@@ -1,0 +1,5595 @@
+{
+  "conjecture_boundary": {
+    "exact": "every displayed q=3,5,7 law, mean, covariance, sign count, tied one-percent tail, and exceptional-stratum conditional",
+    "not_inferred": "no rational function of q, limiting mean, equidistribution rate, subgroup mixture, monodromy classification, or memberwise diagnosis",
+    "smallest_natural_next_theorem": "evaluate the exact all-q joint coefficient moments required by the three adapter polynomials, then prove an error term before comparing finite means with compact-subgroup Haar signatures",
+    "status": "NO_ALL_Q_CONJECTURE_PROPOSED"
+  },
+  "exact_frozen_member_weight_laws": {
+    "families": [
+      {
+        "ambient_haar_comparison": {
+          "ambient_gram_matrix": [
+            [
+              24,
+              -20,
+              4
+            ],
+            [
+              -20,
+              48,
+              0
+            ],
+            [
+              4,
+              0,
+              40
+            ]
+          ],
+          "ambient_mean_vector": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "finite_minus_ambient_mean": [
+            [
+              -2584,
+              2187
+            ],
+            [
+              232,
+              2187
+            ],
+            [
+              8,
+              6561
+            ]
+          ],
+          "warning": "finite-family means and covariance are exact census outputs, not equidistribution errors or subgroup-mixture estimates"
+        },
+        "covariance_matrix_P_D_S": [
+          [
+            [
+              104092928,
+              4782969
+            ],
+            [
+              -97189760,
+              4782969
+            ],
+            [
+              1055744,
+              14348907
+            ]
+          ],
+          [
+            [
+              -97189760,
+              4782969
+            ],
+            [
+              213311408,
+              4782969
+            ],
+            [
+              -5443328,
+              14348907
+            ]
+          ],
+          [
+            [
+              1055744,
+              14348907
+            ],
+            [
+              -5443328,
+              14348907
+            ],
+            [
+              1368317600,
+              43046721
+            ]
+          ]
+        ],
+        "exceptional_coefficient_strata": {
+          "integral_plus_q_split": {
+            "complement_mean": {
+              "D": [
+                1892,
+                3645
+              ],
+              "P": [
+                -1264,
+                729
+              ],
+              "S": [
+                2008,
+                10935
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                -476,
+                243
+              ],
+              "P": [
+                128,
+                81
+              ],
+              "S": [
+                -664,
+                729
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                -9032,
+                3645
+              ],
+              "P": [
+                2416,
+                729
+              ],
+              "S": [
+                -11968,
+                10935
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 18,
+                "positive": 9,
+                "zero": 0
+              },
+              "P": {
+                "negative": 9,
+                "positive": 12,
+                "zero": 6
+              },
+              "S": {
+                "negative": 15,
+                "positive": 6,
+                "zero": 6
+              }
+            },
+            "member_count": 27,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 0
+            },
+            "member_fraction": [
+              1,
+              6
+            ],
+            "signed_source_atom_count": 9,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 5
+          },
+          "repeated_plus_q_split": {
+            "complement_mean": {
+              "D": [
+                232,
+                2187
+              ],
+              "P": [
+                -2584,
+                2187
+              ],
+              "S": [
+                8,
+                6561
+              ]
+            },
+            "conditional_mean": null,
+            "conditional_minus_complement": null,
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 0,
+                "positive": 0,
+                "zero": 0
+              },
+              "P": {
+                "negative": 0,
+                "positive": 0,
+                "zero": 0
+              },
+              "S": {
+                "negative": 0,
+                "positive": 0,
+                "zero": 0
+              }
+            },
+            "member_count": 0,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 0
+            },
+            "member_fraction": [
+              0,
+              1
+            ],
+            "signed_source_atom_count": 0,
+            "status": "EMPTY_IN_FROZEN_FAMILY",
+            "twist_quotiented_coefficient_state_count": 0
+          },
+          "sym3_coefficient_curve": {
+            "complement_mean": {
+              "D": [
+                -775,
+                972
+              ],
+              "P": [
+                -161,
+                243
+              ],
+              "S": [
+                1,
+                729
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                22,
+                3
+              ],
+              "P": [
+                -16,
+                3
+              ],
+              "S": [
+                0,
+                1
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                7903,
+                972
+              ],
+              "P": [
+                -1135,
+                243
+              ],
+              "S": [
+                -1,
+                729
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 6,
+                "positive": 12,
+                "zero": 0
+              },
+              "P": {
+                "negative": 12,
+                "positive": 0,
+                "zero": 6
+              },
+              "S": {
+                "negative": 0,
+                "positive": 0,
+                "zero": 18
+              }
+            },
+            "member_count": 18,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 0
+            },
+            "member_fraction": [
+              1,
+              9
+            ],
+            "signed_source_atom_count": 3,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 2
+          },
+          "sym3_generic_integer_trace_candidate": {
+            "complement_mean": {
+              "D": [
+                197,
+                1053
+              ],
+              "P": [
+                -1292,
+                1053
+              ],
+              "S": [
+                4,
+                3159
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                -2,
+                1
+              ],
+              "P": [
+                0,
+                1
+              ],
+              "S": [
+                0,
+                1
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                -2303,
+                1053
+              ],
+              "P": [
+                1292,
+                1053
+              ],
+              "S": [
+                -4,
+                3159
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 6,
+                "positive": 0,
+                "zero": 0
+              },
+              "P": {
+                "negative": 0,
+                "positive": 0,
+                "zero": 6
+              },
+              "S": {
+                "negative": 0,
+                "positive": 0,
+                "zero": 6
+              }
+            },
+            "member_count": 6,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 0
+            },
+            "member_fraction": [
+              1,
+              27
+            ],
+            "signed_source_atom_count": 2,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 1
+          },
+          "sym3_nodal_ghost": {
+            "complement_mean": {
+              "D": [
+                -1712,
+                2025
+              ],
+              "P": [
+                -1288,
+                2025
+              ],
+              "S": [
+                8,
+                6075
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                12,
+                1
+              ],
+              "P": [
+                -8,
+                1
+              ],
+              "S": [
+                0,
+                1
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                26012,
+                2025
+              ],
+              "P": [
+                -14912,
+                2025
+              ],
+              "S": [
+                -8,
+                6075
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 0,
+                "positive": 12,
+                "zero": 0
+              },
+              "P": {
+                "negative": 12,
+                "positive": 0,
+                "zero": 0
+              },
+              "S": {
+                "negative": 0,
+                "positive": 0,
+                "zero": 12
+              }
+            },
+            "member_count": 12,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 0
+            },
+            "member_fraction": [
+              2,
+              27
+            ],
+            "signed_source_atom_count": 1,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 1
+          }
+        },
+        "input_signed_source_atom_count": 32,
+        "joint_selector_law": {
+          "atom_columns": [
+            "P_numerator",
+            "P_denominator",
+            "D_numerator",
+            "D_denominator",
+            "S_numerator",
+            "S_denominator",
+            "member_count"
+          ],
+          "atoms": [
+            [
+              -728,
+              81,
+              410,
+              81,
+              -1594,
+              243,
+              6
+            ],
+            [
+              -8,
+              1,
+              12,
+              1,
+              0,
+              1,
+              12
+            ],
+            [
+              -392,
+              81,
+              242,
+              81,
+              326,
+              243,
+              12
+            ],
+            [
+              -368,
+              81,
+              -232,
+              81,
+              0,
+              1,
+              18
+            ],
+            [
+              -40,
+              9,
+              50,
+              9,
+              -128,
+              81,
+              6
+            ],
+            [
+              -320,
+              81,
+              56,
+              81,
+              -1384,
+              243,
+              3
+            ],
+            [
+              -320,
+              81,
+              1376,
+              81,
+              1384,
+              243,
+              9
+            ],
+            [
+              -224,
+              81,
+              -106,
+              81,
+              64,
+              27,
+              24
+            ],
+            [
+              -104,
+              81,
+              422,
+              81,
+              -130,
+              27,
+              6
+            ],
+            [
+              0,
+              1,
+              -2,
+              1,
+              0,
+              1,
+              6
+            ],
+            [
+              8,
+              9,
+              -50,
+              9,
+              10,
+              81,
+              12
+            ],
+            [
+              232,
+              81,
+              -652,
+              81,
+              1976,
+              243,
+              12
+            ],
+            [
+              280,
+              81,
+              -412,
+              81,
+              -4112,
+              243,
+              6
+            ],
+            [
+              352,
+              81,
+              110,
+              81,
+              -2080,
+              243,
+              6
+            ],
+            [
+              376,
+              81,
+              -598,
+              81,
+              -1120,
+              243,
+              6
+            ],
+            [
+              472,
+              81,
+              -442,
+              81,
+              2590,
+              243,
+              6
+            ],
+            [
+              520,
+              81,
+              -310,
+              81,
+              -62,
+              9,
+              6
+            ],
+            [
+              80,
+              9,
+              -16,
+              3,
+              400,
+              81,
+              6
+            ]
+          ],
+          "support_size": 18
+        },
+        "marginal_selector_laws": {
+          "D": {
+            "atom_columns": [
+              "value_numerator",
+              "value_denominator",
+              "member_count"
+            ],
+            "atoms": [
+              [
+                -652,
+                81,
+                12
+              ],
+              [
+                -598,
+                81,
+                6
+              ],
+              [
+                -50,
+                9,
+                12
+              ],
+              [
+                -442,
+                81,
+                6
+              ],
+              [
+                -16,
+                3,
+                6
+              ],
+              [
+                -412,
+                81,
+                6
+              ],
+              [
+                -310,
+                81,
+                6
+              ],
+              [
+                -232,
+                81,
+                18
+              ],
+              [
+                -2,
+                1,
+                6
+              ],
+              [
+                -106,
+                81,
+                24
+              ],
+              [
+                56,
+                81,
+                3
+              ],
+              [
+                110,
+                81,
+                6
+              ],
+              [
+                242,
+                81,
+                12
+              ],
+              [
+                410,
+                81,
+                6
+              ],
+              [
+                422,
+                81,
+                6
+              ],
+              [
+                50,
+                9,
+                6
+              ],
+              [
+                12,
+                1,
+                12
+              ],
+              [
+                1376,
+                81,
+                9
+              ]
+            ],
+            "maximum_absolute_value": [
+              1376,
+              81
+            ],
+            "mean": [
+              232,
+              2187
+            ],
+            "mean_absolute_value": [
+              1288,
+              243
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                1376,
+                81
+              ],
+              "definition": "all members with |selector| at least the largest threshold whose tied tail has mass >= 1%",
+              "member_count_including_ties": 9,
+              "member_fraction_including_ties": [
+                1,
+                18
+              ],
+              "sign_member_counts": {
+                "negative": 0,
+                "positive": 9,
+                "zero": 0
+              },
+              "target_fraction": [
+                1,
+                100
+              ],
+              "target_member_count_ceiling": 2
+            },
+            "sign_member_counts": {
+              "negative": 102,
+              "positive": 60,
+              "zero": 0
+            },
+            "support_maximum": [
+              1376,
+              81
+            ],
+            "support_minimum": [
+              -652,
+              81
+            ],
+            "support_size": 18
+          },
+          "P": {
+            "atom_columns": [
+              "value_numerator",
+              "value_denominator",
+              "member_count"
+            ],
+            "atoms": [
+              [
+                -728,
+                81,
+                6
+              ],
+              [
+                -8,
+                1,
+                12
+              ],
+              [
+                -392,
+                81,
+                12
+              ],
+              [
+                -368,
+                81,
+                18
+              ],
+              [
+                -40,
+                9,
+                6
+              ],
+              [
+                -320,
+                81,
+                12
+              ],
+              [
+                -224,
+                81,
+                24
+              ],
+              [
+                -104,
+                81,
+                6
+              ],
+              [
+                0,
+                1,
+                6
+              ],
+              [
+                8,
+                9,
+                12
+              ],
+              [
+                232,
+                81,
+                12
+              ],
+              [
+                280,
+                81,
+                6
+              ],
+              [
+                352,
+                81,
+                6
+              ],
+              [
+                376,
+                81,
+                6
+              ],
+              [
+                472,
+                81,
+                6
+              ],
+              [
+                520,
+                81,
+                6
+              ],
+              [
+                80,
+                9,
+                6
+              ]
+            ],
+            "maximum_absolute_value": [
+              728,
+              81
+            ],
+            "mean": [
+              -2584,
+              2187
+            ],
+            "mean_absolute_value": [
+              3080,
+              729
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                728,
+                81
+              ],
+              "definition": "all members with |selector| at least the largest threshold whose tied tail has mass >= 1%",
+              "member_count_including_ties": 6,
+              "member_fraction_including_ties": [
+                1,
+                27
+              ],
+              "sign_member_counts": {
+                "negative": 6,
+                "positive": 0,
+                "zero": 0
+              },
+              "target_fraction": [
+                1,
+                100
+              ],
+              "target_member_count_ceiling": 2
+            },
+            "sign_member_counts": {
+              "negative": 96,
+              "positive": 60,
+              "zero": 6
+            },
+            "support_maximum": [
+              80,
+              9
+            ],
+            "support_minimum": [
+              -728,
+              81
+            ],
+            "support_size": 17
+          },
+          "S": {
+            "atom_columns": [
+              "value_numerator",
+              "value_denominator",
+              "member_count"
+            ],
+            "atoms": [
+              [
+                -4112,
+                243,
+                6
+              ],
+              [
+                -2080,
+                243,
+                6
+              ],
+              [
+                -62,
+                9,
+                6
+              ],
+              [
+                -1594,
+                243,
+                6
+              ],
+              [
+                -1384,
+                243,
+                3
+              ],
+              [
+                -130,
+                27,
+                6
+              ],
+              [
+                -1120,
+                243,
+                6
+              ],
+              [
+                -128,
+                81,
+                6
+              ],
+              [
+                0,
+                1,
+                36
+              ],
+              [
+                10,
+                81,
+                12
+              ],
+              [
+                326,
+                243,
+                12
+              ],
+              [
+                64,
+                27,
+                24
+              ],
+              [
+                400,
+                81,
+                6
+              ],
+              [
+                1384,
+                243,
+                9
+              ],
+              [
+                1976,
+                243,
+                12
+              ],
+              [
+                2590,
+                243,
+                6
+              ]
+            ],
+            "maximum_absolute_value": [
+              4112,
+              243
+            ],
+            "mean": [
+              8,
+              6561
+            ],
+            "mean_absolute_value": [
+              25660,
+              6561
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                4112,
+                243
+              ],
+              "definition": "all members with |selector| at least the largest threshold whose tied tail has mass >= 1%",
+              "member_count_including_ties": 6,
+              "member_fraction_including_ties": [
+                1,
+                27
+              ],
+              "sign_member_counts": {
+                "negative": 6,
+                "positive": 0,
+                "zero": 0
+              },
+              "target_fraction": [
+                1,
+                100
+              ],
+              "target_member_count_ceiling": 2
+            },
+            "sign_member_counts": {
+              "negative": 45,
+              "positive": 81,
+              "zero": 36
+            },
+            "support_maximum": [
+              2590,
+              243
+            ],
+            "support_minimum": [
+              -4112,
+              243
+            ],
+            "support_size": 16
+          }
+        },
+        "mean_vector_P_D_S": [
+          [
+            -2584,
+            2187
+          ],
+          [
+            232,
+            2187
+          ],
+          [
+            8,
+            6561
+          ]
+        ],
+        "member_count": 162,
+        "q": 3,
+        "raw_second_moment_matrix_P_D_S": [
+          [
+            [
+              4102592,
+              177147
+            ],
+            [
+              -3621824,
+              177147
+            ],
+            [
+              38336,
+              531441
+            ]
+          ],
+          [
+            [
+              -3621824,
+              177147
+            ],
+            [
+              7902416,
+              177147
+            ],
+            [
+              -201536,
+              531441
+            ]
+          ],
+          [
+            [
+              38336,
+              531441
+            ],
+            [
+              -201536,
+              531441
+            ],
+            [
+              50678432,
+              1594323
+            ]
+          ]
+        ],
+        "status": "EXACT_MEMBER_WEIGHT_LAW_FROM_FROZEN_COMPLETE_HISTOGRAM",
+        "twist_quotiented_input_state_count": 18,
+        "uniform_affine_orbit_weighting": {
+          "B_bucket_count": 14,
+          "ambiguous_B_bucket_count": 3,
+          "ambiguous_B_buckets": [
+            {
+              "B_numerator_J": -4,
+              "distinct_selector_triple_count": 2,
+              "member_count": 12
+            },
+            {
+              "B_numerator_J": 2,
+              "distinct_selector_triple_count": 2,
+              "member_count": 30
+            },
+            {
+              "B_numerator_J": 5,
+              "distinct_selector_triple_count": 3,
+              "member_count": 24
+            }
+          ],
+          "exact_uniform_orbit_selector_law": null,
+          "member_count_in_ambiguous_B_buckets": 66,
+          "refusal_reason": "an ambiguous B bucket contains multiple selector triples but only one aggregate orbit count, so allocating its orbits would add information not present in the source",
+          "selector_invariance": "the locked affine action changes a_D only by sign and fixes b_D; P,D,S depend only on (a_D^2,b_D), so each selector is orbit-invariant",
+          "source_aggregation": "exact orbit counts are retained only by B_numerator_J",
+          "source_orbit_size_histogram": {
+            "3": 4,
+            "6": 25
+          },
+          "source_total_affine_orbit_count": 29,
+          "status": "NOT_IDENTIFIABLE_FROM_B_AGGREGATED_ORBIT_SOURCE"
+        }
+      },
+      {
+        "ambient_haar_comparison": {
+          "ambient_gram_matrix": [
+            [
+              24,
+              -20,
+              4
+            ],
+            [
+              -20,
+              48,
+              0
+            ],
+            [
+              4,
+              0,
+              40
+            ]
+          ],
+          "ambient_mean_vector": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "finite_minus_ambient_mean": [
+            [
+              -57468,
+              78125
+            ],
+            [
+              16148,
+              78125
+            ],
+            [
+              7152,
+              390625
+            ]
+          ],
+          "warning": "finite-family means and covariance are exact census outputs, not equidistribution errors or subgroup-mixture estimates"
+        },
+        "covariance_matrix_P_D_S": [
+          [
+            [
+              141418400976,
+              6103515625
+            ],
+            [
+              -123745748736,
+              6103515625
+            ],
+            [
+              67763603136,
+              30517578125
+            ]
+          ],
+          [
+            [
+              -123745748736,
+              6103515625
+            ],
+            [
+              282293829096,
+              6103515625
+            ],
+            [
+              -54408902496,
+              30517578125
+            ]
+          ],
+          [
+            [
+              67763603136,
+              30517578125
+            ],
+            [
+              -54408902496,
+              30517578125
+            ],
+            [
+              5720473498896,
+              152587890625
+            ]
+          ]
+        ],
+        "exceptional_coefficient_strata": {
+          "integral_plus_q_split": {
+            "complement_mean": {
+              "D": [
+                128528,
+                224375
+              ],
+              "P": [
+                -260208,
+                224375
+              ],
+              "S": [
+                1028328,
+                1121875
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                -21312,
+                29375
+              ],
+              "P": [
+                10112,
+                29375
+              ],
+              "S": [
+                -66648,
+                29375
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                -13691824,
+                10545625
+              ],
+              "P": [
+                15859984,
+                10545625
+              ],
+              "S": [
+                -167964576,
+                52728125
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 500,
+                "positive": 205,
+                "zero": 0
+              },
+              "P": {
+                "negative": 420,
+                "positive": 280,
+                "zero": 5
+              },
+              "S": {
+                "negative": 450,
+                "positive": 75,
+                "zero": 180
+              }
+            },
+            "member_count": 705,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 105
+            },
+            "member_fraction": [
+              141,
+              500
+            ],
+            "signed_source_atom_count": 23,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 13
+          },
+          "repeated_plus_q_split": {
+            "complement_mean": {
+              "D": [
+                52048,
+                310625
+              ],
+              "P": [
+                -232688,
+                310625
+              ],
+              "S": [
+                408,
+                12425
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                12544,
+                1875
+              ],
+              "P": [
+                2816,
+                1875
+              ],
+              "S": [
+                -7464,
+                3125
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                6078224,
+                931875
+              ],
+              "P": [
+                2097616,
+                931875
+              ],
+              "S": [
+                -3760608,
+                1553125
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 0,
+                "positive": 15,
+                "zero": 0
+              },
+              "P": {
+                "negative": 0,
+                "positive": 10,
+                "zero": 5
+              },
+              "S": {
+                "negative": 10,
+                "positive": 5,
+                "zero": 0
+              }
+            },
+            "member_count": 15,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 15
+            },
+            "member_fraction": [
+              3,
+              500
+            ],
+            "signed_source_atom_count": 3,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 2
+          },
+          "sym3_coefficient_curve": {
+            "complement_mean": {
+              "D": [
+                -20408,
+                305625
+              ],
+              "P": [
+                -179872,
+                305625
+              ],
+              "S": [
+                -15464,
+                509375
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                136,
+                11
+              ],
+              "P": [
+                -80,
+                11
+              ],
+              "S": [
+                24,
+                11
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                41789488,
+                3361875
+              ],
+              "P": [
+                -22471408,
+                3361875
+              ],
+              "S": [
+                12395104,
+                5603125
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 0,
+                "positive": 55,
+                "zero": 0
+              },
+              "P": {
+                "negative": 50,
+                "positive": 0,
+                "zero": 5
+              },
+              "S": {
+                "negative": 0,
+                "positive": 5,
+                "zero": 50
+              }
+            },
+            "member_count": 55,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 5
+            },
+            "member_fraction": [
+              11,
+              500
+            ],
+            "signed_source_atom_count": 2,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 2
+          },
+          "sym3_generic_integer_trace_candidate": {
+            "complement_mean": {
+              "D": [
+                54592,
+                311875
+              ],
+              "P": [
+                -229872,
+                311875
+              ],
+              "S": [
+                -46392,
+                1559375
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                16,
+                1
+              ],
+              "P": [
+                0,
+                1
+              ],
+              "S": [
+                24,
+                1
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                4935408,
+                311875
+              ],
+              "P": [
+                229872,
+                311875
+              ],
+              "S": [
+                37471392,
+                1559375
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 0,
+                "positive": 5,
+                "zero": 0
+              },
+              "P": {
+                "negative": 0,
+                "positive": 0,
+                "zero": 5
+              },
+              "S": {
+                "negative": 0,
+                "positive": 5,
+                "zero": 0
+              }
+            },
+            "member_count": 5,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 5
+            },
+            "member_fraction": [
+              1,
+              500
+            ],
+            "signed_source_atom_count": 1,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 1
+          },
+          "sym3_nodal_ghost": {
+            "complement_mean": {
+              "D": [
+                -5204,
+                153125
+              ],
+              "P": [
+                -12848,
+                21875
+              ],
+              "S": [
+                14304,
+                765625
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                12,
+                1
+              ],
+              "P": [
+                -8,
+                1
+              ],
+              "S": [
+                0,
+                1
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                1842704,
+                153125
+              ],
+              "P": [
+                -162152,
+                21875
+              ],
+              "S": [
+                -14304,
+                765625
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 0,
+                "positive": 50,
+                "zero": 0
+              },
+              "P": {
+                "negative": 50,
+                "positive": 0,
+                "zero": 0
+              },
+              "S": {
+                "negative": 0,
+                "positive": 0,
+                "zero": 50
+              }
+            },
+            "member_count": 50,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 0
+            },
+            "member_fraction": [
+              1,
+              50
+            ],
+            "signed_source_atom_count": 1,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 1
+          }
+        },
+        "input_signed_source_atom_count": 81,
+        "joint_selector_law": {
+          "atom_columns": [
+            "P_numerator",
+            "P_denominator",
+            "D_numerator",
+            "D_denominator",
+            "S_numerator",
+            "S_denominator",
+            "member_count"
+          ],
+          "atoms": [
+            [
+              -9032,
+              625,
+              6492,
+              625,
+              0,
+              1,
+              20
+            ],
+            [
+              -5872,
+              625,
+              7762,
+              625,
+              -12378,
+              3125,
+              20
+            ],
+            [
+              -8,
+              1,
+              12,
+              1,
+              0,
+              1,
+              50
+            ],
+            [
+              -4752,
+              625,
+              -638,
+              625,
+              8304,
+              3125,
+              60
+            ],
+            [
+              -4032,
+              625,
+              3392,
+              625,
+              -7272,
+              3125,
+              80
+            ],
+            [
+              -4032,
+              625,
+              10072,
+              625,
+              7272,
+              3125,
+              60
+            ],
+            [
+              -3712,
+              625,
+              3802,
+              625,
+              1446,
+              3125,
+              60
+            ],
+            [
+              -144,
+              25,
+              -46,
+              25,
+              -786,
+              625,
+              40
+            ],
+            [
+              -144,
+              25,
+              202,
+              25,
+              -336,
+              625,
+              160
+            ],
+            [
+              -3272,
+              625,
+              2142,
+              625,
+              2928,
+              3125,
+              40
+            ],
+            [
+              -2912,
+              625,
+              5742,
+              625,
+              -5106,
+              3125,
+              60
+            ],
+            [
+              -2352,
+              625,
+              262,
+              625,
+              294,
+              625,
+              100
+            ],
+            [
+              -2192,
+              625,
+              -768,
+              625,
+              0,
+              1,
+              180
+            ],
+            [
+              -1832,
+              625,
+              -2298,
+              625,
+              -1104,
+              3125,
+              20
+            ],
+            [
+              -1832,
+              625,
+              2262,
+              625,
+              -1104,
+              3125,
+              20
+            ],
+            [
+              -1672,
+              625,
+              5782,
+              625,
+              -1584,
+              625,
+              40
+            ],
+            [
+              -64,
+              25,
+              16,
+              25,
+              -2376,
+              625,
+              60
+            ],
+            [
+              -1512,
+              625,
+              -908,
+              625,
+              -25104,
+              3125,
+              80
+            ],
+            [
+              -1512,
+              625,
+              10532,
+              625,
+              25104,
+              3125,
+              40
+            ],
+            [
+              -1072,
+              625,
+              -1598,
+              625,
+              -3696,
+              3125,
+              100
+            ],
+            [
+              -952,
+              625,
+              -2588,
+              625,
+              14904,
+              3125,
+              80
+            ],
+            [
+              -24,
+              25,
+              -68,
+              25,
+              -2136,
+              625,
+              40
+            ],
+            [
+              0,
+              1,
+              -2,
+              1,
+              6,
+              1,
+              24
+            ],
+            [
+              0,
+              1,
+              8,
+              1,
+              -24,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              16,
+              1,
+              24,
+              1,
+              5
+            ],
+            [
+              48,
+              625,
+              5122,
+              625,
+              -10122,
+              3125,
+              20
+            ],
+            [
+              288,
+              625,
+              -3698,
+              625,
+              2214,
+              625,
+              80
+            ],
+            [
+              16,
+              25,
+              -126,
+              25,
+              -2466,
+              625,
+              40
+            ],
+            [
+              1408,
+              625,
+              -3288,
+              625,
+              -48696,
+              3125,
+              60
+            ],
+            [
+              1408,
+              625,
+              1272,
+              625,
+              -48696,
+              3125,
+              10
+            ],
+            [
+              1408,
+              625,
+              9072,
+              625,
+              48696,
+              3125,
+              30
+            ],
+            [
+              1848,
+              625,
+              -4058,
+              625,
+              -22704,
+              3125,
+              40
+            ],
+            [
+              1968,
+              625,
+              -5048,
+              625,
+              21936,
+              3125,
+              160
+            ],
+            [
+              2128,
+              625,
+              3762,
+              625,
+              -13104,
+              3125,
+              60
+            ],
+            [
+              2448,
+              625,
+              -4918,
+              625,
+              25872,
+              3125,
+              120
+            ],
+            [
+              3008,
+              625,
+              -3938,
+              625,
+              -31122,
+              3125,
+              60
+            ],
+            [
+              3168,
+              625,
+              1162,
+              625,
+              -14586,
+              3125,
+              40
+            ],
+            [
+              3288,
+              625,
+              -3068,
+              625,
+              31728,
+              3125,
+              40
+            ],
+            [
+              3568,
+              625,
+              -2358,
+              625,
+              -6288,
+              625,
+              100
+            ],
+            [
+              4288,
+              625,
+              -5478,
+              625,
+              36054,
+              3125,
+              20
+            ],
+            [
+              176,
+              25,
+              16,
+              25,
+              -1056,
+              625,
+              40
+            ],
+            [
+              176,
+              25,
+              14,
+              5,
+              -4026,
+              625,
+              20
+            ],
+            [
+              4648,
+              625,
+              -5268,
+              625,
+              12072,
+              3125,
+              40
+            ],
+            [
+              5328,
+              625,
+              -2458,
+              625,
+              13806,
+              3125,
+              40
+            ],
+            [
+              216,
+              25,
+              -194,
+              25,
+              6864,
+              625,
+              40
+            ]
+          ],
+          "support_size": 45
+        },
+        "marginal_selector_laws": {
+          "D": {
+            "atom_columns": [
+              "value_numerator",
+              "value_denominator",
+              "member_count"
+            ],
+            "atoms": [
+              [
+                -5478,
+                625,
+                20
+              ],
+              [
+                -5268,
+                625,
+                40
+              ],
+              [
+                -5048,
+                625,
+                160
+              ],
+              [
+                -4918,
+                625,
+                120
+              ],
+              [
+                -194,
+                25,
+                40
+              ],
+              [
+                -4058,
+                625,
+                40
+              ],
+              [
+                -3938,
+                625,
+                60
+              ],
+              [
+                -3698,
+                625,
+                80
+              ],
+              [
+                -3288,
+                625,
+                60
+              ],
+              [
+                -126,
+                25,
+                40
+              ],
+              [
+                -3068,
+                625,
+                40
+              ],
+              [
+                -2588,
+                625,
+                80
+              ],
+              [
+                -2458,
+                625,
+                40
+              ],
+              [
+                -2358,
+                625,
+                100
+              ],
+              [
+                -2298,
+                625,
+                20
+              ],
+              [
+                -68,
+                25,
+                40
+              ],
+              [
+                -1598,
+                625,
+                100
+              ],
+              [
+                -2,
+                1,
+                24
+              ],
+              [
+                -46,
+                25,
+                40
+              ],
+              [
+                -908,
+                625,
+                80
+              ],
+              [
+                -768,
+                625,
+                180
+              ],
+              [
+                -638,
+                625,
+                60
+              ],
+              [
+                262,
+                625,
+                100
+              ],
+              [
+                16,
+                25,
+                100
+              ],
+              [
+                1162,
+                625,
+                40
+              ],
+              [
+                1272,
+                625,
+                10
+              ],
+              [
+                14,
+                5,
+                20
+              ],
+              [
+                2142,
+                625,
+                40
+              ],
+              [
+                2262,
+                625,
+                20
+              ],
+              [
+                3392,
+                625,
+                80
+              ],
+              [
+                3762,
+                625,
+                60
+              ],
+              [
+                3802,
+                625,
+                60
+              ],
+              [
+                8,
+                1,
+                1
+              ],
+              [
+                202,
+                25,
+                160
+              ],
+              [
+                5122,
+                625,
+                20
+              ],
+              [
+                5742,
+                625,
+                60
+              ],
+              [
+                5782,
+                625,
+                40
+              ],
+              [
+                6492,
+                625,
+                20
+              ],
+              [
+                12,
+                1,
+                50
+              ],
+              [
+                7762,
+                625,
+                20
+              ],
+              [
+                9072,
+                625,
+                30
+              ],
+              [
+                16,
+                1,
+                5
+              ],
+              [
+                10072,
+                625,
+                60
+              ],
+              [
+                10532,
+                625,
+                40
+              ]
+            ],
+            "maximum_absolute_value": [
+              10532,
+              625
+            ],
+            "mean": [
+              16148,
+              78125
+            ],
+            "mean_absolute_value": [
+              435412,
+              78125
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                10532,
+                625
+              ],
+              "definition": "all members with |selector| at least the largest threshold whose tied tail has mass >= 1%",
+              "member_count_including_ties": 40,
+              "member_fraction_including_ties": [
+                2,
+                125
+              ],
+              "sign_member_counts": {
+                "negative": 0,
+                "positive": 40,
+                "zero": 0
+              },
+              "target_fraction": [
+                1,
+                100
+              ],
+              "target_member_count_ceiling": 25
+            },
+            "sign_member_counts": {
+              "negative": 1464,
+              "positive": 1036,
+              "zero": 0
+            },
+            "support_maximum": [
+              10532,
+              625
+            ],
+            "support_minimum": [
+              -5478,
+              625
+            ],
+            "support_size": 44
+          },
+          "P": {
+            "atom_columns": [
+              "value_numerator",
+              "value_denominator",
+              "member_count"
+            ],
+            "atoms": [
+              [
+                -9032,
+                625,
+                20
+              ],
+              [
+                -5872,
+                625,
+                20
+              ],
+              [
+                -8,
+                1,
+                50
+              ],
+              [
+                -4752,
+                625,
+                60
+              ],
+              [
+                -4032,
+                625,
+                140
+              ],
+              [
+                -3712,
+                625,
+                60
+              ],
+              [
+                -144,
+                25,
+                200
+              ],
+              [
+                -3272,
+                625,
+                40
+              ],
+              [
+                -2912,
+                625,
+                60
+              ],
+              [
+                -2352,
+                625,
+                100
+              ],
+              [
+                -2192,
+                625,
+                180
+              ],
+              [
+                -1832,
+                625,
+                40
+              ],
+              [
+                -1672,
+                625,
+                40
+              ],
+              [
+                -64,
+                25,
+                60
+              ],
+              [
+                -1512,
+                625,
+                120
+              ],
+              [
+                -1072,
+                625,
+                100
+              ],
+              [
+                -952,
+                625,
+                80
+              ],
+              [
+                -24,
+                25,
+                40
+              ],
+              [
+                0,
+                1,
+                30
+              ],
+              [
+                48,
+                625,
+                20
+              ],
+              [
+                288,
+                625,
+                80
+              ],
+              [
+                16,
+                25,
+                40
+              ],
+              [
+                1408,
+                625,
+                100
+              ],
+              [
+                1848,
+                625,
+                40
+              ],
+              [
+                1968,
+                625,
+                160
+              ],
+              [
+                2128,
+                625,
+                60
+              ],
+              [
+                2448,
+                625,
+                120
+              ],
+              [
+                3008,
+                625,
+                60
+              ],
+              [
+                3168,
+                625,
+                40
+              ],
+              [
+                3288,
+                625,
+                40
+              ],
+              [
+                3568,
+                625,
+                100
+              ],
+              [
+                4288,
+                625,
+                20
+              ],
+              [
+                176,
+                25,
+                60
+              ],
+              [
+                4648,
+                625,
+                40
+              ],
+              [
+                5328,
+                625,
+                40
+              ],
+              [
+                216,
+                25,
+                40
+              ]
+            ],
+            "maximum_absolute_value": [
+              9032,
+              625
+            ],
+            "mean": [
+              -57468,
+              78125
+            ],
+            "mean_absolute_value": [
+              332604,
+              78125
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                5872,
+                625
+              ],
+              "definition": "all members with |selector| at least the largest threshold whose tied tail has mass >= 1%",
+              "member_count_including_ties": 40,
+              "member_fraction_including_ties": [
+                2,
+                125
+              ],
+              "sign_member_counts": {
+                "negative": 40,
+                "positive": 0,
+                "zero": 0
+              },
+              "target_fraction": [
+                1,
+                100
+              ],
+              "target_member_count_ceiling": 25
+            },
+            "sign_member_counts": {
+              "negative": 1410,
+              "positive": 1060,
+              "zero": 30
+            },
+            "support_maximum": [
+              216,
+              25
+            ],
+            "support_minimum": [
+              -9032,
+              625
+            ],
+            "support_size": 36
+          },
+          "S": {
+            "atom_columns": [
+              "value_numerator",
+              "value_denominator",
+              "member_count"
+            ],
+            "atoms": [
+              [
+                -24,
+                1,
+                1
+              ],
+              [
+                -48696,
+                3125,
+                70
+              ],
+              [
+                -6288,
+                625,
+                100
+              ],
+              [
+                -31122,
+                3125,
+                60
+              ],
+              [
+                -25104,
+                3125,
+                80
+              ],
+              [
+                -22704,
+                3125,
+                40
+              ],
+              [
+                -4026,
+                625,
+                20
+              ],
+              [
+                -14586,
+                3125,
+                40
+              ],
+              [
+                -13104,
+                3125,
+                60
+              ],
+              [
+                -12378,
+                3125,
+                20
+              ],
+              [
+                -2466,
+                625,
+                40
+              ],
+              [
+                -2376,
+                625,
+                60
+              ],
+              [
+                -2136,
+                625,
+                40
+              ],
+              [
+                -10122,
+                3125,
+                20
+              ],
+              [
+                -1584,
+                625,
+                40
+              ],
+              [
+                -7272,
+                3125,
+                80
+              ],
+              [
+                -1056,
+                625,
+                40
+              ],
+              [
+                -5106,
+                3125,
+                60
+              ],
+              [
+                -786,
+                625,
+                40
+              ],
+              [
+                -3696,
+                3125,
+                100
+              ],
+              [
+                -336,
+                625,
+                160
+              ],
+              [
+                -1104,
+                3125,
+                40
+              ],
+              [
+                0,
+                1,
+                250
+              ],
+              [
+                1446,
+                3125,
+                60
+              ],
+              [
+                294,
+                625,
+                100
+              ],
+              [
+                2928,
+                3125,
+                40
+              ],
+              [
+                7272,
+                3125,
+                60
+              ],
+              [
+                8304,
+                3125,
+                60
+              ],
+              [
+                2214,
+                625,
+                80
+              ],
+              [
+                12072,
+                3125,
+                40
+              ],
+              [
+                13806,
+                3125,
+                40
+              ],
+              [
+                14904,
+                3125,
+                80
+              ],
+              [
+                6,
+                1,
+                24
+              ],
+              [
+                21936,
+                3125,
+                160
+              ],
+              [
+                25104,
+                3125,
+                40
+              ],
+              [
+                25872,
+                3125,
+                120
+              ],
+              [
+                31728,
+                3125,
+                40
+              ],
+              [
+                6864,
+                625,
+                40
+              ],
+              [
+                36054,
+                3125,
+                20
+              ],
+              [
+                48696,
+                3125,
+                30
+              ],
+              [
+                24,
+                1,
+                5
+              ]
+            ],
+            "maximum_absolute_value": [
+              24,
+              1
+            ],
+            "mean": [
+              7152,
+              390625
+            ],
+            "mean_absolute_value": [
+              351888,
+              78125
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                48696,
+                3125
+              ],
+              "definition": "all members with |selector| at least the largest threshold whose tied tail has mass >= 1%",
+              "member_count_including_ties": 106,
+              "member_fraction_including_ties": [
+                53,
+                1250
+              ],
+              "sign_member_counts": {
+                "negative": 71,
+                "positive": 35,
+                "zero": 0
+              },
+              "target_fraction": [
+                1,
+                100
+              ],
+              "target_member_count_ceiling": 25
+            },
+            "sign_member_counts": {
+              "negative": 1211,
+              "positive": 1039,
+              "zero": 250
+            },
+            "support_maximum": [
+              24,
+              1
+            ],
+            "support_minimum": [
+              -24,
+              1
+            ],
+            "support_size": 41
+          }
+        },
+        "mean_vector_P_D_S": [
+          [
+            -57468,
+            78125
+          ],
+          [
+            16148,
+            78125
+          ],
+          [
+            7152,
+            390625
+          ]
+        ],
+        "member_count": 2500,
+        "q": 5,
+        "raw_second_moment_matrix_P_D_S": [
+          [
+            [
+              1157767776,
+              48828125
+            ],
+            [
+              -997389936,
+              48828125
+            ],
+            [
+              538820736,
+              244140625
+            ]
+          ],
+          [
+            [
+              -997389936,
+              48828125
+            ],
+            [
+              2260436696,
+              48828125
+            ],
+            [
+              -434347296,
+              244140625
+            ]
+          ],
+          [
+            [
+              538820736,
+              244140625
+            ],
+            [
+              -434347296,
+              244140625
+            ],
+            [
+              1830567888,
+              48828125
+            ]
+          ]
+        ],
+        "status": "EXACT_MEMBER_WEIGHT_LAW_FROM_FROZEN_COMPLETE_HISTOGRAM",
+        "twist_quotiented_input_state_count": 45,
+        "uniform_affine_orbit_weighting": {
+          "B_bucket_count": 33,
+          "ambiguous_B_bucket_count": 10,
+          "ambiguous_B_buckets": [
+            {
+              "B_numerator_J": -100,
+              "distinct_selector_triple_count": 2,
+              "member_count": 6
+            },
+            {
+              "B_numerator_J": -36,
+              "distinct_selector_triple_count": 3,
+              "member_count": 100
+            },
+            {
+              "B_numerator_J": -16,
+              "distinct_selector_triple_count": 2,
+              "member_count": 120
+            },
+            {
+              "B_numerator_J": -15,
+              "distinct_selector_triple_count": 2,
+              "member_count": 60
+            },
+            {
+              "B_numerator_J": -6,
+              "distinct_selector_triple_count": 2,
+              "member_count": 160
+            },
+            {
+              "B_numerator_J": -4,
+              "distinct_selector_triple_count": 2,
+              "member_count": 140
+            },
+            {
+              "B_numerator_J": 1,
+              "distinct_selector_triple_count": 2,
+              "member_count": 120
+            },
+            {
+              "B_numerator_J": 6,
+              "distinct_selector_triple_count": 2,
+              "member_count": 80
+            },
+            {
+              "B_numerator_J": 9,
+              "distinct_selector_triple_count": 3,
+              "member_count": 140
+            },
+            {
+              "B_numerator_J": 54,
+              "distinct_selector_triple_count": 2,
+              "member_count": 40
+            }
+          ],
+          "exact_uniform_orbit_selector_law": null,
+          "member_count_in_ambiguous_B_buckets": 966,
+          "refusal_reason": "an ambiguous B bucket contains multiple selector triples but only one aggregate orbit count, so allocating its orbits would add information not present in the source",
+          "selector_invariance": "the locked affine action changes a_D only by sign and fixes b_D; P,D,S depend only on (a_D^2,b_D), so each selector is orbit-invariant",
+          "source_aggregation": "exact orbit counts are retained only by B_numerator_J",
+          "source_orbit_size_histogram": {
+            "1": 1,
+            "10": 6,
+            "20": 121,
+            "4": 1,
+            "5": 3
+          },
+          "source_total_affine_orbit_count": 132,
+          "status": "NOT_IDENTIFIABLE_FROM_B_AGGREGATED_ORBIT_SOURCE"
+        }
+      },
+      {
+        "ambient_haar_comparison": {
+          "ambient_gram_matrix": [
+            [
+              24,
+              -20,
+              4
+            ],
+            [
+              -20,
+              48,
+              0
+            ],
+            [
+              4,
+              0,
+              40
+            ]
+          ],
+          "ambient_mean_vector": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "finite_minus_ambient_mean": [
+            [
+              -441712,
+              823543
+            ],
+            [
+              156896,
+              823543
+            ],
+            [
+              -2952,
+              5764801
+            ]
+          ],
+          "warning": "finite-family means and covariance are exact census outputs, not equidistribution errors or subgroup-mixture estimates"
+        },
+        "covariance_matrix_P_D_S": [
+          [
+            [
+              15868010065792,
+              678223072849
+            ],
+            [
+              -13970109466624,
+              678223072849
+            ],
+            [
+              23750858016000,
+              4747561509943
+            ]
+          ],
+          [
+            [
+              -13970109466624,
+              678223072849
+            ],
+            [
+              32496274640224,
+              678223072849
+            ],
+            [
+              -6946144156416,
+              4747561509943
+            ]
+          ],
+          [
+            [
+              23750858016000,
+              4747561509943
+            ],
+            [
+              -6946144156416,
+              4747561509943
+            ],
+            [
+              1318852895644224,
+              33232930569601
+            ]
+          ]
+        ],
+        "exceptional_coefficient_strata": {
+          "integral_plus_q_split": {
+            "complement_mean": {
+              "D": [
+                187667,
+                309729
+              ],
+              "P": [
+                -111432,
+                103243
+              ],
+              "S": [
+                -349052,
+                722701
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                -218438,
+                204085
+              ],
+              "P": [
+                45376,
+                40817
+              ],
+              "S": [
+                418272,
+                285719
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                -44130197,
+                26326965
+              ],
+              "P": [
+                3845512,
+                1755131
+              ],
+              "S": [
+                23919580,
+                12285917
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 2520,
+                "positive": 1050,
+                "zero": 0
+              },
+              "P": {
+                "negative": 1638,
+                "positive": 1890,
+                "zero": 42
+              },
+              "S": {
+                "negative": 1008,
+                "positive": 2562,
+                "zero": 0
+              }
+            },
+            "member_count": 3570,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 336
+            },
+            "member_fraction": [
+              85,
+              343
+            ],
+            "signed_source_atom_count": 33,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 18
+          },
+          "repeated_plus_q_split": {
+            "complement_mean": {
+              "D": [
+                9752,
+                74431
+              ],
+              "P": [
+                -451504,
+                818741
+              ],
+              "S": [
+                -122280,
+                5731187
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                24812,
+                2401
+              ],
+              "P": [
+                4896,
+                2401
+              ],
+              "S": [
+                59664,
+                16807
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                759420,
+                74431
+              ],
+              "P": [
+                2121040,
+                818741
+              ],
+              "S": [
+                20467704,
+                5731187
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 0,
+                "positive": 84,
+                "zero": 0
+              },
+              "P": {
+                "negative": 0,
+                "positive": 42,
+                "zero": 42
+              },
+              "S": {
+                "negative": 42,
+                "positive": 42,
+                "zero": 0
+              }
+            },
+            "member_count": 84,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 84
+            },
+            "member_fraction": [
+              2,
+              343
+            ],
+            "signed_source_atom_count": 3,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 2
+          },
+          "sym3_coefficient_curve": {
+            "complement_mean": {
+              "D": [
+                -56008,
+                400967
+              ],
+              "P": [
+                -144024,
+                400967
+              ],
+              "S": [
+                -203160,
+                2806769
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                112,
+                9
+              ],
+              "P": [
+                -64,
+                9
+              ],
+              "S": [
+                8,
+                3
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                45412376,
+                3608703
+              ],
+              "P": [
+                -24365672,
+                3608703
+              ],
+              "S": [
+                23063632,
+                8420307
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 0,
+                "positive": 378,
+                "zero": 0
+              },
+              "P": {
+                "negative": 336,
+                "positive": 0,
+                "zero": 42
+              },
+              "S": {
+                "negative": 0,
+                "positive": 42,
+                "zero": 336
+              }
+            },
+            "member_count": 378,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 42
+            },
+            "member_fraction": [
+              9,
+              343
+            ],
+            "signed_source_atom_count": 2,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 2
+          },
+          "sym3_generic_integer_trace_candidate": {
+            "complement_mean": {
+              "D": [
+                59240,
+                410571
+              ],
+              "P": [
+                -11624,
+                21609
+              ],
+              "S": [
+                -67720,
+                957999
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                16,
+                1
+              ],
+              "P": [
+                0,
+                1
+              ],
+              "S": [
+                24,
+                1
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                6509896,
+                410571
+              ],
+              "P": [
+                11624,
+                21609
+              ],
+              "S": [
+                23059696,
+                957999
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 0,
+                "positive": 42,
+                "zero": 0
+              },
+              "P": {
+                "negative": 0,
+                "positive": 0,
+                "zero": 42
+              },
+              "S": {
+                "negative": 0,
+                "positive": 42,
+                "zero": 0
+              }
+            },
+            "member_count": 42,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 42
+            },
+            "member_fraction": [
+              1,
+              343
+            ],
+            "signed_source_atom_count": 1,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 1
+          },
+          "sym3_nodal_ghost": {
+            "complement_mean": {
+              "D": [
+                -14720,
+                160867
+              ],
+              "P": [
+                -288048,
+                804335
+              ],
+              "S": [
+                -2952,
+                5630345
+              ]
+            },
+            "conditional_mean": {
+              "D": [
+                12,
+                1
+              ],
+              "P": [
+                -8,
+                1
+              ],
+              "S": [
+                0,
+                1
+              ]
+            },
+            "conditional_minus_complement": {
+              "D": [
+                1945124,
+                160867
+              ],
+              "P": [
+                -6146632,
+                804335
+              ],
+              "S": [
+                2952,
+                5630345
+              ]
+            },
+            "conditional_sign_member_counts": {
+              "D": {
+                "negative": 0,
+                "positive": 336,
+                "zero": 0
+              },
+              "P": {
+                "negative": 336,
+                "positive": 0,
+                "zero": 0
+              },
+              "S": {
+                "negative": 0,
+                "positive": 0,
+                "zero": 336
+              }
+            },
+            "member_count": 336,
+            "member_count_in_each_selector_outer_one_percent_tail": {
+              "D": 0,
+              "P": 0,
+              "S": 0
+            },
+            "member_fraction": [
+              8,
+              343
+            ],
+            "signed_source_atom_count": 1,
+            "status": "NONEMPTY_EXACT_CONDITIONAL",
+            "twist_quotiented_coefficient_state_count": 1
+          }
+        },
+        "input_signed_source_atom_count": 138,
+        "joint_selector_law": {
+          "atom_columns": [
+            "P_numerator",
+            "P_denominator",
+            "D_numerator",
+            "D_denominator",
+            "S_numerator",
+            "S_denominator",
+            "member_count"
+          ],
+          "atoms": [
+            [
+              -31320,
+              2401,
+              26826,
+              2401,
+              -77466,
+              16807,
+              42
+            ],
+            [
+              -31088,
+              2401,
+              41448,
+              2401,
+              0,
+              1,
+              42
+            ],
+            [
+              -23368,
+              2401,
+              5308,
+              2401,
+              0,
+              1,
+              168
+            ],
+            [
+              -400,
+              49,
+              334,
+              49,
+              -18576,
+              2401,
+              168
+            ],
+            [
+              -8,
+              1,
+              12,
+              1,
+              0,
+              1,
+              336
+            ],
+            [
+              -17280,
+              2401,
+              17896,
+              2401,
+              -23784,
+              16807,
+              252
+            ],
+            [
+              -17280,
+              2401,
+              36656,
+              2401,
+              23784,
+              16807,
+              252
+            ],
+            [
+              -15528,
+              2401,
+              18258,
+              2401,
+              3174,
+              16807,
+              210
+            ],
+            [
+              -312,
+              49,
+              450,
+              49,
+              -528,
+              2401,
+              168
+            ],
+            [
+              -14704,
+              2401,
+              13654,
+              2401,
+              6480,
+              16807,
+              252
+            ],
+            [
+              -13960,
+              2401,
+              24838,
+              2401,
+              -11250,
+              16807,
+              84
+            ],
+            [
+              -12888,
+              2401,
+              8478,
+              2401,
+              3390,
+              16807,
+              336
+            ],
+            [
+              -11880,
+              2401,
+              40468,
+              2401,
+              71952,
+              16807,
+              126
+            ],
+            [
+              -11568,
+              2401,
+              26478,
+              2401,
+              -17040,
+              16807,
+              672
+            ],
+            [
+              -10872,
+              2401,
+              -6838,
+              2401,
+              2064,
+              16807,
+              84
+            ],
+            [
+              -10872,
+              2401,
+              11922,
+              2401,
+              2064,
+              16807,
+              42
+            ],
+            [
+              -10424,
+              2401,
+              -7986,
+              2401,
+              23694,
+              16807,
+              126
+            ],
+            [
+              -10368,
+              2401,
+              -3240,
+              2401,
+              -57576,
+              16807,
+              336
+            ],
+            [
+              -10200,
+              2401,
+              3018,
+              2401,
+              -1200,
+              2401,
+              84
+            ],
+            [
+              -9720,
+              2401,
+              -7430,
+              2401,
+              3174,
+              16807,
+              126
+            ],
+            [
+              -9328,
+              2401,
+              2440,
+              2401,
+              0,
+              1,
+              546
+            ],
+            [
+              -8808,
+              2401,
+              6582,
+              2401,
+              -83010,
+              16807,
+              168
+            ],
+            [
+              -8520,
+              2401,
+              -7230,
+              2401,
+              14694,
+              16807,
+              42
+            ],
+            [
+              -8208,
+              2401,
+              -11210,
+              2401,
+              70320,
+              16807,
+              42
+            ],
+            [
+              -8184,
+              2401,
+              26874,
+              2401,
+              -2790,
+              2401,
+              168
+            ],
+            [
+              -7512,
+              2401,
+              -2988,
+              2401,
+              53304,
+              16807,
+              252
+            ],
+            [
+              -7184,
+              2401,
+              -9378,
+              2401,
+              22800,
+              16807,
+              504
+            ],
+            [
+              -7128,
+              2401,
+              8500,
+              2401,
+              -456,
+              16807,
+              84
+            ],
+            [
+              -6808,
+              2401,
+              -2390,
+              2401,
+              -30186,
+              16807,
+              210
+            ],
+            [
+              -120,
+              49,
+              60,
+              49,
+              -8328,
+              2401,
+              168
+            ],
+            [
+              -4160,
+              2401,
+              -5472,
+              2401,
+              -153528,
+              16807,
+              420
+            ],
+            [
+              -4160,
+              2401,
+              40056,
+              2401,
+              153528,
+              16807,
+              84
+            ],
+            [
+              -3928,
+              2401,
+              25978,
+              2401,
+              -18576,
+              16807,
+              126
+            ],
+            [
+              -72,
+              49,
+              -250,
+              49,
+              7890,
+              2401,
+              252
+            ],
+            [
+              -2928,
+              2401,
+              -7362,
+              2401,
+              -61776,
+              16807,
+              672
+            ],
+            [
+              -1584,
+              2401,
+              -10848,
+              2401,
+              81840,
+              16807,
+              756
+            ],
+            [
+              -1584,
+              2401,
+              -7936,
+              2401,
+              81840,
+              16807,
+              84
+            ],
+            [
+              0,
+              1,
+              16,
+              1,
+              24,
+              1,
+              42
+            ],
+            [
+              360,
+              2401,
+              -1662,
+              2401,
+              2256,
+              2401,
+              84
+            ],
+            [
+              936,
+              2401,
+              -15566,
+              2401,
+              13392,
+              2401,
+              84
+            ],
+            [
+              1032,
+              2401,
+              23790,
+              2401,
+              -15906,
+              16807,
+              84
+            ],
+            [
+              24,
+              49,
+              -234,
+              49,
+              -14430,
+              2401,
+              252
+            ],
+            [
+              3216,
+              2401,
+              -3216,
+              2401,
+              -114096,
+              16807,
+              336
+            ],
+            [
+              3960,
+              2401,
+              -12164,
+              2401,
+              -246816,
+              16807,
+              84
+            ],
+            [
+              3960,
+              2401,
+              35996,
+              2401,
+              246816,
+              16807,
+              84
+            ],
+            [
+              4056,
+              2401,
+              -12876,
+              2401,
+              61680,
+              16807,
+              168
+            ],
+            [
+              5192,
+              2401,
+              -14222,
+              2401,
+              -143280,
+              16807,
+              168
+            ],
+            [
+              5848,
+              2401,
+              -18798,
+              2401,
+              131094,
+              16807,
+              210
+            ],
+            [
+              6480,
+              2401,
+              20358,
+              2401,
+              -15600,
+              16807,
+              168
+            ],
+            [
+              6536,
+              2401,
+              -17876,
+              2401,
+              68904,
+              16807,
+              168
+            ],
+            [
+              7160,
+              2401,
+              -7454,
+              2401,
+              114966,
+              16807,
+              126
+            ],
+            [
+              8760,
+              2401,
+              -15102,
+              2401,
+              -181050,
+              16807,
+              168
+            ],
+            [
+              9672,
+              2401,
+              12378,
+              2401,
+              -7050,
+              16807,
+              126
+            ],
+            [
+              9792,
+              2401,
+              -10408,
+              2401,
+              -284040,
+              16807,
+              252
+            ],
+            [
+              9792,
+              2401,
+              11208,
+              2401,
+              -284040,
+              16807,
+              42
+            ],
+            [
+              9792,
+              2401,
+              29632,
+              2401,
+              284040,
+              16807,
+              126
+            ],
+            [
+              9880,
+              2401,
+              4596,
+              2401,
+              -135984,
+              16807,
+              126
+            ],
+            [
+              10440,
+              2401,
+              -7794,
+              2401,
+              93678,
+              16807,
+              42
+            ],
+            [
+              10800,
+              2401,
+              -21370,
+              2401,
+              159984,
+              16807,
+              336
+            ],
+            [
+              10800,
+              2401,
+              -9834,
+              2401,
+              159984,
+              16807,
+              126
+            ],
+            [
+              11472,
+              2401,
+              -13530,
+              2401,
+              -203376,
+              16807,
+              252
+            ],
+            [
+              248,
+              49,
+              46,
+              7,
+              -3510,
+              2401,
+              84
+            ],
+            [
+              12456,
+              2401,
+              -486,
+              2401,
+              -138000,
+              16807,
+              126
+            ],
+            [
+              12872,
+              2401,
+              -8882,
+              2401,
+              -27918,
+              2401,
+              84
+            ],
+            [
+              272,
+              49,
+              208,
+              49,
+              -2448,
+              2401,
+              84
+            ],
+            [
+              14160,
+              2401,
+              -20040,
+              2401,
+              16224,
+              16807,
+              336
+            ],
+            [
+              15336,
+              2401,
+              -22658,
+              2401,
+              173550,
+              16807,
+              168
+            ],
+            [
+              320,
+              49,
+              -368,
+              49,
+              27000,
+              2401,
+              252
+            ],
+            [
+              17736,
+              2401,
+              10194,
+              2401,
+              -53040,
+              16807,
+              42
+            ],
+            [
+              17832,
+              2401,
+              -12540,
+              2401,
+              -40680,
+              16807,
+              168
+            ],
+            [
+              18520,
+              2401,
+              -810,
+              2401,
+              -2958,
+              2401,
+              84
+            ],
+            [
+              18952,
+              2401,
+              -21990,
+              2401,
+              165840,
+              16807,
+              168
+            ],
+            [
+              19512,
+              2401,
+              -12372,
+              2401,
+              137184,
+              16807,
+              168
+            ],
+            [
+              21096,
+              2401,
+              -18646,
+              2401,
+              132294,
+              16807,
+              168
+            ],
+            [
+              432,
+              49,
+              -242,
+              49,
+              10032,
+              2401,
+              336
+            ]
+          ],
+          "support_size": 75
+        },
+        "marginal_selector_laws": {
+          "D": {
+            "atom_columns": [
+              "value_numerator",
+              "value_denominator",
+              "member_count"
+            ],
+            "atoms": [
+              [
+                -22658,
+                2401,
+                168
+              ],
+              [
+                -21990,
+                2401,
+                168
+              ],
+              [
+                -21370,
+                2401,
+                336
+              ],
+              [
+                -20040,
+                2401,
+                336
+              ],
+              [
+                -18798,
+                2401,
+                210
+              ],
+              [
+                -18646,
+                2401,
+                168
+              ],
+              [
+                -368,
+                49,
+                252
+              ],
+              [
+                -17876,
+                2401,
+                168
+              ],
+              [
+                -15566,
+                2401,
+                84
+              ],
+              [
+                -15102,
+                2401,
+                168
+              ],
+              [
+                -14222,
+                2401,
+                168
+              ],
+              [
+                -13530,
+                2401,
+                252
+              ],
+              [
+                -12876,
+                2401,
+                168
+              ],
+              [
+                -12540,
+                2401,
+                168
+              ],
+              [
+                -12372,
+                2401,
+                168
+              ],
+              [
+                -250,
+                49,
+                252
+              ],
+              [
+                -12164,
+                2401,
+                84
+              ],
+              [
+                -242,
+                49,
+                336
+              ],
+              [
+                -234,
+                49,
+                252
+              ],
+              [
+                -11210,
+                2401,
+                42
+              ],
+              [
+                -10848,
+                2401,
+                756
+              ],
+              [
+                -10408,
+                2401,
+                252
+              ],
+              [
+                -9834,
+                2401,
+                126
+              ],
+              [
+                -9378,
+                2401,
+                504
+              ],
+              [
+                -8882,
+                2401,
+                84
+              ],
+              [
+                -7986,
+                2401,
+                126
+              ],
+              [
+                -7936,
+                2401,
+                84
+              ],
+              [
+                -7794,
+                2401,
+                42
+              ],
+              [
+                -7454,
+                2401,
+                126
+              ],
+              [
+                -7430,
+                2401,
+                126
+              ],
+              [
+                -7362,
+                2401,
+                672
+              ],
+              [
+                -7230,
+                2401,
+                42
+              ],
+              [
+                -6838,
+                2401,
+                84
+              ],
+              [
+                -5472,
+                2401,
+                420
+              ],
+              [
+                -3240,
+                2401,
+                336
+              ],
+              [
+                -3216,
+                2401,
+                336
+              ],
+              [
+                -2988,
+                2401,
+                252
+              ],
+              [
+                -2390,
+                2401,
+                210
+              ],
+              [
+                -1662,
+                2401,
+                84
+              ],
+              [
+                -810,
+                2401,
+                84
+              ],
+              [
+                -486,
+                2401,
+                126
+              ],
+              [
+                2440,
+                2401,
+                546
+              ],
+              [
+                60,
+                49,
+                168
+              ],
+              [
+                3018,
+                2401,
+                84
+              ],
+              [
+                4596,
+                2401,
+                126
+              ],
+              [
+                5308,
+                2401,
+                168
+              ],
+              [
+                6582,
+                2401,
+                168
+              ],
+              [
+                8478,
+                2401,
+                336
+              ],
+              [
+                8500,
+                2401,
+                84
+              ],
+              [
+                208,
+                49,
+                84
+              ],
+              [
+                10194,
+                2401,
+                42
+              ],
+              [
+                11208,
+                2401,
+                42
+              ],
+              [
+                11922,
+                2401,
+                42
+              ],
+              [
+                12378,
+                2401,
+                126
+              ],
+              [
+                13654,
+                2401,
+                252
+              ],
+              [
+                46,
+                7,
+                84
+              ],
+              [
+                334,
+                49,
+                168
+              ],
+              [
+                17896,
+                2401,
+                252
+              ],
+              [
+                18258,
+                2401,
+                210
+              ],
+              [
+                20358,
+                2401,
+                168
+              ],
+              [
+                450,
+                49,
+                168
+              ],
+              [
+                23790,
+                2401,
+                84
+              ],
+              [
+                24838,
+                2401,
+                84
+              ],
+              [
+                25978,
+                2401,
+                126
+              ],
+              [
+                26478,
+                2401,
+                672
+              ],
+              [
+                26826,
+                2401,
+                42
+              ],
+              [
+                26874,
+                2401,
+                168
+              ],
+              [
+                12,
+                1,
+                336
+              ],
+              [
+                29632,
+                2401,
+                126
+              ],
+              [
+                35996,
+                2401,
+                84
+              ],
+              [
+                36656,
+                2401,
+                252
+              ],
+              [
+                16,
+                1,
+                42
+              ],
+              [
+                40056,
+                2401,
+                84
+              ],
+              [
+                40468,
+                2401,
+                126
+              ],
+              [
+                41448,
+                2401,
+                42
+              ]
+            ],
+            "maximum_absolute_value": [
+              41448,
+              2401
+            ],
+            "mean": [
+              156896,
+              823543
+            ],
+            "mean_absolute_value": [
+              4762368,
+              823543
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                40468,
+                2401
+              ],
+              "definition": "all members with |selector| at least the largest threshold whose tied tail has mass >= 1%",
+              "member_count_including_ties": 168,
+              "member_fraction_including_ties": [
+                4,
+                343
+              ],
+              "sign_member_counts": {
+                "negative": 0,
+                "positive": 168,
+                "zero": 0
+              },
+              "target_fraction": [
+                1,
+                100
+              ],
+              "target_member_count_ceiling": 145
+            },
+            "sign_member_counts": {
+              "negative": 8820,
+              "positive": 5586,
+              "zero": 0
+            },
+            "support_maximum": [
+              41448,
+              2401
+            ],
+            "support_minimum": [
+              -22658,
+              2401
+            ],
+            "support_size": 75
+          },
+          "P": {
+            "atom_columns": [
+              "value_numerator",
+              "value_denominator",
+              "member_count"
+            ],
+            "atoms": [
+              [
+                -31320,
+                2401,
+                42
+              ],
+              [
+                -31088,
+                2401,
+                42
+              ],
+              [
+                -23368,
+                2401,
+                168
+              ],
+              [
+                -400,
+                49,
+                168
+              ],
+              [
+                -8,
+                1,
+                336
+              ],
+              [
+                -17280,
+                2401,
+                504
+              ],
+              [
+                -15528,
+                2401,
+                210
+              ],
+              [
+                -312,
+                49,
+                168
+              ],
+              [
+                -14704,
+                2401,
+                252
+              ],
+              [
+                -13960,
+                2401,
+                84
+              ],
+              [
+                -12888,
+                2401,
+                336
+              ],
+              [
+                -11880,
+                2401,
+                126
+              ],
+              [
+                -11568,
+                2401,
+                672
+              ],
+              [
+                -10872,
+                2401,
+                126
+              ],
+              [
+                -10424,
+                2401,
+                126
+              ],
+              [
+                -10368,
+                2401,
+                336
+              ],
+              [
+                -10200,
+                2401,
+                84
+              ],
+              [
+                -9720,
+                2401,
+                126
+              ],
+              [
+                -9328,
+                2401,
+                546
+              ],
+              [
+                -8808,
+                2401,
+                168
+              ],
+              [
+                -8520,
+                2401,
+                42
+              ],
+              [
+                -8208,
+                2401,
+                42
+              ],
+              [
+                -8184,
+                2401,
+                168
+              ],
+              [
+                -7512,
+                2401,
+                252
+              ],
+              [
+                -7184,
+                2401,
+                504
+              ],
+              [
+                -7128,
+                2401,
+                84
+              ],
+              [
+                -6808,
+                2401,
+                210
+              ],
+              [
+                -120,
+                49,
+                168
+              ],
+              [
+                -4160,
+                2401,
+                504
+              ],
+              [
+                -3928,
+                2401,
+                126
+              ],
+              [
+                -72,
+                49,
+                252
+              ],
+              [
+                -2928,
+                2401,
+                672
+              ],
+              [
+                -1584,
+                2401,
+                840
+              ],
+              [
+                0,
+                1,
+                42
+              ],
+              [
+                360,
+                2401,
+                84
+              ],
+              [
+                936,
+                2401,
+                84
+              ],
+              [
+                1032,
+                2401,
+                84
+              ],
+              [
+                24,
+                49,
+                252
+              ],
+              [
+                3216,
+                2401,
+                336
+              ],
+              [
+                3960,
+                2401,
+                168
+              ],
+              [
+                4056,
+                2401,
+                168
+              ],
+              [
+                5192,
+                2401,
+                168
+              ],
+              [
+                5848,
+                2401,
+                210
+              ],
+              [
+                6480,
+                2401,
+                168
+              ],
+              [
+                6536,
+                2401,
+                168
+              ],
+              [
+                7160,
+                2401,
+                126
+              ],
+              [
+                8760,
+                2401,
+                168
+              ],
+              [
+                9672,
+                2401,
+                126
+              ],
+              [
+                9792,
+                2401,
+                420
+              ],
+              [
+                9880,
+                2401,
+                126
+              ],
+              [
+                10440,
+                2401,
+                42
+              ],
+              [
+                10800,
+                2401,
+                462
+              ],
+              [
+                11472,
+                2401,
+                252
+              ],
+              [
+                248,
+                49,
+                84
+              ],
+              [
+                12456,
+                2401,
+                126
+              ],
+              [
+                12872,
+                2401,
+                84
+              ],
+              [
+                272,
+                49,
+                84
+              ],
+              [
+                14160,
+                2401,
+                336
+              ],
+              [
+                15336,
+                2401,
+                168
+              ],
+              [
+                320,
+                49,
+                252
+              ],
+              [
+                17736,
+                2401,
+                42
+              ],
+              [
+                17832,
+                2401,
+                168
+              ],
+              [
+                18520,
+                2401,
+                84
+              ],
+              [
+                18952,
+                2401,
+                168
+              ],
+              [
+                19512,
+                2401,
+                168
+              ],
+              [
+                21096,
+                2401,
+                168
+              ],
+              [
+                432,
+                49,
+                336
+              ]
+            ],
+            "maximum_absolute_value": [
+              31320,
+              2401
+            ],
+            "mean": [
+              -441712,
+              823543
+            ],
+            "mean_absolute_value": [
+              3440128,
+              823543
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                23368,
+                2401
+              ],
+              "definition": "all members with |selector| at least the largest threshold whose tied tail has mass >= 1%",
+              "member_count_including_ties": 252,
+              "member_fraction_including_ties": [
+                6,
+                343
+              ],
+              "sign_member_counts": {
+                "negative": 252,
+                "positive": 0,
+                "zero": 0
+              },
+              "target_fraction": [
+                1,
+                100
+              ],
+              "target_member_count_ceiling": 145
+            },
+            "sign_member_counts": {
+              "negative": 8484,
+              "positive": 5880,
+              "zero": 42
+            },
+            "support_maximum": [
+              432,
+              49
+            ],
+            "support_minimum": [
+              -31320,
+              2401
+            ],
+            "support_size": 67
+          },
+          "S": {
+            "atom_columns": [
+              "value_numerator",
+              "value_denominator",
+              "member_count"
+            ],
+            "atoms": [
+              [
+                -284040,
+                16807,
+                294
+              ],
+              [
+                -246816,
+                16807,
+                84
+              ],
+              [
+                -203376,
+                16807,
+                252
+              ],
+              [
+                -27918,
+                2401,
+                84
+              ],
+              [
+                -181050,
+                16807,
+                168
+              ],
+              [
+                -153528,
+                16807,
+                420
+              ],
+              [
+                -143280,
+                16807,
+                168
+              ],
+              [
+                -138000,
+                16807,
+                126
+              ],
+              [
+                -135984,
+                16807,
+                126
+              ],
+              [
+                -18576,
+                2401,
+                168
+              ],
+              [
+                -114096,
+                16807,
+                336
+              ],
+              [
+                -14430,
+                2401,
+                252
+              ],
+              [
+                -83010,
+                16807,
+                168
+              ],
+              [
+                -77466,
+                16807,
+                42
+              ],
+              [
+                -61776,
+                16807,
+                672
+              ],
+              [
+                -8328,
+                2401,
+                168
+              ],
+              [
+                -57576,
+                16807,
+                336
+              ],
+              [
+                -53040,
+                16807,
+                42
+              ],
+              [
+                -40680,
+                16807,
+                168
+              ],
+              [
+                -30186,
+                16807,
+                210
+              ],
+              [
+                -3510,
+                2401,
+                84
+              ],
+              [
+                -23784,
+                16807,
+                252
+              ],
+              [
+                -2958,
+                2401,
+                84
+              ],
+              [
+                -2790,
+                2401,
+                168
+              ],
+              [
+                -18576,
+                16807,
+                126
+              ],
+              [
+                -2448,
+                2401,
+                84
+              ],
+              [
+                -17040,
+                16807,
+                672
+              ],
+              [
+                -15906,
+                16807,
+                84
+              ],
+              [
+                -15600,
+                16807,
+                168
+              ],
+              [
+                -11250,
+                16807,
+                84
+              ],
+              [
+                -1200,
+                2401,
+                84
+              ],
+              [
+                -7050,
+                16807,
+                126
+              ],
+              [
+                -528,
+                2401,
+                168
+              ],
+              [
+                -456,
+                16807,
+                84
+              ],
+              [
+                0,
+                1,
+                1092
+              ],
+              [
+                2064,
+                16807,
+                126
+              ],
+              [
+                3174,
+                16807,
+                336
+              ],
+              [
+                3390,
+                16807,
+                336
+              ],
+              [
+                6480,
+                16807,
+                252
+              ],
+              [
+                14694,
+                16807,
+                42
+              ],
+              [
+                2256,
+                2401,
+                84
+              ],
+              [
+                16224,
+                16807,
+                336
+              ],
+              [
+                22800,
+                16807,
+                504
+              ],
+              [
+                23694,
+                16807,
+                126
+              ],
+              [
+                23784,
+                16807,
+                252
+              ],
+              [
+                53304,
+                16807,
+                252
+              ],
+              [
+                7890,
+                2401,
+                252
+              ],
+              [
+                61680,
+                16807,
+                168
+              ],
+              [
+                68904,
+                16807,
+                168
+              ],
+              [
+                10032,
+                2401,
+                336
+              ],
+              [
+                70320,
+                16807,
+                42
+              ],
+              [
+                71952,
+                16807,
+                126
+              ],
+              [
+                81840,
+                16807,
+                840
+              ],
+              [
+                93678,
+                16807,
+                42
+              ],
+              [
+                13392,
+                2401,
+                84
+              ],
+              [
+                114966,
+                16807,
+                126
+              ],
+              [
+                131094,
+                16807,
+                210
+              ],
+              [
+                132294,
+                16807,
+                168
+              ],
+              [
+                137184,
+                16807,
+                168
+              ],
+              [
+                153528,
+                16807,
+                84
+              ],
+              [
+                159984,
+                16807,
+                462
+              ],
+              [
+                165840,
+                16807,
+                168
+              ],
+              [
+                173550,
+                16807,
+                168
+              ],
+              [
+                27000,
+                2401,
+                252
+              ],
+              [
+                246816,
+                16807,
+                84
+              ],
+              [
+                284040,
+                16807,
+                126
+              ],
+              [
+                24,
+                1,
+                42
+              ]
+            ],
+            "maximum_absolute_value": [
+              24,
+              1
+            ],
+            "mean": [
+              -2952,
+              5764801
+            ],
+            "mean_absolute_value": [
+              3739380,
+              823543
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                284040,
+                16807
+              ],
+              "definition": "all members with |selector| at least the largest threshold whose tied tail has mass >= 1%",
+              "member_count_including_ties": 462,
+              "member_fraction_including_ties": [
+                11,
+                343
+              ],
+              "sign_member_counts": {
+                "negative": 294,
+                "positive": 168,
+                "zero": 0
+              },
+              "target_fraction": [
+                1,
+                100
+              ],
+              "target_member_count_ceiling": 145
+            },
+            "sign_member_counts": {
+              "negative": 6552,
+              "positive": 6762,
+              "zero": 1092
+            },
+            "support_maximum": [
+              24,
+              1
+            ],
+            "support_minimum": [
+              -284040,
+              16807
+            ],
+            "support_size": 67
+          }
+        },
+        "mean_vector_P_D_S": [
+          [
+            -441712,
+            823543
+          ],
+          [
+            156896,
+            823543
+          ],
+          [
+            -2952,
+            5764801
+          ]
+        ],
+        "member_count": 14406,
+        "q": 7,
+        "raw_second_moment_matrix_P_D_S": [
+          [
+            [
+              46831252352,
+              1977326743
+            ],
+            [
+              -40931231232,
+              1977326743
+            ],
+            [
+              9892612224,
+              1977326743
+            ]
+          ],
+          [
+            [
+              -40931231232,
+              1977326743
+            ],
+            [
+              94813093280,
+              1977326743
+            ],
+            [
+              -2893214208,
+              1977326743
+            ]
+          ],
+          [
+            [
+              9892612224,
+              1977326743
+            ],
+            [
+              -2893214208,
+              1977326743
+            ],
+            [
+              549293171328,
+              13841287201
+            ]
+          ]
+        ],
+        "status": "EXACT_MEMBER_WEIGHT_LAW_FROM_FROZEN_COMPLETE_HISTOGRAM",
+        "twist_quotiented_input_state_count": 75,
+        "uniform_affine_orbit_weighting": {
+          "B_bucket_count": 55,
+          "ambiguous_B_bucket_count": 17,
+          "ambiguous_B_buckets": [
+            {
+              "B_numerator_J": -100,
+              "distinct_selector_triple_count": 3,
+              "member_count": 420
+            },
+            {
+              "B_numerator_J": -64,
+              "distinct_selector_triple_count": 2,
+              "member_count": 168
+            },
+            {
+              "B_numerator_J": -50,
+              "distinct_selector_triple_count": 2,
+              "member_count": 210
+            },
+            {
+              "B_numerator_J": -36,
+              "distinct_selector_triple_count": 2,
+              "member_count": 504
+            },
+            {
+              "B_numerator_J": -35,
+              "distinct_selector_triple_count": 2,
+              "member_count": 336
+            },
+            {
+              "B_numerator_J": -22,
+              "distinct_selector_triple_count": 2,
+              "member_count": 840
+            },
+            {
+              "B_numerator_J": -11,
+              "distinct_selector_triple_count": 3,
+              "member_count": 336
+            },
+            {
+              "B_numerator_J": -4,
+              "distinct_selector_triple_count": 2,
+              "member_count": 504
+            },
+            {
+              "B_numerator_J": -2,
+              "distinct_selector_triple_count": 2,
+              "member_count": 210
+            },
+            {
+              "B_numerator_J": 5,
+              "distinct_selector_triple_count": 3,
+              "member_count": 672
+            },
+            {
+              "B_numerator_J": 10,
+              "distinct_selector_triple_count": 2,
+              "member_count": 924
+            },
+            {
+              "B_numerator_J": 13,
+              "distinct_selector_triple_count": 2,
+              "member_count": 294
+            },
+            {
+              "B_numerator_J": 20,
+              "distinct_selector_triple_count": 2,
+              "member_count": 840
+            },
+            {
+              "B_numerator_J": 26,
+              "distinct_selector_triple_count": 2,
+              "member_count": 462
+            },
+            {
+              "B_numerator_J": 52,
+              "distinct_selector_triple_count": 2,
+              "member_count": 882
+            },
+            {
+              "B_numerator_J": 61,
+              "distinct_selector_triple_count": 2,
+              "member_count": 168
+            },
+            {
+              "B_numerator_J": 110,
+              "distinct_selector_triple_count": 2,
+              "member_count": 126
+            }
+          ],
+          "exact_uniform_orbit_selector_law": null,
+          "member_count_in_ambiguous_B_buckets": 7896,
+          "refusal_reason": "an ambiguous B bucket contains multiple selector triples but only one aggregate orbit count, so allocating its orbits would add information not present in the source",
+          "selector_invariance": "the locked affine action changes a_D only by sign and fixes b_D; P,D,S depend only on (a_D^2,b_D), so each selector is orbit-invariant",
+          "source_aggregation": "exact orbit counts are retained only by B_numerator_J",
+          "source_orbit_size_histogram": {
+            "21": 12,
+            "42": 337
+          },
+          "source_total_affine_orbit_count": 349,
+          "status": "NOT_IDENTIFIABLE_FROM_B_AGGREGATED_ORBIT_SOURCE"
+        }
+      }
+    ],
+    "status": "EXACT_ONLY_FOR_Q_3_5_7",
+    "weighting": "uniform weight on every monic squarefree quintic member, inherited without reweighting from the locked joint coefficient histogram"
+  },
+  "exceptional_stratum_contract": {
+    "integral_plus_q_split": "formal factorization into two integral reciprocal quadratics with constant q; this is a coefficient predicate, not a polarization theorem",
+    "repeated_plus_q_split": "the repeated-factor sublocus a_D^2-4*b_D+8*q=0",
+    "sym3_coefficient_curve": "the cleared compact Sym^3 coefficient equation -q*a^4+q*a^2*b+q^2*a^2+b^3-2*q*b^2=0",
+    "sym3_generic_integer_trace_candidate": "off the nodal divisor, the recovered t=a(q-b)/(a^2-b) is integral and Hasse-admissible; no origin or monodromy claim is made",
+    "sym3_nodal_ghost": "the point (a,b)=(0,0), on the coefficient curve but not an odd-q integral elliptic Sym^3 trace image"
+  },
+  "interpretation_firewall": {
+    "compact_theorem": "the locked packet proves ambient Haar means zero and the named subgroup Haar signatures (2,0,0), (0,2,0), and (0,0,2)",
+    "finite_arithmetic_fact": "this packet computes exact selector laws on three frozen member-uniform families",
+    "forbidden_reading": "a finite mean, sign, tail, or coefficient-locus conditional does not identify monodromy, an endomorphism, a correspondence, a motive, or an equidistribution law and has no RH/GRH implication",
+    "orbit_measure_warning": "member-uniform and uniform affine-orbit laws differ; the latter is refused where the B-aggregated source does not identify it"
+  },
+  "normalization_and_adapter": {
+    "adapter": "selector_values_from_squared_first_elementary(A,e2)",
+    "normalized_selector_quartic": "Z^4-e1*Z^3+e2*Z^2-e1*Z+1",
+    "rational_coordinates": "A=e1^2=a_D^2/q and e2=b_D/q",
+    "selector_definitions": {
+      "D": "-I_(1,1)+2*I_(1,5)+I_(4,4)",
+      "I_(r,s)": "p_r*p_s-p_(r+s)",
+      "P": "I_(2,2)-I_(4,4)",
+      "S": "-2*I_(2,8)"
+    },
+    "selector_order": [
+      "P",
+      "D",
+      "S"
+    ],
+    "sign_relation": "e1=-a_D/sqrt(q), irrelevant because P,D,S are even in e1",
+    "source_reciprocal_quartic": "T^4+a_D*T^3+b_D*T^2+q*a_D*T+q^2"
+  },
+  "payload_sha256": "9e2f94b1683f354e2d0eddd9ef9261406f147d6fd071a40d4376a043898b9638",
+  "producer_and_source_locks": {
+    "locks": {
+      "affine_action": {
+        "path": "research/l-families/atlas/function_field/genus2_affine_orbits.py",
+        "sha256_lf_normalized": "32e440750b2832ec4cc84473187b4b1aa6396eda87c64f5ac845b2a96dc88f08"
+      },
+      "coefficient_arithmetic": {
+        "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
+        "sha256_lf_normalized": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935"
+      },
+      "histogram_fixture": {
+        "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+        "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+        "sha256_lf_normalized": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e"
+      },
+      "histogram_producer": {
+        "path": "research/l-families/atlas/function_field/balanced_control_family_scan.py",
+        "sha256_lf_normalized": "7192fa26b0ea17cb68cff288620ea4dfb124e07807986d9c74fbd37e66087d3b"
+      },
+      "note": {
+        "path": "research/l-families/atlas/function_field/GENUS2_INTERFEROMETRY_ARITHMETIC_PUSHFORWARD.md",
+        "sha256_lf_normalized": "8e8e78c0c04a2a7ca9ca4253afc1f3f8208f504a09be2279902398f4c929ef34"
+      },
+      "producer": {
+        "path": "research/l-families/atlas/function_field/genus2_interferometry_arithmetic_pushforward.py",
+        "sha256_lf_normalized": "a9a89e9b39c263e79d38105757de4273fbcaf02fb6b82a847764aa734f712a23"
+      },
+      "selector_note": {
+        "path": "research/l-families/atlas/function_field/FROBENIUS_INTERFEROMETRY_SUBGROUP_SELECTORS.md",
+        "sha256_lf_normalized": "c7637d454f1fb102555e6723dd8d93a4b6a27363d80cbbb9a03061f614bd3221"
+      },
+      "selector_producer": {
+        "path": "research/l-families/atlas/function_field/frobenius_interferometry_subgroup_selectors.py",
+        "sha256_lf_normalized": "48474ebcbb99efea23227126f66f566fdb525a3c9ae9e81a77bf83d4075f55e7"
+      },
+      "test": {
+        "path": "tests/test_genus2_interferometry_arithmetic_pushforward.py",
+        "sha256_lf_normalized": "2d05aef02f5a781097971bd7674e5752d2bc4501217e465e336ccf8045d6b5c1"
+      }
+    },
+    "required_input_payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+    "required_lf_sha256": {
+      "affine_action": "32e440750b2832ec4cc84473187b4b1aa6396eda87c64f5ac845b2a96dc88f08",
+      "coefficient_arithmetic": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935",
+      "histogram_fixture": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e",
+      "histogram_producer": "7192fa26b0ea17cb68cff288620ea4dfb124e07807986d9c74fbd37e66087d3b",
+      "selector_note": "c7637d454f1fb102555e6723dd8d93a4b6a27363d80cbbb9a03061f614bd3221",
+      "selector_producer": "48474ebcbb99efea23227126f66f566fdb525a3c9ae9e81a77bf83d4075f55e7"
+    },
+    "required_member_ledger_sha256": {
+      "3": "e38543c4526e6b330f012274398a258f2d021ddae18442d2f0094d42ec229790",
+      "5": "69fe496e1cca2090ca62bf7622ff34c3ab3aef1b9268dfb41c4df94d380a9d0a",
+      "7": "c1d4ca30f45341de53af20ab4e4ca3f9bff79542146f1ac2230169eec9669655"
+    },
+    "validation_order": "LF-normalized primitive digests are checked before JSON parsing or selector-module execution; payload, embedded producer locks, coverage, member ledgers, atom counts, and member mass are then checked"
+  },
+  "raw_fixture_id": "FUNCTION_FIELD.GENUS2.INTERFEROMETRY.ARITHMETIC_PUSHFORWARD.Q3_Q5_Q7.V1",
+  "resource_contract": {
+    "external_dependencies": "none; Python 3.11+ standard library",
+    "finite_field_enumeration": false,
+    "floating_point_arithmetic": false,
+    "guarded_source_atom_visits": {
+      "q_3_source_atoms": 32,
+      "q_5_source_atoms": 81,
+      "q_7_source_atoms": 138,
+      "total": 251
+    },
+    "polynomial_or_curve_enumeration": false,
+    "random_sampling": false,
+    "root_finding": false,
+    "source_atom_cap_inclusive": 4096,
+    "source_atom_preflight_count": 251
+  },
+  "schema": "riemann.function_field.genus2_interferometry_arithmetic_pushforward.v1",
+  "scope": "member-uniform monic squarefree quintics over F_q for exactly q=3,5,7, using only the frozen complete coefficient histograms",
+  "status": "EXACT_BOUNDED_TRANSFORM_OF_SOURCE_LOCKED_COMPLETE_HISTOGRAMS"
+}

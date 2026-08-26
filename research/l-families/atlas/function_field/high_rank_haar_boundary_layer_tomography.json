@@ -1,0 +1,735 @@
+{
+  "exact_theorems": {
+    "ceiling_crossover": {
+      "fixed_ratio_limit": "N^3*P(X_N>lambda*N) -> H(lambda), 0<lambda<1",
+      "function": "H(lambda)=4/pi*integral_0^(1/lambda) t^2*1{|sin(t)|>lambda*t} dt",
+      "hard_cap": "P(X_N>x)=0 for x>=N",
+      "near_ceiling": {
+        "constant": {
+          "pi_power": -1,
+          "radical": "sqrt(6)",
+          "rational": [
+            8,
+            1
+          ]
+        },
+        "root_scale": "t_lambda~sqrt(6*(1-lambda))",
+        "statement": "H(lambda) ~ 8*sqrt(6)/pi*(1-lambda)^(3/2)"
+      },
+      "small_lambda": {
+        "constant": {
+          "pi_power": -2,
+          "rational": [
+            16,
+            9
+          ]
+        },
+        "statement": "lambda^3*H(lambda) -> 16/(9*pi^2)"
+      }
+    },
+    "endpoint_tomography": {
+      "critical_fraction": "1-beta in the window D<=N^(-beta)",
+      "distance": "D(theta)=min(theta,pi-theta)",
+      "fixed_scaled_window": "N^(3-p)*E[X_N^p*1{N*D<=a}] -> Psi_p(a)",
+      "phase_transition": {
+        "p_equals_3": "mass is uniform across logarithmic endpoint scales",
+        "p_greater_than_3": "all leading mass has an O(1/N) profile",
+        "p_less_than_3": "fixed O(1/N) endpoint mass is lower order"
+      },
+      "profile": "Psi_p(a)=4/pi*integral_0^a |sin(t)|^p*t^(2-p) dt",
+      "supercritical_fraction": "Psi_p(a)/C_p, increasing to 1 as a->infinity",
+      "supercritical_total": "C_p=4/pi*integral_0^infinity |sin(t)|^p*t^(2-p) dt"
+    },
+    "finite_N_ceiling": {
+      "controls": [
+        {
+          "N": 2,
+          "ceiling_probability_coefficient": {
+            "N_squared_minus_one": 3,
+            "formula": "8*sqrt(6)/(pi*(N^2-1)^(3/2))"
+          },
+          "ceiling_quadratic_drop": [
+            1,
+            2
+          ],
+          "series_in_theta_squared": [
+            [
+              1,
+              1
+            ],
+            [
+              -1,
+              2
+            ],
+            [
+              1,
+              24
+            ]
+          ]
+        },
+        {
+          "N": 3,
+          "ceiling_probability_coefficient": {
+            "N_squared_minus_one": 8,
+            "formula": "8*sqrt(6)/(pi*(N^2-1)^(3/2))"
+          },
+          "ceiling_quadratic_drop": [
+            4,
+            3
+          ],
+          "series_in_theta_squared": [
+            [
+              1,
+              1
+            ],
+            [
+              -4,
+              3
+            ],
+            [
+              4,
+              9
+            ]
+          ]
+        },
+        {
+          "N": 4,
+          "ceiling_probability_coefficient": {
+            "N_squared_minus_one": 15,
+            "formula": "8*sqrt(6)/(pi*(N^2-1)^(3/2))"
+          },
+          "ceiling_quadratic_drop": [
+            5,
+            2
+          ],
+          "series_in_theta_squared": [
+            [
+              1,
+              1
+            ],
+            [
+              -5,
+              2
+            ],
+            [
+              41,
+              24
+            ]
+          ]
+        },
+        {
+          "N": 5,
+          "ceiling_probability_coefficient": {
+            "N_squared_minus_one": 24,
+            "formula": "8*sqrt(6)/(pi*(N^2-1)^(3/2))"
+          },
+          "ceiling_quadratic_drop": [
+            4,
+            1
+          ],
+          "series_in_theta_squared": [
+            [
+              1,
+              1
+            ],
+            [
+              -4,
+              1
+            ],
+            [
+              68,
+              15
+            ]
+          ]
+        },
+        {
+          "N": 6,
+          "ceiling_probability_coefficient": {
+            "N_squared_minus_one": 35,
+            "formula": "8*sqrt(6)/(pi*(N^2-1)^(3/2))"
+          },
+          "ceiling_quadratic_drop": [
+            35,
+            6
+          ],
+          "series_in_theta_squared": [
+            [
+              1,
+              1
+            ],
+            [
+              -35,
+              6
+            ],
+            [
+              707,
+              72
+            ]
+          ]
+        },
+        {
+          "N": 7,
+          "ceiling_probability_coefficient": {
+            "N_squared_minus_one": 48,
+            "formula": "8*sqrt(6)/(pi*(N^2-1)^(3/2))"
+          },
+          "ceiling_quadratic_drop": [
+            8,
+            1
+          ],
+          "series_in_theta_squared": [
+            [
+              1,
+              1
+            ],
+            [
+              -8,
+              1
+            ],
+            [
+              56,
+              3
+            ]
+          ]
+        },
+        {
+          "N": 8,
+          "ceiling_probability_coefficient": {
+            "N_squared_minus_one": 63,
+            "formula": "8*sqrt(6)/(pi*(N^2-1)^(3/2))"
+          },
+          "ceiling_quadratic_drop": [
+            21,
+            2
+          ],
+          "series_in_theta_squared": [
+            [
+              1,
+              1
+            ],
+            [
+              -21,
+              2
+            ],
+            [
+              259,
+              8
+            ]
+          ]
+        },
+        {
+          "N": 9,
+          "ceiling_probability_coefficient": {
+            "N_squared_minus_one": 80,
+            "formula": "8*sqrt(6)/(pi*(N^2-1)^(3/2))"
+          },
+          "ceiling_quadratic_drop": [
+            40,
+            3
+          ],
+          "series_in_theta_squared": [
+            [
+              1,
+              1
+            ],
+            [
+              -40,
+              3
+            ],
+            [
+              472,
+              9
+            ]
+          ]
+        },
+        {
+          "N": 10,
+          "ceiling_probability_coefficient": {
+            "N_squared_minus_one": 99,
+            "formula": "8*sqrt(6)/(pi*(N^2-1)^(3/2))"
+          },
+          "ceiling_quadratic_drop": [
+            33,
+            2
+          ],
+          "series_in_theta_squared": [
+            [
+              1,
+              1
+            ],
+            [
+              -33,
+              2
+            ],
+            [
+              3223,
+              40
+            ]
+          ]
+        },
+        {
+          "N": 11,
+          "ceiling_probability_coefficient": {
+            "N_squared_minus_one": 120,
+            "formula": "8*sqrt(6)/(pi*(N^2-1)^(3/2))"
+          },
+          "ceiling_quadratic_drop": [
+            20,
+            1
+          ],
+          "series_in_theta_squared": [
+            [
+              1,
+              1
+            ],
+            [
+              -20,
+              1
+            ],
+            [
+              356,
+              3
+            ]
+          ]
+        },
+        {
+          "N": 12,
+          "ceiling_probability_coefficient": {
+            "N_squared_minus_one": 143,
+            "formula": "8*sqrt(6)/(pi*(N^2-1)^(3/2))"
+          },
+          "ceiling_quadratic_drop": [
+            143,
+            6
+          ],
+          "series_in_theta_squared": [
+            [
+              1,
+              1
+            ],
+            [
+              -143,
+              6
+            ],
+            [
+              12155,
+              72
+            ]
+          ]
+        }
+      ],
+      "statement": "P(X_N>N*(1-epsilon)) ~ 8*sqrt(6)/(pi*(N^2-1)^(3/2))*epsilon^(3/2)"
+    },
+    "finite_N_tail_coordinate": {
+      "endpoint_mass_upper_bound": "2/pi*(arcsin(1/x)-x^(-1)*sqrt(1-x^(-2)))",
+      "hard_cap": "zero for x>=N",
+      "range": "x>=1",
+      "theta_form": "P(X_N>x)=4/pi*integral_0^arcsin(1/x) 1{|sin(N*theta)|>x*sin(theta)}*sin(theta)^2 dtheta",
+      "unit_interval_form": "P(X_N>x)=4/(pi*x^3)*integral_0^1 y^2*1{|sin(N*arcsin(y/x))|>y}/sqrt(1-y^2/x^2) dy"
+    },
+    "truncated_moments": {
+      "critical": {
+        "full_log_coefficient": {
+          "pi_power": -2,
+          "rational": [
+            16,
+            3
+          ]
+        },
+        "hard_truncated_log_coefficient": {
+          "pi_power": -2,
+          "rational": [
+            16,
+            3
+          ]
+        },
+        "integral_0_pi_sin_cubed": [
+          4,
+          3
+        ],
+        "period_mean": {
+          "pi_power": -1,
+          "rational": [
+            4,
+            3
+          ]
+        },
+        "scale_tomography": "the endpoint window D<=N^(-beta) captures fraction 1-beta of the absolute cubic moment for every fixed 0<beta<1",
+        "winsorized_log_coefficient": {
+          "pi_power": -2,
+          "rational": [
+            16,
+            3
+          ]
+        }
+      },
+      "general_hard_formula": "16/(3*pi^2*(p-3))*T^(p-3), p>3",
+      "general_winsor_formula": "16*p/(9*pi^2*(p-3))*T^(p-3), p>3",
+      "regime": "T->infinity and T/N->0",
+      "supercritical_rows": [
+        {
+          "capped_tail_difference": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              9
+            ]
+          },
+          "hard_truncated_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              3
+            ]
+          },
+          "p": 4,
+          "scale": "T^(p-3)",
+          "winsorized_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              64,
+              9
+            ]
+          }
+        },
+        {
+          "capped_tail_difference": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              9
+            ]
+          },
+          "hard_truncated_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              8,
+              3
+            ]
+          },
+          "p": 5,
+          "scale": "T^(p-3)",
+          "winsorized_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              40,
+              9
+            ]
+          }
+        },
+        {
+          "capped_tail_difference": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              9
+            ]
+          },
+          "hard_truncated_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              9
+            ]
+          },
+          "p": 6,
+          "scale": "T^(p-3)",
+          "winsorized_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              32,
+              9
+            ]
+          }
+        },
+        {
+          "capped_tail_difference": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              9
+            ]
+          },
+          "hard_truncated_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              4,
+              3
+            ]
+          },
+          "p": 7,
+          "scale": "T^(p-3)",
+          "winsorized_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              28,
+              9
+            ]
+          }
+        },
+        {
+          "capped_tail_difference": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              9
+            ]
+          },
+          "hard_truncated_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              15
+            ]
+          },
+          "p": 8,
+          "scale": "T^(p-3)",
+          "winsorized_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              128,
+              45
+            ]
+          }
+        },
+        {
+          "capped_tail_difference": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              9
+            ]
+          },
+          "hard_truncated_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              8,
+              9
+            ]
+          },
+          "p": 9,
+          "scale": "T^(p-3)",
+          "winsorized_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              8,
+              3
+            ]
+          }
+        },
+        {
+          "capped_tail_difference": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              9
+            ]
+          },
+          "hard_truncated_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              21
+            ]
+          },
+          "p": 10,
+          "scale": "T^(p-3)",
+          "winsorized_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              160,
+              63
+            ]
+          }
+        },
+        {
+          "capped_tail_difference": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              9
+            ]
+          },
+          "hard_truncated_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              2,
+              3
+            ]
+          },
+          "p": 11,
+          "scale": "T^(p-3)",
+          "winsorized_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              22,
+              9
+            ]
+          }
+        },
+        {
+          "capped_tail_difference": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              9
+            ]
+          },
+          "hard_truncated_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              16,
+              27
+            ]
+          },
+          "p": 12,
+          "scale": "T^(p-3)",
+          "winsorized_coefficient": {
+            "pi_power": -2,
+            "rational": [
+              64,
+              27
+            ]
+          }
+        }
+      ]
+    },
+    "uniform_mesoscopic_tail": {
+      "endpoint_haar_prefactor": "4/pi",
+      "integral_y2_arccos_y": [
+        2,
+        9
+      ],
+      "integral_y3_over_sqrt_1_minus_y2": [
+        2,
+        3
+      ],
+      "phase_proportion": "q(y)=2*arccos(y)/pi",
+      "tail_constant": {
+        "pi_power": -2,
+        "rational": [
+          16,
+          9
+        ]
+      },
+      "theorem": "x^3*P(X_N>x) tends uniformly to 16/(9*pi^2) when both x and N/x tend to infinity"
+    }
+  },
+  "generated_by": "research/l-families/atlas/function_field/high_rank_haar_boundary_layer_tomography.py",
+  "payload_sha256": "399659a8382bb475c3f91d127ffeae46261692dd14a6d9ff4071e649eb513126",
+  "proof_architecture": {
+    "crossover": "fixed-ratio dominated convergence in the exact unit-interval tail coordinate",
+    "finite_ceiling": "quadratic Taylor drop of sin(N*theta)/(N*sin(theta)) and cubic Haar endpoint mass",
+    "tomography": "endpoint substitution t=N*theta and periodic mean at p=3",
+    "truncation": "layer-cake identities integrated against the uniform mesoscopic tail",
+    "uniform_averaging": "continuous approximation in (threshold,phase), finite Fourier expansion, and nonstationary integration by parts"
+  },
+  "resource_budget": {
+    "enumerated_characters": 0,
+    "enumerated_l_functions": 0,
+    "heavy_computation": false,
+    "limits": {
+      "control_rows": 64,
+      "exact_operations": 5000,
+      "packet_file_bytes_each": 65536,
+      "source_bytes_each": 40000,
+      "source_bytes_total": 90000,
+      "source_files": 5,
+      "wall_seconds": 4.0
+    },
+    "numerical_quadrature": false,
+    "packet_file_bytes": {
+      "note": 12021,
+      "producer": 22289,
+      "test": 12986
+    },
+    "random_samples": 0,
+    "root_searches": 0,
+    "used": {
+      "control_rows": 20,
+      "exact_operations": 80,
+      "operation_counts": {
+        "beta_integral_reductions": 4,
+        "series_coefficients": 33,
+        "series_convolutions": 33,
+        "sin_cubed_period_integral": 1,
+        "truncated_constant_rows": 9
+      },
+      "source_bytes": 84944,
+      "source_files": 5
+    }
+  },
+  "schema": "riemann.function_field.high_rank_haar_boundary_layer_tomography.v1",
+  "scope": {
+    "arithmetic_gate": "prove sourced family equidistribution for threshold or smoothed truncation tests uniformly in 1<<x<<N, or count the endpoint stratum with crossover H(lambda)",
+    "compact_group": "Haar SU(2) only",
+    "not_proved": [
+      "arithmetic-family equidistribution uniform in rank",
+      "finite-field trace estimate",
+      "elliptic-curve or modular-form family theorem",
+      "Euler-product or zero-statistic theorem",
+      "RH",
+      "GRH",
+      "external novelty"
+    ],
+    "proved": [
+      "uniform tail for 1<<x<<N",
+      "fixed x/N crossover and both edge limits",
+      "finite-N near-ceiling coefficient",
+      "hard-truncated and Winsorized p-moment asymptotics",
+      "supercritical O(1/N) endpoint profile",
+      "critical logarithmic-scale endpoint profile"
+    ]
+  },
+  "source_contract": {
+    "moment_payload": "0eba593b98d1cdb10cd79354ef15b9352291be1c28d85e961ed35fcd17aed088",
+    "sources": [
+      {
+        "bytes": 7436,
+        "commit": "8ba581fcc9c0b3ef6b68ac6d121648dd36c1c289",
+        "git_blob": "2a0c0b9fefbbe394477dc97cc5c05d22b9ae7bde",
+        "id": "high_rank_note",
+        "lf_sha256": "afe3ff04ea1fd3a8983c4159c4bced01b36161f5053c342bb81a84b794ae5824",
+        "path": "research/l-families/atlas/function_field/ELLIPTIC_SYMMETRIC_POWER_HIGH_RANK_HAAR_LIMIT.md",
+        "role": "weak limit, cubic tail, real-moment phase diagram"
+      },
+      {
+        "bytes": 9955,
+        "commit": "010827a518374e34b28d29f6a92741c3174ae803",
+        "git_blob": "35387da69ab7a80264075cbb3f59f7f429327be5",
+        "id": "moment_note",
+        "lf_sha256": "134024ab5550a1dfef1665cd8b0ad2fcb939d9f22d6453d19e26df64ec828931",
+        "path": "research/l-families/atlas/function_field/ELLIPTIC_TENSOR_SYMMETRIC_POWER_MOMENT_LADDER.md",
+        "role": "finite-rank moment ladder proof note"
+      },
+      {
+        "bytes": 30235,
+        "commit": "010827a518374e34b28d29f6a92741c3174ae803",
+        "git_blob": "f27da4fd9ed623ee46bcd5b70491a51e0adff92c",
+        "id": "moment_script",
+        "lf_sha256": "fe667748566cf94ac0c93a607359f1bc73140da343a4403c74d4024d71d4d247",
+        "path": "research/l-families/atlas/function_field/elliptic_tensor_symmetric_power_moment_ladder.py",
+        "role": "bounded exact finite-rank producer"
+      },
+      {
+        "bytes": 25820,
+        "commit": "010827a518374e34b28d29f6a92741c3174ae803",
+        "git_blob": "dcfcac10995c5ac567020ca5094644d093cd7b0b",
+        "id": "moment_json",
+        "lf_sha256": "cc91b7be07af49f56a776dea7e7204a65061c439a208a9631cfcdfa2f2375540",
+        "path": "research/l-families/atlas/function_field/elliptic_tensor_symmetric_power_moment_ladder.json",
+        "role": "canonical finite-rank moment payload"
+      },
+      {
+        "bytes": 11498,
+        "commit": "010827a518374e34b28d29f6a92741c3174ae803",
+        "git_blob": "773aecd29386880ba8ef932890208bc0f4def20b",
+        "id": "moment_test",
+        "lf_sha256": "47751b97d86e91225b249e9435594b869236fa59129afd478cc6bc4e640b72c8",
+        "path": "tests/test_elliptic_tensor_symmetric_power_moment_ladder.py",
+        "role": "finite-rank packet regression suite"
+      }
+    ]
+  },
+  "status": "PROVED_UNIFORM_HAAR_BOUNDARY_LAYER_TOMOGRAPHY"
+}

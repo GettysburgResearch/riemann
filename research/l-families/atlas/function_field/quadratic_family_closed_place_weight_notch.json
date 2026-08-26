@@ -1,0 +1,1051 @@
+{
+  "claim_boundary": [
+    "The theorem is exact for a declared primitive squarefree closed-place conductor and fixed feasible degree profile; imprimitive modulus degrees are not substituted for the primitive conductor degree.",
+    "All asymptotic scales are fixed-(n,profile) Weil upper envelopes, not lower bounds, attainment claims, typical-value laws, or growing-rank statements.",
+    "The exact irreducible odd-notch raw zero does not imply a zero connected cumulant, special zero distribution, or memberwise sign.",
+    "The curve is a finite-character adapter, not a claimed individual motive or compatible system; no external novelty claim is made.",
+    "No principal-member amplification, number-field transfer, RH, or GRH statement is proved."
+  ],
+  "closed_place_character": {
+    "bounded_reciprocity_parity_checks": 200,
+    "character": "psi_Q(F)=(F/Q)=product_i (F/P_i), extended by zero when gcd(F,Q)!=1",
+    "conductor": "Q=product_i P_i, with distinct monic irreducibles P_i of degrees d_i and primitive conductor degree M=sum_i d_i",
+    "curve_adapter": "G=(-1)^M*Q and C_Q:y^2=G; polynomial reciprocity gives (R/Q)=(G/R) at every finite prime R",
+    "genus": "g=floor((M-1)/2)",
+    "infinity": "If M is odd, infinity ramifies and L(u,psi_Q)=P_C(u); if M is even, G is monic with split infinity and L(u,psi_Q)=(1-u)*P_C(u)"
+  },
+  "degree_profile_coefficients": {
+    "definition": "a_k=[x^k] product_i(1-x^d_i)^(-1), with a_k=0 for k<0",
+    "kernel": "b_k=a_k-q*a_(k-1)",
+    "mixed_examples": {
+      "profile_1_2_through_k_6": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "profile_2_3_through_k_6": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2
+      ]
+    }
+  },
+  "exact_regrouped_identity": {
+    "bounded_coefficient_pairs": 828,
+    "bounded_profile_count": 138,
+    "difference_channel": "Set p_j=0 outside 0<=j<=2*g. For r>=0 retain D_r=p_r-q*p_(r-2), even if p_r=0; set D_r=0 by convention for r<0.",
+    "even_M": "S_(n,Q)=sum_(k=0..floor(n/2)) a_k*[D_(n-2*k)-D_(n-1-2*k)]",
+    "odd_M": "S_(n,Q)=sum_(k=0..floor(n/2)) a_k*D_(n-2*k)",
+    "top_channel": "D_n=(-1)^n*q^(n/2)*[e_n(U_Q)-e_(n-2)(U_Q)] is the unique q^(n/2) channel"
+  },
+  "normalization_and_connected_correction": {
+    "even_notch": "For n>=2 the connected correction is below the profile-independent q^(-(n+1)/2) upper-weight channel.",
+    "family_size": "N_n=|H_n(q)|=q^(n-1)*(q-1)",
+    "generic_raw_envelope": "For every fixed nonempty subprofile, its normalized moment is O_(n,profile)(q^(-n/2)).",
+    "odd_zero_firewall": "An exact zero of the full odd-notch raw moment does not force the connected cumulant to vanish; proper-subprofile terms may leave O_(n,profile)(q^-n).",
+    "proper_partition_bound": "For a fixed labelled closed-place profile, kappa_(n,Q)-mu_(n,Q)=O_(n,profile)(q^(-n)); closed-place singleton means need not vanish and are retained in this bound."
+  },
+  "packet_files_lf_sha256": {
+    "note": "f2724926d646b49a89adfc0ff6198b2c0ac60b09aca897de35a50f1f8f7381df",
+    "producer": "06cc78ce641c05b78c94d6f9217474a77e7e7dc23179565ade99a491bc2da9dd",
+    "test": "92415584d6ae66abbad3f92f57bbe80b9598cc9d2f4bc0cd95de62a7db19138f"
+  },
+  "payload_sha256": "510f35eacebfdb18d5d5c622a37c2c43c687f960e3959684949d118a7106d4b3",
+  "primitive_and_feasibility_firewalls": {
+    "examples": {
+      "q_3_four_degree_two_places": {
+        "feasible": false,
+        "q_assumed_prime_power": 3,
+        "rows": [
+          {
+            "available": 3,
+            "degree": 2,
+            "requested": 4
+          }
+        ]
+      },
+      "q_3_four_rational_places": {
+        "feasible": false,
+        "q_assumed_prime_power": 3,
+        "rows": [
+          {
+            "available": 3,
+            "degree": 1,
+            "requested": 4
+          }
+        ]
+      },
+      "q_3_three_degree_two_places": {
+        "feasible": true,
+        "q_assumed_prime_power": 3,
+        "rows": [
+          {
+            "available": 3,
+            "degree": 2,
+            "requested": 3
+          }
+        ]
+      },
+      "q_3_three_rational_places": {
+        "feasible": true,
+        "q_assumed_prime_power": 3,
+        "rows": [
+          {
+            "available": 3,
+            "degree": 1,
+            "requested": 3
+          }
+        ]
+      }
+    },
+    "fixed_q_feasibility": "A degree-d multiplicity c_d is feasible only if c_d<=I_q(d)=(1/d)*sum_(e|d) mu(e)*q^(d/e), assuming q is a prime power.",
+    "metadata_refusal": "The producer rejects repeated factor labels and every declared exponent other than one; it never factors a polynomial.",
+    "primitive_only": "The input must already describe a primitive squarefree conductor: every factor is a distinct irreducible with exponent one. Nonsquarefree or imprimitive formal moduli are refused; their odd support may identify an inducing primitive character, but removed factors retain imprimitive Euler deletions and zero conditions, so no automatic reduction is made.",
+    "rational_special_case": "I_q(1)=q, so the old q>=r condition is recovered only for an all-degree-one profile."
+  },
+  "primitive_conductor_weight_notch": {
+    "bounded_even_leader_rows": [
+      {
+        "n": 2,
+        "profile": [
+          4
+        ]
+      },
+      {
+        "n": 2,
+        "profile": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 2,
+        "profile": [
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "n": 2,
+        "profile": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "n": 2,
+        "profile": [
+          2,
+          2
+        ]
+      },
+      {
+        "n": 3,
+        "profile": [
+          6
+        ]
+      },
+      {
+        "n": 3,
+        "profile": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 3,
+        "profile": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 3,
+        "profile": [
+          1,
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 3,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "n": 3,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "n": 3,
+        "profile": [
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 3,
+        "profile": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 3,
+        "profile": [
+          2,
+          4
+        ]
+      },
+      {
+        "n": 3,
+        "profile": [
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 3,
+        "profile": [
+          3,
+          3
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          8
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          7
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          2,
+          6
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          2,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          3,
+          5
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          4,
+          4
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          10
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          9
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          8
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          2,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          1,
+          4,
+          4
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          2,
+          7
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          2,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          2,
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          3,
+          6
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          2,
+          8
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          2,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          2,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          2,
+          2,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          3,
+          7
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          3,
+          3,
+          4
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          4,
+          6
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          5,
+          5
+        ]
+      }
+    ],
+    "bounded_odd_zero_rows": [
+      {
+        "n": 2,
+        "profile": [
+          3
+        ]
+      },
+      {
+        "n": 3,
+        "profile": [
+          5
+        ]
+      },
+      {
+        "n": 3,
+        "profile": [
+          2,
+          3
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          7
+        ]
+      },
+      {
+        "n": 4,
+        "profile": [
+          3,
+          4
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          9
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          3,
+          6
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 5,
+        "profile": [
+          4,
+          5
+        ]
+      }
+    ],
+    "even_M_2n": {
+      "exact_residual": "S_(n,Q)=-D_(n-1)+sum_(k=1..floor(n/2)) a_k*[D_(n-2*k)-D_(n-1-2*k)]",
+      "normalized_scale": "mu_(n,Q)=O_(n,profile)(q^(-(n+1)/2))",
+      "profile_independent_leader": "The profile-independent leader is -D_(n-1)=(-1)^n*q^((n-1)/2)*chi_(omega_(n-1))"
+    },
+    "location": "The interior top-weight notch is M=2*n-1 or M=2*n, both with g=n-1; smaller support zeros are not this notch.",
+    "n_5_character_replays": {
+      "n_5_irreducible_even_notch": [
+        {
+          "coefficient": -1,
+          "omega_index": 4,
+          "twice_q_exponent": 4
+        }
+      ],
+      "n_5_irreducible_odd_notch": [],
+      "n_5_mixed_even_notch_2_plus_8": [
+        {
+          "coefficient": -1,
+          "omega_index": 0,
+          "twice_q_exponent": 0
+        },
+        {
+          "coefficient": -1,
+          "omega_index": 1,
+          "twice_q_exponent": 1
+        },
+        {
+          "coefficient": -1,
+          "omega_index": 4,
+          "twice_q_exponent": 4
+        }
+      ],
+      "n_5_mixed_odd_notch_2_plus_7": [
+        {
+          "coefficient": -1,
+          "omega_index": 1,
+          "twice_q_exponent": 1
+        }
+      ],
+      "n_5_rational_even_notch": [
+        {
+          "coefficient": -55,
+          "omega_index": 0,
+          "twice_q_exponent": 0
+        },
+        {
+          "coefficient": -55,
+          "omega_index": 1,
+          "twice_q_exponent": 1
+        },
+        {
+          "coefficient": -10,
+          "omega_index": 2,
+          "twice_q_exponent": 2
+        },
+        {
+          "coefficient": -10,
+          "omega_index": 3,
+          "twice_q_exponent": 3
+        },
+        {
+          "coefficient": -1,
+          "omega_index": 4,
+          "twice_q_exponent": 4
+        }
+      ],
+      "n_5_rational_odd_notch": [
+        {
+          "coefficient": -45,
+          "omega_index": 1,
+          "twice_q_exponent": 1
+        },
+        {
+          "coefficient": -9,
+          "omega_index": 3,
+          "twice_q_exponent": 3
+        }
+      ]
+    },
+    "odd_M_2n_minus_1": {
+      "exact_residual": "S_(n,Q)=sum_(k=1..floor(n/2)) a_k*D_(n-2*k)",
+      "exact_zero": "If min_i d_i>floor(n/2), then every relevant a_k vanishes and S_(n,Q)=0 exactly.",
+      "irreducible_case": "A primitive irreducible conductor of degree 2*n-1 therefore has S_(n,Q)=0 exactly.",
+      "normalized_scale": "For h<=floor(n/2), mu_(n,Q)=O_(n,profile)(q^(-(n+2*h)/2)); under the exact-zero condition mu_(n,Q)=0.",
+      "profile_leading_rule": "If h=min_i d_i<=floor(n/2), then a_k=0 for 1<=k<h and the first possible residual is a_h*D_(n-2*h), of raw weight (n-2*h)/2."
+    }
+  },
+  "resource_contract": {
+    "coefficient_pairs_replayed": 828,
+    "curve_enumeration": false,
+    "distinct_source_files_read": 1,
+    "finite_field_enumeration": false,
+    "floating_point_arithmetic": false,
+    "irreducible_enumeration": false,
+    "maximum_output_bytes": 32768,
+    "maximum_profile_series_index": 8,
+    "maximum_replay_family_degree": 7,
+    "maximum_replay_profile_total_degree": 10,
+    "maximum_replay_profiles": 160,
+    "maximum_source_bytes": 16384,
+    "maximum_symbolic_family_degree": 10,
+    "maximum_symbolic_profile_length": 12,
+    "maximum_symbolic_profile_total_degree": 20,
+    "measured_wall_seconds_is_not_canonical": true,
+    "payload_build_wall_seconds_cap": 4.0,
+    "polynomial_family_enumeration": false,
+    "profiles_replayed": 138,
+    "reciprocity_parity_checks": 200,
+    "root_enumeration": false,
+    "sampling": false,
+    "source_bytes_read": 10738,
+    "source_content_reads": 1,
+    "source_git_commands": 2,
+    "zero_enumeration": false
+  },
+  "schema": "riemann.function_field.quadratic_family_closed_place_weight_notch.v1",
+  "scope": "fixed n>=2 and fixed feasible primitive squarefree degree profile over odd prime powers q; no growing-profile or fixed-q unbounded-rank claim",
+  "source_lock": {
+    "commit": "c94466e28a48ec429150f63de6d334d4c4f60110",
+    "git_blob": "f6183be7e06b284f3cc2c3c4a6ffe5b970c0411e",
+    "imported_general_coefficient": "If L=sum_j l_j*u^j and B_m,0=1, then S_n,m=sum_(j<=n, n-j even) l_j*B_m,(n-j)/2.",
+    "imported_squarefree_series": "sum_{n>=0} sum_{D in H_n(q)} psi_A(D)*u^n = L(u,psi_A)*(1-q*u^2)/(1-u^2)^m",
+    "later_weight_notch_packets_imported": false,
+    "path": "research/l-families/atlas/function_field/quadratic_family_multiplace_l_function_identity.json",
+    "payload_sha256": "ddd7332102007ceda079e7b85dd0a482642c3d999dac779dde220af4e3b27c7d",
+    "schema": "riemann.function_field.quadratic_family_multiplace_l_function_identity.v1",
+    "sha256_lf_normalized": "b4529c82d40575593e4c346e4cdfa0aaee417618886b5b1ab448c2469c87ca9e",
+    "transitive_packet_files": {
+      "note": "5b8548f5fa2961663206dcdf3f23bf6264b37e05dbc9845d992c04a92040d31e",
+      "producer": "70978972a011ab3971542b6028f41329f1d250d0c72785e34f4210232743396f",
+      "test": "80d4a9af7f5c68cd9976036ecede93fa37edbc5d5eabf8c96dd2076986b72b6f"
+    }
+  },
+  "squarefree_series": {
+    "formula": "sum_(D monic squarefree) psi_Q(D)*u^deg(D)=L(u,psi_Q)*(1-q*u^2)/product_i(1-u^(2*d_i))",
+    "rational_place_recovery": "When every d_i=1, the denominator is (1-u^2)^r and a_k=binom(r+k-1,k), exactly recovering the locked rational-place identity.",
+    "reason": "psi_Q^2 is the indicator of gcd(D,Q)=1, so L(u^2,psi_Q^2)=product_i(1-u^(2*d_i))/(1-q*u^2)"
+  },
+  "status": "PROVED_CLOSED_PLACE_EXTENSION_FROM_LOCKED_EULER_QUOTIENT_AND_EXACT_SYMBOLIC_REPLAY",
+  "twist_weight_and_claim_firewalls": {
+    "fixed_profile": "All asymptotics fix n and the complete degree profile while q varies through feasible odd prime powers; no growing-rank/profile uniformity is claimed.",
+    "no_arithmetic_promotion": "No profile channel is promoted to an individual motive, compatible system, functorial transfer, or global Euler-product identity.",
+    "no_rh_claim": "No memberwise sign, zero theorem, principal-member amplifier, number-field transfer, RH, or GRH statement is proved.",
+    "source_sign": "The exact adapter is G=(-1)^M*Q. At odd M, silently using monic Q can be the nontrivial quadratic twist and changes odd exterior-character channels.",
+    "sqrt_q": "q^(1/2) is Frobenius-weight notation, not a chosen element of F_q when q is nonsquare.",
+    "standard_algebra": "The Euler quotient, polynomial reciprocity, infinity factor, and exterior-character identities are standard; no external novelty claim is made."
+  }
+}

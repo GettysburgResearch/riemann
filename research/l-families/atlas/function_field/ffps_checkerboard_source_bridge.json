@@ -1,0 +1,390 @@
+{
+  "exact_theorems": {
+    "bilateral_projector": {
+      "coordinates": {
+        "ell_side": "Y=Q*d^2 mod ell",
+        "rho_side": "X=P*c^2 mod rho"
+      },
+      "crt_scope": "CRT on the normalized two-coordinate physical tuple; not generally one integer's Jacobi symbol",
+      "each_projector_has_half_the_complete_fixed_grid": true,
+      "projectors": "Pi_plus/minus=(1 plus/minus epsilon_rho,tau(X)*epsilon_ell,sigma(Y))/2",
+      "requires": "ell and rho are distinct primes congruent to 1 mod 4"
+    },
+    "centered_projector_identity": {
+      "atomic_cancellation": true,
+      "control_coefficients": [
+        [
+          -3,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          3
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          -3,
+          2
+        ],
+        [
+          -2,
+          3
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "doubled_minus_observation": [
+        8,
+        3
+      ],
+      "doubled_plus_observation": [
+        -26,
+        3
+      ],
+      "identity": "P_circ=(O_plus_circ+O_minus_circ)/2-H_circ",
+      "principal": [
+        -3,
+        1
+      ],
+      "principal_centered": [
+        -263,
+        18
+      ],
+      "reconstructed_centered": [
+        -263,
+        18
+      ],
+      "selected_top_mode": [
+        -17,
+        3
+      ]
+    },
+    "existing_kummer_channel": {
+      "L_106120_indices": {
+        "eta_mod_ell": "kappa_ell",
+        "root_chi": "chi^2=kappa_ell",
+        "root_psi": "psi^2=kappa_rho",
+        "theta_mod_rho": "kappa_rho"
+      },
+      "hard_restricted_gram_not_implied": true,
+      "relation": "the checkerboard top mode differs only by the fixed sector scalar chi(u_ell,sigma)*psi(u_rho,tau)",
+      "source_factor": "chi(Q)*kappa_ell(d)*psi(P)*kappa_rho(c)",
+      "spectrally_absorbed_by_even_character_family": true
+    },
+    "hard_versus_soft_metric": {
+      "closed_leverage_formula": "4*(ell-1)*(rho-1)/(5*ell*rho+ell+rho+1)",
+      "complete_tensor_leverage": [
+        4,
+        7
+      ],
+      "constant_eigenvalue": 21,
+      "hard_improves_complete": true,
+      "metric_firewall": "hard deletion uses inverse of G_A; soft mode weighting uses the complete G inverse",
+      "native_coordinate_count": 12,
+      "primes": [
+        5,
+        13
+      ],
+      "restricted_denominator_each": 258,
+      "same_soft_weight_in_complete_inverse_metric": [
+        344,
+        455
+      ],
+      "sharp_restricted_leverage": [
+        24,
+        43
+      ],
+      "soft_worsens_complete": true,
+      "support_size_each": 6,
+      "top_legendre_eigenvalue": 65,
+      "uniform_retained_weight": [
+        2,
+        1
+      ]
+    },
+    "quartic_oriented_physical_invariance": {
+      "finite_audits": [
+        {
+          "negative_coordinates": 1,
+          "oriented_fibres_are_singletons": true,
+          "owner_count": 2,
+          "physical_coordinate_count": 2,
+          "positive_coordinates": 1,
+          "prime": 5,
+          "quartic_root_channel_matches": true,
+          "raw_core_sign_mixes_on_some_physical_fibre": true,
+          "representative": 1,
+          "source_representations_checked": 8
+        },
+        {
+          "negative_coordinates": 3,
+          "oriented_fibres_are_singletons": true,
+          "owner_count": 6,
+          "physical_coordinate_count": 6,
+          "positive_coordinates": 3,
+          "prime": 13,
+          "quartic_root_channel_matches": true,
+          "raw_core_sign_mixes_on_some_physical_fibre": true,
+          "representative": 1,
+          "source_representations_checked": 72
+        }
+      ],
+      "formula": "epsilon_p,sigma(P*c^2)=xi_p(P/u_p,sigma)*kappa_p(c)=xi_p(P*c^2/u_p,sigma)",
+      "gauge_audit": {
+        "constant_multiplier": -1,
+        "effect": "swap the plus and minus projector labels",
+        "gauge_root": 2,
+        "new_representative": 4,
+        "old_representative": 1,
+        "other_quartic_root_effect": "none after normalization, because x/u is a square",
+        "prime": 13
+      },
+      "physical_collapse_commutes_with_projector": true,
+      "root_free_formula": "epsilon_p,sigma(x)=(x/u_p,sigma)^((p-1)/4) in {+1,-1}"
+    },
+    "raw_core_collapse_failure": {
+      "conclusion": "raw kappa(c) is not physical-collapse invariant; xi(P/u)*kappa(c)=xi(P*c^2/u) is invariant",
+      "first": {
+        "core": 1,
+        "oriented_sign": 1,
+        "owner": 1,
+        "physical": 1,
+        "raw_core_sign": 1
+      },
+      "prime": 5,
+      "second": {
+        "core": 2,
+        "oriented_sign": 1,
+        "owner": 4,
+        "physical": 1,
+        "raw_core_sign": -1
+      },
+      "sector_representative": 1
+    },
+    "wick_atomic_firewall": {
+      "conclusion": "restricted leverage does not remove the R-106131 phase cardinality; one selected character has no family-dimension factor",
+      "doubled_observation_atomic_coefficient": 4,
+      "five_thirteen_value": [
+        980,
+        43
+      ],
+      "normal_ordering_residual": [
+        980,
+        43
+      ],
+      "phase_atomic_coefficient": 48,
+      "selected_channel_atomic_weight_is_uniformly_bounded_by": 9,
+      "selected_quartic_quartic_gauss_weight": [
+        65,
+        12
+      ]
+    }
+  },
+  "generated_by": "research/l-families/atlas/function_field/ffps_checkerboard_source_bridge.py",
+  "payload_sha256": "f158c471f3d3d80652bc370cd278f761c4b289db052c2a64d095c4d4367fcc68",
+  "resource_budget": {
+    "enumerated_characters": 0,
+    "enumerated_conductors": 0,
+    "enumerated_l_functions": 0,
+    "heavy_computation": false,
+    "largest_matrix_dimension": 12,
+    "largest_residue_prime": 13,
+    "limits": {
+      "exact_operations": 20000,
+      "git_objects": 16,
+      "matrix_cells": 4096,
+      "packet_file_bytes_each": 65536,
+      "residue_atoms": 2048,
+      "source_bytes_each": 50000,
+      "source_bytes_total": 60000,
+      "source_files": 2,
+      "wall_seconds": 5.0
+    },
+    "packet_file_bytes": {
+      "note": 12156,
+      "producer": 38029,
+      "test": 14217
+    },
+    "used": {
+      "exact_operations": 1453,
+      "git_objects": 13,
+      "matrix_cells": 184,
+      "operation_counts": {
+        "legendre_evaluations": 469,
+        "primitive_root_candidates": 160,
+        "quartic_discrete_log_steps": 528,
+        "quartic_oriented_signs": 224,
+        "support_energy_entries": 72
+      },
+      "residue_atoms": 104,
+      "source_bytes": 51912,
+      "source_files": 2
+    }
+  },
+  "schema": "riemann.function_field.ffps_checkerboard_source_bridge.v1",
+  "scope": {
+    "forbidden_inference": "soft control of one Kummer mode does not re-invert a hard restricted Gram, and local positive leverage does not remove the R-106131 atomic phase cardinality or R-106123 conductor sum",
+    "formal_only": "the growing-d prime-prefix checkerboard; live bilateral T-106121 supplies only two marked phase primes per fibre",
+    "open_arithmetic": [
+      "globally recombined Wick-centered conditioned-current trace",
+      "selected quartic-quartic off-atomic varying-conductor trace",
+      "all owner/core/roughness/carrier/exceptional ledgers",
+      "all conductor fibres not congruent to 1 modulo 4",
+      "CBKM106130",
+      "WCADD106140",
+      "WCKUM106140",
+      "BCI102990",
+      "RH",
+      "GRH"
+    ],
+    "proved_source_realization": "one fixed owner-class and conductor fibre after quartic orientation, with hard deletion by physical X,Y coordinates",
+    "smallest_analytic_lift": "bound the globally recombined Wick-centered projector pair and the one selected quartic-quartic trace in the exact centered identity; the stronger existing alternative is WCADD106140 together with WCKUM106140"
+  },
+  "source_contract": {
+    "correlated_commit": "12f52a2235cdcda5c3c6b43a82bfcadbbb08f73c",
+    "correlated_sources": [
+      {
+        "bytes": 13716,
+        "commit": "12f52a2235cdcda5c3c6b43a82bfcadbbb08f73c",
+        "git_blob": "4569c521e99e8c591f1694126605f8abee8a75f8",
+        "id": "correlated_note",
+        "lf_sha256": "38d178c0bed51daca67bd963523cd5db3cf35367f8b9474206b9f803325e7106",
+        "path": "research/l-families/atlas/function_field/FFPS_CORRELATED_MASK_AMPLIFIER.md",
+        "role": "hard correlated checkerboard theorem and global firewall"
+      },
+      {
+        "bytes": 38196,
+        "commit": "12f52a2235cdcda5c3c6b43a82bfcadbbb08f73c",
+        "git_blob": "9fa4404f6740b2f545d56b81d4122cd636528bea",
+        "id": "correlated_json",
+        "lf_sha256": "d9d709997362f85d49156bc9669dd81c4f3b23379d03c65d4c91dbcd0ea4411b",
+        "path": "research/l-families/atlas/function_field/ffps_correlated_mask_amplifier.json",
+        "role": "canonical exact restricted-Gram fixture"
+      }
+    ],
+    "live_claim_blobs": [
+      {
+        "claim_id": "L-106020",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "dffea80b5cd7790779397fda1430d30260e79876",
+        "path": "claims/lemmas/L-106020-square-phase-gauss-mellin-identity.md",
+        "role": "even-character Gauss-Mellin identity"
+      },
+      {
+        "claim_id": "L-106024",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "d94787dc2cd1cedd74d33ddc6269daf8de1cc061",
+        "path": "claims/lemmas/L-106024-local-squareclass-physical-occupancy-is-a-strict-contraction.md",
+        "role": "local sign-pair Gram pI-J"
+      },
+      {
+        "claim_id": "L-106040",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "828d0fcde62c4029c448f33c0130fdb039700d31",
+        "path": "claims/lemmas/L-106040-squarefree-composite-kummer-tensor-frame.md",
+        "role": "formal composite Kummer tensor frame"
+      },
+      {
+        "claim_id": "T-106040",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "bd87d14b28d851d40db696a53cf00055070ea02c",
+        "path": "claims/theorems/T-106040-composite-owner-conductor-kummer-frontier.md",
+        "role": "bounded source-selected owner-conductor tensor and open assembly"
+      },
+      {
+        "claim_id": "L-106120",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+        "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md",
+        "role": "bilateral source variables and root-character channel"
+      },
+      {
+        "claim_id": "L-106121",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "955c3ed0363ca330439eedbae1bf0041a4c96468",
+        "path": "claims/lemmas/L-106121-bilateral-tensor-moment-has-a-paid-atomic-diagonal.md",
+        "role": "principal atomic diagonal and source-dual moment"
+      },
+      {
+        "claim_id": "T-106121",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "9111983ae4bf199a8315310a9ce090561430c33b",
+        "path": "claims/theorems/T-106121-bilateral-physical-squareclass-family-frontier.md",
+        "role": "corrected physical coordinates Pc^2 and Qd^2"
+      },
+      {
+        "claim_id": "R-106122",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "dc51ae3add697ab4cec868ef8439f864ce77d71a",
+        "path": "claims/refutations/R-106122-owner-only-product-collisions-do-not-survive-varying-core-characters.md",
+        "role": "owner/core Kummer-coupling firewall"
+      },
+      {
+        "claim_id": "R-106123",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "f89cad68d67444280088d8bea7cbfb7c1eacc90d",
+        "path": "claims/refutations/R-106123-local-core-large-sieve-does-not-pay-the-global-conductor-family.md",
+        "role": "varying-conductor positive-sum firewall"
+      },
+      {
+        "claim_id": "L-106126",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "b4dbebde403a11696c56a4689b2df8b53326a157",
+        "path": "claims/lemmas/L-106126-physical-squareclass-collisions-are-four-linear-core-lines.md",
+        "role": "two/four physical collision lines"
+      },
+      {
+        "claim_id": "R-106131",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "8dde14dd382e0c4fc1bb54d5da21de85ea002f41",
+        "path": "claims/refutations/R-106131-complete-gauss-family-atomic-ledger-carries-phase-cardinality.md",
+        "role": "complete-family atomic phase cardinality"
+      },
+      {
+        "claim_id": "L-106131",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "37722c3f36ec7d1681f34d4329a3795e5028f7ae",
+        "path": "claims/lemmas/L-106131-wick-normal-ordering-additive-kummer-decomposition.md",
+        "role": "exact Wick additive/Kummer decomposition"
+      },
+      {
+        "claim_id": "T-106140",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+        "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md",
+        "role": "live WCADD/WCKUM conjunction and summation discipline"
+      }
+    ],
+    "live_pr_751_head": "98af0db6ec7f77d6333a77a3dac53c4698852f43"
+  },
+  "status": "EXACT_FIXED_FIBRE_SOURCE_BRIDGE_WITH_WICK_FIREWALL"
+}

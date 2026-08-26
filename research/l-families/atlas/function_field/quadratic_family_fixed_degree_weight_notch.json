@@ -1,0 +1,665 @@
+{
+  "claim_boundary": [
+    "All asymptotics hold for fixed (n,m) as q tends through odd prime powers with q>=m; no growing-degree or growing-mark uniformity is claimed.",
+    "Every scale is a Weil upper envelope and weight-channel statement, not a lower bound, attainment claim, typical-value law, or equidistribution theorem.",
+    "The curve is the source adapter for a finite Dirichlet character; no local channel is promoted to an individual motive or compatible system.",
+    "The regrouping uses the standard Euler quotient and standard exterior-character algebra; no external novelty claim is made.",
+    "No memberwise sign, zero theorem, principal-member amplifier, number-field transfer, RH, or GRH statement is proved."
+  ],
+  "connected_correction": {
+    "inheritance": "For n>=3 the proper-partition bound is below both notch upper-envelope scales; for the even notch it is also below the leading scale when n=2. This does not assert pointwise attainment of a character channel.",
+    "n_2_caveat": {
+      "block_moments": "M_1=-1/q, M_2=(2-q)/[q*(q-1)], M_3=3/[q*(q-1)]",
+      "connected_formula": "kappa_(2,3)=M_3-3*M_2*M_1+2*M_1^3=2*(2*q+1)/[q^3*(q-1)]=O(q^-3)",
+      "raw_three_place": "mu_(2,3)=3/[q*(q-1)]=O(q^-2)",
+      "warning": "At the odd-mark-count n=2 notch the O(q^-2) proper terms can match and cancel the raw leading scale, so no general raw-to-connected inheritance statement may include this case."
+    },
+    "one_place_mean": "E[X_a]=0 for odd n and E[X_a]=-q^(-(n-1)) for even n.",
+    "proper_partition_bound": "For fixed (n,m), every proper partition has at least two blocks, hence kappa_(n,m)-mu_(n,m)=O_(n,m)(q^(-n)).",
+    "raw_normalized_moment_envelope": "For every fixed block size s, mu_(n,s)=O_(n,s)(q^(-n/2)).",
+    "set_partitions_visited_for_n_2_control": 5
+  },
+  "exact_regrouped_identity": {
+    "bounded_replay_pairs": 112,
+    "derivation": "B_(m,k)=A_(m,k)-q*A_(m,k-1), while L=P for odd m and L=(1-u)*P for even m",
+    "even_m": "S_(n,m)=sum_(0<=k<=floor(n/2)) A_(m,k)*[D_(n-2k)-D_(n-1-2k)], with D_r=0 for r<0",
+    "odd_m": "S_(n,m)=sum_(0<=k<=floor(n/2)) A_(m,k)*D_(n-2k)",
+    "replay_rectangle": {
+      "m": [
+        1,
+        14
+      ],
+      "n": [
+        2,
+        9
+      ]
+    }
+  },
+  "marked_place_spectrometer": {
+    "interpretation_firewall": "This is an exact detector-design and aliasing diagnostic, not an equidistribution, independence, motive, or novelty theorem.",
+    "notch": "The two mark counts 2*n-1 and 2*n null the q^(n/2) channel exactly.",
+    "post_notch": "For m>=2*n+1 the top channel is (-1)^n*q^(n/2)*chi_(omega_n).",
+    "pre_notch": "Within the supported pre-notch range, the top exterior-character index runs through the parity of n: 1,3,...,n-2 for odd n and 0,2,...,n-2 for even n, with top-channel sign (-1)^(n+1)."
+  },
+  "notation": {
+    "binomial_channel": "A_(m,k)=binom(m+k-1,k)",
+    "coefficient_conventions": "p_j=e_j=0 outside 0<=j<=2*g; p_j=(-1)^j*q^(j/2)*e_j(U_A); chi_(omega_0)=1",
+    "curve": "C_A:y^2=product_(a in A)(a-z), with g=floor((m-1)/2)",
+    "difference_channel": "D_r=p_r-q*p_(r-2), with p_j=0 for j<0",
+    "family": "H_n(q) is the monic squarefree degree-n family; |H_n(q)|=N_n=q^(n-1)*(q-1)",
+    "numerator": "P_A(u)=sum_j p_j*u^j=det(1-sqrt(q)*U_A*u)"
+  },
+  "notch_leading_residual_channels": {
+    "even_mark_count": {
+      "exact_character_expansion": "S_(n,2*n)=(-1)^n*[q^((n-1)/2)*chi_(omega_(n-1))+sum_(k=1..floor(n/2)) binom(2*n+k-1,k)*q^((n-2*k)/2)*chi_(omega_(n-2*k))+sum_(k=1..floor((n-1)/2)) binom(2*n+k-1,k)*q^((n-2*k-1)/2)*chi_(omega_(n-2*k-1))]",
+      "exact_residual": "S_(n,2*n)=-D_(n-1)+sum_(k=1..floor(n/2)) A_(2*n,k)*[D_(n-2k)-D_(n-1-2k)]",
+      "leading_channel": "(-1)^n*q^((n-1)/2)*chi_(omega_(n-1))",
+      "m": "2*n",
+      "n_5_symbolic_row": {
+        "coefficient": -1,
+        "d_index": 4,
+        "fundamental_character_index": 4,
+        "marked_places": 10,
+        "normalized_exponent": "6/2",
+        "twice_q_exponent": 4
+      },
+      "normalized_scale": "mu_(n,2*n)=O_n(q^(-(n+1)/2))",
+      "raw_scale": "O_n(q^((n-1)/2))"
+    },
+    "low_case_character_replays": {
+      "n_2_m_3": [
+        {
+          "coefficient": 3,
+          "omega_index": 0,
+          "twice_q_exponent": 0
+        }
+      ],
+      "n_2_m_4": [
+        {
+          "coefficient": 4,
+          "omega_index": 0,
+          "twice_q_exponent": 0
+        },
+        {
+          "coefficient": 1,
+          "omega_index": 1,
+          "twice_q_exponent": 1
+        }
+      ],
+      "n_5_m_10": [
+        {
+          "coefficient": -55,
+          "omega_index": 0,
+          "twice_q_exponent": 0
+        },
+        {
+          "coefficient": -55,
+          "omega_index": 1,
+          "twice_q_exponent": 1
+        },
+        {
+          "coefficient": -10,
+          "omega_index": 2,
+          "twice_q_exponent": 2
+        },
+        {
+          "coefficient": -10,
+          "omega_index": 3,
+          "twice_q_exponent": 3
+        },
+        {
+          "coefficient": -1,
+          "omega_index": 4,
+          "twice_q_exponent": 4
+        }
+      ],
+      "n_5_m_9": [
+        {
+          "coefficient": -45,
+          "omega_index": 1,
+          "twice_q_exponent": 1
+        },
+        {
+          "coefficient": -9,
+          "omega_index": 3,
+          "twice_q_exponent": 3
+        }
+      ]
+    },
+    "odd_mark_count": {
+      "exact_character_expansion": "S_(n,2*n-1)=(-1)^n*sum_(k=1..floor(n/2)) binom(2*n+k-2,k)*q^((n-2*k)/2)*chi_(omega_(n-2*k))",
+      "exact_residual": "S_(n,2*n-1)=(2*n-1)*D_(n-2)+sum_(k=2..floor(n/2)) A_(2*n-1,k)*D_(n-2k)",
+      "leading_channel": "(2*n-1)*(-1)^n*q^((n-2)/2)*chi_(omega_(n-2))",
+      "m": "2*n-1",
+      "n_5_symbolic_row": {
+        "coefficient": -9,
+        "d_index": 3,
+        "fundamental_character_index": 3,
+        "marked_places": 9,
+        "normalized_exponent": "7/2",
+        "twice_q_exponent": 3
+      },
+      "normalized_scale": "mu_(n,2*n-1)=O_n(q^(-(n+2)/2))",
+      "raw_scale": "O_n(q^((n-2)/2))"
+    },
+    "warning": "These are leading residual weight channels after D_n vanishes, not complete equalities for S_(n,m); the displayed exact lower-channel sums remain."
+  },
+  "packet_files_lf_sha256": {
+    "note": "4bb219aed691592da44c793bf30809a42adb22fafc349e0f823f6063527c2e12",
+    "producer": "56728c301f1409b3ccd1458990cc86f821caff5ecb1f5944c68df46ccb603852",
+    "test": "07df6099eb9f83eb76845bf0ff6089612b4b6cebfeceba2e4e9c1b2cf1c930bb"
+  },
+  "payload_sha256": "f84a3700c14398066ae8dc8a1fd0bc9b41e51950726fac451e74c198437b6158",
+  "resource_contract": {
+    "classification_rows_replayed": 49,
+    "coefficient_pairs_replayed": 112,
+    "curve_enumeration": false,
+    "distinct_source_files_read": 1,
+    "extension_field_enumeration": false,
+    "finite_field_enumeration": false,
+    "floating_point_arithmetic": false,
+    "maximum_classification_genus": 9,
+    "maximum_classification_n": 8,
+    "maximum_output_bytes": 32768,
+    "maximum_replay_m": 14,
+    "maximum_replay_n": 9,
+    "maximum_set_partitions": 5,
+    "maximum_source_bytes": 16384,
+    "measured_wall_seconds_is_not_canonical": true,
+    "payload_build_wall_seconds_cap": 4.0,
+    "polynomial_family_enumeration": false,
+    "root_enumeration": false,
+    "sampling": false,
+    "set_partitions_visited": 5,
+    "source_bytes_read": 10738,
+    "source_content_reads": 1,
+    "source_git_commands": 2,
+    "zero_enumeration": false
+  },
+  "schema": "riemann.function_field.quadratic_family_fixed_degree_weight_notch.v1",
+  "scope": "fixed integers n>=2 and m>=1; odd prime powers q>=m; m distinct finite rational places; asymptotics hold only for fixed (n,m)",
+  "source_lock": {
+    "commit": "c94466e28a48ec429150f63de6d334d4c4f60110",
+    "git_blob": "f6183be7e06b284f3cc2c3c4a6ffe5b970c0411e",
+    "imported_general_coefficient": "If L=sum_j l_j*u^j and B_m,0=1, then S_n,m=sum_(j<=n, n-j even) l_j*B_m,(n-j)/2.",
+    "imported_kernel": "[u^(2k)](1-q*u^2)/(1-u^2)^m=binom(m+k-1,k)-q*binom(m+k-2,k-1) for k>=1",
+    "imported_parity_adapter": {
+      "even_m": "L(u,psi_A)=(1-u)*P_C_A(u)",
+      "odd_m": "L(u,psi_A)=P_C_A(u)"
+    },
+    "path": "research/l-families/atlas/function_field/quadratic_family_multiplace_l_function_identity.json",
+    "payload_sha256": "ddd7332102007ceda079e7b85dd0a482642c3d999dac779dde220af4e3b27c7d",
+    "schema": "riemann.function_field.quadratic_family_multiplace_l_function_identity.v1",
+    "sha256_lf_normalized": "b4529c82d40575593e4c346e4cdfa0aaee417618886b5b1ab448c2469c87ca9e",
+    "six_place_packet_imported": false,
+    "transitive_packet_files": {
+      "note": "5b8548f5fa2961663206dcdf3f23bf6264b37e05dbc9845d992c04a92040d31e",
+      "producer": "70978972a011ab3971542b6028f41329f1d250d0c72785e34f4210232743396f",
+      "test": "80d4a9af7f5c68cd9976036ecede93fa37edbc5d5eabf8c96dd2076986b72b6f"
+    }
+  },
+  "status": "PROVED_FROM_LOCKED_ALL_DEGREE_IDENTITY_BY_BOUNDED_SYMBOLIC_REPLAY",
+  "twist_infinity_and_weight_conventions": {
+    "even_m_infinity": "For even m, split infinity gives L=(1-u)*P and is exactly the source of the -D_(n-1-2k) summand.",
+    "odd_m_twist": "For odd m, replacing the source polynomial by the monic product_(a in A)(z-a) is a quadratic twist when -1 is nonsquare and changes odd exterior-character channels.",
+    "source_curve": "U_A belongs to C_A:y^2=product_(a in A)(a-z)",
+    "sqrt_q": "q^(1/2) denotes Frobenius weight, not a chosen element of F_q when q is nonsquare."
+  },
+  "unique_top_weight_channel": {
+    "bounded_classification_rows": [
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 0
+          }
+        ],
+        "genus": 0,
+        "n": 2,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [],
+        "genus": 1,
+        "n": 2,
+        "region": "NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 2
+          }
+        ],
+        "genus": 2,
+        "n": 2,
+        "region": "POST_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 2
+          }
+        ],
+        "genus": 3,
+        "n": 2,
+        "region": "POST_NOTCH"
+      },
+      {
+        "character": [],
+        "genus": 0,
+        "n": 3,
+        "region": "BELOW_RANGE"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 1
+          }
+        ],
+        "genus": 1,
+        "n": 3,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [],
+        "genus": 2,
+        "n": 3,
+        "region": "NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 3
+          }
+        ],
+        "genus": 3,
+        "n": 3,
+        "region": "POST_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 3
+          }
+        ],
+        "genus": 4,
+        "n": 3,
+        "region": "POST_NOTCH"
+      },
+      {
+        "character": [],
+        "genus": 0,
+        "n": 4,
+        "region": "BELOW_RANGE"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 0
+          }
+        ],
+        "genus": 1,
+        "n": 4,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 2
+          }
+        ],
+        "genus": 2,
+        "n": 4,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [],
+        "genus": 3,
+        "n": 4,
+        "region": "NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 4
+          }
+        ],
+        "genus": 4,
+        "n": 4,
+        "region": "POST_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 4
+          }
+        ],
+        "genus": 5,
+        "n": 4,
+        "region": "POST_NOTCH"
+      },
+      {
+        "character": [],
+        "genus": 0,
+        "n": 5,
+        "region": "BELOW_RANGE"
+      },
+      {
+        "character": [],
+        "genus": 1,
+        "n": 5,
+        "region": "BELOW_RANGE"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 1
+          }
+        ],
+        "genus": 2,
+        "n": 5,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 3
+          }
+        ],
+        "genus": 3,
+        "n": 5,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [],
+        "genus": 4,
+        "n": 5,
+        "region": "NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 5
+          }
+        ],
+        "genus": 5,
+        "n": 5,
+        "region": "POST_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 5
+          }
+        ],
+        "genus": 6,
+        "n": 5,
+        "region": "POST_NOTCH"
+      },
+      {
+        "character": [],
+        "genus": 0,
+        "n": 6,
+        "region": "BELOW_RANGE"
+      },
+      {
+        "character": [],
+        "genus": 1,
+        "n": 6,
+        "region": "BELOW_RANGE"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 0
+          }
+        ],
+        "genus": 2,
+        "n": 6,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 2
+          }
+        ],
+        "genus": 3,
+        "n": 6,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 4
+          }
+        ],
+        "genus": 4,
+        "n": 6,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [],
+        "genus": 5,
+        "n": 6,
+        "region": "NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 6
+          }
+        ],
+        "genus": 6,
+        "n": 6,
+        "region": "POST_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 6
+          }
+        ],
+        "genus": 7,
+        "n": 6,
+        "region": "POST_NOTCH"
+      },
+      {
+        "character": [],
+        "genus": 0,
+        "n": 7,
+        "region": "BELOW_RANGE"
+      },
+      {
+        "character": [],
+        "genus": 1,
+        "n": 7,
+        "region": "BELOW_RANGE"
+      },
+      {
+        "character": [],
+        "genus": 2,
+        "n": 7,
+        "region": "BELOW_RANGE"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 1
+          }
+        ],
+        "genus": 3,
+        "n": 7,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 3
+          }
+        ],
+        "genus": 4,
+        "n": 7,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 5
+          }
+        ],
+        "genus": 5,
+        "n": 7,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [],
+        "genus": 6,
+        "n": 7,
+        "region": "NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 7
+          }
+        ],
+        "genus": 7,
+        "n": 7,
+        "region": "POST_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 7
+          }
+        ],
+        "genus": 8,
+        "n": 7,
+        "region": "POST_NOTCH"
+      },
+      {
+        "character": [],
+        "genus": 0,
+        "n": 8,
+        "region": "BELOW_RANGE"
+      },
+      {
+        "character": [],
+        "genus": 1,
+        "n": 8,
+        "region": "BELOW_RANGE"
+      },
+      {
+        "character": [],
+        "genus": 2,
+        "n": 8,
+        "region": "BELOW_RANGE"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 0
+          }
+        ],
+        "genus": 3,
+        "n": 8,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 2
+          }
+        ],
+        "genus": 4,
+        "n": 8,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 4
+          }
+        ],
+        "genus": 5,
+        "n": 8,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": -1,
+            "omega_index": 6
+          }
+        ],
+        "genus": 6,
+        "n": 8,
+        "region": "PRE_NOTCH"
+      },
+      {
+        "character": [],
+        "genus": 7,
+        "n": 8,
+        "region": "NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 8
+          }
+        ],
+        "genus": 8,
+        "n": 8,
+        "region": "POST_NOTCH"
+      },
+      {
+        "character": [
+          {
+            "coefficient": 1,
+            "omega_index": 8
+          }
+        ],
+        "genus": 9,
+        "n": 8,
+        "region": "POST_NOTCH"
+      }
+    ],
+    "classification": {
+      "below_range": "Delta_(n,g)=0 if 2*g<n-2",
+      "notch": "Delta_(n,n-1)=0, corresponding exactly to m=2*n-1 and m=2*n",
+      "post_notch": "Delta_(n,g)=chi_(omega_n) for g>=n",
+      "pre_notch": "Delta_(n,g)=-chi_(omega_(2*g-n+2)) if n-2<=2*g and g<=n-2; chi_(omega_0)=1"
+    },
+    "delta": "Delta_(n,g)=e_n-e_(n-2)",
+    "formula": "D_n=p_n-q*p_(n-2)=(-1)^n*q^(n/2)*Delta_(n,g)",
+    "uniqueness": "Every other odd-m channel has weight at most (n-2)/2; for even m the extra -D_(n-1) has weight (n-1)/2 and all remaining channels are lower."
+  }
+}

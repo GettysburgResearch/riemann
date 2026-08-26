@@ -1,0 +1,672 @@
+{
+  "auxiliary_filter": {
+    "all_cross_pairs_separated": true,
+    "first_separator_counts": {
+      "11": 1,
+      "17": 1,
+      "5": 4,
+      "7": 6
+    },
+    "pairs": [
+      {
+        "auxiliary_rows": [
+          {
+            "left_sym5_scalar": 72,
+            "left_trace": -3,
+            "prime": 5,
+            "right_sym5_scalar": -22,
+            "right_trace": -2,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": -102,
+            "left_trace": -2,
+            "prime": 7,
+            "right_sym5_scalar": -180,
+            "right_trace": 4,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_good": false,
+            "prime": 11,
+            "right_good": true,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_sym5_scalar": 1710,
+            "left_trace": -6,
+            "prime": 17,
+            "right_sym5_scalar": 140,
+            "right_trace": 4,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          }
+        ],
+        "first_auxiliary_separating_prime": 5,
+        "left_model": [
+          -4,
+          4
+        ],
+        "locked_q31_sym5_scalar_equal": true,
+        "right_model": [
+          -1,
+          -1
+        ]
+      },
+      {
+        "auxiliary_rows": [
+          {
+            "left_sym5_scalar": 72,
+            "left_trace": -3,
+            "prime": 5,
+            "right_sym5_scalar": -56,
+            "right_trace": -1,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": -102,
+            "left_trace": -2,
+            "prime": 7,
+            "right_sym5_scalar": 102,
+            "right_trace": 2,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_good": false,
+            "prime": 11,
+            "right_good": true,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_sym5_scalar": 1710,
+            "left_trace": -6,
+            "prime": 17,
+            "right_sym5_scalar": 1222,
+            "right_trace": 2,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          }
+        ],
+        "first_auxiliary_separating_prime": 5,
+        "left_model": [
+          -4,
+          4
+        ],
+        "locked_q31_sym5_scalar_equal": true,
+        "right_model": [
+          2,
+          -4
+        ]
+      },
+      {
+        "auxiliary_rows": [
+          {
+            "left_sym5_scalar": 72,
+            "left_trace": -3,
+            "prime": 5,
+            "right_sym5_scalar": 56,
+            "right_trace": 1,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": -102,
+            "left_trace": -2,
+            "prime": 7,
+            "right_sym5_scalar": 120,
+            "right_trace": 1,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_good": false,
+            "prime": 11,
+            "right_good": true,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_sym5_scalar": 1710,
+            "left_trace": -6,
+            "prime": 17,
+            "right_sym5_scalar": 1222,
+            "right_trace": 2,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          }
+        ],
+        "first_auxiliary_separating_prime": 5,
+        "left_model": [
+          -4,
+          4
+        ],
+        "locked_q31_sym5_scalar_equal": true,
+        "right_model": [
+          3,
+          -2
+        ]
+      },
+      {
+        "auxiliary_rows": [
+          {
+            "left_sym5_scalar": 72,
+            "left_trace": -3,
+            "prime": 5,
+            "right_sym5_scalar": -72,
+            "right_trace": 3,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_good": true,
+            "prime": 7,
+            "right_good": false,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_good": false,
+            "prime": 11,
+            "right_good": true,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_sym5_scalar": 1710,
+            "left_trace": -6,
+            "prime": 17,
+            "right_sym5_scalar": 140,
+            "right_trace": 4,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          }
+        ],
+        "first_auxiliary_separating_prime": 5,
+        "left_model": [
+          -4,
+          4
+        ],
+        "locked_q31_sym5_scalar_equal": true,
+        "right_model": [
+          4,
+          -2
+        ]
+      },
+      {
+        "auxiliary_rows": [
+          {
+            "left_good": false,
+            "prime": 5,
+            "right_good": true,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_sym5_scalar": -102,
+            "left_trace": -2,
+            "prime": 7,
+            "right_sym5_scalar": -180,
+            "right_trace": 4,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": -340,
+            "left_trace": 4,
+            "prime": 11,
+            "right_sym5_scalar": -406,
+            "right_trace": -2,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": 1040,
+            "left_trace": -5,
+            "prime": 17,
+            "right_sym5_scalar": 140,
+            "right_trace": 4,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          }
+        ],
+        "first_auxiliary_separating_prime": 7,
+        "left_model": [
+          -3,
+          -3
+        ],
+        "locked_q31_sym5_scalar_equal": true,
+        "right_model": [
+          -1,
+          -1
+        ]
+      },
+      {
+        "auxiliary_rows": [
+          {
+            "left_good": false,
+            "prime": 5,
+            "right_good": true,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_sym5_scalar": -102,
+            "left_trace": -2,
+            "prime": 7,
+            "right_sym5_scalar": 102,
+            "right_trace": 2,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": -340,
+            "left_trace": 4,
+            "prime": 11,
+            "right_sym5_scalar": -560,
+            "right_trace": 5,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": 1040,
+            "left_trace": -5,
+            "prime": 17,
+            "right_sym5_scalar": 1222,
+            "right_trace": 2,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          }
+        ],
+        "first_auxiliary_separating_prime": 7,
+        "left_model": [
+          -3,
+          -3
+        ],
+        "locked_q31_sym5_scalar_equal": true,
+        "right_model": [
+          2,
+          -4
+        ]
+      },
+      {
+        "auxiliary_rows": [
+          {
+            "left_good": false,
+            "prime": 5,
+            "right_good": true,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_sym5_scalar": -102,
+            "left_trace": -2,
+            "prime": 7,
+            "right_sym5_scalar": 120,
+            "right_trace": 1,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": -340,
+            "left_trace": 4,
+            "prime": 11,
+            "right_sym5_scalar": 320,
+            "right_trace": 1,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": 1040,
+            "left_trace": -5,
+            "prime": 17,
+            "right_sym5_scalar": 1222,
+            "right_trace": 2,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          }
+        ],
+        "first_auxiliary_separating_prime": 7,
+        "left_model": [
+          -3,
+          -3
+        ],
+        "locked_q31_sym5_scalar_equal": true,
+        "right_model": [
+          3,
+          -2
+        ]
+      },
+      {
+        "auxiliary_rows": [
+          {
+            "left_good": false,
+            "prime": 5,
+            "right_good": true,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_good": true,
+            "prime": 7,
+            "right_good": false,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_sym5_scalar": -340,
+            "left_trace": 4,
+            "prime": 11,
+            "right_sym5_scalar": -450,
+            "right_trace": -6,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": 1040,
+            "left_trace": -5,
+            "prime": 17,
+            "right_sym5_scalar": 140,
+            "right_trace": 4,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          }
+        ],
+        "first_auxiliary_separating_prime": 11,
+        "left_model": [
+          -3,
+          -3
+        ],
+        "locked_q31_sym5_scalar_equal": true,
+        "right_model": [
+          4,
+          -2
+        ]
+      },
+      {
+        "auxiliary_rows": [
+          {
+            "left_good": false,
+            "prime": 5,
+            "right_good": true,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_sym5_scalar": 180,
+            "left_trace": -4,
+            "prime": 7,
+            "right_sym5_scalar": -180,
+            "right_trace": 4,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": -450,
+            "left_trace": -6,
+            "prime": 11,
+            "right_sym5_scalar": -406,
+            "right_trace": -2,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": 1008,
+            "left_trace": 3,
+            "prime": 17,
+            "right_sym5_scalar": 140,
+            "right_trace": 4,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          }
+        ],
+        "first_auxiliary_separating_prime": 7,
+        "left_model": [
+          3,
+          1
+        ],
+        "locked_q31_sym5_scalar_equal": true,
+        "right_model": [
+          -1,
+          -1
+        ]
+      },
+      {
+        "auxiliary_rows": [
+          {
+            "left_good": false,
+            "prime": 5,
+            "right_good": true,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_sym5_scalar": 180,
+            "left_trace": -4,
+            "prime": 7,
+            "right_sym5_scalar": 102,
+            "right_trace": 2,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": -450,
+            "left_trace": -6,
+            "prime": 11,
+            "right_sym5_scalar": -560,
+            "right_trace": 5,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": 1008,
+            "left_trace": 3,
+            "prime": 17,
+            "right_sym5_scalar": 1222,
+            "right_trace": 2,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          }
+        ],
+        "first_auxiliary_separating_prime": 7,
+        "left_model": [
+          3,
+          1
+        ],
+        "locked_q31_sym5_scalar_equal": true,
+        "right_model": [
+          2,
+          -4
+        ]
+      },
+      {
+        "auxiliary_rows": [
+          {
+            "left_good": false,
+            "prime": 5,
+            "right_good": true,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_sym5_scalar": 180,
+            "left_trace": -4,
+            "prime": 7,
+            "right_sym5_scalar": 120,
+            "right_trace": 1,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": -450,
+            "left_trace": -6,
+            "prime": 11,
+            "right_sym5_scalar": 320,
+            "right_trace": 1,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          },
+          {
+            "left_sym5_scalar": 1008,
+            "left_trace": 3,
+            "prime": 17,
+            "right_sym5_scalar": 1222,
+            "right_trace": 2,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          }
+        ],
+        "first_auxiliary_separating_prime": 7,
+        "left_model": [
+          3,
+          1
+        ],
+        "locked_q31_sym5_scalar_equal": true,
+        "right_model": [
+          3,
+          -2
+        ]
+      },
+      {
+        "auxiliary_rows": [
+          {
+            "left_good": false,
+            "prime": 5,
+            "right_good": true,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_good": true,
+            "prime": 7,
+            "right_good": false,
+            "status": "BAD_REDUCTION_SKIPPED"
+          },
+          {
+            "left_sym5_scalar": -450,
+            "left_trace": -6,
+            "prime": 11,
+            "right_sym5_scalar": -450,
+            "right_trace": -6,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": true
+          },
+          {
+            "left_sym5_scalar": 1008,
+            "left_trace": 3,
+            "prime": 17,
+            "right_sym5_scalar": 140,
+            "right_trace": 4,
+            "status": "GOOD_REDUCTION",
+            "sym5_scalar_equal": false
+          }
+        ],
+        "first_auxiliary_separating_prime": 17,
+        "left_model": [
+          3,
+          1
+        ],
+        "locked_q31_sym5_scalar_equal": true,
+        "right_model": [
+          4,
+          -2
+        ]
+      }
+    ],
+    "primes_in_order": [
+      5,
+      7,
+      11,
+      17
+    ]
+  },
+  "interpretation": {
+    "next_target": "replace the coefficient box by an isomorphism-invariant bounded-height catalogue and require equality of complete local factors at held-out primes",
+    "not_proved": [
+      "classification of all integral curve models",
+      "classification of all multi-prime spectral twins",
+      "absence of an isogeny, correspondence, or compatible system outside the box",
+      "any global L-function, zero, RH, or GRH statement"
+    ],
+    "proved": "all 12 cross-pairs of bounded integral models realizing the locked q=31 scalar collision split at a good auxiliary prime in {5,7,11,17}"
+  },
+  "locked_local_collision": {
+    "first_separating_coefficient_degree": 2,
+    "left_trace": -7,
+    "q": 31,
+    "right_trace": 3,
+    "scalar_trace": 5544
+  },
+  "model_box": {
+    "coefficient_range": [
+      -4,
+      4
+    ],
+    "cross_pair_count": 12,
+    "left_trace_models": [
+      {
+        "A": -4,
+        "B": 4,
+        "discriminant_core": 176,
+        "equation": "y^2=x^3-4*x+4"
+      },
+      {
+        "A": -3,
+        "B": -3,
+        "discriminant_core": 135,
+        "equation": "y^2=x^3-3*x-3"
+      },
+      {
+        "A": 3,
+        "B": 1,
+        "discriminant_core": 135,
+        "equation": "y^2=x^3+3*x+1"
+      }
+    ],
+    "measure": "coefficient models, not Q-isomorphism classes",
+    "model_type": "short Weierstrass y^2=x^3+A*x+B over Z",
+    "right_trace_models": [
+      {
+        "A": -1,
+        "B": -1,
+        "discriminant_core": 23,
+        "equation": "y^2=x^3-1*x-1"
+      },
+      {
+        "A": 2,
+        "B": -4,
+        "discriminant_core": 464,
+        "equation": "y^2=x^3+2*x-4"
+      },
+      {
+        "A": 3,
+        "B": -2,
+        "discriminant_core": 216,
+        "equation": "y^2=x^3+3*x-2"
+      },
+      {
+        "A": 4,
+        "B": -2,
+        "discriminant_core": 364,
+        "equation": "y^2=x^3+4*x-2"
+      }
+    ]
+  },
+  "provenance": {
+    "note_sha256_lf": "2fb95f92dd10519a62c195d6535ecf7156e66b128d3508298138bc931808afe5",
+    "producer_sha256_lf": "f7f06311d7ae95b9c3d155145fd09789dbd5fed98757f9e9b8b58a731326105d",
+    "test_sha256_lf": "107ca1b5be7ef9c7178482310b59f4c2f9ebfd915fb529dcef42e5929e04d0b8"
+  },
+  "resource_contract": {
+    "accounted_source_atoms": 2717,
+    "enumeration_scope": "81 short-Weierstrass coefficient candidates at q=31, then the seven retained models at four declared auxiliary primes",
+    "exclusive_source_atom_cap": 4096,
+    "finite_field_model_enumeration": true,
+    "largest_field": 31,
+    "ledger": {
+      "auxiliary_model_prime_checks": 28,
+      "finite_field_point_atoms": 2608,
+      "integral_model_candidates": 81
+    },
+    "random_sampling": false,
+    "source_atom_definition": "one model candidate/check or one finite-field x-coordinate Legendre evaluation"
+  },
+  "schema": "riemann.function_field.elliptic_sym5_multiprime_filter.v1",
+  "source_locks": {
+    "file_sha256_lf": "66635391ee4d69382eaf6d11fd78a77c90cffc8919ccbede9d0f568915cdf167",
+    "path": "research/l-families/atlas/function_field/elliptic_sym5_collision_diophantine_pilot.json",
+    "payload_sha256": "13bf7f95949b0905843c6f453008359fe8b05b65157fdb8c2eaf48e7af542ca5"
+  },
+  "status": "EXACT_BOUNDED_MULTIPRIME_COMPATIBILITY_FIREWALL"
+}

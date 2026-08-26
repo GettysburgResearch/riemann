@@ -1,0 +1,388 @@
+{
+  "algebra_certificate": {
+    "A4_low_to_high": [
+      [
+        -3,
+        -11
+      ],
+      [
+        -2,
+        -14
+      ],
+      [
+        -1,
+        12
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        -7
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "B4_low_to_high": [
+      [
+        -3,
+        -1
+      ],
+      [
+        -2,
+        -10
+      ],
+      [
+        -1,
+        -56
+      ],
+      [
+        0,
+        -47
+      ],
+      [
+        1,
+        44
+      ],
+      [
+        2,
+        21
+      ],
+      [
+        3,
+        -29
+      ],
+      [
+        4,
+        10
+      ]
+    ],
+    "M22_low_to_high": [
+      [
+        -3,
+        -3
+      ],
+      [
+        -2,
+        -24
+      ],
+      [
+        -1,
+        -26
+      ],
+      [
+        0,
+        24
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        -14
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "derivative_identity": "C'(q)=P(q)*D(q)/[q^4*N(q)^2] with D(q+3) coefficientwise positive",
+    "mean_K_low_to_high": [
+      [
+        -3,
+        1
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        -1
+      ]
+    ],
+    "mean_K_squared_low_to_high": [
+      [
+        -3,
+        -1
+      ],
+      [
+        -2,
+        -4
+      ],
+      [
+        -1,
+        -19
+      ],
+      [
+        0,
+        -9
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        -8
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "old_bound_identity": "C(q)-P(q)/(20*q^5)=P(q)*G(q)/[20*q^5*N(q)] with G(q+3) coefficientwise positive",
+    "one_third_identity": "1/3-C(q)=R(q)/[3*q^3*N(q)] with R(q+3) coefficientwise positive",
+    "shifted_positive_coefficients_low_to_high": {
+      "K2_numerator": [
+        2408,
+        6578,
+        7541,
+        4812,
+        1853,
+        429,
+        55,
+        3
+      ],
+      "mean_deficit": [
+        104,
+        215,
+        171,
+        67,
+        13,
+        1
+      ],
+      "monotonicity_factor": [
+        302688,
+        1224274,
+        2185466,
+        2300343,
+        1601101,
+        780313,
+        273789,
+        69579,
+        12596,
+        1548,
+        116,
+        4
+      ],
+      "old_bound_gap": [
+        16312,
+        44602,
+        51119,
+        32068,
+        11947,
+        2651,
+        325,
+        17
+      ],
+      "one_third_gap": [
+        32568,
+        108462,
+        157506,
+        132743,
+        72137,
+        26327,
+        6462,
+        1028,
+        96,
+        4
+      ]
+    },
+    "variance_K_low_to_high": [
+      [
+        -6,
+        -1
+      ],
+      [
+        -5,
+        -2
+      ],
+      [
+        -4,
+        -1
+      ],
+      [
+        -3,
+        1
+      ],
+      [
+        -2,
+        -6
+      ],
+      [
+        -1,
+        -21
+      ],
+      [
+        0,
+        -8
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        -4
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  "firewalls": [
+    "The K^2 theorem is an exact consequence of separately source-locked all-q A4, M22, and B4 theorems; it is not interpolated from q=3,5,7.",
+    "The sharpness statement concerns what support and two moments alone can prove; the saturating law is not asserted to be an arithmetic family law.",
+    "The toy coefficient minor K_D is not XD, HCNC, Pick/Loewner, RH, or GRH.",
+    "No equidistribution or novelty claim is made."
+  ],
+  "held_out_falsification_controls": [
+    {
+      "histogram_atoms": 12,
+      "matches_all_q_formula": true,
+      "mean_K_squared": [
+        2408,
+        27
+      ],
+      "members": 162,
+      "q": 3,
+      "sum_K_squared": 14448
+    },
+    {
+      "histogram_atoms": 24,
+      "matches_all_q_formula": true,
+      "mean_K_squared": [
+        131504,
+        125
+      ],
+      "members": 2500,
+      "q": 5,
+      "sum_K_squared": 2630080
+    },
+    {
+      "histogram_atoms": 53,
+      "matches_all_q_formula": true,
+      "mean_K_squared": [
+        1645440,
+        343
+      ],
+      "members": 14406,
+      "q": 7,
+      "sum_K_squared": 69108480
+    }
+  ],
+  "payload_sha256": "53cef78aca34c3ccad472a13a91e0d81d1bf3dd6b3d7fd03df0179823524ecc4",
+  "resource_contract": {
+    "actual_histogram_atoms": 89,
+    "actual_laurent_updates": 384,
+    "actual_translation_updates": 226,
+    "first_moment_source": "the locked q-scan closed_formula_target; its q=3,5,7 histograms remain held-out controls",
+    "held_out_histograms_are_not_theorem_inputs": true,
+    "maximum_histogram_atoms": 256,
+    "maximum_laurent_updates": 512,
+    "maximum_translation_updates": 256,
+    "maximum_wall_seconds": 3.0
+  },
+  "schema": "riemann.function_field.genus2_toy_minor_second_moment.v1",
+  "scope": {
+    "family": "all monic squarefree quintics D in F_q[T]",
+    "finite_fields_enumerated_by_theorem_replay": 0,
+    "q": "every odd prime power",
+    "sampled_values_used_as_theorem_input": 0,
+    "statistic": "K_D=q*a_D^2-b_D^2 and Z_D=K_D/q^2"
+  },
+  "sign_density": {
+    "N(q)": "3*q^7-8*q^6+6*q^5+8*q^4-9*q^3-19*q^2-4*q-1",
+    "P(q)": "q^5-2*q^4+q^3-q-1",
+    "cantelli_bound": "Pr(K_D<0)>=P(q)^2/[q^3*N(q)]",
+    "improvement_requires": [
+      "a third or higher moment",
+      "an independent constraint on the zero atom",
+      "or arithmetic/geometric information beyond support and two moments"
+    ],
+    "limit": [
+      1,
+      3
+    ],
+    "monotonicity": "strictly increasing for every real q>=3",
+    "q3_value": [
+      1352,
+      8127
+    ],
+    "sharp_information_class": "No larger universal lower bound follows from only support Z in [-20,4/3], E[Z], and E[Z^2]: the two-point law on {x_q,0}, x_q=-N(q)/(q^2*P(q)) in [-20,0), has negative mass exactly P(q)^2/[q^3*N(q)].",
+    "strictly_stronger_than_old_range_bound": "P(q)/(20*q^5) for every real q>=3"
+  },
+  "source_manifest": {
+    "B4": {
+      "lf_sha256": "31eec8f78bc81eb9d157f727c229efb16d112b94e7c27dbf0ea1f81f5005fde2",
+      "path": "research/l-families/atlas/function_field/genus2_b4_triangular_trace_average.json",
+      "payload_sha256": "d12099e24425badd5106f61caa151578ee04dd099a221eca7217b599783c5e5b"
+    },
+    "M22": {
+      "lf_sha256": "a93f288ddce023005989cc0a7ed543d859697e68fa378a24ae7619af35fc9633",
+      "path": "research/l-families/atlas/function_field/genus2_m22_triangular_trace_average.json",
+      "payload_sha256": "4d147295e3d2b7bc4b62eb8ba113c946f528606d82dd28d1a1ec002e2f93d60c"
+    },
+    "packet_note": {
+      "lf_sha256": "7d6287664f51304eeaa1c40f09a93d75e17b4cf71738ab31a25bbcaa4a102599",
+      "path": "research/l-families/atlas/function_field/GENUS2_TOY_MINOR_SECOND_MOMENT.md"
+    },
+    "packet_producer": {
+      "lf_sha256": "007c96e11ed6cda257668b925724e82ac71a5335a034a6875b29c7fd67524518",
+      "path": "research/l-families/atlas/function_field/genus2_toy_minor_second_moment.py"
+    },
+    "packet_test": {
+      "lf_sha256": "d7e53a6f84a4d57fddf224e636859058d608c6b06f77674612d2bb5924990786",
+      "path": "tests/test_genus2_toy_minor_second_moment.py"
+    },
+    "q_scan": {
+      "lf_sha256": "b49b7e2803401904b0bc1f82eb442bf1d8e81bdeb1ec388ff7fb14e7e5628dc6",
+      "path": "research/l-families/atlas/function_field/genus2_q_scan.json",
+      "payload_sha256": "80a28d820e45b2548e3e4b482982ef8313c8919f4a3fb9cc2c0b622b244870b5"
+    },
+    "second_reduction": {
+      "lf_sha256": "0966565c0b29d7bf85f6ad20f8c6634365a8fff674e3c3b06589125fe0bdbaf0",
+      "path": "research/l-families/atlas/function_field/genus2_second_moment_reduction.json",
+      "payload_sha256": "55c5c9ef04a65ca46044ac1d76c76f33afc02b51c2d38a8ca196b99498ee16ec"
+    },
+    "usp4_range": {
+      "lf_sha256": "6544641ac6a8f164d774f7e846926774659f6f0e0554c56b6850f12d6c79de42",
+      "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.json",
+      "payload_sha256": "843a2fe286e52bcf83f971c624454c8a2e8c69e8c894b79c898728ff74e35e6f"
+    }
+  },
+  "status": "PROVED_EXACT_ALL_ODD_PRIME_POWERS",
+  "theorem": {
+    "mean_K_squared": "E[K_D^2]=(3*q^7-8*q^6+6*q^5+8*q^4-9*q^3-19*q^2-4*q-1)/q^3",
+    "mean_Z_squared": "E[Z_D^2]=(3*q^7-8*q^6+6*q^5+8*q^4-9*q^3-19*q^2-4*q-1)/q^7",
+    "mean_Z_squared_limit": 3,
+    "variance_K": "Var(K_D)=(q+1)*(2*q^9-6*q^8+6*q^7+6*q^6-14*q^5-7*q^4+q^3-q-1)/q^6",
+    "variance_Z_limit": 2
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "artifact_manifest": {
+    "note_lf_sha256": "6dd2df999e03628cc9f98c1efba0fb378967dda319a9a359f205d79dc7790ead",
+    "producer_lf_sha256": "7aa7070dbc1494f552a73a16a8288333470d3feabc90fd7f7652cb338edd3494",
+    "test_lf_sha256": "dbc848509f481c5816d7dd6924fcab1466282cc78ce5b57f579bc4a92b59ff8d"
+  },
+  "definition": {
+    "K_D": "q*a_D^2-b_D^2",
+    "P_D(u)": "1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4",
+    "reciprocal": "1/P_D(u)=sum_(n>=0) r_D(n)*u^n",
+    "wavelet": "W_D(N)=(r_D(N)-r_D(N-1))+sqrt(q)*(-r_D(N-1)+r_D(N-2))"
+  },
+  "endpoint_three_theorem": {
+    "nonsquare_steps": [
+      "R+S*sqrt(q)=0 with R,S integers implies R=S=0",
+      "(a+1)^2=q has no integral solution",
+      "b^2=q*a^2 has no nonzero integral solution"
+    ],
+    "polynomial_certificate": {
+      "K_D": "q*a^2-b^2",
+      "W_3_Q_sqrt_q_coordinates": {
+        "rational": "r_3-r_2=-a^3-a^2+2*a*b-a*q+b",
+        "sqrt_q": "-r_2+r_1=b-a^2-a"
+      },
+      "r_1": "-a",
+      "r_2": "a^2-b",
+      "r_3": "-a*(a^2-2*b+q)",
+      "radical_zero_substitution": "b=a^2+a",
+      "reduced_rational_coordinate": "a*((a+1)^2-q)",
+      "terms_checked": 24
+    },
+    "quantifier": "every nonsquare odd prime power q and every family member D",
+    "statement": "W_D(3)=0 iff K_D=0 iff (a_D,b_D)=(0,0)"
+  },
+  "firewalls": [
+    "The endpoint-three converse is proved only when q is nonsquare as an integer.",
+    "The endpoint-seven off-stratum exclusion is authenticated only for q=3,5,7.",
+    "The counts 12, 50, and 336 are frozen data, not an all-q count law.",
+    "Supersingularity and F_q-simplicity classify any member on the proved zero stratum; they do not assert that the stratum is nonempty for every q.",
+    "No RH, GRH, equidistribution, motive-identification, or novelty claim is made."
+  ],
+  "frozen_q_3_5_7_authentication": [
+    {
+      "K_D_zero_count": 12,
+      "W_3_zero_count": 12,
+      "W_7_off_stratum_zero_count": 0,
+      "W_7_zero_count": 12,
+      "a_D_b_D_zero_count": 12,
+      "affine_zero_orbit_count": 2,
+      "affine_zero_orbit_types": [
+        {
+          "orbit_count": 2,
+          "orbit_size": 6,
+          "stabilizer_order": 1
+        }
+      ],
+      "joint_histogram_atoms": 32,
+      "marked_stack_mass": [
+        2,
+        1
+      ],
+      "members": 162,
+      "q": 3
+    },
+    {
+      "K_D_zero_count": 50,
+      "W_3_zero_count": 50,
+      "W_7_off_stratum_zero_count": 0,
+      "W_7_zero_count": 50,
+      "a_D_b_D_zero_count": 50,
+      "affine_zero_orbit_count": 4,
+      "affine_zero_orbit_types": [
+        {
+          "orbit_count": 2,
+          "orbit_size": 5,
+          "stabilizer_order": 4
+        },
+        {
+          "orbit_count": 2,
+          "orbit_size": 20,
+          "stabilizer_order": 1
+        }
+      ],
+      "joint_histogram_atoms": 81,
+      "marked_stack_mass": [
+        5,
+        2
+      ],
+      "members": 2500,
+      "q": 5
+    },
+    {
+      "K_D_zero_count": 336,
+      "W_3_zero_count": 336,
+      "W_7_off_stratum_zero_count": 0,
+      "W_7_zero_count": 336,
+      "a_D_b_D_zero_count": 336,
+      "affine_zero_orbit_count": 8,
+      "affine_zero_orbit_types": [
+        {
+          "orbit_count": 8,
+          "orbit_size": 42,
+          "stabilizer_order": 1
+        }
+      ],
+      "joint_histogram_atoms": 138,
+      "marked_stack_mass": [
+        8,
+        1
+      ],
+      "members": 14406,
+      "q": 7
+    }
+  ],
+  "payload_sha256": "b90d69e9143c5d1e4afeb4741a2680f803de366184a6fc37dd0e71cd76a2052b",
+  "resource_contract": {
+    "actual_recurrence_updates": 1757,
+    "actual_source_atoms": 251,
+    "actual_symbolic_terms": 24,
+    "actual_wavelet_coordinate_checks": 502,
+    "maximum_recurrence_updates": 4096,
+    "maximum_source_atoms": 4096,
+    "maximum_symbolic_terms": 256,
+    "maximum_wall_seconds": 5.0,
+    "maximum_wavelet_coordinate_checks": 1024,
+    "new_family_members_enumerated": 0,
+    "new_finite_fields_enumerated": 0
+  },
+  "schema": "riemann.function_field.native_qadic_wavelet_zero_stratum.v1",
+  "scope": {
+    "all_q": "q is an odd prime power that is not a square as an integer; a_D,b_D are integral genus-two Frobenius coefficients",
+    "frozen": "complete source-locked q=3,5,7 histograms and affine orbit summaries"
+  },
+  "source_manifest": {
+    "affine_fixture": {
+      "lf_sha256": "171a6a289bc8822aebae8b5494eeb70ebc7f54b84153e9ca1cbefc187cf12a7a",
+      "path": "research/l-families/atlas/function_field/genus2_affine_orbits.json",
+      "payload_sha256": "9f55481e43e096d7495d1c2966634e24b69ea15b986d5777af79efe9627a98d1"
+    },
+    "affine_producer": {
+      "lf_sha256": "32e440750b2832ec4cc84473187b4b1aa6396eda87c64f5ac845b2a96dc88f08",
+      "path": "research/l-families/atlas/function_field/genus2_affine_orbits.py"
+    },
+    "balanced_fixture": {
+      "lf_sha256": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e",
+      "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+      "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c"
+    },
+    "balanced_producer": {
+      "lf_sha256": "7192fa26b0ea17cb68cff288620ea4dfb124e07807986d9c74fbd37e66087d3b",
+      "path": "research/l-families/atlas/function_field/balanced_control_family_scan.py"
+    },
+    "native_fixture": {
+      "lf_sha256": "aef506afa6b9b29f10528b634f45c7eab96abc36c6cd2de886262e834fcb2d43",
+      "path": "research/l-families/atlas/function_field/native_qadic_reciprocal_wavelet_spectroscopy.json",
+      "payload_sha256": "4e366316c6d55488b41e0104f6bee6c947220d7989ea7aa1381b5d72a099b882"
+    },
+    "native_note": {
+      "lf_sha256": "b19f8f129d348bd9351c80f50908a220c3418902ef28cdb180baa0ece6a97ff6",
+      "path": "research/l-families/atlas/function_field/NATIVE_QADIC_RECIPROCAL_WAVELET_SPECTROSCOPY.md"
+    },
+    "native_producer": {
+      "lf_sha256": "051264601cdb72bb75e660c2bbfc657cf892e599f689a2cd10d355d7dae257fb",
+      "path": "research/l-families/atlas/function_field/native_qadic_reciprocal_wavelet_spectroscopy.py"
+    },
+    "native_test": {
+      "lf_sha256": "ceee093e9258f7ca13aa82d37e4f37cc0b7399321da80cab53cd1a12c36479f9",
+      "path": "tests/test_native_qadic_reciprocal_wavelet_spectroscopy.py"
+    }
+  },
+  "status": "PROVED_ALL_NONSQUARE_ODD_PRIME_POWERS_AND_FROZEN_TOMOGRAPHY",
+  "zero_stratum_spectral_theorem": {
+    "F_q_simplicity": "the irreducible rational Frobenius polynomial rules out a nontrivial F_q-isogeny factor",
+    "endpoint_range": "N>=0, using r_D(n)=0 for n<0",
+    "frobenius_polynomial": "x^4+q^2",
+    "irreducibility_certificate": "a rational quadratic factorization forces c^2=2*q or c^2=-2*q; the positive case is impossible because v_2(2*q) is odd",
+    "numerator": "P_D(u)=1+q^2*u^4",
+    "reciprocal_coefficients": "r_(4*m)=(-q^2)^m and r_n=0 when 4 does not divide n",
+    "supersingular_certificate": "every root is sqrt(q)*zeta with zeta^4=-1, hence zeta is a root of unity",
+    "wavelet_zero_endpoints": "W_D(N)=0 iff N is congruent to 3 modulo 4"
+  }
+}

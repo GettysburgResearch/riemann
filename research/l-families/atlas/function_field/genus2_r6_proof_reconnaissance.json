@@ -1,0 +1,298 @@
+{
+  "canonical_payload_sha256": "8e42ff92f764fd285ca2f68bba66c4831168f8b77bedb640256f27cdc7e9fcb7",
+  "echo_reduction": {
+    "B1B2_character_decomposition": "-chi_(6,0)+chi_(4,2)-chi_(2,4)+chi_(0,6)",
+    "B3_character_decomposition": "chi_(0,3)-chi_(2,3)+chi_(2,4)-chi_(0,6)",
+    "chebyshev_product": "X_1*X_2=X_3+X_1",
+    "definition": "B_r=-(x^(2r)+x^(-2r))*(y^(2r)+y^(-2r))",
+    "exact_separated_tensor_rank": 2,
+    "mean_identity": "mean(R6)=2*mean(chi_(0,3))-3*mean(B_1*B_2)-2*mean(B_3)",
+    "one_product_factorization_no_go": "The nonzero 2x2 determinant rules out a rank-one separated factorization of R6-2*chi_(0,3).",
+    "pointwise_identity": "R6-2*chi_(0,3)=-3*B_1*B_2-2*B_3",
+    "separated_basis": [
+      "X_1",
+      "X_3"
+    ],
+    "separated_coefficient_matrix": [
+      [
+        -3,
+        -3
+      ],
+      [
+        -3,
+        -1
+      ]
+    ],
+    "separated_determinant": -6,
+    "torus_support": {
+      "B_1_B_2": 16,
+      "B_3": 4,
+      "R6": 37,
+      "R6_minus_2_chi_(0,3)": 16,
+      "chi_(0,3)": 25
+    }
+  },
+  "low_moment_no_go": {
+    "R6_irreducible_coefficients": {
+      "chi_(0,6)": -1,
+      "chi_(2,3)": 2,
+      "chi_(2,4)": 1,
+      "chi_(4,2)": -3,
+      "chi_(6,0)": 3
+    },
+    "R6_irreducible_dimensions": {
+      "chi_(0,6)": 140,
+      "chi_(2,3)": 154,
+      "chi_(2,4)": 260,
+      "chi_(4,2)": 220,
+      "chi_(6,0)": 84
+    },
+    "R6_squared_norm": 24,
+    "R6_uniform_triangle_bound": 1620,
+    "ambiguity_margin": "delta(q)=1-S(q)=(q^5-19*q^4+5*q^3-80*q^2+40*q-49)/q^5",
+    "density_lower_bound": "delta(q)/2>0 for every real q>=19",
+    "derived_dimension_budget_coefficients": {
+      "1": 19,
+      "2": -5,
+      "3": 80,
+      "4": -40,
+      "5": 49
+    },
+    "dimension_budget": "S(q)=19/q-5/q^2+80/q^3-40/q^4+49/q^5",
+    "haar_gram_matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        24
+      ]
+    ],
+    "haar_gram_order": [
+      "1",
+      "chi_(0,1)",
+      "chi_(2,0)",
+      "chi_(0,2)",
+      "chi_(2,1)",
+      "chi_(4,0)",
+      "chi_(0,3)",
+      "R6"
+    ],
+    "logical_boundary": "The five proved all-q low means and compact-group positivity alone do not determine mean(R6).  This does not rule out a separate squarefree-family arithmetic evaluation.",
+    "low_character_dimensions": {
+      "chi_(0,1)": 5,
+      "chi_(0,2)": 14,
+      "chi_(2,0)": 10,
+      "chi_(2,1)": 35,
+      "chi_(4,0)": 35
+    },
+    "low_mean_sign_q_minus_3_coefficients_ascending": {
+      "chi_(0,1)": [
+        57,
+        82,
+        45,
+        11,
+        1,
+        0
+      ],
+      "chi_(0,2)": [
+        82,
+        108,
+        54,
+        12,
+        1,
+        0
+      ],
+      "chi_(2,0)": [
+        6,
+        5,
+        1,
+        0,
+        0,
+        0
+      ],
+      "chi_(2,1)": [
+        13,
+        11,
+        2,
+        0,
+        0,
+        0
+      ],
+      "chi_(4,0)": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "opposite_R6_means": "integral R6*f_(q,+/-)=+/-delta(q)/135",
+    "probability_densities": "f_(q,+/-)=1+sum_lambda m_lambda(q)*chi_lambda +/- delta(q)*R6/(2*1620)",
+    "proved_low_character_order": [
+      "chi_(0,1)",
+      "chi_(2,0)",
+      "chi_(0,2)",
+      "chi_(2,1)",
+      "chi_(4,0)"
+    ],
+    "q_19_witness": {
+      "S": [
+        2469973,
+        2476099
+      ],
+      "absolute_R6_mean": [
+        2042,
+        111424455
+      ],
+      "delta": [
+        6126,
+        2476099
+      ]
+    },
+    "q_minus_19_positive_coefficients_ascending": [
+      6126,
+      132736,
+      27641,
+      2171,
+      76,
+      1
+    ],
+    "shared_low_means": "integral chi_lambda*f_(q,+/-)=m_lambda(q)"
+  },
+  "resource_counts": {
+    "character_weight_candidates": 1035,
+    "constant_term_lookups": 4160,
+    "decomposition_updates": 985,
+    "kostant_weyl_summands": 8280,
+    "laurent_pair_products": 18660,
+    "partition_states": 1794
+  },
+  "schema": "riemann.function_field.genus2_r6_proof_reconnaissance.v1",
+  "scope": {
+    "actual_source_atoms": 1035,
+    "arithmetic": "Python integers and fractions only",
+    "finite_fields_enumerated": 0,
+    "maximum_source_atoms": 4096,
+    "observed_R6_values_consumed": 0,
+    "primitive_family_source_records_consumed": 0,
+    "source_atom_accounting": "conservatively count every C2 bounding-box character-weight candidate as one source atom"
+  },
+  "source_manifest": [
+    {
+      "path": "research/l-families/atlas/function_field/BALANCED_CONTROL_FAMILY_SCAN.md",
+      "sha256_lf_normalized": "50e1f7958a3175c132d82672658d0baf98fedf6620bb0de6c4d0c830c8806ffc"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/balanced_control_family_scan.py",
+      "sha256_lf_normalized": "7192fa26b0ea17cb68cff288620ea4dfb124e07807986d9c74fbd37e66087d3b"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
+      "sha256_lf_normalized": "69272720e27f9630220be0fc083cd16bb22a94c73b57b466740aa4b77dcc6277"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_HIGH_WEIGHT_CHANNEL_PROBE.md",
+      "sha256_lf_normalized": "6d0cebfc1d571895c5c8e1bbec03500d046124fb18d8e15e731d54db035e79b9"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/GUARDED_COHOMOLOGY_CONJECTURE_INFERENCE.md",
+      "sha256_lf_normalized": "7632cedc3502766ace2e19705d8966220bfc85e3eac5a72c9078a0eee826a019"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_DETECTOR_BOUNDARY_QUOTIENT.md",
+      "sha256_lf_normalized": "d1720a5e6cde297355801b84914ce36284eda51f25b5969f809cffa208e4d40a"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/usp_coefficient_minor_rank_scan.py",
+      "sha256_lf_normalized": "2480d71306a799add48038692d691f7f79ac3c9917db69a3852a0a823c7ff167"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_R6_PROOF_RECONNAISSANCE.md",
+      "sha256_lf_normalized": "4abbb973cf2e4044d783621088f3c914b26efb9bfa0022f6e0e1d11e4ae464ef"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus2_r6_proof_reconnaissance.py",
+      "sha256_lf_normalized": "eb21f92fee75a5981ffcb99628c3c6b930f1622a36d8595cf73e9f1921874a8c"
+    },
+    {
+      "path": "tests/test_genus2_r6_proof_reconnaissance.py",
+      "sha256_lf_normalized": "862fba76f244353e813fcbc14504ddc9344f2a87d8cd1e2b102eb3ad496b0b9e"
+    }
+  ],
+  "status": "EXACT_REDUCTION_AND_LOW_MOMENT_NO_GO"
+}

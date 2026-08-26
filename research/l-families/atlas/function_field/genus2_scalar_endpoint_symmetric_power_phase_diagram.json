@@ -1,0 +1,469 @@
+{
+  "all_rank_theorem": {
+    "exact_controls": {
+      "dimension_rows": [
+        {
+          "dimension": 1,
+          "rank": 0
+        },
+        {
+          "dimension": 4,
+          "rank": 1
+        },
+        {
+          "dimension": 10,
+          "rank": 2
+        },
+        {
+          "dimension": 20,
+          "rank": 3
+        },
+        {
+          "dimension": 35,
+          "rank": 4
+        },
+        {
+          "dimension": 56,
+          "rank": 5
+        },
+        {
+          "dimension": 286,
+          "rank": 10
+        },
+        {
+          "dimension": 1771,
+          "rank": 20
+        }
+      ],
+      "fixed_moment_crossovers": [
+        {
+          "dimension_at_next_rank": 2667126,
+          "dimension_at_rank": 2635500,
+          "exact_rank_window": [
+            248,
+            250
+          ],
+          "first_rank_with_constructed_subtotal_above_one": 250,
+          "floor_of_asymptotic_scale_X": 251,
+          "k": 1,
+          "largest_rank_with_constructed_subtotal_at_most_one": 249,
+          "moment": 1,
+          "q": 81,
+          "scale_definition": "X=6^(1/3)*5^(1/(3m))*q^(1/m)",
+          "target_5q3": 2657205
+        },
+        {
+          "dimension_at_next_rank": 1771,
+          "dimension_at_rank": 1540,
+          "exact_rank_window": [
+            18,
+            20
+          ],
+          "first_rank_with_constructed_subtotal_above_one": 20,
+          "floor_of_asymptotic_scale_X": 21,
+          "k": 1,
+          "largest_rank_with_constructed_subtotal_at_most_one": 19,
+          "moment": 2,
+          "q": 81,
+          "scale_definition": "X=6^(1/3)*5^(1/(3m))*q^(1/m)",
+          "target_5q3": 2657205
+        },
+        {
+          "dimension_at_next_rank": 165,
+          "dimension_at_rank": 120,
+          "exact_rank_window": [
+            6,
+            8
+          ],
+          "first_rank_with_constructed_subtotal_above_one": 8,
+          "floor_of_asymptotic_scale_X": 9,
+          "k": 1,
+          "largest_rank_with_constructed_subtotal_at_most_one": 7,
+          "moment": 3,
+          "q": 81,
+          "scale_definition": "X=6^(1/3)*5^(1/(3m))*q^(1/m)",
+          "target_5q3": 2657205
+        },
+        {
+          "dimension_at_next_rank": 56,
+          "dimension_at_rank": 35,
+          "exact_rank_window": [
+            3,
+            5
+          ],
+          "first_rank_with_constructed_subtotal_above_one": 5,
+          "floor_of_asymptotic_scale_X": 6,
+          "k": 1,
+          "largest_rank_with_constructed_subtotal_at_most_one": 4,
+          "moment": 4,
+          "q": 81,
+          "scale_definition": "X=6^(1/3)*5^(1/(3m))*q^(1/m)",
+          "target_5q3": 2657205
+        },
+        {
+          "dimension_at_next_rank": 1198144,
+          "dimension_at_rank": 1179616,
+          "exact_rank_window": [
+            189,
+            191
+          ],
+          "first_rank_with_constructed_subtotal_above_one": 191,
+          "floor_of_asymptotic_scale_X": 192,
+          "k": 2,
+          "largest_rank_with_constructed_subtotal_at_most_one": 190,
+          "moment": 2,
+          "q": 6561,
+          "scale_definition": "X=6^(1/3)*5^(1/(3m))*q^(1/m)",
+          "target_5q3": 1412147682405
+        },
+        {
+          "dimension_at_next_rank": 11480,
+          "dimension_at_rank": 10660,
+          "exact_rank_window": [
+            37,
+            39
+          ],
+          "first_rank_with_constructed_subtotal_above_one": 39,
+          "floor_of_asymptotic_scale_X": 40,
+          "k": 2,
+          "largest_rank_with_constructed_subtotal_at_most_one": 38,
+          "moment": 3,
+          "q": 6561,
+          "scale_definition": "X=6^(1/3)*5^(1/(3m))*q^(1/m)",
+          "target_5q3": 1412147682405
+        }
+      ],
+      "fixed_rank_crossovers": [
+        {
+          "dimension": 4,
+          "exact_bounds": "1/d_r < C_(m_floor) <= 1 < C_(m_floor+1) <= d_r",
+          "first_m_with_constructed_subtotal_above_one": 11,
+          "k": 1,
+          "largest_m_with_constructed_subtotal_at_most_one": 10,
+          "q": 81,
+          "rank": 1,
+          "subtotal_at_floor_m": [
+            1048576,
+            2657205
+          ],
+          "subtotal_at_next_m": [
+            4194304,
+            2657205
+          ],
+          "target_5q3": 2657205
+        },
+        {
+          "dimension": 10,
+          "exact_bounds": "1/d_r < C_(m_floor) <= 1 < C_(m_floor+1) <= d_r",
+          "first_m_with_constructed_subtotal_above_one": 7,
+          "k": 1,
+          "largest_m_with_constructed_subtotal_at_most_one": 6,
+          "q": 81,
+          "rank": 2,
+          "subtotal_at_floor_m": [
+            200000,
+            531441
+          ],
+          "subtotal_at_next_m": [
+            2000000,
+            531441
+          ],
+          "target_5q3": 2657205
+        },
+        {
+          "dimension": 286,
+          "exact_bounds": "1/d_r < C_(m_floor) <= 1 < C_(m_floor+1) <= d_r",
+          "first_m_with_constructed_subtotal_above_one": 3,
+          "k": 1,
+          "largest_m_with_constructed_subtotal_at_most_one": 2,
+          "q": 81,
+          "rank": 10,
+          "subtotal_at_floor_m": [
+            81796,
+            2657205
+          ],
+          "subtotal_at_next_m": [
+            23393656,
+            2657205
+          ],
+          "target_5q3": 2657205
+        },
+        {
+          "dimension": 20,
+          "exact_bounds": "1/d_r < C_(m_floor) <= 1 < C_(m_floor+1) <= d_r",
+          "first_m_with_constructed_subtotal_above_one": 10,
+          "k": 2,
+          "largest_m_with_constructed_subtotal_at_most_one": 9,
+          "q": 6561,
+          "rank": 3,
+          "subtotal_at_floor_m": [
+            102400000000,
+            282429536481
+          ],
+          "subtotal_at_next_m": [
+            2048000000000,
+            282429536481
+          ],
+          "target_5q3": 1412147682405
+        },
+        {
+          "dimension": 286,
+          "exact_bounds": "1/d_r < C_(m_floor) <= 1 < C_(m_floor+1) <= d_r",
+          "first_m_with_constructed_subtotal_above_one": 5,
+          "k": 2,
+          "largest_m_with_constructed_subtotal_at_most_one": 4,
+          "q": 6561,
+          "rank": 10,
+          "subtotal_at_floor_m": [
+            6690585616,
+            1412147682405
+          ],
+          "subtotal_at_next_m": [
+            1913507486176,
+            1412147682405
+          ],
+          "target_5q3": 1412147682405
+        }
+      ],
+      "parity_rows": [
+        {
+          "absolute_subtotal": [
+            4,
+            2657205
+          ],
+          "first_character": -4,
+          "k": 1,
+          "moment": 1,
+          "q": 81,
+          "rank": 1,
+          "signed_subtotal": [
+            0,
+            1
+          ],
+          "tower_sign": -1,
+          "twist_character": 4
+        },
+        {
+          "absolute_subtotal": [
+            16,
+            2657205
+          ],
+          "first_character": -4,
+          "k": 1,
+          "moment": 2,
+          "q": 81,
+          "rank": 1,
+          "signed_subtotal": [
+            16,
+            2657205
+          ],
+          "tower_sign": -1,
+          "twist_character": 4
+        },
+        {
+          "absolute_subtotal": [
+            2,
+            531441
+          ],
+          "first_character": 10,
+          "k": 1,
+          "moment": 1,
+          "q": 81,
+          "rank": 2,
+          "signed_subtotal": [
+            2,
+            531441
+          ],
+          "tower_sign": -1,
+          "twist_character": 10
+        },
+        {
+          "absolute_subtotal": [
+            4,
+            282429536481
+          ],
+          "first_character": 20,
+          "k": 2,
+          "moment": 1,
+          "q": 6561,
+          "rank": 3,
+          "signed_subtotal": [
+            0,
+            1
+          ],
+          "tower_sign": 1,
+          "twist_character": -20
+        },
+        {
+          "absolute_subtotal": [
+            80,
+            282429536481
+          ],
+          "first_character": 20,
+          "k": 2,
+          "moment": 2,
+          "q": 6561,
+          "rank": 3,
+          "signed_subtotal": [
+            80,
+            282429536481
+          ],
+          "tower_sign": 1,
+          "twist_character": -20
+        },
+        {
+          "absolute_subtotal": [
+            1913507486176,
+            750473176484995605
+          ],
+          "first_character": 286,
+          "k": 3,
+          "moment": 5,
+          "q": 531441,
+          "rank": 10,
+          "signed_subtotal": [
+            1913507486176,
+            750473176484995605
+          ],
+          "tower_sign": -1,
+          "twist_character": 286
+        }
+      ],
+      "sym10_specialization": {
+        "absolute_subtotal": "286^m/(5*q^3)",
+        "dimension": 286,
+        "signed_subtotal": "286^m/(5*q^3) for every m>=1"
+      }
+    },
+    "locked_geometric_input": {
+      "character_values": [
+        "s^r*d_r",
+        "(-s)^r*d_r"
+      ],
+      "constructed_density_each": "1/(10*q^3)",
+      "constructed_orbit_size_each": "q*(q-1)/10",
+      "family_size": "q^4*(q-1)",
+      "normalized_frobenius_classes": [
+        "s*I_4",
+        "-s*I_4"
+      ],
+      "tower": "q=3^(4*k), k>=1",
+      "tower_sign": "s=(-1)^k"
+    },
+    "moment_theorem": {
+      "constructed_absolute_subtotal": "d_r^m/(5*q^3)",
+      "constructed_signed_subtotal": {
+        "r_times_m_even": "d_r^m/(5*q^3)",
+        "r_times_m_odd": "0",
+        "raw": "d_r^m*(s^(r*m)+(-s)^(r*m))/(10*q^3)"
+      },
+      "fixed_q_r_limit": "lim_(m->infinity) A_(r,m)(q)^(1/m)=d_r",
+      "full_absolute_moment": "A_(r,m)(q)=E_D[|chi_r(U_D)|^m]",
+      "full_absolute_moment_squeeze": "d_r^m/(5*q^3)<=A_(r,m)(q)<=d_r^m",
+      "integer_moment_domain": "m>=1",
+      "mth_root_squeeze": "d_r*(5*q^3)^(-1/m)<=A_(r,m)(q)^(1/m)<=d_r"
+    },
+    "phase_diagram": {
+      "constructed_subtotal": "C_(r,m,q)=d_r^m/(5*q^3)",
+      "exact_critical_surface": "m*log(d_r)=3*log(q)+log(5)",
+      "fixed_moment": {
+        "asymptotic": "R=6^(1/3)*5^(1/(3*m))*q^(1/m)+O(1)",
+        "exact_cubic_window": "if X=6^(1/3)*5^(1/(3*m))*q^(1/m), then floor(X)-3<=R<=floor(X)-1",
+        "exact_threshold": "R=max{r>=0: binom(r+3,3)^m<=5*q^3}; R+1 is supercritical"
+      },
+      "fixed_rank": {
+        "continuous_crossover": "m_*=(3*log(q)+log(5))/log(d_r), for r>=1",
+        "discrete_control": "M=floor_log_(d_r)(5*q^3) is the largest integer with C_(r,M,q)<=1; M+1 is the first with C>1",
+        "tower_form": "m_*=(12*k*log(3)+log(5))/log(d_r) when q=3^(4*k)"
+      },
+      "rank_zero_exception": "d_0=1, so C_(0,m,q)=1/(5*q^3) and no moment-order crossing occurs"
+    },
+    "representation_identity": {
+      "compact_bound": "|chi_r(U)|<=d_r for every U in USp(4)",
+      "dimension": "d_r=dim Sym^r(C^4)=binom(r+3,3)",
+      "expanded_dimension": "d_r=(r+1)*(r+2)*(r+3)/6",
+      "rank_domain": "every integer r>=0",
+      "reciprocal_normalization": "if P_D(u)^(-1)=sum_r r_D(r)u^r, then r_D(r)=q^(r/2)*chi_r(U_D)",
+      "scalar_action": "Sym^r(t*I_4)=t^r*I_(d_r)",
+      "scalar_character": "chi_r(t*I_4)=t^r*d_r for t in {+1,-1}"
+    }
+  },
+  "claim_boundaries": [
+    "Every displayed endpoint contribution is the exact subtotal of two constructed orbits, not an asymptotic for the full family moment.",
+    "The source proves lower bounds for endpoint densities, not a classification of all scalar-endpoint members.",
+    "The fixed-rank and fixed-moment critical surfaces describe when the constructed subtotal crosses one; they are not asserted phase transitions for the remaining family.",
+    "The signed subtotal can vanish by twist parity while the full signed moment remains unrestricted.",
+    "The m-th-root limit is a fixed-(q,r) full absolute-moment statement from a positive endpoint atom and the compact character bound; it is not a q-asymptotic or equidistribution theorem.",
+    "No motive, zero statistic, RH, GRH, or average-to-individual theorem is claimed."
+  ],
+  "payload_sha256": "32320075030474d5dc0858621201f034fc88062ece257d5369bc645485917060",
+  "replay": {
+    "check": "python -B research/l-families/atlas/function_field/genus2_scalar_endpoint_symmetric_power_phase_diagram.py --check",
+    "note": "research/l-families/atlas/function_field/GENUS2_SCALAR_ENDPOINT_SYMMETRIC_POWER_PHASE_DIAGRAM.md",
+    "producer": "research/l-families/atlas/function_field/genus2_scalar_endpoint_symmetric_power_phase_diagram.py",
+    "test": "tests/test_genus2_scalar_endpoint_symmetric_power_phase_diagram.py",
+    "write": "python -B research/l-families/atlas/function_field/genus2_scalar_endpoint_symmetric_power_phase_diagram.py --write"
+  },
+  "resource_contract": {
+    "actual_exact_operations": 195,
+    "actual_source_bytes": 11295,
+    "arithmetic": "all theorem controls use exact integers and Fraction values; logs and asymptotic roots are recorded symbolically",
+    "maximum_control_rank": 100000,
+    "maximum_exact_operations": 4096,
+    "maximum_output_bytes": 32768,
+    "maximum_source_bytes": 32768,
+    "maximum_wall_seconds": 2.0,
+    "operation_counts": {
+      "dimension_control": 8,
+      "floor_log": 31,
+      "parity_control": 24,
+      "rank_bisection": 27,
+      "rank_bracket": 33,
+      "root_bisection": 28,
+      "root_bracket": 28,
+      "source_semantics": 12,
+      "sym10_specialization": 4
+    }
+  },
+  "schema": "riemann.function_field.genus2_scalar_endpoint_symmetric_power_phase_diagram.v1",
+  "scope": {
+    "curves_enumerated": 0,
+    "family": "H5(q), monic squarefree quintics",
+    "finite_fields_enumerated": 0,
+    "group_elements_enumerated": 0,
+    "moment_orders": "every integer m>=1",
+    "numerical_root_finding": 0,
+    "random_samples": 0,
+    "representations_enumerated": 0,
+    "symmetric_power_ranks": "every integer r>=0",
+    "tower": "q=3^(4*k), k>=1"
+  },
+  "source_manifest": [
+    {
+      "bytes": 11295,
+      "commit": "77c6a1b31d6d2b475df0d87e187f32d9a09479e5",
+      "git_blob": "ce5f1baba8c33e9243ac18e381fbd4824e7a5baa",
+      "lf_sha256": "597d6b27503b0dfaa93b190ec73323ac63c76de7937d1b1bf9ba9cf3731a5313",
+      "path": "research/l-families/atlas/function_field/genus2_sym10_scalar_endpoint_realization.json",
+      "payload_sha256": "bc2d9dcea68befbda0281ebc702b26dca805cb41676862e0c50be35ff66cf49a",
+      "role": "exact q=3^(4*k) seed, twist-orbit sizes, endpoint signs, and family cardinality",
+      "schema": "riemann.function_field.genus2_sym10_scalar_endpoint_realization.v1"
+    }
+  ],
+  "source_order_firewall": {
+    "all_rank_representation_and_phase_algebra_closed_before_source_read": true,
+    "exact_operations_before_source": 183,
+    "source_used_only_for_geometric_endpoint_and_orbit_premises": true
+  },
+  "source_validation": {
+    "transitive_note": "the locked scalar packet already pins its marked-stack and rare-event normalization sources; no second rare-event lock is needed here",
+    "validated_claims": [
+      "q=3^(4*k), normalized seed Frobenius U=(-1)^k*I_4",
+      "the nonsquare affine coset maps U to -U",
+      "two square-affine orbits, each of size q*(q-1)/10",
+      "|H5(q)|=q^4*(q-1), hence each orbit has density 1/(10*q^3)",
+      "the r=10 specialization has d_10=286"
+    ]
+  },
+  "status": "EXACT_ALL_RANK_SCALAR_ENDPOINT_PHASE_DIAGRAM"
+}

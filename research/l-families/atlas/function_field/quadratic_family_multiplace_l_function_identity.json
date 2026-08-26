@@ -1,0 +1,392 @@
+{
+  "character": "psi_A(F)=product_i chi(F(a_i)), with chi(0)=0",
+  "claim_boundary": [
+    "The theorem is an identity for a complete fixed-degree quadratic function-field family; the F_5 enumeration is only a tiny convention check.",
+    "The auxiliary curve records the finite Dirichlet character and its infinity factor; it is not a claimed motive or compatible system for an individual family member.",
+    "The formulas do not imply a memberwise sign, a zero theorem, principal-member amplification, RH, or GRH.",
+    "No external novelty claim is made."
+  ],
+  "connected_joint_cumulant_corollary": {
+    "centered_partition_skeletons": {
+      "2": {
+        "2": 1
+      },
+      "3": {
+        "3": 1
+      },
+      "4": {
+        "2+2": -3,
+        "4": 1
+      },
+      "5": {
+        "2+3": -10,
+        "5": 1
+      }
+    },
+    "constants": {
+      "C": "2*q-3",
+      "N": "q^4*(q-1)",
+      "trace": "t_I=q+1-#C_I(F_q), C_I:y^2=product_(i in I)(a_i-z)"
+    },
+    "definition": "kappa_I=sum over set partitions pi of I of (-1)^(|pi|-1)*(|pi|-1)!*product_(B in pi) E[product_(i in B) X_i]",
+    "five_point_pair_triple_partitions": [
+      {
+        "pair_zero_based": [
+          3,
+          4
+        ],
+        "triple_zero_based": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "pair_zero_based": [
+          2,
+          4
+        ],
+        "triple_zero_based": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "pair_zero_based": [
+          2,
+          3
+        ],
+        "triple_zero_based": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "pair_zero_based": [
+          1,
+          4
+        ],
+        "triple_zero_based": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "pair_zero_based": [
+          1,
+          3
+        ],
+        "triple_zero_based": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "pair_zero_based": [
+          1,
+          2
+        ],
+        "triple_zero_based": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "pair_zero_based": [
+          0,
+          4
+        ],
+        "triple_zero_based": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "pair_zero_based": [
+          0,
+          3
+        ],
+        "triple_zero_based": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "pair_zero_based": [
+          0,
+          2
+        ],
+        "triple_zero_based": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "pair_zero_based": [
+          0,
+          1
+        ],
+        "triple_zero_based": [
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "hasse_envelopes": {
+      "feasibility": "A triple requires q>=3; four distinct rational places require q>=4 (hence q>=5 for odd q); five require q>=5.",
+      "kappa_2": "kappa_2=2*q^-4-1/[q^4*(q-1)]=2*q^-4+O(q^-5)",
+      "kappa_3": "|kappa_3|<=6*(q-2)/(q-1)*q^-7/2",
+      "kappa_4_asymptotic": "kappa_4=(q^2-10)/N+O(q^-7/2)+O(q^-8)=q^-3+O(q^-7/2)",
+      "kappa_4_exact_bound": "|kappa_4-(q^2-10)/N|<=2*(4*q-10)*sqrt(q)/N+3*C^2/N^2",
+      "kappa_5_asymptotic": "kappa_5=O(q^-5/2); its pair/triple complement correction is O(q^-15/2)",
+      "kappa_5_exact_bound": "|kappa_5|<=4*(q^2-15)*sqrt(q)/N+60*C*(q-2)*sqrt(q)/N^2",
+      "trace_inputs": {
+        "five_places": "|t_A|<=4*sqrt(q) (genus two)",
+        "ten_triples": "sum_(|B|=3)|t_B|<=20*sqrt(q)",
+        "three_or_four_places": "|t_I|<=2*sqrt(q) (genus one)"
+      }
+    },
+    "orders": {
+      "2": {
+        "formula": "kappa_I=C/N",
+        "scope": "any distinct pair I"
+      },
+      "3": {
+        "formula": "kappa_I=3*(q-2)*t_I/N",
+        "scope": "any distinct triple I"
+      },
+      "4": {
+        "formula": "kappa_I=[q^2-10+(4*q-10)*t_I]/N-3*C^2/N^2",
+        "scope": "any distinct four-subset I"
+      },
+      "5": {
+        "formula": "kappa_A=(q^2-15)*t_A/N-[3*C*(q-2)/N^2]*sum_(B subset A, |B|=3) t_B",
+        "scope": "A is a five-element set of distinct places"
+      }
+    },
+    "probability_space": "uniform D in H_5(q), with N=q^4*(q-1)",
+    "triple_trace_warning": "The ten t_B for the three-subsets B generally differ from one another and do not collapse to the five-place genus-two trace t_A.",
+    "variables": "X_i=chi(D(a_i)) at distinct rational places"
+  },
+  "degree_five_curve_numerators": {
+    "m=1,2": "P_C=1",
+    "m=3,4": "P_C=1-t*u+q*u^2",
+    "m=5": "P_C=1-t*u+b*u^2-q*t*u^3+q^2*u^4",
+    "middle_coefficient_cancellation": "The m=5 degree-five family sum is independent of b."
+  },
+  "degree_five_specializations": {
+    "1": {
+      "formal_sparse_q_trace_middle": [],
+      "formula": "0"
+    },
+    "2": {
+      "formal_sparse_q_trace_middle": [
+        {
+          "coefficient": -3,
+          "middle_coefficient_power": 0,
+          "q_power": 0,
+          "trace_power": 0
+        },
+        {
+          "coefficient": 2,
+          "middle_coefficient_power": 0,
+          "q_power": 1,
+          "trace_power": 0
+        }
+      ],
+      "formula": "2*q-3"
+    },
+    "3": {
+      "formal_sparse_q_trace_middle": [
+        {
+          "coefficient": -6,
+          "middle_coefficient_power": 0,
+          "q_power": 0,
+          "trace_power": 1
+        },
+        {
+          "coefficient": 3,
+          "middle_coefficient_power": 0,
+          "q_power": 1,
+          "trace_power": 1
+        }
+      ],
+      "formula": "3*(q-2)*t"
+    },
+    "4": {
+      "formal_sparse_q_trace_middle": [
+        {
+          "coefficient": -10,
+          "middle_coefficient_power": 0,
+          "q_power": 0,
+          "trace_power": 0
+        },
+        {
+          "coefficient": -10,
+          "middle_coefficient_power": 0,
+          "q_power": 0,
+          "trace_power": 1
+        },
+        {
+          "coefficient": 4,
+          "middle_coefficient_power": 0,
+          "q_power": 1,
+          "trace_power": 1
+        },
+        {
+          "coefficient": 1,
+          "middle_coefficient_power": 0,
+          "q_power": 2,
+          "trace_power": 0
+        }
+      ],
+      "formula": "q^2-10+(4*q-10)*t"
+    },
+    "5": {
+      "formal_sparse_q_trace_middle": [
+        {
+          "coefficient": -15,
+          "middle_coefficient_power": 0,
+          "q_power": 0,
+          "trace_power": 1
+        },
+        {
+          "coefficient": 1,
+          "middle_coefficient_power": 0,
+          "q_power": 2,
+          "trace_power": 1
+        }
+      ],
+      "formula": "(q^2-15)*t"
+    }
+  },
+  "direct_control": {
+    "actual_family_place_evaluations": 12500,
+    "auxiliary_affine_evaluations": 25,
+    "candidate_polynomials": 3125,
+    "q": 5,
+    "rows": {
+      "1": {
+        "affine_character_sum": 0,
+        "curve_trace": 0,
+        "family_sum": 0,
+        "formula": "0",
+        "places": [
+          0
+        ],
+        "predicted_sum": 0,
+        "rational_points_at_infinity": 1
+      },
+      "2": {
+        "affine_character_sum": -1,
+        "curve_trace": 0,
+        "family_sum": 7,
+        "formula": "2*q-3",
+        "places": [
+          0,
+          1
+        ],
+        "predicted_sum": 7,
+        "rational_points_at_infinity": 2
+      },
+      "3": {
+        "affine_character_sum": 2,
+        "curve_trace": -2,
+        "family_sum": -18,
+        "formula": "3*(q-2)*t",
+        "places": [
+          0,
+          1,
+          2
+        ],
+        "predicted_sum": -18,
+        "rational_points_at_infinity": 1
+      },
+      "4": {
+        "affine_character_sum": 1,
+        "curve_trace": -2,
+        "family_sum": -5,
+        "formula": "q^2-10+(4*q-10)*t",
+        "places": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "predicted_sum": -5,
+        "rational_points_at_infinity": 2
+      },
+      "5": {
+        "affine_character_sum": 0,
+        "curve_trace": 0,
+        "family_sum": 0,
+        "formula": "(q^2-15)*t",
+        "places": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "predicted_sum": 0,
+        "rational_points_at_infinity": 1
+      }
+    },
+    "squarefree_members": 2500
+  },
+  "exact_identity": {
+    "degree_five_coefficient": "S_5,m=(binom(m+1,2)-q*m)*l_1+(m-q)*l_3+l_5",
+    "even_m": "L(u,psi_A)=(1-u)*P_C_A(u)",
+    "general_coefficient": "If L=sum_j l_j*u^j and B_m,0=1, then S_n,m=sum_(j<=n, n-j even) l_j*B_m,(n-j)/2.",
+    "kernel": "[u^(2k)](1-q*u^2)/(1-u^2)^m=binom(m+k-1,k)-q*binom(m+k-2,k-1) for k>=1",
+    "odd_m": "L(u,psi_A)=P_C_A(u)",
+    "parity_reason": "infinity is ramified for odd m and split for even m because f_A has square leading coefficient when m is even",
+    "squarefree_series": "sum_{n>=0} sum_{D in H_n(q)} psi_A(D)*u^n = L(u,psi_A)*(1-q*u^2)/(1-u^2)^m"
+  },
+  "family": "H_n(q): monic squarefree degree-n polynomials over F_q",
+  "marked_places": "distinct rational a_1,...,a_m in F_q",
+  "packet_files_lf_sha256": {
+    "note": "5b8548f5fa2961663206dcdf3f23bf6264b37e05dbc9845d992c04a92040d31e",
+    "producer": "70978972a011ab3971542b6028f41329f1d250d0c72785e34f4210232743396f",
+    "test": "80d4a9af7f5c68cd9976036ecede93fa37edbc5d5eabf8c96dd2076986b72b6f"
+  },
+  "payload_sha256": "ddd7332102007ceda079e7b85dd0a482642c3d999dac779dde220af4e3b27c7d",
+  "resource_contract": {
+    "direct_field": 5,
+    "extension_field_enumeration": false,
+    "maximum_auxiliary_affine_evaluations": 25,
+    "maximum_candidate_polynomials": 3125,
+    "maximum_cumulant_order": 5,
+    "maximum_direct_places": 5,
+    "maximum_family_place_evaluations": 15625,
+    "maximum_series_degree": 5,
+    "maximum_set_partitions": 52,
+    "measured_wall_seconds_is_not_canonical": true,
+    "sampling": false,
+    "wall_seconds_cap": 5.0
+  },
+  "schema": "riemann.function_field.quadratic_family_multiplace_l_function_identity.v1",
+  "standard_identity_reference": {
+    "arxiv": "https://arxiv.org/abs/1504.03444",
+    "authors": "J. P. Keating and Z. Rudnick",
+    "location": "equation (9.7) in the preprint; equation (10-4) in the published version",
+    "scope": "The Euler quotient is standard; this packet specializes the evaluation character, curve/twist adapter, and n=5 rows.",
+    "title": "Squarefree polynomials and Mobius values in short intervals and arithmetic progressions"
+  },
+  "status": "PROVED_EXACT_FOR_EVERY_ODD_PRIME_POWER",
+  "twist_convention": {
+    "curve": "C_A: y^2=f_A(z), smooth projective completion",
+    "polynomial": "f_A(z)=product_i(a_i-z)=(-1)^m*product_i(z-a_i)",
+    "trace": "t_A=q+1-#C_A(F_q)",
+    "warning": "For odd m, the monic product is -f_A: it is the nontrivial quadratic twist when -1 is nonsquare, and F_q-isomorphic to f_A when -1 is square."
+  }
+}

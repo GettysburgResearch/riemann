@@ -1,0 +1,547 @@
+{
+  "canonical_source_semantics": {
+    "BPOE": "physical observation on dyadic shell operators",
+    "HCNC": "oriented signed ratio-four near-collision",
+    "XD": "K1=(I-sqrt(2)S_2)(I-S_2)^2 with ratio-eight support"
+  },
+  "controls": [
+    {
+      "base_q": 2,
+      "collapsed_k1": {
+        "base_q": 2,
+        "coefficients_by_degree_shift_a_plus_b_sqrt2": [
+          [
+            1,
+            0
+          ],
+          [
+            -2,
+            -1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "constant_zero_multiplicity": 2,
+        "derivatives_at_one_until_first_nonzero": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            -2
+          ]
+        ],
+        "endpoint_shifts_for_1_2_4_8": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "dilations": [
+        {
+          "dilation": 2,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": 1
+        },
+        {
+          "dilation": 4,
+          "endpoint_step_shift": 2,
+          "native_integer_shift": 2
+        },
+        {
+          "dilation": 8,
+          "endpoint_step_shift": 3,
+          "native_integer_shift": 3
+        }
+      ],
+      "prime_factorization": {
+        "2": 1
+      }
+    },
+    {
+      "base_q": 3,
+      "collapsed_k1": {
+        "base_q": 3,
+        "coefficients_by_degree_shift_a_plus_b_sqrt2": [
+          [
+            1,
+            0
+          ],
+          [
+            -2,
+            -1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "constant_zero_multiplicity": 1,
+        "derivatives_at_one_until_first_nonzero": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "endpoint_shifts_for_1_2_4_8": [
+          0,
+          1,
+          2,
+          2
+        ]
+      },
+      "dilations": [
+        {
+          "dilation": 2,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 4,
+          "endpoint_step_shift": 2,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 8,
+          "endpoint_step_shift": 2,
+          "native_integer_shift": null
+        }
+      ],
+      "prime_factorization": {
+        "3": 1
+      }
+    },
+    {
+      "base_q": 4,
+      "collapsed_k1": {
+        "base_q": 4,
+        "coefficients_by_degree_shift_a_plus_b_sqrt2": [
+          [
+            1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "constant_zero_multiplicity": 1,
+        "derivatives_at_one_until_first_nonzero": [
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            -1
+          ]
+        ],
+        "endpoint_shifts_for_1_2_4_8": [
+          0,
+          1,
+          1,
+          2
+        ]
+      },
+      "dilations": [
+        {
+          "dilation": 2,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 4,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": 1
+        },
+        {
+          "dilation": 8,
+          "endpoint_step_shift": 2,
+          "native_integer_shift": null
+        }
+      ],
+      "prime_factorization": {
+        "2": 2
+      }
+    },
+    {
+      "base_q": 5,
+      "collapsed_k1": {
+        "base_q": 5,
+        "coefficients_by_degree_shift_a_plus_b_sqrt2": [
+          [
+            1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "constant_zero_multiplicity": 1,
+        "derivatives_at_one_until_first_nonzero": [
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            -1
+          ]
+        ],
+        "endpoint_shifts_for_1_2_4_8": [
+          0,
+          1,
+          1,
+          2
+        ]
+      },
+      "dilations": [
+        {
+          "dilation": 2,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 4,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 8,
+          "endpoint_step_shift": 2,
+          "native_integer_shift": null
+        }
+      ],
+      "prime_factorization": {
+        "5": 1
+      }
+    },
+    {
+      "base_q": 7,
+      "collapsed_k1": {
+        "base_q": 7,
+        "coefficients_by_degree_shift_a_plus_b_sqrt2": [
+          [
+            1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "constant_zero_multiplicity": 1,
+        "derivatives_at_one_until_first_nonzero": [
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            -1
+          ]
+        ],
+        "endpoint_shifts_for_1_2_4_8": [
+          0,
+          1,
+          1,
+          2
+        ]
+      },
+      "dilations": [
+        {
+          "dilation": 2,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 4,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 8,
+          "endpoint_step_shift": 2,
+          "native_integer_shift": null
+        }
+      ],
+      "prime_factorization": {
+        "7": 1
+      }
+    },
+    {
+      "base_q": 8,
+      "collapsed_k1": {
+        "base_q": 8,
+        "coefficients_by_degree_shift_a_plus_b_sqrt2": [
+          [
+            1,
+            0
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
+        "constant_zero_multiplicity": 1,
+        "derivatives_at_one_until_first_nonzero": [
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
+        "endpoint_shifts_for_1_2_4_8": [
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "dilations": [
+        {
+          "dilation": 2,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 4,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 8,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": 1
+        }
+      ],
+      "prime_factorization": {
+        "2": 3
+      }
+    },
+    {
+      "base_q": 9,
+      "collapsed_k1": {
+        "base_q": 9,
+        "coefficients_by_degree_shift_a_plus_b_sqrt2": [
+          [
+            1,
+            0
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
+        "constant_zero_multiplicity": 1,
+        "derivatives_at_one_until_first_nonzero": [
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
+        "endpoint_shifts_for_1_2_4_8": [
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "dilations": [
+        {
+          "dilation": 2,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 4,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 8,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        }
+      ],
+      "prime_factorization": {
+        "3": 2
+      }
+    },
+    {
+      "base_q": 11,
+      "collapsed_k1": {
+        "base_q": 11,
+        "coefficients_by_degree_shift_a_plus_b_sqrt2": [
+          [
+            1,
+            0
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
+        "constant_zero_multiplicity": 1,
+        "derivatives_at_one_until_first_nonzero": [
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
+        "endpoint_shifts_for_1_2_4_8": [
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "dilations": [
+        {
+          "dilation": 2,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 4,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 8,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        }
+      ],
+      "prime_factorization": {
+        "11": 1
+      }
+    },
+    {
+      "base_q": 25,
+      "collapsed_k1": {
+        "base_q": 25,
+        "coefficients_by_degree_shift_a_plus_b_sqrt2": [
+          [
+            1,
+            0
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
+        "constant_zero_multiplicity": 1,
+        "derivatives_at_one_until_first_nonzero": [
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
+        "endpoint_shifts_for_1_2_4_8": [
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "dilations": [
+        {
+          "dilation": 2,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 4,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        },
+        {
+          "dilation": 8,
+          "endpoint_step_shift": 1,
+          "native_integer_shift": null
+        }
+      ],
+      "prime_factorization": {
+        "5": 2
+      }
+    }
+  ],
+  "cross_base_controls": {
+    "q_3_27_smallest_common_native_dilation": 27,
+    "q_3_5_7_smallest_common_native_dilation": null,
+    "q_3_9_smallest_common_native_dilation": 9
+  },
+  "provenance": {
+    "note_sha256_lf": "f282f0be91ea4eb72a515fba8808a33101cf2bf1401bae5eec24bbbafd335857",
+    "producer_sha256_lf": "17b4956c621a600a8f9ed5ee6d6e84b526c7ba709080e89d70e25f7109ca9b60",
+    "source_locks_sha256_lf": {
+      "research/integrated/conjunctive/README.md": "3919171cc2fcc42c6a3b358e750a264747edd0e7dbc8ae4f618ca32508651351",
+      "research/integrated/vaughan_half_divisor/HALF_DIVISOR_REDUCTION.md": "372956a4d7fe0da8ede50aad2601e469407debaa44124a2f2737c34814298ed6",
+      "research/integrated/wavelet_xd/README.md": "6a04ae3f85bcf00929079dd845f12175bb4e81e88eb20997ca7b38f17c67702f",
+      "research/l-families/atlas/function_field/FFPS_PHYSICAL_SQUARECLASS_ADAPTER.md": "6b3a0958422f01b44b7702b1088f4e13926d5d11a7725bde2582cd2d371b07e6"
+    },
+    "test_sha256_lf": "c4de4512b2538030d1b637c0a72ceb7ccc4a3bfd4d023dd6e4fec65a2d1f3d0c"
+  },
+  "schema": "canonical-detector-norm-lattice-obstruction-v1",
+  "scope": {
+    "characteristic_two_family_constructed": false,
+    "continuous_phase_detector_evaluated": false,
+    "family_moment_or_sign_proved": false,
+    "q_adic_replacement_declared_canonical": false,
+    "rh_or_grh_proved": false,
+    "source_atom_cap": 256,
+    "source_atoms_used": 27
+  },
+  "theorem": {
+    "endpoint_alias": "the sampled shift is ceil(log_q(lambda))",
+    "minimal_wavelet_obstruction": "the endpoint-sampled K1 constant zero has multiplicity one for every integer q>2, versus multiplicity two at q=2",
+    "native_translation": "lambda preserves q^Z iff lambda=q^k for an integer k",
+    "odd_q_consequence": "2,4,8 are not native translations on q^Z for odd prime-power q",
+    "step_extension": "for lambda=q^(k+beta), S_lambda uses shift k+1 below log-phase beta and shift k above it"
+  }
+}

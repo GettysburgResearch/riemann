@@ -1,0 +1,934 @@
+{
+  "claim_boundary": [
+    "Every finite numerator, denominator, and density fraction in the table is exact integer arithmetic for the stated monic conductor family.",
+    "The support condition is sufficient for the source-locked raw family sum S_(n,Q) to vanish exactly; no converse for all accidental or representation-theoretic cancellations is claimed.",
+    "The exact zero is a raw family-sum statement, not a connected-cumulant zero and not a zero of any individual L-function.",
+    "The leading fixed-q C0/M term is the standard rough-polynomial/Buchstab law and is not inferred from the finite table. The squarefree specialization and parity-sensitive M^-2 refinement are derived here, with no external priority claim absent a comprehensive literature review.",
+    "Conductors are monic squarefree polynomials, not affine-isomorphism classes of curves or a quotient by twists.",
+    "No memberwise sign, zero-distribution theorem, number-field transfer, RH, or GRH statement is proved."
+  ],
+  "exact_finite_count": {
+    "all_replayed_rows_digest": {
+      "algorithm": "sha256",
+      "canonical_encoding": "compact JSON of the q-major, then n-major ordered list [q,n,M,L,Z,total] for every replayed row",
+      "row_count": 237,
+      "sha256": "233b47c578d647dceb2c1a935689c0b461486eac0a838308d3f62c4a278e20eb"
+    },
+    "ambient_count": "|H_M(q)|=q^M-q^(M-1)",
+    "certified_subset": "all irreducible factor degrees d of Q satisfy d>=L, equivalently min_i d_i>h",
+    "coefficient_formula": "Z_(q,n)=[x^M] product_(d=L..M) (1+x^d)^(I_q(d))",
+    "density": "delta_(q,n)=Z_(q,n)/(q^M-q^(M-1))",
+    "dp_replay_n_range": [
+      2,
+      80
+    ],
+    "factor_bound": "4*L>M, so every counted conductor has at most three irreducible factors",
+    "irreducible_count_formula": "I_q(d)=(1/d)*sum_(e|d) mobius(e)*q^(d/e)",
+    "multiset_formula": "Z_(q,n)=sum_(m_L,...,m_M>=0; sum_d d*m_d=M) product_(d=L..M) binom(I_q(d),m_d), with sum_d m_d<=3",
+    "parameters": "M=2*n-1, h=floor(n/2), L=h+1",
+    "rows": [
+      {
+        "M_times_certified_density": [
+          4,
+          3
+        ],
+        "certified_density": [
+          4,
+          9
+        ],
+        "certified_zero_count": 8,
+        "conductor_degree_M": 3,
+        "first_allowed_factor_degree": 2,
+        "n": 2,
+        "primitive_squarefree_conductor_count": 18,
+        "q": 3,
+        "support_threshold_h": 1
+      },
+      {
+        "M_times_certified_density": [
+          20,
+          9
+        ],
+        "certified_density": [
+          4,
+          9
+        ],
+        "certified_zero_count": 72,
+        "conductor_degree_M": 5,
+        "first_allowed_factor_degree": 2,
+        "n": 3,
+        "primitive_squarefree_conductor_count": 162,
+        "q": 3,
+        "support_threshold_h": 1
+      },
+      {
+        "M_times_certified_density": [
+          532,
+          243
+        ],
+        "certified_density": [
+          76,
+          243
+        ],
+        "certified_zero_count": 456,
+        "conductor_degree_M": 7,
+        "first_allowed_factor_degree": 3,
+        "n": 4,
+        "primitive_squarefree_conductor_count": 1458,
+        "q": 3,
+        "support_threshold_h": 2
+      },
+      {
+        "M_times_certified_density": [
+          224,
+          81
+        ],
+        "certified_density": [
+          224,
+          729
+        ],
+        "certified_zero_count": 4032,
+        "conductor_degree_M": 9,
+        "first_allowed_factor_degree": 3,
+        "n": 5,
+        "primitive_squarefree_conductor_count": 13122,
+        "q": 3,
+        "support_threshold_h": 2
+      },
+      {
+        "M_times_certified_density": [
+          16676,
+          6561
+        ],
+        "certified_density": [
+          1516,
+          6561
+        ],
+        "certified_zero_count": 27288,
+        "conductor_degree_M": 11,
+        "first_allowed_factor_degree": 4,
+        "n": 6,
+        "primitive_squarefree_conductor_count": 118098,
+        "q": 3,
+        "support_threshold_h": 3
+      },
+      {
+        "M_times_certified_density": [
+          176488,
+          59049
+        ],
+        "certified_density": [
+          13576,
+          59049
+        ],
+        "certified_zero_count": 244368,
+        "conductor_degree_M": 13,
+        "first_allowed_factor_degree": 4,
+        "n": 7,
+        "primitive_squarefree_conductor_count": 1062882,
+        "q": 3,
+        "support_threshold_h": 3
+      },
+      {
+        "M_times_certified_density": [
+          1468480,
+          531441
+        ],
+        "certified_density": [
+          293696,
+          1594323
+        ],
+        "certified_zero_count": 1762176,
+        "conductor_degree_M": 15,
+        "first_allowed_factor_degree": 5,
+        "n": 8,
+        "primitive_squarefree_conductor_count": 9565938,
+        "q": 3,
+        "support_threshold_h": 4
+      },
+      {
+        "M_times_certified_density": [
+          44944600,
+          14348907
+        ],
+        "certified_density": [
+          2643800,
+          14348907
+        ],
+        "certified_zero_count": 15862800,
+        "conductor_degree_M": 17,
+        "first_allowed_factor_degree": 5,
+        "n": 9,
+        "primitive_squarefree_conductor_count": 86093442,
+        "q": 3,
+        "support_threshold_h": 4
+      },
+      {
+        "M_times_certified_density": [
+          371012164,
+          129140163
+        ],
+        "certified_density": [
+          19526956,
+          129140163
+        ],
+        "certified_zero_count": 117161736,
+        "conductor_degree_M": 19,
+        "first_allowed_factor_degree": 6,
+        "n": 10,
+        "primitive_squarefree_conductor_count": 774840978,
+        "q": 3,
+        "support_threshold_h": 5
+      },
+      {
+        "M_times_certified_density": [
+          468937690841456408,
+          150094635296999121
+        ],
+        "certified_density": [
+          36072130064727416,
+          450283905890997363
+        ],
+        "certified_zero_count": 216432780388364496,
+        "conductor_degree_M": 39,
+        "first_allowed_factor_degree": 11,
+        "n": 20,
+        "primitive_squarefree_conductor_count": 2701703435345984178,
+        "q": 3,
+        "support_threshold_h": 10
+      },
+      {
+        "M_times_certified_density": [
+          4439159549749752752,
+          1350851717672992089
+        ],
+        "certified_density": [
+          108272184140237872,
+          1350851717672992089
+        ],
+        "certified_zero_count": 1948899314524281696,
+        "conductor_degree_M": 41,
+        "first_allowed_factor_degree": 11,
+        "n": 21,
+        "primitive_squarefree_conductor_count": 24315330918113857602,
+        "q": 3,
+        "support_threshold_h": 10
+      },
+      {
+        "M_times_certified_density": [
+          17760348963616659132703769695578886612,
+          5474401089420219382077155933569751763
+        ],
+        "certified_density": [
+          224814543843248849781060375893403628,
+          5474401089420219382077155933569751763
+        ],
+        "certified_zero_count": 1348887263059493098686362255360421768,
+        "conductor_degree_M": 79,
+        "first_allowed_factor_degree": 21,
+        "n": 40,
+        "primitive_squarefree_conductor_count": 32846406536521316292462935601418510578,
+        "q": 3,
+        "support_threshold_h": 20
+      },
+      {
+        "M_times_certified_density": [
+          2023760842006489711230773945539700936,
+          608266787713357709119683992618861307
+        ],
+        "certified_density": [
+          2023760842006489711230773945539700936,
+          49269609804781974438694403402127765867
+        ],
+        "certified_zero_count": 12142565052038938267384643673238205616,
+        "conductor_degree_M": 81,
+        "first_allowed_factor_degree": 21,
+        "n": 41,
+        "primitive_squarefree_conductor_count": 295617658828691846632166420412766595202,
+        "q": 3,
+        "support_threshold_h": 20
+      },
+      {
+        "M_times_certified_density": [
+          100313072568622835539013177437829369286118364595523208714691832814742902992,
+          29969067287845284806900763378587428179104321131567560879029936829441608169
+        ],
+        "certified_density": [
+          638936767953011691331294123807830377618588309525625533214597661240400656,
+          29969067287845284806900763378587428179104321131567560879029936829441608169
+        ],
+        "certified_zero_count": 11500861823154210443963294228540946797134589571461259597862757902327211808,
+        "conductor_degree_M": 157,
+        "first_allowed_factor_degree": 40,
+        "n": 79,
+        "primitive_squarefree_conductor_count": 539443211181215126524213740814573707223877780368216095822538862929948947042,
+        "q": 3,
+        "support_threshold_h": 39
+      },
+      {
+        "M_times_certified_density": [
+          891666463214774672620407498055716077591127376801975718884355924522988896576,
+          269721605590607563262106870407286853611938890184108047911269431464974473521
+        ],
+        "certified_density": [
+          16823895532354239106045424491617284482851459939659919224233130651377148992,
+          809164816771822689786320611221860560835816670552324143733808294394923420563
+        ],
+        "certified_zero_count": 100943373194125434636272546949703706897108759637959515345398783908262893952,
+        "conductor_degree_M": 159,
+        "first_allowed_factor_degree": 41,
+        "n": 80,
+        "primitive_squarefree_conductor_count": 4854988900630936138717923667331163365014900023313944862402849766369540523378,
+        "q": 3,
+        "support_threshold_h": 40
+      },
+      {
+        "M_times_certified_density": [
+          6,
+          5
+        ],
+        "certified_density": [
+          2,
+          5
+        ],
+        "certified_zero_count": 40,
+        "conductor_degree_M": 3,
+        "first_allowed_factor_degree": 2,
+        "n": 2,
+        "primitive_squarefree_conductor_count": 100,
+        "q": 5,
+        "support_threshold_h": 1
+      },
+      {
+        "M_times_certified_density": [
+          256,
+          125
+        ],
+        "certified_density": [
+          256,
+          625
+        ],
+        "certified_zero_count": 1024,
+        "conductor_degree_M": 5,
+        "first_allowed_factor_degree": 2,
+        "n": 3,
+        "primitive_squarefree_conductor_count": 2500,
+        "q": 5,
+        "support_threshold_h": 1
+      },
+      {
+        "M_times_certified_density": [
+          6006,
+          3125
+        ],
+        "certified_density": [
+          858,
+          3125
+        ],
+        "certified_zero_count": 17160,
+        "conductor_degree_M": 7,
+        "first_allowed_factor_degree": 3,
+        "n": 4,
+        "primitive_squarefree_conductor_count": 62500,
+        "q": 5,
+        "support_threshold_h": 2
+      },
+      {
+        "M_times_certified_density": [
+          190656,
+          78125
+        ],
+        "certified_density": [
+          21184,
+          78125
+        ],
+        "certified_zero_count": 423680,
+        "conductor_degree_M": 9,
+        "first_allowed_factor_degree": 3,
+        "n": 5,
+        "primitive_squarefree_conductor_count": 1562500,
+        "q": 5,
+        "support_threshold_h": 2
+      },
+      {
+        "M_times_certified_density": [
+          4247562,
+          1953125
+        ],
+        "certified_density": [
+          386142,
+          1953125
+        ],
+        "certified_zero_count": 7722840,
+        "conductor_degree_M": 11,
+        "first_allowed_factor_degree": 4,
+        "n": 6,
+        "primitive_squarefree_conductor_count": 39062500,
+        "q": 5,
+        "support_threshold_h": 3
+      },
+      {
+        "M_times_certified_density": [
+          125213556,
+          48828125
+        ],
+        "certified_density": [
+          9631812,
+          48828125
+        ],
+        "certified_zero_count": 192636240,
+        "conductor_degree_M": 13,
+        "first_allowed_factor_degree": 4,
+        "n": 7,
+        "primitive_squarefree_conductor_count": 976562500,
+        "q": 5,
+        "support_threshold_h": 3
+      },
+      {
+        "M_times_certified_density": [
+          2840920776,
+          1220703125
+        ],
+        "certified_density": [
+          946973592,
+          6103515625
+        ],
+        "certified_zero_count": 3787894368,
+        "conductor_degree_M": 15,
+        "first_allowed_factor_degree": 5,
+        "n": 8,
+        "primitive_squarefree_conductor_count": 24414062500,
+        "q": 5,
+        "support_threshold_h": 4
+      },
+      {
+        "M_times_certified_density": [
+          80532892524,
+          30517578125
+        ],
+        "certified_density": [
+          4737228972,
+          30517578125
+        ],
+        "certified_zero_count": 94744579440,
+        "conductor_degree_M": 17,
+        "first_allowed_factor_degree": 5,
+        "n": 9,
+        "primitive_squarefree_conductor_count": 610351562500,
+        "q": 5,
+        "support_threshold_h": 4
+      },
+      {
+        "M_times_certified_density": [
+          1841610619566,
+          762939453125
+        ],
+        "certified_density": [
+          96926874714,
+          762939453125
+        ],
+        "certified_zero_count": 1938537494280,
+        "conductor_degree_M": 19,
+        "first_allowed_factor_degree": 6,
+        "n": 10,
+        "primitive_squarefree_conductor_count": 15258789062500,
+        "q": 5,
+        "support_threshold_h": 5
+      },
+      {
+        "M_times_certified_density": [
+          7578653611068446106148884,
+          2910383045673370361328125
+        ],
+        "certified_density": [
+          194324451565857592465356,
+          2910383045673370361328125
+        ],
+        "certified_zero_count": 97162225782928796232678000,
+        "conductor_degree_M": 39,
+        "first_allowed_factor_degree": 11,
+        "n": 20,
+        "primitive_squarefree_conductor_count": 1455191522836685180664062500,
+        "q": 5,
+        "support_threshold_h": 10
+      },
+      {
+        "M_times_certified_density": [
+          4982138069570382410830148232,
+          1818989403545856475830078125
+        ],
+        "certified_density": [
+          121515562672448351483662152,
+          1818989403545856475830078125
+        ],
+        "certified_zero_count": 2430311253448967029673243040,
+        "conductor_degree_M": 41,
+        "first_allowed_factor_degree": 11,
+        "n": 21,
+        "primitive_squarefree_conductor_count": 36379788070917129516601562500,
+        "q": 5,
+        "support_threshold_h": 10
+      },
+      {
+        "M_times_certified_density": [
+          1789056827804405060969589453116570370289445517649340694,
+          661744490042422139897126953655970282852649688720703125
+        ],
+        "certified_density": [
+          22646288959549431151513790545779371775815766046194186,
+          661744490042422139897126953655970282852649688720703125
+        ],
+        "certified_zero_count": 452925779190988623030275810915587435516315320923883720,
+        "conductor_degree_M": 79,
+        "first_allowed_factor_degree": 21,
+        "n": 40,
+        "primitive_squarefree_conductor_count": 13234889800848442797942539073119405657052993774414062500,
+        "q": 5,
+        "support_threshold_h": 20
+      },
+      {
+        "M_times_certified_density": [
+          45868479879295708964464283290336536566940885233514810948,
+          16543612251060553497428173841399257071316242218017578125
+        ],
+        "certified_density": [
+          566277529374021098326719546794278229221492410290306308,
+          16543612251060553497428173841399257071316242218017578125
+        ],
+        "certified_zero_count": 11325550587480421966534390935885564584429848205806126160,
+        "conductor_degree_M": 81,
+        "first_allowed_factor_degree": 21,
+        "n": 41,
+        "primitive_squarefree_conductor_count": 330872245021211069948563476827985141426324844360351562500,
+        "q": 5,
+        "support_threshold_h": 20
+      },
+      {
+        "M_times_certified_density": [
+          6107362978767666705948454744147027923654034743637204614251870335888471747604859772095923386370887889704321944,
+          2189528850507526673318327473890493955125409284182055893370419193577798566696657189822872169315814971923828125
+        ],
+        "certified_density": [
+          38900401138647558636614361427688075946840985628262449772304906598015743615317578166216072524655336877097592,
+          2189528850507526673318327473890493955125409284182055893370419193577798566696657189822872169315814971923828125
+        ],
+        "certified_zero_count": 778008022772951172732287228553761518936819712565248995446098131960314872306351563324321450493106737541951840,
+        "conductor_degree_M": 157,
+        "first_allowed_factor_degree": 40,
+        "n": 79,
+        "primitive_squarefree_conductor_count": 43790577010150533466366549477809879102508185683641117867408383871555971333933143796457443386316299438476562500,
+        "q": 5,
+        "support_threshold_h": 39
+      },
+      {
+        "M_times_certified_density": [
+          150798190753197857221939296651870021669122352082819262289594697628551103029616218160925800477955676298042179584,
+          54738221262688166832958186847262348878135232104551397334260479839444964167416429745571804232895374298095703125
+        ],
+        "certified_density": [
+          948416294045269542276347777684717117415863849577479637041476085714157880689410177112740883509155196843032576,
+          54738221262688166832958186847262348878135232104551397334260479839444964167416429745571804232895374298095703125
+        ],
+        "certified_zero_count": 18968325880905390845526955553694342348317276991549592740829521714283157613788203542254817670183103936860651520,
+        "conductor_degree_M": 159,
+        "first_allowed_factor_degree": 41,
+        "n": 80,
+        "primitive_squarefree_conductor_count": 1094764425253763336659163736945246977562704642091027946685209596788899283348328594911436084657907485961914062500,
+        "q": 5,
+        "support_threshold_h": 40
+      },
+      {
+        "M_times_certified_density": [
+          8,
+          7
+        ],
+        "certified_density": [
+          8,
+          21
+        ],
+        "certified_zero_count": 112,
+        "conductor_degree_M": 3,
+        "first_allowed_factor_degree": 2,
+        "n": 2,
+        "primitive_squarefree_conductor_count": 294,
+        "q": 7,
+        "support_threshold_h": 1
+      },
+      {
+        "M_times_certified_density": [
+          680,
+          343
+        ],
+        "certified_density": [
+          136,
+          343
+        ],
+        "certified_zero_count": 5712,
+        "conductor_degree_M": 5,
+        "first_allowed_factor_degree": 2,
+        "n": 3,
+        "primitive_squarefree_conductor_count": 14406,
+        "q": 7,
+        "support_threshold_h": 1
+      },
+      {
+        "M_times_certified_density": [
+          30584,
+          16807
+        ],
+        "certified_density": [
+          30584,
+          117649
+        ],
+        "certified_zero_count": 183504,
+        "conductor_degree_M": 7,
+        "first_allowed_factor_degree": 3,
+        "n": 4,
+        "primitive_squarefree_conductor_count": 705894,
+        "q": 7,
+        "support_threshold_h": 2
+      },
+      {
+        "M_times_certified_density": [
+          1902048,
+          823543
+        ],
+        "certified_density": [
+          634016,
+          2470629
+        ],
+        "certified_zero_count": 8876224,
+        "conductor_degree_M": 9,
+        "first_allowed_factor_degree": 3,
+        "n": 5,
+        "primitive_squarefree_conductor_count": 34588806,
+        "q": 7,
+        "support_threshold_h": 2
+      },
+      {
+        "M_times_certified_density": [
+          82395720,
+          40353607
+        ],
+        "certified_density": [
+          7490520,
+          40353607
+        ],
+        "certified_zero_count": 314601840,
+        "conductor_degree_M": 11,
+        "first_allowed_factor_degree": 4,
+        "n": 6,
+        "primitive_squarefree_conductor_count": 1694851494,
+        "q": 7,
+        "support_threshold_h": 3
+      },
+      {
+        "M_times_certified_density": [
+          4763198960,
+          1977326743
+        ],
+        "certified_density": [
+          366399920,
+          1977326743
+        ],
+        "certified_zero_count": 15388796640,
+        "conductor_degree_M": 13,
+        "first_allowed_factor_degree": 4,
+        "n": 7,
+        "primitive_squarefree_conductor_count": 83047723206,
+        "q": 7,
+        "support_threshold_h": 3
+      },
+      {
+        "M_times_certified_density": [
+          30107033840,
+          13841287201
+        ],
+        "certified_density": [
+          6021406768,
+          41523861603
+        ],
+        "certified_zero_count": 590097863264,
+        "conductor_degree_M": 15,
+        "first_allowed_factor_degree": 5,
+        "n": 8,
+        "primitive_squarefree_conductor_count": 4069338437094,
+        "q": 7,
+        "support_threshold_h": 4
+      },
+      {
+        "M_times_certified_density": [
+          11710204281184,
+          4747561509943
+        ],
+        "certified_density": [
+          688835545952,
+          4747561509943
+        ],
+        "certified_zero_count": 28931092929984,
+        "conductor_degree_M": 17,
+        "first_allowed_factor_degree": 5,
+        "n": 9,
+        "primitive_squarefree_conductor_count": 199397583417606,
+        "q": 7,
+        "support_threshold_h": 4
+      },
+      {
+        "M_times_certified_density": [
+          74959171247992,
+          33232930569601
+        ],
+        "certified_density": [
+          3945219539368,
+          33232930569601
+        ],
+        "certified_zero_count": 1159894544574192,
+        "conductor_degree_M": 19,
+        "first_allowed_factor_degree": 6,
+        "n": 10,
+        "primitive_squarefree_conductor_count": 9770481587462694,
+        "q": 7,
+        "support_threshold_h": 5
+      },
+      {
+        "M_times_certified_density": [
+          45113726992312320817541342837392,
+          18562115921017574302453163671207
+        ],
+        "certified_density": [
+          3470286691716332370580103295184,
+          55686347763052722907359491013621
+        ],
+        "certified_zero_count": 48584013684028653188121446132576,
+        "conductor_degree_M": 39,
+        "first_allowed_factor_degree": 11,
+        "n": 20,
+        "primitive_squarefree_conductor_count": 779608868682738120703032874190694,
+        "q": 7,
+        "support_threshold_h": 10
+      },
+      {
+        "M_times_certified_density": [
+          332162382917789819676661161501920,
+          129934811447123020117172145698449
+        ],
+        "certified_density": [
+          8101521534580239504308808817120,
+          129934811447123020117172145698449
+        ],
+        "certified_zero_count": 2381847331166590414266789792233280,
+        "conductor_degree_M": 41,
+        "first_allowed_factor_degree": 11,
+        "n": 21,
+        "primitive_squarefree_conductor_count": 38200834565454167914448610835344006,
+        "q": 7,
+        "support_threshold_h": 10
+      },
+      {
+        "M_times_certified_density": [
+          298208254095615730727484655832983435236561815433656156115783693272,
+          118181386580595879976868414312001964434038548836769923458287039207
+        ],
+        "certified_density": [
+          3774788026526781401613729820670676395399516651058938685009920168,
+          118181386580595879976868414312001964434038548836769923458287039207
+        ],
+        "certified_zero_count": 158541097114124818867776652468168408606779699344475424770416647056,
+        "conductor_degree_M": 79,
+        "first_allowed_factor_degree": 21,
+        "n": 40,
+        "primitive_squarefree_conductor_count": 4963618236385026959028473401104082506229619051144336785248055646694,
+        "q": 7,
+        "support_threshold_h": 20
+      },
+      {
+        "M_times_certified_density": [
+          14985317300629379931439642390387988614223461568949557882781203125440,
+          5790887942449198118866552301288096257267888893001726249456064921143
+        ],
+        "certified_density": [
+          185003917291720739894316572720839365607697056406784665219521026240,
+          5790887942449198118866552301288096257267888893001726249456064921143
+        ],
+        "certified_zero_count": 7770164526252271075561296054275253355523276369084955939219883102080,
+        "conductor_degree_M": 81,
+        "first_allowed_factor_degree": 21,
+        "n": 41,
+        "primitive_squarefree_conductor_count": 243217293582866320992395196654100042805251333506072502477154726688006,
+        "q": 7,
+        "support_threshold_h": 20
+      },
+      {
+        "M_times_certified_density": [
+          254528277773116191399500668343246277519220472948631827586498200163057891395105576575887170340753737883281095709563991209929449670416,
+          97767880938785735581424430925004153408808081132832956331871522058261888829790438024487673220578000207467771702140266989828486321943
+        ],
+        "certified_density": [
+          1621199221484816505729303620020676926874015751265170876347122294032215868758634245706287709176775400530452838914420326177894583888,
+          97767880938785735581424430925004153408808081132832956331871522058261888829790438024487673220578000207467771702140266989828486321943
+        ],
+        "certified_zero_count": 68090367302362293240630752040868430928708661553137176806579136349353066487862638319664083785424566822279019234405653699471572523296,
+        "conductor_degree_M": 157,
+        "first_allowed_factor_degree": 40,
+        "n": 79,
+        "primitive_squarefree_conductor_count": 4106250999429000894419826098850174443169939407578984165938603926446999330851198397028482275264276008713646411489891213572796425521606,
+        "q": 7,
+        "support_threshold_h": 39
+      },
+      {
+        "M_times_certified_density": [
+          1759691227916544901927404732504926755572849418467023525996500772905140173614324690191493302534808085648023827834502124543759324876464,
+          684375166571500149069971016475029073861656567929830694323100654407833221808533066171413712544046001452274401914981868928799404253601
+        ],
+        "certified_density": [
+          33201721281444243432592542122734467086280177706924972188613222130285663653100465852669684953486945012226864676122681595165270280688,
+          2053125499714500447209913049425087221584969703789492082969301963223499665425599198514241137632138004356823205744945606786398212760803
+        ],
+        "certified_zero_count": 3253768685581535856394069128027977774455457415278647274484095768767995038003845653561629125441720611198232738260022796326196487507424,
+        "conductor_degree_M": 159,
+        "first_allowed_factor_degree": 41,
+        "n": 80,
+        "primitive_squarefree_conductor_count": 201206298972021043826571478843658547715327030971370224130991592395902967211708721454395631487949524426968674163004669465067024850558694,
+        "q": 7,
+        "support_threshold_h": 40
+      }
+    ],
+    "semantics": "Z_(q,n) counts conductors certified to have S_(n,Q)=0 by coefficient support; it is not asserted to count every conductor whose raw sum vanishes for any reason",
+    "serialized_n_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      20,
+      21,
+      40,
+      41,
+      79,
+      80
+    ]
+  },
+  "packet_files_lf_sha256": {
+    "note": "b5b1622fdf3fde43eedb44eba2613dfa584d405105d6e72aabc137f66d931abb",
+    "producer": "af684a1f9c37b66282face7b8fc0b168c6407c098ba6f2ca935e5e71f9deb719",
+    "test": "a8ca6480584a517e56e84b88a97b3c61768f967d2870433866f03881873887be"
+  },
+  "payload_sha256": "dcbc1d521353507441a9827d111baca91c37f3e2426e86f074a4265b91a1f658",
+  "resource_contract": {
+    "curve_enumeration": false,
+    "dp_transitions": 1220169,
+    "enumeration_flag_semantics": "recorded code-path ledger authenticated by packet hashes; absence of hidden work also requires source inspection and is not proved by these booleans alone",
+    "factorization": false,
+    "finite_field_element_enumeration": false,
+    "floating_point_arithmetic_in_exact_counts": false,
+    "irreducible_enumeration": false,
+    "irreducible_formula_evaluations": 14397,
+    "maximum_conductor_degree": 159,
+    "maximum_local_multiplicity_observed": 3,
+    "maximum_n": 80,
+    "maximum_output_bytes": 65536,
+    "maximum_peak_nonzero_states_observed": 120,
+    "maximum_replay_rows": 237,
+    "maximum_row_dp_transitions": 100000,
+    "maximum_row_dp_transitions_observed": 14937,
+    "maximum_serialized_rows": 45,
+    "maximum_source_bytes": 32768,
+    "maximum_total_dp_transitions": 8000000,
+    "minimum_n": 2,
+    "payload_build_wall_seconds_cap": 10.0,
+    "polynomial_enumeration": false,
+    "q_values": [
+      3,
+      5,
+      7
+    ],
+    "replayed_rows": 237,
+    "root_enumeration": false,
+    "sampling": false,
+    "serialized_n_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      20,
+      21,
+      40,
+      41,
+      79,
+      80
+    ],
+    "serialized_rows": 45,
+    "source_bytes_read": 21795,
+    "source_content_reads": 1,
+    "source_files_read": 1,
+    "source_git_commands": 2,
+    "wall_clock_semantics": "post-build acceptance ceiling checked after payload construction; not a preemptive process timeout",
+    "zero_enumeration": false
+  },
+  "rigorous_fixed_q_asymptotic": {
+    "buchstab_identification": "C0=4*omega(4), the standard rough-polynomial Buchstab constant at M/L tending to 4",
+    "conjectural_extrapolation": null,
+    "constant": "C0=1+log(3)+(1/2)*(log(3)^2-log(2)^2)+Li_2(1/3)-Li_2(1/2)",
+    "constant_decimal_noncanonical": "2.24583296562735",
+    "direct_proof": [
+      "Because 4*L>M, decompose the exact coefficient into one-, two-, and three-factor contributions only.",
+      "For fixed q, I_q(d)=q^d/d+O_q(q^(d/2)); since every d>=L=M/4+O(1), all replacement and repeated-factor errors are exponentially small after division by q^M.",
+      "The one-factor contribution is 1/M+o(M^-2); the ordered two-factor Riemann sum contributes log(3)/M+O(M^-2).",
+      "The ordered three-factor Riemann sum contributes A3/M+O(M^-2), where A3=(1/6)*integral_(x,y,1-x-y>=1/4) dx*dy/(x*y*(1-x-y)).",
+      "Elementary integration gives A3=(1/2)*(log(3)^2-log(2)^2)+Li_2(1/3)-Li_2(1/2); division by the exact squarefree count q^M*(1-q^-1) gives the density theorem."
+    ],
+    "finite_table_role": "The bounded rows are exact evaluations, not a fit, interpolation proof, or numerical evidence used to justify the asymptotic theorem.",
+    "first_parity_correction": {
+      "cutoff_offset": "Writing eta=L-M/4 gives eta=5/4 for even n and eta=3/4 for odd n.",
+      "finite_row_residual_controls_noncanonical": {
+        "definition": "R_(q,n)=M^2*(Z_(q,n)/q^M-C0/M), evaluated from exact stored Z and the displayed decimal C0; values are rounded and are controls, not proof",
+        "n_79_odd": {
+          "q_3": "-2.253376622",
+          "q_5": "-2.253376619",
+          "q_7": "-2.253376619",
+          "target_D_odd": "-2.257529574"
+        },
+        "n_80_even": {
+          "q_3": "-6.664475255",
+          "q_5": "-6.664475254",
+          "q_7": "-6.664475254",
+          "target_D_even": "-6.772588722"
+        }
+      },
+      "n_even": "D_even=-4*(1+log(2))",
+      "n_odd": "D_odd=-(4/3)*(1+log(2))",
+      "proof": "The two-factor harmonic sum has M^-2 coefficient B_eta=(8-16*eta)/3. Put alpha_M=L/M. Euler--Maclaurin is applied on the actual lattice-aligned triangle D_(alpha_M): its half-boundary coefficient tends to 16*log(2), while expanding the interior integral from alpha_0=1/4 to alpha_M=1/4+eta/M contributes -32*eta*log(2)/M. Boundary variation and corners are O(M^-2) before the outer factor 1/(6*M). Thus the three-factor M^-2 coefficient is B_eta*log(2), D_eps=B_eta*(1+log(2)), the remaining Euler--Maclaurin term is O(M^-3), and the irreducible-count/repetition error is exponentially small.",
+      "theorem": "Z_(q,n)/q^M=C0/M+D_eps/M^2+O_q(M^-3), and delta_(q,n)=C0/((1-q^-1)*M)+D_eps/((1-q^-1)*M^2)+O_q(M^-3)"
+    },
+    "literature_boundary": "The leading C0/M=4*omega(4)/M rough-polynomial law is standard; see Panario--Richmond, Analysis of Ben-Or's polynomial irreducibility test, Random Structures & Algorithms 13 (1998), 439--456, DOI 10.1002/(SICI)1098-2418(199810/12)13:3/4<439::AID-RSA13>3.0.CO;2-U, and Weingartner, On the degrees of polynomial divisors over finite fields, arXiv:1507.01920. The squarefree specialization and explicit parity-sensitive M^-2 refinement are derived here, but no external priority is claimed for the refinement absent a comprehensive literature review.",
+    "regime": "fix an odd prime power q and let n tend to infinity through integers, with M=2*n-1 and L=floor(n/2)+1",
+    "theorem": "Z_(q,n)/q^M=C0/M+O_q(M^(-2)), hence delta_(q,n)=C0/((1-q^(-1))*M)+O_q(M^(-2))"
+  },
+  "schema": "riemann.function_field.quadratic_family_closed_place_notch_density.v1",
+  "scope": "monic primitive squarefree closed-place conductors Q over F_q, q in {3,5,7}, at odd notch degree M=2*n-1; DP-replayed for every 2<=n<=80 with a deterministic sparse exact table serialized",
+  "source_lock": {
+    "commit": "9716d2261e9e7843a6c1ffffd67ee8d6756060aa",
+    "git_blob": "964935a3a936f03011366546d966ef1473c4e832",
+    "imported_exact_residual": "S_(n,Q)=sum_(k=1..floor(n/2)) a_k*D_(n-2*k)",
+    "imported_support_zero": "If min_i d_i>floor(n/2), then every relevant a_k vanishes and S_(n,Q)=0 exactly.",
+    "path": "research/l-families/atlas/function_field/quadratic_family_closed_place_weight_notch.json",
+    "payload_sha256": "510f35eacebfdb18d5d5c622a37c2c43c687f960e3959684949d118a7106d4b3",
+    "schema": "riemann.function_field.quadratic_family_closed_place_weight_notch.v1",
+    "sha256_lf_normalized": "3a024c4661a89d57943e15af829bffd2108b063156748322bb80637eed4e332b",
+    "transitive_packet_files": {
+      "note": "f2724926d646b49a89adfc0ff6198b2c0ac60b09aca897de35a50f1f8f7381df",
+      "producer": "06cc78ce641c05b78c94d6f9217474a77e7e7dc23179565ade99a491bc2da9dd",
+      "test": "92415584d6ae66abbad3f92f57bbe80b9598cc9d2f4bc0cd95de62a7db19138f"
+    }
+  },
+  "status": "EXACT_FINITE_COUNTS_FROM_SOURCE_LOCKED_SUPPORT_THEOREM_AND_BOUNDED_COEFFICIENT_DP"
+}

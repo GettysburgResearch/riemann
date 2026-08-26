@@ -1,0 +1,217 @@
+{
+  "claim_boundary": [
+    "The variables are rational-place Euler coefficients in one complete quadratic function-field family, not independent Haar variables.",
+    "The q^-4 defects are fixed-degree squarefree-family coupling; no zero statistic, RH implication, or principal-member amplification is inferred.",
+    "The result is an all-q theorem, not a recurrence fit to q=3,5,7.",
+    "No external novelty claim is made."
+  ],
+  "cumulant_defects": {
+    "Delta_2": "2*c",
+    "Delta_3": "3*u",
+    "Delta_4": "8*c+6*w-6*v^2-24*v*c-12*c^2",
+    "Delta_5": "15*u*(1-4*(v+c))",
+    "Delta_6": "32*c+30*w-30*(v+c)*(2*v+8*c+6*w)-90*u^2+240*(v+c)^3+30*v^2-60*v^3",
+    "definition": "Delta_m=kappa_m(X+Y)-kappa_m(X)-kappa_m(Y)",
+    "leading_q_to_infinity": {
+      "Delta_2": "4*q^-4+O(q^-5)",
+      "Delta_3": "6*s*(1+epsilon)*q^-4+O(q^-5)",
+      "Delta_4": "-32*q^-4+O(q^-5)",
+      "Delta_5": "-90*s*(1+epsilon)*q^-4+O(q^-5)",
+      "Delta_6": "544*q^-4+O(q^-5)"
+    },
+    "u": "s*(1+epsilon)*c"
+  },
+  "degree_five_coefficients_low_to_high_in_q": {
+    "A": [
+      0,
+      0,
+      0,
+      0,
+      -1,
+      1
+    ],
+    "C": [
+      -3,
+      2
+    ],
+    "V": [
+      -1,
+      2,
+      -2,
+      2,
+      -2,
+      1
+    ],
+    "W": [
+      -6,
+      9,
+      -7,
+      5,
+      -3,
+      1
+    ],
+    "one_character_degree_5": [
+      0
+    ]
+  },
+  "family": "monic squarefree quintics D over F_q",
+  "files": {
+    "note": "research/l-families/atlas/function_field/QUADRATIC_FAMILY_TWO_PLACE_CUMULANT_DEFECT.md",
+    "producer": "research/l-families/atlas/function_field/quadratic_family_two_place_cumulant_defect.py",
+    "test": "tests/test_quadratic_family_two_place_cumulant_defect.py"
+  },
+  "generating_functions": {
+    "family": "(1-q*u^2)/(1-q*u)",
+    "mixed_character_unramified": "(1-q*u^2)/((1-u^2)*(1+sigma*u))",
+    "one_character": "(1-q*u^2)/(1-u^2)",
+    "one_unramified": "(1-q*u^2)/((1-q*u)*(1+u))",
+    "two_characters": "(1-u)*(1-q*u^2)/(1-u^2)^2",
+    "two_unramified": "(1-q*u^2)/((1-q*u)*(1+u)^2)"
+  },
+  "orientation": "epsilon=chi(-1), s=chi(b-a)",
+  "payload_sha256": "18119e393842cfbe1f3ee7f594466eedf554004f9479f94338675921a3b0f859",
+  "places": "two distinct rational primes T-a and T-b",
+  "resource_contract": {
+    "curve_enumeration": false,
+    "finite_field_enumeration": false,
+    "largest_moment_order": 6,
+    "largest_sample_q": 7,
+    "sampling": false,
+    "series_degree": 5
+  },
+  "samples": {
+    "3": {
+      "defects_orders_2_through_6": {
+        "2": [
+          1,
+          27
+        ],
+        "3": [
+          0,
+          1
+        ],
+        "4": [
+          -326,
+          2187
+        ],
+        "5": [
+          0,
+          1
+        ],
+        "6": [
+          84452,
+          59049
+        ]
+      },
+      "epsilon": -1,
+      "family_size": 162,
+      "joint_counts_s=1": {
+        "-1,-1": 24,
+        "-1,0": 13,
+        "-1,1": 24,
+        "0,-1": 16,
+        "0,0": 11,
+        "0,1": 13,
+        "1,-1": 21,
+        "1,0": 16,
+        "1,1": 24
+      }
+    },
+    "5": {
+      "defects_orders_2_through_6": {
+        "2": [
+          7,
+          1250
+        ],
+        "3": [
+          21,
+          1250
+        ],
+        "4": [
+          -46009,
+          1562500
+        ],
+        "5": [
+          -15393,
+          78125
+        ],
+        "6": [
+          3460328,
+          9765625
+        ]
+      },
+      "epsilon": 1,
+      "family_size": 2500,
+      "joint_counts_s=1": {
+        "-1,-1": 433,
+        "-1,0": 176,
+        "-1,1": 433,
+        "0,-1": 176,
+        "0,0": 71,
+        "0,1": 169,
+        "1,-1": 433,
+        "1,0": 169,
+        "1,1": 440
+      }
+    },
+    "7": {
+      "defects_orders_2_through_6": {
+        "2": [
+          11,
+          7203
+        ],
+        "3": [
+          0,
+          1
+        ],
+        "4": [
+          -156728,
+          17294403
+        ],
+        "5": [
+          0,
+          1
+        ],
+        "6": [
+          15121395278,
+          124571584809
+        ]
+      },
+      "epsilon": -1,
+      "family_size": 14406,
+      "joint_counts_s=1": {
+        "-1,-1": 2761,
+        "-1,0": 781,
+        "-1,1": 2761,
+        "0,-1": 792,
+        "0,0": 227,
+        "0,1": 781,
+        "1,-1": 2750,
+        "1,0": 792,
+        "1,1": 2761
+      }
+    }
+  },
+  "scalar_law": {
+    "A": "q^4*(q-1)",
+    "C": "2*q-3",
+    "V": "q^5-2*q^4+2*q^3-2*q^2+2*q-1",
+    "W": "q^5-3*q^4+5*q^3-7*q^2+9*q-6",
+    "moments": {
+      "E[X*Y]": "c=C/A",
+      "E[X*Y^2]": "epsilon*s*c",
+      "E[X]=E[Y]": "0",
+      "E[X^2*Y]": "s*c",
+      "E[X^2*Y^2]": "w=W/A",
+      "E[X^2]=E[Y^2]": "v=V/A"
+    }
+  },
+  "schema": "riemann.function_field.quadratic_family_two_place_cumulant_defect.v1",
+  "source": {
+    "commit": "fe9ba35f67e39c5706cef79d2e7cefd07fce7d67",
+    "concept_note": "research/l-families/atlas/function_field/EULER_DETECTOR_RENORMALIZATION_FLOW.md",
+    "git_blob": "e1740dd014cd0f43222b8ec73a09ee1374b7f3cc"
+  },
+  "status": "PROVED_EXACT_FOR_EVERY_ODD_PRIME_POWER",
+  "variables": "X=chi(D(a)), Y=chi(D(b)) in {-1,0,1}"
+}

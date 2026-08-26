@@ -155,6 +155,59 @@ fourth-, sixth-, and eighth-moment polynomials.  At the cubic threshold,
 
 The second moment is exceptional and remains exactly one.
 
+### 3.1 The complete real-moment phase diagram
+
+The same argument gives a sharp trichotomy for every real `p>=0`, not only
+for even integers.  Set
+
+\[
+ A_p={1\over\pi}\int_0^\pi\sin^p u\,du
+ ={\Gamma((p+1)/2)\over\sqrt\pi\,\Gamma((p+2)/2)}.
+ \tag{14}
+\]
+
+Then, as `N=n+1` tends to infinity,
+
+\[
+ \boxed{
+ \mathbb E|\chi_n|^p\longrightarrow
+ {2A_p\over\pi}\int_0^\pi\sin^{2-p}\theta\,d\theta,
+ \qquad 0\le p<3,}
+ \tag{15}
+\]
+
+\[
+ \boxed{
+ \mathbb E|\chi_n|^3\sim {16\over3\pi^2}\log N,}
+ \tag{16}
+\]
+
+and
+
+\[
+ \boxed{
+ \mathbb E|\chi_n|^p\sim C_pN^{p-3},\qquad
+ C_p={4\over\pi}\int_0^\infty
+ {|\sin x|^p\over x^{p-2}}\,dx,\qquad p>3.}
+ \tag{17}
+\]
+
+All constants displayed here are finite and strictly positive in their stated
+ranges.  Formula (15) is exactly the `p`-th absolute moment of the weak limit
+`W`: periodic averaging applies because `sin^(2-p)(theta)` is integrable
+precisely for `p<3`.  At `p=3`, the average `A_3=4/(3pi)` multiplies the two
+logarithmic endpoint integrals and the Haar factor `2/pi`, giving (16).  For
+`p>3`, put `theta=x/N` at both endpoints.  The rescaled integrand is dominated
+near zero by `x^2` and at infinity by an integrable multiple of `x^(2-p)`;
+the portion outside shrinking endpoint neighbourhoods is lower order.  This
+proves (17).
+
+For `p=2k>=4`, (17) reduces to (11).  In particular,
+`C_4=1`, `C_6=1/2`, and `C_8=1/3`.  The exponent `p-3` is the codimension-three
+endpoint law made quantitative: below three, bulk oscillation controls the
+statistic; at three, bulk and boundary balance logarithmically; above three,
+the near-central boundary layer controls the leading order.
+
 ## 4. Product and principal ladder limits are different
 
 For the tensor ladder, let
@@ -171,7 +224,7 @@ with all Haar variables independent where appropriate.  Put
 \[
  \boxed{Y_r\Longrightarrow W,
  \qquad X_r\Longrightarrow ZW,}
- \tag{14}
+ \tag{18}
 \]
 
 where `Z` and `W` are independent.  Both limiting laws are symmetric with
@@ -179,7 +232,7 @@ mean zero and variance one.  They are nevertheless different.  Directly,
 
 \[
  \mathbb E|Z|^3={64\over15\pi}.
- \tag{15}
+ \tag{19}
 \]
 
 The bounded regular-variation calculation applied to (6) yields
@@ -188,7 +241,7 @@ The bounded regular-variation calculation applied to (6) yields
  \boxed{
  \Pr(|ZW|>x)
  \sim {1024\over135\pi^3}x^{-3}.}
- \tag{16}
+ \tag{20}
 \]
 
 Thus the product limit has the larger absolute-tail constant by the factor
@@ -203,7 +256,7 @@ law `W` is symmetric,
  \mathbb E\chi_n^3=
  \begin{cases}1,&n\text{ even},\\0,&n\text{ odd}.
  \end{cases}
- \tag{17}
+ \tag{21}
 \]
 
 Endpoint mass is negligible for weak convergence but can retain a signed
