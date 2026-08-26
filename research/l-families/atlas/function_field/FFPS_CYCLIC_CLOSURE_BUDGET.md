@@ -428,16 +428,19 @@ the honest source-facing formulation.
 
 Three tempting shortcuts fail exactly:
 
-1. **Take the selected part of WCKUM.**  
+1. **Take the selected part of WCKUM.**
+
    The centered summands \(|W_{\eta,\theta}|^2-D\) are signed. A bound on
    their complete weighted sum does not bound a selected sub-sum.
 
-2. **Return to the uncentered positive family.**  
+2. **Return to the uncentered positive family.**
+
    Positivity then introduces the atomic coefficient \(B_R\), whose ratio to
    the paid principal diagonal is (3.4). This reinstates the
    conductor-dimensional trace corrected by R-106131.
 
-3. **Apply Cauchy fibre by fibre.**  
+3. **Apply Cauchy fibre by fibre.**
+
    This takes absolute values before the signed varying-conductor
    recombination and is forbidden by R-106123 and T-106140.
 
