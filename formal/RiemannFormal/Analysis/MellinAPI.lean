@@ -3,6 +3,9 @@ import Mathlib.Analysis.MellinTransform
 import Mathlib.Tactic
 
 open Complex Filter MeasureTheory Set
+open scoped Topology
+
+noncomputable section
 
 namespace RiemannFormal.Analysis
 
@@ -28,7 +31,9 @@ theorem hasMellin_linearCombination_two {f g : ℝ → ℂ} {s : ℂ}
     HasMellin (fun x => a * f x + b * g x) s
       (a * mellin f s + b * mellin g s) := by
   have hsum := hasMellin_add (hf.const_smul a) (hg.const_smul b)
-  simpa [smul_eq_mul, mellin_const_smul] using hsum
+  simp only [smul_eq_mul] at hsum
+  rw [mellin_const_mul a f s, mellin_const_mul b g s] at hsum
+  exact hsum
 
 /-- Mathlib's compact power kernel supplies an exact reusable compact-kernel transform. -/
 theorem compact_power_kernel_hasMellin (a : ℂ) {s : ℂ} (hs : 0 < s.re + a.re) :
@@ -43,9 +48,20 @@ theorem mellin_analyticAt_of_power_bounds
     {a b : ℝ} {f : ℝ → E} {s : ℂ}
     (hfc : LocallyIntegrableOn f (Set.Ioi 0))
     (hf_top : f =O[Filter.atTop] (· ^ (-a))) (hs_top : s.re < a)
-    (hf_bot : f =O[nhdsGT 0] (· ^ (-b))) (hs_bot : b < s.re) :
-    AnalyticAt ℂ (mellin f) s :=
-  (mellin_differentiableAt_of_isBigO_rpow hfc hf_top hs_top hf_bot hs_bot).analyticAt
+    (hf_bot : f =O[𝓝[>] 0] (· ^ (-b))) (hs_bot : b < s.re) :
+    AnalyticAt ℂ (mellin f) s := by
+  by_cases hE : CompleteSpace E
+  · letI := hE
+    rw [analyticAt_iff_eventually_differentiableAt]
+    filter_upwards
+        [(continuous_re.tendsto s).eventually (Iio_mem_nhds hs_top),
+          (continuous_re.tendsto s).eventually (Ioi_mem_nhds hs_bot)] with z hz_top hz_bot
+    exact mellin_differentiableAt_of_isBigO_rpow hfc hf_top hz_top hf_bot hz_bot
+  · have hmellin : mellin f = 0 := by
+      funext z
+      simp [mellin, integral, hE]
+    rw [hmellin]
+    exact analyticAt_const
 
 /-! ## Direct tail-Mellin convention used by the canonical consumer -/
 
@@ -122,8 +138,9 @@ theorem logBoxMultiplier_analyticAt {A : ℝ} (hA : 1 < A) {s : ℂ} (hs : 0 < s
     intro h
     rw [h] at hs
     simp at hs
-  simpa [logBoxMultiplier] using
-    (analyticAt_const.sub hpow).div analyticAt_id hs0
+  apply ((analyticAt_const.sub hpow).div analyticAt_id hs0).congr
+  filter_upwards with z
+  rfl
 
 /-- The logarithmic-box multiplier has no zero in `Re(s) > 0`. -/
 theorem logBoxMultiplier_nonzero {A : ℝ} (hA : 1 < A) {s : ℂ} (hs : 0 < s.re) :

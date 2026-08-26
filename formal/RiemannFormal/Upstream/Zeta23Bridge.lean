@@ -8,6 +8,8 @@ import Mathlib.Tactic
 
 open Complex
 
+noncomputable section
+
 namespace RiemannFormal.Upstream
 
 /-- Compatibility declaration retained for the trusted bootstrap axiom audit. The project and
@@ -38,7 +40,7 @@ theorem projectRiemannZeta_meromorphicOrderAt_eq_analyticOrderAt
     meromorphicOrderAt riemannZeta ρ =
       (analyticOrderAt riemannZeta ρ).map (fun n : ℕ => (n : ℤ)) := by
   simpa using
-    ((differentiableAt_riemannZeta hρ1).analyticAt.meromorphicOrderAt_eq)
+    ((projectRiemannZeta_analyticAt hρ1).meromorphicOrderAt_eq)
 
 /-- At a Zeta23 open-strip zero, the meromorphic order is exactly the finite natural
 `zeroMult`, embedded in `WithTop ℤ`. -/
@@ -71,6 +73,7 @@ theorem projectCenteredZero_reconstruct (ρ : ℂ) :
     (1 / 2 : ℂ) + Complex.I * ProjectCenteredZero ρ = ρ := by
   change (1 / 2 : ℂ) + Complex.I * ((ρ - 1 / 2) / Complex.I) = ρ
   field_simp [Complex.I_ne_zero]
+  ring
 
 /-- Reflection preserves the exact Zeta23 nontrivial-zero convention. -/
 theorem projectReflectedZero_mem {ρ : ℂ} (hρ : ProjectNontrivialZero ρ) :

@@ -11,8 +11,9 @@ theorem fixed_holomorphic_defect_transfer
     NonremovableAt (fun s => main s + defect s) s₀ := by
   intro hsum
   apply hmain
-  have hdiff := hsum.sub hdefect
-  simpa using hdiff
+  apply (hsum.sub hdefect).congr
+  filter_upwards with s
+  simp
 
 /-- Multiplication by a fixed nonvanishing analytic multiplier preserves a nonremovable
 singularity. -/

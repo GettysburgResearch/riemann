@@ -4,6 +4,8 @@ import Mathlib.NumberTheory.LSeries.ZetaZeros
 
 open Complex
 
+noncomputable section
+
 namespace RiemannFormal.Upstream
 
 /-- The project RH proposition is definitionally Mathlib's proposition. -/
@@ -20,18 +22,20 @@ abbrev projectEntireCompletedZeta : ℂ → ℂ := completedRiemannZeta₀
 
 /-- ζ is analytic at every point except its pole convention at `1`. -/
 theorem projectRiemannZeta_analyticAt {s : ℂ} (hs : s ≠ 1) :
-    AnalyticAt ℂ projectRiemannZeta s :=
-  (differentiableAt_riemannZeta hs).analyticAt
+    AnalyticAt ℂ projectRiemannZeta s := by
+  exact analyticOn_riemannZeta s hs
 
 /-- The completed meromorphic normalization is analytic away from `0` and `1`. -/
 theorem projectCompletedZeta_analyticAt {s : ℂ} (h0 : s ≠ 0) (h1 : s ≠ 1) :
-    AnalyticAt ℂ projectCompletedZeta s :=
-  (differentiableAt_completedZeta h0 h1).analyticAt
+    AnalyticAt ℂ projectCompletedZeta s := by
+  rw [analyticAt_iff_eventually_differentiableAt]
+  filter_upwards [eventually_ne_nhds h0, eventually_ne_nhds h1] with z hz0 hz1
+  exact differentiableAt_completedZeta hz0 hz1
 
 /-- Mathlib's entire completed normalization is analytic everywhere. -/
 theorem projectEntireCompletedZeta_analyticAt (s : ℂ) :
     AnalyticAt ℂ projectEntireCompletedZeta s :=
-  (differentiable_completedZeta₀ s).analyticAt
+  differentiable_completedZeta₀.analyticAt s
 
 /-- Functional equation for the entire completed normalization, with no exceptional points. -/
 theorem projectEntireCompletedZeta_one_sub (s : ℂ) :

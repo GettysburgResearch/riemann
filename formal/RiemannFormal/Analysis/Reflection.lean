@@ -1,6 +1,7 @@
 import RiemannFormal.Analysis.Foundations
 
 open Complex
+open scoped ComplexConjugate
 
 namespace RiemannFormal.Analysis
 
