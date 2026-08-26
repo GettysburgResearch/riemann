@@ -7,8 +7,10 @@ cd "$ROOT/formal"
 start="$(date +%s)"
 
 lake exe cache get
-lake build
-lake build Challenge.MellinAPI Solution.MellinAPI
+lake -Kjobs="${LAKE_JOBS:-1}" build
+lake -Kjobs="${LAKE_JOBS:-1}" build \
+  RiemannComparatorChallenge.MellinAPI \
+  RiemannComparatorSolution.MellinAPI
 
 python3 scripts/generate_registry.py
 python3 scripts/validate_registry.py

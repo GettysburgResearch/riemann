@@ -1,5 +1,5 @@
-import Solution.RH
-import Solution.MellinAPI
+import RiemannComparatorSolution.RH
+import RiemannComparatorSolution.MellinAPI
 import RiemannFormal.Analysis.FixedDetectorConsumer
 
 #print axioms rh_statement_exact

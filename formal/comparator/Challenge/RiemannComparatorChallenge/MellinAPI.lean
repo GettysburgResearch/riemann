@@ -1,4 +1,4 @@
-import ChallengeDeps.MellinAPI
+import RiemannComparatorChallengeDeps.MellinAPI
 
 namespace Comparator.MellinAPI
 

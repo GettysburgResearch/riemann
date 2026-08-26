@@ -10,15 +10,9 @@ PRINT_RE = re.compile(r"^\s*#print\s+axioms\s+([A-Za-z0-9_.]+)\s*$")
 OUTPUT_NAME_RE = re.compile(r"['‘’]?([A-Za-z0-9_.]+)['‘’]?")
 
 
-def expected_declarations() -> set[str]:
-    formal = Path(__file__).resolve().parents[1]
-    files = [
-        formal / "RiemannFormal" / "AxiomAudit.lean",
-        formal / "RiemannFormal" / "Analysis" / "AxiomAudit.lean",
-    ]
-    files.extend(sorted((formal / "comparator" / "PrintAxioms").glob("*.lean")))
+def expected_declarations(paths: list[Path]) -> set[str]:
     expected: set[str] = set()
-    for path in files:
+    for path in paths:
         if not path.is_file():
             raise SystemExit(f"missing axiom-print source: {path}")
         for line in path.read_text(encoding="utf-8").splitlines():
@@ -31,13 +25,13 @@ def expected_declarations() -> set[str]:
 
 
 def main() -> None:
-    if len(sys.argv) != 2:
-        raise SystemExit("usage: audit_axiom_output.py AXIOM_OUTPUT")
+    if len(sys.argv) < 3:
+        raise SystemExit("usage: audit_axiom_output.py AXIOM_OUTPUT PRINT_SOURCE...")
     text = Path(sys.argv[1]).read_text(encoding="utf-8")
     if "sorryAx" in text:
         raise SystemExit("axiom audit contains sorryAx")
 
-    expected = expected_declarations()
+    expected = expected_declarations([Path(arg) for arg in sys.argv[2:]])
     seen: set[str] = set()
     for line in text.splitlines():
         if "depends on axioms:" not in line and "does not depend on any axioms" not in line:

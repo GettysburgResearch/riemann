@@ -1,4 +1,4 @@
-import Solution.MellinAPI
+import RiemannComparatorSolution.MellinAPI
 import RiemannFormal.Analysis.FixedDetectorConsumer
 
 #print axioms Comparator.MellinAPI.fixedMellinConsumerSolution

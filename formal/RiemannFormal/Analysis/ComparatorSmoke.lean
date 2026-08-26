@@ -1,4 +1,4 @@
-import Solution.MellinAPI
+import RiemannComparatorSolution.MellinAPI
 
 namespace RiemannFormal.Analysis
 
