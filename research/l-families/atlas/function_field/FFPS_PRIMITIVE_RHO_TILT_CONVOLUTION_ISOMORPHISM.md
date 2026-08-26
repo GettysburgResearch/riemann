@@ -1426,6 +1426,47 @@ now plausible tools, but the varying wavelets, divisor multiplicity,
 off-diagonal correlations, and harmonic `d` average still have to be
 controlled. No such estimate is proved here.
 
+### 5.10 The wavelet is a near-square, factor-64 shell
+
+The imported autocorrelation is supported on ratio window `[1/16,16]`.
+If one divisor term in (5.47) survives, then
+
+\[
+ {1\over16}\le {67^\alpha a^2\over N}\le16,
+ \qquad
+ {1\over4}\sqrt{N\over67^\alpha}
+ \le a\le
+ 4\sqrt{N\over67^\alpha}.
+\tag{5.53}
+\]
+
+Moreover, every `I` in `D_H` lies in the height grid `(H,2H]`.
+Writing `X=67^alpha a` and `Y=N/a`, the same ratio window gives
+`min(X,Y)>=max(X,Y)/16`. Hence
+
+\[
+ \boxed{
+ {H^2\over16\,67^\alpha}<N\le {4H^2\over67^\alpha}.}
+\tag{5.54}
+\]
+
+Thus, for fixed core `u`, the cofactor in (5.50) is confined to the
+factor-64 multiplicative shell
+
+\[
+ {H^2\over16\,67^\alpha u}<M\le {4H^2\over67^\alpha u}.
+\tag{5.55}
+\]
+
+The WAVE target is therefore not a full unstructured prefix sum: it is a
+Möbius sum over one moving short multiplicative shell, with a near-square
+divisor wavelet. At `alpha=0`, evenness of `R` and symmetry of the max
+height make paired orientations `a` and `N/a` equal. For squarefree
+`N>1` there is no fixed divisor, so the wavelet is exactly twice either
+half-divisor sum. At positive `alpha` this pairing symmetry is absent.
+These support facts sharpen the prospective bilinear/large-sieve attack but
+do not provide cancellation.
+
 ## 6. Firewall against a PRIMCAR or RH misreading
 
 The bounded isomorphism (0.5) acts on full one-variable sequences on
@@ -1499,6 +1540,7 @@ No PRIMCAR, PRIMLS, RH, or GRH estimate is proved. The RH-equivalent statement
 | product-shell zeta transform, finite-height inverse, and local spectrum (5.44)--(5.46) | **PROVED EXACT** |
 | one-variable Möbius divisor-wavelet normal form (5.47)--(5.51) | **PROVED EXACT** |
 | `WAVEPRIMCAR` implies `AUXCOLORPRIMCAR` (5.52) | **PROVED CONDITIONALLY; ESTIMATE OPEN** |
+| near-square divisor support and factor-64 product/cofactor shell (5.53)--(5.55) | **PROVED EXACT FROM IMPORTED KERNEL SUPPORT** |
 | weighted vector gate (5.3b) over induced tests (5.7) | **OPEN / NOT PROVED** |
 | uniform control over induced tests (5.7) | **STRONGER SUFFICIENT SPECIAL CASE; NOT PROVED** |
 | `GENPRIMCAR`, `RAYPRIMCAR`, `COLLPRIMCAR`, `WAVEPRIMCAR`, `AUXCOLORPRIMCAR`, or `COLORPRIMCAR` estimate | **OPEN / NOT PROVED** |

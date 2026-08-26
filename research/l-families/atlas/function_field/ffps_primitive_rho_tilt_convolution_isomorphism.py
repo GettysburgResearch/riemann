@@ -1304,7 +1304,9 @@ def coherent_core_gram_panel(limit: int = 30) -> dict[str, object]:
         ),
         "one_variable_gate": (
             "WAVEPRIMCAR: Y_u(D,H)<<_eta(2DHu)^eta uniformly; "
-            "sum_u g(u)/sqrt(u) Y_u equals AUXCOLORPRIMCAR"
+            "sum_u g(u)/sqrt(u) Y_u equals AUXCOLORPRIMCAR; each cofactor "
+            "lies in the factor-64 shell H^2/(16*67^alpha*u)<M<="
+            "4H^2/(67^alpha*u)"
         ),
         "primes": list(primes),
         "scope": "exact finite combinatorial replay; no AUXCOLORPRIMCAR estimate",

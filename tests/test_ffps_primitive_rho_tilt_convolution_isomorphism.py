@@ -222,6 +222,7 @@ class PrimitiveRhoTiltConvolutionIsomorphismTest(unittest.TestCase):
         self.assertGreater(gram["shell_orientation_checks"], 50)
         self.assertGreater(gram["cofactor_cancellation_checks"], 30)
         self.assertIn("WAVEPRIMCAR", gram["one_variable_gate"])
+        self.assertIn("factor-64", gram["one_variable_gate"])
 
     def test_colored_cube_norm_and_hereditary_replay(self) -> None:
         panel = subject.colored_cube_panel(2)
