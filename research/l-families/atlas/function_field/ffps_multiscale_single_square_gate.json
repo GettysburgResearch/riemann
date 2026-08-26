@@ -1,0 +1,224 @@
+{
+  "mixed_mode_witnesses": [
+    {
+      "all_band_pure_transforms": "0",
+      "band_pure_modes": 2,
+      "bands": 2,
+      "chosen_cross_band_transform": "5/3",
+      "cross_band_modes": 1,
+      "every_separate_band_interferometer": "9/4",
+      "joint_interferometer": "143/108",
+      "joint_minus_separate": "-25/27",
+      "principal_transform": "3/2",
+      "quotient_size": 4,
+      "selected_modes": 3,
+      "total_rank": 2
+    },
+    {
+      "all_band_pure_transforms": "0",
+      "band_pure_modes": 6,
+      "bands": 2,
+      "chosen_cross_band_transform": "5/3",
+      "cross_band_modes": 9,
+      "every_separate_band_interferometer": "9/4",
+      "joint_interferometer": "223/108",
+      "joint_minus_separate": "-5/27",
+      "principal_transform": "3/2",
+      "quotient_size": 16,
+      "selected_modes": 15,
+      "total_rank": 4
+    },
+    {
+      "all_band_pure_transforms": "0",
+      "band_pure_modes": 7,
+      "bands": 3,
+      "chosen_cross_band_transform": "5/3",
+      "cross_band_modes": 24,
+      "every_separate_band_interferometer": "9/4",
+      "joint_interferometer": "2411/1116",
+      "joint_minus_separate": "-25/279",
+      "principal_transform": "3/2",
+      "quotient_size": 32,
+      "selected_modes": 31,
+      "total_rank": 5
+    }
+  ],
+  "panels": [
+    {
+      "band_leverages": [
+        "24/43",
+        "112/157"
+      ],
+      "band_pure_modes": 2,
+      "bands": 2,
+      "conductor": {
+        "average_modewise_hc1": "2",
+        "closed_average_formula": "H*T/(2*(H-1))-2",
+        "largest_paired_branch_degree": 4,
+        "paired_branch_degrees": [
+          2,
+          4
+        ],
+        "total_modewise_hc1": 6,
+        "total_selected_place_degree": 6
+      },
+      "cross_band_modes": 1,
+      "joint_equals_product_of_band_leverages": true,
+      "joint_single_square_leverage": "2688/6751",
+      "quadratic_recovery_root": "1/2",
+      "quotient_size": 4,
+      "ranks": [
+        1,
+        1
+      ],
+      "selected_modes": 3,
+      "separate_square_leverage_after_root": "(product_j L_j)^(1/J), not product_j L_j",
+      "separate_square_product_degree": 4,
+      "total_rank": 2
+    },
+    {
+      "band_leverages": [
+        "2688/6751",
+        "112320/194953"
+      ],
+      "band_pure_modes": 6,
+      "bands": 2,
+      "conductor": {
+        "average_modewise_hc1": "178/15",
+        "closed_average_formula": "H*T/(2*(H-1))-2",
+        "largest_paired_branch_degree": 13,
+        "paired_branch_degrees": [
+          2,
+          3,
+          8,
+          13
+        ],
+        "total_modewise_hc1": 178,
+        "total_selected_place_degree": 26
+      },
+      "cross_band_modes": 9,
+      "joint_equals_product_of_band_leverages": true,
+      "joint_single_square_leverage": "301916160/1316127703",
+      "quadratic_recovery_root": "1/2",
+      "quotient_size": 16,
+      "ranks": [
+        2,
+        2
+      ],
+      "selected_modes": 15,
+      "separate_square_leverage_after_root": "(product_j L_j)^(1/J), not product_j L_j",
+      "separate_square_product_degree": 4,
+      "total_rank": 4
+    },
+    {
+      "band_leverages": [
+        "2688/6751",
+        "112320/194953",
+        "345600/570227"
+      ],
+      "band_pure_modes": 9,
+      "bands": 3,
+      "conductor": {
+        "average_modewise_hc1": "1538/63",
+        "closed_average_formula": "H*T/(2*(H-1))-2",
+        "largest_paired_branch_degree": 21,
+        "paired_branch_degrees": [
+          2,
+          3,
+          5,
+          8,
+          13,
+          21
+        ],
+        "total_modewise_hc1": 1538,
+        "total_selected_place_degree": 52
+      },
+      "cross_band_modes": 54,
+      "joint_equals_product_of_band_leverages": true,
+      "joint_single_square_leverage": "14906032128000/107213078814083",
+      "quadratic_recovery_root": "1/3",
+      "quotient_size": 64,
+      "ranks": [
+        2,
+        2,
+        2
+      ],
+      "selected_modes": 63,
+      "separate_square_leverage_after_root": "(product_j L_j)^(1/J), not product_j L_j",
+      "separate_square_product_degree": 6,
+      "total_rank": 6
+    },
+    {
+      "band_leverages": [
+        "2688/6751",
+        "112320/194953",
+        "345600/570227",
+        "15216768/24711611"
+      ],
+      "band_pure_modes": 12,
+      "bands": 4,
+      "conductor": {
+        "average_modewise_hc1": "5846/85",
+        "closed_average_formula": "H*T/(2*(H-1))-2",
+        "largest_paired_branch_degree": 55,
+        "paired_branch_degrees": [
+          2,
+          3,
+          5,
+          8,
+          13,
+          21,
+          34,
+          55
+        ],
+        "total_modewise_hc1": 17538,
+        "total_selected_place_degree": 141
+      },
+      "cross_band_modes": 243,
+      "joint_equals_product_of_band_leverages": true,
+      "joint_single_square_leverage": "6130314397089792000/71605618858539470749",
+      "quadratic_recovery_root": "1/4",
+      "quotient_size": 256,
+      "ranks": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "selected_modes": 255,
+      "separate_square_leverage_after_root": "(product_j L_j)^(1/J), not product_j L_j",
+      "separate_square_product_degree": 8,
+      "total_rank": 8
+    }
+  ],
+  "resource_caps": {
+    "closed_places_enumerated": 0,
+    "curves_or_l_functions_enumerated": 0,
+    "largest_mode_sum": 255,
+    "maximum_bands": 4,
+    "maximum_quotient_points": 256,
+    "maximum_total_rank": 8,
+    "source_atoms_enumerated": 0
+  },
+  "separate_square_gate": {
+    "lost_information": "all Fourier modes nonprincipal in at least two bands",
+    "product_degree": "2J",
+    "retained_leverage": "geometric mean (product_j L_j)^(1/J)",
+    "return_to_quadratic_scale": "take a J-th root"
+  },
+  "single_square_theorem": {
+    "cross_band_modes": "2^R-1-sum_j(2^(r_j)-1)",
+    "joint_interferometer": "|P|^2-(2^R-1)^-1 sum_(chi!=1)|H_chi|^2",
+    "joint_leverage": "L=product_j L_j",
+    "joint_quotient": "K=product_j C2^(r_j)=C2^R",
+    "sequential_pre_square_restriction": "1_A=product_j 1_(A_j)"
+  },
+  "varying_place_firewall": {
+    "average_modewise_hc1": "2^R*T/(2*(2^R-1))-2",
+    "consequence": "average hc1>=D_max/2-2",
+    "leverage": "<(4/5)^R=n^(-alpha*log(5/4)+o(1))",
+    "order_statistic_import": "D_max>=n^(alpha/delta-o(1)) with high probability",
+    "paired_degree_total": "T=sum_i(deg ell_i+deg rho_i)",
+    "unchanged_conductor_threshold": "theta<delta*log(5/4)"
+  }
+}
