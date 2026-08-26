@@ -251,6 +251,8 @@
   "theorem": {
     "class_transform": "sum_lambda b_(d,lambda)chi_lambda(mu)=[x^ell]tanh(x)*ell!*2^(d-ell), ell=length(mu)",
     "coefficient": "b_(d,lambda)=sum_(T in SYT(lambda)) (-1)^des(T)",
+    "escape_requirement": "any cheaper selector must use an odd cycle-count stratum ell>=3",
+    "even_cycle_global_firewall": "the exact cycle indicator is the unique weighted-L1 minimizer against arbitrary real or complex perturbations supported on derangement types with an even number of cycles",
     "frobenius_series": "sum_(d>=1,lambda|-d) b_(d,lambda)s_lambda t^d=tanh(sum_(r>=1) 2^(r-1)p_r t^r/r)",
     "full_cycle_dual_mass": "2^(d-1)/d",
     "hook_saturation": "b_(d,(d-k,1^k))=(-1)^k*binom(d-1,k)",

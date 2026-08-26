@@ -309,6 +309,67 @@ the precise **contractive primitive-lift problem** (3.8): remove all higher
 odd powers of `tanh(A)` using nonhook Schur directions without leaving the
 dimension box.
 
+### 3.3 A global even-cycle escape firewall
+
+The same calibration completely closes one infinite subspace of possible
+escapes.  Let `Q_0=1_(d)` be the exact cycle indicator, and let `U` be a real
+or complex class function supported on noncycle derangement types having an
+even number of cycles.  Then
+
+\[
+ \boxed{
+ \|Q_0+U\|_{\rm rank,1}\ge {2^{d-1}\over d},
+ \quad\text{with equality iff }U=0.}
+\tag{3.9}
+\]
+
+To see this, write `u_lambda` for the character coefficients of `U`.  By
+(0.5),
+
+\[
+ \sum_{\lambda\vdash d}b_{d,\lambda}u_\lambda=0,
+\tag{3.10}
+\]
+
+because every physical class in the support of `U` has even length.  The
+coefficients of `Q_0` are `(-1)^k/d` on the hooks and zero elsewhere.  Hence
+the spectral capacity and hook saturation give
+
+\[
+ \begin{aligned}
+ \|Q_0+U\|_{\rm rank,1}
+ &\ge
+ \operatorname{Re}\sum_\lambda
+ b_{d,\lambda}(a^0_\lambda+u_\lambda)\\
+ &=\sum_{k=0}^{d-1}{f^{H_k}\over d}
+ ={2^{d-1}\over d}.
+ \end{aligned}
+\tag{3.11}
+\]
+
+The inequality is strict for nonzero `U`.  Indeed, every nonhook shape has
+`lambda_2>=2`.  Start with its row-superstandard tableau and interchange the
+entries `lambda_1` and `lambda_1+1`.  The result is still standard.  The
+swap loses the descent at `lambda_1`, gains descents at `lambda_1-1` and
+`lambda_1+1`, and leaves all other descents unchanged.  Thus both descent
+parities occur, proving
+
+\[
+ |b_{d,\lambda}|<f^\lambda
+ \qquad(\lambda\text{ nonhook}).
+\tag{3.12}
+\]
+
+If all nonhook coefficients of `U` vanished, the annihilator argument of
+Section 3.1 would force `U` to be a multiple of the exact cycle direction;
+its zero value on `(d)` then forces `U=0`.  Every nonzero `U` therefore has a
+nonhook coefficient, where (3.12) makes (3.11) strict.
+
+Consequently an all-degree counterexample or cheaper relaxed selector, if
+one exists, must engage at least one odd cycle-count stratum `ell>=3`.
+Even-cycle freedom alone can never help, at any magnitude; this is global,
+not only a first-order statement.
+
 ## 4. What the bounded replay checks
 
 For every `2<=d<=10`, independently of the frozen LP certificates, the
@@ -316,7 +377,7 @@ replay:
 
 1. enumerates every standard tableau through its row word;
 2. recomputes `b_(d,lambda)` and the hook-length dimensions;
-3. checks the spectral capacity and exact hook saturation;
+3. checks strict nonhook spectral capacity and exact hook saturation;
 4. recomputes the complete character table by Murnaghan--Nakayama;
 5. checks (0.5) on every conjugacy class in exact integer/rational
    arithmetic;
@@ -349,6 +410,7 @@ Proved here:
 - exact spectral capacity and hook saturation;
 - the all-degree zero-hook image theorem (3.5);
 - the equivalence between an optimal dual completion and (3.8);
+- the global even-cycle escape firewall (3.9);
 - the bounded replay statements through degree ten.
 
 Not proved here:

@@ -31,6 +31,10 @@ class DerangementSelectorTanhCalibrationTest(unittest.TestCase):
             "exists for every",
             payload["reduced_frontier"]["algebraic_zero_hook_lift"],
         )
+        self.assertIn(
+            "unique weighted-L1 minimizer",
+            payload["theorem"]["even_cycle_global_firewall"],
+        )
         self.assertEqual(len(payload["finite_replay"]), 9)
 
     def test_tanh_coefficients(self) -> None:

@@ -292,6 +292,8 @@ def verify_degree(degree: int) -> dict[str, object]:
             if coefficient != (-1) ** depth * irreducible_dimension:
                 raise AssertionError("hook saturation failed")
         else:
+            if abs(coefficient) >= irreducible_dimension:
+                raise AssertionError("nonhook descent-parity capacity is not strict")
             nonhook_ratios.append(Fraction(abs(coefficient), irreducible_dimension))
 
     transforms: dict[Partition, Fraction] = {}
@@ -374,6 +376,14 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
                 "[x^ell]tanh(x)*ell!*2^(d-ell), ell=length(mu)"
             ),
             "full_cycle_dual_mass": "2^(d-1)/d",
+            "even_cycle_global_firewall": (
+                "the exact cycle indicator is the unique weighted-L1 minimizer "
+                "against arbitrary real or complex perturbations supported on "
+                "derangement types with an even number of cycles"
+            ),
+            "escape_requirement": (
+                "any cheaper selector must use an odd cycle-count stratum ell>=3"
+            ),
             "quantifier": "every integer d>=1 and every partition mu of d",
         },
         "reduced_frontier": {
