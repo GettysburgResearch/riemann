@@ -68,12 +68,14 @@ Galois-cohomology theorem.  It does **not** prove `G=0`, and it does not prove
 the previously observed finite formula
 `Hhat_12(p)=-p*a_p(f_-)` for every `p`.
 
-The strongest unconditional new reduction in this note is instead finite: the
-full `S_5`-invariant pre-holomorphic covariant space at this weight has dimension
-exactly `66`.  Proving that its holomorphy-valuation subspace is zero would
-settle the stronger assertion that there is no `S_5`-invariant cusp form at
-weight `(12,3)`, hence in particular `G=0`.  No broad finite-field computation
-is needed for that target.
+The strongest unconditional result is instead finite: the full `S_5`-fixed
+pre-holomorphic covariant space has dimension `66`, and the corrected
+two-orientation valuation matrix has rank `66`.  Thus its holomorphic—and,
+because the `Phi` target has odd weight, cuspidal—subspace is exactly zero.
+This proves absence of the natural marked modular channel without any broad
+finite-field computation.  Calling the corresponding formal cohomological
+term `G=0` still requires the separately source-caveated Galois/cohomological
+adapter; the finite kernel does not construct that realization.
 
 ## 2. Normalizations and the outer-automorphism check
 
