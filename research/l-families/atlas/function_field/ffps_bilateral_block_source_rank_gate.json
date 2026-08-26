@@ -1,0 +1,133 @@
+{
+  "bilateral_fourier_ledger": {
+    "clean_equivalence_classes": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "clean_kernel": [
+      [
+        "0",
+        "2",
+        "2",
+        "0"
+      ],
+      [
+        "2",
+        "0",
+        "0",
+        "2"
+      ],
+      [
+        "2",
+        "0",
+        "0",
+        "2"
+      ],
+      [
+        "0",
+        "2",
+        "2",
+        "0"
+      ]
+    ],
+    "clean_selected_rank": 1,
+    "deduction": "after the single-sided modes are removed, the four bilateral cosets coarsen to the two classes of the product checkerboard",
+    "full_kernel": [
+      [
+        "0",
+        "4/3",
+        "4/3",
+        "4/3"
+      ],
+      [
+        "4/3",
+        "0",
+        "4/3",
+        "4/3"
+      ],
+      [
+        "4/3",
+        "4/3",
+        "0",
+        "4/3"
+      ],
+      [
+        "4/3",
+        "4/3",
+        "4/3",
+        "0"
+      ]
+    ],
+    "full_selected_rank": 2,
+    "nonprincipal_characters": {
+      "1": "left single-sided/root mode",
+      "2": "right single-sided/root mode",
+      "3": "double-nonprincipal checkerboard mode"
+    },
+    "quotient": "C2^2"
+  },
+  "resource_caps": {
+    "floating_point_operations": 0,
+    "matrix_cells": 16,
+    "maximum_prime": 29,
+    "point_counts": 0,
+    "quotient_points": 4
+  },
+  "singleton_block_formula": "4*(p-1)/(3*p+1)",
+  "singleton_panels": [
+    {
+      "leverage": "1",
+      "prime": 5,
+      "strict_contraction": false
+    },
+    {
+      "leverage": "6/5",
+      "prime": 13,
+      "strict_contraction": false
+    },
+    {
+      "leverage": "16/13",
+      "prime": 17,
+      "strict_contraction": false
+    },
+    {
+      "leverage": "14/11",
+      "prime": 29,
+      "strict_contraction": false
+    }
+  ],
+  "source_arity_gate": {
+    "current_joint_physical_phase_coordinates": 2,
+    "minimum_coordinates_for_two_strictly_improving_blocks": 4,
+    "reason": "every eligible singleton block has leverage at least one, so each strictly improving block needs at least two local phase factors"
+  },
+  "two_singleton_panels": [
+    {
+      "primes": [
+        5,
+        13
+      ],
+      "two_singleton_block_leverage": "6/5"
+    },
+    {
+      "primes": [
+        5,
+        17
+      ],
+      "two_singleton_block_leverage": "16/13"
+    },
+    {
+      "primes": [
+        13,
+        17
+      ],
+      "two_singleton_block_leverage": "96/65"
+    }
+  ]
+}
