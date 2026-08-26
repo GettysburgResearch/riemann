@@ -1,0 +1,41 @@
+{
+  "checks": {
+    "M00": [
+      "11",
+      "-61/2",
+      "85/2",
+      "-35",
+      "17",
+      "-9/2",
+      "1/2"
+    ],
+    "M01": [
+      "1",
+      "-1/2"
+    ],
+    "M10": [
+      "1",
+      "-5",
+      "10",
+      "-10",
+      "5",
+      "-1"
+    ],
+    "bezout": [
+      "1"
+    ],
+    "max_degree": 6,
+    "module_row0": true,
+    "module_row1": true
+  },
+  "proof_object_sha256": "92f79f86099dd90aff8065576e1134bac6b4a681932910cb055d33c5e1591259",
+  "schema": "riemann.l104637.frozen_bezout.v1",
+  "scope": {
+    "fractrans104635_proved": false,
+    "model_space_transport_proved": false,
+    "ninety_percent_established": false,
+    "rh_established": false,
+    "source_module_identity_proved_exact": true
+  },
+  "verdict": "PASS_L104637_FROZEN_CARRIER_BEZOUT"
+}
