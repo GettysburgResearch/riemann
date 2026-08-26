@@ -13,7 +13,9 @@ Frozen interfaces: PR #751 `L-102500`, `L-102504`, `L-102701`,
 1. `FFPS_COMPLETE_BETA_ATOMIC_VARIATION_FIREWALL.md`;
 2. `FFPS_MOLLIFIED_BETA_RH_EQUIVALENCE.md`;
 3. `FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md`;
-4. `FFPS_COMMON_MOTHER_OUTER_NOTCH_MISMATCH.md` for the historical adapter.
+4. `FFPS_MOLLIFIED_BETA_BOUNDARY_SHELL_IDENTITY.md` for the compact boundary
+   primitive;
+5. `FFPS_COMMON_MOTHER_OUTER_NOTCH_MISMATCH.md` for the historical adapter.
 
 ## 0. Outcome
 
@@ -121,6 +123,35 @@ The later equivalence audit proves the sharper current statement
 
 The source-exact half-divisor packet further rewrites (0.8) as a native
 reflection/geodesic criterion, without the Boolean completion gate below.
+The compact boundary-shell audit then removes the mollifier from the
+arithmetic target.  It constructs a compact bounded-variation primitive
+`K_bd` of `K_ext` and the complete-source field
+
+\[
+ G(t)=\sum_{n\ge1}{\beta(n)\over\sqrt n}
+ K_{\rm bd}(t-\log n),
+ \qquad
+ h_\varepsilon={G-\tau_\varepsilon G\over\varepsilon}.
+\tag{0.9}
+\]
+
+The terminal shell in the finite-difference identity is already
+absolute-subpower, and hence, for every fixed `epsilon>0`,
+
+\[
+\boxed{
+ \mathrm{RH}
+ \quad\Longleftrightarrow\quad
+ \int_0^T|G(t)|\,dt=e^{o(T)}
+ \quad\Longleftrightarrow\quad
+ \int_0^T G_-(t)\,dt=e^{o(T)}.}
+\tag{0.10}
+\]
+
+This is now the shortest exact RH-facing formulation in this lane.  It does
+not make (0.10) easier by itself: a compact countermodel in the same audit
+shows that controlling a finite difference does not automatically control
+the Jordan mass of its primitive.
 
 Historically, this packet produced the following precise repair target for
 `T-106150`:
@@ -339,9 +370,10 @@ The corrected architecture is
 ```text
 complete beta source
   -> extra-notched locally finite signed measure nu_ext
-  -> fixed positive mollification h_epsilon
+  -> compact BV primitive G
+  -> fixed difference h_epsilon=(G-tau_epsilon G)/epsilon
   -> zero-safe Mellin pole detector
-  -> mollified negative-mass Landau consumer.
+  -> equivalent boundary-field and mollified negative-mass criteria.
 ```
 
 This bypasses the power-lossy causal inverse of
@@ -389,8 +421,9 @@ The combined lesson is sharper than either packet alone:
 ```text
 raw complete Jordan variation grows at least like sqrt(Y);
 fixed-mollified negative mass is exactly RH-equivalent;
+compact boundary-field L1 and negative mass are exactly RH-equivalent;
 the open arithmetic burden is cancellation before Jordan decomposition,
-equivalently the positive native-reflection estimate.
+equivalently the boundary-field or positive native-reflection estimate.
 ```
 
 ## 6. Proof ledger
@@ -419,6 +452,7 @@ Still not proved:
 
 - `EXTSRC106150`;
 - the fixed-mollified negative-mass estimate (0.8), equivalently RH;
+- the compact boundary-field estimates (0.10), equivalently RH;
 - the positive native-reflection/geodesic estimate;
 - `BCI102990`, RH, or GRH.
 

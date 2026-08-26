@@ -1,12 +1,16 @@
 {
   "canonical_successor": {
     "atomic_audit_commit": "78e5ce8e75bce174e3014a33b6fe086112577a1e",
+    "boundary_difference": "h_epsilon=(G-tau_epsilon G)/epsilon",
+    "boundary_field": "G=sum beta(n)/sqrt(n)*K_bd(t-log(n)), where D K_bd=K_ext",
+    "boundary_shell_commit": "9e19e27614e473b3b7d06cfc3d51f92eb39ff009",
     "criterion": "int_0^T (h_epsilon)_- dt=e^o(T)",
     "criterion_proved": false,
     "detector": "h_epsilon=eta_epsilon*nu_ext for one fixed epsilon>0",
     "equivalence_commit": "9f29bdb6ea7375df84de550d62f9d0984634a8dd",
     "reflection_commit": "a678292fd6d19d5b18f499aef35d2263cfc2b4ec",
     "rh_proved": false,
+    "shortest_criterion": "int_0^T |G(t)| dt=e^o(T), equivalently int_0^T G_-(t) dt=e^o(T)",
     "source_form": "exact native half-divisor reflection/geodesic identity; no Boolean completion gate required",
     "strength": "equivalent to RH"
   },

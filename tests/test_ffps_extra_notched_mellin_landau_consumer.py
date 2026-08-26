@@ -65,6 +65,8 @@ class FfpsExtraNotchedMellinLandauConsumerTest(unittest.TestCase):
         self.assertFalse(result["conditional_consumer"]["premise_viable"])
         self.assertIn("sqrt(Y)", result["conditional_consumer"]["atomic_lower_bound"])
         self.assertEqual(result["canonical_successor"]["strength"], "equivalent to RH")
+        self.assertIn("K_bd", result["canonical_successor"]["boundary_field"])
+        self.assertIn("|G(t)|", result["canonical_successor"]["shortest_criterion"])
         self.assertFalse(result["canonical_successor"]["criterion_proved"])
         self.assertFalse(result["canonical_successor"]["rh_proved"])
         self.assertEqual(result["resource_caps"]["source_atoms_enumerated"], 0)
