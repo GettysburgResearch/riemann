@@ -2,8 +2,9 @@
 
 Status: **exact arithmetic identities; bounded inverse convolution operators on
 the stated weighted Hilbert space; exact two-sided Mertens-seminorm transfer;
-exact finite pair-block superposition with dilated tests; no uniform dilated
-block estimate, PRIMCAR estimate, PRIMLS estimate, RH proof, or GRH proof**
+exact finite pair-block superposition and primitive-support Boolean compression;
+no weighted dilated-block estimate, PRIMCAR estimate, PRIMLS estimate, RH
+proof, or GRH proof**
 
 Bounded exact replay:
 [`ffps_primitive_rho_tilt_convolution_isomorphism.py`](ffps_primitive_rho_tilt_convolution_isomorphism.py).
@@ -166,9 +167,24 @@ where
 \]
 
 The outer absolute weight in (0.14) is `L_g(1/2)^2`. Therefore the rho tilt
-itself is an invertible `ell^1` coordinate change. But `F_(r,s)` has altered
-coprimality, height, ratio, and endpoint geometry. No estimate uniform over
-those induced dilations is proved here.
+itself is an invertible `ell^1` coordinate change. On the actual primitive
+support, where `F(u,v)` vanishes unless `u,v` are squarefree and coprime, the
+outer variables are automatically squarefree and coprime. Forward and inverse
+absolute pair mass then collapse to the same smaller Boolean product
+
+\[
+ \boxed{
+ \mathcal K_{67}
+ =\prod_{p\ne67}\left(1+{2\over(p+1)\sqrt p}\right)<\infty.}
+\tag{0.16}
+\]
+
+Thus a uniform scalar primitive-pair bound costs `K_67`, and its squared
+vector energy costs `K_67^2`, in either direction. Uniformity is not the
+weakest sufficient input: the exact transfer only asks for the corresponding
+outer-weighted sum of vector norms. In every formulation, however,
+`F_(r,s)` has altered coprimality, height, ratio, and endpoint geometry. No
+such weighted dilated-family estimate is proved here.
 
 ## 1. Exact local and global convolution algebra
 
@@ -457,9 +473,35 @@ also gives the precise vector transfer
 \tag{5.3}
 \]
 
-This is Minkowski's inequality applied to (0.14). Therefore a scalar pair
-bound uniform in `(r,s)` costs at most `L_g(1/2)^2`, while the corresponding
-squared Carleson energy costs at most `L_g(1/2)^4`:
+This is Minkowski's inequality applied to (0.14). More explicitly, set
+
+\[
+ E_0(r,s)=\sum_jw_j|\mathcal B_0(F_{j;r,s})|^2,
+ \qquad
+ E_\rho=\sum_jw_j|\mathcal B_\rho(F_j)|^2.
+\]
+
+Then
+
+\[
+ \boxed{
+ E_\rho^{1/2}
+ \leq\sum_{r,s}|\gamma(r)\gamma(s)|E_0(r,s)^{1/2}.}
+\tag{5.3a}
+\]
+
+For a target `T`, the direct noncancellative sufficient input exposed by this
+identity is
+
+\[
+ \sum_{r,s}|\gamma(r)\gamma(s)|E_0(r,s)^{1/2}
+ \ll \mathcal T^{1/2}.
+\tag{5.3b}
+\]
+
+This is weaker than a pointwise theorem uniform in `(r,s)`. The latter is a
+convenient sufficient corollary and costs at most `L_g(1/2)^2` for a scalar
+pair bound or `L_g(1/2)^4` for the corresponding squared Carleson energy:
 
 \[
  \begin{aligned}
@@ -515,44 +557,314 @@ case exactly as ordinary Möbius pair sums with
 \tag{5.7}
 \]
 
-Thus the identity does not discard the original structure; it moves that
-structure into a family of dilated tests. In particular:
+### 5.1 Boolean compression on primitive support
 
-1. squarefreeness becomes a condition on `rm` and `sn`, not only on the
-   ordinary Möbius variables `m,n`;
-2. `(rm,sn)=1` contains cross-coprimality conditions involving all four
-   variables, not merely `(m,n)=1`;
-3. sieve incidence becomes `(rsmn,d)=1`;
-4. the height boundary is anisotropically dilated by `(r,s)`;
-5. the ratio kernel is translated by `log(r/s)`;
-6. aligned dyadic endpoint blocks are not carried to one common aligned
-   dyadic family.
+The generic constants in (5.2)--(5.4) include prime powers and allow a prime
+to divide both `r` and `s`. Neither can survive in the actual primitive test.
+Indeed, a nonzero term of (5.7) has `rm` and `sn` squarefree and coprime.
+Hence `r,s,m,n` are individually squarefree and their prime supports are
+pairwise disjoint. In particular, `r` and `s` are squarefree and `(r,s)=1`.
 
-An ordinary Möbius pair theorem uniform over all tests (5.7), with enough
-summability to absorb (5.2), would transfer to the rho panel. No such theorem
-is supplied. The obstruction after the exact algebra is uniform control of
-the induced dilations, coprimality conditions, and annular boundaries—not an
-uncontrolled rho coefficient.
+Put
+
+\[
+ \kappa(r)={\mu(r)^2g(r)\over\sqrt r}.
+\tag{5.8}
+\]
+
+For every test supported on squarefree coprime pairs, (0.14) can therefore be
+restricted exactly to
+
+\[
+ \mathcal B_\rho(F)
+ =\sum_{\substack{r,s\in\mathcal N_{67}\\
+                   \mu(r)^2=\mu(s)^2=1\\(r,s)=1}}
+ \kappa(r)\kappa(s)\mathcal B_0(F_{r,s}).
+\tag{5.9}
+\]
+
+At each prime there are only three outer states: absent, in `r`, or in `s`.
+Consequently the exact forward absolute mass is
+
+\[
+ \sum_{\substack{r,s\in\mathcal N_{67}\\
+                  \mu(r)^2=\mu(s)^2=1\\(r,s)=1}}
+ |\kappa(r)\kappa(s)|
+ =\prod_{p\ne67}\left(1+{2\over(p+1)\sqrt p}\right)
+ =\mathcal K_{67}.
+\tag{5.10}
+\]
+
+The product converges because its nonconstant local term is at most
+`2 p^(-3/2)`. For squarefree `r`, one also has `|h(r)|=g(r)`, since
+`|h(p)|=g(p)=1/(p+1)`. Thus the inverse primitive-support superposition has
+the **same** absolute mass `K_67`; the generic asymmetry between `L_g` and
+`L_h` disappears on this Boolean quotient. Replacing the weights in (5.3a)
+by the restricted weights in (5.9), a uniform primitive scalar estimate costs
+`K_67` and a uniform squared vector estimate costs `K_67^2`, in both
+directions. The weaker weighted vector gate remains the direct sufficient
+condition.
+
+### 5.2 The deformed tests are the same generalized primitive panel
+
+The Boolean support permits a stronger reduction than the six raw conditions
+in (5.7) suggest. For a squarefree `d` in `N_67`, define
+
+\[
+ \begin{aligned}
+ \mathcal P^\rho_{\alpha,\gamma}(d;I)
+ &=\mathcal B_\rho(F_{\alpha,\gamma,I,d}),\\
+ \mathcal P^0_{A,B}(q;I)
+ &=\sum_{\substack{m,n\ \mathrm{squarefree},\ 67\nmid mn\\
+                    (m,n)=1,\ (mn,q)=1\\
+                    \max(Am,Bn)\in I}}
+ {\mu(m)\mu(n)\over\sqrt{mn}}
+ \mathcal R\!\left(\log{Am\over Bn}\right).
+ \end{aligned}
+\tag{5.11}
+\]
+
+The first line introduces an auxiliary rho-weighted panel with a sieve
+parameter. The predecessor's actual harmonic zero mode is exactly its `d=1`
+specialization; the zero mode itself is not averaged over `d`.
+
+For squarefree 67-free `m,n`, the support conditions satisfy the exact
+equivalence
+
+\[
+ \begin{aligned}
+ &\mu(rm)^2=\mu(sn)^2=1,\quad
+ (rm,sn)=1,\quad(rsmn,d)=1\\
+ &\quad\Longleftrightarrow\\
+ &r,s\ \mathrm{squarefree},\quad(r,s)=1,\quad(rs,d)=1,\\
+ &\hspace{35mm}(m,n)=1,\quad(mn,drs)=1.
+ \end{aligned}
+\tag{5.12}
+\]
+
+The forward primitive superposition therefore has the sharper exact form
+
+\[
+ \boxed{
+ \mathcal P^\rho_{\alpha,\gamma}(d;I)
+ =\sum_{\substack{r,s\in\mathcal N_{67}\ \mathrm{squarefree}\\
+                   (r,s)=1,\ (rs,d)=1}}
+ \kappa(r)\kappa(s)\,
+ \mathcal P^0_{67^\alpha r,\,67^\gamma s}(drs;I).}
+\tag{5.13}
+\]
+
+For bounded `I`, the height condition makes the outer sum finite. Thus
+squarefreeness, cross-coprimality, the sieve predicate, and the ratio kernel
+do **not** become unrelated obstructions. They retain exactly the ordinary
+primitive-panel form after
+
+\[
+ (A,B,q)=(67^\alpha r,67^\gamma s,drs).
+\]
+
+The actual enlargement is a coupled family of two height scales and sieve
+moduli. A ratio translation is simply `log(A/B)` in this notation, and an
+annulus remains a difference of two upper max-height cutoffs.
+
+### 5.3 Colored-cube norm and hereditary constraints
+
+At one prime put
+
+\[
+ t_p={1\over(p+1)\sqrt p},\qquad
+ T_p=
+ \begin{pmatrix}1&0&0\\t_p&1&0\\t_p&0&1\end{pmatrix},\qquad
+ T_p^{-1}=
+ \begin{pmatrix}1&0&0\\-t_p&1&0\\-t_p&0&1\end{pmatrix}.
+\tag{5.14}
+\]
+
+The three states are absence, membership in the left outer variable, and
+membership in the right outer variable. Tensoring (5.14) over a finite prime
+set gives the Boolean forward and inverse transforms. On the standard `ell^2`
+space of colored configurations, their common exact finite-prime norm is the
+corresponding partial product in
+
+\[
+ \boxed{
+ \|T\|=\|T^{-1}\|
+ =\prod_{p\ne67}
+ {\sqrt{4+2t_p^2}+\sqrt2\,t_p\over2}<\infty.}
+\tag{5.15}
+\]
+
+Indeed, the antisymmetric colored line has singular value one, while the
+remaining two-dimensional block is a shear of size `sqrt(2)t_p`. Formula
+(5.15) is its larger singular value. Since `t_p=O(p^(-3/2))`, the finite-prime
+operators converge in operator norm and their norm products converge to the
+displayed infinite product. This is a colored-configuration norm, not a
+PRIMCAR estimate.
+
+There is also an exact support criterion. Order colored configurations by
+deleting colored primes. Since `T_(y,x)` and `T^(-1)_(y,x)` are nonzero
+exactly when `x<=y`, a coordinate projection `P_A` satisfies
+
+\[
+ \boxed{
+ P_{\mathcal A}T=P_{\mathcal A}TP_{\mathcal A}
+ \quad\Longleftrightarrow\quad
+ \mathcal A\text{ is downward closed},}
+\tag{5.16}
+\]
+
+and the same is true for `T^(-1)`. Sieve avoidance and upper max-height
+cutoffs are hereditary; an annulus is a difference of two hereditary cutoffs.
+A fixed ratio band is generally not hereditary. Full commutation requires
+both downward and upward closure and hence, on a connected colored cube, only
+the two projections `P=0` and `P=I`. This explains exactly which sharp
+restrictions survive the transform without leakage.
+
+### 5.4 The harmonic sieve norm is critical but costs only logarithms
+
+For squarefree `R` in `N_67`, define on squarefree 67-free sieve sequences
+
+\[
+ (D_RA)(d)=1_{(d,R)=1}A(Rd),\qquad
+ \|A\|_w^2=\sum_d{|A(d)|^2\over d^w}.
+\tag{5.17}
+\]
+
+The substitution `q=Rd` gives the sharp operator norm
+
+\[
+ \boxed{\|D_R\|=R^{w/2}.}
+\tag{5.18}
+\]
+
+More explicitly, for `R=rs` with `r,s` squarefree and coprime, the exact
+truncated vector identity is
+
+\[
+ \begin{aligned}
+ &\sum_{\substack{d\leq D\ \mathrm{squarefree}\\(d,67rs)=1}}
+ {\left|\mathcal P^0_{A,B}(drs;I)\right|^2\over d^w}\\
+ &\qquad=(rs)^w
+ \sum_{\substack{q\leq Drs\ \mathrm{squarefree}\\
+                  67\nmid q,\ rs\mid q}}
+ {\left|\mathcal P^0_{A,B}(q;I)\right|^2\over q^w}.
+ \end{aligned}
+\tag{5.18a}
+\]
+
+Consequently, after accounting for the sieve dilation `q=drs` in (5.13),
+the absolute Boolean vector transfer has Euler product
+
+\[
+ \prod_{p\ne67}
+ \left(1+{2p^{(w-1)/2}\over p+1}\right).
+\tag{5.19}
+\]
+
+Its nonconstant local term is asymptotic to `2 p^((w-3)/2)`. The prime sum
+converges for `w<1`; at `w=1` it is `2/(p+1)` and the prime harmonic series
+diverges, while `w>1` only increases every sufficiently large local term.
+Thus (5.19) converges exactly for `w<1`. At the PRIMCAR harmonic weight there
+is no height-independent absolute constant. This is a genuine critical
+boundary, not a failure of the half-weighted identity.
+
+Native height support repairs the apparent divergence at subpower cost. For
+`I` inside a height block of size `H`, every surviving outer variable is
+`O(H)`. At `w=1`,
+
+\[
+ \kappa(r)\sqrt r=g(r)\leq{1\over r}
+ \qquad(r\text{ squarefree}),
+\]
+
+and therefore
+
+\[
+ \sum_{r,s\ll H}\kappa(r)\kappa(s)\sqrt{rs}
+ \ll(1+\log H)^2.
+\tag{5.20}
+\]
+
+Minkowski then taxes a generalized ordinary vector theorem by only
+`O(log^2 H)` at norm level and `O(log^4 H)` in squared energy, both absorbable
+in a subpower allowance. For the actual `d=1` zero mode, `q=rs` is a single
+atom; a harmonic ordinary-panel estimate controls that atom with the same
+`sqrt(rs)` factor. Thus the following is a clean **sufficient**, not necessary,
+zero-mode route: prove the ordinary-Möbius primitive Carleson estimate for the
+generalized panels in (5.11), uniformly (or with outer-weight-summable losses)
+over
+
+\[
+ A=67^\alpha r,\qquad B=67^\gamma s,\qquad q=drs.
+\tag{5.21}
+\]
+
+One precise stronger gate is
+
+\[
+ \boxed{
+ \mathrm{GENPRIMCAR}:\qquad
+ \sum_{I\in\mathscr D_H}
+ \sum_{\substack{q\leq Q\ \mathrm{squarefree}\\67\nmid q}}
+ {\left|\mathcal P^0_{A,B}(q;I)\right|^2\over q}
+ \ll_\varepsilon(2QH)^\varepsilon,}
+\tag{5.22}
+\]
+
+uniformly for `Q,H>=1` and integers `1<=A,B<=2H`. For the ranges arising in
+(5.13), one has `r,s<=2H` and hence `Q=Drs<=4DH^2`. Combining (5.18a),
+(5.20), and (5.22) gives only a polylogarithmic outer loss, absorbable after
+renaming `epsilon`. At `d=1`, the same gate controls the single atom `q=rs`
+by positivity of the `q^-1` energy and incurs the same `sqrt(rs)` factor.
+Since `B_I=P^rho_(alpha,gamma)(1;I)`, weighted Minkowski and (5.20) give the
+conditional implication
+
+\[
+ \boxed{
+ \mathrm{GENPRIMCAR}
+ \quad\Longrightarrow\quad
+ \sum_{I\in\mathscr D_H}|B_I|^2
+ \ll_\varepsilon(2H)^\varepsilon.}
+\tag{5.23}
+\]
+
+The logarithmic factors have been absorbed by renaming `epsilon`.
+
+No such generalized-scale cancellation theorem is supplied. The generic
+weighted condition (5.3b) remains valid, while (5.13)--(5.20) show that the
+actual primitive incidence and harmonic-norm tax are much more structured
+than an arbitrary dilated-test family. They do not turn the scalar zero mode
+into a native `d`-average or prove that this stronger sufficient route is
+necessary.
 
 ## 6. Firewall against a PRIMCAR or RH misreading
 
 The bounded isomorphism (0.5) acts on full one-variable sequences on
-`N_67`. It does **not** preserve the sharp finite structures in the
-primitive-pair packet:
+`N_67`. The primitive-support reduction preserves more structure than a
+generic convolution, but it does **not** preserve the predecessor's original
+two-ray parameter class:
 
 - a sequence supported in one height range acquires contributions on
   arbitrarily large multiples under convolution by `g` or `h`;
-- squarefreeness and pair coprimality change to the cross-conditions in (5.7);
-- sieve incidence changes to `(rsmn,d)=1`;
-- the ratio kernel is shifted separately for every `(r,s)`;
-- the physical height shell and its dyadic endpoints depend on `(r,s)`;
+- squarefreeness, pair coprimality, and sieve avoidance do reassemble exactly
+  into the generalized primitive predicate (5.11);
+- the two scale parameters become `(67^alpha r,67^gamma s)` and the sieve
+  modulus becomes `drs`;
+- upper height cutoffs are hereditary, but a ratio band generally is not;
+- the physical height shell and its dyadic decomposition now range over these
+  coupled scales;
+- the harmonic `d^-1` norm is the critical weight and introduces the
+  `O(log^2 H)` vector tax in (5.20);
 - the fixed-height harmonic limit from the predecessor supplies no uniform
-  estimate over this new dilation family.
+  generalized-scale estimate.
 
-In particular, the undilated PRIMCAR test class is not closed under the
-dilations in (5.7). The exact forward `L_g(1/2)^4` energy cost, or inverse
-`L_h(1/2)^4` cost in the other direction, becomes usable only after a uniform
-theorem for that enlarged test class is supplied.
+In particular, the undilated PRIMCAR parameter class is not closed under
+(5.13). The exact weighted vector inequality (5.3a) becomes usable only after
+a bound of type (5.3b) for the enlarged class. At fixed test-index geometry, a
+uniform theorem is a stronger special case with the `K_67^2` Boolean energy
+cost. After reindexing the harmonic sieve variable from `d` to `drs`, the
+relevant cost is instead the critical but subpower `O(log^4 H)` bound of
+(5.20).
 Moreover, this packet does not bound the predecessor's nonzero Boolean modes
 or their collective incidence spectrum. Its fixed-height `D -> infinity`
 limit still has no error uniform in the growing primorial `Q_H`, and so gives
@@ -582,8 +894,15 @@ No PRIMCAR, PRIMLS, RH, or GRH estimate is proved. The RH-equivalent statement
 | equality of rho-weighted, 67-free, and full Mertens exponents | **PROVED EXACT** |
 | equivalence of the `1/2+epsilon` family with RH | **IMPORTED STANDARD EQUIVALENCE; NO ESTIMATE PROVED** |
 | finite pair-test superposition (0.14), including primitive tests | **PROVED EXACT** |
-| uniform control over induced tests (5.7) | **OPEN / NOT PROVED** |
-| preservation of sharp height, coprimality, ratio, or dyadic geometry | **FALSE / EXPLICITLY NOT CLAIMED** |
+| primitive-support Boolean compression and symmetric cost (5.9)--(5.10) | **PROVED EXACT** |
+| generalized primitive-panel identity and support equivalence (5.11)--(5.13) | **PROVED EXACT** |
+| colored-cube norm and hereditary-projection law (5.14)--(5.16) | **PROVED EXACT** |
+| critical harmonic threshold and polylog height tax (5.17)--(5.20) | **PROVED** |
+| `GENPRIMCAR` implies the zero-mode dyadic bound (5.23) | **PROVED CONDITIONALLY** |
+| weighted vector gate (5.3b) over induced tests (5.7) | **OPEN / NOT PROVED** |
+| uniform control over induced tests (5.7) | **STRONGER SUFFICIENT SPECIAL CASE; NOT PROVED** |
+| generalized-scale ordinary primitive Carleson estimate (5.22) | **OPEN / NOT PROVED** |
+| preservation of the original two-ray/dyadic parameter class | **FALSE / EXPLICITLY NOT CLAIMED** |
 | PRIMCAR, PRIMLS, RH, or GRH | **NOT PROVED** |
 
 No external novelty claim is made.
@@ -601,7 +920,11 @@ The replay uses exact `Fraction` arithmetic. It pins the predecessor quartet;
 checks the local and global convolution identities; checks exact rational
 finite operator inverses; checks both summatory identities and the exceptional
 Euler-factor identities through the stated caps; clears the common square-root
-weight and checks representative pair coefficients; records exact rational
-margins for the `theta=1/2` convergence proof; and enforces the scope firewall.
-It enumerates no zeta zero, finite-field family, curve, conductor family, or
-`L`-function.
+weight and checks representative pair coefficients; checks the squarefree-
+coprime Boolean restriction, generalized support equivalence, colored-cube
+heredity, local shear certificates, harmonic dilation identities, and equality
+of forward/inverse local masses; checks one end-to-end generalized panel with
+coefficient, height, ratio, and sieve data after clearing one common square-
+root weight; records exact rational margins for the `theta=1/2` convergence
+proof; and enforces the scope firewall. It enumerates no zeta zero, finite-
+field family, curve, conductor family, or `L`-function.

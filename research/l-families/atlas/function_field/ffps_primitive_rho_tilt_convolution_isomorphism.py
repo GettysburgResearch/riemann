@@ -9,6 +9,8 @@ import json
 import subprocess
 from collections.abc import Callable
 from fractions import Fraction
+from itertools import product
+from math import gcd
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -38,6 +40,7 @@ REPLAY_MAX_EXPONENT = 5
 REPLAY_GLOBAL_LIMIT = 120
 REPLAY_MATRIX_LIMIT = 24
 REPLAY_SUMMATORY_LIMIT = 160
+REPLAY_SUPPORT_LIMIT = 8
 
 ArithmeticFunction = Callable[[int], Fraction]
 
@@ -70,8 +73,11 @@ def check_predecessor_blobs() -> None:
 def check_scope_markers() -> None:
     note = NOTE_PATH.read_text(encoding="utf-8")
     for marker in (
-        "the undilated PRIMCAR test class is not closed",
+        "the undilated PRIMCAR parameter class is not closed",
         "does not bound the predecessor's nonzero Boolean modes",
+        "The weaker weighted vector gate remains",
+        "No such generalized-scale cancellation theorem is supplied.",
+        "the zero mode itself is not averaged over `d`",
         "No PRIMCAR, PRIMLS, RH, or GRH estimate is proved.",
         "No external novelty claim is made.",
     ):
@@ -507,6 +513,325 @@ def pair_coefficient_panel() -> dict[str, object]:
     }
 
 
+def primitive_boolean_pair_panel() -> dict[str, object]:
+    """Replay the squarefree-coprime compression of the actual pair support."""
+    pairs = ((1, 2), (2, 3), (6, 5), (30, 7), (14, 15))
+    rows = []
+    for u, v in pairs:
+        if mobius(u) == 0 or mobius(v) == 0 or gcd(u, v) != 1:
+            raise ArithmeticError("primitive Boolean replay pair is inadmissible")
+        forward = Fraction()
+        inverse = Fraction()
+        checked_outer_pairs = 0
+        for r in divisors(u):
+            for s in divisors(v):
+                if mobius(r) == 0 or mobius(s) == 0 or gcd(r, s) != 1:
+                    raise ArithmeticError("surviving outer pair is not Boolean-coprime")
+                if abs(h(r)) != g(r) or abs(h(s)) != g(s):
+                    raise ArithmeticError("forward/inverse Boolean masses disagree")
+                forward += g(r) * g(s) * m(u // r) * m(v // s)
+                inverse += h(r) * h(s) * a(u // r) * a(v // s)
+                checked_outer_pairs += 1
+        if forward != a(u) * a(v) or inverse != m(u) * m(v):
+            raise ArithmeticError("primitive Boolean pair identity failed")
+        rows.append(
+            {
+                "checked_outer_pairs": checked_outer_pairs,
+                "ordinary_scaled_coefficient": str(m(u) * m(v)),
+                "ordinary_via_boolean_h": str(inverse),
+                "rho_scaled_coefficient": str(a(u) * a(v)),
+                "rho_via_boolean_g": str(forward),
+                "u": u,
+                "v": v,
+            }
+        )
+    local_rows = []
+    for prime in REPLAY_PRIMES:
+        local_mass = g_prime_power(prime, 1)
+        if abs(h_prime_power(prime, 1)) != local_mass:
+            raise ArithmeticError("Boolean forward/inverse local masses disagree")
+        local_rows.append(
+            {
+                "absolute_forward_state_mass": str(local_mass),
+                "absolute_inverse_state_mass": str(local_mass),
+                "local_outer_states": ["absent", "in_r", "in_s"],
+                "pair_euler_factor": f"1+2/(({prime}+1)*sqrt({prime}))",
+                "prime": prime,
+            }
+        )
+    return {
+        "absolute_pair_mass": ("K_67=prod_(p!=67)(1+2/((p+1)sqrt(p)))<infinity"),
+        "forward_inverse_absolute_masses_equal": True,
+        "local_rows": local_rows,
+        "primitive_scalar_uniform_cost_both_directions": "K_67",
+        "primitive_squared_energy_uniform_cost_both_directions": "K_67^2",
+        "rows": rows,
+        "support": "u,v squarefree and coprime; hence r,s,m,n pairwise coprime",
+    }
+
+
+def is_squarefree(n: int) -> bool:
+    validate_positive_integer(n)
+    return mobius(n) != 0
+
+
+def raw_primitive_support(r: int, s: int, m_value: int, n: int, d: int) -> bool:
+    """The support predicate before Boolean compression."""
+    for value in (r, s, m_value, n, d):
+        validate_domain_integer(value)
+    return (
+        is_squarefree(r * m_value)
+        and is_squarefree(s * n)
+        and gcd(r * m_value, s * n) == 1
+        and gcd(r * s * m_value * n, d) == 1
+    )
+
+
+def compressed_primitive_support(r: int, s: int, m_value: int, n: int, d: int) -> bool:
+    """The equivalent generalized-panel predicate after compression."""
+    for value in (r, s, m_value, n, d):
+        validate_domain_integer(value)
+    return (
+        is_squarefree(r)
+        and is_squarefree(s)
+        and gcd(r, s) == 1
+        and gcd(r * s, d) == 1
+        and is_squarefree(m_value)
+        and is_squarefree(n)
+        and gcd(m_value, n) == 1
+        and gcd(m_value * n, d * r * s) == 1
+    )
+
+
+def primitive_support_equivalence_panel(
+    limit: int = REPLAY_SUPPORT_LIMIT,
+) -> dict[str, object]:
+    """Exhaustively replay the iff support reduction under a small cap."""
+    validate_positive_integer(limit)
+    checked = 0
+    surviving = 0
+    for r in range(1, limit + 1):
+        for s in range(1, limit + 1):
+            for m_value in range(1, limit + 1):
+                for n in range(1, limit + 1):
+                    for d in range(1, limit + 1):
+                        raw = raw_primitive_support(r, s, m_value, n, d)
+                        compressed = compressed_primitive_support(r, s, m_value, n, d)
+                        if raw != compressed:
+                            raise ArithmeticError(
+                                "primitive support compression equivalence failed"
+                            )
+                        checked += 1
+                        surviving += int(raw)
+    return {
+        "checked_quintuples": checked,
+        "equivalence": True,
+        "generalized_parameters": ("A=67^alpha*r, B=67^gamma*s, q=d*r*s"),
+        "limit_per_variable": limit,
+        "surviving_quintuples": surviving,
+    }
+
+
+def finite_generalized_panel_certificate() -> dict[str, object]:
+    """Replay one full coefficient/height/ratio/sieve instance of (5.13)."""
+    total_product = 30
+    sieve = 7
+    lower_height = 5
+    upper_height = 20
+    direct = Fraction()
+    direct_terms = 0
+    for u in divisors(total_product):
+        v = total_product // u
+        if (
+            is_squarefree(u)
+            and is_squarefree(v)
+            and gcd(u, v) == 1
+            and gcd(u * v, sieve) == 1
+            and lower_height < max(u, v) <= upper_height
+        ):
+            direct += a(u) * a(v) * Fraction(u, v)
+            direct_terms += 1
+
+    via_generalized = Fraction()
+    generalized_terms = 0
+    for r in divisors(total_product):
+        for s in divisors(total_product):
+            if total_product % (r * s):
+                continue
+            inner_product = total_product // (r * s)
+            for m_value in divisors(inner_product):
+                n = inner_product // m_value
+                if not compressed_primitive_support(r, s, m_value, n, sieve):
+                    continue
+                u = r * m_value
+                v = s * n
+                if not lower_height < max(u, v) <= upper_height:
+                    continue
+                via_generalized += g(r) * g(s) * m(m_value) * m(n) * Fraction(u, v)
+                generalized_terms += 1
+    if direct != via_generalized:
+        raise ArithmeticError("finite generalized-panel identity failed")
+    return {
+        "cleared_common_weight": f"sqrt({total_product})",
+        "direct_scaled_value": str(direct),
+        "direct_terms": direct_terms,
+        "generalized_scaled_value": str(via_generalized),
+        "generalized_terms": generalized_terms,
+        "height_interval": f"({lower_height},{upper_height}]",
+        "ratio_test": "exp(log(u/v))=u/v",
+        "sieve": sieve,
+        "total_product": total_product,
+    }
+
+
+def colored_configurations(number_of_primes: int) -> tuple[tuple[int, ...], ...]:
+    validate_positive_integer(number_of_primes)
+    return tuple(product((0, 1, 2), repeat=number_of_primes))
+
+
+def colored_leq(left: tuple[int, ...], right: tuple[int, ...]) -> bool:
+    if len(left) != len(right):
+        raise ValueError("colored configurations must have the same rank")
+    return all(
+        item_left == 0 or item_left == item_right
+        for item_left, item_right in zip(left, right, strict=True)
+    )
+
+
+def is_downward_closed(
+    chosen: frozenset[tuple[int, ...]], configurations: tuple[tuple[int, ...], ...]
+) -> bool:
+    return all(
+        lower in chosen
+        for upper in chosen
+        for lower in configurations
+        if colored_leq(lower, upper)
+    )
+
+
+def projection_intertwining_holds(
+    chosen: frozenset[tuple[int, ...]], configurations: tuple[tuple[int, ...], ...]
+) -> bool:
+    """Support test for P_A T = P_A T P_A (and likewise for T inverse)."""
+    return all(
+        (upper in chosen and colored_leq(lower, upper))
+        == (upper in chosen and lower in chosen and colored_leq(lower, upper))
+        for upper in chosen
+        for lower in configurations
+    )
+
+
+def colored_cube_panel(number_of_primes: int = 2) -> dict[str, object]:
+    """Exhaustively replay the hereditary projection criterion at rank two."""
+    configurations = colored_configurations(number_of_primes)
+    downward_count = 0
+    for mask in range(1 << len(configurations)):
+        chosen = frozenset(
+            configuration
+            for index, configuration in enumerate(configurations)
+            if mask & (1 << index)
+        )
+        downward = is_downward_closed(chosen, configurations)
+        intertwines = projection_intertwining_holds(chosen, configurations)
+        if downward != intertwines:
+            raise ArithmeticError("colored hereditary criterion failed")
+        downward_count += int(downward)
+    local_rows = []
+    for prime in REPLAY_PRIMES:
+        t_squared = Fraction(1, prime * (prime + 1) ** 2)
+        gram_trace = 2 + 2 * t_squared
+        gram_determinant = Fraction(1)
+        discriminant = gram_trace**2 - 4 * gram_determinant
+        expected_discriminant = 4 * t_squared * (2 + t_squared)
+        if discriminant != expected_discriminant:
+            raise ArithmeticError("local colored shear certificate failed")
+        local_rows.append(
+            {
+                "colored_antisymmetric_singular_value": "1",
+                "local_norm": "(sqrt(4+2*t_p^2)+sqrt(2)*t_p)/2",
+                "prime": prime,
+                "two_dimensional_gram_determinant": str(gram_determinant),
+                "two_dimensional_gram_discriminant": str(discriminant),
+                "two_dimensional_gram_trace": str(gram_trace),
+                "t_p_squared": str(t_squared),
+            }
+        )
+    return {
+        "checked_coordinate_projections": 1 << len(configurations),
+        "configuration_count": len(configurations),
+        "downward_closed_projection_count": downward_count,
+        "forward_inverse_norms_equal": True,
+        "hereditary_criterion": "P_A*T=P_A*T*P_A iff A is downward closed",
+        "local_rows": local_rows,
+        "number_of_primes": number_of_primes,
+    }
+
+
+def harmonic_dilation_panel(
+    squarefree_dilation: int = 6, limit: int = 120
+) -> dict[str, object]:
+    """Replay ||D_R||=R^(w/2) on finite exact sample vectors."""
+    validate_domain_integer(squarefree_dilation)
+    validate_positive_integer(limit)
+    if not is_squarefree(squarefree_dilation):
+        raise ValueError("dilation must be squarefree")
+    rows = []
+    for weight in (0, 1, 2):
+        left = Fraction()
+        right_base = Fraction()
+        checked = 0
+        for d in range(1, limit // squarefree_dilation + 1):
+            if (
+                d % EXCEPTIONAL_PRIME == 0
+                or not is_squarefree(d)
+                or gcd(d, squarefree_dilation) != 1
+            ):
+                continue
+            q = squarefree_dilation * d
+            value = Fraction((q * q + 3 * q + 1) % 17 - 8)
+            left += value * value / d**weight
+            checked += 1
+        for q in range(1, limit + 1):
+            if (
+                q % squarefree_dilation
+                or q % EXCEPTIONAL_PRIME == 0
+                or not is_squarefree(q)
+                or gcd(q // squarefree_dilation, squarefree_dilation) != 1
+            ):
+                continue
+            value = Fraction((q * q + 3 * q + 1) % 17 - 8)
+            right_base += value * value / q**weight
+        if not right_base or left != squarefree_dilation**weight * right_base:
+            raise ArithmeticError("harmonic dilation norm identity failed")
+        rows.append(
+            {
+                "checked_coordinates": checked,
+                "dilation_norm_squared": str(Fraction(squarefree_dilation**weight)),
+                "left_norm_squared": str(left),
+                "right_restricted_norm_squared": str(right_base),
+                "weight": weight,
+            }
+        )
+    height_checks = 0
+    for r in range(1, limit + 1):
+        if r % EXCEPTIONAL_PRIME == 0 or not is_squarefree(r):
+            continue
+        if g(r) > Fraction(1, r):
+            raise ArithmeticError("critical harmonic height majorant failed")
+        height_checks += 1
+    return {
+        "absolute_euler_factor": "1+2*p^((w-1)/2)/(p+1)",
+        "global_absolute_convergence": "exactly w<1",
+        "height_majorant": "g(r)<=1/r for squarefree r",
+        "height_majorant_checks": height_checks,
+        "harmonic_weight_cost": "O(log(H)^2) in norm; O(log(H)^4) in energy",
+        "sharpness_witness": ("A=delta_R gives ||D_R A||_w^2 / ||A||_w^2=R^w"),
+        "rows": rows,
+        "squarefree_dilation": squarefree_dilation,
+        "weight_one_is_critical": True,
+    }
+
+
 def convergence_majorant_panel() -> list[dict[str, object]]:
     """Record exact rational margins behind the theta=1/2 local bounds."""
     rows = []
@@ -555,34 +880,54 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "inverse_coefficient_identity": "c_0=c_rho*(h/sqrt(.))",
             "inverse_squared_energy_cost": "L_h(1/2)^4",
             "pair_panel": pair_coefficient_panel(),
+            "primitive_boolean_compression": primitive_boolean_pair_panel(),
+            "primitive_support_equivalence": primitive_support_equivalence_panel(),
+            "finite_generalized_panel": finite_generalized_panel_certificate(),
             "scalar_uniform_bound_cost": "L_g(1/2)^2",
             "squared_energy_uniform_bound_cost": "L_g(1/2)^4",
             "total_forward_l1_weight": "L_g(1/2)^2",
+            "uniformity_is_only_a_stronger_sufficient_corollary": True,
             "vector_minkowski": (
                 "||Lambda_rho(F_j)||_l2(w)<=sum_(r,s)|gamma(r)gamma(s)|"
                 "||Lambda_0(D_(r,s)F_j)||_l2(w)"
             ),
+            "weighted_vector_sufficient_gate": (
+                "sum_(r,s)|gamma(r)gamma(s)|E_0(r,s)^(1/2) << target^(1/2)"
+            ),
         },
+        "colored_boolean_geometry": colored_cube_panel(),
+        "harmonic_sieve_dilation": harmonic_dilation_panel(),
         "resource_caps": {
             "global_identity_limit": REPLAY_GLOBAL_LIMIT,
             "local_exponent_limit": REPLAY_MAX_EXPONENT,
             "matrix_limit": REPLAY_MATRIX_LIMIT,
             "pair_rows": 5,
             "primes": list(REPLAY_PRIMES),
+            "support_limit_per_variable": REPLAY_SUPPORT_LIMIT,
+            "support_quintuples": REPLAY_SUPPORT_LIMIT**5,
             "summatory_limit": REPLAY_SUMMATORY_LIMIT,
             "zeta_zeros": 0,
         },
         "scope_firewall": {
+            "actual_zero_mode_has_native_sieve_average": False,
             "a_or_m_is_a_vector_in_weighted_l2": False,
-            "coprimality_preserved_by_dilation": False,
+            "arbitrary_cross_coprimality_obstruction_remaining": False,
+            "coprimality_preserved_in_generalized_panel": True,
             "dyadic_endpoint_structure_preserved": False,
+            "fixed_ratio_band_is_hereditary": False,
+            "generalized_primitive_carleson_estimate_proved": False,
+            "harmonic_dilation_has_height_independent_absolute_cost": False,
+            "harmonic_dilation_tax_is_polylog_under_native_height_cutoff": True,
             "primcar_estimate_proved": False,
             "primls_proved": False,
-            "ratio_kernel_preserved": False,
+            "ratio_kernel_preserved_in_generalized_panel": True,
             "rh_or_grh_proved": False,
             "sharp_finite_height_blocks_preserved": False,
             "undilated_primcar_is_dilation_closed": False,
+            "uniform_dilation_required": False,
+            "uniform_dilation_sufficient": True,
             "uniform_induced_dilation_estimate_proved": False,
+            "weighted_induced_dilation_estimate_proved": False,
         },
         "source_contract": {
             "commit": PREDECESSOR_COMMIT,

@@ -97,6 +97,76 @@ class PrimitiveRhoTiltConvolutionIsomorphismTest(unittest.TestCase):
                 row["ordinary_via_h_scaled_coefficient"],
             )
 
+    def test_primitive_boolean_pair_compression(self) -> None:
+        panel = subject.primitive_boolean_pair_panel()
+        self.assertTrue(panel["forward_inverse_absolute_masses_equal"])
+        self.assertEqual(panel["primitive_scalar_uniform_cost_both_directions"], "K_67")
+        self.assertEqual(
+            panel["primitive_squared_energy_uniform_cost_both_directions"],
+            "K_67^2",
+        )
+        self.assertTrue(
+            all(
+                row["rho_scaled_coefficient"] == row["rho_via_boolean_g"]
+                and row["ordinary_scaled_coefficient"] == row["ordinary_via_boolean_h"]
+                for row in panel["rows"]
+            )
+        )
+        self.assertTrue(
+            all(
+                row["absolute_forward_state_mass"] == row["absolute_inverse_state_mass"]
+                for row in panel["local_rows"]
+            )
+        )
+
+    def test_primitive_support_equivalence(self) -> None:
+        panel = subject.primitive_support_equivalence_panel(6)
+        self.assertTrue(panel["equivalence"])
+        self.assertEqual(panel["checked_quintuples"], 6**5)
+        self.assertGreater(panel["surviving_quintuples"], 0)
+        self.assertTrue(subject.raw_primitive_support(2, 3, 5, 7, 11))
+        self.assertFalse(subject.raw_primitive_support(2, 3, 5, 7, 10))
+        self.assertEqual(
+            subject.raw_primitive_support(2, 3, 5, 7, 11),
+            subject.compressed_primitive_support(2, 3, 5, 7, 11),
+        )
+
+    def test_finite_generalized_panel_certificate(self) -> None:
+        panel = subject.finite_generalized_panel_certificate()
+        self.assertEqual(
+            panel["direct_scaled_value"], panel["generalized_scaled_value"]
+        )
+        self.assertGreater(panel["direct_terms"], 0)
+        self.assertGreater(panel["generalized_terms"], panel["direct_terms"])
+        self.assertEqual(panel["sieve"], 7)
+        self.assertEqual(panel["total_product"], 30)
+
+    def test_colored_cube_norm_and_hereditary_replay(self) -> None:
+        panel = subject.colored_cube_panel(2)
+        self.assertEqual(panel["configuration_count"], 9)
+        self.assertEqual(panel["checked_coordinate_projections"], 512)
+        self.assertGreater(panel["downward_closed_projection_count"], 2)
+        self.assertTrue(panel["forward_inverse_norms_equal"])
+        self.assertTrue(
+            all(
+                Fraction(row["two_dimensional_gram_determinant"]) == 1
+                for row in panel["local_rows"]
+            )
+        )
+
+    def test_harmonic_dilation_criticality(self) -> None:
+        panel = subject.harmonic_dilation_panel(6, 90)
+        self.assertTrue(panel["weight_one_is_critical"])
+        self.assertEqual(panel["global_absolute_convergence"], "exactly w<1")
+        self.assertIn("delta_R", panel["sharpness_witness"])
+        self.assertGreater(panel["height_majorant_checks"], 0)
+        for row in panel["rows"]:
+            self.assertEqual(
+                Fraction(row["left_norm_squared"]),
+                Fraction(6 ** row["weight"])
+                * Fraction(row["right_restricted_norm_squared"]),
+            )
+
     def test_convergence_majorants_are_exactly_positive(self) -> None:
         rows = subject.convergence_majorant_panel()
         self.assertEqual([row["prime"] for row in rows], list(subject.REPLAY_PRIMES))
@@ -120,10 +190,21 @@ class PrimitiveRhoTiltConvolutionIsomorphismTest(unittest.TestCase):
             result["summatory_seminorm_transfer"]["mertens_exponents_coincide"]
         )
         scope = result["scope_firewall"]
+        self.assertFalse(scope["actual_zero_mode_has_native_sieve_average"])
         self.assertFalse(scope["sharp_finite_height_blocks_preserved"])
-        self.assertFalse(scope["coprimality_preserved_by_dilation"])
-        self.assertFalse(scope["ratio_kernel_preserved"])
+        self.assertTrue(scope["coprimality_preserved_in_generalized_panel"])
+        self.assertFalse(scope["arbitrary_cross_coprimality_obstruction_remaining"])
+        self.assertTrue(scope["ratio_kernel_preserved_in_generalized_panel"])
+        self.assertFalse(scope["fixed_ratio_band_is_hereditary"])
         self.assertFalse(scope["dyadic_endpoint_structure_preserved"])
+        self.assertFalse(scope["generalized_primitive_carleson_estimate_proved"])
+        self.assertFalse(
+            scope["harmonic_dilation_has_height_independent_absolute_cost"]
+        )
+        self.assertTrue(
+            scope["harmonic_dilation_tax_is_polylog_under_native_height_cutoff"]
+        )
+        self.assertFalse(scope["weighted_induced_dilation_estimate_proved"])
         self.assertFalse(scope["uniform_induced_dilation_estimate_proved"])
         self.assertFalse(scope["primcar_estimate_proved"])
         self.assertFalse(scope["rh_or_grh_proved"])

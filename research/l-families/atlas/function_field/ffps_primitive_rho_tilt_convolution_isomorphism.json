@@ -1,4 +1,59 @@
 {
+  "colored_boolean_geometry": {
+    "checked_coordinate_projections": 512,
+    "configuration_count": 9,
+    "downward_closed_projection_count": 48,
+    "forward_inverse_norms_equal": true,
+    "hereditary_criterion": "P_A*T=P_A*T*P_A iff A is downward closed",
+    "local_rows": [
+      {
+        "colored_antisymmetric_singular_value": "1",
+        "local_norm": "(sqrt(4+2*t_p^2)+sqrt(2)*t_p)/2",
+        "prime": 2,
+        "t_p_squared": "1/18",
+        "two_dimensional_gram_determinant": "1",
+        "two_dimensional_gram_discriminant": "37/81",
+        "two_dimensional_gram_trace": "19/9"
+      },
+      {
+        "colored_antisymmetric_singular_value": "1",
+        "local_norm": "(sqrt(4+2*t_p^2)+sqrt(2)*t_p)/2",
+        "prime": 3,
+        "t_p_squared": "1/48",
+        "two_dimensional_gram_determinant": "1",
+        "two_dimensional_gram_discriminant": "97/576",
+        "two_dimensional_gram_trace": "49/24"
+      },
+      {
+        "colored_antisymmetric_singular_value": "1",
+        "local_norm": "(sqrt(4+2*t_p^2)+sqrt(2)*t_p)/2",
+        "prime": 5,
+        "t_p_squared": "1/180",
+        "two_dimensional_gram_determinant": "1",
+        "two_dimensional_gram_discriminant": "361/8100",
+        "two_dimensional_gram_trace": "181/90"
+      },
+      {
+        "colored_antisymmetric_singular_value": "1",
+        "local_norm": "(sqrt(4+2*t_p^2)+sqrt(2)*t_p)/2",
+        "prime": 7,
+        "t_p_squared": "1/448",
+        "two_dimensional_gram_determinant": "1",
+        "two_dimensional_gram_discriminant": "897/50176",
+        "two_dimensional_gram_trace": "449/224"
+      },
+      {
+        "colored_antisymmetric_singular_value": "1",
+        "local_norm": "(sqrt(4+2*t_p^2)+sqrt(2)*t_p)/2",
+        "prime": 11,
+        "t_p_squared": "1/1584",
+        "two_dimensional_gram_determinant": "1",
+        "two_dimensional_gram_discriminant": "3169/627264",
+        "two_dimensional_gram_trace": "1585/792"
+      }
+    ],
+    "number_of_primes": 2
+  },
   "exact_convolution": {
     "a": "a(n)=mu(n)rho(n)",
     "domain": "N_67={n>=1:(n,67)=1}",
@@ -480,6 +535,17 @@
   },
   "half_weighted_pair_transfer": {
     "coefficient_identity": "c_rho=c_0*(g/sqrt(.))",
+    "finite_generalized_panel": {
+      "cleared_common_weight": "sqrt(30)",
+      "direct_scaled_value": "-133/24",
+      "direct_terms": 6,
+      "generalized_scaled_value": "-133/24",
+      "generalized_terms": 48,
+      "height_interval": "(5,20]",
+      "ratio_test": "exp(log(u/v))=u/v",
+      "sieve": 7,
+      "total_product": 30
+    },
     "finite_test_identity": "B_rho(F)=sum_(r,s) g(r)g(s)/sqrt(rs) B_0((m,n)->F(rm,sn))",
     "inverse_coefficient_identity": "c_0=c_rho*(h/sqrt(.))",
     "inverse_squared_energy_cost": "L_h(1/2)^4",
@@ -533,10 +599,163 @@
         }
       ]
     },
+    "primitive_boolean_compression": {
+      "absolute_pair_mass": "K_67=prod_(p!=67)(1+2/((p+1)sqrt(p)))<infinity",
+      "forward_inverse_absolute_masses_equal": true,
+      "local_rows": [
+        {
+          "absolute_forward_state_mass": "1/3",
+          "absolute_inverse_state_mass": "1/3",
+          "local_outer_states": [
+            "absent",
+            "in_r",
+            "in_s"
+          ],
+          "pair_euler_factor": "1+2/((2+1)*sqrt(2))",
+          "prime": 2
+        },
+        {
+          "absolute_forward_state_mass": "1/4",
+          "absolute_inverse_state_mass": "1/4",
+          "local_outer_states": [
+            "absent",
+            "in_r",
+            "in_s"
+          ],
+          "pair_euler_factor": "1+2/((3+1)*sqrt(3))",
+          "prime": 3
+        },
+        {
+          "absolute_forward_state_mass": "1/6",
+          "absolute_inverse_state_mass": "1/6",
+          "local_outer_states": [
+            "absent",
+            "in_r",
+            "in_s"
+          ],
+          "pair_euler_factor": "1+2/((5+1)*sqrt(5))",
+          "prime": 5
+        },
+        {
+          "absolute_forward_state_mass": "1/8",
+          "absolute_inverse_state_mass": "1/8",
+          "local_outer_states": [
+            "absent",
+            "in_r",
+            "in_s"
+          ],
+          "pair_euler_factor": "1+2/((7+1)*sqrt(7))",
+          "prime": 7
+        },
+        {
+          "absolute_forward_state_mass": "1/12",
+          "absolute_inverse_state_mass": "1/12",
+          "local_outer_states": [
+            "absent",
+            "in_r",
+            "in_s"
+          ],
+          "pair_euler_factor": "1+2/((11+1)*sqrt(11))",
+          "prime": 11
+        }
+      ],
+      "primitive_scalar_uniform_cost_both_directions": "K_67",
+      "primitive_squared_energy_uniform_cost_both_directions": "K_67^2",
+      "rows": [
+        {
+          "checked_outer_pairs": 2,
+          "ordinary_scaled_coefficient": "-1",
+          "ordinary_via_boolean_h": "-1",
+          "rho_scaled_coefficient": "-2/3",
+          "rho_via_boolean_g": "-2/3",
+          "u": 1,
+          "v": 2
+        },
+        {
+          "checked_outer_pairs": 4,
+          "ordinary_scaled_coefficient": "1",
+          "ordinary_via_boolean_h": "1",
+          "rho_scaled_coefficient": "1/2",
+          "rho_via_boolean_g": "1/2",
+          "u": 2,
+          "v": 3
+        },
+        {
+          "checked_outer_pairs": 8,
+          "ordinary_scaled_coefficient": "-1",
+          "ordinary_via_boolean_h": "-1",
+          "rho_scaled_coefficient": "-5/12",
+          "rho_via_boolean_g": "-5/12",
+          "u": 6,
+          "v": 5
+        },
+        {
+          "checked_outer_pairs": 16,
+          "ordinary_scaled_coefficient": "1",
+          "ordinary_via_boolean_h": "1",
+          "rho_scaled_coefficient": "35/96",
+          "rho_via_boolean_g": "35/96",
+          "u": 30,
+          "v": 7
+        },
+        {
+          "checked_outer_pairs": 16,
+          "ordinary_scaled_coefficient": "1",
+          "ordinary_via_boolean_h": "1",
+          "rho_scaled_coefficient": "35/96",
+          "rho_via_boolean_g": "35/96",
+          "u": 14,
+          "v": 15
+        }
+      ],
+      "support": "u,v squarefree and coprime; hence r,s,m,n pairwise coprime"
+    },
+    "primitive_support_equivalence": {
+      "checked_quintuples": 32768,
+      "equivalence": true,
+      "generalized_parameters": "A=67^alpha*r, B=67^gamma*s, q=d*r*s",
+      "limit_per_variable": 8,
+      "surviving_quintuples": 752
+    },
     "scalar_uniform_bound_cost": "L_g(1/2)^2",
     "squared_energy_uniform_bound_cost": "L_g(1/2)^4",
     "total_forward_l1_weight": "L_g(1/2)^2",
-    "vector_minkowski": "||Lambda_rho(F_j)||_l2(w)<=sum_(r,s)|gamma(r)gamma(s)|||Lambda_0(D_(r,s)F_j)||_l2(w)"
+    "uniformity_is_only_a_stronger_sufficient_corollary": true,
+    "vector_minkowski": "||Lambda_rho(F_j)||_l2(w)<=sum_(r,s)|gamma(r)gamma(s)|||Lambda_0(D_(r,s)F_j)||_l2(w)",
+    "weighted_vector_sufficient_gate": "sum_(r,s)|gamma(r)gamma(s)|E_0(r,s)^(1/2) << target^(1/2)"
+  },
+  "harmonic_sieve_dilation": {
+    "absolute_euler_factor": "1+2*p^((w-1)/2)/(p+1)",
+    "global_absolute_convergence": "exactly w<1",
+    "harmonic_weight_cost": "O(log(H)^2) in norm; O(log(H)^4) in energy",
+    "height_majorant": "g(r)<=1/r for squarefree r",
+    "height_majorant_checks": 74,
+    "rows": [
+      {
+        "checked_coordinates": 7,
+        "dilation_norm_squared": "1",
+        "left_norm_squared": "179",
+        "right_restricted_norm_squared": "179",
+        "weight": 0
+      },
+      {
+        "checked_coordinates": 7,
+        "dilation_norm_squared": "6",
+        "left_norm_squared": "49291727/1616615",
+        "right_restricted_norm_squared": "49291727/9699690",
+        "weight": 1
+      },
+      {
+        "checked_coordinates": 7,
+        "dilation_norm_squared": "36",
+        "left_norm_squared": "45747323463011/2613444058225",
+        "right_restricted_norm_squared": "45747323463011/94083986096100",
+        "weight": 2
+      }
+    ],
+    "sharpness_witness": "A=delta_R gives ||D_R A||_w^2 / ||A||_w^2=R^w",
+    "squarefree_dilation": 6,
+    "weight_one_is_critical": true
   },
   "resource_caps": {
     "global_identity_limit": 120,
@@ -551,19 +770,30 @@
       11
     ],
     "summatory_limit": 160,
+    "support_limit_per_variable": 8,
+    "support_quintuples": 32768,
     "zeta_zeros": 0
   },
   "scope_firewall": {
     "a_or_m_is_a_vector_in_weighted_l2": false,
-    "coprimality_preserved_by_dilation": false,
+    "actual_zero_mode_has_native_sieve_average": false,
+    "arbitrary_cross_coprimality_obstruction_remaining": false,
+    "coprimality_preserved_in_generalized_panel": true,
     "dyadic_endpoint_structure_preserved": false,
+    "fixed_ratio_band_is_hereditary": false,
+    "generalized_primitive_carleson_estimate_proved": false,
+    "harmonic_dilation_has_height_independent_absolute_cost": false,
+    "harmonic_dilation_tax_is_polylog_under_native_height_cutoff": true,
     "primcar_estimate_proved": false,
     "primls_proved": false,
-    "ratio_kernel_preserved": false,
+    "ratio_kernel_preserved_in_generalized_panel": true,
     "rh_or_grh_proved": false,
     "sharp_finite_height_blocks_preserved": false,
     "undilated_primcar_is_dilation_closed": false,
-    "uniform_induced_dilation_estimate_proved": false
+    "uniform_dilation_required": false,
+    "uniform_dilation_sufficient": true,
+    "uniform_induced_dilation_estimate_proved": false,
+    "weighted_induced_dilation_estimate_proved": false
   },
   "source_contract": {
     "commit": "05da4d1705d994dd02d650f321196f8464034ba8",
