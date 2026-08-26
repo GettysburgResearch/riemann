@@ -287,6 +287,7 @@ exponentially fast.  Using (0.5),
  &\ll_q h^{-2}.
 \end{aligned}
 \tag{5.3}
+\]
 
 This proves (0.7).
 
