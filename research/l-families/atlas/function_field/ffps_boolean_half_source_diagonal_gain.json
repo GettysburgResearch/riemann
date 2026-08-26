@@ -1,0 +1,67 @@
+{
+  "half_source": {
+    "coefficient_formula": "sum over coprime R*T=n, R>U of mu(R)*2^(-omega(T))",
+    "identity": "f_U=mu_>U star q, q(S)=2^(-omega(S))",
+    "support": "f_U(n)!=0 implies n>U",
+    "uniform_majorant": "abs(f_U(n))<=(3/2)^omega(n)"
+  },
+  "identity_panels": [
+    {
+      "cutoff_cells_checked": 2,
+      "maximum_absolute_coefficient": "1",
+      "support_size": 1,
+      "three_halves_majorant": "3/2"
+    },
+    {
+      "cutoff_cells_checked": 4,
+      "maximum_absolute_coefficient": "1",
+      "support_size": 2,
+      "three_halves_majorant": "9/4"
+    },
+    {
+      "cutoff_cells_checked": 8,
+      "maximum_absolute_coefficient": "1",
+      "support_size": 3,
+      "three_halves_majorant": "27/8"
+    },
+    {
+      "cutoff_cells_checked": 16,
+      "maximum_absolute_coefficient": "1",
+      "support_size": 4,
+      "three_halves_majorant": "81/16"
+    },
+    {
+      "cutoff_cells_checked": 32,
+      "maximum_absolute_coefficient": "1",
+      "support_size": 5,
+      "three_halves_majorant": "243/32"
+    },
+    {
+      "cutoff_cells_checked": 64,
+      "maximum_absolute_coefficient": "3/2",
+      "support_size": 6,
+      "three_halves_majorant": "729/64"
+    }
+  ],
+  "owner_core_source_diagonal": {
+    "horizon_bound": "sum_(p*a^2<=C*Y) abs(f_U(a))^2/(p*a^2) << Y^(-1/6)*(log Y)^(5/4)*log log Y",
+    "moving_cutoff": "U=floor(Y^(1/6))",
+    "owner_range": "p<=C*Y/U^2",
+    "physical_shape": "n=p*a^2 with (p,a)=1"
+  },
+  "poor_half_core": {
+    "bad_tail_log_exponent": "0.786091435960",
+    "full_tail_log_exponent": "1.250000000000",
+    "rank": "r=floor(alpha*log log Y)",
+    "relative_log_saving": "0.463908564040",
+    "square_majorant_weight": "9/4"
+  },
+  "resource_caps": {
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "maximum_support_size": 6,
+    "maximum_two_box_assignments": 64,
+    "point_counts": 0,
+    "source_atoms_enumerated": 0
+  }
+}
