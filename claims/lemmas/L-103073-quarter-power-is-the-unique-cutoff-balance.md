@@ -1,12 +1,13 @@
-# L-103073 — Quarter power is the unique Boolean cutoff balance
+# L-103073 — Quarter power is the unique fixed-owner cutoff balance
 
 Claim ID: `L-103073`  
-Status: **PROVED EXACT EXPONENT LEDGER**  
+Status: **PROVED EXACT FIXED-FIBRE EXPONENT LEDGER**  
 Created: 2026-08-26  
-Depends on: `L-103070--L-103071`  
+Corrected: 2026-08-26  
+Depends on: `L-103110--L-103111`; binding `R-103110`  
 RH status: **not assumed**
 
-Write the core horizon as `W` and choose a power cutoff
+Write the fixed-owner core horizon as `W` and choose a power cutoff
 
 \[
 U=W^\alpha
@@ -14,11 +15,11 @@ U=W^\alpha
 
 up to fixed dyadic constants.
 
-The complete squarefree Type-I theorem gives
+The fixed-owner squarefree Type-I theorem gives
 
 \[
 \boxed{
-\mathcal T_U
+\mathcal T_U^{\rm fixed\ owner}
 =
 W^{\alpha-1/4+o(1)}.
 }
@@ -32,28 +33,26 @@ a^2>U^4=W^{4\alpha}.
 \tag{L-103073.2}
 \]
 
-The compact physical observation permits only `a^2<=W`.
-
+The compact physical observation in that owner fibre permits only `a^2<=W`.
 Consequently:
 
 ```text
 alpha < 1/4:
-  Type I is power-saving, but the balanced row can remain;
+  fixed-owner Type I is power-saving, but the balanced row can remain;
 
 alpha = 1/4:
-  Type I is subpower and the balanced row is support-empty;
+  fixed-owner Type I is subpower and the balanced row is support-empty;
 
 alpha > 1/4:
-  the balanced row is support-empty, but the inherited Type-I estimate
+  the balanced row is support-empty, but the fixed-owner Type-I estimate
   incurs a positive power.
 ```
 
-Thus
+Thus `alpha=1/4` is the unique exponent where the two **fixed-owner** demands
+meet.
 
-\[
-\boxed{\alpha=\frac14}
-\]
+## Scope
 
-is the unique cutoff exponent at which the two demands meet exactly. The
-historical sixth-root choice optimized for a power saving; the conclusion-facing
-negative-mass theorem is instead optimized at the quarter-power endpoint.
+This ledger does not control the coherent physical collapse across different
+owner products. At the endpoint that collapsed Type-I field is exactly the
+open harmonic/BCI current by `L-103112`. No RH conclusion is drawn.
