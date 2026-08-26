@@ -1,0 +1,581 @@
+{
+  "exact_mathematics": {
+    "arbitrary_coset_union_theorem": {
+      "denominator": "E_A=N*(t^2*Q+t*(k-t)*P)/k^2",
+      "fixed_density_invariance": "the exact leverage depends on k and t only through rho=t/k",
+      "full_tensor_improvement": "P*t>Q*(k+t)",
+      "indicator_action": "G*1_A=P*1_A+(Q-P)*rho*1",
+      "normalized_form": "L=1/(A0*rho^2+B0*rho*(1-rho)), A0=Q/N, B0=P/N",
+      "sharp_leverage": "L_(k,t)=k^2*N/(t^2*Q+t*(k-t)*P)",
+      "support": "A=Phi^(-1)(S), S subset mu_k, |S|=t, rho=t/k",
+      "unique_optimizer": "alpha_opt=(k/t)*1_A, positive and uniform"
+    },
+    "cyclic_spectral_theorem": {
+      "composite_order_reason": "exact order k implies psi_i^r is nontrivial for every 0<r<k; gcd(r,k)>1 can lower its order but cannot make it constant",
+      "eigenvalues": "G*w_0=Q*w_0 and G*w_r=P*w_r for every 1<=r<k",
+      "fourier_basis": "w_r=Phi^r=tensor_i psi_i^r, 0<=r<k",
+      "groups": "H_i=F_(p_i)^*/{+/-1}, |H_i|=m_i=(p_i-1)/2",
+      "hypothesis": "each psi_i:H_i->mu_k has the same exact order k; equivalently k divides every m_i",
+      "orthogonality": "<w_r,w_s>=N*delta_(r,s)",
+      "quotient_map": "Phi(h_1,...,h_d)=product_i psi_i(h_i)"
+    },
+    "finite_controls": {
+      "composite_order_17_41_half_union": {
+        "character_order": 4,
+        "complete_tensor_leverage": [
+          160,
+          189
+        ],
+        "constant_tensor_eigenvalue_Q": 189,
+        "every_nonzero_power_is_nontrivial_locally": true,
+        "improvement_criterion": {
+          "formula": "P*t>Q*(k+t)",
+          "left_P_times_t": 1394,
+          "right_Q_times_k_plus_t": 1134
+        },
+        "local_dimensions": [
+          8,
+          20
+        ],
+        "native_amplitude": 160,
+        "nonzero_power_orders": [
+          4,
+          2,
+          4
+        ],
+        "primes": [
+          17,
+          41
+        ],
+        "restricted_gram_denominator": 35440,
+        "restricted_row_sum": [
+          443,
+          1
+        ],
+        "retained_quotient_values": 2,
+        "sharp_positive_uniform_weight": [
+          2,
+          1
+        ],
+        "sharp_restricted_leverage": [
+          320,
+          443
+        ],
+        "strictly_improves_complete_tensor": true,
+        "support_density": [
+          1,
+          2
+        ],
+        "support_size": 80,
+        "tensor_order": 2,
+        "top_tensor_eigenvalue_P": 697
+      },
+      "legendre_5_13": {
+        "character_order": 2,
+        "complete_tensor_leverage": [
+          4,
+          7
+        ],
+        "constant_tensor_eigenvalue_Q": 21,
+        "every_nonzero_power_is_nontrivial_locally": true,
+        "improvement_criterion": {
+          "formula": "P*t>Q*(k+t)",
+          "left_P_times_t": 65,
+          "right_Q_times_k_plus_t": 63
+        },
+        "local_dimensions": [
+          2,
+          6
+        ],
+        "native_amplitude": 12,
+        "nonzero_power_orders": [
+          2
+        ],
+        "primes": [
+          5,
+          13
+        ],
+        "restricted_gram_denominator": 258,
+        "restricted_row_sum": [
+          43,
+          1
+        ],
+        "retained_quotient_values": 1,
+        "sharp_positive_uniform_weight": [
+          2,
+          1
+        ],
+        "sharp_restricted_leverage": [
+          24,
+          43
+        ],
+        "strictly_improves_complete_tensor": true,
+        "support_density": [
+          1,
+          2
+        ],
+        "support_size": 6,
+        "tensor_order": 2,
+        "top_tensor_eigenvalue_P": 65
+      },
+      "ternary_7_13_kernel": {
+        "closed_form": {
+          "character_order": 3,
+          "complete_tensor_leverage": [
+            9,
+            14
+          ],
+          "constant_tensor_eigenvalue_Q": 28,
+          "every_nonzero_power_is_nontrivial_locally": true,
+          "improvement_criterion": {
+            "formula": "P*t>Q*(k+t)",
+            "left_P_times_t": 91,
+            "right_Q_times_k_plus_t": 112
+          },
+          "local_dimensions": [
+            3,
+            6
+          ],
+          "native_amplitude": 18,
+          "nonzero_power_orders": [
+            3,
+            3
+          ],
+          "primes": [
+            7,
+            13
+          ],
+          "restricted_gram_denominator": 420,
+          "restricted_row_sum": [
+            70,
+            1
+          ],
+          "retained_quotient_values": 1,
+          "sharp_positive_uniform_weight": [
+            3,
+            1
+          ],
+          "sharp_restricted_leverage": [
+            27,
+            35
+          ],
+          "strictly_improves_complete_tensor": false,
+          "support_density": [
+            1,
+            3
+          ],
+          "support_size": 6,
+          "tensor_order": 2,
+          "top_tensor_eigenvalue_P": 91
+        },
+        "direct_denominator": 420,
+        "distinct_restricted_row_sums": [
+          70
+        ],
+        "enumerated_full_coordinates": 18,
+        "enumerated_support_coordinates": 6,
+        "retained_residues": [
+          0
+        ],
+        "two_prime_fixed_size_control": {
+          "attains_global_fixed_size_maximum": true,
+          "balanced_margin_maximum": 420,
+          "column_degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "row_degrees": [
+            2,
+            2,
+            2
+          ]
+        },
+        "uniform_optimizer_verified": true
+      },
+      "ternary_7_13_two_cosets": {
+        "closed_form": {
+          "character_order": 3,
+          "complete_tensor_leverage": [
+            9,
+            14
+          ],
+          "constant_tensor_eigenvalue_Q": 28,
+          "every_nonzero_power_is_nontrivial_locally": true,
+          "improvement_criterion": {
+            "formula": "P*t>Q*(k+t)",
+            "left_P_times_t": 182,
+            "right_Q_times_k_plus_t": 140
+          },
+          "local_dimensions": [
+            3,
+            6
+          ],
+          "native_amplitude": 18,
+          "nonzero_power_orders": [
+            3,
+            3
+          ],
+          "primes": [
+            7,
+            13
+          ],
+          "restricted_gram_denominator": 588,
+          "restricted_row_sum": [
+            49,
+            1
+          ],
+          "retained_quotient_values": 2,
+          "sharp_positive_uniform_weight": [
+            3,
+            2
+          ],
+          "sharp_restricted_leverage": [
+            27,
+            49
+          ],
+          "strictly_improves_complete_tensor": true,
+          "support_density": [
+            2,
+            3
+          ],
+          "support_size": 12,
+          "tensor_order": 2,
+          "top_tensor_eigenvalue_P": 91
+        },
+        "direct_denominator": 588,
+        "distinct_restricted_row_sums": [
+          49
+        ],
+        "enumerated_full_coordinates": 18,
+        "enumerated_support_coordinates": 12,
+        "retained_residues": [
+          0,
+          1
+        ],
+        "two_prime_fixed_size_control": {
+          "attains_global_fixed_size_maximum": true,
+          "balanced_margin_maximum": 588,
+          "column_degrees": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "row_degrees": [
+            4,
+            4,
+            4
+          ]
+        },
+        "uniform_optimizer_verified": true
+      }
+    },
+    "finite_dimension_density_frontier": {
+      "improvement_interval": "rho>Q/(P-Q) and rho<1",
+      "when_P_at_most_2Q": "no proper cyclic quotient-union mask improves the complete tensor",
+      "when_P_exceeds_2Q": {
+        "continuous_optimal_density": "rho*=P/(2*(P-Q))",
+        "continuous_optimal_leverage": "L*=4*N*(P-Q)/P^2"
+      }
+    },
+    "fixed_d_large_local_dimension_frontier": {
+      "explicit_construction": "take k=2^d-1 and retain t=2^(d-1) quotient values; for fixed d, primes p_i congruent to 1 mod 2k support the characters",
+      "legendre_near_optimality": "the k=2,t=1 limiting leverage exceeds the optimum by exactly 4^d/(4^d-1)",
+      "limits": "Q/N->1 and P/N->2^d",
+      "optimal_density": "2^(d-1)/(2^d-1)",
+      "optimal_leverage": "(2^d-1)/4^(d-1)",
+      "rows": [
+        {
+          "constructive_character_order": 3,
+          "constructive_density": [
+            2,
+            3
+          ],
+          "constructive_limiting_leverage": [
+            3,
+            4
+          ],
+          "constructive_retained_values": 2,
+          "continuous_optimal_density": [
+            2,
+            3
+          ],
+          "continuous_optimal_leverage": [
+            3,
+            4
+          ],
+          "large_local_dimension_top_eigenvalue": 4,
+          "legendre_limiting_leverage": [
+            4,
+            5
+          ],
+          "legendre_to_optimum_ratio": [
+            16,
+            15
+          ],
+          "tensor_order_d": 2
+        },
+        {
+          "constructive_character_order": 7,
+          "constructive_density": [
+            4,
+            7
+          ],
+          "constructive_limiting_leverage": [
+            7,
+            16
+          ],
+          "constructive_retained_values": 4,
+          "continuous_optimal_density": [
+            4,
+            7
+          ],
+          "continuous_optimal_leverage": [
+            7,
+            16
+          ],
+          "large_local_dimension_top_eigenvalue": 8,
+          "legendre_limiting_leverage": [
+            4,
+            9
+          ],
+          "legendre_to_optimum_ratio": [
+            64,
+            63
+          ],
+          "tensor_order_d": 3
+        },
+        {
+          "constructive_character_order": 15,
+          "constructive_density": [
+            8,
+            15
+          ],
+          "constructive_limiting_leverage": [
+            15,
+            64
+          ],
+          "constructive_retained_values": 8,
+          "continuous_optimal_density": [
+            8,
+            15
+          ],
+          "continuous_optimal_leverage": [
+            15,
+            64
+          ],
+          "large_local_dimension_top_eigenvalue": 16,
+          "legendre_limiting_leverage": [
+            4,
+            17
+          ],
+          "legendre_to_optimum_ratio": [
+            256,
+            255
+          ],
+          "tensor_order_d": 4
+        },
+        {
+          "constructive_character_order": 31,
+          "constructive_density": [
+            16,
+            31
+          ],
+          "constructive_limiting_leverage": [
+            31,
+            256
+          ],
+          "constructive_retained_values": 16,
+          "continuous_optimal_density": [
+            16,
+            31
+          ],
+          "continuous_optimal_leverage": [
+            31,
+            256
+          ],
+          "large_local_dimension_top_eigenvalue": 32,
+          "legendre_limiting_leverage": [
+            4,
+            33
+          ],
+          "legendre_to_optimum_ratio": [
+            1024,
+            1023
+          ],
+          "tensor_order_d": 5
+        },
+        {
+          "constructive_character_order": 63,
+          "constructive_density": [
+            32,
+            63
+          ],
+          "constructive_limiting_leverage": [
+            63,
+            1024
+          ],
+          "constructive_retained_values": 32,
+          "continuous_optimal_density": [
+            32,
+            63
+          ],
+          "continuous_optimal_leverage": [
+            63,
+            1024
+          ],
+          "large_local_dimension_top_eigenvalue": 64,
+          "legendre_limiting_leverage": [
+            4,
+            65
+          ],
+          "legendre_to_optimum_ratio": [
+            4096,
+            4095
+          ],
+          "tensor_order_d": 6
+        }
+      ]
+    },
+    "kernel_corollary": {
+      "denominator": "E=N*(Q+(k-1)*P)/k^2",
+      "improvement": "P>(k+1)*Q",
+      "leverage": "k^2*N/(Q+(k-1)*P)",
+      "necessary_fixed_d_condition": "k+1<2^d",
+      "optimizer": "alpha_opt=k",
+      "order_comparison": "on one common eligible panel, the kernel leverage is strictly increasing for real k>=2; the smallest available order is best",
+      "support": "Phi=1 (t=1)"
+    },
+    "prime_prefix_asymptotics": {
+      "choice_of_k": "all fixed k share the leading conductor exponent; k=2 minimizes single-kernel leverage on any common panel and is canonical, but different progression constants forbid an exact finite-M ordering",
+      "conductor": "M=product_p p, log M~x/phi(2k), d~x/(phi(2k)*log x)",
+      "conductor_scale": "exp(-(log 2+o(1))*log(M)/log(log(M)))",
+      "exact_leading_reduction": "L_(k,t)~[k^2/(t*(k-t))]*2^(-d)*product_p(1-1/p)",
+      "mertens_progression_scale": "Theta_(k,t)(2^(-d)*(log x)^(-1/phi(2k)))",
+      "nonuniformity_firewall": "fixed-modulus PNT/Mertens in progressions gives no uniform theorem when k grows with x, d, or M",
+      "scope": "fixed k,t; primes p<=x with p congruent to 1 mod 2k"
+    },
+    "product_mask_comparison": {
+      "cartesian_support": "every proper Cartesian product restriction has leverage strictly larger than the complete tensor",
+      "cyclic_consequence": "whenever P*t>Q*(k+t), the cyclic mask beats the complete tensor and therefore every proper product mask",
+      "two_prime_strength": "cyclic quotient unions have balanced row and column margins and attain the exact global fixed-size denominator maximum"
+    }
+  },
+  "firewalls": [
+    "The quotient characters exist exactly when k divides every m_i. Higher-order choices and their common mu_k alignment are noncanonical; the quadratic Legendre choice is canonical.",
+    "Common exact order is essential for the two-eigenvalue formula. If local orders merely divide k, nonzero Fourier powers can become constant in some factors and create lower tensor modes.",
+    "The condition product_i psi_i=1, and any union of its value fibres, is a legitimate fixed CRT subset of the frozen unordered {c,-c} coordinates. This is not a varying-owner/conductor FFPS theorem.",
+    "The fixed-d construction keeps d and k fixed while local primes grow. It is not uniform when d or k grows.",
+    "Prime-prefix asymptotics import PNT and Mertens in one fixed arithmetic progression; they do not license a growing modulus when k grows with x, d, or M.",
+    "No WCADD, WCKUM, BPOE, SOCM, mixed/double/principal FFPS moment, or conductor-uniform family estimate is proved.",
+    "No principal member is individualized; no RH or GRH claim is made.",
+    "No external novelty claim is made."
+  ],
+  "packet_manifest": {
+    "note": {
+      "lf_sha256": "b37d5149bd53974f724d132c9b9e81060afab78816a4bec34fc8e0efcd10056c",
+      "path": "research/l-families/atlas/function_field/FFPS_CYCLIC_CHARACTER_MASKS.md"
+    },
+    "producer": {
+      "lf_sha256": "c5f58004bcc3fe08d978859c71c01f10fa014f25c11308d9f5c04f8bc043066b",
+      "path": "research/l-families/atlas/function_field/ffps_cyclic_character_masks.py"
+    },
+    "test": {
+      "lf_sha256": "3b5273f5069fce2d0415d05eb3c824f5aa4917e6911e38c9021f3357bc4a1e78",
+      "path": "tests/test_ffps_cyclic_character_masks.py"
+    }
+  },
+  "payload_sha256": "fa8b52ef39b7aa56eac02d7ed3d962282546c3cda7a262e5331683213b7947e1",
+  "resource_contract": {
+    "actual_enumerated_coordinates": 36,
+    "actual_exact_operations": 782,
+    "actual_matrix_cells": 180,
+    "actual_source_bytes": 126255,
+    "actual_source_files": 4,
+    "arithmetic": "exact integers and Fraction only; no floating point",
+    "coordinates_before_sources": 36,
+    "matrix_cells_before_sources": 180,
+    "maximum_control_prime": 101,
+    "maximum_direct_tensor_dimension": 24,
+    "maximum_enumerated_coordinates": 128,
+    "maximum_exact_operations": 20000,
+    "maximum_matrix_cells": 2048,
+    "maximum_packet_file_bytes": 65536,
+    "maximum_source_bytes_each": 65536,
+    "maximum_source_bytes_total": 150000,
+    "maximum_source_files": 4,
+    "maximum_wall_seconds": 4.0,
+    "operation_counts": {
+      "closed_form_products": 104,
+      "direct_gram_additions": 180,
+      "direct_gram_factor_multiplications": 360,
+      "fixed_d_closed_form": 90,
+      "trial_divisions": 8,
+      "two_prime_margin_formula": 40
+    },
+    "operations_before_sources": 782
+  },
+  "schema": "riemann.function_field.ffps_cyclic_character_masks.v1",
+  "scope": {
+    "characters": "one chosen exact-order-k character on every H_i",
+    "characters_enumerated": 0,
+    "conductors_enumerated": 0,
+    "finite_fields_enumerated": 0,
+    "formal_gram": "G=tensor_i(p_i*I_(m_i)-J_(m_i)), m_i=(p_i-1)/2",
+    "groups": "H_i=F_(p_i)^*/{+/-1}",
+    "l_functions_enumerated": 0,
+    "random_samples": 0,
+    "supports": "arbitrary unions of values of product_i psi_i"
+  },
+  "source_manifest": [
+    {
+      "bytes_read": 38196,
+      "commit": "12f52a2235cdcda5c3c6b43a82bfcadbbb08f73c",
+      "git_blob": "9fa4404f6740b2f545d56b81d4122cd636528bea",
+      "lf_sha256": "d9d709997362f85d49156bc9669dd81c4f3b23379d03c65d4c91dbcd0ea4411b",
+      "name": "correlated_json",
+      "path": "research/l-families/atlas/function_field/ffps_correlated_mask_amplifier.json",
+      "role": "arbitrary-support optimizer and Legendre checkerboard seed"
+    },
+    {
+      "bytes_read": 13716,
+      "commit": "12f52a2235cdcda5c3c6b43a82bfcadbbb08f73c",
+      "git_blob": "4569c521e99e8c591f1694126605f8abee8a75f8",
+      "lf_sha256": "38d178c0bed51daca67bd963523cd5db3cf35367f8b9474206b9f803325e7106",
+      "name": "correlated_note",
+      "path": "research/l-families/atlas/function_field/FFPS_CORRELATED_MASK_AMPLIFIER.md",
+      "role": "proof-facing restricted-Gram and source-coordinate contract"
+    },
+    {
+      "bytes_read": 58631,
+      "commit": "12f52a2235cdcda5c3c6b43a82bfcadbbb08f73c",
+      "git_blob": "57e11d8f6332375eba62ec2738382ca6ce4182c3",
+      "lf_sha256": "fc2f92f4348296e86e5cf856ed6d3aa536dba2ae1776d56b941fd9b0cf70d215",
+      "name": "correlated_producer",
+      "path": "research/l-families/atlas/function_field/ffps_correlated_mask_amplifier.py",
+      "role": "bounded exact implementation of the prerequisite theorem"
+    },
+    {
+      "bytes_read": 15712,
+      "commit": "12f52a2235cdcda5c3c6b43a82bfcadbbb08f73c",
+      "git_blob": "a8bc217918299436f35114a3b9b7617fce6108e5",
+      "lf_sha256": "43801f9abdf5e3981a88f52fc61452e8fd749fb95ec42ec107546e5278454c7a",
+      "name": "correlated_test",
+      "path": "tests/test_ffps_correlated_mask_amplifier.py",
+      "role": "optimized-mode and source-lock regression surface"
+    }
+  ],
+  "source_relationship": {
+    "dependency_commit": "12f52a2235cdcda5c3c6b43a82bfcadbbb08f73c",
+    "dependency_payload": "ee6c66844a15b4d6a29a6cf5dc252a5efdd5cc8b6052dcd9c27bf76dbe03269a",
+    "legendre_case_recovered": true,
+    "relationship": "the frozen packet proves the general restricted optimizer and the quadratic checkerboard; this packet supplies the exact cyclic quotient spectrum and arbitrary union of quotient fibres"
+  },
+  "status": "EXACT_CYCLIC_QUOTIENT_RESTRICTED_GRAM_THEOREM"
+}
