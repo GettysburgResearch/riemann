@@ -317,42 +317,52 @@
     }
   },
   "finite_scout_corroboration": {
-    "firewall": "three primes do not prove an all-q or prime-power identity and do not resolve the nonregular Eisenstein or stable-space premises",
+    "firewall": "only T_(12,0) is replayed directly; Hhat_12 is inventory-derived, so the three primes test the combined arithmetic branch, are not an independent audit of the inventory, do not prove an all-q or prime-power identity, and do not realize the nonregular Eisenstein Galois class",
     "one_Tate_check": "with Genuine=0, the 2-4*L branch requires Hhat_12=L-L*f_minus and therefore misses each stored row by +p; without that vanishing, the same rows instead require Tr(F_p,Genuine)=p",
-    "role": "CORROBORATION_ONLY_NOT_A_PREMISE_AND_NOT_INTERPOLATION",
+    "raw_T_check": "after substituting the inventory conversion but without treating Hhat_12 as direct data, E_project-E_Shmakov equals -p at p=3,5,7",
+    "role": "EXACT_RAW_T_PLUS_INVENTORY_CONSEQUENCE_NOT_AN_INDEPENDENT_INVENTORY_AUDIT_OR_INTERPOLATION",
     "rows": [
       {
         "BFG_match": true,
         "BFG_required_Hhat": -3708,
         "Hhat_12": -3708,
+        "Hhat_12_is_inventory_derived": true,
         "Shmakov_2_minus_4L_required_Hhat_if_Genuine_zero": -3705,
         "Shmakov_required_Genuine_trace_to_match_observed": 3,
         "Shmakov_required_minus_observed": 3,
         "a_p(f_minus)": 1236,
+        "direct_T_(12,0)": -4587,
         "match": true,
-        "p": 3
+        "p": 3,
+        "raw_T_plus_inventory_project_minus_Shmakov_target": -3
       },
       {
         "BFG_match": true,
         "BFG_required_Hhat": 287250,
         "Hhat_12": 287250,
+        "Hhat_12_is_inventory_derived": true,
         "Shmakov_2_minus_4L_required_Hhat_if_Genuine_zero": 287255,
         "Shmakov_required_Genuine_trace_to_match_observed": 5,
         "Shmakov_required_minus_observed": 5,
         "a_p(f_minus)": -57450,
+        "direct_T_(12,0)": 267251,
         "match": true,
-        "p": 5
+        "p": 5,
+        "raw_T_plus_inventory_project_minus_Shmakov_target": -5
       },
       {
         "BFG_match": true,
         "BFG_required_Hhat": -449624,
         "Hhat_12": -449624,
+        "Hhat_12_is_inventory_derived": true,
         "Shmakov_2_minus_4L_required_Hhat_if_Genuine_zero": -449617,
         "Shmakov_required_Genuine_trace_to_match_observed": 7,
         "Shmakov_required_minus_observed": 7,
         "a_p(f_minus)": 64232,
+        "direct_T_(12,0)": -382735,
         "match": true,
-        "p": 7
+        "p": 7,
+        "raw_T_plus_inventory_project_minus_Shmakov_target": -7
       }
     ]
   },
@@ -364,7 +374,7 @@
     "STABLE-SPACE CLOSURE: the locked corrected two-orientation valuation kernel proves the full marked modular space zero, and the form-attached stable adapter therefore gives Genuine=0 without the conditional k=3 isotypical rows.",
     "DIMENSION FIREWALL: the full-level dimension 30 alone does not imply absence of S5 invariants; the conclusion instead uses the exact marked rank-66/nullity-zero kernel.",
     "COHOMOLOGY FIREWALL: Genuine is the positive semisimplified stable/general form-attached channel, not an arbitrary residual Euler class; boundary, Eisenstein, endoscopic, and nonsemisimple extension data cannot be absorbed into it.",
-    "FINITE-SCOUT FIREWALL: p=3,5,7 corroborate Hhat_12(p)=-p*a_p(f_minus) but do not prove any fourth q or prime-power row.",
+    "FINITE-SCOUT PROVENANCE FIREWALL: p=3,5,7 directly replay T_(12,0); Hhat_12 is then derived with the separately locked arithmetic inventory. The rows give an exact -p raw-T residual against the Shmakov branch, but they are not an independent audit of the inventory and do not prove any fourth q or prime-power row.",
     "No motivic isomorphism, compatible system, novelty, RH, GRH, number-field transfer, or global Euler-product claim is made.",
     "The producer performs no runtime web/database call and no field, polynomial, curve, or family enumeration."
   ],
@@ -422,7 +432,7 @@
   "packet_manifest": [
     {
       "path": "research/l-families/atlas/function_field/GENUS2_SYM12_CONDITIONAL_ENDOSCOPIC_CLOSURE.md",
-      "sha256_lf_normalized": "d1d8a2230b37f2a43b9976bc48001ebccafeeea09815ee27d0ce3a53e807927d"
+      "sha256_lf_normalized": "146811943594bc7a71b9821519db8e8af6fe4d8c47eb0729b3513ca1c248f69e"
     },
     {
       "path": "research/l-families/atlas/function_field/GENUS2_SYM12_MODULAR_ZERO_GENERAL_CHANNEL_ADAPTER.md",
@@ -430,14 +440,14 @@
     },
     {
       "path": "research/l-families/atlas/function_field/genus2_sym12_conditional_endoscopic_closure.py",
-      "sha256_lf_normalized": "6a677fd1b0c400630602e3af7f2a6bd6a9041b18faedfc555faaa2264dfc67f2"
+      "sha256_lf_normalized": "56ba125772fc82fdb5f54921f55d79e52449685d4021b3bec04289b71abb384b"
     },
     {
       "path": "tests/test_genus2_sym12_conditional_endoscopic_closure.py",
-      "sha256_lf_normalized": "0cdde8320273f6f6932d97bee6dc10b61e1ae0e1a9611326752bf26933bb6d5a"
+      "sha256_lf_normalized": "f07e080097cc1c10a054f3a9bb52ea0246996e8cf9be509535e244ed73dd79da"
     }
   ],
-  "payload_sha256": "e1028892c03733940d05101a0dbc443e2a216e5e74e96a91c016b279d62474e1",
+  "payload_sha256": "40c9667fe38aa6705b63467ece10af1041e5467701970274a2b431361f1cc22f",
   "prime_power_trace_convention": "For q=p^r, -L*f_minus means -p^r*(alpha_{-,p}^r+beta_{-,p}^r) at the level of Frobenius-root power sums, not -p^r times a naive composite-index Fourier coefficient. Epsilon_Eis and Genuine are likewise evaluated by Tr(F_p^r,-).",
   "resource_contract": {
     "arithmetic": "exact finite integer and free-module algebra",
@@ -471,7 +481,7 @@
     },
     "runtime_web_or_database_calls": "FORBIDDEN_AND_NOT_PERFORMED",
     "source_bytes": {
-      "actual_total": 164649,
+      "actual_total": 172931,
       "maximum_each": 45000,
       "maximum_total": 180000
     },
@@ -519,6 +529,11 @@
     {
       "claim": "Hhat_12=-L*f_minus",
       "grade": "EXACT_IFF_UNDER_ALL_LISTED_PREMISES_ONLY"
+    },
+    {
+      "boundary": "not a direct central-Q_5 enumeration and not an independent audit of the arithmetic inventory",
+      "claim": "the p=3,5,7 Hhat_12 rows",
+      "grade": "EXACT_CONSEQUENCES_OF_DIRECT_RAW_T12_PLUS_THE_LOCKED_INVENTORY"
     }
   ],
   "source_manifest": [
@@ -551,30 +566,30 @@
       ]
     },
     {
-      "bytes_read": 10724,
-      "commit": "0e89f3ae989c0ef81f9f0fcfd359116d57f83f32",
-      "git_blob": "4741ef79f8dd84634680df612cdd8b1d93d3e8bf",
+      "bytes_read": 12698,
+      "commit": "4a27bc2f96d9995f5657c23624ed731150f3630c",
+      "git_blob": "9ee1d3cb82bf896e9479cf096faa0835a31a531c",
       "id": "sym12_finite_scout",
       "path": "research/l-families/atlas/function_field/genus2_sym12_finite_cusp_trace_scout.json",
-      "payload_sha256": "3572d443f7f5371771a0123b1ebcb1c08e010f02a65c3413d935216b1fcd3168",
-      "role": "finite q=3,5,7 corroboration and explicit Fricke-negative f_minus",
+      "payload_sha256": "9fdc8907f9b9c61de5d4e573b04fa6e78024b4c84117db5c4831d552e51086dc",
+      "role": "finite q=3,5,7 raw T_(12,0) replay, inventory-derived Hhat_12, and explicit Fricke-negative f_minus",
       "schema": "riemann.function_field.genus2_sym12_finite_cusp_trace_scout.v1",
-      "sha256_lf_normalized": "8827b08f86fa0bd3a77698f250f9d40aea193a39b5c80e180f9a1f3acbac6ff9",
+      "sha256_lf_normalized": "21540da03e0595b119120bf957a6ebaab136a0291525b87335c852a3c5c356b4",
       "transitive_packet_files": [
         {
-          "bytes_read": 6745,
+          "bytes_read": 8497,
           "path": "research/l-families/atlas/function_field/GENUS2_SYM12_FINITE_CUSP_TRACE_SCOUT.md",
-          "sha256_lf_normalized": "b3557ce0c6a8321fb3552306249038674530b74fa65856be988d704bd69c59e3"
+          "sha256_lf_normalized": "e9b5b299fb2cc0781f9ef4d6b29e7bba944fa2cc1cb1e3d90452edda0ad0299a"
         },
         {
-          "bytes_read": 29420,
+          "bytes_read": 32437,
           "path": "research/l-families/atlas/function_field/genus2_sym12_finite_cusp_trace_scout.py",
-          "sha256_lf_normalized": "ceeb103d6da8a334bd282c3f5bf86f68f6eae8d1b2d98723124bcfa548b4cdb2"
+          "sha256_lf_normalized": "80b41b00367d5ebad18f351f52fd7c0aeac1322060a0307cea2ec8439a29b2b8"
         },
         {
-          "bytes_read": 10313,
+          "bytes_read": 11852,
           "path": "tests/test_genus2_sym12_finite_cusp_trace_scout.py",
-          "sha256_lf_normalized": "d8a6f43bc11332702fa1fb3873926262af3a7d9b423974035e8bbfc9612b2de5"
+          "sha256_lf_normalized": "8df7e5c55546e5f196585648ab2a02fbceb7ce05aa81c63b42f692d74daf6b2d"
         }
       ]
     },

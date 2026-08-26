@@ -319,9 +319,14 @@ The exact result `G=0` makes this
 `Hhat_12=L-L*f_-`. The producer verifies the master, BFG-closed, and both
 Shmakov-branch subtractions coefficientwise.
 
-## 7. Finite corroboration only
+## 7. Finite combined-branch contradiction only
 
-The committed finite scout gives
+The committed finite scout directly replays the raw values
+`T_(12,0)(p)` from stored complete joint laws. It then applies the separately
+locked arithmetic-inventory identity to derive the displayed `Hhat_12` values.
+Thus the following table is an exact consequence of **raw `T_(12,0)` plus the
+inventory**, not an independent central-`Q_5` enumeration and not an
+independent audit of the master adapter:
 
 | `p` | `Hhat_12(p)` | `a_p(f_-)` | BFG-required `-p a_p(f_-)` | `2-4L`-required `p-p a_p(f_-)` |
 |---:|---:|---:|---:|---:|
@@ -329,12 +334,22 @@ The committed finite scout gives
 | 5 | 287,250 | -57,450 | 287,250 | 287,255 |
 | 7 | -449,624 | 64,232 | -449,624 | -449,617 |
 
-These exact rows corroborate (3) after taking Frobenius traces. With `G=0`,
-the `2-4L` branch misses them by exactly `+p` in every row. Without that
-vanishing, the Shmakov branch could formally have assigned the discrepancy to
-`Tr(F_p,G)=p`. The exact adapter removes that escape. The rows are not a
-premise of the formal reduction, do not decide the Eisenstein channel, and
-cannot prove any fourth `q` or prime-power row.
+With `G=0`, the `2-4L` branch misses the combined arithmetic branch by exactly
+`+p` in every row. The same contradiction can be written without treating
+`Hhat_12` as directly observed:
+
+\[
+ T_{(12,0)}(p)+9+p+4\tau(p)+a_p(f_{8,2})+a_p(g_{10,2})
+ +p\,a_p(f_-)=-p,
+ \qquad p=3,5,7.
+\]
+
+This raw-`T` form still uses the exact inventory coefficients, but makes the
+provenance separation explicit. Without the exact stable vanishing, the
+`2-4L` branch could formally assign the discrepancy to `Tr(F_p,G)=p`. The
+exact adapter removes that escape. The rows are not a premise of the formal
+reduction, do not independently validate the inventory, do not realize the
+Eisenstein Galois channel, and cannot prove any fourth `q` or prime-power row.
 
 ## 8. Locked repository inputs and runtime caps
 
@@ -349,11 +364,11 @@ note/producer/test manifests of:
    `557ab6465a16bb6080caa2a249c3d0935f8d36fb49bdf54898a0fe72b372496f`;
 
 2. `genus2_sym12_finite_cusp_trace_scout.json`, commit
-   `0e89f3ae989c0ef81f9f0fcfd359116d57f83f32`, git blob
-   `4741ef79f8dd84634680df612cdd8b1d93d3e8bf`, LF SHA-256
-   `8827b08f86fa0bd3a77698f250f9d40aea193a39b5c80e180f9a1f3acbac6ff9`,
+   `4a27bc2f96d9995f5657c23624ed731150f3630c`, git blob
+   `9ee1d3cb82bf896e9479cf096faa0835a31a531c`, LF SHA-256
+   `21540da03e0595b119120bf957a6ebaab136a0291525b87335c852a3c5c356b4`,
    payload SHA-256
-   `3572d443f7f5371771a0123b1ebcb1c08e010f02a65c3413d935216b1fcd3168`;
+   `9fdc8907f9b9c61de5d4e573b04fa6e78024b4c84117db5c4831d552e51086dc`;
 
 3. `genus2_sym12_marked_valuation_kernel.json`, commit
    `a0871416abb4ac58132b53dd4ae30faeed9719bd`, git blob
@@ -361,7 +376,7 @@ note/producer/test manifests of:
    `9e833cb7778c6613d0f4c7ef22a72319864c05ce41c50addc9dee778d5446076`.
 
 Including the first two transitive packet manifests, the runtime reads exactly
-nine files and 164,649 bytes. It processes eleven partitions, 35 partition rows,
+nine files and 172,931 bytes. It processes eleven partitions, 35 partition rows,
 19 removable corners, eleven endoscopic projection terms, 30 hook boxes,
 70 free-module component operations, and three finite corroboration rows.
 Those are also hard caps. Output is capped at 32,768 bytes and runtime at four

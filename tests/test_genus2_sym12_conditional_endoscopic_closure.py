@@ -57,13 +57,13 @@ class Genus2Sym12ConditionalEndoscopicClosureTests(unittest.TestCase):
                 ),
             },
             "sym12_finite_scout": {
-                "commit": "0e89f3ae989c0ef81f9f0fcfd359116d57f83f32",
-                "git_blob": "4741ef79f8dd84634680df612cdd8b1d93d3e8bf",
+                "commit": "4a27bc2f96d9995f5657c23624ed731150f3630c",
+                "git_blob": "9ee1d3cb82bf896e9479cf096faa0835a31a531c",
                 "sha256_lf_normalized": (
-                    "8827b08f86fa0bd3a77698f250f9d40aea193a39b5c80e180f9a1f3acbac6ff9"
+                    "21540da03e0595b119120bf957a6ebaab136a0291525b87335c852a3c5c356b4"
                 ),
                 "payload_sha256": (
-                    "3572d443f7f5371771a0123b1ebcb1c08e010f02a65c3413d935216b1fcd3168"
+                    "9fdc8907f9b9c61de5d4e573b04fa6e78024b4c84117db5c4831d552e51086dc"
                 ),
             },
             "sym12_marked_valuation_kernel": {
@@ -288,13 +288,22 @@ class Genus2Sym12ConditionalEndoscopicClosureTests(unittest.TestCase):
             self.assertEqual(
                 row["Shmakov_required_Genuine_trace_to_match_observed"], row["p"]
             )
+            self.assertTrue(row["Hhat_12_is_inventory_derived"])
+            self.assertEqual(
+                row["raw_T_plus_inventory_project_minus_Shmakov_target"],
+                -row["p"],
+            )
             self.assertTrue(row["BFG_match"])
             self.assertTrue(row["match"])
         self.assertEqual(
-            finite["role"], "CORROBORATION_ONLY_NOT_A_PREMISE_AND_NOT_INTERPOLATION"
+            finite["role"],
+            "EXACT_RAW_T_PLUS_INVENTORY_CONSEQUENCE_NOT_AN_INDEPENDENT_"
+            "INVENTORY_AUDIT_OR_INTERPOLATION",
         )
-        self.assertIn("do not prove", finite["firewall"])
+        self.assertIn("only T_(12,0) is replayed directly", finite["firewall"])
+        self.assertIn("not an independent audit", finite["firewall"])
         self.assertIn("misses each stored row by +p", finite["one_Tate_check"])
+        self.assertIn("E_project-E_Shmakov equals -p", finite["raw_T_check"])
 
     def test_status_firewalls_caps_and_no_runtime_external_access(self) -> None:
         self.assertEqual(
@@ -317,7 +326,7 @@ class Genus2Sym12ConditionalEndoscopicClosureTests(unittest.TestCase):
             "STABLE-SPACE CLOSURE",
             "DIMENSION FIREWALL",
             "COHOMOLOGY FIREWALL",
-            "FINITE-SCOUT FIREWALL",
+            "FINITE-SCOUT PROVENANCE FIREWALL",
             "No motivic isomorphism",
         ):
             self.assertIn(marker, text)
@@ -336,7 +345,7 @@ class Genus2Sym12ConditionalEndoscopicClosureTests(unittest.TestCase):
         for key, value in expected_actuals.items():
             self.assertEqual(resources[key]["actual"], value)
             self.assertLessEqual(resources[key]["actual"], resources[key]["maximum"])
-        self.assertEqual(resources["source_bytes"]["actual_total"], 164_649)
+        self.assertEqual(resources["source_bytes"]["actual_total"], 172_931)
         self.assertEqual(
             resources["runtime_web_or_database_calls"], "FORBIDDEN_AND_NOT_PERFORMED"
         )

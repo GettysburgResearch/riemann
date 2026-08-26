@@ -57,12 +57,15 @@ SOURCE_LOCKS: tuple[dict[str, object], ...] = (
     {
         "id": "sym12_finite_scout",
         "path": HERE / "genus2_sym12_finite_cusp_trace_scout.json",
-        "commit": "0e89f3ae989c0ef81f9f0fcfd359116d57f83f32",
-        "git_blob": "4741ef79f8dd84634680df612cdd8b1d93d3e8bf",
-        "lf_sha256": "8827b08f86fa0bd3a77698f250f9d40aea193a39b5c80e180f9a1f3acbac6ff9",
-        "payload_sha256": "3572d443f7f5371771a0123b1ebcb1c08e010f02a65c3413d935216b1fcd3168",
+        "commit": "4a27bc2f96d9995f5657c23624ed731150f3630c",
+        "git_blob": "9ee1d3cb82bf896e9479cf096faa0835a31a531c",
+        "lf_sha256": "21540da03e0595b119120bf957a6ebaab136a0291525b87335c852a3c5c356b4",
+        "payload_sha256": "9fdc8907f9b9c61de5d4e573b04fa6e78024b4c84117db5c4831d552e51086dc",
         "schema": "riemann.function_field.genus2_sym12_finite_cusp_trace_scout.v1",
-        "role": "finite q=3,5,7 corroboration and explicit Fricke-negative f_minus",
+        "role": (
+            "finite q=3,5,7 raw T_(12,0) replay, inventory-derived Hhat_12, "
+            "and explicit Fricke-negative f_minus"
+        ),
     },
 )
 
@@ -880,16 +883,26 @@ def _finite_corroboration(
     scout: Mapping[str, object], guard: ResourceGuard
 ) -> dict[str, object]:
     match = scout.get("finite_match")
+    provenance = scout.get("provenance_boundary")
     target = scout.get("explicit_weight_14_level_2_target")
     rows = scout.get("finite_rows")
     if (
         not isinstance(match, dict)
+        or not isinstance(provenance, dict)
         or not isinstance(target, dict)
         or not isinstance(rows, list)
     ):
         raise TypeError("finite scout structure changed")
-    if match.get("status") != "EXACT_THREE_PRIME_MATCH_NOT_AN_INTERPOLATION_THEOREM":
+    if (
+        match.get("status")
+        != "EXACT_THREE_PRIME_CONSEQUENCE_OF_RAW_T12_PLUS_INVENTORY_"
+        "NOT_AN_INDEPENDENT_INVENTORY_AUDIT"
+    ):
         raise ValueError("finite scout status weakened")
+    if "not an independent audit" not in str(
+        provenance.get("logical_use")
+    ) or "T_(12,0)" not in str(provenance.get("directly_replayed")):
+        raise ValueError("finite scout provenance boundary changed")
     if target.get("Fricke_sign") != -1:
         raise ValueError("finite scout f_minus sign changed")
     corroboration = []
@@ -897,27 +910,48 @@ def _finite_corroboration(
         if not isinstance(row, dict):
             raise TypeError("finite scout row is invalid")
         q = row.get("q")
+        t12 = row.get("T_(12,0)")
         hhat = row.get("Hhat_12")
         coefficient = row.get("a_p(f_-)")
+        traces = row.get("modular_traces")
         if (
             isinstance(q, bool)
             or not isinstance(q, int)
+            or isinstance(t12, bool)
+            or not isinstance(t12, int)
             or isinstance(hhat, bool)
             or not isinstance(hhat, int)
             or isinstance(coefficient, bool)
             or not isinstance(coefficient, int)
+            or not isinstance(traces, Mapping)
+            or "not a direct Q_5 average" not in str(row.get("Hhat_12_provenance"))
         ):
             raise TypeError("finite scout values are invalid")
+        delta = traces.get("Theta_Delta")
+        f8 = traces.get("Theta_(8,2)")
+        g10 = traces.get("Theta_(10,2)")
+        if any(
+            isinstance(value, bool) or not isinstance(value, int)
+            for value in (delta, f8, g10)
+        ):
+            raise TypeError("finite scout modular traces are invalid")
         guard.finite_row()
         if hhat != -q * coefficient:
             raise ArithmeticError("finite scout corroboration failed")
         alternate_required = q - q * coefficient
         if alternate_required - hhat != q:
             raise ArithmeticError("one-Tate finite shift failed")
+        raw_t_project_minus_shmakov = (
+            t12 + 9 + q + 4 * delta + f8 + g10 + q * coefficient
+        )
+        if raw_t_project_minus_shmakov != -q:
+            raise ArithmeticError("raw-T one-Tate contradiction failed")
         corroboration.append(
             {
                 "p": q,
+                "direct_T_(12,0)": t12,
                 "Hhat_12": hhat,
+                "Hhat_12_is_inventory_derived": True,
                 "a_p(f_minus)": coefficient,
                 "BFG_required_Hhat": -q * coefficient,
                 "Shmakov_2_minus_4L_required_Hhat_if_Genuine_zero": (
@@ -925,6 +959,9 @@ def _finite_corroboration(
                 ),
                 "Shmakov_required_minus_observed": q,
                 "Shmakov_required_Genuine_trace_to_match_observed": q,
+                "raw_T_plus_inventory_project_minus_Shmakov_target": (
+                    raw_t_project_minus_shmakov
+                ),
                 "BFG_match": True,
                 "match": True,
             }
@@ -933,15 +970,24 @@ def _finite_corroboration(
         raise ValueError("finite scout support changed")
     return {
         "rows": corroboration,
-        "role": "CORROBORATION_ONLY_NOT_A_PREMISE_AND_NOT_INTERPOLATION",
+        "role": (
+            "EXACT_RAW_T_PLUS_INVENTORY_CONSEQUENCE_NOT_AN_INDEPENDENT_"
+            "INVENTORY_AUDIT_OR_INTERPOLATION"
+        ),
         "firewall": (
-            "three primes do not prove an all-q or prime-power identity and do not "
-            "resolve the nonregular Eisenstein or stable-space premises"
+            "only T_(12,0) is replayed directly; Hhat_12 is inventory-derived, so "
+            "the three primes test the combined arithmetic branch, are not an "
+            "independent audit of the inventory, do not prove an all-q or prime-power "
+            "identity, and do not realize the nonregular Eisenstein Galois class"
         ),
         "one_Tate_check": (
             "with Genuine=0, the 2-4*L branch requires Hhat_12=L-L*f_minus and "
             "therefore misses each stored row by +p; without that vanishing, the "
             "same rows instead require Tr(F_p,Genuine)=p"
+        ),
+        "raw_T_check": (
+            "after substituting the inventory conversion but without treating Hhat_12 "
+            "as direct data, E_project-E_Shmakov equals -p at p=3,5,7"
         ),
     }
 
@@ -1161,6 +1207,14 @@ def build_fixture() -> dict[str, object]:
                 "claim": "Hhat_12=-L*f_minus",
                 "grade": "EXACT_IFF_UNDER_ALL_LISTED_PREMISES_ONLY",
             },
+            {
+                "claim": "the p=3,5,7 Hhat_12 rows",
+                "grade": "EXACT_CONSEQUENCES_OF_DIRECT_RAW_T12_PLUS_THE_LOCKED_INVENTORY",
+                "boundary": (
+                    "not a direct central-Q_5 enumeration and not an independent "
+                    "audit of the arithmetic inventory"
+                ),
+            },
         ],
         "literature_ledger": [
             {
@@ -1218,7 +1272,7 @@ def build_fixture() -> dict[str, object]:
             "STABLE-SPACE CLOSURE: the locked corrected two-orientation valuation kernel proves the full marked modular space zero, and the form-attached stable adapter therefore gives Genuine=0 without the conditional k=3 isotypical rows.",
             "DIMENSION FIREWALL: the full-level dimension 30 alone does not imply absence of S5 invariants; the conclusion instead uses the exact marked rank-66/nullity-zero kernel.",
             "COHOMOLOGY FIREWALL: Genuine is the positive semisimplified stable/general form-attached channel, not an arbitrary residual Euler class; boundary, Eisenstein, endoscopic, and nonsemisimple extension data cannot be absorbed into it.",
-            "FINITE-SCOUT FIREWALL: p=3,5,7 corroborate Hhat_12(p)=-p*a_p(f_minus) but do not prove any fourth q or prime-power row.",
+            "FINITE-SCOUT PROVENANCE FIREWALL: p=3,5,7 directly replay T_(12,0); Hhat_12 is then derived with the separately locked arithmetic inventory. The rows give an exact -p raw-T residual against the Shmakov branch, but they are not an independent audit of the inventory and do not prove any fourth q or prime-power row.",
             "No motivic isomorphism, compatible system, novelty, RH, GRH, number-field transfer, or global Euler-product claim is made.",
             "The producer performs no runtime web/database call and no field, polynomial, curve, or family enumeration.",
         ],
