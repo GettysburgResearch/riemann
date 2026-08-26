@@ -383,7 +383,7 @@ def build_payload() -> dict[str, object]:
                 "n_even": "D_even=-4*(1+log(2))",
                 "n_odd": "D_odd=-(4/3)*(1+log(2))",
                 "cutoff_offset": "Writing eta=L-M/4 gives eta=5/4 for even n and eta=3/4 for odd n.",
-                "proof": "The two-factor harmonic sum has M^-2 coefficient B_eta=(8-16*eta)/3. On the aligned three-factor triangle, the inclusive half-boundary term is 16*log(2), while moving its three edges by eta/M contributes -32*eta*log(2); after the factor 1/(6*M), its M^-2 coefficient is B_eta*log(2). Thus D_eps=B_eta*(1+log(2)); Euler--Maclaurin leaves O(M^-3), and the irreducible-count/repetition error is exponentially small.",
+                "proof": "The two-factor harmonic sum has M^-2 coefficient B_eta=(8-16*eta)/3. Put alpha_M=L/M. Euler--Maclaurin is applied on the actual lattice-aligned triangle D_(alpha_M): its half-boundary coefficient tends to 16*log(2), while expanding the interior integral from alpha_0=1/4 to alpha_M=1/4+eta/M contributes -32*eta*log(2)/M. Boundary variation and corners are O(M^-2) before the outer factor 1/(6*M). Thus the three-factor M^-2 coefficient is B_eta*log(2), D_eps=B_eta*(1+log(2)), the remaining Euler--Maclaurin term is O(M^-3), and the irreducible-count/repetition error is exponentially small.",
                 "finite_row_residual_controls_noncanonical": {
                     "definition": "R_(q,n)=M^2*(Z_(q,n)/q^M-C0/M), evaluated from exact stored Z and the displayed decimal C0; values are rounded and are controls, not proof",
                     "n_79_odd": {

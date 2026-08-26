@@ -347,11 +347,30 @@ For the three-factor sum, scale `a,b,c` by `M` and put
 \tag{29}
 \]
 
-On the aligned triangle `x,y,1-x-y>=1/4`, each of the three
-lattice-coordinate edge integrals is `(32/3)*log(2)`. The inclusive
-trapezoidal half-boundary term is therefore `16*log(2)/M`. Moving all three
-edges from `1/4` to `1/4+eta/M` changes the integral by
-`-32*eta*log(2)/M`. After the outer factor `1/(6M)`,
+Put `alpha_M=L/M` and
+
+\[
+ D_\alpha=\{(x,y):x,y,1-x-y\ge\alpha\},\qquad
+ R_M={1\over M^2}\sum_{D_{\alpha_M}\cap M^{-1}\mathbf Z^2}f(x,y).
+\tag{29a}
+\]
+
+The actual triangle `D_(alpha_M)` is lattice-aligned. The inclusive
+two-dimensional trapezoidal formula therefore gives
+
+\[
+ R_M=F(\alpha_M)+{1\over2M}
+ \sum_{E\subset\partial D_{\alpha_M}}\int_E^{\rm lat}f+O(M^{-2}),
+ \qquad F(\alpha)=\iint_{D_\alpha}f.
+\tag{29b}
+\]
+
+At the limiting cutoff `alpha_0=1/4`, each of the three lattice-coordinate
+edge integrals is `(32/3)*log(2)`, so the half-boundary coefficient is
+`16*log(2)`. Boundary variation contributes only `O(M^-2)` to `R_M`.
+Moreover `F'(1/4)=-32*log(2)`, because increasing the cutoff moves all three
+edges inward. Since `alpha_M=1/4+eta/M`, expanding (29b) and then restoring
+the outer factor `1/(6M)` gives
 
 \[
  {1\over6}\sum_{\substack{a+b+c=M\\a,b,c\ge L}}{1\over abc}

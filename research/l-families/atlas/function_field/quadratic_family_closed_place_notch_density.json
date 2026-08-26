@@ -813,11 +813,11 @@
     ]
   },
   "packet_files_lf_sha256": {
-    "note": "ecd532d604a97d702685f9df9d44ba19c7e655dfeba5e76b16d97a0e2fc3039b",
-    "producer": "78216eb1c4b86d64724728032191602cba677e2f84e676c613bfb800aaf2e4dc",
+    "note": "f4cc0860c904dddeea5f76404846290dabf2b922ae593a064dd58a0f8f746040",
+    "producer": "758acd3e9e14f3f515fbd2cfc47c32cc6efbf415335809122edaf585935c19cd",
     "test": "a8ca6480584a517e56e84b88a97b3c61768f967d2870433866f03881873887be"
   },
-  "payload_sha256": "8e5a8dfe360c1add2f91a1d3a1e1367fa2c914ce0ba699f2d505ffbf5cb63e14",
+  "payload_sha256": "f4a323840b9667d6a3ef0aa2eb9eb9522f7e280edb5f9ebac3d37d56e57c8eff",
   "resource_contract": {
     "curve_enumeration": false,
     "dp_transitions": 1220169,
@@ -906,7 +906,7 @@
       },
       "n_even": "D_even=-4*(1+log(2))",
       "n_odd": "D_odd=-(4/3)*(1+log(2))",
-      "proof": "The two-factor harmonic sum has M^-2 coefficient B_eta=(8-16*eta)/3. On the aligned three-factor triangle, the inclusive half-boundary term is 16*log(2), while moving its three edges by eta/M contributes -32*eta*log(2); after the factor 1/(6*M), its M^-2 coefficient is B_eta*log(2). Thus D_eps=B_eta*(1+log(2)); Euler--Maclaurin leaves O(M^-3), and the irreducible-count/repetition error is exponentially small.",
+      "proof": "The two-factor harmonic sum has M^-2 coefficient B_eta=(8-16*eta)/3. Put alpha_M=L/M. Euler--Maclaurin is applied on the actual lattice-aligned triangle D_(alpha_M): its half-boundary coefficient tends to 16*log(2), while expanding the interior integral from alpha_0=1/4 to alpha_M=1/4+eta/M contributes -32*eta*log(2)/M. Boundary variation and corners are O(M^-2) before the outer factor 1/(6*M). Thus the three-factor M^-2 coefficient is B_eta*log(2), D_eps=B_eta*(1+log(2)), the remaining Euler--Maclaurin term is O(M^-3), and the irreducible-count/repetition error is exponentially small.",
       "theorem": "Z_(q,n)/q^M=C0/M+D_eps/M^2+O_q(M^-3), and delta_(q,n)=C0/((1-q^-1)*M)+D_eps/((1-q^-1)*M^2)+O_q(M^-3)"
     },
     "literature_boundary": "The general rough-polynomial Buchstab law is standard; see Panario--Richmond, Analysis of Ben-Or's polynomial irreducibility test, Random Structures & Algorithms 13 (1998), 439--456, DOI 10.1002/(SICI)1098-2418(199810/12)13:3/4<439::AID-RSA13>3.0.CO;2-U.",
