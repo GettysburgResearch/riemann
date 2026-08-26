@@ -61,7 +61,8 @@ Read, in order:
 4. [correlated-mask amplifier](function_field/FFPS_CORRELATED_MASK_AMPLIFIER.md);
 5. [checkerboard source bridge](function_field/FFPS_CHECKERBOARD_SOURCE_BRIDGE.md);
 6. [cyclic-character masks](function_field/FFPS_CYCLIC_CHARACTER_MASKS.md);
-7. [cyclic source-realization and Wick gate](function_field/FFPS_CYCLIC_SOURCE_REALIZATION_GATE.md).
+7. [cyclic source-realization and Wick gate](function_field/FFPS_CYCLIC_SOURCE_REALIZATION_GATE.md);
+8. [cyclic closure budget](function_field/FFPS_CYCLIC_CLOSURE_BUDGET.md).
 
 The shortest correct summary is:
 
@@ -79,6 +80,10 @@ The shortest correct summary is:
 - an exact centered identity removes the literal atoms and names the rotated
   conditioned currents and double-nonprincipal Kummer modes that a global
   proof would have to estimate;
+- the declared additive/Kummer gates control exactly the coefficient plane
+  `w=u+v` in `(C,S,R)` coordinates, hence the whole principal trace but
+  neither cyclic constituent; the one-sided `CYSEL` upper bound is the
+  smallest additional cyclic gate;
 - converting that hard restriction into a varying-owner global moment and an
   individual principal-member theorem remains open.
 
@@ -102,9 +107,12 @@ Read, in order:
 4. the [ambient symmetric-power ladder](function_field/GENUS2_AMBIENT_SYMMETRIC_POWER_LADDER.md);
 5. the [inverse cusp filters](function_field/GENUS2_INVERSE_CUSP_TRACE_FILTERS.md)
    and [mixed cohomology filter](function_field/GENUS2_MIXED_COHOMOLOGY_FILTER.md);
-6. the [`Sym^10` rare-event law](function_field/GENUS2_SYM10_RARE_EVENT_TOMOGRAPHY.md)
+6. the [`Sym^12` one-scalar arithmetic inventory](function_field/GENUS2_SYM12_ARITHMETIC_INVENTORY.md),
+   [finite cusp-trace scout](function_field/GENUS2_SYM12_FINITE_CUSP_TRACE_SCOUT.md),
+   and [conditional endoscopic closure](function_field/GENUS2_SYM12_CONDITIONAL_ENDOSCOPIC_CLOSURE.md);
+7. the [`Sym^10` rare-event law](function_field/GENUS2_SYM10_RARE_EVENT_TOMOGRAPHY.md)
    and [scalar endpoint realization](function_field/GENUS2_SYM10_SCALAR_ENDPOINT_REALIZATION.md);
-7. the [all-rank scalar-endpoint phase diagram](function_field/GENUS2_SCALAR_ENDPOINT_SYMMETRIC_POWER_PHASE_DIAGRAM.md).
+8. the [all-rank scalar-endpoint phase diagram](function_field/GENUS2_SCALAR_ENDPOINT_SYMMETRIC_POWER_PHASE_DIAGRAM.md).
 
 The exact all-odd-prime-power trace ladder is the main object. It separates
 Tate, elliptic level-two, and level-one cusp channels and supplies exact
@@ -114,6 +122,26 @@ contribution. The all-rank continuation proves the exact crossover surface
 `m log binom(r+3,3) = 3 log q + log 5` for that constructed subtotal and a
 full-family fixed-`(q,r)` spectral-radius limit, without claiming an
 asymptotic for the remaining family.
+
+The ladder no longer ends with an undifferentiated “new input needed” at
+`Sym^12`. All lower Euler rows and inherited cusp channels reduce exactly to
+one family-specific scalar in the locked method: the normalized
+Mobius-weighted aggregate `Hhat_12` of standard central completed
+coefficients. Exact finite rows at `p=3,5,7` isolate the Fricke-negative
+weight-fourteen level-two newform. The literature comparison sharpens this
+to the exact defect identity
+
+`Hhat_12 = -L*f_- + Epsilon_Eis - Genuine`,
+
+where `Epsilon_Eis=e_Eis^(S5)-(2-5L)` and `Genuine` is the positive
+stable/general `S5`-invariant channel whose compact-support Euler
+contribution is `-Genuine`. The desired all-`q` closure still requires both
+the conjectural nonregular Eisenstein continuation `Epsilon_Eis=0` and the
+conditionally predicted stable vanishing `Genuine=0`. Shmakov's printed
+formula instead gives `Epsilon_Eis=L`, an unresolved one-Tate discrepancy;
+the finite rows do not decide it without the stable vanishing. For `q=p^r`,
+`-L*f_-` means `-p^r(alpha_{-,p}^r+beta_{-,p}^r)`, not `-q` times a naive
+composite-index Fourier coefficient.
 
 This route is the best candidate for independent verification and a focused
 paper. It is not currently a direct RH route.
@@ -128,15 +156,38 @@ Read:
    their [arithmetic pushforward](function_field/GENUS2_INTERFEROMETRY_ARITHMETIC_PUSHFORWARD.md),
    and the [held-out inverse-design failure](function_field/GENUS2_INVERSE_DESIGNED_SPLIT_FILTER.md);
 3. [detector renormalization flow](function_field/EULER_DETECTOR_RENORMALIZATION_FLOW.md);
-4. [guarded cohomology inference](function_field/GUARDED_COHOMOLOGY_CONJECTURE_INFERENCE.md)
+4. its exact arithmetic
+   [two-place cumulant defect](function_field/QUADRATIC_FAMILY_TWO_PLACE_CUMULANT_DEFECT.md)
+   and [three-place elliptic interference](function_field/QUADRATIC_FAMILY_THREE_PLACE_ELLIPTIC_INTERFERENCE.md),
+   followed by the unifying
+   [multi-place `L`-function identity](function_field/QUADRATIC_FAMILY_MULTIPLACE_L_FUNCTION_IDENTITY.md);
+5. [guarded cohomology inference](function_field/GUARDED_COHOMOLOGY_CONJECTURE_INFERENCE.md)
    followed by the exact [same-characteristic spectroscopy](function_field/GENUS2_EXACT_FROBENIUS_TOWER_SPECTROSCOPY.md);
-5. the [high-rank Haar boundary-layer tomography](function_field/HIGH_RANK_HAAR_BOUNDARY_LAYER_TOMOGRAPHY.md).
+6. the [high-rank Haar boundary-layer tomography](function_field/HIGH_RANK_HAAR_BOUNDARY_LAYER_TOMOGRAPHY.md).
 
 These packets show both sides of inverse design. Exact character algebra can
 remove declared nuisance channels and isolate a named residual, but a filter
 optimized on `q=3,5` can reverse on untouched `q=7`. Likewise, three fields
 cannot name a Frobenius spectrum, whereas an all-`q` theorem supplies genuine
-same-characteristic towers and exact minimal recurrences.
+same-characteristic towers and exact minimal recurrences. At three rational
+places, the first genuinely geometric interaction is already exact: its raw
+triple correlation is `3(q-2)t`, where `t` is the Frobenius trace of the
+oriented elliptic curve attached to the three places. Thus Frobenius
+interferometry has become an arithmetic theorem rather than only a
+compact-group selector. The multi-place packet then proves the all-degree
+generating identity behind these correlations and, in degree five, continues
+the ladder through four-place elliptic and five-place genus-two traces. The
+five-place coefficient forgets the genus-two middle coefficient exactly; it
+does not forget the geometry, because the trace remains. Its connected
+cumulants retain the same hierarchy: the fourth has a universal `q^-3`
+background plus an elliptic correction, while the fifth has genus-two upper
+envelope `q^-5/2` and a smaller correction from ten separately labelled
+elliptic triples. Across orders two through five the exact/Hasse scales are
+`q^-4`, `q^-7/2`, `q^-3`, and `q^-5/2`. This full connected sequence climbs
+by a half power: a universal four-place background intervenes before the
+genus-two five-place envelope. The trace-dependent `q^-7/2` and `q^-5/2`
+entries are upper envelopes, not typical-value theorems. Those ten traces do
+not collapse to the five-place trace.
 
 ### Extended packet index
 
@@ -178,6 +229,8 @@ release audit.
 - **PROVED:** an exact symbolic theorem with declared quantifiers and replay.
 - **PROVED FROM LOCKED SOURCES:** an exact consequence whose dependencies are
   hash-locked branch theorems or source files.
+- **EXACT CONDITIONAL REDUCTION:** exact algebra that names the unresolved
+  imported premises; it is not a theorem asserting those premises.
 - **EXACT FINITE:** exhaustive only on the displayed finite support.
 - **FORMAL MODEL:** exact inside a declared abstraction, with no automatic
   Euler-product or arithmetic-family promotion.
@@ -201,6 +254,9 @@ Python replays are mandatory because assertions may not carry correctness.
 | **PROVED** | all nuisance-free filters on `r2,r4,r6,r8` form `m(1,-1,-1,1)+k(0,-4,3,0)` and have mean `-m Theta_(8,2)` | inverse design becomes a complete lattice theorem; sparse and minimum-Haar-variance filters are explicit |
 | **PROVED** | all filters on `r4,r6,r8,r10` cancelling `q`, constants, and `Theta_(8,2)` form `m(1,-1,-1,1)+k(4,-3,0,0)` and leave `m((q-1)Theta_Delta-Theta_(10,2))` | isolates a mixed level-one/level-two cusp residual and supplies exact order-six prime-power recurrences |
 | **PROVED** | the one-step quintic reciprocal descent closes through `Sym^10` and necessarily becomes self-referential from `Sym^12` onward | identifies a real proof-method boundary rather than extrapolating the ladder |
+| **PROVED FROM LOCKED SOURCES** | `T_(12,0)=Hhat_12-2q-9-4 Theta_Delta-Theta_(8,2)-Theta_(10,2)`, while the ambient trace is `Hhat_12+2-5q-q Theta_(14,Gamma0(2))` | `Q_5=A_f^*(5)` is standard; its normalized Mobius-weighted degree-twelve aggregate `Hhat_12` is the sole remaining family-specific scalar in the locked method and is not evaluated here |
+| **EXACT FINITE** | at `p=3,5,7`, `Hhat_12(p)=-p a_p(f_-)` for the Fricke-negative weight-fourteen level-two newform | a source-locked three-prime identification, not interpolation or an all-prime theorem |
+| **EXACT CONDITIONAL REDUCTION** | `Hhat_12=-L*f_-+Epsilon_Eis-Genuine`; Rösner's theorem gives the endoscopic channel, and the exact project ambient identity supplies the reduction; BFG's formal nonregular branch plus predicted stable vanishing gives `Hhat_12=-L*f_-`, while Shmakov's printed branch gives `Epsilon_Eis=L` | a one-Tate Eisenstein discrepancy and the conditional `k=3` stable-space vanishing remain; finite rows force `Tr(F_p,Genuine)=p` under the Shmakov branch rather than contradicting it alone |
 | **PROVED + EXACT FINITE** | the exact `Sym^10` law over `q=3,5,7` has both signs, tied-tail contributions, and named local repeated/split factor predicates | high moments require member-level rare-event accounting; those predicates are not endomorphism or endoscopy theorems |
 | **PROVED** | `D=T^5+1` over `F_3` has Frobenius polynomial `X^4+9`; over `q=3^(4k)` its twists give two constructed scalar-endpoint orbits, each of density `1/(10q^3)` | total endpoint densities are at least these values; the two-orbit union contributes exactly `286^m/(5q^3)` to the normalized `m`th moment |
 | **PROVED** | for every rank `r` and moment `m`, the same two orbits contribute `binom(r+3,3)^m/(5q^3)` in absolute value, with signed cancellation exactly when `rm` is odd | the constructed subtotal has an exact `(q,r,m)` critical surface; the full absolute moment has `m`th-root limit `binom(r+3,3)` at fixed `q,r` |
@@ -217,6 +273,7 @@ Python replays are mandatory because assertions may not carry correctness.
 | **PROVED FORMAL FAMILY** | checkerboard and cyclic-character masks have closed exact leverages; at fixed tensor depth their optimal density tends to `2^(d-1)/(2^d-1)` | a constructive restricted-Gram optimizer exists, but a varying-owner/conductor amplifier must still be proved |
 | **PROVED SOURCE FIREWALL** | the raw core Legendre checker is not invariant under `P*c^2`; a quartic-character gauge repairs it inside a fixed owner quadratic sector | the soft mode is already a double-nonprincipal Kummer channel, while hard support restriction and global re-inversion remain unproved |
 | **PROVED SOURCE FIREWALL** | every exact-order-`k` fixed-sector mask has a physical `2k`-root orientation, yet every leverage-improving cyclic hard mask has a strictly positive Wick residual | the all-`k` centered projector identity, not the uncentered hard inequality, is the next source-faithful analytic coordinate |
+| **PROVED CONDITIONAL CLOSURE + NO-GO** | with cyclic coordinates `(C,S,R)`, the live measurements are `A=C+R`, `K=S+R`, and `P=A-K=C-S`; a target `uC+vS+wR` is controlled by scalar WCADD/WCKUM budgets exactly when `w=u+v` | the whole principal trace closes if the two still-open live estimates hold, while neither cyclic constituent does; the one-sided selected-mode upper bound `CYSEL` is the smallest extra cyclic inequality |
 
 ### Detector design, phases, and moonshots
 
@@ -227,6 +284,9 @@ Python replays are mandatory because assertions may not carry correctness.
 | **PROVED COMPACT-HAAR** | exact interferometers select block `SU(2)xSU(2)`, doubled `SU(2)`, and `Sym^3(SU(2))`; two infinite root-resonance ladders continue the `Sym^3` selector | these are Haar-projection selectors, not pointwise subgroup or motive certificates |
 | **EXACT FINITE** | the unique `q=3,5` maximin split filter reverses on held-out `q=7`; rank-stable nulling does not repair it | inverse-designed arithmetic filters require transport theorems, not attractive training histograms |
 | **PROVED / FORMAL MODEL** | variance-normalized independent aggregation closes on cumulant jets with eigenvalues `2^(2-j)` | mixed-prime cumulant defects are the missing data; the model does not assert independent Euler factors |
+| **PROVED** | for every odd prime power, two rational-place quadratic Euler coefficients in the squarefree-quintic family have a complete `3 x 3` joint law and mixed cumulant defects `Delta_2,...,Delta_6`; every allowed nonzero channel first appears at scale `q^-4` | the renormalization moonshot's first missing arithmetic residual is now an exact theorem; it is fixed-degree family coupling, not an independent-prime model or zero theorem |
+| **PROVED** | for three distinct rational places, `sum_D chi(D(a)D(b)D(c))=3(q-2)t`, with `t` the Frobenius trace of `y^2=(a-z)(b-z)(c-z)`; the exact third-cumulant interaction splits into an elementary pair channel and this elliptic channel | the interferometry moonshot now detects a genuine geometric trace; for `q=3 mod 4` the pair channel vanishes, but the result is still a family correlation rather than a motive or zero theorem |
+| **PROVED** | for every odd prime power and set of distinct rational places, the squarefree sums in every polynomial degree obey `sum_n sum_(D in H_n) psi_A(D)u^n=L(u,psi_A)(1-qu^2)/(1-u^2)^m`; at degree five the `m=1,...,5` correlations are `0`, `2q-3`, `3(q-2)t`, `q^2-10+(4q-10)t`, and `(q^2-15)t`, with exact connected cumulants through five places | the standard squarefree Euler quotient becomes a source-exact evaluation-character/curve adapter and a geometric interaction ladder; for odd `m` the monic model is `-f_A`, a nontrivial quadratic twist exactly when `-1` is nonsquare, while the even-place infinity factor is also binding; neither the genus-two middle-coefficient cancellation nor the ten complementary elliptic traces may be promoted to a local-factor or motive identity |
 | **EXACT FINITE + REFUSAL** | three-field data retain the ambiguity module `(q-3)(q-5)(q-7)Q(q)` | the inference engine refuses to name a cohomology or eigenform packet without a tower and geometric adapter |
 | **PROVED** | the high-rank `SU(2)` character law has an exact cubic tail; its limiting variance exists but absolute moments of order at least three diverge, while finite-rank `2k` moments grow like `n^(2k-3)` | weak limits, rank limits, and high moments do not commute because of a thin endpoint layer |
 | **PROVED** | that endpoint layer has a uniform mesoscopic tail constant `16/(9 pi^2)`, an exact fixed-`lambda` crossover profile, and hard-truncated, Winsorized, and cubic-moment coefficients | rare-event tomography now resolves the rank-scale boundary rather than merely detecting moment divergence |
@@ -250,6 +310,14 @@ Python replays are mandatory because assertions may not carry correctness.
    ring for exact nuisance cancellation and a named surviving arithmetic
    channel, then demand a held-out transport theorem before interpreting the
    filter geometrically.
+5. **Sharpest new reconciliation target:** decide whether the nonregular
+   Eisenstein coefficient is `2-5L` or the printed `2-4L`, and independently
+   determine the stable `S5`-invariant at weight `(12,3)`. The exact defect
+   identity prevents these two questions from being conflated.
+6. **Most surprising moonshot conversion:** exact connected correlations at
+   two through five marked places have successive exact/Hasse scales `q^-4`,
+   `q^-7/2`, `q^-3`, and `q^-5/2`: the four-place leader is universal,
+   while the trace envelopes progress from elliptic to genus two.
 
 ## Strongest negative information
 
@@ -264,6 +332,9 @@ Python replays are mandatory because assertions may not carry correctness.
 - A finite character truncation is not multiplicatively closed, and complete
   one-place marginals do not determine mixed-prime aggregation.
 - Three different characteristics do not constitute a Frobenius tower.
+- Three exact `Sym^12` prime rows do not separate an Eisenstein defect from a
+  stable/general trace; under the printed one-Tate shift they can be absorbed
+  by `Tr(F_p,Genuine)=p`.
 - Compact-group selectors do not classify endomorphism or zero strata
   memberwise.
 - A scalar trace collision is not equality of local factors, and a local
@@ -291,6 +362,34 @@ are presented through bounded point counts and conjectural identifications.
 That makes the packets serious paper candidates, but it does not establish
 external novelty without expert review.
 
+For `Sym^12`, Rudnick's standard notation identifies `Q_5(f)` with the
+central coefficient `A_f^*(5)` of the completed even quadratic
+`L`-polynomial. The potentially distinctive object is therefore not the
+middle coefficient itself, but its project-defined Mobius-weighted
+degree-twelve aggregate and the exact affine reductions in which it is the
+only unresolved family scalar. Those reductions were not found printed in
+the audited primary sources; global novelty remains uncertified.
+
+The follow-up source audit separates three further facts.
+[Rösner's Theorem 5.13](https://sites.math.unt.edu/~schmidt/dimension_formulas/papers/2016_Dissertation_Roesner_final.pdf)
+and [Shmakov's inner-cohomology calculation](https://openscholar.uga.edu/nanna/record/1979/files/dissertation.pdf)
+support the
+Fricke-negative endoscopic channel at nonregular weight. BFG's value
+`2-5L` is nevertheless an explicitly expected nonregular Eisenstein
+continuation, while Shmakov's later printed pieces total `2-4L`; the missing
+copy is `[5,1] tensor L`.
+[Bergström--Cléry's](https://arxiv.org/abs/2309.04388) `k=3` extension is
+conditional on the BFG continuation; combining that extension with the
+[official `(12,3)` table](https://smf.compositio.nl/api/Entries/2/2?j=12&k=3&l=0)
+predicts the stable `S5`-invariant vanishing. The 2026 covariant construction
+of [Cléry--van der Geer](https://arxiv.org/abs/2605.13300) confirms
+`A_2[w]=A_2[2]/S5` but does not compute this `(12,3)` invariant. Their
+[2018 coefficient tables, pp. 1139--1140](https://ems.press/content/serial-article-files/26421)
+separately identify the finite scout's Fricke-negative target
+`f_-(Q)=Q+64Q^2+1236Q^3+...`. The branch therefore records a one-Tate
+reconciliation gate, not an accusation of error or a closed cohomology
+theorem.
+
 Likewise, Howe already records the exceptional curve `y^2=x^5+1`, its
 `x^4+9` Weil polynomial, and scalar supersingular endpoint possibilities.
 The endpoint packet's distinct content is the elementary reconstruction,
@@ -305,17 +404,21 @@ pending a dedicated specialist search.
 
 ## Open theorem gates
 
-1. Prove a varying-owner/conductor estimate for the all-`k` centered cyclic
-   projector identity, or prove that its rotated conditioned currents cannot
-   be recombined within the live FFPS source discipline.
+1. Prove `CYSEL`, the one-sided varying-owner/conductor upper bound for the
+   selected cyclic Kummer modes, or prove that this channel cannot be
+   recombined within the live FFPS source discipline. Together with the open
+   WCADD/WCKUM gates this is the exact cyclic closure frontier.
 2. Combine a global mixed-prime contraction theorem with a genuine
    individualization mechanism—positive domination, amplification, Fourier
    inversion with affordable loss, or rigidity of exceptional members.
 3. Obtain an independent arithmetic-geometry verification of the marked and
    ambient genus-two ladder and identify precisely which alternating
    cohomology pieces realize its Tate and cusp spectra.
-4. Go beyond `Sym^10` using a new arithmetic inventory rather than the now
-   self-referential one-step reciprocal descent.
+4. Resolve the `Sym^12` defect identity by independently determining both
+   `Epsilon_Eis` and the stable `S5`-invariant `Genuine`. A second descent for
+   `Hhat_12`, a direct covariant computation at `(12,3)`, or a corrected
+   compact-support trace theorem would each provide a non-circular test of
+   the one-Tate gate.
 5. Prove an all-`q` geometric classification of the rare members dominating
    high symmetric-power moments; the present exact scalar stratum is one
    explicit component, not a full tomography theorem.
@@ -327,23 +430,40 @@ pending a dedicated specialist search.
 8. Build a bounded `(q,g,r)` phase diagram using characteristic functions,
    trimmed moments, tail counts, and named special strata rather than raw
    moments alone.
+9. Continue the exact multi-place connected hierarchy beyond five marks and
+   determine whether its trace-dependent Hasse envelopes are sharp on
+   generic, endoscopic, or exceptional configuration strata. The general
+   generating identity is proved; the higher connected geometric
+   decomposition is not.
 
 ## Replay and resource contract
 
-Each packet has a prose note, canonical JSON payload, exact producer, and
-focused test. From the repository root the common replay pattern is:
+Each packet has a prose note, an exact producer, and a focused test; stored
+payload packets also carry canonical JSON. From the repository root the
+common stored-payload replay pattern is:
 
 ```text
 python -B research/l-families/atlas/function_field/<producer>.py --check
 python -O -B research/l-families/atlas/function_field/<producer>.py --check
-python -m unittest tests.test_<producer> -v
-python -O -m unittest tests.test_<producer> -v
+python -m pytest -q tests/test_<producer>.py
+python -O -m pytest -q tests/test_<producer>.py
 ```
 
-Use the exact command printed in a packet when its CLI also accepts an
-explicit payload path. The release audit runs all focused tests together in
-ordinary and optimized Python, recomputes payload hashes, checks source blobs,
-runs Ruff, and finishes with `git diff --check`.
+Use the exact producer command printed in a packet when it emits to stdout or
+accepts an explicit payload path. The focused test command must still be the
+printed `pytest` invocation; a zero-test `unittest` exit is not a replay. The
+release audit runs all focused tests together in ordinary and optimized
+Python, recomputes payload hashes, checks source blobs, runs Ruff, and
+finishes with `git diff --check`.
+
+The final bounded checkpoint covers 58 producer/test pairs and 55 stored
+JSON companions. All 621 focused tests pass in ordinary and optimized
+Python. All 58 producers replay in both modes: 55 use the common `--check`
+form, while the renormalization-flow, guarded-inference, and genus-one phase
+diagram packets use their printed alternate CLIs. Ruff and formatting pass
+on the 111 non-frozen Python files. Five provenance-frozen files retain ten
+pre-existing Ruff findings and are listed in the release audit rather than
+silently rewritten.
 
 Resource limits are part of the claim:
 
