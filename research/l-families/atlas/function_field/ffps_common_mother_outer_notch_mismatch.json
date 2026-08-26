@@ -1,0 +1,199 @@
+{
+  "anti_causal_inverse": {
+    "compact_support_series": "f=-sum_(j>=1) 2^(-j/2)*S_2^(-j)g for g=Qf",
+    "global_l1_norm": "1+sqrt(2)",
+    "native_prefix_firewall": "uses future/global values; terminal-source/horizon compatibility is not proved",
+    "panels": [
+      {
+        "coefficient_magnitude": "1/2*sqrt(2)",
+        "coefficient_squared": "1/2",
+        "future_depth": 1,
+        "positive_l1_mass_through_depth": "1/2*sqrt(2)"
+      },
+      {
+        "coefficient_magnitude": "1/2",
+        "coefficient_squared": "1/4",
+        "future_depth": 2,
+        "positive_l1_mass_through_depth": "1/2+1/2*sqrt(2)"
+      },
+      {
+        "coefficient_magnitude": "1/4",
+        "coefficient_squared": "1/16",
+        "future_depth": 4,
+        "positive_l1_mass_through_depth": "3/4+3/4*sqrt(2)"
+      },
+      {
+        "coefficient_magnitude": "1/16",
+        "coefficient_squared": "1/256",
+        "future_depth": 8,
+        "positive_l1_mass_through_depth": "15/16+15/16*sqrt(2)"
+      },
+      {
+        "coefficient_magnitude": "1/256",
+        "coefficient_squared": "1/65536",
+        "future_depth": 16,
+        "positive_l1_mass_through_depth": "255/256+255/256*sqrt(2)"
+      }
+    ],
+    "zero_mass_one_sided_transfer": "for compact zero-total-mass currents, global negative mass transfers at factor at most 1+sqrt(2)"
+  },
+  "causal_inverse": {
+    "formal_series": "Q^(-1)=sum_(k>=0) (sqrt(2)*S_2)^k",
+    "loss_at_scale_2^k": "(sqrt(2))^k=(2^k)^(1/2)",
+    "one_sided_transfer": "positive causal inverse exists, but its horizon norm has square-root power growth",
+    "panels": [
+      {
+        "coefficient": "1",
+        "coefficient_squared": "1",
+        "dyadic_depth": 0,
+        "physical_scale": "1",
+        "positive_l1_mass_through_depth": "1"
+      },
+      {
+        "coefficient": "sqrt(2)",
+        "coefficient_squared": "2",
+        "dyadic_depth": 1,
+        "physical_scale": "2",
+        "positive_l1_mass_through_depth": "1+sqrt(2)"
+      },
+      {
+        "coefficient": "2",
+        "coefficient_squared": "4",
+        "dyadic_depth": 2,
+        "physical_scale": "4",
+        "positive_l1_mass_through_depth": "3+sqrt(2)"
+      },
+      {
+        "coefficient": "4",
+        "coefficient_squared": "16",
+        "dyadic_depth": 4,
+        "physical_scale": "16",
+        "positive_l1_mass_through_depth": "7+3*sqrt(2)"
+      },
+      {
+        "coefficient": "16",
+        "coefficient_squared": "256",
+        "dyadic_depth": 8,
+        "physical_scale": "256",
+        "positive_l1_mass_through_depth": "31+15*sqrt(2)"
+      },
+      {
+        "coefficient": "256",
+        "coefficient_squared": "65536",
+        "dyadic_depth": 16,
+        "physical_scale": "65536",
+        "positive_l1_mass_through_depth": "511+255*sqrt(2)"
+      }
+    ],
+    "subpower_transfer_from_naive_coefficientwise_causal_inverse": false
+  },
+  "conflict": {
+    "L102500_and_L102701": "m_Phi=2*q(s)^2*r(s)^2/[s^2*(s-1/2)]",
+    "L102740_constructed_D_L": "q(s)*r(s)^2*(s-1)*(5s+3/2)/[s*(s-1/2)]",
+    "L102740_printed": "m_Phi=2*q(s)*r(s)^2/[s^2*(s-1/2)]",
+    "common_mother_D_out_J": "q(s)^2*r(s)^2*(s-1)*(5s+3/2)/[s*(s-1/2)]",
+    "explicit_L102880_K_L": "4*q(s)*r(s)^2*(s-1)/[s*(s-1/2)]",
+    "missing_factor": "q(s)"
+  },
+  "corrected_adapter": {
+    "derivative_identity": "D_out*J=Q*D(L_102740)=Q*V*K_L_explicit",
+    "explicit_outer_relation": "L_102740=V*R_L_explicit",
+    "identity": "Q*L_sigma=(1/2)*(D-1)*(5*D+3/2)*H_sigma",
+    "not_proved": "L_sigma=(1/2)*(D-1)*(5*D+3/2)*H_sigma",
+    "operator": "Q=I-sqrt(2)*S_2",
+    "stable_filter": "V=(5*D+3/2)/4=(5/4)*(D+3/10)",
+    "stable_filter_positive_inverse_l1_norm": "8/3"
+  },
+  "exact_samples": [
+    {
+      "D_out_J": "0",
+      "L102500_mother": "3/2-sqrt(2)",
+      "L102740_constructed_D_L": "0",
+      "L102740_printed_mother": "1-1/2*sqrt(2)",
+      "L102740_stable_filter_V": "13/8",
+      "common_mother_differential": "0",
+      "difference": "1/2-1/2*sqrt(2)",
+      "explicit_piecewise_K_L": "0",
+      "operator_orientation": "D_out*J=Q*D(L_102740)=Q*V*K_L_explicit",
+      "q": "1-1/2*sqrt(2)",
+      "ratio": "q(s)",
+      "s": 1
+    },
+    {
+      "D_out_J": "621/256-69/64*sqrt(2)",
+      "L102500_mother": "27/128-3/32*sqrt(2)",
+      "L102740_constructed_D_L": "69/32-69/128*sqrt(2)",
+      "L102740_printed_mother": "3/16-3/64*sqrt(2)",
+      "L102740_stable_filter_V": "23/8",
+      "common_mother_differential": "621/512-69/128*sqrt(2)",
+      "difference": "3/128-3/64*sqrt(2)",
+      "explicit_piecewise_K_L": "3/4-3/16*sqrt(2)",
+      "operator_orientation": "D_out*J=Q*D(L_102740)=Q*V*K_L_explicit",
+      "q": "1-1/4*sqrt(2)",
+      "ratio": "q(s)",
+      "s": 2
+    },
+    {
+      "D_out_J": "17787/5120-539/640*sqrt(2)",
+      "L102500_mother": "539/7680-49/2880*sqrt(2)",
+      "L102740_constructed_D_L": "539/160-539/1280*sqrt(2)",
+      "L102740_printed_mother": "49/720-49/5760*sqrt(2)",
+      "L102740_stable_filter_V": "33/8",
+      "common_mother_differential": "5929/5120-539/1920*sqrt(2)",
+      "difference": "49/23040-49/5760*sqrt(2)",
+      "explicit_piecewise_K_L": "49/60-49/480*sqrt(2)",
+      "operator_orientation": "D_out*J=Q*D(L_102740)=Q*V*K_L_explicit",
+      "q": "1-1/8*sqrt(2)",
+      "ratio": "q(s)",
+      "s": 3
+    },
+    {
+      "D_out_J": "2903181/655360-50933/184320*sqrt(2)",
+      "L102500_mother": "54777/3276800-961/921600*sqrt(2)",
+      "L102740_constructed_D_L": "50933/11520-50933/368640*sqrt(2)",
+      "L102740_printed_mother": "961/57600-961/1843200*sqrt(2)",
+      "L102740_stable_filter_V": "53/8",
+      "common_mother_differential": "2903181/3276800-50933/921600*sqrt(2)",
+      "difference": "961/29491200-961/1843200*sqrt(2)",
+      "explicit_piecewise_K_L": "961/1440-961/46080*sqrt(2)",
+      "operator_orientation": "D_out*J=Q*D(L_102740)=Q*V*K_L_explicit",
+      "q": "1-1/32*sqrt(2)",
+      "ratio": "q(s)",
+      "s": 5
+    }
+  ],
+  "frozen_blobs": {
+    "L-102500": "db4590fc23b53ed601e108a77e4d064b7d9d13f9",
+    "L-102504": "30edf4116f15984c4dfa133d7ff0609388ae2868",
+    "L-102701": "70eb455a3b2bb0398f8bba22dee82c39ef803156",
+    "L-102740": "ec2f3aafe1b590a11a9967e298f5dfb0e2d59f55",
+    "L-102880-explicit-K_L": "d7330d114ebba1a7a16e22fa9ba6aa6b5eb7cdd6",
+    "L-102885-stable-image": "045481b73474d67ded5bf9633808e8d8d39c4622",
+    "L-106134": "cf40354ff8810a2d4bea9459cf142c300ba36237",
+    "T-106150": "ac15f0106a26303f06779feb484a521978fe3ecf"
+  },
+  "frozen_head": "98af0db6",
+  "frozen_parent_head": "ec6635b4",
+  "impact": {
+    "corrected_L106134_labels": "the polynomial right sides of .13-.14 are Q*V*R_L_explicit and Q*V*K_L_explicit",
+    "corrected_T106150_line": "Q*V*H_K_live=D_out*J plus a Q*V-filtered closed remainder",
+    "invalid_as_written": "the identification of that self-convolution differential with either the L-102740 current or explicit L-102880 K_L",
+    "raw_complete_beta_status": "refuted by the later atomic variation firewall: raw Jordan negative variation is Omega(sqrt(Y))",
+    "required_repair": "prove EXTSRC for the complete source, or prove terminal-safe anti-causal Q removal; V has a fixed positive stable inverse",
+    "retained": "the exact common-mother self-convolution and its zero-safe Mellin-Landau detector",
+    "viable_complete_reformulation": "mollify before Jordan decomposition; MEXTSRC106150 and NATCOMP-MOLL106150 remain unproved"
+  },
+  "notation": {
+    "q(s)": "1-sqrt(2)*2^(-s)",
+    "r(s)": "1-2^(-s)"
+  },
+  "resource_caps": {
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "maximum_dyadic_depth": 16,
+    "mellin_samples": 4,
+    "piecewise_cells_integrated": 3,
+    "point_counts": 0,
+    "source_atoms_enumerated": 0
+  }
+}

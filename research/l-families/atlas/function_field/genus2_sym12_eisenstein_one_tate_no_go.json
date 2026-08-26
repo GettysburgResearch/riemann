@@ -1,0 +1,88 @@
+{
+  "BFG_expected_marked_continuation": {
+    "polynomial": "2-5L",
+    "source_grade": "EXPECTED_NONREGULAR_CONTINUATION",
+    "virtual_rank": -3
+  },
+  "exact_localization": {
+    "BFG_Fricke_positive_carriers": [
+      "[5,1]",
+      "[4,2]",
+      "[3,2,1]"
+    ],
+    "Shmakov_Fricke_positive_carriers": [
+      "[3,2,1]",
+      "[4,2]"
+    ],
+    "epsilon_formal": "L",
+    "natural_S5_fixed_dimension_of_unique_difference": 1,
+    "unique_difference": "[5,1] tensor L"
+  },
+  "no_go": {
+    "epsilon_zero_compatible_with_displayed_Shmakov_terms": false,
+    "outer_or_sign_selector_reaches_BFG_2_minus_5L": false,
+    "rank_difference_Shmakov_minus_BFG": 1,
+    "rank_specialization_already_distinguishes_branches": true
+  },
+  "packet": "GENUS2_SYM12_EISENSTEIN_ONE_TATE_NO_GO",
+  "proof_grade": {
+    "exact": "Given the displayed constituent tables, projection gives 2-4L, all four convention totals, and a unique [5,1] tensor L difference.",
+    "open": "Independently realize the unique Fricke-positive local block in compactly supported l-adic Eisenstein cohomology on the natural marked quotient.",
+    "source_caveated_galois": "Shmakov separately says the thesis does not give a satisfactory full justification of the Galois action on Eisenstein cohomology.",
+    "source_supported_topological": "Shmakov states the relevant cohomology formulas and says Euler characteristics are unaffected by the connecting-map assumptions."
+  },
+  "resource_firewall": {
+    "calculation": "nine finite constituent rows and four S5 selectors",
+    "largest_linear_algebra_problem": "none",
+    "point_counts": 0
+  },
+  "shmakov_projection_by_selector": {
+    "natural_sign": {
+      "polynomial": "0",
+      "selected_irreps": [
+        "[2,1,1,1,1]",
+        "[1,1,1,1,1,1]"
+      ],
+      "virtual_rank": 0
+    },
+    "natural_trivial": {
+      "polynomial": "2-4L",
+      "selected_irreps": [
+        "[6]",
+        "[5,1]"
+      ],
+      "virtual_rank": -2
+    },
+    "outer_sign": {
+      "polynomial": "1-L",
+      "selected_irreps": [
+        "[3,3]",
+        "[1,1,1,1,1,1]"
+      ],
+      "virtual_rank": 0
+    },
+    "outer_trivial": {
+      "polynomial": "1-3L",
+      "selected_irreps": [
+        "[6]",
+        "[2,2,2]"
+      ],
+      "virtual_rank": -2
+    }
+  },
+  "source_dimensions": {
+    "weight_14": {
+      "level_1": 0,
+      "level_2_new_minus": 1,
+      "level_2_new_plus": 1,
+      "level_4_new": 1
+    },
+    "weight_16": {
+      "level_1": 1,
+      "level_2_new_minus": 0,
+      "level_2_new_plus": 1,
+      "level_4_new": 1
+    }
+  },
+  "status": "EXACT_FINITE_PROJECTION_AND_SOURCE_GRADED_NO_GO"
+}

@@ -1,0 +1,262 @@
+{
+  "aggregation_boundary": {
+    "each_fixed_depth": "O_(q,j)(M^-2)",
+    "necessary_for_M_minus_1": "a number of depths growing with M",
+    "open_issue": "decay or nondecay of the local delta tower, together with uniformity as j grows"
+  },
+  "bounded_replay": {
+    "maximum_depth": 8,
+    "profile_h_span": 12,
+    "profiles_checked": 7421,
+    "rows": [
+      {
+        "M": 29,
+        "active_joint_shifts": [],
+        "branches": {
+          "fourth_order_remainder": 3,
+          "generic_D_top": 5,
+          "parity_zero": 3,
+          "repeated_minimum_D_top": 1
+        },
+        "delta0_M_minus_3": "352/9 + (160/9)*log(2)",
+        "delta0_h_minus_3": "4/9 + (1/9)*log(2)",
+        "depth": 1,
+        "generic_h_minus_3": "7/36 + (1/9)*log(2)",
+        "h": 7,
+        "parity_zero_shift": 1,
+        "profiles": 12
+      },
+      {
+        "M": 49,
+        "active_joint_shifts": [
+          1
+        ],
+        "branches": {
+          "fourth_order_remainder": 9,
+          "generic_D_top": 8,
+          "near_h_joint": 1,
+          "parity_zero": 4,
+          "repeated_minimum_D_top": 1
+        },
+        "delta0_M_minus_3": "64 + (32)*log(2)",
+        "delta0_h_minus_3": "5/6 + (1/3)*log(2)",
+        "depth": 2,
+        "generic_h_minus_3": "7/12 + (1/3)*log(2)",
+        "h": 12,
+        "parity_zero_shift": 2,
+        "profiles": 23
+      },
+      {
+        "M": 69,
+        "active_joint_shifts": [
+          1,
+          2
+        ],
+        "branches": {
+          "fourth_order_remainder": 16,
+          "generic_D_top": 11,
+          "near_h_joint": 2,
+          "parity_zero": 6,
+          "repeated_minimum_D_top": 1
+        },
+        "delta0_M_minus_3": "800/9 + (416/9)*log(2)",
+        "delta0_h_minus_3": "11/9 + (5/9)*log(2)",
+        "depth": 3,
+        "generic_h_minus_3": "35/36 + (5/9)*log(2)",
+        "h": 17,
+        "parity_zero_shift": 3,
+        "profiles": 36
+      },
+      {
+        "M": 89,
+        "active_joint_shifts": [
+          1,
+          2,
+          3
+        ],
+        "branches": {
+          "fourth_order_remainder": 27,
+          "generic_D_top": 14,
+          "near_h_joint": 3,
+          "parity_zero": 7,
+          "repeated_minimum_D_top": 1
+        },
+        "delta0_M_minus_3": "1024/9 + (544/9)*log(2)",
+        "delta0_h_minus_3": "29/18 + (7/9)*log(2)",
+        "depth": 4,
+        "generic_h_minus_3": "49/36 + (7/9)*log(2)",
+        "h": 22,
+        "parity_zero_shift": 4,
+        "profiles": 52
+      },
+      {
+        "M": 109,
+        "active_joint_shifts": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "branches": {
+          "fourth_order_remainder": 40,
+          "generic_D_top": 17,
+          "near_h_joint": 4,
+          "parity_zero": 9,
+          "repeated_minimum_D_top": 1
+        },
+        "delta0_M_minus_3": "416/3 + (224/3)*log(2)",
+        "delta0_h_minus_3": "2 + (1)*log(2)",
+        "depth": 5,
+        "generic_h_minus_3": "7/4 + (1)*log(2)",
+        "h": 27,
+        "parity_zero_shift": 5,
+        "profiles": 71
+      },
+      {
+        "M": 129,
+        "active_joint_shifts": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "branches": {
+          "fourth_order_remainder": 56,
+          "generic_D_top": 20,
+          "near_h_joint": 5,
+          "parity_zero": 10,
+          "repeated_minimum_D_top": 1
+        },
+        "delta0_M_minus_3": "1472/9 + (800/9)*log(2)",
+        "delta0_h_minus_3": "43/18 + (11/9)*log(2)",
+        "depth": 6,
+        "generic_h_minus_3": "77/36 + (11/9)*log(2)",
+        "h": 32,
+        "parity_zero_shift": 6,
+        "profiles": 92
+      },
+      {
+        "M": 149,
+        "active_joint_shifts": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "branches": {
+          "fourth_order_remainder": 74,
+          "generic_D_top": 23,
+          "near_h_joint": 6,
+          "parity_zero": 12,
+          "repeated_minimum_D_top": 1
+        },
+        "delta0_M_minus_3": "1696/9 + (928/9)*log(2)",
+        "delta0_h_minus_3": "25/9 + (13/9)*log(2)",
+        "depth": 7,
+        "generic_h_minus_3": "91/36 + (13/9)*log(2)",
+        "h": 37,
+        "parity_zero_shift": 7,
+        "profiles": 116
+      },
+      {
+        "M": 169,
+        "active_joint_shifts": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "branches": {
+          "fourth_order_remainder": 96,
+          "generic_D_top": 26,
+          "near_h_joint": 7,
+          "parity_zero": 13,
+          "repeated_minimum_D_top": 1
+        },
+        "delta0_M_minus_3": "640/3 + (352/3)*log(2)",
+        "delta0_h_minus_3": "19/6 + (5/3)*log(2)",
+        "depth": 8,
+        "generic_h_minus_3": "35/12 + (5/3)*log(2)",
+        "h": 42,
+        "parity_zero_shift": 8,
+        "profiles": 143
+      }
+    ]
+  },
+  "claim_boundary": {
+    "external_priority_claim": false,
+    "individual_L_function_zero": false,
+    "input_theorem": "standard fixed-modulus prime-polynomial progression theorem",
+    "rh_or_grh": false,
+    "uniform_growing_depth_theorem": false
+  },
+  "exact_reduction": {
+    "forced_zero_channel": "delta_(j,j,q)=Prob(D_(2j+1)+D_1=0)=0",
+    "parity": "D_1 odd and every D_r with odd r>=3 even",
+    "residual": "sum_(s=0)^j m_(h-j+s)*D_(2j+1-2s)"
+  },
+  "fixed_q_asymptotic": {
+    "count_over_q^M": "delta_(j,0,q)*(1+log(2))/(3h^2)+{delta_(j,0,q)*([(2j-1)(7+4log(2))+9]/36)+(1/2)*sum_(s=1)^j delta_(j,s,q)}/h^3+O_(q,j)(h^-4)",
+    "delta_definition": "delta_(j,0,q)=Prob(D_(2j+1)=0); for s>=1, delta_(j,s,q)=Prob(D_(2j+1)+D_(2j+1-2s)=0)",
+    "positivity_claimed": false,
+    "squarefree_density": "[16*delta_(j,0,q)*(1+log(2))/(3M^2)+32*{delta_(j,0,q)*[(7j+4)+(4j+1)log(2)]/9+sum_(s=1)^j delta_(j,s,q)}/M^3+O_(q,j)(M^-4)]/(1-q^-1)"
+  },
+  "frozen_sources": {
+    "0b9f407f10ab8b12f22526af8a08b870baaef0e9:research/l-families/atlas/function_field/QUADRATIC_FAMILY_NOTCH_PARITY_SIEVE.md": "38f1b6e95f9a7eb6756450673ff067308886a0ff",
+    "4fc8930e14eaa3863d3f3edc151c056d7d5aedce:research/l-families/atlas/function_field/QUADRATIC_FAMILY_NOTCH_DEPTH_PHASE_DIAGRAM.md": "01cefa8a55c9b1ae1a0b5bed9c11fe323fb6764e",
+    "9716d2261e9e7843a6c1ffffd67ee8d6756060aa:research/l-families/atlas/function_field/QUADRATIC_FAMILY_CLOSED_PLACE_WEIGHT_NOTCH.md": "a1b8476ddd3cad6f63ff205392426ae9c2d0829c",
+    "d13dfcfcbb32733fc9b7925b82c4cf3dc9a9107a:research/l-families/atlas/function_field/QUADRATIC_FAMILY_THIRD_BOUNDARY_TRACE_ZERO_DENSITY.md": "ba853379190d9f4de1172f576095ed29a068c0dd",
+    "d13dfcfcbb32733fc9b7925b82c4cf3dc9a9107a:research/l-families/atlas/function_field/quadratic_family_third_boundary_trace_zero_density.py": "8ca76f0286cf95537ba8f00081ba973e2940ed69",
+    "f5aabadd65dd53cd9a69e3e3b38b9bc7693b3359:research/l-families/atlas/function_field/QUADRATIC_FAMILY_SECOND_BOUNDARY_ZERO_DENSITY_THIRD_ORDER.md": "12aa4be45fd970f843be6b2024547f7ab7594b21",
+    "f5aabadd65dd53cd9a69e3e3b38b9bc7693b3359:research/l-families/atlas/function_field/quadratic_family_second_boundary_zero_density_third_order.py": "60dc980a4e8bccb2cdd607829d167909b3f4729c"
+  },
+  "profile_weights": {
+    "each_near_h_h_minus_3": "1/2",
+    "generic_exact": "[1+H_(2h+j)-H_h]/[(h-j)(3h+j+1)]",
+    "generic_h_minus_2": "1/3 + (1/3)*log(2)",
+    "generic_h_minus_3": "(2j-1)*(7+4log(2))/36",
+    "repeated_minimum_h_minus_3": "1/4"
+  },
+  "resource_caps": {
+    "curves_enumerated": 0,
+    "finite_field_elements_enumerated": 0,
+    "irreducibles_enumerated": 0,
+    "maximum_depth": 8,
+    "polynomials_enumerated": 0,
+    "profiles_checked": 7421,
+    "residue_classes_enumerated": 0,
+    "zeros_enumerated": 0
+  },
+  "schema": "riemann.function_field.quadratic_fixed_depth_zero.v1",
+  "scope": {
+    "M": "4h+1",
+    "depth": "fixed integer j>=1",
+    "minimum_factor_degree": "h-j",
+    "n": "2h+1",
+    "q": "fixed odd prime power",
+    "stable_range": "h>=5j+2"
+  },
+  "specializations": {
+    "j=1": {
+      "active_joint_channels": [],
+      "delta0_M_minus_3": "352/9 + (160/9)*log(2)",
+      "delta0_h_minus_3": "4/9 + (1/9)*log(2)",
+      "recovers": "second-boundary M^-3 packet"
+    },
+    "j=2": {
+      "active_joint_channels": [
+        "delta_(2,1,q)"
+      ],
+      "delta0_M_minus_3": "64 + (32)*log(2)",
+      "delta0_h_minus_3": "5/6 + (1/3)*log(2)",
+      "recovers": "third-boundary M^-3 packet"
+    }
+  },
+  "status": "exact all-fixed-depth residual/profile theorem and fixed-q raw zero density through M^-3"
+}

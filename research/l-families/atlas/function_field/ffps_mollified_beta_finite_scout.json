@@ -1,0 +1,96 @@
+{
+  "checkpoints": [
+    {
+      "Y": 1024,
+      "absolute_mass": 422.792340806,
+      "mollified_to_raw_lower_ratio": 0.466608659,
+      "negative_mass": 209.084604889,
+      "power": 10,
+      "raw_atomic_lower_bound": 448.094137918,
+      "raw_root_limit": 32
+    },
+    {
+      "Y": 16384,
+      "absolute_mass": 580.765242647,
+      "mollified_to_raw_lower_ratio": 0.154760636,
+      "negative_mass": 287.633962114,
+      "power": 14,
+      "raw_atomic_lower_bound": 1858.573150716,
+      "raw_root_limit": 512
+    },
+    {
+      "Y": 262144,
+      "absolute_mass": 733.561133124,
+      "mollified_to_raw_lower_ratio": 0.049569681,
+      "negative_mass": 367.254652332,
+      "power": 18,
+      "raw_atomic_lower_bound": 7408.85645363,
+      "raw_root_limit": 8192
+    }
+  ],
+  "final_resolution_relative_difference": {
+    "absolute_relative_difference": 5.7446e-05,
+    "negative_relative_difference": 0.000243105
+  },
+  "fine_window_linear_fits": {
+    "absolute_mass": {
+      "intercept": 42.412108317,
+      "maximum_absolute_residual": 3.423606762,
+      "minimum_power": 10,
+      "row_count": 9,
+      "slope_per_doubling": 38.380383925
+    },
+    "negative_mass": {
+      "intercept": 19.218348415,
+      "maximum_absolute_residual": 3.612827653,
+      "minimum_power": 10,
+      "row_count": 9,
+      "slope_per_doubling": 19.324573187
+    }
+  },
+  "frozen_sources": {
+    "78e5ce8e75bce174e3014a33b6fe086112577a1e": {
+      "research/l-families/atlas/function_field/FFPS_COMPLETE_BETA_ATOMIC_VARIATION_FIREWALL.md": "e85848a9a6b24fd4911c2f58d8fb5cb316124d99"
+    },
+    "9f29bdb6ea7375df84de550d62f9d0984634a8dd": {
+      "research/l-families/atlas/function_field/FFPS_MOLLIFIED_BETA_RH_EQUIVALENCE.md": "053c27bac9f8dec63c4865ab3563a7d985de7cbe",
+      "research/l-families/atlas/function_field/FFPS_SIGNED_DIFFERENTIAL_ATOMIC_SHELL_FIREWALL.md": "8dff1025fd7d794497b71c2ba2920a51ff9095f2"
+    }
+  },
+  "grid_semantics": {
+    "detector_samples": "midpoints of output log cells",
+    "mass_quadrature": "midpoint rule with one factor of the log step",
+    "raw_comparator": "exact at Y, with complete odd groups m<=floor(Y/32)",
+    "source_placement": "log(n) rounded to the nearest log-grid node"
+  },
+  "interpretation": "finite data through 2^18 suggest roughly linear growth in log(Y); this is not an asymptotic or RH inference",
+  "kernel_zero_mass_controls": [
+    0.0,
+    0.0
+  ],
+  "maximum_resolution_relative_difference": 0.003202956,
+  "parameters": {
+    "coarse_cells_per_log_two": 256,
+    "epsilon_over_log_two": 0.5,
+    "fine_cells_per_log_two": 512,
+    "max_power": 18
+  },
+  "resource_caps": {
+    "conductor_enumerations": 0,
+    "curve_enumerations": 0,
+    "horizons_per_panel": 13,
+    "maximum_fft_length": 16384,
+    "maximum_kernel_grid_cells": 2304,
+    "maximum_linear_convolution_cells": 11519,
+    "maximum_source_grid_cells": 9216,
+    "maximum_source_limit": 262144,
+    "panel_count": 2,
+    "resolutions": [
+      256,
+      512
+    ],
+    "zero_searches": 0
+  },
+  "schema": "riemann.function_field.ffps_mollified_beta_finite_scout.v1",
+  "status": "finite floating-point scout; no asymptotic or RH inference"
+}

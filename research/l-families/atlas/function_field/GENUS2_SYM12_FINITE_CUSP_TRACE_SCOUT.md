@@ -1,13 +1,16 @@
 # Genus-two Sym12 finite cusp-trace scout
 
-Status: **FINITE EXACT MATCH AT `q=3,5,7` ONLY**
+Status: **FINITE EXACT DERIVED MATCH AT `q=3,5,7` ONLY**
 
-Scope: stored complete joint laws at three odd primes; no new family scan.
+Scope: stored complete joint laws at three odd primes, together with the exact
+Sym12 arithmetic-inventory conversion; no new family scan.
 
-Exact sources: two committed, content-hash-locked JSON artifacts listed below.
+Exact sources: three committed, content-hash-locked JSON artifacts listed
+below.
 
 What was actually run: 251 stored atoms, one reciprocal recurrence through
-degree 12, and an eight-coefficient exact modular-form reconstruction.
+degree 12, an eight-coefficient exact modular-form reconstruction, and one
+source-locked application of the arithmetic-inventory identity.
 
 Smallest remaining gap: an arithmetic or cohomological theorem identifying the
 candidate trace for general odd prime powers; another finite row can falsify but
@@ -41,13 +44,14 @@ with absent negative-index terms omitted. It evaluates this recurrence once
 through degree 12 on each stored joint-law atom and accumulates degrees
 `6,8,10,12` with the atom multiplicities.
 
-The degree-twelve normalizations are
+The recurrence directly supplies
 
 \[
 T_{(12,0)}(q)=\frac{\sum_Dr_D(12)}{q(q-1)}
 \]
 
-and
+The \(\widehat H_{12}\) quantity is **not** independently enumerated in this scout.  The
+source-locked arithmetic inventory proves
 
 \[
 \widehat H_{12}
@@ -55,9 +59,14 @@ and
  +\Theta_{(8,2)}+\Theta_{(10,2)}.
 \]
 
+Thus the displayed \(\widehat H_{12}\) and \(H_{12}=q(q-1)\widehat H_{12}\)
+rows are exact consequences of the directly replayed \(T_{(12,0)}\) rows
+*plus* that theorem.  This producer does not enumerate monic squarefree
+degree-twelve moduli or directly sum their central coefficients \(Q_5(f)\).
+
 The exact output is:
 
-| `q` | atoms | `sum r_D(6)` | `sum r_D(8)` | `sum r_D(10)` | `sum r_D(12)` | `T_(12,0)` | `Hhat_12` | `H_12` |
+| `q` | atoms | `sum r_D(6)` | `sum r_D(8)` | `sum r_D(10)` | `sum r_D(12)` | direct `T_(12,0)` | inventory-derived `Hhat_12` | inventory-derived `H_12` |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 3 | 32 | -24 | -126 | 3,828 | -27,522 | -4,587 | -3,708 | -22,248 |
 | 5 | 81 | -80 | 3,980 | 372,960 | 5,345,020 | 267,251 | 287,250 | 5,745,000 |
@@ -118,7 +127,7 @@ including this `f_-` and its Fricke sign, on pp. 1139--1140 of
 explicit series above, rather than a potentially confusing orbit label, is the
 identity of the comparison target in this packet.
 
-At the three tested primes the match is exact:
+At the three tested primes the resulting combined-branch match is exact:
 
 | `p` | `a_p(f_-)` | `-p a_p(f_-)` | `Hhat_12(p)` |
 |---:|---:|---:|---:|
@@ -132,7 +141,10 @@ Thus the finite statement is
 \boxed{\widehat H_{12}(p)=-p\,a_p(f_-),\qquad p=3,5,7.}
 \]
 
-Equivalently, on these three rows only,
+This is not an independent check of the arithmetic inventory: it is the exact
+consequence of applying that inventory to the independently replayed raw
+\(T_{(12,0)}\) rows.  Equivalently, the direct numerical content can be stated
+without introducing \(\widehat H_{12}\), on these three rows only, as
 
 \[
 T_{(12,0)}(p)=-p a_p(f_-)-2p-9-4\tau(p)
@@ -160,7 +172,16 @@ The producer reads exactly these committed artifacts:
    `0fbf48768fdea477b2bee4f53c8f1e547a167155c665b5e97bc201961971ec77`.
    Only its committed modular trace and coefficient rows are consumed.
 
-The source files total 180,674 bytes. The historical balanced artifact covers
+3. `genus2_sym12_arithmetic_inventory.json`, commit
+   `482e32c53f26517906143cd0d99c74d8b4edf3be`, git blob
+   `68907aa3ee65ced500807c79123f116da05f0ece`, LF-normalized SHA-256
+   `94f0647a91aff299c62f24019947846e6923863f3ecba3c2f9cf95008407d4f6`,
+   payload SHA-256
+   `fba1c85c8dc3d60b276635ae5e3ed84db3ded06f4960afeaa9b92b4055f9211f`.
+   Its exact marked-open formula is the only bridge from the directly
+   replayed `T_(12,0)` values to `Hhat_12` and `H_12`.
+
+The source files total 219,771 bytes. The historical balanced artifact covers
 20,175 monic quintic candidates and 17,068 squarefree members, but none is
 reenumerated here. The replay performs exactly:
 
@@ -172,8 +193,8 @@ reenumerated here. The replay performs exactly:
 - 72 truncated q-series convolution terms and 8 linear combinations;
 - 3 final finite-row checks.
 
-The producer caps itself at exactly those operation counts, two source files,
-200,000 aggregate source bytes, 32,768 output bytes, and four wall-clock
+The producer caps itself at exactly those operation counts, three source files,
+225,000 aggregate source bytes, 32,768 output bytes, and four wall-clock
 seconds. Arithmetic is entirely integral. It imports no enumerator and uses no
 floating-point fit or external computer algebra.
 
@@ -203,6 +224,15 @@ The replay authenticates a calculation from committed aggregate atoms. It is
 not an authenticated replay of the primitive quintic enumeration, and it does
 not claim to be one. The complete family enumeration remains provenance of the
 locked balanced artifact.
+
+### Provenance firewall
+
+Only `sum_D r_D(12)` and `T_(12,0)` are directly replayed from the stored
+joint-law atoms.  The `Hhat_12` and `H_12` columns use the separately
+source-locked arithmetic-inventory identity.  They are therefore exact finite
+consequences of the combined branch, but they are neither a direct
+central-coefficient computation nor an independent audit of the master
+adapter.
 
 No RH, GRH, number-field transfer, memberwise sign, or global Euler-product
 claim is made.

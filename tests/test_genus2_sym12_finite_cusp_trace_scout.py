@@ -67,6 +67,16 @@ class Genus2Sym12FiniteCuspTraceScoutTests(unittest.TestCase):
                     "0fbf48768fdea477b2bee4f53c8f1e547a167155c665b5e97bc201961971ec77"
                 ),
             },
+            "sym12_arithmetic_inventory": {
+                "commit": "482e32c53f26517906143cd0d99c74d8b4edf3be",
+                "git_blob": "68907aa3ee65ced500807c79123f116da05f0ece",
+                "sha256_lf_normalized": (
+                    "94f0647a91aff299c62f24019947846e6923863f3ecba3c2f9cf95008407d4f6"
+                ),
+                "payload_sha256": (
+                    "fba1c85c8dc3d60b276635ae5e3ed84db3ded06f4960afeaa9b92b4055f9211f"
+                ),
+            },
         }
         manifest = {row["id"]: row for row in self.stored["source_manifest"]}
         self.assertEqual(set(manifest), set(expected))
@@ -140,6 +150,7 @@ class Genus2Sym12FiniteCuspTraceScoutTests(unittest.TestCase):
             self.assertEqual(row["T_(12,0)"], expected[q]["T12"])
             self.assertEqual(row["Hhat_12"], expected[q]["Hhat"])
             self.assertEqual(row["H_12"], expected[q]["H"])
+            self.assertIn("not a direct Q_5 average", row["Hhat_12_provenance"])
             self.assertTrue(
                 all(
                     control["match"]
@@ -169,8 +180,8 @@ class Genus2Sym12FiniteCuspTraceScoutTests(unittest.TestCase):
     def test_resource_caps_are_exact_and_no_enumerator_is_imported(self) -> None:
         resources = self.stored["resource_contract"]
         expected_actuals = {
-            "source_files": 2,
-            "source_bytes": 180_674,
+            "source_files": 3,
+            "source_bytes": 219_771,
             "joint_law_atoms": 251,
             "reciprocal_updates": 3_012,
             "reciprocal_scalar_terms": 10_542,
@@ -226,11 +237,29 @@ class Genus2Sym12FiniteCuspTraceScoutTests(unittest.TestCase):
         self.assertIn("PRIME-POWER FIREWALL", text)
         self.assertIn("not the naive composite-index Fourier coefficient", text)
         self.assertIn("No motive, compatible system", text)
+        self.assertIn("PROVENANCE FIREWALL", text)
+        provenance = self.stored["provenance_boundary"]
+        self.assertIn("sum_D r_D(12)", provenance["directly_replayed"])
+        self.assertIn("arithmetic-inventory", provenance["imported_exact_theorem"])
+        self.assertIn("not an independent audit", provenance["logical_use"])
         self.assertIn("No RH, GRH", text)
         self.assertEqual(
             self.stored["finite_match"]["status"],
-            "EXACT_THREE_PRIME_MATCH_NOT_AN_INTERPOLATION_THEOREM",
+            "EXACT_THREE_PRIME_CONSEQUENCE_OF_RAW_T12_PLUS_INVENTORY_"
+            "NOT_AN_INDEPENDENT_INVENTORY_AUDIT",
         )
+
+    def test_inventory_conversion_drift_is_rejected(self) -> None:
+        inventory = subject._load_locked_source(
+            subject.SOURCE_LOCKS[2], subject.ResourceGuard()
+        )
+        subject._validate_inventory(inventory)
+        damaged = dict(inventory)
+        dependency = dict(damaged["degree_twelve_dependency"])
+        dependency["marked_open_formula"] = "T_(12,0)=Hhat_12"
+        damaged["degree_twelve_dependency"] = dependency
+        with self.assertRaises(ValueError):
+            subject._validate_inventory(damaged)
 
 
 if __name__ == "__main__":

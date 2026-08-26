@@ -1,0 +1,174 @@
+{
+  "equivalence": {
+    "causal_cutoff": "R(T)=T+1 (or any R(T)>T)",
+    "criteria": [
+      "RH iff integral_0^T (eta_epsilon*D_out*O_(1,R(T)))_+ dt=exp(o(T))",
+      "RH iff integral_0^T (C_epsilon(t))_- dt=exp(o(T))",
+      "RH iff integral_0^T (eta_epsilon*D_out*(O_(1,R(T))-O_(0,R(T))))_+ dt=exp(o(T))"
+    ],
+    "fixed_epsilon": "every fixed epsilon>0 separately; some iff every",
+    "geodesic_estimate_proved": false,
+    "grh_proved": false,
+    "implications": {
+      "RH_to_complete_absolute": "normalized Mertens plus compact BV summation",
+      "complete_iff_geodesic": "squared field has O(T) absolute log mass",
+      "complete_iff_native_reflection": "h_epsilon=-2*eta_epsilon*D_out*O_(1,R) on the causal horizon",
+      "complete_negative_to_RH": "fixed-mollified beta Mellin--Landau equivalence",
+      "geodesic_iff_relative_reflection": "C_epsilon=-2*eta_epsilon*D_out*(O_(1,R)-O_(0,R))"
+    },
+    "native_reflection_estimate_proved": false,
+    "rh_proved": false
+  },
+  "frozen_sources": {
+    "356fbf29e958e2ea067bfe5ef912b1f68d0334c6": {
+      "claims/lemmas/L-106135-reflection-even-odd-energies-are-exact-complements.md": "5663c7798843f751c184a6923582df58f0b58a26"
+    },
+    "3f10a6be2009f8e499b1bd421fd97b2095a82b06": {
+      "research/l-families/atlas/function_field/FFPS_EXTRA_NOTCHED_MELLIN_LANDAU_CONSUMER.md": "4a9aaf8bef6150bf054d6b6d4a873379db091b14"
+    },
+    "9f29bdb6ea7375df84de550d62f9d0984634a8dd": {
+      "research/l-families/atlas/function_field/FFPS_MOLLIFIED_BETA_RH_EQUIVALENCE.md": "053c27bac9f8dec63c4865ab3563a7d985de7cbe",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_rh_equivalence.json": "c0b5df0b206da90eeceb6df65109dd2fa3853612",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_rh_equivalence.py": "60146ce6cc3912de270e9b2d8ad59e6e37b8c8f7",
+      "tests/test_ffps_mollified_beta_rh_equivalence.py": "44d3f3e036202d9a78d992315504fea7d0960588"
+    },
+    "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc": {
+      "claims/lemmas/L-102602-native-completion-defect-and-pole-audit.md": "47966830014aaaaf0ff83f3659a2b04541f45486",
+      "claims/lemmas/L-102700-half-divisor-factorization-of-completion-defect.md": "6d68773121a8c9d32e151f9e83d1546da4814d80",
+      "claims/lemmas/L-102701-common-mother-ratiofour-two-field-form.md": "70eb455a3b2bb0398f8bba22dee82c39ef803156",
+      "claims/lemmas/L-102707-continuous-half-divisor-geodesic-and-polarized-hankel-current.md": "6810bcece309b0c54ae6c8fc84b314990004549c",
+      "claims/lemmas/L-102708-uniform-geodesic-source-energy-is-polylogarithmic.md": "14ae4c9ff5e29f12cf8aa70ead5d4c4dd337d6d7"
+    }
+  },
+  "kernel_identity": {
+    "D_out_coefficients_D0_through_D4": [
+      "0",
+      "3/4",
+      "1/4",
+      "-6",
+      "5"
+    ],
+    "K_ext": "P*Phi_star=D_out*(A *_M A)",
+    "P": "(1/2)*D*(D-1)*(5D+3/2)",
+    "Phi_star": "(2D-1)*(A *_M A)",
+    "samples": {
+      "2": "69/2",
+      "3": "495/2",
+      "5": "2385",
+      "7": "19929/2"
+    }
+  },
+  "open_gates": {
+    "geodesic": {
+      "load_bearing_rows": [
+        "distinct-product physical overlap",
+        "one-sided orientation of the polarized current"
+      ],
+      "name": "GEO-WKSFSC106150",
+      "quantity": "positive mass of eta_epsilon*D_out*(O_(1,R(T))-O_(0,R(T)))"
+    },
+    "native": {
+      "name": "NATREF-MOLL106150",
+      "quantity": "positive mass of eta_epsilon*D_out*O_(1,R(T))"
+    }
+  },
+  "reflection": {
+    "D_kills_norm": "D_out*I_tau=-2*D_out*O_(tau,R)=2*D_out*E_(tau,R)",
+    "causal_cutoff_panels": [
+      {
+        "R": "1",
+        "T": "0"
+      },
+      {
+        "R": "11",
+        "T": "10"
+      },
+      {
+        "R": "201/2",
+        "T": "100"
+      }
+    ],
+    "energy_samples": {
+      "N=5,I=-3": {
+        "even": "1",
+        "odd": "4"
+      },
+      "N=5,I=3": {
+        "even": "4",
+        "odd": "1"
+      },
+      "N=7,I=0": {
+        "even": "7/2",
+        "odd": "7/2"
+      }
+    },
+    "finite_horizon_fence": "f_(tau,R)=1_[0,R]*f_tau with R>T; correlations agree on x<=T",
+    "native": "h_epsilon=-2*eta_epsilon*D_out*O_(1,R)",
+    "negative_part": "(-2*r)_-=2*(r)_+",
+    "projection_identity": "I_tau=N_(tau,R)-2*O_(tau,R)=2*E_(tau,R)-N_(tau,R)",
+    "relative": "C_epsilon=-2*eta_epsilon*D_out*(O_(1,R)-O_(0,R))",
+    "sign_samples": {
+      "-3": "0",
+      "0": "0",
+      "2": "4"
+    }
+  },
+  "resource_caps": {
+    "coefficient_samples": 7,
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "differential_samples": 4,
+    "prime_intervals_enumerated": 0,
+    "reflection_samples": 3,
+    "zeros_enumerated": 0
+  },
+  "source_decomposition": {
+    "coefficient_samples": {
+      "1": {
+        "normalized": "1",
+        "raw": "1"
+      },
+      "17956": {
+        "normalized": "1/67",
+        "raw": "2"
+      },
+      "25": {
+        "normalized": "-1/5",
+        "raw": "-1"
+      },
+      "4": {
+        "normalized": "-1/2",
+        "raw": "-1"
+      },
+      "40401": {
+        "normalized": "2/201",
+        "raw": "2"
+      },
+      "4489": {
+        "normalized": "-2/67",
+        "raw": "-2"
+      },
+      "9": {
+        "normalized": "-1/3",
+        "raw": "-1"
+      }
+    },
+    "complete": "h_epsilon=C_epsilon+Q_epsilon",
+    "endpoint_normalization": {
+      "native_field": "H_nat=(2D-1)*I_1",
+      "orientation": "I_1-I_0=integral_0^1 2*(dot(G_tau) *_M G_tau) d tau",
+      "squared_field": "H_sq=(2D-1)*I_0",
+      "tau_0": "Lambda_0=lambda^square and Lambda_0*Lambda_0=beta^square",
+      "tau_1": "Lambda_1=lambda and Lambda_1*Lambda_1=beta"
+    },
+    "geodesic": "C_epsilon=eta_epsilon*D_out*(I_1-I_0)=eta_epsilon*D_out*integral_0^1 2*(dot(G_tau) *_M G_tau) d tau",
+    "large_exact_square_root": "32589158477190044730",
+    "native": "h_epsilon=eta_epsilon*D_out*(G_1 *_M G_1), because Lambda_1*Lambda_1=beta",
+    "squared": "Q_epsilon(t)=sum beta(m)/m*kappa_epsilon(t-2log(m))"
+  },
+  "squared_l1": {
+    "bound": "integral_0^T |Q_epsilon| <= 2*||kappa_epsilon||_1*H_floor(exp(T/2))",
+    "growth": "O_epsilon(1+T)",
+    "majorant_at_root_8": "761/140"
+  }
+}

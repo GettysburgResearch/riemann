@@ -1,0 +1,63 @@
+{
+  "BV_certificate": {
+    "K_ext_support": "[0,4*log(2)]",
+    "derivative_identity": "d kappa_epsilon=(K_ext-tau_epsilon K_ext)/epsilon",
+    "epsilon": "1/10",
+    "kappa_support": "[0,4*log(2)+1/10]",
+    "summation_by_parts_factor_in_units_of_TV_K_ext": "40",
+    "sup_norm_bound_in_units_of_TV_K_ext": "10",
+    "variation_bound_in_units_of_TV_K_ext": "20"
+  },
+  "RH_forward_chain": [
+    "RH => M(x)=O_delta(x^(1/2+delta))",
+    "A_mu(x)=M(x)/sqrt(x)+(1/2)*integral_1^x M(u)*u^(-3/2) du",
+    "A_mu(x)=O_delta(x^delta)",
+    "A_beta(x)=A_mu(x)-67^(-1/2)*A_mu(x/67)",
+    "A_beta(x)=O_delta(x^delta)"
+  ],
+  "box_multiplier": {
+    "formula": "(1-exp(-epsilon*s))/(epsilon*s)",
+    "right_half_plane_panels": [
+      "1/100",
+      "1/10",
+      "1/4",
+      "1/2"
+    ],
+    "zeros": "Re(s)=0 only"
+  },
+  "definition": {
+    "beta": "mu(n)-1_(67|n)*mu(n/67)",
+    "h_epsilon": "sum beta(n)/sqrt(n)*kappa_epsilon(t-log(n))",
+    "kappa_epsilon": "eta_epsilon*K_ext in log coordinate"
+  },
+  "equivalence": {
+    "arithmetic_estimate_proved": false,
+    "fixed_epsilon": "every epsilon>0",
+    "grh_proved": false,
+    "implications": {
+      "RH_to_absolute_mass": "Mertens bound plus compact-BV summation",
+      "absolute_to_negative_mass": "pointwise h_- <= |h|",
+      "negative_mass_to_RH": "zero-safe Mellin identity plus Landau"
+    },
+    "rh_proved": false,
+    "statements": [
+      "Riemann Hypothesis",
+      "integral_0^T |h_epsilon(t)| dt = exp(o(T))",
+      "integral_0^T (h_epsilon(t))_- dt = exp(o(T))"
+    ]
+  },
+  "frozen_sources": {
+    "blobs": {
+      "research/l-families/atlas/function_field/FFPS_EXTRA_NOTCHED_MELLIN_LANDAU_CONSUMER.md": "4a9aaf8bef6150bf054d6b6d4a873379db091b14"
+    },
+    "commit": "3f10a6be2009f8e499b1bd421fd97b2095a82b06"
+  },
+  "mellin_transform": "eta_hat_epsilon(s)*M_ext(s)*(1-67^(-(s+1/2)))/zeta(s+1/2)",
+  "resource_caps": {
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "mellin_panels": 4,
+    "source_atoms_enumerated": 0,
+    "zeros_enumerated": 0
+  }
+}

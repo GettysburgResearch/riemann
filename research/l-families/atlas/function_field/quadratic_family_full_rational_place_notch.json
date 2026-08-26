@@ -1,0 +1,204 @@
+{
+  "direct_prime_controls": [
+    {
+      "degree": 0,
+      "direct": 1,
+      "formula": 1,
+      "q": 3
+    },
+    {
+      "degree": 1,
+      "direct": 0,
+      "formula": 0,
+      "q": 3
+    },
+    {
+      "degree": 2,
+      "direct": 3,
+      "formula": 3,
+      "q": 3
+    },
+    {
+      "degree": 3,
+      "direct": 0,
+      "formula": 0,
+      "q": 3
+    },
+    {
+      "degree": 4,
+      "direct": -3,
+      "formula": -3,
+      "q": 3
+    },
+    {
+      "degree": 5,
+      "direct": 0,
+      "formula": 0,
+      "q": 3
+    },
+    {
+      "degree": 0,
+      "direct": 1,
+      "formula": 1,
+      "q": 5
+    },
+    {
+      "degree": 1,
+      "direct": 0,
+      "formula": 0,
+      "q": 5
+    },
+    {
+      "degree": 2,
+      "direct": -10,
+      "formula": -10,
+      "q": 5
+    },
+    {
+      "degree": 3,
+      "direct": 0,
+      "formula": 0,
+      "q": 5
+    }
+  ],
+  "firewalls": [
+    "the vanishing is a family correlation, not an individual L-zero",
+    "the full-place source uses all rational evaluation places",
+    "no growing-closed-place or FFPS source adapter follows",
+    "no RH or GRH conclusion is made"
+  ],
+  "q_panels": [
+    {
+      "F_q2_points": 16,
+      "F_q_points": 4,
+      "correlations_degrees_0_to_10": [
+        1,
+        0,
+        3,
+        0,
+        -3,
+        0,
+        -17,
+        0,
+        -39,
+        0,
+        -69
+      ],
+      "curve": "y^2=x-x^q",
+      "genus": 1,
+      "orientation_sign": 1,
+      "q": 3,
+      "q_mod_4": 3,
+      "zeta_numerator": "(1+(1)*3*u^2)^1"
+    },
+    {
+      "F_q2_points": 6,
+      "F_q_points": 6,
+      "correlations_degrees_0_to_10": [
+        1,
+        0,
+        -10,
+        0,
+        15,
+        0,
+        60,
+        0,
+        45,
+        0,
+        -174
+      ],
+      "curve": "y^2=x-x^q",
+      "genus": 2,
+      "orientation_sign": -1,
+      "q": 5,
+      "q_mod_4": 1,
+      "zeta_numerator": "(1+(-1)*5*u^2)^2"
+    },
+    {
+      "F_q2_points": 92,
+      "F_q_points": 8,
+      "correlations_degrees_0_to_10": [
+        1,
+        0,
+        21,
+        0,
+        126,
+        0,
+        -210,
+        0,
+        -5817,
+        0,
+        -32613
+      ],
+      "curve": "y^2=x-x^q",
+      "genus": 3,
+      "orientation_sign": 1,
+      "q": 7,
+      "q_mod_4": 3,
+      "zeta_numerator": "(1+(1)*7*u^2)^3"
+    },
+    {
+      "F_q2_points": 10,
+      "F_q_points": 10,
+      "correlations_degrees_0_to_10": [
+        1,
+        0,
+        -36,
+        0,
+        450,
+        0,
+        -1860,
+        0,
+        -3285,
+        0,
+        20808
+      ],
+      "curve": "y^2=x-x^q",
+      "genus": 4,
+      "orientation_sign": -1,
+      "q": 9,
+      "q_mod_4": 1,
+      "zeta_numerator": "(1+(-1)*9*u^2)^4"
+    },
+    {
+      "F_q2_points": 232,
+      "F_q_points": 12,
+      "correlations_degrees_0_to_10": [
+        1,
+        0,
+        55,
+        0,
+        1155,
+        0,
+        9845,
+        0,
+        -19690,
+        0,
+        -1229382
+      ],
+      "curve": "y^2=x-x^q",
+      "genus": 5,
+      "orientation_sign": 1,
+      "q": 11,
+      "q_mod_4": 3,
+      "zeta_numerator": "(1+(1)*11*u^2)^5"
+    }
+  ],
+  "resource_caps": {
+    "candidate_polynomials": 520,
+    "curves_enumerated": 0,
+    "direct_prime_fields": [
+      3,
+      5
+    ],
+    "extension_field_elements_enumerated": 0,
+    "maximum_direct_degree": 5,
+    "zeros_enumerated": 0
+  },
+  "theorem": {
+    "auxiliary_curve": "C_q:y^2=x-x^q",
+    "full_place_series": "sum_n S_(n,q)u^n=P_q(u)*(1-q*u^2)/(1-u^2)^q",
+    "odd_notch": "S_(2k+1,q)=0 for every k>=0",
+    "zeta_numerator": "P_q(u)=(1+s_q*q*u^2)^((q-1)/2), s_q=(-1)^((q+1)/2)"
+  }
+}

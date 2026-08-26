@@ -1,0 +1,175 @@
+{
+  "S5_selectors": [
+    {
+      "convention": "natural",
+      "fixed_dimension_on_frozen_general_rows": 0,
+      "selected_S6_irreps": [
+        "[6]",
+        "[5,1]"
+      ]
+    },
+    {
+      "convention": "outer",
+      "fixed_dimension_on_frozen_general_rows": 1,
+      "selected_S6_irreps": [
+        "[6]",
+        "[2,2,2]"
+      ]
+    },
+    {
+      "convention": "natural_plus_sign",
+      "fixed_dimension_on_frozen_general_rows": 2,
+      "selected_S6_irreps": [
+        "[2,1,1,1,1]",
+        "[1,1,1,1,1,1]"
+      ]
+    },
+    {
+      "convention": "outer_plus_sign",
+      "fixed_dimension_on_frozen_general_rows": 1,
+      "selected_S6_irreps": [
+        "[3,3]",
+        "[1,1,1,1,1,1]"
+      ]
+    }
+  ],
+  "convention_reconciliation": {
+    "Bergstrom_Clery_2025_M2_type": "[2,2,2]",
+    "character_twist": "None in the regular covariant/form identification: mu is induced by the natural six-root quotient, nu o mu is the identity, and regular covariants are exactly the image.  The alternating chi5 maps to the alternating Vandermonde product, so the quadratic character is already represented inside the natural S6 module rather than added as an extra twist.",
+    "deduction": "The split-root and 2025 official identifications differ only by an inner automorphism: an outer automorphism sends [2,2,2] to [5,1].",
+    "marked_subgroup": "The official A2(w^1) subgroup is therefore conjugate to the natural point stabilizer S5, not the transitive outer S5.",
+    "split_root_M2_type": "[2,2,2]"
+  },
+  "exact_conclusion": {
+    "corrected_natural_marked_valuation_nullity": 0,
+    "official_general_fixed_dimension": 0,
+    "official_selector": [
+      "[6]",
+      "[5,1]"
+    ],
+    "outer_counterfactual_fixed_dimension": 1,
+    "remaining_gate": "Resolve the separately source-caveated nonregular compact-support Eisenstein Galois class and the all-q Sym12 formula.  The modular-zero-to-stable adapter is already closed, and outer-S6 relabelling is irrelevant.",
+    "stable_adapter_status": "closed by the exact modular-zero general-channel adapter: G=0 for the positive semisimplified marked stable channel"
+  },
+  "novelty_firewall": "The S6 character facts are classical.  The project contribution is the exact convention reconciliation and its application to the frozen Sym12 rows; no claim of external novelty or of stable-channel nonvanishing is made.",
+  "official_general_rows": {
+    "partitions": [
+      "[3,1,1,1]",
+      "[2,2,2]",
+      "[2,2,1,1]",
+      "[2,1,1,1,1]",
+      "[1,1,1,1,1,1]"
+    ],
+    "source_grade": "CONDITIONAL_K3_FORMULA_DATABASE_ROWS",
+    "total_S6_dimension": 30,
+    "weight_project_convention": "(j,k)=(12,3)"
+  },
+  "outer_automorphism": {
+    "conjugacy_classes": [
+      {
+        "class_size": 120,
+        "cycle_type": "[6]",
+        "outer_image": "[3,2,1]",
+        "sign": -1
+      },
+      {
+        "class_size": 144,
+        "cycle_type": "[5,1]",
+        "outer_image": "[5,1]",
+        "sign": 1
+      },
+      {
+        "class_size": 90,
+        "cycle_type": "[4,2]",
+        "outer_image": "[4,2]",
+        "sign": 1
+      },
+      {
+        "class_size": 90,
+        "cycle_type": "[4,1,1]",
+        "outer_image": "[4,1,1]",
+        "sign": -1
+      },
+      {
+        "class_size": 40,
+        "cycle_type": "[3,3]",
+        "outer_image": "[3,1,1,1]",
+        "sign": 1
+      },
+      {
+        "class_size": 120,
+        "cycle_type": "[3,2,1]",
+        "outer_image": "[6]",
+        "sign": -1
+      },
+      {
+        "class_size": 40,
+        "cycle_type": "[3,1,1,1]",
+        "outer_image": "[3,3]",
+        "sign": 1
+      },
+      {
+        "class_size": 15,
+        "cycle_type": "[2,2,2]",
+        "outer_image": "[2,1,1,1,1]",
+        "sign": -1
+      },
+      {
+        "class_size": 45,
+        "cycle_type": "[2,2,1,1]",
+        "outer_image": "[2,2,1,1]",
+        "sign": 1
+      },
+      {
+        "class_size": 15,
+        "cycle_type": "[2,1,1,1,1]",
+        "outer_image": "[2,2,2]",
+        "sign": -1
+      },
+      {
+        "class_size": 1,
+        "cycle_type": "[1,1,1,1,1,1]",
+        "outer_image": "[1,1,1,1,1,1]",
+        "sign": 1
+      }
+    ],
+    "irreducible_pullback": {
+      "[1,1,1,1,1,1]": "[1,1,1,1,1,1]",
+      "[2,1,1,1,1]": "[3,3]",
+      "[2,2,1,1]": "[2,2,1,1]",
+      "[2,2,2]": "[5,1]",
+      "[3,1,1,1]": "[4,1,1]",
+      "[3,2,1]": "[3,2,1]",
+      "[3,3]": "[2,1,1,1,1]",
+      "[4,1,1]": "[3,1,1,1]",
+      "[4,2]": "[4,2]",
+      "[5,1]": "[2,2,2]",
+      "[6]": "[6]"
+    },
+    "sign_is_fixed": true
+  },
+  "packet": "GENUS2_SYM12_OUTER_S6_CONVENTION_GATE",
+  "primary_sources": [
+    {
+      "source": "Bergstrom-Faber-van der Geer, arXiv:0803.0917v2, Sections 2 and 5",
+      "url": "https://arxiv.org/abs/0803.0917",
+      "use": "A2(w^1) is the quotient by the point stabilizer of a labelled Weierstrass point."
+    },
+    {
+      "source": "Bergstrom-Clery, arXiv:2309.04388v2, Section 2 and Theorem 3.1",
+      "url": "https://arxiv.org/abs/2309.04388",
+      "use": "Fixes the official S6 action and identifies M2(Gamma[2]) with s[2^3]."
+    },
+    {
+      "source": "Clery-van der Geer, arXiv:2605.13300v1, Sections 2, 6, and 8",
+      "url": "https://arxiv.org/abs/2605.13300",
+      "use": "Fixes the natural root action, gives M2 as s[2^3], and identifies regular covariants with modular forms."
+    }
+  ],
+  "resource_firewall": {
+    "computer_algebra_packages": 0,
+    "largest_group": "S6",
+    "point_counts": 0
+  },
+  "status": "EXACT_FINITE_CHARACTER_THEORY_AND_PRIMARY_SOURCE_CONVENTION_AUDIT"
+}

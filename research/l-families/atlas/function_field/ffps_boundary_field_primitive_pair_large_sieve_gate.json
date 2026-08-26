@@ -1,0 +1,227 @@
+{
+  "conditional_gate": {
+    "channels_required": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "conditional_implication_to_rh_proved": true,
+    "estimate": "sum_(d<=D,sf,67-free) d^-1 sup_(H<=U<=2H)|P_(alpha,gamma)(d;H,U)|^2 <<_epsilon (2DH)^epsilon",
+    "estimate_proved": false,
+    "name": "PRIMLS",
+    "rh_implies_gate_claimed": false,
+    "rh_proved": false
+  },
+  "decomposition": {
+    "channels": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "common_factor_identity": "S_H(X)=sum_(alpha,gamma,r) kappa * sum_d d^-1 P_(alpha,gamma)(d;H,min(2H,X/(67^r d)))",
+    "dyadic_reconstruction": "O(X)=sum_(0<=j<ceil(log2 X)) S_(2^j)(X)",
+    "exceptional_coefficients": [
+      1,
+      -2,
+      1
+    ],
+    "identity_proved": true,
+    "reciprocity": "P_10=P_01 and P_20=P_02",
+    "reciprocity_rows": [
+      {
+        "basis_terms": 74,
+        "forward": [
+          1,
+          0
+        ],
+        "height": 64,
+        "match": true,
+        "reverse": [
+          0,
+          1
+        ],
+        "sieve": 1,
+        "upper": 128
+      },
+      {
+        "basis_terms": 4739,
+        "forward": [
+          2,
+          0
+        ],
+        "height": 4096,
+        "match": true,
+        "reverse": [
+          0,
+          2
+        ],
+        "sieve": 1,
+        "upper": 8192
+      }
+    ]
+  },
+  "exact_normal_forms": {
+    "boolean_sieve": {
+      "channel": [
+        0,
+        0
+      ],
+      "frozen_prime": 19,
+      "harmonic_parseval": "Z_Q^-1 sum_(d|Q) d^-1 |P(d)|^2 =sum_(S|Q)|b_S|^2/N_S",
+      "height": 8,
+      "modulus": 30,
+      "replay": {
+        "energy_digest": "423fe29f86f2f08e11cfc3c40511f25574e40459385aedf6997dbd97d173b93e",
+        "incidence_digests": {
+          "1": "f2b4ed51fe86caa54708ea8f5985ed19cb49901e04ff858b7a03caf5ddd3e1a4",
+          "10": "1c1d48fbc833fee1c480dd48061727357ad2306f46881998c3ff0119085d3c88",
+          "15": "f2f0965b2a75cfa91b19b562380dfb2354b7f542719519ec914bd719fb61d34b",
+          "2": "ab266578842041bdaeff6b8ecbec533d8eabfd31d368727603333b45c34ac089",
+          "3": "8743e55462b54efd427b0a1a7deb49b6932e1c10235cd3f6fc3427fc373ca91e",
+          "30": "dc33e73c950ef69303c0c13710243e49d9c3b4c7a67ac3ca8def6a819cc8ad5c",
+          "5": "e31ebcb2a70242b83b91707bc9134f46e9422ca3c48a43122438da9bd609ff87",
+          "6": "3b07331ccb015f933df62a3755e8a28ee4c762c86231ec7221a4872d05def874"
+        },
+        "inversion_match": true,
+        "parseval_match": true,
+        "sieve_digests": {
+          "1": "6719f034b64219d3b7e8141261d89e98eeb5546dbc44cf195069d4f3179b43b1",
+          "10": "5c5cf7ab1322c3cc189b641cf6553a6dedac1136630359e38907df7b8735f27b",
+          "15": "bdbf7aac41843d0f311eb7c014c27d469e93f15ff529b22ef6c4a5f50db99753",
+          "2": "1a2147ffa77c17d3b1813d2b37465865fdae0662f80ecd837887a95d773fa62a",
+          "3": "278db2a93bfc6a8b887df2efb2f6bc10a82433b96dc1d2e64d72dc8370ea1a03",
+          "30": "f2b4ed51fe86caa54708ea8f5985ed19cb49901e04ff858b7a03caf5ddd3e1a4",
+          "5": "8b4eb19269501f03224173ad2e4cfcecc7afd0020ec56ce9d283988969bb62bb",
+          "6": "63b69c286d079602774d1c516fda1c89545358e3872688d03cc9db4677980bcb"
+        },
+        "zero_frequency_digest": "89506ec1b688ef013aea7ceb3806247735c452fdbb07638ebece330361816052"
+      },
+      "upper": 16,
+      "zero_frequency_obstruction": "the harmonic mean b_1 survives Parseval; sieve averaging alone cannot force cancellation"
+    },
+    "mobius_gram": {
+      "identity": "P_(alpha,gamma)(d;H,U)=G_(alpha,gamma)(d;U)-G_(alpha,gamma)(d;H), with G a signed k^-1 Mobius sum of one-dimensional Gram inner products",
+      "rows": [
+        {
+          "channel": [
+            0,
+            0
+          ],
+          "height": 8,
+          "lifted_match": true,
+          "shell_digest": "6719f034b64219d3b7e8141261d89e98eeb5546dbc44cf195069d4f3179b43b1",
+          "sieve": 1,
+          "upper": 16
+        },
+        {
+          "channel": [
+            1,
+            0
+          ],
+          "height": 64,
+          "lifted_match": true,
+          "shell_digest": "26ae3d4b18d0fc9a626bf4790c7783e28e56cfd2cf1468b90d6a753695c1fe94",
+          "sieve": 1,
+          "upper": 96
+        }
+      ]
+    }
+  },
+  "finite_exact_replay": {
+    "complete_basis_terms": 990,
+    "complete_digest": "55871470f7c30f55a19203e500912d0011a622db791c6d68b99733fab7cafb35",
+    "dyadic_match": true,
+    "prefix": 96,
+    "shells": [
+      {
+        "basis_terms": 1,
+        "digest": "e6bc302e9357c599e4767b307768bd686b423fbe0a0e051cfe04617d7cb3e964",
+        "height": 1,
+        "match": true
+      },
+      {
+        "basis_terms": 2,
+        "digest": "2098034d4213db7475c4741621a3fadcb3a4cbb43859f16023a6b944b4fbd4ea",
+        "height": 2,
+        "match": true
+      },
+      {
+        "basis_terms": 10,
+        "digest": "29ef132f38ab2b368b5a3c844054e2bf075e4c913bbe9f3aa90f01d7812acd7f",
+        "height": 4,
+        "match": true
+      },
+      {
+        "basis_terms": 27,
+        "digest": "c8d925129e6a8f7f1cf599f7c19ea8d15be7229ebbf7189c694797b0c1abe052",
+        "height": 8,
+        "match": true
+      },
+      {
+        "basis_terms": 96,
+        "digest": "4daddf1172660e163171f80bd86d7c3f2c901ec565eae95fb156c0807ac5c590",
+        "height": 16,
+        "match": true
+      },
+      {
+        "basis_terms": 355,
+        "digest": "8099cb81ecdf9fc1cbc9a2867dd24b27ac4befd6c674fabf6070ab39334c3f35",
+        "height": 32,
+        "match": true
+      },
+      {
+        "basis_terms": 667,
+        "digest": "e3aba02f6dca3d4f2c97037204f11d1ca93355c5a82c2cdaab37405244dda4fd",
+        "height": 64,
+        "match": true
+      }
+    ],
+    "toy_correlation": "min(a,b)/max(a,b) on the closed ratio-sixteen band, zero outside"
+  },
+  "resource_caps": {
+    "boolean_modulus": 30,
+    "conductor_families": 0,
+    "curves": 0,
+    "direct_pair_cells": 9216,
+    "finite_fields": 0,
+    "l_functions": 0,
+    "largest_reciprocity_upper": 8192,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "2582feec6",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_BOUNDARY_FIELD_PRIMITIVE_RAY_LOCALIZATION.md": "4ab7c602991b0dc319e72d3c805e202b2302b46e",
+      "research/l-families/atlas/function_field/ffps_boundary_field_primitive_ray_localization.json": "66773e4d9a0ea243191c28d71e66c7f2b8bac8f9",
+      "research/l-families/atlas/function_field/ffps_boundary_field_primitive_ray_localization.py": "c16cc534afce645412d2cfd5d93a2b6a34d92860",
+      "tests/test_ffps_boundary_field_primitive_ray_localization.py": "7bc9ff4f6d5ea056a7ee9dca55419fafde466275"
+    },
+    "imported_theorem": "exact primitive-ray formula and RH localization to subpower-complement primitive height"
+  }
+}

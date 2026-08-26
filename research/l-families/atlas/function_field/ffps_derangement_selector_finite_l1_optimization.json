@@ -1,0 +1,1539 @@
+{
+  "all_d_frontier": {
+    "conjecture": "for every d>=2 the unique optimum remains the exact d-cycle indicator",
+    "forced_hook_predecessor_potential": "x_k=(-1)^k*(sum_(j=0)^k binom(d-1,j)-(k+1)*2^(d-1)/d)",
+    "proved": false,
+    "zero_interior_potential_ansatz": "works through d=7 but violates a nonhook capacity first at d=8; an all-d proof needs propagated interior Young-lattice potentials"
+  },
+  "finite_theorem": {
+    "all_d_claim": false,
+    "degrees": "2<=d<=10",
+    "optimum": "2^(d-1)/d",
+    "proof": "exact Murnaghan-Nakayama character tables plus explicit strict rational LP-dual certificates",
+    "unique_optimizer": "Q=1_(d-cycle)"
+  },
+  "frozen_sources": {
+    "691166b8c31f9b8e3790a9687d8fce55493f6831": {
+      "research/l-families/atlas/function_field/FFPS_EXACT_CYCLE_SELECTOR_MASS_NO_GO.md": "d136159ea9f0fa41600e673dc2c6ef1a2ad2f10f",
+      "research/l-families/atlas/function_field/ffps_exact_cycle_selector_mass_no_go.json": "8fa0af46cd52e7ec766821d2189ac877f8548904",
+      "research/l-families/atlas/function_field/ffps_exact_cycle_selector_mass_no_go.py": "5058f33f18457df07340a5653a456575b4174cde",
+      "tests/test_ffps_exact_cycle_selector_mass_no_go.py": "6b2f3de0a36b2470ab33172cc8f45ec6f9e2a561"
+    },
+    "961603fd0a4fd33299b94c8eaafa11ce53bd3e50": {
+      "research/l-families/atlas/function_field/FFPS_RELATIVE_BOUNDARY_TRACE_TOWER_GATE.md": "cc8b649848a2e7425989a553628d9c830f56f6d1",
+      "research/l-families/atlas/function_field/ffps_relative_boundary_trace_tower_gate.json": "6e5947a1650498d060201a1242b609e135eb40a0",
+      "research/l-families/atlas/function_field/ffps_relative_boundary_trace_tower_gate.py": "64790fc7d57976ad7176f828c690d953e30e03f5",
+      "tests/test_ffps_relative_boundary_trace_tower_gate.py": "41853e4e3bc7d814fb9a61dc72f822c1461e71dd"
+    }
+  },
+  "panels": [
+    {
+      "candidate": "exact d-cycle indicator",
+      "candidate_nonzero_coefficients": [
+        {
+          "coefficient": "1/2",
+          "dimension": 1,
+          "partition": [
+            2
+          ]
+        },
+        {
+          "coefficient": "-1/2",
+          "dimension": 1,
+          "partition": [
+            1,
+            1
+          ]
+        }
+      ],
+      "degree": 2,
+      "derangement_classes": 1,
+      "dual_certificate": [
+        {
+          "coefficient": "1",
+          "cycle_type": [
+            2
+          ]
+        }
+      ],
+      "exact_cycle_mass": "1",
+      "fixedpoint_constraints": 1,
+      "free_derangement_values": 0,
+      "hook_only_branching_diagnostic": {
+        "feasible": true,
+        "first_violation_k": null,
+        "maximum_nonhook_capacity_ratio": "0"
+      },
+      "irreducibles": 2,
+      "minimum_relative_nonhook_dual_slack": "not applicable",
+      "optimum_to_exact_cycle_ratio": "1",
+      "unique_optimizer": true,
+      "weighted_l1_optimum": "1"
+    },
+    {
+      "candidate": "exact d-cycle indicator",
+      "candidate_nonzero_coefficients": [
+        {
+          "coefficient": "1/3",
+          "dimension": 1,
+          "partition": [
+            3
+          ]
+        },
+        {
+          "coefficient": "-1/3",
+          "dimension": 2,
+          "partition": [
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/3",
+          "dimension": 1,
+          "partition": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "degree": 3,
+      "derangement_classes": 1,
+      "dual_certificate": [
+        {
+          "coefficient": "-1/3",
+          "cycle_type": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "4/3",
+          "cycle_type": [
+            3
+          ]
+        }
+      ],
+      "exact_cycle_mass": "4/3",
+      "fixedpoint_constraints": 2,
+      "free_derangement_values": 0,
+      "hook_only_branching_diagnostic": {
+        "feasible": true,
+        "first_violation_k": null,
+        "maximum_nonhook_capacity_ratio": "0"
+      },
+      "irreducibles": 3,
+      "minimum_relative_nonhook_dual_slack": "not applicable",
+      "optimum_to_exact_cycle_ratio": "1",
+      "unique_optimizer": true,
+      "weighted_l1_optimum": "4/3"
+    },
+    {
+      "candidate": "exact d-cycle indicator",
+      "candidate_nonzero_coefficients": [
+        {
+          "coefficient": "1/4",
+          "dimension": 1,
+          "partition": [
+            4
+          ]
+        },
+        {
+          "coefficient": "-1/4",
+          "dimension": 3,
+          "partition": [
+            3,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/4",
+          "dimension": 3,
+          "partition": [
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/4",
+          "dimension": 1,
+          "partition": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "degree": 4,
+      "derangement_classes": 2,
+      "dual_certificate": [
+        {
+          "coefficient": "-1",
+          "cycle_type": [
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "2",
+          "cycle_type": [
+            4
+          ]
+        }
+      ],
+      "exact_cycle_mass": "2",
+      "fixedpoint_constraints": 3,
+      "free_derangement_values": 1,
+      "hook_only_branching_diagnostic": {
+        "feasible": true,
+        "first_violation_k": null,
+        "maximum_nonhook_capacity_ratio": "0"
+      },
+      "irreducibles": 5,
+      "minimum_relative_nonhook_dual_slack": "1",
+      "optimum_to_exact_cycle_ratio": "1",
+      "unique_optimizer": true,
+      "weighted_l1_optimum": "2"
+    },
+    {
+      "candidate": "exact d-cycle indicator",
+      "candidate_nonzero_coefficients": [
+        {
+          "coefficient": "1/5",
+          "dimension": 1,
+          "partition": [
+            5
+          ]
+        },
+        {
+          "coefficient": "-1/5",
+          "dimension": 4,
+          "partition": [
+            4,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/5",
+          "dimension": 6,
+          "partition": [
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/5",
+          "dimension": 4,
+          "partition": [
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/5",
+          "dimension": 1,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "degree": 5,
+      "derangement_classes": 2,
+      "dual_certificate": [
+        {
+          "coefficient": "-1",
+          "cycle_type": [
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-5/4",
+          "cycle_type": [
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/20",
+          "cycle_type": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "16/5",
+          "cycle_type": [
+            5
+          ]
+        }
+      ],
+      "exact_cycle_mass": "16/5",
+      "fixedpoint_constraints": 5,
+      "free_derangement_values": 1,
+      "hook_only_branching_diagnostic": {
+        "feasible": true,
+        "first_violation_k": null,
+        "maximum_nonhook_capacity_ratio": "7/25"
+      },
+      "irreducibles": 7,
+      "minimum_relative_nonhook_dual_slack": "1",
+      "optimum_to_exact_cycle_ratio": "1",
+      "unique_optimizer": true,
+      "weighted_l1_optimum": "16/5"
+    },
+    {
+      "candidate": "exact d-cycle indicator",
+      "candidate_nonzero_coefficients": [
+        {
+          "coefficient": "1/6",
+          "dimension": 1,
+          "partition": [
+            6
+          ]
+        },
+        {
+          "coefficient": "-1/6",
+          "dimension": 5,
+          "partition": [
+            5,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/6",
+          "dimension": 10,
+          "partition": [
+            4,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/6",
+          "dimension": 10,
+          "partition": [
+            3,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/6",
+          "dimension": 5,
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/6",
+          "dimension": 1,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "degree": 6,
+      "derangement_classes": 4,
+      "dual_certificate": [
+        {
+          "coefficient": "-4/3",
+          "cycle_type": [
+            4,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-32/9",
+          "cycle_type": [
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": "5/9",
+          "cycle_type": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "16/3",
+          "cycle_type": [
+            6
+          ]
+        }
+      ],
+      "exact_cycle_mass": "16/3",
+      "fixedpoint_constraints": 7,
+      "free_derangement_values": 3,
+      "hook_only_branching_diagnostic": {
+        "feasible": true,
+        "first_violation_k": null,
+        "maximum_nonhook_capacity_ratio": "14/27"
+      },
+      "irreducibles": 11,
+      "minimum_relative_nonhook_dual_slack": "2/3",
+      "optimum_to_exact_cycle_ratio": "1",
+      "unique_optimizer": true,
+      "weighted_l1_optimum": "16/3"
+    },
+    {
+      "candidate": "exact d-cycle indicator",
+      "candidate_nonzero_coefficients": [
+        {
+          "coefficient": "1/7",
+          "dimension": 1,
+          "partition": [
+            7
+          ]
+        },
+        {
+          "coefficient": "-1/7",
+          "dimension": 6,
+          "partition": [
+            6,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/7",
+          "dimension": 15,
+          "partition": [
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/7",
+          "dimension": 20,
+          "partition": [
+            4,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/7",
+          "dimension": 15,
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/7",
+          "dimension": 6,
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/7",
+          "dimension": 1,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "degree": 7,
+      "derangement_classes": 4,
+      "dual_certificate": [
+        {
+          "coefficient": "1/5",
+          "cycle_type": [
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-15/2",
+          "cycle_type": [
+            4,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": "-7/3",
+          "cycle_type": [
+            3,
+            3,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/3",
+          "cycle_type": [
+            3,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "5/4",
+          "cycle_type": [
+            2,
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-13/140",
+          "cycle_type": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "64/7",
+          "cycle_type": [
+            7
+          ]
+        }
+      ],
+      "exact_cycle_mass": "64/7",
+      "fixedpoint_constraints": 11,
+      "free_derangement_values": 3,
+      "hook_only_branching_diagnostic": {
+        "feasible": true,
+        "first_violation_k": null,
+        "maximum_nonhook_capacity_ratio": "79/98"
+      },
+      "irreducibles": 15,
+      "minimum_relative_nonhook_dual_slack": "5/7",
+      "optimum_to_exact_cycle_ratio": "1",
+      "unique_optimizer": true,
+      "weighted_l1_optimum": "64/7"
+    },
+    {
+      "candidate": "exact d-cycle indicator",
+      "candidate_nonzero_coefficients": [
+        {
+          "coefficient": "1/8",
+          "dimension": 1,
+          "partition": [
+            8
+          ]
+        },
+        {
+          "coefficient": "-1/8",
+          "dimension": 7,
+          "partition": [
+            7,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/8",
+          "dimension": 21,
+          "partition": [
+            6,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/8",
+          "dimension": 35,
+          "partition": [
+            5,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/8",
+          "dimension": 35,
+          "partition": [
+            4,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/8",
+          "dimension": 21,
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/8",
+          "dimension": 7,
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/8",
+          "dimension": 1,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "degree": 8,
+      "derangement_classes": 7,
+      "dual_certificate": [
+        {
+          "coefficient": "1327/186",
+          "cycle_type": [
+            6,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1881/155",
+          "cycle_type": [
+            5,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": "-252/155",
+          "cycle_type": [
+            5,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1503/124",
+          "cycle_type": [
+            4,
+            3,
+            1
+          ]
+        },
+        {
+          "coefficient": "1103/248",
+          "cycle_type": [
+            4,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-351/248",
+          "cycle_type": [
+            4,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-599/558",
+          "cycle_type": [
+            3,
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1103/744",
+          "cycle_type": [
+            3,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": "823/372",
+          "cycle_type": [
+            3,
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "913/2232",
+          "cycle_type": [
+            3,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1837/1488",
+          "cycle_type": [
+            2,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1103/1488",
+          "cycle_type": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "673/7440",
+          "cycle_type": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1483/22320",
+          "cycle_type": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "16",
+          "cycle_type": [
+            8
+          ]
+        }
+      ],
+      "exact_cycle_mass": "16",
+      "fixedpoint_constraints": 15,
+      "free_derangement_values": 6,
+      "hook_only_branching_diagnostic": {
+        "feasible": false,
+        "first_violation_k": 1,
+        "maximum_nonhook_capacity_ratio": "6/5"
+      },
+      "irreducibles": 22,
+      "minimum_relative_nonhook_dual_slack": "19/31",
+      "optimum_to_exact_cycle_ratio": "1",
+      "unique_optimizer": true,
+      "weighted_l1_optimum": "16"
+    },
+    {
+      "candidate": "exact d-cycle indicator",
+      "candidate_nonzero_coefficients": [
+        {
+          "coefficient": "1/9",
+          "dimension": 1,
+          "partition": [
+            9
+          ]
+        },
+        {
+          "coefficient": "-1/9",
+          "dimension": 8,
+          "partition": [
+            8,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/9",
+          "dimension": 28,
+          "partition": [
+            7,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/9",
+          "dimension": 56,
+          "partition": [
+            6,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/9",
+          "dimension": 70,
+          "partition": [
+            5,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/9",
+          "dimension": 56,
+          "partition": [
+            4,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/9",
+          "dimension": 28,
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/9",
+          "dimension": 8,
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/9",
+          "dimension": 1,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "degree": 9,
+      "derangement_classes": 8,
+      "dual_certificate": [
+        {
+          "coefficient": "15943/665",
+          "cycle_type": [
+            7,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-4599/190",
+          "cycle_type": [
+            6,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": "-84694/4275",
+          "cycle_type": [
+            5,
+            3,
+            1
+          ]
+        },
+        {
+          "coefficient": "-5359/855",
+          "cycle_type": [
+            5,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-50593/4560",
+          "cycle_type": [
+            4,
+            4,
+            1
+          ]
+        },
+        {
+          "coefficient": "1171/456",
+          "cycle_type": [
+            4,
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-83/270",
+          "cycle_type": [
+            3,
+            3,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1393/190",
+          "cycle_type": [
+            3,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "29789/25650",
+          "cycle_type": [
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-919/3648",
+          "cycle_type": [
+            2,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": "-233/480",
+          "cycle_type": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-63829/1149120",
+          "cycle_type": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "256/9",
+          "cycle_type": [
+            9
+          ]
+        }
+      ],
+      "exact_cycle_mass": "256/9",
+      "fixedpoint_constraints": 22,
+      "free_derangement_values": 7,
+      "hook_only_branching_diagnostic": {
+        "feasible": false,
+        "first_violation_k": 1,
+        "maximum_nonhook_capacity_ratio": "431/243"
+      },
+      "irreducibles": 30,
+      "minimum_relative_nonhook_dual_slack": "63/95",
+      "optimum_to_exact_cycle_ratio": "1",
+      "unique_optimizer": true,
+      "weighted_l1_optimum": "256/9"
+    },
+    {
+      "candidate": "exact d-cycle indicator",
+      "candidate_nonzero_coefficients": [
+        {
+          "coefficient": "1/10",
+          "dimension": 1,
+          "partition": [
+            10
+          ]
+        },
+        {
+          "coefficient": "-1/10",
+          "dimension": 9,
+          "partition": [
+            9,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/10",
+          "dimension": 36,
+          "partition": [
+            8,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/10",
+          "dimension": 84,
+          "partition": [
+            7,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/10",
+          "dimension": 126,
+          "partition": [
+            6,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/10",
+          "dimension": 126,
+          "partition": [
+            5,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/10",
+          "dimension": 84,
+          "partition": [
+            4,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/10",
+          "dimension": 36,
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1/10",
+          "dimension": 9,
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-1/10",
+          "dimension": 1,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "degree": 10,
+      "derangement_classes": 12,
+      "dual_certificate": [
+        {
+          "coefficient": "11941/165",
+          "cycle_type": [
+            8,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-46252/1155",
+          "cycle_type": [
+            7,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": "25532/1155",
+          "cycle_type": [
+            7,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-13516/297",
+          "cycle_type": [
+            6,
+            3,
+            1
+          ]
+        },
+        {
+          "coefficient": "-2656/165",
+          "cycle_type": [
+            6,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-4679/297",
+          "cycle_type": [
+            6,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-30326/825",
+          "cycle_type": [
+            5,
+            4,
+            1
+          ]
+        },
+        {
+          "coefficient": "-2146/99",
+          "cycle_type": [
+            5,
+            3,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "11761/1650",
+          "cycle_type": [
+            5,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": "-9508/825",
+          "cycle_type": [
+            5,
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-19411/4950",
+          "cycle_type": [
+            5,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1189/264",
+          "cycle_type": [
+            4,
+            4,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-3793/990",
+          "cycle_type": [
+            4,
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": "-3668/495",
+          "cycle_type": [
+            4,
+            3,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "14027/660",
+          "cycle_type": [
+            4,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-10249/1980",
+          "cycle_type": [
+            4,
+            2,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "35617/9900",
+          "cycle_type": [
+            4,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "2650/297",
+          "cycle_type": [
+            3,
+            3,
+            3,
+            1
+          ]
+        },
+        {
+          "coefficient": "18989/1485",
+          "cycle_type": [
+            3,
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-2326/1485",
+          "cycle_type": [
+            3,
+            3,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-2179/594",
+          "cycle_type": [
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "coefficient": "8011/660",
+          "cycle_type": [
+            3,
+            2,
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "1643/594",
+          "cycle_type": [
+            3,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "6731/5940",
+          "cycle_type": [
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-5523/1760",
+          "cycle_type": [
+            2,
+            2,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-2969/1485",
+          "cycle_type": [
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-5773/13200",
+          "cycle_type": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-31657/103950",
+          "cycle_type": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "-15971/184800",
+          "cycle_type": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coefficient": "256/5",
+          "cycle_type": [
+            10
+          ]
+        }
+      ],
+      "exact_cycle_mass": "256/5",
+      "fixedpoint_constraints": 30,
+      "free_derangement_values": 11,
+      "hook_only_branching_diagnostic": {
+        "feasible": false,
+        "first_violation_k": 1,
+        "maximum_nonhook_capacity_ratio": "66/25"
+      },
+      "irreducibles": 42,
+      "minimum_relative_nonhook_dual_slack": "34/55",
+      "optimum_to_exact_cycle_ratio": "1",
+      "unique_optimizer": true,
+      "weighted_l1_optimum": "256/5"
+    }
+  ],
+  "problem": {
+    "character_expansion": "Q=sum_lambda a_lambda*chi_lambda",
+    "coefficient_field": "real or complex characteristic-zero coefficients; certificates rational",
+    "constraints": "Q((d))=1 and Q(mu)=0 for every cycle type mu containing 1",
+    "equivalent_root_incidence_condition": "Perm_d*Q=0 pointwise, equivalently Res_(S_(d-1))^(S_d) Q=0",
+    "objective": "minimize sum_lambda dim(lambda)*abs(a_lambda)"
+  },
+  "resource_caps": {
+    "character_table_entries": 3581,
+    "curves_or_sheaves": 0,
+    "dual_character_inequalities": 137,
+    "external_lp_calls_in_replay": 0,
+    "finite_field_points": 0,
+    "floating_point_steps_in_replay": 0,
+    "l_functions_or_zeros": 0,
+    "maximum_degree": 10,
+    "maximum_irreducibles": 42,
+    "orthogonality_summands": 116945,
+    "partitions_checked": 137
+  },
+  "schema": "riemann.function_field.ffps_derangement_selector_finite_l1.v1",
+  "scope": {
+    "asymptotic_selector_bound_proved": false,
+    "category": "full semisimple class-function algebra of S_d",
+    "characteristic": 0,
+    "grh_proved": false,
+    "native_ffps_adapter_constructed": false,
+    "novelty_claimed": false,
+    "rh_proved": false
+  },
+  "status": "exact finite optimization through d=10; all-d optimality remains conjectural"
+}

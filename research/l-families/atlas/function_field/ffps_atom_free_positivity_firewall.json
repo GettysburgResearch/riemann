@@ -1,0 +1,143 @@
+{
+  "exact_theorems": {
+    "deduction": "exact atom deletion and nontrivial positive principal domination cannot coexist in one quadratic kernel",
+    "off_coset_signature": "for h balanced cosets of size n: eigenvalues hn (once), -hn/(h-1) (h-1 times), and 0 (h(n-1) times)",
+    "principal_domination": "K >= c vv* implies K_ii >= c |v_i|^2 for every i",
+    "zero_diagonal_psd": "A Hermitian positive-semidefinite matrix with zero diagonal is zero"
+  },
+  "panels": [
+    {
+      "atom_count": 2,
+      "certificate_dimension": 2,
+      "coset_size": 1,
+      "literal_diagonal_before_repair": "0",
+      "negative_eigenvalue": "-2",
+      "negative_multiplicity": 1,
+      "positive_eigenvalue": "2",
+      "positive_multiplicity": 1,
+      "quotient_order": 2,
+      "sharp_scalar_diagonal_repair": "2",
+      "zero_eigenvalue": "0",
+      "zero_multiplicity": 0
+    },
+    {
+      "atom_count": 4,
+      "certificate_dimension": 4,
+      "coset_size": 2,
+      "literal_diagonal_before_repair": "0",
+      "negative_eigenvalue": "-4",
+      "negative_multiplicity": 1,
+      "positive_eigenvalue": "4",
+      "positive_multiplicity": 1,
+      "quotient_order": 2,
+      "sharp_scalar_diagonal_repair": "4",
+      "zero_eigenvalue": "0",
+      "zero_multiplicity": 2
+    },
+    {
+      "atom_count": 10,
+      "certificate_dimension": 10,
+      "coset_size": 5,
+      "literal_diagonal_before_repair": "0",
+      "negative_eigenvalue": "-10",
+      "negative_multiplicity": 1,
+      "positive_eigenvalue": "10",
+      "positive_multiplicity": 1,
+      "quotient_order": 2,
+      "sharp_scalar_diagonal_repair": "10",
+      "zero_eigenvalue": "0",
+      "zero_multiplicity": 8
+    },
+    {
+      "atom_count": 4,
+      "certificate_dimension": 4,
+      "coset_size": 1,
+      "literal_diagonal_before_repair": "0",
+      "negative_eigenvalue": "-4/3",
+      "negative_multiplicity": 3,
+      "positive_eigenvalue": "4",
+      "positive_multiplicity": 1,
+      "quotient_order": 4,
+      "sharp_scalar_diagonal_repair": "4/3",
+      "zero_eigenvalue": "0",
+      "zero_multiplicity": 0
+    },
+    {
+      "atom_count": 8,
+      "certificate_dimension": 8,
+      "coset_size": 2,
+      "literal_diagonal_before_repair": "0",
+      "negative_eigenvalue": "-8/3",
+      "negative_multiplicity": 3,
+      "positive_eigenvalue": "8",
+      "positive_multiplicity": 1,
+      "quotient_order": 4,
+      "sharp_scalar_diagonal_repair": "8/3",
+      "zero_eigenvalue": "0",
+      "zero_multiplicity": 4
+    },
+    {
+      "atom_count": 20,
+      "certificate_dimension": 20,
+      "coset_size": 5,
+      "literal_diagonal_before_repair": "0",
+      "negative_eigenvalue": "-20/3",
+      "negative_multiplicity": 3,
+      "positive_eigenvalue": "20",
+      "positive_multiplicity": 1,
+      "quotient_order": 4,
+      "sharp_scalar_diagonal_repair": "20/3",
+      "zero_eigenvalue": "0",
+      "zero_multiplicity": 16
+    },
+    {
+      "atom_count": 8,
+      "certificate_dimension": 8,
+      "coset_size": 1,
+      "literal_diagonal_before_repair": "0",
+      "negative_eigenvalue": "-8/7",
+      "negative_multiplicity": 7,
+      "positive_eigenvalue": "8",
+      "positive_multiplicity": 1,
+      "quotient_order": 8,
+      "sharp_scalar_diagonal_repair": "8/7",
+      "zero_eigenvalue": "0",
+      "zero_multiplicity": 0
+    },
+    {
+      "atom_count": 16,
+      "certificate_dimension": 16,
+      "coset_size": 2,
+      "literal_diagonal_before_repair": "0",
+      "negative_eigenvalue": "-16/7",
+      "negative_multiplicity": 7,
+      "positive_eigenvalue": "16",
+      "positive_multiplicity": 1,
+      "quotient_order": 8,
+      "sharp_scalar_diagonal_repair": "16/7",
+      "zero_eigenvalue": "0",
+      "zero_multiplicity": 8
+    },
+    {
+      "atom_count": 40,
+      "certificate_dimension": 40,
+      "coset_size": 5,
+      "literal_diagonal_before_repair": "0",
+      "negative_eigenvalue": "-40/7",
+      "negative_multiplicity": 7,
+      "positive_eigenvalue": "40",
+      "positive_multiplicity": 1,
+      "quotient_order": 8,
+      "sharp_scalar_diagonal_repair": "40/7",
+      "zero_eigenvalue": "0",
+      "zero_multiplicity": 32
+    }
+  ],
+  "resource_caps": {
+    "floating_point_operations": 0,
+    "maximum_coset_size": 5,
+    "maximum_matrix_size": 40,
+    "maximum_quotient_order": 8,
+    "point_counts": 0
+  }
+}

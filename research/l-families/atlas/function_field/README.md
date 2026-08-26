@@ -10,6 +10,82 @@ its symmetric-cube functorial pushforward, closed symbolic divisor sums, and
 exact `USp(2g)` character calculations. Nothing here implies RH or GRH over
 the integers.
 
+## Current successor front door
+
+PR #757 adds a large proof-graded successor spanning the fixed-mollified beta
+RH equivalence, its compact boundary primitive and native
+reflection/geodesic forms, its exact ratio-16 beta near-correlation criterion,
+its localization beyond every prescribed subpower primitive-height cutoff,
+and exact Möbius--Gram/biased-Boolean normal forms for the remaining
+primitive-pair target, now identified as the fixed-height harmonic limit of
+the actual incidence Gram together with a stronger dyadic `PRIMCAR` gate and
+an exact invertible convolution which proves the `rho`-weighted one-variable
+Möbius coefficient has the same positive Mertens exponents as ordinary
+Möbius, while the pair zero mode becomes a Boolean-compressed weighted
+superposition whose squarefreeness, coprimality, and sieve incidence reassemble
+in the same generalized primitive panel with scales `(A,B,q)`. For
+each of the three actual `(alpha,0)` channels, fixed squarefree
+67-free `q` has
+`3^omega(q)` compatible colorings and `d=1` has
+`2^omega(q)` saturated rays. The exact positive-norm hierarchy is
+`RAYPRIMCAR -> COLLPRIMCAR <- GENPRIMCAR`: the two stronger gates
+are formally incomparable, the former pays a convergent
+`K_67(epsilon)` cost for `0<epsilon<1`, and the latter a
+polylogarithmic height tax. All three estimates remain open. The successor
+also proves that all compatible `r/s` colors at fixed `(d,u=rs)` have
+one common weight, so their interference can be retained before taking a
+norm. The resulting quadratic `AUXCOLORPRIMCAR` gate
+(`COLORPRIMCAR` at `D=1`) controls the auxiliary rho-sieved energy
+with sharp Hilbert cost `J_67`; `RAYPRIMCAR` implies it, while it is
+formally incomparable with `COLLPRIMCAR` and `GENPRIMCAR`. This
+fourth estimate is also open and leaves nonzero incidence modes untouched.
+Its quadratic energy is exactly a signed primitive-pair support-overlap Gram
+with kernel `prod_(p|gcd(N,M))(1+sqrt(p)/(p+1))`; the formula is exact,
+but its cross terms are not positive and its local determinant degenerates.
+The complete color family retains every product-shell amplitude through an
+exact upper-divisor Möbius inverse, while erasing orientations within a shell;
+recovery measured in the local weighted overlap-Gram norm has condition
+number asymptotic to `4sqrt(p)`.
+Writing `N=uM` then cancels the core sign and square root completely: every
+coherent color is a one-variable Möbius sum against an explicit divisor
+wavelet. The new per-core gate `WAVEPRIMCAR` conditionally implies
+`AUXCOLORPRIMCAR` with Euler threshold `eta<1/2`; it remains unproved and
+does not touch nonzero incidence modes. Ratio-16 kernel support makes the
+wavelet near-square and confines each cofactor to a factor-64 shell around
+`H^2/(67^alpha u)`.
+The successor
+also includes the exact refutation of the raw Jordan premise,
+hard-mask relative projectors and conductor ledgers, odd-notch boundary
+densities through every fixed depth, their local anti-concentration law, and
+an `O(M^-2)` whole-layer theorem through logarithmically growing depth,
+plus a profile chi-square criterion which permits a logarithmic gap to the
+residue-entropy wall when its discrete modulus satisfies the displayed gate,
+and an exact detector-specific squareclass quotient which crosses that wall
+by an additive `log log` depth window,
+the forced exponential mass of an exact universal cycle selector, its exact-
+finite derangement relaxation through degree ten, a universal degree-shell
+ternary norm torsor of physical rank `48` and linear tame boundary cost, and
+an exact closed-point Adams extractor which replaces the exponential cycle
+selector by `2^(omega(a)+omega(b))` nonzero signed traces for separable
+kernels, and
+an all-degree `tanh` structural calibration with a sharp nonhook gap,
+descent-set rigidity, almost-half-depth two-row propagation, and a stable-tail
+theorem which forces exponential transport throughout every fixed edge
+neighborhood while leaving the moving-tail bulk gate open,
+and the genus-two `Sym^12`
+comparison. For `Sym^12`, the exact `p=3,5,7` residual has a unique formal
+one-Tate repair inside the displayed carrier ledger; actual compact-support
+Galois realization and any all-`q` correction remain open.
+Do not try to infer that frontier from the alphabetical packet list below.
+Start at:
+
+1. [`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](../SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md);
+2. [`SHEAF_AMPLIFIER_RESEARCH_MAP.md`](../SHEAF_AMPLIFIER_RESEARCH_MAP.md);
+3. [`SHEAF_AMPLIFIER_RELEASE_AUDIT.md`](../SHEAF_AMPLIFIER_RELEASE_AUDIT.md).
+
+Nothing in that successor proves RH or GRH. The native reflection estimate
+is an exact RH-equivalent open gate, not a completed estimate.
+
 ## Files
 
 - `pilot.py` implements dependency-free polynomial arithmetic, factorization,

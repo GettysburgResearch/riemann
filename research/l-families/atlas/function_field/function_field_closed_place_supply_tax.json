@@ -1,0 +1,89 @@
+{
+  "large_deviation": {
+    "cutoff": "D=floor(n^beta), beta<alpha/delta",
+    "probability": "Pr(Omega_E(F;D)>=r)<=n^(-J+o(1))",
+    "rank": "r=floor(alpha*log n)",
+    "rate": "J=alpha*log(alpha/(delta*beta))-alpha+delta*beta"
+  },
+  "panels": [
+    {
+      "critical_place_degree_exponent": "0.400000000000",
+      "eligible_density": 0.5,
+      "expected_short_factor_exponent": 0.1,
+      "formal_leverage_exponent": "0.044628710263",
+      "rank_exponent_alpha": 0.2,
+      "short_place_cutoff_exponent_beta": 0.2,
+      "upper_tail_rate": "0.038629436112"
+    },
+    {
+      "critical_place_degree_exponent": "0.548128923568",
+      "eligible_density": 0.5,
+      "expected_short_factor_exponent": 0.2,
+      "formal_leverage_exponent": "0.061155717291",
+      "rank_exponent_alpha": 0.274064461784,
+      "short_place_cutoff_exponent_beta": 0.4,
+      "upper_tail_rate": "0.012278443560"
+    },
+    {
+      "critical_place_degree_exponent": "0.600000000000",
+      "eligible_density": 0.5,
+      "expected_short_factor_exponent": 0.24,
+      "formal_leverage_exponent": "0.066943065394",
+      "rank_exponent_alpha": 0.3,
+      "short_place_cutoff_exponent_beta": 0.48,
+      "upper_tail_rate": "0.006943065394"
+    },
+    {
+      "critical_place_degree_exponent": "0.400000000000",
+      "eligible_density": 1.0,
+      "expected_short_factor_exponent": 0.3,
+      "formal_leverage_exponent": "0.089257420526",
+      "rank_exponent_alpha": 0.4,
+      "short_place_cutoff_exponent_beta": 0.3,
+      "upper_tail_rate": "0.015072828981"
+    },
+    {
+      "critical_place_degree_exponent": "0.548128923568",
+      "eligible_density": 1.0,
+      "expected_short_factor_exponent": 0.45,
+      "formal_leverage_exponent": "0.122311434583",
+      "rank_exponent_alpha": 0.548128923568,
+      "short_place_cutoff_exponent_beta": 0.45,
+      "upper_tail_rate": "0.009996598571"
+    },
+    {
+      "critical_place_degree_exponent": "0.600000000000",
+      "eligible_density": 1.0,
+      "expected_short_factor_exponent": 0.55,
+      "formal_leverage_exponent": "0.133886130789",
+      "rank_exponent_alpha": 0.6,
+      "short_place_cutoff_exponent_beta": 0.55,
+      "upper_tail_rate": "0.002206826194"
+    }
+  ],
+  "resource_caps": {
+    "closed_places_enumerated": 0,
+    "curves_enumerated": 0,
+    "exponent_panels": 6,
+    "floating_point_evaluations": 40,
+    "point_counts": 0,
+    "polynomials_enumerated": 0
+  },
+  "supply_tax": {
+    "allowable_conductor_power": {
+      "criterion": "a D^theta loss requires theta<delta*log(5/4)",
+      "delta_1": "0.223143551314",
+      "delta_1_over_2": "0.111571775657"
+    },
+    "degree_to_leverage_exponent_ratio": {
+      "delta_1": "4.481420117725",
+      "delta_1_over_2": "8.962840235449"
+    },
+    "leverage_gain": "n^(-alpha*log(5/4)+o(1))",
+    "typical_rth_place_degree": "log(d_(r))/log(n) >= alpha/delta-o_Pr(1)"
+  },
+  "truncated_factor_mgf": {
+    "bound": "E[s^Omega_E(F;D)] <= C_q*D^(delta*(s-1))",
+    "range": "s>=1, D<n, F monic squarefree of degree n"
+  }
+}

@@ -1,0 +1,909 @@
+{
+  "panels": [
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 2,
+      "block_relation_intersection_dimension": 0,
+      "blocks": 2,
+      "hard_invariant_coefficient": 1,
+      "invariant_dimension": 0,
+      "invariant_selected_mode_count": 0,
+      "normalized_selected_invariant_coefficient": "0",
+      "off_coset_interferometer_invariant_coefficient": "1",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 0,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 0,
+      "visible_codimension": 0
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 2,
+      "block_relation_intersection_dimension": 1,
+      "blocks": 2,
+      "hard_invariant_coefficient": 2,
+      "invariant_dimension": 1,
+      "invariant_selected_mode_count": 1,
+      "normalized_selected_invariant_coefficient": "1/3",
+      "off_coset_interferometer_invariant_coefficient": "2/3",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 1,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 1,
+      "visible_codimension": 1
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": false,
+      "block_kernel_dimension": 0,
+      "block_rank": 2,
+      "block_relation_intersection_dimension": 1,
+      "blocks": 2,
+      "hard_invariant_coefficient": 0,
+      "invariant_dimension": 1,
+      "invariant_selected_mode_count": 1,
+      "normalized_selected_invariant_coefficient": "-1/3",
+      "off_coset_interferometer_invariant_coefficient": "4/3",
+      "panel": "nontrivial_arithmetic_coset",
+      "relation_rank": 1,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": -1,
+      "visible_codimension": 1
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 2,
+      "block_relation_intersection_dimension": 2,
+      "blocks": 2,
+      "hard_invariant_coefficient": 4,
+      "invariant_dimension": 2,
+      "invariant_selected_mode_count": 3,
+      "normalized_selected_invariant_coefficient": "1",
+      "off_coset_interferometer_invariant_coefficient": "0",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 2,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 3,
+      "visible_codimension": 2
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": false,
+      "block_kernel_dimension": 0,
+      "block_rank": 2,
+      "block_relation_intersection_dimension": 2,
+      "blocks": 2,
+      "hard_invariant_coefficient": 0,
+      "invariant_dimension": 2,
+      "invariant_selected_mode_count": 3,
+      "normalized_selected_invariant_coefficient": "-1/3",
+      "off_coset_interferometer_invariant_coefficient": "4/3",
+      "panel": "nontrivial_arithmetic_coset",
+      "relation_rank": 2,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": -1,
+      "visible_codimension": 2
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 4,
+      "block_relation_intersection_dimension": 0,
+      "blocks": 4,
+      "hard_invariant_coefficient": 1,
+      "invariant_dimension": 0,
+      "invariant_selected_mode_count": 0,
+      "normalized_selected_invariant_coefficient": "0",
+      "off_coset_interferometer_invariant_coefficient": "1",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 0,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 0,
+      "visible_codimension": 0
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 4,
+      "block_relation_intersection_dimension": 1,
+      "blocks": 4,
+      "hard_invariant_coefficient": 2,
+      "invariant_dimension": 1,
+      "invariant_selected_mode_count": 1,
+      "normalized_selected_invariant_coefficient": "1/15",
+      "off_coset_interferometer_invariant_coefficient": "14/15",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 1,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 1,
+      "visible_codimension": 1
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": false,
+      "block_kernel_dimension": 0,
+      "block_rank": 4,
+      "block_relation_intersection_dimension": 1,
+      "blocks": 4,
+      "hard_invariant_coefficient": 0,
+      "invariant_dimension": 1,
+      "invariant_selected_mode_count": 1,
+      "normalized_selected_invariant_coefficient": "-1/15",
+      "off_coset_interferometer_invariant_coefficient": "16/15",
+      "panel": "nontrivial_arithmetic_coset",
+      "relation_rank": 1,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": -1,
+      "visible_codimension": 1
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 4,
+      "block_relation_intersection_dimension": 2,
+      "blocks": 4,
+      "hard_invariant_coefficient": 4,
+      "invariant_dimension": 2,
+      "invariant_selected_mode_count": 3,
+      "normalized_selected_invariant_coefficient": "1/5",
+      "off_coset_interferometer_invariant_coefficient": "4/5",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 2,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 3,
+      "visible_codimension": 2
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": false,
+      "block_kernel_dimension": 0,
+      "block_rank": 4,
+      "block_relation_intersection_dimension": 2,
+      "blocks": 4,
+      "hard_invariant_coefficient": 0,
+      "invariant_dimension": 2,
+      "invariant_selected_mode_count": 3,
+      "normalized_selected_invariant_coefficient": "-1/15",
+      "off_coset_interferometer_invariant_coefficient": "16/15",
+      "panel": "nontrivial_arithmetic_coset",
+      "relation_rank": 2,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": -1,
+      "visible_codimension": 2
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 4,
+      "block_relation_intersection_dimension": 4,
+      "blocks": 4,
+      "hard_invariant_coefficient": 16,
+      "invariant_dimension": 4,
+      "invariant_selected_mode_count": 15,
+      "normalized_selected_invariant_coefficient": "1",
+      "off_coset_interferometer_invariant_coefficient": "0",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 4,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 15,
+      "visible_codimension": 4
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": false,
+      "block_kernel_dimension": 0,
+      "block_rank": 4,
+      "block_relation_intersection_dimension": 4,
+      "blocks": 4,
+      "hard_invariant_coefficient": 0,
+      "invariant_dimension": 4,
+      "invariant_selected_mode_count": 15,
+      "normalized_selected_invariant_coefficient": "-1/15",
+      "off_coset_interferometer_invariant_coefficient": "16/15",
+      "panel": "nontrivial_arithmetic_coset",
+      "relation_rank": 4,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": -1,
+      "visible_codimension": 4
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 8,
+      "block_relation_intersection_dimension": 0,
+      "blocks": 8,
+      "hard_invariant_coefficient": 1,
+      "invariant_dimension": 0,
+      "invariant_selected_mode_count": 0,
+      "normalized_selected_invariant_coefficient": "0",
+      "off_coset_interferometer_invariant_coefficient": "1",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 0,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 0,
+      "visible_codimension": 0
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 8,
+      "block_relation_intersection_dimension": 1,
+      "blocks": 8,
+      "hard_invariant_coefficient": 2,
+      "invariant_dimension": 1,
+      "invariant_selected_mode_count": 1,
+      "normalized_selected_invariant_coefficient": "1/255",
+      "off_coset_interferometer_invariant_coefficient": "254/255",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 1,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 1,
+      "visible_codimension": 1
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": false,
+      "block_kernel_dimension": 0,
+      "block_rank": 8,
+      "block_relation_intersection_dimension": 1,
+      "blocks": 8,
+      "hard_invariant_coefficient": 0,
+      "invariant_dimension": 1,
+      "invariant_selected_mode_count": 1,
+      "normalized_selected_invariant_coefficient": "-1/255",
+      "off_coset_interferometer_invariant_coefficient": "256/255",
+      "panel": "nontrivial_arithmetic_coset",
+      "relation_rank": 1,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": -1,
+      "visible_codimension": 1
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 8,
+      "block_relation_intersection_dimension": 2,
+      "blocks": 8,
+      "hard_invariant_coefficient": 4,
+      "invariant_dimension": 2,
+      "invariant_selected_mode_count": 3,
+      "normalized_selected_invariant_coefficient": "1/85",
+      "off_coset_interferometer_invariant_coefficient": "84/85",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 2,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 3,
+      "visible_codimension": 2
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": false,
+      "block_kernel_dimension": 0,
+      "block_rank": 8,
+      "block_relation_intersection_dimension": 2,
+      "blocks": 8,
+      "hard_invariant_coefficient": 0,
+      "invariant_dimension": 2,
+      "invariant_selected_mode_count": 3,
+      "normalized_selected_invariant_coefficient": "-1/255",
+      "off_coset_interferometer_invariant_coefficient": "256/255",
+      "panel": "nontrivial_arithmetic_coset",
+      "relation_rank": 2,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": -1,
+      "visible_codimension": 2
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 8,
+      "block_relation_intersection_dimension": 8,
+      "blocks": 8,
+      "hard_invariant_coefficient": 256,
+      "invariant_dimension": 8,
+      "invariant_selected_mode_count": 255,
+      "normalized_selected_invariant_coefficient": "1",
+      "off_coset_interferometer_invariant_coefficient": "0",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 8,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 255,
+      "visible_codimension": 8
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": false,
+      "block_kernel_dimension": 0,
+      "block_rank": 8,
+      "block_relation_intersection_dimension": 8,
+      "blocks": 8,
+      "hard_invariant_coefficient": 0,
+      "invariant_dimension": 8,
+      "invariant_selected_mode_count": 255,
+      "normalized_selected_invariant_coefficient": "-1/255",
+      "off_coset_interferometer_invariant_coefficient": "256/255",
+      "panel": "nontrivial_arithmetic_coset",
+      "relation_rank": 8,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": -1,
+      "visible_codimension": 8
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 10,
+      "block_relation_intersection_dimension": 0,
+      "blocks": 10,
+      "hard_invariant_coefficient": 1,
+      "invariant_dimension": 0,
+      "invariant_selected_mode_count": 0,
+      "normalized_selected_invariant_coefficient": "0",
+      "off_coset_interferometer_invariant_coefficient": "1",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 0,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 0,
+      "visible_codimension": 0
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 10,
+      "block_relation_intersection_dimension": 1,
+      "blocks": 10,
+      "hard_invariant_coefficient": 2,
+      "invariant_dimension": 1,
+      "invariant_selected_mode_count": 1,
+      "normalized_selected_invariant_coefficient": "1/1023",
+      "off_coset_interferometer_invariant_coefficient": "1022/1023",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 1,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 1,
+      "visible_codimension": 1
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": false,
+      "block_kernel_dimension": 0,
+      "block_rank": 10,
+      "block_relation_intersection_dimension": 1,
+      "blocks": 10,
+      "hard_invariant_coefficient": 0,
+      "invariant_dimension": 1,
+      "invariant_selected_mode_count": 1,
+      "normalized_selected_invariant_coefficient": "-1/1023",
+      "off_coset_interferometer_invariant_coefficient": "1024/1023",
+      "panel": "nontrivial_arithmetic_coset",
+      "relation_rank": 1,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": -1,
+      "visible_codimension": 1
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 10,
+      "block_relation_intersection_dimension": 2,
+      "blocks": 10,
+      "hard_invariant_coefficient": 4,
+      "invariant_dimension": 2,
+      "invariant_selected_mode_count": 3,
+      "normalized_selected_invariant_coefficient": "1/341",
+      "off_coset_interferometer_invariant_coefficient": "340/341",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 2,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 3,
+      "visible_codimension": 2
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": false,
+      "block_kernel_dimension": 0,
+      "block_rank": 10,
+      "block_relation_intersection_dimension": 2,
+      "blocks": 10,
+      "hard_invariant_coefficient": 0,
+      "invariant_dimension": 2,
+      "invariant_selected_mode_count": 3,
+      "normalized_selected_invariant_coefficient": "-1/1023",
+      "off_coset_interferometer_invariant_coefficient": "1024/1023",
+      "panel": "nontrivial_arithmetic_coset",
+      "relation_rank": 2,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": -1,
+      "visible_codimension": 2
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 10,
+      "block_relation_intersection_dimension": 10,
+      "blocks": 10,
+      "hard_invariant_coefficient": 1024,
+      "invariant_dimension": 10,
+      "invariant_selected_mode_count": 1023,
+      "normalized_selected_invariant_coefficient": "1",
+      "off_coset_interferometer_invariant_coefficient": "0",
+      "panel": "orientation_preserving_aligned",
+      "relation_rank": 10,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 1023,
+      "visible_codimension": 10
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": false,
+      "block_kernel_dimension": 0,
+      "block_rank": 10,
+      "block_relation_intersection_dimension": 10,
+      "blocks": 10,
+      "hard_invariant_coefficient": 0,
+      "invariant_dimension": 10,
+      "invariant_selected_mode_count": 1023,
+      "normalized_selected_invariant_coefficient": "-1/1023",
+      "off_coset_interferometer_invariant_coefficient": "1024/1023",
+      "panel": "nontrivial_arithmetic_coset",
+      "relation_rank": 10,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": -1,
+      "visible_codimension": 10
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 4,
+      "block_relation_intersection_dimension": 0,
+      "blocks": 4,
+      "hard_invariant_coefficient": 1,
+      "invariant_dimension": 0,
+      "invariant_selected_mode_count": 0,
+      "normalized_selected_invariant_coefficient": "0",
+      "off_coset_interferometer_invariant_coefficient": "1",
+      "panel": "one_sided_collision_is_not_block_visible",
+      "relation_rank": 1,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 0
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 0,
+      "block_rank": 8,
+      "block_relation_intersection_dimension": 8,
+      "blocks": 8,
+      "hard_invariant_coefficient": 256,
+      "invariant_dimension": 8,
+      "invariant_selected_mode_count": 255,
+      "normalized_selected_invariant_coefficient": "1",
+      "off_coset_interferometer_invariant_coefficient": "0",
+      "panel": "full_orientation_preserving_double_collision",
+      "relation_rank": 16,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 255
+    },
+    {
+      "arithmetic_twist_trivial_on_invariants": true,
+      "block_kernel_dimension": 1,
+      "block_rank": 2,
+      "block_relation_intersection_dimension": 0,
+      "blocks": 3,
+      "hard_invariant_coefficient": 2,
+      "invariant_dimension": 1,
+      "invariant_selected_mode_count": 1,
+      "normalized_selected_invariant_coefficient": "1/7",
+      "off_coset_interferometer_invariant_coefficient": "6/7",
+      "panel": "generic_block_dependency_control",
+      "relation_rank": 0,
+      "relative_hard_minus_selected_coefficient": 1,
+      "selected_invariant_coefficient": 1
+    }
+  ],
+  "quotient_projector_checks": [
+    {
+      "blocks": 1,
+      "rows": [
+        {
+          "hard_kernel": 2,
+          "quotient": 0,
+          "relative_kernel": 1,
+          "selected_kernel": 1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 1,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        }
+      ]
+    },
+    {
+      "blocks": 2,
+      "rows": [
+        {
+          "hard_kernel": 4,
+          "quotient": 0,
+          "relative_kernel": 1,
+          "selected_kernel": 3
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 1,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 2,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 3,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        }
+      ]
+    },
+    {
+      "blocks": 3,
+      "rows": [
+        {
+          "hard_kernel": 8,
+          "quotient": 0,
+          "relative_kernel": 1,
+          "selected_kernel": 7
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 1,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 2,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 3,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 4,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 5,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 6,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 7,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        }
+      ]
+    },
+    {
+      "blocks": 4,
+      "rows": [
+        {
+          "hard_kernel": 16,
+          "quotient": 0,
+          "relative_kernel": 1,
+          "selected_kernel": 15
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 1,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 2,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 3,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 4,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 5,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 6,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 7,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 8,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 9,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 10,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 11,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 12,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 13,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 14,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 15,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        }
+      ]
+    },
+    {
+      "blocks": 5,
+      "rows": [
+        {
+          "hard_kernel": 32,
+          "quotient": 0,
+          "relative_kernel": 1,
+          "selected_kernel": 31
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 1,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 2,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 3,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 4,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 5,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 6,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 7,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 8,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 9,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 10,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 11,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 12,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 13,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 14,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 15,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 16,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 17,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 18,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 19,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 20,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 21,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 22,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 23,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 24,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 25,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 26,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 27,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 28,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 29,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 30,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        },
+        {
+          "hard_kernel": 0,
+          "quotient": 31,
+          "relative_kernel": 1,
+          "selected_kernel": -1
+        }
+      ]
+    }
+  ],
+  "resource_caps": {
+    "curves_or_conductors": 0,
+    "finite_field_points": 0,
+    "floating_point_operations": 0,
+    "maximum_blocks": 10,
+    "maximum_quotient_points": 32,
+    "maximum_selected_labels_in_one_panel": 1024,
+    "monomial_strata_enumerated": 0
+  },
+  "theorem": {
+    "invariant_dimension": "d=(r-rank(B))+dim(row(B) intersect relation_space(Z))",
+    "invariant_selected_modes": "2^d-1",
+    "nontrivial_arithmetic_coset_normalized_coefficient": "-1/(2^r-1)",
+    "orientation_preserving_normalized_coefficient": "(2^d-1)/(2^r-1)",
+    "relative_projector": "C-S=Pi_0"
+  }
+}

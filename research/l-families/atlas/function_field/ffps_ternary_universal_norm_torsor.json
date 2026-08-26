@@ -1,0 +1,931 @@
+{
+  "schema": "riemann.function_field.ffps_ternary_universal_norm_torsor.v1",
+  "status": "EXACT_VARYING_PLACE_NORM_TORSOR_NORMAL_FORM",
+  "base_condition": "q is a prime power congruent to 1 modulo 6",
+  "universal_physical_ranks": {
+    "orientation_cover_degree": 16,
+    "cubic_regular_rank": 3,
+    "physical_deck_group": "C2^4 x C3",
+    "physical_deck_group_order": 48,
+    "regular_pushforward": 48,
+    "selected_pushforward": 32,
+    "relative_pushforward": 16
+  },
+  "invariant_law": {
+    "oriented": "2 iff U is a cube, otherwise 0",
+    "physical_descent": "1_[F sixth]+1_[F cube]",
+    "generic": 0
+  },
+  "monodromy_normal_form": "(S_a x S_b) x (C2^4 x C3)",
+  "degree_panels": [
+    {
+      "left_degree": 1,
+      "right_degree": 1,
+      "selected_norm_exponent_coordinates": 4,
+      "orientation_base_coordinates": 6,
+      "toric_boundary_components": 12,
+      "regular_conductor_bound": 576,
+      "selector_rank_mass": "1",
+      "canonical_termwise_rank_masses": {
+        "regular": "48",
+        "selected": "32",
+        "relative": "16"
+      }
+    },
+    {
+      "left_degree": 1,
+      "right_degree": 2,
+      "selected_norm_exponent_coordinates": 6,
+      "orientation_base_coordinates": 9,
+      "toric_boundary_components": 18,
+      "regular_conductor_bound": 864,
+      "selector_rank_mass": "1",
+      "canonical_termwise_rank_masses": {
+        "regular": "48",
+        "selected": "32",
+        "relative": "16"
+      }
+    },
+    {
+      "left_degree": 1,
+      "right_degree": 3,
+      "selected_norm_exponent_coordinates": 8,
+      "orientation_base_coordinates": 12,
+      "toric_boundary_components": 24,
+      "regular_conductor_bound": 1152,
+      "selector_rank_mass": "4/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "64",
+        "selected": "128/3",
+        "relative": "64/3"
+      }
+    },
+    {
+      "left_degree": 1,
+      "right_degree": 4,
+      "selected_norm_exponent_coordinates": 10,
+      "orientation_base_coordinates": 15,
+      "toric_boundary_components": 30,
+      "regular_conductor_bound": 1440,
+      "selector_rank_mass": "2",
+      "canonical_termwise_rank_masses": {
+        "regular": "96",
+        "selected": "64",
+        "relative": "32"
+      }
+    },
+    {
+      "left_degree": 1,
+      "right_degree": 5,
+      "selected_norm_exponent_coordinates": 12,
+      "orientation_base_coordinates": 18,
+      "toric_boundary_components": 36,
+      "regular_conductor_bound": 1728,
+      "selector_rank_mass": "16/5",
+      "canonical_termwise_rank_masses": {
+        "regular": "768/5",
+        "selected": "512/5",
+        "relative": "256/5"
+      }
+    },
+    {
+      "left_degree": 1,
+      "right_degree": 6,
+      "selected_norm_exponent_coordinates": 14,
+      "orientation_base_coordinates": 21,
+      "toric_boundary_components": 42,
+      "regular_conductor_bound": 2016,
+      "selector_rank_mass": "16/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "256",
+        "selected": "512/3",
+        "relative": "256/3"
+      }
+    },
+    {
+      "left_degree": 1,
+      "right_degree": 7,
+      "selected_norm_exponent_coordinates": 16,
+      "orientation_base_coordinates": 24,
+      "toric_boundary_components": 48,
+      "regular_conductor_bound": 2304,
+      "selector_rank_mass": "64/7",
+      "canonical_termwise_rank_masses": {
+        "regular": "3072/7",
+        "selected": "2048/7",
+        "relative": "1024/7"
+      }
+    },
+    {
+      "left_degree": 1,
+      "right_degree": 8,
+      "selected_norm_exponent_coordinates": 18,
+      "orientation_base_coordinates": 27,
+      "toric_boundary_components": 54,
+      "regular_conductor_bound": 2592,
+      "selector_rank_mass": "16",
+      "canonical_termwise_rank_masses": {
+        "regular": "768",
+        "selected": "512",
+        "relative": "256"
+      }
+    },
+    {
+      "left_degree": 2,
+      "right_degree": 1,
+      "selected_norm_exponent_coordinates": 6,
+      "orientation_base_coordinates": 9,
+      "toric_boundary_components": 18,
+      "regular_conductor_bound": 864,
+      "selector_rank_mass": "1",
+      "canonical_termwise_rank_masses": {
+        "regular": "48",
+        "selected": "32",
+        "relative": "16"
+      }
+    },
+    {
+      "left_degree": 2,
+      "right_degree": 2,
+      "selected_norm_exponent_coordinates": 8,
+      "orientation_base_coordinates": 12,
+      "toric_boundary_components": 24,
+      "regular_conductor_bound": 1152,
+      "selector_rank_mass": "1",
+      "canonical_termwise_rank_masses": {
+        "regular": "48",
+        "selected": "32",
+        "relative": "16"
+      }
+    },
+    {
+      "left_degree": 2,
+      "right_degree": 3,
+      "selected_norm_exponent_coordinates": 10,
+      "orientation_base_coordinates": 15,
+      "toric_boundary_components": 30,
+      "regular_conductor_bound": 1440,
+      "selector_rank_mass": "4/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "64",
+        "selected": "128/3",
+        "relative": "64/3"
+      }
+    },
+    {
+      "left_degree": 2,
+      "right_degree": 4,
+      "selected_norm_exponent_coordinates": 12,
+      "orientation_base_coordinates": 18,
+      "toric_boundary_components": 36,
+      "regular_conductor_bound": 1728,
+      "selector_rank_mass": "2",
+      "canonical_termwise_rank_masses": {
+        "regular": "96",
+        "selected": "64",
+        "relative": "32"
+      }
+    },
+    {
+      "left_degree": 2,
+      "right_degree": 5,
+      "selected_norm_exponent_coordinates": 14,
+      "orientation_base_coordinates": 21,
+      "toric_boundary_components": 42,
+      "regular_conductor_bound": 2016,
+      "selector_rank_mass": "16/5",
+      "canonical_termwise_rank_masses": {
+        "regular": "768/5",
+        "selected": "512/5",
+        "relative": "256/5"
+      }
+    },
+    {
+      "left_degree": 2,
+      "right_degree": 6,
+      "selected_norm_exponent_coordinates": 16,
+      "orientation_base_coordinates": 24,
+      "toric_boundary_components": 48,
+      "regular_conductor_bound": 2304,
+      "selector_rank_mass": "16/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "256",
+        "selected": "512/3",
+        "relative": "256/3"
+      }
+    },
+    {
+      "left_degree": 2,
+      "right_degree": 7,
+      "selected_norm_exponent_coordinates": 18,
+      "orientation_base_coordinates": 27,
+      "toric_boundary_components": 54,
+      "regular_conductor_bound": 2592,
+      "selector_rank_mass": "64/7",
+      "canonical_termwise_rank_masses": {
+        "regular": "3072/7",
+        "selected": "2048/7",
+        "relative": "1024/7"
+      }
+    },
+    {
+      "left_degree": 2,
+      "right_degree": 8,
+      "selected_norm_exponent_coordinates": 20,
+      "orientation_base_coordinates": 30,
+      "toric_boundary_components": 60,
+      "regular_conductor_bound": 2880,
+      "selector_rank_mass": "16",
+      "canonical_termwise_rank_masses": {
+        "regular": "768",
+        "selected": "512",
+        "relative": "256"
+      }
+    },
+    {
+      "left_degree": 3,
+      "right_degree": 1,
+      "selected_norm_exponent_coordinates": 8,
+      "orientation_base_coordinates": 12,
+      "toric_boundary_components": 24,
+      "regular_conductor_bound": 1152,
+      "selector_rank_mass": "4/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "64",
+        "selected": "128/3",
+        "relative": "64/3"
+      }
+    },
+    {
+      "left_degree": 3,
+      "right_degree": 2,
+      "selected_norm_exponent_coordinates": 10,
+      "orientation_base_coordinates": 15,
+      "toric_boundary_components": 30,
+      "regular_conductor_bound": 1440,
+      "selector_rank_mass": "4/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "64",
+        "selected": "128/3",
+        "relative": "64/3"
+      }
+    },
+    {
+      "left_degree": 3,
+      "right_degree": 3,
+      "selected_norm_exponent_coordinates": 12,
+      "orientation_base_coordinates": 18,
+      "toric_boundary_components": 36,
+      "regular_conductor_bound": 1728,
+      "selector_rank_mass": "16/9",
+      "canonical_termwise_rank_masses": {
+        "regular": "256/3",
+        "selected": "512/9",
+        "relative": "256/9"
+      }
+    },
+    {
+      "left_degree": 3,
+      "right_degree": 4,
+      "selected_norm_exponent_coordinates": 14,
+      "orientation_base_coordinates": 21,
+      "toric_boundary_components": 42,
+      "regular_conductor_bound": 2016,
+      "selector_rank_mass": "8/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "128",
+        "selected": "256/3",
+        "relative": "128/3"
+      }
+    },
+    {
+      "left_degree": 3,
+      "right_degree": 5,
+      "selected_norm_exponent_coordinates": 16,
+      "orientation_base_coordinates": 24,
+      "toric_boundary_components": 48,
+      "regular_conductor_bound": 2304,
+      "selector_rank_mass": "64/15",
+      "canonical_termwise_rank_masses": {
+        "regular": "1024/5",
+        "selected": "2048/15",
+        "relative": "1024/15"
+      }
+    },
+    {
+      "left_degree": 3,
+      "right_degree": 6,
+      "selected_norm_exponent_coordinates": 18,
+      "orientation_base_coordinates": 27,
+      "toric_boundary_components": 54,
+      "regular_conductor_bound": 2592,
+      "selector_rank_mass": "64/9",
+      "canonical_termwise_rank_masses": {
+        "regular": "1024/3",
+        "selected": "2048/9",
+        "relative": "1024/9"
+      }
+    },
+    {
+      "left_degree": 3,
+      "right_degree": 7,
+      "selected_norm_exponent_coordinates": 20,
+      "orientation_base_coordinates": 30,
+      "toric_boundary_components": 60,
+      "regular_conductor_bound": 2880,
+      "selector_rank_mass": "256/21",
+      "canonical_termwise_rank_masses": {
+        "regular": "4096/7",
+        "selected": "8192/21",
+        "relative": "4096/21"
+      }
+    },
+    {
+      "left_degree": 3,
+      "right_degree": 8,
+      "selected_norm_exponent_coordinates": 22,
+      "orientation_base_coordinates": 33,
+      "toric_boundary_components": 66,
+      "regular_conductor_bound": 3168,
+      "selector_rank_mass": "64/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "1024",
+        "selected": "2048/3",
+        "relative": "1024/3"
+      }
+    },
+    {
+      "left_degree": 4,
+      "right_degree": 1,
+      "selected_norm_exponent_coordinates": 10,
+      "orientation_base_coordinates": 15,
+      "toric_boundary_components": 30,
+      "regular_conductor_bound": 1440,
+      "selector_rank_mass": "2",
+      "canonical_termwise_rank_masses": {
+        "regular": "96",
+        "selected": "64",
+        "relative": "32"
+      }
+    },
+    {
+      "left_degree": 4,
+      "right_degree": 2,
+      "selected_norm_exponent_coordinates": 12,
+      "orientation_base_coordinates": 18,
+      "toric_boundary_components": 36,
+      "regular_conductor_bound": 1728,
+      "selector_rank_mass": "2",
+      "canonical_termwise_rank_masses": {
+        "regular": "96",
+        "selected": "64",
+        "relative": "32"
+      }
+    },
+    {
+      "left_degree": 4,
+      "right_degree": 3,
+      "selected_norm_exponent_coordinates": 14,
+      "orientation_base_coordinates": 21,
+      "toric_boundary_components": 42,
+      "regular_conductor_bound": 2016,
+      "selector_rank_mass": "8/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "128",
+        "selected": "256/3",
+        "relative": "128/3"
+      }
+    },
+    {
+      "left_degree": 4,
+      "right_degree": 4,
+      "selected_norm_exponent_coordinates": 16,
+      "orientation_base_coordinates": 24,
+      "toric_boundary_components": 48,
+      "regular_conductor_bound": 2304,
+      "selector_rank_mass": "4",
+      "canonical_termwise_rank_masses": {
+        "regular": "192",
+        "selected": "128",
+        "relative": "64"
+      }
+    },
+    {
+      "left_degree": 4,
+      "right_degree": 5,
+      "selected_norm_exponent_coordinates": 18,
+      "orientation_base_coordinates": 27,
+      "toric_boundary_components": 54,
+      "regular_conductor_bound": 2592,
+      "selector_rank_mass": "32/5",
+      "canonical_termwise_rank_masses": {
+        "regular": "1536/5",
+        "selected": "1024/5",
+        "relative": "512/5"
+      }
+    },
+    {
+      "left_degree": 4,
+      "right_degree": 6,
+      "selected_norm_exponent_coordinates": 20,
+      "orientation_base_coordinates": 30,
+      "toric_boundary_components": 60,
+      "regular_conductor_bound": 2880,
+      "selector_rank_mass": "32/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "512",
+        "selected": "1024/3",
+        "relative": "512/3"
+      }
+    },
+    {
+      "left_degree": 4,
+      "right_degree": 7,
+      "selected_norm_exponent_coordinates": 22,
+      "orientation_base_coordinates": 33,
+      "toric_boundary_components": 66,
+      "regular_conductor_bound": 3168,
+      "selector_rank_mass": "128/7",
+      "canonical_termwise_rank_masses": {
+        "regular": "6144/7",
+        "selected": "4096/7",
+        "relative": "2048/7"
+      }
+    },
+    {
+      "left_degree": 4,
+      "right_degree": 8,
+      "selected_norm_exponent_coordinates": 24,
+      "orientation_base_coordinates": 36,
+      "toric_boundary_components": 72,
+      "regular_conductor_bound": 3456,
+      "selector_rank_mass": "32",
+      "canonical_termwise_rank_masses": {
+        "regular": "1536",
+        "selected": "1024",
+        "relative": "512"
+      }
+    },
+    {
+      "left_degree": 5,
+      "right_degree": 1,
+      "selected_norm_exponent_coordinates": 12,
+      "orientation_base_coordinates": 18,
+      "toric_boundary_components": 36,
+      "regular_conductor_bound": 1728,
+      "selector_rank_mass": "16/5",
+      "canonical_termwise_rank_masses": {
+        "regular": "768/5",
+        "selected": "512/5",
+        "relative": "256/5"
+      }
+    },
+    {
+      "left_degree": 5,
+      "right_degree": 2,
+      "selected_norm_exponent_coordinates": 14,
+      "orientation_base_coordinates": 21,
+      "toric_boundary_components": 42,
+      "regular_conductor_bound": 2016,
+      "selector_rank_mass": "16/5",
+      "canonical_termwise_rank_masses": {
+        "regular": "768/5",
+        "selected": "512/5",
+        "relative": "256/5"
+      }
+    },
+    {
+      "left_degree": 5,
+      "right_degree": 3,
+      "selected_norm_exponent_coordinates": 16,
+      "orientation_base_coordinates": 24,
+      "toric_boundary_components": 48,
+      "regular_conductor_bound": 2304,
+      "selector_rank_mass": "64/15",
+      "canonical_termwise_rank_masses": {
+        "regular": "1024/5",
+        "selected": "2048/15",
+        "relative": "1024/15"
+      }
+    },
+    {
+      "left_degree": 5,
+      "right_degree": 4,
+      "selected_norm_exponent_coordinates": 18,
+      "orientation_base_coordinates": 27,
+      "toric_boundary_components": 54,
+      "regular_conductor_bound": 2592,
+      "selector_rank_mass": "32/5",
+      "canonical_termwise_rank_masses": {
+        "regular": "1536/5",
+        "selected": "1024/5",
+        "relative": "512/5"
+      }
+    },
+    {
+      "left_degree": 5,
+      "right_degree": 5,
+      "selected_norm_exponent_coordinates": 20,
+      "orientation_base_coordinates": 30,
+      "toric_boundary_components": 60,
+      "regular_conductor_bound": 2880,
+      "selector_rank_mass": "256/25",
+      "canonical_termwise_rank_masses": {
+        "regular": "12288/25",
+        "selected": "8192/25",
+        "relative": "4096/25"
+      }
+    },
+    {
+      "left_degree": 5,
+      "right_degree": 6,
+      "selected_norm_exponent_coordinates": 22,
+      "orientation_base_coordinates": 33,
+      "toric_boundary_components": 66,
+      "regular_conductor_bound": 3168,
+      "selector_rank_mass": "256/15",
+      "canonical_termwise_rank_masses": {
+        "regular": "4096/5",
+        "selected": "8192/15",
+        "relative": "4096/15"
+      }
+    },
+    {
+      "left_degree": 5,
+      "right_degree": 7,
+      "selected_norm_exponent_coordinates": 24,
+      "orientation_base_coordinates": 36,
+      "toric_boundary_components": 72,
+      "regular_conductor_bound": 3456,
+      "selector_rank_mass": "1024/35",
+      "canonical_termwise_rank_masses": {
+        "regular": "49152/35",
+        "selected": "32768/35",
+        "relative": "16384/35"
+      }
+    },
+    {
+      "left_degree": 5,
+      "right_degree": 8,
+      "selected_norm_exponent_coordinates": 26,
+      "orientation_base_coordinates": 39,
+      "toric_boundary_components": 78,
+      "regular_conductor_bound": 3744,
+      "selector_rank_mass": "256/5",
+      "canonical_termwise_rank_masses": {
+        "regular": "12288/5",
+        "selected": "8192/5",
+        "relative": "4096/5"
+      }
+    },
+    {
+      "left_degree": 6,
+      "right_degree": 1,
+      "selected_norm_exponent_coordinates": 14,
+      "orientation_base_coordinates": 21,
+      "toric_boundary_components": 42,
+      "regular_conductor_bound": 2016,
+      "selector_rank_mass": "16/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "256",
+        "selected": "512/3",
+        "relative": "256/3"
+      }
+    },
+    {
+      "left_degree": 6,
+      "right_degree": 2,
+      "selected_norm_exponent_coordinates": 16,
+      "orientation_base_coordinates": 24,
+      "toric_boundary_components": 48,
+      "regular_conductor_bound": 2304,
+      "selector_rank_mass": "16/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "256",
+        "selected": "512/3",
+        "relative": "256/3"
+      }
+    },
+    {
+      "left_degree": 6,
+      "right_degree": 3,
+      "selected_norm_exponent_coordinates": 18,
+      "orientation_base_coordinates": 27,
+      "toric_boundary_components": 54,
+      "regular_conductor_bound": 2592,
+      "selector_rank_mass": "64/9",
+      "canonical_termwise_rank_masses": {
+        "regular": "1024/3",
+        "selected": "2048/9",
+        "relative": "1024/9"
+      }
+    },
+    {
+      "left_degree": 6,
+      "right_degree": 4,
+      "selected_norm_exponent_coordinates": 20,
+      "orientation_base_coordinates": 30,
+      "toric_boundary_components": 60,
+      "regular_conductor_bound": 2880,
+      "selector_rank_mass": "32/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "512",
+        "selected": "1024/3",
+        "relative": "512/3"
+      }
+    },
+    {
+      "left_degree": 6,
+      "right_degree": 5,
+      "selected_norm_exponent_coordinates": 22,
+      "orientation_base_coordinates": 33,
+      "toric_boundary_components": 66,
+      "regular_conductor_bound": 3168,
+      "selector_rank_mass": "256/15",
+      "canonical_termwise_rank_masses": {
+        "regular": "4096/5",
+        "selected": "8192/15",
+        "relative": "4096/15"
+      }
+    },
+    {
+      "left_degree": 6,
+      "right_degree": 6,
+      "selected_norm_exponent_coordinates": 24,
+      "orientation_base_coordinates": 36,
+      "toric_boundary_components": 72,
+      "regular_conductor_bound": 3456,
+      "selector_rank_mass": "256/9",
+      "canonical_termwise_rank_masses": {
+        "regular": "4096/3",
+        "selected": "8192/9",
+        "relative": "4096/9"
+      }
+    },
+    {
+      "left_degree": 6,
+      "right_degree": 7,
+      "selected_norm_exponent_coordinates": 26,
+      "orientation_base_coordinates": 39,
+      "toric_boundary_components": 78,
+      "regular_conductor_bound": 3744,
+      "selector_rank_mass": "1024/21",
+      "canonical_termwise_rank_masses": {
+        "regular": "16384/7",
+        "selected": "32768/21",
+        "relative": "16384/21"
+      }
+    },
+    {
+      "left_degree": 6,
+      "right_degree": 8,
+      "selected_norm_exponent_coordinates": 28,
+      "orientation_base_coordinates": 42,
+      "toric_boundary_components": 84,
+      "regular_conductor_bound": 4032,
+      "selector_rank_mass": "256/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "4096",
+        "selected": "8192/3",
+        "relative": "4096/3"
+      }
+    },
+    {
+      "left_degree": 7,
+      "right_degree": 1,
+      "selected_norm_exponent_coordinates": 16,
+      "orientation_base_coordinates": 24,
+      "toric_boundary_components": 48,
+      "regular_conductor_bound": 2304,
+      "selector_rank_mass": "64/7",
+      "canonical_termwise_rank_masses": {
+        "regular": "3072/7",
+        "selected": "2048/7",
+        "relative": "1024/7"
+      }
+    },
+    {
+      "left_degree": 7,
+      "right_degree": 2,
+      "selected_norm_exponent_coordinates": 18,
+      "orientation_base_coordinates": 27,
+      "toric_boundary_components": 54,
+      "regular_conductor_bound": 2592,
+      "selector_rank_mass": "64/7",
+      "canonical_termwise_rank_masses": {
+        "regular": "3072/7",
+        "selected": "2048/7",
+        "relative": "1024/7"
+      }
+    },
+    {
+      "left_degree": 7,
+      "right_degree": 3,
+      "selected_norm_exponent_coordinates": 20,
+      "orientation_base_coordinates": 30,
+      "toric_boundary_components": 60,
+      "regular_conductor_bound": 2880,
+      "selector_rank_mass": "256/21",
+      "canonical_termwise_rank_masses": {
+        "regular": "4096/7",
+        "selected": "8192/21",
+        "relative": "4096/21"
+      }
+    },
+    {
+      "left_degree": 7,
+      "right_degree": 4,
+      "selected_norm_exponent_coordinates": 22,
+      "orientation_base_coordinates": 33,
+      "toric_boundary_components": 66,
+      "regular_conductor_bound": 3168,
+      "selector_rank_mass": "128/7",
+      "canonical_termwise_rank_masses": {
+        "regular": "6144/7",
+        "selected": "4096/7",
+        "relative": "2048/7"
+      }
+    },
+    {
+      "left_degree": 7,
+      "right_degree": 5,
+      "selected_norm_exponent_coordinates": 24,
+      "orientation_base_coordinates": 36,
+      "toric_boundary_components": 72,
+      "regular_conductor_bound": 3456,
+      "selector_rank_mass": "1024/35",
+      "canonical_termwise_rank_masses": {
+        "regular": "49152/35",
+        "selected": "32768/35",
+        "relative": "16384/35"
+      }
+    },
+    {
+      "left_degree": 7,
+      "right_degree": 6,
+      "selected_norm_exponent_coordinates": 26,
+      "orientation_base_coordinates": 39,
+      "toric_boundary_components": 78,
+      "regular_conductor_bound": 3744,
+      "selector_rank_mass": "1024/21",
+      "canonical_termwise_rank_masses": {
+        "regular": "16384/7",
+        "selected": "32768/21",
+        "relative": "16384/21"
+      }
+    },
+    {
+      "left_degree": 7,
+      "right_degree": 7,
+      "selected_norm_exponent_coordinates": 28,
+      "orientation_base_coordinates": 42,
+      "toric_boundary_components": 84,
+      "regular_conductor_bound": 4032,
+      "selector_rank_mass": "4096/49",
+      "canonical_termwise_rank_masses": {
+        "regular": "196608/49",
+        "selected": "131072/49",
+        "relative": "65536/49"
+      }
+    },
+    {
+      "left_degree": 7,
+      "right_degree": 8,
+      "selected_norm_exponent_coordinates": 30,
+      "orientation_base_coordinates": 45,
+      "toric_boundary_components": 90,
+      "regular_conductor_bound": 4320,
+      "selector_rank_mass": "1024/7",
+      "canonical_termwise_rank_masses": {
+        "regular": "49152/7",
+        "selected": "32768/7",
+        "relative": "16384/7"
+      }
+    },
+    {
+      "left_degree": 8,
+      "right_degree": 1,
+      "selected_norm_exponent_coordinates": 18,
+      "orientation_base_coordinates": 27,
+      "toric_boundary_components": 54,
+      "regular_conductor_bound": 2592,
+      "selector_rank_mass": "16",
+      "canonical_termwise_rank_masses": {
+        "regular": "768",
+        "selected": "512",
+        "relative": "256"
+      }
+    },
+    {
+      "left_degree": 8,
+      "right_degree": 2,
+      "selected_norm_exponent_coordinates": 20,
+      "orientation_base_coordinates": 30,
+      "toric_boundary_components": 60,
+      "regular_conductor_bound": 2880,
+      "selector_rank_mass": "16",
+      "canonical_termwise_rank_masses": {
+        "regular": "768",
+        "selected": "512",
+        "relative": "256"
+      }
+    },
+    {
+      "left_degree": 8,
+      "right_degree": 3,
+      "selected_norm_exponent_coordinates": 22,
+      "orientation_base_coordinates": 33,
+      "toric_boundary_components": 66,
+      "regular_conductor_bound": 3168,
+      "selector_rank_mass": "64/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "1024",
+        "selected": "2048/3",
+        "relative": "1024/3"
+      }
+    },
+    {
+      "left_degree": 8,
+      "right_degree": 4,
+      "selected_norm_exponent_coordinates": 24,
+      "orientation_base_coordinates": 36,
+      "toric_boundary_components": 72,
+      "regular_conductor_bound": 3456,
+      "selector_rank_mass": "32",
+      "canonical_termwise_rank_masses": {
+        "regular": "1536",
+        "selected": "1024",
+        "relative": "512"
+      }
+    },
+    {
+      "left_degree": 8,
+      "right_degree": 5,
+      "selected_norm_exponent_coordinates": 26,
+      "orientation_base_coordinates": 39,
+      "toric_boundary_components": 78,
+      "regular_conductor_bound": 3744,
+      "selector_rank_mass": "256/5",
+      "canonical_termwise_rank_masses": {
+        "regular": "12288/5",
+        "selected": "8192/5",
+        "relative": "4096/5"
+      }
+    },
+    {
+      "left_degree": 8,
+      "right_degree": 6,
+      "selected_norm_exponent_coordinates": 28,
+      "orientation_base_coordinates": 42,
+      "toric_boundary_components": 84,
+      "regular_conductor_bound": 4032,
+      "selector_rank_mass": "256/3",
+      "canonical_termwise_rank_masses": {
+        "regular": "4096",
+        "selected": "8192/3",
+        "relative": "4096/3"
+      }
+    },
+    {
+      "left_degree": 8,
+      "right_degree": 7,
+      "selected_norm_exponent_coordinates": 30,
+      "orientation_base_coordinates": 45,
+      "toric_boundary_components": 90,
+      "regular_conductor_bound": 4320,
+      "selector_rank_mass": "1024/7",
+      "canonical_termwise_rank_masses": {
+        "regular": "49152/7",
+        "selected": "32768/7",
+        "relative": "16384/7"
+      }
+    },
+    {
+      "left_degree": 8,
+      "right_degree": 8,
+      "selected_norm_exponent_coordinates": 32,
+      "orientation_base_coordinates": 48,
+      "toric_boundary_components": 96,
+      "regular_conductor_bound": 4608,
+      "selector_rank_mass": "256",
+      "canonical_termwise_rank_masses": {
+        "regular": "12288",
+        "selected": "8192",
+        "relative": "4096"
+      }
+    }
+  ],
+  "resource_ledger": {
+    "max_degree": 8,
+    "degree_pairs": 64,
+    "finite_fields_enumerated": 0,
+    "polynomials_enumerated": 0,
+    "places_enumerated": 0
+  },
+  "not_proved": [
+    "full owner-Boolean-Artin-Schreier FFPS source adapter",
+    "joint cancellation of the exact cycle-selector mass",
+    "uniform pushed-forward Betti or signed trace estimate",
+    "CYSEL, WCADD106140, WCKUM106140, RH, or GRH"
+  ]
+}

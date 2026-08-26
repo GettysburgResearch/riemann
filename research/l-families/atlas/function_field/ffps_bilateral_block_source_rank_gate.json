@@ -1,0 +1,184 @@
+{
+  "bilateral_fourier_ledger": {
+    "correction": "L-106120/L-106131/T-106140 retain both mixed modes, so the previous claimed rank-one clean-source collapse was false",
+    "full_kernel": [
+      [
+        "0",
+        "4/3",
+        "4/3",
+        "4/3"
+      ],
+      [
+        "4/3",
+        "0",
+        "4/3",
+        "4/3"
+      ],
+      [
+        "4/3",
+        "4/3",
+        "0",
+        "4/3"
+      ],
+      [
+        "4/3",
+        "4/3",
+        "4/3",
+        "0"
+      ]
+    ],
+    "mixed_channels_retained": true,
+    "native_nonprincipal_character_count": 3,
+    "native_quotient_rank": 2,
+    "nonprincipal_characters": {
+      "1": "left mixed principal--nonprincipal mode",
+      "2": "right mixed nonprincipal--principal mode",
+      "3": "double-nonprincipal checkerboard mode"
+    },
+    "product_only_comparison": {
+      "equivalence_classes": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "interpretation": "the existing one-block double-NP checkerboard is a legitimate subfamily, not a clean-source collapse",
+      "kernel": [
+        [
+          "0",
+          "2",
+          "2",
+          "0"
+        ],
+        [
+          "2",
+          "0",
+          "0",
+          "2"
+        ],
+        [
+          "2",
+          "0",
+          "0",
+          "2"
+        ],
+        [
+          "0",
+          "2",
+          "2",
+          "0"
+        ]
+      ],
+      "native_source_forces_this_truncation": false
+    },
+    "quotient": "C2^2"
+  },
+  "frozen_source": {
+    "claims": {
+      "L-106120": {
+        "evidence": "equation (8): PP, P-NP, NP-P, NP-NP all retained",
+        "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065"
+      },
+      "L-106131": {
+        "evidence": "equation (13): full four-channel Wick tensor split",
+        "git_blob": "37722c3f36ec7d1681f34d4329a3795e5028f7ae"
+      },
+      "T-106121": {
+        "evidence": "Section 1: both one-collision mixed channels retained",
+        "git_blob": "9111983ae4bf199a8315310a9ce090561430c33b"
+      },
+      "T-106140": {
+        "evidence": "equation (6): mixed and double-NP channels recombined",
+        "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2"
+      }
+    },
+    "head": "98af0db6ec7f77d6333a77a3dac53c4698852f43"
+  },
+  "resource_caps": {
+    "floating_point_operations": 0,
+    "matrix_cells": 16,
+    "maximum_prime": 29,
+    "point_counts": 0,
+    "quotient_points": 4
+  },
+  "singleton_block_formula": "4*(p-1)/(3*p+1)",
+  "singleton_panels": [
+    {
+      "leverage": "1",
+      "prime": 5,
+      "strict_contraction": false
+    },
+    {
+      "leverage": "6/5",
+      "prime": 13,
+      "strict_contraction": false
+    },
+    {
+      "leverage": "16/13",
+      "prime": 17,
+      "strict_contraction": false
+    },
+    {
+      "leverage": "14/11",
+      "prime": 29,
+      "strict_contraction": false
+    }
+  ],
+  "source_arity_gate": {
+    "current_joint_physical_phase_coordinates": 2,
+    "current_native_quotient_rank": 2,
+    "current_rank_two_partition": "{ell}|{rho}",
+    "current_rank_two_partition_contracts": false,
+    "minimum_coordinates_for_two_strictly_improving_blocks": 4,
+    "native_four_phase_candidate": {
+      "blocks": [
+        "epsilon(X_1)*epsilon(Y_1)",
+        "epsilon(X_2)*epsilon(Y_2)"
+      ],
+      "coordinates": [
+        "X_1",
+        "Y_1",
+        "X_2",
+        "Y_2"
+      ],
+      "status": "design specification; source identity not yet proved"
+    },
+    "reason": "every eligible singleton block has leverage at least one, so each strictly improving block needs at least two local phase factors"
+  },
+  "two_singleton_panels": [
+    {
+      "one_two_factor_block_leverage": "24/43",
+      "primes": [
+        5,
+        13
+      ],
+      "rank_one_contracts": true,
+      "rank_two_contracts": false,
+      "two_singleton_block_leverage": "6/5"
+    },
+    {
+      "one_two_factor_block_leverage": "4/7",
+      "primes": [
+        5,
+        17
+      ],
+      "rank_one_contracts": true,
+      "rank_two_contracts": false,
+      "two_singleton_block_leverage": "16/13"
+    },
+    {
+      "one_two_factor_block_leverage": "48/71",
+      "primes": [
+        13,
+        17
+      ],
+      "rank_one_contracts": true,
+      "rank_two_contracts": false,
+      "two_singleton_block_leverage": "96/65"
+    }
+  ]
+}

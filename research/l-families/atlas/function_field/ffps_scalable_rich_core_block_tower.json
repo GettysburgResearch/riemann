@@ -1,0 +1,227 @@
+{
+  "all_rank_source": {
+    "canonical_phase_primes": "the first r divisors 1 mod 4 on each side",
+    "every_nonprincipal_quotient_mode": "contains a nonprincipal phase on both source sides",
+    "phase_identity": "(-1)^(2r)=1",
+    "quotient": "C2^r",
+    "rich_condition": "omega_1(c),omega_1(d)>=r"
+  },
+  "ambient_growing_rank_frontier": {
+    "bad_relative_log_weight": "(log x)^(-c(alpha)+o(1))",
+    "balanced_alpha": "0.274064461784",
+    "balanced_exponent": "0.061155717291",
+    "c_alpha": "1/2-alpha+alpha*log(2*alpha)",
+    "leverage": "(log x)^(-alpha*log(5/4)+o(1))",
+    "panels": [
+      {
+        "alpha": "0.1",
+        "bad_core_log_exponent": "0.239056208757",
+        "leverage_log_exponent": "0.022314355131"
+      },
+      {
+        "alpha": "0.2",
+        "bad_core_log_exponent": "0.116741853625",
+        "leverage_log_exponent": "0.044628710263"
+      },
+      {
+        "alpha": "0.3",
+        "bad_core_log_exponent": "0.046752312870",
+        "leverage_log_exponent": "0.066943065394"
+      },
+      {
+        "alpha": "0.4",
+        "bad_core_log_exponent": "0.010742579474",
+        "leverage_log_exponent": "0.089257420526"
+      }
+    ],
+    "rank": "r=floor(alpha*log log x), 0<alpha<1/2",
+    "scope": "ambient squarefree cores and formal Gram only"
+  },
+  "complexity_ledger": {
+    "equal_degree_path_average_betti": "e*r-2+e*r/(2^r-1)",
+    "equal_degree_path_average_energy_rank": "e^2*r^2+(e^2-4e)*r+4+O_e(r^2*2^-r)",
+    "growing_rank_consequence": "O_e((log log x)^2) only for fixed equal place degree e",
+    "selected_mode_count": "2^r-1",
+    "status": "separate fixed-degree path model, not a native varying-place complex"
+  },
+  "conditional_principal_atomic_ledger": {
+    "condition": "uses the natural generalized source-dual weight g^2*product(p)",
+    "local_weight": "C_r=product_(selected p) (p+1)/(p-1)",
+    "uniform_growth": "C_r=O(log(2r)) for 2r distinct primes 1 mod 4",
+    "weighted_atom": "at most C_r/(g^2*c*d*P*Q)"
+  },
+  "exact_leverage": {
+    "block_factor": "4*(p-1)*(q-1)/(5*p*q+p+q+1)<4/5",
+    "panels": [
+      {
+        "all_blocks_contract": true,
+        "blocks": 1,
+        "cross_pairs": [
+          [
+            5,
+            13
+          ]
+        ],
+        "joint_leverage": "24/43",
+        "leverage_factors": [
+          "24/43"
+        ],
+        "phase_coordinates": 2,
+        "principal_local_weight_product": "7/4",
+        "selected_modes": 1,
+        "uniform_upper_bound": "4/5"
+      },
+      {
+        "all_blocks_contract": true,
+        "blocks": 2,
+        "cross_pairs": [
+          [
+            5,
+            13
+          ],
+          [
+            17,
+            29
+          ]
+        ],
+        "joint_leverage": "2688/6751",
+        "leverage_factors": [
+          "24/43",
+          "112/157"
+        ],
+        "phase_coordinates": 4,
+        "principal_local_weight_product": "135/64",
+        "selected_modes": 3,
+        "uniform_upper_bound": "16/25"
+      },
+      {
+        "all_blocks_contract": true,
+        "blocks": 3,
+        "cross_pairs": [
+          [
+            5,
+            13
+          ],
+          [
+            17,
+            29
+          ],
+          [
+            37,
+            41
+          ]
+        ],
+        "joint_leverage": "967680/3233729",
+        "leverage_factors": [
+          "24/43",
+          "112/157",
+          "360/479"
+        ],
+        "phase_coordinates": 6,
+        "principal_local_weight_product": "1197/512",
+        "selected_modes": 7,
+        "uniform_upper_bound": "64/125"
+      },
+      {
+        "all_blocks_contract": true,
+        "blocks": 5,
+        "cross_pairs": [
+          [
+            5,
+            13
+          ],
+          [
+            17,
+            29
+          ],
+          [
+            37,
+            41
+          ],
+          [
+            53,
+            61
+          ],
+          [
+            73,
+            89
+          ]
+        ],
+        "joint_leverage": "12421693440/69754768259",
+        "leverage_factors": [
+          "24/43",
+          "112/157",
+          "360/479",
+          "312/407",
+          "288/371"
+        ],
+        "phase_coordinates": 10,
+        "principal_local_weight_product": "12356631/4685824",
+        "selected_modes": 31,
+        "uniform_upper_bound": "1024/3125"
+      },
+      {
+        "all_blocks_contract": true,
+        "blocks": 8,
+        "cross_pairs": [
+          [
+            5,
+            13
+          ],
+          [
+            17,
+            29
+          ],
+          [
+            37,
+            41
+          ],
+          [
+            53,
+            61
+          ],
+          [
+            73,
+            89
+          ],
+          [
+            97,
+            101
+          ],
+          [
+            109,
+            113
+          ],
+          [
+            137,
+            149
+          ]
+        ],
+        "joint_leverage": "6130314397089792000/71605618858539470749",
+        "leverage_factors": [
+          "24/43",
+          "112/157",
+          "360/479",
+          "312/407",
+          "288/371",
+          "1200/1537",
+          "3024/3863",
+          "5032/6397"
+        ],
+        "phase_coordinates": 16,
+        "principal_local_weight_product": "5107964085/1744830464",
+        "selected_modes": 255,
+        "uniform_upper_bound": "65536/390625"
+      }
+    ],
+    "tower_bound": "L_r<(4/5)^r"
+  },
+  "resource_caps": {
+    "bisection_steps": 80,
+    "conductors_enumerated": 0,
+    "maximum_blocks": 8,
+    "point_counts": 0,
+    "prime_panels": 16,
+    "source_atoms_enumerated": 0
+  }
+}

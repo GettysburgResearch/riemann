@@ -1,0 +1,286 @@
+{
+  "autocorrelation_certificates": [
+    {
+      "prime": 3,
+      "quadratic_correlation": [
+        2,
+        -1,
+        -1
+      ],
+      "quadratic_gauss_sum_squared": 3,
+      "trivial_additive_sum_squared": 1,
+      "trivial_correlation": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "prime": 5,
+      "quadratic_correlation": [
+        4,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "quadratic_gauss_sum_squared": 5,
+      "trivial_additive_sum_squared": 1,
+      "trivial_correlation": [
+        4,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "prime": 7,
+      "quadratic_correlation": [
+        6,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "quadratic_gauss_sum_squared": 7,
+      "trivial_additive_sum_squared": 1,
+      "trivial_correlation": [
+        6,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "prime": 13,
+      "quadratic_correlation": [
+        12,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "quadratic_gauss_sum_squared": 13,
+      "trivial_additive_sum_squared": 1,
+      "trivial_correlation": [
+        12,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11
+      ]
+    }
+  ],
+  "exact_identities": {
+    "deduction": "same-coset and literal-atom deletion does not lower the quadratic weight; principal recovery depends on exact cancellation with the selected average",
+    "interferometer": "1-((p+1)^r-1)/(2^r-1)",
+    "selected_average_energy": "((p+1)^r-1)/(2^r-1)",
+    "selected_total_energy": "(p+1)^r-1"
+  },
+  "model": {
+    "atom_space": "(F_p^times)^r",
+    "atom_weight": "psi(x_1+...+x_r)",
+    "nonprincipal_mode_energy": "p^|S| for nonempty S subset {1,...,r}",
+    "principal_trace": "(-1)^r",
+    "quotient_phase": "(kappa(x_1),...,kappa(x_r)) in C_2^r"
+  },
+  "panels": [
+    {
+      "exact_reconstruction": "1",
+      "interferometer": "-2",
+      "interferometer_has_literal_atomic_diagonal": false,
+      "literal_atomic_mass": 2,
+      "prime": 3,
+      "principal_energy": 1,
+      "principal_trace": -1,
+      "quotient_order": 2,
+      "rank": 1,
+      "selected_average_energy": "3",
+      "selected_total_energy": 3,
+      "separate_triangle_bound_for_principal_energy": "5"
+    },
+    {
+      "exact_reconstruction": "1",
+      "interferometer": "-4",
+      "interferometer_has_literal_atomic_diagonal": false,
+      "literal_atomic_mass": 4,
+      "prime": 3,
+      "principal_energy": 1,
+      "principal_trace": 1,
+      "quotient_order": 4,
+      "rank": 2,
+      "selected_average_energy": "5",
+      "selected_total_energy": 15,
+      "separate_triangle_bound_for_principal_energy": "9"
+    },
+    {
+      "exact_reconstruction": "1",
+      "interferometer": "-8",
+      "interferometer_has_literal_atomic_diagonal": false,
+      "literal_atomic_mass": 8,
+      "prime": 3,
+      "principal_energy": 1,
+      "principal_trace": -1,
+      "quotient_order": 8,
+      "rank": 3,
+      "selected_average_energy": "9",
+      "selected_total_energy": 63,
+      "separate_triangle_bound_for_principal_energy": "17"
+    },
+    {
+      "exact_reconstruction": "1",
+      "interferometer": "-16",
+      "interferometer_has_literal_atomic_diagonal": false,
+      "literal_atomic_mass": 16,
+      "prime": 3,
+      "principal_energy": 1,
+      "principal_trace": 1,
+      "quotient_order": 16,
+      "rank": 4,
+      "selected_average_energy": "17",
+      "selected_total_energy": 255,
+      "separate_triangle_bound_for_principal_energy": "33"
+    },
+    {
+      "exact_reconstruction": "1",
+      "interferometer": "-4",
+      "interferometer_has_literal_atomic_diagonal": false,
+      "literal_atomic_mass": 4,
+      "prime": 5,
+      "principal_energy": 1,
+      "principal_trace": -1,
+      "quotient_order": 2,
+      "rank": 1,
+      "selected_average_energy": "5",
+      "selected_total_energy": 5,
+      "separate_triangle_bound_for_principal_energy": "9"
+    },
+    {
+      "exact_reconstruction": "1",
+      "interferometer": "-32/3",
+      "interferometer_has_literal_atomic_diagonal": false,
+      "literal_atomic_mass": 16,
+      "prime": 5,
+      "principal_energy": 1,
+      "principal_trace": 1,
+      "quotient_order": 4,
+      "rank": 2,
+      "selected_average_energy": "35/3",
+      "selected_total_energy": 35,
+      "separate_triangle_bound_for_principal_energy": "67/3"
+    },
+    {
+      "exact_reconstruction": "1",
+      "interferometer": "-208/7",
+      "interferometer_has_literal_atomic_diagonal": false,
+      "literal_atomic_mass": 64,
+      "prime": 5,
+      "principal_energy": 1,
+      "principal_trace": -1,
+      "quotient_order": 8,
+      "rank": 3,
+      "selected_average_energy": "215/7",
+      "selected_total_energy": 215,
+      "separate_triangle_bound_for_principal_energy": "423/7"
+    },
+    {
+      "exact_reconstruction": "1",
+      "interferometer": "-256/3",
+      "interferometer_has_literal_atomic_diagonal": false,
+      "literal_atomic_mass": 256,
+      "prime": 5,
+      "principal_energy": 1,
+      "principal_trace": 1,
+      "quotient_order": 16,
+      "rank": 4,
+      "selected_average_energy": "259/3",
+      "selected_total_energy": 1295,
+      "separate_triangle_bound_for_principal_energy": "515/3"
+    },
+    {
+      "exact_reconstruction": "1",
+      "interferometer": "-12",
+      "interferometer_has_literal_atomic_diagonal": false,
+      "literal_atomic_mass": 12,
+      "prime": 13,
+      "principal_energy": 1,
+      "principal_trace": -1,
+      "quotient_order": 2,
+      "rank": 1,
+      "selected_average_energy": "13",
+      "selected_total_energy": 13,
+      "separate_triangle_bound_for_principal_energy": "25"
+    },
+    {
+      "exact_reconstruction": "1",
+      "interferometer": "-64",
+      "interferometer_has_literal_atomic_diagonal": false,
+      "literal_atomic_mass": 144,
+      "prime": 13,
+      "principal_energy": 1,
+      "principal_trace": 1,
+      "quotient_order": 4,
+      "rank": 2,
+      "selected_average_energy": "65",
+      "selected_total_energy": 195,
+      "separate_triangle_bound_for_principal_energy": "129"
+    },
+    {
+      "exact_reconstruction": "1",
+      "interferometer": "-2736/7",
+      "interferometer_has_literal_atomic_diagonal": false,
+      "literal_atomic_mass": 1728,
+      "prime": 13,
+      "principal_energy": 1,
+      "principal_trace": -1,
+      "quotient_order": 8,
+      "rank": 3,
+      "selected_average_energy": "2743/7",
+      "selected_total_energy": 2743,
+      "separate_triangle_bound_for_principal_energy": "5479/7"
+    },
+    {
+      "exact_reconstruction": "1",
+      "interferometer": "-2560",
+      "interferometer_has_literal_atomic_diagonal": false,
+      "literal_atomic_mass": 20736,
+      "prime": 13,
+      "principal_energy": 1,
+      "principal_trace": 1,
+      "quotient_order": 16,
+      "rank": 4,
+      "selected_average_energy": "2561",
+      "selected_total_energy": 38415,
+      "separate_triangle_bound_for_principal_energy": "5121"
+    }
+  ],
+  "resource_caps": {
+    "floating_point_operations": 0,
+    "largest_autocorrelation_cells": 841,
+    "maximum_prime": 29,
+    "maximum_tensor_rank": 5,
+    "point_counts": 0
+  }
+}

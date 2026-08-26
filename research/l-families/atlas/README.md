@@ -2,6 +2,62 @@
 
 Status: **exact finite exploration, exact synthetic algebra, and source-qualified discovery data**.
 
+Current successor: PR #757 extends this atlas into source-exact mollified beta
+and native-reflection RH criteria, hard-mask/sheaf amplification, deeper
+closed-place notch laws through a growing logarithmic depth window and a
+conditional profile-residue criterion whose permitted range approaches the
+entropy wall, followed by an exact quadratic-squareclass compression which
+crosses that wall by an additive `log log` depth window, an exact
+cycle-selector complexity no-go, a universal bounded-rank ternary norm torsor,
+and an exact closed-point Adams extractor which bypasses the exponential
+selector for separable trace kernels, its finite derangement relaxation and
+all-degree `tanh` calibration together with fixed-tail Young-lattice transport
+and a bulk matching gate, high-primitive-ray localization of the
+quadratic RH gate together with exact incidence-Gram/Boolean limits and a
+dyadic Carleson sufficient gate for its primitive-pair target, an exact
+invertible Dirichlet-convolution equivalence for that target's one-variable
+`rho` coefficient, a Boolean-compressed weighted superposition for its pair
+zero mode whose incidence algebra survives in a generalized three-parameter
+primitive panel, and its exact compatible-scale geometry: in each of the
+three actual `(alpha,0)` channels, fixed squarefree 67-free `q`
+has `3^omega(q)`
+colored triples while `d=1` has
+`2^omega(q)` saturated rays. At the positive-norm level the honest
+open hierarchy is `RAYPRIMCAR -> COLLPRIMCAR <- GENPRIMCAR`; the ray
+and full-`q` gates are formally incomparable sufficient routes, with
+a convergent `K_67(epsilon)` cost after choosing
+`0<epsilon<1` versus polylogarithmic costs. None is proved, and
+nonzero `PRIMCAR` modes remain separate. A second exact compression sums
+the `2^omega(u)` compatible `r/s` colors coherently at each fixed
+`(d,u=rs)` before taking a norm. It exposes the open quadratic
+`AUXCOLORPRIMCAR` gate (`COLORPRIMCAR` at `D=1`), proves
+`RAYPRIMCAR -> AUXCOLORPRIMCAR`, and gives the sharp Hilbert cost
+`J_67`; the color gate is formally incomparable with `COLLPRIMCAR`
+and `GENPRIMCAR` by positive-norm algebra. Its energy is also exactly the
+primitive-pair shared-support Gram
+`K(N,M)=prod_(p|gcd(N,M))(1+sqrt(p)/(p+1))`, giving a concrete
+spectral/large-sieve target rather than a black-box norm. The color family is
+exactly an upper-divisor zeta transform: it retains every product-shell
+amplitude by finite-height Möbius inversion, but erases orientation within a
+fixed channel and shell. Recovery measured in the local weighted overlap-Gram
+norm has condition number asymptotic to `4sqrt(p)`. A final exact collapse
+gives the one-variable divisor wavelet
+`W_I^alpha(N)`: the coherent core is a Möbius sum over the cofactor, and
+`WAVEPRIMCAR` is a concrete per-core sufficient route to
+`AUXCOLORPRIMCAR`. It is unproved, nonmultiplicative, and still leaves every
+nonzero incidence mode. Kernel support confines it to a near-square divisor
+wavelet and a factor-64 shell `M asymp H^2/(67^alpha u)`. The successor also contains
+a `Sym^12` cohomological audit.
+Begin with
+[`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md),
+then [`SHEAF_AMPLIFIER_RESEARCH_MAP.md`](SHEAF_AMPLIFIER_RESEARCH_MAP.md).
+Those criteria do not prove their RH-equivalent estimates; RH and GRH remain
+open.
+
+Everything below this notice is the historical phase-0 atlas map. Use the
+three PR #757 front doors above—not later historical “smallest gaps” lists—to
+identify the current frontier.
+
 Scope: one small GL(1)/GL(2) local-Euler corpus; complete monic squarefree
 cubic regressions over `F_q[T]` for `q=3,5,7,11,13`, including the original
 100-member `F_5[T]` pilot; the complete genus-two quintic families over

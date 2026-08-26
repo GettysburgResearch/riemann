@@ -766,13 +766,13 @@
   },
   "packet_manifest": {
     "note": "research/l-families/atlas/function_field/GENUS2_SYM12_ARITHMETIC_INVENTORY.md",
-    "note_lf_sha256": "cc97d2becf4cf45fafd3b9c0130cf4423836634d4074bab7e172f5e4f77274a1",
+    "note_lf_sha256": "32157224a1f6ad6e382178096ecffc4520e26872b3b148e842b0115b87cb237e",
     "producer": "research/l-families/atlas/function_field/genus2_sym12_arithmetic_inventory.py",
-    "producer_lf_sha256": "0901a4252663efab672f4d33b6d3584b5e8c8a3915d564e4097c8fa4343e4b6f",
+    "producer_lf_sha256": "0964816bc4ce72dc8f425a74540c8db02e3b11493fe137642e803c1465230855",
     "test": "tests/test_genus2_sym12_arithmetic_inventory.py",
-    "test_lf_sha256": "648b313603a6ed9c58c1b623e15f204d17c3b04a04c1bb0ec9ec9225703b3bd3"
+    "test_lf_sha256": "2d9b883b0ca07f8602974adcc503c24dcc8ce9360a8483c3d58f3caabd5acdb0"
   },
-  "payload_sha256": "557ab6465a16bb6080caa2a249c3d0935f8d36fb49bdf54898a0fe72b372496f",
+  "payload_sha256": "fba1c85c8dc3d60b276635ae5e3ed84db3ded06f4960afeaa9b92b4055f9211f",
   "quartic_channel": {
     "full_G4_over_q_q_minus_1": [
       {
@@ -1234,7 +1234,7 @@
   },
   "resource_contract": {
     "actual_exact_operations": 1816,
-    "actual_source_bytes": 196665,
+    "actual_source_bytes": 196367,
     "actual_source_files": 8,
     "arithmetic": "integers and exact rational intermediates only; no floating point in mathematical algebra",
     "maximum_exact_operations": 16384,
@@ -1275,7 +1275,7 @@
       "schema": "riemann.function_field.genus2_reciprocal_descent_boundary.v1"
     },
     {
-      "bytes": 7509,
+      "bytes": 7211,
       "commit": "f83f80639fc821abc41d0bcb781972c65b85a548",
       "git_blob": "224f24b0ec3aa9ebc4cd98de7b505dbf5c30f53b",
       "lf_sha256": "8eac418b5d624b4524bdf5d63534100ec19e17bd85c787a590bed96e896e91a3",

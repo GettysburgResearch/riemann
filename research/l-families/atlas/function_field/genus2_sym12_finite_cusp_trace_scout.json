@@ -6,8 +6,8 @@
     "url": "https://ems.press/content/serial-article-files/26421"
   },
   "definitions": {
-    "H_12": "q*(q-1)*Hhat_12",
-    "Hhat_12": "T_(12,0)+2*q+9+4*Theta_Delta+Theta_(8,2)+Theta_(10,2)",
+    "H_12": "inventory-derived q*(q-1)*Hhat_12; not directly enumerated as a central Q_5 coefficient sum",
+    "Hhat_12": "inventory-derived T_(12,0)+2*q+9+4*Theta_Delta+Theta_(8,2)+Theta_(10,2)",
     "T_(12,0)": "sum_D r_D(12)/(q*(q-1))",
     "reciprocal_series": "1/(1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4)=sum_(n>=0) r_D(n)*u^n"
   },
@@ -72,13 +72,14 @@
   "finite_match": {
     "equivalent_T_identity_on_tested_rows": "T_(12,0)(p)=-p*a_p(f_-)-2*p-9-4*Theta_Delta(p)-Theta_(8,2)(p)-Theta_(10,2)(p)",
     "identity_on_tested_rows": "Hhat_12(p)=-p*a_p(f_-), p in {3,5,7}",
-    "status": "EXACT_THREE_PRIME_MATCH_NOT_AN_INTERPOLATION_THEOREM"
+    "status": "EXACT_THREE_PRIME_CONSEQUENCE_OF_RAW_T12_PLUS_INVENTORY_NOT_AN_INDEPENDENT_INVENTORY_AUDIT"
   },
   "finite_rows": [
     {
       "-p*a_p(f_-)": -3708,
       "H_12": -22248,
       "Hhat_12": -3708,
+      "Hhat_12_provenance": "derived from replayed T_(12,0) by the source-locked Sym12 arithmetic inventory; not a direct Q_5 average",
       "T_(12,0)": -4587,
       "a_p(f_-)": 1236,
       "finite_match": true,
@@ -121,6 +122,7 @@
       "-p*a_p(f_-)": 287250,
       "H_12": 5745000,
       "Hhat_12": 287250,
+      "Hhat_12_provenance": "derived from replayed T_(12,0) by the source-locked Sym12 arithmetic inventory; not a direct Q_5 average",
       "T_(12,0)": 267251,
       "a_p(f_-)": -57450,
       "finite_match": true,
@@ -163,6 +165,7 @@
       "-p*a_p(f_-)": -449624,
       "H_12": -18884208,
       "Hhat_12": -449624,
+      "Hhat_12_provenance": "derived from replayed T_(12,0) by the source-locked Sym12 arithmetic inventory; not a direct Q_5 average",
       "T_(12,0)": -382735,
       "a_p(f_-)": 64232,
       "finite_match": true,
@@ -209,23 +212,30 @@
     "No motive, compatible system, Yoshida/endoscopic summand, or cohomological identification is proved by the finite match.",
     "The producer reads stored joint-law atoms and committed modular rows; it does not enumerate a field, polynomial, curve, or family member.",
     "The r6, r8, and r10 identities are lower recurrence regressions; they authenticate normalization but do not strengthen the r12 match beyond q=3,5,7.",
+    "PROVENANCE FIREWALL: only T_(12,0) is replayed directly from the stored family atoms; Hhat_12 and H_12 are exact consequences of the separately source-locked arithmetic inventory, not an independent central-coefficient enumeration.",
     "No RH, GRH, number-field transfer, sign theorem, or global Euler-product claim is made."
   ],
   "packet_manifest": [
     {
       "path": "research/l-families/atlas/function_field/GENUS2_SYM12_FINITE_CUSP_TRACE_SCOUT.md",
-      "sha256_lf_normalized": "b3557ce0c6a8321fb3552306249038674530b74fa65856be988d704bd69c59e3"
+      "sha256_lf_normalized": "a28078dc78a082fdfa23d9506538fa4cb44fd40c8f435910837e5e9c59d19494"
     },
     {
       "path": "research/l-families/atlas/function_field/genus2_sym12_finite_cusp_trace_scout.py",
-      "sha256_lf_normalized": "ceeb103d6da8a334bd282c3f5bf86f68f6eae8d1b2d98723124bcfa548b4cdb2"
+      "sha256_lf_normalized": "a741c18aaf26b1954c24f7dd73173484ca3e9fdba74c8da39ef5c2b1a4a1e614"
     },
     {
       "path": "tests/test_genus2_sym12_finite_cusp_trace_scout.py",
-      "sha256_lf_normalized": "d8a6f43bc11332702fa1fb3873926262af3a7d9b423974035e8bbfc9612b2de5"
+      "sha256_lf_normalized": "ff7c2150a951ba9049b7b0002af376fa4f39534ed8c84a055eda00f1b54f67b9"
     }
   ],
-  "payload_sha256": "3572d443f7f5371771a0123b1ebcb1c08e010f02a65c3413d935216b1fcd3168",
+  "payload_sha256": "1c794190e4e83778de852d1f12df5a35fccbce414c27df67eeeb6f87ed7ee1d1",
+  "provenance_boundary": {
+    "directly_replayed": "sum_D r_D(12) and T_(12,0) from the stored complete joint laws",
+    "imported_exact_theorem": "the Sym12 arithmetic-inventory identity converting T_(12,0) to Hhat_12 and H_12",
+    "logical_use": "the p=3,5,7 Hhat_12 rows test the combined raw-T plus inventory branch; they are not an independent audit of the inventory",
+    "not_performed": "a direct enumeration of squarefree degree-twelve f and the central completed coefficients Q_5(f)"
+  },
   "resource_contract": {
     "Eisenstein_divisor_terms": {
       "actual": 32,
@@ -269,13 +279,13 @@
       "maximum": 3012
     },
     "source_bytes": {
-      "actual_total": 180674,
+      "actual_total": 219771,
       "maximum_each": 160000,
-      "maximum_total": 200000
+      "maximum_total": 225000
     },
     "source_files": {
-      "actual": 2,
-      "maximum": 2
+      "actual": 3,
+      "maximum": 3
     },
     "weighted_accumulations": {
       "actual": 1004,
@@ -316,6 +326,17 @@
       "role": "committed Delta, f_(8,2), and g_(10,2) trace rows",
       "schema": "riemann.genus2_sym10_marked_trace_average.v1",
       "sha256_lf_normalized": "4f91ac00193805207088e9fc6aea2b464645267b17dc54f71165a1ae3b9d45ce"
+    },
+    {
+      "bytes_read": 39097,
+      "commit": "482e32c53f26517906143cd0d99c74d8b4edf3be",
+      "git_blob": "68907aa3ee65ced500807c79123f116da05f0ece",
+      "id": "sym12_arithmetic_inventory",
+      "path": "research/l-families/atlas/function_field/genus2_sym12_arithmetic_inventory.json",
+      "payload_sha256": "fba1c85c8dc3d60b276635ae5e3ed84db3ded06f4960afeaa9b92b4055f9211f",
+      "role": "exact source-relative conversion from replayed T_(12,0) to Hhat_12; the scout does not directly average Q_5",
+      "schema": "riemann.function_field.genus2_sym12_arithmetic_inventory.v1",
+      "sha256_lf_normalized": "94f0647a91aff299c62f24019947846e6923863f3ecba3c2f9cf95008407d4f6"
     }
   ],
   "status": "FINITE_EXACT_Q3_Q5_Q7_MATCH_ONLY"

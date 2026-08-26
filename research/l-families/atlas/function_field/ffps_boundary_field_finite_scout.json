@@ -1,0 +1,92 @@
+{
+  "checkpoints": [
+    {
+      "Y": 1024,
+      "absolute_mass": 122.349243913,
+      "jordan_residual": 1.02803221,
+      "negative_mass": 60.660605852,
+      "power": 10,
+      "signed_mass": 1.02803221
+    },
+    {
+      "Y": 16384,
+      "absolute_mass": 161.464544565,
+      "jordan_residual": 0.425264673,
+      "negative_mass": 80.519639946,
+      "power": 14,
+      "signed_mass": 0.425264673
+    },
+    {
+      "Y": 262144,
+      "absolute_mass": 203.050873521,
+      "jordan_residual": -1.847792632,
+      "negative_mass": 102.449333076,
+      "power": 18,
+      "signed_mass": -1.847792632
+    }
+  ],
+  "fine_window_linear_fits": {
+    "absolute_mass": {
+      "intercept": 19.753940262,
+      "maximum_absolute_residual": 1.006409298,
+      "minimum_power": 10,
+      "row_count": 9,
+      "slope_per_doubling": 10.158889435
+    },
+    "negative_mass": {
+      "intercept": 9.061065207,
+      "maximum_absolute_residual": 1.018572326,
+      "minimum_power": 10,
+      "row_count": 9,
+      "slope_per_doubling": 5.142982427
+    }
+  },
+  "first_difference_control": {
+    "maximum_absolute_difference": 2.13e-13,
+    "maximum_relative_difference": 1e-15
+  },
+  "frozen_sources": {
+    "928cf3f3da653ff9608adfe6c050e0578e249350": {
+      "research/l-families/atlas/function_field/FFPS_MOLLIFIED_BETA_FINITE_SCOUT.md": "e3235e9a24b21b11f852587e2a31fbb617b1763a",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_finite_scout.json": "79e00d6cdf527ddd02fde26603d4554f48fb04f0",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_finite_scout.py": "3ef4973fb46630c9068d364dd108d05b3c4b8aed",
+      "tests/test_ffps_mollified_beta_finite_scout.py": "92f09e8bd6b5dcb7f9197e244a31b01b8f2b324d"
+    },
+    "9e19e27614e473b3b7d06cfc3d51f92eb39ff009": {
+      "research/l-families/atlas/function_field/FFPS_MOLLIFIED_BETA_BOUNDARY_SHELL_IDENTITY.md": "bf4d1baa231086ba7e8eafaecd39730d83c9201a",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_boundary_shell_identity.json": "c86a40d6a930603b3897ad12a28acc5f21e80dd6",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_boundary_shell_identity.py": "2180038eef7ab639477879e806bb13fdbea0b1ec",
+      "tests/test_ffps_mollified_beta_boundary_shell_identity.py": "5e7de97284878c6f9b5a5ac43b83ccaf9528e242"
+    }
+  },
+  "interpretation": "finite data suggest roughly linear boundary-field variation in log(Y); this is not an asymptotic or RH inference",
+  "maximum_resolution_relative_difference": 0.002534238,
+  "parameters": {
+    "coarse_cells_per_log_two": 256,
+    "fine_cells_per_log_two": 512,
+    "max_power": 18
+  },
+  "resource_caps": {
+    "boundary_fft_convolutions": 3,
+    "conductor_enumerations": 0,
+    "curve_enumerations": 0,
+    "horizons_per_panel": 13,
+    "maximum_boundary_kernel_grid_cells": 2048,
+    "maximum_fft_length": 16384,
+    "maximum_linear_convolution_cells": 11519,
+    "maximum_source_grid_cells": 9216,
+    "maximum_source_limit": 262144,
+    "maximum_source_placement_visits": 786432,
+    "maximum_validation_kernel_grid_cells": 2304,
+    "mollified_validation_convolutions": 1,
+    "panel_count": 2,
+    "resolutions": [
+      256,
+      512
+    ],
+    "source_construction_passes": 3,
+    "zero_searches": 0
+  },
+  "schema": "riemann.function_field.ffps_boundary_field_finite_scout.v1",
+  "status": "finite floating-point scout; no asymptotic or RH inference"
+}

@@ -1,0 +1,69 @@
+{
+  "convergence_panels": [
+    {
+      "M": 29,
+      "M_cubed_next_coefficient_estimate": 69.39589746813616,
+      "h": 7,
+      "h_cubed_next_coefficient_estimate": 0.7082014086740331
+    },
+    {
+      "M": 41,
+      "M_cubed_next_coefficient_estimate": 63.35871135647332,
+      "h": 10,
+      "h_cubed_next_coefficient_estimate": 0.6473436553107864
+    },
+    {
+      "M": 101,
+      "M_cubed_next_coefficient_estimate": 55.91453282925086,
+      "h": 25,
+      "h_cubed_next_coefficient_estimate": 0.5699561595939594
+    },
+    {
+      "M": 201,
+      "M_cubed_next_coefficient_estimate": 53.635048091310125,
+      "h": 50,
+      "h_cubed_next_coefficient_estimate": 0.5455127947313966
+    },
+    {
+      "M": 401,
+      "M_cubed_next_coefficient_estimate": 52.52547239825404,
+      "h": 100,
+      "h_cubed_next_coefficient_estimate": 0.5334493301412468
+    },
+    {
+      "M": 801,
+      "M_cubed_next_coefficient_estimate": 51.97747946250902,
+      "h": 200,
+      "h_cubed_next_coefficient_estimate": 0.5274471904827407
+    }
+  ],
+  "fixed_q_count": {
+    "formula": "delta_q*q^M*((1+log(2))/(3h^2)+(4+log(2))/(9h^3)+O_q(h^-4))",
+    "h_minus_2_coefficient": "1/3 + (1/3)*log(2)",
+    "h_minus_3_one_pinned": "7/36 + (1/9)*log(2)",
+    "h_minus_3_total": "4/9 + (1/9)*log(2)",
+    "h_minus_3_two_pinned": "1/4 + (0)*log(2)",
+    "same_local_probability": "delta_q=Prob(D3=0) for every profile"
+  },
+  "profile_classification": {
+    "fourth_order_only": [
+      "(h-1,h-1,h+1,h+2)",
+      "(h-1,h-1,h-1,h+4)"
+    ],
+    "one_pinned": "(h-1,3h+2) and (h-1,d,3h+2-d)",
+    "two_pinned_h_minus_3": "(h-1,h-1,2h+3)"
+  },
+  "resource_caps": {
+    "irreducibles_enumerated": 0,
+    "maximum_enumerated_h": 40,
+    "maximum_h": 200,
+    "polynomials_enumerated": 0,
+    "residue_classes_enumerated": 0
+  },
+  "schema": "riemann.function_field.quadratic_second_boundary_zero_density.third_order.v1",
+  "squarefree_density": {
+    "M_minus_2_coefficient": "16/3 + (16/3)*log(2)",
+    "M_minus_3_coefficient": "352/9 + (160/9)*log(2)",
+    "formula": "delta_q/(1-q^-1)*(16*(1+log(2))/(3M^2)+32*(11+5log(2))/(9M^3)+O_q(M^-4))"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "anti_causal_inverse": {
+    "Q": "I-sqrt(2)*S_2",
+    "coefficient_sum": "1+sqrt(2)",
+    "formula": "h=-sum_(j>=1)2^(-j/2)*S_2^(-j)g, g=Qh",
+    "partial_sums": [
+      {
+        "decimal": "0.000000000000",
+        "depth": 0,
+        "partial_sum": "0"
+      },
+      {
+        "decimal": "0.707106781187",
+        "depth": 1,
+        "partial_sum": "1/2*sqrt(2)"
+      },
+      {
+        "decimal": "1.207106781187",
+        "depth": 2,
+        "partial_sum": "1/2+1/2*sqrt(2)"
+      },
+      {
+        "decimal": "1.810660171780",
+        "depth": 4,
+        "partial_sum": "3/4+3/4*sqrt(2)"
+      },
+      {
+        "decimal": "2.263325214725",
+        "depth": 8,
+        "partial_sum": "15/16+15/16*sqrt(2)"
+      },
+      {
+        "decimal": "2.404783040645",
+        "depth": 16,
+        "partial_sum": "255/256+255/256*sqrt(2)"
+      },
+      {
+        "decimal": "2.414176724398",
+        "depth": 32,
+        "partial_sum": "65535/65536+65535/65536*sqrt(2)"
+      }
+    ],
+    "zero_mass_one_sided_bound": "||h_-||_TV <= (1+sqrt(2))*||g_-||_TV"
+  },
+  "combined_global_bound": {
+    "C_inv": "8/3+8/3*sqrt(2)",
+    "formula": "||K_native-source_-||_1 <= C_inv*||K_extra-source_-||_TV",
+    "requires": "same fixed source and zero total logarithmic mass"
+  },
+  "conclusion_scope": {
+    "kernel_level": "Jordan WKSFSC106150 AND TERMFUT106150 imply the same-source explicit-native live premise",
+    "parent_binding": "NATBIND106150 must bind BCI102990 to that explicit native kernel and same live source before the BCI/RH arrow",
+    "parent_binding_status": "open",
+    "raw_complete_beta_status": "refuted by the complete-beta atomic variation firewall: Jordan negative variation is Omega(sqrt(Y)); the kernel-level implication concerns the differently scoped frozen live source",
+    "viable_complete_replacement": "mollify before Jordan decomposition; the fixed-mollified negative-mass estimate is RH-equivalent and is not proved here"
+  },
+  "frozen_sources": {
+    "98af0db6ec7f77d6333a77a3dac53c4698852f43": {
+      "claims/lemmas/L-102500-common-compact-mother-and-bezout.md": "db4590fc23b53ed601e108a77e4d064b7d9d13f9",
+      "claims/lemmas/L-102701-common-mother-ratiofour-two-field-form.md": "70eb455a3b2bb0398f8bba22dee82c39ef803156",
+      "claims/lemmas/L-102740-outer-ray-current-factors-through-the-first-order-critical-scale-current.md": "ec2f3aafe1b590a11a9967e298f5dfb0e2d59f55",
+      "claims/lemmas/L-106134-common-mother-is-a-differential-self-convolution.md": "cf40354ff8810a2d4bea9459cf142c300ba36237",
+      "claims/theorems/T-106150-same-half-source-analytic-square-frontier.md": "ac15f0106a26303f06779feb484a521978fe3ecf"
+    },
+    "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc": {
+      "claims/lemmas/L-102880-logarithmic-derivative-outer-detector-has-zero-square-lattice-moment.md": "d7330d114ebba1a7a16e22fa9ba6aa6b5eb7cdd6",
+      "claims/lemmas/L-102885-derivative-outer-kernel-is-a-stable-image-of-the-same-k1-wavelet.md": "045481b73474d67ded5bf9633808e8d8d39c4622",
+      "claims/theorems/T-102990-equal-pair-boolean-core-incidence-frontier.md": "b319572db9ecc89bc528b85368cbf49aa13206d0"
+    }
+  },
+  "resource_caps": {
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "maximum_dyadic_depth": 32,
+    "point_counts": 0,
+    "source_atoms_enumerated": 0
+  },
+  "stable_inverse": {
+    "L1_norm": "8/3",
+    "T": "(5/4)*(D+3/10)",
+    "formula": "f=(4/5)*(D+3/10)^(-1)h",
+    "positive_kernel": "(4/5)*exp(-3(u-v)/10)*1_(v<=u)"
+  },
+  "terminal_gate": {
+    "consequence": "Jordan WKSFSC106150 AND TERMFUT106150 transfer to the explicit native K_L live negative-mass premise",
+    "name": "TERMFUT106150",
+    "statement": "for the source frozen at horizon Y and cutoff U(Y), the same live K_extra current has complete support in [1,CY] for fixed C and Jordan negative variation Y^o(1) there",
+    "status": "exactly isolates moving-cutoff/terminal compatibility"
+  },
+  "three_kernel_multipliers": {
+    "L102740_differentiated_outer": "q*r^2*(s-1)*(5s+3/2)/(s*(s-1/2))",
+    "common_mother_self_convolution": "q^2*r^2*(s-1)*(5s+3/2)/(s*(s-1/2))",
+    "explicit_native_K_L": "4*q*r^2*(s-1)/(s*(s-1/2))",
+    "factorization": "K_extra=Q*T*K_native, T=(5D+3/2)/4",
+    "factorization_polynomial_coefficients": [
+      "-3/2",
+      "-7/2",
+      "5"
+    ],
+    "typing_caveat": "the frozen L-102885 names the common-mother K_extra object K_L; it is not the explicit native K_L of L-102880"
+  }
+}

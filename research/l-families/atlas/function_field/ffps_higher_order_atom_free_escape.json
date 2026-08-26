@@ -1,0 +1,177 @@
+{
+  "exact_theorem": {
+    "U_k": "sum over ordered distinct i_1,...,i_k of product_j a_(i_j)",
+    "lower_bound": "U_k>=A^k*product_(j=0)^(k-1)(1-j*alpha)",
+    "masses": "a_i>=0, A=sum_i a_i, max_i a_i<=alpha*A",
+    "principal_corollary": "|sum_i z_i|^(2k)<=N^k*U_k/product_(j=0)^(k-1)(1-j*alpha)",
+    "range": "(k-1)*alpha<1",
+    "sharpness": "equality for uniform mass on s atoms when alpha=1/s"
+  },
+  "nonuniform_controls": [
+    {
+      "energy": "223/288",
+      "lower_bound": "2/3",
+      "order": 2,
+      "verified": true
+    },
+    {
+      "energy": "85/192",
+      "lower_bound": "2/9",
+      "order": 3,
+      "verified": true
+    }
+  ],
+  "resource_caps": {
+    "floating_point_operations": 0,
+    "largest_ordered_tuple_count": 1680,
+    "maximum_atoms": 8,
+    "maximum_order": 4,
+    "point_counts": 0
+  },
+  "uniform_equality_panels": [
+    {
+      "closed_form": "1/2",
+      "delocalization_lower_bound": "1/2",
+      "equality": true,
+      "order": 2,
+      "ordered_distinct_energy": "1/2",
+      "support_size": 2
+    },
+    {
+      "closed_form": "2/3",
+      "delocalization_lower_bound": "2/3",
+      "equality": true,
+      "order": 2,
+      "ordered_distinct_energy": "2/3",
+      "support_size": 3
+    },
+    {
+      "closed_form": "2/9",
+      "delocalization_lower_bound": "2/9",
+      "equality": true,
+      "order": 3,
+      "ordered_distinct_energy": "2/9",
+      "support_size": 3
+    },
+    {
+      "closed_form": "3/4",
+      "delocalization_lower_bound": "3/4",
+      "equality": true,
+      "order": 2,
+      "ordered_distinct_energy": "3/4",
+      "support_size": 4
+    },
+    {
+      "closed_form": "3/8",
+      "delocalization_lower_bound": "3/8",
+      "equality": true,
+      "order": 3,
+      "ordered_distinct_energy": "3/8",
+      "support_size": 4
+    },
+    {
+      "closed_form": "3/32",
+      "delocalization_lower_bound": "3/32",
+      "equality": true,
+      "order": 4,
+      "ordered_distinct_energy": "3/32",
+      "support_size": 4
+    },
+    {
+      "closed_form": "4/5",
+      "delocalization_lower_bound": "4/5",
+      "equality": true,
+      "order": 2,
+      "ordered_distinct_energy": "4/5",
+      "support_size": 5
+    },
+    {
+      "closed_form": "12/25",
+      "delocalization_lower_bound": "12/25",
+      "equality": true,
+      "order": 3,
+      "ordered_distinct_energy": "12/25",
+      "support_size": 5
+    },
+    {
+      "closed_form": "24/125",
+      "delocalization_lower_bound": "24/125",
+      "equality": true,
+      "order": 4,
+      "ordered_distinct_energy": "24/125",
+      "support_size": 5
+    },
+    {
+      "closed_form": "5/6",
+      "delocalization_lower_bound": "5/6",
+      "equality": true,
+      "order": 2,
+      "ordered_distinct_energy": "5/6",
+      "support_size": 6
+    },
+    {
+      "closed_form": "5/9",
+      "delocalization_lower_bound": "5/9",
+      "equality": true,
+      "order": 3,
+      "ordered_distinct_energy": "5/9",
+      "support_size": 6
+    },
+    {
+      "closed_form": "5/18",
+      "delocalization_lower_bound": "5/18",
+      "equality": true,
+      "order": 4,
+      "ordered_distinct_energy": "5/18",
+      "support_size": 6
+    },
+    {
+      "closed_form": "6/7",
+      "delocalization_lower_bound": "6/7",
+      "equality": true,
+      "order": 2,
+      "ordered_distinct_energy": "6/7",
+      "support_size": 7
+    },
+    {
+      "closed_form": "30/49",
+      "delocalization_lower_bound": "30/49",
+      "equality": true,
+      "order": 3,
+      "ordered_distinct_energy": "30/49",
+      "support_size": 7
+    },
+    {
+      "closed_form": "120/343",
+      "delocalization_lower_bound": "120/343",
+      "equality": true,
+      "order": 4,
+      "ordered_distinct_energy": "120/343",
+      "support_size": 7
+    },
+    {
+      "closed_form": "7/8",
+      "delocalization_lower_bound": "7/8",
+      "equality": true,
+      "order": 2,
+      "ordered_distinct_energy": "7/8",
+      "support_size": 8
+    },
+    {
+      "closed_form": "21/32",
+      "delocalization_lower_bound": "21/32",
+      "equality": true,
+      "order": 3,
+      "ordered_distinct_energy": "21/32",
+      "support_size": 8
+    },
+    {
+      "closed_form": "105/256",
+      "delocalization_lower_bound": "105/256",
+      "equality": true,
+      "order": 4,
+      "ordered_distinct_energy": "105/256",
+      "support_size": 8
+    }
+  ]
+}

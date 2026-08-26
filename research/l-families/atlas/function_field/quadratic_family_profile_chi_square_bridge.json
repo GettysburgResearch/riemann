@@ -1,0 +1,276 @@
+{
+  "claim_boundary": {
+    "external_priority_claim": false,
+    "individual_L_function_zero": false,
+    "integer_rh_or_grh": false,
+    "number_field_transfer": false,
+    "raw_detector_zeros": true
+  },
+  "discrepancy_bound": {
+    "beta_lower_bound": "beta_r>=r/(q^r+r)>=1/(2q^r)",
+    "bridge_panels": [
+      {
+        "M": 6453,
+        "M_minus_ell_minus_r": 3221,
+        "beta_lower_bound": "7/2194",
+        "d": 1610,
+        "ell_at_most_M_over_2": true,
+        "ell_r": 3225,
+        "factor_count_bound": 5,
+        "h": 1613,
+        "j": 3,
+        "near_wall_safe": true,
+        "q": 3,
+        "r": 7
+      },
+      {
+        "M": 58725,
+        "M_minus_ell_minus_r": 29355,
+        "beta_lower_bound": "1/2188",
+        "d": 14677,
+        "ell_at_most_M_over_2": true,
+        "ell_r": 29361,
+        "factor_count_bound": 5,
+        "h": 14681,
+        "j": 4,
+        "near_wall_safe": true,
+        "q": 3,
+        "r": 9
+      },
+      {
+        "M": 194933,
+        "M_minus_ell_minus_r": 97461,
+        "beta_lower_bound": "7/78132",
+        "d": 48730,
+        "ell_at_most_M_over_2": true,
+        "ell_r": 97465,
+        "factor_count_bound": 5,
+        "h": 48733,
+        "j": 3,
+        "near_wall_safe": true,
+        "q": 5,
+        "r": 7
+      }
+    ],
+    "conclusion": "Z/q^M<=2beta_r/d^2",
+    "constant": 614400,
+    "formula": "D^2<=614400M^11(ell_r+1)^10q^(ell_r-M)",
+    "half_modulus_corollary": "ell_r<=M/2 is safe for all sufficiently large M",
+    "near_wall_safe_condition": "q^(M-ell_r-r)>=1228800M^11(ell_r+1)^10"
+  },
+  "entropy_fence": {
+    "breaks_logarithmic_depth": false,
+    "depth_scale": "J=(1/2)log_q(M)+O_q(1)",
+    "support_bound": "Phi*sum_a p_lambda(a)^2-1>=Phi/|supp p_lambda|-1"
+  },
+  "exact_gate": {
+    "D_squared": "Phi/T*sum_lambda T_lambda^-1*sum_a|N_lambda(a)-T_lambda/Phi|^2",
+    "parseval": "D_squared=T^-1*sum_lambda T_lambda^-1*sum_(chi!=1)|sum_(Q in lambda)chi(Q)|^2",
+    "sufficient_spectral_gate": "D_squared<=beta_r",
+    "toy_exact_panel": {
+      "D_squared": "1",
+      "T": 8,
+      "Z": 6,
+      "beta": "1/2",
+      "normalized_zero": "3/4",
+      "profile_count": 2,
+      "residue_count": 4,
+      "squared_gate_holds": true
+    },
+    "zero_bound": "Z<=T*(beta_r+sqrt(beta_r)*D)"
+  },
+  "frozen_sources": {
+    "9f439e623ccafc12ffe4d434e511fd41a415c12f:research/l-families/atlas/function_field/QUADRATIC_FAMILY_LOGARITHMIC_DEPTH_ZERO_FIREWALL.md": "0aa9cd103cc48aaf56a64f45a3902cca63a2d3c5",
+    "9f439e623ccafc12ffe4d434e511fd41a415c12f:research/l-families/atlas/function_field/quadratic_family_logarithmic_depth_zero_firewall.json": "b4d56f8184734018422c35e84ef8d87bdf886872",
+    "9f439e623ccafc12ffe4d434e511fd41a415c12f:research/l-families/atlas/function_field/quadratic_family_logarithmic_depth_zero_firewall.py": "2e6eb61536833ef924ed703099a11de42126ea24",
+    "9f439e623ccafc12ffe4d434e511fd41a415c12f:tests/test_quadratic_family_logarithmic_depth_zero_firewall.py": "9286c3944f9de377e9ebecf1d3fc8aa538dc935a"
+  },
+  "newton_repeated_degrees": {
+    "cycle_panels": [
+      {
+        "all_cycle_lengths_sum_to_multiplicity": true,
+        "cycle_partitions": [
+          [
+            1
+          ]
+        ],
+        "multiplicity": 1,
+        "principal_power_requires_cycle_length_at_least_two": true
+      },
+      {
+        "all_cycle_lengths_sum_to_multiplicity": true,
+        "cycle_partitions": [
+          [
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "multiplicity": 2,
+        "principal_power_requires_cycle_length_at_least_two": true
+      },
+      {
+        "all_cycle_lengths_sum_to_multiplicity": true,
+        "cycle_partitions": [
+          [
+            3
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "multiplicity": 3,
+        "principal_power_requires_cycle_length_at_least_two": true
+      },
+      {
+        "all_cycle_lengths_sum_to_multiplicity": true,
+        "cycle_partitions": [
+          [
+            4
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "multiplicity": 4,
+        "principal_power_requires_cycle_length_at_least_two": true
+      },
+      {
+        "all_cycle_lengths_sum_to_multiplicity": true,
+        "cycle_partitions": [
+          [
+            5
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "multiplicity": 5,
+        "principal_power_requires_cycle_length_at_least_two": true
+      }
+    ],
+    "nonprincipal_power": "|sum_(deg P=e)chi(P)^b|<=(ell_r+1)q^(e/2)/e",
+    "principal_power": "b>=2 and I_q(e)<=q^e/e<=q^(be/2)/e",
+    "profile_fourier_bound": "|Nhat_lambda(chi)|<=(ell_r+1)^5q^(M/2)"
+  },
+  "profile_bounds": {
+    "bounded_panels": [
+      {
+        "M": 33,
+        "all_profile_lower_bounds_hold": true,
+        "d": 7,
+        "h": 8,
+        "j": 1,
+        "maximum_factor_count": 4,
+        "profile_count": 13,
+        "q": 3,
+        "two_factor_layer_lower_bound_holds": true
+      },
+      {
+        "M": 49,
+        "all_profile_lower_bounds_hold": true,
+        "d": 10,
+        "h": 12,
+        "j": 2,
+        "maximum_factor_count": 4,
+        "profile_count": 23,
+        "q": 3,
+        "two_factor_layer_lower_bound_holds": true
+      },
+      {
+        "M": 37,
+        "all_profile_lower_bounds_hold": true,
+        "d": 8,
+        "h": 9,
+        "j": 1,
+        "maximum_factor_count": 4,
+        "profile_count": 13,
+        "q": 5,
+        "two_factor_layer_lower_bound_holds": true
+      },
+      {
+        "M": 57,
+        "all_profile_lower_bounds_hold": true,
+        "d": 12,
+        "h": 14,
+        "j": 2,
+        "maximum_factor_count": 4,
+        "profile_count": 24,
+        "q": 5,
+        "two_factor_layer_lower_bound_holds": true
+      }
+    ],
+    "maximum_factors": 5,
+    "nonempty_profile_lower_bound": "T_lambda>=q^M/(122880M^5)",
+    "profile_count": "at most 5M^4",
+    "total_layer_lower_bound": "T>=q^M/M^2",
+    "total_layer_upper_bound": "T<=q^M/d^2"
+  },
+  "resource_caps": {
+    "characters_enumerated": 0,
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "finite_field_elements_enumerated": 0,
+    "irreducibles_enumerated": 0,
+    "maximum_factor_count": 5,
+    "maximum_profile_count_per_panel": 5000,
+    "polynomials_enumerated": 0,
+    "profiles_generated": 73,
+    "residue_classes_enumerated": 0,
+    "zeros_enumerated": 0
+  },
+  "schema": "riemann.function_field.profile_chi_square_bridge.v1",
+  "status": "exact profile-weighted chi-square gate and unconditional bridge under an explicit logarithmic-gap criterion below the residue entropy wall"
+}

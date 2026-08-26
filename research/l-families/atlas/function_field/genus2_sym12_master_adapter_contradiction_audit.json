@@ -1,0 +1,165 @@
+{
+  "exact_arrow_audit": {
+    "all_statuses": "PASS",
+    "ambient_formula": "Tr(F_q,e_c(A_2(w^1),V_(12,0)))=Hhat_12+2-5*q-q*Theta_(14,Gamma0(2))(q)",
+    "cubic_rows": "G3hat=0; repeated Lambda3hat=17-6*q",
+    "linear_row": "Q1hat=3*q-9",
+    "local_system_normalization": "r_D(12)=q^6*chi_(12,0)(U_D)",
+    "marked_open_formula": "T_(12,0)=Hhat_12-2*q-9-4*Theta_Delta-Theta_(8,2)-Theta_(10,2)",
+    "ordered_boundary": "11-3*q+4*Theta_Delta+Theta_(8,2)+Theta_(10,2)-q*Theta_(14,Gamma0(2))",
+    "quartic_row": "G4hat=Theta_Delta",
+    "reciprocal_preclosure": "T_(12,0)=Hhat_12-(q+1)*G3hat-G4hat+Lambda3hat+Q1hat",
+    "stable_channel": "Genuine=0",
+    "stack_group_order": "q*(q-1)"
+  },
+  "finite_raw_T_contradiction": {
+    "identity": "T_(12,0)(p)+9+p+4*Theta_Delta(p)+Theta_(8,2)(p)+Theta_(10,2)(p)+p*a_p(f_minus)=-p",
+    "not_independent_of_inventory": true,
+    "provenance": "T_(12,0) is replayed directly; conversion to Hhat_12 and the raw-T comparison both use the exact arithmetic inventory",
+    "rows": [
+      {
+        "Shmakov_required_minus_arithmetic_branch": 3,
+        "a_p(f_minus)": 1236,
+        "direct_T_(12,0)": -4587,
+        "inventory_derived_Hhat_12": -3708,
+        "p": 3,
+        "project_minus_Shmakov_from_raw_T_plus_inventory": -3
+      },
+      {
+        "Shmakov_required_minus_arithmetic_branch": 5,
+        "a_p(f_minus)": -57450,
+        "direct_T_(12,0)": 267251,
+        "inventory_derived_Hhat_12": 287250,
+        "p": 5,
+        "project_minus_Shmakov_from_raw_T_plus_inventory": -5
+      },
+      {
+        "Shmakov_required_minus_arithmetic_branch": 7,
+        "a_p(f_minus)": 64232,
+        "direct_T_(12,0)": -382735,
+        "inventory_derived_Hhat_12": -449624,
+        "p": 7,
+        "project_minus_Shmakov_from_raw_T_plus_inventory": -7
+      }
+    ]
+  },
+  "firewalls": [
+    "PROVENANCE FIREWALL: the scout directly computes T_(12,0), not H_12; its Hhat_12 and H_12 rows are inventory-derived.",
+    "FINITE FIREWALL: residuals -3,-5,-7 do not prove the correction at a fourth q or at prime powers.",
+    "GALOIS FIREWALL: the unique [5,1] tensor L repair is forced only inside the displayed constituent ledger and at the three trace rows; no actual all-q Galois Euler class is constructed.",
+    "SCOPE FIREWALL: no motive, compatible system, novelty, RH/GRH, or global Euler-product claim is made."
+  ],
+  "packet_manifest": [
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_SYM12_MASTER_ADAPTER_CONTRADICTION_AUDIT.md",
+      "sha256_lf_normalized": "e26be5a9f049dcafc781944b7f14a2a291fbbc23466d1c328b0c923c6c46cbd2"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus2_sym12_master_adapter_contradiction_audit.py",
+      "sha256_lf_normalized": "9fc4b818613a47f7914bb0f77c02196e80a4916c5019a582a31092ee018678a4"
+    },
+    {
+      "path": "tests/test_genus2_sym12_master_adapter_contradiction_audit.py",
+      "sha256_lf_normalized": "d6a88af6f65225931a0da33fe61bfb74f30684b6e233e60c37c29f7fff2dbd7c"
+    }
+  ],
+  "payload_sha256": "43466ccfe080aaf55e4adf9b25d2d22a72bf8cfa2ecafb30c86c17c794a3c226",
+  "resource_contract": {
+    "finite_row_checks": {
+      "actual": 3,
+      "maximum": 3
+    },
+    "maximum_output_bytes": 32768,
+    "maximum_wall_seconds": 4.0,
+    "runtime_external_access": "NONE",
+    "source_bytes": {
+      "actual_total": 90961,
+      "maximum_each": 45000,
+      "maximum_total": 95000
+    },
+    "source_files": {
+      "actual": 5,
+      "maximum": 5
+    }
+  },
+  "schema": "riemann.function_field.genus2_sym12_master_adapter_contradiction_audit.v1",
+  "scope": {
+    "all_q_cohomological_correction": "NOT_PROVED",
+    "base_fields_for_exact_adapters": "all odd prime powers",
+    "field_or_curve_enumeration": "NONE",
+    "finite_contradiction_support": [
+      3,
+      5,
+      7
+    ]
+  },
+  "smallest_unproved_arrow": {
+    "arrow": "Shmakov displayed formal associated-graded Tate ledger -> actual compact-support Galois Frobenius Euler class on A_2(w^1)",
+    "reason": "the arithmetic, q*(q-1) stack normalization, ordered boundary, and semisimplified stable-channel vanishing all survive the audit",
+    "source_caveat": "Shmakov explicitly does not fully justify the Galois action on the displayed Eisenstein cohomology"
+  },
+  "source_manifest": [
+    {
+      "bytes_read": 8749,
+      "commit": "c8eff406f49daf9f09c0bb3e63e21659275d224e",
+      "git_blob": "79ad36346734bb41f21b570f380ad9d1af86f9ee",
+      "id": "marked_stack_adapter",
+      "lf_sha256": "fe8f23f6379a70ea150a8e4f1b87054553536fde3bd23e6c1d21e252baf3b26c",
+      "path": "research/l-families/atlas/function_field/genus2_marked_weierstrass_stack_adapter.json",
+      "payload_sha256": "7b091cc158c7ff378774dcbaef5802c469c3d377384034bced1caf4fe92b3601",
+      "role": "exact H5//G_tilde groupoid and q*(q-1) trace normalization",
+      "schema": "riemann.function_field.genus2_marked_weierstrass_stack_adapter.v1"
+    },
+    {
+      "bytes_read": 39097,
+      "commit": "482e32c53f26517906143cd0d99c74d8b4edf3be",
+      "git_blob": "68907aa3ee65ced500807c79123f116da05f0ece",
+      "id": "sym12_inventory",
+      "lf_sha256": "94f0647a91aff299c62f24019947846e6923863f3ecba3c2f9cf95008407d4f6",
+      "path": "research/l-families/atlas/function_field/genus2_sym12_arithmetic_inventory.json",
+      "payload_sha256": "fba1c85c8dc3d60b276635ae5e3ed84db3ded06f4960afeaa9b92b4055f9211f",
+      "role": "exact reciprocal arithmetic and ordered decomposable boundary",
+      "schema": "riemann.function_field.genus2_sym12_arithmetic_inventory.v1"
+    },
+    {
+      "bytes_read": 12698,
+      "commit": "c463d4896e62057139454cb0ae2beb868506fee4",
+      "git_blob": "68acd63d703d3569f282cd32a4160dcdd7bf76fa",
+      "id": "sym12_finite_scout",
+      "lf_sha256": "06cc45904ee427fa6b2d2812b6c54d2312d6b9d41e12cd4689d28b7def360d2e",
+      "path": "research/l-families/atlas/function_field/genus2_sym12_finite_cusp_trace_scout.json",
+      "payload_sha256": "1c794190e4e83778de852d1f12df5a35fccbce414c27df67eeeb6f87ed7ee1d1",
+      "role": "direct raw T_(12,0) rows and explicitly inventory-derived Hhat rows",
+      "schema": "riemann.function_field.genus2_sym12_finite_cusp_trace_scout.v1"
+    },
+    {
+      "bytes_read": 27787,
+      "commit": "20abcc478c310a17917b2276f85e525ad966f1c2",
+      "git_blob": "1b40e95287081b218255c1cc0a46d71020322fe4",
+      "id": "conditional_closure",
+      "lf_sha256": "e52f521214bcc2e0da5fc6e77be467b43997d2b97a97a0cb01b076a9efd7ec5f",
+      "path": "research/l-families/atlas/function_field/genus2_sym12_conditional_endoscopic_closure.json",
+      "payload_sha256": "70a88bd13649e644503d604ca15081f2d1c6f946635285ee31c9fb1a7b672a4e",
+      "role": "exact G=0 adapter and source-graded Eisenstein comparison",
+      "schema": "riemann.function_field.genus2_sym12_conditional_endoscopic_closure.v2"
+    },
+    {
+      "bytes_read": 2630,
+      "commit": "86be60a01e39651d4501fd704afc664a251f97a8",
+      "git_blob": "f6ea61e047b1c3bb152ef52e9e5ea5cda68bbc74",
+      "id": "one_tate_no_go",
+      "lf_sha256": "d53761f184729e1004e4fcecf42053ce40da6b9d74f0b0935c63321be8fd5ad7",
+      "path": "research/l-families/atlas/function_field/genus2_sym12_eisenstein_one_tate_no_go.json",
+      "role": "finite constituent localization of the unique [5,1] tensor L defect"
+    }
+  ],
+  "status": "EXACT_SOURCE_RELATIVE_THREE_PRIME_CONTRADICTION_LOCALIZATION",
+  "unique_formal_repair_within_displayed_ledger": {
+    "carrier": "[5,1] tensor L",
+    "effect_on_Eisenstein_projection": "2-4*L -> 2-5*L",
+    "effect_on_master_relation_when_G_zero": "Hhat_12=L-L*f_minus -> Hhat_12=-L*f_minus",
+    "grade": "unique formal carrier correction and forced trace correction at p=3,5,7 only; not an all-q Galois or motivic theorem",
+    "location": "weight-16 Fricke-positive level-2 Siegel block in H_c^3"
+  },
+  "verdict": "No missing Tate occurs in the arithmetic inventory, q*(q-1) stack normalization, or marked open-to-ambient boundary. The exact finite conflict is localized to the source-caveated cohomological realization."
+}

@@ -1,0 +1,163 @@
+{
+  "conditional_gate": {
+    "conditional_implication_to_rh_proved": true,
+    "estimate": "sum_(I in aligned dyadic height blocks) sum_(d<=D,sf,67-free) d^-1 |P_I(d)|^2 <<_epsilon (2DH)^epsilon",
+    "estimate_proved": false,
+    "implies_primls": true,
+    "name": "PRIMCAR",
+    "rh_proved": false
+  },
+  "exact_reductions": {
+    "dyadic_maximal": {
+      "bound": "sum_(d<=D,squarefree,67-free) d^-1 sup_U |P(d;H,U)|^2 <= ceil(log2(N+1)) sum_I E_D(I)",
+      "replay": {
+        "family_size": 7,
+        "height_count": 4,
+        "max_blocks_in_prefix": 2,
+        "prefix_rows": [
+          {
+            "blocks": [],
+            "prefix": 0
+          },
+          {
+            "blocks": [
+              [
+                0,
+                1
+              ]
+            ],
+            "prefix": 1
+          },
+          {
+            "blocks": [
+              [
+                0,
+                2
+              ]
+            ],
+            "prefix": 2
+          },
+          {
+            "blocks": [
+              [
+                0,
+                2
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "prefix": 3
+          },
+          {
+            "blocks": [
+              [
+                0,
+                4
+              ]
+            ],
+            "prefix": 4
+          }
+        ]
+      }
+    },
+    "finite_incidence_gram": {
+      "energy_digest": "fae3fb91f65801c620636e2f6346d4aaaf59e5f0fa37ec7498bb25e19332d6f2",
+      "energy_match": true,
+      "kernel": "K_D(lcm(e,f))=sum_(d<=D,sf,67-free,(d,lcm(e,f))=1)d^-1",
+      "linear_digest": "4acd141b19b697ea3b2ae812fd622abdeaf7555744feef12c5db48da00ec2e40",
+      "linear_match": true,
+      "strata": 10
+    },
+    "harmonic_limit": {
+      "coefficient": "67/(68*zeta(2))",
+      "formula": "lim_(D->infinity) E_D(I)/log(D)=67/(68*zeta(2))*E_(nu_Q)|P_I(delta)|^2",
+      "replay": {
+        "centered_energy_digest": "f6e7ef956dd93237b547cfc30267722d8925c2f6b22d4fab380e5c9a751b186b",
+        "energy_digest": "41221615bda024a009ae8b8f77416a6e59fd1fdd51d6e31893321bb8bbb02d0a",
+        "incidence_classes": 16,
+        "mean_digest": "203b529721df605a8b047298c300d83cdc428a41b993b7d48a985d72e85e919d",
+        "mode_digests": {
+          "1": "203b529721df605a8b047298c300d83cdc428a41b993b7d48a985d72e85e919d",
+          "10": "59c519e5121409ea7362be60d02ea2d8a692d4c8f31a5708b042277e4eb0bf9f",
+          "105": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "14": "8e4f97cd64a96a949cfacca0d615987b7cd65439043022c629853cc03eed412c",
+          "15": "446010bd514f1efd307667463b229f14d1c80c4599a98f0d68e226534c1a7bbe",
+          "2": "29613415c307887bb72b46660e7c355760f4ff06a623e61faf3ee14925387d80",
+          "21": "06b851a19b4346c3522a989a0226cd149c544688b2b90ba68b5f752f87ae95b9",
+          "210": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "3": "412bf24d458d0a4e75c84e565f64c8ea37cd2d95cea432e0d39ed70f66f160ca",
+          "30": "3b1a5d74e3c666fe13ea0886a5e64625a2f3c9ddb4861d239810037376d72197",
+          "35": "f7fabc065dfaf19d0dc0bce88d83eea944594bbb49abb2199835785157776b14",
+          "42": "c3369873ec299089aa84f576c2b895dba65177d064aae31509288c8bd4f8313a",
+          "5": "4e119366cb44a060d6bc5c0b13b43cbf5b46684e60bb9f90bda99123061fc0ca",
+          "6": "2fb8a8e4135b45815bd1afad3949663f0947bc885c12ab10335b6f4bf9e68e2d",
+          "7": "ec4d92babafef733f95f6fbef078c6751ac1cda1e9f8368be027386138fbd17e",
+          "70": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "mode_energy_match": true,
+        "normalizer": "96/35",
+        "rho_tilt_match": true,
+        "squarefree_harmonic_coefficient_match": true
+      },
+      "zero_mode": "B_I=sum_(a,b in I) mu(a)rho(a)mu(b)rho(b)/sqrt(ab)*R(log(67^alpha*a/(67^gamma*b)))"
+    },
+    "rho_euler_factor": {
+      "absolute_correction_half_plane": "Re(s)>0",
+      "factorization": "sum_((n,67)=1)mu(n)rho(n)n^-s=G_rho(s)/((1-67^-s)zeta(s)) for Re(s)>1",
+      "local_rows": [
+        {
+          "correction_linear": "1/3",
+          "prime": "2",
+          "rho": "2/3"
+        },
+        {
+          "correction_linear": "1/4",
+          "prime": "3",
+          "rho": "3/4"
+        },
+        {
+          "correction_linear": "1/6",
+          "prime": "5",
+          "rho": "5/6"
+        },
+        {
+          "correction_linear": "1/8",
+          "prime": "7",
+          "rho": "7/8"
+        }
+      ]
+    }
+  },
+  "resource_caps": {
+    "channel": [
+      0,
+      0
+    ],
+    "curves": 0,
+    "dyadic_height": 4,
+    "finite_fields": 0,
+    "harmonic_limit": 180,
+    "incidence_modulus": 210,
+    "l_functions": 0,
+    "pair_cells_per_layer_at_most": 64,
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "harmonic_limit_uniform_in_height": false,
+    "maximal_gate_proved": false,
+    "primls_proved": false,
+    "rh_or_grh_proved": false
+  },
+  "source_contract": {
+    "commit": "dd1bd8766",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_BOUNDARY_FIELD_PRIMITIVE_PAIR_LARGE_SIEVE_GATE.md": "2abd49b975837c924009e33912e786b4b720e29c",
+      "research/l-families/atlas/function_field/ffps_boundary_field_primitive_pair_large_sieve_gate.json": "beee338489fc23f0e74841162a1f422b99b6c71a",
+      "research/l-families/atlas/function_field/ffps_boundary_field_primitive_pair_large_sieve_gate.py": "37ee4b1620c6f601dc68d7b97fb8851508c1b176",
+      "tests/test_ffps_boundary_field_primitive_pair_large_sieve_gate.py": "df06ea3e0da15c83ae0a267c1a37dfedd852ff17"
+    },
+    "imported_theorem": "primitive-pair shell decomposition, PRIMLS=>RH, and exact finite Boolean-sieve transform"
+  }
+}

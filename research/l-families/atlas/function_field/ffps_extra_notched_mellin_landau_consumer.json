@@ -1,0 +1,124 @@
+{
+  "canonical_successor": {
+    "atomic_audit_commit": "78e5ce8e75bce174e3014a33b6fe086112577a1e",
+    "boundary_difference": "h_epsilon=(G-tau_epsilon G)/epsilon",
+    "boundary_field": "G=sum beta(n)/sqrt(n)*K_bd(t-log(n)), where D K_bd=K_ext",
+    "boundary_shell_commit": "9e19e27614e473b3b7d06cfc3d51f92eb39ff009",
+    "criterion": "int_0^T (h_epsilon)_- dt=e^o(T)",
+    "criterion_proved": false,
+    "detector": "h_epsilon=eta_epsilon*nu_ext for one fixed epsilon>0",
+    "equivalence_commit": "9f29bdb6ea7375df84de550d62f9d0984634a8dd",
+    "reflection_commit": "a678292fd6d19d5b18f499aef35d2263cfc2b4ec",
+    "rh_proved": false,
+    "shortest_criterion": "int_0^T |G(t)| dt=e^o(T), equivalently int_0^T G_-(t) dt=e^o(T)",
+    "source_form": "exact native half-divisor reflection/geodesic identity; no Boolean completion gate required",
+    "strength": "equivalent to RH"
+  },
+  "conditional_consumer": {
+    "atomic_lower_bound": "nu_ext^-([1,Y]) >= ((70+50*sqrt(2))/pi^2)*sqrt(Y)+O(log(Y))",
+    "conclusion": "Riemann Hypothesis",
+    "landau_ledger": {
+      "division_gate": "box multiplier is nonzero for Re(s)>0",
+      "landau_conclusion": "mollified transform holomorphic for Re(s)>0",
+      "mollified_negative_transform": "holomorphic for Re(s)>0",
+      "negative_premise": "nu_ext^-([1,Y])=O_epsilon(Y^epsilon) for every epsilon>0",
+      "positive_density_abscissa_upper_bound": "1/2",
+      "positive_real_axis": "explicit transform holomorphic for every real s>0",
+      "raw_total_variation_prefix": "|nu_ext|([1,Y]) = O(Y^(1/2))",
+      "source_coefficient_bound": "|beta(n)| <= 2"
+    },
+    "premise": "nu_ext^-([1,Y]) = Y^o(1), in Jordan variation",
+    "premise_viable": false,
+    "status": "exact analytic implication; raw arithmetic premise refuted by the complete beta atomic-variation firewall"
+  },
+  "kernel": {
+    "A_hat": "q(s)*r(s)/(s*(s-1/2))",
+    "D_out": "(1/2)*D*(D-1)*(5*D+3/2)*(2*D-1)",
+    "definition": "K_ext=D_out(A *_M A)",
+    "measure_certificate": {
+      "conclusion": "K_ext is a compact finite signed measure",
+      "convolution_identity": "D^4(a*a)=a''*a''",
+      "log_kernel": "continuous compact piecewise-smooth a(t)",
+      "max_D_out_order": 4,
+      "mother_measure_derivative": "a'' is a finite signed measure",
+      "support": "[0,4*log(2)] in log scale, equivalently [1,16]"
+    },
+    "simplified_multiplier": "q(s)^2*r(s)^2*(s-1)*(5s+3/2)/(s*(s-1/2))",
+    "support": "[1,16] as a finite signed logarithmic measure"
+  },
+  "measure_regularization": {
+    "mollifier": "positive probability box on log-scale interval [0,epsilon]",
+    "multiplier": "(1-exp(-epsilon*s))/(epsilon*s)",
+    "multiplier_zeros": "Re(s)=0 only",
+    "negative_variation_contraction": "int_[0,T] (h_epsilon)_- dt <= nu_ext^-([0,T]) for every T",
+    "output_type": "locally integrable log-scale density h_epsilon",
+    "panels": [
+      {
+        "nonzero_for_every_imaginary_part": true,
+        "real_part": "1/100"
+      },
+      {
+        "nonzero_for_every_imaginary_part": true,
+        "real_part": "1/10"
+      },
+      {
+        "nonzero_for_every_imaginary_part": true,
+        "real_part": "1/4"
+      },
+      {
+        "nonzero_for_every_imaginary_part": true,
+        "real_part": "49/100"
+      }
+    ]
+  },
+  "resource_caps": {
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "mellin_samples": 4,
+    "point_counts": 0,
+    "smoothing_panels": 4,
+    "source_atoms_enumerated": 0
+  },
+  "source": {
+    "absolute_fubini_half_plane": "Re(s)>1/2",
+    "beta": "mu(n)-1_(67|n)*mu(n/67)",
+    "dirichlet_factor": "sum beta(n)*n^(-z)=(1-67^(-z))/zeta(z) for Re(z)>1",
+    "mellin_transform": "M_ext(s)*(1-67^(-(s+1/2)))/zeta(s+1/2)",
+    "off_line_zero": "rho with Re(rho)>1/2 gives a genuine pole at s=rho-1/2"
+  },
+  "source_adapter_gate": {
+    "consequence": "historical only: EXTSRC106150 plus the now-refuted raw-Jordan WKSFSC106150 would imply RH",
+    "name": "EXTSRC106150",
+    "statement": "the complete beta-source extra-notched current equals D_out*J_U^diamond plus an absolute-subpower closed field",
+    "status": "source-accounting gate remains open, but cannot rescue the refuted raw-Jordan premise"
+  },
+  "zero_audit": {
+    "dyadic_zero_real_parts": {
+      "q(s)=1-sqrt(2)*2^(-s)": "1/2",
+      "r(s)=1-2^(-s)": "0"
+    },
+    "nonvanishing_on_0_lt_Re_s_lt_1_over_2": true,
+    "polynomial_zero_real_parts": {
+      "5s+3/2": "-3/10",
+      "s-1": "1"
+    },
+    "positive_integer_samples": [
+      {
+        "M_ext(s)": "621/256-69/64*sqrt(2)",
+        "s": 2
+      },
+      {
+        "M_ext(s)": "17787/5120-539/640*sqrt(2)",
+        "s": 3
+      },
+      {
+        "M_ext(s)": "3744225/917504-29025/57344*sqrt(2)",
+        "s": 4
+      },
+      {
+        "M_ext(s)": "853910505/184549376-416745/2883584*sqrt(2)",
+        "s": 6
+      }
+    ]
+  }
+}

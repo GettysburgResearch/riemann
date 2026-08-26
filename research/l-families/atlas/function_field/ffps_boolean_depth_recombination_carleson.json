@@ -1,0 +1,67 @@
+{
+  "common_core": {
+    "l1_factor": "sum_g mu^2(g)*9^omega(g)/g^2 < infinity",
+    "l2_factor": "sum_g mu^2(g)*81^omega(g)/g^4 < infinity"
+  },
+  "depth_recombination": {
+    "coefficient_formula": "sum over disjoint R,S,T with R*S*T=n, R>U, S>U of mu(R)*mu(S)",
+    "identity": "b_U=mu_>U star mu_>U star 1_sf",
+    "uniform_three_box_majorant": "abs(b_U(n))<=3^omega(n)"
+  },
+  "fixed_ratio_core_shells": {
+    "l1": {
+      "bad_shell_log_exponent": "1.239934868312",
+      "full_shell_log_exponent": "2.000000000000",
+      "majorant_weight": 3,
+      "relative_log_saving": "0.760065131688"
+    },
+    "l2_diagonal": {
+      "bad_shell_log_exponent": "4.541025453915",
+      "full_shell_log_exponent": "8.000000000000",
+      "majorant_weight": 9,
+      "relative_log_saving": "3.458974546085"
+    },
+    "rank": "r=floor(alpha*log log x)",
+    "scope": "uniform Boolean core-coefficient envelopes after indicator shell deletion; not a bound for the Hilbert-valued observed FFPS current"
+  },
+  "identity_panels": [
+    {
+      "cutoff_cells_checked": 4,
+      "maximum_absolute_coefficient": 2,
+      "support_size": 2,
+      "three_box_majorant": 9
+    },
+    {
+      "cutoff_cells_checked": 8,
+      "maximum_absolute_coefficient": 2,
+      "support_size": 3,
+      "three_box_majorant": 27
+    },
+    {
+      "cutoff_cells_checked": 16,
+      "maximum_absolute_coefficient": 4,
+      "support_size": 4,
+      "three_box_majorant": 81
+    },
+    {
+      "cutoff_cells_checked": 32,
+      "maximum_absolute_coefficient": 6,
+      "support_size": 5,
+      "three_box_majorant": 243
+    },
+    {
+      "cutoff_cells_checked": 64,
+      "maximum_absolute_coefficient": 10,
+      "support_size": 6,
+      "three_box_majorant": 729
+    }
+  ],
+  "resource_caps": {
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "maximum_support_size": 6,
+    "maximum_three_box_assignments": 729,
+    "point_counts": 0,
+    "source_atoms_enumerated": 0
+  }
+}

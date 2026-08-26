@@ -1,0 +1,216 @@
+{
+  "exact_formula": {
+    "average_betti": "(2er2^(r-1)-2(2^r-1))/(2^r-1)",
+    "average_betti_square": "(2^r*(e^2*r*(r+1)-4er+4)-4)/(2^r-1)",
+    "deduction": "the selected average has linear first-moment rank but quadratic second-moment tensor rank",
+    "mode_betti": "b_S=2e|S|-2"
+  },
+  "panels": [
+    {
+      "asymptotic_average_selected_energy_rank": "1*r^2-3*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "0",
+      "average_selected_energy_rank": "0",
+      "blocks": 1,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 1,
+      "selected_mode_count": 1,
+      "total_first_moment_rank": 0,
+      "total_selected_energy_rank": 0
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "1*r^2-3*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "2/3",
+      "average_selected_energy_rank": "4/3",
+      "blocks": 2,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 1,
+      "selected_mode_count": 3,
+      "total_first_moment_rank": 2,
+      "total_selected_energy_rank": 4
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "1*r^2-3*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "10/7",
+      "average_selected_energy_rank": "4",
+      "blocks": 3,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 1,
+      "selected_mode_count": 7,
+      "total_first_moment_rank": 10,
+      "total_selected_energy_rank": 28
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "1*r^2-3*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "98/31",
+      "average_selected_energy_rank": "444/31",
+      "blocks": 5,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 1,
+      "selected_mode_count": 31,
+      "total_first_moment_rank": 98,
+      "total_selected_energy_rank": 444
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "1*r^2-3*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "1538/255",
+      "average_selected_energy_rank": "2252/51",
+      "blocks": 8,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 1,
+      "selected_mode_count": 255,
+      "total_first_moment_rank": 1538,
+      "total_selected_energy_rank": 11260
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "1*r^2-3*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "13654/1365",
+      "average_selected_energy_rank": "50972/455",
+      "blocks": 12,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 1,
+      "selected_mode_count": 4095,
+      "total_first_moment_rank": 40962,
+      "total_selected_energy_rank": 458748
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "4*r^2-4*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "2",
+      "average_selected_energy_rank": "4",
+      "blocks": 1,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 2,
+      "selected_mode_count": 1,
+      "total_first_moment_rank": 2,
+      "total_selected_energy_rank": 4
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "4*r^2-4*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "10/3",
+      "average_selected_energy_rank": "44/3",
+      "blocks": 2,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 2,
+      "selected_mode_count": 3,
+      "total_first_moment_rank": 10,
+      "total_selected_energy_rank": 44
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "4*r^2-4*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "34/7",
+      "average_selected_energy_rank": "220/7",
+      "blocks": 3,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 2,
+      "selected_mode_count": 7,
+      "total_first_moment_rank": 34,
+      "total_selected_energy_rank": 220
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "4*r^2-4*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "258/31",
+      "average_selected_energy_rank": "2684/31",
+      "blocks": 5,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 2,
+      "selected_mode_count": 31,
+      "total_first_moment_rank": 258,
+      "total_selected_energy_rank": 2684
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "4*r^2-4*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "3586/255",
+      "average_selected_energy_rank": "58364/255",
+      "blocks": 8,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 2,
+      "selected_mode_count": 255,
+      "total_first_moment_rank": 3586,
+      "total_selected_energy_rank": 58364
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "4*r^2-4*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "30038/1365",
+      "average_selected_energy_rank": "726356/1365",
+      "blocks": 12,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 2,
+      "selected_mode_count": 4095,
+      "total_first_moment_rank": 90114,
+      "total_selected_energy_rank": 2179068
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "9*r^2-3*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "4",
+      "average_selected_energy_rank": "16",
+      "blocks": 1,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 3,
+      "selected_mode_count": 1,
+      "total_first_moment_rank": 4,
+      "total_selected_energy_rank": 16
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "9*r^2-3*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "6",
+      "average_selected_energy_rank": "44",
+      "blocks": 2,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 3,
+      "selected_mode_count": 3,
+      "total_first_moment_rank": 18,
+      "total_selected_energy_rank": 132
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "9*r^2-3*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "58/7",
+      "average_selected_energy_rank": "604/7",
+      "blocks": 3,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 3,
+      "selected_mode_count": 7,
+      "total_first_moment_rank": 58,
+      "total_selected_energy_rank": 604
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "9*r^2-3*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "418/31",
+      "average_selected_energy_rank": "6844/31",
+      "blocks": 5,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 3,
+      "selected_mode_count": 31,
+      "total_first_moment_rank": 418,
+      "total_selected_energy_rank": 6844
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "9*r^2-3*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "1878/85",
+      "average_selected_energy_rank": "47444/85",
+      "blocks": 8,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 3,
+      "selected_mode_count": 255,
+      "total_first_moment_rank": 5634,
+      "total_selected_energy_rank": 142332
+    },
+    {
+      "asymptotic_average_selected_energy_rank": "9*r^2-3*r+4+O_e(r^2*2^-r)",
+      "average_first_moment_rank": "15474/455",
+      "average_selected_energy_rank": "16436/13",
+      "blocks": 12,
+      "exact_asymptotic_remainder": "(e^2*r*(r+1)-4*e*r)/(2^r-1)",
+      "place_degree": 3,
+      "selected_mode_count": 4095,
+      "total_first_moment_rank": 139266,
+      "total_selected_energy_rank": 5177340
+    }
+  ],
+  "resource_caps": {
+    "floating_point_operations": 0,
+    "largest_subset_size_sum": 12,
+    "maximum_blocks": 12,
+    "maximum_place_degree": 5,
+    "point_counts": 0,
+    "subsets_enumerated": 0
+  }
+}

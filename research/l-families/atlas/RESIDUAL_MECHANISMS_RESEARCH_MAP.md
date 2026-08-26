@@ -1,5 +1,77 @@
 # Residual detector mechanisms: start here
 
+> **Successor notice (PR #757).** This file is the frozen front door for PR
+> #756. For the current successor results, begin with
+> [`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md)
+> and
+> [`SHEAF_AMPLIFIER_RESEARCH_MAP.md`](SHEAF_AMPLIFIER_RESEARCH_MAP.md). In
+> particular, PR #757 proves the
+> stable/general `Sym^12` channel `G=0`, localizes the remaining discrepancy
+> to the formal-associated-graded-to-Galois realization arrow, refutes the
+> raw complete-current Jordan premise by an explicit `Omega(sqrt(Y))` lower
+> bound, and replaces it with a fixed-mollified native-reflection criterion
+> exactly equivalent to RH, whose quadratic form is now localized to balanced
+> primitive rays beyond every prescribed subpower height. It also proves the
+> odd-notch density through `M^-3` at every fixed depth, exponential local
+> anti-concentration, and an `O(M^-2)` theorem through a growing logarithmic
+> depth window, followed by a profile chi-square criterion which permits a
+> logarithmic gap to the residue-entropy wall when its discrete modulus
+> satisfies the displayed condition, and then an exact quadratic-squareclass
+> quotient which crosses that generic wall to
+> `r=log_q M+log_q log M+O_q(1)`. The universal exact `d`-cycle selector
+> has forced semisimple
+> rank mass `2^(d-1)/d`; the same optimum remains uniquely forced under the
+> derangement relaxation through degree ten, while an exact all-degree `tanh`
+> transform, sharp `(d-4)/d` nonhook gap, and descent-set rigidity isolate the
+> remaining contractive nonhook problem. Every putative contractive optimum
+> is now forced to carry nonzero predecessor potentials in alternating
+> half-planes (alternating signs for real lifts) through
+> `d/2-(1/2+o(1))sqrt(d log d)` two-row layers, and every fixed tail has an
+> explicit exponential leading profile with polynomial error. Thus the live
+> selector problem is moving-tail bulk matching, not another finite edge
+> patch. The actual primitive-pair `d^-1` average also has an exact incidence
+> Gram whose fixed-height limit is the biased Boolean cube; the stronger open
+> dyadic gate `PRIMCAR` implies `PRIMLS` and hence conditionally RH. Its `rho`
+> coefficient is boundedly convolution-equivalent to ordinary Möbius; the
+> pair zero mode becomes a Boolean-compressed weighted superposition of
+> generalized primitive panels. Squarefreeness, coprimality, and sieve
+> incidence survive exactly under `(A,B,q)=(67^alpha r,67^gamma s,drs)`, and
+> for each of the three actual `(alpha,0)` channels and fixed
+> squarefree 67-free `q`, there are `3^omega(q)` compatible
+> colorings, with `2^omega(q)` saturated `d=1`
+> rays. Minkowski exposes `COLLPRIMCAR` as the direct weighted-
+> `l^1` input. The image-tailored `RAYPRIMCAR` and full-
+> `q` `GENPRIMCAR` gates are stronger but incomparable at
+> subpower normalization by positive-norm algebra: the former pays a
+> convergent `K_67(epsilon)` cost for `0<epsilon<1`, the latter
+> `O(log^2 H)` in vector norm / `O(log^4 H)` in energy. None
+> is proved, and none controls the nonzero incidence spectrum. There is also
+> an exact coherent-core compression at every fixed `(d,u=rs)`:
+> summing the `r/s` colors before the norm exposes the quadratic
+> `AUXCOLORPRIMCAR` gate (`COLORPRIMCAR` at `D=1`). The ray
+> gate implies it with an explicit Euler cost, and it controls the whole
+> auxiliary rho-sieved energy with sharp Hilbert constant `J_67`; it is
+> formally incomparable with the collective and full-`q` gates. Expanding
+> it gives an exact signed primitive-pair Gram with multiplicative kernel
+> `prod_(p|gcd(N,M))(1+sqrt(p)/(p+1))`; this is a new attack surface,
+> not a cancellation estimate. Exact upper-divisor Möbius inversion recovers
+> every product-shell amplitude but not its internal orientations, and the
+> local weighted overlap-Gram condition number grows like `4sqrt(p)`.
+> Finally, `N=uM` cancels the core sign and square root, leaving a
+> one-variable Möbius divisor-wavelet square function. The open per-core gate
+> `WAVEPRIMCAR` implies `AUXCOLORPRIMCAR` with Euler convergence exactly
+> below exponent `1/2`. Ratio-16 support makes its divisor wavelet
+> near-square and confines each cofactor to a factor-64 multiplicative shell.
+> Separately, the minimal
+> ternary physical mask has a universal degree-shell norm/Kummer realization
+> of rank `48`, tame Swan zero, and linear toric boundary support; the exact
+> cycle selector is its first exponential **coefficient-space** assembly cost,
+> while closed-point Adams--Möbius extraction bypasses that cost with only
+> `2^(omega(a)+omega(b))` nonzero signed trace terms whenever the joint kernel has commuting
+> partial Frobenius actions. The native source has not yet passed that
+> factorization gate. The
+> historical statements below should not be used as the current frontier.
+
 ## Release status
 
 This is the canonical start-here index for draft

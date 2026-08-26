@@ -1,0 +1,185 @@
+{
+  "adapter": {
+    "conditional_conclusion": "MEXTSRC106150 and MWKSFSC106150 plus the direct consumer imply RH",
+    "missing_source_gate": "NATCOMP-MOLL106150",
+    "missing_source_gate_reason": "multiplicative polylog gauge equivalence does not imply an additive L1-subpower error at k_epsilon",
+    "mollified_one_sided_gate": "MWKSFSC106150 remains open",
+    "name": "MEXTSRC106150",
+    "proposed_closed_remainder": "absolute Y^(o(1)) on each dyadic block",
+    "retained_live_object": "D_out J_U^diamond for the complete balanced source",
+    "status": "open: not proved by the frozen source chain"
+  },
+  "closure_rows": {
+    "boolean_type_i": {
+      "sources": [
+        "L-102953",
+        "L-106080"
+      ],
+      "transport": "proved generic fixed-BV zero-mass kernel estimate"
+    },
+    "diagonal_and_equal_product": {
+      "sources": [
+        "L-102702",
+        "L-102883"
+      ],
+      "transport": "fixed-L2 energy plus one-block Cauchy-Schwarz"
+    },
+    "finite_and_terminal": {
+      "sources": [
+        "L-102886",
+        "L-106080"
+      ],
+      "transport": "fixed finite support"
+    },
+    "pair_owner_collapse": {
+      "sources": [
+        "L-102747",
+        "L-102962"
+      ],
+      "transport": "exact allocation and logarithmic multiplicity only"
+    },
+    "same_owner_square_cores": {
+      "sources": [
+        "L-102705"
+      ],
+      "transport": "fixed compact-kernel autocorrelation"
+    },
+    "source_l1_squared_and_higher": {
+      "sources": [
+        "L-102601",
+        "L-102904",
+        "L-102905",
+        "L-102906"
+      ],
+      "transport": "Tonelli after exact source isolation"
+    },
+    "very_large_common_square": {
+      "sources": [
+        "L-102887"
+      ],
+      "transport": "absolute common-square summation"
+    }
+  },
+  "duplicate_67": {
+    "labelled_local_polynomial": "(1-x_67,1)(1-x_67,2)",
+    "physical_coefficients_by_exponent": {
+      "0": 1,
+      "1": -2,
+      "2": 1
+    }
+  },
+  "frozen_sources": {
+    "half_source_blobs": {
+      "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md": "346cc52420ec65457c2a5accc045d4a85635cc24",
+      "claims/lemmas/L-106132-boolean-half-source-least-prime-calderon-row.md": "f393a1d8583c5680b98a4b3e26d9b5a61c8d2b7a",
+      "claims/lemmas/L-106133-canonical-equal-pair-boolean-source-is-a-beta-half-source-square.md": "b988b14eb982504a799158eed4c76e7f033c96f0",
+      "claims/lemmas/L-106134-common-mother-is-a-differential-self-convolution.md": "cf40354ff8810a2d4bea9459cf142c300ba36237",
+      "claims/theorems/T-106150-same-half-source-analytic-square-frontier.md": "ac15f0106a26303f06779feb484a521978fe3ecf"
+    },
+    "half_source_commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+    "parent_blobs": {
+      "claims/lemmas/L-102505-squared-core-physical-collapse-is-polylogarithmic.md": "135b496421bbb0986946ae647e4e2b9058d8f22c",
+      "claims/lemmas/L-102601-logarithmic-phase-connection-tail.md": "ecc70bc470155a0b156f0f607ebd09504d9d4691",
+      "claims/lemmas/L-102602-native-completion-defect-and-pole-audit.md": "47966830014aaaaf0ff83f3659a2b04541f45486",
+      "claims/lemmas/L-102603-duhamel-current-for-the-completion-defect.md": "ee0e142dd5c4db246237167f64c410d1583e3d34",
+      "claims/lemmas/L-102604-duhamel-equal-owner-disintegration.md": "ab3135710439ff79a9ee634bfc291f2f5f34d0dd",
+      "claims/lemmas/L-102702-diagonal-and-factor-pair-costs-are-subpower.md": "5ce74d15cc7b41e990630f6749bfd3c2473cbbf4",
+      "claims/lemmas/L-102705-same-owner-square-core-overlap-is-polylogarithmic.md": "445306dd4a8f3f85134fcb5da3bfa83e7165ecc6",
+      "claims/lemmas/L-102706-euler-half-divisor-homotopies-are-subcritically-gauge-equivalent.md": "6192bec36636e2d35b2aba4fdd64eb4bcf93c2d9",
+      "claims/lemmas/L-102707-continuous-half-divisor-geodesic-and-polarized-hankel-current.md": "6810bcece309b0c54ae6c8fc84b314990004549c",
+      "claims/lemmas/L-102708-uniform-geodesic-source-energy-is-polylogarithmic.md": "14ae4c9ff5e29f12cf8aa70ead5d4c4dd337d6d7",
+      "claims/lemmas/L-102709-regionwise-gauge-selection-is-source-exact.md": "6080f9c6d36f5654a69d2c8148d3aa4483f39dfb",
+      "claims/lemmas/L-102747-pair-owner-collapse-costs-only-log-squared.md": "3437a003426ed54cb690b891e81388b722ed3539",
+      "claims/lemmas/L-102883-balanced-vaughan-free-energy-and-equal-product-cost-are-subpower.md": "b8a6eed2c8dda7d0ed28a8dd18fc57387e4c2e7b",
+      "claims/lemmas/L-102886-dyadic-frozen-vaughan-cutoff-removes-transfer-atoms.md": "26abf63b6a69c449f89313b151931b2dc71a42ad",
+      "claims/lemmas/L-102887-very-large-common-square-cores-are-absolutely-summable.md": "22fe3cfa5bb47698fc2a5ad879fc0870543469b2",
+      "claims/lemmas/L-102904-endpoint-color-walsh-expansion-has-only-squared-activity-off-the-midpoint.md": "f0bdbf09e620027eafe9a198350f588edafdd269",
+      "claims/lemmas/L-102905-local-critical-hodge-decomposition-of-complementary-factors.md": "215d7bbb7a25c788eaa39cc4d3e717e911705886",
+      "claims/lemmas/L-102906-global-primewise-hodge-normal-form.md": "9e7728f51948b55a886e919d9d8a58cc5de07b6e",
+      "claims/lemmas/L-102951-harmonic-critical-class-is-the-squarefree-boolean-euler-class.md": "1a2f15e7b5fcb0a3fb17d20668c3735065d14224",
+      "claims/lemmas/L-102952-owner-excluded-boolean-vaughan-coefficients-are-universal.md": "8e0de55d193d6f9dafd025235dac8ab48e687081",
+      "claims/lemmas/L-102953-squarefree-type-I-is-an-l1-shift-transfer-of-the-parent-lattice.md": "9bfb57bdd6799c82fb274c441b14854fae322bcb",
+      "claims/lemmas/L-102954-hodge-boolean-reduction-leaves-one-owner-indexed-restriction.md": "65c63098dcea20bfe8a189355c86fe663908b00b",
+      "claims/lemmas/L-102955-boolean-balanced-equal-and-one-sided-core-sectors-are-subpower.md": "208f3752be4245a835c5a150c14945ca48365489",
+      "claims/lemmas/L-102962-canonical-equal-pair-gauge-is-horizon-safe-on-the-boolean-balanced-source.md": "d8f4557df6dc37e6b605b1821c5b8ab028136398",
+      "claims/theorems/T-102990-equal-pair-boolean-core-incidence-frontier.md": "b319572db9ecc89bc528b85368cbf49aa13206d0"
+    },
+    "parent_commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc"
+  },
+  "horizon": {
+    "endpoint_atoms": "assigned exactly once by half-open restrictions",
+    "finite_horizon_contraction": "(eta_epsilon*L_fr)^-([0,T]) <= L_fr^-([0,T])",
+    "frozen_wksfsc_binding": "not established by the wording of T-106150 alone",
+    "raw_piecewise_object": "sum_j restriction of D_out J_(U_j)^diamond to [j log 2,(j+1) log 2)"
+  },
+  "kernel": {
+    "extra_multiplier": "q(s)^2*r(s)^2*(s-1)*(5s+3/2)/(s*(s-1/2))",
+    "identity_samples": {
+      "2": {
+        "rational": "621/256",
+        "sqrt2": "-69/64"
+      },
+      "3": {
+        "rational": "17787/5120",
+        "sqrt2": "-539/640"
+      },
+      "5": {
+        "rational": "2903181/655360",
+        "sqrt2": "-50933/184320"
+      }
+    },
+    "kernel_zero_order_at_s_zero": 1,
+    "mollifier": "fixed positive log box eta_epsilon",
+    "mollifier_mass": 1
+  },
+  "resource_caps": {
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "mellin_samples": 3,
+    "point_counts": 0,
+    "source_atoms_enumerated": 0
+  },
+  "scope": {
+    "anti_causal_future_used": false,
+    "equal_and_one_sided_balanced_sectors_deleted": false,
+    "grh_proved": false,
+    "mextsrc_proved": false,
+    "multiplicative_gauge_spent_as_additive_error": false,
+    "ordinary_self_convolution_used": false,
+    "raw_wksfsc_bound_to_piecewise_gate": false,
+    "rh_proved": false
+  },
+  "source_path": [
+    {
+      "status": "proved exact",
+      "step": "duplicate-67 labelled Euler source -> beta"
+    },
+    {
+      "status": "proved modulo frozen squared ideal",
+      "step": "native Euler -> harmonic Hodge class at frozen scope"
+    },
+    {
+      "status": "proved exact",
+      "step": "Boolean Vaughan and owner restriction"
+    },
+    {
+      "status": "open: NATCOMP-MOLL106150",
+      "step": "native balanced observation -> completed x_p x_q y_C observation at k_epsilon"
+    },
+    {
+      "status": "proved exact",
+      "step": "completed Boolean balanced source -> Beta half-source square"
+    },
+    {
+      "status": "proved exact",
+      "step": "completed half-source -> extra-notched Wick differential"
+    }
+  ],
+  "type_i_exponents_in_Y": {
+    "final_boolean_type_i": "-1/12",
+    "squarefree_count_tax": "1/4",
+    "squarefree_lattice": "-1/4",
+    "unrestricted_lattice": "-1/2",
+    "vaughan_weight_tax": "1/6"
+  }
+}

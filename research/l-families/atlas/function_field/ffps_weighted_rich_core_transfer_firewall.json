@@ -1,0 +1,102 @@
+{
+  "exact_clean_shell_counterfixture": {
+    "boolean_coefficients": [
+      2,
+      2
+    ],
+    "boolean_cutoff": 32,
+    "core_supports": [
+      [
+        103,
+        107
+      ],
+      [
+        79,
+        83
+      ]
+    ],
+    "cores": [
+      11021,
+      6557
+    ],
+    "eligible_counts": [
+      0,
+      0
+    ],
+    "horizon": 1187716129,
+    "owners": [
+      35,
+      221
+    ],
+    "physical_products": [
+      4251185435,
+      9501729029
+    ],
+    "ratio_eight_shell_multipliers": [
+      "3.579294185875",
+      "7.999999997474"
+    ]
+  },
+  "frozen_boolean_source": {
+    "coefficient": "b_U=a_U star a_U star mu_sf",
+    "rough_support_formula": "b_U(S)=1+(-1)^|S| if every p in S exceeds U",
+    "uniform_pointwise_majorant": "abs(b_U(n))<=5^omega(n)"
+  },
+  "resource_caps": {
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "maximum_labelled_partitions": 6561,
+    "maximum_support_size": 8,
+    "point_counts": 0,
+    "source_atoms_enumerated": 0
+  },
+  "rough_formula_panels": [
+    {
+      "computed_b_U": 0,
+      "formula_1_plus_minus_1_to_k": 0,
+      "support_size": 1
+    },
+    {
+      "computed_b_U": 2,
+      "formula_1_plus_minus_1_to_k": 2,
+      "support_size": 2
+    },
+    {
+      "computed_b_U": 0,
+      "formula_1_plus_minus_1_to_k": 0,
+      "support_size": 3
+    },
+    {
+      "computed_b_U": 2,
+      "formula_1_plus_minus_1_to_k": 2,
+      "support_size": 4
+    },
+    {
+      "computed_b_U": 0,
+      "formula_1_plus_minus_1_to_k": 0,
+      "support_size": 5
+    },
+    {
+      "computed_b_U": 2,
+      "formula_1_plus_minus_1_to_k": 2,
+      "support_size": 6
+    },
+    {
+      "computed_b_U": 0,
+      "formula_1_plus_minus_1_to_k": 0,
+      "support_size": 7
+    },
+    {
+      "computed_b_U": 2,
+      "formula_1_plus_minus_1_to_k": 2,
+      "support_size": 8
+    }
+  ],
+  "weighted_rankin_majorant": {
+    "alpha": 0.274064461784,
+    "bad_l1_log_exponent": "3.379934017955",
+    "full_l1_log_exponent": "5",
+    "relative_log_saving": "1.620065982045",
+    "scope": "Boolean coefficient majorant only; not the full physical FFPS source"
+  }
+}

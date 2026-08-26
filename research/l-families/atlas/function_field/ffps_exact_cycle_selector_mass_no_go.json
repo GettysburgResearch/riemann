@@ -1,0 +1,1258 @@
+{
+  "cycle_panels": [
+    {
+      "all_exact": true,
+      "cycle_types_checked": 1,
+      "degree": 1
+    },
+    {
+      "all_exact": true,
+      "cycle_types_checked": 2,
+      "degree": 2
+    },
+    {
+      "all_exact": true,
+      "cycle_types_checked": 3,
+      "degree": 3
+    },
+    {
+      "all_exact": true,
+      "cycle_types_checked": 5,
+      "degree": 4
+    },
+    {
+      "all_exact": true,
+      "cycle_types_checked": 7,
+      "degree": 5
+    },
+    {
+      "all_exact": true,
+      "cycle_types_checked": 11,
+      "degree": 6
+    },
+    {
+      "all_exact": true,
+      "cycle_types_checked": 15,
+      "degree": 7
+    },
+    {
+      "all_exact": true,
+      "cycle_types_checked": 22,
+      "degree": 8
+    },
+    {
+      "all_exact": true,
+      "cycle_types_checked": 30,
+      "degree": 9
+    },
+    {
+      "all_exact": true,
+      "cycle_types_checked": 42,
+      "degree": 10
+    }
+  ],
+  "ffps_consequence": {
+    "closed_loophole": "no cheaper exact d-cycle selector exists by changing the semisimple S_d character presentation",
+    "remaining_escape": "joint K_0 cancellation before termwise cost, a weaker or source-specific selector, or different geometry",
+    "rh_proved": false
+  },
+  "hook_panels": [
+    {
+      "degree": 1,
+      "hooks": [
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 0,
+          "partition": [
+            1
+          ],
+          "selector_coefficient": "1"
+        }
+      ],
+      "masses": {
+        "absolute": "1",
+        "integral_numerator_even": "1",
+        "integral_numerator_odd": "0",
+        "integral_numerator_total": "1",
+        "negative": "0",
+        "positive": "1"
+      }
+    },
+    {
+      "degree": 2,
+      "hooks": [
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 0,
+          "partition": [
+            2
+          ],
+          "selector_coefficient": "1/2"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 1,
+          "k": 1,
+          "partition": [
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/2"
+        }
+      ],
+      "masses": {
+        "absolute": "1",
+        "integral_numerator_even": "1",
+        "integral_numerator_odd": "1",
+        "integral_numerator_total": "2",
+        "negative": "1/2",
+        "positive": "1/2"
+      }
+    },
+    {
+      "degree": 3,
+      "hooks": [
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 0,
+          "partition": [
+            3
+          ],
+          "selector_coefficient": "1/3"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 2,
+          "k": 1,
+          "partition": [
+            2,
+            1
+          ],
+          "selector_coefficient": "-1/3"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 2,
+          "partition": [
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/3"
+        }
+      ],
+      "masses": {
+        "absolute": "4/3",
+        "integral_numerator_even": "2",
+        "integral_numerator_odd": "2",
+        "integral_numerator_total": "4",
+        "negative": "2/3",
+        "positive": "2/3"
+      }
+    },
+    {
+      "degree": 4,
+      "hooks": [
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 0,
+          "partition": [
+            4
+          ],
+          "selector_coefficient": "1/4"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 3,
+          "k": 1,
+          "partition": [
+            3,
+            1
+          ],
+          "selector_coefficient": "-1/4"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 3,
+          "k": 2,
+          "partition": [
+            2,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/4"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 1,
+          "k": 3,
+          "partition": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/4"
+        }
+      ],
+      "masses": {
+        "absolute": "2",
+        "integral_numerator_even": "4",
+        "integral_numerator_odd": "4",
+        "integral_numerator_total": "8",
+        "negative": "1",
+        "positive": "1"
+      }
+    },
+    {
+      "degree": 5,
+      "hooks": [
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 0,
+          "partition": [
+            5
+          ],
+          "selector_coefficient": "1/5"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 4,
+          "k": 1,
+          "partition": [
+            4,
+            1
+          ],
+          "selector_coefficient": "-1/5"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 6,
+          "k": 2,
+          "partition": [
+            3,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/5"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 4,
+          "k": 3,
+          "partition": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/5"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 4,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/5"
+        }
+      ],
+      "masses": {
+        "absolute": "16/5",
+        "integral_numerator_even": "8",
+        "integral_numerator_odd": "8",
+        "integral_numerator_total": "16",
+        "negative": "8/5",
+        "positive": "8/5"
+      }
+    },
+    {
+      "degree": 6,
+      "hooks": [
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 0,
+          "partition": [
+            6
+          ],
+          "selector_coefficient": "1/6"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 5,
+          "k": 1,
+          "partition": [
+            5,
+            1
+          ],
+          "selector_coefficient": "-1/6"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 10,
+          "k": 2,
+          "partition": [
+            4,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/6"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 10,
+          "k": 3,
+          "partition": [
+            3,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/6"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 5,
+          "k": 4,
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/6"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 1,
+          "k": 5,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/6"
+        }
+      ],
+      "masses": {
+        "absolute": "16/3",
+        "integral_numerator_even": "16",
+        "integral_numerator_odd": "16",
+        "integral_numerator_total": "32",
+        "negative": "8/3",
+        "positive": "8/3"
+      }
+    },
+    {
+      "degree": 7,
+      "hooks": [
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 0,
+          "partition": [
+            7
+          ],
+          "selector_coefficient": "1/7"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 6,
+          "k": 1,
+          "partition": [
+            6,
+            1
+          ],
+          "selector_coefficient": "-1/7"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 15,
+          "k": 2,
+          "partition": [
+            5,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/7"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 20,
+          "k": 3,
+          "partition": [
+            4,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/7"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 15,
+          "k": 4,
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/7"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 6,
+          "k": 5,
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/7"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 6,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/7"
+        }
+      ],
+      "masses": {
+        "absolute": "64/7",
+        "integral_numerator_even": "32",
+        "integral_numerator_odd": "32",
+        "integral_numerator_total": "64",
+        "negative": "32/7",
+        "positive": "32/7"
+      }
+    },
+    {
+      "degree": 8,
+      "hooks": [
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 0,
+          "partition": [
+            8
+          ],
+          "selector_coefficient": "1/8"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 7,
+          "k": 1,
+          "partition": [
+            7,
+            1
+          ],
+          "selector_coefficient": "-1/8"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 21,
+          "k": 2,
+          "partition": [
+            6,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/8"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 35,
+          "k": 3,
+          "partition": [
+            5,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/8"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 35,
+          "k": 4,
+          "partition": [
+            4,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/8"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 21,
+          "k": 5,
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/8"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 7,
+          "k": 6,
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/8"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 1,
+          "k": 7,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/8"
+        }
+      ],
+      "masses": {
+        "absolute": "16",
+        "integral_numerator_even": "64",
+        "integral_numerator_odd": "64",
+        "integral_numerator_total": "128",
+        "negative": "8",
+        "positive": "8"
+      }
+    },
+    {
+      "degree": 9,
+      "hooks": [
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 0,
+          "partition": [
+            9
+          ],
+          "selector_coefficient": "1/9"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 8,
+          "k": 1,
+          "partition": [
+            8,
+            1
+          ],
+          "selector_coefficient": "-1/9"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 28,
+          "k": 2,
+          "partition": [
+            7,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/9"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 56,
+          "k": 3,
+          "partition": [
+            6,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/9"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 70,
+          "k": 4,
+          "partition": [
+            5,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/9"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 56,
+          "k": 5,
+          "partition": [
+            4,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/9"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 28,
+          "k": 6,
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/9"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 8,
+          "k": 7,
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/9"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 8,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/9"
+        }
+      ],
+      "masses": {
+        "absolute": "256/9",
+        "integral_numerator_even": "128",
+        "integral_numerator_odd": "128",
+        "integral_numerator_total": "256",
+        "negative": "128/9",
+        "positive": "128/9"
+      }
+    },
+    {
+      "degree": 10,
+      "hooks": [
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 0,
+          "partition": [
+            10
+          ],
+          "selector_coefficient": "1/10"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 9,
+          "k": 1,
+          "partition": [
+            9,
+            1
+          ],
+          "selector_coefficient": "-1/10"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 36,
+          "k": 2,
+          "partition": [
+            8,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/10"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 84,
+          "k": 3,
+          "partition": [
+            7,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/10"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 126,
+          "k": 4,
+          "partition": [
+            6,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/10"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 126,
+          "k": 5,
+          "partition": [
+            5,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/10"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 84,
+          "k": 6,
+          "partition": [
+            4,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/10"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 36,
+          "k": 7,
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/10"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 9,
+          "k": 8,
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/10"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 1,
+          "k": 9,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/10"
+        }
+      ],
+      "masses": {
+        "absolute": "256/5",
+        "integral_numerator_even": "256",
+        "integral_numerator_odd": "256",
+        "integral_numerator_total": "512",
+        "negative": "128/5",
+        "positive": "128/5"
+      }
+    },
+    {
+      "degree": 11,
+      "hooks": [
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 0,
+          "partition": [
+            11
+          ],
+          "selector_coefficient": "1/11"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 10,
+          "k": 1,
+          "partition": [
+            10,
+            1
+          ],
+          "selector_coefficient": "-1/11"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 45,
+          "k": 2,
+          "partition": [
+            9,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/11"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 120,
+          "k": 3,
+          "partition": [
+            8,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/11"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 210,
+          "k": 4,
+          "partition": [
+            7,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/11"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 252,
+          "k": 5,
+          "partition": [
+            6,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/11"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 210,
+          "k": 6,
+          "partition": [
+            5,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/11"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 120,
+          "k": 7,
+          "partition": [
+            4,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/11"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 45,
+          "k": 8,
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/11"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 10,
+          "k": 9,
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/11"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 10,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/11"
+        }
+      ],
+      "masses": {
+        "absolute": "1024/11",
+        "integral_numerator_even": "512",
+        "integral_numerator_odd": "512",
+        "integral_numerator_total": "1024",
+        "negative": "512/11",
+        "positive": "512/11"
+      }
+    },
+    {
+      "degree": 12,
+      "hooks": [
+        {
+          "cycle_character": 1,
+          "dimension": 1,
+          "k": 0,
+          "partition": [
+            12
+          ],
+          "selector_coefficient": "1/12"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 11,
+          "k": 1,
+          "partition": [
+            11,
+            1
+          ],
+          "selector_coefficient": "-1/12"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 55,
+          "k": 2,
+          "partition": [
+            10,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/12"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 165,
+          "k": 3,
+          "partition": [
+            9,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/12"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 330,
+          "k": 4,
+          "partition": [
+            8,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/12"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 462,
+          "k": 5,
+          "partition": [
+            7,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/12"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 462,
+          "k": 6,
+          "partition": [
+            6,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/12"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 330,
+          "k": 7,
+          "partition": [
+            5,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/12"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 165,
+          "k": 8,
+          "partition": [
+            4,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/12"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 55,
+          "k": 9,
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/12"
+        },
+        {
+          "cycle_character": 1,
+          "dimension": 11,
+          "k": 10,
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "1/12"
+        },
+        {
+          "cycle_character": -1,
+          "dimension": 1,
+          "k": 11,
+          "partition": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "selector_coefficient": "-1/12"
+        }
+      ],
+      "masses": {
+        "absolute": "512/3",
+        "integral_numerator_even": "1024",
+        "integral_numerator_odd": "1024",
+        "integral_numerator_total": "2048",
+        "negative": "256/3",
+        "positive": "256/3"
+      }
+    }
+  ],
+  "product_panels": [
+    {
+      "degrees": [
+        2,
+        3
+      ],
+      "forced_absolute_rank_mass": "4/3"
+    },
+    {
+      "degrees": [
+        3,
+        4
+      ],
+      "forced_absolute_rank_mass": "8/3"
+    },
+    {
+      "degrees": [
+        2,
+        3,
+        5
+      ],
+      "forced_absolute_rank_mass": "64/15"
+    }
+  ],
+  "resource_caps": {
+    "closed_places": 0,
+    "curves_or_sheaves": 0,
+    "cycle_types_checked": 138,
+    "finite_field_points": 0,
+    "l_functions_or_zeros": 0,
+    "maximum_cycle_degree": 10,
+    "maximum_hook_degree": 12,
+    "product_panels": 3
+  },
+  "source_contract": {
+    "commit": "2423b93de9d7822ddc92841549d5a7d904e571ca",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_RELATIVE_BOUNDARY_TRACE_TOWER_GATE.md": "628854ef5be277572390bf298a070a9281af319b",
+      "research/l-families/atlas/function_field/ffps_relative_boundary_trace_tower_gate.json": "7d519a8f6c24b70a08c9e183e18d299b57348f5f",
+      "research/l-families/atlas/function_field/ffps_relative_boundary_trace_tower_gate.py": "de8ff576b30014b7e554ddc25aee049b694f2667",
+      "tests/test_ffps_relative_boundary_trace_tower_gate.py": "8631fc89be8dcd2bc1b3d21714cfef1c0271ee4c"
+    },
+    "role": "universal cycle selector and root-incidence cancellation"
+  },
+  "theorem": {
+    "coefficient_reason": "orthogonality gives chi_lambda((d))/d; Murnaghan-Nakayama leaves only hooks",
+    "forced_absolute_rank_mass": "2^(d-1)/d",
+    "forced_positive_and_negative_mass_for_d_gt_1": "2^(d-2)/d each",
+    "integral_numerator_complex_lower_bound": "even rank >=2^(d-2), odd rank >=2^(d-2), total >=2^(d-1)",
+    "product_rule": "multiply 2^(d_i-1)/d_i over independent factors",
+    "scope": "exact full-S_d characteristic-zero semisimple character category",
+    "unique_expansion": "1_(d-cycle)=d^-1*sum_(k=0)^(d-1) (-1)^k*chi_(d-k,1^k)"
+  }
+}

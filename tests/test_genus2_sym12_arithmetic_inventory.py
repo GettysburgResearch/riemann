@@ -147,6 +147,32 @@ def test_source_locks_and_method_firewall() -> None:
         in payload["r6_and_ladder_boundary"]["exact_character_level_statement"],
         "character-span firewall drifted",
     )
+    for row in manifest.values():
+        raw = (ROOT / row["path"]).read_bytes()
+        _require(
+            row["bytes"] == len(module._lf_bytes(raw)),
+            "source-byte ledger is not LF-canonical",
+        )
+    _require(
+        manifest["r6_reconnaissance"]["bytes"] == 7211,
+        "R6 canonical byte count drifted",
+    )
+    _require(
+        payload["resource_contract"]["actual_source_bytes"]
+        == sum(row["bytes"] for row in manifest.values()),
+        "canonical source-byte total drifted",
+    )
+
+
+def test_source_byte_normalization_is_line_ending_invariant() -> None:
+    module = _load_module()
+    lf = b'{\n  "x": 1\n}\n'
+    crlf = lf.replace(b"\n", b"\r\n")
+    _require(module._lf_bytes(lf) == module._lf_bytes(crlf), "LF normalization failed")
+    _require(
+        module._lf_sha256(lf) == module._lf_sha256(crlf),
+        "line endings changed the source content hash",
+    )
 
 
 def test_cli_normal_optimized_and_committed_fixture(tmp_path: Path) -> None:

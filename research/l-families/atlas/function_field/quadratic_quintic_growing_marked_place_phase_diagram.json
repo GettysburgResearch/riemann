@@ -1,0 +1,78 @@
+{
+  "firewalls": [
+    "the character envelope is an upper bound, not an attained scale",
+    "m and q must obey the rational-place feasibility m<=q",
+    "the full-aperture zero is exceptional geometry, not generic cancellation",
+    "no individual L-zero, RH, or GRH statement follows"
+  ],
+  "growing_mark_phase": {
+    "critical_scale": "m asymptotic to sqrt(q)",
+    "envelope_scale": "O(min(1,m^5*q^(-5/2)))",
+    "full_aperture": "m=q lies on the all-odd-exterior null stratum of y^2=x-x^q, so the exact correlation is zero",
+    "uniform_decay": "m=o(sqrt(q)) implies |S_(5,m)|/|H_5(q)|=o(1)"
+  },
+  "panels": [
+    {
+      "full_aperture_exact_value": null,
+      "m_over_sqrt_q": "1.094540909231",
+      "mark_count": 11,
+      "normalized_character_envelope": "0.001419109209",
+      "q": 101,
+      "stable_formula": "S_5,m=-q^(5/2)chi_omega5-m*q^(3/2)chi_omega3-binom(m+1,2)*q^(1/2)chi_omega1"
+    },
+    {
+      "full_aperture_exact_value": null,
+      "m_over_sqrt_q": "1.990074380420",
+      "mark_count": 20,
+      "normalized_character_envelope": "0.080811252590",
+      "q": 101,
+      "stable_formula": "S_5,m=-q^(5/2)chi_omega5-q^2chi_omega4-m*q^(3/2)chi_omega3-m*q*chi_omega2-binom(m+1,2)*q^(1/2)chi_omega1-binom(m+1,2)"
+    },
+    {
+      "full_aperture_exact_value": null,
+      "m_over_sqrt_q": "4.975185951050",
+      "mark_count": 50,
+      "normalized_character_envelope": "1.000000000000",
+      "q": 101,
+      "stable_formula": "S_5,m=-q^(5/2)chi_omega5-q^2chi_omega4-m*q^(3/2)chi_omega3-m*q*chi_omega2-binom(m+1,2)*q^(1/2)chi_omega1-binom(m+1,2)"
+    },
+    {
+      "full_aperture_exact_value": 0,
+      "m_over_sqrt_q": "10.049875621121",
+      "mark_count": 101,
+      "normalized_character_envelope": "1.000000000000",
+      "q": 101,
+      "stable_formula": "S_5,m=-q^(5/2)chi_omega5-m*q^(3/2)chi_omega3-binom(m+1,2)*q^(1/2)chi_omega1"
+    },
+    {
+      "full_aperture_exact_value": null,
+      "m_over_sqrt_q": "0.975924252532",
+      "mark_count": 31,
+      "normalized_character_envelope": "0.004289151668",
+      "q": 1009,
+      "stable_formula": "S_5,m=-q^(5/2)chi_omega5-m*q^(3/2)chi_omega3-binom(m+1,2)*q^(1/2)chi_omega1"
+    },
+    {
+      "full_aperture_exact_value": null,
+      "m_over_sqrt_q": "3.148142750103",
+      "mark_count": 100,
+      "normalized_character_envelope": "1.000000000000",
+      "q": 1009,
+      "stable_formula": "S_5,m=-q^(5/2)chi_omega5-q^2chi_omega4-m*q^(3/2)chi_omega3-m*q*chi_omega2-binom(m+1,2)*q^(1/2)chi_omega1-binom(m+1,2)"
+    }
+  ],
+  "resource_caps": {
+    "curves_enumerated": 0,
+    "finite_fields_enumerated": 0,
+    "floating_panels": 6,
+    "symbolic_identity_rows": 60
+  },
+  "stable_selection_rules": {
+    "even_m_at_least_12": "S_5,m=-q^(5/2)chi_omega5-q^2chi_omega4-m*q^(3/2)chi_omega3-m*q*chi_omega2-binom(m+1,2)*q^(1/2)chi_omega1-binom(m+1,2)",
+    "odd_m_at_least_11": "S_5,m=-q^(5/2)chi_omega5-m*q^(3/2)chi_omega3-binom(m+1,2)*q^(1/2)chi_omega1"
+  },
+  "symbolic_verification": {
+    "all_pass": true,
+    "rows": 60
+  }
+}
