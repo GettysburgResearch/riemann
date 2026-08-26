@@ -78,6 +78,7 @@ The prefix energy is itself an exact RH criterion:
  \Longleftrightarrow
  \mathcal E(X)=X^{o(1)}.}
 \tag{0.6}
+\]
 
 No estimate in (0.6) is proved here.  The theorem converts the boundary-field
 criterion into one compact-ratio two-point correlation target.
@@ -221,6 +222,7 @@ It follows exactly that
  \Longleftrightarrow
  |\mathcal O(X)|=X^{o(1)}.}
 \tag{3.4}
+\]
 
 If the energy is subpower, subtracting the logarithmic diagonal gives the
 off-diagonal bound.  Conversely, (3.1)--(3.3) plus an off-diagonal subpower
@@ -236,6 +238,7 @@ Thus the smallest quadratic target exposed by this packet is
  \mathcal R\!\left(\log{m\over n}\right)
  \right|=X^{o(1)}.}
 \tag{3.5}
+\]
 
 This is a signed compact-ratio beta correlation.  It is not supplied by a
 diagonal large sieve, an unsigned divisor bound, or the boundary telescope.
