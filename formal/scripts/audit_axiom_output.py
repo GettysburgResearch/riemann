@@ -30,7 +30,25 @@ def parse_output(text: str) -> tuple[set[str], dict[str, set[str]]]:
 
     seen: set[str] = set()
     dependencies: dict[str, set[str]] = {}
-    for line in text.splitlines():
+    lines = text.splitlines()
+    logical_lines: list[str] = []
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        if "depends on axioms:" in line:
+            payload = line.split("depends on axioms:", 1)[1].strip()
+            if payload.startswith("[") and not payload.endswith("]"):
+                fragments = [line]
+                while not fragments[-1].rstrip().endswith("]"):
+                    index += 1
+                    if index >= len(lines):
+                        raise SystemExit(f"unclosed axiom line: {' '.join(fragments)}")
+                    fragments.append(lines[index].strip())
+                line = " ".join(fragments)
+        logical_lines.append(line)
+        index += 1
+
+    for line in logical_lines:
         if "depends on axioms:" not in line and "does not depend on any axioms" not in line:
             continue
         head = line.split("depends on axioms:", 1)[0].split("does not depend", 1)[0]
