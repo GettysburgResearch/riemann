@@ -330,7 +330,9 @@ The producer source-locks the reciprocal-boundary, `R6`, `Sym6`, `Sym8`,
 artifacts at their committed git blobs and canonical payload hashes. It then
 rebuilds all displayed algebra using integers and exact rational
 intermediates under explicit operation, byte, file, output, and wall-time
-caps. Normal and optimized Python runs must emit byte-identical JSON.
+caps. Source-byte accounting uses NFC/LF-canonical bytes, so CRLF versus LF
+checkout policy cannot drift the replay. Normal and optimized Python runs must
+emit byte-identical JSON.
 
 No external novelty claim, finite interpolation, memberwise sign, zero-free
 region, RH/GRH criterion, principal-member amplifier, compatible system, or

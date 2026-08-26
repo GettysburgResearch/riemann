@@ -731,10 +731,11 @@ def _read_sources(
         if not isinstance(path, Path) or not path.is_file():
             raise RuntimeError(f"missing source lock: {lock['name']}")
         raw = path.read_bytes()
-        guard.source(len(raw))
+        normalized = _lf_bytes(raw)
+        guard.source(len(normalized))
         if _git_blob(raw) != lock["git_blob"] or _lf_sha256(raw) != lock["lf_sha256"]:
             raise RuntimeError(f"source content drift: {lock['name']}")
-        value = json.loads(_lf_bytes(raw).decode("utf-8"))
+        value = json.loads(normalized.decode("utf-8"))
         if not isinstance(value, dict) or value.get("schema") != lock["schema"]:
             raise RuntimeError(f"source schema drift: {lock['name']}")
         payload = dict(value)
@@ -753,7 +754,7 @@ def _read_sources(
                 for key, item in lock.items()
                 if key != "name"
             }
-            | {"name": name, "bytes": len(raw)}
+            | {"name": name, "bytes": len(normalized)}
         )
     return values, manifest
 
