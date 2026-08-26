@@ -16,34 +16,45 @@ import numpy as np
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
-SOURCE_COMMIT = "9f29bdb6e"
+ANALYTIC_SOURCE_COMMIT = "9f29bdb6ea7375df84de550d62f9d0984634a8dd"
+RAW_COMPARATOR_COMMIT = "78e5ce8e75bce174e3014a33b6fe086112577a1e"
 SOURCE_BLOBS = {
-    (
-        "research/l-families/atlas/function_field/"
-        "FFPS_SIGNED_DIFFERENTIAL_ATOMIC_SHELL_FIREWALL.md"
-    ): "8dff1025fd7d794497b71c2ba2920a51ff9095f2",
-    (
-        "research/l-families/atlas/function_field/FFPS_MOLLIFIED_BETA_RH_EQUIVALENCE.md"
-    ): "053c27bac9f8dec63c4865ab3563a7d985de7cbe",
+    ANALYTIC_SOURCE_COMMIT: {
+        (
+            "research/l-families/atlas/function_field/"
+            "FFPS_SIGNED_DIFFERENTIAL_ATOMIC_SHELL_FIREWALL.md"
+        ): "8dff1025fd7d794497b71c2ba2920a51ff9095f2",
+        (
+            "research/l-families/atlas/function_field/"
+            "FFPS_MOLLIFIED_BETA_RH_EQUIVALENCE.md"
+        ): "053c27bac9f8dec63c4865ab3563a7d985de7cbe",
+    },
+    RAW_COMPARATOR_COMMIT: {
+        (
+            "research/l-families/atlas/function_field/"
+            "FFPS_COMPLETE_BETA_ATOMIC_VARIATION_FIREWALL.md"
+        ): "e85848a9a6b24fd4911c2f58d8fb5cb316124d99",
+    },
 }
 
 
 def check_source_blobs() -> None:
-    for path, expected in SOURCE_BLOBS.items():
-        completed = subprocess.run(
-            ["git", "rev-parse", f"{SOURCE_COMMIT}:{path}"],
-            cwd=ROOT,
-            check=True,
-            capture_output=True,
-            text=True,
-            timeout=2,
-        )
-        if completed.stdout.strip() != expected:
-            raise RuntimeError(f"frozen source blob mismatch: {path}")
+    for commit, rows in SOURCE_BLOBS.items():
+        for path, expected in rows.items():
+            completed = subprocess.run(
+                ["git", "rev-parse", f"{commit}:{path}"],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+                timeout=2,
+            )
+            if completed.stdout.strip() != expected:
+                raise RuntimeError(f"frozen source blob mismatch: {commit}:{path}")
 
 
 def mobius_sieve(limit: int) -> np.ndarray:
-    if limit < 1 or limit > 1 << 18:
+    if isinstance(limit, bool) or not isinstance(limit, int) or not 1 <= limit <= 1 << 18:
         raise ValueError("limit must lie in [1,2^18]")
     mu = np.zeros(limit + 1, dtype=np.int8)
     mu[1] = 1
@@ -116,17 +127,33 @@ def mollified_kernel(grid: np.ndarray, epsilon: float) -> np.ndarray:
     return result
 
 
+def linear_convolution_fft_length(left_length: int, right_length: int) -> int:
+    if left_length < 1 or right_length < 1:
+        raise ValueError("convolution lengths must be positive")
+    output_length = left_length + right_length - 1
+    return 1 << (output_length - 1).bit_length()
+
+
 def fft_convolution(left: np.ndarray, right: np.ndarray) -> np.ndarray:
     output_length = len(left) + len(right) - 1
-    fft_length = 1 << (output_length - 1).bit_length()
+    fft_length = linear_convolution_fft_length(len(left), len(right))
     transformed = np.fft.rfft(left, fft_length) * np.fft.rfft(right, fft_length)
     return np.fft.irfft(transformed, fft_length)[:output_length]
 
 
 def run_panel(max_power: int, cells_per_log_two: int) -> dict[str, object]:
-    if max_power < 8 or max_power > 18:
+    if (
+        isinstance(max_power, bool)
+        or not isinstance(max_power, int)
+        or not 8 <= max_power <= 18
+    ):
         raise ValueError("max_power must lie in [8,18]")
-    if cells_per_log_two not in (128, 256, 512, 1024):
+    if isinstance(cells_per_log_two, bool) or cells_per_log_two not in (
+        128,
+        256,
+        512,
+        1024,
+    ):
         raise ValueError("unsupported grid resolution")
     limit = 1 << max_power
     log_two = math.log(2.0)
@@ -173,6 +200,7 @@ def run_panel(max_power: int, cells_per_log_two: int) -> dict[str, object]:
                 "Y": 1 << power,
                 "negative_mass": negative_mass,
                 "absolute_mass": absolute_mass,
+                "raw_root_limit": raw_root_limit,
                 "raw_atomic_lower_bound": raw_atomic_lower_bound,
                 "mollified_to_raw_lower_ratio": (
                     negative_mass / raw_atomic_lower_bound
@@ -200,6 +228,8 @@ def linear_fit(
     rows: list[dict[str, object]], key: str, minimum_power: int
 ) -> dict[str, float | int]:
     selected = [row for row in rows if int(row["power"]) >= minimum_power]
+    if len(selected) < 2:
+        raise ValueError("linear fit requires at least two selected rows")
     x_values = np.array([float(row["power"]) for row in selected])
     y_values = np.array([float(row[key]) for row in selected])
     x_mean = float(np.mean(x_values))
@@ -220,6 +250,12 @@ def linear_fit(
 
 
 def run(max_power: int = 18) -> dict[str, object]:
+    if (
+        isinstance(max_power, bool)
+        or not isinstance(max_power, int)
+        or not 11 <= max_power <= 18
+    ):
+        raise ValueError("scout fit requires max_power in [11,18]")
     panels = [run_panel(max_power, resolution) for resolution in (256, 512)]
     coarse = panels[0]["rows"]
     fine = panels[1]["rows"]
@@ -239,7 +275,7 @@ def run(max_power: int = 18) -> dict[str, object]:
             }
         )
     return {
-        "frozen_sources": {"commit": SOURCE_COMMIT, "blobs": SOURCE_BLOBS},
+        "frozen_sources": SOURCE_BLOBS,
         "status": "finite floating-point scout; no asymptotic or RH inference",
         "kernel": (
             "eta_(log(2)/2) convolved with the exact inverse-Mellin "
@@ -256,7 +292,25 @@ def run(max_power: int = 18) -> dict[str, object]:
         },
         "resource_caps": {
             "maximum_source_limit": 1 << 18,
+            "panel_count": len(panels),
             "resolutions": [256, 512],
+            "maximum_source_grid_cells": max(
+                int(panel["grid_cells"]) for panel in panels
+            ),
+            "maximum_kernel_grid_cells": max(
+                int(panel["kernel_cells"]) for panel in panels
+            ),
+            "maximum_linear_convolution_cells": max(
+                int(panel["grid_cells"]) + int(panel["kernel_cells"]) - 1
+                for panel in panels
+            ),
+            "maximum_fft_length": max(
+                linear_convolution_fft_length(
+                    int(panel["grid_cells"]), int(panel["kernel_cells"])
+                )
+                for panel in panels
+            ),
+            "horizons_per_panel": max_power - 5,
             "curve_enumerations": 0,
             "conductor_enumerations": 0,
             "zero_searches": 0,
@@ -265,6 +319,8 @@ def run(max_power: int = 18) -> dict[str, object]:
 
 
 def rounded_summary(max_power: int = 18) -> dict[str, object]:
+    if max_power != 18:
+        raise ValueError("canonical rounded summary requires max_power=18")
     result = run(max_power)
     fine_panel = result["panels"][1]
     rows = {int(row["power"]): row for row in fine_panel["rows"]}
@@ -283,6 +339,7 @@ def rounded_summary(max_power: int = 18) -> dict[str, object]:
                     "Y",
                     "negative_mass",
                     "absolute_mass",
+                    "raw_root_limit",
                     "raw_atomic_lower_bound",
                     "mollified_to_raw_lower_ratio",
                 )
@@ -303,6 +360,12 @@ def rounded_summary(max_power: int = 18) -> dict[str, object]:
             rounded(panel["kernel_integral_midpoint"]) for panel in result["panels"]
         ],
         "checkpoints": checkpoints,
+        "grid_semantics": {
+            "source_placement": "log(n) rounded to the nearest log-grid node",
+            "detector_samples": "midpoints of output log cells",
+            "mass_quadrature": "midpoint rule with one factor of the log step",
+            "raw_comparator": "exact at Y, with complete odd groups m<=floor(Y/32)",
+        },
         "fine_window_linear_fits": {
             key: {name: rounded(value) for name, value in fits[key].items()}
             for key in ("negative_mass", "absolute_mass")
@@ -316,6 +379,13 @@ def rounded_summary(max_power: int = 18) -> dict[str, object]:
                 for row in result["resolution_comparison"]
             )
         ),
+        "final_resolution_relative_difference": {
+            key: rounded(result["resolution_comparison"][-1][key])
+            for key in (
+                "negative_relative_difference",
+                "absolute_relative_difference",
+            )
+        },
         "interpretation": (
             "finite data through 2^18 suggest roughly linear growth in log(Y); "
             "this is not an asymptotic or RH inference"
