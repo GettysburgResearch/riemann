@@ -9,8 +9,8 @@ Exact replay:
 ## 0. Outcome
 
 There is a genuine one-dimensional function-field model in which the ambient
-quadratic torsor rank grows exponentially, while the global checkerboard
-character compresses to two endpoint places.
+quadratic torsor degree (and regular pushforward rank) grows exponentially,
+while the global checkerboard character compresses to two endpoint places.
 
 Fix an odd prime power \(q\).  Choose distinct monic irreducibles
 
@@ -67,7 +67,8 @@ Consequently, for every \(m\ge1\),
 
 Here `kappa_m` is the quadratic character of \(\mathbf F_{q^m}^\times\).
 If \(e=1\), the right side is zero and the selected complete sum vanishes
-exactly for every \(m\).
+exactly for every \(m\).  The sum is on the projective-line open and includes
+infinity; monicity of \(P_0,P_d\) gives endpoint-ratio value \(1\) there.
 
 There is a load-bearing catch.  The full product torsor initially lives on
 

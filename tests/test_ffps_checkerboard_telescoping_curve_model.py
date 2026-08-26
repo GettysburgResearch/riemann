@@ -43,7 +43,7 @@ class CheckerboardTelescopingCurveModelTests(unittest.TestCase):
     def test_path_rank_and_telescoping(self) -> None:
         for path_length in range(1, 40):
             row, _ = MODULE.path_model(5, path_length)
-            self.assertEqual(row["geometric_torsor_rank"], path_length)
+            self.assertEqual(row["geometric_deck_group_f2_rank"], path_length)
             self.assertEqual(row["top_character_rank"], 1)
             self.assertEqual(row["top_invariants"], 0)
 
@@ -96,6 +96,10 @@ class CheckerboardTelescopingCurveModelTests(unittest.TestCase):
                 MODULE.divisors(value)
         with self.assertRaises(ValueError):
             MODULE.irreducible_count(True, 2)
+        with self.assertRaises(ValueError):
+            MODULE.irreducible_count(2, 2)
+        with self.assertRaises(ValueError):
+            MODULE.irreducible_count(15, 2)
         with self.assertRaises(ValueError):
             MODULE.irreducible_count(3, 0)
         with self.assertRaises(ValueError):

@@ -32,6 +32,30 @@ MAX_BOUNDARY_ROWS = 2_048
 MAX_WALL_SECONDS = 3.0
 
 
+def validate_odd_prime_power(field_size: int) -> int:
+    if (
+        isinstance(field_size, bool)
+        or not isinstance(field_size, int)
+        or field_size < 3
+        or field_size % 2 == 0
+    ):
+        raise ValueError("field_size must be an odd prime power")
+    smallest_factor = next(
+        (
+            candidate
+            for candidate in range(3, int(field_size**0.5) + 1, 2)
+            if field_size % candidate == 0
+        ),
+        field_size,
+    )
+    remaining = field_size
+    while remaining % smallest_factor == 0:
+        remaining //= smallest_factor
+    if remaining != 1:
+        raise ValueError("field_size must be an odd prime power")
+    return field_size
+
+
 def divisors(value: int) -> tuple[int, ...]:
     if isinstance(value, bool) or not isinstance(value, int) or value < 1:
         raise ValueError("value must be a positive integer")
@@ -60,12 +84,7 @@ def mobius(value: int) -> int:
 
 
 def irreducible_count(field_size: int, degree: int) -> int:
-    if (
-        isinstance(field_size, bool)
-        or not isinstance(field_size, int)
-        or field_size < 2
-    ):
-        raise ValueError("field_size must be an integer at least two")
+    field_size = validate_odd_prime_power(field_size)
     if isinstance(degree, bool) or not isinstance(degree, int) or degree < 1:
         raise ValueError("degree must be positive")
     numerator = sum(
@@ -133,7 +152,7 @@ def path_model(field_size: int, path_length: int) -> tuple[dict[str, object], in
             "d": path_length,
             "e_q_d": degree,
             "available_degree_e_primes": available_primes,
-            "geometric_torsor_rank": path_length,
+            "geometric_deck_group_f2_rank": path_length,
             "geometric_torsor_degree": 1 << path_length,
             "top_character_rank": 1,
             "top_branch_points": minimal_punctures,
