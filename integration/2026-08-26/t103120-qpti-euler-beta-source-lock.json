@@ -1,0 +1,32 @@
+{
+  "schema": "riemann.t103120.qpti.euler_beta.lock.v1",
+  "repository": "gfreund123/riemann",
+  "pull_request": 719,
+  "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+  "starting_head": "426fe1c34a35d21b38a393456a7071c0902170f1",
+  "pre_lock_head": "763efe8329a0c7accbc04cbfb6f7afbebc979cca",
+  "cross_pr_heads": {
+    "pr_730": "b3114562acbeb8c5890ef7a5fc59eed8db71d29a",
+    "pr_751": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+    "pr_756": "6e4609dfe1b073f1eb58445fdd1d7164dbc450d6"
+  },
+  "binding_paths": [
+    "claims/lemmas/L-103120-qpti-has-an-exact-euler-beta-owner-core-transform.md",
+    "claims/refutations/R-103120-beta-normalization-does-not-cancel-the-owner-mode.md",
+    "claims/theorems/T-103120-qpti-euler-beta-dispersion-frontier.md",
+    "reports/gpt56-pro/2026-08-26-qpti-euler-beta-dispersion.md",
+    "experiments/X-103120-qpti-euler-beta/README.md",
+    "experiments/X-103120-qpti-euler-beta/verify.py",
+    "experiments/X-103120-qpti-euler-beta/results/verification.json"
+  ],
+  "proof_object_sha256": "1be3d2b1484aef51e8661fe49ac95fb062249d1238b003d6c8ad1991075bb4e5",
+  "status": {
+    "euler_beta_transform": "PROVED EXACT",
+    "fixed_live_core_owner_mode": "PROVED NONZERO",
+    "fibrewise_owner_collapse": "REFUTED AS AN IMPLICATION",
+    "EBD103120": "OPEN / RH-BEARING",
+    "QPTI103112": "OPEN / RH-BEARING",
+    "BCI102990": "OPEN / RH-BEARING",
+    "rh_established": false
+  }
+}
