@@ -45,7 +45,8 @@ gives the one-variable divisor wavelet
 `W_I^alpha(N)`: the coherent core is a Möbius sum over the cofactor, and
 `WAVEPRIMCAR` is a concrete per-core sufficient route to
 `AUXCOLORPRIMCAR`. It is unproved, nonmultiplicative, and still leaves every
-nonzero incidence mode. The successor also contains
+nonzero incidence mode. Kernel support confines it to a near-square divisor
+wavelet and a factor-64 shell `M asymp H^2/(67^alpha u)`. The successor also contains
 a `Sym^12` cohomological audit.
 Begin with
 [`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md),

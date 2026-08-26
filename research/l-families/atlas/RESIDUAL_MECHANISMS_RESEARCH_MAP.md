@@ -60,7 +60,8 @@
 > Finally, `N=uM` cancels the core sign and square root, leaving a
 > one-variable Möbius divisor-wavelet square function. The open per-core gate
 > `WAVEPRIMCAR` implies `AUXCOLORPRIMCAR` with Euler convergence exactly
-> below exponent `1/2`.
+> below exponent `1/2`. Ratio-16 support makes its divisor wavelet
+> near-square and confines each cofactor to a factor-64 multiplicative shell.
 > Separately, the minimal
 > ternary physical mask has a universal degree-shell norm/Kummer realization
 > of rank `48`, tame Swan zero, and linear toric boundary support; the exact

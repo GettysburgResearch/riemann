@@ -7,7 +7,7 @@ Frozen parent: PR #756 at
 `6e4609dfe1b073f1eb58445fdd1d7164dbc450d6`.
 
 Audited mathematical-packet head:
-`906e9db8c`. The final PR head is recorded in
+`74ea9c186`. The final PR head is recorded in
 the PR body because a tracked file cannot contain the SHA of the commit which
 creates that SHA.
 
@@ -151,6 +151,10 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
   It defines the per-core `WAVEPRIMCAR` gate and proves conditionally that it
   implies `AUXCOLORPRIMCAR` with Euler threshold `eta<1/2`; the estimate
   itself remains open.
+- `74ea9c186` imports the exact ratio-16 kernel support to show that the
+  wavelet uses only near-square divisors and that each cofactor lies in a
+  factor-64 shell around `H^2/(67^alpha u)`. At `alpha=0` it is exactly
+  twice a half-divisor sum for squarefree `N>1`; no cancellation follows.
 
 ### Selector and notch extensions
 

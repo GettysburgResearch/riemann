@@ -123,7 +123,9 @@ The per-core d-averaged gate `WAVEPRIMCAR` implies
 `AUXCOLORPRIMCAR`; its outer Euler product converges exactly for exponent
 below `1/2`. The wavelet is neither positive nor multiplicative, and the
 gate remains wholly unproved, but this is the most classical analytic form
-of the new zero-mode burden.
+of the new zero-mode burden. The inherited ratio-16 support further confines
+each wavelet to divisors within a factor four of the balanced square root and
+each cofactor to a factor-64 shell around `H^2/(67^alpha u)`.
 
 ### 2. The raw version is impossible
 

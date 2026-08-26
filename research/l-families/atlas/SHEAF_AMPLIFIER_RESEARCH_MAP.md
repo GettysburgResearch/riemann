@@ -462,7 +462,10 @@ divisor wavelet `W_I^alpha(uM)`. Its d-averaged per-core energy is
 `WAVEPRIMCAR`. A uniform all-exponent WAVE theorem implies
 `AUXCOLORPRIMCAR` with outer Euler convergence exactly for `eta<1/2`.
 This is now the most classical-looking analytic target, but the wavelet is
-not multiplicative or positive and no estimate has been proved.
+not multiplicative or positive and no estimate has been proved. The inherited
+ratio-16 support makes it a near-square divisor wavelet and restricts `M` to
+one factor-64 shell around `H^2/(67^alpha u)`, sharpening a future bilinear
+or large-sieve formulation.
 
 The associated three-state colored cube is also exact. Its local shear has
 states `absent/left/right`, forward and inverse have the same convergent

@@ -50,7 +50,9 @@ Writing `N=uM` then cancels the core sign and square root completely: every
 coherent color is a one-variable Möbius sum against an explicit divisor
 wavelet. The new per-core gate `WAVEPRIMCAR` conditionally implies
 `AUXCOLORPRIMCAR` with Euler threshold `eta<1/2`; it remains unproved and
-does not touch nonzero incidence modes.
+does not touch nonzero incidence modes. Ratio-16 kernel support makes the
+wavelet near-square and confines each cofactor to a factor-64 shell around
+`H^2/(67^alpha u)`.
 The successor
 also includes the exact refutation of the raw Jordan premise,
 hard-mask relative projectors and conductor ledgers, odd-notch boundary
