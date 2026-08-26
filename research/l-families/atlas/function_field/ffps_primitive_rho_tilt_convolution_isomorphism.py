@@ -10,7 +10,7 @@ import subprocess
 from collections.abc import Callable
 from fractions import Fraction
 from itertools import product
-from math import gcd
+from math import gcd, prod
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -78,6 +78,8 @@ def check_scope_markers() -> None:
         "The weaker weighted vector gate remains",
         "No such generalized-scale cancellation theorem is supplied.",
         "the zero mode itself is not averaged over `d`",
+        "abstract positive-norm arrays",
+        "neither gate implies the other",
         "No PRIMCAR, PRIMLS, RH, or GRH estimate is proved.",
         "No external novelty claim is made.",
     ):
@@ -684,6 +686,329 @@ def finite_generalized_panel_certificate() -> dict[str, object]:
     }
 
 
+def prime_valuation(n: int, prime: int) -> int:
+    validate_positive_integer(n)
+    if not is_prime(prime):
+        raise ValueError("valuation base must be prime")
+    valuation = 0
+    while n % prime == 0:
+        n //= prime
+        valuation += 1
+    return valuation
+
+
+def compatible_triple(
+    alpha: int, gamma: int, r: int, s: int, d: int
+) -> tuple[int, int, int]:
+    """Map an admissible colored dilation to its generalized parameters."""
+    for exponent in (alpha, gamma):
+        if isinstance(exponent, bool) or not isinstance(exponent, int) or exponent < 0:
+            raise ValueError("scale exponents must be nonnegative integers")
+    for value in (r, s, d):
+        validate_domain_integer(value)
+        if not is_squarefree(value):
+            raise ValueError("colored dilation variables must be squarefree")
+    if gcd(r, s) != 1 or gcd(r * s, d) != 1:
+        raise ValueError("colored dilation variables must be pairwise coprime")
+    return EXCEPTIONAL_PRIME**alpha * r, EXCEPTIONAL_PRIME**gamma * s, d * r * s
+
+
+def recover_compatible_triple(
+    alpha: int, gamma: int, scale_a: int, scale_b: int, modulus: int
+) -> tuple[int, int, int]:
+    """Invert the compatible parameter map, rejecting triples outside its image."""
+    for exponent in (alpha, gamma):
+        if isinstance(exponent, bool) or not isinstance(exponent, int) or exponent < 0:
+            raise ValueError("scale exponents must be nonnegative integers")
+    for value in (scale_a, scale_b, modulus):
+        validate_positive_integer(value)
+    if (
+        prime_valuation(scale_a, EXCEPTIONAL_PRIME) != alpha
+        or prime_valuation(scale_b, EXCEPTIONAL_PRIME) != gamma
+        or modulus % EXCEPTIONAL_PRIME == 0
+    ):
+        raise ValueError("exceptional-prime valuations are incompatible")
+    r = scale_a // EXCEPTIONAL_PRIME**alpha
+    s = scale_b // EXCEPTIONAL_PRIME**gamma
+    if (
+        not is_squarefree(r)
+        or not is_squarefree(s)
+        or not is_squarefree(modulus)
+        or gcd(r, s) != 1
+        or modulus % (r * s)
+    ):
+        raise ValueError("scale cores or modulus are incompatible")
+    d = modulus // (r * s)
+    if not is_squarefree(d) or gcd(d, r * s) != 1:
+        raise ValueError("residual sieve factor is incompatible")
+    return r, s, d
+
+
+def compatible_triple_panel(limit: int = REPLAY_SUPPORT_LIMIT) -> dict[str, object]:
+    """Replay the bijection between colored dilations and compatible triples."""
+    validate_positive_integer(limit)
+    rows = []
+    color_count_rows = []
+    for modulus in range(1, limit + 1):
+        if modulus % EXCEPTIONAL_PRIME == 0 or not is_squarefree(modulus):
+            continue
+        omega = len(factorization(modulus))
+        compatible = 0
+        saturated = 0
+        for r in divisors(modulus):
+            for s in divisors(modulus):
+                if gcd(r, s) != 1 or modulus % (r * s):
+                    continue
+                compatible += 1
+                if r * s == modulus:
+                    saturated += 1
+        if compatible != 3**omega or saturated != 2**omega:
+            raise ArithmeticError("compatible color count failed")
+        color_count_rows.append(
+            {
+                "compatible_triples": compatible,
+                "modulus": modulus,
+                "omega": omega,
+                "zero_mode_saturated_rays": saturated,
+            }
+        )
+    for alpha in (0, 1, 2):
+        seen: set[tuple[int, int, int]] = set()
+        admissible = 0
+        for r in range(1, limit + 1):
+            for s in range(1, limit + 1):
+                for d in range(1, limit + 1):
+                    if (
+                        not is_squarefree(r)
+                        or not is_squarefree(s)
+                        or not is_squarefree(d)
+                        or gcd(r, s) != 1
+                        or gcd(r * s, d) != 1
+                    ):
+                        continue
+                    triple = compatible_triple(alpha, 0, r, s, d)
+                    if triple in seen:
+                        raise ArithmeticError(
+                            "compatible parameter map is not injective"
+                        )
+                    seen.add(triple)
+                    if recover_compatible_triple(alpha, 0, *triple) != (r, s, d):
+                        raise ArithmeticError("compatible parameter inverse failed")
+                    admissible += 1
+        bounded_image = {triple for triple in seen if triple[2] <= limit}
+        expected_image = {
+            compatible_triple(
+                alpha,
+                0,
+                r,
+                s,
+                modulus // (r * s),
+            )
+            for modulus in range(1, limit + 1)
+            if modulus % EXCEPTIONAL_PRIME != 0 and is_squarefree(modulus)
+            for r in divisors(modulus)
+            for s in divisors(modulus)
+            if gcd(r, s) == 1 and modulus % (r * s) == 0
+        }
+        if bounded_image != expected_image:
+            raise ArithmeticError("bounded compatible image exhaustion failed")
+        rows.append(
+            {
+                "alpha": alpha,
+                "gamma": 0,
+                "admissible_triples": admissible,
+                "bounded_image_exhausted": True,
+                "image_triples": len(seen),
+            }
+        )
+
+    bit_primes = (2, 3, 5)
+    generated_bits: set[tuple[int, int, int]] = set()
+    generated_zero_modes: set[tuple[int, int, int]] = set()
+    for colors in product((0, 1, 2, 3), repeat=len(bit_primes)):
+        r = s = d = 1
+        for prime, color in zip(bit_primes, colors, strict=True):
+            if color == 1:
+                r *= prime
+            elif color == 2:
+                s *= prime
+            elif color == 3:
+                d *= prime
+        generated_bits.add((r, s, d * r * s))
+        if d == 1:
+            generated_zero_modes.add((r, s, r * s))
+    scanned_bits = {
+        (r, s, modulus)
+        for r_bits in product((0, 1), repeat=len(bit_primes))
+        for s_bits in product((0, 1), repeat=len(bit_primes))
+        for q_bits in product((0, 1), repeat=len(bit_primes))
+        for r in (
+            prod(prime for prime, bit in zip(bit_primes, r_bits, strict=True) if bit),
+        )
+        for s in (
+            prod(prime for prime, bit in zip(bit_primes, s_bits, strict=True) if bit),
+        )
+        for modulus in (
+            prod(prime for prime, bit in zip(bit_primes, q_bits, strict=True) if bit),
+        )
+        if gcd(r, s) == 1 and modulus % (r * s) == 0
+    }
+    if generated_bits != scanned_bits:
+        raise ArithmeticError("independent compatible bit-cube scan failed")
+    if len(generated_bits) != 4 ** len(bit_primes):
+        raise ArithmeticError("compatible bit-cube cardinality failed")
+    if len(generated_zero_modes) != 3 ** len(bit_primes):
+        raise ArithmeticError("zero-mode bit-cube cardinality failed")
+    return {
+        "bijection": True,
+        "bit_cube_exhaustion": {
+            "compatible_triples": len(generated_bits),
+            "independent_target_scan_equal": True,
+            "primes": list(bit_primes),
+            "zero_mode_triples": len(generated_zero_modes),
+        },
+        "color_count_rows": color_count_rows,
+        "image_conditions": (
+            "v_67(A)=alpha, v_67(B)=gamma; r=A/67^alpha and "
+            "s=B/67^gamma squarefree coprime; q squarefree 67-free; r*s|q"
+        ),
+        "independent_channels": [[0, 0], [1, 0], [2, 0]],
+        "limit_per_variable": limit,
+        "rows": rows,
+        "unique_inverse": "d=q/(r*s)",
+    }
+
+
+def abstract_ray_d_energy(
+    core: int, dilation_limit: int, values: dict[int, Fraction]
+) -> Fraction:
+    """Harmonic d-energy for an abstract one-interval compatible-ray array."""
+    validate_domain_integer(core)
+    validate_positive_integer(dilation_limit)
+    if not is_squarefree(core):
+        raise ValueError("ray core must be squarefree")
+    return sum(
+        (
+            values.get(core * d, Fraction(0)) ** 2 / d
+            for d in range(1, dilation_limit + 1)
+            if d % EXCEPTIONAL_PRIME != 0 and is_squarefree(d) and gcd(d, core) == 1
+        ),
+        Fraction(0),
+    )
+
+
+def abstract_q_energy(
+    modulus_limit: int,
+    values: dict[int, Fraction],
+    *,
+    required_divisor: int = 1,
+) -> Fraction:
+    """Harmonic full-q or restricted-multiple-ray energy."""
+    validate_positive_integer(modulus_limit)
+    validate_domain_integer(required_divisor)
+    return sum(
+        (
+            values.get(modulus, Fraction(0)) ** 2 / modulus
+            for modulus in range(1, modulus_limit + 1)
+            if modulus % EXCEPTIONAL_PRIME != 0
+            and is_squarefree(modulus)
+            and modulus % required_divisor == 0
+        ),
+        Fraction(0),
+    )
+
+
+def gate_hierarchy_panel() -> dict[str, object]:
+    """Give exact positive-norm witnesses for the gate hierarchy."""
+    core = 6
+    dilation_limit = 5
+    modulus_limit = core * dilation_limit
+    sharp_values = {6: Fraction(1), 30: Fraction(2)}
+    compatible_ray_energy = abstract_ray_d_energy(core, dilation_limit, sharp_values)
+    restricted_full_q_energy = abstract_q_energy(
+        modulus_limit, sharp_values, required_divisor=core
+    )
+    full_q_energy = abstract_q_energy(modulus_limit, sharp_values)
+    if (
+        compatible_ray_energy != Fraction(9, 5)
+        or restricted_full_q_energy != Fraction(3, 10)
+        or full_q_energy != restricted_full_q_energy
+        or compatible_ray_energy != core * restricted_full_q_energy
+    ):
+        raise ArithmeticError("compatible/full-q conversion failed")
+
+    off_ray_values = {5: Fraction(1)}
+    off_ray_d_energy = abstract_ray_d_energy(core, dilation_limit, off_ray_values)
+    off_ray_restricted_energy = abstract_q_energy(
+        modulus_limit, off_ray_values, required_divisor=core
+    )
+    off_ray_full_q_energy = abstract_q_energy(modulus_limit, off_ray_values)
+    if (
+        off_ray_d_energy
+        or off_ray_restricted_energy
+        or off_ray_full_q_energy != Fraction(1, 5)
+    ):
+        raise ArithmeticError("off-ray blindness witness failed")
+
+    hidden_ray_rows = []
+    for prime in REPLAY_PRIMES:
+        weight_squared = g(prime) * g(prime) / prime
+        ray_energy = Fraction((prime + 1) ** 2)
+        collective_term_squared = weight_squared * ray_energy
+        if collective_term_squared != Fraction(1, prime):
+            raise ArithmeticError("collective hiding witness failed")
+        hidden_ray_rows.append(
+            {
+                "amplitude": prime + 1,
+                "collective_weighted_contribution_squared": str(
+                    collective_term_squared
+                ),
+                "prime_core": prime,
+                "ray_energy": str(ray_energy),
+                "weight_kappa_p_squared": str(weight_squared),
+            }
+        )
+
+    return {
+        "collective_gate_is_weaker_than_uniform_ray_control": {
+            "mechanism": (
+                "put norm p+1 on one remote prime-p ray; "
+                "its weighted contribution squared is 1/p"
+            ),
+            "rows": hidden_ray_rows,
+        },
+        "exact_conversion_witness": {
+            "compatible_ray_energy": str(compatible_ray_energy),
+            "core_rs": core,
+            "dilation_limit": dilation_limit,
+            "full_q_energy": str(full_q_energy),
+            "modulus_limit": modulus_limit,
+            "restricted_full_q_energy": str(restricted_full_q_energy),
+            "ratio": str(compatible_ray_energy / restricted_full_q_energy),
+            "values": {str(key): str(value) for key, value in sharp_values.items()},
+        },
+        "formal_implications": [
+            (
+                "RAYPRIMCAR -> COLLPRIMCAR -> auxiliary rho-sieved energy "
+                "-> d=1 zero-mode bound"
+            ),
+            (
+                "GENPRIMCAR -> COLLPRIMCAR -> auxiliary rho-sieved energy "
+                "-> d=1 zero-mode bound under native height support"
+            ),
+        ],
+        "off_ray_blindness_witness": {
+            "compatible_d_energy": str(off_ray_d_energy),
+            "full_q_energy": str(off_ray_full_q_energy),
+            "restricted_ray_q_energy": str(off_ray_restricted_energy),
+            "ray_core": core,
+            "values": {str(key): str(value) for key, value in off_ray_values.items()},
+        },
+        "scope": "abstract positive-norm arrays, not realized arithmetic P^0 panels",
+        "ray_and_full_q_gates_formally_comparable": False,
+    }
+
+
 def colored_configurations(number_of_primes: int) -> tuple[tuple[int, ...], ...]:
     validate_positive_integer(number_of_primes)
     return tuple(product((0, 1, 2), repeat=number_of_primes))
@@ -896,6 +1221,10 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             ),
         },
         "colored_boolean_geometry": colored_cube_panel(),
+        "compatible_scale_geometry": {
+            "gate_hierarchy": gate_hierarchy_panel(),
+            "triple_bijection": compatible_triple_panel(),
+        },
         "harmonic_sieve_dilation": harmonic_dilation_panel(),
         "resource_caps": {
             "global_identity_limit": REPLAY_GLOBAL_LIMIT,
@@ -912,14 +1241,19 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "actual_zero_mode_has_native_sieve_average": False,
             "a_or_m_is_a_vector_in_weighted_l2": False,
             "arbitrary_cross_coprimality_obstruction_remaining": False,
+            "collprimcar_estimate_proved": False,
+            "compatible_scale_bijection_proved": True,
             "coprimality_preserved_in_generalized_panel": True,
             "dyadic_endpoint_structure_preserved": False,
             "fixed_ratio_band_is_hereditary": False,
             "generalized_primitive_carleson_estimate_proved": False,
+            "genprimcar_and_rayprimcar_formally_equivalent": False,
             "harmonic_dilation_has_height_independent_absolute_cost": False,
             "harmonic_dilation_tax_is_polylog_under_native_height_cutoff": True,
             "primcar_estimate_proved": False,
             "primls_proved": False,
+            "ray_gen_nonimplication_scope": "abstract positive-norm algebra only",
+            "rayprimcar_estimate_proved": False,
             "ratio_kernel_preserved_in_generalized_panel": True,
             "rh_or_grh_proved": False,
             "sharp_finite_height_blocks_preserved": False,

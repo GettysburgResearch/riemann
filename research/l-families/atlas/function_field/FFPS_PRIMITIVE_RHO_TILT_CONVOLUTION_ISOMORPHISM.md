@@ -799,7 +799,7 @@ over
 \tag{5.21}
 \]
 
-One precise stronger gate is
+One precise full-`q`, differently normalized gate is
 
 \[
  \boxed{
@@ -834,8 +834,184 @@ No such generalized-scale cancellation theorem is supplied. The generic
 weighted condition (5.3b) remains valid, while (5.13)--(5.20) show that the
 actual primitive incidence and harmonic-norm tax are much more structured
 than an arbitrary dilated-test family. They do not turn the scalar zero mode
-into a native `d`-average or prove that this stronger sufficient route is
+into a native `d`-average or prove that this full-`q` sufficient route is
 necessary.
+
+### 5.5 Compatible triples and the exact gate hierarchy
+
+The full uniformity in `GENPRIMCAR` is not intrinsic. For one of the three
+independent channels, fix `alpha in {0,1,2}` and `gamma=0`. The map
+
+\[
+ (r,s,d)\longmapsto
+ (A,B,q)=(67^\alpha r,s,drs)
+\tag{5.24}
+\]
+
+is a bijection from squarefree 67-free pairwise-coprime triples onto the
+triples satisfying
+
+\[
+ \begin{gathered}
+ v_{67}(A)=\alpha,\qquad v_{67}(B)=v_{67}(q)=0,\\
+ r=A/67^\alpha,\qquad s=B\text{ are squarefree and coprime},\\
+ q\text{ is squarefree},\qquad rs\mid q.
+ \end{gathered}
+\tag{5.25}
+\]
+
+The inverse is uniquely `d=q/(rs)`. For fixed squarefree `q`, every prime of
+`q` is colored `r`, `s`, or `d`, so there are exactly `3^omega(q)` compatible
+triples per channel. The actual zero mode has `d=1`: every prime is colored
+only `r` or `s`, giving exactly `2^omega(q)` saturated rays and
+
+\[
+ q=rs={AB\over67^\alpha}.
+\tag{5.26}
+\]
+
+This suggests a gate strictly tailored to the image. Put
+
+\[
+ \mathcal E^\alpha_{r,s}(D,H)
+ =\sum_{I\in\mathscr D_H}
+  \sum_{\substack{d\leq D\ \mathrm{squarefree}\\(d,67rs)=1}}
+ {\left|\mathcal P^0_{67^\alpha r,s}(drs;I)\right|^2\over d}.
+\tag{5.27}
+\]
+
+The exact vector form of (5.13) is
+
+\[
+ \left(
+  \sum_{I\in\mathscr D_H}
+  \sum_{\substack{d\leq D\ \mathrm{squarefree}\\67\nmid d}}
+  {|\mathcal P^\rho_{\alpha,0}(d;I)|^2\over d}
+ \right)^{1/2}
+ \leq
+ \sum_{\substack{r,s\in\mathcal N_{67}\ \mathrm{squarefree}\\(r,s)=1}}
+ \kappa(r)\kappa(s)\,
+ \mathcal E^\alpha_{r,s}(D,H)^{1/2}.
+\tag{5.28}
+\]
+
+The minimal weighted-`l^1` sufficient condition furnished by
+Minkowski and (5.28) is
+
+\[
+ \mathrm{COLLPRIMCAR}:\qquad
+ \sum_{\substack{r,s\in\mathcal N_{67}\ \mathrm{squarefree}\\(r,s)=1}}
+ \kappa(r)\kappa(s)\,
+ \mathcal E^\alpha_{r,s}(D,H)^{1/2}
+ \ll_\varepsilon(2DH)^{\varepsilon/2}.
+\]
+
+It need not bound any one ray. A stronger gate tailored to each compatible
+ray is
+
+\[
+ \boxed{
+ \mathrm{RAYPRIMCAR}:\qquad
+ \mathcal E^\alpha_{r,s}(D,H)
+ \ll_\varepsilon(2DHrs)^\varepsilon}
+\tag{5.29}
+\]
+
+uniformly over admissible `r,s`. Indeed, for `0<epsilon<1`, its outer norm
+cost is the convergent product
+
+\[
+ \mathcal K_{67}(\varepsilon)
+ =\prod_{p\ne67}
+ \left(1+{2p^{\varepsilon/2}\over(p+1)\sqrt p}\right)<\infty.
+\tag{5.30}
+\]
+
+After renaming `epsilon`, `RAYPRIMCAR` implies the auxiliary rho-sieved
+Carleson bound and, at `D=1`, the dyadic scalar-zero-mode bound. If the right
+side of (5.29) is uniform in `r,s` without the harmless `(rs)^epsilon` loss,
+the sharp outer costs are `K_67` in vector norm and `K_67^2` in energy.
+
+The full-q gate and compatible-ray gate are not the same normalization. By
+(5.18a),
+
+\[
+ \mathcal E^\alpha_{r,s}(D,H)
+ =rs\sum_{I\in\mathscr D_H}
+ \sum_{\substack{q\leq Drs\ \mathrm{squarefree}\\
+                  67\nmid q,\ rs\mid q}}
+ {\left|\mathcal P^0_{67^\alpha r,s}(q;I)\right|^2\over q}.
+\tag{5.31}
+\]
+
+Therefore `GENPRIMCAR` bounds a ray only with a sharp linear `rs` factor;
+collectively, the Boolean half weights turn its square root into the critical
+polylogarithmic tax of (5.20). With
+`H_N=\sum_{1\leq n\leq N}n^{-1}` and `H_0=0`, put
+
+\[
+ \begin{aligned}
+ \Lambda_\alpha(H)
+ &=
+ \sum_{\substack{r,s\in\mathcal N_{67}\ \mathrm{squarefree}\\
+                  (r,s)=1,\ 67^\alpha r\leq2H,\ s\leq2H}}
+ g(r)g(s)\\
+ &\leq
+ H_{\lfloor2H/67^\alpha\rfloor}H_{\lfloor2H\rfloor}
+ \leq(1+\log(2H))^2.
+ \end{aligned}
+\]
+
+Then
+
+\[
+ \left(
+  \sum_{I\in\mathscr D_H}
+  \sum_{\substack{d\leq D\ \mathrm{squarefree}\\67\nmid d}}
+  {|\mathcal P^\rho_{\alpha,0}(d;I)|^2\over d}
+ \right)^{1/2}
+ \leq
+ \Lambda_\alpha(H)
+ \sup_{1\leq A,B\leq2H}
+ \mathfrak G_{A,B}(4DH^2,H)^{1/2},
+\]
+
+where `\mathfrak G` denotes the left side of (5.22). Thus the same
+`O(\log^2 H)` vector / `O(\log^4 H)` energy loss controls the
+whole auxiliary rho-sieved panel, not only `d=1`. Conversely,
+`RAYPRIMCAR` sees no `q` outside
+the compatible multiple ray `rs|q`. Hence neither gate implies the other at
+the stated subpower normalization by positivity or norm algebra alone. Under
+the native height support, the exact implication diagram is
+
+\[
+ \begin{gathered}
+ \mathrm{RAYPRIMCAR}
+ \xrightarrow{\ \mathcal K_{67}(\varepsilon)\ }
+ \mathrm{COLLPRIMCAR}
+ \longrightarrow \text{auxiliary rho-sieved energy}
+ \xrightarrow{\ D=1\ }\text{zero-mode bound},\\
+ \mathrm{GENPRIMCAR}
+ \xrightarrow{\ O(\log^2 H)\text{ in vector norm}\ }
+ \mathrm{COLLPRIMCAR}
+ \longrightarrow \text{auxiliary rho-sieved energy}
+ \xrightarrow{\ D=1\ }\text{zero-mode bound}.
+ \end{gathered}
+\tag{5.32}
+\]
+
+The collective gate is weaker than either uniform gate and formally implies
+neither. Both uniform gates are scientifically useful sufficient routes, but
+proving all of `GENPRIMCAR` would control many panels which the rho zero mode
+never visits. The replay's non-implication witnesses are deliberately
+abstract positive-norm arrays. They certify what restriction, positivity, and
+norm algebra cannot prove; they are not asserted to be values of the
+correlated arithmetic panels `\mathcal P^0_{A,B}`. Concretely, a
+single prime-`p` ray of norm `p+1` has ray energy
+`(p+1)^2`, while its squared contribution to the collective norm is
+`\kappa(p)^2(p+1)^2=1/p`. The replay also exhibits equality in the
+factor-`rs` conversion and a full-`q` atom invisible to its
+compatible ray.
 
 ## 6. Firewall against a PRIMCAR or RH misreading
 
@@ -853,8 +1029,10 @@ two-ray parameter class:
 - upper height cutoffs are hereditary, but a ratio band generally is not;
 - the physical height shell and its dyadic decomposition now range over these
   coupled scales;
-- the harmonic `d^-1` norm is the critical weight and introduces the
-  `O(log^2 H)` vector tax in (5.20);
+- reindexing the harmonic `d^-1` norm through the full-`q`
+  `GENPRIMCAR` gate introduces the `O(log^2 H)` vector tax in
+  (5.20), while the direct `d^-1` `RAYPRIMCAR` gate has a
+  convergent `\mathcal K_{67}(\varepsilon)` cost;
 - the fixed-height harmonic limit from the predecessor supplies no uniform
   generalized-scale estimate.
 
@@ -898,10 +1076,13 @@ No PRIMCAR, PRIMLS, RH, or GRH estimate is proved. The RH-equivalent statement
 | generalized primitive-panel identity and support equivalence (5.11)--(5.13) | **PROVED EXACT** |
 | colored-cube norm and hereditary-projection law (5.14)--(5.16) | **PROVED EXACT** |
 | critical harmonic threshold and polylog height tax (5.17)--(5.20) | **PROVED** |
-| `GENPRIMCAR` implies the zero-mode dyadic bound (5.23) | **PROVED CONDITIONALLY** |
+| `GENPRIMCAR` implies the auxiliary rho-sieved and zero-mode bounds | **PROVED CONDITIONALLY** |
+| compatible-triple bijection and `3^omega/2^omega` counts (5.24)--(5.26) | **PROVED EXACT** |
+| `RAYPRIMCAR` implies the auxiliary rho-sieved and zero-mode bounds via (5.28)--(5.30) | **PROVED CONDITIONALLY** |
+| exact `RAYPRIMCAR` / `GENPRIMCAR` / `COLLPRIMCAR` hierarchy (5.31)--(5.32) | **PROVED AT THE POSITIVE-NORM LEVEL** |
 | weighted vector gate (5.3b) over induced tests (5.7) | **OPEN / NOT PROVED** |
 | uniform control over induced tests (5.7) | **STRONGER SUFFICIENT SPECIAL CASE; NOT PROVED** |
-| generalized-scale ordinary primitive Carleson estimate (5.22) | **OPEN / NOT PROVED** |
+| `GENPRIMCAR` or `RAYPRIMCAR` estimate | **OPEN / NOT PROVED** |
 | preservation of the original two-ray/dyadic parameter class | **FALSE / EXPLICITLY NOT CLAIMED** |
 | PRIMCAR, PRIMLS, RH, or GRH | **NOT PROVED** |
 
@@ -923,8 +1104,12 @@ Euler-factor identities through the stated caps; clears the common square-root
 weight and checks representative pair coefficients; checks the squarefree-
 coprime Boolean restriction, generalized support equivalence, colored-cube
 heredity, local shear certificates, harmonic dilation identities, and equality
-of forward/inverse local masses; checks one end-to-end generalized panel with
-coefficient, height, ratio, and sieve data after clearing one common square-
-root weight; records exact rational margins for the `theta=1/2` convergence
-proof; and enforces the scope firewall. It enumerates no zeta zero, finite-
-field family, curve, conductor family, or `L`-function.
+of forward/inverse local masses; exhausts the compatible image independently
+on the three-prime bit cube, verifies the `3^{\omega(q)}` and
+`2^{\omega(q)}` color counts, and checks exact synthetic witnesses for
+the sharp `rs` conversion, off-ray blindness, and remote-ray hiding;
+checks one end-to-end generalized panel with coefficient, height, ratio, and
+sieve data after clearing one common square-root weight; records exact
+rational margins for the `theta=1/2` convergence proof; and enforces
+the scope firewall. It enumerates no zeta zero, finite-field family, curve,
+conductor family, or `L`-function.

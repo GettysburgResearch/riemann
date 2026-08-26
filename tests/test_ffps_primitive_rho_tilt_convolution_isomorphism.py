@@ -141,6 +141,48 @@ class PrimitiveRhoTiltConvolutionIsomorphismTest(unittest.TestCase):
         self.assertEqual(panel["sieve"], 7)
         self.assertEqual(panel["total_product"], 30)
 
+    def test_compatible_triple_bijection(self) -> None:
+        panel = subject.compatible_triple_panel(6)
+        self.assertTrue(panel["bijection"])
+        self.assertTrue(
+            all(
+                row["admissible_triples"] == row["image_triples"]
+                for row in panel["rows"]
+            )
+        )
+        self.assertTrue(all(row["bounded_image_exhausted"] for row in panel["rows"]))
+        self.assertEqual(panel["bit_cube_exhaustion"]["compatible_triples"], 64)
+        self.assertEqual(panel["bit_cube_exhaustion"]["zero_mode_triples"], 27)
+        self.assertTrue(panel["bit_cube_exhaustion"]["independent_target_scan_equal"])
+        self.assertTrue(
+            all(
+                row["compatible_triples"] == 3 ** row["omega"]
+                and row["zero_mode_saturated_rays"] == 2 ** row["omega"]
+                for row in panel["color_count_rows"]
+            )
+        )
+        triple = subject.compatible_triple(2, 0, 6, 5, 7)
+        self.assertEqual(triple, (67**2 * 6, 5, 210))
+        self.assertEqual(subject.recover_compatible_triple(2, 0, *triple), (6, 5, 7))
+        with self.assertRaises(ValueError):
+            subject.recover_compatible_triple(0, 0, 4, 5, 20)
+        with self.assertRaises(ValueError):
+            subject.recover_compatible_triple(1, 0, 6, 5, 30)
+        hierarchy = subject.gate_hierarchy_panel()
+        exact = hierarchy["exact_conversion_witness"]
+        self.assertEqual(exact["compatible_ray_energy"], "9/5")
+        self.assertEqual(exact["restricted_full_q_energy"], "3/10")
+        self.assertEqual(exact["ratio"], "6")
+        off_ray = hierarchy["off_ray_blindness_witness"]
+        self.assertEqual(off_ray["compatible_d_energy"], "0")
+        self.assertEqual(off_ray["restricted_ray_q_energy"], "0")
+        self.assertEqual(off_ray["full_q_energy"], "1/5")
+        hidden = hierarchy["collective_gate_is_weaker_than_uniform_ray_control"]
+        self.assertEqual(
+            hidden["rows"][-1]["collective_weighted_contribution_squared"], "1/11"
+        )
+        self.assertFalse(hierarchy["ray_and_full_q_gates_formally_comparable"])
+
     def test_colored_cube_norm_and_hereditary_replay(self) -> None:
         panel = subject.colored_cube_panel(2)
         self.assertEqual(panel["configuration_count"], 9)
@@ -198,6 +240,10 @@ class PrimitiveRhoTiltConvolutionIsomorphismTest(unittest.TestCase):
         self.assertFalse(scope["fixed_ratio_band_is_hereditary"])
         self.assertFalse(scope["dyadic_endpoint_structure_preserved"])
         self.assertFalse(scope["generalized_primitive_carleson_estimate_proved"])
+        self.assertFalse(scope["genprimcar_and_rayprimcar_formally_equivalent"])
+        self.assertFalse(scope["rayprimcar_estimate_proved"])
+        self.assertFalse(scope["collprimcar_estimate_proved"])
+        self.assertTrue(scope["compatible_scale_bijection_proved"])
         self.assertFalse(
             scope["harmonic_dilation_has_height_independent_absolute_cost"]
         )

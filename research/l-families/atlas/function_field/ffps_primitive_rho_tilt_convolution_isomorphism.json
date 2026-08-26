@@ -54,6 +54,169 @@
     ],
     "number_of_primes": 2
   },
+  "compatible_scale_geometry": {
+    "gate_hierarchy": {
+      "collective_gate_is_weaker_than_uniform_ray_control": {
+        "mechanism": "put norm p+1 on one remote prime-p ray; its weighted contribution squared is 1/p",
+        "rows": [
+          {
+            "amplitude": 3,
+            "collective_weighted_contribution_squared": "1/2",
+            "prime_core": 2,
+            "ray_energy": "9",
+            "weight_kappa_p_squared": "1/18"
+          },
+          {
+            "amplitude": 4,
+            "collective_weighted_contribution_squared": "1/3",
+            "prime_core": 3,
+            "ray_energy": "16",
+            "weight_kappa_p_squared": "1/48"
+          },
+          {
+            "amplitude": 6,
+            "collective_weighted_contribution_squared": "1/5",
+            "prime_core": 5,
+            "ray_energy": "36",
+            "weight_kappa_p_squared": "1/180"
+          },
+          {
+            "amplitude": 8,
+            "collective_weighted_contribution_squared": "1/7",
+            "prime_core": 7,
+            "ray_energy": "64",
+            "weight_kappa_p_squared": "1/448"
+          },
+          {
+            "amplitude": 12,
+            "collective_weighted_contribution_squared": "1/11",
+            "prime_core": 11,
+            "ray_energy": "144",
+            "weight_kappa_p_squared": "1/1584"
+          }
+        ]
+      },
+      "exact_conversion_witness": {
+        "compatible_ray_energy": "9/5",
+        "core_rs": 6,
+        "dilation_limit": 5,
+        "full_q_energy": "3/10",
+        "modulus_limit": 30,
+        "ratio": "6",
+        "restricted_full_q_energy": "3/10",
+        "values": {
+          "30": "2",
+          "6": "1"
+        }
+      },
+      "formal_implications": [
+        "RAYPRIMCAR -> COLLPRIMCAR -> auxiliary rho-sieved energy -> d=1 zero-mode bound",
+        "GENPRIMCAR -> COLLPRIMCAR -> auxiliary rho-sieved energy -> d=1 zero-mode bound under native height support"
+      ],
+      "off_ray_blindness_witness": {
+        "compatible_d_energy": "0",
+        "full_q_energy": "1/5",
+        "ray_core": 6,
+        "restricted_ray_q_energy": "0",
+        "values": {
+          "5": "1"
+        }
+      },
+      "ray_and_full_q_gates_formally_comparable": false,
+      "scope": "abstract positive-norm arrays, not realized arithmetic P^0 panels"
+    },
+    "triple_bijection": {
+      "bijection": true,
+      "bit_cube_exhaustion": {
+        "compatible_triples": 64,
+        "independent_target_scan_equal": true,
+        "primes": [
+          2,
+          3,
+          5
+        ],
+        "zero_mode_triples": 27
+      },
+      "color_count_rows": [
+        {
+          "compatible_triples": 1,
+          "modulus": 1,
+          "omega": 0,
+          "zero_mode_saturated_rays": 1
+        },
+        {
+          "compatible_triples": 3,
+          "modulus": 2,
+          "omega": 1,
+          "zero_mode_saturated_rays": 2
+        },
+        {
+          "compatible_triples": 3,
+          "modulus": 3,
+          "omega": 1,
+          "zero_mode_saturated_rays": 2
+        },
+        {
+          "compatible_triples": 3,
+          "modulus": 5,
+          "omega": 1,
+          "zero_mode_saturated_rays": 2
+        },
+        {
+          "compatible_triples": 9,
+          "modulus": 6,
+          "omega": 2,
+          "zero_mode_saturated_rays": 4
+        },
+        {
+          "compatible_triples": 3,
+          "modulus": 7,
+          "omega": 1,
+          "zero_mode_saturated_rays": 2
+        }
+      ],
+      "image_conditions": "v_67(A)=alpha, v_67(B)=gamma; r=A/67^alpha and s=B/67^gamma squarefree coprime; q squarefree 67-free; r*s|q",
+      "independent_channels": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "limit_per_variable": 8,
+      "rows": [
+        {
+          "admissible_triples": 94,
+          "alpha": 0,
+          "bounded_image_exhausted": true,
+          "gamma": 0,
+          "image_triples": 94
+        },
+        {
+          "admissible_triples": 94,
+          "alpha": 1,
+          "bounded_image_exhausted": true,
+          "gamma": 0,
+          "image_triples": 94
+        },
+        {
+          "admissible_triples": 94,
+          "alpha": 2,
+          "bounded_image_exhausted": true,
+          "gamma": 0,
+          "image_triples": 94
+        }
+      ],
+      "unique_inverse": "d=q/(r*s)"
+    }
+  },
   "exact_convolution": {
     "a": "a(n)=mu(n)rho(n)",
     "domain": "N_67={n>=1:(n,67)=1}",
@@ -778,15 +941,20 @@
     "a_or_m_is_a_vector_in_weighted_l2": false,
     "actual_zero_mode_has_native_sieve_average": false,
     "arbitrary_cross_coprimality_obstruction_remaining": false,
+    "collprimcar_estimate_proved": false,
+    "compatible_scale_bijection_proved": true,
     "coprimality_preserved_in_generalized_panel": true,
     "dyadic_endpoint_structure_preserved": false,
     "fixed_ratio_band_is_hereditary": false,
     "generalized_primitive_carleson_estimate_proved": false,
+    "genprimcar_and_rayprimcar_formally_equivalent": false,
     "harmonic_dilation_has_height_independent_absolute_cost": false,
     "harmonic_dilation_tax_is_polylog_under_native_height_cutoff": true,
     "primcar_estimate_proved": false,
     "primls_proved": false,
     "ratio_kernel_preserved_in_generalized_panel": true,
+    "ray_gen_nonimplication_scope": "abstract positive-norm algebra only",
+    "rayprimcar_estimate_proved": false,
     "rh_or_grh_proved": false,
     "sharp_finite_height_blocks_preserved": false,
     "undilated_primcar_is_dilation_closed": false,
