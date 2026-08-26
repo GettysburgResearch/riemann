@@ -32,6 +32,14 @@ each of the three actual `(alpha,0)` channels, fixed squarefree
 are formally incomparable, the former pays a convergent
 `K_67(epsilon)` cost for `0<epsilon<1`, and the latter a
 polylogarithmic height tax. All three estimates remain open. The successor
+also proves that all compatible `r/s` colors at fixed `(d,u=rs)` have
+one common weight, so their interference can be retained before taking a
+norm. The resulting quadratic `AUXCOLORPRIMCAR` gate
+(`COLORPRIMCAR` at `D=1`) controls the auxiliary rho-sieved energy
+with sharp Hilbert cost `J_67`; `RAYPRIMCAR` implies it, while it is
+formally incomparable with `COLLPRIMCAR` and `GENPRIMCAR`. This
+fourth estimate is also open and leaves nonzero incidence modes untouched.
+The successor
 also includes the exact refutation of the raw Jordan premise,
 hard-mask relative projectors and conductor ledgers, odd-notch boundary
 densities through every fixed depth, their local anti-concentration law, and

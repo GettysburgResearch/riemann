@@ -95,9 +95,15 @@ squarefree 67-free `q` in its stated ranges and, after harmonic
 reindexing, pays `O(log^2 H)` in
 vector norm / `O(log^4 H)` in energy. They are stronger,
 incomparable sufficient routes at the stated subpower normalization. None is
-proved. The scalar zero mode has no native `d`-average, and the
-nonzero incidence spectrum and finite-`D` summability remain
-separate.
+proved. Before discarding phase, one may instead sum all compatible `r/s`
+colors with the same fixed `(d,u=rs)`. This exact compression yields the
+quadratic gate `AUXCOLORPRIMCAR`, with `COLORPRIMCAR` as its
+`D=1` specialization. Weighted Hilbert Cauchy gives the sharp energy cost
+`J_67`, and `RAYPRIMCAR` implies the auxiliary color gate. The color
+gate is formally incomparable with `COLLPRIMCAR` and `GENPRIMCAR`:
+it is a genuine additional cancellation target, but still unproved. The
+scalar zero mode has no native `d`-average, and every one of these routes
+leaves the nonzero incidence spectrum separate.
 
 ### 2. The raw version is impossible
 
@@ -401,8 +407,9 @@ in chronological order.
    The still stronger `PRIMCAR` removes the endpoint supremum and exposes an
    incidence Gram; it is also unproved. Its pair zero mode is now rewritten
    exactly as a Boolean-compressed generalized primitive panel. The smallest
-   direct positive-norm target is `COLLPRIMCAR`; the image-tailored
-   uniform target is `RAYPRIMCAR`, while full-`q`
+   direct positive-norm target is `COLLPRIMCAR`; the coherent quadratic
+   target is `AUXCOLORPRIMCAR`; the image-tailored uniform target is
+   `RAYPRIMCAR`, while full-`q`
    `GENPRIMCAR` is a broader, differently normalized alternative.
    All are open and address only the auxiliary rho-sieved/zero-mode burden,
    not the nonzero incidence spectrum.
@@ -430,7 +437,8 @@ in chronological order.
 
 Run four lanes in parallel:
 
-1. attack `COLLPRIMCAR` directly, or the stronger
+1. attack `COLLPRIMCAR` directly, exploit coherent core-color
+   cancellation through `AUXCOLORPRIMCAR`, or prove the stronger
    `RAYPRIMCAR` along the exact compatible rays `q=drs`;
    retain full-`q` `GENPRIMCAR` as a broader alternative, not
    an intrinsic reformulation. The incidence predicate already survives,

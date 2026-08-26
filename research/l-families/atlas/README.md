@@ -27,7 +27,13 @@ open hierarchy is `RAYPRIMCAR -> COLLPRIMCAR <- GENPRIMCAR`; the ray
 and full-`q` gates are formally incomparable sufficient routes, with
 a convergent `K_67(epsilon)` cost after choosing
 `0<epsilon<1` versus polylogarithmic costs. None is proved, and
-nonzero `PRIMCAR` modes remain separate. The successor also contains
+nonzero `PRIMCAR` modes remain separate. A second exact compression sums
+the `2^omega(u)` compatible `r/s` colors coherently at each fixed
+`(d,u=rs)` before taking a norm. It exposes the open quadratic
+`AUXCOLORPRIMCAR` gate (`COLORPRIMCAR` at `D=1`), proves
+`RAYPRIMCAR -> AUXCOLORPRIMCAR`, and gives the sharp Hilbert cost
+`J_67`; the color gate is formally incomparable with `COLLPRIMCAR`
+and `GENPRIMCAR` by positive-norm algebra. The successor also contains
 a `Sym^12` cohomological audit.
 Begin with
 [`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md),

@@ -436,9 +436,16 @@ compatible multiple ray and has convergent `K_67(epsilon)` cost for
 polylogarithmic tax above. Neither stronger gate implies the other at the
 stated subpower normalization by positive-norm algebra. Synthetic replay
 witnesses certify that formal nonimplication, not arithmetic counterexamples
-for the actual panels. None of the three estimates is proved. The scalar zero
-mode itself has no native `d`-average, and nonzero incidence modes and
-finite-`D` summability remain separate.
+for the actual panels. A further exact compression retains interference among
+the `2^omega(u)` ordered `r/s` colors at each fixed `(d,u=rs)`.
+Its weighted quadratic gate is `AUXCOLORPRIMCAR`, specialized to
+`COLORPRIMCAR` at `D=1`. It conditionally controls the auxiliary
+rho-sieved energy with sharp Hilbert constant
+`J_67=prod_(p!=67)(1+1/((p+1)sqrt(p)))`, and
+`RAYPRIMCAR` implies it. It is formally incomparable with both
+`COLLPRIMCAR` and `GENPRIMCAR`. None of the four estimates is
+proved. The scalar zero mode itself has no native `d`-average, and nonzero
+incidence modes remain separate.
 
 The associated three-state colored cube is also exact. Its local shear has
 states `absent/left/right`, forward and inverse have the same convergent
@@ -1153,8 +1160,9 @@ isolates the stronger `PRIMCAR` route into a zero mode, nonzero incidence
 spectrum, and dyadic summability. The zero mode's `rho` tilt has been rewritten
 exactly as a Boolean-compressed family of ordinary-Möbius primitive panels at
 `(A,B,q)=(67^alpha r,67^gamma s,drs)`. Incidence survives exactly and the
-compatible image is now classified exactly. The next analytic target is
-`COLLPRIMCAR` directly or `RAYPRIMCAR` on the actual
+compatible image and its coherent core-color compression are now classified
+exactly. The next analytic target is `COLLPRIMCAR` directly,
+`AUXCOLORPRIMCAR` before phase is discarded, or `RAYPRIMCAR` on the actual
 `q=drs` rays; full-`q` `GENPRIMCAR` remains a broader
 alternative with a polylogarithmic tax, not an intrinsic requirement. Every
 route still leaves the nonzero spectrum.

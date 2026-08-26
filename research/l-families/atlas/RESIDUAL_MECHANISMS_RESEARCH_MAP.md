@@ -45,7 +45,13 @@
 > subpower normalization by positive-norm algebra: the former pays a
 > convergent `K_67(epsilon)` cost for `0<epsilon<1`, the latter
 > `O(log^2 H)` in vector norm / `O(log^4 H)` in energy. None
-> is proved, and none controls the nonzero incidence spectrum.
+> is proved, and none controls the nonzero incidence spectrum. There is also
+> an exact coherent-core compression at every fixed `(d,u=rs)`:
+> summing the `r/s` colors before the norm exposes the quadratic
+> `AUXCOLORPRIMCAR` gate (`COLORPRIMCAR` at `D=1`). The ray
+> gate implies it with an explicit Euler cost, and it controls the whole
+> auxiliary rho-sieved energy with sharp Hilbert constant `J_67`; it is
+> formally incomparable with the collective and full-`q` gates.
 > Separately, the minimal
 > ternary physical mask has a universal degree-shell norm/Kummer realization
 > of rank `48`, tame Swan zero, and linear toric boundary support; the exact

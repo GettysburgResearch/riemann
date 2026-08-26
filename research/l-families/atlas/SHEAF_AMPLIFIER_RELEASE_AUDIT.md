@@ -7,7 +7,7 @@ Frozen parent: PR #756 at
 `6e4609dfe1b073f1eb58445fdd1d7164dbc450d6`.
 
 Audited mathematical-packet head:
-`f56b8e8dbda0c54a59fed288c3ca3cbf2150f3a2`. The final PR head is recorded in
+`fc9dbb34d`. The final PR head is recorded in
 the PR body because a tracked file cannot contain the SHA of the commit which
 creates that SHA.
 
@@ -37,7 +37,7 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
 | primitive-ray localization | exact source disintegration and equivalence | each fixed ray is `A_(a,b) log X+O(1)`; every prescribed subpower-height sector is harmless | the balanced high-height residual remains RH-bearing |
 | primitive-pair large-sieve gate | exact shell identities, two exact normal forms, plus conditional implication | five oriented/three reciprocal panels reconstruct the residual; Möbius--Gram and biased-Boolean forms expose its modes; `PRIMLS` implies RH | the harmonic zero mode survives sieve averaging; `PRIMLS` is unproved, stronger than RH, with no converse |
 | primitive incidence/Carleson form | exact finite Gram, fixed-height limit, and conditional implication | the actual `d^-1` average limits to `67/(68 zeta(2))` times the Boolean energy; `PRIMCAR=>PRIMLS=>RH` | `PRIMCAR` is stronger and unproved; its `rho`-tilted zero mode still carries `1/zeta(s)` |
-| primitive `rho`-tilt convolution | exact Euler algebra, bounded inverse operators, Boolean compression, compatible-image bijection, and positive-norm gate hierarchy | the one-variable tilt preserves every positive Mertens exponent; in each of the three actual `(alpha,0)` channels, fixed squarefree 67-free `q` has `3^omega(q)` compatible colorings and `d=1` has `2^omega(q)` saturated rays; `RAYPRIMCAR -> COLLPRIMCAR <- GENPRIMCAR` with a convergent ray cost for `0<epsilon<1` versus a polylog full-`q` cost | no gate is proved; RAY/GEN incomparability is only positive-norm algebra, its synthetic witnesses are not arithmetic panel values, and nonzero `PRIMCAR` modes remain uncontrolled |
+| primitive `rho`-tilt convolution | exact Euler algebra, bounded inverse operators, Boolean compression, compatible-image bijection, and positive-norm gate hierarchy | the one-variable tilt preserves every positive Mertens exponent; fixed squarefree 67-free `q` has `3^omega(q)` compatible colorings and `d=1` has `2^omega(q)` saturated rays; compatible `r/s` colors have equal weight at every fixed `(d,u=rs)`, exposing `AUXCOLORPRIMCAR`; `RAYPRIMCAR` implies both collective and color gates, with sharp color Hilbert cost `J_67` | no gate is proved; all incomparability witnesses are positive-norm arrays rather than arithmetic panel values, and nonzero `PRIMCAR` modes remain uncontrolled |
 | native reflection/geodesic criterion | exact source identity and equivalence | same detector is a differentiated reflection-odd energy; relative squared endpoint costs `O(T)` | positive reflection estimate remains RH-bearing |
 | finite beta scout | bounded floating point | checkpoint values and two-mesh controls are reproducible | no interval certificate or asymptotic inference |
 | compact boundary-field scout | bounded floating point plus exact first-difference control | `G` rows reproduce; direct differencing agrees with `h_epsilon` to `2.13e-13` absolute | no asymptotic inference |
@@ -124,6 +124,12 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
   direct collective gate from the stronger compatible-ray and full-`q`
   gates. Two independent read-only audits checked the `d^-1=rs*q^-1`
   normalization, harmonic costs, image exhaustion, and scope firewalls.
+- `fc9dbb34d` proves the fixed-`d`, fixed-core coherent-color identity,
+  introduces the weighted quadratic `AUXCOLORPRIMCAR` gate, proves
+  `RAYPRIMCAR` implies it with the exact Euler threshold, and records the
+  sharp `J_67` Hilbert constant. Its cancellation and nonimplication
+  witnesses are explicitly synthetic; no new estimate or nonzero-mode
+  control is claimed.
 
 ### Selector and notch extensions
 
@@ -314,6 +320,11 @@ JSON:
 33. `COLLPRIMCAR` is the direct weighted-`l^1` condition
     furnished by Minkowski. It need not control any individual ray, and even
     a solved zero mode would not control the nonzero incidence spectrum.
+34. `AUXCOLORPRIMCAR` sums compatible `r/s` colors before taking a
+    norm and then uses a weighted quadratic core energy. It controls the
+    auxiliary rho-sieved panel conditionally, but is unproved and is formally
+    incomparable with `COLLPRIMCAR` and `GENPRIMCAR` only at the
+    positive-norm level.
 
 ## 5. Final replay set
 
@@ -443,7 +454,8 @@ Open and load-bearing:
 - the stronger three-panel `PRIMLS` maximal Möbius-pair estimate;
 - the still stronger dyadic `PRIMCAR` incidence-energy estimate;
 - the direct weighted `COLLPRIMCAR` auxiliary rho-sieved input (hence
-  a zero-mode route), or either stronger, formally incomparable route:
+  a zero-mode route), the coherent quadratic `AUXCOLORPRIMCAR` input,
+  or either uniform sufficient route:
   compatible-ray `RAYPRIMCAR` and
   full-`q` `GENPRIMCAR`;
 - global varying-place relative complex and signed trace cancellation;
