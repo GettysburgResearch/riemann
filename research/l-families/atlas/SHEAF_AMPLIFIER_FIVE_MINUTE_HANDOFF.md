@@ -59,6 +59,15 @@ cube.  The latter retains the harmonic zero mode and has frozen rows at sieve
 primes larger than the shell, proving that averaging over the common-factor
 label alone cannot supply the missing cancellation.
 
+The finite divisor cube is now connected back to the actual truncated
+average. For every fixed primitive-height block, the `d^-1` square mean is an
+exact incidence Gram with kernel `K_D(lcm(e,f))`; after division by `log D`
+it converges to `67/(68 zeta(2))` times the biased-Boolean energy. Its zero
+mode is an explicit `rho`-tilted Möbius pair whose Euler series still contains
+`1/zeta(s)`. A dyadic nonmaximal gate named `PRIMCAR` implies `PRIMLS` and
+hence conditionally RH, but is stronger and wholly unproved. The gain is an
+exact analytic decomposition, not an estimate.
+
 ### 2. The raw version is impossible
 
 The complete unmollified current has unavoidable negative atomic variation
@@ -98,10 +107,20 @@ as
 \]
 
 Consequently the clean physical Kummer layer is scalable, while tensoring it
-termwise with exact irreducibility still pays
-`2^(a+b-2)/(ab)`. This is a local product-mass theorem, not a no-go for
-cancellation after the still-unbuilt owner/Boolean/incidence source tensor or
-for a prime-polynomial trace formula.
+termwise with exact irreducibility still pays `2^(a+b-2)/(ab)`. This is a
+local coefficient-space product-mass theorem.
+
+There is now an exact categorical bypass. Closed-point Möbius inversion with
+Adams operations extracts degrees `(a,b)` using
+`2^(omega(a)+omega(b))` nonzero signed extension-field traces whenever the
+joint kernel has commuting partial Frobenius actions, equivalently here a
+finite external-product decomposition. The clean rank-48 ternary package
+qualifies and partial Adams preserves its `48/32/16` deck-character ranks.
+For `a=b`, removing ordered equal places costs another `2^omega(a)` nonzero
+diagonal terms. An arbitrary sheaf on a
+product has only diagonal Frobenius, so this cannot yet be applied to the
+unbuilt owner/Boolean/Artin--Schreier FFPS source. It replaces an exponential
+selector ledger, not the uniform Betti or signed-trace gate.
 
 One apparent escape is now closed sharply. The exact universal `d`-cycle
 selector has a unique hook-character expansion and forced absolute rank mass
@@ -160,6 +179,20 @@ This rules out every bounded-depth, fixed-width, or merely near-hook repair.
 For real lifts the half-planes are forced signs; complex lifts need not be
 real. It remains a necessary condition: no contractive lift or all-degree
 optimum has been constructed.
+
+The propagation is not confined to two rows. For every fixed tail partition
+`beta|-m`, every lift satisfies
+
+\[
+ \operatorname{Re}x_{(d-1-m,\beta)}
+ =(-1)^{m+1}a_\beta{2^{d-1}\over d}+O_\beta(d^m),
+\]
+
+with an explicit positive Young-lattice recursion for `a_beta`. The first
+three-row family has `a_(j,1)=2j+1`, and its leading diamond terms cancel
+exactly. Thus fixed edge neighborhoods are rigid but consistent; the live
+question is a moving-tail bulk matching theorem near the Young-lattice
+center.
 
 ### 4. The first accidental notch layer is smaller than feared
 
@@ -257,8 +290,9 @@ If you care about the direct RH mechanism:
 4. [`FFPS_BOUNDARY_FIELD_NEAR_CORRELATION_CRITERION.md`](function_field/FFPS_BOUNDARY_FIELD_NEAR_CORRELATION_CRITERION.md);
 5. [`FFPS_BOUNDARY_FIELD_PRIMITIVE_RAY_LOCALIZATION.md`](function_field/FFPS_BOUNDARY_FIELD_PRIMITIVE_RAY_LOCALIZATION.md);
 6. [`FFPS_BOUNDARY_FIELD_PRIMITIVE_PAIR_LARGE_SIEVE_GATE.md`](function_field/FFPS_BOUNDARY_FIELD_PRIMITIVE_PAIR_LARGE_SIEVE_GATE.md);
-7. [`FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md`](function_field/FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md);
-8. [`FFPS_BOUNDARY_FIELD_FINITE_SCOUT.md`](function_field/FFPS_BOUNDARY_FIELD_FINITE_SCOUT.md)
+7. [`FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md`](function_field/FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md);
+8. [`FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md`](function_field/FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md);
+9. [`FFPS_BOUNDARY_FIELD_FINITE_SCOUT.md`](function_field/FFPS_BOUNDARY_FIELD_FINITE_SCOUT.md)
    only after the theorem packets.
 
 If you care about hard masks and sheaves:
@@ -272,8 +306,10 @@ If you care about hard masks and sheaves:
 7. [`FFPS_DERANGEMENT_SELECTOR_FINITE_L1_OPTIMIZATION.md`](function_field/FFPS_DERANGEMENT_SELECTOR_FINITE_L1_OPTIMIZATION.md);
 8. [`FFPS_DERANGEMENT_SELECTOR_TANH_CALIBRATION.md`](function_field/FFPS_DERANGEMENT_SELECTOR_TANH_CALIBRATION.md);
 9. [`FFPS_SELECTOR_YOUNG_LATTICE_PROPAGATION_OBSTRUCTION.md`](function_field/FFPS_SELECTOR_YOUNG_LATTICE_PROPAGATION_OBSTRUCTION.md);
-10. [`FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md`](function_field/FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md);
-11. [`FUNCTION_FIELD_BLOCK_ENTROPY_CONDUCTOR_PHASE_DIAGRAM.md`](function_field/FUNCTION_FIELD_BLOCK_ENTROPY_CONDUCTOR_PHASE_DIAGRAM.md).
+10. [`FFPS_SELECTOR_STABLE_TAIL_TRANSPORT.md`](function_field/FFPS_SELECTOR_STABLE_TAIL_TRANSPORT.md);
+11. [`FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md`](function_field/FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md);
+12. [`FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md`](function_field/FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md);
+13. [`FUNCTION_FIELD_BLOCK_ENTROPY_CONDUCTOR_PHASE_DIAGRAM.md`](function_field/FUNCTION_FIELD_BLOCK_ENTROPY_CONDUCTOR_PHASE_DIAGRAM.md).
 
 If you care about standalone arithmetic geometry:
 
@@ -305,9 +341,10 @@ in chronological order.
   Their algebraic ingredients are classical Fourier theory; novelty, if any,
   lies in the physical-source and relative-cleanup architecture.
 - The universal norm-torsor packet closes the varying-degree physical layer
-  for one clean ternary shell and locates the first exponential cost. Norms,
-  Kummer torsors, and cycle indicators are classical; external novelty is not
-  claimed for the ingredients or their separate use.
+  for one clean ternary shell and locates the coefficient-space exponential
+  cost. The closed-point Adams packet then bypasses that cost for separable
+  trace kernels. Norms, Kummer torsors, Adams operations, and cycle indicators
+  are classical; external novelty is not claimed for the ingredients.
 - The forced selector mass is classical character theory used as a new
   project firewall; the finite derangement relaxation adds exact rational
   dual certificates, while the all-degree `tanh` identity and algebraic lift
@@ -329,11 +366,14 @@ in chronological order.
    reflection gate or high-primitive-height beta correlation, without using
    RH.  A five-channel maximal sifted Möbius-pair large sieve is a clean
    sufficient statement, but is deliberately stronger than RH and unproved.
+   The still stronger `PRIMCAR` removes the endpoint supremum and exposes an
+   incidence Gram; it is also unproved.
 2. **Relative sheaf gate:** construct the global varying-place complex where
    hard and selected cleanup remain common and `C-S=Pi_0` survives with a
-   usable conductor ledger. The clean ternary norm/Kummer factor now exists;
-   the missing step is the native owner/Boolean/Artin--Schreier source tensor
-   and cancellation before the exact cycle-selector mass is normed.
+   usable conductor ledger. The clean ternary norm/Kummer factor and its
+   divisor-cost Adams extractor now exist; the missing step is to make the
+   native owner/Boolean/Artin--Schreier source separable or equip it with
+   commuting partial Frobenii, then prove a uniform Betti/signed-trace bound.
 3. **Weighted source gate:** transfer rich-core supply through the actual
    Boolean/owner physical shell; ambient density alone is insufficient.
 4. **Sym12 realization gate:** decide whether the formal `[5,1] tensor L`
@@ -344,18 +384,20 @@ in chronological order.
    estimates cannot reach a mesoscopic depth.
 6. **Selector gate:** prove or disprove coefficientwise contractivity of the
    all-degree zero-hook lift. Algebraic existence and the global even-cycle
-   no-go are settled, and every solution is forced to propagate almost to the
-   two-row equator; existence remains open.
+   no-go are settled; every solution propagates almost to the two-row equator
+   and through every fixed tail. The live obstruction is moving-tail bulk
+   matching; existence remains open.
 
 ## Recommended next ambitious pass
 
 Run four lanes in parallel:
 
-1. attack the five-channel maximal primitive-pair large sieve now extracted
-   from the high-height ratio-16 beta correlation;
-2. tensor the new universal ternary norm torsor with the actual owner/Boolean
-   source before paying exact-cycle rank, or replace the selector by a
-   prime-polynomial trace formula;
+1. attack the explicit `rho`-tilted zero mode and nonzero incidence spectrum
+   in `PRIMCAR`, without confusing the stronger gate with progress on its
+   estimate;
+2. prove the actual owner/Boolean/Artin--Schreier source has the partial-
+   Frobenius/external-product structure required by the new Adams extractor,
+   then simplify its signed divisor sum before any Betti norm;
 3. attack the squareclass `KRAWLS` orbit sums or a growing-monodromy
    replacement; the exact quotient has crossed the generic entropy wall, but
    termwise character estimates stop at the additive `log log` gain;

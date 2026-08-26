@@ -44,6 +44,8 @@ class ClosedPointAdamsCompressionTests(unittest.TestCase):
             [MODULE.mobius(value) for value in range(1, 11)],
             [1, -1, -1, 0, -1, 1, -1, 0, 0, 1],
         )
+        self.assertEqual(MODULE.mobius_support_count(12), 4)
+        self.assertEqual(MODULE.mobius_support_count(30), 8)
 
     def test_one_place_identity_with_nontrivial_adams_power(self) -> None:
         for degree in range(1, 13):
@@ -90,9 +92,11 @@ class ClosedPointAdamsCompressionTests(unittest.TestCase):
 
     def test_divisor_cost_replaces_cycle_mass(self) -> None:
         panel = MODULE.complexity_panel(12, 12)
-        self.assertEqual(panel["divisor_pair_terms"], 36)
-        self.assertEqual(panel["distinct_diagonal_terms"], 6)
-        self.assertEqual(panel["regular_character_line_evaluations"], 2016)
+        self.assertEqual(panel["raw_divisor_pair_slots"], 36)
+        self.assertEqual(panel["nonzero_mobius_pair_terms"], 16)
+        self.assertEqual(panel["raw_distinct_diagonal_slots"], 6)
+        self.assertEqual(panel["nonzero_mobius_diagonal_terms"], 4)
+        self.assertEqual(panel["regular_character_line_evaluations"], 960)
         self.assertEqual(MODULE.selector_mass(12, 12), Fraction(262144, 9))
 
     def test_invalid_inputs_fail_closed(self) -> None:

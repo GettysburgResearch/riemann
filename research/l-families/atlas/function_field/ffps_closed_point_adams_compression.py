@@ -78,6 +78,12 @@ def divisor_count(value: int) -> int:
     return len(divisors(value))
 
 
+def mobius_support_count(value: int) -> int:
+    """Number of divisors on which the Moebius coefficient is nonzero."""
+
+    return sum(mobius(divisor) != 0 for divisor in divisors(value))
+
+
 def selector_mass(left_degree: int, right_degree: int) -> Fraction:
     validate_positive_integer(left_degree, "left degree")
     validate_positive_integer(right_degree, "right degree")
@@ -99,8 +105,10 @@ def _synthetic_eigenvalues(
         raise ValueError("synthetic side must be zero or one")
     if point not in range(_point_count(degree)):
         raise ValueError("synthetic closed-point index is out of range")
-    first = ((term + 2 * side + degree + point) % 5) - 2
-    second = ((2 * term + side + degree + 2 * point) % 5) - 2
+    # Frobenius actions are invertible, so keep every synthetic eigenvalue
+    # nonzero even though the inversion identity itself only uses power sums.
+    first = ((term + 2 * side + degree + point) % 5) + 1
+    second = ((2 * term + side + degree + 2 * point) % 5) + 1
     return (first, second)
 
 
@@ -251,15 +259,20 @@ def physical_adams_profile(
 def complexity_panel(left_degree: int, right_degree: int) -> dict[str, object]:
     left_tau = divisor_count(left_degree)
     right_tau = divisor_count(right_degree)
-    diagonal_terms = left_tau if left_degree == right_degree else 0
+    left_support = mobius_support_count(left_degree)
+    right_support = mobius_support_count(right_degree)
+    raw_diagonal_slots = left_tau if left_degree == right_degree else 0
+    nonzero_diagonal_terms = left_support if left_degree == right_degree else 0
     cycle_mass = selector_mass(left_degree, right_degree)
     return {
         "left_degree": left_degree,
         "right_degree": right_degree,
-        "divisor_pair_terms": left_tau * right_tau,
-        "distinct_diagonal_terms": diagonal_terms,
+        "raw_divisor_pair_slots": left_tau * right_tau,
+        "nonzero_mobius_pair_terms": left_support * right_support,
+        "raw_distinct_diagonal_slots": raw_diagonal_slots,
+        "nonzero_mobius_diagonal_terms": nonzero_diagonal_terms,
         "regular_character_line_evaluations": 48
-        * (left_tau * right_tau + diagonal_terms),
+        * (left_support * right_support + nonzero_diagonal_terms),
         "coefficient_space_selector_mass": str(cycle_mass),
         "coefficient_space_regular_rank_mass": str(48 * cycle_mass),
     }

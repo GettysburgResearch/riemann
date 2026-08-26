@@ -46,7 +46,7 @@ where `Q_H` is the product of the primes `p != 67` with `p <= 2H`, and
 
 \[
 \boxed{
- \sum_{\substack{d\le D\\d\ {m squarefree},\ 67\nmid d}}
+ \sum_{\substack{d\le D\\d\ {\rm squarefree},\ 67\nmid d}}
  {\lvert\mathcal P_I(d)\rvert^2\over d}
  =
  \sum_{e,f\mid Q_H}W_{I,e}\overline{W_{I,f}}
@@ -58,7 +58,7 @@ where
 
 \[
  K_D(n)=
- \sum_{\substack{d\le D\\d\ {m squarefree},\ 67\nmid d\\(d,n)=1}}
+ \sum_{\substack{d\le D\\d\ {\rm squarefree},\ 67\nmid d\\(d,n)=1}}
  {1\over d}.
 \tag{0.4}
 \]
@@ -72,7 +72,7 @@ For fixed `H` and `I`, the genuine truncated average has the limit
 \[
 \boxed{
  {1\over\log D}
- \sum_{\substack{d\le D\\d\ {m squarefree},\ 67\nmid d}}
+ \sum_{\substack{d\le D\\d\ {\rm squarefree},\ 67\nmid d}}
  {\lvert\mathcal P_I(d)\rvert^2\over d}
  \longrightarrow
  {67\over68\zeta(2)}
@@ -156,7 +156,7 @@ grid `(H,2H]`. Define
 
 \[
  \mathcal E_D(I)=
- \sum_{\substack{d\le D\\d\ {m squarefree},\ 67\nmid d}}
+ \sum_{\substack{d\le D\\d\ {\rm squarefree},\ 67\nmid d}}
  {\lvert\mathcal P_I(d)\rvert^2\over d}.
 \tag{0.13}
 \]
@@ -165,7 +165,7 @@ The exact dyadic chaining inequality is
 
 \[
 \boxed{
- \sum_d{1\over d}
+ \sum_{\substack{d\le D\\d\ {\rm squarefree},\ 67\nmid d}}{1\over d}
  \sup_{H\le U\le2H}
  |\mathcal P(d;H,U)|^2
  \le
@@ -217,7 +217,7 @@ For an integer height `t`, define
 \begin{aligned}
  A_t(d)
  :=\sum_{\substack{
- a,b\ {m squarefree},\ 67\nmid ab,\ (a,b)=1\\
+ a,b\ {\rm squarefree},\ 67\nmid ab,\ (a,b)=1\\
  h_{\alpha,\gamma}(a,b)=t,\ (ab,d)=1}}
  {\mu(a)\mu(b)\over\sqrt{ab}}
  \mathcal R\!\left(
@@ -323,7 +323,7 @@ The standard squarefree harmonic estimate from the frozen source gives
 
 \[
  \sum_{\substack{d\le D\\(d,Q)=\delta\\
- d\ {m squarefree},\ 67\nmid d}}{1\over d}
+ d\ {\rm squarefree},\ 67\nmid d}}{1\over d}
  ={C(67Q)\over\delta}\log D+O_Q(1),
 \tag{3.2}
 \]
@@ -351,7 +351,7 @@ without the square proves
 
 \[
  {1\over\log D}
- \sum_{\substack{d\le D\\d\ {m squarefree},\ 67\nmid d}}
+ \sum_{\substack{d\le D\\d\ {\rm squarefree},\ 67\nmid d}}
  {\mathcal P_I(d)\over d}
  \longrightarrow
  {67\over68\zeta(2)}B_I.

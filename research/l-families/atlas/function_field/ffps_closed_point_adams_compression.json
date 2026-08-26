@@ -19,8 +19,10 @@
     {
       "left_degree": 3,
       "right_degree": 5,
-      "divisor_pair_terms": 4,
-      "distinct_diagonal_terms": 0,
+      "raw_divisor_pair_slots": 4,
+      "nonzero_mobius_pair_terms": 4,
+      "raw_distinct_diagonal_slots": 0,
+      "nonzero_mobius_diagonal_terms": 0,
       "regular_character_line_evaluations": 192,
       "coefficient_space_selector_mass": "64/15",
       "coefficient_space_regular_rank_mass": "1024/5"
@@ -28,27 +30,33 @@
     {
       "left_degree": 8,
       "right_degree": 8,
-      "divisor_pair_terms": 16,
-      "distinct_diagonal_terms": 4,
-      "regular_character_line_evaluations": 960,
+      "raw_divisor_pair_slots": 16,
+      "nonzero_mobius_pair_terms": 4,
+      "raw_distinct_diagonal_slots": 4,
+      "nonzero_mobius_diagonal_terms": 2,
+      "regular_character_line_evaluations": 288,
       "coefficient_space_selector_mass": "256",
       "coefficient_space_regular_rank_mass": "12288"
     },
     {
       "left_degree": 11,
       "right_degree": 12,
-      "divisor_pair_terms": 12,
-      "distinct_diagonal_terms": 0,
-      "regular_character_line_evaluations": 576,
+      "raw_divisor_pair_slots": 12,
+      "nonzero_mobius_pair_terms": 8,
+      "raw_distinct_diagonal_slots": 0,
+      "nonzero_mobius_diagonal_terms": 0,
+      "regular_character_line_evaluations": 384,
       "coefficient_space_selector_mass": "524288/33",
       "coefficient_space_regular_rank_mass": "8388608/11"
     },
     {
       "left_degree": 12,
       "right_degree": 12,
-      "divisor_pair_terms": 36,
-      "distinct_diagonal_terms": 6,
-      "regular_character_line_evaluations": 2016,
+      "raw_divisor_pair_slots": 36,
+      "nonzero_mobius_pair_terms": 16,
+      "raw_distinct_diagonal_slots": 6,
+      "nonzero_mobius_diagonal_terms": 4,
+      "regular_character_line_evaluations": 960,
       "coefficient_space_selector_mass": "262144/9",
       "coefficient_space_regular_rank_mass": "4194304/3"
     }

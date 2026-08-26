@@ -433,7 +433,8 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
         "exact_reductions": {
             "dyadic_maximal": {
                 "bound": (
-                    "sum_d d^-1 sup_U |P(d;H,U)|^2 <= ceil(log2(N+1)) sum_I E_D(I)"
+                    "sum_(d<=D,squarefree,67-free) d^-1 sup_U |P(d;H,U)|^2 "
+                    "<= ceil(log2(N+1)) sum_I E_D(I)"
                 ),
                 "replay": dyadic,
             },

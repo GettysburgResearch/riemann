@@ -37,19 +37,22 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
 | boundary near-correlation | exact positive Gram identity and equivalence | prefix `L2` energy uses only beta pairs with ratio in `[1/16,16]`; its off-diagonal is RH-equivalent | no subpower correlation estimate is proved |
 | primitive-ray localization | exact source disintegration and equivalence | each fixed ray is `A_(a,b) log X+O(1)`; every prescribed subpower-height sector is harmless | the balanced high-height residual remains RH-bearing |
 | primitive-pair large-sieve gate | exact shell identities, two exact normal forms, plus conditional implication | five oriented/three reciprocal panels reconstruct the residual; Möbius--Gram and biased-Boolean forms expose its modes; `PRIMLS` implies RH | the harmonic zero mode survives sieve averaging; `PRIMLS` is unproved, stronger than RH, with no converse |
+| primitive incidence/Carleson form | exact finite Gram, fixed-height limit, and conditional implication | the actual `d^-1` average limits to `67/(68 zeta(2))` times the Boolean energy; `PRIMCAR=>PRIMLS=>RH` | `PRIMCAR` is stronger and unproved; its `rho`-tilted zero mode still carries `1/zeta(s)` |
 | native reflection/geodesic criterion | exact source identity and equivalence | same detector is a differentiated reflection-odd energy; relative squared endpoint costs `O(T)` | positive reflection estimate remains RH-bearing |
 | finite beta scout | bounded floating point | checkpoint values and two-mesh controls are reproducible | no interval certificate or asymptotic inference |
 | compact boundary-field scout | bounded floating point plus exact first-difference control | `G` rows reproduce; direct differencing agrees with `h_epsilon` to `2.13e-13` absolute | no asymptotic inference |
 | mask Pareto frontier | exact finite Fourier/Gram algebra | leverage and selected leakage share one sharp parameter | fixed support gain is not individualization |
 | Kummer invariant audit | exact fixed-fibre geometry | generic invariant criterion and resonant strata identified | no varying-place complex or uniform Betti bound |
 | cyclic/abelian torsor projector | exact endomorphism theorem | `C-S=Pi_0`; subgroup quotients compress selected rank | actual FFPS cleanup must be common and equivariant |
-| universal ternary norm torsor | exact varying-degree-shell construction and finite-monodromy normal form | clean physical ranks are `48/32/16`, generic selected invariants vanish, tame toric conductor is at most `288(a+b)`, and root/physical monodromy split | exact irreducibility still has exponential termwise mass; native source gluing, joint cancellation, and `CYSEL` remain open |
+| universal ternary norm torsor | exact varying-degree-shell construction and finite-monodromy normal form | clean physical ranks are `48/32/16`, generic selected invariants vanish, tame toric conductor is at most `288(a+b)`, and root/physical monodromy split | coefficient-space irreducibility has exponential termwise mass; the closed-point bypass still needs native source gluing, Betti control, and `CYSEL` |
+| closed-point Adams compression | exact orbit/Möbius theorem and finite-abelian character algebra | separable degree `(a,b)` extraction costs `2^(omega(a)+omega(b))` nonzero signed traces, plus `2^omega(a)` for an equal-degree ordered diagonal; ternary deck ranks stay `48/32/16` | the native source has not been shown separable/partial-Frobenius; trace-term count is not a uniform Betti estimate |
 | rich-core and closed-place towers | exact source algebra plus ambient counting | formal leverage `<(4/5)^r` on declared rich sources | weighted Boolean transfer is open |
 | entropy/conductor phase diagram | exact ambient theorem; conditional loss model | threshold `theta<delta log(5/4)` | typical ambient order statistics do not imply a weighted-source theorem |
-| exact cycle-selector mass | exact characteristic-zero representation theorem | every exact full-`S_d` presentation has forced mass `2^(d-1)/d`; product costs multiply | weaker/source-specific selectors and joint geometric cancellation remain open |
+| exact cycle-selector mass | exact characteristic-zero representation theorem | every exact full-`S_d` presentation has forced mass `2^(d-1)/d`; product costs multiply | this is a coefficient-space theorem; closed-point Adams inversion is a different category, while weaker/source-specific selectors and joint cancellation remain open |
 | derangement-relaxed selector | **exact finite**, `2<=d<=10` | fixed-point vanishing still has optimum `2^(d-1)/d`, uniquely at the exact cycle indicator | all-`d` optimality is conjectural; no asymptotic or native-source lower bound |
 | selector `tanh` calibration | exact all-degree symmetric-function theorem and selector-range firewalls | natural dual is `tanh(A)`; nonhooks have the sharp `(d-4)/d` gap; descent-set-only saturated repairs are rigid; zero-hook lifts exist; even-cycle-only perturbations never lower mass | coefficientwise contraction on odd cycle counts `>=3` remains open; no all-`d` optimum follows |
 | selector Young-lattice propagation | exact all-degree necessary condition | any real or complex contractive optimum obeys `Re((-1)^(j-1)X_j)>=2^d/d-C(d,j)` and remains active to within `(1/2+o(1))sqrt(d log d)` of the two-row equator | no lift is constructed and the deeper Young-lattice boxes may still obstruct existence |
+| selector stable-tail transport | exact fixed-tail edge theorem | every fixed tail has an explicit positive recursive exponential amplitude with polynomial error; three-row diamonds cancel compatibly | moving-tail/bulk Young-lattice matching remains completely open |
 | first notch boundary | exact all-odd-`q` theorem | no first-boundary zeros for `n>=4` | deeper profiles remain |
 | second notch boundary | exact reduction and fixed-`q` asymptotic using standard prime-polynomial AP input | density begins at `M^-2`, with exact `M^-3` term | detector zeros only; no individual L-function zero |
 | third notch boundary | exact reduction and fixed-`q` asymptotic using the same standard input | density begins at `M^-2`; `D_5+D_3` first enters at `M^-3` | growing-depth aggregate remains open |
@@ -100,6 +103,13 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
   Parseval gives the exact `d^-1` divisor-sieve spectrum.  Its surviving
   zero mode and frozen large-prime rows rule out cancellation by sieve-label
   averaging alone without asserting any new estimate.
+- `1d898069a` identifies the actual truncated harmonic average with a finite
+  incidence Gram and the biased Boolean cube with its exact fixed-height
+  limit. It also gives the stronger conditional gate
+  `PRIMCAR=>PRIMLS=>RH`; an independent audit rederived the normalization,
+  zero-mode Euler factor, spectral coefficients, and dyadic chaining. Seven
+  embedded Markdown control characters and one omitted finite summation
+  subscript were repaired without changing the theorem.
 
 ### Selector and notch extensions
 
@@ -155,11 +165,21 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
   `d/2-(1/2+o(1))sqrt(d log d)` layers. An independent audit rederived the
   hook recurrence, telescope, and threshold constant and replayed the packet
   in both modes; it remains explicitly necessary rather than constructive.
+- `47b2c033e` propagates the same forced exponential transport through every
+  fixed Young-diagram tail, proves the signed-transpose reduction, and shows
+  exact leading compatibility of the first three-row diamonds. An independent
+  3,648-case cover/dimension audit found one `j>=2,d>=2j+2` prose omission,
+  now repaired. Moving-tail bulk matching remains open.
 - `c81e69db1` constructs the universal ternary norm/orientation/cubic torsor;
   `2d83d5d4a` proves the direct-product monodromy and local product-mass
   no-go. The physical layer is bounded-rank and linearly ramified, while the
   owner/Boolean/phase source tensor and cancellation of the exact cycle
   selector remain open.
+- `f03edc15c` changes the clean place-selection presentation: Adams--Möbius
+  inversion uses divisor-many extension-field traces for separable kernels,
+  with an exact ordered-diagonal correction. It retains the explicit
+  factorization and Betti firewalls and does not weaken the coefficient-space
+  selector theorem.
 
 ### Genus-two `Sym^12`
 
@@ -251,6 +271,17 @@ JSON:
 25. The Young-lattice telescope is a necessary consequence of hook
     saturation and two-row dimension boxes. Its propagation depth is not
     called an existence theorem or an all-degree optimum.
+26. The stable-tail induction uses distinct Young-lattice predecessors and is
+    uniform only for each fixed tail. Its polynomial error constants are not
+    extrapolated into the moving central band.
+27. The fixed-height incidence limit retains an `O_(Q_H)(1)` error and is not
+    used uniformly as `H` grows. `PRIMCAR` is recorded as stronger than
+    `PRIMLS`, not as a proved or easier estimate.
+28. Adams extraction requires independent partial Frobenius actions. A
+    general product sheaf supplies only diagonal Frobenius, and divisor-many
+    trace terms do not bound the Betti complexity of their pushforwards.
+29. Equal-degree place extraction uses ordered pairs and subtracts the exact
+    diagonal class. No unordered-pair normalization is silently inserted.
 
 ## 5. Final replay set
 
@@ -267,11 +298,14 @@ python -B research/l-families/atlas/function_field/ffps_boundary_field_finite_sc
 python -B research/l-families/atlas/function_field/ffps_boundary_field_near_correlation_criterion.py --check
 python -B research/l-families/atlas/function_field/ffps_boundary_field_primitive_ray_localization.py --check
 python -B research/l-families/atlas/function_field/ffps_boundary_field_primitive_pair_large_sieve_gate.py --check
+python -B research/l-families/atlas/function_field/ffps_primitive_pair_harmonic_incidence_carleson.py --check
 python -B research/l-families/atlas/function_field/ffps_exact_cycle_selector_mass_no_go.py --check
 python -B research/l-families/atlas/function_field/ffps_derangement_selector_finite_l1_optimization.py --check
 python -B research/l-families/atlas/function_field/ffps_derangement_selector_tanh_calibration.py --check
 python -B research/l-families/atlas/function_field/ffps_selector_young_lattice_propagation_obstruction.py --check
+python -B research/l-families/atlas/function_field/ffps_selector_stable_tail_transport.py --check
 python -B research/l-families/atlas/function_field/ffps_ternary_universal_norm_torsor.py --check
+python -B research/l-families/atlas/function_field/ffps_closed_point_adams_compression.py --check
 python -B research/l-families/atlas/function_field/quadratic_family_third_boundary_trace_zero_density.py --check
 python -B research/l-families/atlas/function_field/quadratic_family_fixed_depth_trace_zero_density.py --check
 python -B research/l-families/atlas/function_field/quadratic_family_local_delta_tower_anticoncentration.py --check
@@ -297,11 +331,14 @@ tests.test_ffps_boundary_field_finite_scout
 tests.test_ffps_boundary_field_near_correlation_criterion
 tests.test_ffps_boundary_field_primitive_ray_localization
 tests.test_ffps_boundary_field_primitive_pair_large_sieve_gate
+tests.test_ffps_primitive_pair_harmonic_incidence_carleson
 tests.test_ffps_exact_cycle_selector_mass_no_go
 tests.test_ffps_derangement_selector_finite_l1_optimization
 tests.test_ffps_derangement_selector_tanh_calibration
 tests.test_ffps_selector_young_lattice_propagation_obstruction
+tests.test_ffps_selector_stable_tail_transport
 tests.test_ffps_ternary_universal_norm_torsor
+tests.test_ffps_closed_point_adams_compression
 tests.test_genus2_sym12_arithmetic_inventory
 tests.test_genus2_sym12_finite_cusp_trace_scout
 tests.test_genus2_sym12_conditional_endoscopic_closure
@@ -369,13 +406,17 @@ Open and load-bearing:
 - compact-ratio off-diagonal beta correlation, another equivalent formulation;
 - high-primitive-height beta cancellation; low and fixed rays are now removed;
 - the stronger three-panel `PRIMLS` maximal Möbius-pair estimate;
+- the still stronger dyadic `PRIMCAR` incidence-energy estimate;
 - global varying-place relative complex and signed trace cancellation;
-- native owner/Boolean/Artin--Schreier gluing to the universal norm torsor;
+- native owner/Boolean/Artin--Schreier gluing to the universal norm torsor,
+  including the separable/partial-Frobenius structure needed by Adams
+  extraction;
 - a weaker/source-specific, prime-polynomial, or jointly cancelled closed-place
   selector;
 - coefficientwise contractivity of the all-degree selector lift on odd-cycle
   derangement strata; perturbations supported solely on even-cycle-count
-  derangements and every bounded-depth two-row repair are now excluded;
+  derangements, every bounded-depth two-row repair, and every fixed-tail edge
+  truncation are now excluded; moving-tail bulk matching is open;
 - weighted Boolean/owner rich-core transfer;
 - any positive-average-to-principal domination route not using the exact
   signed identities;

@@ -61,8 +61,11 @@ the corresponding formula is
 \tag{0.2}
 \]
 
-Thus exact place degrees cost \(\tau(a)\tau(b)\) extension-field trace
-evaluations, rather than the coefficient-space selector mass
+Although (0.2) is written on the raw \(\tau(a)\tau(b)\) divisor grid,
+\(\mu(e)\mu(f)\ne0\) on exactly
+\(2^{\omega(a)+\omega(b)}\) pairs. Thus exact place degrees cost only that
+many nonzero extension-field trace evaluations, rather than the
+coefficient-space selector mass
 
 \[
  {2^{a+b-2}\over ab}.
@@ -211,11 +214,12 @@ Then
 \tag{2.5}
 \]
 
-The first term uses \(\tau(a)^2\) evaluations from (0.2), and the diagonal
-uses another \(\tau(a)\) evaluations from (0.1). If \(a\ne b\), equality of
-the two closed places is impossible and no correction occurs. Symmetric
-unordered pairs require the usual final factor of two and fixed-point
-check; this packet keeps the ordered convention.
+The first term is written on \(\tau(a)^2\) raw divisor slots but has only
+\(2^{2\omega(a)}\) nonzero evaluations; the diagonal is written on
+\(\tau(a)\) slots and has only \(2^{\omega(a)}\) nonzero evaluations. If
+\(a\ne b\), equality of the two closed places is impossible and no correction
+occurs. Symmetric unordered pairs require the usual final factor of two and
+fixed-point check; this packet keeps the ordered convention.
 
 ### Why an ordinary product sheaf is not enough
 
@@ -392,8 +396,8 @@ For the regular package, the raw character-line evaluation ledger is
 
 \[
  \boxed{
- 48\tau(a)\tau(b)
- +\mathbf1_{a=b}\,48\tau(a),}
+ 48\,2^{\omega(a)+\omega(b)}
+ +\mathbf1_{a=b}\,48\,2^{\omega(a)},}
 \tag{4.4}
 \]
 
@@ -405,9 +409,12 @@ is to be compared with the termwise coefficient-space rank mass
 \tag{4.5}
 \]
 
-Equation (4.4) counts character-line trace evaluations, not the total Betti
-number of a pushed-forward source complex. It therefore proves a selector
-compression theorem, not a Deligne estimate.
+Equation (4.4) counts the nonzero character-line trace evaluations after
+discarding the zero Möbius coefficients. The unsimplified formulas occupy
+\(\tau(a)\tau(b)\), plus \(\mathbf1_{a=b}\tau(a)\), raw divisor slots. Neither
+ledger is the total Betti number of a pushed-forward source complex. The
+result therefore proves a selector compression theorem, not a Deligne
+estimate.
 
 ## 5. Exact validity criterion and source obstruction
 
@@ -486,7 +493,7 @@ The theorem does **not** prove:
 | trace equivalence of local orientation and norm orientation | **PROVED EXACT FOR THE CLEAN KUMMER PACKAGE** |
 | external character decomposition (3.3)--(3.4) | **PROVED FROM THE LOCKED DIRECT-PRODUCT NORMAL FORM** |
 | Adams laws (4.1)--(4.2) and bounded ranks | **PROVED EXACT FINITE-ABELIAN CHARACTER ALGEBRA** |
-| replacement of exponential selector mass by \(\tau(a)\tau(b)\) trace terms | **PROVED FOR THE CLEAN SEPARABLE PACKAGE** |
+| replacement of exponential selector mass by \(2^{\omega(a)+\omega(b)}\) nonzero trace terms | **PROVED FOR THE CLEAN SEPARABLE PACKAGE** |
 | native owner/Boolean/Artin--Schreier separable adapter | **NOT CONSTRUCTED** |
 | uniform pushed-forward Betti or signed trace estimate | **OPEN** |
 | CYSEL, WCADD106140, WCKUM106140, RH, or GRH | **NOT PROVED** |
@@ -510,7 +517,7 @@ python -B -m ruff format --check research/l-families/atlas/function_field/ffps_c
 ~~~
 
 The replay checks the one- and two-variable Möbius identities on exact
-synthetic Frobenius eigenvalue packets, all \(C_2^4\times C_3\) partial
-Adams profiles for \(1\le e,f\le12\), and divisor-term ledgers through
-\(a,b\le12\). It enumerates no finite field, polynomial, closed place,
-curve, source atom, \(L\)-function, or zero.
+synthetic nonzero Frobenius eigenvalue packets, all \(C_2^4\times C_3\)
+partial Adams profiles for \(1\le e,f\le12\), and both raw-divisor and
+nonzero-Möbius ledgers through \(a,b\le12\). It enumerates no finite field,
+polynomial, closed place, curve, source atom, \(L\)-function, or zero.

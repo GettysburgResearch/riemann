@@ -23,20 +23,22 @@ For a five-minute digest, read in this order:
 5. [`FFPS_BOUNDARY_FIELD_NEAR_CORRELATION_CRITERION.md`](function_field/FFPS_BOUNDARY_FIELD_NEAR_CORRELATION_CRITERION.md);
 6. [`FFPS_BOUNDARY_FIELD_PRIMITIVE_RAY_LOCALIZATION.md`](function_field/FFPS_BOUNDARY_FIELD_PRIMITIVE_RAY_LOCALIZATION.md);
 7. [`FFPS_BOUNDARY_FIELD_PRIMITIVE_PAIR_LARGE_SIEVE_GATE.md`](function_field/FFPS_BOUNDARY_FIELD_PRIMITIVE_PAIR_LARGE_SIEVE_GATE.md);
-8. [`FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md`](function_field/FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md);
-9. [`QUADRATIC_FAMILY_LOGARITHMIC_DEPTH_ZERO_FIREWALL.md`](function_field/QUADRATIC_FAMILY_LOGARITHMIC_DEPTH_ZERO_FIREWALL.md);
-10. [`QUADRATIC_FAMILY_PROFILE_CHI_SQUARE_BRIDGE.md`](function_field/QUADRATIC_FAMILY_PROFILE_CHI_SQUARE_BRIDGE.md);
-11. [`QUADRATIC_FAMILY_SQUARECLASS_ENTROPY_COMPRESSION.md`](function_field/QUADRATIC_FAMILY_SQUARECLASS_ENTROPY_COMPRESSION.md);
-12. [`FFPS_DERANGEMENT_SELECTOR_TANH_CALIBRATION.md`](function_field/FFPS_DERANGEMENT_SELECTOR_TANH_CALIBRATION.md);
-13. [`FFPS_SELECTOR_YOUNG_LATTICE_PROPAGATION_OBSTRUCTION.md`](function_field/FFPS_SELECTOR_YOUNG_LATTICE_PROPAGATION_OBSTRUCTION.md);
-14. [`FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md`](function_field/FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md);
-15. [`GENUS2_SYM12_MASTER_ADAPTER_CONTRADICTION_AUDIT.md`](function_field/GENUS2_SYM12_MASTER_ADAPTER_CONTRADICTION_AUDIT.md);
-16. [`SHEAF_AMPLIFIER_RELEASE_AUDIT.md`](SHEAF_AMPLIFIER_RELEASE_AUDIT.md)
+8. [`FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md`](function_field/FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md);
+9. [`FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md`](function_field/FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md);
+10. [`QUADRATIC_FAMILY_LOGARITHMIC_DEPTH_ZERO_FIREWALL.md`](function_field/QUADRATIC_FAMILY_LOGARITHMIC_DEPTH_ZERO_FIREWALL.md);
+11. [`QUADRATIC_FAMILY_PROFILE_CHI_SQUARE_BRIDGE.md`](function_field/QUADRATIC_FAMILY_PROFILE_CHI_SQUARE_BRIDGE.md);
+12. [`QUADRATIC_FAMILY_SQUARECLASS_ENTROPY_COMPRESSION.md`](function_field/QUADRATIC_FAMILY_SQUARECLASS_ENTROPY_COMPRESSION.md);
+13. [`FFPS_DERANGEMENT_SELECTOR_TANH_CALIBRATION.md`](function_field/FFPS_DERANGEMENT_SELECTOR_TANH_CALIBRATION.md);
+14. [`FFPS_SELECTOR_STABLE_TAIL_TRANSPORT.md`](function_field/FFPS_SELECTOR_STABLE_TAIL_TRANSPORT.md);
+15. [`FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md`](function_field/FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md);
+16. [`FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md`](function_field/FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md);
+17. [`GENUS2_SYM12_MASTER_ADAPTER_CONTRADICTION_AUDIT.md`](function_field/GENUS2_SYM12_MASTER_ADAPTER_CONTRADICTION_AUDIT.md);
+18. [`SHEAF_AMPLIFIER_RELEASE_AUDIT.md`](SHEAF_AMPLIFIER_RELEASE_AUDIT.md)
    before reusing any claim.
 
-Items 3--7 are the shortest quadratic RH-facing path; item 8 is its native-
+Items 3--8 are the shortest quadratic RH-facing path; item 9 is its native-
 reflection continuation. Standalone arithmetic geometry begins at items
-9--13. The hard-mask/sheaf path begins at
+10--17. The hard-mask/sheaf path begins at
 [`FFPS_MASK_AMPLIFIER_PARETO_FRONTIER.md`](function_field/FFPS_MASK_AMPLIFIER_PARETO_FRONTIER.md).
 
 ## Executive verdict
@@ -51,8 +53,10 @@ another family of attractive finite plots:
 2. it proved that the tempting unmollified Jordan premise is
    **unconditionally false** by an explicit `Omega(sqrt(Y))` atomic lower
    bound;
-3. it converted the cyclic hard-mask idea into exact projector geometry,
-   scalable source candidates, and quantitative conductor/no-go ledgers;
+3. it converted the cyclic hard-mask idea into exact projector geometry, a
+   bounded-rank universal norm torsor, and a divisor-cost closed-point Adams
+   extractor for separable kernels, while isolating the native source-
+   factorization and Betti gates;
 4. it proved exact residual/profile algebra and a fixed-`q,j` `M^-2/M^-3`
    odd-notch asymptotic at every fixed depth, exponential local
    anti-concentration, and an `O(M^-2)` whole-layer theorem through a
@@ -89,17 +93,20 @@ as RH. They should not be blended into one vague “family estimate.”
 | boundary near-correlation | prefix `L2` energy is RH-equivalent and is exactly a positive Gram sum over beta pairs with ratio in `[1/16,16]`; the diagonal is explicitly logarithmic | prove the signed off-diagonal compact-ratio correlation is subpower |
 | primitive-ray localization | every fixed admissible beta ray has an explicit `A_(a,b) log X+O(1)` law; all reduced rays of height at most `H` cost `O(H log(2X))`, so for every prescribed `H=X^o(1)` RH is equivalent to the balanced residual above height `H` | cancel the high-height sector; both primitive coordinates exceed `H/16` and the common factor is `<X/H` |
 | primitive-pair large-sieve gate | the full residual has an exact five-oriented/three-reciprocal decomposition, a signed one-dimensional Möbius--Gram form, and a biased-Boolean divisor-sieve diagonalization | prove `PRIMLS`, a maximal `L2(d^-1)` square-root-scale bound; the harmonic zero mode and frozen sieve rows show that `d`-averaging alone cannot do it |
+| primitive incidence/Carleson form | the actual truncated `d^-1` square mean is an incidence Gram; at fixed height its normalized limit is `67/(68 zeta(2))` times the Boolean energy, with a `rho`-tilted Möbius zero mode; `PRIMCAR=>PRIMLS=>RH` | `PRIMCAR` is a stronger unproved sufficient gate; control its zero mode, nonzero spectrum, and dyadic block sum uniformly as height grows |
 | reflection/geodesic form | the same detector is exactly a differentiated native reflection-odd energy; the relative geodesic form differs only by an unconditional `O_epsilon(T)` squared field | obtain arithmetic control of the positive differentiated reflection energy |
 | raw complete current | negative Jordan variation is at least `((70+50 sqrt(2))/pi^2)sqrt(Y)+O(log Y)` | none: the raw subpower premise is refuted |
 | hard-mask co-design | sharp leverage/leakage Pareto law and bounded-energy anomaly-cancellation theorem | a global varying-place relative complex and signed trace estimate |
 | cyclic/abelian geometry | honest torsor endomorphism identity `C-S=Pi_0`; subgroup masks compress many coordinates to fixed selected rank | realize the actual FFPS cleanup functorially with uniform conductor cost |
 | universal ternary norm torsor | on every degree pair `(a,b)` over `q=1 mod 6`, the clean physical mask has ranks `48/32/16`, generic selected invariant zero, tame Swan zero, and toric conductor at most `288(a+b)`; root and physical monodromy split | tensor the native owner/Boolean/phase source before norming the exact selector, or use a source-specific/prime-polynomial selector; this packet alone is not `CYSEL` |
+| closed-point Adams compression | exact degree `(a,b)` extraction costs `2^(omega(a)+omega(b))` nonzero signed traces for separable kernels, plus `2^omega(a)` to remove the ordered diagonal when `a=b`; the clean ternary deck ranks remain `48/32/16` | prove the native source has commuting partial Frobenii/external-product form and bound all transformed pushforwards; trace-term count is not a Betti bound |
 | scalable blocks | a native rich-core source has formal leverage `<(4/5)^r`; closed-place supply permits `r` growing with conductor degree | weighted Boolean transfer and joint relative cancellation |
 | entropy/conductor | the `r`-th eligible place has degree `exp((1/delta+o(1))r)`; a modewise conductor loss wins only below `theta<delta log(5/4)` | cancel large-degree constituents before paying separate mode costs |
 | exact cycle selector | the full `S_d` `d`-cycle indicator has forced absolute semisimple rank mass `2^(d-1)/d`, with equal signed halves; product costs multiply | joint `K_0` cancellation, a weaker source-specific selector, or different descended-orbit geometry |
 | derangement-relaxed selector | **exact finite, `2<=d<=10`:** merely vanishing on fixed-point classes still has unique optimum `1_(d)` and mass `2^(d-1)/d` | the all-`d` statement is conjectural; source-specific and joint geometric cancellation remain open |
 | selector `tanh` calibration | the natural bounded dual has the exact all-degree `tanh` series; every nonhook has the sharp gap `|b_lambda|/f^lambda<=(d-4)/d`; descent-set-only saturated repairs are rigid; an unrestricted zero-hook lift exists, and even-cycle-only perturbations are globally excluded | solve or refute contractivity on the remaining odd-cycle strata; this does not prove the all-`d` optimum |
 | Young-lattice propagation | every real or complex contractive optimal lift must satisfy `Re((-1)^(j-1)X_j)>=2^d/d-C(d,j)` and therefore engage two-row potentials through `d/2-(1/2+o(1))sqrt(d log d)` | this is necessary only; construct a global box-feasible lift or prove that deeper cover constraints make one impossible |
+| stable-tail selector transport | for every fixed `beta|-m`, `Re x_(d-1-m,beta)=(-1)^(m+1)a_beta 2^(d-1)/d+O_beta(d^m)`; three-row diamonds are rigid but compatible | fixed tails do not decide the moving central band; solve the bulk Young-lattice matching gate |
 | odd-notch zeros | first boundary is nonzero for all `n>=4`; every fixed depth has an exact `M^-2/M^-3` law; local probabilities are `O_q(sqrt(j)q^-j)`; for fixed `epsilon>0` and sufficiently large `h`, the complete window `j<=(1/2-epsilon)log_q h` is `O_q(M^-2)` | cross the natural CRT-modulus barrier `q^(2j)~h` using a bilinear large sieve, growing monodromy, or another genuinely uniform input |
 | profile chi-square bridge | exact profile-weighted Parseval gives `Z<=T(beta+sqrt(beta)D)` and function-field RH bounds `D^2` by an explicit polynomial times `q^(ell_r-M)`; its explicit sufficient condition permits a logarithmic gap to the entropy wall when the discrete `ell_r` satisfies it | `ell_r<=M/2` is the unconditional realized corollary; no near-wall landing is claimed for every `M`, and the logarithmic depth scale remains |
 | squareclass entropy compression | the detector factors through exactly `K_r` quadratic signs, replacing `q^ell_r` Fourier modes by `2^K_r`; the complete safe window reaches `r=log_q M+log_q log M+O_q(1)` with total `O_q(M^-2)` | `KRAWLS` must cancel inside degree-wise Krawtchouk orbits to approach the conditional `r=Theta(sqrt M)` scale |
@@ -311,7 +318,45 @@ mean, and primes larger than the shell produce identical sieve rows.  Thus
 abstract orthogonality in the common-factor label cannot prove `PRIMLS`; the
 mean and the nonzero Boolean modes both require Möbius-pair cancellation.
 
-### 1.6 Native half-divisor reflection removes the Boolean adapter
+### 1.6 The actual harmonic average has an incidence spectrum
+
+For a fixed primitive-height block `I`, group primitive pairs by their
+squarefree product `e=ab`, with signed weight `W_(I,e)`. The genuine truncated
+common-factor energy is exactly
+
+\[
+ \sum_{e,f}W_{I,e}\overline{W_{I,f}}K_D([e,f]),
+\]
+
+where `K_D(n)` is the squarefree, `67`-free harmonic mass of `d<=D` coprime
+to `n`. This is a positive semidefinite incidence Gram, not a model.
+At fixed height,
+
+\[
+ {1\over\log D}\mathcal E_D(I)
+ \longrightarrow {67\over68\zeta(2)}
+ \mathbb E_{\nu_{Q_H}}|\mathcal P_I|^2.
+\]
+
+Thus the biased Boolean cube is precisely the limiting spectrum of the real
+`d^-1` average. Its zero mode is a `rho`-tilted Möbius pair,
+`rho(p)=p/(p+1)`, whose one-variable Euler series factors as a nonvanishing
+correction times `1/zeta(s)`. Centering isolates this term but does not bound
+it.
+
+Aligned dyadic decomposition of every endpoint prefix gives a stronger
+nonmaximal gate `PRIMCAR`. If the sum of all dyadic block incidence energies
+is subpower, then `PRIMLS`, and hence RH, follows. `PRIMCAR` is not proved and
+is not a relaxation; it replaces the supremum by the explicit burdens
+
+```text
+rho-tilted zero mode + nonzero incidence spectrum + dyadic block summability.
+```
+
+Read
+[`FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md`](function_field/FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md).
+
+### 1.7 Native half-divisor reflection removes the Boolean adapter
 
 The frozen half-divisor source `lambda` satisfies `lambda*lambda=beta`. Let
 `F_1` be its positive spline field and `I_1=F_1*_M F_1`. With
@@ -350,7 +395,7 @@ This route is source-exact and bypasses the open Boolean completion statement
 `NATCOMP-MOLL106150`. Its smallest burden is now sharply stated, but not
 solved.
 
-### 1.7 Lightweight scout
+### 1.8 Lightweight scout
 
 The bounded scout uses at most `2^18` beta coefficients and two log meshes.
 For `epsilon=(log 2)/2`, the fine panel reports:
@@ -499,10 +544,38 @@ termwise exact irreducibility tensor still incurs
 rules out cancellation internal to this positive physical representation. It
 does **not** rule out cancellation after the native virtual
 owner/Boolean/incidence tensor, a weaker source-specific selector, or a
-prime-polynomial trace formula. Read
+different closed-point presentation. The next subsection constructs the last
+option for the clean separable layer. Read
 [`FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md`](function_field/FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md).
 
-### 2.6 Exact irreducibility selectors cannot be rank-optimized away
+### 2.6 Closed-point Adams inversion bypasses the selector category
+
+For a compatible constructible class `V` on one fixed place space, let
+`A_n(V)` be its trace sum on `F_(q^n)`-points and `P_d(V)` its degree-`d`
+closed-point trace. Exact orbit counting and Adams operations give
+
+\[
+ dP_d(V)=\sum_{e\mid d}\mu(e)A_{d/e}(\psi^eV).
+\]
+
+For a separable two-place kernel, double inversion extracts degrees `(a,b)`
+with `2^(omega(a)+omega(b))` nonzero signed trace evaluations; the raw divisor
+grid has `tau(a)tau(b)` slots, but all nonsquarefree Möbius coefficients
+vanish. If `a=b` and equal ordered places are forbidden, diagonal pullback
+costs another `2^omega(a)` nonzero terms. The clean ternary package is a sum
+of 48 external character lines, and partial Adams preserves its
+raw/selected/relative deck ranks `48/32/16`.
+
+This does not contradict the exponential `S_d` theorem below. That theorem
+represents the cycle indicator as one class on coefficient space; Adams
+inversion changes to a fixed closed-point space and a signed extension-field
+tower. Nor is divisor-many trace evaluation a Betti bound. Most importantly,
+an arbitrary sheaf on `X times Y` has only diagonal Frobenius. The native
+owner/Boolean/Artin--Schreier FFPS source must still be proved external, or
+equipped with commuting partial Frobenii, before the extractor applies. Read
+[`FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md`](function_field/FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md).
+
+### 2.7 Exact irreducibility selectors cannot be rank-optimized away
 
 The universal root-incidence packet used the exact `d`-cycle selector
 
@@ -536,7 +609,7 @@ rank, selecting only the factorization information seen by the native source,
 using an approximate filter, or changing from universal roots to descended
 closed-orbit atoms.
 
-### 2.7 The derangement relaxation is no cheaper through degree ten
+### 2.8 The derangement relaxation is no cheaper through degree ten
 
 A strictly weaker optimization asks only that `Q((d))=1` and that `Q` vanish
 on conjugacy classes with a fixed point; its values on all other derangement
@@ -559,7 +632,7 @@ the simplest hook-predecessor-only dual ansatz already fails at `d=8`, even
 though an interior Young-lattice certificate exists there. Read
 [`FFPS_DERANGEMENT_SELECTOR_FINITE_L1_OPTIMIZATION.md`](function_field/FFPS_DERANGEMENT_SELECTOR_FINITE_L1_OPTIMIZATION.md).
 
-### 2.8 The natural all-degree dual is exactly a hyperbolic tangent
+### 2.9 The natural all-degree dual is exactly a hyperbolic tangent
 
 The finite dual certificates have an exact structural calibration.  If
 
@@ -609,7 +682,7 @@ where the nonlinear `tanh` tail lives.
 Read
 [`FFPS_DERANGEMENT_SELECTOR_TANH_CALIBRATION.md`](function_field/FFPS_DERANGEMENT_SELECTOR_TANH_CALIBRATION.md).
 
-### 2.9 Contractive repairs must propagate almost to the equator
+### 2.10 Contractive repairs must propagate almost to the equator
 
 Suppose an all-degree correction actually attains the conjectured optimum and
 stays in every Schur dimension box. Divisibility of its `p_1`-free residual
@@ -635,7 +708,29 @@ necessary condition: the off-chain Young-lattice constraints may permit or
 forbid the required global extension. Read
 [`FFPS_SELECTOR_YOUNG_LATTICE_PROPAGATION_OBSTRUCTION.md`](function_field/FFPS_SELECTOR_YOUNG_LATTICE_PROPAGATION_OBSTRUCTION.md).
 
-### 2.10 Firewalls that must be retained
+### 2.11 Every fixed tail carries the same exponential edge flow
+
+The two-row chain is one slice of an exact stable-edge theorem. For every
+fixed tail partition `beta|-m`, let `a_beta` be the positive integer obtained
+from the column boundary `a_(1^m)=m+1` and the recursion
+`a_beta=sum_(gamma lessdot beta)a_gamma`. Then every real or complex lift
+obeys
+
+\[
+ \operatorname{Re}x_{(d-1-m,\beta)}
+ =(-1)^{m+1}a_\beta{2^{d-1}\over d}+O_\beta(d^m).
+\]
+
+The error has an explicit exact recursion. Transposition forces the opposite
+edge simultaneously. Three-row diamonds do not immediately contradict the
+flow: `a_(j,1)=2j+1`, and their leading exponential terms cancel exactly.
+Therefore bounded edge neighborhoods are rigid but compatible. The genuine
+remaining selector problem is a **bulk Young-lattice matching gate** for
+tails growing with `d`, where central Specht dimensions also become
+exponential. Read
+[`FFPS_SELECTOR_STABLE_TAIL_TRANSPORT.md`](function_field/FFPS_SELECTOR_STABLE_TAIL_TRANSPORT.md).
+
+### 2.12 Firewalls that must be retained
 
 - Ambient density of rich cores does not transfer automatically through the
   cutoff-dependent Boolean/owner source.
@@ -958,18 +1053,20 @@ the refuted raw measure. The exact quadratic target is now
  \mathcal R\!\left(\log{m\over n}\right).
 \]
 
-Its subpower bound is exactly RH-equivalent. The useful next move is a
-prime-incidence or `beta=lambda*lambda` decomposition which preserves the
-assembled signed Gram form and interfaces with relative projectors.
+Its subpower bound is exactly RH-equivalent. The primitive decomposition now
+isolates the stronger `PRIMCAR` route into a `rho`-tilted Möbius zero mode,
+nonzero incidence spectrum, and dyadic summability. Any analytic attack must
+control those terms uniformly rather than merely re-center the fixed-height
+Boolean limit.
 
 ### Highest family/sheaf bet
 
-Start from the new universal ternary norm torsor and tensor it with the actual
-Boolean/owner/phase source before separate absolute values or exact-cycle
-rank masses are taken. Determine whether the complete virtual cone cancels
-the hook selector, or replace it by a prime-polynomial trace formula. This
-targets the source and entropy/conductor obstructions directly; another
-fixed-fibre Kummer example would not.
+Start from the divisor-cost Adams extractor and prove that the actual
+Boolean/owner/phase source descends to one fixed closed-point kernel with an
+external decomposition or commuting partial Frobenii. Then simplify the
+signed double Möbius recombination before any Betti norm. The clean physical
+package already passes; another fixed-fibre Kummer example would not address
+the remaining source and cohomological complexity.
 
 ### Highest standalone arithmetic-geometry bet
 
@@ -992,9 +1089,9 @@ more informative than a fourth small prime.
 4. Automate cohomological conjecture generation only after the exact adapter,
    representation channel, and Galois normalization are locked.
 5. Solve or disprove the selector's contractive primitive lift; its full
-   forbidden class transform and almost-half-depth propagation law are now
-   explicit, so more finite LP degrees are lower priority than a global
-   Young-lattice extension or impossibility theorem.
+   forbidden class transform, almost-half-depth two-row law, and every fixed-
+   tail edge profile are explicit. More finite LP degrees are lower priority
+   than the moving-tail bulk matching theorem.
 
 ## 6. Proof and computation contract
 

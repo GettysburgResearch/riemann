@@ -26,11 +26,19 @@
 > remaining contractive nonhook problem. Every putative contractive optimum
 > is now forced to carry nonzero predecessor potentials in alternating
 > half-planes (alternating signs for real lifts) through
-> `d/2-(1/2+o(1))sqrt(d log d)` two-row layers.  Separately, the minimal
+> `d/2-(1/2+o(1))sqrt(d log d)` two-row layers, and every fixed tail has an
+> explicit exponential leading profile with polynomial error. Thus the live
+> selector problem is moving-tail bulk matching, not another finite edge
+> patch. The actual primitive-pair `d^-1` average also has an exact incidence
+> Gram whose fixed-height limit is the biased Boolean cube; the stronger open
+> dyadic gate `PRIMCAR` implies `PRIMLS` and hence conditionally RH. Separately, the minimal
 > ternary physical mask has a universal degree-shell norm/Kummer realization
 > of rank `48`, tame Swan zero, and linear toric boundary support; the exact
-> cycle selector, rather than the physical torsor, is its first exponential
-> naive-assembly cost. The
+> cycle selector is its first exponential **coefficient-space** assembly cost,
+> while closed-point Adams--Möbius extraction bypasses that cost with only
+> `2^(omega(a)+omega(b))` nonzero signed trace terms whenever the joint kernel has commuting
+> partial Frobenius actions. The native source has not yet passed that
+> factorization gate. The
 > historical statements below should not be used as the current frontier.
 
 ## Release status

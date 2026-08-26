@@ -253,7 +253,7 @@ Write
 \tag{3.2}
 \]
 
-For fixed `j`, (0.9) gives
+For fixed `j>=2` and `d>=2j+2`, (0.9) gives
 
 \[
  \begin{aligned}
