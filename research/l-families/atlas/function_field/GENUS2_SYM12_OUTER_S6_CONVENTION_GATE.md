@@ -41,6 +41,17 @@ The alternating form `chi_5` maps to the alternating Vandermonde product
 `prod_(i<j) p_ij`; its quadratic character is already an `S_6` constituent,
 not an extra tensor factor added to every covariant.  The source's regularity
 theorem identifies the regular covariants with the image of `mu`.
+Concretely, for a regular covariant `c=mu(F)` and `h` in the natural marked
+`S_5`, equivariance and injectivity give
+
+\[
+h c=c\quad\Longrightarrow\quad
+\mu(hF-F)=0\quad\Longrightarrow\quad hF=F.
+\tag{2}
+\]
+
+This rules out a hidden sign on the particular regular kernel, not merely on
+one convenient generator.
 
 Thus the `15`-dimensional regular marked kernel from the preceding packet is
 in the **natural point-stabilizer** convention used by the official rows.
@@ -58,14 +69,14 @@ the nontrivial swaps
 [3,1^3]&\longleftrightarrow[3^2],\\
 [6]&\longleftrightarrow[3,2,1],
 \end{aligned}
-\tag{2}
+\tag{3}
 \]
 
 and fixes `[4,1^2]`, `[4,2]`, `[2^2,1^2]`, `[5,1]`, and the
 identity class.  In particular it preserves parity, as it must because
 `A_6` is characteristic.
 
-Murnaghan--Nakayama applied to (2) gives the irreducible pullback map
+Murnaghan--Nakayama applied to (3) gives the irreducible pullback map
 
 \[
 \begin{array}{c|c}
@@ -82,7 +93,7 @@ Murnaghan--Nakayama applied to (2) gives the irreducible pullback map
 [2,1^4]&[3^2]\\
 [1^6]&[1^6].
 \end{array}
-\tag{3}
+\tag{4}
 \]
 
 This also sharpens a common shorthand.  Pure outer pullback does **not**
@@ -99,10 +110,10 @@ Let `H_nat` be the point stabilizer and
 \dim s[\lambda]^{H_{\rm nat}}=1
 \quad\Longleftrightarrow\quad
 \lambda=[6]\text{ or }[5,1].
-\tag{4}
+\tag{5}
 \]
 
-Transporting (4) through (3), and optionally tensoring with sign, gives four
+Transporting (5) through (4), and optionally tensoring with sign, gives four
 exact fingerprints:
 
 | subgroup/character convention | selected `S_6` irreducibles |
@@ -178,7 +189,7 @@ pytest -q tests/test_genus2_sym12_outer_s6_convention_gate.py
 ```
 
 The replay constructs the full `S_6` character table by
-Murnaghan--Nakayama, checks its orthogonality, pulls it through (2), and
+Murnaghan--Nakayama, checks its orthogonality, pulls it through (3), and
 performs the four exact subgroup averages.  Its largest group has order
 `720`; it performs zero point counts.
 
