@@ -3,6 +3,7 @@
 Claim ID: `L-104633`  
 Status: **PROVED EXACT FINITE-MATRIX SUFFICIENT REDUCTION**  
 Created: 2026-08-27  
+Corrected: 2026-08-27  
 Depends on: `L-104632`; carrier-free zeta-derivative packet `L-106612` at
 PR #731 head `433490c133b26bce4163f4edf7ad04aeda9d33e3`  
 RH status: **not assumed**
@@ -111,9 +112,10 @@ are finite differential polynomials in
 \zeta,\zeta',\ldots,\zeta^{(6)}.
 \]
 
-In the source Fourier coordinate these are precisely the first seven
-logarithmic-frequency Krylov grades. Thus (L-104633.1) retains every grade
-present in the physical endpoint packet. It is a sufficient transport family;
+In the source Fourier coordinate these use only the first seven logarithmic
+frequency grades. The exact frozen-carrier Bézout identity `L-104637` confirms
+that degree six is sufficient at the source-module level. Thus
+(L-104633.1) is the smallest natural full-grade Krylov family for this packet;
 no claim is made that it is always optimal.
 
 ## 3. Finite-matrix 90-percent gate
@@ -144,6 +146,14 @@ Then
 \tag{L-104633.8}
 \]
 
-The matrices in (L-104633.3) are ordinary weighted mean values of finite
-zeta-derivative packets. Their asymptotic estimate is open; the reduction is
-exact.
+## 4. Interpretation firewall
+
+The entries in (L-104633.3) are finite model-space/source Grams. They include
+the numerator and denominator inner-factor geometry through `P_(K_A)` and
+`P_(K_B)`. They are **not** automatically ordinary boundary mean values of
+`zeta,...,zeta^(6)` merely because the source grades stop at six.
+
+`L-104637` closes the frozen source-module algebra, but promotion to the
+model-space matrices requires a separate source-to-inner-factor theorem or a
+direct estimate of the literal Grams in (L-104633.3). That estimate is the
+open content of `FRACKRYLOV104633`.
