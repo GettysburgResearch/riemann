@@ -1,3 +1,3 @@
-import Solution.RH
+import RiemannComparatorSolution.RH
 
 #print axioms rh_statement_exact

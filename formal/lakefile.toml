@@ -20,13 +20,19 @@ rev = "cec57f919ccf34e5fa5372b4ba332f7c848bbb6e"
 name = "RiemannFormal"
 
 [[lean_lib]]
-name = "ChallengeDeps"
-srcDir = "comparator"
+name = "RiemannComparatorChallengeDeps"
+srcDir = "comparator/ChallengeDeps"
+roots = ["RiemannComparatorChallengeDeps"]
+globs = ["RiemannComparatorChallengeDeps.+"]
 
 [[lean_lib]]
-name = "Challenge"
-srcDir = "comparator"
+name = "RiemannComparatorChallenge"
+srcDir = "comparator/Challenge"
+roots = ["RiemannComparatorChallenge"]
+globs = ["RiemannComparatorChallenge.+"]
 
 [[lean_lib]]
-name = "Solution"
-srcDir = "comparator"
+name = "RiemannComparatorSolution"
+srcDir = "comparator/Solution"
+roots = ["RiemannComparatorSolution"]
+globs = ["RiemannComparatorSolution.+"]

@@ -26,10 +26,9 @@ python3 formal/scripts/verify_source_locks.py
 python3 formal/scripts/validate_blueprint.py
 
 cd formal
-lake update
 lake exe cache get
 lake build
-lake build Solution.RH
+bash scripts/build_local_comparators.sh
 cd ..
 
 bash formal/scripts/check_no_sorry.sh
