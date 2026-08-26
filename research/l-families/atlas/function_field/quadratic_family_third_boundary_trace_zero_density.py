@@ -482,7 +482,7 @@ def run() -> dict[str, object]:
             ),
             "delta_5_q": "Prob(D_5=0)",
             "delta_53_q": "Prob(D_5+D_3=0)",
-            "both_probabilities_positive_for_every_odd_q": True,
+            "both_probabilities_positive_for_every_odd_prime_power_q": True,
             "q3": {
                 "delta_5": str(delta5_q3),
                 "delta_53": str(delta53_q3),

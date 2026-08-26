@@ -52,10 +52,10 @@ After division by the exact squarefree count `q^M-q^(M-1)` and use of
 \tag{0.3}
 \]
 
-Both probabilities in (0.1) are strictly positive for every odd `q`.  Thus
-the third boundary has a genuine `M^-2` population.  It has no `M^-1`
-population.  The first mixed channel appears at `M^-3`, while the native
-`D_5+2D_1` channel is only `M^-4`.
+Both probabilities in (0.1) are strictly positive for every odd prime power
+`q`.  Thus the third boundary has a genuine `M^-2` population.  It has no
+`M^-1` population.  The first mixed channel appears at `M^-3`, while the
+native `D_5+2D_1` channel is only `M^-4`.
 
 ## 1. Frozen inputs and claim boundary
 
@@ -102,8 +102,8 @@ and (2.1) becomes the exact three-channel identity
 \]
 
 Every monic polynomial of degree at most five is coprime to `Q`.  If
-`p_r=sum_(deg F=r) psi_Q(F)`, then `p_1,p_3,p_5` are sums of an odd number
-of signs and hence are odd.  Since
+\(p_r=\sum_{\deg F=r}\psi_Q(F)\), then `p_1,p_3,p_5` are sums of an odd
+number of signs and hence are odd.  Since
 
 \[
  D_1=p_1,\qquad D_3=p_3-qp_1,\qquad D_5=p_5-qp_3,
@@ -273,7 +273,15 @@ sums.
 
 ## 6. Positivity of both local constants
 
-For odd `q`, the counts `N_3,N_4,N_5` are even.  Set
+For odd `q`, the exact counts
+
+\[
+ N_3={q^3-q\over3},\qquad
+ N_4={q^4-q^2\over4},\qquad
+ N_5={q^5-q\over5}
+\]
+
+are even.  Set
 
 \[
  e\equiv N_2\pmod2,\qquad
@@ -320,8 +328,9 @@ The distinctness correction for repeated degrees is exponentially smaller
 as well.  There are only `O(h)` profiles, so all residue-class and
 prime-count errors together are `O_q(q^M h^-4)`.
 
-Consequently `delta_(5,q)` applies to both `D_5=0` profiles at the required
-orders, and `delta_(53,q)` applies to the single third-order mixed profile.
+Consequently `delta_(5,q)` applies to the generic and repeated-minimum
+`D_5=0` contributions at the required orders, and `delta_(53,q)` applies to
+the single third-order mixed profile.
 
 ## 8. Proof ledger and bounded replay
 
