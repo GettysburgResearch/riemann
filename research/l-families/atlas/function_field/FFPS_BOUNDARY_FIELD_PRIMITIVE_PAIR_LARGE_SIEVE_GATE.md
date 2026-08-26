@@ -1,6 +1,7 @@
 # The high primitive beta sector is a five-channel Möbius large-sieve problem
 
-Status: **exact dyadic-shell and common-factor decomposition; conditional
+Status: **exact dyadic-shell/common-factor decomposition, exact
+Möbius--Gram and harmonic Boolean-sieve normal forms; conditional
 square-root-scale large-sieve criterion sufficient for RH; the large-sieve
 estimate and RH are not proved**
 
@@ -144,6 +145,16 @@ uniform sufficient hypothesis, not as an equivalent reformulation of RH.
 Its value is that it is an averaged, sifted two-point Möbius theorem at the
 natural square-root scale, rather than another name for the complete beta
 correlation.
+
+Two further exact normal forms sharpen what that theorem would have to do.
+First, every primitive shell is the difference of two rectangles, and
+Möbius inversion of primitive coprimality writes each rectangle as a signed
+sum of one-dimensional Gram inner products. Second, on every finite
+squarefree divisor cube, harmonic averaging in the sieve variable has an
+exact biased-Boolean Parseval formula. Its zero frequency is the harmonic
+mean of the panel and survives orthogonality. Thus averaging over the common
+factor is a useful organization, but it is not by itself a cancellation
+mechanism.
 
 ## 1. Exact common-factor swap
 
@@ -331,7 +342,195 @@ geometries. Ordinary pointwise control of a single shift, or an unsigned
 divisor bound, does not supply the two-dimensional square-root cancellation
 in (0.8).
 
-## 5. Proof and scope ledger
+## 5. Exact Möbius--Gram normal form
+
+The two-dimensional primitive condition can be removed exactly. For real
+\(T\ge0\), define the closed rectangle
+
+\[
+ \mathcal G_{\alpha,\gamma}(d;T)
+ =\sum_{\substack{
+   a,b\ {\rm squarefree},\ 67\nmid ab,\ (ab,d)=1,\ (a,b)=1\\
+   67^\alpha a\le T,\ 67^\gamma b\le T}}
+ {\mu(a)\mu(b)\over\sqrt{ab}}
+ \mathcal R\!\left(\log{67^\alpha a\over67^\gamma b}\right).
+\tag{5.1}
+\]
+
+The shell is simply
+
+\[
+ \boxed{
+ \mathcal P_{\alpha,\gamma}(d;H,U)
+ =\mathcal G_{\alpha,\gamma}(d;U)
+  -\mathcal G_{\alpha,\gamma}(d;H).}
+\tag{5.2}
+\]
+
+Let \(K_{\rm bd}\) be the compact boundary kernel whose autocorrelation is
+\(\mathcal R\). For squarefree \(k\) coprime to \(67d\), put
+
+\[
+ V^{(\alpha)}_{k,d,T}(t)
+ =\sum_{\substack{
+  n\le T/(67^\alpha k)\\
+  n\ {\rm squarefree},\ (n,67kd)=1}}
+ {\mu(n)\over\sqrt n}
+ K_{\rm bd}\!\left(t-\log(67^\alpha n)\right).
+\tag{5.3}
+\]
+
+Then finite Möbius inversion gives
+
+\[
+\boxed{
+ \mathcal G_{\alpha,\gamma}(d;T)
+ =\sum_{\substack{
+   k\le T/67^{\max(\alpha,\gamma)}\\
+   k\ {\rm squarefree},\ (k,67d)=1}}
+ {\mu(k)\over k}
+ \left\langle
+ V^{(\alpha)}_{k,d,T},V^{(\gamma)}_{k,d,T}
+ \right\rangle_{L^2(\mathbf R)}.}
+\tag{5.4}
+\]
+
+Indeed, insert
+
+\[
+ 1_{(a,b)=1}=\sum_{k\mid(a,b)}\mu(k),
+\tag{5.5}
+\]
+
+write \(a=kx,b=ky\), and use squarefreeness. The source signs become
+\(\mu(x)\mu(y)\), the normalization contributes \(1/k\), and the common
+factor cancels from the logarithmic ratio. Expanding the inner product in
+(5.4) now recovers the rectangle term by term.
+
+For the central channel, (5.4) is the signed energy identity
+
+\[
+ \mathcal G_{0,0}(d;T)
+ =\sum_k{\mu(k)\over k}\|V^{(0)}_{k,d,T}\|_2^2.
+\tag{5.6}
+\]
+
+This is a useful reduction to one-dimensional prefix fields, but not a
+positivity proof: the outer coefficients in (5.6) have Möbius sign, the
+exceptional channels are cross inner products, and (5.2) subtracts two
+prefix rectangles. Taking absolute values at any of those three interfaces
+would discard the cancellation sought by PRIMLS.
+
+## 6. Exact harmonic Boolean-sieve transform
+
+Fix one panel, \(H,U\), and a squarefree \(67\)-free modulus \(Q\). Split
+the unsieved panel by its exact incidence with \(Q\):
+
+\[
+ W_e
+ =\sum_{\substack{
+   a,b\ {\rm squarefree},\ 67\nmid ab,\ (a,b)=1\\
+   H<h_{\alpha,\gamma}(a,b)\le U,\ (ab,Q)=e}}
+ {\mu(a)\mu(b)\over\sqrt{ab}}
+ \mathcal R\!\left(\log{67^\alpha a\over67^\gamma b}\right),
+ \qquad e\mid Q.
+\tag{6.1}
+\]
+
+For every \(d\mid Q\), the sieve is the exact disjointness transform
+
+\[
+ \boxed{
+ \mathcal P_{\alpha,\gamma}(d;H,U)
+ =\sum_{\substack{e\mid Q\\(d,e)=1}}W_e.}
+\tag{6.2}
+\]
+
+It is invertible, with
+
+\[
+ \boxed{
+ W_e=\sum_{c\mid e}(-1)^{\omega(c)}
+ \mathcal P_{\alpha,\gamma}
+ \!\left({Q\over e}c;H,U\right).}
+\tag{6.3}
+\]
+
+There is also an exact orthogonal form adapted to the \(d^{-1}\) weight in
+PRIMLS. Put
+
+\[
+ Z_Q=\sum_{d\mid Q}{1\over d}
+ =\prod_{p\mid Q}\left(1+{1\over p}\right),
+ \qquad
+ \nu_Q(d)={1\over Z_Qd}.
+\tag{6.4}
+\]
+
+Under \(\nu_Q\), the indicators \(X_p(d)=1_{p\mid d}\) are independent
+Bernoulli variables with mean \(1/(p+1)\). For \(S\mid Q\), define
+
+\[
+ \phi_S(d)=\prod_{p\mid S}\left(X_p(d)-{1\over p+1}\right),
+ \qquad
+ N_S=\|\phi_S\|_{L^2(\nu_Q)}^2
+ =\prod_{p\mid S}{p\over(p+1)^2},
+\tag{6.5}
+\]
+
+and \(b_S=\mathbb E_{\nu_Q}[\mathcal P(d)\phi_S(d)]\). Direct product
+expectation in (6.2) gives
+
+\[
+ \boxed{
+ b_S=(-1)^{\omega(S)}
+ \prod_{p\mid S}{p\over(p+1)^2}
+ \sum_{\substack{e\mid Q\\S\mid e}}
+ W_e\prod_{p\mid e/S}{p\over p+1}.}
+\tag{6.6}
+\]
+
+Biased-Boolean Parseval is therefore
+
+\[
+\boxed{
+ {1\over Z_Q}\sum_{d\mid Q}{|\mathcal P(d)|^2\over d}
+ =\sum_{S\mid Q}{|b_S|^2\over N_S}.}
+\tag{6.7}
+\]
+
+In particular,
+
+\[
+ b_1=\mathbb E_{\nu_Q}[\mathcal P(d)]
+ =\sum_{e\mid Q}W_e\prod_{p\mid e}{p\over p+1},
+ \qquad
+ {1\over Z_Q}\sum_{d\mid Q}{|\mathcal P(d)|^2\over d}
+ \ge |b_1|^2.
+\tag{6.8}
+\]
+
+This is the exact zero-frequency obstruction. If only the \(Q\)-free
+stratum \(W_1\) is present, every sieve row equals \(W_1\), and (6.8) is an
+equality. More concretely, if \(p>U\) and \(p\nmid67d\), then
+
+\[
+ \mathcal P_{\alpha,\gamma}(pd;H,U)
+ =\mathcal P_{\alpha,\gamma}(d;H,U),
+\tag{6.9}
+\]
+
+because neither primitive coordinate can contain \(p\). Such large-prime
+sieve coordinates are exact repetitions, not new orthogonal samples.
+
+Equations (6.2)--(6.9) neither prove nor disprove PRIMLS. They prove a
+narrower firewall: no abstract orthogonality in the common-factor label can
+erase the harmonic mean. A successful estimate must also control that mean
+through the Möbius pair signs, and then control the nonzero Boolean modes.
+The full truncated average \(d\le D\) is not replaced here by a divisor
+cube.
+
+## 7. Proof and scope ledger
 
 | statement | grade |
 |---|---|
@@ -339,6 +538,9 @@ in (0.8).
 | dyadic reconstruction (0.5) | **PROVED EXACT** |
 | five-to-three reciprocity reduction (0.6) | **PROVED EXACT** |
 | square-root normalization (3.1) | **PROVED UNCONDITIONALLY** |
+| rectangle increment and Möbius--Gram identity (5.2)--(5.6) | **PROVED EXACT** |
+| divisor-sieve transform/inversion (6.2)--(6.3) | **PROVED EXACT** |
+| harmonic Boolean Parseval and zero-frequency fence (6.4)--(6.9) | **PROVED EXACT** |
 | PRIMLS implies RH | **PROVED AS A CONDITIONAL IMPLICATION** |
 | PRIMLS estimate (0.8) | **OPEN / NOT PROVED** |
 | RH implies PRIMLS | **NOT CLAIMED** |
@@ -348,7 +550,7 @@ The packet makes no external novelty claim. It isolates a theorem-shaped
 analytic gate for future comparison with averaged Chowla estimates,
 dispersion methods, bilinear forms, or family large sieves.
 
-## 6. Bounded replay
+## 8. Bounded replay
 
 ~~~text
 python -B research/l-families/atlas/function_field/ffps_boundary_field_primitive_pair_large_sieve_gate.py --check
@@ -361,5 +563,8 @@ The replay pins every imported source blob; checks the beta local states and
 all five exceptional channels; compares the direct finite off-diagonal
 shells with the exchanged \(d\)-panel formula in an exact formal square-root
 basis; verifies channel reciprocity and dyadic reconstruction; and enforces
-the conditional scope and resource caps. It enumerates no zeta zero, finite
+the conditional scope and resource caps. It also checks the rectangle
+increment and Möbius lift, the disjointness transform and its inverse, the
+harmonic Boolean Parseval identity on the divisor cube of \(30\), and one
+frozen large-prime sieve coordinate. It enumerates no zeta zero, finite
 field, curve, conductor family, or \(L\)-function.

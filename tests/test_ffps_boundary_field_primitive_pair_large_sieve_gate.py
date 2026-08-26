@@ -59,6 +59,45 @@ class BoundaryFieldPrimitivePairLargeSieveGateTest(unittest.TestCase):
                     subject.panel_form(gamma, alpha, sieve, height, upper),
                 )
 
+    def test_mobius_gram_rectangle_normal_form(self) -> None:
+        for alpha, gamma, sieve, height, upper in subject.GRAM_ROWS:
+            with self.subTest(alpha=alpha, gamma=gamma):
+                primitive_upper = subject.primitive_rectangle(
+                    alpha, gamma, sieve, upper
+                )
+                primitive_lower = subject.primitive_rectangle(
+                    alpha, gamma, sieve, height
+                )
+                self.assertEqual(
+                    primitive_upper,
+                    subject.mobius_lifted_rectangle(alpha, gamma, sieve, upper),
+                )
+                self.assertEqual(
+                    primitive_lower,
+                    subject.mobius_lifted_rectangle(alpha, gamma, sieve, height),
+                )
+                self.assertEqual(
+                    subject.subtract_forms(primitive_upper, primitive_lower),
+                    subject.panel_form(alpha, gamma, sieve, height, upper),
+                )
+
+    def test_harmonic_boolean_parseval_and_inversion(self) -> None:
+        alpha, gamma, modulus, height, upper = subject.BOOLEAN_ROW
+        certificate = subject.boolean_parseval_certificate(
+            alpha, gamma, modulus, height, upper
+        )
+        self.assertTrue(certificate["parseval_match"])
+        self.assertTrue(certificate["inversion_match"])
+        self.assertEqual(len(certificate["incidence_digests"]), 8)
+        self.assertEqual(len(certificate["sieve_digests"]), 8)
+
+    def test_large_sieve_prime_is_a_frozen_coordinate(self) -> None:
+        alpha, gamma, _, height, upper = subject.BOOLEAN_ROW
+        self.assertEqual(
+            subject.panel_form(alpha, gamma, 19, height, upper),
+            subject.panel_form(alpha, gamma, 1, height, upper),
+        )
+
     def test_toy_correlation_and_radical_arithmetic(self) -> None:
         self.assertEqual(subject.toy_correlation(3, 5), Fraction(3, 5))
         self.assertEqual(subject.toy_correlation(5, 3), Fraction(3, 5))
@@ -67,6 +106,8 @@ class BoundaryFieldPrimitivePairLargeSieveGateTest(unittest.TestCase):
         form: subject.RadicalForm = {}
         subject.add_radical_term(form, 12, Fraction(3))
         self.assertEqual(form, {3: Fraction(3, 2)})
+        self.assertEqual(subject.multiply_forms(form, form), {1: Fraction(3, 4)})
+        self.assertEqual(subject.divisors(30), (1, 2, 3, 5, 6, 10, 15, 30))
 
     def test_conditional_scope_and_guards(self) -> None:
         result = subject.run(check_sources=False)
@@ -84,6 +125,10 @@ class BoundaryFieldPrimitivePairLargeSieveGateTest(unittest.TestCase):
             subject.direct_shell(1, 1)
         with self.assertRaises(ValueError):
             subject.panel_form(1, 1, 1, 1, 2)
+        with self.assertRaises(ValueError):
+            subject.primitive_rectangle(0, 0, 4, 8)
+        with self.assertRaises(ValueError):
+            subject.incidence_strata(0, 0, 4, 1, 2)
 
 
 if __name__ == "__main__":

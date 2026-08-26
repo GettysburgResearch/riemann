@@ -40,6 +40,11 @@ RECIPROCITY_ROWS = (
     (1, 0, 1, 64, 128),
     (2, 0, 1, 4_096, 8_192),
 )
+GRAM_ROWS = (
+    (0, 0, 1, 8, 16),
+    (1, 0, 1, 64, 96),
+)
+BOOLEAN_ROW = (0, 0, 30, 8, 16)
 
 
 def check_source_blobs() -> None:
@@ -139,6 +144,54 @@ def add_forms(left: RadicalForm, right: RadicalForm) -> RadicalForm:
         if result[radicand] == 0:
             del result[radicand]
     return result
+
+
+def scale_form(form: RadicalForm, scalar: Fraction) -> RadicalForm:
+    return {
+        radicand: scalar * coefficient
+        for radicand, coefficient in form.items()
+        if scalar * coefficient
+    }
+
+
+def subtract_forms(left: RadicalForm, right: RadicalForm) -> RadicalForm:
+    return add_forms(left, scale_form(right, Fraction(-1)))
+
+
+def multiply_forms(left: RadicalForm, right: RadicalForm) -> RadicalForm:
+    result: RadicalForm = {}
+    for left_radicand, left_coefficient in left.items():
+        for right_radicand, right_coefficient in right.items():
+            add_radical_term(
+                result,
+                left_radicand * right_radicand,
+                left_coefficient * right_coefficient,
+            )
+    return result
+
+
+def prime_factors(value: int) -> tuple[int, ...]:
+    if isinstance(value, bool) or not isinstance(value, int) or value < 1:
+        raise ValueError("value must be a positive integer")
+    factors = []
+    remaining = value
+    prime = 2
+    while prime * prime <= remaining:
+        if remaining % prime == 0:
+            factors.append(prime)
+            while remaining % prime == 0:
+                remaining //= prime
+        prime += 1
+    if remaining > 1:
+        factors.append(remaining)
+    return tuple(factors)
+
+
+def divisors(value: int) -> tuple[int, ...]:
+    result = [1]
+    for prime in prime_factors(value):
+        result += [prime * divisor for divisor in result]
+    return tuple(sorted(result))
 
 
 def direct_shell(prefix: int, height: int) -> RadicalForm:
@@ -317,6 +370,233 @@ def panel_form(
     return form
 
 
+def primitive_rectangle(alpha: int, gamma: int, sieve: int, upper: int) -> RadicalForm:
+    if (
+        (alpha, gamma) not in CHANNELS
+        or isinstance(sieve, bool)
+        or not isinstance(sieve, int)
+        or sieve < 1
+        or mobius(sieve) == 0
+        or sieve % EXCEPTIONAL_PRIME == 0
+        or isinstance(upper, bool)
+        or not isinstance(upper, int)
+        or upper < 0
+    ):
+        raise ValueError("invalid primitive-rectangle input")
+    left_scale = EXCEPTIONAL_PRIME**alpha
+    right_scale = EXCEPTIONAL_PRIME**gamma
+    form: RadicalForm = {}
+    for left in range(1, upper // left_scale + 1):
+        left_mu = mobius(left)
+        if left_mu == 0 or math.gcd(left, EXCEPTIONAL_PRIME * sieve) != 1:
+            continue
+        physical_left = left_scale * left
+        for right in range(1, upper // right_scale + 1):
+            right_mu = mobius(right)
+            if (
+                right_mu == 0
+                or math.gcd(right, EXCEPTIONAL_PRIME * sieve) != 1
+                or math.gcd(left, right) != 1
+            ):
+                continue
+            physical_right = right_scale * right
+            correlation = toy_correlation(physical_left, physical_right)
+            if correlation == 0:
+                continue
+            add_radical_term(
+                form,
+                left * right,
+                Fraction(left_mu * right_mu) * correlation,
+            )
+    return form
+
+
+def mobius_lifted_rectangle(
+    alpha: int, gamma: int, sieve: int, upper: int
+) -> RadicalForm:
+    if (
+        (alpha, gamma) not in CHANNELS
+        or isinstance(sieve, bool)
+        or not isinstance(sieve, int)
+        or sieve < 1
+        or mobius(sieve) == 0
+        or sieve % EXCEPTIONAL_PRIME == 0
+        or isinstance(upper, bool)
+        or not isinstance(upper, int)
+        or upper < 0
+    ):
+        raise ValueError("invalid lifted-rectangle input")
+    left_scale = EXCEPTIONAL_PRIME**alpha
+    right_scale = EXCEPTIONAL_PRIME**gamma
+    common_limit = upper // max(left_scale, right_scale)
+    form: RadicalForm = {}
+    for common in range(1, common_limit + 1):
+        common_mu = mobius(common)
+        if common_mu == 0 or math.gcd(common, EXCEPTIONAL_PRIME * sieve) != 1:
+            continue
+        local_sieve = EXCEPTIONAL_PRIME * sieve * common
+        for left in range(1, upper // (left_scale * common) + 1):
+            left_mu = mobius(left)
+            if left_mu == 0 or math.gcd(left, local_sieve) != 1:
+                continue
+            physical_left = left_scale * left
+            for right in range(1, upper // (right_scale * common) + 1):
+                right_mu = mobius(right)
+                if right_mu == 0 or math.gcd(right, local_sieve) != 1:
+                    continue
+                physical_right = right_scale * right
+                correlation = toy_correlation(physical_left, physical_right)
+                if correlation == 0:
+                    continue
+                add_radical_term(
+                    form,
+                    left * right,
+                    Fraction(common_mu * left_mu * right_mu, common) * correlation,
+                )
+    return form
+
+
+def incidence_strata(
+    alpha: int, gamma: int, modulus: int, height: int, upper: int
+) -> dict[int, RadicalForm]:
+    if (
+        (alpha, gamma) not in CHANNELS
+        or isinstance(modulus, bool)
+        or not isinstance(modulus, int)
+        or modulus < 1
+        or mobius(modulus) == 0
+        or modulus % EXCEPTIONAL_PRIME == 0
+        or isinstance(height, bool)
+        or not isinstance(height, int)
+        or height < 1
+        or isinstance(upper, bool)
+        or not isinstance(upper, int)
+        or not height <= upper <= 2 * height
+    ):
+        raise ValueError("invalid incidence-strata input")
+    strata = {divisor: {} for divisor in divisors(modulus)}
+    left_scale = EXCEPTIONAL_PRIME**alpha
+    right_scale = EXCEPTIONAL_PRIME**gamma
+    for left in range(1, upper // left_scale + 1):
+        left_mu = mobius(left)
+        if left_mu == 0 or left % EXCEPTIONAL_PRIME == 0:
+            continue
+        physical_left = left_scale * left
+        for right in range(1, upper // right_scale + 1):
+            right_mu = mobius(right)
+            if (
+                right_mu == 0
+                or right % EXCEPTIONAL_PRIME == 0
+                or math.gcd(left, right) != 1
+            ):
+                continue
+            physical_right = right_scale * right
+            primitive_height = max(physical_left, physical_right)
+            if not height < primitive_height <= upper:
+                continue
+            correlation = toy_correlation(physical_left, physical_right)
+            if correlation == 0:
+                continue
+            incidence = math.gcd(left * right, modulus)
+            add_radical_term(
+                strata[incidence],
+                left * right,
+                Fraction(left_mu * right_mu) * correlation,
+            )
+    return strata
+
+
+def sieve_from_strata(strata: dict[int, RadicalForm], sieve: int) -> RadicalForm:
+    if isinstance(sieve, bool) or not isinstance(sieve, int) or sieve < 1:
+        raise ValueError("sieve must be a positive integer")
+    result: RadicalForm = {}
+    for incidence, form in strata.items():
+        if math.gcd(incidence, sieve) == 1:
+            result = add_forms(result, form)
+    return result
+
+
+def boolean_parseval_certificate(
+    alpha: int, gamma: int, modulus: int, height: int, upper: int
+) -> dict[str, object]:
+    strata = incidence_strata(alpha, gamma, modulus, height, upper)
+    modulus_divisors = divisors(modulus)
+    panel_rows = {sieve: sieve_from_strata(strata, sieve) for sieve in modulus_divisors}
+    for sieve, form in panel_rows.items():
+        if form != panel_form(alpha, gamma, sieve, height, upper):
+            raise ArithmeticError("incidence disjointness transform failed")
+
+    inversion_rows: dict[int, RadicalForm] = {}
+    for incidence in modulus_divisors:
+        recovered: RadicalForm = {}
+        for inner in divisors(incidence):
+            recovered = add_forms(
+                recovered,
+                scale_form(
+                    panel_rows[(modulus // incidence) * inner],
+                    Fraction((-1) ** len(prime_factors(inner))),
+                ),
+            )
+        if recovered != strata[incidence]:
+            raise ArithmeticError("incidence transform inversion failed")
+        inversion_rows[incidence] = recovered
+
+    normalizer = sum((Fraction(1, sieve) for sieve in modulus_divisors), Fraction(0))
+    left_energy: RadicalForm = {}
+    for sieve, form in panel_rows.items():
+        left_energy = add_forms(
+            left_energy,
+            scale_form(multiply_forms(form, form), Fraction(1, sieve) / normalizer),
+        )
+
+    right_energy: RadicalForm = {}
+    zero_frequency: RadicalForm = {}
+    for frequency in modulus_divisors:
+        frequency_primes = prime_factors(frequency)
+        frequency_weight = Fraction((-1) ** len(frequency_primes))
+        frequency_norm = Fraction(1)
+        for prime in frequency_primes:
+            frequency_weight *= Fraction(prime, (prime + 1) ** 2)
+            frequency_norm *= Fraction(prime, (prime + 1) ** 2)
+        coefficient: RadicalForm = {}
+        for incidence, form in strata.items():
+            if incidence % frequency:
+                continue
+            tail_weight = Fraction(1)
+            for prime in prime_factors(incidence // frequency):
+                tail_weight *= Fraction(prime, prime + 1)
+            coefficient = add_forms(
+                coefficient, scale_form(form, frequency_weight * tail_weight)
+            )
+        if frequency == 1:
+            zero_frequency = coefficient
+        right_energy = add_forms(
+            right_energy,
+            scale_form(
+                multiply_forms(coefficient, coefficient), Fraction(1, frequency_norm)
+            ),
+        )
+    if left_energy != right_energy:
+        raise ArithmeticError("harmonic Boolean Parseval identity failed")
+
+    return {
+        "energy_digest": radical_digest(left_energy),
+        "incidence_digests": {
+            str(incidence): radical_digest(strata[incidence])
+            for incidence in modulus_divisors
+        },
+        "inversion_match": all(
+            inversion_rows[incidence] == strata[incidence]
+            for incidence in modulus_divisors
+        ),
+        "parseval_match": True,
+        "sieve_digests": {
+            str(sieve): radical_digest(panel_rows[sieve]) for sieve in modulus_divisors
+        },
+        "zero_frequency_digest": radical_digest(zero_frequency),
+    }
+
+
 def radical_digest(form: RadicalForm) -> str:
     payload = "|".join(
         f"{radicand}:{coefficient.numerator}/{coefficient.denominator}"
@@ -370,6 +650,54 @@ def run(check_sources: bool = True) -> dict[str, object]:
             }
         )
 
+    gram_rows = []
+    for alpha, gamma, sieve, height, upper in GRAM_ROWS:
+        primitive_upper = primitive_rectangle(alpha, gamma, sieve, upper)
+        lifted_upper = mobius_lifted_rectangle(alpha, gamma, sieve, upper)
+        primitive_lower = primitive_rectangle(alpha, gamma, sieve, height)
+        lifted_lower = mobius_lifted_rectangle(alpha, gamma, sieve, height)
+        shell = subtract_forms(primitive_upper, primitive_lower)
+        if primitive_upper != lifted_upper or primitive_lower != lifted_lower:
+            raise ArithmeticError("Möbius-lifted rectangle identity failed")
+        if shell != panel_form(alpha, gamma, sieve, height, upper):
+            raise ArithmeticError("rectangle-increment identity failed")
+        gram_rows.append(
+            {
+                "channel": [alpha, gamma],
+                "height": height,
+                "lifted_match": True,
+                "shell_digest": radical_digest(shell),
+                "sieve": sieve,
+                "upper": upper,
+            }
+        )
+
+    boolean_alpha, boolean_gamma, modulus, boolean_height, boolean_upper = BOOLEAN_ROW
+    boolean_certificate = boolean_parseval_certificate(
+        boolean_alpha,
+        boolean_gamma,
+        modulus,
+        boolean_height,
+        boolean_upper,
+    )
+    frozen_prime = 19
+    if frozen_prime <= boolean_upper:
+        raise ArithmeticError("frozen-prime replay row is not beyond the panel")
+    if panel_form(
+        boolean_alpha,
+        boolean_gamma,
+        frozen_prime,
+        boolean_height,
+        boolean_upper,
+    ) != panel_form(
+        boolean_alpha,
+        boolean_gamma,
+        1,
+        boolean_height,
+        boolean_upper,
+    ):
+        raise ArithmeticError("large-prime sieve coordinate was not frozen")
+
     return {
         "conditional_gate": {
             "name": "PRIMLS",
@@ -396,6 +724,31 @@ def run(check_sources: bool = True) -> dict[str, object]:
             "reciprocity": "P_10=P_01 and P_20=P_02",
             "reciprocity_rows": reciprocity_rows,
         },
+        "exact_normal_forms": {
+            "boolean_sieve": {
+                "channel": [boolean_alpha, boolean_gamma],
+                "frozen_prime": frozen_prime,
+                "height": boolean_height,
+                "harmonic_parseval": (
+                    "Z_Q^-1 sum_(d|Q) d^-1 |P(d)|^2 =sum_(S|Q)|b_S|^2/N_S"
+                ),
+                "modulus": modulus,
+                "replay": boolean_certificate,
+                "upper": boolean_upper,
+                "zero_frequency_obstruction": (
+                    "the harmonic mean b_1 survives Parseval; sieve averaging "
+                    "alone cannot force cancellation"
+                ),
+            },
+            "mobius_gram": {
+                "identity": (
+                    "P_(alpha,gamma)(d;H,U)=G_(alpha,gamma)(d;U)"
+                    "-G_(alpha,gamma)(d;H), with G a signed k^-1 "
+                    "Mobius sum of one-dimensional Gram inner products"
+                ),
+                "rows": gram_rows,
+            },
+        },
         "finite_exact_replay": {
             "complete_basis_terms": len(complete),
             "complete_digest": radical_digest(complete),
@@ -415,6 +768,7 @@ def run(check_sources: bool = True) -> dict[str, object]:
             ),
         },
         "resource_caps": {
+            "boolean_modulus": modulus,
             "direct_pair_cells": TOY_PREFIX**2,
             "largest_reciprocity_upper": max(row[4] for row in RECIPROCITY_ROWS),
             "zeta_zeros": 0,
