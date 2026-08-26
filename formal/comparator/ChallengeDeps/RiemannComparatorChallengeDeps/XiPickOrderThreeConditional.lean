@@ -3,6 +3,9 @@ import Mathlib
 namespace ChallengeDeps.XiPickOrderThreeConditional
 
 open Complex Set Filter
+open scoped BigOperators
+
+noncomputable section
 
 /-- Exact endpoint in Platt--Trudgian Theorem 1. -/
 def verifiedHeightNat : ℕ := 3000175332800
@@ -202,7 +205,7 @@ def LocallyUniformlyConvergesOn
   ∀ K : Set ℝ, IsCompact K → K ⊆ domain →
     ∀ epsilon : ℝ, 0 < epsilon →
       ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ t ∈ K,
-        |(∑ k in Finset.range n, terms k t) - limit t| < epsilon
+        |(∑ k ∈ Finset.range n, terms k t) - limit t| < epsilon
 
 /-- Exact grouped actual-Xi expansion interface.  It states one reflected-orbit
 representative convention, analytic multiplicities, the selected reserve term,
@@ -278,7 +281,7 @@ structure ActualXiReserveAllocation
     ∀ i : ℕ, share i ≤ 9 * orbitTail (grouped.offLineEnumeration i)
   reciprocalSquareTail :
     ∀ N : ℕ,
-      (∑ i in Finset.range N, orbitTail (grouped.offLineEnumeration i)) ≤
+      (∑ i ∈ Finset.range N, orbitTail (grouped.offLineEnumeration i)) ≤
         2 * (Real.log verifiedHeight + 1) / verifiedHeight
   numericalBudget :
     18 * (Real.log verifiedHeight + 1) / verifiedHeight < 1
@@ -286,13 +289,13 @@ structure ActualXiReserveAllocation
     ∀ i : ℕ, ∀ t : ℝ, 1 / 4 < t →
       OneOrbitPaid grouped.selectedReserve (grouped.offLineEnumeration i) t
   totalShare_le_one :
-    ∀ N : ℕ, (∑ i in Finset.range N, share i) ≤ 1
+    ∀ N : ℕ, (∑ i ∈ Finset.range N, share i) ≤ 1
   leftover : ℕ → ℝ
   leftover_eq :
-    ∀ N : ℕ, leftover N = 1 - ∑ i in Finset.range N, share i
+    ∀ N : ℕ, leftover N = 1 - ∑ i ∈ Finset.range N, share i
   leftover_nonnegative : ∀ N : ℕ, 0 ≤ leftover N
   oneUse :
-    ∀ N : ℕ, leftover N + ∑ i in Finset.range N, share i = 1
+    ∀ N : ℕ, leftover N + ∑ i ∈ Finset.range N, share i = 1
 
 /-- Finite Pick data, duplicated on the trusted Mathlib-only side. -/
 def pickEntry (x p y q : ℝ) : ℝ := (x * p + y * q) / (x + y)
@@ -328,9 +331,9 @@ def LocallyUniformlyConvergesSequenceOn
 
 /-- Componentwise finite sum of second-order jets. -/
 def jetSumRange (terms : ℕ → ℝ → Jet2) (N : ℕ) (t : ℝ) : Jet2 :=
-  ⟨∑ i in Finset.range N, (terms i t).value,
-   ∑ i in Finset.range N, (terms i t).first,
-   ∑ i in Finset.range N, (terms i t).second⟩
+  ⟨∑ i ∈ Finset.range N, (terms i t).value,
+   ∑ i ∈ Finset.range N, (terms i t).first,
+   ∑ i ∈ Finset.range N, (terms i t).second⟩
 
 /-- One off-line orbit together with exactly its allocated share of the selected
 critical reserve. -/
@@ -467,5 +470,7 @@ def ChallengeStatement : Prop :=
   ∀ inputs : ActualXiOrderThreeInputs,
     ∀ x1 x2 x3 : ℝ, 0 < x1 → 0 < x2 → 0 < x3 →
       ActualXiPickPSDThroughThree x1 x2 x3
+
+end
 
 end ChallengeDeps.XiPickOrderThreeConditional

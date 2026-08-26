@@ -1,6 +1,6 @@
 {
-  "challenge_module": "Challenge.RH",
-  "solution_module": "Solution.RH",
+  "challenge_module": "RiemannComparatorChallenge.RH",
+  "solution_module": "RiemannComparatorSolution.RH",
   "theorem_names": ["rh_statement_exact"],
   "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
   "enable_nanoda": false

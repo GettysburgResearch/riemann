@@ -23,6 +23,7 @@ theorem pickEntry_self {x p : ℝ} (hx : x ≠ 0) :
 /-- Duplicate first/third rows and columns reduce to a two-dimensional form. -/
 theorem duplicate13_quad3 (a g d x y z : ℝ) :
     quad3 a g a d g a x y z = quad2 a g d (x + z) y := by
+  simp only [quad3, quad2]
   ring
 
 /-- PSD of the reduced two-node packet implies PSD after duplicating the first

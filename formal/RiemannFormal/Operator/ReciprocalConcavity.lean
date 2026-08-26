@@ -2,13 +2,14 @@ import Mathlib
 
 namespace RiemannFormal.Operator
 
+noncomputable section
+
 /-- A second-order jet.  The formalization records exactly the value and first
 two derivatives needed by the reviewed order-three argument. -/
 structure Jet2 where
   value : ℝ
   first : ℝ
   second : ℝ
-  deriving Repr
 
 namespace Jet2
 
@@ -81,7 +82,8 @@ theorem offLineOrbit_defect_formula
     {m U B : ℝ} (hden : U ^ 2 + B ^ 2 ≠ 0) :
     energy (offLineJet m U B) =
       -32 * m ^ 2 * B ^ 2 / (U ^ 2 + B ^ 2) ^ 3 := by
-  field_simp [energy, offLineJet, hden]
+  simp only [energy, offLineJet]
+  field_simp [hden]
   ring
 
 /-- One unit of a critical-line orbit. -/
@@ -91,7 +93,8 @@ def criticalJet (V : ℝ) : Jet2 :=
 /-- A critical-line orbit has zero reciprocal curvature. -/
 theorem criticalOrbit_energy_zero {V : ℝ} (hV : V ≠ 0) :
     energy (criticalJet V) = 0 := by
-  field_simp [energy, criticalJet, hV]
+  simp only [energy, criticalJet]
+  field_simp [hV]
   ring
 
 /-- Exact reserve-expansion identity used for one-orbit absorption. -/
@@ -137,5 +140,7 @@ theorem reciprocalSquareTailBudget
   nlinarith
 
 end Jet2
+
+end
 
 end RiemannFormal.Operator

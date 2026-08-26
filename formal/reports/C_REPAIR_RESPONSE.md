@@ -78,8 +78,8 @@ infinite analytic tail theorem: EXPLICIT UNPROVED INPUT
 ## Comparator status
 
 ```text
-Challenge.XiPickOrderThreeConditional: exact shared headline through sizes one, two, and three; one placeholder
-Solution.XiPickOrderThreeConditional: same shared type, sorry-free
+RiemannComparatorChallenge.XiPickOrderThreeConditional: exact shared headline through sizes one, two, and three; one placeholder
+RiemannComparatorSolution.XiPickOrderThreeConditional: same shared type, sorry-free
 PSD only: YES
 repeated nodes: INCLUDED
 order four: ABSENT

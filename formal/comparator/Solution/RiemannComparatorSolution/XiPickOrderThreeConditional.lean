@@ -1,4 +1,4 @@
-import ChallengeDeps.XiPickOrderThreeConditional
+import RiemannComparatorChallengeDeps.XiPickOrderThreeConditional
 import RiemannFormal.Operator.XiOrderThree
 
 open ChallengeDeps.XiPickOrderThreeConditional

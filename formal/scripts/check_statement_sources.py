@@ -16,7 +16,10 @@ DELTA = FORMAL / "registry" / "deltas" / "C.tsv"
 API = FORMAL / "registry" / "deltas" / "C_API.tsv"
 LOCKS = FORMAL / "registry" / "deltas" / "C_EXTERNAL_SOURCE_LOCKS.tsv"
 REPORT = FORMAL / "reports" / "C_OPERATOR_QA.tsv"
-SHARED = FORMAL / "comparator" / "ChallengeDeps" / "XiPickOrderThreeConditional.lean"
+SHARED = (
+    FORMAL / "comparator" / "ChallengeDeps" /
+    "RiemannComparatorChallengeDeps" / "XiPickOrderThreeConditional.lean"
+)
 SHA40 = re.compile(r"^[0-9a-f]{40}$")
 SHA256 = re.compile(r"^[0-9a-f]{64}$")
 

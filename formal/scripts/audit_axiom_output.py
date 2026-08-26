@@ -7,14 +7,14 @@ from pathlib import Path
 
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 PRINT_RE = re.compile(r"^\s*#print\s+axioms\s+([A-Za-z0-9_.]+)\s*$")
-THEOREM_RE = re.compile(r"['\u2018\u2019]?([A-Za-z0-9_.]+)['\u2018\u2019]?")
+OUTPUT_NAME_RE = re.compile(r"['\u2018\u2019]?([A-Za-z0-9_.]+)['\u2018\u2019]?")
 
 
-def expected_from_sources(paths: list[Path]) -> set[str]:
+def expected_declarations(paths: list[Path]) -> set[str]:
     expected: set[str] = set()
     for path in paths:
         if not path.is_file():
-            raise SystemExit(f"axiom audit source does not exist: {path}")
+            raise SystemExit(f"missing axiom-print source: {path}")
         for line in path.read_text(encoding="utf-8").splitlines():
             match = PRINT_RE.match(line)
             if match:
@@ -34,7 +34,7 @@ def parse_output(text: str) -> tuple[set[str], dict[str, set[str]]]:
         if "depends on axioms:" not in line and "does not depend on any axioms" not in line:
             continue
         head = line.split("depends on axioms:", 1)[0].split("does not depend", 1)[0]
-        matches = THEOREM_RE.findall(head)
+        matches = OUTPUT_NAME_RE.findall(head)
         if not matches:
             raise SystemExit(f"cannot parse declaration name from axiom line: {line}")
         declaration = matches[-1]
@@ -57,13 +57,10 @@ def parse_output(text: str) -> tuple[set[str], dict[str, set[str]]]:
 
 def main() -> None:
     if len(sys.argv) < 3:
-        raise SystemExit(
-            "usage: audit_axiom_output.py AXIOM_OUTPUT AXIOM_SOURCE [AXIOM_SOURCE ...]"
-        )
-    output = Path(sys.argv[1])
-    sources = [Path(x) for x in sys.argv[2:]]
-    expected = expected_from_sources(sources)
-    seen, dependencies = parse_output(output.read_text(encoding="utf-8"))
+        raise SystemExit("usage: audit_axiom_output.py AXIOM_OUTPUT PRINT_SOURCE...")
+
+    expected = expected_declarations([Path(arg) for arg in sys.argv[2:]])
+    seen, dependencies = parse_output(Path(sys.argv[1]).read_text(encoding="utf-8"))
 
     missing = expected - seen
     if missing:

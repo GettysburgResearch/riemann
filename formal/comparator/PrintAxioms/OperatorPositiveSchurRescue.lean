@@ -1,3 +1,3 @@
-import Solution.OperatorPositiveSchurRescue
+import RiemannComparatorSolution.OperatorPositiveSchurRescue
 
 #print axioms OperatorPositiveSchurRescue_firewall

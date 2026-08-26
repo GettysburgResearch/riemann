@@ -1,3 +1,3 @@
-import Solution.XiPickThreeNode
+import RiemannComparatorSolution.XiPickThreeNode
 
 #print axioms XiPickThreeNode_identity

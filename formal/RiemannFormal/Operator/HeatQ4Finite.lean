@@ -2,6 +2,8 @@ import RiemannFormal.Operator.FiniteMatrix
 
 namespace RiemannFormal.Operator
 
+noncomputable section
+
 /-- First four physicists' Hermite polynomials, used only at finite algebraic
 scope. -/
 def hermite0 (_x : ℝ) : ℝ := 1
@@ -30,6 +32,7 @@ def q4Filter2 (a b c : ℝ) : ℝ := a - 2 * b + c
 /-- A second finite difference is a difference of adjacent first differences. -/
 theorem q4Filter2_factor (a b c : ℝ) :
     q4Filter2 a b c = (a - b) - (b - c) := by
+  simp only [q4Filter2]
   ring
 
 /-- Filter composition identity used by finite Q4 packets. -/
@@ -52,5 +55,7 @@ theorem q4ZeroBareDet_identity (R E T I : ℝ) :
 /-- The hyperbolic pole block has determinant `-1`. -/
 theorem hyperbolicPoleBlock_det : det2 0 1 0 = -1 := by
   norm_num [det2]
+
+end
 
 end RiemannFormal.Operator

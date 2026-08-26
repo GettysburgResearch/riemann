@@ -1,6 +1,6 @@
 {
-  "challenge_module": "Challenge.OperatorPositiveSchurRescue",
-  "solution_module": "Solution.OperatorPositiveSchurRescue",
+  "challenge_module": "RiemannComparatorChallenge.OperatorPositiveSchurRescue",
+  "solution_module": "RiemannComparatorSolution.OperatorPositiveSchurRescue",
   "theorem_names": ["OperatorPositiveSchurRescue_firewall"],
   "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
   "enable_nanoda": false

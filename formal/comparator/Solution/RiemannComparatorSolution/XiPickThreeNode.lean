@@ -1,4 +1,4 @@
-import ChallengeDeps.XiPickThreeNode
+import RiemannComparatorChallengeDeps.XiPickThreeNode
 import RiemannFormal.Operator.PickAlgebra
 
 open ChallengeDeps.XiPickThreeNode

@@ -7,7 +7,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 FORMAL = ROOT / "formal"
 XI = FORMAL / "RiemannFormal" / "Operator" / "XiOrderThree.lean"
-SHARED = FORMAL / "comparator" / "ChallengeDeps" / "XiPickOrderThreeConditional.lean"
+SHARED = (
+    FORMAL / "comparator" / "ChallengeDeps" /
+    "RiemannComparatorChallengeDeps" / "XiPickOrderThreeConditional.lean"
+)
 SOURCE = FORMAL / "RiemannFormal" / "Operator" / "XiSourceSpecific.lean"
 
 THEOREM = re.compile(

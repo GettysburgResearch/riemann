@@ -25,10 +25,9 @@ This environment did not contain a Lean toolchain and cannot access external pac
 The path-filtered workflow performs, on a networked GitHub runner:
 
 ```text
-lake update
 lake exe cache get
 lake build
-lake build Challenge.RH Solution.RH
+bash scripts/build_local_comparators.sh
 no-sorry/custom-axiom audit
 #print axioms audit
 ```

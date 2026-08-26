@@ -3,7 +3,10 @@ import RiemannFormal.Operator.XiExternalInputs
 
 namespace RiemannFormal.Operator
 
+noncomputable section
+
 open ChallengeDeps.XiPickOrderThreeConditional
+open scoped BigOperators
 
 /-- Local kernel-facing version of one reflected off-line orbit. -/
 def sourceOffLineJet (o : ReflectedOffLineOrbit) (t : ℝ) : Jet2 :=
@@ -475,7 +478,7 @@ structure ReserveTailInputs
     (grouped : GroupedActualXiC2Expansion) : Prop where
   reciprocalSquareTail :
     ∀ N : ℕ,
-      (∑ i in Finset.range N, orbitTail (grouped.offLineEnumeration i)) ≤
+      (∑ i ∈ Finset.range N, orbitTail (grouped.offLineEnumeration i)) ≤
         2 * (Real.log verifiedHeight + 1) / verifiedHeight
   numericalBudget :
     18 * (Real.log verifiedHeight + 1) / verifiedHeight < 1
@@ -489,7 +492,7 @@ theorem buildActualXiReserveAllocation
     ActualXiReserveAllocation grouped := by
   let share : ℕ → ℝ := fun i =>
     orbitEpsilon grouped.selectedReserve (grouped.offLineEnumeration i)
-  let leftover : ℕ → ℝ := fun N => 1 - ∑ i in Finset.range N, share i
+  let leftover : ℕ → ℝ := fun N => 1 - ∑ i ∈ Finset.range N, share i
   have hshareNonnegative : ∀ i : ℕ, 0 ≤ share i := by
     intro i
     have hdom := reviewedOneOrbitDomain_of_source grouped.selectedReserve
@@ -511,17 +514,17 @@ theorem buildActualXiReserveAllocation
       orbitEpsilon_le_nine_mul_tail
         (reviewedOneOrbitDomain_of_source grouped.selectedReserve
           (grouped.offLineEnumeration i) (by norm_num))
-  have htotal : ∀ N : ℕ, (∑ i in Finset.range N, share i) ≤ 1 := by
+  have htotal : ∀ N : ℕ, (∑ i ∈ Finset.range N, share i) ≤ 1 := by
     intro N
     have hsum :
-        (∑ i in Finset.range N, share i) ≤
-          ∑ i in Finset.range N,
+        (∑ i ∈ Finset.range N, share i) ≤
+          ∑ i ∈ Finset.range N,
             9 * orbitTail (grouped.offLineEnumeration i) :=
       Finset.sum_le_sum fun i _ => hshareLe i
     have hscale :
-        (∑ i in Finset.range N,
+        (∑ i ∈ Finset.range N,
           9 * orbitTail (grouped.offLineEnumeration i)) =
-          9 * ∑ i in Finset.range N,
+          9 * ∑ i ∈ Finset.range N,
             orbitTail (grouped.offLineEnumeration i) := by
       rw [Finset.mul_sum]
     rw [hscale] at hsum
@@ -564,5 +567,7 @@ theorem buildLockedActualXiReserveAllocation
     (inputs : ReserveTailInputs grouped) :
     SourceLockExact verified.sourceLock ∧ ActualXiReserveAllocation grouped :=
   ⟨verified.sourceLockExact, buildActualXiReserveAllocation inputs⟩
+
+end
 
 end RiemannFormal.Operator

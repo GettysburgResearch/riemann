@@ -64,8 +64,14 @@ def main() -> None:
     outputs: list[str] = []
     for row in checked:
         topic = row["comparator_topic"]
-        challenge = FORMAL / "comparator" / "Challenge" / f"{topic}.lean"
-        solution = FORMAL / "comparator" / "Solution" / f"{topic}.lean"
+        challenge = (
+            FORMAL / "comparator" / "Challenge" /
+            "RiemannComparatorChallenge" / f"{topic}.lean"
+        )
+        solution = (
+            FORMAL / "comparator" / "Solution" /
+            "RiemannComparatorSolution" / f"{topic}.lean"
+        )
         if not challenge.is_file() or not solution.is_file():
             raise SystemExit(f"missing comparator pair for {topic}")
         ctext = challenge.read_text(encoding="utf-8")
@@ -86,8 +92,12 @@ def main() -> None:
                 f"challenge={placeholder_count} solution={solution_placeholders}"
             )
         statement = row["comparator_statement"].strip() or None
-        outputs.append(compile_module(f"Challenge.{topic}", theorem, statement))
-        outputs.append(compile_module(f"Solution.{topic}", theorem, statement))
+        outputs.append(
+            compile_module(f"RiemannComparatorChallenge.{topic}", theorem, statement)
+        )
+        outputs.append(
+            compile_module(f"RiemannComparatorSolution.{topic}", theorem, statement)
+        )
 
     generated = FORMAL / "reports" / "generated"
     generated.mkdir(parents=True, exist_ok=True)

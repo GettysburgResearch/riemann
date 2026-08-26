@@ -1,4 +1,4 @@
-import ChallengeDeps.OperatorPositiveSchurRescue
+import RiemannComparatorChallengeDeps.OperatorPositiveSchurRescue
 
 /-- Trusted challenge: a positive Schur correction cannot rescue an already
 negative visible direction. -/

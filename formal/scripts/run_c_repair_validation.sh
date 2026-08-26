@@ -1,14 +1,21 @@
 #!/usr/bin/env bash
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+JOBS="${LAKE_JOBS:-1}"
 cd "$ROOT/formal"
 
-lake exe cache get
-lake build
+lake -Kjobs="$JOBS" exe cache get
+lake -Kjobs="$JOBS" build
 
-lake build Challenge.XiPickThreeNode Solution.XiPickThreeNode
-lake build Challenge.OperatorPositiveSchurRescue Solution.OperatorPositiveSchurRescue
-lake build Challenge.XiPickOrderThreeConditional Solution.XiPickOrderThreeConditional
+lake -Kjobs="$JOBS" build \
+  RiemannComparatorChallenge.XiPickThreeNode \
+  RiemannComparatorSolution.XiPickThreeNode
+lake -Kjobs="$JOBS" build \
+  RiemannComparatorChallenge.OperatorPositiveSchurRescue \
+  RiemannComparatorSolution.OperatorPositiveSchurRescue
+lake -Kjobs="$JOBS" build \
+  RiemannComparatorChallenge.XiPickOrderThreeConditional \
+  RiemannComparatorSolution.XiPickOrderThreeConditional
 
 python3 scripts/generate_registry.py
 python3 scripts/validate_registry.py

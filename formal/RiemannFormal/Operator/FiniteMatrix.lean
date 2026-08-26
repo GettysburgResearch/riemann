@@ -71,6 +71,7 @@ theorem zero_psd2_not_pd2 : IsPSD2 0 0 0 ∧ ¬ IsPD2 0 0 0 := by
 /-- Exact two-by-two congruence/completion-of-squares identity. -/
 theorem ldl2_identity (a b c x y : ℝ) :
     a * quad2 a b c x y = (a * x + b * y) ^ 2 + det2 a b c * y ^ 2 := by
+  simp only [quad2, det2]
   ring
 
 /-- A positive first pivot and nonnegative determinant imply two-by-two PSD. -/
@@ -109,6 +110,7 @@ def leadingMinor2 (a b d : ℝ) : ℝ := a * d - b ^ 2
 /-- Congruence identity for swapping the first two coordinates. -/
 theorem quad3_swap12 (a b c d e f x y z : ℝ) :
     quad3 a b c d e f x y z = quad3 d b e a c f y x z := by
+  simp only [quad3]
   ring
 
 /-- PSD is invariant under the first coordinate transposition. -/
@@ -125,6 +127,7 @@ theorem psd3_swap12_iff (a b c d e f : ℝ) :
 /-- Congruence identity for swapping the last two coordinates. -/
 theorem quad3_swap23 (a b c d e f x y z : ℝ) :
     quad3 a b c d e f x y z = quad3 a c b f e d x z y := by
+  simp only [quad3]
   ring
 
 /-- PSD is invariant under the last coordinate transposition. -/
@@ -142,6 +145,7 @@ theorem psd3_swap23_iff (a b c d e f : ℝ) :
 single two-node packet. -/
 theorem duplicate12_quad3 (a g h x y z : ℝ) :
     quad3 a a g a g h x y z = quad2 a g h (x + y) z := by
+  simp only [quad3, quad2]
   ring
 
 /-- PSD of the reduced two-node packet implies PSD of the duplicate packet. -/
@@ -154,6 +158,7 @@ theorem duplicate12_psd3 {a g h : ℝ} (h2 : IsPSD2 a g h) :
 /-- Duplicate last two coordinates also reduce to a two-node packet. -/
 theorem duplicate23_quad3 (a g h x y z : ℝ) :
     quad3 a g g h h h x y z = quad2 a g h x (y + z) := by
+  simp only [quad3, quad2]
   ring
 
 /-- PSD of the reduced packet implies PSD after duplicating the last node. -/
@@ -169,6 +174,7 @@ theorem ldl3_identity (a b c d e f x y z : ℝ) :
       leadingMinor2 a b d * (a * x + b * y + c * z) ^ 2 +
       (leadingMinor2 a b d * y + (a * e - b * c) * z) ^ 2 +
       a * det3 a b c d e f * z ^ 2 := by
+  simp only [leadingMinor2, quad3, det3]
   ring
 
 /-- A positive first pivot, positive leading two-by-two minor, and nonnegative

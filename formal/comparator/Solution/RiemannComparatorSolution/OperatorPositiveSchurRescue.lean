@@ -1,4 +1,4 @@
-import ChallengeDeps.OperatorPositiveSchurRescue
+import RiemannComparatorChallengeDeps.OperatorPositiveSchurRescue
 import RiemannFormal.Refutations.MatrixFirewalls
 
 /-- Sorry-free solution of the positive-Schur-rescue firewall. -/

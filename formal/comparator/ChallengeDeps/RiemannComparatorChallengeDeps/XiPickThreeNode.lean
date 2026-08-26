@@ -2,6 +2,8 @@ import Mathlib
 
 namespace ChallengeDeps.XiPickThreeNode
 
+noncomputable section
+
 def det3 (a b c d e f : ℝ) : ℝ :=
   a * d * f + 2 * b * c * e - a * e ^ 2 - d * c ^ 2 - f * b ^ 2
 
@@ -21,5 +23,7 @@ def secondDivDiff (t1 t2 t3 y1 y2 y3 : ℝ) : ℝ :=
 
 def denominator (x1 x2 x3 : ℝ) : ℝ :=
   (x1 + x2) ^ 2 * (x1 + x3) ^ 2 * (x2 + x3) ^ 2
+
+end
 
 end ChallengeDeps.XiPickThreeNode

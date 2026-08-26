@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+JOBS="${LAKE_JOBS:-1}"
 cd "$ROOT/formal"
 
 TARGETS=(RiemannFormal comparator/Solution comparator/ChallengeDeps)
@@ -23,7 +24,8 @@ fi
 # Reviewer C challenge files each contain exactly one statement-only placeholder;
 # corresponding ChallengeDeps and Solution files contain none and compile.
 shopt -s nullglob
-for challenge in comparator/Challenge/{XiPick,Operator,Refutation}*.lean; do
+for challenge in \
+    comparator/Challenge/RiemannComparatorChallenge/{XiPick,Operator,Refutation}*.lean; do
   count="$(grep -Ec '\b(sorry|admit)\b' "$challenge" || true)"
   if [[ "$count" -ne 1 ]]; then
     echo "trusted challenge must contain exactly one placeholder: $challenge ($count)" >&2
@@ -31,8 +33,8 @@ for challenge in comparator/Challenge/{XiPick,Operator,Refutation}*.lean; do
   fi
   topic="$(basename "$challenge")"
   stem="${topic%.lean}"
-  solution="comparator/Solution/$topic"
-  deps="comparator/ChallengeDeps/$topic"
+  solution="comparator/Solution/RiemannComparatorSolution/$topic"
+  deps="comparator/ChallengeDeps/RiemannComparatorChallengeDeps/$topic"
   if [[ ! -f "$solution" || ! -f "$deps" ]]; then
     echo "missing comparator dependency or solution for $challenge" >&2
     exit 1
@@ -41,7 +43,9 @@ for challenge in comparator/Challenge/{XiPick,Operator,Refutation}*.lean; do
     echo "trusted comparator dependency/solution is not clean: $topic" >&2
     exit 1
   fi
-  lake build "Challenge.${stem}" "Solution.${stem}"
+  lake -Kjobs="$JOBS" build \
+    "RiemannComparatorChallenge.${stem}" \
+    "RiemannComparatorSolution.${stem}"
 done
 
 python3 scripts/verify_declaration_map.py

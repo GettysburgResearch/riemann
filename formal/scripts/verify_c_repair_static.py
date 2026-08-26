@@ -80,11 +80,13 @@ def main() -> None:
         "EXT.XI.PLATT_TRUDGIAN.2021.txt"
     )
     actual_hash = hashlib.sha256(statement.read_bytes()).hexdigest()
-    lock_text = (FORMAL / "registry" / "deltas" / "C_EXTERNAL_SOURCE_LOCKS.tsv").read_text()
+    lock_text = (FORMAL / "registry" / "deltas" / "C_EXTERNAL_SOURCE_LOCKS.tsv").read_text(
+        encoding="utf-8"
+    )
     lean_text = (
         FORMAL / "comparator" / "ChallengeDeps" /
-        "XiPickOrderThreeConditional.lean"
-    ).read_text()
+        "RiemannComparatorChallengeDeps" / "XiPickOrderThreeConditional.lean"
+    ).read_text(encoding="utf-8")
     assert actual_hash in lock_text
     assert actual_hash in lean_text
 

@@ -2,6 +2,8 @@ import RiemannFormal.Operator.FiniteMatrix
 
 namespace RiemannFormal.Operator
 
+noncomputable section
+
 /-- Off-diagonal entry of the finite infinitesimal Pick packet after writing
 `F(x)=x p(x^2)`. -/
 def pickEntry (x p y q : ℝ) : ℝ := (x * p + y * q) / (x + y)
@@ -14,7 +16,8 @@ theorem two_point_pick_identity
     {x y p q : ℝ} (hxy : x + y ≠ 0) :
     pickDet2 x p y q =
       -((p - q) * (x ^ 2 * p - y ^ 2 * q)) / (x + y) ^ 2 := by
-  field_simp [pickDet2, pickEntry, hxy]
+  unfold pickDet2 pickEntry
+  field_simp [hxy]
   ring
 
 /-- The two-node determinant is nonnegative under the two scalar monotonicities
@@ -87,8 +90,8 @@ theorem pickDet3_factorAB
       pickFactorA (x1 ^ 2) (x2 ^ 2) (x3 ^ 2) p1 p2 p3 *
         pickFactorB (x1 ^ 2) (x2 ^ 2) (x3 ^ 2) p1 p2 p3 /
         pickDenominator3 x1 x2 x3 := by
-  field_simp [pickDet3, pickEntry, pickFactorA, pickFactorB,
-    pickDenominator3, det3, h12, h13, h23]
+  unfold pickDet3 pickEntry pickFactorA pickFactorB pickDenominator3 det3
+  field_simp [h12, h13, h23]
   ring
 
 /-- The reciprocal-curvature factor is exactly a second divided difference. -/
@@ -99,8 +102,8 @@ theorem pickFactorA_divided_difference
     pickFactorA t1 t2 t3 p1 p2 p3 =
       -p1 * p2 * p3 * delta3 t1 t2 t3 *
         secondDivDiff t1 t2 t3 (1 / p1) (1 / p2) (1 / p3) := by
-  field_simp [pickFactorA, delta3, secondDivDiff, ht12, ht13, ht23,
-    hp1, hp2, hp3]
+  unfold pickFactorA delta3 secondDivDiff
+  field_simp [ht12, ht13, ht23, hp1, hp2, hp3]
   ring
 
 /-- The companion `t p(t)` curvature is the second determinant factor. -/
@@ -110,7 +113,8 @@ theorem pickFactorB_divided_difference
     pickFactorB t1 t2 t3 p1 p2 p3 =
       -delta3 t1 t2 t3 *
         secondDivDiff t1 t2 t3 (t1 * p1) (t2 * p2) (t3 * p3) := by
-  field_simp [pickFactorB, delta3, secondDivDiff, ht12, ht13, ht23]
+  unfold pickFactorB delta3 secondDivDiff
+  field_simp [ht12, ht13, ht23]
   ring
 
 /-- Exact reviewed three-node determinant factorization. -/
@@ -154,6 +158,7 @@ theorem three_node_pick_det_nonnegative
   have hpref : 0 ≤
       p1 * p2 * p3 * delta3 (x1 ^ 2) (x2 ^ 2) (x3 ^ 2) ^ 2 /
         pickDenominator3 x1 x2 x3 := by
+    unfold pickDenominator3
     positivity
   have hcurv : 0 ≤
       secondDivDiff (x1 ^ 2) (x2 ^ 2) (x3 ^ 2)
@@ -161,7 +166,7 @@ theorem three_node_pick_det_nonnegative
         secondDivDiff (x1 ^ 2) (x2 ^ 2) (x3 ^ 2)
           (x1 ^ 2 * p1) (x2 ^ 2 * p2) (x3 ^ 2 * p3) :=
     mul_nonneg_of_nonpos_of_nonpos hrecip hcomp
-  exact mul_nonneg hpref hcurv
+  simpa [mul_assoc] using mul_nonneg hpref hcurv
 
 /-- Principal-minor implication for a three-node packet.  A strict two-node
 pivot plus a nonnegative three-node determinant yields PSD, not necessarily PD. -/
@@ -175,5 +180,7 @@ theorem three_node_pick_psd_of_principal_minors
   apply leading_principal_minors_psd3 hp1
   · simpa [leadingMinor2, pickDet2] using hminor12
   · simpa [pickDet3] using hdet3
+
+end
 
 end RiemannFormal.Operator
