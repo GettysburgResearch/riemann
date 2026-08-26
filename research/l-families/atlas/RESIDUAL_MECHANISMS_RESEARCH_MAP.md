@@ -57,6 +57,10 @@
 > not a cancellation estimate. Exact upper-divisor Möbius inversion recovers
 > every product-shell amplitude but not its internal orientations, and the
 > local weighted overlap-Gram condition number grows like `4sqrt(p)`.
+> Finally, `N=uM` cancels the core sign and square root, leaving a
+> one-variable Möbius divisor-wavelet square function. The open per-core gate
+> `WAVEPRIMCAR` implies `AUXCOLORPRIMCAR` with Euler convergence exactly
+> below exponent `1/2`.
 > Separately, the minimal
 > ternary physical mask has a universal degree-shell norm/Kummer realization
 > of rank `48`, tame Swan zero, and linear toric boundary support; the exact

@@ -115,6 +115,16 @@ should exploit the forward signed transform rather than whiten it prime by
 prime. The scalar zero mode has no native `d`-average, and every one of these routes
 leaves the nonzero incidence spectrum separate.
 
+There is now a particularly concrete one-variable target. For squarefree
+`N`, all orientations have the same sign `mu(N)`. Writing `N=uM`
+cancels the core sign and square root, so each coherent color sum is an
+ordinary Möbius sum in `M` against an explicit divisor wavelet at `uM`.
+The per-core d-averaged gate `WAVEPRIMCAR` implies
+`AUXCOLORPRIMCAR`; its outer Euler product converges exactly for exponent
+below `1/2`. The wavelet is neither positive nor multiplicative, and the
+gate remains wholly unproved, but this is the most classical analytic form
+of the new zero-mode burden.
+
 ### 2. The raw version is impossible
 
 The complete unmollified current has unavoidable negative atomic variation
@@ -418,7 +428,8 @@ in chronological order.
    incidence Gram; it is also unproved. Its pair zero mode is now rewritten
    exactly as a Boolean-compressed generalized primitive panel. The smallest
    direct positive-norm target is `COLLPRIMCAR`; the coherent quadratic
-   target is `AUXCOLORPRIMCAR`; the image-tailored uniform target is
+   target is `AUXCOLORPRIMCAR`; its one-variable per-core sufficient form is
+   `WAVEPRIMCAR`; the image-tailored uniform target is
    `RAYPRIMCAR`, while full-`q`
    `GENPRIMCAR` is a broader, differently normalized alternative.
    All are open and address only the auxiliary rho-sieved/zero-mode burden,

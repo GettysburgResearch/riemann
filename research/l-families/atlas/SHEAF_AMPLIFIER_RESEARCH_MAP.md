@@ -455,6 +455,15 @@ Recovery in the local weighted overlap-Gram norm has condition number
 asymptotic to `4sqrt(p)`. The scalar zero mode itself has no native `d`-average, and nonzero
 incidence modes remain separate.
 
+The shell formula finally collapses the pair coordinates to one variable.
+All orientations of squarefree `N` carry the same `mu(N)` sign; after
+`N=uM`, the coherent core is a Möbius sum in `M` against the explicit
+divisor wavelet `W_I^alpha(uM)`. Its d-averaged per-core energy is
+`WAVEPRIMCAR`. A uniform all-exponent WAVE theorem implies
+`AUXCOLORPRIMCAR` with outer Euler convergence exactly for `eta<1/2`.
+This is now the most classical-looking analytic target, but the wavelet is
+not multiplicative or positive and no estimate has been proved.
+
 The associated three-state colored cube is also exact. Its local shear has
 states `absent/left/right`, forward and inverse have the same convergent
 Hilbert norm product, and a sharp projection law says a coordinate constraint
@@ -1170,7 +1179,8 @@ exactly as a Boolean-compressed family of ordinary-Möbius primitive panels at
 `(A,B,q)=(67^alpha r,67^gamma s,drs)`. Incidence survives exactly and the
 compatible image and its coherent core-color compression are now classified
 exactly. The next analytic target is `COLLPRIMCAR` directly,
-`AUXCOLORPRIMCAR` before phase is discarded, or `RAYPRIMCAR` on the actual
+`AUXCOLORPRIMCAR` before phase is discarded, its one-variable sufficient
+form `WAVEPRIMCAR`, or `RAYPRIMCAR` on the actual
 `q=drs` rays; full-`q` `GENPRIMCAR` remains a broader
 alternative with a polylogarithmic tax, not an intrinsic requirement. Every
 route still leaves the nonzero spectrum.

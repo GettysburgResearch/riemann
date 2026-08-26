@@ -7,7 +7,7 @@ Frozen parent: PR #756 at
 `6e4609dfe1b073f1eb58445fdd1d7164dbc450d6`.
 
 Audited mathematical-packet head:
-`5598fdb79`. The final PR head is recorded in
+`906e9db8c`. The final PR head is recorded in
 the PR body because a tracked file cannot contain the SHA of the commit which
 creates that SHA.
 
@@ -37,7 +37,7 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
 | primitive-ray localization | exact source disintegration and equivalence | each fixed ray is `A_(a,b) log X+O(1)`; every prescribed subpower-height sector is harmless | the balanced high-height residual remains RH-bearing |
 | primitive-pair large-sieve gate | exact shell identities, two exact normal forms, plus conditional implication | five oriented/three reciprocal panels reconstruct the residual; Möbius--Gram and biased-Boolean forms expose its modes; `PRIMLS` implies RH | the harmonic zero mode survives sieve averaging; `PRIMLS` is unproved, stronger than RH, with no converse |
 | primitive incidence/Carleson form | exact finite Gram, fixed-height limit, and conditional implication | the actual `d^-1` average limits to `67/(68 zeta(2))` times the Boolean energy; `PRIMCAR=>PRIMLS=>RH` | `PRIMCAR` is stronger and unproved; its `rho`-tilted zero mode still carries `1/zeta(s)` |
-| primitive `rho`-tilt convolution | exact Euler algebra, bounded inverse operators, Boolean compression, compatible-image bijection, and positive-norm gate hierarchy | fixed `q` has `3^omega(q)` compatible colorings and `d=1` has `2^omega(q)` saturated rays; fixed-`(d,u)` colors expose `AUXCOLORPRIMCAR`; `RAYPRIMCAR` implies it with sharp cost `J_67`; its energy is exactly the primitive-pair shared-support Gram `prod_(p|gcd(N,M))(1+sqrt(p)/(p+1))` | no gate is proved; the Gram has signed cross terms and degenerating local determinants, incomparability witnesses are synthetic, and nonzero `PRIMCAR` modes remain uncontrolled |
+| primitive `rho`-tilt convolution | exact Euler algebra, Boolean compression, compatible-image bijection, color Gram, and one-variable wavelet reduction | fixed `q` has `3^omega(q)` compatible colorings; fixed-`(d,u)` colors expose `AUXCOLORPRIMCAR`; its energy is the shared-support Gram; writing `N=uM` reduces each core to a Möbius sum against an explicit divisor wavelet, and `WAVEPRIMCAR` conditionally implies the color gate below exponent `1/2` | no gate is proved; the wavelet is signed and nonmultiplicative, weighted-Gram conditioning degenerates, witnesses are synthetic, and nonzero `PRIMCAR` modes remain uncontrolled |
 | native reflection/geodesic criterion | exact source identity and equivalence | same detector is a differentiated reflection-odd energy; relative squared endpoint costs `O(T)` | positive reflection estimate remains RH-bearing |
 | finite beta scout | bounded floating point | checkpoint values and two-mesh controls are reproducible | no interval certificate or asymptotic inference |
 | compact boundary-field scout | bounded floating point plus exact first-difference control | `G` rows reproduce; direct differencing agrees with `h_epsilon` to `2.13e-13` absolute | no asymptotic inference |
@@ -146,6 +146,11 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
   separates algebraic Möbius inversion from conditioning in the weighted
   Gram norm, and adds exact formal Cholesky/characteristic-polynomial and
   coefficient-normalization replays after an independent audit.
+- `906e9db8c` uses the constant shell sign and `N=uM` cancellation to
+  rewrite every coherent color as a one-variable Möbius divisor-wavelet sum.
+  It defines the per-core `WAVEPRIMCAR` gate and proves conditionally that it
+  implies `AUXCOLORPRIMCAR` with Euler threshold `eta<1/2`; the estimate
+  itself remains open.
 
 ### Selector and notch extensions
 
