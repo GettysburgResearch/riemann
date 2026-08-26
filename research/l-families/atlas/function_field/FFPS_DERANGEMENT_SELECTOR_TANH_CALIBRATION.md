@@ -534,6 +534,17 @@ larger `d`.
 
 ## 5. Scope and literature boundary
 
+The scalar `b_(d,lambda)` is the evaluation at `-1` of the descent
+polynomial of `SYT(lambda)`.  In the tableau/poset literature this is commonly
+called the **Charney--Davis quantity** or statistic.  Reiner, Stanton, and
+Welker, [*The Charney--Davis quantity for certain graded
+posets*](https://www.mat.univie.ac.at/~slc/wpapers/s50reistwel.html),
+Séminaire Lotharingien de Combinatoire 50 (2003), B50c, studied this
+evaluation for several graded-poset families, including product-of-chain
+tableau cases.  Thus neither the scalar statistic nor special-shape
+evaluations are new objects here; no external novelty claim is made for
+their use in this selector packet.
+
 The descent-set ribbon expansion, the power-sum generating series, the
 `p_1 -> 0` derangement transform, and Lie-idempotent language are classical.
 The `(1-E)` context is described, for example, by Hivert, Luque, Novelli,

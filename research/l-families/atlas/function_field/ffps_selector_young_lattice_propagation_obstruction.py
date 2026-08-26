@@ -120,8 +120,20 @@ def two_row_dimension(degree: int, index: int) -> int:
     return math.comb(degree, index) - math.comb(degree, index - 1)
 
 
+def two_row_hook_dimension(degree: int, index: int) -> int:
+    """Independent hook-length formula for shape (d-j,j)."""
+
+    validate_chain_index(degree, index)
+    numerator = math.factorial(degree) * (degree - 2 * index + 1)
+    denominator = math.factorial(degree - index + 1) * math.factorial(index)
+    quotient, remainder = divmod(numerator, denominator)
+    if remainder:
+        raise AssertionError("two-row hook-length quotient is not integral")
+    return quotient
+
+
 def signed_forced_lower_bound(degree: int, index: int) -> Fraction:
-    """Lower bound on (-1)^(j-1) X_j."""
+    """Lower bound on Re((-1)^(j-1) X_j)."""
 
     validate_chain_index(degree, index)
     return Fraction(2**degree, degree) - math.comb(degree, index)
@@ -146,8 +158,23 @@ def verify_degree(degree: int) -> dict[str, object]:
     if hook_predecessor_potential(degree, 1) != x_one:
         raise AssertionError("hook recurrence does not reproduce X_1")
 
+    z_value = cycle_dual_mass(degree)
+    for hook_depth in range(degree):
+        left = (
+            hook_predecessor_potential(degree, hook_depth - 1)
+            if hook_depth > 0
+            else Fraction(0)
+        )
+        if hook_depth < degree - 1:
+            left += hook_predecessor_potential(degree, hook_depth)
+        right = (-1) ** hook_depth * (math.comb(degree - 1, hook_depth) - z_value)
+        if left != right:
+            raise AssertionError("hook recurrence failed")
+
     running = x_one
     for index in range(1, maximum + 1):
+        if two_row_dimension(degree, index) != two_row_hook_dimension(degree, index):
+            raise AssertionError("two-row dimension formulas disagree")
         if index > 1:
             running -= two_row_dimension(degree, index)
         expected = signed_forced_lower_bound(degree, index)
@@ -187,12 +214,13 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
         verify_degree(degree)
     return {
         "theorem": {
-            "signed_bound": "(-1)^(j-1) X_j >= 2^d/d - binom(d,j)",
+            "signed_bound": "Re((-1)^(j-1) X_j) >= 2^d/d - binom(d,j)",
             "forced_depth": ("m_d=max{j<=floor((d-1)/2): binom(d,j)<2^d/d}"),
             "asymptotic_depth": ("d/2-(1/2+o(1))*sqrt(d*log(d))"),
             "status": "necessary condition for every contractive optimal lift",
         },
         "scope": {
+            "complex_coefficients_allowed": True,
             "constructive_lift_proved": False,
             "all_degree_optimum_proved": False,
             "linear_programming_used": False,

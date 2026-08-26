@@ -4,9 +4,16 @@ Status: **exact finite exploration, exact synthetic algebra, and source-qualifie
 
 Current successor: PR #757 extends this atlas into source-exact mollified beta
 and native-reflection RH criteria, hard-mask/sheaf amplification, deeper
-closed-place notch laws and anti-concentration, an exact cycle-selector
-complexity no-go and finite derangement relaxation, and a `Sym^12`
-cohomological audit. Begin with
+closed-place notch laws through a growing logarithmic depth window and a
+conditional profile-residue criterion whose permitted range approaches the
+entropy wall, followed by an exact quadratic-squareclass compression which
+crosses that wall by an additive `log log` depth window, an exact
+cycle-selector complexity no-go, a universal bounded-rank ternary norm torsor
+which isolates that selector as the first exponential degree-shell cost, its
+finite derangement relaxation and all-degree `tanh` calibration together with
+an almost-half-depth Young-lattice propagation obstruction, high-primitive-ray localization of the
+quadratic RH gate together with exact Gram/Boolean normal forms for its
+primitive-pair target, and a `Sym^12` cohomological audit. Begin with
 [`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md),
 then [`SHEAF_AMPLIFIER_RESEARCH_MAP.md`](SHEAF_AMPLIFIER_RESEARCH_MAP.md).
 Those criteria do not prove their RH-equivalent estimates; RH and GRH remain

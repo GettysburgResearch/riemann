@@ -10,13 +10,28 @@
 > to the formal-associated-graded-to-Galois realization arrow, refutes the
 > raw complete-current Jordan premise by an explicit `Omega(sqrt(Y))` lower
 > bound, and replaces it with a fixed-mollified native-reflection criterion
-> exactly equivalent to RH. It also proves the odd-notch density through
-> `M^-3` at every fixed depth, exponential local anti-concentration across the
-> displayed coefficient tower, and that the universal exact `d`-cycle selector
-> has forced semisimple rank mass `2^(d-1)/d`. The same optimum remains uniquely
-> forced under the derangement relaxation through degree ten; the all-degree
-> relaxed statement is conjectural. The historical statements below should
-> not be used as the current frontier.
+> exactly equivalent to RH, whose quadratic form is now localized to balanced
+> primitive rays beyond every prescribed subpower height. It also proves the
+> odd-notch density through `M^-3` at every fixed depth, exponential local
+> anti-concentration, and an `O(M^-2)` theorem through a growing logarithmic
+> depth window, followed by a profile chi-square criterion which permits a
+> logarithmic gap to the residue-entropy wall when its discrete modulus
+> satisfies the displayed condition, and then an exact quadratic-squareclass
+> quotient which crosses that generic wall to
+> `r=log_q M+log_q log M+O_q(1)`. The universal exact `d`-cycle selector
+> has forced semisimple
+> rank mass `2^(d-1)/d`; the same optimum remains uniquely forced under the
+> derangement relaxation through degree ten, while an exact all-degree `tanh`
+> transform, sharp `(d-4)/d` nonhook gap, and descent-set rigidity isolate the
+> remaining contractive nonhook problem. Every putative contractive optimum
+> is now forced to carry nonzero predecessor potentials in alternating
+> half-planes (alternating signs for real lifts) through
+> `d/2-(1/2+o(1))sqrt(d log d)` two-row layers.  Separately, the minimal
+> ternary physical mask has a universal degree-shell norm/Kummer realization
+> of rank `48`, tame Swan zero, and linear toric boundary support; the exact
+> cycle selector, rather than the physical torsor, is its first exponential
+> naive-assembly cost. The
+> historical statements below should not be used as the current frontier.
 
 ## Release status
 

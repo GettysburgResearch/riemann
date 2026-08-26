@@ -15,11 +15,24 @@ the integers.
 PR #757 adds a large proof-graded successor spanning the fixed-mollified beta
 RH equivalence, its compact boundary primitive and native
 reflection/geodesic forms, its exact ratio-16 beta near-correlation criterion,
+its localization beyond every prescribed subpower primitive-height cutoff,
+and exact Möbius--Gram/biased-Boolean normal forms for the remaining
+primitive-pair target,
 the exact refutation of the raw Jordan premise,
 hard-mask relative projectors and conductor ledgers, odd-notch boundary
-densities through every fixed depth and their local anti-concentration law,
+densities through every fixed depth, their local anti-concentration law, and
+an `O(M^-2)` whole-layer theorem through logarithmically growing depth,
+plus a profile chi-square criterion which permits a logarithmic gap to the
+residue-entropy wall when its discrete modulus satisfies the displayed gate,
+and an exact detector-specific squareclass quotient which crosses that wall
+by an additive `log log` depth window,
 the forced exponential mass of an exact universal cycle selector, its exact-
-finite derangement relaxation through degree ten, and the genus-two `Sym^12`
+finite derangement relaxation through degree ten, a universal degree-shell
+ternary norm torsor of physical rank `48` and linear tame boundary cost, and
+an all-degree `tanh` structural calibration with a sharp nonhook gap,
+descent-set rigidity, and a theorem forcing every putative contractive repair
+to propagate almost to the two-row Young-lattice equator,
+and the genus-two `Sym^12`
 comparison. For `Sym^12`, the exact `p=3,5,7` residual has a unique formal
 one-Tate repair inside the displayed carrier ledger; actual compact-support
 Galois realization and any all-`q` correction remain open.

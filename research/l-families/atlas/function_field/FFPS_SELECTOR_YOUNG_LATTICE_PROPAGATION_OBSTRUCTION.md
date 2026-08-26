@@ -51,17 +51,18 @@ Write `x_nu=[s_nu]X_(d-1)`, and on the two-row chain put
 \tag{0.3}
 \]
 
-The exact signed propagation theorem is
+The exact half-plane propagation theorem is
 
 \[
  \boxed{
- (-1)^{j-1}X_j
+ \operatorname{Re}\!\left((-1)^{j-1}X_j\right)
  \ge {2^d\over d}-{d\choose j}.}
 \tag{0.4}
 \]
 
-In particular, the sign as well as nonvanishing is forced whenever the
-right side is positive.  If
+In particular, the alternating open half-plane and hence nonvanishing are
+forced whenever the right side is positive. For a real lift this is exactly
+the asserted alternating sign. If
 
 \[
  m_d=max\left\{
@@ -182,7 +183,7 @@ implies
 \tag{2.3}
 \]
 
-Set `Y_j=(-1)^(j-1)X_j`.  Equation (2.3) is exactly
+Set `Y_j=(-1)^(j-1)X_j`. Equation (2.3) is exactly
 
 \[
  |Y_j-Y_{j-1}|
@@ -190,21 +191,22 @@ Set `Y_j=(-1)^(j-1)X_j`.  Equation (2.3) is exactly
 \tag{2.4}
 \]
 
-Starting from (1.6) and telescoping gives the **signed**, not merely
-absolute, lower bound
+Starting from the real value (1.6), taking real parts in (2.4), and
+telescoping gives the **half-plane**, not merely absolute, lower bound
 
 \[
  \begin{aligned}
- Y_j
+ \operatorname{Re}(Y_j)
  &\ge Y_1-
  \sum_{r=2}^j\left({d\choose r}-{d\choose r-1}\right)\\
- &={2^d\over d}-d-left({d\choose j}-d\right)\\
+ &={2^d\over d}-d-\left({d\choose j}-d\right)\\
  &={2^d\over d}-{d\choose j}.
  \end{aligned}
 \tag{2.5}
 \]
 
-This proves (0.4).  Notice how little was assumed: hook saturation, the
+This proves (0.4) for real or complex coefficients. Notice how little was
+assumed: hook saturation, the
 correct `p_1`-free target, and the ordinary dimension box.  No guessed
 interior formula or finite-degree certificate enters the argument.
 
@@ -219,7 +221,7 @@ slack.  At `lambda_2=(d-2,2)`, the natural `tanh` coefficient is
 so it has only `4f/d=2(d-3)` of outward room.  Meanwhile (2.5) forces
 
 \[
- -X_2\ge {2^d\over d}-{d\choose2}
+ \operatorname{Re}(-X_2)\ge {2^d\over d}-{d\choose2}
 \tag{2.7}
 \]
 
@@ -262,6 +264,12 @@ Moving one integer step does not change the leading term, which proves
 
 ## 4. What this rules out, and what it does not
 
+The theorem allows complex Schur coefficients. For a complex lift, (0.4)
+places the alternating potential in an open right half-plane; for a real
+lift, it forces its sign. Taking real parts of a feasible complex lift also
+gives a feasible real lift because all targets and dimension boxes are real,
+but the displayed statement applies directly to every complex lift.
+
 The theorem rules out, in every sufficiently large degree:
 
 - the hook-only predecessor-potential ansatz;
@@ -288,7 +296,7 @@ python -B -O -m unittest tests.test_ffps_selector_young_lattice_propagation_obst
 ```
 
 The replay authenticates both frozen source packets and checks the hook
-recurrence, the two-row dimension identity, the exact telescoping lower
+recurrence, the two-row dimension identity, the exact real-part telescoping lower
 bound, and the threshold through degree 256 using only integer and rational
 arithmetic.  It performs no LP solve, character-table enumeration,
 finite-field enumeration, `L`-function computation, zero search, or

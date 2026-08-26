@@ -83,6 +83,7 @@
   ],
   "scope": {
     "all_degree_optimum_proved": false,
+    "complex_coefficients_allowed": true,
     "constructive_lift_proved": false,
     "floating_point_used": false,
     "linear_programming_used": false,
@@ -91,7 +92,7 @@
   "theorem": {
     "asymptotic_depth": "d/2-(1/2+o(1))*sqrt(d*log(d))",
     "forced_depth": "m_d=max{j<=floor((d-1)/2): binom(d,j)<2^d/d}",
-    "signed_bound": "(-1)^(j-1) X_j >= 2^d/d - binom(d,j)",
+    "signed_bound": "Re((-1)^(j-1) X_j) >= 2^d/d - binom(d,j)",
     "status": "necessary condition for every contractive optimal lift"
   }
 }

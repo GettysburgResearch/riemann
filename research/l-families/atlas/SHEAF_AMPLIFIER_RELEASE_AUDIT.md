@@ -7,7 +7,8 @@ Frozen parent: PR #756 at
 `6e4609dfe1b073f1eb58445fdd1d7164dbc450d6`.
 
 Audited mathematical-packet head:
-`cf7b10ef5e50693b9150996e3891da8debb6b180`. The final PR head is recorded in
+`c58bbd89a` (to be replaced by the final packet SHA after the last focused
+audit fix). The final PR head is recorded in
 the PR body because a tracked file cannot contain the SHA of the commit which
 creates that SHA.
 
@@ -34,21 +35,29 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
 | fixed-mollified beta criterion | exact equivalence | one-sided negative mass, two-sided mass, and RH are equivalent | the estimate itself is not proved |
 | compact boundary primitive | exact identity and equivalence | `h_epsilon=(I-tau_epsilon)G/epsilon`; signed mass is one terminal shell; one-sided mass of `G` is RH-equivalent | the telescope does not control Jordan mass |
 | boundary near-correlation | exact positive Gram identity and equivalence | prefix `L2` energy uses only beta pairs with ratio in `[1/16,16]`; its off-diagonal is RH-equivalent | no subpower correlation estimate is proved |
+| primitive-ray localization | exact source disintegration and equivalence | each fixed ray is `A_(a,b) log X+O(1)`; every prescribed subpower-height sector is harmless | the balanced high-height residual remains RH-bearing |
+| primitive-pair large-sieve gate | exact shell identities, two exact normal forms, plus conditional implication | five oriented/three reciprocal panels reconstruct the residual; Möbius--Gram and biased-Boolean forms expose its modes; `PRIMLS` implies RH | the harmonic zero mode survives sieve averaging; `PRIMLS` is unproved, stronger than RH, with no converse |
 | native reflection/geodesic criterion | exact source identity and equivalence | same detector is a differentiated reflection-odd energy; relative squared endpoint costs `O(T)` | positive reflection estimate remains RH-bearing |
 | finite beta scout | bounded floating point | checkpoint values and two-mesh controls are reproducible | no interval certificate or asymptotic inference |
 | compact boundary-field scout | bounded floating point plus exact first-difference control | `G` rows reproduce; direct differencing agrees with `h_epsilon` to `2.13e-13` absolute | no asymptotic inference |
 | mask Pareto frontier | exact finite Fourier/Gram algebra | leverage and selected leakage share one sharp parameter | fixed support gain is not individualization |
 | Kummer invariant audit | exact fixed-fibre geometry | generic invariant criterion and resonant strata identified | no varying-place complex or uniform Betti bound |
 | cyclic/abelian torsor projector | exact endomorphism theorem | `C-S=Pi_0`; subgroup quotients compress selected rank | actual FFPS cleanup must be common and equivariant |
+| universal ternary norm torsor | exact varying-degree-shell construction and finite-monodromy normal form | clean physical ranks are `48/32/16`, generic selected invariants vanish, tame toric conductor is at most `288(a+b)`, and root/physical monodromy split | exact irreducibility still has exponential termwise mass; native source gluing, joint cancellation, and `CYSEL` remain open |
 | rich-core and closed-place towers | exact source algebra plus ambient counting | formal leverage `<(4/5)^r` on declared rich sources | weighted Boolean transfer is open |
 | entropy/conductor phase diagram | exact ambient theorem; conditional loss model | threshold `theta<delta log(5/4)` | typical ambient order statistics do not imply a weighted-source theorem |
 | exact cycle-selector mass | exact characteristic-zero representation theorem | every exact full-`S_d` presentation has forced mass `2^(d-1)/d`; product costs multiply | weaker/source-specific selectors and joint geometric cancellation remain open |
 | derangement-relaxed selector | **exact finite**, `2<=d<=10` | fixed-point vanishing still has optimum `2^(d-1)/d`, uniquely at the exact cycle indicator | all-`d` optimality is conjectural; no asymptotic or native-source lower bound |
+| selector `tanh` calibration | exact all-degree symmetric-function theorem and selector-range firewalls | natural dual is `tanh(A)`; nonhooks have the sharp `(d-4)/d` gap; descent-set-only saturated repairs are rigid; zero-hook lifts exist; even-cycle-only perturbations never lower mass | coefficientwise contraction on odd cycle counts `>=3` remains open; no all-`d` optimum follows |
+| selector Young-lattice propagation | exact all-degree necessary condition | any real or complex contractive optimum obeys `Re((-1)^(j-1)X_j)>=2^d/d-C(d,j)` and remains active to within `(1/2+o(1))sqrt(d log d)` of the two-row equator | no lift is constructed and the deeper Young-lattice boxes may still obstruct existence |
 | first notch boundary | exact all-odd-`q` theorem | no first-boundary zeros for `n>=4` | deeper profiles remain |
 | second notch boundary | exact reduction and fixed-`q` asymptotic using standard prime-polynomial AP input | density begins at `M^-2`, with exact `M^-3` term | detector zeros only; no individual L-function zero |
 | third notch boundary | exact reduction and fixed-`q` asymptotic using the same standard input | density begins at `M^-2`; `D_5+D_3` first enters at `M^-3` | growing-depth aggregate remains open |
 | all fixed notch depths | exact residual/profile algebra and fixed-`q,j` asymptotic using the standard fixed-modulus prime-polynomial progression theorem | every fixed depth has a closed `M^-2/M^-3` law and is `O(M^-2)` | stable range and `O_(q,j)(M^-4)` remainder are not growing-`j` uniform |
 | local delta-tower anti-concentration | exact all-odd-`q` probability bound | `delta_(j,s,q)=O_q(sqrt(j)q^-j)` uniformly in `s`; displayed `M^-2/M^-3` coefficient towers are absolutely summable | does not justify summing conductor layers or complementary growing-depth profiles |
+| logarithmic-depth zero firewall | exact whole-layer upper bound using standard function-field Dirichlet RH | for fixed `epsilon>0` and sufficiently large `h`, all layers through `J<=(1/2-epsilon)log_q h` contribute `O_q(M^-2)` without a profile remainder | conditioning the full lower-sign target hits an exponential CRT-modulus barrier |
+| profile chi-square bridge | exact Parseval gate plus standard function-field RH bounds | an explicit sufficient condition permits a logarithmic gap to the residue-entropy wall while retaining `O_q(M^-2)` | `ell_r<=M/2` is the realized corollary; no discrete near-wall landing is asserted for every `M` |
+| squareclass entropy compression | exact detector quotient, Parseval gate, and standard function-field RH bounds | replacing full units by `K_r` quadratic signs gives a safe terminal scale `r=log_q M+log_q log M+O_q(1)` and total `O_q(M^-2)` | mesoscopic depth needs the open `KRAWLS` orbit-cancellation estimate; termwise character bounds cannot supply it |
 | full rational aperture | exact all-odd-`q` theorem | supersingular auxiliary curve forces every odd full-place correlation to vanish | not a varying-closed-place FFPS estimate |
 | `Sym^12` stable channel | exact semisimplified representation result | `G=0` | does not decide Eisenstein Galois realization |
 | `Sym^12` master contradiction | exact source-relative rows at `p=3,5,7` | Shmakov displayed branch differs by `-p`; unique formal repair is `[5,1] tensor L` | three rows do not prove an all-`q` cohomological identity |
@@ -78,6 +87,19 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
 - `5948711a9` independently audited and committed the prefix-energy theorem:
   the Gram shift, ratio-16 support, BV/RH implications, exceptional Euler
   factor, logarithmic diagonal, and off-diagonal equivalence all replay.
+- `2582feec6` disintegrates that form into exact exceptional-`67` primitive
+  rays, proves the fixed-ray logarithmic law and an unconditional
+  `O(H log(2X))` low-height aggregate, and localizes the equivalent RH gate
+  to balanced high primitive height.
+- `0a2bbc828` exchanges primitive height with the common squarefree factor
+  exactly, reconstructs the whole off-diagonal from dyadic shells, and
+  proves the conditional implication `PRIMLS => RH`.  Its direct-pair replay
+  retains the moving prefix boundary rather than replacing it asymptotically.
+- `dd1bd8766` diagonalizes the same panels twice: finite coprimality Möbius
+  inversion gives a signed one-dimensional Gram form, and biased-Boolean
+  Parseval gives the exact `d^-1` divisor-sieve spectrum.  Its surviving
+  zero mode and frozen large-prime rows rule out cancellation by sieve-label
+  averaging alone without asserting any new estimate.
 
 ### Selector and notch extensions
 
@@ -102,6 +124,42 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
   ten tests in both modes, an 81-test related suite, Ruff, source locks, and an
   independent final audit all pass. It expressly retains the growing-depth
   remainder and stable-range fence.
+- `a0f5e07ba` bypasses that remainder by marking one least-degree prime and
+  counting a complete conductor layer.  Exact CRT anti-concentration,
+  prime-polynomial progressions, and the rough-complement bound give the
+  first genuinely growing logarithmic window; `9f439e623` repairs its final
+  display delimiter without changing the theorem.
+- `71c738b72` averages the complete profiles, handles repeated degrees by
+  Newton identities, and proves the conditional finite-residue entropy gate.
+  `c6d68eaaf` hardens the replay to odd prime powers and makes explicit that
+  its logarithmic-gap criterion need not be attained by the discrete
+  `ell_r` for every `M`.
+- `d2447e002` quotients that gate by the detector's exact quadratic-sign
+  coordinates.  The resulting `2^K_r` entropy bound gives the additive
+  `log log M` depth extension.  An independent audit rederived its
+  normalization, conductor bound, asymptotic wall, monotone summation, and
+  Krawtchouk method no-go; `KRAWLS` remains explicitly unproved.
+- `ac2af8288`, `7658c79a4`, and `c58bbd89a` identify the natural selector
+  dual as `tanh(A)`, prove the all-degree zero-hook image theorem, and exclude
+  every nonzero perturbation supported solely on even-cycle-count
+  derangements globally.  An independent
+  read-only audit rederived all three arguments and found only a degree-one
+  proof-endpoint wording fix, recorded in `b59fd5b2e`.
+- `0909baac5` imports the Adin--Reiner--Roichman cyclic-descent theorem with
+  explicit attribution to prove the sharp all-degree nonhook capacity gap,
+  and proves that every descent-set-only saturated tableau weighting is the
+  original parity signing.  `92dd0b7e8` is a formatting-only test repair.
+- `5ee641cf6` proves that every real or complex contractive optimal selector
+  lift must carry nonzero two-row predecessor potentials in alternating
+  half-planes through
+  `d/2-(1/2+o(1))sqrt(d log d)` layers. An independent audit rederived the
+  hook recurrence, telescope, and threshold constant and replayed the packet
+  in both modes; it remains explicitly necessary rather than constructive.
+- `c81e69db1` constructs the universal ternary norm/orientation/cubic torsor;
+  `2d83d5d4a` proves the direct-product monodromy and local product-mass
+  no-go. The physical layer is bounded-rank and linearly ramified, while the
+  owner/Boolean/phase source tensor and cancellation of the exact cycle
+  selector remain open.
 
 ### Genus-two `Sym^12`
 
@@ -160,6 +218,39 @@ JSON:
     anti-concentration is therefore uniform in the channel index.
 14. The `Sym^12` finite rows are raw-`T` plus locked inventory, not an
     independent enumeration of `Hhat_12`.
+15. The primitive-ray split retains all five exceptional `67` orientations;
+    every common radial factor and prefix cutoff is exact before asymptotics.
+16. Weighted Cauchy applied to the maximal `L2(d^-1)` `PRIMLS` gate costs
+    only logarithms across the common factor and dyadic shells.  The gate is
+    sufficient, not silently called equivalent to RH.
+17. The selector `tanh` functional saturates hooks but has explicit forbidden
+    odd-cycle derangement support; algebraic lift existence is separated from
+    coefficientwise contractivity.
+18. Marked-prime CRT counting controls complete depth layers rather than
+    summing a nonuniform fixed-depth remainder.
+19. Profile-weighted Parseval prevents a spurious factor equal to the number
+    of profiles; the repeated-degree prime choices remain squarefree through
+    Newton's elementary-symmetric identity.
+20. Primitive-pair Boolean Parseval retains its zero frequency and is stated
+    only on finite divisor cubes; it does not replace the truncated `d<=D`
+    average or prove `PRIMLS`.
+21. Cyclic descent is used only for straight nonhooks; the rotation argument
+    excludes cyclic-descent sizes `1,d-1`, giving the sharp `(d-4)/d` gap.
+    Descent-set rigidity is fenced from general tableau-local corrections.
+22. The notch squareclass quotient is lossless for the detector coordinates,
+    not for the full conductor distribution.  Its `2^K_r` character count is
+    exact; degree-permutation projection is exact, while `KRAWLS` and its
+    `sqrt M` scale are only a named conditional target.
+23. The universal norm torsor uses scalar norm-square orientations only after
+    exact irreducibility selection; on reducible etale fibres a total-norm
+    square is not confused with factorwise squarehood.
+24. Direct-product monodromy forces the selector-by-physical termwise mass
+    only inside the clean positive norm/Kummer layer; it is not promoted to a
+    no-go for the unbuilt virtual FFPS source tensor or a prime-polynomial
+    trace formula.
+25. The Young-lattice telescope is a necessary consequence of hook
+    saturation and two-row dimension boxes. Its propagation depth is not
+    called an existence theorem or an all-degree optimum.
 
 ## 5. Final replay set
 
@@ -174,11 +265,19 @@ python -B research/l-families/atlas/function_field/ffps_mollified_geodesic_rh_cr
 python -B research/l-families/atlas/function_field/ffps_mollified_beta_finite_scout.py --check
 python -B research/l-families/atlas/function_field/ffps_boundary_field_finite_scout.py --check
 python -B research/l-families/atlas/function_field/ffps_boundary_field_near_correlation_criterion.py --check
+python -B research/l-families/atlas/function_field/ffps_boundary_field_primitive_ray_localization.py --check
+python -B research/l-families/atlas/function_field/ffps_boundary_field_primitive_pair_large_sieve_gate.py --check
 python -B research/l-families/atlas/function_field/ffps_exact_cycle_selector_mass_no_go.py --check
 python -B research/l-families/atlas/function_field/ffps_derangement_selector_finite_l1_optimization.py --check
+python -B research/l-families/atlas/function_field/ffps_derangement_selector_tanh_calibration.py --check
+python -B research/l-families/atlas/function_field/ffps_selector_young_lattice_propagation_obstruction.py --check
+python -B research/l-families/atlas/function_field/ffps_ternary_universal_norm_torsor.py --check
 python -B research/l-families/atlas/function_field/quadratic_family_third_boundary_trace_zero_density.py --check
 python -B research/l-families/atlas/function_field/quadratic_family_fixed_depth_trace_zero_density.py --check
 python -B research/l-families/atlas/function_field/quadratic_family_local_delta_tower_anticoncentration.py --check
+python -B research/l-families/atlas/function_field/quadratic_family_logarithmic_depth_zero_firewall.py --check
+python -B research/l-families/atlas/function_field/quadratic_family_profile_chi_square_bridge.py --check
+python -B research/l-families/atlas/function_field/quadratic_family_squareclass_entropy_compression.py --check
 python -B research/l-families/atlas/function_field/genus2_sym12_arithmetic_inventory.py --check
 python -B research/l-families/atlas/function_field/genus2_sym12_finite_cusp_trace_scout.py --check
 python -B research/l-families/atlas/function_field/genus2_sym12_conditional_endoscopic_closure.py --check
@@ -196,8 +295,13 @@ tests.test_ffps_mollified_geodesic_rh_criterion
 tests.test_ffps_mollified_beta_finite_scout
 tests.test_ffps_boundary_field_finite_scout
 tests.test_ffps_boundary_field_near_correlation_criterion
+tests.test_ffps_boundary_field_primitive_ray_localization
+tests.test_ffps_boundary_field_primitive_pair_large_sieve_gate
 tests.test_ffps_exact_cycle_selector_mass_no_go
 tests.test_ffps_derangement_selector_finite_l1_optimization
+tests.test_ffps_derangement_selector_tanh_calibration
+tests.test_ffps_selector_young_lattice_propagation_obstruction
+tests.test_ffps_ternary_universal_norm_torsor
 tests.test_genus2_sym12_arithmetic_inventory
 tests.test_genus2_sym12_finite_cusp_trace_scout
 tests.test_genus2_sym12_conditional_endoscopic_closure
@@ -209,6 +313,9 @@ tests.test_quadratic_family_second_boundary_zero_density_third_order
 tests.test_quadratic_family_third_boundary_trace_zero_density
 tests.test_quadratic_family_fixed_depth_trace_zero_density
 tests.test_quadratic_family_local_delta_tower_anticoncentration
+tests.test_quadratic_family_logarithmic_depth_zero_firewall
+tests.test_quadratic_family_profile_chi_square_bridge
+tests.test_quadratic_family_squareclass_entropy_compression
 tests.test_quadratic_family_full_rational_place_notch
 tests.test_ffps_cyclic_torsor_relative_projector
 tests.test_ffps_finite_abelian_subgroup_mask_compression
@@ -260,14 +367,22 @@ Open and load-bearing:
 - fixed-mollified/native-reflection one-sided subpower mass;
 - compact-boundary-field one-sided subpower mass, an equivalent formulation;
 - compact-ratio off-diagonal beta correlation, another equivalent formulation;
+- high-primitive-height beta cancellation; low and fixed rays are now removed;
+- the stronger three-panel `PRIMLS` maximal Möbius-pair estimate;
 - global varying-place relative complex and signed trace cancellation;
-- a weaker/source-specific or jointly cancelled closed-place selector;
+- native owner/Boolean/Artin--Schreier gluing to the universal norm torsor;
+- a weaker/source-specific, prime-polynomial, or jointly cancelled closed-place
+  selector;
+- coefficientwise contractivity of the all-degree selector lift on odd-cycle
+  derangement strata; perturbations supported solely on even-cycle-count
+  derangements and every bounded-depth two-row repair are now excluded;
 - weighted Boolean/owner rich-core transfer;
 - any positive-average-to-principal domination route not using the exact
   signed identities;
 - actual Galois realization of the `Sym^12` one-Tate carrier;
-- growing-depth profile counting, stable-range control, and a uniform
-  `O_(q,j)(M^-4)` remainder; local delta-tower decay is now proved;
+- mesoscopic control beyond the squareclass notch wall; the exact quadratic
+  quotient now crosses the generic residue wall to
+  `r=log_q M+log_q log M+O_q(1)`, while `KRAWLS` is open;
 - external novelty and priority review.
 
 ## 8. Extraction recommendation

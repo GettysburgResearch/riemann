@@ -29,6 +29,7 @@ class SelectorYoungLatticePropagationObstructionTest(unittest.TestCase):
         self.assertFalse(payload["scope"]["constructive_lift_proved"])
         self.assertFalse(payload["scope"]["all_degree_optimum_proved"])
         self.assertFalse(payload["scope"]["linear_programming_used"])
+        self.assertTrue(payload["scope"]["complex_coefficients_allowed"])
         self.assertEqual(payload["scope"]["maximum_replay_degree"], 256)
         self.assertEqual(len(payload["panels"]), 8)
 
@@ -57,6 +58,24 @@ class SelectorYoungLatticePropagationObstructionTest(unittest.TestCase):
                     MODULE.two_row_dimension(degree, index),
                     math.comb(degree, index) - math.comb(degree, index - 1),
                 )
+                self.assertEqual(
+                    MODULE.two_row_dimension(degree, index),
+                    MODULE.two_row_hook_dimension(degree, index),
+                )
+
+    def test_full_hook_recurrence(self) -> None:
+        for degree in range(5, 65):
+            z_value = MODULE.cycle_dual_mass(degree)
+            for depth in range(degree):
+                left = (
+                    MODULE.hook_predecessor_potential(degree, depth - 1)
+                    if depth > 0
+                    else Fraction(0)
+                )
+                if depth < degree - 1:
+                    left += MODULE.hook_predecessor_potential(degree, depth)
+                right = (-1) ** depth * (math.comb(degree - 1, depth) - z_value)
+                self.assertEqual(left, right)
 
     def test_forced_depth_is_single_threshold(self) -> None:
         for degree in range(5, 65):

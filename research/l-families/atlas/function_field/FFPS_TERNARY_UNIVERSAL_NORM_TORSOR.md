@@ -297,7 +297,7 @@ Its Frobenius trace is one on \(d\)-cycles and zero on every other cycle
 type.  Consequently
 
 \[
- \mathcal Q_{a,b}=mathcal Q_a\boxtimes\mathcal Q_b
+ \mathcal Q_{a,b}=\mathcal Q_a\boxtimes\mathcal Q_b
 \tag{4.2}
 \]
 
@@ -377,6 +377,11 @@ Taking \(W\) to be the regular, selected, or relative physical
 representation gives exactly the three masses obtained from (4.3) and
 (4.4).  Therefore no cancellation internal to the bounded norm/Kummer layer
 can make the exact cycle selector affordable.
+
+Here (4.7) is the support/semisimple rank mass of the **unnormalized honest**
+representation (W). The factors (1/16) in (3.4) and (1/4) in (3.3)
+are trace normalizations and endomorphism weights, not claims of fractional
+object multiplicity.
 
 This local direct-product no-go does **not** rule out cancellation after
 tensoring with the complete owner/Boolean/incidence FFPS source complex.  Such
