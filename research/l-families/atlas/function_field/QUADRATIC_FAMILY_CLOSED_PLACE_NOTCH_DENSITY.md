@@ -401,16 +401,22 @@ Using the exact stored values of `Z` and only rounding the final display gives
 These two finite rows check the predicted parity direction and scale; they are
 not used to prove (25)--(26).
 
-The identification with `4*omega(4)` is the standard rough-polynomial
-Buchstab law. Panario and Richmond study precisely the probability that a
-random polynomial over a finite field has no irreducible factor below a
-degree cutoff and express the result in terms of Buchstab's function:
+The leading identification `C_0=4*omega(4)` is the standard
+rough-polynomial Buchstab law. Panario and Richmond study precisely the
+probability that a random polynomial over a finite field has no irreducible
+factor below a degree cutoff and express its first-order behavior in terms of
+Buchstab's function:
 [D. Panario and B. Richmond, *Analysis of Ben-Or's polynomial
 irreducibility test*, Random Structures & Algorithms **13** (1998),
 439--456](https://doi.org/10.1002/%28SICI%291098-2418%28199810/12%2913%3A3/4%3C439%3A%3AAID-RSA13%3E3.0.CO%3B2-U).
-No novelty is claimed for the roughness asymptotic. The packet contribution is
-the exact bounded squarefree DP and its source-locked identification with the
-closed-place detector's structural-zero subset.
+A sharper general first-order treatment is given by
+[A. Weingartner, *On the degrees of polynomial divisors over finite fields*](https://arxiv.org/abs/1507.01920).
+No novelty is claimed for the leading `4*omega(4)/M` term. The squarefree
+specialization and explicit parity-sensitive `M^-2` refinement are derived
+here, but no external priority is claimed for the refinement without a
+comprehensive literature review. The packet contribution also includes the
+exact bounded DP and its source-locked identification with the closed-place
+detector's structural-zero subset.
 
 ## 4. What the zero does and does not say
 

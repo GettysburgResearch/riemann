@@ -47,7 +47,7 @@ distinguishes current direct relevance from possible upside.
 | six-place connected law and weight ceiling | A | exact corollary of the multi-place identity, Weil functional equation, set-partition formula, and symplectic exterior-character algebra; no external novelty claim | D direct / B methodologically |
 | universal fixed-degree weight notch | A | exact symbolic corollary of the locked all-degree coefficient identity and standard symplectic primitive-exterior decomposition; no external novelty claim | D direct / B methodologically |
 | closed-place conductor notch | A | known Euler/profile, infinity, and exterior-algebra ingredients reorganized into one exact truncated-profile mechanism; the boundary zeros are likely folklore corollaries, not a priority claim | D direct / B methodologically |
-| closed-place structural-zero density | A | exact bounded counts plus a direct special-case derivation of the standard Panario--Richmond/Buchstab rough-polynomial law; the source-locked detector interpretation and parity packaging are the candidate contribution | D direct / B methodologically |
+| closed-place structural-zero density | A | the leading Panario--Richmond/Buchstab term is standard; the exact squarefree specialization, source-locked detector interpretation, and parity-sensitive refinement are derived here without an external priority claim | D direct / B methodologically |
 
 ## Best paper-sized theorem stack
 
@@ -486,10 +486,12 @@ squarefree count multiplies both coefficients by `q/(q-1)`. The producer
 replays all 237 pairs `q in {3,5,7}`, `2<=n<=80`, binds every row into a
 canonical digest, and checks it against an independent one-/two-/three-factor
 computation. It uses only irreducible-count formulas and a coefficient DP.
-Panario--Richmond already establish the
-general rough-polynomial Buchstab law; this release claims the exact
-structural-zero bridge and its bounded replay, not novelty for that
-asymptotic or a converse classification of the full zero locus.
+Panario--Richmond establish the general first-order rough-polynomial
+Buchstab law, so this release claims no novelty for the leading `C_0/M`
+term. The squarefree specialization and explicit parity-sensitive `M^-2`
+refinement are derived here, but no external priority is claimed absent a
+comprehensive review. The exact structural-zero bridge and bounded replay do
+not provide a converse classification of the full zero locus.
 
 For rational marks, a formal character-dimension entropy crossover cannot be
 promoted to an arithmetic phase diagram: simultaneous proportional growth

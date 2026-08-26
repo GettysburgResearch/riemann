@@ -265,13 +265,15 @@ fixed-`q` law
 
 where `C_0=4 omega(4)=2.2458329656...`,
 `D_even=-4(1+log 2)`, and `D_odd=-(4/3)(1+log 2)`. Conditioning on
-squarefreeness multiplies these coefficients by `q/(q-1)`. The Buchstab
-rough-polynomial asymptotic is standard; the atlas contribution is its exact
-source-locked identification with a structural detector-zero stratum. This
-stratum is a certified subset, not a classification of every accidental
-raw zero. All 237 bounded DP rows are bound into one canonical digest and
-independently recomputed from the one-/two-/three-factor formula; the 45
-expanded rows are a sparse readable projection of that authenticated replay.
+squarefreeness multiplies these coefficients by `q/(q-1)`. The leading
+`4 omega(4)/M` Buchstab term is standard. The squarefree specialization and
+explicit parity-sensitive `M^-2` refinement are derived here, without an
+external priority claim pending comprehensive review. The source-locked
+detector-zero stratum is a certified subset, not a classification of every
+accidental raw zero. All 237 bounded DP rows are bound into one canonical
+digest and independently recomputed from the one-/two-/three-factor formula;
+the 45 expanded rows are a sparse readable projection of that authenticated
+replay.
 
 A separate growing-parameter audit found an important firewall. On rational
 marks, the formal compact supremum has a character-dimension entropy
@@ -382,7 +384,7 @@ Python replays are mandatory because assertions may not carry correctness.
 | **PROVED FROM LOCKED SOURCE** | the six-place raw sum is `(q^2-21)t_A+(q-6)b_A-q^2+6q-21`, its connected correction is `O(q^-7)`, and the all-`m` top-weight channel is `q^(5/2)(e_3-e_5)`, with an exact genus-four cancellation at `m=9,10` | the second Frobenius-power channel re-enters at six marks, while symplectic exterior algebra exposes a nonmonotone weight ceiling; all scales are fixed-`m` upper envelopes, not distribution or attainment claims |
 | **PROVED FROM LOCKED SOURCE** | for every fixed family degree `n>=2`, the marked-place top channel is `(-1)^n q^(n/2)(e_n-e_(n-2))`; it vanishes at `m=2n-1,2n`, with exact odd/even residual expansions and connected correction `O_(n,m)(q^-n)` | mark count is an exact exterior-character spectrometer with a universal interior notch; the `n=2,m=3` connected cancellation is isolated rather than hidden in a generic asymptotic |
 | **PROVED FROM LOCKED SOURCE** | for a squarefree primitive closed-place conductor of degree profile `(d_i)`, the squarefree-family kernel is `(1-qu^2)/prod_i(1-u^(2d_i))`; the same top notch depends only on total conductor degree, while lower layers are governed by the relevant truncated profile coefficients | high-degree closed places remove the `m<=q` feasibility wall; an odd-notch conductor with every `d_i>floor(n/2)` gives an exact raw-sum zero, whereas the even notch retains the split-infinity channel |
-| **EXACT FINITE + PROVED ASYMPTOTIC** | the support-forced odd-notch zero count is `[x^M]prod_(d>floor(n/2))(1+x^d)^(I_q(d))`; at fixed `q` its squarefree-conditioned density is `q*C_0/((q-1)M)` with explicit parity corrections | the exact DP replays and digest-binds 237 bounded rows, independently checked by factor count, without enumerating a polynomial; `C_0=4 omega(4)` is standard rough-polynomial theory, while the detector-stratum bridge is source-locked and no converse zero classification is claimed |
+| **EXACT FINITE + PROVED ASYMPTOTIC** | the support-forced odd-notch zero count is `[x^M]prod_(d>floor(n/2))(1+x^d)^(I_q(d))`; at fixed `q` its squarefree-conditioned density is `q*C_0/((q-1)M)` with explicit parity corrections | the exact DP replays and digest-binds 237 bounded rows, independently checked by factor count, without enumerating a polynomial; the leading `C_0=4 omega(4)` term is standard, while the squarefree specialization, parity refinement, and detector-stratum bridge are derived here without a priority claim or converse zero classification |
 | **EXACT FINITE + REFUSAL** | three-field data retain the ambiguity module `(q-3)(q-5)(q-7)Q(q)` | the inference engine refuses to name a cohomology or eigenform packet without a tower and geometric adapter |
 | **PROVED** | the high-rank `SU(2)` character law has an exact cubic tail; its limiting variance exists but absolute moments of order at least three diverge, while finite-rank `2k` moments grow like `n^(2k-3)` | weak limits, rank limits, and high moments do not commute because of a thin endpoint layer |
 | **PROVED** | that endpoint layer has a uniform mesoscopic tail constant `16/(9 pi^2)`, an exact fixed-`lambda` crossover profile, and hard-truncated, Winsorized, and cubic-moment coefficients | rare-event tomography now resolves the rank-scale boundary rather than merely detecting moment divergence |

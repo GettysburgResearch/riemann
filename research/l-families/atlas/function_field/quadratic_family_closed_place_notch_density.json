@@ -3,7 +3,7 @@
     "Every finite numerator, denominator, and density fraction in the table is exact integer arithmetic for the stated monic conductor family.",
     "The support condition is sufficient for the source-locked raw family sum S_(n,Q) to vanish exactly; no converse for all accidental or representation-theoretic cancellations is claimed.",
     "The exact zero is a raw family-sum statement, not a connected-cumulant zero and not a zero of any individual L-function.",
-    "The fixed-q asymptotic is a standard rough-polynomial/Buchstab law, also derived here from the at-most-three-factor decomposition; it is not inferred from the finite table and no novelty is claimed for it.",
+    "The leading fixed-q C0/M term is the standard rough-polynomial/Buchstab law and is not inferred from the finite table. The squarefree specialization and parity-sensitive M^-2 refinement are derived here, with no external priority claim absent a comprehensive literature review.",
     "Conductors are monic squarefree polynomials, not affine-isomorphism classes of curves or a quotient by twists.",
     "No memberwise sign, zero-distribution theorem, number-field transfer, RH, or GRH statement is proved."
   ],
@@ -813,11 +813,11 @@
     ]
   },
   "packet_files_lf_sha256": {
-    "note": "f4cc0860c904dddeea5f76404846290dabf2b922ae593a064dd58a0f8f746040",
-    "producer": "758acd3e9e14f3f515fbd2cfc47c32cc6efbf415335809122edaf585935c19cd",
+    "note": "b5b1622fdf3fde43eedb44eba2613dfa584d405105d6e72aabc137f66d931abb",
+    "producer": "af684a1f9c37b66282face7b8fc0b168c6407c098ba6f2ca935e5e71f9deb719",
     "test": "a8ca6480584a517e56e84b88a97b3c61768f967d2870433866f03881873887be"
   },
-  "payload_sha256": "f4a323840b9667d6a3ef0aa2eb9eb9522f7e280edb5f9ebac3d37d56e57c8eff",
+  "payload_sha256": "dcbc1d521353507441a9827d111baca91c37f3e2426e86f074a4265b91a1f658",
   "resource_contract": {
     "curve_enumeration": false,
     "dp_transitions": 1220169,
@@ -909,7 +909,7 @@
       "proof": "The two-factor harmonic sum has M^-2 coefficient B_eta=(8-16*eta)/3. Put alpha_M=L/M. Euler--Maclaurin is applied on the actual lattice-aligned triangle D_(alpha_M): its half-boundary coefficient tends to 16*log(2), while expanding the interior integral from alpha_0=1/4 to alpha_M=1/4+eta/M contributes -32*eta*log(2)/M. Boundary variation and corners are O(M^-2) before the outer factor 1/(6*M). Thus the three-factor M^-2 coefficient is B_eta*log(2), D_eps=B_eta*(1+log(2)), the remaining Euler--Maclaurin term is O(M^-3), and the irreducible-count/repetition error is exponentially small.",
       "theorem": "Z_(q,n)/q^M=C0/M+D_eps/M^2+O_q(M^-3), and delta_(q,n)=C0/((1-q^-1)*M)+D_eps/((1-q^-1)*M^2)+O_q(M^-3)"
     },
-    "literature_boundary": "The general rough-polynomial Buchstab law is standard; see Panario--Richmond, Analysis of Ben-Or's polynomial irreducibility test, Random Structures & Algorithms 13 (1998), 439--456, DOI 10.1002/(SICI)1098-2418(199810/12)13:3/4<439::AID-RSA13>3.0.CO;2-U.",
+    "literature_boundary": "The leading C0/M=4*omega(4)/M rough-polynomial law is standard; see Panario--Richmond, Analysis of Ben-Or's polynomial irreducibility test, Random Structures & Algorithms 13 (1998), 439--456, DOI 10.1002/(SICI)1098-2418(199810/12)13:3/4<439::AID-RSA13>3.0.CO;2-U, and Weingartner, On the degrees of polynomial divisors over finite fields, arXiv:1507.01920. The squarefree specialization and explicit parity-sensitive M^-2 refinement are derived here, but no external priority is claimed for the refinement absent a comprehensive literature review.",
     "regime": "fix an odd prime power q and let n tend to infinity through integers, with M=2*n-1 and L=floor(n/2)+1",
     "theorem": "Z_(q,n)/q^M=C0/M+O_q(M^(-2)), hence delta_(q,n)=C0/((1-q^(-1))*M)+O_q(M^(-2))"
   },
