@@ -1,0 +1,36 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_RATIONAL_FINITE_FIELD_ORTHOGONALITY",
+  "checks": {
+    "local_occupancy_sharpness": 120,
+    "one_modulus_exact_identity": 960,
+    "one_modulus_principal_contraction": 960,
+    "quadratic_root_fibre": 66,
+    "sharp_owner_bound_algebra": 4000,
+    "tensor_exact_identity": 160,
+    "tensor_principal_contraction": 160
+  },
+  "open": {
+    "coherent_short_core_owner_conductor_moment": true,
+    "hbcqdsp102888": true,
+    "riemann_hypothesis": true
+  },
+  "prime_moduli": [
+    5,
+    7,
+    11,
+    13,
+    17,
+    19
+  ],
+  "proof_object_sha256": "63f7cbba47dea60cf308b26e46162b4dc23f54798f7ce408424bf7f1058f4872",
+  "proved": {
+    "hilbert_square_phase_identity": true,
+    "principal_contraction_without_phase_cardinality": true,
+    "principal_quadratic_root_fibre": true,
+    "sharp_fixed_owner_bound_algebra": true,
+    "sharp_local_occupancy_operator_norm": true,
+    "tensor_square_phase_identity": true
+  },
+  "total_checks": 6426,
+  "verdict": "PASS_X_106020_SQUARE_PHASE_OWNER_CONDUCTOR_FAMILY"
+}

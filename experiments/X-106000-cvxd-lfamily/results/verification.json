@@ -1,0 +1,89 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_RATIONAL_FINITE_FIELD",
+  "checks": {
+    "character_orthogonality_mod_11": 100,
+    "character_orthogonality_mod_13": 144,
+    "character_orthogonality_mod_5": 16,
+    "character_orthogonality_mod_7": 36,
+    "complete_line_sum_mod_11": 11,
+    "complete_line_sum_mod_13": 13,
+    "complete_line_sum_mod_5": 5,
+    "complete_line_sum_mod_7": 7,
+    "function_field_squareclass_F25": 331776,
+    "function_field_squareclass_F9": 4096,
+    "gauss_norm_counting_mod_11": 10,
+    "gauss_norm_counting_mod_13": 12,
+    "gauss_norm_counting_mod_5": 4,
+    "gauss_norm_counting_mod_7": 6,
+    "marked_67_completion_mod_11": 300,
+    "marked_67_completion_mod_13": 300,
+    "marked_67_completion_mod_5": 300,
+    "marked_67_completion_mod_7": 300,
+    "nonquadratic_core_visibility_mod_11": 100,
+    "nonquadratic_core_visibility_mod_13": 144,
+    "nonquadratic_core_visibility_mod_5": 16,
+    "nonquadratic_core_visibility_mod_7": 36,
+    "principal_completion_mod_11": 300,
+    "principal_completion_mod_13": 300,
+    "principal_completion_mod_5": 300,
+    "principal_completion_mod_7": 300,
+    "quadratic_core_blindness_mod_11": 100,
+    "quadratic_core_blindness_mod_13": 144,
+    "quadratic_core_blindness_mod_5": 16,
+    "quadratic_core_blindness_mod_7": 36,
+    "rational_second_moment_mod_11": 1610,
+    "rational_second_moment_mod_13": 2316,
+    "rational_second_moment_mod_5": 260,
+    "rational_second_moment_mod_7": 582,
+    "squareclass_lines_mod_11": 10000,
+    "squareclass_lines_mod_13": 20736,
+    "squareclass_lines_mod_5": 256,
+    "squareclass_lines_mod_7": 1296,
+    "uniform_family_dimension_barrier": 192
+  },
+  "function_fields": [
+    {
+      "cardinality": 9,
+      "modulus": [
+        1,
+        0,
+        1
+      ],
+      "p": 3
+    },
+    {
+      "cardinality": 25,
+      "modulus": [
+        2,
+        0,
+        1
+      ],
+      "p": 5
+    }
+  ],
+  "open": {
+    "bqsp102870": true,
+    "hybrid_collision_line_moment": true,
+    "number_field_trace_transfer": true,
+    "principal_leverage_at_subpower_cost": true,
+    "riemann_hypothesis": true
+  },
+  "prime_moduli": [
+    5,
+    7,
+    11,
+    13
+  ],
+  "proof_object_sha256": "a23b1c5a739a5634593df8c6ec750a857dd8690e79c31fc8b195f0859c2786d1",
+  "proved": {
+    "character_orthogonality": true,
+    "finite_field_gauss_norm": true,
+    "function_field_collision_mirror": true,
+    "nonquadratic_core_visibility": true,
+    "principal_euler_completion": true,
+    "squareclass_collision_lines": true,
+    "uniform_family_dimension_barrier": true
+  },
+  "total_checks": 376476,
+  "verdict": "PASS_X_106000_CVXD_LFAMILY_SQUARECLASS_MOMENTS"
+}

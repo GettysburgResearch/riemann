@@ -1,0 +1,41 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_RESIDUE_GRAM_AND_HOMOGENEITY",
+  "checks": {
+    "at_most_two_core_roots": 2992,
+    "exact_quadratic_residue_gram": 1200,
+    "homogeneity_degree_separation": 160,
+    "low_crowding_cauchy": 3000,
+    "many_owner_one_residue_counterexample": 40,
+    "partial_matching_does_not_bound_owner_count": 40,
+    "quartic_pair_tensor_identity": 40
+  },
+  "open": {
+    "bpoe103300": true,
+    "hqoro106071_high_owner_crowding": true,
+    "riemann_hypothesis": true
+  },
+  "prime_fields": [
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31
+  ],
+  "proof_object_sha256": "145e8e6e7fa3cc38c75fef3083ede2a6dfdb7feba6f441222e0605921315d9a7",
+  "proved": {
+    "at_most_two_cores_per_owner_residue": true,
+    "low_owner_crowding_cells_are_closed": true,
+    "many_owner_one_residue_counterexample": true,
+    "quadratic_character_moment_is_residue_gram": true,
+    "quartic_pair_tensor_has_degree_four": true,
+    "quartic_to_quadratic_uniform_adapter_rejected": true
+  },
+  "scope": "finite exact homogeneity, residue-Gram, root-count, and low-crowding algebra only",
+  "total_checks": 7472,
+  "verdict": "PASS_X_106071_QUADRATIC_VS_QUARTIC_FIREWALL"
+}

@@ -1,0 +1,161 @@
+{
+  "analytic_claims_machine_proved": false,
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "canonical_main": {
+    "sha": "573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f"
+  },
+  "claim_namespaces": [
+    "T106020",
+    "T106030"
+  ],
+  "created": "2026-08-24",
+  "programme_issues": [
+    {
+      "issue": 743,
+      "role": "CV/XD common mother and physical restriction"
+    },
+    {
+      "issue": 736,
+      "role": "Dirichlet-character family completion"
+    },
+    {
+      "issue": 737,
+      "role": "function-field mirror"
+    }
+  ],
+  "stacked_parent": {
+    "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+    "pr": 719,
+    "role": "horizon-safe owner-excluded balanced frontier HBCQDSP102888",
+    "sha": "c2e82cfdd254a478731f005b3d83b49d3e1e33ea",
+    "load_bearing_files": [
+      {
+        "path": "claims/lemmas/L-102883-coherent-centered-double-phase-energy.md",
+        "blob_sha": "c2fb229f90b8326b7631c45569246f2ef7061c89"
+      },
+      {
+        "path": "claims/lemmas/L-102886-dyadic-frozen-vaughan-cutoff-removes-transfer-atoms.md",
+        "blob_sha": "26abf63b6a69c449f89313b151931b2dc71a42ad"
+      },
+      {
+        "path": "claims/lemmas/L-102887-horizon-safe-pair-gauge-eliminates-the-largest-two-smooth-boundary.md",
+        "blob_sha": "383aa27fee269645e45c26c12fbd4a97a6b337a8"
+      },
+      {
+        "path": "claims/lemmas/L-102888-owner-excluded-vaughan-has-no-smooth-boundary.md",
+        "blob_sha": "80864f4f83db85daad4e94a68ed0457077d3b9b6"
+      },
+      {
+        "path": "claims/refutations/R-102869-differentiating-the-dynamic-vaughan-cutoff-omits-transfer-atoms.md",
+        "blob_sha": "db9285088f8a37c6214137439f7652113e4cf2c2"
+      }
+    ]
+  },
+  "reviewed_global_occupancy_comparison": {
+    "claim": "BPOE103300",
+    "pr": 707,
+    "sha": "7bf3308d40ac8ed1ba50e404ff6e9c47526d89e4",
+    "path": "claims/theorems/T-103300-balanced-phase-amplitude-and-physical-occupancy-frontier.md",
+    "blob_sha": "08a377a9204d95c547d1455a65c0dde1ae2bc21d"
+  },
+  "new_claims": [
+    {
+      "path": "claims/refutations/R-106001-post-residual-ramified-completion-is-not-source-exact.md",
+      "blob_sha": "1f256d94dcff97dd80b9bd6ab5427d8910d1b6b4"
+    },
+    {
+      "path": "claims/lemmas/L-106004-full-source-completion-to-hbc-residual-functor.md",
+      "blob_sha": "a44245fdfc95acc14dabade5b95da3860b1f1a9d"
+    },
+    {
+      "path": "claims/theorems/T-106001-horizon-safe-residual-family-synchronization.md",
+      "blob_sha": "0bd960fd8d8946434740385310537fc3d30c55b9"
+    },
+    {
+      "path": "claims/lemmas/L-106020-square-phase-gauss-mellin-identity.md",
+      "blob_sha": "dffea80b5cd7790779397fda1430d30260e79876"
+    },
+    {
+      "path": "claims/lemmas/L-106021-sharp-square-phase-owner-bound.md",
+      "blob_sha": "7b62052f13860b4af48748cb6b2b5199399c3b23"
+    },
+    {
+      "path": "claims/lemmas/L-106022-owner-conductor-even-L-family.md",
+      "blob_sha": "af4d092478bcfd06d2092ba0a79345302b28d056"
+    },
+    {
+      "path": "claims/lemmas/L-106023-function-field-kummer-fourier-square-phase.md",
+      "blob_sha": "c2419a9c34ae5f7ea84e265f09eaecbf0a0766de"
+    },
+    {
+      "path": "claims/lemmas/L-106024-local-squareclass-physical-occupancy-is-a-strict-contraction.md",
+      "blob_sha": "d94787dc2cd1cedd74d33ddc6269daf8de1cc061"
+    },
+    {
+      "path": "claims/theorems/T-106020-owner-conductor-square-phase-frontier.md",
+      "blob_sha": "ca192877a37e9a9aaab2ab5f2a15f8cf6ca5be86"
+    },
+    {
+      "path": "claims/lemmas/L-106025-balanced-vaughan-is-a-mollified-reciprocal-l-defect.md",
+      "blob_sha": "0ca6177c780a2fdfd070c1fe02d7930c0e5ab6a5"
+    },
+    {
+      "path": "claims/lemmas/L-106026-mellin-plancherel-normal-form-for-owner-conductor-moment.md",
+      "blob_sha": "388c7e166a0e6e534d7e908685f71a16de246575"
+    },
+    {
+      "path": "claims/lemmas/L-106027-owner-quadratic-class-partition-preserves-local-leverage.md",
+      "blob_sha": "91d76282af0fa44d6af7a42fbfe862efc5129579"
+    },
+    {
+      "path": "claims/theorems/T-106030-explicit-mollified-owner-conductor-moment-frontier.md",
+      "blob_sha": "5139c15f44d6eb13bf4e2a12c8b33cf5818bc6b5"
+    }
+  ],
+  "proof_objects": [
+    {
+      "path": "experiments/X-106000-cvxd-lfamily/results/verification.json",
+      "exact_checks": 376476,
+      "sha256": "a23b1c5a739a5634593df8c6ec750a857dd8690e79c31fc8b195f0859c2786d1",
+      "verdict": "PASS_X_106000_CVXD_LFAMILY_SQUARECLASS_MOMENTS"
+    },
+    {
+      "path": "experiments/X-106020-square-phase-owner-conductor/results/verification.json",
+      "blob_sha": "977cb41b1375d24fc29018697ac504f1b3aca995",
+      "exact_checks": 6426,
+      "sha256": "63f7cbba47dea60cf308b26e46162b4dc23f54798f7ce408424bf7f1058f4872",
+      "verdict": "PASS_X_106020_SQUARE_PHASE_OWNER_CONDUCTOR_FAMILY"
+    },
+    {
+      "path": "experiments/X-106030-mollified-owner-conductor-moment/results/verification.json",
+      "blob_sha": "babc3f1e3c065f18f0c8a2c3d8ebc8d0c4efbce1",
+      "exact_checks": 38780,
+      "sha256": "48c20069952efd0ec21e3b23a38c0b78af07e3b010e0dbb346e32014e898398b",
+      "verdict": "PASS_X_106030_MOLLIFIED_OWNER_CONDUCTOR_NORMAL_FORM"
+    }
+  ],
+  "proved": {
+    "full_source_completion_order": true,
+    "horizon_safe_residual_adapter": true,
+    "square_phase_gauss_mellin_identity": true,
+    "phase_cardinality_removal": true,
+    "all_owner_weight_fixed_packet_bound": true,
+    "owner_conductor_even_l_family": true,
+    "local_source_paid_principal_leverage": true,
+    "local_squareclass_physical_occupancy": true,
+    "owner_quadratic_class_partition": true,
+    "balanced_vaughan_mollifier_defect_identity": true,
+    "finite_shell_mellin_plancherel_normal_form": true,
+    "finite_field_kummer_fourier_mechanism": true
+  },
+  "open": {
+    "pcm106030": true,
+    "nem106030": true,
+    "socm106020": true,
+    "ffsocm106023": true,
+    "bpoe103300": true,
+    "hbcqdsp102888": true,
+    "riemann_hypothesis": true
+  },
+  "rh_established": false
+}

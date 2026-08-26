@@ -1,0 +1,25 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_CYCLIC_CHARACTER_EXPONENTS",
+  "checks": {
+    "principal_chart_recombination": 2,
+    "quadratic_roots_have_common_square": 40,
+    "square_completion_is_chart_trivial": 360,
+    "tangent_root_fibre_projector": 36384,
+    "tensor_chart_count": 126
+  },
+  "open": {
+    "riemann_hypothesis": true,
+    "sgic102890": true,
+    "tkca106050": true
+  },
+  "proof_object_sha256": "04ae5cfd6495a62bf899618f0ccdae99041f1467c717fb7a974974e533df50e2",
+  "proved": {
+    "principal_chart_recombination": true,
+    "quadratic_root_common_square": true,
+    "square_completion_chart_triviality": true,
+    "tangent_root_fibre_projector": true,
+    "tensor_chart_count": true
+  },
+  "total_checks": 36912,
+  "verdict": "PASS_X_106052_TEMPERATURE_TANGENT_KUMMER_CHARTS"
+}

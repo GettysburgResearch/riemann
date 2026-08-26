@@ -1,0 +1,38 @@
+{
+  "analytic_claims_machine_proved": false,
+  "bqsp102870_proved": false,
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "canonical_main": {
+    "sha": "573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f"
+  },
+  "claim_namespace": "T106000",
+  "created": "2026-08-24",
+  "ffhclm106003_proved": false,
+  "hclm106000_proved": false,
+  "programme_issues": [
+    {
+      "issue": 743,
+      "role": "CV/XD common mother and physical restriction"
+    },
+    {
+      "issue": 736,
+      "role": "Dirichlet-character family completion"
+    },
+    {
+      "issue": 737,
+      "role": "function-field mirror"
+    }
+  ],
+  "proof_object": {
+    "exact_checks": 376476,
+    "sha256": "a23b1c5a739a5634593df8c6ec750a857dd8690e79c31fc8b195f0859c2786d1",
+    "verdict": "PASS_X_106000_CVXD_LFAMILY_SQUARECLASS_MOMENTS"
+  },
+  "rh_established": false,
+  "stacked_parent": {
+    "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+    "pr": 719,
+    "role": "clean four-owner semiprime-squareclass BQSP frontier",
+    "sha": "20e6bc5d961f00818fac86c9252e2535c5d9821a"
+  }
+}

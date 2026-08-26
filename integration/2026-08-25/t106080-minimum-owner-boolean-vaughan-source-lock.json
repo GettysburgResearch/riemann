@@ -1,0 +1,77 @@
+{
+  "schema": "riemann.t106080.minimum-owner-boolean-vaughan-source-lock.v1",
+  "created": "2026-08-25",
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "pre_lock_head": "77cf2f604eb394da798975ec79412bc0bae35098",
+  "programme_issues": [743, 736, 737],
+  "parent": {
+    "pr": 719,
+    "head": "60285de21fafdd1b3c185ddd19b57191a41c08dd",
+    "load_bearing_claims": [
+      "L-102746",
+      "L-102747",
+      "L-102748",
+      "L-102880",
+      "L-102882",
+      "L-102883",
+      "L-102887",
+      "L-102888",
+      "T-102890"
+    ]
+  },
+  "continuation_base": {
+    "pr": 751,
+    "head": "508f52e91bcea116eb92fd40a2c8e8558803405c",
+    "binding_correction": "R-106071"
+  },
+  "claims": [
+    {
+      "path": "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md",
+      "blob_sha": "346cc52420ec65457c2a5accc045d4a85635cc24"
+    },
+    {
+      "path": "claims/lemmas/L-106081-minimum-owner-gauge-forces-a-core-paid-phase-prime.md",
+      "blob_sha": "c46018c068269b612eac5513ca7c7f560326561d"
+    },
+    {
+      "path": "claims/lemmas/L-106082-minimum-owner-blocks-all-lie-in-the-coherent-long-core-range.md",
+      "blob_sha": "2f3598a883497623717c926cad0ae54fce240bee",
+      "status": "proposed complete; hostile source review required"
+    },
+    {
+      "path": "claims/theorems/T-106080-minimum-owner-boolean-vaughan-closure-proposal.md",
+      "blob_sha": "18176982b56437205b5f381a9ed4e28a8013e545",
+      "status": "full proof proposal; not canonically accepted"
+    },
+    {
+      "path": "claims/methodology/M-106080-minimum-owner-boolean-vaughan-hostile-review-contract.md",
+      "blob_sha": "67e462f16703234f173fdf75ee4822256c4f4368"
+    }
+  ],
+  "proof_object": {
+    "path": "experiments/X-106080-minimum-owner-boolean-vaughan/results/verification.json",
+    "blob_sha": "79dd67a34a7b89f4492357b93016a120c54908a0",
+    "checks": 34250,
+    "sha256": "86bb5ac732d2548679b16000a61c1fa40d961c962bde5d44edf9d39c110f98df"
+  },
+  "retained_total_exact_checks": 678395,
+  "proved_exact": {
+    "boolean_vaughan_identity": true,
+    "balanced_support_two_core_primes": true,
+    "minimum_owner_rule": true,
+    "distinguished_owner_square_le_core": true,
+    "dyadic_long_core_range": true,
+    "same_family_centered_kernel": true,
+    "squarefree_lattice_reindexing": true
+  },
+  "review_required": {
+    "boolean_type_I_global_transport": true,
+    "parent_phase_source_allocation_in_boolean_coordinate": true,
+    "full_detector_composition": true
+  },
+  "open_status": {
+    "external_hostile_review": true,
+    "canonical_acceptance": false,
+    "riemann_hypothesis_accepted": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "exact_checks": 183600,
+  "proof_object_sha256": "d24b5505bd463acc7396590c8ddfe5a1fe811eb3c2d7921a37c9d98490c28183",
+  "proved_exact": {
+    "even_odd_are_orthogonal_complements": true,
+    "reflection_is_self_adjoint_involution": true,
+    "reflection_mismatch_energy": true,
+    "reflection_signature": true,
+    "single_reflection_gate_equivalent_to_self_convolution_gate": true,
+    "zero_mode_differential_equivalence": true
+  },
+  "status": {
+    "BCI102990": "open",
+    "REFSIG106150": "open",
+    "SFSC106150": "open",
+    "WKSFSC106150": "open",
+    "riemann_hypothesis": "unproved"
+  },
+  "verdict": "PASS_X_106151_REFLECTION_COMPLEMENTARITY"
+}

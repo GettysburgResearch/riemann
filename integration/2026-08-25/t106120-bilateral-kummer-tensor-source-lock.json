@@ -1,0 +1,63 @@
+{
+  "schema": "riemann.t106120.bilateral-kummer-tensor-source-lock.v1",
+  "created": "2026-08-25",
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "programme_issues": [743, 736, 737],
+  "parent": {
+    "pr": 719,
+    "head": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+    "frontier": "T-102990 / BCI102990"
+  },
+  "binding_firewalls": [
+    "R-106071",
+    "R-106080",
+    "R-106090",
+    "R-106110"
+  ],
+  "claims": [
+    "L-106120",
+    "L-106121",
+    "L-106122",
+    "L-106123",
+    "L-106130",
+    "T-106120"
+  ],
+  "proved": {
+    "bilateral_least_prime_partition": true,
+    "two_same_occurrence_nonzero_phases": true,
+    "complete_two_sided_amplification_before_square": true,
+    "tensor_gauss_even_character_identity": true,
+    "principal_principal_recombination": true,
+    "source_dual_weight": "g^2*ell*rho",
+    "tensor_moment_conditionally_controls_bci102990": true,
+    "atomic_diagonal_subpower": true,
+    "both_semiprime_owner_fields_are_prime_wick_squares": true,
+    "double_product_collision_normal_form": true,
+    "near_prime_core_blocks_subpower": true,
+    "function_field_nonprincipal_prime_owner_shell_square_root_bound": true
+  },
+  "closed_sector": {
+    "condition": "(C/ell)*(D/rho)=X^o(1)",
+    "interpretation": "the product of the two rough cofactors is subpower"
+  },
+  "replay": {
+    "path": "experiments/X-106120-bilateral-kummer-tensor/results/verification.json",
+    "verdict": "PASS_X_106120_BILATERAL_KUMMER_TENSOR",
+    "checks": 1480
+  },
+  "open": {
+    "BTPP106122": true,
+    "BTPN106122": true,
+    "BTNN106122": true,
+    "BTRC106123": true,
+    "BCI102990": true,
+    "riemann_hypothesis": true
+  },
+  "status": {
+    "preferred_frontier": "T-106120",
+    "t106110": "valid asymmetric alternative",
+    "canonical_acceptance": false,
+    "independent_review_required": true,
+    "riemann_hypothesis_proved": false
+  }
+}

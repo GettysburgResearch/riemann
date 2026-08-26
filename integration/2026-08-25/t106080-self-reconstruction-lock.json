@@ -1,0 +1,61 @@
+{
+  "schema": "riemann.t106080.self-reconstruction-lock.v2",
+  "created": "2026-08-25",
+  "corrected": "2026-08-25",
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "reconstructed_head": "8743ba4230097c296dee1dec40d09b59cdf56599",
+  "initial_self_audit_commit": "4f2ad2f74a6b0ce2a00f4c534448355f9ac0f7fe",
+  "parent_pr": 719,
+  "parent_head": "60285de21fafdd1b3c185ddd19b57191a41c08dd",
+  "binding_correction": "R-106080",
+  "corrected_frontier": "T-106081 / MOBOSM106081",
+  "retained": [
+    "L-106080 Boolean source identity",
+    "fixed-owner squarefree Type-I Y^(-1/12+o(1))",
+    "L-106081 minimum-owner geometry",
+    "lambda^2 <= a",
+    "L^2 < 2B",
+    "no-exception sector: P=lambda*Lambda <= a",
+    "exceptional sector: lambda*a^2 < 4*sqrt(Y) and lambda^5 < 4*sqrt(Y)",
+    "L-106082.2 abstract same-family identity",
+    "T-106081.8 selector-tied clean Gram identity",
+    "T-106081.10 positive-moment reduction"
+  ],
+  "retracted": [
+    "L-106082.3 complete-source transport from L-102883",
+    "L-106082.5 complete balanced-field energy",
+    "T-106080 RH composition"
+  ],
+  "open": [
+    "BSFTI106081 independent global parent-ledger verification",
+    "MOBOSM106081 source-tied owner-squareclass moment",
+    "MOBOSM-NE106081 no-exception owner moment",
+    "MOBOSM-EX106081 exceptional-owner moment",
+    "Riemann Hypothesis"
+  ],
+  "formula_correction": {
+    "file": "claims/theorems/T-106081-minimum-owner-boolean-vaughan-corrected-owner-occupancy-frontier.md",
+    "first_draft_coefficient": "(ell-1)/(ell*rho)",
+    "correct_coefficient": "(rho-1)/(ell*rho)",
+    "reason": "A_(ell->rho;k) is summed over rho-1 nonzero rho-phases; ordered-pair symmetrization after Cauchy preserves that cardinality."
+  },
+  "binding_files": [
+    "claims/refutations/R-106080-core-only-centered-phase-packing-does-not-transport-owner-squareclasses.md",
+    "claims/theorems/T-106081-minimum-owner-boolean-vaughan-corrected-owner-occupancy-frontier.md",
+    "reports/gpt56-pro/2026-08-25-t106080-self-reconstruction.md",
+    "standalone/2026-08-25-t106080-self-reconstruction/REVIEW_SPECIFICATION.md"
+  ],
+  "review_order": [
+    "R-106080",
+    "T-106081",
+    "MOBOSM106081",
+    "BSFTI106081"
+  ],
+  "status": {
+    "internal_reconstruction_complete": true,
+    "former_closure_rejected": true,
+    "independent_review_required": true,
+    "canonical_acceptance": false,
+    "riemann_hypothesis_proved": false
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "riemann.t106100.fully-amplified-owner-anchor-source-lock.v1",
+  "created": "2026-08-25",
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "programme_issues": [743, 736, 737],
+  "parent": {
+    "pr": 719,
+    "head": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+    "frontier": "BCI102990"
+  },
+  "retained_local_claims": [
+    "L-106090",
+    "L-106091",
+    "L-106092",
+    "R-106090"
+  ],
+  "binding_correction": "R-106095",
+  "superseded": [
+    "L-106093.9 Q-indexed controlling moment",
+    "L-106094 same-anchor diagonal theorem",
+    "T-106090 Q-indexed controlling frontier"
+  ],
+  "corrected_claims": [
+    "L-106095 fully amplified owner/anchor family",
+    "L-106096 literal atomic diagonal",
+    "T-106100 corrected frontier"
+  ],
+  "proved": {
+    "least_discrepancy_incidence": true,
+    "fixed_Q_local_family": true,
+    "fixed_Q_long_core": true,
+    "opposite_owner_must_be_amplified_before_square": true,
+    "varying_Q_squareclass_absorption": true,
+    "fully_amplified_mellin_gauss_normal_form": true,
+    "correct_source_dual_weight": "g^2*ell",
+    "literal_atomic_diagonal_subpower": true
+  },
+  "replays": [
+    {
+      "path": "experiments/X-106090-least-discrepancy-rough-tail/results/verification.json",
+      "verdict": "PASS_X_106090_LEAST_DISCREPANCY_ROUGH_TAIL",
+      "checks": 142924
+    },
+    {
+      "path": "experiments/X-106100-fully-amplified-owner-anchor/results/verification.json",
+      "verdict": "PASS_X_106100_FULLY_AMPLIFIED_OWNER_ANCHOR",
+      "checks": 11616
+    }
+  ],
+  "open": {
+    "FAPCX106100": true,
+    "FANEX106100": true,
+    "BCI102990": true,
+    "riemann_hypothesis": true
+  },
+  "status": {
+    "canonical_acceptance": false,
+    "riemann_hypothesis_proved": false,
+    "independent_review_required": true
+  }
+}

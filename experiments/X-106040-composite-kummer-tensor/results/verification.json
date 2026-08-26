@@ -1,0 +1,36 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_RATIONAL_TENSOR_FRAME",
+  "checks": {
+    "composite_principal_completion": 1148,
+    "full_sector_recombination": 400,
+    "local_frame_identity": 800,
+    "principal_root_fibre_reciprocity": 10,
+    "quadratic_sector_count": 56,
+    "scalar_phi_formula_refuted": 1,
+    "sector_principal_contraction": 1200,
+    "tensor_frame_identity": 400
+  },
+  "open": {
+    "composite_owner_conductor_assembly": true,
+    "hbcqdsp102888": true,
+    "riemann_hypothesis": true
+  },
+  "prime_pool": [
+    3,
+    5,
+    7,
+    11
+  ],
+  "proof_object_sha256": "5c5dfbf952abdb3f790bbea95ea9a036c7d45b74caee5e9d38292e4717ab95cb",
+  "proved": {
+    "composite_principal_completion": true,
+    "local_sign_pair_frame": true,
+    "principal_root_fibre_reciprocity": true,
+    "quadratic_class_sector_count": true,
+    "scalar_phi_leverage_formula_rejected": true,
+    "sector_principal_contraction": true,
+    "squarefree_tensor_frame": true
+  },
+  "total_checks": 4015,
+  "verdict": "PASS_X_106040_COMPOSITE_KUMMER_TENSOR_FRAME"
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "riemann.t106090.least-discrepancy-rough-tail-source-lock.v1",
+  "created": "2026-08-25",
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "programme_issues": [743, 736, 737],
+  "parent": {
+    "pr": 719,
+    "head": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+    "inherited_claims": [
+      "L-102951",
+      "L-102952",
+      "L-102953",
+      "L-102955",
+      "L-102956",
+      "L-102957",
+      "L-102958",
+      "L-102959",
+      "L-102962",
+      "L-102963",
+      "T-102990"
+    ]
+  },
+  "binding_corrections": [
+    "R-106071",
+    "R-106080",
+    "R-106090"
+  ],
+  "new_claims": [
+    "L-106090",
+    "L-106091",
+    "L-106092",
+    "L-106093",
+    "L-106094",
+    "T-106090"
+  ],
+  "proved": {
+    "least_discrepancy_incidence_partition": true,
+    "opposite_reduced_core_is_strictly_rough": true,
+    "nonzero_ramanujan_phase": true,
+    "fixed_fibre_even_character_family": true,
+    "fixed_fibre_automatic_long_core": true,
+    "anchor_amplified_mellin_gauss_normal_form": true,
+    "natural_source_dual_weight": "g^2*ell*Q",
+    "same_anchor_diagonal_subpower": true
+  },
+  "replay": {
+    "path": "experiments/X-106090-least-discrepancy-rough-tail/results/verification.json",
+    "verdict": "PASS_X_106090_LEAST_DISCREPANCY_ROUGH_TAIL",
+    "checks": 142924
+  },
+  "open": {
+    "LDRPCX106090_distinct_anchor_principal_moment": true,
+    "LDRNEX106090_distinct_anchor_nonprincipal_moment": true,
+    "LDRTM106090_total_hybrid_moment": true,
+    "LDART106090_direct_triangular_current": true,
+    "BCI102990": true,
+    "riemann_hypothesis": true
+  },
+  "status": {
+    "canonical_acceptance": false,
+    "riemann_hypothesis_proved": false,
+    "independent_review_required": true
+  }
+}
