@@ -467,6 +467,14 @@ ratio-16 support makes it a near-square divisor wavelet and restricts `M` to
 one factor-64 shell around `H^2/(67^alpha u)`, sharpening a future bilinear
 or large-sieve formulation.
 
+The preferred next experiment is Fourier--hyperbola rather than another raw
+norm inequality. Without the height cutoff, Fourier expansion of `R` gives
+the exact factor `67^(i alpha t) prod_(p|N)2cos(t log p)`. The cutoff is a
+difference of two two-sided divisor intervals. Smooth those endpoints, seek
+a joint `t`/`d` mean-square estimate uniform in `u`, and unsmooth only at
+the end. The double Fourier integral, the `t=0` divisor loss, and the
+critical non-absolutely-summable `M`-local factor are the named hazards.
+
 The associated three-state colored cube is also exact. Its local shear has
 states `absent/left/right`, forward and inverse have the same convergent
 Hilbert norm product, and a sharp projection law says a coordinate constraint

@@ -127,6 +127,18 @@ of the new zero-mode burden. The inherited ratio-16 support further confines
 each wavelet to divisors within a factor four of the balanced square root and
 each cofactor to a factor-64 shell around `H^2/(67^alpha u)`.
 
+The next analytic move is now explicit. Fourier expansion of the imported
+autocorrelation turns the untruncated divisor wavelet into
+`67^(i alpha t) N^(-it) prod_(p|N)(1+p^(2it))`, equivalently
+`prod_(p|N) 2 cos(t log p)`. A sharp height interval is the difference of
+two two-sided divisor intervals, so the proposed attack is: smooth the
+endpoints, derive the exact Fourier--hyperbola formula, prove a joint `t`-
+and `d`-mean-square/large-sieve estimate uniform in `u`, then remove
+smoothing by bounded variation or Perron endpoints. Do not replace this by
+an infinite Euler product: squaring creates a double Fourier integral,
+`t=0` recovers the divisor loss, and the formal `M`-local factor is critical
+rather than absolutely summable.
+
 ### 2. The raw version is impossible
 
 The complete unmollified current has unavoidable negative atomic variation
