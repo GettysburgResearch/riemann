@@ -1,5 +1,5 @@
 {
-  "schema": "riemann.t104630.source_lock.v1",
+  "schema": "riemann.t104630.source_lock.v2",
   "imports": [
     {
       "pr": 731,
@@ -7,6 +7,7 @@
       "paths": [
         "claims/lemmas/L-106500-odd-endpoint-wronskian-is-a-positive-current-chaos.md",
         "claims/lemmas/L-106501-odd-endpoint-cayley-and-cross-current-phase-normal-form.md",
+        "claims/lemmas/L-106612-finite-zeta-derivative-packet.md",
         "claims/theorems/T-106590-macroscopic-height-to-microscopic-companion-correlation.md",
         "claims/lemmas/L-106591-small-shift-cofinal-fifth-companion-height-budget.md",
         "claims/lemmas/L-106630-canonical-correlation-primal-transport.md"
@@ -22,8 +23,15 @@
       ]
     }
   ],
+  "local_exact_inputs": [
+    "L-104602",
+    "X-104620",
+    "L-104634"
+  ],
   "open": [
-    "FRACTRANS104630"
+    "FRACTRANS104630",
+    "FRACKRYLOV104633",
+    "FRACTRANS104635"
   ],
   "ninety_percent_established": false,
   "rh_established": false
