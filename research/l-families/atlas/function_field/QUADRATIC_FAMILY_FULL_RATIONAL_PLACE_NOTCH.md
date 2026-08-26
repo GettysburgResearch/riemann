@@ -149,6 +149,16 @@ Equation (1.2) then makes the two square roots occur with equal multiplicity
 `g`.  Taking their characteristic polynomial proves (0.6).  No extension
 field is enumerated in the replay; (1.4) is a linear-algebra count.
 
+This curve calculation is externally known.  Lemma 1 of Setayesh--Tsimerman,
+[*High ell-torsion rank for class groups over function
+fields*](https://arxiv.org/abs/2006.07987), records `g` copies of the two
+eigenvalues `+-sqrt(q*)` for `y^2=x^q-x`, with
+`q*=(-1)^((q-1)/2)q`.  The source-convention curve (0.5) is its `-1`
+quadratic twist; the eigenvalue squares, and hence the displayed even
+numerator, agree.  No novelty is claimed for the supersingular curve or its
+zeta function.  The project-specific result is its insertion into the exact
+evaluation-character adapter, producing the full-place correlation law.
+
 ## 2. The family correlation series
 
 The exact multi-place theorem says, for `m` distinct rational places,
