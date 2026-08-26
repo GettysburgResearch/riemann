@@ -1135,6 +1135,72 @@ def fixed_q_coloring_panel(witness_scale: int = 3) -> dict[str, object]:
     }
 
 
+def coherent_core_gram_panel(limit: int = 30) -> dict[str, object]:
+    """Replay the direct color bijection and its Boolean overlap Gram."""
+    validate_positive_integer(limit)
+    pair_bijection_checks = 0
+    for d in (1, 5):
+        for core in (1, 2, 6):
+            if gcd(d, core) != 1:
+                continue
+            for left in range(1, limit + 1):
+                if mobius(left) == 0 or gcd(left, 67 * d) != 1:
+                    continue
+                for right in range(1, limit + 1):
+                    if (
+                        mobius(right) == 0
+                        or gcd(right, 67 * d) != 1
+                        or gcd(left, right) != 1
+                        or left * right % core != 0
+                    ):
+                        continue
+                    r = gcd(left, core)
+                    s = core // r
+                    m_value = left // r
+                    n_value = right // s
+                    if (
+                        r * s != core
+                        or gcd(r, s) != 1
+                        or gcd(m_value * n_value, d * core) != 1
+                        or gcd(m_value, n_value) != 1
+                        or m_value * n_value * core != left * right
+                        or mobius(m_value) * mobius(n_value)
+                        != mobius(core) * mobius(left) * mobius(right)
+                    ):
+                        raise ArithmeticError("coherent-core pair bijection failed")
+                    pair_bijection_checks += 1
+
+    primes = (2, 3, 5)
+    configuration_count = 2 ** len(primes)
+    gram_pair_checks = 0
+    feature_monomial_checksum = 0
+    for left_mask in range(configuration_count):
+        for right_mask in range(configuration_count):
+            intersection = left_mask & right_mask
+            feature_masks = tuple(
+                mask for mask in range(configuration_count) if mask & ~intersection == 0
+            )
+            expected_count = 2 ** intersection.bit_count()
+            if len(feature_masks) != expected_count:
+                raise ArithmeticError("Boolean overlap Gram expansion failed")
+            feature_monomial_checksum += len(feature_masks)
+            gram_pair_checks += 1
+    if gram_pair_checks != 64 or feature_monomial_checksum != 125:
+        raise ArithmeticError("Boolean overlap Gram checksum failed")
+    return {
+        "configuration_count": configuration_count,
+        "direct_pair_bijection_checks": pair_bijection_checks,
+        "feature_monomial_checksum": feature_monomial_checksum,
+        "gram_pair_checks": gram_pair_checks,
+        "kernel": (
+            "K(N,M)=prod_(p|gcd(N,M))(1+sqrt(p)/(p+1)); "
+            "local block [[1,1],[1,1+c_p]] has determinant c_p>0"
+        ),
+        "primes": list(primes),
+        "scope": "exact finite combinatorial replay; no AUXCOLORPRIMCAR estimate",
+    }
+
+
 def colored_configurations(number_of_primes: int) -> tuple[tuple[int, ...], ...]:
     validate_positive_integer(number_of_primes)
     return tuple(product((0, 1, 2), repeat=number_of_primes))
@@ -1348,6 +1414,7 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
         },
         "colored_boolean_geometry": colored_cube_panel(),
         "compatible_scale_geometry": {
+            "coherent_core_gram": coherent_core_gram_panel(),
             "fixed_q_coloring": fixed_q_coloring_panel(),
             "gate_hierarchy": gate_hierarchy_panel(),
             "triple_bijection": compatible_triple_panel(),

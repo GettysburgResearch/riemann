@@ -55,6 +55,19 @@
     "number_of_primes": 2
   },
   "compatible_scale_geometry": {
+    "coherent_core_gram": {
+      "configuration_count": 8,
+      "direct_pair_bijection_checks": 760,
+      "feature_monomial_checksum": 125,
+      "gram_pair_checks": 64,
+      "kernel": "K(N,M)=prod_(p|gcd(N,M))(1+sqrt(p)/(p+1)); local block [[1,1],[1,1+c_p]] has determinant c_p>0",
+      "primes": [
+        2,
+        3,
+        5
+      ],
+      "scope": "exact finite combinatorial replay; no AUXCOLORPRIMCAR estimate"
+    },
     "fixed_q_coloring": {
       "d_one_specialization": "COLORPRIMCAR: the AUXCOLORPRIMCAR gate at D=1",
       "equal_weight_scope": "every fixed d and core u=rs; ordered colors at fixed alpha,d,u",

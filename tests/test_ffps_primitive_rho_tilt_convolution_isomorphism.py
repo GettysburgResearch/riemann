@@ -204,6 +204,11 @@ class PrimitiveRhoTiltConvolutionIsomorphismTest(unittest.TestCase):
         reverse = coloring["remote_ray_reverse_witness"]
         self.assertEqual(reverse["raywise_weighted_l1_contribution_squared"], "1/11")
         self.assertEqual(reverse["weighted_color_energy_squared"], "144/11")
+        gram = subject.coherent_core_gram_panel()
+        self.assertEqual(gram["configuration_count"], 8)
+        self.assertEqual(gram["gram_pair_checks"], 64)
+        self.assertEqual(gram["feature_monomial_checksum"], 125)
+        self.assertGreater(gram["direct_pair_bijection_checks"], 100)
 
     def test_colored_cube_norm_and_hereditary_replay(self) -> None:
         panel = subject.colored_cube_panel(2)

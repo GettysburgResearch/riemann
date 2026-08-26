@@ -1173,6 +1173,85 @@ total generalized modulus. Thus `AUXCOLORPRIMCAR` addresses the whole
 auxiliary rho-sieved energy, while its `COLORPRIMCAR` specialization
 addresses only the zero mode. Neither controls any nonzero `PRIMCAR` mode.
 
+### 5.7 The color energy is an exact support-overlap Gram
+
+The coherent core has a direct primitive-pair realization. Let
+`X_d` be the squarefree, 67-free coprime pairs `(a,b)` with
+`(ab,d)=1`, and include the height and ratio factor in
+
+\[
+ \Phi^{\alpha}_{d,I}(a,b)
+ ={\mu(a)\mu(b)\over\sqrt{ab}}
+ \mathcal R\!\left(\log{67^\alpha a\over b}\right)
+ \mathbf 1_{\max(67^\alpha a,b)\in I}.
+\]
+
+For every squarefree `(u,d)=1`, the substitution
+`a=rm`, `b=(u/r)n` is a bijection from the color-panel terms
+onto the pairs in `X_d` for which `u|ab`. It preserves the full
+height and ratio data and gives
+
+\[
+ \boxed{
+ \mathcal C^{\alpha}_{d,u}(I)
+ =\mu(u)\sqrt u
+ \sum_{\substack{(a,b)\in\mathscr X_d\\u\mid ab}}
+ \Phi^{\alpha}_{d,I}(a,b).}
+\tag{5.40}
+\]
+
+Indeed, `mn u=ab` and
+`mu(m)mu(n)=mu(u)mu(a)mu(b)`. Summing (5.40) against
+`w(u)=g(u)/sqrt(u)` also recovers the original rho weight because
+
+\[
+ \sum_{u\mid ab}\mu(u)g(u)
+ =\prod_{p\mid ab}\left(1-{1\over p+1}\right)
+ =\rho(ab)=\rho(a)\rho(b).
+\tag{5.41}
+\]
+
+More importantly, expanding the quadratic color energy gives the exact Gram
+identity
+
+\[
+ \boxed{
+ \sum_u w(u)\sum_I|\mathcal C^{\alpha}_{d,u}(I)|^2
+ =\sum_I\sum_{\substack{x=(a,b),\ y=(a',b')\in\mathscr X_d}}
+ \Phi^{\alpha}_{d,I}(x)\overline{\Phi^{\alpha}_{d,I}(y)}
+ \mathscr K(ab,a'b'),}
+\tag{5.42}
+\]
+
+where, for integers prime to `67d`,
+
+\[
+ \mathscr K(N,M)
+ =\sum_{u\mid(N,M)}g(u)\sqrt u
+ =\prod_{p\mid(N,M)}\left(1+{\sqrt p\over p+1}\right).
+\tag{5.43}
+\]
+
+This kernel is positive definite on every finite Boolean support cube. On
+ordered primitive pairs it is only positive semidefinite, because different
+orientations can have the same product `ab`. Its feature map is
+`N -> (sqrt(g(u)sqrt(u)) 1_(u|N))_u`; at one prime its
+absence/presence block is
+
+\[
+ \begin{pmatrix}1&1\\1&1+c_p\end{pmatrix},
+ \qquad c_p={\sqrt p\over p+1},
+ \qquad \det=c_p>0.
+\]
+
+Thus `AUXCOLORPRIMCAR` is not merely another black-box norm: it is a
+specific multiplicative shared-support Gram for the signed primitive-pair
+data; its cross terms are not termwise positive. The increasingly small local
+determinant also warns that inverting
+this Gram uniformly is costly. The identity supplies a possible spectral or
+large-sieve attack on the color gate; it does not prove that gate or any RH
+estimate.
+
 ## 6. Firewall against a PRIMCAR or RH misreading
 
 The bounded isomorphism (0.5) acts on full one-variable sequences on
@@ -1242,6 +1321,7 @@ No PRIMCAR, PRIMLS, RH, or GRH estimate is proved. The RH-equivalent statement
 | exact `RAYPRIMCAR` / `GENPRIMCAR` / `COLLPRIMCAR` hierarchy (5.31)--(5.32) | **PROVED AT THE POSITIVE-NORM LEVEL** |
 | fixed-`d`, fixed-core coherent coloring compression (5.33)--(5.36) | **PROVED EXACT** |
 | `RAYPRIMCAR` implies `AUXCOLORPRIMCAR`, which controls the auxiliary rho-sieved energy and the zero mode (5.37)--(5.39) | **PROVED CONDITIONALLY** |
+| direct primitive-pair color formula and support-overlap Gram (5.40)--(5.43) | **PROVED EXACT** |
 | weighted vector gate (5.3b) over induced tests (5.7) | **OPEN / NOT PROVED** |
 | uniform control over induced tests (5.7) | **STRONGER SUFFICIENT SPECIAL CASE; NOT PROVED** |
 | `GENPRIMCAR`, `RAYPRIMCAR`, `COLLPRIMCAR`, `AUXCOLORPRIMCAR`, or `COLORPRIMCAR` estimate | **OPEN / NOT PROVED** |
