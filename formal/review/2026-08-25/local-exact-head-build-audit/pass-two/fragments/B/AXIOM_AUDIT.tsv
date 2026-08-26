@@ -1,0 +1,2 @@
+reviewer	source_head	scope	command	exit_code	classification	print_output_verdict	first_result
+B	6d42bbc31c81e7d6a03909e205b56f30f6f7b49a	authoritative_manifest_and_explicit_B_modules	bash scripts/check_axioms.sh; explicit Arithmetic/AxiomAudit.lean and ArithmeticFixedRows.lean	0	PASS	ALLOWED_ONLY	Four manifested modules and 34/34 declarations; only propext, Classical.choice, Quot.sound, or no axioms

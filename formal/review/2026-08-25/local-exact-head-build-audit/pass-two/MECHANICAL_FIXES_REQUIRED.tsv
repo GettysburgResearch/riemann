@@ -1,0 +1,7 @@
+scope	item	classification	status	statement_type_change	action
+SHARED	root/Zeta23 comparator target and module-root collision	MECHANICAL_PACKAGE_FIX	PASS on bootstrap; applied to A and B; advisory for C	NO	Use unique RiemannComparator Lake targets and module prefixes while retaining Challenge/ChallengeDeps/Solution trust directories
+A	pinned-Mathlib analytic proof terms, imports, computability, source ledger, comparator isolation	STATEMENT_PRESERVING_REPAIR	PASS and pushed at ae0887b8125601c98dc809cffe01c7f1c78bb998	NO	No further build repair required
+B	finite proof bodies, computability annotations, comparator isolation, complete axiom manifest/parser	STATEMENT_PRESERVING_REPAIR	PASS and pushed at 6d42bbc31c81e7d6a03909e205b56f30f6f7b49a	NO	No further build repair required
+C	finite-matrix, reciprocal-concavity, Pick algebra, computability, notation, Repr removal, LF lock, comparator isolation	PARTIAL_STATEMENT_PRESERVING_ADVISORY	Targeted local progress only; not pushed	NO	Retain advisory patch until statement owners resolve the two type gates
+C	RiemannFormal.Operator.actualXiInputs_have_concrete_dependencies	STATEMENT_REVIEW_REQUIRED	BLOCKED	YES	Review the intended Prop-level assertion for existence or packaging of ActualXiReserveAllocation
+C	RiemannFormal.Operator.buildLockedActualXiReserveAllocation	STATEMENT_REVIEW_REQUIRED	BLOCKED	YES	Review the intended Prop-level assertion or Type-valued return API for ActualXiReserveAllocation

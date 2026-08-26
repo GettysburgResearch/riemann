@@ -1,0 +1,4 @@
+review_pr	reviewer_relation	review_head	primary_branch	pass_two_primary_head	build_blocker_status	mathematical_verdict_changed	remaining_review_action
+747	C reviews A	ebe287cc85b122cbe3efd57b7c30ce17d150d74c	formal/010-upstream-analysis	ae0887b8125601c98dc809cffe01c7f1c78bb998	CLEARED_BY_EXACT_REMOTE_PASS	NO	Reviewer C final acceptance addendum remains absent
+750	A reviews B	c2a439895f73ce2b6d03ea3405c5bbddef0fb014	formal/020-arithmetic-mellin	6d42bbc31c81e7d6a03909e205b56f30f6f7b49a	CLEARED_BY_EXACT_REMOTE_PASS	NO	Retain original mathematical dispositions; overall reconciliation remains gated by C
+749	B reviews C	5e406679aae9a217eff290dfce81e0a0f301d6cc	formal/030-xi-operator-qa	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	UNRESOLVED_STATEMENT_REVIEW_REQUIRED	NO	Review the two Type-under-conjunction declaration results before any further compile repair

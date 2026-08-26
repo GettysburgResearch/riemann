@@ -1,0 +1,2 @@
+reviewer	source_head	scope	command	exit_code	classification	print_output_verdict	first_result
+C	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	partial advisory worktree	bash scripts/check_axioms.sh and all C AxiomAudit/PrintAxioms modules	—	AXIOM_AUDIT_FAILURE	NOT_GREEN_NOT_RUN_TO_COMPLETION	Trusted compilation stops at actualXiInputs_have_concrete_dependencies; buildLockedActualXiReserveAllocation has the same inherited Type-under-And defect. Static scan found no custom axiom/opaque/unsafe, but no kernel axiom verdict is claimed

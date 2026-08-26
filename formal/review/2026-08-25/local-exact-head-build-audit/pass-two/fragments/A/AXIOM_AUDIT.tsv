@@ -1,0 +1,2 @@
+reviewer	source_head	scope	command	exit_code	classification	print_output_verdict	first_result
+A	ae0887b8125601c98dc809cffe01c7f1c78bb998	authoritative_runner	bash scripts/check_axioms.sh	0	PASS	PASS_ALLOWED_FOUNDATIONS_ONLY	24/24 declarations across 4/4 fail-closed manifest modules; only propext, Classical.choice, Quot.sound

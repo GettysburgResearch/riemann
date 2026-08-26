@@ -1,0 +1,15 @@
+reviewer	sequence	scope	working_directory	command	exit_code	classification	log	first_result
+SHARED	1	bootstrap-infrastructure	formal	bash scripts/build_local_comparators.sh	127	TOOLCHAIN_FAILURE	raw/shared/01_bootstrap_local_comparators.log	Bash PATH omitted elan; lake command not found
+SHARED	2	bootstrap-target-only-diagnostic	formal	PATH with elan; bash scripts/build_local_comparators.sh	1	COMPARATOR_FAILURE	raw/shared/02_bootstrap_local_comparators_with_elan_path.log	Identical ChallengeDeps/Challenge/Solution module roots resolved into nonexistent Zeta23 comparator files
+SHARED	3	bootstrap-unique-module-repair	formal	bash scripts/build_local_comparators.sh	0	PASS	raw/shared/03_bootstrap_unique_module_comparators.log	Unique RiemannComparator ChallengeDeps/Solution/Challenge RH modules all compile
+SHARED	4	bootstrap-trusted-build	formal	lake build	0	PASS	raw/shared/04_bootstrap_lake_build.log	Trusted RiemannFormal build completes successfully
+SHARED	5	bootstrap-environment-retry	formal	python3 scripts/generate_registry.py	9009	TOOLCHAIN_FAILURE	raw/shared/05_generate_registry.log	Windows Store python3 alias; no script executed
+SHARED	6	bootstrap-environment-retry	formal	python3 scripts/validate_registry.py	9009	TOOLCHAIN_FAILURE	raw/shared/06_validate_registry.log	Windows Store python3 alias; no script executed
+SHARED	7	bootstrap-environment-retry	formal	python3 scripts/verify_source_locks.py	9009	TOOLCHAIN_FAILURE	raw/shared/07_verify_source_locks.log	Windows Store python3 alias; no script executed
+SHARED	8	bootstrap-environment-retry	formal	python3 scripts/validate_blueprint.py	9009	TOOLCHAIN_FAILURE	raw/shared/08_validate_blueprint.log	Windows Store python3 alias; no script executed
+SHARED	9	bootstrap-common-suite	formal	bundled python scripts/generate_registry.py	0	PASS	raw/shared/09_generate_registry_bundled_python.log	Generated 139 claims and 0 bootstrap delta rows
+SHARED	10	bootstrap-common-suite	formal	bundled python scripts/validate_registry.py	0	PASS	raw/shared/10_validate_registry_bundled_python.log	Validated 139 claims
+SHARED	11	bootstrap-common-suite	formal	bundled python scripts/verify_source_locks.py	0	PASS	raw/shared/11_verify_source_locks_bundled_python.log	Validated exact Mathlib and Zeta23 source locks
+SHARED	12	bootstrap-common-suite	formal	bundled python scripts/validate_blueprint.py	0	PASS	raw/shared/12_validate_blueprint_bundled_python.log	Validated 3 blueprint fragments
+SHARED	13	bootstrap-common-suite	formal	bash scripts/check_no_sorry.sh	0	PASS	raw/shared/13_check_no_sorry.log	Trusted no-sorry and custom-axiom scan passes
+SHARED	14	bootstrap-common-suite	formal	bash scripts/check_axioms.sh	0	PASS	raw/shared/14_check_axioms.log	6/6 axiom declarations from 2/2 manifest modules; allowed foundations only

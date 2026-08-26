@@ -1,0 +1,326 @@
+diff --git a/.github/workflows/formal.yml b/.github/workflows/formal.yml
+index b2207a466..ae1fdebfe 100644
+--- a/.github/workflows/formal.yml
++++ b/.github/workflows/formal.yml
+@@ -43,10 +43,6 @@ jobs:
+           python3 formal/scripts/verify_source_locks.py
+           python3 formal/scripts/validate_blueprint.py
+ 
+-      - name: Resolve the exact pinned Lake dependency graph
+-        working-directory: formal
+-        run: lake update
+-
+       - name: Fetch Mathlib cache
+         working-directory: formal
+         run: lake exe cache get
+@@ -55,7 +51,7 @@ jobs:
+         working-directory: formal
+         run: |
+           lake build
+-          lake build Challenge.RH Solution.RH
++          bash scripts/build_local_comparators.sh
+ 
+       - name: Reject sorry/admit and project axioms in trusted targets
+         run: bash formal/scripts/check_no_sorry.sh
+diff --git a/formal/.gitattributes b/formal/.gitattributes
+new file mode 100644
+index 000000000..f7f080dd8
+--- /dev/null
++++ b/formal/.gitattributes
+@@ -0,0 +1 @@
++registry/deltas/C_EXTERNAL_SOURCE_STATEMENTS/*.txt text eol=lf
+diff --git a/formal/BOOTSTRAP_VALIDATION.md b/formal/BOOTSTRAP_VALIDATION.md
+index a459dfefc..5019a6a56 100644
+--- a/formal/BOOTSTRAP_VALIDATION.md
++++ b/formal/BOOTSTRAP_VALIDATION.md
+@@ -25,10 +25,9 @@ This environment did not contain a Lean toolchain and cannot access external pac
+ The path-filtered workflow performs, on a networked GitHub runner:
+ 
+ ```text
+-lake update
+ lake exe cache get
+ lake build
+-lake build Challenge.RH Solution.RH
++bash scripts/build_local_comparators.sh
+ no-sorry/custom-axiom audit
+ #print axioms audit
+ ```
+diff --git a/formal/README.md b/formal/README.md
+index 79b838219..014e118f1 100644
+--- a/formal/README.md
++++ b/formal/README.md
+@@ -26,10 +26,9 @@ python3 formal/scripts/verify_source_locks.py
+ python3 formal/scripts/validate_blueprint.py
+ 
+ cd formal
+-lake update
+ lake exe cache get
+ lake build
+-lake build Solution.RH
++bash scripts/build_local_comparators.sh
+ cd ..
+ 
+ bash formal/scripts/check_no_sorry.sh
+diff --git a/formal/comparator/Challenge.lean b/formal/comparator/Challenge.lean
+deleted file mode 100644
+index 18038d105..000000000
+--- a/formal/comparator/Challenge.lean
++++ /dev/null
+@@ -1 +0,0 @@
+-import Challenge.RH
+diff --git a/formal/comparator/Challenge/RH.lean b/formal/comparator/Challenge/RiemannComparatorChallenge/RH.lean
+similarity index 80%
+rename from formal/comparator/Challenge/RH.lean
+rename to formal/comparator/Challenge/RiemannComparatorChallenge/RH.lean
+index 4da9c66fe..f5d4e3020 100644
+--- a/formal/comparator/Challenge/RH.lean
++++ b/formal/comparator/Challenge/RiemannComparatorChallenge/RH.lean
+@@ -1,4 +1,4 @@
+-import ChallengeDeps.RH
++import RiemannComparatorChallengeDeps.RH
+ 
+ /-- Trusted smoke statement: the project RH proposition is exactly Mathlib's. -/
+ theorem rh_statement_exact : ChallengeDeps.ProjectRH ↔ RiemannHypothesis := by
+diff --git a/formal/comparator/ChallengeDeps.lean b/formal/comparator/ChallengeDeps.lean
+deleted file mode 100644
+index f302934ff..000000000
+--- a/formal/comparator/ChallengeDeps.lean
++++ /dev/null
+@@ -1 +0,0 @@
+-import ChallengeDeps.RH
+diff --git a/formal/comparator/ChallengeDeps/RH.lean b/formal/comparator/ChallengeDeps/RiemannComparatorChallengeDeps/RH.lean
+similarity index 100%
+rename from formal/comparator/ChallengeDeps/RH.lean
+rename to formal/comparator/ChallengeDeps/RiemannComparatorChallengeDeps/RH.lean
+diff --git a/formal/comparator/PrintAxioms/RH.lean b/formal/comparator/PrintAxioms/RH.lean
+index cf03510af..70ff6df1c 100644
+--- a/formal/comparator/PrintAxioms/RH.lean
++++ b/formal/comparator/PrintAxioms/RH.lean
+@@ -1,3 +1,3 @@
+-import Solution.RH
++import RiemannComparatorSolution.RH
+ 
+ #print axioms rh_statement_exact
+diff --git a/formal/comparator/README.md b/formal/comparator/README.md
+index a203ed7c6..798b3e9c5 100644
+--- a/formal/comparator/README.md
++++ b/formal/comparator/README.md
+@@ -8,7 +8,7 @@ Quick checks:
+ 
+ ```bash
+ cd formal
+-lake build Solution.RH
++bash scripts/build_local_comparators.sh
+ lake env lean comparator/PrintAxioms/RH.lean
+ ```
+ 
+diff --git a/formal/comparator/Solution.lean b/formal/comparator/Solution.lean
+deleted file mode 100644
+index c4dff1e98..000000000
+--- a/formal/comparator/Solution.lean
++++ /dev/null
+@@ -1 +0,0 @@
+-import Solution.RH
+diff --git a/formal/comparator/Solution/RH.lean b/formal/comparator/Solution/RiemannComparatorSolution/RH.lean
+similarity index 81%
+rename from formal/comparator/Solution/RH.lean
+rename to formal/comparator/Solution/RiemannComparatorSolution/RH.lean
+index 36a342c39..6208c417c 100644
+--- a/formal/comparator/Solution/RH.lean
++++ b/formal/comparator/Solution/RiemannComparatorSolution/RH.lean
+@@ -1,4 +1,4 @@
+-import ChallengeDeps.RH
++import RiemannComparatorChallengeDeps.RH
+ import RiemannFormal.Statement.RH
+ 
+ /-- Sorry-free implementation of the trusted smoke statement. -/
+diff --git a/formal/comparator/config-rh.json b/formal/comparator/config-rh.json
+index 98ceb3df9..e83622391 100644
+--- a/formal/comparator/config-rh.json
++++ b/formal/comparator/config-rh.json
+@@ -1,6 +1,6 @@
+ {
+-  "challenge_module": "Challenge.RH",
+-  "solution_module": "Solution.RH",
++  "challenge_module": "RiemannComparatorChallenge.RH",
++  "solution_module": "RiemannComparatorSolution.RH",
+   "theorem_names": ["rh_statement_exact"],
+   "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+   "enable_nanoda": false
+diff --git a/formal/lakefile.toml b/formal/lakefile.toml
+index 93ecaaf92..f86a1b259 100644
+--- a/formal/lakefile.toml
++++ b/formal/lakefile.toml
+@@ -20,13 +20,19 @@ rev = "cec57f919ccf34e5fa5372b4ba332f7c848bbb6e"
+ name = "RiemannFormal"
+ 
+ [[lean_lib]]
+-name = "ChallengeDeps"
+-srcDir = "comparator"
++name = "RiemannComparatorChallengeDeps"
++srcDir = "comparator/ChallengeDeps"
++roots = ["RiemannComparatorChallengeDeps"]
++globs = ["RiemannComparatorChallengeDeps.+"]
+ 
+ [[lean_lib]]
+-name = "Challenge"
+-srcDir = "comparator"
++name = "RiemannComparatorChallenge"
++srcDir = "comparator/Challenge"
++roots = ["RiemannComparatorChallenge"]
++globs = ["RiemannComparatorChallenge.+"]
+ 
+ [[lean_lib]]
+-name = "Solution"
+-srcDir = "comparator"
++name = "RiemannComparatorSolution"
++srcDir = "comparator/Solution"
++roots = ["RiemannComparatorSolution"]
++globs = ["RiemannComparatorSolution.+"]
+diff --git a/formal/scripts/audit_axiom_output.py b/formal/scripts/audit_axiom_output.py
+index 8cfd60fd4..d9d3d4206 100644
+--- a/formal/scripts/audit_axiom_output.py
++++ b/formal/scripts/audit_axiom_output.py
+@@ -6,30 +6,38 @@ import sys
+ from pathlib import Path
+ 
+ ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
+-EXPECTED = {
+-    "RiemannFormal.rh_iff_mathlib",
+-    "RiemannFormal.Upstream.projectRH_is_mathlib",
+-    "RiemannFormal.Upstream.zeta23_bridge_preserves_RH",
+-    "RiemannFormal.Release20260822.researchCutoff_eq",
+-    "RiemannFormal.Release20260822.semanticClaimCount_eq",
+-    "rh_statement_exact",
+-}
++PRINT_RE = re.compile(r"^\s*#print\s+axioms\s+([A-Za-z0-9_.]+)\s*$")
++OUTPUT_NAME_RE = re.compile(r"['‘’]?([A-Za-z0-9_.]+)['‘’]?")
++
++
++def expected_declarations(paths: list[Path]) -> set[str]:
++    expected: set[str] = set()
++    for path in paths:
++        if not path.is_file():
++            raise SystemExit(f"missing axiom-print source: {path}")
++        for line in path.read_text(encoding="utf-8").splitlines():
++            match = PRINT_RE.match(line)
++            if match:
++                expected.add(match.group(1))
++    if not expected:
++        raise SystemExit("no #print axioms declarations discovered")
++    return expected
+ 
+ 
+ def main() -> None:
+-    if len(sys.argv) != 2:
+-        raise SystemExit("usage: audit_axiom_output.py AXIOM_OUTPUT")
++    if len(sys.argv) < 3:
++        raise SystemExit("usage: audit_axiom_output.py AXIOM_OUTPUT PRINT_SOURCE...")
+     text = Path(sys.argv[1]).read_text(encoding="utf-8")
+     if "sorryAx" in text:
+         raise SystemExit("axiom audit contains sorryAx")
+ 
++    expected = expected_declarations([Path(arg) for arg in sys.argv[2:]])
+     seen: set[str] = set()
+-    theorem_pat = re.compile(r"['\u2018\u2019]?([A-Za-z0-9_.]+)['\u2018\u2019]?")
+     for line in text.splitlines():
+         if "depends on axioms:" not in line and "does not depend on any axioms" not in line:
+             continue
+         head = line.split("depends on axioms:", 1)[0].split("does not depend", 1)[0]
+-        matches = theorem_pat.findall(head)
++        matches = OUTPUT_NAME_RE.findall(head)
+         if matches:
+             seen.add(matches[-1])
+         if "depends on axioms:" in line:
+@@ -41,10 +49,10 @@ def main() -> None:
+             if extra:
+                 raise SystemExit(f"forbidden axioms {sorted(extra)} in line: {line}")
+ 
+-    missing = EXPECTED - seen
++    missing = expected - seen
+     if missing:
+         raise SystemExit(f"missing #print axioms output for {sorted(missing)}")
+-    print(f"PASS_FORMAL_AXIOM_OUTPUT declarations={len(seen)}")
++    print(f"PASS_FORMAL_AXIOM_OUTPUT declarations={len(seen)} expected={len(expected)}")
+ 
+ 
+ if __name__ == "__main__":
+diff --git a/formal/scripts/axiom_print_modules.txt b/formal/scripts/axiom_print_modules.txt
+new file mode 100644
+index 000000000..1fa29ae52
+--- /dev/null
++++ b/formal/scripts/axiom_print_modules.txt
+@@ -0,0 +1,2 @@
++RiemannFormal/AxiomAudit.lean
++comparator/PrintAxioms/RH.lean
+diff --git a/formal/scripts/build_local_comparators.sh b/formal/scripts/build_local_comparators.sh
+new file mode 100644
+index 000000000..a70e9cc37
+--- /dev/null
++++ b/formal/scripts/build_local_comparators.sh
+@@ -0,0 +1,11 @@
++#!/usr/bin/env bash
++set -euo pipefail
++
++ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
++JOBS="${LAKE_JOBS:-1}"
++
++cd "$ROOT/formal"
++lake -Kjobs="$JOBS" build \
++  RiemannComparatorChallengeDeps \
++  RiemannComparatorChallenge \
++  RiemannComparatorSolution
+diff --git a/formal/scripts/check_axioms.sh b/formal/scripts/check_axioms.sh
+index 4a28581ce..56f6d3877 100644
+--- a/formal/scripts/check_axioms.sh
++++ b/formal/scripts/check_axioms.sh
+@@ -2,13 +2,44 @@
+ set -euo pipefail
+ ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+ OUT="$(mktemp)"
+-trap 'rm -f "$OUT"' EXIT
++DECLARED="$(mktemp)"
++DISCOVERED="$(mktemp)"
++trap 'rm -f "$OUT" "$DECLARED" "$DISCOVERED"' EXIT
+ 
+ cd "$ROOT/formal"
++
++MANIFEST="scripts/axiom_print_modules.txt"
++PYTHON="${PYTHON:-python3}"
++test -f "$MANIFEST" || { echo "missing axiom-print manifest: $MANIFEST" >&2; exit 1; }
++
++awk 'NF && $1 !~ /^#/' "$MANIFEST" | LC_ALL=C sort > "$DECLARED"
++if test -n "$(uniq -d "$DECLARED")"; then
++  echo "duplicate entries in $MANIFEST" >&2
++  uniq -d "$DECLARED" >&2
++  exit 1
++fi
++
++{
++  find RiemannFormal -type f -name 'AxiomAudit.lean' -print
++  find comparator/PrintAxioms -maxdepth 1 -type f -name '*.lean' -print
++} | LC_ALL=C sort > "$DISCOVERED"
++
++if ! cmp -s "$DECLARED" "$DISCOVERED"; then
++  echo "axiom-print manifest does not exactly match committed print modules" >&2
++  diff -u "$DECLARED" "$DISCOVERED" >&2 || true
++  exit 1
++fi
++
++mapfile -t files < "$DECLARED"
++test "${#files[@]}" -gt 0 || { echo "empty axiom-print manifest" >&2; exit 1; }
++
++lake -Kjobs="${LAKE_JOBS:-1}" build RiemannFormal RiemannComparatorSolution
+ {
+-  lake env lean RiemannFormal/AxiomAudit.lean
+-  lake env lean comparator/PrintAxioms/RH.lean
++  for path in "${files[@]}"; do
++    test -f "$path" || { echo "missing axiom-print module: $path" >&2; exit 1; }
++    lake env lean "$path"
++  done
+ } 2>&1 | tee "$OUT"
+ 
+-python3 "$ROOT/formal/scripts/audit_axiom_output.py" "$OUT"
+-echo PASS_FORMAL_AXIOM_AUDIT
++"$PYTHON" "$ROOT/formal/scripts/audit_axiom_output.py" "$OUT" "${files[@]}"
++echo "PASS_FORMAL_AXIOM_AUDIT modules=${#files[@]}"

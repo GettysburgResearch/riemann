@@ -1,0 +1,4 @@
+reviewer	source_head	target_or_check	exit_code	classification	verdict	first_result
+C	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	RiemannComparatorChallengeDeps.XiPickThreeNode	0	PASS	PASS	Unique local dependency target builds
+C	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	RiemannComparatorChallengeDeps.XiPickOrderThreeConditional	0	PASS	PASS	Unique local dependency target builds; repeated-node cases and PSD-only conclusion retained
+C	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	all C Challenge and Solution targets plus PrintAxioms modules	—	BLOCKED_BY_LEAN_COMPILE_FAILURE	NOT_GREEN	Not run to completion after frozen theorem-type stop; no full comparator verdict is claimed
