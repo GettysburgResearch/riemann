@@ -45,6 +45,7 @@ distinguishes current direct relevance from possible upside.
 | three-place elliptic interference | A | exact all-odd-`q` correlation and cumulant decomposition with an elliptic Frobenius trace; external novelty unsearched | D direct / B methodologically |
 | multi-place squarefree `L`-identity | A | the Euler quotient is standard; the exact evaluation-character curve adapter, infinity/twist convention, degree-five geometric ladder, and connected-cumulant corollary are the packet contribution | D direct / B methodologically |
 | six-place connected law and weight ceiling | A | exact corollary of the multi-place identity, Weil functional equation, set-partition formula, and symplectic exterior-character algebra; no external novelty claim | D direct / B methodologically |
+| universal fixed-degree weight notch | A | exact symbolic corollary of the locked all-degree coefficient identity and standard symplectic primitive-exterior decomposition; no external novelty claim | D direct / B methodologically |
 
 ## Best paper-sized theorem stack
 
@@ -416,23 +417,40 @@ envelopes are `O(q^-7/2)`, while the split-infinity ten-place row is
 top channel. This is an exact weight-channel identity for fixed mark count,
 not an assertion that any envelope is attained or a growing-rank asymptotic.
 
+The
+[fixed-degree notch packet](function_field/QUADRATIC_FAMILY_FIXED_DEGREE_WEIGHT_NOTCH.md)
+proves the general selection rule. For every fixed `n>=2`, the only potential
+`q^(n/2)` numerator channel is
+
+`p_n-q p_(n-2)=(-1)^n q^(n/2)(e_n-e_(n-2))`.
+
+Before the notch it walks through fundamental characters with the parity of
+`n`; it vanishes at the two mark counts `m=2n-1,2n`; afterward it is
+`(-1)^n chi_(omega_n)`. The odd notch has normalized envelope
+`O_n(q^(-n/2-1))`, while split infinity leaves the even notch at
+`O_n(q^(-(n+1)/2))`. Proper partition products are `O_(n,m)(q^-n)`.
+The packet separately computes `(n,m)=(2,3)`, where connectedization cancels
+the raw `q^-2` scalar leader and improves the cumulant to `O(q^-3)`. All of
+these statements fix `(n,m)`; none is uniform in growing degree or mark
+count.
+
 ## Release integrity checkpoint
 
-The bounded release replay covers 59 producer/test pairs and 56 stored JSON
-companions. All 630 focused tests pass under ordinary and optimized Python.
-All 59 producers also replay in both modes: 56 through their common
+The bounded release replay covers 60 producer/test pairs and 57 stored JSON
+companions. All 641 focused tests pass under ordinary and optimized Python.
+All 60 producers also replay in both modes: 57 through their common
 `--check` interface and three through the alternate CLI printed in their
 notes. Packet tests recompute the canonical payload and source locks wherever
 those locks are declared.
 
-Ruff and formatting pass on 113 non-frozen Python files. The only Ruff debt
+Ruff and formatting pass on 115 non-frozen Python files. The only Ruff debt
 is provenance-frozen and predates this release checkpoint:
 
 - `ffps_principal_leverage.py` and its test;
 - `frobenius_interferometry_subgroup_selectors.py` and its test;
 - `guarded_cohomology_conjecture_inference.py`.
 
-A control-byte scan over all 236 changed files is clean. The working diff
+A control-byte scan over all 240 changed files is clean. The working diff
 passes `git diff --check`; the full range check reports only the deliberately
 retained blank EOF in the provenance-frozen
 `CANONICAL_DETECTOR_NORM_LATTICE_OBSTRUCTION.md`.
@@ -462,6 +480,9 @@ retained blank EOF in the provenance-frozen
    upper envelope from sharpness or typical size, and retain the exact
    oriented twist and split-infinity conventions before interpreting an
    exterior-character channel.
+10. For the universal notch, label the odd/even residuals as leading weight
+    channels unless the full lower-weight sum is displayed, and keep the
+    `(n,m)=(2,3)` connected cancellation outside generic inheritance claims.
 
 The executable provenance and recommended reading paths are in
 [RESIDUAL_MECHANISMS_RESEARCH_MAP.md](RESIDUAL_MECHANISMS_RESEARCH_MAP.md).

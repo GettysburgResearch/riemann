@@ -162,7 +162,9 @@ Read:
    followed by the unifying
    [multi-place `L`-function identity](function_field/QUADRATIC_FAMILY_MULTIPLACE_L_FUNCTION_IDENTITY.md)
    and its
-   [six-place/weight-ceiling continuation](function_field/QUADRATIC_FAMILY_SIX_PLACE_CONNECTED_SATURATION.md);
+   [six-place/weight-ceiling continuation](function_field/QUADRATIC_FAMILY_SIX_PLACE_CONNECTED_SATURATION.md),
+   followed by the
+   [universal fixed-degree notch](function_field/QUADRATIC_FAMILY_FIXED_DEGREE_WEIGHT_NOTCH.md);
 5. [guarded cohomology inference](function_field/GUARDED_COHOMOLOGY_CONJECTURE_INFERENCE.md)
    followed by the exact [same-characteristic spectroscopy](function_field/GENUS2_EXACT_FROBENIUS_TOWER_SPECTROSCOPY.md);
 6. the [high-rank Haar boundary-layer tomography](function_field/HIGH_RANK_HAAR_BOUNDARY_LAYER_TOMOGRAPHY.md).
@@ -213,6 +215,21 @@ ten places the exact leading envelopes improve to `q^-7/2` and `q^-3`, and
 connectedization cannot refill the cancelled channel. These remain uniform
 upper envelopes for fixed mark count, not sharpness, equidistribution, or
 attainment theorems.
+
+The universal continuation shows that this is not peculiar to degree five.
+For fixed family degree `n >= 2`, the sole potential top-weight numerator
+channel is
+
+`p_n-q p_(n-2)=(-1)^n q^(n/2)(e_n-e_(n-2))`.
+
+As the auxiliary genus varies, this scans fundamental exterior characters of
+the same parity as `n`, vanishes at the two interior notch counts
+`m=2n-1,2n`, and then stabilizes on `(-1)^n chi_(omega_n)`. The odd notch
+drops a full weight and the even split-infinity notch drops a half weight.
+Proper connected partitions are `O_(n,m)(q^-n)` and cannot restore the top
+channel; `(n,m)=(2,3)` is explicitly exceptional because they instead cancel
+the raw scalar leader. This is a fixed-parameter selection rule and aliasing
+firewall, not a growing-degree theorem.
 
 ### Extended packet index
 
@@ -313,6 +330,7 @@ Python replays are mandatory because assertions may not carry correctness.
 | **PROVED** | for three distinct rational places, `sum_D chi(D(a)D(b)D(c))=3(q-2)t`, with `t` the Frobenius trace of `y^2=(a-z)(b-z)(c-z)`; the exact third-cumulant interaction splits into an elementary pair channel and this elliptic channel | the interferometry moonshot now detects a genuine geometric trace; for `q=3 mod 4` the pair channel vanishes, but the result is still a family correlation rather than a motive or zero theorem |
 | **PROVED** | for every odd prime power and set of distinct rational places, the squarefree sums in every polynomial degree obey `sum_n sum_(D in H_n) psi_A(D)u^n=L(u,psi_A)(1-qu^2)/(1-u^2)^m`; at degree five the `m=1,...,5` correlations are `0`, `2q-3`, `3(q-2)t`, `q^2-10+(4q-10)t`, and `(q^2-15)t`, with exact connected cumulants through five places | the standard squarefree Euler quotient becomes a source-exact evaluation-character/curve adapter and a geometric interaction ladder; for odd `m` the monic model is `-f_A`, a nontrivial quadratic twist exactly when `-1` is nonsquare, while the even-place infinity factor is also binding; neither the genus-two middle-coefficient cancellation nor the ten complementary elliptic traces may be promoted to a local-factor or motive identity |
 | **PROVED FROM LOCKED SOURCE** | the six-place raw sum is `(q^2-21)t_A+(q-6)b_A-q^2+6q-21`, its connected correction is `O(q^-7)`, and the all-`m` top-weight channel is `q^(5/2)(e_3-e_5)`, with an exact genus-four cancellation at `m=9,10` | the second Frobenius-power channel re-enters at six marks, while symplectic exterior algebra exposes a nonmonotone weight ceiling; all scales are fixed-`m` upper envelopes, not distribution or attainment claims |
+| **PROVED FROM LOCKED SOURCE** | for every fixed family degree `n>=2`, the marked-place top channel is `(-1)^n q^(n/2)(e_n-e_(n-2))`; it vanishes at `m=2n-1,2n`, with exact odd/even residual expansions and connected correction `O_(n,m)(q^-n)` | mark count is an exact exterior-character spectrometer with a universal interior notch; the `n=2,m=3` connected cancellation is isolated rather than hidden in a generic asymptotic |
 | **EXACT FINITE + REFUSAL** | three-field data retain the ambiguity module `(q-3)(q-5)(q-7)Q(q)` | the inference engine refuses to name a cohomology or eigenform packet without a tower and geometric adapter |
 | **PROVED** | the high-rank `SU(2)` character law has an exact cubic tail; its limiting variance exists but absolute moments of order at least three diverge, while finite-rank `2k` moments grow like `n^(2k-3)` | weak limits, rank limits, and high moments do not commute because of a thin endpoint layer |
 | **PROVED** | that endpoint layer has a uniform mesoscopic tail constant `16/(9 pi^2)`, an exact fixed-`lambda` crossover profile, and hard-truncated, Winsorized, and cubic-moment coefficients | rare-event tomography now resolves the rank-scale boundary rather than merely detecting moment divergence |
@@ -343,9 +361,10 @@ Python replays are mandatory because assertions may not carry correctness.
 6. **Most surprising moonshot conversion:** exact connected correlations at
    two through six marked places have successive exact/Hasse scales `q^-4`,
    `q^-7/2`, `q^-3`, `q^-5/2`, and `q^-5/2`. The apparent plateau is then
-   resolved by an exact exterior-character law: its top channel changes from
-   `omega_1` to `omega_3`, vanishes in genus four, and returns as
-   `-omega_5`.
+   resolved by a universal exterior-character law: in every fixed family
+   degree `n`, the top channel walks through same-parity fundamental
+   characters, vanishes at `m=2n-1,2n`, and returns as
+   `(-1)^n chi_(omega_n)`.
 
 ## Strongest negative information
 
@@ -461,9 +480,9 @@ pending a dedicated specialist search.
 9. Continue the exact multi-place connected hierarchy beyond six marks and
    determine whether its trace-dependent Hasse envelopes are sharp on
    generic, endoscopic, or exceptional configuration strata. The general
-   generating identity and the top-weight exterior-character classification
-   are proved; distributions of the surviving `omega_1`, `omega_3`,
-   `omega_4`, and `omega_5` channels are not.
+   generating identity and the universal fixed-degree exterior-character
+   classification are proved; distributions and sharpness of the surviving
+   character channels are not.
 
 ## Replay and resource contract
 
@@ -485,12 +504,12 @@ release audit runs all focused tests together in ordinary and optimized
 Python, recomputes payload hashes, checks source blobs, runs Ruff, and
 finishes with `git diff --check`.
 
-The final bounded checkpoint covers 59 producer/test pairs and 56 stored
-JSON companions. All 630 focused tests pass in ordinary and optimized
-Python. All 59 producers replay in both modes: 56 use the common `--check`
+The final bounded checkpoint covers 60 producer/test pairs and 57 stored
+JSON companions. All 641 focused tests pass in ordinary and optimized
+Python. All 60 producers replay in both modes: 57 use the common `--check`
 form, while the renormalization-flow, guarded-inference, and genus-one phase
 diagram packets use their printed alternate CLIs. Ruff and formatting pass
-on the 113 non-frozen Python files. Five provenance-frozen files retain ten
+on the 115 non-frozen Python files. Five provenance-frozen files retain ten
 pre-existing Ruff findings and are listed in the release audit rather than
 silently rewritten.
 
