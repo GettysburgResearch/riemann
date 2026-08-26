@@ -24,6 +24,7 @@ where `chi(0)=0`.  Define
 \[
  s_q=(-1)^{(q+1)/2},\qquad g={q-1\over2}.
 \tag{0.2}
+\]
 
 Then the complete generating series is
 
@@ -32,6 +33,7 @@ Then the complete generating series is
  \sum_{n\ge0}S^{\mathrm{full}}_{n,q}u^n
  =(1+s_qqu^2)^g{1-qu^2\over(1-u^2)^q}.}
 \tag{0.3}
+\]
 
 Every factor on the right is even.  Consequently
 
@@ -39,6 +41,7 @@ Every factor on the right is even.  Consequently
  \boxed{S^{\mathrm{full}}_{2k+1,q}=0
  \quad\text{for every }k\ge0.}
 \tag{0.4}
+\]
 
 In particular, the complete rational-place correlation in the quadratic
 quintic family vanishes for every odd prime power, even though the generic
@@ -50,12 +53,14 @@ the auxiliary curve itself becomes
 \[
  C_q:\quad y^2=x-x^q,
 \tag{0.5}
+\]
 
 and has the exact zeta numerator
 
 \[
  \boxed{P_q(u)=(1+s_qqu^2)^g.}
 \tag{0.6}
+\]
 
 Thus its odd Frobenius exterior coefficients vanish simultaneously.  This is
 a geometric saturation law for the evaluation-character interferometer.
@@ -77,6 +82,7 @@ At `A=F_q`, because `q` is odd,
  f_A(x)=(-1)^q\prod_{a\in\mathbf F_q}(x-a)
  =-(x^q-x)=x-x^q.
 \tag{1.1}
+\]
 
 The degree is odd, so infinity is ramified and contributes one rational
 point.  For every `x in F_q`, the right side of (0.5) is zero.  Hence
@@ -85,6 +91,7 @@ point.  For every `x in F_q`, the right side of (0.5) is zero.  Hence
  \#C_q(\mathbf F_q)=q+1,
 \qquad \sum_{i=1}^{q-1}\alpha_i=0,
 \tag{1.2}
+\]
 
 where the `alpha_i` are the reciprocal roots of `P_q`.
 
@@ -114,6 +121,7 @@ so its quadratic character in `F_(q^2)` is
  =\zeta^{(q^2-1)/2}
  =(-1)^{(q+1)/2}=s_q.
 \tag{1.3}
+\]
 
 Each value in `V` has `q` preimages.  Therefore
 
@@ -129,12 +137,14 @@ and
  \#C_q(\mathbf F_{q^2})
  =q^2+1+q(q-1)s_q.}
 \tag{1.4}
+\]
 
 Newton's point-count identity gives
 
 \[
  \sum_{i=1}^{q-1}\alpha_i^2=-q(q-1)s_q.
 \tag{1.5}
+\]
 
 Each summand has absolute value `q` by the Weil theorem, and the right side
 has the maximal possible absolute value `q(q-1)`.  Equality in the triangle
@@ -144,6 +154,7 @@ inequality forces
  \alpha_i^2=-qs_q
  \quad\text{for every }i.
 \tag{1.6}
+\]
 
 Equation (1.2) then makes the two square roots occur with equal multiplicity
 `g`.  Taking their characteristic polynomial proves (0.6).  No extension
@@ -168,6 +179,7 @@ The exact multi-place theorem says, for `m` distinct rational places,
  \prod_{a\in A}\chi(D(a))u^n
  =L(u,\psi_A){1-qu^2\over(1-u^2)^m}.
 \tag{2.1}
+\]
 
 Here `m=q` is odd.  Infinity is ramified, so the finite Dirichlet polynomial
 is exactly the curve numerator:
@@ -175,6 +187,7 @@ is exactly the curve numerator:
 \[
  L(u,\psi_{\mathbf F_q})=P_q(u).
 \tag{2.2}
+\]
 
 Substitution of (0.6) into (2.1) proves (0.3)--(0.4).
 
@@ -185,6 +198,7 @@ The even-degree rows are also explicit.  Put
  -q\binom{q+r-2}{r-1},
 \qquad B_{q,0}=1,
 \tag{2.3}
+\]
 
 with `B_(q,r)=0` for `r<0`.  Then
 
@@ -194,6 +208,7 @@ with `B_(q,r)=0` for `r<0`.  Then
  =\sum_{j=0}^{\min(g,k)}
  \binom gj(s_qq)^jB_{q,k-j}.}
 \tag{2.4}
+\]
 
 Thus the theorem gives the entire family-correlation tower, not just the
 odd vanishing.

@@ -49,15 +49,23 @@ def richness_rate(density: float, alpha: float) -> float:
     return density - alpha + alpha * math.log(alpha / density)
 
 
-def balanced_fraction(effective_gain: float) -> float:
-    """Solve 1-x+x log x = effective_gain*x on (0,1)."""
-    if effective_gain <= 0:
-        raise ValueError("effective gain must be positive")
+def uniform_balanced_fraction(density: float, conductor_power: float) -> float:
+    """Solve 1-x+x log x = log(5/4)*x-theta/delta on (0,1)."""
+    typical_gain = effective_rank_gain(density, conductor_power)
+    if typical_gain <= 0:
+        raise ValueError("conductor power must lie below the critical threshold")
+    scaled_power = conductor_power / density
     lo = 1e-15
     hi = 1 - 1e-15
     for _ in range(160):
         mid = (lo + hi) / 2
-        value = 1 - mid + mid * math.log(mid) - effective_gain * mid
+        value = (
+            1
+            - mid
+            + mid * math.log(mid)
+            - LOG_BLOCK_GAIN * mid
+            + scaled_power
+        )
         if value > 0:
             lo = mid
         else:
@@ -66,30 +74,32 @@ def balanced_fraction(effective_gain: float) -> float:
 
 
 def optimized_power_panel(density: float, conductor_power: float) -> dict[str, object]:
-    gain = effective_rank_gain(density, conductor_power)
+    typical_gain = effective_rank_gain(density, conductor_power)
     threshold = density * LOG_BLOCK_GAIN
-    if gain <= 0:
+    if typical_gain <= 0:
         return {
             "density": density,
             "conductor_power": conductor_power,
             "critical_conductor_power": f"{threshold:.12f}",
             "status": "no growing-rank net gain",
-            "effective_gain_per_rank": f"{gain:.12f}",
+            "typical_effective_gain_per_rank": f"{typical_gain:.12f}",
             "optimal_alpha": None,
             "optimal_net_exponent": "0.000000000000",
         }
-    fraction = balanced_fraction(gain)
+    fraction = uniform_balanced_fraction(density, conductor_power)
     alpha = density * fraction
-    exponent = alpha * gain
+    uniform_trace_exponent = alpha * LOG_BLOCK_GAIN - conductor_power
+    exponent = uniform_trace_exponent
     return {
         "density": density,
         "conductor_power": conductor_power,
         "critical_conductor_power": f"{threshold:.12f}",
-        "status": "conditional net gain",
-        "effective_gain_per_rank": f"{gain:.12f}",
+        "status": "conditional uniform rich-core net gain",
+        "typical_effective_gain_per_rank": f"{typical_gain:.12f}",
         "optimal_fraction_alpha_over_delta": f"{fraction:.12f}",
         "optimal_alpha": f"{alpha:.12f}",
         "optimal_net_exponent": f"{exponent:.12f}",
+        "uniform_trace_exponent_at_optimum": f"{uniform_trace_exponent:.12f}",
         "richness_rate_at_optimum": f"{richness_rate(density, alpha):.12f}",
     }
 
@@ -106,8 +116,12 @@ def sublog_panel(
         "rank_schedule": f"r={kappa:g}*log(log(n))",
         "typical_rth_place_degree": f"(log(n))^({kappa / density:.12f}+o_Pr(1))",
         "formal_leverage": f"(log(n))^(-{kappa * LOG_BLOCK_GAIN:.12f}+o(1))",
-        "net_exponent_after_degree_power_loss": f"{kappa * gain:.12f}",
-        "status": "net gain" if gain > 0 else "no net gain",
+        "typical_net_exponent_after_degree_power_loss": f"{kappa * gain:.12f}",
+        "status": (
+            "typical-scale net gain, not an averaged bound"
+            if gain > 0
+            else "no typical-scale net gain"
+        ),
     }
 
 
@@ -122,8 +136,18 @@ def run() -> dict[str, object]:
         )
     return {
         "order_statistic": {
-            "range": "r->infinity and r=o(log n)",
-            "law": "log(d_(r))/r -> 1/delta in probability",
+            "sublogarithmic_rank": (
+                "r->infinity and r=o(log n): "
+                "log(d_(r))/r -> 1/delta in probability"
+            ),
+            "logarithmic_rank": (
+                "r=alpha*log(n), 0<alpha<delta: "
+                "log(d_(r))/log(n) -> alpha/delta in probability"
+            ),
+            "tail_scope": (
+                "the variance proof gives convergence in probability, "
+                "not the polynomial tail needed for an averaged trace exponent"
+            ),
             "variance_input": "Var Omega_E(F;D)=delta*log(D)+O_q(1)+o(1)",
         },
         "ambient_abundance": {
@@ -139,8 +163,9 @@ def run() -> dict[str, object]:
             "delta_1_over_2": f"{0.5 * LOG_BLOCK_GAIN:.12f}",
             "delta_1": f"{LOG_BLOCK_GAIN:.12f}",
             "meaning": (
-                "a degree^theta loss survives exactly below this threshold; "
-                "modewise linear and square-root losses fail"
+                "both the typical and uniform rich-core ledgers have positive "
+                "exponent exactly below this threshold; their optimized "
+                "positive-theta exponents differ"
             ),
         },
         "optimized_power_rank_panels": power_panels,
@@ -154,6 +179,14 @@ def run() -> dict[str, object]:
             "the order-statistic theorem is for ambient squarefree cores",
             "FFPS-RICH-CARLESON is still needed for the frozen weighted source",
             "the conductor comparison is conditional on a degree^theta trace loss",
+            (
+                "the alpha*(log(5/4)-theta/delta) power-rank expression is "
+                "typical only, not an averaged exponent"
+            ),
+            (
+                "the optimized power panels use the deterministic d_(r)<=n "
+                "bound on every rich core"
+            ),
             "a relative virtual complex may cancel branches before this loss is paid",
             "none of the phase panels proves CYSEL, individualization, RH, or GRH",
         ],

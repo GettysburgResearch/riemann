@@ -8,6 +8,8 @@
     "the order-statistic theorem is for ambient squarefree cores",
     "FFPS-RICH-CARLESON is still needed for the frozen weighted source",
     "the conductor comparison is conditional on a degree^theta trace loss",
+    "the alpha*(log(5/4)-theta/delta) power-rank expression is typical only, not an averaged exponent",
+    "the optimized power panels use the deterministic d_(r)<=n bound on every rich core",
     "a relative virtual complex may cancel branches before this loss is paid",
     "none of the phase panels proves CYSEL, individualization, RH, or GRH"
   ],
@@ -16,112 +18,121 @@
       "conductor_power": 0.0,
       "critical_conductor_power": "0.111571775657",
       "density": 0.5,
-      "effective_gain_per_rank": "0.223143551314",
       "optimal_alpha": "0.274064461784",
       "optimal_fraction_alpha_over_delta": "0.548128923568",
       "optimal_net_exponent": "0.061155717291",
       "richness_rate_at_optimum": "0.061155717291",
-      "status": "conditional net gain"
+      "status": "conditional uniform rich-core net gain",
+      "typical_effective_gain_per_rank": "0.223143551314",
+      "uniform_trace_exponent_at_optimum": "0.061155717291"
     },
     {
       "conductor_power": 0.025,
       "critical_conductor_power": "0.111571775657",
       "density": 0.5,
-      "effective_gain_per_rank": "0.173143551314",
-      "optimal_alpha": "0.292547316927",
-      "optimal_fraction_alpha_over_delta": "0.585094633855",
-      "optimal_net_exponent": "0.050652681380",
-      "richness_rate_at_optimum": "0.050652681380",
-      "status": "conditional net gain"
+      "optimal_alpha": "0.306652131890",
+      "optimal_fraction_alpha_over_delta": "0.613304263779",
+      "optimal_net_exponent": "0.043427445728",
+      "richness_rate_at_optimum": "0.043427445728",
+      "status": "conditional uniform rich-core net gain",
+      "typical_effective_gain_per_rank": "0.173143551314",
+      "uniform_trace_exponent_at_optimum": "0.043427445728"
     },
     {
       "conductor_power": 0.05,
       "critical_conductor_power": "0.111571775657",
       "density": 0.5,
-      "effective_gain_per_rank": "0.123143551314",
-      "optimal_alpha": "0.316146135022",
-      "optimal_fraction_alpha_over_delta": "0.632292270044",
-      "optimal_net_exponent": "0.038931357801",
-      "richness_rate_at_optimum": "0.038931357801",
-      "status": "conditional net gain"
+      "optimal_alpha": "0.344997483582",
+      "optimal_fraction_alpha_over_delta": "0.689994967163",
+      "optimal_net_exponent": "0.026983963681",
+      "richness_rate_at_optimum": "0.026983963681",
+      "status": "conditional uniform rich-core net gain",
+      "typical_effective_gain_per_rank": "0.123143551314",
+      "uniform_trace_exponent_at_optimum": "0.026983963681"
     },
     {
       "conductor_power": 0.1,
       "critical_conductor_power": "0.111571775657",
       "density": 0.5,
-      "effective_gain_per_rank": "0.023143551314",
-      "optimal_alpha": "0.406225912652",
-      "optimal_fraction_alpha_over_delta": "0.812451825304",
-      "optimal_net_exponent": "0.009401510255",
-      "richness_rate_at_optimum": "0.009401510255",
-      "status": "conditional net gain"
+      "optimal_alpha": "0.456769583177",
+      "optimal_fraction_alpha_over_delta": "0.913539166353",
+      "optimal_net_exponent": "0.001925186922",
+      "richness_rate_at_optimum": "0.001925186922",
+      "status": "conditional uniform rich-core net gain",
+      "typical_effective_gain_per_rank": "0.023143551314",
+      "uniform_trace_exponent_at_optimum": "0.001925186922"
     },
     {
       "conductor_power": 0.12,
       "critical_conductor_power": "0.111571775657",
       "density": 0.5,
-      "effective_gain_per_rank": "-0.016856448686",
       "optimal_alpha": null,
       "optimal_net_exponent": "0.000000000000",
-      "status": "no growing-rank net gain"
+      "status": "no growing-rank net gain",
+      "typical_effective_gain_per_rank": "-0.016856448686"
     },
     {
       "conductor_power": 0.0,
       "critical_conductor_power": "0.223143551314",
       "density": 1.0,
-      "effective_gain_per_rank": "0.223143551314",
       "optimal_alpha": "0.548128923568",
       "optimal_fraction_alpha_over_delta": "0.548128923568",
       "optimal_net_exponent": "0.122311434583",
       "richness_rate_at_optimum": "0.122311434583",
-      "status": "conditional net gain"
+      "status": "conditional uniform rich-core net gain",
+      "typical_effective_gain_per_rank": "0.223143551314",
+      "uniform_trace_exponent_at_optimum": "0.122311434583"
     },
     {
       "conductor_power": 0.05,
       "critical_conductor_power": "0.223143551314",
       "density": 1.0,
-      "effective_gain_per_rank": "0.173143551314",
-      "optimal_alpha": "0.585094633855",
-      "optimal_fraction_alpha_over_delta": "0.585094633855",
-      "optimal_net_exponent": "0.101305362760",
-      "richness_rate_at_optimum": "0.101305362760",
-      "status": "conditional net gain"
+      "optimal_alpha": "0.613304263779",
+      "optimal_fraction_alpha_over_delta": "0.613304263779",
+      "optimal_net_exponent": "0.086854891456",
+      "richness_rate_at_optimum": "0.086854891456",
+      "status": "conditional uniform rich-core net gain",
+      "typical_effective_gain_per_rank": "0.173143551314",
+      "uniform_trace_exponent_at_optimum": "0.086854891456"
     },
     {
       "conductor_power": 0.1,
       "critical_conductor_power": "0.223143551314",
       "density": 1.0,
-      "effective_gain_per_rank": "0.123143551314",
-      "optimal_alpha": "0.632292270044",
-      "optimal_fraction_alpha_over_delta": "0.632292270044",
-      "optimal_net_exponent": "0.077862715602",
-      "richness_rate_at_optimum": "0.077862715602",
-      "status": "conditional net gain"
+      "optimal_alpha": "0.689994967163",
+      "optimal_fraction_alpha_over_delta": "0.689994967163",
+      "optimal_net_exponent": "0.053967927362",
+      "richness_rate_at_optimum": "0.053967927362",
+      "status": "conditional uniform rich-core net gain",
+      "typical_effective_gain_per_rank": "0.123143551314",
+      "uniform_trace_exponent_at_optimum": "0.053967927362"
     },
     {
       "conductor_power": 0.2,
       "critical_conductor_power": "0.223143551314",
       "density": 1.0,
-      "effective_gain_per_rank": "0.023143551314",
-      "optimal_alpha": "0.812451825304",
-      "optimal_fraction_alpha_over_delta": "0.812451825304",
-      "optimal_net_exponent": "0.018803020509",
-      "richness_rate_at_optimum": "0.018803020509",
-      "status": "conditional net gain"
+      "optimal_alpha": "0.913539166353",
+      "optimal_fraction_alpha_over_delta": "0.913539166353",
+      "optimal_net_exponent": "0.003850373845",
+      "richness_rate_at_optimum": "0.003850373845",
+      "status": "conditional uniform rich-core net gain",
+      "typical_effective_gain_per_rank": "0.023143551314",
+      "uniform_trace_exponent_at_optimum": "0.003850373845"
     },
     {
       "conductor_power": 0.24,
       "critical_conductor_power": "0.223143551314",
       "density": 1.0,
-      "effective_gain_per_rank": "-0.016856448686",
       "optimal_alpha": null,
       "optimal_net_exponent": "0.000000000000",
-      "status": "no growing-rank net gain"
+      "status": "no growing-rank net gain",
+      "typical_effective_gain_per_rank": "-0.016856448686"
     }
   ],
   "order_statistic": {
-    "law": "log(d_(r))/r -> 1/delta in probability",
-    "range": "r->infinity and r=o(log n)",
+    "logarithmic_rank": "r=alpha*log(n), 0<alpha<delta: log(d_(r))/log(n) -> alpha/delta in probability",
+    "sublogarithmic_rank": "r->infinity and r=o(log n): log(d_(r))/r -> 1/delta in probability",
+    "tail_scope": "the variance proof gives convergence in probability, not the polynomial tail needed for an averaged trace exponent",
     "variance_input": "Var Omega_E(F;D)=delta*log(D)+O_q(1)+o(1)"
   },
   "resource_caps": {
@@ -136,36 +147,36 @@
       "conductor_power": 0.0,
       "density": 0.5,
       "formal_leverage": "(log(n))^(-0.223143551314+o(1))",
-      "net_exponent_after_degree_power_loss": "0.223143551314",
       "rank_schedule": "r=1*log(log(n))",
-      "status": "net gain",
+      "status": "typical-scale net gain, not an averaged bound",
+      "typical_net_exponent_after_degree_power_loss": "0.223143551314",
       "typical_rth_place_degree": "(log(n))^(2.000000000000+o_Pr(1))"
     },
     {
       "conductor_power": 0.1,
       "density": 0.5,
       "formal_leverage": "(log(n))^(-0.223143551314+o(1))",
-      "net_exponent_after_degree_power_loss": "0.023143551314",
       "rank_schedule": "r=1*log(log(n))",
-      "status": "net gain",
+      "status": "typical-scale net gain, not an averaged bound",
+      "typical_net_exponent_after_degree_power_loss": "0.023143551314",
       "typical_rth_place_degree": "(log(n))^(2.000000000000+o_Pr(1))"
     },
     {
       "conductor_power": 0.0,
       "density": 1.0,
       "formal_leverage": "(log(n))^(-0.223143551314+o(1))",
-      "net_exponent_after_degree_power_loss": "0.223143551314",
       "rank_schedule": "r=1*log(log(n))",
-      "status": "net gain",
+      "status": "typical-scale net gain, not an averaged bound",
+      "typical_net_exponent_after_degree_power_loss": "0.223143551314",
       "typical_rth_place_degree": "(log(n))^(1.000000000000+o_Pr(1))"
     },
     {
       "conductor_power": 0.2,
       "density": 1.0,
       "formal_leverage": "(log(n))^(-0.223143551314+o(1))",
-      "net_exponent_after_degree_power_loss": "0.023143551314",
       "rank_schedule": "r=1*log(log(n))",
-      "status": "net gain",
+      "status": "typical-scale net gain, not an averaged bound",
+      "typical_net_exponent_after_degree_power_loss": "0.023143551314",
       "typical_rth_place_degree": "(log(n))^(1.000000000000+o_Pr(1))"
     }
   ],
@@ -173,6 +184,6 @@
     "criterion": "theta<delta*log(5/4)",
     "delta_1": "0.223143551314",
     "delta_1_over_2": "0.111571775657",
-    "meaning": "a degree^theta loss survives exactly below this threshold; modewise linear and square-root losses fail"
+    "meaning": "both the typical and uniform rich-core ledgers have positive exponent exactly below this threshold; their optimized positive-theta exponents differ"
   }
 }

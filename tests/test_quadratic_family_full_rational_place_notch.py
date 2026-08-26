@@ -13,6 +13,7 @@ MODULE_PATH = (
     / "function_field"
     / "quadratic_family_full_rational_place_notch.py"
 )
+NOTE_PATH = MODULE_PATH.with_name("QUADRATIC_FAMILY_FULL_RATIONAL_PLACE_NOTCH.md")
 SPEC = importlib.util.spec_from_file_location("full_place_notch", MODULE_PATH)
 assert SPEC and SPEC.loader
 full_place_notch = importlib.util.module_from_spec(SPEC)
@@ -20,6 +21,17 @@ SPEC.loader.exec_module(full_place_notch)
 
 
 class QuadraticFamilyFullRationalPlaceNotchTest(unittest.TestCase):
+    def test_display_math_delimiters_are_balanced(self) -> None:
+        depth = 0
+        for line in NOTE_PATH.read_text(encoding="utf-8").splitlines():
+            if line == r"\[":
+                depth += 1
+                self.assertEqual(depth, 1)
+            elif line == r"\]":
+                depth -= 1
+                self.assertGreaterEqual(depth, 0)
+        self.assertEqual(depth, 0)
+
     def test_zeta_numerator_has_only_even_coefficients(self) -> None:
         for q in full_place_notch.Q_PANELS:
             coefficients = full_place_notch.zeta_numerator_coefficients(q)

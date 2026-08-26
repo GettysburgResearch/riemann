@@ -68,25 +68,29 @@ The formal hard-block leverage is `exp(-a r)`, where
  a=\log(5/4).
 \]
 
-If a trace theorem loses a factor `d_(r)^theta`, its net rank exponent is
+If a trace theorem loses a factor `d_(r)^theta`, its **typical-scale** net
+rank exponent is
 
 \[
  \boxed{a-{\theta\over\delta}.}
 \tag{0.6}
 \]
 
-Consequently a growing-rank gain is possible in this model exactly below
+Consequently this typical envelope decays exactly below
 
 \[
  \boxed{\theta<\delta\log(5/4).}
 \tag{0.7}
 \]
 
-The thresholds are only `0.223143...` for `q=1 mod 4` and `0.111571...`
-for `q=3 mod 4`.  A linear or square-root dependence on the largest branch
-degree loses decisively.  The live escape is an exact cancellation of the
-large-degree constituents inside a joint relative complex *before* a
-modewise conductor is paid.
+The same threshold governs the rigorous uniform rich-core ledger in Section
+3.2, but its optimized exponent is smaller: convergence in probability of
+`d_(r)` cannot by itself be combined with a polynomial exceptional-set
+bound.  The thresholds are only `0.223143...` for `q=1 mod 4` and
+`0.111571...` for `q=3 mod 4`.  A linear or square-root dependence on the
+largest branch degree loses decisively in this ledger.  The live escape is
+an exact cancellation of the large-degree constituents inside a joint
+relative complex *before* a modewise conductor is paid.
 
 Equation (0.3) is an ambient squarefree theorem.  The weighted-source
 firewall proves that it cannot be silently transferred through the frozen
@@ -177,12 +181,38 @@ Except on that event,
 
 which proves (0.3).
 
+The same argument also gives a two-sided law at logarithmic rank.  If
+
+\[
+ r=\lfloor\alpha\log n\rfloor,
+ \qquad 0<\alpha<\delta,
+\]
+
+then, for fixed sufficiently small `eta>0`, use
+
+\[
+ D_\pm=\lfloor n^{\alpha/\delta\pm\eta}\rfloor.
+\]
+
+Both cutoffs are `o(n)`, their means differ from `r` by
+`delta*eta*log n+O_q(1)`, and their variances are `O_q(log n)`.  Hence
+
+\[
+ \boxed{
+ {\log d_{(r)}(F)\over\log n}
+ \ \xrightarrow{\Pr}\ {\alpha\over\delta}.}
+\tag{2.3}
+\]
+
+The Chebyshev failure probability supplied here is only `O_q(1/log n)`.
+In particular, (2.3) is not a polynomial-tail estimate.
+
 For (0.4), use the full bivariate squarefree Euler product.  For each fixed
 `0<t<1`, coefficient transfer gives
 
 \[
  \mathbb E[t^{\omega_E(F)}]\ll_{q,t}n^{\delta(t-1)}.
-\tag{2.3}
+\tag{2.4}
 \]
 
 On `omega_E(F)<r`, `1<=t^{-(r-1)}t^omega`.  Since `r=o(log n)`, the
@@ -205,7 +235,11 @@ The exact two-place block factor is below `4/5`, hence
 \]
 
 Suppose only for this exponent ledger that the surviving relative trace
-costs at most a power `d_(r)^theta`.  Equation (0.3) makes the product
+bound is weakened by at most a power `d_(r)^theta`.  The exact block factors
+also satisfy `log L_r=-ar+o(r)`: each side uses distinct places, only
+finitely many closed places have bounded norm, and the exact two-place
+factor tends to `4/5` as both norms tend to infinity.  Equation (0.3) then
+makes the typical product
 
 \[
  d_{(r)}^\theta L_r
@@ -214,7 +248,9 @@ costs at most a power `d_(r)^theta`.  Equation (0.3) makes the product
 \tag{3.2}
 \]
 
-This proves (0.6)--(0.7).  Two useful schedules are:
+This proves (0.6)--(0.7) as a convergence-in-probability phase diagnostic.
+It does not yet bound an average over cores: an exceptional core can have a
+much larger `d_(r)^theta`.  Two useful schedules are:
 
 ### 3.1 Sublogarithmic rank
 
@@ -228,18 +264,35 @@ For `r=kappa log log n`,
  &=(\log n)^{-\kappa(\log(5/4)-\theta/\delta)+o_{\Pr}(1)}.
 \end{aligned}
 \tag{3.3}
+\]
 
-The poor-core ambient error in (0.4) is much smaller than this polylogarithmic
-gain.  But a source-weighted Carleson theorem and a relative trace estimate
-are still missing.
+The poor-core ambient error in (0.4) is much smaller than this
+polylogarithmic typical gain.  That comparison does not control the upper
+tail of `d_(r)` at the same precision.  A source-weighted Carleson theorem,
+a relative trace estimate, and a quantitative tail or uniform-integrability
+input are still needed before (3.3) can become an averaged decay estimate.
 
 ### 3.2 Power rank
 
-For `r=alpha log n`, the earlier one-sided supply theorem gives
+For `r=alpha log n`, with `0<alpha<delta`, equation (2.3) gives the
+typical-scale diagnostic
 
 \[
- d_{(r)}\ge n^{\alpha/\delta-o_{\Pr}(1)},
+ \begin{aligned}
+ d_{(r)}&=n^{\alpha/\delta+o_{\Pr}(1)},\\
+ d_{(r)}^\theta L_r
+ &=n^{-\alpha(\log(5/4)-\theta/\delta)+o_{\Pr}(1)}.
+ \end{aligned}
 \tag{3.4}
+\]
+
+This is not an averaged exponent.  For a rigorous uniform ledger, use only
+the deterministic fact that every factor of a rich degree-`n` core has
+degree at most `n`.  Thus the conditional trace contribution on every rich
+core is at most
+
+\[
+ n^{-(\alpha\log(5/4)-\theta)+o(1)},
 \]
 
 while the ambient poor-core exponent is
@@ -248,38 +301,45 @@ while the ambient poor-core exponent is
  c_\delta(\alpha)
  =\delta-\alpha+\alpha\log(\alpha/\delta).
 \tag{3.5}
+\]
 
-Conditional on a source transfer and a `d^theta` relative trace loss, the
-best exponent available from this two-term ledger is
+Conditional on a source transfer carrying this poor-core rate, a trivial
+bound on discarded cores, and a relative trace bound losing at most
+`d_(r)^theta`, the uniform two-term exponent is
 
 \[
  \min\left\{
  c_\delta(\alpha),
- \alpha\left(\log(5/4)-{\theta\over\delta}\right)
+ \alpha\log(5/4)-\theta
  \right\}.
 \tag{3.6}
+\]
 
 If `theta<delta log(5/4)`, the optimum is the unique crossing.  Put
 
 \[
- b=\log(5/4)-\theta/\delta,
- \qquad x=\alpha/\delta.
+ a=\log(5/4),\qquad
+ \tau=\theta/\delta,\qquad
+ x=\alpha/\delta.
 \]
 
 Then `x` is the unique root in `(0,1)` of
 
 \[
- 1-x+x\log x=bx.
+ 1-x+x\log x=ax-\tau.
 \tag{3.7}
+\]
 
 Equivalently,
 
 \[
- x=-{1\over W_{-1}(-e^{-(1+b)})}.
+ x=-{1+\tau\over
+ W_{-1}(-(1+\tau)e^{-(1+a)})}.
 \tag{3.8}
+\]
 
-The optimized exponent is `delta*x*b`.  At `theta=0`, this recovers exactly
-the previously found panels
+The optimized exponent is `delta*(a*x-tau)`.  At `theta=0`, this recovers
+exactly the previously found panels
 
 \[
 \begin{array}{c|c|c}
@@ -288,9 +348,12 @@ the previously found panels
 1&0.548128923568&0.122311434583.
 \end{array}
 \tag{3.9}
+\]
 
 As `theta` approaches the threshold in (0.7), the optimized exponent tends
-to zero.  Above it, increasing rank only worsens the conductor ledger.
+to zero.  At or above it, no `0<alpha<delta` makes the uniform rich-core
+trace exponent positive.  This does not rule out a sharper tail theorem or
+additional cancellation in the trace itself.
 
 ## 4. Why multiscale banding does not alter the theorem
 
@@ -316,6 +379,7 @@ Thus the scale-free conclusion is:
 \boxed{
  \text{banding cannot trade branch entropy for quadratic leverage.}}
 \tag{4.1}
+\]
 
 The only currently visible escape is a genuinely joint virtual complex in
 which the common high-degree inertia constituents cancel before the trace
@@ -328,14 +392,16 @@ Proved for ambient squarefree polynomial cores:
 - the one/two-prime divisibility estimate (1.4);
 - the truncated mean and variance (1.5);
 - the sublogarithmic order-statistic law (0.3);
+- the logarithmic-rank order-statistic law (2.3), only in probability;
 - the ambient abundance estimate (0.4).
 
 Exact algebra or conditional exponent bookkeeping:
 
 - block leverage `exp(-r log(5/4))` from the hard Gram theorem;
-- the universal conductor threshold (0.7), conditional on a
-  `d_(r)^theta` trace loss;
-- the optimized power-rank crossing (3.6)--(3.9);
+- the conductor threshold (0.7) inside the stated `d_(r)^theta` loss model;
+- the typical-scale diagnostics (3.2)--(3.4), which are not averaged bounds;
+- the uniform rich-core conditional crossing (3.6)--(3.9), using
+  `d_(r)<=n` rather than the typical order statistic;
 - the multiscale no-escape conclusion from the joint-quotient theorem.
 
 Not proved:
@@ -343,8 +409,15 @@ Not proved:
 - `FFPS-RICH-CARLESON(alpha)` for the frozen Boolean/depth source;
 - a relative sheaf whose large-degree local inertia cancels;
 - a uniform varying-place Frobenius trace bound;
+- the quantitative tail or uniform integrability needed to average (3.3)
+  or the sharper expression in (3.4);
 - `CYSEL`, `WCADD`, `WCKUM`, principal-member individualization;
 - RH or GRH.
+
+No external novelty or priority is claimed for the order-statistic or
+optimization observations in this packet.  The phrase \"only currently
+visible escape\" refers only to the architectures audited in this branch,
+not to an exhaustive literature classification.
 
 The packet changes the next experimental question.  The useful target is no
 longer “find more short places.”  It is:
