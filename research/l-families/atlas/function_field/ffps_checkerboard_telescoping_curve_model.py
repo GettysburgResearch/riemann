@@ -7,6 +7,8 @@ import argparse
 import json
 import subprocess
 import time
+from itertools import product
+from math import factorial
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -29,6 +31,7 @@ MAX_E = 64
 MAX_ROWS = 512
 MAX_BIT_OPERATIONS = 100_000
 MAX_BOUNDARY_ROWS = 2_048
+MAX_TREE_PROFILES = 2_000
 MAX_WALL_SECONDS = 3.0
 
 
@@ -122,6 +125,192 @@ def gf2_rank(vectors: tuple[int, ...]) -> tuple[int, int]:
                 break
             value ^= basis[pivot]
     return len(basis), bit_operations
+
+
+def graph_profile(
+    vertex_count: int, edges: tuple[tuple[int, int], ...], closed_place_degree: int = 1
+) -> dict[str, object]:
+    """Return the exact incidence and top-character profile of a simple graph."""
+
+    if (
+        isinstance(vertex_count, bool)
+        or not isinstance(vertex_count, int)
+        or vertex_count < 2
+    ):
+        raise ValueError("vertex_count must be at least two")
+    if (
+        isinstance(closed_place_degree, bool)
+        or not isinstance(closed_place_degree, int)
+        or closed_place_degree < 1
+    ):
+        raise ValueError("closed_place_degree must be positive")
+
+    normalized: set[tuple[int, int]] = set()
+    degrees = [0] * vertex_count
+    adjacency = [set() for _ in range(vertex_count)]
+    incidence_vectors: list[int] = []
+    for edge in edges:
+        if len(edge) != 2:
+            raise ValueError("every edge must have two endpoints")
+        left, right = edge
+        if (
+            isinstance(left, bool)
+            or isinstance(right, bool)
+            or not isinstance(left, int)
+            or not isinstance(right, int)
+            or not 0 <= left < vertex_count
+            or not 0 <= right < vertex_count
+            or left == right
+        ):
+            raise ValueError("edge endpoints must be distinct graph vertices")
+        normalized_edge = (min(left, right), max(left, right))
+        if normalized_edge in normalized:
+            raise ValueError("parallel edges are not allowed")
+        normalized.add(normalized_edge)
+        degrees[left] += 1
+        degrees[right] += 1
+        adjacency[left].add(right)
+        adjacency[right].add(left)
+        incidence_vectors.append((1 << left) | (1 << right))
+    if any(degree == 0 for degree in degrees):
+        raise ValueError("graph vertices must all be incident")
+
+    components = 0
+    unseen = set(range(vertex_count))
+    while unseen:
+        components += 1
+        frontier = [unseen.pop()]
+        while frontier:
+            vertex = frontier.pop()
+            for neighbor in adjacency[vertex]:
+                if neighbor in unseen:
+                    unseen.remove(neighbor)
+                    frontier.append(neighbor)
+
+    rank, bit_operations = gf2_rank(tuple(incidence_vectors))
+    expected_rank = vertex_count - components
+    if rank != expected_rank:
+        raise ArithmeticError("binary incidence-rank theorem failed")
+    odd_vertices = tuple(vertex for vertex, degree in enumerate(degrees) if degree % 2)
+    top_divisor = 0
+    for vector in incidence_vectors:
+        top_divisor ^= vector
+        bit_operations += 1
+    expected_divisor = sum(1 << vertex for vertex in odd_vertices)
+    if top_divisor != expected_divisor:
+        raise ArithmeticError("top divisor is not the odd-degree vertex set")
+
+    top_invariant = not odd_vertices
+    geometric_branch_points = closed_place_degree * len(odd_vertices)
+    common_punctures = closed_place_degree * vertex_count
+    if top_invariant:
+        minimal_h1 = 0
+        minimal_h2 = 1
+        common_h1 = common_punctures - 1
+        puncture_tax = None
+    else:
+        minimal_h1 = geometric_branch_points - 2
+        minimal_h2 = 0
+        common_h1 = common_punctures - 2
+        puncture_tax = common_h1 - minimal_h1
+
+    connected = components == 1
+    full_edge_rank = rank == len(edges)
+    is_path = (
+        connected
+        and full_edge_rank
+        and len(edges) == vertex_count - 1
+        and max(degrees) <= 2
+    )
+    return {
+        "vertex_count": vertex_count,
+        "edge_count": len(edges),
+        "component_count": components,
+        "incidence_rank": rank,
+        "full_edge_rank": full_edge_rank,
+        "forest": full_edge_rank,
+        "connected": connected,
+        "degrees": tuple(degrees),
+        "odd_vertices": odd_vertices,
+        "odd_vertex_count": len(odd_vertices),
+        "top_invariant": top_invariant,
+        "top_divisor_bits": top_divisor,
+        "geometric_branch_points": geometric_branch_points,
+        "minimal_top_h1": minimal_h1,
+        "minimal_top_h2": minimal_h2,
+        "common_open_h1": common_h1,
+        "removable_puncture_tax": puncture_tax,
+        "is_path": is_path,
+        "bit_operations": bit_operations,
+    }
+
+
+def prufer_tree(code: tuple[int, ...]) -> tuple[tuple[int, int], ...]:
+    """Decode a Prüfer word into a labelled tree."""
+
+    vertex_count = len(code) + 2
+    if any(
+        isinstance(vertex, bool)
+        or not isinstance(vertex, int)
+        or not 0 <= vertex < vertex_count
+        for vertex in code
+    ):
+        raise ValueError("Prüfer symbols must be graph vertices")
+    degrees = [1] * vertex_count
+    for vertex in code:
+        degrees[vertex] += 1
+    edges: list[tuple[int, int]] = []
+    for vertex in code:
+        leaf = next(index for index, degree in enumerate(degrees) if degree == 1)
+        edges.append((min(leaf, vertex), max(leaf, vertex)))
+        degrees[leaf] -= 1
+        degrees[vertex] -= 1
+    leaves = [index for index, degree in enumerate(degrees) if degree == 1]
+    if len(leaves) != 2:
+        raise ArithmeticError("Prüfer decoder did not leave two vertices")
+    edges.append((min(leaves), max(leaves)))
+    return tuple(sorted(edges))
+
+
+def labelled_tree_census(max_vertices: int = 6) -> tuple[list[dict[str, int]], int]:
+    """Check the graph optimizer over all small labelled trees."""
+
+    if (
+        isinstance(max_vertices, bool)
+        or not isinstance(max_vertices, int)
+        or not 2 <= max_vertices <= 6
+    ):
+        raise ValueError("max_vertices must lie between two and six")
+    rows: list[dict[str, int]] = []
+    total_profiles = 0
+    for vertex_count in range(2, max_vertices + 1):
+        total = 0
+        paths = 0
+        for code in product(range(vertex_count), repeat=vertex_count - 2):
+            profile = graph_profile(vertex_count, prufer_tree(code))
+            total += 1
+            total_profiles += 1
+            if total_profiles > MAX_TREE_PROFILES:
+                raise RuntimeError("tree-profile cap exceeded")
+            if not profile["full_edge_rank"] or profile["top_invariant"]:
+                raise ArithmeticError("a tree lost full rank or became Eulerian")
+            if (profile["odd_vertex_count"] == 2) != profile["is_path"]:
+                raise ArithmeticError("two-odd-vertex tree was not exactly a path")
+            if profile["is_path"]:
+                paths += 1
+        expected_total = vertex_count ** (vertex_count - 2)
+        expected_paths = factorial(vertex_count) // 2
+        if total != expected_total or paths != expected_paths:
+            raise ArithmeticError("labelled-tree census mismatch")
+        rows.append(
+            {
+                "vertex_count": vertex_count,
+                "labelled_trees": total,
+                "path_labelings": paths,
+                "expected_path_labelings": expected_paths,
+            }
+        )
+    return rows, total_profiles
 
 
 def path_model(field_size: int, path_length: int) -> tuple[dict[str, object], int]:
@@ -240,11 +429,28 @@ def build_report() -> dict[str, object]:
                     if boundary_rows > MAX_BOUNDARY_ROWS:
                         raise RuntimeError("boundary row cap exceeded")
 
+    tree_rows, tree_profiles = labelled_tree_census()
+    graph_controls = {
+        "path_6": graph_profile(
+            6, tuple((vertex, vertex + 1) for vertex in range(5)), 3
+        ),
+        "star_6": graph_profile(6, tuple((0, vertex) for vertex in range(1, 6)), 3),
+        "cycle_6": graph_profile(
+            6, tuple((vertex, (vertex + 1) % 6) for vertex in range(6)), 3
+        ),
+    }
+    if graph_controls["path_6"]["odd_vertex_count"] != 2:
+        raise ArithmeticError("path control lost its two endpoints")
+    if graph_controls["star_6"]["odd_vertex_count"] != 6:
+        raise ArithmeticError("star control has the wrong odd-degree profile")
+    if not graph_controls["cycle_6"]["top_invariant"]:
+        raise ArithmeticError("cycle control did not become invariant")
+
     if time.monotonic() - started > MAX_WALL_SECONDS:
         raise RuntimeError("wall-time cap exceeded")
     return {
-        "schema": "riemann.function_field.ffps_checkerboard_telescoping_curve.v1",
-        "status": "EXACT_TELESCOPING_TOP_CHARACTER_MODEL",
+        "schema": "riemann.function_field.ffps_checkerboard_telescoping_curve.v2",
+        "status": "EXACT_GRAPH_OPTIMIZED_TELESCOPING_MODEL",
         "exact": {
             "squareclass_rank": "d",
             "top_character": "P_0/P_d",
@@ -253,6 +459,9 @@ def build_report() -> dict[str, object]:
             "puncture_tax": "(d-1)*e",
             "boundary_tower": ("e*sum epsilon_i^(m/e) if e divides m, otherwise zero"),
             "even_relative_degree": "e*(d-1)",
+            "graph_rank": "|V|-components",
+            "graph_top_branch_count": "e*number_of_odd_degree_vertices",
+            "full_rank_optimizer": "path uniquely minimizes nonconstant top branch count",
         },
         "imported": [
             "Grothendieck-Ogg-Shafarevich",
@@ -261,6 +470,9 @@ def build_report() -> dict[str, object]:
         ],
         "rows": len(rows),
         "boundary_rows": boundary_rows,
+        "labelled_tree_profiles": tree_profiles,
+        "tree_census": tree_rows,
+        "graph_controls": graph_controls,
         "controls": {
             "q5_d4": next(row for row in rows if row["q"] == 5 and row["d"] == 4),
             "q3_d128": next(row for row in rows if row["q"] == 3 and row["d"] == 128),
@@ -270,6 +482,8 @@ def build_report() -> dict[str, object]:
             "max_bit_operations": MAX_BIT_OPERATIONS,
             "boundary_rows": boundary_rows,
             "max_boundary_rows": MAX_BOUNDARY_ROWS,
+            "labelled_tree_profiles": tree_profiles,
+            "max_tree_profiles": MAX_TREE_PROFILES,
             "finite_fields_enumerated": 0,
             "polynomials_enumerated": 0,
             "curves_enumerated": 0,
@@ -294,6 +508,7 @@ def run_checks() -> dict[str, object]:
         "removable-puncture tax",
         "same-characteristic tower",
         "dim H_c^1=2e-2",
+        "Graph optimizer",
         "legal source extension across middle punctures",
         "not an FFPS source realization",
         "No external novelty or priority claim",

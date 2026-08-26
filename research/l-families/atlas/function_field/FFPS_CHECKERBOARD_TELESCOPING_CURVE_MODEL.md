@@ -133,6 +133,13 @@ Thus this model identifies a new exact gate:
 > line can be extended across every cancellation puncture without changing
 > the native source sum.
 
+The path is not an arbitrary convenient example.  Among connected
+full-rank graph constructions with \(d\) Kummer coordinates, it is the
+unique topology (up to graph isomorphism) whose nonconstant top line has the
+minimum possible two odd vertices.  Thus it simultaneously gives the
+smallest maximally extended Betti cost and the largest common-open boundary
+tax.  Section 2A proves this inverse-design theorem.
+
 At fixed \(q\), take the least \(e=e_q(d)\) for which there are at least
 \(d+1\) degree-\(e\) primes.  The exact prime-polynomial formula gives
 
@@ -194,6 +201,84 @@ Multiplying (0.1) cancels every middle polynomial and proves
 which gives (0.2).  The endpoint ratio is not a geometric square: it has odd
 valuation at each root of \(P_0\) and \(P_d\).  Therefore the top selected
 line has no geometric invariant vector.
+
+### 2A. Graph inverse-design theorem
+
+The construction has an exact graph form.  Let \(\Gamma=(V,E)\) be a finite
+simple graph without isolated vertices, attach a distinct monic degree-\(e\)
+prime \(P_v\) to every vertex, orient the edges arbitrarily, and set
+
+\[
+ f_{uv}=P_u/P_v\qquad(uv\in E).
+\tag{2A.1}
+\]
+
+Over \(\mathbf F_2\), the valuation-parity vector of \(f_{uv}\) is the
+incidence column with ones at \(u\) and \(v\).  The usual incidence-rank
+calculation therefore gives
+
+\[
+ \boxed{
+ \operatorname{rank}_{\mathbf F_2}\langle[f_e]:e\in E\rangle
+ =|V|-c(\Gamma),}
+\tag{2A.2}
+\]
+
+where \(c(\Gamma)\) is the number of connected components.  In particular,
+the edge squareclasses are independent exactly when \(\Gamma\) is a forest.
+
+Multiplying all edge functions and reducing exponents modulo two gives
+
+\[
+ \boxed{
+ \prod_{e\in E}f_e
+ \equiv
+ \prod_{\deg(v)\ {\rm odd}}P_v
+ \pmod{\overline{\mathbf F}_q(T)^{\times2}}.}
+\tag{2A.3}
+\]
+
+Thus the top checkerboard line is geometrically constant exactly when
+\(\Gamma\) is Eulerian.  In the nonconstant case, its geometric branch count
+is
+
+\[
+ b_{\rm top}=e\,o(\Gamma),
+\tag{2A.4}
+\]
+
+where \(o(\Gamma)\) is the number of odd-degree vertices.  On the maximal
+lisse open its first compactly supported Betti number is
+\(e\,o(\Gamma)-2\).  On the common graph-torsor open it is \(e|V|-2\), so
+the removable-puncture tax is
+
+\[
+ \boxed{e\bigl(|V|-o(\Gamma)\bigr).}
+\tag{2A.5}
+\]
+
+Now require connected full geometric rank with \(d=|E|\).  By (2A.2), the
+graph must be a tree on \(d+1\) vertices.  Every nontrivial tree has at least
+two odd-degree vertices.  Equality forces exactly two leaves: the identity
+
+\[
+ \#\{\text{leaves}\}
+ =2+\sum_{\deg(v)\ge3}(\deg(v)-2)
+\]
+
+then forces every other vertex to have degree two, so the tree is a path.
+Conversely a path has exactly two odd endpoints.  Hence
+
+> **Graph optimizer.**  The path is the unique connected full-rank topology
+> with minimal nonconstant top branch count \(2e\).  Equivalently, it is the
+> unique such topology with minimal maximally extended Betti cost \(2e-2\);
+> it also maximizes the cancelled-puncture tax at \(e(d-1)\).
+
+This is a genuine tradeoff.  A star retains many branch points and little
+compression.  A cycle makes every vertex even, but then the top line is
+invariant and carries a main term rather than square-root cancellation.
+The bounded replay enumerates all 1,441 labelled trees on at most six
+vertices and finds exactly \(n!/2\) path labelings for each \(n\ge2\).
 
 ## 3. Branch-parity criterion
 
@@ -394,6 +479,8 @@ The missing work is precisely:
 |---|---|
 | independence of the path squareclasses | **PROVED EXACT ALL \(d,e\)** |
 | top-character telescoping (0.2) | **PROVED EXACT ALL \(d,e\)** |
+| graph rank and top-parity laws (2A.2)--(2A.5) | **PROVED EXACT** |
+| path uniqueness as full-rank Betti optimizer | **PROVED EXACT** |
 | geometric invariant criterion (3.2) | **PROVED ON \(\mathbf P^1\)** |
 | cohomology dimensions (0.3), (0.5) | **PROVED FROM IMPORTED GOS + DUALITY** |
 | trace bound (0.4) | **PROVED FROM IMPORTED TRACE FORMULA + WEIL II** |
@@ -408,8 +495,9 @@ No external novelty or priority claim is made.
 
 ## 8. Reproduction
 
-The replay uses the exact irreducible-count formula and bit-vector path
-incidence.  It checks \(q=3,5,7,9\) and \(1\le d\le128\), with no finite
+The replay uses the exact irreducible-count formula and bit-vector graph
+incidence.  It checks \(q=3,5,7,9\), \(1\le d\le128\), and all labelled
+trees on at most six vertices, with no finite
 field, polynomial, curve, character family, cohomology, or zero enumeration.
 The geometric and weight theorems remain visibly imported.
 
