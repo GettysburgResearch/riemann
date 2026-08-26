@@ -1,0 +1,109 @@
+{
+  "atomic_mass_per_odd_source": {
+    "negative": "50+35*sqrt(2)",
+    "positive": "50+35*sqrt(2)",
+    "total_variation": "100+70*sqrt(2)"
+  },
+  "complete_beta_atomic_coefficients": [
+    {
+      "coefficient": "5",
+      "ratio": 1
+    },
+    {
+      "coefficient": "-10-25/2*sqrt(2)",
+      "ratio": 2
+    },
+    {
+      "coefficient": "25+25*sqrt(2)",
+      "ratio": 4
+    },
+    {
+      "coefficient": "-40-35/2*sqrt(2)",
+      "ratio": 8
+    },
+    {
+      "coefficient": "20+10*sqrt(2)",
+      "ratio": 16
+    },
+    {
+      "coefficient": "-5*sqrt(2)",
+      "ratio": 32
+    }
+  ],
+  "complete_group_support": {
+    "endpoint_inclusive_sample": {
+      "Y": 992,
+      "fits": true,
+      "m": 31
+    },
+    "full_group_condition": "32*m<=Y",
+    "largest_ratio": 32,
+    "ratios": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ]
+  },
+  "disposition": {
+    "fixed_mollified_density_premise": "still analytically sufficient",
+    "grh_proved": false,
+    "raw_complete_jordan_premise": "refuted",
+    "raw_landau_implication": "logically true but arithmetically vacuous",
+    "rh_proved": false
+  },
+  "frozen_sources": {
+    "3f10a6be2009f8e499b1bd421fd97b2095a82b06": {
+      "research/l-families/atlas/function_field/FFPS_EXTRA_NOTCHED_MELLIN_LANDAU_CONSUMER.md": "4a9aaf8bef6150bf054d6b6d4a873379db091b14",
+      "research/l-families/atlas/function_field/FFPS_SIGNED_DIFFERENTIAL_ATOMIC_SHELL_FIREWALL.md": "8dff1025fd7d794497b71c2ba2920a51ff9095f2"
+    },
+    "a970a55a11adc3d30bd98be90be12055984056ef": {
+      "research/l-families/atlas/function_field/FFPS_MOLLIFIED_COMPLETE_SOURCE_ADAPTER.md": "73f2bc0aa968ce8f9a60ed51c8261951ed8525b8"
+    }
+  },
+  "grouping_identity": "B(z)=C(z)*(1-z/sqrt(2))",
+  "kernel_atomic_coefficients": [
+    {
+      "coefficient": "5",
+      "ratio": 1
+    },
+    {
+      "coefficient": "-10-10*sqrt(2)",
+      "ratio": 2
+    },
+    {
+      "coefficient": "15+20*sqrt(2)",
+      "ratio": 4
+    },
+    {
+      "coefficient": "-20-10*sqrt(2)",
+      "ratio": 8
+    },
+    {
+      "coefficient": "10",
+      "ratio": 16
+    }
+  ],
+  "lower_bound": {
+    "exact": "(50+35*sqrt(2))*sum_{m<=Y/32,m odd}|beta(m)|/sqrt(m)",
+    "growth": "Omega(sqrt(Y))",
+    "odd_squarefree_density": "4/pi^2",
+    "squarefree_subsum_lead_at_x=Y/32": "(70+50*sqrt(2))/pi^2*sqrt(Y)",
+    "weighted_partial_sum_lead": "8/pi^2*sqrt(x)"
+  },
+  "resource_caps": {
+    "collision_free_group_positions_checked": 192,
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "point_counts": 0,
+    "source_families_enumerated": 0,
+    "two_adic_relation_checks": 500
+  },
+  "two_adic_source": {
+    "beta_2m": "-beta_m for odd m",
+    "beta_4m": "0 for odd m",
+    "checked_odd_m_through": 999
+  }
+}
