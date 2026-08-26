@@ -209,6 +209,7 @@ class PrimitiveRhoTiltConvolutionIsomorphismTest(unittest.TestCase):
         self.assertEqual(gram["gram_pair_checks"], 64)
         self.assertEqual(gram["feature_monomial_checksum"], 125)
         self.assertGreater(gram["direct_pair_bijection_checks"], 100)
+        self.assertEqual(gram["upper_zeta_inversion_checks"], 8)
 
     def test_colored_cube_norm_and_hereditary_replay(self) -> None:
         panel = subject.colored_cube_panel(2)

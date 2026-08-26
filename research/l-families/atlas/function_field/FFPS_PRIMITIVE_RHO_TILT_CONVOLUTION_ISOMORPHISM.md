@@ -1252,6 +1252,66 @@ this Gram uniformly is costly. The identity supplies a possible spectral or
 large-sieve attack on the color gate; it does not prove that gate or any RH
 estimate.
 
+### 5.8 Product shells, exact inversion, and the high-prime penalty
+
+The Gram kernel depends on a primitive pair only through its squarefree
+product. Define the oriented product-shell amplitude
+
+\[
+ \mathcal A^{\alpha}_{d,I}(N)
+ =\sum_{\substack{ab=N\\(a,b)\in\mathscr X_d}}
+ \Phi^{\alpha}_{d,I}(a,b).
+\]
+
+Then (5.40) is precisely the upper-divisor zeta transform
+
+\[
+ \boxed{
+ {\mathcal C^{\alpha}_{d,u}(I)\over\mu(u)\sqrt u}
+ =\sum_{u\mid N}\mathcal A^{\alpha}_{d,I}(N).}
+\tag{5.44}
+\]
+
+At fixed height only finitely many shells occur, so Boolean Möbius inversion
+recovers every product shell exactly:
+
+\[
+ \boxed{
+ \mathcal A^{\alpha}_{d,I}(N)
+ =\sum_{N\mid k}\mu(k/N)
+ {\mathcal C^{\alpha}_{d,k}(I)\over\mu(k)\sqrt k}.}
+\tag{5.45}
+\]
+
+Thus the complete color family loses the orientation data inside a fixed
+product `N`, but it loses no product-shell amplitude. This is a useful
+division of labor: `AUXCOLORPRIMCAR` sees the coherently oriented shell
+sum, whereas nonzero `PRIMCAR` modes may still see the internal orientation
+directions.
+
+The inversion is exact but poorly conditioned at high primes. With
+`c_p=sqrt(p)/(p+1)`, the local overlap block has Cholesky factor and
+eigenvalues
+
+\[
+ \begin{pmatrix}1&1\\1&1+c_p\end{pmatrix}
+ =
+ \begin{pmatrix}1&0\\1&\sqrt{c_p}\end{pmatrix}
+ \begin{pmatrix}1&1\\0&\sqrt{c_p}\end{pmatrix},
+ \qquad
+ \lambda_\pm(p)
+ ={2+c_p\pm\sqrt{4+c_p^2}\over2}.
+\tag{5.46}
+\]
+
+Consequently its spectral condition number is
+`lambda_+(p)/lambda_-(p) ~ 4 sqrt(p)`. Tensoring naïve inverse
+bounds over many high primes is therefore prohibitive. A viable proof should
+exploit the forward signed shell transform or additional arithmetic
+orthogonality, rather than whiten the full Boolean Gram prime by prime. This
+is an exact conditioning diagnosis, not a no-go theorem for
+`AUXCOLORPRIMCAR`.
+
 ## 6. Firewall against a PRIMCAR or RH misreading
 
 The bounded isomorphism (0.5) acts on full one-variable sequences on
@@ -1322,6 +1382,7 @@ No PRIMCAR, PRIMLS, RH, or GRH estimate is proved. The RH-equivalent statement
 | fixed-`d`, fixed-core coherent coloring compression (5.33)--(5.36) | **PROVED EXACT** |
 | `RAYPRIMCAR` implies `AUXCOLORPRIMCAR`, which controls the auxiliary rho-sieved energy and the zero mode (5.37)--(5.39) | **PROVED CONDITIONALLY** |
 | direct primitive-pair color formula and support-overlap Gram (5.40)--(5.43) | **PROVED EXACT** |
+| product-shell zeta transform, finite-height inverse, and local spectrum (5.44)--(5.46) | **PROVED EXACT** |
 | weighted vector gate (5.3b) over induced tests (5.7) | **OPEN / NOT PROVED** |
 | uniform control over induced tests (5.7) | **STRONGER SUFFICIENT SPECIAL CASE; NOT PROVED** |
 | `GENPRIMCAR`, `RAYPRIMCAR`, `COLLPRIMCAR`, `AUXCOLORPRIMCAR`, or `COLORPRIMCAR` estimate | **OPEN / NOT PROVED** |

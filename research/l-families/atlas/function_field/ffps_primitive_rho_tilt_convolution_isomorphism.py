@@ -1187,6 +1187,36 @@ def coherent_core_gram_panel(limit: int = 30) -> dict[str, object]:
             gram_pair_checks += 1
     if gram_pair_checks != 64 or feature_monomial_checksum != 125:
         raise ArithmeticError("Boolean overlap Gram checksum failed")
+
+    shell_values = {
+        mask: Fraction((-1) ** mask.bit_count() * (mask + 1))
+        for mask in range(configuration_count)
+    }
+    upper_zeta = {
+        divisor_mask: sum(
+            (
+                shell_values[shell_mask]
+                for shell_mask in range(configuration_count)
+                if divisor_mask & ~shell_mask == 0
+            ),
+            Fraction(),
+        )
+        for divisor_mask in range(configuration_count)
+    }
+    recovered_shells = {
+        shell_mask: sum(
+            (
+                (-1) ** ((multiple_mask ^ shell_mask).bit_count())
+                * upper_zeta[multiple_mask]
+                for multiple_mask in range(configuration_count)
+                if shell_mask & ~multiple_mask == 0
+            ),
+            Fraction(),
+        )
+        for shell_mask in range(configuration_count)
+    }
+    if recovered_shells != shell_values:
+        raise ArithmeticError("upper-divisor zeta inversion failed")
     return {
         "configuration_count": configuration_count,
         "direct_pair_bijection_checks": pair_bijection_checks,
@@ -1198,6 +1228,7 @@ def coherent_core_gram_panel(limit: int = 30) -> dict[str, object]:
         ),
         "primes": list(primes),
         "scope": "exact finite combinatorial replay; no AUXCOLORPRIMCAR estimate",
+        "upper_zeta_inversion_checks": configuration_count,
     }
 
 
