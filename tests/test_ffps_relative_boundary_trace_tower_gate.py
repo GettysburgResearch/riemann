@@ -81,6 +81,11 @@ class RelativeBoundaryTraceTowerGateTest(unittest.TestCase):
         self.assertEqual(caps["finite_field_points"], 0)
         self.assertEqual(caps["closed_places_enumerated"], 0)
 
+    def test_exact_selector_mass_question_has_a_scoped_successor(self) -> None:
+        successor = boundary_gate.run()["theorem"]["mass_no_go_successor"]
+        self.assertIn("forced", successor["conclusion"])
+        self.assertIn("joint K_0", successor["remaining_escape"])
+
 
 if __name__ == "__main__":
     unittest.main()

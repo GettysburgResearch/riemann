@@ -197,6 +197,18 @@ def run() -> dict[str, object]:
             "universal_incidence_cancellation": (
                 "[Perm_d tensor Q_d]=0 in R(S_d) tensor Q for d>1"
             ),
+            "mass_no_go_successor": {
+                "commit": "691166b8c31f9b8e3790a9687d8fce55493f6831",
+                "packet": "FFPS_EXACT_CYCLE_SELECTOR_MASS_NO_GO.md",
+                "conclusion": (
+                    "2^(d-1)/d is forced for every exact full-S_d "
+                    "characteristic-zero semisimple presentation"
+                ),
+                "remaining_escape": (
+                    "joint K_0 cancellation, a weaker source-specific "
+                    "selector, or different geometry"
+                ),
+            },
             "firewall": (
                 "the universal selector reselects over every residue field; "
                 "it is not the constant-weight extension tower of one fixed place"

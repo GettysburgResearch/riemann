@@ -65,6 +65,14 @@ and no universal owner/core/Boolean FFPS pushforward carrying this factor has
 been constructed.  The boundary cost can disappear while the
 irreducible-place projector cost remains large or worse.
 
+The successor packet `FFPS_EXACT_CYCLE_SELECTOR_MASS_NO_GO.md` closes the
+rank-optimization question inside the exact full-`S_d`, characteristic-zero
+semisimple category.  Character orthogonality and Murnaghan--Nakayama make
+the hook expansion unique, so the mass `2^(d-1)/d` is forced, with equal
+positive and negative halves for `d>1`.  This does not rule out joint
+`K_0` cancellation, a weaker source-specific selector, or different
+geometry.
+
 This packet therefore adds a third row to the earlier ledger:
 
 | realization | boundary trace | geometric status | cost verdict |
@@ -440,11 +448,13 @@ The surviving cost moves into the selection mechanism:
 \]
 
 Equation (7.1) is the absolute generic-rank mass of the elementary signed
-presentation, not a theorem that this cost is optimal.  A lower-complexity
-cohomological realization of the `d`-cycle class function is an open design
-problem.  The discriminant boundary of \(\operatorname{Conf}_d\), growing
-base dimension, distinctness conditions, and every FFPS owner/core cleanup
-also remain to be costed.
+presentation.  The successor mass no-go proves that it is also optimal among
+all exact presentations in `R(S_d) tensor Q`: the `d`-cycle indicator has
+unique hook coefficients `(-1)^k/d`.  The discriminant boundary of
+\(\operatorname{Conf}_d\), growing base dimension, distinctness conditions,
+and every FFPS owner/core cleanup still remain to be costed.  A cheaper
+source-specific, approximate, jointly cancelled, or non-semisimple geometric
+mechanism is not excluded.
 
 Thus the exact root-boundary cancellation does **not** establish overall
 `theta=0` for the varying-place source.
@@ -489,7 +499,8 @@ without a new adapter theorem.
 | multi-place universal boundary cancellation (5.1) | **PROVED EXACT ON THE ORDERED PRODUCT/DISJOINT LOCUS** |
 | cancellation after arbitrary additive pushforward | **PROVED FORMALLY FOR THE SAME RATIONAL `K_0` CLASS** |
 | identification of the native FFPS boundary with that universal root-incidence class | **OPEN / NOT CONSTRUCTED** |
-| affordable irreducible-place selector | **OPEN; (7.1) IS ONLY THE RAW EXTERIOR PRESENTATION** |
+| cheaper exact full-`S_d` semisimple selector | **RULED OUT BY THE SUCCESSOR MASS NO-GO; (7.1) IS OPTIMAL** |
+| source-specific, approximate, or jointly cancelled selector | **OPEN** |
 | uniform Betti/conductor bound for the surviving FFPS complex | **OPEN** |
 | `CYSEL`, `WCADD`, `WCKUM`, principal individualization, RH, or GRH | **NOT PROVED** |
 
