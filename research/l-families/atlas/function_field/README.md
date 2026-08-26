@@ -42,6 +42,9 @@ fourth estimate is also open and leaves nonzero incidence modes untouched.
 Its quadratic energy is exactly a signed primitive-pair support-overlap Gram
 with kernel `prod_(p|gcd(N,M))(1+sqrt(p)/(p+1))`; the formula is exact,
 but its cross terms are not positive and its local determinant degenerates.
+The complete color family retains every product-shell amplitude through an
+exact upper-divisor Möbius inverse, while erasing orientations within a shell;
+the local inverse condition number grows like `4sqrt(p)`.
 The successor
 also includes the exact refutation of the raw Jordan premise,
 hard-mask relative projectors and conductor ledgers, odd-notch boundary

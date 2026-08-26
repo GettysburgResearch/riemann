@@ -54,7 +54,9 @@
 > formally incomparable with the collective and full-`q` gates. Expanding
 > it gives an exact signed primitive-pair Gram with multiplicative kernel
 > `prod_(p|gcd(N,M))(1+sqrt(p)/(p+1))`; this is a new attack surface,
-> not a cancellation estimate.
+> not a cancellation estimate. Exact upper-divisor Möbius inversion recovers
+> every product-shell amplitude but not its internal orientations, and the
+> local inverse condition number grows like `4sqrt(p)`.
 > Separately, the minimal
 > ternary physical mask has a universal degree-shell norm/Kummer realization
 > of rank `48`, tame Swan zero, and linear toric boundary support; the exact

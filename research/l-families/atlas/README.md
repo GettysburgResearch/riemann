@@ -36,7 +36,10 @@ the `2^omega(u)` compatible `r/s` colors coherently at each fixed
 and `GENPRIMCAR` by positive-norm algebra. Its energy is also exactly the
 primitive-pair shared-support Gram
 `K(N,M)=prod_(p|gcd(N,M))(1+sqrt(p)/(p+1))`, giving a concrete
-spectral/large-sieve target rather than a black-box norm. The successor also contains
+spectral/large-sieve target rather than a black-box norm. The color family is
+exactly an upper-divisor zeta transform: it retains every product-shell
+amplitude by finite-height Möbius inversion, but erases orientation within a
+shell and has local inverse condition number asymptotic to `4sqrt(p)`. The successor also contains
 a `Sym^12` cohomological audit.
 Begin with
 [`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md),

@@ -106,7 +106,12 @@ quadratic form is exactly a signed primitive-pair shared-support Gram with
 kernel `prod_(p|gcd(N,M))(1+sqrt(p)/(p+1))`; the local Boolean block has
 determinant `sqrt(p)/(p+1)`. This creates a concrete spectral/large-sieve
 problem while warning that uniform inversion degenerates at large primes. The
-scalar zero mode has no native `d`-average, and every one of these routes
+full color family is an upper-divisor zeta transform of one coherently
+oriented amplitude per product shell `N=ab`; finite-height Möbius inversion
+recovers those shells exactly, while internal orientation modes are genuinely
+absent. The local condition number is asymptotic to `4sqrt(p)`, so a proof
+should exploit the forward signed transform rather than whiten it prime by
+prime. The scalar zero mode has no native `d`-average, and every one of these routes
 leaves the nonzero incidence spectrum separate.
 
 ### 2. The raw version is impossible

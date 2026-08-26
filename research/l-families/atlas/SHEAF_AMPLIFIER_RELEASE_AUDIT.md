@@ -7,7 +7,7 @@ Frozen parent: PR #756 at
 `6e4609dfe1b073f1eb58445fdd1d7164dbc450d6`.
 
 Audited mathematical-packet head:
-`90ab2486f`. The final PR head is recorded in
+`314fbe6c8`. The final PR head is recorded in
 the PR body because a tracked file cannot contain the SHA of the commit which
 creates that SHA.
 
@@ -135,6 +135,12 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
   `[[1,1],[1,1+sqrt(p)/(p+1)]]`; its determinant is positive but tends to
   zero. A 760-case pair-bijection replay and the complete three-prime feature
   cube certify the formula without claiming a new bound.
+- `314fbe6c8` factors the complete color family as the upper-divisor zeta
+  transform of product-shell amplitudes, proves its exact finite-height
+  Möbius inverse, and diagonalizes the local overlap block. The transform
+  forgets internal pair orientation and its inverse condition number is
+  asymptotic to `4sqrt(p)`; these are an exact scope boundary and conditioning
+  diagnosis, not a no-go theorem.
 
 ### Selector and notch extensions
 
