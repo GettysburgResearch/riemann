@@ -164,7 +164,9 @@ Read:
    and its
    [six-place/weight-ceiling continuation](function_field/QUADRATIC_FAMILY_SIX_PLACE_CONNECTED_SATURATION.md),
    followed by the
-   [universal fixed-degree notch](function_field/QUADRATIC_FAMILY_FIXED_DEGREE_WEIGHT_NOTCH.md);
+   [universal fixed-degree notch](function_field/QUADRATIC_FAMILY_FIXED_DEGREE_WEIGHT_NOTCH.md)
+   and its
+   [closed-place conductor extension](function_field/QUADRATIC_FAMILY_CLOSED_PLACE_WEIGHT_NOTCH.md);
 5. [guarded cohomology inference](function_field/GUARDED_COHOMOLOGY_CONJECTURE_INFERENCE.md)
    followed by the exact [same-characteristic spectroscopy](function_field/GENUS2_EXACT_FROBENIUS_TOWER_SPECTROSCOPY.md);
 6. the [high-rank Haar boundary-layer tomography](function_field/HIGH_RANK_HAAR_BOUNDARY_LAYER_TOMOGRAPHY.md).
@@ -230,6 +232,29 @@ Proper connected partitions are `O_(n,m)(q^-n)` and cannot restore the top
 channel; `(n,m)=(2,3)` is explicitly exceptional because they instead cancel
 the raw scalar leader. This is a fixed-parameter selection rule and aliasing
 firewall, not a growing-degree theorem.
+
+The closed-place extension replaces the rational linear factors by a
+squarefree primitive conductor `Q=prod_i P_i`, with degree profile `(d_i)`.
+It proves
+
+`sum_n S_n(Q)u^n=L(u,psi)(1-qu^2)/prod_i(1-u^(2d_i))`
+
+with the exact reciprocity model `y^2=(-1)^deg(Q)Q`. The top channel and
+notch depend only on the primitive conductor degree, while the visible lower
+layers are governed by the truncated coefficients of its degree profile. At
+the odd notch an irreducible conductor of degree `2n-1` forces the raw family
+sum to vanish; at the even notch split infinity leaves a profile-independent
+half-weight channel. This also removes the artificial rational-place
+constraint `m<=q`, but it does not
+supply a varying-conductor equidistribution theorem.
+
+A separate growing-parameter audit found an important firewall. On rational
+marks, the formal compact supremum has a character-dimension entropy
+crossover, but `q>=m` makes every proportional `(n,g)` arithmetic regime
+superexponentially decaying. The crossover is therefore not a realizable
+family phase transition. Closed places make fixed-`q` conductor growth
+possible; interpreting it statistically still requires all-channel control
+and a genuine family of conductors.
 
 ### Extended packet index
 
@@ -331,6 +356,7 @@ Python replays are mandatory because assertions may not carry correctness.
 | **PROVED** | for every odd prime power and set of distinct rational places, the squarefree sums in every polynomial degree obey `sum_n sum_(D in H_n) psi_A(D)u^n=L(u,psi_A)(1-qu^2)/(1-u^2)^m`; at degree five the `m=1,...,5` correlations are `0`, `2q-3`, `3(q-2)t`, `q^2-10+(4q-10)t`, and `(q^2-15)t`, with exact connected cumulants through five places | the standard squarefree Euler quotient becomes a source-exact evaluation-character/curve adapter and a geometric interaction ladder; for odd `m` the monic model is `-f_A`, a nontrivial quadratic twist exactly when `-1` is nonsquare, while the even-place infinity factor is also binding; neither the genus-two middle-coefficient cancellation nor the ten complementary elliptic traces may be promoted to a local-factor or motive identity |
 | **PROVED FROM LOCKED SOURCE** | the six-place raw sum is `(q^2-21)t_A+(q-6)b_A-q^2+6q-21`, its connected correction is `O(q^-7)`, and the all-`m` top-weight channel is `q^(5/2)(e_3-e_5)`, with an exact genus-four cancellation at `m=9,10` | the second Frobenius-power channel re-enters at six marks, while symplectic exterior algebra exposes a nonmonotone weight ceiling; all scales are fixed-`m` upper envelopes, not distribution or attainment claims |
 | **PROVED FROM LOCKED SOURCE** | for every fixed family degree `n>=2`, the marked-place top channel is `(-1)^n q^(n/2)(e_n-e_(n-2))`; it vanishes at `m=2n-1,2n`, with exact odd/even residual expansions and connected correction `O_(n,m)(q^-n)` | mark count is an exact exterior-character spectrometer with a universal interior notch; the `n=2,m=3` connected cancellation is isolated rather than hidden in a generic asymptotic |
+| **PROVED FROM LOCKED SOURCE** | for a squarefree primitive closed-place conductor of degree profile `(d_i)`, the squarefree-family kernel is `(1-qu^2)/prod_i(1-u^(2d_i))`; the same top notch depends only on total conductor degree, while lower layers are governed by the relevant truncated profile coefficients | high-degree closed places remove the `m<=q` feasibility wall; an odd-notch conductor with every `d_i>floor(n/2)` gives an exact raw-sum zero, whereas the even notch retains the split-infinity channel |
 | **EXACT FINITE + REFUSAL** | three-field data retain the ambiguity module `(q-3)(q-5)(q-7)Q(q)` | the inference engine refuses to name a cohomology or eigenform packet without a tower and geometric adapter |
 | **PROVED** | the high-rank `SU(2)` character law has an exact cubic tail; its limiting variance exists but absolute moments of order at least three diverge, while finite-rank `2k` moments grow like `n^(2k-3)` | weak limits, rank limits, and high moments do not commute because of a thin endpoint layer |
 | **PROVED** | that endpoint layer has a uniform mesoscopic tail constant `16/(9 pi^2)`, an exact fixed-`lambda` crossover profile, and hard-truncated, Winsorized, and cubic-moment coefficients | rare-event tomography now resolves the rank-scale boundary rather than merely detecting moment divergence |
@@ -483,6 +509,11 @@ pending a dedicated specialist search.
    generating identity and the universal fixed-degree exterior-character
    classification are proved; distributions and sharpness of the surviving
    character channels are not.
+10. Vary closed-place conductors at fixed `q` and test whether the surviving
+    exterior characters equidistribute on any rigorously specified
+    conductor family. The rational-place entropy crossover is infeasible;
+    the closed-place identity removes that kinematic obstruction but supplies
+    no statistical theorem by itself.
 
 ## Replay and resource contract
 
@@ -504,12 +535,12 @@ release audit runs all focused tests together in ordinary and optimized
 Python, recomputes payload hashes, checks source blobs, runs Ruff, and
 finishes with `git diff --check`.
 
-The final bounded checkpoint covers 60 producer/test pairs and 57 stored
-JSON companions. All 641 focused tests pass in ordinary and optimized
-Python. All 60 producers replay in both modes: 57 use the common `--check`
+The final bounded checkpoint covers 61 producer/test pairs and 58 stored
+JSON companions. All 654 focused tests pass in ordinary and optimized
+Python. All 61 producers replay in both modes: 58 use the common `--check`
 form, while the renormalization-flow, guarded-inference, and genus-one phase
 diagram packets use their printed alternate CLIs. Ruff and formatting pass
-on the 115 non-frozen Python files. Five provenance-frozen files retain ten
+on the 117 non-frozen Python files. Five provenance-frozen files retain ten
 pre-existing Ruff findings and are listed in the release audit rather than
 silently rewritten.
 
