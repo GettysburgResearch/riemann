@@ -42,10 +42,11 @@ unconditional finite invariant-theory proof that the natural `S_5`-fixed
 holomorphic/cuspidal covariant channel at this bidegree is zero.
 
 This does **not** make the separately source-caveated nonregular Eisenstein
-or Galois formulas unconditional. It closes the modular-form channel that
-would realize a natural marked stable/general contribution; transporting
-that conclusion into an actual Frobenius identity still requires the
-cohomological adapter stated in the defect audit.
+formula unconditional. The primary-source adapter in
+[`GENUS2_SYM12_MODULAR_ZERO_GENERAL_CHANNEL_ADAPTER.md`](GENUS2_SYM12_MODULAR_ZERO_GENERAL_CHANNEL_ADAPTER.md)
+now shows that this zero closes the positive semisimplified marked
+stable/general channel `G`. The actual compact-support Eisenstein Galois class
+and the resulting all-`q` Frobenius identity remain open.
 
 ## 2. The source and its exact dimension
 
@@ -205,8 +206,14 @@ Still conditional or source-caveated:
 - the equality `epsilon_Eis=L` as an actual trace identity;
 - the all-`q` formula for `Hhat_12` obtained by combining those channels.
 
+Closed by the separate primary-source adapter:
+
+- `G=(S_gen,Gamma(2)[12,3])^S5=0` as a positive semisimplified stable/general
+  Galois channel.
+
 The finite zero-kernel result removes the previously alleged modular-form
-obstruction. It does not by itself upgrade any item in the second list.
+obstruction. Together with the stable adapter it closes `G`; it does not
+upgrade any Eisenstein item in the conditional list.
 
 ## 7. Replay and resource firewall
 

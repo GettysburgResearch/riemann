@@ -1,19 +1,19 @@
 # Genus-two Sym12 conditional endoscopic closure
 
-Status: **EXACT CONDITIONAL REDUCTION; NOT AN ALL-`q` THEOREM**
+Status: **EXACT STABLE-CHANNEL CLOSURE; ONE EISENSTEIN GATE REMAINS**
 Scope: formal trace-channel algebra for the ambient stack
-`A_2(w^1)`, with three separately graded imported premises
-Exact repository sources: committed Sym12 inventory and committed finite scout
+`A_2(w^1)`, with a source-locked exact marked modular zero
+Exact repository sources: committed Sym12 inventory, finite scout, and corrected
+marked-valuation certificate
 Runtime: finite branching and integer algebra only; no web, database, field,
 polynomial, curve, or modular-form-space query
 Smallest remaining gap: resolve the nonregular one-Tate Eisenstein discrepancy
-and establish the stable `S5`-invariant vanishing without the same conjectural
-continuation
+as an actual compact-support Galois Euler class
 
 The replay is `genus2_sym12_conditional_endoscopic_closure.py`; its canonical,
 self-hashed output is `genus2_sym12_conditional_endoscopic_closure.json`.
 
-## 1. Master defect identity and conditional closure
+## 1. Master defect identity and one-gate closure
 
 Let `f_+` and `f_-` be the normalized Fricke-positive and Fricke-negative
 rational newforms of weight 14 and level 2. Define
@@ -36,17 +36,30 @@ committed project ambient identity then give the exact defect reduction
 \tag{1}
 \]
 
-The desired closure uses two additional statements:
+The corrected marked-valuation packet and the primary form-to-cohomology
+adapter now prove the second formerly open statement:
+
+\[
+\boxed{G=0.}
+\tag{2}
+\]
+
+The source-locked proof is
+[`GENUS2_SYM12_MODULAR_ZERO_GENERAL_CHANNEL_ADAPTER.md`](GENUS2_SYM12_MODULAR_ZERO_GENERAL_CHANNEL_ADAPTER.md).
+It uses the exact marked cusp-space zero together with Roesner's
+arbitrary-weight stable direct-sum theorem. It does not use the conjectural
+`k=3` isotypical formula or an Eisenstein continuation.
+
+The desired final closure therefore uses only one additional statement:
 
 1. the nonregular compact-support Eisenstein formula continues with the BFG
    convention, so `epsilon_Eis=0`;
-2. the stable/general Siegel cusp channel has no `S5` invariant, so `G=0`.
 
-Under exactly those two unresolved premises, (1) becomes
+Under that one unresolved premise, (1)--(2) become
 
 \[
 \boxed{\widehat H_{12}=-\mathbb L f_-.}
-\tag{2}
+\tag{3}
 \]
 
 For `q=p^r`, the first term in (1) means
@@ -57,7 +70,8 @@ For `q=p^r`, the first term in (1) means
 
 with the other two channels evaluated by their `F_p^r` traces. It does not
 mean `-p^r` times a naive composite-index Fourier coefficient. Equation (1)
-is an exact source-relative reduction; equation (2) is not yet an
+is an exact source-relative reduction, equation (2) is theorem-grade, and
+equation (3) is not yet an
 unconditional all-odd-prime-power theorem.
 
 ## 2. Exact `S6 -> S5` branching
@@ -201,12 +215,42 @@ the object compared here.
 
 ## 5. Stable/general channel
 
-Rösner and Shmakov do not evaluate the stable/general term at this weight;
-Shmakov leaves `S_gen,Gamma(2)[12,3]` present. Bergström--Cléry, Theorem 5.3,
-proves its isotypical formula for `k>=4`. Their Remark 5.4 extends the formula
-to `k=3,j>0` only **assuming** the BFG nonregular Eisenstein conjecture.
+The corrected two-orientation valuation packet proves
 
-The official data query with `j=12,k=3,l=0` returns only
+\[
+S_{12,3}(\Gamma_2(w^1))=0.
+\]
+
+This is the whole natural marked cusp space: the pre-holomorphic space has
+dimension `66`, the exact corrected matrix has rank `66`, and odd scalar
+weight gives `M=S`.
+
+The primary adapter is exact at the semisimplified stable level:
+
+1. Bergstrom--Clery decompose the cusp space orthogonally into general and
+   Yoshida Arthur summands.
+2. BFG and Shmakov define the positive general Galois channel from the
+   general-type Hecke eigenforms, with one four-dimensional representation per
+   eigenvector.
+3. Roesner's Corollary 5.20 applies to every `l>=m>=0`, including `(12,0)`:
+   stable inner cohomology is a direct sum of four-dimensional irreducible
+   Galois representations with matching holomorphic Hodge components.
+4. Taking natural `S5` invariants is exact in characteristic zero.
+
+Therefore the marked modular zero forces
+
+\[
+\boxed{G=(S_{\rm gen,\Gamma(2)}[12,3])^{S_5}=0.}
+\]
+
+Endoscopic, Saito--Kurokawa, Soudry, and Eisenstein terms cannot leak into
+`G`: they are separate summands, and Roesner proves the possible level-two
+Soudry contribution is zero. The conclusion concerns the positive
+semisimplified stable channel; it does not settle nonsemisimple boundary
+extensions or the Eisenstein Galois class.
+
+As independent corroboration, the conditional official `k=3` query returns
+only
 
 ```text
 [3,1^3], [2^3], [2^2,1^2], [2,1^4], [1^6].
@@ -215,19 +259,9 @@ The official data query with `j=12,k=3,l=0` returns only
 None is `[6]` or `[5,1]`, so their implemented decomposition has zero `S5`
 invariant. The producer freezes those five rows, recomputes their Specht
 dimensions as `10+5+9+5+1=30`, and projects their invariant multiplicities to
-zero.
-
-That is conditional formula/database evidence, not an unconditional theorem.
-The theorem-level total dimension `30` alone does not imply the invariant
-vanishing. Some sources print the weight as `S_(3,12)(Gamma[2])`; this packet
-uses the project/API convention `(j,k)=(12,3)`.
-
-Cléry--van der Geer, arXiv:2605.13300, unconditionally gives the structural
-covariant/valuation description of level-2 forms and explicitly identifies
-`A_2[w]=A_2[2]/S5`. It does not print or compute the `(j,k)=(12,3)`
-`S5`-isotypical dimension; its dimension discussion refers back to the 2025
-Bergström--Cléry work. It therefore confirms the quotient normalization but
-does not upgrade the vanishing.
+zero. Those rows remain conditional corroboration, not a premise. The exact
+proof uses the marked rank certificate, so the full-level dimension `30` need
+not determine an isotypical decomposition.
 
 ## 6. Exact ambient comparison
 
@@ -244,7 +278,7 @@ E_{\mathrm{proj}}
 =\widehat H_{12}+2-5\mathbb L-\mathbb L(f_++f_-).
 \]
 
-Before specializing either open channel, the cohomological target is
+Before applying the exact stable specialization, the cohomological target is
 
 \[
 E_{\mathrm{cond}}
@@ -260,7 +294,13 @@ E_{\mathrm{proj}}-E_{\mathrm{cond}}
  -\varepsilon_{\rm Eis}+G.
 \]
 
-This proves (1). After imposing both `epsilon_Eis=0` and `G=0`,
+This proves (1). The exact result `G=0` first gives
+
+\[
+\widehat H_{12}=-\mathbb Lf_-+\varepsilon_{\rm Eis}.
+\]
+
+After imposing the one remaining premise `epsilon_Eis=0`,
 
 \[
 E_{\mathrm{proj}}=E_{\mathrm{cond}}
@@ -275,7 +315,7 @@ The one-Tate discrepancy is load-bearing. Shmakov's printed `2-4L` gives
 \widehat H_{12}=\mathbb L-\mathbb Lf_- -G.
 \]
 
-Only after separately imposing `G=0` does this become
+The exact result `G=0` makes this
 `Hhat_12=L-L*f_-`. The producer verifies the master, BFG-closed, and both
 Shmakov-branch subtractions coefficientwise.
 
@@ -289,12 +329,12 @@ The committed finite scout gives
 | 5 | 287,250 | -57,450 | 287,250 | 287,255 |
 | 7 | -449,624 | 64,232 | -449,624 | -449,617 |
 
-These exact rows corroborate (2) after taking Frobenius traces. With `G=0`,
+These exact rows corroborate (3) after taking Frobenius traces. With `G=0`,
 the `2-4L` branch misses them by exactly `+p` in every row. Without that
-vanishing, the Shmakov branch instead forces `Tr(F_p,G)=p` for
-`p=3,5,7`; the rows do not contradict Shmakov alone. They are not a premise
-of the formal reduction, do not decide either open channel, and cannot prove
-any fourth `q` or prime-power row.
+vanishing, the Shmakov branch could formally have assigned the discrepancy to
+`Tr(F_p,G)=p`. The exact adapter removes that escape. The rows are not a
+premise of the formal reduction, do not decide the Eisenstein channel, and
+cannot prove any fourth `q` or prime-power row.
 
 ## 8. Locked repository inputs and runtime caps
 
@@ -313,10 +353,15 @@ note/producer/test manifests of:
    `4741ef79f8dd84634680df612cdd8b1d93d3e8bf`, LF SHA-256
    `8827b08f86fa0bd3a77698f250f9d40aea193a39b5c80e180f9a1f3acbac6ff9`,
    payload SHA-256
-   `3572d443f7f5371771a0123b1ebcb1c08e010f02a65c3413d935216b1fcd3168`.
+   `3572d443f7f5371771a0123b1ebcb1c08e010f02a65c3413d935216b1fcd3168`;
 
-Including both transitive packet manifests, the runtime reads exactly eight
-files and 150,269 bytes. It processes eleven partitions, 35 partition rows,
+3. `genus2_sym12_marked_valuation_kernel.json`, commit
+   `a0871416abb4ac58132b53dd4ae30faeed9719bd`, git blob
+   `6e9fcc3d42f1a7acf74759dd408259fd507c79f0`, LF SHA-256
+   `9e833cb7778c6613d0f4c7ef22a72319864c05ce41c50addc9dee778d5446076`.
+
+Including the first two transitive packet manifests, the runtime reads exactly
+nine files and 164,649 bytes. It processes eleven partitions, 35 partition rows,
 19 removable corners, eleven endoscopic projection terms, 30 hook boxes,
 70 free-module component operations, and three finite corroboration rows.
 Those are also hard caps. Output is capped at 32,768 bytes and runtime at four
@@ -327,20 +372,23 @@ enumeration calls.
 
 - Bergström, Faber, and van der Geer,
   [*Siegel Modular Forms of Genus 2 and Level 2: Cohomological Computations and
-  Conjectures*](https://arxiv.org/abs/0803.0917): BFG Conjecture 8.1 and the
-  explicitly expected nonregular Eisenstein continuation.
-- Rösner, dissertation, Theorem 5.13, pp. 97--98:
-  [semisimplified inner/endoscopic theorem](https://sites.math.unt.edu/~schmidt/dimension_formulas/papers/2016_Dissertation_Roesner_final.pdf).
+  Conjectures*](https://arxiv.org/abs/0803.0917): the form-attached rank-four
+  inner channel, BFG Conjecture 8.1, and the explicitly expected nonregular
+  Eisenstein continuation.
+- Rösner, dissertation, pp. 95--99, Theorem 5.13, and Corollary 5.20:
+  [arbitrary-weight holomorphic/stable and semisimplified inner/endoscopic
+  theorems](https://sites.math.unt.edu/~schmidt/dimension_formulas/papers/2016_Dissertation_Roesner_final.pdf).
 - Shmakov, dissertation, Theorem 4.6.4 and Theorems 4.6.6--4.6.8:
   [inner/endoscopic theorem and the one-Tate Eisenstein
   discrepancy](https://openscholar.uga.edu/nanna/record/1979/files/dissertation.pdf).
 - Bergström--Cléry,
   [arXiv:2309.04388v2](https://arxiv.org/abs/2309.04388), Theorem 5.3 and
-  Remark 5.4: regular isotypical formula and conditional `k=3` continuation.
+  Remark 5.4: exact Arthur decomposition and the boundary between it and the
+  conditional `k=3` isotypical continuation.
 - Cléry--van der Geer,
-  [arXiv:2605.13300](https://arxiv.org/abs/2605.13300): unconditional
-  covariant/valuation structure and `A_2[w]=A_2[2]/S5`, but no computed
-  `(12,3)` `S5`-isotypical dimension.
+  [arXiv:2605.13300](https://arxiv.org/abs/2605.13300): covariant/valuation
+  structure and `A_2[w]=A_2[2]/S5`; the project packet performs the corrected
+  exact `(12,3)` valuation rank.
 - [Official Siegel modular-form data query](https://smf.compositio.nl/api/Entries/2/2?j=12&k=3&l=0):
   frozen isotypical corroboration only; never queried by the producer.
 

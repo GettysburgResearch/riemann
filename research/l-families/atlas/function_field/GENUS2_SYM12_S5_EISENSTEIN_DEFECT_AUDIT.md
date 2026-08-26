@@ -1,6 +1,7 @@
 # Genus-two Sym12 `S5` Eisenstein defect audit
 
-Status: **DIFFERENTIAL-INDEPENDENT FORMAL EULER PROJECTION; GALOIS REFINEMENT CAVEATED**
+Status: **STABLE CHANNEL CLOSED; DIFFERENTIAL-INDEPENDENT FORMAL EISENSTEIN
+PROJECTION; EISENSTEIN GALOIS REFINEMENT CAVEATED**
 
 Scope: the `(j,k)=(12,3)` channel on the marked ambient stack
 `A_2(w^1)=A_2[2]/S_5`
@@ -64,7 +65,15 @@ branch
 
 Here `G` is the stable/general `S_5`-invariant Galois channel.  Equation (3) is
 an exact implication of the displayed Shmakov refinement, not an unconditional
-Galois-cohomology theorem.  It does **not** prove `G=0`, and it does not prove
+Galois-cohomology theorem.  Independently, the corrected modular-zero adapter
+now proves `G=0` for the positive semisimplified form-attached channel.  Thus
+the conditional Shmakov branch simplifies to
+
+\[
+\widehat H_{12}=\mathbb L-\mathbb Lf_-.
+\]
+
+It still does not prove
 the previously observed finite formula
 `Hhat_12(p)=-p*a_p(f_-)` for every `p`.
 
@@ -73,9 +82,12 @@ pre-holomorphic covariant space has dimension `66`, and the corrected
 two-orientation valuation matrix has rank `66`.  Thus its holomorphic—and,
 because the `Phi` target has odd weight, cuspidal—subspace is exactly zero.
 This proves absence of the natural marked modular channel without any broad
-finite-field computation.  Calling the corresponding formal cohomological
-term `G=0` still requires the separately source-caveated Galois/cohomological
-adapter; the finite kernel does not construct that realization.
+finite-field computation.  The source audit in
+[`GENUS2_SYM12_MODULAR_ZERO_GENERAL_CHANNEL_ADAPTER.md`](GENUS2_SYM12_MODULAR_ZERO_GENERAL_CHANNEL_ADAPTER.md)
+closes the remaining adapter: Roesner's arbitrary-weight stable direct-sum
+theorem identifies the stable Galois multiplicities with the holomorphic
+general-type multiplicities, including at `m=0`.  Endoscopic and Eisenstein
+terms remain separate.
 
 ## 2. Normalizations and the outer-automorphism check
 
@@ -234,27 +246,18 @@ theorem-supported endoscopic term,
 \]
 
 Under the displayed Shmakov Galois/Tate refinement, substitution of (2) gives
-(3).  It follows that the following three assertions cannot all be promoted to
-all-`q` theorems:
+(3).  The exact stable adapter proves `G=0`, so the following two assertions
+cannot both be promoted to all-`q` theorems:
 
 1. `Hhat_12=-L*f_-`;
 2. Shmakov's formal `2-4L` expression realizes the actual Galois Euler class
    on the project ambient stack;
-3. `G=0`.
 
 This audit verifies the stack, group action, Tate convention, and
 differential-independent formal projection behind item 2, but not its missing
-Galois realization.  Conditional on item 2, an all-`q` proof of item 1 would
-instead force
-
-\[
-G=\mathbb L
-\]
-
-in the relevant Grothendieck/trace channel.  That would be highly
-non-generic for a genuine stable Siegel-cusp contribution and should be
-treated as a diagnostic of the remaining adapter/channel decomposition, not
-as a conjecture inferred from three primes.
+Galois realization.  The former formal escape `G=L` is no longer available:
+`G` is a positive form-attached stable channel, not an arbitrary residual
+Euler symbol.
 
 ## 6. The official-data rows: useful, but not independent
 
@@ -276,9 +279,9 @@ neither the full list nor the two nonlift rows contain `[6]` or `[5,1]`.
 
 However, the implemented `k=3` decomposition is based on the same conditional
 nonregular continuation discussed by Bergstrom--Clery, Remark 5.4.  It is
-therefore conditional evidence for `G=0`, not an independent resolution of
-the Eisenstein defect.  In particular, it neither proves nor disproves the
-preferred but Galois-caveated Shmakov formal specialization.
+therefore only conditional corroboration of the independently proved `G=0`.
+In particular, it neither proves nor disproves the Galois-caveated Shmakov
+formal specialization.
 
 ## 7. An unconditional finite covariant target
 
@@ -355,39 +358,33 @@ primes.
 Finally, the Siegel `Phi` target at `(12,3)` has odd elliptic weight `15` and
 vanishes. Thus every holomorphic `S_5`-invariant form at this weight is
 already cuspidal. Equation (8) therefore proves the natural marked modular
-channel zero without using the conditional `k=3` dimension formula. Calling
-the corresponding term in the formal cohomological defect `G=0` still
-requires the independently source-caveated Galois/cohomological realization;
-the finite kernel does not supply that adapter.
+channel zero without using the conditional `k=3` dimension formula. BFG's
+form-attached channel definition, Bergstrom--Clery's general/Yoshida direct
+sum, and Roesner's arbitrary-weight Corollary 5.20 then imply
+
+\[
+\boxed{G=0}
+\]
+
+as a semisimplified `S_5`-fixed Galois representation. This implication does
+not realize the Eisenstein associated graded as an actual Galois Euler class.
 
 ## 8. Finite rows and same-characteristic recurrences
 
 The existing exact finite rows are
 
-| `p` | `Hhat_12(p)` | `a_p(f_-)` | forced `Tr(F_p|G)` from (3) |
-|---:|---:|---:|---:|
-| 3 | -3,708 | 1,236 | 3 |
-| 5 | 287,250 | -57,450 | 5 |
-| 7 | -449,624 | 64,232 | 7 |
+| `p` | `Hhat_12(p)` | `a_p(f_-)` | Shmakov-formal prediction with `G=0` | discrepancy |
+|---:|---:|---:|---:|---:|
+| 3 | -3,708 | 1,236 | -3,705 | `+3` |
+| 5 | 287,250 | -57,450 | 287,255 | `+5` |
+| 7 | -449,624 | 64,232 | -449,617 | `+7` |
 
-Thus they impose
-
-\[
-\operatorname{Tr}(F_p\mid G)=p
-\qquad(p=3,5,7),
-\tag{9}
-\]
-
-under the conditional Shmakov-refined branch (3).  They do not imply `G=L`,
-because three first-power Frobenius traces do not determine a Galois
-representation; without the Galois realization of (1), even this forced-trace
-interpretation is conditional.
-
-A same-characteristic row at `q=p^2` would become genuinely discriminating
-only after the dimension/purity/characteristic-polynomial type of `G` is fixed:
-it would compare `sum gamma_i^2` with the Tate prediction `p^2`. No such row
-is manufactured here. The covariant problem (8) is now resolved; a broad
-point count is still unjustified before the channel adapter is resolved.
+Thus the formal `2-4L` branch misses each stored row by exactly `+p` after the
+exact stable closure. The rows are finite corroboration of the `2-5L` branch,
+not a proof of its Galois realization or of any fourth prime. A
+same-characteristic row can no longer discriminate the stable channel, which
+is zero; the remaining target is the Eisenstein Galois class itself. No broad
+point count is justified for that source-normalization question.
 
 ## 9. Proof ledger
 
@@ -405,12 +402,15 @@ point count is still unjustified before the channel adapter is resolved.
 - the pre-holomorphic covariant dimension `66` in (7);
 - transitivity of `S_5` on the ten unordered `3+3` boundary partitions;
 - the source-calibrated two-orientation valuation rank `66` and zero kernel
-  in (8), independently checked in two finite characteristics.
+  in (8), independently checked in two finite characteristics;
+- the theorem-grade form-to-stable adapter and hence `G=0` for the positive
+  semisimplified `S_5`-fixed general channel.
 
-The two companion replays check the branching carriers, the three-term
+The companion replays check the branching carriers, the three-term
 Eisenstein projection, the lift/nonlift totals, (7), and the corrected
-holomorphy kernel using exact arithmetic. Neither encodes a Galois
-realization of the formal cohomological channels.
+holomorphy kernel using exact arithmetic. The stable adapter is a
+primary-source theorem chain rather than a new numerical replay; none of the
+replays realizes the Eisenstein Galois class.
 
 ### Conditional or source-caveated
 
@@ -418,39 +418,35 @@ realization of the formal cohomological channels.
   `S_5 x Gal` Eisenstein Euler class, hence as Frobenius trace `2-4q`;
 - `epsilon_Eis=L` and the branch (3) as identities of actual Galois/trace
   channels;
-- the official `k=3` row decomposition as a Galois/cohomological proof that
-  the formal channel `G` vanishes;
+- the official `k=3` row decomposition, which is no longer needed to prove
+  that the channel `G` vanishes;
 - interpreting the three finite equalities as an all-prime formula;
-- the forced traces in (9), and identifying a representation from them.
 
 ### Open
 
 - an independent Galois realization of the formal Eisenstein Euler class;
-- transport of the exact modular zero in (8) to the formal stable/general
-  Galois channel `G`;
-- reconciliation of (9) with the conditional zero-invariant data;
 - an all-`q` formula for `Hhat_12`.
 
 ## 10. Bounded next attack
 
-The covariant surgery is closed. The next useful work is not another point
-count or another valuation rank. It is an exact comparison between the
-natural marked modular zero and the compact-support cohomological channel in
-the formal defect, together with an independent boundary-geometric or
-trace-formula justification of the Eisenstein Tate labels. Only that adapter
-can turn the finite zero into an actual Galois/Frobenius identity;
-connecting-morphism rank calculations alone cannot supply it.
+The covariant surgery and the stable adapter are closed. The next useful work
+is not another point count, valuation rank, or `S_6` decomposition. It is an
+independent boundary-geometric or trace-formula justification of the
+Eisenstein Tate labels on the natural marked quotient. Connecting-morphism
+rank calculations alone cannot supply the missing Galois action.
 
 ## 11. Primary sources and novelty boundary
 
 - Bergstrom, Faber, and van der Geer,
   [*Siegel Modular Forms of Genus 2 and Level 2: Cohomological Computations and
-  Conjectures*](https://arxiv.org/abs/0803.0917): regular Eisenstein theorem and
-  explicitly expected `m=0` continuation.
+  Conjectures*](https://arxiv.org/abs/0803.0917): form-attached rank-four
+  channel, regular Eisenstein theorem, and explicitly expected `m=0`
+  continuation.
 - Roesner,
   [*Parahoric Restriction for GSp(4) and the Cohomology of Siegel Modular
   Varieties*](https://sites.math.unt.edu/~schmidt/dimension_formulas/papers/2016_Dissertation_Roesner_final.pdf),
-  especially Theorem 5.13 and the natural six-Weierstrass-point action.
+  especially pp. 95--99, Theorem 5.13, Corollary 5.20, and the natural
+  six-Weierstrass-point action.
 - Shmakov,
   [*Cohomology of Local Systems on Siegel Threefolds with Square-Free
   Parahoric Level*](https://openscholar.uga.edu/nanna/record/1979/files/dissertation.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0),
@@ -461,8 +457,8 @@ connecting-morphism rank calculations alone cannot supply it.
   recording the incomplete Galois-action treatment.
 - Bergstrom--Clery,
   [*Dimension formulas for spaces of vector-valued Siegel modular forms of
-  degree two and level two*](https://arxiv.org/abs/2309.04388), Theorem 5.3 and
-  Remark 5.4.
+  degree two and level two*](https://arxiv.org/abs/2309.04388), equation (3),
+  Theorem 5.3, and Remark 5.4.
 - Clery--van der Geer,
   [*Tautological modular forms of level two and degree two*](https://arxiv.org/abs/2605.13300),
   the marked quotient, covariant map, and Criterion 7.4.
@@ -472,6 +468,7 @@ connecting-morphism rank calculations alone cannot supply it.
 No claim is made that Shmakov's theorem, the branching rule, or the covariant
 framework is externally new.  The project-level contribution of this note is
 the hypothesis audit, the differential-independent formal projection and its
-conditional defect branch (3), the lift/nonlift correction, and the finite
-66-dimensional proof target.  Nothing here proves RH or GRH, constructs a
-motive, or promotes a local trace equality to a compatible global system.
+conditional defect branch (3), the lift/nonlift correction, the exact
+66-dimensional marked zero, and the source-locked stable adapter. Nothing here
+proves RH or GRH, constructs a new motive, or promotes a local trace equality
+to a compatible global system.

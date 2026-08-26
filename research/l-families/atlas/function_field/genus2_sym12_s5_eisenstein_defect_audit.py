@@ -135,7 +135,7 @@ def main() -> int:
     assert (weight_12, weight_14, covariant_multiplicity) == (752, 686, 66)
 
     payload = {
-        "schema": "riemann.genus2.sym12.s5_eisenstein_defect_audit.v1",
+        "schema": "riemann.genus2.sym12.s5_eisenstein_defect_audit.v2",
         "scope": "finite exact character and weight algebra only",
         "s6_to_s5_invariant_carriers": ["[6]", "[5,1]"],
         "formal_eisenstein_projection": {
@@ -146,6 +146,18 @@ def main() -> int:
             "epsilon_against_BFG_formal_2_minus_5L": "L",
         },
         "conditional_master_defect": "Hhat_12=L-L*f_minus-G",
+        "source_locked_downstream_adapter": {
+            "input": (
+                "the corrected two-orientation marked valuation packet proves "
+                "S_(12,3)(Gamma_2(w^1))=0"
+            ),
+            "primary_theorem": (
+                "Roesner Corollary 5.20 identifies the arbitrary-weight stable "
+                "channel with four-dimensional form-attached Galois summands"
+            ),
+            "conclusion": "G=0 as the semisimplified S5-fixed stable channel",
+            "Shmakov_formal_branch_after_G_zero": "Hhat_12=L-L*f_minus",
+        },
         "official_row_audit": {
             "lift_dimension": lift_dimension,
             "nonlift_dimension": nonlift_dimension,
@@ -159,8 +171,10 @@ def main() -> int:
         "firewall": (
             "The 66-dimensional source precedes holomorphy valuations, and the "
             "formal 2-4*L projection does not establish its Galois realization; "
-            "this replay proves neither the modular-form-space nor stable-channel "
-            "vanishing."
+            "this finite replay alone proves neither the modular-form-space nor "
+            "stable-channel vanishing. The separately locked corrected valuation "
+            "packet and primary-source adapter close G=0; they do not realize the "
+            "formal Eisenstein class."
         ),
     }
     print(json.dumps(payload, indent=2, sort_keys=True))

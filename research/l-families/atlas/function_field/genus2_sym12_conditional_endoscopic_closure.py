@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Build the exact conditional Sym12 endoscopic-closure reduction.
+"""Build the exact Sym12 stable-channel closure and Eisenstein reduction.
 
 The producer verifies finite symmetric-group branching, specializes an
 explicitly conjectural BFG endoscopic/Eisenstein ledger, and compares it with
-the committed project ambient formula.  It proves a conditional equivalence,
-not an all-q trace formula.  No web service, database, finite field, polynomial,
-curve, or modular-form space is queried at runtime.
+the committed project ambient formula.  A locked corrected marked-valuation
+fixture closes the form-attached stable/general channel exactly; the
+nonregular Eisenstein value remains open.  This is not an all-q trace formula.
+No web service, database, finite field, polynomial, curve, or modular-form
+space is queried at runtime.
 """
 
 from __future__ import annotations
@@ -24,12 +26,13 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
 OUTPUT_PATH = HERE / "genus2_sym12_conditional_endoscopic_closure.json"
 NOTE_PATH = HERE / "GENUS2_SYM12_CONDITIONAL_ENDOSCOPIC_CLOSURE.md"
+ADAPTER_NOTE_PATH = HERE / "GENUS2_SYM12_MODULAR_ZERO_GENERAL_CHANNEL_ADAPTER.md"
 SCRIPT_PATH = Path(__file__).resolve()
 TEST_PATH = ROOT / "tests" / "test_genus2_sym12_conditional_endoscopic_closure.py"
 
-MAX_SOURCE_FILES = 8
+MAX_SOURCE_FILES = 9
 MAX_SOURCE_BYTES_EACH = 45_000
-MAX_SOURCE_BYTES_TOTAL = 160_000
+MAX_SOURCE_BYTES_TOTAL = 180_000
 MAX_BRANCHING_PARTITIONS = 11
 MAX_BRANCHING_ROW_TESTS = 35
 MAX_REMOVABLE_CORNERS = 19
@@ -62,6 +65,19 @@ SOURCE_LOCKS: tuple[dict[str, object], ...] = (
         "role": "finite q=3,5,7 corroboration and explicit Fricke-negative f_minus",
     },
 )
+
+MARKED_ZERO_LOCK: dict[str, object] = {
+    "id": "sym12_marked_valuation_kernel",
+    "path": HERE / "genus2_sym12_marked_valuation_kernel.json",
+    "commit": "a0871416abb4ac58132b53dd4ae30faeed9719bd",
+    "git_blob": "6e9fcc3d42f1a7acf74759dd408259fd507c79f0",
+    "raw_worktree_blob": "5a6449e035ced7fcf666ca29be0fe80b0075bb06",
+    "lf_sha256": "9e833cb7778c6613d0f4c7ef22a72319864c05ce41c50addc9dee778d5446076",
+    "role": (
+        "exact corrected two-orientation rank-66/nullity-zero certificate for "
+        "the marked (j,k)=(12,3) modular space"
+    ),
+}
 
 PARTITIONS_OF_6: tuple[tuple[int, ...], ...] = (
     (6,),
@@ -240,6 +256,11 @@ def _git_blob(raw: bytes) -> str:
     return hashlib.sha1(prefix + normalized).hexdigest()
 
 
+def _raw_git_blob(raw: bytes) -> str:
+    prefix = f"blob {len(raw)}\0".encode()
+    return hashlib.sha1(prefix + raw).hexdigest()
+
+
 def _relative(path: Path) -> str:
     return path.resolve().relative_to(ROOT).as_posix()
 
@@ -317,6 +338,71 @@ def _load_locked_packet(
             }
         )
     return value, transitive
+
+
+def _load_marked_zero(guard: ResourceGuard) -> dict[str, object]:
+    path = MARKED_ZERO_LOCK.get("path")
+    if not isinstance(path, Path):
+        raise TypeError("marked-zero lock path is invalid")
+    raw = _read_counted(path, guard)
+    if _lf_sha256(raw) != MARKED_ZERO_LOCK.get("lf_sha256"):
+        raise ValueError("LF-normalized marked-zero source hash mismatch")
+    if _raw_git_blob(raw) != MARKED_ZERO_LOCK.get("raw_worktree_blob"):
+        raise ValueError("raw-worktree marked-zero source hash mismatch")
+    value = json.loads(raw.decode("utf-8"))
+    if not isinstance(value, dict):
+        raise TypeError("marked-zero fixture is not an object")
+
+    parameters = value.get("parameters")
+    highest = value.get("highest_weight_model")
+    boundary = value.get("representative_boundary_valuation")
+    controls = value.get("calibration_controls")
+    if not all(isinstance(block, dict) for block in (parameters, highest, boundary)):
+        raise TypeError("marked-zero fixture blocks are missing")
+    if not isinstance(controls, list):
+        raise TypeError("marked-zero calibration controls are missing")
+    combined = boundary.get("combined_matrix")
+    if not isinstance(combined, dict):
+        raise TypeError("marked-zero combined matrix is missing")
+
+    if parameters != {
+        "b": 12,
+        "d": 9,
+        "holomorphy_t_degree_cap": 18,
+        "selected_total_degree": 27,
+    }:
+        raise ValueError("marked-zero parameters changed")
+    if highest.get("nullity") != 66:
+        raise ValueError("marked-zero highest-weight dimension changed")
+    if (
+        combined.get("columns"),
+        combined.get("rank_over_Q"),
+        combined.get("nullity"),
+        combined.get("rank_mod_1000003"),
+        combined.get("rank_mod_1000033"),
+    ) != (66, 66, 0, 66, 66):
+        raise ValueError("marked-zero corrected rank certificate changed")
+    if boundary.get("oriented_blocks_computed") != ["{1,2,6}", "{3,4,5}"]:
+        raise ValueError("marked-zero orientation certificate changed")
+
+    control_rows = {
+        (row.get("d"), row.get("b")): row for row in controls if isinstance(row, dict)
+    }
+    expected_controls = {
+        (4, 6): (6, 0),
+        (7, 4): (18, 0),
+        (12, 2): (36, 2),
+    }
+    if set(control_rows) != set(expected_controls):
+        raise ValueError("marked-zero calibration controls changed")
+    for key, (rank, nullity) in expected_controls.items():
+        row = control_rows[key]
+        if (row.get("corrected_rank"), row.get("corrected_nullity")) != (
+            rank,
+            nullity,
+        ):
+            raise ValueError("marked-zero calibration result changed")
+    return value
 
 
 def _partition_label(partition: Sequence[int]) -> str:
@@ -579,8 +665,10 @@ def _hook_dimension(partition: Sequence[int], guard: ResourceGuard) -> int:
     return math.factorial(sum(partition)) // hook_product
 
 
-def _stable_vanishing_evidence(
-    branching: Mapping[str, object], guard: ResourceGuard
+def _stable_vanishing_certificate(
+    branching: Mapping[str, object],
+    marked: Mapping[str, object],
+    guard: ResourceGuard,
 ) -> dict[str, object]:
     api_partitions = (
         (3, 1, 1, 1),
@@ -607,35 +695,90 @@ def _stable_vanishing_evidence(
         )
     if total_dimension != 30 or invariant_dimension != 0:
         raise ArithmeticError("stable-space data projection failed")
+    highest = marked.get("highest_weight_model")
+    boundary = marked.get("representative_boundary_valuation")
+    if not isinstance(highest, dict) or not isinstance(boundary, dict):
+        raise TypeError("marked-zero certificate blocks are missing")
+    combined = boundary.get("combined_matrix")
+    if not isinstance(combined, dict):
+        raise TypeError("marked-zero combined matrix is missing")
+
     return {
         "project_notation": "S_(12,3)(Gamma_2(w^1))",
         "source_notation_warning": (
-            "some sources print S_(3,12)(Gamma[2]); the official query uses j=12,k=3"
+            "Bergstrom--Clery order is scalar first, S_(3,12); the project and "
+            "official query use (j,k)=(12,3)"
         ),
-        "official_data_isotypical_rows": rows,
-        "total_dimension_checksum": total_dimension,
-        "S5_invariant_dimension_from_these_rows": invariant_dimension,
-        "official_data_endpoint": (
-            "https://smf.compositio.nl/api/Entries/2/2?j=12&k=3&l=0"
-        ),
-        "runtime_access": "NONE; rows are a frozen source-audit transcription",
-        "source_grade": (
-            "CONDITIONAL_FORMULA_AND_DATABASE_EVIDENCE_NOT_UNCONDITIONAL_THEOREM"
-        ),
-        "why_conditional": (
-            "Bergstrom--Clery Theorem 5.3 covers k>=4; Remark 5.4 extends to "
-            "k=3,j>0 only assuming the BFG nonregular Eisenstein conjecture"
-        ),
-        "negative_source_result": (
-            "Roesner and Shmakov do not evaluate the stable/general term at this weight"
-        ),
-        "dimension_firewall": (
-            "the theorem-level total dimension 30 alone does not imply S5-invariant vanishing"
-        ),
-        "latest_structural_source": (
-            "Clery--van der Geer arXiv:2605.13300 unconditionally identifies "
-            "A2[w]=A2[2]/S5 and gives a covariant/valuation characterization, but "
-            "does not compute the (j,k)=(12,3) S5-isotypic dimension"
+        "exact_marked_modular_zero": {
+            "preholomorphic_highest_weight_dimension": highest["nullity"],
+            "corrected_two_orientation_matrix": {
+                "rows": combined["rows"],
+                "columns": combined["columns"],
+                "rank_over_Q": combined["rank_over_Q"],
+                "rank_mod_1000003": combined["rank_mod_1000003"],
+                "rank_mod_1000033": combined["rank_mod_1000033"],
+                "nullity": combined["nullity"],
+            },
+            "quotient_identification": (
+                "A_2(w^1)=A_2[2]/S5 in the natural point-stabilizer convention"
+            ),
+            "odd_scalar_weight": (
+                "M_(12,3)=S_(12,3), because the global Phi target vanishes"
+            ),
+            "conclusion": "S_(12,3)(Gamma_2(w^1))=0",
+            "source_grade": "EXACT_LOCKED_CORRECTED_VALUATION_CERTIFICATE",
+        },
+        "form_to_stable_channel_adapter": {
+            "BFG_definition": (
+                "S[Gamma_2[2],(j,k)] is the form-attached rank-4-per-eigenform "
+                "inner-cohomology channel"
+            ),
+            "Bergstrom_Clery_decomposition": (
+                "S_(k,j)=S^(G)_(k,j) direct_sum S^(Y)_(k,j) for j>0; "
+                "S^(G) is the general-type summand"
+            ),
+            "Roesner_theorem": (
+                "for every l>=m>=0 the level-two inner cohomology is the direct "
+                "sum of endoscopic, Saito-Kurokawa, and stable parts; the stable "
+                "part consists of four-dimensional irreducible Galois "
+                "representations and contributes equally to all four Hodge types"
+            ),
+            "holomorphic_component": (
+                "H_!^(3,0)(A_2[2],V_(l,m)) is Hecke-isomorphic to "
+                "S_(l-m,m+3)(Gamma[2]), including m=0"
+            ),
+            "invariant_exactness": (
+                "over characteristic zero, S5 invariants are exact and commute "
+                "with the stable direct-summand decomposition"
+            ),
+            "no_leakage": (
+                "Yoshida/endoscopic and Eisenstein/boundary terms are separate "
+                "summands; the level-two Soudry contribution is zero"
+            ),
+            "conclusion": (
+                "Genuine=(S_gen,Gamma(2)[12,3])^S5=0 as a semisimple "
+                "Gal(Qbar/Q)-representation"
+            ),
+            "source_grade": "THEOREM_GRADE_FORM_ATTACHED_ADAPTER",
+        },
+        "exact_conclusion": "Genuine=0",
+        "official_conditional_corroboration": {
+            "isotypical_rows": rows,
+            "total_dimension_checksum": total_dimension,
+            "S5_invariant_dimension_from_these_rows": invariant_dimension,
+            "endpoint": ("https://smf.compositio.nl/api/Entries/2/2?j=12&k=3&l=0"),
+            "runtime_access": "NONE; rows are a frozen source-audit transcription",
+            "source_grade": ("CONDITIONAL_K3_ISOTYPICAL_FORMULA; CORROBORATION_ONLY"),
+            "why_conditional": (
+                "Bergstrom--Clery Theorem 5.3 covers k>=4; Remark 5.4 extends "
+                "its cohomology-derived isotypical formula to k=3 only under the "
+                "BFG nonregular Eisenstein conjecture"
+            ),
+        },
+        "firewall": (
+            "the conclusion is for the positive semisimplified stable/general "
+            "channel G; it does not identify the nonregular compact-support "
+            "Eisenstein Galois class or nonsemisimple boundary extensions"
         ),
     }
 
@@ -694,7 +837,7 @@ def _conditional_algebra(guard: ResourceGuard) -> dict[str, object]:
             "formula": "Hhat_12+2-5*L-L*(f_plus+f_minus)",
             "vector": _serialize_vector(project),
         },
-        "master_target_before_specializing_the_two_open_channels": {
+        "master_target_before_exact_stable_specialization": {
             "definitions": {
                 "Epsilon_Eis": "e_Eis-(2-5*L)",
                 "Genuine": "positive stable/general S5-invariant channel whose e_c contribution is -Genuine",
@@ -704,12 +847,15 @@ def _conditional_algebra(guard: ResourceGuard) -> dict[str, object]:
             "project_minus_target": _serialize_vector(master_difference),
             "equality_iff": ("Hhat_12=-L*f_minus+Epsilon_Eis-Genuine"),
         },
-        "conditional_target_with_stable_vanishing": {
+        "target_after_exact_stable_vanishing": {
             "formula": "2-5*L-L*(f_plus+2*f_minus)",
             "vector": _serialize_vector(bfg_closed_target),
             "project_minus_target": _serialize_vector(bfg_closed_difference),
             "equality_iff": "Hhat_12=-L*f_minus",
-            "status": "EXACT_IFF_INSIDE_THE_STATED_CONDITIONAL_PREMISES",
+            "status": (
+                "EXACT_STABLE_SPECIALIZATION; EQUALITY_TO_MINUS_L_F_MINUS "
+                "STILL_REQUIRES_EPSILON_EIS_ZERO"
+            ),
         },
         "one_Tate_discrepancy_effect": {
             "if_Eisenstein_is_2_minus_4L_before_stable_vanishing": {
@@ -834,6 +980,23 @@ def _source_manifest(
                 "transitive_packet_files": transitive[source_id],
             }
         )
+    marked_path = MARKED_ZERO_LOCK["path"]
+    if not isinstance(marked_path, Path):
+        raise TypeError("marked-zero source manifest path is invalid")
+    rows.append(
+        {
+            "id": MARKED_ZERO_LOCK["id"],
+            "path": _relative(marked_path),
+            "commit": MARKED_ZERO_LOCK["commit"],
+            "git_blob": MARKED_ZERO_LOCK["git_blob"],
+            "raw_worktree_blob": MARKED_ZERO_LOCK["raw_worktree_blob"],
+            "sha256_lf_normalized": MARKED_ZERO_LOCK["lf_sha256"],
+            "role": MARKED_ZERO_LOCK["role"],
+            "bytes_read": marked_path.stat().st_size,
+            "content_kind": "EXACT_RAW_FIXTURE_WITH_COMMIT_AND_DUAL_HASH_LOCK",
+            "transitive_packet_files": [],
+        }
+    )
     total = sum(
         row["bytes_read"]
         + sum(item["bytes_read"] for item in row["transitive_packet_files"])
@@ -850,7 +1013,7 @@ def _packet_manifest() -> list[dict[str, str]]:
             "path": _relative(path),
             "sha256_lf_normalized": _lf_sha256(path.read_bytes()),
         }
-        for path in (NOTE_PATH, SCRIPT_PATH, TEST_PATH)
+        for path in (NOTE_PATH, ADAPTER_NOTE_PATH, SCRIPT_PATH, TEST_PATH)
     ]
 
 
@@ -892,13 +1055,14 @@ def build_fixture() -> dict[str, object]:
     guard = ResourceGuard()
     inventory, inventory_transitive = _load_locked_packet(SOURCE_LOCKS[0], guard)
     scout, scout_transitive = _load_locked_packet(SOURCE_LOCKS[1], guard)
+    marked = _load_marked_zero(guard)
     _verify_inventory(inventory)
     deadline.check("locked packets")
 
     branching = _branching_certificate(guard)
     endoscopy = _endoscopic_specialization(branching, guard)
     eisenstein = _eisenstein_specialization()
-    stable = _stable_vanishing_evidence(branching, guard)
+    stable = _stable_vanishing_certificate(branching, marked, guard)
     algebra = _conditional_algebra(guard)
     finite = _finite_corroboration(scout, guard)
     deadline.check("conditional reduction")
@@ -909,9 +1073,9 @@ def build_fixture() -> dict[str, object]:
     }
     payload: dict[str, object] = {
         "schema": (
-            "riemann.function_field.genus2_sym12_conditional_endoscopic_closure.v1"
+            "riemann.function_field.genus2_sym12_conditional_endoscopic_closure.v2"
         ),
-        "status": "EXACT_CONDITIONAL_REDUCTION_NOT_AN_ALL_Q_THEOREM",
+        "status": "EXACT_STABLE_CHANNEL_CLOSURE_ONE_EISENSTEIN_GATE_NOT_ALL_Q",
         "conditional_statement": {
             "master_reduction": (
                 "Hhat_12=-L*f_minus+Epsilon_Eis-Genuine, where "
@@ -920,18 +1084,29 @@ def build_fixture() -> dict[str, object]:
             ),
             "premises": [
                 "Use the semisimplified inner/endoscopic specialization -L*(f_plus+2*f_minus).",
+                (
+                    "Use the exact marked modular zero and the theorem-grade "
+                    "form-to-stable adapter, which give Genuine=0."
+                ),
                 "Adopt the conjectural nonregular compact-support Eisenstein continuation 2-5*L.",
-                "Adopt the conditionally supported vanishing Genuine=S_(12,3)(Gamma_2(w^1))=0.",
             ],
             "unresolved_premises": [
                 "Epsilon_Eis=0 (the BFG nonregular Eisenstein continuation).",
-                "Genuine=0 (stable/general S5-invariant vanishing).",
             ],
-            "exact_conclusion": (
-                "Under exactly those premises, the project ambient formula equals the "
-                "conditional cohomological target if and only if Hhat_12=-L*f_minus."
+            "exact_stable_closure": (
+                "Genuine=(S_gen,Gamma(2)[12,3])^S5=0; hence the master "
+                "reduction simplifies to Hhat_12=-L*f_minus+Epsilon_Eis."
             ),
-            "unconditional_conclusion": "NONE",
+            "exact_conclusion": (
+                "After the exact stable closure, the project ambient formula equals "
+                "the theorem-supported cohomological target if and only if "
+                "Hhat_12=-L*f_minus+Epsilon_Eis; imposing the one remaining BFG "
+                "Eisenstein premise gives Hhat_12=-L*f_minus."
+            ),
+            "unconditional_conclusion": (
+                "The positive semisimplified S5-fixed stable/general channel Genuine "
+                "vanishes; no conclusion is made here about Epsilon_Eis."
+            ),
         },
         "prime_power_trace_convention": (
             "For q=p^r, -L*f_minus means -p^r*(alpha_{-,p}^r+beta_{-,p}^r) "
@@ -943,7 +1118,7 @@ def build_fixture() -> dict[str, object]:
         "S6_to_S5_branching": branching,
         "BFG_endoscopic_specialization": endoscopy,
         "nonregular_Eisenstein_specialization": eisenstein,
-        "stable_invariant_vanishing_evidence": stable,
+        "stable_invariant_vanishing_certificate": stable,
         "exact_internal_algebra": algebra,
         "finite_scout_corroboration": finite,
         "source_grade_ledger": [
@@ -968,7 +1143,15 @@ def build_fixture() -> dict[str, object]:
             },
             {
                 "claim": "S_(12,3)(Gamma_2(w^1)) S5-invariant vanishing",
-                "grade": "CONDITIONAL_FORMULA_AND_OFFICIAL_DATA_EVIDENCE",
+                "grade": "EXACT_CORRECTED_MARKED_VALUATION_CERTIFICATE",
+            },
+            {
+                "claim": "Genuine=(S_gen,Gamma(2)[12,3])^S5=0",
+                "grade": "THEOREM_GRADE_FORM_ATTACHED_STABLE_ADAPTER",
+                "boundary": (
+                    "semisimplified stable/general channel only; Eisenstein and "
+                    "nonsemisimple boundary extensions are separate"
+                ),
             },
             {
                 "claim": "Hhat_12=-L*f_minus+Epsilon_Eis-Genuine",
@@ -994,7 +1177,11 @@ def build_fixture() -> dict[str, object]:
                     "https://sites.math.unt.edu/~schmidt/dimension_formulas/"
                     "papers/2016_Dissertation_Roesner_final.pdf"
                 ),
-                "use": "semisimplified inner/endoscopic theorem support",
+                "use": (
+                    "semisimplified endoscopy and, via pp. 95-99 and Corollary "
+                    "5.20, the arbitrary-weight stable direct sum and its "
+                    "holomorphic companion"
+                ),
             },
             {
                 "source": "Shmakov dissertation, Theorem 4.6.4, p. 366",
@@ -1008,26 +1195,29 @@ def build_fixture() -> dict[str, object]:
                 "source": "Bergstrom--Clery, arXiv:2309.04388v2",
                 "url": "https://arxiv.org/abs/2309.04388",
                 "use": (
-                    "Theorem 5.3 regular range and Remark 5.4 conditional k=3 extension"
+                    "Arthur decomposition S=S^(G) direct_sum S^(Y), exact odd-k "
+                    "cuspidality, and the boundary between structural form-attached "
+                    "channels and the conditional k=3 isotypical formula"
                 ),
             },
             {
                 "source": "Clery--van der Geer, arXiv:2605.13300",
                 "url": "https://arxiv.org/abs/2605.13300",
                 "use": (
-                    "unconditional structural identification A2[w]=A2[2]/S5; "
-                    "no (j,k)=(12,3) S5-isotypic dimension"
+                    "structural identification A2[w]=A2[2]/S5 and the "
+                    "covariant/valuation criterion used by the locked corrected "
+                    "(j,k)=(12,3) rank certificate"
                 ),
             },
         ],
         "firewalls": [
-            "CONDITIONAL-REDUCTION FIREWALL: the iff is exact only after all three displayed premises are assumed; it is not an all-q theorem.",
+            "CONDITIONAL-REDUCTION FIREWALL: Genuine=0 is closed exactly, but the final Hhat_12=-L*f_minus identity still requires the displayed nonregular Eisenstein premise; it is not an all-q theorem.",
             "NONREGULAR FIREWALL: BFG proves the Eisenstein formula in the regular range and only expects the m=0 continuation used here.",
             "ONE-TATE FIREWALL: Shmakov's printed 2-4*L specialization differs from BFG's formal 2-5*L by one Tate term and changes the master relation to Hhat_12=L-L*f_minus-Genuine; only after Genuine=0 does this become Hhat_12=L-L*f_minus.",
             "AMBIENT-NORMALIZATION FIREWALL: the project and both cited specializations use the same ambient A_2(w^1)=A_2[2]/S5; no open/ambient correction resolving the discrepancy has been identified.",
-            "STABLE-SPACE FIREWALL: Roesner and Shmakov do not evaluate the stable/general term; official data vanishing uses a conditional k=3 decomposition.",
-            "DIMENSION FIREWALL: total dimension 30 does not imply absence of S5 invariants without the isotypical decomposition.",
-            "2026-STRUCTURAL FIREWALL: the unconditional covariant/valuation description confirms A2[w]=A2[2]/S5 but does not compute the (12,3) S5-isotypic dimension.",
+            "STABLE-SPACE CLOSURE: the locked corrected two-orientation valuation kernel proves the full marked modular space zero, and the form-attached stable adapter therefore gives Genuine=0 without the conditional k=3 isotypical rows.",
+            "DIMENSION FIREWALL: the full-level dimension 30 alone does not imply absence of S5 invariants; the conclusion instead uses the exact marked rank-66/nullity-zero kernel.",
+            "COHOMOLOGY FIREWALL: Genuine is the positive semisimplified stable/general form-attached channel, not an arbitrary residual Euler class; boundary, Eisenstein, endoscopic, and nonsemisimple extension data cannot be absorbed into it.",
             "FINITE-SCOUT FIREWALL: p=3,5,7 corroborate Hhat_12(p)=-p*a_p(f_minus) but do not prove any fourth q or prime-power row.",
             "No motivic isomorphism, compatible system, novelty, RH, GRH, number-field transfer, or global Euler-product claim is made.",
             "The producer performs no runtime web/database call and no field, polynomial, curve, or family enumeration.",

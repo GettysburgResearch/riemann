@@ -156,8 +156,10 @@ The selector calculation itself does **not** make the five official rows
 unconditional: they remain the nonregular `k=3` continuation recorded in the
 prior packet. Independently, however, the corrected covariant calculation
 proves the natural marked modular space zero without using those rows. The
-remaining caveat is the transport from that modular zero to the formal
-Galois/cohomological channel, not a decomposition of surviving forms.
+primary-source adapter now transports that zero to the positive semisimplified
+stable/general Galois channel. The remaining caveat is the nonregular
+compact-support Eisenstein Galois class, not a decomposition of surviving
+forms.
 
 ## 5. What is closed and what remains
 
@@ -176,14 +178,13 @@ Closed exactly:
 Still open:
 
 1. unconditional validity of the official `k=3` general-space rows;
-2. transport of the exact modular zero to the formal stable/general Galois
-   channel `G` and the all-`q` `Sym^12` formula;
-3. the separately source-caveated Eisenstein one-Tate discrepancy.
+2. the separately source-caveated Eisenstein one-Tate discrepancy and the
+   all-`q` `Sym^12` formula.
 
-The next bounded task should therefore audit the cohomological/Galois adapter
-from the exact modular zero. Repeating the valuation rank, searching for a
-lift decomposition, or transporting to the outer `S_5` cannot resolve that
-remaining question.
+The modular-zero-to-stable adapter is now closed in
+`GENUS2_SYM12_MODULAR_ZERO_GENERAL_CHANNEL_ADAPTER.md`. Repeating the valuation
+rank, searching for a lift decomposition, or transporting to the outer `S_5`
+cannot resolve the remaining Eisenstein question.
 
 ## 6. Replay and sources
 
