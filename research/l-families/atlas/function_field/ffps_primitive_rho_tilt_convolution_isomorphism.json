@@ -55,6 +55,164 @@
     "number_of_primes": 2
   },
   "compatible_scale_geometry": {
+    "fixed_q_coloring": {
+      "d_one_specialization": "COLORPRIMCAR: the AUXCOLORPRIMCAR gate at D=1",
+      "equal_weight_scope": "every fixed d and core u=rs; ordered colors at fixed alpha,d,u",
+      "euler_cost": "J_67=prod_(p!=67)(1+1/((p+1)*sqrt(p)))<infinity; sharp weighted-Hilbert energy cost",
+      "formal_gate": "AUXCOLORPRIMCAR: sum_(d<=D sf) d^-1 sum_((u,d)=1 sf) g(u)/sqrt(u) sum_I |sum_(r|u) V_(d;r,u/r)(I)|^2 <<_epsilon (2DH)^epsilon",
+      "formal_relations": [
+        "RAYPRIMCAR -> AUXCOLORPRIMCAR -> auxiliary rho-sieved energy -> zero mode",
+        "COLLPRIMCAR and AUXCOLORPRIMCAR are positive-norm incomparable",
+        "GENPRIMCAR and AUXCOLORPRIMCAR are positive-norm incomparable"
+      ],
+      "ray_to_color_euler_cost": "prod_(p!=67)(1+4*p^eta/((p+1)*sqrt(p)))<infinity exactly for eta<1/2",
+      "remote_ray_reverse_witness": {
+        "prime": 11,
+        "ray_norm": 12,
+        "raywise_weighted_l1_contribution_squared": "1/11",
+        "weighted_color_energy": "12/sqrt(11)",
+        "weighted_color_energy_squared": "144/11"
+      },
+      "sweep_rows": [
+        {
+          "cleared_common_weight": "1",
+          "color_count": 1,
+          "colors": [
+            {
+              "cleared_weight": "1",
+              "r": 1,
+              "s": 1
+            }
+          ],
+          "compression_identity": true,
+          "modulus": 1,
+          "omega": 0,
+          "squared_actual_weight": "1"
+        },
+        {
+          "cleared_common_weight": "1/3",
+          "color_count": 2,
+          "colors": [
+            {
+              "cleared_weight": "1/3",
+              "r": 1,
+              "s": 2
+            },
+            {
+              "cleared_weight": "1/3",
+              "r": 2,
+              "s": 1
+            }
+          ],
+          "compression_identity": true,
+          "modulus": 2,
+          "omega": 1,
+          "squared_actual_weight": "1/18"
+        },
+        {
+          "cleared_common_weight": "1/12",
+          "color_count": 4,
+          "colors": [
+            {
+              "cleared_weight": "1/12",
+              "r": 1,
+              "s": 6
+            },
+            {
+              "cleared_weight": "1/12",
+              "r": 2,
+              "s": 3
+            },
+            {
+              "cleared_weight": "1/12",
+              "r": 3,
+              "s": 2
+            },
+            {
+              "cleared_weight": "1/12",
+              "r": 6,
+              "s": 1
+            }
+          ],
+          "compression_identity": true,
+          "modulus": 6,
+          "omega": 2,
+          "squared_actual_weight": "1/864"
+        },
+        {
+          "cleared_common_weight": "1/72",
+          "color_count": 8,
+          "colors": [
+            {
+              "cleared_weight": "1/72",
+              "r": 1,
+              "s": 30
+            },
+            {
+              "cleared_weight": "1/72",
+              "r": 2,
+              "s": 15
+            },
+            {
+              "cleared_weight": "1/72",
+              "r": 3,
+              "s": 10
+            },
+            {
+              "cleared_weight": "1/72",
+              "r": 5,
+              "s": 6
+            },
+            {
+              "cleared_weight": "1/72",
+              "r": 6,
+              "s": 5
+            },
+            {
+              "cleared_weight": "1/72",
+              "r": 10,
+              "s": 3
+            },
+            {
+              "cleared_weight": "1/72",
+              "r": 15,
+              "s": 2
+            },
+            {
+              "cleared_weight": "1/72",
+              "r": 30,
+              "s": 1
+            }
+          ],
+          "compression_identity": true,
+          "modulus": 30,
+          "omega": 3,
+          "squared_actual_weight": "1/155520"
+        }
+      ],
+      "synthetic_cancellation_witness": {
+        "auxcolor_quadratic_contribution": "1/(12*sqrt(6))",
+        "color_energy": "1",
+        "color_vector": [
+          "1"
+        ],
+        "largest_ray_energy": "9",
+        "outer_coefficient": "1/(12*sqrt(6))",
+        "ray_energies": {
+          "1": "9",
+          "2": "25/4",
+          "3": "25/4",
+          "6": "9"
+        },
+        "raywise_l1_norm": "11",
+        "scope": "abstract vectors, not realized arithmetic P^0 panels",
+        "squared_outer_coefficient": "1/864",
+        "witness_scale": 3,
+        "zero_mode_coefficient_squared_times_color_energy": "1/864",
+        "zero_mode_largest_ray_contribution_energy": "1/96"
+      },
+      "uniform_per_q_alternative": "||C_q||^2 <<_eta (2Hq)^eta implies the zero mode directly by Minkowski for eta<1; it implies quadratic COLORPRIMCAR at the same eta only for eta<1/2, and as an all-epsilon family is stronger after exponent renaming"
+    },
     "gate_hierarchy": {
       "collective_gate_is_weaker_than_uniform_ray_control": {
         "mechanism": "put norm p+1 on one remote prime-p ray; its weighted contribution squared is 1/p",
@@ -941,11 +1099,15 @@
     "a_or_m_is_a_vector_in_weighted_l2": false,
     "actual_zero_mode_has_native_sieve_average": false,
     "arbitrary_cross_coprimality_obstruction_remaining": false,
+    "auxcolorprimcar_estimate_proved": false,
     "collprimcar_estimate_proved": false,
+    "colorprimcar_estimate_proved": false,
     "compatible_scale_bijection_proved": true,
     "coprimality_preserved_in_generalized_panel": true,
     "dyadic_endpoint_structure_preserved": false,
+    "fixed_core_equal_color_weight_extends_to_each_fixed_positive_d": true,
     "fixed_ratio_band_is_hereditary": false,
+    "fixed_total_modulus_has_d_independent_color_weight": false,
     "generalized_primitive_carleson_estimate_proved": false,
     "genprimcar_and_rayprimcar_formally_equivalent": false,
     "harmonic_dilation_has_height_independent_absolute_cost": false,

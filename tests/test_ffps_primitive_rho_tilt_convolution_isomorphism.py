@@ -182,6 +182,28 @@ class PrimitiveRhoTiltConvolutionIsomorphismTest(unittest.TestCase):
             hidden["rows"][-1]["collective_weighted_contribution_squared"], "1/11"
         )
         self.assertFalse(hierarchy["ray_and_full_q_gates_formally_comparable"])
+        coloring = subject.fixed_q_coloring_panel()
+        self.assertEqual(
+            [row["color_count"] for row in coloring["sweep_rows"]],
+            [1, 2, 4, 8],
+        )
+        self.assertEqual(
+            [row["cleared_common_weight"] for row in coloring["sweep_rows"]],
+            ["1", "1/3", "1/12", "1/72"],
+        )
+        witness = coloring["synthetic_cancellation_witness"]
+        self.assertEqual(witness["color_vector"], ["1"])
+        self.assertEqual(witness["color_energy"], "1")
+        self.assertEqual(witness["largest_ray_energy"], "9")
+        self.assertEqual(witness["raywise_l1_norm"], "11")
+        self.assertEqual(witness["squared_outer_coefficient"], "1/864")
+        self.assertEqual(witness["auxcolor_quadratic_contribution"], "1/(12*sqrt(6))")
+        self.assertEqual(
+            witness["zero_mode_coefficient_squared_times_color_energy"], "1/864"
+        )
+        reverse = coloring["remote_ray_reverse_witness"]
+        self.assertEqual(reverse["raywise_weighted_l1_contribution_squared"], "1/11")
+        self.assertEqual(reverse["weighted_color_energy_squared"], "144/11")
 
     def test_colored_cube_norm_and_hereditary_replay(self) -> None:
         panel = subject.colored_cube_panel(2)
@@ -243,7 +265,13 @@ class PrimitiveRhoTiltConvolutionIsomorphismTest(unittest.TestCase):
         self.assertFalse(scope["genprimcar_and_rayprimcar_formally_equivalent"])
         self.assertFalse(scope["rayprimcar_estimate_proved"])
         self.assertFalse(scope["collprimcar_estimate_proved"])
+        self.assertFalse(scope["auxcolorprimcar_estimate_proved"])
+        self.assertFalse(scope["colorprimcar_estimate_proved"])
         self.assertTrue(scope["compatible_scale_bijection_proved"])
+        self.assertTrue(
+            scope["fixed_core_equal_color_weight_extends_to_each_fixed_positive_d"]
+        )
+        self.assertFalse(scope["fixed_total_modulus_has_d_independent_color_weight"])
         self.assertFalse(
             scope["harmonic_dilation_has_height_independent_absolute_cost"]
         )

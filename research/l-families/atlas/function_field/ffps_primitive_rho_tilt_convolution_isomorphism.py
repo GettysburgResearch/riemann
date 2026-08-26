@@ -80,6 +80,7 @@ def check_scope_markers() -> None:
         "the zero mode itself is not averaged over `d`",
         "abstract positive-norm arrays",
         "neither gate implies the other",
+        "Neither controls any nonzero `PRIMCAR` mode",
         "No PRIMCAR, PRIMLS, RH, or GRH estimate is proved.",
         "No external novelty claim is made.",
     ):
@@ -1009,6 +1010,131 @@ def gate_hierarchy_panel() -> dict[str, object]:
     }
 
 
+def fixed_q_coloring_panel(witness_scale: int = 3) -> dict[str, object]:
+    """Replay fixed-core equal weights and coherent pre-norm cancellation."""
+    validate_positive_integer(witness_scale)
+    sweep_rows = []
+    for modulus in (1, 2, 6, 30):
+        color_rows = []
+        cleared_pair_sum = Fraction(0)
+        scalar_color_sum = Fraction(0)
+        for r in divisors(modulus):
+            s = modulus // r
+            common_cleared_weight = g(r) * g(s)
+            if common_cleared_weight != g(modulus):
+                raise ArithmeticError("saturated colors do not have equal weight")
+            scalar_value = Fraction(r + 2 * s)
+            cleared_pair_sum += common_cleared_weight * scalar_value
+            scalar_color_sum += scalar_value
+            color_rows.append(
+                {
+                    "cleared_weight": str(common_cleared_weight),
+                    "r": r,
+                    "s": s,
+                }
+            )
+        if cleared_pair_sum != g(modulus) * scalar_color_sum:
+            raise ArithmeticError("fixed-q coherent coloring compression failed")
+        omega = len(factorization(modulus))
+        if len(color_rows) != 2**omega:
+            raise ArithmeticError("saturated color count failed")
+        sweep_rows.append(
+            {
+                "cleared_common_weight": str(g(modulus)),
+                "color_count": len(color_rows),
+                "colors": color_rows,
+                "compression_identity": True,
+                "modulus": modulus,
+                "omega": omega,
+                "squared_actual_weight": str(g(modulus) ** 2 / modulus),
+            }
+        )
+
+    modulus = 6
+    scale = Fraction(witness_scale)
+    vectors = {
+        1: (scale,),
+        2: (-scale + Fraction(1, 2),),
+        3: (-scale + Fraction(1, 2),),
+        6: (scale,),
+    }
+    color_vector = tuple(
+        sum(vectors[r][coordinate] for r in divisors(modulus))
+        for coordinate in range(1)
+    )
+    ray_energies = {
+        r: sum(coordinate * coordinate for coordinate in vector)
+        for r, vector in vectors.items()
+    }
+    color_energy = sum(coordinate * coordinate for coordinate in color_vector)
+    raywise_l1_norm = 4 * scale - 1
+    squared_outer_coefficient = g(modulus) ** 2 / modulus
+    if (
+        color_vector != (Fraction(1),)
+        or color_energy != 1
+        or max(ray_energies.values()) != scale**2
+        or squared_outer_coefficient != Fraction(1, 864)
+    ):
+        raise ArithmeticError("coherent color cancellation witness failed")
+    return {
+        "equal_weight_scope": (
+            "every fixed d and core u=rs; ordered colors at fixed alpha,d,u"
+        ),
+        "euler_cost": (
+            "J_67=prod_(p!=67)(1+1/((p+1)*sqrt(p)))<infinity; "
+            "sharp weighted-Hilbert energy cost"
+        ),
+        "formal_gate": (
+            "AUXCOLORPRIMCAR: sum_(d<=D sf) d^-1 sum_((u,d)=1 sf) "
+            "g(u)/sqrt(u) sum_I |sum_(r|u) V_(d;r,u/r)(I)|^2 "
+            "<<_epsilon (2DH)^epsilon"
+        ),
+        "d_one_specialization": ("COLORPRIMCAR: the AUXCOLORPRIMCAR gate at D=1"),
+        "formal_relations": [
+            "RAYPRIMCAR -> AUXCOLORPRIMCAR -> auxiliary rho-sieved energy -> zero mode",
+            "COLLPRIMCAR and AUXCOLORPRIMCAR are positive-norm incomparable",
+            "GENPRIMCAR and AUXCOLORPRIMCAR are positive-norm incomparable",
+        ],
+        "ray_to_color_euler_cost": (
+            "prod_(p!=67)(1+4*p^eta/((p+1)*sqrt(p)))<infinity exactly for eta<1/2"
+        ),
+        "remote_ray_reverse_witness": {
+            "prime": 11,
+            "ray_norm": 12,
+            "raywise_weighted_l1_contribution_squared": "1/11",
+            "weighted_color_energy": "12/sqrt(11)",
+            "weighted_color_energy_squared": "144/11",
+        },
+        "sweep_rows": sweep_rows,
+        "synthetic_cancellation_witness": {
+            "auxcolor_quadratic_contribution": "1/(12*sqrt(6))",
+            "zero_mode_coefficient_squared_times_color_energy": str(
+                squared_outer_coefficient * color_energy
+            ),
+            "color_energy": str(color_energy),
+            "color_vector": [str(coordinate) for coordinate in color_vector],
+            "largest_ray_energy": str(max(ray_energies.values())),
+            "outer_coefficient": "1/(12*sqrt(6))",
+            "ray_energies": {
+                str(r): str(energy) for r, energy in sorted(ray_energies.items())
+            },
+            "raywise_l1_norm": str(raywise_l1_norm),
+            "scope": "abstract vectors, not realized arithmetic P^0 panels",
+            "squared_outer_coefficient": str(squared_outer_coefficient),
+            "zero_mode_largest_ray_contribution_energy": str(
+                squared_outer_coefficient * max(ray_energies.values())
+            ),
+            "witness_scale": witness_scale,
+        },
+        "uniform_per_q_alternative": (
+            "||C_q||^2 <<_eta (2Hq)^eta implies the zero mode directly "
+            "by Minkowski for eta<1; it implies quadratic COLORPRIMCAR at "
+            "the same eta only for eta<1/2, and as an all-epsilon family "
+            "is stronger after exponent renaming"
+        ),
+    }
+
+
 def colored_configurations(number_of_primes: int) -> tuple[tuple[int, ...], ...]:
     validate_positive_integer(number_of_primes)
     return tuple(product((0, 1, 2), repeat=number_of_primes))
@@ -1222,6 +1348,7 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
         },
         "colored_boolean_geometry": colored_cube_panel(),
         "compatible_scale_geometry": {
+            "fixed_q_coloring": fixed_q_coloring_panel(),
             "gate_hierarchy": gate_hierarchy_panel(),
             "triple_bijection": compatible_triple_panel(),
         },
@@ -1242,10 +1369,14 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "a_or_m_is_a_vector_in_weighted_l2": False,
             "arbitrary_cross_coprimality_obstruction_remaining": False,
             "collprimcar_estimate_proved": False,
+            "auxcolorprimcar_estimate_proved": False,
+            "colorprimcar_estimate_proved": False,
             "compatible_scale_bijection_proved": True,
             "coprimality_preserved_in_generalized_panel": True,
             "dyadic_endpoint_structure_preserved": False,
             "fixed_ratio_band_is_hereditary": False,
+            "fixed_core_equal_color_weight_extends_to_each_fixed_positive_d": True,
+            "fixed_total_modulus_has_d_independent_color_weight": False,
             "generalized_primitive_carleson_estimate_proved": False,
             "genprimcar_and_rayprimcar_formally_equivalent": False,
             "harmonic_dilation_has_height_independent_absolute_cost": False,

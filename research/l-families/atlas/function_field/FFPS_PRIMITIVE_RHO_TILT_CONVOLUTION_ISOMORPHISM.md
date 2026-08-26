@@ -1013,6 +1013,166 @@ single prime-`p` ray of norm `p+1` has ray energy
 factor-`rs` conversion and a full-`q` atom invisible to its
 compatible ray.
 
+### 5.6 Core colors can interfere before taking a norm
+
+The equal-weight compression extends to every fixed squarefree sieve value
+`d`, provided one groups by the squarefree core `u=rs` rather
+than by the total modulus `q=du`. For `(u,d)=1`, define
+
+\[
+ V^\alpha_{d;r,u/r}(I)
+ =\mathcal P^0_{67^\alpha r,u/r}(du;I),
+ \qquad
+ \mathcal C^\alpha_{d,u}(I)
+ =\sum_{r\mid u}V^\alpha_{d;r,u/r}(I).
+\tag{5.33}
+\]
+
+The parameter colors remain ordered: swapping `r` and `u/r`
+changes the oriented scales and ratio test. For `alpha=0`, evenness
+of the ratio kernel gives equal values on the swapped pair, but both ordered
+colors remain in the sum. Since `r` and `u/r` are coprime
+and `g` is multiplicative, every one of the
+`2^{\omega(u)}` colors has the same outer weight
+
+\[
+ \kappa(r)\kappa(u/r)
+ ={g(r)g(u/r)\over\sqrt u}
+ ={g(u)\over\sqrt u}
+ =:w(u).
+\tag{5.34}
+\]
+
+Consequently every auxiliary rho slice has the exact coherent-core form
+
+\[
+ \boxed{
+ \mathcal P^\rho_{\alpha,0}(d;I)
+ =\sum_{\substack{u\in\mathcal N_{67}\ \mathrm{squarefree}\\(u,d)=1}}
+ w(u)\mathcal C^\alpha_{d,u}(I).}
+\tag{5.35}
+\]
+
+For bounded height blocks the core sum is finite. At `d=1`, put
+`B^\rho_{\alpha,I}=\mathcal P^\rho_{\alpha,0}(1;I)`. Taking the
+color sum before the norm gives the sharper chain
+
+\[
+ \left\|(B^\rho_{\alpha,I})_I\right\|_2
+ \leq\sum_u w(u)\|\mathcal C^\alpha_{1,u}\|_2
+ \leq\sum_u w(u)\sum_{r\mid u}\|V^\alpha_{1;r,u/r}\|_2.
+\tag{5.36}
+\]
+
+The last member is the `d=1` raywise `COLLPRIMCAR` envelope.
+The middle member retains coherent cancellation among the oriented
+factorizations of one modulus and can be strictly smaller.
+
+This exposes an image-faithful quadratic gate for the whole auxiliary panel.
+Put
+
+\[
+ \begin{aligned}
+ \mathfrak X^\alpha_{\rm color}(D,H)
+ &=
+ \sum_{\substack{d\leq D\ \mathrm{squarefree}\\67\nmid d}}
+ {1\over d}
+ \sum_{\substack{u\in\mathcal N_{67}\ \mathrm{squarefree}\\(u,d)=1}}
+ w(u)\sum_{I\in\mathscr D_H}|\mathcal C^\alpha_{d,u}(I)|^2,\\
+ \mathrm{AUXCOLORPRIMCAR}:\qquad
+ \mathfrak X^\alpha_{\rm color}(D,H)
+ &\ll_\varepsilon(2DH)^\varepsilon.
+ \end{aligned}
+\tag{5.37}
+\]
+
+Its `D=1` specialization is named `COLORPRIMCAR`. These are
+weighted quadratic core energies, not uniform memberwise estimates. For
+each fixed `d`, weighted Hilbert Cauchy and (5.35) give
+
+\[
+ \begin{aligned}
+ \mathcal J_{67}(d)
+ &=\sum_{\substack{u\in\mathcal N_{67}\ \mathrm{squarefree}\\(u,d)=1}}
+ w(u)
+ \leq
+ \mathcal J_{67}
+ :=\prod_{p\ne67}\left(1+{1\over(p+1)\sqrt p}\right)<\infty,\\
+ \sum_{\substack{d\leq D\ \mathrm{squarefree}\\67\nmid d}}
+ {1\over d}\sum_{I\in\mathscr D_H}
+ |\mathcal P^\rho_{\alpha,0}(d;I)|^2
+ &\leq
+ \mathcal J_{67}\,
+ \mathfrak X^\alpha_{\rm color}(D,H).
+ \end{aligned}
+\tag{5.38}
+\]
+
+Thus `AUXCOLORPRIMCAR` conditionally controls the auxiliary
+rho-sieved energy and hence the `d=1` zero mode. The constant
+`J_67(d)` is sharp on each positive-weight core space; the uniform
+energy constant is `J_67` (operator norm `sqrt(J_67)`).
+
+Moreover, `RAYPRIMCAR` implies `AUXCOLORPRIMCAR`. Cauchy--Schwarz
+gives
+
+\[
+ \|\mathcal C^\alpha_{d,u}\|_2^2
+ \leq 2^{\omega(u)}
+ \sum_{r\mid u}\|V^\alpha_{d;r,u/r}\|_2^2,
+\]
+
+so after summing `d^{-1}`, applying the ray gate, and collecting the
+`2^{\omega(u)}` ordered factorizations, the outer Euler product is
+
+\[
+ \prod_{p\ne67}
+ \left(1+{4p^\eta\over(p+1)\sqrt p}\right)
+\tag{5.39}
+\]
+
+and converges exactly for `0<eta<1/2`. Since
+`RAYPRIMCAR` is asserted for every positive subpower exponent,
+choosing `eta<min(epsilon,1/2)` proves the conditional implication.
+
+For comparison, a uniform zero-mode bound
+`\|\mathcal C^\alpha_{1,u}\|_2^2\ll_\eta(2Hu)^\eta` implies the
+zero-mode estimate directly by Minkowski for `eta<1`, with vector
+cost
+`\prod_{p\ne67}(1+p^{\eta/2}/((p+1)\sqrt p))` and its square in
+energy. It implies the named quadratic `COLORPRIMCAR` at the same
+exponent only for `eta<1/2`; as an all-exponent subpower family it is
+stronger after choosing and renaming a smaller exponent. It is not the gate
+defined in (5.37).
+
+At the positive-norm level, `AUXCOLORPRIMCAR` and
+`COLLPRIMCAR` are formally incomparable. Fixed-core
+cancellation can keep the color energy small while individual ray norms are
+arbitrarily large. In the other direction, a single remote prime-`p`
+ray of norm `p+1` contributes only `p^{-1/2}` to the
+raywise weighted-`l^1` envelope, but contributes
+`(p+1)/\sqrt p` to the weighted color energy. These are abstract
+norm arrays, not arithmetic-panel counterexamples.
+
+Nor does `GENPRIMCAR` imply `AUXCOLORPRIMCAR` by positivity.
+Extracting one `q`-atom from the full-`q^{-1}` energy loses a
+factor `q`. Formally, for every prime `p\ll H`, align the two
+`q=p` color vectors with norm `sqrt(p)`. Each corresponding
+`GENPRIMCAR` atom has normalized energy one, while its coherent
+color contribution is `4\sqrt p/(p+1)`; summing over the primes grows
+like `sqrt(H)/log H`. Conversely, `AUXCOLORPRIMCAR` is blind to
+off-compatible moduli and to same-`q` color cancellation, so it
+cannot recover `GENPRIMCAR` by positive-norm algebra. Again, these
+are only synthetic non-implication witnesses.
+
+This is a genuine extra cancellation opportunity, not a proved estimate.
+The replay's cancellation witness is synthetic and is not asserted to arise
+from the arithmetic panels. Equal weights persist at every fixed `d` and
+core `u=rs`; what is special at `d=1` is that the core equals the
+total generalized modulus. Thus `AUXCOLORPRIMCAR` addresses the whole
+auxiliary rho-sieved energy, while its `COLORPRIMCAR` specialization
+addresses only the zero mode. Neither controls any nonzero `PRIMCAR` mode.
+
 ## 6. Firewall against a PRIMCAR or RH misreading
 
 The bounded isomorphism (0.5) acts on full one-variable sequences on
@@ -1080,9 +1240,11 @@ No PRIMCAR, PRIMLS, RH, or GRH estimate is proved. The RH-equivalent statement
 | compatible-triple bijection and `3^omega/2^omega` counts (5.24)--(5.26) | **PROVED EXACT** |
 | `RAYPRIMCAR` implies the auxiliary rho-sieved and zero-mode bounds via (5.28)--(5.30) | **PROVED CONDITIONALLY** |
 | exact `RAYPRIMCAR` / `GENPRIMCAR` / `COLLPRIMCAR` hierarchy (5.31)--(5.32) | **PROVED AT THE POSITIVE-NORM LEVEL** |
+| fixed-`d`, fixed-core coherent coloring compression (5.33)--(5.36) | **PROVED EXACT** |
+| `RAYPRIMCAR` implies `AUXCOLORPRIMCAR`, which controls the auxiliary rho-sieved energy and the zero mode (5.37)--(5.39) | **PROVED CONDITIONALLY** |
 | weighted vector gate (5.3b) over induced tests (5.7) | **OPEN / NOT PROVED** |
 | uniform control over induced tests (5.7) | **STRONGER SUFFICIENT SPECIAL CASE; NOT PROVED** |
-| `GENPRIMCAR` or `RAYPRIMCAR` estimate | **OPEN / NOT PROVED** |
+| `GENPRIMCAR`, `RAYPRIMCAR`, `COLLPRIMCAR`, `AUXCOLORPRIMCAR`, or `COLORPRIMCAR` estimate | **OPEN / NOT PROVED** |
 | preservation of the original two-ray/dyadic parameter class | **FALSE / EXPLICITLY NOT CLAIMED** |
 | PRIMCAR, PRIMLS, RH, or GRH | **NOT PROVED** |
 
@@ -1107,7 +1269,9 @@ heredity, local shear certificates, harmonic dilation identities, and equality
 of forward/inverse local masses; exhausts the compatible image independently
 on the three-prime bit cube, verifies the `3^{\omega(q)}` and
 `2^{\omega(q)}` color counts, and checks exact synthetic witnesses for
-the sharp `rs` conversion, off-ray blindness, and remote-ray hiding;
+the sharp `rs` conversion, off-ray blindness, remote-ray hiding, and
+coherent fixed-`q` color cancellation after verifying the common
+weight on `q=1,2,6,30`;
 checks one end-to-end generalized panel with coefficient, height, ratio, and
 sieve data after clearing one common square-root weight; records exact
 rational margins for the `theta=1/2` convergence proof; and enforces
