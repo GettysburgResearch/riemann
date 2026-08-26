@@ -1,0 +1,25 @@
+{
+  "exact_checks": 204,
+  "open_status": {
+    "bci102990": false,
+    "hrough106210": false,
+    "hsmall106210": false,
+    "refsig106150": false,
+    "riemann_hypothesis": false,
+    "wccorr106191": false,
+    "wckum106140": false,
+    "wksfsc106150": false
+  },
+  "proof_object_sha256": "c0fab902c0fff38f6e7d760bd4fe492047758403d775cf37b41b94047ec3f14f",
+  "proved_exact": {
+    "cofinal_finite_depth_fixtures": true,
+    "harmonic_selector_partition": true,
+    "harmonic_selector_sharp_cost": true,
+    "local_half_source_witt_product": true,
+    "rough_balanced_rank_two_coefficient": true,
+    "rough_half_source_two_state_transfer": true,
+    "witt_coefficient_divisor_identity": true
+  },
+  "schema": "riemann.x106210.harmonic-selector-witt-l-tower.v1",
+  "verdict": "PASS_X_106210_HARMONIC_SELECTOR_WITT_L_TOWER"
+}
