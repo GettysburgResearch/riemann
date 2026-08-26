@@ -166,7 +166,9 @@ Read:
    followed by the
    [universal fixed-degree notch](function_field/QUADRATIC_FAMILY_FIXED_DEGREE_WEIGHT_NOTCH.md)
    and its
-   [closed-place conductor extension](function_field/QUADRATIC_FAMILY_CLOSED_PLACE_WEIGHT_NOTCH.md);
+   [closed-place conductor extension](function_field/QUADRATIC_FAMILY_CLOSED_PLACE_WEIGHT_NOTCH.md),
+   then the fixed-`q`
+   [structural-zero density law](function_field/QUADRATIC_FAMILY_CLOSED_PLACE_NOTCH_DENSITY.md);
 5. [guarded cohomology inference](function_field/GUARDED_COHOMOLOGY_CONJECTURE_INFERENCE.md)
    followed by the exact [same-characteristic spectroscopy](function_field/GENUS2_EXACT_FROBENIUS_TOWER_SPECTROSCOPY.md);
 6. the [high-rank Haar boundary-layer tomography](function_field/HIGH_RANK_HAAR_BOUNDARY_LAYER_TOMOGRAPHY.md).
@@ -247,6 +249,29 @@ sum to vanish; at the even notch split infinity leaves a profile-independent
 half-weight channel. This also removes the artificial rational-place
 constraint `m<=q`, but it does not
 supply a varying-conductor equidistribution theorem.
+
+The density sequel answers one fixed-`q` question without invoking
+equidistribution. At the odd notch `M=2n-1`, let `Z_(q,n)` count squarefree
+primitive conductors all of whose irreducible factor degrees exceed
+`floor(n/2)`. Then every counted conductor has exact raw sum `S_(n,Q)=0`,
+and
+
+`Z_(q,n)=[x^M] prod_(d>floor(n/2))(1+x^d)^(I_q(d))`.
+
+The strict cutoff permits at most three factors. It yields the rigorous
+fixed-`q` law
+
+`Z_(q,n)/q^M=C_0/M+D_epsilon/M^2+O_q(M^-3)`,
+
+where `C_0=4 omega(4)=2.2458329656...`,
+`D_even=-4(1+log 2)`, and `D_odd=-(4/3)(1+log 2)`. Conditioning on
+squarefreeness multiplies these coefficients by `q/(q-1)`. The Buchstab
+rough-polynomial asymptotic is standard; the atlas contribution is its exact
+source-locked identification with a structural detector-zero stratum. This
+stratum is a certified subset, not a classification of every accidental
+raw zero. All 237 bounded DP rows are bound into one canonical digest and
+independently recomputed from the one-/two-/three-factor formula; the 45
+expanded rows are a sparse readable projection of that authenticated replay.
 
 A separate growing-parameter audit found an important firewall. On rational
 marks, the formal compact supremum has a character-dimension entropy
@@ -357,6 +382,7 @@ Python replays are mandatory because assertions may not carry correctness.
 | **PROVED FROM LOCKED SOURCE** | the six-place raw sum is `(q^2-21)t_A+(q-6)b_A-q^2+6q-21`, its connected correction is `O(q^-7)`, and the all-`m` top-weight channel is `q^(5/2)(e_3-e_5)`, with an exact genus-four cancellation at `m=9,10` | the second Frobenius-power channel re-enters at six marks, while symplectic exterior algebra exposes a nonmonotone weight ceiling; all scales are fixed-`m` upper envelopes, not distribution or attainment claims |
 | **PROVED FROM LOCKED SOURCE** | for every fixed family degree `n>=2`, the marked-place top channel is `(-1)^n q^(n/2)(e_n-e_(n-2))`; it vanishes at `m=2n-1,2n`, with exact odd/even residual expansions and connected correction `O_(n,m)(q^-n)` | mark count is an exact exterior-character spectrometer with a universal interior notch; the `n=2,m=3` connected cancellation is isolated rather than hidden in a generic asymptotic |
 | **PROVED FROM LOCKED SOURCE** | for a squarefree primitive closed-place conductor of degree profile `(d_i)`, the squarefree-family kernel is `(1-qu^2)/prod_i(1-u^(2d_i))`; the same top notch depends only on total conductor degree, while lower layers are governed by the relevant truncated profile coefficients | high-degree closed places remove the `m<=q` feasibility wall; an odd-notch conductor with every `d_i>floor(n/2)` gives an exact raw-sum zero, whereas the even notch retains the split-infinity channel |
+| **EXACT FINITE + PROVED ASYMPTOTIC** | the support-forced odd-notch zero count is `[x^M]prod_(d>floor(n/2))(1+x^d)^(I_q(d))`; at fixed `q` its squarefree-conditioned density is `q*C_0/((q-1)M)` with explicit parity corrections | the exact DP replays and digest-binds 237 bounded rows, independently checked by factor count, without enumerating a polynomial; `C_0=4 omega(4)` is standard rough-polynomial theory, while the detector-stratum bridge is source-locked and no converse zero classification is claimed |
 | **EXACT FINITE + REFUSAL** | three-field data retain the ambiguity module `(q-3)(q-5)(q-7)Q(q)` | the inference engine refuses to name a cohomology or eigenform packet without a tower and geometric adapter |
 | **PROVED** | the high-rank `SU(2)` character law has an exact cubic tail; its limiting variance exists but absolute moments of order at least three diverge, while finite-rank `2k` moments grow like `n^(2k-3)` | weak limits, rank limits, and high moments do not commute because of a thin endpoint layer |
 | **PROVED** | that endpoint layer has a uniform mesoscopic tail constant `16/(9 pi^2)`, an exact fixed-`lambda` crossover profile, and hard-truncated, Winsorized, and cubic-moment coefficients | rare-event tomography now resolves the rank-scale boundary rather than merely detecting moment divergence |
@@ -511,9 +537,10 @@ pending a dedicated specialist search.
    character channels are not.
 10. Vary closed-place conductors at fixed `q` and test whether the surviving
     exterior characters equidistribute on any rigorously specified
-    conductor family. The rational-place entropy crossover is infeasible;
-    the closed-place identity removes that kinematic obstruction but supplies
-    no statistical theorem by itself.
+    conductor family. The support-forced odd-notch zero stratum is now
+    counted exactly and has a Buchstab density law, but accidental zeros,
+    nonzero character channels, and their geometric distribution remain
+    unclassified.
 
 ## Replay and resource contract
 
@@ -535,12 +562,12 @@ release audit runs all focused tests together in ordinary and optimized
 Python, recomputes payload hashes, checks source blobs, runs Ruff, and
 finishes with `git diff --check`.
 
-The final bounded checkpoint covers 61 producer/test pairs and 58 stored
-JSON companions. All 654 focused tests pass in ordinary and optimized
-Python. All 61 producers replay in both modes: 58 use the common `--check`
+The final bounded checkpoint covers 62 producer/test pairs and 59 stored
+JSON companions. All 667 focused tests pass in ordinary and optimized
+Python. All 62 producers replay in both modes: 59 use the common `--check`
 form, while the renormalization-flow, guarded-inference, and genus-one phase
 diagram packets use their printed alternate CLIs. Ruff and formatting pass
-on the 117 non-frozen Python files. Five provenance-frozen files retain ten
+on the 119 non-frozen Python files. Five provenance-frozen files retain ten
 pre-existing Ruff findings and are listed in the release audit rather than
 silently rewritten.
 

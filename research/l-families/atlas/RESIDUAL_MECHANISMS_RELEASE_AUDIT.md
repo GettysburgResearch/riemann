@@ -47,6 +47,7 @@ distinguishes current direct relevance from possible upside.
 | six-place connected law and weight ceiling | A | exact corollary of the multi-place identity, Weil functional equation, set-partition formula, and symplectic exterior-character algebra; no external novelty claim | D direct / B methodologically |
 | universal fixed-degree weight notch | A | exact symbolic corollary of the locked all-degree coefficient identity and standard symplectic primitive-exterior decomposition; no external novelty claim | D direct / B methodologically |
 | closed-place conductor notch | A | known Euler/profile, infinity, and exterior-algebra ingredients reorganized into one exact truncated-profile mechanism; the boundary zeros are likely folklore corollaries, not a priority claim | D direct / B methodologically |
+| closed-place structural-zero density | A | exact bounded counts plus a direct special-case derivation of the standard Panario--Richmond/Buchstab rough-polynomial law; the source-locked detector interpretation and parity packaging are the candidate contribution | D direct / B methodologically |
 
 ## Best paper-sized theorem stack
 
@@ -467,6 +468,29 @@ only primitive squarefree conductors. A nominal imprimitive modulus has
 additional deleted Euler factors and is not covered by silently substituting
 its primitive conductor.
 
+The
+[density sequel](function_field/QUADRATIC_FAMILY_CLOSED_PLACE_NOTCH_DENSITY.md)
+counts the support-forced odd-notch subset exactly. With `M=2n-1` and
+`L=floor(n/2)+1`,
+
+`Z_(q,n)=[x^M]prod_(d=L)^M(1+x^d)^(I_q(d))`.
+
+The strict cutoff gives at most three irreducible factors, so direct harmonic
+and aligned-triangle Euler--Maclaurin expansions prove
+
+`Z_(q,n)/q^M=C_0/M+D_epsilon/M^2+O_q(M^-3)`.
+
+Here `C_0=4 omega(4)=2.2458329656...`, while
+`D_even=-4(1+log 2)` and `D_odd=-(4/3)(1+log 2)`. Dividing by the exact
+squarefree count multiplies both coefficients by `q/(q-1)`. The producer
+replays all 237 pairs `q in {3,5,7}`, `2<=n<=80`, binds every row into a
+canonical digest, and checks it against an independent one-/two-/three-factor
+computation. It uses only irreducible-count formulas and a coefficient DP.
+Panario--Richmond already establish the
+general rough-polynomial Buchstab law; this release claims the exact
+structural-zero bridge and its bounded replay, not novelty for that
+asymptotic or a converse classification of the full zero locus.
+
 For rational marks, a formal character-dimension entropy crossover cannot be
 promoted to an arithmetic phase diagram: simultaneous proportional growth
 forces `q>=m`, and the feasible top envelope decays like
@@ -476,21 +500,21 @@ conductor family, all lower channels, and an equidistribution theorem.
 
 ## Release integrity checkpoint
 
-The bounded release replay covers 61 producer/test pairs and 58 stored JSON
-companions. All 654 focused tests pass under ordinary and optimized Python.
-All 61 producers also replay in both modes: 58 through their common
+The bounded release replay covers 62 producer/test pairs and 59 stored JSON
+companions. All 667 focused tests pass under ordinary and optimized Python.
+All 62 producers also replay in both modes: 59 through their common
 `--check` interface and three through the alternate CLI printed in their
 notes. Packet tests recompute the canonical payload and source locks wherever
 those locks are declared.
 
-Ruff and formatting pass on 117 non-frozen Python files. The only Ruff debt
+Ruff and formatting pass on 119 non-frozen Python files. The only Ruff debt
 is provenance-frozen and predates this release checkpoint:
 
 - `ffps_principal_leverage.py` and its test;
 - `frobenius_interferometry_subgroup_selectors.py` and its test;
 - `guarded_cohomology_conjecture_inference.py`.
 
-A control-byte scan over all 244 changed files is clean. The working diff
+A control-byte scan over all 248 changed files is clean. The working diff
 passes `git diff --check`; the full range check reports only the deliberately
 retained blank EOF in the provenance-frozen
 `CANONICAL_DETECTOR_NORM_LATTICE_OBSTRUCTION.md`.
@@ -526,6 +550,10 @@ retained blank EOF in the provenance-frozen
 11. For closed places, require a primitive squarefree conductor, retain the
     `(-1)^M` reciprocity model, and do not turn either an imprimitive modulus
     or a compact character-dimension envelope into the stated theorem.
+12. For the density law, preserve the strict cutoff
+    `d>floor(n/2)`, the squarefree normalization `q/(q-1)`, and the distinction
+    between a support-forced subset and every conductor with an accidental
+    raw zero.
 
 The executable provenance and recommended reading paths are in
 [RESIDUAL_MECHANISMS_RESEARCH_MAP.md](RESIDUAL_MECHANISMS_RESEARCH_MAP.md).
