@@ -1,211 +1,134 @@
-# L-105463 — The remaining F1 trace is a reflection-odd Hodge variation with zero total mass
+# L-105463 — Corrected reflection-Hodge variation and bounded-detector transfer
 
 Claim ID: `L-105463`
 
-Status: **PROVED EXACT HILBERT-SIGNATURE AND VARIATION EQUIVALENCE**
+Status: **CORRECTED: REFLECTION SIGNATURE RETAINED; DIRECT IDENTIFICATION WITH BOUNDED \(K_L\) WITHDRAWN**
 
-Let \(F_{U,\theta}\) and \(\mathcal J_U^\diamond\) be as in `L-105462`, and put
+Corrected: 2026-08-26
+
+Depends on: `L-105462`, `L-105490--L-105491`, `L-106134--L-106135`
+
+RH status: **unproved**
+
+Let \(J_U\) be the ordinary completed same-half-source convolution, and put
 
 \[
 \mathcal D_{\rm out}
- =
- \frac12D(D-1)(5D+3/2)(2D-1).
-\tag{L-105463.1}
+=
+\frac12D(D-1)(5D+\tfrac32)(2D-1).
 \]
 
-The exact common-mother calculation of `L-106134`, composed with
-`L-105462`, gives
+## 1. Exact reflection geometry retained
+
+With the reflection projectors \(E_x,O_x\), define the Beta-averaged energies
 
 \[
-H_K^{\rm live}
- =
- \mathcal D_{\rm out}\mathcal J_U^\diamond
- +H_{\rm closed}.
-\tag{L-105463.2}
-\]
-
-Using the ordinary completion and the diagonal ledger,
-
-\[
-\boxed{
-H_K^{\rm live}
- =
- \mathcal D_{\rm out}\mathcal J_U
- +\widetilde H_{\rm closed},
-}
-\tag{L-105463.3}
-\]
-
-where the closed field has subpower logarithmic total variation.
-
-## 1. Reflection Hodge decomposition
-
-Write \(x=\log X\),
-
-\[
-f_\theta(u)=F_{U,\theta}(e^u),
+\mathcal E_U(x)=\int_0^1(1-\theta)\|E_xf_\theta\|_2^2d\theta,
 \qquad
-(R_xf)(u)=f(x-u).
-\]
-
-The operator \(R_x\) is a self-adjoint unitary involution.  Define
-
-\[
-E_x=\frac12(I+R_x),
-\qquad
-O_x=\frac12(I-R_x).
-\]
-
-After the Beta average, put
-
-\[
-\begin{aligned}
-\mathcal E_U(x)
- &=
- \int_0^1(1-\theta)\|E_xf_\theta\|_2^2\,d\theta,\\
-\mathcal O_U(x)
- &=
- \int_0^1(1-\theta)\|O_xf_\theta\|_2^2\,d\theta,\\
-\mathcal N_U
- &=
- \int_0^1(1-\theta)\|f_\theta\|_2^2\,d\theta.
-\end{aligned}
+\mathcal O_U(x)=\int_0^1(1-\theta)\|O_xf_\theta\|_2^2d\theta.
 \]
 
 Then
 
 \[
 \boxed{
-\mathcal E_U+\mathcal O_U=\mathcal N_U,
+J_U=\mathcal E_U-\mathcal O_U,
 \qquad
-\mathcal J_U=\mathcal E_U-\mathcal O_U.
+\mathcal E_U+\mathcal O_U=\mathcal N_U,
 }
-\tag{L-105463.4}
+\tag{L-105463.1}
 \]
 
-Since \(\mathcal D_{\rm out}\) contains \(D\),
+where \(\mathcal N_U\) is independent of \(x\). Hence
 
 \[
 \boxed{
-\mathcal D_{\rm out}\mathcal J_U
- =
- 2\mathcal D_{\rm out}\mathcal E_U
- =
- -2\mathcal D_{\rm out}\mathcal O_U.
+\mathcal D_{\rm out}J_U
+=
+2\mathcal D_{\rm out}\mathcal E_U
+=
+-2\mathcal D_{\rm out}\mathcal O_U.
 }
-\tag{L-105463.5}
+\tag{L-105463.2}
 \]
 
-Moreover,
+The signed compact measure
 
 \[
-\boxed{
-\mathcal O_U(x)
- =
- \frac14\int_0^1(1-\theta)
- \int_{\mathbf R}|f_\theta(u)-f_\theta(x-u)|^2\,du\,d\theta.
-}
-\tag{L-105463.6}
+\nu_U=\mathcal D_{\rm out}\mathcal O_U
 \]
 
-Thus the adverse physical trace is the differential variation of the
-anti-invariant Hodge norm.
-
-## 2. Zero mass and total variation
-
-For one frozen finite source block, \(\mathcal J_U\) is compactly supported in
-logarithmic coordinate.  Since
+has total mass zero. Therefore
 
 \[
-\mathcal O_U-\frac12\mathcal N_U
- =
- -\frac12\mathcal J_U,
+\nu_U^+(\mathbb R)=\nu_U^-(\mathbb R)
+=\frac12\|\nu_U\|_{\rm TV}.
+\tag{L-105463.3}
 \]
 
-the signed measure
+The four exponential moments at
+\(0,1,-3/10,1/2\) also remain zero.
 
-\[
-\nu_U
- =
- \mathcal D_{\rm out}\mathcal O_U
-\tag{L-105463.7}
-\]
-
-is compactly supported.  The leading factor \(D\) gives
-
-\[
-\boxed{\nu_U(\mathbf R)=0.}
-\tag{L-105463.8}
-\]
-
-Consequently its Jordan masses satisfy
-
-\[
-\boxed{
-\nu_U^+(\mathbf R)
- =
- \nu_U^-(\mathbf R)
- =
- \frac12\|\nu_U\|_{\rm TV}.
-}
-\tag{L-105463.9}
-\]
-
-Therefore the one-sided reflection gate is exactly a total-variation gate.
-Define
-
-```text
-F1VAR105460:
-  on every frozen dyadic horizon,
-  || D_out O_U ||_TV = Y^(o(1)).
-```
-
-Then, with the same frozen boundary convention,
+Thus
 
 \[
 \boxed{
 \mathrm{F1VAR}_{105460}
 \Longleftrightarrow
-\mathrm{REFSIG}_{106150}.
+\mathrm{REFSIG}_{106150}
+\Longleftrightarrow
+\mathrm{SFSC}_{106150}
 }
-\tag{L-105463.10}
+\tag{L-105463.4}
 \]
 
-The factor of two is immaterial and explicit.
+as statements about the differential reflection current.
 
-## 3. Four exact primitive moments
+## 2. Binding multiplier correction
 
-Let
-
-\[
-P(z)=\frac12z(z-1)(5z+3/2)(2z-1).
-\]
-
-Put \(q_U=\mathcal O_U-\mathcal N_U/2=-\mathcal J_U/2\).  For every root
-
-\[
-\lambda\in\left\{0,1,-\frac3{10},\frac12\right\},
-\]
-
-compact distributional integration by parts gives
+Let \(H_K\) be the bounded derivative-outer observation of the same exact
+Boolean source. It is not equal to \(\mathcal D_{\rm out}J_U\).
+Instead `L-105490` gives
 
 \[
 \boxed{
-\int_{\mathbf R}e^{-\lambda x}\,d\nu_U(x)
- =
- P(\lambda)
- \int_{\mathbf R}e^{-\lambda x}q_U(x)\,dx
- =
- 0.
+(5D+\tfrac32)(I-\sqrt2\,\mathsf S)H_K
+=
+4\mathcal D_{\rm out}J_U
++
+H_{\rm closed}.
 }
-\tag{L-105463.11}
+\tag{L-105463.5}
 \]
 
-Thus the final F1 trace is a compact four-moment primitive wavelet applied to
-one positive reflection-mismatch energy.
+The closed term is inherited from repeated-label contractions and has
+subpower logarithmic total variation.
 
-## Boundary
+By the stable resolvents of `L-105491`,
 
-This lemma identifies the exact norm whose subpower variation would prove the
-remaining arithmetic theorem.  It does not estimate that variation.
-`F1VAR105460`, `REFSIG106150`, `BCI102990`, and RH remain unproved.
+\[
+\boxed{
+\|H_K\|_{L^1(dX/X)}
+\ll
+\|\mathcal D_{\rm out}J_U\|_{\rm TV}
++
+Y^{o(1)}.
+}
+\tag{L-105463.6}
+\]
+
+Therefore `F1VAR105460` remains a sufficient route to the bounded-detector
+Hardy criterion and RH. The reverse implication is not established.
+
+## Disposition
+
+```text
+reflection even/odd decomposition             PROVED EXACT
+zero mass and Jordan-mass equality             PROVED EXACT
+four primitive moments                         PROVED EXACT
+F1VAR = REFSIG = SFSC for differential current PROVED EXACT
+differential current = bounded K_L current      WITHDRAWN
+stable one-way transfer to bounded K_L          PROVED
+bounded K_L -> differential variation           OPEN / NOT CLAIMED
+Riemann Hypothesis                              UNPROVED
+```
