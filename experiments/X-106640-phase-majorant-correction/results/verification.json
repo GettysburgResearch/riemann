@@ -1,0 +1,56 @@
+{
+  "canonical_charge": "1/5",
+  "classification": "PASS_T106640_PHASE_MAJORANT_CORRECTION",
+  "cross_trace_norm_inequality_checked": true,
+  "density_one_established": false,
+  "fixtures": [
+    {
+      "canonical_charge": "1/5",
+      "degree_minus": "1",
+      "degree_plus": "1",
+      "delta_im": "-16/25",
+      "delta_re": "12/25",
+      "overlap": "4/5",
+      "phase_majorant": "13/25",
+      "slack": "8/25"
+    },
+    {
+      "canonical_charge": "1746/4225",
+      "degree_minus": "2",
+      "degree_plus": "2",
+      "delta_im": "0",
+      "delta_re": "4688/4225",
+      "overlap": "6704/4225",
+      "phase_majorant": "3762/4225",
+      "slack": "2016/4225"
+    },
+    {
+      "canonical_charge": "293517/640900",
+      "degree_minus": "3",
+      "degree_plus": "3",
+      "delta_im": "-2421215884/1026882025",
+      "delta_re": "999721191/2053764050",
+      "overlap": "1629183/640900",
+      "phase_majorant": "5161570959/2053764050",
+      "slack": "1688398293/821505620"
+    },
+    {
+      "canonical_charge": "14944931/11868025",
+      "degree_minus": "3",
+      "degree_plus": "2",
+      "delta_im": "0",
+      "delta_re": "-2401816/11868025",
+      "overlap": "20659144/11868025",
+      "phase_majorant": "38005891/11868025",
+      "slack": "354784/182585"
+    }
+  ],
+  "mesotrans106630_proved": false,
+  "ninety_percent_established": false,
+  "one_pole_equality_refuted": true,
+  "phase_majorant": "13/25",
+  "phase_slack": "8/25",
+  "proof_object_sha256": "512b998b8004622834fe07e2f6f3a1d84a84742f8c8e119aa14e50760c05422b",
+  "rh_established": false,
+  "schema": "riemann.x106640.phase-majorant-correction.v1"
+}
