@@ -1,0 +1,743 @@
+{
+  "exact_convolution": {
+    "a": "a(n)=mu(n)rho(n)",
+    "domain": "N_67={n>=1:(n,67)=1}",
+    "forward_identity": "m*g=a",
+    "full_integer_extension": "extend m,a,g,h by zero on 67|n",
+    "g_local": "g(p^k)=1/(p+1) for p!=67 and k>=1",
+    "global_replay": {
+      "checked_integers": 119,
+      "limit": 120,
+      "sample_rows": [
+        {
+          "a": "1",
+          "a_times_h": "1",
+          "g": "1",
+          "g_times_h": "1",
+          "h": "1",
+          "m": "1",
+          "m_times_g": "1",
+          "n": 1
+        },
+        {
+          "a": "-2/3",
+          "a_times_h": "-1",
+          "g": "1/3",
+          "g_times_h": "0",
+          "h": "-1/3",
+          "m": "-1",
+          "m_times_g": "-2/3",
+          "n": 2
+        },
+        {
+          "a": "0",
+          "a_times_h": "0",
+          "g": "1/3",
+          "g_times_h": "0",
+          "h": "-2/9",
+          "m": "0",
+          "m_times_g": "0",
+          "n": 4
+        },
+        {
+          "a": "1/2",
+          "a_times_h": "1",
+          "g": "1/12",
+          "g_times_h": "0",
+          "h": "1/12",
+          "m": "1",
+          "m_times_g": "1/2",
+          "n": 6
+        },
+        {
+          "a": "0",
+          "a_times_h": "0",
+          "g": "1/12",
+          "g_times_h": "0",
+          "h": "1/18",
+          "m": "0",
+          "m_times_g": "0",
+          "n": 12
+        },
+        {
+          "a": "-5/12",
+          "a_times_h": "-1",
+          "g": "1/72",
+          "g_times_h": "0",
+          "h": "-1/72",
+          "m": "-1",
+          "m_times_g": "-5/12",
+          "n": 30
+        },
+        {
+          "a": "0",
+          "a_times_h": "0",
+          "g": "1/72",
+          "g_times_h": "0",
+          "h": "-1/108",
+          "m": "0",
+          "m_times_g": "0",
+          "n": 60
+        },
+        {
+          "a": "0",
+          "a_times_h": "0",
+          "g": "1/96",
+          "g_times_h": "0",
+          "h": "-1/144",
+          "m": "0",
+          "m_times_g": "0",
+          "n": 84
+        },
+        {
+          "a": "0",
+          "a_times_h": "0",
+          "g": "1/72",
+          "g_times_h": "0",
+          "h": "-1/162",
+          "m": "0",
+          "m_times_g": "0",
+          "n": 120
+        }
+      ]
+    },
+    "h_local": "h(p^k)=-(1-rho_p)rho_p^(k-1) for p!=67 and k>=1",
+    "inverse_identity": "a*h=m",
+    "local_panels": [
+      {
+        "prime": 2,
+        "rho_p": "2/3",
+        "rows": [
+          {
+            "a": "1",
+            "a_times_h": "1",
+            "delta": "1",
+            "exponent": 0,
+            "g": "1",
+            "g_times_h": "1",
+            "h": "1",
+            "m": "1",
+            "m_times_g": "1"
+          },
+          {
+            "a": "-2/3",
+            "a_times_h": "-1",
+            "delta": "0",
+            "exponent": 1,
+            "g": "1/3",
+            "g_times_h": "0",
+            "h": "-1/3",
+            "m": "-1",
+            "m_times_g": "-2/3"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 2,
+            "g": "1/3",
+            "g_times_h": "0",
+            "h": "-2/9",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 3,
+            "g": "1/3",
+            "g_times_h": "0",
+            "h": "-4/27",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 4,
+            "g": "1/3",
+            "g_times_h": "0",
+            "h": "-8/81",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 5,
+            "g": "1/3",
+            "g_times_h": "0",
+            "h": "-16/243",
+            "m": "0",
+            "m_times_g": "0"
+          }
+        ]
+      },
+      {
+        "prime": 3,
+        "rho_p": "3/4",
+        "rows": [
+          {
+            "a": "1",
+            "a_times_h": "1",
+            "delta": "1",
+            "exponent": 0,
+            "g": "1",
+            "g_times_h": "1",
+            "h": "1",
+            "m": "1",
+            "m_times_g": "1"
+          },
+          {
+            "a": "-3/4",
+            "a_times_h": "-1",
+            "delta": "0",
+            "exponent": 1,
+            "g": "1/4",
+            "g_times_h": "0",
+            "h": "-1/4",
+            "m": "-1",
+            "m_times_g": "-3/4"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 2,
+            "g": "1/4",
+            "g_times_h": "0",
+            "h": "-3/16",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 3,
+            "g": "1/4",
+            "g_times_h": "0",
+            "h": "-9/64",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 4,
+            "g": "1/4",
+            "g_times_h": "0",
+            "h": "-27/256",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 5,
+            "g": "1/4",
+            "g_times_h": "0",
+            "h": "-81/1024",
+            "m": "0",
+            "m_times_g": "0"
+          }
+        ]
+      },
+      {
+        "prime": 5,
+        "rho_p": "5/6",
+        "rows": [
+          {
+            "a": "1",
+            "a_times_h": "1",
+            "delta": "1",
+            "exponent": 0,
+            "g": "1",
+            "g_times_h": "1",
+            "h": "1",
+            "m": "1",
+            "m_times_g": "1"
+          },
+          {
+            "a": "-5/6",
+            "a_times_h": "-1",
+            "delta": "0",
+            "exponent": 1,
+            "g": "1/6",
+            "g_times_h": "0",
+            "h": "-1/6",
+            "m": "-1",
+            "m_times_g": "-5/6"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 2,
+            "g": "1/6",
+            "g_times_h": "0",
+            "h": "-5/36",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 3,
+            "g": "1/6",
+            "g_times_h": "0",
+            "h": "-25/216",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 4,
+            "g": "1/6",
+            "g_times_h": "0",
+            "h": "-125/1296",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 5,
+            "g": "1/6",
+            "g_times_h": "0",
+            "h": "-625/7776",
+            "m": "0",
+            "m_times_g": "0"
+          }
+        ]
+      },
+      {
+        "prime": 7,
+        "rho_p": "7/8",
+        "rows": [
+          {
+            "a": "1",
+            "a_times_h": "1",
+            "delta": "1",
+            "exponent": 0,
+            "g": "1",
+            "g_times_h": "1",
+            "h": "1",
+            "m": "1",
+            "m_times_g": "1"
+          },
+          {
+            "a": "-7/8",
+            "a_times_h": "-1",
+            "delta": "0",
+            "exponent": 1,
+            "g": "1/8",
+            "g_times_h": "0",
+            "h": "-1/8",
+            "m": "-1",
+            "m_times_g": "-7/8"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 2,
+            "g": "1/8",
+            "g_times_h": "0",
+            "h": "-7/64",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 3,
+            "g": "1/8",
+            "g_times_h": "0",
+            "h": "-49/512",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 4,
+            "g": "1/8",
+            "g_times_h": "0",
+            "h": "-343/4096",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 5,
+            "g": "1/8",
+            "g_times_h": "0",
+            "h": "-2401/32768",
+            "m": "0",
+            "m_times_g": "0"
+          }
+        ]
+      },
+      {
+        "prime": 11,
+        "rho_p": "11/12",
+        "rows": [
+          {
+            "a": "1",
+            "a_times_h": "1",
+            "delta": "1",
+            "exponent": 0,
+            "g": "1",
+            "g_times_h": "1",
+            "h": "1",
+            "m": "1",
+            "m_times_g": "1"
+          },
+          {
+            "a": "-11/12",
+            "a_times_h": "-1",
+            "delta": "0",
+            "exponent": 1,
+            "g": "1/12",
+            "g_times_h": "0",
+            "h": "-1/12",
+            "m": "-1",
+            "m_times_g": "-11/12"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 2,
+            "g": "1/12",
+            "g_times_h": "0",
+            "h": "-11/144",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 3,
+            "g": "1/12",
+            "g_times_h": "0",
+            "h": "-121/1728",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 4,
+            "g": "1/12",
+            "g_times_h": "0",
+            "h": "-1331/20736",
+            "m": "0",
+            "m_times_g": "0"
+          },
+          {
+            "a": "0",
+            "a_times_h": "0",
+            "delta": "0",
+            "exponent": 5,
+            "g": "1/12",
+            "g_times_h": "0",
+            "h": "-14641/248832",
+            "m": "0",
+            "m_times_g": "0"
+          }
+        ]
+      }
+    ],
+    "m": "m(n)=mu(n)",
+    "operator_inverse_identity": "g*h=delta"
+  },
+  "finite_operator_replay": {
+    "dimension": 24,
+    "domain_max": 24,
+    "g_matrix_digest": "11e7265883ec43128f8fe64f6418accfb59a11060e2c1e22e72b5ef7588d5a80",
+    "g_nonzero_entries": 84,
+    "h_matrix_digest": "b1ab5b7798cb3501032ddf1119fa7d6a5acd55d240376cb047804df7aca21565",
+    "h_nonzero_entries": 84,
+    "inverse_both_orders": true,
+    "unit_diagonal": true
+  },
+  "half_weighted_pair_transfer": {
+    "coefficient_identity": "c_rho=c_0*(g/sqrt(.))",
+    "finite_test_identity": "B_rho(F)=sum_(r,s) g(r)g(s)/sqrt(rs) B_0((m,n)->F(rm,sn))",
+    "inverse_coefficient_identity": "c_0=c_rho*(h/sqrt(.))",
+    "inverse_squared_energy_cost": "L_h(1/2)^4",
+    "pair_panel": {
+      "identity": "c_rho(u)c_rho(v)=sum_(rm=u,sn=v) g(r)g(s)c_0(m)c_0(n)/sqrt(rs)",
+      "rows_after_clearing_common_half_weight": [
+        {
+          "common_half_weight": "1/sqrt(6)",
+          "ordinary_scaled_coefficient": "1",
+          "ordinary_via_h_scaled_coefficient": "1",
+          "rho_scaled_coefficient": "1/2",
+          "rho_via_g_scaled_coefficient": "1/2",
+          "u": 2,
+          "v": 3
+        },
+        {
+          "common_half_weight": "1/sqrt(30)",
+          "ordinary_scaled_coefficient": "-1",
+          "ordinary_via_h_scaled_coefficient": "-1",
+          "rho_scaled_coefficient": "-5/12",
+          "rho_via_g_scaled_coefficient": "-5/12",
+          "u": 6,
+          "v": 5
+        },
+        {
+          "common_half_weight": "1/sqrt(60)",
+          "ordinary_scaled_coefficient": "1",
+          "ordinary_via_h_scaled_coefficient": "1",
+          "rho_scaled_coefficient": "5/18",
+          "rho_via_g_scaled_coefficient": "5/18",
+          "u": 6,
+          "v": 10
+        },
+        {
+          "common_half_weight": "1/sqrt(60)",
+          "ordinary_scaled_coefficient": "0",
+          "ordinary_via_h_scaled_coefficient": "0",
+          "rho_scaled_coefficient": "0",
+          "rho_via_g_scaled_coefficient": "0",
+          "u": 12,
+          "v": 5
+        },
+        {
+          "common_half_weight": "1/sqrt(420)",
+          "ordinary_scaled_coefficient": "-1",
+          "ordinary_via_h_scaled_coefficient": "-1",
+          "rho_scaled_coefficient": "-35/144",
+          "rho_via_g_scaled_coefficient": "-35/144",
+          "u": 30,
+          "v": 14
+        }
+      ]
+    },
+    "scalar_uniform_bound_cost": "L_g(1/2)^2",
+    "squared_energy_uniform_bound_cost": "L_g(1/2)^4",
+    "total_forward_l1_weight": "L_g(1/2)^2",
+    "vector_minkowski": "||Lambda_rho(F_j)||_l2(w)<=sum_(r,s)|gamma(r)gamma(s)|||Lambda_0(D_(r,s)F_j)||_l2(w)"
+  },
+  "resource_caps": {
+    "global_identity_limit": 120,
+    "local_exponent_limit": 5,
+    "matrix_limit": 24,
+    "pair_rows": 5,
+    "primes": [
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "summatory_limit": 160,
+    "zeta_zeros": 0
+  },
+  "scope_firewall": {
+    "a_or_m_is_a_vector_in_weighted_l2": false,
+    "coprimality_preserved_by_dilation": false,
+    "dyadic_endpoint_structure_preserved": false,
+    "primcar_estimate_proved": false,
+    "primls_proved": false,
+    "ratio_kernel_preserved": false,
+    "rh_or_grh_proved": false,
+    "sharp_finite_height_blocks_preserved": false,
+    "undilated_primcar_is_dilation_closed": false,
+    "uniform_induced_dilation_estimate_proved": false
+  },
+  "source_contract": {
+    "commit": "05da4d1705d994dd02d650f321196f8464034ba8",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md": "722ca5bd8acef2efdb5591f29935b4f97102f957",
+      "research/l-families/atlas/function_field/ffps_primitive_pair_harmonic_incidence_carleson.json": "f0a556f8f3ab2db04f7e434646ac4c70987ae50f",
+      "research/l-families/atlas/function_field/ffps_primitive_pair_harmonic_incidence_carleson.py": "7e780f0109264dbfaac59cae36db6fd72c3f34ee",
+      "tests/test_ffps_primitive_pair_harmonic_incidence_carleson.py": "abaded5c04b4cec8464618f2dfff74a486ab025b"
+    },
+    "imported_object": "primitive-pair harmonic-incidence packet and its rho-tilted zero mode"
+  },
+  "summatory_seminorm_transfer": {
+    "L_g_theta": "prod_(p!=67)(1+1/((p+1)(p^theta-1)))<infinity",
+    "L_h_theta": "prod_(p!=67)(1+p^(-theta)/((p+1)(1-rho_p*p^(-theta))))<infinity",
+    "exceptional_prime_replay": {
+      "checked_endpoints": 160,
+      "sample_rows": [
+        {
+          "M": 1,
+          "M_0": 1,
+          "M_0_from_M": 1,
+          "M_from_M_0": 1,
+          "x": 1
+        },
+        {
+          "M": -1,
+          "M_0": -1,
+          "M_0_from_M": -1,
+          "M_from_M_0": -1,
+          "x": 66
+        },
+        {
+          "M": -2,
+          "M_0": -1,
+          "M_0_from_M": -1,
+          "M_from_M_0": -2,
+          "x": 67
+        },
+        {
+          "M": -2,
+          "M_0": -1,
+          "M_0_from_M": -1,
+          "M_from_M_0": -2,
+          "x": 68
+        },
+        {
+          "M": -1,
+          "M_0": -1,
+          "M_0_from_M": -1,
+          "M_from_M_0": -1,
+          "x": 134
+        },
+        {
+          "M": 0,
+          "M_0": 0,
+          "M_0_from_M": 0,
+          "M_from_M_0": 0,
+          "x": 160
+        }
+      ]
+    },
+    "forward_bound": "S_theta(a)<=L_g(theta)S_theta(m)",
+    "inverse_bound": "S_theta(m)<=L_h(theta)S_theta(a)",
+    "mertens_exponents_coincide": true,
+    "rh_equivalence_status": "standard imported equivalence; not proved here",
+    "rh_equivalent_family": "for every epsilon>0, S_(1/2+epsilon)(a)<infinity",
+    "summatory_replay": {
+      "checked_endpoints": 160,
+      "sample_rows": [
+        {
+          "M_0": "1",
+          "M_0_from_h": "1",
+          "M_rho": "1",
+          "M_rho_from_g": "1",
+          "x": 1
+        },
+        {
+          "M_0": "0",
+          "M_0_from_h": "0",
+          "M_rho": "1/3",
+          "M_rho_from_g": "1/3",
+          "x": 2
+        },
+        {
+          "M_0": "-2",
+          "M_0_from_h": "-2",
+          "M_rho": "-5/4",
+          "M_rho_from_g": "-5/4",
+          "x": 5
+        },
+        {
+          "M_0": "-1",
+          "M_0_from_h": "-1",
+          "M_rho": "-77/72",
+          "M_rho_from_g": "-77/72",
+          "x": 10
+        },
+        {
+          "M_0": "-3",
+          "M_0_from_h": "-3",
+          "M_rho": "-4537/1260",
+          "M_rho_from_g": "-4537/1260",
+          "x": 20
+        },
+        {
+          "M_0": "0",
+          "M_0_from_h": "0",
+          "M_rho": "-753371/287280",
+          "M_rho_from_g": "-753371/287280",
+          "x": 40
+        },
+        {
+          "M_0": "-3",
+          "M_0_from_h": "-3",
+          "M_rho": "-22662582203/3624611760",
+          "M_rho_from_g": "-22662582203/3624611760",
+          "x": 80
+        },
+        {
+          "M_0": "0",
+          "M_0_from_h": "0",
+          "M_rho": "-1935772396318495237/305652527147167200",
+          "M_rho_from_g": "-1935772396318495237/305652527147167200",
+          "x": 160
+        }
+      ]
+    },
+    "theta_domain": "theta>0",
+    "theta_zero_excluded": "L_g(0)=L_h(0)=infinity"
+  },
+  "weighted_l2_isomorphism": {
+    "L_g_half": "prod_(p!=67)(1+1/((p+1)(sqrt(p)-1)))<infinity",
+    "L_h_half": "prod_(p!=67)(1+1/(sqrt(p)(p+1-sqrt(p))))<infinity",
+    "forward": "T_g:f->f*g",
+    "forward_young_bound": "||T_g f||_(2,-1)<=L_g(1/2)||f||_(2,-1)",
+    "inverse": "T_h:f->f*h",
+    "inverse_young_bound": "||T_h f||_(2,-1)<=L_h(1/2)||f||_(2,-1)",
+    "majorant_panels": [
+      {
+        "g_bound": "u_g(p)<=4/p^(3/2)",
+        "g_bound_square_margin_9p_minus_16": 2,
+        "h_bound": "u_h(p)<=2/p^(3/2)",
+        "h_bound_square_margin_p2_over_4_plus_1": "2",
+        "prime": 2
+      },
+      {
+        "g_bound": "u_g(p)<=4/p^(3/2)",
+        "g_bound_square_margin_9p_minus_16": 11,
+        "h_bound": "u_h(p)<=2/p^(3/2)",
+        "h_bound_square_margin_p2_over_4_plus_1": "13/4",
+        "prime": 3
+      },
+      {
+        "g_bound": "u_g(p)<=4/p^(3/2)",
+        "g_bound_square_margin_9p_minus_16": 29,
+        "h_bound": "u_h(p)<=2/p^(3/2)",
+        "h_bound_square_margin_p2_over_4_plus_1": "29/4",
+        "prime": 5
+      },
+      {
+        "g_bound": "u_g(p)<=4/p^(3/2)",
+        "g_bound_square_margin_9p_minus_16": 47,
+        "h_bound": "u_h(p)<=2/p^(3/2)",
+        "h_bound_square_margin_p2_over_4_plus_1": "53/4",
+        "prime": 7
+      },
+      {
+        "g_bound": "u_g(p)<=4/p^(3/2)",
+        "g_bound_square_margin_9p_minus_16": 83,
+        "h_bound": "u_h(p)<=2/p^(3/2)",
+        "h_bound_square_margin_p2_over_4_plus_1": "125/4",
+        "prime": 11
+      }
+    ],
+    "space": "ell^2(N_67,n^-1)"
+  }
+}
