@@ -213,14 +213,20 @@ def run() -> dict[str, object]:
             "D_mellin_convention": "Mellin(D f)(s)=s*Mellin(f)(s)",
             "D_out": "(1/2)*D*(D-1)*(5*D+3/2)*(2*D-1)",
             "audited_object": "K_extra=D_out(A*_M A)",
-            "native_outer_multiplier": "q(s)*r(s)^2*(s-1)*(5s+3/2)/(s^2*(s-1/2))",
-            "native_derivative_outer_multiplier": (
+            "L102740_outer_multiplier": "q(s)*r(s)^2*(s-1)*(5s+3/2)/(s^2*(s-1/2))",
+            "L102740_derivative_outer_multiplier": (
                 "q(s)*r(s)^2*(s-1)*(5s+3/2)/(s*(s-1/2))"
             ),
+            "explicit_piecewise_derivative_multiplier": (
+                "4*q(s)*r(s)^2*(s-1)/(s*(s-1/2))"
+            ),
+            "stable_filter_V": "(5*D+3/2)/4",
             "dyadic_shift_convention": "S_2 f(X)=f(X/2)",
-            "extra_notch_relation": "K_extra=q(D)*K_outer_native",
+            "exact_operator_relations": (
+                "K_740=V*K_explicit; K_extra=Q*K_740=Q*V*K_explicit"
+            ),
             "parent_adapter_status": (
-                "L-102740/L-106134/T-106150 silently add one q(s) factor"
+                "three distinct frozen kernels were printed under one outer label"
             ),
             "reduced_rational_factor": "5+3/s-4/(s-1/2)",
             "continuous_base_density": "(3-4*exp(t/2))*1_{t>=0} dt",
@@ -263,11 +269,12 @@ def run() -> dict[str, object]:
                 "estimate based only on the literal extra-notched kernel"
             ),
             "does_not_rule_out": (
-                "the native outer estimate, or cancellation after the complete "
+                "the explicit outer estimate, or cancellation after the complete "
                 "undeleted Boolean source and all source sectors are recombined"
             ),
             "parent_blocker": (
-                "the native-outer to D_out adapter must be repaired or retyped "
+                "the three-way explicit/constructed/D_out adapter must be repaired "
+                "or retyped "
                 "before any conclusion-facing use"
             ),
         },

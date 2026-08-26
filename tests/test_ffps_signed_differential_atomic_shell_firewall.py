@@ -70,18 +70,20 @@ class FfpsSignedDifferentialAtomicShellFirewallTest(unittest.TestCase):
         result = signed_atomic_shell.run()
         reduction = result["exact_mellin_reduction"]
         self.assertEqual(
-            reduction["extra_notch_relation"],
-            "K_extra=q(D)*K_outer_native",
+            reduction["exact_operator_relations"],
+            "K_740=V*K_explicit; K_extra=Q*K_740=Q*V*K_explicit",
         )
-        self.assertIn("s^2*(s-1/2)", reduction["native_outer_multiplier"])
-        self.assertIn("s*(s-1/2)", reduction["native_derivative_outer_multiplier"])
+        self.assertIn("s^2*(s-1/2)", reduction["L102740_outer_multiplier"])
+        self.assertIn("s*(s-1/2)", reduction["L102740_derivative_outer_multiplier"])
+        self.assertIn("4*q(s)", reduction["explicit_piecewise_derivative_multiplier"])
+        self.assertEqual(reduction["stable_filter_V"], "(5*D+3/2)/4")
         self.assertEqual(reduction["dyadic_shift_convention"], "S_2 f(X)=f(X/2)")
         self.assertEqual(
             reduction["D_mellin_convention"],
             "Mellin(D f)(s)=s*Mellin(f)(s)",
         )
-        self.assertIn("silently add one q(s)", reduction["parent_adapter_status"])
-        self.assertIn("native-outer", result["conclusion"]["parent_blocker"])
+        self.assertIn("three distinct", reduction["parent_adapter_status"])
+        self.assertIn("three-way", result["conclusion"]["parent_blocker"])
         self.assertIn("does_not_rule_out", result["conclusion"])
 
     def test_scale_gap_and_caps(self) -> None:

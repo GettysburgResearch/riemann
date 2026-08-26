@@ -2,7 +2,7 @@
 
 Status: **exact signed-measure theorem for a deleted Wick-disjoint prime
 shell of the literal `D_out` polynomial; parent outer-adapter mismatch
-exposed, and no theorem yet for the native outer current, complete recombined
+exposed, and no theorem yet for the explicit outer current, complete recombined
 FFPS gate, RH, or GRH**
 
 Bounded exact replay:
@@ -67,30 +67,45 @@ continuous part cannot cancel point masses.  Its free source diagonal is only
 gives no source-blind or deletion-stable route from the free diagonal to the
 literal polynomial estimate written in `WKSFSC106150`.
 
-There is a load-bearing parent mismatch.  With
+There is a load-bearing three-way parent mismatch.  With
 
 \[
  q(s)=1-\sqrt2\,2^{-s},\qquad r(s)=1-2^{-s},
 \]
 
-the actual common mother has `q(s)^2r(s)^2`, whereas the native outer
-multiplier written before the final equality in `L-102740` has only
-`q(s)r(s)^2`.  Therefore the kernel audited here is
+the actual common mother has `q(s)^2r(s)^2`, whereas the outer construction
+written before the final equality in `L-102740` has only `q(s)r(s)^2`.
+Moreover the explicit piecewise kernel of `L-102880` differs from the
+`L-102740` construction by the stable first-order filter
 
 \[
-\boxed{K_{\rm extra}=q(D)K_{\rm outer}^{\rm native},}
+ V={5D+3/2\over4}.
+\]
+
+Therefore the kernel audited here is
+
+\[
+\boxed{K_{\rm extra}=QV K_{\rm exp},}
 \tag{0.5}
 \]
 
-where `q(D)=I-sqrt(2)S_2` is the single dyadic notch,
-`(S_2f)(X)=f(X/2)`, and not `K_outer^native` itself.  The equality in
-`L-102740` and the inherited
-identification in `L-106134`/`T-106150` silently supply the missing `q(s)`.
-Until a separate adapter repairs or retypes that edge, this packet has no
-direct conclusion-facing implication to the native outer current or RH.
+where `Q=I-sqrt(2)S_2` is the single dyadic notch,
+`(S_2f)(X)=f(X/2)`, and `K_exp` is the explicit derivative kernel printed in
+`L-102880`.  Equivalently, if `K_740` denotes the derivative of the
+`L-102740` construction, then
+
+\[
+ K_{740}=VK_{\rm exp},\qquad K_{\rm extra}=QK_{740}.
+\]
+
+Thus neither the construction nor the common-mother differential equals the
+explicit kernel.  Until a complete-source adapter or a terminal-safe inverse
+repairs that edge, this packet has no direct conclusion-facing implication to
+the explicit outer current or RH.  The full frozen-interface proof is in
+`FFPS_COMMON_MOTHER_OUTER_NOTCH_MISMATCH.md`.
 
 The second qualification is also decisive: the intended RH-bearing current is
-the **complete undeleted Boolean source** plus its native closed sectors.
+the **complete undeleted Boolean source** plus its inherited closed sectors.
 Other source sectors may cancel these atoms before the negative part is taken.
 Equation (0.4) neither proves nor disproves that global cancellation.
 
@@ -159,32 +174,42 @@ finite-measure Mellin transformation gives
 \]
 
 By contrast, the literal first multiplier line of `L-102740` gives the
-undifferentiated native outer current
+undifferentiated constructed outer current
 
 \[
- \widehat R_{\rm outer}^{\rm native}(s)
+ \widehat R_{740}(s)
  =q(s)r(s)^2{(s-1)(5s+3/2)\over s^2(s-1/2)}.
 \tag{1.5}
 \]
 
-Applying the final `D` in the frozen definition
-`K_outer^native=D R_outer^native` therefore gives
+Applying the final `D` in the frozen definition `K_740=D R_740` therefore
+gives
 
 \[
- \widehat K_{\rm outer}^{\rm native}(s)
+ \widehat K_{740}(s)
  =q(s)r(s)^2{(s-1)(5s+3/2)\over s(s-1/2)}.
 \tag{1.6}
 \]
 
-The corrected undifferentiated parent relation is consequently
+Direct integration of the three explicit cells in `L-102880` instead gives
 
 \[
- q(D)R_{\rm outer}^{\rm native}
+ \widehat K_{\rm exp}(s)
+ ={4q(s)r(s)^2(s-1)\over s(s-1/2)}.
+\tag{1.7}
+\]
+
+Consequently
+
+\[
+ K_{740}=VK_{\rm exp},\qquad
+ QR_{740}
  ={1\over2}(D-1)(5D+3/2)\Phi_*.
 \]
 
 Applying `D` gives (0.5).  Equivalently, equation (1.4) has one additional
-factor `q(s)` relative to (1.6).  Since
+factor `q(s)` relative to (1.6), while (1.6) itself has the additional stable
+factor `(5s+3/2)/4` relative to (1.7).  Since
 `widehat(S_2f)(s)=2^(-s)widehat(f)(s)`, this proves the typing identity (0.5)
 and isolates the parent adapter mismatch.  The remainder of this packet
 concerns `K_extra` only.
@@ -193,7 +218,7 @@ The inverse transform of the last factor is
 
 \[
 5\delta_0+(3-4e^{t/2})1_{t\ge0}\,dt.
-\tag{1.7}
+\tag{1.8}
 \]
 
 The apparent half-line tails cancel after the four finite differences in
@@ -204,7 +229,7 @@ contributes atoms.  Expanding
 (1-z)^2(1-\sqrt2z)^2
 =1-(2+2\sqrt2)z+(3+4\sqrt2)z^2
  -(4+2\sqrt2)z^3+2z^4
-\tag{1.8}
+\tag{1.9}
 \]
 
 proves (0.1).  This also proves directly that `K` is nonzero.  Its total mass
@@ -217,7 +242,7 @@ extra-notched kernel.  The remaining part of `K_extra` is absolutely
 continuous, so it cannot cancel those point masses.  If a consumer removes
 endpoint atoms into a separate colour ledger, it must move (0.1) there
 explicitly rather than silently treating `K_extra` as an ordinary function.
-No claim is made here that the native outer endpoint ledger has the same
+No claim is made here that the explicit outer endpoint ledger has the same
 five atoms.
 
 ## 2. The odd prime shell
@@ -317,7 +342,7 @@ Y^{3/10-o(1)}.
 
 Unlike the earlier positive-spline firewall, this conclusion is already
 after the exact literal differential (1.3).  Because of (0.5), it is not
-automatically a statement after the native conclusion-bearing outer kernel.
+automatically a statement after the explicit conclusion-bearing outer kernel.
 
 ## 4. Exact firewall and remaining escape
 
@@ -353,15 +378,15 @@ the negative part is taken.}}
 That cancellation might come from the exact two-large-Moebius
 recombination, the connected additive/Kummer subtraction, or another global
 arithmetic identity.  It cannot be inferred from the local kernel or source
-diagonal alone.  Separately, removing the spurious extra `q(D)` to recover
-the native outer kernel can change the atomic response; this packet makes no
+diagonal alone.  Separately, removing the `Q` and `V` filters to recover the
+explicit outer kernel can change the atomic response; this packet makes no
 claim about that response.
 
 In particular, the result does **not** establish any of the following:
 
 - failure of the literal `WKSFSC106150` estimate for the complete frozen
   source;
-- failure of the native outer-current estimate, `SFSC106150`, or
+- failure of the explicit outer-current estimate, `SFSC106150`, or
   `REFSIG106150`;
 - failure of `WCADD106140`, `WCKUM106140`, or the selected cyclic gate;
 - a lower bound for the complete current after all source sectors combine;
@@ -373,8 +398,8 @@ Proved exactly:
 
 - the finite signed-measure nature of the differentiated self-convolution;
 - the rational Mellin reduction (1.4);
-- the extra-notch typing `K_extra=q(D)K_outer^native` relative to the
-  two inconsistent parent multiplier formulas;
+- the exact typing `K_extra=QV K_explicit` and
+  `K_740=V K_explicit` relative to the three frozen multiplier formulas;
 - all five dyadic atomic coefficients (0.1);
 - the exact negative atomic mass (0.2);
 - the singleton Beta weight (0.3);
@@ -388,8 +413,8 @@ Used asymptotically:
 
 Still open:
 
-- repair or retyping of the parent native-outer/`D_out` adapter;
-- the signed atomic response of the native outer kernel;
+- repair or retyping of the parent explicit-outer/`D_out` adapter;
+- the signed atomic response of the explicit outer kernel;
 - the cancellation or reinforcement of this shell in the complete undeleted
   Boolean source;
 - the endpoint-colour bookkeeping if a consumer excludes the extra-notched
