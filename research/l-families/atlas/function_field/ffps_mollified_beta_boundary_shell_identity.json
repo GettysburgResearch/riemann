@@ -1,0 +1,162 @@
+{
+  "equivalence": {
+    "criterion": "RH iff integral_0^T |G| dt=exp(o(T)) iff integral_0^T (G)_- dt=exp(o(T))",
+    "grh_proved": false,
+    "mollified_absolute_equivalence": "for every fixed epsilon>0, ||G||_1=exp(o(T)) iff ||h_epsilon||_1=exp(o(T))",
+    "mollified_estimate_proved": false,
+    "primitive_estimate_proved": false,
+    "proof_inputs": "normalized Mertens plus compact-BV summation for RH=>; Mellin-Landau and nonvanishing of M_ext(s)/s in 0<Re(s)<1/2 for the converse",
+    "rh_proved": false
+  },
+  "finite_difference": {
+    "absolute_l1_comparison": "||h_epsilon||_[0,T] <= 2||G||_[0,T]/epsilon; ||G||_[0,T] <= epsilon*(floor(T/epsilon)+1)*||h_epsilon||_[0,T]",
+    "all_fixed_epsilon": "h_epsilon=(I-tau_epsilon)G/epsilon",
+    "cell_telescope": "H_j=(B_j-B_(j-1))/epsilon for B_j=integral_(j epsilon)^((j+1)epsilon) G",
+    "exact_cell_sample": {
+      "G_cells": [
+        "3"
+      ],
+      "absolute_mass": "6",
+      "difference_cells": [
+        "3",
+        "-3"
+      ],
+      "epsilon": "1",
+      "negative_mass": "3",
+      "positive_mass": "3",
+      "signed_mass": "0",
+      "terminal_boundary_cell": "0"
+    },
+    "jordan_balance": "integral|h_epsilon|=2*integral(h_epsilon)_-+integral h_epsilon",
+    "scout_width": "epsilon=log(2)/2 gives a half-dyadic first difference",
+    "signed_boundary": "integral_0^T h_epsilon=(1/epsilon)*integral_(T-epsilon)^T G, with G=0 on t<0"
+  },
+  "frozen_sources": {
+    "1a4e7f73addaeec3d13e83b7a8a967b42a47ce1b": {
+      "research/l-families/atlas/function_field/FFPS_MOLLIFIED_BETA_FINITE_SCOUT.md": "b7cc861cd327b17aed18cefcefc74afda560d433",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_finite_scout.json": "d401fec015b6340090d73d489f6eaa93c9f21c8d",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_finite_scout.py": "d48b99fd5e05d12fa7936da2f86b3b0de9990ce3",
+      "tests/test_ffps_mollified_beta_finite_scout.py": "8218b8049613c97f7d048cb04ea46549f879bf27"
+    },
+    "9f29bdb6ea7375df84de550d62f9d0984634a8dd": {
+      "research/l-families/atlas/function_field/FFPS_SIGNED_DIFFERENTIAL_ATOMIC_SHELL_FIREWALL.md": "8dff1025fd7d794497b71c2ba2920a51ff9095f2",
+      "research/l-families/atlas/function_field/ffps_signed_differential_atomic_shell_firewall.json": "d5f4bf77edb3b9cb533926ee01886b75ea4271a6",
+      "research/l-families/atlas/function_field/ffps_signed_differential_atomic_shell_firewall.py": "729b48ad4ff5cd31fbe9e99d6abf2ab78124cf17",
+      "tests/test_ffps_signed_differential_atomic_shell_firewall.py": "c31a53b2f5cb774a750f7c7ff8614fe8160a63ed"
+    },
+    "a678292fd6d19d5b18f499aef35d2263cfc2b4ec": {
+      "research/l-families/atlas/function_field/FFPS_MOLLIFIED_BETA_RH_EQUIVALENCE.md": "f546d1e57c1886c1fddb590cd55b596a96bbefad",
+      "research/l-families/atlas/function_field/FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md": "49e6f2fa54922991213f406c518f0468db4ed3a4",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_rh_equivalence.json": "d316b0eaba5c24d62fb350e1f057c31eb12dccc7",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_rh_equivalence.py": "631c9a465f87c592368d04f1ae33810329f295c4",
+      "research/l-families/atlas/function_field/ffps_mollified_geodesic_rh_criterion.json": "db9e1171fe35d586c32beda3eab0afc409a0a6af",
+      "research/l-families/atlas/function_field/ffps_mollified_geodesic_rh_criterion.py": "6d9963fd27187da5ad19267124135bafbbbcecaf",
+      "tests/test_ffps_mollified_beta_rh_equivalence.py": "44d3f3e036202d9a78d992315504fea7d0960588",
+      "tests/test_ffps_mollified_geodesic_rh_criterion.py": "7abb329cd8fb1e23d1344ed9a1e01be983ade277"
+    }
+  },
+  "native_reflection": {
+    "R_coefficients_D0_through_D3": [
+      "3/4",
+      "1/4",
+      "-6",
+      "5"
+    ],
+    "R_of_D": "D_out/D=5D^3-6D^2+(1/4)D+3/4",
+    "finite_horizon": "G=(3/4)N_(1,R)-2R(D)O_(1,R) for x<R",
+    "norm_removal": "(I-tau_epsilon) kills the constant (3/4)N_(1,R) exactly",
+    "primitive": "G=R(D)*I_1"
+  },
+  "no_go": {
+    "counterexample": "G=A*1_[0,epsilon) has zero terminal boundary and zero signed mass after 2epsilon, but negative mass A and absolute mass 2A",
+    "formal_scope": "finite-difference/boundary algebra alone",
+    "odd_fiber_obstruction": "P(0)=1, so dyadic shifts do not annihilate an independent odd source fiber",
+    "remaining_burden": "control of Jordan mass must use cancellation between distinct odd source indices or equivalent RH-bearing arithmetic"
+  },
+  "odd_fiber_compression": {
+    "beta_relations": "beta(2m)=-beta(m), beta(4m)=0 for odd m",
+    "boundary_field": "G(t)=sum_(m odd) beta(m)/sqrt(m)*psi(t-log(m))",
+    "compressed_kernel": "psi=P(tau_log(2))*w",
+    "compressed_kernel_support": "[0,5*log(2)]",
+    "compressed_polynomial_P": [
+      "1",
+      "-2-5/2*sqrt(2)",
+      "5+5*sqrt(2)",
+      "-8-7/2*sqrt(2)",
+      "4+2*sqrt(2)",
+      "-sqrt(2)"
+    ],
+    "factorization": "P(z)=(1-z)^2*(1-sqrt(2)z)^2*(1-z/sqrt(2))",
+    "kernel_polynomial_C": [
+      "1",
+      "-2-2*sqrt(2)",
+      "3+4*sqrt(2)",
+      "-4-2*sqrt(2)",
+      "2"
+    ],
+    "source_identity": "S_beta=(I-2^(-1/2)*tau_log(2))*sum_(m odd) beta(m)/sqrt(m)*delta_log(m)",
+    "source_samples_beta_m_beta_2m_beta_4m": {
+      "1": [
+        1,
+        -1,
+        0
+      ],
+      "201": [
+        2,
+        -2,
+        0
+      ],
+      "3": [
+        -1,
+        1,
+        0
+      ],
+      "335": [
+        2,
+        -2,
+        0
+      ],
+      "5": [
+        -1,
+        1,
+        0
+      ],
+      "67": [
+        -2,
+        2,
+        0
+      ],
+      "9": [
+        0,
+        0,
+        0
+      ]
+    },
+    "tail_annihilation": {
+      "P(1)": "0",
+      "P(1/sqrt(2))": "0",
+      "P_prime(1)": "0",
+      "P_prime(1/sqrt(2))": "0"
+    }
+  },
+  "primitive_kernel": {
+    "base_derivative": "D*w=5*delta_0+(3-4exp(t/2))*1_[0,infinity)dt",
+    "base_primitive": "w(t)=1_[0,infinity)*(13+3t-8exp(t/2))",
+    "causal_primitive": "K_bd(t)=K_ext((\u2212infinity,t])",
+    "distributional_identity": "D*K_bd=K_ext",
+    "laplace_multiplier": "M_ext(s)/s (removable at s=0)",
+    "regularity": "compact ordinary BV function",
+    "support": "[0,4*log(2)]",
+    "translation": "tau_a f(t)=f(t-a)"
+  },
+  "resource_caps": {
+    "curves_enumerated": 0,
+    "maximum_polynomial_degree": 5,
+    "prime_intervals_enumerated": 0,
+    "source_ranges_enumerated": 0,
+    "source_samples": 7,
+    "zeros_enumerated": 0
+  },
+  "schema": "riemann.function_field.ffps_mollified_beta_boundary_shell.v1",
+  "status": "exact boundary-shell and primitive-detector equivalence; no detector estimate and no RH or GRH proof"
+}
