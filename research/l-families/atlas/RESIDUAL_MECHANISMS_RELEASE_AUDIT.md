@@ -1,5 +1,9 @@
 # Residual mechanisms release audit
 
+This is the proof-strength and novelty companion for draft
+[PR #756](https://github.com/gfreund123/riemann/pull/756); the PR body records
+the exact audited release head.
+
 ## Verdict
 
 The branch contains internally exact mathematics, exact finite experiments,
@@ -470,7 +474,8 @@ its primitive conductor.
 
 The
 [density sequel](function_field/QUADRATIC_FAMILY_CLOSED_PLACE_NOTCH_DENSITY.md)
-counts the support-forced odd-notch subset exactly. With `M=2n-1` and
+counts the support-forced odd-notch subset of monic primitive squarefree
+conductors exactly. With `M=2n-1` and
 `L=floor(n/2)+1`,
 
 `Z_(q,n)=[x^M]prod_(d=L)^M(1+x^d)^(I_q(d))`.
@@ -481,7 +486,8 @@ and aligned-triangle Euler--Maclaurin expansions prove
 `Z_(q,n)/q^M=C_0/M+D_epsilon/M^2+O_q(M^-3)`.
 
 Here `C_0=4 omega(4)=2.2458329656...`, while
-`D_even=-4(1+log 2)` and `D_odd=-(4/3)(1+log 2)`. Dividing by the exact
+`D_even=-4(1+log 2)` for even `n` and
+`D_odd=-(4/3)(1+log 2)` for odd `n`. Dividing by the exact
 squarefree count multiplies both coefficients by `q/(q-1)`. The producer
 replays all 237 pairs `q in {3,5,7}`, `2<=n<=80`, binds every row into a
 canonical digest, and checks it against an independent one-/two-/three-factor

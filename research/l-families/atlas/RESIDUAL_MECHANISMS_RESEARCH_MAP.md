@@ -2,6 +2,10 @@
 
 ## Release status
 
+This is the canonical start-here index for draft
+[PR #756](https://github.com/gfreund123/riemann/pull/756); its body records
+the exact audited release head.
+
 This is the front door for the bounded successor pass to the L-function
 detector atlas in PR #752. The pass deliberately followed several leads at
 once, but it now has three coherent theorem stacks rather than a collection of
@@ -251,8 +255,8 @@ constraint `m<=q`, but it does not
 supply a varying-conductor equidistribution theorem.
 
 The density sequel answers one fixed-`q` question without invoking
-equidistribution. At the odd notch `M=2n-1`, let `Z_(q,n)` count squarefree
-primitive conductors all of whose irreducible factor degrees exceed
+equidistribution. At the odd notch `M=2n-1`, let `Z_(q,n)` count monic
+squarefree primitive conductors all of whose irreducible factor degrees exceed
 `floor(n/2)`. Then every counted conductor has exact raw sum `S_(n,Q)=0`,
 and
 
@@ -264,7 +268,8 @@ fixed-`q` law
 `Z_(q,n)/q^M=C_0/M+D_epsilon/M^2+O_q(M^-3)`,
 
 where `C_0=4 omega(4)=2.2458329656...`,
-`D_even=-4(1+log 2)`, and `D_odd=-(4/3)(1+log 2)`. Conditioning on
+`D_even=-4(1+log 2)` for even `n`, and
+`D_odd=-(4/3)(1+log 2)` for odd `n`. Conditioning on
 squarefreeness multiplies these coefficients by `q/(q-1)`. The leading
 `4 omega(4)/M` Buchstab term is standard. The squarefree specialization and
 explicit parity-sensitive `M^-2` refinement are derived here, without an
@@ -312,6 +317,10 @@ index when auditing a dependency or continuing a secondary lead.
   [repeated-factor tomography](function_field/GENUS2_REPEATED_FACTOR_TOMOGRAPHY.md),
   [zero-geometry conditioning](function_field/GENUS2_DETECTOR_ZERO_GEOMETRY_CONDITIONING.md),
   and [rank-stable inverse design](function_field/GENUS2_RANK_STABLE_INVERSE_DESIGN.md).
+- **Marked-stack trace reconciliations:**
+  [`chi_(0,3)`](GENUS2_CHI03_STACK_TRACE_RECONCILIATION.md),
+  [`chi_(2,2)`](GENUS2_CHI22_STACK_TRACE_RECONCILIATION.md), and
+  [`chi_(0,4)`](GENUS2_CHI04_STACK_TRACE_RECONCILIATION.md).
 
 Every research note introduced by this branch now appears either in a
 five-minute route or in this extended index. The index is navigational; the
