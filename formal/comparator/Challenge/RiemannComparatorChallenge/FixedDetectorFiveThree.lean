@@ -1,4 +1,4 @@
-import ChallengeDeps.FixedDetectorFiveThree
+import RiemannComparatorChallengeDeps.FixedDetectorFiveThree
 
 namespace Challenge.FixedDetectorFiveThree
 

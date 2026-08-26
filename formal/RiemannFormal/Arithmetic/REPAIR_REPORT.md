@@ -140,8 +140,8 @@ The repaired tree preserves the requested suite:
 cd formal
 lake exe cache get
 lake build
-lake build Challenge.ArithmeticRows23 Solution.ArithmeticRows23
-lake build Challenge.FixedDetectorFiveThree Solution.FixedDetectorFiveThree
+lake build RiemannComparatorChallenge.ArithmeticRows23 RiemannComparatorSolution.ArithmeticRows23
+lake build RiemannComparatorChallenge.FixedDetectorFiveThree RiemannComparatorSolution.FixedDetectorFiveThree
 python3 scripts/generate_registry.py
 python3 scripts/validate_registry.py
 python3 scripts/verify_source_locks.py

@@ -10,6 +10,7 @@ Quick checks:
 cd formal
 bash scripts/build_local_comparators.sh
 lake env lean comparator/PrintAxioms/RH.lean
+lake env lean comparator/PrintAxioms/ArithmeticFixedRows.lean
 ```
 
 A full independent comparator run uses `comparator/config-rh.json` and an external `leanprover/comparator` binary.

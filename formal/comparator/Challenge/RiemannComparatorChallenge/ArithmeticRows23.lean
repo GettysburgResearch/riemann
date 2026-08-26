@@ -1,4 +1,4 @@
-import ChallengeDeps.ArithmeticRows23
+import RiemannComparatorChallengeDeps.ArithmeticRows23
 
 namespace Challenge.ArithmeticRows23
 

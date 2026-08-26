@@ -1,4 +1,4 @@
-import ChallengeDeps.FixedDetectorFiveThree
+import RiemannComparatorChallengeDeps.FixedDetectorFiveThree
 import RiemannFormal.Arithmetic.FixedRows
 
 namespace Solution.FixedDetectorFiveThree
