@@ -1,0 +1,175 @@
+{
+  "panels": [
+    {
+      "error_to_cycle_mass": "1/67108864",
+      "exact_error": 1,
+      "potential_shape": [
+        31
+      ],
+      "tail": [],
+      "tail_size": 0,
+      "transport_coefficient": 1
+    },
+    {
+      "error_to_cycle_mass": "1/2097152",
+      "exact_error": 32,
+      "potential_shape": [
+        30,
+        1
+      ],
+      "tail": [
+        1
+      ],
+      "tail_size": 1,
+      "transport_coefficient": 2
+    },
+    {
+      "error_to_cycle_mass": "31/4194304",
+      "exact_error": 496,
+      "potential_shape": [
+        29,
+        2
+      ],
+      "tail": [
+        2
+      ],
+      "tail_size": 2,
+      "transport_coefficient": 2
+    },
+    {
+      "error_to_cycle_mass": "497/67108864",
+      "exact_error": 497,
+      "potential_shape": [
+        29,
+        1,
+        1
+      ],
+      "tail": [
+        1,
+        1
+      ],
+      "tail_size": 2,
+      "transport_coefficient": 3
+    },
+    {
+      "error_to_cycle_mass": "9953/67108864",
+      "exact_error": 9953,
+      "potential_shape": [
+        28,
+        2,
+        1
+      ],
+      "tail": [
+        2,
+        1
+      ],
+      "tail_size": 3,
+      "transport_coefficient": 5
+    },
+    {
+      "error_to_cycle_mass": "108409/67108864",
+      "exact_error": 108409,
+      "potential_shape": [
+        27,
+        3,
+        1
+      ],
+      "tail": [
+        3,
+        1
+      ],
+      "tail_size": 4,
+      "transport_coefficient": 7
+    },
+    {
+      "error_to_cycle_mass": "508929/33554432",
+      "exact_error": 1017858,
+      "potential_shape": [
+        26,
+        3,
+        2
+      ],
+      "tail": [
+        3,
+        2
+      ],
+      "tail_size": 5,
+      "transport_coefficient": 12
+    },
+    {
+      "error_to_cycle_mass": "7409843/33554432",
+      "exact_error": 14819686,
+      "potential_shape": [
+        25,
+        3,
+        2,
+        1
+      ],
+      "tail": [
+        3,
+        2,
+        1
+      ],
+      "tail_size": 6,
+      "transport_coefficient": 42
+    }
+  ],
+  "scope": {
+    "all_degree_optimum_proved": false,
+    "floating_point_used": false,
+    "global_extension_constructed": false,
+    "linear_programming_used": false,
+    "maximum_degree": 64,
+    "maximum_tail_size": 8
+  },
+  "theorem": {
+    "fixed_tail_asymptotic": "Re X_beta=(-1)^(m+1)*a_beta*2^(d-1)/d+O_beta(d^m)",
+    "remaining_gate": "bulk Young-lattice matching",
+    "stable_tail_bound": "|(-1)^(m+1) Re X_beta-a_beta*2^(d-1)/d|<=E_beta(d)",
+    "transpose_reduction": "existence implies a real lift with x_(nu')=(-1)^(d-1)x_nu"
+  },
+  "three_row_cancellations": [
+    {
+      "current_three_row_coefficient": 5,
+      "index": 2,
+      "previous_three_row_coefficient": 3,
+      "signed_sum": 0,
+      "two_row_coefficient": 2
+    },
+    {
+      "current_three_row_coefficient": 7,
+      "index": 3,
+      "previous_three_row_coefficient": 5,
+      "signed_sum": 0,
+      "two_row_coefficient": 2
+    },
+    {
+      "current_three_row_coefficient": 9,
+      "index": 4,
+      "previous_three_row_coefficient": 7,
+      "signed_sum": 0,
+      "two_row_coefficient": 2
+    },
+    {
+      "current_three_row_coefficient": 11,
+      "index": 5,
+      "previous_three_row_coefficient": 9,
+      "signed_sum": 0,
+      "two_row_coefficient": 2
+    },
+    {
+      "current_three_row_coefficient": 13,
+      "index": 6,
+      "previous_three_row_coefficient": 11,
+      "signed_sum": 0,
+      "two_row_coefficient": 2
+    },
+    {
+      "current_three_row_coefficient": 15,
+      "index": 7,
+      "previous_three_row_coefficient": 13,
+      "signed_sum": 0,
+      "two_row_coefficient": 2
+    }
+  ]
+}
