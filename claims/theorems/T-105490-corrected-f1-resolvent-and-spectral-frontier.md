@@ -1,25 +1,17 @@
-# T-105490 — Corrected F1 bounded-detector, resolvent and spectral frontier
+# T-105490 — Corrected bounded-detector resolvent and spectral geometry
 
 Claim ID: `T-105490`
 
-Status: **BINDING MULTIPLIER CORRECTION AND NEW POSITIVE SPECTRAL NORMAL FORM; RH UNPROVED**
+Status: **RETAINED MULTIPLIER CORRECTION; OLD COMPLETED-SOURCE CONCLUSION SUPERSEDED**
 
-Created: 2026-08-26
+Corrected: 2026-08-27
 
-Base: durable draft PR #730
+Superseded conclusion disposition: `R-105500`, `T-105500`
 
-Frozen inputs:
-
-```text
-PR #730  f534df7ad3a180c35a95b57cd7a91b6233702408
-PR #719  426fe1c34a35d21b38a393456a7071c0902170f1
-PR #751  98af0db6ec7f77d6333a77a3dac53c4698852f43
-```
-
-## 1. Binding correction
+## 1. Binding multiplier correction
 
 The bounded derivative-outer density and the historical differential
-analytic-square packet are not equal. Their exact symbols satisfy
+analytic-square packet are not equal.  Their exact symbols satisfy
 
 \[
 \boxed{
@@ -30,23 +22,23 @@ analytic-square packet are not equal. Their exact symbols satisfy
 \tag{T-105490.1}
 \]
 
-Thus, sourcewise,
+Thus, at a fixed source and with its explicitly retained diagonal field,
 
 \[
 \boxed{
 (5D+\tfrac32)(I-\sqrt2\,\mathsf S)H_K
 =
-4P(D)J.
+4P(D)J+H_{\rm diag}.
 }
 \tag{T-105490.2}
 \]
 
-The reflection decomposition of \(J\) remains exact. The old identification
-of \(P(D)J\) with the bounded current \(H_K\) is superseded.
+The reflection decomposition of \(J\) remains exact.  The old direct
+identification of \(P(D)J\) with \(H_K\) is superseded.
 
-## 2. Reflection remains a sufficient route
+## 2. Stable one-way transfer
 
-The missing factor has the stable anti-causal inverse
+The missing dyadic factor has the stable anti-causal inverse
 
 \[
 (I-\sqrt2\,\tau_{\log2})^{-1}
@@ -54,43 +46,16 @@ The missing factor has the stable anti-causal inverse
 -\sum_{j\ge1}2^{-j/2}\tau_{\log2}^{-j},
 \]
 
-and \((5\partial+3/2)^{-1}\) is a positive causal resolvent. Therefore
-
-\[
-\|H_K\|_{L^1}
-\le
-\frac{8}{3(\sqrt2-1)}
-\|P(D)J\|_{\rm TV}
-\tag{T-105490.3}
-\]
-
-modulo the inherited closed field.
-
-Consequently
-
-\[
-\boxed{
-\mathrm{F1VAR}_{105460}
-\Longleftrightarrow
-\mathrm{REFSIG}_{106150}
-\Longleftrightarrow
-\mathrm{SFSC}_{106150}
-\Longrightarrow
-\mathrm{F1HARDY}_{105470}
-\Longrightarrow
-\mathrm{RH}.
-}
-\tag{T-105490.4}
-\]
-
-The reverse implication from the bounded Hardy current to the differential
-reflection variation is not claimed.
+and \((5\partial+3/2)^{-1}\) is a positive causal resolvent.  Therefore the
+reflection total variation controls the bounded-current logarithmic \(L^1\)
+norm at the declared diagonal-ledger scope.  The reverse direction is not
+asserted.
 
 ## 3. Correct positive spectral square
 
-Historical `L-105483` omitted the resolvent denominator. Its weight is
-asymptotically constant, so its unregularized integral is infinite for every
-nonzero finite source packet.
+Historical `L-105483` omitted the resolvent denominator.  Its unregularized
+weight is asymptotically constant and gives an infinite integral for every
+nonzero finite packet.
 
 The corrected bounded-detector weight is
 
@@ -106,7 +71,7 @@ The corrected bounded-detector weight is
 }
 \asymp\frac1{1+t^2}.
 }
-\tag{T-105490.5}
+\tag{T-105490.3}
 \]
 
 For the exact normal-ordered analytic source square
@@ -117,87 +82,51 @@ For the exact normal-ordered analytic source square
 =
 \frac1{2\pi}\int
 \Omega_K(t)|\mathscr Q_U^\diamond(t)|^2dt.
-\tag{T-105490.6}
+\tag{T-105490.4}
 \]
 
-This gives the exact packet equivalence
+At that fixed source,
 
 \[
-\boxed{
 \mathrm{F1KASQ}_{105492}
 \Longleftrightarrow
 \mathrm{F1GRAM}_{105480}
 \Longleftrightarrow
-\mathrm{F1HCNC}_{105481}.
-}
-\tag{T-105490.7}
+\mathrm{F1HCNC}_{105481},
+\tag{T-105490.5}
 \]
 
-The corrected Beta fourth-moment premise satisfies
+and
 
 \[
-\boxed{
 \mathrm{F1KFOURTH}_{105493}
 \Longrightarrow
 \mathrm{F1KASQ}_{105492}.
-}
-\tag{T-105490.8}
+\tag{T-105490.6}
 \]
 
-Every premise in (T-105490.7)--(T-105490.8) remains open.
+## 4. Binding source correction
 
-## 4. Sharp and square frontiers
+The former equation identifying `QPTI103112` with `BCI102990` and then RH is
+withdrawn.  `QPTI103112` is false by corrected PR #719.  `R-105500` separates
+that harmonic source from the cutoff-dependent balanced coefficient \(b_U\),
+so the semiprime refutation is not silently transferred; nevertheless no old
+completed-source RH arrow is retained without a fresh proof.
 
-The strongest unaffected direct route is
-
-\[
-\boxed{
-\mathrm{F1HCNC}_{105481}
-\Longleftrightarrow
-\mathrm{F1GRAM}_{105480}
-\Longrightarrow
-\mathrm{F1HARDY}_{105470}
-\Longrightarrow
-\mathrm{RH}.
-}
-\tag{T-105490.9}
-\]
-
-The corrected PR #719 quarter-power route is
-
-\[
-\boxed{
-\mathrm{QPTI}_{103112}
-\Longleftrightarrow
-\mathrm{BCI}_{102990}
-\Longrightarrow
-\mathrm{RH}.
-}
-\tag{T-105490.10}
-\]
-
-`QPTI103112` is a one-sided coherent owner-collapse theorem.
-`F1HCNC105481` is a stronger positive square/near-collision theorem.
-No equivalence between them is asserted.
-
-## Exact status
+The independent native ordinary-Möbius conclusion theorem is `T-105500`.
 
 ```text
 bounded K_L Mellin symbol                         PROVED EXACT
 historical K_L = P(D)(A*A)                        REFUTED
 exact dyadic/differential bridge                  PROVED EXACT
 anti-causal dyadic inverse                        PROVED STABLE
-reflection variation -> bounded Hardy current     PROVED
-reverse Hardy -> reflection variation             NOT CLAIMED
-old Omega_A analytic-square L2                    INFINITE / WITHDRAWN
-correct Omega_K positive weight                   PROVED EXACT
-Omega_K asymptotic (1+t^2)^(-1)                   PROVED
-correct bounded spectral Plancherel                PROVED EXACT
-correct Beta fourth moment -> F1 Gram              PROVED EXACT
+old nondecaying spectral weight                   REFUTED / INFINITE
+correct Omega_K positive H^-1 weight              PROVED EXACT
+fixed-source spectral/Gram identities             PROVED EXACT
+QPTI103112 / EBD103120                            REFUTED
+old completed-source RH conclusion                WITHDRAWN
 
-F1KFOURTH105493 / F1KASQ105492                     OPEN / RH-BEARING
-F1HCNC105481 / F1GRAM105480                        OPEN / RH-BEARING
-F1HARDY105470                                      OPEN / RH-BEARING
-QPTI103112 / BCI102990                             OPEN / RH-BEARING
-Riemann Hypothesis                                 UNPROVED
+F1KFOURTH/F1KASQ/F1HCNC on balanced b_U           OPEN SOURCE ESTIMATES
+NATIVEF1XD105504 / NATIVECELL105504               OPEN / RH-EQUIVALENT
+Riemann Hypothesis                                UNPROVED
 ```

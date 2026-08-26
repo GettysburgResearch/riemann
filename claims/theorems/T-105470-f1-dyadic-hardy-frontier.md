@@ -1,18 +1,21 @@
-# T-105470 — Corrected F1 dyadic-cell and one-Hardy-primitive frontier
+# T-105470 — Bounded-detector dyadic-cell and Hardy discretization
 
 Claim ID: `T-105470`
 
-Status: **MAJOR UNCONDITIONAL DISCRETIZATION; ONE BOUNDED-CURRENT HARDY GATE OPEN**
+Status: **RETAINED EXACT GENERIC DISCRETIZATION; OLD SOURCE-TO-RH ARROW SUPERSEDED**
 
-Corrected: 2026-08-26
+Corrected: 2026-08-27
 
-For the exact bounded density \(K_L\), let
+Superseded conclusion disposition: `R-105500`, `T-105500`
+
+For any finite real coefficient sequence \((a_n)\), let
 
 \[
-H_K(X)=\sum_na_nK_L(X/n).
+H_K(X)=\sum_na_nK_L(X/n)
 \]
 
-Every breakpoint is one of \(n,2n,4n,8n\). Hence on every open integer cell
+for the exact bounded density \(K_L\).  Every breakpoint is one of
+\(n,2n,4n,8n\), so on every open integer cell
 
 \[
 H_K(X)=A_m+B_m\sqrt X.
@@ -22,7 +25,8 @@ H_K(X)=A_m+B_m\sqrt X.
 Define
 
 \[
-P(x)=\sum_{n\le x}a_n,\qquad
+P(x)=\sum_{n\le x}a_n,
+\qquad
 Q(x)=\sum_{n\le x}\frac{a_n}{\sqrt n},
 \]
 
@@ -35,26 +39,23 @@ W(x)=2P(x)-\sqrt xQ(x),
 Then
 
 \[
-\boxed{
-H_K(m+)=4\Delta_2W(m).
-}
+\boxed{H_K(m+)=4\Delta_2W(m).}
 \tag{T-105470.2}
 \]
 
 The cell logarithmic \(L^1\) mass is uniformly equivalent to its two endpoint
-values, and the right/left jump ledger is \(M^{-1/2+o(1)}\).
+values.  For any source whose atomic coefficient square has the declared
+subpower ledger, the right/left jump contribution is subpower.
 
-Define
+Define the source-indexed condition
 
 ```text
-F1HARDY105470:
-  sum_(M<=m<=2M) |Delta_2 W(m)|/m = M^(o(1))
+F1HARDY105470[a]:
+  sum_(M<=m<=2M) |Delta_2 W_a(m)|/m = M^(o(1)).
 ```
 
-on every frozen dyadic source block. Then `F1HARDY105470` is equivalent to
-subpower logarithmic \(L^1\) mass of the bounded current \(H_K\), modulo the
-closed endpoint ledger. Weighted \(l^1\) duality gives the exact scalar
-source form
+It is equivalent to subpower logarithmic \(L^1\) mass of the corresponding
+bounded current, modulo its endpoint ledger.  Weighted \(l^1\) duality gives
 
 \[
 \sum_{m=M}^{2M}\frac{|\Delta_2W(m)|}{m}
@@ -67,49 +68,34 @@ source form
 \tag{T-105470.3}
 \]
 
-## Corrected relation to reflection
+## Binding source correction
 
-Historical versions identified \(H_K\) directly with the differential
-reflection current. `L-105490--L-105491` replace that equality by a stable
-resolvent. Therefore
+The generic identities above remain exact.  The previous unqualified arrow
 
-\[
-\boxed{
-\mathrm{F1VAR}_{105460}
-\Longleftrightarrow
-\mathrm{REFSIG}_{106150}
-\Longrightarrow
-\mathrm{F1HARDY}_{105470}
-\Longrightarrow
-\mathrm{RH},
-}
-\tag{T-105470.4}
-\]
+```text
+F1HARDY105470 -> RH
+```
 
-but the reverse arrow from `F1HARDY105470` to the reflection variation is not
-claimed.
+used the now-withdrawn completed-source `QPTI/BCI/HMO` identification.
+`QPTI103112` is false, and no replacement source theorem is supplied by this
+bounded-current discretization alone.  The cutoff-dependent balanced source is
+not refuted by the QPTI semiprime main, but its conclusion interface is
+reopened.
 
-The quarter-power normal form on corrected PR #719 gives the alternative sharp
-coordinate
-
-\[
-\mathrm{QPTI}_{103112}
-\Longleftrightarrow
-\mathrm{BCI}_{102990}
-\Longrightarrow
-\mathrm{RH}.
-\tag{T-105470.5}
-\]
+The native ordinary-Möbius repair uses the derivative same-\(K_1\) kernel
+\(K_2\), not a silent reassignment of the old coefficient sequence.  Its exact
+ratio-sixteen cell gate `NATIVECELL105504` is RH-equivalent by `T-105500`.
 
 ```text
 integer-cell affine normal form                    PROVED EXACT
 closed logarithmic cell primitive                  PROVED EXACT
 two-endpoint equivalence                           PROVED
 right sample = one dyadic Hardy primitive          PROVED EXACT
-weighted endpoint jump ledger                      PROVED SUBPOWER
-bounded-current L1 = discrete F1HARDY              PROVED
-reflection variation -> F1HARDY                    PROVED
-F1HARDY -> reflection variation                    NOT CLAIMED
-F1HARDY105470 / QPTI103112                         OPEN / RH-BEARING
+weighted dual source form                          PROVED EXACT
+old QPTI alternative                               REFUTED
+old unqualified F1HARDY -> RH arrow                WITHDRAWN
+
+F1HARDY105470[b_U]                                 OPEN / SOURCE INTERFACE REOPENED
+NATIVECELL105504                                   OPEN / RH-EQUIVALENT
 Riemann Hypothesis                                 UNPROVED
 ```
