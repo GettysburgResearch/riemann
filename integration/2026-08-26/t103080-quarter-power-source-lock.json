@@ -1,0 +1,31 @@
+{
+  "base_branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+  "base_pr": 719,
+  "base_sha": "4146f81e7237d41e2e4a0cb1737511266683e980",
+  "cutoff_utc": "2026-08-26T00:00:00Z",
+  "dependencies": [
+    "claims/lemmas/L-102747-pair-owner-collapse-costs-only-log-squared.md",
+    "claims/lemmas/L-102880-logarithmic-derivative-outer-detector-has-zero-square-lattice-moment.md",
+    "claims/lemmas/L-102951-harmonic-critical-class-is-the-squarefree-boolean-euler-class.md",
+    "claims/lemmas/L-102952-owner-excluded-boolean-vaughan-coefficients-are-universal.md",
+    "claims/lemmas/L-102953-squarefree-type-I-is-an-l1-shift-transfer-of-the-parent-lattice.md",
+    "claims/lemmas/L-102954-hodge-boolean-reduction-leaves-one-owner-indexed-restriction.md",
+    "claims/theorems/T-102990-equal-pair-boolean-core-incidence-frontier.md",
+    "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md",
+    "claims/lemmas/L-106132-boolean-half-source-least-prime-calderon-row.md",
+    "claims/lemmas/L-106133-canonical-equal-pair-boolean-source-is-a-beta-half-source-square.md",
+    "claims/lemmas/L-103073-quarter-power-is-the-unique-cutoff-balance.md"
+  ],
+  "proof_object_sha256": "d55d9c0a8ea7478127e93af726654e2e91e2b57953219bf10d251753981a8aa6",
+  "repository": "gfreund123/riemann",
+  "review_first": "Reconstruct the uniform complete source/Hilbert Type-I endpoint L-103070 from frozen L-102953 without orthogonalizing owner fibres.",
+  "schema": "riemann.t103080.source-lock.v1",
+  "status": {
+    "bci102990": "proved in proposal on frozen inputs; independent hostile review pending",
+    "full_composition": "proposed complete unconditional theorem",
+    "new_algebra": "proved exact",
+    "rh_accepted": false
+  },
+  "supporting_pr": 751,
+  "supporting_sha": "98af0db6ec7f77d6333a77a3dac53c4698852f43"
+}
