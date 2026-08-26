@@ -23,9 +23,16 @@ an exact invertible convolution which proves the `rho`-weighted one-variable
 Möbius coefficient has the same positive Mertens exponents as ordinary
 Möbius, while the pair zero mode becomes a Boolean-compressed weighted
 superposition whose squarefreeness, coprimality, and sieve incidence reassemble
-in the same generalized primitive panel with scales `(A,B,q)` and only a
-polylogarithmic harmonic-dilation tax,
-the exact refutation of the raw Jordan premise,
+in the same generalized primitive panel with scales `(A,B,q)`. For
+each of the three actual `(alpha,0)` channels, fixed squarefree
+67-free `q` has
+`3^omega(q)` compatible colorings and `d=1` has
+`2^omega(q)` saturated rays. The exact positive-norm hierarchy is
+`RAYPRIMCAR -> COLLPRIMCAR <- GENPRIMCAR`: the two stronger gates
+are formally incomparable, the former pays a convergent
+`K_67(epsilon)` cost for `0<epsilon<1`, and the latter a
+polylogarithmic height tax. All three estimates remain open. The successor
+also includes the exact refutation of the raw Jordan premise,
 hard-mask relative projectors and conductor ledgers, odd-notch boundary
 densities through every fixed depth, their local anti-concentration law, and
 an `O(M^-2)` whole-layer theorem through logarithmically growing depth,

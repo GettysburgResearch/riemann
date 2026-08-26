@@ -95,7 +95,7 @@ as RH. They should not be blended into one vague “family estimate.”
 | primitive-ray localization | every fixed admissible beta ray has an explicit `A_(a,b) log X+O(1)` law; all reduced rays of height at most `H` cost `O(H log(2X))`, so for every prescribed `H=X^o(1)` RH is equivalent to the balanced residual above height `H` | cancel the high-height sector; both primitive coordinates exceed `H/16` and the common factor is `<X/H` |
 | primitive-pair large-sieve gate | the full residual has an exact five-oriented/three-reciprocal decomposition, a signed one-dimensional Möbius--Gram form, and a biased-Boolean divisor-sieve diagonalization | prove `PRIMLS`, a maximal `L2(d^-1)` square-root-scale bound; the harmonic zero mode and frozen sieve rows show that `d`-averaging alone cannot do it |
 | primitive incidence/Carleson form | the actual truncated `d^-1` square mean is an incidence Gram; at fixed height its normalized limit is `67/(68 zeta(2))` times the Boolean energy, with a `rho`-tilted Möbius zero mode; `PRIMCAR=>PRIMLS=>RH` | `PRIMCAR` is a stronger unproved sufficient gate; control its zero mode, nonzero spectrum, and dyadic block sum uniformly as height grows |
-| primitive `rho`-tilt isomorphism | `mu*rho` and 67-free `mu` are mutually inverse-convolution equivalent and have the same positive Mertens exponents; primitive pair support Boolean-compresses, then reassembles exactly as the ordinary panel with `(A,B,q)=(67^alpha r,67^gamma s,drs)`; the critical harmonic tax is only `O(log^4 H)` in energy | prove generalized-scale ordinary-Möbius primitive Carleson cancellation, uniformly or with summable losses, over those coupled `(A,B,q)` panels; nonzero `PRIMCAR` modes remain separate |
+| primitive `rho`-tilt isomorphism | `mu*rho` and 67-free `mu` are mutually inverse-convolution equivalent and have the same positive Mertens exponents; primitive support reassembles as `(A,B,q)=(67^alpha r,67^gamma s,drs)`; in each of the three actual `(alpha,0)` channels, fixed squarefree 67-free `q` has `3^omega(q)` compatible colorings and the `d=1` zero mode `2^omega(q)` saturated rays | prove the direct weighted `COLLPRIMCAR` gate, or one of the stronger, formally incomparable routes `RAYPRIMCAR` (compatible rays, convergent cost for `0<epsilon<1`) and `GENPRIMCAR` (all admissible squarefree 67-free `q`, polylog tax); nonzero `PRIMCAR` modes remain separate |
 | reflection/geodesic form | the same detector is exactly a differentiated native reflection-odd energy; the relative geodesic form differs only by an unconditional `O_epsilon(T)` squared field | obtain arithmetic control of the positive differentiated reflection energy |
 | raw complete current | negative Jordan variation is at least `((70+50 sqrt(2))/pi^2)sqrt(Y)+O(log Y)` | none: the raw subpower premise is refuted |
 | hard-mask co-design | sharp leverage/leakage Pareto law and bounded-energy anomaly-cancellation theorem | a global varying-place relative complex and signed trace estimate |
@@ -418,11 +418,27 @@ Thus squarefreeness, cross-coprimality, sieve incidence, and the ratio-kernel
 form all survive. On the harmonic `d^-1` space, reindexing `d` to `drs` has
 sharp norm `sqrt(rs)`. This is the critical weight: its infinite absolute
 Euler product diverges, but native height support gives only `O(log^2 H)` in
-vector norm and `O(log^4 H)` in energy. The one-variable coefficient is
-Mertens-neutral. A clean stronger sufficient route for the pair zero mode is
-generalized-scale Carleson cancellation, not a new incidence algebra; the
-scalar zero mode itself has no native `d`-average. This would address only the
-zero mode; nonzero incidence modes and finite-`D` summability remain.
+vector norm and `O(log^4 H)` in energy. For an actual fixed
+`(alpha,0)` channel, every prime of fixed squarefree 67-free
+`q` is colored `r/s/d`, giving `3^omega(q)`
+compatible triples; `d=1` leaves `2^omega(q)` saturated rays
+`q=rs`.
+
+The exact positive-norm implication diagram is
+
+`RAYPRIMCAR -> COLLPRIMCAR <- GENPRIMCAR`.
+
+`COLLPRIMCAR` is the weakest direct sufficient weighted-`ell^1`
+condition exposed by Minkowski. `RAYPRIMCAR` follows only the
+compatible multiple ray and has convergent `K_67(epsilon)` cost for
+`0<epsilon<1`;
+`GENPRIMCAR` sees off-ray `q` as well and incurs the
+polylogarithmic tax above. Neither stronger gate implies the other at the
+stated subpower normalization by positive-norm algebra. Synthetic replay
+witnesses certify that formal nonimplication, not arithmetic counterexamples
+for the actual panels. None of the three estimates is proved. The scalar zero
+mode itself has no native `d`-average, and nonzero incidence modes and
+finite-`D` summability remain separate.
 
 The associated three-state colored cube is also exact. Its local shear has
 states `absent/left/right`, forward and inverse have the same convergent
@@ -1137,9 +1153,11 @@ isolates the stronger `PRIMCAR` route into a zero mode, nonzero incidence
 spectrum, and dyadic summability. The zero mode's `rho` tilt has been rewritten
 exactly as a Boolean-compressed family of ordinary-Möbius primitive panels at
 `(A,B,q)=(67^alpha r,67^gamma s,drs)`. Incidence survives exactly and the
-critical harmonic tax is polylogarithmic. The next analytic target is
-generalized-scale cancellation uniformly, or with summable losses, across
-that family; this still leaves the nonzero spectrum.
+compatible image is now classified exactly. The next analytic target is
+`COLLPRIMCAR` directly or `RAYPRIMCAR` on the actual
+`q=drs` rays; full-`q` `GENPRIMCAR` remains a broader
+alternative with a polylogarithmic tax, not an intrinsic requirement. Every
+route still leaves the nonzero spectrum.
 
 ### Highest family/sheaf bet
 

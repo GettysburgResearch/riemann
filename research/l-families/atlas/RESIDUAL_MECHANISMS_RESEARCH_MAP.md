@@ -36,8 +36,16 @@
 > pair zero mode becomes a Boolean-compressed weighted superposition of
 > generalized primitive panels. Squarefreeness, coprimality, and sieve
 > incidence survive exactly under `(A,B,q)=(67^alpha r,67^gamma s,drs)`, and
-> the critical harmonic dilation costs only `O(log^4 H)` in energy. The open
-> input is generalized-scale cancellation, not a new incidence algebra.
+> for each of the three actual `(alpha,0)` channels and fixed
+> squarefree 67-free `q`, there are `3^omega(q)` compatible
+> colorings, with `2^omega(q)` saturated `d=1`
+> rays. Minkowski exposes `COLLPRIMCAR` as the direct weighted-
+> `l^1` input. The image-tailored `RAYPRIMCAR` and full-
+> `q` `GENPRIMCAR` gates are stronger but incomparable at
+> subpower normalization by positive-norm algebra: the former pays a
+> convergent `K_67(epsilon)` cost for `0<epsilon<1`, the latter
+> `O(log^2 H)` in vector norm / `O(log^4 H)` in energy. None
+> is proved, and none controls the nonzero incidence spectrum.
 > Separately, the minimal
 > ternary physical mask has a universal degree-shell norm/Kummer realization
 > of rank `48`, tame Swan zero, and linear toric boundary support; the exact

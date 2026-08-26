@@ -18,8 +18,17 @@ dyadic Carleson sufficient gate for its primitive-pair target, an exact
 invertible Dirichlet-convolution equivalence for that target's one-variable
 `rho` coefficient, a Boolean-compressed weighted superposition for its pair
 zero mode whose incidence algebra survives in a generalized three-parameter
-primitive panel with only a polylogarithmic harmonic tax, and a `Sym^12`
-cohomological audit.
+primitive panel, and its exact compatible-scale geometry: in each of the
+three actual `(alpha,0)` channels, fixed squarefree 67-free `q`
+has `3^omega(q)`
+colored triples while `d=1` has
+`2^omega(q)` saturated rays. At the positive-norm level the honest
+open hierarchy is `RAYPRIMCAR -> COLLPRIMCAR <- GENPRIMCAR`; the ray
+and full-`q` gates are formally incomparable sufficient routes, with
+a convergent `K_67(epsilon)` cost after choosing
+`0<epsilon<1` versus polylogarithmic costs. None is proved, and
+nonzero `PRIMCAR` modes remain separate. The successor also contains
+a `Sym^12` cohomological audit.
 Begin with
 [`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md),
 then [`SHEAF_AMPLIFIER_RESEARCH_MAP.md`](SHEAF_AMPLIFIER_RESEARCH_MAP.md).

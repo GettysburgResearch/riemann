@@ -79,13 +79,25 @@ compresses: prime powers disappear, the two outer variables are coprime, and
 forward and inverse have the same Euler-product mass `K_67`.
 More strongly, all squarefreeness, cross-coprimality, and sieve conditions
 reassemble into the same generalized ordinary primitive panel with
-`(A,B,q)=(67^alpha r,67^gamma s,drs)`. The `d^-1` harmonic norm is critical,
-but native height truncation makes its tax only `O(log^2 H)` in vector norm
-and `O(log^4 H)` in energy. This still does not prove the zero-mode estimate:
-one clean stronger sufficient input is generalized-scale ordinary-Möbius
-Carleson cancellation over those coupled `(A,B,q)` panels. The scalar zero
-mode has no native `d`-average, and the nonzero incidence spectrum and finite-
-`D` summability remain separate.
+`(A,B,q)=(67^alpha r,67^gamma s,drs)`. For each of the three actual
+`(alpha,0)` channels and fixed squarefree 67-free `q`, the
+compatible image has exactly `3^omega(q)` colorings; its true
+`d=1` zero mode has `2^omega(q)` saturated rays
+`q=rs`. The exact positive-norm hierarchy is
+
+`RAYPRIMCAR -> COLLPRIMCAR <- GENPRIMCAR`.
+
+`COLLPRIMCAR` is the direct weighted-Minkowski input.
+`RAYPRIMCAR` controls only compatible multiple rays and pays the
+convergent `K_67(epsilon)` cost after choosing
+`0<epsilon<1`; `GENPRIMCAR` controls every admissible
+squarefree 67-free `q` in its stated ranges and, after harmonic
+reindexing, pays `O(log^2 H)` in
+vector norm / `O(log^4 H)` in energy. They are stronger,
+incomparable sufficient routes at the stated subpower normalization. None is
+proved. The scalar zero mode has no native `d`-average, and the
+nonzero incidence spectrum and finite-`D` summability remain
+separate.
 
 ### 2. The raw version is impossible
 
@@ -388,9 +400,12 @@ in chronological order.
    sufficient statement, but is deliberately stronger than RH and unproved.
    The still stronger `PRIMCAR` removes the endpoint supremum and exposes an
    incidence Gram; it is also unproved. Its pair zero mode is now rewritten
-   exactly as a Boolean-compressed generalized primitive panel with a
-   polylogarithmic harmonic tax, but the generalized-scale vector estimate is
-   open.
+   exactly as a Boolean-compressed generalized primitive panel. The smallest
+   direct positive-norm target is `COLLPRIMCAR`; the image-tailored
+   uniform target is `RAYPRIMCAR`, while full-`q`
+   `GENPRIMCAR` is a broader, differently normalized alternative.
+   All are open and address only the auxiliary rho-sieved/zero-mode burden,
+   not the nonzero incidence spectrum.
 2. **Relative sheaf gate:** construct the global varying-place complex where
    hard and selected cleanup remain common and `C-S=Pi_0` survives with a
    usable conductor ledger. The clean ternary norm/Kummer factor and its
@@ -415,11 +430,11 @@ in chronological order.
 
 Run four lanes in parallel:
 
-1. attack ordinary-Möbius primitive Carleson cancellation uniformly, or with
-   summable losses, over the exact generalized scales
-   `(A,B,q)=(67^alpha r,67^gamma s,drs)`; the incidence predicate already
-   survives and the harmonic tax is polylogarithmic, after which the nonzero
-   `PRIMCAR` spectrum remains separate;
+1. attack `COLLPRIMCAR` directly, or the stronger
+   `RAYPRIMCAR` along the exact compatible rays `q=drs`;
+   retain full-`q` `GENPRIMCAR` as a broader alternative, not
+   an intrinsic reformulation. The incidence predicate already survives,
+   but the nonzero `PRIMCAR` spectrum remains separate;
 2. prove the actual owner/Boolean/Artin--Schreier source has the partial-
    Frobenius/external-product structure required by the new Adams extractor,
    then simplify its signed divisor sum before any Betti norm;
