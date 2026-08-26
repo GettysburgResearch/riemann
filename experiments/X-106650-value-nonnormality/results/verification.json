@@ -1,0 +1,60 @@
+{
+  "classification": "PASS_T106650_VALUE_NONNORMALITY_SPLIT",
+  "density_one_established": false,
+  "determinant_identity_checked": true,
+  "fixtures": [
+    {
+      "canonical_charge": "1/5",
+      "degree_minus": "1",
+      "degree_plus": "1",
+      "determinant": "1/5",
+      "nonnormality": "0",
+      "value_sum": "1/5"
+    },
+    {
+      "canonical_charge": "1746/4225",
+      "degree_minus": "2",
+      "degree_plus": "2",
+      "determinant": "81/4225",
+      "nonnormality": "576/4225",
+      "value_sum": "18/65"
+    },
+    {
+      "canonical_charge": "293517/640900",
+      "degree_minus": "3",
+      "degree_plus": "3",
+      "determinant": "1296/801125",
+      "nonnormality": "61889/640900",
+      "value_sum": "57907/160225"
+    },
+    {
+      "canonical_charge": "14944931/11868025",
+      "degree_minus": "3",
+      "degree_plus": "2",
+      "determinant": "194481/11868025",
+      "nonnormality": "4867776/11868025",
+      "value_sum": "38027/44785"
+    }
+  ],
+  "frame_fixture": {
+    "canonical_charge": "23/170",
+    "degree_minus": "2",
+    "degree_plus": "2",
+    "determinant": "1/2890",
+    "frame_alpha": "1/5",
+    "frame_beta": "9/5",
+    "frame_ratio": "9",
+    "frame_upper_bound": "63/170",
+    "nonnormality": "8/85",
+    "value_sum": "7/170"
+  },
+  "frame_ratio_bound_checked": true,
+  "gram_charge_identity_checked": true,
+  "mesoschur106650_proved": false,
+  "mesotrans106630_proved": false,
+  "ninety_percent_established": false,
+  "proof_object_sha256": "fabc744ab13cb751e49cf3f6e3e5adbe6a5f09941edb3f71c9bf0d1bed97951b",
+  "rh_established": false,
+  "schema": "riemann.x106650.value-nonnormality.v1",
+  "value_nonnormality_split_checked": true
+}
