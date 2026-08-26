@@ -1316,6 +1316,116 @@ orthogonality, rather than whiten the full Boolean Gram prime by prime. This
 is an exact conditioning diagnosis, not a no-go theorem for
 `AUXCOLORPRIMCAR`.
 
+### 5.9 Collapse to a one-variable Möbius divisor wavelet
+
+The product-shell amplitude is more explicit than a generic orientation
+sum. For squarefree 67-free `N=ab`, coprimality of `a,b` is automatic and
+
+\[
+ \mu(a)\mu(b)=\mu(N),
+\]
+
+independently of the orientation. Define the finite divisor wavelet
+
+\[
+ \mathcal W^\alpha_I(N)
+ =\sum_{a\mid N}
+ \mathcal R\!\left(\log{67^\alpha a^2\over N}\right)
+ \mathbf 1_{\max(67^\alpha a,N/a)\in I}.
+\tag{5.47}
+\]
+
+Then the auxiliary sieve coordinate enters a shell only by coprimality:
+
+\[
+ \boxed{
+ \mathcal A^\alpha_{d,I}(N)
+ =\mathbf 1_{(N,d)=1}{\mu(N)\over\sqrt N}
+ \mathcal W^\alpha_I(N).}
+\tag{5.48}
+\]
+
+Combining (5.40) and (5.48) gives the exact one-variable normal form
+
+\[
+ \boxed{
+ \mathcal C^\alpha_{d,u}(I)
+ =\mu(u)\sqrt u
+ \sum_{\substack{N\in\mathcal N_{67}\ \mathrm{squarefree}\\
+                   u\mid N,\ (N,d)=1}}
+ {\mu(N)\over\sqrt N}\mathcal W^\alpha_I(N).}
+\tag{5.49}
+\]
+
+Writing `N=uM` cancels both the core sign and square root:
+
+\[
+ \boxed{
+ \mathcal C^\alpha_{d,u}(I)
+ =\sum_{\substack{M\in\mathcal N_{67}\ \mathrm{squarefree}\\
+                    (M,u)=1,\ (uM,d)=1}}
+ {\mu(M)\over\sqrt M}\mathcal W^\alpha_I(uM).}
+\tag{5.50}
+\]
+
+Put
+
+\[
+ \mathcal Y^\alpha_u(D,H)
+ =\sum_{\substack{d\le D\ \mathrm{squarefree}\\(d,67u)=1}}{1\over d}
+  \sum_{I\in\mathscr D_H}
+  \left|
+   \sum_{\substack{M\in\mathcal N_{67}\ \mathrm{squarefree}\\
+                     (M,u)=1,\ (M,d)=1}}
+   {\mu(M)\over\sqrt M}\mathcal W^\alpha_I(uM)
+  \right|^2.
+\]
+
+Then the quadratic color gate is exactly the absolutely weighted
+one-variable square-function assembly
+
+\[
+ \boxed{
+ \mathfrak X^\alpha_{\rm color}(D,H)
+ =\sum_{\substack{u\in\mathcal N_{67}\ \mathrm{squarefree}}}
+ {g(u)\over\sqrt u}\mathcal Y^\alpha_u(D,H).}
+\tag{5.51}
+\]
+
+This exposes a concrete sufficient theorem:
+
+\[
+ \boxed{
+ \mathrm{WAVEPRIMCAR}:\qquad
+ \mathcal Y^\alpha_u(D,H)
+ \ll_\eta(2DHu)^\eta}
+\tag{5.52}
+\]
+
+uniformly in squarefree 67-free `u` and the three actual `alpha`
+channels. For `0<eta<1/2`, its outer
+cost is
+`prod_(p!=67)(1+p^eta/((p+1)sqrt(p)))<infinity`.
+Since the assertion is an all-positive-exponent family, exponent renaming
+proves `WAVEPRIMCAR -> AUXCOLORPRIMCAR`. This new gate is unproved;
+it is scientifically useful because its inner object is one-variable rather
+than an individual oriented primitive-pair ray. It is a stronger per-core
+statement than the weighted aggregate `AUXCOLORPRIMCAR`, which does not
+reverse-imply it by positive-norm algebra. One fixed-`eta` theorem would
+not supply the asserted all-exponent family.
+
+This is an exact reduction from a correlated primitive-pair panel to a
+one-variable Möbius divisibility square function with an explicit divisor
+wavelet. There is no Möbius cancellation *within* one product shell: any
+orientation cancellation there comes from the signed ratio kernel and the
+height block. Möbius cancellation occurs across distinct `N` in (5.49).
+The wavelet is neither multiplicative nor positive; at `alpha>0` swapped
+orientations differ, while at `alpha=0` both ordered terms are still counted.
+Classical multiplicative large-sieve, Selberg-form, or summatory methods are
+now plausible tools, but the varying wavelets, divisor multiplicity,
+off-diagonal correlations, and harmonic `d` average still have to be
+controlled. No such estimate is proved here.
+
 ## 6. Firewall against a PRIMCAR or RH misreading
 
 The bounded isomorphism (0.5) acts on full one-variable sequences on
@@ -1387,9 +1497,11 @@ No PRIMCAR, PRIMLS, RH, or GRH estimate is proved. The RH-equivalent statement
 | `RAYPRIMCAR` implies `AUXCOLORPRIMCAR`, which controls the auxiliary rho-sieved energy and the zero mode (5.37)--(5.39) | **PROVED CONDITIONALLY** |
 | direct primitive-pair color formula and support-overlap Gram (5.40)--(5.43) | **PROVED EXACT** |
 | product-shell zeta transform, finite-height inverse, and local spectrum (5.44)--(5.46) | **PROVED EXACT** |
+| one-variable Möbius divisor-wavelet normal form (5.47)--(5.51) | **PROVED EXACT** |
+| `WAVEPRIMCAR` implies `AUXCOLORPRIMCAR` (5.52) | **PROVED CONDITIONALLY; ESTIMATE OPEN** |
 | weighted vector gate (5.3b) over induced tests (5.7) | **OPEN / NOT PROVED** |
 | uniform control over induced tests (5.7) | **STRONGER SUFFICIENT SPECIAL CASE; NOT PROVED** |
-| `GENPRIMCAR`, `RAYPRIMCAR`, `COLLPRIMCAR`, `AUXCOLORPRIMCAR`, or `COLORPRIMCAR` estimate | **OPEN / NOT PROVED** |
+| `GENPRIMCAR`, `RAYPRIMCAR`, `COLLPRIMCAR`, `WAVEPRIMCAR`, `AUXCOLORPRIMCAR`, or `COLORPRIMCAR` estimate | **OPEN / NOT PROVED** |
 | preservation of the original two-ray/dyadic parameter class | **FALSE / EXPLICITLY NOT CLAIMED** |
 | PRIMCAR, PRIMLS, RH, or GRH | **NOT PROVED** |
 

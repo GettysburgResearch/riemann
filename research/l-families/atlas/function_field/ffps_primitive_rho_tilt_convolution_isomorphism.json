@@ -57,17 +57,20 @@
   "compatible_scale_geometry": {
     "coherent_core_gram": {
       "coefficient_normalization_checks": 760,
+      "cofactor_cancellation_checks": 40,
       "configuration_count": 8,
       "direct_pair_bijection_checks": 760,
       "feature_monomial_checksum": 125,
       "gram_pair_checks": 64,
       "kernel": "K(N,M)=prod_(p|gcd(N,M))(1+sqrt(p)/(p+1)); local block [[1,1],[1,1+c_p]] has determinant c_p>0",
+      "one_variable_gate": "WAVEPRIMCAR: Y_u(D,H)<<_eta(2DHu)^eta uniformly; sum_u g(u)/sqrt(u) Y_u equals AUXCOLORPRIMCAR",
       "primes": [
         2,
         3,
         5
       ],
       "scope": "exact finite combinatorial replay; no AUXCOLORPRIMCAR estimate",
+      "shell_orientation_checks": 57,
       "spectral_identity_checks": {
         "characteristic_discriminant": "4+c^2",
         "cholesky_entries": 4,

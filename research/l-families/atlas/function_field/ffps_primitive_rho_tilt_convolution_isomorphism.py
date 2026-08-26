@@ -1139,6 +1139,8 @@ def coherent_core_gram_panel(limit: int = 30) -> dict[str, object]:
     """Replay the direct color bijection and its Boolean overlap Gram."""
     validate_positive_integer(limit)
     pair_bijection_checks = 0
+    shell_orientation_checks = 0
+    cofactor_cancellation_checks = 0
     for d in (1, 5):
         for core in (1, 2, 6):
             if gcd(d, core) != 1:
@@ -1169,6 +1171,26 @@ def coherent_core_gram_panel(limit: int = 30) -> dict[str, object]:
                     ):
                         raise ArithmeticError("coherent-core pair bijection failed")
                     pair_bijection_checks += 1
+
+    for shell in range(1, limit + 1):
+        if mobius(shell) == 0 or gcd(shell, 67) != 1:
+            continue
+        for left in divisors(shell):
+            right = shell // left
+            if gcd(left, right) != 1 or mobius(left) * mobius(right) != mobius(shell):
+                raise ArithmeticError("squarefree shell orientation failed")
+            for d in (1, 5):
+                if (gcd(shell, d) == 1) != (gcd(left * right, d) == 1):
+                    raise ArithmeticError("shell sieve projection failed")
+            shell_orientation_checks += 1
+
+    for core in (1, 2, 6):
+        for cofactor in range(1, limit + 1):
+            if mobius(cofactor) == 0 or gcd(cofactor, 67 * core) != 1:
+                continue
+            if mobius(core) * mobius(core * cofactor) != mobius(cofactor):
+                raise ArithmeticError("core-cofactor sign cancellation failed")
+            cofactor_cancellation_checks += 1
 
     primes = (2, 3, 5)
     configuration_count = 2 ** len(primes)
@@ -1271,6 +1293,7 @@ def coherent_core_gram_panel(limit: int = 30) -> dict[str, object]:
         raise ArithmeticError("formal local Gram spectrum replay failed")
     return {
         "coefficient_normalization_checks": pair_bijection_checks,
+        "cofactor_cancellation_checks": cofactor_cancellation_checks,
         "configuration_count": configuration_count,
         "direct_pair_bijection_checks": pair_bijection_checks,
         "feature_monomial_checksum": feature_monomial_checksum,
@@ -1279,8 +1302,13 @@ def coherent_core_gram_panel(limit: int = 30) -> dict[str, object]:
             "K(N,M)=prod_(p|gcd(N,M))(1+sqrt(p)/(p+1)); "
             "local block [[1,1],[1,1+c_p]] has determinant c_p>0"
         ),
+        "one_variable_gate": (
+            "WAVEPRIMCAR: Y_u(D,H)<<_eta(2DHu)^eta uniformly; "
+            "sum_u g(u)/sqrt(u) Y_u equals AUXCOLORPRIMCAR"
+        ),
         "primes": list(primes),
         "scope": "exact finite combinatorial replay; no AUXCOLORPRIMCAR estimate",
+        "shell_orientation_checks": shell_orientation_checks,
         "spectral_identity_checks": {
             "cholesky_entries": 4,
             "characteristic_discriminant": "4+c^2",
