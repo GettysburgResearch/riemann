@@ -565,8 +565,9 @@ theorem buildLockedActualXiReserveAllocation
     {grouped : GroupedActualXiC2Expansion}
     (verified : PublishedVerifiedHeightTheorem)
     (inputs : ReserveTailInputs grouped) :
-    SourceLockExact verified.sourceLock ∧ ActualXiReserveAllocation grouped :=
-  ⟨verified.sourceLockExact, buildActualXiReserveAllocation inputs⟩
+    SourceLockExact verified.sourceLock ∧
+      Nonempty (ActualXiReserveAllocation grouped) :=
+  ⟨verified.sourceLockExact, ⟨buildActualXiReserveAllocation inputs⟩⟩
 
 end
 

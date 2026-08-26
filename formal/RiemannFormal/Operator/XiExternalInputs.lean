@@ -37,9 +37,9 @@ theorem actualXiInputs_have_concrete_dependencies
     (inputs : ActualXiOrderThreeInputs) :
     SourceLockExact inputs.verified.sourceLock ∧
       CriticalMultiplicityResidual inputs.grouped.selectedReserve ∧
-      ActualXiReserveAllocation inputs.grouped ∧
+      Nonempty (ActualXiReserveAllocation inputs.grouped) ∧
       RegroupedActualXiC2Approximation inputs.grouped inputs.reserve :=
-  ⟨inputs.verified.sourceLockExact, inputs.residual, inputs.reserve,
+  ⟨inputs.verified.sourceLockExact, inputs.residual, ⟨inputs.reserve⟩,
     inputs.paidC2Approximation⟩
 
 end RiemannFormal.Operator
