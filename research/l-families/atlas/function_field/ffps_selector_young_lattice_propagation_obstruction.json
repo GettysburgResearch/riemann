@@ -1,0 +1,97 @@
+{
+  "panels": [
+    {
+      "cycle_dual_mass": "16/5",
+      "degree": 5,
+      "first_nonpositive_index": 2,
+      "first_nonpositive_signed_lower_bound": "-18/5",
+      "first_two_row_potential": "7/5",
+      "forced_depth": 1,
+      "last_positive_signed_lower_bound": "7/5",
+      "maximum_two_row_index": 2
+    },
+    {
+      "cycle_dual_mass": "16",
+      "degree": 8,
+      "first_nonpositive_index": 3,
+      "first_nonpositive_signed_lower_bound": "-24",
+      "first_two_row_potential": "24",
+      "forced_depth": 2,
+      "last_positive_signed_lower_bound": "4",
+      "maximum_two_row_index": 3
+    },
+    {
+      "cycle_dual_mass": "256/5",
+      "degree": 10,
+      "first_nonpositive_index": 3,
+      "first_nonpositive_signed_lower_bound": "-88/5",
+      "first_two_row_potential": "462/5",
+      "forced_depth": 2,
+      "last_positive_signed_lower_bound": "287/5",
+      "maximum_two_row_index": 4
+    },
+    {
+      "cycle_dual_mass": "2048",
+      "degree": 16,
+      "first_nonpositive_index": 5,
+      "first_nonpositive_signed_lower_bound": "-272",
+      "first_two_row_potential": "4080",
+      "forced_depth": 4,
+      "last_positive_signed_lower_bound": "2276",
+      "maximum_two_row_index": 7
+    },
+    {
+      "cycle_dual_mass": "67108864",
+      "degree": 32,
+      "first_nonpositive_index": 12,
+      "first_nonpositive_signed_lower_bound": "-91575112",
+      "first_two_row_potential": "134217696",
+      "forced_depth": 11,
+      "last_positive_signed_lower_bound": "5193248",
+      "maximum_two_row_index": 15
+    },
+    {
+      "cycle_dual_mass": "144115188075855872",
+      "degree": 64,
+      "first_nonpositive_index": 25,
+      "first_nonpositive_signed_lower_bound": "-112808192599754048",
+      "first_two_row_potential": "288230376151711680",
+      "forced_depth": 24,
+      "last_positive_signed_lower_bound": "37581270682045624",
+      "maximum_two_row_index": 31
+    },
+    {
+      "cycle_dual_mass": "1329227995784915872903807060280344576",
+      "degree": 128,
+      "first_nonpositive_index": 53,
+      "first_nonpositive_signed_lower_bound": "-977545960099659209464711631496596608",
+      "first_two_row_potential": "2658455991569831745807614120560689024",
+      "forced_depth": 52,
+      "last_positive_signed_lower_bound": "122823051589792000683492214520739872",
+      "maximum_two_row_index": 63
+    },
+    {
+      "cycle_dual_mass": "226156424291633194186662080095093570025917938800079226639565593765455331328",
+      "degree": 256,
+      "first_nonpositive_index": 110,
+      "first_nonpositive_signed_lower_bound": "-7351226677264575620864225686034177774476178667409737510719246090347823744",
+      "first_two_row_potential": "452312848583266388373324160190187140051835877600158453279131187530910662400",
+      "forced_depth": 109,
+      "last_positive_signed_lower_bound": "108346533762460905112366864636552140317860869508780895545229502508200230656",
+      "maximum_two_row_index": 127
+    }
+  ],
+  "scope": {
+    "all_degree_optimum_proved": false,
+    "constructive_lift_proved": false,
+    "floating_point_used": false,
+    "linear_programming_used": false,
+    "maximum_replay_degree": 256
+  },
+  "theorem": {
+    "asymptotic_depth": "d/2-(1/2+o(1))*sqrt(d*log(d))",
+    "forced_depth": "m_d=max{j<=floor((d-1)/2): binom(d,j)<2^d/d}",
+    "signed_bound": "(-1)^(j-1) X_j >= 2^d/d - binom(d,j)",
+    "status": "necessary condition for every contractive optimal lift"
+  }
+}
