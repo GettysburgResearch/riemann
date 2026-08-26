@@ -1,0 +1,356 @@
+{
+  "barrier": {
+    "beyond_logarithmic_window": false,
+    "k_wise_marginal_is_insufficient": true,
+    "reason": "the target H_C depends on all lower-degree signs from the same marked prime; conditioning it requires the exponential-degree lower-sign modulus",
+    "scale": "ell_r=Theta_q(q^r), hence q^(2j)<<h"
+  },
+  "bounded_replay": {
+    "central_panels": [
+      {
+        "I_q(r)": 8,
+        "beta_r": "35/128",
+        "beta_r_squared": "1225/16384",
+        "j": 1,
+        "q": 3,
+        "r": 3,
+        "simple_squared_majorant": "1/6"
+      },
+      {
+        "I_q(r)": 48,
+        "beta_r": "8061900920775/70368744177664",
+        "beta_r_squared": "64994246456392792826600625/4951760157141521099596496896",
+        "j": 2,
+        "q": 3,
+        "r": 5,
+        "simple_squared_majorant": "5/162"
+      },
+      {
+        "I_q(r)": 40,
+        "beta_r": "34461632205/274877906944",
+        "beta_r_squared": "1187604094232693162025/75557863725914323419136",
+        "j": 1,
+        "q": 5,
+        "r": 3,
+        "simple_squared_majorant": "9/250"
+      }
+    ],
+    "marked_prime_panels": [
+      {
+        "R_divides_C_is_dropped_only_to_enlarge_upper_bound": true,
+        "a_d": 1,
+        "d": 99,
+        "marked_factor_degree": 99,
+        "marked_pair_overcounts_by_m_d": true,
+        "other_channels_have_degree_below_r": true,
+        "r": 3,
+        "top_sign_coefficient": 1,
+        "top_sign_sum": "S_3"
+      },
+      {
+        "R_divides_C_is_dropped_only_to_enlarge_upper_bound": true,
+        "a_d": 2,
+        "d": 99,
+        "marked_factor_degree": 99,
+        "marked_pair_overcounts_by_m_d": true,
+        "other_channels_have_degree_below_r": true,
+        "r": 3,
+        "top_sign_coefficient": 2,
+        "top_sign_sum": "S_3"
+      },
+      {
+        "R_divides_C_is_dropped_only_to_enlarge_upper_bound": true,
+        "a_d": 3,
+        "d": 99,
+        "marked_factor_degree": 99,
+        "marked_pair_overcounts_by_m_d": true,
+        "other_channels_have_degree_below_r": true,
+        "r": 3,
+        "top_sign_coefficient": 3,
+        "top_sign_sum": "S_3"
+      }
+    ],
+    "modulus_panels": [
+      {
+        "all_exact_bounds_hold": true,
+        "maximum_depth": 8,
+        "q": 3
+      },
+      {
+        "all_exact_bounds_hold": true,
+        "maximum_depth": 8,
+        "q": 5
+      },
+      {
+        "all_exact_bounds_hold": true,
+        "maximum_depth": 8,
+        "q": 7
+      },
+      {
+        "all_exact_bounds_hold": true,
+        "maximum_depth": 8,
+        "q": 9
+      }
+    ]
+  },
+  "claim_boundary": {
+    "external_priority_claim": false,
+    "individual_L_function_zero": false,
+    "macroscopic_depth_bound": false,
+    "raw_detector_zeros": true,
+    "rh_or_grh": false
+  },
+  "frozen_sources": {
+    "4fc8930e14eaa3863d3f3edc151c056d7d5aedce:research/l-families/atlas/function_field/QUADRATIC_FAMILY_NOTCH_DEPTH_PHASE_DIAGRAM.md": "01cefa8a55c9b1ae1a0b5bed9c11fe323fb6764e",
+    "9716d2261e9e7843a6c1ffffd67ee8d6756060aa:research/l-families/atlas/function_field/QUADRATIC_FAMILY_CLOSED_PLACE_WEIGHT_NOTCH.md": "a1b8476ddd3cad6f63ff205392426ae9c2d0829c",
+    "cf7b10ef5e50693b9150996e3891da8debb6b180:research/l-families/atlas/function_field/QUADRATIC_FAMILY_LOCAL_DELTA_TOWER_ANTICONCENTRATION.md": "c6c9c27417ccf9521a2b777946e09b09d9184068",
+    "cf7b10ef5e50693b9150996e3891da8debb6b180:research/l-families/atlas/function_field/quadratic_family_local_delta_tower_anticoncentration.json": "91086ee46dea9961cde6d740e424dcfd355761f0",
+    "cf7b10ef5e50693b9150996e3891da8debb6b180:research/l-families/atlas/function_field/quadratic_family_local_delta_tower_anticoncentration.py": "3938f64a81e33349e7e7c9b795a018597ec36f72",
+    "d61323f8c269bdf114d958d6596d0d32bf793efb:research/l-families/atlas/function_field/QUADRATIC_FAMILY_FIXED_DEPTH_TRACE_ZERO_DENSITY.md": "1803cdf033710d2bbb53b83144cbf4b2ae324554",
+    "d61323f8c269bdf114d958d6596d0d32bf793efb:research/l-families/atlas/function_field/quadratic_family_fixed_depth_trace_zero_density.json": "68e17b580208e12756cc3ed9f102407e07765dfd",
+    "d61323f8c269bdf114d958d6596d0d32bf793efb:research/l-families/atlas/function_field/quadratic_family_fixed_depth_trace_zero_density.py": "935c3ddbef1550675384441daa679802d75636a6"
+  },
+  "marked_prime_reduction": {
+    "R_divides_C": "excluded for squarefreeness, then dropped only to enlarge the prime upper bound",
+    "detector": "S_(n,RC)=a_d*S_r+H_C(signs of degrees below r)",
+    "factorization": "Q=R*C with deg R=d and C squarefree d-rough",
+    "fixed_complement": "all a_k and a_d=m_d(C)+1 are fixed",
+    "overcount": "each Q occurs m_d times, so marked pairs majorize Q",
+    "profile_remainder": null,
+    "residue_zero_fraction": "|E_C|/phi(A_r)<=beta_r"
+  },
+  "notation": {
+    "A_r": "product_(deg P<=r) P",
+    "M": "4h+1",
+    "beta_r": "2^(-I_q(r))*binom(I_q(r),floor(I_q(r)/2))",
+    "d": "h-j",
+    "ell_r": "sum_(e<=r) e I_q(e)",
+    "n": "2h+1",
+    "r": "2j+1"
+  },
+  "pnt_ap": {
+    "exact_normalization": "pi_q(d;A,a)=I_q(d)/phi(A)+E_(d,A,a)",
+    "subset_bound": "pi_q(d;A,E)<=beta*q^d/d*(1+(deg(A)+1)q^(deg(A)-d/2))",
+    "uniform_error": "|E_(d,A,a)|<=(deg(A)+1)q^(d/2)/d"
+  },
+  "resource_caps": {
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "finite_field_elements_enumerated": 0,
+    "irreducibles_enumerated": 0,
+    "maximum_replay_depth": 8,
+    "maximum_window_scan": 64,
+    "polynomials_enumerated": 0,
+    "residue_classes_enumerated": 0,
+    "zeros_enumerated": 0
+  },
+  "safe_window": {
+    "condition": "ell_(2J+1)<=(h-J)/4",
+    "logarithmic_corollary": "J<=(1/2-epsilon)log_q(h) is safe for sufficiently large h",
+    "modulus_bounds": "2q^r/3<=ell_r<q^(r+1)/(q-1)",
+    "panels": [
+      {
+        "first_failure_panel": {
+          "M": 26245,
+          "beta_squared_majorant": "7/1458",
+          "d": 6558,
+          "d_greater_than_r": true,
+          "ell_r": 3225,
+          "h": 6561,
+          "j": 3,
+          "q": 3,
+          "r": 7,
+          "rough_layer_weight": "1/43007364",
+          "safe_modulus": false,
+          "twice_pnt_exponent": -108
+        },
+        "h": 6561,
+        "maximum_safe_depth": 2,
+        "q": 3,
+        "terminal_panel": {
+          "M": 26245,
+          "beta_squared_majorant": "5/162",
+          "d": 6559,
+          "d_greater_than_r": true,
+          "ell_r": 345,
+          "h": 6561,
+          "j": 2,
+          "q": 3,
+          "r": 5,
+          "rough_layer_weight": "1/43020481",
+          "safe_modulus": true,
+          "twice_pnt_exponent": -5869
+        }
+      },
+      {
+        "first_failure_panel": {
+          "M": 2125765,
+          "beta_squared_majorant": "11/118098",
+          "d": 531436,
+          "d_greater_than_r": true,
+          "ell_r": 265305,
+          "h": 531441,
+          "j": 5,
+          "q": 3,
+          "r": 11,
+          "rough_layer_weight": "1/282424222096",
+          "safe_modulus": false,
+          "twice_pnt_exponent": -826
+        },
+        "h": 531441,
+        "maximum_safe_depth": 4,
+        "q": 3,
+        "terminal_panel": {
+          "M": 2125765,
+          "beta_squared_majorant": "1/1458",
+          "d": 531437,
+          "d_greater_than_r": true,
+          "ell_r": 29361,
+          "h": 531441,
+          "j": 4,
+          "q": 3,
+          "r": 9,
+          "rough_layer_weight": "1/282425284969",
+          "safe_modulus": true,
+          "twice_pnt_exponent": -472715
+        }
+      },
+      {
+        "first_failure_panel": {
+          "M": 172186885,
+          "beta_squared_majorant": "5/3188646",
+          "d": 43046714,
+          "d_greater_than_r": true,
+          "ell_r": 21519681,
+          "h": 43046721,
+          "j": 7,
+          "q": 3,
+          "r": 15,
+          "rough_layer_weight": "1/1853019586197796",
+          "safe_modulus": false,
+          "twice_pnt_exponent": -7352
+        },
+        "h": 43046721,
+        "maximum_safe_depth": 6,
+        "q": 3,
+        "terminal_panel": {
+          "M": 172186885,
+          "beta_squared_majorant": "13/1062882",
+          "d": 43046715,
+          "d_greater_than_r": true,
+          "ell_r": 2390265,
+          "h": 43046721,
+          "j": 6,
+          "q": 3,
+          "r": 13,
+          "rough_layer_weight": "1/1853019672291225",
+          "safe_modulus": true,
+          "twice_pnt_exponent": -38266185
+        }
+      },
+      {
+        "first_failure_panel": {
+          "M": 13947137605,
+          "beta_squared_majorant": "19/774840978",
+          "d": 3486784392,
+          "d_greater_than_r": true,
+          "ell_r": 1743361569,
+          "h": 3486784401,
+          "j": 9,
+          "q": 3,
+          "r": 19,
+          "rough_layer_weight": "1/12157665396294809664",
+          "safe_modulus": false,
+          "twice_pnt_exponent": -61254
+        },
+        "h": 3486784401,
+        "maximum_safe_depth": 8,
+        "q": 3,
+        "terminal_panel": {
+          "M": 13947137605,
+          "beta_squared_majorant": "17/86093442",
+          "d": 3486784393,
+          "d_greater_than_r": true,
+          "ell_r": 193700001,
+          "h": 3486784401,
+          "j": 8,
+          "q": 3,
+          "r": 17,
+          "rough_layer_weight": "1/12157665403268378449",
+          "safe_modulus": true,
+          "twice_pnt_exponent": -3099384391
+        }
+      },
+      {
+        "first_failure_panel": {
+          "M": 1562501,
+          "beta_squared_majorant": "27/3906250",
+          "d": 390621,
+          "d_greater_than_r": true,
+          "ell_r": 2440465,
+          "h": 390625,
+          "j": 4,
+          "q": 5,
+          "r": 9,
+          "rough_layer_weight": "1/152584765641",
+          "safe_modulus": false,
+          "twice_pnt_exponent": 4490309
+        },
+        "h": 390625,
+        "maximum_safe_depth": 3,
+        "q": 5,
+        "terminal_panel": {
+          "M": 1562501,
+          "beta_squared_majorant": "21/156250",
+          "d": 390622,
+          "d_greater_than_r": true,
+          "ell_r": 97465,
+          "h": 390625,
+          "j": 3,
+          "q": 5,
+          "r": 7,
+          "rough_layer_weight": "1/152585546884",
+          "safe_modulus": true,
+          "twice_pnt_exponent": -195692
+        }
+      },
+      {
+        "first_failure_panel": {
+          "M": 976562501,
+          "beta_squared_majorant": "39/2441406250",
+          "d": 244140619,
+          "d_greater_than_r": true,
+          "ell_r": 1525858585,
+          "h": 244140625,
+          "j": 6,
+          "q": 5,
+          "r": 13,
+          "rough_layer_weight": "1/59604641845703161",
+          "safe_modulus": false,
+          "twice_pnt_exponent": 2807576551
+        },
+        "h": 244140625,
+        "maximum_safe_depth": 5,
+        "q": 5,
+        "terminal_panel": {
+          "M": 976562501,
+          "beta_squared_majorant": "33/97656250",
+          "d": 244140620,
+          "d_greater_than_r": true,
+          "ell_r": 61031065,
+          "h": 244140625,
+          "j": 5,
+          "q": 5,
+          "r": 11,
+          "rough_layer_weight": "1/59604642333984400",
+          "safe_modulus": true,
+          "twice_pnt_exponent": -122078490
+        }
+      }
+    ],
+    "sum": "sum_(j=1)^J Z_(q,h,j)/q^M=O_q(h^-2)=O_q(M^-2)"
+  },
+  "schema": "riemann.function_field.logarithmic_depth_zero_firewall.v1",
+  "status": "uniform marked-prime raw-zero bound and logarithmic growing-depth summation theorem",
+  "whole_layer_bound": "Z_(q,h,j)/q^M<=beta_r/d^2*(1+(ell_r+1)q^(ell_r-d/2))"
+}
