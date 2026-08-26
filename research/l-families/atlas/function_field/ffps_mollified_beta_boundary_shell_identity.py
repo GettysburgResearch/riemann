@@ -246,7 +246,9 @@ def cell_difference(cells: tuple[Fraction, ...]) -> tuple[Fraction, ...]:
     if not cells:
         return ()
     extended = (Fraction(0),) + cells + (Fraction(0),)
-    return tuple(extended[index + 1] - extended[index] for index in range(len(cells) + 1))
+    return tuple(
+        extended[index + 1] - extended[index] for index in range(len(cells) + 1)
+    )
 
 
 def boundary_sample() -> dict[str, object]:
@@ -346,9 +348,7 @@ def run() -> dict[str, object]:
             "regularity": "compact ordinary BV function",
             "laplace_multiplier": "M_ext(s)/s (removable at s=0)",
             "base_primitive": "w(t)=1_[0,infinity)*(13+3t-8exp(t/2))",
-            "base_derivative": (
-                "D*w=5*delta_0+(3-4exp(t/2))*1_[0,infinity)dt"
-            ),
+            "base_derivative": ("D*w=5*delta_0+(3-4exp(t/2))*1_[0,infinity)dt"),
         },
         "odd_fiber_compression": {
             "source_identity": (
@@ -359,24 +359,18 @@ def run() -> dict[str, object]:
             "source_samples_beta_m_beta_2m_beta_4m": source_samples,
             "kernel_polynomial_C": [qstr(value) for value in expected_kernel],
             "compressed_polynomial_P": [qstr(value) for value in expected_odd],
-            "factorization": (
-                "P(z)=(1-z)^2*(1-sqrt(2)z)^2*(1-z/sqrt(2))"
-            ),
+            "factorization": ("P(z)=(1-z)^2*(1-sqrt(2)z)^2*(1-z/sqrt(2))"),
             "tail_annihilation": {
                 "P(1)": qstr(qeval(odd_polynomial, one)),
                 "P_prime(1)": qstr(qeval(qderivative(odd_polynomial), one)),
-                "P(1/sqrt(2))": qstr(
-                    qeval(odd_polynomial, inverse_sqrt_two)
-                ),
+                "P(1/sqrt(2))": qstr(qeval(odd_polynomial, inverse_sqrt_two)),
                 "P_prime(1/sqrt(2))": qstr(
                     qeval(qderivative(odd_polynomial), inverse_sqrt_two)
                 ),
             },
             "compressed_kernel": "psi=P(tau_log(2))*w",
             "compressed_kernel_support": "[0,5*log(2)]",
-            "boundary_field": (
-                "G(t)=sum_(m odd) beta(m)/sqrt(m)*psi(t-log(m))"
-            ),
+            "boundary_field": ("G(t)=sum_(m odd) beta(m)/sqrt(m)*psi(t-log(m))"),
         },
         "finite_difference": {
             "all_fixed_epsilon": "h_epsilon=(I-tau_epsilon)G/epsilon",
@@ -405,12 +399,8 @@ def run() -> dict[str, object]:
                 str(value) for value in expected_reflection_primitive
             ],
             "primitive": "G=R(D)*I_1",
-            "finite_horizon": (
-                "G=(3/4)N_(1,R)-2R(D)O_(1,R) for x<R"
-            ),
-            "norm_removal": (
-                "(I-tau_epsilon) kills the constant (3/4)N_(1,R) exactly"
-            ),
+            "finite_horizon": ("G=(3/4)N_(1,R)-2R(D)O_(1,R) for x<R"),
+            "norm_removal": ("(I-tau_epsilon) kills the constant (3/4)N_(1,R) exactly"),
         },
         "equivalence": {
             "criterion": (

@@ -42,12 +42,8 @@ class FfpsMollifiedBetaBoundaryShellIdentityTest(unittest.TestCase):
         inverse_sqrt_two = (Fraction(0), Fraction(1, 2))
         self.assertEqual(beta_boundary_shell.qeval(polynomial, one), zero)
         self.assertEqual(beta_boundary_shell.qeval(derivative, one), zero)
-        self.assertEqual(
-            beta_boundary_shell.qeval(polynomial, inverse_sqrt_two), zero
-        )
-        self.assertEqual(
-            beta_boundary_shell.qeval(derivative, inverse_sqrt_two), zero
-        )
+        self.assertEqual(beta_boundary_shell.qeval(polynomial, inverse_sqrt_two), zero)
+        self.assertEqual(beta_boundary_shell.qeval(derivative, inverse_sqrt_two), zero)
 
     def test_complete_beta_two_adic_pairing(self) -> None:
         for odd in (1, 3, 9, 67, 201, 335):
