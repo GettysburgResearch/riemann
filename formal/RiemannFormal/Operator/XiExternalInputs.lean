@@ -28,7 +28,8 @@ theorem criticalMultiplicityResidual_exact
     | mk gamma multiplicity gamma_pos one_le_multiplicity zeta_zero
         multiplicity_eq_analyticOrder =>
       simp [criticalOrbitJet, criticalUnitJet, jetAdd, jetScale]
-      congr <;> ring
+      ring_nf
+      all_goals simp
 
 /-- Every repaired headline input exposes the precise finite-height theorem,
 grouped actual-Xi expansion, multiplicity residual, and one-use reserve ledger.

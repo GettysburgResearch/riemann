@@ -177,9 +177,13 @@ theorem orbitV_eq_U_mul_one_sub_s
     (hU : orbitU o t ≠ 0) :
     t + reserveRadius reserve =
       orbitU o t * (1 - orbitS reserve o t) := by
-  unfold orbitS orbitGap orbitU orbitC reserveRadius
-  field_simp [hU]
-  ring
+  unfold orbitS
+  calc
+    t + reserveRadius reserve = orbitU o t - orbitGap reserve o := by
+      unfold orbitGap orbitU
+      ring
+    _ = orbitU o t * (1 - orbitGap reserve o / orbitU o t) := by
+      field_simp [hU]
 
 /-- Exact coordinate identity `B²=kappa*s²*U²`. -/
 theorem orbitB_sq_eq_kappa_s_sq_U_sq
@@ -190,7 +194,6 @@ theorem orbitB_sq_eq_kappa_s_sq_U_sq
       orbitKappa reserve o * orbitS reserve o t ^ 2 * orbitU o t ^ 2 := by
   unfold orbitKappa orbitS
   field_simp [hgap, hU]
-  ring
 
 /-- Algebraic cross-curvature identity in the reviewed `(U,s,kappa)`
 coordinates. -/
@@ -205,6 +208,7 @@ theorem oneOrbit_cross_curvature_coordinates
       16 * m * s ^ 2 * qKappa kappa s /
         (U ^ 4 * (1 + kappa * s ^ 2) ^ 3 * (1 - s) ^ 3) := by
   subst V
+  simp only [Jet2.cross, Jet2.offLineJet, Jet2.criticalJet]
   rw [hB]
   have hden : U ^ 2 + kappa * s ^ 2 * U ^ 2 ≠ 0 := by
     have hU2 : U ^ 2 ≠ 0 := pow_ne_zero 2 hU
@@ -213,8 +217,8 @@ theorem oneOrbit_cross_curvature_coordinates
           U ^ 2 * (1 + kappa * s ^ 2) := by ring
     rw [hfactor]
     exact mul_ne_zero hU2 hOnePlus
-  field_simp [Jet2.cross, Jet2.offLineJet, Jet2.criticalJet, qKappa,
-    hU, hOneSubS, hOnePlus, hden]
+  unfold qKappa
+  field_simp [hU, hOneSubS, hOnePlus, hden]
   ring
 
 /-- Source-specific cross curvature from L-92101, with all domain hypotheses
@@ -250,7 +254,7 @@ theorem reflectedOffLine_defect_formula
   have hden : orbitU o t ^ 2 + orbitB o ^ 2 ≠ 0 := by
     have hU2 : 0 < orbitU o t ^ 2 := sq_pos_of_ne_zero hU
     nlinarith [sq_nonneg (orbitB o)]
-  simpa [sourceOffLineJet, orbitDefect] using
+  simpa [sourceOffLineJet, orbitDefect, neg_div] using
     (Jet2.offLineOrbit_defect_formula
       (m := (o.multiplicity : ℝ)) (U := orbitU o t) (B := orbitB o) hden)
 
@@ -294,7 +298,6 @@ theorem oneOrbit_defect_coordinates
     rw [hfactor]
     exact mul_ne_zero hU2 hOnePlus
   field_simp [hU, hOnePlus, hden]
-  ring
 
 /-- The reviewed choice `epsilon=2m*kappa/(1-kappa)` pays the complete local
 curvature defect. -/
@@ -353,8 +356,15 @@ theorem oneOrbit_epsilon_pays_coordinates
   have hlower :
       16 * m * s ^ 2 * ((1 - kappa) / D) ≤ crossValue := by
     rw [hcross]
-    have hmul := mul_le_mul_of_nonneg_left hfrac hfactor
-    simpa [D, mul_assoc] using hmul
+    calc
+      16 * m * s ^ 2 * ((1 - kappa) / D) ≤
+          16 * m * s ^ 2 *
+            (qKappa kappa s / (D * (1 - s) ^ 3)) :=
+        mul_le_mul_of_nonneg_left hfrac hfactor
+      _ = 16 * m * s ^ 2 * qKappa kappa s /
+          (U ^ 4 * (1 + kappa * s ^ 2) ^ 3 * (1 - s) ^ 3) := by
+        dsimp [D]
+        ring
   have hepsilon : 0 ≤ 2 * m * kappa / (1 - kappa) :=
     div_nonneg (mul_nonneg (mul_nonneg (by norm_num) hm) hk0)
       (le_of_lt hOneMinusK)
@@ -396,7 +406,7 @@ theorem orbitEpsilon_le_nine_mul_tail
       (show 0 ≤ 4 * m by positivity)
     calc
       4 * m * kappa ≤ 4 * m * (9 / (4 * o.b ^ 2)) := h
-      _ = 9 * m / o.b ^ 2 := by field_simp [hb]; ring
+      _ = 9 * m / o.b ^ 2 := by field_simp [hb]
   calc
     orbitEpsilon reserve o = 2 * m * kappa / (1 - kappa) := rfl
     _ ≤ 4 * m * kappa := hfirst
@@ -486,7 +496,7 @@ structure ReserveTailInputs
 /-- Construct the exact finite-prefix global reserve ledger. Every share is
 nonnegative, every orbit is paid, total use is at most one, and the leftover is
 nonnegative and used exactly once. -/
-theorem buildActualXiReserveAllocation
+noncomputable def buildActualXiReserveAllocation
     {grouped : GroupedActualXiC2Expansion}
     (inputs : ReserveTailInputs grouped) :
     ActualXiReserveAllocation grouped := by
@@ -496,12 +506,15 @@ theorem buildActualXiReserveAllocation
   have hshareNonnegative : ∀ i : ℕ, 0 ≤ share i := by
     intro i
     have hdom := reviewedOneOrbitDomain_of_source grouped.selectedReserve
-      (grouped.offLineEnumeration i) (by norm_num)
+      (grouped.offLineEnumeration i) (t := 1) (by norm_num)
     have hden : 0 < 1 - orbitKappa grouped.selectedReserve
         (grouped.offLineEnumeration i) := by
       linarith [hdom.kappa_lt_half]
     dsimp [share, orbitEpsilon]
-    positivity
+    apply div_nonneg
+    · exact mul_nonneg (mul_nonneg (by norm_num) (by positivity))
+        hdom.kappa_nonnegative
+    · exact le_of_lt hden
   have htailNonnegative :
       ∀ i : ℕ, 0 ≤ orbitTail (grouped.offLineEnumeration i) := by
     intro i
@@ -513,7 +526,7 @@ theorem buildActualXiReserveAllocation
     simpa [share] using
       orbitEpsilon_le_nine_mul_tail
         (reviewedOneOrbitDomain_of_source grouped.selectedReserve
-          (grouped.offLineEnumeration i) (by norm_num))
+          (grouped.offLineEnumeration i) (t := 1) (by norm_num))
   have htotal : ∀ N : ℕ, (∑ i ∈ Finset.range N, share i) ≤ 1 := by
     intro N
     have hsum :
@@ -529,7 +542,17 @@ theorem buildActualXiReserveAllocation
       rw [Finset.mul_sum]
     rw [hscale] at hsum
     have htail := inputs.reciprocalSquareTail N
-    nlinarith [inputs.numericalBudget]
+    have hbudget :
+        (∑ i ∈ Finset.range N, share i) ≤
+          18 * (Real.log verifiedHeight + 1) / verifiedHeight := by
+      calc
+        (∑ i ∈ Finset.range N, share i) ≤
+            9 * ∑ i ∈ Finset.range N,
+              orbitTail (grouped.offLineEnumeration i) := hsum
+        _ ≤ 9 * (2 * (Real.log verifiedHeight + 1) / verifiedHeight) :=
+          mul_le_mul_of_nonneg_left htail (by norm_num)
+        _ = 18 * (Real.log verifiedHeight + 1) / verifiedHeight := by ring
+    exact le_of_lt (lt_of_le_of_lt hbudget inputs.numericalBudget)
   refine
     { share := share
       share_eq := ?_
