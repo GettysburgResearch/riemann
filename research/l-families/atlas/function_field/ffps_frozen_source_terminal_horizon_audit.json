@@ -1,0 +1,100 @@
+{
+  "cutoff_crossing_counterfixture": {
+    "2Y": 33554432,
+    "U_2Y": 17,
+    "U_Y": 16,
+    "Y": 16777216,
+    "Y_over_physical_product": "8388608/1603083",
+    "b_U2Y(core)": "0",
+    "b_UY(core)": "2",
+    "base_exponent": 24,
+    "canonical_base_share": "1/3",
+    "canonical_next_share": "0",
+    "canonical_owner_pair_count": 6,
+    "conclusion": "the same live labelled balanced coordinate at cutoff 16 is absent after the next-horizon cutoff is reset to 17",
+    "core_primes": [
+      17,
+      43
+    ],
+    "extra_support_endpoint_for_atom": 51298656,
+    "native_source_window": [
+      2097152,
+      33554432
+    ],
+    "owners": [
+      2,
+      3
+    ],
+    "physical_product": 3206166
+  },
+  "fixed_source_support_theorem": {
+    "conclusion": "anti-causal inversion is constant-horizon for the exact physical-product projection of one frozen source",
+    "dyadic_shells_across_full_extra_support": 8,
+    "exact_native_source_projection": [
+      "Y/8",
+      "2Y"
+    ],
+    "extra_kernel_support_ratio": [
+      1,
+      16
+    ],
+    "maximum_future_inverse_depth_from_X_in_[Y,2Y]": 5,
+    "native_block": [
+      "Y",
+      "2Y"
+    ],
+    "native_kernel_support_ratio": [
+      1,
+      8
+    ],
+    "projected_extra_current_support": [
+      "Y/8",
+      "32Y"
+    ],
+    "projected_native_current_support": [
+      "Y/8",
+      "16Y"
+    ],
+    "terminal_horizon_dilation": 32
+  },
+  "frozen_sources": {
+    "98af0db6ec7f77d6333a77a3dac53c4698852f43": {
+      "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md": "346cc52420ec65457c2a5accc045d4a85635cc24",
+      "claims/lemmas/L-106132-boolean-half-source-least-prime-calderon-row.md": "f393a1d8583c5680b98a4b3e26d9b5a61c8d2b7a",
+      "claims/lemmas/L-106133-canonical-equal-pair-boolean-source-is-a-beta-half-source-square.md": "b988b14eb982504a799158eed4c76e7f033c96f0",
+      "claims/lemmas/L-106134-common-mother-is-a-differential-self-convolution.md": "cf40354ff8810a2d4bea9459cf142c300ba36237",
+      "claims/theorems/T-106150-same-half-source-analytic-square-frontier.md": "ac15f0106a26303f06779feb484a521978fe3ecf"
+    },
+    "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc": {
+      "claims/lemmas/L-102735-four-octave-localization-of-the-radial-frontier.md": "cb0f305b4e26b3f8553c7f6fe4bab5097b1ab97e",
+      "claims/lemmas/L-102880-logarithmic-derivative-outer-detector-has-zero-square-lattice-moment.md": "d7330d114ebba1a7a16e22fa9ba6aa6b5eb7cdd6",
+      "claims/lemmas/L-102886-dyadic-frozen-vaughan-cutoff-removes-transfer-atoms.md": "26abf63b6a69c449f89313b151931b2dc71a42ad",
+      "claims/lemmas/L-102887-horizon-safe-pair-gauge-eliminates-the-largest-two-smooth-boundary.md": "383aa27fee269645e45c26c12fbd4a97a6b337a8",
+      "claims/lemmas/L-102959-incidence-masked-centered-phase-packing.md": "59f12fea22bc1871f160cf280baf62155225fdd2",
+      "claims/lemmas/L-102962-canonical-equal-pair-gauge-is-horizon-safe-on-the-boolean-balanced-source.md": "d8f4557df6dc37e6b605b1821c5b8ab028136398",
+      "claims/theorems/T-102990-equal-pair-boolean-core-incidence-frontier.md": "b319572db9ecc89bc528b85368cbf49aa13206d0"
+    }
+  },
+  "projection_firewall": {
+    "complement": 7,
+    "complete": 0,
+    "complete_negative_mass": 0,
+    "selected": -7,
+    "selected_negative_mass": 7
+  },
+  "resource_caps": {
+    "boolean_labels": 4,
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "dyadic_horizons": 2,
+    "maximum_boolean_subsets_per_support": 4,
+    "maximum_dyadic_depth": 5,
+    "point_counts": 0
+  },
+  "typed_conclusion": {
+    "not_implied_by_frozen_WKSFSC": "negative mass of that same cutoff-and-shell-projected source on [Y/8,32Y]",
+    "proved": "the shell-projected source has a fixed 32Y terminal horizon",
+    "smallest_new_gate": "uniform same-U Jordan negative-mass control for each exact physical source shell on its complete [Y/8,32Y] support",
+    "type_I_repair_boundary": "cutoff drift is algebraically a difference of Type-I rows; extra-notched absolute closure of that difference is not in the frozen claims"
+  }
+}
