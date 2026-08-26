@@ -558,9 +558,10 @@ theorem buildActualXiReserveAllocation
     dsimp [leftover]
     ring
 
-/-- Source-locked wrapper for the canonical critical-reserve semantic node.
-The external theorem lock is returned alongside the exact one-use allocation,
-so provenance is not an inert annotation. -/
+/-- Source-locked existence wrapper for the canonical critical-reserve semantic
+node.  The external theorem lock is returned alongside existence of an exact
+one-use allocation; `buildActualXiReserveAllocation` remains the concrete
+data-producing API. -/
 theorem buildLockedActualXiReserveAllocation
     {grouped : GroupedActualXiC2Expansion}
     (verified : PublishedVerifiedHeightTheorem)
