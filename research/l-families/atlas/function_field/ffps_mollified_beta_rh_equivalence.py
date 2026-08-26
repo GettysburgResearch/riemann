@@ -11,7 +11,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
-SOURCE_COMMIT = "3f10a6be2"
+SOURCE_COMMIT = "3f10a6be2009f8e499b1bd421fd97b2095a82b06"
 SOURCE_BLOBS = {
     (
         "research/l-families/atlas/function_field/"

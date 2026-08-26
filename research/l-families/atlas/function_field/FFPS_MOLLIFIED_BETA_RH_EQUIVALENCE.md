@@ -210,19 +210,33 @@ where
 \tag{4.2}
 \]
 
-The box multiplier is nonzero in `Re(s)>0`, while `M_ext` is nonzero in
-`0<Re(s)<1/2`.  A zeta zero `rho` with `Re(rho)>1/2` therefore creates a
-genuine pole of (4.1) at `s=rho-1/2`.
+The right side of (4.1) continues meromorphically to `Re(s)>0`.  The box
+multiplier is nonzero there, while `M_ext` is nonzero in
+`0<Re(s)<1/2`.  By the classical critical-strip localization, a nontrivial
+zeta zero `rho` with `Re(rho)>1/2` has `0<Re(rho-1/2)<1/2`; it therefore
+creates a genuine pole of (4.1) at `s=rho-1/2`.
 
-Assume (iii).  The Laplace transform of `h_epsilon^-` is holomorphic in the
-right half-plane.  Unconditionally `|beta(n)|<=2` and compact support of
-`kappa_epsilon` give the finite exponential bound needed for the positive
-part.  The transform (4.1) is holomorphic at every positive real point.
-Landau's theorem applied to the nonnegative density `h_epsilon^+` therefore
-forces its abscissa of convergence to be at most zero.  Hence (4.1) has no
-pole in `Re(s)>0`, excluding every zeta zero to the right of the critical
-line.  The functional equation excludes the reflected zeros.  This proves
-(iii) implies (i).
+Assume (iii), and let `N(s)` be the Laplace transform of
+`h_epsilon^-`.  The subpower premise makes `N` holomorphic in `Re(s)>0`.
+Unconditionally `|beta(n)|<=2` and compact support of `kappa_epsilon` give
+`h_epsilon^+` a finite Laplace abscissa.  If that abscissa `sigma_c` were
+positive, then, initially in `Re(s)>1/2`,
+
+\[
+ \int_0^\infty h_\varepsilon^+(t)e^{-st}\,dt
+ =\widehat h_\varepsilon(s)+N(s).
+\tag{4.3}
+\]
+
+The right side is holomorphic near the positive real point `sigma_c`,
+because (4.1) is holomorphic at every positive real point.  This contradicts
+Landau's theorem for the nonnegative density `h_epsilon^+`.  (If that density
+vanishes identically, the same conclusion is immediate.)  Thus
+`sigma_c<=0`.  Both positive and negative transforms now converge in
+`Re(s)>0`, so their difference makes (4.1) holomorphic there.  Hence (4.1)
+has no pole in `Re(s)>0`, excluding every zeta zero to the right of the
+critical line.  The functional equation excludes the reflected zeros.  This
+proves (iii) implies (i).
 
 This direction applies directly to the **mollified density**.  It does not
 pass through the refuted raw Jordan premise.
