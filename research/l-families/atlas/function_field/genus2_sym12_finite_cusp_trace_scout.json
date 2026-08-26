@@ -1,0 +1,322 @@
+{
+  "coefficient_provenance": {
+    "database_orbit_label_used": false,
+    "in_packet_reconstruction": "The displayed coefficients through Q^7 are independently rebuilt from the committed f_(8,2), g_(10,2) rows and exact E_4,E_6 series.",
+    "primary_reference": "Clery--van der Geer (2018), pp. 1139--1140, explicit f_- weight-14 level-2 expansion and Fricke sign",
+    "url": "https://ems.press/content/serial-article-files/26421"
+  },
+  "definitions": {
+    "H_12": "q*(q-1)*Hhat_12",
+    "Hhat_12": "T_(12,0)+2*q+9+4*Theta_Delta+Theta_(8,2)+Theta_(10,2)",
+    "T_(12,0)": "sum_D r_D(12)/(q*(q-1))",
+    "reciprocal_series": "1/(1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4)=sum_(n>=0) r_D(n)*u^n"
+  },
+  "explicit_weight_14_level_2_target": {
+    "E_4_coefficients_Q0_through_Q7": [
+      1,
+      240,
+      2160,
+      6720,
+      17520,
+      30240,
+      60480,
+      82560
+    ],
+    "E_6_coefficients_Q0_through_Q7": [
+      1,
+      -504,
+      -16632,
+      -122976,
+      -532728,
+      -1575504,
+      -4058208,
+      -8471232
+    ],
+    "Fricke_sign": -1,
+    "coefficients_Q0_through_Q7": [
+      0,
+      1,
+      64,
+      1236,
+      4096,
+      -57450,
+      79104,
+      64232
+    ],
+    "construction": "f_-(Q)=(f_(8,2)(Q)*E_6(Q)+3*g_(10,2)(Q)*E_4(Q))/4",
+    "display": "Q+64*Q^2+1236*Q^3+4096*Q^4-57450*Q^5+79104*Q^6+64232*Q^7+O(Q^8)",
+    "f_(8,2)_coefficients_Q0_through_Q7": [
+      0,
+      1,
+      -8,
+      12,
+      64,
+      -210,
+      -96,
+      1016
+    ],
+    "g_(10,2)_coefficients_Q0_through_Q7": [
+      0,
+      1,
+      16,
+      -156,
+      256,
+      870,
+      -2496,
+      -952
+    ],
+    "name": "f_minus_explicit_Fricke_negative_target",
+    "normalization": "coefficient of Q is 1",
+    "status": "EXACT_Q_EXPANSION_FROM_LOCKED_ROWS_THROUGH_Q7"
+  },
+  "finite_match": {
+    "equivalent_T_identity_on_tested_rows": "T_(12,0)(p)=-p*a_p(f_-)-2*p-9-4*Theta_Delta(p)-Theta_(8,2)(p)-Theta_(10,2)(p)",
+    "identity_on_tested_rows": "Hhat_12(p)=-p*a_p(f_-), p in {3,5,7}",
+    "status": "EXACT_THREE_PRIME_MATCH_NOT_AN_INTERPOLATION_THEOREM"
+  },
+  "finite_rows": [
+    {
+      "-p*a_p(f_-)": -3708,
+      "H_12": -22248,
+      "Hhat_12": -3708,
+      "T_(12,0)": -4587,
+      "a_p(f_-)": 1236,
+      "finite_match": true,
+      "historical_complete_scan_candidates": 243,
+      "joint_law_atoms_replayed": 32,
+      "lower_recurrence_checks": {
+        "r10": {
+          "committed_control_total": 3828,
+          "expected_formula": "q*(q-1)*((q-1)*Theta_Delta(q)-Theta_(8,2)(q)-Theta_(10,2)(q)-q-7)",
+          "expected_total": 3828,
+          "match": true
+        },
+        "r6": {
+          "expected_formula": "-4*q*(q-1)",
+          "expected_total": -24,
+          "match": true
+        },
+        "r8": {
+          "expected_formula": "q*(q-1)*(-Theta_(8,2)(q)-q-6)",
+          "expected_total": -126,
+          "match": true
+        }
+      },
+      "member_coefficient_ledger_sha256": "e38543c4526e6b330f012274398a258f2d021ddae18442d2f0094d42ec229790",
+      "modular_traces": {
+        "Theta_(10,2)": -156,
+        "Theta_(8,2)": 12,
+        "Theta_Delta": 252
+      },
+      "q": 3,
+      "reciprocal_totals": {
+        "sum_D_r_D(10)": 3828,
+        "sum_D_r_D(12)": -27522,
+        "sum_D_r_D(6)": -24,
+        "sum_D_r_D(8)": -126
+      },
+      "squarefree_family_members": 162
+    },
+    {
+      "-p*a_p(f_-)": 287250,
+      "H_12": 5745000,
+      "Hhat_12": 287250,
+      "T_(12,0)": 267251,
+      "a_p(f_-)": -57450,
+      "finite_match": true,
+      "historical_complete_scan_candidates": 3125,
+      "joint_law_atoms_replayed": 81,
+      "lower_recurrence_checks": {
+        "r10": {
+          "committed_control_total": 372960,
+          "expected_formula": "q*(q-1)*((q-1)*Theta_Delta(q)-Theta_(8,2)(q)-Theta_(10,2)(q)-q-7)",
+          "expected_total": 372960,
+          "match": true
+        },
+        "r6": {
+          "expected_formula": "-4*q*(q-1)",
+          "expected_total": -80,
+          "match": true
+        },
+        "r8": {
+          "expected_formula": "q*(q-1)*(-Theta_(8,2)(q)-q-6)",
+          "expected_total": 3980,
+          "match": true
+        }
+      },
+      "member_coefficient_ledger_sha256": "69fe496e1cca2090ca62bf7622ff34c3ab3aef1b9268dfb41c4df94d380a9d0a",
+      "modular_traces": {
+        "Theta_(10,2)": 870,
+        "Theta_(8,2)": -210,
+        "Theta_Delta": 4830
+      },
+      "q": 5,
+      "reciprocal_totals": {
+        "sum_D_r_D(10)": 372960,
+        "sum_D_r_D(12)": 5345020,
+        "sum_D_r_D(6)": -80,
+        "sum_D_r_D(8)": 3980
+      },
+      "squarefree_family_members": 2500
+    },
+    {
+      "-p*a_p(f_-)": -449624,
+      "H_12": -18884208,
+      "Hhat_12": -449624,
+      "T_(12,0)": -382735,
+      "a_p(f_-)": 64232,
+      "finite_match": true,
+      "historical_complete_scan_candidates": 16807,
+      "joint_law_atoms_replayed": 138,
+      "lower_recurrence_checks": {
+        "r10": {
+          "committed_control_total": -4222764,
+          "expected_formula": "q*(q-1)*((q-1)*Theta_Delta(q)-Theta_(8,2)(q)-Theta_(10,2)(q)-q-7)",
+          "expected_total": -4222764,
+          "match": true
+        },
+        "r6": {
+          "expected_formula": "-4*q*(q-1)",
+          "expected_total": -168,
+          "match": true
+        },
+        "r8": {
+          "expected_formula": "q*(q-1)*(-Theta_(8,2)(q)-q-6)",
+          "expected_total": -43218,
+          "match": true
+        }
+      },
+      "member_coefficient_ledger_sha256": "c1d4ca30f45341de53af20ab4e4ca3f9bff79542146f1ac2230169eec9669655",
+      "modular_traces": {
+        "Theta_(10,2)": -952,
+        "Theta_(8,2)": 1016,
+        "Theta_Delta": -16744
+      },
+      "q": 7,
+      "reciprocal_totals": {
+        "sum_D_r_D(10)": -4222764,
+        "sum_D_r_D(12)": -16074870,
+        "sum_D_r_D(6)": -168,
+        "sum_D_r_D(8)": -43218
+      },
+      "squarefree_family_members": 14406
+    }
+  ],
+  "firewalls": [
+    "FINITE INTERPOLATION FIREWALL: equality at p=3,5,7 does not imply an identity at any fourth q; corrections divisible by (q-3)*(q-5)*(q-7) are invisible here.",
+    "PRIME-POWER FIREWALL: for q=p^r, a Frobenius-power trace alpha_p^r+beta_p^r is not the naive composite-index Fourier coefficient a_(p^r); this packet tests no r>1 row.",
+    "The explicit q-expansion, not an ambiguous database orbit label, defines f_- in this packet.",
+    "No motive, compatible system, Yoshida/endoscopic summand, or cohomological identification is proved by the finite match.",
+    "The producer reads stored joint-law atoms and committed modular rows; it does not enumerate a field, polynomial, curve, or family member.",
+    "The r6, r8, and r10 identities are lower recurrence regressions; they authenticate normalization but do not strengthen the r12 match beyond q=3,5,7.",
+    "No RH, GRH, number-field transfer, sign theorem, or global Euler-product claim is made."
+  ],
+  "packet_manifest": [
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_SYM12_FINITE_CUSP_TRACE_SCOUT.md",
+      "sha256_lf_normalized": "eed77c24a9eb75b168fb8eea588e89865cc8043f58bb46faf44a5f963a551594"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus2_sym12_finite_cusp_trace_scout.py",
+      "sha256_lf_normalized": "ceeb103d6da8a334bd282c3f5bf86f68f6eae8d1b2d98723124bcfa548b4cdb2"
+    },
+    {
+      "path": "tests/test_genus2_sym12_finite_cusp_trace_scout.py",
+      "sha256_lf_normalized": "d8a6f43bc11332702fa1fb3873926262af3a7d9b423974035e8bbfc9612b2de5"
+    }
+  ],
+  "payload_sha256": "523d8306e1bb52832d40650348b323c7471e47338b5111fc26f7940c9b363bc6",
+  "resource_contract": {
+    "Eisenstein_divisor_terms": {
+      "actual": 32,
+      "maximum": 32
+    },
+    "Eisenstein_divisor_tests": {
+      "actual": 56,
+      "maximum": 56
+    },
+    "arithmetic": "exact Python integers only; no floats or numerical fitting",
+    "counter_nesting": "reciprocal_updates contain reciprocal_scalar_terms; contributing Eisenstein_divisor_terms are a subset of Eisenstein_divisor_tests",
+    "field_or_polynomial_enumeration": "FORBIDDEN_AND_NOT_PERFORMED",
+    "finite_row_checks": {
+      "actual": 3,
+      "maximum": 3
+    },
+    "historical_complete_scan_candidates_not_rerun": 20175,
+    "historical_squarefree_members_not_rerun": 17068,
+    "joint_law_atoms": {
+      "actual": 251,
+      "maximum": 251
+    },
+    "maximum_output_bytes": 32768,
+    "maximum_wall_seconds": 4.0,
+    "new_q_values_enumerated": [],
+    "nonoverlapping_exact_step_total": 11685,
+    "q_series_convolution_terms": {
+      "actual": 72,
+      "maximum": 72
+    },
+    "q_series_linear_combinations": {
+      "actual": 8,
+      "maximum": 8
+    },
+    "reciprocal_scalar_terms": {
+      "actual": 10542,
+      "maximum": 10542
+    },
+    "reciprocal_updates": {
+      "actual": 3012,
+      "maximum": 3012
+    },
+    "source_bytes": {
+      "actual_total": 180674,
+      "maximum_each": 160000,
+      "maximum_total": 200000
+    },
+    "source_files": {
+      "actual": 2,
+      "maximum": 2
+    },
+    "weighted_accumulations": {
+      "actual": 1004,
+      "maximum": 1004
+    }
+  },
+  "schema": "riemann.function_field.genus2_sym12_finite_cusp_trace_scout.v1",
+  "scope": {
+    "all_q_statement": "NOT_PROVED",
+    "family_enumeration_in_this_producer": [],
+    "prime_power_statement": "NOT_TESTED_AND_NOT_PROVED",
+    "tested_q_type": "odd primes only",
+    "tested_q_values": [
+      3,
+      5,
+      7
+    ]
+  },
+  "source_manifest": [
+    {
+      "bytes_read": 156214,
+      "commit": "955ea1e25160075fb4b498018319c80f7e4db9d5",
+      "git_blob": "377c8c03d6a9ccf5a505a9b1a19acc360c59ff44",
+      "id": "balanced_joint_laws",
+      "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+      "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+      "role": "complete stored q=3,5,7 joint (a_D,b_D) laws",
+      "schema": "riemann.function_field.balanced_control_family_scan.v1",
+      "sha256_lf_normalized": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e"
+    },
+    {
+      "bytes_read": 24460,
+      "commit": "42910253be8173c6cd0de19a7a7403d0c31b5c22",
+      "git_blob": "561caa7dc504dfb158908aef9229e91af0707a1e",
+      "id": "modular_trace_rows",
+      "path": "research/l-families/atlas/function_field/genus2_sym10_marked_trace_average.json",
+      "payload_sha256": "0fbf48768fdea477b2bee4f53c8f1e547a167155c665b5e97bc201961971ec77",
+      "role": "committed Delta, f_(8,2), and g_(10,2) trace rows",
+      "schema": "riemann.genus2_sym10_marked_trace_average.v1",
+      "sha256_lf_normalized": "4f91ac00193805207088e9fc6aea2b464645267b17dc54f71165a1ae3b9d45ce"
+    }
+  ],
+  "status": "FINITE_EXACT_Q3_Q5_Q7_MATCH_ONLY"
+}
