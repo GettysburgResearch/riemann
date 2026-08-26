@@ -16,7 +16,10 @@ theorem positive_node_eq_of_sq_eq {x y : ℝ}
 theorem pickEntry_self {x p : ℝ} (hx : x ≠ 0) :
     pickEntry x p x p = p := by
   unfold pickEntry
-  have hden : x + x ≠ 0 := by nlinarith
+  have hden : x + x ≠ 0 := by
+    intro h
+    apply hx
+    linarith
   apply (div_eq_iff hden).2
   ring
 
