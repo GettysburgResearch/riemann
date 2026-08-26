@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Bounded exact replay for the marked genus-two Sym^12 valuation target.
 
-The replay deliberately works only with the finite representation-theoretic
-model at (d,b)=(9,12).  It performs no point counting and no floating-point
-linear algebra.
+The canonical replay uses the finite representation-theoretic model at
+(d,b)=(9,12).  Optional parameters support small source-calibration controls.
+It performs no point counting and no floating-point linear algebra.
 """
 
 from __future__ import annotations
@@ -14,7 +14,7 @@ import itertools
 import json
 import math
 from collections import Counter, defaultdict
-from collections.abc import Iterable
+from collections.abc import Callable, Iterable
 from functools import cache
 from pathlib import Path
 
@@ -28,9 +28,60 @@ COVARIANT_DEGREE = 9
 SELECTED_TOTAL_DEGREE = 3 * COVARIANT_DEGREE
 HOLOMORPHY_T_DEGREE_CAP = 2 * COVARIANT_DEGREE
 
+CALIBRATION_CERTIFICATES = [
+    {
+        "d": 4,
+        "b": 6,
+        "weight": "(6,1)",
+        "highest_weight_dimension": 6,
+        "corrected_rank": 6,
+        "corrected_nullity": 0,
+        "external_target": "Chenevier M_(6,1)=0",
+    },
+    {
+        "d": 7,
+        "b": 4,
+        "weight": "(4,5)",
+        "highest_weight_dimension": 18,
+        "corrected_rank": 18,
+        "corrected_nullity": 0,
+        "external_target": "natural-S5 fixed dimension in M_(4,5) is 0",
+    },
+    {
+        "d": 12,
+        "b": 2,
+        "weight": "(2,11)",
+        "highest_weight_dimension": 38,
+        "corrected_rank": 36,
+        "corrected_nullity": 2,
+        "kernel_sha256": (
+            "ce4cbd1e53811943c87c7fad2ffefdf785e19eba084f4c382ef173ccbe809095"
+        ),
+        "external_target": "Clery-van der Geer dim S_(2,11)(Gamma_2[w])=2",
+    },
+]
+
 State = tuple[tuple[int, ...], int]
 SparseVector = dict[State, int]
-ChartRowKey = tuple[tuple[int, ...], int, int, int, int]
+ChartRowKey = tuple[object, ...]
+
+
+def configure_parameters(d: int, b: int) -> None:
+    """Configure a bounded control pair and clear degree-dependent caches."""
+
+    if d <= 0 or b < 0 or (6 * d - b) % 2:
+        raise ValueError("require d>0, b>=0, and 6d-b even")
+    global R_DEGREE, ORDER, COVARIANT_DEGREE
+    global SELECTED_TOTAL_DEGREE, HOLOMORPHY_T_DEGREE_CAP
+    R_DEGREE = d
+    ORDER = b
+    COVARIANT_DEGREE = d
+    SELECTED_TOTAL_DEGREE = 3 * d
+    HOLOMORPHY_T_DEGREE_CAP = 2 * d
+    split_two_three.cache_clear()
+    split_three_two.cache_clear()
+    selected_high_terms.cache_clear()
+    complementary_high_terms.cache_clear()
 
 
 def states_at_index_sum(index_sum: int) -> list[State]:
@@ -170,6 +221,36 @@ def split_two_three(
     return tuple(terms)
 
 
+@cache
+def split_three_two(
+    sym_indices: tuple[int, ...],
+) -> tuple[tuple[int, int, int, tuple[int, ...], int], ...]:
+    """Coproduct Sym^5(R) -> Sym^3(R) tensor Sym^2(R).
+
+    This is the complementary orientation of the same unordered 3+3
+    partition: all three selected labels now come from the five symmetric
+    roots, while the distinguished sixth root is unselected.
+    """
+
+    counts = Counter(sym_indices)
+    terms: list[tuple[int, int, int, tuple[int, ...], int]] = []
+    for selected_indices in itertools.combinations_with_replacement(
+        range(R_DEGREE + 1), 3
+    ):
+        selected = Counter(selected_indices)
+        if any(selected[index] > counts[index] for index in selected):
+            continue
+        complement = list(sym_indices)
+        for index in selected_indices:
+            complement.remove(index)
+        scalar = math.prod(
+            math.comb(counts[index], multiplicity)
+            for index, multiplicity in selected.items()
+        )
+        terms.append((*selected_indices, tuple(complement), scalar))
+    return tuple(terms)
+
+
 def _triple_shift_terms(
     first_power: int, second_power: int, distinguished_power: int
 ) -> dict[tuple[int, int, int, int], int]:
@@ -230,8 +311,38 @@ def selected_high_terms(
     return tuple((*key, scalar) for key, scalar in sorted(combined.items()))
 
 
+@cache
+def complementary_high_terms(
+    first_index: int, second_index: int, third_index: int, chart: str
+) -> tuple[tuple[int, int, int, int, int], ...]:
+    """High-t jet when the selected block avoids distinguished label 6.
+
+    The Sym^3 polynomial basis maps to labelled roots by
+    ``prod multiplicity!`` times the distinct-orbit sum.  Retaining that
+    state-dependent factor is essential for an equivariant boundary map.
+    """
+
+    indices = (first_index, second_index, third_index)
+    if chart == "phi":
+        powers_by_index = {index: R_DEGREE - index for index in indices}
+    elif chart == "phi_prime":
+        powers_by_index = {index: index for index in indices}
+    else:
+        raise ValueError(f"unknown chart: {chart}")
+
+    orbit_scalar = math.prod(
+        math.factorial(multiplicity) for multiplicity in Counter(indices).values()
+    )
+    combined: defaultdict[tuple[int, int, int, int], int] = defaultdict(int)
+    for ordered in sorted(set(itertools.permutations(indices))):
+        powers = tuple(powers_by_index[index] for index in ordered)
+        for key, scalar in _triple_shift_terms(*powers).items():
+            combined[key] += orbit_scalar * scalar
+    return tuple((*key, scalar) for key, scalar in sorted(combined.items()))
+
+
 def chart_rows(vectors: list[SparseVector], chart: str) -> dict[ChartRowKey, list[int]]:
-    """Exact high-t coefficient rows on the 66-dimensional source basis."""
+    """High jets for the oriented block containing distinguished label 6."""
 
     state_columns: defaultdict[State, dict[int, int]] = defaultdict(dict)
     for column, vector in enumerate(vectors):
@@ -245,6 +356,39 @@ def chart_rows(vectors: list[SparseVector], chart: str) -> dict[ChartRowKey, lis
             high_terms = selected_high_terms(first, second, distinguished, chart)
             for first_x, second_x, distinguished_x, t_degree, jet_scalar in high_terms:
                 key = (complement, first_x, second_x, distinguished_x, t_degree)
+                row = rows.setdefault(key, [0] * width)
+                scalar = coproduct_scalar * jet_scalar
+                for column, coefficient in columns.items():
+                    row[column] += scalar * coefficient
+    return {key: row for key, row in rows.items() if any(row)}
+
+
+def complementary_chart_rows(
+    vectors: list[SparseVector], chart: str
+) -> dict[ChartRowKey, list[int]]:
+    """High jets for the complementary block of three symmetric labels."""
+
+    state_columns: defaultdict[State, dict[int, int]] = defaultdict(dict)
+    for column, vector in enumerate(vectors):
+        for state, scalar in vector.items():
+            state_columns[state][column] = scalar
+
+    rows: dict[ChartRowKey, list[int]] = {}
+    width = len(vectors)
+    for (sym_indices, distinguished), columns in state_columns.items():
+        for first, second, third, complement, coproduct_scalar in split_three_two(
+            sym_indices
+        ):
+            high_terms = complementary_high_terms(first, second, third, chart)
+            for first_x, second_x, third_x, t_degree, jet_scalar in high_terms:
+                key = (
+                    complement,
+                    distinguished,
+                    first_x,
+                    second_x,
+                    third_x,
+                    t_degree,
+                )
                 row = rows.setdefault(key, [0] * width)
                 scalar = coproduct_scalar * jet_scalar
                 for column, coefficient in columns.items():
@@ -308,6 +452,63 @@ def rank_rows_mod_prime(rows: Iterable[list[int]], width: int, prime: int) -> in
     return len(pivots)
 
 
+def rank_rows_over_q_with_full_mod_certificate(
+    rows: list[list[int]], width: int, prime: int = 1_000_003
+) -> int:
+    """Return the Q-rank, avoiding rational elimination after full modular rank."""
+
+    if rank_rows_mod_prime(rows, width, prime) == width:
+        return width
+    return rank_rows_over_q(rows, width)
+
+
+def linearized_minimum_rows(
+    vectors: list[SparseVector],
+    row_builder: Callable[[list[SparseVector], str], dict[ChartRowKey, list[int]]],
+    width: int,
+) -> tuple[list[list[int]], dict[str, object]]:
+    """Linearize the two-chart minimum, proving the required containment.
+
+    The regular locus for one coefficient is initially ``ker(phi) union
+    ker(phi_prime)``.  It is a linear space only when one kernel contains the
+    other.  We certify that fact over Q rather than choosing a chart from the
+    coefficient index by fiat.
+    """
+
+    phi_values = list(row_builder(vectors, "phi").values())
+    phi_prime_values = list(row_builder(vectors, "phi_prime").values())
+    rank_phi = rank_rows_over_q_with_full_mod_certificate(phi_values, width)
+    rank_phi_prime = rank_rows_over_q_with_full_mod_certificate(phi_prime_values, width)
+    rank_stacked = rank_rows_over_q_with_full_mod_certificate(
+        phi_values + phi_prime_values, width
+    )
+
+    if rank_stacked != max(rank_phi, rank_phi_prime):
+        raise RuntimeError("two-chart minimum did not linearize by containment")
+    if rank_phi > rank_phi_prime:
+        selected_chart = "phi_prime"
+        selected_values = phi_prime_values
+        containment = "ker(phi) subset ker(phi_prime)"
+    elif rank_phi < rank_phi_prime:
+        selected_chart = "phi"
+        selected_values = phi_values
+        containment = "ker(phi_prime) subset ker(phi)"
+    else:
+        selected_chart = "phi"
+        selected_values = phi_values
+        containment = "ker(phi) = ker(phi_prime)"
+
+    return selected_values, {
+        "selected_chart": selected_chart,
+        "phi_rows": len(phi_values),
+        "phi_prime_rows": len(phi_prime_values),
+        "rank_phi_over_Q": rank_phi,
+        "rank_phi_prime_over_Q": rank_phi_prime,
+        "rank_stacked_over_Q": rank_stacked,
+        "kernel_containment": containment,
+    }
+
+
 def valuation_analysis(
     domain: list[State], nullspace_rows: list[list[int]]
 ) -> dict[str, object]:
@@ -317,66 +518,51 @@ def valuation_analysis(
     vectors = basis_vectors(domain, nullspace_rows)
     selected_rows: list[list[int]] = []
     coefficient_rows: list[dict[str, object]] = []
-    containment_rows: list[dict[str, object]] = []
+    containing_mark_rows: list[dict[str, object]] = []
+    avoiding_mark_rows: list[dict[str, object]] = []
     prime_1 = 1_000_003
     prime_2 = 1_000_033
 
     for coefficient in range(ORDER + 1):
-        selected_chart = "phi_prime" if coefficient <= ORDER // 2 else "phi"
-        selected = chart_rows(vectors, selected_chart)
-        selected_values = list(selected.values())
-        selected_rows.extend(selected_values)
+        containing_values, containing = linearized_minimum_rows(
+            vectors, chart_rows, width
+        )
+        avoiding_values, avoiding = linearized_minimum_rows(
+            vectors, complementary_chart_rows, width
+        )
+        containing["coefficient"] = coefficient
+        avoiding["coefficient"] = coefficient
+        containing_mark_rows.append(containing)
+        avoiding_mark_rows.append(avoiding)
+        coefficient_values = containing_values + avoiding_values
+        selected_rows.extend(coefficient_values)
         coefficient_rows.append(
             {
                 "coefficient": coefficient,
-                "selected_chart": selected_chart,
-                "nonzero_target_rows": len(selected_values),
-                "rank_over_Q": rank_rows_over_q(selected_values, width),
+                "containing_mark_chart": containing["selected_chart"],
+                "avoiding_mark_chart": avoiding["selected_chart"],
+                "nonzero_target_rows": len(coefficient_values),
+                "rank_over_Q": rank_rows_over_q_with_full_mod_certificate(
+                    coefficient_values, width
+                ),
                 f"rank_mod_{prime_1}": rank_rows_mod_prime(
-                    selected_values, width, prime_1
+                    coefficient_values, width, prime_1
                 ),
                 f"rank_mod_{prime_2}": rank_rows_mod_prime(
-                    selected_values, width, prime_2
+                    coefficient_values, width, prime_2
                 ),
             }
         )
 
-        if coefficient <= ORDER // 2:
-            phi = chart_rows(vectors, "phi")
-            phi_values = list(phi.values())
-            phi_prime_values = selected_values
-            phi_mod_rank = rank_rows_mod_prime(phi_values, width, prime_1)
-            if phi_mod_rank == width:
-                phi_q_rank = width
-                stacked_q_rank = width
-            else:
-                phi_q_rank = rank_rows_over_q(phi_values, width)
-                stacked_q_rank = rank_rows_over_q(phi_values + phi_prime_values, width)
-            phi_prime_q_rank = coefficient_rows[-1]["rank_over_Q"]
-            containment_rows.append(
-                {
-                    "coefficient": coefficient,
-                    "phi_rows": len(phi_values),
-                    "phi_prime_rows": len(phi_prime_values),
-                    "rank_phi_over_Q": phi_q_rank,
-                    "rank_phi_prime_over_Q": phi_prime_q_rank,
-                    "rank_stacked_over_Q": stacked_q_rank,
-                    "kernel_containment": (
-                        "ker(phi) subset ker(phi_prime)"
-                        if coefficient < ORDER // 2
-                        else "ker(phi) = ker(phi_prime)"
-                    ),
-                }
-            )
-
         vectors = [lower_vector(vector) for vector in vectors]
 
-    combined_rank_q = rank_rows_over_q(selected_rows, width)
+    combined_rank_q = rank_rows_over_q_with_full_mod_certificate(selected_rows, width)
     kernel = integer_nullspace_from_rows(selected_rows, width)
     return {
-        "representative_partition": "{1,2,6}|{3,4,5}",
-        "coefficient_chart_rule": ("phi_prime for j=0,...,6; phi for j=7,...,12"),
-        "chart_kernel_containment_for_j_0_through_6": containment_rows,
+        "representative_unordered_partition": "{1,2,6}|{3,4,5}",
+        "oriented_blocks_computed": ["{1,2,6}", "{3,4,5}"],
+        "containing_mark_chart_containments": containing_mark_rows,
+        "avoiding_mark_chart_containments": avoiding_mark_rows,
         "coefficient_matrices": coefficient_rows,
         "combined_matrix": {
             "rows": len(selected_rows),
@@ -389,9 +575,9 @@ def valuation_analysis(
                 primitive_row_digest(kernel)
             ),
         },
-        "weyl_symmetry": (
-            "j maps to 12-j and phi maps to phi_prime; the j=7,...,12 "
-            "containments mirror the displayed j=0,...,5 containments"
+        "orientation_firewall": (
+            "the two blocks of an unordered 3+3 partition are distinct "
+            "oriented substitutions after label 6 is marked; both are imposed"
         ),
     }
 
@@ -420,16 +606,18 @@ def run() -> dict[str, object]:
             ),
         },
         "representative_boundary_valuation": valuation,
+        "calibration_controls": CALIBRATION_CERTIFICATES,
         "resource_caps": {
             "point_counts": 0,
             "source_columns": 66,
             "largest_weight_state_space": 752,
             "partitions_computed": 1,
+            "oriented_blocks_per_partition": 2,
             "wall_clock_target_enforced": False,
-            "wall_clock_target_seconds": 60,
+            "wall_clock_target_seconds": 300,
             "reason_one_partition_suffices": (
-                "S5 is transitive on the ten choices of the two labels that "
-                "join fixed label 6"
+                "S5 is transitive on the ten unordered 3+3 partitions, but "
+                "both block orientations of the representative are computed"
             ),
         },
     }
@@ -439,10 +627,18 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--write-json", type=Path)
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--d", type=int)
+    parser.add_argument("--b", type=int)
     args = parser.parse_args()
+    if (args.d is None) != (args.b is None):
+        parser.error("--d and --b must be supplied together")
+    if args.d is not None and args.b is not None:
+        configure_parameters(args.d, args.b)
     result = run()
     rendered = json.dumps(result, indent=2, sort_keys=True) + "\n"
     canonical_path = Path(__file__).with_suffix(".json")
+    if args.check and args.d is not None:
+        parser.error("--check is reserved for the canonical (d,b)=(9,12) fixture")
     if args.check and (
         not canonical_path.exists()
         or canonical_path.read_text(encoding="utf-8") != rendered

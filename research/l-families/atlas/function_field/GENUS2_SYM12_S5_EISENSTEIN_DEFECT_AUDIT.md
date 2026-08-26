@@ -328,29 +328,35 @@ B_{12}-B_{14}=66.
 \tag{7}
 \]
 
-This is not yet a modular-form dimension.  Criterion 7.4 of
-Clery--van der Geer imposes boundary valuations on these covariants.  The
-structural vanishing problem is now finite and explicit:
+This is not yet a modular-form dimension. Criterion 7.4 of
+Clery--van der Geer imposes boundary valuations on these covariants. The
+corrected companion valuation packet now resolves that finite problem:
 
 \[
 \boxed{
-\text{compute the holomorphy-valuation kernel inside this 66-dimensional
-space.}
+\dim\ker J_{(9,12)}=0.
 }
 \tag{8}
 \]
 
-The ten `3+3` boundary partitions form a single orbit under the standard
-`S_5`: represent a partition by the two other labels sharing the block with
-the fixed label, and `S_5` is transitive on those two-subsets.  Therefore an
-`S_5`-invariant covariant has the same valuation on all ten such divisors, and
-one representative suffices for that part of Criterion 7.4.
+The ten **unordered** `3+3` boundary partitions form a single orbit under the
+standard `S_5`: represent a partition by the two other labels sharing the
+block with the fixed label, and `S_5` is transitive on those two-subsets. One
+representative divisor therefore suffices, but the substitution displayed in
+Definition 7.1 has two block orientations. The former replay kept only the
+block containing the marked root and falsely obtained nullity `15`. Exact
+controls at weights `(6,1)`, `(4,5)`, and `(2,11)` show that both oriented
+blocks must be imposed in the conservative marked implementation. The
+corrected `9902 x 66` matrix has rank `66` over `Q` and modulo two audit
+primes.
 
 Finally, the Siegel `Phi` target at `(12,3)` has odd elliptic weight `15` and
-vanishes.  Thus every holomorphic `S_5`-invariant form at this weight is
-already cuspidal.  A zero kernel in (8) would prove the full invariant cusp
-space zero and would in particular prove `G=0` without using the conditional
-`k=3` dimension formula.
+vanishes. Thus every holomorphic `S_5`-invariant form at this weight is
+already cuspidal. Equation (8) therefore proves the natural marked modular
+channel zero without using the conditional `k=3` dimension formula. Calling
+the corresponding term in the formal cohomological defect `G=0` still
+requires the independently source-caveated Galois/cohomological realization;
+the finite kernel does not supply that adapter.
 
 ## 8. Finite rows and same-characteristic recurrences
 
@@ -377,9 +383,9 @@ interpretation is conditional.
 
 A same-characteristic row at `q=p^2` would become genuinely discriminating
 only after the dimension/purity/characteristic-polynomial type of `G` is fixed:
-it would compare `sum gamma_i^2` with the Tate prediction `p^2`.  No such row
-is manufactured here, and no broad point count is justified before the exact
-covariant problem (8) and the channel adapter are resolved.
+it would compare `sum gamma_i^2` with the Tate prediction `p^2`. No such row
+is manufactured here. The covariant problem (8) is now resolved; a broad
+point count is still unjustified before the channel adapter is resolved.
 
 ## 9. Proof ledger
 
@@ -395,12 +401,14 @@ covariant problem (8) and the channel adapter are resolved.
 - the correction of the official rows into `19` nonlift and `11` lift
   dimensions;
 - the pre-holomorphic covariant dimension `66` in (7);
-- transitivity of `S_5` on the ten `3+3` boundary partitions.
+- transitivity of `S_5` on the ten unordered `3+3` boundary partitions;
+- the source-calibrated two-orientation valuation rank `66` and zero kernel
+  in (8), independently checked in two finite characteristics.
 
-The companion replay checks the branching carriers, the three-term
-Eisenstein projection, the lift/nonlift totals, and (7) using integer
-arithmetic.  It deliberately does not encode a cohomology theorem or a
-holomorphy conclusion.
+The two companion replays check the branching carriers, the three-term
+Eisenstein projection, the lift/nonlift totals, (7), and the corrected
+holomorphy kernel using exact arithmetic. Neither encodes a Galois
+realization of the formal cohomological channels.
 
 ### Conditional or source-caveated
 
@@ -408,36 +416,28 @@ holomorphy conclusion.
   `S_5 x Gal` Eisenstein Euler class, hence as Frobenius trace `2-4q`;
 - `epsilon_Eis=L` and the branch (3) as identities of actual Galois/trace
   channels;
-- the official `k=3` row decomposition as a proof that `G=0`;
+- the official `k=3` row decomposition as a Galois/cohomological proof that
+  the formal channel `G` vanishes;
 - interpreting the three finite equalities as an all-prime formula;
 - the forced traces in (9), and identifying a representation from them.
 
 ### Open
 
-- the valuation-kernel calculation (8);
 - an independent Galois realization of the formal Eisenstein Euler class;
-- the unconditional value of the stable/general invariant channel `G`;
+- transport of the exact modular zero in (8) to the formal stable/general
+  Galois channel `G`;
 - reconciliation of (9) with the conditional zero-invariant data;
 - an all-`q` formula for `Hhat_12`.
 
 ## 10. Bounded next attack
 
-The best next pass is exact covariant surgery, not more point counting:
-
-1. construct a rational basis for the 66 covariants in (6), using
-   transvectants or exact `SL_2` highest-weight projection;
-2. pull one basis through a representative `3+3` degeneration;
-3. form the exact valuation/leading-coefficient matrix dictated by Criterion
-   7.4;
-4. compute its rational kernel and record whether it is zero;
-5. only if a nonzero kernel survives, decompose its Hecke/lift type and then
-   use one same-characteristic tower as a discriminator.
-
-This route is finite and independently checkable.  It attacks `G` on the
-conditional branch (3).  Separately, turning that branch into an actual
-Galois/Frobenius identity requires an independent boundary-geometric or
-trace-formula justification of the Eisenstein Tate labels; connecting-morphism
-rank calculations alone cannot supply that missing bridge.
+The covariant surgery is closed. The next useful work is not another point
+count or another valuation rank. It is an exact comparison between the
+natural marked modular zero and the compact-support cohomological channel in
+the formal defect, together with an independent boundary-geometric or
+trace-formula justification of the Eisenstein Tate labels. Only that adapter
+can turn the finite zero into an actual Galois/Frobenius identity;
+connecting-morphism rank calculations alone cannot supply it.
 
 ## 11. Primary sources and novelty boundary
 

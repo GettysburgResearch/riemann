@@ -33,9 +33,7 @@ def _load_module():
 def test_murnaghan_nakayama_table_is_orthonormal() -> None:
     module = _load_module()
     for left in module.S6_IRREPS:
-        assert module.character(left, (1, 1, 1, 1, 1, 1)) == module.hook_dimension(
-            left
-        )
+        assert module.character(left, (1, 1, 1, 1, 1, 1)) == module.hook_dimension(left)
         for right in module.S6_IRREPS:
             inner_product = sum(
                 module.class_size(cls)
@@ -54,7 +52,9 @@ def test_outer_map_is_involutive_and_preserves_sign_and_class_size() -> None:
         assert module.permutation_sign(image) == module.permutation_sign(cls)
 
     outer_irreps = module.outer_irrep_map()
-    assert all(outer_irreps[outer_irreps[partition]] == partition for partition in outer_irreps)
+    assert all(
+        outer_irreps[outer_irreps[partition]] == partition for partition in outer_irreps
+    )
     assert outer_irreps[(5, 1)] == (2, 2, 2)
     assert outer_irreps[(2, 1, 1, 1, 1)] == (3, 3)
 
@@ -70,9 +70,7 @@ def test_four_exact_s5_selectors_and_frozen_row_fingerprints() -> None:
     for (outer, sign_twist), (selected, projected) in expected.items():
         assert module.selector(outer=outer, sign_twist=sign_twist) == selected
         assert (
-            module.projection_on_official_rows(
-                outer=outer, sign_twist=sign_twist
-            )
+            module.projection_on_official_rows(outer=outer, sign_twist=sign_twist)
             == projected
         )
 
@@ -84,6 +82,7 @@ def test_canonical_packet_and_convention_conclusion() -> None:
     assert stored["official_general_rows"]["total_S6_dimension"] == 30
     assert stored["exact_conclusion"]["official_general_fixed_dimension"] == 0
     assert stored["exact_conclusion"]["outer_counterfactual_fixed_dimension"] == 1
+    assert stored["exact_conclusion"]["corrected_natural_marked_valuation_nullity"] == 0
     reconciliation = stored["convention_reconciliation"]
     assert reconciliation["split_root_M2_type"] == "[2,2,2]"
     assert reconciliation["Bergstrom_Clery_2025_M2_type"] == "[2,2,2]"

@@ -51,6 +51,8 @@ def test_chart_orientation_and_twice_canonical_symmetrization() -> None:
     assert module.selected_high_terms(9, 9, 9, "phi") == ()
     assert (0, 0, 0, 27, 2) in module.selected_high_terms(0, 0, 0, "phi")
     assert (0, 0, 0, 27, 2) in module.selected_high_terms(9, 9, 9, "phi_prime")
+    assert (0, 0, 0, 27, 6) in module.complementary_high_terms(0, 0, 0, "phi")
+    assert (0, 0, 0, 27, 6) in module.complementary_high_terms(9, 9, 9, "phi_prime")
 
 
 def test_first_coefficient_min_linearizes_exactly() -> None:
@@ -72,27 +74,59 @@ def test_committed_full_matrix_certificate() -> None:
     payload = json.loads(FIXTURE.read_text(encoding="utf-8"))
     model = payload["highest_weight_model"]
     matrix = payload["representative_boundary_valuation"]["combined_matrix"]
-    containments = payload["representative_boundary_valuation"][
-        "chart_kernel_containment_for_j_0_through_6"
-    ]
+    valuation = payload["representative_boundary_valuation"]
+    containing = valuation["containing_mark_chart_containments"]
+    avoiding = valuation["avoiding_mark_chart_containments"]
 
     assert model["nullity"] == 66
     assert matrix == {
         "columns": 66,
-        "nullity": 15,
+        "nullity": 0,
         "rowwise_primitive_rational_kernel_basis_sha256": (
-            "1326459cad19fcf373b6d4364acfc5597acb9799d5fbb87ca4c8e905fd8ce95d"
+            "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
         ),
-        "rank_mod_1000003": 51,
-        "rank_mod_1000033": 51,
-        "rank_over_Q": 51,
-        "rows": 3481,
+        "rank_mod_1000003": 66,
+        "rank_mod_1000033": 66,
+        "rank_over_Q": 66,
+        "rows": 9902,
     }
     assert all(
-        row["rank_stacked_over_Q"] == row["rank_phi_over_Q"] for row in containments
+        row["rank_stacked_over_Q"]
+        == max(row["rank_phi_over_Q"], row["rank_phi_prime_over_Q"])
+        for row in containing + avoiding
     )
-    assert containments[-1]["rank_phi_over_Q"] == 51
-    assert containments[-1]["rank_phi_prime_over_Q"] == 51
+    assert containing[6]["rank_phi_over_Q"] == 51
+    assert containing[6]["rank_phi_prime_over_Q"] == 51
+    assert avoiding[6]["rank_phi_over_Q"] == 53
+    assert avoiding[6]["rank_phi_prime_over_Q"] == 53
+
+
+def _control(module, d: int, b: int) -> tuple[int, int, int]:
+    module.configure_parameters(d, b)
+    domain, _, matrix = module.raising_matrix()
+    highest = module.integer_nullspace_rows(matrix)
+    valuation = module.valuation_analysis(domain, highest)
+    combined = valuation["combined_matrix"]
+    return len(highest), combined["rank_over_Q"], combined["nullity"]
+
+
+def test_small_controls_detect_the_missing_orientation() -> None:
+    module = _load_module()
+    assert _control(module, 4, 6) == (6, 6, 0)
+    assert _control(module, 7, 4) == (18, 18, 0)
+
+
+def test_weight_2_11_calibration_matches_the_primary_dimension() -> None:
+    payload = json.loads(FIXTURE.read_text(encoding="utf-8"))
+    controls = {(row["d"], row["b"]): row for row in payload["calibration_controls"]}
+    control = controls[(12, 2)]
+    assert control["highest_weight_dimension"] == 38
+    assert control["corrected_rank"] == 36
+    assert control["corrected_nullity"] == 2
+    assert (
+        control["kernel_sha256"]
+        == "ce4cbd1e53811943c87c7fad2ffefdf785e19eba084f4c382ef173ccbe809095"
+    )
 
 
 def test_resource_firewall() -> None:
@@ -102,4 +136,5 @@ def test_resource_firewall() -> None:
     assert caps["partitions_computed"] == 1
     assert caps["largest_weight_state_space"] == 752
     assert caps["wall_clock_target_enforced"] is False
-    assert caps["wall_clock_target_seconds"] == 60
+    assert caps["oriented_blocks_per_partition"] == 2
+    assert caps["wall_clock_target_seconds"] == 300

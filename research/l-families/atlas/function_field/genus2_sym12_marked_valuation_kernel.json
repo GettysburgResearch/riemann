@@ -1,4 +1,34 @@
 {
+  "calibration_controls": [
+    {
+      "b": 6,
+      "corrected_nullity": 0,
+      "corrected_rank": 6,
+      "d": 4,
+      "external_target": "Chenevier M_(6,1)=0",
+      "highest_weight_dimension": 6,
+      "weight": "(6,1)"
+    },
+    {
+      "b": 4,
+      "corrected_nullity": 0,
+      "corrected_rank": 18,
+      "d": 7,
+      "external_target": "natural-S5 fixed dimension in M_(4,5) is 0",
+      "highest_weight_dimension": 18,
+      "weight": "(4,5)"
+    },
+    {
+      "b": 2,
+      "corrected_nullity": 2,
+      "corrected_rank": 36,
+      "d": 12,
+      "external_target": "Clery-van der Geer dim S_(2,11)(Gamma_2[w])=2",
+      "highest_weight_dimension": 38,
+      "kernel_sha256": "ce4cbd1e53811943c87c7fad2ffefdf785e19eba084f4c382ef173ccbe809095",
+      "weight": "(2,11)"
+    }
+  ],
   "highest_weight_model": {
     "nullity": 66,
     "raising_rank_mod_1000003": 686,
@@ -14,7 +44,267 @@
     "selected_total_degree": 27
   },
   "representative_boundary_valuation": {
-    "chart_kernel_containment_for_j_0_through_6": [
+    "avoiding_mark_chart_containments": [
+      {
+        "coefficient": 0,
+        "kernel_containment": "ker(phi) subset ker(phi_prime)",
+        "phi_prime_rows": 22,
+        "phi_rows": 11340,
+        "rank_phi_over_Q": 64,
+        "rank_phi_prime_over_Q": 5,
+        "rank_stacked_over_Q": 64,
+        "selected_chart": "phi_prime"
+      },
+      {
+        "coefficient": 1,
+        "kernel_containment": "ker(phi) subset ker(phi_prime)",
+        "phi_prime_rows": 62,
+        "phi_rows": 9276,
+        "rank_phi_over_Q": 64,
+        "rank_phi_prime_over_Q": 9,
+        "rank_stacked_over_Q": 64,
+        "selected_chart": "phi_prime"
+      },
+      {
+        "coefficient": 2,
+        "kernel_containment": "ker(phi) subset ker(phi_prime)",
+        "phi_prime_rows": 148,
+        "phi_rows": 7391,
+        "rank_phi_over_Q": 64,
+        "rank_phi_prime_over_Q": 16,
+        "rank_stacked_over_Q": 64,
+        "selected_chart": "phi_prime"
+      },
+      {
+        "coefficient": 3,
+        "kernel_containment": "ker(phi) subset ker(phi_prime)",
+        "phi_prime_rows": 314,
+        "phi_rows": 5647,
+        "rank_phi_over_Q": 64,
+        "rank_phi_prime_over_Q": 24,
+        "rank_stacked_over_Q": 64,
+        "selected_chart": "phi_prime"
+      },
+      {
+        "coefficient": 4,
+        "kernel_containment": "ker(phi) subset ker(phi_prime)",
+        "phi_prime_rows": 610,
+        "phi_rows": 4172,
+        "rank_phi_over_Q": 64,
+        "rank_phi_prime_over_Q": 35,
+        "rank_stacked_over_Q": 64,
+        "selected_chart": "phi_prime"
+      },
+      {
+        "coefficient": 5,
+        "kernel_containment": "ker(phi) subset ker(phi_prime)",
+        "phi_prime_rows": 1106,
+        "phi_rows": 2888,
+        "rank_phi_over_Q": 61,
+        "rank_phi_prime_over_Q": 43,
+        "rank_stacked_over_Q": 61,
+        "selected_chart": "phi_prime"
+      },
+      {
+        "coefficient": 6,
+        "kernel_containment": "ker(phi) = ker(phi_prime)",
+        "phi_prime_rows": 1897,
+        "phi_rows": 1897,
+        "rank_phi_over_Q": 53,
+        "rank_phi_prime_over_Q": 53,
+        "rank_stacked_over_Q": 53,
+        "selected_chart": "phi"
+      },
+      {
+        "coefficient": 7,
+        "kernel_containment": "ker(phi_prime) subset ker(phi)",
+        "phi_prime_rows": 2888,
+        "phi_rows": 1106,
+        "rank_phi_over_Q": 43,
+        "rank_phi_prime_over_Q": 61,
+        "rank_stacked_over_Q": 61,
+        "selected_chart": "phi"
+      },
+      {
+        "coefficient": 8,
+        "kernel_containment": "ker(phi_prime) subset ker(phi)",
+        "phi_prime_rows": 4172,
+        "phi_rows": 610,
+        "rank_phi_over_Q": 35,
+        "rank_phi_prime_over_Q": 64,
+        "rank_stacked_over_Q": 64,
+        "selected_chart": "phi"
+      },
+      {
+        "coefficient": 9,
+        "kernel_containment": "ker(phi_prime) subset ker(phi)",
+        "phi_prime_rows": 5647,
+        "phi_rows": 314,
+        "rank_phi_over_Q": 24,
+        "rank_phi_prime_over_Q": 64,
+        "rank_stacked_over_Q": 64,
+        "selected_chart": "phi"
+      },
+      {
+        "coefficient": 10,
+        "kernel_containment": "ker(phi_prime) subset ker(phi)",
+        "phi_prime_rows": 7391,
+        "phi_rows": 148,
+        "rank_phi_over_Q": 16,
+        "rank_phi_prime_over_Q": 64,
+        "rank_stacked_over_Q": 64,
+        "selected_chart": "phi"
+      },
+      {
+        "coefficient": 11,
+        "kernel_containment": "ker(phi_prime) subset ker(phi)",
+        "phi_prime_rows": 9276,
+        "phi_rows": 62,
+        "rank_phi_over_Q": 9,
+        "rank_phi_prime_over_Q": 64,
+        "rank_stacked_over_Q": 64,
+        "selected_chart": "phi"
+      },
+      {
+        "coefficient": 12,
+        "kernel_containment": "ker(phi_prime) subset ker(phi)",
+        "phi_prime_rows": 11340,
+        "phi_rows": 22,
+        "rank_phi_over_Q": 5,
+        "rank_phi_prime_over_Q": 64,
+        "rank_stacked_over_Q": 64,
+        "selected_chart": "phi"
+      }
+    ],
+    "coefficient_matrices": [
+      {
+        "avoiding_mark_chart": "phi_prime",
+        "coefficient": 0,
+        "containing_mark_chart": "phi_prime",
+        "nonzero_target_rows": 38,
+        "rank_mod_1000003": 5,
+        "rank_mod_1000033": 5,
+        "rank_over_Q": 5
+      },
+      {
+        "avoiding_mark_chart": "phi_prime",
+        "coefficient": 1,
+        "containing_mark_chart": "phi_prime",
+        "nonzero_target_rows": 103,
+        "rank_mod_1000003": 9,
+        "rank_mod_1000033": 9,
+        "rank_over_Q": 9
+      },
+      {
+        "avoiding_mark_chart": "phi_prime",
+        "coefficient": 2,
+        "containing_mark_chart": "phi_prime",
+        "nonzero_target_rows": 239,
+        "rank_mod_1000003": 16,
+        "rank_mod_1000033": 16,
+        "rank_over_Q": 16
+      },
+      {
+        "avoiding_mark_chart": "phi_prime",
+        "coefficient": 3,
+        "containing_mark_chart": "phi_prime",
+        "nonzero_target_rows": 496,
+        "rank_mod_1000003": 25,
+        "rank_mod_1000033": 25,
+        "rank_over_Q": 25
+      },
+      {
+        "avoiding_mark_chart": "phi_prime",
+        "coefficient": 4,
+        "containing_mark_chart": "phi_prime",
+        "nonzero_target_rows": 947,
+        "rank_mod_1000003": 39,
+        "rank_mod_1000033": 39,
+        "rank_over_Q": 39
+      },
+      {
+        "avoiding_mark_chart": "phi_prime",
+        "coefficient": 5,
+        "containing_mark_chart": "phi_prime",
+        "nonzero_target_rows": 1693,
+        "rank_mod_1000003": 51,
+        "rank_mod_1000033": 51,
+        "rank_over_Q": 51
+      },
+      {
+        "avoiding_mark_chart": "phi",
+        "coefficient": 6,
+        "containing_mark_chart": "phi",
+        "nonzero_target_rows": 2870,
+        "rank_mod_1000003": 66,
+        "rank_mod_1000033": 66,
+        "rank_over_Q": 66
+      },
+      {
+        "avoiding_mark_chart": "phi",
+        "coefficient": 7,
+        "containing_mark_chart": "phi",
+        "nonzero_target_rows": 1693,
+        "rank_mod_1000003": 51,
+        "rank_mod_1000033": 51,
+        "rank_over_Q": 51
+      },
+      {
+        "avoiding_mark_chart": "phi",
+        "coefficient": 8,
+        "containing_mark_chart": "phi",
+        "nonzero_target_rows": 947,
+        "rank_mod_1000003": 39,
+        "rank_mod_1000033": 39,
+        "rank_over_Q": 39
+      },
+      {
+        "avoiding_mark_chart": "phi",
+        "coefficient": 9,
+        "containing_mark_chart": "phi",
+        "nonzero_target_rows": 496,
+        "rank_mod_1000003": 25,
+        "rank_mod_1000033": 25,
+        "rank_over_Q": 25
+      },
+      {
+        "avoiding_mark_chart": "phi",
+        "coefficient": 10,
+        "containing_mark_chart": "phi",
+        "nonzero_target_rows": 239,
+        "rank_mod_1000003": 16,
+        "rank_mod_1000033": 16,
+        "rank_over_Q": 16
+      },
+      {
+        "avoiding_mark_chart": "phi",
+        "coefficient": 11,
+        "containing_mark_chart": "phi",
+        "nonzero_target_rows": 103,
+        "rank_mod_1000003": 9,
+        "rank_mod_1000033": 9,
+        "rank_over_Q": 9
+      },
+      {
+        "avoiding_mark_chart": "phi",
+        "coefficient": 12,
+        "containing_mark_chart": "phi",
+        "nonzero_target_rows": 38,
+        "rank_mod_1000003": 5,
+        "rank_mod_1000033": 5,
+        "rank_over_Q": 5
+      }
+    ],
+    "combined_matrix": {
+      "columns": 66,
+      "nullity": 0,
+      "rank_mod_1000003": 66,
+      "rank_mod_1000033": 66,
+      "rank_over_Q": 66,
+      "rows": 9902,
+      "rowwise_primitive_rational_kernel_basis_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "containing_mark_chart_containments": [
       {
         "coefficient": 0,
         "kernel_containment": "ker(phi) subset ker(phi_prime)",
@@ -22,7 +312,8 @@
         "phi_rows": 4587,
         "rank_phi_over_Q": 66,
         "rank_phi_prime_over_Q": 5,
-        "rank_stacked_over_Q": 66
+        "rank_stacked_over_Q": 66,
+        "selected_chart": "phi_prime"
       },
       {
         "coefficient": 1,
@@ -31,7 +322,8 @@
         "phi_rows": 3792,
         "rank_phi_over_Q": 66,
         "rank_phi_prime_over_Q": 9,
-        "rank_stacked_over_Q": 66
+        "rank_stacked_over_Q": 66,
+        "selected_chart": "phi_prime"
       },
       {
         "coefficient": 2,
@@ -40,7 +332,8 @@
         "phi_rows": 3087,
         "rank_phi_over_Q": 66,
         "rank_phi_prime_over_Q": 16,
-        "rank_stacked_over_Q": 66
+        "rank_stacked_over_Q": 66,
+        "selected_chart": "phi_prime"
       },
       {
         "coefficient": 3,
@@ -49,7 +342,8 @@
         "phi_rows": 2453,
         "rank_phi_over_Q": 64,
         "rank_phi_prime_over_Q": 22,
-        "rank_stacked_over_Q": 64
+        "rank_stacked_over_Q": 64,
+        "selected_chart": "phi_prime"
       },
       {
         "coefficient": 4,
@@ -58,7 +352,8 @@
         "phi_rows": 1872,
         "rank_phi_over_Q": 63,
         "rank_phi_prime_over_Q": 32,
-        "rank_stacked_over_Q": 63
+        "rank_stacked_over_Q": 63,
+        "selected_chart": "phi_prime"
       },
       {
         "coefficient": 5,
@@ -67,7 +362,8 @@
         "phi_rows": 1328,
         "rank_phi_over_Q": 58,
         "rank_phi_prime_over_Q": 41,
-        "rank_stacked_over_Q": 58
+        "rank_stacked_over_Q": 58,
+        "selected_chart": "phi_prime"
       },
       {
         "coefficient": 6,
@@ -76,135 +372,85 @@
         "phi_rows": 973,
         "rank_phi_over_Q": 51,
         "rank_phi_prime_over_Q": 51,
-        "rank_stacked_over_Q": 51
-      }
-    ],
-    "coefficient_chart_rule": "phi_prime for j=0,...,6; phi for j=7,...,12",
-    "coefficient_matrices": [
-      {
-        "coefficient": 0,
-        "nonzero_target_rows": 16,
-        "rank_mod_1000003": 5,
-        "rank_mod_1000033": 5,
-        "rank_over_Q": 5,
-        "selected_chart": "phi_prime"
-      },
-      {
-        "coefficient": 1,
-        "nonzero_target_rows": 41,
-        "rank_mod_1000003": 9,
-        "rank_mod_1000033": 9,
-        "rank_over_Q": 9,
-        "selected_chart": "phi_prime"
-      },
-      {
-        "coefficient": 2,
-        "nonzero_target_rows": 91,
-        "rank_mod_1000003": 16,
-        "rank_mod_1000033": 16,
-        "rank_over_Q": 16,
-        "selected_chart": "phi_prime"
-      },
-      {
-        "coefficient": 3,
-        "nonzero_target_rows": 182,
-        "rank_mod_1000003": 22,
-        "rank_mod_1000033": 22,
-        "rank_over_Q": 22,
-        "selected_chart": "phi_prime"
-      },
-      {
-        "coefficient": 4,
-        "nonzero_target_rows": 337,
-        "rank_mod_1000003": 32,
-        "rank_mod_1000033": 32,
-        "rank_over_Q": 32,
-        "selected_chart": "phi_prime"
-      },
-      {
-        "coefficient": 5,
-        "nonzero_target_rows": 587,
-        "rank_mod_1000003": 41,
-        "rank_mod_1000033": 41,
-        "rank_over_Q": 41,
-        "selected_chart": "phi_prime"
-      },
-      {
-        "coefficient": 6,
-        "nonzero_target_rows": 973,
-        "rank_mod_1000003": 51,
-        "rank_mod_1000033": 51,
-        "rank_over_Q": 51,
-        "selected_chart": "phi_prime"
+        "rank_stacked_over_Q": 51,
+        "selected_chart": "phi"
       },
       {
         "coefficient": 7,
-        "nonzero_target_rows": 587,
-        "rank_mod_1000003": 41,
-        "rank_mod_1000033": 41,
-        "rank_over_Q": 41,
+        "kernel_containment": "ker(phi_prime) subset ker(phi)",
+        "phi_prime_rows": 1328,
+        "phi_rows": 587,
+        "rank_phi_over_Q": 41,
+        "rank_phi_prime_over_Q": 58,
+        "rank_stacked_over_Q": 58,
         "selected_chart": "phi"
       },
       {
         "coefficient": 8,
-        "nonzero_target_rows": 337,
-        "rank_mod_1000003": 32,
-        "rank_mod_1000033": 32,
-        "rank_over_Q": 32,
+        "kernel_containment": "ker(phi_prime) subset ker(phi)",
+        "phi_prime_rows": 1872,
+        "phi_rows": 337,
+        "rank_phi_over_Q": 32,
+        "rank_phi_prime_over_Q": 63,
+        "rank_stacked_over_Q": 63,
         "selected_chart": "phi"
       },
       {
         "coefficient": 9,
-        "nonzero_target_rows": 182,
-        "rank_mod_1000003": 22,
-        "rank_mod_1000033": 22,
-        "rank_over_Q": 22,
+        "kernel_containment": "ker(phi_prime) subset ker(phi)",
+        "phi_prime_rows": 2453,
+        "phi_rows": 182,
+        "rank_phi_over_Q": 22,
+        "rank_phi_prime_over_Q": 64,
+        "rank_stacked_over_Q": 64,
         "selected_chart": "phi"
       },
       {
         "coefficient": 10,
-        "nonzero_target_rows": 91,
-        "rank_mod_1000003": 16,
-        "rank_mod_1000033": 16,
-        "rank_over_Q": 16,
+        "kernel_containment": "ker(phi_prime) subset ker(phi)",
+        "phi_prime_rows": 3087,
+        "phi_rows": 91,
+        "rank_phi_over_Q": 16,
+        "rank_phi_prime_over_Q": 66,
+        "rank_stacked_over_Q": 66,
         "selected_chart": "phi"
       },
       {
         "coefficient": 11,
-        "nonzero_target_rows": 41,
-        "rank_mod_1000003": 9,
-        "rank_mod_1000033": 9,
-        "rank_over_Q": 9,
+        "kernel_containment": "ker(phi_prime) subset ker(phi)",
+        "phi_prime_rows": 3792,
+        "phi_rows": 41,
+        "rank_phi_over_Q": 9,
+        "rank_phi_prime_over_Q": 66,
+        "rank_stacked_over_Q": 66,
         "selected_chart": "phi"
       },
       {
         "coefficient": 12,
-        "nonzero_target_rows": 16,
-        "rank_mod_1000003": 5,
-        "rank_mod_1000033": 5,
-        "rank_over_Q": 5,
+        "kernel_containment": "ker(phi_prime) subset ker(phi)",
+        "phi_prime_rows": 4587,
+        "phi_rows": 16,
+        "rank_phi_over_Q": 5,
+        "rank_phi_prime_over_Q": 66,
+        "rank_stacked_over_Q": 66,
         "selected_chart": "phi"
       }
     ],
-    "combined_matrix": {
-      "columns": 66,
-      "nullity": 15,
-      "rank_mod_1000003": 51,
-      "rank_mod_1000033": 51,
-      "rank_over_Q": 51,
-      "rows": 3481,
-      "rowwise_primitive_rational_kernel_basis_sha256": "1326459cad19fcf373b6d4364acfc5597acb9799d5fbb87ca4c8e905fd8ce95d"
-    },
-    "representative_partition": "{1,2,6}|{3,4,5}",
-    "weyl_symmetry": "j maps to 12-j and phi maps to phi_prime; the j=7,...,12 containments mirror the displayed j=0,...,5 containments"
+    "orientation_firewall": "the two blocks of an unordered 3+3 partition are distinct oriented substitutions after label 6 is marked; both are imposed",
+    "oriented_blocks_computed": [
+      "{1,2,6}",
+      "{3,4,5}"
+    ],
+    "representative_unordered_partition": "{1,2,6}|{3,4,5}"
   },
   "resource_caps": {
     "largest_weight_state_space": 752,
+    "oriented_blocks_per_partition": 2,
     "partitions_computed": 1,
     "point_counts": 0,
-    "reason_one_partition_suffices": "S5 is transitive on the ten choices of the two labels that join fixed label 6",
+    "reason_one_partition_suffices": "S5 is transitive on the ten unordered 3+3 partitions, but both block orientations of the representative are computed",
     "source_columns": 66,
     "wall_clock_target_enforced": false,
-    "wall_clock_target_seconds": 60
+    "wall_clock_target_seconds": 300
   }
 }

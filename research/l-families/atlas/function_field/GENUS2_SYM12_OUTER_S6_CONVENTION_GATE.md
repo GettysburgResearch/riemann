@@ -10,8 +10,8 @@ Canonical output:
 
 ## 1. Result
 
-The outer-automorphism ambiguity does **not** transport the natural marked
-kernel to the transitive `S_5` for the current official `(12,3)` rows.
+The outer-automorphism ambiguity does **not** change the marked selector for
+the current official `(12,3)` rows.
 
 The two conventions actually used by the relevant packets agree up to an
 inner automorphism:
@@ -53,10 +53,12 @@ h c=c\quad\Longrightarrow\quad
 This rules out a hidden sign on the particular regular kernel, not merely on
 one convenient generator.
 
-Thus the `15`-dimensional regular marked kernel from the preceding packet is
-in the **natural point-stabilizer** convention used by the official rows.
-Outer or sign relabelling cannot dispose of it.  The remaining exact task is
-to decompose those `15` directions into Yoshida/lift and general pieces.
+The corrected valuation packet now finds that the natural marked regular
+kernel is zero after both block orientations are imposed. That zero is in
+the **natural point-stabilizer** convention used by the official rows, and it
+agrees with the exact natural selector below. The former `15`-dimensional
+one-orientation kernel is retracted; it no longer creates a convention or
+lift-decomposition problem.
 
 ## 2. Exact outer map
 
@@ -150,11 +152,12 @@ official marked subgroup really been the transitive outer `S_5`, the row
 convention checksum independent of any point count or dimension
 interpolation.
 
-This does **not** prove that the general channel vanishes.  The five rows are
-still the conditional nonregular `k=3` continuation recorded in the prior
-packet.  Nor does the total `15`-dimensional marked kernel imply a
-`15`-dimensional general space: at odd scalar weight all forms are cuspidal,
-but Yoshida/lift and general summands still have to be separated.
+The selector calculation itself does **not** make the five official rows
+unconditional: they remain the nonregular `k=3` continuation recorded in the
+prior packet. Independently, however, the corrected covariant calculation
+proves the natural marked modular space zero without using those rows. The
+remaining caveat is the transport from that modular zero to the formal
+Galois/cohomological channel, not a decomposition of surviving forms.
 
 ## 5. What is closed and what remains
 
@@ -166,18 +169,21 @@ Closed exactly:
 4. the fact that the split-root and current official conventions are in the
    same inner class;
 5. the absence of an additional parity sign in the regular covariant/form
-   identification.
+   identification;
+6. compatibility of the corrected zero marked kernel with the official
+   natural/trivial selector.
 
 Still open:
 
-1. the Yoshida/general decomposition of the `15` marked directions;
-2. unconditional validity of the official `k=3` general-space rows;
-3. the stable/general Galois channel `G` and the all-`q` `Sym^12` formula;
-4. the separately source-caveated Eisenstein one-Tate discrepancy.
+1. unconditional validity of the official `k=3` general-space rows;
+2. transport of the exact modular zero to the formal stable/general Galois
+   channel `G` and the all-`q` `Sym^12` formula;
+3. the separately source-caveated Eisenstein one-Tate discrepancy.
 
-The next bounded calculation should therefore act on the `15`-dimensional
-kernel with a lift/Yoshida diagnostic.  Repeating the valuation rank or
-transporting to the outer `S_5` cannot resolve the remaining question.
+The next bounded task should therefore audit the cohomological/Galois adapter
+from the exact modular zero. Repeating the valuation rank, searching for a
+lift decomposition, or transporting to the outer `S_5` cannot resolve that
+remaining question.
 
 ## 6. Replay and sources
 

@@ -40,8 +40,7 @@ def partition_label(partition: Partition) -> str:
 
 def transpose(partition: Partition) -> Partition:
     return tuple(
-        sum(row >= column for row in partition)
-        for column in range(1, partition[0] + 1)
+        sum(row >= column for row in partition) for column in range(1, partition[0] + 1)
     )
 
 
@@ -122,7 +121,9 @@ def character(partition: Partition, cycle_type: Partition) -> int:
         if len(inner) > len(partition):
             continue
         padded_inner = inner + (0,) * (len(partition) - len(inner))
-        if any(left > right for left, right in zip(padded_inner, partition, strict=True)):
+        if any(
+            left > right for left, right in zip(padded_inner, partition, strict=True)
+        ):
             continue
         valid, height = _is_border_strip(partition, inner, strip_size)
         if valid:
@@ -160,9 +161,13 @@ def outer_irrep_map() -> dict[Partition, Partition]:
         pulled_back = tuple(
             character(partition, OUTER_CLASS[cls]) for cls in S6_CLASSES
         )
-        matches = [candidate for candidate, vector in vectors.items() if vector == pulled_back]
+        matches = [
+            candidate for candidate, vector in vectors.items() if vector == pulled_back
+        ]
         if len(matches) != 1:
-            raise ArithmeticError("outer pullback did not identify a unique irreducible")
+            raise ArithmeticError(
+                "outer pullback did not identify a unique irreducible"
+            )
         result[partition] = matches[0]
     return result
 
@@ -191,9 +196,7 @@ def fixed_multiplicity(
 def selector(*, outer: bool = False, sign_twist: bool = False) -> list[str]:
     selected = []
     for partition in S6_IRREPS:
-        multiplicity = fixed_multiplicity(
-            partition, outer=outer, sign_twist=sign_twist
-        )
+        multiplicity = fixed_multiplicity(partition, outer=outer, sign_twist=sign_twist)
         if multiplicity not in (0, 1):
             raise ArithmeticError("unexpected S5 fixed multiplicity")
         if multiplicity:
@@ -275,7 +278,9 @@ def build_packet() -> dict[str, object]:
         "official_general_rows": {
             "weight_project_convention": "(j,k)=(12,3)",
             "partitions": [partition_label(row) for row in OFFICIAL_GENERAL_ROWS],
-            "total_S6_dimension": sum(hook_dimension(row) for row in OFFICIAL_GENERAL_ROWS),
+            "total_S6_dimension": sum(
+                hook_dimension(row) for row in OFFICIAL_GENERAL_ROWS
+            ),
             "source_grade": "CONDITIONAL_K3_FORMULA_DATABASE_ROWS",
         },
         "convention_reconciliation": {
@@ -301,10 +306,11 @@ def build_packet() -> dict[str, object]:
             "official_selector": ["[6]", "[5,1]"],
             "official_general_fixed_dimension": 0,
             "outer_counterfactual_fixed_dimension": 1,
+            "corrected_natural_marked_valuation_nullity": 0,
             "remaining_gate": (
-                "Decompose the 15-dimensional natural marked holomorphic kernel into "
-                "Yoshida/lift and general summands.  Outer-S6 or sign relabelling cannot "
-                "by itself remove or reassign that kernel in the official convention."
+                "Transport the exact natural marked modular zero through an independently "
+                "justified cohomological/Galois adapter.  The former 15-dimensional "
+                "one-orientation kernel is retracted, and outer-S6 relabelling is irrelevant."
             ),
         },
         "novelty_firewall": (
