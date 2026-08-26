@@ -13,7 +13,6 @@ import math
 from collections import defaultdict
 from collections.abc import Iterable
 
-
 Partition = tuple[int, ...]
 
 
@@ -58,9 +57,7 @@ def euler_polynomial(terms: Iterable[tuple[int, int, int]]) -> dict[int, int]:
     for degree, exponent, multiplicity in terms:
         result[exponent] += (-1) ** degree * multiplicity
     return {
-        exponent: coefficient
-        for exponent, coefficient in result.items()
-        if coefficient
+        exponent: coefficient for exponent, coefficient in result.items() if coefficient
     }
 
 
@@ -95,7 +92,7 @@ def main() -> int:
     borel = euler_polynomial(((3, 1, 2),))
     total_eisenstein = {
         exponent: siegel.get(exponent, 0) + borel.get(exponent, 0)
-        for exponent in {0, 1}
+        for exponent in (0, 1)
     }
     assert siegel == {0: 2, 1: -2}
     assert klingen == {}
@@ -104,7 +101,7 @@ def main() -> int:
     bfg_formal = {0: 2, 1: -5}
     epsilon_eis = {
         exponent: total_eisenstein.get(exponent, 0) - bfg_formal.get(exponent, 0)
-        for exponent in {0, 1}
+        for exponent in (0, 1)
     }
     epsilon_eis = {key: value for key, value in epsilon_eis.items() if value}
     assert epsilon_eis == {1: 1}
@@ -141,14 +138,14 @@ def main() -> int:
         "schema": "riemann.genus2.sym12.s5_eisenstein_defect_audit.v1",
         "scope": "finite exact character and weight algebra only",
         "s6_to_s5_invariant_carriers": ["[6]", "[5,1]"],
-        "eisenstein_projection": {
+        "formal_eisenstein_projection": {
             "siegel": "2-2*L",
             "klingen": "0",
             "borel": "-2*L",
             "total": "2-4*L",
             "epsilon_against_BFG_formal_2_minus_5L": "L",
         },
-        "master_defect": "Hhat_12=L-L*f_minus-G",
+        "conditional_master_defect": "Hhat_12=L-L*f_minus-G",
         "official_row_audit": {
             "lift_dimension": lift_dimension,
             "nonlift_dimension": nonlift_dimension,
@@ -160,8 +157,10 @@ def main() -> int:
             "Sym12_highest_weight_multiplicity": covariant_multiplicity,
         },
         "firewall": (
-            "The 66-dimensional source precedes holomorphy valuations; this replay "
-            "does not prove the modular-form space or stable channel vanishes."
+            "The 66-dimensional source precedes holomorphy valuations, and the "
+            "formal 2-4*L projection does not establish its Galois realization; "
+            "this replay proves neither the modular-form-space nor stable-channel "
+            "vanishing."
         ),
     }
     print(json.dumps(payload, indent=2, sort_keys=True))
