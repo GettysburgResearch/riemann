@@ -1217,7 +1217,60 @@ def coherent_core_gram_panel(limit: int = 30) -> dict[str, object]:
     }
     if recovered_shells != shell_values:
         raise ArithmeticError("upper-divisor zeta inversion failed")
+
+    def polynomial_add(
+        left: tuple[Fraction, ...], right: tuple[Fraction, ...]
+    ) -> tuple[Fraction, ...]:
+        length = max(len(left), len(right))
+        return tuple(
+            (left[index] if index < len(left) else Fraction())
+            + (right[index] if index < len(right) else Fraction())
+            for index in range(length)
+        )
+
+    def polynomial_multiply(
+        left: tuple[Fraction, ...], right: tuple[Fraction, ...]
+    ) -> tuple[Fraction, ...]:
+        result = [Fraction()] * (len(left) + len(right) - 1)
+        for left_index, left_value in enumerate(left):
+            for right_index, right_value in enumerate(right):
+                result[left_index + right_index] += left_value * right_value
+        while len(result) > 1 and result[-1] == 0:
+            result.pop()
+        return tuple(result)
+
+    one = (Fraction(1),)
+    zero = (Fraction(),)
+    root_c = (Fraction(), Fraction(1))
+    local_left = ((one, zero), (one, root_c))
+    local_right = ((one, one), (zero, root_c))
+    cholesky_product = tuple(
+        tuple(
+            polynomial_add(
+                polynomial_multiply(local_left[row][0], local_right[0][column]),
+                polynomial_multiply(local_left[row][1], local_right[1][column]),
+            )
+            for column in range(2)
+        )
+        for row in range(2)
+    )
+    expected_kernel = ((one, one), (one, (Fraction(1), Fraction(), Fraction(1))))
+    trace_polynomial = (Fraction(2), Fraction(), Fraction(1))
+    determinant_polynomial = (Fraction(), Fraction(), Fraction(1))
+    discriminant_polynomial = polynomial_add(
+        polynomial_multiply(trace_polynomial, trace_polynomial),
+        tuple(-4 * coefficient for coefficient in determinant_polynomial),
+    )
+    if cholesky_product != expected_kernel or discriminant_polynomial != (
+        Fraction(4),
+        Fraction(),
+        Fraction(),
+        Fraction(),
+        Fraction(1),
+    ):
+        raise ArithmeticError("formal local Gram spectrum replay failed")
     return {
+        "coefficient_normalization_checks": pair_bijection_checks,
         "configuration_count": configuration_count,
         "direct_pair_bijection_checks": pair_bijection_checks,
         "feature_monomial_checksum": feature_monomial_checksum,
@@ -1228,6 +1281,12 @@ def coherent_core_gram_panel(limit: int = 30) -> dict[str, object]:
         ),
         "primes": list(primes),
         "scope": "exact finite combinatorial replay; no AUXCOLORPRIMCAR estimate",
+        "spectral_identity_checks": {
+            "cholesky_entries": 4,
+            "characteristic_discriminant": "4+c^2",
+            "determinant": "c",
+            "trace": "2+c",
+        },
         "upper_zeta_inversion_checks": configuration_count,
     }
 

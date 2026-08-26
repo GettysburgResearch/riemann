@@ -56,6 +56,7 @@
   },
   "compatible_scale_geometry": {
     "coherent_core_gram": {
+      "coefficient_normalization_checks": 760,
       "configuration_count": 8,
       "direct_pair_bijection_checks": 760,
       "feature_monomial_checksum": 125,
@@ -67,6 +68,12 @@
         5
       ],
       "scope": "exact finite combinatorial replay; no AUXCOLORPRIMCAR estimate",
+      "spectral_identity_checks": {
+        "characteristic_discriminant": "4+c^2",
+        "cholesky_entries": 4,
+        "determinant": "c",
+        "trace": "2+c"
+      },
       "upper_zeta_inversion_checks": 8
     },
     "fixed_q_coloring": {

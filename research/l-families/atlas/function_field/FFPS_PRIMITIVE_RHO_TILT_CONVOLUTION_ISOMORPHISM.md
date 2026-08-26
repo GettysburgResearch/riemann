@@ -1278,20 +1278,23 @@ recovers every product shell exactly:
 \[
  \boxed{
  \mathcal A^{\alpha}_{d,I}(N)
- =\sum_{N\mid k}\mu(k/N)
+ =\sum_{\substack{N\mid k, k\ \mathrm{squarefree}\\
+                    67\nmid k, (k,d)=1}}\mu(k/N)
  {\mathcal C^{\alpha}_{d,k}(I)\over\mu(k)\sqrt k}.}
 \tag{5.45}
 \]
 
-Thus the complete color family loses the orientation data inside a fixed
-product `N`, but it loses no product-shell amplitude. This is a useful
-division of labor: `AUXCOLORPRIMCAR` sees the coherently oriented shell
-sum, whereas nonzero `PRIMCAR` modes may still see the internal orientation
-directions.
+Here color coordinates outside the finite height support are extended by
+zero. Thus, for each fixed `(alpha,d,I)`, the complete color family
+loses the orientation data inside a fixed product `N`, but it loses no
+product-shell amplitude. This is a useful division of labor:
+`AUXCOLORPRIMCAR` sees the coherently oriented shell sum, whereas nonzero
+`PRIMCAR` modes may still see the internal orientation directions.
 
-The inversion is exact but poorly conditioned at high primes. With
-`c_p=sqrt(p)/(p+1)`, the local overlap block has Cholesky factor and
-eigenvalues
+The algebraic Boolean Möbius inversion is exact and has no high-prime
+parameter. However, recovering shell contrasts from the weighted color
+energy is poorly conditioned at high primes. With `c_p=sqrt(p)/(p+1)`,
+the local overlap Gram block has Cholesky factor and eigenvalues
 
 \[
  \begin{pmatrix}1&1\\1&1+c_p\end{pmatrix}
@@ -1304,9 +1307,10 @@ eigenvalues
 \tag{5.46}
 \]
 
-Consequently its spectral condition number is
+Consequently the weighted Gram block's spectral condition number is
 `lambda_+(p)/lambda_-(p) ~ 4 sqrt(p)`. Tensoring naïve inverse
-bounds over many high primes is therefore prohibitive. A viable proof should
+bounds in this weighted Gram norm over many high primes is therefore
+prohibitive. A viable proof should
 exploit the forward signed shell transform or additional arithmetic
 orthogonality, rather than whiten the full Boolean Gram prime by prime. This
 is an exact conditioning diagnosis, not a no-go theorem for
