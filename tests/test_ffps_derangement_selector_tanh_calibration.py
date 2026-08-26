@@ -43,6 +43,13 @@ class DerangementSelectorTanhCalibrationTest(unittest.TestCase):
             "unique weighted-L1 minimizer",
             payload["theorem"]["even_cycle_global_firewall"],
         )
+        self.assertIn(
+            "(d-4)/d",
+            payload["theorem"]["uniform_nonhook_capacity"],
+        )
+        self.assertFalse(
+            payload["theorem"]["descent_set_only_repair_from_degree_six"]
+        )
         self.assertEqual(len(payload["finite_replay"]), 9)
 
     def test_tanh_coefficients(self) -> None:
@@ -65,12 +72,32 @@ class DerangementSelectorTanhCalibrationTest(unittest.TestCase):
 
     def test_hook_saturation(self) -> None:
         degree = 10
+        observed_descent_sets: set[frozenset[int]] = set()
         for depth in range(degree):
             hook = (degree - depth, *([1] * depth))
             self.assertEqual(
                 MODULE.descent_parity_coefficient(hook),
                 (-1) ** depth * MODULE.dimension(hook),
             )
+            hook_sets = {
+                MODULE.descent_set(word) for word in MODULE.tableau_row_words(hook)
+            }
+            self.assertEqual(len(hook_sets), MODULE.dimension(hook))
+            self.assertTrue(all(len(descents) == depth for descents in hook_sets))
+            observed_descent_sets.update(hook_sets)
+        self.assertEqual(len(observed_descent_sets), 2 ** (degree - 1))
+
+    def test_uniform_nonhook_capacity(self) -> None:
+        self.assertEqual(
+            MODULE.verify_degree(3)["nonhook_capacity_ceiling"], "not_applicable"
+        )
+        for degree in range(4, 11):
+            panel = MODULE.verify_degree(degree)
+            self.assertEqual(
+                Fraction(panel["maximum_nonhook_absolute_ratio"]),
+                Fraction(degree - 4, degree),
+            )
+            self.assertTrue(panel["descent_set_rigidity_checked"])
 
     def test_validation(self) -> None:
         with self.assertRaises(ValueError):

@@ -1,8 +1,9 @@
 # A hyperbolic-tangent calibration for the derangement selector
 
-Status: **exact all-degree characteristic-zero symmetric-function theorem;
-bounded exact replay through degree ten; the contractive correction, the
-all-degree selector optimum, a native FFPS adapter, RH, and GRH remain open**
+Status: **exact all-degree characteristic-zero symmetric-function theorem,
+uniform nonhook spectral gap, and descent-set rigidity theorem; bounded exact
+replay through degree ten; the contractive correction, the all-degree selector
+optimum, a native FFPS adapter, RH, and GRH remain open**
 
 Bounded replay:
 [`ffps_derangement_selector_tanh_calibration.py`](ffps_derangement_selector_tanh_calibration.py).
@@ -62,13 +63,28 @@ Thus the normalized spectral coefficients
 `b_(d,lambda)/f^lambda` lie in `[-1,1]` and saturate the exact signs required
 on every hook by complementary slackness.
 
+There is also a uniform quantitative gap away from hooks.  Every nonhook
+partition has `d>=4`, and
+
+\[
+ \boxed{
+ { |b_{d,\lambda}|\over f^\lambda}
+ \le {d-4\over d}
+ \qquad(\lambda\text{ nonhook}).}
+\tag{0.5}
+\]
+
+This follows from the cyclic-descent theorem of Adin--Reiner--Roichman; the
+short deduction is in Section 3.3.  The constant is sharp: for
+`lambda=(d-2,2)` and its transpose the ratio is `(d-4)/d`.
+
 Second, for every cycle type `mu|-d`, with `ell=ell(mu)`,
 
 \[
  \boxed{
  \sum_{\lambda\vdash d}b_{d,\lambda}\chi_\lambda(\mu)
  =[x^\ell]\tanh x\;\ell!\,2^{d-\ell}.}
-\tag{0.5}
+\tag{0.6}
 \]
 
 The transform depends only on the number of cycles, not on their lengths.
@@ -77,7 +93,7 @@ It is zero for even `ell`; its first odd values are
 \[
  2^{d-1},\qquad -2^{d-2},\qquad 2^{d-1},\qquad
  -17\,2^{d-3}
-\tag{0.6}
+\tag{0.7}
 \]
 
 for `ell=1,3,5,7`, respectively.
@@ -86,7 +102,7 @@ In particular the full-cycle class coefficient is exactly
 
 \[
  [p_d]\mathcal F_d={2^{d-1}\over d},
-\tag{0.7}
+\tag{0.8}
 \]
 
 the conjectured optimum.  But from degree six onward the same bounded
@@ -94,6 +110,12 @@ spectral certificate also has forbidden support on derangement classes with
 three, five, and then higher odd numbers of cycles.  Formula (0.3) therefore
 does **not** prove the all-degree optimization conjecture.  It identifies the
 entire residual exactly.
+
+Moreover, that residual cannot be repaired by changing the sign through a
+bounded weight that depends only on the tableau descent set.  Hook saturation
+already determines such a weight on every subset of `[d-1]`, forcing the
+original descent-parity certificate.  Section 3.5 proves this exact no-go;
+it does not rule out the general nonhook correction in (3.8).
 
 ## 1. Proof of the `tanh` identity
 
@@ -194,7 +216,7 @@ multiplication by `z_mu` reduces (2.2) to
 \tag{2.4}
 \]
 
-so `z_mu[p_mu]F_d` is the left side of (0.5).  This proves the formula.
+so `z_mu[p_mu]F_d` is the left side of (0.6).  This proves the formula.
 
 ## 3. Exact relationship to the relaxed selector dual
 
@@ -314,7 +336,79 @@ the precise **contractive primitive-lift problem** (3.8): remove all higher
 odd powers of `tanh(A)` using nonhook Schur directions without leaving the
 dimension box.
 
-### 3.3 A global even-cycle escape firewall
+### 3.3 Cyclic descents give a sharp uniform nonhook gap
+
+The quantitative bound (0.5) is a short consequence of a theorem of
+Adin--Reiner--Roichman.  Their cyclic-descent theorem says that the ordinary
+descent map on the standard tableaux of a shape has a cyclic extension if
+and only if the shape is not a connected ribbon.  A straight nonhook shape
+contains a `2 x 2` square, so the theorem supplies a map
+
+\[
+ C:\operatorname{SYT}(\lambda)\longrightarrow 2^{[d]}
+\quad\text{and a bijection}\quad
+ p:\operatorname{SYT}(\lambda)\longrightarrow
+ \operatorname{SYT}(\lambda)
+\tag{3.9}
+\]
+
+such that
+
+\[
+ C(T)\cap[d-1]=\operatorname{Des}(T),
+ \qquad C(pT)=C(T)+1\pmod d,
+ \qquad \varnothing\subsetneq C(T)\subsetneq[d].
+\tag{3.10}
+\]
+
+Choose `T` uniformly, and put `K=|C(T)|` and
+`I=1_(d in C(T))`.  On the fiber `K=k`, the bijection `p` preserves the
+uniform measure and rotates the labels.  Every label therefore has the same
+incidence probability, and summing those probabilities gives
+
+\[
+ \Pr(d\in C(T)\mid K=k)={k\over d}.
+\tag{3.11}
+\]
+
+The values `k=1` and `k=d-1` cannot occur.  In the first case, rotation
+would produce a tableau with `C(T)={d}`, hence with no ordinary descents;
+only a one-row straight shape has such a tableau.  In the second case,
+rotation would produce `C(T)=[d-1]`, hence a tableau in which every ordinary
+index is a descent; only a one-column shape has such a tableau.  A nonhook is
+neither.  Thus `2<=K<=d-2`.
+
+Since `des(T)=K-I`, (3.11) now gives
+
+\[
+ \begin{aligned}
+ {b_{d,\lambda}\over f^\lambda}
+ &=\mathbb E\bigl[(-1)^{\operatorname{des}(T)}\bigr],\\
+ \mathbb E\bigl[(-1)^{\operatorname{des}(T)}\mid K=k\bigr]
+ &=(-1)^k\left(1-{2k\over d}\right).
+ \end{aligned}
+\tag{3.12}
+\]
+
+Taking the convex combination over `2<=k<=d-2` proves (0.5).
+
+The constant is attained by `lambda=(m,2)`, where `m=d-2`.  Encode a
+tableau by its ballot word with `m` first-row letters and two second-row
+letters.  It has one descent exactly when the two second-row letters are
+adjacent, which gives `m-1` tableaux.  The hook-length formula gives
+`f^(m,2)=(m+2)(m-1)/2`, so the remaining `m(m-1)/2` tableaux have two
+descents and
+
+\[
+ { |b_{d,(d-2,2)}|\over f^{(d-2,2)}}
+ ={m-2\over m+2}={d-4\over d}.
+\tag{3.13}
+\]
+
+Transposition complements the ordinary descent set, so the transpose family
+has the same absolute ratio.
+
+### 3.4 A global even-cycle escape firewall
 
 The same calibration completely closes one infinite subspace of possible
 escapes.  Let `Q_0=1_(d)` be the exact cycle indicator, and let `U` be a real
@@ -325,15 +419,15 @@ even number of cycles.  Then
  \boxed{
  \|Q_0+U\|_{\rm rank,1}\ge {2^{d-1}\over d},
  \quad\text{with equality iff }U=0.}
-\tag{3.9}
+\tag{3.14}
 \]
 
 To see this, write `u_lambda` for the character coefficients of `U`.  By
-(0.5),
+(0.6),
 
 \[
  \sum_{\lambda\vdash d}b_{d,\lambda}u_\lambda=0,
-\tag{3.10}
+\tag{3.15}
 \]
 
 because every physical class in the support of `U` has even length.  The
@@ -349,31 +443,67 @@ the spectral capacity and hook saturation give
  &=\sum_{k=0}^{d-1}{f^{H_k}\over d}
  ={2^{d-1}\over d}.
  \end{aligned}
-\tag{3.11}
-\]
-
-The inequality is strict for nonzero `U`.  Indeed, every nonhook shape has
-`lambda_2>=2`.  Start with its row-superstandard tableau and interchange the
-entries `lambda_1` and `lambda_1+1`.  The result is still standard.  The
-swap loses the descent at `lambda_1`, gains descents at `lambda_1-1` and
-`lambda_1+1`, and leaves all other descents unchanged.  Thus both descent
-parities occur, proving
-
-\[
- |b_{d,\lambda}|<f^\lambda
- \qquad(\lambda\text{ nonhook}).
-\tag{3.12}
+\tag{3.16}
 \]
 
 If all nonhook coefficients of `U` vanished, the annihilator argument of
 Section 3.1 would force `U` to be a multiple of the exact cycle direction;
 its zero value on `(d)` then forces `U=0`.  Every nonzero `U` therefore has a
-nonhook coefficient, where (3.12) makes (3.11) strict.
+nonhook coefficient, where (0.5) is strict and makes (3.16) strict.
 
 Consequently an all-degree counterexample or cheaper relaxed selector, if
 one exists, must engage at least one odd cycle-count stratum `ell>=3`.
 Even-cycle freedom alone can never help, at any magnitude; this is global,
 not only a first-order statement.
+
+### 3.5 Descent-set-only repairs are rigid
+
+There is a second exact firewall around the most natural tableau-signing
+ansatz.  Let
+
+\[
+ w:2^{[d-1]}\longrightarrow\mathbb C,
+ \qquad |w(D)|\le1,
+ \qquad
+ c_\lambda(w)=\sum_{T\in\operatorname{SYT}(\lambda)}w(\operatorname{Des}T).
+\tag{3.17}
+\]
+
+Suppose these spectral coefficients attain the full-cycle dual mass.  The
+cycle character is supported on hooks, so equality in the spectral box
+forces
+
+\[
+ c_{H_k}(w)=(-1)^k f^{H_k}
+ \qquad(0\le k<d).
+\tag{3.18}
+\]
+
+The tableaux of `H_k` are in bijection with the `k`-subsets of `[d-1]`:
+the entries below the northwest corner in the first column are exactly
+`{j+1:j in D}`, and the resulting descent set is `D`.  Consequently
+
+\[
+ \sum_{\substack{D\subseteq[d-1]\\|D|=k}}w(D)
+ =(-1)^k{d-1\choose k}.
+\tag{3.19}
+\]
+
+Equality in the triangle inequality and `|w(D)|<=1` force every summand to
+equal `(-1)^k`.  As `k` varies, this determines the weight on every subset:
+
+\[
+ \boxed{w(D)=(-1)^{|D|}\quad(D\subseteq[d-1]).}
+\tag{3.20}
+\]
+
+Thus `c_lambda(w)=b_(d,lambda)` for every shape, and the certificate is
+exactly `F_d=tanh(A)_d`.  For every `d>=6`, the derangement type
+`(d-4,2,2)` has three cycles, and (0.6) gives the forbidden transform
+`-2^(d-2)`.  No bounded descent-set-only signing can repair the odd-cycle
+residual while retaining the optimal hook values.  This is a no-go only for
+the ansatz (3.17); a correction that distinguishes tableaux having the same
+descent set, or is not tableau-local, remains possible.
 
 ## 4. What the bounded replay checks
 
@@ -382,17 +512,19 @@ replay:
 
 1. enumerates every standard tableau through its row word;
 2. recomputes `b_(d,lambda)` and the hook-length dimensions;
-3. checks strict nonhook spectral capacity and exact hook saturation;
-4. recomputes the complete character table by Murnaghan--Nakayama;
-5. checks (0.5) on every conjugacy class in exact integer/rational
+3. checks the uniform `(d-4)/d` nonhook capacity and exact hook saturation;
+4. checks that hook tableaux exhaust all `2^(d-1)` descent subsets, the
+   finite shadow of (3.19)--(3.20);
+5. recomputes the complete character table by Murnaghan--Nakayama;
+6. checks (0.6) on every conjugacy class in exact integer/rational
    arithmetic;
-6. verifies that the nonhook-to-noncycle-derangement character matrix has
+7. verifies that the nonhook-to-noncycle-derangement character matrix has
    full row rank, the finite shadow of (3.5);
-7. lists every forbidden derangement residual.
+8. lists every forbidden derangement residual.
 
 The first forbidden residual is `(2,2,2)` at `d=6`, with class transform
 `-16=-2^(6-2)`.  At `d=10`, the replay sees both the three-cycle-factor
-layer and the first five-cycle-factor type `(2,2,2,2,2)`, exactly as (0.5)
+layer and the first five-cycle-factor type `(2,2,2,2,2)`, exactly as (0.6)
 predicts.  No LP solver or floating-point step occurs.
 
 Because a non-cycle derangement has at least two cycles, and the even-cycle
@@ -409,20 +541,30 @@ and Thibon, *The (1-E)-transform in combinatorial Hopf algebras*, J. Algebraic
 Combin. 33 (2011), 277--312, arXiv:0912.0184.  No literature novelty is
 claimed for (0.3) or its reformulation here.
 
+The quantitative gap (0.5) uses Theorem 1.1 of Adin, Reiner, and Roichman,
+*On cyclic descents for tableaux*, Int. Math. Res. Not. IMRN (2020),
+10231--10276, arXiv:1710.06664: a skew shape admits a cyclic extension of its
+descent map exactly when it is not a connected ribbon.  The deduction in
+Section 3.3 is a corollary of that theorem.  No external novelty claim is
+made for the cyclic-extension input or for the corollary without a dedicated
+comparison.
+
 Proved here:
 
-- (0.3)--(0.7) for every degree and every cycle type;
+- the identities (0.3), (0.4), and (0.6)--(0.8) in every degree;
 - exact spectral capacity and hook saturation;
+- the uniform nonhook capacity bound (0.5), with a sharp family;
 - the all-degree zero-hook image theorem (3.5);
 - the equivalence between an optimal dual completion and (3.8);
-- the global even-cycle escape firewall (3.9);
+- the global even-cycle escape firewall (3.14);
+- the descent-set-only rigidity theorem (3.20);
 - the bounded replay statements through degree ten.
 
 Not proved here:
 
 - a choice of the algebraic correction (3.8) satisfying the dimension box
   for all `d`;
-- strict nonhook slack or unique optimality beyond `d=10`;
+- unique optimality beyond `d=10`;
 - a native FFPS interpretation of the root-incidence boundary;
 - an affordable joint source/selector cancellation;
 - any trace estimate, individualization, RH, or GRH statement.

@@ -120,7 +120,17 @@ def tableau_row_words(partition: Partition) -> tuple[tuple[int, ...], ...]:
 
 
 def descent_count(row_word: tuple[int, ...]) -> int:
-    return sum(next_row > row for row, next_row in pairwise(row_word))
+    return len(descent_set(row_word))
+
+
+def descent_set(row_word: tuple[int, ...]) -> frozenset[int]:
+    """One-based ordinary descent set of a tableau row word."""
+
+    return frozenset(
+        index
+        for index, (row, next_row) in enumerate(pairwise(row_word), start=1)
+        if next_row > row
+    )
 
 
 def descent_parity_coefficient(partition: Partition) -> int:
@@ -278,6 +288,7 @@ def verify_degree(degree: int) -> dict[str, object]:
         partition: descent_parity_coefficient(partition) for partition in shapes
     }
     tableau_count = 0
+    hook_descent_set_count = 0
     nonhook_ratios: list[Fraction] = []
     for partition, coefficient in coefficients.items():
         irreducible_dimension = dimension(partition)
@@ -291,10 +302,19 @@ def verify_degree(degree: int) -> dict[str, object]:
             depth = degree - partition[0]
             if coefficient != (-1) ** depth * irreducible_dimension:
                 raise AssertionError("hook saturation failed")
+            hook_descent_sets = {descent_set(word) for word in words}
+            if len(hook_descent_sets) != irreducible_dimension or any(
+                len(descents) != depth for descents in hook_descent_sets
+            ):
+                raise AssertionError("hook-to-descent-subset bijection failed")
+            hook_descent_set_count += len(hook_descent_sets)
         else:
-            if abs(coefficient) >= irreducible_dimension:
-                raise AssertionError("nonhook descent-parity capacity is not strict")
+            if degree * abs(coefficient) > (degree - 4) * irreducible_dimension:
+                raise AssertionError("uniform nonhook descent-parity gap failed")
             nonhook_ratios.append(Fraction(abs(coefficient), irreducible_dimension))
+
+    if hook_descent_set_count != 2 ** (degree - 1):
+        raise AssertionError("hook descent sets do not exhaust all subsets")
 
     transforms: dict[Partition, Fraction] = {}
     for cycle_type in shapes:
@@ -339,6 +359,8 @@ def verify_degree(degree: int) -> dict[str, object]:
         "partitions": len(shapes),
         "standard_tableaux": tableau_count,
         "hook_shapes": sum(is_hook(partition) for partition in shapes),
+        "hook_descent_subsets": hook_descent_set_count,
+        "descent_set_rigidity_checked": True,
         "cycle_dual_mass": str(Fraction(transforms[cycle], degree)),
         "transform_by_cycle_count": transform_by_cycle_count,
         "forbidden_derangement_residual_types": [
@@ -347,6 +369,9 @@ def verify_degree(degree: int) -> dict[str, object]:
         "noncycle_derangement_coordinates": len(noncycle_derangements),
         "zero_hook_projection_rank": zero_hook_projection_rank,
         "maximum_nonhook_absolute_ratio": str(max(nonhook_ratios, default=Fraction(0))),
+        "nonhook_capacity_ceiling": (
+            str(Fraction(degree - 4, degree)) if nonhooks else "not_applicable"
+        ),
     }
 
 
@@ -357,8 +382,9 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
     return {
         "schema": "riemann.function_field.ffps_selector_tanh_calibration.v1",
         "status": (
-            "exact all-degree symbolic identity with bounded finite replay; "
-            "the contractive correction and all-degree selector optimum remain open"
+            "exact all-degree symbolic identity, cyclic-descent nonhook gap, and "
+            "descent-set rigidity with bounded finite replay; the contractive "
+            "correction and all-degree selector optimum remain open"
         ),
         "frozen_source": {
             "commit": FINITE_OPTIMUM_COMMIT,
@@ -371,6 +397,18 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
                 "tanh(sum_(r>=1) 2^(r-1)p_r t^r/r)"
             ),
             "hook_saturation": ("b_(d,(d-k,1^k))=(-1)^k*binom(d-1,k)"),
+            "uniform_nonhook_capacity": (
+                "abs(b_(d,lambda))/dim(lambda)<=(d-4)/d for every "
+                "nonhook lambda|-d; nonhooks begin at d=4"
+            ),
+            "uniform_nonhook_capacity_input": (
+                "Adin-Reiner-Roichman Theorem 1.1 cyclic descent extension"
+            ),
+            "descent_set_only_rigidity": (
+                "any unit-disk tableau weight depending only on Des(T) and "
+                "saturating all hooks equals (-1)^abs(Des(T))"
+            ),
+            "descent_set_only_repair_from_degree_six": False,
             "class_transform": (
                 "sum_lambda b_(d,lambda)chi_lambda(mu)="
                 "[x^ell]tanh(x)*ell!*2^(d-ell), ell=length(mu)"
