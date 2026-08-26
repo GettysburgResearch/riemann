@@ -218,18 +218,18 @@
   "packet_manifest": [
     {
       "path": "research/l-families/atlas/function_field/GENUS2_SYM12_FINITE_CUSP_TRACE_SCOUT.md",
-      "sha256_lf_normalized": "e9b5b299fb2cc0781f9ef4d6b29e7bba944fa2cc1cb1e3d90452edda0ad0299a"
+      "sha256_lf_normalized": "a28078dc78a082fdfa23d9506538fa4cb44fd40c8f435910837e5e9c59d19494"
     },
     {
       "path": "research/l-families/atlas/function_field/genus2_sym12_finite_cusp_trace_scout.py",
-      "sha256_lf_normalized": "80b41b00367d5ebad18f351f52fd7c0aeac1322060a0307cea2ec8439a29b2b8"
+      "sha256_lf_normalized": "a741c18aaf26b1954c24f7dd73173484ca3e9fdba74c8da39ef5c2b1a4a1e614"
     },
     {
       "path": "tests/test_genus2_sym12_finite_cusp_trace_scout.py",
-      "sha256_lf_normalized": "8df7e5c55546e5f196585648ab2a02fbceb7ce05aa81c63b42f692d74daf6b2d"
+      "sha256_lf_normalized": "ff7c2150a951ba9049b7b0002af376fa4f39534ed8c84a055eda00f1b54f67b9"
     }
   ],
-  "payload_sha256": "9fdc8907f9b9c61de5d4e573b04fa6e78024b4c84117db5c4831d552e51086dc",
+  "payload_sha256": "1c794190e4e83778de852d1f12df5a35fccbce414c27df67eeeb6f87ed7ee1d1",
   "provenance_boundary": {
     "directly_replayed": "sum_D r_D(12) and T_(12,0) from the stored complete joint laws",
     "imported_exact_theorem": "the Sym12 arithmetic-inventory identity converting T_(12,0) to Hhat_12 and H_12",
@@ -329,14 +329,14 @@
     },
     {
       "bytes_read": 39097,
-      "commit": "70dd4a130e702a2d6df4b0fb96a0182a560009a4",
-      "git_blob": "b48963d7b9bc6459046024507a2f2cb8ccbbcd40",
+      "commit": "482e32c53f26517906143cd0d99c74d8b4edf3be",
+      "git_blob": "68907aa3ee65ced500807c79123f116da05f0ece",
       "id": "sym12_arithmetic_inventory",
       "path": "research/l-families/atlas/function_field/genus2_sym12_arithmetic_inventory.json",
-      "payload_sha256": "557ab6465a16bb6080caa2a249c3d0935f8d36fb49bdf54898a0fe72b372496f",
+      "payload_sha256": "fba1c85c8dc3d60b276635ae5e3ed84db3ded06f4960afeaa9b92b4055f9211f",
       "role": "exact source-relative conversion from replayed T_(12,0) to Hhat_12; the scout does not directly average Q_5",
       "schema": "riemann.function_field.genus2_sym12_arithmetic_inventory.v1",
-      "sha256_lf_normalized": "e966b54fe909570eaac7d9253f635c8067c5f874ed47c9daf485c8fd88bfbd85"
+      "sha256_lf_normalized": "94f0647a91aff299c62f24019947846e6923863f3ecba3c2f9cf95008407d4f6"
     }
   ],
   "status": "FINITE_EXACT_Q3_Q5_Q7_MATCH_ONLY"

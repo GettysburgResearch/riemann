@@ -68,13 +68,13 @@ class Genus2Sym12FiniteCuspTraceScoutTests(unittest.TestCase):
                 ),
             },
             "sym12_arithmetic_inventory": {
-                "commit": "70dd4a130e702a2d6df4b0fb96a0182a560009a4",
-                "git_blob": "b48963d7b9bc6459046024507a2f2cb8ccbbcd40",
+                "commit": "482e32c53f26517906143cd0d99c74d8b4edf3be",
+                "git_blob": "68907aa3ee65ced500807c79123f116da05f0ece",
                 "sha256_lf_normalized": (
-                    "e966b54fe909570eaac7d9253f635c8067c5f874ed47c9daf485c8fd88bfbd85"
+                    "94f0647a91aff299c62f24019947846e6923863f3ecba3c2f9cf95008407d4f6"
                 ),
                 "payload_sha256": (
-                    "557ab6465a16bb6080caa2a249c3d0935f8d36fb49bdf54898a0fe72b372496f"
+                    "fba1c85c8dc3d60b276635ae5e3ed84db3ded06f4960afeaa9b92b4055f9211f"
                 ),
             },
         }
