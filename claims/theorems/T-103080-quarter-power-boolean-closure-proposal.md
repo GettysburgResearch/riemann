@@ -1,122 +1,37 @@
-# T-103080 — Quarter-power Boolean cutoff closure proposal
+# HIST-QP-T-103080 — Retracted quarter-power Boolean closure proposal
 
-Claim ID: `T-103080`  
-Status: **PROPOSED COMPLETE UNCONDITIONAL RH THEOREM; FROZEN-HEAD HOSTILE REVIEW REQUIRED**  
-Created: 2026-08-26  
-Base: PR #719 at `4146f81e7237d41e2e4a0cb1737511266683e980`  
-Additional frozen input: PR #751 at `98af0db6ec7f77d6333a77a3dac53c4698852f43`  
-Accepted RH status: **unproved pending independent reconstruction**
+Historical packet label: `T-103080`  
+Canonical status: **RETRACTED / SUPERSEDED BY `T-103110`**  
+Original landing: `e56c9813`  
+Binding correction: `R-103110`  
+RH status: **unproved**
 
-## 1. Frozen fixed detector
+The original proposal correctly proved that, for a fixed canonical owner
+product, the quarter-power balanced core is outside physical support. It also
+proved a subpower Type-I estimate in each fixed owner/core fibre.
 
-The derivative outer kernel `K_L` is fixed in advance, supported in `[1,8]`,
-has zero square-lattice moment, and preserves every hypothetical
-reciprocal-zeta pole in `Re(s)>0`.
+It did **not** prove that the block-dependent pair-indexed Type-I fibres may be
+collapsed coherently over different owner products. That missing physical
+restriction is exactly the RH-bearing harmonic/BCI current.
 
-The unique Hodge harmonic source is the native squarefree Euler source modulo
-the already-closed squared/higher-prime-power ideal.
-
-## 2. Arbitrary-cutoff Boolean identity
-
-For every dyadically frozen cutoff `U`,
-
-\[
-\mu_{\rm sf}
-=
-\mathcal T_U+\mathcal B_U.
-\]
-
-The historical programme chose `U` at the sixth-root scale in order to retain
-a power-saving Type-I estimate. The conclusion-facing theorem requires only a
-subpower estimate.
-
-## 3. Quarter-power cutoff
-
-On a physical block `Y<=X<2Y` and owner-product block `A<=P<2A`, choose
-
-\[
-V=\left\lfloor(2Y/A)^{1/4}\right\rfloor.
-\]
-
-Then:
+The corrected live theorem is
 
 ```text
-complete squarefree Type-I row at V:       Y^o(1);
-balanced Boolean row at V:                 identically zero by support.
+claims/theorems/T-103110-corrected-quarter-power-boolean-frontier.md
 ```
 
-The first statement is `L-103070`; the second is `L-103071`. `L-103073` proves that quarter power is the unique cutoff exponent where these two requirements meet.
-
-## 4. Transfer to the historical BCI row
-
-For the historical cutoff `U_0`, the exact identity
-
-\[
-\mathcal B_{U_0}
-=
-\mathcal B_V+\mathcal T_V-\mathcal T_{U_0}
-\]
-
-becomes, after the fixed physical observation,
-
-\[
-\mathcal O_{K_L}[\mathcal B_{U_0}]
-=
-\mathcal O_{K_L}[\mathcal T_V]
--
-\mathcal O_{K_L}[\mathcal T_{U_0}].
-\]
-
-Both terms on the right have subpower logarithmic absolute mass. Therefore the
-complete historical balanced row has subpower negative mass, and in particular
-
-\[
-\boxed{\mathrm{BCI}_{102990}.}
-\]
-
-## 5. Frozen conclusion chain
-
-`L-103072` proves the literal frozen statement `BCI102990` before any
-incidence, Kummer, Pluecker, reflection, or family norm is taken. The
-conclusion therefore uses the already-frozen implication graph rather than a
-new detector:
-
-\[
-\boxed{
-\mathrm{BCI}_{102990}
-\Longrightarrow
-\mathrm{ICPR}_{102970}
-\Longrightarrow
-\mathrm{OICP}_{102960}
-\Longrightarrow
-\mathrm{HMO}_{102940}
-\Longrightarrow
-\int_1^X(H_K(t))_-\frac{dt}{t}=X^{o(1)}
-\Longrightarrow
-\mathrm{RH}.
-}
-\]
-
-Equivalently, the quarter-power cutoff supplies the previously missing
-conclusion-facing balanced-row estimate while leaving the fixed derivative
-kernel and Mellin--Landau consumer unchanged.
-
-No RH, GRH, Mertens power saving, prime-correlation conjecture, moving
-detector, or zero-dependent choice is used in `L-103070--L-103073`.
-
-## 6. Exact status boundary
+with live gate
 
 ```text
-arbitrary-cutoff Boolean identity          PROVED EXACT
-quarter-power Type-I endpoint              PROVED SUBPOWER
-quarter-power balanced support             PROVED EMPTY
-cutoff-transfer identity                   PROVED EXACT
-BCI102990                                  PROVED IN THIS PROPOSAL ON FROZEN INPUTS
-full composition                           PROPOSED COMPLETE
-independent hostile reconstruction         NOT YET COMPLETED
-accepted Riemann Hypothesis proof           NO
+QPTI103112 <=> BCI102990 <=> HMO102940 -> RH.
 ```
 
-The distinction in the last two rows is mandatory. This theorem is a
-conclusion-complete proof proposal, not an announcement that the mathematical
-community has accepted a proof of RH.
+The `T-103080` token also collided with the pre-existing `ASPH103080` frontier
+named by `R-103010`. The binding identifier map is
+
+```text
+integration/2026-08-26/t103080-quarter-power-disambiguation.tsv
+```
+
+Do not cite this historical path as a complete theorem or proof of RH. The
+original proposal is recoverable from Git history at commit `e56c9813`.
