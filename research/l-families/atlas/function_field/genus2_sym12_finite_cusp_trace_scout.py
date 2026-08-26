@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """Replay a source-locked q=3,5,7 scout for the marked Sym^12 scalar.
 
-This producer reads only two committed JSON artifacts: the complete stored
-joint (a_D,b_D) laws for q=3,5,7 and the committed low-weight modular trace
-rows.  It never imports or invokes a finite-field or polynomial enumerator.
+This producer reads three committed JSON artifacts: the complete stored joint
+(a_D,b_D) laws for q=3,5,7, the committed low-weight modular trace rows, and
+the exact arithmetic inventory that converts the directly replayed T_(12,0)
+rows into Hhat_12.  It never imports or invokes a finite-field or polynomial
+enumerator.
 
 The resulting match with one explicit weight-14 level-2 q-expansion is a
-finite identity at three primes.  It is not an all-q interpolation theorem,
-a prime-power identity, or a cohomological identification.
+finite consequence at three primes of the raw T_(12,0) replay plus that
+inventory theorem.  It is not an independent direct Q_5 average, an all-q
+interpolation theorem, a prime-power identity, or a cohomological
+identification.
 """
 
 from __future__ import annotations
@@ -32,9 +36,9 @@ FROZEN_PRIMES = (3, 5, 7)
 RECIPROCAL_DEGREES = (6, 8, 10, 12)
 Q_EXPANSION_DEGREE = 7
 
-MAX_SOURCE_FILES = 2
+MAX_SOURCE_FILES = 3
 MAX_SOURCE_BYTES_EACH = 160_000
-MAX_SOURCE_BYTES_TOTAL = 200_000
+MAX_SOURCE_BYTES_TOTAL = 225_000
 MAX_JOINT_LAW_ATOMS = 251
 MAX_RECIPROCAL_UPDATES = 3_012
 MAX_RECIPROCAL_TERMS = 10_542
@@ -67,6 +71,19 @@ SOURCE_LOCKS: tuple[dict[str, object], ...] = (
         "payload_sha256": "0fbf48768fdea477b2bee4f53c8f1e547a167155c665b5e97bc201961971ec77",
         "schema": "riemann.genus2_sym10_marked_trace_average.v1",
         "role": "committed Delta, f_(8,2), and g_(10,2) trace rows",
+    },
+    {
+        "id": "sym12_arithmetic_inventory",
+        "path": HERE / "genus2_sym12_arithmetic_inventory.json",
+        "commit": "70dd4a130e702a2d6df4b0fb96a0182a560009a4",
+        "git_blob": "b48963d7b9bc6459046024507a2f2cb8ccbbcd40",
+        "lf_sha256": "e966b54fe909570eaac7d9253f635c8067c5f874ed47c9daf485c8fd88bfbd85",
+        "payload_sha256": "557ab6465a16bb6080caa2a249c3d0935f8d36fb49bdf54898a0fe72b372496f",
+        "schema": "riemann.function_field.genus2_sym12_arithmetic_inventory.v1",
+        "role": (
+            "exact source-relative conversion from replayed T_(12,0) to "
+            "Hhat_12; the scout does not directly average Q_5"
+        ),
     },
 )
 
@@ -278,6 +295,19 @@ def _load_locked_source(
         raise ValueError(f"source payload sentinel mismatch: {path}")
     _verify_payload_hash(value, str(path))
     return value
+
+
+def _validate_inventory(value: Mapping[str, object]) -> None:
+    definitions = value.get("definitions")
+    dependency = value.get("degree_twelve_dependency")
+    if not isinstance(definitions, Mapping) or not isinstance(dependency, Mapping):
+        raise TypeError("Sym12 arithmetic inventory blocks are missing")
+    if (
+        definitions.get("Hhat_12") != "H_12/(q*(q-1))"
+        or dependency.get("marked_open_formula")
+        != "T_(12,0)=Hhat_12-2*q-9-4*Theta_Delta-Theta_(8,2)-Theta_(10,2)"
+    ):
+        raise ValueError("Sym12 arithmetic-inventory conversion changed")
 
 
 def reciprocal_coefficients(
@@ -556,6 +586,10 @@ def _finite_rows(
                 "T_(12,0)": t12,
                 "Hhat_12": hhat12,
                 "H_12": denominator * hhat12,
+                "Hhat_12_provenance": (
+                    "derived from replayed T_(12,0) by the source-locked "
+                    "Sym12 arithmetic inventory; not a direct Q_5 average"
+                ),
                 "a_p(f_-)": a_p,
                 "-p*a_p(f_-)": -q * a_p,
                 "finite_match": True,
@@ -672,6 +706,8 @@ def build_fixture() -> dict[str, object]:
     guard = ResourceGuard()
     balanced = _load_locked_source(SOURCE_LOCKS[0], guard)
     modular = _load_locked_source(SOURCE_LOCKS[1], guard)
+    inventory = _load_locked_source(SOURCE_LOCKS[2], guard)
+    _validate_inventory(inventory)
     deadline.check("source locks")
     f_star = _explicit_f_star(modular, guard)
     rows = _finite_rows(balanced, modular, f_star, guard)
@@ -692,8 +728,14 @@ def build_fixture() -> dict[str, object]:
                 "1/(1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4)=sum_(n>=0) r_D(n)*u^n"
             ),
             "T_(12,0)": "sum_D r_D(12)/(q*(q-1))",
-            "Hhat_12": ("T_(12,0)+2*q+9+4*Theta_Delta+Theta_(8,2)+Theta_(10,2)"),
-            "H_12": "q*(q-1)*Hhat_12",
+            "Hhat_12": (
+                "inventory-derived T_(12,0)+2*q+9+4*Theta_Delta+"
+                "Theta_(8,2)+Theta_(10,2)"
+            ),
+            "H_12": (
+                "inventory-derived q*(q-1)*Hhat_12; not directly enumerated "
+                "as a central Q_5 coefficient sum"
+            ),
         },
         "source_manifest": _source_manifest(guard),
         "explicit_weight_14_level_2_target": f_star,
@@ -704,7 +746,27 @@ def build_fixture() -> dict[str, object]:
                 "T_(12,0)(p)=-p*a_p(f_-)-2*p-9-4*Theta_Delta(p)-"
                 "Theta_(8,2)(p)-Theta_(10,2)(p)"
             ),
-            "status": "EXACT_THREE_PRIME_MATCH_NOT_AN_INTERPOLATION_THEOREM",
+            "status": (
+                "EXACT_THREE_PRIME_CONSEQUENCE_OF_RAW_T12_PLUS_INVENTORY_"
+                "NOT_AN_INDEPENDENT_INVENTORY_AUDIT"
+            ),
+        },
+        "provenance_boundary": {
+            "directly_replayed": (
+                "sum_D r_D(12) and T_(12,0) from the stored complete joint laws"
+            ),
+            "imported_exact_theorem": (
+                "the Sym12 arithmetic-inventory identity converting T_(12,0) "
+                "to Hhat_12 and H_12"
+            ),
+            "not_performed": (
+                "a direct enumeration of squarefree degree-twelve f and the "
+                "central completed coefficients Q_5(f)"
+            ),
+            "logical_use": (
+                "the p=3,5,7 Hhat_12 rows test the combined raw-T plus inventory "
+                "branch; they are not an independent audit of the inventory"
+            ),
         },
         "coefficient_provenance": {
             "primary_reference": (
@@ -727,6 +789,7 @@ def build_fixture() -> dict[str, object]:
             "No motive, compatible system, Yoshida/endoscopic summand, or cohomological identification is proved by the finite match.",
             "The producer reads stored joint-law atoms and committed modular rows; it does not enumerate a field, polynomial, curve, or family member.",
             "The r6, r8, and r10 identities are lower recurrence regressions; they authenticate normalization but do not strengthen the r12 match beyond q=3,5,7.",
+            "PROVENANCE FIREWALL: only T_(12,0) is replayed directly from the stored family atoms; Hhat_12 and H_12 are exact consequences of the separately source-locked arithmetic inventory, not an independent central-coefficient enumeration.",
             "No RH, GRH, number-field transfer, sign theorem, or global Euler-product claim is made.",
         ],
     }
