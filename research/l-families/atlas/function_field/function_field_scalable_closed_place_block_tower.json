@@ -1,0 +1,128 @@
+{
+  "block_tower": {
+    "every_mode_bilateral": true,
+    "leverage": "L_r<(4/5)^r=n^(-alpha*log(5/4)+o(1))",
+    "selected_modes": "2^r-1",
+    "source_scope": "conditional on one clean pair N=P*G^2*C^2, M=Q*G^2*D^2; no universal FFPS source adapter"
+  },
+  "orientation": {
+    "condition": "4 divides q^degree-1",
+    "q_1_mod_4": "all closed-place degrees",
+    "q_3_mod_4": "even closed-place degrees"
+  },
+  "panels": [
+    {
+      "balanced_alpha": "0.274064461784",
+      "balanced_exponent": "0.061155717291",
+      "eligible_degree_density": "1/2",
+      "eligible_degrees_through_8": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "first_two_norms": [
+        9,
+        81
+      ],
+      "q": 3,
+      "q_mod_4": 3,
+      "sample_block_leverage": "320/467"
+    },
+    {
+      "balanced_alpha": "0.548128923568",
+      "balanced_exponent": "0.122311434583",
+      "eligible_degree_density": "1",
+      "eligible_degrees_through_8": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "first_two_norms": [
+        5,
+        25
+      ],
+      "q": 5,
+      "q_mod_4": 1,
+      "sample_block_leverage": "24/41"
+    },
+    {
+      "balanced_alpha": "0.274064461784",
+      "balanced_exponent": "0.061155717291",
+      "eligible_degree_density": "1/2",
+      "eligible_degrees_through_8": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "first_two_norms": [
+        49,
+        2401
+      ],
+      "q": 7,
+      "q_mod_4": 3,
+      "sample_block_leverage": "57600/73837"
+    },
+    {
+      "balanced_alpha": "0.548128923568",
+      "balanced_exponent": "0.122311434583",
+      "eligible_degree_density": "1",
+      "eligible_degrees_through_8": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "first_two_norms": [
+        9,
+        81
+      ],
+      "q": 9,
+      "q_mod_4": 1,
+      "sample_block_leverage": "320/467"
+    },
+    {
+      "balanced_alpha": "0.274064461784",
+      "balanced_exponent": "0.061155717291",
+      "eligible_degree_density": "1/2",
+      "eligible_degrees_through_8": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "first_two_norms": [
+        121,
+        14641
+      ],
+      "q": 11,
+      "q_mod_4": 3,
+      "sample_block_leverage": "878400/1109071"
+    }
+  ],
+  "resource_caps": {
+    "bisection_steps_per_panel": 80,
+    "closed_places_enumerated": 0,
+    "curves_enumerated": 0,
+    "maximum_closed_place_degree": 8,
+    "point_counts": 0,
+    "polynomials_enumerated": 0,
+    "q_panels": 5
+  },
+  "squarefree_factor_count": {
+    "bad_probability": "n^(-c_delta(alpha)+o(1))",
+    "c_delta": "delta-alpha+alpha*log(alpha/delta)",
+    "eligible_density": "delta=1 if q=1 mod 4; delta=1/2 if q=3 mod 4",
+    "rank": "r=floor(alpha*log n), 0<alpha<delta"
+  }
+}
