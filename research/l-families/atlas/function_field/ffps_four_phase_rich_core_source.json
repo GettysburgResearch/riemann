@@ -1,0 +1,131 @@
+{
+  "ambient_density": {
+    "all_log_weight": "log x+O(1)",
+    "bad_log_weight": "O((log x)^(1/2)*log log x)",
+    "bad_relative_weight": "O(log log x/(log x)^(1/2))",
+    "scope": "ambient reduced cores only; not an FFPS source-mass theorem"
+  },
+  "leverage_identity": {
+    "panels": [
+      {
+        "block_leverages": [
+          "24/43",
+          "112/157"
+        ],
+        "cross_blocks": [
+          [
+            5,
+            13
+          ],
+          [
+            17,
+            29
+          ]
+        ],
+        "joint_leverage": "2688/6751",
+        "phase_primes": [
+          5,
+          13,
+          17,
+          29
+        ],
+        "strict_contraction": true
+      },
+      {
+        "block_leverages": [
+          "48/71",
+          "72/97"
+        ],
+        "cross_blocks": [
+          [
+            13,
+            17
+          ],
+          [
+            29,
+            37
+          ]
+        ],
+        "joint_leverage": "3456/6887",
+        "phase_primes": [
+          13,
+          17,
+          29,
+          37
+        ],
+        "strict_contraction": true
+      },
+      {
+        "block_leverages": [
+          "112/157",
+          "360/479"
+        ],
+        "cross_blocks": [
+          [
+            17,
+            29
+          ],
+          [
+            37,
+            41
+          ]
+        ],
+        "joint_leverage": "40320/75203",
+        "phase_primes": [
+          17,
+          29,
+          37,
+          41
+        ],
+        "strict_contraction": true
+      }
+    ],
+    "strict_gap_numerator": "p*q+5*p+5*q-3",
+    "two_prime_block": "4*(p-1)*(q-1)/(5*p*q+p+q+1)"
+  },
+  "quotient": {
+    "every_mode_is_bilateral": true,
+    "group": "C2^2",
+    "nonprincipal_modes": {
+      "tau_1": [
+        "Y_mod_ell_1",
+        "X_mod_rho_1"
+      ],
+      "tau_1_tau_2": [
+        "Y_mod_ell_1",
+        "X_mod_rho_1",
+        "Y_mod_ell_2",
+        "X_mod_rho_2"
+      ],
+      "tau_2": [
+        "Y_mod_ell_2",
+        "X_mod_rho_2"
+      ]
+    }
+  },
+  "resource_caps": {
+    "conductors_enumerated": 0,
+    "curves_enumerated": 0,
+    "maximum_prime_checked": 10000,
+    "point_counts": 0,
+    "prime_panels": 12,
+    "source_atoms_enumerated": 0
+  },
+  "source_partition": {
+    "canonical_choice": "the two least eligible divisors on each side",
+    "left_core_condition": "at least two distinct prime divisors 1 mod 4",
+    "nonzero_phase_source": "squarefree a=g*c,b=g*d with gcd(g,c*d)=gcd(c,d)=1 and gcd(c,Q)=gcd(d,P)=1",
+    "owner_sector_splits": [
+      "kappa_ell_i(Q)=sigma_i",
+      "kappa_rho_i(P)=tau_i"
+    ],
+    "phase_identity": "(-1)^4=1",
+    "physical_coordinates": [
+      "Y=Q*d^2 mod ell_1",
+      "X=P*c^2 mod rho_1",
+      "Y=Q*d^2 mod ell_2",
+      "X=P*c^2 mod rho_2"
+    ],
+    "right_core_condition": "at least two distinct prime divisors 1 mod 4"
+  }
+}
