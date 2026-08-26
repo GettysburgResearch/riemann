@@ -7,7 +7,10 @@ from pathlib import Path
 
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 PRINT_RE = re.compile(r"^\s*#print\s+axioms\s+([A-Za-z0-9_.]+)\s*$")
-OUTPUT_NAME_RE = re.compile(r"['‘’]?([A-Za-z0-9_.]+)['‘’]?")
+OUTPUT_RE = re.compile(
+    r"(?m)^['‘’]?([A-Za-z0-9_.]+)['‘’]?\s+"
+    r"(?:does not depend on any axioms|depends on axioms:\s*\[([^\]]*)\])\s*$"
+)
 
 
 def expected_declarations(paths: list[Path]) -> set[str]:
@@ -33,21 +36,16 @@ def main() -> None:
 
     expected = expected_declarations([Path(arg) for arg in sys.argv[2:]])
     seen: set[str] = set()
-    for line in text.splitlines():
-        if "depends on axioms:" not in line and "does not depend on any axioms" not in line:
-            continue
-        head = line.split("depends on axioms:", 1)[0].split("does not depend", 1)[0]
-        matches = OUTPUT_NAME_RE.findall(head)
-        if matches:
-            seen.add(matches[-1])
-        if "depends on axioms:" in line:
-            payload = line.split("depends on axioms:", 1)[1].strip()
-            if not (payload.startswith("[") and payload.endswith("]")):
-                raise SystemExit(f"unparsed axiom line: {line}")
-            names = {x.strip() for x in payload[1:-1].split(",") if x.strip()}
+    for match in OUTPUT_RE.finditer(text):
+        seen.add(match.group(1))
+        payload = match.group(2)
+        if payload is not None:
+            names = {x.strip() for x in payload.split(",") if x.strip()}
             extra = names - ALLOWED
             if extra:
-                raise SystemExit(f"forbidden axioms {sorted(extra)} in line: {line}")
+                raise SystemExit(
+                    f"forbidden axioms {sorted(extra)} for {match.group(1)}"
+                )
 
     missing = expected - seen
     if missing:

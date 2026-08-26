@@ -9,7 +9,9 @@ theorem fixedMellinConsumerSolution : ChallengeStatement := by
   have hsum : AnalyticAt ℂ (fun s => multiplier s * main s + defect s) s₀ := by
     simpa [htotal] using htotalAnalytic
   have hproduct : AnalyticAt ℂ (fun s => multiplier s * main s) s₀ := by
-    simpa using hsum.sub hdefect
+    apply (hsum.sub hdefect).congr
+    filter_upwards with s
+    simp
   exact (analyticAt_iff_analytic_mul hmultiplier hmultiplier_ne).mpr hproduct
 
 #print axioms fixedMellinConsumerSolution

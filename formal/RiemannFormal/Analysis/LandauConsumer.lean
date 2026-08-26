@@ -36,25 +36,30 @@ def MellinLandauBoundarySingularity : Prop :=
       F s = tailMellin (fun x : ℝ => (f x : ℂ)) s) →
     NonremovableAt F (σc : ℂ)
 
-/-- Analytic and growth data that do not themselves assert the tail-transform identity. -/
-structure NonnegativeTailMellinCore
+/-- Analytic and growth data that do not themselves assert the tail-transform identity. The
+single-constructor inductive spelling keeps the package in `Prop` without asking Lean to generate
+an impermissible data-valued projection for `initialAbscissa`. -/
+inductive NonnegativeTailMellinCore
     (f : Detector) (F : ℂ → ℂ) (σc : ℝ) : Prop where
-  locallyIntegrable :
+| mk
+  (locallyIntegrable :
     LocallyIntegrableOn (fun x : ℝ => (f x : ℂ)) (Set.Ici (1 : ℝ))
-  eventuallyNonnegative : EventuallyNonnegative f
-  nonzeroAE : NotAEEqZeroOnTail f
-  finiteAbscissa : HasFiniteTailMellinAbscissa f σc
-  initialAbscissa : ℝ
-  boundary_lt_initial : σc < initialAbscissa
-  initialConvergence : ∀ s : ℂ, initialAbscissa < s.re →
-    TailMellinConvergent (fun x : ℝ => (f x : ℂ)) s
-  analyticRightOfAbscissa : ∀ s : ℂ, σc < s.re → AnalyticAt ℂ F s
-  analyticPositiveReal : ∀ σ : ℝ, 0 < σ → AnalyticAt ℂ F (σ : ℂ)
+  )
+  (eventuallyNonnegative : EventuallyNonnegative f)
+  (nonzeroAE : NotAEEqZeroOnTail f)
+  (finiteAbscissa : HasFiniteTailMellinAbscissa f σc)
+  (initialAbscissa : ℝ)
+  (boundary_lt_initial : σc < initialAbscissa)
+  (initialConvergence : ∀ s : ℂ, initialAbscissa < s.re →
+    TailMellinConvergent (fun x : ℝ => (f x : ℂ)) s)
+  (analyticRightOfAbscissa : ∀ s : ℂ, σc < s.re → AnalyticAt ℂ F s)
+  (analyticPositiveReal : ∀ σ : ℝ, 0 < σ → AnalyticAt ℂ F (σ : ℂ)) :
+  NonnegativeTailMellinCore f F σc
 
 /-- Complete data required to invoke the exact tail-Landau proposition. -/
 structure NonnegativeTailMellinData
-    (f : Detector) (F : ℂ → ℂ) (σc : ℝ)
-    extends NonnegativeTailMellinCore f F σc : Prop where
+    (f : Detector) (F : ℂ → ℂ) (σc : ℝ) : Prop where
+  toNonnegativeTailMellinCore : NonnegativeTailMellinCore f F σc
   agreesRight : ∀ s : ℂ, σc < s.re →
     F s = tailMellin (fun x : ℝ => (f x : ℂ)) s
 
@@ -64,10 +69,13 @@ theorem nonnegative_landau_boundary
     (hLandau : MellinLandauBoundarySingularity)
     {f : Detector} {F : ℂ → ℂ} {σc : ℝ}
     (hdata : NonnegativeTailMellinData f F σc) :
-    NonremovableAt F (σc : ℂ) :=
-  hLandau f F σc hdata.initialAbscissa hdata.boundary_lt_initial
-    hdata.locallyIntegrable hdata.eventuallyNonnegative hdata.nonzeroAE
-    hdata.finiteAbscissa hdata.initialConvergence hdata.agreesRight
+    NonremovableAt F (σc : ℂ) := by
+  rcases hdata.toNonnegativeTailMellinCore with
+    ⟨hlocallyIntegrable, heventuallyNonnegative, hnonzeroAE, hfiniteAbscissa,
+      σinitial, hboundary_lt_initial, hinitialConvergence, _, _⟩
+  exact hLandau f F σc σinitial hboundary_lt_initial
+    hlocallyIntegrable heventuallyNonnegative hnonzeroAE hfiniteAbscissa
+    hinitialConvergence hdata.agreesRight
 
 /-- If the continuation is analytic at every positive real point, tail Landau forces its finite
 abscissa to be nonpositive. -/
@@ -76,10 +84,12 @@ theorem landau_abscissa_nonpositive
     {f : Detector} {F : ℂ → ℂ} {σc : ℝ}
     (hdata : NonnegativeTailMellinData f F σc) :
     σc ≤ 0 := by
+  rcases hdata.toNonnegativeTailMellinCore with
+    ⟨_, _, _, _, _, _, _, _, hanalyticPositiveReal⟩
   by_contra hnot
   have hpos : 0 < σc := lt_of_not_ge hnot
   exact (nonnegative_landau_boundary hLandau hdata)
-    (hdata.analyticPositiveReal σc hpos)
+    (hanalyticPositiveReal σc hpos)
 
 /-- Consequently the defining nonnegative tail continuation is analytic throughout `Re(s) > 0`. -/
 theorem nonnegative_tail_continuation_analytic
@@ -87,8 +97,10 @@ theorem nonnegative_tail_continuation_analytic
     {f : Detector} {F : ℂ → ℂ} {σc : ℝ}
     (hdata : NonnegativeTailMellinData f F σc)
     {s : ℂ} (hs : 0 < s.re) :
-    AnalyticAt ℂ F s :=
-  hdata.analyticRightOfAbscissa s
+    AnalyticAt ℂ F s := by
+  rcases hdata.toNonnegativeTailMellinCore with
+    ⟨_, _, _, _, _, _, _, hanalyticRightOfAbscissa, _⟩
+  exact hanalyticRightOfAbscissa s
     (lt_of_le_of_lt (landau_abscissa_nonpositive hLandau hdata) hs)
 
 /-- Logarithmic negative mass up to `X`, exactly
