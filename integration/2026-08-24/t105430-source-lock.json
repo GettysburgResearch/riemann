@@ -1,0 +1,34 @@
+{
+  "aliases": {
+    "F1CYCLE105431": "four-distinct-label degree-two Hodge intersection",
+    "F1HCNC105430": "homotopy-coherent full-defect Hodge trace",
+    "F1STAR105431": "shared unordered-pair owner row energy"
+  },
+  "base": {
+    "pr": 730,
+    "sha": "5626725a994bd89973df6e13e48ed6f897d10d0b"
+  },
+  "created": "2026-08-24",
+  "frozen_inputs": [
+    {
+      "pr": 719,
+      "scope": "Wick carrier, full-disk reserve, equal-pair owner and DPWNC frontier",
+      "sha": "b6cb90d3d5f06320ba2c4908930a5b85fa270240"
+    },
+    {
+      "pr": 676,
+      "scope": "critical centered-kernel/Mellin detector context",
+      "sha": "9849df6a52bb4791ebf10cf0dd9f0c929d36bdd9"
+    }
+  ],
+  "schema": "riemann.t105430.source-lock.v1",
+  "status": {
+    "f1cycle105431_proved": false,
+    "f1hcnc105430_proved": false,
+    "f1star105431_proved": false,
+    "rh_established": false
+  },
+  "supersedes": [
+    "F1WNC105420 as a subpower positive-energy statement"
+  ]
+}

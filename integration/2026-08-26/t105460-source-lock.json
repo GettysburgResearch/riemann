@@ -1,0 +1,44 @@
+{
+  "aliases": {
+    "F1VAR105460": "REFSIG106150 in F1 reflection-odd Hodge coordinates",
+    "F1WICK105460": "WKSFSC106150 in the open prime-configuration square"
+  },
+  "base": {
+    "pr": 730,
+    "sha": "d385097bfcd19ab6f9015b522eacd5b97bc7e1b5"
+  },
+  "created": "2026-08-26",
+  "frozen_inputs": [
+    {
+      "pr": 730,
+      "scope": "finite F1 Hodge geometry, radial actual owners, shared-owner renewal, balanced Pluecker local systems",
+      "sha": "d385097bfcd19ab6f9015b522eacd5b97bc7e1b5"
+    },
+    {
+      "pr": 719,
+      "scope": "canonical equal-pair Boolean core, positive even-Wick unification, BCI102990",
+      "sha": "4146f81e7237d41e2e4a0cb1737511266683e980"
+    },
+    {
+      "pr": 751,
+      "scope": "Boolean half-source square, Wick/ordinary diagonal correction, reflection signature, connected Kummer alternative",
+      "sha": "356fbf29e958e2ea067bfe5ef912b1f68d0334c6"
+    }
+  ],
+  "schema": "riemann.t105460.source-lock.v1",
+  "status": {
+    "bci102990_proved": false,
+    "beta_pair_green_proved": true,
+    "f1var105460_proved": false,
+    "prime_box_boolean_chow_proved": true,
+    "reflection_signature_proved": true,
+    "rh_established": false,
+    "tp3_half_kernel": false
+  },
+  "supersedes": [
+    "F1STAR105431 as an intrinsic terminal gate",
+    "F1CYCLE105431 as an intrinsic terminal gate",
+    "F1BPT105450/BQSP102870 as the latest canonical endpoint",
+    "any TP3 or PF-infinity upgrade of the positive ratio-four half-kernel"
+  ]
+}

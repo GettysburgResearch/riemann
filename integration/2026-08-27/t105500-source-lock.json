@@ -1,0 +1,67 @@
+{
+  "schema": "riemann.integration.t105500-source-lock.v1",
+  "created": "2026-08-27",
+  "target_pr": 730,
+  "target_branch": "research/gpt56-pro/105400-f1-frobenius-hodge-execution",
+  "base_head": "b3114562acbeb8c5890ef7a5fc59eed8db71d29a",
+  "frozen_inputs": [
+    {
+      "pr": 719,
+      "sha": "59654c02d13545d6c8c0972315db2628e9efa1f6",
+      "purpose": "binding QPTI semiprime refutation and native wavelet reset"
+    },
+    {
+      "pr": 751,
+      "sha": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+      "purpose": "half-source and reflection comparison lineage; conclusion arrows re-audited"
+    },
+    {
+      "pr": 685,
+      "sha": "4f69b7656f42dcb5ff250d13adc9f88e8d18f315",
+      "purpose": "native same-K1 Vaughan identity and Type-I theorem"
+    },
+    {
+      "pr": 705,
+      "sha": "027ea8bd5c879a190e9e22620c245a81f7b93b73",
+      "purpose": "correct same-K1 largest-prime/Vaughan translation"
+    },
+    {
+      "pr": 715,
+      "sha": "99cc94c48bafd9b96141f7cef9f1e7aa83012747",
+      "purpose": "positive half-kernel A and corrected same-K1 multiplier"
+    }
+  ],
+  "binding_disposition": {
+    "qpti103112": "refuted",
+    "ebd103120": "refuted",
+    "qpti_bci_hmo_completed_source_equivalence": "withdrawn",
+    "qpti_semiprime_main_transfers_to_balanced_b_u": false,
+    "balanced_b_u_source_refuted_by_r103121": false
+  },
+  "proved": {
+    "prime_color_rigidity": true,
+    "native_mobius_prime_color_factorization": true,
+    "vaughan_tail_pair_factorization": true,
+    "balanced_core_vanishes_below_u_squared": true,
+    "tail_pair_diagonal_and_equal_product_subpower": true,
+    "same_k1_half_kernel_factorization": true,
+    "cross_hodge_signature": true,
+    "prime_color_differential_gauge_flatness": true,
+    "k2_ratio_sixteen_kernel": true,
+    "hardy_endpoint_and_atomic_jump": true,
+    "signed_cell_primitive": true,
+    "derivative_type_i_power_saving": true,
+    "native_f1xd_equivalent_to_native_cell_and_rh": true
+  },
+  "open": {
+    "NATIVEF1XD105504": true,
+    "NATIVECELL105504": true,
+    "riemann_hypothesis": true
+  },
+  "replay": {
+    "classification": "PASS_T105500_NATIVE_F1_TAIL_PAIR",
+    "proof_object_sha256": "e25255643bfd11e9fc931b4484189d0f6178bcf5537f39d734acb0b3da84a386",
+    "finite_checks": 161264,
+    "rh_established": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "base_pr": 730,
+  "base_sha": "08f68c0a2b937d8aeac35c5c6a1de6946ed39dd7",
+  "classification": "PASS_T105420_F1_WICK_HODGE_QUOTIENT",
+  "f1wnc105420_proved": false,
+  "favorable_carrier_transfer_proved": true,
+  "favorable_transfer_checks": 5000,
+  "first_chaos_detector_fraction": "1/769",
+  "first_chaos_square_multiplier": 769,
+  "mutations_rejected": [
+    "duplicate_67_tail_promoted_to_infinite_rejected",
+    "f1wnc105420_promoted_to_proved_rejected",
+    "favorable_carrier_absolute_valued_before_recombination_rejected",
+    "first_chaos_removed_after_squaring_rejected",
+    "free_fock_energy_promoted_to_physical_restriction_rejected",
+    "rh_promoted_by_replay_rejected",
+    "unquotiented_hodge_energy_called_subpower_rejected",
+    "wick_quotient_called_detector_change_rejected"
+  ],
+  "orthogonal_algebra_checks": 5000,
+  "proof_object_sha256": "16b33f5c6499722bcec281099c9f86d3b5eca30e19a04ceb38ee3ef4b427fd29",
+  "rh_established": false,
+  "schema": "riemann.x105420.f1-wick-hodge-quotient.v1",
+  "unquotiented_f1ato105405_valid": false,
+  "wick_hodge_quotient_identified": true,
+  "wick_pr": 719,
+  "wick_sha": "6211b5d7dd2b7f3f2657fc5ad5b22b1580650477"
+}

@@ -1,0 +1,27 @@
+{
+  "adelic_gram_reduction_proved": true,
+  "base_pr": 730,
+  "base_sha": "9aaf39898c95a1aa4af0b8aaf3a6fb56046e1b0f",
+  "box_transform_checks": 8,
+  "classification": "PASS_T105410_F1_ORTHOGONAL_ATO_REDUCTION",
+  "f1ato105405_proved": false,
+  "gram_checks": 250,
+  "mutations_rejected": [
+    "carrier_reintroduced_before_gram_rejected",
+    "diagonal_bound_promoted_to_offdiagonal_rejected",
+    "f1ato105405_promoted_to_proved_rejected",
+    "far_ratio_zero_promoted_to_near_collision_rejected",
+    "moving_box_order_promoted_to_fixed_detector_rejected",
+    "orthogonal_coordinates_estimated_on_different_sources_rejected",
+    "psd_sign_promoted_to_subpower_size_rejected",
+    "rh_promoted_by_replay_rejected"
+  ],
+  "orthogonal_primitive_split_proved": true,
+  "orthogonal_split_checks": 5000,
+  "positive_box_spline_proved": true,
+  "proof_object_sha256": "e886fd89bbb4a7c5b640111d2e080a487b19795c30848ed4898e4c86f7412f99",
+  "rh_established": false,
+  "schema": "riemann.x105410.f1-orthogonal-ato.v1",
+  "three_ray_pr": 719,
+  "three_ray_sha": "847e7feeac864bda4e3df38329d1a70c59aa4814"
+}

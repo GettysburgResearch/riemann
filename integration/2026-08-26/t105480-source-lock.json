@@ -1,0 +1,59 @@
+{
+  "aliases": {
+    "F1ASQ2_105483": "the positive critical spectral L2 norm of the normal-ordered analytic source square",
+    "F1FOURTH105483": "the Beta-weighted half-source fourth-moment sufficient gate",
+    "F1GRAM105480": "the weighted endpoint-square sufficient condition for F1HARDY105470",
+    "F1HCNC105481": "the positive part of the derivative-kernel distinct-product Gram off-diagonal",
+    "F1NYMAN105482": "the compact Mellin-Plancherel norm of the canonical physical source polynomial"
+  },
+  "base": {
+    "pr": 730,
+    "sha": "74a4f6dcad0eabdc98c954ce0e7b46d39875cf32"
+  },
+  "created": "2026-08-26",
+  "frozen_inputs": [
+    {
+      "pr": 730,
+      "scope": "F1 prime-box Chow, reflection-Hodge variation, exact integer-cell and Hardy discretization",
+      "sha": "74a4f6dcad0eabdc98c954ce0e7b46d39875cf32"
+    },
+    {
+      "pr": 719,
+      "scope": "canonical equal-pair Boolean core, coefficient diagonal, equal-product ledgers, and positive critical analytic-square spectral factor",
+      "sha": "e56c981e2d0639a988f8f54aa362724eb00d9131"
+    },
+    {
+      "pr": 751,
+      "scope": "same-half-source square, least-prime Calderon row, connected Kummer and centered-incidence alternatives",
+      "sha": "98af0db6ec7f77d6333a77a3dac53c4698852f43"
+    }
+  ],
+  "kernel": {
+    "claim": "L-102880",
+    "name": "K_L",
+    "source_sha": "e56c981e2d0639a988f8f54aa362724eb00d9131",
+    "support": "[1,8]"
+  },
+  "schema": "riemann.t105480.source-lock.v1",
+  "status": {
+    "bci102990_proved": false,
+    "continuous_discrete_l2_equivalence_proved": true,
+    "critical_analytic_square_weight_proved": true,
+    "diagonal_gram_subpower_inherited": true,
+    "f1asq2_105483_proved": false,
+    "f1fourth105483_proved": false,
+    "f1gram105480_proved": false,
+    "f1hardy105470_proved": false,
+    "f1hcnc105481_proved": false,
+    "half_source_fourth_moment_implication_proved": true,
+    "mellin_plancherel_coordinate_proved": true,
+    "positive_semidefinite_gram_proved": true,
+    "rh_established": false,
+    "source_blind_gram_bound": false
+  },
+  "supersedes_as_latest_f1_square_endpoint": [
+    "an unnamed continuous L2 strengthening of F1VAR105460",
+    "any source-blind Bessel or Schur closure of the physical Gram",
+    "diagonal coefficient energy as a purported proof of physical restriction"
+  ]
+}

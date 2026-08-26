@@ -1,0 +1,30 @@
+{
+  "base": {
+    "pr": 727,
+    "sha": "71782530d175162040a8c182a4cb1602d2b23821"
+  },
+  "created": "2026-08-23",
+  "inputs": [
+    {
+      "pr": 719,
+      "scope": [
+        "L-102722 completion tangent",
+        "L-102728 three filtered rays"
+      ],
+      "sha": "fb71bd7e191aab615beb94711ba35abec3691032"
+    }
+  ],
+  "normalization": {
+    "lambda_e": "log p_e",
+    "normalized_box_p^-1_not_used": true,
+    "r_e": "p_e^-1/2"
+  },
+  "schema": "riemann.t105400.f1-hodge-checkpoint1.v1",
+  "status": {
+    "f1pe105403": false,
+    "finite_hodge_gap": true,
+    "finite_native_functor": true,
+    "rh_established": false,
+    "three_ray_primitive_trace": true
+  }
+}

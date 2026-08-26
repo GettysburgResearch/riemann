@@ -1,0 +1,51 @@
+{
+  "all_shared_owner_renewal_proved": true,
+  "augmentation_gram_checks": 1023,
+  "balanced_pluecker_local_system_proved": true,
+  "base_pr": 730,
+  "base_sha": "7c7c7af75a258f63c49b196fdbd85bcec024612d",
+  "bqsp102870_proved": false,
+  "classification": "PASS_T105450_F1_BALANCED_PLUCKER_LOCAL_SYSTEM",
+  "double_phase_checks": 1492,
+  "f1bpt105450_proved": false,
+  "f1rect_positive_energy_controlling": false,
+  "fixed_quadruple_modulus_loss_removed": true,
+  "mutations_rejected": [
+    "common_owner_factor_omitted_rejected",
+    "f1bpt105450_promoted_to_proved_rejected",
+    "fixed_quadruple_bound_promoted_to_coherent_sum_rejected",
+    "owner_core_overlap_ignored_rejected",
+    "positive_rectangle_energy_substituted_for_signed_trace_rejected",
+    "removed_common_owner_allowed_to_recur_rejected",
+    "renewal_path_repeated_prime_rejected",
+    "rh_promoted_by_replay_rejected",
+    "shared_second_owner_called_shared_greatest_rejected",
+    "singleton_radial_layer_deleted_rejected",
+    "zero_additive_character_reintroduced_rejected"
+  ],
+  "owner_weight_cancellation_checks": 2000,
+  "phase_pr": 719,
+  "phase_sha": "2ee5c675a7a2a30ce04ad6609dc7800849bedccc",
+  "pluecker_rectangle_checks": 252,
+  "proof_object_sha256": "be96cb5aa7d7641b09acc6963027b9466db5e866950c20d74575e05d003f9a3f",
+  "ramanujan_nonzero_checks": 68,
+  "renewal_product_checks": 21,
+  "rh_established": false,
+  "schema": "riemann.x105450.f1-balanced-plucker.v1",
+  "shared_owner_factor_checks": 102,
+  "shared_second_fixture": {
+    "M": 35,
+    "M1": 7,
+    "N": 55,
+    "N1": 11,
+    "P": [
+      11,
+      5
+    ],
+    "Q": [
+      7,
+      5
+    ],
+    "ell": 5
+  }
+}

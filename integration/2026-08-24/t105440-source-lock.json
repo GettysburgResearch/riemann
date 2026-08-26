@@ -1,0 +1,33 @@
+{
+  "base": {
+    "pr": 730,
+    "sha": "512ff17dd7880313694c20372ca2b84ad2a5c330"
+  },
+  "created": "2026-08-24",
+  "frozen_inputs": [
+    {
+      "pr": 719,
+      "scope": "equal-pair Wick owner, pair collapse and exact physical restriction frontier",
+      "sha": "b6cb90d3d5f06320ba2c4908930a5b85fa270240"
+    },
+    {
+      "pr": 700,
+      "scope": "truncated-Dickman endpoint interval localization; not promoted to outer-kernel control",
+      "sha": "18737409b6fa1c0a20096e5939a60cfc933d251c"
+    }
+  ],
+  "retains": [
+    "L-105431 finite degree-two Hodge identity",
+    "L-105432 owner-gauge transfer on the degree-at-least-two layer"
+  ],
+  "schema": "riemann.t105440.source-lock.v1",
+  "status": {
+    "f1eot105441_proved": false,
+    "f1rect105443_proved": false,
+    "rh_established": false
+  },
+  "supersedes": [
+    "T-105430 pair-only complete-source composition",
+    "F1STAR105431 + F1CYCLE105431 as a complete RH chain"
+  ]
+}

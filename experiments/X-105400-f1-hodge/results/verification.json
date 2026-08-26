@@ -1,0 +1,30 @@
+{
+  "base_pr": 727,
+  "base_sha": "71782530d175162040a8c182a4cb1602d2b23821",
+  "classification": "PASS_T105400_F1_NATIVE_SOURCE_FINITE_HODGE",
+  "f1pe105403_proved": false,
+  "finite_hodge_gap_proved": true,
+  "finite_native_functor_proved": true,
+  "mutations_rejected": [
+    "activation_fan_promoted_to_native_source_rejected",
+    "completion_promoted_to_native_source_rejected",
+    "duplicate_67_label_collapsed_early_rejected",
+    "f1pe105403_promoted_to_proved_rejected",
+    "finite_hodge_sign_promoted_to_cofinal_trace_rejected",
+    "mean_direction_called_primitive_rejected",
+    "normalized_p_inverse_mixed_with_half_density_rejected",
+    "pairwise_ray_square_taken_before_carrier_centering_rejected",
+    "rh_established_by_replay_rejected"
+  ],
+  "optimal_trace_constant": "769/2",
+  "orthogonal_primitive_coordinate": "191A-192G",
+  "owner_shelling_checks": 20,
+  "proof_object_sha256": "b837555bb6f2ffba09574053b97ec787301714712602108ab2d0a63f3677adb3",
+  "rh_established": false,
+  "schema": "riemann.x105400.f1-native-source-finite-hodge.v1",
+  "source_blind_separator": true,
+  "source_corner_checks": 10,
+  "three_ray_fraction_checks": 10000,
+  "three_ray_primitive_trace_proved": true,
+  "toric_hodge_checks": 1000
+}

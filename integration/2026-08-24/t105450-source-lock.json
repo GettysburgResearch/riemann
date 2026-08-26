@@ -1,0 +1,32 @@
+{
+  "aliases": {
+    "F1BPT105450": "BQSP102870 in F1 Pluecker local-system coordinates"
+  },
+  "base": {
+    "pr": 730,
+    "sha": "7c7c7af75a258f63c49b196fdbd85bcec024612d"
+  },
+  "created": "2026-08-24",
+  "frozen_inputs": [
+    {
+      "pr": 719,
+      "scope": "largest-two gauge, semiprime squareclasses, renewals, balanced phases, zero square-lattice moment, Vaughan Type-I removal",
+      "sha": "2ee5c675a7a2a30ce04ad6609dc7800849bedccc"
+    },
+    {
+      "pr": 730,
+      "scope": "radial actual-owner decomposition, pair incidence bridge, Pluecker rectangle",
+      "sha": "7c7c7af75a258f63c49b196fdbd85bcec024612d"
+    }
+  ],
+  "schema": "riemann.t105450.source-lock.v1",
+  "status": {
+    "bqsp102870_proved": false,
+    "f1bpt105450_proved": false,
+    "rh_established": false
+  },
+  "supersedes": [
+    "F1STAR105431 as an independent terminal gate",
+    "F1RECT105443 positive energy as the controlling signed theorem"
+  ]
+}

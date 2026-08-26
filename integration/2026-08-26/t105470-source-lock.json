@@ -1,0 +1,52 @@
+{
+  "aliases": {
+    "F1HARDY105470": "F1VAR105460 after exact integer-cell discretization",
+    "F1VAR105460": "REFSIG106150 in reflection-odd Hodge coordinates",
+    "F1DUAL105470": "the weighted l1 dual family in T-105470.7--T-105470.8"
+  },
+  "base": {
+    "pr": 730,
+    "sha": "77c4f9e24ead1a89678ffdb975275b914c709d70"
+  },
+  "created": "2026-08-26",
+  "frozen_inputs": [
+    {
+      "pr": 730,
+      "scope": "F1 prime-box Chow, Beta pair Green, Wick configuration square, reflection-Hodge variation",
+      "sha": "77c4f9e24ead1a89678ffdb975275b914c709d70"
+    },
+    {
+      "pr": 719,
+      "scope": "source diagonal, equal-product energy, canonical equal-pair Boolean incidence, BCI102990",
+      "sha": "4146f81e7237d41e2e4a0cb1737511266683e980"
+    },
+    {
+      "pr": 751,
+      "scope": "same-half-source common mother, reflection signature, connected Kummer and centered double-incidence alternatives",
+      "sha": "98af0db6ec7f77d6333a77a3dac53c4698852f43"
+    }
+  ],
+  "kernel": {
+    "claim": "L-102880",
+    "name": "K_L",
+    "support": "[1,8]",
+    "source_sha": "4146f81e7237d41e2e4a0cb1737511266683e980"
+  },
+  "schema": "riemann.t105470.source-lock.v1",
+  "status": {
+    "bci102990_proved": false,
+    "continuous_discrete_equivalence_proved": true,
+    "f1hardy105470_proved": false,
+    "f1var105460_proved": false,
+    "integer_cell_affine_proved": true,
+    "jump_ledger_subpower_inherited": true,
+    "one_hardy_primitive_proved": true,
+    "rh_established": false
+  },
+  "supersedes_as_latest_f1_endpoint": [
+    "F1STAR105431",
+    "F1CYCLE105431",
+    "F1BPT105450",
+    "F1VAR105460 as a continuous black-box gate"
+  ]
+}

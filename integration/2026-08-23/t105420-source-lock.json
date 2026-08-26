@@ -1,0 +1,31 @@
+{
+  "aliases": {
+    "F1WNC105420": "WNC102743 in F1 Hodge coordinates"
+  },
+  "base": {
+    "pr": 730,
+    "sha": "08f68c0a2b937d8aeac35c5c6a1de6946ed39dd7"
+  },
+  "created": "2026-08-23",
+  "frozen_inputs": [
+    {
+      "pr": 719,
+      "scope": "centered rays, prime carrier, exact Wick quotient, second-chaos square, free energy and physical restriction frontier",
+      "sha": "6211b5d7dd2b7f3f2657fc5ad5b22b1580650477"
+    },
+    {
+      "pr": 715,
+      "scope": "common-mother CV/XD shell Gram",
+      "sha": "99cc94c48bafd9b96141f7cef9f1e7aa83012747"
+    }
+  ],
+  "schema": "riemann.t105420.source-lock.v1",
+  "status": {
+    "f1wnc105420_proved": false,
+    "rh_established": false
+  },
+  "supersedes": [
+    "F1ATO105405 as unquotiented packing",
+    "F1PE105403 as unquotiented primitive-energy packing"
+  ]
+}
