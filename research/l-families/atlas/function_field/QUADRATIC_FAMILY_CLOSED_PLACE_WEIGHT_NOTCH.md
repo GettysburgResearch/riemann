@@ -412,7 +412,31 @@ All asymptotics in this packet fix `n` and the complete degree profile while
 profile or rank growing with `q`, and fixed `q` never supports an arbitrary
 number of factors of any prescribed degree.
 
-## 6. Source lock, resources, and claim boundary
+## 6. Primary-literature boundary
+
+The arithmetic ingredients of this packet are established. Florea's
+[Lemma 2.2](https://arxiv.org/abs/1505.03094) prints the squarefree-character
+Euler quotient with the full product over prime divisors of an arbitrary
+conductor. Keating--Rudnick give the general quotient
+`L(u,chi)/L(u^2,chi^2)` in
+[equation (9.7)](https://arxiv.org/html/1504.03444#S9.E7). The completion,
+functional equation, and split-infinity factor are standard; see
+[Andrade--Bae--Jung, Section 2.1.1](https://link.springer.com/article/10.1186/s40687-016-0087-4).
+The primitive-exterior decomposition used at the notch is the symplectic
+Lefschetz decomposition in
+[Goodman--Wallach, Theorem 16.3 and Corollary 16.4](https://sites.math.rutgers.edu/~goodman/pub/hklect.pdf).
+Exact squarefree correlation and Poisson formulas in this family also appear
+in [Bui--Florea--Keating, Lemmas 2.1--2.2](https://arxiv.org/abs/2001.03265).
+
+Accordingly, neither the Euler quotient, its arbitrary degree-profile
+denominator, the infinity factor, nor the symplectic cancellation is claimed
+new. The irreducible degree-`2n-1` raw zero is a short corollary of those
+known identities and is best treated as likely folklore unless a specialist
+search establishes otherwise. The contribution here is the unified
+degree-profile/layer packaging, its exact support criterion, the odd/even
+boundary comparison, and its alignment with the atlas detector mechanisms.
+
+## 7. Source lock, resources, and claim boundary
 
 The packet imports only the canonical all-degree rational-place JSON at
 commit `c94466e28a48ec429150f63de6d334d4c4f60110`, git blob

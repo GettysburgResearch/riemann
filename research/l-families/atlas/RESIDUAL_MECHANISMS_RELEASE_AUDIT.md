@@ -46,7 +46,7 @@ distinguishes current direct relevance from possible upside.
 | multi-place squarefree `L`-identity | A | the Euler quotient is standard; the exact evaluation-character curve adapter, infinity/twist convention, degree-five geometric ladder, and connected-cumulant corollary are the packet contribution | D direct / B methodologically |
 | six-place connected law and weight ceiling | A | exact corollary of the multi-place identity, Weil functional equation, set-partition formula, and symplectic exterior-character algebra; no external novelty claim | D direct / B methodologically |
 | universal fixed-degree weight notch | A | exact symbolic corollary of the locked all-degree coefficient identity and standard symplectic primitive-exterior decomposition; no external novelty claim | D direct / B methodologically |
-| closed-place conductor notch | A | exact Euler-factor, reciprocity, and weight-channel extension from rational marks to arbitrary squarefree primitive quadratic conductors; no external novelty claim | D direct / B methodologically |
+| closed-place conductor notch | A | known Euler/profile, infinity, and exterior-algebra ingredients reorganized into one exact truncated-profile mechanism; the boundary zeros are likely folklore corollaries, not a priority claim | D direct / B methodologically |
 
 ## Best paper-sized theorem stack
 
@@ -221,6 +221,18 @@ machinery.
   for that Euler identity; it contributes the evaluation-character
   specialization, exact curve/infinity/twist adapter, and degree-five
   coefficient consequences.
+- [Florea, Lemma 2.2](https://arxiv.org/abs/1505.03094) already writes the
+  same quotient with the full product over prime factors of an arbitrary
+  conductor. [Andrade--Bae--Jung, Section 2.1.1](https://link.springer.com/article/10.1186/s40687-016-0087-4)
+  records the completion and split-infinity factor, while the relevant
+  primitive-exterior cancellation is standard symplectic Lefschetz algebra;
+  see [Goodman--Wallach, Theorem 16.3 and Corollary 16.4](https://sites.math.rutgers.edu/~goodman/pub/hklect.pdf).
+  [Bui--Florea--Keating, Lemmas 2.1--2.2](https://arxiv.org/abs/2001.03265)
+  give closely related exact squarefree-correlation and Poisson formulas.
+  The closed-place packet therefore treats its irreducible boundary zero as
+  a likely folklore corollary. Its candidate contribution is the unified
+  truncated-profile packaging and odd/even detector comparison, not a new
+  Euler product, functional equation, or symplectic identity.
 
 Rudnick's Section 2.3 also fixes the closest standard analytic notation: for
 an even degree-twelve quadratic `L`-polynomial, the packet's `Q_5(f)` is the
