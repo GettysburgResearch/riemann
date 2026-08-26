@@ -1,0 +1,96 @@
+{
+  "claim_boundary": [
+    "The all-q identity uses the standard quadratic Dirichlet L-polynomial of the displayed elliptic curve; direct family controls are only q=3,5.",
+    "The elliptic trace is a three-place interaction channel, not a motive attached to an individual detector or a statement about zeros.",
+    "The q^-7/2 Weil scale is an upper-envelope scale; the trace t may vanish for particular triples.",
+    "No RH, GRH, principal-member amplification, or external novelty claim is made."
+  ],
+  "direct_controls": [
+    {
+      "candidate_polynomials": 243,
+      "elliptic_trace": 0,
+      "epsilon": -1,
+      "places": [
+        0,
+        1,
+        2
+      ],
+      "q": 3,
+      "separation_sum": 1,
+      "squarefree_members": 162,
+      "third_defect_numerator": 0,
+      "triple_product_sum": 0
+    },
+    {
+      "candidate_polynomials": 3125,
+      "elliptic_trace": -2,
+      "epsilon": 1,
+      "places": [
+        0,
+        1,
+        2
+      ],
+      "q": 5,
+      "separation_sum": 1,
+      "squarefree_members": 2500,
+      "third_defect_numerator": -66,
+      "triple_product_sum": -18
+    }
+  ],
+  "elliptic_trace": "t=q+1-#E(F_q)=-sum_z chi((a-z)*(b-z)*(c-z))",
+  "exact_theorems": {
+    "family_size": "A=q^4*(q-1)",
+    "pair_coefficient": "C=2*q-3",
+    "separation_sum": "s=chi(b-a)+chi(c-a)+chi(c-b)",
+    "squarefree_series": "(1-t*u+q*u^2)*(1-q*u^2)/(1-u^2)^3",
+    "third_cumulant_defect": "Delta_3=[3*(1+epsilon)*C*s+18*(q-2)*t]/A",
+    "triple_L_polynomial": "L(u,psi_abc)=1-t*u+q*u^2",
+    "triple_character_sum": "sum_D X_a*X_b*X_c=3*(q-2)*t"
+  },
+  "family": "monic squarefree quintics over F_q",
+  "formal_u5_coefficient": {
+    "rendered": "3*(q-2)*t",
+    "sparse_q_t": [
+      {
+        "coefficient": -6,
+        "q_power": 0,
+        "t_power": 1
+      },
+      {
+        "coefficient": 3,
+        "q_power": 1,
+        "t_power": 1
+      }
+    ]
+  },
+  "oriented_elliptic_curve": "E_(a,b,c): y^2=(a-z)*(b-z)*(c-z)",
+  "packet_files_lf_sha256": {
+    "note": "e4b5395a54211e2a041525a30c02347a2b0f6ce9388dbe395a6f2603cb040d97",
+    "producer": "9398e394829b04079783582616370eac25dab1771bac88c9a3c0ff5e46ae0764",
+    "test": "bb8cacd1a01ddc974c2a31538db6ef53a54ed71c70af0962d58465127cdb1fed"
+  },
+  "payload_sha256": "3982e6e9775abbe944a40cf61882861e9e1f66e23f062cb670db6d5e6478bb46",
+  "resource_contract": {
+    "actual_candidate_polynomials": 3368,
+    "extension_field_enumeration": false,
+    "floating_point_arithmetic": false,
+    "largest_direct_field": 5,
+    "maximum_candidate_polynomials": 4096,
+    "maximum_series_degree": 5,
+    "measured_wall_seconds_is_not_canonical": true,
+    "wall_seconds_cap": 4.0
+  },
+  "schema": "riemann.function_field.quadratic_family_three_place_elliptic_interference.v1",
+  "source": {
+    "commit": "a91f98532",
+    "git_blob": "95f29d89e4eaf953ab5ecf0675e061000d7a9cef",
+    "imported_rows": {
+      "A": "q^4*(q-1)",
+      "C": "2*q-3"
+    },
+    "path": "research/l-families/atlas/function_field/quadratic_family_two_place_cumulant_defect.json",
+    "payload_sha256": "18119e393842cfbe1f3ee7f594466eedf554004f9479f94338675921a3b0f859"
+  },
+  "status": "PROVED_EXACT_FOR_EVERY_ODD_PRIME_POWER",
+  "variables": "X_i=chi(D(a_i)) at three distinct rational places"
+}
