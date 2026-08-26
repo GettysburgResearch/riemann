@@ -1,9 +1,10 @@
 # L-106611 — The fifth-endpoint quotient is a carrier-free arithmetic cross-ratio
 
 Claim ID: `L-106611`  
-Status: **PROVED EXACT ALGEBRAICALLY ON REGULAR WINDOWS**  
+Status: **CORRECTED EXACT ALGEBRA + CANONICAL/PHASE MAJORANTS ON REGULAR WINDOWS**  
 Created: 2026-08-26  
-Depends on: `L-106610`, `L-106514`, `T-106600`  
+Corrected: 2026-08-26  
+Depends on: `L-106610`, corrected `L-106514`, `L-106660`, `T-106600`  
 RH status: **not assumed**
 
 Retain the notation of `L-106610` and use the explicit scale
@@ -73,7 +74,7 @@ h\,DH_5-(Dh)H_5
 \]
 
 The complete Xi amplitude \(A\), its logarithmic derivative \(q\), and the
-common Riemann–Siegel carrier are absent from the conclusion-facing
+common Riemann--Siegel carrier are absent from the conclusion-facing
 Wronskian.
 
 Consequently,
@@ -92,35 +93,85 @@ Consequently,
 \tag{L-106611.3}
 \]
 
-## 3. Exact oriented phase-angle mean
+## 3. Correct canonical charge and optimized phase majorants
 
-On a finite regular window, reduce common factors and write the quotient as
+On a finite regular window, reduce common factors and write
 
 \[
-U_{5,a_{\rm RS}}=\omega_0 B_+\overline{B_-}.
+U_{5,a_{\rm RS}}=\omega_0B_+\overline{B_-}
 \]
 
-Let \(\beta_-'\ge0\) be the boundary phase density of \(B_-\). The exact
-oriented charge identity of `L-106514` becomes
+on the compactified real boundary. Let \(m_-=\deg B_-\), let
+\(\beta_-'\ge0\) be the boundary phase density of \(B_-\), and let
+
+\[
+\mathcal O
+=
+\operatorname{tr}(P_{K_{B_-}}P_{K_{B_+}}).
+\]
+
+The exact adverse charge is the canonical-correlation defect
 
 \[
 \boxed{
+\mathcal C_{5,\rm RS}
+=
 \|H_{U_{5,a_{\rm RS}}}\|_{\mathcal S_2}^2
 =
-\frac1{\pi}
-\int_{\mathbb R}
+m_- -\mathcal O.
+}
+\tag{L-106611.4}
+\]
+
+Define the complex cross trace directly from the physical quotient by
+
+\[
+\Delta_{5,\rm RS}
+=
+\frac1{2\pi}\int_{\mathbb R}
+\beta_-'(t)U_{5,a_{\rm RS}}(t)\,dt.
+\]
+
+The corrected cross-Hankel inequality of `L-106514` and the phase optimization
+of `L-106660` give
+
+\[
+\boxed{
+\mathcal C_{5,\rm RS}
+\le
+m_- -|\Delta_{5,\rm RS}|
+=
+\min_{\theta\in\mathbb R}
+\frac1{4\pi}\int_{\mathbb R}
+\beta_-'(t)
+|1-e^{i\theta}U_{5,a_{\rm RS}}(t)|^2\,dt.
+}
+\tag{L-106611.5}
+\]
+
+Taking the unrotated phase and using (L-106611.3) yields the fully explicit
+Wronskian majorant
+
+\[
+\boxed{
+\mathcal C_{5,\rm RS}
+\le
+\frac1{\pi}\int_{\mathbb R}
 \beta_-'(t)
 \frac{
 |h\,DH_5-(Dh)H_5|^2
 }{
 \omega(t)^2|C_0R_5|^2
-}\,dt .
+}\,dt.
 }
-\tag{L-106611.4}
+\tag{L-106611.6}
 \]
 
-This is the same adverse topological charge as before, but its boundary angle
-is now a literal arithmetic Wronskian.
+The earlier version of this file incorrectly wrote equality in
+(L-106611.6). `L-106514` and `R-106640` prove that the phase mean can strictly
+overpay the canonical charge. The optimized scalar in (L-106611.5) is sharper
+and is exact for one principal channel, but it can also remain strict in
+several channels.
 
 ## 4. Symmetric semiclassical normalization
 
@@ -141,7 +192,7 @@ C_5
 (i\omega)^5
 \frac{i}{\omega}(D+q_5)\widetilde H_5,
 }
-\tag{L-106611.5}
+\tag{L-106611.7}
 \]
 
 \[
@@ -155,7 +206,7 @@ R_5
 \frac{i}{\omega}(D+q_5)\widetilde H_5
 \right].
 }
-\tag{L-106611.6}
+\tag{L-106611.8}
 \]
 
 The common factor \((i\omega)^5\) cancels from (L-106611.1). Both endpoints
@@ -164,7 +215,8 @@ and one carrier-cancelled derivative packet.
 
 ## 5. Scope
 
-Equation (L-106611.4) does not bound the positive phase-weighted mean.
-The denominator phase density is still conclusion-bearing and may
-concentrate. The theorem removes the carrier and amplitude ambiguity; it does
-not replace the required arithmetic mean-value estimate.
+Equations (L-106611.5)--(L-106611.6) do not bound either positive
+phase-weighted mean. The denominator phase density is still
+conclusion-bearing and may concentrate. The theorem removes the carrier and
+amplitude ambiguity and now retains the exact canonical/majorant distinction;
+it does not supply the required Xi arithmetic estimate.
