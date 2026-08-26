@@ -47,23 +47,23 @@ class Genus2Sym12ConditionalEndoscopicClosureTests(unittest.TestCase):
     def test_committed_source_locks_and_transitive_manifests(self) -> None:
         expected = {
             "sym12_inventory": {
-                "commit": "70dd4a130e702a2d6df4b0fb96a0182a560009a4",
-                "git_blob": "b48963d7b9bc6459046024507a2f2cb8ccbbcd40",
+                "commit": "482e32c53f26517906143cd0d99c74d8b4edf3be",
+                "git_blob": "68907aa3ee65ced500807c79123f116da05f0ece",
                 "sha256_lf_normalized": (
-                    "e966b54fe909570eaac7d9253f635c8067c5f874ed47c9daf485c8fd88bfbd85"
+                    "94f0647a91aff299c62f24019947846e6923863f3ecba3c2f9cf95008407d4f6"
                 ),
                 "payload_sha256": (
-                    "557ab6465a16bb6080caa2a249c3d0935f8d36fb49bdf54898a0fe72b372496f"
+                    "fba1c85c8dc3d60b276635ae5e3ed84db3ded06f4960afeaa9b92b4055f9211f"
                 ),
             },
             "sym12_finite_scout": {
-                "commit": "4a27bc2f96d9995f5657c23624ed731150f3630c",
-                "git_blob": "9ee1d3cb82bf896e9479cf096faa0835a31a531c",
+                "commit": "c463d4896e62057139454cb0ae2beb868506fee4",
+                "git_blob": "68acd63d703d3569f282cd32a4160dcdd7bf76fa",
                 "sha256_lf_normalized": (
-                    "21540da03e0595b119120bf957a6ebaab136a0291525b87335c852a3c5c356b4"
+                    "06cc45904ee427fa6b2d2812b6c54d2312d6b9d41e12cd4689d28b7def360d2e"
                 ),
                 "payload_sha256": (
-                    "9fdc8907f9b9c61de5d4e573b04fa6e78024b4c84117db5c4831d552e51086dc"
+                    "1c794190e4e83778de852d1f12df5a35fccbce414c27df67eeeb6f87ed7ee1d1"
                 ),
             },
             "sym12_marked_valuation_kernel": {
@@ -345,7 +345,7 @@ class Genus2Sym12ConditionalEndoscopicClosureTests(unittest.TestCase):
         for key, value in expected_actuals.items():
             self.assertEqual(resources[key]["actual"], value)
             self.assertLessEqual(resources[key]["actual"], resources[key]["maximum"])
-        self.assertEqual(resources["source_bytes"]["actual_total"], 172_931)
+        self.assertEqual(resources["source_bytes"]["actual_total"], 174_029)
         self.assertEqual(
             resources["runtime_web_or_database_calls"], "FORBIDDEN_AND_NOT_PERFORMED"
         )

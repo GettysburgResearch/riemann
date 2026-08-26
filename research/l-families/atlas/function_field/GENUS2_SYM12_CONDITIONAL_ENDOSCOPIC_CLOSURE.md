@@ -357,18 +357,18 @@ The producer content-locks the canonical JSON and transitively verifies the
 note/producer/test manifests of:
 
 1. `genus2_sym12_arithmetic_inventory.json`, commit
-   `70dd4a130e702a2d6df4b0fb96a0182a560009a4`, git blob
-   `b48963d7b9bc6459046024507a2f2cb8ccbbcd40`, LF SHA-256
-   `e966b54fe909570eaac7d9253f635c8067c5f874ed47c9daf485c8fd88bfbd85`,
+   `482e32c53f26517906143cd0d99c74d8b4edf3be`, git blob
+   `68907aa3ee65ced500807c79123f116da05f0ece`, LF SHA-256
+   `94f0647a91aff299c62f24019947846e6923863f3ecba3c2f9cf95008407d4f6`,
    payload SHA-256
-   `557ab6465a16bb6080caa2a249c3d0935f8d36fb49bdf54898a0fe72b372496f`;
+   `fba1c85c8dc3d60b276635ae5e3ed84db3ded06f4960afeaa9b92b4055f9211f`;
 
 2. `genus2_sym12_finite_cusp_trace_scout.json`, commit
-   `4a27bc2f96d9995f5657c23624ed731150f3630c`, git blob
-   `9ee1d3cb82bf896e9479cf096faa0835a31a531c`, LF SHA-256
-   `21540da03e0595b119120bf957a6ebaab136a0291525b87335c852a3c5c356b4`,
+   `c463d4896e62057139454cb0ae2beb868506fee4`, git blob
+   `68acd63d703d3569f282cd32a4160dcdd7bf76fa`, LF SHA-256
+   `06cc45904ee427fa6b2d2812b6c54d2312d6b9d41e12cd4689d28b7def360d2e`,
    payload SHA-256
-   `9fdc8907f9b9c61de5d4e573b04fa6e78024b4c84117db5c4831d552e51086dc`;
+   `1c794190e4e83778de852d1f12df5a35fccbce414c27df67eeeb6f87ed7ee1d1`;
 
 3. `genus2_sym12_marked_valuation_kernel.json`, commit
    `a0871416abb4ac58132b53dd4ae30faeed9719bd`, git blob
@@ -376,7 +376,7 @@ note/producer/test manifests of:
    `9e833cb7778c6613d0f4c7ef22a72319864c05ce41c50addc9dee778d5446076`.
 
 Including the first two transitive packet manifests, the runtime reads exactly
-nine files and 172,931 bytes. It processes eleven partitions, 35 partition rows,
+nine files and 174,029 bytes. It processes eleven partitions, 35 partition rows,
 19 removable corners, eleven endoscopic projection terms, 30 hook boxes,
 70 free-module component operations, and three finite corroboration rows.
 Those are also hard caps. Output is capped at 32,768 bytes and runtime at four
