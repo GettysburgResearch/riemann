@@ -31,7 +31,14 @@
 > selector problem is moving-tail bulk matching, not another finite edge
 > patch. The actual primitive-pair `d^-1` average also has an exact incidence
 > Gram whose fixed-height limit is the biased Boolean cube; the stronger open
-> dyadic gate `PRIMCAR` implies `PRIMLS` and hence conditionally RH. Separately, the minimal
+> dyadic gate `PRIMCAR` implies `PRIMLS` and hence conditionally RH. Its `rho`
+> coefficient is boundedly convolution-equivalent to ordinary Möbius; the
+> pair zero mode becomes a Boolean-compressed weighted superposition of
+> generalized primitive panels. Squarefreeness, coprimality, and sieve
+> incidence survive exactly under `(A,B,q)=(67^alpha r,67^gamma s,drs)`, and
+> the critical harmonic dilation costs only `O(log^4 H)` in energy. The open
+> input is generalized-scale cancellation, not a new incidence algebra.
+> Separately, the minimal
 > ternary physical mask has a universal degree-shell norm/Kummer realization
 > of rank `48`, tame Swan zero, and linear toric boundary support; the exact
 > cycle selector is its first exponential **coefficient-space** assembly cost,

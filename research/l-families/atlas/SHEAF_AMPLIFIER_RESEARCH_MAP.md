@@ -24,21 +24,22 @@ For a five-minute digest, read in this order:
 6. [`FFPS_BOUNDARY_FIELD_PRIMITIVE_RAY_LOCALIZATION.md`](function_field/FFPS_BOUNDARY_FIELD_PRIMITIVE_RAY_LOCALIZATION.md);
 7. [`FFPS_BOUNDARY_FIELD_PRIMITIVE_PAIR_LARGE_SIEVE_GATE.md`](function_field/FFPS_BOUNDARY_FIELD_PRIMITIVE_PAIR_LARGE_SIEVE_GATE.md);
 8. [`FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md`](function_field/FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md);
-9. [`FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md`](function_field/FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md);
-10. [`QUADRATIC_FAMILY_LOGARITHMIC_DEPTH_ZERO_FIREWALL.md`](function_field/QUADRATIC_FAMILY_LOGARITHMIC_DEPTH_ZERO_FIREWALL.md);
-11. [`QUADRATIC_FAMILY_PROFILE_CHI_SQUARE_BRIDGE.md`](function_field/QUADRATIC_FAMILY_PROFILE_CHI_SQUARE_BRIDGE.md);
-12. [`QUADRATIC_FAMILY_SQUARECLASS_ENTROPY_COMPRESSION.md`](function_field/QUADRATIC_FAMILY_SQUARECLASS_ENTROPY_COMPRESSION.md);
-13. [`FFPS_DERANGEMENT_SELECTOR_TANH_CALIBRATION.md`](function_field/FFPS_DERANGEMENT_SELECTOR_TANH_CALIBRATION.md);
-14. [`FFPS_SELECTOR_STABLE_TAIL_TRANSPORT.md`](function_field/FFPS_SELECTOR_STABLE_TAIL_TRANSPORT.md);
-15. [`FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md`](function_field/FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md);
-16. [`FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md`](function_field/FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md);
-17. [`GENUS2_SYM12_MASTER_ADAPTER_CONTRADICTION_AUDIT.md`](function_field/GENUS2_SYM12_MASTER_ADAPTER_CONTRADICTION_AUDIT.md);
-18. [`SHEAF_AMPLIFIER_RELEASE_AUDIT.md`](SHEAF_AMPLIFIER_RELEASE_AUDIT.md)
+9. [`FFPS_PRIMITIVE_RHO_TILT_CONVOLUTION_ISOMORPHISM.md`](function_field/FFPS_PRIMITIVE_RHO_TILT_CONVOLUTION_ISOMORPHISM.md);
+10. [`FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md`](function_field/FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md);
+11. [`QUADRATIC_FAMILY_LOGARITHMIC_DEPTH_ZERO_FIREWALL.md`](function_field/QUADRATIC_FAMILY_LOGARITHMIC_DEPTH_ZERO_FIREWALL.md);
+12. [`QUADRATIC_FAMILY_PROFILE_CHI_SQUARE_BRIDGE.md`](function_field/QUADRATIC_FAMILY_PROFILE_CHI_SQUARE_BRIDGE.md);
+13. [`QUADRATIC_FAMILY_SQUARECLASS_ENTROPY_COMPRESSION.md`](function_field/QUADRATIC_FAMILY_SQUARECLASS_ENTROPY_COMPRESSION.md);
+14. [`FFPS_DERANGEMENT_SELECTOR_TANH_CALIBRATION.md`](function_field/FFPS_DERANGEMENT_SELECTOR_TANH_CALIBRATION.md);
+15. [`FFPS_SELECTOR_STABLE_TAIL_TRANSPORT.md`](function_field/FFPS_SELECTOR_STABLE_TAIL_TRANSPORT.md);
+16. [`FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md`](function_field/FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md);
+17. [`FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md`](function_field/FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md);
+18. [`GENUS2_SYM12_MASTER_ADAPTER_CONTRADICTION_AUDIT.md`](function_field/GENUS2_SYM12_MASTER_ADAPTER_CONTRADICTION_AUDIT.md);
+19. [`SHEAF_AMPLIFIER_RELEASE_AUDIT.md`](SHEAF_AMPLIFIER_RELEASE_AUDIT.md)
    before reusing any claim.
 
-Items 3--8 are the shortest quadratic RH-facing path; item 9 is its native-
+Items 3--9 are the shortest quadratic RH-facing path; item 10 is its native-
 reflection continuation. Standalone arithmetic geometry begins at items
-10--17. The hard-mask/sheaf path begins at
+11--18. The hard-mask/sheaf path begins at
 [`FFPS_MASK_AMPLIFIER_PARETO_FRONTIER.md`](function_field/FFPS_MASK_AMPLIFIER_PARETO_FRONTIER.md).
 
 ## Executive verdict
@@ -94,6 +95,7 @@ as RH. They should not be blended into one vague “family estimate.”
 | primitive-ray localization | every fixed admissible beta ray has an explicit `A_(a,b) log X+O(1)` law; all reduced rays of height at most `H` cost `O(H log(2X))`, so for every prescribed `H=X^o(1)` RH is equivalent to the balanced residual above height `H` | cancel the high-height sector; both primitive coordinates exceed `H/16` and the common factor is `<X/H` |
 | primitive-pair large-sieve gate | the full residual has an exact five-oriented/three-reciprocal decomposition, a signed one-dimensional Möbius--Gram form, and a biased-Boolean divisor-sieve diagonalization | prove `PRIMLS`, a maximal `L2(d^-1)` square-root-scale bound; the harmonic zero mode and frozen sieve rows show that `d`-averaging alone cannot do it |
 | primitive incidence/Carleson form | the actual truncated `d^-1` square mean is an incidence Gram; at fixed height its normalized limit is `67/(68 zeta(2))` times the Boolean energy, with a `rho`-tilted Möbius zero mode; `PRIMCAR=>PRIMLS=>RH` | `PRIMCAR` is a stronger unproved sufficient gate; control its zero mode, nonzero spectrum, and dyadic block sum uniformly as height grows |
+| primitive `rho`-tilt isomorphism | `mu*rho` and 67-free `mu` are mutually inverse-convolution equivalent and have the same positive Mertens exponents; primitive pair support Boolean-compresses, then reassembles exactly as the ordinary panel with `(A,B,q)=(67^alpha r,67^gamma s,drs)`; the critical harmonic tax is only `O(log^4 H)` in energy | prove generalized-scale ordinary-Möbius primitive Carleson cancellation, uniformly or with summable losses, over those coupled `(A,B,q)` panels; nonzero `PRIMCAR` modes remain separate |
 | reflection/geodesic form | the same detector is exactly a differentiated native reflection-odd energy; the relative geodesic form differs only by an unconditional `O_epsilon(T)` squared field | obtain arithmetic control of the positive differentiated reflection energy |
 | raw complete current | negative Jordan variation is at least `((70+50 sqrt(2))/pi^2)sqrt(Y)+O(log Y)` | none: the raw subpower premise is refuted |
 | hard-mask co-design | sharp leverage/leakage Pareto law and bounded-energy anomaly-cancellation theorem | a global varying-place relative complex and signed trace estimate |
@@ -356,7 +358,84 @@ rho-tilted zero mode + nonzero incidence spectrum + dyadic block summability.
 Read
 [`FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md`](function_field/FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md).
 
-### 1.7 Native half-divisor reflection removes the Boolean adapter
+### 1.7 The rho zero mode is an invertible convolution of ordinary Möbius
+
+On integers prime to 67, put `m=mu`, `a=mu*rho`. Exact local Euler algebra
+constructs mutually inverse multiplicative kernels
+
+\[
+ g(p^k)={1\over p+1},qquad
+ h(p^k)=-{1\over p+1}\left({p\over p+1}\right)^{k-1},
+\]
+
+such that `m*g=a`, `a*h=m`, and `g*h=delta_1`. Both kernels are absolutely
+summable after division by `sqrt(n)`. They therefore give bounded inverse
+operators on `ell^2(n^-1)` and two-sided transfer of every positive Mertens
+summatory exponent. After restoring the harmless prime-67 Euler factor,
+
+\[
+ \mathrm{RH}
+ \quad\Longleftrightarrow\quad
+ \sum_{\substack{n\le x\\(n,67)=1}}{\mu(n)\rho(n)}
+ =O_\varepsilon(x^{1/2+\varepsilon})
+ \quad(\forall\varepsilon>0).
+\]
+
+This is an imported-equivalence transfer, not an estimate. At the actual pair
+level, half-weighting gives an exact superposition of ordinary Möbius tests
+`F(rm,sn)`. If
+
+\[
+ E_0(r,s)=\sum_jw_j|\mathcal B_0(F_{j;r,s})|^2,
+\]
+
+the direct cancellation-free sufficient gate is
+
+\[
+ \sum_{r,s}|\gamma(r)\gamma(s)|E_0(r,s)^{1/2}
+ \ll_\varepsilon(2DH)^{\varepsilon/2}.
+\]
+
+A uniform theorem is only a stronger sufficient corollary. Generically it
+costs `L_g(1/2)^4` in squared energy. On the actual squarefree-coprime
+primitive support, prime powers and shared outer primes disappear; forward
+and inverse instead have the same absolute pair mass
+
+\[
+ \mathcal K_{67}
+ =\prod_{p\ne67}\left(1+{2\over(p+1)\sqrt p}\right),
+\]
+
+so fixed-index uniform scalar/energy costs sharpen to `K_67/K_67^2` in both
+directions. Better still, the raw support conditions are equivalent to the
+same ordinary primitive predicate after
+
+\[
+ (A,B,q)=(67^\alpha r,67^\gamma s,drs).
+\]
+
+Thus squarefreeness, cross-coprimality, sieve incidence, and the ratio-kernel
+form all survive. On the harmonic `d^-1` space, reindexing `d` to `drs` has
+sharp norm `sqrt(rs)`. This is the critical weight: its infinite absolute
+Euler product diverges, but native height support gives only `O(log^2 H)` in
+vector norm and `O(log^4 H)` in energy. The one-variable coefficient is
+Mertens-neutral. A clean stronger sufficient route for the pair zero mode is
+generalized-scale Carleson cancellation, not a new incidence algebra; the
+scalar zero mode itself has no native `d`-average. This would address only the
+zero mode; nonzero incidence modes and finite-`D` summability remain.
+
+The associated three-state colored cube is also exact. Its local shear has
+states `absent/left/right`, forward and inverse have the same convergent
+Hilbert norm product, and a sharp projection law says a coordinate constraint
+survives one-sided compression exactly when it is downward closed. Sieve
+avoidance and upper height cutoffs are hereditary; ratio bands generally are
+not. This isolates the remaining geometric leakage without treating every
+sharp cutoff as equally hostile.
+
+Read
+[`FFPS_PRIMITIVE_RHO_TILT_CONVOLUTION_ISOMORPHISM.md`](function_field/FFPS_PRIMITIVE_RHO_TILT_CONVOLUTION_ISOMORPHISM.md).
+
+### 1.8 Native half-divisor reflection removes the Boolean adapter
 
 The frozen half-divisor source `lambda` satisfies `lambda*lambda=beta`. Let
 `F_1` be its positive spline field and `I_1=F_1*_M F_1`. With
@@ -395,7 +474,7 @@ This route is source-exact and bypasses the open Boolean completion statement
 `NATCOMP-MOLL106150`. Its smallest burden is now sharply stated, but not
 solved.
 
-### 1.8 Lightweight scout
+### 1.9 Lightweight scout
 
 The bounded scout uses at most `2^18` beta coefficients and two log meshes.
 For `epsilon=(log 2)/2`, the fine panel reports:
@@ -1054,10 +1133,13 @@ the refuted raw measure. The exact quadratic target is now
 \]
 
 Its subpower bound is exactly RH-equivalent. The primitive decomposition now
-isolates the stronger `PRIMCAR` route into a `rho`-tilted Möbius zero mode,
-nonzero incidence spectrum, and dyadic summability. Any analytic attack must
-control those terms uniformly rather than merely re-center the fixed-height
-Boolean limit.
+isolates the stronger `PRIMCAR` route into a zero mode, nonzero incidence
+spectrum, and dyadic summability. The zero mode's `rho` tilt has been rewritten
+exactly as a Boolean-compressed family of ordinary-Möbius primitive panels at
+`(A,B,q)=(67^alpha r,67^gamma s,drs)`. Incidence survives exactly and the
+critical harmonic tax is polylogarithmic. The next analytic target is
+generalized-scale cancellation uniformly, or with summable losses, across
+that family; this still leaves the nonzero spectrum.
 
 ### Highest family/sheaf bet
 

@@ -7,7 +7,7 @@ Frozen parent: PR #756 at
 `6e4609dfe1b073f1eb58445fdd1d7164dbc450d6`.
 
 Audited mathematical-packet head:
-`05da4d1705d994dd02d650f321196f8464034ba8`. The final PR head is recorded in
+`4d1eea3b84f8795a9b3ba9fe90c78476a930accb`. The final PR head is recorded in
 the PR body because a tracked file cannot contain the SHA of the commit which
 creates that SHA.
 
@@ -37,6 +37,7 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
 | primitive-ray localization | exact source disintegration and equivalence | each fixed ray is `A_(a,b) log X+O(1)`; every prescribed subpower-height sector is harmless | the balanced high-height residual remains RH-bearing |
 | primitive-pair large-sieve gate | exact shell identities, two exact normal forms, plus conditional implication | five oriented/three reciprocal panels reconstruct the residual; Möbius--Gram and biased-Boolean forms expose its modes; `PRIMLS` implies RH | the harmonic zero mode survives sieve averaging; `PRIMLS` is unproved, stronger than RH, with no converse |
 | primitive incidence/Carleson form | exact finite Gram, fixed-height limit, and conditional implication | the actual `d^-1` average limits to `67/(68 zeta(2))` times the Boolean energy; `PRIMCAR=>PRIMLS=>RH` | `PRIMCAR` is stronger and unproved; its `rho`-tilted zero mode still carries `1/zeta(s)` |
+| primitive `rho`-tilt convolution | exact Euler algebra, bounded inverse operators, Boolean compression, generalized-panel reduction, and colored-cube audit | the one-variable tilt preserves every positive Mertens exponent; pair incidence survives exactly under `(A,B,q)=(67^alpha r,67^gamma s,drs)`, and the stronger generalized-harmonic route has only an `O(log^4 H)` energy tax | generalized-scale ordinary-Möbius cancellation is unproved; the scalar zero mode has no native sieve average, and nonzero `PRIMCAR` modes remain uncontrolled |
 | native reflection/geodesic criterion | exact source identity and equivalence | same detector is a differentiated reflection-odd energy; relative squared endpoint costs `O(T)` | positive reflection estimate remains RH-bearing |
 | finite beta scout | bounded floating point | checkpoint values and two-mesh controls are reproducible | no interval certificate or asymptotic inference |
 | compact boundary-field scout | bounded floating point plus exact first-difference control | `G` rows reproduce; direct differencing agrees with `h_epsilon` to `2.13e-13` absolute | no asymptotic inference |
@@ -109,6 +110,13 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
   zero-mode Euler factor, spectral coefficients, and dyadic chaining. Seven
   embedded Markdown control characters and one omitted finite summation
   subscript were repaired without changing the theorem.
+- `4d1eea3b8` proves that the surviving `rho` tilt is a Wiener-type
+  Dirichlet-convolution isomorphism. An independent audit rederived both
+  kernels, half-weight norms, Mertens transfers, prime-67 restoration, generic
+  vector transfer, primitive-support Boolean compression, generalized-panel
+  identity, colored-cube norm, hereditary constraints, and critical harmonic
+  scaling. The packet explicitly leaves generalized-scale cancellation,
+  nonzero incidence modes, PRIMCAR, PRIMLS, RH, and GRH open.
 
 ### Selector and notch extensions
 
@@ -281,6 +289,16 @@ JSON:
     trace terms do not bound the Betti complexity of their pushforwards.
 29. Equal-degree place extraction uses ordered pairs and subtracts the exact
     diagonal class. No unordered-pair normalization is silently inserted.
+30. The `rho` convolution isomorphism acts on complete 67-free sequences.
+    On primitive support its pair transfer preserves the incidence predicate
+    but enlarges the scale/modulus family to `(67^alpha r,67^gamma s,drs)`.
+    The harmonic norm is critical with a polylogarithmic height tax, so an
+    undilated two-ray `PRIMCAR` estimate cannot be substituted; even a solved
+    zero mode would not control the nonzero incidence spectrum.
+31. `GENPRIMCAR` is a named stronger sufficient generalized-scale gate, not a
+    necessary reformulation. The actual rho zero mode is its `d=1` atom and
+    has no native sieve average; the exact conditional implication is kept
+    separate from every unproved estimate.
 
 ## 5. Final replay set
 
@@ -298,6 +316,7 @@ python -B research/l-families/atlas/function_field/ffps_boundary_field_near_corr
 python -B research/l-families/atlas/function_field/ffps_boundary_field_primitive_ray_localization.py --check
 python -B research/l-families/atlas/function_field/ffps_boundary_field_primitive_pair_large_sieve_gate.py --check
 python -B research/l-families/atlas/function_field/ffps_primitive_pair_harmonic_incidence_carleson.py --check
+python -B research/l-families/atlas/function_field/ffps_primitive_rho_tilt_convolution_isomorphism.py --check
 python -B research/l-families/atlas/function_field/ffps_exact_cycle_selector_mass_no_go.py --check
 python -B research/l-families/atlas/function_field/ffps_derangement_selector_finite_l1_optimization.py --check
 python -B research/l-families/atlas/function_field/ffps_derangement_selector_tanh_calibration.py --check
@@ -331,6 +350,7 @@ tests.test_ffps_boundary_field_near_correlation_criterion
 tests.test_ffps_boundary_field_primitive_ray_localization
 tests.test_ffps_boundary_field_primitive_pair_large_sieve_gate
 tests.test_ffps_primitive_pair_harmonic_incidence_carleson
+tests.test_ffps_primitive_rho_tilt_convolution_isomorphism
 tests.test_ffps_exact_cycle_selector_mass_no_go
 tests.test_ffps_derangement_selector_finite_l1_optimization
 tests.test_ffps_derangement_selector_tanh_calibration
@@ -358,14 +378,14 @@ tests.test_ffps_finite_abelian_subgroup_mask_compression
 tests.test_function_field_block_entropy_conductor_phase_diagram
 ```
 
-At the audited head, all 27 listed producers passed normally and under `-O`;
-the focused 36-module set passed 282 tests in each mode; and all 73 branch-
-added or changed test modules passed 483 tests in each mode. Ruff check passed
-over all 147 changed Python files. Ruff 0.16.1 format-check passed on 135;
+At the audited head, all 28 listed producers passed normally and under `-O`;
+the focused 37-module set passed 297 tests in each mode; and all 74 branch-
+added or changed test modules passed 498 tests in each mode. Ruff check passed
+over all 149 changed Python files. Ruff 0.16.1 format-check passed on 137;
 twelve older source-
 locked files have formatter-version-only drift and were deliberately not
-rewritten, avoiding a meaningless hash cascade. The three newest theorem
-packets are among the 135 clean files. All 139 local Markdown references from
+rewritten, avoiding a meaningless hash cascade. The four newest theorem
+packets are among the 137 clean files. All 142 local Markdown references from
 the six front doors and `git diff --check` also passed.
 
 ## 6. Computation boundary

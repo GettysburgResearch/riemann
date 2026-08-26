@@ -68,6 +68,25 @@ mode is an explicit `rho`-tilted Möbius pair whose Euler series still contains
 hence conditionally RH, but is stronger and wholly unproved. The gain is an
 exact analytic decomposition, not an estimate.
 
+The `rho` weight itself is no longer mysterious. On integers prime to 67,
+`mu*rho` is ordinary Möbius convolved with an explicit kernel `g`, and `g`
+has an explicit inverse `h`; both are absolutely summable at half weight.
+Consequently they give a bounded isomorphism on `ell^2(n^-1)`, preserve every
+positive one-variable Mertens exponent in both directions, and transfer finite
+pair tests as an exact weighted sum of multiplicatively dilated ordinary
+Möbius tests. On squarefree-coprime primitive support this sum Boolean-
+compresses: prime powers disappear, the two outer variables are coprime, and
+forward and inverse have the same Euler-product mass `K_67`.
+More strongly, all squarefreeness, cross-coprimality, and sieve conditions
+reassemble into the same generalized ordinary primitive panel with
+`(A,B,q)=(67^alpha r,67^gamma s,drs)`. The `d^-1` harmonic norm is critical,
+but native height truncation makes its tax only `O(log^2 H)` in vector norm
+and `O(log^4 H)` in energy. This still does not prove the zero-mode estimate:
+one clean stronger sufficient input is generalized-scale ordinary-Möbius
+Carleson cancellation over those coupled `(A,B,q)` panels. The scalar zero
+mode has no native `d`-average, and the nonzero incidence spectrum and finite-
+`D` summability remain separate.
+
 ### 2. The raw version is impossible
 
 The complete unmollified current has unavoidable negative atomic variation
@@ -291,8 +310,9 @@ If you care about the direct RH mechanism:
 5. [`FFPS_BOUNDARY_FIELD_PRIMITIVE_RAY_LOCALIZATION.md`](function_field/FFPS_BOUNDARY_FIELD_PRIMITIVE_RAY_LOCALIZATION.md);
 6. [`FFPS_BOUNDARY_FIELD_PRIMITIVE_PAIR_LARGE_SIEVE_GATE.md`](function_field/FFPS_BOUNDARY_FIELD_PRIMITIVE_PAIR_LARGE_SIEVE_GATE.md);
 7. [`FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md`](function_field/FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md);
-8. [`FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md`](function_field/FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md);
-9. [`FFPS_BOUNDARY_FIELD_FINITE_SCOUT.md`](function_field/FFPS_BOUNDARY_FIELD_FINITE_SCOUT.md)
+8. [`FFPS_PRIMITIVE_RHO_TILT_CONVOLUTION_ISOMORPHISM.md`](function_field/FFPS_PRIMITIVE_RHO_TILT_CONVOLUTION_ISOMORPHISM.md);
+9. [`FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md`](function_field/FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md);
+10. [`FFPS_BOUNDARY_FIELD_FINITE_SCOUT.md`](function_field/FFPS_BOUNDARY_FIELD_FINITE_SCOUT.md)
    only after the theorem packets.
 
 If you care about hard masks and sheaves:
@@ -367,7 +387,10 @@ in chronological order.
    RH.  A five-channel maximal sifted Möbius-pair large sieve is a clean
    sufficient statement, but is deliberately stronger than RH and unproved.
    The still stronger `PRIMCAR` removes the endpoint supremum and exposes an
-   incidence Gram; it is also unproved.
+   incidence Gram; it is also unproved. Its pair zero mode is now rewritten
+   exactly as a Boolean-compressed generalized primitive panel with a
+   polylogarithmic harmonic tax, but the generalized-scale vector estimate is
+   open.
 2. **Relative sheaf gate:** construct the global varying-place complex where
    hard and selected cleanup remain common and `C-S=Pi_0` survives with a
    usable conductor ledger. The clean ternary norm/Kummer factor and its
@@ -392,9 +415,11 @@ in chronological order.
 
 Run four lanes in parallel:
 
-1. attack the explicit `rho`-tilted zero mode and nonzero incidence spectrum
-   in `PRIMCAR`, without confusing the stronger gate with progress on its
-   estimate;
+1. attack ordinary-Möbius primitive Carleson cancellation uniformly, or with
+   summable losses, over the exact generalized scales
+   `(A,B,q)=(67^alpha r,67^gamma s,drs)`; the incidence predicate already
+   survives and the harmonic tax is polylogarithmic, after which the nonzero
+   `PRIMCAR` spectrum remains separate;
 2. prove the actual owner/Boolean/Artin--Schreier source has the partial-
    Frobenius/external-product structure required by the new Adams extractor,
    then simplify its signed divisor sum before any Betti norm;

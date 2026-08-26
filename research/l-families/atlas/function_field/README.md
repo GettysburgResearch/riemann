@@ -18,7 +18,13 @@ reflection/geodesic forms, its exact ratio-16 beta near-correlation criterion,
 its localization beyond every prescribed subpower primitive-height cutoff,
 and exact Möbius--Gram/biased-Boolean normal forms for the remaining
 primitive-pair target, now identified as the fixed-height harmonic limit of
-the actual incidence Gram together with a stronger dyadic `PRIMCAR` gate,
+the actual incidence Gram together with a stronger dyadic `PRIMCAR` gate and
+an exact invertible convolution which proves the `rho`-weighted one-variable
+Möbius coefficient has the same positive Mertens exponents as ordinary
+Möbius, while the pair zero mode becomes a Boolean-compressed weighted
+superposition whose squarefreeness, coprimality, and sieve incidence reassemble
+in the same generalized primitive panel with scales `(A,B,q)` and only a
+polylogarithmic harmonic-dilation tax,
 the exact refutation of the raw Jordan premise,
 hard-mask relative projectors and conductor ledgers, odd-notch boundary
 densities through every fixed depth, their local anti-concentration law, and

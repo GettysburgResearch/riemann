@@ -14,8 +14,13 @@ selector for separable trace kernels, its finite derangement relaxation and
 all-degree `tanh` calibration together with fixed-tail Young-lattice transport
 and a bulk matching gate, high-primitive-ray localization of the
 quadratic RH gate together with exact incidence-Gram/Boolean limits and a
-dyadic Carleson sufficient gate for its primitive-pair target, and a `Sym^12`
-cohomological audit. Begin with
+dyadic Carleson sufficient gate for its primitive-pair target, an exact
+invertible Dirichlet-convolution equivalence for that target's one-variable
+`rho` coefficient, a Boolean-compressed weighted superposition for its pair
+zero mode whose incidence algebra survives in a generalized three-parameter
+primitive panel with only a polylogarithmic harmonic tax, and a `Sym^12`
+cohomological audit.
+Begin with
 [`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md),
 then [`SHEAF_AMPLIFIER_RESEARCH_MAP.md`](SHEAF_AMPLIFIER_RESEARCH_MAP.md).
 Those criteria do not prove their RH-equivalent estimates; RH and GRH remain
