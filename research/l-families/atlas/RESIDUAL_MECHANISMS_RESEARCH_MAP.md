@@ -160,7 +160,9 @@ Read:
    [two-place cumulant defect](function_field/QUADRATIC_FAMILY_TWO_PLACE_CUMULANT_DEFECT.md)
    and [three-place elliptic interference](function_field/QUADRATIC_FAMILY_THREE_PLACE_ELLIPTIC_INTERFERENCE.md),
    followed by the unifying
-   [multi-place `L`-function identity](function_field/QUADRATIC_FAMILY_MULTIPLACE_L_FUNCTION_IDENTITY.md);
+   [multi-place `L`-function identity](function_field/QUADRATIC_FAMILY_MULTIPLACE_L_FUNCTION_IDENTITY.md)
+   and its
+   [six-place/weight-ceiling continuation](function_field/QUADRATIC_FAMILY_SIX_PLACE_CONNECTED_SATURATION.md);
 5. [guarded cohomology inference](function_field/GUARDED_COHOMOLOGY_CONJECTURE_INFERENCE.md)
    followed by the exact [same-characteristic spectroscopy](function_field/GENUS2_EXACT_FROBENIUS_TOWER_SPECTROSCOPY.md);
 6. the [high-rank Haar boundary-layer tomography](function_field/HIGH_RANK_HAAR_BOUNDARY_LAYER_TOMOGRAPHY.md).
@@ -188,6 +190,29 @@ by a half power: a universal four-place background intervenes before the
 genus-two five-place envelope. The trace-dependent `q^-7/2` and `q^-5/2`
 entries are upper envelopes, not typical-value theorems. Those ten traces do
 not collapse to the five-place trace.
+
+The six-place continuation is a useful stress test rather than just one more
+row. It proves the exact raw numerator
+
+`(q^2-21)t_A+(q-6)b_A-q^2+6q-21`
+
+and the complete connected subtraction over the `203` set partitions of six
+labels. The leading trace envelope remains `q^-5/2`, the middle genus-two
+coefficient re-enters at `q^-3`, and every disconnected correction is
+`O(q^-7)` or smaller. Equivalently, this row is the first in the ladder that
+sees the second Frobenius power, through
+`b_A=(t_A^2-s_(2,A))/2` and the `F_(q^2)` point count.
+
+More importantly, the same exact coefficient extraction has a
+representation-ring explanation. Its top weight is
+`q^(5/2)(e_3-e_5)`: this is `chi_(omega_1)` in genus two,
+`chi_(omega_3)` in genus three, zero in genus four, and
+`-chi_(omega_5)` from genus five onward. Thus `q^-5/2` is a fixed-degree
+weight ceiling with a genus-four notch, not a monotone rank law. At nine and
+ten places the exact leading envelopes improve to `q^-7/2` and `q^-3`, and
+connectedization cannot refill the cancelled channel. These remain uniform
+upper envelopes for fixed mark count, not sharpness, equidistribution, or
+attainment theorems.
 
 ### Extended packet index
 
@@ -287,6 +312,7 @@ Python replays are mandatory because assertions may not carry correctness.
 | **PROVED** | for every odd prime power, two rational-place quadratic Euler coefficients in the squarefree-quintic family have a complete `3 x 3` joint law and mixed cumulant defects `Delta_2,...,Delta_6`; every allowed nonzero channel first appears at scale `q^-4` | the renormalization moonshot's first missing arithmetic residual is now an exact theorem; it is fixed-degree family coupling, not an independent-prime model or zero theorem |
 | **PROVED** | for three distinct rational places, `sum_D chi(D(a)D(b)D(c))=3(q-2)t`, with `t` the Frobenius trace of `y^2=(a-z)(b-z)(c-z)`; the exact third-cumulant interaction splits into an elementary pair channel and this elliptic channel | the interferometry moonshot now detects a genuine geometric trace; for `q=3 mod 4` the pair channel vanishes, but the result is still a family correlation rather than a motive or zero theorem |
 | **PROVED** | for every odd prime power and set of distinct rational places, the squarefree sums in every polynomial degree obey `sum_n sum_(D in H_n) psi_A(D)u^n=L(u,psi_A)(1-qu^2)/(1-u^2)^m`; at degree five the `m=1,...,5` correlations are `0`, `2q-3`, `3(q-2)t`, `q^2-10+(4q-10)t`, and `(q^2-15)t`, with exact connected cumulants through five places | the standard squarefree Euler quotient becomes a source-exact evaluation-character/curve adapter and a geometric interaction ladder; for odd `m` the monic model is `-f_A`, a nontrivial quadratic twist exactly when `-1` is nonsquare, while the even-place infinity factor is also binding; neither the genus-two middle-coefficient cancellation nor the ten complementary elliptic traces may be promoted to a local-factor or motive identity |
+| **PROVED FROM LOCKED SOURCE** | the six-place raw sum is `(q^2-21)t_A+(q-6)b_A-q^2+6q-21`, its connected correction is `O(q^-7)`, and the all-`m` top-weight channel is `q^(5/2)(e_3-e_5)`, with an exact genus-four cancellation at `m=9,10` | the second Frobenius-power channel re-enters at six marks, while symplectic exterior algebra exposes a nonmonotone weight ceiling; all scales are fixed-`m` upper envelopes, not distribution or attainment claims |
 | **EXACT FINITE + REFUSAL** | three-field data retain the ambiguity module `(q-3)(q-5)(q-7)Q(q)` | the inference engine refuses to name a cohomology or eigenform packet without a tower and geometric adapter |
 | **PROVED** | the high-rank `SU(2)` character law has an exact cubic tail; its limiting variance exists but absolute moments of order at least three diverge, while finite-rank `2k` moments grow like `n^(2k-3)` | weak limits, rank limits, and high moments do not commute because of a thin endpoint layer |
 | **PROVED** | that endpoint layer has a uniform mesoscopic tail constant `16/(9 pi^2)`, an exact fixed-`lambda` crossover profile, and hard-truncated, Winsorized, and cubic-moment coefficients | rare-event tomography now resolves the rank-scale boundary rather than merely detecting moment divergence |
@@ -315,9 +341,11 @@ Python replays are mandatory because assertions may not carry correctness.
    determine the stable `S5`-invariant at weight `(12,3)`. The exact defect
    identity prevents these two questions from being conflated.
 6. **Most surprising moonshot conversion:** exact connected correlations at
-   two through five marked places have successive exact/Hasse scales `q^-4`,
-   `q^-7/2`, `q^-3`, and `q^-5/2`: the four-place leader is universal,
-   while the trace envelopes progress from elliptic to genus two.
+   two through six marked places have successive exact/Hasse scales `q^-4`,
+   `q^-7/2`, `q^-3`, `q^-5/2`, and `q^-5/2`. The apparent plateau is then
+   resolved by an exact exterior-character law: its top channel changes from
+   `omega_1` to `omega_3`, vanishes in genus four, and returns as
+   `-omega_5`.
 
 ## Strongest negative information
 
@@ -430,11 +458,12 @@ pending a dedicated specialist search.
 8. Build a bounded `(q,g,r)` phase diagram using characteristic functions,
    trimmed moments, tail counts, and named special strata rather than raw
    moments alone.
-9. Continue the exact multi-place connected hierarchy beyond five marks and
+9. Continue the exact multi-place connected hierarchy beyond six marks and
    determine whether its trace-dependent Hasse envelopes are sharp on
    generic, endoscopic, or exceptional configuration strata. The general
-   generating identity is proved; the higher connected geometric
-   decomposition is not.
+   generating identity and the top-weight exterior-character classification
+   are proved; distributions of the surviving `omega_1`, `omega_3`,
+   `omega_4`, and `omega_5` channels are not.
 
 ## Replay and resource contract
 
@@ -456,12 +485,12 @@ release audit runs all focused tests together in ordinary and optimized
 Python, recomputes payload hashes, checks source blobs, runs Ruff, and
 finishes with `git diff --check`.
 
-The final bounded checkpoint covers 58 producer/test pairs and 55 stored
-JSON companions. All 621 focused tests pass in ordinary and optimized
-Python. All 58 producers replay in both modes: 55 use the common `--check`
+The final bounded checkpoint covers 59 producer/test pairs and 56 stored
+JSON companions. All 630 focused tests pass in ordinary and optimized
+Python. All 59 producers replay in both modes: 56 use the common `--check`
 form, while the renormalization-flow, guarded-inference, and genus-one phase
 diagram packets use their printed alternate CLIs. Ruff and formatting pass
-on the 111 non-frozen Python files. Five provenance-frozen files retain ten
+on the 113 non-frozen Python files. Five provenance-frozen files retain ten
 pre-existing Ruff findings and are listed in the release audit rather than
 silently rewritten.
 

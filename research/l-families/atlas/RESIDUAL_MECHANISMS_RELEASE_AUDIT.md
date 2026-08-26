@@ -44,6 +44,7 @@ distinguishes current direct relevance from possible upside.
 | two-place cumulant defect | A | exact all-odd-`q` joint law and the first arithmetic residual for the renormalization model; external novelty unsearched | D direct / B methodologically |
 | three-place elliptic interference | A | exact all-odd-`q` correlation and cumulant decomposition with an elliptic Frobenius trace; external novelty unsearched | D direct / B methodologically |
 | multi-place squarefree `L`-identity | A | the Euler quotient is standard; the exact evaluation-character curve adapter, infinity/twist convention, degree-five geometric ladder, and connected-cumulant corollary are the packet contribution | D direct / B methodologically |
+| six-place connected law and weight ceiling | A | exact corollary of the multi-place identity, Weil functional equation, set-partition formula, and symplectic exterior-character algebra; no external novelty claim | D direct / B methodologically |
 
 ## Best paper-sized theorem stack
 
@@ -386,23 +387,52 @@ from a trace envelope to a universal background and back. The trace-dependent
 `q^-7/2` and `q^-5/2` entries are Hasse envelopes, not distributional or
 lower-bound theorems.
 
+The
+[six-place continuation](function_field/QUADRATIC_FAMILY_SIX_PLACE_CONNECTED_SATURATION.md)
+then proves
+
+`S_(5,6)=(q^2-21)t_A+(q-6)b_A-q^2+6q-21`
+
+and subtracts every non-singleton partition profile `6`, `4+2`, `3+3`, and
+`2+2+2` exactly. The resulting sixth cumulant differs from its raw moment by
+`O(q^-7)`; its trace channel has Hasse ceiling `q^-5/2`, while the middle
+coefficient and universal terms are `O(q^-3)`. Since
+`b_A=(t_A^2-s_(2,A))/2`, this is also the first row in the marked-place
+ladder that retains the second Frobenius power rather than only the first
+trace.
+
+The apparent five/six-place plateau is not the whole pattern. Normalize the
+auxiliary Frobenius class to `U_A in USp(2g)` and put
+`e_j=Tr(Lambda^j Std)(U_A)`. Exact coefficient extraction shows that the
+parity-independent top-weight numerator channel is
+
+`q^(5/2)(e_3-e_5)`.
+
+Symplectic duality and primitive exterior powers identify this as
+`chi_(omega_1)` for `g=2`, `chi_(omega_3)` for `g=3`, zero for `g=4`, and
+`-chi_(omega_5)` for `g>=5`. Consequently the raw and connected nine-place
+envelopes are `O(q^-7/2)`, while the split-infinity ten-place row is
+`O(q^-3)`; proper partition products are too small to restore the cancelled
+top channel. This is an exact weight-channel identity for fixed mark count,
+not an assertion that any envelope is attained or a growing-rank asymptotic.
+
 ## Release integrity checkpoint
 
-The bounded release replay covers 58 producer/test pairs and 55 stored JSON
-companions. All 621 focused tests pass under ordinary and optimized Python.
-All 58 producers also replay in both modes: 55 through their common
+The bounded release replay covers 59 producer/test pairs and 56 stored JSON
+companions. All 630 focused tests pass under ordinary and optimized Python.
+All 59 producers also replay in both modes: 56 through their common
 `--check` interface and three through the alternate CLI printed in their
 notes. Packet tests recompute the canonical payload and source locks wherever
 those locks are declared.
 
-Ruff and formatting pass on 111 non-frozen Python files. The only Ruff debt
+Ruff and formatting pass on 113 non-frozen Python files. The only Ruff debt
 is provenance-frozen and predates this release checkpoint:
 
 - `ffps_principal_leverage.py` and its test;
 - `frobenius_interferometry_subgroup_selectors.py` and its test;
 - `guarded_cohomology_conjecture_inference.py`.
 
-A control-byte scan over all 232 changed files is clean. The working diff
+A control-byte scan over all 236 changed files is clean. The working diff
 passes `git diff --check`; the full range check reports only the deliberately
 retained blank EOF in the provenance-frozen
 `CANONICAL_DETECTOR_NORM_LATTICE_OBSTRUCTION.md`.
@@ -428,6 +458,10 @@ retained blank EOF in the provenance-frozen
 8. For the multi-place packet, distinguish the standard squarefree Euler
    quotient from the evaluation-character curve adapter and the exact
    degree-five coefficient consequences.
+9. For the weight-ceiling packet, distinguish a uniform Hasse/character
+   upper envelope from sharpness or typical size, and retain the exact
+   oriented twist and split-infinity conventions before interpreting an
+   exterior-character channel.
 
 The executable provenance and recommended reading paths are in
 [RESIDUAL_MECHANISMS_RESEARCH_MAP.md](RESIDUAL_MECHANISMS_RESEARCH_MAP.md).
