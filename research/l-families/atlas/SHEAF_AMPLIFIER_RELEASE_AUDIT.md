@@ -7,7 +7,7 @@ Frozen parent: PR #756 at
 `6e4609dfe1b073f1eb58445fdd1d7164dbc450d6`.
 
 Audited mathematical-packet head:
-`314fbe6c8`. The final PR head is recorded in
+`5598fdb79`. The final PR head is recorded in
 the PR body because a tracked file cannot contain the SHA of the commit which
 creates that SHA.
 
@@ -138,9 +138,14 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
 - `314fbe6c8` factors the complete color family as the upper-divisor zeta
   transform of product-shell amplitudes, proves its exact finite-height
   Möbius inverse, and diagonalizes the local overlap block. The transform
-  forgets internal pair orientation and its inverse condition number is
-  asymptotic to `4sqrt(p)`; these are an exact scope boundary and conditioning
+  forgets internal pair orientation at fixed `(alpha,d,I)`, while recovery
+  measured in the weighted Gram norm has condition number asymptotic to
+  `4sqrt(p)`; these are an exact scope boundary and conditioning
   diagnosis, not a no-go theorem.
+- `5598fdb79` restricts the inverse to admissible squarefree coordinates,
+  separates algebraic Möbius inversion from conditioning in the weighted
+  Gram norm, and adds exact formal Cholesky/characteristic-polynomial and
+  coefficient-normalization replays after an independent audit.
 
 ### Selector and notch extensions
 

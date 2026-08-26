@@ -450,8 +450,9 @@ the signed primitive-pair shared-support Gram with kernel
 large-sieve attack, but the local determinant tends to zero and no bound
 follows formally. The full color family is exactly the upper-divisor zeta
 transform of coherently oriented product-shell amplitudes. Möbius inversion
-recovers every shell at finite height, not the orientation data inside it,
-and the local inverse condition number is asymptotic to `4sqrt(p)`. The scalar zero mode itself has no native `d`-average, and nonzero
+recovers every shell at finite height, not the orientation data inside it.
+Recovery in the local weighted overlap-Gram norm has condition number
+asymptotic to `4sqrt(p)`. The scalar zero mode itself has no native `d`-average, and nonzero
 incidence modes remain separate.
 
 The associated three-state colored cube is also exact. Its local shear has

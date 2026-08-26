@@ -109,7 +109,8 @@ problem while warning that uniform inversion degenerates at large primes. The
 full color family is an upper-divisor zeta transform of one coherently
 oriented amplitude per product shell `N=ab`; finite-height Möbius inversion
 recovers those shells exactly, while internal orientation modes are genuinely
-absent. The local condition number is asymptotic to `4sqrt(p)`, so a proof
+absent at fixed `(alpha,d,I)`. Recovery in the local weighted overlap-Gram
+norm has condition number asymptotic to `4sqrt(p)`, so a proof
 should exploit the forward signed transform rather than whiten it prime by
 prime. The scalar zero mode has no native `d`-average, and every one of these routes
 leaves the nonzero incidence spectrum separate.
