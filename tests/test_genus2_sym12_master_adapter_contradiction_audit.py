@@ -47,9 +47,9 @@ class Genus2Sym12MasterAdapterContradictionAuditTests(unittest.TestCase):
     def test_five_committed_sources_are_content_locked(self) -> None:
         expected = {
             "marked_stack_adapter": "c8eff406f49daf9f09c0bb3e63e21659275d224e",
-            "sym12_inventory": "70dd4a130e702a2d6df4b0fb96a0182a560009a4",
-            "sym12_finite_scout": "4a27bc2f96d9995f5657c23624ed731150f3630c",
-            "conditional_closure": "db57a442b124de5d507fb7cbe45b3871d327f576",
+            "sym12_inventory": "482e32c53f26517906143cd0d99c74d8b4edf3be",
+            "sym12_finite_scout": "c463d4896e62057139454cb0ae2beb868506fee4",
+            "conditional_closure": "20abcc478c310a17917b2276f85e525ad966f1c2",
             "one_tate_no_go": "86be60a01e39651d4501fd704afc664a251f97a8",
         }
         manifest = {row["id"]: row for row in self.stored["source_manifest"]}
@@ -105,7 +105,7 @@ class Genus2Sym12MasterAdapterContradictionAuditTests(unittest.TestCase):
             self.assertIn(marker, firewalls)
         resources = self.stored["resource_contract"]
         self.assertEqual(resources["source_files"]["actual"], 5)
-        self.assertEqual(resources["source_bytes"]["actual_total"], 90_960)
+        self.assertEqual(resources["source_bytes"]["actual_total"], 90_961)
         self.assertEqual(resources["finite_row_checks"]["actual"], 3)
         self.assertEqual(resources["runtime_external_access"], "NONE")
 

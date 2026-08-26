@@ -52,18 +52,18 @@
   "packet_manifest": [
     {
       "path": "research/l-families/atlas/function_field/GENUS2_SYM12_MASTER_ADAPTER_CONTRADICTION_AUDIT.md",
-      "sha256_lf_normalized": "4914b47e3627b3f1bd04b41465595b8686c396bf9bcc94d65bb1e80d328d5566"
+      "sha256_lf_normalized": "e26be5a9f049dcafc781944b7f14a2a291fbbc23466d1c328b0c923c6c46cbd2"
     },
     {
       "path": "research/l-families/atlas/function_field/genus2_sym12_master_adapter_contradiction_audit.py",
-      "sha256_lf_normalized": "75c94979d203c0b19acff3f3b9ff3feff044a9524cbad45f2cde9701c67e3f06"
+      "sha256_lf_normalized": "9fc4b818613a47f7914bb0f77c02196e80a4916c5019a582a31092ee018678a4"
     },
     {
       "path": "tests/test_genus2_sym12_master_adapter_contradiction_audit.py",
-      "sha256_lf_normalized": "a39d4d79a0d0b6ca1a958950792204087a46f94d60b09d10a3018665cac75417"
+      "sha256_lf_normalized": "d6a88af6f65225931a0da33fe61bfb74f30684b6e233e60c37c29f7fff2dbd7c"
     }
   ],
-  "payload_sha256": "b1ccab8339f67aa8978bce8a2fb2ec494b148973e75e295104274dabcd51a996",
+  "payload_sha256": "43466ccfe080aaf55e4adf9b25d2d22a72bf8cfa2ecafb30c86c17c794a3c226",
   "resource_contract": {
     "finite_row_checks": {
       "actual": 3,
@@ -73,7 +73,7 @@
     "maximum_wall_seconds": 4.0,
     "runtime_external_access": "NONE",
     "source_bytes": {
-      "actual_total": 90960,
+      "actual_total": 90961,
       "maximum_each": 45000,
       "maximum_total": 95000
     },
@@ -112,34 +112,34 @@
     },
     {
       "bytes_read": 39097,
-      "commit": "70dd4a130e702a2d6df4b0fb96a0182a560009a4",
-      "git_blob": "b48963d7b9bc6459046024507a2f2cb8ccbbcd40",
+      "commit": "482e32c53f26517906143cd0d99c74d8b4edf3be",
+      "git_blob": "68907aa3ee65ced500807c79123f116da05f0ece",
       "id": "sym12_inventory",
-      "lf_sha256": "e966b54fe909570eaac7d9253f635c8067c5f874ed47c9daf485c8fd88bfbd85",
+      "lf_sha256": "94f0647a91aff299c62f24019947846e6923863f3ecba3c2f9cf95008407d4f6",
       "path": "research/l-families/atlas/function_field/genus2_sym12_arithmetic_inventory.json",
-      "payload_sha256": "557ab6465a16bb6080caa2a249c3d0935f8d36fb49bdf54898a0fe72b372496f",
+      "payload_sha256": "fba1c85c8dc3d60b276635ae5e3ed84db3ded06f4960afeaa9b92b4055f9211f",
       "role": "exact reciprocal arithmetic and ordered decomposable boundary",
       "schema": "riemann.function_field.genus2_sym12_arithmetic_inventory.v1"
     },
     {
       "bytes_read": 12698,
-      "commit": "4a27bc2f96d9995f5657c23624ed731150f3630c",
-      "git_blob": "9ee1d3cb82bf896e9479cf096faa0835a31a531c",
+      "commit": "c463d4896e62057139454cb0ae2beb868506fee4",
+      "git_blob": "68acd63d703d3569f282cd32a4160dcdd7bf76fa",
       "id": "sym12_finite_scout",
-      "lf_sha256": "21540da03e0595b119120bf957a6ebaab136a0291525b87335c852a3c5c356b4",
+      "lf_sha256": "06cc45904ee427fa6b2d2812b6c54d2312d6b9d41e12cd4689d28b7def360d2e",
       "path": "research/l-families/atlas/function_field/genus2_sym12_finite_cusp_trace_scout.json",
-      "payload_sha256": "9fdc8907f9b9c61de5d4e573b04fa6e78024b4c84117db5c4831d552e51086dc",
+      "payload_sha256": "1c794190e4e83778de852d1f12df5a35fccbce414c27df67eeeb6f87ed7ee1d1",
       "role": "direct raw T_(12,0) rows and explicitly inventory-derived Hhat rows",
       "schema": "riemann.function_field.genus2_sym12_finite_cusp_trace_scout.v1"
     },
     {
-      "bytes_read": 27786,
-      "commit": "db57a442b124de5d507fb7cbe45b3871d327f576",
-      "git_blob": "df308ddf75f55ddd2d4d2164ec3b0711ac75cd3d",
+      "bytes_read": 27787,
+      "commit": "20abcc478c310a17917b2276f85e525ad966f1c2",
+      "git_blob": "1b40e95287081b218255c1cc0a46d71020322fe4",
       "id": "conditional_closure",
-      "lf_sha256": "78a1480fcd7b58a523bb7c43fb6747b57f7d6e57d304d7cfd4d765660db47240",
+      "lf_sha256": "e52f521214bcc2e0da5fc6e77be467b43997d2b97a97a0cb01b076a9efd7ec5f",
       "path": "research/l-families/atlas/function_field/genus2_sym12_conditional_endoscopic_closure.json",
-      "payload_sha256": "40c9667fe38aa6705b63467ece10af1041e5467701970274a2b431361f1cc22f",
+      "payload_sha256": "70a88bd13649e644503d604ca15081f2d1c6f946635285ee31c9fb1a7b672a4e",
       "role": "exact G=0 adapter and source-graded Eisenstein comparison",
       "schema": "riemann.function_field.genus2_sym12_conditional_endoscopic_closure.v2"
     },

@@ -227,12 +227,12 @@ cohomological identification must be reformulated.
 The producer content-locks five committed artifacts:
 
 1. the exact marked-Weierstrass stack adapter at commit `c8eff406f`;
-2. the arithmetic inventory at commit `70dd4a130`;
-3. the provenance-repaired finite scout at commit `4a27bc2f9`;
-4. the raw-`T` conditional closure at commit `db57a442b`; and
+2. the arithmetic inventory at commit `482e32c53`;
+3. the provenance-repaired finite scout at commit `c463d4896`;
+4. the raw-`T` conditional closure at commit `20abcc478`; and
 5. the one-Tate constituent no-go at commit `86be60a01`.
 
-It reads 90,960 bytes, performs three finite row checks, and uses exact Python
+It reads 90,961 bytes, performs three finite row checks, and uses exact Python
 integers only. Hard caps are five source files, 45,000 bytes per source,
 95,000 source bytes total, three rows, 32,768 output bytes, and four seconds.
 
