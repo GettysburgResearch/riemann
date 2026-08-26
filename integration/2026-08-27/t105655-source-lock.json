@@ -1,0 +1,42 @@
+{
+  "schema": "riemann.source_lock.t105655.v1",
+  "claim_namespace": "105654-105655",
+  "created_at": "2026-08-27",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105300-xi-moderate-saddle-residue-spectrum",
+  "pr_number": 729,
+  "source_head_before_t105655": "e399156475cac82199275ea1470eaa83ec6ebbc3",
+  "sibling_pr": 731,
+  "sibling_corrected_interfaces": [
+    "L-106514: phase-angle statistic is a majorant, not exact canonical charge",
+    "T-106540: oriented phase-angle theorem is a sufficient majorant reduction"
+  ],
+  "new_claims": [
+    "R-105654",
+    "L-105654",
+    "T-105655",
+    "M-105655"
+  ],
+  "replay": {
+    "verdict": "PASS_X_105655_CAUCHY_TRANSLATION_TRACE_CORRECTION",
+    "checks": 39605,
+    "arithmetic_class": "EXACT_RATIONAL"
+  },
+  "proved_scope": [
+    "exact cross-Dirichlet versus canonical-overlap counterexample",
+    "exact one matched-factor phase-defect absorption",
+    "exact Cauchy Gram normal form for the finite multipacket target",
+    "exact collinear two-factor finite regression"
+  ],
+  "open_gates": [
+    "CTI105655 general complex multipacket trace inequality",
+    "D0PHASE105650 physical degree-zero overlap",
+    "POINTID105630 physical point localization",
+    "cofinal endpoint/common-zero ledger",
+    "fixed-width moving-saddle hostile review"
+  ],
+  "phase_angle_equality_valid": false,
+  "phase_angle_majorant_valid": true,
+  "general_cti_proved": false,
+  "rh_established": false
+}
