@@ -1,0 +1,1367 @@
+{
+  "ambient_boundary": {
+    "boundary_expression": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 11,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 1,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 1,
+        "Theta_Delta_power": 0,
+        "coefficient": 1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 1,
+        "coefficient": 4,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -3,
+        "q_power": 1
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 1,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -1,
+        "q_power": 1
+      }
+    ],
+    "boundary_formula": "11-3*q+4*Theta_Delta+Theta_(8,2)+Theta_(10,2)-q*Theta_(14,Gamma0(2))",
+    "branch_rows": [
+      {
+        "branch_dimension": 13,
+        "contribution": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 1,
+            "q_power": 0
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": -1,
+            "q_power": 1
+          }
+        ],
+        "i": 0,
+        "vanishes_by_unmarked_central_involution": false
+      },
+      {
+        "branch_dimension": 24,
+        "contribution": [],
+        "i": 1,
+        "vanishes_by_unmarked_central_involution": true
+      },
+      {
+        "branch_dimension": 33,
+        "contribution": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 2,
+            "q_power": 0
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 1,
+            "coefficient": 2,
+            "q_power": 0
+          }
+        ],
+        "i": 2,
+        "vanishes_by_unmarked_central_involution": false
+      },
+      {
+        "branch_dimension": 40,
+        "contribution": [],
+        "i": 3,
+        "vanishes_by_unmarked_central_involution": true
+      },
+      {
+        "branch_dimension": 45,
+        "contribution": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 2,
+            "q_power": 0
+          }
+        ],
+        "i": 4,
+        "vanishes_by_unmarked_central_involution": false
+      },
+      {
+        "branch_dimension": 48,
+        "contribution": [],
+        "i": 5,
+        "vanishes_by_unmarked_central_involution": true
+      },
+      {
+        "branch_dimension": 49,
+        "contribution": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 2,
+            "q_power": 0
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 1,
+            "Theta_Delta_power": 0,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "i": 6,
+        "vanishes_by_unmarked_central_involution": false
+      },
+      {
+        "branch_dimension": 48,
+        "contribution": [],
+        "i": 7,
+        "vanishes_by_unmarked_central_involution": true
+      },
+      {
+        "branch_dimension": 45,
+        "contribution": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 2,
+            "q_power": 0
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 1,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "i": 8,
+        "vanishes_by_unmarked_central_involution": false
+      },
+      {
+        "branch_dimension": 40,
+        "contribution": [],
+        "i": 9,
+        "vanishes_by_unmarked_central_involution": true
+      },
+      {
+        "branch_dimension": 33,
+        "contribution": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 2,
+            "q_power": 0
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 1,
+            "coefficient": 2,
+            "q_power": 0
+          }
+        ],
+        "i": 10,
+        "vanishes_by_unmarked_central_involution": false
+      },
+      {
+        "branch_dimension": 24,
+        "contribution": [],
+        "i": 11,
+        "vanishes_by_unmarked_central_involution": true
+      },
+      {
+        "branch_dimension": 13,
+        "contribution": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": -2,
+            "q_power": 1
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 1,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": -1,
+            "q_power": 1
+          }
+        ],
+        "i": 12,
+        "vanishes_by_unmarked_central_involution": false
+      }
+    ],
+    "branching": "Sym^12(W_1 direct_sum W_1)=direct_sum_(i=0)^12 W_i external_tensor W_(12-i)",
+    "dimension_sum": 455,
+    "geometry": "A_(1,1)(w^1)=Y_0(2) times A_1"
+  },
+  "ambient_inventory": {
+    "channel_cancellations": {
+      "Theta_(10,2)": "-1+1=0",
+      "Theta_(8,2)": "-1+1=0",
+      "Theta_Delta": "-4+4=0"
+    },
+    "expression": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 2,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 1,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -5,
+        "q_power": 1
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 1,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -1,
+        "q_power": 1
+      }
+    ],
+    "formula": "Tr(F_q,e_c(A_2(w^1),V_(12,0)))=Hhat_12+2-5*q-q*Theta_(14,Gamma0(2))(q)",
+    "new_family_specific_input": "Hhat_12(q)",
+    "standard_boundary_input": "the full weight-14 Gamma_0(2) cuspidal Frobenius trace"
+  },
+  "cubic_channel": {
+    "formal_g_12": [
+      {
+        "coefficient": 1,
+        "q_power": 0,
+        "s_power": 12
+      },
+      {
+        "coefficient": -11,
+        "q_power": 1,
+        "s_power": 10
+      },
+      {
+        "coefficient": 45,
+        "q_power": 2,
+        "s_power": 8
+      },
+      {
+        "coefficient": -84,
+        "q_power": 3,
+        "s_power": 6
+      },
+      {
+        "coefficient": 70,
+        "q_power": 4,
+        "s_power": 4
+      },
+      {
+        "coefficient": -21,
+        "q_power": 5,
+        "s_power": 2
+      },
+      {
+        "coefficient": 1,
+        "q_power": 6,
+        "s_power": 0
+      }
+    ],
+    "formal_lambda_12_term_count": 42,
+    "full_G3_over_q_q_minus_1": [],
+    "full_Lambda3_over_q_q_minus_1": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 1,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 1,
+        "Theta_Delta_power": 0,
+        "coefficient": -1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 1,
+        "coefficient": -3,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -5,
+        "q_power": 1
+      }
+    ],
+    "moment_inventory": {
+      "highest_level_one_weight": 14,
+      "highest_level_two_weight_actually_used": 12,
+      "marked_even_degrees": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "unmarked_even_degrees": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ]
+    },
+    "repeated_G3_over_q_q_minus_1": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 1,
+        "q_power": 0
+      }
+    ],
+    "repeated_Lambda3_over_q_q_minus_1": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 17,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -6,
+        "q_power": 1
+      }
+    ],
+    "repeated_proof": {
+      "L^3_per_modulus": "-(q-1)",
+      "normalized_total": "17-6*q",
+      "ordered_L^2*M_per_modulus": "18-6*q"
+    },
+    "squarefree_G3_over_q_q_minus_1": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -1,
+        "q_power": 0
+      }
+    ],
+    "squarefree_Lambda3_over_q_q_minus_1": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -17,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 1,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 1,
+        "Theta_Delta_power": 0,
+        "coefficient": -1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 1,
+        "coefficient": -3,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 1,
+        "q_power": 1
+      }
+    ]
+  },
+  "definitions": {
+    "H_12": "sum_(deg f=12, f monic squarefree) mu(f)*Q_5(f), where Q_5(f) is the central coefficient of the completed even quadratic Dirichlet polynomial",
+    "Hhat_12": "H_12/(q*(q-1))",
+    "T_(12,0)": "sum_(D monic squarefree quintic) r_D(12)/(q*(q-1))",
+    "normalization": "r_D(12)=q^6*chi_(12,0)(U_D)"
+  },
+  "degree_twelve_dependency": {
+    "lower_residual_expression": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -9,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 1,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 1,
+        "Theta_Delta_power": 0,
+        "coefficient": -1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 1,
+        "coefficient": -4,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -2,
+        "q_power": 1
+      }
+    ],
+    "marked_open_expression": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -9,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 1,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 1,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 1,
+        "Theta_Delta_power": 0,
+        "coefficient": -1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 1,
+        "coefficient": -4,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -2,
+        "q_power": 1
+      }
+    ],
+    "marked_open_formula": "T_(12,0)=Hhat_12-2*q-9-4*Theta_Delta-Theta_(8,2)-Theta_(10,2)",
+    "minimality_certificate": {
+      "coefficient_of_Hhat_12": 1,
+      "meaning": "necessary and sufficient inside the locked one-step dependency graph; an additional arithmetic theorem could still evaluate or relate Hhat_12",
+      "remaining_unknown_dimension_over_the_locked_input_ring": 1
+    },
+    "necessary_and_sufficient_relative_input": "one scalar Hhat_12(q)",
+    "preclosure_identity": "T_(12,0)=Hhat_12-(q+1)*G3hat-G4hat+Lambda3hat+Q1hat"
+  },
+  "firewalls": [
+    "This is a one-scalar dependency and obstruction theorem, not an evaluation of Hhat_12 or a closed Sym^12 trace formula.",
+    "Minimality is relative to the source-locked one-step sieve/functional-equation/reciprocity graph, not a mathematical impossibility theorem.",
+    "The weight-14 Gamma_0(2) trace is standard boundary arithmetic, but a numerical ambient value still requires that trace and Hhat_12.",
+    "No external novelty, motivic isomorphism, individual cohomology decomposition, memberwise sign, RH/GRH criterion, or compatible system is claimed."
+  ],
+  "linear_modulus_channel": {
+    "Q1_over_q_q_minus_1": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -9,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 3,
+        "q_power": 1
+      }
+    ],
+    "binom_ell_2_mark_per_linear_modulus": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 8,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": [
+          -21,
+          2
+        ],
+        "q_power": 1
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": [
+          5,
+          2
+        ],
+        "q_power": 2
+      }
+    ],
+    "lambda_12_per_linear_modulus": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -1,
+        "q_power": 1
+      }
+    ],
+    "quadratic_mark_per_linear_modulus": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": [
+          1,
+          2
+        ],
+        "q_power": 1
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": [
+          -1,
+          2
+        ],
+        "q_power": 2
+      }
+    ],
+    "weighted_row_per_linear_modulus": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 9,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -12,
+        "q_power": 1
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 3,
+        "q_power": 2
+      }
+    ]
+  },
+  "packet_manifest": {
+    "note": "research/l-families/atlas/function_field/GENUS2_SYM12_ARITHMETIC_INVENTORY.md",
+    "note_lf_sha256": "cc97d2becf4cf45fafd3b9c0130cf4423836634d4074bab7e172f5e4f77274a1",
+    "producer": "research/l-families/atlas/function_field/genus2_sym12_arithmetic_inventory.py",
+    "producer_lf_sha256": "0901a4252663efab672f4d33b6d3584b5e8c8a3915d564e4097c8fa4343e4b6f",
+    "test": "tests/test_genus2_sym12_arithmetic_inventory.py",
+    "test_lf_sha256": "648b313603a6ed9c58c1b623e15f204d17c3b04a04c1bb0ec9ec9225703b3bd3"
+  },
+  "payload_sha256": "557ab6465a16bb6080caa2a249c3d0935f8d36fb49bdf54898a0fe72b372496f",
+  "quartic_channel": {
+    "full_G4_over_q_q_minus_1": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 1,
+        "coefficient": 1,
+        "q_power": 0
+      }
+    ],
+    "repeated_G4": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 6,
+        "q_power": 1
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -7,
+        "q_power": 2
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 1,
+        "q_power": 3
+      }
+    ],
+    "repeated_G4_over_q_q_minus_1": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -6,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 1,
+        "q_power": 1
+      }
+    ],
+    "repeated_strata": [
+      {
+        "aggregate_g12": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 1,
+            "q_power": 1
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": -1,
+            "q_power": 2
+          }
+        ],
+        "count": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 1,
+            "q_power": 1
+          }
+        ],
+        "stratum": "L^4"
+      },
+      {
+        "aggregate_g12": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": -1,
+            "q_power": 1
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 1,
+            "q_power": 2
+          }
+        ],
+        "count": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": -1,
+            "q_power": 1
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 1,
+            "q_power": 2
+          }
+        ],
+        "stratum": "L^3*M"
+      },
+      {
+        "aggregate_g12": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              -13,
+              2
+            ],
+            "q_power": 1
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              25,
+              2
+            ],
+            "q_power": 2
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": -6,
+            "q_power": 3
+          }
+        ],
+        "count": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              -1,
+              2
+            ],
+            "q_power": 1
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              1,
+              2
+            ],
+            "q_power": 2
+          }
+        ],
+        "stratum": "L^2*M^2"
+      },
+      {
+        "aggregate_g12": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              -1,
+              2
+            ],
+            "q_power": 1
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              1,
+              2
+            ],
+            "q_power": 2
+          }
+        ],
+        "count": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              -1,
+              2
+            ],
+            "q_power": 1
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              1,
+              2
+            ],
+            "q_power": 2
+          }
+        ],
+        "stratum": "Q^2"
+      },
+      {
+        "aggregate_g12": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 10,
+            "q_power": 1
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              -27,
+              2
+            ],
+            "q_power": 2
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              7,
+              2
+            ],
+            "q_power": 3
+          }
+        ],
+        "count": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 1,
+            "q_power": 1
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              -3,
+              2
+            ],
+            "q_power": 2
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              1,
+              2
+            ],
+            "q_power": 3
+          }
+        ],
+        "stratum": "L^2*M*N"
+      },
+      {
+        "aggregate_g12": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": 3,
+            "q_power": 1
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              -13,
+              2
+            ],
+            "q_power": 2
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              7,
+              2
+            ],
+            "q_power": 3
+          }
+        ],
+        "count": [
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              -1,
+              2
+            ],
+            "q_power": 2
+          },
+          {
+            "Hhat_12_power": 0,
+            "Theta_(10,2)_power": 0,
+            "Theta_(14,2)_power": 0,
+            "Theta_(8,2)_power": 0,
+            "Theta_Delta_power": 0,
+            "coefficient": [
+              1,
+              2
+            ],
+            "q_power": 3
+          }
+        ],
+        "stratum": "L^2*Q"
+      }
+    ],
+    "squarefree_G4_over_q_q_minus_1": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": 6,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 1,
+        "coefficient": 1,
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": -1,
+        "q_power": 1
+      }
+    ],
+    "telescope": "(q-a)*sum_(k=0)^12 P_k=q*P_12-sum_(k=1)^13 P_k",
+    "telescope_verified_in": "Z[q,a]",
+    "two_sign_sums_per_fixed_L": [
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": [
+          1,
+          2
+        ],
+        "q_power": 0
+      },
+      {
+        "Hhat_12_power": 0,
+        "Theta_(10,2)_power": 0,
+        "Theta_(14,2)_power": 0,
+        "Theta_(8,2)_power": 0,
+        "Theta_Delta_power": 0,
+        "coefficient": [
+          -1,
+          2
+        ],
+        "q_power": 1
+      }
+    ]
+  },
+  "r6_and_ladder_boundary": {
+    "R6_role": "independent reconnaissance target; its locked mean gap neither evaluates nor enlarges the one-scalar Hhat_12 closure",
+    "arithmetic_firewall": "this character-basis fact does not rule out a separate family-specific relation among their means",
+    "exact_character_level_statement": "chi_(12,0) is absent from the irreducible support of R6 and from the Sym6/8/10 target characters, so their pointwise linear span does not contain chi_(12,0)"
+  },
+  "resource_contract": {
+    "actual_exact_operations": 1816,
+    "actual_source_bytes": 196665,
+    "actual_source_files": 8,
+    "arithmetic": "integers and exact rational intermediates only; no floating point in mathematical algebra",
+    "maximum_exact_operations": 16384,
+    "maximum_output_bytes": 65536,
+    "maximum_source_bytes_each": 65536,
+    "maximum_source_bytes_total": 225000,
+    "maximum_source_files": 8,
+    "maximum_wall_seconds": 4.0,
+    "operation_counts": {
+      "euler_add": 78,
+      "euler_shift": 119,
+      "expression_add": 468,
+      "expression_multiply": 344,
+      "expression_scale": 362,
+      "su2_add": 195,
+      "su2_shift": 250
+    }
+  },
+  "schema": "riemann.function_field.genus2_sym12_arithmetic_inventory.v1",
+  "scope": {
+    "base_fields": "every finite field F_q of odd characteristic",
+    "curves_enumerated": 0,
+    "finite_fields_enumerated": 0,
+    "proof_mode": "bounded exact coefficient, Euler, marking, and boundary algebra",
+    "target": "marked curve-open and ambient V_(12,0)=Sym^12(V) virtual traces"
+  },
+  "source_manifest": [
+    {
+      "bytes": 20912,
+      "commit": "476f1f5e445a4f05e6ae8b8a54376bd78a2a1a20",
+      "git_blob": "b66af64816f7cf5da13e07b25993377db2643fdf",
+      "lf_sha256": "0a21ce9bd6340fcc9329ad343aeb354d7310ea0cf4dde6f128cbc11bc14a0c71",
+      "name": "reciprocal_boundary",
+      "path": "research/l-families/atlas/function_field/genus2_reciprocal_descent_boundary.json",
+      "payload_key": "payload_sha256",
+      "payload_sha256": "0b8cb0ac368d9923ce10644b5c5cd09f752d056ede8226e9e38d603b86aa1fbf",
+      "role": "degree-twelve central-coefficient and method-boundary theorem",
+      "schema": "riemann.function_field.genus2_reciprocal_descent_boundary.v1"
+    },
+    {
+      "bytes": 7509,
+      "commit": "f83f80639fc821abc41d0bcb781972c65b85a548",
+      "git_blob": "224f24b0ec3aa9ebc4cd98de7b505dbf5c30f53b",
+      "lf_sha256": "8eac418b5d624b4524bdf5d63534100ec19e17bd85c787a590bed96e896e91a3",
+      "name": "r6_reconnaissance",
+      "path": "research/l-families/atlas/function_field/genus2_r6_proof_reconnaissance.json",
+      "payload_key": "canonical_payload_sha256",
+      "payload_sha256": "8e42ff92f764fd285ca2f68bba66c4831168f8b77bedb640256f27cdc7e9fcb7",
+      "role": "character-span no-go and separate R6 arithmetic gap",
+      "schema": "riemann.function_field.genus2_r6_proof_reconnaissance.v1"
+    },
+    {
+      "bytes": 9929,
+      "commit": "522bc6b454016a07a9c65aaa6177d0340d70f5dc",
+      "git_blob": "b1d2c12ff8682db6cf60a8673574d93f2779010c",
+      "lf_sha256": "4e6156e8ca4f8b652e02961d3aa5f3ea63c9b42243908d1ecab8b94c08d253a6",
+      "name": "sym6",
+      "path": "research/l-families/atlas/function_field/genus2_sym6_marked_trace_average.json",
+      "payload_key": "payload_sha256",
+      "payload_sha256": "7bf31859372bb2a292f8321794f9b05859d2def82b1dd59ad83ab992088a5e86",
+      "role": "first exact marked symmetric-power ladder row",
+      "schema": "riemann.function_field.genus2_sym6_marked_trace_average.v1"
+    },
+    {
+      "bytes": 19682,
+      "commit": "dc63f02d0897e10936ef0767a1c8e6f15ac49e06",
+      "git_blob": "1dece87cbec2731f858e3dd38d2ceb0a96959d53",
+      "lf_sha256": "a92700980ac7fef22f7a36db7b3d4d8bb7aa8d763904677e64bfca3182be0233",
+      "name": "sym8",
+      "path": "research/l-families/atlas/function_field/genus2_sym8_marked_trace_average.json",
+      "payload_key": "payload_sha256",
+      "payload_sha256": "423b8c37b69fb56b459beb7ebd9e6b94d12cf658f5819f7ac481e83560f5d0ae",
+      "role": "second exact marked symmetric-power ladder row",
+      "schema": "riemann.function_field.genus2_sym8_marked_trace_average.v1"
+    },
+    {
+      "bytes": 24460,
+      "commit": "42910253be8173c6cd0de19a7a7403d0c31b5c22",
+      "git_blob": "561caa7dc504dfb158908aef9229e91af0707a1e",
+      "lf_sha256": "4f91ac00193805207088e9fc6aea2b464645267b17dc54f71165a1ae3b9d45ce",
+      "name": "sym10",
+      "path": "research/l-families/atlas/function_field/genus2_sym10_marked_trace_average.json",
+      "payload_key": "payload_sha256",
+      "payload_sha256": "0fbf48768fdea477b2bee4f53c8f1e547a167155c665b5e97bc201961971ec77",
+      "role": "last closed one-step marked row and quartic-stratum template",
+      "schema": "riemann.genus2_sym10_marked_trace_average.v1"
+    },
+    {
+      "bytes": 36776,
+      "commit": "955ea1e25160075fb4b498018319c80f7e4db9d5",
+      "git_blob": "49cde8d3a1881d0d626e4f288abc53f370a33244",
+      "lf_sha256": "b9016ae801cff40d15c53d96210b66a7d44fae7d916e827a0526b9dd42017227",
+      "name": "genus1",
+      "path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.json",
+      "payload_key": "payload_sha256",
+      "payload_sha256": "183ffb31ae2f5776944e162e59390c40bd7081827b8731246e72e25a882e50df",
+      "role": "all-weight unmarked elliptic moment and character law",
+      "schema": "riemann.function_field.genus1_cubic_family_laws.v1"
+    },
+    {
+      "bytes": 28462,
+      "commit": "446c889795a05fd378fed93d443c8887b6e25794",
+      "git_blob": "19c82e8af8aea133eb53c6843c7f45c6ca30b693",
+      "lf_sha256": "8f254196d3aa73f440a18f22da0bfa3f54307db7c68e7fa3faf934de60cbbf3e",
+      "name": "marked_tower",
+      "path": "research/l-families/atlas/function_field/genus1_marked_2torsion_moment_tower.json",
+      "payload_key": "payload_sha256",
+      "payload_sha256": "d6861d94296bd37bba503f87cfa4b00b51a3a2d4f62ae01c707cc45a08588cde",
+      "role": "all-weight marked Y_0(2) moment theorem",
+      "schema": "riemann.genus1_marked_2torsion_moment_tower.v1"
+    },
+    {
+      "bytes": 48935,
+      "commit": "2871db30ec0a03b049a297675ac0d2081d706521",
+      "git_blob": "89e17fd88697ae902a3f70c14c838a0c1038888a",
+      "lf_sha256": "36f50aaf9f2c27130bd3f6ddc54f7eff9e9397faf1f1a0b9db82958b3f0daec6",
+      "name": "ambient_ladder",
+      "path": "research/l-families/atlas/function_field/genus2_ambient_symmetric_power_ladder.json",
+      "payload_key": "payload_sha256",
+      "payload_sha256": "c854c15f654edc97783537a814a20f5fd91fbdbf2b2929d34c8ba79c8eca2fb4",
+      "role": "ordered decomposable geometry and elliptic boundary formulas",
+      "schema": "riemann.function_field.genus2_ambient_symmetric_power_ladder.v1"
+    }
+  ],
+  "status": "PROVED_EXACT_SOURCE_RELATIVE_ONE_SCALAR_CLOSURE",
+  "theorem_target": {
+    "next_exact_arithmetic_task": "evaluate Hhat_12(q), equivalently the central completed-coefficient average over squarefree degree-12 quadratic characters; then both marked and ambient Sym^12 traces close immediately",
+    "paper_sized_statement": "The marked Sym^12 reciprocal trace is affinely equivalent to the normalized central Q_5 aggregate Hhat_12; all lower Euler rows are explicit, and after adding the decomposable boundary every inherited Delta, weight-8 level-2, and weight-10 level-2 channel cancels."
+  }
+}
