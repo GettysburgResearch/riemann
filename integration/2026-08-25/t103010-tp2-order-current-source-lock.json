@@ -1,0 +1,23 @@
+{
+  "schema": "riemann.t103010.tp2-order-current.source-lock.v1",
+  "repository": "gfreund123/riemann",
+  "pull_request": 719,
+  "predecessor_head": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+  "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+  "proof_object_sha256": "1bde7e37866f9760c8878574443852fe7ef8d777d2ea4e0ab32218e4b215801a",
+  "controlling_claim": "T-103010",
+  "open_gate": "DORI103010",
+  "parallel_open_gate": "BCI102990",
+  "paths": [
+    "claims/lemmas/L-103000-common-two-box-spline-is-log-concave-and-tp2.md",
+    "claims/lemmas/L-103001-derivative-companion-has-a-strict-order-wronskian.md",
+    "claims/lemmas/L-103002-order-concordant-antisymmetric-packets-are-one-sided.md",
+    "claims/lemmas/L-103003-owner-endpoint-determinants-become-common-mother-wronskians.md",
+    "claims/lemmas/L-103004-wronskian-has-an-exact-finite-log-ratio-budget.md",
+    "claims/refutations/R-103000-tp2-kernel-does-not-orient-order-inverting-source-minors.md",
+    "claims/theorems/T-103010-tp2-endpoint-order-inversion-frontier.md",
+    "experiments/X-103010-tp2-order-current/verify.py",
+    "experiments/X-103010-tp2-order-current/results/verification.json"
+  ],
+  "rh_established": false
+}

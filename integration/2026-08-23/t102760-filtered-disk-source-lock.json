@@ -1,0 +1,24 @@
+{
+  "schema": "riemann.t102760.filtered-disk-source-lock.v1",
+  "repository": "gfreund123/riemann",
+  "pull_request": 719,
+  "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+  "predecessor_head": "fb71bd7e191aab615beb94711ba35abec3691032",
+  "dependencies": {
+    "pr690_active_sharp": "98140e291f1285e886d576291812961db9691c86",
+    "pr715_common_mother": "99cc94c48bafd9b96141f7cef9f1e7aa83012747",
+    "pr718_completion_defect": "41a087387812e89ce800c59f43582799fee24782",
+    "t102750_three_ray_head": "fb71bd7e191aab615beb94711ba35abec3691032"
+  },
+  "proof_object_sha256": "ef680e0fcfc91e3f8a9b948ae4643a5c1bd55fc74c36c8115d6f517aa3241af9",
+  "proved": [
+    "full filtered SHARP disk carrier positivity",
+    "uniform native disk prime-removal budget below one",
+    "post-filter S-lemma matrix",
+    "exact common carrier cX",
+    "ratio-eight support after carrier subtraction",
+    "radial cost upper-bounds Lorentz negative part"
+  ],
+  "open_gate": "RSC102760",
+  "rh_established": false
+}

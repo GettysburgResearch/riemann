@@ -1,0 +1,38 @@
+{
+  "schema": "riemann.t103110.quarter-power-correction.v1",
+  "repository": "gfreund123/riemann",
+  "pull_request": 719,
+  "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+  "historical_packet_frozen_base": "4146f81e7237d41e2e4a0cb1737511266683e980",
+  "branch_head_before_packet_landing": "e56c981e2d0639a988f8f54aa362724eb00d9131",
+  "quarter_power_packet_landing_commit": "8eea03836b23154a0990a4a870aa5bb3ecb7510d",
+  "supporting_pr_751_head": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+  "supporting_pr_756_head": "6e4609dfe1b073f1eb58445fdd1d7164dbc450d6",
+  "binding_paths": [
+    "claims/refutations/R-103110-quarter-power-type-I-does-not-close-owner-collapse.md",
+    "claims/lemmas/L-103110-quarter-power-fixed-owner-endpoint.md",
+    "claims/lemmas/L-103111-quarter-power-balanced-support-is-empty.md",
+    "claims/lemmas/L-103112-quarter-power-type-I-is-the-harmonic-field.md",
+    "claims/theorems/T-103110-corrected-quarter-power-boolean-frontier.md",
+    "integration/2026-08-26/t103080-quarter-power-disambiguation.tsv",
+    "reports/gpt56-pro/2026-08-26-quarter-power-self-reconstruction.md",
+    "experiments/X-103110-quarter-power-owner-collapse-audit/results/verification.json"
+  ],
+  "historical_paths_retired": [
+    "claims/lemmas/L-103070-quarter-power-boolean-type-I-endpoint.md",
+    "claims/lemmas/L-103071-quarter-power-cutoff-annihilates-the-balanced-source.md",
+    "claims/lemmas/L-103072-cutoff-transfer-proves-the-frozen-bci-row.md",
+    "claims/theorems/T-103080-quarter-power-boolean-closure-proposal.md"
+  ],
+  "proof_object_sha256": "1326dcc1ad0146d630ee1c3ce944fe9986b96b565ee4d7d0c1ea244123916ea5",
+  "status": {
+    "quarter_power_fixed_owner_type_i": "PROVED SUBPOWER",
+    "quarter_power_balanced_support": "PROVED EMPTY",
+    "cutoff_transfer_algebra": "PROVED EXACT",
+    "complete_owner_collapse": "OPEN / RH-BEARING",
+    "QPTI103112": "OPEN / RH-BEARING",
+    "BCI102990": "OPEN / RH-BEARING",
+    "historical_T103080": "SUPERSEDED",
+    "rh_established": false
+  }
+}

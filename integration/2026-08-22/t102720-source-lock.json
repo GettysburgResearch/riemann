@@ -1,0 +1,22 @@
+{
+  "base_head": "b7ff3c347a3cfe9264bf55216f826d3235e8e649",
+  "base_pr": 719,
+  "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+  "diagnostic_limit": 200000,
+  "diagnostic_minimum": 4.919891332579141,
+  "open_gates": [
+    "CCE102721",
+    "PHDNC102710"
+  ],
+  "proof_object_sha256": "e6fe35075d5e3fae12ea10960005819a55a5a6fe08ed9432fc9a1f7f16415a1e",
+  "proved": [
+    "positive completion dominates the full active shifted-quadratic disk",
+    "two-mode centered completion defect has a fixed positive kernel",
+    "positive-real Mellin poles cancel after exact compact-initial subtraction",
+    "every hypothetical off-line reciprocal-zeta pole survives",
+    "centered envelope is positive for 0<X<=1"
+  ],
+  "repository": "gfreund123/riemann",
+  "rh_established": false,
+  "schema": "riemann.t102720.source-lock.v1"
+}

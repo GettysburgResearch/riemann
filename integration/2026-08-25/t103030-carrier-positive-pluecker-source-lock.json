@@ -1,0 +1,20 @@
+{
+  "schema": "riemann.t103030.carrier-positive-pluecker.source-lock.v1",
+  "repository": "gfreund123/riemann",
+  "pull_request": 719,
+  "predecessor_head": "60279126d4c1f42f6fe154b88bb128bf81d54ef3",
+  "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+  "proof_object_sha256": "70abc9c35a53203b1885872778951d8ee377f3808f30edab6e1a40b0b08bbe6d",
+  "controlling_claim": "T-103030",
+  "open_gate": "CCPF103030",
+  "parallel_open_gate": "BCI102990",
+  "paths": [
+    "claims/lemmas/L-103006-minimum-pair-cycle-is-a-positive-average-of-symmetric-pluecker-rectangles.md",
+    "claims/lemmas/L-103007-symmetric-pluecker-rectangle-has-positive-ordered-euler-activity.md",
+    "claims/refutations/R-103001-positive-scalar-euler-activity-is-not-positive-operator-observation.md",
+    "claims/theorems/T-103030-carrier-positive-centered-pluecker-frontier.md",
+    "experiments/X-103030-carrier-positive-pluecker/verify.py",
+    "experiments/X-103030-carrier-positive-pluecker/results/verification.json"
+  ],
+  "rh_established": false
+}

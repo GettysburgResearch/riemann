@@ -1,0 +1,21 @@
+{
+  "schema": "riemann.t102740.filtered-rays-lock.v1",
+  "base_pr": 719,
+  "base_head_before_addendum": "b613eecc8d979abc6b10a85857a471b26e5bb8f1",
+  "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+  "dependencies": {
+    "pr690_active_sharp": "98140e291f1285e886d576291812961db9691c86",
+    "pr715_common_mother": "99cc94c48bafd9b96141f7cef9f1e7aa83012747",
+    "pr718_completion_defect": "41a087387812e89ce800c59f43582799fee24782"
+  },
+  "proof_object_sha256": "41b6942b52bab96f87e9fac2a69b528702099a545f153bd3f96d11630192f5a3",
+  "proved": [
+    "positive filtered carrier z=-1",
+    "positive filtered carrier z=-1/2",
+    "global native prime budget below one for both rays",
+    "native and tangent filtered positivity",
+    "two exact compact-current inequalities"
+  ],
+  "open_gate": "FLC102740",
+  "rh_established": false
+}

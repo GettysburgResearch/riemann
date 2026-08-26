@@ -1,0 +1,19 @@
+{
+  "schema": "riemann.t103060.positive-even-wick.source-lock.v1",
+  "repository": "gfreund123/riemann",
+  "pull_request": 719,
+  "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+  "binding_correction": "R-103002",
+  "controlling_claim": "T-103060",
+  "canonical_open_gate": "BCI102990",
+  "proof_object_sha256": "41bcbae187d0c4a0224f992a35967ff9c1f9a43ad65a29fd5f45644367d6cb3c",
+  "paths": [
+    "claims/lemmas/L-103008-radial-middle-prefix-has-an-exact-midpoint-peano-pair-decomposition.md",
+    "claims/lemmas/L-103009-radial-middle-prefix-has-a-positive-even-wick-expansion.md",
+    "claims/theorems/T-103050-peano-unification-leaves-one-boolean-core-frontier.md",
+    "claims/theorems/T-103060-positive-even-wick-unification-frontier.md",
+    "experiments/X-103060-positive-even-wick/verify.py",
+    "experiments/X-103060-positive-even-wick/results/verification.json"
+  ],
+  "rh_established": false
+}

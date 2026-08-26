@@ -1,0 +1,33 @@
+{
+  "schema": "riemann.t102990.boolean-incidence-source-lock.v1",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+  "packet_parent_head": "da01ed97e6901ea70d7ff5c8c3b6073d4ec8f7e1",
+  "packet_content_head_before_lock": "9eb95a6100b2031081ecd9c291ea9f6ec8240946",
+  "frozen_dependencies": {
+    "pr_719_independent_boolean_review": "da01ed97e6901ea70d7ff5c8c3b6073d4ec8f7e1",
+    "pr_751_corrected_boolean_vaughan": "dbf78e950130a8bbfb00c4e1b03645954485b929",
+    "pr_730_f1_pluecker_owner_hodge": "d385097bfcd19ab6f9015b522eacd5b97bc7e1b5"
+  },
+  "controlling_claims": [
+    "L-102957",
+    "L-102958",
+    "L-102959",
+    "L-102960",
+    "L-102961",
+    "L-102962",
+    "L-102963",
+    "T-102980",
+    "T-102990"
+  ],
+  "proof_objects": {
+    "X-102980": "a88f93dd0d5a27a0b8414ebc39588e92db86a7cf905f32749ba6b425ed6434d3",
+    "X-102990": "7632dac0a7a9391c33e20fab58b2a0cda2d002b06d7f841cc4340d93f864c01f"
+  },
+  "open_gates": [
+    "COCURL102980",
+    "BCI102990"
+  ],
+  "status": "major unconditional source/operator reduction; arithmetic orientation remains open",
+  "rh_established": false
+}
