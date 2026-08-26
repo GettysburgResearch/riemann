@@ -33,18 +33,25 @@ SPEC.loader.exec_module(MODULE)
 class FiniteAbelianSubgroupMaskCompressionTests(unittest.TestCase):
     def test_bounded_replay(self) -> None:
         report = MODULE.run_checks()
+        self.assertEqual(
+            report["schema"],
+            "riemann.function_field.ffps_finite_abelian_subgroup_mask.v2",
+        )
         self.assertEqual(report["status"], "EXACT_FINITE_ABELIAN_SUBGROUP_COMPRESSION")
         self.assertEqual(len(report["dimensions"]), 8)
+        self.assertEqual(report["dimensions"][-1]["group_order"], 256)
+        self.assertEqual(report["dimensions"][-1]["retained_group_order"], 128)
+        self.assertNotIn("ambient_order", report["dimensions"][-1])
 
     def test_top_walsh_support_only(self) -> None:
         for dimension in range(1, 7):
-            size = 1 << dimension
+            group_order = 1 << dimension
             support = [
                 label
-                for label in range(size)
+                for label in range(group_order)
                 if MODULE.walsh_coefficient(dimension, label)
             ]
-            self.assertEqual(support, [0, size - 1])
+            self.assertEqual(support, [0, group_order - 1])
 
     def test_autocorrelation_is_principal_plus_top(self) -> None:
         dimension = 5
@@ -57,9 +64,30 @@ class FiniteAbelianSubgroupMaskCompressionTests(unittest.TestCase):
 
     def test_two_prime_control(self) -> None:
         row = MODULE.panel_row((5, 13))
+        self.assertEqual(row["native_amplitude"], 12)
+        self.assertNotIn("ambient_order", row)
         self.assertEqual(row["hard_leverage"], "24/43")
         self.assertEqual(row["full_leverage"], "4/7")
         self.assertLess(Fraction(row["hard_leverage"]), Fraction(row["full_leverage"]))
+
+    def test_exact_wick_spectrum_witness(self) -> None:
+        witness, matrix_entries = MODULE.wick_spectrum_witness()
+        self.assertEqual(witness["matrix"], ((0, 1), (1, 0)))
+        self.assertEqual(witness["positive_eigenvalue"], 1)
+        self.assertEqual(witness["negative_eigenvalue"], -1)
+        self.assertEqual(witness["sharp_diagonal_repair"], 1)
+        self.assertEqual(matrix_entries, 4)
+
+    def test_direct_checkerboard_restricted_gram(self) -> None:
+        control, matrix_entries = MODULE.direct_checkerboard_5_13()
+        self.assertEqual(control["native_amplitude"], 12)
+        self.assertEqual(control["retained_coordinates"], 6)
+        self.assertEqual(control["restricted_gram_energy"], 258)
+        self.assertEqual(control["restricted_row_sum"], "43")
+        self.assertEqual(control["optimizer_weight"], "2")
+        self.assertEqual(control["restricted_leverage"], "24/43")
+        self.assertEqual(control["complete_tensor_leverage"], "4/7")
+        self.assertEqual(matrix_entries, 220)
 
     def test_prime_panel_ratio_decreases(self) -> None:
         rows = [
@@ -96,6 +124,8 @@ class FiniteAbelianSubgroupMaskCompressionTests(unittest.TestCase):
             "checkerboard compression",
             "does **not** prove",
             "Rank compression is therefore",
+            "native amplitude",
+            "independently reconstructs the `(5,13)` restricted Gram",
             "No external novelty or priority claim",
         ):
             self.assertIn(marker, note)

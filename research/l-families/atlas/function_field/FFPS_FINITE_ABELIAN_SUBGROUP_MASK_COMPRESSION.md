@@ -14,11 +14,11 @@ mask.  The extension reveals a favorable feature of the many-factor
 checkerboard which is invisible if geometric complexity is identified with
 the number of local factors.
 
-Let `G` be a finite abelian group of order `N`, let `A` be a nonempty subset
+Let `G` be a finite abelian group of order `n_G`, let `A` be a nonempty subset
 of size `s`, and normalize its hard weight by
 
 \[
- w_A(g)={N\over s}{\bf 1}_A(g).
+ w_A(g)={n_G\over s}{\bf 1}_A(g).
 \tag{0.1}
 \]
 
@@ -33,7 +33,7 @@ squared hard observation over every translate of `A`.  Then
 and the total selected Fourier mass is
 
 \[
- \boxed{u={N\over s}-1.}
+ \boxed{u={n_G\over s}-1.}
 \tag{0.3}
 \]
 
@@ -70,8 +70,8 @@ The formal restricted-Gram leverage can nevertheless improve exponentially
 with `d`:
 
 \[
- L_{\rm cb}={4N\over Q+P},\qquad
- L_{\rm full}={N\over Q},\qquad
+ L_{\rm cb}={4M\over Q+P},\qquad
+ L_{\rm full}={M\over Q},\qquad
  {L_{\rm cb}\over L_{\rm full}}={4Q\over Q+P},
 \tag{0.7}
 \]
@@ -79,7 +79,7 @@ with `d`:
 where
 
 \[
- N=\prod_i{p_i-1\over2},\quad
+ M=\prod_i{p_i-1\over2},\quad
  Q=\prod_i{p_i+1\over2},\quad
  P=\prod_i p_i,
 \]
@@ -88,6 +88,11 @@ and every `p_i=1 mod 4`.  Here the selected spectral rank, selected mass,
 and sharp Wick diagonal repair are all exactly one.  What can grow is not
 the rank but the ramification/Betti complexity of the tensor character and
 the complexity of realizing a genuine many-factor physical source.
+
+The two size parameters are kept separate throughout: `n_G=|G|` is the
+order of the finite phase group, while `M=prod_i (p_i-1)/2` is the
+native amplitude, or number of coordinates, in the formal square-phase
+tensor.
 
 This sharpens the design target:
 
@@ -124,7 +129,7 @@ Write `Ghat` for the character group and normalize
 
 \[
  \widehat w_A(\chi)
- ={1\over N}\sum_{g\in G}w_A(g)\chi(g)^{-1}
+ ={1\over n_G}\sum_{g\in G}w_A(g)\chi(g)^{-1}
  ={1\over s}\sum_{a\in A}\chi(a)^{-1}.
 \tag{2.1}
 \]
@@ -134,7 +139,7 @@ Then `w_A` has principal coefficient one and Parseval gives
 \[
  \sum_{\chi\in\widehat G}
  \widehat w_A(\chi)\widehat w_A(\chi^{-1})
- ={N\over s}.
+ ={n_G\over s}.
 \tag{2.2}
 \]
 
@@ -166,7 +171,7 @@ up to the harmless simultaneous inverse convention.  Character
 orthogonality therefore gives
 
 \[
- {1\over N}\sum_{h\in G}|O_h|^2
+ {1\over n_G}\sum_{h\in G}|O_h|^2
  =|P|^2+\sum_{\chi\ne\mathbf1}
  |\widehat w_A(\chi)|^2|H_\chi|^2.
 \tag{2.4}
@@ -177,12 +182,12 @@ This proves (0.2).  The corresponding autocorrelation trace function is
 \[
  K_A(g)=\sum_\chi
  \widehat w_A(\chi)\widehat w_A(\chi^{-1})\chi(g)
- ={N\over s^2}|A\cap gA|,
+ ={n_G\over s^2}|A\cap gA|,
 \tag{2.5}
 \]
 
 with the inverse in `g` depending only on the chosen translation convention.
-In particular `K_A(1)=N/s` and the selected kernel is `K_A-1`.
+In particular `K_A(1)=n_G/s` and the selected kernel is `K_A-1`.
 
 ## 3. Honest endomorphism on a torsor
 
@@ -190,7 +195,7 @@ Let `pi:T -> U` be a torsor under the split constant group `G` and put
 `H=pi_*E_T`.  With the right-regular deck action `rho`, define
 
 \[
- \Pi_\chi={1\over N}\sum_{g\in G}\chi(g)^{-1}\rho(g).
+ \Pi_\chi={1\over n_G}\sum_{g\in G}\chi(g)^{-1}\rho(g).
 \tag{3.1}
 \]
 
@@ -249,7 +254,7 @@ exact compression facts:
 
 1. the number of selected character lines is `h-1`;
 2. the total selected mass is `u=h-1`;
-3. the answer is independent of the ambient order `N`;
+3. the answer is independent of the group order `n_G`;
 4. translating the coset changes coefficient phases but not the covariance
    endomorphism.
 
@@ -303,12 +308,15 @@ Since
 its Gram energy is
 
 \[
- E_A={N\over4}(Q+P).
+ E_A={M\over4}(Q+P).
 \tag{5.2}
 \]
 
 The unique restricted optimum is the uniform retained weight two, and the
-sharp leverage is (0.7).  Moreover
+sharp leverage is (0.7).  The replay independently constructs the full
+`12 by 12` Gram for `(p_1,p_2)=(5,13)`, restricts it to the six checkerboard
+coordinates, obtains `E_A=258`, verifies the exact row sum `43`, solves for
+the uniform optimizer `2`, and recovers leverage `24/43`.  Moreover
 
 \[
  {P\over Q}=\prod_i{2p_i\over p_i+1}.
@@ -358,7 +366,7 @@ conjectural opportunity, not a proved asymptotic family theorem.
 Let `D=sum|z_omega|^2`.  The diagonal coefficients of (0.2) are
 
 \[
- 1,\qquad {N\over s}=1+u,\qquad u.
+ 1,\qquad {n_G\over s}=1+u,\qquad u.
 \]
 
 After literal Wick subtraction,
@@ -388,6 +396,7 @@ collision direction.
 | subgroup-coset compression (0.5) | **PROVED EXACT** |
 | one-line checkerboard selector (0.6) | **PROVED EXACT FORMAL/TORSOR ALGEBRA** |
 | product-Gram leverage (0.7) | **PROVED EXACT IN THE FROZEN FORMAL TENSOR** |
+| direct `(5,13)` restricted-Gram control | **REPLAYED EXACT WITH RATIONAL MATRICES** |
 | two-prime physical checkerboard | **IMPORTED EXACT FROM FROZEN SOURCE BRIDGE** |
 | growing-`d` physical source | **OPEN** |
 | rank-one conductor/Betti growth | **OPEN** |
@@ -397,10 +406,13 @@ No external novelty or priority claim is made.
 
 ## 9. Reproduction
 
-The replay checks the Walsh support, autocorrelation, and Wick spectrum for
-`C_2^d`, `1<=d<=8`, plus six small exact prime panels.  It performs fewer
-than 180,000 Walsh summands and no conductor, curve, character-family, or
-L-function-zero enumeration.
+The replay checks the Walsh support and autocorrelation for `C_2^d`,
+`1<=d<=8`, and verifies the centered Wick spectrum on the exact matrix
+`J_2-I_2` with both eigenvectors.  It evaluates six exact prime panels and
+independently reconstructs the `(5,13)` restricted Gram and optimizer.  It
+performs 174,760 Walsh/autocorrelation summands, accounts for 224 entries in
+the small direct matrices, and performs no conductor, curve,
+character-family, or L-function-zero enumeration.
 
 ~~~powershell
 python research/l-families/atlas/function_field/ffps_finite_abelian_subgroup_mask_compression.py --check
