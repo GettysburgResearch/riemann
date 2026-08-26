@@ -231,7 +231,7 @@ modulo two.  Moreover (3.2) implies `2d>h`, so `a_h=m_h`.  Therefore
 
 \[
  \boxed{
- h>3j+\varepsilon,quad\min_{P\mid Q}\deg P=h-j
+ h>3j+\varepsilon,\qquad \min_{P\mid Q}\deg P=h-j
  \quad\Longrightarrow\quad
  S_{n,Q}\equiv m_h\pmod2.}
  \tag{3.3}
