@@ -10,6 +10,29 @@ its symmetric-cube functorial pushforward, closed symbolic divisor sums, and
 exact `USp(2g)` character calculations. Nothing here implies RH or GRH over
 the integers.
 
+## Current successor front door
+
+PR #757 adds a large proof-graded successor spanning the fixed-mollified beta
+RH equivalence, its compact boundary primitive and native
+reflection/geodesic forms, its exact ratio-16 beta near-correlation criterion,
+the exact refutation of the raw Jordan premise,
+hard-mask relative projectors and conductor ledgers, odd-notch boundary
+densities through every fixed depth and their local anti-concentration law,
+the forced exponential mass of an exact universal cycle selector, its exact-
+finite derangement relaxation through degree ten, and the genus-two `Sym^12`
+comparison. For `Sym^12`, the exact `p=3,5,7` residual has a unique formal
+one-Tate repair inside the displayed carrier ledger; actual compact-support
+Galois realization and any all-`q` correction remain open.
+Do not try to infer that frontier from the alphabetical packet list below.
+Start at:
+
+1. [`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](../SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md);
+2. [`SHEAF_AMPLIFIER_RESEARCH_MAP.md`](../SHEAF_AMPLIFIER_RESEARCH_MAP.md);
+3. [`SHEAF_AMPLIFIER_RELEASE_AUDIT.md`](../SHEAF_AMPLIFIER_RELEASE_AUDIT.md).
+
+Nothing in that successor proves RH or GRH. The native reflection estimate
+is an exact RH-equivalent open gate, not a completed estimate.
+
 ## Files
 
 - `pilot.py` implements dependency-free polynomial arithmetic, factorization,

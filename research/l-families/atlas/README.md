@@ -2,6 +2,20 @@
 
 Status: **exact finite exploration, exact synthetic algebra, and source-qualified discovery data**.
 
+Current successor: PR #757 extends this atlas into source-exact mollified beta
+and native-reflection RH criteria, hard-mask/sheaf amplification, deeper
+closed-place notch laws and anti-concentration, an exact cycle-selector
+complexity no-go and finite derangement relaxation, and a `Sym^12`
+cohomological audit. Begin with
+[`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md),
+then [`SHEAF_AMPLIFIER_RESEARCH_MAP.md`](SHEAF_AMPLIFIER_RESEARCH_MAP.md).
+Those criteria do not prove their RH-equivalent estimates; RH and GRH remain
+open.
+
+Everything below this notice is the historical phase-0 atlas map. Use the
+three PR #757 front doors above—not later historical “smallest gaps” lists—to
+identify the current frontier.
+
 Scope: one small GL(1)/GL(2) local-Euler corpus; complete monic squarefree
 cubic regressions over `F_q[T]` for `q=3,5,7,11,13`, including the original
 100-member `F_5[T]` pilot; the complete genus-two quintic families over

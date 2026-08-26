@@ -1,5 +1,23 @@
 # Residual detector mechanisms: start here
 
+> **Successor notice (PR #757).** This file is the frozen front door for PR
+> #756. For the current successor results, begin with
+> [`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md)
+> and
+> [`SHEAF_AMPLIFIER_RESEARCH_MAP.md`](SHEAF_AMPLIFIER_RESEARCH_MAP.md). In
+> particular, PR #757 proves the
+> stable/general `Sym^12` channel `G=0`, localizes the remaining discrepancy
+> to the formal-associated-graded-to-Galois realization arrow, refutes the
+> raw complete-current Jordan premise by an explicit `Omega(sqrt(Y))` lower
+> bound, and replaces it with a fixed-mollified native-reflection criterion
+> exactly equivalent to RH. It also proves the odd-notch density through
+> `M^-3` at every fixed depth, exponential local anti-concentration across the
+> displayed coefficient tower, and that the universal exact `d`-cycle selector
+> has forced semisimple rank mass `2^(d-1)/d`. The same optimum remains uniquely
+> forced under the derangement relaxation through degree ten; the all-degree
+> relaxed statement is conjectural. The historical statements below should
+> not be used as the current frontier.
+
 ## Release status
 
 This is the canonical start-here index for draft
