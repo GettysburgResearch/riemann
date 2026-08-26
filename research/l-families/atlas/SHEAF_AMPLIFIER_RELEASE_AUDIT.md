@@ -7,8 +7,7 @@ Frozen parent: PR #756 at
 `6e4609dfe1b073f1eb58445fdd1d7164dbc450d6`.
 
 Audited mathematical-packet head:
-`c58bbd89a` (to be replaced by the final packet SHA after the last focused
-audit fix). The final PR head is recorded in
+`05da4d1705d994dd02d650f321196f8464034ba8`. The final PR head is recorded in
 the PR body because a tracked file cannot contain the SHA of the commit which
 creates that SHA.
 
@@ -359,14 +358,15 @@ tests.test_ffps_finite_abelian_subgroup_mask_compression
 tests.test_function_field_block_entropy_conductor_phase_diagram
 ```
 
-At the audited head, all 16 listed producers passed normally and under `-O`;
-the focused set passed 182 tests in each mode; and all 59 branch-added test
-modules passed 364 tests in each mode. Ruff check passed over all 125 changed
-Python files. Ruff 0.16.1 format-check passed on 113; twelve older source-
+At the audited head, all 27 listed producers passed normally and under `-O`;
+the focused 36-module set passed 282 tests in each mode; and all 73 branch-
+added or changed test modules passed 483 tests in each mode. Ruff check passed
+over all 147 changed Python files. Ruff 0.16.1 format-check passed on 135;
+twelve older source-
 locked files have formatter-version-only drift and were deliberately not
-rewritten, avoiding a meaningless hash cascade. The two new theorem packets
-are among the 113 clean files. Local Markdown references from all six front
-doors and `git diff --check` also passed.
+rewritten, avoiding a meaningless hash cascade. The three newest theorem
+packets are among the 135 clean files. All 139 local Markdown references from
+the six front doors and `git diff --check` also passed.
 
 ## 6. Computation boundary
 
