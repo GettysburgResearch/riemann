@@ -1,10 +1,14 @@
 # Genus-two Sym12 finite cusp-trace scout
 
-Status: **FINITE EXACT MATCH AT `q=3,5,7` ONLY**  
-Scope: stored complete joint laws at three odd primes; no new family scan  
-Exact sources: two committed, content-hash-locked JSON artifacts listed below  
+Status: **FINITE EXACT MATCH AT `q=3,5,7` ONLY**
+
+Scope: stored complete joint laws at three odd primes; no new family scan.
+
+Exact sources: two committed, content-hash-locked JSON artifacts listed below.
+
 What was actually run: 251 stored atoms, one reciprocal recurrence through
-degree 12, and an eight-coefficient exact modular-form reconstruction  
+degree 12, and an eight-coefficient exact modular-form reconstruction.
+
 Smallest remaining gap: an arithmetic or cohomological theorem identifying the
 candidate trace for general odd prime powers; another finite row can falsify but
 cannot prove that theorem
