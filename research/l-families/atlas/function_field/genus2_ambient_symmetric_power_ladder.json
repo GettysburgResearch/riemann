@@ -1,0 +1,1699 @@
+{
+  "exact_proof": {
+    "branching_rule": "Sym^r(W_1 direct_sum W_1)=direct_sum_(i=0)^r W_i external_tensor W_(r-i)",
+    "channel_shift_ladder": [
+      {
+        "r": 2,
+        "statement": "the open constant cancels and only -2*L remains"
+      },
+      {
+        "r": 4,
+        "statement": "the open constant cancels and only -3*L remains"
+      },
+      {
+        "r": 6,
+        "statement": "the boundary first injects -L*f_(8,2)"
+      },
+      {
+        "r": 8,
+        "statement": "the unshifted f_(8,2) channel cancels and the next channel survives as -L*g_(10,2)"
+      },
+      {
+        "r": 10,
+        "statement": "unshifted f_(8,2), g_(10,2), and Delta cancel; the two-copy level-two oldspace leaves -2*L*Delta"
+      }
+    ],
+    "elliptic_inputs": {
+      "A_1_W_0": "L",
+      "A_1_even_positive": "-S[r+2]-1",
+      "Y_0(2)_W_0": "L-1",
+      "Y_0(2)_even_positive": "-S[Gamma_0(2),r+2]-2",
+      "level_1_nonzero": {
+        "weight_12": "Delta"
+      },
+      "level_2_nonzero": {
+        "weight_10": "g_(10,2)",
+        "weight_12": "2*Delta (oldspace; no newspace)",
+        "weight_8": "f_(8,2)"
+      },
+      "odd": "zero by the unmarked A_1 central involution"
+    },
+    "exact_controls": [
+      {
+        "Theta_(10,2)": -156,
+        "Theta_(8,2)": 12,
+        "Theta_Delta": 252,
+        "ambient_traces": {
+          "10": -1522,
+          "2": -6,
+          "4": -9,
+          "6": -44,
+          "8": 457
+        },
+        "q": 3
+      },
+      {
+        "Theta_(10,2)": 870,
+        "Theta_(8,2)": -210,
+        "Theta_Delta": 4830,
+        "ambient_traces": {
+          "10": -48318,
+          "2": -10,
+          "4": -15,
+          "6": 1036,
+          "8": -4369
+        },
+        "q": 5
+      },
+      {
+        "Theta_(10,2)": -952,
+        "Theta_(8,2)": 1016,
+        "Theta_Delta": -16744,
+        "ambient_traces": {
+          "10": 234390,
+          "2": -14,
+          "4": -21,
+          "6": -7132,
+          "8": 6637
+        },
+        "q": 7
+      },
+      {
+        "Theta_(10,2)": -15030,
+        "Theta_(8,2)": -4230,
+        "Theta_Delta": -290790,
+        "ambient_traces": {
+          "10": 5234186,
+          "2": -18,
+          "4": -27,
+          "6": 38044,
+          "8": 135235
+        },
+        "q": 9
+      }
+    ],
+    "formal_ring": "Z[L,Delta,f_(8,2),g_(10,2)]",
+    "geometry": "A_(1,1)(w^1)=Y_0(2) times A_1; the marked odd theta characteristic distinguishes the factors",
+    "ladder": [
+      {
+        "ambient_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -2,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          }
+        ],
+        "ambient_formula": "-2*L",
+        "boundary_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": 1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -3,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          }
+        ],
+        "boundary_formula": "1-3*L",
+        "branch_dimension_sum": 10,
+        "branch_rows": [
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 3,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 0,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 4,
+            "contribution": [],
+            "i": 1,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 3,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 2,
+            "vanishes_by_unmarked_central_involution": false
+          }
+        ],
+        "branching_identity": "Sym^2(W_1 direct_sum W_1)=direct_sum_(i=0)^2 W_i external_tensor W_(2-i)",
+        "channel_balance": {
+          "exactly_canceled_channels": [
+            "1"
+          ],
+          "rows": [
+            {
+              "ambient": 0,
+              "boundary": 1,
+              "channel": "1",
+              "open": -1
+            },
+            {
+              "ambient": -2,
+              "boundary": -3,
+              "channel": "L",
+              "open": 1
+            }
+          ]
+        },
+        "open_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": -1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": 1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          }
+        ],
+        "open_formula": "L-1",
+        "r": 2,
+        "symmetric_power_dimension": 10
+      },
+      {
+        "ambient_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -3,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          }
+        ],
+        "ambient_formula": "-3*L",
+        "boundary_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": 3,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -3,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          }
+        ],
+        "boundary_formula": "3-3*L",
+        "branch_dimension_sum": 35,
+        "branch_rows": [
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 5,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 0,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 8,
+            "contribution": [],
+            "i": 1,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 9,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 2,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 8,
+            "contribution": [],
+            "i": 3,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 5,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 4,
+            "vanishes_by_unmarked_central_involution": false
+          }
+        ],
+        "branching_identity": "Sym^4(W_1 direct_sum W_1)=direct_sum_(i=0)^4 W_i external_tensor W_(4-i)",
+        "channel_balance": {
+          "exactly_canceled_channels": [
+            "1"
+          ],
+          "rows": [
+            {
+              "ambient": 0,
+              "boundary": 3,
+              "channel": "1",
+              "open": -3
+            },
+            {
+              "ambient": -3,
+              "boundary": -3,
+              "channel": "L",
+              "open": 0
+            }
+          ]
+        },
+        "open_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": -3,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          }
+        ],
+        "open_formula": "-3",
+        "r": 4,
+        "symmetric_power_dimension": 35
+      },
+      {
+        "ambient_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": 1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -3,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -1,
+            "f_(8,2)_power": 1,
+            "g_(10,2)_power": 0
+          }
+        ],
+        "ambient_formula": "1-3*L-L*f_(8,2)",
+        "boundary_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": 5,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -3,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -1,
+            "f_(8,2)_power": 1,
+            "g_(10,2)_power": 0
+          }
+        ],
+        "boundary_formula": "5-3*L-L*f_(8,2)",
+        "branch_dimension_sum": 84,
+        "branch_rows": [
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 7,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 0,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 12,
+            "contribution": [],
+            "i": 1,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 15,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 2,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 16,
+            "contribution": [],
+            "i": 3,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 15,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 4,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 12,
+            "contribution": [],
+            "i": 5,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 1,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 7,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": -1,
+                "f_(8,2)_power": 1,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 6,
+            "vanishes_by_unmarked_central_involution": false
+          }
+        ],
+        "branching_identity": "Sym^6(W_1 direct_sum W_1)=direct_sum_(i=0)^6 W_i external_tensor W_(6-i)",
+        "channel_balance": {
+          "exactly_canceled_channels": [],
+          "rows": [
+            {
+              "ambient": 1,
+              "boundary": 5,
+              "channel": "1",
+              "open": -4
+            },
+            {
+              "ambient": -3,
+              "boundary": -3,
+              "channel": "L",
+              "open": 0
+            },
+            {
+              "ambient": -1,
+              "boundary": -1,
+              "channel": "L*f_(8,2)",
+              "open": 0
+            }
+          ]
+        },
+        "open_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": -4,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          }
+        ],
+        "open_formula": "-4",
+        "r": 6,
+        "symmetric_power_dimension": 84
+      },
+      {
+        "ambient_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": 1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -4,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 1
+          }
+        ],
+        "ambient_formula": "1-4*L-L*g_(10,2)",
+        "boundary_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": 7,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": 1,
+            "f_(8,2)_power": 1,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -3,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 1
+          }
+        ],
+        "boundary_formula": "7-3*L+f_(8,2)-L*g_(10,2)",
+        "branch_dimension_sum": 165,
+        "branch_rows": [
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 9,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 0,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 16,
+            "contribution": [],
+            "i": 1,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 21,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 2,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 24,
+            "contribution": [],
+            "i": 3,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 25,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 4,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 24,
+            "contribution": [],
+            "i": 5,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 1,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 21,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 1,
+                "f_(8,2)_power": 1,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 6,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 16,
+            "contribution": [],
+            "i": 7,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 1
+              }
+            ],
+            "branch_dimension": 9,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 1
+              }
+            ],
+            "i": 8,
+            "vanishes_by_unmarked_central_involution": false
+          }
+        ],
+        "branching_identity": "Sym^8(W_1 direct_sum W_1)=direct_sum_(i=0)^8 W_i external_tensor W_(8-i)",
+        "channel_balance": {
+          "exactly_canceled_channels": [
+            "f_(8,2)"
+          ],
+          "rows": [
+            {
+              "ambient": 1,
+              "boundary": 7,
+              "channel": "1",
+              "open": -6
+            },
+            {
+              "ambient": -4,
+              "boundary": -3,
+              "channel": "L",
+              "open": -1
+            },
+            {
+              "ambient": 0,
+              "boundary": 1,
+              "channel": "f_(8,2)",
+              "open": -1
+            },
+            {
+              "ambient": -1,
+              "boundary": -1,
+              "channel": "L*g_(10,2)",
+              "open": 0
+            }
+          ]
+        },
+        "open_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": -6,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": -1,
+            "f_(8,2)_power": 1,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          }
+        ],
+        "open_formula": "-f_(8,2)-L-6",
+        "r": 8,
+        "symmetric_power_dimension": 165
+      },
+      {
+        "ambient_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": 2,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -4,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 1,
+            "L_power": 1,
+            "coefficient": -2,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          }
+        ],
+        "ambient_formula": "2-4*L-2*L*Delta",
+        "boundary_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": 9,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": 1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 1
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": 1,
+            "f_(8,2)_power": 1,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 1,
+            "L_power": 0,
+            "coefficient": 1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -3,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 1,
+            "L_power": 1,
+            "coefficient": -3,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          }
+        ],
+        "boundary_formula": "(1-3*L)*Delta+f_(8,2)+g_(10,2)-3*L+9",
+        "branch_dimension_sum": 286,
+        "branch_rows": [
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 1,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 11,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 1,
+                "L_power": 0,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 1,
+                "L_power": 1,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 0,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 20,
+            "contribution": [],
+            "i": 1,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 27,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 2,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 32,
+            "contribution": [],
+            "i": 3,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 35,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 4,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 36,
+            "contribution": [],
+            "i": 5,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 1,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 35,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 1,
+                "f_(8,2)_power": 1,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 6,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 32,
+            "contribution": [],
+            "i": 7,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 1
+              }
+            ],
+            "branch_dimension": 27,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 1
+              }
+            ],
+            "i": 8,
+            "vanishes_by_unmarked_central_involution": false
+          },
+          {
+            "A_1_W_(r-i)": [],
+            "Y_0(2)_W_i": [],
+            "branch_dimension": 20,
+            "contribution": [],
+            "i": 9,
+            "vanishes_by_unmarked_central_involution": true
+          },
+          {
+            "A_1_W_(r-i)": [
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": 1,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "Y_0(2)_W_i": [
+              {
+                "Delta_power": 0,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 1,
+                "L_power": 0,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "branch_dimension": 11,
+            "contribution": [
+              {
+                "Delta_power": 0,
+                "L_power": 1,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              },
+              {
+                "Delta_power": 1,
+                "L_power": 1,
+                "coefficient": -2,
+                "f_(8,2)_power": 0,
+                "g_(10,2)_power": 0
+              }
+            ],
+            "i": 10,
+            "vanishes_by_unmarked_central_involution": false
+          }
+        ],
+        "branching_identity": "Sym^10(W_1 direct_sum W_1)=direct_sum_(i=0)^10 W_i external_tensor W_(10-i)",
+        "channel_balance": {
+          "exactly_canceled_channels": [
+            "Delta",
+            "f_(8,2)",
+            "g_(10,2)"
+          ],
+          "rows": [
+            {
+              "ambient": 2,
+              "boundary": 9,
+              "channel": "1",
+              "open": -7
+            },
+            {
+              "ambient": -4,
+              "boundary": -3,
+              "channel": "L",
+              "open": -1
+            },
+            {
+              "ambient": 0,
+              "boundary": 1,
+              "channel": "Delta",
+              "open": -1
+            },
+            {
+              "ambient": -2,
+              "boundary": -3,
+              "channel": "L*Delta",
+              "open": 1
+            },
+            {
+              "ambient": 0,
+              "boundary": 1,
+              "channel": "f_(8,2)",
+              "open": -1
+            },
+            {
+              "ambient": 0,
+              "boundary": 1,
+              "channel": "g_(10,2)",
+              "open": -1
+            }
+          ]
+        },
+        "open_expression": [
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": -7,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": -1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 1
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 0,
+            "coefficient": -1,
+            "f_(8,2)_power": 1,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 1,
+            "L_power": 0,
+            "coefficient": -1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 0,
+            "L_power": 1,
+            "coefficient": -1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          },
+          {
+            "Delta_power": 1,
+            "L_power": 1,
+            "coefficient": 1,
+            "f_(8,2)_power": 0,
+            "g_(10,2)_power": 0
+          }
+        ],
+        "open_formula": "(L-1)*Delta-f_(8,2)-g_(10,2)-L-7",
+        "r": 10,
+        "symmetric_power_dimension": 286
+      }
+    ]
+  },
+  "firewalls": [
+    "The ladder concerns alternating compactly supported virtual traces, not individual cohomology groups.",
+    "A trace-channel cancellation is not a motivic isomorphism or a proof that canceling cohomology objects are absent.",
+    "The decomposable boundary is the ordered product Y_0(2) times A_1; no S_2 quotient is inserted.",
+    "The r=10 endpoint is independently source-locked at commit 50cbe644c6fa9cc4e6a7f5f03683883ffea83d49.",
+    "No finite-field enumeration, asymptotic inference, RH criterion, or external novelty claim is made."
+  ],
+  "packet_manifest": [
+    {
+      "bytes": 7104,
+      "lf_sha256": "4bd2a1d0cd884a3208a5eaa4505a1491a8ce78885a8f2b651509ab078ca84f83",
+      "path": "research/l-families/atlas/function_field/GENUS2_AMBIENT_SYMMETRIC_POWER_LADDER.md"
+    },
+    {
+      "bytes": 35707,
+      "lf_sha256": "58852e2c41fb46b0a94a0855ee25167901b3c1f95de579c920f9b2ba29b20c76",
+      "path": "research/l-families/atlas/function_field/genus2_ambient_symmetric_power_ladder.py"
+    },
+    {
+      "bytes": 12244,
+      "lf_sha256": "8fc76f5eac71ab1a0db3f5b4eb0bf203df017ac7ca90b9ca81d6cc6b1213d2e3",
+      "path": "tests/test_genus2_ambient_symmetric_power_ladder.py"
+    }
+  ],
+  "payload_sha256": "c854c15f654edc97783537a814a20f5fd91fbdbf2b2929d34c8ba79c8eca2fb4",
+  "resource_contract": {
+    "abelian_surfaces_enumerated": 0,
+    "actual_exact_operations": 247,
+    "actual_source_bytes": 120959,
+    "actual_source_files": 7,
+    "arithmetic": "exact sparse integer polynomial algebra only",
+    "cohomology_groups_enumerated": 0,
+    "curves_enumerated": 0,
+    "finite_fields_enumerated": 0,
+    "maximum_exact_operations": 5000,
+    "maximum_output_bytes": 65536,
+    "maximum_packet_file_bytes": 65536,
+    "maximum_source_bytes_each": 32768,
+    "maximum_source_bytes_total": 131072,
+    "maximum_source_files": 7,
+    "maximum_wall_seconds": 5.0,
+    "modular_symbols_enumerated": 0,
+    "operation_counts": {
+      "control_evaluation": 44,
+      "cusp_lookup": 30,
+      "dimension_check": 35,
+      "polynomial_add": 62,
+      "polynomial_multiply": 33,
+      "polynomial_scale": 43
+    },
+    "operations_after_exact_algebra": 247
+  },
+  "schema": "riemann.function_field.genus2_ambient_symmetric_power_ladder.v1",
+  "scope": {
+    "compatible_system_constructed": false,
+    "external_novelty_claimed": false,
+    "individual_cohomology_group_decomposition": false,
+    "memberwise_sign": false,
+    "motivic_isomorphism": false,
+    "rh_or_grh_claim": false,
+    "virtual_compact_support_trace": true
+  },
+  "source_manifest": [
+    {
+      "bytes": 16921,
+      "commit": "aee73fda38a73bd792a4b69cd12ec7c4b7aaad1e",
+      "git_blob": "9548aea141e1f5b48897850a91e9b6d76b7c0ae4",
+      "id": "native_t2_t4",
+      "lf_sha256": "aef506afa6b9b29f10528b634f45c7eab96abc36c6cd2de886262e834fcb2d43",
+      "path": "research/l-families/atlas/function_field/native_qadic_reciprocal_wavelet_spectroscopy.json",
+      "payload_sha256": "4e366316c6d55488b41e0104f6bee6c947220d7989ea7aa1381b5d72a099b882",
+      "role": "all-q marked-open T_(2,0) and T_(4,0) traces",
+      "schema": "riemann.function_field.native_qadic_reciprocal_wavelet_spectroscopy.v1"
+    },
+    {
+      "bytes": 9929,
+      "commit": "522bc6b454016a07a9c65aaa6177d0340d70f5dc",
+      "git_blob": "b1d2c12ff8682db6cf60a8673574d93f2779010c",
+      "id": "sym6",
+      "lf_sha256": "4e6156e8ca4f8b652e02961d3aa5f3ea63c9b42243908d1ecab8b94c08d253a6",
+      "path": "research/l-families/atlas/function_field/genus2_sym6_marked_trace_average.json",
+      "payload_sha256": "7bf31859372bb2a292f8321794f9b05859d2def82b1dd59ad83ab992088a5e86",
+      "role": "all-q marked-open T_(6,0) trace theorem",
+      "schema": "riemann.function_field.genus2_sym6_marked_trace_average.v1"
+    },
+    {
+      "bytes": 19682,
+      "commit": "dc63f02d0897e10936ef0767a1c8e6f15ac49e06",
+      "git_blob": "1dece87cbec2731f858e3dd38d2ceb0a96959d53",
+      "id": "sym8",
+      "lf_sha256": "a92700980ac7fef22f7a36db7b3d4d8bb7aa8d763904677e64bfca3182be0233",
+      "path": "research/l-families/atlas/function_field/genus2_sym8_marked_trace_average.json",
+      "payload_sha256": "423b8c37b69fb56b459beb7ebd9e6b94d12cf658f5819f7ac481e83560f5d0ae",
+      "role": "all-q marked-open T_(8,0) trace theorem",
+      "schema": "riemann.function_field.genus2_sym8_marked_trace_average.v1"
+    },
+    {
+      "bytes": 24460,
+      "commit": "42910253be8173c6cd0de19a7a7403d0c31b5c22",
+      "git_blob": "561caa7dc504dfb158908aef9229e91af0707a1e",
+      "id": "sym10",
+      "lf_sha256": "4f91ac00193805207088e9fc6aea2b464645267b17dc54f71165a1ae3b9d45ce",
+      "path": "research/l-families/atlas/function_field/genus2_sym10_marked_trace_average.json",
+      "payload_sha256": "0fbf48768fdea477b2bee4f53c8f1e547a167155c665b5e97bc201961971ec77",
+      "role": "all-q marked-open T_(10,0) trace theorem",
+      "schema": "riemann.genus2_sym10_marked_trace_average.v1"
+    },
+    {
+      "bytes": 8749,
+      "commit": "c8eff406f49daf9f09c0bb3e63e21659275d224e",
+      "git_blob": "79ad36346734bb41f21b570f380ad9d1af86f9ee",
+      "id": "marked_adapter",
+      "lf_sha256": "fe8f23f6379a70ea150a8e4f1b87054553536fde3bd23e6c1d21e252baf3b26c",
+      "path": "research/l-families/atlas/function_field/genus2_marked_weierstrass_stack_adapter.json",
+      "payload_sha256": "7b091cc158c7ff378774dcbaef5802c469c3d377384034bced1caf4fe92b3601",
+      "role": "exact marked-stack measure and trace interpretation",
+      "schema": "riemann.function_field.genus2_marked_weierstrass_stack_adapter.v1"
+    },
+    {
+      "bytes": 14484,
+      "commit": "e0da0f790f96f6dc5c03b363a9a01b91621ee113",
+      "git_blob": "9160b9a95efec4f0ed7a895b507d13d97158d714",
+      "id": "decomposable_geometry",
+      "lf_sha256": "7338bb846308b685fc0124ba3f8da80e5fe368360aa79efff97754ad3c200c2b",
+      "path": "research/l-families/atlas/function_field/genus2_chi04_stack_trace_reconciliation.json",
+      "payload_sha256": "b87733cdf4f5532fcc0a74313d79f4d5ee3f056b55c9bab953ef40c3e01a5762",
+      "role": "exact marked decomposable geometry Y_0(2) times A_1",
+      "schema": "riemann.function_field.genus2_chi04_stack_trace_reconciliation.v1"
+    },
+    {
+      "bytes": 26734,
+      "commit": "50cbe644c6fa9cc4e6a7f5f03683883ffea83d49",
+      "git_blob": "c639b41275264ba2a05c51448da5c1cfdf472264",
+      "id": "ambient_sym10",
+      "lf_sha256": "abcdf414e237816dae407f6efcc3cd5bf6dc7ac24a1961decbd88e2dfe64d6d7",
+      "path": "research/l-families/atlas/function_field/genus2_sym10_ambient_stack_trace.json",
+      "payload_sha256": "867a49d1daa5dc41012119b6e7154e21d3b4281e9da24ce32014b7f6c371a1b7",
+      "role": "independent committed Sym10 ambient endpoint",
+      "schema": "riemann.function_field.genus2_sym10_ambient_stack_trace.v1"
+    }
+  ],
+  "status": "EXACT_MARKED_AMBIENT_SYM_EVEN_LADDER_R2_THROUGH_R10",
+  "theorem": {
+    "ambient_space": "A_2(w^1)",
+    "formulas": {
+      "r=10": "2-4*q-2*q*Theta_Delta(q)",
+      "r=2": "-2*q",
+      "r=4": "-3*q",
+      "r=6": "1-3*q-q*Theta_(8,2)(q)",
+      "r=8": "1-4*q-q*Theta_(10,2)(q)"
+    },
+    "local_system": "V_(r,0)=Sym^r(V), r in {2,4,6,8,10}",
+    "quantifier": "every odd prime power q",
+    "trace_meaning": "alternating compactly supported geometric-Frobenius trace"
+  }
+}
