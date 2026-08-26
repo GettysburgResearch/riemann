@@ -100,8 +100,10 @@ Equivalently, (0.7) follows from
 \tag{0.9}
 \]
 
-Thus the bridge reaches to within an explicit logarithmic margin of the
-finite-residue entropy wall.  The simpler condition
+Thus (0.9) is an explicit logarithmic-size sufficient tolerance below the
+finite-residue entropy wall: whenever the discrete value `ell_r` obeys it,
+the bridge applies.  This does **not** assert that, for every `M`, some
+discrete `ell_r` lands within that tolerance.  The simpler condition
 
 \[
  \boxed{\ell_r\le M/2}
@@ -479,10 +481,11 @@ it cannot cross it in scale.  For the probability distribution
 
 Thus full-residue chi-square equidistribution is impossible once the
 residue group materially exceeds the conductor supply.  Since
-`ell_r=Theta_q(q^r)`, reaching `ell_r=M-O(log M)` already means
+`ell_r=Theta_q(q^r)`, satisfying `ell_r=M-O(log M)` already means
 `r=log_qM+O_q(1)` and hence (0.12).  The bridge improves the constant and
-reaches the entropy wall to logarithmic accuracy; it does not establish a
-mesoscopic window with `j/log M -> infinity`.
+has an explicit logarithmic-gap criterion near the entropy wall; the
+discrete sequence `ell_r` is not claimed to realize that gap for each `M`.
+It does not establish a mesoscopic window with `j/log M -> infinity`.
 
 A theorem beyond this point would have to use the special detector-zero
 sets more economically than full residue equidistribution, or import a new

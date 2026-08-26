@@ -186,7 +186,8 @@ class QuadraticFamilyProfileChiSquareBridgeTests(unittest.TestCase):
             self.assertIn(marker, note)
 
     def test_invalid_inputs_fail_closed(self) -> None:
-        for q_value in (True, 2, 4):
+        self.assertEqual(MODULE.irreducible_count(9, 3), 240)
+        for q_value in (True, 2, 4, 15, 45):
             with self.assertRaises(ValueError):
                 MODULE.irreducible_count(q_value, 3)
         with self.assertRaises(ValueError):

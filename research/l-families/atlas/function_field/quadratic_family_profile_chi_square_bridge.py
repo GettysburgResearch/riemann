@@ -55,14 +55,29 @@ def check_source_blobs() -> None:
             raise RuntimeError(f"source blob mismatch: {commit}:{path}")
 
 
+def _is_prime_power(value: int) -> bool:
+    """Return whether the already-validated odd value is a prime power."""
+
+    candidate = 3
+    while candidate * candidate <= value and value % candidate != 0:
+        candidate += 2
+    if candidate * candidate > value:
+        return True
+    remaining = value
+    while remaining % candidate == 0:
+        remaining //= candidate
+    return remaining == 1
+
+
 def _validate_q(q_value: int) -> None:
     if (
         isinstance(q_value, bool)
         or not isinstance(q_value, int)
         or q_value < 3
         or q_value % 2 == 0
+        or not _is_prime_power(q_value)
     ):
-        raise ValueError("q must be an odd integer at least three")
+        raise ValueError("q must be an odd prime power")
 
 
 def _validate_h_depth(h_value: int, depth: int) -> None:
@@ -358,7 +373,7 @@ def run() -> dict[str, object]:
         "schema": "riemann.function_field.profile_chi_square_bridge.v1",
         "status": (
             "exact profile-weighted chi-square gate and unconditional bridge "
-            "to a logarithmic margin from the residue entropy wall"
+            "under an explicit logarithmic-gap criterion below the residue entropy wall"
         ),
         "frozen_sources": {
             f"{commit}:{path}": blob for (commit, path), blob in SOURCE_BLOBS.items()
