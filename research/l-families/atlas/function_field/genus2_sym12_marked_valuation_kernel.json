@@ -1,9 +1,9 @@
 {
   "highest_weight_model": {
     "nullity": 66,
-    "primitive_basis_sha256": "6f09eb35f716efab67f717cf55adcde1dab3e9fc11ef73747d41668f95d95c1e",
     "raising_rank_mod_1000003": 686,
     "raising_rank_over_Q": 686,
+    "rowwise_primitive_rational_kernel_basis_sha256": "6f09eb35f716efab67f717cf55adcde1dab3e9fc11ef73747d41668f95d95c1e",
     "weight_12_states": 752,
     "weight_14_states": 686
   },
@@ -189,21 +189,22 @@
     "combined_matrix": {
       "columns": 66,
       "nullity": 15,
-      "primitive_kernel_basis_sha256": "1326459cad19fcf373b6d4364acfc5597acb9799d5fbb87ca4c8e905fd8ce95d",
       "rank_mod_1000003": 51,
       "rank_mod_1000033": 51,
       "rank_over_Q": 51,
-      "rows": 3481
+      "rows": 3481,
+      "rowwise_primitive_rational_kernel_basis_sha256": "1326459cad19fcf373b6d4364acfc5597acb9799d5fbb87ca4c8e905fd8ce95d"
     },
     "representative_partition": "{1,2,6}|{3,4,5}",
     "weyl_symmetry": "j maps to 12-j and phi maps to phi_prime; the j=7,...,12 containments mirror the displayed j=0,...,5 containments"
   },
   "resource_caps": {
-    "designed_wall_clock_cap_seconds": 60,
     "largest_weight_state_space": 752,
     "partitions_computed": 1,
     "point_counts": 0,
     "reason_one_partition_suffices": "S5 is transitive on the ten choices of the two labels that join fixed label 6",
-    "source_columns": 66
+    "source_columns": 66,
+    "wall_clock_target_enforced": false,
+    "wall_clock_target_seconds": 60
   }
 }

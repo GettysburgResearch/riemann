@@ -137,7 +137,8 @@ has rational rank `686`, independently certified modulo `1000003`.  Hence
 \tag{4}
 \]
 
-The replay constructs a primitive integral basis of this kernel.  Its
+The replay constructs a rowwise-primitive integral basis of the rational
+kernel.  Its
 canonical digest is
 
 ```text
@@ -224,8 +225,8 @@ Its coefficient ranks, in order `j=0,...,12`, are
 \]
 
 The combined rank is only `51`; the later coefficient blocks add no rank
-beyond the middle block.  A primitive basis for the `15`-dimensional kernel
-has digest
+beyond the middle block.  A rowwise-primitive integral basis of the
+`15`-dimensional rational kernel has digest
 
 ```text
 1326459cad19fcf373b6d4364acfc5597acb9799d5fbb87ca4c8e905fd8ce95d
@@ -314,8 +315,9 @@ The replay is deliberately bounded:
 - `752` states in the largest source weight space;
 - `66` source columns;
 - exact sparse arithmetic over `Q` plus two finite-field rank checks;
-- a designed wall-clock cap of `60` seconds on the project machine (the
-  recorded development run completed in about `36` seconds).
+- a wall-clock target/budget of `60` seconds on the project machine, recorded
+  but not enforced in-process (the development run completed in about `36`
+  seconds).
 
 Run:
 
@@ -347,7 +349,7 @@ Primary inputs:
   preceding defect audit.
 
 Clery--van der Geer provide the general valuation criterion; they do not, in
-the cited version, print the `(d,b)=(9,12)` marked `66 x 3481` calculation or
+the cited version, print the `(d,b)=(9,12)` marked `3481 x 66` calculation or
 the rank `51`/nullity `15` result.  This packet establishes that result inside
 the project.  No claim of external novelty or publication priority is made
 without a dedicated literature and author-convention check.

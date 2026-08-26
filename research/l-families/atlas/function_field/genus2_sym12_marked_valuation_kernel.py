@@ -385,7 +385,9 @@ def valuation_analysis(
             f"rank_mod_{prime_1}": rank_rows_mod_prime(selected_rows, width, prime_1),
             f"rank_mod_{prime_2}": rank_rows_mod_prime(selected_rows, width, prime_2),
             "nullity": len(kernel),
-            "primitive_kernel_basis_sha256": primitive_row_digest(kernel),
+            "rowwise_primitive_rational_kernel_basis_sha256": (
+                primitive_row_digest(kernel)
+            ),
         },
         "weyl_symmetry": (
             "j maps to 12-j and phi maps to phi_prime; the j=7,...,12 "
@@ -413,7 +415,9 @@ def run() -> dict[str, object]:
             "raising_rank_over_Q": rank_q,
             "raising_rank_mod_1000003": rank_mod_prime,
             "nullity": len(nullspace),
-            "primitive_basis_sha256": primitive_row_digest(nullspace),
+            "rowwise_primitive_rational_kernel_basis_sha256": (
+                primitive_row_digest(nullspace)
+            ),
         },
         "representative_boundary_valuation": valuation,
         "resource_caps": {
@@ -421,7 +425,8 @@ def run() -> dict[str, object]:
             "source_columns": 66,
             "largest_weight_state_space": 752,
             "partitions_computed": 1,
-            "designed_wall_clock_cap_seconds": 60,
+            "wall_clock_target_enforced": False,
+            "wall_clock_target_seconds": 60,
             "reason_one_partition_suffices": (
                 "S5 is transitive on the ten choices of the two labels that "
                 "join fixed label 6"

@@ -80,7 +80,7 @@ def test_committed_full_matrix_certificate() -> None:
     assert matrix == {
         "columns": 66,
         "nullity": 15,
-        "primitive_kernel_basis_sha256": (
+        "rowwise_primitive_rational_kernel_basis_sha256": (
             "1326459cad19fcf373b6d4364acfc5597acb9799d5fbb87ca4c8e905fd8ce95d"
         ),
         "rank_mod_1000003": 51,
@@ -101,4 +101,5 @@ def test_resource_firewall() -> None:
     assert caps["point_counts"] == 0
     assert caps["partitions_computed"] == 1
     assert caps["largest_weight_state_space"] == 752
-    assert caps["designed_wall_clock_cap_seconds"] == 60
+    assert caps["wall_clock_target_enforced"] is False
+    assert caps["wall_clock_target_seconds"] == 60
