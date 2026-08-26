@@ -1,10 +1,15 @@
 # Genus-two Sym12 `S5` Eisenstein defect audit
 
-Status: **THEOREM-SUPPORTED EISENSTEIN RESOLUTION; ONE STABLE CHANNEL OPEN**  
+Status: **THEOREM-SUPPORTED EISENSTEIN RESOLUTION; ONE STABLE CHANNEL OPEN**
+
 Scope: the `(j,k)=(12,3)` channel on the marked ambient stack
-`A_2(w^1)=A_2[2]/S_5`  
+`A_2(w^1)=A_2[2]/S_5`
+
 Computation: finite character and weight algebra only; no point counts or family
 enumeration
+
+Exact replay:
+[`genus2_sym12_s5_eisenstein_defect_audit.py`](genus2_sym12_s5_eisenstein_defect_audit.py)
 
 ## 1. Outcome
 
@@ -334,6 +339,11 @@ covariant problem (8) and the channel adapter are resolved.
   dimensions;
 - the pre-holomorphic covariant dimension `66` in (7);
 - transitivity of `S_5` on the ten `3+3` boundary partitions.
+
+The companion replay checks the branching carriers, the three-term
+Eisenstein projection, the lift/nonlift totals, and (7) using integer
+arithmetic.  It deliberately does not encode a cohomology theorem or a
+holomorphy conclusion.
 
 ### Conditional or corroborative
 
