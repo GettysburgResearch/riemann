@@ -88,9 +88,43 @@ holes in the common source base.  Filling them lowers the Betti cost by the
 exact removable-puncture tax
 
 \[
- \boxed{(d-1)e.}
+\boxed{(d-1)e.}
 \tag{0.6}
 \]
+
+The same tax has an exact Frobenius-tower shadow.  Let
+\(T_{\min}(m)\) and \(T_{\rm all}(m)\) be the selected trace sums on the two
+opens.  For each middle prime choose one root \(\alpha_i\in\mathbf F_{q^e}\)
+and put
+
+\[
+ \epsilon_i=
+ \kappa_e\!\left({P_0(\alpha_i)\over P_d(\alpha_i)}\right)\in\{\pm1\}.
+\]
+
+Then
+
+\[
+ \boxed{
+ T_{\min}(m)-T_{\rm all}(m)
+ =
+ \begin{cases}
+ e\displaystyle\sum_{i=1}^{d-1}\epsilon_i^{\,m/e},&e\mid m,\\
+ 0,&e\nmid m.
+ \end{cases}}
+\tag{0.7}
+\]
+
+In particular,
+
+\[
+ \boxed{T_{\min}(2er)-T_{\rm all}(2er)=e(d-1)}
+\tag{0.8}
+\]
+
+for every \(r\ge1\), independent of all middle evaluation signs.  A
+one-extension cancellation therefore cannot be promoted to a tower-uniform
+bound by ignoring the punctures.
 
 Thus this model identifies a new exact gate:
 
@@ -103,7 +137,7 @@ At fixed \(q\), take the least \(e=e_q(d)\) for which there are at least
 
 \[
  e_q(d)=\log_q d+O_q(\log\log(d+2)).
-\tag{0.7}
+\tag{0.9}
 \]
 
 The maximal-extension cost is therefore \(O_q(\log d)\), while the
@@ -248,6 +282,48 @@ identity.
 This is why an endomorphism identity surviving on one common open is weaker
 than a conductor-compressed trace theorem on the maximal extension.
 
+### 4A. Exact closed-place boundary tower
+
+Let \(\alpha_i\) be a root of the middle irreducible \(P_i\).  The roots of
+\(P_i\) contribute to \(\mathbf F_{q^m}\)-points exactly when \(e\mid m\);
+then all \(e\) conjugate roots occur.  The value
+\(P_0(\alpha_i)/P_d(\alpha_i)\) lies in
+\(\mathbf F_{q^e}^{\times}\).  If \(m=en\), restriction of the quadratic
+character satisfies
+
+\[
+ \kappa_m(a)=\kappa_e(a)^n
+ \qquad(a\in\mathbf F_{q^e}^{\times}),
+\tag{4A.1}
+\]
+
+because
+\((q^{en}-1)/(q^e-1)=1+q^e+\cdots+q^{e(n-1)}\equiv n\pmod2\).
+Quadratic character is Frobenius-invariant, so every conjugate root has the
+same sign.  Adding the \(d-1\) middle closed places back to the sum proves
+(0.7).
+
+When \(n\) is even every sign becomes \(+1\), proving (0.8).  This is an
+exact no-go for sign-engineering the boundary away on the entire
+same-characteristic tower.
+
+For \(e=1\), the minimal-open cohomology vanishes and
+\(T_{\min}(m)=0\).  Hence the common-open sum has the complete two-step law
+
+\[
+ \boxed{
+ T_{\rm all}(m)=
+ \begin{cases}
+ -\sum_i\epsilon_i,&m\ \text{odd},\\
+ -(d-1),&m\ \text{even}.
+ \end{cases}}
+\tag{4A.2}
+\]
+
+The odd row can be balanced when the realized signs permit it; the even row
+never can for \(d>1\).  No claim is made that every abstract sign pattern is
+realized by a polynomial path.
+
 ## 5. Closed-place scaling at fixed \(q\)
 
 The number of monic irreducibles of degree \(e\) is
@@ -265,7 +341,7 @@ Define
 \]
 
 Then the path construction exists with common degree \(e_q(d)\).  The
-standard estimate \(I_q(e)=q^e/e+O(q^{e/2})\) gives (0.7).  Therefore
+standard estimate \(I_q(e)=q^e/e+O(q^{e/2})\) gives (0.9).  Therefore
 
 \[
  \begin{array}{c|c}
@@ -321,7 +397,8 @@ The missing work is precisely:
 | cohomology dimensions (0.3), (0.5) | **PROVED FROM IMPORTED GOS + DUALITY** |
 | trace bound (0.4) | **PROVED FROM IMPORTED TRACE FORMULA + WEIL II** |
 | exact removable-puncture tax (0.6) | **PROVED EXACT** |
-| fixed-\(q\) degree law (0.7) | **PROVED FROM THE PRIME-POLYNOMIAL FORMULA** |
+| boundary tower and even-step no-go (0.7)--(0.8) | **PROVED EXACT** |
+| fixed-\(q\) degree law (0.9) | **PROVED FROM THE PRIME-POLYNOMIAL FORMULA** |
 | full many-place FFPS adapter | **OPEN** |
 | legal source extension across middle punctures | **OPEN / CENTRAL GATE** |
 | CYSEL, WCADD, WCKUM, RH, or GRH | **OPEN / UNPROVED** |

@@ -60,6 +60,22 @@ class CheckerboardTelescopingCurveModelTests(unittest.TestCase):
                     (path_length - 1) * row["e_q_d"],
                 )
 
+    def test_boundary_tower_even_step_is_sign_independent(self) -> None:
+        for signs in ((1, 1, 1), (1, -1, 1), (-1, -1, -1)):
+            self.assertEqual(
+                MODULE.boundary_trace_difference(5, 10, signs),
+                5 * len(signs),
+            )
+            self.assertEqual(
+                MODULE.boundary_trace_difference(5, 20, signs),
+                5 * len(signs),
+            )
+
+    def test_boundary_tower_odd_step_retains_signs(self) -> None:
+        signs = (1, -1, -1, 1, 1)
+        self.assertEqual(MODULE.boundary_trace_difference(3, 3, signs), 3 * sum(signs))
+        self.assertEqual(MODULE.boundary_trace_difference(3, 4, signs), 0)
+
     def test_rational_endpoint_row_has_zero_minimal_cohomology(self) -> None:
         row, _ = MODULE.path_model(5, 4)
         self.assertEqual(row["e_q_d"], 1)
@@ -84,6 +100,12 @@ class CheckerboardTelescopingCurveModelTests(unittest.TestCase):
             MODULE.irreducible_count(3, 0)
         with self.assertRaises(ValueError):
             MODULE.minimal_closed_place_degree(3, 0)
+        with self.assertRaises(ValueError):
+            MODULE.boundary_trace_difference(0, 2, (1,))
+        with self.assertRaises(ValueError):
+            MODULE.boundary_trace_difference(2, 0, (1,))
+        with self.assertRaises(ValueError):
+            MODULE.boundary_trace_difference(2, 2, (0,))
 
     def test_optimized_replay(self) -> None:
         completed = subprocess.run(

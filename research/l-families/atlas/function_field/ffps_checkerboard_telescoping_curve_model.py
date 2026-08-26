@@ -28,6 +28,7 @@ MAX_D = 128
 MAX_E = 64
 MAX_ROWS = 512
 MAX_BIT_OPERATIONS = 100_000
+MAX_BOUNDARY_ROWS = 2_048
 MAX_WALL_SECONDS = 3.0
 
 
@@ -147,6 +148,31 @@ def path_model(field_size: int, path_length: int) -> tuple[dict[str, object], in
     )
 
 
+def boundary_trace_difference(
+    closed_place_degree: int, extension_degree: int, signs: tuple[int, ...]
+) -> int:
+    """Return the exact trace added by filling equal-degree middle places."""
+
+    if (
+        isinstance(closed_place_degree, bool)
+        or not isinstance(closed_place_degree, int)
+        or closed_place_degree < 1
+    ):
+        raise ValueError("closed_place_degree must be positive")
+    if (
+        isinstance(extension_degree, bool)
+        or not isinstance(extension_degree, int)
+        or extension_degree < 1
+    ):
+        raise ValueError("extension_degree must be positive")
+    if any(sign not in (-1, 1) for sign in signs):
+        raise ValueError("boundary signs must be plus or minus one")
+    if extension_degree % closed_place_degree:
+        return 0
+    relative_degree = extension_degree // closed_place_degree
+    return closed_place_degree * sum(sign**relative_degree for sign in signs)
+
+
 def check_source_blobs() -> None:
     for (commit, path), expected in SOURCE_BLOBS.items():
         completed = subprocess.run(
@@ -175,6 +201,26 @@ def build_report() -> dict[str, object]:
             if bit_operations > MAX_BIT_OPERATIONS:
                 raise RuntimeError("bit-operation cap exceeded")
 
+    boundary_rows = 0
+    for sign_count in range(7):
+        for bit_mask in range(1 << sign_count):
+            signs = tuple(
+                -1 if bit_mask & (1 << index) else 1 for index in range(sign_count)
+            )
+            for degree in range(1, 5):
+                for relative_degree in range(1, 5):
+                    value = boundary_trace_difference(
+                        degree, degree * relative_degree, signs
+                    )
+                    expected = degree * (
+                        sum(signs) if relative_degree % 2 else sign_count
+                    )
+                    if value != expected:
+                        raise ArithmeticError("boundary tower law failed")
+                    boundary_rows += 1
+                    if boundary_rows > MAX_BOUNDARY_ROWS:
+                        raise RuntimeError("boundary row cap exceeded")
+
     if time.monotonic() - started > MAX_WALL_SECONDS:
         raise RuntimeError("wall-time cap exceeded")
     return {
@@ -186,6 +232,8 @@ def build_report() -> dict[str, object]:
             "minimal_h1": "2*e-2",
             "common_h1": "(d+1)*e-2",
             "puncture_tax": "(d-1)*e",
+            "boundary_tower": ("e*sum epsilon_i^(m/e) if e divides m, otherwise zero"),
+            "even_relative_degree": "e*(d-1)",
         },
         "imported": [
             "Grothendieck-Ogg-Shafarevich",
@@ -193,6 +241,7 @@ def build_report() -> dict[str, object]:
             "Deligne weight bound",
         ],
         "rows": len(rows),
+        "boundary_rows": boundary_rows,
         "controls": {
             "q5_d4": next(row for row in rows if row["q"] == 5 and row["d"] == 4),
             "q3_d128": next(row for row in rows if row["q"] == 3 and row["d"] == 128),
@@ -200,6 +249,8 @@ def build_report() -> dict[str, object]:
         "resource_ledger": {
             "bit_operations": bit_operations,
             "max_bit_operations": MAX_BIT_OPERATIONS,
+            "boundary_rows": boundary_rows,
+            "max_boundary_rows": MAX_BOUNDARY_ROWS,
             "finite_fields_enumerated": 0,
             "polynomials_enumerated": 0,
             "curves_enumerated": 0,
@@ -222,6 +273,7 @@ def run_checks() -> dict[str, object]:
     for marker in (
         "full-rank quadratic-torsor construction",
         "removable-puncture tax",
+        "same-characteristic tower",
         "dim H_c^1=2e-2",
         "legal source extension across middle punctures",
         "not an FFPS source realization",
