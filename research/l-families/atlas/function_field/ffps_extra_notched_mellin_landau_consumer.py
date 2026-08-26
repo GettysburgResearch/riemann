@@ -106,7 +106,12 @@ def run() -> dict[str, object]:
             raise AssertionError("positive Mellin sample unexpectedly vanished")
         samples.append({"s": s, "M_ext(s)": qstr(value)})
     smoothing_panels = []
-    for real_part in (Fraction(1, 100), Fraction(1, 10), Fraction(1, 4), Fraction(49, 100)):
+    for real_part in (
+        Fraction(1, 100),
+        Fraction(1, 10),
+        Fraction(1, 4),
+        Fraction(49, 100),
+    ):
         if not smoothing_multiplier_nonzero(real_part):
             raise AssertionError("box mollifier vanished in the open strip")
         smoothing_panels.append(
@@ -117,9 +122,7 @@ def run() -> dict[str, object]:
             "definition": "K_ext=D_out(A *_M A)",
             "A_hat": "q(s)*r(s)/(s*(s-1/2))",
             "D_out": "(1/2)*D*(D-1)*(5*D+3/2)*(2*D-1)",
-            "simplified_multiplier": (
-                "q(s)^2*r(s)^2*(s-1)*(5s+3/2)/(s*(s-1/2))"
-            ),
+            "simplified_multiplier": ("q(s)^2*r(s)^2*(s-1)*(5s+3/2)/(s*(s-1/2))"),
             "support": "[1,16] as a finite signed logarithmic measure",
             "measure_certificate": finite_measure_certificate(),
         },
@@ -135,16 +138,10 @@ def run() -> dict[str, object]:
         },
         "source": {
             "beta": "mu(n)-1_(67|n)*mu(n/67)",
-            "mellin_transform": (
-                "M_ext(s)*(1-67^(-(s+1/2)))/zeta(s+1/2)"
-            ),
+            "mellin_transform": ("M_ext(s)*(1-67^(-(s+1/2)))/zeta(s+1/2)"),
             "absolute_fubini_half_plane": "Re(s)>1/2",
-            "dirichlet_factor": (
-                "sum beta(n)*n^(-z)=(1-67^(-z))/zeta(z) for Re(z)>1"
-            ),
-            "off_line_zero": (
-                "rho with Re(rho)>1/2 gives a genuine pole at s=rho-1/2"
-            ),
+            "dirichlet_factor": ("sum beta(n)*n^(-z)=(1-67^(-z))/zeta(z) for Re(z)>1"),
+            "off_line_zero": ("rho with Re(rho)>1/2 gives a genuine pole at s=rho-1/2"),
         },
         "measure_regularization": {
             "mollifier": "positive probability box on log-scale interval [0,epsilon]",
@@ -159,8 +156,29 @@ def run() -> dict[str, object]:
         "conditional_consumer": {
             "premise": "nu_ext^-([1,Y]) = Y^o(1), in Jordan variation",
             "conclusion": "Riemann Hypothesis",
-            "status": "exact analytic implication; arithmetic premise open",
+            "status": (
+                "exact analytic implication; raw arithmetic premise refuted "
+                "by the complete beta atomic-variation firewall"
+            ),
+            "premise_viable": False,
+            "atomic_lower_bound": (
+                "nu_ext^-([1,Y]) >= ((70+50*sqrt(2))/pi^2)*sqrt(Y)+O(log(Y))"
+            ),
             "landau_ledger": landau_hypothesis_certificate(),
+        },
+        "canonical_successor": {
+            "atomic_audit_commit": "78e5ce8e75bce174e3014a33b6fe086112577a1e",
+            "equivalence_commit": "9f29bdb6ea7375df84de550d62f9d0984634a8dd",
+            "reflection_commit": "a678292fd6d19d5b18f499aef35d2263cfc2b4ec",
+            "detector": "h_epsilon=eta_epsilon*nu_ext for one fixed epsilon>0",
+            "criterion": "int_0^T (h_epsilon)_- dt=e^o(T)",
+            "strength": "equivalent to RH",
+            "source_form": (
+                "exact native half-divisor reflection/geodesic identity; "
+                "no Boolean completion gate required"
+            ),
+            "criterion_proved": False,
+            "rh_proved": False,
         },
         "source_adapter_gate": {
             "name": "EXTSRC106150",
@@ -168,8 +186,14 @@ def run() -> dict[str, object]:
                 "the complete beta-source extra-notched current equals "
                 "D_out*J_U^diamond plus an absolute-subpower closed field"
             ),
-            "consequence": "EXTSRC106150 AND WKSFSC106150 imply RH",
-            "status": "not supplied by the uncorrected native-outer naming",
+            "consequence": (
+                "historical only: EXTSRC106150 plus the now-refuted raw-Jordan "
+                "WKSFSC106150 would imply RH"
+            ),
+            "status": (
+                "source-accounting gate remains open, but cannot rescue the "
+                "refuted raw-Jordan premise"
+            ),
         },
         "resource_caps": {
             "mellin_samples": len(samples),

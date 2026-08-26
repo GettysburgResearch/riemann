@@ -40,14 +40,14 @@ class FfpsExtraNotchedMellinLandauConsumerTest(unittest.TestCase):
     def test_positive_box_has_no_open_strip_zero(self) -> None:
         self.assertFalse(extra_consumer.smoothing_multiplier_nonzero(Fraction(0)))
         self.assertTrue(extra_consumer.smoothing_multiplier_nonzero(Fraction(1, 1000)))
-        self.assertTrue(extra_consumer.smoothing_multiplier_nonzero(Fraction(499, 1000)))
+        self.assertTrue(
+            extra_consumer.smoothing_multiplier_nonzero(Fraction(499, 1000))
+        )
 
     def test_measure_and_landau_certificates(self) -> None:
         measure = extra_consumer.finite_measure_certificate()
         self.assertEqual(measure["max_D_out_order"], 4)
-        self.assertEqual(
-            measure["convolution_identity"], "D^4(a*a)=a''*a''"
-        )
+        self.assertEqual(measure["convolution_identity"], "D^4(a*a)=a''*a''")
         landau = extra_consumer.landau_hypothesis_certificate()
         self.assertEqual(landau["positive_density_abscissa_upper_bound"], "1/2")
         self.assertIn("Re(s)>0", landau["division_gate"])
@@ -55,11 +55,18 @@ class FfpsExtraNotchedMellinLandauConsumerTest(unittest.TestCase):
     def test_gate_and_caps(self) -> None:
         result = extra_consumer.run()
         self.assertEqual(result["source_adapter_gate"]["name"], "EXTSRC106150")
-        self.assertEqual(result["conditional_consumer"]["conclusion"], "Riemann Hypothesis")
+        self.assertEqual(
+            result["conditional_consumer"]["conclusion"], "Riemann Hypothesis"
+        )
         self.assertEqual(
             result["conditional_consumer"]["premise"],
             "nu_ext^-([1,Y]) = Y^o(1), in Jordan variation",
         )
+        self.assertFalse(result["conditional_consumer"]["premise_viable"])
+        self.assertIn("sqrt(Y)", result["conditional_consumer"]["atomic_lower_bound"])
+        self.assertEqual(result["canonical_successor"]["strength"], "equivalent to RH")
+        self.assertFalse(result["canonical_successor"]["criterion_proved"])
+        self.assertFalse(result["canonical_successor"]["rh_proved"])
         self.assertEqual(result["resource_caps"]["source_atoms_enumerated"], 0)
 
 

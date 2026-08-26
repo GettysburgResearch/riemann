@@ -1,14 +1,19 @@
 # A direct Mellin--Landau consumer for the extra-notched current
 
-Status: **exact conditional analytic consumer; arithmetic source adapter and
-negative-mass estimate open; RH unproved**
+Status: **exact conditional analytic consumer; its raw Jordan premise is now
+unconditionally refuted, while the fixed-mollified premise is an exact RH
+criterion; RH remains unproved**
 
 Bounded exact replay:
 [`ffps_extra_notched_mellin_landau_consumer.py`](ffps_extra_notched_mellin_landau_consumer.py).
 
 Frozen interfaces: PR #751 `L-102500`, `L-102504`, `L-102701`,
-`L-106134`, and `T-106150`.  Read first:
-`FFPS_COMMON_MOTHER_OUTER_NOTCH_MISMATCH.md`.
+`L-106134`, and `T-106150`.  For the current disposition, read first:
+
+1. `FFPS_COMPLETE_BETA_ATOMIC_VARIATION_FIREWALL.md`;
+2. `FFPS_MOLLIFIED_BETA_RH_EQUIVALENCE.md`;
+3. `FFPS_MOLLIFIED_GEODESIC_RH_CRITERION.md`;
+4. `FFPS_COMMON_MOTHER_OUTER_NOTCH_MISMATCH.md` for the historical adapter.
 
 ## 0. Outcome
 
@@ -88,18 +93,50 @@ Here `Y^{o(1)}` means `O_epsilon(Y^epsilon)` for every `epsilon>0`, and
 `nu_ext^-` is the negative measure in the Jordan decomposition.  Thus the
 dyadic atoms are included.
 
-This produces a precise repair target for `T-106150`:
+The implication (0.6) is logically correct, but it is no longer a viable
+repair target.  The independently audited complete-source atomic firewall
+proves
+
+\[
+ \nu_{\rm ext}^-([1,Y])
+ \ge {70+50\sqrt2\over\pi^2}\sqrt Y+O(\log Y),
+\tag{0.7}
+\]
+
+so its premise is unconditionally false.  The viable cancellation must occur
+before taking the Jordan part.  For any one fixed `epsilon>0`, put
+
+\[
+ h_\varepsilon=\eta_\varepsilon*\nu_{\rm ext}.
+\]
+
+The later equivalence audit proves the sharper current statement
+
+\[
+\boxed{
+ \mathrm{RH}\quad\Longleftrightarrow\quad
+ \int_0^T(h_\varepsilon(t))_-\,dt=e^{o(T)}.}
+\tag{0.8}
+\]
+
+The source-exact half-divisor packet further rewrites (0.8) as a native
+reflection/geodesic criterion, without the Boolean completion gate below.
+
+Historically, this packet produced the following precise repair target for
+`T-106150`:
 
 ```text
 EXTSRC106150:
   the complete beta-source extra-notched current equals
   D_out J_U^diamond plus an absolute-subpower closed field.
 
-EXTSRC106150 AND WKSFSC106150 -> RH.
+EXTSRC106150 AND raw-Jordan WKSFSC106150 -> RH.
 ```
 
 `EXTSRC106150` is an exact source-adapter gate.  It is not supplied by the
 incorrect unnotched naming in `L-102740/L-106134`, and it is not claimed here.
+Even if supplied, it cannot rescue the refuted raw-Jordan premise.  It remains
+relevant only as a source-accounting question, not as the canonical RH route.
 
 ## 1. Exact Mellin audit
 
@@ -295,31 +332,35 @@ every zeta zero with real part greater than `1/2`.  The zeta functional
 equation excludes zeros to the left of the line as well.  This proves (0.6),
 including the measure/function and finite-abscissa hypotheses.
 
-## 4. What the repair does and does not solve
+## 4. Post-audit architecture
 
 The corrected architecture is
 
 ```text
 complete beta source
   -> extra-notched locally finite signed measure nu_ext
+  -> fixed positive mollification h_epsilon
   -> zero-safe Mellin pole detector
-  -> negative-mass Landau consumer.
+  -> mollified negative-mass Landau consumer.
 ```
 
 This bypasses the power-lossy causal inverse of
 `Q=I-sqrt(2)S_2`.  It also shows that the notch mismatch is not, by itself, a
 reason to abandon the half-source programme.
 
-What remains is arithmetic and exact:
+The original Boolean adapter programme asked for:
 
 1. start from the complete `beta` source, not only the live balanced sector;
 2. repeat the source decomposition with `K_ext` typed throughout;
 3. prove every inherited closed sector remains absolute-subpower;
 4. identify the surviving live term with `D_out J_U^diamond`;
-5. prove its Jordan negative variation is subpower.
+5. prove its raw Jordan negative variation is subpower.
 
-Steps 1--4 are exactly `EXTSRC106150`.  Step 5 is `WKSFSC106150` under the
-signed-measure convention.
+Steps 1--4 are exactly `EXTSRC106150`.  Step 5 was `WKSFSC106150` under the
+signed-measure convention, and is now refuted for the complete current by
+(0.7).  The source-exact native reflection identity provides a different
+route: it starts directly from the complete half-divisor square, retains the
+fixed mollifier, and makes no claim that raw Jordan variation is small.
 
 The fixed extra notch preserves absolute-subpower closed fields once their
 native absolute bounds are available, because a finite shift combination is
@@ -331,16 +372,25 @@ it from a misnamed equation.
 
 The exact negative dyadic atoms in
 `FFPS_SIGNED_DIFFERENTIAL_ATOMIC_SHELL_FIREWALL.md` belong precisely to
-`K_ext`.  They show that `WKSFSC106150` cannot follow from a deletion-stable,
-source-blind diagonal argument.  They do not affect the analytic implication
-(0.6): the Jordan convention and mollification include them exactly.
+`K_ext`.  The complete-source audit goes further: after every possible
+`2`-adic collision is grouped, the positive and negative masses per odd
+source are both `50+35*sqrt(2)`.  Unique `2`-adic factorization then proves
+the square-root lower bound (0.7).  The raw premise is therefore impossible,
+not merely inaccessible to a diagonal argument.
+
+This does not affect the analytic pole calculation.  Positive convolution
+contracts raw Jordan variation, but it can also cancel adjacent atoms against
+each other and against the continuous part *before* the new negative part is
+taken.  That distinction is exactly why (0.8) remains viable while (0.6) is
+vacuous.
 
 The combined lesson is sharper than either packet alone:
 
 ```text
-the extra-notched detector is analytically sufficient;
-its arithmetic negative-mass estimate needs global source-sector
-cancellation and cannot be proved by local diagonal interpolation.
+raw complete Jordan variation grows at least like sqrt(Y);
+fixed-mollified negative mass is exactly RH-equivalent;
+the open arithmetic burden is cancellation before Jordan decomposition,
+equivalently the positive native-reflection estimate.
 ```
 
 ## 6. Proof ledger
@@ -357,14 +407,19 @@ Proved exactly:
 - the self-contained finite-abscissa Landau lemma and conditional implication
   (0.6).
 
-New exact gate:
+Historical exact gate:
 
 - `EXTSRC106150`, the complete-source adapter to the extra-notched current.
 
-Not proved:
+Refuted exactly after this packet:
+
+- raw-Jordan `WKSFSC106150` for the complete beta current.
+
+Still not proved:
 
 - `EXTSRC106150`;
-- `WKSFSC106150` or any complete-source negative-mass estimate;
+- the fixed-mollified negative-mass estimate (0.8), equivalently RH;
+- the positive native-reflection/geodesic estimate;
 - `BCI102990`, RH, or GRH.
 
 ## 7. Bounded replay

@@ -1,5 +1,17 @@
 {
+  "canonical_successor": {
+    "atomic_audit_commit": "78e5ce8e75bce174e3014a33b6fe086112577a1e",
+    "criterion": "int_0^T (h_epsilon)_- dt=e^o(T)",
+    "criterion_proved": false,
+    "detector": "h_epsilon=eta_epsilon*nu_ext for one fixed epsilon>0",
+    "equivalence_commit": "9f29bdb6ea7375df84de550d62f9d0984634a8dd",
+    "reflection_commit": "a678292fd6d19d5b18f499aef35d2263cfc2b4ec",
+    "rh_proved": false,
+    "source_form": "exact native half-divisor reflection/geodesic identity; no Boolean completion gate required",
+    "strength": "equivalent to RH"
+  },
   "conditional_consumer": {
+    "atomic_lower_bound": "nu_ext^-([1,Y]) >= ((70+50*sqrt(2))/pi^2)*sqrt(Y)+O(log(Y))",
     "conclusion": "Riemann Hypothesis",
     "landau_ledger": {
       "division_gate": "box multiplier is nonzero for Re(s)>0",
@@ -12,7 +24,8 @@
       "source_coefficient_bound": "|beta(n)| <= 2"
     },
     "premise": "nu_ext^-([1,Y]) = Y^o(1), in Jordan variation",
-    "status": "exact analytic implication; arithmetic premise open"
+    "premise_viable": false,
+    "status": "exact analytic implication; raw arithmetic premise refuted by the complete beta atomic-variation firewall"
   },
   "kernel": {
     "A_hat": "q(s)*r(s)/(s*(s-1/2))",
@@ -70,10 +83,10 @@
     "off_line_zero": "rho with Re(rho)>1/2 gives a genuine pole at s=rho-1/2"
   },
   "source_adapter_gate": {
-    "consequence": "EXTSRC106150 AND WKSFSC106150 imply RH",
+    "consequence": "historical only: EXTSRC106150 plus the now-refuted raw-Jordan WKSFSC106150 would imply RH",
     "name": "EXTSRC106150",
     "statement": "the complete beta-source extra-notched current equals D_out*J_U^diamond plus an absolute-subpower closed field",
-    "status": "not supplied by the uncorrected native-outer naming"
+    "status": "source-accounting gate remains open, but cannot rescue the refuted raw-Jordan premise"
   },
   "zero_audit": {
     "dyadic_zero_real_parts": {
