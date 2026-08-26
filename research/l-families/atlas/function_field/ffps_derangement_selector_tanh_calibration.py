@@ -388,6 +388,8 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
         },
         "reduced_frontier": {
             "projection": "pi_0 sets p_1=0",
+            "image_theorem_degree_range": "every integer d>=1; d=1 is trivial",
+            "annihilator_argument_degree_range": "every integer d>=2",
             "algebraic_zero_hook_lift": (
                 "exists for every p_d-coefficient-zero derangement polynomial"
             ),

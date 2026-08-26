@@ -251,6 +251,11 @@ There is an exact all-degree image theorem:
 \tag{3.5}
 \]
 
+For `d=1`, both sides of (3.5) are zero: there are no nonhook partitions,
+and there is no `p_1`-free degree-one power sum.  Thus the identity is
+trivial in that endpoint degree.  The annihilator argument below is for
+`d>=2`.
+
 To prove it, take the Hall-inner-product annihilator of the left side inside
 the `p_1`-free subspace.  Since `pi_0` is an orthogonal projection in the
 power-sum basis, an annihilator element is both `p_1`-free and hook-supported

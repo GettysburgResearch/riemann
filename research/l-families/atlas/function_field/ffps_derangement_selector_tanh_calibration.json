@@ -225,6 +225,8 @@
   },
   "reduced_frontier": {
     "algebraic_zero_hook_lift": "exists for every p_d-coefficient-zero derangement polynomial",
+    "annihilator_argument_degree_range": "every integer d>=2",
+    "image_theorem_degree_range": "every integer d>=1; d=1 is trivial",
     "needed_correction": "find a Schur function R_d with zero hook coefficients, pi_0(R_d)=[t^d](A-tanh(A)), and abs(b_(d,lambda)+[s_lambda]R_d)<=dim(lambda)",
     "projection": "pi_0 sets p_1=0",
     "proved_for_all_d": false,

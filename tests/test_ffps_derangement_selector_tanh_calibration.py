@@ -31,6 +31,14 @@ class DerangementSelectorTanhCalibrationTest(unittest.TestCase):
             "exists for every",
             payload["reduced_frontier"]["algebraic_zero_hook_lift"],
         )
+        self.assertEqual(
+            payload["reduced_frontier"]["image_theorem_degree_range"],
+            "every integer d>=1; d=1 is trivial",
+        )
+        self.assertEqual(
+            payload["reduced_frontier"]["annihilator_argument_degree_range"],
+            "every integer d>=2",
+        )
         self.assertIn(
             "unique weighted-L1 minimizer",
             payload["theorem"]["even_cycle_global_firewall"],
