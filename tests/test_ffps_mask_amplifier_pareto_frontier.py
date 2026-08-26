@@ -75,6 +75,19 @@ class FFPSMaskAmplifierParetoTests(unittest.TestCase):
             leverage = (1 + u_star) ** 2 / (a_value + b_value * u_star)
             self.assertEqual(leverage, Fraction(*panel["leverage_star"]))
 
+    def test_uniform_weight_uniquely_minimizes_fourier_leakage(self) -> None:
+        uniform = self.report["weight_controls"]["ternary_uniform"]
+        nonuniform = self.report["weight_controls"]["ternary_nonuniform"]
+        self.assertEqual(uniform["selected_fourier_leakage"], [1, 2])
+        self.assertEqual(uniform["sharp_lower_bound"], [1, 2])
+        self.assertTrue(uniform["is_unique_uniform_equality_case"])
+        self.assertEqual(nonuniform["selected_fourier_leakage"], [2, 3])
+        self.assertFalse(nonuniform["is_unique_uniform_equality_case"])
+        self.assertGreater(
+            Fraction(*nonuniform["selected_fourier_leakage"]),
+            Fraction(*uniform["selected_fourier_leakage"]),
+        )
+
     def test_strict_improvement_interval_is_exact(self) -> None:
         panel = self.report["panels"]["13_37"]
         a_value = Fraction(*panel["A"])
@@ -100,6 +113,7 @@ class FFPSMaskAmplifierParetoTests(unittest.TestCase):
         for marker in (
             "exact leverage/mode/anomaly Pareto frontier",
             "selected Kummer burden",
+            "simultaneous optimizer",
             "finite linear algebra",
             "conductor-uniform `CYSEL`",
             "RH or GRH",

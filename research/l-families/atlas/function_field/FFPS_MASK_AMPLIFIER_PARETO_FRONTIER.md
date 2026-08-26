@@ -33,6 +33,13 @@ is the total mass of the selected nonprincipal Fourier modes.  Thus changing
 the retained set at fixed density can redistribute the selected-mode burden,
 but cannot reduce it.
 
+This lower bound survives arbitrary signed or complex reweighting on the same
+hard support.  Among all quotient weights preserving principal amplitude,
+the unique minimum-leakage weight is the same positive uniform weight `k/t`
+which uniquely minimizes the restricted Gram energy.  Any nonuniform dual
+weight simultaneously worsens leverage and increases total selected Fourier
+mass.
+
 When `B>2A`, the continuous leverage minimum occurs at
 
 \[
@@ -130,6 +137,47 @@ Parseval for the indicator of `S` gives
 This proves (0.2).  In particular, the shape of `S` cannot lower the total
 selected mass at a fixed density.
 
+There is a stronger dual statement.  Let `w_s` be arbitrary complex weights
+supported on `S`, normalized so that the principal Fourier coefficient is
+one:
+
+\[
+ {1\over k}\sum_{s\in S}w_s=1.
+ \tag{2.2}
+\]
+
+Put
+
+\[
+ \widehat w(r)={1\over k}\sum_{s\in S}w_ss^{-r}.
+\]
+
+Parseval and Cauchy--Schwarz give
+
+\[
+\begin{aligned}
+ \sum_{r=1}^{k-1}|\widehat w(r)|^2
+ &={1\over k}\sum_{s\in S}|w_s|^2-1\\
+ &\ge {k\over t}-1=u.
+\end{aligned}
+\tag{2.3}
+\]
+
+Equality holds exactly when every `w_s=k/t`.  Therefore
+
+\[
+ \boxed{
+ \text{no proper hard support can preserve the principal coefficient while
+ eliminating every selected quotient mode.}}
+ \tag{2.4}
+\]
+
+The frozen restricted-Gram theorem independently says that `w_s=k/t` is the
+unique minimum-energy weight on a quotient-fibre support.  Hence it is a
+**simultaneous optimizer**: it minimizes both Gram leverage and selected
+Fourier leakage.  Signed dual coefficients do not open a hidden improvement
+on the same support.
+
 The sharp cyclic-mask leverage from the frozen packet is
 
 \[
@@ -209,6 +257,11 @@ Three consequences must be kept distinct.
    family problem does not retain this signed amplitude identity for free;
    its replacement is precisely the selected-mode subtraction and `CYSEL`
    gate in the frozen closure packet.
+
+For a fixed support, (2.3) also shows that the uniform hard optimizer makes a
+principal cancellation as difficult as possible: a nonuniform weight has a
+larger coefficient norm and therefore lowers the minimum selected amplitude
+needed to cancel one observation.
 
 The cancellation vector in (0.4) is finite linear algebra.  It is not a
 claim that an arithmetic family realizes an arbitrary vector of `H_r`
@@ -309,6 +362,9 @@ so the ternary density is close to the exact panel optimum.
 Proved exactly:
 
 - the one-parameter leverage/selected-mass identity (0.1)--(0.2);
+- simultaneous optimality of the positive uniform weight for restricted-Gram
+  energy and Fourier leakage, including the no-pure-principal-support theorem
+  (2.4);
 - the continuous Pareto interval, optimum, and strict-improvement interval;
 - the sharp finite-amplitude cancellation energy (0.4);
 - the Fourier-label uncertainty bound and prime-order full-support theorem;
@@ -327,4 +383,3 @@ The design conclusion is therefore precise: inverse-Gram leverage and the
 selected analytic burden are the same one-parameter tradeoff.  Geometry can
 still distinguish masks with the same density by their Fourier-label support
 and collision strata, so the next optimization must be sheaf-aware.
-

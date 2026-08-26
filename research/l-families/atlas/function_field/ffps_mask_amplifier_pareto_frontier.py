@@ -155,6 +155,35 @@ def cyclic_design_point(
     }
 
 
+def quotient_weight_leakage(
+    order: int, weights: tuple[Fraction | int, ...]
+) -> dict[str, object]:
+    """Audit Parseval leakage for principal-normalized real quotient weights."""
+
+    if isinstance(order, bool) or not isinstance(order, int) or order < 2:
+        raise ValueError("character order must be an integer at least two")
+    if not weights or len(weights) >= order:
+        raise ValueError("weights must occupy a nonempty proper quotient support")
+    rational_weights = tuple(Fraction(value) for value in weights)
+    if sum(rational_weights) != order:
+        raise ValueError("weights must have principal normalization sum(w)=k")
+    support_size = len(rational_weights)
+    leakage = sum(value * value for value in rational_weights) / order - 1
+    lower_bound = Fraction(order, support_size) - 1
+    uniform_weight = Fraction(order, support_size)
+    is_uniform = all(value == uniform_weight for value in rational_weights)
+    if leakage < lower_bound or (leakage == lower_bound) != is_uniform:
+        raise RuntimeError("Parseval/Cauchy leakage certificate failed")
+    return {
+        "order": order,
+        "support_size": support_size,
+        "weights": [_pair(value) for value in rational_weights],
+        "selected_fourier_leakage": _pair(leakage),
+        "sharp_lower_bound": _pair(lower_bound),
+        "is_unique_uniform_equality_case": is_uniform,
+    }
+
+
 def build_report() -> dict[str, object]:
     """Build the bounded exact report used by the focused tests."""
 
@@ -172,6 +201,12 @@ def build_report() -> dict[str, object]:
         "theorems": {
             "leverage_in_u": "L(u)=(1+u)^2/(A+B*u)",
             "selected_mass": "sum_{r=1}^{k-1}|gamma_r|^2=u=k/t-1",
+            "arbitrary_weight_leakage": (
+                "sum_{r!=0}|what(r)|^2=(1/k)sum_s|w_s|^2-1>=k/t-1"
+            ),
+            "simultaneous_optimizer": (
+                "w_s=k/t uniquely minimizes restricted Gram energy and Fourier leakage"
+            ),
             "continuous_optimum": "u_star=1-2*A/B; L_star=4*(B-A)/B^2",
             "pareto_interval": "0<=u<=u_star when B>2*A",
             "strict_improvement_interval": "0<u<(B-2*A)/A",
@@ -183,6 +218,12 @@ def build_report() -> dict[str, object]:
             "13_37": panel_frontier((13, 37)),
         },
         "design_points": rows,
+        "weight_controls": {
+            "ternary_uniform": quotient_weight_leakage(
+                3, (Fraction(3, 2), Fraction(3, 2))
+            ),
+            "ternary_nonuniform": quotient_weight_leakage(3, (1, 2)),
+        },
         "resource_contract": {
             "prime_panels": 2,
             "design_rows": len(rows),
@@ -250,6 +291,7 @@ def run_checks() -> dict[str, object]:
     for marker in (
         "L(u)",
         "selected squared amplitude",
+        "simultaneous optimizer",
         "Fourier-label complexity",
         "individualize",
         "RH or GRH",
