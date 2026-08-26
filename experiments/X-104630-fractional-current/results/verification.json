@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "base_proportion_lower": "900299/1000000",
+    "cdf_fixtures": [
+      {
+        "u": "5/7",
+        "y": "1/100"
+      },
+      {
+        "u": "5/9",
+        "y": "1/50"
+      },
+      {
+        "u": "5/11",
+        "y": "3/100"
+      }
+    ],
+    "delta0": "3283/4914240",
+    "exp_delta_upper": "1001/1000",
+    "kappa0": "20476/2345",
+    "shallow_upper": "21701/1000000",
+    "tail_per_zero_upper": "17/50000",
+    "total_charge_upper": "96701/1000000"
+  },
+  "proof_object_sha256": "2e68af3c6a5bc060d0a24020e509f476d65b126b227c05de216083e317c85f22",
+  "schema": "riemann.t104630.fractional_current.v1",
+  "scope": {
+    "fifth_current_maxwell_sandwich_proved_exact": true,
+    "fractional_calderon_resolution_proved_exact": true,
+    "fractrans104630_proved": false,
+    "ninety_percent_established": false,
+    "rational_90_percent_ledger_proved_exact": true,
+    "rh_established": false
+  },
+  "verdict": "PASS_T104630_FRACTIONAL_CURRENT_ALGEBRA"
+}
