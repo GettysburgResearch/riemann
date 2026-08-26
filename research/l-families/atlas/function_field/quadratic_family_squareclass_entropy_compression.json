@@ -1,0 +1,111 @@
+{
+  "claim_boundary": {
+    "external_novelty": false,
+    "individual_L_function_zero": false,
+    "integer_rh_or_grh": false,
+    "number_field_transfer": false,
+    "unconditional_mesoscopic_depth": false
+  },
+  "finite_gate": {
+    "Q_squared": "3",
+    "T": 8,
+    "Z": 6,
+    "beta": "1/4",
+    "cube_size": 8,
+    "normalized_zero": "3/4",
+    "parseval_Q_squared": "3",
+    "squared_gate_holds": true
+  },
+  "open_gate": {
+    "conditional_orbit_entropy": "R_r=product_e(I_q(e)+1)",
+    "conditional_scale": "for fixed eps>0, r<(sqrt(2)-eps)*sqrt(M)",
+    "name": "KRAWLS",
+    "proved": false
+  },
+  "orbit_ledgers": [
+    {
+      "K": 5,
+      "binomial_identity_holds": true,
+      "degree_sizes": [
+        2,
+        3
+      ],
+      "orbit_coordinates": 12,
+      "squareclass_characters": 32,
+      "sum_orbit_multiplicities": 32
+    },
+    {
+      "K": 7,
+      "binomial_identity_holds": true,
+      "degree_sizes": [
+        3,
+        4
+      ],
+      "orbit_coordinates": 20,
+      "squareclass_characters": 128,
+      "sum_orbit_multiplicities": 128
+    }
+  ],
+  "resource_caps": {
+    "characters_enumerated": 0,
+    "conductors_enumerated": 0,
+    "irreducibles_enumerated": 0,
+    "maximum_finite_cube_size": 8,
+    "maximum_irreducible_degree": 7,
+    "maximum_orbit_variables": 7,
+    "polynomials_enumerated": 0,
+    "zeros_enumerated": 0
+  },
+  "schema": "quadratic_family_squareclass_entropy_compression.v1",
+  "source_commit": "c6d68eaaf3d55e9a9deffcb6e08f3cb5fcdfb7e9",
+  "strict_compression_controls": [
+    {
+      "K_r": 508,
+      "M": 1001,
+      "d": 247,
+      "ell_r": 3225,
+      "explicit_gate_safe": true,
+      "full_residue_wall_crossed": true,
+      "h": 250,
+      "j": 3,
+      "q": 3,
+      "r": 7,
+      "squareclass_half_wall_safe": true
+    },
+    {
+      "K_r": 829,
+      "M": 1201,
+      "d": 298,
+      "ell_r": 3865,
+      "explicit_gate_safe": true,
+      "full_residue_wall_crossed": true,
+      "h": 300,
+      "j": 2,
+      "q": 5,
+      "r": 5,
+      "squareclass_half_wall_safe": true
+    },
+    {
+      "K_r": 285,
+      "M": 401,
+      "d": 99,
+      "ell_r": 801,
+      "explicit_gate_safe": true,
+      "full_residue_wall_crossed": true,
+      "h": 100,
+      "j": 1,
+      "q": 9,
+      "r": 3,
+      "squareclass_half_wall_safe": true
+    }
+  ],
+  "theorems": {
+    "constituent_triangle_bound_recovers_2^K_r": true,
+    "depth_extension": "log_q(M)+log_q(log(M))+O_q(1)",
+    "discrepancy_constant": 614400,
+    "full_unit_characters_replaced_by_quadratic_squareclasses": true,
+    "half_squareclass_wall_implies_gate_asymptotically": true,
+    "krawtchouk_projection_exact": true,
+    "squareclass_fourier_support_size": "2^K_r"
+  }
+}
