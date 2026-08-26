@@ -59,8 +59,10 @@ def rank_budget(blocks: int, place_degree: int) -> dict[str, object]:
         "total_selected_energy_rank": total_square,
         "average_selected_energy_rank": str(Fraction(total_square, mode_count)),
         "asymptotic_average_selected_energy_rank": (
-            f"{place_degree**2}*r^2{place_degree**2 - 4 * place_degree:+d}*r+4+O(2^-r)"
+            f"{place_degree**2}*r^2{place_degree**2 - 4 * place_degree:+d}*r+4"
+            "+O_e(r^2*2^-r)"
         ),
+        "exact_asymptotic_remainder": ("(e^2*r*(r+1)-4*e*r)/(2^r-1)"),
     }
 
 

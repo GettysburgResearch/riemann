@@ -42,10 +42,10 @@ and
 Thus
 
 \[
- \overline b\sim er-2,
- \qquad
- \overline{b^2}
- =e^2r^2+(e^2-4e)r+4+O(2^{-r}).
+\overline b\sim er-2,
+\qquad
+\overline{b^2}
+=e^2r^2+(e^2-4e)r+4+O_e(r^2 2^{-r}).
 \tag{0.4}
 \]
 
@@ -63,8 +63,9 @@ Suppose a selected trace has the cohomological form
 \]
 
 with `V_chi` pure of weight one after the usual compact-support conventions.
-Then `|H_chi|^2` is represented, after choosing the matching dual/conjugate
-realization, on
+After choosing a complex embedding, the conjugate trace is realized by the
+dual Kummer companion (with the usual weight normalization).  Thus
+`|H_chi|^2` is represented on the ambient tensor
 
 \[
  V_\chi\otimes\overline{V_\chi},
@@ -93,6 +94,11 @@ not `q^(1/2)*overline b`.  The exact Artin--Schreier/Kummer weight-barrier
 packet shows that this weight-two scale can be attained even when every
 selected line is nonconstant and the off-coset kernel is atom-free.
 
+Here `b_chi^2` is the exact dimension of this ambient tensor realization and
+the sharp separate-bound budget.  It is not asserted to be a minimal
+irreducible rank: the tensor may decompose, and a joint signed sum may cancel
+some of its constituents.
+
 ## 2. Exact derivation
 
 Use the binomial identities
@@ -107,14 +113,31 @@ Then
 
 \[
  \begin{aligned}
- \sum_{S\ne\varnothing}b_S^2
- &=\sum_{k=1}^r{r\choose k}(2ek-2)^2\\
- &=2^r\big(e^2r(r+1)-4er+4\big)-4,
- \end{aligned}
+\sum_{S\ne\varnothing}b_S^2
+&=\sum_{k=1}^r{r\choose k}(2ek-2)^2\\
+&=2^r\big(e^2r(r+1)-4er+4\big)-4,
+\end{aligned}
 \]
 
 which proves (0.3).  The subtraction of four is the omitted empty subset,
 whose formal value `(2e*0-2)^2` would be four.
+
+More precisely, if
+
+\[
+ A_r=e^2r^2+(e^2-4e)r+4,
+\]
+
+then
+
+\[
+ \overline{b^2}
+ =A_r+{e^2r(r+1)-4er\over2^r-1}.
+\tag{2.1}
+\]
+
+This gives the corrected remainder `O_e(r^2 2^-r)` in (0.4).  Writing
+`O(2^-r)` without the polynomial factor would not be uniform in `r`.
 
 ## 3. What remains genuinely promising
 
