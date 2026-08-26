@@ -89,10 +89,13 @@ It has conductor `(T-a)(T-b)(T-c)` and is odd at infinity. Its degree-two
 Dirichlet `L`-polynomial is the numerator of the displayed elliptic curve:
 
 \[
- L(u,\psi_{a,b,c})=1-tu+qu^2.
+L(u,\psi_{a,b,c})=1-tu+qu^2.
 \tag{4}
 \]
 
+Here `(a-z)(b-z)(c-z)=-\prod_{x\in\{a,b,c\}}(z-x)` is the
+quadratic-reciprocity twist convention relating the evaluation character to
+the displayed curve; it is not an interchangeable choice of cubic model.
 The sign convention in (4) is fixed directly by the degree-one coefficient:
 
 \[
