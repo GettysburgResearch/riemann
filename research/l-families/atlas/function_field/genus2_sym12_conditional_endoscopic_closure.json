@@ -1,0 +1,614 @@
+{
+  "BFG_endoscopic_specialization": {
+    "BFG_status": "CONJECTURAL_IN_BFG_2008",
+    "S5_invariant_inside_parentheses": "f_plus+2*f_minus",
+    "expanded_endoscopy": "-L*(f_plus+2*f_minus)",
+    "later_theorem_support": "Roesner Theorem 5.13 and Shmakov Theorem 4.6.4 support the semisimplified inner/endoscopic mechanism for nonregular weights",
+    "parameters": {
+      "k": 16,
+      "k_prime": 14,
+      "l": 12,
+      "m": 0
+    },
+    "projected_channels": {
+      "S14_Gamma0(2)_new": {
+        "motive": "f_plus+f_minus",
+        "projected_multiplicity": 1,
+        "term_rows": [
+          {
+            "S5_invariant_multiplicity": 0,
+            "coefficient_after_k16_specialization": 2,
+            "partition": "[3,2,1]",
+            "projected_coefficient": 0
+          },
+          {
+            "S5_invariant_multiplicity": 0,
+            "coefficient_after_k16_specialization": "irrelevant_tau_coefficient",
+            "partition": "[4,1,1]",
+            "projected_coefficient": 0
+          },
+          {
+            "S5_invariant_multiplicity": 0,
+            "coefficient_after_k16_specialization": 1,
+            "partition": "[4,2]",
+            "projected_coefficient": 0
+          },
+          {
+            "S5_invariant_multiplicity": 1,
+            "coefficient_after_k16_specialization": 1,
+            "partition": "[5,1]",
+            "projected_coefficient": 1
+          }
+        ]
+      },
+      "S14_Gamma0(2)_new_minus": {
+        "motive": "f_minus",
+        "projected_multiplicity": 1,
+        "term_rows": [
+          {
+            "S5_invariant_multiplicity": 0,
+            "coefficient_after_k16_specialization": 0,
+            "partition": "[4,2]",
+            "projected_coefficient": 0
+          },
+          {
+            "S5_invariant_multiplicity": 1,
+            "coefficient_after_k16_specialization": 1,
+            "partition": "[5,1]",
+            "projected_coefficient": 1
+          }
+        ]
+      },
+      "S14_Gamma0(2)_new_plus": {
+        "motive": "f_plus",
+        "projected_multiplicity": 0,
+        "term_rows": [
+          {
+            "S5_invariant_multiplicity": 0,
+            "coefficient_after_k16_specialization": 1,
+            "partition": "[4,2]",
+            "projected_coefficient": 0
+          },
+          {
+            "S5_invariant_multiplicity": 1,
+            "coefficient_after_k16_specialization": 0,
+            "partition": "[5,1]",
+            "projected_coefficient": 0
+          }
+        ]
+      },
+      "S14_Gamma0(4)_new": {
+        "projected_multiplicity": 0,
+        "result": "0 by S6-to-S5 branching",
+        "term_rows": [
+          {
+            "S5_invariant_multiplicity": 0,
+            "coefficient_after_k16_specialization": "irrelevant_tau_coefficient",
+            "partition": "[3,1,1,1]",
+            "projected_coefficient": 0
+          },
+          {
+            "S5_invariant_multiplicity": 0,
+            "coefficient_after_k16_specialization": 1,
+            "partition": "[3,3]",
+            "projected_coefficient": 0
+          },
+          {
+            "S5_invariant_multiplicity": 0,
+            "coefficient_after_k16_specialization": 2,
+            "partition": "[4,1,1]",
+            "projected_coefficient": 0
+          }
+        ]
+      },
+      "S14_SL2Z": {
+        "dimension": 0,
+        "result": "0 independently of its S6 coefficient ledger"
+      }
+    },
+    "source_formula": "BFG_2008_Conjecture_8.1",
+    "tau_specialization": {
+      "tau_(1,16)": 1,
+      "tau_(2,16)": 1,
+      "tau_16_minus": 0,
+      "tau_16_plus": 1
+    }
+  },
+  "S6_to_S5_branching": {
+    "invariant_multiplicity": 1,
+    "partitions_with_invariants": [
+      "[6]",
+      "[5,1]"
+    ],
+    "rows": [
+      {
+        "S5_invariant_multiplicity": 1,
+        "S5_shapes_after_removing_one_corner": [
+          "[5]"
+        ],
+        "S6_partition": "[6]"
+      },
+      {
+        "S5_invariant_multiplicity": 1,
+        "S5_shapes_after_removing_one_corner": [
+          "[4,1]",
+          "[5]"
+        ],
+        "S6_partition": "[5,1]"
+      },
+      {
+        "S5_invariant_multiplicity": 0,
+        "S5_shapes_after_removing_one_corner": [
+          "[3,2]",
+          "[4,1]"
+        ],
+        "S6_partition": "[4,2]"
+      },
+      {
+        "S5_invariant_multiplicity": 0,
+        "S5_shapes_after_removing_one_corner": [
+          "[3,1,1]",
+          "[4,1]"
+        ],
+        "S6_partition": "[4,1,1]"
+      },
+      {
+        "S5_invariant_multiplicity": 0,
+        "S5_shapes_after_removing_one_corner": [
+          "[3,2]"
+        ],
+        "S6_partition": "[3,3]"
+      },
+      {
+        "S5_invariant_multiplicity": 0,
+        "S5_shapes_after_removing_one_corner": [
+          "[2,2,1]",
+          "[3,1,1]",
+          "[3,2]"
+        ],
+        "S6_partition": "[3,2,1]"
+      },
+      {
+        "S5_invariant_multiplicity": 0,
+        "S5_shapes_after_removing_one_corner": [
+          "[2,1,1,1]",
+          "[3,1,1]"
+        ],
+        "S6_partition": "[3,1,1,1]"
+      },
+      {
+        "S5_invariant_multiplicity": 0,
+        "S5_shapes_after_removing_one_corner": [
+          "[2,2,1]"
+        ],
+        "S6_partition": "[2,2,2]"
+      },
+      {
+        "S5_invariant_multiplicity": 0,
+        "S5_shapes_after_removing_one_corner": [
+          "[2,1,1,1]",
+          "[2,2,1]"
+        ],
+        "S6_partition": "[2,2,1,1]"
+      },
+      {
+        "S5_invariant_multiplicity": 0,
+        "S5_shapes_after_removing_one_corner": [
+          "[1,1,1,1,1]",
+          "[2,1,1,1]"
+        ],
+        "S6_partition": "[2,1,1,1,1]"
+      },
+      {
+        "S5_invariant_multiplicity": 0,
+        "S5_shapes_after_removing_one_corner": [
+          "[1,1,1,1,1]"
+        ],
+        "S6_partition": "[1,1,1,1,1,1]"
+      }
+    ],
+    "rule": "Res^(S6)_(S5) s[lambda] is the sum over partitions obtained by removing one corner; S5 invariants are copies of s[5]",
+    "status": "EXACT_STANDARD_BRANCHING_RULE_REPLAY"
+  },
+  "conditional_statement": {
+    "exact_conclusion": "Under exactly those premises, the project ambient formula equals the conditional cohomological target if and only if Hhat_12=-L*f_minus.",
+    "master_reduction": "Hhat_12=-L*f_minus+Epsilon_Eis-Genuine, where Epsilon_Eis=e_Eis-(2-5*L) and the stable/general Euler contribution is -Genuine",
+    "premises": [
+      "Use the semisimplified inner/endoscopic specialization -L*(f_plus+2*f_minus).",
+      "Adopt the conjectural nonregular compact-support Eisenstein continuation 2-5*L.",
+      "Adopt the conditionally supported vanishing Genuine=S_(12,3)(Gamma_2(w^1))=0."
+    ],
+    "unconditional_conclusion": "NONE",
+    "unresolved_premises": [
+      "Epsilon_Eis=0 (the BFG nonregular Eisenstein continuation).",
+      "Genuine=0 (stable/general S5-invariant vanishing)."
+    ]
+  },
+  "exact_internal_algebra": {
+    "basis": [
+      "one",
+      "L",
+      "L_f_plus",
+      "L_f_minus",
+      "Hhat_12",
+      "Epsilon_Eis",
+      "Genuine"
+    ],
+    "conditional_target_with_stable_vanishing": {
+      "equality_iff": "Hhat_12=-L*f_minus",
+      "formula": "2-5*L-L*(f_plus+2*f_minus)",
+      "project_minus_target": {
+        "Hhat_12": 1,
+        "L_f_minus": 1
+      },
+      "status": "EXACT_IFF_INSIDE_THE_STATED_CONDITIONAL_PREMISES",
+      "vector": {
+        "L": -5,
+        "L_f_minus": -2,
+        "L_f_plus": -1,
+        "one": 2
+      }
+    },
+    "interpretation": "free trace-channel module; this algebra does not assert a motivic isomorphism",
+    "master_target_before_specializing_the_two_open_channels": {
+      "definitions": {
+        "Epsilon_Eis": "e_Eis-(2-5*L)",
+        "Genuine": "positive stable/general S5-invariant channel whose e_c contribution is -Genuine"
+      },
+      "equality_iff": "Hhat_12=-L*f_minus+Epsilon_Eis-Genuine",
+      "formula": "2-5*L+Epsilon_Eis-L*(f_plus+2*f_minus)-Genuine",
+      "project_minus_target": {
+        "Epsilon_Eis": -1,
+        "Genuine": 1,
+        "Hhat_12": 1,
+        "L_f_minus": 1
+      },
+      "vector": {
+        "Epsilon_Eis": 1,
+        "Genuine": -1,
+        "L": -5,
+        "L_f_minus": -2,
+        "L_f_plus": -1,
+        "one": 2
+      }
+    },
+    "one_Tate_discrepancy_effect": {
+      "if_Eisenstein_is_2_minus_4L_and_Genuine_is_zero": {
+        "equality_iff": "Hhat_12=L-L*f_minus",
+        "project_minus_target": {
+          "Hhat_12": 1,
+          "L": -1,
+          "L_f_minus": 1
+        },
+        "target": {
+          "L": -4,
+          "L_f_minus": -2,
+          "L_f_plus": -1,
+          "one": 2
+        }
+      },
+      "if_Eisenstein_is_2_minus_4L_before_stable_vanishing": {
+        "equality_iff": "Hhat_12=L-L*f_minus-Genuine",
+        "project_minus_target": {
+          "Genuine": 1,
+          "Hhat_12": 1,
+          "L": -1,
+          "L_f_minus": 1
+        },
+        "target": {
+          "Genuine": -1,
+          "L": -4,
+          "L_f_minus": -2,
+          "L_f_plus": -1,
+          "one": 2
+        }
+      },
+      "meaning": "the unresolved Eisenstein discrepancy changes the closure relation; it cannot be ignored"
+    },
+    "project_ambient": {
+      "formula": "Hhat_12+2-5*L-L*(f_plus+f_minus)",
+      "vector": {
+        "Hhat_12": 1,
+        "L": -5,
+        "L_f_minus": -1,
+        "L_f_plus": -1,
+        "one": 2
+      }
+    }
+  },
+  "finite_scout_corroboration": {
+    "firewall": "three primes do not prove an all-q or prime-power identity and do not resolve the nonregular Eisenstein or stable-space premises",
+    "one_Tate_check": "with Genuine=0, the 2-4*L branch requires Hhat_12=L-L*f_minus and therefore misses each stored row by +p; without that vanishing, the same rows instead require Tr(F_p,Genuine)=p",
+    "role": "CORROBORATION_ONLY_NOT_A_PREMISE_AND_NOT_INTERPOLATION",
+    "rows": [
+      {
+        "BFG_match": true,
+        "BFG_required_Hhat": -3708,
+        "Hhat_12": -3708,
+        "Shmakov_2_minus_4L_required_Hhat_if_Genuine_zero": -3705,
+        "Shmakov_required_Genuine_trace_to_match_observed": 3,
+        "Shmakov_required_minus_observed": 3,
+        "a_p(f_minus)": 1236,
+        "match": true,
+        "p": 3
+      },
+      {
+        "BFG_match": true,
+        "BFG_required_Hhat": 287250,
+        "Hhat_12": 287250,
+        "Shmakov_2_minus_4L_required_Hhat_if_Genuine_zero": 287255,
+        "Shmakov_required_Genuine_trace_to_match_observed": 5,
+        "Shmakov_required_minus_observed": 5,
+        "a_p(f_minus)": -57450,
+        "match": true,
+        "p": 5
+      },
+      {
+        "BFG_match": true,
+        "BFG_required_Hhat": -449624,
+        "Hhat_12": -449624,
+        "Shmakov_2_minus_4L_required_Hhat_if_Genuine_zero": -449617,
+        "Shmakov_required_Genuine_trace_to_match_observed": 7,
+        "Shmakov_required_minus_observed": 7,
+        "a_p(f_minus)": 64232,
+        "match": true,
+        "p": 7
+      }
+    ]
+  },
+  "firewalls": [
+    "CONDITIONAL-REDUCTION FIREWALL: the iff is exact only after all three displayed premises are assumed; it is not an all-q theorem.",
+    "NONREGULAR FIREWALL: BFG proves the Eisenstein formula in the regular range and only expects the m=0 continuation used here.",
+    "ONE-TATE FIREWALL: Shmakov's printed 2-4*L specialization differs from BFG's formal 2-5*L by one Tate term and changes the master relation to Hhat_12=L-L*f_minus-Genuine; only after Genuine=0 does this become Hhat_12=L-L*f_minus.",
+    "AMBIENT-NORMALIZATION FIREWALL: the project and both cited specializations use the same ambient A_2(w^1)=A_2[2]/S5; no open/ambient correction resolving the discrepancy has been identified.",
+    "STABLE-SPACE FIREWALL: Roesner and Shmakov do not evaluate the stable/general term; official data vanishing uses a conditional k=3 decomposition.",
+    "DIMENSION FIREWALL: total dimension 30 does not imply absence of S5 invariants without the isotypical decomposition.",
+    "2026-STRUCTURAL FIREWALL: the unconditional covariant/valuation description confirms A2[w]=A2[2]/S5 but does not compute the (12,3) S5-isotypic dimension.",
+    "FINITE-SCOUT FIREWALL: p=3,5,7 corroborate Hhat_12(p)=-p*a_p(f_minus) but do not prove any fourth q or prime-power row.",
+    "No motivic isomorphism, compatible system, novelty, RH, GRH, number-field transfer, or global Euler-product claim is made.",
+    "The producer performs no runtime web/database call and no field, polynomial, curve, or family enumeration."
+  ],
+  "literature_ledger": [
+    {
+      "source": "Bergstrom--Faber--van der Geer 2008",
+      "url": "https://arxiv.org/abs/0803.0917",
+      "use": "Conjecture 8.1 endoscopy and explicitly expected, not proved, nonregular Eisenstein continuation"
+    },
+    {
+      "source": "Roesner dissertation, Theorem 5.13, pp. 97-98",
+      "url": "https://sites.math.unt.edu/~schmidt/dimension_formulas/papers/2016_Dissertation_Roesner_final.pdf",
+      "use": "semisimplified inner/endoscopic theorem support"
+    },
+    {
+      "source": "Shmakov dissertation, Theorem 4.6.4, p. 366",
+      "url": "https://openscholar.uga.edu/nanna/record/1979/files/dissertation.pdf",
+      "use": "inner/endoscopic theorem support; later printed Eisenstein formulas also expose the unresolved 2-4*L versus 2-5*L discrepancy"
+    },
+    {
+      "source": "Bergstrom--Clery, arXiv:2309.04388v2",
+      "url": "https://arxiv.org/abs/2309.04388",
+      "use": "Theorem 5.3 regular range and Remark 5.4 conditional k=3 extension"
+    },
+    {
+      "source": "Clery--van der Geer, arXiv:2605.13300",
+      "url": "https://arxiv.org/abs/2605.13300",
+      "use": "unconditional structural identification A2[w]=A2[2]/S5; no (j,k)=(12,3) S5-isotypic dimension"
+    }
+  ],
+  "nonregular_Eisenstein_specialization": {
+    "BFG_status": "CONJECTURAL_NONREGULAR_CONTINUATION; BFG proves the displayed Eisenstein formula only in the regular range",
+    "dimensions": {
+      "dim_S14_Gamma0(2)": 2,
+      "dim_S14_SL2Z": 0,
+      "dim_S16_Gamma0(2)": 3
+    },
+    "even_tail": "2*(S[2]+1)=-2*L",
+    "formal_result": "2-5*L",
+    "formula_specialized": "dim S14(Gamma0(2))-dim S16(Gamma0(2))*L+2*(S[2]+1)",
+    "later_source_discrepancy": {
+      "Shmakov_Borel": "-2*L",
+      "Shmakov_Klingen": "0",
+      "Shmakov_Siegel_Eisenstein": "2-2*L",
+      "Shmakov_printed_specialization": "2-4*L",
+      "connecting_and_Galois_caveat": "connecting assumptions do not change Euler characteristic; a Galois-action caveat remains",
+      "difference_BFG_minus_Shmakov": "-L",
+      "missing_channel": "one [5,1] tensor L copy tied to the unique Fricke-positive weight-16 level-2 newform",
+      "normalization_check": "the project and both cited specializations concern the same ambient A_2(w^1)=A_2[2]/S5; no open/ambient reconciliation is identified",
+      "outer_automorphism_excluded": "Roesner constructs the natural S6 action from six Weierstrass points",
+      "status": "UNRESOLVED_ONE_TATE_DISCREPANCY"
+    },
+    "nonregular_convention": "S[2]=-L-1"
+  },
+  "packet_manifest": [
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_SYM12_CONDITIONAL_ENDOSCOPIC_CLOSURE.md",
+      "sha256_lf_normalized": "3c63522afeac11fee32405a6e925a7e0f283623eec7d5cecfdf3d6eb324fa7fd"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus2_sym12_conditional_endoscopic_closure.py",
+      "sha256_lf_normalized": "e64c35db45d5f58f801f67dd5910bfbc0f9930273e09af09f52f08b85155cd94"
+    },
+    {
+      "path": "tests/test_genus2_sym12_conditional_endoscopic_closure.py",
+      "sha256_lf_normalized": "c7bc8765df1fe7a455c54bf547f763f19e9fd4845f280d9fd731fd49c81502e2"
+    }
+  ],
+  "payload_sha256": "0b13df2156cc35cc25db87a6d9e3d0f3bbee415afc67942d4474c58477527a57",
+  "prime_power_trace_convention": "For q=p^r, -L*f_minus means -p^r*(alpha_{-,p}^r+beta_{-,p}^r) at the level of Frobenius-root power sums, not -p^r times a naive composite-index Fourier coefficient. Epsilon_Eis and Genuine are likewise evaluated by Tr(F_p^r,-).",
+  "resource_contract": {
+    "arithmetic": "exact finite integer and free-module algebra",
+    "branching_partitions": {
+      "actual": 11,
+      "maximum": 11
+    },
+    "branching_row_tests": {
+      "actual": 35,
+      "maximum": 35
+    },
+    "endoscopic_projection_terms": {
+      "actual": 11,
+      "maximum": 11
+    },
+    "field_polynomial_curve_enumeration": "FORBIDDEN_AND_NOT_PERFORMED",
+    "finite_corroboration_rows": {
+      "actual": 3,
+      "maximum": 3
+    },
+    "hook_boxes": {
+      "actual": 30,
+      "maximum": 30
+    },
+    "maximum_output_bytes": 32768,
+    "maximum_wall_seconds": 4.0,
+    "numeric_fitting": "NONE",
+    "removable_corners": {
+      "actual": 19,
+      "maximum": 19
+    },
+    "runtime_web_or_database_calls": "FORBIDDEN_AND_NOT_PERFORMED",
+    "source_bytes": {
+      "actual_total": 150269,
+      "maximum_each": 45000,
+      "maximum_total": 160000
+    },
+    "source_files": {
+      "actual": 8,
+      "maximum": 8
+    },
+    "symbolic_component_operations": {
+      "actual": 70,
+      "maximum": 70
+    }
+  },
+  "schema": "riemann.function_field.genus2_sym12_conditional_endoscopic_closure.v1",
+  "source_grade_ledger": [
+    {
+      "claim": "S6-to-S5 invariant branching and formal channel algebra",
+      "grade": "EXACT_INTERNAL"
+    },
+    {
+      "boundary": "this does not prove the nonregular compact-support Eisenstein term",
+      "claim": "semisimplified inner/endoscopic mechanism",
+      "grade": "THEOREM_SUPPORTED_BY_ROESNER_AND_SHMAKOV"
+    },
+    {
+      "claim": "BFG specialization of Conjecture 8.1",
+      "grade": "CONJECTURAL_IN_BFG_BUT_ENDOSCOPICALLY_THEOREM_SUPPORTED"
+    },
+    {
+      "claim": "nonregular Eisenstein value 2-5*L",
+      "grade": "CONJECTURAL_CONTINUATION_WITH_UNRESOLVED_ONE_TATE_DISCREPANCY"
+    },
+    {
+      "claim": "S_(12,3)(Gamma_2(w^1)) S5-invariant vanishing",
+      "grade": "CONDITIONAL_FORMULA_AND_OFFICIAL_DATA_EVIDENCE"
+    },
+    {
+      "claim": "Hhat_12=-L*f_minus+Epsilon_Eis-Genuine",
+      "grade": "EXACT_MASTER_REDUCTION_GIVEN_THE_THEOREM_SUPPORTED_ENDOSCOPIC_CHANNEL"
+    },
+    {
+      "claim": "Hhat_12=-L*f_minus",
+      "grade": "EXACT_IFF_UNDER_ALL_LISTED_PREMISES_ONLY"
+    }
+  ],
+  "source_manifest": [
+    {
+      "bytes_read": 39097,
+      "commit": "70dd4a130e702a2d6df4b0fb96a0182a560009a4",
+      "git_blob": "b48963d7b9bc6459046024507a2f2cb8ccbbcd40",
+      "id": "sym12_inventory",
+      "path": "research/l-families/atlas/function_field/genus2_sym12_arithmetic_inventory.json",
+      "payload_sha256": "557ab6465a16bb6080caa2a249c3d0935f8d36fb49bdf54898a0fe72b372496f",
+      "role": "exact project ambient formula with one scalar Hhat_12",
+      "schema": "riemann.function_field.genus2_sym12_arithmetic_inventory.v1",
+      "sha256_lf_normalized": "e966b54fe909570eaac7d9253f635c8067c5f874ed47c9daf485c8fd88bfbd85",
+      "transitive_packet_files": [
+        {
+          "bytes_read": 9963,
+          "path": "research/l-families/atlas/function_field/GENUS2_SYM12_ARITHMETIC_INVENTORY.md",
+          "sha256_lf_normalized": "cc97d2becf4cf45fafd3b9c0130cf4423836634d4074bab7e172f5e4f77274a1"
+        },
+        {
+          "bytes_read": 39040,
+          "path": "research/l-families/atlas/function_field/genus2_sym12_arithmetic_inventory.py",
+          "sha256_lf_normalized": "0901a4252663efab672f4d33b6d3584b5e8c8a3915d564e4097c8fa4343e4b6f"
+        },
+        {
+          "bytes_read": 5204,
+          "path": "tests/test_genus2_sym12_arithmetic_inventory.py",
+          "sha256_lf_normalized": "648b313603a6ed9c58c1b623e15f204d17c3b04a04c1bb0ec9ec9225703b3bd3"
+        }
+      ]
+    },
+    {
+      "bytes_read": 10724,
+      "commit": "0e89f3ae989c0ef81f9f0fcfd359116d57f83f32",
+      "git_blob": "4741ef79f8dd84634680df612cdd8b1d93d3e8bf",
+      "id": "sym12_finite_scout",
+      "path": "research/l-families/atlas/function_field/genus2_sym12_finite_cusp_trace_scout.json",
+      "payload_sha256": "3572d443f7f5371771a0123b1ebcb1c08e010f02a65c3413d935216b1fcd3168",
+      "role": "finite q=3,5,7 corroboration and explicit Fricke-negative f_minus",
+      "schema": "riemann.function_field.genus2_sym12_finite_cusp_trace_scout.v1",
+      "sha256_lf_normalized": "8827b08f86fa0bd3a77698f250f9d40aea193a39b5c80e180f9a1f3acbac6ff9",
+      "transitive_packet_files": [
+        {
+          "bytes_read": 6745,
+          "path": "research/l-families/atlas/function_field/GENUS2_SYM12_FINITE_CUSP_TRACE_SCOUT.md",
+          "sha256_lf_normalized": "b3557ce0c6a8321fb3552306249038674530b74fa65856be988d704bd69c59e3"
+        },
+        {
+          "bytes_read": 29420,
+          "path": "research/l-families/atlas/function_field/genus2_sym12_finite_cusp_trace_scout.py",
+          "sha256_lf_normalized": "ceeb103d6da8a334bd282c3f5bf86f68f6eae8d1b2d98723124bcfa548b4cdb2"
+        },
+        {
+          "bytes_read": 10076,
+          "path": "tests/test_genus2_sym12_finite_cusp_trace_scout.py",
+          "sha256_lf_normalized": "d8a6f43bc11332702fa1fb3873926262af3a7d9b423974035e8bbfc9612b2de5"
+        }
+      ]
+    }
+  ],
+  "stable_invariant_vanishing_evidence": {
+    "S5_invariant_dimension_from_these_rows": 0,
+    "dimension_firewall": "the theorem-level total dimension 30 alone does not imply S5-invariant vanishing",
+    "latest_structural_source": "Clery--van der Geer arXiv:2605.13300 unconditionally identifies A2[w]=A2[2]/S5 and gives a covariant/valuation characterization, but does not compute the (j,k)=(12,3) S5-isotypic dimension",
+    "negative_source_result": "Roesner and Shmakov do not evaluate the stable/general term at this weight",
+    "official_data_endpoint": "https://smf.compositio.nl/api/Entries/2/2?j=12&k=3&l=0",
+    "official_data_isotypical_rows": [
+      {
+        "S5_invariant_multiplicity": 0,
+        "S6_partition": "[3,1,1,1]",
+        "Specht_dimension": 10
+      },
+      {
+        "S5_invariant_multiplicity": 0,
+        "S6_partition": "[2,2,2]",
+        "Specht_dimension": 5
+      },
+      {
+        "S5_invariant_multiplicity": 0,
+        "S6_partition": "[2,2,1,1]",
+        "Specht_dimension": 9
+      },
+      {
+        "S5_invariant_multiplicity": 0,
+        "S6_partition": "[2,1,1,1,1]",
+        "Specht_dimension": 5
+      },
+      {
+        "S5_invariant_multiplicity": 0,
+        "S6_partition": "[1,1,1,1,1,1]",
+        "Specht_dimension": 1
+      }
+    ],
+    "project_notation": "S_(12,3)(Gamma_2(w^1))",
+    "runtime_access": "NONE; rows are a frozen source-audit transcription",
+    "source_grade": "CONDITIONAL_FORMULA_AND_DATABASE_EVIDENCE_NOT_UNCONDITIONAL_THEOREM",
+    "source_notation_warning": "some sources print S_(3,12)(Gamma[2]); the official query uses j=12,k=3",
+    "total_dimension_checksum": 30,
+    "why_conditional": "Bergstrom--Clery Theorem 5.3 covers k>=4; Remark 5.4 extends to k=3,j>0 only assuming the BFG nonregular Eisenstein conjecture"
+  },
+  "status": "EXACT_CONDITIONAL_REDUCTION_NOT_AN_ALL_Q_THEOREM"
+}
