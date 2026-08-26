@@ -203,10 +203,49 @@ so a necessary condition for a zero is
  m_h\equiv0\pmod2.
  \tag{4.5}
 
-Whether this second boundary has a positive `1/M` contribution is now the
-first genuine density problem.  It requires the joint distribution of
-`D_3,D_1` across constrained large-factor profiles, not merely the trace-zero
-distribution of `D_1`.
+The second boundary cannot by itself contribute another `1/M` term.  More
+generally, fix any depth `j>=0` and put
+
+\[
+ d=h-j.
+ \tag{4.6}
+\]
+
+For fixed `j` and sufficiently large `n`, the number `B_(q,n,j)` of monic
+squarefree degree-`M` conductors with minimum factor degree exactly `d`
+satisfies
+
+\[
+ \boxed{B_{q,n,j}=O_j\!\left({q^M\over M^2}\right),}
+ \tag{4.7}
+
+uniformly over odd prime powers `q`.  Indeed, mark one degree-`d` factor.
+There are at most `q^d/d` choices.  The complementary degree
+
+\[
+ N=M-d=3d+O_j(1)
+\]
+
+has all factor degrees at least `d`.  It has at most three factors once `n`
+is large.  Its one-factor contribution is `O(q^N/N)`; its two-factor
+contribution is
+
+\[
+ O\!\left(
+ q^N\sum_{a=d}^{N-d}{1\over a(N-a)}
+ \right)=O(q^N/N);
+\]
+
+and only `O_j(1)` three-factor degree profiles are possible, contributing
+`O_j(q^N/N^3)`.  Multiplication by `q^d/d` proves (4.7).  Marking can only
+overcount conductors with several degree-`d` factors.
+
+Consequently **no fixed number of boundary layers can alter the leading
+`4*omega(4)/M` coefficient**, even if every member on those layers happened
+to have zero raw sum.  The second boundary can affect the `M^-2` term and
+requires the joint distribution of `D_3,D_1`, but an additional leading
+constant could arise only from depths `j` growing with `M` or from a
+macroscopic range of profiles.
 
 ## 5. Exact boundary
 
@@ -217,6 +256,7 @@ Proved:
 - parity-forced nonvanishing for every odd `n>=5`;
 - the two-stratum equivalence (0.9) for every `n>=4`;
 - zero asymptotic contribution from the entire first boundary;
+- the `O_j(q^M/M^2)` bound for every fixed-depth factor boundary;
 - the necessary parity condition (4.5) on the next odd boundary when no
   low-degree factor interferes.
 
@@ -230,4 +270,3 @@ Not proved:
 
 The main correction to the finite `n=3` intuition is exact: the apparent
 trace-zero boundary family is killed by odd parity in every asymptotic row.
-

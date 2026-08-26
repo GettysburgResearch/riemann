@@ -87,6 +87,8 @@ class QuadraticFamilyFirstBoundaryTests(unittest.TestCase):
             "entire first boundary is nonzero",
             "sum of exactly `q` values",
             "first boundary contributes no additional",
+            "O_j\\!\\left({q^M\\over M^2}\\right)",
+            "no fixed number of boundary layers",
             "second boundary",
             "not zeros of an individual L-function",
         ):

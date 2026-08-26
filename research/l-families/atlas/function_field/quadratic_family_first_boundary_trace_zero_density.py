@@ -228,6 +228,10 @@ def build_report() -> dict[str, object]:
             "even_n": "m_h*D_0=m_h>0",
             "odd_n_at_least_5": "m_h*D_1!=0 because D_1 is odd",
             "density_consequence": "the first boundary contributes exactly zero",
+            "fixed_depth_profile_bound": "B_(q,n,j)=O_j(q^M/M^2)",
+            "leading_constant_firewall": (
+                "no fixed number of boundary layers changes the 1/M coefficient"
+            ),
         },
         "exceptional_n3_prime_field_controls": rows,
         "resource_contract": {
@@ -262,6 +266,7 @@ def run_checks() -> dict[str, object]:
         "exact trace-zero extinction",
         "D_1\\equiv q\\equiv1",
         "B_{q,n}^{(1)}=0",
+        "no fixed number of boundary layers",
         "second boundary",
         "not zeros of an individual L-function",
     ):
