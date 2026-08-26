@@ -1,0 +1,668 @@
+{
+  "boundary_trace_panel": {
+    "place_degrees": [
+      3,
+      5,
+      11
+    ],
+    "rows": [
+      {
+        "boundary_trace": 0,
+        "extension_degree": 1
+      },
+      {
+        "boundary_trace": 3,
+        "extension_degree": 3
+      },
+      {
+        "boundary_trace": 5,
+        "extension_degree": 5
+      },
+      {
+        "boundary_trace": 11,
+        "extension_degree": 11
+      },
+      {
+        "boundary_trace": 8,
+        "extension_degree": 15
+      },
+      {
+        "boundary_trace": 14,
+        "extension_degree": 33
+      },
+      {
+        "boundary_trace": 16,
+        "extension_degree": 55
+      },
+      {
+        "boundary_trace": 19,
+        "extension_degree": 165
+      },
+      {
+        "boundary_trace": 19,
+        "extension_degree": 330
+      }
+    ]
+  },
+  "extension_panels": [
+    {
+      "blocks": 1,
+      "boundary_skyscraper_length": 37,
+      "place_degree": 37,
+      "relative_middle_extension_conductor_degree": 0,
+      "relative_zero_extension_conductor_degree": 37,
+      "rows": {
+        "hard_C": {
+          "generic_rank": 2,
+          "inertia_invariants": 1,
+          "middle_extension_conductor_coefficient": 1,
+          "middle_extension_stalk_rank": 1,
+          "zero_extension_conductor_coefficient": 2,
+          "zero_extension_stalk_rank": 0
+        },
+        "relative_C_minus_S": {
+          "generic_rank": 1,
+          "inertia_invariants": 1,
+          "middle_extension_conductor_coefficient": 0,
+          "middle_extension_stalk_rank": 1,
+          "zero_extension_conductor_coefficient": 1,
+          "zero_extension_stalk_rank": 0
+        },
+        "unnormalized_selected_S": {
+          "generic_rank": 1,
+          "inertia_invariants": 0,
+          "middle_extension_conductor_coefficient": 1,
+          "middle_extension_stalk_rank": 0,
+          "zero_extension_conductor_coefficient": 1,
+          "zero_extension_stalk_rank": 0
+        }
+      }
+    },
+    {
+      "blocks": 2,
+      "boundary_skyscraper_length": 37,
+      "place_degree": 37,
+      "relative_middle_extension_conductor_degree": 0,
+      "relative_zero_extension_conductor_degree": 37,
+      "rows": {
+        "hard_C": {
+          "generic_rank": 4,
+          "inertia_invariants": 2,
+          "middle_extension_conductor_coefficient": 2,
+          "middle_extension_stalk_rank": 2,
+          "zero_extension_conductor_coefficient": 4,
+          "zero_extension_stalk_rank": 0
+        },
+        "relative_C_minus_S": {
+          "generic_rank": 1,
+          "inertia_invariants": 1,
+          "middle_extension_conductor_coefficient": 0,
+          "middle_extension_stalk_rank": 1,
+          "zero_extension_conductor_coefficient": 1,
+          "zero_extension_stalk_rank": 0
+        },
+        "unnormalized_selected_S": {
+          "generic_rank": 3,
+          "inertia_invariants": 1,
+          "middle_extension_conductor_coefficient": 2,
+          "middle_extension_stalk_rank": 1,
+          "zero_extension_conductor_coefficient": 3,
+          "zero_extension_stalk_rank": 0
+        }
+      }
+    },
+    {
+      "blocks": 4,
+      "boundary_skyscraper_length": 37,
+      "place_degree": 37,
+      "relative_middle_extension_conductor_degree": 0,
+      "relative_zero_extension_conductor_degree": 37,
+      "rows": {
+        "hard_C": {
+          "generic_rank": 16,
+          "inertia_invariants": 8,
+          "middle_extension_conductor_coefficient": 8,
+          "middle_extension_stalk_rank": 8,
+          "zero_extension_conductor_coefficient": 16,
+          "zero_extension_stalk_rank": 0
+        },
+        "relative_C_minus_S": {
+          "generic_rank": 1,
+          "inertia_invariants": 1,
+          "middle_extension_conductor_coefficient": 0,
+          "middle_extension_stalk_rank": 1,
+          "zero_extension_conductor_coefficient": 1,
+          "zero_extension_stalk_rank": 0
+        },
+        "unnormalized_selected_S": {
+          "generic_rank": 15,
+          "inertia_invariants": 7,
+          "middle_extension_conductor_coefficient": 8,
+          "middle_extension_stalk_rank": 7,
+          "zero_extension_conductor_coefficient": 15,
+          "zero_extension_stalk_rank": 0
+        }
+      }
+    },
+    {
+      "blocks": 8,
+      "boundary_skyscraper_length": 37,
+      "place_degree": 37,
+      "relative_middle_extension_conductor_degree": 0,
+      "relative_zero_extension_conductor_degree": 37,
+      "rows": {
+        "hard_C": {
+          "generic_rank": 256,
+          "inertia_invariants": 128,
+          "middle_extension_conductor_coefficient": 128,
+          "middle_extension_stalk_rank": 128,
+          "zero_extension_conductor_coefficient": 256,
+          "zero_extension_stalk_rank": 0
+        },
+        "relative_C_minus_S": {
+          "generic_rank": 1,
+          "inertia_invariants": 1,
+          "middle_extension_conductor_coefficient": 0,
+          "middle_extension_stalk_rank": 1,
+          "zero_extension_conductor_coefficient": 1,
+          "zero_extension_stalk_rank": 0
+        },
+        "unnormalized_selected_S": {
+          "generic_rank": 255,
+          "inertia_invariants": 127,
+          "middle_extension_conductor_coefficient": 128,
+          "middle_extension_stalk_rank": 127,
+          "zero_extension_conductor_coefficient": 255,
+          "zero_extension_stalk_rank": 0
+        }
+      }
+    }
+  ],
+  "local_branch_panels": [
+    {
+      "blocks": 1,
+      "character_counts": {
+        "group_order": 2,
+        "hard_sign": 1,
+        "hard_trivial": 1,
+        "selected_sign": 1,
+        "selected_trivial": 0
+      },
+      "inertia_vector": 1,
+      "is_branch": true,
+      "objects": {
+        "C_minus_normalized_selected_average": {
+          "absolute_ramified_character_mass": "0",
+          "sign_coefficient": "0",
+          "signed_tame_artin_conductor": "0",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "1"
+        },
+        "atom_free_Pi0_minus_normalized_selected_average": {
+          "absolute_ramified_character_mass": "1",
+          "sign_coefficient": "-1",
+          "signed_tame_artin_conductor": "-1",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "0"
+        },
+        "hard_C": {
+          "absolute_ramified_character_mass": "1",
+          "sign_coefficient": "1",
+          "signed_tame_artin_conductor": "1",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "2"
+        },
+        "integral_atom_free_numerator": {
+          "absolute_ramified_character_mass": "1",
+          "sign_coefficient": "-1",
+          "signed_tame_artin_conductor": "-1",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "0"
+        },
+        "normalized_selected_average": {
+          "absolute_ramified_character_mass": "1",
+          "sign_coefficient": "1",
+          "signed_tame_artin_conductor": "1",
+          "trivial_coefficient": "0",
+          "virtual_inertia_invariants": "0",
+          "virtual_rank": "1"
+        },
+        "principal_Pi0": {
+          "absolute_ramified_character_mass": "0",
+          "sign_coefficient": "0",
+          "signed_tame_artin_conductor": "0",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "1"
+        },
+        "relative_C_minus_S": {
+          "absolute_ramified_character_mass": "0",
+          "sign_coefficient": "0",
+          "signed_tame_artin_conductor": "0",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "1"
+        },
+        "unnormalized_selected_S": {
+          "absolute_ramified_character_mass": "1",
+          "sign_coefficient": "1",
+          "signed_tame_artin_conductor": "1",
+          "trivial_coefficient": "0",
+          "virtual_inertia_invariants": "0",
+          "virtual_rank": "1"
+        }
+      }
+    },
+    {
+      "blocks": 2,
+      "character_counts": {
+        "group_order": 4,
+        "hard_sign": 2,
+        "hard_trivial": 2,
+        "selected_sign": 2,
+        "selected_trivial": 1
+      },
+      "inertia_vector": 1,
+      "is_branch": true,
+      "objects": {
+        "C_minus_normalized_selected_average": {
+          "absolute_ramified_character_mass": "4/3",
+          "sign_coefficient": "4/3",
+          "signed_tame_artin_conductor": "4/3",
+          "trivial_coefficient": "5/3",
+          "virtual_inertia_invariants": "5/3",
+          "virtual_rank": "3"
+        },
+        "atom_free_Pi0_minus_normalized_selected_average": {
+          "absolute_ramified_character_mass": "2/3",
+          "sign_coefficient": "-2/3",
+          "signed_tame_artin_conductor": "-2/3",
+          "trivial_coefficient": "2/3",
+          "virtual_inertia_invariants": "2/3",
+          "virtual_rank": "0"
+        },
+        "hard_C": {
+          "absolute_ramified_character_mass": "2",
+          "sign_coefficient": "2",
+          "signed_tame_artin_conductor": "2",
+          "trivial_coefficient": "2",
+          "virtual_inertia_invariants": "2",
+          "virtual_rank": "4"
+        },
+        "integral_atom_free_numerator": {
+          "absolute_ramified_character_mass": "2",
+          "sign_coefficient": "-2",
+          "signed_tame_artin_conductor": "-2",
+          "trivial_coefficient": "2",
+          "virtual_inertia_invariants": "2",
+          "virtual_rank": "0"
+        },
+        "normalized_selected_average": {
+          "absolute_ramified_character_mass": "2/3",
+          "sign_coefficient": "2/3",
+          "signed_tame_artin_conductor": "2/3",
+          "trivial_coefficient": "1/3",
+          "virtual_inertia_invariants": "1/3",
+          "virtual_rank": "1"
+        },
+        "principal_Pi0": {
+          "absolute_ramified_character_mass": "0",
+          "sign_coefficient": "0",
+          "signed_tame_artin_conductor": "0",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "1"
+        },
+        "relative_C_minus_S": {
+          "absolute_ramified_character_mass": "0",
+          "sign_coefficient": "0",
+          "signed_tame_artin_conductor": "0",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "1"
+        },
+        "unnormalized_selected_S": {
+          "absolute_ramified_character_mass": "2",
+          "sign_coefficient": "2",
+          "signed_tame_artin_conductor": "2",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "3"
+        }
+      }
+    },
+    {
+      "blocks": 4,
+      "character_counts": {
+        "group_order": 16,
+        "hard_sign": 8,
+        "hard_trivial": 8,
+        "selected_sign": 8,
+        "selected_trivial": 7
+      },
+      "inertia_vector": 1,
+      "is_branch": true,
+      "objects": {
+        "C_minus_normalized_selected_average": {
+          "absolute_ramified_character_mass": "112/15",
+          "sign_coefficient": "112/15",
+          "signed_tame_artin_conductor": "112/15",
+          "trivial_coefficient": "113/15",
+          "virtual_inertia_invariants": "113/15",
+          "virtual_rank": "15"
+        },
+        "atom_free_Pi0_minus_normalized_selected_average": {
+          "absolute_ramified_character_mass": "8/15",
+          "sign_coefficient": "-8/15",
+          "signed_tame_artin_conductor": "-8/15",
+          "trivial_coefficient": "8/15",
+          "virtual_inertia_invariants": "8/15",
+          "virtual_rank": "0"
+        },
+        "hard_C": {
+          "absolute_ramified_character_mass": "8",
+          "sign_coefficient": "8",
+          "signed_tame_artin_conductor": "8",
+          "trivial_coefficient": "8",
+          "virtual_inertia_invariants": "8",
+          "virtual_rank": "16"
+        },
+        "integral_atom_free_numerator": {
+          "absolute_ramified_character_mass": "8",
+          "sign_coefficient": "-8",
+          "signed_tame_artin_conductor": "-8",
+          "trivial_coefficient": "8",
+          "virtual_inertia_invariants": "8",
+          "virtual_rank": "0"
+        },
+        "normalized_selected_average": {
+          "absolute_ramified_character_mass": "8/15",
+          "sign_coefficient": "8/15",
+          "signed_tame_artin_conductor": "8/15",
+          "trivial_coefficient": "7/15",
+          "virtual_inertia_invariants": "7/15",
+          "virtual_rank": "1"
+        },
+        "principal_Pi0": {
+          "absolute_ramified_character_mass": "0",
+          "sign_coefficient": "0",
+          "signed_tame_artin_conductor": "0",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "1"
+        },
+        "relative_C_minus_S": {
+          "absolute_ramified_character_mass": "0",
+          "sign_coefficient": "0",
+          "signed_tame_artin_conductor": "0",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "1"
+        },
+        "unnormalized_selected_S": {
+          "absolute_ramified_character_mass": "8",
+          "sign_coefficient": "8",
+          "signed_tame_artin_conductor": "8",
+          "trivial_coefficient": "7",
+          "virtual_inertia_invariants": "7",
+          "virtual_rank": "15"
+        }
+      }
+    },
+    {
+      "blocks": 8,
+      "character_counts": {
+        "group_order": 256,
+        "hard_sign": 128,
+        "hard_trivial": 128,
+        "selected_sign": 128,
+        "selected_trivial": 127
+      },
+      "inertia_vector": 1,
+      "is_branch": true,
+      "objects": {
+        "C_minus_normalized_selected_average": {
+          "absolute_ramified_character_mass": "32512/255",
+          "sign_coefficient": "32512/255",
+          "signed_tame_artin_conductor": "32512/255",
+          "trivial_coefficient": "32513/255",
+          "virtual_inertia_invariants": "32513/255",
+          "virtual_rank": "255"
+        },
+        "atom_free_Pi0_minus_normalized_selected_average": {
+          "absolute_ramified_character_mass": "128/255",
+          "sign_coefficient": "-128/255",
+          "signed_tame_artin_conductor": "-128/255",
+          "trivial_coefficient": "128/255",
+          "virtual_inertia_invariants": "128/255",
+          "virtual_rank": "0"
+        },
+        "hard_C": {
+          "absolute_ramified_character_mass": "128",
+          "sign_coefficient": "128",
+          "signed_tame_artin_conductor": "128",
+          "trivial_coefficient": "128",
+          "virtual_inertia_invariants": "128",
+          "virtual_rank": "256"
+        },
+        "integral_atom_free_numerator": {
+          "absolute_ramified_character_mass": "128",
+          "sign_coefficient": "-128",
+          "signed_tame_artin_conductor": "-128",
+          "trivial_coefficient": "128",
+          "virtual_inertia_invariants": "128",
+          "virtual_rank": "0"
+        },
+        "normalized_selected_average": {
+          "absolute_ramified_character_mass": "128/255",
+          "sign_coefficient": "128/255",
+          "signed_tame_artin_conductor": "128/255",
+          "trivial_coefficient": "127/255",
+          "virtual_inertia_invariants": "127/255",
+          "virtual_rank": "1"
+        },
+        "principal_Pi0": {
+          "absolute_ramified_character_mass": "0",
+          "sign_coefficient": "0",
+          "signed_tame_artin_conductor": "0",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "1"
+        },
+        "relative_C_minus_S": {
+          "absolute_ramified_character_mass": "0",
+          "sign_coefficient": "0",
+          "signed_tame_artin_conductor": "0",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "1"
+        },
+        "unnormalized_selected_S": {
+          "absolute_ramified_character_mass": "128",
+          "sign_coefficient": "128",
+          "signed_tame_artin_conductor": "128",
+          "trivial_coefficient": "127",
+          "virtual_inertia_invariants": "127",
+          "virtual_rank": "255"
+        }
+      }
+    },
+    {
+      "blocks": 10,
+      "character_counts": {
+        "group_order": 1024,
+        "hard_sign": 512,
+        "hard_trivial": 512,
+        "selected_sign": 512,
+        "selected_trivial": 511
+      },
+      "inertia_vector": 1,
+      "is_branch": true,
+      "objects": {
+        "C_minus_normalized_selected_average": {
+          "absolute_ramified_character_mass": "523264/1023",
+          "sign_coefficient": "523264/1023",
+          "signed_tame_artin_conductor": "523264/1023",
+          "trivial_coefficient": "523265/1023",
+          "virtual_inertia_invariants": "523265/1023",
+          "virtual_rank": "1023"
+        },
+        "atom_free_Pi0_minus_normalized_selected_average": {
+          "absolute_ramified_character_mass": "512/1023",
+          "sign_coefficient": "-512/1023",
+          "signed_tame_artin_conductor": "-512/1023",
+          "trivial_coefficient": "512/1023",
+          "virtual_inertia_invariants": "512/1023",
+          "virtual_rank": "0"
+        },
+        "hard_C": {
+          "absolute_ramified_character_mass": "512",
+          "sign_coefficient": "512",
+          "signed_tame_artin_conductor": "512",
+          "trivial_coefficient": "512",
+          "virtual_inertia_invariants": "512",
+          "virtual_rank": "1024"
+        },
+        "integral_atom_free_numerator": {
+          "absolute_ramified_character_mass": "512",
+          "sign_coefficient": "-512",
+          "signed_tame_artin_conductor": "-512",
+          "trivial_coefficient": "512",
+          "virtual_inertia_invariants": "512",
+          "virtual_rank": "0"
+        },
+        "normalized_selected_average": {
+          "absolute_ramified_character_mass": "512/1023",
+          "sign_coefficient": "512/1023",
+          "signed_tame_artin_conductor": "512/1023",
+          "trivial_coefficient": "511/1023",
+          "virtual_inertia_invariants": "511/1023",
+          "virtual_rank": "1"
+        },
+        "principal_Pi0": {
+          "absolute_ramified_character_mass": "0",
+          "sign_coefficient": "0",
+          "signed_tame_artin_conductor": "0",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "1"
+        },
+        "relative_C_minus_S": {
+          "absolute_ramified_character_mass": "0",
+          "sign_coefficient": "0",
+          "signed_tame_artin_conductor": "0",
+          "trivial_coefficient": "1",
+          "virtual_inertia_invariants": "1",
+          "virtual_rank": "1"
+        },
+        "unnormalized_selected_S": {
+          "absolute_ramified_character_mass": "512",
+          "sign_coefficient": "512",
+          "signed_tame_artin_conductor": "512",
+          "trivial_coefficient": "511",
+          "virtual_inertia_invariants": "511",
+          "virtual_rank": "1023"
+        }
+      }
+    }
+  ],
+  "resource_caps": {
+    "closed_places_enumerated": 0,
+    "curves_or_pushforwards_computed": 0,
+    "finite_field_points": 0,
+    "floating_point_operations": 0,
+    "maximum_blocks": 10,
+    "maximum_character_labels": 1024
+  },
+  "theorem": {
+    "boundary_trace": "sum_(v in D, deg(v)|m) deg(v)",
+    "middle_extension_object": "ME(C)-ME(S)=E_X",
+    "open_relative_object": "C-S=Pi_0=E_U",
+    "relative_middle_extension_conductor_degree": "0",
+    "relative_zero_extension_conductor_degree": "deg(D)",
+    "supply_tax_verdict": "ramified Kummer sectors cancel, but the common-open boundary retains the largest place degree",
+    "zero_extension_class": "[j_! E_U]=[E_X]-[i_* E_D]"
+  },
+  "unbranched_control": {
+    "blocks": 5,
+    "character_counts": {
+      "group_order": 32,
+      "hard_sign": 0,
+      "hard_trivial": 32,
+      "selected_sign": 0,
+      "selected_trivial": 31
+    },
+    "inertia_vector": 0,
+    "is_branch": false,
+    "objects": {
+      "C_minus_normalized_selected_average": {
+        "absolute_ramified_character_mass": "0",
+        "sign_coefficient": "0",
+        "signed_tame_artin_conductor": "0",
+        "trivial_coefficient": "31",
+        "virtual_inertia_invariants": "31",
+        "virtual_rank": "31"
+      },
+      "atom_free_Pi0_minus_normalized_selected_average": {
+        "absolute_ramified_character_mass": "0",
+        "sign_coefficient": "0",
+        "signed_tame_artin_conductor": "0",
+        "trivial_coefficient": "0",
+        "virtual_inertia_invariants": "0",
+        "virtual_rank": "0"
+      },
+      "hard_C": {
+        "absolute_ramified_character_mass": "0",
+        "sign_coefficient": "0",
+        "signed_tame_artin_conductor": "0",
+        "trivial_coefficient": "32",
+        "virtual_inertia_invariants": "32",
+        "virtual_rank": "32"
+      },
+      "integral_atom_free_numerator": {
+        "absolute_ramified_character_mass": "0",
+        "sign_coefficient": "0",
+        "signed_tame_artin_conductor": "0",
+        "trivial_coefficient": "0",
+        "virtual_inertia_invariants": "0",
+        "virtual_rank": "0"
+      },
+      "normalized_selected_average": {
+        "absolute_ramified_character_mass": "0",
+        "sign_coefficient": "0",
+        "signed_tame_artin_conductor": "0",
+        "trivial_coefficient": "1",
+        "virtual_inertia_invariants": "1",
+        "virtual_rank": "1"
+      },
+      "principal_Pi0": {
+        "absolute_ramified_character_mass": "0",
+        "sign_coefficient": "0",
+        "signed_tame_artin_conductor": "0",
+        "trivial_coefficient": "1",
+        "virtual_inertia_invariants": "1",
+        "virtual_rank": "1"
+      },
+      "relative_C_minus_S": {
+        "absolute_ramified_character_mass": "0",
+        "sign_coefficient": "0",
+        "signed_tame_artin_conductor": "0",
+        "trivial_coefficient": "1",
+        "virtual_inertia_invariants": "1",
+        "virtual_rank": "1"
+      },
+      "unnormalized_selected_S": {
+        "absolute_ramified_character_mass": "0",
+        "sign_coefficient": "0",
+        "signed_tame_artin_conductor": "0",
+        "trivial_coefficient": "31",
+        "virtual_inertia_invariants": "31",
+        "virtual_rank": "31"
+      }
+    }
+  }
+}
