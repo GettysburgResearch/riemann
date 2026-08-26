@@ -12,7 +12,8 @@ Bounded replay:
 The fixed-`m` six-place theorem extends to a stable all-`m` character law,
 and that law has a genuine growing-mark transition.
 
-Let `A` be a set of `m` distinct rational places in `F_q`, let
+Let `q` be an odd prime power, let `A` be a set of `m` distinct rational
+places in `F_q`, let
 
 \[
  R_{5,m}(A)=

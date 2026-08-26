@@ -11,6 +11,19 @@ from pathlib import Path
 PANELS = ((101, 11), (101, 20), (101, 50), (101, 101), (1009, 31), (1009, 100))
 
 
+def is_prime_power(value: int) -> bool:
+    if isinstance(value, bool) or not isinstance(value, int) or value < 2:
+        return False
+    divisor = 2
+    while divisor * divisor <= value and value % divisor:
+        divisor += 1
+    if divisor * divisor > value:
+        return True
+    while value % divisor == 0:
+        value //= divisor
+    return value == 1
+
+
 def character_dimension(rank: int, index: int) -> int:
     """Dimension of the fundamental omega_index character of USp(2*rank)."""
     if rank < 1 or not 1 <= index <= rank:
@@ -76,8 +89,13 @@ def verify_stable_identity(mark_count: int, q: int, exterior: tuple[int, ...]) -
 
 
 def normalized_envelope(q: int, mark_count: int) -> float:
-    if q < 3 or q % 2 == 0 or not 11 <= mark_count <= q:
-        raise ValueError("require odd q and 11<=m<=q")
+    if (
+        q < 3
+        or q % 2 == 0
+        or not is_prime_power(q)
+        or not 11 <= mark_count <= q
+    ):
+        raise ValueError("require odd prime-power q and 11<=m<=q")
     rank = (mark_count - 1) // 2
     choose_two = mark_count * (mark_count + 1) // 2
     numerator = q**2.5 * character_dimension(rank, 5)

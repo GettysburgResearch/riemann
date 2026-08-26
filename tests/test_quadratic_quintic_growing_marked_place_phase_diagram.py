@@ -54,6 +54,8 @@ class QuadraticQuinticGrowingMarkedPlacePhaseDiagramTest(unittest.TestCase):
             growing_marks.stable_character_formula(10)
         with self.assertRaises(ValueError):
             growing_marks.normalized_envelope(101, 102)
+        with self.assertRaises(ValueError):
+            growing_marks.normalized_envelope(15, 11)
         caps = growing_marks.run()["resource_caps"]
         self.assertEqual(caps["finite_fields_enumerated"], 0)
         self.assertLessEqual(caps["symbolic_identity_rows"], 100)
