@@ -27,6 +27,10 @@ class DerangementSelectorTanhCalibrationTest(unittest.TestCase):
         payload = MODULE.run(check_sources=False)
         self.assertFalse(payload["scope"]["all_degree_weighted_l1_optimum_proved"])
         self.assertEqual(payload["theorem"]["full_cycle_dual_mass"], "2^(d-1)/d")
+        self.assertIn(
+            "exists for every",
+            payload["reduced_frontier"]["algebraic_zero_hook_lift"],
+        )
         self.assertEqual(len(payload["finite_replay"]), 9)
 
     def test_tanh_coefficients(self) -> None:
@@ -42,6 +46,10 @@ class DerangementSelectorTanhCalibrationTest(unittest.TestCase):
             degree_six["forbidden_derangement_residual_types"], [[2, 2, 2]]
         )
         self.assertEqual(degree_six["transform_by_cycle_count"]["3"], "-16")
+        self.assertEqual(
+            degree_six["zero_hook_projection_rank"],
+            degree_six["noncycle_derangement_coordinates"],
+        )
 
     def test_hook_saturation(self) -> None:
         degree = 10

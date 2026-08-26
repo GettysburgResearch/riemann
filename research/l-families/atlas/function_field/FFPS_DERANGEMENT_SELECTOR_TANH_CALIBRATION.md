@@ -228,8 +228,64 @@ Let `pi_0` be the endomorphism setting `p_1=0`; this is the usual
 \tag{3.3}
 \]
 
-The all-degree lower-bound conjecture is now equivalent to finding, for
-every `d`, a correction `R_d` such that
+### 3.1 The zero-hook lift exists algebraically in every degree
+
+Let
+
+\[
+ V_d^{\rm nh}
+ =\operatorname{span}\{s_\lambda:\lambda\vdash d,\ \lambda
+ \text{ is not a hook}\}.
+\tag{3.4}
+\]
+
+There is an exact all-degree image theorem:
+
+\[
+ \boxed{
+ \pi_0(V_d^{\rm nh})
+ =\left\{
+ P\in\operatorname{span}\{p_\mu:1\notin\mu\}:
+ [p_d]P=0
+ \right\}.}
+\tag{3.5}
+\]
+
+To prove it, take the Hall-inner-product annihilator of the left side inside
+the `p_1`-free subspace.  Since `pi_0` is an orthogonal projection in the
+power-sum basis, an annihilator element is both `p_1`-free and hook-supported
+in the Schur basis.  Being `p_1`-free says that its associated class
+function vanishes on every fixed-point class, equivalently its restriction
+to `S_(d-1)` is zero.
+
+Write its hook coefficients as `a_k` on `H_k`.  At the hook predecessor
+`(d-1-k,1^k)`, Young branching gives
+
+\[
+ a_k+a_{k+1}=0.
+\tag{3.6}
+\]
+
+No nonhook predecessor lies below a hook, so there are no further
+conditions.  The annihilator is therefore one-dimensional, spanned by
+
+\[
+ \sum_{k=0}^{d-1}(-1)^ks_{H_k}=p_d.
+\tag{3.7}
+\]
+
+Taking the annihilator once more proves (3.5), because the Hall-orthogonal
+complement of `p_d` in the `p_1`-free power-sum space is exactly the
+`p_d`-coefficient-zero hyperplane.
+
+Since `L_d-pi_0(F_d)` has zero `p_d` coefficient, (3.5) proves that a
+zero-hook correction with the first two properties below exists for every
+`d`.  There is no remaining algebraic or rank obstruction.
+
+### 3.2 The remaining problem is coefficientwise contraction
+
+The all-degree lower-bound conjecture is now equivalent to choosing such an
+algebraic correction `R_d` inside the dimension box:
 
 \[
  \begin{aligned}
@@ -238,19 +294,20 @@ every `d`, a correction `R_d` such that
  \left|b_{d,\lambda}+[s_\lambda]R_d\right|&\le f^\lambda
  &&(\lambda\vdash d).
  \end{aligned}
-\tag{3.4}
+\tag{3.8}
 \]
 
 The hook-zero requirement is forced because (0.4) already saturates every
-hook capacity.  Conversely, (3.4) makes `F_d+R_d` an admissible dual with
+hook capacity.  Conversely, (3.8) makes `F_d+R_d` an admissible dual with
 objective `2^(d-1)/d`, matching the exact-cycle primal candidate.  Strict
 inequality on every nonhook is a sufficient complementary-slackness
 certificate for uniqueness.
 
 Thus the missing all-degree theorem is no longer “guess the interior Young
-lattice potentials.”  It is the precise **contractive primitive-lift
-problem** (3.4): remove all higher odd powers of `tanh(A)` using nonhook
-Schur directions without leaving the dimension box.
+lattice potentials,” nor is it existence of an unrestricted lift.  It is
+the precise **contractive primitive-lift problem** (3.8): remove all higher
+odd powers of `tanh(A)` using nonhook Schur directions without leaving the
+dimension box.
 
 ## 4. What the bounded replay checks
 
@@ -263,7 +320,9 @@ replay:
 4. recomputes the complete character table by Murnaghan--Nakayama;
 5. checks (0.5) on every conjugacy class in exact integer/rational
    arithmetic;
-6. lists every forbidden derangement residual.
+6. verifies that the nonhook-to-noncycle-derangement character matrix has
+   full row rank, the finite shadow of (3.5);
+7. lists every forbidden derangement residual.
 
 The first forbidden residual is `(2,2,2)` at `d=6`, with class transform
 `-16=-2^(6-2)`.  At `d=10`, the replay sees both the three-cycle-factor
@@ -288,12 +347,14 @@ Proved here:
 
 - (0.3)--(0.7) for every degree and every cycle type;
 - exact spectral capacity and hook saturation;
-- the equivalence between an optimal dual completion and (3.4);
+- the all-degree zero-hook image theorem (3.5);
+- the equivalence between an optimal dual completion and (3.8);
 - the bounded replay statements through degree ten.
 
 Not proved here:
 
-- existence of the correction (3.4) for all `d`;
+- a choice of the algebraic correction (3.8) satisfying the dimension box
+  for all `d`;
 - strict nonhook slack or unique optimality beyond `d=10`;
 - a native FFPS interpretation of the root-incidence boundary;
 - an affordable joint source/selector cancellation;

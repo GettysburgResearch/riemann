@@ -6,11 +6,13 @@
       "forbidden_derangement_residual_types": [],
       "hook_shapes": 2,
       "maximum_nonhook_absolute_ratio": "0",
+      "noncycle_derangement_coordinates": 0,
       "partitions": 2,
       "standard_tableaux": 2,
       "transform_by_cycle_count": {
         "1": "2"
-      }
+      },
+      "zero_hook_projection_rank": 0
     },
     {
       "cycle_dual_mass": "4/3",
@@ -18,12 +20,14 @@
       "forbidden_derangement_residual_types": [],
       "hook_shapes": 3,
       "maximum_nonhook_absolute_ratio": "0",
+      "noncycle_derangement_coordinates": 0,
       "partitions": 3,
       "standard_tableaux": 4,
       "transform_by_cycle_count": {
         "1": "4",
         "3": "-2"
-      }
+      },
+      "zero_hook_projection_rank": 0
     },
     {
       "cycle_dual_mass": "2",
@@ -31,12 +35,14 @@
       "forbidden_derangement_residual_types": [],
       "hook_shapes": 4,
       "maximum_nonhook_absolute_ratio": "0",
+      "noncycle_derangement_coordinates": 1,
       "partitions": 5,
       "standard_tableaux": 10,
       "transform_by_cycle_count": {
         "1": "8",
         "3": "-4"
-      }
+      },
+      "zero_hook_projection_rank": 1
     },
     {
       "cycle_dual_mass": "16/5",
@@ -44,13 +50,15 @@
       "forbidden_derangement_residual_types": [],
       "hook_shapes": 5,
       "maximum_nonhook_absolute_ratio": "1/5",
+      "noncycle_derangement_coordinates": 1,
       "partitions": 7,
       "standard_tableaux": 26,
       "transform_by_cycle_count": {
         "1": "16",
         "3": "-8",
         "5": "16"
-      }
+      },
+      "zero_hook_projection_rank": 1
     },
     {
       "cycle_dual_mass": "16/3",
@@ -64,13 +72,15 @@
       ],
       "hook_shapes": 6,
       "maximum_nonhook_absolute_ratio": "1/3",
+      "noncycle_derangement_coordinates": 3,
       "partitions": 11,
       "standard_tableaux": 76,
       "transform_by_cycle_count": {
         "1": "32",
         "3": "-16",
         "5": "32"
-      }
+      },
+      "zero_hook_projection_rank": 3
     },
     {
       "cycle_dual_mass": "64/7",
@@ -84,6 +94,7 @@
       ],
       "hook_shapes": 7,
       "maximum_nonhook_absolute_ratio": "3/7",
+      "noncycle_derangement_coordinates": 3,
       "partitions": 15,
       "standard_tableaux": 232,
       "transform_by_cycle_count": {
@@ -91,7 +102,8 @@
         "3": "-32",
         "5": "64",
         "7": "-272"
-      }
+      },
+      "zero_hook_projection_rank": 3
     },
     {
       "cycle_dual_mass": "16",
@@ -110,6 +122,7 @@
       ],
       "hook_shapes": 8,
       "maximum_nonhook_absolute_ratio": "1/2",
+      "noncycle_derangement_coordinates": 6,
       "partitions": 22,
       "standard_tableaux": 764,
       "transform_by_cycle_count": {
@@ -117,7 +130,8 @@
         "3": "-64",
         "5": "128",
         "7": "-544"
-      }
+      },
+      "zero_hook_projection_rank": 6
     },
     {
       "cycle_dual_mass": "256/9",
@@ -141,6 +155,7 @@
       ],
       "hook_shapes": 9,
       "maximum_nonhook_absolute_ratio": "5/9",
+      "noncycle_derangement_coordinates": 7,
       "partitions": 30,
       "standard_tableaux": 2620,
       "transform_by_cycle_count": {
@@ -149,7 +164,8 @@
         "5": "256",
         "7": "-1088",
         "9": "7936"
-      }
+      },
+      "zero_hook_projection_rank": 7
     },
     {
       "cycle_dual_mass": "256/5",
@@ -185,6 +201,7 @@
       ],
       "hook_shapes": 10,
       "maximum_nonhook_absolute_ratio": "3/5",
+      "noncycle_derangement_coordinates": 11,
       "partitions": 42,
       "standard_tableaux": 9496,
       "transform_by_cycle_count": {
@@ -193,7 +210,8 @@
         "5": "512",
         "7": "-2176",
         "9": "15872"
-      }
+      },
+      "zero_hook_projection_rank": 11
     }
   ],
   "frozen_source": {
@@ -206,6 +224,7 @@
     "commit": "6d9e66033c1a00066935cceed9ca66b76b67fd99"
   },
   "reduced_frontier": {
+    "algebraic_zero_hook_lift": "exists for every p_d-coefficient-zero derangement polynomial",
     "needed_correction": "find a Schur function R_d with zero hook coefficients, pi_0(R_d)=[t^d](A-tanh(A)), and abs(b_(d,lambda)+[s_lambda]R_d)<=dim(lambda)",
     "projection": "pi_0 sets p_1=0",
     "proved_for_all_d": false,

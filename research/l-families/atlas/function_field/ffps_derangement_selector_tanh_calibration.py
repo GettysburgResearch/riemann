@@ -236,6 +236,41 @@ def predicted_class_transform(degree: int, cycle_count: int) -> Fraction:
     )
 
 
+def matrix_rank(rows: list[list[int]]) -> int:
+    """Exact rational rank of a small integer matrix."""
+
+    if not rows:
+        return 0
+    matrix = [[Fraction(entry) for entry in row] for row in rows]
+    row_count = len(matrix)
+    column_count = len(matrix[0])
+    pivot_row = 0
+    for column in range(column_count):
+        pivot = next(
+            (row for row in range(pivot_row, row_count) if matrix[row][column]),
+            None,
+        )
+        if pivot is None:
+            continue
+        matrix[pivot_row], matrix[pivot] = matrix[pivot], matrix[pivot_row]
+        pivot_value = matrix[pivot_row][column]
+        matrix[pivot_row] = [entry / pivot_value for entry in matrix[pivot_row]]
+        for row in range(row_count):
+            if row == pivot_row or not matrix[row][column]:
+                continue
+            factor = matrix[row][column]
+            matrix[row] = [
+                entry - factor * pivot_entry
+                for entry, pivot_entry in zip(
+                    matrix[row], matrix[pivot_row], strict=True
+                )
+            ]
+        pivot_row += 1
+        if pivot_row == row_count:
+            break
+    return pivot_row
+
+
 def verify_degree(degree: int) -> dict[str, object]:
     validate_degree(degree)
     shapes = partitions(degree)
@@ -278,6 +313,20 @@ def verify_degree(degree: int) -> dict[str, object]:
         for cycle_type, value in transforms.items()
         if 1 not in cycle_type and cycle_type != cycle and value
     ]
+    nonhooks = [partition for partition in shapes if not is_hook(partition)]
+    noncycle_derangements = [
+        cycle_type
+        for cycle_type in shapes
+        if 1 not in cycle_type and cycle_type != cycle
+    ]
+    zero_hook_projection_rank = matrix_rank(
+        [
+            [character(partition, cycle_type) for partition in nonhooks]
+            for cycle_type in noncycle_derangements
+        ]
+    )
+    if zero_hook_projection_rank != len(noncycle_derangements):
+        raise AssertionError("zero-hook derangement projection lost surjectivity")
     transform_by_cycle_count = {
         str(cycle_count): str(predicted_class_transform(degree, cycle_count))
         for cycle_count in range(1, degree + 1)
@@ -293,6 +342,8 @@ def verify_degree(degree: int) -> dict[str, object]:
         "forbidden_derangement_residual_types": [
             list(cycle_type) for cycle_type in residual_types
         ],
+        "noncycle_derangement_coordinates": len(noncycle_derangements),
+        "zero_hook_projection_rank": zero_hook_projection_rank,
         "maximum_nonhook_absolute_ratio": str(max(nonhook_ratios, default=Fraction(0))),
     }
 
@@ -327,6 +378,9 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
         },
         "reduced_frontier": {
             "projection": "pi_0 sets p_1=0",
+            "algebraic_zero_hook_lift": (
+                "exists for every p_d-coefficient-zero derangement polynomial"
+            ),
             "needed_correction": (
                 "find a Schur function R_d with zero hook coefficients, "
                 "pi_0(R_d)=[t^d](A-tanh(A)), and "
