@@ -1,0 +1,1390 @@
+{
+  "exact_mathematics": {
+    "arbitrary_d_expected_energy": {
+      "equality_correction": "an individual mask need not equal the expectation; energies are integral while the exact average can be fractional",
+      "existence_consequence": "some size-s mask has E_A at least the expectation, hence restricted leverage at most N^2/E[E_A]",
+      "expectation": "E[E_A]=(s/N)*Tr(G)+s*(s-1)/(N*(N-1))*(B-Tr(G))",
+      "fixed_d_asymptotic": "if d is fixed and min_i m_i tends to infinity, choose density 2^(d-1)/(2^d-1); some masks have leverage at most (2^d-1)/4^(d-1)+o(1)",
+      "fixed_d_table": [
+        {
+          "d": 1,
+          "limiting_density": [
+            1,
+            1
+          ],
+          "limiting_leverage_upper_bound": [
+            1,
+            1
+          ]
+        },
+        {
+          "d": 2,
+          "limiting_density": [
+            2,
+            3
+          ],
+          "limiting_leverage_upper_bound": [
+            3,
+            4
+          ]
+        },
+        {
+          "d": 3,
+          "limiting_density": [
+            4,
+            7
+          ],
+          "limiting_leverage_upper_bound": [
+            7,
+            16
+          ]
+        },
+        {
+          "d": 4,
+          "limiting_density": [
+            8,
+            15
+          ],
+          "limiting_leverage_upper_bound": [
+            15,
+            64
+          ]
+        },
+        {
+          "d": 5,
+          "limiting_density": [
+            16,
+            31
+          ],
+          "limiting_leverage_upper_bound": [
+            31,
+            256
+          ]
+        }
+      ],
+      "fractional_refusal_example": {
+        "dimensions": [
+          2,
+          3
+        ],
+        "exact_attainment": false,
+        "expected_energy": [
+          216,
+          5
+        ],
+        "individual_energies_are_integers": true,
+        "size": 2
+      },
+      "limit_profile": "2^d*rho-(2^d-1)*rho^2, maximized at rho=2^(d-1)/(2^d-1)",
+      "setup": "G=tensor_i((2*m_i+1)I_(m_i)-J_(m_i)), N=product_i m_i, and A is uniform among size-s supports",
+      "total": "B=1^*G*1=N*product_i(m_i+1)",
+      "trace": "Tr(G)=2^d*N^2"
+    },
+    "finite_controls": {
+      "asymptotic_two_prime": [
+        {
+          "best_balanced_supports_constructed": 1,
+          "best_denominator": 25272,
+          "best_density": [
+            [
+              9,
+              13
+            ]
+          ],
+          "best_dual_energy": [
+            325,
+            486
+          ],
+          "best_sizes": [
+            90
+          ],
+          "m": 10,
+          "n": 13,
+          "native_amplitude": 130,
+          "p": 21,
+          "q": 27,
+          "size_rows": []
+        },
+        {
+          "best_balanced_supports_constructed": 1,
+          "best_denominator": 2302960,
+          "best_density": [
+            [
+              2,
+              3
+            ]
+          ],
+          "best_dual_energy": [
+            83205,
+            115148
+          ],
+          "best_sizes": [
+            860
+          ],
+          "m": 30,
+          "n": 43,
+          "native_amplitude": 1290,
+          "p": 61,
+          "q": 87,
+          "size_rows": []
+        }
+      ],
+      "checkerboard_5_13": {
+        "all_legendre_tensor_eigenvalue": 65,
+        "closed_leverage_formula": "4/(product_i((m_i+1)/m_i)+product_i(p_i/m_i))",
+        "complete_tensor_leverage": [
+          4,
+          7
+        ],
+        "constant_tensor_eigenvalue": 21,
+        "denominator": [
+          258,
+          1
+        ],
+        "dimensions": [
+          2,
+          6
+        ],
+        "direct_matrix_audit": true,
+        "local_legendre_pair_vectors": [
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            1,
+            1,
+            -1,
+            -1
+          ]
+        ],
+        "native_amplitude": 12,
+        "optimizer": {
+          "denominator_1_G_A_1": [
+            258,
+            1
+          ],
+          "dual_energy": [
+            24,
+            43
+          ],
+          "support": [
+            0,
+            2,
+            3,
+            7,
+            10,
+            11
+          ],
+          "weights_N_G_A_1_over_E": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        "primes": [
+          5,
+          13
+        ],
+        "retained_canonical_pair_representatives": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "sharp_restricted_leverage": [
+          24,
+          43
+        ],
+        "support_size": 6,
+        "uniform_positive_weight_on_support": 2
+      },
+      "exhaustive_two_prime": [
+        {
+          "m": 2,
+          "n": 3,
+          "nonempty_sizes_checked": 6,
+          "subsets_checked": 64
+        },
+        {
+          "m": 2,
+          "n": 4,
+          "nonempty_sizes_checked": 8,
+          "subsets_checked": 256
+        },
+        {
+          "m": 3,
+          "n": 3,
+          "nonempty_sizes_checked": 9,
+          "subsets_checked": 512
+        }
+      ],
+      "frontier_5_7": {
+        "best_balanced_supports_constructed": 1,
+        "best_denominator": 74,
+        "best_density": [
+          [
+            2,
+            3
+          ]
+        ],
+        "best_dual_energy": [
+          18,
+          37
+        ],
+        "best_sizes": [
+          4
+        ],
+        "m": 2,
+        "n": 3,
+        "native_amplitude": 6,
+        "p": 5,
+        "q": 7,
+        "size_rows": [
+          {
+            "column_square_sum_min": 1,
+            "maximum_denominator": 24,
+            "optimal_dual_energy": [
+              3,
+              2
+            ],
+            "row_square_sum_min": 1,
+            "size": 1
+          },
+          {
+            "column_square_sum_min": 2,
+            "maximum_denominator": 50,
+            "optimal_dual_energy": [
+              18,
+              25
+            ],
+            "row_square_sum_min": 2,
+            "size": 2
+          },
+          {
+            "column_square_sum_min": 3,
+            "maximum_denominator": 68,
+            "optimal_dual_energy": [
+              9,
+              17
+            ],
+            "row_square_sum_min": 5,
+            "size": 3
+          },
+          {
+            "column_square_sum_min": 6,
+            "maximum_denominator": 74,
+            "optimal_dual_energy": [
+              18,
+              37
+            ],
+            "row_square_sum_min": 8,
+            "size": 4
+          },
+          {
+            "column_square_sum_min": 9,
+            "maximum_denominator": 72,
+            "optimal_dual_energy": [
+              1,
+              2
+            ],
+            "row_square_sum_min": 13,
+            "size": 5
+          },
+          {
+            "column_square_sum_min": 12,
+            "maximum_denominator": 72,
+            "optimal_dual_energy": [
+              1,
+              2
+            ],
+            "row_square_sum_min": 18,
+            "size": 6
+          }
+        ]
+      },
+      "matching": [
+        {
+          "gain": 0,
+          "k": 0,
+          "m": 2,
+          "n": 3
+        },
+        {
+          "gain": 0,
+          "k": 1,
+          "m": 2,
+          "n": 3
+        },
+        {
+          "gain": 2,
+          "k": 2,
+          "m": 2,
+          "n": 3
+        },
+        {
+          "gain": 0,
+          "k": 0,
+          "m": 2,
+          "n": 4
+        },
+        {
+          "gain": 2,
+          "k": 1,
+          "m": 2,
+          "n": 4
+        },
+        {
+          "gain": 6,
+          "k": 2,
+          "m": 2,
+          "n": 4
+        },
+        {
+          "gain": 0,
+          "k": 0,
+          "m": 3,
+          "n": 4
+        },
+        {
+          "gain": 8,
+          "k": 1,
+          "m": 3,
+          "n": 4
+        },
+        {
+          "gain": 18,
+          "k": 2,
+          "m": 3,
+          "n": 4
+        },
+        {
+          "gain": 30,
+          "k": 3,
+          "m": 3,
+          "n": 4
+        }
+      ],
+      "odd_prime_prefix_half_density": [
+        {
+          "b_B_over_N_squared": [
+            3,
+            1
+          ],
+          "conductor_product_M": 15,
+          "d": 2,
+          "dimensions": [
+            1,
+            2
+          ],
+          "native_amplitude": 2,
+          "normalized_expected_denominator": [
+            2,
+            1
+          ],
+          "primes": [
+            3,
+            5
+          ],
+          "some_mask_leverage_upper_bound": [
+            1,
+            2
+          ],
+          "support_size": 1,
+          "trace": 16
+        },
+        {
+          "b_B_over_N_squared": [
+            28,
+            5
+          ],
+          "conductor_product_M": 15015,
+          "d": 5,
+          "dimensions": [
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "native_amplitude": 180,
+          "normalized_expected_denominator": [
+            8446,
+            895
+          ],
+          "primes": [
+            3,
+            5,
+            7,
+            11,
+            13
+          ],
+          "some_mask_leverage_upper_bound": [
+            895,
+            8446
+          ],
+          "support_size": 90,
+          "trace": 1036800
+        },
+        {
+          "b_B_over_N_squared": [
+            90,
+            11
+          ],
+          "conductor_product_M": 3234846615,
+          "d": 9,
+          "dimensions": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            8,
+            9,
+            11,
+            14
+          ],
+          "native_amplitude": 1995840,
+          "normalized_expected_denominator": [
+            2855049075,
+            21954229
+          ],
+          "primes": [
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23,
+            29
+          ],
+          "some_mask_leverage_upper_bound": [
+            21954229,
+            2855049075
+          ],
+          "support_size": 997920,
+          "trace": 2039489180467200
+        },
+        {
+          "b_B_over_N_squared": [
+            152,
+            15
+          ],
+          "conductor_product_M": 6541380665835015,
+          "d": 13,
+          "dimensions": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            8,
+            9,
+            11,
+            14,
+            15,
+            18,
+            20,
+            21
+          ],
+          "native_amplitude": 226328256000,
+          "normalized_expected_denominator": [
+            6961404498047924,
+            3394923839985
+          ],
+          "primes": [
+            3,
+            5,
+            7,
+            11,
+            13,
+            17,
+            19,
+            23,
+            29,
+            31,
+            37,
+            41,
+            43
+          ],
+          "some_mask_leverage_upper_bound": [
+            3394923839985,
+            6961404498047924
+          ],
+          "support_size": 113164128000,
+          "trace": 419630935769100582912000000
+        }
+      ],
+      "random_fixed_size": [
+        {
+          "dimensions": [
+            2,
+            3
+          ],
+          "native_amplitude": 6,
+          "rows": [
+            {
+              "expected_energy": [
+                0,
+                1
+              ],
+              "maximum_energy": 0,
+              "minimum_energy": 0,
+              "size": 0,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": true,
+              "subset_count": 1
+            },
+            {
+              "expected_energy": [
+                24,
+                1
+              ],
+              "maximum_energy": 24,
+              "minimum_energy": 24,
+              "size": 1,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": true,
+              "subset_count": 6
+            },
+            {
+              "expected_energy": [
+                216,
+                5
+              ],
+              "maximum_energy": 50,
+              "minimum_energy": 36,
+              "size": 2,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": false,
+              "subset_count": 15
+            },
+            {
+              "expected_energy": [
+                288,
+                5
+              ],
+              "maximum_energy": 68,
+              "minimum_energy": 48,
+              "size": 3,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": false,
+              "subset_count": 20
+            },
+            {
+              "expected_energy": [
+                336,
+                5
+              ],
+              "maximum_energy": 74,
+              "minimum_energy": 60,
+              "size": 4,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": false,
+              "subset_count": 15
+            },
+            {
+              "expected_energy": [
+                72,
+                1
+              ],
+              "maximum_energy": 72,
+              "minimum_energy": 72,
+              "size": 5,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": true,
+              "subset_count": 6
+            },
+            {
+              "expected_energy": [
+                72,
+                1
+              ],
+              "maximum_energy": 72,
+              "minimum_energy": 72,
+              "size": 6,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": true,
+              "subset_count": 1
+            }
+          ],
+          "total_1_G_1": 72,
+          "trace": 144
+        },
+        {
+          "dimensions": [
+            2,
+            2,
+            2
+          ],
+          "native_amplitude": 8,
+          "rows": [
+            {
+              "expected_energy": [
+                0,
+                1
+              ],
+              "maximum_energy": 0,
+              "minimum_energy": 0,
+              "size": 0,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": true,
+              "subset_count": 1
+            },
+            {
+              "expected_energy": [
+                64,
+                1
+              ],
+              "maximum_energy": 64,
+              "minimum_energy": 64,
+              "size": 1,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": true,
+              "subset_count": 8
+            },
+            {
+              "expected_energy": [
+                822,
+                7
+              ],
+              "maximum_energy": 136,
+              "minimum_energy": 96,
+              "size": 2,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": false,
+              "subset_count": 28
+            },
+            {
+              "expected_energy": [
+                1122,
+                7
+              ],
+              "maximum_energy": 216,
+              "minimum_energy": 136,
+              "size": 3,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": false,
+              "subset_count": 56
+            },
+            {
+              "expected_energy": [
+                1348,
+                7
+              ],
+              "maximum_energy": 304,
+              "minimum_energy": 144,
+              "size": 4,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": false,
+              "subset_count": 70
+            },
+            {
+              "expected_energy": [
+                1500,
+                7
+              ],
+              "maximum_energy": 270,
+              "minimum_energy": 190,
+              "size": 5,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": false,
+              "subset_count": 56
+            },
+            {
+              "expected_energy": [
+                1578,
+                7
+              ],
+              "maximum_energy": 244,
+              "minimum_energy": 204,
+              "size": 6,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": false,
+              "subset_count": 28
+            },
+            {
+              "expected_energy": [
+                226,
+                1
+              ],
+              "maximum_energy": 226,
+              "minimum_energy": 226,
+              "size": 7,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": true,
+              "subset_count": 8
+            },
+            {
+              "expected_energy": [
+                216,
+                1
+              ],
+              "maximum_energy": 216,
+              "minimum_energy": 216,
+              "size": 8,
+              "some_mask_at_least_expectation": true,
+              "some_mask_exactly_expectation": true,
+              "subset_count": 1
+            }
+          ],
+          "total_1_G_1": 216,
+          "trace": 512
+        }
+      ]
+    },
+    "five_seven_example": {
+      "deleted_matching": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "full_denominator": 72,
+      "full_leverage": [
+        1,
+        2
+      ],
+      "matching_gain": 2,
+      "optimizer": {
+        "denominator_1_G_A_1": [
+          74,
+          1
+        ],
+        "dual_energy": [
+          18,
+          37
+        ],
+        "support": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "weights_N_G_A_1_over_E": [
+          [
+            66,
+            37
+          ],
+          [
+            45,
+            37
+          ],
+          [
+            66,
+            37
+          ],
+          [
+            45,
+            37
+          ]
+        ]
+      },
+      "restricted_denominator": 74,
+      "restricted_leverage": [
+        18,
+        37
+      ],
+      "retained_coordinates": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "global_legendre_checkerboard": {
+      "closed_controls": [
+        {
+          "all_legendre_tensor_eigenvalue": 65,
+          "closed_leverage_formula": "4/(product_i((m_i+1)/m_i)+product_i(p_i/m_i))",
+          "complete_tensor_leverage": [
+            4,
+            7
+          ],
+          "constant_tensor_eigenvalue": 21,
+          "denominator": [
+            258,
+            1
+          ],
+          "dimensions": [
+            2,
+            6
+          ],
+          "native_amplitude": 12,
+          "primes": [
+            5,
+            13
+          ],
+          "sharp_restricted_leverage": [
+            24,
+            43
+          ],
+          "support_size": 6,
+          "uniform_positive_weight_on_support": 2
+        },
+        {
+          "all_legendre_tensor_eigenvalue": 1105,
+          "closed_leverage_formula": "4/(product_i((m_i+1)/m_i)+product_i(p_i/m_i))",
+          "complete_tensor_leverage": [
+            32,
+            63
+          ],
+          "constant_tensor_eigenvalue": 189,
+          "denominator": [
+            31056,
+            1
+          ],
+          "dimensions": [
+            2,
+            6,
+            8
+          ],
+          "native_amplitude": 96,
+          "primes": [
+            5,
+            13,
+            17
+          ],
+          "sharp_restricted_leverage": [
+            192,
+            647
+          ],
+          "support_size": 48,
+          "uniform_positive_weight_on_support": 2
+        }
+      ],
+      "contrast_with_product_masks": "local/product deletions populate lower-order tensor modes and obey the frozen mask no-go; global parity cancels every lower-order mode and reaches the all-primes top eigenvalue",
+      "coordinate_contract": "L-106024 labels each local coordinate by an unordered pair {c,-c}; the Legendre symbol descends because (-1|p_i)=+1 and is balanced",
+      "denominator": "E_A=N/4*(product_i(m_i+1)+product_i(p_i))",
+      "direct_control": {
+        "all_legendre_tensor_eigenvalue": 65,
+        "closed_leverage_formula": "4/(product_i((m_i+1)/m_i)+product_i(p_i/m_i))",
+        "complete_tensor_leverage": [
+          4,
+          7
+        ],
+        "constant_tensor_eigenvalue": 21,
+        "denominator": [
+          258,
+          1
+        ],
+        "dimensions": [
+          2,
+          6
+        ],
+        "direct_matrix_audit": true,
+        "local_legendre_pair_vectors": [
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            1,
+            1,
+            -1,
+            -1
+          ]
+        ],
+        "native_amplitude": 12,
+        "optimizer": {
+          "denominator_1_G_A_1": [
+            258,
+            1
+          ],
+          "dual_energy": [
+            24,
+            43
+          ],
+          "support": [
+            0,
+            2,
+            3,
+            7,
+            10,
+            11
+          ],
+          "weights_N_G_A_1_over_E": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        "primes": [
+          5,
+          13
+        ],
+        "retained_canonical_pair_representatives": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "sharp_restricted_leverage": [
+          24,
+          43
+        ],
+        "support_size": 6,
+        "uniform_positive_weight_on_support": 2
+      },
+      "domain": "every finite set of distinct primes p_i congruent to 1 modulo 4",
+      "positive_optimizer": "G_A*1_A is constant, so the sharp weights are uniformly +2 on A; the gain uses no signed cancellation",
+      "sharp_leverage": "4/(product_i((m_i+1)/m_i)+product_i(p_i/m_i))",
+      "spectral_mechanism": "a=(1+w)/2 has Fourier support only on the constant tensor line and the all-primes Legendre line; G*w=(product_i p_i)*w",
+      "support": "under CRT, retain exactly the tuples with product_i(c_i|p_i)=+1; this is the quadratic-residue/Jacobi parity checkerboard"
+    },
+    "growing_prime_prefix_corollaries": {
+      "all_odd_primes_random_mask": {
+        "controls": [
+          {
+            "b_B_over_N_squared": [
+              3,
+              1
+            ],
+            "conductor_product_M": 15,
+            "d": 2,
+            "dimensions": [
+              1,
+              2
+            ],
+            "native_amplitude": 2,
+            "normalized_expected_denominator": [
+              2,
+              1
+            ],
+            "primes": [
+              3,
+              5
+            ],
+            "some_mask_leverage_upper_bound": [
+              1,
+              2
+            ],
+            "support_size": 1,
+            "trace": 16
+          },
+          {
+            "b_B_over_N_squared": [
+              28,
+              5
+            ],
+            "conductor_product_M": 15015,
+            "d": 5,
+            "dimensions": [
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            "native_amplitude": 180,
+            "normalized_expected_denominator": [
+              8446,
+              895
+            ],
+            "primes": [
+              3,
+              5,
+              7,
+              11,
+              13
+            ],
+            "some_mask_leverage_upper_bound": [
+              895,
+              8446
+            ],
+            "support_size": 90,
+            "trace": 1036800
+          },
+          {
+            "b_B_over_N_squared": [
+              90,
+              11
+            ],
+            "conductor_product_M": 3234846615,
+            "d": 9,
+            "dimensions": [
+              1,
+              2,
+              3,
+              5,
+              6,
+              8,
+              9,
+              11,
+              14
+            ],
+            "native_amplitude": 1995840,
+            "normalized_expected_denominator": [
+              2855049075,
+              21954229
+            ],
+            "primes": [
+              3,
+              5,
+              7,
+              11,
+              13,
+              17,
+              19,
+              23,
+              29
+            ],
+            "some_mask_leverage_upper_bound": [
+              21954229,
+              2855049075
+            ],
+            "support_size": 997920,
+            "trace": 2039489180467200
+          },
+          {
+            "b_B_over_N_squared": [
+              152,
+              15
+            ],
+            "conductor_product_M": 6541380665835015,
+            "d": 13,
+            "dimensions": [
+              1,
+              2,
+              3,
+              5,
+              6,
+              8,
+              9,
+              11,
+              14,
+              15,
+              18,
+              20,
+              21
+            ],
+            "native_amplitude": 226328256000,
+            "normalized_expected_denominator": [
+              6961404498047924,
+              3394923839985
+            ],
+            "primes": [
+              3,
+              5,
+              7,
+              11,
+              13,
+              17,
+              19,
+              23,
+              29,
+              31,
+              37,
+              41,
+              43
+            ],
+            "some_mask_leverage_upper_bound": [
+              3394923839985,
+              6961404498047924
+            ],
+            "support_size": 113164128000,
+            "trace": 419630935769100582912000000
+          }
+        ],
+        "exact_normalized_average": "2^d*N/(4*(N-1)) + b*(N-2)/(4*(N-1)), b=product_p((p+1)/(p-1))",
+        "finite_existence": "some half-density formal mask has denominator at least this average",
+        "imported_asymptotics": "Mertens gives b~C*(log x)^2; PNT gives log M~x and d~x/log x",
+        "leverage": "at most 2^(2-d)*(1+o(1))=exp(-(log 2+o(1))*log M/log log M)=M^(-log 2/log log M+o(1/log log M))",
+        "setup": "p ranges over 3<=p<=x, d=pi(x)-1, M=product p, s=N/2"
+      },
+      "comparison": "both formal correlated bounds are subpolynomial in M but far smaller than the complete tensor's order (log log M)^(-2) leverage",
+      "one_mod_four_explicit_checkerboard": {
+        "conductor_form": "M^(-log 2/log log M+o(1/log log M))",
+        "exact_bound": "sharp leverage < 2^(2-d), since every p_i/m_i>2",
+        "imported_asymptotics": "PNT in the progression 1 mod 4 gives log M~x/2 and d~x/(2 log x)~log M/log log M",
+        "realization": "explicit on the fixed source-owned CRT tensor coordinates; not an owner-varying FFPS condition or global moment theorem",
+        "setup": "p<=x, p congruent to 1 modulo 4, d=pi(x;4,1)"
+      }
+    },
+    "restricted_support_optimizer": {
+      "domain": "every nonempty joint support A of a tensor Gram G and every real or complex weight vector alpha with 1^*alpha=N",
+      "proof": "|1^*alpha|^2 <= (1^*G_A*1)*(alpha^*G_A^(-1)*alpha), with equality in weighted Cauchy-Schwarz exactly at the displayed alpha",
+      "sharp_energy": "N^2/(1_A^*G_A*1_A)",
+      "unique_extremizer": "alpha=N*G_A*1_A/(1_A^*G_A*1_A)"
+    },
+    "two_prime_theorem": {
+      "asymptotic": "as m,n tend to infinity, every optimal density tends to 2/3 and the optimal restricted leverage tends to 3/4",
+      "balanced_square_sum": "if s=a*t+b with 0<=b<t, R_t(s)=t*a^2+b*(2a+1)",
+      "distinct_prime_corollary": "for distinct p,q>=5, m,n>=2 are distinct and k=2 gives 2*(2*(m-1)*(n-1)-3)>0",
+      "existence": "balanced row and column degrees satisfy Gale-Ryser; the producer also constructs them by bipartite Havel-Hakimi",
+      "fixed_size_maximum": "E_max(s)=p*q*s+s^2-p*R_m(s)-q*R_n(s)",
+      "limit_profile": "E_max(floor(rho*m*n))/(m*n)^2 -> 4*rho-3*rho^2 uniformly",
+      "matching_gain": "E_(full-minus-k-matching)-E_full=k*(k+2*m*n-2*m-2*n-3)",
+      "search_reduction": "the 2^(m*n) support search reduces exactly to m*n nonempty sizes",
+      "setup": "p=2m+1, q=2n+1, G=(pI_m-J_m) tensor (qI_n-J_n)",
+      "support_energy": "E_A=p*q*s+s^2-p*sum_i(r_i^2)-q*sum_j(c_j^2)"
+    }
+  },
+  "firewalls": [
+    "An arbitrary subset of joint sign-pair coordinates is a formal restricted-Gram mask; the packet does not construct an arithmetic condition realizing that subset in corrected FFPS.",
+    "The Legendre checkerboard is explicitly realizable on one fixed source-owned CRT tensor of unordered {c,-c} coordinates. This does not realize it across varying owners or conductors.",
+    "The exact random-fixed-size formula is an expectation. It proves existence of a mask with energy at least the average, not exact attainment of a generally fractional average.",
+    "The signed complete-frame no-go and this restricted-Gram gain use different metrics: a principal block of G^(-1) is not generally the inverse of the corresponding principal block of G.",
+    "No global FFPS mixed, double, centered-incidence, or principal moment is proved; no conductor loss is paid.",
+    "No principal member is individualized, and no RH or GRH statement is proved.",
+    "The fixed-d asymptotic is not uniform in growing d and is not a global compatible-system or Euler-product theorem.",
+    "The growing-d prime-prefix corollaries are separate exact half-density bounds plus imported classical prime asymptotics; they prove no WCADD, WCKUM, BPOE, SOCM, or global FFPS moment estimate.",
+    "No external novelty claim is made."
+  ],
+  "packet_manifest": {
+    "note": {
+      "lf_sha256": "38d178c0bed51daca67bd963523cd5db3cf35367f8b9474206b9f803325e7106",
+      "path": "research/l-families/atlas/function_field/FFPS_CORRELATED_MASK_AMPLIFIER.md"
+    },
+    "producer": {
+      "lf_sha256": "fc2f92f4348296e86e5cf856ed6d3aa536dba2ae1776d56b941fd9b0cf70d215",
+      "path": "research/l-families/atlas/function_field/ffps_correlated_mask_amplifier.py"
+    },
+    "test": {
+      "lf_sha256": "43801f9abdf5e3981a88f52fc61452e8fd749fb95ec42ec107546e5278454c7a",
+      "path": "tests/test_ffps_correlated_mask_amplifier.py"
+    }
+  },
+  "payload_sha256": "ee6c66844a15b4d6a29a6cf5dc252a5efdd5cc8b6052dcd9c27bf76dbe03269a",
+  "resource_contract": {
+    "actual_enumerated_subsets": 1152,
+    "actual_exact_operations": 7793,
+    "actual_matrix_cells": 530,
+    "actual_source_bytes": 96439,
+    "actual_source_files": 8,
+    "actual_two_prime_size_scan": 1426,
+    "arithmetic": "exact integers and rational numbers only; no floats",
+    "maximum_enumerated_subsets": 2048,
+    "maximum_exact_operations": 100000,
+    "maximum_matrix_cells": 50000,
+    "maximum_packet_file_bytes": 65536,
+    "maximum_source_bytes_each": 40000,
+    "maximum_source_bytes_total": 131072,
+    "maximum_source_files": 8,
+    "maximum_tensor_dimension": 16,
+    "maximum_two_prime_size_scan": 2000,
+    "maximum_wall_seconds": 5.0,
+    "operation_counts": {
+      "balanced_support_edges": 975,
+      "gauss_jordan_eliminate": 456,
+      "gauss_jordan_scale": 104,
+      "kronecker_cells": 296,
+      "matching_gain_controls": 10,
+      "matrix_total": 100,
+      "matrix_trace": 14,
+      "matrix_vector": 536,
+      "quadratic_form": 22,
+      "subset_energy_cells": 5280
+    },
+    "operations_before_sources": 7793,
+    "subsets_before_sources": 1152
+  },
+  "schema": "riemann.function_field.ffps_correlated_mask_amplifier.v1",
+  "scope": {
+    "arbitrary_d_expectation": "every tensor order d with N>=2",
+    "characters_enumerated": 0,
+    "checkerboard": "every finite set of distinct primes p congruent to 1 mod 4",
+    "conductors_enumerated": 0,
+    "finite_fields_enumerated": 0,
+    "formal_tensor_gram": "G=tensor_i((2*m_i+1)I_(m_i)-J_(m_i))",
+    "l_functions_enumerated": 0,
+    "prime_corollary": "every pair of distinct odd primes p,q>=5",
+    "prime_prefix_asymptotics": "formal consequences of the exact bounds plus classical Mertens, PNT, and PNT in the fixed progression 1 mod 4",
+    "random_samples": 0,
+    "two_prime_fixed_size_theorem": "all positive integers m,n",
+    "weights": "arbitrary real or complex scalars on a retained joint support"
+  },
+  "source_manifest": [
+    {
+      "bytes": 12387,
+      "commit": "5c9462064aefe43164fcf5bc0b6d76b575e67a49",
+      "git_blob": "d96cd12a5fbfe86b63d9c6b7076c8a99aa139f4c",
+      "id": "principal_json",
+      "lf_sha256": "cdf514d8f8b76b7d2569ea6852c8f4dcc8590c0ad72822d3bee711711cfd3ee3",
+      "path": "research/l-families/atlas/function_field/ffps_principal_leverage.json",
+      "role": "corrected local Gram G_p=pI-J and tensor leverage",
+      "schema": "riemann.function_field.ffps_principal_leverage.v2"
+    },
+    {
+      "bytes": 6703,
+      "commit": "5c9462064aefe43164fcf5bc0b6d76b575e67a49",
+      "git_blob": "e7cb9133bb6b57ddbb1c7f1e350f1d2d0af7bd1a",
+      "id": "principal_note",
+      "lf_sha256": "6b3a0958422f01b44b7702b1088f4e13926d5d11a7725bde2582cd2d371b07e6",
+      "path": "research/l-families/atlas/function_field/FFPS_PHYSICAL_SQUARECLASS_ADAPTER.md",
+      "role": "physical-squareclass interpretation and scope firewall"
+    },
+    {
+      "bytes": 17390,
+      "commit": "d6cdca528f664acb8fd9e33541f855faa45bb5ca",
+      "git_blob": "1aa8ea28e164a8389b66b6b780d5e081e6a96848",
+      "id": "mask_json",
+      "lf_sha256": "fe6024020775e977e3dfe31822137b579c9cef438f9e94666714179ed43d469b",
+      "path": "research/l-families/atlas/function_field/ffps_conditioned_mask_no_go.json",
+      "role": "local and product-coordinate restricted-mask no-go",
+      "schema": "riemann.function_field.ffps_conditioned_mask_no_go.v1"
+    },
+    {
+      "bytes": 4922,
+      "commit": "d6cdca528f664acb8fd9e33541f855faa45bb5ca",
+      "git_blob": "c300500a1563c5299f3ddffd47571309511bb563",
+      "id": "mask_note",
+      "lf_sha256": "0a3d7d30780b48de82bb2203e1b1ff0eed7912e348b91be329bc202f945b0524",
+      "path": "research/l-families/atlas/function_field/FFPS_CONDITIONED_MASK_NO_GO.md",
+      "role": "restricted metric and product-mask boundary"
+    },
+    {
+      "bytes": 9926,
+      "commit": "7d1da8cc11718f138897cd36e8cc83a77c4f65d6",
+      "git_blob": "eb21ae1cdd158395d3547b946f2ee25a84e23e05",
+      "id": "frontier_json",
+      "lf_sha256": "f6b65bb4a8cdaaa7c91464d8fba86b7691350bf14cdcc8a68c90848be6f89d51",
+      "path": "research/l-families/atlas/function_field/ffps_coherent_tensor_cost_frontier.json",
+      "role": "complete-tensor conductor-cost frontier",
+      "schema": "riemann.function_field.ffps_coherent_tensor_cost_frontier.v1"
+    },
+    {
+      "bytes": 4369,
+      "commit": "7d1da8cc11718f138897cd36e8cc83a77c4f65d6",
+      "git_blob": "292487efca3df3971518edba0c0b23b830be2c16",
+      "id": "frontier_note",
+      "lf_sha256": "037ec4751504d2387a87e606dbd8eb74dbcc3abb554ccb77ee449fd838a4583e",
+      "path": "research/l-families/atlas/function_field/FFPS_COHERENT_TENSOR_COST_FRONTIER.md",
+      "role": "formal tensor and global-moment firewall"
+    },
+    {
+      "bytes": 31134,
+      "commit": "4347a83499f697e3a73393c212507e74f927a2f2",
+      "git_blob": "5f666e6a6ada7cd79eb9af27038ad64d599d4eee",
+      "id": "signed_json",
+      "lf_sha256": "d9d2bd40bbbd22caba3fe67dd2967f092195e5fe7cdff479c21ff6b6c04062aa",
+      "path": "research/l-families/atlas/function_field/ffps_tensor_signed_amplifier_no_go.json",
+      "payload_sha256": "a61fe11c49e38630762931971c573a87be1763974f9a7ee599ccf10f915c1e95",
+      "role": "complete-frame signed no-go and correlated-mask warning",
+      "schema": "riemann.function_field.ffps_tensor_signed_amplifier_no_go.v1"
+    },
+    {
+      "bytes": 9608,
+      "commit": "4347a83499f697e3a73393c212507e74f927a2f2",
+      "git_blob": "1ce6a9c461d5937f4d6bb2de9f430b466ff1e78c",
+      "id": "signed_note",
+      "lf_sha256": "85bbfdc3f3d137fa6d9a56d0f5445ad131c3628ecb29286155dce5864c8f7929",
+      "path": "research/l-families/atlas/function_field/FFPS_TENSOR_SIGNED_AMPLIFIER_NO_GO.md",
+      "role": "metric distinction and exact (5,7) seed example"
+    }
+  ],
+  "source_relationship": {
+    "live_L_106024_blob": "d94787dc2cd1cedd74d33ddc6269daf8de1cc061",
+    "live_audited_head": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+    "live_pr": 751,
+    "local_gram_unchanged": true,
+    "relationship_to_frontier": "the existing conductor frontier concerns the unmasked complete tensor; formal correlated masks do not by themselves alter its arithmetic realization",
+    "relationship_to_local_mask_packet": "the local/product-mask no-go remains valid; the improvement requires a non-product joint support",
+    "relationship_to_signed_packet": "the committed signed packet closes the complete inverse-metric problem and explicitly leaves correlated restricted-Gram deletion open; the present theorem is logically independent and closes that formal optimization"
+  },
+  "status": "EXACT_FORMAL_CORRELATED_RESTRICTED_GRAM_OPTIMIZATION"
+}
