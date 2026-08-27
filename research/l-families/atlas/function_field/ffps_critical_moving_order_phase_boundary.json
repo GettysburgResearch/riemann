@@ -1,0 +1,135 @@
+{
+  "constants": {
+    "critical_boundary_constant": 0.1586528115844149,
+    "natural_log_2": 0.6931471805599453,
+    "variance_sigma_squared": 0.1586528115844149
+  },
+  "endpoint_rows": [
+    {
+      "decay_ratio": 1.0001569490806503,
+      "exact_ladder_decay": 100.01569490806503,
+      "high_precision_minus_float_ceiling": 0,
+      "log_T_star": 8.325546111576978,
+      "log_X": 100.0,
+      "log_order": 10.204887601816106,
+      "order_is_subpower_ratio": 0.10204887601816105,
+      "predicted_ladder_decay": 100.0,
+      "smoother_stair_decay": 76.24618986159399,
+      "stair_decay_over_log_X": 0.7624618986159399
+    },
+    {
+      "decay_ratio": 1.0000000001417766,
+      "exact_ladder_decay": 400.00000005671063,
+      "high_precision_minus_float_ceiling": 0,
+      "log_T_star": 16.651092223153956,
+      "log_X": 400.0,
+      "log_order": 25.469682860029355,
+      "order_is_subpower_ratio": 0.06367420715007338,
+      "predicted_ladder_decay": 400.0,
+      "smoother_stair_decay": 350.73247336333236,
+      "stair_decay_over_log_X": 0.8768311834083309
+    },
+    {
+      "decay_ratio": 1.0000000000000022,
+      "exact_ladder_decay": 1600.0000000000034,
+      "high_precision_minus_float_ceiling": -6368434528,
+      "log_T_star": 33.30218444630791,
+      "log_X": 1600.0,
+      "log_order": 57.385572945209375,
+      "order_is_subpower_ratio": 0.03586598309075586,
+      "predicted_ladder_decay": 1600.0,
+      "smoother_stair_decay": 1498.5842043706018,
+      "stair_decay_over_log_X": 0.9366151277316261
+    },
+    {
+      "decay_ratio": 1.0000000000000067,
+      "exact_ladder_decay": 6400.000000000043,
+      "high_precision_minus_float_ceiling": -680698839639693153022901912205611511234,
+      "log_T_star": 66.60436889261582,
+      "log_X": 6400.0,
+      "log_order": 122.6036474767053,
+      "order_is_subpower_ratio": 0.019156819918235205,
+      "predicted_ladder_decay": 6400.0,
+      "smoother_stair_decay": 6189.804322400311,
+      "stair_decay_over_log_X": 0.9671569253750486
+    }
+  ],
+  "phase_rows": [
+    {
+      "alpha": 0.0,
+      "certified_margin_over_log_X": 0.9665319253750486,
+      "constant_over_variance": 0.25,
+      "ladder_decay_over_log_X": 0.0006250000000000037,
+      "stair_decay_over_log_X": 0.9671569253750486
+    },
+    {
+      "alpha": 0.5,
+      "certified_margin_over_log_X": 0.9171569253750483,
+      "constant_over_variance": 0.25,
+      "ladder_decay_over_log_X": 0.050000000000000336,
+      "stair_decay_over_log_X": 0.9671569253750486
+    },
+    {
+      "alpha": 1.0,
+      "certified_margin_over_log_X": -1.0328430746249646,
+      "constant_over_variance": 0.5,
+      "ladder_decay_over_log_X": 2.0000000000000133,
+      "stair_decay_over_log_X": 0.9671569253750486
+    },
+    {
+      "alpha": 1.0,
+      "certified_margin_over_log_X": -0.03284307462495804,
+      "constant_over_variance": 1.0,
+      "ladder_decay_over_log_X": 1.0000000000000067,
+      "stair_decay_over_log_X": 0.9671569253750486
+    },
+    {
+      "alpha": 1.0,
+      "certified_margin_over_log_X": 0.46715692537504533,
+      "constant_over_variance": 2.0,
+      "ladder_decay_over_log_X": 0.5000000000000033,
+      "stair_decay_over_log_X": 0.9671569253750486
+    }
+  ],
+  "phase_theorem": {
+    "canonical_boundary_order": "m_dagger(X)=ceil(sigma^2*T_*^2/log X)",
+    "criterion": "RH iff E_{m_dagger(X)}(X)=X^o(1)",
+    "critical_frequency": "T_*(X)=exp(sqrt(log(2)*log(X)))",
+    "order_family": "m_{alpha,c}(X)=ceil(c*T_*^2/(log X)^alpha)",
+    "proved_equivalence_region": "0<=alpha<1 and c>0, or alpha=1 and c>=sigma^2"
+  },
+  "proof_ledger": {
+    "RH_or_GRH": "NOT PROVED",
+    "beta_energy_estimate": "NOT PROVED",
+    "boundary_constant_sigma_squared": "PROVED FOR THIS COMPARISON",
+    "criterion_failure_below_boundary": "NOT PROVED",
+    "low_high_window_comparison": "PROVED",
+    "phase_region_RH_equivalence": "PROVED",
+    "uniform_small_argument_ladder_expansion": "PROVED"
+  },
+  "resource_caps": {
+    "finite_field_elements": 0,
+    "log_horizons": 4,
+    "phase_rows": 5,
+    "primes": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "microscope_commit": "d30994d59d27adb6d9686a10854ae097092bf54b",
+    "microscope_git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_FIXED_SUPPORT_BETA_MESOSCOPIC_MICROSCOPE.md": "1690fbbe217030c23bbed6d18954ebd44c3fce92",
+      "research/l-families/atlas/function_field/ffps_fixed_support_beta_mesoscopic_microscope.json": "5a970b9d687f1809617c37136b5f4646ea9a10e7",
+      "research/l-families/atlas/function_field/ffps_fixed_support_beta_mesoscopic_microscope.py": "c29cb7b79f12e0dbc77cf631b9aeb6a80c63648a",
+      "tests/test_ffps_fixed_support_beta_mesoscopic_microscope.py": "845e89e23f5c29214d018c3976a483605c7134b4"
+    },
+    "smoother_commit": "b631040b76d696dbc69cadde7af240077f605c94",
+    "smoother_git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_INFINITE_DYADIC_BOX_BANDPASS_SMOOTHER.md": "01d3ea427883fb761f6301f71d9dd05c552c5056",
+      "research/l-families/atlas/function_field/ffps_infinite_dyadic_box_bandpass_smoother.json": "7a38b5f943a8dc1c0afde8d1cc91f35118b767ca",
+      "research/l-families/atlas/function_field/ffps_infinite_dyadic_box_bandpass_smoother.py": "2ba0f30c9bd67cdb01af639d320daf8133b5bb77",
+      "tests/test_ffps_infinite_dyadic_box_bandpass_smoother.py": "d6a30d654d46edfa01add55cec55b0b3253a12b0"
+    }
+  }
+}
