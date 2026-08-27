@@ -1,0 +1,178 @@
+{
+  "bounded_replay": {
+    "common_lattice_scale": {
+      "beta_weighted_max_square": "248554/14625",
+      "common_lattice": "all prefixes use one guarded period and the same weighted frequency coordinates before the scale supremum",
+      "frequency_count": 3,
+      "ordinary_weighted_max_square": "37153/2340",
+      "qfree_weighted_max_square": "200/13",
+      "scale_depth": 9,
+      "single_filter_bounds": [
+        "148612/14625",
+        "37153/1625"
+      ],
+      "squared_filter_bounds": [
+        "2048/325",
+        "10368/325"
+      ],
+      "toy_modulus": "1/5"
+    },
+    "ell2_linfty": {
+      "rows": [
+        {
+          "coordinate_count": 1,
+          "energy": "1/4",
+          "energy_over_maximum": "1",
+          "maximum_square": "1/4"
+        },
+        {
+          "coordinate_count": 2,
+          "energy": "17/9",
+          "energy_over_maximum": "17/16",
+          "maximum_square": "16/9"
+        },
+        {
+          "coordinate_count": 3,
+          "energy": "49/8",
+          "energy_over_maximum": "98/81",
+          "maximum_square": "81/16"
+        },
+        {
+          "coordinate_count": 4,
+          "energy": "354/25",
+          "energy_over_maximum": "177/128",
+          "maximum_square": "256/25"
+        },
+        {
+          "coordinate_count": 5,
+          "energy": "979/36",
+          "energy_over_maximum": "979/625",
+          "maximum_square": "625/36"
+        },
+        {
+          "coordinate_count": 6,
+          "energy": "325/7",
+          "energy_over_maximum": "2275/1296",
+          "maximum_square": "1296/49"
+        },
+        {
+          "coordinate_count": 7,
+          "energy": "1169/16",
+          "energy_over_maximum": "668/343",
+          "maximum_square": "2401/64"
+        },
+        {
+          "coordinate_count": 8,
+          "energy": "2924/27",
+          "energy_over_maximum": "2193/1024",
+          "maximum_square": "4096/81"
+        },
+        {
+          "coordinate_count": 9,
+          "energy": "15333/100",
+          "energy_over_maximum": "5111/2187",
+          "maximum_square": "6561/100"
+        },
+        {
+          "coordinate_count": 10,
+          "energy": "2303/11",
+          "energy_over_maximum": "25333/10000",
+          "maximum_square": "10000/121"
+        },
+        {
+          "coordinate_count": 11,
+          "energy": "19987/72",
+          "energy_over_maximum": "3634/1331",
+          "maximum_square": "14641/144"
+        },
+        {
+          "coordinate_count": 12,
+          "energy": "4670/13",
+          "energy_over_maximum": "30355/10368",
+          "maximum_square": "20736/169"
+        }
+      ],
+      "subpower_consequence": "when N(X)=X^o(1), the squared ell2 and squared ell-infinity targets are exponent-equivalent",
+      "theorem": "max_j|z_j|^2<=sum_j|z_j|^2<=N*max_j|z_j|^2"
+    },
+    "weight_mass": {
+      "central_weight": "0",
+      "field": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "identity": "(1/L)*sum_k|Bhat(t_k)|^2=||B||_2^2",
+      "period_cells": 4,
+      "spatial_energy": "2",
+      "total_weight": "2",
+      "weight_mass": [
+        "0",
+        "1/2",
+        "1",
+        "1/2"
+      ]
+    }
+  },
+  "maximal_common_lattice": {
+    "beta_vs_67free": "(1-67^-1/2)^4 W_A <= W_beta <= (1+67^-1/2)^4 W_A",
+    "beta_vs_mobius": "(1-67^-1/2)^2 W_M <= W_beta <= (1+67^-1/2)^2 W_M",
+    "definition": "W_F(X)=sup_(1<=Y<=X) max_(0<|k|<=K_*(X)) |Bhat(t_k)|^2|F_Y(t_k)|^2/L_X",
+    "rh_equivalence": "RH iff W_beta(X)=X^o(1)",
+    "verdict": "the exceptional source filter creates no hidden small single-frequency witness direction"
+  },
+  "resource_caps": {
+    "floating_point_operations": 0,
+    "primes_enumerated": 0,
+    "toy_fourier_cells": 4,
+    "toy_frequency_count": 3,
+    "toy_scale_depth": 9,
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "continuum_replaced_by_exact_lattice": true,
+    "raw_unweighted_pointwise_bound_equivalent": false,
+    "retained_witness_estimate_proved": false,
+    "rh_or_grh_proved": false,
+    "subpower_lattice_replaced_by_weighted_maximum": true
+  },
+  "single_witness": {
+    "coordinate": "Z_X(k)=L_X^(-1/2)*Bhat(t_(k,X))*D_X(t_(k,X))",
+    "finite_comparison": "max_(0<|k|<=K_*)|Z_X(k)|^2 <= Q_*(X) <= 2*K_*(X)*max_(0<|k|<=K_*)|Z_X(k)|^2",
+    "off_rh_witness": "if RH fails, some epsilon>0, unbounded X_j, and retained k_j have |Z_(X_j)(k_j)|^2>=X_j^epsilon",
+    "rh_equivalence": "RH iff max_(0<|k|<=K_*)|Z_X(k)|^2=X^o(1)",
+    "unweighted_warning": "the equivalent maximum is the weighted coordinate Z_X(k), not the raw D_X(t_k); Bhat can be very small"
+  },
+  "source_contract": {
+    "commit": "8192514ed68f50b8e2a9cff9e1bedab2478bb5c1",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_CRITICAL_BETA_FOURIER_LATTICE_COMPRESSION.md": "2334c471d37456acd974765d15c21122f65d01b1",
+      "research/l-families/atlas/function_field/FFPS_DUPLICATE67_CRITICAL_SCALE_FILTER_FIREWALL.md": "3a66ff2c438945ba3c25193fa6c36734e59bc09f",
+      "research/l-families/atlas/function_field/ffps_critical_beta_fourier_lattice_compression.json": "9cc5d8cf91a00fb18a5a416c0c1a4c8963ff4986",
+      "research/l-families/atlas/function_field/ffps_critical_beta_fourier_lattice_compression.py": "ad0fe111e1cd4be4a56f0da8171fe5cc6cec4d14",
+      "research/l-families/atlas/function_field/ffps_duplicate67_critical_scale_filter_firewall.json": "60d20a60b378fc22632195a4c9f1c6d6eff916dc",
+      "research/l-families/atlas/function_field/ffps_duplicate67_critical_scale_filter_firewall.py": "4a67f44518dad3116aed2b23716cbfbeccea131d",
+      "tests/test_ffps_critical_beta_fourier_lattice_compression.py": "3c71d664649a9cfd3f5840f5ccfa0b6487bb7b67",
+      "tests/test_ffps_duplicate67_critical_scale_filter_firewall.py": "b63c96d25d5c4829ed6854785464c528959d885b"
+    },
+    "imports": "critical Fourier-lattice compression and duplicate-67 maximal scale-filter firewall"
+  },
+  "weight_probability": {
+    "critical_retained_mass": "||B||_2^2+O(X^(-1+o(1)))",
+    "full_mass": "(1/L_X)*sum_(k in Z)|Bhat(t_k)|^2=||B||_2^2 exactly",
+    "probability_view": "after normalizing retained weights, Q_*(X) is total retained weight times E_pi |D_X(t_k)|^2"
+  }
+}
