@@ -1,0 +1,3 @@
+import RiemannComparatorSolution.XiPickOrderThreeConditional
+
+#print axioms XiPickOrderThreeConditional_psd

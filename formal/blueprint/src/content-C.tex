@@ -1,1 +1,96 @@
-% Reviewer C owns this file after bootstrap merge.
+\section{Finite operator algebra, exact reserve interfaces, and firewalls}
+
+Reviewer C preserves the kernel-checked finite operator layer and repairs the
+actual--Xi wrapper after independent cross-review.  The Riemann Hypothesis
+remains unproved.
+
+\subsection{Exact finite Pick algebra}
+
+For $F(x)=x p(x^2)$, put
+\[
+  H_{ij}=\frac{x_i p_i+x_j p_j}{x_i+x_j}.
+\]
+The exact two-point determinant identity and the three-node factorization into
+the reciprocal and companion second divided differences are formalized by
+\lean{RiemannFormal.Operator.two_point_pick_identity} and
+\lean{RiemannFormal.Operator.three_node_pick_determinant_identity}.
+Semantic ID: \texttt{OPERATOR.XI.PICK\_ORDER3.DETERMINANT}.
+
+The LDL layer keeps PSD and PD separate.  A nonnegative three-node determinant
+produces PSD under the strict leading pivots; PD requires a strict determinant.
+Duplicate-row congruences for the $12$, $13$, and $23$ repetition patterns are
+proved separately.
+
+\subsection{Concrete external and actual--Xi data}
+
+The conditional headline uses the explicit normalization
+\[
+ \xi(s)=\tfrac12s(s-1)\Lambda(s),\qquad
+ \Xi(z)=\xi(\tfrac12+z),\qquad
+ p(x)=\operatorname{Re}\frac{\Xi'(x)}{x\Xi(x)}.
+\]
+The external verified-height proposition states the exact height
+$3{,}000{,}175{,}332{,}800$ and the precise critical-line conclusion.  Its
+bibliographic/artifact lock and normalized statement SHA-256 are independent of
+the local repository claim SHA.
+
+The grouped actual--Xi interface includes injective reflected and critical
+representative enumerations, analytic-order multiplicities, locally uniform
+convergence of the value and first two derivatives on $t>1/4$, one selected
+low critical reserve, and the residual $(m_0-1)R_0$.  A separate exact
+paid-prefix interface records the unspent reserve, paid off-line blocks, all
+other critical blocks, and convergence of those nonnegative finite curvatures
+to the actual--Xi jet.
+
+\subsection{Source-specific reciprocal curvature}
+
+For one reflected off-line orbit, the formalization proves the exact defect and
+cross-curvature formulas, including
+\[
+ \epsilon=\frac{2m\kappa}{1-\kappa},
+ \qquad \epsilon\le \frac{9m}{b^2}
+\]
+from the concrete conditions $0<a<1/2$, $b>H_*$ and
+$\gamma_0\le H_*/2$; the caller supplies no payment inequality.  The declarations are
+\lean{RiemannFormal.Operator.reflectedOffLine_cross_curvature_exact} and
+\lean{RiemannFormal.Operator.reflectedOffLineOrbit_absorbed_reviewed}.
+Semantic ID: \texttt{OPERATOR.XI.RECIPROCAL\_CONCAVITY.ONE\_ORBIT}.
+
+The global finite-prefix allocation has nonnegative shares and tails, pays every
+listed orbit, consumes total reserve at most one, and retains a nonnegative
+leftover with an exact one-use identity.  The reciprocal-square tail and its
+numerical budget remain explicit theorem inputs.
+\notready
+\lean{RiemannFormal.Operator.buildLockedActualXiReserveAllocation}
+Semantic ID: \texttt{OPERATOR.XI.CRITICAL\_RESERVE\_BUDGET}.
+
+\subsection{Actual--Xi order three}
+
+The repaired headline
+\lean{RiemannFormal.Operator.actualXiPickOrderThreeConditional}
+uses the concrete publication theorem, source lock, grouped $C^2$ expansion,
+multiplicity residual, one-use reserve allocation, source-faithful paid-prefix
+$C^2$ convergence, and exact scalar curvature bridges.  Repeated positive nodes are not assumed positive semidefinite: equal
+squares imply equal nodes and duplicate rows/columns reduce to the order-two
+actual--Xi theorem.
+
+\notready
+The formal verdict is \texttt{PROVED\_CONDITIONAL}.  The conclusion records PSD for every positive packet of sizes one, two, and
+three.  It does not assert distinct-node positive
+definiteness, order four, or RH.
+Semantic ID: \texttt{OPERATOR.XI.PICK\_ORDER3}.
+
+\subsection{Operator no-go theorems}
+
+The trusted refutation modules retain exact finite witnesses proving that:
+\begin{itemize}
+\item a positive Schur complement cannot repair an existing negative direction;
+\item an $\ell^2$ coefficient budget does not imply coherent contraction;
+\item small negative inertia does not control positive current;
+\item the hyperbolic pole block is not two positive squares;
+\item positive excess does not orient an arbitrary square root;
+\item a scalar diagonal does not determine a polarized Gram matrix.
+\end{itemize}
+
+The heat displacement result remains a finite parity fixture only.  SACF,
+UOSACF, fixed-center heat, the constant-four frontier, and RH remain unproved.
