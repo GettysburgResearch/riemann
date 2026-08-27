@@ -1,0 +1,385 @@
+{
+  "classical_external_input": {
+    "rescaled_consequence": "distance of x^(r+1) from degree-r polynomials on [0,1] is 2^(-2r-1)",
+    "source": "NIST DLMF section 18.38",
+    "statement_used": "the monic Chebyshev polynomial has least uniform norm on [-1,1]",
+    "url": "https://dlmf.nist.gov/18.38"
+  },
+  "proof_ledger": {
+    "BV_extremizer_also_minimizes_sup_plus_variation": "PROVED",
+    "RH_or_GRH": "NOT PROVED",
+    "exact_sup_variation_and_L2_energy": "PROVED EXACT",
+    "new_beta_cancellation_or_unconditional_estimate": "NOT PROVED",
+    "sharp_zero_extended_BV_variation_bound": "PROVED FROM CLASSICAL MINIMAX INPUT",
+    "step_to_smooth_energy_ratio_and_limit": "PROVED",
+    "unique_alternating_step_extremizer": "PROVED"
+  },
+  "resource_caps": {
+    "beta_terms": 0,
+    "curve_computations": 0,
+    "maximum_atoms": 8,
+    "maximum_information_order": 6,
+    "primes": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "root_searches": 0,
+    "zeta_zeros": 0
+  },
+  "sharp_BV_theorem": {
+    "complete_BV_size_optimum": "the alternating step kernel simultaneously attains the sharp supremum and variation bounds, so it uniquely minimizes their sum",
+    "energy_gap": "step_energy/(C_r*b^2)=2^(4r)/((2r+1)*binom(2r,r)^2), tending to pi/2",
+    "exact_BV_size": "||K||_infty+Var(K)=r!*2^(2r)*(2r+3)*|b|",
+    "exact_step_energy": "||K||_2^2=(r!)^2*2^(4r)*b^2",
+    "rows": [
+      {
+        "BV_size_sup_plus_variation": "3",
+        "L1_minimax_error": "1",
+        "atoms": [
+          {
+            "node_rounded": "1.000000000000",
+            "weight": "-1"
+          },
+          {
+            "node_rounded": "0.000000000000",
+            "weight": "1"
+          }
+        ],
+        "information_order": 0,
+        "minimax_error": "1/2",
+        "monic_L1_residual_coefficients": [
+          "1"
+        ],
+        "monic_residual_coefficients": [
+          "-1/2",
+          "1"
+        ],
+        "sharp_smooth_energy": 1,
+        "sharp_supremum": "1",
+        "sharp_variation": "2",
+        "step_energy": "1",
+        "step_height": "1",
+        "step_to_smooth_energy_ratio": "1",
+        "weight_scale": "2"
+      },
+      {
+        "BV_size_sup_plus_variation": "20",
+        "L1_minimax_error": "1/4",
+        "atoms": [
+          {
+            "node_rounded": "1.000000000000",
+            "weight": "4"
+          },
+          {
+            "node_rounded": "0.500000000000",
+            "weight": "-8"
+          },
+          {
+            "node_rounded": "0.000000000000",
+            "weight": "4"
+          }
+        ],
+        "information_order": 1,
+        "minimax_error": "1/8",
+        "monic_L1_residual_coefficients": [
+          "-1/2",
+          "1"
+        ],
+        "monic_residual_coefficients": [
+          "1/8",
+          "-1",
+          "1"
+        ],
+        "sharp_smooth_energy": 12,
+        "sharp_supremum": "4",
+        "sharp_variation": "16",
+        "step_energy": "16",
+        "step_height": "4",
+        "step_to_smooth_energy_ratio": "4/3",
+        "weight_scale": "8"
+      },
+      {
+        "BV_size_sup_plus_variation": "224",
+        "L1_minimax_error": "1/16",
+        "atoms": [
+          {
+            "node_rounded": "1.000000000000",
+            "weight": "-32"
+          },
+          {
+            "node_rounded": "0.750000000000",
+            "weight": "64"
+          },
+          {
+            "node_rounded": "0.250000000000",
+            "weight": "-64"
+          },
+          {
+            "node_rounded": "0.000000000000",
+            "weight": "32"
+          }
+        ],
+        "information_order": 2,
+        "minimax_error": "1/32",
+        "monic_L1_residual_coefficients": [
+          "3/16",
+          "-1",
+          "1"
+        ],
+        "monic_residual_coefficients": [
+          "-1/32",
+          "9/16",
+          "-3/2",
+          "1"
+        ],
+        "sharp_smooth_energy": 720,
+        "sharp_supremum": "32",
+        "sharp_variation": "192",
+        "step_energy": "1024",
+        "step_height": "32",
+        "step_to_smooth_energy_ratio": "64/45",
+        "weight_scale": "64"
+      },
+      {
+        "BV_size_sup_plus_variation": "3456",
+        "L1_minimax_error": "1/64",
+        "atoms": [
+          {
+            "node_rounded": "1.000000000000",
+            "weight": "384"
+          },
+          {
+            "node_rounded": "0.853553390593",
+            "weight": "-768"
+          },
+          {
+            "node_rounded": "0.500000000000",
+            "weight": "768"
+          },
+          {
+            "node_rounded": "0.146446609407",
+            "weight": "-768"
+          },
+          {
+            "node_rounded": "0.000000000000",
+            "weight": "384"
+          }
+        ],
+        "information_order": 3,
+        "minimax_error": "1/128",
+        "monic_L1_residual_coefficients": [
+          "-1/16",
+          "5/8",
+          "-3/2",
+          "1"
+        ],
+        "monic_residual_coefficients": [
+          "1/128",
+          "-1/4",
+          "5/4",
+          "-2",
+          "1"
+        ],
+        "sharp_smooth_energy": 100800,
+        "sharp_supremum": "384",
+        "sharp_variation": "3072",
+        "step_energy": "147456",
+        "step_height": "384",
+        "step_to_smooth_energy_ratio": "256/175",
+        "weight_scale": "768"
+      },
+      {
+        "BV_size_sup_plus_variation": "67584",
+        "L1_minimax_error": "1/256",
+        "atoms": [
+          {
+            "node_rounded": "1.000000000000",
+            "weight": "-6144"
+          },
+          {
+            "node_rounded": "0.904508497187",
+            "weight": "12288"
+          },
+          {
+            "node_rounded": "0.654508497187",
+            "weight": "-12288"
+          },
+          {
+            "node_rounded": "0.345491502813",
+            "weight": "12288"
+          },
+          {
+            "node_rounded": "0.095491502813",
+            "weight": "-12288"
+          },
+          {
+            "node_rounded": "0.000000000000",
+            "weight": "6144"
+          }
+        ],
+        "information_order": 4,
+        "minimax_error": "1/512",
+        "monic_L1_residual_coefficients": [
+          "5/256",
+          "-5/16",
+          "21/16",
+          "-2",
+          "1"
+        ],
+        "monic_residual_coefficients": [
+          "-1/512",
+          "25/256",
+          "-25/32",
+          "35/16",
+          "-5/2",
+          "1"
+        ],
+        "sharp_smooth_energy": 25401600,
+        "sharp_supremum": "6144",
+        "sharp_variation": "61440",
+        "step_energy": "37748736",
+        "step_height": "6144",
+        "step_to_smooth_energy_ratio": "16384/11025",
+        "weight_scale": "12288"
+      },
+      {
+        "BV_size_sup_plus_variation": "1597440",
+        "L1_minimax_error": "1/1024",
+        "atoms": [
+          {
+            "node_rounded": "1.000000000000",
+            "weight": "122880"
+          },
+          {
+            "node_rounded": "0.933012701892",
+            "weight": "-245760"
+          },
+          {
+            "node_rounded": "0.750000000000",
+            "weight": "245760"
+          },
+          {
+            "node_rounded": "0.500000000000",
+            "weight": "-245760"
+          },
+          {
+            "node_rounded": "0.250000000000",
+            "weight": "245760"
+          },
+          {
+            "node_rounded": "0.066987298108",
+            "weight": "-245760"
+          },
+          {
+            "node_rounded": "0.000000000000",
+            "weight": "122880"
+          }
+        ],
+        "information_order": 5,
+        "minimax_error": "1/2048",
+        "monic_L1_residual_coefficients": [
+          "-3/512",
+          "35/256",
+          "-7/8",
+          "9/4",
+          "-5/2",
+          "1"
+        ],
+        "monic_residual_coefficients": [
+          "1/2048",
+          "-9/256",
+          "105/256",
+          "-7/4",
+          "27/8",
+          "-3",
+          "1"
+        ],
+        "sharp_smooth_energy": 10059033600,
+        "sharp_supremum": "122880",
+        "sharp_variation": "1474560",
+        "step_energy": "15099494400",
+        "step_height": "122880",
+        "step_to_smooth_energy_ratio": "65536/43659",
+        "weight_scale": "245760"
+      },
+      {
+        "BV_size_sup_plus_variation": "44236800",
+        "L1_minimax_error": "1/4096",
+        "atoms": [
+          {
+            "node_rounded": "1.000000000000",
+            "weight": "-2949120"
+          },
+          {
+            "node_rounded": "0.950484433951",
+            "weight": "5898240"
+          },
+          {
+            "node_rounded": "0.811744900929",
+            "weight": "-5898240"
+          },
+          {
+            "node_rounded": "0.611260466978",
+            "weight": "5898240"
+          },
+          {
+            "node_rounded": "0.388739533022",
+            "weight": "-5898240"
+          },
+          {
+            "node_rounded": "0.188255099071",
+            "weight": "5898240"
+          },
+          {
+            "node_rounded": "0.049515566049",
+            "weight": "-5898240"
+          },
+          {
+            "node_rounded": "0.000000000000",
+            "weight": "2949120"
+          }
+        ],
+        "information_order": 6,
+        "minimax_error": "1/8192",
+        "monic_L1_residual_coefficients": [
+          "7/4096",
+          "-7/128",
+          "63/128",
+          "-15/8",
+          "55/16",
+          "-3",
+          "1"
+        ],
+        "monic_residual_coefficients": [
+          "-1/8192",
+          "49/4096",
+          "-49/256",
+          "147/128",
+          "-105/32",
+          "77/16",
+          "-7/2",
+          "1"
+        ],
+        "sharp_smooth_energy": 5753767219200,
+        "sharp_supremum": "2949120",
+        "sharp_variation": "41287680",
+        "step_energy": "8697308774400",
+        "step_height": "2949120",
+        "step_to_smooth_energy_ratio": "1048576/693693",
+        "weight_scale": "5898240"
+      }
+    ],
+    "step_profile": "K alternates between plus/minus r!*2^(2r)*|b| on consecutive Lobatto intervals",
+    "supremum_bound": "||K||_infty>=r!*4^r*|b|, from the shifted second-kind Chebyshev L1 extremal polynomial",
+    "unique_extremizer": "the derivative measure is supported on shifted Chebyshev-Lobatto extrema with alternating endpoint-half weights",
+    "variation_bound": "Var_R(K)>=2^(2r+1)*(r+1)!*|b|"
+  },
+  "source_contract": {
+    "commit": "ad78ecf6ac7e9dc099cb5fc3b1d40fca9aaa2b3f",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_COMPACT_KERNEL_INFORMATION_ORDER.md": "ccaef3ad8527aa5c32735ad441829bbe547f0472",
+      "research/l-families/atlas/function_field/ffps_compact_kernel_information_order.json": "0030155750437bfbc6f19d13fcbf9a7dc58325c9",
+      "research/l-families/atlas/function_field/ffps_compact_kernel_information_order.py": "8b275b88879237074b6181ad77ab784e8f847a0c",
+      "tests/test_ffps_compact_kernel_information_order.py": "866e9260195aa01d0ac59a6ad0f6cca420700b30"
+    }
+  }
+}
