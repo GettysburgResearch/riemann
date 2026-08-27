@@ -1,0 +1,22 @@
+{
+  "new_claims": [
+    "L-107010",
+    "L-107011",
+    "R-107010",
+    "T-107010"
+  ],
+  "parent_branch": "research/gpt56-pro/107000-beta-nyquist-compression",
+  "parent_pr": 759,
+  "parent_sha": "ebaf1dbcccecd7ed18812e786da40f1d610e497d",
+  "proof_object_sha256": "9199e54fb5d069cad2ba305847e1aa77085c49ec713ce8db8999421b53dc2827",
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t107010.source-lock.v1",
+  "status": {
+    "NBV107000": "open",
+    "RH": "unproved",
+    "all_depth_fourier_decay": "proved",
+    "quadratic_source_blind_barrier": "proved",
+    "trans_bertrand_sampling": "proved",
+    "universal_causal_smoother": "proved"
+  }
+}
