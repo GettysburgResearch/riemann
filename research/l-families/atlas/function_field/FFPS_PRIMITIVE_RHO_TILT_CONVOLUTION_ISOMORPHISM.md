@@ -1109,7 +1109,32 @@ each fixed `d`, weighted Hilbert Cauchy and (5.35) give
 \]
 
 Thus `AUXCOLORPRIMCAR` conditionally controls the auxiliary
-rho-sieved energy and hence the `d=1` zero mode. The constant
+rho-sieved energy and hence the `d=1` zero mode. More importantly, its
+`u=1` summand is literally the predecessor's whole PRIMCAR energy. Indeed,
+
+\[
+ \boxed{
+ \mathcal C^\alpha_{d,1}(I)
+ =\mathcal P^0_{67^\alpha,1}(d;I)
+ =\mathcal P_I^{(\alpha,0)}(d),
+ \qquad w(1)=1.}
+\tag{5.37a}
+\]
+
+The squarefree, 67-free, primitive, sieve, height, ratio-kernel, and
+coefficient predicates agree term by term. Therefore the positive `u=1`
+summand in (5.37) gives
+
+\[
+ \mathfrak X^\alpha_{\rm color}(D,H)
+ \geq\sum_{I\in\mathscr D_H}\mathcal E_D^{(\alpha,0)}(I).
+\tag{5.37b}
+\]
+
+Consequently, when asserted in the three physical channels,
+`AUXCOLORPRIMCAR -> PRIMCAR -> PRIMLS -> RH` conditionally. This
+corrects the earlier scope reading that the color gate reached only the
+rho zero mode. No estimate in this chain is proved. The constant
 `J_67(d)` is sharp on each positive-weight core space; the uniform
 energy constant is `J_67` (operator norm `sqrt(J_67)`).
 
@@ -1171,7 +1196,10 @@ from the arithmetic panels. Equal weights persist at every fixed `d` and
 core `u=rs`; what is special at `d=1` is that the core equals the
 total generalized modulus. Thus `AUXCOLORPRIMCAR` addresses the whole
 auxiliary rho-sieved energy, while its `COLORPRIMCAR` specialization
-addresses only the zero mode. Neither controls any nonzero `PRIMCAR` mode.
+addresses only `D=1`. Equation (5.37b) shows that the full auxiliary color
+gate also contains the complete finite-`D` PRIMCAR energy. It need not
+estimate each biased-Boolean coordinate separately, but such a coordinatewise
+estimate is not required for the conditional implication to PRIMCAR.
 
 ### 5.7 The color energy is an exact support-overlap Gram
 
@@ -1288,8 +1316,11 @@ Here color coordinates outside the finite height support are extended by
 zero. Thus, for each fixed `(alpha,d,I)`, the complete color family
 loses the orientation data inside a fixed product `N`, but it loses no
 product-shell amplitude. This is a useful division of labor:
-`AUXCOLORPRIMCAR` sees the coherently oriented shell sum, whereas nonzero
-`PRIMCAR` modes may still see the internal orientation directions.
+the full color family sees the coherently oriented shell sums, while
+individual incidence coordinates may still resolve internal orientation
+directions. Nevertheless its `u=1` member is the complete original panel,
+so the positive auxiliary color energy already dominates PRIMCAR as in
+(5.37b).
 
 The algebraic Boolean Möbius inversion is exact and has no high-prime
 parameter. However, recovering shell contrasts from the weighted color
@@ -1414,6 +1445,22 @@ statement than the weighted aggregate `AUXCOLORPRIMCAR`, which does not
 reverse-imply it by positive-norm algebra. One fixed-`eta` theorem would
 not supply the asserted all-exponent family.
 
+There is also a shorter implication which pays no outer Euler product. At
+`u=1`, (5.50) and (5.37a) give the exact identity
+
+\[
+ \boxed{
+ \mathcal Y^\alpha_1(D,H)
+ =\sum_{I\in\mathscr D_H}\mathcal E_D^{(\alpha,0)}(I).}
+\tag{5.52a}
+\]
+
+Call this single-core statement `BASEWAVE`. Then `BASEWAVE` is exactly
+`PRIMCAR`, and the uniform quantifier in `WAVEPRIMCAR` includes `u=1`.
+Thus `WAVEPRIMCAR -> BASEWAVE (= PRIMCAR) -> PRIMLS -> RH`
+directly. The restriction `eta<1/2` is needed only for summing all cores in
+the separate implication to `AUXCOLORPRIMCAR`; it is not used in (5.52a).
+
 This is an exact reduction from a correlated primitive-pair panel to a
 one-variable Möbius divisibility square function with an explicit divisor
 wavelet. There is no Möbius cancellation *within* one product shell: any
@@ -1497,10 +1544,13 @@ uniform theorem is a stronger special case with the `K_67^2` Boolean energy
 cost. After reindexing the harmonic sieve variable from `d` to `drs`, the
 relevant cost is instead the critical but subpower `O(log^4 H)` bound of
 (5.20).
-Moreover, this packet does not bound the predecessor's nonzero Boolean modes
-or their collective incidence spectrum. Its fixed-height `D -> infinity`
-limit still has no error uniform in the growing primorial `Q_H`, and so gives
-no finite-`D`, height-uniform substitute for such a theorem.
+Moreover, the convolution isomorphism alone does not bound the predecessor's
+nonzero Boolean modes or their collective incidence spectrum. Its
+fixed-height `D -> infinity` limit still has no error uniform in the growing
+primorial `Q_H`. The later gates are stronger conditional inputs: by
+(5.37b) and (5.52a), `AUXCOLORPRIMCAR` and `WAVEPRIMCAR` each do
+control the complete finite-`D` PRIMCAR energy if their stated estimates are
+proved.
 
 Consequently, neither the Hilbert-space Young bound nor the exact
 superposition proves the predecessor's open estimate
@@ -1535,11 +1585,13 @@ No PRIMCAR, PRIMLS, RH, or GRH estimate is proved. The RH-equivalent statement
 | `RAYPRIMCAR` implies the auxiliary rho-sieved and zero-mode bounds via (5.28)--(5.30) | **PROVED CONDITIONALLY** |
 | exact `RAYPRIMCAR` / `GENPRIMCAR` / `COLLPRIMCAR` hierarchy (5.31)--(5.32) | **PROVED AT THE POSITIVE-NORM LEVEL** |
 | fixed-`d`, fixed-core coherent coloring compression (5.33)--(5.36) | **PROVED EXACT** |
-| `RAYPRIMCAR` implies `AUXCOLORPRIMCAR`, which controls the auxiliary rho-sieved energy and the zero mode (5.37)--(5.39) | **PROVED CONDITIONALLY** |
+| `AUXCOLORPRIMCAR` contains the `u=1` PRIMCAR energy (5.37a)--(5.37b) | **PROVED EXACT; ESTIMATE OPEN** |
+| `RAYPRIMCAR` implies `AUXCOLORPRIMCAR`, hence conditionally PRIMCAR and RH (5.37)--(5.39) | **PROVED CONDITIONALLY; ESTIMATES OPEN** |
 | direct primitive-pair color formula and support-overlap Gram (5.40)--(5.43) | **PROVED EXACT** |
 | product-shell zeta transform, finite-height inverse, and local spectrum (5.44)--(5.46) | **PROVED EXACT** |
 | one-variable Möbius divisor-wavelet normal form (5.47)--(5.51) | **PROVED EXACT** |
 | `WAVEPRIMCAR` implies `AUXCOLORPRIMCAR` (5.52) | **PROVED CONDITIONALLY; ESTIMATE OPEN** |
+| `Y^alpha_1` is exactly PRIMCAR, so `WAVEPRIMCAR -> BASEWAVE (= PRIMCAR) -> PRIMLS -> RH` without the outer `eta<1/2` threshold (5.52a) | **PROVED EXACT / CONDITIONALLY; ESTIMATES OPEN** |
 | near-square divisor support and factor-64 product/cofactor shell (5.53)--(5.55) | **PROVED EXACT FROM IMPORTED KERNEL SUPPORT** |
 | weighted vector gate (5.3b) over induced tests (5.7) | **OPEN / NOT PROVED** |
 | uniform control over induced tests (5.7) | **STRONGER SUFFICIENT SPECIAL CASE; NOT PROVED** |
