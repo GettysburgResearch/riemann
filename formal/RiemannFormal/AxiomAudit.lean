@@ -3,5 +3,10 @@ import RiemannFormal
 #print axioms RiemannFormal.rh_iff_mathlib
 #print axioms RiemannFormal.Upstream.projectRH_is_mathlib
 #print axioms RiemannFormal.Upstream.zeta23_bridge_preserves_RH
+#print axioms RiemannFormal.Upstream.projectRiemannZeta_meromorphicOrderAt_eq_zeroMultiplicity
+#print axioms RiemannFormal.Analysis.logBoxMultiplier_nonzero
+#print axioms RiemannFormal.Analysis.nonnegative_landau_boundary
+#print axioms RiemannFormal.Analysis.subpower_negative_mass_holomorphic
+#print axioms RiemannFormal.Analysis.fixedDetector_negativeMass_implies_RH
 #print axioms RiemannFormal.Release20260822.researchCutoff_eq
 #print axioms RiemannFormal.Release20260822.semanticClaimCount_eq

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "riemann": {
     "repository": "gfreund123/riemann",
     "scientific_commit": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
@@ -28,5 +28,126 @@
     "repository": "google-deepmind/formal-conjectures",
     "reference_commit": "488aade228ec37880b8fec178c173c07d279bb53",
     "proof_dependency": false
-  }
+  },
+  "analysis_scientific_claims": [
+    {
+      "semantic_id": "CONSUMER.MELLIN.FIXED_ROW",
+      "source_pr": 652,
+      "source_sha": "24ab64551225f2dba9aa53a533eb9b0285c6e363",
+      "source_path": "claims/lemmas/L-99602-exact-two-row-mellin-landau-consumer.md",
+      "source_claim_id": "L-99602",
+      "lean_declarations": [
+        "RiemannFormal.Analysis.FixedDetectorMellinIdentity",
+        "RiemannFormal.Analysis.FixedDetectorReciprocalZetaIdentity"
+      ]
+    },
+    {
+      "semantic_id": "CONSUMER.MELLIN.ZERO_SAFE_BOX",
+      "source_pr": 653,
+      "source_sha": "e928fd615d753882706bb88c51b717bd8d4a86ba",
+      "source_path": "claims/lemmas/L-99270-zero-free-smoothing-and-negative-mass.md",
+      "source_claim_id": "L-99270",
+      "lean_declarations": [
+        "RiemannFormal.Analysis.logBoxMultiplier",
+        "RiemannFormal.Analysis.logBoxMultiplier_nonzero"
+      ]
+    },
+    {
+      "semantic_id": "CONSUMER.MELLIN.SPECIALIZED_LANDAU",
+      "source_pr": 653,
+      "source_sha": "e928fd615d753882706bb88c51b717bd8d4a86ba",
+      "source_path": "claims/lemmas/L-99272-specialized-landau-and-scalar-firewall.md",
+      "source_claim_id": "L-99272",
+      "lean_declarations": [
+        "RiemannFormal.Analysis.MellinLandauBoundarySingularity",
+        "RiemannFormal.Analysis.nonnegative_landau_boundary"
+      ]
+    },
+    {
+      "semantic_id": "CONSUMER.MELLIN.HOLOMORPHIC_DEFECT",
+      "source_pr": 650,
+      "source_sha": "3f9e80f09fe1f595927ea7dce6fb49ac68c5c21b",
+      "source_path": "claims/lemmas/L-99282-holomorphic-perturbation-landau-transfer.md",
+      "source_claim_id": "L-99282",
+      "lean_declarations": [
+        "RiemannFormal.Analysis.fixed_holomorphic_defect_transfer",
+        "RiemannFormal.Analysis.fixed_mellin_singularity_transfer"
+      ]
+    },
+    {
+      "semantic_id": "API.MELLIN.SUBPOWER_NEGATIVE_MASS",
+      "source_pr": 653,
+      "source_sha": "e928fd615d753882706bb88c51b717bd8d4a86ba",
+      "source_path": "claims/lemmas/L-99270-zero-free-smoothing-and-negative-mass.md",
+      "source_claim_id": "L-99270",
+      "lean_declarations": [
+        "RiemannFormal.Analysis.SubpowerNegativeMassHolomorphy",
+        "RiemannFormal.Analysis.fixedDetector_negativeMass_implies_RH"
+      ]
+    },
+    {
+      "semantic_id": "API.MELLIN.SUBPOWER_NEGATIVE_MASS",
+      "source_pr": 653,
+      "source_sha": "e928fd615d753882706bb88c51b717bd8d4a86ba",
+      "source_path": "claims/lemmas/L-99272-specialized-landau-and-scalar-firewall.md",
+      "source_claim_id": "L-99272",
+      "lean_declarations": [
+        "RiemannFormal.Analysis.fixedDetector_negativeMass_implies_RH"
+      ]
+    }
+  ],
+  "analysis_upstream_declarations": [
+    {
+      "project": "mathlib",
+      "commit": "51e6992efd06126df61a496bebf8f49482a4e129",
+      "source_path": "Mathlib/NumberTheory/LSeries/RiemannZeta.lean",
+      "declarations": [
+        "RiemannHypothesis",
+        "riemannZeta",
+        "completedRiemannZeta",
+        "completedRiemannZeta₀",
+        "differentiableAt_riemannZeta"
+      ]
+    },
+    {
+      "project": "mathlib",
+      "commit": "51e6992efd06126df61a496bebf8f49482a4e129",
+      "source_path": "Mathlib/Analysis/MellinTransform.lean",
+      "declarations": [
+        "mellin",
+        "MellinConvergent",
+        "mellin_comp_mul_left",
+        "mellin_differentiableAt_of_isBigO_rpow"
+      ]
+    },
+    {
+      "project": "mathlib",
+      "commit": "51e6992efd06126df61a496bebf8f49482a4e129",
+      "source_path": "Mathlib/Analysis/Meromorphic/Order.lean",
+      "declarations": [
+        "meromorphicOrderAt",
+        "AnalyticAt.meromorphicOrderAt_eq",
+        "meromorphicOrderAt_inv"
+      ]
+    },
+    {
+      "project": "zeta23",
+      "commit": "cec57f919ccf34e5fa5372b4ba332f7c848bbb6e",
+      "source_path": "Zeta23/Statement.lean",
+      "declarations": [
+        "Zeta23.IsNontrivialZero",
+        "Zeta23.zeroMult",
+        "Zeta23.RH_implies_on_line"
+      ]
+    },
+    {
+      "project": "zeta23",
+      "commit": "cec57f919ccf34e5fa5372b4ba332f7c848bbb6e",
+      "source_path": "Zeta23/ZetaReflect.lean",
+      "declarations": [
+        "Zeta23.zeta_reflect_zero",
+        "Zeta23.zeta_mult_reflect"
+      ]
+    }
+  ]
 }

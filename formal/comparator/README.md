@@ -8,7 +8,7 @@ Quick checks:
 
 ```bash
 cd formal
-lake build Solution.RH
+bash scripts/build_local_comparators.sh
 lake env lean comparator/PrintAxioms/RH.lean
 ```
 
