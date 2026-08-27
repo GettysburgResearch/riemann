@@ -346,8 +346,8 @@ This pass deliberately avoids heavy computation.
 
 The continuation preserves that discipline. Its final carrier packet
 uses no beta terms, primes, zeta zeros, random samples, or quadrature.
-The full 500-test sweep completes in under one minute per Python mode on
-this machine; no high-rank enumeration was introduced.
+The full 500-test sweep completes in under 80 seconds per Python mode
+on this machine; no high-rank enumeration was introduced.
 
 ## 6. Refuted shortcuts
 
