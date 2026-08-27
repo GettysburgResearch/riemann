@@ -1,0 +1,96 @@
+{
+  "bounded_replay": {
+    "derivative_samples": 129,
+    "direct_branch_integral_checks": 9,
+    "display_moments": {
+      "absolute_first": "-1.378991739855116",
+      "second": "-2.00000000000011",
+      "zeroth": "1.617594946878853e-13"
+    },
+    "maximum_direct_decimal_residual": "2.000E-79",
+    "root_bisection_steps": 128,
+    "sign_samples": 257,
+    "simpson_panels_per_piece": 512
+  },
+  "exact_autocorrelation": {
+    "definition": "R(u)=integral_R J_1(v)J_1(v+u)dv",
+    "endpoint_values": {
+      "C(0)": "1+sinh(2)/2",
+      "C(1)": "-e/2",
+      "C(2)": "0"
+    },
+    "inner_piece_0_le_q_le_1": "C(q)=((e^2+4-(e^2+2)q)e^(-q)-(2q+e^(-2)(q+1))e^q)/4",
+    "mass": "M=4sinh^2(1/2)=e+e^(-1)-2",
+    "normalization": "R(u)=C(|u|)/M^2",
+    "outer_piece_1_le_q_le_2": "C(q)=-(sinh(2-q)+(2-q)cosh(2-q))/2",
+    "outside_piece_q_ge_2": "C(q)=0"
+  },
+  "integral_identities": {
+    "absolute_first_moment": "integral_R |u|R(u)du=(2-sinh(2))/(16sinh^4(1/2))",
+    "half_shell_balance": {
+      "integral_0^1_R": "sinh(1)/(2M^2)",
+      "integral_1^2_R": "-sinh(1)/(2M^2)"
+    },
+    "origin": "R(0)=(1+sinh(2)/2)/(16sinh^4(1/2))",
+    "second_moment": "integral_R u^2R(u)du=-2",
+    "zeroth_moment": "integral_R R(u)du=0"
+  },
+  "programme_boundary": {
+    "energy_or_off_diagonal_estimate_proved": false,
+    "no_positivity_shortcut": "Fourier/Gram positivity holds only after quadratic assembly; the physical off-diagonal kernel is negative on the outer annulus",
+    "physical_kernel_pointwise_nonnegative": false,
+    "rh_or_grh_proved": false,
+    "translate_gram_positive_definite": true
+  },
+  "proof_ledger": {
+    "bounded_decimal_and_quadrature_checks": "REGRESSION ONLY",
+    "energy_or_off_diagonal_estimate": "NOT PROVED",
+    "integral_and_moment_identities": "PROVED EXACT",
+    "piecewise_physical_autocorrelation": "PROVED EXACT",
+    "ratio_annulus_translation": "PROVED EXACT",
+    "rh_or_grh": "NOT PROVED",
+    "unique_interior_node_and_complete_sign_geometry": "PROVED EXACT"
+  },
+  "ratio_annuli": {
+    "negative": "e^xi<rho<e^2",
+    "nodal": "rho=e^xi",
+    "oriented_negative": "e^(-2)<a/b<e^(-xi) or e^xi<a/b<e^2",
+    "oriented_positive": "e^(-xi)<a/b<e^xi",
+    "positive": "1<=rho<e^xi",
+    "radius": "rho=max(a/b,b/a)=e^|log(a/b)|",
+    "support_boundary_and_exterior": "rho>=e^2 gives R(log(a/b))=0"
+  },
+  "resource_caps": {
+    "curves": 0,
+    "direct_formula_shifts": 9,
+    "frozen_blobs": 4,
+    "primes": 0,
+    "random_samples": 0,
+    "root_bisection_steps": 128,
+    "sign_grid_cells_per_unit": 128,
+    "simpson_panels_per_piece": 512,
+    "zeta_zeros": 0
+  },
+  "sign_geometry": {
+    "display_root_lower": "0.63921327054652060848458059623449389674052859102219953924961666229265738695360745",
+    "display_root_midpoint": "0.6392132705465206",
+    "display_root_upper": "0.6392132705465206084845805962344938967434673268992552580195385036357130011481541",
+    "inner_derivative": "4C'(q)=((e^2+2)q-2e^2-6)e^(-q)-((2+e^(-2))q+2+2e^(-2))e^q<0 on [0,1]",
+    "negative": "R(u)<0 iff xi<|u|<2",
+    "positive": "R(u)>0 iff |u|<xi",
+    "rounding_contract": "80-digit Decimal display bracket only; the exact proof uses strict monotonicity and endpoint signs",
+    "unique_node": "xi is the unique q in (0,1) with C(q)=0",
+    "zeros": "R(u)=0 at |u|=xi and for |u|>=2"
+  },
+  "source_contract": {
+    "commit": "3658d4c31cc866e15d48ab1fc9d8d119136da424",
+    "frozen_normalization": "Phi(x)=e^(x-1)(1-|x-1|)_+, M=4sinh^2(1/2), J_1=Phi'/M",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_ZERO_FREE_BETA_ENERGY_LADDER.md": "bd4cbb842e78c1dad5d380c8d20ff14c39bba15e",
+      "research/l-families/atlas/function_field/ffps_zero_free_beta_energy_ladder.json": "7e8889aa0dd1b01674e20158a52502cff0d8dffa",
+      "research/l-families/atlas/function_field/ffps_zero_free_beta_energy_ladder.py": "df80000192292cc5fc1cd08013f152fb257054f9",
+      "tests/test_ffps_zero_free_beta_energy_ladder.py": "983a1320f89087028f6724fe36aaca5ca1309b15"
+    },
+    "source_imported_at_runtime": false
+  }
+}
