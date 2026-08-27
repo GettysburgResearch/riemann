@@ -363,6 +363,24 @@ def linear_scale_replay_complex(order: int, c: complex) -> complex:
     )
 
 
+def profile_spectral_density(t: float) -> float:
+    """Density of the positive Stieltjes measure for Psi(q)=Phi(sqrt(q))."""
+    if t <= 16:
+        raise ValueError("t must exceed the first spectral threshold 16")
+    maximum_odd = int(math.sqrt(t) / 4)
+    odd_modes = range(1, maximum_odd + 1, 2)
+    return (
+        18432
+        * math.fsum(1 / math.sqrt(1 - 16 * mode**2 / t) for mode in odd_modes)
+        / (math.pi**4 * t**2)
+    )
+
+
+def profile_threshold_density_limit() -> float:
+    """lim_(t down to 16) sqrt(t-16)*rho(t)."""
+    return 288 / math.pi**4
+
+
 def stieltjes_partial_sum(order: int, z: float, depth: int) -> float:
     """Alternating depth-M primitive truncation for J_r(z)/(z h_r^2)."""
     validate_order(order)
@@ -577,6 +595,8 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "cost_charged_phase_diagram": "for n=r+1->infinity and positive real tilt, if z_r*W_r/n->c in [0,infinity) and n*log(1+log(X)/W_r)->tau in [0,infinity), then G*L->(pi^3/36)*exp(2*tau)*Phi(c), with Phi(0)=1",
             "complex_linear_scale_profile": "the same Phi(c) limit holds locally uniformly on compact subsets of Re(c)>0",
             "profile_stieltjes_representation": "Phi(c)=72/pi^4*sum_(k>=0)(2k+1)^-2*integral_0^pi sin(theta)^3/((2k+1)^2+(c^2/16)*sin(theta)^2)dtheta",
+            "profile_stieltjes_density": "Psi(q)=Phi(sqrt(q))=integral_16^infinity rho(t)/(t+q)dt, rho(t)=18432/(pi^4*t^2)*sum_(m odd,16m^2<=t)(1-16m^2/t)^(-1/2)",
+            "first_profile_threshold": "rho(t)~288/(pi^4*sqrt(t-16)) and Psi(q)~288/(pi^3*sqrt(q+16)) at the first slit threshold",
             "profile_zero_free_domain": "Phi is zero-free on C minus (i[4,infinity) union -i[4,infinity)); finite-order transforms are eventually zero-free on each compact subset of Re(c)>0",
             "primitive_L1": "||F_r||_1/|h_r|=(r+1)*tan(a)^2/8",
             "uniform_refill_remainder": "for real z>=0, |J_r(z)/h_r^2-z*kappa_r|<=(3/16)*z^2*kappa_r, uniformly in r; 3/16 is sharp for the exact L1/Young envelope",
@@ -605,6 +625,7 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "cost_charged_real_tilt_phase_diagram": "PROVED",
             "complex_right_half_plane_profile": "PROVED",
             "limiting_profile_stieltjes_zero_free_domain": "PROVED",
+            "exact_profile_stieltjes_density_and_threshold": "PROVED",
             "uniform_in_order_relative_linear_refill": "PROVED",
             "sharp_young_envelope_constant": "PROVED",
             "uniform_complex_zero_free_half_disk": "PROVED",
@@ -648,6 +669,8 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "complex_replay_r127_c1_plus_half_i": str(
                 linear_scale_replay_complex(LINEAR_SCALE_REPLAY_ORDER, complex(1, 0.5))
             ),
+            "first_threshold_density_scaled_at_16_plus_1e-6": f"{profile_spectral_density(16 + 1e-6) * 1e-3:.15f}",
+            "first_threshold_density_scaled_limit": f"{profile_threshold_density_limit():.15f}",
         },
     }
 

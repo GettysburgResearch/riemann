@@ -2,6 +2,8 @@
   "asymptotic_spot_checks": {
     "complex_profile_c1_plus_half_i": "(0.9620850234276621-0.045498045401627406j)",
     "complex_replay_r127_c1_plus_half_i": "(0.9620701084731107-0.04551273465578219j)",
+    "first_threshold_density_scaled_at_16_plus_1e-6": "2.956602610163806",
+    "first_threshold_density_scaled_limit": "2.956602889349089",
     "linear_profile_c1": "0.953153430801452",
     "linear_profile_c2": "0.837199377989800",
     "linear_replay_r127_c1": "0.953137207733085",
@@ -21,6 +23,7 @@
     "cost_charged_phase_diagram": "for n=r+1->infinity and positive real tilt, if z_r*W_r/n->c in [0,infinity) and n*log(1+log(X)/W_r)->tau in [0,infinity), then G*L->(pi^3/36)*exp(2*tau)*Phi(c), with Phi(0)=1",
     "exact_bounds": "pi^3/36<P_r<=25/9 for r>=1, and P_r<=196/135 for r>=2",
     "finite_jump_formula": "J_r(z)=sum_jk mu_j*mu_k*(1-exp(-a*d_jk)-a*d_jk)/a^2, a=z/2",
+    "first_profile_threshold": "rho(t)~288/(pi^4*sqrt(t-16)) and Psi(q)~288/(pi^3*sqrt(q+16)) at the first slit threshold",
     "global_real_tilt_bounds": "for every z>0, 0<J_r(z)<z||F_r||_2^2 and z*J_r(z)->4||K_r||_2^2",
     "global_stieltjes_law": "J_K(z)/z=(2*pi)^-1*integral |Khat(xi)|^2/((z/2)^2+xi^2) dxi; as a function of (z/2)^2 this is strictly completely monotone",
     "iterated_primitive_hierarchy": "G_K(q)=sum_(m=1)^M (-q)^(m-1)||P_m||_2^2+(-q)^M G_(P_M)(q), so every truncation has the exact alternating error sign",
@@ -29,6 +32,7 @@
     "normalized_refill_asymptotic": "kappa_r=pi^2/(72(r+1)^2)*(1+O(r^-2))",
     "primitive_L1": "||F_r||_1/|h_r|=(r+1)*tan(a)^2/8",
     "primitive_energy": "||F_r||_2^2/h_r^2=tan(a)^2/(6*(3-tan(a)^2))=(1-cos(pi/(r+1)))/(12*(1+2*cos(pi/(r+1)))), a=pi/(2(r+1))",
+    "profile_stieltjes_density": "Psi(q)=Phi(sqrt(q))=integral_16^infinity rho(t)/(t+q)dt, rho(t)=18432/(pi^4*t^2)*sum_(m odd,16m^2<=t)(1-16m^2/t)^(-1/2)",
     "profile_stieltjes_representation": "Phi(c)=72/pi^4*sum_(k>=0)(2k+1)^-2*integral_0^pi sin(theta)^3/((2k+1)^2+(c^2/16)*sin(theta)^2)dtheta",
     "profile_zero_free_domain": "Phi is zero-free on C minus (i[4,infinity) union -i[4,infinity)); finite-order transforms are eventually zero-free on each compact subset of Re(c)>0",
     "rows": [
@@ -214,6 +218,7 @@
     "cost_charged_real_tilt_phase_diagram": "PROVED",
     "exact_linear_max_cusp_refill": "PROVED",
     "exact_primitive_energy": "PROVED",
+    "exact_profile_stieltjes_density_and_threshold": "PROVED",
     "exact_second_primitive_energy": "PROVED",
     "finite_jump_transform": "PROVED",
     "finite_nonzero_cost_refill_compensation_limit": "PROVED",

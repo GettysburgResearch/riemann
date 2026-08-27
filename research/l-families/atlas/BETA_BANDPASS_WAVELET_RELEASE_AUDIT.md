@@ -87,7 +87,8 @@ The strongest exact continuation results are:
    an explicit profile \(\Phi(c)\in(0,1)\); at superlinear scale it tends to
    zero. The profile extends as a positive Stieltjes transform, is zero-free
    on the right half-plane, and has its first imaginary-axis branch points
-   at \(\pm4i\).
+   at \(\pm4i\). Its exact measure density has square-root edges at the full
+   odd ladder \(\pm4(2k+1)i\).
 
 6. **Near-notch and endpoint-layer closure.** Every positive Bessel notch has
    an exact quadratic tilt floor, energy excess, and shifted local profile.
@@ -329,6 +330,7 @@ delimiter/control-byte checks, and Git whitespace checks.
 | exact second-primitive norm and sharp \(u=o(r)\) refill regime | **PROVED** |
 | linear-scale relative refill converges to explicit \(\Phi(c)\) | **PROVED FOR POSITIVE REAL TILT** |
 | \(\Phi(c)\) is a positive Stieltjes profile zero-free off \(i[4,\infty)\cup-i[4,\infty)\) | **PROVED** |
+| exact profile measure has odd square-root thresholds \(\pm4(2k+1)i\) | **PROVED** |
 | finite transforms converge locally uniformly on compact subsets of \(\Re c>0\) | **PROVED** |
 | cost-charged local Chebyshev refill has floor \(\pi^3/36\) | **PROVED FOR \(zW=o(r)\); CHEBYSHEV ZERO MODE ONLY** |
 | full moving-order Perron or beta estimate from cusp compensation | **NOT PROVED** |

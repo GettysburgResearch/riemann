@@ -211,6 +211,11 @@ class ChebyshevMaxCuspCompensationTest(unittest.TestCase):
             complex_profile,
             delta=3e-5,
         )
+        self.assertAlmostEqual(
+            subject.profile_spectral_density(16 + 1e-6) * 1e-3,
+            subject.profile_threshold_density_limit(),
+            delta=3e-7,
+        )
 
     def test_linear_scale_finite_replay(self) -> None:
         for c in (1.0, 2.0):
@@ -291,6 +296,8 @@ class ChebyshevMaxCuspCompensationTest(unittest.TestCase):
             subject.linear_scale_profile_complex(complex(0, 1))
         with self.assertRaises(ValueError):
             subject.linear_scale_replay_complex(2, complex(-1, 1))
+        with self.assertRaises(ValueError):
+            subject.profile_spectral_density(16)
 
 
 if __name__ == "__main__":

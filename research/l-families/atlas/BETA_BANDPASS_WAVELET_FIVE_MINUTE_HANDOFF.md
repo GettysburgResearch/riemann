@@ -66,7 +66,9 @@ The fastest route into the current head is:
    an explicit \(\Phi(c)\), or \(0\) according as \(u/n\to0\),
    \(u/n\to c\in(0,\infty)\), or \(u/n\to\infty\). The same profile
    converges locally uniformly on \(\Re c>0\) and is zero-free off the
-   imaginary rays \(i[4,\infty)\cup-i[4,\infty)\). This remains a
+   imaginary rays \(i[4,\infty)\cup-i[4,\infty)\). Its exact Stieltjes
+   density exposes square-root thresholds at
+   \(c=\pm4(2k+1)i\), beginning at \(\pm4i\). This remains a
    kernel-transform result, not a Perron-axis estimate.
 
 2. Read
@@ -219,8 +221,9 @@ complete compact-kernel design theorem.
    multiplied by the explicit Stieltjes profile \(\Phi(c)\); at
    superlinear scale it vanishes. The profile is zero-free in the right
    half-plane, while its first imaginary-axis branch points occur at
-   \(\pm4i\). This remains a geometric family-specific theorem, not a beta
-   estimate or a full Perron-contour result.
+   \(\pm4i\); the exact measure gives the complete odd square-root threshold
+   ladder \(\pm4(2k+1)i\). This remains a geometric family-specific theorem,
+   not a beta estimate or a full Perron-contour result.
 
 The scientific direction is now sharper: universal carrier geometry is
 closed enough that another gain must preserve the signs in the beta

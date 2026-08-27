@@ -1074,8 +1074,32 @@ turns (4.22) into the positive Stieltjes representation
 \]
 
 Equivalently, \(\Psi(q)=\Phi(\sqrt q)\), defined by the right side of
-(4.29), is a positive Stieltjes transform whose spectral support starts at
-\(q=16\). It follows that
+(4.29), is a positive Stieltjes transform whose measure support starts at
+\(t=16\). The change of variables
+\(t=16(2k+1)^2/\sin^2\theta\) makes that measure completely explicit:
+
+\[
+ \boxed{
+ \Psi(q)=\int_{16}^\infty\frac{\rho(t)}{t+q}\,dt,\qquad
+ \rho(t)=\frac{18432}{\pi^4t^2}
+ \sum_{\substack{m\ge1\ {\rm odd}\\16m^2\le t}}
+ \left(1-\frac{16m^2}{t}\right)^{-1/2}.}
+\tag{4.29a}
+\]
+
+Thus the full threshold ladder is \(q=-16m^2\) for odd \(m\). At the first
+threshold,
+
+\[
+ \rho(t)\sim\frac{288}{\pi^4\sqrt{t-16}},
+ \qquad
+ \Psi(q)\sim\frac{288}{\pi^3\sqrt{q+16}},
+\tag{4.29b}
+\]
+
+in the corresponding slit sectors. The first loss of contour uniformity is
+therefore a square-root edge, not an unexplained numerical instability. It
+follows from (4.29a) that
 
 \[
  \boxed{
@@ -1176,6 +1200,7 @@ In particular:
 | cost-charged real-positive phase diagram (4.27) | **PROVED FOR THE CHEBYSHEV FAMILY** |
 | complex right-half-plane profile (4.28) | **PROVED LOCALLY UNIFORMLY ON COMPACTS** |
 | Stieltjes representation and limiting zero-free domain (4.29)--(4.30) | **PROVED** |
+| exact Stieltjes density and odd square-root threshold ladder (4.29a)--(4.29b) | **PROVED** |
 | acute-sector complex scale trichotomy (4.31) | **PROVED FOR THE KERNEL TRANSFORM** |
 | uniform-in-order relative remainder (2.8) | **PROVED** |
 | sharp \(3/16\) Young-envelope coefficient | **PROVED** |
