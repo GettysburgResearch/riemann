@@ -1,7 +1,6 @@
 semantic_id	lean_declaration	lean_module	formal_status	formal_dependency_ids	blocked_on	notes
 CONSUMER.MELLIN.TWO_ROW	RiemannFormal.Arithmetic.FixedRows.rows23_no_common_zero	RiemannFormal.Arithmetic.FixedRows	PROVED			Exact complex-algebra elimination on the domain ‖a‖ < 1; no floating evidence.
 CONSUMER.MELLIN.FIVE_THREE	RiemannFormal.Arithmetic.FixedRows.fiveThree_nonzero	RiemannFormal.Arithmetic.FixedRows	PROVED			Exact factorization -3(a-1)(a-2) and open-unit-disc noncancellation.
-API.MELLIN.SUBPOWER_NEGATIVE_MASS			BLOCKED_MATHEMATICS		Reviewer A repaired analytic consumer API plus fixed native negative-mass and Landau hypotheses	The circular RH wrapper was removed. B now supplies only non-circular arithmetic packages; final A+B composition is deferred to reconciliation.
 OPEN.ARITH.ROWS23_NATIVE			BLOCKED_MATHEMATICS	CONSUMER.MELLIN.TWO_ROW	native fixed-row producer estimate	The exact numerator pair is proved. Supplying both literal native rows with the required sign or holomorphic-defect control remains open.
 OPEN.ARITH.FIVE_THREE_NEGATIVE_MASS			BLOCKED_MATHEMATICS	CONSUMER.MELLIN.FIVE_THREE	fixed 5:3 negative-mass estimate	The scalar numerator is zero-safe; its arithmetic sign or subpower logarithmic negative mass remains open.
 OPEN.ARITH.FIXED_DETECTOR_NEGATIVE_MASS			BLOCKED_MATHEMATICS		one fixed native detector with subpower logarithmic negative mass	No RH implication is registered on B's branch before the exact analytic API is reconciled.

@@ -1,15 +1,32 @@
-# Comparator statement lock
+# Formal comparator surface
 
-The trusted side imports only Mathlib through `ChallengeDeps`. The solution side imports the formal library and must be sorry-free.
+The formal-v0.1 comparator keeps trusted statement files separate from the
+sorry-free implementation. Challenge files import only their trusted
+ChallengeDeps closure and contain exactly one statement placeholder. Solution
+files contain no `sorry`, `admit`, custom `axiom`, `opaque`, or `unsafe`
+declaration.
 
-The bootstrap topic checks only that the project conclusion is exactly Mathlib's `RiemannHypothesis`. Future topics must expose every mathematical hypothesis explicitly and copy their complete statement-definition closure into the trusted side.
+The seven release topics are:
 
-Quick checks:
+1. `RH`
+2. `MellinAPI`
+3. `ArithmeticRows23`
+4. `FixedDetectorFiveThree`
+5. `OperatorPositiveSchurRescue`
+6. `XiPickThreeNode`
+7. `XiPickOrderThreeConditional`
+
+Run from `formal/`:
 
 ```bash
-cd formal
 bash scripts/build_local_comparators.sh
-lake env lean comparator/PrintAxioms/RH.lean
+bash scripts/check_no_sorry.sh
+python3 scripts/verify_all_comparator_types.py --repo ..
 ```
 
-A full independent comparator run uses `comparator/config-rh.json` and an external `leanprover/comparator` binary.
+The exact type audit loads Challenge and Solution declarations in separate
+Lean processes, removes only the queried declaration-name prefix and Unicode
+whitespace, and rejects any mathematical type difference. The order-three Xi
+statement includes repeated-node branches and concludes positive
+semidefiniteness only. It does not assert positive definiteness, order four,
+or RH.
