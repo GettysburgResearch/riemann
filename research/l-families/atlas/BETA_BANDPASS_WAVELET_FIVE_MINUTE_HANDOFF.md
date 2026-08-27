@@ -4,8 +4,9 @@ Status: **frozen exploratory theorem atlas; the current head adds a universal
 compact-kernel information theorem, the unique all-order Chebyshev BV
 extremizer, an exact moving safe-factor phase diagram, finite autocorrelation
 geometry, a global max-cusp Stieltjes/primitive hierarchy and compensation
-law, near-notch and endpoint-layer asymptotics, and ensemble firewalls; RH
-and GRH remain open**
+law, a sharp moving-tilt profile with a zero-free right-half-plane
+continuation, near-notch and endpoint-layer asymptotics, and ensemble
+firewalls; RH and GRH remain open**
 
 Parent release: draft PR #757 at
 \(b870366141fe8d5f43d5b81f6e50a67d2a888070\).
@@ -59,7 +60,14 @@ The fastest route into the current head is:
    support. More strongly, the complete positive-tilt transform is a strict
    Stieltjes function with a finite difference formula, global alternating
    causal-primitive bounds, an exact terminal even cusp coefficient, and a
-   uniform complex kernel-transform zero-free half-disk.
+   uniform complex kernel-transform zero-free half-disk. The exact second
+   primitive then resolves the growing-order transition: for
+   \(u=zW\) and \(n=r+1\), the relative refill tends to \(1\),
+   an explicit \(\Phi(c)\), or \(0\) according as \(u/n\to0\),
+   \(u/n\to c\in(0,\infty)\), or \(u/n\to\infty\). The same profile
+   converges locally uniformly on \(\Re c>0\) and is zero-free off the
+   imaginary rays \(i[4,\infty)\cup-i[4,\infty)\). This remains a
+   kernel-transform result, not a Perron-axis estimate.
 
 2. Read
    [FFPS_COMPACT_KERNEL_INFORMATION_ORDER.md](function_field/FFPS_COMPACT_KERNEL_INFORMATION_ORDER.md)
@@ -206,8 +214,13 @@ complete compact-kernel design theorem.
    primitive supplies an alternating upper or lower bound, and the first
    surviving moment forces the terminal even cusp coefficient. After the
    Perron \(1/z\) and the sharp BV cost are charged, the local Chebyshev
-   zero mode has a nonvanishing \(\pi^3/36\) floor; this remains a geometric
-   family-specific barrier, not a beta estimate.
+   zero mode has a nonvanishing \(\pi^3/36\) floor throughout
+   \(zW=o(r)\). At the sharp linear scale \(zW/(r+1)\to c\), that floor is
+   multiplied by the explicit Stieltjes profile \(\Phi(c)\); at
+   superlinear scale it vanishes. The profile is zero-free in the right
+   half-plane, while its first imaginary-axis branch points occur at
+   \(\pm4i\). This remains a geometric family-specific theorem, not a beta
+   estimate or a full Perron-contour result.
 
 The scientific direction is now sharper: universal carrier geometry is
 closed enough that another gain must preserve the signs in the beta
@@ -704,7 +717,7 @@ At the continuation head:
 
 - all 62 changed bounded producers pass normally and under optimized
   Python;
-- all 622 tests in the 61 changed focused modules pass in both modes;
+- all 627 tests in the 61 changed focused modules pass in both modes;
 - Ruff lint and format pass on all 123 changed Python files;
 - all 67 changed Markdown files are free of forbidden control bytes;
 - the two front-door documents have resolving local links and balanced

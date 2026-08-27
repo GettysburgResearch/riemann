@@ -574,7 +574,7 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "linear_scale_tilt_profile": "if z_r/(r+1)->c in (0,infinity), J_r(z_r)/(z_r*h_r^2*kappa_r)->Phi(c)=288/(pi^2*c^3)*(c-(4/pi)*integral_0^pi tanh(c*pi*sin(theta)/8)dtheta), with 0<Phi(c)<1",
             "linear_scale_small_c": "Phi(c)=1-pi^2*c^2/200+17*pi^4*c^4/627200+O(c^6)",
             "superlinear_tilt_collapse": "if z_r/(r+1)->infinity, J_r(z_r)/(z_r*h_r^2*kappa_r)->0",
-            "cost_charged_phase_diagram": "if z_r*W_r/(r+1)->c and (r+1)*log(1+log(X)/W_r)->tau, then G*L->(pi^3/36)*exp(2*tau)*Phi(c), with Phi(0)=1",
+            "cost_charged_phase_diagram": "for n=r+1->infinity and positive real tilt, if z_r*W_r/n->c in [0,infinity) and n*log(1+log(X)/W_r)->tau in [0,infinity), then G*L->(pi^3/36)*exp(2*tau)*Phi(c), with Phi(0)=1",
             "complex_linear_scale_profile": "the same Phi(c) limit holds locally uniformly on compact subsets of Re(c)>0",
             "profile_stieltjes_representation": "Phi(c)=72/pi^4*sum_(k>=0)(2k+1)^-2*integral_0^pi sin(theta)^3/((2k+1)^2+(c^2/16)*sin(theta)^2)dtheta",
             "profile_zero_free_domain": "Phi is zero-free on C minus (i[4,infinity) union -i[4,infinity)); finite-order transforms are eventually zero-free on each compact subset of Re(c)>0",

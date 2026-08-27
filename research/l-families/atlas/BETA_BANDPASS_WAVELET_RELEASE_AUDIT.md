@@ -82,7 +82,12 @@ The strongest exact continuation results are:
    function with a finite difference formula and alternating causal-primitive
    bounds. Its first surviving moment forces the terminal even cusp
    coefficient. After both the Perron \(1/z\) and sharp BV cost are charged,
-   the local Chebyshev zero mode retains a \(\pi^3/36\) floor.
+   the local Chebyshev zero mode retains a \(\pi^3/36\) floor throughout
+   \(zW=o(r)\). At the sharp linear scale, the relative refill converges to
+   an explicit profile \(\Phi(c)\in(0,1)\); at superlinear scale it tends to
+   zero. The profile extends as a positive Stieltjes transform, is zero-free
+   on the right half-plane, and has its first imaginary-axis branch points
+   at \(\pm4i\).
 
 6. **Near-notch and endpoint-layer closure.** Every positive Bessel notch has
    an exact quadratic tilt floor, energy excess, and shifted local profile.
@@ -250,6 +255,7 @@ delimiter/control-byte checks, and Git whitespace checks.
 | \(f3ae060d1\) | Chebyshev-step autocorrelation normal form |
 | \(033a64fba\) | Chebyshev max-cusp refill compensation |
 | \(154331d49\) | global cusp-resolvent and primitive hierarchy |
+| \(2331ec257\) | sharp real/complex Chebyshev tilt phase diagram |
 
 ## 2. Claim ledger
 
@@ -320,7 +326,11 @@ delimiter/control-byte checks, and Git whitespace checks.
 | causal primitives give global alternating resolvent bounds | **PROVED** |
 | first surviving moment fixes the terminal even cusp coefficient | **PROVED** |
 | kernel transform is zero-free on \(\Re z\ge0,\ 0<|z|W<16/3\) | **PROVED** |
-| cost-charged local Chebyshev refill has floor \(\pi^3/36\) | **PROVED; CHEBYSHEV ZERO MODE ONLY** |
+| exact second-primitive norm and sharp \(u=o(r)\) refill regime | **PROVED** |
+| linear-scale relative refill converges to explicit \(\Phi(c)\) | **PROVED FOR POSITIVE REAL TILT** |
+| \(\Phi(c)\) is a positive Stieltjes profile zero-free off \(i[4,\infty)\cup-i[4,\infty)\) | **PROVED** |
+| finite transforms converge locally uniformly on compact subsets of \(\Re c>0\) | **PROVED** |
+| cost-charged local Chebyshev refill has floor \(\pi^3/36\) | **PROVED FOR \(zW=o(r)\); CHEBYSHEV ZERO MODE ONLY** |
 | full moving-order Perron or beta estimate from cusp compensation | **NOT PROVED** |
 | higher information order never improves actual beta cancellation | **NOT PROVED** |
 | real spectral zero-freeness forces a uniform local energy gap | **REFUTED** |
@@ -414,7 +424,7 @@ At the full continuation head:
 
 - all 62 changed bounded producers passed normally and under optimized
   Python;
-- all 622 tests in the 61 changed focused modules passed in both modes;
+- all 627 tests in the 61 changed focused modules passed in both modes;
 - Ruff lint and format passed on all 123 changed Python files;
 - all 67 changed Markdown packets contain no forbidden control bytes;
 - local links from the two successor front doors resolve;
@@ -464,10 +474,10 @@ This pass deliberately avoids heavy computation.
   small displayed approximations already fenced as replay output.
 
 The continuation preserves that discipline. Its eight newest packets use no
-beta terms, primes, zeta zeros, random samples, or quadrature. The complete 62-
-producer sweep takes under 47 seconds per Python mode, and the full 622-test
-sweep takes under 83 seconds per mode on this machine; no high-rank
-enumeration was introduced.
+beta terms, primes, zeta zeros, or random samples. The final phase-profile
+replay adds one deterministic \(4096\)-panel Simpson integral and no adaptive
+quadrature. The complete 62-producer sweep and full 627-test sweep remain
+bounded and introduce no high-rank enumeration.
 
 ## 6. Refuted shortcuts
 

@@ -1030,8 +1030,9 @@ extension \(\Phi(0)=1\), the full cost-charged real-positive limit is
 
 \[
  \boxed{
+ n\to\infty,\quad u_n>0,\quad
  \frac{u_n}{n}\to c\in[0,\infty),\quad
- n\log\left(1+\frac{\ell}{W_n}\right)\to\tau
+ n\log\left(1+\frac{\ell}{W_n}\right)\to\tau\in[0,\infty)
  \quad\Longrightarrow\quad
  \mathcal G^*_{r,W}(X)\mathcal L_{r,W}(z)
  \to\frac{\pi^3}{36}e^{2\tau}\Phi(c).}
@@ -1112,9 +1113,11 @@ of \(\Re c>0\) is not uniform as \(\Re c\downarrow0\), and the limits
 not prove a zero-free Perron contour or justify passage along the full
 imaginary axis.
 
-Within schedules with \(r_X\to\infty\), the limiting floor \(\pi^3/36\) is
-approached exactly when \(r_X\log(1+\ell/W_X)\to0\). In the wide-support
-regime \(W_X\gg\ell\), this is equivalent to \(W_X\gg r_X\ell\).
+Within the sublinear-tilt schedules \(z_XW_X=o(r_X)\), the limiting floor
+\(\pi^3/36\) is approached exactly when
+\(r_X\log(1+\ell/W_X)\to0\). In the wide-support regime \(W_X\gg\ell\),
+this is equivalent to \(W_X\gg r_X\ell\). At linear tilt, (4.27) permits a
+different balance between the support-cost factor and \(\Phi(c)\).
 
 This is an exact real-positive geometric phase diagram for the BV-optimal
 Chebyshev family.

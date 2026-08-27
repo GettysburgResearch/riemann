@@ -18,7 +18,7 @@
     "complex_linear_scale_profile": "the same Phi(c) limit holds locally uniformly on compact subsets of Re(c)>0",
     "complex_zero_free_half_disk": "for Re(z)>=0 and 0<|z|<16/3, J_r(z) is nonzero; after width-W dilation the condition is |z|W<16/3",
     "cost_charged_local_chart": "G*L=P_r*(1+log(X)/W)^(2r+2)*(1+O(zW)); for zW->0 its liminf is at least pi^3/36, with equality requiring r->infinity and r*log(1+log(X)/W)->0",
-    "cost_charged_phase_diagram": "if z_r*W_r/(r+1)->c and (r+1)*log(1+log(X)/W_r)->tau, then G*L->(pi^3/36)*exp(2*tau)*Phi(c), with Phi(0)=1",
+    "cost_charged_phase_diagram": "for n=r+1->infinity and positive real tilt, if z_r*W_r/n->c in [0,infinity) and n*log(1+log(X)/W_r)->tau in [0,infinity), then G*L->(pi^3/36)*exp(2*tau)*Phi(c), with Phi(0)=1",
     "exact_bounds": "pi^3/36<P_r<=25/9 for r>=1, and P_r<=196/135 for r>=2",
     "finite_jump_formula": "J_r(z)=sum_jk mu_j*mu_k*(1-exp(-a*d_jk)-a*d_jk)/a^2, a=z/2",
     "global_real_tilt_bounds": "for every z>0, 0<J_r(z)<z||F_r||_2^2 and z*J_r(z)->4||K_r||_2^2",
