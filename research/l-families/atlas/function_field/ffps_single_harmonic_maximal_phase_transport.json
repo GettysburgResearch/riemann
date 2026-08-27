@@ -1,0 +1,132 @@
+{
+  "bounded_replay": {
+    "beta_zero_scale": {
+      "depth": 10,
+      "reconstruction": true,
+      "theorem_bounds": "(1-67^(-1/2))*Msharp_max<=D_zero_max<=(1+67^(-1/2))*Msharp_max",
+      "toy_modulus": "1/5"
+    },
+    "phase_transport": {
+      "fixed_harmonic_cost": "1+2*pi*|h|",
+      "rows": [
+        {
+          "forward_identity": true,
+          "height": 1,
+          "reverse_identity": true
+        },
+        {
+          "forward_identity": true,
+          "height": 2,
+          "reverse_identity": true
+        },
+        {
+          "forward_identity": true,
+          "height": 3,
+          "reverse_identity": true
+        },
+        {
+          "forward_identity": true,
+          "height": 4,
+          "reverse_identity": true
+        },
+        {
+          "forward_identity": true,
+          "height": 5,
+          "reverse_identity": true
+        },
+        {
+          "forward_identity": true,
+          "height": 6,
+          "reverse_identity": true
+        },
+        {
+          "forward_identity": true,
+          "height": 7,
+          "reverse_identity": true
+        },
+        {
+          "forward_identity": true,
+          "height": 8,
+          "reverse_identity": true
+        },
+        {
+          "forward_identity": true,
+          "height": 9,
+          "reverse_identity": true
+        },
+        {
+          "forward_identity": true,
+          "height": 10,
+          "reverse_identity": true
+        },
+        {
+          "forward_identity": true,
+          "height": 11,
+          "reverse_identity": true
+        },
+        {
+          "forward_identity": true,
+          "height": 12,
+          "reverse_identity": true
+        }
+      ],
+      "theorem_bound": "(1+|t|*log X)^(-1) max_Y|F_Y(0)|<=max_Y|F_Y(t)|<=(1+|t|*log X) max_Y|F_Y(0)|",
+      "unit_phase": [
+        "3/5",
+        "4/5"
+      ]
+    }
+  },
+  "classical_input": {
+    "beta_form": "RH iff sup_(1<=Y<=X)|D_Y(0)|=X^o(1)",
+    "statement": "RH iff sup_(1<=Y<=X)|sum_(n<=Y)mu(n)|=X^(1/2+o(1))",
+    "status": "IMPORTED CLASSICAL MERTENS CRITERION",
+    "weighted_form": "RH iff sup_(1<=Y<=X)|sum_(n<=Y)mu(n)/sqrt(n)|=X^o(1)"
+  },
+  "load_bearing_scope": {
+    "actual_signed_beta_source": true,
+    "dyadic_endpoint_replacement_proved": false,
+    "endpoint_only_first_harmonic_equivalence": false,
+    "maximal_prefix_assembly": true,
+    "moving_kernel_order": false,
+    "one_common_period_before_prefix_supremum": true,
+    "raw_central_beta_prefix_is_rh_equivalent": true,
+    "rh_proved": false
+  },
+  "phase_transport": {
+    "common_lattice_frequency": "t_(h,X)=2*pi*h/L_X",
+    "definition": "F_Y(t)=sum_(n<=Y)a_n*n^(-it)",
+    "fixed_harmonic_constant": "|t_(h,X)|logX<2*pi*|h| for fixed nonzero h",
+    "proof": "discrete Abel summation and total variation sum_(n<Y)|n^(-it)-(n+1)^(-it)|<=|t|logY",
+    "two_sided_maximal_bound": "(1+|t|logX)^(-1)F_zero_max<=F_t_max<=(1+|t|logX)F_zero_max"
+  },
+  "resource_caps": {
+    "floating_point_operations": 0,
+    "large_matrices": 0,
+    "toy_prefixes": 12,
+    "toy_scale_depth": 10,
+    "zeta_zeros": 0
+  },
+  "single_harmonic_equivalence": {
+    "minimal_window": "inside the kernel-weighted retained lattice, one nonzero guarded lattice harmonic; k=0 has zero weight",
+    "raw_target": "sup_(1<=Y<=X)|D_Y(t_(h,X))|^2=X^o(1)",
+    "theorem": "for every fixed nonzero h and fixed kernel order r, RH iff either the raw or weighted maximal target holds",
+    "weight": "w_(h,X)=|Bhat(t_(h,X))|^2/L_X",
+    "weight_asymptotic": "w_(h,X)~K_0^2*(2*pi*|h|)^(2r)*L_X^(-(2r+1))",
+    "weighted_target": "w_(h,X)*sup_(1<=Y<=X)|D_Y(t_(h,X))|^2=X^o(1)"
+  },
+  "source_contract": {
+    "commit": "ece0694b29dfc6cd335a8f9da20fe141141d607b",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_CRITICAL_BETA_SPECTRAL_WITNESS_PRINCIPLE.md": "2e3e0b395e3162e6b73bab5c06ea94e39a360a80",
+      "research/l-families/atlas/function_field/FFPS_CRITICAL_LATTICE_FIRST_HARMONIC_FIREWALL.md": "67b6bf8ec69a77b017dab21124bef117fc461f50",
+      "research/l-families/atlas/function_field/ffps_critical_beta_spectral_witness_principle.json": "d48dd56093fb4782308bda622f0d5041f2256a16",
+      "research/l-families/atlas/function_field/ffps_critical_beta_spectral_witness_principle.py": "488f2fa28524ddf1fbb9c5d16053b6d4cd3cbb74",
+      "research/l-families/atlas/function_field/ffps_critical_lattice_first_harmonic_firewall.json": "63afdd65bc764b131cd0c6b17caef7585ef7c6bd",
+      "research/l-families/atlas/function_field/ffps_critical_lattice_first_harmonic_firewall.py": "114eb2a3d7d98e99a3cfb23788f519ea20f6698e",
+      "tests/test_ffps_critical_beta_spectral_witness_principle.py": "71c7b5222b73cd2bd5d8649b3cacf208fa68c2a5",
+      "tests/test_ffps_critical_lattice_first_harmonic_firewall.py": "fc2c4992e2aa38ad125340b3c100c4e58708bac5"
+    },
+    "imports": "common-period critical witness lattice, fixed-harmonic weight asymptotic, and duplicate-67 scale identity"
+  }
+}
