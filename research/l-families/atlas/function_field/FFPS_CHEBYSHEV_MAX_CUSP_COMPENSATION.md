@@ -1102,17 +1102,37 @@ therefore a square-root edge, not an unexplained numerical instability. It
 follows from (4.29a) that
 
 \[
+ \boxed{
+ \int_{16}^\infty\frac{\rho(t)}{t^j}\,dt
+ =\frac{576}{4^{j-1}\pi^4}
+ \frac{(j!)^2}{(2j+1)!}
+ \left(1-2^{-2j-2}\right)\zeta(2j+2),
+ \qquad j\ge1.}
+\tag{4.29c}
+\]
+
+Indeed, expand (4.29) in \(q\), use
+\[
+ \int_0^\pi\sin^{2j+1}\theta\,d\theta
+ =\frac{2^{2j+1}(j!)^2}{(2j+1)!},
+ \qquad
+ \sum_{m\ {\rm odd}}m^{-2j-2}
+ =(1-2^{-2j-2})\zeta(2j+2).
+\]
+The first rows are
+
+\[
  \int_{16}^\infty\frac{\rho(t)}t\,dt=1,\qquad
  \int_{16}^\infty\frac{\rho(t)}{t^2}\,dt=\frac{\pi^2}{200},\qquad
  \int_{16}^\infty\frac{\rho(t)}{t^3}\,dt
  =\frac{17\pi^4}{627200}.
-\tag{4.29c}
+\tag{4.29d}
 \]
 
 The first identity normalizes \(\Phi(0)=1\); the next two are precisely the
-quadratic and quartic coefficients in (4.24). Thus the causal-primitive
-hierarchy is literally the inverse-moment hierarchy of the limiting
-Stieltjes measure. It follows from (4.29a) that
+quadratic and quartic coefficients in (4.24). Thus the complete
+causal-primitive expansion is literally the inverse-moment hierarchy of the
+limiting Stieltjes measure. It follows from (4.29a) that
 
 \[
  \boxed{
@@ -1214,6 +1234,7 @@ In particular:
 | complex right-half-plane profile (4.28) | **PROVED LOCALLY UNIFORMLY ON COMPACTS** |
 | Stieltjes representation and limiting zero-free domain (4.29)--(4.30) | **PROVED** |
 | exact Stieltjes density and odd square-root threshold ladder (4.29a)--(4.29b) | **PROVED** |
+| all-order inverse-moment formula (4.29c) | **PROVED** |
 | acute-sector complex scale trichotomy (4.31) | **PROVED FOR THE KERNEL TRANSFORM** |
 | uniform-in-order relative remainder (2.8) | **PROVED** |
 | sharp \(3/16\) Young-envelope coefficient | **PROVED** |
