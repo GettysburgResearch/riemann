@@ -1,0 +1,99 @@
+{
+  "control": {
+    "color_times_radius": "24/25",
+    "colors": 3,
+    "condition_inverse": "14149498560666738074232998892012174657316454997092403421222835765524220810301320491780517893688997030396800686401371608837316770114489461462881081388331949710845947265625/10158610276589809424858002870872039128874728933813024425184722055630093826111234209019951635166558891865871964004444558136045479567517016390971857",
+    "condition_numerator_digits": 170,
+    "critical_radius_control": "8/25",
+    "exact_reassembly": true,
+    "maximum_total_degree": 5,
+    "q": 11,
+    "q_times_radius_squared": "704/625",
+    "rough_cutoff_degree": 2,
+    "rough_nonzero_monomials": 10,
+    "rough_phase_one_coefficients": [
+      1,
+      0,
+      0,
+      -1320,
+      -10890,
+      -96624
+    ]
+  },
+  "proof_ledger": {
+    "actual_sharp_rough_coefficient_frontier": "NOT CLAIMED",
+    "behavior_for_q_at_or_below_color_square": "NOT CLAIMED",
+    "color_square_and_depth_two_subfrontier": "PROVED",
+    "depth_two_absolute_conditioning_barrier": "PROVED",
+    "fixed_colored_core_stability": "PROVED",
+    "multicolor_rough_quotient": "PROVED EXACT",
+    "native_ffps_or_sheaf_realization": "NOT INCLUDED",
+    "number_field_transfer": "NOT INFERRED",
+    "rh_or_grh": "NOT PROVED",
+    "uniform_condition_number": "PROVED"
+  },
+  "resource_caps": {
+    "colors": 3,
+    "finite_field_elements": 0,
+    "finite_field_polynomials_enumerated": 0,
+    "irreducibles_enumerated": 0,
+    "largest_test_condition_numerator_digits": 2015,
+    "largest_test_rough_cutoff_degree": 3,
+    "maximum_total_degree": 5,
+    "q": 11,
+    "rough_cutoff_degree": 2,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "frozen_sources": [
+      {
+        "blob": "bb4610731c91951b10c11d7664c5d193b4fa1f3c",
+        "commit": "2d4e06ccc65b337f05410219f366323c40a4a8d5",
+        "path": "research/l-families/atlas/function_field/FUNCTION_FIELD_MULTICOLOR_WITT_PHASE_DIAGRAM.md"
+      },
+      {
+        "blob": "cc48422f9db42a6d759251671af76bba62a70cad",
+        "commit": "2d4e06ccc65b337f05410219f366323c40a4a8d5",
+        "path": "research/l-families/atlas/function_field/function_field_multicolor_witt_phase_diagram.py"
+      },
+      {
+        "blob": "98fcbec7c51c56ace02c0f6bdca7307f076adb45",
+        "commit": "2d4e06ccc65b337f05410219f366323c40a4a8d5",
+        "path": "research/l-families/atlas/function_field/function_field_multicolor_witt_phase_diagram.json"
+      },
+      {
+        "blob": "2e06eac5b8f3fd35fdf0a6e0adad02be50396f3d",
+        "commit": "2d4e06ccc65b337f05410219f366323c40a4a8d5",
+        "path": "tests/test_function_field_multicolor_witt_phase_diagram.py"
+      },
+      {
+        "blob": "bd1dd0fb7b2400114ed78dddd5e36fa5d2984578",
+        "commit": "11552aea89380809f45ff002eb0c6927c70ab1f2",
+        "path": "research/l-families/atlas/function_field/FUNCTION_FIELD_WITT_ROUGH_SIEVE_FRONTIER.md"
+      },
+      {
+        "blob": "81eff0c25123e93baaec7c72daeda740ec7b4ff6",
+        "commit": "11552aea89380809f45ff002eb0c6927c70ab1f2",
+        "path": "research/l-families/atlas/function_field/function_field_witt_rough_sieve_frontier.py"
+      },
+      {
+        "blob": "0bb8ff9b57ffd1844b8cd1708b2d809ffd81ae8c",
+        "commit": "11552aea89380809f45ff002eb0c6927c70ab1f2",
+        "path": "research/l-families/atlas/function_field/function_field_witt_rough_sieve_frontier.json"
+      },
+      {
+        "blob": "7aca10c1a9e8d3079d0b915e92a644b7cad1a391",
+        "commit": "11552aea89380809f45ff002eb0c6927c70ab1f2",
+        "path": "tests/test_function_field_witt_rough_sieve_frontier.py"
+      }
+    ]
+  },
+  "theorem": {
+    "absolute_method_barrier": "y_n>=(2+eta)log_q(n) makes every fixed critical-radius finite-deletion condition number superexponential",
+    "conditioning_cost": "for y>=1, log K_(q,c,y)(r)=O_(q,c,r)((q*r)^y/y), 0<r<1/c; K_(q,c,0)=1",
+    "domain": "formal replay for integer q>=2; geometric theorem for prime-power q",
+    "fixed_colored_core": "a fixed core divides by the union of low-degree and core-prime local factors and preserves |u|<1/c",
+    "rough_quotient": "F_(q,c,>y)=F_(q,c)/prod_(deg P<=y)(1-sum_i (u*z_i)^degP)",
+    "two_axis_subfrontier": "for fixed 0<eta<2, q>c^2 and y_n<=(2-eta)log_q(n) imply exponential critical-normalized complete-shell decay"
+  }
+}
