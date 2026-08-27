@@ -1,9 +1,10 @@
 # Beta band-pass and curve-wavelet successor: five-minute handoff
 
-Status: **frozen exploratory theorem atlas; the newest pass contains an
-all-order beta moment tower, a sharp higher-derivative and growing-rung
-hierarchy, a spectral-zero-free no-gap theorem, exact function-field
-calibration, and sheaf firewalls; RH and GRH remain open**
+Status: **frozen exploratory theorem atlas; the current head adds a universal
+compact-kernel information theorem, the unique all-order Chebyshev BV
+extremizer, an exact moving safe-factor phase diagram, finite autocorrelation
+geometry, near-notch and endpoint-layer asymptotics, and ensemble firewalls;
+RH and GRH remain open**
 
 Parent release: draft PR #757 at
 \(b870366141fe8d5f43d5b81f6e50a67d2a888070\).
@@ -25,6 +26,49 @@ The complete replay and scope ledger is in
 The fastest route into the current head is:
 
 1. Read
+   [FFPS_CHEBYSHEV_BV_KERNEL_EXTREMIZER.md](function_field/FFPS_CHEBYSHEV_BV_KERNEL_EXTREMIZER.md),
+   then
+   [FFPS_SHARP_BV_SAFE_FACTOR_PHASE_DIAGRAM.md](function_field/FFPS_SHARP_BV_SAFE_FACTOR_PHASE_DIAGRAM.md)
+   and
+   [FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md](function_field/FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md).
+   Two independent Chebyshev duals prove that the alternating step uniquely
+   minimizes the *complete* universal forward size
+   \(\|K\|_\infty+\operatorname{Var}K\) at every information order. The
+   resulting safe-factor constants
+
+   \[
+    A_r=\frac{16^r(2r+3)^2}
+    {(2r+1)\binom{2r}{r}^2}
+   \]
+
+   increase strictly from \(A_0=9\), with \(A_r\sim2\pi r^2\). Thus an extra
+   vanished moment never improves the universal BV certificate. Its value
+   must come from kernel/source-specific geometry. The third packet supplies
+   exactly that next coordinate: a finite atomic formula for \(-R_r''\), the
+   exact cusp \(R_r(s)/R_r(0)=1-(2r+1)|s|\) on its maximal disjoint-jump
+   window, and the exact order-\(2r\) Fourier notch.
+
+2. Read
+   [FFPS_COMPACT_KERNEL_INFORMATION_ORDER.md](function_field/FFPS_COMPACT_KERNEL_INFORMATION_ORDER.md)
+   and
+   [FFPS_CARRIER_ENSEMBLE_CONDITION_FIREWALL.md](function_field/FFPS_CARRIER_ENSEMBLE_CONDITION_FIREWALL.md).
+   Every fixed nonzero real compact BV kernel gives an RH-equivalent normalized
+   beta energy; its first surviving moment determines the reverse power.
+   Positive direct sums cannot beat the best constituent condition number,
+   coherent sums factor through their first surviving moment, and order zero
+   is a genuine low-pass loophole rather than a derivative-rung competitor.
+
+3. Read
+   [FFPS_SPECTRAL_NEAR_NOTCH_CONDITIONING.md](function_field/FFPS_SPECTRAL_NEAR_NOTCH_CONDITIONING.md)
+   and
+   [FFPS_TILT_ENDPOINT_LAYER_PHASE_DIAGRAM.md](function_field/FFPS_TILT_ENDPOINT_LAYER_PHASE_DIAGRAM.md).
+   The first resolves the singular perturbation around every Bessel notch,
+   including its exact quadratic energy excess and shifted local profile. The
+   second proves the large-tilt Gamma endpoint layer and the exact moving-tilt
+   RH-safe phase boundary. These close two tempting numerical extrapolations
+   without using heavy root searches or beta sums.
+
+4. Then read
    [FFPS_HIGHER_DERIVATIVE_CARRIER_HIERARCHY.md](function_field/FFPS_HIGHER_DERIVATIVE_CARRIER_HIERARCHY.md).
    This is now the strongest direct-beta front door. At every fixed
    derivative rung \(m\ge1\),
@@ -55,7 +99,7 @@ The fastest route into the current head is:
    convolution; support, positivity, derivative order, and diagonal
    normalization are now closed sharply.
 
-2. Then read
+5. Then read
    [FFPS_BETA_CARRIER_LEGENDRE_MOMENT_TOWER.md](function_field/FFPS_BETA_CARRIER_LEGENDRE_MOMENT_TOWER.md)
    and
    [FFPS_SPECTRAL_ZERO_FREE_CARRIER_TILT.md](function_field/FFPS_SPECTRAL_ZERO_FREE_CARRIER_TILT.md).
@@ -68,14 +112,14 @@ The fastest route into the current head is:
    the positive tilt orientation is zero-free in the right Laplace
    half-plane.
 
-3. For the original first-derivative phase diagram and its provenance,
+6. For the original first-derivative phase diagram and its provenance,
    read
    [FFPS_MOVING_SUPPORT_CARRIER_PHASE_DIAGRAM.md](function_field/FFPS_MOVING_SUPPORT_CARRIER_PHASE_DIAGRAM.md),
    [FFPS_UNIFORM_MOVING_CARRIER_BETA_CRITERION.md](function_field/FFPS_UNIFORM_MOVING_CARRIER_BETA_CRITERION.md),
    and
    [FFPS_VARIATIONAL_PROBABILITY_CARRIER_OPTIMUM.md](function_field/FFPS_VARIATIONAL_PROBABILITY_CARRIER_OPTIMUM.md).
 
-4. For the arithmetic-geometric mirror, read
+7. For the arithmetic-geometric mirror, read
    [FUNCTION_FIELD_MOBIUS_CARRIER_CALIBRATION.md](function_field/FUNCTION_FIELD_MOBIUS_CARRIER_CALIBRATION.md),
    then
    [FFPS_FUNCTION_FIELD_BETA_DIVISOR_WAVELET_PILOT.md](function_field/FFPS_FUNCTION_FIELD_BETA_DIVISOR_WAVELET_PILOT.md).
@@ -84,7 +128,7 @@ The fastest route into the current head is:
    divisor-wavelet port. Known function-field RH is imported only as a
    calibration theorem.
 
-5. For the sheaf/Adams route, read
+8. For the sheaf/Adams route, read
    [FFPS_MARKED_PLACE_BIFROBENIUS_GLUING_GATE.md](function_field/FFPS_MARKED_PLACE_BIFROBENIUS_GLUING_GATE.md)
    and
    [FFPS_TERNARY_RELATIVE_CORRESPONDENCE_NORMAL_FORM.md](function_field/FFPS_TERNARY_RELATIVE_CORRESPONDENCE_NORMAL_FORM.md).
@@ -93,7 +137,7 @@ The fastest route into the current head is:
    Artin--Schreier/incidence block fails. A signed
    pushforward/correspondence realization remains open.
 
-6. Use
+9. Use
    [BETA_BANDPASS_WAVELET_RELEASE_AUDIT.md](BETA_BANDPASS_WAVELET_RELEASE_AUDIT.md)
    as the claim and replay ledger. Older sections below remain useful
    provenance, but this list supersedes their original entry order.
@@ -103,6 +147,49 @@ from a complete function-field identity. Do not treat an RH-equivalent
 criterion as progress on its open arithmetic estimate. Do not revive a
 carrier-sign or compact-kernel-zero argument without first quotienting
 the exact spectral surgery and chirality firewalls.
+
+## Current-head synthesis: seven new theorem packets
+
+The newest continuation starts with a local spectral question and ends with a
+complete compact-kernel design theorem.
+
+1. Near every positive Bessel notch, the tilted Fourier floor and energy
+   excess are both quadratic in the tilt. The local notch profile has an exact
+   shifted quadratic normal form; the high-notch condition product is
+   explicit.
+2. At large tilt, the normalized beta carrier converges after endpoint
+   rescaling to a Gamma layer. Its derivative energy has a two-term exact
+   asymptotic, producing the moving tilt/support phase diagram.
+3. Positive detector ensembles obey a convex condition firewall, while
+   coherent combinations factor through the first surviving moment. The
+   order-zero low-pass row remains RH-equivalent for arbitrary finite support
+   and must not be silently excluded.
+4. Every fixed nonzero compact real BV kernel has a finite information order
+   and an RH-equivalent normalized energy. This is a classification of
+   observables, not a cancellation estimate.
+5. For a prescribed information order and sensitivity, the unique minimizer
+   of zero-extended variation is also the unique minimizer of the complete BV
+   size. Its derivative lives on Chebyshev--Lobatto extrema, and the kernel is
+   the alternating sign of a second-kind Chebyshev polynomial.
+6. After width normalization, the exact universal safe factor is
+
+   \[
+    A_r\left(1+\frac{\log X}{W}\right)^{2r+2}.
+   \]
+
+   The constants \(A_r\) grow strictly and log-concavely. The packet also
+   upgrades the normalized RH corollary to variable information order and
+   identifies the exact power-law safe region.
+7. The optimal step's autocorrelation has finite atomic curvature. Its local
+   cusp steepens like \(r\), but its disjoint-jump window shrinks like
+   \(r^{-2}\); from order four onward the local linear branch ends before its
+   formal zero. This is a concrete warning against turning a spectral notch
+   into an unsupported resolution claim.
+
+The scientific direction is now sharper: universal carrier geometry is
+closed enough that another gain must preserve the signs in the beta
+primitive-pair/Fourier coupling or exploit a genuinely arithmetic
+function-field/sheaf channel.
 
 ## 0. What the aggressive continuation actually established
 
@@ -592,11 +679,11 @@ rank \(q^a\).
 
 At the continuation head:
 
-- all 54 changed bounded producers pass normally and under optimized
+- all 61 changed bounded producers pass normally and under optimized
   Python;
-- all 500 tests in the 53 changed focused modules pass in both modes;
-- Ruff lint and format pass on all 107 changed Python files;
-- all 59 changed Markdown files are free of forbidden control bytes;
+- all 602 tests in the 60 changed focused modules pass in both modes;
+- Ruff lint and format pass on all 121 changed Python files;
+- all 66 changed Markdown files are free of forbidden control bytes;
 - the two front-door documents have resolving local links and balanced
   math/fence delimiters;
 - the working diff passes the Git whitespace check.

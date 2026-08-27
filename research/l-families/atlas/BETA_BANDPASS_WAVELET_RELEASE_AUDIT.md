@@ -20,32 +20,79 @@ Programme scope:
 
 ## 0. Current-head synthesis
 
-The original audit below remains provenance for the first release
-slice. The branch subsequently grew into four review lanes. The current
-front door is
-[FFPS_HIGHER_DERIVATIVE_CARRIER_HIERARCHY.md](function_field/FFPS_HIGHER_DERIVATIVE_CARRIER_HIERARCHY.md).
+The original audit below remains provenance for the first release slice. The
+branch subsequently grew into four review lanes. The current front door is the
+three-packet Chebyshev chain:
+[FFPS_CHEBYSHEV_BV_KERNEL_EXTREMIZER.md](function_field/FFPS_CHEBYSHEV_BV_KERNEL_EXTREMIZER.md),
+[FFPS_SHARP_BV_SAFE_FACTOR_PHASE_DIAGRAM.md](function_field/FFPS_SHARP_BV_SAFE_FACTOR_PHASE_DIAGRAM.md),
+and
+[FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md](function_field/FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md).
 
 The strongest exact continuation results are:
 
-1. **All-order moment and Legendre tower.** Every fixed signed field
+1. **Universal compact-kernel classification.** Every fixed nonzero real
+   compact BV kernel has a finite information order and gives an
+   RH-equivalent fully normalized beta energy. Its first surviving moment
+   fixes the exact reverse power. This classifies the logical strength of
+   every fixed compact detector without estimating one new beta sum.
+
+2. **Complete Chebyshev BV extremizer.** The shifted first-kind Chebyshev
+   minimax dual gives the sharp variation, while a second-kind monic
+   \(L^1\) dual independently gives the sharp supremum. The same alternating
+   step attains both, hence uniquely minimizes
+   \(\|K\|_\infty+\operatorname{Var}K\) at every information order.
+
+3. **Sharp safe-factor phase diagram.** At width \(W\), the exact minimum of
+   the universal BV factor is
+
+   \[
+    A_r\left(1+\frac{\log X}{W}\right)^{2r+2},
+    \qquad
+    A_r=\frac{16^r(2r+3)^2}
+    {(2r+1)\binom{2r}{r}^2}.
+   \]
+
+   The \(A_r\) increase strictly and log-concavely, with
+   \(A_r\sim2\pi r^2\). Thus extra vanished moments never improve this
+   universal proof envelope. A separately proved pointwise argument extends
+   the normalized RH corollary to moving information order.
+
+4. **Finite autocorrelation normal form.** The optimal step has an exact
+   atomic formula for \(-R_r''\), a local law
+   \(R_r(s)/R_r(0)=1-(2r+1)|s|\), and an order-\(2r\) Fourier notch. Its
+   linear window shrinks like \(r^{-2}\), and from order four it closes before
+   the formal cusp zero.
+
+5. **Near-notch and endpoint-layer closure.** Every positive Bessel notch has
+   an exact quadratic tilt floor, energy excess, and shifted local profile.
+   At the opposite large-tilt limit, the carrier has a Gamma endpoint layer
+   and a two-term derivative-energy asymptotic, yielding the exact moving
+   support/tilt phase boundary.
+
+6. **Ensemble condition firewall.** Positive orthogonal assembly averages
+   constituent condition numbers; coherent sums factor through their lowest
+   surviving moment. The order-zero low-pass family remains a legitimate
+   arbitrary-support RH-equivalent row.
+
+7. **All-order moment and Legendre tower.** Every fixed signed field
    moment is RH-equivalent; all logarithmic beta moments admit an exact
    triangular transform and complete shifted-Legendre Parseval
    decomposition. RH also pays an explicit growing-order forward
    window.
 
-2. **Higher-derivative fixed- and growing-rung hierarchy.** The
+8. **Higher-derivative fixed- and growing-rung hierarchy.** The
    positive beta polynomial is the unique signed-carrier variational
    optimum at every derivative rung. The critical width is
    \(2m+1\), the matched moment remains the literal beta prefix, and
    the sharply normalized RH criterion survives
    \(m=o(\log X/\log\log X)\) at fixed width.
 
-3. **Spectral-zero-free no-gap theorem.** Exponentially tilted positive
+9. **Spectral-zero-free no-gap theorem.** Exponentially tilted positive
    carriers have no real Fourier zeros and approach the sharp carrier
    energy infimum without attaining it. Their Laplace zeros lie on
    \(\Re z=-2\tau/S\), so only positive tilt is right-half-plane safe.
 
-4. **Sharp centered carrier duality.** For every compact normalized
+10. **Sharp centered carrier duality.** For every compact normalized
    carrier derivative,
 
    \[
@@ -57,7 +104,7 @@ The strongest exact continuation results are:
    Mertens-plus-shape decomposition and signed-autocorrelation second
    moment.
 
-5. **All-support parabolic criterion.** For every arbitrary prescribed
+11. **All-support parabolic criterion.** For every arbitrary prescribed
    schedule \(1\le S_X<\infty\),
 
    \[
@@ -70,33 +117,35 @@ The strongest exact continuation results are:
    The width power \(3\) is the unique scale-balanced exponent for the
    two proved mechanisms.
 
-6. **Exact curve-zeta calibration.** The same carrier construction on
+12. **Exact curve-zeta calibration.** The same carrier construction on
    \(1/Z_C(u)\) gives an exact coefficient-square energy and is
    equivalent to the reciprocal roots lying on the Weil circle. Weil
    RH is imported, not reproved.
 
-7. **Function-field channel exposure.** The divisor-wavelet pilot
+13. **Function-field channel exposure.** The divisor-wavelet pilot
    isolates a genuine twisted \(L\)-channel; the marked-place packets
    identify two-place recurrences, an elliptic three-place channel,
    higher Tate notches, and all-mark exterior-character structure.
 
-8. **Corrected Adams obstruction.** The native gluing problem is the
+14. **Corrected Adams obstruction.** The native gluing problem is the
    crossed marked-place source graph under partial Frobenius. Local
    Artin--Schreier/incidence blocks remain valid inside fixed marked
    blocks. A signed pushforward or correspondence-level construction
    remains open.
 
-9. **Spectral firewalls.** Chirality, compact carrier zeros, and finite
+15. **Spectral firewalls.** Chirality, compact carrier zeros, and finite
    spectral-factor surgery are not determined by the positive energy.
    Positivity, diagonal interpolation, or a pretty compact zero set
    cannot close the beta problem without new source arithmetic.
 
-Three independent agents rederived the centered-moment theorem,
-all-support renormalization, all-order Legendre tower, higher-rung
-variational and growing-window theorems, spectral tilt/no-gap theorem,
-and critical exponent trichotomy. The three newest packets pass normal
-and optimized replay with \(18\), \(17\), and \(18\) focused tests in
-each mode, respectively, plus Ruff, source-blob provenance,
+Three independent agents rederived the centered-moment theorem, all-support
+renormalization, all-order Legendre tower, higher-rung variational and
+growing-window theorems, spectral tilt/no-gap theorem, and critical exponent
+trichotomy. In the newest seven-packet continuation they also independently
+rederived the near-notch constants, endpoint-layer asymptotic, ensemble and
+compact-kernel firewalls, both Chebyshev duals, the moving-order safe chart,
+and the atomic autocorrelation signs and factors of two. Every focused replay
+passes normally and under optimized Python, plus Ruff, source-blob provenance,
 delimiter/control-byte checks, and Git whitespace checks.
 
 ## 1. Commit ledger
@@ -168,6 +217,13 @@ delimiter/control-byte checks, and Git whitespace checks.
 | \(866b082b7\) | all-order beta carrier moment and Legendre tower |
 | \(0123d1ecb\) | higher-derivative fixed/growing-rung hierarchy |
 | \(805ab873c\) | spectral-zero-free positive tilt and no-gap theorem |
+| \(d7708ab08\) | spectral near-notch conditioning law |
+| \(8c49116ac\) | large-tilt endpoint-layer phase diagram |
+| \(f49c463be\) | carrier-ensemble condition firewall |
+| \(ad78ecf6a\) | universal compact-kernel information order |
+| \(798feab0b\) | complete Chebyshev BV kernel extremizer |
+| \(c223f8fe1\) | sharp BV safe-factor phase diagram |
+| \(f3ae060d1\) | Chebyshev-step autocorrelation normal form |
 
 ## 2. Claim ledger
 
@@ -220,6 +276,17 @@ delimiter/control-byte checks, and Git whitespace checks.
 | normalized safe growing-rung RH equivalence | **PROVED** |
 | positive real-Fourier-zero-free carriers approach the sharp energy infimum | **PROVED; INFIMUM NOT ATTAINED** |
 | spectral tilt Laplace zero line \(\Re z=-2\tau/S\) | **PROVED EXACT** |
+| quadratic near-notch Fourier floor, energy excess, and shifted local profile | **PROVED** |
+| large-tilt Gamma endpoint layer and two-term derivative-energy asymptotic | **PROVED** |
+| positive ensemble convex condition firewall and coherent moment factorization | **PROVED** |
+| every fixed nonzero compact real BV kernel gives a normalized RH-equivalent energy | **PROVED** |
+| sharp zero-extended variation and supremum bounds at every information order | **PROVED** |
+| alternating Chebyshev step uniquely minimizes the complete BV forward size | **PROVED** |
+| universal BV safe constants \(A_r\) grow strictly and log-concavely | **PROVED** |
+| normalized variable-information-order RH corollary inside the exact safe factor | **PROVED SUFFICIENT** |
+| finite atomic curvature and exact local cusp of the Chebyshev step | **PROVED** |
+| local cusp predicts its formal zero at every order | **REFUTED FROM ORDER FOUR** |
+| higher information order never improves actual beta cancellation | **NOT PROVED** |
 | real spectral zero-freeness forces a uniform local energy gap | **REFUTED** |
 | carrier chirality or compact zero set follows from energy | **REFUTED** |
 | finite compact spectral-factor surgery classification | **PROVED EXACT IN THE STATED CLASS** |
@@ -259,6 +326,13 @@ python -B research/l-families/atlas/function_field/ffps_compact_kernel_finite_sp
 python -B research/l-families/atlas/function_field/ffps_beta_carrier_legendre_moment_tower.py --check
 python -B research/l-families/atlas/function_field/ffps_higher_derivative_carrier_hierarchy.py --check
 python -B research/l-families/atlas/function_field/ffps_spectral_zero_free_carrier_tilt.py --check
+python -B research/l-families/atlas/function_field/ffps_spectral_near_notch_conditioning.py --check
+python -B research/l-families/atlas/function_field/ffps_tilt_endpoint_layer_phase_diagram.py --check
+python -B research/l-families/atlas/function_field/ffps_carrier_ensemble_condition_firewall.py --check
+python -B research/l-families/atlas/function_field/ffps_compact_kernel_information_order.py --check
+python -B research/l-families/atlas/function_field/ffps_chebyshev_bv_kernel_extremizer.py --check
+python -B research/l-families/atlas/function_field/ffps_sharp_bv_safe_factor_phase_diagram.py --check
+python -B research/l-families/atlas/function_field/ffps_chebyshev_step_autocorrelation_normal_form.py --check
 ~~~
 
 Focused test modules:
@@ -289,15 +363,22 @@ tests.test_ffps_compact_kernel_finite_spectral_factor_surgery
 tests.test_ffps_beta_carrier_legendre_moment_tower
 tests.test_ffps_higher_derivative_carrier_hierarchy
 tests.test_ffps_spectral_zero_free_carrier_tilt
+tests.test_ffps_spectral_near_notch_conditioning
+tests.test_ffps_tilt_endpoint_layer_phase_diagram
+tests.test_ffps_carrier_ensemble_condition_firewall
+tests.test_ffps_compact_kernel_information_order
+tests.test_ffps_chebyshev_bv_kernel_extremizer
+tests.test_ffps_sharp_bv_safe_factor_phase_diagram
+tests.test_ffps_chebyshev_step_autocorrelation_normal_form
 ~~~
 
 At the full continuation head:
 
-- all 54 changed bounded producers passed normally and under optimized
+- all 61 changed bounded producers passed normally and under optimized
   Python;
-- all 500 tests in the 53 changed focused modules passed in both modes;
-- Ruff lint and format passed on all 107 changed Python files;
-- all 59 changed Markdown packets contain no forbidden control bytes;
+- all 602 tests in the 60 changed focused modules passed in both modes;
+- Ruff lint and format passed on all 121 changed Python files;
+- all 66 changed Markdown packets contain no forbidden control bytes;
 - local links from the two successor front doors resolve;
 - the moving-support packet has balanced inline/display math
   delimiters and independently rederived constants;
@@ -344,10 +425,11 @@ This pass deliberately avoids heavy computation.
 - Arithmetic is integer, rational, radical-basis, or symbolic except for
   small displayed approximations already fenced as replay output.
 
-The continuation preserves that discipline. Its final carrier packet
-uses no beta terms, primes, zeta zeros, random samples, or quadrature.
-The full 500-test sweep completes in under 80 seconds per Python mode
-on this machine; no high-rank enumeration was introduced.
+The continuation preserves that discipline. Its seven newest packets use no
+beta terms, primes, zeta zeros, random samples, or quadrature. The complete 61-
+producer sweep takes under 46 seconds per Python mode, and the full 602-test
+sweep takes under 83 seconds per mode on this machine; no high-rank
+enumeration was introduced.
 
 ## 6. Refuted shortcuts
 
@@ -374,6 +456,12 @@ on this machine; no high-rank enumeration was introduced.
 
 Direct beta architecture:
 
+- pair the finite Chebyshev difference spectrum with the assembled
+  primitive-pair kernel before taking absolute values, and decide whether its
+  order-\(2r\) notch produces a source-specific gain beyond the sharp BV
+  envelope;
+- compare the exact low-pass/order-one BV winners with a genuinely
+  Fourier- or autocorrelation-sensitive forward inequality;
 - arithmetic control of the exact nonnegative carrier-shape defect;
 - improvement of the \(3\gamma/2\) raw-energy wedge using translated
   beta-convolution structure rather than abstract support data;

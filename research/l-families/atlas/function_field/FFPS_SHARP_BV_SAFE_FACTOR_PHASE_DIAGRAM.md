@@ -132,7 +132,8 @@ and dilation. Explicitly, on a hull \((a,a+W)\), one may write it as
 \[
  K_{r,W}(t)
  =(-1)^rr!4^r b\,W^{-r-1}
- \operatorname{sgn}U_r\!\left(2\frac{t-a}{W}-1\right),
+ \operatorname{sgn}U_r\!\left(2\frac{t-a}{W}-1\right)
+ \mathbf1_{(a,a+W)}(t),
 \tag{1.4}
 \]
 
