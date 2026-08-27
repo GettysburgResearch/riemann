@@ -1,0 +1,5 @@
+import RiemannComparatorSolution.ArithmeticRows23
+import RiemannComparatorSolution.FixedDetectorFiveThree
+
+#print axioms Solution.ArithmeticRows23.solution
+#print axioms Solution.FixedDetectorFiveThree.solution
