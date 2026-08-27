@@ -1,4 +1,4 @@
-# Reviewer B narrow adjudication of C statement shape
+# Independent narrow adjudication in the B→C cross-review scope
 
 Verdict: `APPROVED_STATEMENT_SHAPE_REPAIR`.
 
