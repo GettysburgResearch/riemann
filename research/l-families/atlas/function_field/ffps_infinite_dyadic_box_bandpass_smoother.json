@@ -1,0 +1,223 @@
+{
+  "envelope_replay": {
+    "rows": [
+      {
+        "M": 3,
+        "a_interval": "[2^3,2^4)",
+        "upper_bound": "2^(-1)"
+      },
+      {
+        "M": 4,
+        "a_interval": "[2^4,2^5)",
+        "upper_bound": "2^(-3)"
+      },
+      {
+        "M": 5,
+        "a_interval": "[2^5,2^6)",
+        "upper_bound": "2^(-6)"
+      },
+      {
+        "M": 6,
+        "a_interval": "[2^6,2^7)",
+        "upper_bound": "2^(-10)"
+      },
+      {
+        "M": 7,
+        "a_interval": "[2^7,2^8)",
+        "upper_bound": "2^(-15)"
+      },
+      {
+        "M": 8,
+        "a_interval": "[2^8,2^9)",
+        "upper_bound": "2^(-21)"
+      },
+      {
+        "M": 9,
+        "a_interval": "[2^9,2^10)",
+        "upper_bound": "2^(-28)"
+      },
+      {
+        "M": 10,
+        "a_interval": "[2^10,2^11)",
+        "upper_bound": "2^(-36)"
+      },
+      {
+        "M": 11,
+        "a_interval": "[2^11,2^12)",
+        "upper_bound": "2^(-45)"
+      },
+      {
+        "M": 12,
+        "a_interval": "[2^12,2^13)",
+        "upper_bound": "2^(-55)"
+      },
+      {
+        "M": 13,
+        "a_interval": "[2^13,2^14)",
+        "upper_bound": "2^(-66)"
+      },
+      {
+        "M": 14,
+        "a_interval": "[2^14,2^15)",
+        "upper_bound": "2^(-78)"
+      },
+      {
+        "M": 15,
+        "a_interval": "[2^15,2^16)",
+        "upper_bound": "2^(-91)"
+      },
+      {
+        "M": 16,
+        "a_interval": "[2^16,2^17)",
+        "upper_bound": "2^(-105)"
+      }
+    ]
+  },
+  "fixed_bandpass": {
+    "autocorrelation_zero_order": "exactly 2r",
+    "estimate_proved": false,
+    "kernel": "B_(r,infinity)=eta_(ell,infinity)*Delta_epsilon^r K_bd",
+    "laplace_multiplier": "Phi_ell(s)*((1-exp(-epsilon*s))/epsilon)^r*M_ext(s)/s",
+    "rh_equivalent_energy": true,
+    "support": "[0,4log2+r*epsilon+ell]"
+  },
+  "infinite_smoother": {
+    "fourier_envelope": "for a=ell*|t| and M=floor(log2(a))>=3, |Phi_ell(it)|<=2^(-(M-1)(M-2)/2)",
+    "laplace_product": "Phi_ell(s)=product_(k>=1) (1-exp(-ell*s/2^k))/(ell*s/2^k)",
+    "probability_density": true,
+    "regularity": "C-infinity",
+    "right_half_plane_zero_free": true,
+    "support": "[0,ell]",
+    "widths": "ell_k=ell/2^k for k>=1"
+  },
+  "notch_replay": {
+    "partial_levels": 8,
+    "rows": [
+      {
+        "correlation_leading_moment": "-128",
+        "correlation_zero_moments": 2,
+        "difference_order": 1,
+        "kernel_leading_moment": "-8",
+        "kernel_zero_moments": 1
+      },
+      {
+        "correlation_leading_moment": "1536",
+        "correlation_zero_moments": 4,
+        "difference_order": 2,
+        "kernel_leading_moment": "16",
+        "kernel_zero_moments": 2
+      },
+      {
+        "correlation_leading_moment": "-46080",
+        "correlation_zero_moments": 6,
+        "difference_order": 3,
+        "kernel_leading_moment": "-48",
+        "kernel_zero_moments": 3
+      },
+      {
+        "correlation_leading_moment": "2580480",
+        "correlation_zero_moments": 8,
+        "difference_order": 4,
+        "kernel_leading_moment": "192",
+        "kernel_zero_moments": 4
+      }
+    ]
+  },
+  "partial_product_replay": {
+    "rows": [
+      {
+        "common_grid_cells": 1,
+        "laplace_linear_coefficient": "-1/4",
+        "levels": 1,
+        "mass": "1",
+        "total_width": "1/2"
+      },
+      {
+        "common_grid_cells": 2,
+        "laplace_linear_coefficient": "-3/8",
+        "levels": 2,
+        "mass": "1",
+        "total_width": "3/4"
+      },
+      {
+        "common_grid_cells": 5,
+        "laplace_linear_coefficient": "-7/16",
+        "levels": 3,
+        "mass": "1",
+        "total_width": "7/8"
+      },
+      {
+        "common_grid_cells": 12,
+        "laplace_linear_coefficient": "-15/32",
+        "levels": 4,
+        "mass": "1",
+        "total_width": "15/16"
+      },
+      {
+        "common_grid_cells": 27,
+        "laplace_linear_coefficient": "-31/64",
+        "levels": 5,
+        "mass": "1",
+        "total_width": "31/32"
+      },
+      {
+        "common_grid_cells": 58,
+        "laplace_linear_coefficient": "-63/128",
+        "levels": 6,
+        "mass": "1",
+        "total_width": "63/64"
+      },
+      {
+        "common_grid_cells": 121,
+        "laplace_linear_coefficient": "-127/256",
+        "levels": 7,
+        "mass": "1",
+        "total_width": "127/128"
+      },
+      {
+        "common_grid_cells": 248,
+        "laplace_linear_coefficient": "-255/512",
+        "levels": 8,
+        "mass": "1",
+        "total_width": "255/256"
+      }
+    ]
+  },
+  "resource_caps": {
+    "binary_envelope_exponent": 16,
+    "curves": 0,
+    "difference_order": 4,
+    "finite_fields": 0,
+    "l_functions": 0,
+    "partial_convolution_levels": 8,
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "fixed_parameters": true,
+    "horizon_dependent_filter": false,
+    "low_frequency_estimate": false,
+    "rh_or_grh_proved": false,
+    "theta_fixed_in_open_interval_zero_one_half": true
+  },
+  "source_contract": {
+    "commit": "05aaabe69060c24c8db4ca33c350e109231960f1",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_BANDPASS_BETA_ENERGY_LADDER.md": "0ac23a6c384a896e50fed21ca7d8bf079c338ac0",
+      "research/l-families/atlas/function_field/ffps_bandpass_beta_energy_ladder.json": "ff568b48100048f6ad963c7afa23c4ac04c3d291",
+      "research/l-families/atlas/function_field/ffps_bandpass_beta_energy_ladder.py": "9ca6db9ad6b0149936efbd0e99f799d89f3cc53a",
+      "tests/test_ffps_bandpass_beta_energy_ladder.py": "6b45ddd02148c437bba375d6dbaf753c938e3375"
+    },
+    "imported": "fixed band-pass beta energy ladder and its pinned boundary/Mellin inputs",
+    "source_line_endings": "irrelevant because the contract uses Git object IDs"
+  },
+  "spectral_tail": {
+    "dirichlet_polynomial": "D_X(t)=sum_(n<=X) beta(n)*n^(-1/2-it)",
+    "fixed_power_corollary": "the tail on |t|>=X^delta is O_(A,delta,fixed)(X^(-A))",
+    "general_cutoff_condition": "log(T(X))/sqrt(log X) tends to infinity",
+    "plancherel": "E(X)=(1/(2pi))*integral |Bhat(t)|^2*|D_X(t)|^2 dt",
+    "reduced_criterion": "RH iff the spectral energy on |t|<=T_theta(X) is X^o(1), for any one fixed theta in (0,1/2)",
+    "subpower_cutoff": "T_theta(X)=exp((log X)^(1/2+theta)), fixed 0<theta<1/2",
+    "superpower_tail": "for every fixed theta in (0,1/2) and A>0, the energy on |t|>=T_theta(X) is O_(A,theta,fixed)(X^(-A))",
+    "trivial_source_bound": "|D_X(t)|<=4*sqrt(X)"
+  }
+}
