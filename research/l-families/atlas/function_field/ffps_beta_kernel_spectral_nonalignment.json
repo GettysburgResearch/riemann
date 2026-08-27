@@ -1,0 +1,147 @@
+{
+  "finite_window_scalar_repair": {
+    "carrier": "zero-free in 0<Re(s)<1/2",
+    "fourier_transform": "(1-exp(-i a_T L t))/L*K_bd_hat(a_T t)",
+    "height": "T>0",
+    "kernel": "C_T=Delta_(a_T L)[K_bd(./a_T)]",
+    "parameter_dependence": "depends only on T, never on a zeta zero or zero census",
+    "real_zero_set": "2pi*Z/(a_T L); amplitude order 1 at zero and 3 elsewhere",
+    "replay_certificates": [
+      {
+        "carrier_zero_free_open_rh_strip": true,
+        "height": "1/10",
+        "scale": "10/11",
+        "scaled_height": "1/11",
+        "scaled_height_below_one": true,
+        "support_endpoint_in_log2_units": "50/11"
+      },
+      {
+        "carrier_zero_free_open_rh_strip": true,
+        "height": "1",
+        "scale": "1/2",
+        "scaled_height": "1/2",
+        "scaled_height_below_one": true,
+        "support_endpoint_in_log2_units": "5/2"
+      },
+      {
+        "carrier_zero_free_open_rh_strip": true,
+        "height": "10",
+        "scale": "1/11",
+        "scaled_height": "10/11",
+        "scaled_height_below_one": true,
+        "support_endpoint_in_log2_units": "5/11"
+      },
+      {
+        "carrier_zero_free_open_rh_strip": true,
+        "height": "1000",
+        "scale": "1/1001",
+        "scaled_height": "1000/1001",
+        "scaled_height_below_one": true,
+        "support_endpoint_in_log2_units": "5/1001"
+      }
+    ],
+    "scale": "a_T=1/(1+T)",
+    "support": "[0,5a_T L]",
+    "window_positivity": "|C_T_hat(t)|^2>0 for 0<|t|<=T"
+  },
+  "frozen_boundary": {
+    "L": "log(2)",
+    "causal_formula": "K_bd=(1-tau_L)^2(1-sqrt(2)tau_L)^2[1_(t>=0)(13+3t-8exp(t/2))]",
+    "complete_zero_divisor": {
+      "s=-3/10": "multiplicity 1",
+      "s=1": "multiplicity 1",
+      "s=1/2": "multiplicity 1",
+      "s=1/2+2pi*i*k/L, k!=0": "multiplicity 2",
+      "s=2pi*i*k/L, k!=0": "multiplicity 2"
+    },
+    "fourier_weight": "4sin^4(Lt/2)(3-2sqrt(2)cos(Lt))^2(t^2+1)(100t^2+9)/(t^4(t^2+1/4))",
+    "laplace_transform": "(1-2^(-s))^2(1-2^(1/2-s))^2(s-1)(10s+3)/(2s^2(s-1/2))",
+    "real_fourier_zeros": "t=2pi*k/L for nonzero integers k; amplitude order 2 and weight order 4",
+    "removable_values": {
+      "s=0": "3(1-sqrt(2))^2(log(2))^2 != 0",
+      "s=1/2": "simple zero after removing the apparent pole"
+    },
+    "shift_no_go": "time translation, finite translate polynomials, finite differences, and convolution multipliers cannot remove an inherited K_bd zero",
+    "weight_at_zero": "9(1-sqrt(2))^4L^4"
+  },
+  "global_direct_sum_repair": {
+    "carrier": "both scalar channel carriers are zero-free in 0<Re(s)<1/2",
+    "channels": [
+      "C_1",
+      "C_(1/sqrt(2))"
+    ],
+    "common_real_zeros": "{0}",
+    "positivity": "w_direct(t)>0 for every real t!=0",
+    "proof": "a nonzero common zero would give k=m*sqrt(2); parity descent forbids k^2=2m^2",
+    "scope": "a vector/direct-sum energy or sum of two Perron inners, not one scalar autocorrelation",
+    "weight": "w_direct(t)=|C_1_hat(t)|^2+|C_(1/sqrt(2))_hat(t)|^2"
+  },
+  "resource_caps": {
+    "curves": 0,
+    "largest_lattice_index_replayed": 128,
+    "numerical_zeta_value_evaluations": 0,
+    "primes": 0,
+    "universal_weight_samples": 6,
+    "window_certificates": 4,
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "exact_transform_and_zero_classification": true,
+    "grh_proved": false,
+    "perron_bound_proved": false,
+    "rh_proved": false,
+    "simplicity_proved": false,
+    "zero_dependent_kernel_choice": false,
+    "zeta_zero_computation": false
+  },
+  "source_contract": {
+    "commits": {
+      "05aaabe69060c24c8db4ca33c350e109231960f1": {
+        "research/l-families/atlas/function_field/FFPS_BANDPASS_BETA_ENERGY_LADDER.md": "0ac23a6c384a896e50fed21ca7d8bf079c338ac0",
+        "research/l-families/atlas/function_field/ffps_bandpass_beta_energy_ladder.json": "ff568b48100048f6ad963c7afa23c4ac04c3d291",
+        "research/l-families/atlas/function_field/ffps_bandpass_beta_energy_ladder.py": "9ca6db9ad6b0149936efbd0e99f799d89f3cc53a",
+        "tests/test_ffps_bandpass_beta_energy_ladder.py": "6b45ddd02148c437bba375d6dbaf753c938e3375"
+      },
+      "3a1d92b57b6234c046c2abf42d9ab15d03173838": {
+        "research/l-families/atlas/function_field/FFPS_TRUNCATED_BETA_ZERO_TUBE_RESIDUE_LAW.md": "5d6c9377ee5d859c0890f20e3c118a3f228a9dc3",
+        "research/l-families/atlas/function_field/ffps_truncated_beta_zero_tube_residue_law.json": "51b9c291afe89770b61c8ae4f8d30705619eadd9",
+        "research/l-families/atlas/function_field/ffps_truncated_beta_zero_tube_residue_law.py": "a771ebc67c6e48e805112f769f28b7ae3bea2801",
+        "tests/test_ffps_truncated_beta_zero_tube_residue_law.py": "8ba42f8a5b514473215c122f2c1a035177e6da93"
+      },
+      "b870366141fe8d5f43d5b81f6e50a67d2a888070": {
+        "research/l-families/atlas/function_field/FFPS_MOLLIFIED_BETA_BOUNDARY_SHELL_IDENTITY.md": "bf4d1baa231086ba7e8eafaecd39730d83c9201a",
+        "research/l-families/atlas/function_field/ffps_mollified_beta_boundary_shell_identity.json": "c86a40d6a930603b3897ad12a28acc5f21e80dd6",
+        "research/l-families/atlas/function_field/ffps_mollified_beta_boundary_shell_identity.py": "2180038eef7ab639477879e806bb13fdbea0b1ec",
+        "tests/test_ffps_mollified_beta_boundary_shell_identity.py": "5e7de97284878c6f9b5a5ac43b83ccaf9528e242"
+      }
+    },
+    "imported_results": [
+      "the exact compact boundary kernel K_bd and its Laplace multiplier",
+      "the fixed band-pass transform and RH-strip carrier fence",
+      "the local beta zero-tube residue law for a fixed compact band-pass kernel"
+    ]
+  },
+  "universal_scalar_kernel": {
+    "carrier_strip": "zero-free in 0<Re(s)<1/2",
+    "carrier_zeros": "s=0 simple and s=1+2pi*i*k (k!=0) double",
+    "class": "real compact BV L1-intersect-L2, support [0,2], integral zero",
+    "critical_zero_nonalignment": "zeta(1/2)<0 by eta(1/2)>0, so every critical-line zero has nonzero ordinate and positive weight",
+    "fourier_weight": "16t^2(sinh^2(1/2)+sin^2(t/2))^2/(1+t^2)^2",
+    "kernel": "K_*(x)=Phi'(x) almost everywhere",
+    "laplace_transform": "4s exp(-s)sinh^2((s-1)/2)/(s-1)^2",
+    "piecewise": {
+      "0<x<1": "exp(x-1)(x+1)",
+      "1<x<2": "exp(x-1)(1-x)",
+      "elsewhere": "0"
+    },
+    "real_zeros": "t=0 only, of weight order 2",
+    "smoothing_ladder": "K_m=D(Phi^(*m)) has the same real zero set and weight decay O(|t|^(2-4m))",
+    "tent": "Phi(x)=exp(x-1)(1-|x-1|)_+ on [0,2]"
+  },
+  "zero_tube_consequence": {
+    "all_height_scalar": "K_* discharges w(gamma)>0 at every critical-line zero",
+    "all_height_source_locked": "the two-channel direct sum discharges nonalignment globally",
+    "finite_window": "the scalar C_T discharges w(gamma)>0 on the whole guarded window",
+    "what_remains": "the O_T(1/c) Perron estimate, contour displacement, height-uniform tail, and any simplicity or RH conclusion remain unproved"
+  }
+}
