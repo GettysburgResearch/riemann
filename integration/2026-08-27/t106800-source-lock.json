@@ -1,0 +1,49 @@
+{
+  "branch": "research/gpt56-pro/106800-beta-spectral-abscissa",
+  "claims": [
+    "L-106800",
+    "L-106801",
+    "R-106800",
+    "T-106800"
+  ],
+  "created_utc": "2026-08-27",
+  "external_classical_inputs": [
+    {
+      "name": "classical Mertens zero-abscissa theorem",
+      "replayed": false,
+      "statement": "the Mertens power exponent equals the supremum of real parts of nontrivial zeta zeros"
+    },
+    {
+      "arxiv": "2208.06141",
+      "name": "Lee-Leong explicit Mertens bound",
+      "replayed": false,
+      "statement": "M(x) << x exp(-c (log x)^(3/5)(loglog x)^(-1/5)) for some c>0"
+    }
+  ],
+  "parent": {
+    "commit": "fad8ce2c4ce8633c5bb67356e6765800eac3d440",
+    "paths": [
+      "research/l-families/atlas/function_field/FFPS_CRITICAL_BETA_FOURIER_LATTICE_COMPRESSION.md",
+      "research/l-families/atlas/function_field/FFPS_CRITICAL_BETA_SPECTRAL_WITNESS_PRINCIPLE.md",
+      "research/l-families/atlas/function_field/FFPS_SHARP_ROUGH_SINGLE_HARMONIC_NORMAL_FORM.md",
+      "research/l-families/atlas/function_field/FFPS_CRITICAL_LATTICE_FIRST_HARMONIC_FIREWALL.md"
+    ],
+    "pr": 758
+  },
+  "replay": {
+    "classification": "PASS_T106800_BETA_SPECTRAL_ABSCISSA_AND_VK_ENERGY",
+    "exact_checks": 155561,
+    "proof_object_sha256": "439a4c6f55c11c2af331eafb711f2e72e4ec4712deb714fad0a12ac21f7ec403"
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t106800.source-lock.v1",
+  "status": {
+    "fixed_power_saving": false,
+    "grh_established": false,
+    "maximal_beta_energy_abscissa": "PROVED FROM CLASSICAL + PINNED LATTICE",
+    "new_zero_free_half_plane": false,
+    "rh_established": false,
+    "single_harmonic_abscissa": "PROVED FROM CLASSICAL + EXACT TRANSFORMS",
+    "vk_beta_energy_saving": "PROVED FROM LEE-LEONG + EXACT TRANSFORMS"
+  }
+}
