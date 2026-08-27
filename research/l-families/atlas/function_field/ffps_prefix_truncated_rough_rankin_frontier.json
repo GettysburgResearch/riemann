@@ -1,0 +1,148 @@
+{
+  "asymptotic_parameter_controls": {
+    "fixed_polylog_B": [
+      {
+        "B": "-2",
+        "log_y_over_loglog_x": "1.61987768697",
+        "rankin_sigma": "0.117330560228",
+        "sigma_log_x_over_log_x": "0.117330560228",
+        "suppressed_prime_scale_over_log_x": "0.00523921380588"
+      },
+      {
+        "B": "2",
+        "log_y_over_loglog_x": "2.38012231303",
+        "rankin_sigma": "0.239560574858",
+        "sigma_log_x_over_log_x": "0.239560574858",
+        "suppressed_prime_scale_over_log_x": "0.00523921380588"
+      },
+      {
+        "B": "6",
+        "log_y_over_loglog_x": "3.14036693908",
+        "rankin_sigma": "0.302609790831",
+        "sigma_log_x_over_log_x": "0.302609790831",
+        "suppressed_prime_scale_over_log_x": "0.00523921380588"
+      }
+    ],
+    "fixed_power_A": [
+      {
+        "A": "3",
+        "certificate_power": "0.166666666667",
+        "rankin_sigma": "0.293374104343",
+        "suppressed_prime_scale_over_log_x": "0.00523921380588"
+      },
+      {
+        "A": "4",
+        "certificate_power": "0.25",
+        "rankin_sigma": "0.345030578257",
+        "suppressed_prime_scale_over_log_x": "0.00523921380588"
+      },
+      {
+        "A": "6",
+        "certificate_power": "0.333333333333",
+        "rankin_sigma": "0.396687052171",
+        "suppressed_prime_scale_over_log_x": "0.00523921380588"
+      }
+    ],
+    "scope": "finite rows illustrate the analytic choices only; the asymptotic theorem uses Rankin plus the labelled PNT bound"
+  },
+  "finite_prefix_control": {
+    "duplicate_inverse_max_error": "4.71027737605e-16",
+    "duplicate_max_error": "4.33555950913e-16",
+    "forward_max_error": "4.77912004416e-15",
+    "frequency": 0.271,
+    "horizon": 840,
+    "inverse_max_error": "1.62866349926e-14",
+    "ordinary_endpoint": {
+      "imag": "0.522456305688",
+      "real": "-0.591095673389"
+    },
+    "rough_bound": 13,
+    "rough_endpoint": {
+      "imag": "8.03589870449",
+      "real": "-0.610067764086"
+    }
+  },
+  "proof_ledger": {
+    "finite_prefix_factorizations": "IMPORTED EXACT AND REPLAYED",
+    "fixed_A_mass_exponent": "PROVED WITH MATCHING UPPER AND LOWER BOUNDS",
+    "polylog_exponent_two_frontier": "PROVED SHARP BY RANKIN-PNT UPPER AND SQUAREFREE-BINOMIAL LOWER BOUNDS",
+    "rankin_product_bounds": "PROVED EXACT",
+    "rh_or_grh": "NOT PROVED",
+    "rough_critical_lattice_equivalence": "PROVED EQUIVALENT TO RH",
+    "rough_source_estimate": "OPEN",
+    "truncated_maximal_conditioning": "PROVED EXACT"
+  },
+  "resource_caps": {
+    "integer_horizon": 840,
+    "l_functions": 0,
+    "largest_prime": 13,
+    "moduli": 0,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "1e0c42aaf3f35a90af52380a32bbf7d8da0d5be5",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_SMALL_PRIME_ROUGH_CRITICAL_LATTICE_PRECONDITIONER.md": "7f909b9a474ef3418ef79ecf98170c8bdc7f7f90",
+      "research/l-families/atlas/function_field/ffps_small_prime_rough_critical_lattice_preconditioner.py": "2c9b40bc95dd090682449124c2873af9bcfebdbf"
+    }
+  },
+  "theorem": {
+    "critical_lattice": "through that range, maximal rough retained-lattice energy is RH-equivalent; no rough estimate is proved",
+    "prefix_conditioning": "replace complete Euler products by the exact d<=X squarefree-smooth and smooth coefficient masses",
+    "rankin_range": "both truncated masses are X^o if and only if y tends to infinity with log y <= (2+o(1))*log log X"
+  },
+  "truncated_mass_control": [
+    {
+      "X": 60,
+      "rankin_sigma": "0.11",
+      "smooth_complete_product": "14.6134491673",
+      "smooth_rankin_bound": "14.898915687",
+      "smooth_truncated_mass": "7.87993450494",
+      "squarefree_binomial_lower_bound": "0.387298334621",
+      "squarefree_binomial_subset_size": "2",
+      "squarefree_complete_product": "3.89691977794",
+      "squarefree_rankin_bound": "5.3961572567",
+      "squarefree_truncated_mass": "3.89691977794",
+      "y": 5
+    },
+    {
+      "X": 120,
+      "rankin_sigma": "0.11",
+      "smooth_complete_product": "23.4929494107",
+      "smooth_rankin_bound": "23.1401793892",
+      "smooth_truncated_mass": "11.2561178148",
+      "squarefree_binomial_lower_bound": "0.547722557505",
+      "squarefree_binomial_subset_size": "2",
+      "squarefree_complete_product": "5.36981700817",
+      "squarefree_rankin_bound": "7.60068800044",
+      "squarefree_truncated_mass": "5.30081045223",
+      "y": 7
+    },
+    {
+      "X": 420,
+      "rankin_sigma": "0.11",
+      "smooth_complete_product": "46.5425569219",
+      "smooth_rankin_bound": "43.7064992869",
+      "smooth_truncated_mass": "19.4564465926",
+      "squarefree_binomial_lower_bound": "0.731925054711",
+      "squarefree_binomial_subset_size": "2",
+      "squarefree_complete_product": "8.92724368533",
+      "squarefree_rankin_bound": "12.991486189",
+      "squarefree_truncated_mass": "8.31912798358",
+      "y": 13
+    },
+    {
+      "X": 840,
+      "rankin_sigma": "0.11",
+      "smooth_complete_product": "46.5425569219",
+      "smooth_rankin_bound": "47.1692881491",
+      "smooth_truncated_mass": "22.3079000811",
+      "squarefree_binomial_lower_bound": "0.517549169507",
+      "squarefree_binomial_subset_size": "2",
+      "squarefree_complete_product": "8.92724368533",
+      "squarefree_rankin_bound": "14.0207787294",
+      "squarefree_truncated_mass": "8.57704479951",
+      "y": 13
+    }
+  ]
+}
