@@ -1,0 +1,105 @@
+{
+  "autocorrelation": {
+    "boundary_mean": "K_bd_hat(0)=3*(1-sqrt(2))^2*(log(2))^2 != 0",
+    "definition": "R_(r,j)(u)=integral B_(r,j)(v)B_(r,j)(v+u)dv",
+    "fourier_weight": "|1-exp(-i*epsilon*t)|^(2r)/epsilon^(2r)*|eta_hat_ell(t)|^(2j)*|K_bd_hat(t)|^2",
+    "high_frequency": "O_fixed((1+|t|)^(-2j-2))",
+    "r_equals_one_identity": "R_(1,0)(u)=(2R_bd(u)-R_bd(u-epsilon)-R_bd(u+epsilon))/epsilon^2",
+    "zero_frequency_order": "exactly 2r"
+  },
+  "energy_criterion": {
+    "energy": "E_(r,j)(X)=integral_R |H_(r,j;X)(t)|^2 dt",
+    "equivalence": "RH iff E_(r,j)(X)=X^o(1)",
+    "estimate_proved": false,
+    "prefix_field": "H_(r,j;X)(t)=sum_(n<=X) beta(n)/sqrt(n)*B_(r,j)(t-log(n))",
+    "proof_route": "BV under RH; causality and Cauchy-Schwarz; one-sided Landau converse",
+    "rh_proved": false
+  },
+  "finite_symbolic_replay": {
+    "autocorrelation_moments_through_2r": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-46080"
+    ],
+    "bandpass_length": 14,
+    "bandpass_moments_through_r": [
+      "0",
+      "0",
+      "0",
+      "-48"
+    ],
+    "base_kernel": [
+      "3",
+      "-1",
+      "4",
+      "2"
+    ],
+    "box_order": 2,
+    "box_width_cells": 3,
+    "difference_order": 3,
+    "direct_energy": "34287288085396147/121932845980545600",
+    "gram_energy": "34287288085396147/121932845980545600",
+    "step": 2
+  },
+  "fixed_parameter_ladder": {
+    "fixedness_fence": "r,j,epsilon,ell do not depend on X, T, a zero, or a frequency",
+    "kernel": "B_(r,j)=eta_ell^(*j)*Delta_epsilon^r K_bd",
+    "laplace_multiplier": "((1-exp(-epsilon*s))/epsilon)^r*((1-exp(-ell*s))/(ell*s))^j*M_ext(s)/s",
+    "multiplier_fence": "difference and box factors are nonzero for Re(s)>0; the imported source carrier is used only in 0<Re(s)<1/2",
+    "parameters": "epsilon>0, ell>0, integers r>=1 and j>=0, all fixed",
+    "support": "[0,4log2+r*epsilon+j*ell]"
+  },
+  "gram_and_diagonal": {
+    "diagonal": "R_(r,j)(0)*2379/(2278*zeta(2))*log(X)+O_fixed(1)",
+    "gram_identity": "E_(r,j)(X)=sum_(m,n<=X) beta(m)beta(n)/sqrt(mn)*R_(r,j)(log(m/n))",
+    "off_diagonal_equivalence": "RH iff the signed off-diagonal is X^o(1)",
+    "ratio_support": "exp(-S)<=m/n<=exp(S), S=4log2+r*epsilon+j*ell"
+  },
+  "resource_caps": {
+    "beta_square_coefficients": 384,
+    "box_convolution_order": 3,
+    "conductor_families": 0,
+    "curves": 0,
+    "finite_difference_order": 4,
+    "finite_fields": 0,
+    "l_functions": 0,
+    "toy_source_terms": 20,
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "horizon_dependent_filter": false,
+    "new_analytic_estimate": false,
+    "rh_or_grh_proved": false,
+    "wavelet_or_primitive_pair_bound": false
+  },
+  "source_contract": {
+    "commit": "b870366141fe8d5f43d5b81f6e50a67d2a888070",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_BOUNDARY_FIELD_NEAR_CORRELATION_CRITERION.md": "105837343b6b8ef148488f492c66da8feae0334a",
+      "research/l-families/atlas/function_field/FFPS_EXTRA_NOTCHED_MELLIN_LANDAU_CONSUMER.md": "a794800a56ff3c168293b9f27b2700b5e87a6360",
+      "research/l-families/atlas/function_field/FFPS_MOLLIFIED_BETA_BOUNDARY_SHELL_IDENTITY.md": "bf4d1baa231086ba7e8eafaecd39730d83c9201a",
+      "research/l-families/atlas/function_field/FFPS_MOLLIFIED_BETA_RH_EQUIVALENCE.md": "f546d1e57c1886c1fddb590cd55b596a96bbefad",
+      "research/l-families/atlas/function_field/ffps_boundary_field_near_correlation_criterion.json": "efc21abe6b87d16d49b272d0fd0dd65e1f059d57",
+      "research/l-families/atlas/function_field/ffps_boundary_field_near_correlation_criterion.py": "53b5a710cb2f6b918958ff7e96801d81e2a0a79c",
+      "research/l-families/atlas/function_field/ffps_extra_notched_mellin_landau_consumer.json": "42e6f76dbfe9d677cd2f10713a4f81377a474279",
+      "research/l-families/atlas/function_field/ffps_extra_notched_mellin_landau_consumer.py": "e64410f78d33fe841f9d157fbdd9f24b42a7e9c6",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_boundary_shell_identity.json": "c86a40d6a930603b3897ad12a28acc5f21e80dd6",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_boundary_shell_identity.py": "2180038eef7ab639477879e806bb13fdbea0b1ec",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_rh_equivalence.json": "d316b0eaba5c24d62fb350e1f057c31eb12dccc7",
+      "research/l-families/atlas/function_field/ffps_mollified_beta_rh_equivalence.py": "631c9a465f87c592368d04f1ae33810329f295c4",
+      "tests/test_ffps_boundary_field_near_correlation_criterion.py": "006e1c41f34f4d1e9a8885fb160c7d9886a3a77d",
+      "tests/test_ffps_extra_notched_mellin_landau_consumer.py": "c3ff0fea530ed4dfe4ad0d28d11de015d379e70e",
+      "tests/test_ffps_mollified_beta_boundary_shell_identity.py": "5e7de97284878c6f9b5a5ac43b83ccaf9528e242",
+      "tests/test_ffps_mollified_beta_rh_equivalence.py": "44d3f3e036202d9a78d992315504fea7d0960588"
+    },
+    "imported_results": [
+      "K_bd is nonzero compact BV on [0,4log2] with K_ext=D K_bd",
+      "the beta boundary and fixed-mollified Mellin-Landau criteria are RH-equivalent",
+      "the beta-square diagonal constant is 2379/(2278*zeta(2))"
+    ]
+  }
+}
