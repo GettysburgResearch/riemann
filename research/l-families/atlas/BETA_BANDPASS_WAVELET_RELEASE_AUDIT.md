@@ -22,11 +22,13 @@ Programme scope:
 
 The original audit below remains provenance for the first release slice. The
 branch subsequently grew into four review lanes. The current front door is the
-three-packet Chebyshev chain:
+four-packet Chebyshev chain:
 [FFPS_CHEBYSHEV_BV_KERNEL_EXTREMIZER.md](function_field/FFPS_CHEBYSHEV_BV_KERNEL_EXTREMIZER.md),
 [FFPS_SHARP_BV_SAFE_FACTOR_PHASE_DIAGRAM.md](function_field/FFPS_SHARP_BV_SAFE_FACTOR_PHASE_DIAGRAM.md),
 and
-[FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md](function_field/FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md).
+[FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md](function_field/FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md),
+followed by
+[FFPS_CHEBYSHEV_MAX_CUSP_COMPENSATION.md](function_field/FFPS_CHEBYSHEV_MAX_CUSP_COMPENSATION.md).
 
 The strongest exact continuation results are:
 
@@ -63,36 +65,50 @@ The strongest exact continuation results are:
    linear window shrinks like \(r^{-2}\), and from order four it closes before
    the formal cusp zero.
 
-5. **Near-notch and endpoint-layer closure.** Every positive Bessel notch has
+5. **Max-cusp compensation law.** The Chebyshev step primitive has the exact
+   normalized energy
+
+   \[
+    \kappa_r=\frac{1-\cos(\pi/(r+1))}
+    {12(1+2\cos(\pi/(r+1)))}.
+   \]
+
+   This is the positive linear refill coefficient of the Perron max cusp.
+   Although \(\kappa_r\asymp r^{-2}\), its product with the sharp BV cost
+   decreases strictly to the nonzero limit
+   \(A_r\kappa_r\downarrow\pi^3/36\). An exact primitive \(L^1\) norm gives
+   a relative zero-mode remainder at most \((9/32)z\), uniformly in order.
+
+6. **Near-notch and endpoint-layer closure.** Every positive Bessel notch has
    an exact quadratic tilt floor, energy excess, and shifted local profile.
    At the opposite large-tilt limit, the carrier has a Gamma endpoint layer
    and a two-term derivative-energy asymptotic, yielding the exact moving
    support/tilt phase boundary.
 
-6. **Ensemble condition firewall.** Positive orthogonal assembly averages
+7. **Ensemble condition firewall.** Positive orthogonal assembly averages
    constituent condition numbers; coherent sums factor through their lowest
    surviving moment. The order-zero low-pass family remains a legitimate
    arbitrary-support RH-equivalent row.
 
-7. **All-order moment and Legendre tower.** Every fixed signed field
+8. **All-order moment and Legendre tower.** Every fixed signed field
    moment is RH-equivalent; all logarithmic beta moments admit an exact
    triangular transform and complete shifted-Legendre Parseval
    decomposition. RH also pays an explicit growing-order forward
    window.
 
-8. **Higher-derivative fixed- and growing-rung hierarchy.** The
+9. **Higher-derivative fixed- and growing-rung hierarchy.** The
    positive beta polynomial is the unique signed-carrier variational
    optimum at every derivative rung. The critical width is
    \(2m+1\), the matched moment remains the literal beta prefix, and
    the sharply normalized RH criterion survives
    \(m=o(\log X/\log\log X)\) at fixed width.
 
-9. **Spectral-zero-free no-gap theorem.** Exponentially tilted positive
+10. **Spectral-zero-free no-gap theorem.** Exponentially tilted positive
    carriers have no real Fourier zeros and approach the sharp carrier
    energy infimum without attaining it. Their Laplace zeros lie on
    \(\Re z=-2\tau/S\), so only positive tilt is right-half-plane safe.
 
-10. **Sharp centered carrier duality.** For every compact normalized
+11. **Sharp centered carrier duality.** For every compact normalized
    carrier derivative,
 
    \[
@@ -104,7 +120,7 @@ The strongest exact continuation results are:
    Mertens-plus-shape decomposition and signed-autocorrelation second
    moment.
 
-11. **All-support parabolic criterion.** For every arbitrary prescribed
+12. **All-support parabolic criterion.** For every arbitrary prescribed
    schedule \(1\le S_X<\infty\),
 
    \[
@@ -117,23 +133,23 @@ The strongest exact continuation results are:
    The width power \(3\) is the unique scale-balanced exponent for the
    two proved mechanisms.
 
-12. **Exact curve-zeta calibration.** The same carrier construction on
+13. **Exact curve-zeta calibration.** The same carrier construction on
    \(1/Z_C(u)\) gives an exact coefficient-square energy and is
    equivalent to the reciprocal roots lying on the Weil circle. Weil
    RH is imported, not reproved.
 
-13. **Function-field channel exposure.** The divisor-wavelet pilot
+14. **Function-field channel exposure.** The divisor-wavelet pilot
    isolates a genuine twisted \(L\)-channel; the marked-place packets
    identify two-place recurrences, an elliptic three-place channel,
    higher Tate notches, and all-mark exterior-character structure.
 
-14. **Corrected Adams obstruction.** The native gluing problem is the
+15. **Corrected Adams obstruction.** The native gluing problem is the
    crossed marked-place source graph under partial Frobenius. Local
    Artin--Schreier/incidence blocks remain valid inside fixed marked
    blocks. A signed pushforward or correspondence-level construction
    remains open.
 
-15. **Spectral firewalls.** Chirality, compact carrier zeros, and finite
+16. **Spectral firewalls.** Chirality, compact carrier zeros, and finite
    spectral-factor surgery are not determined by the positive energy.
    Positivity, diagonal interpolation, or a pretty compact zero set
    cannot close the beta problem without new source arithmetic.
@@ -141,10 +157,11 @@ The strongest exact continuation results are:
 Three independent agents rederived the centered-moment theorem, all-support
 renormalization, all-order Legendre tower, higher-rung variational and
 growing-window theorems, spectral tilt/no-gap theorem, and critical exponent
-trichotomy. In the newest seven-packet continuation they also independently
+trichotomy. In the newest eight-packet continuation they also independently
 rederived the near-notch constants, endpoint-layer asymptotic, ensemble and
 compact-kernel firewalls, both Chebyshev duals, the moving-order safe chart,
-and the atomic autocorrelation signs and factors of two. Every focused replay
+the atomic autocorrelation signs and factors of two, and the primitive-energy
+max-cusp compensation law. Every focused replay
 passes normally and under optimized Python, plus Ruff, source-blob provenance,
 delimiter/control-byte checks, and Git whitespace checks.
 
@@ -224,6 +241,7 @@ delimiter/control-byte checks, and Git whitespace checks.
 | \(798feab0b\) | complete Chebyshev BV kernel extremizer |
 | \(c223f8fe1\) | sharp BV safe-factor phase diagram |
 | \(f3ae060d1\) | Chebyshev-step autocorrelation normal form |
+| \(033a64fba\) | Chebyshev max-cusp refill compensation |
 
 ## 2. Claim ledger
 
@@ -286,6 +304,11 @@ delimiter/control-byte checks, and Git whitespace checks.
 | normalized variable-information-order RH corollary inside the exact safe factor | **PROVED SUFFICIENT** |
 | finite atomic curvature and exact local cusp of the Chebyshev step | **PROVED** |
 | local cusp predicts its formal zero at every order | **REFUTED FROM ORDER FOUR** |
+| exact Chebyshev primitive \(L^2\) and \(L^1\) norms | **PROVED** |
+| positive max-cusp refill and exact correlation remainder identity | **PROVED** |
+| sharp-cost/refill product \(A_r\kappa_r\) decreases strictly to \(\pi^3/36\) | **PROVED** |
+| zero-mode refill has a relative \(O(z)\) remainder uniformly in order | **PROVED** |
+| full moving-order Perron or beta estimate from cusp compensation | **NOT PROVED** |
 | higher information order never improves actual beta cancellation | **NOT PROVED** |
 | real spectral zero-freeness forces a uniform local energy gap | **REFUTED** |
 | carrier chirality or compact zero set follows from energy | **REFUTED** |
@@ -333,6 +356,7 @@ python -B research/l-families/atlas/function_field/ffps_compact_kernel_informati
 python -B research/l-families/atlas/function_field/ffps_chebyshev_bv_kernel_extremizer.py --check
 python -B research/l-families/atlas/function_field/ffps_sharp_bv_safe_factor_phase_diagram.py --check
 python -B research/l-families/atlas/function_field/ffps_chebyshev_step_autocorrelation_normal_form.py --check
+python -B research/l-families/atlas/function_field/ffps_chebyshev_max_cusp_compensation.py --check
 ~~~
 
 Focused test modules:
@@ -370,15 +394,16 @@ tests.test_ffps_compact_kernel_information_order
 tests.test_ffps_chebyshev_bv_kernel_extremizer
 tests.test_ffps_sharp_bv_safe_factor_phase_diagram
 tests.test_ffps_chebyshev_step_autocorrelation_normal_form
+tests.test_ffps_chebyshev_max_cusp_compensation
 ~~~
 
 At the full continuation head:
 
-- all 61 changed bounded producers passed normally and under optimized
+- all 62 changed bounded producers passed normally and under optimized
   Python;
-- all 602 tests in the 60 changed focused modules passed in both modes;
-- Ruff lint and format passed on all 121 changed Python files;
-- all 66 changed Markdown packets contain no forbidden control bytes;
+- all 615 tests in the 61 changed focused modules passed in both modes;
+- Ruff lint and format passed on all 123 changed Python files;
+- all 67 changed Markdown packets contain no forbidden control bytes;
 - local links from the two successor front doors resolve;
 - the moving-support packet has balanced inline/display math
   delimiters and independently rederived constants;
@@ -425,9 +450,9 @@ This pass deliberately avoids heavy computation.
 - Arithmetic is integer, rational, radical-basis, or symbolic except for
   small displayed approximations already fenced as replay output.
 
-The continuation preserves that discipline. Its seven newest packets use no
-beta terms, primes, zeta zeros, random samples, or quadrature. The complete 61-
-producer sweep takes under 46 seconds per Python mode, and the full 602-test
+The continuation preserves that discipline. Its eight newest packets use no
+beta terms, primes, zeta zeros, random samples, or quadrature. The complete 62-
+producer sweep takes under 47 seconds per Python mode, and the full 615-test
 sweep takes under 83 seconds per mode on this machine; no high-rank
 enumeration was introduced.
 
@@ -460,6 +485,9 @@ Direct beta architecture:
   primitive-pair kernel before taking absolute values, and decide whether its
   order-\(2r\) notch produces a source-specific gain beyond the sharp BV
   envelope;
+- combine the exact max-cusp compensation and finite difference spectrum
+  inside the full reciprocal-zeta Perron contour, preserving their signs
+  before any absolute-value estimate;
 - compare the exact low-pass/order-one BV winners with a genuinely
   Fourier- or autocorrelation-sensitive forward inequality;
 - arithmetic control of the exact nonnegative carrier-shape defect;

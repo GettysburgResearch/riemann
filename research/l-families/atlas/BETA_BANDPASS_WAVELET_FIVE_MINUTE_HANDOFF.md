@@ -3,8 +3,8 @@
 Status: **frozen exploratory theorem atlas; the current head adds a universal
 compact-kernel information theorem, the unique all-order Chebyshev BV
 extremizer, an exact moving safe-factor phase diagram, finite autocorrelation
-geometry, near-notch and endpoint-layer asymptotics, and ensemble firewalls;
-RH and GRH remain open**
+geometry, a strict max-cusp compensation law, near-notch and endpoint-layer
+asymptotics, and ensemble firewalls; RH and GRH remain open**
 
 Parent release: draft PR #757 at
 \(b870366141fe8d5f43d5b81f6e50a67d2a888070\).
@@ -30,7 +30,9 @@ The fastest route into the current head is:
    then
    [FFPS_SHARP_BV_SAFE_FACTOR_PHASE_DIAGRAM.md](function_field/FFPS_SHARP_BV_SAFE_FACTOR_PHASE_DIAGRAM.md)
    and
-   [FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md](function_field/FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md).
+   [FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md](function_field/FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md),
+   followed by
+   [FFPS_CHEBYSHEV_MAX_CUSP_COMPENSATION.md](function_field/FFPS_CHEBYSHEV_MAX_CUSP_COMPENSATION.md).
    Two independent Chebyshev duals prove that the alternating step uniquely
    minimizes the *complete* universal forward size
    \(\|K\|_\infty+\operatorname{Var}K\) at every information order. The
@@ -47,6 +49,12 @@ The fastest route into the current head is:
    exactly that next coordinate: a finite atomic formula for \(-R_r''\), the
    exact cusp \(R_r(s)/R_r(0)=1-(2r+1)|s|\) on its maximal disjoint-jump
    window, and the exact order-\(2r\) Fourier notch.
+
+   The fourth packet reconnects this geometry to the assembled Perron max
+   cusp. Its normalized linear refill coefficient is exact and decays like
+   \(r^{-2}\), but its product with the sharp BV cost decreases to the
+   nonzero limit \(\pi^3/36\). The isolated zero-mode expansion has a
+   uniform-in-order relative error bounded by \((9/32)z\) on unit support.
 
 2. Read
    [FFPS_COMPACT_KERNEL_INFORMATION_ORDER.md](function_field/FFPS_COMPACT_KERNEL_INFORMATION_ORDER.md)
@@ -148,7 +156,7 @@ criterion as progress on its open arithmetic estimate. Do not revive a
 carrier-sign or compact-kernel-zero argument without first quotienting
 the exact spectral surgery and chirality firewalls.
 
-## Current-head synthesis: seven new theorem packets
+## Current-head synthesis: eight new theorem packets
 
 The newest continuation starts with a local spectral question and ends with a
 complete compact-kernel design theorem.
@@ -185,6 +193,10 @@ complete compact-kernel design theorem.
    \(r^{-2}\); from order four onward the local linear branch ends before its
    formal zero. This is a concrete warning against turning a spectral notch
    into an unsupported resolution claim.
+8. The max-cusp refill can be evaluated exactly. Its normalized coefficient
+   shrinks quadratically with order, but the sharp BV cost grows quadratically;
+   their product decreases strictly to \(\pi^3/36\). An exact primitive
+   \(L^1\) formula makes the relative linear refill uniform in order.
 
 The scientific direction is now sharper: universal carrier geometry is
 closed enough that another gain must preserve the signs in the beta
@@ -679,11 +691,11 @@ rank \(q^a\).
 
 At the continuation head:
 
-- all 61 changed bounded producers pass normally and under optimized
+- all 62 changed bounded producers pass normally and under optimized
   Python;
-- all 602 tests in the 60 changed focused modules pass in both modes;
-- Ruff lint and format pass on all 121 changed Python files;
-- all 66 changed Markdown files are free of forbidden control bytes;
+- all 615 tests in the 61 changed focused modules pass in both modes;
+- Ruff lint and format pass on all 123 changed Python files;
+- all 67 changed Markdown files are free of forbidden control bytes;
 - the two front-door documents have resolving local links and balanced
   math/fence delimiters;
 - the working diff passes the Git whitespace check.
