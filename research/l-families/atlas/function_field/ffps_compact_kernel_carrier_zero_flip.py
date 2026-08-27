@@ -172,7 +172,7 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "invariants": [
                 "support [0,L]",
                 "compact BV regularity",
-                "mean zero",
+                "zero mean whenever the input has zero mean",
                 "Fourier magnitude",
                 "autocorrelation",
                 "every finite translate Gram energy",
@@ -205,7 +205,7 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
         "proof_ledger": {
             "constructive_one_zero_flip": "PROVED EXACT",
             "conjugate_pair_real_flip": "PROVED EXACT",
-            "support_bv_mean_preservation": "PROVED EXACT",
+            "support_bv_zero_mean_preservation": "PROVED EXACT",
             "fourier_autocorrelation_energy_invariance": "PROVED EXACT",
             "finite_carrier_defect_repair": "PROVED EXACT",
             "arbitrary_infinite_zero_flip": "NOT PROVED",

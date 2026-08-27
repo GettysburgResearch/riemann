@@ -16,7 +16,7 @@ and checked before the bounded replay runs.
 
 ## 0. Outcome
 
-For a real tilt (a), define the probability atom on ([0,1])
+For a real tilt \(a\), define the probability atom on \([0,1]\)
 
 \[
  f_a(x)=
@@ -39,8 +39,8 @@ Let
 \tag{0.2}
 \]
 
-for a fixed integer (m\ge1). Every (J_{a,m}) is a nonzero real compact
-BV band-pass kernel on the same support ([0,2]).
+for a fixed integer \(m\ge1\). Every \(J_{a,m}\) is a nonzero real compact
+BV band-pass kernel on the same support \([0,2]\).
 
 The atom has Laplace transform
 
@@ -50,7 +50,7 @@ The atom has Laplace transform
 \tag{0.3}
 \]
 
-with the removable interpretation at (a=0) and (s=a). Consequently
+with the removable interpretation at \(a=0\) and \(s=a\). Consequently
 
 \[
 \boxed{
@@ -59,7 +59,7 @@ with the removable interpretation at (a=0) and (s=a). Consequently
 \tag{0.4}
 \]
 
-Besides the forced zero at (s=0), its carrier zeros are
+Besides the forced zero at \(s=0\), its carrier zeros are
 
 \[
 \boxed{
@@ -68,7 +68,7 @@ Besides the forced zero at (s=0), its carrier zeros are
 \tag{0.5}
 \]
 
-each of multiplicity (2m). Thus the sign of (a) decides on which side
+each of multiplicity \(2m\). Thus the sign of \(a\) decides on which side
 of the Mellin plane the zero lattice lies.
 
 But that sign is completely invisible to the Fourier energy. Reflection
@@ -94,7 +94,7 @@ and hence
 
 The two kernels therefore have the same autocorrelation and the same
 finite-prefix energy for every coefficient vector, even though their
-nontrivial Laplace zeros have real parts (-m|a|) and (+m|a|).
+nontrivial Laplace zeros have real parts \(-m|a|\) and \(+m|a|\).
 
 For the literal beta source
 
@@ -115,7 +115,7 @@ put
 \tag{0.9}
 \]
 
-Then for every fixed real (a) and fixed (m\ge1),
+Then for every fixed real \(a\) and fixed \(m\ge1\),
 
 \[
 \boxed{
@@ -125,8 +125,8 @@ Then for every fixed real (a) and fixed (m\ge1),
 \tag{0.10}
 \]
 
-For (a\le0), this follows directly from the frozen Mellin--Landau
-argument because (0.5) is on or left of (Re s=0). For (a>0), use
+For \(a\le0\), this follows directly from the frozen Mellin--Landau
+argument because (0.5) is on or left of \(\Re s=0\). For \(a>0\), use
 the exact energy identity
 
 \[
@@ -149,7 +149,7 @@ Normalization in (0.1) follows from
 \tag{1.1}
 \]
 
-For (a\ne0), direct integration gives
+For \(a\ne0\), direct integration gives
 
 \[
  \int_0^1 f_a(x)e^{-sx}\,dx
@@ -157,16 +157,16 @@ For (a\ne0), direct integration gives
 \tag{1.2}
 \]
 
-which is (0.3). Its (a\to0) limit is
+which is (0.3). Its \(a\to0\) limit is
 
 \[
  \widehat f_0(s)={1-e^{-s}\over s}.
 \tag{1.3}
 \]
 
-Because (P_a=f_a*f_a), the density (P_a^{*m}) is the law of a sum of
-(2m) independent (f_a)-variables. The scaling in (0.2) is the law of
-their sum divided by (m), so its support is ([0,2]) for every (m).
+Because \(P_a=f_a*f_a\), the density \(P_a^{*m}\) is the law of a sum of
+\(2m\) independent \(f_a\)-variables. The scaling in (0.2) is the law of
+their sum divided by \(m\), so its support is \([0,2]\) for every \(m\).
 It is continuous and vanishes at both endpoints. Differentiation creates
 no boundary atom, and scaling the Laplace transform gives
 
@@ -177,9 +177,9 @@ no boundary atom, and scaling the Laplace transform gives
 \tag{1.4}
 \]
 
-proving (0.4). The kernel is compact BV: at (m=1), it is the derivative
-of the explicit continuous piecewise exponential-linear spline (P_a);
-at (m\ge2), further convolution preserves this regularity. It is
+proving (0.4). The kernel is compact BV: at \(m=1\), it is the derivative
+of the explicit continuous piecewise exponential-linear spline \(P_a\);
+at \(m\ge2\), further convolution preserves this regularity. It is
 nonzero by (0.4) and has mean zero because it is a compact derivative.
 
 The numerator in (0.3) vanishes when
@@ -189,12 +189,12 @@ The numerator in (0.3) vanishes when
 \tag{1.5}
 \]
 
-The (k=0) zero is canceled by the denominator. Substitution of (s/m)
-in (1.5) proves (0.5), up to replacing (k) by (-k).
+The \(k=0\) zero is canceled by the denominator. Substitution of \(s/m\)
+in (1.5) proves (0.5), up to replacing \(k\) by \(-k\).
 
 ## 2. Fourier weight and the chirality identity
 
-For (a\ne0), elementary absolute values in (0.3) give
+For \(a\ne0\), elementary absolute values in (0.3) give
 
 \[
 \boxed{
@@ -205,7 +205,7 @@ For (a\ne0), elementary absolute values in (0.3) give
 \tag{2.1}
 \]
 
-This depends on (a) only through (|a|). At (a=0), its continuous
+This depends on \(a\) only through \(|a|\). At \(a=0\), its continuous
 limit is
 
 \[
@@ -224,8 +224,8 @@ Equations (0.4) and (2.1) yield the exact ladder weight
 \tag{2.3}
 \]
 
-For (a\ne0), (2.1) is strictly positive, so the only real zero in
-(2.3) is the forced double weight-zero at (t=0). For (a=0), additional
+For \(a\ne0\), (2.1) is strictly positive, so the only real zero in
+(2.3) is the forced double weight-zero at \(t=0\). For \(a=0\), additional
 zeros occur at
 
 \[
@@ -243,8 +243,8 @@ The exact reflection is stronger than the even formula. From (0.1),
 \tag{2.5}
 \]
 
-Reflecting all (2m) summands around (1/2), then dividing their sum by
-(m), proves
+Reflecting all \(2m\) summands around \(1/2\), then dividing their sum by
+\(m\), proves
 
 \[
  Q_{-a,m}(x)=Q_{a,m}(2-x).
@@ -260,7 +260,7 @@ Differentiation proves (0.6). On the full Laplace plane,
 \tag{2.7}
 \]
 
-Thus reflection reverses the carrier-zero lattice. On (s=it), the
+Thus reflection reverses the carrier-zero lattice. On \(s=it\), the
 exponential in (2.7) is a phase, proving (0.7).
 
 If
@@ -283,7 +283,7 @@ then Fourier inversion of (0.7), or a direct change of variables in
 ## 3. Exact finite-prefix isospectrality
 
 The conclusion is not special to beta coefficients. For arbitrary finite
-real coefficients (c_j) and shifts (x_j), define
+real coefficients \(c_j\) and shifts \(x_j\), define
 
 \[
  F_{a,m}(t)=\sum_jc_jJ_{a,m}(t-x_j).
@@ -299,8 +299,8 @@ Finite Fubini and (2.8) give
 \tag{3.2}
 \]
 
-Equation (2.9) makes the right side invariant under (a\mapsto-a).
-Taking (c_n=\beta(n)/\sqrt n) and (x_n=\log n) proves (0.11).
+Equation (2.9) makes the right side invariant under \(a\mapsto-a\).
+Taking \(c_n=\beta(n)/\sqrt n\) and \(x_n=\log n\) proves (0.11).
 
 This identity is exact at every finite horizon. It does not arise from an
 asymptotic comparison, a unitary change of the beta coefficients, or a
@@ -316,7 +316,7 @@ The frozen beta consumer examines possible poles at
 \tag{4.1}
 \]
 
-coming from a hypothetical zeta zero with (1/2<\Re\rho<1). By (0.5),
+coming from a hypothetical zeta zero with \(1/2<\Re\rho<1\). By (0.5),
 the direct carrier is nonvanishing throughout this open strip in either
 of the ranges
 
@@ -328,8 +328,8 @@ of the ranges
 \tag{4.2}
 \]
 
-At (a=0), the nontrivial carrier zeros lie on the boundary
-(Re s=0), although the real Fourier weight has the side notches (2.4).
+At \(a=0\), the nontrivial carrier zeros lie on the boundary
+\(\Re s=0\), although the real Fourier weight has the side notches (2.4).
 When
 
 \[
@@ -338,15 +338,15 @@ When
 \]
 
 the carrier lattice lies inside the consumer strip. The direct
-Mellin--Landau proof for the (J_{a,m}) field then has a genuine logical
+Mellin--Landau proof for the \(J_{a,m}\) field then has a genuine logical
 gap: a hypothetical pole at precisely one of these points could be
 canceled by the carrier. No such alignment is asserted, and failure of RH
 is not inferred.
 
-The mirror repairs the *energy* criterion. For (a>0), the kernel with
-tilt (-a) has every nontrivial carrier zero in the left half-plane and
+The mirror repairs the *energy* criterion. For \(a>0\), the kernel with
+tilt \(-a\) has every nontrivial carrier zero in the left half-plane and
 has exactly the same prefix energy. This proves the reverse direction of
-(0.10) for every positive (a), including (4.3).
+(0.10) for every positive \(a\), including (4.3).
 
 The repair does not transfer an oriented one-sided assertion. Let
 
@@ -366,7 +366,7 @@ In the direct-safe ranges (4.2), the frozen argument proves
 \]
 
 Inside (4.3), (4.5) is not claimed. Equality of autocorrelations does not
-identify the Jordan parts or (L^1) norms of the two complete oriented
+identify the Jordan parts or \(L^1\) norms of the two complete oriented
 fields.
 
 ## 5. Proof of the all-tilt energy criterion
@@ -378,7 +378,7 @@ Under RH, the normalized beta summatory function obeys
 \tag{5.1}
 \]
 
-for every (delta>0). Fixed-kernel bounded-variation summation, exactly
+for every \(\delta>0\). Fixed-kernel bounded-variation summation, exactly
 as in the frozen packet, gives
 
 \[
@@ -386,24 +386,24 @@ as in the frozen packet, gives
 \tag{5.2}
 \]
 
-for every fixed (a,m).
+for every fixed \(a,m\).
 
-Conversely, suppose (5.2). If (a\le0), the direct carrier is safe and
+Conversely, suppose (5.2). If \(a\le0\), the direct carrier is safe and
 the frozen chain
 
 ~~~text
 prefix L2 energy -> complete L1 -> one-sided Landau -> RH
 ~~~
 
-applies to (J_{a,m}). If (a>0), (0.11) transfers (5.2) exactly to
-(J_{-a,m}), whose carrier is safe. Applying the same chain there proves
+applies to \(J_{a,m}\). If \(a>0\), (0.11) transfers (5.2) exactly to
+\(J_{-a,m}\), whose carrier is safe. Applying the same chain there proves
 RH. This completes (0.10).
 
 ## 6. Near-blind-spot law and design consequences
 
 Nonzero tilt removes exact real side notches, but small tilt does not make
 them harmless uniformly. At the former uniform-atom lattice
-(t=2\pi mk), (2.1)--(2.3) give
+\(t=2\pi mk\), (2.1)--(2.3) give
 
 \[
 \boxed{
@@ -413,31 +413,31 @@ them harmless uniformly. At the former uniform-atom lattice
 \tag{6.1}
 \]
 
-This is positive for (a\ne0) but can be extremely small. The theorem
+This is positive for \(a\ne0\) but can be extremely small. The theorem
 therefore distinguishes three design properties:
 
 1. real-frequency nonalignment;
 2. a quantitative spectral floor;
 3. complex-carrier safety for the Landau consumer.
 
-They are not equivalent. The sign of (a) changes property 3 while
+They are not equivalent. The sign of \(a\) changes property 3 while
 leaving properties 1, 2, the autocorrelation, and every finite energy
 unchanged.
 
-For the predecessor kernel, (a=1). Its reflected (a=-1) partner has
+For the predecessor kernel, \(a=1\). Its reflected \(a=-1\) partner has
 the exact same Gram problem and moves the carrier lattice from
-(Re s=m) to (Re s=-m). The positive predecessor is already directly
+\(\Re s=m\) to \(\Re s=-m\). The positive predecessor is already directly
 safe, so reflection does not improve its theorem; it exposes the more
 general isospectral mechanism.
 
 ## 7. Fixed-parameter firewall
 
-- Both (a) and (m) are fixed independently of (X,T), every zeta
+- Both \(a\) and \(m\) are fixed independently of \(X,T\), every zeta
   zero, and every frequency.
-- Constants may deteriorate as (a\to0), (|a|\to\infty), or
-  (m\to\infty). No uniform two-parameter theorem is inferred.
-- The all-tilt result concerns prefix (L^2) energy. It does not silently
-  transfer a direct (L^1), Jordan-mass, or memberwise sign theorem across
+- Constants may deteriorate as \(a\to0\), \(|a|\to\infty\), or
+  \(m\to\infty\). No uniform two-parameter theorem is inferred.
+- The all-tilt result concerns prefix \(L^2\) energy. It does not silently
+  transfer a direct \(L^1\), Jordan-mass, or memberwise sign theorem across
   reflection.
 - Carrier zeros inside (4.3) identify a gap in one proof coordinate, not
   a zeta zero or a failure of the energy criterion.
@@ -465,7 +465,7 @@ without a dedicated literature comparison.
 
 ## 9. Bounded replay
 
-The producer checks the four frozen blobs, orders (1\) through (6), six
+The producer checks the four frozen blobs, orders \(1\) through \(6\), six
 declared tilts, six bounded nonzero frequencies per row, the exact
 tilt-mirror weight identity, the direct-carrier phase classification, and
 the uniform-atom side-notch limit. Floating-point values are regression

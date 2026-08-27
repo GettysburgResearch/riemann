@@ -1,7 +1,7 @@
 # Compact carrier zeros can be flipped without changing beta energy
 
 Status: **exact constructive finite-zero surgery for compact BV kernels,
-support/mean/autocorrelation/Gram invariance, and finite carrier-defect
+support/zero-mean/autocorrelation/Gram invariance, and finite carrier-defect
 repair; no arbitrary infinite zero flip, beta-energy estimate, RH, or GRH
 result**
 
@@ -16,14 +16,14 @@ pinned by Git blob ID.
 
 ## 0. Outcome
 
-Let (K) be a real compact BV function supported on ([0,L]), and set
+Let \(K\) be a nonzero real compact BV function supported on \([0,L]\), and set
 
 \[
  F(s)=\int_0^L K(x)e^{-sx}\,dx.
 \tag{0.1}
 \]
 
-Suppose (z) is a carrier zero with (Re z\ne0):
+Suppose \(z\) is a carrier zero with \(\Re z\ne0\):
 
 \[
  F(z)=0.
@@ -39,7 +39,7 @@ Define the compact primitive
 \tag{0.3}
 \]
 
-and extend it by zero outside ([0,L]). Because of (0.2), both endpoint
+and extend it by zero outside \([0,L]\). Because of (0.2), both endpoint
 values vanish. The one-zero flip is
 
 \[
@@ -58,7 +58,7 @@ Its transform is
 \]
 
 The apparent pole is removable by (0.2). Equation (0.5) removes one copy
-of the zero at (z) and inserts one at
+of the zero at \(z\) and inserts one at
 
 \[
  -\overline z.
@@ -83,7 +83,7 @@ so the surgery preserves
 \]
 
 For a real zero, (0.4) is already real. For a nonreal zero of a real
-kernel, perform the two flips (z,overline z). The final kernel is real,
+kernel, perform the two flips \(z,\overline z\). The final kernel is real,
 compact BV, supported on the same interval, and has transform
 
 \[
@@ -120,7 +120,7 @@ At the right endpoint,
 \tag{1.2}
 \]
 
-while (h_z(0)=0) directly. Therefore its extension by zero has no
+while \(h_z(0)=0\) directly. Therefore its extension by zero has no
 boundary delta in the distributional derivative. If
 
 \[
@@ -150,13 +150,13 @@ Now transform (0.4):
 which proves (0.5).
 
 The regularity assertion is also constructive. A compact BV function is
-bounded and integrable. Equation (0.3) makes (h_z) compact absolutely
+bounded and integrable. Equation (0.3) makes \(h_z\) compact absolutely
 continuous; (1.1) shows that its derivative is BV. Hence (0.4) is compact
 BV on the same support. No Paley--Wiener existence theorem is needed.
 
 ## 2. Fourier and Gram invariance
 
-Write (z=a+ib). On (s=it),
+Write \(z=a+ib\). On \(s=it\),
 
 \[
  |it+\overline z|^2
@@ -172,7 +172,7 @@ proving (0.7)--(0.8). If
 \tag{2.2}
 \]
 
-then its Fourier transform is (|F(it)|^2). Therefore
+then its Fourier transform is \(|F(it)|^2\). Therefore
 
 \[
 \boxed{
@@ -180,7 +180,7 @@ then its Fourier transform is (|F(it)|^2). Therefore
 \tag{2.3}
 \]
 
-For arbitrary finite complex coefficients (c_j) and real shifts (x_j),
+For arbitrary finite complex coefficients \(c_j\) and real shifts \(x_j\),
 finite Fubini gives
 
 \[
@@ -190,7 +190,7 @@ finite Fubini gives
 \tag{2.4}
 \]
 
-Replacing (K) by its flip leaves the right side unchanged. In
+Replacing \(K\) by its flip leaves the right side unchanged. In
 particular, for the beta coefficients and logarithmic shifts,
 
 \[
@@ -205,21 +205,30 @@ particular, for the beta coefficients and logarithmic shifts,
 \tag{2.5}
 \]
 
-This identity is exact at every finite (X).
+This identity is exact at every finite \(X\).
 
-If (K) has mean zero, then (F(0)=0). Since (z\ne0), the multiplier
-in (0.5) is finite at zero, and
+At zero, the exact transformation law is
+
+\[
+ F^{[z]}(0)=-{\overline z\over z}F(0).
+\tag{2.6}
+\]
+
+Thus the magnitude of the mean is preserved, but its phase need not be. A
+single real-zero flip reverses a nonzero mean; a conjugate-pair flip
+preserves it exactly. In particular, if \(K\) has mean zero, then
+\(F(0)=0\) and
 
 \[
  F^{[z]}(0)=0.
-\tag{2.6}
+\tag{2.7}
 \]
 
 Thus the band-pass condition is preserved as well.
 
 ## 3. Keeping the output real
 
-For real (K), carrier zeros occur in conjugate pairs. A flip at one
+For real \(K\), carrier zeros occur in conjugate pairs. A flip at one
 nonreal zero may produce a complex intermediate kernel. Flipping its
 conjugate next multiplies the transform by
 
@@ -249,7 +258,7 @@ denominator is canceled by the zero being flipped.
 
 ## 4. A literal carrier-gap example
 
-Let (K_0) be piecewise constant on ([0,3]), with weights
+Let \(K_0\) be piecewise constant on \([0,3]\), with weights
 
 \[
  (c_0,c_1,c_2)
@@ -274,7 +283,7 @@ The coefficient polynomial factors exactly:
 \tag{4.3}
 \]
 
-The root (y=1) gives the mean-zero condition
+The root \(y=1\) gives the mean-zero condition
 
 \[
  c_0+c_1+c_2=0.
@@ -290,20 +299,20 @@ The second root gives the real carrier zero
 \tag{4.5}
 \]
 
-Thus (K_0) has a literal zero inside the open Mellin--Landau consumer
-strip. Applying (0.4) with (z=z_0) moves this zero to
-(-\log(4/3)), keeps support ([0,3]), and leaves the entire Fourier
+Thus \(K_0\) has a literal zero inside the open Mellin--Landau consumer
+strip. Applying (0.4) with \(z=z_0\) moves this zero to
+\(-\log(4/3)\), keeps support \([0,3]\), and leaves the entire Fourier
 weight unchanged.
 
 The replay verifies (4.3)--(4.5) in the exact variable
-(y=e^{-z_0}=3/4) and checks the unit-modulus identity at six bounded
+\(y=e^{-z_0}=3/4\) and checks the unit-modulus identity at six bounded
 frequencies. The proof is (0.3)--(1.5), not numerical quadrature.
 
 ## 5. Finite carrier-defect repair
 
-Because (F) is entire and not identically zero, it has only finitely many
-zeros in a compact rectangle. Fix a declared height (T) and margin
-(0<\delta<1/4), and consider
+Because \(F\) is entire and not identically zero, it has only finitely many
+zeros in a compact rectangle. Fix a declared height \(T\) and margin
+\(0<\delta<1/4\), and consider
 
 \[
  \mathcal Z_{T,\delta}
@@ -316,7 +325,7 @@ zeros in a compact rectangle. Fix a declared height (T) and margin
 Flip this finite multiset, including multiplicities and conjugates. The
 resulting real compact BV kernel:
 
-- has the same support and mean;
+- has the same support and remains mean zero when the input is mean zero;
 - has exactly the same autocorrelation and beta prefix energy;
 - has no carrier zero left in the rectangle (5.1);
 - introduces only the reflected zeros in the left half-plane.
@@ -391,15 +400,15 @@ spectral factorization is left open.
 | statement | grade |
 |---|---|
 | one-zero ODE construction (0.3)--(0.5) | **PROVED EXACT** |
-| support, BV regularity, and mean preservation | **PROVED EXACT** |
-| carrier motion (z\mapsto-\bar z) | **PROVED EXACT** |
+| support, BV regularity, and zero-mean preservation | **PROVED EXACT** |
+| carrier motion \(z\mapsto-\bar z\) | **PROVED EXACT** |
 | Fourier magnitude and autocorrelation invariance | **PROVED EXACT** |
 | arbitrary finite translate/beta Gram invariance | **PROVED EXACT** |
 | real conjugate-pair and finite-multiset surgery | **PROVED EXACT** |
 | finite compact-rectangle carrier repair | **PROVED EXACT** |
 | full-strip repair for a finite strip divisor | **PROVED EXACT** |
 | arbitrary infinite carrier-zero flip | **NOT PROVED** |
-| (L^1) or Jordan-mass invariance | **FALSE IN GENERAL / NOT CLAIMED** |
+| \(L^1\) or Jordan-mass invariance | **FALSE IN GENERAL / NOT CLAIMED** |
 | any beta-energy estimate | **NOT PROVED** |
 | RH or GRH | **NOT PROVED** |
 
@@ -410,7 +419,7 @@ literature comparison.
 ## 9. Bounded replay
 
 The replay pins the predecessor quartet; checks the toy mean and
-right-half-plane root exactly over (mathbf Q); checks one-zero and
+right-half-plane root exactly over \(\mathbf Q\); checks one-zero and
 conjugate-pair unit-modulus multipliers at six frequencies and three
 declared complex zeros; and verifies the toy weight equality. It uses no
 root finder, quadrature, zeta zero, numerical zeta value, prime, curve, or

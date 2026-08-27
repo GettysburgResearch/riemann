@@ -4,7 +4,7 @@
     "invariants": [
       "support [0,L]",
       "compact BV regularity",
-      "mean zero",
+      "zero mean whenever the input has zero mean",
       "Fourier magnitude",
       "autocorrelation",
       "every finite translate Gram energy"
@@ -28,7 +28,7 @@
     "fourier_autocorrelation_energy_invariance": "PROVED EXACT",
     "one_sided_jordan_mass_invariance": "FALSE IN GENERAL / NOT CLAIMED",
     "rh_or_grh": "NOT PROVED",
-    "support_bv_mean_preservation": "PROVED EXACT"
+    "support_bv_zero_mean_preservation": "PROVED EXACT"
   },
   "resource_caps": {
     "complex_zero_samples": 3,
