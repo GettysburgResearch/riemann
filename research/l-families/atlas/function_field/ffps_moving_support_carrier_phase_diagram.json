@@ -1,0 +1,259 @@
+{
+  "centered_moment_duality": {
+    "autocorrelation_identity": "integral(u^2*C_X(u),u)=-2*B(X)^2",
+    "bounded_extremizer_row": {
+      "extremal_energy": 1.5,
+      "field_length": 2.0,
+      "recovered_prefix_bound": 1.0
+    },
+    "center": "(log(X)+S_X)/2",
+    "equality_field": "H(t)=6*B*(L-2*t)/L^3 on [0,L]",
+    "identities": "integral(H_X)=0 and integral(t*H_X)=-B(X)",
+    "information_firewall": "sharp for support, zero mass, first moment, and L2 data; not for full beta convolution structure",
+    "pythagorean_decomposition": "E_Q=12*|B(X)|^2/L^3+||H_X-H_X_star||_2^2",
+    "sharp_inequality": "E_Q(X)*(log(X)+S_X)^3>=12*|B(X)|^2",
+    "test_norm_squared": "(log(X)+S_X)^3/12"
+  },
+  "forward_theorem": {
+    "assumptions": "RH and (log(X)+S_X)*(||J_X||_infinity+Var(J_X))^2=X^o(1)",
+    "conclusion": "E_Q(X)=X^o(1)",
+    "parabolic_corollary": "the forward gate holds for every S_X>=1"
+  },
+  "independent_laplace_replay": {
+    "cost": "exp(3/2)/sqrt(2)*(2*S/3)^(3/2)",
+    "parameter": "alpha=3/(2*S)",
+    "scope": "requires nonnegative normalized Q; reproduces the wedge exponent"
+  },
+  "parabolic_escape": {
+    "cubic_scale": "S_X>=X^(1/3) makes the energy O(1) unconditionally",
+    "firewall": "positive-power support does not give a full RH reverse theorem from raw energy",
+    "norms": "||J_S||_2^2=12/S^3, ||J_S||_infinity=6/S^2, Var(J_S)=24/S^2",
+    "renormalized_trivial_bound": "R_S(X)<=192*X*((log(X)+S)/S)^3",
+    "trivial_bound": "E_S(X)<=192*X/S^3"
+  },
+  "phase_rows": [
+    {
+      "bound_exponent_over_log_X": 1.0317805383034793,
+      "log_X": 100.0,
+      "log_support": 0.6931471805599453,
+      "schedule_code": 0.0,
+      "trivial_log_energy_bound": 103.17805383034793
+    },
+    {
+      "bound_exponent_over_log_X": 0.914419848140635,
+      "log_X": 100.0,
+      "log_support": 4.605170185988092,
+      "schedule_code": 1.0,
+      "trivial_log_energy_bound": 91.4419848140635
+    },
+    {
+      "bound_exponent_over_log_X": 0.05257495372027776,
+      "log_X": 100.0,
+      "log_support": 33.333333333333336,
+      "schedule_code": 2.0,
+      "trivial_log_energy_bound": 5.257495372027776
+    },
+    {
+      "bound_exponent_over_log_X": 1.0079451345758699,
+      "log_X": 400.0,
+      "log_support": 0.6931471805599453,
+      "schedule_code": 0.0,
+      "trivial_log_energy_bound": 403.17805383034795
+    },
+    {
+      "bound_exponent_over_log_X": 0.9682077543267595,
+      "log_X": 400.0,
+      "log_support": 5.991464547107982,
+      "schedule_code": 1.0,
+      "trivial_log_energy_bound": 387.28310173070383
+    },
+    {
+      "bound_exponent_over_log_X": 0.013143738430069475,
+      "log_X": 400.0,
+      "log_support": 133.33333333333334,
+      "schedule_code": 2.0,
+      "trivial_log_energy_bound": 5.25749537202779
+    },
+    {
+      "bound_exponent_over_log_X": 1.0019862836439675,
+      "log_X": 1600.0,
+      "log_support": 0.6931471805599453,
+      "schedule_code": 0.0,
+      "trivial_log_energy_bound": 1603.1780538303478
+    },
+    {
+      "bound_exponent_over_log_X": 0.98945263665459,
+      "log_X": 1600.0,
+      "log_support": 7.3777589082278725,
+      "schedule_code": 1.0,
+      "trivial_log_energy_bound": 1583.1242186473442
+    },
+    {
+      "bound_exponent_over_log_X": 0.0032859346075173337,
+      "log_X": 1600.0,
+      "log_support": 533.3333333333334,
+      "schedule_code": 2.0,
+      "trivial_log_energy_bound": 5.2574953720277335
+    }
+  ],
+  "projected_laplace_replay": {
+    "exact_cost": "sqrt(L*V(alpha*L))/(alpha*Qhat(alpha))",
+    "limit": "alpha->0 recovers the sharp centered-moment inequality",
+    "positive_carrier_bound": "exp(alpha*S)*min(L^(3/2)/sqrt(12),1/(sqrt(2)*alpha^(3/2)))",
+    "variance": "V(z)=(1-exp(-2z))/(2z)-((1-exp(-z))/z)^2",
+    "variance_rows": [
+      {
+        "centered_variance_upper_bound": 8.333333333333334e-06,
+        "unprojected_second_moment_upper_bound": 50.0,
+        "variance": 8.250470284187905e-06,
+        "z": 0.01
+      },
+      {
+        "centered_variance_upper_bound": 0.0008333333333333335,
+        "unprojected_second_moment_upper_bound": 5.0,
+        "variance": 0.0007545340038193071,
+        "z": 0.1
+      },
+      {
+        "centered_variance_upper_bound": 0.08333333333333333,
+        "unprojected_second_moment_upper_bound": 0.5,
+        "variance": 0.032755957487965615,
+        "z": 1.0
+      },
+      {
+        "centered_variance_upper_bound": 8.333333333333334,
+        "unprojected_second_moment_upper_bound": 0.05,
+        "variance": 0.04000090787492604,
+        "z": 10.0
+      }
+    ]
+  },
+  "proof_ledger": {
+    "RH_or_GRH": "NOT PROVED",
+    "all_support_parabolic_renormalized_RH_equivalence": "PROVED",
+    "arbitrary_support_renormalized_reverse_RH_gate": "PROVED",
+    "arithmetic_improvement_over_centered_wedge": "NOT PROVED",
+    "cubic_normalization_escape": "PROVED",
+    "exact_carrier_moment_identities": "PROVED",
+    "exact_projected_finite_alpha_carrier_inequality": "PROVED",
+    "exact_pythagorean_mertens_shape_decomposition": "PROVED",
+    "exact_signed_autocorrelation_second_moment": "PROVED",
+    "moving_support_forward_gate_under_RH": "PROVED",
+    "optimal_constant_in_abstract_information_class": "PROVED",
+    "parabolic_beta_estimate_in_RH_bearing_region": "NOT PROVED",
+    "parabolic_forward_gate_for_all_supports_at_least_one": "PROVED",
+    "parabolic_trivial_energy_bound": "PROVED",
+    "positive_power_support_full_RH_gate": "NOT PROVED",
+    "sharp_centered_support_energy_inequality": "PROVED",
+    "subcubic_width_power_trivial_dilution_schedule": "PROVED",
+    "subpower_support_reverse_RH_gate": "PROVED",
+    "supercubic_all_support_forward_gate": "NOT PROVED",
+    "support_exponent_zero_exclusion_wedge": "PROVED",
+    "width_renormalization_removes_trivial_dilution": "PROVED"
+  },
+  "renormalization_exponent_trichotomy": {
+    "firewall": "the p>3 row is a limit of the proved forward bound, not an impossibility theorem",
+    "p_above_3": "current RH forward gate retains S_X^(p-3) for S_X much larger than log(X)",
+    "p_below_3": "S_X=X^(1/(3-p)) makes L_X^p*E_S(X)=O(1) by Young",
+    "p_equal_3": "exact all-support RH equivalence",
+    "sample_trivial_schedule_exponents": [
+      {
+        "support_exponent": 0.3333333333333333,
+        "width_power_p": 0.0
+      },
+      {
+        "support_exponent": 0.5,
+        "width_power_p": 1.0
+      },
+      {
+        "support_exponent": 1.0,
+        "width_power_p": 2.0
+      },
+      {
+        "support_exponent": 2.0,
+        "width_power_p": 2.5
+      }
+    ]
+  },
+  "resource_caps": {
+    "beta_terms": 0,
+    "log_horizons": 3,
+    "primes": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "support_schedules": 3,
+    "zeta_zeros": 0
+  },
+  "reverse_margin_control": {
+    "alpha": 0.025,
+    "convergence_abscissa": 0.1,
+    "margin_to_target": 0.1,
+    "partial_sum_exponent": 0.07500000000000001
+  },
+  "reverse_theorem": {
+    "conclusion": "no zeta zero with Re(rho)>1/2+3*gamma/2; gamma=0 gives RH",
+    "energy_gate": "E_Q(X)=X^o(1)",
+    "positivity_needed": false,
+    "prefix_bound": "|B(X)|^2<=E_Q(X)*(log(X)+S_X)^3/12",
+    "support_envelope_needed": false,
+    "support_gate": "pointwise-uniform S_X<=X^(gamma+o(1))"
+  },
+  "source_contract": {
+    "commit": "19f274c9335ecffb357e296b3fd5fefdeba5f3fd",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_VARIATIONAL_PROBABILITY_CARRIER_OPTIMUM.md": "d216e254e550c3f3cad49e3dac29da2b0b76e760",
+      "research/l-families/atlas/function_field/ffps_variational_probability_carrier_optimum.json": "a37d9b0bf1c43bed0df268a764427fa6c3870211",
+      "research/l-families/atlas/function_field/ffps_variational_probability_carrier_optimum.py": "f7a8628858f2a23bc4b9f164ea0cde1601c03235",
+      "tests/test_ffps_variational_probability_carrier_optimum.py": "6a8c9d45391014df212f4e2773be0d7a3e57e2e8"
+    }
+  },
+  "width_renormalized_theorem": {
+    "bounded_forward_cost_rows": [
+      {
+        "cost": 93654360900.0,
+        "log_X": 100.0,
+        "polylog_upper_bound": 93654360900.0,
+        "support": 1.0
+      },
+      {
+        "cost": 14400.0,
+        "log_X": 100.0,
+        "polylog_upper_bound": 93654360900.0,
+        "support": 100.0
+      },
+      {
+        "cost": 900.0000003600001,
+        "log_X": 100.0,
+        "polylog_upper_bound": 93654360900.0,
+        "support": 1000000000000.0
+      }
+    ],
+    "definition": "R_Q(X)=(log(X)+S_X)^3*E_Q(X)",
+    "dilution_firewall": "the width factor is the sharp centered-moment recovery price",
+    "forward_gate": "(log(X)+S_X)^4*(||J_X||_infinity+Var(J_X))^2=X^o(1)",
+    "parabolic_equivalence": "RH iff R_S(X)=X^o(1) for every schedule S_X>=1",
+    "reverse": "R_Q(X)=X^o(1) implies RH for every finite support schedule"
+  },
+  "zero_exclusion_rows": [
+    {
+      "excluded_zero_real_parts_above": 0.5,
+      "support_exponent_gamma": 0.0
+    },
+    {
+      "excluded_zero_real_parts_above": 0.575,
+      "support_exponent_gamma": 0.05
+    },
+    {
+      "excluded_zero_real_parts_above": 0.65,
+      "support_exponent_gamma": 0.1
+    },
+    {
+      "excluded_zero_real_parts_above": 0.75,
+      "support_exponent_gamma": 0.16666666666666666
+    },
+    {
+      "excluded_zero_real_parts_above": 1.0,
+      "support_exponent_gamma": 0.3333333333333333
+    }
+  ]
+}
