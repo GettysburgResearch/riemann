@@ -1,0 +1,182 @@
+{
+  "controls": [
+    {
+      "collision_delta": 4,
+      "first_three_filtered": [
+        "321677851",
+        "67887951923",
+        "521342389774"
+      ],
+      "generic_annihilator_degree": 16,
+      "label": "generic_split",
+      "memberwise_minimal_degree": 16,
+      "middle": 17,
+      "p_distinct_roots": 4,
+      "prime": 7,
+      "q_nonnotched_distinct_roots": 4,
+      "trace": 4
+    },
+    {
+      "collision_delta": 9,
+      "first_three_filtered": [
+        "20520559320",
+        "12338441762360",
+        "-629383425274850"
+      ],
+      "generic_annihilator_degree": 16,
+      "label": "generic_split",
+      "memberwise_minimal_degree": 16,
+      "middle": 26,
+      "p_distinct_roots": 4,
+      "prime": 11,
+      "q_nonnotched_distinct_roots": 4,
+      "trace": 5
+    },
+    {
+      "collision_delta": 0,
+      "first_three_filtered": [
+        "103747084320",
+        "-13911918604320",
+        "-16543399298569440"
+      ],
+      "generic_annihilator_degree": 16,
+      "label": "realized_square",
+      "marks": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        9
+      ],
+      "memberwise_minimal_degree": 6,
+      "middle": 22,
+      "p_distinct_roots": 2,
+      "prime": 11,
+      "q_nonnotched_distinct_roots": 1,
+      "trace": 0,
+      "trace_two": -44
+    },
+    {
+      "collision_delta": 0,
+      "first_three_filtered": [
+        "110376534656",
+        "-372940414944128",
+        "84695693895163520"
+      ],
+      "generic_annihilator_degree": 16,
+      "label": "realized_square",
+      "marks": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        11
+      ],
+      "memberwise_minimal_degree": 8,
+      "middle": 30,
+      "p_distinct_roots": 2,
+      "prime": 13,
+      "q_nonnotched_distinct_roots": 2,
+      "trace": -4,
+      "trace_two": -44
+    }
+  ],
+  "notch_controls": {
+    "11": {
+      "degree": 3,
+      "root_values": {
+        "1": 0,
+        "11": 0,
+        "121": 0
+      }
+    },
+    "7": {
+      "degree": 3,
+      "root_values": {
+        "1": 0,
+        "49": 0,
+        "7": 0
+      }
+    }
+  },
+  "primitive_pair_polynomial": "T^4-(b-2p)T^3+(p*t^2-2p*b+2p^2)T^2-p^2(b-2p)T+p^4",
+  "proof_ledger": {
+    "generic_rank_sixteen": "PROVED OFF THE STATED LOCI",
+    "memberwise_rank_formula": "PROVED EXACT",
+    "primitive_pair_polynomial": "PROVED EXACT",
+    "raw_six_place_tower": "IMPORTED EXACT",
+    "rh_or_grh": "NOT PROVED",
+    "sheaf_or_tate_class_realization": "NOT CLAIMED",
+    "square_collision_classification": "PROVED EXACT",
+    "square_stratum_realization_in_six_branch_family": "PROVED BY TWO EXACT BOUNDED CONTROLS",
+    "unique_minimal_cubic_notch": "PROVED EXACT"
+  },
+  "realized_exceptional_curves": [
+    {
+      "marks": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        9
+      ],
+      "middle": 22,
+      "minimal_rank": 6,
+      "prime": 11,
+      "trace": 0,
+      "trace_two": -44
+    },
+    {
+      "marks": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        11
+      ],
+      "middle": 30,
+      "minimal_rank": 8,
+      "prime": 13,
+      "trace": -4,
+      "trace_two": -44
+    }
+  ],
+  "resource_caps": {
+    "control_rows": 4,
+    "curves_enumerated": 2,
+    "largest_polynomial_degree": 16,
+    "largest_quadratic_extension_field": 169,
+    "matrices": 0,
+    "maximum_power_sum_exponent": 44,
+    "maximum_raw_extension_index": 22,
+    "quadratic_extension_elements_visited": 290,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "b653f272954bf7e1d93d6e54c1883b4cb00b181c",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/QUADRATIC_FAMILY_SIX_PLACE_CONNECTED_SATURATION.md": "21edbccca1c21a4e058aaeccb8f3a92688c9e2ff",
+      "research/l-families/atlas/function_field/quadratic_family_six_place_connected_saturation.json": "7e5ad04886abedaf7da4df5fc91fdb05787cb25a",
+      "research/l-families/atlas/function_field/quadratic_family_six_place_connected_saturation.py": "379ba7af057b3997b119a967d8f47e17437932da",
+      "tests/test_quadratic_family_six_place_connected_saturation.py": "1673941ca46dbf4591a677fa80fad82af2b095c4"
+    },
+    "import": "exact six-place raw correlation and genus-two convention"
+  },
+  "theorem": {
+    "aliasing_no_go": "a scalar filter killing nuisance roots p,p^2 necessarily kills geometric cross-pair modes occupying the same roots",
+    "collision_iff": "t^2-4*b+8*p=0 iff P(T)=(T^2-(t/2)T+p)^2",
+    "generic_annihilator": "P(T)*p^8 P(T/p^2)*Q(T)*p^4 Q(T/p)",
+    "generic_rank": 16,
+    "memberwise_rank": "2*#distinct(P roots)+2*#distinct(Q roots other than p)",
+    "raw_decomposition": "S_n=p^(2n)-6*p^n-21 + H1[p^2 twist,-21] + centered-cross-pairs[p twist,-6]",
+    "square_stratum_ranks": {
+      "t_nonzero": 8,
+      "t_zero": 6
+    },
+    "unique_scalar_notch": "(E-1)*(E-p)*(E-p^2)"
+  }
+}
