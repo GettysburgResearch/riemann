@@ -1,0 +1,99 @@
+{
+  "bounded_replay": {
+    "composed_normal_form": {
+      "lower_bound": "0.0570153800929",
+      "ordinary_zero_max": "1.11465386447",
+      "rough_twisted_max": "7.85997693566",
+      "smooth_mass": "22.3079000811",
+      "squarefree_mass": "8.57704479951",
+      "upper_bound": "56.6772852809",
+      "verified": true
+    },
+    "partial_summation": {
+      "normalization": "max_(N<=X)|Q_N|/sqrt(N)",
+      "normalized_unweighted_max": "4.24643158052",
+      "two_sided_bound": "weighted_max/(1+log(X)/2)<=normalized_unweighted_max<=2*weighted_max",
+      "verified": true,
+      "weighted_zero_max": "7.57869804188"
+    },
+    "phase_transport": {
+      "abel_forward_max_error": "1.23469579223e-14",
+      "abel_reverse_max_error": "6.46625256759e-15",
+      "rough_twisted_max": "7.85997693566",
+      "rough_zero_max": "7.57869804188",
+      "transport_cost": "2.27934635945",
+      "two_sided_bound_verified": true
+    },
+    "scale_identities": {
+      "errors": {
+        "beta_forward": "5.55111512313e-16",
+        "beta_inverse": "5.55111512313e-16",
+        "rough_forward": "4.97127076776e-15",
+        "rough_inverse": "1.11022302463e-14"
+      },
+      "frequency": "0.19",
+      "horizon": 840,
+      "rough_bound": 13
+    }
+  },
+  "exact_comparisons": {
+    "composed": "M_zero_max/(H*C_sf)<=A_rough_harmonic_max<=H*C_sm*M_zero_max",
+    "phase": "A_rough_zero_max/H<=A_rough_harmonic_max<=H*A_rough_zero_max",
+    "rough_scale": "A_rough_t_max/C_sm<=M_t_max<=C_sf*A_rough_t_max",
+    "unweighted": "A_rough_zero_max/(1+log(X)/2)<=Q_normalized_max<=2*A_rough_zero_max"
+  },
+  "kernel_weight": {
+    "asymptotic": "w_(h,X)~K_0^2*(2*pi*|h|)^(2r)*L_X^(-(2r+1))",
+    "fixed_h_and_r": true,
+    "nonzero_h_required": true,
+    "weight_and_inverse_are_subpower": true
+  },
+  "resource_caps": {
+    "floating_point_tolerance": 3e-12,
+    "integer_horizon": 840,
+    "large_matrices": 0,
+    "largest_prime": 13,
+    "zeta_zeros": 0
+  },
+  "scope_fences": {
+    "dyadic_replacement_proved": false,
+    "endpoint_only_proved": false,
+    "moving_cutoff_inside_prefix_maximum": false,
+    "moving_frequency_inside_prefix_maximum": false,
+    "naive_unnormalized_moving_cutoff_mertens_equivalence": false,
+    "rh_or_grh_proved": false,
+    "rough_estimate_proved": false
+  },
+  "sharp_frontier": {
+    "coefficient_mass_iff": "C_sf,C_sm=X^o iff limsup log(y_X)/log(log(X))<=2",
+    "fixed_A_beyond_two": "for y_X=(log X)^A and fixed A>2, both positive masses are X^(1/2-1/A+o(1))",
+    "scope": "sharp for positive conditioning masses, not a no-go for signed cancellation or RH-equivalence beyond the frontier"
+  },
+  "source_contract": {
+    "commits": {
+      "phase_transport": "31c0e730ffe80683798d9cc830c26e9d451a8759",
+      "rough_frontier": "d1af013130ae4004c629b916950e34545b0a65f1"
+    },
+    "git_blobs": {
+      "31c0e730ffe80683798d9cc830c26e9d451a8759": {
+        "research/l-families/atlas/function_field/FFPS_SINGLE_HARMONIC_MAXIMAL_PHASE_TRANSPORT.md": "6c3b9487fe6bea2bc133c4d6283eb7e972797139",
+        "research/l-families/atlas/function_field/ffps_single_harmonic_maximal_phase_transport.json": "8da26ca2b9ba3dc52b5620aeb5b02bcb44ffcca4",
+        "research/l-families/atlas/function_field/ffps_single_harmonic_maximal_phase_transport.py": "9662f1d429d4acf1c3e1b1f0968f163e5aa8eee9",
+        "tests/test_ffps_single_harmonic_maximal_phase_transport.py": "23e7cbcbc7b25d1fb3e030ea26be8468ba594c4b"
+      },
+      "d1af013130ae4004c629b916950e34545b0a65f1": {
+        "research/l-families/atlas/function_field/FFPS_PREFIX_TRUNCATED_ROUGH_RANKIN_FRONTIER.md": "fa63811afd3ecc23b2ea26089a7544f093023c4e",
+        "research/l-families/atlas/function_field/ffps_prefix_truncated_rough_rankin_frontier.json": "ef899a0a37a25d56c94478943faa95894e27ff3d",
+        "research/l-families/atlas/function_field/ffps_prefix_truncated_rough_rankin_frontier.py": "f004b2a418eba090899adb938337aff34cbb1ddb",
+        "tests/test_ffps_prefix_truncated_rough_rankin_frontier.py": "fb7f68fde6dbb0f75c498785e2d40b03ebfcb334"
+      }
+    }
+  },
+  "theorem": {
+    "cutoff_quantifier": "choose y_X once at outer X and freeze it across every integer prefix 1<=N<=X",
+    "range": "y_X tends to infinity and limsup log(y_X)/log(log(X))<=2",
+    "raw_equivalences": "RH iff rough weighted zero-frequency maximal prefix is X^o iff one fixed nonzero guarded harmonic is X^o",
+    "unweighted_equivalence": "RH iff max_(N<=X)|sum_rough_(n<=N)mu(n)|/sqrt(N)=X^o",
+    "weighted_equivalence": "for fixed r>=1 and fixed nonzero h, RH iff w_(h,X)*rough_harmonic_max^2=X^o"
+  }
+}
