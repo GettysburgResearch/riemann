@@ -1,0 +1,236 @@
+{
+  "all_curve_factorization": {
+    "deleted_modulus": {
+      "axis_poles_have_modulus": "sqrt(q)",
+      "degree_multiplicities": {
+        "1": 1,
+        "2": 2,
+        "5": 1
+      },
+      "degrees": [
+        1,
+        2,
+        2,
+        5
+      ],
+      "denominator": "D_Sigma(X,Y)=prod_(v in Sigma)(1-q^(-deg(v)/2)X^deg(v))(1-q^(-deg(v)/2)Y^deg(v))(1-q^(-deg(v))(XY)^deg(v))",
+      "exact_q4_replay_value_at_X_1_7_Y_2_11": "16318634287387400193910070042376662109375/19988571879750172850640592097983030439936",
+      "interpretation": "each list entry is one distinct deleted closed point; distinct points may have the same degree",
+      "mixed_poles_satisfy": "|XY|=q",
+      "repeated_degrees_allowed": true,
+      "support_only": true
+    },
+    "formula": "F_C,Sigma=J_C,Sigma/[Z_C(X/sqrt(q))Z_C(Y/sqrt(q))Z_C(XY/q)D_Sigma(X,Y)]",
+    "local_certificate": {
+      "checks": 9,
+      "identity": "(1-a)(1-b)(1-ab)-(1-a-b)=ab(a+b-ab)"
+    },
+    "orientation_product": "F_C,Sigma=prod_(v notin Sigma)(1-q^(-deg(v)/2)X^deg(v)-q^(-deg(v)/2)Y^deg(v))",
+    "p1_minus_infinity_rows": [
+      {
+        "expected_A1_product": "3/4",
+        "inverse_zeta_P1": "21/32",
+        "outside_product": "3/4",
+        "u": "1/8"
+      },
+      {
+        "expected_A1_product": "3/4",
+        "inverse_zeta_P1": "11/16",
+        "outside_product": "3/4",
+        "u": "1/12"
+      },
+      {
+        "expected_A1_product": "3/4",
+        "inverse_zeta_P1": "45/64",
+        "outside_product": "3/4",
+        "u": "1/16"
+      },
+      {
+        "expected_A1_product": "3/4",
+        "inverse_zeta_P1": "57/80",
+        "outside_product": "3/4",
+        "u": "1/20"
+      }
+    ],
+    "regularized_function": "P_C(X/sqrt(q))P_C(Y/sqrt(q))F_C,Sigma is analytic for |X|,|Y|<q^(1/6)"
+  },
+  "convergence": {
+    "closed_point_input": "N_C(d)=O_C(q^d/d), derived from Weil",
+    "residual_domain": "every closed bidisc |X|,|Y|<=r with r^3<sqrt(q)",
+    "rows": [
+      {
+        "condition": "r^6<q, equivalently r^3<sqrt(q)",
+        "field_size": 2,
+        "r_to_the_sixth": "1061520150601/1000000000000",
+        "radius": "101/100"
+      },
+      {
+        "condition": "r^6<q, equivalently r^3<sqrt(q)",
+        "field_size": 3,
+        "r_to_the_sixth": "1061520150601/1000000000000",
+        "radius": "101/100"
+      },
+      {
+        "condition": "r^6<q, equivalently r^3<sqrt(q)",
+        "field_size": 4,
+        "r_to_the_sixth": "1061520150601/1000000000000",
+        "radius": "101/100"
+      },
+      {
+        "condition": "r^6<q, equivalently r^3<sqrt(q)",
+        "field_size": 5,
+        "r_to_the_sixth": "1061520150601/1000000000000",
+        "radius": "101/100"
+      }
+    ]
+  },
+  "frobenius_channels": {
+    "axis_reciprocal_bound": "[X^n]1/P_C(X/sqrt(q))=O_C((n+1)^(m_C-1))",
+    "bivariate_bound": "c_(i,j)=O_C,Sigma((i+1)^(m_C-1)(j+1)^(m_C-1))",
+    "fixed_offset_expansion": "c_(h+a,h+b)=sum_(lambda,mu)Q_(lambda,mu)^(a,b)(h)(lambda*mu)^h+O(R^(-h)), R>1",
+    "fixed_offset_polynomial_degree": "deg Q_(lambda,mu)^(a,b)<=m_lambda+m_mu-2",
+    "maximum_root_multiplicity": "m_C",
+    "normalized_polynomial": "P_C(X/sqrt(q))=prod_j(1-lambda_j X), |lambda_j|=1",
+    "repeated_pole_rows": [
+      {
+        "coefficient_polynomial_degree": 0,
+        "coefficients": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "multiplicity": 1,
+        "vanishing_difference_order": 1
+      },
+      {
+        "coefficient_polynomial_degree": 1,
+        "coefficients": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "multiplicity": 2,
+        "vanishing_difference_order": 2
+      },
+      {
+        "coefficient_polynomial_degree": 2,
+        "coefficients": [
+          1,
+          3,
+          6,
+          10,
+          15,
+          21,
+          28,
+          36,
+          45,
+          55,
+          66,
+          78,
+          91,
+          105,
+          120,
+          136,
+          153
+        ],
+        "multiplicity": 3,
+        "vanishing_difference_order": 3
+      },
+      {
+        "coefficient_polynomial_degree": 3,
+        "coefficients": [
+          1,
+          4,
+          10,
+          20,
+          35,
+          56,
+          84,
+          120,
+          165,
+          220,
+          286,
+          364,
+          455,
+          560,
+          680,
+          816,
+          969
+        ],
+        "multiplicity": 4,
+        "vanishing_difference_order": 4
+      }
+    ]
+  },
+  "resource_caps": {
+    "abstract_pole_multiplicity": 4,
+    "closed_points_enumerated": 0,
+    "coefficient_cap": 16,
+    "curves_enumerated": 0,
+    "deleted_place_degrees": [
+      1,
+      2,
+      2,
+      5
+    ],
+    "floating_point_operations": 0,
+    "point_counts": 0
+  },
+  "scope": {
+    "all_curve_factorization_proved": true,
+    "curve_enumeration": 0,
+    "exponential_decay_in_positive_genus_claimed": false,
+    "fixed_offset_unit_circle_expansion_proved": true,
+    "point_enumeration": 0,
+    "polynomial_coefficient_bound_proved": true,
+    "rh_proved": false,
+    "shell_l2_summability_claimed": false,
+    "waveprimcar_proved": false
+  },
+  "shell_consequence": {
+    "coarse_genus_g_bound": "S_h^alpha=O((1+h)^(4g-2)) for g>=1",
+    "genus_zero": "the exponential q^(-(1/3-epsilon)h) theorem survives finite deletion",
+    "norm_height_interpretation": "polynomial degree growth is q^(o(h)), but no l2 shell summability follows",
+    "positive_genus": "S_h^alpha=O((1+h)^(2m_C-2)) for fixed finite ratio support",
+    "simple_frobenius_roots": "S_h^alpha=O(1)"
+  },
+  "source_contract": {
+    "dependency_scope": "the committed genus-zero shadow quartet is pinned by commit blobs; the all-curve proof is symbolic and uses no curve instance",
+    "frozen_ancestor": "b870366141fe8d5f43d5b81f6e50a67d2a888070",
+    "shadow_predecessor_blobs": {
+      "research/l-families/atlas/function_field/FUNCTION_FIELD_BASEWAVE_SHADOW.md": "e66606a8e06977b4ed54734942adf6c74cf82286",
+      "research/l-families/atlas/function_field/function_field_basewave_shadow.json": "68a97c46036ca929ffcfd66ec78b70aaac3eb9a2",
+      "research/l-families/atlas/function_field/function_field_basewave_shadow.py": "e4896b7c8e59ba2f3a264d4e846e9ba821ec8116",
+      "tests/test_function_field_basewave_shadow.py": "6de80f6a71f8531260228ab0a99bde0646e967d1"
+    },
+    "shadow_predecessor_commit": "e87f2392f"
+  }
+}
