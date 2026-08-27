@@ -1,4 +1,4 @@
-# One fixed infinite dyadic smoother localizes the RH energy to a subpower frequency window
+# One fixed infinite dyadic smoother localizes the RH energy to a critical logarithmic frequency window
 
 Status: **exact compact `C^infinity` smoother, zero-free Laplace product,
 RH-equivalent band-pass energy, and unconditional superpower spectral-tail
@@ -138,11 +138,48 @@ the fixed-kernel RH equivalence survives:
 There is also a genuinely stronger unconditional localization. Put
 
 \[
- D_X(t)=\sum_{n\le X}\beta(n)n^{-1/2-it}.
+D_X(t)=\sum_{n\le X}\beta(n)n^{-1/2-it}.
 \tag{0.13}
 \]
 
-For a fixed
+For fixed `kappa>0`, define the critical-scale window
+
+\[
+ T_\kappa^{\rm crit}(X)
+ =\exp\{\kappa\sqrt{\log X}\}.
+\tag{0.14a}
+\]
+
+The exact stair-step envelope gives the explicit tail exponent
+
+\[
+ \boxed{
+ {1\over2\pi}
+ \int_{|t|\ge T_\kappa^{\rm crit}(X)}
+ |\widehat B_{r,\infty}(t)|^2|D_X(t)|^2dt
+ \le X^{1-\kappa^2/\log2+o(1)}.}
+\tag{0.14b}
+\]
+
+In particular, `kappa>sqrt(log 2)` gives a power-saving tail, while the
+threshold value itself already gives an `X^(o(1))` tail. Therefore
+
+\[
+ \boxed{
+ \mathrm{RH}
+ \Longleftrightarrow
+ {1\over2\pi}\int_{|t|\le
+  \exp\{\sqrt{(\log2)(\log X)}\}}
+ |\widehat B_{r,\infty}(t)|^2|D_X(t)|^2dt
+ =X^{o(1)}.}
+\tag{0.14c}
+\]
+
+This is the smallest constant-scale window certified by the present
+stair-envelope plus trivial-source argument; it is not asserted to be the
+smallest possible window for the actual beta source.
+
+For the stronger conclusion that the discarded tail beats every power, fix
 
 \[
  0<\theta<1/2,
@@ -407,7 +444,39 @@ For sufficiently large `T`, the substitution `u=log t` gives
 \tag{5.4}
 \]
 
-For `T=T_theta(X)`, the exponent in (5.4) is
+The exact stairs give more at the constant critical scale. On the dyadic
+block
+
+\[
+ {2^M\over\ell}\le |t|<{2^{M+1}\over\ell},
+\]
+
+(0.6), squared and multiplied by the block length, gives
+
+\[
+ \int_{2^M/\ell\le |t|<2^{M+1}/\ell}
+ |\Phi_\ell(it)|^2dt
+ \ll_\ell 2^{-M^2+4M}.
+\tag{5.5a}
+\]
+
+The fixed difference and boundary multipliers are bounded. Summing (5.5a)
+from `M_0=floor(log_2(ell T))+O(1)` and using (5.2) yields
+
+\[
+ \log\!\left(
+ {1\over2\pi}\int_{|t|\ge T}
+ |\widehat B_{r,\infty}(t)|^2|D_X(t)|^2dt
+ \right)
+ \le
+ \log X-{(\log T)^2\over\log2}+O_{r,\varepsilon,\ell}(\log T+1).
+\tag{5.5b}
+\]
+
+Taking `T=T_kappa^crit(X)` proves (0.14b), including the threshold
+criterion (0.14c).
+
+For `T=T_theta(X)`, the coarser log-square exponent in (5.4) is
 
 \[
  -c(\log T)^2
@@ -429,15 +498,17 @@ More generally, the same proof gives superpower deletion for every cutoff
 
 Taking `T=X^delta` is an immediate weaker corollary.
 
-No Möbius cancellation is used in (0.14). The tail theorem costs only the
+No Möbius cancellation is used in (0.14a)--(0.15). The tail theorems cost only the
 trivial bound `|beta(n)|<=2`.
 
 ## 6. What this closes, and what it does not
 
-For this fixed detector, a future Fourier or Perron proof no longer has to
-control frequencies beyond `exp((log X)^(1/2+theta))`. The whole exterior
-frequency lane is closed unconditionally, with more than any power of
-saving.
+For this fixed detector, a future Fourier or Perron proof need only control
+frequencies up to the critical threshold
+`exp(sqrt((log 2)(log X)))` for an RH-equivalent `X^(o(1))` target. Moving
+to any fixed `kappa>sqrt(log 2)` gives a power-saving exterior tail; moving
+to `exp((log X)^(1/2+theta))` closes the exterior lane with more than any
+power of saving.
 
 The remaining window still expands with `X`, and (0.16) asks for
 cancellation in the beta Dirichlet polynomial there. Nothing here estimates
@@ -469,6 +540,9 @@ not solve the cusp or low-frequency arithmetic problem.
   `ell` or `epsilon` tends to zero, or as `r` tends to infinity, is claimed.
 - The parameter `theta` in (0.14) is fixed in `(0,1/2)`. The displayed
   subpower conclusion is not stated uniformly as `theta` tends to zero.
+- The critical constant `sqrt(log 2)` is the threshold of the exact stair
+  envelope combined with the trivial beta bound. No optimality claim for
+  the arithmetic Dirichlet polynomial is made.
 - The cutoff `T_theta(X)` varies with the horizon, but the detector kernel
   does not. This analytic decomposition is not a horizon-dependent filter.
 - Superpower deletion of the high-frequency tail is not a bound for the
@@ -486,6 +560,8 @@ not solve the cusp or low-frequency arithmetic problem.
 | compact smooth band-pass kernel and multiplier (4.2) | **PROVED FROM PINNED INPUT** |
 | exact zero order `2r`, Gram identity, and compact ratio support | **PROVED** |
 | RH-equivalent prefix energy (0.12) | **PROVED BY THE PINNED BV/LANDAU ROUTE** |
+| critical tail exponent (0.14b) | **PROVED BY THE EXACT STAIR ENVELOPE AND THE TRIVIAL BETA BOUND** |
+| critical-window RH criterion (0.14c) | **PROVED** |
 | unconditional subpower-window tail bound (0.15) | **PROVED BY (0.6) AND THE TRIVIAL BETA BOUND** |
 | subpower-frequency RH criterion (0.16) | **PROVED** |
 | any estimate inside `|t|<=T_theta(X)` | **OPEN / NOT PROVED** |

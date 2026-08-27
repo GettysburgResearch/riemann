@@ -303,6 +303,19 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "dirichlet_polynomial": ("D_X(t)=sum_(n<=X) beta(n)*n^(-1/2-it)"),
             "plancherel": ("E(X)=(1/(2pi))*integral |Bhat(t)|^2*|D_X(t)|^2 dt"),
             "trivial_source_bound": "|D_X(t)|<=4*sqrt(X)",
+            "critical_cutoff": (
+                "T_kappa^crit(X)=exp(kappa*sqrt(log X)), fixed kappa>0"
+            ),
+            "critical_tail_exponent": (
+                "energy on |t|>=T_kappa^crit(X) is at most X^(1-kappa^2/log(2)+o(1))"
+            ),
+            "critical_rh_criterion": (
+                "RH iff the spectral energy on |t|<=exp(sqrt(log(2)*log(X))) is X^o(1)"
+            ),
+            "critical_scope": (
+                "kappa=sqrt(log(2)) gives an X^o(1) tail; larger fixed "
+                "kappa gives power saving; no arithmetic optimality is claimed"
+            ),
             "subpower_cutoff": (
                 "T_theta(X)=exp((log X)^(1/2+theta)), fixed 0<theta<1/2"
             ),
@@ -325,6 +338,7 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
         "scope": {
             "fixed_parameters": True,
             "theta_fixed_in_open_interval_zero_one_half": True,
+            "critical_constant_is_method_threshold_not_optimality_claim": True,
             "horizon_dependent_filter": False,
             "low_frequency_estimate": False,
             "rh_or_grh_proved": False,

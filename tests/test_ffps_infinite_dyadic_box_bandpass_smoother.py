@@ -72,6 +72,19 @@ class InfiniteDyadicBoxBandpassSmootherTest(unittest.TestCase):
         self.assertFalse(result["scope"]["low_frequency_estimate"])
         self.assertFalse(result["scope"]["rh_or_grh_proved"])
         self.assertTrue(result["scope"]["theta_fixed_in_open_interval_zero_one_half"])
+        self.assertTrue(
+            result["scope"][
+                "critical_constant_is_method_threshold_not_optimality_claim"
+            ]
+        )
+        self.assertIn(
+            "1-kappa^2/log(2)",
+            result["spectral_tail"]["critical_tail_exponent"],
+        )
+        self.assertIn(
+            "exp(sqrt(log(2)*log(X)))",
+            result["spectral_tail"]["critical_rh_criterion"],
+        )
         self.assertIn(
             "exp((log X)^(1/2+theta))", result["spectral_tail"]["subpower_cutoff"]
         )
