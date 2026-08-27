@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bounded exact replay for the ternary relative correspondence normal form."""
+"""Replay for the ternary relative kernel and geometric support-shift form."""
 
 from __future__ import annotations
 
@@ -50,6 +50,22 @@ GRAPH_DEPTH = 5
 Matrix = tuple[tuple[Fraction, ...], ...]
 
 
+def is_prime_power(value: int) -> bool:
+    """Return whether value is p^r for one prime p and r at least one."""
+
+    if isinstance(value, bool) or not isinstance(value, int) or value < 2:
+        return False
+    divisor = 2
+    while divisor * divisor <= value and value % divisor:
+        divisor += 1
+    if divisor * divisor > value:
+        return True
+    remainder = value
+    while remainder % divisor == 0:
+        remainder //= divisor
+    return remainder == 1
+
+
 def check_source_blobs() -> None:
     for (commit, path), expected in SOURCE_BLOBS.items():
         completed = subprocess.run(
@@ -69,6 +85,8 @@ def validate_ternary_residue_size(residue_size: int) -> None:
         raise TypeError("residue size must be an integer")
     if residue_size < 7 or residue_size % 6 != 1:
         raise ValueError("residue size must be at least 7 and congruent to 1 mod 6")
+    if not is_prime_power(residue_size):
+        raise ValueError("residue size must be a prime power")
 
 
 def sign_pair_count(residue_size: int) -> int:
@@ -370,8 +388,9 @@ def correspondence_orbit(residue_size: int, depth: int) -> dict[str, object]:
         "graph_signatures": signatures,
         "module_normal_form": (
             "the centered classes H_n=[Gamma_(Q^n)]-Q^-1[J] are linearly "
-            "independent; T(H_n)=H_(n+1), so their orbit is one free "
-            "E[T]-generator but no finite-dimensional E-space"
+            "independent in the faithful geometric support-function module; "
+            "T(H_n)=H_(n+1), so their forward orbit is one free "
+            "E[T]-generator but no finite-dimensional E-subspace"
         ),
         "residue_size": residue_size,
         "with_background_dimension": depth + 2,
@@ -396,8 +415,9 @@ def formal_divisor_shift_ledger(
     return {
         "background_coefficient_factor": left_sum * right_sum,
         "formal_warning": (
-            "this is the sparse polynomial in partial-Frobenius graph shifts; "
-            "it is not a closed-point Adams theorem for the native complex"
+            "this is the sparse polynomial in forward geometric support shifts; "
+            "it is not a partial-Frobenius isomorphism and it is not a "
+            "closed-point Adams theorem for the native complex"
         ),
         "left_axis_coefficient_factor": right_sum,
         "left_degree": left_degree,
@@ -434,7 +454,7 @@ def run(check_sources: bool = True) -> dict[str, object]:
         },
         "physical_occupancy": {
             "all_q_theorem": (
-                "for Q_i congruent to 1 mod 6, the sign-pair sector has "
+                "for prime powers Q_i congruent to 1 mod 6, the sign-pair sector has "
                 "m_i=(Q_i-1)/2 cells, every ternary class on the bilateral "
                 "product has M/3 cells, and each rotated hard support has 2M/3"
             ),
@@ -462,19 +482,25 @@ def run(check_sources: bool = True) -> dict[str, object]:
             "source_image_pullback": source_image_rank_certificate(),
         },
         "partial_frobenius_and_correspondences": {
+            "ambient_module": (
+                "faithful E-linear geometric support-function module generated "
+                "by the full incidence plane and distinct graph indicators; "
+                "not a Chow quotient or fixed-F_Q trace-function quotient"
+            ),
             "commuting_partial_frobenius_created": False,
             "finite_dimensional_graph_closure": False,
             "orbit_rows": orbit_rows,
             "positive_normal_form": (
                 "the surviving centered incidence is one free generator over "
-                "the Frobenius-shift polynomial semigroup; bilateral incidence "
+                "the forward graph-support shift polynomial semigroup; bilateral incidence "
                 "is one free E[T_x,T_y]-generator. This is sparse on every "
                 "finite divisor grid, despite infinite E-dimension"
             ),
             "formal_divisor_ledgers": divisor_rows,
             "categorical_boundary": (
-                "the shift module is a correspondence bookkeeping theorem, not "
-                "an isomorphism under partial Frobenius and not the separable "
+                "the support-shift module is faithful geometric bookkeeping, "
+                "not a theorem in arbitrary correspondence quotients, not an "
+                "isomorphism under partial Frobenius, and not the separable "
                 "two-place Adams formula"
             ),
         },
@@ -486,7 +512,7 @@ def run(check_sources: bool = True) -> dict[str, object]:
             "partial_frobenius_isomorphism": "REFUTED FOR THE NATURAL RELATIVE INCIDENCE",
             "frobenius_graph_shift_module": "CONSTRUCTED EXACTLY",
             "finite_dimensional_correspondence_closure": (
-                "REFUTED FOR THE NATURAL FROBENIUS-GRAPH SUPPORT CLASSES"
+                "REFUTED ONLY IN THE FAITHFUL GEOMETRIC SUPPORT-CLASS MODULE"
             ),
             "native_closed_point_adams_formula": "NOT CONSTRUCTED",
             "live_source_occupancy_lower_bound": "OPEN / NOT CLAIMED",
@@ -518,13 +544,16 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--no-source-check", action="store_true")
+    parser.add_argument("--write-json", type=Path)
     args = parser.parse_args()
     result = run(check_sources=not args.no_source_check)
     rendered = json.dumps(result, indent=2, sort_keys=True) + "\n"
     canonical = Path(__file__).with_suffix(".json")
     if args.check and canonical.read_text(encoding="utf-8") != rendered:
         raise SystemExit("canonical JSON fixture is stale")
-    if not args.check:
+    if args.write_json:
+        args.write_json.write_text(rendered, encoding="utf-8")
+    if not args.check and not args.write_json:
         print(rendered, end="")
 
 

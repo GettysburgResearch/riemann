@@ -184,7 +184,9 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "critical_frequency": "T_*(X)=exp(sqrt(log(2)*log(X)))",
             "retained_radius": "K_*(X)=ceil(L_X*T_*(X)/(2*pi))",
             "discarded_lattice_energy": "X^o(1) unconditionally",
-            "retained_mode_count": "2*K_*(X)+1=X^o(1), with k=0 identically zero",
+            "retained_mode_count": (
+                "2*K_*(X)+1=X^o(1), with k=0 universally identically zero"
+            ),
             "rh_criterion": "RH iff the retained lattice energy is X^o(1)",
         },
         "finite_rank_gram": {
@@ -194,7 +196,11 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "positive_semidefinite": True,
             "rank_upper_bound": "2*K_*(X)=X^o(1) because Bhat(0)=0",
             "higher_fixed_notch_reduces_rank_further": False,
-            "additive_remainder": "E(X)=Q_*(X)+R_*(X), 0<=R_*(X)=X^o(1)",
+            "other_filter_zeros": (
+                "special nonzero lattice alignments may occur, but no additional "
+                "coordinate is universally removed for every X"
+            ),
+            "additive_remainder": "E(X)=Q_*(X)+R_*(X), 0<=R_*(X)<=X^o(1)",
             "estimate_proved_for_retained_form": False,
         },
         "parseval_replay": parseval_panel(),
@@ -222,6 +228,7 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--write-json", type=Path)
     args = parser.parse_args()
     rendered = json.dumps(run(), indent=2, sort_keys=True) + "\n"
     canonical = Path(__file__).with_suffix(".json")
@@ -229,7 +236,10 @@ def main() -> None:
         not canonical.exists() or canonical.read_text(encoding="utf-8") != rendered
     ):
         raise SystemExit("canonical JSON fixture is stale")
-    print(rendered, end="")
+    if args.write_json:
+        args.write_json.write_text(rendered, encoding="utf-8")
+    if not args.check and not args.write_json:
+        print(rendered, end="")
 
 
 if __name__ == "__main__":

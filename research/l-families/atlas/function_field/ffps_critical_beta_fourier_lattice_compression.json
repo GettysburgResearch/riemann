@@ -2,7 +2,7 @@
   "critical_compression": {
     "critical_frequency": "T_*(X)=exp(sqrt(log(2)*log(X)))",
     "discarded_lattice_energy": "X^o(1) unconditionally",
-    "retained_mode_count": "2*K_*(X)+1=X^o(1), with k=0 identically zero",
+    "retained_mode_count": "2*K_*(X)+1=X^o(1), with k=0 universally identically zero",
     "retained_radius": "K_*(X)=ceil(L_X*T_*(X)/(2*pi))",
     "rh_criterion": "RH iff the retained lattice energy is X^o(1)"
   },
@@ -13,10 +13,11 @@
     "reason": "compact support plus Fourier-series Parseval"
   },
   "finite_rank_gram": {
-    "additive_remainder": "E(X)=Q_*(X)+R_*(X), 0<=R_*(X)=X^o(1)",
+    "additive_remainder": "E(X)=Q_*(X)+R_*(X), 0<=R_*(X)<=X^o(1)",
     "entries": "G_X(m,n)=(1/L_X)*sum_(|k|<=K_*) |Bhat(t_k)|^2*exp(-i*t_k*log(m/n))",
     "estimate_proved_for_retained_form": false,
     "higher_fixed_notch_reduces_rank_further": false,
+    "other_filter_zeros": "special nonzero lattice alignments may occur, but no additional coordinate is universally removed for every X",
     "positive_semidefinite": true,
     "rank_upper_bound": "2*K_*(X)=X^o(1) because Bhat(0)=0"
   },

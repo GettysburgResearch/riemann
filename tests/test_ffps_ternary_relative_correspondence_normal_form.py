@@ -35,6 +35,9 @@ class TernaryRelativeCorrespondenceNormalFormTest(unittest.TestCase):
             subject.bilateral_labels(7, 13, alignment=0)
         with self.assertRaises(ValueError):
             subject.balanced_ternary_labels(11)
+        with self.assertRaises(ValueError):
+            subject.balanced_ternary_labels(55)
+        self.assertEqual(subject.sign_pair_count(49), 24)
 
     def test_exact_pre_externalization_relative_kernel(self) -> None:
         labels = subject.bilateral_labels(7, 7)

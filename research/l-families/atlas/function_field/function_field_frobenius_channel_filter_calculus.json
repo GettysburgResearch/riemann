@@ -40,11 +40,13 @@
     "shared_factors_reduce_depth": true
   },
   "filter_calculus": {
+    "coefficient_field": "chosen K contains sqrt(q) and coefficients of P_C",
     "curve_zeta_numerator": "P_C(u)=product_(nu=1)^(2g)(1-alpha_nu*u)",
     "filter": "R_x(X/sqrt(q))*R_y(Y/sqrt(q))*R_m(XY/q)",
     "formal_minimal_multiplier": "R_x*R_y*R_m up to a scalar",
-    "galois_stability_required_over_base_field": true,
+    "galois_stability_required_over_chosen_K": true,
     "selected_denominators": "Q_x(X/sqrt(q))*Q_y(Y/sqrt(q))*Q_m(XY/q)",
+    "smaller_field_descent": "over K_0 not containing sqrt(q), the scaled filter Q(X/sqrt(q)) itself must descend to K_0[X]",
     "stable_factorization": "P_C=Q_x R_x=Q_y R_y=Q_m R_m"
   },
   "full_null": {

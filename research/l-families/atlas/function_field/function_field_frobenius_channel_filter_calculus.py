@@ -358,7 +358,12 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "stable_factorization": "P_C=Q_x R_x=Q_y R_y=Q_m R_m",
             "filter": ("R_x(X/sqrt(q))*R_y(Y/sqrt(q))*R_m(XY/q)"),
             "selected_denominators": ("Q_x(X/sqrt(q))*Q_y(Y/sqrt(q))*Q_m(XY/q)"),
-            "galois_stability_required_over_base_field": True,
+            "coefficient_field": "chosen K contains sqrt(q) and coefficients of P_C",
+            "galois_stability_required_over_chosen_K": True,
+            "smaller_field_descent": (
+                "over K_0 not containing sqrt(q), the scaled filter "
+                "Q(X/sqrt(q)) itself must descend to K_0[X]"
+            ),
             "formal_minimal_multiplier": "R_x*R_y*R_m up to a scalar",
         },
         "axis_null": {
@@ -397,6 +402,7 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--write-json", type=Path)
     args = parser.parse_args()
     rendered = json.dumps(run(), indent=2, sort_keys=True) + "\n"
     canonical = Path(__file__).with_suffix(".json")
@@ -404,7 +410,10 @@ def main() -> None:
         not canonical.exists() or canonical.read_text(encoding="utf-8") != rendered
     ):
         raise SystemExit("canonical JSON fixture is stale")
-    print(rendered, end="")
+    if args.write_json:
+        args.write_json.write_text(rendered, encoding="utf-8")
+    if not args.check and not args.write_json:
+        print(rendered, end="")
 
 
 if __name__ == "__main__":
