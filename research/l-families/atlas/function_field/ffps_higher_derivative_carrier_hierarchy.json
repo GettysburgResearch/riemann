@@ -1,0 +1,653 @@
+{
+  "hierarchy": {
+    "carrier_formula": "Q_(m,S)=(2m+1)!*t^m*(S-t)^m/(m!^2*S^(2m+1))",
+    "critical_width_formula": "p_c(m)=2m+1",
+    "detector_formula": "D^m Q=(-1)^m*(2m+1)!*P_m(2t/S-1)/(m!*S^(m+1))",
+    "generating_identity": "H_(m,S,X)(z)=(-z)^m*Q_(m,S)(z)*B_X(z)",
+    "growing_rung_forward_factor": "(2m+1)*(2m+3)^2*(L/S)^(2m+2)",
+    "higher_legendre_energy_formula": "(2m+2r+1)*[(m+r)!*binom(2m+2r,m+r)/r!]^2",
+    "moment_formula": "M_(m+r)=(-1)^m*m!*binom(m+r,m)*sum_h binom(r,h)*q_h*B_(r-h)",
+    "normalized_energy": "mathfrak_E=L^(2m+1)*E/C_m",
+    "rungs": [
+      {
+        "autocorrelation_order_2m_for_B_0_3": "-18",
+        "carrier_coefficients": [
+          "0",
+          "3/2",
+          "-3/4"
+        ],
+        "carrier_moments_q_0_through_q_3": [
+          "1",
+          "1",
+          "6/5",
+          "8/5"
+        ],
+        "critical_width_power": 3,
+        "detector_coefficients": [
+          "3/2",
+          "-3/2"
+        ],
+        "detector_legendre_factor": "-3/2",
+        "detector_norm_squared": "3/2",
+        "moment_transform_rows": [
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "-1"
+            ],
+            "extra_order": 0,
+            "field_order": 1,
+            "legendre_energy_constant": 12,
+            "sample_value": "-2"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "-2",
+              "-2"
+            ],
+            "extra_order": 1,
+            "field_order": 2,
+            "legendre_energy_constant": 720,
+            "sample_value": "2"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "-18/5",
+              "-6",
+              "-3"
+            ],
+            "extra_order": 2,
+            "field_order": 3,
+            "legendre_energy_constant": 25200,
+            "sample_value": "-21/5"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "-32/5",
+              "-72/5",
+              "-12",
+              "-4"
+            ],
+            "extra_order": 3,
+            "field_order": 4,
+            "legendre_energy_constant": 705600,
+            "sample_value": "-288/5"
+          }
+        ],
+        "normalized_forward_factor_at_L_4_S_2": "1200",
+        "phase_rows": [
+          {
+            "RH_forward_paid": true,
+            "reverse_paid": false,
+            "width_power": 2
+          },
+          {
+            "RH_forward_paid": true,
+            "reverse_paid": true,
+            "width_power": 3
+          },
+          {
+            "RH_forward_paid": false,
+            "reverse_paid": true,
+            "width_power": 4
+          }
+        ],
+        "rung": 1,
+        "sharp_energy_constant": 12,
+        "spectral_derivative_order_2m_for_B_0_3": "18",
+        "support": "2",
+        "support_condition_number_at_L_4_S_2": "8",
+        "trivial_raw_dilution_exponent": "1/3",
+        "variation_scale_constant_bound": 30,
+        "variational_minimum_at_support_2": "3/2",
+        "zero_boundary_at_trivial_escape": "1"
+      },
+      {
+        "autocorrelation_order_2m_for_B_0_3": "216",
+        "carrier_coefficients": [
+          "0",
+          "0",
+          "15/4",
+          "-15/4",
+          "15/16"
+        ],
+        "carrier_moments_q_0_through_q_3": [
+          "1",
+          "1",
+          "8/7",
+          "10/7"
+        ],
+        "critical_width_power": 5,
+        "detector_coefficients": [
+          "15/2",
+          "-45/2",
+          "45/4"
+        ],
+        "detector_legendre_factor": "15/2",
+        "detector_norm_squared": "45/2",
+        "moment_transform_rows": [
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "2"
+            ],
+            "extra_order": 0,
+            "field_order": 2,
+            "legendre_energy_constant": 720,
+            "sample_value": "4"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "6",
+              "6"
+            ],
+            "extra_order": 1,
+            "field_order": 3,
+            "legendre_energy_constant": 100800,
+            "sample_value": "-6"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "96/7",
+              "24",
+              "12"
+            ],
+            "extra_order": 2,
+            "field_order": 4,
+            "legendre_energy_constant": 6350400,
+            "sample_value": "108/7"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "200/7",
+              "480/7",
+              "60",
+              "20"
+            ],
+            "extra_order": 3,
+            "field_order": 5,
+            "legendre_energy_constant": 279417600,
+            "sample_value": "2040/7"
+          }
+        ],
+        "normalized_forward_factor_at_L_4_S_2": "15680",
+        "phase_rows": [
+          {
+            "RH_forward_paid": true,
+            "reverse_paid": false,
+            "width_power": 4
+          },
+          {
+            "RH_forward_paid": true,
+            "reverse_paid": true,
+            "width_power": 5
+          },
+          {
+            "RH_forward_paid": false,
+            "reverse_paid": true,
+            "width_power": 6
+          }
+        ],
+        "rung": 2,
+        "sharp_energy_constant": 720,
+        "spectral_derivative_order_2m_for_B_0_3": "216",
+        "support": "2",
+        "support_condition_number_at_L_4_S_2": "32",
+        "trivial_raw_dilution_exponent": "1/5",
+        "variation_scale_constant_bound": 420,
+        "variational_minimum_at_support_2": "45/2",
+        "zero_boundary_at_trivial_escape": "1"
+      },
+      {
+        "autocorrelation_order_2m_for_B_0_3": "-6480",
+        "carrier_coefficients": [
+          "0",
+          "0",
+          "0",
+          "35/4",
+          "-105/8",
+          "105/16",
+          "-35/32"
+        ],
+        "carrier_moments_q_0_through_q_3": [
+          "1",
+          "1",
+          "10/9",
+          "4/3"
+        ],
+        "critical_width_power": 7,
+        "detector_coefficients": [
+          "105/2",
+          "-315",
+          "1575/4",
+          "-525/4"
+        ],
+        "detector_legendre_factor": "-105/2",
+        "detector_norm_squared": "1575/2",
+        "moment_transform_rows": [
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "-6"
+            ],
+            "extra_order": 0,
+            "field_order": 3,
+            "legendre_energy_constant": 100800,
+            "sample_value": "-12"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "-24",
+              "-24"
+            ],
+            "extra_order": 1,
+            "field_order": 4,
+            "legendre_energy_constant": 25401600,
+            "sample_value": "24"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "-200/3",
+              "-120",
+              "-60"
+            ],
+            "extra_order": 2,
+            "field_order": 5,
+            "legendre_energy_constant": 2514758400,
+            "sample_value": "-220/3"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "-160",
+              "-400",
+              "-360",
+              "-120"
+            ],
+            "extra_order": 3,
+            "field_order": 6,
+            "legendre_energy_constant": 159826867200,
+            "sample_value": "-1760"
+          }
+        ],
+        "normalized_forward_factor_at_L_4_S_2": "145152",
+        "phase_rows": [
+          {
+            "RH_forward_paid": true,
+            "reverse_paid": false,
+            "width_power": 6
+          },
+          {
+            "RH_forward_paid": true,
+            "reverse_paid": true,
+            "width_power": 7
+          },
+          {
+            "RH_forward_paid": false,
+            "reverse_paid": true,
+            "width_power": 8
+          }
+        ],
+        "rung": 3,
+        "sharp_energy_constant": 100800,
+        "spectral_derivative_order_2m_for_B_0_3": "6480",
+        "support": "2",
+        "support_condition_number_at_L_4_S_2": "128",
+        "trivial_raw_dilution_exponent": "1/7",
+        "variation_scale_constant_bound": 7560,
+        "variational_minimum_at_support_2": "1575/2",
+        "zero_boundary_at_trivial_escape": "1"
+      },
+      {
+        "autocorrelation_order_2m_for_B_0_3": "362880",
+        "carrier_coefficients": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "315/16",
+          "-315/8",
+          "945/32",
+          "-315/32",
+          "315/256"
+        ],
+        "carrier_moments_q_0_through_q_3": [
+          "1",
+          "1",
+          "12/11",
+          "14/11"
+        ],
+        "critical_width_power": 9,
+        "detector_coefficients": [
+          "945/2",
+          "-4725",
+          "42525/4",
+          "-33075/4",
+          "33075/16"
+        ],
+        "detector_legendre_factor": "945/2",
+        "detector_norm_squared": "99225/2",
+        "moment_transform_rows": [
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "24"
+            ],
+            "extra_order": 0,
+            "field_order": 4,
+            "legendre_energy_constant": 25401600,
+            "sample_value": "48"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "120",
+              "120"
+            ],
+            "extra_order": 1,
+            "field_order": 5,
+            "legendre_energy_constant": 10059033600,
+            "sample_value": "-120"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "4320/11",
+              "720",
+              "360"
+            ],
+            "extra_order": 2,
+            "field_order": 6,
+            "legendre_energy_constant": 1438441804800,
+            "sample_value": "4680/11"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "11760/11",
+              "30240/11",
+              "2520",
+              "840"
+            ],
+            "extra_order": 3,
+            "field_order": 7,
+            "legendre_energy_constant": 124664956416000,
+            "sample_value": "136080/11"
+          }
+        ],
+        "normalized_forward_factor_at_L_4_S_2": "1115136",
+        "phase_rows": [
+          {
+            "RH_forward_paid": true,
+            "reverse_paid": false,
+            "width_power": 8
+          },
+          {
+            "RH_forward_paid": true,
+            "reverse_paid": true,
+            "width_power": 9
+          },
+          {
+            "RH_forward_paid": false,
+            "reverse_paid": true,
+            "width_power": 10
+          }
+        ],
+        "rung": 4,
+        "sharp_energy_constant": 25401600,
+        "spectral_derivative_order_2m_for_B_0_3": "362880",
+        "support": "2",
+        "support_condition_number_at_L_4_S_2": "512",
+        "trivial_raw_dilution_exponent": "1/9",
+        "variation_scale_constant_bound": 166320,
+        "variational_minimum_at_support_2": "99225/2",
+        "zero_boundary_at_trivial_escape": "1"
+      },
+      {
+        "autocorrelation_order_2m_for_B_0_3": "-32659200",
+        "carrier_coefficients": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "693/16",
+          "-3465/32",
+          "3465/32",
+          "-3465/64",
+          "3465/256",
+          "-693/512"
+        ],
+        "carrier_moments_q_0_through_q_3": [
+          "1",
+          "1",
+          "14/13",
+          "16/13"
+        ],
+        "critical_width_power": 11,
+        "detector_coefficients": [
+          "10395/2",
+          "-155925/2",
+          "1091475/4",
+          "-363825",
+          "3274425/16",
+          "-654885/16"
+        ],
+        "detector_legendre_factor": "-10395/2",
+        "detector_norm_squared": "9823275/2",
+        "moment_transform_rows": [
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "-120"
+            ],
+            "extra_order": 0,
+            "field_order": 5,
+            "legendre_energy_constant": 10059033600,
+            "sample_value": "-240"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "-720",
+              "-720"
+            ],
+            "extra_order": 1,
+            "field_order": 6,
+            "legendre_energy_constant": 5753767219200,
+            "sample_value": "720"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "-35280/13",
+              "-5040",
+              "-2520"
+            ],
+            "extra_order": 2,
+            "field_order": 7,
+            "legendre_energy_constant": 1121984607744000,
+            "sample_value": "-37800/13"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "-107520/13",
+              "-282240/13",
+              "-20160",
+              "-6720"
+            ],
+            "extra_order": 3,
+            "field_order": 8,
+            "legendre_energy_constant": 127158255544320000,
+            "sample_value": "-1290240/13"
+          }
+        ],
+        "normalized_forward_factor_at_L_4_S_2": "7614464",
+        "phase_rows": [
+          {
+            "RH_forward_paid": true,
+            "reverse_paid": false,
+            "width_power": 10
+          },
+          {
+            "RH_forward_paid": true,
+            "reverse_paid": true,
+            "width_power": 11
+          },
+          {
+            "RH_forward_paid": false,
+            "reverse_paid": true,
+            "width_power": 12
+          }
+        ],
+        "rung": 5,
+        "sharp_energy_constant": 10059033600,
+        "spectral_derivative_order_2m_for_B_0_3": "32659200",
+        "support": "2",
+        "support_condition_number_at_L_4_S_2": "2048",
+        "trivial_raw_dilution_exponent": "1/11",
+        "variation_scale_constant_bound": 4324320,
+        "variational_minimum_at_support_2": "9823275/2",
+        "zero_boundary_at_trivial_escape": "1"
+      },
+      {
+        "autocorrelation_order_2m_for_B_0_3": "4311014400",
+        "carrier_coefficients": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "3003/32",
+          "-9009/32",
+          "45045/128",
+          "-15015/64",
+          "45045/512",
+          "-9009/512",
+          "3003/2048"
+        ],
+        "carrier_moments_q_0_through_q_3": [
+          "1",
+          "1",
+          "16/15",
+          "6/5"
+        ],
+        "critical_width_power": 13,
+        "detector_coefficients": [
+          "135135/2",
+          "-2837835/2",
+          "14189175/2",
+          "-14189175",
+          "212837625/16",
+          "-93648555/16",
+          "31216185/32"
+        ],
+        "detector_legendre_factor": "135135/2",
+        "detector_norm_squared": "1404728325/2",
+        "moment_transform_rows": [
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "720"
+            ],
+            "extra_order": 0,
+            "field_order": 6,
+            "legendre_energy_constant": 5753767219200,
+            "sample_value": "1440"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "5040",
+              "5040"
+            ],
+            "extra_order": 1,
+            "field_order": 7,
+            "legendre_energy_constant": 4487938430976000,
+            "sample_value": "-5040"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "21504",
+              "40320",
+              "20160"
+            ],
+            "extra_order": 2,
+            "field_order": 8,
+            "legendre_energy_constant": 1144424299898880000,
+            "sample_value": "22848"
+          },
+          {
+            "coefficients_of_B_0_through_B_extra_order": [
+              "72576",
+              "193536",
+              "181440",
+              "60480"
+            ],
+            "extra_order": 3,
+            "field_order": 9,
+            "legendre_energy_constant": 164288466163261440000,
+            "sample_value": "895104"
+          }
+        ],
+        "normalized_forward_factor_at_L_4_S_2": "47923200",
+        "phase_rows": [
+          {
+            "RH_forward_paid": true,
+            "reverse_paid": false,
+            "width_power": 12
+          },
+          {
+            "RH_forward_paid": true,
+            "reverse_paid": true,
+            "width_power": 13
+          },
+          {
+            "RH_forward_paid": false,
+            "reverse_paid": true,
+            "width_power": 14
+          }
+        ],
+        "rung": 6,
+        "sharp_energy_constant": 5753767219200,
+        "spectral_derivative_order_2m_for_B_0_3": "4311014400",
+        "support": "2",
+        "support_condition_number_at_L_4_S_2": "8192",
+        "trivial_raw_dilution_exponent": "1/13",
+        "variation_scale_constant_bound": 129729600,
+        "variational_minimum_at_support_2": "1404728325/2",
+        "zero_boundary_at_trivial_escape": "1"
+      }
+    ],
+    "sharp_energy_formula": "L^(2m+1)*E>=C_m*|B_0|^2, C_m=(m!)^2*(2m+1)*binom(2m,m)^2",
+    "spectral_formula": "P^(2m)(0)=(2m)!*|B_0|^2",
+    "support_condition_number": "kappa_m=(L/S)^(2m+1)"
+  },
+  "proof_ledger": {
+    "RH_or_GRH": "NOT PROVED",
+    "Rodrigues_Legendre_detector_formula": "PROVED",
+    "all_order_triangular_moment_transform": "PROVED",
+    "all_support_fixed_rung_renormalized_RH_equivalence": "PROVED",
+    "arithmetic_improvement_beyond_support_geometry": "NOT PROVED",
+    "complete_higher_rung_Legendre_tower": "PROVED",
+    "critical_width_power_within_current_bounds": "PROVED",
+    "exact_support_condition_number": "PROVED",
+    "first_available_autocorrelation_and_spectral_jet": "PROVED",
+    "new_unconditional_subpower_beta_energy_estimate": "NOT PROVED",
+    "normalized_safe_growing_rung_RH_equivalence": "PROVED",
+    "positive_unit_mass_beta_carrier": "PROVED",
+    "raw_energy_zero_exclusion_wedge": "PROVED",
+    "sharp_support_energy_pythagorean_identity": "PROVED",
+    "subcritical_trivial_dilution_schedule": "PROVED",
+    "supercritical_adaptive_schedule_obstruction": "PROVED",
+    "unique_signed_carrier_variational_optimum": "PROVED",
+    "unrestricted_growing_rung_forward_or_equivalence": "NOT PROVED"
+  },
+  "resource_caps": {
+    "beta_terms": 0,
+    "curve_computations": 0,
+    "maximum_extra_moment": 3,
+    "maximum_rung": 6,
+    "primes": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "866b082b7cecdfa03ebbeca369aa8f654a9bad00",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_BETA_CARRIER_LEGENDRE_MOMENT_TOWER.md": "d0c1fd90b990fe57ef52902b7d434572d870b2ba",
+      "research/l-families/atlas/function_field/ffps_beta_carrier_legendre_moment_tower.json": "e37644360a071870e4cdbc4eb44e3e5e2e3ba328",
+      "research/l-families/atlas/function_field/ffps_beta_carrier_legendre_moment_tower.py": "c81eb277f75becfae22ff3f7a23804c86b586aa9",
+      "tests/test_ffps_beta_carrier_legendre_moment_tower.py": "6c8f2a084d83e772cd4eeecf37ca4874e10adde5"
+    }
+  }
+}
