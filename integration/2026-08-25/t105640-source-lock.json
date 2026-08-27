@@ -1,0 +1,68 @@
+{
+  "schema": "riemann.source_lock.t105640.v3",
+  "claim_namespace": "105640-105646",
+  "created_at": "2026-08-25",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105300-xi-moderate-saddle-residue-spectrum",
+  "pr_number": 729,
+  "source_head_before_t105640": "4150f96e3d410de1724303c60d72a000c1ff05e0",
+  "base_branch": "research/gpt56-pro/105200-xi-natural-scale-residue-coherence",
+  "base_sha": "452978883b0009f002cfec426dfd5eb10041a15c",
+  "interfaces": {
+    "current_hierarchy": "L-105620--L-105622",
+    "logconcave_profile": "L-105624--L-105626",
+    "inner_causal_phase": "L-105627--L-105632",
+    "zero_height_variational_principle": "T-105442--T-105446",
+    "sibling_signed_model_space": "PR #731, L-106415--L-106431"
+  },
+  "new_claims": [
+    "L-105640",
+    "L-105641",
+    "L-105642",
+    "L-105643",
+    "L-105644",
+    "L-105645",
+    "L-105646",
+    "R-105640",
+    "T-105640",
+    "M-105640"
+  ],
+  "replay": {
+    "verdict": "PASS_X_105640_STRONG_LC_DEPTH_COLLAR",
+    "checks": 4223,
+    "proof_object": "b8d2c8770f38dbcace6a481f540d2fad1af8c01ad04fabde2ecc8167890adcf0"
+  },
+  "proved_scope": [
+    "uniform strong-log-concavity constant ledger",
+    "universal exponential envelope for the current-Turan profile",
+    "Maxwell monotone-likelihood sandwich for the actual current profile",
+    "97-percent equivalence with the exponential metric for H<=1/2",
+    "finite inner midline/exponential trace identity",
+    "finite Xi-prime anti-inner soft-depth bound",
+    "boundary-zero weighted-charge firewall",
+    "one-zero positive current-height owner probability measure",
+    "universal three-percent owner survival law"
+  ],
+  "review_required": [
+    "infinite theta-series strong-log-concavity proof",
+    "Maxwell monotone-likelihood domination",
+    "Paley-Wiener normalization and model-space trace",
+    "Xi-prime shifted-factor orientation",
+    "cofinal zero-count normalization",
+    "height-owner transfer to physical signed allpass flow"
+  ],
+  "open_gates": [
+    "HOWNXFER105644",
+    "BCOLLAR105643",
+    "POINTID105630",
+    "SAFEDESC105628",
+    "ENDIDX105630",
+    "fixed-width moving-saddle hostile review"
+  ],
+  "height_owner_probability_proved": true,
+  "height_owner_universal_three_percent_law_proved": true,
+  "height_owner_physical_transfer_proved": false,
+  "boundary_collar_index_conversion_proved": false,
+  "pointwise_physical_sign_proved": false,
+  "rh_established": false
+}

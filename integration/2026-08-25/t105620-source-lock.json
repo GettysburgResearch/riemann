@@ -1,0 +1,76 @@
+{
+  "schema": "riemann.source_lock.t105620.v3",
+  "claim_namespace": "105620-105632",
+  "created_at": "2026-08-25",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105300-xi-moderate-saddle-residue-spectrum",
+  "pr_number": 729,
+  "source_head_before_t105620": "e1aa453f2945b621c0f31b420e70d921ad93e467",
+  "base_branch": "research/gpt56-pro/105200-xi-natural-scale-residue-coherence",
+  "base_sha": "452978883b0009f002cfec426dfd5eb10041a15c",
+  "interfaces": {
+    "actual_turan_source": "L-105613 / sibling L-106401",
+    "two_boundary_polarization": "L-105260",
+    "phase_barycenter": "L-105600",
+    "height_shell_winding": "L-105602",
+    "one_sided_phase_gap": "L-105422",
+    "allpass_hankel_charge": "L-105290",
+    "sibling_model_sampling_and_signed_tail": "L-106415--L-106431"
+  },
+  "new_claims": [
+    "L-105620",
+    "L-105621",
+    "L-105622",
+    "L-105623",
+    "L-105624",
+    "L-105625",
+    "L-105626",
+    "L-105627",
+    "L-105628",
+    "L-105629",
+    "L-105630",
+    "L-105631",
+    "L-105632",
+    "R-105620",
+    "R-105630",
+    "T-105620",
+    "T-105630",
+    "M-105620"
+  ],
+  "replays": {
+    "current_turan": {
+      "verdict": "PASS_X_105620_CURRENT_TURAN_HIERARCHY",
+      "checks": 200,
+      "proof_object": "62195a8b977b7ddb34607fcd0cbd7d19f9d06161151148104d593a9e7b7e319c"
+    },
+    "logconcave_causal_bank": {
+      "verdict": "PASS_X_105630_LOGCONCAVE_CAUSAL_BANK",
+      "checks": 102,
+      "proof_object": "f511cef71f3f5cf8bac793569aa78ff12ffc9dee659a72803cbe2c950b890e99"
+    }
+  },
+  "proved_scope": [
+    "current is an all-order positive exterior-square hierarchy",
+    "actual Turan source is its first chaos",
+    "standard Xi Fourier kernel is strictly log-concave (review requested)",
+    "current-normalized source profile is monotone",
+    "zero-free-height Xi-prime allpass is inner (review requested)",
+    "safe-region causal weighted contraction",
+    "source-owned finite compressions inherit contraction",
+    "inner allpass model space is the canonical Hankel bank",
+    "inner phases have nonpositive signed complement under every source projection",
+    "raw negative shell energy below two is not a necessary invariant",
+    "causal weighted energy alone does not imply pointwise physical sign"
+  ],
+  "open_gates": [
+    "POINTID105630",
+    "SAFEDESC105628",
+    "ENDIDX105630",
+    "fixed-width moving-saddle hostile review"
+  ],
+  "mctphys105610_proved": false,
+  "hshe105602_proved": false,
+  "descent_below_beta0_proved": false,
+  "pointwise_physical_sign_proved": false,
+  "rh_established": false
+}

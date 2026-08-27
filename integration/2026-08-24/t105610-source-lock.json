@@ -1,0 +1,40 @@
+{
+  "claim_namespace": "105610",
+  "created_at": "2026-08-24",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105300-xi-moderate-saddle-residue-spectrum",
+  "pr_number": 729,
+  "source_head_before_t105610": "0854513d6e56440661de557b7affd64bb9243dc1",
+  "base_branch": "research/gpt56-pro/105200-xi-natural-scale-residue-coherence",
+  "base_sha": "452978883b0009f002cfec426dfd5eb10041a15c",
+  "sibling_sources": {
+    "actual_xi_turan_hankel": {
+      "pr": 731,
+      "head": "50cf8ef3419b88c33b11de4b538192c5ad6a36e9",
+      "interface": "actual Xi exterior-square theta source / robust frame"
+    },
+    "one_sided_hardy": {
+      "claims": ["L-105420", "L-105422"],
+      "interface": "positive reciprocal source and phase-uniform gap"
+    }
+  },
+  "replay": {
+    "verdict": "PASS_X_105610_MOVING_CARRIER_TURAN_BRIDGE",
+    "checks": 348,
+    "proof_object": "17e2887882e7b8da65ca6ffc091286ba8c6615cac28a685cf29832538724dadf"
+  },
+  "removed_transfer_layers": [
+    "real carrier freezing",
+    "carrier phase freezing",
+    "reciprocal coefficient reconstruction after freezing",
+    "operator-valued archimedean drift",
+    "frozen-to-actual Turan numerator transfer"
+  ],
+  "open_gates": [
+    "MCTPHYS105610",
+    "DMPXFER105603 reduced physical restriction",
+    "HSHE105602",
+    "ROBUSTFRAME106310"
+  ],
+  "rh_established": false
+}

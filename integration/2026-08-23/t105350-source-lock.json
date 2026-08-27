@@ -1,0 +1,64 @@
+{
+  "schema": "riemann.source-lock.v1",
+  "created": "2026-08-23",
+  "repository": "gfreund123/riemann",
+  "programme_pr": 729,
+  "programme_branch": "research/gpt56-pro/105300-xi-moderate-saddle-residue-spectrum",
+  "checkpoint_base": "79647461671f9bca121256331f8584f8de7315ec",
+  "stacked_base_branch": "research/gpt56-pro/105200-xi-natural-scale-residue-coherence",
+  "stacked_base_head": "452978883b0009f002cfec426dfd5eb10041a15c",
+  "frozen_inputs": [
+    {
+      "path": "claims/lemmas/L-105329-boundary-loewner-cauchy-vandermonde-determinants.md",
+      "blob": "549372aa0e963610da4d655dbcbfe200fec5e4bb",
+      "role": "finite-window boundary kernel, contour squares, separated and confluent determinant formulas"
+    },
+    {
+      "path": "claims/lemmas/L-105328-critical-residue-vandermonde-hankel-pencil.md",
+      "blob": "e4b4ecb2fbdf6a3af5eb94fdc788a630ec61d45c",
+      "role": "sharp critical hierarchy retained unchanged"
+    },
+    {
+      "path": "claims/theorems/T-105330-dual-vandermonde-contour-frontier.md",
+      "blob": "b61da4aefd88264edcc3651272b4cfdc12a57fa5",
+      "role": "prior conclusion graph CRVH105330 and BCVH105330"
+    },
+    {
+      "path": "claims/methodology/M-105331-moving-saddle-global-dominance-audit.md",
+      "blob": "b009a4c09778aa6f0a281e7a1c805bc04661cc04",
+      "role": "moving-saddle disposition retained open"
+    }
+  ],
+  "new_claims": [
+    "L-105350",
+    "L-105351",
+    "R-105350",
+    "T-105350",
+    "M-105350"
+  ],
+  "new_gate": {
+    "id": "OASH105350",
+    "meaning": "all-order origin-anchored Stieltjes-Hankel positivity of the boundary Cauchy function",
+    "status": "OPEN",
+    "equivalent_to": [
+      "BCVH105330",
+      "all-packet PSD component of BRP105220"
+    ]
+  },
+  "replay": {
+    "verdict": "PASS_X_105350_ONE_ANCHOR_LOEWNER_HAMBURGER",
+    "checks": 159,
+    "proof_object": "50c6c26c11155fd3c35d49830f5ff6f8b32b0f0b6294bf73f04ea7aeeec9aee4",
+    "arithmetic_class": "EXACT_RATIONAL_ATOMIC_MOMENT_GRAM",
+    "xi_evaluated": false,
+    "infinite_moment_theorem_machine_proved": false
+  },
+  "scientific_status": {
+    "crvh105330_proved_for_xi": false,
+    "oash105350_proved_for_xi": false,
+    "moving_saddle_proved": false,
+    "pres105220_proved": false,
+    "brp105220_proved": false,
+    "rh_established": false
+  }
+}
