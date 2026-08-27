@@ -77,7 +77,12 @@ The strongest exact continuation results are:
    Although \(\kappa_r\asymp r^{-2}\), its product with the sharp BV cost
    decreases strictly to the nonzero limit
    \(A_r\kappa_r\downarrow\pi^3/36\). An exact primitive \(L^1\) norm gives
-   a relative zero-mode remainder at most \((9/32)z\), uniformly in order.
+   the sharp Young-envelope relative remainder \((3/16)z\), uniformly in
+   order. Globally, the positive-tilt transform is a strict Stieltjes
+   function with a finite difference formula and alternating causal-primitive
+   bounds. Its first surviving moment forces the terminal even cusp
+   coefficient. After both the Perron \(1/z\) and sharp BV cost are charged,
+   the local Chebyshev zero mode retains a \(\pi^3/36\) floor.
 
 6. **Near-notch and endpoint-layer closure.** Every positive Bessel notch has
    an exact quadratic tilt floor, energy excess, and shifted local profile.
@@ -161,7 +166,9 @@ trichotomy. In the newest eight-packet continuation they also independently
 rederived the near-notch constants, endpoint-layer asymptotic, ensemble and
 compact-kernel firewalls, both Chebyshev duals, the moving-order safe chart,
 the atomic autocorrelation signs and factors of two, and the primitive-energy
-max-cusp compensation law. Every focused replay
+max-cusp compensation law. They subsequently audited the global Stieltjes,
+iterated-primitive, large-tilt, complex half-disk, and cost-charged
+extensions. Every focused replay
 passes normally and under optimized Python, plus Ruff, source-blob provenance,
 delimiter/control-byte checks, and Git whitespace checks.
 
@@ -242,6 +249,7 @@ delimiter/control-byte checks, and Git whitespace checks.
 | \(c223f8fe1\) | sharp BV safe-factor phase diagram |
 | \(f3ae060d1\) | Chebyshev-step autocorrelation normal form |
 | \(033a64fba\) | Chebyshev max-cusp refill compensation |
+| \(154331d49\) | global cusp-resolvent and primitive hierarchy |
 
 ## 2. Claim ledger
 
@@ -308,6 +316,11 @@ delimiter/control-byte checks, and Git whitespace checks.
 | positive max-cusp refill and exact correlation remainder identity | **PROVED** |
 | sharp-cost/refill product \(A_r\kappa_r\) decreases strictly to \(\pi^3/36\) | **PROVED** |
 | zero-mode refill has a relative \(O(z)\) remainder uniformly in order | **PROVED** |
+| positive-tilt transform is strictly Stieltjes with a finite jump formula | **PROVED** |
+| causal primitives give global alternating resolvent bounds | **PROVED** |
+| first surviving moment fixes the terminal even cusp coefficient | **PROVED** |
+| kernel transform is zero-free on \(\Re z\ge0,\ 0<|z|W<16/3\) | **PROVED** |
+| cost-charged local Chebyshev refill has floor \(\pi^3/36\) | **PROVED; CHEBYSHEV ZERO MODE ONLY** |
 | full moving-order Perron or beta estimate from cusp compensation | **NOT PROVED** |
 | higher information order never improves actual beta cancellation | **NOT PROVED** |
 | real spectral zero-freeness forces a uniform local energy gap | **REFUTED** |
@@ -401,7 +414,7 @@ At the full continuation head:
 
 - all 62 changed bounded producers passed normally and under optimized
   Python;
-- all 615 tests in the 61 changed focused modules passed in both modes;
+- all 622 tests in the 61 changed focused modules passed in both modes;
 - Ruff lint and format passed on all 123 changed Python files;
 - all 67 changed Markdown packets contain no forbidden control bytes;
 - local links from the two successor front doors resolve;
@@ -452,7 +465,7 @@ This pass deliberately avoids heavy computation.
 
 The continuation preserves that discipline. Its eight newest packets use no
 beta terms, primes, zeta zeros, random samples, or quadrature. The complete 62-
-producer sweep takes under 47 seconds per Python mode, and the full 615-test
+producer sweep takes under 47 seconds per Python mode, and the full 622-test
 sweep takes under 83 seconds per mode on this machine; no high-rank
 enumeration was introduced.
 

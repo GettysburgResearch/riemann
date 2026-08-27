@@ -3,8 +3,9 @@
 Status: **frozen exploratory theorem atlas; the current head adds a universal
 compact-kernel information theorem, the unique all-order Chebyshev BV
 extremizer, an exact moving safe-factor phase diagram, finite autocorrelation
-geometry, a strict max-cusp compensation law, near-notch and endpoint-layer
-asymptotics, and ensemble firewalls; RH and GRH remain open**
+geometry, a global max-cusp Stieltjes/primitive hierarchy and compensation
+law, near-notch and endpoint-layer asymptotics, and ensemble firewalls; RH
+and GRH remain open**
 
 Parent release: draft PR #757 at
 \(b870366141fe8d5f43d5b81f6e50a67d2a888070\).
@@ -54,7 +55,11 @@ The fastest route into the current head is:
    cusp. Its normalized linear refill coefficient is exact and decays like
    \(r^{-2}\), but its product with the sharp BV cost decreases to the
    nonzero limit \(\pi^3/36\). The isolated zero-mode expansion has a
-   uniform-in-order relative error bounded by \((9/32)z\) on unit support.
+   sharp uniform Young-envelope error bounded by \((3/16)z\) on unit
+   support. More strongly, the complete positive-tilt transform is a strict
+   Stieltjes function with a finite difference formula, global alternating
+   causal-primitive bounds, an exact terminal even cusp coefficient, and a
+   uniform complex kernel-transform zero-free half-disk.
 
 2. Read
    [FFPS_COMPACT_KERNEL_INFORMATION_ORDER.md](function_field/FFPS_COMPACT_KERNEL_INFORMATION_ORDER.md)
@@ -196,7 +201,13 @@ complete compact-kernel design theorem.
 8. The max-cusp refill can be evaluated exactly. Its normalized coefficient
    shrinks quadratically with order, but the sharp BV cost grows quadratically;
    their product decreases strictly to \(\pi^3/36\). An exact primitive
-   \(L^1\) formula makes the relative linear refill uniform in order.
+   \(L^1\) formula makes the relative linear refill uniform in order. The
+   global resolvent is strictly Stieltjes on positive tilt, every causal
+   primitive supplies an alternating upper or lower bound, and the first
+   surviving moment forces the terminal even cusp coefficient. After the
+   Perron \(1/z\) and the sharp BV cost are charged, the local Chebyshev
+   zero mode has a nonvanishing \(\pi^3/36\) floor; this remains a geometric
+   family-specific barrier, not a beta estimate.
 
 The scientific direction is now sharper: universal carrier geometry is
 closed enough that another gain must preserve the signs in the beta
@@ -693,7 +704,7 @@ At the continuation head:
 
 - all 62 changed bounded producers pass normally and under optimized
   Python;
-- all 615 tests in the 61 changed focused modules pass in both modes;
+- all 622 tests in the 61 changed focused modules pass in both modes;
 - Ruff lint and format pass on all 123 changed Python files;
 - all 67 changed Markdown files are free of forbidden control bytes;
 - the two front-door documents have resolving local links and balanced
