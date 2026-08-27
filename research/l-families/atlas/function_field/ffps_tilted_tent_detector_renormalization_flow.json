@@ -1,0 +1,172 @@
+{
+  "carrier": {
+    "J_m_zeros": "s=0 simple; s=sigma*sqrt(m)(1+2pi*i*k), k!=0, order 2m",
+    "K_m_laplace": "s*P_laplace(s)^m",
+    "K_m_zeros": "s=0 simple; s=1+2pi*i*k, k!=0, order 2m",
+    "P_laplace": "((exp(1-s)-1)/((e-1)(1-s)))^2",
+    "open_rh_strip": "causal K_m is zero-free for every finite m; centered J_m is zero-free only when sigma*sqrt(m)>=1/2",
+    "real_fourier_zero_set": "{0}"
+  },
+  "diffusive_flow": {
+    "autocorrelation_limit": "R_infinity(x)=(1-x^2/2)exp(-x^2/4)/(4sqrt(pi))",
+    "control_rows": [
+      {
+        "carrier_zero_real_part": "sigma*sqrt(m)",
+        "maximum_sample_error": 0.04295273268246487,
+        "order": 1,
+        "real_weight_zero_set": [
+          0
+        ],
+        "support": [
+          "-(mu/sigma)*sqrt(m)",
+          "((2-mu)/sigma)*sqrt(m)"
+        ]
+      },
+      {
+        "carrier_zero_real_part": "sigma*sqrt(m)",
+        "maximum_sample_error": 0.024075731900608098,
+        "order": 2,
+        "real_weight_zero_set": [
+          0
+        ],
+        "support": [
+          "-(mu/sigma)*sqrt(m)",
+          "((2-mu)/sigma)*sqrt(m)"
+        ]
+      },
+      {
+        "carrier_zero_real_part": "sigma*sqrt(m)",
+        "maximum_sample_error": 0.012391630342583719,
+        "order": 4,
+        "real_weight_zero_set": [
+          0
+        ],
+        "support": [
+          "-(mu/sigma)*sqrt(m)",
+          "((2-mu)/sigma)*sqrt(m)"
+        ]
+      },
+      {
+        "carrier_zero_real_part": "sigma*sqrt(m)",
+        "maximum_sample_error": 0.006262845409993348,
+        "order": 8,
+        "real_weight_zero_set": [
+          0
+        ],
+        "support": [
+          "-(mu/sigma)*sqrt(m)",
+          "((2-mu)/sigma)*sqrt(m)"
+        ]
+      },
+      {
+        "carrier_zero_real_part": "sigma*sqrt(m)",
+        "maximum_sample_error": 0.0015764324536135521,
+        "order": 32,
+        "real_weight_zero_set": [
+          0
+        ],
+        "support": [
+          "-(mu/sigma)*sqrt(m)",
+          "((2-mu)/sigma)*sqrt(m)"
+        ]
+      },
+      {
+        "carrier_zero_real_part": "sigma*sqrt(m)",
+        "maximum_sample_error": 0.00039472300540698,
+        "order": 128,
+        "real_weight_zero_set": [
+          0
+        ],
+        "support": [
+          "-(mu/sigma)*sqrt(m)",
+          "((2-mu)/sigma)*sqrt(m)"
+        ]
+      }
+    ],
+    "edgeworth": "J_m(y)=-y*phi(y)-lambda_3*H_4(y)*phi(y)/(6sqrt(m))+O(m^-1) uniformly; proved by the stated Fourier-splitting lemma",
+    "fourier_transform": "J_m_hat(t)=i*t*psi(t/sqrt(m))^m",
+    "local_uniform_limit": "J_m_hat(t)->i*t*exp(-t^2/2)",
+    "normalized_density": "f_m(y)=sigma*sqrt(m)P^(*m)(m*mu+sigma*sqrt(m)y)",
+    "normalized_detector": "J_m(y)=m*sigma^2*K_m(m*mu+sigma*sqrt(m)y)=f_m'(y)",
+    "support": "[-(mu/sigma)sqrt(m),((2-mu)/sigma)sqrt(m)]",
+    "unscaled_kernel": "K_m=D(P^(*m)), support [0,2m]",
+    "weight": "W_m(t)=t^2|psi(t/sqrt(m))|^(2m)",
+    "weight_expansion": "W_m=t^2 exp(-t^2)[1+lambda_4*t^4/(12m)+O_A(m^-2)]",
+    "weight_l1_error": "integral |W_m-t^2 exp(-t^2)| dt=O(m^-1)",
+    "weight_limit": "W_m(t)->t^2 exp(-t^2)"
+  },
+  "fixed_vs_growing_firewall": {
+    "arithmetic_estimate": "no beta energy, Jordan-mass, Perron, or RH estimate is proved",
+    "causality": "centered J_m is noncausal; a right shift restores causality but adds a shrinking Laplace multiplier",
+    "diffusive_zoom": "the Gaussian derivative appears only after centering and sqrt(m) scaling",
+    "fixed_order": "each finite m is compact and carrier-safe for the beta Mellin pole",
+    "noncommuting_limits": "m->infinity, Perron c->0, and height T->infinity are not interchanged",
+    "unscaled_fixed_frequency": "t^2|P_hat(t)|^(2m) decays exponentially for every fixed t!=0"
+  },
+  "norm_and_jordan_asymptotics": {
+    "J_m_energy": "1/(4sqrt(pi))+5lambda_4/(64sqrt(pi)m)+O(m^-2)",
+    "K_m_each_jordan_side": "1/(sigma*sqrt(2*pi*m))*(1+o(1))",
+    "K_m_energy": "1/(4sqrt(pi)sigma^3*m^(3/2))*(1+O(m^-1))",
+    "cusp_refill": "ell_m(0)=||f_m||_2^2=1/(2sqrt(pi))+lambda_4/(32sqrt(pi)m)+O(m^-2)",
+    "cusp_refill_first_correction": "lambda_4/(32*sqrt(pi)*m)",
+    "derivative_energy_first_correction": "5*lambda_4/(64*sqrt(pi)*m)",
+    "derivative_gaussian_energy": "1/(4*sqrt(pi))",
+    "exact_signed_moments": "integral J_m=0 and integral y*J_m(y)dy=-1",
+    "gaussian_density_energy": "1/(2*sqrt(pi))",
+    "positive_and_negative_jordan_mass_limit": "1/sqrt(2*pi)",
+    "total_variation_limit": "sqrt(2/pi)"
+  },
+  "probability_kernel": {
+    "cumulants": {
+      "kappa_1": "2/(E - 1)",
+      "kappa_2": "2*(E**2 - 3*E + 1)/(E - 1)**2",
+      "kappa_3": "-2*(2*E**3 - 7*E**2 + 5*E - 2)/(E - 1)**3",
+      "kappa_4": "2*(6*E**4 - 25*E**3 + 32*E**2 - 25*E + 6)/(E - 1)**4"
+    },
+    "density": "P(x)=exp(x)*min(x,2-x)/(e-1)^2 on [0,2]",
+    "factorization": "P=f*f, f(v)=exp(v)/(e-1) on [0,1]",
+    "general_cumulant": "for r>=2: 2[(-1)^(r-1)Li_(1-r)(e^-1)+(-1)^r(r-1)!]",
+    "mass": "Z=4sinh^2(1/2)=(e-1)^2/e",
+    "mean": "mu=2/(e-1)",
+    "mgf": "M_X(t)=((exp(1+t)-1)/((e-1)(1+t)))^2",
+    "unnormalized_tent": "Phi(x)=exp(x-1)(1-|x-1|)_+",
+    "variance": "sigma^2=2(e^2-3e+1)/(e-1)^2"
+  },
+  "proof_ledger": {
+    "growing_order_beta_theorem": "NOT PROVED",
+    "jordan_asymptotics": "PROVED USING THE STATED CLASSICAL LOG-CONCAVITY CLOSURE LEMMA",
+    "local_uniform_fourier_and_weight_limits": "PROVED",
+    "probability_factorization_and_cumulants": "PROVED EXACT",
+    "rh_or_grh": "NOT PROVED",
+    "support_and_carrier_zeros": "PROVED EXACT",
+    "uniform_edgeworth_remainder": "PROVED BY THE SELF-CONTAINED FOURIER-SPLITTING LEMMA IN THE MARKDOWN",
+    "weight_l1_and_norm_asymptotics": "PROVED BY THE SAME FOURIER SPLITTING"
+  },
+  "resource_caps": {
+    "curves": 0,
+    "largest_replayed_order": 128,
+    "numerical_zeta_values": 0,
+    "primes": 0,
+    "random_samples": 0,
+    "symbolic_cumulant_order": 4,
+    "weight_frequencies": 5,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "3658d4c31",
+    "cusp_commit": "3dbf13f6d1c49e573a5b9cd8355d9c124273062b",
+    "cusp_git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_BANDPASS_ASSEMBLED_PERRON_LEAKAGE.md": "e7959b8788b8a374920aa53bcafd1fb28cda3b72",
+      "research/l-families/atlas/function_field/ffps_bandpass_assembled_perron_leakage.json": "0031e9ae114d7bf6c60d69789d5d52fe4cf04f6e",
+      "research/l-families/atlas/function_field/ffps_bandpass_assembled_perron_leakage.py": "52023bb4527a32a2c9983fdd25707da3361242e8",
+      "tests/test_ffps_bandpass_assembled_perron_leakage.py": "efc9cde7eef3e833aaa5ac40b5d37b1e34f76770"
+    },
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_ZERO_FREE_BETA_ENERGY_LADDER.md": "bd4cbb842e78c1dad5d380c8d20ff14c39bba15e",
+      "research/l-families/atlas/function_field/ffps_zero_free_beta_energy_ladder.json": "7e8889aa0dd1b01674e20158a52502cff0d8dffa",
+      "research/l-families/atlas/function_field/ffps_zero_free_beta_energy_ladder.py": "df80000192292cc5fc1cd08013f152fb257054f9",
+      "tests/test_ffps_zero_free_beta_energy_ladder.py": "983a1320f89087028f6724fe36aaca5ca1309b15"
+    },
+    "live_imported_source_blob": "df80000192292cc5fc1cd08013f152fb257054f9"
+  }
+}
