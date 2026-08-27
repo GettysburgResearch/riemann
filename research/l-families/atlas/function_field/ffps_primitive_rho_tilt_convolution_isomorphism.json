@@ -56,6 +56,7 @@
   },
   "compatible_scale_geometry": {
     "coherent_core_gram": {
+      "basewave_identity": "Y_1^alpha(D,H)=sum_I E_D^(alpha,0)(I), so BASEWAVE=PRIMCAR and WAVEPRIMCAR implies RH conditionally without the eta<1/2 outer-core threshold",
       "coefficient_normalization_checks": 760,
       "cofactor_cancellation_checks": 40,
       "configuration_count": 8,
@@ -85,7 +86,8 @@
       "euler_cost": "J_67=prod_(p!=67)(1+1/((p+1)*sqrt(p)))<infinity; sharp weighted-Hilbert energy cost",
       "formal_gate": "AUXCOLORPRIMCAR: sum_(d<=D sf) d^-1 sum_((u,d)=1 sf) g(u)/sqrt(u) sum_I |sum_(r|u) V_(d;r,u/r)(I)|^2 <<_epsilon (2DH)^epsilon",
       "formal_relations": [
-        "RAYPRIMCAR -> AUXCOLORPRIMCAR -> auxiliary rho-sieved energy -> zero mode",
+        "RAYPRIMCAR -> AUXCOLORPRIMCAR -> PRIMCAR -> PRIMLS -> RH conditionally",
+        "the u=1 AUXCOLOR summand has weight one and is exactly the three-channel PRIMCAR energy",
         "COLLPRIMCAR and AUXCOLORPRIMCAR are positive-norm incomparable",
         "GENPRIMCAR and AUXCOLORPRIMCAR are positive-norm incomparable"
       ],

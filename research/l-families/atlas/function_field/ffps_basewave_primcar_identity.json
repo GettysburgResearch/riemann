@@ -1,0 +1,75 @@
+{
+  "conditional_hierarchy": {
+    "aux_route": "AUXCOLORPRIMCAR -> PRIMCAR -> PRIMLS -> RH",
+    "eta_below_one_half_needed_for_direct_wave_route": false,
+    "eta_below_one_half_role": "only the outer sum proving WAVEPRIMCAR -> AUXCOLORPRIMCAR",
+    "ray_route": "RAYPRIMCAR -> AUXCOLORPRIMCAR -> PRIMCAR -> PRIMLS -> RH",
+    "wave_route": "WAVEPRIMCAR -> BASEWAVE (=PRIMCAR) -> PRIMLS -> RH"
+  },
+  "exact_identity": {
+    "aux_containment": "X_color^alpha(D,H)>=Y^alpha_1(D,H), because w(1)=1",
+    "base_core": "C^alpha_(d,1)(I)=P^0_(67^alpha,1)(d;I)=P_I^(alpha,0)(d)",
+    "base_energy": "Y^alpha_1(D,H)=sum_(I in D_H) E_D^(alpha,0)(I)",
+    "definition": "BASEWAVE is the u=1 specialization of WAVEPRIMCAR",
+    "gate_equivalence": "BASEWAVE=PRIMCAR"
+  },
+  "finite_exact_replay": {
+    "alphas": [
+      0,
+      1,
+      2
+    ],
+    "aux_u_one_weight": "1",
+    "pair_cap": 10,
+    "panel_checks": 189,
+    "predicate_checks": 18900,
+    "rows": [
+      {
+        "alpha": 0,
+        "basewave_probe_energy": "134597/210",
+        "height_sets": 9,
+        "primcar_probe_energy": "134597/210"
+      },
+      {
+        "alpha": 1,
+        "basewave_probe_energy": "254801/210",
+        "height_sets": 9,
+        "primcar_probe_energy": "254801/210"
+      },
+      {
+        "alpha": 2,
+        "basewave_probe_energy": "254801/210",
+        "height_sets": 9,
+        "primcar_probe_energy": "254801/210"
+      }
+    ],
+    "termwise_identity": true
+  },
+  "resource_caps": {
+    "alpha_channels": 3,
+    "floating_point_operations": 0,
+    "large_character_families": 0,
+    "pair_coordinate_cap": 10,
+    "sieve_values": 7,
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "auxcolorprimcar_estimate_proved": false,
+    "basewave_estimate_proved": false,
+    "colorprimcar_d_one_alone_suffices": false,
+    "primcar_estimate_proved": false,
+    "primls_estimate_proved": false,
+    "replay_interpretation": "bounded exact predicate and term-expansion authentication; the theorem follows symbolically from the displayed definitions",
+    "rh_proved": false
+  },
+  "source_contract": {
+    "commit": "b870366141fe8d5f43d5b81f6e50a67d2a888070",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_PRIMITIVE_PAIR_HARMONIC_INCIDENCE_CARLESON.md": "722ca5bd8acef2efdb5591f29935b4f97102f957",
+      "research/l-families/atlas/function_field/FFPS_PRIMITIVE_RHO_TILT_CONVOLUTION_ISOMORPHISM.md": "31311893b8a7ba708ae7a2813b9c44b920b788a9",
+      "research/l-families/atlas/function_field/ffps_primitive_pair_harmonic_incidence_carleson.py": "7e780f0109264dbfaac59cae36db6fd72c3f34ee",
+      "research/l-families/atlas/function_field/ffps_primitive_rho_tilt_convolution_isomorphism.py": "750eb699efa75ae955c7a6294c095542becd27c8"
+    },
+    "repair_scope": "compare the frozen PRIMCAR and coherent-core definitions; the repaired working note is intentionally not treated as a frozen blob"
+  }
+}

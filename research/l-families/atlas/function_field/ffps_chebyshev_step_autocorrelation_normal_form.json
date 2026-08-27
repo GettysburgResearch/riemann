@@ -1,0 +1,142 @@
+{
+  "autocorrelation_normal_form": {
+    "curvature": "-R''=tilde(dK)*dK",
+    "jump_measure": "dK=h*sum_j (-1)^j*c_j*delta_(y_j), c_end=1 and c_interior=2",
+    "kernel": "K_r(t)=(-1)^r*r!*4^r*b*sgn(U_r(2t-1)) on (0,1)",
+    "low_frequency_law": "Khat(xi)=b*(i*xi)^r+O(xi^(r+1)); evenness sharpens Rhat(xi)=b^2*xi^(2r)+O(xi^(2r+2))",
+    "resolution_asymptotic": "minimum cell width~pi^2/(4(r+1)^2)",
+    "rows": [
+      {
+        "cells": 1,
+        "distinct_nonzero_curvature_atoms": 3,
+        "half_window_correlation": "0.500000000000000",
+        "information_order": 0,
+        "local_linear_zero_inside_cusp_window": true,
+        "minimum_cell_width": "1.000000000000000",
+        "normalized_cusp_slope": 1,
+        "origin_curvature_mass": 2,
+        "step_height_for_b_1": 1
+      },
+      {
+        "cells": 2,
+        "distinct_nonzero_curvature_atoms": 5,
+        "half_window_correlation": "0.250000000000000",
+        "information_order": 1,
+        "local_linear_zero_inside_cusp_window": true,
+        "minimum_cell_width": "0.500000000000000",
+        "normalized_cusp_slope": 3,
+        "origin_curvature_mass": 6,
+        "step_height_for_b_1": 4
+      },
+      {
+        "cells": 3,
+        "distinct_nonzero_curvature_atoms": 9,
+        "half_window_correlation": "0.375000000000000",
+        "information_order": 2,
+        "local_linear_zero_inside_cusp_window": true,
+        "minimum_cell_width": "0.250000000000000",
+        "normalized_cusp_slope": 5,
+        "origin_curvature_mass": 10,
+        "step_height_for_b_1": 32
+      },
+      {
+        "cells": 4,
+        "distinct_nonzero_curvature_atoms": 13,
+        "half_window_correlation": "0.487436867076458",
+        "information_order": 3,
+        "local_linear_zero_inside_cusp_window": true,
+        "minimum_cell_width": "0.146446609406726",
+        "normalized_cusp_slope": 7,
+        "origin_curvature_mass": 14,
+        "step_height_for_b_1": 384
+      },
+      {
+        "cells": 5,
+        "distinct_nonzero_curvature_atoms": 19,
+        "half_window_correlation": "0.570288237343632",
+        "information_order": 4,
+        "local_linear_zero_inside_cusp_window": false,
+        "minimum_cell_width": "0.095491502812526",
+        "normalized_cusp_slope": 9,
+        "origin_curvature_mass": 18,
+        "step_height_for_b_1": 6144
+      },
+      {
+        "cells": 6,
+        "distinct_nonzero_curvature_atoms": 19,
+        "half_window_correlation": "0.631569860407207",
+        "information_order": 5,
+        "local_linear_zero_inside_cusp_window": false,
+        "minimum_cell_width": "0.066987298107781",
+        "normalized_cusp_slope": 11,
+        "origin_curvature_mass": 22,
+        "step_height_for_b_1": 122880
+      },
+      {
+        "cells": 7,
+        "distinct_nonzero_curvature_atoms": 33,
+        "half_window_correlation": "0.678148820682862",
+        "information_order": 6,
+        "local_linear_zero_inside_cusp_window": false,
+        "minimum_cell_width": "0.049515566048790",
+        "normalized_cusp_slope": 13,
+        "origin_curvature_mass": 26,
+        "step_height_for_b_1": 2949120
+      },
+      {
+        "cells": 8,
+        "distinct_nonzero_curvature_atoms": 41,
+        "half_window_correlation": "0.714548246917326",
+        "information_order": 7,
+        "local_linear_zero_inside_cusp_window": false,
+        "minimum_cell_width": "0.038060233744357",
+        "normalized_cusp_slope": 15,
+        "origin_curvature_mass": 30,
+        "step_height_for_b_1": 82575360
+      },
+      {
+        "cells": 9,
+        "distinct_nonzero_curvature_atoms": 51,
+        "half_window_correlation": "0.743693638340111",
+        "information_order": 8,
+        "local_linear_zero_inside_cusp_window": false,
+        "minimum_cell_width": "0.030153689607046",
+        "normalized_cusp_slope": 17,
+        "origin_curvature_mass": 34,
+        "step_height_for_b_1": 2642411520
+      }
+    ],
+    "small_lag_law": "R(s)/R(0)=1-(2r+1)|s| for |s|<=sin^2(pi/(2(r+1)))"
+  },
+  "proof_ledger": {
+    "RH_or_GRH": "NOT PROVED",
+    "autocorrelation_geometry_improves_beta_cancellation": "NOT PROVED",
+    "exact_small_lag_cusp": "PROVED",
+    "finite_atomic_curvature_normal_form": "PROVED",
+    "high_order_cusp_window_shrinks_quadratically": "PROVED",
+    "local_cusp_locates_first_autocorrelation_zero_for_all_r": "REFUTED FOR r>=4",
+    "low_frequency_notch_order": "PROVED",
+    "new_unconditional_beta_estimate": "NOT PROVED"
+  },
+  "resource_caps": {
+    "beta_terms": 0,
+    "curve_computations": 0,
+    "maximum_cells": 9,
+    "maximum_information_order": 8,
+    "maximum_raw_curvature_pairs": 100,
+    "primes": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "root_searches": 0,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "c223f8fe1b7d89f457db07ce6cc44940fa215aeb",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_SHARP_BV_SAFE_FACTOR_PHASE_DIAGRAM.md": "ae4aed4fa1736633a940f79c0e678f1aabe85d29",
+      "research/l-families/atlas/function_field/ffps_sharp_bv_safe_factor_phase_diagram.json": "ffffe417f2870ca2be7442bd920583441594319d",
+      "research/l-families/atlas/function_field/ffps_sharp_bv_safe_factor_phase_diagram.py": "6e455bc03e264cd429ed12553d4c9e3ec2a993f9",
+      "tests/test_ffps_sharp_bv_safe_factor_phase_diagram.py": "3abfe3d60ac333781f26d9d9c1a3eeefb6bc1f7f"
+    }
+  }
+}

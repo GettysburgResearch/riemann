@@ -1,0 +1,95 @@
+{
+  "finite_zero_flip": {
+    "input": "real compact BV K on [0,L], F(z)=0, Re(z)!=0",
+    "invariants": [
+      "support [0,L]",
+      "compact BV regularity",
+      "zero mean whenever the input has zero mean",
+      "Fourier magnitude",
+      "autocorrelation",
+      "every finite translate Gram energy"
+    ],
+    "primitive": "h_z(x)=exp(z*x) integral_0^x exp(-z*u)K(u)du; K^[z]=K+2Re(z)h_z",
+    "real_output_rule": "flip real zeros singly and nonreal zeros in conjugate pairs",
+    "transform": "F^[z](s)=F(s)(s+conj(z))/(s-z)",
+    "zero_motion": "z -> -conj(z)"
+  },
+  "programme_conclusion": {
+    "finite_window_surgery": "all carrier zeros in a declared compact substrip can be flipped left without changing the beta Gram",
+    "full_strip_scope": "a full repair follows when only finitely many carrier zeros lie in the open consumer strip",
+    "infinite_zero_set": "requires a convergent infinite product or a separate global symmetry"
+  },
+  "proof_ledger": {
+    "any_beta_energy_estimate": "NOT PROVED",
+    "arbitrary_infinite_zero_flip": "NOT PROVED",
+    "conjugate_pair_real_flip": "PROVED EXACT",
+    "constructive_one_zero_flip": "PROVED EXACT",
+    "finite_carrier_defect_repair": "PROVED EXACT",
+    "fourier_autocorrelation_energy_invariance": "PROVED EXACT",
+    "one_sided_jordan_mass_invariance": "FALSE IN GENERAL / NOT CLAIMED",
+    "rh_or_grh": "NOT PROVED",
+    "support_bv_zero_mean_preservation": "PROVED EXACT"
+  },
+  "resource_caps": {
+    "complex_zero_samples": 3,
+    "frequency_samples": 6,
+    "primes": 0,
+    "random_samples": 0,
+    "toy_intervals": 3,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "b0892f2ac6af5bc97010bc281118601547243148",
+    "frozen_blobs": {
+      "research/l-families/atlas/function_field/FFPS_BETA_KERNEL_CARRIER_CHIRALITY.md": "71449163391c3de989fecf9e60c4f77f3efae6c6",
+      "research/l-families/atlas/function_field/ffps_beta_kernel_carrier_chirality.json": "66fe36ecde1acf70a83d0d67e784153c64bd6ce9",
+      "research/l-families/atlas/function_field/ffps_beta_kernel_carrier_chirality.py": "da6c4702268d9211c382ee9a0454c81fa2ad60f9",
+      "tests/test_ffps_beta_kernel_carrier_chirality.py": "365f8c2f109433ce13e419c03a82669194e7d48a"
+    }
+  },
+  "toy_certificate": {
+    "carrier_polynomial": "(y-1)(y-3/4)",
+    "flipped_zero": "-log(4/3)",
+    "kernel": "weights (3/4,-7/4,1) on [0,1],[1,2],[2,3]",
+    "mean_zero": true,
+    "right_half_plane_zero": "z=log(4/3)",
+    "rows": [
+      {
+        "frequency": "-20",
+        "toy_flipped_weight": 0.003329805590844574,
+        "toy_original_weight": 0.003329805590844574,
+        "toy_weight_error": 0.0
+      },
+      {
+        "frequency": "-3/2",
+        "toy_flipped_weight": 2.2358029019155277,
+        "toy_original_weight": 2.2358029019155277,
+        "toy_weight_error": 0.0
+      },
+      {
+        "frequency": "-1/100",
+        "toy_flipped_weight": 6.2573956466167875e-06,
+        "toy_original_weight": 6.257395646616786e-06,
+        "toy_weight_error": 1.6940658945086007e-21
+      },
+      {
+        "frequency": "1/100",
+        "toy_flipped_weight": 6.2573956466167875e-06,
+        "toy_original_weight": 6.257395646616786e-06,
+        "toy_weight_error": 1.6940658945086007e-21
+      },
+      {
+        "frequency": "3/2",
+        "toy_flipped_weight": 2.2358029019155277,
+        "toy_original_weight": 2.2358029019155277,
+        "toy_weight_error": 0.0
+      },
+      {
+        "frequency": "20",
+        "toy_flipped_weight": 0.003329805590844574,
+        "toy_original_weight": 0.003329805590844574,
+        "toy_weight_error": 0.0
+      }
+    ]
+  }
+}

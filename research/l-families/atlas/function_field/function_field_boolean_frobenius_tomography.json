@@ -1,0 +1,231 @@
+{
+  "bounded_controls": {
+    "compatible_family": {
+      "feasible": true,
+      "filter_degree": 5,
+      "filter_orders": {
+        "a": 1,
+        "b": 1,
+        "c": 1
+      },
+      "orbit_cases": {
+        "a": {
+          "case": "unique retained-mode order",
+          "deletion_lower_bound": 0,
+          "positive_exact_orders": [
+            1
+          ],
+          "selected_filter_order": 1
+        },
+        "b": {
+          "case": "lcm deletion order",
+          "deletion_lower_bound": 1,
+          "positive_exact_orders": [],
+          "selected_filter_order": 1
+        },
+        "c": {
+          "case": "lcm deletion order",
+          "deletion_lower_bound": 1,
+          "positive_exact_orders": [],
+          "selected_filter_order": 1
+        }
+      },
+      "residual_profiles": [
+        {
+          "a": 1
+        },
+        {
+          "a": 2
+        }
+      ]
+    },
+    "full_deletion_lcm": {
+      "feasible": true,
+      "filter_degree": 7,
+      "filter_orders": {
+        "a": 3,
+        "b": 1,
+        "c": 1
+      },
+      "orbit_cases": {
+        "a": {
+          "case": "lcm deletion order",
+          "deletion_lower_bound": 3,
+          "positive_exact_orders": [],
+          "selected_filter_order": 3
+        },
+        "b": {
+          "case": "lcm deletion order",
+          "deletion_lower_bound": 1,
+          "positive_exact_orders": [],
+          "selected_filter_order": 1
+        },
+        "c": {
+          "case": "lcm deletion order",
+          "deletion_lower_bound": 1,
+          "positive_exact_orders": [],
+          "selected_filter_order": 1
+        }
+      },
+      "residual_profiles": [
+        {},
+        {}
+      ]
+    },
+    "galois_descent": {
+      "conjugate_pair_selected_together": true,
+      "single_conjugate_selected_over_Q": false
+    },
+    "member_filters": [
+      {
+        "filter_degree": 3,
+        "filter_orders": {
+          "a": 1,
+          "b": 1
+        },
+        "retained_profile": {
+          "a": 1
+        }
+      },
+      {
+        "filter_degree": 3,
+        "filter_orders": {
+          "a": 1,
+          "c": 1
+        },
+        "retained_profile": {
+          "a": 2
+        }
+      }
+    ],
+    "retention_deletion_conflict": {
+      "conflicts": [
+        "a: exact retained order 1 is below deletion bound 3"
+      ],
+      "feasible": false,
+      "orbit_cases": {
+        "a": {
+          "case": "retention/deletion conflict",
+          "deletion_lower_bound": 3,
+          "positive_exact_orders": [
+            1
+          ]
+        },
+        "b": {
+          "case": "lcm deletion order",
+          "deletion_lower_bound": 1,
+          "positive_exact_orders": [],
+          "selected_filter_order": 1
+        },
+        "c": {
+          "case": "lcm deletion order",
+          "deletion_lower_bound": 1,
+          "positive_exact_orders": [],
+          "selected_filter_order": 1
+        }
+      }
+    },
+    "unequal_retention_conflict": {
+      "conflicts": [
+        "a: incompatible exact orders [1, 2] from retained modes"
+      ],
+      "feasible": false,
+      "orbit_cases": {
+        "a": {
+          "case": "incompatible retained-mode orders",
+          "deletion_lower_bound": 0,
+          "positive_exact_orders": [
+            1,
+            2
+          ]
+        },
+        "b": {
+          "case": "lcm deletion order",
+          "deletion_lower_bound": 1,
+          "positive_exact_orders": [],
+          "selected_filter_order": 1
+        },
+        "c": {
+          "case": "lcm deletion order",
+          "deletion_lower_bound": 1,
+          "positive_exact_orders": [],
+          "selected_filter_order": 1
+        }
+      }
+    }
+  },
+  "formal_energy_control": {
+    "adaptive_filter": [
+      "1",
+      "0",
+      "1"
+    ],
+    "beta_numerator": [
+      "1",
+      "1/3"
+    ],
+    "character_energy": "32923/3",
+    "character_energy_polynomial": "4*H^3/27 + 8*H^2/9 + 47*H/27 + 1",
+    "character_leading_energy_coefficient": "4/27",
+    "formal_conductor_degree": 5,
+    "horizon": 40,
+    "normalized_character_denominator_before_filter": [
+      "1",
+      "2",
+      "2",
+      "2",
+      "1"
+    ],
+    "positive_boolean_leading_energy_coefficient": "2/27",
+    "positive_energy_identity_verified": true,
+    "retained_denominator": [
+      "1",
+      "2",
+      "1"
+    ],
+    "retained_principal_coefficient": "2/3",
+    "scope": "formal Weil-circle polynomial; no modulus realization claim"
+  },
+  "proof_ledger": {
+    "all_curve_boolean_hadamard_split": "IMPORTED EXACT",
+    "beta_unit_circle_numerator_nonvanishing": "IMPORTED EXACT",
+    "finite_family_universal_trilemma": "PROVED EXACT BY ORBIT VALUATIONS",
+    "formal_double_root_energy_control": "REPLAYED EXACT",
+    "full_deletion_lcm_corollary": "PROVED EXACT WITHOUT GENERICITY",
+    "galois_descent_criterion": "PROVED BY COEFFICIENT-FIELD FACTORIZATION",
+    "member_adaptive_minimality": "PROVED EXACT BY ORBIT VALUATIONS",
+    "number_field_transfer": "NOT CLAIMED",
+    "residue_and_energy_signature": "PROVED BY PARTIAL FRACTIONS",
+    "rh_or_grh": "NOT PROVED"
+  },
+  "resource_caps": {
+    "curve_enumeration": 0,
+    "finite_field_element_enumeration": 0,
+    "formal_series_horizon": 40,
+    "l_functions_enumerated": 0,
+    "moduli_enumerated": 0,
+    "point_counts": 0,
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "coefficient_field": "factor normalized Frobenius polynomials over a field containing their coefficients and sqrt(q); over a smaller field the scaled filter polynomial itself must descend",
+    "energy_analytic_gap": "the global H^(2M-1) energy asymptotic assumes every non-weight-one inverse-L singularity lies outside some circle |z|=R_0>1; local orbit minimality needs only nonvanishing at the selected unit-circle roots",
+    "family": "finite family over one fixed q and coefficient field",
+    "function_field_rh": "used only to place the relevant weight-one roots on |z|=1",
+    "tomography_limit": "a polynomial filter can delete surviving modes but cannot resurrect a mode already removed by the prefilter"
+  },
+  "source_contract": {
+    "git_blobs": {
+      "7a54822cb9b20f331edb6f40b2276618c496c1cb:research/l-families/atlas/function_field/FUNCTION_FIELD_BETA_BOOLEAN_EVALUATION_BANDPASS.md": "0306cfa06c68375dd62472073698aaae0ace0ff9",
+      "7a54822cb9b20f331edb6f40b2276618c496c1cb:research/l-families/atlas/function_field/function_field_beta_boolean_evaluation_bandpass.py": "5ab6b5845838495362bb37883386b640e6a8900d",
+      "8192514ed68f50b8e2a9cff9e1bedab2478bb5c1:research/l-families/atlas/function_field/FUNCTION_FIELD_FROBENIUS_CHANNEL_FILTER_CALCULUS.md": "182fee0619e3a78b9e8d9435d921293328c37668",
+      "8192514ed68f50b8e2a9cff9e1bedab2478bb5c1:research/l-families/atlas/function_field/function_field_frobenius_channel_filter_calculus.py": "f349df947adecf99dec4558a99741d1b26641934"
+    },
+    "imported_nonvanishing": "the literal beta numerator 1-chi(P)q^(-e/2)z^e has no zero on |z|=1"
+  },
+  "theorem": {
+    "member_minimality": "after any prefilter, an additional polynomial filter selects a retained Frobenius orbit profile r from the surviving profile s with the unique primitive orders s-r",
+    "positive_energy_firewall": "coherent class sum/difference isolates trivial/character channels, while the sum of the two positive class energies retains one half of each channel energy",
+    "universal_trilemma": "on each coefficient-field Galois orbit, either all members delete it and the lcm/max order is minimal; all positive retention requests impose one compatible exact order which dominates deletion requests; or no scalar universal filter exists"
+  }
+}

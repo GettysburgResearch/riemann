@@ -2,6 +2,13 @@
 
 Status: **release-candidate exploratory mathematics; no proof of RH or GRH**
 
+Successor map: begin with
+[BETA_BANDPASS_WAVELET_FIVE_MINUTE_HANDOFF.md](BETA_BANDPASS_WAVELET_FIVE_MINUTE_HANDOFF.md).
+The successor gives the corrected BASEWAVE/PRIMCAR hierarchy, the fixed
+smooth beta spectral localization, the all-curve complete shadow, and the
+native termwise partial-Frobenius verdict. This map remains authoritative for
+the larger PR #757 source, mask, selector, notch, and genus-two inventories.
+
 Branch: `codex/l-function-sheaf-amplifier`
 
 Frozen parent: PR #756 at
@@ -12,9 +19,10 @@ Programmes touched:
 [#737](https://github.com/gfreund123/riemann/issues/737), and
 [#741](https://github.com/gfreund123/riemann/issues/741)
 
-## Start here
+## Frozen #757 deep-dive path
 
-For a five-minute digest, read in this order:
+First read the successor handoff linked above. To digest the frozen #757
+source itself, then read in this order:
 
 1. [`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md);
 2. this map, especially the result table below;
@@ -95,13 +103,13 @@ as RH. They should not be blended into one vague “family estimate.”
 | primitive-ray localization | every fixed admissible beta ray has an explicit `A_(a,b) log X+O(1)` law; all reduced rays of height at most `H` cost `O(H log(2X))`, so for every prescribed `H=X^o(1)` RH is equivalent to the balanced residual above height `H` | cancel the high-height sector; both primitive coordinates exceed `H/16` and the common factor is `<X/H` |
 | primitive-pair large-sieve gate | the full residual has an exact five-oriented/three-reciprocal decomposition, a signed one-dimensional Möbius--Gram form, and a biased-Boolean divisor-sieve diagonalization | prove `PRIMLS`, a maximal `L2(d^-1)` square-root-scale bound; the harmonic zero mode and frozen sieve rows show that `d`-averaging alone cannot do it |
 | primitive incidence/Carleson form | the actual truncated `d^-1` square mean is an incidence Gram; at fixed height its normalized limit is `67/(68 zeta(2))` times the Boolean energy, with a `rho`-tilted Möbius zero mode; `PRIMCAR=>PRIMLS=>RH` | `PRIMCAR` is a stronger unproved sufficient gate; control its zero mode, nonzero spectrum, and dyadic block sum uniformly as height grows |
-| primitive `rho`-tilt isomorphism | `mu*rho` and 67-free `mu` are mutually inverse-convolution equivalent and have the same positive Mertens exponents; primitive support reassembles as `(A,B,q)=(67^alpha r,67^gamma s,drs)`; in each of the three actual `(alpha,0)` channels, fixed squarefree 67-free `q` has `3^omega(q)` compatible colorings and the `d=1` zero mode `2^omega(q)` saturated rays | prove the direct weighted `COLLPRIMCAR` gate, or one of the stronger, formally incomparable routes `RAYPRIMCAR` (compatible rays, convergent cost for `0<epsilon<1`) and `GENPRIMCAR` (all admissible squarefree 67-free `q`, polylog tax); nonzero `PRIMCAR` modes remain separate |
+| primitive `rho`-tilt isomorphism | `mu*rho` and 67-free `mu` are mutually inverse-convolution equivalent and have the same positive Mertens exponents; primitive support reassembles as `(A,B,q)=(67^alpha r,67^gamma s,drs)`; in each actual channel, the coherent `u=1` member is exactly the whole PRIMCAR panel, while fixed squarefree 67-free `q` has `3^omega(q)` compatible colorings | prove `PRIMCAR` directly, the stronger positive `AUXCOLORPRIMCAR` or `WAVEPRIMCAR` gates which contain it at `u=1`, or the still stronger alternatives `RAYPRIMCAR` and `GENPRIMCAR`; every estimate is open |
 | reflection/geodesic form | the same detector is exactly a differentiated native reflection-odd energy; the relative geodesic form differs only by an unconditional `O_epsilon(T)` squared field | obtain arithmetic control of the positive differentiated reflection energy |
 | raw complete current | negative Jordan variation is at least `((70+50 sqrt(2))/pi^2)sqrt(Y)+O(log Y)` | none: the raw subpower premise is refuted |
 | hard-mask co-design | sharp leverage/leakage Pareto law and bounded-energy anomaly-cancellation theorem | a global varying-place relative complex and signed trace estimate |
 | cyclic/abelian geometry | honest torsor endomorphism identity `C-S=Pi_0`; subgroup masks compress many coordinates to fixed selected rank | realize the actual FFPS cleanup functorially with uniform conductor cost |
 | universal ternary norm torsor | on every degree pair `(a,b)` over `q=1 mod 6`, the clean physical mask has ranks `48/32/16`, generic selected invariant zero, tame Swan zero, and toric conductor at most `288(a+b)`; root and physical monodromy split | tensor the native owner/Boolean/phase source before norming the exact selector, or use a source-specific/prime-polynomial selector; this packet alone is not `CYSEL` |
-| closed-point Adams compression | exact degree `(a,b)` extraction costs `2^(omega(a)+omega(b))` nonzero signed traces for separable kernels, plus `2^omega(a)` to remove the ordered diagonal when `a=b`; the clean ternary deck ranks remain `48/32/16` | prove the native source has commuting partial Frobenii/external-product form and bound all transformed pushforwards; trace-term count is not a Betti bound |
+| closed-point Adams compression | exact degree `(a,b)` extraction costs `2^(omega(a)+omega(b))` nonzero signed traces for separable kernels, plus `2^omega(a)` to remove the ordered diagonal when `a=b`; the clean ternary deck ranks remain `48/32/16` | the successor refutes termwise bounded-rank partial-Frobenius/external-product structure for the universal native phase block; classify sparse source occupancy, cancel in a relative complex, or develop a correspondence-level extractor |
 | scalable blocks | a native rich-core source has formal leverage `<(4/5)^r`; closed-place supply permits `r` growing with conductor degree | weighted Boolean transfer and joint relative cancellation |
 | entropy/conductor | the `r`-th eligible place has degree `exp((1/delta+o(1))r)`; a modewise conductor loss wins only below `theta<delta log(5/4)` | cancel large-degree constituents before paying separate mode costs |
 | exact cycle selector | the full `S_d` `d`-cycle indicator has forced absolute semisimple rank mass `2^(d-1)/d`, with equal signed halves; product costs multiply | joint `K_0` cancellation, a weaker source-specific selector, or different descended-orbit geometry |
@@ -452,8 +460,11 @@ follows formally. The full color family is exactly the upper-divisor zeta
 transform of coherently oriented product-shell amplitudes. Möbius inversion
 recovers every shell at finite height, not the orientation data inside it.
 Recovery in the local weighted overlap-Gram norm has condition number
-asymptotic to `4sqrt(p)`. The scalar zero mode itself has no native `d`-average, and nonzero
-incidence modes remain separate.
+asymptotic to `4sqrt(p)`. At a fixed general core, the scalar zero mode and
+nonzero incidence modes remain distinct coordinates. The successor's
+load-bearing `u=1` specialization is nevertheless the complete PRIMCAR
+energy, so the full AUXCOLOR/WAVE gates leave no separate incidence spectrum
+outside their stated estimates.
 
 The shell formula finally collapses the pair coordinates to one variable.
 All orientations of squarefree `N` carry the same `mu(N)` sign; after
@@ -700,9 +711,12 @@ This does not contradict the exponential `S_d` theorem below. That theorem
 represents the cycle indicator as one class on coefficient space; Adams
 inversion changes to a fixed closed-point space and a signed extension-field
 tower. Nor is divisor-many trace evaluation a Betti bound. Most importantly,
-an arbitrary sheaf on `X times Y` has only diagonal Frobenius. The native
-owner/Boolean/Artin--Schreier FFPS source must still be proved external, or
-equipped with commuting partial Frobenii, before the extractor applies. Read
+an arbitrary sheaf on `X times Y` has only diagonal Frobenius. The successor
+proves that the universal native phase/incidence constituent is not termwise
+external of bounded rank and lacks natural independent partial Frobenius.
+The extractor can apply only after source-specific sparse restriction,
+cancellation in a common relative complex, or a new correspondence-level
+extension. Read
 [`FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md`](function_field/FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md).
 
 ### 2.7 Exact irreducibility selectors cannot be rank-optimized away
@@ -1193,17 +1207,20 @@ exactly. The next analytic target is `COLLPRIMCAR` directly,
 `AUXCOLORPRIMCAR` before phase is discarded, its one-variable sufficient
 form `WAVEPRIMCAR`, or `RAYPRIMCAR` on the actual
 `q=drs` rays; full-`q` `GENPRIMCAR` remains a broader
-alternative with a polylogarithmic tax, not an intrinsic requirement. Every
-route still leaves the nonzero spectrum.
+alternative with a polylogarithmic tax, not an intrinsic requirement. The
+successor audit proves that the `u=1` member of AUXCOLORPRIMCAR and
+WAVEPRIMCAR is the full PRIMCAR panel, so these gates do not leave a
+separate nonzero spectrum; their estimates remain wholly open.
 
 ### Highest family/sheaf bet
 
-Start from the divisor-cost Adams extractor and prove that the actual
-Boolean/owner/phase source descends to one fixed closed-point kernel with an
-external decomposition or commuting partial Frobenii. Then simplify the
-signed double Möbius recombination before any Betti norm. The clean physical
-package already passes; another fixed-fibre Kummer example would not address
-the remaining source and cohomological complexity.
+The successor refutes termwise bounded-rank externalization of the universal
+native phase/incidence block: its rank grows like the residue cardinality and
+its natural constituents lack independent partial Frobenius. The live bets
+are to classify a sparse actual source image, construct the complete signed
+relative complex so those constituents cancel before externalization, or
+develop a correspondence-level closed-point formula retaining diagonal
+graphs. Another clean fixed-fibre Kummer example would not address this.
 
 ### Highest standalone arithmetic-geometry bet
 

@@ -1,0 +1,209 @@
+{
+  "kernel_ladder": {
+    "carrier_zeros": "s=0 and s=m(1+2pi*i*k) for nonzero integers k; none in 0<Re(s)<1/2",
+    "definition": "M=4sinh^2(1/2), P=Phi/M, Q_m(x)=m P^(*m)(m x), J_m=D Q_m",
+    "fixed_support": "supp(J_m)=[0,2] for every m",
+    "fourier_weight": "t^2[((sinh^2(1/2)+sin^2(t/(2m)))^2)/(sinh^4(1/2)(1+(t/m)^2)^2)]^m",
+    "laplace_transform": "J_m_hat(s)=s[Phi_hat(s/m)/M]^m, Phi_hat(z)=4e^(-z)sinh^2((z-1)/2)/(z-1)^2",
+    "order_one_norm_squared": "(1+sinh(2)/2)/(16sinh^4(1/2))",
+    "real_weight_zeros": "t=0 only, always of order two",
+    "rows": [
+      {
+        "autocorrelation_support": [
+          -2,
+          2
+        ],
+        "high_frequency_decay_exponent": -2,
+        "kernel_support": [
+          0,
+          2
+        ],
+        "order": 1,
+        "positive_sample_minimum": 9.999841348338401e-05,
+        "ratio_band": [
+          "exp(-2)",
+          "exp(2)"
+        ],
+        "weight_zero_order_at_zero": 2,
+        "weight_zero_set": [
+          "0"
+        ]
+      },
+      {
+        "autocorrelation_support": [
+          -2,
+          2
+        ],
+        "high_frequency_decay_exponent": -6,
+        "kernel_support": [
+          0,
+          2
+        ],
+        "order": 2,
+        "positive_sample_minimum": 3.282038972533829e-10,
+        "ratio_band": [
+          "exp(-2)",
+          "exp(2)"
+        ],
+        "weight_zero_order_at_zero": 2,
+        "weight_zero_set": [
+          "0"
+        ]
+      },
+      {
+        "autocorrelation_support": [
+          -2,
+          2
+        ],
+        "high_frequency_decay_exponent": -10,
+        "kernel_support": [
+          0,
+          2
+        ],
+        "order": 3,
+        "positive_sample_minimum": 9.177823555445259e-12,
+        "ratio_band": [
+          "exp(-2)",
+          "exp(2)"
+        ],
+        "weight_zero_order_at_zero": 2,
+        "weight_zero_set": [
+          "0"
+        ]
+      },
+      {
+        "autocorrelation_support": [
+          -2,
+          2
+        ],
+        "high_frequency_decay_exponent": -14,
+        "kernel_support": [
+          0,
+          2
+        ],
+        "order": 4,
+        "positive_sample_minimum": 4.822079185081502e-19,
+        "ratio_band": [
+          "exp(-2)",
+          "exp(2)"
+        ],
+        "weight_zero_order_at_zero": 2,
+        "weight_zero_set": [
+          "0"
+        ]
+      },
+      {
+        "autocorrelation_support": [
+          -2,
+          2
+        ],
+        "high_frequency_decay_exponent": -18,
+        "kernel_support": [
+          0,
+          2
+        ],
+        "order": 5,
+        "positive_sample_minimum": 1.47865296684396e-19,
+        "ratio_band": [
+          "exp(-2)",
+          "exp(2)"
+        ],
+        "weight_zero_order_at_zero": 2,
+        "weight_zero_set": [
+          "0"
+        ]
+      },
+      {
+        "autocorrelation_support": [
+          -2,
+          2
+        ],
+        "high_frequency_decay_exponent": -22,
+        "kernel_support": [
+          0,
+          2
+        ],
+        "order": 6,
+        "positive_sample_minimum": 5.608036647428498e-19,
+        "ratio_band": [
+          "exp(-2)",
+          "exp(2)"
+        ],
+        "weight_zero_order_at_zero": 2,
+        "weight_zero_set": [
+          "0"
+        ]
+      }
+    ]
+  },
+  "proof_ledger": {
+    "any_energy_or_off_diagonal_estimate": "NOT PROVED",
+    "compact_ratio_gram_identity": "PROVED EXACT",
+    "open_rh_strip_carrier_nonvanishing": "PROVED EXACT",
+    "positive_nonzero_fourier_weight": "PROVED EXACT",
+    "rh_equivalent_one_sided_negative_mass": "PROVED FROM FROZEN LANDAU ARGUMENT",
+    "rh_equivalent_prefix_energy": "PROVED FROM FROZEN LANDAU ARGUMENT",
+    "rh_or_grh": "NOT PROVED",
+    "zero_free_kernel_ladder": "PROVED EXACT"
+  },
+  "resource_caps": {
+    "curves": 0,
+    "largest_ladder_order": 6,
+    "numerical_zeta_value_evaluations": 0,
+    "primes": 0,
+    "random_samples": 0,
+    "weight_samples_per_order": 6,
+    "zeta_zeros": 0
+  },
+  "rh_equivalence": {
+    "beta_diagonal": "||J_m||_2^2 * 2379/(2278*zeta(2))*log X+O_m(1)",
+    "beta_source": "beta(n)=mu(n)-1_(67|n)mu(n/67)",
+    "criterion": "for every fixed m>=1, RH iff E_m(X)=X^o(1), iff complete L1 or negative mass is e^o(T)",
+    "gram_ratio_band": "exp(-2)<=a/b<=exp(2), independent of m",
+    "prefix_energy": "E_m(X)=integral |sum_(n<=X) beta(n)n^(-1/2)J_m(t-log n)|^2 dt"
+  },
+  "source_contract": {
+    "frozen_sources": [
+      {
+        "blob": "9e280c6dfc6fdaa34690d3966851d6d5e1acebb2",
+        "commit": "fc7ee1304746d3c5b50d02592ccb0d8cdf329c4f",
+        "path": "research/l-families/atlas/function_field/FFPS_BETA_KERNEL_SPECTRAL_NONALIGNMENT.md"
+      },
+      {
+        "blob": "111e9b3f61ab7dd14c73e85e1a4501822ed3f26f",
+        "commit": "fc7ee1304746d3c5b50d02592ccb0d8cdf329c4f",
+        "path": "research/l-families/atlas/function_field/ffps_beta_kernel_spectral_nonalignment.py"
+      },
+      {
+        "blob": "e88ade4246f8003956d54fa3a09719285920cf0e",
+        "commit": "fc7ee1304746d3c5b50d02592ccb0d8cdf329c4f",
+        "path": "research/l-families/atlas/function_field/ffps_beta_kernel_spectral_nonalignment.json"
+      },
+      {
+        "blob": "4d86735b3970f92321e4801fea744cd5f34e6c94",
+        "commit": "fc7ee1304746d3c5b50d02592ccb0d8cdf329c4f",
+        "path": "tests/test_ffps_beta_kernel_spectral_nonalignment.py"
+      },
+      {
+        "blob": "0ac23a6c384a896e50fed21ca7d8bf079c338ac0",
+        "commit": "05aaabe69060c24c8db4ca33c350e109231960f1",
+        "path": "research/l-families/atlas/function_field/FFPS_BANDPASS_BETA_ENERGY_LADDER.md"
+      },
+      {
+        "blob": "9ca6db9ad6b0149936efbd0e99f799d89f3cc53a",
+        "commit": "05aaabe69060c24c8db4ca33c350e109231960f1",
+        "path": "research/l-families/atlas/function_field/ffps_bandpass_beta_energy_ladder.py"
+      },
+      {
+        "blob": "ff568b48100048f6ad963c7afa23c4ac04c3d291",
+        "commit": "05aaabe69060c24c8db4ca33c350e109231960f1",
+        "path": "research/l-families/atlas/function_field/ffps_bandpass_beta_energy_ladder.json"
+      },
+      {
+        "blob": "6b45ddd02148c437bba375d6dbaf753c938e3375",
+        "commit": "05aaabe69060c24c8db4ca33c350e109231960f1",
+        "path": "tests/test_ffps_bandpass_beta_energy_ladder.py"
+      }
+    ]
+  }
+}

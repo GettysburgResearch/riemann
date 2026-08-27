@@ -1,0 +1,113 @@
+{
+  "absolute_neumann_frontier": {
+    "critical_cost": "C_+(y)=C_-(y)=X^(sqrt(c)+o(1)); C_+(y)C_-(y)=X^(2*sqrt(c)+o(1))",
+    "critical_energy_one_way_cost": "X^(2*sqrt(c)+o(1)) after squaring",
+    "critical_scale": "y=c*(log X)^2*(log log X)^2, fixed c>0",
+    "subpower_cost": "log C_+(y), log C_-(y)=(1+o(1))*log(X)/(log log X)^(delta/2)=o(log X)",
+    "subpower_scale": "y=(log X)^2*(log log X)^(2-delta), fixed delta>0"
+  },
+  "bounded_replay": {
+    "coefficients": {
+      "coefficient_cap": 420,
+      "forward_identity": "mu=(product over p<=y of (1-delta_p))*mu_y_rough",
+      "inverse_identity": "mu_y_rough=(sum over y-smooth d) mu(n/d)",
+      "primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "rough_nonzero": 92,
+      "sha256": "c6ac2171022ed657f25babe7d159fafcce297d1b0d3a7bad1c84fee61c664f16"
+    },
+    "commuting_scales": {
+      "commuting_orders_agree": true,
+      "operator": "T_p=I-omega_p*S_p, (S_p F)_X=F_(X/p)",
+      "prefix_cap": 96,
+      "terminating_inverse_reconstructs": true,
+      "toy_omegas": {
+        "2": "1/3",
+        "3": "1/4",
+        "5": "1/6",
+        "7": "1/8"
+      }
+    }
+  },
+  "exact_operator": {
+    "beta_factorization": "D=(I-omega_67*S_67)*product_(p<=y)(I-omega_p*S_p) A_y",
+    "beta_inverse": "A_(y,X)=sum_(j>=0)omega_67^j sum_(d y-smooth)d^(-1/2-it)D_(X/(67^j*d))",
+    "commuting": true,
+    "ordinary_factorization": "M=product_(p<=y)(I-omega_p*S_p) A_y",
+    "product_inverse": "A_(y,X)=sum_(d<=X, d y-smooth)d^(-1/2-it)M_(X/d)",
+    "rough_prefix": "A_(y,X)(t)=sum_(n<=X, gcd(n,P(y))=1) mu(n)*n^(-1/2-it)",
+    "single_inverse": "(I-omega_p*S_p)^(-1)=sum_(j>=0)omega_p^j*S_p^j, terminating at every prefix"
+  },
+  "maximal_conditioning": {
+    "beta_bounds": "(1-67^(-1/2))*C_-(y)^(-1) A_nu<=D_nu<=(1+67^(-1/2))*C_+(y) A_nu",
+    "condition_number": "C_+(y)*C_-(y)",
+    "forward_cost": "C_+(y)=product_(p<=y)(1+p^(-1/2))",
+    "inverse_cost": "C_-(y)=product_(p<=y)(1-p^(-1/2))^(-1)",
+    "measure_scope": "every positive Fourier measure nu",
+    "mobius_bounds": "C_-(y)^(-1) A_nu<=M_nu<=C_+(y) A_nu"
+  },
+  "moving_y_lattice_equivalence": {
+    "critical_scale_transfers_subpower": false,
+    "general_cost_condition": "sqrt(y(X))/log(y(X))=o(log X)",
+    "maximal_rough_target": "sup_(1<=Y<=X)||A_(y(X),Y)||_(L2(lambda_X))^2=X^o(1)",
+    "retained_measure": "lambda_X=(1/L_X)*sum_(|k|<=K_*)|Bhat(t_k)|^2*delta_(t_k)",
+    "subfrontier_is_admissible": true,
+    "theorem": "under the general cost condition, RH iff the maximal y(X)-rough retained-lattice target is X^o(1)"
+  },
+  "pnt_import": {
+    "consequences": {
+      "log_C_minus": "(2+o(1))*sqrt(y)/log(y)",
+      "log_C_plus": "(2+o(1))*sqrt(y)/log(y)",
+      "log_condition_number": "(4+o(1))*sqrt(y)/log(y)"
+    },
+    "derivation": "prime number theorem plus partial summation",
+    "quadratic_error": "sum_(p<=y)1/p=O(log log y)",
+    "statement": "sum_(p<=y)p^(-1/2)=(2+o(1))*sqrt(y)/log(y)",
+    "status": "CLASSICAL EXTERNAL INPUT, NOT REPROVED BY THE REPLAY"
+  },
+  "resource_caps": {
+    "coefficient_cap": 420,
+    "floating_point_operations": 0,
+    "large_matrices": 0,
+    "prefix_cap": 96,
+    "toy_primes": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "cancellation_or_rh_proved": false,
+    "critical_retained_estimate_proved": false,
+    "exact_prefix_coordinate_theorem": true,
+    "operator_norm_claim_for_discarded_lattice_tail": false,
+    "pnt_asymptotic_imported": true,
+    "rough_prefix_estimate_proved": false
+  },
+  "source_contract": {
+    "commit": "8192514ed68f50b8e2a9cff9e1bedab2478bb5c1",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_CRITICAL_BETA_FOURIER_LATTICE_COMPRESSION.md": "2334c471d37456acd974765d15c21122f65d01b1",
+      "research/l-families/atlas/function_field/FFPS_DUPLICATE67_CRITICAL_SCALE_FILTER_FIREWALL.md": "3a66ff2c438945ba3c25193fa6c36734e59bc09f",
+      "research/l-families/atlas/function_field/ffps_critical_beta_fourier_lattice_compression.json": "9cc5d8cf91a00fb18a5a416c0c1a4c8963ff4986",
+      "research/l-families/atlas/function_field/ffps_critical_beta_fourier_lattice_compression.py": "ad0fe111e1cd4be4a56f0da8171fe5cc6cec4d14",
+      "research/l-families/atlas/function_field/ffps_duplicate67_critical_scale_filter_firewall.json": "60d20a60b378fc22632195a4c9f1c6d6eff916dc",
+      "research/l-families/atlas/function_field/ffps_duplicate67_critical_scale_filter_firewall.py": "4a67f44518dad3116aed2b23716cbfbeccea131d",
+      "tests/test_ffps_critical_beta_fourier_lattice_compression.py": "3c71d664649a9cfd3f5840f5ccfa0b6487bb7b67",
+      "tests/test_ffps_duplicate67_critical_scale_filter_firewall.py": "b63c96d25d5c4829ed6854785464c528959d885b"
+    },
+    "imported": "critical retained beta lattice RH criterion and duplicate-67 maximal positive-measure scale isomorphism"
+  },
+  "structural_burden": {
+    "beyond_frontier": "absolute Neumann inversion loses a fixed power; signed scale cancellation or a different norm could still improve it",
+    "cancellation_produced_by_preconditioner": false,
+    "remaining_source": "squarefree y-rough Mobius prefixes sampled jointly on the critical retained Fourier lattice",
+    "why_maximal": "terminating inverses call all smaller y-smooth dilates X/d"
+  }
+}

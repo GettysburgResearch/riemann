@@ -1,0 +1,209 @@
+{
+  "all_curve_extension": {
+    "a1_clean_separation": "the trivial deleted channel is analytic on |z|<sqrt(q), so it cannot cancel an evaluation Frobenius pole",
+    "exact_identity_proved": true,
+    "main_term_algorithm": "factor the trivial inverse-zeta and inverse-L denominators on the normalized unit circle and add their exact principal parts",
+    "possible_cross_channel_cancellation": true,
+    "scope": "every fixed smooth projective geometrically connected curve, open U, exceptional P in U, and quadratic divisor character chi"
+  },
+  "degree_bandpass": {
+    "fixed_parameters": true,
+    "formula": "B(z)=K(z)((1-z^s)/s)^r((1+...+z^(ell-1))/ell)^j",
+    "release_control_coefficients": [
+      "1/3",
+      "1/3",
+      "-1/3",
+      "-2/3",
+      "-1/3",
+      "1/3",
+      "1/3"
+    ],
+    "release_control_degree": 6,
+    "zero_order_at_z_1": 2
+  },
+  "evaluation_boolean": {
+    "a1_identity": "A_sigma(z)=B(z)/2*[(1-q^(-e/2)z^e)(1-sqrt(q)z)/(1-q^(-d/2)z^d)+sigma(1-chi(P)q^(-e/2)z^e)/L_Q(z/sqrt(q),chi)]",
+    "all_curve_identity": "A_sigma(z)=B(z)/2*[(1-q^(-e/2)z^e)/Z_U(z/sqrt(q))+sigma(1-chi(P)q^(-e/2)z^e)/L_U(z/sqrt(q),chi)]",
+    "complete_a1_identity": "H_complete(z)=B(z)(1-q^(-e/2)z^e)(1-sqrt(q)z), a polynomial",
+    "deletion_only_identity": "H_Qfree(z)=B(z)(1-q^(-e/2)z^e)(1-sqrt(q)z)/(1-q^(-d/2)z^d), exponentially decaying",
+    "evaluation_character": "chi_Q(f) is the quadratic character of f mod Q in F_(q^d); Q-divisible f are excluded",
+    "incomplete": true,
+    "positive_energy_firewall": {
+      "coefficient_checks": 21,
+      "coherent_amplitude_identity": "h_+(n)+h_-(n)=h_triv(n)",
+      "difference_identity": "h_+(n)-h_-(n)=h_chi(n)",
+      "positive_energy_identity": "|h_+(n)|^2+|h_-(n)|^2=(|h_triv(n)|^2+|h_chi(n)|^2)/2",
+      "verdict": "positive class averaging retains half the inverse-L energy; coherent amplitude recombination removes it"
+    },
+    "selector": "delta_sigma(D)=1_(Q not<=D)(1+sigma*chi_Q(D))/2"
+  },
+  "frobenius_truth_serum": {
+    "beta_numerator_unit_circle_zeros": 0,
+    "cancellation_criterion": "all evaluation Frobenius modes disappear iff the completed P_Q(z/sqrt(q)) divides B(z) with multiplicity",
+    "completed_quadratic_degree": "N_Q=d-1-1_(2|d)",
+    "degree_rows": {
+      "criterion": "if d-1-1_(2|d)>deg(B), the completed quadratic L polynomial cannot divide B",
+      "rows": [
+        {
+          "all_frobenius_modes_can_be_cancelled": false,
+          "conductor_degree": 9,
+          "field_size": 3,
+          "filter_degree": 6,
+          "irreducible_modulus_count": 2184,
+          "quadratic_completed_l_degree": 8
+        },
+        {
+          "all_frobenius_modes_can_be_cancelled": false,
+          "conductor_degree": 10,
+          "field_size": 3,
+          "filter_degree": 6,
+          "irreducible_modulus_count": 5880,
+          "quadratic_completed_l_degree": 8
+        },
+        {
+          "all_frobenius_modes_can_be_cancelled": false,
+          "conductor_degree": 9,
+          "field_size": 5,
+          "filter_degree": 6,
+          "irreducible_modulus_count": 217000,
+          "quadratic_completed_l_degree": 8
+        },
+        {
+          "all_frobenius_modes_can_be_cancelled": false,
+          "conductor_degree": 10,
+          "field_size": 5,
+          "filter_degree": 6,
+          "irreducible_modulus_count": 976248,
+          "quadratic_completed_l_degree": 8
+        },
+        {
+          "all_frobenius_modes_can_be_cancelled": false,
+          "conductor_degree": 9,
+          "field_size": 7,
+          "filter_degree": 6,
+          "irreducible_modulus_count": 4483696,
+          "quadratic_completed_l_degree": 8
+        },
+        {
+          "all_frobenius_modes_can_be_cancelled": false,
+          "conductor_degree": 10,
+          "field_size": 7,
+          "filter_degree": 6,
+          "irreducible_modulus_count": 28245840,
+          "quadratic_completed_l_degree": 8
+        }
+      ]
+    },
+    "fixed_filter_no_go": "if N_Q>deg(B), at least one unit-circle mode survives for every irreducible evaluation modulus Q of degree d",
+    "formal_periodic_control": {
+      "arithmetic_modulus_realization_claimed": false,
+      "boolean_coefficients_through_12": [
+        "1",
+        "-5/2",
+        "3/2",
+        "-4/27",
+        "95/162",
+        "-41/162",
+        "-499/729",
+        "1445/4374",
+        "2929/4374",
+        "-6574/19683",
+        "-78745/118098",
+        "39379/118098",
+        "354281/531441"
+      ],
+      "boolean_energy_leading_coefficient": "5/18",
+      "character_mean_square": "10/9",
+      "completed_l_control": "P(z)=1+z^2 (Weil-admissible formal control only)",
+      "conductor_degree": 3,
+      "eventual_character_period": [
+        "2/3",
+        "4/3",
+        "-2/3",
+        "-4/3"
+      ],
+      "field_size": 9,
+      "filter": [
+        "1",
+        "-1"
+      ]
+    },
+    "main_terms": {
+      "coefficient_expansion": "h_n=sum_(M_lambda>0)Q_lambda(n)lambda^n+O(R^-n), deg(Q_lambda)=M_lambda-1",
+      "coefficient_recurrence": "if L_norm(z)=1+sum_(k=1)^N ell_k z^k and C(z)=N(z)/L_norm(z), then c_n=N_n-sum_(k=1)^N ell_k c_(n-k)",
+      "energy_asymptotic": "sum_(n<=H)|h_n|^2=H^(2M-1)/[(2M-1)((M-1)!)^2] *sum_(M_lambda=M)|A_lambda|^2+O(H^(2M-2))",
+      "principal_coefficient": "A_lambda=lim_(z->lambda^-1)(1-lambda*z)^M H(z)",
+      "simple_principal_coefficient": "A_lambda=sigma*B(lambda^-1)(1-chi(P)q^(-e/2)lambda^-e)/[2(1-lambda^-1/sqrt(q))^epsilon*prod_(mu!=lambda)(1-mu/lambda)^m_mu]",
+      "simple_root_case": "sum_(n<=H)|h_n|^2=H*sum_lambda|A_lambda|^2+O(1)",
+      "surviving_order": "M_lambda=max(m_lambda-ord_(z=lambda^-1)B(z),0)"
+    },
+    "normalized_roots": "P_Q(z/sqrt(q))=prod_lambda(1-lambda*z)^m_lambda, |lambda|=1"
+  },
+  "literal_beta": {
+    "global_weighted_identity": "sum_D beta_P(D)psi(D)u^deg(D)=(1-psi(P)u^e)/L_U(u,psi)",
+    "rows": [
+      {
+        "character_value_at_exceptional_place": -1,
+        "coefficients": [
+          1,
+          2,
+          1
+        ],
+        "factorization": "(1-(-1)u^e)^2"
+      },
+      {
+        "character_value_at_exceptional_place": 1,
+        "coefficients": [
+          1,
+          -2,
+          1
+        ],
+        "factorization": "(1-(1)u^e)^2"
+      }
+    ]
+  },
+  "resource_caps": {
+    "conductor_degrees": [
+      9,
+      10
+    ],
+    "curves_enumerated": 0,
+    "field_sizes": [
+      3,
+      5,
+      7
+    ],
+    "floating_point_operations": 0,
+    "l_functions_enumerated": 0,
+    "points_enumerated": 0,
+    "polynomials_enumerated": 0,
+    "series_coefficient_cap": 40
+  },
+  "scope_firewalls": {
+    "a1_uniform_nonannihilation_for_large_conductor": true,
+    "all_curve_euler_identity": true,
+    "complete_family_result": false,
+    "external_novelty_claim": false,
+    "genuine_incomplete_boolean_restriction": true,
+    "grh_proved": false,
+    "incomplete_waveprimcar_proved": false,
+    "number_field_inference": false,
+    "owner_restriction_included": false,
+    "rh_proved": false
+  },
+  "source_contract": {
+    "literal_source": "beta_P(D)=mu(D)-1_(P<=D)mu(D-P)",
+    "normalization": "u=z/sqrt(q), so degree n carries q^(-n/2)",
+    "source_blobs": {
+      "research/l-families/atlas/function_field/FFPS_ASSEMBLED_BETA_PERRON_FOURIER_BRIDGE.md": "21ef8f5215ca349f0efffd52dca1543ef6d988d6",
+      "research/l-families/atlas/function_field/FFPS_BANDPASS_BETA_ENERGY_LADDER.md": "0ac23a6c384a896e50fed21ca7d8bf079c338ac0",
+      "research/l-families/atlas/function_field/FUNCTION_FIELD_BASEWAVE_CURVE_EXTENSION.md": "fd8f0c7659b5d5d3e00ff7b1d6b720b77cce2afc",
+      "research/l-families/atlas/function_field/FUNCTION_FIELD_BASEWAVE_SHADOW.md": "e66606a8e06977b4ed54734942adf6c74cf82286",
+      "research/l-families/atlas/function_field/ffps_assembled_beta_perron_fourier_bridge.py": "2dbe93508eadcc9ba9ed15a5f64d02f13c728ef3",
+      "research/l-families/atlas/function_field/ffps_bandpass_beta_energy_ladder.py": "e5091a72b15dc6a5c73d0e0c828ceeb8eb9baef6",
+      "research/l-families/atlas/function_field/function_field_basewave_curve_extension.py": "d2db36d21823d5a28dd4dd3207469e9c9d9edbc7",
+      "research/l-families/atlas/function_field/function_field_basewave_shadow.py": "e4896b7c8e59ba2f3a264d4e846e9ba821ec8116"
+    },
+    "source_commit": "070be728e"
+  }
+}

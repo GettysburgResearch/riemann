@@ -1,0 +1,105 @@
+{
+  "bounded_replay": {
+    "bridge_norm": {
+      "bridge_max_square": "141308905913729/5773745577600",
+      "endpoint_max_square": "3440322846889/230949823104",
+      "endpoints": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "full_max_square": "3440322846889/230949823104",
+      "limit": 16,
+      "squared_comparison": "max(E^2,B^2)/4<=M^2<=4*max(E^2,B^2)"
+    },
+    "dyadic_hidden_excursion": {
+      "all_sampled_prefixes_zero": true,
+      "coefficient_envelope": "|a_n|<=n^(-1/2)",
+      "endpoints": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "half_excursion_length": 64,
+      "largest_gap": 128,
+      "limit": 256,
+      "maximum_square": "16",
+      "sample_count_including_boundaries": 10
+    },
+    "square_root_grid": {
+      "count": 9,
+      "endpoints": [
+        0,
+        4,
+        16,
+        36,
+        64,
+        100,
+        144,
+        196,
+        256
+      ],
+      "limit": 256,
+      "mesh": 2
+    }
+  },
+  "literal_beta_bridge": {
+    "bridge_gate": "B_h(X)=max_j max_(2^j<Y<=2^(j+1))|sum_(2^j<n<=Y)beta(n)n^(-1/2-it_(h,X))|",
+    "canonical_residual_gate": "given dyadic endpoint control, the exact residual is the maximal beta bridge B_0=X^o(1); no universal minimality claim is made",
+    "endpoint_gate": "E_h(X)=max_(e in dyadic endpoints)|D_e(t_(h,X))|",
+    "exact_comparison": "max(E_h,B_h)/2<=max_(Y<=X)|D_Y(t_(h,X))|<=2*max(E_h,B_h)",
+    "local_phase_transport": "(1+|t|log2)^(-1)B_0<=B_t<= (1+|t|log2)B_0",
+    "rh_equivalence": "RH iff both the dyadic endpoint gate and beta bridge gate are X^o(1)"
+  },
+  "resource_caps": {
+    "floating_point_operations": 0,
+    "large_matrices": 0,
+    "toy_limit": 256,
+    "toy_sqrt_mesh": 2,
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "adaptive_sampler_refuted_source_blindly": true,
+    "arbitrary_coefficient_log_sampler_refuted": true,
+    "beta_bridge_estimate_proved": false,
+    "endpoint_only_logarithmic_rh_criterion_proved": false,
+    "literal_beta_dyadic_endpoints_alone": false,
+    "literal_beta_square_root_sampler": true,
+    "rh_or_grh_proved": false
+  },
+  "source_blind_sampling": {
+    "adaptive_verdict": "the same lower bound holds for deterministic adaptive value queries by answering zero and hiding an excursion in the final largest gap; randomized guarantees are not analyzed",
+    "dyadic_or_logarithmic_verdict": "cannot control arbitrary admissible coefficients source-blindly",
+    "envelope": "|a_n|<=C/sqrt(n)",
+    "sharp_lower_bound": "for m sampled endpoints, some admissible sequence has every sample zero and max prefix >=sqrt(X)/(2*(m+1))-1/(2*sqrt(X))",
+    "subpower_frontier": "worst-case subpower error requires m>=X^(1/2-o(1)); m=X^(1/2+o(1)) suffices",
+    "sufficient_count": "O(sqrt(X)/R+1) endpoints",
+    "sufficient_mesh": "if max_j(sqrt(e_(j+1))-sqrt(e_j))<=R, then max_Y|F_Y(t)|<=max_(e in E)|F_e(t)|+2*C*R"
+  },
+  "source_contract": {
+    "commit": "31c0e730ffe80683798d9cc830c26e9d451a8759",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_SINGLE_HARMONIC_MAXIMAL_PHASE_TRANSPORT.md": "6c3b9487fe6bea2bc133c4d6283eb7e972797139",
+      "research/l-families/atlas/function_field/ffps_single_harmonic_maximal_phase_transport.json": "8da26ca2b9ba3dc52b5620aeb5b02bcb44ffcca4",
+      "research/l-families/atlas/function_field/ffps_single_harmonic_maximal_phase_transport.py": "9662f1d429d4acf1c3e1b1f0968f163e5aa8eee9",
+      "tests/test_ffps_single_harmonic_maximal_phase_transport.py": "23e7cbcbc7b25d1fb3e030ea26be8468ba594c4b"
+    },
+    "imports": "one-harmonic maximal-prefix RH equivalence and exact common guarded frequency"
+  },
+  "square_root_endpoint_theorem": {
+    "endpoint_count": "X^(1/2+o(1))",
+    "literal_beta_constant": "C=2 because |beta(n)|<=2",
+    "mesh_error": "4*R",
+    "theorem": "for any fixed nonzero harmonic, a predetermined square-root mesh with R=X^o(1) gives an endpoint-only RH-equivalent target"
+  }
+}

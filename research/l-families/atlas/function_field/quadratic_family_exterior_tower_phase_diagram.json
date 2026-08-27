@@ -1,0 +1,517 @@
+{
+  "even_pure_tate_controls": {
+    "10": {
+      "0": -55,
+      "1": -30,
+      "2": -2
+    },
+    "12": {
+      "0": -78,
+      "1": -48,
+      "2": -5
+    },
+    "2": {
+      "0": -3,
+      "1": 2
+    },
+    "4": {
+      "0": -10,
+      "2": 1
+    },
+    "6": {
+      "0": -21,
+      "1": -6,
+      "2": 1
+    },
+    "8": {
+      "0": -36,
+      "1": -16
+    }
+  },
+  "phase_rows_m_1_through_12": [
+    {
+      "generic_formal_torus_minimal_rank": 0,
+      "genus": 0,
+      "mark_count": 1,
+      "memberwise_minimal_rank_formula": "0",
+      "pure_tate_baseline_by_p_exponent": {},
+      "recurrence_order_bound": 0,
+      "sparse_primitive_expression": [],
+      "weil_weights_descending": []
+    },
+    {
+      "generic_formal_torus_minimal_rank": 2,
+      "genus": 0,
+      "mark_count": 2,
+      "memberwise_minimal_rank_formula": "2",
+      "pure_tate_baseline_by_p_exponent": {
+        "0": -3,
+        "1": 2
+      },
+      "recurrence_order_bound": 2,
+      "sparse_primitive_expression": [
+        {
+          "coefficient": -3,
+          "primitive_exterior_index": 0,
+          "q_power": 0,
+          "weil_weight": 0
+        },
+        {
+          "coefficient": 2,
+          "primitive_exterior_index": 0,
+          "q_power": 1,
+          "weil_weight": 2
+        }
+      ],
+      "weil_weights_descending": [
+        2,
+        0
+      ]
+    },
+    {
+      "generic_formal_torus_minimal_rank": 4,
+      "genus": 1,
+      "mark_count": 3,
+      "memberwise_minimal_rank_formula": "2*r1",
+      "pure_tate_baseline_by_p_exponent": {},
+      "recurrence_order_bound": 4,
+      "sparse_primitive_expression": [
+        {
+          "coefficient": -6,
+          "primitive_exterior_index": 1,
+          "q_power": 0,
+          "weil_weight": 1
+        },
+        {
+          "coefficient": 3,
+          "primitive_exterior_index": 1,
+          "q_power": 1,
+          "weil_weight": 3
+        }
+      ],
+      "weil_weights_descending": [
+        3,
+        1
+      ]
+    },
+    {
+      "generic_formal_torus_minimal_rank": 6,
+      "genus": 1,
+      "mark_count": 4,
+      "memberwise_minimal_rank_formula": "2+2*r1",
+      "pure_tate_baseline_by_p_exponent": {
+        "0": -10,
+        "2": 1
+      },
+      "recurrence_order_bound": 6,
+      "sparse_primitive_expression": [
+        {
+          "coefficient": -10,
+          "primitive_exterior_index": 0,
+          "q_power": 0,
+          "weil_weight": 0
+        },
+        {
+          "coefficient": -10,
+          "primitive_exterior_index": 1,
+          "q_power": 0,
+          "weil_weight": 1
+        },
+        {
+          "coefficient": 4,
+          "primitive_exterior_index": 1,
+          "q_power": 1,
+          "weil_weight": 3
+        },
+        {
+          "coefficient": 1,
+          "primitive_exterior_index": 0,
+          "q_power": 2,
+          "weil_weight": 4
+        }
+      ],
+      "weil_weights_descending": [
+        4,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "generic_formal_torus_minimal_rank": 8,
+      "genus": 2,
+      "mark_count": 5,
+      "memberwise_minimal_rank_formula": "2*r1",
+      "pure_tate_baseline_by_p_exponent": {},
+      "recurrence_order_bound": 8,
+      "sparse_primitive_expression": [
+        {
+          "coefficient": -15,
+          "primitive_exterior_index": 1,
+          "q_power": 0,
+          "weil_weight": 1
+        },
+        {
+          "coefficient": 1,
+          "primitive_exterior_index": 1,
+          "q_power": 2,
+          "weil_weight": 5
+        }
+      ],
+      "weil_weights_descending": [
+        5,
+        1
+      ]
+    },
+    {
+      "generic_formal_torus_minimal_rank": 19,
+      "genus": 2,
+      "mark_count": 6,
+      "memberwise_minimal_rank_formula": "1+2*r1+2*r2",
+      "pure_tate_baseline_by_p_exponent": {
+        "0": -21,
+        "1": -6,
+        "2": 1
+      },
+      "recurrence_order_bound": 19,
+      "sparse_primitive_expression": [
+        {
+          "coefficient": -21,
+          "primitive_exterior_index": 0,
+          "q_power": 0,
+          "weil_weight": 0
+        },
+        {
+          "coefficient": -21,
+          "primitive_exterior_index": 1,
+          "q_power": 0,
+          "weil_weight": 1
+        },
+        {
+          "coefficient": -6,
+          "primitive_exterior_index": 2,
+          "q_power": 0,
+          "weil_weight": 2
+        },
+        {
+          "coefficient": 1,
+          "primitive_exterior_index": 2,
+          "q_power": 1,
+          "weil_weight": 4
+        },
+        {
+          "coefficient": 1,
+          "primitive_exterior_index": 1,
+          "q_power": 2,
+          "weil_weight": 5
+        }
+      ],
+      "weil_weights_descending": [
+        5,
+        4,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "generic_formal_torus_minimal_rank": 34,
+      "genus": 3,
+      "mark_count": 7,
+      "memberwise_minimal_rank_formula": "r1+2*r3",
+      "pure_tate_baseline_by_p_exponent": {},
+      "recurrence_order_bound": 34,
+      "sparse_primitive_expression": [
+        {
+          "coefficient": -28,
+          "primitive_exterior_index": 1,
+          "q_power": 0,
+          "weil_weight": 1
+        },
+        {
+          "coefficient": -7,
+          "primitive_exterior_index": 3,
+          "q_power": 0,
+          "weil_weight": 3
+        },
+        {
+          "coefficient": 1,
+          "primitive_exterior_index": 3,
+          "q_power": 1,
+          "weil_weight": 5
+        }
+      ],
+      "weil_weights_descending": [
+        5,
+        3,
+        1
+      ]
+    },
+    {
+      "generic_formal_torus_minimal_rank": 48,
+      "genus": 3,
+      "mark_count": 8,
+      "memberwise_minimal_rank_formula": "1+r1+r2+2*r3",
+      "pure_tate_baseline_by_p_exponent": {
+        "0": -36,
+        "1": -16
+      },
+      "recurrence_order_bound": 49,
+      "sparse_primitive_expression": [
+        {
+          "coefficient": -36,
+          "primitive_exterior_index": 0,
+          "q_power": 0,
+          "weil_weight": 0
+        },
+        {
+          "coefficient": -36,
+          "primitive_exterior_index": 1,
+          "q_power": 0,
+          "weil_weight": 1
+        },
+        {
+          "coefficient": -8,
+          "primitive_exterior_index": 2,
+          "q_power": 0,
+          "weil_weight": 2
+        },
+        {
+          "coefficient": -8,
+          "primitive_exterior_index": 3,
+          "q_power": 0,
+          "weil_weight": 3
+        },
+        {
+          "coefficient": 1,
+          "primitive_exterior_index": 3,
+          "q_power": 1,
+          "weil_weight": 5
+        }
+      ],
+      "weil_weights_descending": [
+        5,
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "generic_formal_torus_minimal_rank": 48,
+      "genus": 4,
+      "mark_count": 9,
+      "memberwise_minimal_rank_formula": "r1+r3",
+      "pure_tate_baseline_by_p_exponent": {},
+      "recurrence_order_bound": 56,
+      "sparse_primitive_expression": [
+        {
+          "coefficient": -45,
+          "primitive_exterior_index": 1,
+          "q_power": 0,
+          "weil_weight": 1
+        },
+        {
+          "coefficient": -9,
+          "primitive_exterior_index": 3,
+          "q_power": 0,
+          "weil_weight": 3
+        }
+      ],
+      "weil_weights_descending": [
+        3,
+        1
+      ]
+    },
+    {
+      "generic_formal_torus_minimal_rank": 115,
+      "genus": 4,
+      "mark_count": 10,
+      "memberwise_minimal_rank_formula": "1+r1+r2+r3+r4",
+      "pure_tate_baseline_by_p_exponent": {
+        "0": -55,
+        "1": -30,
+        "2": -2
+      },
+      "recurrence_order_bound": 126,
+      "sparse_primitive_expression": [
+        {
+          "coefficient": -55,
+          "primitive_exterior_index": 0,
+          "q_power": 0,
+          "weil_weight": 0
+        },
+        {
+          "coefficient": -55,
+          "primitive_exterior_index": 1,
+          "q_power": 0,
+          "weil_weight": 1
+        },
+        {
+          "coefficient": -10,
+          "primitive_exterior_index": 2,
+          "q_power": 0,
+          "weil_weight": 2
+        },
+        {
+          "coefficient": -10,
+          "primitive_exterior_index": 3,
+          "q_power": 0,
+          "weil_weight": 3
+        },
+        {
+          "coefficient": -1,
+          "primitive_exterior_index": 4,
+          "q_power": 0,
+          "weil_weight": 4
+        }
+      ],
+      "weil_weights_descending": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "generic_formal_torus_minimal_rank": 222,
+      "genus": 5,
+      "mark_count": 11,
+      "memberwise_minimal_rank_formula": "r1+r3+r5",
+      "pure_tate_baseline_by_p_exponent": {},
+      "recurrence_order_bound": 252,
+      "sparse_primitive_expression": [
+        {
+          "coefficient": -66,
+          "primitive_exterior_index": 1,
+          "q_power": 0,
+          "weil_weight": 1
+        },
+        {
+          "coefficient": -11,
+          "primitive_exterior_index": 3,
+          "q_power": 0,
+          "weil_weight": 3
+        },
+        {
+          "coefficient": -1,
+          "primitive_exterior_index": 5,
+          "q_power": 0,
+          "weil_weight": 5
+        }
+      ],
+      "weil_weights_descending": [
+        5,
+        3,
+        1
+      ]
+    },
+    {
+      "generic_formal_torus_minimal_rank": 385,
+      "genus": 5,
+      "mark_count": 12,
+      "memberwise_minimal_rank_formula": "1+r1+r2+r3+r4+r5",
+      "pure_tate_baseline_by_p_exponent": {
+        "0": -78,
+        "1": -48,
+        "2": -5
+      },
+      "recurrence_order_bound": 462,
+      "sparse_primitive_expression": [
+        {
+          "coefficient": -78,
+          "primitive_exterior_index": 0,
+          "q_power": 0,
+          "weil_weight": 0
+        },
+        {
+          "coefficient": -78,
+          "primitive_exterior_index": 1,
+          "q_power": 0,
+          "weil_weight": 1
+        },
+        {
+          "coefficient": -12,
+          "primitive_exterior_index": 2,
+          "q_power": 0,
+          "weil_weight": 2
+        },
+        {
+          "coefficient": -12,
+          "primitive_exterior_index": 3,
+          "q_power": 0,
+          "weil_weight": 3
+        },
+        {
+          "coefficient": -1,
+          "primitive_exterior_index": 4,
+          "q_power": 0,
+          "weil_weight": 4
+        },
+        {
+          "coefficient": -1,
+          "primitive_exterior_index": 5,
+          "q_power": 0,
+          "weil_weight": 5
+        }
+      ],
+      "weil_weights_descending": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    }
+  ],
+  "proof_ledger": {
+    "all_m_exterior_formula": "PROVED EXACT FROM LOCKED SOURCE",
+    "characteristic_polynomial_recurrence_bounds": "PROVED EXACT",
+    "distinct_root_minimal_ranks": "PROVED USING STANDARD FROBENIUS SEMISIMPLICITY",
+    "generic_torus_ranks": "FORMAL GENERIC, NOT AN ARITHMETIC EQUIDISTRIBUTION CLAIM",
+    "low_mark_phase_table": "PROVED EXACT",
+    "mark_count_weight_five_notch": "PROVED EXACT",
+    "rh_or_grh": "NOT PROVED",
+    "sheaf_decomposition_beyond_finite_character_adapter": "NOT CLAIMED",
+    "stable_nonzero_filter_no_go": "PROVED OVER THE FORMAL SYMPLECTIC TORUS",
+    "stable_primitive_collapse": "PROVED EXACT BY SYMPLECTIC LEFSCHETZ ALGEBRA"
+  },
+  "resource_caps": {
+    "curves_enumerated": 0,
+    "finite_field_elements": 0,
+    "largest_exterior_index": 5,
+    "largest_formal_genus_weight_check": 8,
+    "largest_mark_count_symbolically_checked": 24,
+    "largest_stored_phase_table_mark_count": 12,
+    "matrices_constructed": 0,
+    "polynomial_family_members": 0,
+    "zeta_zeros": 0
+  },
+  "schema": "riemann.function_field.quadratic_family_exterior_tower_phase_diagram.v1",
+  "source_contract": {
+    "commit": "c94466e28a48ec429150f63de6d334d4c4f60110",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/QUADRATIC_FAMILY_MULTIPLACE_L_FUNCTION_IDENTITY.md": "56790383fc49fb2f9116bc7add90e19afd00d1c7",
+      "research/l-families/atlas/function_field/quadratic_family_multiplace_l_function_identity.json": "f6183be7e06b284f3cc2c3c4a6ffe5b970c0411e",
+      "research/l-families/atlas/function_field/quadratic_family_multiplace_l_function_identity.py": "e96b8a653573e72966f2fa5069b322996854bec8",
+      "tests/test_quadratic_family_multiplace_l_function_identity.py": "693b94467d4968b3b9af12a9e52a955e0ada2331"
+    },
+    "import": "all-field degree-five coefficient identity and finite-character adapter"
+  },
+  "stable_generic_rank_formulas": {
+    "even_m_at_least_12": "3+6g+8*C(g,2)+16*C(g,3)+16*C(g,4)+32*C(g,5)",
+    "odd_m_at_least_11": "6g+16*C(g,3)+32*C(g,5)"
+  },
+  "theorem": {
+    "all_m_exterior_formula": "S_A(n)=(m*p^n-C_m)Tr(F^n|exterior^1 V_A)+(p^n-m)Tr(F^n|exterior^3 V_A)-Tr(F^n|exterior^5 V_A), C_m=m(m+1)/2",
+    "even_stable_m_at_least_10": "S=-Phi5-Phi4-m*(Phi3+Phi2)-C_m*(Phi1+1); Phi5=0 at m=10",
+    "exact_rank_scope": "under standard semisimplicity of curve Frobenius, replace each primitive dimension by the number r_j of distinct primitive eigenvalues",
+    "finite_dirichlet_representation": "V_A=H^1(C_A) for odd m and V_A=1+H^1(C_A) for even m",
+    "formal_universal_filter_no_go": "for m>=11 a configuration-independent nonzero Q(E) cannot annihilate the moving Phi5 row on the formal symplectic torus",
+    "odd_stable_m_at_least_9": "S=-Phi5-m*Phi3-C_m*Phi1; Phi5=0 at m=9",
+    "stable_recurrence_order_bound": "binomial(m-1,5)",
+    "weight_five_phase": "present at m=5,6,7,8; absent at m=9,10; present with rigid coefficient -1 for all m>=11"
+  }
+}

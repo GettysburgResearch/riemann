@@ -1,0 +1,378 @@
+{
+  "partial_frobenius": {
+    "rows": [
+      {
+        "artin_schreier_h_axis": {
+          "coboundary_obstruction": "if G is rational and G^p-G is polynomial then G has no poles; if deg_x(G)>0 then deg_x(G^p-G)=p*deg_x(G)>1, while deg_x(G)=0 cannot produce x-dependence",
+          "difference": "(h^Q-h)x",
+          "difference_degree_in_x": 1,
+          "partial_isomorphism_exists": false
+        },
+        "artin_schreier_x_axis": {
+          "difference": "h(x^Q-x)",
+          "difference_degree_in_h": 1,
+          "partial_isomorphism_exists": false
+        },
+        "characteristic": 3,
+        "diagonal_support": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "frobenius_power": 3,
+        "partial_graph_support": [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "supports_equal": false
+      },
+      {
+        "artin_schreier_h_axis": {
+          "coboundary_obstruction": "if G is rational and G^p-G is polynomial then G has no poles; if deg_x(G)>0 then deg_x(G^p-G)=p*deg_x(G)>1, while deg_x(G)=0 cannot produce x-dependence",
+          "difference": "(h^Q-h)x",
+          "difference_degree_in_x": 1,
+          "partial_isomorphism_exists": false
+        },
+        "artin_schreier_x_axis": {
+          "difference": "h(x^Q-x)",
+          "difference_degree_in_h": 1,
+          "partial_isomorphism_exists": false
+        },
+        "characteristic": 5,
+        "diagonal_support": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "frobenius_power": 5,
+        "partial_graph_support": [
+          [
+            0,
+            1
+          ],
+          [
+            5,
+            0
+          ]
+        ],
+        "supports_equal": false
+      },
+      {
+        "artin_schreier_h_axis": {
+          "coboundary_obstruction": "if G is rational and G^p-G is polynomial then G has no poles; if deg_x(G)>0 then deg_x(G^p-G)=p*deg_x(G)>1, while deg_x(G)=0 cannot produce x-dependence",
+          "difference": "(h^Q-h)x",
+          "difference_degree_in_x": 1,
+          "partial_isomorphism_exists": false
+        },
+        "artin_schreier_x_axis": {
+          "difference": "h(x^Q-x)",
+          "difference_degree_in_h": 1,
+          "partial_isomorphism_exists": false
+        },
+        "characteristic": 7,
+        "diagonal_support": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "frobenius_power": 7,
+        "partial_graph_support": [
+          [
+            0,
+            1
+          ],
+          [
+            7,
+            0
+          ]
+        ],
+        "supports_equal": false
+      }
+    ],
+    "support_obstruction": "partial Frobenius sends the diagonal x=y to the distinct graph x^Q=y over the geometric product"
+  },
+  "proof_ledger": {
+    "artin_schreier_partial_frobenius_failure": "PROVED BY ARTIN-SCHREIER COBBOUNDARY DEGREE",
+    "bilateral_rank_product": "PROVED EXACT",
+    "clean_torsor_relative_projector": "IMPORTED PROVED EXACT",
+    "cysel_rh_grh": "NOT PROVED",
+    "diagonal_partial_frobenius_failure": "PROVED BY DISTINCT GEOMETRIC SUPPORT",
+    "fourier_and_incidence_rank": "PROVED EXACT ALL Q BY GRAM SPECTRUM",
+    "full_native_relative_complex": "NOT CONSTRUCTED",
+    "uniform_betti_or_trace_estimate": "NOT PROVED"
+  },
+  "rank_theorem": {
+    "bilateral_rank": "the product block has rank rank_left*rank_right",
+    "finite_replay": {
+      "bilateral_rows": [
+        {
+          "left_residue_size": 3,
+          "rank": 8,
+          "right_residue_size": 5
+        },
+        {
+          "left_residue_size": 5,
+          "rank": 24,
+          "right_residue_size": 7
+        }
+      ],
+      "degree_growth": [
+        {
+          "base_field_size": 3,
+          "full_centered_rank": 2,
+          "nonzero_phase_sector_rank": 2,
+          "place_degree": 1,
+          "residue_size": 3
+        },
+        {
+          "base_field_size": 3,
+          "full_centered_rank": 8,
+          "nonzero_phase_sector_rank": 8,
+          "place_degree": 2,
+          "residue_size": 9
+        },
+        {
+          "base_field_size": 3,
+          "full_centered_rank": 26,
+          "nonzero_phase_sector_rank": 26,
+          "place_degree": 3,
+          "residue_size": 27
+        },
+        {
+          "base_field_size": 3,
+          "full_centered_rank": 80,
+          "nonzero_phase_sector_rank": 80,
+          "place_degree": 4,
+          "residue_size": 81
+        },
+        {
+          "base_field_size": 3,
+          "full_centered_rank": 242,
+          "nonzero_phase_sector_rank": 242,
+          "place_degree": 5,
+          "residue_size": 243
+        },
+        {
+          "base_field_size": 3,
+          "full_centered_rank": 728,
+          "nonzero_phase_sector_rank": 728,
+          "place_degree": 6,
+          "residue_size": 729
+        }
+      ],
+      "one_place_rows": [
+        {
+          "cell_count": 3,
+          "rank": 2,
+          "residue_size": 3,
+          "sector": "all_residues"
+        },
+        {
+          "cell_count": 2,
+          "rank": 2,
+          "residue_size": 3,
+          "sector": "nonzero_residues"
+        },
+        {
+          "cell_count": 1,
+          "rank": 1,
+          "residue_size": 3,
+          "sector": "sign_pair_sector"
+        },
+        {
+          "cell_count": 5,
+          "rank": 4,
+          "residue_size": 5,
+          "sector": "all_residues"
+        },
+        {
+          "cell_count": 4,
+          "rank": 4,
+          "residue_size": 5,
+          "sector": "nonzero_residues"
+        },
+        {
+          "cell_count": 2,
+          "rank": 2,
+          "residue_size": 5,
+          "sector": "sign_pair_sector"
+        },
+        {
+          "cell_count": 7,
+          "rank": 6,
+          "residue_size": 7,
+          "sector": "all_residues"
+        },
+        {
+          "cell_count": 6,
+          "rank": 6,
+          "residue_size": 7,
+          "sector": "nonzero_residues"
+        },
+        {
+          "cell_count": 3,
+          "rank": 3,
+          "residue_size": 7,
+          "sector": "sign_pair_sector"
+        },
+        {
+          "cell_count": 11,
+          "rank": 10,
+          "residue_size": 11,
+          "sector": "all_residues"
+        },
+        {
+          "cell_count": 10,
+          "rank": 10,
+          "residue_size": 11,
+          "sector": "nonzero_residues"
+        },
+        {
+          "cell_count": 5,
+          "rank": 5,
+          "residue_size": 11,
+          "sector": "sign_pair_sector"
+        }
+      ]
+    },
+    "fourier_gram": "QI_m-J_m on m distinct physical residues",
+    "fourier_rows": [
+      {
+        "column_count": 1,
+        "gram_rank": 1,
+        "residue_size": 3
+      },
+      {
+        "column_count": 2,
+        "gram_rank": 2,
+        "residue_size": 5
+      },
+      {
+        "column_count": 3,
+        "gram_rank": 3,
+        "residue_size": 7
+      },
+      {
+        "column_count": 5,
+        "gram_rank": 5,
+        "residue_size": 11
+      }
+    ],
+    "rank": "m for m<Q, and Q-1 for m=Q"
+  },
+  "relative_cleanup": {
+    "all_native_cleanups_proved_equivariant": false,
+    "common_relative_complex_constructed": false,
+    "rows": [
+      {
+        "operation": "clean cyclic hard-selected difference",
+        "reason": "C-S=Pi_0 as honest endomorphisms",
+        "status": "PROVED EXACT ON THE CONSTRUCTED TORSOR"
+      },
+      {
+        "operation": "common E-linear pullback, pushforward, extension, or cone",
+        "reason": "a genuinely common equivariant functor preserves C-S=Pi_0",
+        "status": "PROVED FORMALLY"
+      },
+      {
+        "operation": "literal atom diagonal and equal physical-product strata",
+        "reason": "the relations are base-defined and deck-stable, but the native common source morphisms have not been constructed",
+        "status": "CONDITIONALLY EQUIVARIANT"
+      },
+      {
+        "operation": "owner/core overlap and shared incidence",
+        "reason": "they are source-base conditions if transported by one common map; that transport is an open adapter",
+        "status": "CONDITIONALLY EQUIVARIANT"
+      },
+      {
+        "operation": "constant or resonant subquotient removal",
+        "reason": "matching multiplicity, Tate shift, arithmetic Frobenius scalar, and source coefficient are all required",
+        "status": "NOT AUDITED GLOBALLY"
+      },
+      {
+        "operation": "signed conductor recombination",
+        "reason": "it preserves an existing common identity, but cannot create the missing common source complex",
+        "status": "FORMALLY LINEAR"
+      }
+    ],
+    "safe_conclusion": "the rank obstruction applies termwise to the native phase/incidence constituent; it is not a no-go for an unconstructed assembled relative C-S complex in which those constituents cancel first"
+  },
+  "resource_caps": {
+    "curves": 0,
+    "finite_field_element_enumeration": 0,
+    "l_functions": 0,
+    "largest_exact_matrix_dimension": 24,
+    "point_counts": 0,
+    "residue_sizes": [
+      3,
+      5,
+      7,
+      11
+    ],
+    "zeta_zeros": 0
+  },
+  "smallest_escapes": [
+    "retain the exact connected signed incidence/Kummer-Mobius combination before any absolute value and prove cancellation of the high-rank diagonal correspondences",
+    "construct the common relative C-S complex and show every cleanup is one common equivariant functor",
+    "prove a source-specific subpower bound for the number of occupied physical residue cells; no such bound is currently available",
+    "replace separable Adams inversion by a new correspondence-level closed-point trace formula that explicitly retains diagonals"
+  ],
+  "source_contract": {
+    "factor_graph": {
+      "edges": [
+        "left source selects ell",
+        "right source selects rho",
+        "e_ell(-hY) crosses from ell to the right physical source",
+        "e_rho(kX) crosses from rho to the left physical source",
+        "coprimality, common-core, Boolean, shell, and cleanup constraints remain"
+      ],
+      "fixed_fibre_factorization": "for fixed ell,rho and fixed source support, the two phase factors tensor; their individual Fourier separation ranks still grow with the residue cardinalities",
+      "frozen_member": "W=sum_(P,Q,c,d) conjugate(A_(P,c))*B_(Q,d)*e_ell(-h Qd^2)*e_rho(k Pc^2)",
+      "nodes": {
+        "left_physical": "X=Pc^2 in the rho residue field",
+        "left_source": "(P,c), with marked place ell=P^-(c)",
+        "phase_variables": "h in F_ell^x, k in F_rho^x",
+        "right_physical": "Y=Qd^2 in the ell residue field",
+        "right_source": "(Q,d), with marked place rho=P^-(d)"
+      },
+      "wick_image": "(1_(x=x')-1/ell)(1_(y=y')-1/rho), with the literal atom omega=omega' removed but same-residue distinct atoms retained"
+    },
+    "git_blobs": {
+      "98af0db6e:claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+      "98af0db6e:claims/lemmas/L-106131-wick-normal-ordering-additive-kummer-decomposition.md": "37722c3f36ec7d1681f34d4329a3795e5028f7ae",
+      "98af0db6e:claims/lemmas/L-106191-source-dual-centered-double-incidence-correlation.md": "85c4ef92ead7d8b235f9c195c3c0acd16d16030f",
+      "98af0db6e:claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+      "b870366141fe8d5f43d5b81f6e50a67d2a888070:research/l-families/atlas/function_field/FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md": "c79e52ebf0099fe416bc2c79dcb041cc21e025fb",
+      "b870366141fe8d5f43d5b81f6e50a67d2a888070:research/l-families/atlas/function_field/FFPS_CYCLIC_SHEAF_INVARIANT_AUDIT.md": "d531ef36d314549072052cc5b1ae1762c11d00e2",
+      "b870366141fe8d5f43d5b81f6e50a67d2a888070:research/l-families/atlas/function_field/FFPS_CYCLIC_TORSOR_RELATIVE_PROJECTOR.md": "ab16e6c0894e51303119692e67b2f2bf59ba73e4",
+      "b870366141fe8d5f43d5b81f6e50a67d2a888070:research/l-families/atlas/function_field/FFPS_PHYSICAL_SQUARECLASS_ADAPTER.md": "e7cb9133bb6b57ddbb1c7f1e350f1d2d0af7bd1a"
+    }
+  },
+  "verdict": {
+    "bounded_or_subpower_external_product": false,
+    "commuting_partial_frobenius_on_natural_constituents": false,
+    "scope": "exact no-go for termwise conductor-uniform externalization of the universal phase/incidence kernel; the actual native image would inherit the rank of its occupied residue cells, which has not been classified. This is not a no-go for a source-specific sparse image or an assembled signed relative complex that cancels the constituent before Adams extraction.",
+    "statement": "The universal Artin-Schreier phase block has rank Q-1 on all residues and rank m on every proper m-cell restriction; its Wick-centered incidence image has the same ranks. Thus a source-independent adapter valid on a full physical sector has rank comparable with Q=q^a, exponential in the place degree a. The natural AS line and diagonal incidence class also fail independent partial Frobenius invariance."
+  }
+}

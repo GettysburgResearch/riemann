@@ -1,0 +1,116 @@
+{
+  "ensemble_theorem": {
+    "PSD_example": {
+      "A_equals_R_transpose_R": [
+        [
+          "1",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "5/4"
+        ]
+      ],
+      "R": [
+        [
+          "1",
+          "1/2"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "row_norms": [
+        "192",
+        "720"
+      ],
+      "total_energy": "912"
+    },
+    "cancellation_example": {
+      "kernel_coefficients": [
+        "6",
+        "-36",
+        "36"
+      ],
+      "norm_squared": "36/5",
+      "sensitivity": "1/10",
+      "sharp_lower_bound": "36/5",
+      "surviving_rung": 2
+    },
+    "coherent_example": {
+      "K1_coefficients": [
+        "6",
+        "-12"
+      ],
+      "K1_plus_K2_over_10": [
+        "12",
+        "-48",
+        "36"
+      ],
+      "K2_coefficients": [
+        "60",
+        "-360",
+        "360"
+      ],
+      "norm_squared": "96/5",
+      "sharp_lower_bound": "12"
+    },
+    "coherent_factorization": "r is the first nonzero moment of K; K=D^r Q_K with compact Q_K and mass b=(-1)^r*moment_r(K)/r!",
+    "coherent_lower_bounds": "||K||_2^2>=b^2*C_r/W^(2r+1), ||K*mu_X||_2^2>=b^2*C_r*|B(X)|^2/L^(2r+1)",
+    "direct_sum_example": {
+      "conditions": [
+        "8",
+        "32"
+      ],
+      "convex_weights": [
+        "3/2",
+        "3/4"
+      ],
+      "diagonal": "36",
+      "ratio": "16",
+      "reverse": "9/4"
+    },
+    "direct_sum_identity": "Delta/A is the reverse-coefficient-weighted average of kappa_j=(L_j/S_j)^(2m_j+1)",
+    "order_zero_loophole": "Q_(0,S)=1_[0,S]/S has kappa_0=L/S and RH iff L*||Q_(0,S)*mu_X||_2^2=X^o(1) for every S_X>=1",
+    "sharp_constants_m_0_through_4": [
+      1,
+      12,
+      720,
+      100800,
+      25401600
+    ]
+  },
+  "proof_ledger": {
+    "RH_or_GRH": "NOT PROVED",
+    "coherent_lowest_surviving_moment_factorization": "PROVED",
+    "finite_common_Hilbert_PSD_row_reduction": "PROVED",
+    "growing_adaptive_or_indefinite_ensemble_theorem": "NOT PROVED",
+    "m_0_low_pass_loophole_and_RH_equivalence": "PROVED",
+    "m_1_optimal_at_common_support_ratio_among_zero_mean_derivative_rungs": "PROVED",
+    "new_unconditional_beta_estimate": "NOT PROVED",
+    "positive_direct_sum_beats_best_constituent": "DISPROVED",
+    "positive_direct_sum_convex_ratio_identity": "PROVED EXACT",
+    "positive_multiscale_mixture_beats_hull_optimizer": "DISPROVED",
+    "source_specific_beta_cancellation_from_support_geometry": "NOT PROVED"
+  },
+  "resource_caps": {
+    "beta_terms": 0,
+    "curve_computations": 0,
+    "maximum_rung": 4,
+    "polynomial_examples": 4,
+    "primes": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "0123d1ecb097294fc132cf251aebeab9a6bda169",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_HIGHER_DERIVATIVE_CARRIER_HIERARCHY.md": "d9eda9b3abf512c93c6b0f5c8a84b06b658fe385",
+      "research/l-families/atlas/function_field/ffps_higher_derivative_carrier_hierarchy.json": "8b2be0d6b3bc8a78c44f98269d7a139b7635c3f3",
+      "research/l-families/atlas/function_field/ffps_higher_derivative_carrier_hierarchy.py": "83e7ed029c5613f392022c262e4e6bdb95627499",
+      "tests/test_ffps_higher_derivative_carrier_hierarchy.py": "3eb7bde31a113603e2a28c50ef29483f0357c9d6"
+    }
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "exact_scale_ladder": {
+    "finite_scale_replay": {
+      "depth": 12,
+      "first_inverse": "M_X=sum_(k>=0) omega^k D_(X/q^k)",
+      "first_reconstruction": true,
+      "second_inverse": "A_X=sum_(k>=0)(k+1)omega^k D_(X/q^k)",
+      "second_reconstruction": true,
+      "toy_modulus": "1/5"
+    },
+    "ordinary_inverse": "M_X=sum_(k>=0)omega_q^k D_(X/q^k)",
+    "ordinary_to_beta": "D_X(t)=M_X(t)-omega_q(t)M_(X/q)(t), omega_q(t)=q^(-1/2-it)",
+    "q67_coefficients": {
+      "cap": 625,
+      "identity": "beta=M-q^(-s)M_(X/q)=(1-q^(-s)S)^2 A_qfree",
+      "layer_counts": {
+        "0": 375,
+        "1": 6,
+        "2": 0,
+        "zero": 244
+      },
+      "prime": 67,
+      "sha256": "114552f5f37ff254bc280e7b794dff42fb15c24345737634a45875005b725425"
+    },
+    "q67_explicit_layers_on_residue_2": [
+      -1,
+      2,
+      -1,
+      0
+    ],
+    "qfree_inverse": "A_X=sum_(k>=0)(k+1)omega_q^k D_(X/q^k)",
+    "qfree_to_beta": "D_X=A_X-2omega_q A_(X/q)+omega_q^2 A_(X/q^2)",
+    "qfree_to_ordinary": "M_X=A_X-omega_q A_(X/q)",
+    "toy_coefficients": {
+      "cap": 625,
+      "identity": "beta=M-q^(-s)M_(X/q)=(1-q^(-s)S)^2 A_qfree",
+      "layer_counts": {
+        "0": 317,
+        "1": 64,
+        "2": 13,
+        "zero": 231
+      },
+      "prime": 5,
+      "sha256": "d001b63c35cfe3b621151ea1126109e1e6cbad1eee5ea2a1bc602aba22caaaaf"
+    }
+  },
+  "perron_unit_firewall": {
+    "half_plane": "Re(w)>=1/2",
+    "inverse": "1/(1-67^(-w))=sum_(k>=0)67^(-kw)",
+    "pair_factor": "(1-1/sqrt(67))^2<=|(1-67^(-w1))(1-67^(-w2))|<=(1+1/sqrt(67))^2",
+    "single_factor": "1-1/sqrt(67)<=|1-67^(-w)|<=1+1/sqrt(67)",
+    "toy_lower": "4/5",
+    "toy_upper": "6/5"
+  },
+  "resource_caps": {
+    "coefficient_cap": 625,
+    "floating_point_operations": 0,
+    "large_matrices": 0,
+    "scale_depth": 12,
+    "toy_primes": [
+      5
+    ],
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "asymptotic_cancellation_proved": false,
+    "block_hilbert_isomorphism_proved": true,
+    "critical_window_estimate_proved": false,
+    "exact_scale_identities_proved": true,
+    "mobius_block_estimate_proved": false,
+    "perron_numerator_zero_or_contraction": false,
+    "rh_or_grh_proved": false,
+    "weighted_maximal_isomorphism_proved": true
+  },
+  "short_multiplicative_blocks": {
+    "beta_block": "V_k=D_(X/q^k)-D_(X/q^(k+1))=U_k-omega_q U_(k+1)",
+    "bounded_replay": {
+      "asymptotic_sharpness": "aligned and alternating scale modes approach the two constants",
+      "lower_energy_constant": "16/25",
+      "rows": [
+        {
+          "depth": 2,
+          "energy_ratio": "41/50",
+          "mode": "aligned"
+        },
+        {
+          "depth": 2,
+          "energy_ratio": "61/50",
+          "mode": "alternating"
+        },
+        {
+          "depth": 3,
+          "energy_ratio": "19/25",
+          "mode": "aligned"
+        },
+        {
+          "depth": 3,
+          "energy_ratio": "97/75",
+          "mode": "alternating"
+        },
+        {
+          "depth": 4,
+          "energy_ratio": "73/100",
+          "mode": "aligned"
+        },
+        {
+          "depth": 4,
+          "energy_ratio": "133/100",
+          "mode": "alternating"
+        },
+        {
+          "depth": 5,
+          "energy_ratio": "89/125",
+          "mode": "aligned"
+        },
+        {
+          "depth": 5,
+          "energy_ratio": "169/125",
+          "mode": "alternating"
+        },
+        {
+          "depth": 6,
+          "energy_ratio": "7/10",
+          "mode": "aligned"
+        },
+        {
+          "depth": 6,
+          "energy_ratio": "41/30",
+          "mode": "alternating"
+        },
+        {
+          "depth": 7,
+          "energy_ratio": "121/175",
+          "mode": "aligned"
+        },
+        {
+          "depth": 7,
+          "energy_ratio": "241/175",
+          "mode": "alternating"
+        },
+        {
+          "depth": 8,
+          "energy_ratio": "137/200",
+          "mode": "aligned"
+        },
+        {
+          "depth": 8,
+          "energy_ratio": "277/200",
+          "mode": "alternating"
+        },
+        {
+          "depth": 9,
+          "energy_ratio": "17/25",
+          "mode": "aligned"
+        },
+        {
+          "depth": 9,
+          "energy_ratio": "313/225",
+          "mode": "alternating"
+        },
+        {
+          "depth": 10,
+          "energy_ratio": "169/250",
+          "mode": "aligned"
+        },
+        {
+          "depth": 10,
+          "energy_ratio": "349/250",
+          "mode": "alternating"
+        },
+        {
+          "depth": 11,
+          "energy_ratio": "37/55",
+          "mode": "aligned"
+        },
+        {
+          "depth": 11,
+          "energy_ratio": "7/5",
+          "mode": "alternating"
+        },
+        {
+          "depth": 12,
+          "energy_ratio": "67/100",
+          "mode": "aligned"
+        },
+        {
+          "depth": 12,
+          "energy_ratio": "421/300",
+          "mode": "alternating"
+        }
+      ],
+      "upper_energy_constant": "36/25"
+    },
+    "hilbert_bound": "(1-q^(-1/2))^2*sum_k||U_k||^2<=sum_k||V_k||^2<=(1+q^(-1/2))^2*sum_k||U_k||^2",
+    "ordinary_block": "U_k=M_(X/q^k)-M_(X/q^(k+1))"
+  },
+  "smallest_live_estimate": {
+    "name": "MOBIUS-CRIT-BLOCK",
+    "statement": "sum_(k<=log_q X) integral_(critical window) |Bhat(t)|^2|M_(X/q^k)(t)-M_(X/q^(k+1))(t)|^2 dt=X^o(1)",
+    "status": "OPEN SUFFICIENT TARGET; STRONGER THAN THE ASSEMBLED ENDPOINT",
+    "why_live": "Cauchy costs only O(log X)=X^o(1), but the duplicate-67 filter gives no saving for this block square"
+  },
+  "source_contract": {
+    "commit": "070be728e8d434bfb72645e23f9894acf920d3c0",
+    "git_blobs": {
+      "research/l-families/atlas/BETA_BANDPASS_WAVELET_FIVE_MINUTE_HANDOFF.md": "130ef8d478929ce37a8ec4266d1e8b2277073078",
+      "research/l-families/atlas/function_field/FFPS_ASSEMBLED_BETA_PERRON_FOURIER_BRIDGE.md": "21ef8f5215ca349f0efffd52dca1543ef6d988d6",
+      "research/l-families/atlas/function_field/FFPS_BANDPASS_ASSEMBLED_PERRON_LEAKAGE.md": "e7959b8788b8a374920aa53bcafd1fb28cda3b72",
+      "research/l-families/atlas/function_field/FFPS_INFINITE_DYADIC_BOX_BANDPASS_SMOOTHER.md": "01d3ea427883fb761f6301f71d9dd05c552c5056",
+      "research/l-families/atlas/function_field/ffps_assembled_beta_perron_fourier_bridge.json": "1223ab8049492f58cf5e64a25f80d5799aa165f7",
+      "research/l-families/atlas/function_field/ffps_assembled_beta_perron_fourier_bridge.py": "2dbe93508eadcc9ba9ed15a5f64d02f13c728ef3",
+      "research/l-families/atlas/function_field/ffps_bandpass_assembled_perron_leakage.json": "0031e9ae114d7bf6c60d69789d5d52fe4cf04f6e",
+      "research/l-families/atlas/function_field/ffps_bandpass_assembled_perron_leakage.py": "52023bb4527a32a2c9983fdd25707da3361242e8",
+      "research/l-families/atlas/function_field/ffps_infinite_dyadic_box_bandpass_smoother.json": "7a38b5f943a8dc1c0afde8d1cc91f35118b767ca",
+      "research/l-families/atlas/function_field/ffps_infinite_dyadic_box_bandpass_smoother.py": "2ba0f30c9bd67cdb01af639d320daf8133b5bb77",
+      "tests/test_ffps_assembled_beta_perron_fourier_bridge.py": "c59efdea340a2f47c8f1a0b55c9052e2468f7c6a",
+      "tests/test_ffps_bandpass_assembled_perron_leakage.py": "efc9cde7eef3e833aaa5ac40b5d37b1e34f76770",
+      "tests/test_ffps_infinite_dyadic_box_bandpass_smoother.py": "d6a30d654d46edfa01add55cec55b0b3253a12b0"
+    },
+    "scope": "critical-window smoother, assembled Perron bridge, linear leakage theorem, and successor handoff"
+  },
+  "weighted_maximal_isomorphism": {
+    "asymptotic_gain_from_duplicate_factor": "none beyond q-dependent constants",
+    "beta_vs_mobius_norm": "(1-q^(-1/2))*M_nu(X)<=D_nu(X)<=(1+q^(-1/2))*M_nu(X)",
+    "beta_vs_qfree_norm": "(1-q^(-1/2))^2*A_nu(X)<=D_nu(X)<=(1+q^(-1/2))^2*A_nu(X)",
+    "critical_consequence": "the maximal beta, ordinary-Mobius, and 67-free-Mobius critical-window X^o targets are equivalent",
+    "critical_measure": "dnu_X=(1/(2pi))*|Bhat_(r,infinity)(t)|^2*1_(|t|<=exp(sqrt(log(2)*log(X))))dt",
+    "maximal_definition": "F_nu(X)=sup_(1<=Y<=X)||F_Y||_(L2(nu))",
+    "measure_scope": "every positive Fourier measure nu"
+  }
+}

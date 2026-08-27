@@ -1,0 +1,114 @@
+{
+  "compact_kernel_theorem": {
+    "BV_forward_bound": "||K*mu_X||_2^2<=L*(||K||_infty+Var_R K)^2*(B^*(X))^2",
+    "dilation_certificate": {
+      "coefficients_on_0_5": [
+        "1/25",
+        "-2/125"
+      ],
+      "order": 1,
+      "scale": 5,
+      "sensitivity": "1/6"
+    },
+    "fixed_kernel_equivalence": "for every fixed nonzero compact real BV kernel, RH iff raw energy=X^o(1) iff normalized reverse energy=X^o(1)",
+    "information_order": "r(K)=min{q in nonnegative integers: integral t^q K(t) dt != 0}",
+    "moving_kernel_conclusion": "if r is fixed, b_X!=0, and G_X=X^o(1), normalized field energy is equivalent to RH",
+    "moving_kernel_safe_factor": "G_X=L^(2r+2)*(||K_X||_infty+Var K_X)^2/(b_X^2*C_r)",
+    "reverse_bound": "||K*mu_X||_2^2>=b(K)^2*C_r*|B(X)|^2/L^(2r+1)",
+    "rows": [
+      {
+        "coefficient_BV_envelope": "3",
+        "coefficients": [
+          "1"
+        ],
+        "information_order": 0,
+        "name": "low_pass",
+        "sample_geometric_factor_L_2": "36",
+        "sensitivity": "1",
+        "sharp_constant": 1
+      },
+      {
+        "coefficient_BV_envelope": "7",
+        "coefficients": [
+          "1",
+          "-2"
+        ],
+        "information_order": 1,
+        "name": "linear_bandpass",
+        "sample_geometric_factor_L_2": "2352",
+        "sensitivity": "1/6",
+        "sharp_constant": 12
+      },
+      {
+        "coefficient_BV_envelope": "42",
+        "coefficients": [
+          "6",
+          "-12"
+        ],
+        "information_order": 1,
+        "name": "optimal_rung_1",
+        "sample_geometric_factor_L_2": "2352",
+        "sensitivity": "1",
+        "sharp_constant": 12
+      },
+      {
+        "coefficient_BV_envelope": "1620",
+        "coefficients": [
+          "60",
+          "-360",
+          "360"
+        ],
+        "information_order": 2,
+        "name": "optimal_rung_2",
+        "sample_geometric_factor_L_2": "233280",
+        "sensitivity": "1",
+        "sharp_constant": 720
+      }
+    ],
+    "sensitivity": "b(K)=(-1)^r*integral(t^r*K)/r!",
+    "sensitivity_preserving_dilation": "K_S(t)=S^(-r-1)*K(t/S), so G_X=(L/S)^(2r+2)*M(K)^2/(b(K)^2*C_r)",
+    "translation_certificate": {
+      "base_coefficients_on_0_1": [
+        "1",
+        "-2"
+      ],
+      "order": 1,
+      "sensitivity": "1/6",
+      "shifted_coefficients_on_3_4": [
+        "7",
+        "-2"
+      ],
+      "support_interval": "[3,4]"
+    }
+  },
+  "proof_ledger": {
+    "BV_Abel_forward_bound_under_RH": "PROVED",
+    "RH_or_GRH": "NOT PROVED",
+    "every_fixed_nonzero_compact_BV_kernel_RH_equivalence": "PROVED",
+    "failure_outside_safe_geometric_window": "NOT PROVED",
+    "information_order_and_compact_primitive_factorization": "PROVED",
+    "moving_kernel_safe_geometric_factor": "PROVED SUFFICIENT",
+    "new_unconditional_beta_estimate": "NOT PROVED",
+    "translation_and_sensitivity_preserving_dilation_laws": "PROVED",
+    "universal_moment_reverse_bound": "PROVED"
+  },
+  "resource_caps": {
+    "beta_terms": 0,
+    "curve_computations": 0,
+    "exact_polynomial_examples": 4,
+    "maximum_polynomial_degree": 4,
+    "primes": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "f49c463be37b264d121aa27677f9b7ae2a2afdac",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_CARRIER_ENSEMBLE_CONDITION_FIREWALL.md": "ca9874570739bf5d84e920ddad9b1b4e76a78200",
+      "research/l-families/atlas/function_field/ffps_carrier_ensemble_condition_firewall.json": "c24077db591207a9edbb5fc0b7318bf45c0c0e5f",
+      "research/l-families/atlas/function_field/ffps_carrier_ensemble_condition_firewall.py": "b11895c8e7015b5eca9f7bb63c17fe7b6ecf68c8",
+      "tests/test_ffps_carrier_ensemble_condition_firewall.py": "35b6b9b7a443400d512db0f83c72f279a2b4b180"
+    }
+  }
+}

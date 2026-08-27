@@ -1,0 +1,484 @@
+{
+  "bounded_controls": [
+    {
+      "laurent_digest": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          -1,
+          -3
+        ],
+        [
+          1,
+          1,
+          -3
+        ],
+        [
+          2,
+          0,
+          6
+        ],
+        [
+          3,
+          -1,
+          6
+        ],
+        [
+          3,
+          1,
+          6
+        ],
+        [
+          4,
+          -2,
+          6
+        ],
+        [
+          4,
+          0,
+          -12
+        ],
+        [
+          4,
+          2,
+          6
+        ],
+        [
+          5,
+          -3,
+          6
+        ],
+        [
+          5,
+          -1,
+          -6
+        ],
+        [
+          5,
+          1,
+          -6
+        ],
+        [
+          5,
+          3,
+          6
+        ],
+        [
+          6,
+          -4,
+          6
+        ],
+        [
+          6,
+          -2,
+          -24
+        ],
+        [
+          6,
+          0,
+          -36
+        ],
+        [
+          6,
+          2,
+          -24
+        ],
+        [
+          6,
+          4,
+          6
+        ],
+        [
+          7,
+          -5,
+          6
+        ],
+        [
+          7,
+          -3,
+          -18
+        ],
+        [
+          7,
+          -1,
+          12
+        ],
+        [
+          7,
+          1,
+          12
+        ],
+        [
+          7,
+          3,
+          -18
+        ],
+        [
+          7,
+          5,
+          6
+        ],
+        [
+          8,
+          -6,
+          6
+        ],
+        [
+          8,
+          -4,
+          -36
+        ],
+        [
+          8,
+          -2,
+          -30
+        ],
+        [
+          8,
+          0,
+          -24
+        ],
+        [
+          8,
+          2,
+          -30
+        ],
+        [
+          8,
+          4,
+          -36
+        ],
+        [
+          8,
+          6,
+          6
+        ]
+      ],
+      "maximum_total_degree": 8,
+      "nonzero_laurent_monomials": 31,
+      "phase_one_coefficients": [
+        "1",
+        "-6",
+        "6",
+        "12",
+        "0",
+        "0",
+        "-72",
+        "0",
+        "-144"
+      ],
+      "q": 3
+    },
+    {
+      "laurent_digest": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          -1,
+          -5
+        ],
+        [
+          1,
+          1,
+          -5
+        ],
+        [
+          2,
+          0,
+          20
+        ],
+        [
+          3,
+          -1,
+          20
+        ],
+        [
+          3,
+          1,
+          20
+        ],
+        [
+          4,
+          -2,
+          20
+        ],
+        [
+          4,
+          0,
+          -80
+        ],
+        [
+          4,
+          2,
+          20
+        ],
+        [
+          5,
+          -3,
+          20
+        ],
+        [
+          5,
+          -1,
+          -60
+        ],
+        [
+          5,
+          1,
+          -60
+        ],
+        [
+          5,
+          3,
+          20
+        ],
+        [
+          6,
+          -4,
+          20
+        ],
+        [
+          6,
+          -2,
+          -160
+        ],
+        [
+          6,
+          0,
+          -240
+        ],
+        [
+          6,
+          2,
+          -160
+        ],
+        [
+          6,
+          4,
+          20
+        ],
+        [
+          7,
+          -5,
+          20
+        ],
+        [
+          7,
+          -3,
+          -140
+        ],
+        [
+          7,
+          -1,
+          200
+        ],
+        [
+          7,
+          1,
+          200
+        ],
+        [
+          7,
+          3,
+          -140
+        ],
+        [
+          7,
+          5,
+          20
+        ],
+        [
+          8,
+          -6,
+          20
+        ],
+        [
+          8,
+          -4,
+          -240
+        ],
+        [
+          8,
+          -2,
+          -60
+        ],
+        [
+          8,
+          0,
+          160
+        ],
+        [
+          8,
+          2,
+          -60
+        ],
+        [
+          8,
+          4,
+          -240
+        ],
+        [
+          8,
+          6,
+          20
+        ]
+      ],
+      "maximum_total_degree": 8,
+      "nonzero_laurent_monomials": 31,
+      "phase_one_coefficients": [
+        "1",
+        "-10",
+        "20",
+        "40",
+        "-40",
+        "-80",
+        "-520",
+        "160",
+        "-400"
+      ],
+      "q": 5
+    }
+  ],
+  "necklace_ledger": {
+    "1": {
+      "binary_lyndon_count": 2,
+      "content_multiplicities": [
+        1,
+        1
+      ],
+      "sum": 2
+    },
+    "2": {
+      "binary_lyndon_count": 1,
+      "content_multiplicities": [
+        0,
+        1,
+        0
+      ],
+      "sum": 1
+    },
+    "3": {
+      "binary_lyndon_count": 2,
+      "content_multiplicities": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "sum": 2
+    },
+    "4": {
+      "binary_lyndon_count": 3,
+      "content_multiplicities": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "sum": 3
+    },
+    "5": {
+      "binary_lyndon_count": 6,
+      "content_multiplicities": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        0
+      ],
+      "sum": 6
+    },
+    "6": {
+      "binary_lyndon_count": 9,
+      "content_multiplicities": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1,
+        0
+      ],
+      "sum": 9
+    },
+    "7": {
+      "binary_lyndon_count": 18,
+      "content_multiplicities": [
+        0,
+        1,
+        3,
+        5,
+        5,
+        3,
+        1,
+        0
+      ],
+      "sum": 18
+    },
+    "8": {
+      "binary_lyndon_count": 30,
+      "content_multiplicities": [
+        0,
+        1,
+        3,
+        7,
+        8,
+        7,
+        3,
+        1,
+        0
+      ],
+      "sum": 30
+    }
+  },
+  "proof_ledger": {
+    "content_refined_witt_identity": "PROVED EXACT",
+    "critical_normalized_decay_for_q_at_least_five": "PROVED",
+    "maximal_height_wavelet": "NOT PROVED",
+    "number_field_waveprimcar": "NOT PROVED",
+    "polynomial_zeta_substitution": "PROVED EXACT",
+    "q_equals_three_critical_decay": "NOT CLAIMED",
+    "rh_or_grh": "NOT PROVED",
+    "sieve_or_growing_core_uniformity": "NOT INCLUDED",
+    "squarefree_divisor_orientation_identity": "PROVED EXACT",
+    "uniform_continuation_to_radius_one_half": "PROVED"
+  },
+  "resource_caps": {
+    "curves": 0,
+    "finite_field_elements": 0,
+    "irreducibles_enumerated": 0,
+    "maximum_total_degree": 8,
+    "polynomials_enumerated": 0,
+    "q_controls": [
+      3,
+      5
+    ],
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "fad8ce2c4ce8633c5bb67356e6765800eac3d440",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_BASEWAVE_PRIMCAR_IDENTITY.md": "07f5c104f59e7912dc137201d535c947b14fd365",
+      "research/l-families/atlas/function_field/FUNCTION_FIELD_BETA_BOOLEAN_EVALUATION_BANDPASS.md": "0306cfa06c68375dd62472073698aaae0ace0ff9",
+      "research/l-families/atlas/function_field/ffps_basewave_primcar_identity.py": "a13ba5ce66f6c4318eed2cc90cb8c5d9bb97b905",
+      "research/l-families/atlas/function_field/function_field_beta_boolean_evaluation_bandpass.py": "5ab6b5845838495362bb37883386b640e6a8900d"
+    }
+  },
+  "theorem": {
+    "analytic_continuation": "uniform for |z|=1 on every closed disk |u|<=r, 0<r<1/2",
+    "coefficient_bound": "sup_|z|=1 |[u^n]F_q(u,z)| <= C(q,r)*r^(-n), 0<r<1/2",
+    "critical_decay": "after q^(-n/2) normalization, exponential decay for every q>=5",
+    "orientation_euler_product": "F_q(u,z)=prod_P(1-(uz)^deg(P)-(u/z)^deg(P))",
+    "witt_factorization": "F_q(u,z)=prod_(a,b)(1-q*u^(a+b)*z^(a-b))^M(a,b)"
+  }
+}

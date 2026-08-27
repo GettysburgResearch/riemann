@@ -1,0 +1,103 @@
+{
+  "bandpass_assembled_identity": {
+    "estimate_proved": false,
+    "rh_equivalent": true,
+    "sharp_identity_survives_verbatim": true,
+    "wavelet": "replace R by R_(r,j) in the complete assembled divisor wavelet"
+  },
+  "barnes_collapse": {
+    "change_of_variables": "z=z1+z2, v=(z1-z2)/2",
+    "denominator": "z1*z2=(z/2+v)*(z/2-v)",
+    "identity": "(1/(2pi i))*integral_v exp(-v*x)/((z/2+v)*(z/2-v)) dv=exp(-z*abs(x)/2)/z",
+    "jacobian_absolute_value": 1,
+    "relative_line": "-Re(z)/2 < Re(v) < Re(z)/2",
+    "residue_coefficient": "1/z on both signs of x",
+    "x_negative_pole": "v=-z/2",
+    "x_positive_pole": "v=z/2"
+  },
+  "double_perron": {
+    "absolute_region": "Re(z1)>1/2 and Re(z2)>1/2",
+    "boundary_estimate_proved": false,
+    "exact_t_zero_notch_retained": true,
+    "formula": "integral_z1 integral_z2 X^(z1+z2)/(z1*z2) integral_t Rhat_(r,j)(t) B_beta(1/2+z1-it) B_beta(1/2+z2+it)"
+  },
+  "finite_assembled_replay": {
+    "ordered_pairs": 729,
+    "pair_cap": 40,
+    "radical_dimension": 190,
+    "radical_sha256": "d7a21d2798c21760271b4958eda2d37118164a501a27bf284c05c49577da9713"
+  },
+  "max_tilt_leakage": {
+    "crossover": "|t| is of order |z|^(1/(2r)) for positive real z",
+    "expansion": "Rhat_z(0)=z*||primitive(B)||_2^2+O_fixed(|z|^2)",
+    "identity": "integral abs(x) R(x) dx=-2*||primitive(B)||_2^2",
+    "local_two_variable_shape": "Rhat_z(t)=c_bd^2*t^(2r)+z*A_(r,j)+O_fixed(t^(2r+2)+|z|t^2+|z|^2)",
+    "repeated_notch_improves_z_order": false,
+    "rows": [
+      {
+        "absolute_first_moment": "-76/3",
+        "difference_order": 1,
+        "linear_leakage_coefficient": "38/3",
+        "linear_leakage_is_strict": true,
+        "primitive_energy": "38/3",
+        "zero_moments": 2
+      },
+      {
+        "absolute_first_moment": "-32/3",
+        "difference_order": 2,
+        "linear_leakage_coefficient": "16/3",
+        "linear_leakage_is_strict": true,
+        "primitive_energy": "16/3",
+        "zero_moments": 4
+      },
+      {
+        "absolute_first_moment": "-224/9",
+        "difference_order": 3,
+        "linear_leakage_coefficient": "112/9",
+        "linear_leakage_is_strict": true,
+        "primitive_energy": "112/9",
+        "zero_moments": 6
+      },
+      {
+        "absolute_first_moment": "-260/3",
+        "difference_order": 4,
+        "linear_leakage_coefficient": "130/3",
+        "linear_leakage_is_strict": true,
+        "primitive_energy": "130/3",
+        "zero_moments": 8
+      }
+    ],
+    "uniform_bound": "|Rhat_z(t)-Rhat(t)| <= |z|*S/2*exp(|z|S/2)*||B||_1^2"
+  },
+  "resource_caps": {
+    "curves": 0,
+    "difference_order": 4,
+    "finite_fields": 0,
+    "l_functions": 0,
+    "pair_cap": 40,
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "asymptotic_estimate": false,
+    "perron_contour_shift": false,
+    "rh_or_grh_proved": false
+  },
+  "source_contract": {
+    "commit": "b870366141fe8d5f43d5b81f6e50a67d2a888070",
+    "git_blob_count": 8,
+    "predecessor_blobs": {
+      "05aaabe69060c24c8db4ca33c350e109231960f1": {
+        "research/l-families/atlas/function_field/FFPS_BANDPASS_BETA_ENERGY_LADDER.md": "0ac23a6c384a896e50fed21ca7d8bf079c338ac0",
+        "research/l-families/atlas/function_field/ffps_bandpass_beta_energy_ladder.json": "ff568b48100048f6ad963c7afa23c4ac04c3d291",
+        "research/l-families/atlas/function_field/ffps_bandpass_beta_energy_ladder.py": "9ca6db9ad6b0149936efbd0e99f799d89f3cc53a",
+        "tests/test_ffps_bandpass_beta_energy_ladder.py": "6b45ddd02148c437bba375d6dbaf753c938e3375"
+      },
+      "afd49590f1a7e70e68054b8932eb9cadfaa62c40": {
+        "research/l-families/atlas/function_field/FFPS_ASSEMBLED_BETA_PERRON_FOURIER_BRIDGE.md": "21ef8f5215ca349f0efffd52dca1543ef6d988d6",
+        "research/l-families/atlas/function_field/ffps_assembled_beta_perron_fourier_bridge.json": "1223ab8049492f58cf5e64a25f80d5799aa165f7",
+        "research/l-families/atlas/function_field/ffps_assembled_beta_perron_fourier_bridge.py": "8e236e2d77ee047981bc5c14bfaadd1c1cb786c8",
+        "tests/test_ffps_assembled_beta_perron_fourier_bridge.py": "a3abb51a91e719487b85af4c8528898b6724d53d"
+      }
+    }
+  }
+}

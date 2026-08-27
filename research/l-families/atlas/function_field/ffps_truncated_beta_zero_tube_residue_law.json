@@ -1,0 +1,282 @@
+{
+  "exact_replays": {
+    "autocorrelation": {
+      "absolute_lag_moment": "-4",
+      "autocorrelation_notch_order": 4,
+      "correlation_by_lag": {
+        "-1": "-4",
+        "-2": "1",
+        "0": "6",
+        "1": "-4",
+        "2": "1"
+      },
+      "cumulative_norm_square": "2",
+      "difference_order": 2,
+      "kernel": [
+        "1",
+        "-2",
+        "1"
+      ],
+      "max_tilt_linear_coefficient": "2"
+    },
+    "multiplicity_constants": [
+      {
+        "I_m_over_pi": "1",
+        "c_times_inner_power": 0,
+        "compatible_with_O_1_over_c_unnotched": true,
+        "multiplicity": 1,
+        "real_c_coefficient": 1,
+        "real_c_power": -1
+      },
+      {
+        "I_m_over_pi": "1/2",
+        "c_times_inner_power": -2,
+        "compatible_with_O_1_over_c_unnotched": false,
+        "multiplicity": 2,
+        "real_c_coefficient": 2,
+        "real_c_power": -3
+      },
+      {
+        "I_m_over_pi": "3/8",
+        "c_times_inner_power": -4,
+        "compatible_with_O_1_over_c_unnotched": false,
+        "multiplicity": 3,
+        "real_c_coefficient": 6,
+        "real_c_power": -5
+      },
+      {
+        "I_m_over_pi": "5/16",
+        "c_times_inner_power": -6,
+        "compatible_with_O_1_over_c_unnotched": false,
+        "multiplicity": 4,
+        "real_c_coefficient": 20,
+        "real_c_power": -7
+      },
+      {
+        "I_m_over_pi": "35/128",
+        "c_times_inner_power": -8,
+        "compatible_with_O_1_over_c_unnotched": false,
+        "multiplicity": 5,
+        "real_c_coefficient": 70,
+        "real_c_power": -9
+      },
+      {
+        "I_m_over_pi": "63/256",
+        "c_times_inner_power": -10,
+        "compatible_with_O_1_over_c_unnotched": false,
+        "multiplicity": 6,
+        "real_c_coefficient": 252,
+        "real_c_power": -11
+      }
+    ],
+    "notch_constants": [
+      {
+        "compatible_with_O_1_over_c": true,
+        "multiplicity": 1,
+        "notch_weight_order": 0,
+        "real_c_coefficient": "1",
+        "real_c_power": -1
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 2,
+        "notch_weight_order": 0,
+        "real_c_coefficient": "2",
+        "real_c_power": -3
+      },
+      {
+        "compatible_with_O_1_over_c": true,
+        "multiplicity": 2,
+        "notch_weight_order": 2,
+        "real_c_coefficient": "1/2",
+        "real_c_power": -1
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 3,
+        "notch_weight_order": 0,
+        "real_c_coefficient": "6",
+        "real_c_power": -5
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 3,
+        "notch_weight_order": 2,
+        "real_c_coefficient": "1/2",
+        "real_c_power": -3
+      },
+      {
+        "compatible_with_O_1_over_c": true,
+        "multiplicity": 3,
+        "notch_weight_order": 4,
+        "real_c_coefficient": "3/8",
+        "real_c_power": -1
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 4,
+        "notch_weight_order": 0,
+        "real_c_coefficient": "20",
+        "real_c_power": -7
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 4,
+        "notch_weight_order": 2,
+        "real_c_coefficient": "1",
+        "real_c_power": -5
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 4,
+        "notch_weight_order": 4,
+        "real_c_coefficient": "1/4",
+        "real_c_power": -3
+      },
+      {
+        "compatible_with_O_1_over_c": true,
+        "multiplicity": 4,
+        "notch_weight_order": 6,
+        "real_c_coefficient": "5/16",
+        "real_c_power": -1
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 5,
+        "notch_weight_order": 0,
+        "real_c_coefficient": "70",
+        "real_c_power": -9
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 5,
+        "notch_weight_order": 2,
+        "real_c_coefficient": "5/2",
+        "real_c_power": -7
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 5,
+        "notch_weight_order": 4,
+        "real_c_coefficient": "3/8",
+        "real_c_power": -5
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 5,
+        "notch_weight_order": 6,
+        "real_c_coefficient": "5/32",
+        "real_c_power": -3
+      },
+      {
+        "compatible_with_O_1_over_c": true,
+        "multiplicity": 5,
+        "notch_weight_order": 8,
+        "real_c_coefficient": "35/128",
+        "real_c_power": -1
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 6,
+        "notch_weight_order": 0,
+        "real_c_coefficient": "252",
+        "real_c_power": -11
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 6,
+        "notch_weight_order": 2,
+        "real_c_coefficient": "7",
+        "real_c_power": -9
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 6,
+        "notch_weight_order": 4,
+        "real_c_coefficient": "3/4",
+        "real_c_power": -7
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 6,
+        "notch_weight_order": 6,
+        "real_c_coefficient": "3/16",
+        "real_c_power": -5
+      },
+      {
+        "compatible_with_O_1_over_c": false,
+        "multiplicity": 6,
+        "notch_weight_order": 8,
+        "real_c_coefficient": "7/64",
+        "real_c_power": -3
+      },
+      {
+        "compatible_with_O_1_over_c": true,
+        "multiplicity": 6,
+        "notch_weight_order": 10,
+        "real_c_coefficient": "63/256",
+        "real_c_power": -1
+      }
+    ],
+    "toy_local_residues": {
+      "local_residue_square": "9/4",
+      "local_weight": "5/3",
+      "real_c_rows": [
+        {
+          "coefficient": "15/4",
+          "multiplicity": 1,
+          "power_of_c": -1
+        },
+        {
+          "coefficient": "15/2",
+          "multiplicity": 2,
+          "power_of_c": -3
+        },
+        {
+          "coefficient": "45/2",
+          "multiplicity": 3,
+          "power_of_c": -5
+        },
+        {
+          "coefficient": "75",
+          "multiplicity": 4,
+          "power_of_c": -7
+        }
+      ],
+      "zeta_zeros_computed": 0
+    }
+  },
+  "resource_caps": {
+    "floating_point_operations": 0,
+    "large_matrices": 0,
+    "maximum_symbolic_multiplicity": 6,
+    "toy_kernel_length": 3,
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "O_1_over_c_bound_proved": false,
+    "critical_zeros_computed": false,
+    "height_window_fixed": true,
+    "infinite_t_tail_controlled": false,
+    "local_zero_isolating_tube_assumed": true,
+    "perron_contour_shift_proved": false,
+    "rh_or_grh_proved": false
+  },
+  "source_contract": {
+    "commit": "3dbf13f6d1c49e573a5b9cd8355d9c124273062b",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_BANDPASS_ASSEMBLED_PERRON_LEAKAGE.md": "e7959b8788b8a374920aa53bcafd1fb28cda3b72",
+      "research/l-families/atlas/function_field/ffps_bandpass_assembled_perron_leakage.json": "0031e9ae114d7bf6c60d69789d5d52fe4cf04f6e",
+      "research/l-families/atlas/function_field/ffps_bandpass_assembled_perron_leakage.py": "52023bb4527a32a2c9983fdd25707da3361242e8",
+      "tests/test_ffps_bandpass_assembled_perron_leakage.py": "efc9cde7eef3e833aaa5ac40b5d37b1e34f76770"
+    }
+  },
+  "theorem": {
+    "fixed_notch_O_1_over_c_forces": "multiplicity m<=r+1 at a weight zero of order 2r",
+    "local_multiple_zero_law": "delta^(2m-1)|B_beta(1/2+delta+it)|^2 dt -> I_m*Q_rho*Dirac_gamma",
+    "max_tilt_warning": "a nonzero linear leakage coefficient contributes at c^(2-2m)",
+    "real_c_perron_coefficient": "binomial(2m-2,m-1)*Q_rho*w(gamma)",
+    "simple_distribution": "delta|B_beta|^2 dt -> pi*sum_rho Q_rho*Dirac_gamma",
+    "unnotched_O_1_over_c_forces": "every weighted critical-line zero is simple"
+  }
+}

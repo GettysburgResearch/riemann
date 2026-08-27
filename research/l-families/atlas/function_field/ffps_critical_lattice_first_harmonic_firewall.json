@@ -1,0 +1,132 @@
+{
+  "bounded_replay": {
+    "coherent_four_cell": {
+      "coefficient_l2_square": "85",
+      "coordinate_square": "45",
+      "first_harmonic_amplitude": [
+        "-3",
+        "6"
+      ],
+      "phase_cycle": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "-1"
+        ],
+        [
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "positive_coefficients": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "purpose": "finite exact normalization control only; the theorem uses the squarefree-density asymptotic rather than this toy row",
+      "single_row_rayleigh_lower_bound": "9/17"
+    }
+  },
+  "first_harmonic": {
+    "asymptotic": "P_X(t_(1,X))=2*(1+1/67)/zeta(2)*sqrt(X)*(1+o(1))",
+    "fixed_r_verdict": "X^(1-o(1)) for every fixed notch order r",
+    "frequency": "t_(1,X)=2*pi/(log(X)+S+delta)",
+    "kernel_constant": "K_0=Khat_bd(0)=3*(1-sqrt(2))^2*(log(2))^2",
+    "magnitude_dirichlet_polynomial": "P_X(t)=sum_(n<=X)|beta(n)|*n^(-1/2-it)",
+    "weighted_coordinate": "|Bhat(t_1)|^2|P_X(t_1)|^2/L_X~4*((1+1/67)/zeta(2))^2*K_0^2*(2*pi)^(2r)*X/L_X^(2r+1)"
+  },
+  "growing_notch": {
+    "fixed_detector_warning": "the RH-equivalent detector requires fixed r; a moving r(X) is only a source-blind suppression diagnostic",
+    "law": "if r(X)=(c+o(1))*log(X)/loglog(X), the coherent first harmonic has size X^(1-2c+o(1))",
+    "rows": [
+      {
+        "coherent_power_exponent": "1",
+        "r_over_logX_over_loglogX": "0"
+      },
+      {
+        "coherent_power_exponent": "1/2",
+        "r_over_logX_over_loglogX": "1/4"
+      },
+      {
+        "coherent_power_exponent": "0",
+        "r_over_logX_over_loglogX": "1/2"
+      },
+      {
+        "coherent_power_exponent": "-1/2",
+        "r_over_logX_over_loglogX": "3/4"
+      }
+    ],
+    "subpower_threshold": "c>=1/2"
+  },
+  "literal_magnitude_source": {
+    "cap": 625,
+    "dirichlet_series": "(1+q^(-s))*zeta(s)/zeta(2s)",
+    "explicit_layers_on_residue_2": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "identity": "|beta_q(n)|=mu(n)^2+1_(q|n)mu(n/q)^2",
+    "mean_density": "(1+1/q)/zeta(2)",
+    "prime": 67,
+    "sha256": "a7993cfd30dbd3aecd011c2214ddf2832b03802539e065f94ccd4f272d96811b"
+  },
+  "operator_norm_firewall": {
+    "gram_lower_bound": "lambda_max(G_X)>=constant_r*X/(log X)^(2r+2)",
+    "magnitude_vector": "v_n=|beta(n)|/sqrt(n)",
+    "vector_square_upper_bound": "sum_(n<=X)|beta(n)|^2/n<=4*(1+log X)",
+    "verdict": "the subpower-rank critical Gram has power-size operator norm; low rank or source-blind positivity cannot prove the beta bound"
+  },
+  "resource_caps": {
+    "coefficient_identity_cap": 625,
+    "floating_point_operations": 0,
+    "primes_enumerated": 0,
+    "toy_fourier_cells": 4,
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "actual_beta_witness_estimated": false,
+    "countermodel_is_source_blind": true,
+    "literal_beta_magnitudes_preserved": true,
+    "mobius_signs_preserved": false,
+    "moving_notch_is_fixed_detector": false,
+    "rh_or_grh_proved": false
+  },
+  "source_contract": {
+    "commit": "3778eb0f5a80a92a4ca8ffb938f247c79ae6bf37",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_CRITICAL_BETA_SPECTRAL_WITNESS_PRINCIPLE.md": "2e3e0b395e3162e6b73bab5c06ea94e39a360a80",
+      "research/l-families/atlas/function_field/FFPS_INFINITE_DYADIC_BOX_BANDPASS_SMOOTHER.md": "01d3ea427883fb761f6301f71d9dd05c552c5056",
+      "research/l-families/atlas/function_field/ffps_critical_beta_spectral_witness_principle.json": "d48dd56093fb4782308bda622f0d5041f2256a16",
+      "research/l-families/atlas/function_field/ffps_critical_beta_spectral_witness_principle.py": "488f2fa28524ddf1fbb9c5d16053b6d4cd3cbb74",
+      "research/l-families/atlas/function_field/ffps_infinite_dyadic_box_bandpass_smoother.json": "7a38b5f943a8dc1c0afde8d1cc91f35118b767ca",
+      "research/l-families/atlas/function_field/ffps_infinite_dyadic_box_bandpass_smoother.py": "2ba0f30c9bd67cdb01af639d320daf8133b5bb77",
+      "tests/test_ffps_critical_beta_spectral_witness_principle.py": "71c7b5222b73cd2bd5d8649b3cacf208fa68c2a5",
+      "tests/test_ffps_infinite_dyadic_box_bandpass_smoother.py": "d6a30d654d46edfa01add55cec55b0b3253a12b0"
+    },
+    "imports": "single weighted spectral witness theorem and exact order-r zero of the infinite-smoother kernel at frequency zero"
+  },
+  "toy_magnitude_source": {
+    "cap": 625,
+    "dirichlet_series": "(1+q^(-s))*zeta(s)/zeta(2s)",
+    "explicit_layers_on_residue_2": [
+      1,
+      2,
+      1,
+      0
+    ],
+    "identity": "|beta_q(n)|=mu(n)^2+1_(q|n)mu(n/q)^2",
+    "mean_density": "(1+1/q)/zeta(2)",
+    "prime": 5,
+    "sha256": "b6f31a224a26a839ed5eac744037b1aee03ba8c09c9117680fb6fd3b3241dae2"
+  }
+}

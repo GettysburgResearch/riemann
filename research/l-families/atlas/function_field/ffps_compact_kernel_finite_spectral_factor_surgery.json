@@ -1,0 +1,162 @@
+{
+  "divisor_flow": {
+    "conjugate_pair_orbits_forward": {
+      "-1+2i": 2,
+      "-1-2i": 2,
+      "-2+0i": 3,
+      "1+2i": 0,
+      "1-2i": 0,
+      "2+0i": 1
+    },
+    "disjoint_orbit_reverse_order": {
+      "-1+2i": 2,
+      "-1-2i": 2,
+      "-2+0i": 3,
+      "1+2i": 0,
+      "1-2i": 0,
+      "2+0i": 1
+    },
+    "initial_divisor": {
+      "-1+2i": 0,
+      "-1-2i": 0,
+      "-2+0i": 1,
+      "1+2i": 2,
+      "1-2i": 2,
+      "2+0i": 3
+    },
+    "inverse_flows_restore_initial": {
+      "-1+2i": 0,
+      "-1-2i": 0,
+      "-2+0i": 1,
+      "1+2i": 2,
+      "1-2i": 2,
+      "2+0i": 3
+    },
+    "real_flow_capacity": "-m_R(z) <= n_O <= m_z",
+    "reflection": "R(a+ib)=-a+ib",
+    "two_real_flips_direct": {
+      "-1+2i": 0,
+      "-1-2i": 0,
+      "-2+0i": 3,
+      "1+2i": 2,
+      "1-2i": 2,
+      "2+0i": 1
+    },
+    "two_real_flips_sequential": {
+      "-1+2i": 0,
+      "-1-2i": 0,
+      "-2+0i": 3,
+      "1+2i": 2,
+      "1-2i": 2,
+      "2+0i": 1
+    }
+  },
+  "finite_allpass_group": {
+    "composition_law": "finite normalized factors commute and orbit flows add",
+    "elementary_factor": "B_z(s)=(s+conj(z))/(s-z)",
+    "inverse_law": "B_R(z)=B_z^(-1)",
+    "maximum_commutator_error": 3.510833468576701e-16,
+    "maximum_inverse_error": 2.220446049250313e-16,
+    "maximum_unit_modulus_error": 2.220446049250313e-16,
+    "reflection": "R(z)=-conj(z)"
+  },
+  "invariant_scope": {
+    "fixed_obstructions": [
+      "imaginary-axis zeros cannot move without changing Fourier magnitude",
+      "real output forces conjugate-matched nonreal flows",
+      "finite surgery cannot orient an infinite wrong-half-plane divisor",
+      "an infinite product must separately preserve convergence, exponential type, support, and BV regularity"
+    ],
+    "not_preserved_in_general": [
+      "nonzero mean phase or sign",
+      "kernel pointwise shape",
+      "L1 norm",
+      "positive and negative Jordan masses",
+      "oriented complete fields"
+    ],
+    "preserved": [
+      "support containment in the same compact interval",
+      "compact BV regularity",
+      "Fourier magnitude",
+      "autocorrelation",
+      "every finite translate Gram energy",
+      "zero mean when present"
+    ]
+  },
+  "jordan_l1_counterexample": {
+    "carrier_zero": "a=log(4/3), with exp(-a)=3/4",
+    "exact_log_bounds": "31/108 < log(4/3) < 1/3",
+    "flipped_l1_mass": 2.3014126623762774,
+    "flipped_mean": "+1/3",
+    "flipped_negative_mass": 0.984039664521472,
+    "flipped_positive_mass": 1.3173729978548052,
+    "kernel": "weights (1,-4/3) on [0,1] and [1,2]",
+    "maximum_replayed_weight_error": 2.7755575615628914e-17,
+    "original_l1_mass": 2.333333333333333,
+    "original_mean": "-1/3",
+    "original_negative_mass": 1.3333333333333333,
+    "original_positive_mass": 1.0,
+    "verdict": "Fourier energy does not determine oriented Jordan or L1 mass"
+  },
+  "proof_ledger": {
+    "any_beta_energy_estimate": "NOT PROVED",
+    "arbitrary_infinite_allpass_product": "NOT PROVED",
+    "finite_allpass_composition_commutation_inverse": "PROVED EXACT",
+    "finite_rational_allpass_converse": "PROVED EXACT",
+    "global_minimum_phase_for_infinite_divisors": "NOT PROVED",
+    "jordan_l1_invariance": "REFUTED BY AN EXPLICIT TWO-INTERVAL KERNEL",
+    "one_zero_ode_surgery": "IMPORTED AND REDERIVED EXACT",
+    "real_output_and_mean_phase_laws": "PROVED EXACT",
+    "reflection_orbit_divisor_capacity_classification": "PROVED EXACT",
+    "rh_or_grh": "NOT PROVED",
+    "support_bv_fourier_autocorrelation_gram_invariance": "PROVED EXACT"
+  },
+  "rational_converse": {
+    "entireness_gate": "every pole multiplicity of reduced A must be supplied by a zero of F",
+    "statement": "a rational A with no imaginary-axis pole, |A(it)|=1, and A(infinity)=1 is a finite product of elementary B_z factors",
+    "unit_scalar_extension": "without A(infinity)=1 there is one additional constant phase"
+  },
+  "real_structure": {
+    "conjugate_pair_denominator_coefficients": [
+      "5",
+      "-2",
+      "1"
+    ],
+    "conjugate_pair_numerator_coefficients": [
+      "5",
+      "2",
+      "1"
+    ],
+    "four_real_flip_sign": 1,
+    "mean_law": "F_new(0)=eta*F(0)*product_O(-conj(z_O)/z_O)^n_O; eta=1 for normalized ODE surgery",
+    "nonzero_real_mean": "conjugate-pair flows preserve it; each real-zero flip changes its sign",
+    "rule": "real zeros may move singly; nonreal flows must be matched on the conjugate reflection orbit",
+    "three_real_flip_sign": -1,
+    "zero_mean": "preserved"
+  },
+  "resource_caps": {
+    "allpass_zero_samples": 3,
+    "exact_reflection_orbits": 3,
+    "frequency_samples": 6,
+    "kernel_intervals_in_counterexample": 2,
+    "primes": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "root_finders": 0,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "git_blobs": {
+      "011ad6d3f3dade7638f0e5ec9c9d404c889f214d:research/l-families/atlas/function_field/FFPS_BETA_KERNEL_CARRIER_CHIRALITY.md": "ab15fb0a719545e66417985d32609f9f182e81c9",
+      "011ad6d3f3dade7638f0e5ec9c9d404c889f214d:research/l-families/atlas/function_field/FFPS_COMPACT_KERNEL_CARRIER_ZERO_FLIP.md": "4d08a600643e2189a3ba4c9600d9b88d4de1105c",
+      "011ad6d3f3dade7638f0e5ec9c9d404c889f214d:research/l-families/atlas/function_field/ffps_beta_kernel_carrier_chirality.json": "66fe36ecde1acf70a83d0d67e784153c64bd6ce9",
+      "011ad6d3f3dade7638f0e5ec9c9d404c889f214d:research/l-families/atlas/function_field/ffps_beta_kernel_carrier_chirality.py": "da6c4702268d9211c382ee9a0454c81fa2ad60f9",
+      "011ad6d3f3dade7638f0e5ec9c9d404c889f214d:research/l-families/atlas/function_field/ffps_compact_kernel_carrier_zero_flip.json": "5ddeb3284e02d41d87583772fb92147e02781578",
+      "011ad6d3f3dade7638f0e5ec9c9d404c889f214d:research/l-families/atlas/function_field/ffps_compact_kernel_carrier_zero_flip.py": "f3b3759ff49ca1c1343b7eb9539031b650c8f7ac",
+      "011ad6d3f3dade7638f0e5ec9c9d404c889f214d:tests/test_ffps_beta_kernel_carrier_chirality.py": "365f8c2f109433ce13e419c03a82669194e7d48a",
+      "011ad6d3f3dade7638f0e5ec9c9d404c889f214d:tests/test_ffps_compact_kernel_carrier_zero_flip.py": "3e3c6859b9219946ece4a44575c5bdd7fa6b5281"
+    },
+    "import_scope": "the one-zero ODE and Fourier multiplier are imported and rederived; the corrected zero-mean law is refined to the finite exact phase law"
+  },
+  "status": "exact finite rational all-pass classification and abelian divisor-flow calculus; no infinite-product or global minimum-phase theorem"
+}

@@ -74,13 +74,14 @@ def check_scope_markers() -> None:
     note = NOTE_PATH.read_text(encoding="utf-8")
     for marker in (
         "the undilated PRIMCAR parameter class is not closed",
-        "does not bound the predecessor's nonzero Boolean modes",
+        "the convolution isomorphism alone does not bound the predecessor's",
         "The weaker weighted vector gate remains",
         "No such generalized-scale cancellation theorem is supplied.",
         "the zero mode itself is not averaged over `d`",
         "abstract positive-norm arrays",
         "neither gate implies the other",
-        "Neither controls any nonzero `PRIMCAR` mode",
+        "`AUXCOLORPRIMCAR -> PRIMCAR -> PRIMLS -> RH`",
+        "`WAVEPRIMCAR -> BASEWAVE (= PRIMCAR)",
         "No PRIMCAR, PRIMLS, RH, or GRH estimate is proved.",
         "No external novelty claim is made.",
     ):
@@ -1091,7 +1092,11 @@ def fixed_q_coloring_panel(witness_scale: int = 3) -> dict[str, object]:
         ),
         "d_one_specialization": ("COLORPRIMCAR: the AUXCOLORPRIMCAR gate at D=1"),
         "formal_relations": [
-            "RAYPRIMCAR -> AUXCOLORPRIMCAR -> auxiliary rho-sieved energy -> zero mode",
+            ("RAYPRIMCAR -> AUXCOLORPRIMCAR -> PRIMCAR -> PRIMLS -> RH conditionally"),
+            (
+                "the u=1 AUXCOLOR summand has weight one and is exactly the "
+                "three-channel PRIMCAR energy"
+            ),
             "COLLPRIMCAR and AUXCOLORPRIMCAR are positive-norm incomparable",
             "GENPRIMCAR and AUXCOLORPRIMCAR are positive-norm incomparable",
         ],
@@ -1307,6 +1312,11 @@ def coherent_core_gram_panel(limit: int = 30) -> dict[str, object]:
             "sum_u g(u)/sqrt(u) Y_u equals AUXCOLORPRIMCAR; each cofactor "
             "lies in the factor-64 shell H^2/(16*67^alpha*u)<M<="
             "4H^2/(67^alpha*u)"
+        ),
+        "basewave_identity": (
+            "Y_1^alpha(D,H)=sum_I E_D^(alpha,0)(I), so BASEWAVE=PRIMCAR "
+            "and WAVEPRIMCAR implies RH conditionally without the eta<1/2 "
+            "outer-core threshold"
         ),
         "primes": list(primes),
         "scope": "exact finite combinatorial replay; no AUXCOLORPRIMCAR estimate",

@@ -1,0 +1,221 @@
+{
+  "critical_compression": {
+    "critical_frequency": "T_*(X)=exp(sqrt(log(2)*log(X)))",
+    "discarded_lattice_energy": "X^o(1) unconditionally",
+    "retained_mode_count": "2*K_*(X)+1=X^o(1), with k=0 universally identically zero",
+    "retained_radius": "K_*(X)=ceil(L_X*T_*(X)/(2*pi))",
+    "rh_criterion": "RH iff the retained lattice energy is X^o(1)"
+  },
+  "exact_lattice_identity": {
+    "frequencies": "t_k=2*pi*k/L_X",
+    "guarded_period": "L_X=log(X)+S_(r,infinity)+delta, fixed delta>0",
+    "identity": "E(X)=(1/L_X)*sum_(k in Z) |Bhat(t_k)|^2*|D_X(t_k)|^2",
+    "reason": "compact support plus Fourier-series Parseval"
+  },
+  "finite_rank_gram": {
+    "additive_remainder": "E(X)=Q_*(X)+R_*(X), 0<=R_*(X)<=X^o(1)",
+    "entries": "G_X(m,n)=(1/L_X)*sum_(|k|<=K_*) |Bhat(t_k)|^2*exp(-i*t_k*log(m/n))",
+    "estimate_proved_for_retained_form": false,
+    "higher_fixed_notch_reduces_rank_further": false,
+    "other_filter_zeros": "special nonzero lattice alignments may occur, but no additional coordinate is universally removed for every X",
+    "positive_semidefinite": true,
+    "rank_upper_bound": "2*K_*(X)=X^o(1) because Bhat(0)=0"
+  },
+  "parseval_replay": {
+    "rows": [
+      {
+        "field": [
+          3,
+          -1,
+          4,
+          2
+        ],
+        "normalization": "spectral=4*spatial",
+        "spatial_energy": 30,
+        "spectral_energy": 120
+      },
+      {
+        "field": [
+          1,
+          0,
+          -1,
+          0
+        ],
+        "normalization": "spectral=4*spatial",
+        "spatial_energy": 2,
+        "spectral_energy": 8
+      },
+      {
+        "field": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "normalization": "spectral=4*spatial",
+        "spatial_energy": 100,
+        "spectral_energy": 400
+      }
+    ]
+  },
+  "rank_replay": {
+    "rows": [
+      {
+        "integer_log_height": 1,
+        "nonzero_gram_rank_upper_bound": 4,
+        "retained_radius_surrogate": 2
+      },
+      {
+        "integer_log_height": 2,
+        "nonzero_gram_rank_upper_bound": 8,
+        "retained_radius_surrogate": 4
+      },
+      {
+        "integer_log_height": 3,
+        "nonzero_gram_rank_upper_bound": 24,
+        "retained_radius_surrogate": 12
+      },
+      {
+        "integer_log_height": 4,
+        "nonzero_gram_rank_upper_bound": 32,
+        "retained_radius_surrogate": 16
+      },
+      {
+        "integer_log_height": 5,
+        "nonzero_gram_rank_upper_bound": 80,
+        "retained_radius_surrogate": 40
+      },
+      {
+        "integer_log_height": 6,
+        "nonzero_gram_rank_upper_bound": 96,
+        "retained_radius_surrogate": 48
+      },
+      {
+        "integer_log_height": 7,
+        "nonzero_gram_rank_upper_bound": 224,
+        "retained_radius_surrogate": 112
+      },
+      {
+        "integer_log_height": 8,
+        "nonzero_gram_rank_upper_bound": 256,
+        "retained_radius_surrogate": 128
+      },
+      {
+        "integer_log_height": 9,
+        "nonzero_gram_rank_upper_bound": 576,
+        "retained_radius_surrogate": 288
+      },
+      {
+        "integer_log_height": 10,
+        "nonzero_gram_rank_upper_bound": 640,
+        "retained_radius_surrogate": 320
+      },
+      {
+        "integer_log_height": 11,
+        "nonzero_gram_rank_upper_bound": 1408,
+        "retained_radius_surrogate": 704
+      },
+      {
+        "integer_log_height": 12,
+        "nonzero_gram_rank_upper_bound": 1536,
+        "retained_radius_surrogate": 768
+      }
+    ],
+    "theorem_scale": "rank <= 2*ceil(L_X*exp(sqrt(log(2)*log(X)))/(2*pi)) = X^o(1)"
+  },
+  "resource_caps": {
+    "binary_stair_block": 18,
+    "curves": 0,
+    "finite_fields": 0,
+    "l_functions": 0,
+    "rank_surrogate_rows": 12,
+    "toy_fourier_cells": 4,
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "arbitrary_vector_operator_norm_compression": false,
+    "critical_tail_uses_only_trivial_beta_bound": true,
+    "exact_continuous_to_discrete_identity": true,
+    "finite_rank_is_not_an_energy_bound": true,
+    "rh_or_grh_proved": false
+  },
+  "source_contract": {
+    "commit": "b631040b76d696dbc69cadde7af240077f605c94",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_INFINITE_DYADIC_BOX_BANDPASS_SMOOTHER.md": "01d3ea427883fb761f6301f71d9dd05c552c5056",
+      "research/l-families/atlas/function_field/ffps_infinite_dyadic_box_bandpass_smoother.json": "7a38b5f943a8dc1c0afde8d1cc91f35118b767ca",
+      "research/l-families/atlas/function_field/ffps_infinite_dyadic_box_bandpass_smoother.py": "2ba0f30c9bd67cdb01af639d320daf8133b5bb77",
+      "tests/test_ffps_infinite_dyadic_box_bandpass_smoother.py": "d6a30d654d46edfa01add55cec55b0b3253a12b0"
+    },
+    "imported": "fixed compact infinite-smoother beta field, exact energy, stair envelope, and critical tail exponent",
+    "source_line_endings": "irrelevant because Git object IDs are pinned"
+  },
+  "stair_replay": {
+    "rows": [
+      {
+        "M": 3,
+        "lattice_block_upper_bound": "constant*2^(1)"
+      },
+      {
+        "M": 4,
+        "lattice_block_upper_bound": "constant*2^(-2)"
+      },
+      {
+        "M": 5,
+        "lattice_block_upper_bound": "constant*2^(-7)"
+      },
+      {
+        "M": 6,
+        "lattice_block_upper_bound": "constant*2^(-14)"
+      },
+      {
+        "M": 7,
+        "lattice_block_upper_bound": "constant*2^(-23)"
+      },
+      {
+        "M": 8,
+        "lattice_block_upper_bound": "constant*2^(-34)"
+      },
+      {
+        "M": 9,
+        "lattice_block_upper_bound": "constant*2^(-47)"
+      },
+      {
+        "M": 10,
+        "lattice_block_upper_bound": "constant*2^(-62)"
+      },
+      {
+        "M": 11,
+        "lattice_block_upper_bound": "constant*2^(-79)"
+      },
+      {
+        "M": 12,
+        "lattice_block_upper_bound": "constant*2^(-98)"
+      },
+      {
+        "M": 13,
+        "lattice_block_upper_bound": "constant*2^(-119)"
+      },
+      {
+        "M": 14,
+        "lattice_block_upper_bound": "constant*2^(-142)"
+      },
+      {
+        "M": 15,
+        "lattice_block_upper_bound": "constant*2^(-167)"
+      },
+      {
+        "M": 16,
+        "lattice_block_upper_bound": "constant*2^(-194)"
+      },
+      {
+        "M": 17,
+        "lattice_block_upper_bound": "constant*2^(-223)"
+      },
+      {
+        "M": 18,
+        "lattice_block_upper_bound": "constant*2^(-254)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "conditional_signed_pushforward_frontier": {
+    "complete_native_relative_complex": "NOT CONSTRUCTED",
+    "exotic_structure_after_complete_signed_pushforward": "OPEN / NOT RULED OUT",
+    "finite_frozen_source_lift": "FORMALLY AVAILABLE WITH SOURCE-CARDINALITY COST",
+    "natural_raw_coordinatewise_lift": "OBSTRUCTED BY CROSSED INCIDENCE"
+  },
+  "correction_theorem": {
+    "internal_left_matrix_rank": 2,
+    "internal_right_matrix_rank": 3,
+    "left_block_coordinate_count": 4,
+    "marked_place_block_separation_rank": 1,
+    "meaning": "large rank in the two atom coordinates inside either marked-place block does not imply large separation rank across the ell|rho blocks",
+    "right_block_coordinate_count": 9
+  },
+  "correspondence_escape": {
+    "distinct_through_depth": 5,
+    "divisor_example": {
+      "a": 30,
+      "b": 42
+    },
+    "double_nonzero_mobius_slots": 64,
+    "firewall": "support-symbol sparsity is not a closed-point trace theorem: a valid correspondence category must also transport extension level, Adams powers of stalk eigenvalues, Tate scalars, and cleanup cones",
+    "graph_signatures": [
+      [
+        1,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        27,
+        1
+      ],
+      [
+        81,
+        1
+      ],
+      [
+        243,
+        1
+      ]
+    ],
+    "left_nonzero_mobius_slots": 8,
+    "q": 3,
+    "right_nonzero_mobius_slots": 8
+  },
+  "crossed_core_gluing": {
+    "allocation_trilemma": [
+      {
+        "allocation": "core c on rho/evaluation block",
+        "crossed_object": "ell divides c (and the least-place selector)"
+      },
+      {
+        "allocation": "core c on ell/selector block",
+        "crossed_object": "evaluation and nonincidence of c at rho"
+      },
+      {
+        "allocation": "duplicate c on both blocks",
+        "crossed_object": "the equality diagonal c_ell=c_rho"
+      }
+    ],
+    "coefficient_only_pullback_equation": "alpha-A^q=0",
+    "coefficient_only_support": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "coefficient_only_support_preserved": false,
+    "original_support": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "root_only_pullback_equation": "alpha^q-A=0",
+    "root_only_support": [
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "root_only_support_preserved": false,
+    "universal_linear_incidence": "F_A(T)=T-A with alpha=A"
+  },
+  "frozen_source_cost": {
+    "conditional_scope": "the identity-rank lower bound applies when a universal adapter retains one nonzero c=ell row for every place in the degree shell; it is not an occupancy theorem for the final live source",
+    "finite_horizon_escape": "freezing every F_q source label as a separate zero-dimensional summand supplies formal partial Frobenius but pays source-cardinality rank",
+    "q": 3,
+    "rows": [
+      {
+        "degree": 1,
+        "identity_incidence_submatrix_rank": 3,
+        "irreducible_place_count": 3
+      },
+      {
+        "degree": 2,
+        "identity_incidence_submatrix_rank": 3,
+        "irreducible_place_count": 3
+      },
+      {
+        "degree": 3,
+        "identity_incidence_submatrix_rank": 8,
+        "irreducible_place_count": 8
+      },
+      {
+        "degree": 4,
+        "identity_incidence_submatrix_rank": 18,
+        "irreducible_place_count": 18
+      },
+      {
+        "degree": 5,
+        "identity_incidence_submatrix_rank": 48,
+        "irreducible_place_count": 48
+      },
+      {
+        "degree": 6,
+        "identity_incidence_submatrix_rank": 116,
+        "irreducible_place_count": 116
+      }
+    ]
+  },
+  "minimum_bifrobenius_gluing_datum": [
+    "one common pushed-forward native class K_nat on the ordered marked-place base",
+    "commuting ell- and rho-partial Frobenius structures with the correct cocycle",
+    "all independent extension-degree traces equal to the literal native source",
+    "the product of the two partial Frobenii equals ordinary total Frobenius",
+    "common equivariant hard/selected projectors realizing C-S=Pi_0",
+    "common equivariant atomic, equal-product, root, owner/core, incidence, and resonant cleanup cones",
+    "the signed varying-conductor recombination before every norm or absolute value",
+    "uniform complexity bounds for every partial Adams transform after pushforward"
+  ],
+  "proof_ledger": {
+    "CYSEL_WCADD_WCKUM_RH_GRH": "NOT PROVED",
+    "absolute_nonexistence_after_signed_pushforward": "NOT PROVED",
+    "coordinate_allocation_trilemma": "PROVED FOR THE NATURAL RAW UNIVERSALIZATION",
+    "correspondence_level_closed_point_formula": "NOT CONSTRUCTED",
+    "crossed_universal_divisor_incidence_failure": "PROVED BY DISTINCT SUPPORT",
+    "full_native_commuting_partial_frobenii": "NOT CONSTRUCTED",
+    "full_native_external_product": "NOT CONSTRUCTED",
+    "internal_QI_minus_J_rank": "RETAINED EXACT FROM THE PREDECESSOR",
+    "internal_rank_implies_marked_place_nonseparability": "REFUTED BY THE BLOCK OUTER-PRODUCT CONTROL",
+    "one_axis_AS_and_diagonal_obstructions": "RETAINED BUT NOT THE MARKED-PLACE ADAMS AXES",
+    "simultaneous_marked_block_frobenius": "PROVED FORMALLY FOR THE LOCAL AS AND DIAGONAL CONSTITUENTS",
+    "uniform_betti_or_trace_estimate": "NOT PROVED"
+  },
+  "resource_caps": {
+    "closed_place_enumeration": 0,
+    "curve_or_point_count": 0,
+    "finite_field_element_enumeration": 0,
+    "l_function_or_zero_computation": 0,
+    "largest_exact_matrix_dimension": 9,
+    "largest_irreducible_count": 116,
+    "polynomial_enumeration": 0
+  },
+  "simultaneous_block_frobenius": {
+    "artin_schreier_monomial": "h*Y",
+    "diagonal_support": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "one_axis_Y_image": "h*Y^q",
+    "one_axis_diagonal_support": [
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "one_axis_h_image": "h^q*Y",
+    "one_axis_reduced_support_preserved": false,
+    "q": 3,
+    "simultaneous_diagonal_support": [
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "simultaneous_image": "(h*Y)^q",
+    "simultaneous_reduced_support_preserved": true,
+    "trace_invariant_under_simultaneous_block_frobenius": true
+  },
+  "source_contract": {
+    "factor_partition": {
+      "crossed_edges": [
+        "ell=P^-(c), while c also supplies X on the rho block",
+        "rho=P^-(d), while d also supplies Y on the ell block",
+        "the common core g is shared by both source sides",
+        "coprimality, Boolean, shell, owner/core, and cleanup relations couple the sides"
+      ],
+      "local_constituent_verdict": "the Artin-Schreier and centered-incidence constituents are not by themselves marked-place partial-Frobenius obstructions when all coordinates belonging to one place move simultaneously",
+      "marked_place_blocks": {
+        "ell": [
+          "ell",
+          "h",
+          "Y=Q*d^2 mod ell",
+          "Y'",
+          "ell-incidence"
+        ],
+        "rho": [
+          "rho",
+          "k",
+          "X=P*c^2 mod rho",
+          "X'",
+          "rho-incidence"
+        ]
+      }
+    },
+    "git_blobs": {
+      "05da4d1705d994dd02d650f321196f8464034ba8:research/l-families/atlas/function_field/FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md": "c79e52ebf0099fe416bc2c79dcb041cc21e025fb",
+      "464c3705fd9418be8fc03488109cc24dab6f5efd:research/l-families/atlas/function_field/FFPS_CYCLIC_TORSOR_RELATIVE_PROJECTOR.md": "ab16e6c0894e51303119692e67b2f2bf59ba73e4",
+      "5c9462064aefe43164fcf5bc0b6d76b575e67a49:research/l-families/atlas/function_field/FFPS_PHYSICAL_SQUARECLASS_ADAPTER.md": "e7cb9133bb6b57ddbb1c7f1e350f1d2d0af7bd1a",
+      "8192514ed68f50b8e2a9cff9e1bedab2478bb5c1:research/l-families/atlas/function_field/FFPS_TERNARY_RELATIVE_CORRESPONDENCE_NORMAL_FORM.md": "4ee3c50f3cce3e7aa2dbd901b93fd50b713ea4bb",
+      "98af0db6e:claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+      "98af0db6e:claims/lemmas/L-106131-wick-normal-ordering-additive-kummer-decomposition.md": "37722c3f36ec7d1681f34d4329a3795e5028f7ae",
+      "98af0db6e:claims/lemmas/L-106191-source-dual-centered-double-incidence-correlation.md": "85c4ef92ead7d8b235f9c195c3c0acd16d16030f",
+      "98af0db6e:claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+      "9c95eb3684dfd280e07b48fd5dca5f9efa716349:research/l-families/atlas/function_field/FFPS_FROBENIUS_EXTENSION_TOWER_ALIASING.md": "3d16de5cf8b099b8348c470befcda6c6050aad9e",
+      "9ced25befb6dd88146809866a34a15fec034b096:research/l-families/atlas/function_field/FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md": "21645bdb609320cf176893aa589af7a17c741d9a",
+      "e3903136912402a969abee7bfcf1ad5f9dfbd1a0:research/l-families/atlas/function_field/FFPS_NATIVE_PARTIAL_FROBENIUS_VERDICT.md": "19939eb240ca6b2b6d5221954cec76fe0f5c4f9c"
+    }
+  },
+  "status": "exact marked-place axis correction and natural universal-source allocation obstruction; no absolute no-go after signed pushforward"
+}

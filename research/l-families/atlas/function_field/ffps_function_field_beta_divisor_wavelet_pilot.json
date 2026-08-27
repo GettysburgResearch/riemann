@@ -1,0 +1,174 @@
+{
+  "adapter": {
+    "beta_local_vector": [
+      1,
+      -2,
+      1
+    ],
+    "conductor": "Q=T^3+T+1",
+    "definition": "sum_(alpha=0)^2 c_alpha chi(Pi)^alpha (uz)^(alpha e) sum_(M sf,Pi not|M) mu(M)chi(M)u^deg(M)sum_(A|M)z^(2deg(A)-deg(M))",
+    "euler_product": "(1-chi(Pi)(uz)^e)^2 product_(R!=Pi)(1-chi(R)(uz)^deg(R)-chi(R)(u/z)^deg(R))",
+    "exceptional_character": 1,
+    "exceptional_place": "Pi=T",
+    "field": "F_5[T]",
+    "witt_l_factorization": "(1-chi(Pi)(uz)^e)^2/(1-chi(Pi)(uz)^e-chi(Pi)(u/z)^e) times product_(a,b)L_U(u^(a+b)z^(a-b),chi^(a+b))^(-M(a,b))"
+  },
+  "exact_example": {
+    "frobenius_eigenvalues": "alpha,beta=(-3+-sqrt(-11))/2",
+    "frobenius_modulus": "sqrt(5)",
+    "identity_routes": [
+      "literal beta enumeration",
+      "three-channel squarefree-core enumeration",
+      "two-color Euler product",
+      "content-refined twisted Witt/L product"
+    ],
+    "laurent_coefficients": [
+      {
+        "coefficient": 1,
+        "degree": 0,
+        "phase": 0
+      },
+      {
+        "coefficient": -2,
+        "degree": 1,
+        "phase": -1
+      },
+      {
+        "coefficient": -4,
+        "degree": 1,
+        "phase": 1
+      },
+      {
+        "coefficient": 2,
+        "degree": 2,
+        "phase": -2
+      },
+      {
+        "coefficient": 4,
+        "degree": 2,
+        "phase": 0
+      },
+      {
+        "coefficient": 7,
+        "degree": 2,
+        "phase": 2
+      },
+      {
+        "coefficient": 5,
+        "degree": 3,
+        "phase": -3
+      },
+      {
+        "coefficient": -2,
+        "degree": 3,
+        "phase": -1
+      },
+      {
+        "coefficient": -1,
+        "degree": 3,
+        "phase": 3
+      },
+      {
+        "coefficient": -24,
+        "degree": 4,
+        "phase": -4
+      },
+      {
+        "coefficient": -28,
+        "degree": 4,
+        "phase": -2
+      },
+      {
+        "coefficient": -14,
+        "degree": 4,
+        "phase": 0
+      },
+      {
+        "coefficient": -22,
+        "degree": 4,
+        "phase": 2
+      },
+      {
+        "coefficient": -32,
+        "degree": 4,
+        "phase": 4
+      }
+    ],
+    "quadratic_l_coefficients_through_degree_four": [
+      1,
+      3,
+      5,
+      0,
+      0
+    ],
+    "quadratic_l_polynomial": "1+3u+5u^2",
+    "zero_frequency_coefficients": [
+      1,
+      -6,
+      13,
+      2,
+      -120
+    ]
+  },
+  "proof_ledger": {
+    "beta_three_channel_adapter": "PROVED EXACT",
+    "frozen_l_polynomial": "PROVED BY COMPLETE RESIDUE-CLASS SUMS",
+    "growing_sieve_or_core_uniformity": "NOT PROVED",
+    "literal_core_euler_identity": "PROVED EXACT",
+    "near_square_or_maximal_wavelet_estimate": "NOT PROVED",
+    "number_field_waveprimcar": "NOT PROVED",
+    "quadratic_odd_even_selection_rule": "PROVED EXACT",
+    "rh_or_grh": "NOT PROVED",
+    "twisted_witt_l_factorization": "PROVED FORMALLY",
+    "zero_mode_energy_main_term": "PROVED BY DOUBLE-POLE COEFFICIENTS",
+    "zero_mode_meromorphic_continuation": "PROVED BY NORMAL CONVERGENCE AFTER EXTRACTING LENGTHS 1 AND 2"
+  },
+  "quadratic_selection_rule": {
+    "even_word_length": "inverse deleted-principal L_U(v,1)=(1-5v)/(1-v^3)",
+    "first_two_lengths": "(1+3u+5u^2)^(-2) times (1-5u^2)/(1-u^6)",
+    "odd_word_length": "inverse quadratic L_Q(v,chi)",
+    "zero_frequency": "(1-u)^2/(1-2u) product_(k>=1)L_U(u^k,chi^k)^(-L_k(2))"
+  },
+  "resource_caps": {
+    "curves_or_points": 0,
+    "floating_point_fits": 0,
+    "irreducibles_replayed": 205,
+    "maximum_monic_degree": 4,
+    "maximum_primitive_word_length": 4,
+    "monic_polynomials_per_complete_degree_scan": 781,
+    "numerical_l_zeros": 0,
+    "q": 5,
+    "random_samples": 0,
+    "zeta_zeros": 0
+  },
+  "scope_firewall": {
+    "complete_degree_shell_only": true,
+    "finite_rows_imply_growing_cancellation": false,
+    "function_field_rh_imported": false,
+    "integer_rh_inferred": false,
+    "zero_frequency_is_not_near_square_kernel": true
+  },
+  "source_contract": {
+    "commit": "3658d4c31",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FUNCTION_FIELD_BETA_BOOLEAN_EVALUATION_BANDPASS.md": "0306cfa06c68375dd62472073698aaae0ace0ff9",
+      "research/l-families/atlas/function_field/FUNCTION_FIELD_DIVISOR_WAVELET_WITT_FACTORIZATION.md": "ad1ec29ec5678c4dfe356c29f1077de8e2dc868e",
+      "research/l-families/atlas/function_field/function_field_beta_boolean_evaluation_bandpass.json": "b0131f481be7a052ea5df89e986cbb976c548d65",
+      "research/l-families/atlas/function_field/function_field_beta_boolean_evaluation_bandpass.py": "5ab6b5845838495362bb37883386b640e6a8900d",
+      "research/l-families/atlas/function_field/function_field_divisor_wavelet_witt_factorization.json": "41c8ae54f6edd556055fcadee8b6ca72581cbed8",
+      "research/l-families/atlas/function_field/function_field_divisor_wavelet_witt_factorization.py": "af697bda209ef4e0f614a672d931e76bba94a83c",
+      "research/l-families/atlas/function_field/pilot.py": "cf1463fdb4f270c550e845874d497edcf41dea9c",
+      "tests/test_function_field_beta_boolean_evaluation_bandpass.py": "e6fe5181a820a27c995f1beea36b960bfe08edbe",
+      "tests/test_function_field_divisor_wavelet_witt_factorization.py": "5fa7501c6bea03a9325d5056ecdd603eed5694b9"
+    },
+    "live_pilot_blob": "cf1463fdb4f270c550e845874d497edcf41dea9c"
+  },
+  "zero_mode_main_term": {
+    "coefficient_law": "b_n=n(A_alpha alpha^n+A_beta beta^n)+O(5^(n/2))",
+    "critical_energy": "sum_(n<=H)|5^(-n/2)b_n|^2=(|A_alpha|^2+|A_beta|^2)H^3/3+O(H^2)",
+    "interpretation": "the complete zero Fourier mode retains a geometric quadratic-Frobenius constituent",
+    "meromorphic_disk": "|u|<1/2",
+    "pole_statement": "double poles at u=alpha^-1,beta^-1; the k=2 principal zero 1-5u^2 does not cancel them",
+    "principal_amplitudes": "A_alpha=lim_(u->alpha^-1)(1-alpha*u)^2 B(u,1), A_beta=conjugate(A_alpha), both nonzero"
+  }
+}

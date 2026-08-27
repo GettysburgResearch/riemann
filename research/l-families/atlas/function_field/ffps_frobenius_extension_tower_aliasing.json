@@ -1,0 +1,470 @@
+{
+  "categorical_scope": {
+    "betti_lower_bound": false,
+    "closed_point_adams_formula": "NOT CONSTRUCTED",
+    "correspondence_support_rank_lower_bound": false,
+    "cysel_wcadd_wckum_rh_grh": "NOT PROVED",
+    "full_native_source_complex": "NOT CONSTRUCTED",
+    "statement": "Q^r is the dimension of the literal point-function permutation model and Q^r-1 is its external separation rank. A graph correspondence can encode the same numerical kernel without presenting it as Q^r-1 external summands, so no sheaf-rank or Betti lower bound is inferred."
+  },
+  "extension_field_theorem": {
+    "algebra": "span(H_n) is Q[C_r], with unit H_0 and dimension r",
+    "centered_total_mass": "zero for every n",
+    "finite_replay": [
+      {
+        "base_size": 2,
+        "centered_algebra_dimension": 1,
+        "centered_generator_minimal_polynomial": "t*(t^1-1)",
+        "extension_degree": 1,
+        "field_size": 2,
+        "permutation_minimal_polynomial": "t^1-1",
+        "rows": [
+          {
+            "frobenius_power": 0,
+            "operator_trace": 1,
+            "pointwise_alias_class": 0,
+            "rank": 1,
+            "total_centered_mass": 0,
+            "total_graph_points": 2
+          },
+          {
+            "frobenius_power": 1,
+            "operator_trace": 1,
+            "pointwise_alias_class": 0,
+            "rank": 1,
+            "total_centered_mass": 0,
+            "total_graph_points": 2
+          },
+          {
+            "frobenius_power": 2,
+            "operator_trace": 1,
+            "pointwise_alias_class": 0,
+            "rank": 1,
+            "total_centered_mass": 0,
+            "total_graph_points": 2
+          }
+        ]
+      },
+      {
+        "base_size": 2,
+        "centered_algebra_dimension": 2,
+        "centered_generator_minimal_polynomial": "t*(t^2-1)",
+        "extension_degree": 2,
+        "field_size": 4,
+        "permutation_minimal_polynomial": "t^2-1",
+        "rows": [
+          {
+            "frobenius_power": 0,
+            "operator_trace": 3,
+            "pointwise_alias_class": 0,
+            "rank": 3,
+            "total_centered_mass": 0,
+            "total_graph_points": 4
+          },
+          {
+            "frobenius_power": 1,
+            "operator_trace": 1,
+            "pointwise_alias_class": 1,
+            "rank": 3,
+            "total_centered_mass": 0,
+            "total_graph_points": 4
+          },
+          {
+            "frobenius_power": 2,
+            "operator_trace": 3,
+            "pointwise_alias_class": 0,
+            "rank": 3,
+            "total_centered_mass": 0,
+            "total_graph_points": 4
+          },
+          {
+            "frobenius_power": 3,
+            "operator_trace": 1,
+            "pointwise_alias_class": 1,
+            "rank": 3,
+            "total_centered_mass": 0,
+            "total_graph_points": 4
+          }
+        ]
+      },
+      {
+        "base_size": 2,
+        "centered_algebra_dimension": 3,
+        "centered_generator_minimal_polynomial": "t*(t^3-1)",
+        "extension_degree": 3,
+        "field_size": 8,
+        "permutation_minimal_polynomial": "t^3-1",
+        "rows": [
+          {
+            "frobenius_power": 0,
+            "operator_trace": 7,
+            "pointwise_alias_class": 0,
+            "rank": 7,
+            "total_centered_mass": 0,
+            "total_graph_points": 8
+          },
+          {
+            "frobenius_power": 1,
+            "operator_trace": 1,
+            "pointwise_alias_class": 1,
+            "rank": 7,
+            "total_centered_mass": 0,
+            "total_graph_points": 8
+          },
+          {
+            "frobenius_power": 2,
+            "operator_trace": 1,
+            "pointwise_alias_class": 2,
+            "rank": 7,
+            "total_centered_mass": 0,
+            "total_graph_points": 8
+          },
+          {
+            "frobenius_power": 3,
+            "operator_trace": 7,
+            "pointwise_alias_class": 0,
+            "rank": 7,
+            "total_centered_mass": 0,
+            "total_graph_points": 8
+          },
+          {
+            "frobenius_power": 4,
+            "operator_trace": 1,
+            "pointwise_alias_class": 1,
+            "rank": 7,
+            "total_centered_mass": 0,
+            "total_graph_points": 8
+          }
+        ]
+      },
+      {
+        "base_size": 2,
+        "centered_algebra_dimension": 4,
+        "centered_generator_minimal_polynomial": "t*(t^4-1)",
+        "extension_degree": 4,
+        "field_size": 16,
+        "permutation_minimal_polynomial": "t^4-1",
+        "rows": [
+          {
+            "frobenius_power": 0,
+            "operator_trace": 15,
+            "pointwise_alias_class": 0,
+            "rank": 15,
+            "total_centered_mass": 0,
+            "total_graph_points": 16
+          },
+          {
+            "frobenius_power": 1,
+            "operator_trace": 1,
+            "pointwise_alias_class": 1,
+            "rank": 15,
+            "total_centered_mass": 0,
+            "total_graph_points": 16
+          },
+          {
+            "frobenius_power": 2,
+            "operator_trace": 3,
+            "pointwise_alias_class": 2,
+            "rank": 15,
+            "total_centered_mass": 0,
+            "total_graph_points": 16
+          },
+          {
+            "frobenius_power": 3,
+            "operator_trace": 1,
+            "pointwise_alias_class": 3,
+            "rank": 15,
+            "total_centered_mass": 0,
+            "total_graph_points": 16
+          },
+          {
+            "frobenius_power": 4,
+            "operator_trace": 15,
+            "pointwise_alias_class": 0,
+            "rank": 15,
+            "total_centered_mass": 0,
+            "total_graph_points": 16
+          },
+          {
+            "frobenius_power": 5,
+            "operator_trace": 1,
+            "pointwise_alias_class": 1,
+            "rank": 15,
+            "total_centered_mass": 0,
+            "total_graph_points": 16
+          }
+        ]
+      },
+      {
+        "base_size": 2,
+        "centered_algebra_dimension": 5,
+        "centered_generator_minimal_polynomial": "t*(t^5-1)",
+        "extension_degree": 5,
+        "field_size": 32,
+        "permutation_minimal_polynomial": "t^5-1",
+        "rows": [
+          {
+            "frobenius_power": 0,
+            "operator_trace": 31,
+            "pointwise_alias_class": 0,
+            "rank": 31,
+            "total_centered_mass": 0,
+            "total_graph_points": 32
+          },
+          {
+            "frobenius_power": 1,
+            "operator_trace": 1,
+            "pointwise_alias_class": 1,
+            "rank": 31,
+            "total_centered_mass": 0,
+            "total_graph_points": 32
+          },
+          {
+            "frobenius_power": 2,
+            "operator_trace": 1,
+            "pointwise_alias_class": 2,
+            "rank": 31,
+            "total_centered_mass": 0,
+            "total_graph_points": 32
+          },
+          {
+            "frobenius_power": 3,
+            "operator_trace": 1,
+            "pointwise_alias_class": 3,
+            "rank": 31,
+            "total_centered_mass": 0,
+            "total_graph_points": 32
+          },
+          {
+            "frobenius_power": 4,
+            "operator_trace": 1,
+            "pointwise_alias_class": 4,
+            "rank": 31,
+            "total_centered_mass": 0,
+            "total_graph_points": 32
+          },
+          {
+            "frobenius_power": 5,
+            "operator_trace": 31,
+            "pointwise_alias_class": 0,
+            "rank": 31,
+            "total_centered_mass": 0,
+            "total_graph_points": 32
+          },
+          {
+            "frobenius_power": 6,
+            "operator_trace": 1,
+            "pointwise_alias_class": 1,
+            "rank": 31,
+            "total_centered_mass": 0,
+            "total_graph_points": 32
+          }
+        ]
+      }
+    ],
+    "minimal_polynomials": {
+      "H_1_on_full_space": "t*(t^r-1)",
+      "H_n_on_full_space": "t*(t^(r/gcd(n,r))-1)",
+      "P_r": "t^r-1"
+    },
+    "multiplication": "H_m H_n=H_(m+n), with indices mod r",
+    "operator_trace": "Q^gcd(n,r)-1",
+    "pointwise_alias": "H_n^(r)=H_m^(r) iff n is congruent to m mod r",
+    "rank": "Q^r-1 for every n",
+    "total_graph_count": "Q^r for every n"
+  },
+  "literal_matrix_cost": {
+    "base_size": 2,
+    "rows": [
+      {
+        "arbitrary_tower_largest_matrix_dimension_lower_bound": 4,
+        "arbitrary_tower_max_level_lower_bound": 2,
+        "divisor_grid_size": 2,
+        "mobius_prime_count": 1,
+        "single_level_degree_lower_bound": 2,
+        "single_level_matrix_dimension_lower_bound": 4
+      },
+      {
+        "arbitrary_tower_largest_matrix_dimension_lower_bound": 8,
+        "arbitrary_tower_max_level_lower_bound": 3,
+        "divisor_grid_size": 4,
+        "mobius_prime_count": 2,
+        "single_level_degree_lower_bound": 4,
+        "single_level_matrix_dimension_lower_bound": 16
+      },
+      {
+        "arbitrary_tower_largest_matrix_dimension_lower_bound": 16,
+        "arbitrary_tower_max_level_lower_bound": 4,
+        "divisor_grid_size": 8,
+        "mobius_prime_count": 3,
+        "single_level_degree_lower_bound": 8,
+        "single_level_matrix_dimension_lower_bound": 256
+      },
+      {
+        "arbitrary_tower_largest_matrix_dimension_lower_bound": 64,
+        "arbitrary_tower_max_level_lower_bound": 6,
+        "divisor_grid_size": 16,
+        "mobius_prime_count": 4,
+        "single_level_degree_lower_bound": 16,
+        "single_level_matrix_dimension_lower_bound": 65536
+      },
+      {
+        "arbitrary_tower_largest_matrix_dimension_lower_bound": 256,
+        "arbitrary_tower_max_level_lower_bound": 8,
+        "divisor_grid_size": 32,
+        "mobius_prime_count": 5,
+        "single_level_degree_lower_bound": 32,
+        "single_level_matrix_dimension_lower_bound": 4294967296
+      },
+      {
+        "arbitrary_tower_largest_matrix_dimension_lower_bound": 2048,
+        "arbitrary_tower_max_level_lower_bound": 11,
+        "divisor_grid_size": 64,
+        "mobius_prime_count": 6,
+        "single_level_degree_lower_bound": 64,
+        "single_level_matrix_dimension_lower_bound": 18446744073709551616
+      }
+    ],
+    "scope": "necessary costs for linear fidelity of every coefficient on the full nonzero-Mobius divisor grid; one particular Mobius vector can remain visible at lower cost"
+  },
+  "mobius_divisor_polynomial": {
+    "definition": "M_a(t)=sum_(e|a) mu(e)t^(a/e)",
+    "prime_formula": "rank(P^p-P)=Q^r-sum_(d|r)c_d*gcd(d,p-1), where c_d is the number of Frobenius cycles of length d",
+    "rows": [
+      {
+        "extension_degree": 3,
+        "field_size": 8,
+        "mobius_value": 5,
+        "operator_rank": 4,
+        "operator_trace": 0,
+        "reduced_coefficients": [
+          0,
+          -1,
+          1
+        ],
+        "total_entry_sum": 0,
+        "zero_operator": false
+      },
+      {
+        "extension_degree": 3,
+        "field_size": 8,
+        "mobius_value": 7,
+        "operator_rank": 0,
+        "operator_trace": 0,
+        "reduced_coefficients": [
+          0,
+          0,
+          0
+        ],
+        "total_entry_sum": 0,
+        "zero_operator": true
+      },
+      {
+        "extension_degree": 4,
+        "field_size": 16,
+        "mobius_value": 7,
+        "operator_rank": 6,
+        "operator_trace": 0,
+        "reduced_coefficients": [
+          0,
+          -1,
+          0,
+          1
+        ],
+        "total_entry_sum": 0,
+        "zero_operator": false
+      },
+      {
+        "extension_degree": 5,
+        "field_size": 32,
+        "mobius_value": 11,
+        "operator_rank": 0,
+        "operator_trace": 0,
+        "reduced_coefficients": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total_entry_sum": 0,
+        "zero_operator": true
+      }
+    ],
+    "zero_criterion": "M_a(P_r)=0 iff every residue coefficient sum_(e|a,a/e congruent j mod r) mu(e) is zero"
+  },
+  "resource_caps": {
+    "base_size": 2,
+    "closed_place_enumeration": 0,
+    "curves": 0,
+    "finite_field_element_enumeration": 0,
+    "l_functions": 0,
+    "largest_exact_matrix_dimension": 32,
+    "maximum_matrix_extension_degree": 5,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "git_blobs": {
+      "05da4d1705d994dd02d650f321196f8464034ba8:research/l-families/atlas/function_field/FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md": "c79e52ebf0099fe416bc2c79dcb041cc21e025fb",
+      "98af0db6e:claims/lemmas/L-106191-source-dual-centered-double-incidence-correlation.md": "85c4ef92ead7d8b235f9c195c3c0acd16d16030f",
+      "e3903136912402a969abee7bfcf1ad5f9dfbd1a0:research/l-families/atlas/function_field/FFPS_NATIVE_PARTIAL_FROBENIUS_VERDICT.md": "19939eb240ca6b2b6d5221954cec76fe0f5c4f9c"
+    },
+    "native_kernel": "H_n^(r)=P_r^n-Q^(-r)J on functions of F_(Q^r)"
+  },
+  "tower_fidelity": {
+    "exact_criterion": "the coefficient grid is linearly faithful exactly when the stacked residue-incidence matrix [1_(e mod r=j)] has full column rank",
+    "finite_replay": [
+      {
+        "action_visible": true,
+        "centered_algebra_dimension": 8,
+        "divisor_grid_size": 8,
+        "joint_period": 30,
+        "levels": [
+          2,
+          3,
+          5
+        ],
+        "linear_grid_faithful": false,
+        "linear_grid_rank": 7,
+        "mobius_value": 30,
+        "pointwise_labels_distinct": true
+      },
+      {
+        "action_visible": true,
+        "centered_algebra_dimension": 14,
+        "divisor_grid_size": 16,
+        "joint_period": 210,
+        "levels": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "linear_grid_faithful": false,
+        "linear_grid_rank": 13,
+        "mobius_value": 210,
+        "pointwise_labels_distinct": true
+      },
+      {
+        "action_visible": true,
+        "centered_algebra_dimension": 24,
+        "divisor_grid_size": 16,
+        "joint_period": 2310,
+        "levels": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "linear_grid_faithful": true,
+        "linear_grid_rank": 16,
+        "mobius_value": 210,
+        "pointwise_labels_distinct": true
+      }
+    ],
+    "joint_centered_algebra_dimension": "deg lcm_(r in T)(t^r-1)=sum phi(d) over d dividing some tower level",
+    "label_period": "lcm of the tower levels",
+    "warning": "distinct exponent labels modulo the joint period do not imply linear fidelity for arbitrary divisor coefficients"
+  }
+}
