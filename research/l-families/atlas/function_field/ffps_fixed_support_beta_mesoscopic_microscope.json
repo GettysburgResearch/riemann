@@ -1,0 +1,145 @@
+{
+  "autocorrelation_control_rows": [
+    {
+      "maximum_sample_error": 0.005559693176973551,
+      "order": 4,
+      "values": {
+        "0": 0.13548770270996552,
+        "1": 0.055931747081595797,
+        "1.41421356237": 0.0035665677876778688,
+        "2": -0.048601088447608874,
+        "3": -0.05299842439247106
+      }
+    },
+    {
+      "maximum_sample_error": 0.0014170805348541204,
+      "order": 16,
+      "values": {
+        "0": 0.13963031535208495,
+        "1": 0.05520214918720585,
+        "1.41421356237": 0.0009151957594092445,
+        "2": -0.051079518299861425,
+        "3": -0.05228167951629979
+      }
+    },
+    {
+      "maximum_sample_error": 0.0003558729143907924,
+      "order": 64,
+      "values": {
+        "0": 0.14069152297254828,
+        "1": 0.0549950812177858,
+        "1.41421356237": 0.00023014163207327046,
+        "2": -0.05168709627051771,
+        "3": -0.0520948036334519
+      }
+    }
+  ],
+  "constants": {
+    "gaussian_energy": 0.14104739588693907,
+    "gaussian_node": 1.4142135623730951,
+    "mean": 1.163953413738653,
+    "sigma": 0.3983124547191751,
+    "variance": 0.1586528115844149
+  },
+  "critical_scale_rows": [
+    {
+      "log_T_star": 8.325546111576978,
+      "log_X": 100.0,
+      "log_m_over_log_X": 0.14810055183975382,
+      "log_m_star": 14.810055183975381
+    },
+    {
+      "log_T_star": 16.651092223153956,
+      "log_X": 400.0,
+      "log_m_over_log_X": 0.07865286851782334,
+      "log_m_star": 31.46114740712934
+    },
+    {
+      "log_T_star": 33.30218444630791,
+      "log_X": 1600.0,
+      "log_m_over_log_X": 0.040477082408398285,
+      "log_m_star": 64.76333185343725
+    }
+  ],
+  "exact_bridge": {
+    "autocorrelation_scaling": "R_m^c(sigma*v/sqrt(m))=(m^(3/2)/sigma^3)*R_m^G(v)",
+    "centered_detector": "J_m^G(y)=m*sigma^2*K_m(m*mu+sigma*sqrt(m)*y)",
+    "compressed_density": "Q_m(x)=m*P^{*m}(m*x)",
+    "compressed_detector": "J_m^c(x)=m^2*K_m(m*x)",
+    "detector_scaling": "J_m^c(x)=(m/sigma^2)*J_m^G(sqrt(m)*(x-mu)/sigma)"
+  },
+  "nonmonotonicity_control": {
+    "frequency": 12.566370614359172,
+    "pointwise_limit": 157.91367041742973,
+    "weight_order_1": 0.006253126446312848,
+    "weight_order_128": 129.84033776634632,
+    "weight_order_2": 5.882008147294503e-05
+  },
+  "proof_ledger": {
+    "RH_or_GRH": "NOT PROVED",
+    "exact_scaling_bridge": "PROVED EXACT",
+    "growing_order_beta_estimate": "NOT PROVED",
+    "mesoscopic_sign_tubes_away_from_the_gaussian_node": "PROVED",
+    "norm_and_jordan_asymptotics": "PROVED FROM THE EXACT BRIDGE",
+    "pointwise_order_monotonicity": "FALSE",
+    "scaled_weight_and_autocorrelation_limits": "PROVED FROM THE PINNED RENORMALIZATION THEOREM",
+    "uniform_growing_order_RH_equivalence": "NOT PROVED"
+  },
+  "resource_caps": {
+    "autocorrelation_samples_per_order": 5,
+    "curves": 0,
+    "orders": [
+      4,
+      16,
+      64
+    ],
+    "primes": 0,
+    "random_samples": 0,
+    "simpson_panels": 8192,
+    "simpson_radius": 14.0,
+    "weight_samples_per_order": 5,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "ladder_commit": "3658d4c31cc866e15d48ab1fc9d8d119136da424",
+    "ladder_git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_ZERO_FREE_BETA_ENERGY_LADDER.md": "bd4cbb842e78c1dad5d380c8d20ff14c39bba15e",
+      "research/l-families/atlas/function_field/ffps_zero_free_beta_energy_ladder.json": "7e8889aa0dd1b01674e20158a52502cff0d8dffa",
+      "research/l-families/atlas/function_field/ffps_zero_free_beta_energy_ladder.py": "df80000192292cc5fc1cd08013f152fb257054f9",
+      "tests/test_ffps_zero_free_beta_energy_ladder.py": "983a1320f89087028f6724fe36aaca5ca1309b15"
+    },
+    "renormalization_commit": "46ea68808e238b0c9b85050158ba149649b1b37e",
+    "renormalization_git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_TILTED_TENT_DETECTOR_RENORMALIZATION_FLOW.md": "6de962fe78c2f77d3f02e0d11f56f7145eb37f93",
+      "research/l-families/atlas/function_field/ffps_tilted_tent_detector_renormalization_flow.json": "7595d5ce5f24524442c6392de6b23073de1f951b",
+      "research/l-families/atlas/function_field/ffps_tilted_tent_detector_renormalization_flow.py": "8b8c5783714661fd9d6f1803263b544e90b82957",
+      "tests/test_ffps_tilted_tent_detector_renormalization_flow.py": "7763de04d6545ed73b397d00e8485f5631c3ae00"
+    }
+  },
+  "spectral_microscope": {
+    "critical_order": "m_*(X)=ceil(sigma^2*exp(2*sqrt(log(2)*log(X))))=X^o(1)",
+    "exact_energy_identity": "(sigma^3/m^(3/2))*E_m(X)=(2pi)^-1 integral tilde_w_m(tau)|D_X(sqrt(m)*tau/sigma)|^2 dtau",
+    "limit": "tau^2*exp(-tau^2), locally uniformly and in L1",
+    "scaled_weight": "tilde_w_m(tau)=(sigma^2/m)w_m(sqrt(m)*tau/sigma)"
+  },
+  "weight_control_rows": [
+    {
+      "maximum_sample_weight_error": 0.012391630342584073,
+      "normalized_energy_constant": 0.13548770270996552,
+      "normalized_energy_limit": 0.14104739588693907,
+      "order": 4
+    },
+    {
+      "maximum_sample_weight_error": 0.0031460392363389517,
+      "normalized_energy_constant": 0.13963031535208495,
+      "normalized_energy_limit": 0.14104739588693907,
+      "order": 16
+    },
+    {
+      "maximum_sample_weight_error": 0.0007890407476563444,
+      "normalized_energy_constant": 0.14069152297254828,
+      "normalized_energy_limit": 0.14104739588693907,
+      "order": 64
+    }
+  ]
+}
