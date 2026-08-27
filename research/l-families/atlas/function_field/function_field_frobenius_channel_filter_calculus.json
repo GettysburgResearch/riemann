@@ -1,0 +1,185 @@
+{
+  "axis_null": {
+    "analytic_bidisc": "every closed |X|,|Y|<=r with r^3<sqrt(q)",
+    "filter": "P_C(X/sqrt(q))*P_C(Y/sqrt(q))",
+    "fixed_offset_shell": "O_(C,Sigma,epsilon)(q^(-(1/3-epsilon)*h))",
+    "remaining_frobenius_denominator": "P_C(XY/q)"
+  },
+  "family_uniform_filter": {
+    "formal_rule": "the primitive family-uniform null filter is lcm_i(P_i)",
+    "generic_pairwise_coprime_depth": "sum_i degree(P_i)",
+    "rows": [
+      {
+        "family_size": 1,
+        "member_degree": 4,
+        "two_axis_bidegree": [
+          4,
+          4
+        ],
+        "universal_axis_depth": 4
+      },
+      {
+        "family_size": 2,
+        "member_degree": 4,
+        "two_axis_bidegree": [
+          8,
+          8
+        ],
+        "universal_axis_depth": 8
+      },
+      {
+        "family_size": 3,
+        "member_degree": 4,
+        "two_axis_bidegree": [
+          12,
+          12
+        ],
+        "universal_axis_depth": 12
+      }
+    ],
+    "shared_factors_reduce_depth": true
+  },
+  "filter_calculus": {
+    "curve_zeta_numerator": "P_C(u)=product_(nu=1)^(2g)(1-alpha_nu*u)",
+    "filter": "R_x(X/sqrt(q))*R_y(Y/sqrt(q))*R_m(XY/q)",
+    "formal_minimal_multiplier": "R_x*R_y*R_m up to a scalar",
+    "galois_stability_required_over_base_field": true,
+    "selected_denominators": "Q_x(X/sqrt(q))*Q_y(Y/sqrt(q))*Q_m(XY/q)",
+    "stable_factorization": "P_C=Q_x R_x=Q_y R_y=Q_m R_m"
+  },
+  "full_null": {
+    "analytic_limit": "residual Euler product still limits r^3<sqrt(q)",
+    "filter": "P_C(X/sqrt(q))*P_C(Y/sqrt(q))*P_C(XY/q)",
+    "remaining_frobenius_denominator": "none"
+  },
+  "minimal_degree": {
+    "rows": [
+      {
+        "dense_two_axis_stencil_upper_bound": 9,
+        "generic_numerator_degree": 2,
+        "genus": 1,
+        "three_channel_depth_sum": 6,
+        "two_axis_null_bidegree": [
+          2,
+          2
+        ]
+      },
+      {
+        "dense_two_axis_stencil_upper_bound": 25,
+        "generic_numerator_degree": 4,
+        "genus": 2,
+        "three_channel_depth_sum": 12,
+        "two_axis_null_bidegree": [
+          4,
+          4
+        ]
+      },
+      {
+        "dense_two_axis_stencil_upper_bound": 49,
+        "generic_numerator_degree": 6,
+        "genus": 3,
+        "three_channel_depth_sum": 18,
+        "two_axis_null_bidegree": [
+          6,
+          6
+        ]
+      },
+      {
+        "dense_two_axis_stencil_upper_bound": 81,
+        "generic_numerator_degree": 8,
+        "genus": 4,
+        "three_channel_depth_sum": 24,
+        "two_axis_null_bidegree": [
+          8,
+          8
+        ]
+      },
+      {
+        "dense_two_axis_stencil_upper_bound": 121,
+        "generic_numerator_degree": 10,
+        "genus": 5,
+        "three_channel_depth_sum": 30,
+        "two_axis_null_bidegree": [
+          10,
+          10
+        ]
+      },
+      {
+        "dense_two_axis_stencil_upper_bound": 169,
+        "generic_numerator_degree": 12,
+        "genus": 6,
+        "three_channel_depth_sum": 36,
+        "two_axis_null_bidegree": [
+          12,
+          12
+        ]
+      },
+      {
+        "dense_two_axis_stencil_upper_bound": 225,
+        "generic_numerator_degree": 14,
+        "genus": 7,
+        "three_channel_depth_sum": 42,
+        "two_axis_null_bidegree": [
+          14,
+          14
+        ]
+      },
+      {
+        "dense_two_axis_stencil_upper_bound": 289,
+        "generic_numerator_degree": 16,
+        "genus": 8,
+        "three_channel_depth_sum": 48,
+        "two_axis_null_bidegree": [
+          16,
+          16
+        ]
+      }
+    ],
+    "scope": "formal denominator selection without accidental cancellation; degree lower bound, not a lower bound on nonzero coefficients"
+  },
+  "resource_caps": {
+    "curves_enumerated": 0,
+    "finite_fields_enumerated": 0,
+    "formal_series_bidegree": 10,
+    "l_functions_enumerated": 0,
+    "minimal_degree_genus": 8,
+    "points_enumerated": 0
+  },
+  "scope": {
+    "accidental_residual_cancellation_excluded_from_minimality": true,
+    "fixed_curve": true,
+    "growing_genus_fixed_depth_filter": false,
+    "incomplete_family_theorem": false,
+    "number_field_transfer": false,
+    "rh_or_grh_proved": false
+  },
+  "selector_replay": {
+    "axis_deflation_verified": true,
+    "axis_filter_bidegree": [
+      4,
+      4
+    ],
+    "axis_filtered_nonzero_coefficients": 63,
+    "curve_numerator_degree": 4,
+    "mixed_filter_degree": 4,
+    "original_nonzero_coefficients": 121,
+    "q": 9,
+    "selected_factor_degree": 2,
+    "series_cap": 10,
+    "sqrt_q": 3,
+    "stable_selector_verified": true,
+    "total_deflation_verified": true,
+    "total_filtered_nonzero_coefficients": 39
+  },
+  "source_contract": {
+    "commit": "18056756f6fdf36c5d7d88f3cc3d5f442878da80",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FUNCTION_FIELD_BASEWAVE_CURVE_EXTENSION.md": "fd8f0c7659b5d5d3e00ff7b1d6b720b77cce2afc",
+      "research/l-families/atlas/function_field/function_field_basewave_curve_extension.json": "d364a9e459c87abb27d19eb7de62509fb19e0e79",
+      "research/l-families/atlas/function_field/function_field_basewave_curve_extension.py": "d2db36d21823d5a28dd4dd3207469e9c9d9edbc7",
+      "tests/test_function_field_basewave_curve_extension.py": "67a939a5dc9792f340a72205fbbbfa7d1d732937"
+    },
+    "imported": "all-curve three-zeta factorization and residual domain",
+    "source_line_endings": "irrelevant because Git object IDs are pinned"
+  }
+}
