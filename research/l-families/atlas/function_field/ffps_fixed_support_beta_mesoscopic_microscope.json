@@ -77,13 +77,13 @@
   },
   "proof_ledger": {
     "RH_or_GRH": "NOT PROVED",
+    "critical_growing_order_RH_equivalence": "PROVED",
+    "critical_growing_order_beta_estimate": "NOT PROVED",
     "exact_scaling_bridge": "PROVED EXACT",
-    "growing_order_beta_estimate": "NOT PROVED",
     "mesoscopic_sign_tubes_away_from_the_gaussian_node": "PROVED",
     "norm_and_jordan_asymptotics": "PROVED FROM THE EXACT BRIDGE",
     "pointwise_order_monotonicity": "FALSE",
-    "scaled_weight_and_autocorrelation_limits": "PROVED FROM THE PINNED RENORMALIZATION THEOREM",
-    "uniform_growing_order_RH_equivalence": "NOT PROVED"
+    "scaled_weight_and_autocorrelation_limits": "PROVED FROM THE PINNED RENORMALIZATION THEOREM"
   },
   "resource_caps": {
     "autocorrelation_samples_per_order": 5,
@@ -101,6 +101,13 @@
     "zeta_zeros": 0
   },
   "source_contract": {
+    "infinite_smoother_commit": "b631040b76d696dbc69cadde7af240077f605c94",
+    "infinite_smoother_git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_INFINITE_DYADIC_BOX_BANDPASS_SMOOTHER.md": "01d3ea427883fb761f6301f71d9dd05c552c5056",
+      "research/l-families/atlas/function_field/ffps_infinite_dyadic_box_bandpass_smoother.json": "7a38b5f943a8dc1c0afde8d1cc91f35118b767ca",
+      "research/l-families/atlas/function_field/ffps_infinite_dyadic_box_bandpass_smoother.py": "2ba0f30c9bd67cdb01af639d320daf8133b5bb77",
+      "tests/test_ffps_infinite_dyadic_box_bandpass_smoother.py": "d6a30d654d46edfa01add55cec55b0b3253a12b0"
+    },
     "ladder_commit": "3658d4c31cc866e15d48ab1fc9d8d119136da424",
     "ladder_git_blobs": {
       "research/l-families/atlas/function_field/FFPS_ZERO_FREE_BETA_ENERGY_LADDER.md": "bd4cbb842e78c1dad5d380c8d20ff14c39bba15e",
@@ -119,8 +126,10 @@
   "spectral_microscope": {
     "critical_order": "m_*(X)=ceil(sigma^2*exp(2*sqrt(log(2)*log(X))))=X^o(1)",
     "exact_energy_identity": "(sigma^3/m^(3/2))*E_m(X)=(2pi)^-1 integral tilde_w_m(tau)|D_X(sqrt(m)*tau/sigma)|^2 dtau",
+    "growing_order_equivalence": "RH iff E_{m_*(X)}(X)=X^o(1)",
     "limit": "tau^2*exp(-tau^2), locally uniformly and in L1",
-    "scaled_weight": "tilde_w_m(tau)=(sigma^2/m)w_m(sqrt(m)*tau/sigma)"
+    "scaled_weight": "tilde_w_m(tau)=(sigma^2/m)w_m(sqrt(m)*tau/sigma)",
+    "window_lower_bound": "w_m(t)>=t^2*exp(-2*t^2/m)>=exp(-2/sigma^2)*t^2 for |t|<=T_* and m>=sigma^2*T_*^2"
   },
   "weight_control_rows": [
     {

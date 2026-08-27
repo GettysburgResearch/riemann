@@ -62,6 +62,14 @@ class FixedSupportBetaMesoscopicMicroscopeTest(unittest.TestCase):
         )
         self.assertLess(late, early)
 
+    def test_global_compressed_weight_lower_bound(self) -> None:
+        for order in (1, 2, 8, 32):
+            for frequency in (0.25, 1.0, 4.0, 4.0 * math.pi):
+                self.assertGreaterEqual(
+                    microscope.compressed_weight(order, frequency),
+                    microscope.compressed_weight_lower_bound(order, frequency),
+                )
+
     def test_normalized_energy_constant(self) -> None:
         target = 1.0 / (4.0 * math.sqrt(math.pi))
         self.assertLess(
@@ -94,7 +102,8 @@ class FixedSupportBetaMesoscopicMicroscopeTest(unittest.TestCase):
         ledger = payload["proof_ledger"]
         self.assertEqual(ledger["exact_scaling_bridge"], "PROVED EXACT")
         self.assertEqual(ledger["pointwise_order_monotonicity"], "FALSE")
-        self.assertEqual(ledger["growing_order_beta_estimate"], "NOT PROVED")
+        self.assertEqual(ledger["critical_growing_order_RH_equivalence"], "PROVED")
+        self.assertEqual(ledger["critical_growing_order_beta_estimate"], "NOT PROVED")
         self.assertEqual(ledger["RH_or_GRH"], "NOT PROVED")
 
     def test_validation(self) -> None:

@@ -2,9 +2,8 @@
 
 Status: **exact scaling bridge between the fixed-support and diffusive
 detector flows, derivative-Gaussian physical and Fourier phase diagram,
-subpower-order RH forward theorem, and exact nonmonotonicity firewall; no
-growing-order reverse implication, beta cancellation estimate, RH, or GRH
-result**
+critical growing-order RH equivalence, and exact nonmonotonicity firewall;
+no beta cancellation estimate, proof of RH, or GRH result**
 
 Bounded replay:
 [ffps_fixed_support_beta_mesoscopic_microscope.py](ffps_fixed_support_beta_mesoscopic_microscope.py).
@@ -17,8 +16,9 @@ Frozen sources:
 |---|---|
 | zero-free fixed-support beta-energy ladder | **3658d4c31cc866e15d48ab1fc9d8d119136da424** |
 | tilted-tent detector renormalization flow | **46ea68808e238b0c9b85050158ba149649b1b37e** |
+| infinite dyadic box band-pass smoother | **b631040b76d696dbc69cadde7af240077f605c94** |
 
-The producer pins all eight Git blobs. No live source module is imported.
+The producer pins all twelve Git blobs. No live source module is imported.
 
 ## 0. Outcome
 
@@ -145,20 +145,30 @@ Then the Gaussian microscope in (0.9) is centered on the same frequency
 scale as the remaining beta witness window. This is an exact scale match,
 not an estimate of \(D_X\).
 
-There is one unconditional growing-order implication:
+There are now two growing-order conclusions. First,
+
+\[
+ \mathrm{RH}
+ \Longrightarrow
+ \mathcal E_{m(X)}(X)=X^{o(1)}
+ \quad\text{for every integer }m(X)=X^{o(1)}.
+\tag{0.12}
+\]
+
+Second, at the critical order (0.11), the converse can be recovered by
+comparison with the frozen infinite smoother:
 
 \[
 \boxed{
  \mathrm{RH}
- \Longrightarrow
- \mathcal E_{m(X)}(X)=X^{o(1)}
- \quad\text{for every integer }m(X)=X^{o(1)}.}
-\tag{0.12}
+ \Longleftrightarrow
+ \mathcal E_{m_*(X)}(X)=X^{o(1)}.}
+\tag{0.13}
 \]
 
-The converse is not proved. The weights are not pointwise ordered in
-\(m\), so positivity supplies no comparison back to a fixed RH-equivalent
-rung.
+The comparison is not order monotonicity. It uses a new global lower bound
+for \(w_m\) inside the critical window and the already proved
+unconditional exterior-tail theorem.
 
 ## 1. Exact bridge between the two flows
 
@@ -552,45 +562,112 @@ critical choice \(m_*(X)\).
 The proof uses RH. It is not an unconditional estimate of the critical
 window.
 
-## 7. Why the reverse direction remains open
+## 7. The critical growing-order reverse theorem
 
-For every one fixed \(m\), the pinned Mellin--Landau argument proves
+The reverse direction does not require a moving-carrier Landau theorem.
+It can be transferred to one frozen carrier after an exact positive
+spectral comparison.
+
+The factorization \(P=p_V*p_V\) gives
 
 \[
- \mathrm{RH}\Longleftrightarrow
- \mathcal E_m(X)=X^{o(1)}.
+ |\widehat P(u)|^2
+ =
+ \left[
+ {1+\dfrac{4e}{(e-1)^2}\sin^2(u/2)\over1+u^2}
+ \right]^2.
 \tag{7.1}
 \]
 
-This does not permit \(m=m(X)\). The carrier, BV constants, and field all
-change with the horizon. A pole created by one hypothetical off-line zero
-is being tested by a different entire multiplier at each \(X\).
-
-The most tempting shortcut would compare the growing-order weight to one
-fixed weight. Equations (3.3)--(3.6) refute global pointwise monotonicity,
-so positivity of the spectral integral gives no such comparison.
-
-The exact open gate isolated by this packet is:
+In particular,
 
 \[
- \mathcal E_{m_*(X)}(X)=X^{o(1)}
- \quad\stackrel{?}{\Longrightarrow}\quad
- \mathrm{RH}.
+ |\widehat P(u)|^2\ge(1+u^2)^{-2}.
 \tag{7.2}
 \]
 
-No implication in (7.2) is claimed. A successful reverse theorem would
-need one of:
+Substitute \(u=t/m\) into the exact ladder weight:
 
-- a uniform moving-carrier Landau theorem;
-- a comparison preserving signed frequency assembly;
-- a rigidity theorem forcing a fixed-frequency witness to survive the
-  moving Gaussian microscope;
-- or a reconstruction of one fixed detector from a controlled bank of
-  subpower orders.
+\[
+\begin{aligned}
+ w_m(t)
+ &=t^2|\widehat P(t/m)|^{2m}\\
+ &\ge t^2\left(1+{t^2\over m^2}\right)^{-2m}\\
+ &\ge t^2\exp\left(-{2t^2\over m}\right).
+\end{aligned}
+\tag{7.3}
+\]
 
-The last option is a genuine inverse-design problem. It cannot be replaced
-by taking absolute values frequency by frequency.
+The last line uses \(\log(1+x)\le x\). For
+
+\[
+ m=m_*(X)\ge\sigma^2T_*(X)^2
+\tag{7.4}
+\]
+
+and \(|t|\le T_*(X)\), this yields the uniform floor
+
+\[
+\boxed{
+ w_{m_*(X)}(t)\ge e^{-2/\sigma^2}t^2.}
+\tag{7.5}
+\]
+
+Now fix once and for all any infinite dyadic detector
+\(B_{r,\infty}\) from the frozen smoother packet, with \(r\ge1\).
+Its Fourier transform is
+
+\[
+ \widehat B_{r,\infty}(t)
+ =\Phi_\ell(it)
+ \left({1-e^{-i\varepsilon t}\over\varepsilon}\right)^r
+ \widehat K_{\rm bd}(t).
+\tag{7.6}
+\]
+
+Here \(|\Phi_\ell(it)|\le1\), the compact boundary kernel has bounded
+Fourier transform, one difference factor is at most \(|t|\), and the
+remaining \(r-1\) factors are at most \(2/\varepsilon\). Therefore a
+fixed constant \(C_B\) satisfies
+
+\[
+\boxed{
+ |\widehat B_{r,\infty}(t)|^2\le C_Bt^2
+ \qquad(t\in\mathbb R).}
+\tag{7.7}
+\]
+
+Equations (7.5)--(7.7) and the positivity of \(|D_X(t)|^2dt\) give
+
+\[
+\begin{aligned}
+ {1\over2\pi}\int_{|t|\le T_*(X)}
+ |\widehat B_{r,\infty}(t)|^2|D_X(t)|^2dt
+ &\le
+ C_Be^{2/\sigma^2}\mathcal E_{m_*(X)}(X).
+\end{aligned}
+\tag{7.8}
+\]
+
+The frozen infinite-smoother theorem proves unconditionally that its
+exterior energy beyond \(T_*(X)\) is \(X^{o(1)}\). Hence
+
+\[
+ \mathcal E_{m_*(X)}(X)=X^{o(1)}
+ \Longrightarrow
+ \mathcal E_{r,\infty}(X)=X^{o(1)}.
+\tag{7.9}
+\]
+
+The right side is an exact fixed-kernel RH criterion. Thus (7.9) proves
+the reverse implication in (0.13). Section 6 proves the forward
+implication because \(m_*(X)=X^{o(1)}\).
+
+This does not estimate either energy. It replaces the previously open
+moving-carrier problem by an exact domination of the already canonical
+fixed detector. The failure of order monotonicity in Section 3 remains
+true; the successful comparison is cross-family and restricted to the
+critical window whose exterior is independently paid.
 
 ## 8. Scope ledger
 
@@ -603,8 +680,8 @@ by taking absolute values frequency by frequency.
 | exact rescaled beta energy (0.9) | **PROVED EXACT** |
 | critical scale match (0.11) | **PROVED EXACT ASYMPTOTICALLY** |
 | RH forward theorem for every \(m(X)=X^{o(1)}\) | **PROVED** |
+| critical growing-order equivalence (0.13) | **PROVED BY THE FIXED-SMOOTHER COMPARISON** |
 | pointwise order monotonicity | **FALSE** |
-| critical growing-order reverse implication | **NOT PROVED** |
 | beta cancellation estimate | **NOT PROVED** |
 | RH or GRH | **NOT PROVED** |
 
@@ -615,7 +692,7 @@ comparison.
 
 The producer:
 
-- checks all eight frozen Git blobs;
+- checks all twelve frozen Git blobs;
 - evaluates orders \(4,16,64\) at five bounded scaled frequencies;
 - performs three \(8192\)-panel compact Simpson regressions for the
   normalized energy and five autocorrelation points per order;

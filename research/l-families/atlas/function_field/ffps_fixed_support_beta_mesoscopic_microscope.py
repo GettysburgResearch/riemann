@@ -27,6 +27,13 @@ FLOW_BLOBS = {
     "research/l-families/atlas/function_field/ffps_tilted_tent_detector_renormalization_flow.json": "7595d5ce5f24524442c6392de6b23073de1f951b",
     "tests/test_ffps_tilted_tent_detector_renormalization_flow.py": "7763de04d6545ed73b397d00e8485f5631c3ae00",
 }
+SMOOTHER_COMMIT = "b631040b76d696dbc69cadde7af240077f605c94"
+SMOOTHER_BLOBS = {
+    "research/l-families/atlas/function_field/FFPS_INFINITE_DYADIC_BOX_BANDPASS_SMOOTHER.md": "01d3ea427883fb761f6301f71d9dd05c552c5056",
+    "research/l-families/atlas/function_field/ffps_infinite_dyadic_box_bandpass_smoother.py": "2ba0f30c9bd67cdb01af639d320daf8133b5bb77",
+    "research/l-families/atlas/function_field/ffps_infinite_dyadic_box_bandpass_smoother.json": "7a38b5f943a8dc1c0afde8d1cc91f35118b767ca",
+    "tests/test_ffps_infinite_dyadic_box_bandpass_smoother.py": "d6a30d654d46edfa01add55cec55b0b3253a12b0",
+}
 
 ORDERS = (4, 16, 64)
 TAUS = (0.5, 1.0, math.sqrt(2.0), 2.0, 3.0)
@@ -39,6 +46,7 @@ def check_source_blobs() -> None:
     for commit, blobs in (
         (LADDER_COMMIT, LADDER_BLOBS),
         (FLOW_COMMIT, FLOW_BLOBS),
+        (SMOOTHER_COMMIT, SMOOTHER_BLOBS),
     ):
         for path, expected in blobs.items():
             completed = subprocess.run(
@@ -84,6 +92,13 @@ def compressed_weight(order: int, frequency: float) -> float:
     if not math.isfinite(frequency):
         raise ValueError("frequency must be finite")
     return frequency * frequency * p_fourier_modulus_squared(frequency / order) ** order
+
+
+def compressed_weight_lower_bound(order: int, frequency: float) -> float:
+    validate_order(order)
+    if not math.isfinite(frequency):
+        raise ValueError("frequency must be finite")
+    return frequency * frequency * math.exp(-2.0 * frequency * frequency / order)
 
 
 def scaled_weight(order: int, tau: float) -> float:
@@ -227,6 +242,12 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
         < autocorrelation_rows[0]["maximum_sample_error"]
     ):
         raise AssertionError("autocorrelation control did not improve")
+    for order in (1, 2, 8, 32):
+        for frequency in (0.25, 1.0, 4.0, 4.0 * math.pi):
+            if compressed_weight(order, frequency) < compressed_weight_lower_bound(
+                order, frequency
+            ):
+                raise AssertionError("compressed-weight lower bound drifted")
     if (
         not critical_scale_rows()[-1]["log_m_over_log_X"]
         < critical_scale_rows()[0]["log_m_over_log_X"]
@@ -239,6 +260,8 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "ladder_git_blobs": LADDER_BLOBS,
             "renormalization_commit": FLOW_COMMIT,
             "renormalization_git_blobs": FLOW_BLOBS,
+            "infinite_smoother_commit": SMOOTHER_COMMIT,
+            "infinite_smoother_git_blobs": SMOOTHER_BLOBS,
         },
         "exact_bridge": {
             "compressed_density": "Q_m(x)=m*P^{*m}(m*x)",
@@ -259,6 +282,8 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "limit": "tau^2*exp(-tau^2), locally uniformly and in L1",
             "exact_energy_identity": "(sigma^3/m^(3/2))*E_m(X)=(2pi)^-1 integral tilde_w_m(tau)|D_X(sqrt(m)*tau/sigma)|^2 dtau",
             "critical_order": "m_*(X)=ceil(sigma^2*exp(2*sqrt(log(2)*log(X))))=X^o(1)",
+            "window_lower_bound": "w_m(t)>=t^2*exp(-2*t^2/m)>=exp(-2/sigma^2)*t^2 for |t|<=T_* and m>=sigma^2*T_*^2",
+            "growing_order_equivalence": "RH iff E_{m_*(X)}(X)=X^o(1)",
         },
         "weight_control_rows": weight_rows,
         "autocorrelation_control_rows": autocorrelation_rows,
@@ -270,8 +295,8 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "mesoscopic_sign_tubes_away_from_the_gaussian_node": "PROVED",
             "norm_and_jordan_asymptotics": "PROVED FROM THE EXACT BRIDGE",
             "pointwise_order_monotonicity": "FALSE",
-            "growing_order_beta_estimate": "NOT PROVED",
-            "uniform_growing_order_RH_equivalence": "NOT PROVED",
+            "critical_growing_order_RH_equivalence": "PROVED",
+            "critical_growing_order_beta_estimate": "NOT PROVED",
             "RH_or_GRH": "NOT PROVED",
         },
         "resource_caps": {
