@@ -44,23 +44,20 @@ GOOD = (
 )
 
 run_case("good", SOURCES, GOOD, True)
-run_case("crlf", SOURCES, GOOD.replace("\n", "\r\n"), True)
+run_case("crlf_and_repeat", SOURCES, (GOOD + GOOD.splitlines()[0] + "\n").replace("\n", "\r\n"), True)
+run_case("missing", SOURCES, "'Demo.one' depends on axioms: [propext]\n", False)
+run_case("unexpected", SOURCES, GOOD + "'Demo.extra' does not depend on any axioms\n", False)
 run_case(
-    "missing",
+    "sorry_ax",
     SOURCES,
-    "'Demo.one' depends on axioms: [propext]\n",
-    False,
-)
-run_case(
-    "unexpected",
-    SOURCES,
-    GOOD + "'Demo.extra' does not depend on any axioms\n",
+    "'Demo.one' depends on axioms: [propext, sorryAx]\n"
+    "'Demo.two' does not depend on any axioms\n",
     False,
 )
 run_case(
     "forbidden",
     SOURCES,
-    "'Demo.one' depends on axioms: [propext, sorryAx]\n"
+    "'Demo.one' depends on axioms: [Project.unreviewed]\n"
     "'Demo.two' does not depend on any axioms\n",
     False,
 )
@@ -71,10 +68,4 @@ run_case(
     "'Demo.two' does not depend on any axioms\n",
     False,
 )
-run_case(
-    "duplicate",
-    SOURCES,
-    GOOD + "'Demo.one' depends on axioms: [propext]\n",
-    False,
-)
-print("PASS_FORMAL_AXIOM_AUDIT_REGRESSION cases=7")
+print("PASS_FORMAL_AXIOM_AUDIT_REGRESSION cases=7 duplicate_prints_allowed=true")

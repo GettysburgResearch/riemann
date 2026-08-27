@@ -1,21 +1,37 @@
 # Formalization status
 
-## Bootstrap release
+Current release: **formal-v0.1**
 
 ```text
-scientific source commit: 852d8aa05c701ea7818ce8a50543e68987fef5cc
-scientific cutoff:        PR #707
-canonical semantic rows:  139
-RH statement:             Mathlib RiemannHypothesis
-formal proof of RH:       none
+Riemann Hypothesis: UNPROVED
+reviewed unconditional Lean path to RH: NONE
+conditional Lean path to RH: PRESENT WITH EXPLICIT PREMISES
+trusted sorry/admit/custom axioms: NONE
+Challenge-only placeholders: 7
+canonical scientific claims represented in registry: 139
+post-PR-707 research included: NO
+heavy computation run by this release: NO
 ```
 
-The bootstrap provides:
+## Audited release census
 
-- one pinned Lean/Mathlib/Zeta23 environment;
-- a deterministic 139-row formalization registry generated from the canonical scientific registry;
-- a Mathlib-only trusted statement layer and a sorry-free solution smoke test;
-- a fail-closed no-sorry, source-lock, registry, and axiom audit;
-- separate module ownership and handoffs for Reviewers A, B, and C.
+- 139 unique canonical registry rows;
+- 31 A/B/C canonical delta rows;
+- 2 `STATED` rows;
+- 10 `PROVED` rows;
+- 8 `PROVED_CONDITIONAL` rows;
+- seven exact comparator topics;
+- nine committed axiom-print modules;
+- 89 expected axiom outputs in the combined rehearsal;
+- only `propext`, `Classical.choice`, and `Quot.sound` permitted.
 
-The first proof-bearing release target is `formal-v0.1`; see `ROADMAP.md`.
+The authoritative detailed front door is [`FORMAL_V0_1.md`](FORMAL_V0_1.md).
+The complete claim-by-claim status is generated at
+`registry/FORMALIZATION_MAP.tsv` from the August 22 canonical registry and the
+sparse reviewer deltas.
+
+A `PROVED_CONDITIONAL` theorem is a genuine Lean implication whose unproved
+mathematical inputs appear as explicit parameters. It is not evidence that
+those inputs hold. In particular, the fixed-detector negative-mass theorem and
+the actual-Xi order-three theorem do not prove RH or unconditional Xi
+positivity.

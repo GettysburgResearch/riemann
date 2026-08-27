@@ -1,22 +1,30 @@
 # Formalization track
 
-The formalization project lives in [`formal/`](formal/README.md) as a self-contained Lean 4/Lake project inside this repository.
+The repository's Lean development lives in the self-contained `formal/`
+subproject.
 
-Its first source release is the reviewed scientific integration at commit
-`852d8aa05c701ea7818ce8a50543e68987fef5cc`, covering research through PR #707.
-Research after that cutoff is intentionally excluded until it receives a later exact-SHA review.
+Current release: **formal-v0.1**, formalizing the reviewed August 22, 2026
+scientific release through PR #707.
 
-The formal track has three separate notions of status:
+```text
+Riemann Hypothesis: UNPROVED
+unconditional Lean theorem proving RH: NONE
+conditional RH implication with explicit premises: PRESENT
+```
 
-1. **scientific status** from `canonical/2026-08-22/claims.tsv`;
-2. **statement status**: whether the intended proposition has been expressed in Lean;
-3. **proof status**: whether that exact proposition has a sorry-free proof under the declared trust policy.
+Read [`formal/FORMAL_V0_1.md`](formal/FORMAL_V0_1.md) for the exact source
+locks, theorem inventory, exclusions, comparator surface, trust boundary and
+reproduction command.
 
-An open RH-bearing claim may be stated and used as an explicit theorem hypothesis. It must never be installed as an axiom asserting that it holds.
+The formal release uses Mathlib's `RiemannHypothesis` as its unique RH
+conclusion, pins Mathlib and the Anthropic Zeta23 dependency, and keeps every
+unproved RH-bearing theorem as an explicit proposition or theorem parameter.
+No open gate is installed as an axiom.
 
-Start with:
+The generated `formal/registry/FORMALIZATION_MAP.tsv` maps all 139 canonical
+scientific semantic IDs to their independent formal status. Most of the
+canonical corpus remains unproved or not yet exactly stated in Lean; the first
+release is a reviewed gold spine, not a full formalization of the repository.
 
-- [`formal/README.md`](formal/README.md)
-- [`formal/TRUST.md`](formal/TRUST.md)
-- [`formal/ROADMAP.md`](formal/ROADMAP.md)
-- [`formal/registry/README.md`](formal/registry/README.md)
+Post-PR-707 research, including later beta and L-function-family work, is
+excluded until it receives its own scientific review and integration.

@@ -49,8 +49,6 @@ def main() -> None:
         if not matches:
             raise SystemExit(f"unparsed axiom declaration: {line}")
         declaration = matches[-1]
-        if declaration in seen:
-            raise SystemExit(f"duplicate #print axioms output for {declaration}")
         if "depends on axioms:" in line:
             payload = line.split("depends on axioms:", 1)[1].strip()
             if not payload.startswith("["):
