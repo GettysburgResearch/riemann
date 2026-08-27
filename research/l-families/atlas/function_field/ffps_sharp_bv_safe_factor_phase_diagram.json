@@ -1,0 +1,239 @@
+{
+  "proof_ledger": {
+    "RH_or_GRH": "NOT PROVED",
+    "failure_outside_safe_factor_precludes_RH_equivalence": "NOT PROVED",
+    "higher_order_never_improves_actual_beta_energy": "NOT PROVED",
+    "moving_information_order_safe_extension": "PROVED SUFFICIENT",
+    "new_unconditional_beta_cancellation": "NOT PROVED",
+    "sharp_fixed_width_shape_minimum": "PROVED",
+    "strict_growth_in_information_order": "PROVED",
+    "strict_log_concavity_in_information_order": "PROVED",
+    "unique_dilated_Chebyshev_equality_case": "PROVED",
+    "universal_BV_route_prefers_low_pass": "PROVED"
+  },
+  "resource_caps": {
+    "beta_terms": 0,
+    "curve_computations": 0,
+    "maximum_information_order": 12,
+    "primes": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "root_searches": 0,
+    "sample_widths": 3,
+    "zeta_zeros": 0
+  },
+  "sharp_phase_theorem": {
+    "asymptotic": "A_r=2*pi*r^2*(1+11/(4r)+53/(32r^2)+O(r^-3))",
+    "consecutive_ratio": "A_(r+1)/A_r=4*(r+1)^2*(2r+5)^2/((2r+1)*(2r+3)^3)>1",
+    "global_order_winner": "r=0, with A_0=9",
+    "order_constant": "A_r=16^r*(2r+3)^2/((2r+1)*binom(2r,r)^2)",
+    "power_law_safe_region": "for r=(log X)^rho and W=(log X)^sigma, the sharp BV certificate is subpower exactly when rho<max(1,sigma), away from bounded/order-zero conventions",
+    "ratio_gap": "numerator gap=32r^3+132r^2+172r+73",
+    "ratio_shape": "A_(r+1)/A_r decreases strictly to one, so A_r is strictly log-concave",
+    "rows": [
+      {
+        "information_order": 0,
+        "next_ratio": "100/27",
+        "order_constant_A_r": "9",
+        "positive_gap_numerator": 73,
+        "positive_ratio_drop_numerator": 5444,
+        "ratio_to_2pi_r_squared": null,
+        "sharp_BV_shape_constant": 3
+      },
+      {
+        "information_order": 1,
+        "next_ratio": "784/375",
+        "order_constant_A_r": "100/3",
+        "positive_gap_numerator": 409,
+        "positive_ratio_drop_numerator": 50212,
+        "ratio_to_2pi_r_squared": "5.305164769730",
+        "sharp_BV_shape_constant": 20
+      },
+      {
+        "information_order": 2,
+        "next_ratio": "2916/1715",
+        "order_constant_A_r": "3136/45",
+        "positive_gap_numerator": 1201,
+        "positive_ratio_drop_numerator": 228484,
+        "ratio_to_2pi_r_squared": "2.772832786312",
+        "sharp_BV_shape_constant": 224
+      },
+      {
+        "information_order": 3,
+        "next_ratio": "7744/5103",
+        "order_constant_A_r": "20736/175",
+        "positive_gap_numerator": 2641,
+        "positive_ratio_drop_numerator": 724964,
+        "ratio_to_2pi_r_squared": "2.095388507907",
+        "sharp_BV_shape_constant": 3456
+      },
+      {
+        "information_order": 4,
+        "next_ratio": "16900/11979",
+        "order_constant_A_r": "1982464/11025",
+        "positive_gap_numerator": 4921,
+        "positive_ratio_drop_numerator": 1845700,
+        "ratio_to_2pi_r_squared": "1.788656151370",
+        "sharp_BV_shape_constant": 67584
+      },
+      {
+        "information_order": 5,
+        "next_ratio": "32400/24167",
+        "order_constant_A_r": "11075584/43659",
+        "positive_gap_numerator": 8233,
+        "positive_ratio_drop_numerator": 4048804,
+        "ratio_to_2pi_r_squared": "1.615001664014",
+        "sharp_BV_shape_constant": 1597440
+      },
+      {
+        "information_order": 6,
+        "next_ratio": "56644/43875",
+        "order_constant_A_r": "26214400/77077",
+        "positive_gap_numerator": 12769,
+        "positive_ratio_drop_numerator": 7975172,
+        "ratio_to_2pi_r_squared": "1.503601499578",
+        "sharp_BV_shape_constant": 44236800
+      },
+      {
+        "information_order": 7,
+        "next_ratio": "92416/73695",
+        "order_constant_A_r": "1212153856/2760615",
+        "positive_gap_numerator": 18721,
+        "positive_ratio_drop_numerator": 14479204,
+        "ratio_to_2pi_r_squared": "1.426185299292",
+        "sharp_BV_shape_constant": 1403781120
+      },
+      {
+        "information_order": 8,
+        "next_ratio": "142884/116603",
+        "order_constant_A_r": "387620798464/703956825",
+        "positive_gap_numerator": 26281,
+        "positive_ratio_drop_numerator": 24659524,
+        "ratio_to_2pi_r_squared": "1.369308189656",
+        "sharp_BV_shape_constant": 50205818880
+      },
+      {
+        "information_order": 9,
+        "next_ratio": "211600/175959",
+        "order_constant_A_r": "1894080577536/2807136475",
+        "positive_gap_numerator": 35641,
+        "positive_ratio_drop_numerator": 39889700,
+        "ratio_to_2pi_r_squared": "1.325775643675",
+        "sharp_BV_shape_constant": 1997663109120
+      },
+      {
+        "information_order": 10,
+        "next_ratio": "302500/255507",
+        "order_constant_A_r": "36352603193344/44801898141",
+        "positive_gap_numerator": 46993,
+        "positive_ratio_drop_numerator": 61848964,
+        "ratio_to_2pi_r_squared": "1.291395394514",
+        "sharp_BV_shape_constant": 87516669542400
+      },
+      {
+        "information_order": 11,
+        "next_ratio": "419904/359375",
+        "order_constant_A_r": "171798691840000/178837328943",
+        "positive_gap_numerator": 60529,
+        "positive_ratio_drop_numerator": null,
+        "ratio_to_2pi_r_squared": "1.263561658305",
+        "sharp_BV_shape_constant": 4185579847680000
+      },
+      {
+        "information_order": 12,
+        "next_ratio": null,
+        "order_constant_A_r": "12824703626379264/11425718238025",
+        "positive_gap_numerator": null,
+        "positive_ratio_drop_numerator": null,
+        "ratio_to_2pi_r_squared": "1.240570549620",
+        "sharp_BV_shape_constant": 216980459303731200
+      }
+    ],
+    "safe_factor_bound": "G_X >= A_r*(1+log(X)/W)^(2r+2)",
+    "sample_width_rows": [
+      {
+        "information_order": 0,
+        "log_horizon": 4,
+        "minimum_safe_factor": "225",
+        "support_width": 1
+      },
+      {
+        "information_order": 0,
+        "log_horizon": 4,
+        "minimum_safe_factor": "81",
+        "support_width": 2
+      },
+      {
+        "information_order": 0,
+        "log_horizon": 4,
+        "minimum_safe_factor": "36",
+        "support_width": 4
+      },
+      {
+        "information_order": 1,
+        "log_horizon": 4,
+        "minimum_safe_factor": "62500/3",
+        "support_width": 1
+      },
+      {
+        "information_order": 1,
+        "log_horizon": 4,
+        "minimum_safe_factor": "2700",
+        "support_width": 2
+      },
+      {
+        "information_order": 1,
+        "log_horizon": 4,
+        "minimum_safe_factor": "1600/3",
+        "support_width": 4
+      },
+      {
+        "information_order": 2,
+        "log_horizon": 4,
+        "minimum_safe_factor": "9800000/9",
+        "support_width": 1
+      },
+      {
+        "information_order": 2,
+        "log_horizon": 4,
+        "minimum_safe_factor": "254016/5",
+        "support_width": 2
+      },
+      {
+        "information_order": 2,
+        "log_horizon": 4,
+        "minimum_safe_factor": "200704/45",
+        "support_width": 4
+      },
+      {
+        "information_order": 3,
+        "log_horizon": 4,
+        "minimum_safe_factor": "324000000/7",
+        "support_width": 1
+      },
+      {
+        "information_order": 3,
+        "log_horizon": 4,
+        "minimum_safe_factor": "136048896/175",
+        "support_width": 2
+      },
+      {
+        "information_order": 3,
+        "log_horizon": 4,
+        "minimum_safe_factor": "5308416/175",
+        "support_width": 4
+      }
+    ],
+    "shape_bound": "W^(r+1) M(K)/|b(K)| >= r!*4^r*(2r+3)",
+    "zero_mean_order_winner": "among r>=1, the winner is r=1, with A_1=100/3"
+  },
+  "source_contract": {
+    "commit": "798feab0bb333efd8b45ab197131cd13658a5ca9",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_CHEBYSHEV_BV_KERNEL_EXTREMIZER.md": "0daf4e6181d1c452b957bff255ba79062bf411a0",
+      "research/l-families/atlas/function_field/ffps_chebyshev_bv_kernel_extremizer.json": "8bd2400c05e946fde6241253f7f90b5fbe0aa1ce",
+      "research/l-families/atlas/function_field/ffps_chebyshev_bv_kernel_extremizer.py": "cdee20c916566802b59278f07cfc51ebcedb7606",
+      "tests/test_ffps_chebyshev_bv_kernel_extremizer.py": "e4d9ce253dcec5a7f88bbfefedf4fb5bbcf06c5d"
+    }
+  }
+}
