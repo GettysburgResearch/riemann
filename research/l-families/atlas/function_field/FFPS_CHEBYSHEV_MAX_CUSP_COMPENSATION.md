@@ -1102,6 +1102,19 @@ therefore a square-root edge, not an unexplained numerical instability. It
 follows from (4.29a) that
 
 \[
+ \int_{16}^\infty\frac{\rho(t)}t\,dt=1,\qquad
+ \int_{16}^\infty\frac{\rho(t)}{t^2}\,dt=\frac{\pi^2}{200},\qquad
+ \int_{16}^\infty\frac{\rho(t)}{t^3}\,dt
+ =\frac{17\pi^4}{627200}.
+\tag{4.29c}
+\]
+
+The first identity normalizes \(\Phi(0)=1\); the next two are precisely the
+quadratic and quartic coefficients in (4.24). Thus the causal-primitive
+hierarchy is literally the inverse-moment hierarchy of the limiting
+Stieltjes measure. It follows from (4.29a) that
+
+\[
  \boxed{
  \Phi(c)\ne0\quad\text{on}\quad
  \mathbb C\setminus

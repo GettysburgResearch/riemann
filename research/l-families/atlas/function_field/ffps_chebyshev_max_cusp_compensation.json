@@ -32,6 +32,7 @@
     "normalized_refill_asymptotic": "kappa_r=pi^2/(72(r+1)^2)*(1+O(r^-2))",
     "primitive_L1": "||F_r||_1/|h_r|=(r+1)*tan(a)^2/8",
     "primitive_energy": "||F_r||_2^2/h_r^2=tan(a)^2/(6*(3-tan(a)^2))=(1-cos(pi/(r+1)))/(12*(1+2*cos(pi/(r+1)))), a=pi/(2(r+1))",
+    "profile_inverse_moments": "integral rho(t)/t dt=1, integral rho(t)/t^2 dt=pi^2/200, integral rho(t)/t^3 dt=17*pi^4/627200",
     "profile_stieltjes_density": "Psi(q)=Phi(sqrt(q))=integral_16^infinity rho(t)/(t+q)dt, rho(t)=18432/(pi^4*t^2)*sum_(m odd,16m^2<=t)(1-16m^2/t)^(-1/2)",
     "profile_stieltjes_representation": "Phi(c)=72/pi^4*sum_(k>=0)(2k+1)^-2*integral_0^pi sin(theta)^3/((2k+1)^2+(c^2/16)*sin(theta)^2)dtheta",
     "profile_zero_free_domain": "Phi is zero-free on C minus (i[4,infinity) union -i[4,infinity)); finite-order transforms are eventually zero-free on each compact subset of Re(c)>0",
