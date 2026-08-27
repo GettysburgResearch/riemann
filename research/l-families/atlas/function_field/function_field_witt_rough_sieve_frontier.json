@@ -1,0 +1,61 @@
+{
+  "bounded_control": {
+    "critical_radius_control": "9/20",
+    "exact_reassembly": true,
+    "maximum_total_degree": 8,
+    "q": 5,
+    "q_times_radius_squared": "81/80",
+    "removed_condition_inverse": "10240000000000000000000000000/569468379011812486801",
+    "removed_condition_numerator_digits": 29,
+    "rough_cutoff_degree": 2,
+    "rough_nonzero_laurent_monomials": 19,
+    "rough_phase_one_coefficients": [
+      "1",
+      "0",
+      "0",
+      "-80",
+      "-300",
+      "-1248",
+      "-2040",
+      "1680",
+      "47040"
+    ]
+  },
+  "proof_ledger": {
+    "exponent_two_absolute_conditioning_barrier": "PROVED",
+    "exponent_two_subfrontier": "PROVED FOR THE COMPLETE DEGREE SHELL",
+    "finite_rough_quotient": "PROVED EXACT",
+    "fixed_core_stability": "PROVED",
+    "growing_core_or_arbitrary_sieve": "NOT INCLUDED",
+    "maximal_height_wavelet": "NOT PROVED",
+    "number_field_transfer": "NOT INFERRED",
+    "rh_or_grh": "NOT PROVED",
+    "sharp_actual_rough_coefficient_frontier": "NOT CLAIMED",
+    "uniform_conditioning_bound": "PROVED"
+  },
+  "resource_caps": {
+    "finite_field_elements": 0,
+    "irreducibles_enumerated": 0,
+    "maximum_total_degree": 8,
+    "polynomials_enumerated": 0,
+    "q": 5,
+    "rough_cutoff_degree": 2,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "02555b216077a3cd3a1309eb530cd29b26c7f6a3",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FUNCTION_FIELD_DIVISOR_WAVELET_WITT_FACTORIZATION.md": "ad1ec29ec5678c4dfe356c29f1077de8e2dc868e",
+      "research/l-families/atlas/function_field/function_field_divisor_wavelet_witt_factorization.json": "41c8ae54f6edd556055fcadee8b6ca72581cbed8",
+      "research/l-families/atlas/function_field/function_field_divisor_wavelet_witt_factorization.py": "af697bda209ef4e0f614a672d931e76bba94a83c",
+      "tests/test_function_field_divisor_wavelet_witt_factorization.py": "5fa7501c6bea03a9325d5056ecdd603eed5694b9"
+    }
+  },
+  "theorem": {
+    "absolute_method_barrier": "y_n>=(2+eta)*log_q(n) makes every critical-radius finite-deletion condition number superexponential in n",
+    "conditioning_cost": "log K_(q,y)(r)=O_(q,r)((q*r)^y/y), 0<r<1/2",
+    "critical_subfrontier": "for q>=5 and every eta>0, y_n<=(2-eta)*log_q(n) retains exponential q^(-n/2)-normalized decay",
+    "fixed_core": "every fixed squarefree core is a finite Laurent multiplier times a finite-deletion quotient and preserves |u|<1/2",
+    "rough_quotient": "F_(q,>y)(u,z)=F_q(u,z)/prod_(deg P<=y)(1-(uz)^degP-(u/z)^degP)"
+  }
+}
