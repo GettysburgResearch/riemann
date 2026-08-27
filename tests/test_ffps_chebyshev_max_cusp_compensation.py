@@ -17,6 +17,7 @@ SCRIPT = (
     / "function_field"
     / "ffps_chebyshev_max_cusp_compensation.py"
 )
+NOTE = SCRIPT.with_name("FFPS_CHEBYSHEV_MAX_CUSP_COMPENSATION.md")
 SPEC = importlib.util.spec_from_file_location("chebyshev_cusp", SCRIPT)
 if SPEC is None or SPEC.loader is None:
     raise RuntimeError("could not load Chebyshev max-cusp producer")
@@ -165,6 +166,60 @@ class ChebyshevMaxCuspCompensationTest(unittest.TestCase):
                 )
                 self.assertGreater(signed_error, 0)
 
+    def test_exact_second_primitive_formula(self) -> None:
+        for order in range(2, 9):
+            self.assertAlmostEqual(
+                subject.second_primitive_energy_ratio(order),
+                subject.second_primitive_energy_ratio_closed(order),
+                places=13,
+            )
+            self.assertAlmostEqual(
+                subject.primitive_norm_ratio(order, 2),
+                subject.second_primitive_norm_ratio_closed(order),
+                places=13,
+            )
+            self.assertLess(
+                subject.second_primitive_energy_ratio_closed(order) * (order + 1) ** 2,
+                1,
+            )
+
+    def test_second_primitive_sharp_asymptotic(self) -> None:
+        scaled = subject.second_primitive_energy_ratio_closed(100) * 101**2
+        self.assertAlmostEqual(scaled, math.pi**2 / 50, delta=0.0002)
+
+    def test_linear_scale_profile(self) -> None:
+        for c in (0.5, 1.0, 2.0, 5.0):
+            profile = subject.linear_scale_profile(c)
+            self.assertGreater(profile, 0)
+            self.assertLess(profile, 1)
+        self.assertEqual(subject.linear_scale_profile(0), 1)
+        self.assertAlmostEqual(
+            subject.linear_scale_profile(0.5),
+            0.9878257496,
+            places=9,
+        )
+        self.assertAlmostEqual(
+            subject.linear_scale_profile(1e-7),
+            1 - math.pi**2 * 1e-14 / 200,
+            places=13,
+        )
+        complex_c = complex(1, 0.5)
+        complex_profile = subject.linear_scale_profile_complex(complex_c)
+        self.assertGreater(complex_profile.real, 0)
+        self.assertAlmostEqual(
+            subject.linear_scale_replay_complex(127, complex_c),
+            complex_profile,
+            delta=3e-5,
+        )
+
+    def test_linear_scale_finite_replay(self) -> None:
+        for c in (1.0, 2.0):
+            self.assertAlmostEqual(
+                subject.linear_scale_replay(127, c),
+                subject.linear_scale_profile(c),
+                delta=6e-5,
+            )
+
     def test_cost_charged_local_chart(self) -> None:
         order = 4
         width = 100.0
@@ -183,6 +238,15 @@ class ChebyshevMaxCuspCompensationTest(unittest.TestCase):
         fixture = json.loads(subject.OUTPUT.read_text(encoding="utf-8"))
         self.assertEqual(fixture, subject.run())
 
+    def test_note_control_bytes_and_math_delimiters(self) -> None:
+        text = NOTE.read_text(encoding="utf-8")
+        self.assertFalse(
+            any(ord(character) < 32 and character not in "\n\r" for character in text)
+        )
+        self.assertEqual(text.count(r"\("), text.count(r"\)"))
+        self.assertEqual(text.count(r"\["), text.count(r"\]"))
+        self.assertEqual(text.count("~~~"), 2)
+
     def test_firewalls(self) -> None:
         ledger = subject.run()["proof_ledger"]
         self.assertEqual(ledger["exact_linear_max_cusp_refill"], "PROVED")
@@ -193,7 +257,8 @@ class ChebyshevMaxCuspCompensationTest(unittest.TestCase):
         caps = subject.run()["resource_caps"]
         self.assertEqual(caps["maximum_cell_replay_order"], 8)
         self.assertEqual(caps["beta_terms"], 0)
-        self.assertEqual(caps["quadratures"], 0)
+        self.assertEqual(caps["quadratures"], 1)
+        self.assertEqual(caps["profile_simpson_panels"], 4096)
 
     def test_validation(self) -> None:
         with self.assertRaises(ValueError):
@@ -214,6 +279,18 @@ class ChebyshevMaxCuspCompensationTest(unittest.TestCase):
             subject.primitive_cell_polynomials(2, 0)
         with self.assertRaises(ValueError):
             subject.stieltjes_partial_sum(2, 1, 3)
+        with self.assertRaises(ValueError):
+            subject.second_primitive_energy_ratio_closed(1)
+        with self.assertRaises(ValueError):
+            subject.linear_scale_profile(-1)
+        with self.assertRaises(ValueError):
+            subject.linear_scale_profile(1, panels=3)
+        with self.assertRaises(ValueError):
+            subject.linear_scale_replay(2, 0)
+        with self.assertRaises(ValueError):
+            subject.linear_scale_profile_complex(complex(0, 1))
+        with self.assertRaises(ValueError):
+            subject.linear_scale_replay_complex(2, complex(-1, 1))
 
 
 if __name__ == "__main__":

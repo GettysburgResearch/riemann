@@ -2,9 +2,11 @@
 
 Status: **exact primitive energy, exact max-cusp linear refill coefficient,
 global Stieltjes positivity, quadratic refill decay, strictly decreasing
-cost-refill compensation product, sharp all-order bounds, and a sharp
-uniform-in-order Young remainder envelope; no moving-order Perron estimate,
-no new beta cancellation, and no proof of RH**
+cost-refill compensation product, exact second-primitive energy, a sharp
+moving-tilt phase profile with a zero-free right-half-plane continuation,
+sharp all-order bounds, and a sharp uniform-in-order Young remainder
+envelope; no full imaginary-axis Perron estimate, no new beta cancellation,
+and no proof of RH**
 
 Bounded replay:
 [ffps_chebyshev_max_cusp_compensation.py](ffps_chebyshev_max_cusp_compensation.py).
@@ -159,6 +161,22 @@ For \(r\ge2\), the sharper upper bound is \(196/135\).
 Thus growing information order makes the max-cusp refill coefficient small,
 but not for free in the universal normalized geometry. The product has a
 finite nonzero limit.
+
+The compensation has a sharp real-positive scale boundary. With \(n=r+1\),
+width-normalized tilt \(u=zW\), and
+
+\[
+ \Phi(c)=\frac{288}{\pi^2c^3}
+ \left[c-\frac4\pi\int_0^\pi
+ \tanh\left(\frac{c\pi\sin\theta}{8}\right)d\theta\right],
+ \qquad c>0,
+\tag{0.11}
+\]
+
+the relative refill tends to \(1\), \(\Phi(c)\), or \(0\) according as
+\(u/n\to0\), \(u/n\to c\in(0,\infty)\), or \(u/n\to\infty\). Thus the
+sublinear regime is the maximal real-positive scale on which the full
+linear refill survives.
 
 ## 1. Exact primitive on the Chebyshev cells
 
@@ -769,16 +787,345 @@ then, provided \(r_X\to\infty\),
 \tag{4.9}
 \]
 
+The hypothesis \(u_X\to0\) can be widened substantially when the information
+order grows. Put \(n=r+1\), use the angular coordinate
+
+\[
+ t=\frac{1-\cos\theta}{2},
+ \qquad0\le\theta\le\pi,
+\tag{4.10}
+\]
+
+and let \(s(x)=\operatorname{sgn}(\sin x)\). The unit-height Chebyshev step
+is exactly \(s(n\theta)\). Introduce the mean-zero periodic primitives
+
+\[
+ T(x)=-\frac4\pi\sum_{\substack{k\ge1\\k\ {\rm odd}}}
+ \frac{\cos(kx)}{k^2},
+ \qquad
+ U(x)=-\frac4\pi\sum_{\substack{k\ge1\\k\ {\rm odd}}}
+ \frac{\sin(kx)}{k^3},
+\tag{4.11}
+\]
+
+so \(T'=s\) away from the jumps and \(U'=T\). Repeated integration by
+parts against the bounded next periodic primitives gives, uniformly in
+\(\theta\),
+
+\[
+ \frac{P_1(t(\theta))}{h_r}
+ =\frac{\sin\theta}{2n}T(n\theta)
+ -\frac{\cos\theta}{2n^2}U(n\theta)
+ +O(n^{-3}),
+\tag{4.12}
+\]
+
+and
+
+\[
+ \frac{P_2(t(\theta))}{h_r}
+ =\frac{\sin^2\theta}{4n^2}U(n\theta)
+ +O(n^{-3}).
+\tag{4.13}
+\]
+
+Parseval gives
+
+\[
+ \langle T^2\rangle=\frac{\pi^2}{12},
+ \qquad
+ \langle U^2\rangle=\frac{\pi^4}{120}.
+\tag{4.14}
+\]
+
+Periodic averaging in \(dt=(\sin\theta/2)d\theta\), together with
+\(\int_0^\pi\sin^3\theta\,d\theta=4/3\) and
+\(\int_0^\pi\sin^5\theta\,d\theta=16/15\), now yields
+
+\[
+ \frac{\|P_1\|_2^2}{h_r^2}
+ =\frac{\pi^2}{72n^2}+O(n^{-3}),
+ \qquad
+ \frac{\|P_2\|_2^2}{h_r^2}
+ =\frac{\pi^4}{3600n^4}+O(n^{-5}).
+\tag{4.15}
+\]
+
+Put \(v=\sin^2(\pi/(2n))\). The cell primitives in fact give the following
+exact refinement for every \(r\ge2\):
+
+\[
+ \boxed{
+ \frac{\|P_2\|_2^2}{h_r^2}
+ =\frac{v^2(8-9v)}
+ {120(3-4v)(16v^2-20v+5)},
+ \qquad
+ \frac{\|P_2\|_2^2}{\|P_1\|_2^2}
+ =\frac{v(8-9v)}{20(16v^2-20v+5)}.}
+\tag{4.16}
+\]
+
+Indeed, on cell \(j\), with \(x=t-y_j\), one has
+
+\[
+ \frac{P_2(y_j+x)}{h_r}
+ =(-1)^j\left(\frac{x^2}{2}-B_jx-C_j\right),
+ \qquad
+ C_j=\frac{\tan^2a\tan(2a)}{16}\sin(2j\theta).
+\]
+
+The cell norm contains only the midpoint harmonics \(1,3,5\); summing them
+with
+\(\sum_{j=0}^{n-1}\sin(m(j+1/2)\pi/n)=\csc(m\pi/(2n))\)
+gives (4.16). Expanding it yields
+
+\[
+ \frac{\|P_2\|_2^2}{\|P_1\|_2^2}
+ =\frac{\pi^2}{50n^2}
+ +\frac{61\pi^4}{4800n^4}
+ +\frac{1157\pi^6}{144000n^6}
+ +O(n^{-8}).
+\tag{4.16a}
+\]
+
+Since \(0<v\le1/4\), the denominator polynomial in (4.16) is at least one,
+and \(v<\pi^2/(4n^2)\). In particular,
+
+\[
+ 0<\frac{\|P_2\|_2^2}{\|P_1\|_2^2}<\frac1{n^2}
+ \qquad(n\ge3).
+\tag{4.16b}
+\]
+
+Apply the first two levels of (2.5k) with \(q=u^2/4\). Since
+\(0<G_{P_1}(q)<\|P_2\|_2^2\),
+
+\[
+ \boxed{
+ 0<
+ 1-\frac{\mathcal L_{r,W}(z)}{\kappa_r}
+ <
+ \frac{u^2}{4}\frac{\|P_2\|_2^2}{\|P_1\|_2^2}
+ =\frac{\pi^2u^2}{200n^2}+O\left(\frac{u^2}{n^4}\right)
+ <\frac{u^2}{4n^2}.}
+\tag{4.17}
+\]
+
+This bound holds for every positive real \(u\); its right side is useful
+uniformly throughout the much larger sublinear-tilt regime \(u=o(r)\).
+Consequently, whenever
+
+\[
+ r_X\to\infty,\qquad z_XW_X=o(r_X),\qquad
+ (r_X+1)\log\left(1+\frac{\ell}{W_X}\right)\to\tau,
+\tag{4.18}
+\]
+
+the limit in (4.9) still holds. In particular, the cost-charged refill tends
+to \(\pi^3/36\) for \(z_XW_X=o(r_X)\) and
+\(r_X\log(1+\ell/W_X)\to0\). Thus the compensation floor is not merely a
+small-\(zW\) Taylor artifact; it persists across every sublinear positive
+tilt.
+
+This sublinear condition is sharp. Let
+
+\[
+ q_0=1,\qquad q_n=(-1)^n,\qquad q_j=2(-1)^j\quad(0<j<n),
+\]
+
+be the jump masses of the unit-height step, and set
+
+\[
+ S_n(z)=\sum_{j,k=0}^nq_jq_k
+ \exp\left(-\frac z2|y_j-y_k|\right).
+\]
+
+The finite-jump identity (2.5f) reduces exactly to
+
+\[
+ \frac{J_r(z)}{h_r^2}=\frac{4(z-S_n(z))}{z^2}.
+\tag{4.19}
+\]
+
+Suppose \(z_n/n\to c\in(0,\infty)\). In a bulk row
+\(j/n\to x\), a fixed displacement \(m\) has
+
+\[
+ n(y_{j+m}-y_j)\longrightarrow
+ \frac{\pi m}{2}\sin(\pi x).
+\]
+
+The resulting bilateral alternating row sum is
+
+\[
+ 4\sum_{m\in\mathbb Z}(-1)^m
+ e^{-c\pi|m|\sin(\pi x)/4}
+ =4\tanh\left(\frac{c\pi\sin(\pi x)}8\right).
+\tag{4.20}
+\]
+
+Alternating-series bounds keep every row uniformly bounded, including the
+flat endpoint layers. Truncating away from the endpoints, passing to the
+Riemann integral, and then removing the truncation gives
+
+\[
+ \frac{S_n(z_n)}n\longrightarrow
+ \frac4\pi\int_0^\pi
+ \tanh\left(\frac{c\pi\sin\theta}{8}\right)d\theta.
+\tag{4.21}
+\]
+
+Combining (4.19), (4.21), and \(n^2\kappa_r\to\pi^2/72\) proves the
+scale-sharp profile
+
+\[
+ \boxed{
+ \frac{J_r(z_n)}{z_nh_r^2\kappa_r}\longrightarrow\Phi(c),
+ \qquad
+ \Phi(c)=\frac{288}{\pi^2c^3}
+ \left[c-\frac4\pi\int_0^\pi
+ \tanh\left(\frac{c\pi\sin\theta}{8}\right)d\theta\right].}
+\tag{4.22}
+\]
+
+The inequalities \(\tanh x<x\) and
+\(\tanh x>x-x^3/3\) show directly that
+
+\[
+ 0<\Phi(c)<1.
+\tag{4.23}
+\]
+
+At the two ends of the phase curve,
+
+\[
+ \Phi(c)=1-\frac{\pi^2c^2}{200}
+ +\frac{17\pi^4c^4}{627200}+O(c^6),
+ \qquad c\downarrow0,
+\tag{4.24}
+\]
+
+and
+
+\[
+ \Phi(c)=\frac{288}{\pi^2c^2}
+ -\frac{1152}{\pi^2c^3}+O(c^{-4}),
+ \qquad c\to\infty.
+\tag{4.25}
+\]
+
+The quadratic term in (4.24) agrees exactly with the second-primitive
+coefficient in (4.16a). Finally, if \(z_n/n\to\infty\), the global bound
+\(J_r(z)<4h_r^2/z\) gives
+
+\[
+ 0<\frac{J_r(z_n)}{z_nh_r^2\kappa_r}
+ <\left(\frac{288}{\pi^2}+o(1)\right)
+ \left(\frac n{z_n}\right)^2\longrightarrow0.
+\tag{4.26}
+\]
+
+After dilation, replace \(z_n\) by \(u_n=z_nW_n\). With the continuous
+extension \(\Phi(0)=1\), the full cost-charged real-positive limit is
+
+\[
+ \boxed{
+ \frac{u_n}{n}\to c\in[0,\infty),\quad
+ n\log\left(1+\frac{\ell}{W_n}\right)\to\tau
+ \quad\Longrightarrow\quad
+ \mathcal G^*_{r,W}(X)\mathcal L_{r,W}(z)
+ \to\frac{\pi^3}{36}e^{2\tau}\Phi(c).}
+\tag{4.27}
+\]
+
+For \(u_n/n\to\infty\) and bounded cost exponent, the same product tends to
+zero. Thus the universal \(\pi^3/36\) compensation floor survives exactly on
+the sublinear real-positive side; linear tilt retains only the explicit
+fraction \(\Phi(c)\), and superlinear tilt loses the refill.
+
+There is also a proof-grade complex continuation, though not yet one that
+reaches the full Perron axis. The Toeplitz-row argument above is locally
+uniform when \(c\) ranges over a compact subset of \(\Re c>0\). Hence
+
+\[
+ \frac{J_{n-1}(nc)}{nc\,h_{n-1}^2\kappa_{n-1}}
+ \longrightarrow\Phi(c)
+\tag{4.28}
+\]
+
+locally uniformly on the open right half-plane. A Mittag--Leffler expansion,
+
+\[
+ \frac{\tanh x}{x}
+ =\sum_{k\ge0}\frac8{\pi^2(2k+1)^2+4x^2},
+\]
+
+turns (4.22) into the positive Stieltjes representation
+
+\[
+ \boxed{
+ \Phi(c)=\frac{72}{\pi^4}
+ \sum_{k\ge0}\frac1{(2k+1)^2}
+ \int_0^\pi
+ \frac{\sin^3\theta\,d\theta}
+ {(2k+1)^2+(c^2/16)\sin^2\theta}.}
+\tag{4.29}
+\]
+
+Equivalently, \(\Psi(q)=\Phi(\sqrt q)\), defined by the right side of
+(4.29), is a positive Stieltjes transform whose spectral support starts at
+\(q=16\). It follows that
+
+\[
+ \boxed{
+ \Phi(c)\ne0\quad\text{on}\quad
+ \mathbb C\setminus
+ \left(i[4,\infty)\cup-i[4,\infty)\right).}
+\tag{4.30}
+\]
+
+Indeed, off the negative \(q\)-axis the imaginary part of a positive
+Stieltjes transform has a strict sign, while on \(q>-16\) the integral is
+positive. In particular, \(\Phi\) is zero-free throughout \(\Re c>0\).
+Local uniform convergence then implies that every compact subset of that
+half-plane is zero-free for the finite-order normalized transforms once
+\(n\) is sufficiently large.
+
+The same resolvent estimates give a complex trichotomy in any fixed acute
+right-half sector \(|\arg z|\le\pi/2-\delta\):
+
+\[
+ \frac{|z_n|}{n}\to0\Longrightarrow R_n(z_n)\to1,\qquad
+ \frac{z_n}{n}\to c\Longrightarrow R_n(z_n)\to\Phi(c),\qquad
+ \frac{|z_n|}{n}\to\infty\Longrightarrow R_n(z_n)\to0,
+\tag{4.31}
+\]
+
+where \(R_n(z)=J_{n-1}(z)/(z h_{n-1}^2\kappa_{n-1})\). The first implication
+uses \(|G_{P_1}(q)|\ll_\delta\|P_2\|_2^2\); the last uses
+\(|G_K(q)|\ll_\delta\|K\|_2^2/|q|\).
+
+The excluded imaginary rays are structural, not a defect of notation. The
+first Stieltjes branch point is \(c=\pm4i\). Convergence on compact subsets
+of \(\Re c>0\) is not uniform as \(\Re c\downarrow0\), and the limits
+\(n\to\infty\) and \(\Re c\to0\) need not commute. Thus (4.28)--(4.31) do
+not prove a zero-free Perron contour or justify passage along the full
+imaginary axis.
+
 Within schedules with \(r_X\to\infty\), the limiting floor \(\pi^3/36\) is
 approached exactly when \(r_X\log(1+\ell/W_X)\to0\). In the wide-support
 regime \(W_X\gg\ell\), this is equivalent to \(W_X\gg r_X\ell\).
 
-This is an exact local geometric barrier for the BV-optimal Chebyshev family.
+This is an exact real-positive geometric phase diagram for the BV-optimal
+Chebyshev family.
 It is not a universal lower bound over all compact BV kernels: the sharp
 lower bound for the BV cost and the refill coefficient of an unrelated
-kernel cannot simply be multiplied. It also requires \(z_XW_X\to0\), controls
-only the isolated zero mode, and supplies no vertical-contour, reciprocal-zeta,
-height-truncation, or beta primitive-pair estimate.
+kernel cannot simply be multiplied. The elementary local chart requires
+\(z_XW_X\to0\); the primitive hierarchy covers \(z_XW_X=o(r_X)\), and the
+Toeplitz limit resolves linear and superlinear positive real tilt. These
+results control only the isolated zero mode and supply no complex
+vertical-contour, reciprocal-zeta, height-truncation, or beta primitive-pair
+estimate.
 
 ## 5. What this does and does not say
 
@@ -819,13 +1166,21 @@ In particular:
 | fixed-order large-tilt expansion (2.5f.4) | **PROVED** |
 | global alternating primitive hierarchy (2.5k) | **PROVED** |
 | terminal even cusp coefficient (2.5m) | **PROVED** |
+| exact second-primitive norm and ratio (4.16) | **PROVED** |
+| sublinear real-positive refill limit (4.17)--(4.18) | **PROVED** |
+| linear-scale profile \(\Phi(c)\) (4.19)--(4.25) | **PROVED FOR REAL POSITIVE TILT** |
+| superlinear real-positive collapse (4.26) | **PROVED** |
+| cost-charged real-positive phase diagram (4.27) | **PROVED FOR THE CHEBYSHEV FAMILY** |
+| complex right-half-plane profile (4.28) | **PROVED LOCALLY UNIFORMLY ON COMPACTS** |
+| Stieltjes representation and limiting zero-free domain (4.29)--(4.30) | **PROVED** |
+| acute-sector complex scale trichotomy (4.31) | **PROVED FOR THE KERNEL TRANSFORM** |
 | uniform-in-order relative remainder (2.8) | **PROVED** |
 | sharp \(3/16\) Young-envelope coefficient | **PROVED** |
 | uniform complex zero-free half-disk (2.11) | **PROVED FOR THE KERNEL TRANSFORM ONLY** |
 | quadratic normalized refill decay (0.7) | **PROVED** |
 | finite nonzero compensation limit (0.9) | **PROVED** |
 | strict descent and sharp bounds (0.10) | **PROVED** |
-| cost-charged moving local floor (4.7) | **PROVED FOR THE CHEBYSHEV FAMILY AND \(zW\to0^+\)** |
+| cost-charged moving local floor (4.7) | **PROVED FOR THE CHEBYSHEV FAMILY AND \(zW=o(r)\)** |
 | uniform moving-order Perron estimate | **NOT PROVED** |
 | new beta cancellation, RH, or GRH | **NOT PROVED** |
 
@@ -845,12 +1200,15 @@ The producer:
 - checks positivity, the Stieltjes monotonicity rows, fixed-order large-tilt
   scaling, the sharp \(3/16\) Young envelope, and the cost-charged dilation
   chart;
-- tabulates only sixteen fixed orders and two constant-time asymptotic spot
-  evaluations;
+- checks the exact second-primitive formula against independent cell
+  integration and replays the linear-scale profile at order \(127\);
+- tabulates only sixteen fixed orders, bounded asymptotic spot evaluations,
+  and one deterministic \(4096\)-panel Simpson integral for the explicit
+  profile;
 - records the exact trigonometric formula, sharp rational \(A_r\), and
   compensation limit;
 - performs no beta sum, prime enumeration, zeta evaluation, root search,
-  random sampling, quadrature, or curve computation.
+  random sampling, adaptive quadrature, or curve computation.
 
 ~~~text
 python -B research/l-families/atlas/function_field/ffps_chebyshev_max_cusp_compensation.py --check

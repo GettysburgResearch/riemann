@@ -25,6 +25,8 @@ SOURCE_BLOBS = {
 
 MAX_CELL_ORDER = 8
 MAX_TABLE_ORDER = 16
+PROFILE_SIMPSON_PANELS = 4096
+LINEAR_SCALE_REPLAY_ORDER = 127
 
 
 def check_source_blobs() -> None:
@@ -234,6 +236,133 @@ def primitive_mass_ratio(order: int, depth: int) -> float:
     return integrate_cell_polynomials(order, polynomials)
 
 
+def second_primitive_energy_ratio(order: int) -> float:
+    """||P_2||_2^2/||P_1||_2^2 for the unit-height Chebyshev step."""
+    if order < 2:
+        raise ValueError("order must be at least two")
+    return primitive_norm_ratio(order, 2) / primitive_norm_ratio(order, 1)
+
+
+def second_primitive_norm_ratio_closed(order: int) -> float:
+    """Exact ||P_2||_2^2/h_r^2 in the Chebyshev family."""
+    if order < 2:
+        raise ValueError("order must be at least two")
+    v = math.sin(math.pi / (2 * (order + 1))) ** 2
+    return v**2 * (8 - 9 * v) / (120 * (3 - 4 * v) * (16 * v**2 - 20 * v + 5))
+
+
+def second_primitive_energy_ratio_closed(order: int) -> float:
+    """Exact ||P_2||_2^2/||P_1||_2^2 in the Chebyshev family."""
+    if order < 2:
+        raise ValueError("order must be at least two")
+    v = math.sin(math.pi / (2 * (order + 1))) ** 2
+    return v * (8 - 9 * v) / (20 * (16 * v**2 - 20 * v + 5))
+
+
+def second_primitive_scaled_limit() -> float:
+    return math.pi**2 / 50
+
+
+def relative_fixed_tilt_refill(order: int, z: float) -> float:
+    """J_r(z)/(z*h_r^2*kappa_r)."""
+    return normalized_stieltjes_ratio(order, z) / primitive_energy_ratio(order)
+
+
+def linear_scale_profile(c: float, panels: int = PROFILE_SIMPSON_PANELS) -> float:
+    """The real-positive z/(r+1)->c refill profile by bounded Simpson replay."""
+    if c < 0:
+        raise ValueError("c must be nonnegative")
+    if panels < 2 or panels % 2:
+        raise ValueError("panels must be a positive even integer")
+    if c == 0:
+        return 1.0
+    step = math.pi / panels
+    scale = c * math.pi / 8
+
+    def residual(theta: float) -> float:
+        x = scale * math.sin(theta)
+        if abs(x) < 0.01:
+            x_squared = x * x
+            return x**3 * (
+                Fraction(1, 3)
+                + x_squared
+                * (
+                    -Fraction(2, 15)
+                    + x_squared * (Fraction(17, 315) - Fraction(62, 2835) * x_squared)
+                )
+            )
+        return x - math.tanh(x)
+
+    terms = [0.0]
+    terms.extend(
+        (4 if index % 2 else 2) * residual(index * step) for index in range(1, panels)
+    )
+    terms.append(0.0)
+    integral = step * math.fsum(terms) / 3
+    return 1152 * integral / (math.pi**3 * c**3)
+
+
+def linear_scale_profile_complex(
+    c: complex, panels: int = PROFILE_SIMPSON_PANELS
+) -> complex:
+    """Analytic profile replay for a nonzero right-half-plane scale."""
+    if c == 0 or c.real <= 0:
+        raise ValueError("c must lie in the open right half-plane")
+    if panels < 2 or panels % 2:
+        raise ValueError("panels must be a positive even integer")
+    step = math.pi / panels
+    scale = c * math.pi / 8
+
+    def residual(theta: float) -> complex:
+        x = scale * math.sin(theta)
+        if abs(x) < 0.01:
+            x_squared = x * x
+            return x**3 * (
+                Fraction(1, 3)
+                + x_squared
+                * (
+                    -Fraction(2, 15)
+                    + x_squared * (Fraction(17, 315) - Fraction(62, 2835) * x_squared)
+                )
+            )
+        return x - cmath.tanh(x)
+
+    terms = [0j]
+    terms.extend(
+        (4 if index % 2 else 2) * residual(index * step) for index in range(1, panels)
+    )
+    terms.append(0j)
+    integral = (
+        step
+        * complex(
+            math.fsum(term.real for term in terms),
+            math.fsum(term.imag for term in terms),
+        )
+        / 3
+    )
+    return 1152 * integral / (math.pi**3 * c**3)
+
+
+def linear_scale_replay(order: int, c: float) -> float:
+    """Finite-order cell replay at z=c(r+1)."""
+    validate_order(order)
+    if c <= 0:
+        raise ValueError("c must be positive")
+    z = c * (order + 1)
+    return tilted_zero_mode_by_cells(order, z) / (z * primitive_energy_ratio(order))
+
+
+def linear_scale_replay_complex(order: int, c: complex) -> complex:
+    """Finite-order jump replay at a right-half-plane scale z=c(r+1)."""
+    validate_order(order)
+    if c.real <= 0:
+        raise ValueError("c must lie in the open right half-plane")
+    z = c * (order + 1)
+    return tilted_zero_mode_by_jumps_complex(order, z) / (
+        z * primitive_energy_ratio(order)
+    )
+
+
 def stieltjes_partial_sum(order: int, z: float, depth: int) -> float:
     """Alternating depth-M primitive truncation for J_r(z)/(z h_r^2)."""
     validate_order(order)
@@ -330,6 +459,21 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
         expected_mass = 1 / (math.factorial(order) * 4**order)
         if abs(primitive_mass_ratio(order, order) - expected_mass) > 2e-14:
             raise AssertionError("terminal primitive sensitivity failed")
+        if order >= 2:
+            second_by_cells = second_primitive_energy_ratio(order)
+            second_closed = second_primitive_energy_ratio_closed(order)
+            if abs(second_by_cells - second_closed) > 2e-14:
+                raise AssertionError("exact second-primitive formula failed")
+            if (
+                abs(
+                    second_primitive_norm_ratio_closed(order)
+                    - primitive_norm_ratio(order, 2)
+                )
+                > 2e-14
+            ):
+                raise AssertionError("exact second-primitive norm failed")
+            if second_closed * (order + 1) ** 2 >= 1:
+                raise AssertionError("all-order second-primitive bound failed")
         if compensation_ratio_upper_bound(order) >= 1:
             raise AssertionError("compensation descent certificate failed")
         if (
@@ -359,6 +503,32 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
         )
         if complex_error > complex_bound + 2e-12 or complex_value == 0:
             raise AssertionError("complex half-disk certificate failed")
+
+    for c in (0.5, 1.0, 2.0, 5.0):
+        profile = linear_scale_profile(c)
+        if not 0 < profile < 1:
+            raise AssertionError("linear-scale profile escaped the unit interval")
+    for c in (1.0, 2.0):
+        if (
+            abs(
+                linear_scale_replay(LINEAR_SCALE_REPLAY_ORDER, c)
+                - linear_scale_profile(c)
+            )
+            > 6e-5
+        ):
+            raise AssertionError("linear-scale finite replay failed")
+    complex_c = complex(1, 0.5)
+    complex_profile = linear_scale_profile_complex(complex_c)
+    if complex_profile.real <= 0:
+        raise AssertionError("acute-sector profile lost its positive real part")
+    if (
+        abs(
+            linear_scale_replay_complex(LINEAR_SCALE_REPLAY_ORDER, complex_c)
+            - complex_profile
+        )
+        > 3e-5
+    ):
+        raise AssertionError("complex linear-scale finite replay failed")
 
     rows = []
     for order in range(1, MAX_TABLE_ORDER + 1):
@@ -396,6 +566,18 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "finite_jump_formula": "J_r(z)=sum_jk mu_j*mu_k*(1-exp(-a*d_jk)-a*d_jk)/a^2, a=z/2",
             "iterated_primitive_hierarchy": "G_K(q)=sum_(m=1)^M (-q)^(m-1)||P_m||_2^2+(-q)^M G_(P_M)(q), so every truncation has the exact alternating error sign",
             "terminal_cusp_expansion": "J_K(z)=z*sum_(m=1)^r(-z^2/4)^(m-1)||P_m||_2^2+(-1)^r*b^2*(z^2/4)^r+O(z^(2r+1))",
+            "second_primitive_exact_norm": "with v=sin(pi/(2*(r+1)))^2, ||P_2||_2^2/h_r^2=v^2*(8-9v)/(120*(3-4v)*(16v^2-20v+5))",
+            "second_primitive_exact_ratio": "with v=sin(pi/(2*(r+1)))^2, ||P_2||_2^2/||P_1||_2^2=v*(8-9v)/(20*(16v^2-20v+5))",
+            "second_primitive_asymptotic": "||P_2||_2^2/||P_1||_2^2=pi^2/(50*n^2)+61*pi^4/(4800*n^4)+1157*pi^6/(144000*n^6)+O(n^-8), n=r+1",
+            "second_primitive_all_order_bound": "0<||P_2||_2^2/||P_1||_2^2<1/(r+1)^2 for every r>=2",
+            "sublinear_tilt_limit": "uniformly for positive z_r=o(r), J_r(z_r)/(z_r*h_r^2*kappa_r)->1 and A_r*J_r(z_r)/(z_r*h_r^2)->pi^3/36",
+            "linear_scale_tilt_profile": "if z_r/(r+1)->c in (0,infinity), J_r(z_r)/(z_r*h_r^2*kappa_r)->Phi(c)=288/(pi^2*c^3)*(c-(4/pi)*integral_0^pi tanh(c*pi*sin(theta)/8)dtheta), with 0<Phi(c)<1",
+            "linear_scale_small_c": "Phi(c)=1-pi^2*c^2/200+17*pi^4*c^4/627200+O(c^6)",
+            "superlinear_tilt_collapse": "if z_r/(r+1)->infinity, J_r(z_r)/(z_r*h_r^2*kappa_r)->0",
+            "cost_charged_phase_diagram": "if z_r*W_r/(r+1)->c and (r+1)*log(1+log(X)/W_r)->tau, then G*L->(pi^3/36)*exp(2*tau)*Phi(c), with Phi(0)=1",
+            "complex_linear_scale_profile": "the same Phi(c) limit holds locally uniformly on compact subsets of Re(c)>0",
+            "profile_stieltjes_representation": "Phi(c)=72/pi^4*sum_(k>=0)(2k+1)^-2*integral_0^pi sin(theta)^3/((2k+1)^2+(c^2/16)*sin(theta)^2)dtheta",
+            "profile_zero_free_domain": "Phi is zero-free on C minus (i[4,infinity) union -i[4,infinity)); finite-order transforms are eventually zero-free on each compact subset of Re(c)>0",
             "primitive_L1": "||F_r||_1/|h_r|=(r+1)*tan(a)^2/8",
             "uniform_refill_remainder": "for real z>=0, |J_r(z)/h_r^2-z*kappa_r|<=(3/16)*z^2*kappa_r, uniformly in r; 3/16 is sharp for the exact L1/Young envelope",
             "complex_zero_free_half_disk": "for Re(z)>=0 and 0<|z|<16/3, J_r(z) is nonzero; after width-W dilation the condition is |z|W<16/3",
@@ -415,6 +597,14 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "finite_jump_transform": "PROVED",
             "global_alternating_primitive_hierarchy": "PROVED",
             "terminal_even_cusp_coefficient": "PROVED",
+            "exact_second_primitive_energy": "PROVED",
+            "second_primitive_two_scale_asymptotic": "PROVED",
+            "sublinear_tilt_compensation_limit": "PROVED",
+            "linear_scale_tilt_profile": "PROVED FOR POSITIVE REAL TILT",
+            "superlinear_tilt_collapse": "PROVED FOR POSITIVE REAL TILT",
+            "cost_charged_real_tilt_phase_diagram": "PROVED",
+            "complex_right_half_plane_profile": "PROVED",
+            "limiting_profile_stieltjes_zero_free_domain": "PROVED",
             "uniform_in_order_relative_linear_refill": "PROVED",
             "sharp_young_envelope_constant": "PROVED",
             "uniform_complex_zero_free_half_disk": "PROVED",
@@ -429,18 +619,35 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
         "resource_caps": {
             "maximum_cell_replay_order": MAX_CELL_ORDER,
             "maximum_table_order": MAX_TABLE_ORDER,
+            "two_scale_spot_order": 100,
+            "sublinear_tilt_spot_order": 64,
+            "linear_scale_replay_order": LINEAR_SCALE_REPLAY_ORDER,
+            "profile_simpson_panels": PROFILE_SIMPSON_PANELS,
             "asymptotic_spot_order": 1000,
             "beta_terms": 0,
             "primes": 0,
             "zeta_zeros": 0,
             "root_searches": 0,
             "random_samples": 0,
-            "quadratures": 0,
+            "quadratures": 1,
             "curve_computations": 0,
         },
         "asymptotic_spot_checks": {
             "refill_scaled_at_1000": f"{primitive_energy_ratio(1000) * 72 * 1001**2 / math.pi**2:.15f}",
             "product_over_limit_at_1000": f"{compensation_product(1000) / refill_limit():.15f}",
+            "second_primitive_scaled_at_100": f"{second_primitive_energy_ratio(100) * 101**2:.15f}",
+            "second_primitive_scaled_limit": f"{second_primitive_scaled_limit():.15f}",
+            "sublinear_tilt_ratio_r64_z8": f"{relative_fixed_tilt_refill(64, 8):.15f}",
+            "linear_profile_c1": f"{linear_scale_profile(1):.15f}",
+            "linear_replay_r127_c1": f"{linear_scale_replay(LINEAR_SCALE_REPLAY_ORDER, 1):.15f}",
+            "linear_profile_c2": f"{linear_scale_profile(2):.15f}",
+            "linear_replay_r127_c2": f"{linear_scale_replay(LINEAR_SCALE_REPLAY_ORDER, 2):.15f}",
+            "complex_profile_c1_plus_half_i": str(
+                linear_scale_profile_complex(complex(1, 0.5))
+            ),
+            "complex_replay_r127_c1_plus_half_i": str(
+                linear_scale_replay_complex(LINEAR_SCALE_REPLAY_ORDER, complex(1, 0.5))
+            ),
         },
     }
 
