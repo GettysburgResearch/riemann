@@ -1,0 +1,375 @@
+{
+  "compressed_ladder": {
+    "definition": "P_a=f_a*f_a, Q_(a,m)(x)=m P_a^(*m)(m*x), J_(a,m)=D Q_(a,m)",
+    "fourier_weight": "w_(a,m)(t)=t^2|f_a_hat(i*t/m)|^(4m)=w_(-a,m)(t)",
+    "laplace_reflection": "J_(-a,m)_hat(s)=-exp(-2s)J_(a,m)_hat(-s)",
+    "laplace_transform": "J_hat(s)=s[f_a_hat(s/m)]^(2m)",
+    "nontrivial_carrier_zeros": "s=m(a+2pi*i*k), nonzero integer k, each of order 2m",
+    "reflection": "J_(-a,m)(x)=-J_(a,m)(2-x)",
+    "rows": [
+      {
+        "carrier_zero_real_part": "-1",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999841348338401e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 1,
+        "tilt": "-1"
+      },
+      {
+        "carrier_zero_real_part": "-1/8",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999833464709321e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 1,
+        "tilt": "-1/8"
+      },
+      {
+        "carrier_zero_real_part": "0",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999833334583326e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "t=2pi*m*k for nonzero integers k",
+        "order": 1,
+        "tilt": "0"
+      },
+      {
+        "carrier_zero_real_part": "1/8",
+        "direct_landau_zone": "DIRECT CARRIER GAP: nontrivial zeros lie inside 0<Re(s)<1/2",
+        "minimum_replayed_nonzero_weight": 9.999833464709321e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 1,
+        "tilt": "1/8"
+      },
+      {
+        "carrier_zero_real_part": "1/2",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.99983539740198e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 1,
+        "tilt": "1/2"
+      },
+      {
+        "carrier_zero_real_part": "1",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.999841348338401e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 1,
+        "tilt": "1"
+      },
+      {
+        "carrier_zero_real_part": "-2",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999920673895274e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 2,
+        "tilt": "-1"
+      },
+      {
+        "carrier_zero_real_part": "-1/4",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.99991673205987e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 2,
+        "tilt": "-1/8"
+      },
+      {
+        "carrier_zero_real_part": "0",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999916666996523e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "t=2pi*m*k for nonzero integers k",
+        "order": 2,
+        "tilt": "0"
+      },
+      {
+        "carrier_zero_real_part": "1/4",
+        "direct_landau_zone": "DIRECT CARRIER GAP: nontrivial zeros lie inside 0<Re(s)<1/2",
+        "minimum_replayed_nonzero_weight": 9.99991673205987e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 2,
+        "tilt": "1/8"
+      },
+      {
+        "carrier_zero_real_part": "1",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.999917698411362e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 2,
+        "tilt": "1/2"
+      },
+      {
+        "carrier_zero_real_part": "2",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.999920673895274e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 2,
+        "tilt": "1"
+      },
+      {
+        "carrier_zero_real_part": "-3",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999947115865273e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 3,
+        "tilt": "-1"
+      },
+      {
+        "carrier_zero_real_part": "-3/8",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999944487969277e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 3,
+        "tilt": "-1/8"
+      },
+      {
+        "carrier_zero_real_part": "0",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999944444593636e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "t=2pi*m*k for nonzero integers k",
+        "order": 3,
+        "tilt": "0"
+      },
+      {
+        "carrier_zero_real_part": "3/8",
+        "direct_landau_zone": "DIRECT CARRIER GAP: nontrivial zeros lie inside 0<Re(s)<1/2",
+        "minimum_replayed_nonzero_weight": 9.999944487969277e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 3,
+        "tilt": "1/8"
+      },
+      {
+        "carrier_zero_real_part": "3/2",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.999945132205024e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 3,
+        "tilt": "1/2"
+      },
+      {
+        "carrier_zero_real_part": "3",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.999947115865273e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 3,
+        "tilt": "1"
+      },
+      {
+        "carrier_zero_real_part": "-4",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999960336874072e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 4,
+        "tilt": "-1"
+      },
+      {
+        "carrier_zero_real_part": "-1/2",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999958365949753e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 4,
+        "tilt": "-1/8"
+      },
+      {
+        "carrier_zero_real_part": "0",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999958333417964e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "t=2pi*m*k for nonzero integers k",
+        "order": 4,
+        "tilt": "0"
+      },
+      {
+        "carrier_zero_real_part": "1/2",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.999958365949753e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 4,
+        "tilt": "1/8"
+      },
+      {
+        "carrier_zero_real_part": "2",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.999958849127152e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 4,
+        "tilt": "1/2"
+      },
+      {
+        "carrier_zero_real_part": "4",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.999960336874072e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 4,
+        "tilt": "1"
+      },
+      {
+        "carrier_zero_real_part": "-5",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999968269487181e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 5,
+        "tilt": "-1"
+      },
+      {
+        "carrier_zero_real_part": "-5/8",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999966692746564e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 5,
+        "tilt": "-1/8"
+      },
+      {
+        "carrier_zero_real_part": "0",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999966666721104e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "t=2pi*m*k for nonzero integers k",
+        "order": 5,
+        "tilt": "0"
+      },
+      {
+        "carrier_zero_real_part": "5/8",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.999966692746564e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 5,
+        "tilt": "1/8"
+      },
+      {
+        "carrier_zero_real_part": "5/2",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.999967079288763e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 5,
+        "tilt": "1/2"
+      },
+      {
+        "carrier_zero_real_part": "5",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.999968269487181e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 5,
+        "tilt": "1"
+      },
+      {
+        "carrier_zero_real_part": "-6",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.99997355789919e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 6,
+        "tilt": "-1"
+      },
+      {
+        "carrier_zero_real_part": "-3/4",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999972243948028e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 6,
+        "tilt": "-1/8"
+      },
+      {
+        "carrier_zero_real_part": "0",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/left of Re(s)=0",
+        "minimum_replayed_nonzero_weight": 9.999972222260152e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "t=2pi*m*k for nonzero integers k",
+        "order": 6,
+        "tilt": "0"
+      },
+      {
+        "carrier_zero_real_part": "3/4",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.999972243948028e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 6,
+        "tilt": "1/8"
+      },
+      {
+        "carrier_zero_real_part": "3",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.999972566066691e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 6,
+        "tilt": "1/2"
+      },
+      {
+        "carrier_zero_real_part": "6",
+        "direct_landau_zone": "DIRECTLY SAFE: nontrivial carrier zeros are on/right of Re(s)=1/2",
+        "minimum_replayed_nonzero_weight": 9.99997355789919e-05,
+        "mirror_weight_maximum_error": 0.0,
+        "nonzero_real_fourier_zeros": "none",
+        "order": 6,
+        "tilt": "1"
+      }
+    ],
+    "support": "[0,2] for every a and m"
+  },
+  "energy_conclusion": {
+    "all_tilt_fixed_order_criterion": "for every fixed real a and m>=1, RH iff E_(a,m)(X)=X^o(1)",
+    "direct_one_sided_scope": "the direct L1/Jordan Landau proof is certified only when m*a<=0 or m*a>=1/2",
+    "exact_isospectrality": "E_(a,m)(X)=E_(-a,m)(X) for every finite coefficient vector",
+    "reason": "a<=0 is directly carrier-safe; a>0 transfers through the energy-identical -a mirror"
+  },
+  "proof_ledger": {
+    "all_real_tilt_fixed_order_energy_rh_equivalence": "PROVED FROM FROZEN LANDAU/ENERGY ARGUMENT",
+    "any_beta_energy_estimate": "NOT PROVED",
+    "carrier_chirality_and_zero_set": "PROVED EXACT",
+    "direct_one_sided_criterion_inside_carrier_gap": "NOT CLAIMED",
+    "finite_prefix_energy_isospectrality": "PROVED EXACT",
+    "fourier_weight_mirror_identity": "PROVED EXACT",
+    "rh_or_grh": "NOT PROVED",
+    "tilted_atom_factorization_and_transform": "PROVED EXACT"
+  },
+  "resource_caps": {
+    "frequencies_per_row": 6,
+    "largest_order": 6,
+    "primes": 0,
+    "random_samples": 0,
+    "tilts": 6,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "3658d4c31cc866e15d48ab1fc9d8d119136da424",
+    "frozen_blobs": {
+      "research/l-families/atlas/function_field/FFPS_ZERO_FREE_BETA_ENERGY_LADDER.md": "bd4cbb842e78c1dad5d380c8d20ff14c39bba15e",
+      "research/l-families/atlas/function_field/ffps_zero_free_beta_energy_ladder.json": "7e8889aa0dd1b01674e20158a52502cff0d8dffa",
+      "research/l-families/atlas/function_field/ffps_zero_free_beta_energy_ladder.py": "df80000192292cc5fc1cd08013f152fb257054f9",
+      "tests/test_ffps_zero_free_beta_energy_ladder.py": "983a1320f89087028f6724fe36aaca5ca1309b15"
+    }
+  },
+  "tilted_atom": {
+    "definition": "f_a(x)=a*exp(a*x)/(exp(a)-1) on [0,1], with f_0=1",
+    "laplace_transform": "f_a_hat(s)=a(exp(a-s)-1)/((exp(a)-1)(a-s))",
+    "reflection": "f_-a(x)=f_a(1-x)"
+  }
+}
