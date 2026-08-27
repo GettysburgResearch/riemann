@@ -6,7 +6,13 @@
   "max_cusp_compensation": {
     "absolute_lag_identity": "integral |s| R_r(s) ds=-2||F_r||_2^2",
     "compensation_limit": "A_r*kappa_r=(pi^3/36)*(1+3/(4r)+(8pi^2-27)/(32r^2)+O(r^-3))",
+    "complex_zero_free_half_disk": "for Re(z)>=0 and 0<|z|<16/3, J_r(z) is nonzero; after width-W dilation the condition is |z|W<16/3",
+    "cost_charged_local_chart": "G*L=P_r*(1+log(X)/W)^(2r+2)*(1+O(zW)); for zW->0 its liminf is at least pi^3/36, with equality requiring r->infinity and r*log(1+log(X)/W)->0",
     "exact_bounds": "pi^3/36<P_r<=25/9 for r>=1, and P_r<=196/135 for r>=2",
+    "finite_jump_formula": "J_r(z)=sum_jk mu_j*mu_k*(1-exp(-a*d_jk)-a*d_jk)/a^2, a=z/2",
+    "global_real_tilt_bounds": "for every z>0, 0<J_r(z)<z||F_r||_2^2 and z*J_r(z)->4||K_r||_2^2",
+    "global_stieltjes_law": "J_K(z)/z=(2*pi)^-1*integral |Khat(xi)|^2/((z/2)^2+xi^2) dxi; as a function of (z/2)^2 this is strictly completely monotone",
+    "iterated_primitive_hierarchy": "G_K(q)=sum_(m=1)^M (-q)^(m-1)||P_m||_2^2+(-q)^M G_(P_M)(q), so every truncation has the exact alternating error sign",
     "normalized_refill_asymptotic": "kappa_r=pi^2/(72(r+1)^2)*(1+O(r^-2))",
     "primitive_L1": "||F_r||_1/|h_r|=(r+1)*tan(a)^2/8",
     "primitive_energy": "||F_r||_2^2/h_r^2=tan(a)^2/(6*(3-tan(a)^2))=(1-cos(pi/(r+1)))/(12*(1+2*cos(pi/(r+1)))), a=pi/(2(r+1))",
@@ -17,7 +23,9 @@
         "normalized_refill_coefficient": "0.083333333333333",
         "product_over_pi3_over_36": "3.225153443319949",
         "safe_factor_order_constant": "100/3",
-        "scaled_refill_72_rplus1_squared_over_pi2": "2.431708407416106"
+        "scaled_refill_72_rplus1_squared_over_pi2": "2.431708407416106",
+        "stieltjes_ratio_at_z1": "0.069379780583889",
+        "young_relative_coefficient": "0.187500000000000"
       },
       {
         "compensation_product": "1.451851851851852",
@@ -25,7 +33,9 @@
         "normalized_refill_coefficient": "0.020833333333333",
         "product_over_pi3_over_36": "1.685680199708560",
         "safe_factor_order_constant": "3136/45",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.367835979171560"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.367835979171560",
+        "stieltjes_ratio_at_z1": "0.020514297381967",
+        "young_relative_coefficient": "0.187500000000000"
       },
       {
         "compensation_product": "1.197951735263213",
@@ -33,7 +43,9 @@
         "normalized_refill_coefficient": "0.010110028629970",
         "product_over_pi3_over_36": "1.390888139009494",
         "safe_factor_order_constant": "20736/175",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.180062797698373"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.180062797698373",
+        "stieltjes_ratio_at_z1": "0.010059439096673",
+        "young_relative_coefficient": "0.181980515339464"
       },
       {
         "compensation_product": "1.093112621242575",
@@ -41,7 +53,9 @@
         "normalized_refill_coefficient": "0.006079084739596",
         "product_over_pi3_over_36": "1.269164136361315",
         "safe_factor_order_constant": "1982464/11025",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.108692110300378"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.108692110300378",
+        "stieltjes_ratio_at_z1": "0.006063139886914",
+        "young_relative_coefficient": "0.179046567773487"
       },
       {
         "compensation_product": "1.036681361274693",
@@ -49,7 +63,9 @@
         "normalized_refill_coefficient": "0.004086508806388",
         "product_over_pi3_over_36": "1.203644326298648",
         "safe_factor_order_constant": "11075584/43659",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.073217364719198"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.073217364719198",
+        "stieltjes_ratio_at_z1": "0.004079741848985",
+        "young_relative_coefficient": "0.177386230994570"
       },
       {
         "compensation_product": "1.001721826777447",
@@ -57,7 +73,9 @@
         "normalized_refill_coefficient": "0.002945316819860",
         "product_over_pi3_over_36": "1.163054375596811",
         "safe_factor_order_constant": "26214400/77077",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.052836295983398"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.052836295983398",
+        "stieltjes_ratio_at_z1": "0.002941920481697",
+        "young_relative_coefficient": "0.176367100790862"
       },
       {
         "compensation_product": "0.978067575791107",
@@ -65,7 +83,9 @@
         "normalized_refill_coefficient": "0.002227496127969",
         "product_over_pi3_over_36": "1.135590483550422",
         "safe_factor_order_constant": "1212153856/2760615",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.039991243878807"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.039991243878807",
+        "stieltjes_ratio_at_z1": "0.002225594070388",
+        "young_relative_coefficient": "0.175699366582121"
       },
       {
         "compensation_product": "0.961059958615860",
@@ -73,7 +93,9 @@
         "normalized_refill_coefficient": "0.001745377750066",
         "product_over_pi3_over_36": "1.115843700516072",
         "safe_factor_order_constant": "387620798464/703956825",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.031352688995411"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.031352688995411",
+        "stieltjes_ratio_at_z1": "0.001744226101118",
+        "young_relative_coefficient": "0.175238974257828"
       },
       {
         "compensation_product": "0.948274849601762",
@@ -81,7 +103,9 @@
         "normalized_refill_coefficient": "0.001405397927740",
         "product_over_pi3_over_36": "1.100999482706458",
         "safe_factor_order_constant": "1894080577536/2807136475",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.025255386995378"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.025255386995378",
+        "stieltjes_ratio_at_z1": "0.001404658453901",
+        "young_relative_coefficient": "0.174908446713859"
       },
       {
         "compensation_product": "0.938331323500521",
@@ -89,7 +113,9 @@
         "normalized_refill_coefficient": "0.001156424043538",
         "product_over_pi3_over_36": "1.089454499626562",
         "safe_factor_order_constant": "36352603193344/44801898141",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.020787243123062"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.020787243123062",
+        "stieltjes_ratio_at_z1": "0.001155926884731",
+        "young_relative_coefficient": "0.174663274191604"
       },
       {
         "compensation_product": "0.930387298894521",
@@ -97,7 +123,9 @@
         "normalized_refill_coefficient": "0.000968505508597",
         "product_over_pi3_over_36": "1.080231048234292",
         "safe_factor_order_constant": "171798691840000/178837328943",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.017413130765887"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.017413130765887",
+        "stieltjes_ratio_at_z1": "0.000968158638523",
+        "young_relative_coefficient": "0.174476460247894"
       },
       {
         "compensation_product": "0.923901217119936",
@@ -105,7 +133,9 @@
         "normalized_refill_coefficient": "0.000823117266029",
         "product_over_pi3_over_36": "1.072700349005467",
         "safe_factor_order_constant": "12824703626379264/11425718238025",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.014801656278996"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.014801656278996",
+        "stieltjes_ratio_at_z1": "0.000822867739890",
+        "young_relative_coefficient": "0.174330877349131"
       },
       {
         "compensation_product": "0.918509562846223",
@@ -113,7 +143,9 @@
         "normalized_refill_coefficient": "0.000708285684425",
         "product_over_pi3_over_36": "1.066440340560887",
         "safe_factor_order_constant": "59180113853415424/45635265151875",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.012738421157328"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.012738421157328",
+        "stieltjes_ratio_at_z1": "0.000708101515438",
+        "young_relative_coefficient": "0.174215241316050"
       },
       {
         "compensation_product": "0.913959587614310",
@@ -121,7 +153,9 @@
         "normalized_refill_coefficient": "0.000615984923048",
         "product_over_pi3_over_36": "1.061157567977846",
         "safe_factor_order_constant": "1081989810475761664/729232910488125",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.011079608446549"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.011079608446549",
+        "stieltjes_ratio_at_z1": "0.000615845984380",
+        "young_relative_coefficient": "0.174121875738749"
       },
       {
         "compensation_product": "0.910070299248526",
@@ -129,7 +163,9 @@
         "normalized_refill_coefficient": "0.000540668067901",
         "product_over_pi3_over_36": "1.056641889342456",
         "safe_factor_order_constant": "544935554911830016/323743400754975",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.009725762306530"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.009725762306530",
+        "stieltjes_ratio_at_z1": "0.000540561252132",
+        "young_relative_coefficient": "0.174045412852182"
       },
       {
         "compensation_product": "0.906708800048295",
@@ -137,23 +173,34 @@
         "normalized_refill_coefficient": "0.000478399898143",
         "product_over_pi3_over_36": "1.052739003083133",
         "safe_factor_order_constant": "225972614902942007296/119228219630042193",
-        "scaled_refill_72_rplus1_squared_over_pi2": "1.008606290183074"
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.008606290183074",
+        "stieltjes_ratio_at_z1": "0.000478316413609",
+        "young_relative_coefficient": "0.173982008570737"
       }
     ],
     "strict_descent": "P_(r+1)/P_r<Q_r<1, with 1-Q_r numerator 12r^4+60r^3+99r^2+60r+8",
+    "terminal_cusp_expansion": "J_K(z)=z*sum_(m=1)^r(-z^2/4)^(m-1)||P_m||_2^2+(-1)^r*b^2*(z^2/4)^r+O(z^(2r+1))",
     "tilted_zero_mode": "integral R_r(s)*exp(-z|s|/2) ds=z||F_r||_2^2+O(z^2)",
-    "uniform_refill_remainder": "for real z>=0, |J_r(z)/h_r^2-z*kappa_r|<=(9/32)*z^2*kappa_r, uniformly in r",
-    "universal_cost_asymptotic": "A_r~2*pi*r^2"
+    "uniform_refill_remainder": "for real z>=0, |J_r(z)/h_r^2-z*kappa_r|<=(3/16)*z^2*kappa_r, uniformly in r; 3/16 is sharp for the exact L1/Young envelope",
+    "universal_cost_asymptotic": "A_r~2*pi*r^2",
+    "young_coefficient_asymptotic": "q_r=(9*pi^2/512)*(1+pi^2/(12*(r+1)^2)-pi^4/(240*(r+1)^4)+O(r^-6))"
   },
   "proof_ledger": {
     "RH_or_GRH": "NOT PROVED",
     "compensation_product_strictly_decreases_for_all_orders": "PROVED",
+    "cost_charged_moving_local_floor": "PROVED FOR CHEBYSHEV FAMILY",
     "exact_linear_max_cusp_refill": "PROVED",
     "exact_primitive_energy": "PROVED",
+    "finite_jump_transform": "PROVED",
     "finite_nonzero_cost_refill_compensation_limit": "PROVED",
+    "global_alternating_primitive_hierarchy": "PROVED",
+    "global_positive_tilt_stieltjes_law": "PROVED",
     "moving_order_Perron_estimate": "NOT PROVED",
     "new_beta_cancellation": "NOT PROVED",
     "quadratic_decay_of_normalized_refill": "PROVED",
+    "sharp_young_envelope_constant": "PROVED",
+    "terminal_even_cusp_coefficient": "PROVED",
+    "uniform_complex_zero_free_half_disk": "PROVED",
     "uniform_in_order_relative_linear_refill": "PROVED"
   },
   "resource_caps": {

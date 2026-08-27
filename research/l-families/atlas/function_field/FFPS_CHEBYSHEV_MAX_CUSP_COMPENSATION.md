@@ -1,9 +1,10 @@
 # Chebyshev notch depth and max-cusp refill obey a compensation law
 
 Status: **exact primitive energy, exact max-cusp linear refill coefficient,
-quadratic refill decay, strictly decreasing cost-refill compensation product,
-sharp all-order bounds, and a uniform-in-order relative remainder; no
-moving-order Perron estimate, no new beta cancellation, and no proof of RH**
+global Stieltjes positivity, quadratic refill decay, strictly decreasing
+cost-refill compensation product, sharp all-order bounds, and a sharp
+uniform-in-order Young remainder envelope; no moving-order Perron estimate,
+no new beta cancellation, and no proof of RH**
 
 Bounded replay:
 [ffps_chebyshev_max_cusp_compensation.py](ffps_chebyshev_max_cusp_compensation.py).
@@ -83,8 +84,34 @@ Therefore the max-cusp/Perron tilt has the exact zero-mode expansion
 \tag{0.6}
 \]
 
-The sign is positive. The untilted zero mode vanishes because \(K_r\) has
-mean zero, while the absolute-lag moment is negative.
+The sign is positive. In fact this local statement belongs to a global law.
+For every real \(z>0\),
+
+\[
+ \boxed{
+ 0<J_r(z)<z\|F_r\|_2^2,
+ \qquad
+ J_r(z)=\int_{\mathbb R}R_r(s)e^{-z|s|/2}\,ds.}
+\tag{0.6a}
+\]
+
+Moreover \(J_r(2\sqrt q)/(2\sqrt q)\) is a strictly completely monotone
+Stieltjes function of \(q>0\), decreasing from \(\|F_r\|_2^2\) to zero.
+Thus the positive max cusp refills the notch at every positive tilt, not only
+infinitesimally. The untilted zero mode vanishes because \(K_r\) has mean
+zero, while the absolute-lag moment is negative.
+
+Each additional vanished moment generates another exact causal-primitive
+term in a global alternating Stieltjes expansion. At information order \(r\),
+the first nonanalytic endpoint is the forced even cusp
+
+\[
+ (-1)^rb^2\left(\frac{z^2}{4}\right)^r.
+\tag{0.6b}
+\]
+
+Thus the order-\(2r\) Fourier notch, the positive real refill, and the
+terminal cusp coefficient are three faces of one resolvent hierarchy.
 
 Normalized by \(R_r(0)=h_r^2\), the refill coefficient decays quadratically:
 
@@ -288,9 +315,190 @@ distributional integration by parts gives
 \tag{2.5}
 \]
 
-For \(r\ge2\), the first moment of \(K_r\) also vanishes, so
-\(\int F_r=0\) and the remainder in (0.6) improves from \(O(z^2)\) to
-\(O(z^3)\). The linear refill itself remains.
+The remainder in (2.5) has a definite sign. More precisely, for any nonzero
+compact real mean-zero \(K\) and real \(z>0\), Fourier inversion gives, with
+\(a=z/2\),
+
+\[
+ \boxed{
+ \frac{J_K(z)}z
+ =\frac1{2\pi}\int_{\mathbb R}
+ \frac{|\widehat K(\xi)|^2}{a^2+\xi^2}\,d\xi.}
+\tag{2.5a}
+\]
+
+If
+
+\[
+ \Phi_K(q)=\frac{J_K(2\sqrt q)}{2\sqrt q},
+\tag{2.5b}
+\]
+
+then for every integer \(m\ge0\) and \(q>0\),
+
+\[
+ \boxed{
+ (-1)^m\Phi_K^{(m)}(q)
+ =\frac{m!}{2\pi}\int_{\mathbb R}
+ \frac{|\widehat K(\xi)|^2}{(q+\xi^2)^{m+1}}\,d\xi>0.}
+\tag{2.5c}
+\]
+
+Because \(\widehat K(\xi)=i\xi\widehat F(\xi)\), Plancherel also gives
+
+\[
+ \lim_{q\downarrow0}\Phi_K(q)=\|F\|_2^2.
+\tag{2.5d}
+\]
+
+Equations (2.5a)--(2.5d) prove (0.6a), show that the correction in (2.5)
+is strictly negative, and rule out every positive-tilt zero. At the opposite
+endpoint, the exponential approximate identity gives
+
+\[
+ \lim_{z\to\infty}zJ_K(z)=4\|K\|_2^2.
+\tag{2.5e}
+\]
+
+For the Chebyshev step there is also a finite exact coordinate. Put
+\(\mu_j=h_r(-1)^jc_j\), where \(c_0=c_{r+1}=1\), \(c_j=2\) in the
+interior, and
+\(y_j=(1-\cos(j\pi/(r+1)))/2\). Then
+
+\[
+ \boxed{
+ J_r(z)=
+ \sum_{j,k=0}^{r+1}\mu_j\mu_k
+ \frac{1-e^{-a|y_j-y_k|}-a|y_j-y_k|}{a^2},
+ \qquad a=\frac z2.}
+\tag{2.5f}
+\]
+
+The additive constant in the displayed Green kernel is harmless because
+\(\sum_j\mu_j=0\). Formula (2.5f) turns the complete positive-tilt refill
+into the same finite Chebyshev difference spectrum that controls
+\(-R_r''\); it uses no root search or quadrature.
+
+Equivalently, with \(q_j=(-1)^jc_j\),
+
+\[
+ \boxed{
+ \frac{J_r(z)}{h_r^2}
+ =\frac4{z^2}\left[
+ z-\sum_{j,k=0}^{r+1}q_jq_k
+ e^{-z|y_j-y_k|/2}\right].}
+\tag{2.5f.1}
+\]
+
+The positivity is also a literal square. For every compact real \(K\) and
+real \(z>0\),
+
+\[
+ \boxed{
+ J_K(z)=z\int_{\mathbb R}
+ \left|
+ \int_{-\infty}^x e^{-(z/2)(x-t)}K(t)\,dt
+ \right|^2dx.}
+\tag{2.5f.2}
+\]
+
+For the unit-support Chebyshev step this sharpens the global sandwich to
+
+\[
+ 0<\frac{J_r(z)}{h_r^2}
+ <\min\left\{\kappa_rz,\frac4z\right\}.
+\tag{2.5f.3}
+\]
+
+It also gives the fixed-order real large-tilt expansion as \(z\to+\infty\),
+
+\[
+ \frac{J_r(z)}{h_r^2}
+ =\frac4z-\frac{16r+8}{z^2}
+ +O_r\left(\frac{e^{-z\delta_r/2}}{z^2}\right),
+\qquad
+ \delta_r=\sin^2\frac{\pi}{2(r+1)}.
+\tag{2.5f.4}
+\]
+
+The absolute value of the displayed error is at most
+\((16r^2+16r+8)e^{-z\delta_r/2}/z^2\). This is a fixed-order statement
+unless \(z\delta_r\) is controlled.
+
+The Stieltjes law also exposes the complete moment-cancellation hierarchy,
+not just the first refill. For a compact real information-order-\(r\) kernel
+\(K\), define its causal primitives by
+
+\[
+ P_0=K,\qquad
+ P_m(t)=\frac1{(m-1)!}\int_{-\infty}^t(t-u)^{m-1}K(u)\,du
+ \quad(1\le m\le r).
+\tag{2.5g}
+\]
+
+The vanished moments make every \(P_m\) in (2.5g) compact, with
+\(P_m'=P_{m-1}\). Under the sensitivity convention
+
+\[
+ b=\frac{(-1)^r}{r!}\int t^rK(t)\,dt,
+\tag{2.5h}
+\]
+
+repeated integration by parts gives \(\int P_r=b\). For any compact real
+\(f\), put
+
+\[
+ G_f(q)=\frac1{2\pi}\int_{\mathbb R}
+ \frac{|\widehat f(\xi)|^2}{\xi^2+q}\,d\xi.
+\tag{2.5i}
+\]
+
+Since \(\widehat{P_{m-1}}=i\xi\widehat P_m\),
+
+\[
+ G_{P_{m-1}}(q)=\|P_m\|_2^2-qG_{P_m}(q).
+\tag{2.5j}
+\]
+
+Iteration gives, for every \(1\le M\le r\),
+
+\[
+ \boxed{
+ G_K(q)=
+ \sum_{m=1}^M(-q)^{m-1}\|P_m\|_2^2
+ +(-q)^M G_{P_M}(q).}
+\tag{2.5k}
+\]
+
+The final factor is strictly positive. Thus every truncation has a global,
+exact alternating error sign: odd \(M\) gives an upper bound and even \(M\)
+gives a lower bound. At the terminal primitive,
+
+\[
+ G_{P_r}(q)=\frac{b^2}{2\sqrt q}+O(1)
+ \qquad(q\downarrow0).
+\tag{2.5l}
+\]
+
+Combining (2.5k) and (2.5l), with \(q=z^2/4\), yields the full local normal
+form
+
+\[
+ \boxed{
+ J_K(z)=
+ z\sum_{m=1}^r
+ \left(-\frac{z^2}{4}\right)^{m-1}\|P_m\|_2^2
+ +(-1)^rb^2\left(\frac{z^2}{4}\right)^r
+ +O(z^{2r+1}).}
+\tag{2.5m}
+\]
+
+The analytic terms have odd powers. The absolute-lag cusp first appears as
+the terminal even power, with its sign and coefficient forced exactly by the
+first surviving moment. For \(r=1\) it is \(-b^2z^2/4\); for \(r=2\) it is
+\(+b^2z^4/16\). In particular, when \(r\ge2\), the \(O(z^2)\) remainder in
+(0.6) improves first to \(O(z^3)\), while the positive linear refill itself
+remains.
 
 More importantly, the relative linear approximation is uniform in
 information order for real \(z\ge0\). Young's \(L^1\) inequality and (2.5)
@@ -313,22 +521,87 @@ The relative coefficient is
 \tag{2.7}
 \]
 
-On \(0<a_r\le\pi/4\), monotonicity of \(\tan x/x\) gives
-\((r+1)^2t_r\le4\), while \(3-t_r\le3\). Therefore
+The exact maximum of (2.7) is smaller than the crude product of separate
+factor bounds. Put \(n=r+1\), \(x=\pi/(2n)\), \(y=\tan x\), and
+
+\[
+ H(x)=\left(\frac{\tan x}{x}\right)^2(3-\tan^2x).
+\tag{2.7a}
+\]
+
+For \(n\ge3\), so \(0<x\le\pi/6\), the sign of \(H'(x)\) is the sign of
+
+\[
+ \arctan y-
+ \frac{y(3-y^2)}{(1+y^2)(3-2y^2)}.
+\tag{2.7b}
+\]
+
+The derivative of (2.7b), as a function of \(y\), is
+
+\[
+ \frac{y^2(6y^4-25y^2+9)}
+ {(1+y^2)^2(3-2y^2)^2}>0
+ \qquad(0<y^2\le1/3).
+\tag{2.7c}
+\]
+
+Indeed \(6u^2-25u+9\) decreases on \(0\le u\le1/3\) and equals \(4/3\)
+at the right endpoint. The difference in (2.7b) tends to zero with \(y\),
+so it is strictly positive thereafter. Thus \(H\) increases with \(x\), so
+(2.7) decreases strictly from \(r=2\) onward. Directly, its values at both
+\(r=1\) and \(r=2\) equal \(3/16\). Therefore
 
 \[
  \boxed{
  \left|
  \frac1{h_r^2}\int R_r(s)e^{-z|s|/2}\,ds-z\kappa_r
  \right|
- \le\frac9{32}z^2\kappa_r}
+ \le\frac3{16}z^2\kappa_r}
 \tag{2.8}
 \]
 
-for every \(r\ge1\). Hence the linear term is relatively dominant as
-\(z\to0^+\) uniformly in \(r\); no condition such as \(zr^2\to0\) is needed
-for this isolated zero mode. After dilation to width \(W\), the corresponding
-small parameter is \(zW\).
+for every \(r\ge1\) and real \(z\ge0\). The coefficient \(3/16\) is sharp
+for this exact \(L^1\)/Young envelope and is attained exactly at \(r=1,2\).
+It then decreases to \(9\pi^2/512\), with
+
+\[
+ \frac{\lambda_r^2}{4\kappa_r}
+ =\frac{9\pi^2}{512}\left(
+ 1+\frac{\pi^2}{12(r+1)^2}
+ -\frac{\pi^4}{240(r+1)^4}
+ +O(r^{-6})\right).
+\tag{2.9}
+\]
+
+The same argument is analytic in \(z\). When \(\Re z\ge0\),
+\(|e^{-z|s|/2}|\le1\), so
+
+\[
+ \boxed{
+ \left|\frac{J_r(z)}{h_r^2}-z\kappa_r\right|
+ \le\frac3{16}|z|^2\kappa_r.}
+\tag{2.10}
+\]
+
+The linear term therefore dominates throughout the uniform half-disk
+
+\[
+ \boxed{
+ \Re z\ge0,\qquad0<|z|<\frac{16}{3}
+ \quad\Longrightarrow\quad J_r(z)\ne0}
+\tag{2.11}
+\]
+
+for every information order. Under width-\(W\) dilation, the condition is
+\(|z|W<16/3\). This is a local kernel-transform zero-free region, not a
+reciprocal-zeta or full Perron-contour zero-free theorem.
+
+Hence the linear term is relatively accurate as \(z\to0^+\) uniformly in
+\(r\); no condition such as \(zr^2\to0\) is needed for this isolated zero
+mode. The guaranteed relative-error window from this envelope is
+\((3/16)z<1\). After dilation to width \(W\), the corresponding small
+parameter is \(zW\).
 
 ## 3. The compensation limit
 
@@ -410,7 +683,104 @@ The first products are
 
 The second value supplies the \(r\ge2\) upper bound.
 
-## 4. What this does and does not say
+## 4. The cost-charged moving local chart
+
+The compensation law has a precise moving-order interpretation. Let
+\(\ell=\log X\), \(W>0\), and dilate the Chebyshev step to width \(W\) while
+preserving its order-\(r\) sensitivity. Write
+
+\[
+ E_{r,W}=R_{r,W}(0),\qquad
+ u=zW,\qquad
+ j_r(u)=\frac{J_{r,1}(u)}{R_{r,1}(0)}.
+\tag{4.1}
+\]
+
+Exact dilation gives
+
+\[
+ \frac{J_{r,W}(z)}{E_{r,W}}=Wj_r(u).
+\tag{4.2}
+\]
+
+The Barnes/Perron factor \(1/z\) cancels the trivial linear tilt. The natural
+per-unit-tilt zero-mode coefficient is therefore
+
+\[
+ \mathcal L_{r,W}(z)
+ =\frac{J_{r,W}(z)}{zW^2E_{r,W}}
+ =\frac{j_r(u)}u.
+\tag{4.3}
+\]
+
+For positive real \(u\), (0.6a) and (2.8) give the uniform local chart
+
+\[
+ \left(1-\frac3{16}u\right)\kappa_r
+ \le\mathcal L_{r,W}(z)\le\kappa_r
+ \qquad(0<u<16/3).
+\tag{4.4}
+\]
+
+The sharp BV safe factor is
+
+\[
+ \mathcal G^*_{r,W}(X)
+ =A_r\left(1+\frac{\ell}{W}\right)^{2r+2}.
+\tag{4.5}
+\]
+
+Consequently, for any schedule \(r=r_X\ge1\), \(W=W_X>0\), and
+\(u_X=z_XW_X\to0^+\), the cost-charged refill satisfies
+
+\[
+ \boxed{
+ \mathcal G^*_{r,W}(X)\mathcal L_{r,W}(z)
+ =P_r\left(1+\frac{\ell}{W}\right)^{2r+2}
+ (1+O(u_X)),
+ \qquad P_r=A_r\kappa_r,}
+\tag{4.6}
+\]
+
+with an absolute relative-error constant at most \(3/16\). In particular,
+
+\[
+ \liminf_{X\to\infty}
+ \mathcal G^*_{r,W}(X)\mathcal L_{r,W}(z)
+ \ge\frac{\pi^3}{36}.
+\tag{4.7}
+\]
+
+The uncharged coefficient \(\mathcal L_{r,W}\sim\kappa_r\) vanishes when
+\(r_X\to\infty\), but it cannot vanish after the sharp BV cost is charged.
+More precisely, if
+
+\[
+ (r_X+1)\log\left(1+\frac{\ell}{W_X}\right)\longrightarrow\tau
+ \in[0,\infty),
+\tag{4.8}
+\]
+
+then, provided \(r_X\to\infty\),
+
+\[
+ \mathcal G^*_{r,W}(X)\mathcal L_{r,W}(z)
+ \longrightarrow\frac{\pi^3}{36}e^{2\tau}.
+\tag{4.9}
+\]
+
+Within schedules with \(r_X\to\infty\), the limiting floor \(\pi^3/36\) is
+approached exactly when \(r_X\log(1+\ell/W_X)\to0\). In the wide-support
+regime \(W_X\gg\ell\), this is equivalent to \(W_X\gg r_X\ell\).
+
+This is an exact local geometric barrier for the BV-optimal Chebyshev family.
+It is not a universal lower bound over all compact BV kernels: the sharp
+lower bound for the BV cost and the refill coefficient of an unrelated
+kernel cannot simply be multiplied. It also requires \(z_XW_X\to0\), controls
+only the isolated zero mode, and supplies no vertical-contour, reciprocal-zeta,
+height-truncation, or beta primitive-pair estimate.
+
+## 5. What this does and does not say
 
 The result sharpens the earlier statement that the max cusp refills every
 fixed Fourier notch linearly. The \(R_r(0)\)-normalized coefficient
@@ -436,29 +806,45 @@ In particular:
 - it does not replace the fully normalized moving-order criterion;
 - it does not turn a local zero-mode expansion into a uniform contour bound.
 
-## 5. Scope ledger
+## 6. Scope ledger
 
 | statement | grade |
 |---|---|
 | exact Chebyshev primitive energy (0.3) | **PROVED** |
 | absolute-lag identity specialized to the step | **PROVED** |
 | exact positive linear max-cusp refill (0.6) | **PROVED** |
+| global positive-tilt Stieltjes law (0.6a), (2.5a)--(2.5e) | **PROVED** |
+| finite exact Chebyshev difference formula (2.5f) | **PROVED** |
+| positive-square form and global two-envelope bound (2.5f.2)--(2.5f.3) | **PROVED** |
+| fixed-order large-tilt expansion (2.5f.4) | **PROVED** |
+| global alternating primitive hierarchy (2.5k) | **PROVED** |
+| terminal even cusp coefficient (2.5m) | **PROVED** |
 | uniform-in-order relative remainder (2.8) | **PROVED** |
+| sharp \(3/16\) Young-envelope coefficient | **PROVED** |
+| uniform complex zero-free half-disk (2.11) | **PROVED FOR THE KERNEL TRANSFORM ONLY** |
 | quadratic normalized refill decay (0.7) | **PROVED** |
 | finite nonzero compensation limit (0.9) | **PROVED** |
 | strict descent and sharp bounds (0.10) | **PROVED** |
+| cost-charged moving local floor (4.7) | **PROVED FOR THE CHEBYSHEV FAMILY AND \(zW\to0^+\)** |
 | uniform moving-order Perron estimate | **NOT PROVED** |
 | new beta cancellation, RH, or GRH | **NOT PROVED** |
 
 No external novelty or priority is claimed.
 
-## 6. Bounded replay
+## 7. Bounded replay
 
 The producer:
 
 - verifies the frozen autocorrelation quartet by full Git blob ID;
 - checks (0.3) independently by analytic cell integration through order
   eight;
+- checks the global tilted transform independently from the jump Green kernel
+  and direct analytic cell-pair integration;
+- integrates the causal primitives cell by cell and checks their alternating
+  Stieltjes bounds and terminal sensitivity;
+- checks positivity, the Stieltjes monotonicity rows, fixed-order large-tilt
+  scaling, the sharp \(3/16\) Young envelope, and the cost-charged dilation
+  chart;
 - tabulates only sixteen fixed orders and two constant-time asymptotic spot
   evaluations;
 - records the exact trigonometric formula, sharp rational \(A_r\), and

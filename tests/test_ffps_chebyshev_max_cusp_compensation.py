@@ -82,13 +82,102 @@ class ChebyshevMaxCuspCompensationTest(unittest.TestCase):
         )
 
     def test_uniform_relative_remainder_constant(self) -> None:
+        sharp = float(subject.sharp_relative_remainder_constant())
+        self.assertEqual(subject.sharp_relative_remainder_constant(), Fraction(3, 16))
+        self.assertAlmostEqual(subject.relative_remainder_coefficient(1), sharp)
+        self.assertAlmostEqual(subject.relative_remainder_coefficient(2), sharp)
         for order in range(1, 1000):
-            self.assertLessEqual(subject.relative_remainder_coefficient(order), 9 / 32)
+            self.assertLessEqual(subject.relative_remainder_coefficient(order), sharp)
+        coefficients = [
+            subject.relative_remainder_coefficient(order) for order in range(2, 1000)
+        ]
+        self.assertTrue(all(left > right for left, right in pairwise(coefficients)))
         self.assertAlmostEqual(
             subject.relative_remainder_coefficient(1000),
             9 * math.pi**2 / 512,
             delta=0.001,
         )
+
+    def test_global_tilted_jump_and_cell_formulas(self) -> None:
+        for order in range(1, 9):
+            coefficient = subject.primitive_energy_ratio(order)
+            for z in (0.25, 1.0, 4.0):
+                by_jumps = subject.tilted_zero_mode_by_jumps(order, z)
+                by_cells = subject.tilted_zero_mode_by_cells(order, z)
+                self.assertAlmostEqual(by_jumps, by_cells, places=11)
+                self.assertGreater(by_jumps, 0)
+                self.assertLess(by_jumps, z * coefficient)
+
+    def test_stieltjes_ratio_strictly_decreases(self) -> None:
+        for order in range(1, 9):
+            values = [
+                subject.normalized_stieltjes_ratio(order, z)
+                for z in (0.0625, 0.125, 0.25, 0.5, 1, 2, 4)
+            ]
+            self.assertTrue(all(left > right for left, right in pairwise(values)))
+            self.assertAlmostEqual(
+                values[0],
+                subject.primitive_energy_ratio(order),
+                delta=0.02 * subject.primitive_energy_ratio(order),
+            )
+
+    def test_complex_zero_free_half_disk(self) -> None:
+        for order in range(1, 9):
+            coefficient = subject.primitive_energy_ratio(order)
+            for z in (complex(0.5, 1), complex(0, 4), complex(2, 3)):
+                value = subject.tilted_zero_mode_by_jumps_complex(order, z)
+                bound = Fraction(3, 16) * abs(z) ** 2 * coefficient
+                self.assertLessEqual(abs(value - z * coefficient), bound + 1e-12)
+                self.assertNotEqual(value, 0)
+
+    def test_large_tilt_endpoint(self) -> None:
+        for order in range(1, 5):
+            scaled = 800 * subject.tilted_zero_mode_by_cells(order, 800)
+            self.assertAlmostEqual(scaled, 4, delta=0.12)
+            delta = math.sin(math.pi / (2 * (order + 1))) ** 2
+            for z in (8, 100):
+                exact = subject.tilted_zero_mode_by_jumps(order, z)
+                approximation = 4 / z - (16 * order + 8) / z**2
+                bound = (
+                    (16 * order**2 + 16 * order + 8) * math.exp(-z * delta / 2) / z**2
+                )
+                self.assertLessEqual(abs(exact - approximation), bound + 1e-13)
+
+    def test_causal_primitive_norms_and_terminal_sensitivity(self) -> None:
+        for order in range(1, 9):
+            self.assertAlmostEqual(
+                subject.primitive_norm_ratio(order, 1),
+                subject.primitive_energy_ratio(order),
+                places=13,
+            )
+            self.assertAlmostEqual(
+                subject.primitive_mass_ratio(order, order),
+                1 / (math.factorial(order) * 4**order),
+                places=13,
+            )
+
+    def test_global_alternating_primitive_bounds(self) -> None:
+        for order in range(1, 9):
+            exact = subject.normalized_stieltjes_ratio(order, 2)
+            for depth in range(1, min(order, 4) + 1):
+                signed_error = (-1) ** depth * (
+                    exact - subject.stieltjes_partial_sum(order, 2, depth)
+                )
+                self.assertGreater(signed_error, 0)
+
+    def test_cost_charged_local_chart(self) -> None:
+        order = 4
+        width = 100.0
+        log_x = 5.0
+        z = 1e-5
+        exact = subject.cost_charged_refill(order, width, log_x, z)
+        main = (
+            float(subject.order_constant(order))
+            * subject.primitive_energy_ratio(order)
+            * (1 + log_x / width) ** (2 * order + 2)
+        )
+        self.assertAlmostEqual(exact / main, 1, delta=0.001)
+        self.assertGreater(exact, subject.refill_limit())
 
     def test_canonical_fixture_matches_payload(self) -> None:
         fixture = json.loads(subject.OUTPUT.read_text(encoding="utf-8"))
@@ -113,6 +202,18 @@ class ChebyshevMaxCuspCompensationTest(unittest.TestCase):
             subject.cell_boundaries(-1)
         with self.assertRaises(ValueError):
             subject.order_constant(0)
+        with self.assertRaises(ValueError):
+            subject.tilted_zero_mode_by_jumps(1, 0)
+        with self.assertRaises(ValueError):
+            subject.tilted_zero_mode_by_cells(1, -1)
+        with self.assertRaises(ValueError):
+            subject.tilted_zero_mode_by_jumps_complex(1, complex(-1, 1))
+        with self.assertRaises(ValueError):
+            subject.safe_factor(1, 0, 1)
+        with self.assertRaises(ValueError):
+            subject.primitive_cell_polynomials(2, 0)
+        with self.assertRaises(ValueError):
+            subject.stieltjes_partial_sum(2, 1, 3)
 
 
 if __name__ == "__main__":
