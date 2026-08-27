@@ -257,6 +257,7 @@ delimiter/control-byte checks, and Git whitespace checks.
 | \(033a64fba\) | Chebyshev max-cusp refill compensation |
 | \(154331d49\) | global cusp-resolvent and primitive hierarchy |
 | \(2331ec257\) | sharp real/complex Chebyshev tilt phase diagram |
+| \(06217bfd2\) | exact profile measure and odd threshold ladder |
 
 ## 2. Claim ledger
 
