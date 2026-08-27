@@ -1,0 +1,297 @@
+{
+  "endpoint_layer_theorem": {
+    "Gamma_derivative": "g_m^(m)(u)=exp(-u)*L_m(u)",
+    "Gamma_layer": "u=T*(1-sign(tau)*x), g_m(u)=u^m*exp(-u)/m!",
+    "Phi_asymptotic": "Phi_m(T)=A_m*exp(T)*T^(-m-1)*(1-m*(m+1)/(2T)+O_m(T^-2))",
+    "Phi_leading_constant": "A_m=(2m+1)!/(2^(m+1)*m!)",
+    "bounded_first_rung_BV_certificates": [
+      {
+        "Phi_1": "1.000000000000",
+        "detector_sup_support_1": "6.000000000000",
+        "detector_variation_support_1": "24.000000000000",
+        "tilt_magnitude": "0"
+      },
+      {
+        "Phi_1": "1.025224250627",
+        "detector_sup_support_1": "9.648940334912",
+        "detector_variation_support_1": "26.397174226431",
+        "tilt_magnitude": "1/2"
+      },
+      {
+        "Phi_1": "1.103638323514",
+        "detector_sup_support_1": "14.778112197861",
+        "detector_variation_support_1": "35.644956156094",
+        "tilt_magnitude": "1"
+      },
+      {
+        "Phi_1": "3.841078788138",
+        "detector_sup_support_1": "85.285649753019",
+        "detector_variation_support_1": "194.423768624860",
+        "tilt_magnitude": "4"
+      }
+    ],
+    "critical_safe_window": "(2m+1)*log(Theta)+log(1+H)=o(log X), Theta=Lambda*L/S, H=Lambda*log(X)/S",
+    "effective_width": "w=S/(2T), E_m~[binom(2m,m)/2^(2m+1)]*w^(-2m-1)",
+    "energy_asymptotic": "E_m=binom(2m,m)*T^(2m+1)/S^(2m+1)*(1+m*(2m+1)/(2T)+O_m(T^-2))",
+    "first_rung_BV": "||J||_infty=6*exp(T)/(S^2*Phi_1(T)); Var(J) is piecewise at T=1/2",
+    "first_rung_exact_algebraic_coefficients_T3_T2_T1_T0": [
+      "2",
+      "3",
+      "9/2",
+      "6"
+    ],
+    "moving_tilt_RH_forward": "E<=X^o(1)*[(Lambda/S)^(2m+1)+log(X)*(Lambda/S)^(2m+2)], Lambda=1+|tau|",
+    "raw_power_chart": "for S=X^(sigma+o(1)), T=X^(alpha+o(1)), sigma>0 and alpha>=0, raw energy is certified subpower when alpha<=sigma",
+    "rows": [
+      {
+        "Laguerre_cross_next": "3/16",
+        "Laguerre_norm": "1/4",
+        "Phi_first_relative_correction": "-1",
+        "Phi_leading_constant": "3/2",
+        "effective_width_energy_constant": "1/4",
+        "energy_first_relative_correction": "3/2",
+        "energy_leading_constant": 2,
+        "raw_power_chart_sigma_1_alpha_0_1_2": [
+          {
+            "certified": true,
+            "exponents": [
+              "-3",
+              "-4"
+            ],
+            "tilt_power": "0"
+          },
+          {
+            "certified": true,
+            "exponents": [
+              "0",
+              "0"
+            ],
+            "tilt_power": "1"
+          },
+          {
+            "certified": false,
+            "exponents": [
+              "3",
+              "4"
+            ],
+            "tilt_power": "2"
+          }
+        ],
+        "rung": 1
+      },
+      {
+        "Laguerre_cross_next": "5/32",
+        "Laguerre_norm": "3/16",
+        "Phi_first_relative_correction": "-3",
+        "Phi_leading_constant": "15/2",
+        "effective_width_energy_constant": "3/16",
+        "energy_first_relative_correction": "5",
+        "energy_leading_constant": 6,
+        "raw_power_chart_sigma_1_alpha_0_1_2": [
+          {
+            "certified": true,
+            "exponents": [
+              "-5",
+              "-6"
+            ],
+            "tilt_power": "0"
+          },
+          {
+            "certified": true,
+            "exponents": [
+              "0",
+              "0"
+            ],
+            "tilt_power": "1"
+          },
+          {
+            "certified": false,
+            "exponents": [
+              "5",
+              "6"
+            ],
+            "tilt_power": "2"
+          }
+        ],
+        "rung": 2
+      },
+      {
+        "Laguerre_cross_next": "35/256",
+        "Laguerre_norm": "5/32",
+        "Phi_first_relative_correction": "-6",
+        "Phi_leading_constant": "105/2",
+        "effective_width_energy_constant": "5/32",
+        "energy_first_relative_correction": "21/2",
+        "energy_leading_constant": 20,
+        "raw_power_chart_sigma_1_alpha_0_1_2": [
+          {
+            "certified": true,
+            "exponents": [
+              "-7",
+              "-8"
+            ],
+            "tilt_power": "0"
+          },
+          {
+            "certified": true,
+            "exponents": [
+              "0",
+              "0"
+            ],
+            "tilt_power": "1"
+          },
+          {
+            "certified": false,
+            "exponents": [
+              "7",
+              "8"
+            ],
+            "tilt_power": "2"
+          }
+        ],
+        "rung": 3
+      },
+      {
+        "Laguerre_cross_next": "63/512",
+        "Laguerre_norm": "35/256",
+        "Phi_first_relative_correction": "-10",
+        "Phi_leading_constant": "945/2",
+        "effective_width_energy_constant": "35/256",
+        "energy_first_relative_correction": "18",
+        "energy_leading_constant": 70,
+        "raw_power_chart_sigma_1_alpha_0_1_2": [
+          {
+            "certified": true,
+            "exponents": [
+              "-9",
+              "-10"
+            ],
+            "tilt_power": "0"
+          },
+          {
+            "certified": true,
+            "exponents": [
+              "0",
+              "0"
+            ],
+            "tilt_power": "1"
+          },
+          {
+            "certified": false,
+            "exponents": [
+              "9",
+              "10"
+            ],
+            "tilt_power": "2"
+          }
+        ],
+        "rung": 4
+      },
+      {
+        "Laguerre_cross_next": "231/2048",
+        "Laguerre_norm": "63/512",
+        "Phi_first_relative_correction": "-15",
+        "Phi_leading_constant": "10395/2",
+        "effective_width_energy_constant": "63/512",
+        "energy_first_relative_correction": "55/2",
+        "energy_leading_constant": 252,
+        "raw_power_chart_sigma_1_alpha_0_1_2": [
+          {
+            "certified": true,
+            "exponents": [
+              "-11",
+              "-12"
+            ],
+            "tilt_power": "0"
+          },
+          {
+            "certified": true,
+            "exponents": [
+              "0",
+              "0"
+            ],
+            "tilt_power": "1"
+          },
+          {
+            "certified": false,
+            "exponents": [
+              "11",
+              "12"
+            ],
+            "tilt_power": "2"
+          }
+        ],
+        "rung": 5
+      },
+      {
+        "Laguerre_cross_next": "429/4096",
+        "Laguerre_norm": "231/2048",
+        "Phi_first_relative_correction": "-21",
+        "Phi_leading_constant": "135135/2",
+        "effective_width_energy_constant": "231/2048",
+        "energy_first_relative_correction": "39",
+        "energy_leading_constant": 924,
+        "raw_power_chart_sigma_1_alpha_0_1_2": [
+          {
+            "certified": true,
+            "exponents": [
+              "-13",
+              "-14"
+            ],
+            "tilt_power": "0"
+          },
+          {
+            "certified": true,
+            "exponents": [
+              "0",
+              "0"
+            ],
+            "tilt_power": "1"
+          },
+          {
+            "certified": false,
+            "exponents": [
+              "13",
+              "14"
+            ],
+            "tilt_power": "2"
+          }
+        ],
+        "rung": 6
+      }
+    ],
+    "uniform_simple_window": "(1+|tau_X|)*L_X/S_X=X^o(1); in particular |tau_X|=X^o(1) is safe for every S_X>=1"
+  },
+  "proof_ledger": {
+    "RH_or_GRH": "NOT PROVED",
+    "converse_failure_outside_safe_window": "NOT PROVED",
+    "energy_leading_constant_and_first_correction": "PROVED EXACT",
+    "first_rung_exact_BV_formula": "PROVED EXACT",
+    "fixed_rung_endpoint_Gamma_layer": "PROVED",
+    "moving_tilt_RH_forward_bound": "PROVED",
+    "new_unconditional_beta_estimate": "NOT PROVED",
+    "polynomial_tilt_safe_for_critical_normalization": "NOT PROVED",
+    "raw_power_schedule_phase_chart": "PROVED SUFFICIENT UNDER RH",
+    "safe_critical_normalization_window": "PROVED SUFFICIENT"
+  },
+  "resource_caps": {
+    "Bessel_root_searches": 0,
+    "beta_terms": 0,
+    "curve_computations": 0,
+    "maximum_rung": 6,
+    "numerical_tilt_values": 4,
+    "primes": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "805ab873cb051c739f19978ebb772b2625adcffb",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_SPECTRAL_ZERO_FREE_CARRIER_TILT.md": "a23f6f57dc87ef698fd06e9fe2680119e032e37b",
+      "research/l-families/atlas/function_field/ffps_spectral_zero_free_carrier_tilt.json": "3d7e74420af1b85c7ab35a11166c54e3218434d2",
+      "research/l-families/atlas/function_field/ffps_spectral_zero_free_carrier_tilt.py": "f8f7c7596c368293cf5005c25e8f156ebcf0b94c",
+      "tests/test_ffps_spectral_zero_free_carrier_tilt.py": "2c2215c3810089b46b7f3d83d5ed7b5aa77f3e85"
+    }
+  }
+}
