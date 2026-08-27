@@ -197,7 +197,9 @@ def assembled_prefix_energy(
                         left = left_power * common * left_core
                         right = right_power * common * right_core
                         if (left, right) in pairs:
-                            raise ArithmeticError("primitive coordinates were not unique")
+                            raise ArithmeticError(
+                                "primitive coordinates were not unique"
+                            )
                         pairs.add((left, right))
                         source_product = (
                             left_exceptional
@@ -221,7 +223,9 @@ def assembled_prefix_energy(
 
 def divisors(value: int) -> tuple[int, ...]:
     validate_positive_integer(value)
-    return tuple(candidate for candidate in range(1, value + 1) if value % candidate == 0)
+    return tuple(
+        candidate for candidate in range(1, value + 1) if value % candidate == 0
+    )
 
 
 def harmonic_common_factor(bound: int, primitive_product: int, prime: int) -> Fraction:
@@ -257,7 +261,9 @@ def collapsed_wavelet_prefix_energy(
         primitive_sign = mobius(primitive_product)
         for left_exponent, left_exceptional in enumerate(EXCEPTIONAL_COEFFICIENTS):
             left_power = prime**left_exponent
-            for right_exponent, right_exceptional in enumerate(EXCEPTIONAL_COEFFICIENTS):
+            for right_exponent, right_exceptional in enumerate(
+                EXCEPTIONAL_COEFFICIENTS
+            ):
                 right_power = prime**right_exponent
                 exceptional_product = left_exceptional * right_exceptional
                 radicand, scale = inverse_square_root_basis(
@@ -314,7 +320,11 @@ def polynomial_multiply(left: Polynomial, right: Polynomial) -> Polynomial:
             product[exponent] = product.get(exponent, 0) + (
                 left_coefficient * right_coefficient
             )
-    return {exponent: coefficient for exponent, coefficient in product.items() if coefficient}
+    return {
+        exponent: coefficient
+        for exponent, coefficient in product.items()
+        if coefficient
+    }
 
 
 def local_factor_panel() -> dict[str, object]:
@@ -338,12 +348,8 @@ def local_factor_panel() -> dict[str, object]:
         for right, right_coefficient in exceptional_one_variable.items()
     }
     exceptional_factored = polynomial_multiply(
-        polynomial_multiply(
-            {(0, 0): 1, (1, 0): -1}, {(0, 0): 1, (1, 0): -1}
-        ),
-        polynomial_multiply(
-            {(0, 0): 1, (0, 1): -1}, {(0, 0): 1, (0, 1): -1}
-        ),
+        polynomial_multiply({(0, 0): 1, (1, 0): -1}, {(0, 0): 1, (1, 0): -1}),
+        polynomial_multiply({(0, 0): 1, (0, 1): -1}, {(0, 0): 1, (0, 1): -1}),
     )
     if exceptional_pair != exceptional_factored:
         raise ArithmeticError("exceptional local square factorization failed")
@@ -410,11 +416,16 @@ def notch_tilt_panel() -> dict[str, object]:
     for order in (1, 2, 3):
         kernel = repeated_difference(TOY_BOUNDARY_KERNEL, order)
         correlation = autocorrelation(kernel)
-        vanishing = [correlation_moment(correlation, exponent) for exponent in range(2 * order)]
+        vanishing = [
+            correlation_moment(correlation, exponent) for exponent in range(2 * order)
+        ]
         if any(vanishing):
             raise ArithmeticError("finite-difference autocorrelation notch lost order")
         tilted = sum(
-            (value * Fraction(1, 2) ** abs(shift) for shift, value in correlation.items()),
+            (
+                value * Fraction(1, 2) ** abs(shift)
+                for shift, value in correlation.items()
+            ),
             Fraction(0),
         )
         rows.append(
@@ -447,7 +458,9 @@ def finite_reindex_panel() -> dict[str, object]:
         collapsed_wavelet_prefix_energy()
     )
     if direct != collapsed:
-        raise ArithmeticError("collapsed N/divisor/H_N wavelet differs from direct energy")
+        raise ArithmeticError(
+            "collapsed N/divisor/H_N wavelet differs from direct energy"
+        )
     return {
         "exceptional_prime": REPLAY_EXCEPTIONAL_PRIME,
         "source_cap": REPLAY_SOURCE_CAP,

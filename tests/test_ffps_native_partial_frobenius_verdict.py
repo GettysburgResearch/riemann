@@ -93,7 +93,9 @@ class NativePartialFrobeniusVerdictTest(unittest.TestCase):
 
     def test_full_verdict_scope(self) -> None:
         certificate = subject.run(check_sources=False)
-        fixture = json.loads(MODULE_PATH.with_suffix(".json").read_text(encoding="utf-8"))
+        fixture = json.loads(
+            MODULE_PATH.with_suffix(".json").read_text(encoding="utf-8")
+        )
         self.assertEqual(json.loads(json.dumps(certificate)), fixture)
         self.assertFalse(certificate["verdict"]["bounded_or_subpower_external_product"])
         self.assertFalse(

@@ -350,9 +350,7 @@ def run(check_sources: bool = True) -> dict[str, object]:
         raise ArithmeticError("autocorrelation second-difference identity failed")
 
     bandpass_correlation = autocorrelation(bandpass)
-    bandpass_correlation_moments = correlation_moments(
-        bandpass_correlation, 2 * order
-    )
+    bandpass_correlation_moments = correlation_moments(bandpass_correlation, 2 * order)
     if any(bandpass_correlation_moments[index] for index in range(2 * order)):
         raise ArithmeticError("autocorrelation lost its doubled zero order")
     if bandpass_correlation_moments[2 * order] == 0:
@@ -381,8 +379,7 @@ def run(check_sources: bool = True) -> dict[str, object]:
             "kernel": "B_(r,j)=eta_ell^(*j)*Delta_epsilon^r K_bd",
             "support": "[0,4log2+r*epsilon+j*ell]",
             "laplace_multiplier": (
-                "((1-exp(-epsilon*s))/epsilon)^r*"
-                "((1-exp(-ell*s))/(ell*s))^j*M_ext(s)/s"
+                "((1-exp(-epsilon*s))/epsilon)^r*((1-exp(-ell*s))/(ell*s))^j*M_ext(s)/s"
             ),
             "multiplier_fence": (
                 "difference and box factors are nonzero for Re(s)>0; "
@@ -394,8 +391,7 @@ def run(check_sources: bool = True) -> dict[str, object]:
         },
         "energy_criterion": {
             "prefix_field": (
-                "H_(r,j;X)(t)=sum_(n<=X) beta(n)/sqrt(n)*"
-                "B_(r,j)(t-log(n))"
+                "H_(r,j;X)(t)=sum_(n<=X) beta(n)/sqrt(n)*B_(r,j)(t-log(n))"
             ),
             "energy": "E_(r,j)(X)=integral_R |H_(r,j;X)(t)|^2 dt",
             "equivalence": "RH iff E_(r,j)(X)=X^o(1)",
@@ -413,21 +409,15 @@ def run(check_sources: bool = True) -> dict[str, object]:
             "boundary_mean": "K_bd_hat(0)=3*(1-sqrt(2))^2*(log(2))^2 != 0",
             "high_frequency": "O_fixed((1+|t|)^(-2j-2))",
             "r_equals_one_identity": (
-                "R_(1,0)(u)=(2R_bd(u)-R_bd(u-epsilon)-"
-                "R_bd(u+epsilon))/epsilon^2"
+                "R_(1,0)(u)=(2R_bd(u)-R_bd(u-epsilon)-R_bd(u+epsilon))/epsilon^2"
             ),
         },
         "gram_and_diagonal": {
             "gram_identity": (
-                "E_(r,j)(X)=sum_(m,n<=X) beta(m)beta(n)/sqrt(mn)*"
-                "R_(r,j)(log(m/n))"
+                "E_(r,j)(X)=sum_(m,n<=X) beta(m)beta(n)/sqrt(mn)*R_(r,j)(log(m/n))"
             ),
-            "ratio_support": (
-                "exp(-S)<=m/n<=exp(S), S=4log2+r*epsilon+j*ell"
-            ),
-            "diagonal": (
-                "R_(r,j)(0)*2379/(2278*zeta(2))*log(X)+O_fixed(1)"
-            ),
+            "ratio_support": ("exp(-S)<=m/n<=exp(S), S=4log2+r*epsilon+j*ell"),
+            "diagonal": ("R_(r,j)(0)*2379/(2278*zeta(2))*log(X)+O_fixed(1)"),
             "off_diagonal_equivalence": "RH iff the signed off-diagonal is X^o(1)",
         },
         "finite_symbolic_replay": {
@@ -437,9 +427,7 @@ def run(check_sources: bool = True) -> dict[str, object]:
             "box_width_cells": box_width,
             "box_order": box_order,
             "bandpass_length": len(bandpass),
-            "bandpass_moments_through_r": [
-                str(value) for value in bandpass_moments
-            ],
+            "bandpass_moments_through_r": [str(value) for value in bandpass_moments],
             "autocorrelation_moments_through_2r": [
                 str(value) for value in bandpass_correlation_moments
             ],

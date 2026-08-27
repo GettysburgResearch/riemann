@@ -55,9 +55,7 @@ class AssembledBetaPerronFourierBridgeTest(unittest.TestCase):
         self.assertEqual(primitive_products, 430)
         self.assertEqual(orientations, 1271)
         panel = subject.finite_reindex_panel()
-        self.assertEqual(
-            panel["collapsed_wavelet_sha256"], panel["radical_sum_sha256"]
-        )
+        self.assertEqual(panel["collapsed_wavelet_sha256"], panel["radical_sum_sha256"])
 
     def test_local_euler_factorizations(self) -> None:
         panel = subject.local_factor_panel()
@@ -77,7 +75,9 @@ class AssembledBetaPerronFourierBridgeTest(unittest.TestCase):
 
     def test_canonical_json_and_scope(self) -> None:
         result = subject.run(check_sources=False)
-        fixture = json.loads(MODULE_PATH.with_suffix(".json").read_text(encoding="utf-8"))
+        fixture = json.loads(
+            MODULE_PATH.with_suffix(".json").read_text(encoding="utf-8")
+        )
         self.assertEqual(result, fixture)
         self.assertTrue(result["assembled_identity"]["rh_equivalent"])
         self.assertFalse(result["assembled_identity"]["estimate_proved"])
