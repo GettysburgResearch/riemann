@@ -714,6 +714,32 @@ formed, rather than externalizing each term. A clean failure would be a new
 categorical no-go; success would reopen the sheaf amplifier without paying
 rank \(q^a\).
 
+### E. The first Chebyshev Perron edge
+
+The exact profile measure makes the next kernel problem unusually precise.
+Write \(n=r+1\) and approach the first cut at \(c=4i\).
+
+1. Prove the undamped subthreshold limit for \(c=iy,\ |y|<4\), using the
+   exact Fourier--Bessel expansion of the Chebyshev step rather than taking
+   \(\Re c\downarrow0\) inside the damped Toeplitz proof.
+2. Resolve the turning-point window
+   \[
+    c=4i+\lambda n^{-2/3}.
+   \]
+   The first Bessel mode then has order and argument separated by
+   \(O(n^{1/3})\), so an Airy profile is the natural target. The outer
+   Stieltjes law
+   \(\Phi(c)\sim288/(\pi^3\sqrt{c^2+16})\) predicts an \(n^{1/3}\)
+   normalized transition size.
+3. Above \(|\Im c|=4\), extract the stationary-phase oscillatory envelope
+   instead of expecting pointwise convergence.
+4. Only after those three steps, match a damping schedule
+   \(\Re c_n\downarrow0\) to the actual Perron height truncation.
+
+This programme could genuinely connect the new kernel theorem to a vertical
+contour. It is deliberately recorded as a target: no Airy edge theorem,
+undamped Perron estimate, or beta cancellation is proved in this release.
+
 ## 9. Verification and computation boundary
 
 At the continuation head:
