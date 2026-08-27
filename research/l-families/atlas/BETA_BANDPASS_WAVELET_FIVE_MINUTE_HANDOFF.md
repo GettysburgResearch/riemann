@@ -1,6 +1,8 @@
 # Beta band-pass and curve-wavelet successor: five-minute handoff
 
-Status: **eight exact theorem packets and two sharp no-go results; RH and
+Status: **frozen exploratory theorem atlas; the newest pass contains a
+sharp all-support carrier criterion, exact function-field calibration,
+spectral/sheaf firewalls, and many bounded discovery packets; RH and
 GRH remain open**
 
 Parent release: draft PR #757 at
@@ -20,29 +22,132 @@ The complete replay and scope ledger is in
 
 ## If you are the next agent, start here
 
-Read this file once, then choose exactly one lane:
+The fastest route into the current head is:
 
-1. **Direct beta/RH lane:** read
-   [FFPS_INFINITE_DYADIC_BOX_BANDPASS_SMOOTHER.md](function_field/FFPS_INFINITE_DYADIC_BOX_BANDPASS_SMOOTHER.md),
+1. Read
+   [FFPS_MOVING_SUPPORT_CARRIER_PHASE_DIAGRAM.md](function_field/FFPS_MOVING_SUPPORT_CARRIER_PHASE_DIAGRAM.md).
+   This is now the direct-beta front door. Its sharp identity is
+
+   \[
+    (\log X+S_X)^3\mathcal E_Q(X)
+    =
+    12|B(X)|^2
+    +(\log X+S_X)^3\|H_X-H_{X,*}\|_2^2.
+   \]
+
+   For the variational parabolic carrier and **any** schedule
+   \(S_X\ge1\),
+
+   \[
+    \mathrm{RH}
+    \Longleftrightarrow
+    (\log X+S_X)^3\mathcal E_{S_X}(X)=X^{o(1)}.
+   \]
+
+   This is an exact criterion, not an estimate. The best next analytic
+   problem is to exploit the translated beta convolution to control the
+   nonnegative shape defect or improve on the universal support-moment
+   wedge. Abstract carrier optimization alone is closed sharply.
+
+2. Then read
+   [FFPS_UNIFORM_MOVING_CARRIER_BETA_CRITERION.md](function_field/FFPS_UNIFORM_MOVING_CARRIER_BETA_CRITERION.md)
+   and
+   [FFPS_VARIATIONAL_PROBABILITY_CARRIER_OPTIMUM.md](function_field/FFPS_VARIATIONAL_PROBABILITY_CARRIER_OPTIMUM.md).
+   They explain why every fixed or subpower moving probability carrier
+   remains RH-exact, and why the parabolic carrier uniquely minimizes
+   diagonal cost at fixed support.
+
+3. For the arithmetic-geometric mirror, read
+   [FUNCTION_FIELD_MOBIUS_CARRIER_CALIBRATION.md](function_field/FUNCTION_FIELD_MOBIUS_CARRIER_CALIBRATION.md),
    then
-   [FFPS_BANDPASS_ASSEMBLED_PERRON_LEAKAGE.md](function_field/FFPS_BANDPASS_ASSEMBLED_PERRON_LEAKAGE.md).
-   The live target is the signed beta energy inside the critical window
-   \(e^{\sqrt{(\log2)(\log X)}}\), or the equivalent bilateral contour
-   problem. The exterior frequency range is already harmless at the
-   \(X^{o(1)}\) scale.
-2. **Function-field lane:** read
-   [FUNCTION_FIELD_BASEWAVE_CURVE_EXTENSION.md](function_field/FUNCTION_FIELD_BASEWAVE_CURVE_EXTENSION.md).
-   The live target is an incomplete/source-faithful family, or an
-   inverse-designed observable which cancels selected Frobenius residue
-   channels.
-3. **Sheaf/Adams lane:** read
-   [FFPS_NATIVE_PARTIAL_FROBENIUS_VERDICT.md](function_field/FFPS_NATIVE_PARTIAL_FROBENIUS_VERDICT.md).
-   Do not try another termwise bounded-rank externalization of the universal
-   phase block. Classify actual source occupancy, build the signed relative
-   complex, or develop a correspondence-level closed-point formula.
+   [FFPS_FUNCTION_FIELD_BETA_DIVISOR_WAVELET_PILOT.md](function_field/FFPS_FUNCTION_FIELD_BETA_DIVISOR_WAVELET_PILOT.md).
+   The first proves the exact curve-zeta analogue of the carrier energy;
+   the second identifies the surviving twisted \(L\)-channel in the
+   divisor-wavelet port. Known function-field RH is imported only as a
+   calibration theorem.
 
-Do not begin with finite scouts. Do not infer a number-field estimate from a
-complete function-field identity. Do not call any open energy gate proved.
+4. For the sheaf/Adams route, read
+   [FFPS_MARKED_PLACE_BIFROBENIUS_GLUING_GATE.md](function_field/FFPS_MARKED_PLACE_BIFROBENIUS_GLUING_GATE.md)
+   and
+   [FFPS_TERNARY_RELATIVE_CORRESPONDENCE_NORMAL_FORM.md](function_field/FFPS_TERNARY_RELATIVE_CORRESPONDENCE_NORMAL_FORM.md).
+   The corrected obstruction is the crossed source graph under partial
+   Frobenius, not an unsupported claim that every local
+   Artin--Schreier/incidence block fails. A signed
+   pushforward/correspondence realization remains open.
+
+5. Use
+   [BETA_BANDPASS_WAVELET_RELEASE_AUDIT.md](BETA_BANDPASS_WAVELET_RELEASE_AUDIT.md)
+   as the claim and replay ledger. Older sections below remain useful
+   provenance, but this list supersedes their original entry order.
+
+Do not begin with finite scouts. Do not infer a number-field estimate
+from a complete function-field identity. Do not treat an RH-equivalent
+criterion as progress on its open arithmetic estimate. Do not revive a
+carrier-sign or compact-kernel-zero argument without first quotienting
+the exact spectral surgery and chirality firewalls.
+
+## 0. What the aggressive continuation actually established
+
+### A. The carrier problem has a sharp universal solution
+
+For every compact unit-mass carrier \(Q_X\), signed or positive, whose
+zero-extended derivative is in \(L^2\), the complete beta field obeys
+
+\[
+ \int H_X=0,\qquad
+ \int tH_X(t)\,dt=-B(X).
+\]
+
+Centered Cauchy--Schwarz gives the optimal constant \(12\), realized by
+the parabolic one-atom field. It also gives:
+
+- an exact Pythagorean Mertens-plus-shape decomposition;
+- an exact signed-autocorrelation second moment
+  \(\int u^2\mathcal C_X(u)\,du=-2B(X)^2\);
+- a projected finite-abscissa Laplace inequality converging to the
+  centered moment law;
+- a raw-energy zero-free wedge
+  \(\Re\rho\le1/2+3\gamma/2\) when
+  \(S_X\le X^{\gamma+o(1)}\);
+- a critical renormalization exponent \(p=3\): every \(p<3\) admits a
+  trivially diluted schedule, while the current all-support RH forward
+  theorem does not pay \(p>3\).
+
+The result does not prove a beta-energy bound. It identifies exactly
+which part of such a bound is the classical Mertens signal and which
+part is carrier geometry.
+
+### B. Several attractive compact-kernel shortcuts are now closed
+
+The continuation proves that:
+
+- energy does not determine carrier chirality;
+- compact carrier zeros can be flipped without changing the energy;
+- all finite compact spectral-factor surgeries preserving the
+  autocorrelation can be classified;
+- the signed beta Gram problem has an exact annular primitive normal
+  form, but positivity/diagonal interpolation alone cannot close it;
+- the critical moving-order scale found earlier is a boundary of one
+  Fourier-comparison method, not a boundary of RH-equivalent carriers.
+
+These are design firewalls. Future detectors must use source arithmetic,
+not the sign or zero set of a chosen compact factor.
+
+### C. The function-field calibration is exact
+
+For a fixed smooth projective curve \(C/\mathbf F_q\), the normalized
+Möbius coefficients of \(1/Z_C(u)\) and a short parabolic carrier give
+disjoint degree translates and the exact energy
+
+\[
+ \mathcal E_N={96\over(\log q)^3}
+ \sum_{n\le N}|q^{-n/2}M_C(n)|^2.
+\]
+
+The corresponding subpower criterion is equivalent to the curve's
+reciprocal roots lying on \(|\alpha|=\sqrt q\). Weil RH supplies that
+fact; the packet does not reprove it. This is the cleanest exact
+calibration of the number-field carrier mechanism now in the atlas.
 
 ## 1. The strongest new analytic localization
 
@@ -270,41 +375,48 @@ Frobenius residues while preserving a chosen mixed or source-specific
 channel. It still omits incomplete owner/Boolean restrictions, nontrivial
 cores, harmonic sieve averaging, and nonzero incidence modes.
 
-## 6. The native sheaf does not pass termwise Adams compression
+## 6. The native Adams obstruction is a crossed source graph
 
-For \(m\) distinct physical residue cells in a field of size \(Q\), the
-nonzero native Artin--Schreier Fourier block has Gram
-
-\[
- QI_m-J_m
-\]
-
-and rank
+The earlier internal-rank calculation
 
 \[
  \operatorname {rank}(QI_m-J_m)=
- \begin{cases}m,&m<Q,\\Q-1,&m=Q.\end{cases}
+ \begin{cases}m,&m<Q,\\Q-1,&m=Q\end{cases}
 \]
 
-Since \(Q=q^a\), a source-independent presentation on a full physical
-degree-\(a\) sector has exponential rank in \(a\). Wick centering gives
-\(I_m-Q^{-1}J_m=Q^{-1}(QI_m-J_m)\), so it retains the same rank.
-Geometrically, the natural line \(\mathcal L_\psi(hx)\) fails each
-independent partial Frobenius, and
-partial Frobenius moves the diagonal \(x=y\) to \(x^Q=y\).
+is correct but was initially applied across the wrong tensor axes. The
+closed-point Adams factors are the two **marked-place blocks**
+\(\ell\mid\rho\), not phase versus residue inside one block. An internal
+kernel \(H_\ell\) times an internal kernel \(H_\rho\) has marked-block
+separation rank one regardless of the two internal matrix ranks.
 
-Therefore the clean rank-\(48\) ternary Adams compression cannot simply be
-tensored termwise with the universal native phase/incidence kernel.
+Under simultaneous Frobenius of a complete marked block, the local
+Artin--Schreier line and centered incidence are ordinary Weil objects.
+The natural raw source fails the marked-place external-product gate for
+a different reason:
 
-This is not a no-go for:
+\[
+ \boxed{
+ \ell=P^-(c),\quad c\mapsto Pc^2\bmod\rho;
+ \qquad
+ \rho=P^-(d),\quad d\mapsto Qd^2\bmod\ell.}
+\]
 
-- a sparse actual source image;
-- cancellation inside a complete signed relative complex before
-  externalization;
-- a correspondence-level closed-point formula which retains diagonal
-  graphs.
+Each reduced core is selected on one side and evaluated on the other.
+Common-core, Boolean, coprimality, owner, shell, and cleanup conditions
+add further crossed relations.
 
-The actual occupancy theorem and full relative complex remain unbuilt.
+Therefore:
+
+- the clean rank-\(48\) ternary norm/Kummer package passes the separable
+  gate;
+- the natural raw complete native source does not currently pass it;
+- large internal \(QI-J\) rank is **not** a marked-place Adams no-go;
+- a complete signed pushforward could still erase the crossed support;
+- a graph-shift or correspondence-level Adams formula remains viable.
+
+No such pushed-forward bifrobenius class or uniform trace estimate has
+been constructed.
 
 ## 7. What is closed, refuted, and open
 
@@ -318,7 +430,12 @@ The actual occupancy theorem and full relative complex remain unbuilt.
 | BASEWAVE is a smaller gate than PRIMCAR | **REFUTED: THEY ARE IDENTICAL** |
 | complete genus-zero shadow | **PROVED WITH EXPONENTIAL SHELL DECAY** |
 | complete fixed-curve shadow | **PROVED WITH FROBENIUS RESIDUE EXPANSION** |
-| termwise bounded-rank native Adams adapter | **REFUTED ON THE UNIVERSAL PHASE/INCIDENCE BLOCK** |
+| large internal \(QI-J\) rank proves large marked-place separation rank | **REFUTED** |
+| natural raw native source has a marked-place external product | **OBSTRUCTED BY THE CROSSED SOURCE GRAPH** |
+| width-renormalized parabolic carrier energy for arbitrary support | **RH-EQUIVALENT; ESTIMATE OPEN** |
+| raw moving-support energy at exponent \(\gamma\) | **ZERO-FREE WEDGE PROVED; FULL RH ONLY AT \(\gamma=0\)** |
+| carrier chirality or compact zero set is determined by energy | **REFUTED** |
+| curve-zeta parabolic carrier calibration | **PROVED EXACT; WEIL RH IMPORTED** |
 | beta energy inside the critical frequency window | **OPEN; RH-EQUIVALENT** |
 | bilateral boundary-contour estimate | **OPEN; RH-STRENGTH** |
 | incomplete/source-faithful function-field shadow | **OPEN** |
@@ -328,7 +445,34 @@ The actual occupancy theorem and full relative complex remain unbuilt.
 
 ## 8. Best next ambitious experiments
 
-### A. Low-frequency beta interferometry
+### A. Arithmetic control of the carrier shape defect
+
+Start from the exact decomposition
+
+\[
+ (\log X+S_X)^3\mathcal E_Q(X)
+ =
+ 12|B(X)|^2
+ +(\log X+S_X)^3\|H_X-H_{X,*}\|_2^2.
+\]
+
+The abstract support/moment problem is solved optimally. A meaningful
+advance must now use the discrete translated beta convolution. Promising
+coordinates are:
+
+- higher centered moments of \(H_X\) and their exact beta-weighted
+  polynomial statistics;
+- the signed autocorrelation curvature identity together with local
+  spectral information away from zero;
+- an assembled primitive-pair or divisor-wavelet bound for the shape
+  defect before taking absolute values;
+- a function-field port that identifies which Frobenius constituent
+  carries the defect.
+
+Do not spend another pass optimizing an arbitrary compact carrier norm:
+the parabolic solution and the \(L^{3/2}\) information barrier are sharp.
+
+### B. Low-frequency beta interferometry
 
 Work directly with
 
@@ -347,7 +491,7 @@ orientations, and signed \(t\)-integral. Compare:
 The goal is not a channelwise negative-moment estimate. It is one assembled
 signed theorem at the \(X^{o(1)}\) scale.
 
-### B. Frobenius-residue inverse design
+### C. Frobenius-residue inverse design
 
 Use the all-curve formula to solve for small virtual combinations which
 annihilate specified axis residues or repeated-root channels. Then add one
@@ -355,7 +499,7 @@ owner/Boolean restriction and identify exactly which inverse-zeta zeros and
 Frobenius terms survive. This could generate a genuine family moment theorem
 rather than another complete-family toy.
 
-### C. Relative-correspondence Adams theory
+### D. Relative-correspondence Adams theory
 
 Keep the centered diagonal and Artin--Schreier graphs as correspondences.
 Attempt closed-point inversion after the selected/unselected difference is
@@ -365,12 +509,20 @@ rank \(q^a\).
 
 ## 9. Verification and computation boundary
 
-The eight new packet producers and the amended rho-wavelet predecessor
-producer pass normally and under optimized Python. Their nine relevant test
-modules contain 78 tests, all passing in both modes. Ruff lint and format
-checks pass on all seventeen changed producer/test Python files.
+At the continuation head:
 
-The largest exact matrix has dimension 24. The function-field recurrence
-uses bidegree at most 35 for \(q=3,5,7\), without polynomial or point
-enumeration. The all-curve extension is symbolic. No zeta zero, curve,
-closed point, conductor family, or L-function is enumerated.
+- all 51 changed bounded producers pass normally and under optimized
+  Python;
+- all 447 tests in the 50 changed focused modules pass in both modes;
+- Ruff lint and format pass on all 101 changed Python files;
+- all 56 changed Markdown files are free of forbidden control bytes;
+- the two front-door documents have resolving local links and balanced
+  math/fence delimiters;
+- the working diff passes the Git whitespace check.
+
+The sweep is broad but light. The original largest exact matrix has
+dimension 24; the original function-field recurrence uses bidegree at
+most 35 for \(q=3,5,7\). The newest moving-support packet evaluates no
+beta sum, prime, zeta zero, curve, point, polynomial, conductor family,
+or \(L\)-function. Its replay is closed-form arithmetic on four
+variance rows and five support exponents.
