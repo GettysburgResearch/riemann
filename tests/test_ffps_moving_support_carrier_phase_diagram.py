@@ -112,6 +112,10 @@ class MovingSupportCarrierPhaseDiagramTest(unittest.TestCase):
             ledger["exact_projected_finite_alpha_carrier_inequality"], "PROVED"
         )
         self.assertEqual(
+            ledger["comparable_weight_and_multiscale_abstract_no_improvement"],
+            "PROVED",
+        )
+        self.assertEqual(
             ledger["parabolic_forward_gate_for_all_supports_at_least_one"],
             "PROVED",
         )

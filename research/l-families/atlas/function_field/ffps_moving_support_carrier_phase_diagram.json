@@ -133,6 +133,7 @@
     "all_support_parabolic_renormalized_RH_equivalence": "PROVED",
     "arbitrary_support_renormalized_reverse_RH_gate": "PROVED",
     "arithmetic_improvement_over_centered_wedge": "NOT PROVED",
+    "comparable_weight_and_multiscale_abstract_no_improvement": "PROVED",
     "cubic_normalization_escape": "PROVED",
     "exact_carrier_moment_identities": "PROVED",
     "exact_projected_finite_alpha_carrier_inequality": "PROVED",
@@ -206,6 +207,13 @@
       "research/l-families/atlas/function_field/ffps_variational_probability_carrier_optimum.py": "f7a8628858f2a23bc4b9f164ea0cde1601c03235",
       "tests/test_ffps_variational_probability_carrier_optimum.py": "6a8c9d45391014df212f4e2773be0d7a3e57e2e8"
     }
+  },
+  "weighted_multiscale_firewall": {
+    "comparable_weight_conclusion": "uniformly comparable dimensionless weights retain L^3 cost",
+    "domain_gate": "positive w with integral((1+t^2)/w(t),t) finite",
+    "multiscale_conclusion": "Laplace samples recover F'(0) whose zero-mean Riesz norm is L^(3/2)/sqrt(12)",
+    "scope": "abstract support/moment/L2 information only; arithmetic or stronger source norms may improve it",
+    "weighted_dual_cost": "inf_c integral((t-c)^2/w(t),t)"
   },
   "width_renormalized_theorem": {
     "bounded_forward_cost_rows": [

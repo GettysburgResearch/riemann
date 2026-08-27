@@ -297,6 +297,13 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "variance_rows": projected_rows,
             "limit": "alpha->0 recovers the sharp centered-moment inequality",
         },
+        "weighted_multiscale_firewall": {
+            "weighted_dual_cost": "inf_c integral((t-c)^2/w(t),t)",
+            "domain_gate": "positive w with integral((1+t^2)/w(t),t) finite",
+            "comparable_weight_conclusion": "uniformly comparable dimensionless weights retain L^3 cost",
+            "multiscale_conclusion": "Laplace samples recover F'(0) whose zero-mean Riesz norm is L^(3/2)/sqrt(12)",
+            "scope": "abstract support/moment/L2 information only; arithmetic or stronger source norms may improve it",
+        },
         "independent_laplace_replay": {
             "parameter": "alpha=3/(2*S)",
             "cost": "exp(3/2)/sqrt(2)*(2*S/3)^(3/2)",
@@ -330,6 +337,7 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "sharp_centered_support_energy_inequality": "PROVED",
             "optimal_constant_in_abstract_information_class": "PROVED",
             "exact_projected_finite_alpha_carrier_inequality": "PROVED",
+            "comparable_weight_and_multiscale_abstract_no_improvement": "PROVED",
             "arbitrary_support_renormalized_reverse_RH_gate": "PROVED",
             "all_support_parabolic_renormalized_RH_equivalence": "PROVED",
             "support_exponent_zero_exclusion_wedge": "PROVED",

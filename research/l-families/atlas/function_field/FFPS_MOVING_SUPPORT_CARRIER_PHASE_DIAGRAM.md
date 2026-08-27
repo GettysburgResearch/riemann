@@ -3,8 +3,8 @@
 Status: **sharp carrier moment inequality, all-support
 width-renormalized parabolic RH criterion, raw-energy zero-free wedge,
 moving-BV forward theorem, explicit Young dilution bound, and exact
-normalization repair; no beta-energy estimate, proof of RH, or GRH
-result**
+normalization repair; no beta-energy estimate in an RH-bearing region,
+proof of RH, or GRH result**
 
 Bounded replay:
 [ffps_moving_support_carrier_phase_diagram.py](ffps_moving_support_carrier_phase_diagram.py).
@@ -372,8 +372,9 @@ Finite support permits Fubini. Substituting \(w=v+u\) and using
 
 Thus the arithmetic beta prefix is not merely bounded by the field:
 its square is exactly the negative second moment of the signed
-autocorrelation. This identity uses the complete coherent field, not
-its positive spectral density or an absolute autocorrelation.
+autocorrelation. Equivalently, it is encoded by the curvature of the
+positive spectral density at frequency zero; it is not determined by
+the total energy alone.
 
 ## 3. Zero-free wedge and RH criterion
 
@@ -777,8 +778,9 @@ claim that no stronger arithmetic theorem could control \(p>3\).
 
 ### Weighted and multiscale firewall
 
-For a positive weight \(w\), the sharp dual cost of recovering the
-first moment from
+For a positive weight \(w\) satisfying
+\(\int_0^{L_X}(1+t^2)/w(t)\,dt<\infty\), the sharp dual cost of
+recovering the first moment from
 
 \[
  \mathcal E_w=\int_0^{L_X}w(t)|H_X(t)|^2\,dt
@@ -827,7 +829,7 @@ control, or another independent source norm.
 | matched cubic phase boundary | **PROVED FOR THE DISPLAYED MECHANISMS** |
 | width renormalization removes trivial dilution | **PROVED** |
 | \(p<3\) trivial-dilution schedule | **PROVED** |
-| comparable-weight or multiscale improvement from the same data | **RULED OUT** |
+| comparable-weight or multiscale improvement from the same data | **RULED OUT IN THE ABSTRACT INFORMATION CLASS** |
 | full RH reverse theorem from raw positive-power energy | **NOT PROVED** |
 | \(p>3\) all-support RH forward theorem | **NOT PROVED** |
 | beta-energy estimate in an RH-bearing region | **NOT PROVED** |
