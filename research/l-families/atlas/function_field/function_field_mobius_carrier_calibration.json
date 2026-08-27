@@ -1,0 +1,72 @@
+{
+  "control_rows": [
+    {
+      "energy_root_estimator": 1.1717321141723656,
+      "energy_through_degree_cap": 2012.6116542934408,
+      "field_size": 5,
+      "label": "Weil-compatible control",
+      "last_normalized_coefficient": 0.0,
+      "normalized_root_radius": 1.0,
+      "trace": 0
+    },
+    {
+      "energy_root_estimator": 1.1588856053716396,
+      "energy_through_degree_cap": 1185.6248335866226,
+      "field_size": 5,
+      "label": "Weil-compatible near-edge control",
+      "last_normalized_coefficient": 1.982609620992,
+      "normalized_root_radius": 1.0,
+      "trace": 4
+    },
+    {
+      "energy_root_estimator": 1.6871739157271257,
+      "energy_through_degree_cap": 80107451843.15865,
+      "field_size": 5,
+      "label": "formal off-circle control; not asserted to be a curve",
+      "last_normalized_coefficient": -46368.0,
+      "normalized_root_radius": 1.618033988749895,
+      "trace": 5
+    }
+  ],
+  "curve_theorem": {
+    "carrier_support": "S=(log q)/2, strictly below one degree spacing",
+    "degree_mobius_sum": "M_n=[u^n](1-u)(1-q*u)/P_C(u)",
+    "equivalence": "curve RH iff E_N=q^o(N)",
+    "known_RH_consequence": "E_N=O_C((1+N)^max(0,4g-1))",
+    "normalization": "b_n=q^(-n/2)*M_n",
+    "orthogonal_energy": "E_N=(96/(log q)^3)*sum_{n<=N}|b_n|^2",
+    "zeta_shape": "Z_C(u)=P_C(u)/((1-u)(1-q*u))"
+  },
+  "mechanism": {
+    "functional_equation": "alpha_j pairs with q/alpha_j, forcing equality",
+    "interpretation": "exact function-field calibration of the probability-carrier beta criterion",
+    "subexponential_energy": "equivalent to max_j |alpha_j|<=sqrt(q) after reduction"
+  },
+  "proof_ledger": {
+    "Weil_RH_itself": "IMPORTED KNOWN THEOREM, NOT REPROVED",
+    "disjoint_degree_packet_energy": "PROVED EXACT",
+    "energy_to_reciprocal_root_radius": "PROVED",
+    "functional_equation_to_curve_RH": "PROVED",
+    "integer_RH_or_GRH": "NOT PROVED",
+    "number_field_beta_estimate": "NOT PROVED"
+  },
+  "resource_caps": {
+    "curve_enumerations": 0,
+    "degree_cap": 24,
+    "field_element_enumerations": 0,
+    "formal_genus_one_rows": 3,
+    "point_counts": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "19f274c9335ecffb357e296b3fd5fefdeba5f3fd",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_VARIATIONAL_PROBABILITY_CARRIER_OPTIMUM.md": "d216e254e550c3f3cad49e3dac29da2b0b76e760",
+      "research/l-families/atlas/function_field/ffps_variational_probability_carrier_optimum.json": "a37d9b0bf1c43bed0df268a764427fa6c3870211",
+      "research/l-families/atlas/function_field/ffps_variational_probability_carrier_optimum.py": "f7a8628858f2a23bc4b9f164ea0cde1601c03235",
+      "tests/test_ffps_variational_probability_carrier_optimum.py": "6a8c9d45391014df212f4e2773be0d7a3e57e2e8"
+    }
+  }
+}
