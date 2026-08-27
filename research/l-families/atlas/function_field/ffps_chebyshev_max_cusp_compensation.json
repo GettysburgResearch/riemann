@@ -32,6 +32,7 @@
     "normalized_refill_asymptotic": "kappa_r=pi^2/(72(r+1)^2)*(1+O(r^-2))",
     "primitive_L1": "||F_r||_1/|h_r|=(r+1)*tan(a)^2/8",
     "primitive_energy": "||F_r||_2^2/h_r^2=tan(a)^2/(6*(3-tan(a)^2))=(1-cos(pi/(r+1)))/(12*(1+2*cos(pi/(r+1)))), a=pi/(2(r+1))",
+    "profile_density_tail": "rho(t)~1152/(pi^3*t^(3/2)), integral rho(t)dt=288/pi^2, and the divergent first ordinary moment forces Psi(q)=288/(pi^2*q)-1152/(pi^2*q^(3/2))+O(q^-2)",
     "profile_inverse_moments": "for j>=1, integral rho(t)/t^j dt=576/(4^(j-1)*pi^4)*(j!)^2/(2j+1)!*(1-2^(-2j-2))*zeta(2j+2); first rows are 1, pi^2/200, 17*pi^4/627200",
     "profile_stieltjes_density": "Psi(q)=Phi(sqrt(q))=integral_16^infinity rho(t)/(t+q)dt, rho(t)=18432/(pi^4*t^2)*sum_(m odd,16m^2<=t)(1-16m^2/t)^(-1/2)",
     "profile_stieltjes_representation": "Phi(c)=72/pi^4*sum_(k>=0)(2k+1)^-2*integral_0^pi sin(theta)^3/((2k+1)^2+(c^2/16)*sin(theta)^2)dtheta",

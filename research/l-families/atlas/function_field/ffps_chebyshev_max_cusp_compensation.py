@@ -598,6 +598,7 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "profile_stieltjes_density": "Psi(q)=Phi(sqrt(q))=integral_16^infinity rho(t)/(t+q)dt, rho(t)=18432/(pi^4*t^2)*sum_(m odd,16m^2<=t)(1-16m^2/t)^(-1/2)",
             "first_profile_threshold": "rho(t)~288/(pi^4*sqrt(t-16)) and Psi(q)~288/(pi^3*sqrt(q+16)) at the first slit threshold",
             "profile_inverse_moments": "for j>=1, integral rho(t)/t^j dt=576/(4^(j-1)*pi^4)*(j!)^2/(2j+1)!*(1-2^(-2j-2))*zeta(2j+2); first rows are 1, pi^2/200, 17*pi^4/627200",
+            "profile_density_tail": "rho(t)~1152/(pi^3*t^(3/2)), integral rho(t)dt=288/pi^2, and the divergent first ordinary moment forces Psi(q)=288/(pi^2*q)-1152/(pi^2*q^(3/2))+O(q^-2)",
             "profile_zero_free_domain": "Phi is zero-free on C minus (i[4,infinity) union -i[4,infinity)); finite-order transforms are eventually zero-free on each compact subset of Re(c)>0",
             "primitive_L1": "||F_r||_1/|h_r|=(r+1)*tan(a)^2/8",
             "uniform_refill_remainder": "for real z>=0, |J_r(z)/h_r^2-z*kappa_r|<=(3/16)*z^2*kappa_r, uniformly in r; 3/16 is sharp for the exact L1/Young envelope",

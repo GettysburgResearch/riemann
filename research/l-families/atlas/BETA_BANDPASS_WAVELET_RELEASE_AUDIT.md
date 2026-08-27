@@ -334,6 +334,7 @@ delimiter/control-byte checks, and Git whitespace checks.
 | \(\Phi(c)\) is a positive Stieltjes profile zero-free off \(i[4,\infty)\cup-i[4,\infty)\) | **PROVED** |
 | exact profile measure has odd square-root thresholds \(\pm4(2k+1)i\) | **PROVED** |
 | all profile inverse moments have the exact odd-mode/even-zeta formula (4.29c) | **PROVED** |
+| profile density has \(t^{-3/2}\) tail and forces the fractional large-scale term | **PROVED** |
 | finite transforms converge locally uniformly on compact subsets of \(\Re c>0\) | **PROVED** |
 | cost-charged local Chebyshev refill has floor \(\pi^3/36\) | **PROVED FOR \(zW=o(r)\); CHEBYSHEV ZERO MODE ONLY** |
 | full moving-order Perron or beta estimate from cusp compensation | **NOT PROVED** |

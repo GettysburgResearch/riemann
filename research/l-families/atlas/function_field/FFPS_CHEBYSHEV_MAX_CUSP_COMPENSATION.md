@@ -1132,7 +1132,31 @@ The first rows are
 The first identity normalizes \(\Phi(0)=1\); the next two are precisely the
 quadratic and quartic coefficients in (4.24). Thus the complete
 causal-primitive expansion is literally the inverse-moment hierarchy of the
-limiting Stieltjes measure. It follows from (4.29a) that
+limiting Stieltjes measure.
+
+At the other end, the odd-mode Riemann sum in (4.29a) gives
+
+\[
+ \rho(t)\sim\frac{1152}{\pi^3t^{3/2}},
+ \qquad
+ \int_{16}^\infty\rho(t)\,dt=\frac{288}{\pi^2}.
+\tag{4.29e}
+\]
+
+The total mass yields the leading \(288/(\pi^2q)\) term of \(\Psi(q)\).
+Because \(t\rho(t)\asymp t^{-1/2}\), the first ordinary measure moment
+diverges; the tail instead contributes
+
+\[
+ \Psi(q)=\frac{288}{\pi^2q}
+ -\frac{1152}{\pi^2q^{3/2}}+O(q^{-2}),
+ \qquad q\to+\infty,
+\tag{4.29f}
+\]
+
+which is exactly (4.25) in \(q=c^2\) coordinates. Thus both the small-scale
+primitive expansion and the large-scale fractional correction come from the
+same measure. It follows from (4.29a) that
 
 \[
  \boxed{
@@ -1235,6 +1259,7 @@ In particular:
 | Stieltjes representation and limiting zero-free domain (4.29)--(4.30) | **PROVED** |
 | exact Stieltjes density and odd square-root threshold ladder (4.29a)--(4.29b) | **PROVED** |
 | all-order inverse-moment formula (4.29c) | **PROVED** |
+| density tail, total mass, and fractional large-scale term (4.29e)--(4.29f) | **PROVED** |
 | acute-sector complex scale trichotomy (4.31) | **PROVED FOR THE KERNEL TRANSFORM** |
 | uniform-in-order relative remainder (2.8) | **PROVED** |
 | sharp \(3/16\) Young-envelope coefficient | **PROVED** |
