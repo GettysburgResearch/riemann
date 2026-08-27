@@ -1,0 +1,200 @@
+{
+  "classical_external_inputs": [
+    {
+      "source": "NIST DLMF 10.21(i)",
+      "url": "https://dlmf.nist.gov/10.21#i",
+      "use": "reality and simplicity of the positive Bessel zeros"
+    },
+    {
+      "source": "NIST DLMF 10.52(ii)",
+      "url": "https://dlmf.nist.gov/10.52#ii",
+      "use": "fixed-order large-argument spherical-Bessel asymptotics"
+    }
+  ],
+  "near_notch_theorem": {
+    "F_formula": "F_m(a)=Phi_m(-i*a)=(2m+1)!!*j_m(a)/a^m",
+    "bounded_numerical_certificates": [
+      {
+        "D_m_k_rounded": "0.145034831733",
+        "notch_floor_per_energy_rounded": "0.035058504026",
+        "root_index": 1,
+        "root_rounded": "4.493409457909",
+        "rung": 1,
+        "spherical_residual_abs": "1.943e-16"
+      },
+      {
+        "D_m_k_rounded": "0.049852570338",
+        "notch_floor_per_energy_rounded": "0.004142131282",
+        "root_index": 2,
+        "root_rounded": "7.725251836938",
+        "rung": 1,
+        "spherical_residual_abs": "5.204e-17"
+      },
+      {
+        "D_m_k_rounded": "0.074756228177",
+        "notch_floor_per_energy_rounded": "0.007823891112",
+        "root_index": 1,
+        "root_rounded": "5.763459196895",
+        "rung": 2,
+        "spherical_residual_abs": "1.388e-17"
+      },
+      {
+        "D_m_k_rounded": "0.019573576642",
+        "notch_floor_per_energy_rounded": "0.000536374864",
+        "root_index": 2,
+        "root_rounded": "9.095011330476",
+        "rung": 2,
+        "spherical_residual_abs": "1.874e-16"
+      },
+      {
+        "D_m_k_rounded": "0.041175889712",
+        "notch_floor_per_energy_rounded": "0.002179869292",
+        "root_index": 1,
+        "root_rounded": "6.987932000501",
+        "rung": 3,
+        "spherical_residual_abs": "8.327e-17"
+      },
+      {
+        "D_m_k_rounded": "0.008663466667",
+        "notch_floor_per_energy_rounded": "0.000096500127",
+        "root_index": 2,
+        "root_rounded": "10.417118547379",
+        "rung": 3,
+        "spherical_residual_abs": "1.249e-16"
+      }
+    ],
+    "compact_band": "if band endpoints avoid old notches and the band contains some, lambda_A(tau)=d_(m,A)^2*tau^2+O(tau^4)",
+    "condition_product": "Delta_m(tau)/lambda_A(tau) -> ((2m+1)/(2m+3))/d_(m,A)^2",
+    "derivative_constant": "D_(m,k)=|F_m'(a_k)|=(2m+1)!!*|j_m'(a_k)|/a_k^m",
+    "energy_excess": "Delta_m(tau)=E_m(tau)/E_m(0)-1=((2m+1)/(2m+3))*tau^2+O(tau^4)",
+    "exact_tradeoff": "lim |Qhat_tau(omega_k)|^2/Delta_m(tau)=D_(m,k)^2*((2m+3)/(2m+1))",
+    "high_notch_asymptotic": "D_(m,k)~(2m+1)!!*a_k^(-m-1), so individual squared conditioning grows like a_k^(2m+2)",
+    "local_profile": "for a=a_k+|tau|*y, |Qhat_tau(2a/S)|^2/tau^2 -> D_(m,k)^2*(1+y^2)",
+    "minimum_quartic_ratio": "eta_min=1/3-1/(2m+3)-(2m+2)*(2m+3)/(3*a_k^2)",
+    "minimum_shift": "a_k(tau)=a_k+(m+1)*tau^2/a_k+O(tau^4)",
+    "old_frequency_quartic_ratio": "eta_old=1/3-1/(2m+3)-(2m+2)*(2m+6)/(12*a_k^2)",
+    "old_notches": "a_k=j_(m+1/2,k), omega_k=2*a_k/S",
+    "pointwise_floor": "|Qhat_tau(omega_k)|^2=D_(m,k)^2*tau^2+O(tau^4)",
+    "symbolic_rows": [
+      {
+        "centered_second_moment": "1/5",
+        "energy_curvature": "3/5",
+        "high_notch_derivative_decay_power": 2,
+        "high_notch_squared_condition_growth_power": 4,
+        "local_minimum_shift_times_root": 2,
+        "rung": 1,
+        "sample_band_floor_coefficient": "16/9",
+        "sample_energy_times_condition_limit": "27/80",
+        "sample_local_profile_y_minus1_0_1": [
+          "8",
+          "4",
+          "8"
+        ],
+        "sample_minimum_floor_quartic_ratio_at_inverse_root_square_1_over_25": "-2/15",
+        "sample_notch_modulus_coefficients_tau_2_to_tau_4": [
+          "4",
+          "0",
+          "-113/60"
+        ],
+        "sample_old_frequency_quartic_ratio_at_inverse_root_square_1_over_25": "2/75"
+      },
+      {
+        "centered_second_moment": "1/7",
+        "energy_curvature": "5/7",
+        "high_notch_derivative_decay_power": 3,
+        "high_notch_squared_condition_growth_power": 6,
+        "local_minimum_shift_times_root": 3,
+        "rung": 2,
+        "sample_band_floor_coefficient": "25/9",
+        "sample_energy_times_condition_limit": "9/35",
+        "sample_local_profile_y_minus1_0_1": [
+          "18",
+          "9",
+          "18"
+        ],
+        "sample_minimum_floor_quartic_ratio_at_inverse_root_square_1_over_25": "-194/525",
+        "sample_notch_modulus_coefficients_tau_2_to_tau_4": [
+          "9",
+          "0",
+          "-85/28"
+        ],
+        "sample_old_frequency_quartic_ratio_at_inverse_root_square_1_over_25": "-1/105"
+      },
+      {
+        "centered_second_moment": "1/9",
+        "energy_curvature": "7/9",
+        "high_notch_derivative_decay_power": 4,
+        "high_notch_squared_condition_growth_power": 8,
+        "local_minimum_shift_times_root": 4,
+        "rung": 3,
+        "sample_band_floor_coefficient": "4",
+        "sample_energy_times_condition_limit": "7/36",
+        "sample_local_profile_y_minus1_0_1": [
+          "32",
+          "16",
+          "32"
+        ],
+        "sample_minimum_floor_quartic_ratio_at_inverse_root_square_1_over_25": "-166/225",
+        "sample_notch_modulus_coefficients_tau_2_to_tau_4": [
+          "16",
+          "0",
+          "-151/36"
+        ],
+        "sample_old_frequency_quartic_ratio_at_inverse_root_square_1_over_25": "-22/225"
+      },
+      {
+        "centered_second_moment": "1/11",
+        "energy_curvature": "9/11",
+        "high_notch_derivative_decay_power": 5,
+        "high_notch_squared_condition_growth_power": 10,
+        "local_minimum_shift_times_root": 5,
+        "rung": 4,
+        "sample_band_floor_coefficient": "49/9",
+        "sample_energy_times_condition_limit": "81/539",
+        "sample_local_profile_y_minus1_0_1": [
+          "50",
+          "25",
+          "50"
+        ],
+        "sample_minimum_floor_quartic_ratio_at_inverse_root_square_1_over_25": "-202/165",
+        "sample_notch_modulus_coefficients_tau_2_to_tau_4": [
+          "25",
+          "0",
+          "-707/132"
+        ],
+        "sample_old_frequency_quartic_ratio_at_inverse_root_square_1_over_25": "-37/165"
+      }
+    ]
+  },
+  "proof_ledger": {
+    "RH_or_GRH": "NOT PROVED",
+    "even_pointwise_notch_jet_through_tau_4": "PROVED EXACT",
+    "fixed_compact_band_floor_law": "PROVED",
+    "high_notch_conditioning_power": "PROVED FROM CLASSICAL ASYMPTOTICS",
+    "local_rescaled_quadratic_profile": "PROVED EXACT",
+    "new_beta_cancellation_or_subpower_estimate": "NOT PROVED",
+    "pointwise_energy_floor_tradeoff": "PROVED EXACT FROM FROZEN CURVATURE",
+    "uniform_coercivity_from_zero_freeness": "DISPROVED"
+  },
+  "resource_caps": {
+    "beta_terms": 0,
+    "bisection_steps_per_root": 72,
+    "curve_computations": 0,
+    "maximum_symbolic_rung": 4,
+    "numerical_root_rungs": 3,
+    "numerical_roots_per_rung": 2,
+    "primes": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "805ab873cb051c739f19978ebb772b2625adcffb",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_SPECTRAL_ZERO_FREE_CARRIER_TILT.md": "a23f6f57dc87ef698fd06e9fe2680119e032e37b",
+      "research/l-families/atlas/function_field/ffps_spectral_zero_free_carrier_tilt.json": "3d7e74420af1b85c7ab35a11166c54e3218434d2",
+      "research/l-families/atlas/function_field/ffps_spectral_zero_free_carrier_tilt.py": "f8f7c7596c368293cf5005c25e8f156ebcf0b94c",
+      "tests/test_ffps_spectral_zero_free_carrier_tilt.py": "2c2215c3810089b46b7f3d83d5ed7b5aa77f3e85"
+    }
+  }
+}
