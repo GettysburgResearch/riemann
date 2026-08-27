@@ -1,0 +1,59 @@
+{
+  "artifact": "FUNCTION_FIELD_BASEWAVE_SHADOW",
+  "factorization": {
+    "diagonal_channel": "1-XY",
+    "formula": "F=((1-sqrt(q)X)(1-sqrt(q)Y)(1-XY))/((1-q^(-e/2)X^e)(1-q^(-e/2)Y^e)(1-q^(-e)(XY)^e))*J",
+    "local_defect_identity": "(1-a)(1-b)(1-ab)-(1-a-b)=ab(a+b-ab)",
+    "residual_convergence": "absolute on every closed bidisc |X|,|Y|<=r with r^3<sqrt(q)",
+    "zero_frequency_verdict": "exact notch, not a main-term pole"
+  },
+  "finite_replay": {
+    "control_kernel": {
+      "-2": 1,
+      "-1": 2,
+      "0": 3,
+      "1": 2,
+      "2": 1
+    },
+    "field_sizes": [
+      3,
+      5,
+      7
+    ],
+    "maximum_degree": 35,
+    "recurrence_product_match_degree": 8
+  },
+  "proof_ledger": {
+    "bivariate_orientation_euler_product": "PROVED EXACT",
+    "complete_shell_decay": "PROVED BY EXACT EULER FACTORIZATION AND CAUCHY",
+    "coefficient_recurrence": "PROVED EXACT ALL DEGREE",
+    "incomplete_owner_boolean_analogue": "OPEN / NOT INFERRED",
+    "positive_genus_analogue": "OPEN / NOT INFERRED",
+    "waveprimcar": "NOT PROVED"
+  },
+  "resource_caps": {
+    "curves": 0,
+    "l_functions": 0,
+    "point_counts": 0,
+    "polynomial_enumeration": 0,
+    "zeta_zeros": 0
+  },
+  "scope": {
+    "degeneracy": "polynomial norm ratios retain only degree and the complete genus-zero monic inverse zeta function is 1-qu",
+    "number_field_inference": false,
+    "positive_genus_inference": false,
+    "rh_proved": false
+  },
+  "source_contract": {
+    "commit": "b870366141fe8d5f43d5b81f6e50a67d2a888070",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_BOUNDARY_FIELD_NEAR_CORRELATION_CRITERION.md": "105837343b6b8ef148488f492c66da8feae0334a",
+      "research/l-families/atlas/function_field/FFPS_PRIMITIVE_RHO_TILT_CONVOLUTION_ISOMORPHISM.md": "31311893b8a7ba708ae7a2813b9c44b920b788a9",
+      "research/l-families/atlas/function_field/ffps_boundary_field_near_correlation_criterion.py": "53b5a710cb2f6b918958ff7e96801d81e2a0a79c"
+    }
+  },
+  "theorem": {
+    "energy_consequence": "the squared complete-shell shadow is exponentially summable",
+    "statement": "For fixed q,e,alpha and every finitely supported sampled ratio kernel, S_h^alpha=O_epsilon(q^(-(1/3-epsilon)h))."
+  }
+}
