@@ -1,0 +1,227 @@
+#!/usr/bin/env python3
+"""Bounded replay for Chebyshev max-cusp refill compensation."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import math
+import subprocess
+from fractions import Fraction
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[3]
+OUTPUT = HERE / "ffps_chebyshev_max_cusp_compensation.json"
+
+SOURCE_COMMIT = "f3ae060d1bba0a7855e09d88b856baf991fc844a"
+SOURCE_BLOBS = {
+    "research/l-families/atlas/function_field/FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md": "85a009d5f82201158fc6795ba7354122997b5768",
+    "research/l-families/atlas/function_field/ffps_chebyshev_step_autocorrelation_normal_form.py": "79792cb7b7a33a37287db63ded9f28e67649d8b6",
+    "research/l-families/atlas/function_field/ffps_chebyshev_step_autocorrelation_normal_form.json": "ade0f2905908c7dd16d233cd38646307bca5d87f",
+    "tests/test_ffps_chebyshev_step_autocorrelation_normal_form.py": "1b2dd31d720c077992fca5ee59d1b94ee2cce5af",
+}
+
+MAX_CELL_ORDER = 8
+MAX_TABLE_ORDER = 16
+
+
+def check_source_blobs() -> None:
+    for path, expected in SOURCE_BLOBS.items():
+        completed = subprocess.run(
+            ["git", "rev-parse", f"{SOURCE_COMMIT}:{path}"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=3,
+        )
+        if completed.stdout.strip() != expected:
+            raise RuntimeError(f"frozen source blob mismatch: {path}")
+
+
+def validate_order(order: int) -> None:
+    if order < 1:
+        raise ValueError("order must be at least one")
+
+
+def cell_boundaries(order: int) -> tuple[float, ...]:
+    validate_order(order)
+    degree = order + 1
+    return tuple(
+        (1 - math.cos(index * math.pi / degree)) / 2 for index in range(degree + 1)
+    )
+
+
+def primitive_energy_ratio(order: int) -> float:
+    """||F_r||_2^2/h_r^2 in closed trigonometric form."""
+    validate_order(order)
+    tangent_squared = math.tan(math.pi / (2 * (order + 1))) ** 2
+    return tangent_squared / (6 * (3 - tangent_squared))
+
+
+def primitive_energy_ratio_cosine(order: int) -> float:
+    validate_order(order)
+    cosine = math.cos(math.pi / (order + 1))
+    return (1 - cosine) / (12 * (1 + 2 * cosine))
+
+
+def primitive_l1_ratio(order: int) -> float:
+    """||F_r||_1/|h_r| in closed form."""
+    validate_order(order)
+    tangent_squared = math.tan(math.pi / (2 * (order + 1))) ** 2
+    return (order + 1) * tangent_squared / 8
+
+
+def relative_remainder_coefficient(order: int) -> float:
+    """lambda_r^2/(4*kappa_r) in the tilted zero-mode bound."""
+    validate_order(order)
+    return primitive_l1_ratio(order) ** 2 / (4 * primitive_energy_ratio(order))
+
+
+def primitive_energy_ratio_by_cells(order: int) -> float:
+    """Independent exact-cell integration, with unit signed height."""
+    validate_order(order)
+    boundaries = cell_boundaries(order)
+    cumulative = 0.0
+    total = 0.0
+    for cell in range(order + 1):
+        width = boundaries[cell + 1] - boundaries[cell]
+        slope = (-1) ** cell
+        total += cumulative**2 * width
+        total += cumulative * slope * width**2
+        total += width**3 / 3
+        cumulative += slope * width
+    if abs(cumulative) > 2e-14:
+        raise AssertionError("mean-zero primitive did not close")
+    return total
+
+
+def order_constant(order: int) -> Fraction:
+    validate_order(order)
+    return Fraction(
+        16**order * (2 * order + 3) ** 2,
+        (2 * order + 1) * math.comb(2 * order, order) ** 2,
+    )
+
+
+def compensation_product(order: int) -> float:
+    return float(order_constant(order)) * primitive_energy_ratio(order)
+
+
+def compensation_ratio_upper_bound(order: int) -> Fraction:
+    """Strict rational upper bound for P_(r+1)/P_r."""
+    validate_order(order)
+    return Fraction(
+        4 * (order + 1) ** 4 * (2 * order + 5) ** 2,
+        (order + 2) ** 2 * (2 * order + 1) * (2 * order + 3) ** 3,
+    )
+
+
+def compensation_ratio_gap_numerator(order: int) -> int:
+    validate_order(order)
+    return 12 * order**4 + 60 * order**3 + 99 * order**2 + 60 * order + 8
+
+
+def refill_limit() -> float:
+    return math.pi**3 / 36
+
+
+def run(*, check_sources: bool = True) -> dict[str, object]:
+    if check_sources:
+        check_source_blobs()
+
+    for order in range(1, MAX_CELL_ORDER + 1):
+        closed = primitive_energy_ratio(order)
+        if abs(closed - primitive_energy_ratio_cosine(order)) > 2e-14:
+            raise AssertionError("primitive energy trigonometric forms disagree")
+        if abs(closed - primitive_energy_ratio_by_cells(order)) > 2e-14:
+            raise AssertionError("primitive energy formula failed")
+        if compensation_ratio_upper_bound(order) >= 1:
+            raise AssertionError("compensation descent certificate failed")
+        if relative_remainder_coefficient(order) > 9 / 32 + 2e-14:
+            raise AssertionError("uniform remainder certificate failed")
+
+    rows = []
+    for order in range(1, MAX_TABLE_ORDER + 1):
+        coefficient = primitive_energy_ratio(order)
+        product = compensation_product(order)
+        rows.append(
+            {
+                "information_order": order,
+                "normalized_refill_coefficient": f"{coefficient:.15f}",
+                "scaled_refill_72_rplus1_squared_over_pi2": f"{coefficient * 72 * (order + 1) ** 2 / math.pi**2:.15f}",
+                "safe_factor_order_constant": (
+                    str(order_constant(order).numerator)
+                    if order_constant(order).denominator == 1
+                    else f"{order_constant(order).numerator}/{order_constant(order).denominator}"
+                ),
+                "compensation_product": f"{product:.15f}",
+                "product_over_pi3_over_36": f"{product / refill_limit():.15f}",
+            }
+        )
+
+    return {
+        "source_contract": {"commit": SOURCE_COMMIT, "git_blobs": SOURCE_BLOBS},
+        "max_cusp_compensation": {
+            "primitive_energy": "||F_r||_2^2/h_r^2=tan(a)^2/(6*(3-tan(a)^2))=(1-cos(pi/(r+1)))/(12*(1+2*cos(pi/(r+1)))), a=pi/(2(r+1))",
+            "absolute_lag_identity": "integral |s| R_r(s) ds=-2||F_r||_2^2",
+            "tilted_zero_mode": "integral R_r(s)*exp(-z|s|/2) ds=z||F_r||_2^2+O(z^2)",
+            "primitive_L1": "||F_r||_1/|h_r|=(r+1)*tan(a)^2/8",
+            "uniform_refill_remainder": "for real z>=0, |J_r(z)/h_r^2-z*kappa_r|<=(9/32)*z^2*kappa_r, uniformly in r",
+            "normalized_refill_asymptotic": "kappa_r=pi^2/(72(r+1)^2)*(1+O(r^-2))",
+            "universal_cost_asymptotic": "A_r~2*pi*r^2",
+            "compensation_limit": "A_r*kappa_r=(pi^3/36)*(1+3/(4r)+(8pi^2-27)/(32r^2)+O(r^-3))",
+            "strict_descent": "P_(r+1)/P_r<Q_r<1, with 1-Q_r numerator 12r^4+60r^3+99r^2+60r+8",
+            "exact_bounds": "pi^3/36<P_r<=25/9 for r>=1, and P_r<=196/135 for r>=2",
+            "rows": rows,
+        },
+        "proof_ledger": {
+            "exact_primitive_energy": "PROVED",
+            "exact_linear_max_cusp_refill": "PROVED",
+            "uniform_in_order_relative_linear_refill": "PROVED",
+            "quadratic_decay_of_normalized_refill": "PROVED",
+            "finite_nonzero_cost_refill_compensation_limit": "PROVED",
+            "compensation_product_strictly_decreases_for_all_orders": "PROVED",
+            "moving_order_Perron_estimate": "NOT PROVED",
+            "new_beta_cancellation": "NOT PROVED",
+            "RH_or_GRH": "NOT PROVED",
+        },
+        "resource_caps": {
+            "maximum_cell_replay_order": MAX_CELL_ORDER,
+            "maximum_table_order": MAX_TABLE_ORDER,
+            "asymptotic_spot_order": 1000,
+            "beta_terms": 0,
+            "primes": 0,
+            "zeta_zeros": 0,
+            "root_searches": 0,
+            "random_samples": 0,
+            "quadratures": 0,
+            "curve_computations": 0,
+        },
+        "asymptotic_spot_checks": {
+            "refill_scaled_at_1000": f"{primitive_energy_ratio(1000) * 72 * 1001**2 / math.pi**2:.15f}",
+            "product_over_limit_at_1000": f"{compensation_product(1000) / refill_limit():.15f}",
+        },
+    }
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--no-source-check", action="store_true")
+    parser.add_argument("--write-json", type=Path)
+    args = parser.parse_args()
+    payload = run(check_sources=not args.no_source_check)
+    text = json.dumps(payload, indent=2, sort_keys=True) + "\n"
+    if args.write_json is not None:
+        args.write_json.write_text(text, encoding="utf-8")
+    elif args.check:
+        if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf-8") != text:
+            raise RuntimeError(f"canonical fixture mismatch: {OUTPUT}")
+    else:
+        print(text, end="")
+
+
+if __name__ == "__main__":
+    main()

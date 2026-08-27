@@ -1,0 +1,180 @@
+{
+  "asymptotic_spot_checks": {
+    "product_over_limit_at_1000": "1.000751621331409",
+    "refill_scaled_at_1000": "1.000002462479350"
+  },
+  "max_cusp_compensation": {
+    "absolute_lag_identity": "integral |s| R_r(s) ds=-2||F_r||_2^2",
+    "compensation_limit": "A_r*kappa_r=(pi^3/36)*(1+3/(4r)+(8pi^2-27)/(32r^2)+O(r^-3))",
+    "exact_bounds": "pi^3/36<P_r<=25/9 for r>=1, and P_r<=196/135 for r>=2",
+    "normalized_refill_asymptotic": "kappa_r=pi^2/(72(r+1)^2)*(1+O(r^-2))",
+    "primitive_L1": "||F_r||_1/|h_r|=(r+1)*tan(a)^2/8",
+    "primitive_energy": "||F_r||_2^2/h_r^2=tan(a)^2/(6*(3-tan(a)^2))=(1-cos(pi/(r+1)))/(12*(1+2*cos(pi/(r+1)))), a=pi/(2(r+1))",
+    "rows": [
+      {
+        "compensation_product": "2.777777777777777",
+        "information_order": 1,
+        "normalized_refill_coefficient": "0.083333333333333",
+        "product_over_pi3_over_36": "3.225153443319949",
+        "safe_factor_order_constant": "100/3",
+        "scaled_refill_72_rplus1_squared_over_pi2": "2.431708407416106"
+      },
+      {
+        "compensation_product": "1.451851851851852",
+        "information_order": 2,
+        "normalized_refill_coefficient": "0.020833333333333",
+        "product_over_pi3_over_36": "1.685680199708560",
+        "safe_factor_order_constant": "3136/45",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.367835979171560"
+      },
+      {
+        "compensation_product": "1.197951735263213",
+        "information_order": 3,
+        "normalized_refill_coefficient": "0.010110028629970",
+        "product_over_pi3_over_36": "1.390888139009494",
+        "safe_factor_order_constant": "20736/175",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.180062797698373"
+      },
+      {
+        "compensation_product": "1.093112621242575",
+        "information_order": 4,
+        "normalized_refill_coefficient": "0.006079084739596",
+        "product_over_pi3_over_36": "1.269164136361315",
+        "safe_factor_order_constant": "1982464/11025",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.108692110300378"
+      },
+      {
+        "compensation_product": "1.036681361274693",
+        "information_order": 5,
+        "normalized_refill_coefficient": "0.004086508806388",
+        "product_over_pi3_over_36": "1.203644326298648",
+        "safe_factor_order_constant": "11075584/43659",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.073217364719198"
+      },
+      {
+        "compensation_product": "1.001721826777447",
+        "information_order": 6,
+        "normalized_refill_coefficient": "0.002945316819860",
+        "product_over_pi3_over_36": "1.163054375596811",
+        "safe_factor_order_constant": "26214400/77077",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.052836295983398"
+      },
+      {
+        "compensation_product": "0.978067575791107",
+        "information_order": 7,
+        "normalized_refill_coefficient": "0.002227496127969",
+        "product_over_pi3_over_36": "1.135590483550422",
+        "safe_factor_order_constant": "1212153856/2760615",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.039991243878807"
+      },
+      {
+        "compensation_product": "0.961059958615860",
+        "information_order": 8,
+        "normalized_refill_coefficient": "0.001745377750066",
+        "product_over_pi3_over_36": "1.115843700516072",
+        "safe_factor_order_constant": "387620798464/703956825",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.031352688995411"
+      },
+      {
+        "compensation_product": "0.948274849601762",
+        "information_order": 9,
+        "normalized_refill_coefficient": "0.001405397927740",
+        "product_over_pi3_over_36": "1.100999482706458",
+        "safe_factor_order_constant": "1894080577536/2807136475",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.025255386995378"
+      },
+      {
+        "compensation_product": "0.938331323500521",
+        "information_order": 10,
+        "normalized_refill_coefficient": "0.001156424043538",
+        "product_over_pi3_over_36": "1.089454499626562",
+        "safe_factor_order_constant": "36352603193344/44801898141",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.020787243123062"
+      },
+      {
+        "compensation_product": "0.930387298894521",
+        "information_order": 11,
+        "normalized_refill_coefficient": "0.000968505508597",
+        "product_over_pi3_over_36": "1.080231048234292",
+        "safe_factor_order_constant": "171798691840000/178837328943",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.017413130765887"
+      },
+      {
+        "compensation_product": "0.923901217119936",
+        "information_order": 12,
+        "normalized_refill_coefficient": "0.000823117266029",
+        "product_over_pi3_over_36": "1.072700349005467",
+        "safe_factor_order_constant": "12824703626379264/11425718238025",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.014801656278996"
+      },
+      {
+        "compensation_product": "0.918509562846223",
+        "information_order": 13,
+        "normalized_refill_coefficient": "0.000708285684425",
+        "product_over_pi3_over_36": "1.066440340560887",
+        "safe_factor_order_constant": "59180113853415424/45635265151875",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.012738421157328"
+      },
+      {
+        "compensation_product": "0.913959587614310",
+        "information_order": 14,
+        "normalized_refill_coefficient": "0.000615984923048",
+        "product_over_pi3_over_36": "1.061157567977846",
+        "safe_factor_order_constant": "1081989810475761664/729232910488125",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.011079608446549"
+      },
+      {
+        "compensation_product": "0.910070299248526",
+        "information_order": 15,
+        "normalized_refill_coefficient": "0.000540668067901",
+        "product_over_pi3_over_36": "1.056641889342456",
+        "safe_factor_order_constant": "544935554911830016/323743400754975",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.009725762306530"
+      },
+      {
+        "compensation_product": "0.906708800048295",
+        "information_order": 16,
+        "normalized_refill_coefficient": "0.000478399898143",
+        "product_over_pi3_over_36": "1.052739003083133",
+        "safe_factor_order_constant": "225972614902942007296/119228219630042193",
+        "scaled_refill_72_rplus1_squared_over_pi2": "1.008606290183074"
+      }
+    ],
+    "strict_descent": "P_(r+1)/P_r<Q_r<1, with 1-Q_r numerator 12r^4+60r^3+99r^2+60r+8",
+    "tilted_zero_mode": "integral R_r(s)*exp(-z|s|/2) ds=z||F_r||_2^2+O(z^2)",
+    "uniform_refill_remainder": "for real z>=0, |J_r(z)/h_r^2-z*kappa_r|<=(9/32)*z^2*kappa_r, uniformly in r",
+    "universal_cost_asymptotic": "A_r~2*pi*r^2"
+  },
+  "proof_ledger": {
+    "RH_or_GRH": "NOT PROVED",
+    "compensation_product_strictly_decreases_for_all_orders": "PROVED",
+    "exact_linear_max_cusp_refill": "PROVED",
+    "exact_primitive_energy": "PROVED",
+    "finite_nonzero_cost_refill_compensation_limit": "PROVED",
+    "moving_order_Perron_estimate": "NOT PROVED",
+    "new_beta_cancellation": "NOT PROVED",
+    "quadratic_decay_of_normalized_refill": "PROVED",
+    "uniform_in_order_relative_linear_refill": "PROVED"
+  },
+  "resource_caps": {
+    "asymptotic_spot_order": 1000,
+    "beta_terms": 0,
+    "curve_computations": 0,
+    "maximum_cell_replay_order": 8,
+    "maximum_table_order": 16,
+    "primes": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "root_searches": 0,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "f3ae060d1bba0a7855e09d88b856baf991fc844a",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_CHEBYSHEV_STEP_AUTOCORRELATION_NORMAL_FORM.md": "85a009d5f82201158fc6795ba7354122997b5768",
+      "research/l-families/atlas/function_field/ffps_chebyshev_step_autocorrelation_normal_form.json": "ade0f2905908c7dd16d233cd38646307bca5d87f",
+      "research/l-families/atlas/function_field/ffps_chebyshev_step_autocorrelation_normal_form.py": "79792cb7b7a33a37287db63ded9f28e67649d8b6",
+      "tests/test_ffps_chebyshev_step_autocorrelation_normal_form.py": "1b2dd31d720c077992fca5ee59d1b94ee2cce5af"
+    }
+  }
+}
