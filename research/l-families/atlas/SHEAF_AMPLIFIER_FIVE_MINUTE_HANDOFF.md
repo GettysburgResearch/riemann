@@ -2,6 +2,14 @@
 
 Status: **substantial exploratory release; RH and GRH remain open**
 
+Successor note: the next frozen pass starts at
+[BETA_BANDPASS_WAVELET_FIVE_MINUTE_HANDOFF.md](BETA_BANDPASS_WAVELET_FIVE_MINUTE_HANDOFF.md).
+It corrects the gate reading by proving BASEWAVE is exactly PRIMCAR, builds
+fixed smooth band-pass criteria, closes the exterior spectral tail, extends
+the complete shadow to all fixed curves, and proves a termwise native
+partial-Frobenius obstruction. This PR #757 handoff remains the parent
+release and should be read for its full source construction.
+
 Frozen parent: PR #756 at
 `6e4609dfe1b073f1eb58445fdd1d7164dbc450d6`.  The final successor head and
 complete replay ledger are recorded in
@@ -108,12 +116,13 @@ determinant `sqrt(p)/(p+1)`. This creates a concrete spectral/large-sieve
 problem while warning that uniform inversion degenerates at large primes. The
 full color family is an upper-divisor zeta transform of one coherently
 oriented amplitude per product shell `N=ab`; finite-height Möbius inversion
-recovers those shells exactly, while internal orientation modes are genuinely
-absent at fixed `(alpha,d,I)`. Recovery in the local weighted overlap-Gram
-norm has condition number asymptotic to `4sqrt(p)`, so a proof
-should exploit the forward signed transform rather than whiten it prime by
-prime. The scalar zero mode has no native `d`-average, and every one of these routes
-leaves the nonzero incidence spectrum separate.
+recovers those shells exactly. Internal orientation data is absent for a
+general fixed core, but the successor audit found a load-bearing exception:
+the `u=1` member is predicatewise the complete original PRIMCAR panel, with
+weight one. Hence `AUXCOLORPRIMCAR -> PRIMCAR -> PRIMLS -> RH`
+conditionally. Recovery in the local weighted overlap-Gram norm still has
+condition number asymptotic to `4sqrt(p)`, so a proof should exploit the
+forward signed transform rather than whiten it prime by prime.
 
 There is now a particularly concrete one-variable target. For squarefree
 `N`, all orientations have the same sign `mu(N)`. Writing `N=uM`
@@ -121,9 +130,10 @@ cancels the core sign and square root, so each coherent color sum is an
 ordinary Möbius sum in `M` against an explicit divisor wavelet at `uM`.
 The per-core d-averaged gate `WAVEPRIMCAR` implies
 `AUXCOLORPRIMCAR`; its outer Euler product converges exactly for exponent
-below `1/2`. The wavelet is neither positive nor multiplicative, and the
-gate remains wholly unproved, but this is the most classical analytic form
-of the new zero-mode burden. The inherited ratio-16 support further confines
+below `1/2`. More directly, its `u=1` specialization is exactly PRIMCAR, so
+that single-core selection pays no outer exponent threshold. The wavelet is
+neither positive nor multiplicative, and every gate remains wholly
+unproved. The inherited ratio-16 support further confines
 each wavelet to divisors within a factor four of the balanced square root and
 each cofactor to a factor-64 shell around `H^2/(67^alpha u)`.
 
@@ -446,14 +456,18 @@ in chronological order.
    `WAVEPRIMCAR`; the image-tailored uniform target is
    `RAYPRIMCAR`, while full-`q`
    `GENPRIMCAR` is a broader, differently normalized alternative.
-   All are open and address only the auxiliary rho-sieved/zero-mode burden,
-   not the nonzero incidence spectrum.
+   All are open. The successor proves that the full auxiliary color and
+   uniform wavelet gates each contain the entire PRIMCAR energy through
+   their `u=1` member; they are not merely zero-mode gates.
 2. **Relative sheaf gate:** construct the global varying-place complex where
    hard and selected cleanup remain common and `C-S=Pi_0` survives with a
-   usable conductor ledger. The clean ternary norm/Kummer factor and its
-   divisor-cost Adams extractor now exist; the missing step is to make the
-   native owner/Boolean/Artin--Schreier source separable or equip it with
-   commuting partial Frobenii, then prove a uniform Betti/signed-trace bound.
+   usable conductor ledger. The successor proves that the universal native
+   Artin--Schreier phase/incidence block has separation rank \(m\) (or
+   \(Q-1\) on all \(Q\) cells), so no bounded/subpower-rank
+   source-independent termwise separation exists; its natural realization
+   also has no independent partial Frobenius. The live routes are cancellation
+   before externalization, source-specific sparse occupancy, or a new
+   correspondence-level Adams formula.
 3. **Weighted source gate:** transfer rich-core supply through the actual
    Boolean/owner physical shell; ambient density alone is insufficient.
 4. **Sym12 realization gate:** decide whether the formal `[5,1] tensor L`
@@ -472,15 +486,14 @@ in chronological order.
 
 Run four lanes in parallel:
 
-1. attack `COLLPRIMCAR` directly, exploit coherent core-color
-   cancellation through `AUXCOLORPRIMCAR`, or prove the stronger
-   `RAYPRIMCAR` along the exact compatible rays `q=drs`;
-   retain full-`q` `GENPRIMCAR` as a broader alternative, not
-   an intrinsic reformulation. The incidence predicate already survives,
-   but the nonzero `PRIMCAR` spectrum remains separate;
-2. prove the actual owner/Boolean/Artin--Schreier source has the partial-
-   Frobenius/external-product structure required by the new Adams extractor,
-   then simplify its signed divisor sum before any Betti norm;
+1. attack the complete `u=1` PRIMCAR/base-wave panel directly, or preserve
+   coherent core-color cancellation through `AUXCOLORPRIMCAR`; retain
+   `RAYPRIMCAR` and full-`q` `GENPRIMCAR` only as stronger alternatives;
+2. classify actual owner/Boolean/Artin--Schreier physical occupancy, or
+   construct the relative selected/unselected correspondence before Adams
+   extraction; bounded/subpower-rank source-independent termwise
+   externalization, and the natural partial-Frobenius realization, are now
+   refuted for the universal phase/incidence block;
 3. attack the squareclass `KRAWLS` orbit sums or a growing-monodromy
    replacement; the exact quotient has crossed the generic entropy wall, but
    termwise character estimates stop at the additive `log log` gain;

@@ -3,6 +3,12 @@
 Status: **release-candidate audit; current replay green; exploratory PR, not
 an integrated proof packet; RH and GRH remain open**
 
+Successor correction ledger:
+[BETA_BANDPASS_WAVELET_RELEASE_AUDIT.md](BETA_BANDPASS_WAVELET_RELEASE_AUDIT.md).
+In particular, BASEWAVE is exactly PRIMCAR, while the universal native
+phase/incidence block fails termwise bounded-rank partial-Frobenius
+externalization. This file remains the frozen audit of PR #757 itself.
+
 Frozen parent: PR #756 at
 `6e4609dfe1b073f1eb58445fdd1d7164dbc450d6`.
 
@@ -37,7 +43,7 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
 | primitive-ray localization | exact source disintegration and equivalence | each fixed ray is `A_(a,b) log X+O(1)`; every prescribed subpower-height sector is harmless | the balanced high-height residual remains RH-bearing |
 | primitive-pair large-sieve gate | exact shell identities, two exact normal forms, plus conditional implication | five oriented/three reciprocal panels reconstruct the residual; Möbius--Gram and biased-Boolean forms expose its modes; `PRIMLS` implies RH | the harmonic zero mode survives sieve averaging; `PRIMLS` is unproved, stronger than RH, with no converse |
 | primitive incidence/Carleson form | exact finite Gram, fixed-height limit, and conditional implication | the actual `d^-1` average limits to `67/(68 zeta(2))` times the Boolean energy; `PRIMCAR=>PRIMLS=>RH` | `PRIMCAR` is stronger and unproved; its `rho`-tilted zero mode still carries `1/zeta(s)` |
-| primitive `rho`-tilt convolution | exact Euler algebra, Boolean compression, compatible-image bijection, color Gram, and one-variable wavelet reduction | fixed `q` has `3^omega(q)` compatible colorings; fixed-`(d,u)` colors expose `AUXCOLORPRIMCAR`; its energy is the shared-support Gram; writing `N=uM` reduces each core to a Möbius sum against an explicit divisor wavelet, and `WAVEPRIMCAR` conditionally implies the color gate below exponent `1/2` | no gate is proved; the wavelet is signed and nonmultiplicative, weighted-Gram conditioning degenerates, witnesses are synthetic, and nonzero `PRIMCAR` modes remain uncontrolled |
+| primitive `rho`-tilt convolution | exact Euler algebra, Boolean compression, compatible-image bijection, color Gram, and one-variable wavelet reduction | fixed `q` has `3^omega(q)` compatible colorings; fixed-`(d,u)` colors expose `AUXCOLORPRIMCAR`; writing `N=uM` reduces each core to a Möbius divisor wavelet; the successor proves the `u=1` member is exactly PRIMCAR | no gate is proved; the wavelet is signed and nonmultiplicative, and weighted-Gram conditioning degenerates; contrary to the original reading, AUXCOLORPRIMCAR and WAVEPRIMCAR each contain the full PRIMCAR burden through `u=1` |
 | native reflection/geodesic criterion | exact source identity and equivalence | same detector is a differentiated reflection-odd energy; relative squared endpoint costs `O(T)` | positive reflection estimate remains RH-bearing |
 | finite beta scout | bounded floating point | checkpoint values and two-mesh controls are reproducible | no interval certificate or asymptotic inference |
 | compact boundary-field scout | bounded floating point plus exact first-difference control | `G` rows reproduce; direct differencing agrees with `h_epsilon` to `2.13e-13` absolute | no asymptotic inference |
@@ -45,7 +51,7 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
 | Kummer invariant audit | exact fixed-fibre geometry | generic invariant criterion and resonant strata identified | no varying-place complex or uniform Betti bound |
 | cyclic/abelian torsor projector | exact endomorphism theorem | `C-S=Pi_0`; subgroup quotients compress selected rank | actual FFPS cleanup must be common and equivariant |
 | universal ternary norm torsor | exact varying-degree-shell construction and finite-monodromy normal form | clean physical ranks are `48/32/16`, generic selected invariants vanish, tame toric conductor is at most `288(a+b)`, and root/physical monodromy split | coefficient-space irreducibility has exponential termwise mass; the closed-point bypass still needs native source gluing, Betti control, and `CYSEL` |
-| closed-point Adams compression | exact orbit/Möbius theorem and finite-abelian character algebra | separable degree `(a,b)` extraction costs `2^(omega(a)+omega(b))` nonzero signed traces, plus `2^omega(a)` for an equal-degree ordered diagonal; ternary deck ranks stay `48/32/16` | the native source has not been shown separable/partial-Frobenius; trace-term count is not a uniform Betti estimate |
+| closed-point Adams compression | exact orbit/Möbius theorem and finite-abelian character algebra | separable degree `(a,b)` extraction costs `2^(omega(a)+omega(b))` nonzero signed traces, plus `2^omega(a)` for an equal-degree ordered diagonal; ternary deck ranks stay `48/32/16` | the successor refutes termwise bounded-rank partial-Frobenius externalization of the universal native phase block; sparse occupancy, relative cancellation, or a correspondence-level extension remains open |
 | rich-core and closed-place towers | exact source algebra plus ambient counting | formal leverage `<(4/5)^r` on declared rich sources | weighted Boolean transfer is open |
 | entropy/conductor phase diagram | exact ambient theorem; conditional loss model | threshold `theta<delta log(5/4)` | typical ambient order statistics do not imply a weighted-source theorem |
 | exact cycle-selector mass | exact characteristic-zero representation theorem | every exact full-`S_d` presentation has forced mass `2^(d-1)/d`; product costs multiply | this is a coefficient-space theorem; closed-point Adams inversion is a different category, while weaker/source-specific selectors and joint cancellation remain open |
@@ -478,15 +484,17 @@ Open and load-bearing:
 - high-primitive-height beta cancellation; low and fixed rays are now removed;
 - the stronger three-panel `PRIMLS` maximal Möbius-pair estimate;
 - the still stronger dyadic `PRIMCAR` incidence-energy estimate;
-- the direct weighted `COLLPRIMCAR` auxiliary rho-sieved input (hence
-  a zero-mode route), the coherent quadratic `AUXCOLORPRIMCAR` input,
+- the direct weighted `COLLPRIMCAR` auxiliary rho-sieved input, the coherent
+  quadratic `AUXCOLORPRIMCAR` input,
   or either uniform sufficient route:
   compatible-ray `RAYPRIMCAR` and
-  full-`q` `GENPRIMCAR`;
+  full-`q` `GENPRIMCAR`; the successor proves AUXCOLORPRIMCAR and
+  WAVEPRIMCAR each contain full PRIMCAR at `u=1`, but no estimate;
 - global varying-place relative complex and signed trace cancellation;
-- native owner/Boolean/Artin--Schreier gluing to the universal norm torsor,
-  including the separable/partial-Frobenius structure needed by Adams
-  extraction;
+- native owner/Boolean/Artin--Schreier gluing to the universal norm torsor;
+  termwise bounded-rank partial-Frobenius structure is refuted on the
+  universal phase block, leaving sparse occupancy, relative cancellation,
+  or correspondence-level extraction;
 - a weaker/source-specific, prime-polynomial, or jointly cancelled closed-place
   selector;
 - coefficientwise contractivity of the all-degree selector lift on odd-cycle
