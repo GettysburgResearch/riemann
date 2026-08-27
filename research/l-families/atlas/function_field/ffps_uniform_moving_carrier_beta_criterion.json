@@ -1,0 +1,162 @@
+{
+  "carrier_rows": [
+    {
+      "imag_s": 0.0,
+      "maximum_sampled_carrier_modulus": 0.08908318732795581,
+      "minimum_sampled_carrier_modulus": 0.08212933198880008,
+      "real_s": 0.1
+    },
+    {
+      "imag_s": 1.0,
+      "maximum_sampled_carrier_modulus": 0.7696353003673372,
+      "minimum_sampled_carrier_modulus": 0.6299556118939987,
+      "real_s": 0.25
+    },
+    {
+      "imag_s": 6.0,
+      "maximum_sampled_carrier_modulus": 3.2556330618914826,
+      "minimum_sampled_carrier_modulus": 0.032348005456717496,
+      "real_s": 0.49
+    }
+  ],
+  "exact_formulas": {
+    "atom_laplace": "a*(exp(-s)-exp(-a))/((1-exp(-a))*(a-s))",
+    "carrier": "s*atom_laplace(a,s/m)^(2m)",
+    "carrier_zeros": "forced simple zero s=0; nonforced zeros m*(a-2*pi*i*k), k nonzero, multiplicity 2m",
+    "energy_cost": "O_delta((1+log X)*X^(2delta)*variation_scale^4)",
+    "variation_scale": "m*a*(1+coth(a/2))"
+  },
+  "order_limit_rows": [
+    {
+      "order": 1.0,
+      "relative_error_to_order_limit": 0.1301217040957207,
+      "tilt": 1.0
+    },
+    {
+      "order": 8.0,
+      "relative_error_to_order_limit": 0.016759586071739857,
+      "tilt": 1.0
+    },
+    {
+      "order": 64.0,
+      "relative_error_to_order_limit": 0.0021049022366827737,
+      "tilt": 1.0
+    },
+    {
+      "order": 512.0,
+      "relative_error_to_order_limit": 0.00026327258866583786,
+      "tilt": 1.0
+    },
+    {
+      "order": 1.0,
+      "relative_error_to_order_limit": 0.026305389089999628,
+      "tilt": 8.0
+    },
+    {
+      "order": 8.0,
+      "relative_error_to_order_limit": 0.003254830825960377,
+      "tilt": 8.0
+    },
+    {
+      "order": 64.0,
+      "relative_error_to_order_limit": 0.0004060920564873649,
+      "tilt": 8.0
+    },
+    {
+      "order": 512.0,
+      "relative_error_to_order_limit": 5.074915066916684e-05,
+      "tilt": 8.0
+    },
+    {
+      "order": 1.0,
+      "relative_error_to_order_limit": 0.00041638067607232653,
+      "tilt": 64.0
+    },
+    {
+      "order": 8.0,
+      "relative_error_to_order_limit": 5.188535478750156e-05,
+      "tilt": 64.0
+    },
+    {
+      "order": 64.0,
+      "relative_error_to_order_limit": 6.483069156003549e-06,
+      "tilt": 64.0
+    },
+    {
+      "order": 512.0,
+      "relative_error_to_order_limit": 8.103429416315399e-07,
+      "tilt": 64.0
+    }
+  ],
+  "proof_ledger": {
+    "RH_or_GRH": "NOT PROVED",
+    "arbitrary_schedule_reverse_RH_implication": "PROVED",
+    "moving_energy_estimate": "NOT PROVED",
+    "partial_sums_to_holomorphic_continuation": "PROVED",
+    "prefix_L2_to_beta_Dirichlet_partial_sums": "PROVED",
+    "subpower_two_parameter_RH_equivalence": "PROVED",
+    "uniform_moving_carrier_lower_bound": "PROVED",
+    "universal_probability_derivative_reverse_gate": "PROVED"
+  },
+  "real_floor_rows": [
+    {
+      "minimum_over_floor": 1.001563730890893,
+      "minimum_sampled_carrier": 0.04531261701288891,
+      "real_s": 0.05,
+      "universal_probability_floor": 0.04524187090179798
+    },
+    {
+      "minimum_over_floor": 1.0031299261697266,
+      "minimum_sampled_carrier": 0.08212933198880007,
+      "real_s": 0.1,
+      "universal_probability_floor": 0.0818730753077982
+    },
+    {
+      "minimum_over_floor": 1.0078433375047797,
+      "minimum_sampled_carrier": 0.15282197109593906,
+      "real_s": 0.25,
+      "universal_probability_floor": 0.15163266492815836
+    },
+    {
+      "minimum_over_floor": 1.0154312671358423,
+      "minimum_sampled_carrier": 0.1867402860916428,
+      "real_s": 0.49,
+      "universal_probability_floor": 0.1839024384371858
+    }
+  ],
+  "resource_caps": {
+    "finite_field_elements": 0,
+    "laplace_samples": 3,
+    "orders": 4,
+    "primes": 0,
+    "quadratures": 0,
+    "random_samples": 0,
+    "tilts": 4,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "phase_commit": "db37529e44bcaada9a6e39dd6cdd73c97dda8b94",
+    "phase_git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_CRITICAL_MOVING_ORDER_PHASE_BOUNDARY.md": "3a9b6ff9af2184bece44449f56e9fe779e9b3de6",
+      "research/l-families/atlas/function_field/ffps_critical_moving_order_phase_boundary.json": "5e7c572b698d6fd721110d84c8e08f2a468beaa7",
+      "research/l-families/atlas/function_field/ffps_critical_moving_order_phase_boundary.py": "c63e3f2645cc18421a6bd511cd4476e14430a592",
+      "tests/test_ffps_critical_moving_order_phase_boundary.py": "2b3288aecca01bce2b6155ab3636b71b516826cd"
+    },
+    "renormalization_commit": "46ea68808e238b0c9b85050158ba149649b1b37e",
+    "renormalization_git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_TILTED_TENT_DETECTOR_RENORMALIZATION_FLOW.md": "6de962fe78c2f77d3f02e0d11f56f7145eb37f93",
+      "research/l-families/atlas/function_field/ffps_tilted_tent_detector_renormalization_flow.json": "7595d5ce5f24524442c6392de6b23073de1f951b",
+      "research/l-families/atlas/function_field/ffps_tilted_tent_detector_renormalization_flow.py": "8b8c5783714661fd9d6f1803263b544e90b82957",
+      "tests/test_ffps_tilted_tent_detector_renormalization_flow.py": "7763de04d6545ed73b397d00e8485f5631c3ae00"
+    }
+  },
+  "theorem": {
+    "abstract_reverse_gate": "for any moving probability densities Q_X on [0,2], E_{D Q_X}(X)=X^o(1) implies RH",
+    "equivalence_region": "a(X)>=1 and a(X)m(X)=X^o(1)",
+    "fixed_tilt_carrier_compactum": "inf_{m>=1,s in K}|Jhat_{1,m}(s)|>0 for compact K subset 0<Re(s)<1",
+    "forward_gate": "RH and a(X)m(X)=X^o(1) imply E_{a(X),m(X)}(X)=X^o(1)",
+    "moving_parameters": "a(X)>=1 and integer m(X)>=1",
+    "real_carrier_floor": "Jhat_X(sigma)>=sigma*exp(-2sigma) for every sigma>0",
+    "tilted_reverse_gate": "E_{a(X),m(X)}(X)=X^o(1) implies RH with no growth restriction"
+  }
+}
