@@ -1,0 +1,1289 @@
+diff --git a/.github/workflows/formal.yml b/.github/workflows/formal.yml
+index b2207a4661d661843cd58f5508c1b92de960294a..ae1fdebfe56dcc0b28f3dff7005976e6f97ddf89 100644
+--- a/.github/workflows/formal.yml
++++ b/.github/workflows/formal.yml
+@@ -43,10 +43,6 @@ jobs:
+           python3 formal/scripts/verify_source_locks.py
+           python3 formal/scripts/validate_blueprint.py
+ 
+-      - name: Resolve the exact pinned Lake dependency graph
+-        working-directory: formal
+-        run: lake update
+-
+       - name: Fetch Mathlib cache
+         working-directory: formal
+         run: lake exe cache get
+@@ -55,7 +51,7 @@ jobs:
+         working-directory: formal
+         run: |
+           lake build
+-          lake build Challenge.RH Solution.RH
++          bash scripts/build_local_comparators.sh
+ 
+       - name: Reject sorry/admit and project axioms in trusted targets
+         run: bash formal/scripts/check_no_sorry.sh
+diff --git a/formal/.gitattributes b/formal/.gitattributes
+new file mode 100644
+index 0000000000000000000000000000000000000000..f7f080dd85969f6fffc4d0afea9add0055baedca
+--- /dev/null
++++ b/formal/.gitattributes
+@@ -0,0 +1 @@
++registry/deltas/C_EXTERNAL_SOURCE_STATEMENTS/*.txt text eol=lf
+diff --git a/formal/BOOTSTRAP_VALIDATION.md b/formal/BOOTSTRAP_VALIDATION.md
+index a459dfefc7a5c4fc68c739900b11571e53a5004c..5019a6a563c835c5270a14b4fc06843f7062ff17 100644
+--- a/formal/BOOTSTRAP_VALIDATION.md
++++ b/formal/BOOTSTRAP_VALIDATION.md
+@@ -25,10 +25,9 @@ This environment did not contain a Lean toolchain and cannot access external pac
+ The path-filtered workflow performs, on a networked GitHub runner:
+ 
+ ```text
+-lake update
+ lake exe cache get
+ lake build
+-lake build Challenge.RH Solution.RH
++bash scripts/build_local_comparators.sh
+ no-sorry/custom-axiom audit
+ #print axioms audit
+ ```
+diff --git a/formal/README.md b/formal/README.md
+index 79b83821931b8660df1ce36f3a33537eb89a0e34..014e118f1832236f635d9b1b8fb08ecfa5d733f1 100644
+--- a/formal/README.md
++++ b/formal/README.md
+@@ -26,10 +26,9 @@ python3 formal/scripts/verify_source_locks.py
+ python3 formal/scripts/validate_blueprint.py
+ 
+ cd formal
+-lake update
+ lake exe cache get
+ lake build
+-lake build Solution.RH
++bash scripts/build_local_comparators.sh
+ cd ..
+ 
+ bash formal/scripts/check_no_sorry.sh
+diff --git a/formal/RiemannFormal/Operator/FiniteMatrix.lean b/formal/RiemannFormal/Operator/FiniteMatrix.lean
+index 957e78da40172d2c73b52a80e08e12004a12f5e6..c76f11afc74e0b4b0030e5a8dda74a306bf6ddfc 100644
+--- a/formal/RiemannFormal/Operator/FiniteMatrix.lean
++++ b/formal/RiemannFormal/Operator/FiniteMatrix.lean
+@@ -71,6 +71,7 @@ theorem zero_psd2_not_pd2 : IsPSD2 0 0 0 ∧ ¬ IsPD2 0 0 0 := by
+ /-- Exact two-by-two congruence/completion-of-squares identity. -/
+ theorem ldl2_identity (a b c x y : ℝ) :
+     a * quad2 a b c x y = (a * x + b * y) ^ 2 + det2 a b c * y ^ 2 := by
++  simp only [quad2, det2]
+   ring
+ 
+ /-- A positive first pivot and nonnegative determinant imply two-by-two PSD. -/
+@@ -109,6 +110,7 @@ def leadingMinor2 (a b d : ℝ) : ℝ := a * d - b ^ 2
+ /-- Congruence identity for swapping the first two coordinates. -/
+ theorem quad3_swap12 (a b c d e f x y z : ℝ) :
+     quad3 a b c d e f x y z = quad3 d b e a c f y x z := by
++  simp only [quad3]
+   ring
+ 
+ /-- PSD is invariant under the first coordinate transposition. -/
+@@ -125,6 +127,7 @@ theorem psd3_swap12_iff (a b c d e f : ℝ) :
+ /-- Congruence identity for swapping the last two coordinates. -/
+ theorem quad3_swap23 (a b c d e f x y z : ℝ) :
+     quad3 a b c d e f x y z = quad3 a c b f e d x z y := by
++  simp only [quad3]
+   ring
+ 
+ /-- PSD is invariant under the last coordinate transposition. -/
+@@ -142,6 +145,7 @@ theorem psd3_swap23_iff (a b c d e f : ℝ) :
+ single two-node packet. -/
+ theorem duplicate12_quad3 (a g h x y z : ℝ) :
+     quad3 a a g a g h x y z = quad2 a g h (x + y) z := by
++  simp only [quad3, quad2]
+   ring
+ 
+ /-- PSD of the reduced two-node packet implies PSD of the duplicate packet. -/
+@@ -154,6 +158,7 @@ theorem duplicate12_psd3 {a g h : ℝ} (h2 : IsPSD2 a g h) :
+ /-- Duplicate last two coordinates also reduce to a two-node packet. -/
+ theorem duplicate23_quad3 (a g h x y z : ℝ) :
+     quad3 a g g h h h x y z = quad2 a g h x (y + z) := by
++  simp only [quad3, quad2]
+   ring
+ 
+ /-- PSD of the reduced packet implies PSD after duplicating the last node. -/
+@@ -169,6 +174,7 @@ theorem ldl3_identity (a b c d e f x y z : ℝ) :
+       leadingMinor2 a b d * (a * x + b * y + c * z) ^ 2 +
+       (leadingMinor2 a b d * y + (a * e - b * c) * z) ^ 2 +
+       a * det3 a b c d e f * z ^ 2 := by
++  simp only [leadingMinor2, quad3, det3]
+   ring
+ 
+ /-- A positive first pivot, positive leading two-by-two minor, and nonnegative
+diff --git a/formal/RiemannFormal/Operator/HeatQ4Finite.lean b/formal/RiemannFormal/Operator/HeatQ4Finite.lean
+index c5d0c3b0ffda47675801c80b6533f857d93c28b2..33401f51302c61c377f2b0a6a371fbe732f4663b 100644
+--- a/formal/RiemannFormal/Operator/HeatQ4Finite.lean
++++ b/formal/RiemannFormal/Operator/HeatQ4Finite.lean
+@@ -2,6 +2,8 @@ import RiemannFormal.Operator.FiniteMatrix
+ 
+ namespace RiemannFormal.Operator
+ 
++noncomputable section
++
+ /-- First four physicists' Hermite polynomials, used only at finite algebraic
+ scope. -/
+ def hermite0 (_x : ℝ) : ℝ := 1
+@@ -30,6 +32,7 @@ def q4Filter2 (a b c : ℝ) : ℝ := a - 2 * b + c
+ /-- A second finite difference is a difference of adjacent first differences. -/
+ theorem q4Filter2_factor (a b c : ℝ) :
+     q4Filter2 a b c = (a - b) - (b - c) := by
++  simp only [q4Filter2]
+   ring
+ 
+ /-- Filter composition identity used by finite Q4 packets. -/
+@@ -53,4 +56,6 @@ theorem q4ZeroBareDet_identity (R E T I : ℝ) :
+ theorem hyperbolicPoleBlock_det : det2 0 1 0 = -1 := by
+   norm_num [det2]
+ 
++end
++
+ end RiemannFormal.Operator
+diff --git a/formal/RiemannFormal/Operator/PickAlgebra.lean b/formal/RiemannFormal/Operator/PickAlgebra.lean
+index db160f5ae00b1b2d137048fd6e8e22c94b059f09..d19c19e0acb468bff19849cfebcdfbb8501e1b16 100644
+--- a/formal/RiemannFormal/Operator/PickAlgebra.lean
++++ b/formal/RiemannFormal/Operator/PickAlgebra.lean
+@@ -2,6 +2,8 @@ import RiemannFormal.Operator.FiniteMatrix
+ 
+ namespace RiemannFormal.Operator
+ 
++noncomputable section
++
+ /-- Off-diagonal entry of the finite infinitesimal Pick packet after writing
+ `F(x)=x p(x^2)`. -/
+ def pickEntry (x p y q : ℝ) : ℝ := (x * p + y * q) / (x + y)
+@@ -14,7 +16,8 @@ theorem two_point_pick_identity
+     {x y p q : ℝ} (hxy : x + y ≠ 0) :
+     pickDet2 x p y q =
+       -((p - q) * (x ^ 2 * p - y ^ 2 * q)) / (x + y) ^ 2 := by
+-  field_simp [pickDet2, pickEntry, hxy]
++  unfold pickDet2 pickEntry
++  field_simp [hxy]
+   ring
+ 
+ /-- The two-node determinant is nonnegative under the two scalar monotonicities
+@@ -87,8 +90,8 @@ theorem pickDet3_factorAB
+       pickFactorA (x1 ^ 2) (x2 ^ 2) (x3 ^ 2) p1 p2 p3 *
+         pickFactorB (x1 ^ 2) (x2 ^ 2) (x3 ^ 2) p1 p2 p3 /
+         pickDenominator3 x1 x2 x3 := by
+-  field_simp [pickDet3, pickEntry, pickFactorA, pickFactorB,
+-    pickDenominator3, det3, h12, h13, h23]
++  unfold pickDet3 pickEntry pickFactorA pickFactorB pickDenominator3 det3
++  field_simp [h12, h13, h23]
+   ring
+ 
+ /-- The reciprocal-curvature factor is exactly a second divided difference. -/
+@@ -99,8 +102,8 @@ theorem pickFactorA_divided_difference
+     pickFactorA t1 t2 t3 p1 p2 p3 =
+       -p1 * p2 * p3 * delta3 t1 t2 t3 *
+         secondDivDiff t1 t2 t3 (1 / p1) (1 / p2) (1 / p3) := by
+-  field_simp [pickFactorA, delta3, secondDivDiff, ht12, ht13, ht23,
+-    hp1, hp2, hp3]
++  unfold pickFactorA delta3 secondDivDiff
++  field_simp [ht12, ht13, ht23, hp1, hp2, hp3]
+   ring
+ 
+ /-- The companion `t p(t)` curvature is the second determinant factor. -/
+@@ -110,7 +113,8 @@ theorem pickFactorB_divided_difference
+     pickFactorB t1 t2 t3 p1 p2 p3 =
+       -delta3 t1 t2 t3 *
+         secondDivDiff t1 t2 t3 (t1 * p1) (t2 * p2) (t3 * p3) := by
+-  field_simp [pickFactorB, delta3, secondDivDiff, ht12, ht13, ht23]
++  unfold pickFactorB delta3 secondDivDiff
++  field_simp [ht12, ht13, ht23]
+   ring
+ 
+ /-- Exact reviewed three-node determinant factorization. -/
+@@ -154,6 +158,7 @@ theorem three_node_pick_det_nonnegative
+   have hpref : 0 ≤
+       p1 * p2 * p3 * delta3 (x1 ^ 2) (x2 ^ 2) (x3 ^ 2) ^ 2 /
+         pickDenominator3 x1 x2 x3 := by
++    unfold pickDenominator3
+     positivity
+   have hcurv : 0 ≤
+       secondDivDiff (x1 ^ 2) (x2 ^ 2) (x3 ^ 2)
+@@ -161,7 +166,7 @@ theorem three_node_pick_det_nonnegative
+         secondDivDiff (x1 ^ 2) (x2 ^ 2) (x3 ^ 2)
+           (x1 ^ 2 * p1) (x2 ^ 2 * p2) (x3 ^ 2 * p3) :=
+     mul_nonneg_of_nonpos_of_nonpos hrecip hcomp
+-  exact mul_nonneg hpref hcurv
++  simpa [mul_assoc] using mul_nonneg hpref hcurv
+ 
+ /-- Principal-minor implication for a three-node packet.  A strict two-node
+ pivot plus a nonnegative three-node determinant yields PSD, not necessarily PD. -/
+@@ -176,4 +181,6 @@ theorem three_node_pick_psd_of_principal_minors
+   · simpa [leadingMinor2, pickDet2] using hminor12
+   · simpa [pickDet3] using hdet3
+ 
++end
++
+ end RiemannFormal.Operator
+diff --git a/formal/RiemannFormal/Operator/ReciprocalConcavity.lean b/formal/RiemannFormal/Operator/ReciprocalConcavity.lean
+index 933490957d8acb5ea3f713165eaa09e888f038e7..2f6604c5c3f4d7e0b18d047748d21b2701827aad 100644
+--- a/formal/RiemannFormal/Operator/ReciprocalConcavity.lean
++++ b/formal/RiemannFormal/Operator/ReciprocalConcavity.lean
+@@ -2,13 +2,14 @@ import Mathlib
+ 
+ namespace RiemannFormal.Operator
+ 
++noncomputable section
++
+ /-- A second-order jet.  The formalization records exactly the value and first
+ two derivatives needed by the reviewed order-three argument. -/
+ structure Jet2 where
+   value : ℝ
+   first : ℝ
+   second : ℝ
+-  deriving Repr
+ 
+ namespace Jet2
+ 
+@@ -81,7 +82,8 @@ theorem offLineOrbit_defect_formula
+     {m U B : ℝ} (hden : U ^ 2 + B ^ 2 ≠ 0) :
+     energy (offLineJet m U B) =
+       -32 * m ^ 2 * B ^ 2 / (U ^ 2 + B ^ 2) ^ 3 := by
+-  field_simp [energy, offLineJet, hden]
++  simp only [energy, offLineJet]
++  field_simp [hden]
+   ring
+ 
+ /-- One unit of a critical-line orbit. -/
+@@ -91,7 +93,8 @@ def criticalJet (V : ℝ) : Jet2 :=
+ /-- A critical-line orbit has zero reciprocal curvature. -/
+ theorem criticalOrbit_energy_zero {V : ℝ} (hV : V ≠ 0) :
+     energy (criticalJet V) = 0 := by
+-  field_simp [energy, criticalJet, hV]
++  simp only [energy, criticalJet]
++  field_simp [hV]
+   ring
+ 
+ /-- Exact reserve-expansion identity used for one-orbit absorption. -/
+@@ -138,4 +141,6 @@ theorem reciprocalSquareTailBudget
+ 
+ end Jet2
+ 
++end
++
+ end RiemannFormal.Operator
+diff --git a/formal/RiemannFormal/Operator/RepeatedNodes.lean b/formal/RiemannFormal/Operator/RepeatedNodes.lean
+index 3cf5369a4b134b2167bc8d9f59cf2638750e36d7..dc9e0792191207d7d0d9dcaafb80a08091cfb6c3 100644
+--- a/formal/RiemannFormal/Operator/RepeatedNodes.lean
++++ b/formal/RiemannFormal/Operator/RepeatedNodes.lean
+@@ -16,13 +16,17 @@ theorem positive_node_eq_of_sq_eq {x y : ℝ}
+ theorem pickEntry_self {x p : ℝ} (hx : x ≠ 0) :
+     pickEntry x p x p = p := by
+   unfold pickEntry
+-  have hden : x + x ≠ 0 := by nlinarith
++  have hden : x + x ≠ 0 := by
++    intro h
++    apply hx
++    linarith
+   apply (div_eq_iff hden).2
+   ring
+ 
+ /-- Duplicate first/third rows and columns reduce to a two-dimensional form. -/
+ theorem duplicate13_quad3 (a g d x y z : ℝ) :
+     quad3 a g a d g a x y z = quad2 a g d (x + z) y := by
++  simp only [quad3, quad2]
+   ring
+ 
+ /-- PSD of the reduced two-node packet implies PSD after duplicating the first
+diff --git a/formal/RiemannFormal/Operator/XiExternalInputs.lean b/formal/RiemannFormal/Operator/XiExternalInputs.lean
+index 0352de0164296cdf106c5d981ead93ba0472de80..78cab4bfee35fbbffac52737da083eb187b01b13 100644
+--- a/formal/RiemannFormal/Operator/XiExternalInputs.lean
++++ b/formal/RiemannFormal/Operator/XiExternalInputs.lean
+@@ -1,4 +1,4 @@
+-import ChallengeDeps.XiPickOrderThreeConditional
++import RiemannComparatorChallengeDeps.XiPickOrderThreeConditional
+ 
+ namespace RiemannFormal.Operator
+ 
+@@ -22,10 +22,14 @@ theorem criticalMultiplicityResidual_exact
+     (reserve : SelectedCriticalReserve) :
+     CriticalMultiplicityResidual reserve := by
+   intro t
+-  ext <;>
+-    simp [CriticalMultiplicityResidual, criticalOrbitJet, criticalUnitJet,
+-      jetAdd, jetScale] <;>
+-    ring
++  cases reserve with
++  | mk orbit gamma_le_half_height =>
++    cases orbit with
++    | mk gamma multiplicity gamma_pos one_le_multiplicity zeta_zero
++        multiplicity_eq_analyticOrder =>
++      simp [criticalOrbitJet, criticalUnitJet, jetAdd, jetScale]
++      ring_nf
++      all_goals simp
+ 
+ /-- Every repaired headline input exposes the precise finite-height theorem,
+ grouped actual-Xi expansion, multiplicity residual, and one-use reserve ledger.
+@@ -34,9 +38,9 @@ theorem actualXiInputs_have_concrete_dependencies
+     (inputs : ActualXiOrderThreeInputs) :
+     SourceLockExact inputs.verified.sourceLock ∧
+       CriticalMultiplicityResidual inputs.grouped.selectedReserve ∧
+-      ActualXiReserveAllocation inputs.grouped ∧
++      Nonempty (ActualXiReserveAllocation inputs.grouped) ∧
+       RegroupedActualXiC2Approximation inputs.grouped inputs.reserve :=
+-  ⟨inputs.verified.sourceLockExact, inputs.residual, inputs.reserve,
++  ⟨inputs.verified.sourceLockExact, inputs.residual, ⟨inputs.reserve⟩,
+     inputs.paidC2Approximation⟩
+ 
+ end RiemannFormal.Operator
+diff --git a/formal/RiemannFormal/Operator/XiOrderThree.lean b/formal/RiemannFormal/Operator/XiOrderThree.lean
+index 5918088dc6952c3205676523c0168cd1b241144f..8a57d165e4d585232d8976858871b99a0d39101e 100644
+--- a/formal/RiemannFormal/Operator/XiOrderThree.lean
++++ b/formal/RiemannFormal/Operator/XiOrderThree.lean
+@@ -6,6 +6,7 @@ import RiemannFormal.Operator.XiSourceSpecific
+ namespace RiemannFormal.Operator
+ 
+ open ChallengeDeps.XiPickOrderThreeConditional
++open scoped Topology
+ 
+ private theorem sharedPSD2_to_local {a b c : ℝ}
+     (h : ChallengeDeps.XiPickOrderThreeConditional.IsPSD2 a b c) :
+@@ -80,7 +81,7 @@ theorem regroupedActualXi_energy_tendsto
+     approximation.secondConverges htDomain
+   have htwo : Filter.Tendsto (fun _ : ℕ => (2 : ℝ)) Filter.atTop (𝓝 (2 : ℝ)) :=
+     tendsto_const_nhds
+-  simpa [reciprocalEnergy] using
++  simpa [reciprocalEnergy, pow_two] using
+     (hvalue.mul hsecond).sub (htwo.mul (hfirst.mul hfirst))
+ 
+ /-- A nonnegative scalar sequence cannot converge in absolute difference to
+diff --git a/formal/RiemannFormal/Operator/XiSourceSpecific.lean b/formal/RiemannFormal/Operator/XiSourceSpecific.lean
+index 7b2d2dc1a53bb97361661aee09d6c255ae18dbf0..da684227de5443511b60d1fafa0b1ccafa1883ee 100644
+--- a/formal/RiemannFormal/Operator/XiSourceSpecific.lean
++++ b/formal/RiemannFormal/Operator/XiSourceSpecific.lean
+@@ -3,7 +3,10 @@ import RiemannFormal.Operator.XiExternalInputs
+ 
+ namespace RiemannFormal.Operator
+ 
++noncomputable section
++
+ open ChallengeDeps.XiPickOrderThreeConditional
++open scoped BigOperators
+ 
+ /-- Local kernel-facing version of one reflected off-line orbit. -/
+ def sourceOffLineJet (o : ReflectedOffLineOrbit) (t : ℝ) : Jet2 :=
+@@ -174,9 +177,13 @@ theorem orbitV_eq_U_mul_one_sub_s
+     (hU : orbitU o t ≠ 0) :
+     t + reserveRadius reserve =
+       orbitU o t * (1 - orbitS reserve o t) := by
+-  unfold orbitS orbitGap orbitU orbitC reserveRadius
+-  field_simp [hU]
+-  ring
++  unfold orbitS
++  calc
++    t + reserveRadius reserve = orbitU o t - orbitGap reserve o := by
++      unfold orbitGap orbitU
++      ring
++    _ = orbitU o t * (1 - orbitGap reserve o / orbitU o t) := by
++      field_simp [hU]
+ 
+ /-- Exact coordinate identity `B²=kappa*s²*U²`. -/
+ theorem orbitB_sq_eq_kappa_s_sq_U_sq
+@@ -187,7 +194,6 @@ theorem orbitB_sq_eq_kappa_s_sq_U_sq
+       orbitKappa reserve o * orbitS reserve o t ^ 2 * orbitU o t ^ 2 := by
+   unfold orbitKappa orbitS
+   field_simp [hgap, hU]
+-  ring
+ 
+ /-- Algebraic cross-curvature identity in the reviewed `(U,s,kappa)`
+ coordinates. -/
+@@ -202,6 +208,7 @@ theorem oneOrbit_cross_curvature_coordinates
+       16 * m * s ^ 2 * qKappa kappa s /
+         (U ^ 4 * (1 + kappa * s ^ 2) ^ 3 * (1 - s) ^ 3) := by
+   subst V
++  simp only [Jet2.cross, Jet2.offLineJet, Jet2.criticalJet]
+   rw [hB]
+   have hden : U ^ 2 + kappa * s ^ 2 * U ^ 2 ≠ 0 := by
+     have hU2 : U ^ 2 ≠ 0 := pow_ne_zero 2 hU
+@@ -210,8 +217,8 @@ theorem oneOrbit_cross_curvature_coordinates
+           U ^ 2 * (1 + kappa * s ^ 2) := by ring
+     rw [hfactor]
+     exact mul_ne_zero hU2 hOnePlus
+-  field_simp [Jet2.cross, Jet2.offLineJet, Jet2.criticalJet, qKappa,
+-    hU, hOneSubS, hOnePlus, hden]
++  unfold qKappa
++  field_simp [hU, hOneSubS, hOnePlus, hden]
+   ring
+ 
+ /-- Source-specific cross curvature from L-92101, with all domain hypotheses
+@@ -247,7 +254,7 @@ theorem reflectedOffLine_defect_formula
+   have hden : orbitU o t ^ 2 + orbitB o ^ 2 ≠ 0 := by
+     have hU2 : 0 < orbitU o t ^ 2 := sq_pos_of_ne_zero hU
+     nlinarith [sq_nonneg (orbitB o)]
+-  simpa [sourceOffLineJet, orbitDefect] using
++  simpa [sourceOffLineJet, orbitDefect, neg_div] using
+     (Jet2.offLineOrbit_defect_formula
+       (m := (o.multiplicity : ℝ)) (U := orbitU o t) (B := orbitB o) hden)
+ 
+@@ -291,7 +298,6 @@ theorem oneOrbit_defect_coordinates
+     rw [hfactor]
+     exact mul_ne_zero hU2 hOnePlus
+   field_simp [hU, hOnePlus, hden]
+-  ring
+ 
+ /-- The reviewed choice `epsilon=2m*kappa/(1-kappa)` pays the complete local
+ curvature defect. -/
+@@ -350,8 +356,15 @@ theorem oneOrbit_epsilon_pays_coordinates
+   have hlower :
+       16 * m * s ^ 2 * ((1 - kappa) / D) ≤ crossValue := by
+     rw [hcross]
+-    have hmul := mul_le_mul_of_nonneg_left hfrac hfactor
+-    simpa [D, mul_assoc] using hmul
++    calc
++      16 * m * s ^ 2 * ((1 - kappa) / D) ≤
++          16 * m * s ^ 2 *
++            (qKappa kappa s / (D * (1 - s) ^ 3)) :=
++        mul_le_mul_of_nonneg_left hfrac hfactor
++      _ = 16 * m * s ^ 2 * qKappa kappa s /
++          (U ^ 4 * (1 + kappa * s ^ 2) ^ 3 * (1 - s) ^ 3) := by
++        dsimp [D]
++        ring
+   have hepsilon : 0 ≤ 2 * m * kappa / (1 - kappa) :=
+     div_nonneg (mul_nonneg (mul_nonneg (by norm_num) hm) hk0)
+       (le_of_lt hOneMinusK)
+@@ -393,7 +406,7 @@ theorem orbitEpsilon_le_nine_mul_tail
+       (show 0 ≤ 4 * m by positivity)
+     calc
+       4 * m * kappa ≤ 4 * m * (9 / (4 * o.b ^ 2)) := h
+-      _ = 9 * m / o.b ^ 2 := by field_simp [hb]; ring
++      _ = 9 * m / o.b ^ 2 := by field_simp [hb]
+   calc
+     orbitEpsilon reserve o = 2 * m * kappa / (1 - kappa) := rfl
+     _ ≤ 4 * m * kappa := hfirst
+@@ -475,7 +488,7 @@ structure ReserveTailInputs
+     (grouped : GroupedActualXiC2Expansion) : Prop where
+   reciprocalSquareTail :
+     ∀ N : ℕ,
+-      (∑ i in Finset.range N, orbitTail (grouped.offLineEnumeration i)) ≤
++      (∑ i ∈ Finset.range N, orbitTail (grouped.offLineEnumeration i)) ≤
+         2 * (Real.log verifiedHeight + 1) / verifiedHeight
+   numericalBudget :
+     18 * (Real.log verifiedHeight + 1) / verifiedHeight < 1
+@@ -483,22 +496,25 @@ structure ReserveTailInputs
+ /-- Construct the exact finite-prefix global reserve ledger. Every share is
+ nonnegative, every orbit is paid, total use is at most one, and the leftover is
+ nonnegative and used exactly once. -/
+-theorem buildActualXiReserveAllocation
++noncomputable def buildActualXiReserveAllocation
+     {grouped : GroupedActualXiC2Expansion}
+     (inputs : ReserveTailInputs grouped) :
+     ActualXiReserveAllocation grouped := by
+   let share : ℕ → ℝ := fun i =>
+     orbitEpsilon grouped.selectedReserve (grouped.offLineEnumeration i)
+-  let leftover : ℕ → ℝ := fun N => 1 - ∑ i in Finset.range N, share i
++  let leftover : ℕ → ℝ := fun N => 1 - ∑ i ∈ Finset.range N, share i
+   have hshareNonnegative : ∀ i : ℕ, 0 ≤ share i := by
+     intro i
+     have hdom := reviewedOneOrbitDomain_of_source grouped.selectedReserve
+-      (grouped.offLineEnumeration i) (by norm_num)
++      (grouped.offLineEnumeration i) (t := 1) (by norm_num)
+     have hden : 0 < 1 - orbitKappa grouped.selectedReserve
+         (grouped.offLineEnumeration i) := by
+       linarith [hdom.kappa_lt_half]
+     dsimp [share, orbitEpsilon]
+-    positivity
++    apply div_nonneg
++    · exact mul_nonneg (mul_nonneg (by norm_num) (by positivity))
++        hdom.kappa_nonnegative
++    · exact le_of_lt hden
+   have htailNonnegative :
+       ∀ i : ℕ, 0 ≤ orbitTail (grouped.offLineEnumeration i) := by
+     intro i
+@@ -510,23 +526,33 @@ theorem buildActualXiReserveAllocation
+     simpa [share] using
+       orbitEpsilon_le_nine_mul_tail
+         (reviewedOneOrbitDomain_of_source grouped.selectedReserve
+-          (grouped.offLineEnumeration i) (by norm_num))
+-  have htotal : ∀ N : ℕ, (∑ i in Finset.range N, share i) ≤ 1 := by
++          (grouped.offLineEnumeration i) (t := 1) (by norm_num))
++  have htotal : ∀ N : ℕ, (∑ i ∈ Finset.range N, share i) ≤ 1 := by
+     intro N
+     have hsum :
+-        (∑ i in Finset.range N, share i) ≤
+-          ∑ i in Finset.range N,
++        (∑ i ∈ Finset.range N, share i) ≤
++          ∑ i ∈ Finset.range N,
+             9 * orbitTail (grouped.offLineEnumeration i) :=
+       Finset.sum_le_sum fun i _ => hshareLe i
+     have hscale :
+-        (∑ i in Finset.range N,
++        (∑ i ∈ Finset.range N,
+           9 * orbitTail (grouped.offLineEnumeration i)) =
+-          9 * ∑ i in Finset.range N,
++          9 * ∑ i ∈ Finset.range N,
+             orbitTail (grouped.offLineEnumeration i) := by
+       rw [Finset.mul_sum]
+     rw [hscale] at hsum
+     have htail := inputs.reciprocalSquareTail N
+-    nlinarith [inputs.numericalBudget]
++    have hbudget :
++        (∑ i ∈ Finset.range N, share i) ≤
++          18 * (Real.log verifiedHeight + 1) / verifiedHeight := by
++      calc
++        (∑ i ∈ Finset.range N, share i) ≤
++            9 * ∑ i ∈ Finset.range N,
++              orbitTail (grouped.offLineEnumeration i) := hsum
++        _ ≤ 9 * (2 * (Real.log verifiedHeight + 1) / verifiedHeight) :=
++          mul_le_mul_of_nonneg_left htail (by norm_num)
++        _ = 18 * (Real.log verifiedHeight + 1) / verifiedHeight := by ring
++    exact le_of_lt (lt_of_le_of_lt hbudget inputs.numericalBudget)
+   refine
+     { share := share
+       share_eq := ?_
+@@ -555,14 +581,18 @@ theorem buildActualXiReserveAllocation
+     dsimp [leftover]
+     ring
+ 
+-/-- Source-locked wrapper for the canonical critical-reserve semantic node.
+-The external theorem lock is returned alongside the exact one-use allocation,
+-so provenance is not an inert annotation. -/
++/-- Source-locked existence wrapper for the canonical critical-reserve semantic
++node.  The external theorem lock is returned alongside existence of an exact
++one-use allocation; `buildActualXiReserveAllocation` remains the concrete
++data-producing API. -/
+ theorem buildLockedActualXiReserveAllocation
+     {grouped : GroupedActualXiC2Expansion}
+     (verified : PublishedVerifiedHeightTheorem)
+     (inputs : ReserveTailInputs grouped) :
+-    SourceLockExact verified.sourceLock ∧ ActualXiReserveAllocation grouped :=
+-  ⟨verified.sourceLockExact, buildActualXiReserveAllocation inputs⟩
++    SourceLockExact verified.sourceLock ∧
++      Nonempty (ActualXiReserveAllocation grouped) :=
++  ⟨verified.sourceLockExact, ⟨buildActualXiReserveAllocation inputs⟩⟩
++
++end
+ 
+ end RiemannFormal.Operator
+diff --git a/formal/comparator/Challenge.lean b/formal/comparator/Challenge.lean
+deleted file mode 100644
+index 18038d105ad258d72840e03dea32ffdc8c909393..0000000000000000000000000000000000000000
+--- a/formal/comparator/Challenge.lean
++++ /dev/null
+@@ -1 +0,0 @@
+-import Challenge.RH
+diff --git a/formal/comparator/Challenge/OperatorPositiveSchurRescue.lean b/formal/comparator/Challenge/RiemannComparatorChallenge/OperatorPositiveSchurRescue.lean
+similarity index 78%
+rename from formal/comparator/Challenge/OperatorPositiveSchurRescue.lean
+rename to formal/comparator/Challenge/RiemannComparatorChallenge/OperatorPositiveSchurRescue.lean
+index f4036289f2e295bada9e4c61a27ed2e420a3fb2a..7eab75979e7f06d6e33b2e03313d46511c2babe8 100644
+--- a/formal/comparator/Challenge/OperatorPositiveSchurRescue.lean
++++ b/formal/comparator/Challenge/RiemannComparatorChallenge/OperatorPositiveSchurRescue.lean
+@@ -1,4 +1,4 @@
+-import ChallengeDeps.OperatorPositiveSchurRescue
++import RiemannComparatorChallengeDeps.OperatorPositiveSchurRescue
+ 
+ /-- Trusted challenge: a positive Schur correction cannot rescue an already
+ negative visible direction. -/
+diff --git a/formal/comparator/Challenge/RH.lean b/formal/comparator/Challenge/RiemannComparatorChallenge/RH.lean
+similarity index 80%
+rename from formal/comparator/Challenge/RH.lean
+rename to formal/comparator/Challenge/RiemannComparatorChallenge/RH.lean
+index 4da9c66fe301e419e01f692925a62af779f5762a..f5d4e3020caefebe3132c6c5c91fa0b6370278b8 100644
+--- a/formal/comparator/Challenge/RH.lean
++++ b/formal/comparator/Challenge/RiemannComparatorChallenge/RH.lean
+@@ -1,4 +1,4 @@
+-import ChallengeDeps.RH
++import RiemannComparatorChallengeDeps.RH
+ 
+ /-- Trusted smoke statement: the project RH proposition is exactly Mathlib's. -/
+ theorem rh_statement_exact : ChallengeDeps.ProjectRH ↔ RiemannHypothesis := by
+diff --git a/formal/comparator/Challenge/XiPickOrderThreeConditional.lean b/formal/comparator/Challenge/RiemannComparatorChallenge/XiPickOrderThreeConditional.lean
+similarity index 86%
+rename from formal/comparator/Challenge/XiPickOrderThreeConditional.lean
+rename to formal/comparator/Challenge/RiemannComparatorChallenge/XiPickOrderThreeConditional.lean
+index f84b02101bb391ad7c4b5a683b2956747f4bb326..5ac46a4526da491b58647abb960254b116efc4ac 100644
+--- a/formal/comparator/Challenge/XiPickOrderThreeConditional.lean
++++ b/formal/comparator/Challenge/RiemannComparatorChallenge/XiPickOrderThreeConditional.lean
+@@ -1,4 +1,4 @@
+-import ChallengeDeps.XiPickOrderThreeConditional
++import RiemannComparatorChallengeDeps.XiPickOrderThreeConditional
+ 
+ open ChallengeDeps.XiPickOrderThreeConditional
+ 
+diff --git a/formal/comparator/Challenge/XiPickThreeNode.lean b/formal/comparator/Challenge/RiemannComparatorChallenge/XiPickThreeNode.lean
+similarity index 92%
+rename from formal/comparator/Challenge/XiPickThreeNode.lean
+rename to formal/comparator/Challenge/RiemannComparatorChallenge/XiPickThreeNode.lean
+index 7a6ca8af9883df47da713832fc07335744f55a99..fa6fd193613febe0f10d99819d428eb86778d701 100644
+--- a/formal/comparator/Challenge/XiPickThreeNode.lean
++++ b/formal/comparator/Challenge/RiemannComparatorChallenge/XiPickThreeNode.lean
+@@ -1,4 +1,4 @@
+-import ChallengeDeps.XiPickThreeNode
++import RiemannComparatorChallengeDeps.XiPickThreeNode
+ 
+ open ChallengeDeps.XiPickThreeNode
+ 
+diff --git a/formal/comparator/ChallengeDeps.lean b/formal/comparator/ChallengeDeps.lean
+deleted file mode 100644
+index f302934ff60da28e5f8276bf71ea79bff423c86f..0000000000000000000000000000000000000000
+--- a/formal/comparator/ChallengeDeps.lean
++++ /dev/null
+@@ -1 +0,0 @@
+-import ChallengeDeps.RH
+diff --git a/formal/comparator/ChallengeDeps/OperatorPositiveSchurRescue.lean b/formal/comparator/ChallengeDeps/RiemannComparatorChallengeDeps/OperatorPositiveSchurRescue.lean
+similarity index 100%
+rename from formal/comparator/ChallengeDeps/OperatorPositiveSchurRescue.lean
+rename to formal/comparator/ChallengeDeps/RiemannComparatorChallengeDeps/OperatorPositiveSchurRescue.lean
+diff --git a/formal/comparator/ChallengeDeps/RH.lean b/formal/comparator/ChallengeDeps/RiemannComparatorChallengeDeps/RH.lean
+similarity index 100%
+rename from formal/comparator/ChallengeDeps/RH.lean
+rename to formal/comparator/ChallengeDeps/RiemannComparatorChallengeDeps/RH.lean
+diff --git a/formal/comparator/ChallengeDeps/XiPickOrderThreeConditional.lean b/formal/comparator/ChallengeDeps/RiemannComparatorChallengeDeps/XiPickOrderThreeConditional.lean
+similarity index 97%
+rename from formal/comparator/ChallengeDeps/XiPickOrderThreeConditional.lean
+rename to formal/comparator/ChallengeDeps/RiemannComparatorChallengeDeps/XiPickOrderThreeConditional.lean
+index 5029a88f7fff80039a1fde5bc63f9d5a18a0a4b3..7d3dd6c98fd453d1810d80b0e1a39e2e4fbc7ab5 100644
+--- a/formal/comparator/ChallengeDeps/XiPickOrderThreeConditional.lean
++++ b/formal/comparator/ChallengeDeps/RiemannComparatorChallengeDeps/XiPickOrderThreeConditional.lean
+@@ -3,6 +3,9 @@ import Mathlib
+ namespace ChallengeDeps.XiPickOrderThreeConditional
+ 
+ open Complex Set Filter
++open scoped BigOperators
++
++noncomputable section
+ 
+ /-- Exact endpoint in Platt--Trudgian Theorem 1. -/
+ def verifiedHeightNat : ℕ := 3000175332800
+@@ -202,7 +205,7 @@ def LocallyUniformlyConvergesOn
+   ∀ K : Set ℝ, IsCompact K → K ⊆ domain →
+     ∀ epsilon : ℝ, 0 < epsilon →
+       ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ t ∈ K,
+-        |(∑ k in Finset.range n, terms k t) - limit t| < epsilon
++        |(∑ k ∈ Finset.range n, terms k t) - limit t| < epsilon
+ 
+ /-- Exact grouped actual-Xi expansion interface.  It states one reflected-orbit
+ representative convention, analytic multiplicities, the selected reserve term,
+@@ -278,7 +281,7 @@ structure ActualXiReserveAllocation
+     ∀ i : ℕ, share i ≤ 9 * orbitTail (grouped.offLineEnumeration i)
+   reciprocalSquareTail :
+     ∀ N : ℕ,
+-      (∑ i in Finset.range N, orbitTail (grouped.offLineEnumeration i)) ≤
++      (∑ i ∈ Finset.range N, orbitTail (grouped.offLineEnumeration i)) ≤
+         2 * (Real.log verifiedHeight + 1) / verifiedHeight
+   numericalBudget :
+     18 * (Real.log verifiedHeight + 1) / verifiedHeight < 1
+@@ -286,13 +289,13 @@ structure ActualXiReserveAllocation
+     ∀ i : ℕ, ∀ t : ℝ, 1 / 4 < t →
+       OneOrbitPaid grouped.selectedReserve (grouped.offLineEnumeration i) t
+   totalShare_le_one :
+-    ∀ N : ℕ, (∑ i in Finset.range N, share i) ≤ 1
++    ∀ N : ℕ, (∑ i ∈ Finset.range N, share i) ≤ 1
+   leftover : ℕ → ℝ
+   leftover_eq :
+-    ∀ N : ℕ, leftover N = 1 - ∑ i in Finset.range N, share i
++    ∀ N : ℕ, leftover N = 1 - ∑ i ∈ Finset.range N, share i
+   leftover_nonnegative : ∀ N : ℕ, 0 ≤ leftover N
+   oneUse :
+-    ∀ N : ℕ, leftover N + ∑ i in Finset.range N, share i = 1
++    ∀ N : ℕ, leftover N + ∑ i ∈ Finset.range N, share i = 1
+ 
+ /-- Finite Pick data, duplicated on the trusted Mathlib-only side. -/
+ def pickEntry (x p y q : ℝ) : ℝ := (x * p + y * q) / (x + y)
+@@ -328,9 +331,9 @@ def LocallyUniformlyConvergesSequenceOn
+ 
+ /-- Componentwise finite sum of second-order jets. -/
+ def jetSumRange (terms : ℕ → ℝ → Jet2) (N : ℕ) (t : ℝ) : Jet2 :=
+-  ⟨∑ i in Finset.range N, (terms i t).value,
+-   ∑ i in Finset.range N, (terms i t).first,
+-   ∑ i in Finset.range N, (terms i t).second⟩
++  ⟨∑ i ∈ Finset.range N, (terms i t).value,
++   ∑ i ∈ Finset.range N, (terms i t).first,
++   ∑ i ∈ Finset.range N, (terms i t).second⟩
+ 
+ /-- One off-line orbit together with exactly its allocated share of the selected
+ critical reserve. -/
+@@ -468,4 +471,6 @@ def ChallengeStatement : Prop :=
+     ∀ x1 x2 x3 : ℝ, 0 < x1 → 0 < x2 → 0 < x3 →
+       ActualXiPickPSDThroughThree x1 x2 x3
+ 
++end
++
+ end ChallengeDeps.XiPickOrderThreeConditional
+diff --git a/formal/comparator/ChallengeDeps/XiPickThreeNode.lean b/formal/comparator/ChallengeDeps/RiemannComparatorChallengeDeps/XiPickThreeNode.lean
+similarity index 96%
+rename from formal/comparator/ChallengeDeps/XiPickThreeNode.lean
+rename to formal/comparator/ChallengeDeps/RiemannComparatorChallengeDeps/XiPickThreeNode.lean
+index e5f39994a4d35a7b9a02510e349b503e5119903e..75b3adfc1c2bb172377134377e87acff8a68e188 100644
+--- a/formal/comparator/ChallengeDeps/XiPickThreeNode.lean
++++ b/formal/comparator/ChallengeDeps/RiemannComparatorChallengeDeps/XiPickThreeNode.lean
+@@ -2,6 +2,8 @@ import Mathlib
+ 
+ namespace ChallengeDeps.XiPickThreeNode
+ 
++noncomputable section
++
+ def det3 (a b c d e f : ℝ) : ℝ :=
+   a * d * f + 2 * b * c * e - a * e ^ 2 - d * c ^ 2 - f * b ^ 2
+ 
+@@ -22,4 +24,6 @@ def secondDivDiff (t1 t2 t3 y1 y2 y3 : ℝ) : ℝ :=
+ def denominator (x1 x2 x3 : ℝ) : ℝ :=
+   (x1 + x2) ^ 2 * (x1 + x3) ^ 2 * (x2 + x3) ^ 2
+ 
++end
++
+ end ChallengeDeps.XiPickThreeNode
+diff --git a/formal/comparator/PrintAxioms/OperatorPositiveSchurRescue.lean b/formal/comparator/PrintAxioms/OperatorPositiveSchurRescue.lean
+index e84fc29f22a5d319d37ab9cea2fd8df133deebbd..455013bfe0b511060d92e1716bdcf656e26bc0b4 100644
+--- a/formal/comparator/PrintAxioms/OperatorPositiveSchurRescue.lean
++++ b/formal/comparator/PrintAxioms/OperatorPositiveSchurRescue.lean
+@@ -1,3 +1,3 @@
+-import Solution.OperatorPositiveSchurRescue
++import RiemannComparatorSolution.OperatorPositiveSchurRescue
+ 
+ #print axioms OperatorPositiveSchurRescue_firewall
+diff --git a/formal/comparator/PrintAxioms/RH.lean b/formal/comparator/PrintAxioms/RH.lean
+index cf03510af51be5a48ae8c13ae9df4f9b30311607..70ff6df1c437db368266561ccafe4c62af820d6f 100644
+--- a/formal/comparator/PrintAxioms/RH.lean
++++ b/formal/comparator/PrintAxioms/RH.lean
+@@ -1,3 +1,3 @@
+-import Solution.RH
++import RiemannComparatorSolution.RH
+ 
+ #print axioms rh_statement_exact
+diff --git a/formal/comparator/PrintAxioms/XiPickOrderThreeConditional.lean b/formal/comparator/PrintAxioms/XiPickOrderThreeConditional.lean
+index f670030c3d44548a480fb90a64bde5c3fda02318..1f6608150732e78ca276d420bffa90bd136c40eb 100644
+--- a/formal/comparator/PrintAxioms/XiPickOrderThreeConditional.lean
++++ b/formal/comparator/PrintAxioms/XiPickOrderThreeConditional.lean
+@@ -1,3 +1,3 @@
+-import Solution.XiPickOrderThreeConditional
++import RiemannComparatorSolution.XiPickOrderThreeConditional
+ 
+ #print axioms XiPickOrderThreeConditional_psd
+diff --git a/formal/comparator/PrintAxioms/XiPickThreeNode.lean b/formal/comparator/PrintAxioms/XiPickThreeNode.lean
+index 3bad0245fb42bf85ee4c8ac9b39fb2468679492a..3fb05490dc5d54bb224e0c982d65ead73ef769f7 100644
+--- a/formal/comparator/PrintAxioms/XiPickThreeNode.lean
++++ b/formal/comparator/PrintAxioms/XiPickThreeNode.lean
+@@ -1,3 +1,3 @@
+-import Solution.XiPickThreeNode
++import RiemannComparatorSolution.XiPickThreeNode
+ 
+ #print axioms XiPickThreeNode_identity
+diff --git a/formal/comparator/README.md b/formal/comparator/README.md
+index a203ed7c6d6889a629304d321dec963bed8d869a..798b3e9c5edc69a2d6d23e54c60713106ae9a597 100644
+--- a/formal/comparator/README.md
++++ b/formal/comparator/README.md
+@@ -8,7 +8,7 @@ Quick checks:
+ 
+ ```bash
+ cd formal
+-lake build Solution.RH
++bash scripts/build_local_comparators.sh
+ lake env lean comparator/PrintAxioms/RH.lean
+ ```
+ 
+diff --git a/formal/comparator/Solution.lean b/formal/comparator/Solution.lean
+deleted file mode 100644
+index c4dff1e98b4cbe089fc56e88e036601987b7fad1..0000000000000000000000000000000000000000
+--- a/formal/comparator/Solution.lean
++++ /dev/null
+@@ -1 +0,0 @@
+-import Solution.RH
+diff --git a/formal/comparator/Solution/OperatorPositiveSchurRescue.lean b/formal/comparator/Solution/RiemannComparatorSolution/OperatorPositiveSchurRescue.lean
+similarity index 81%
+rename from formal/comparator/Solution/OperatorPositiveSchurRescue.lean
+rename to formal/comparator/Solution/RiemannComparatorSolution/OperatorPositiveSchurRescue.lean
+index 01e6be12db35475e59efb3a545a266eec6e3b03c..f1bd301531c474d15ae1f8c39acf986d09b3135e 100644
+--- a/formal/comparator/Solution/OperatorPositiveSchurRescue.lean
++++ b/formal/comparator/Solution/RiemannComparatorSolution/OperatorPositiveSchurRescue.lean
+@@ -1,4 +1,4 @@
+-import ChallengeDeps.OperatorPositiveSchurRescue
++import RiemannComparatorChallengeDeps.OperatorPositiveSchurRescue
+ import RiemannFormal.Refutations.MatrixFirewalls
+ 
+ /-- Sorry-free solution of the positive-Schur-rescue firewall. -/
+diff --git a/formal/comparator/Solution/RH.lean b/formal/comparator/Solution/RiemannComparatorSolution/RH.lean
+similarity index 81%
+rename from formal/comparator/Solution/RH.lean
+rename to formal/comparator/Solution/RiemannComparatorSolution/RH.lean
+index 36a342c39f3b96d9871af5472f3b0afbfd6e6b43..6208c417cdea78700474da064b468a0d96390970 100644
+--- a/formal/comparator/Solution/RH.lean
++++ b/formal/comparator/Solution/RiemannComparatorSolution/RH.lean
+@@ -1,4 +1,4 @@
+-import ChallengeDeps.RH
++import RiemannComparatorChallengeDeps.RH
+ import RiemannFormal.Statement.RH
+ 
+ /-- Sorry-free implementation of the trusted smoke statement. -/
+diff --git a/formal/comparator/Solution/XiPickOrderThreeConditional.lean b/formal/comparator/Solution/RiemannComparatorSolution/XiPickOrderThreeConditional.lean
+similarity index 81%
+rename from formal/comparator/Solution/XiPickOrderThreeConditional.lean
+rename to formal/comparator/Solution/RiemannComparatorSolution/XiPickOrderThreeConditional.lean
+index f0253531d2361f68bc78d77bbc54ba8bcf60f31b..fa184f81c090ef76547c64d65a52c36193d39867 100644
+--- a/formal/comparator/Solution/XiPickOrderThreeConditional.lean
++++ b/formal/comparator/Solution/RiemannComparatorSolution/XiPickOrderThreeConditional.lean
+@@ -1,4 +1,4 @@
+-import ChallengeDeps.XiPickOrderThreeConditional
++import RiemannComparatorChallengeDeps.XiPickOrderThreeConditional
+ import RiemannFormal.Operator.XiOrderThree
+ 
+ open ChallengeDeps.XiPickOrderThreeConditional
+diff --git a/formal/comparator/Solution/XiPickThreeNode.lean b/formal/comparator/Solution/RiemannComparatorSolution/XiPickThreeNode.lean
+similarity index 96%
+rename from formal/comparator/Solution/XiPickThreeNode.lean
+rename to formal/comparator/Solution/RiemannComparatorSolution/XiPickThreeNode.lean
+index 700207b26a5b5bbfce4fad14cdcbc4758ac4b3d2..c6b627b78958775c44f0c9d0aa3604c95ce9e283 100644
+--- a/formal/comparator/Solution/XiPickThreeNode.lean
++++ b/formal/comparator/Solution/RiemannComparatorSolution/XiPickThreeNode.lean
+@@ -1,4 +1,4 @@
+-import ChallengeDeps.XiPickThreeNode
++import RiemannComparatorChallengeDeps.XiPickThreeNode
+ import RiemannFormal.Operator.PickAlgebra
+ 
+ open ChallengeDeps.XiPickThreeNode
+diff --git a/formal/comparator/config-OperatorPositiveSchurRescue.json b/formal/comparator/config-OperatorPositiveSchurRescue.json
+index e1bfb43c532dbad66f570d050724bcb8399b9371..6b8a84f19711c1360f960616bc41980ab5e66fe8 100644
+--- a/formal/comparator/config-OperatorPositiveSchurRescue.json
++++ b/formal/comparator/config-OperatorPositiveSchurRescue.json
+@@ -1,6 +1,6 @@
+ {
+-  "challenge_module": "Challenge.OperatorPositiveSchurRescue",
+-  "solution_module": "Solution.OperatorPositiveSchurRescue",
++  "challenge_module": "RiemannComparatorChallenge.OperatorPositiveSchurRescue",
++  "solution_module": "RiemannComparatorSolution.OperatorPositiveSchurRescue",
+   "theorem_names": ["OperatorPositiveSchurRescue_firewall"],
+   "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+   "enable_nanoda": false
+diff --git a/formal/comparator/config-XiPickOrderThreeConditional.json b/formal/comparator/config-XiPickOrderThreeConditional.json
+index 4a623610940bf937a426fea91fb574f2425e31b7..60aa767d4f23b2b5d03dfb54b5480090422f27c3 100644
+--- a/formal/comparator/config-XiPickOrderThreeConditional.json
++++ b/formal/comparator/config-XiPickOrderThreeConditional.json
+@@ -1,6 +1,6 @@
+ {
+-  "challenge_module": "Challenge.XiPickOrderThreeConditional",
+-  "solution_module": "Solution.XiPickOrderThreeConditional",
++  "challenge_module": "RiemannComparatorChallenge.XiPickOrderThreeConditional",
++  "solution_module": "RiemannComparatorSolution.XiPickOrderThreeConditional",
+   "theorem_names": ["XiPickOrderThreeConditional_psd"],
+   "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+   "enable_nanoda": false
+diff --git a/formal/comparator/config-XiPickThreeNode.json b/formal/comparator/config-XiPickThreeNode.json
+index e6156f40f167240675d4b98391ddd07154e51309..f7b93c8645dc8d0ec6bd2d51fe266cdfccc56f04 100644
+--- a/formal/comparator/config-XiPickThreeNode.json
++++ b/formal/comparator/config-XiPickThreeNode.json
+@@ -1,6 +1,6 @@
+ {
+-  "challenge_module": "Challenge.XiPickThreeNode",
+-  "solution_module": "Solution.XiPickThreeNode",
++  "challenge_module": "RiemannComparatorChallenge.XiPickThreeNode",
++  "solution_module": "RiemannComparatorSolution.XiPickThreeNode",
+   "theorem_names": ["XiPickThreeNode_identity"],
+   "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+   "enable_nanoda": false
+diff --git a/formal/comparator/config-rh.json b/formal/comparator/config-rh.json
+index 98ceb3df912500126a8d62629f44bc6fdb16c4d6..e83622391e8e2e75ca27219059fb063fd9c06c6b 100644
+--- a/formal/comparator/config-rh.json
++++ b/formal/comparator/config-rh.json
+@@ -1,6 +1,6 @@
+ {
+-  "challenge_module": "Challenge.RH",
+-  "solution_module": "Solution.RH",
++  "challenge_module": "RiemannComparatorChallenge.RH",
++  "solution_module": "RiemannComparatorSolution.RH",
+   "theorem_names": ["rh_statement_exact"],
+   "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+   "enable_nanoda": false
+diff --git a/formal/lakefile.toml b/formal/lakefile.toml
+index 93ecaaf9218273e57189702c85203ac36b229ac6..f86a1b25988005884f79113195ce7af36b155fb2 100644
+--- a/formal/lakefile.toml
++++ b/formal/lakefile.toml
+@@ -20,13 +20,19 @@ rev = "cec57f919ccf34e5fa5372b4ba332f7c848bbb6e"
+ name = "RiemannFormal"
+ 
+ [[lean_lib]]
+-name = "ChallengeDeps"
+-srcDir = "comparator"
++name = "RiemannComparatorChallengeDeps"
++srcDir = "comparator/ChallengeDeps"
++roots = ["RiemannComparatorChallengeDeps"]
++globs = ["RiemannComparatorChallengeDeps.+"]
+ 
+ [[lean_lib]]
+-name = "Challenge"
+-srcDir = "comparator"
++name = "RiemannComparatorChallenge"
++srcDir = "comparator/Challenge"
++roots = ["RiemannComparatorChallenge"]
++globs = ["RiemannComparatorChallenge.+"]
+ 
+ [[lean_lib]]
+-name = "Solution"
+-srcDir = "comparator"
++name = "RiemannComparatorSolution"
++srcDir = "comparator/Solution"
++roots = ["RiemannComparatorSolution"]
++globs = ["RiemannComparatorSolution.+"]
+diff --git a/formal/reports/C_REPAIR_RESPONSE.md b/formal/reports/C_REPAIR_RESPONSE.md
+index 84ab153984f0fbedf0b263e58e89fad52406696d..38469c7b62db3725afc80f3a90fa5cfb2c4a8d4b 100644
+--- a/formal/reports/C_REPAIR_RESPONSE.md
++++ b/formal/reports/C_REPAIR_RESPONSE.md
+@@ -78,8 +78,8 @@ infinite analytic tail theorem: EXPLICIT UNPROVED INPUT
+ ## Comparator status
+ 
+ ```text
+-Challenge.XiPickOrderThreeConditional: exact shared headline through sizes one, two, and three; one placeholder
+-Solution.XiPickOrderThreeConditional: same shared type, sorry-free
++RiemannComparatorChallenge.XiPickOrderThreeConditional: exact shared headline through sizes one, two, and three; one placeholder
++RiemannComparatorSolution.XiPickOrderThreeConditional: same shared type, sorry-free
+ PSD only: YES
+ repeated nodes: INCLUDED
+ order four: ABSENT
+diff --git a/formal/scripts/audit_axiom_output.py b/formal/scripts/audit_axiom_output.py
+index aa21ac2379daca5319cb26c1a4e6b35f144160a0..6f2ccbe439cd163e6f053657a9d843a069190d38 100755
+--- a/formal/scripts/audit_axiom_output.py
++++ b/formal/scripts/audit_axiom_output.py
+@@ -7,14 +7,14 @@ from pathlib import Path
+ 
+ ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
+ PRINT_RE = re.compile(r"^\s*#print\s+axioms\s+([A-Za-z0-9_.]+)\s*$")
+-THEOREM_RE = re.compile(r"['\u2018\u2019]?([A-Za-z0-9_.]+)['\u2018\u2019]?")
++OUTPUT_NAME_RE = re.compile(r"['\u2018\u2019]?([A-Za-z0-9_.]+)['\u2018\u2019]?")
+ 
+ 
+-def expected_from_sources(paths: list[Path]) -> set[str]:
++def expected_declarations(paths: list[Path]) -> set[str]:
+     expected: set[str] = set()
+     for path in paths:
+         if not path.is_file():
+-            raise SystemExit(f"axiom audit source does not exist: {path}")
++            raise SystemExit(f"missing axiom-print source: {path}")
+         for line in path.read_text(encoding="utf-8").splitlines():
+             match = PRINT_RE.match(line)
+             if match:
+@@ -30,11 +30,29 @@ def parse_output(text: str) -> tuple[set[str], dict[str, set[str]]]:
+ 
+     seen: set[str] = set()
+     dependencies: dict[str, set[str]] = {}
+-    for line in text.splitlines():
++    lines = text.splitlines()
++    logical_lines: list[str] = []
++    index = 0
++    while index < len(lines):
++        line = lines[index]
++        if "depends on axioms:" in line:
++            payload = line.split("depends on axioms:", 1)[1].strip()
++            if payload.startswith("[") and not payload.endswith("]"):
++                fragments = [line]
++                while not fragments[-1].rstrip().endswith("]"):
++                    index += 1
++                    if index >= len(lines):
++                        raise SystemExit(f"unclosed axiom line: {' '.join(fragments)}")
++                    fragments.append(lines[index].strip())
++                line = " ".join(fragments)
++        logical_lines.append(line)
++        index += 1
++
++    for line in logical_lines:
+         if "depends on axioms:" not in line and "does not depend on any axioms" not in line:
+             continue
+         head = line.split("depends on axioms:", 1)[0].split("does not depend", 1)[0]
+-        matches = THEOREM_RE.findall(head)
++        matches = OUTPUT_NAME_RE.findall(head)
+         if not matches:
+             raise SystemExit(f"cannot parse declaration name from axiom line: {line}")
+         declaration = matches[-1]
+@@ -57,13 +75,10 @@ def parse_output(text: str) -> tuple[set[str], dict[str, set[str]]]:
+ 
+ def main() -> None:
+     if len(sys.argv) < 3:
+-        raise SystemExit(
+-            "usage: audit_axiom_output.py AXIOM_OUTPUT AXIOM_SOURCE [AXIOM_SOURCE ...]"
+-        )
+-    output = Path(sys.argv[1])
+-    sources = [Path(x) for x in sys.argv[2:]]
+-    expected = expected_from_sources(sources)
+-    seen, dependencies = parse_output(output.read_text(encoding="utf-8"))
++        raise SystemExit("usage: audit_axiom_output.py AXIOM_OUTPUT PRINT_SOURCE...")
++
++    expected = expected_declarations([Path(arg) for arg in sys.argv[2:]])
++    seen, dependencies = parse_output(Path(sys.argv[1]).read_text(encoding="utf-8"))
+ 
+     missing = expected - seen
+     if missing:
+diff --git a/formal/scripts/axiom_print_modules.txt b/formal/scripts/axiom_print_modules.txt
+new file mode 100644
+index 0000000000000000000000000000000000000000..94fd0137c1878b14c05c80e671c5a9d412dc87ab
+--- /dev/null
++++ b/formal/scripts/axiom_print_modules.txt
+@@ -0,0 +1,5 @@
++RiemannFormal/AxiomAudit.lean
++comparator/PrintAxioms/OperatorPositiveSchurRescue.lean
++comparator/PrintAxioms/RH.lean
++comparator/PrintAxioms/XiPickOrderThreeConditional.lean
++comparator/PrintAxioms/XiPickThreeNode.lean
+diff --git a/formal/scripts/build_local_comparators.sh b/formal/scripts/build_local_comparators.sh
+new file mode 100644
+index 0000000000000000000000000000000000000000..a70e9cc37affa60353d35a9af519c0a0e14b6f58
+--- /dev/null
++++ b/formal/scripts/build_local_comparators.sh
+@@ -0,0 +1,11 @@
++#!/usr/bin/env bash
++set -euo pipefail
++
++ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
++JOBS="${LAKE_JOBS:-1}"
++
++cd "$ROOT/formal"
++lake -Kjobs="$JOBS" build \
++  RiemannComparatorChallengeDeps \
++  RiemannComparatorChallenge \
++  RiemannComparatorSolution
+diff --git a/formal/scripts/check_axioms.sh b/formal/scripts/check_axioms.sh
+index e546092ffaa9a21a2484ec497810fa4f92b6d230..3801b521ea3dc63395b6fd88a26733db6ed85845 100644
+--- a/formal/scripts/check_axioms.sh
++++ b/formal/scripts/check_axioms.sh
+@@ -1,14 +1,43 @@
+ #!/usr/bin/env bash
+ set -euo pipefail
++
+ ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+ FORMAL="$ROOT/formal"
+-cd "$FORMAL"
+-
+ OUT="$(mktemp)"
++DECLARED="$(mktemp)"
++DISCOVERED="$(mktemp)"
+ REGISTRY_AUDIT="$(mktemp --suffix=.lean -p "$FORMAL")"
+-trap 'rm -f "$OUT" "$REGISTRY_AUDIT"' EXIT
++trap 'rm -f "$OUT" "$DECLARED" "$DISCOVERED" "$REGISTRY_AUDIT"' EXIT
++
++cd "$FORMAL"
++
++MANIFEST="scripts/axiom_print_modules.txt"
++PYTHON="${PYTHON:-python3}"
++JOBS="${LAKE_JOBS:-1}"
++test -f "$MANIFEST" || { echo "missing axiom-print manifest: $MANIFEST" >&2; exit 1; }
++
++awk 'NF && $1 !~ /^#/' "$MANIFEST" | LC_ALL=C sort > "$DECLARED"
++if test -n "$(uniq -d "$DECLARED")"; then
++  echo "duplicate entries in $MANIFEST" >&2
++  uniq -d "$DECLARED" >&2
++  exit 1
++fi
+ 
+-python3 - "$REGISTRY_AUDIT" <<'PY'
++{
++  find RiemannFormal -type f -name 'AxiomAudit.lean' -print
++  find comparator/PrintAxioms -maxdepth 1 -type f -name '*.lean' -print
++} | LC_ALL=C sort > "$DISCOVERED"
++
++if ! cmp -s "$DECLARED" "$DISCOVERED"; then
++  echo "axiom-print manifest does not exactly match committed print modules" >&2
++  diff -u "$DECLARED" "$DISCOVERED" >&2 || true
++  exit 1
++fi
++
++mapfile -t files < "$DECLARED"
++test "${#files[@]}" -gt 0 || { echo "empty axiom-print manifest" >&2; exit 1; }
++
++"$PYTHON" - "$REGISTRY_AUDIT" <<'PY'
+ import csv
+ import sys
+ from pathlib import Path
+@@ -26,25 +55,26 @@ for path in paths:
+             declarations.append(row["lean_declaration"].strip())
+ declarations = list(dict.fromkeys(declarations))
+ out.write_text(
+-    "import RiemannFormal\n\n" +
+-    "\n".join(f"#print axioms {name}" for name in declarations) + "\n",
++    "import RiemannFormal\n\n"
++    + "\n".join(f"#print axioms {name}" for name in declarations)
++    + "\n",
+     encoding="utf-8",
+ )
+ print(f"GENERATED_C_AXIOM_AUDIT declarations={len(declarations)}")
+ PY
+ 
+-SOURCES=(RiemannFormal/AxiomAudit.lean "$REGISTRY_AUDIT")
++sources=("${files[@]}" "$REGISTRY_AUDIT")
++
++lake -Kjobs="$JOBS" build RiemannFormal RiemannComparatorSolution
+ {
+-  lake env lean RiemannFormal/AxiomAudit.lean
++  for path in "${files[@]}"; do
++    test -f "$path" || { echo "missing axiom-print module: $path" >&2; exit 1; }
++    lake env lean "$path"
++  done
+   lake env lean "$(basename "$REGISTRY_AUDIT")"
+-  while IFS= read -r file; do
+-    SOURCES+=("$file")
+-    lake env lean "$file"
+-  done < <(find comparator/PrintAxioms -maxdepth 1 -type f -name '*.lean' | sort)
+ } 2>&1 | tee "$OUT"
+ 
+-python3 scripts/audit_axiom_output.py "$OUT" "${SOURCES[@]}"
++"$PYTHON" scripts/audit_axiom_output.py "$OUT" "${sources[@]}"
+ mkdir -p reports/generated
+ cp "$OUT" reports/generated/C_AXIOM_OUTPUT.txt
+-
+-echo PASS_FORMAL_AXIOM_AUDIT_REGISTRY_COMPLETE
++echo "PASS_FORMAL_AXIOM_AUDIT modules=${#files[@]} registry_complete=true"
+diff --git a/formal/scripts/check_external_input_usage.py b/formal/scripts/check_external_input_usage.py
+index 7b104022edf248c36ba313c49232c979e3efeeb8..3933190dadd63c26f482db6b1f5beb2cda587bcf 100644
+--- a/formal/scripts/check_external_input_usage.py
++++ b/formal/scripts/check_external_input_usage.py
+@@ -7,7 +7,10 @@ from pathlib import Path
+ ROOT = Path(__file__).resolve().parents[2]
+ FORMAL = ROOT / "formal"
+ XI = FORMAL / "RiemannFormal" / "Operator" / "XiOrderThree.lean"
+-SHARED = FORMAL / "comparator" / "ChallengeDeps" / "XiPickOrderThreeConditional.lean"
++SHARED = (
++    FORMAL / "comparator" / "ChallengeDeps" /
++    "RiemannComparatorChallengeDeps" / "XiPickOrderThreeConditional.lean"
++)
+ SOURCE = FORMAL / "RiemannFormal" / "Operator" / "XiSourceSpecific.lean"
+ 
+ THEOREM = re.compile(
+diff --git a/formal/scripts/check_no_sorry.sh b/formal/scripts/check_no_sorry.sh
+index 30855c7cb355b7d8aabe5480259dbb79f7a8830b..cc7b9dc55e662e52a7576f45bf76fc2c60a63862 100644
+--- a/formal/scripts/check_no_sorry.sh
++++ b/formal/scripts/check_no_sorry.sh
+@@ -1,6 +1,7 @@
+ #!/usr/bin/env bash
+ set -euo pipefail
+ ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
++JOBS="${LAKE_JOBS:-1}"
+ cd "$ROOT/formal"
+ 
+ TARGETS=(RiemannFormal comparator/Solution comparator/ChallengeDeps)
+@@ -23,7 +24,8 @@ fi
+ # Reviewer C challenge files each contain exactly one statement-only placeholder;
+ # corresponding ChallengeDeps and Solution files contain none and compile.
+ shopt -s nullglob
+-for challenge in comparator/Challenge/{XiPick,Operator,Refutation}*.lean; do
++for challenge in \
++    comparator/Challenge/RiemannComparatorChallenge/{XiPick,Operator,Refutation}*.lean; do
+   count="$(grep -Ec '\b(sorry|admit)\b' "$challenge" || true)"
+   if [[ "$count" -ne 1 ]]; then
+     echo "trusted challenge must contain exactly one placeholder: $challenge ($count)" >&2
+@@ -31,8 +33,8 @@ for challenge in comparator/Challenge/{XiPick,Operator,Refutation}*.lean; do
+   fi
+   topic="$(basename "$challenge")"
+   stem="${topic%.lean}"
+-  solution="comparator/Solution/$topic"
+-  deps="comparator/ChallengeDeps/$topic"
++  solution="comparator/Solution/RiemannComparatorSolution/$topic"
++  deps="comparator/ChallengeDeps/RiemannComparatorChallengeDeps/$topic"
+   if [[ ! -f "$solution" || ! -f "$deps" ]]; then
+     echo "missing comparator dependency or solution for $challenge" >&2
+     exit 1
+@@ -41,7 +43,9 @@ for challenge in comparator/Challenge/{XiPick,Operator,Refutation}*.lean; do
+     echo "trusted comparator dependency/solution is not clean: $topic" >&2
+     exit 1
+   fi
+-  lake build "Challenge.${stem}" "Solution.${stem}"
++  lake -Kjobs="$JOBS" build \
++    "RiemannComparatorChallenge.${stem}" \
++    "RiemannComparatorSolution.${stem}"
+ done
+ 
+ python3 scripts/verify_declaration_map.py
+diff --git a/formal/scripts/check_statement_sources.py b/formal/scripts/check_statement_sources.py
+index 5e4dd5066dbcdde837512243a65a2b97d2a44cc6..98cb07746628ccd6176d603e33bac4ebde46f5d1 100644
+--- a/formal/scripts/check_statement_sources.py
++++ b/formal/scripts/check_statement_sources.py
+@@ -16,7 +16,10 @@ DELTA = FORMAL / "registry" / "deltas" / "C.tsv"
+ API = FORMAL / "registry" / "deltas" / "C_API.tsv"
+ LOCKS = FORMAL / "registry" / "deltas" / "C_EXTERNAL_SOURCE_LOCKS.tsv"
+ REPORT = FORMAL / "reports" / "C_OPERATOR_QA.tsv"
+-SHARED = FORMAL / "comparator" / "ChallengeDeps" / "XiPickOrderThreeConditional.lean"
++SHARED = (
++    FORMAL / "comparator" / "ChallengeDeps" /
++    "RiemannComparatorChallengeDeps" / "XiPickOrderThreeConditional.lean"
++)
+ SHA40 = re.compile(r"^[0-9a-f]{40}$")
+ SHA256 = re.compile(r"^[0-9a-f]{64}$")
+ 
+diff --git a/formal/scripts/run_c_repair_validation.sh b/formal/scripts/run_c_repair_validation.sh
+index c67ece8b0ffdeed769a5449ef2b08de4fc8f3900..f85b3802d1941efa5edaf7774ee860bed6849fe2 100644
+--- a/formal/scripts/run_c_repair_validation.sh
++++ b/formal/scripts/run_c_repair_validation.sh
+@@ -1,14 +1,21 @@
+ #!/usr/bin/env bash
+ set -euo pipefail
+ ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
++JOBS="${LAKE_JOBS:-1}"
+ cd "$ROOT/formal"
+ 
+-lake exe cache get
+-lake build
++lake -Kjobs="$JOBS" exe cache get
++lake -Kjobs="$JOBS" build
+ 
+-lake build Challenge.XiPickThreeNode Solution.XiPickThreeNode
+-lake build Challenge.OperatorPositiveSchurRescue Solution.OperatorPositiveSchurRescue
+-lake build Challenge.XiPickOrderThreeConditional Solution.XiPickOrderThreeConditional
++lake -Kjobs="$JOBS" build \
++  RiemannComparatorChallenge.XiPickThreeNode \
++  RiemannComparatorSolution.XiPickThreeNode
++lake -Kjobs="$JOBS" build \
++  RiemannComparatorChallenge.OperatorPositiveSchurRescue \
++  RiemannComparatorSolution.OperatorPositiveSchurRescue
++lake -Kjobs="$JOBS" build \
++  RiemannComparatorChallenge.XiPickOrderThreeConditional \
++  RiemannComparatorSolution.XiPickOrderThreeConditional
+ 
+ python3 scripts/generate_registry.py
+ python3 scripts/validate_registry.py
+diff --git a/formal/scripts/verify_c_repair_static.py b/formal/scripts/verify_c_repair_static.py
+index ebe7b07115dd772abc6a7a40e70a8627106d936b..b969085e6257c29684139415af3c1e99da17038c 100644
+--- a/formal/scripts/verify_c_repair_static.py
++++ b/formal/scripts/verify_c_repair_static.py
+@@ -80,11 +80,13 @@ def main() -> None:
+         "EXT.XI.PLATT_TRUDGIAN.2021.txt"
+     )
+     actual_hash = hashlib.sha256(statement.read_bytes()).hexdigest()
+-    lock_text = (FORMAL / "registry" / "deltas" / "C_EXTERNAL_SOURCE_LOCKS.tsv").read_text()
++    lock_text = (FORMAL / "registry" / "deltas" / "C_EXTERNAL_SOURCE_LOCKS.tsv").read_text(
++        encoding="utf-8"
++    )
+     lean_text = (
+         FORMAL / "comparator" / "ChallengeDeps" /
+-        "XiPickOrderThreeConditional.lean"
+-    ).read_text()
++        "RiemannComparatorChallengeDeps" / "XiPickOrderThreeConditional.lean"
++    ).read_text(encoding="utf-8")
+     assert actual_hash in lock_text
+     assert actual_hash in lean_text
+ 
+diff --git a/formal/scripts/verify_comparator_fidelity.py b/formal/scripts/verify_comparator_fidelity.py
+index c3fb8e3f5f3e9c5b5c91a11f6270e6901f38213c..b7f40410c8383b3070167811c203276343a4cb25 100644
+--- a/formal/scripts/verify_comparator_fidelity.py
++++ b/formal/scripts/verify_comparator_fidelity.py
+@@ -64,8 +64,14 @@ def main() -> None:
+     outputs: list[str] = []
+     for row in checked:
+         topic = row["comparator_topic"]
+-        challenge = FORMAL / "comparator" / "Challenge" / f"{topic}.lean"
+-        solution = FORMAL / "comparator" / "Solution" / f"{topic}.lean"
++        challenge = (
++            FORMAL / "comparator" / "Challenge" /
++            "RiemannComparatorChallenge" / f"{topic}.lean"
++        )
++        solution = (
++            FORMAL / "comparator" / "Solution" /
++            "RiemannComparatorSolution" / f"{topic}.lean"
++        )
+         if not challenge.is_file() or not solution.is_file():
+             raise SystemExit(f"missing comparator pair for {topic}")
+         ctext = challenge.read_text(encoding="utf-8")
+@@ -86,8 +92,12 @@ def main() -> None:
+                 f"challenge={placeholder_count} solution={solution_placeholders}"
+             )
+         statement = row["comparator_statement"].strip() or None
+-        outputs.append(compile_module(f"Challenge.{topic}", theorem, statement))
+-        outputs.append(compile_module(f"Solution.{topic}", theorem, statement))
++        outputs.append(
++            compile_module(f"RiemannComparatorChallenge.{topic}", theorem, statement)
++        )
++        outputs.append(
++            compile_module(f"RiemannComparatorSolution.{topic}", theorem, statement)
++        )
+ 
+     generated = FORMAL / "reports" / "generated"
+     generated.mkdir(parents=True, exist_ok=True)

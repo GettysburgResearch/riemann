@@ -1,0 +1,11 @@
+scope	head	modules	expected_outputs	observed_outputs	registry_headlines	verdict	foundations	evidence
+COMBINED	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	9	89	89	33 unique	PASS	propext;Classical.choice;Quot.sound	outputs/COMBINED_AXIOM_OUTPUT.txt
+COMBINED_EXPLICIT	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	RiemannFormal/AxiomAudit.lean	compiled	compiled	-	PASS	permitted only	outputs/COMBINED_COMMAND_EXIT_CODES.tsv
+COMBINED_EXPLICIT	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	RiemannFormal/Analysis/AxiomAudit.lean	compiled	compiled	-	PASS	permitted only	outputs/COMBINED_COMMAND_EXIT_CODES.tsv
+COMBINED_EXPLICIT	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	RiemannFormal/Arithmetic/AxiomAudit.lean	compiled	compiled	-	PASS	permitted only	outputs/COMBINED_COMMAND_EXIT_CODES.tsv
+COMBINED_EXPLICIT	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	comparator/PrintAxioms/MellinAPI.lean	compiled	compiled	-	PASS	permitted only	outputs/COMBINED_COMMAND_EXIT_CODES.tsv
+COMBINED_EXPLICIT	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	comparator/PrintAxioms/ArithmeticFixedRows.lean	compiled	compiled	-	PASS	permitted only	outputs/COMBINED_COMMAND_EXIT_CODES.tsv
+COMBINED_EXPLICIT	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	comparator/PrintAxioms/OperatorPositiveSchurRescue.lean	compiled	compiled	-	PASS	permitted only	outputs/COMBINED_COMMAND_EXIT_CODES.tsv
+COMBINED_EXPLICIT	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	comparator/PrintAxioms/RH.lean	compiled	compiled	-	PASS	permitted only	outputs/COMBINED_COMMAND_EXIT_CODES.tsv
+COMBINED_EXPLICIT	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	comparator/PrintAxioms/XiPickOrderThreeConditional.lean	compiled	compiled	-	PASS	permitted only	outputs/COMBINED_COMMAND_EXIT_CODES.tsv
+COMBINED_EXPLICIT	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	comparator/PrintAxioms/XiPickThreeNode.lean	compiled	compiled	-	PASS	permitted only	outputs/COMBINED_COMMAND_EXIT_CODES.tsv

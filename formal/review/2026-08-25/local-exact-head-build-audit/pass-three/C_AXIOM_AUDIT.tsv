@@ -1,0 +1,7 @@
+commit	module	compile_verdict	audit_verdict	allowed_foundations	evidence
+381a5a98ade7c6bad7122e5182c2fc07332dc747	RiemannFormal/AxiomAudit.lean	PASS	PASS	propext;Classical.choice;Quot.sound	raw/C/34_check_axioms_after_parser_fix.log
+381a5a98ade7c6bad7122e5182c2fc07332dc747	comparator/PrintAxioms/OperatorPositiveSchurRescue.lean	PASS	PASS	propext;Classical.choice;Quot.sound	raw/C/34_check_axioms_after_parser_fix.log
+381a5a98ade7c6bad7122e5182c2fc07332dc747	comparator/PrintAxioms/RH.lean	PASS	PASS	propext;Classical.choice;Quot.sound	raw/C/34_check_axioms_after_parser_fix.log
+381a5a98ade7c6bad7122e5182c2fc07332dc747	comparator/PrintAxioms/XiPickOrderThreeConditional.lean	PASS	PASS	propext;Classical.choice;Quot.sound	raw/C/34_check_axioms_after_parser_fix.log
+381a5a98ade7c6bad7122e5182c2fc07332dc747	comparator/PrintAxioms/XiPickThreeNode.lean	PASS	PASS	propext;Classical.choice;Quot.sound	raw/C/34_check_axioms_after_parser_fix.log
+381a5a98ade7c6bad7122e5182c2fc07332dc747	SUMMARY_40_EXPECTED_DECLARATIONS	PASS	PASS	37 permitted-foundation;3 axiom-free	raw/C/34a_C_AXIOM_OUTPUT.txt

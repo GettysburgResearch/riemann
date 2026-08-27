@@ -1,0 +1,59 @@
+sequence	command	exit_code	started_utc	finished_utc	log
+00_preflight	preflight 	0	2026-08-27T00:47:05Z	2026-08-27T00:47:06Z	00_preflight.log
+01_rematerialize_c_lock_lf	rematerialize_locked_source_lf 	0	2026-08-27T00:47:06Z	2026-08-27T00:47:06Z	01_rematerialize_c_lock_lf.log
+02_axiom_parser_regression	/c/Users/gideo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe /c/riemann-pass3/combined/formal/scripts/test_audit_axiom_output.py -v 	0	2026-08-27T00:47:06Z	2026-08-27T00:47:07Z	02_axiom_parser_regression.log
+03_dependency_sidecar_equality	verify_dependency_sidecars 	0	2026-08-27T00:47:07Z	2026-08-27T00:47:07Z	03_dependency_sidecar_equality.log
+04_cache_get	lake -Kjobs=1 exe cache get 	0	2026-08-27T00:47:08Z	2026-08-27T00:47:33Z	04_cache_get.log
+05_recover_zeta_hypotheses	lake -Kjobs=1 build @Zeta23/+Zeta23.Hypotheses 	0	2026-08-27T00:47:33Z	2026-08-27T00:47:36Z	05_recover_zeta_hypotheses.log
+06_recover_zeta_gamma_facts	lake -Kjobs=1 build @Zeta23/+Zeta23.GammaFacts 	0	2026-08-27T00:47:36Z	2026-08-27T00:47:39Z	06_recover_zeta_gamma_facts.log
+07_recover_zeta_defs_counting	lake -Kjobs=1 build @Zeta23/+Zeta23.Defs.Counting 	0	2026-08-27T00:47:39Z	2026-08-27T00:47:43Z	07_recover_zeta_defs_counting.log
+08_recover_zeta_strong_pnt_prefix	lake -Kjobs=1 build @Zeta23/+Zeta23.FromPNTPlus.StrongPNTPrefix 	0	2026-08-27T00:47:43Z	2026-08-27T00:47:46Z	08_recover_zeta_strong_pnt_prefix.log
+09_lake_build	lake -Kjobs=1 build 	0	2026-08-27T00:47:46Z	2026-08-27T00:47:53Z	09_lake_build.log
+10_generate_registry	/c/Users/gideo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe scripts/generate_registry.py 	0	2026-08-27T00:47:53Z	2026-08-27T00:47:53Z	10_generate_registry.log
+11_validate_registry	/c/Users/gideo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe scripts/validate_registry.py 	0	2026-08-27T00:47:53Z	2026-08-27T00:47:53Z	11_validate_registry.log
+12_verify_source_locks	/c/Users/gideo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe scripts/verify_source_locks.py 	0	2026-08-27T00:47:53Z	2026-08-27T00:47:53Z	12_verify_source_locks.log
+13_validate_blueprint	/c/Users/gideo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe scripts/validate_blueprint.py 	0	2026-08-27T00:47:53Z	2026-08-27T00:47:54Z	13_validate_blueprint.log
+14_check_no_sorry	bash scripts/check_no_sorry.sh 	0	2026-08-27T00:47:54Z	2026-08-27T00:56:36Z	14_check_no_sorry.log
+15_check_axioms	bash scripts/check_axioms.sh 	0	2026-08-27T00:56:36Z	2026-08-27T00:59:49Z	15_check_axioms.log
+16_build_comparator_aggregates	bash scripts/build_local_comparators.sh 	0	2026-08-27T00:59:49Z	2026-08-27T00:59:55Z	16_build_comparator_aggregates.log
+17_build_a_comparator_smoke	lake -Kjobs=1 build RiemannFormal.Analysis.ComparatorSmoke 	0	2026-08-27T00:59:55Z	2026-08-27T01:00:07Z	17_build_a_comparator_smoke.log
+20_challenge_deps_ArithmeticRows23	lake -Kjobs=1 build RiemannComparatorChallengeDeps.ArithmeticRows23 	0	2026-08-27T01:00:07Z	2026-08-27T01:00:10Z	20_challenge_deps_ArithmeticRows23.log
+21_challenge_ArithmeticRows23	lake -Kjobs=1 build RiemannComparatorChallenge.ArithmeticRows23 	0	2026-08-27T01:00:10Z	2026-08-27T01:00:13Z	21_challenge_ArithmeticRows23.log
+22_solution_ArithmeticRows23	lake -Kjobs=1 build RiemannComparatorSolution.ArithmeticRows23 	0	2026-08-27T01:00:13Z	2026-08-27T01:00:17Z	22_solution_ArithmeticRows23.log
+23_challenge_deps_FixedDetectorFiveThree	lake -Kjobs=1 build RiemannComparatorChallengeDeps.FixedDetectorFiveThree 	0	2026-08-27T01:00:17Z	2026-08-27T01:00:20Z	23_challenge_deps_FixedDetectorFiveThree.log
+24_challenge_FixedDetectorFiveThree	lake -Kjobs=1 build RiemannComparatorChallenge.FixedDetectorFiveThree 	0	2026-08-27T01:00:20Z	2026-08-27T01:00:22Z	24_challenge_FixedDetectorFiveThree.log
+25_solution_FixedDetectorFiveThree	lake -Kjobs=1 build RiemannComparatorSolution.FixedDetectorFiveThree 	0	2026-08-27T01:00:23Z	2026-08-27T01:00:26Z	25_solution_FixedDetectorFiveThree.log
+26_challenge_deps_MellinAPI	lake -Kjobs=1 build RiemannComparatorChallengeDeps.MellinAPI 	0	2026-08-27T01:00:26Z	2026-08-27T01:00:29Z	26_challenge_deps_MellinAPI.log
+27_challenge_MellinAPI	lake -Kjobs=1 build RiemannComparatorChallenge.MellinAPI 	0	2026-08-27T01:00:29Z	2026-08-27T01:00:32Z	27_challenge_MellinAPI.log
+28_solution_MellinAPI	lake -Kjobs=1 build RiemannComparatorSolution.MellinAPI 	0	2026-08-27T01:00:32Z	2026-08-27T01:00:35Z	28_solution_MellinAPI.log
+29_challenge_deps_OperatorPositiveSchurRescue	lake -Kjobs=1 build RiemannComparatorChallengeDeps.OperatorPositiveSchurRescue 	0	2026-08-27T01:00:35Z	2026-08-27T01:00:42Z	29_challenge_deps_OperatorPositiveSchurRescue.log
+30_challenge_OperatorPositiveSchurRescue	lake -Kjobs=1 build RiemannComparatorChallenge.OperatorPositiveSchurRescue 	0	2026-08-27T01:00:42Z	2026-08-27T01:00:48Z	30_challenge_OperatorPositiveSchurRescue.log
+31_solution_OperatorPositiveSchurRescue	lake -Kjobs=1 build RiemannComparatorSolution.OperatorPositiveSchurRescue 	0	2026-08-27T01:00:48Z	2026-08-27T01:00:55Z	31_solution_OperatorPositiveSchurRescue.log
+32_challenge_deps_RH	lake -Kjobs=1 build RiemannComparatorChallengeDeps.RH 	0	2026-08-27T01:00:55Z	2026-08-27T01:00:58Z	32_challenge_deps_RH.log
+33_challenge_RH	lake -Kjobs=1 build RiemannComparatorChallenge.RH 	0	2026-08-27T01:00:58Z	2026-08-27T01:01:02Z	33_challenge_RH.log
+34_solution_RH	lake -Kjobs=1 build RiemannComparatorSolution.RH 	0	2026-08-27T01:01:02Z	2026-08-27T01:01:05Z	34_solution_RH.log
+35_challenge_deps_XiPickOrderThreeConditional	lake -Kjobs=1 build RiemannComparatorChallengeDeps.XiPickOrderThreeConditional 	0	2026-08-27T01:01:05Z	2026-08-27T01:01:12Z	35_challenge_deps_XiPickOrderThreeConditional.log
+36_challenge_XiPickOrderThreeConditional	lake -Kjobs=1 build RiemannComparatorChallenge.XiPickOrderThreeConditional 	0	2026-08-27T01:01:12Z	2026-08-27T01:01:19Z	36_challenge_XiPickOrderThreeConditional.log
+37_solution_XiPickOrderThreeConditional	lake -Kjobs=1 build RiemannComparatorSolution.XiPickOrderThreeConditional 	0	2026-08-27T01:01:19Z	2026-08-27T01:01:25Z	37_solution_XiPickOrderThreeConditional.log
+38_challenge_deps_XiPickThreeNode	lake -Kjobs=1 build RiemannComparatorChallengeDeps.XiPickThreeNode 	0	2026-08-27T01:01:25Z	2026-08-27T01:01:32Z	38_challenge_deps_XiPickThreeNode.log
+39_challenge_XiPickThreeNode	lake -Kjobs=1 build RiemannComparatorChallenge.XiPickThreeNode 	0	2026-08-27T01:01:32Z	2026-08-27T01:01:39Z	39_challenge_XiPickThreeNode.log
+40_solution_XiPickThreeNode	lake -Kjobs=1 build RiemannComparatorSolution.XiPickThreeNode 	0	2026-08-27T01:01:39Z	2026-08-27T01:01:45Z	40_solution_XiPickThreeNode.log
+50_a_retained_replay	bash RiemannFormal/Analysis/replay/run_validation.sh /c/riemann-pass3/combined 	0	2026-08-27T01:01:45Z	2026-08-27T01:10:53Z	50_a_retained_replay.log
+51_b_trusted_modules	lake -Kjobs=1 build RiemannFormal.Arithmetic.FixedRows RiemannFormal.Arithmetic.SourceIdentities RiemannFormal.Arithmetic.HalfDivisor RiemannFormal.Arithmetic.Wavelet RiemannFormal.MellinLandau.FixedDetectorAssembly 	0	2026-08-27T01:10:53Z	2026-08-27T01:10:57Z	51_b_trusted_modules.log
+60_c_verify_declaration_map	/c/Users/gideo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe scripts/verify_declaration_map.py 	0	2026-08-27T01:10:57Z	2026-08-27T01:11:21Z	60_c_verify_declaration_map.log
+61_c_check_statement_sources	/c/Users/gideo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe scripts/check_statement_sources.py 	0	2026-08-27T01:11:21Z	2026-08-27T01:13:35Z	61_c_check_statement_sources.log
+62_c_verify_static	/c/Users/gideo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe scripts/verify_c_repair_static.py 	0	2026-08-27T01:13:35Z	2026-08-27T01:13:35Z	62_c_verify_static.log
+63_c_check_external_usage	/c/Users/gideo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe scripts/check_external_input_usage.py 	0	2026-08-27T01:13:35Z	2026-08-27T01:13:35Z	63_c_check_external_usage.log
+64_c_verify_comparator_fidelity	/c/Users/gideo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe scripts/verify_comparator_fidelity.py 	0	2026-08-27T01:13:35Z	2026-08-27T01:15:50Z	64_c_verify_comparator_fidelity.log
+70_print_axioms_AxiomAudit	lake env lean RiemannFormal/AxiomAudit.lean 	0	2026-08-27T01:15:51Z	2026-08-27T01:16:13Z	70_print_axioms_AxiomAudit.log
+71_print_axioms_AxiomAudit	lake env lean RiemannFormal/Analysis/AxiomAudit.lean 	0	2026-08-27T01:16:13Z	2026-08-27T01:16:28Z	71_print_axioms_AxiomAudit.log
+72_print_axioms_AxiomAudit	lake env lean RiemannFormal/Arithmetic/AxiomAudit.lean 	0	2026-08-27T01:16:28Z	2026-08-27T01:16:44Z	72_print_axioms_AxiomAudit.log
+73_print_axioms_MellinAPI	lake env lean comparator/PrintAxioms/MellinAPI.lean 	0	2026-08-27T01:16:44Z	2026-08-27T01:16:59Z	73_print_axioms_MellinAPI.log
+74_print_axioms_ArithmeticFixedRows	lake env lean comparator/PrintAxioms/ArithmeticFixedRows.lean 	0	2026-08-27T01:16:59Z	2026-08-27T01:17:14Z	74_print_axioms_ArithmeticFixedRows.log
+75_print_axioms_OperatorPositiveSchurRescue	lake env lean comparator/PrintAxioms/OperatorPositiveSchurRescue.lean 	0	2026-08-27T01:17:14Z	2026-08-27T01:17:37Z	75_print_axioms_OperatorPositiveSchurRescue.log
+76_print_axioms_RH	lake env lean comparator/PrintAxioms/RH.lean 	0	2026-08-27T01:17:37Z	2026-08-27T01:17:52Z	76_print_axioms_RH.log
+77_print_axioms_XiPickOrderThreeConditional	lake env lean comparator/PrintAxioms/XiPickOrderThreeConditional.lean 	0	2026-08-27T01:17:52Z	2026-08-27T01:18:15Z	77_print_axioms_XiPickOrderThreeConditional.log
+78_print_axioms_XiPickThreeNode	lake env lean comparator/PrintAxioms/XiPickThreeNode.lean 	0	2026-08-27T01:18:15Z	2026-08-27T01:18:38Z	78_print_axioms_XiPickThreeNode.log
+90_final_registry_validation	/c/Users/gideo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe scripts/validate_registry.py 	0	2026-08-27T01:18:38Z	2026-08-27T01:18:38Z	90_final_registry_validation.log
+91_final_source_lock_validation	/c/Users/gideo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe scripts/verify_source_locks.py 	0	2026-08-27T01:18:38Z	2026-08-27T01:18:38Z	91_final_source_lock_validation.log
+92_final_blueprint_validation	/c/Users/gideo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe scripts/validate_blueprint.py 	0	2026-08-27T01:18:38Z	2026-08-27T01:18:38Z	92_final_blueprint_validation.log

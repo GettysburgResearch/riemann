@@ -1,0 +1,192 @@
+'RiemannFormal.Analysis.mellin_dilation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.hasMellin_linearCombination_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.mellin_analyticAt_of_power_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.tailMellin_positivePart_eq_add_negativePart' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Analysis.logBoxMultiplier_analyticAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.logBoxMultiplier_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.fixed_mellin_singularity_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.reciprocalZeta_order_of_projectZero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.nonnegative_landau_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.landau_abscissa_nonpositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.subpower_negative_mass_holomorphic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.subpower_negative_mass_singularity_transfer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Analysis.positiveTailContinuation_agrees_initially' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Analysis.shiftedReciprocalZeta_nonremovable_of_order' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Analysis.fixedDetector_negativeMass_implies_RH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Analysis.functionalEquationReflection_closes_RH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Arithmetic.FixedRows.rows23_no_common_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Arithmetic.FixedRows.fiveThree_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Arithmetic.SourceIdentities.scalarFirstOwnerExpansion_eq_finiteEulerProduct' depends on axioms: [propext,
+ Quot.sound]
+'RiemannFormal.Arithmetic.SourceIdentities.duplicate67_same_prime_distinct_labels' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Arithmetic.SourceIdentities.duplicate67_parity_fixture' depends on axioms: [propext, Quot.sound]
+'RiemannFormal.Arithmetic.SourceIdentities.native_one_prime_ne_contracted_two_child' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Arithmetic.SourceIdentities.raw_cutoff_ne_rn_child_16_4_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Arithmetic.SourceIdentities.rn_density_times_capacity_eq_response_16_4_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Arithmetic.SourceIdentities.response_capacity_coefficients_differ_16_4_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Arithmetic.SourceIdentities.normalized_p_inv_ne_p_inv_sqrt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Arithmetic.native_ne_auxiliary' does not depend on any axioms
+'RiemannFormal.Arithmetic.response_ne_capacity' does not depend on any axioms
+'RiemannFormal.Arithmetic.signedObservation_ne_auxiliaryPositive' does not depend on any axioms
+'RiemannFormal.Arithmetic.rebuildAtRole_coefficient' depends on axioms: [propext]
+'RiemannFormal.Arithmetic.FixedArithmeticDetector.asConstantMoving_queryIndependent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Arithmetic.HalfDivisor.etaCoeff_antidiagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Arithmetic.HalfDivisor.eta_mul_eta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Arithmetic.HalfDivisor.genericOneFieldConvolution' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Arithmetic.Wavelet.fourTapValues_geometric' depends on axioms: [propext, Quot.sound]
+'RiemannFormal.Arithmetic.Wavelet.threeTap_minimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Arithmetic.Wavelet.affine_nuisance_sign_flip' depends on axioms: [propext, Quot.sound]
+'RiemannFormal.Arithmetic.Wavelet.fourTap_shift' depends on axioms: [propext]
+'RiemannFormal.Arithmetic.Wavelet.finite_sum_by_parts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Arithmetic.Wavelet.K0_ne_K1' does not depend on any axioms
+'RiemannFormal.MellinLandau.fixedFiveThreeArithmeticInput_spec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.MellinLandau.fixedRows23ArithmeticInput_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.rh_iff_mathlib' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Upstream.projectRH_is_mathlib' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Upstream.zeta23_bridge_preserves_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Upstream.projectRiemannZeta_meromorphicOrderAt_eq_zeroMultiplicity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Analysis.logBoxMultiplier_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.nonnegative_landau_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.subpower_negative_mass_holomorphic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.fixedDetector_negativeMass_implies_RH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Release20260822.researchCutoff_eq' does not depend on any axioms
+'RiemannFormal.Release20260822.semanticClaimCount_eq' does not depend on any axioms
+'RiemannFormal.Operator.three_node_pick_determinant_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.Jet2.reciprocalConcavity_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.repeated12_pick_psd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.repeated13_pick_psd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.repeated23_pick_psd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.plattTrudgian_source_lock_exact' does not depend on any axioms
+'RiemannFormal.Operator.criticalMultiplicityResidual_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.reflectedOffLine_cross_curvature_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Operator.orbitGap_ge_two_thirds_b_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.orbitKappa_le_nine_quarter_b_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.reflectedOffLineOrbit_absorbed_reviewed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Operator.buildActualXiReserveAllocation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.actualXiPickOrderTwo_of_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.locallyUniformSequence_tendsto_at' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.regroupedActualXi_energy_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.nonnegative_of_absolute_convergence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.actualXiReciprocalConcavity_of_inputs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Operator.actualXiCompanionCurvature_of_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.actualXiLowOrderLoewner_of_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.actualXiPickOrderThreeConditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Refutations.positiveSchurCannotRescue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Refutations.coefficientBudgetDoesNotImplyOperatorContraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Refutations.smallNegativeInertiaDoesNotControlCurrent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Refutations.hyperbolicPoleBlockNotTwoPositiveSquares' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Refutations.positiveExcessDoesNotControlSquareRoot' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Refutations.scalarDiagonalDoesNotDeterminePolarizedGram' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Refutations.parityChangesUnderDisplacement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Solution.ArithmeticRows23.solution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Solution.FixedDetectorFiveThree.solution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Comparator.MellinAPI.fixedMellinConsumerSolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.fixedDetector_negativeMass_implies_RH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OperatorPositiveSchurRescue_firewall' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rh_statement_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Comparator.MellinAPI.fixedMellinConsumerSolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.fixedDetector_negativeMass_implies_RH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'XiPickOrderThreeConditional_psd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'XiPickThreeNode_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.FixedDetectorReciprocalZetaIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.fixed_mellin_singularity_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.logBoxMultiplier_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.nonnegative_landau_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Analysis.fixedDetector_negativeMass_implies_RH' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Arithmetic.FixedRows.rows23_no_common_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Arithmetic.FixedRows.fiveThree_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Arithmetic.SourceIdentities.sharpRNDensity_16_4_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Arithmetic.SourceIdentities.native_one_prime_ne_contracted_two_child' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Arithmetic.SourceIdentities.scalarFirstOwnerExpansion_eq_finiteEulerProduct' depends on axioms: [propext,
+ Quot.sound]
+'RiemannFormal.Arithmetic.SourceIdentities.response_capacity_coefficients_differ_16_4_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Arithmetic.Wavelet.threeTap_minimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Arithmetic.Wavelet.finite_sum_by_parts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Arithmetic.Wavelet.K0_ne_K1' does not depend on any axioms
+'RiemannFormal.Arithmetic.Wavelet.sameKernelIdentity_coefficient' does not depend on any axioms
+'RiemannFormal.Arithmetic.HalfDivisor.eta_mul_eta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.actualXiPickOrderTwo_of_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.three_node_pick_determinant_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.actualXiCompanionCurvature_of_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.Jet2.reciprocalConcavity_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.reflectedOffLineOrbit_absorbed_reviewed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Operator.buildLockedActualXiReserveAllocation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.actualXiReciprocalConcavity_of_inputs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Operator.actualXiPickOrderThreeConditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.actualXiLowOrderLoewner_of_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Refutations.positiveSchurCannotRescue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Refutations.positiveExcessDoesNotControlSquareRoot' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RiemannFormal.Refutations.parityChangesUnderDisplacement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.two_point_pick_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.secondDivDiff_add_nonpositive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.oneOrbit_cross_curvature_coordinates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.buildActualXiReserveAllocation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RiemannFormal.Operator.repeated12_pick_psd' depends on axioms: [propext, Classical.choice, Quot.sound]

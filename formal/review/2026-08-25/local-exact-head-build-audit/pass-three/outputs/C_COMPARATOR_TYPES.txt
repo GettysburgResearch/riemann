@@ -1,0 +1,26 @@
+XiPickThreeNode_identity {x1 x2 x3 p1 p2 p3 : ℝ} (h12 : x1 + x2 ≠ 0) (h13 : x1 + x3 ≠ 0) (h23 : x2 + x3 ≠ 0)
+  (ht12 : x1 ^ 2 ≠ x2 ^ 2) (ht13 : x1 ^ 2 ≠ x3 ^ 2) (ht23 : x2 ^ 2 ≠ x3 ^ 2) (hp1 : p1 ≠ 0) (hp2 : p2 ≠ 0)
+  (hp3 : p3 ≠ 0) :
+  ChallengeDeps.XiPickThreeNode.pickDet3 x1 x2 x3 p1 p2 p3 =
+    p1 * p2 * p3 * ChallengeDeps.XiPickThreeNode.delta3 (x1 ^ 2) (x2 ^ 2) (x3 ^ 2) ^ 2 /
+          ChallengeDeps.XiPickThreeNode.denominator x1 x2 x3 *
+        ChallengeDeps.XiPickThreeNode.secondDivDiff (x1 ^ 2) (x2 ^ 2) (x3 ^ 2) (1 / p1) (1 / p2) (1 / p3) *
+      ChallengeDeps.XiPickThreeNode.secondDivDiff (x1 ^ 2) (x2 ^ 2) (x3 ^ 2) (x1 ^ 2 * p1) (x2 ^ 2 * p2) (x3 ^ 2 * p3)
+
+XiPickThreeNode_identity {x1 x2 x3 p1 p2 p3 : ℝ} (h12 : x1 + x2 ≠ 0) (h13 : x1 + x3 ≠ 0) (h23 : x2 + x3 ≠ 0)
+  (ht12 : x1 ^ 2 ≠ x2 ^ 2) (ht13 : x1 ^ 2 ≠ x3 ^ 2) (ht23 : x2 ^ 2 ≠ x3 ^ 2) (hp1 : p1 ≠ 0) (hp2 : p2 ≠ 0)
+  (hp3 : p3 ≠ 0) :
+  ChallengeDeps.XiPickThreeNode.pickDet3 x1 x2 x3 p1 p2 p3 =
+    p1 * p2 * p3 * ChallengeDeps.XiPickThreeNode.delta3 (x1 ^ 2) (x2 ^ 2) (x3 ^ 2) ^ 2 /
+          ChallengeDeps.XiPickThreeNode.denominator x1 x2 x3 *
+        ChallengeDeps.XiPickThreeNode.secondDivDiff (x1 ^ 2) (x2 ^ 2) (x3 ^ 2) (1 / p1) (1 / p2) (1 / p3) *
+      ChallengeDeps.XiPickThreeNode.secondDivDiff (x1 ^ 2) (x2 ^ 2) (x3 ^ 2) (x1 ^ 2 * p1) (x2 ^ 2 * p2) (x3 ^ 2 * p3)
+
+XiPickOrderThreeConditional_psd : ChallengeDeps.XiPickOrderThreeConditional.ChallengeStatement
+XiPickOrderThreeConditional_psd : ChallengeDeps.XiPickOrderThreeConditional.ChallengeStatement
+
+XiPickOrderThreeConditional_psd : ChallengeDeps.XiPickOrderThreeConditional.ChallengeStatement
+XiPickOrderThreeConditional_psd : ChallengeDeps.XiPickOrderThreeConditional.ChallengeStatement
+
+OperatorPositiveSchurRescue_firewall {b z c : ℝ} (hb : b < 0) (hc : 0 < c) : b - z ^ 2 / c < 0
+OperatorPositiveSchurRescue_firewall {b z c : ℝ} (hb : b < 0) (hc : 0 < c) : b - z ^ 2 / c < 0

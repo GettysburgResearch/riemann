@@ -1,0 +1,36 @@
+source	commit	phase	command	exit_code	classification	evidence
+C	9fcb09dd9 repair layer	dependency-cache	lake -Kjobs=1 exe cache get	0	PASS	raw/C/09_cache_get.log
+C	pre-381a repair range	targeted	lake -Kjobs=1 build RiemannFormal.Operator.XiSourceSpecific	1	LEAN_COMPILE_FAILURE	raw/C/10_build_XiSourceSpecific.log
+C	pre-381a repair range	targeted	lake -Kjobs=1 build RiemannFormal.Operator.XiExternalInputs	0	PASS	raw/C/11_build_XiExternalInputs_after_proof_fix.log
+C	pre-381a repair range	targeted	lake -Kjobs=1 build RiemannFormal.Operator.XiSourceSpecific	1	LEAN_COMPILE_FAILURE	raw/C/12_build_XiSourceSpecific_after_proof_fix.log
+C	pre-381a repair range	targeted	lake -Kjobs=1 build RiemannFormal.Operator.XiExternalInputs	0	PASS	raw/C/13_build_XiExternalInputs_clean_proof.log
+C	pre-381a repair range	targeted	lake -Kjobs=1 build RiemannFormal.Operator.XiSourceSpecific	1	LEAN_COMPILE_FAILURE	raw/C/14_build_XiSourceSpecific_repair_round1.log
+C	pre-381a repair range	targeted	lake -Kjobs=1 build RiemannFormal.Operator.XiSourceSpecific	1	LEAN_COMPILE_FAILURE	raw/C/15_build_XiSourceSpecific_repair_round2.log
+C	pre-381a repair range	targeted	lake -Kjobs=1 build RiemannFormal.Operator.XiSourceSpecific	0	PASS	raw/C/16_build_XiSourceSpecific_repair_round3.log
+C	577b81b15 repair layer	targeted-final	lake -Kjobs=1 build RiemannFormal.Operator.XiExternalInputs	0	PASS	raw/C/17_build_XiExternalInputs_final_targeted.log
+C	577b81b15 repair layer	targeted-final	lake -Kjobs=1 build RiemannFormal.Operator.XiSourceSpecific	0	PASS	raw/C/18_build_XiSourceSpecific_final_targeted.log
+C	pre-195de8538	full-C-suite	bash scripts/run_c_repair_validation.sh	1	LEAN_COMPILE_FAILURE	raw/C/21_run_c_repair_validation.log
+C	195de8538 repair layer	targeted	lake -Kjobs=1 build RiemannFormal.Operator.RepeatedNodes	0	PASS	raw/C/22_build_RepeatedNodes_targeted.log
+C	pre-1657dffcd	full-C-suite	bash scripts/run_c_repair_validation.sh	1	LEAN_COMPILE_FAILURE	raw/C/24_run_c_repair_validation_rerun.log
+C	pre-1657dffcd	targeted	lake -Kjobs=1 build RiemannFormal.Operator.XiOrderThree	1	LEAN_COMPILE_FAILURE	raw/C/25_build_XiOrderThree_targeted.log
+C	1657dffcd repair layer	targeted	lake -Kjobs=1 build RiemannFormal.Operator.XiOrderThree	0	PASS	raw/C/26_build_XiOrderThree_targeted_round2.log
+C	1657dffcd repair layer	full-C-suite	bash scripts/run_c_repair_validation.sh	1	TOOLCHAIN_FAILURE	raw/C/28_run_c_repair_validation_rerun2.log
+C	1657dffcd repair layer	full-C-suite UTF-8 retry	bash scripts/run_c_repair_validation.sh	1	SOURCE_LOCK_FAILURE	raw/C/29_run_c_repair_validation_utf8_retry.log
+C	1657dffcd repair layer	full-C-suite UTF-8+LF retry	bash scripts/run_c_repair_validation.sh	1	AXIOM_AUDIT_FAILURE	raw/C/30_run_c_repair_validation_utf8_lf_retry.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	axiom-parser-tests	parser negative and positive unit fixtures	0	PASS	raw/C/31_axiom_parser_unit_tests.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	axiom-audit	bash scripts/check_axioms.sh	0	PASS	raw/C/34_check_axioms_after_parser_fix.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-cache	lake -Kjobs=1 exe cache get	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-trusted-build	lake -Kjobs=1 build	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-comparator	lake -Kjobs=1 build RiemannComparatorChallenge.XiPickThreeNode RiemannComparatorSolution.XiPickThreeNode	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-comparator	lake -Kjobs=1 build RiemannComparatorChallenge.OperatorPositiveSchurRescue RiemannComparatorSolution.OperatorPositiveSchurRescue	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-comparator	lake -Kjobs=1 build RiemannComparatorChallenge.XiPickOrderThreeConditional RiemannComparatorSolution.XiPickOrderThreeConditional	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-registry-generation	python3 scripts/generate_registry.py	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-registry-validation	python3 scripts/validate_registry.py	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-source-lock	python3 scripts/verify_source_locks.py	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-blueprint	python3 scripts/validate_blueprint.py	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-declaration-map	python3 scripts/verify_declaration_map.py	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-statement-sources	python3 scripts/check_statement_sources.py	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-static-replay	python3 scripts/verify_c_repair_static.py	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-no-sorry	bash scripts/check_no_sorry.sh	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	final-suite-axioms	bash scripts/check_axioms.sh	0	PASS	raw/C/35_run_c_repair_validation_final.log
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	full-C-suite-final	bash scripts/run_c_repair_validation.sh	0	PASS	raw/C/35_run_c_repair_validation_final.log

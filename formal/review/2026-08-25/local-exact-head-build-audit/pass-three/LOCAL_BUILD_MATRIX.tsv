@@ -1,0 +1,11 @@
+scope	exact_head	command_group	exit_code	classification	result	evidence
+A	ae0887b8125601c98dc809cffe01c7f1c78bb998	pass-two exact-head suite	0	PASS	Trusted/comparator/registry/locks/blueprint/no-sorry/24-axiom replay green	../pass-two/A_BUILD_REPORT.md
+B	6d42bbc31c81e7d6a03909e205b56f30f6f7b49a	pass-two exact-head suite	0	PASS	Trusted/four comparator topics/registry/locks/blueprint/no-sorry/34-axiom replay green	../pass-two/B_BUILD_REPORT.md
+C	381a5a98ade7c6bad7122e5182c2fc07332dc747	bash scripts/run_c_repair_validation.sh	0	PASS	Complete exact-head C suite terminal PASS marker	C_BUILD_REPORT.md
+COMBINED	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	58-command serialized combined runner	0	PASS	58/58 exit zero; 2026-08-27T00:47:05Z–01:18:38Z	outputs/COMBINED_COMMAND_EXIT_CODES.tsv
+COMBINED	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	lake -Kjobs=1 build	0	PASS	8,806 jobs	COMBINED_BUILD_REPORT.md
+COMBINED	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	bash scripts/check_no_sorry.sh	0	PASS	Seven topics; exact Challenge boundary; trusted/ChallengeDeps/Solution clean	COMBINED_BUILD_REPORT.md
+COMBINED	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	bash scripts/check_axioms.sh	0	PASS	89/89 declarations; permitted foundations only	COMBINED_AXIOM_AUDIT.tsv
+COMBINED	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	21 explicit comparator target builds	0	PASS	Seven ChallengeDeps, seven Challenge, seven Solution targets	COMBINED_COMPARATOR_AUDIT.tsv
+COMBINED	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	audit-only exact Challenge/Solution theorem-type comparison, first parser	1	COMPARATOR_AUDIT_TOOL_FAILURE	Parser expected name-colon and rejected valid explicit binders before any type comparison; source preflight 7/7	outputs/COMBINED_COMPARATOR_TYPE_AUDIT_FIRST_ATTEMPT.log
+COMBINED	ae50ef2786b904a9aecdcfb1112d7b323f36ea41	audit-only exact Challenge/Solution theorem-type comparison, corrected parser	0	PASS	7/7 exact theorem types; exact-name prefix plus whitespace-only normalization	outputs/COMBINED_COMPARATOR_TYPE_AUDIT_RERUN.log

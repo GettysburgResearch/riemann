@@ -1,0 +1,11 @@
+sequence	evidence	command_exit	classification	first_causal_error	resolution_evidence
+1	raw/C/10_build_XiSourceSpecific.log	1	LEAN_COMPILE_FAILURE	XiExternalInputs.lean left True and True and True after ring normalization in criticalMultiplicityResidual_exact	raw/C/11_build_XiExternalInputs_after_proof_fix.log
+2	raw/C/12_build_XiSourceSpecific_after_proof_fix.log	1	LEAN_COMPILE_FAILURE	XiSourceSpecific.lean orbitV_eq_U_mul_one_sub_s did not close under the pinned field-normalization tactic; later diagnostics also showed the data-returning declaration could not be a theorem	raw/C/16_build_XiSourceSpecific_repair_round3.log
+3	raw/C/14_build_XiSourceSpecific_repair_round1.log	1	LEAN_COMPILE_FAILURE	oneOrbit_cross_curvature_coordinates retained an unsolved qKappa polynomial normalization goal	raw/C/15_build_XiSourceSpecific_repair_round2.log
+4	raw/C/15_build_XiSourceSpecific_repair_round2.log	1	LEAN_COMPILE_FAILURE	a cleanup simp was invoked after its goal had already closed and made no progress	raw/C/16_build_XiSourceSpecific_repair_round3.log
+5	raw/C/21_run_c_repair_validation.log	1	LEAN_COMPILE_FAILURE	RepeatedNodes.pickEntry_self used linarith alone to derive x+x nonzero from x nonzero	raw/C/22_build_RepeatedNodes_targeted.log
+6	raw/C/24_run_c_repair_validation_rerun.log	1	LEAN_COMPILE_FAILURE	XiOrderThree.lean lacked the Topology scope, so neighborhood notation was unresolved	raw/C/26_build_XiOrderThree_targeted_round2.log
+7	raw/C/25_build_XiOrderThree_targeted.log	1	LEAN_COMPILE_FAILURE	regroupedActualXi_energy_tendsto had multiplication versus power-two normal-form mismatch	raw/C/26_build_XiOrderThree_targeted_round2.log
+8	raw/C/28_run_c_repair_validation_rerun2.log	1	TOOLCHAIN_FAILURE	Windows Python decoded Lean UTF-8 output as cp1252 and raised UnicodeDecodeError	raw/C/29_run_c_repair_validation_utf8_retry.log
+9	raw/C/29_run_c_repair_validation_utf8_retry.log	1	SOURCE_LOCK_FAILURE	external statement materialized with CRLF instead of locked LF bytes	raw/C/30_run_c_repair_validation_utf8_lf_retry.log
+10	raw/C/30_run_c_repair_validation_utf8_lf_retry.log	1	AXIOM_AUDIT_FAILURE	axiom parser treated a valid multiline depends-on-axioms record as a malformed single physical line	raw/C/31_axiom_parser_unit_tests.log; raw/C/34_check_axioms_after_parser_fix.log

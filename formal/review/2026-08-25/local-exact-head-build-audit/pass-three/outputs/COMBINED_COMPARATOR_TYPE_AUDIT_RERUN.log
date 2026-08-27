@@ -1,0 +1,6 @@
+COMMAND: python verify_combined_comparator_types.py --repo C:\riemann-pass3\combined --lake C:\Users\gideo\.elan\bin\lake.exe --timeout 1200 --output audit-local-20260827-pass3\concise-staging\COMBINED_COMPARATOR_TYPES.tsv
+FROZEN_HEAD: ae50ef2786b904a9aecdcfb1112d7b323f36ea41
+FROZEN_TREE: bd621c02db310fc318ee287eefeb6e2c76c8b48a
+PASS_COMBINED_COMPARATOR_SOURCE_PREFLIGHT topics=7 challenge_sorries=7 solution_placeholders=0
+PASS_COMBINED_COMPARATOR_TYPE_FIDELITY topics=7 lean_processes=2 normalization=prefix+whitespace-only
+EXIT=0
