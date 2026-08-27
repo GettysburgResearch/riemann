@@ -1,0 +1,150 @@
+{
+  "architecture": "A: direct beta/primitive-pair route",
+  "diagonal_majorant_replay": {
+    "checked_product_shells": 27,
+    "dyadic_level_count": 4,
+    "exact_diagonal": "51502244010572228941629079338142140184256796299/4257366391071221495290708957519203456300000000",
+    "finite_orientation_majorant": "10975869248/45090045",
+    "harmonic_cap": 256,
+    "harmonic_d12_upper_verified": true,
+    "proof_bound": "L_H ||R||_infinity^2 sum_(N<=4H^2/A) d_12(N)/N"
+  },
+  "diagonal_theorem": {
+    "bound": "D_alpha(H) << L_H (1+log(4H^2+2))^12",
+    "status": "proved unconditionally"
+  },
+  "exact_gram_replay": {
+    "core_energy_equals_shared_divisor_gram": true,
+    "diagonal_off_diagonal_split": true,
+    "off_diagonal_equals_exact_gcd_form": true,
+    "rows": [
+      {
+        "alpha": 0,
+        "core_energy_digest": "612d10f6175e25be285c955732977887351887cc1d89fc7e6d6cd1cc03cd11c2",
+        "diagonal_digest": "1215d167d1cf13e5c4a4e53f5abeac9e93f698a4150ffe98f421175cb941be7b",
+        "height_block": [
+          8,
+          12
+        ],
+        "off_diagonal_digest": "25ff9a6f4131cffdc20d38ae827ac01d2835e8c88b8c867d1349a571ba877758",
+        "product_shells": 10
+      },
+      {
+        "alpha": 0,
+        "core_energy_digest": "e50a91b18ee28bf26c3b0813ec0a5f38f6ad0affdf81079152426d8bdd5d66f3",
+        "diagonal_digest": "6dbe099646224efcd9640c10e00f936a0f7c13b5f6f6c00f6f6518b806e74009",
+        "height_block": [
+          12,
+          16
+        ],
+        "off_diagonal_digest": "349ad44ffb636e0d98f54a01a72cf648a3376cbabf90c3cc0f752dda21d388f6",
+        "product_shells": 19
+      },
+      {
+        "alpha": 1,
+        "core_energy_digest": "1397c6424b2de2cf7c387989e7c1ab7eb20eb738964635415854ba66b6f8b13c",
+        "diagonal_digest": "9187cab36c42a6da1208dd08d9f424314f0ec4e3c6cc8dc6405a9e038c73c99c",
+        "height_block": [
+          66,
+          100
+        ],
+        "off_diagonal_digest": "e1cc3a785f70b7cae8dde27aee53c0f9b05c7f460fa1ab051ce3ed33842a182a",
+        "product_shells": 57
+      },
+      {
+        "alpha": 1,
+        "core_energy_digest": "e06e134583feae50bf9dc66c5bf20745b12faa4abf449a8a0a320141be404398",
+        "diagonal_digest": "78ba224f17d78b4728aeea37055c45031d71f3ebf58d2a8776ed93109085a7af",
+        "height_block": [
+          100,
+          134
+        ],
+        "off_diagonal_digest": "bf11efffdf2a6026ee5ae87a8c67e5c791d86677d1e708c64212a025f0f2d376",
+        "product_shells": 64
+      }
+    ]
+  },
+  "exact_theorems": {
+    "coreagg_equivalent_to_primcar": "imported from frozen predecessor",
+    "diagonal_subpower": true,
+    "exact_gcd_decomposition": true,
+    "kernel_positive_definite": true,
+    "offgcdwave_equivalent_to_coreagg": true,
+    "shared_divisor_gram": true
+  },
+  "feature_gram_replay": {
+    "feature_gram_reconstruction": true,
+    "kernel": "K_2(N,M)=sum_(r|gcd(N,M))tau(r)/r=prod_(p|gcd)(1+2/p)",
+    "local_condition_number_asymptotic": "2p",
+    "local_rows": [
+      {
+        "determinant": "1",
+        "discriminant": "5",
+        "prime": 2,
+        "trace": "3"
+      },
+      {
+        "determinant": "2/3",
+        "discriminant": "40/9",
+        "prime": 3,
+        "trace": "8/3"
+      },
+      {
+        "determinant": "2/5",
+        "discriminant": "104/25",
+        "prime": 5,
+        "trace": "12/5"
+      },
+      {
+        "determinant": "2/7",
+        "discriminant": "200/49",
+        "prime": 7,
+        "trace": "16/7"
+      },
+      {
+        "determinant": "2/11",
+        "discriminant": "488/121",
+        "prime": 11,
+        "trace": "24/11"
+      }
+    ],
+    "support": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      10,
+      15,
+      30
+    ]
+  },
+  "open_gate": {
+    "OFFGCDWAVE": "absolute subpower bound for the N!=M signed shared-divisor wavelet correlation in all three alpha channels"
+  },
+  "resource_caps": {
+    "feature_support_size": 8,
+    "finite_fields": 0,
+    "largest_height_endpoint": 134,
+    "zeta_zeros": 0
+  },
+  "scope_firewall": {
+    "architecture_b_claims": false,
+    "coreagg_proved": false,
+    "offgcdwave_proved": false,
+    "primcar_proved": false,
+    "primls_proved": false,
+    "rh_or_grh_proved": false
+  },
+  "source_contract": {
+    "commit": "aaccfe767c3d36a353056c9a2483e3824d89949f",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_PRIMITIVE_CORE_WAVELET_CLOSURE.md": "af735a493a5c74b7158c314079dbf4b72ee11b46",
+      "research/l-families/atlas/function_field/_ffps_core_wavelet_arithmetic.py": "14e9e86fadcf4974ec9d3007aa527a120a19b101",
+      "research/l-families/atlas/function_field/_ffps_core_wavelet_panels.py": "549404d16e1b77340e2d2b365f78010eb505e478",
+      "research/l-families/atlas/function_field/ffps_primitive_core_wavelet_closure.json": "71a0581d1b2629304258e5660b93a46e3fa082c1",
+      "research/l-families/atlas/function_field/ffps_primitive_core_wavelet_closure.py": "e5aa81db7f574fe50a662b6356e0f67dcf0ac386",
+      "tests/test_ffps_primitive_core_wavelet_closure.py": "d89cc149c269276492a91336051a9de6dd253593"
+    }
+  }
+}
