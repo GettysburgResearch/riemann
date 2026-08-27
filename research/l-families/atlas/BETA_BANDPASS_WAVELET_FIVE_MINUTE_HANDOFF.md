@@ -1,9 +1,9 @@
 # Beta band-pass and curve-wavelet successor: five-minute handoff
 
-Status: **frozen exploratory theorem atlas; the newest pass contains a
-sharp all-support carrier criterion, exact function-field calibration,
-spectral/sheaf firewalls, and many bounded discovery packets; RH and
-GRH remain open**
+Status: **frozen exploratory theorem atlas; the newest pass contains an
+all-order beta moment tower, a sharp higher-derivative and growing-rung
+hierarchy, a spectral-zero-free no-gap theorem, exact function-field
+calibration, and sheaf firewalls; RH and GRH remain open**
 
 Parent release: draft PR #757 at
 \(b870366141fe8d5f43d5b81f6e50a67d2a888070\).
@@ -25,39 +25,57 @@ The complete replay and scope ledger is in
 The fastest route into the current head is:
 
 1. Read
-   [FFPS_MOVING_SUPPORT_CARRIER_PHASE_DIAGRAM.md](function_field/FFPS_MOVING_SUPPORT_CARRIER_PHASE_DIAGRAM.md).
-   This is now the direct-beta front door. Its sharp identity is
+   [FFPS_HIGHER_DERIVATIVE_CARRIER_HIERARCHY.md](function_field/FFPS_HIGHER_DERIVATIVE_CARRIER_HIERARCHY.md).
+   This is now the strongest direct-beta front door. At every fixed
+   derivative rung \(m\ge1\),
 
    \[
-    (\log X+S_X)^3\mathcal E_Q(X)
+    (\log X+S_X)^{2m+1}\mathcal E_{m,S_X}(X)
     =
-    12|B(X)|^2
-    +(\log X+S_X)^3\|H_X-H_{X,*}\|_2^2.
+    C_m|B(X)|^2
+    +(\log X+S_X)^{2m+1}\|H_X-H_{X,*}\|_2^2,
    \]
 
-   For the variational parabolic carrier and **any** schedule
-   \(S_X\ge1\),
+   where
+   \(C_m=(m!)^2(2m+1)\binom{2m}{m}^2\). The positive beta polynomial is
+   the unique optimum even among signed carriers. For its complete
+   translated field and **any** schedule \(S_X\ge1\),
 
    \[
     \mathrm{RH}
     \Longleftrightarrow
-    (\log X+S_X)^3\mathcal E_{S_X}(X)=X^{o(1)}.
+    (\log X+S_X)^{2m+1}\mathcal E_{m,S_X}(X)=X^{o(1)}.
    \]
 
-   This is an exact criterion, not an estimate. The best next analytic
-   problem is to exploit the translated beta convolution to control the
-   nonnegative shape defect or improve on the universal support-moment
-   wedge. Abstract carrier optimization alone is closed sharply.
+   After division by \(C_m\), the equivalence remains valid in the safe
+   growing window
+   \(m=o(\log X/\log\log X)\) at fixed width. This is an exact
+   criterion, not the missing estimate. The best next analytic problem
+   is still to exploit source cancellation in the translated beta
+   convolution; support, positivity, derivative order, and diagonal
+   normalization are now closed sharply.
 
 2. Then read
-   [FFPS_UNIFORM_MOVING_CARRIER_BETA_CRITERION.md](function_field/FFPS_UNIFORM_MOVING_CARRIER_BETA_CRITERION.md)
+   [FFPS_BETA_CARRIER_LEGENDRE_MOMENT_TOWER.md](function_field/FFPS_BETA_CARRIER_LEGENDRE_MOMENT_TOWER.md)
+   and
+   [FFPS_SPECTRAL_ZERO_FREE_CARRIER_TILT.md](function_field/FFPS_SPECTRAL_ZERO_FREE_CARRIER_TILT.md).
+   The first proves that every fixed signed field moment is itself
+   RH-equivalent, organizes all logarithmic beta moments into a
+   complete Legendre Parseval tower, and gives an RH-forward
+   growing-order window. The second constructs positive carriers with
+   no real Fourier zeros whose energies approach the sharp optimum.
+   Real spectral zero-freeness has no uniform energy gap; moreover only
+   the positive tilt orientation is zero-free in the right Laplace
+   half-plane.
+
+3. For the original first-derivative phase diagram and its provenance,
+   read
+   [FFPS_MOVING_SUPPORT_CARRIER_PHASE_DIAGRAM.md](function_field/FFPS_MOVING_SUPPORT_CARRIER_PHASE_DIAGRAM.md),
+   [FFPS_UNIFORM_MOVING_CARRIER_BETA_CRITERION.md](function_field/FFPS_UNIFORM_MOVING_CARRIER_BETA_CRITERION.md),
    and
    [FFPS_VARIATIONAL_PROBABILITY_CARRIER_OPTIMUM.md](function_field/FFPS_VARIATIONAL_PROBABILITY_CARRIER_OPTIMUM.md).
-   They explain why every fixed or subpower moving probability carrier
-   remains RH-exact, and why the parabolic carrier uniquely minimizes
-   diagonal cost at fixed support.
 
-3. For the arithmetic-geometric mirror, read
+4. For the arithmetic-geometric mirror, read
    [FUNCTION_FIELD_MOBIUS_CARRIER_CALIBRATION.md](function_field/FUNCTION_FIELD_MOBIUS_CARRIER_CALIBRATION.md),
    then
    [FFPS_FUNCTION_FIELD_BETA_DIVISOR_WAVELET_PILOT.md](function_field/FFPS_FUNCTION_FIELD_BETA_DIVISOR_WAVELET_PILOT.md).
@@ -66,7 +84,7 @@ The fastest route into the current head is:
    divisor-wavelet port. Known function-field RH is imported only as a
    calibration theorem.
 
-4. For the sheaf/Adams route, read
+5. For the sheaf/Adams route, read
    [FFPS_MARKED_PLACE_BIFROBENIUS_GLUING_GATE.md](function_field/FFPS_MARKED_PLACE_BIFROBENIUS_GLUING_GATE.md)
    and
    [FFPS_TERNARY_RELATIVE_CORRESPONDENCE_NORMAL_FORM.md](function_field/FFPS_TERNARY_RELATIVE_CORRESPONDENCE_NORMAL_FORM.md).
@@ -75,7 +93,7 @@ The fastest route into the current head is:
    Artin--Schreier/incidence block fails. A signed
    pushforward/correspondence realization remains open.
 
-5. Use
+6. Use
    [BETA_BANDPASS_WAVELET_RELEASE_AUDIT.md](BETA_BANDPASS_WAVELET_RELEASE_AUDIT.md)
    as the claim and replay ledger. Older sections below remain useful
    provenance, but this list supersedes their original entry order.
@@ -88,7 +106,70 @@ the exact spectral surgery and chirality firewalls.
 
 ## 0. What the aggressive continuation actually established
 
-### A. The carrier problem has a sharp universal solution
+### A. The first moment is one row of an all-order detector tower
+
+For one fixed unit-mass carrier \(Q\), the complete field moments obey
+
+\[
+ M_k(X)
+ =-k\sum_{j=0}^{k-1}\binom{k-1}{j}q_jB_{k-1-j}(X).
+\]
+
+The transform is triangular and has the exponential generating
+identity
+
+\[
+ \mathscr H_X(z)=-z\mathscr Q(z)\mathscr B_X(z).
+\]
+
+Every one fixed \(M_k(X)=X^{o(1)}\) is RH-equivalent. Higher \(k\)
+magnifies an off-line pole order but does not improve the Mertens power
+exponent. The complete shifted-Legendre decomposition resolves every
+logarithmic beta moment into an exact nonnegative energy channel. RH
+also pays a forward growing-order window
+\(k=o(\log X/\log\log X)\) at fixed carrier support; no diagonal
+growing-order converse is inferred.
+
+### B. Higher derivatives give an exact fixed- and growing-rung hierarchy
+
+The positive beta carrier
+
+\[
+ Q_{m,S}(t)=
+ \frac{(2m+1)!}{m!^2S^{2m+1}}t^m(S-t)^m
+\]
+
+is the unique minimizer of \(\|D^mQ\|_2\) among all signed unit-mass
+carriers on \([0,S]\). Its detector is exactly a shifted Legendre
+polynomial. The matched field moment remains
+\(M_m=(-1)^mm!B(X)\), so it cannot be tuned away by a moving carrier.
+
+The critical width power is \(2m+1\). Below it, Young dilation makes
+the premise trivial; above it, an adaptive width forces a macroscopic
+renormalized energy along an infinite subsequence. After the sharp
+factorial normalization, the criterion remains RH-equivalent for
+growing \(m\) whenever
+
+\[
+ \log((2m+1)(2m+3)^2)
+ +(2m+2)\log((\log X+S)/S)=o(\log X).
+\]
+
+### C. Real spectral zero-freeness has no carrier-energy gap
+
+Exponential tilts of the beta optimizer are positive and have no real
+Fourier zeros for every nonzero real tilt. Their \(D^m\)-energies are
+strictly above the optimum but converge to it as the tilt tends to
+zero. Hence the real-Fourier-zero-free positive class has the same
+sharp infimum, which it does not attain.
+
+The sign of the tilt remains decisive for Landau-style use: the
+Laplace zero lattice lies on
+\(\Re z=-2\tau/S\). Positive tilt is right-half-plane zero-free;
+negative tilt moves the lattice into that half-plane. This is a
+spectral-factor design theorem and firewall, not beta cancellation.
+
+### D. The carrier problem has a sharp universal first-rung solution
 
 For every compact unit-mass carrier \(Q_X\), signed or positive, whose
 zero-extended derivative is in \(L^2\), the complete beta field obeys
@@ -117,7 +198,7 @@ The result does not prove a beta-energy bound. It identifies exactly
 which part of such a bound is the classical Mertens signal and which
 part is carrier geometry.
 
-### B. Several attractive compact-kernel shortcuts are now closed
+### E. Several attractive compact-kernel shortcuts are now closed
 
 The continuation proves that:
 
@@ -133,7 +214,7 @@ The continuation proves that:
 These are design firewalls. Future detectors must use source arithmetic,
 not the sign or zero set of a chosen compact factor.
 
-### C. The function-field calibration is exact
+### F. The function-field calibration is exact
 
 For a fixed smooth projective curve \(C/\mathbf F_q\), the normalized
 Möbius coefficients of \(1/Z_C(u)\) and a short parabolic carrier give
@@ -511,11 +592,11 @@ rank \(q^a\).
 
 At the continuation head:
 
-- all 51 changed bounded producers pass normally and under optimized
+- all 54 changed bounded producers pass normally and under optimized
   Python;
-- all 447 tests in the 50 changed focused modules pass in both modes;
-- Ruff lint and format pass on all 101 changed Python files;
-- all 56 changed Markdown files are free of forbidden control bytes;
+- all 500 tests in the 53 changed focused modules pass in both modes;
+- Ruff lint and format pass on all 107 changed Python files;
+- all 59 changed Markdown files are free of forbidden control bytes;
 - the two front-door documents have resolving local links and balanced
   math/fence delimiters;
 - the working diff passes the Git whitespace check.

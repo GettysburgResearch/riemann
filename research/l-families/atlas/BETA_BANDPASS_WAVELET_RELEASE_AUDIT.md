@@ -23,11 +23,29 @@ Programme scope:
 The original audit below remains provenance for the first release
 slice. The branch subsequently grew into four review lanes. The current
 front door is
-[FFPS_MOVING_SUPPORT_CARRIER_PHASE_DIAGRAM.md](function_field/FFPS_MOVING_SUPPORT_CARRIER_PHASE_DIAGRAM.md).
+[FFPS_HIGHER_DERIVATIVE_CARRIER_HIERARCHY.md](function_field/FFPS_HIGHER_DERIVATIVE_CARRIER_HIERARCHY.md).
 
 The strongest exact continuation results are:
 
-1. **Sharp centered carrier duality.** For every compact normalized
+1. **All-order moment and Legendre tower.** Every fixed signed field
+   moment is RH-equivalent; all logarithmic beta moments admit an exact
+   triangular transform and complete shifted-Legendre Parseval
+   decomposition. RH also pays an explicit growing-order forward
+   window.
+
+2. **Higher-derivative fixed- and growing-rung hierarchy.** The
+   positive beta polynomial is the unique signed-carrier variational
+   optimum at every derivative rung. The critical width is
+   \(2m+1\), the matched moment remains the literal beta prefix, and
+   the sharply normalized RH criterion survives
+   \(m=o(\log X/\log\log X)\) at fixed width.
+
+3. **Spectral-zero-free no-gap theorem.** Exponentially tilted positive
+   carriers have no real Fourier zeros and approach the sharp carrier
+   energy infimum without attaining it. Their Laplace zeros lie on
+   \(\Re z=-2\tau/S\), so only positive tilt is right-half-plane safe.
+
+4. **Sharp centered carrier duality.** For every compact normalized
    carrier derivative,
 
    \[
@@ -39,7 +57,7 @@ The strongest exact continuation results are:
    Mertens-plus-shape decomposition and signed-autocorrelation second
    moment.
 
-2. **All-support parabolic criterion.** For every arbitrary prescribed
+5. **All-support parabolic criterion.** For every arbitrary prescribed
    schedule \(1\le S_X<\infty\),
 
    \[
@@ -52,32 +70,34 @@ The strongest exact continuation results are:
    The width power \(3\) is the unique scale-balanced exponent for the
    two proved mechanisms.
 
-3. **Exact curve-zeta calibration.** The same carrier construction on
+6. **Exact curve-zeta calibration.** The same carrier construction on
    \(1/Z_C(u)\) gives an exact coefficient-square energy and is
    equivalent to the reciprocal roots lying on the Weil circle. Weil
    RH is imported, not reproved.
 
-4. **Function-field channel exposure.** The divisor-wavelet pilot
+7. **Function-field channel exposure.** The divisor-wavelet pilot
    isolates a genuine twisted \(L\)-channel; the marked-place packets
    identify two-place recurrences, an elliptic three-place channel,
    higher Tate notches, and all-mark exterior-character structure.
 
-5. **Corrected Adams obstruction.** The native gluing problem is the
+8. **Corrected Adams obstruction.** The native gluing problem is the
    crossed marked-place source graph under partial Frobenius. Local
    Artin--Schreier/incidence blocks remain valid inside fixed marked
    blocks. A signed pushforward or correspondence-level construction
    remains open.
 
-6. **Spectral firewalls.** Chirality, compact carrier zeros, and finite
+9. **Spectral firewalls.** Chirality, compact carrier zeros, and finite
    spectral-factor surgery are not determined by the positive energy.
    Positivity, diagonal interpolation, or a pretty compact zero set
    cannot close the beta problem without new source arithmetic.
 
 Three independent agents rederived the centered-moment theorem,
-all-support renormalization, projected finite-abscissa bound, and
-critical exponent trichotomy. The final packet passes normal and
-optimized replay, 16 focused tests in both modes, Ruff, source-blob
-provenance, delimiter/control-byte checks, and Git whitespace checks.
+all-support renormalization, all-order Legendre tower, higher-rung
+variational and growing-window theorems, spectral tilt/no-gap theorem,
+and critical exponent trichotomy. The three newest packets pass normal
+and optimized replay with \(18\), \(17\), and \(18\) focused tests in
+each mode, respectively, plus Ruff, source-blob provenance,
+delimiter/control-byte checks, and Git whitespace checks.
 
 ## 1. Commit ledger
 
@@ -145,6 +165,9 @@ provenance, delimiter/control-byte checks, and Git whitespace checks.
 | \(19f274c93\) | variational probability-carrier optimum |
 | \(3667da851\) | curve-zeta probability-carrier calibration |
 | \(69a1ead02\) | moving-support beta-energy phase diagram |
+| \(866b082b7\) | all-order beta carrier moment and Legendre tower |
+| \(0123d1ecb\) | higher-derivative fixed/growing-rung hierarchy |
+| \(805ab873c\) | spectral-zero-free positive tilt and no-gap theorem |
 
 ## 2. Claim ledger
 
@@ -187,8 +210,17 @@ provenance, delimiter/control-byte checks, and Git whitespace checks.
 | width-renormalized energy implies RH for arbitrary finite support | **PROVED** |
 | width-renormalized parabolic energy is RH-equivalent for every schedule \(S_X\ge1\) | **PROVED** |
 | width exponent \(p<3\) admits unconditional dilution schedules | **PROVED** |
-| all-support RH forward theorem at \(p>3\) | **NOT PROVED** |
+| every-schedule subpower forward theorem at \(p>3\) | **OBSTRUCTED BY AN EXACT ADAPTIVE SCHEDULE** |
 | variational parabolic density uniquely minimizes derivative energy | **PROVED EXACT** |
+| every fixed carrier field moment is RH-equivalent | **PROVED** |
+| all-order triangular moment transform and Legendre Parseval tower | **PROVED EXACT** |
+| RH-forward growing moment-order window | **PROVED** |
+| positive beta polynomial uniquely minimizes \(m\)-th derivative energy | **PROVED EXACT FOR EVERY FIXED \(m\)** |
+| critical higher-rung width power \(2m+1\) | **PROVED** |
+| normalized safe growing-rung RH equivalence | **PROVED** |
+| positive real-Fourier-zero-free carriers approach the sharp energy infimum | **PROVED; INFIMUM NOT ATTAINED** |
+| spectral tilt Laplace zero line \(\Re z=-2\tau/S\) | **PROVED EXACT** |
+| real spectral zero-freeness forces a uniform local energy gap | **REFUTED** |
 | carrier chirality or compact zero set follows from energy | **REFUTED** |
 | finite compact spectral-factor surgery classification | **PROVED EXACT IN THE STATED CLASS** |
 | curve-zeta parabolic energy criterion | **PROVED EXACT; WEIL RH IMPORTED** |
@@ -224,6 +256,9 @@ python -B research/l-families/atlas/function_field/ffps_function_field_beta_divi
 python -B research/l-families/atlas/function_field/ffps_marked_place_bifrobenius_gluing_gate.py --check
 python -B research/l-families/atlas/function_field/ffps_beta_gram_sign_geometry.py --check
 python -B research/l-families/atlas/function_field/ffps_compact_kernel_finite_spectral_factor_surgery.py --check
+python -B research/l-families/atlas/function_field/ffps_beta_carrier_legendre_moment_tower.py --check
+python -B research/l-families/atlas/function_field/ffps_higher_derivative_carrier_hierarchy.py --check
+python -B research/l-families/atlas/function_field/ffps_spectral_zero_free_carrier_tilt.py --check
 ~~~
 
 Focused test modules:
@@ -251,15 +286,18 @@ tests.test_ffps_function_field_beta_divisor_wavelet_pilot
 tests.test_ffps_marked_place_bifrobenius_gluing_gate
 tests.test_ffps_beta_gram_sign_geometry
 tests.test_ffps_compact_kernel_finite_spectral_factor_surgery
+tests.test_ffps_beta_carrier_legendre_moment_tower
+tests.test_ffps_higher_derivative_carrier_hierarchy
+tests.test_ffps_spectral_zero_free_carrier_tilt
 ~~~
 
 At the full continuation head:
 
-- all 51 changed bounded producers passed normally and under optimized
+- all 54 changed bounded producers passed normally and under optimized
   Python;
-- all 447 tests in the 50 changed focused modules passed in both modes;
-- Ruff lint and format passed on all 101 changed Python files;
-- all 56 changed Markdown packets contain no forbidden control bytes;
+- all 500 tests in the 53 changed focused modules passed in both modes;
+- Ruff lint and format passed on all 107 changed Python files;
+- all 59 changed Markdown packets contain no forbidden control bytes;
 - local links from the two successor front doors resolve;
 - the moving-support packet has balanced inline/display math
   delimiters and independently rederived constants;
@@ -308,7 +346,7 @@ This pass deliberately avoids heavy computation.
 
 The continuation preserves that discipline. Its final carrier packet
 uses no beta terms, primes, zeta zeros, random samples, or quadrature.
-The full 447-test sweep completes in under one minute per Python mode on
+The full 500-test sweep completes in under one minute per Python mode on
 this machine; no high-rank enumeration was introduced.
 
 ## 6. Refuted shortcuts
