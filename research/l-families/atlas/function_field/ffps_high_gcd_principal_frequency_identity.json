@@ -1,0 +1,182 @@
+{
+  "additive_autocorrelation": {
+    "core": 6,
+    "far": {
+      "rational_component": "0",
+      "sha256": "17470f9c984d42391a151d66a56ec3c72fc4ca271585f6a6a331f405b16cefea",
+      "term_count": 2
+    },
+    "identity": "sum_h C_g,I(h)=|Z_I,g|^2",
+    "near": {
+      "rational_component": "4567/315",
+      "sha256": "b69caad11c53fd431d4738782ffb0caf834b5852881f455d8e08e6546887f1eb",
+      "term_count": 2
+    },
+    "near_gap": 2,
+    "principal_frequency": {
+      "rational_component": "4567/315",
+      "sha256": "d4dab8a29033b46d45476dedd3d10fb74bddcfdb4f62f9cf3d47434683991b52",
+      "term_count": 4
+    },
+    "sequence_coordinates": 3,
+    "shifts": 7,
+    "z_squared": {
+      "rational_component": "4567/315",
+      "sha256": "d4dab8a29033b46d45476dedd3d10fb74bddcfdb4f62f9cf3d47434683991b52",
+      "term_count": 4
+    }
+  },
+  "architecture": "A: direct beta/primitive-pair route",
+  "coprimality_inversion": {
+    "identity": "C_cop(g,I)=sum_((d,g)=1) mu(d)/d |Z_(I,gd)|^2",
+    "rows": [
+      {
+        "core": 1,
+        "direct": {
+          "rational_component": "4/9",
+          "sha256": "14b732d70ee7e1994a87d046fa6d099277cd5ad00e3144830a8d00024c6d9991",
+          "term_count": 221
+        },
+        "divisor_inversion": {
+          "rational_component": "4/9",
+          "sha256": "14b732d70ee7e1994a87d046fa6d099277cd5ad00e3144830a8d00024c6d9991",
+          "term_count": 221
+        }
+      },
+      {
+        "core": 2,
+        "direct": {
+          "rational_component": "9",
+          "sha256": "60ee4361e99386470cf64572f51ca0df316a7d92cc26e3ea389ad7fe5549025f",
+          "term_count": 38
+        },
+        "divisor_inversion": {
+          "rational_component": "9",
+          "sha256": "60ee4361e99386470cf64572f51ca0df316a7d92cc26e3ea389ad7fe5549025f",
+          "term_count": 38
+        }
+      },
+      {
+        "core": 3,
+        "direct": {
+          "rational_component": "64/9",
+          "sha256": "3f0876e6962334b99679dc240196e1edd1c06c31992ccd0a8fd0e275382433f8",
+          "term_count": 21
+        },
+        "divisor_inversion": {
+          "rational_component": "64/9",
+          "sha256": "3f0876e6962334b99679dc240196e1edd1c06c31992ccd0a8fd0e275382433f8",
+          "term_count": 21
+        }
+      },
+      {
+        "core": 6,
+        "direct": {
+          "rational_component": "121/9",
+          "sha256": "3b29f1d751366edf48f08893cd2b442e450439576eb8409f3ea56800139b25b1",
+          "term_count": 4
+        },
+        "divisor_inversion": {
+          "rational_component": "121/9",
+          "sha256": "3b29f1d751366edf48f08893cd2b442e450439576eb8409f3ea56800139b25b1",
+          "term_count": 4
+        }
+      },
+      {
+        "core": 10,
+        "direct": {
+          "rational_component": "121/9",
+          "sha256": "71f5281f97f4478d66952204089c0d607d774504a557d29263031ef81e335693",
+          "term_count": 2
+        },
+        "divisor_inversion": {
+          "rational_component": "121/9",
+          "sha256": "71f5281f97f4478d66952204089c0d607d774504a557d29263031ef81e335693",
+          "term_count": 2
+        }
+      }
+    ]
+  },
+  "exact_theorems": {
+    "autocorrelation_zero_frequency_positive": true,
+    "boundary_kernel_mean_nonzero": true,
+    "coprimality_inversion_exact": true,
+    "global_frequency_assembly_equals_coreagg": true,
+    "principal_additive_frequency_equals_z_squared": true
+  },
+  "global_coreagg_frequency": {
+    "identity": "sum_g kappa2(g)/g C_cop(g,I)=sum_r tau(r)/r^2 |Z_(I,r)|^2",
+    "left_coprime_frequency_assembly": {
+      "rational_component": "40171543557643548310712489225/1190162865296272263305276367",
+      "sha256": "ac1b81a3633f5cb136cbdbd4a9fd01dcf2a89dab54574a0bb79aa61966fc2955",
+      "term_count": 220
+    },
+    "local_rows": [
+      {
+        "kappa2_minus_one": "1",
+        "prime": 2,
+        "tau_over_prime": "1"
+      },
+      {
+        "kappa2_minus_one": "2/3",
+        "prime": 3,
+        "tau_over_prime": "2/3"
+      },
+      {
+        "kappa2_minus_one": "2/5",
+        "prime": 5,
+        "tau_over_prime": "2/5"
+      },
+      {
+        "kappa2_minus_one": "2/7",
+        "prime": 7,
+        "tau_over_prime": "2/7"
+      },
+      {
+        "kappa2_minus_one": "2/11",
+        "prime": 11,
+        "tau_over_prime": "2/11"
+      }
+    ],
+    "right_coreagg": {
+      "rational_component": "40171543557643548310712489225/1190162865296272263305276367",
+      "sha256": "ac1b81a3633f5cb136cbdbd4a9fd01dcf2a89dab54574a0bb79aa61966fc2955",
+      "term_count": 220
+    }
+  },
+  "kernel_mean": {
+    "autocorrelation_positivity_margin": "81",
+    "autocorrelation_zero_frequency": "(153-108*sqrt(2))*(log(2))^4",
+    "autocorrelation_zero_frequency_positive": true,
+    "boundary_mean": "(9-6*sqrt(2))*(log(2))^2",
+    "boundary_mean_nonzero": true,
+    "boundary_positivity_margin": "9",
+    "limit_inputs": [
+      "lim_(s->0) (1-2^(-s))/s=log(2)",
+      "lim_(s->0) (s-1)*(5s+3/2)/(s-1/2)=3"
+    ],
+    "q_zero": "1+(-1)*sqrt(2)",
+    "q_zero_squared": "3+(-2)*sqrt(2)"
+  },
+  "resource_caps": {
+    "finite_fields": 0,
+    "radical_replay_product_shell_cap": 42,
+    "zeta_zeros": 0
+  },
+  "scope_firewall": {
+    "coreagg_proved": false,
+    "hidden_vanishing_moment_exists": false,
+    "highfargcdwave_proved": false,
+    "minor_arc_only_estimate_sufficient": false,
+    "near_shift_estimate_sufficient": false,
+    "rh_or_grh_proved": false
+  },
+  "source_contract": {
+    "commit": "5122e939df2fa322b5a3185cf1d78d4b402f3d5f",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_DIVISOR_WAVE_SHIFTED_ZETA_FACTORIZATION.md": "21ef6a6e0078beb85f81fc880e5f161fc6288a8f",
+      "research/l-families/atlas/function_field/FFPS_HIGH_GCD_FAR_GAP_LOCALIZATION.md": "72a4dbf21f452041c939c2c308716abfd49195a9",
+      "research/l-families/atlas/function_field/FFPS_MOLLIFIED_BETA_BOUNDARY_SHELL_IDENTITY.md": "bf4d1baa231086ba7e8eafaecd39730d83c9201a"
+    }
+  }
+}
