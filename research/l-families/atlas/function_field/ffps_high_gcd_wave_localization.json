@@ -1,0 +1,153 @@
+{
+  "architecture": "A: direct beta/primitive-pair route",
+  "bounds": {
+    "low_sector": "|O_low(H;B)| <<_R L_H B^2 (1+log(4H^2+2))^8"
+  },
+  "divisor_harmonic_majorant": {
+    "rows": [
+      {
+        "cap": 4,
+        "left": "50/3",
+        "right": "152587890625/429981696"
+      },
+      {
+        "cap": 8,
+        "left": "4733/105",
+        "right": "112480504131560035634881/37780199833600000000"
+      },
+      {
+        "cap": 12,
+        "left": "18527/231",
+        "right": "2998029456515774993272082050388387067361/348614789508809898092140953600000000"
+      }
+    ],
+    "theorem": "sum_(n<=X) d_8(n)/n <= H_X^8"
+  },
+  "exact_theorems": {
+    "factor_64_reduced_ratio": true,
+    "highgcdwave_equivalent_to_offgcdwave": true,
+    "subpower_low_reduced_sector": true
+  },
+  "high_low_partition": {
+    "partition_exact": true,
+    "rows": [
+      {
+        "cutoff": 1,
+        "full": "8439251083/2156564410",
+        "high": "41706043/117630786",
+        "high_nonzero_terms": 2326,
+        "low": "11511960442/3234846615",
+        "low_nonzero_terms": 463
+      },
+      {
+        "cutoff": 2,
+        "full": "8439251083/2156564410",
+        "high": "-76971498/1078282205",
+        "high_nonzero_terms": 2115,
+        "low": "8593194079/2156564410",
+        "low_nonzero_terms": 674
+      },
+      {
+        "cutoff": 4,
+        "full": "8439251083/2156564410",
+        "high": "172752941/6469693230",
+        "high_nonzero_terms": 1863,
+        "low": "12572500154/3234846615",
+        "low_nonzero_terms": 926
+      },
+      {
+        "cutoff": 6,
+        "full": "8439251083/2156564410",
+        "high": "156246991/497668710",
+        "high_nonzero_terms": 1495,
+        "low": "11643271183/3234846615",
+        "low_nonzero_terms": 1294
+      }
+    ]
+  },
+  "ratio_localization": {
+    "ratio_window": "1/64 < a/b < 64",
+    "rows": [
+      {
+        "H": 4,
+        "alpha": 0,
+        "checked_squarefree_pairs": 1444,
+        "lower": "1",
+        "upper": "64"
+      },
+      {
+        "H": 6,
+        "alpha": 0,
+        "checked_squarefree_pairs": 7569,
+        "lower": "9/4",
+        "upper": "144"
+      },
+      {
+        "H": 8,
+        "alpha": 0,
+        "checked_squarefree_pairs": 23716,
+        "lower": "4",
+        "upper": "256"
+      },
+      {
+        "H": 4,
+        "alpha": 1,
+        "checked_squarefree_pairs": 0,
+        "lower": "1/67",
+        "upper": "64/67"
+      },
+      {
+        "H": 6,
+        "alpha": 1,
+        "checked_squarefree_pairs": 4,
+        "lower": "9/268",
+        "upper": "144/67"
+      },
+      {
+        "H": 8,
+        "alpha": 1,
+        "checked_squarefree_pairs": 9,
+        "lower": "4/67",
+        "upper": "256/67"
+      },
+      {
+        "H": 4,
+        "alpha": 2,
+        "checked_squarefree_pairs": 0,
+        "lower": "1/4489",
+        "upper": "64/4489"
+      },
+      {
+        "H": 6,
+        "alpha": 2,
+        "checked_squarefree_pairs": 0,
+        "lower": "9/17956",
+        "upper": "144/4489"
+      },
+      {
+        "H": 8,
+        "alpha": 2,
+        "checked_squarefree_pairs": 0,
+        "lower": "4/4489",
+        "upper": "256/4489"
+      }
+    ]
+  },
+  "resource_caps": {
+    "largest_H": 8,
+    "synthetic_cap": 30
+  },
+  "scope_firewall": {
+    "highgcdwave_proved": false,
+    "offgcdwave_proved": false,
+    "primcar_proved": false,
+    "rh_or_grh_proved": false
+  },
+  "source_contract": {
+    "commit": "0855a61a2c719b4f93ad02d5aa8390ddff1b7765",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_PRIMITIVE_CORE_GCD_GRAM_CLOSURE.md": "d3b5a372b554f48fda50fc5d4b8de9a37b1ba036",
+      "research/l-families/atlas/function_field/ffps_primitive_core_gcd_gram_closure.py": "73a3f0a6fb05b02a5a469e1f34a7448a6c326fae"
+    }
+  }
+}
