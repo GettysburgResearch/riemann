@@ -1,0 +1,21 @@
+{
+  "cutoff_utc": "2026-08-27T00:00:00Z",
+  "locked_inputs": [
+    "research/l-families/atlas/function_field/FFPS_INFINITE_DYADIC_BOX_BANDPASS_SMOOTHER.md",
+    "research/l-families/atlas/function_field/FFPS_BANDPASS_BETA_ENERGY_LADDER.md",
+    "research/l-families/atlas/BETA_BANDPASS_WAVELET_FIVE_MINUTE_HANDOFF.md"
+  ],
+  "new_branch": "research/gpt56-pro/107000-beta-nyquist-compression",
+  "parent_branch": "codex/beta-bandpass-wavelet",
+  "parent_pr": 758,
+  "parent_sha": "070be728e8d434bfb72645e23f9894acf920d3c0",
+  "proof_object_sha256": "54b824823d430ae40fc29159e2c67f64e31e49ac26d099719a986ebf3b6d721a",
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t107000.source-lock.v1",
+  "status": {
+    "NBV107000": "open",
+    "RH": "unproved",
+    "analytic_compression": "proved unconditional",
+    "finite_rank_criterion": "RH-equivalent"
+  }
+}
