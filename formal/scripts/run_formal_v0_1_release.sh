@@ -4,6 +4,8 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 FORMAL="$ROOT/formal"
 JOBS="${LAKE_JOBS:-1}"
+export PYTHONUTF8=1
+export PYTHONIOENCODING=utf-8
 
 cd "$ROOT"
 python3 formal/scripts/generate_registry.py
@@ -18,7 +20,9 @@ lake -Kjobs="$JOBS" build RiemannFormal.Release
 bash scripts/build_local_comparators.sh
 bash scripts/check_no_sorry.sh
 bash scripts/check_axioms.sh
-python3 scripts/verify_all_comparator_types.py --repo "$ROOT"
+python3 scripts/verify_all_comparator_types.py \
+  --repo "$ROOT" \
+  --expected-manifest "$FORMAL/registry/FORMAL_V0_1_MANIFEST.json"
 
 cd "$ROOT"
 python3 formal/scripts/generate_registry.py

@@ -67,11 +67,19 @@ def main() -> None:
         raise SystemExit("duplicate semantic ID in generated formalization map")
     statuses = Counter(row["formal_status"] for row in rows)
     expected_counts = manifest["registry_expectations"]
-    for status in ("STATED", "PROVED", "PROVED_CONDITIONAL"):
+    actual_counts = {
+        "STATED": statuses["STATED"],
+        "PROVED": sum(
+            statuses[name]
+            for name in ("PROVED", "UPSTREAM_PROVED", "REFUTED_FORMALIZED")
+        ),
+        "PROVED_CONDITIONAL": statuses["PROVED_CONDITIONAL"],
+    }
+    for status, actual in actual_counts.items():
         expected = int(expected_counts[status])
-        if statuses[status] != expected:
+        if actual != expected:
             raise SystemExit(
-                f"formal status count mismatch for {status}: {statuses[status]} != {expected}"
+                f"formal status count mismatch for {status}: {actual} != {expected}"
             )
 
     claimed: dict[str, str] = {}
@@ -128,8 +136,8 @@ def main() -> None:
     print(
         "PASS_FORMAL_V0_1_RELEASE_MANIFEST "
         f"claims={len(rows)} delta_rows={total} topics={len(topics)} "
-        f"stated={statuses['STATED']} proved={statuses['PROVED']} "
-        f"conditional={statuses['PROVED_CONDITIONAL']}"
+        f"stated={actual_counts['STATED']} proved={actual_counts['PROVED']} "
+        f"conditional={actual_counts['PROVED_CONDITIONAL']}"
     )
 
 

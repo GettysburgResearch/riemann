@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import json
 import os
 import re
 import subprocess
@@ -351,6 +352,24 @@ def compare_types(
     return matches
 
 
+def verify_manifest_hashes(
+    path: Path, matches: Iterable[tuple[Topic, str]]
+) -> None:
+    if not path.is_file():
+        fail(f"missing expected comparator-hash manifest: {path}")
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    expected = manifest.get("comparator_type_hashes")
+    if not isinstance(expected, dict):
+        fail("manifest lacks comparator_type_hashes object")
+    actual = {
+        topic.file_stem: hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+        for topic, normalized in matches
+    }
+    if expected != actual:
+        fail(f"comparator hash mismatch; expected={expected} actual={actual}")
+    print(f"PASS_FORMAL_V0_1_COMPARATOR_HASHES topics={len(actual)}")
+
+
 def write_report(path: Path, matches: Iterable[tuple[Topic, str]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as handle:
@@ -482,14 +501,27 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         type=Path,
         help="optional TSV output path (full audit only; never written inside repo by default)",
     )
+    parser.add_argument(
+        "--expected-manifest",
+        type=Path,
+        help="optional formal-v0.1 manifest whose comparator hashes must match",
+    )
     return parser.parse_args(argv)
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(sys.argv[1:] if argv is None else argv)
     if args.self_test:
-        if args.repo is not None or args.preflight or args.output is not None:
-            fail("--self-test cannot be combined with --repo, --preflight, or --output")
+        if (
+            args.repo is not None
+            or args.preflight
+            or args.output is not None
+            or args.expected_manifest is not None
+        ):
+            fail(
+                "--self-test cannot be combined with --repo, --preflight, "
+                "--output, or --expected-manifest"
+            )
         self_test()
         return 0
     if args.repo is None:
@@ -506,8 +538,8 @@ def main(argv: list[str] | None = None) -> int:
         "solution_placeholders=0"
     )
     if args.preflight:
-        if args.output is not None:
-            fail("--output is unavailable with --preflight")
+        if args.output is not None or args.expected_manifest is not None:
+            fail("--output and --expected-manifest are unavailable with --preflight")
         return 0
 
     # These must remain distinct subprocess calls: several Challenge and Solution
@@ -515,6 +547,8 @@ def main(argv: list[str] | None = None) -> int:
     challenge = run_lean_probe(formal, "Challenge", args.lake, args.timeout)
     solution = run_lean_probe(formal, "Solution", args.lake, args.timeout)
     matches = compare_types(challenge, solution)
+    if args.expected_manifest is not None:
+        verify_manifest_hashes(args.expected_manifest.resolve(), matches)
     if args.output is not None:
         output = args.output.resolve()
         if output == repo or output.is_relative_to(repo):

@@ -28,7 +28,9 @@ Quot.sound
 ```
 
 The fail-closed audit rejects missing output, unexpected output, duplicate
-output, `sorryAx`, malformed multiline output and every other axiom.
+manifest entries, `sorryAx`, malformed multiline output and every other axiom.
+Repeated print occurrences of an expected declaration are permitted because
+the retained root, lane, comparator and generated-registry audits overlap.
 
 ## Challenge/Solution separation
 
