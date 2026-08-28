@@ -1,0 +1,46 @@
+PR #760 continuation validation
+===============================
+
+Frozen remote head:
+  5122e939df2fa322b5a3185cf1d78d4b402f3d5f
+
+New mathematical packets:
+  FFPS_DUAL_ARCHITECTURE_FULLPROOF_CONTINUATION.md
+  FFPS_DIVISOR_WAVE_WITT_ZETA_TOWER.md
+  FFPS_GCD_WAVE_MODE_DECOUPLING.md
+  FFPS_RELATIVE_TRACE_TENSOR_CLOSURE.md
+
+Focused validation performed in the artifact runtime:
+  PASS: 9 unit tests under ordinary Python
+  PASS: 9 unit tests under python -O
+  PASS: all three canonical producers under ordinary Python
+  PASS: all three canonical producers under python -O
+  PASS: ordinary and optimized canonical JSON output byte-identical
+  PASS: Python byte compilation
+  PASS: trailing-newline and trailing-whitespace checks
+  PASS: git diff --cached --check on the add-only patch
+
+Source hashes were read back from GitHub at the frozen commits.  The producers
+contain exact source locks.  The local artifact runtime did not contain a full
+Git checkout, so the producer runs used --no-source-lock after the remote blob
+SHAs were independently read back.
+
+Ruff was unavailable in the artifact runtime and is not claimed.
+
+Scientific status:
+  RH and GRH remain unproved.
+
+Artifact file hashes:
+3d823336cbfbd3bdf6761f1bc1910cea1e37c9ae77d63028ba3f24d17fed6af9  research/l-families/atlas/function_field/FFPS_DIVISOR_WAVE_WITT_ZETA_TOWER.md
+34943a7a06aa4c0edf6d035a97199c721ee61b9af2d828498bdc06acbeb0b05d  research/l-families/atlas/function_field/FFPS_DUAL_ARCHITECTURE_FULLPROOF_CONTINUATION.md
+5a6dda1d6d8b9f17b092940b05670aa11d6a05193a58921d99fb03f2b3aaf85d  research/l-families/atlas/function_field/FFPS_GCD_WAVE_MODE_DECOUPLING.md
+64d4b74f494fc76648cdd8c500f3e6f2b384ef740bc025f802a0fec05d5508b0  research/l-families/atlas/function_field/FFPS_RELATIVE_TRACE_TENSOR_CLOSURE.md
+3ba722b4daf915b99c1c521c73634f8d35a16419f82ee8b0405a8da393013145  research/l-families/atlas/function_field/ffps_divisor_wave_witt_zeta_tower.json
+de16eff61660747898ddd53bf571642f8f244e6ac88725fa3894f0c317cbae6e  research/l-families/atlas/function_field/ffps_divisor_wave_witt_zeta_tower.py
+7da6637b8eaf90f7ed7ce11d91ff28052e886045bebf1b4e950c44ae35d6a92a  research/l-families/atlas/function_field/ffps_gcd_wave_mode_decoupling.json
+a6525b39e91539764fa99c622b1d6bff1b11c0e3e97bc7f18ce73d027f0ccff8  research/l-families/atlas/function_field/ffps_gcd_wave_mode_decoupling.py
+020f223db25176c7c6c6e5720c785819c3d7bf065723cc035b29446389b37ea0  research/l-families/atlas/function_field/ffps_relative_trace_tensor_closure.json
+4307ca16861c65127d53d469f7d4ca3da201422d239cd35734ceece69222735c  research/l-families/atlas/function_field/ffps_relative_trace_tensor_closure.py
+cd6636627a4bc9491bf9a19c13957f2592fb5e52794ad4092fa00477228d210c  tests/test_ffps_divisor_wave_witt_zeta_tower.py
+20bc62cf392c307d922c510bd7b36eb75bf71c8dc97a54d23a7084372700ce48  tests/test_ffps_gcd_wave_mode_decoupling.py
+af003b6629b032bcec97adcdb23fe4a4dc2673b2c30f296fc9e73a532358425b  tests/test_ffps_relative_trace_tensor_closure.py

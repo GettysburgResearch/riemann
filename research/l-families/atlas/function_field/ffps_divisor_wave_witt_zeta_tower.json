@@ -1,0 +1,220 @@
+{
+  "architecture": "A: direct beta / primitive-pair route",
+  "exact_factorization": "F_xi(s)=prod_(n>=1) prod_(a+b=n) zeta^(67)(n*s-i*(a-b)*xi)^(-ell_(a,b))",
+  "finite_depth_factorization": "extract n<=R; correction normal for Re(s)>1/(R+1)+delta",
+  "first_extractions": {
+    "degree_two_factor": "1/zeta^(67)(2s)",
+    "normal_convergence": "Re(s)>1/(R+1)+delta",
+    "packets": {
+      "1": {
+        "-1": 1,
+        "1": 1
+      },
+      "2": {
+        "0": 1
+      },
+      "3": {
+        "-1": 1,
+        "1": 1
+      },
+      "4": {
+        "-2": 1,
+        "0": 1,
+        "2": 1
+      }
+    },
+    "remainder_after_depth_R": "O_R(p^(-(R+1)Re(s)))"
+  },
+  "resource_caps": {
+    "witt_depth": 8,
+    "zeta_zeros": 0
+  },
+  "scope_firewall": {
+    "finite_local_factors_nonzero_at_every_hypothetical_zero": false,
+    "highgcdwave_proved": false,
+    "hyperbola_cutoff_removed": false,
+    "rh_or_grh_proved": false
+  },
+  "source_blobs": {
+    "research/l-families/atlas/function_field/FFPS_DIVISOR_WAVE_SHIFTED_ZETA_FACTORIZATION.md": "21ef6a6e0078beb85f81fc880e5f161fc6288a8f",
+    "research/l-families/atlas/function_field/ffps_divisor_wave_shifted_zeta_factorization.json": "f716c083a0c4f7cc578084503c1a228d1d93e3fc",
+    "research/l-families/atlas/function_field/ffps_divisor_wave_shifted_zeta_factorization.py": "74cdcfd5e638e8bca9f70646e66ebe47e783f77b",
+    "tests/test_ffps_divisor_wave_shifted_zeta_factorization.py": "f232c040e83202519bb40e73d116f91e70b08ba4"
+  },
+  "source_commit": "5122e939df2fa322b5a3185cf1d78d4b402f3d5f",
+  "witt_tower": {
+    "depth": 8,
+    "local_identity_verified_through_degree": 8,
+    "rows": [
+      {
+        "degree": 1,
+        "dimension": 2,
+        "weights": [
+          {
+            "multiplicity": 1,
+            "weight": -1
+          },
+          {
+            "multiplicity": 1,
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "degree": 2,
+        "dimension": 1,
+        "weights": [
+          {
+            "multiplicity": 1,
+            "weight": 0
+          }
+        ]
+      },
+      {
+        "degree": 3,
+        "dimension": 2,
+        "weights": [
+          {
+            "multiplicity": 1,
+            "weight": -1
+          },
+          {
+            "multiplicity": 1,
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "degree": 4,
+        "dimension": 3,
+        "weights": [
+          {
+            "multiplicity": 1,
+            "weight": -2
+          },
+          {
+            "multiplicity": 1,
+            "weight": 0
+          },
+          {
+            "multiplicity": 1,
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "degree": 5,
+        "dimension": 6,
+        "weights": [
+          {
+            "multiplicity": 1,
+            "weight": -3
+          },
+          {
+            "multiplicity": 2,
+            "weight": -1
+          },
+          {
+            "multiplicity": 2,
+            "weight": 1
+          },
+          {
+            "multiplicity": 1,
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "degree": 6,
+        "dimension": 9,
+        "weights": [
+          {
+            "multiplicity": 1,
+            "weight": -4
+          },
+          {
+            "multiplicity": 2,
+            "weight": -2
+          },
+          {
+            "multiplicity": 3,
+            "weight": 0
+          },
+          {
+            "multiplicity": 2,
+            "weight": 2
+          },
+          {
+            "multiplicity": 1,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "degree": 7,
+        "dimension": 18,
+        "weights": [
+          {
+            "multiplicity": 1,
+            "weight": -5
+          },
+          {
+            "multiplicity": 3,
+            "weight": -3
+          },
+          {
+            "multiplicity": 5,
+            "weight": -1
+          },
+          {
+            "multiplicity": 5,
+            "weight": 1
+          },
+          {
+            "multiplicity": 3,
+            "weight": 3
+          },
+          {
+            "multiplicity": 1,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "degree": 8,
+        "dimension": 30,
+        "weights": [
+          {
+            "multiplicity": 1,
+            "weight": -6
+          },
+          {
+            "multiplicity": 3,
+            "weight": -4
+          },
+          {
+            "multiplicity": 7,
+            "weight": -2
+          },
+          {
+            "multiplicity": 8,
+            "weight": 0
+          },
+          {
+            "multiplicity": 7,
+            "weight": 2
+          },
+          {
+            "multiplicity": 3,
+            "weight": 4
+          },
+          {
+            "multiplicity": 1,
+            "weight": 6
+          }
+        ]
+      }
+    ],
+    "target": "1-(z+z^-1)x"
+  }
+}
