@@ -1,0 +1,22 @@
+{
+  "schema": "formal-a-repair-static-v1",
+  "primary_pr": 734,
+  "repaired_from_head": "92f70a3b49b9295b5efb88491107670065b03317",
+  "binding_cross_review_pr": 747,
+  "binding_cross_review_head": "ebe287cc85b122cbe3efd57b7c30ce17d150d74c",
+  "checks": {
+    "json_parse": "PASS",
+    "tsv_schema": "PASS",
+    "source_lock_mock_replay": "PASS",
+    "shell_syntax": "PASS",
+    "trusted_sorry_admit_scan": "PASS",
+    "custom_axiom_opaque_unsafe_scan": "PASS",
+    "python_ast_parse_verify_source_locks": "PASS",
+    "python_py_compile": "NOT_RUN_FILESYSTEM_PERMISSION"
+  },
+  "lean_executable_available": false,
+  "lake_executable_available": false,
+  "lake_build_executed": false,
+  "build_pass_claimed": false,
+  "rh_proved": false
+}

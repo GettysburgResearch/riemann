@@ -43,10 +43,6 @@ jobs:
           python3 formal/scripts/verify_source_locks.py
           python3 formal/scripts/validate_blueprint.py
 
-      - name: Resolve the exact pinned Lake dependency graph
-        working-directory: formal
-        run: lake update
-
       - name: Fetch Mathlib cache
         working-directory: formal
         run: lake exe cache get
@@ -55,7 +51,7 @@ jobs:
         working-directory: formal
         run: |
           lake build
-          lake build Challenge.RH Solution.RH
+          bash scripts/build_local_comparators.sh
 
       - name: Reject sorry/admit and project axioms in trusted targets
         run: bash formal/scripts/check_no_sorry.sh

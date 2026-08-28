@@ -1,3 +1,7 @@
-import Solution.RH
+import RiemannComparatorSolution.RH
+import RiemannComparatorSolution.MellinAPI
+import RiemannFormal.Analysis.FixedDetectorConsumer
 
 #print axioms rh_statement_exact
+#print axioms Comparator.MellinAPI.fixedMellinConsumerSolution
+#print axioms RiemannFormal.Analysis.fixedDetector_negativeMass_implies_RH

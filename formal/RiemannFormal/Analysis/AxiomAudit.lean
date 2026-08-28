@@ -1,0 +1,22 @@
+import RiemannFormal.Analysis.MellinAPI
+import RiemannFormal.Analysis.SingularityTransfer
+import RiemannFormal.Analysis.LandauConsumer
+import RiemannFormal.Analysis.Reflection
+import RiemannFormal.Analysis.FixedDetectorConsumer
+
+#print axioms RiemannFormal.Analysis.mellin_dilation
+#print axioms RiemannFormal.Analysis.hasMellin_linearCombination_two
+#print axioms RiemannFormal.Analysis.mellin_analyticAt_of_power_bounds
+#print axioms RiemannFormal.Analysis.tailMellin_positivePart_eq_add_negativePart
+#print axioms RiemannFormal.Analysis.logBoxMultiplier_analyticAt
+#print axioms RiemannFormal.Analysis.logBoxMultiplier_nonzero
+#print axioms RiemannFormal.Analysis.fixed_mellin_singularity_transfer
+#print axioms RiemannFormal.Analysis.reciprocalZeta_order_of_projectZero
+#print axioms RiemannFormal.Analysis.nonnegative_landau_boundary
+#print axioms RiemannFormal.Analysis.landau_abscissa_nonpositive
+#print axioms RiemannFormal.Analysis.subpower_negative_mass_holomorphic
+#print axioms RiemannFormal.Analysis.subpower_negative_mass_singularity_transfer
+#print axioms RiemannFormal.Analysis.positiveTailContinuation_agrees_initially
+#print axioms RiemannFormal.Analysis.shiftedReciprocalZeta_nonremovable_of_order
+#print axioms RiemannFormal.Analysis.fixedDetector_negativeMass_implies_RH
+#print axioms RiemannFormal.Analysis.functionalEquationReflection_closes_RH

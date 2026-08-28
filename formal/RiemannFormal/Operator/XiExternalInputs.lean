@@ -1,0 +1,46 @@
+import RiemannComparatorChallengeDeps.XiPickOrderThreeConditional
+
+namespace RiemannFormal.Operator
+
+open ChallengeDeps.XiPickOrderThreeConditional
+
+/-- The bibliographic/artifact lock is an exact data equality, independently
+of the repository claim-file SHA. -/
+theorem plattTrudgian_source_lock_exact :
+    SourceLockExact plattTrudgianSourceLock := rfl
+
+/-- The verified-height theorem carries its own exact external source lock. -/
+theorem publishedVerifiedHeight_source_locked
+    (h : PublishedVerifiedHeightTheorem) :
+    SourceLockExact h.sourceLock :=
+  h.sourceLockExact
+
+/-- Exact multiplicity bookkeeping for the selected critical reserve: one
+coefficient unit is consumed by the reserve and the remaining
+`(m₀ - 1) R₀` stays in the grouped Xi expansion. -/
+theorem criticalMultiplicityResidual_exact
+    (reserve : SelectedCriticalReserve) :
+    CriticalMultiplicityResidual reserve := by
+  intro t
+  cases reserve with
+  | mk orbit gamma_le_half_height =>
+    cases orbit with
+    | mk gamma multiplicity gamma_pos one_le_multiplicity zeta_zero
+        multiplicity_eq_analyticOrder =>
+      simp [criticalOrbitJet, criticalUnitJet, jetAdd, jetScale]
+      ring_nf
+      all_goals simp
+
+/-- Every repaired headline input exposes the precise finite-height theorem,
+grouped actual-Xi expansion, multiplicity residual, and one-use reserve ledger.
+This theorem is used by QA to reject an inert proposition bundle. -/
+theorem actualXiInputs_have_concrete_dependencies
+    (inputs : ActualXiOrderThreeInputs) :
+    SourceLockExact inputs.verified.sourceLock ∧
+      CriticalMultiplicityResidual inputs.grouped.selectedReserve ∧
+      Nonempty (ActualXiReserveAllocation inputs.grouped) ∧
+      RegroupedActualXiC2Approximation inputs.grouped inputs.reserve :=
+  ⟨inputs.verified.sourceLockExact, inputs.residual, ⟨inputs.reserve⟩,
+    inputs.paidC2Approximation⟩
+
+end RiemannFormal.Operator

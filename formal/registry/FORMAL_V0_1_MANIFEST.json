@@ -1,0 +1,77 @@
+{
+  "schema": "riemann-formal-v0.1-release-manifest-v1",
+  "release_name": "formal-v0.1",
+  "scientific_status": "RIEMANN_HYPOTHESIS_UNPROVED",
+  "scientific_release": {
+    "commit": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+    "canonical_claims_path": "canonical/2026-08-22/claims.tsv",
+    "research_pr_cutoff": 707,
+    "canonical_claim_count": 139
+  },
+  "formal_bootstrap": "573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f",
+  "formal_sources": {
+    "A": {
+      "pr": 734,
+      "commit": "ae0887b8125601c98dc809cffe01c7f1c78bb998"
+    },
+    "B": {
+      "pr": 733,
+      "commit": "6d42bbc31c81e7d6a03909e205b56f30f6f7b49a"
+    },
+    "C": {
+      "pr": 735,
+      "commit": "381a5a98ade7c6bad7122e5182c2fc07332dc747"
+    }
+  },
+  "independent_build_audit": {
+    "pr": 755,
+    "commit": "8ef4b09093d8a1189c60287e70256aedda33b320",
+    "combined_rehearsal_commit": "ae50ef2786b904a9aecdcfb1112d7b323f36ea41",
+    "combined_rehearsal_tree": "bd621c02db310fc318ee287eefeb6e2c76c8b48a",
+    "commands_passed": 58,
+    "commands_total": 58,
+    "trusted_build_jobs": 8806,
+    "axiom_outputs": 89,
+    "exact_type_comparisons": 7
+  },
+  "toolchain": {
+    "lean": "v4.33.0-rc2",
+    "mathlib": "51e6992efd06126df61a496bebf8f49482a4e129",
+    "zeta23": "cec57f919ccf34e5fa5372b4ba332f7c848bbb6e"
+  },
+  "registry_expectations": {
+    "canonical_claims": 139,
+    "canonical_delta_rows": 31,
+    "STATED": 2,
+    "PROVED": 10,
+    "PROVED_CONDITIONAL": 8
+  },
+  "trust_expectations": {
+    "challenge_topics": 7,
+    "challenge_placeholders": 7,
+    "trusted_placeholders": 0,
+    "solution_placeholders": 0,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "comparator_type_hashes": {
+    "RH": "deb7b62cb10fb8f6116044c70ee8695d793850ffc7916d88dda76b5b13c3daa2",
+    "MellinAPI": "b320b4aa7132e4f9a2e0b7a95307bdea13aa4df2390cca2b4a97cc15eab70725",
+    "ArithmeticRows23": "8109c1452090ac5745c8c46d9a4048b50ff53e45b71fa4472c9b647d2dbd29c9",
+    "FixedDetectorFiveThree": "977ee631dd98252fc6eb61717eff607e77eddb65585fe76db1200d22dd019ca7",
+    "OperatorPositiveSchurRescue": "fbbb28dbc0437758f0e4436228128a9f246ce95be16a4a4f88394d850891973d",
+    "XiPickThreeNode": "a3261012f73bc46347921489152741cd48798d31672d067d1ec7e1c8cc49245a",
+    "XiPickOrderThreeConditional": "1f9ede6875f49c3b0812bf9467ad863f7cc338afcde7c3c0a50f38269b6fb040"
+  },
+  "release_scope": {
+    "post_pr_707_research": "EXCLUDED",
+    "heavy_numerical_campaigns": "NOT_RUN",
+    "unconditional_lean_theorem_proving_rh": "NONE",
+    "conditional_lean_theorem_concluding_rh": "PRESENT_WITH_EXPLICIT_PREMISES"
+  },
+  "final_release_commit": "RECORDED_IN_PULL_REQUEST_AFTER_TREE_CREATION",
+  "final_release_tree": "RECORDED_IN_PULL_REQUEST_AFTER_TREE_CREATION"
+}

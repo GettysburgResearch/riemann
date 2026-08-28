@@ -1,1 +1,2 @@
 import RiemannFormal.MellinLandau.Contract
+import RiemannFormal.MellinLandau.FixedDetectorAssembly

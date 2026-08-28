@@ -1,16 +1,25 @@
 # Trust model
 
-## Trusted targets
+formal-v0.1 separates statement identity, proof implementation, scientific
+status and external evidence.
 
-The default `RiemannFormal` library, `Solution` comparator library, and release modules must contain:
+## Trusted source closure
 
-- no `sorry`;
-- no `admit`;
-- no custom mathematical axioms;
-- no import of Formal Conjectures as proof evidence;
-- no hidden assertion that an RH-bearing open cut holds.
+The trusted Lean library consists of:
 
-The only permitted foundational axioms in headline `#print axioms` output are Lean's standard:
+```text
+formal/RiemannFormal/**
+formal/comparator/ChallengeDeps/**
+formal/comparator/Solution/**
+```
+
+It must contain no `sorry`, `admit`, project `axiom`, `opaque`, `unsafe`, or
+unresolved tactic-suggestion declaration. The standalone
+`RiemannFormal.Analysis.ComparatorSmoke` file imports a Solution module only to
+exercise the comparator build and is deliberately not imported by the trusted
+`RiemannFormal.Analysis` aggregate.
+
+The permitted foundational axioms are exactly:
 
 ```text
 propext
@@ -18,18 +27,61 @@ Classical.choice
 Quot.sound
 ```
 
-A theorem with an explicit unproved mathematical hypothesis is conditional and must be recorded as `PROVED_CONDITIONAL`.
+The fail-closed audit rejects missing output, unexpected output, duplicate
+manifest entries, `sorryAx`, malformed multiline output and every other axiom.
+Repeated print occurrences of an expected declaration are permitted because
+the retained root, lane, comparator and generated-registry audits overlap.
 
-## Trusted statements versus solutions
+## Challenge/Solution separation
 
-Files under `comparator/Challenge/` are trusted statement specifications. They may contain deliberate `sorry` placeholders and import only Mathlib through their complete statement dependency layer.
+The seven Challenge files are Mathlib-only statement surfaces. Each contains
+exactly one deliberate placeholder. The matching ChallengeDeps and Solution
+files are placeholder-free.
 
-Files under `comparator/Solution/` are untrusted implementations checked against those statements and must be sorry-free.
+Exact statement fidelity is checked in isolated Lean processes. The verifier
+removes only the exact queried declaration-name prefix and whitespace before
+comparison. Explicit binders and every mathematical symbol remain
+load-bearing.
 
-## External libraries
+Challenge placeholders do not enter the trusted aggregate or Solution proof
+closure.
 
-- Mathlib supplies the canonical Riemann zeta function and `RiemannHypothesis`.
-- Zeta23 is a pinned Apache-2.0 dependency and supplies reusable analytic infrastructure.
-- Formal Conjectures is a statement-comparison reference only.
+## Open mathematics
 
-Exact pins and the upstream comparison decision are in `registry/SOURCE_LOCKS.json` and `UpstreamAudit.md`.
+An open theorem is represented as a proposition or an explicit theorem
+parameter. It is never installed as an axiom asserting that it holds.
+
+For example, the tail-Mellin Landau and negative-mass holomorphy results are
+exact propositions consumed explicitly by a conditional theorem. Compiling
+that implication establishes the implication only; it does not prove either
+premise or RH.
+
+Likewise, the actual-Xi order-three wrapper keeps the external verified-height,
+grouped convergence, multiplicity, tail and reserve inputs explicit.
+
+## Source and release locks
+
+The release manifest pins:
+
+- the August 22 scientific integration and PR #707 research cutoff;
+- the formal bootstrap;
+- exact A/B/C source heads;
+- the independent exact-head build audit;
+- Lean, Mathlib and Zeta23 revisions;
+- expected registry, comparator and axiom counts.
+
+The final reconciliation commit and tree are recorded in the integration PR,
+because a commit cannot contain its own hash.
+
+## Computation boundary
+
+This formal release runs ordinary Lean compilation and small exact validation
+scripts. It does not rerun historical zeta-zero scans, interval campaigns,
+finite-field censuses, trace-cube searches or other heavy computations.
+External artifacts remain external unless a kernel-checked certificate and
+verified checker are supplied.
+
+Machine verification checks the declaration actually presented to Lean. Human
+and comparator review remains necessary to ensure that declaration is the
+intended scientific statement and uses the correct source, normalization,
+quantifiers and conclusion scope.

@@ -1,54 +1,52 @@
 # Riemann formalization
 
-This directory is an independent Lean 4/Lake project inside the Riemann research repository.
-It formalizes the reviewed scientific release at repository commit
-`852d8aa05c701ea7818ce8a50543e68987fef5cc` and research cutoff PR #707.
+This nested Lean project contains the formalization track for the Riemann
+Agentic Polymath repository.
 
-## Literal status
+**Current release: formal-v0.1. The Riemann Hypothesis remains unproved.**
 
-```text
-Riemann Hypothesis:       UNPROVED
-formal proof of RH:       NONE
-reviewed-only path to RH: NONE
-trusted custom axioms:    FORBIDDEN
-```
+Start here:
 
-The bootstrap establishes infrastructure and trusted statement plumbing. It does not claim that the 139 reviewed scientific claims have already been formalized.
+1. [`FORMAL_V0_1.md`](FORMAL_V0_1.md) — release scope, provenance and exact status;
+2. [`RESULTS.md`](RESULTS.md) — strongest unconditional and conditional results;
+3. [`OPEN_GATES.md`](OPEN_GATES.md) — missing analytic, arithmetic and operator inputs;
+4. [`TRUST.md`](TRUST.md) — Challenge/Solution, no-sorry and axiom boundaries;
+5. [`registry/FORMAL_V0_1_MANIFEST.json`](registry/FORMAL_V0_1_MANIFEST.json) — machine-readable locks;
+6. generated `registry/FORMALIZATION_MAP.tsv` — all 139 canonical semantic claims.
 
-## Build
+## Exact build
 
 From the repository root:
 
 ```bash
-python3 formal/scripts/generate_registry.py
-python3 formal/scripts/validate_registry.py
-python3 formal/scripts/verify_source_locks.py
-python3 formal/scripts/validate_blueprint.py
-
 cd formal
-lake update
 lake exe cache get
-lake build
-lake build Solution.RH
 cd ..
-
-bash formal/scripts/check_no_sorry.sh
-bash formal/scripts/check_axioms.sh
+bash formal/scripts/run_formal_v0_1_release.sh
 ```
 
-`formal/registry/FORMALIZATION_MAP.tsv` is a deterministic generated report and is intentionally not committed. Reviewers edit only their sparse owned delta files; a later formal release reconciliation snapshots the joined registry.
+The release runner performs:
 
-## Layers
+- the trusted Lean build;
+- all seven Challenge/ChallengeDeps/Solution comparator builds;
+- exact Challenge/Solution theorem-type comparison;
+- canonical registry, source-lock and blueprint validation;
+- the trusted no-sorry/custom-axiom boundary;
+- the complete fail-closed axiom audit;
+- the formal-v0.1 manifest and release-front-door checks.
 
-- `RiemannFormal/Statement/`: canonical propositions, release metadata, and open-cut identifiers.
-- `RiemannFormal/Upstream/`: Mathlib/Zeta23 bridges and source locks.
-- `RiemannFormal/Analysis/`: analytic infrastructure owned by Formalization Reviewer A.
-- `RiemannFormal/Arithmetic/` and `MellinLandau/`: arithmetic and fixed-detector work owned by Reviewer B.
-- `RiemannFormal/Operator/` and `Refutations/`: operator algebra and formal firewalls owned by Reviewer C.
-- `comparator/`: trusted Mathlib-only statements and sorry-free solution modules.
-- `registry/`: the exact semantic-ID/formal-status join and sparse reviewer deltas.
-- `Experimental/`: incomplete work excluded from trusted default targets.
+It does not run distributed mathematics or any historical heavy numerical
+campaign.
 
-## Source policy
+## Scientific boundary
 
-The scientific registry is `../canonical/2026-08-22/claims.tsv`. Formal status is tracked separately. A compiled theorem with an explicit open hypothesis is `PROVED_CONDITIONAL`, not `PROVED`.
+The formal library contains genuine unconditional finite algebra and genuine
+conditional implications. A conditional theorem concluding RH is not an
+unconditional proof: the tail-Mellin Landau, negative-mass holomorphy and
+fixed arithmetic producer estimates remain explicit inputs.
+
+The actual-Xi order-three theorem likewise remains conditional and concludes
+positive semidefiniteness through order three only.
+
+Research after PR #707 is excluded from formal-v0.1. It may enter a later
+release only after scientific review and canonical integration.

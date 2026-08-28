@@ -1,1 +1,112 @@
-% Reviewer B owns this file after bootstrap merge.
+% Reviewer B arithmetic and fixed-detector formalization repair.
+
+\section{Arithmetic and fixed-detector substrate}
+
+\begin{theorem}[Exact common-zero exclusion for rows 2 and 3]
+\label{thm:B-rows23-exact}
+\lean{RiemannFormal.Arithmetic.FixedRows.rows23_no_common_zero}
+For \(a=2^{-z}\) with \(\lVert a\rVert<1\), the reviewed row-two and
+scaled row-three numerator polynomials cannot vanish simultaneously.
+The proof is exact complex algebra and eliminates the second variable.
+Semantic ID: \texttt{CONSUMER.MELLIN.TWO\_ROW}.
+\end{theorem}
+
+\begin{theorem}[Exact fixed \(5{:}3\) noncancellation]
+\label{thm:B-five-three-exact}
+\lean{RiemannFormal.Arithmetic.FixedRows.fiveThree_nonzero}
+The fixed scalar numerator factors as
+\[
+ -3(a-1)(a-2),
+\]
+and is nonzero on \(\lVert a\rVert<1\).
+Semantic ID: \texttt{CONSUMER.MELLIN.FIVE\_THREE}.
+\end{theorem}
+
+\begin{theorem}[Generic scalar first-owner recursion]
+\label{thm:B-first-owner-scalar}
+\lean{RiemannFormal.Arithmetic.SourceIdentities.scalarFirstOwnerExpansion_eq_finiteEulerProduct}
+A generic finite scalar recursion equals its finite Euler product in every
+commutative coefficient ring.
+\notready
+This declaration is not the full reviewed \texttt{L-99601}: labelled prime
+occurrences, commuting shifts, complete future-prime products, accumulated
+parity, and disjoint/exhaustive ownership remain to be formalized.
+Canonical semantic ID awaiting completion:
+\texttt{ARITH.SHARP.SEQUENTIAL\_FIRST\_OWNER}.
+\end{theorem}
+
+\begin{theorem}[Exact finite source firewalls]
+\label{thm:B-source-firewalls}
+\lean{RiemannFormal.Arithmetic.SourceIdentities.raw_cutoff_ne_rn_child_16_4_4}
+The trusted arithmetic layer formalizes the actual SHARP target
+\(T(y)=(4\sqrt y-3)\mathbf 1_{y\ge1}\) at the reviewed
+\((Y,Z,t)=(16,4,4)\) cell: parent capacity is \(5\), child response is
+\(1\), the RN density is \(1/5\), and the raw cutoff is not the RN child.
+It also proves
+\lean{RiemannFormal.Arithmetic.SourceIdentities.response_capacity_coefficients_differ_16_4_4},
+\lean{RiemannFormal.Arithmetic.SourceIdentities.native_one_prime_ne_contracted_two_child},
+and the quantified normalization firewall
+\lean{RiemannFormal.Arithmetic.SourceIdentities.normalized_p_inv_ne_p_inv_sqrt}.
+
+Role indices prevent implicit substitution between native source, auxiliary
+positive source, signed observation, response, and capacity.  They do not by
+themselves certify provenance: public coefficient extraction and explicit
+reconstruction remain possible and must be audited separately.
+\notready
+The complete canonical source ledger and every conclusion-facing provenance
+interface are not yet formalized.
+Semantic ID: \texttt{ARITH.SOURCE.TYPING\_FIREWALLS}.
+\end{theorem}
+
+\begin{theorem}[Half-divisor coefficient and Dirichlet square]
+\label{thm:B-half-divisor-local}
+\lean{RiemannFormal.Arithmetic.HalfDivisor.eta_mul_eta}
+For
+\[
+ \eta(p^k)=\binom{2k}{k}/4^k,
+\]
+the Mathlib arithmetic-function Dirichlet convolution satisfies
+\(\eta*\eta=\zeta\).  The coefficient convolution is
+\lean{RiemannFormal.Arithmetic.HalfDivisor.etaCoeff_antidiagonal}, and the
+generic finite convolution cancellation is
+\lean{RiemannFormal.Arithmetic.HalfDivisor.genericOneFieldConvolution}.
+\notready
+The exact \(b_U/h_U\) fields, ratio-four kernel, Hardy norm-three estimate,
+endpoint localization, and signed near-collision theorem are not asserted.
+Canonical semantic ID awaiting completion:
+\texttt{ARITH.VAUGHAN.HALF\_DIVISOR}.
+\end{theorem}
+
+\begin{theorem}[Generic finite tap and summation helpers]
+\label{thm:B-wavelet-generic}
+\lean{RiemannFormal.Arithmetic.Wavelet.threeTap_minimal}
+The trusted finite layer proves a generic four-tap factorization, generic
+three-tap minimality, finite shifts, affine-nuisance sign flip, and the finite
+summation-by-parts identity
+\lean{RiemannFormal.Arithmetic.Wavelet.finite_sum_by_parts}.
+\notready
+These declarations are not the canonical minimal ordinary-Mobius wavelet or
+its Abel--Mertens frame.  The exact \(\sqrt2\) coefficients, piecewise
+ratio-eight kernel, factor-67 negative copy, endpoint conventions, compact
+frame assembly, and quantitative same-K1 translation remain unformalized.
+Canonical semantic IDs awaiting completion:
+\texttt{ARITH.WAVELET.MINIMAL\_RATIO8},
+\texttt{ARITH.WAVELET.ABEL\_MERTENS}, and
+\texttt{ARITH.XD.SAME\_K1\_TRANSLATION}.
+\end{theorem}
+
+\begin{theorem}[Non-circular arithmetic consumer input]
+\label{thm:B-fixed-native-input}
+\lean{RiemannFormal.MellinLandau.fixedFiveThreeArithmeticInput_spec}
+Given a supplied native source, Reviewer B packages one fixed coefficient
+family, its exact source identity, and the zero-safe fixed \(5{:}3\) numerator.
+The two-row analogue is
+\lean{RiemannFormal.MellinLandau.fixedRows23ArithmeticInput_spec}.
+\notready
+No theorem here concludes RH.  The native negative-mass estimate, Mellin
+transform, Landau boundary theorem, multiplicity bookkeeping, holomorphic
+defect control, and functional-equation reflection must be supplied by the
+reconciled analytic API.
+Canonical semantic ID awaiting composition:
+\texttt{API.MELLIN.SUBPOWER\_NEGATIVE\_MASS}.
+\end{theorem}
