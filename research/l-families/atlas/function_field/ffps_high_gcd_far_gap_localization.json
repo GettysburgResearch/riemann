@@ -1,0 +1,186 @@
+{
+  "architecture": "A: direct beta/primitive-pair route",
+  "bounds": {
+    "near_gap": "|O_near(H;G)| <<_R L_H (2G+1) (1+log(4H^2+G+2))^12"
+  },
+  "divisor_harmonic": {
+    "rows": [
+      {
+        "cap": 6,
+        "k": 4,
+        "left": "103/10",
+        "right": "5764801/160000"
+      },
+      {
+        "cap": 10,
+        "k": 4,
+        "left": "5066/315",
+        "right": "2967978983263921/40327580160000"
+      },
+      {
+        "cap": 16,
+        "k": 4,
+        "left": "17646271/720720",
+        "right": "35245828868437678209351361/269815127746582978560000"
+      },
+      {
+        "cap": 6,
+        "k": 8,
+        "left": "434/15",
+        "right": "33232930569601/25600000000"
+      },
+      {
+        "cap": 10,
+        "k": 8,
+        "left": "1165/21",
+        "right": "8808899245096338251414340294241/1626313721561225625600000000"
+      },
+      {
+        "cap": 16,
+        "k": 8,
+        "left": "4415689/40040",
+        "right": "1242268452623194823956293056392719709787508352552321/72800203160904891909795498115521419673600000000"
+      }
+    ],
+    "theorem": "sum_(n<=X) d_k(n)/n <= H_X^k for k=4,8"
+  },
+  "exact_theorems": {
+    "highfargcdwave_equivalent_to_highgcdwave": true,
+    "near_gap_absolute_subpower": true,
+    "shifted_coprimality_normal_form": true,
+    "three_way_partition": true
+  },
+  "resource_caps": {
+    "partition_cap": 32,
+    "shifted_cauchy_cap": 48,
+    "tau_square_cap": 80
+  },
+  "scope_firewall": {
+    "gap_is_in_reduced_product_shell_variables": true,
+    "highfargcdwave_proved": false,
+    "highgcdwave_proved": false,
+    "qualitative_averaged_chowla_imported": false,
+    "rh_or_grh_proved": false
+  },
+  "shifted_cauchy": {
+    "cap": 48,
+    "common_bound": "4000801740453754066865146979467962626239545297331440523104347652875141679044922586102919795041/8985240617118194113772056144921130693372376163646305421837229439166122233554174361600000000",
+    "conclusion": "each shifted tau correlation is at most H_(X+G)^4",
+    "gap": 7,
+    "max_first_l2_factor": "845769854756295539527/17027717056296685200",
+    "max_second_l2_factor": "845769854756295539527/17027717056296685200",
+    "shifts_checked": 15
+  },
+  "shifted_coprimality": {
+    "checked": 1365,
+    "identity": "gcd(a,a+h)=gcd(a,h)",
+    "limit": 30
+  },
+  "source_contract": {
+    "commit": "680be76bd31acdd96925d0b73f1a469226a19c9f",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_DIVISOR_WAVE_SHIFTED_ZETA_FACTORIZATION.md": "21ef6a6e0078beb85f81fc880e5f161fc6288a8f",
+      "research/l-families/atlas/function_field/FFPS_HIGH_GCD_WAVE_LOCALIZATION.md": "1493a630000c211717339b8dd2e92244b624a6cd",
+      "research/l-families/atlas/function_field/ffps_high_gcd_wave_localization.py": "951ef7a801fa2691e9649403072d9469ea190d8d"
+    }
+  },
+  "tau_square": {
+    "checked": 80,
+    "inequality": "tau(n)^2 <= d_4(n)",
+    "rows": [
+      {
+        "d4": 1,
+        "n": 1,
+        "tau_squared": 1
+      },
+      {
+        "d4": 4,
+        "n": 2,
+        "tau_squared": 4
+      },
+      {
+        "d4": 16,
+        "n": 6,
+        "tau_squared": 16
+      },
+      {
+        "d4": 40,
+        "n": 12,
+        "tau_squared": 36
+      },
+      {
+        "d4": 64,
+        "n": 30,
+        "tau_squared": 64
+      },
+      {
+        "d4": 160,
+        "n": 60,
+        "tau_squared": 144
+      },
+      {
+        "d4": 140,
+        "n": 80,
+        "tau_squared": 100
+      }
+    ]
+  },
+  "three_way_partition": {
+    "cap": 32,
+    "partition_exact": true,
+    "rows": [
+      {
+        "counts": {
+          "high_far": 3011,
+          "high_near": 0,
+          "low": 539
+        },
+        "cutoff": 1,
+        "full": "-15178668877/1823277183",
+        "gap": 0,
+        "high_far": "2584553431/2865149859",
+        "high_near": "0",
+        "low": "-61685743888/6685349671"
+      },
+      {
+        "counts": {
+          "high_far": 2605,
+          "high_near": 152,
+          "low": 793
+        },
+        "cutoff": 2,
+        "full": "-15178668877/1823277183",
+        "gap": 1,
+        "high_far": "35024557298/100280245065",
+        "high_near": "9580984381/100280245065",
+        "low": "-879432329914/100280245065"
+      },
+      {
+        "counts": {
+          "high_far": 2097,
+          "high_near": 362,
+          "low": 1091
+        },
+        "cutoff": 4,
+        "full": "-15178668877/1823277183",
+        "gap": 2,
+        "high_far": "-31974643/280504182",
+        "high_near": "-87262099/4360010655",
+        "low": "-78227507151/9550499530"
+      },
+      {
+        "counts": {
+          "high_far": 1406,
+          "high_near": 606,
+          "low": 1538
+        },
+        "cutoff": 6,
+        "full": "-15178668877/1823277183",
+        "gap": 4,
+        "high_far": "-1035290369/2305292990",
+        "high_near": "2330863341/13370699342",
+        "low": "-807273132241/100280245065"
+      }
+    ]
+  }
+}
