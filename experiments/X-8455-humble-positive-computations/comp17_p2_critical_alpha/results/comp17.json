@@ -1,0 +1,74 @@
+{
+  "alpha_star_by_dps": [
+    {
+      "abs_diff_to_constants": {
+        "0.9975": 4.508924747842924e-05,
+        "1": 0.002454910752521571,
+        "2/sqrt(e)": 0.21551623017778843,
+        "e^(-1/4)": 0.21874430617607357,
+        "log(e+1)/1": 0.3157165982707444,
+        "pi/e": 0.15818226054344328,
+        "pi/sqrt(e)": 0.9079271754827015,
+        "sqrt(pi/e)": 0.07750251425244181
+      },
+      "alpha_star": "0.997545089247478429239635040013",
+      "bracket_width": 1.332267629498489e-17,
+      "dps": 25,
+      "nearest_constant": "0.9975",
+      "p2_at_star": -2.642862389786548e-19
+    },
+    {
+      "abs_diff_to_constants": {
+        "0.9975": 4.508924747842924e-05,
+        "1": 0.002454910752521571,
+        "2/sqrt(e)": 0.21551623017778843,
+        "e^(-1/4)": 0.21874430617607357,
+        "log(e+1)/1": 0.3157165982707444,
+        "pi/e": 0.15818226054344328,
+        "pi/sqrt(e)": 0.9079271754827015,
+        "sqrt(pi/e)": 0.07750251425244181
+      },
+      "alpha_star": "0.997545089247478429239635033809",
+      "bracket_width": 1.3322676295501878e-17,
+      "dps": 40,
+      "nearest_constant": "0.9975",
+      "p2_at_star": -2.6428623801512543e-19
+    },
+    {
+      "abs_diff_to_constants": {
+        "0.9975": 4.508924747842924e-05,
+        "1": 0.002454910752521571,
+        "2/sqrt(e)": 0.21551623017778843,
+        "e^(-1/4)": 0.21874430617607357,
+        "log(e+1)/1": 0.3157165982707444,
+        "pi/e": 0.15818226054344328,
+        "pi/sqrt(e)": 0.9079271754827015,
+        "sqrt(pi/e)": 0.07750251425244181
+      },
+      "alpha_star": "0.997545089247478429239635033809",
+      "bracket_width": 1.3322676295501878e-17,
+      "dps": 60,
+      "nearest_constant": "0.9975",
+      "p2_at_star": -2.6428623801512543e-19
+    }
+  ],
+  "coeff_profile_at_star": {
+    "0": "0.48894947907567480357",
+    "1": "-0.20145309034469850102",
+    "2": "-5.8421441286347374429e-22",
+    "3": "-0.0031297491995553979072",
+    "4": "-0.002084266828729931103",
+    "5": "-0.0013935429910355545411",
+    "6": "-0.00098732701441078445251"
+  },
+  "content_sha256": "5ece84911f51ae129f803aa2c299eb93d9085c44f95ab7e1075d9a6260ff85e9",
+  "disclaimer": "Binary search on mpmath.quad; not a directed zero certificate. Constant comparisons are fishing.",
+  "other_j_root_brackets_in_0.9_1.1": [],
+  "schema": "riemann.x8455.comp17.v1",
+  "status": "EMPIRICAL_PROVISIONAL",
+  "suggested_questions_for_other_agents": [
+    "Is \u03b1* characterized by an exact stationary-phase / boundary-term condition on \u03a6?",
+    "Why j=2 specifically \u2014 related to the quadratic leading factor in \u03a6 ~ e^{9t/2} n^4 terms?",
+    "Does \u03b1* equal half the reciprocal of the first positive zero of some transform of \u03a6?"
+  ]
+}

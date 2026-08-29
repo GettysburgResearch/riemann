@@ -1,0 +1,1141 @@
+{
+  "content_sha256": "10850f9081faa8924972df58cbb6a86ad27c0ad3bfa9d336e6c2bae9092e08a1",
+  "disclaimer": "Float np.roots geometry is discovery-only. Sturm counts use rationalized coeffs. L-16003 converse is already known false in general; this only tables nearby cases.",
+  "rows": [
+    {
+      "N": 4,
+      "alpha": 1.05,
+      "bound_gap": 2,
+      "deficit": 0,
+      "deg": 8,
+      "gap_lower_bound_L16003": 6,
+      "geometry": {
+        "imag_heights": [],
+        "mean_abs_real_root": 2.8567611238875736,
+        "n_nonreal_pairs_float": 0,
+        "n_real_float": 8,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.2716847104064901,
+          "mean_nn": 0.20201694664721406,
+          "median_nn": 0.1887634929566483
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.44012302107165047,
+          "mean_nn": 0.19979925333437223,
+          "median_nn": 0.16850032870586085
+        },
+        "nonreal_upper": [],
+        "real_roots": [
+          -4.1588560902690705,
+          -3.1870153403940176,
+          -2.271684710406484,
+          -1.8094883544807168,
+          1.8094883544807219,
+          2.27168471040649,
+          3.1870153403940185,
+          4.1588560902690705
+        ]
+      },
+      "kind": "windowed",
+      "n_real_sturm": 8,
+      "same_sign_pairs": 6,
+      "sign_pattern": "----+----"
+    },
+    {
+      "N": 4,
+      "alpha": 1.05,
+      "bound_gap": 2,
+      "deficit": 4,
+      "deg": 8,
+      "gap_lower_bound_L16003": 2,
+      "geometry": {
+        "imag_heights": [
+          0.11118806696413308,
+          0.11118806696415172
+        ],
+        "mean_abs_real_root": 3.4993381675956035,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 4,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.0013440968922662222,
+          "mean_nn": 0.0006822644878687889,
+          "median_nn": 0.0006822644878683448
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.34710561927652117,
+          "mean_nn": 0.18326221825620315,
+          "median_nn": 0.1832622182562027
+        },
+        "nonreal_upper": [
+          [
+            1.89869124490344,
+            0.11118806696415172
+          ],
+          [
+            -1.8986912449034414,
+            0.11118806696413308
+          ]
+        ],
+        "real_roots": [
+          -4.000020432083472,
+          -2.9986559031077356,
+          2.9986559031077338,
+          4.000020432083472
+        ]
+      },
+      "kind": "sampled",
+      "n_real_sturm": 4,
+      "same_sign_pairs": 2,
+      "sign_pattern": "-++-+-++-"
+    },
+    {
+      "N": 4,
+      "alpha": 1.0,
+      "bound_gap": 2,
+      "deficit": 0,
+      "deg": 8,
+      "gap_lower_bound_L16003": 6,
+      "geometry": {
+        "imag_heights": [],
+        "mean_abs_real_root": 2.913034171145572,
+        "n_nonreal_pairs_float": 0,
+        "n_real_float": 8,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.2761295884441277,
+          "mean_nn": 0.16882180335226613,
+          "median_nn": 0.19379118027578235
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.261186639965757,
+          "mean_nn": 0.15715392511751955,
+          "median_nn": 0.17045542380627787
+        },
+        "nonreal_upper": [],
+        "real_roots": [
+          -4.181666650313713,
+          -3.205915710237826,
+          -2.276129588444118,
+          -1.9884247355866131,
+          1.9884247355866103,
+          2.2761295884441277,
+          3.205915710237829,
+          4.181666650313739
+        ]
+      },
+      "kind": "windowed",
+      "n_real_sturm": 8,
+      "same_sign_pairs": 6,
+      "sign_pattern": "----+----"
+    },
+    {
+      "N": 4,
+      "alpha": 1.0,
+      "bound_gap": 2,
+      "deficit": 4,
+      "deg": 8,
+      "gap_lower_bound_L16003": 2,
+      "geometry": {
+        "imag_heights": [
+          0.2489364205887618,
+          0.24893642058876317
+        ],
+        "mean_abs_real_root": 3.4972354198639843,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 4,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.005534973270362453,
+          "mean_nn": 0.0027703931343462385,
+          "median_nn": 0.0027703931343472377
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.3512964956546174,
+          "mean_nn": 0.1853503469026806,
+          "median_nn": 0.1853503469026816
+        },
+        "nonreal_upper": [
+          [
+            2.0008729973836785,
+            0.24893642058876317
+          ],
+          [
+            -2.000872997383678,
+            0.2489364205887618
+          ]
+        ],
+        "real_roots": [
+          -4.000005812998328,
+          -2.994465026729638,
+          2.9944650267296375,
+          4.0000058129983325
+        ]
+      },
+      "kind": "sampled",
+      "n_real_sturm": 4,
+      "same_sign_pairs": 2,
+      "sign_pattern": "-++-+-++-"
+    },
+    {
+      "N": 4,
+      "alpha": 0.98,
+      "bound_gap": 6,
+      "deficit": 0,
+      "deg": 8,
+      "gap_lower_bound_L16003": 2,
+      "geometry": {
+        "imag_heights": [],
+        "mean_abs_real_root": 2.939517919928159,
+        "n_nonreal_pairs_float": 0,
+        "n_real_float": 8,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.24956141141294141,
+          "mean_nn": 0.18951791992815903,
+          "median_nn": 0.20265090013159504
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.2115568351807129,
+          "mean_nn": 0.12265696974634044,
+          "median_nn": 0.13951053983260042
+        },
+        "nonreal_upper": [],
+        "real_roots": [
+          -4.192158450028299,
+          -3.2131433502349043,
+          -2.2495614114129086,
+          -2.1032084680365304,
+          2.103208468036502,
+          2.2495614114129414,
+          3.213143350234891,
+          4.192158450028296
+        ]
+      },
+      "kind": "windowed",
+      "n_real_sturm": 8,
+      "same_sign_pairs": 2,
+      "sign_pattern": "--+-+-+--"
+    },
+    {
+      "N": 4,
+      "alpha": 0.98,
+      "bound_gap": 0,
+      "deficit": 4,
+      "deg": 8,
+      "gap_lower_bound_L16003": 4,
+      "geometry": {
+        "imag_heights": [
+          0.2924652851962884,
+          0.29246528519629217
+        ],
+        "mean_abs_real_root": 3.4954519588893214,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 4,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.009068643763603834,
+          "mean_nn": 0.004548041110678747,
+          "median_nn": 0.004548041110675305
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.3548301661478588,
+          "mean_nn": 0.1871005564212519,
+          "median_nn": 0.18710055642124845
+        },
+        "nonreal_upper": [
+          [
+            2.0507478927309615,
+            0.2924652851962884
+          ],
+          [
+            -2.0507478927309553,
+            0.29246528519629217
+          ]
+        ],
+        "real_roots": [
+          -3.9999725615422395,
+          -2.9909313562364113,
+          2.990931356236396,
+          3.999972561542238
+        ]
+      },
+      "kind": "sampled",
+      "n_real_sturm": 4,
+      "same_sign_pairs": 4,
+      "sign_pattern": "+++-+-+++"
+    },
+    {
+      "N": 4,
+      "alpha": 0.96,
+      "bound_gap": 2,
+      "deficit": 4,
+      "deg": 8,
+      "gap_lower_bound_L16003": 2,
+      "geometry": {
+        "imag_heights": [
+          0.10725459515070303,
+          0.10725459515071128
+        ],
+        "mean_abs_real_root": 3.7115866285634276,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 4,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.21962482227835878,
+          "mean_nn": 0.21158662856342714,
+          "median_nn": 0.21158662856342714
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.22294682000091992,
+          "mean_nn": 0.17454176005340805,
+          "median_nn": 0.17454176005340805
+        },
+        "nonreal_upper": [
+          [
+            2.2259142753763568,
+            0.10725459515071128
+          ],
+          [
+            -2.2259142753763568,
+            0.10725459515070303
+          ]
+        ],
+        "real_roots": [
+          -4.203548434848506,
+          -3.219624822278348,
+          3.2196248222783588,
+          4.2035484348484955
+        ]
+      },
+      "kind": "windowed",
+      "n_real_sturm": 4,
+      "same_sign_pairs": 2,
+      "sign_pattern": "--+-+-+--"
+    },
+    {
+      "N": 4,
+      "alpha": 0.96,
+      "bound_gap": 0,
+      "deficit": 4,
+      "deg": 8,
+      "gap_lower_bound_L16003": 4,
+      "geometry": {
+        "imag_heights": [
+          0.334627079222643,
+          0.33462707922264606
+        ],
+        "mean_abs_real_root": 3.4926927172313844,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 4,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.014521427157160094,
+          "mean_nn": 0.007307282768615919,
+          "median_nn": 0.007307282768614254
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.36028294954141504,
+          "mean_nn": 0.18979409815686943,
+          "median_nn": 0.18979409815686776
+        },
+        "nonreal_upper": [
+          [
+            2.107185958056244,
+            0.33462707922264606
+          ],
+          [
+            -2.1071859580562458,
+            0.334627079222643
+          ]
+        ],
+        "real_roots": [
+          -3.999906861619925,
+          -2.98547857284284,
+          2.985478572842858,
+          3.9999068616199134
+        ]
+      },
+      "kind": "sampled",
+      "n_real_sturm": 4,
+      "same_sign_pairs": 4,
+      "sign_pattern": "+++-+-+++"
+    },
+    {
+      "N": 4,
+      "alpha": 0.94,
+      "bound_gap": 2,
+      "deficit": 4,
+      "deg": 8,
+      "gap_lower_bound_L16003": 2,
+      "geometry": {
+        "imag_heights": [
+          0.17339208081757332,
+          0.1733920808175805
+        ],
+        "mean_abs_real_root": 3.7202833455385544,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 4,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.22464534732578745,
+          "mean_nn": 0.22028334553855433,
+          "median_nn": 0.22028334553855156
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.2353197289037432,
+          "mean_nn": 0.17821795198110812,
+          "median_nn": 0.1782179519811109
+        },
+        "nonreal_upper": [
+          [
+            2.2819734048935327,
+            0.1733920808175805
+          ],
+          [
+            -2.2819734048935096,
+            0.17339208081757332
+          ]
+        ],
+        "real_roots": [
+          -4.215921343751329,
+          -3.2246453473257874,
+          3.2246453473257737,
+          4.215921343751327
+        ]
+      },
+      "kind": "windowed",
+      "n_real_sturm": 4,
+      "same_sign_pairs": 2,
+      "sign_pattern": "--+-+-+--"
+    },
+    {
+      "N": 4,
+      "alpha": 0.94,
+      "bound_gap": 0,
+      "deficit": 4,
+      "deg": 8,
+      "gap_lower_bound_L16003": 4,
+      "geometry": {
+        "imag_heights": [
+          0.3770041435366168,
+          0.3770041435366185
+        ],
+        "mean_abs_real_root": 3.4884651673293146,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 4,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.022863493751857256,
+          "mean_nn": 0.011534832670686002,
+          "median_nn": 0.011534832670689665
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.3686250161361122,
+          "mean_nn": 0.19390861484950006,
+          "median_nn": 0.19390861484950372
+        },
+        "nonreal_upper": [
+          [
+            2.1714906170075956,
+            0.3770041435366185
+          ],
+          [
+            -2.171490617007593,
+            0.3770041435366168
+          ]
+        ],
+        "real_roots": [
+          -3.9997938284104926,
+          -2.977136506248154,
+          2.9771365062481427,
+          3.999793828410467
+        ]
+      },
+      "kind": "sampled",
+      "n_real_sturm": 4,
+      "same_sign_pairs": 4,
+      "sign_pattern": "+++-+-+++"
+    },
+    {
+      "N": 4,
+      "alpha": 0.9,
+      "bound_gap": 2,
+      "deficit": 4,
+      "deg": 8,
+      "gap_lower_bound_L16003": 2,
+      "geometry": {
+        "imag_heights": [
+          0.27062666191720336,
+          0.2706266619172041
+        ],
+        "mean_abs_real_root": 3.7342402799961203,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 4,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.24397226784685966,
+          "mean_nn": 0.2342402799961204,
+          "median_nn": 0.23424027999612052
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.2633706529992734,
+          "mean_nn": 0.19231194161907272,
+          "median_nn": 0.19231194161907283
+        },
+        "nonreal_upper": [
+          [
+            2.420330500892843,
+            0.27062666191720336
+          ],
+          [
+            -2.42033050089284,
+            0.2706266619172041
+          ]
+        ],
+        "real_roots": [
+          -4.243972267846858,
+          -3.224508292145383,
+          3.224508292145381,
+          4.24397226784686
+        ]
+      },
+      "kind": "windowed",
+      "n_real_sturm": 4,
+      "same_sign_pairs": 2,
+      "sign_pattern": "--+-+-+--"
+    },
+    {
+      "N": 4,
+      "alpha": 0.9,
+      "bound_gap": 0,
+      "deficit": 4,
+      "deg": 8,
+      "gap_lower_bound_L16003": 4,
+      "geometry": {
+        "imag_heights": [
+          0.4693931240975752,
+          0.4693931240975759
+        ],
+        "mean_abs_real_root": 3.472598408195193,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 4,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.054196735534132845,
+          "mean_nn": 0.02740159180480717,
+          "median_nn": 0.027401591804805392
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.3999582579183878,
+          "mean_nn": 0.2093750974976527,
+          "median_nn": 0.20937509749765093
+        },
+        "nonreal_upper": [
+          [
+            2.33070275309006,
+            0.4693931240975752
+          ],
+          [
+            -2.3307027530900606,
+            0.4693931240975759
+          ]
+        ],
+        "real_roots": [
+          -3.999393551924515,
+          -2.945803264465867,
+          2.945803264465882,
+          3.9993935519245074
+        ]
+      },
+      "kind": "sampled",
+      "n_real_sturm": 4,
+      "same_sign_pairs": 4,
+      "sign_pattern": "+++-+-+++"
+    },
+    {
+      "N": 6,
+      "alpha": 1.05,
+      "bound_gap": 2,
+      "deficit": 0,
+      "deg": 12,
+      "gap_lower_bound_L16003": 10,
+      "geometry": {
+        "imag_heights": [],
+        "mean_abs_real_root": 3.7687456136650144,
+        "n_nonreal_pairs_float": 0,
+        "n_real_float": 12,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.26678482624023214,
+          "mean_nn": 0.16604144075327174,
+          "median_nn": 0.1593609401905438
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.4414988568171436,
+          "mean_nn": 0.17200590330040444,
+          "median_nn": 0.14266782436188574
+        },
+        "nonreal_upper": [],
+        "real_roots": [
+          -6.103680940713276,
+          -5.115173515920348,
+          -4.1393329267668255,
+          -3.1793889536141835,
+          -2.266784826240215,
+          -1.80811251873523,
+          1.8081125187352236,
+          2.266784826240232,
+          3.179388953614134,
+          4.139332926766953,
+          5.115173515920167,
+          6.103680940713381
+        ]
+      },
+      "kind": "windowed",
+      "n_real_sturm": 12,
+      "same_sign_pairs": 10,
+      "sign_pattern": "------+------"
+    },
+    {
+      "N": 6,
+      "alpha": 1.05,
+      "bound_gap": 4,
+      "deficit": 4,
+      "deg": 12,
+      "gap_lower_bound_L16003": 4,
+      "geometry": {
+        "imag_heights": [
+          0.11118806717215489,
+          0.11118806717219425
+        ],
+        "mean_abs_real_root": 4.499669081545653,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 8,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.0013440968953393195,
+          "mean_nn": 0.0003411344960944085,
+          "median_nn": 1.0219765070651476e-05
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.34710561927959427,
+          "mean_nn": 0.13555723830275468,
+          "median_nn": 0.08857469070006374
+        },
+        "nonreal_upper": [
+          [
+            1.8986912450350975,
+            0.11118806717219425
+          ],
+          [
+            -1.898691245035112,
+            0.11118806717215489
+          ]
+        ],
+        "real_roots": [
+          -5.999999998441093,
+          -4.9999999925533025,
+          -4.000020432083547,
+          -2.9986559031046607,
+          2.9986559031047273,
+          4.000020432083444,
+          4.999999992553407,
+          5.999999998441044
+        ]
+      },
+      "kind": "sampled",
+      "n_real_sturm": 8,
+      "same_sign_pairs": 4,
+      "sign_pattern": "++-++-+-++-++"
+    },
+    {
+      "N": 6,
+      "alpha": 1.0,
+      "bound_gap": 2,
+      "deficit": 0,
+      "deg": 12,
+      "gap_lower_bound_L16003": 10,
+      "geometry": {
+        "imag_heights": [],
+        "mean_abs_real_root": 3.8095115499684193,
+        "n_nonreal_pairs_float": 0,
+        "n_real_float": 12,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.26810782052371085,
+          "mean_nn": 0.1467712974775203,
+          "median_nn": 0.14299936878190334
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.26139061807968034,
+          "mean_nn": 0.14221270615536677,
+          "median_nn": 0.1431130490188206
+        },
+        "nonreal_upper": [],
+        "real_roots": [
+          -6.118616302906742,
+          -5.130005949798635,
+          -4.1559927877651734,
+          -3.1961256813435788,
+          -2.268107820523711,
+          -1.988220757472687,
+          1.9882207574727067,
+          2.268107820523685,
+          3.196125681343616,
+          4.155992787765087,
+          5.130005949798719,
+          6.118616302906689
+        ]
+      },
+      "kind": "windowed",
+      "n_real_sturm": 12,
+      "same_sign_pairs": 10,
+      "sign_pattern": "------+------"
+    },
+    {
+      "N": 6,
+      "alpha": 1.0,
+      "bound_gap": 4,
+      "deficit": 4,
+      "deg": 12,
+      "gap_lower_bound_L16003": 4,
+      "geometry": {
+        "imag_heights": [
+          0.2489364154419288,
+          0.2489364154419515
+        ],
+        "mean_abs_real_root": 4.498617801888182,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 8,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.005534972663206794,
+          "mean_nn": 0.0013852887381183843,
+          "median_nn": 3.090626309099065e-06
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.35129649504746174,
+          "mean_nn": 0.13660139652921233,
+          "median_nn": 0.08856756900792995
+        },
+        "nonreal_upper": [
+          [
+            2.0008729891284913,
+            0.2489364154419515
+          ],
+          [
+            -2.000872989128514,
+            0.2489364154419288
+          ]
+        ],
+        "real_roots": [
+          -5.999999998963337,
+          -5.00000036825591,
+          -4.000005812996672,
+          -2.994465027336793,
+          2.9944650273368776,
+          4.0000058129965295,
+          5.000000368256089,
+          5.999999998963245
+        ]
+      },
+      "kind": "sampled",
+      "n_real_sturm": 8,
+      "same_sign_pairs": 4,
+      "sign_pattern": "+--++-+-++--+"
+    },
+    {
+      "N": 6,
+      "alpha": 0.98,
+      "bound_gap": 6,
+      "deficit": 0,
+      "deg": 12,
+      "gap_lower_bound_L16003": 6,
+      "geometry": {
+        "imag_heights": [],
+        "mean_abs_real_root": 3.828575168032956,
+        "n_nonreal_pairs_float": 0,
+        "n_real_float": 12,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.2355359155170187,
+          "mean_nn": 0.16190850136628895,
+          "median_nn": 0.1500375066066475
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.1827562953117079,
+          "mean_nn": 0.12174853356047304,
+          "median_nn": 0.14253939018099682
+        },
+        "nonreal_upper": [],
+        "real_roots": [
+          -6.125545961892796,
+          -5.136717103054064,
+          -4.163357910159294,
+          -3.2022902978559893,
+          -2.2355359155170187,
+          -2.1080038197185593,
+          2.108003819718697,
+          2.2355359155168384,
+          3.2022902978560692,
+          4.163357910159231,
+          5.136717103054022,
+          6.125545961892888
+        ]
+      },
+      "kind": "windowed",
+      "n_real_sturm": 12,
+      "same_sign_pairs": 6,
+      "sign_pattern": "----+-+-+----"
+    },
+    {
+      "N": 6,
+      "alpha": 0.98,
+      "bound_gap": 2,
+      "deficit": 4,
+      "deg": 12,
+      "gap_lower_bound_L16003": 6,
+      "geometry": {
+        "imag_heights": [
+          0.292465280866728,
+          0.29246528086673473
+        ],
+        "mean_abs_real_root": 4.4977260627914895,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 8,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.009068642848121922,
+          "mean_nn": 0.002274103440933206,
+          "median_nn": 1.387953709852674e-05
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.35483016523237687,
+          "mean_nn": 0.13747649252499577,
+          "median_nn": 0.08855091946792926
+        },
+        "nonreal_upper": [
+          [
+            2.0507478841770754,
+            0.29246528086673473
+          ],
+          [
+            -2.0507478841770843,
+            0.292465280866728
+          ]
+        ],
+        "real_roots": [
+          -6.000000011841425,
+          -5.000000320623452,
+          -3.9999725615492014,
+          -2.990931357151878,
+          2.990931357151888,
+          3.999972561549255,
+          5.000000320623325,
+          6.000000011841486
+        ]
+      },
+      "kind": "sampled",
+      "n_real_sturm": 8,
+      "same_sign_pairs": 6,
+      "sign_pattern": "--+++-+-+++--"
+    },
+    {
+      "N": 6,
+      "alpha": 0.96,
+      "bound_gap": 2,
+      "deficit": 4,
+      "deg": 12,
+      "gap_lower_bound_L16003": 6,
+      "geometry": {
+        "imag_heights": [
+          0.11414983694370422,
+          0.11414983694372513
+        ],
+        "mean_abs_real_root": 4.663943051946539,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 8,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.20757797613799278,
+          "mean_nn": 0.16394305194653963,
+          "median_nn": 0.15753457187060693
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.1905369413575766,
+          "mean_nn": 0.1444166986974213,
+          "median_nn": 0.14464129412179116
+        },
+        "nonreal_upper": [
+          [
+            2.2207095590481,
+            0.11414983694370422
+          ],
+          [
+            -2.220709559048077,
+            0.11414983694372513
+          ]
+        ],
+        "real_roots": [
+          -6.13312508790696,
+          -5.143930587536157,
+          -4.171138556205057,
+          -3.207577976137993,
+          3.207577976137893,
+          4.171138556205163,
+          5.143930587536059,
+          6.133125087907036
+        ]
+      },
+      "kind": "windowed",
+      "n_real_sturm": 8,
+      "same_sign_pairs": 6,
+      "sign_pattern": "----+-+-+----"
+    },
+    {
+      "N": 6,
+      "alpha": 0.96,
+      "bound_gap": 2,
+      "deficit": 4,
+      "deg": 12,
+      "gap_lower_bound_L16003": 6,
+      "geometry": {
+        "imag_heights": [
+          0.33462708533346164,
+          0.3346270853334624
+        ],
+        "mean_abs_real_root": 4.4963462463214725,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 8,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.01452142934649192,
+          "mean_nn": 0.0036537765356138285,
+          "median_nn": 4.681554090080198e-05
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.36028295173074687,
+          "mean_nn": 0.13882306930416444,
+          "median_nn": 0.08851766284073825
+        },
+        "nonreal_upper": [
+          [
+            2.107185972339653,
+            0.33462708533346164
+          ],
+          [
+            -2.107185972339643,
+            0.3346270853334624
+          ]
+        ],
+        "real_roots": [
+          -6.000000045714208,
+          -4.999999507332922,
+          -3.999906861585276,
+          -2.985478570653508,
+          2.985478570653519,
+          3.9999068615852233,
+          4.999999507332987,
+          6.000000045714138
+        ]
+      },
+      "kind": "sampled",
+      "n_real_sturm": 8,
+      "same_sign_pairs": 6,
+      "sign_pattern": "-++++-+-++++-"
+    },
+    {
+      "N": 6,
+      "alpha": 0.94,
+      "bound_gap": 2,
+      "deficit": 4,
+      "deg": 12,
+      "gap_lower_bound_L16003": 6,
+      "geometry": {
+        "imag_heights": [
+          0.17865692686998907,
+          0.1786569268700091
+        ],
+        "mean_abs_real_root": 4.670932240468238,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 8,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.21126801280338725,
+          "mean_nn": 0.17093224046823813,
+          "median_nn": 0.16551157311666653
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.19873358010911346,
+          "mean_nn": 0.14568218701612606,
+          "median_nn": 0.146952633253715
+        },
+        "nonreal_upper": [
+          [
+            2.27606653480758,
+            0.17865692686998907
+          ],
+          [
+            -2.276066534807526,
+            0.1786569268700091
+          ]
+        ],
+        "real_roots": [
+          -6.141437802836238,
+          -5.151687951276693,
+          -4.17933519495664,
+          -3.2112680128033873,
+          3.2112680128033237,
+          4.1793351949567,
+          5.1516879512766725,
+          6.141437802836251
+        ]
+      },
+      "kind": "windowed",
+      "n_real_sturm": 8,
+      "same_sign_pairs": 6,
+      "sign_pattern": "----+-+-+----"
+    },
+    {
+      "N": 6,
+      "alpha": 0.94,
+      "bound_gap": 2,
+      "deficit": 4,
+      "deg": 12,
+      "gap_lower_bound_L16003": 6,
+      "geometry": {
+        "imag_heights": [
+          0.37700418561135834,
+          0.3770041856113765
+        ],
+        "mean_abs_real_root": 4.494231808634915,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 8,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.022863517797591104,
+          "mean_nn": 0.005768246028447055,
+          "median_nn": 0.00010467849474071755
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.36862504018184605,
+          "mean_nn": 0.14087967584315186,
+          "median_nn": 0.08845979988689834
+        },
+        "nonreal_upper": [
+          [
+            2.171490730267649,
+            0.3770041856113765
+          ],
+          [
+            -2.171490730267649,
+            0.37700418561135834
+          ]
+        ],
+        "real_roots": [
+          -6.0000001093267405,
+          -4.9999968151128575,
+          -3.9997938278976495,
+          -2.9771364822024355,
+          2.977136482202409,
+          3.99979382789771,
+          4.999996815112809,
+          6.000000109326706
+        ]
+      },
+      "kind": "sampled",
+      "n_real_sturm": 8,
+      "same_sign_pairs": 6,
+      "sign_pattern": "-++++-+-++++-"
+    },
+    {
+      "N": 6,
+      "alpha": 0.9,
+      "bound_gap": 2,
+      "deficit": 4,
+      "deg": 12,
+      "gap_lower_bound_L16003": 6,
+      "geometry": {
+        "imag_heights": [
+          0.2761554836898675,
+          0.2761554836898681
+        ],
+        "mean_abs_real_root": 4.683690602673744,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 8,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.2081504776070786,
+          "mean_nn": 0.18369060267374376,
+          "median_nn": 0.18297006684320705
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.2163303177267224,
+          "mean_nn": 0.1513391919020753,
+          "median_nn": 0.15812839913448085
+        },
+        "nonreal_upper": [
+          [
+            2.4124890762948934,
+            0.2761554836898675
+          ],
+          [
+            -2.4124890762949014,
+            0.2761554836898681
+          ]
+        ],
+        "real_roots": [
+          -6.160671799401609,
+          -5.169008201112009,
+          -4.196931932574309,
+          -3.2081504776070426,
+          3.2081504776070786,
+          4.196931932574242,
+          5.169008201112172,
+          6.160671799401489
+        ]
+      },
+      "kind": "windowed",
+      "n_real_sturm": 8,
+      "same_sign_pairs": 6,
+      "sign_pattern": "----+-+-+----"
+    },
+    {
+      "N": 6,
+      "alpha": 0.9,
+      "bound_gap": 2,
+      "deficit": 4,
+      "deg": 12,
+      "gap_lower_bound_L16003": 6,
+      "geometry": {
+        "imag_heights": [
+          0.46939352298085124,
+          0.4693935229808589
+        ],
+        "mean_abs_real_root": 4.4862934367122405,
+        "n_nonreal_pairs_float": 2,
+        "n_real_float": 8,
+        "nn_to_nonzero_integers": {
+          "max_nn": 0.054197189266019574,
+          "mean_nn": 0.013706684055100282,
+          "median_nn": 0.00031465270989583516
+        },
+        "nn_to_zeta_over_2pi": {
+          "max_nn": 0.3999587116502745,
+          "mean_nn": 0.14860813965468095,
+          "median_nn": 0.08824982567174322
+        },
+        "nonreal_upper": [
+          [
+            2.3307039493473627,
+            0.4693935229808589
+          ],
+          [
+            -2.3307039493473782,
+            0.46939352298085124
+          ]
+        ],
+        "real_roots": [
+          -6.000000241534635,
+          -4.999977153831979,
+          -3.999393540748342,
+          -2.9458028107339804,
+          2.9458028107340515,
+          3.999393540748425,
+          4.999977153831783,
+          6.000000241534728
+        ]
+      },
+      "kind": "sampled",
+      "n_real_sturm": 8,
+      "same_sign_pairs": 6,
+      "sign_pattern": "-++++-+-++++-"
+    }
+  ],
+  "schema": "riemann.x8455.comp6.v1",
+  "status": "EMPIRICAL_PROVISIONAL",
+  "suggested_questions_for_other_agents": [
+    "In failing windowed rows, are imag heights clustering near a universal value?",
+    "Is bound_gap=0 exactly on the passing windowed side and >0 exactly on the failing side?",
+    "Do real roots prefer zeta/(2pi) on the passing side and integers on the failing/sampled side?"
+  ]
+}

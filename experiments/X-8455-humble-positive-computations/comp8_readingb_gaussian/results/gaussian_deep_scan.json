@@ -1,0 +1,258 @@
+{
+  "c7_multiphase_fits": [
+    {
+      "coef": [
+        -0.7868563229586678,
+        0.17681263794104815
+      ],
+      "model": "g1",
+      "r2": 0.9935965842075625,
+      "rmse": 0.010136208230732706
+    },
+    {
+      "coef": [
+        -0.7868655719171331,
+        0.17679995217008806,
+        0.000358092040439164
+      ],
+      "model": "g1+g2",
+      "r2": 0.9936005749627004,
+      "rmse": 0.010133049180089462
+    },
+    {
+      "coef": [
+        -0.7868536506457884,
+        0.17673400573636247,
+        0.0005686041315266507,
+        0.0024150501551630115
+      ],
+      "model": "g1+g2+g3",
+      "r2": 0.993774613793906,
+      "rmse": 0.009994310134315301
+    },
+    {
+      "coef": [
+        -0.7795579858390356,
+        -0.006878158219977273
+      ],
+      "model": "shift3_g1",
+      "r2": 0.0014386171919218427,
+      "rmse": 0.12657765795682072
+    },
+    {
+      "coef": [
+        -0.7797905554777373,
+        -0.006977973556784379,
+        0.007198313420604202
+      ],
+      "model": "shift3_g1+g2",
+      "r2": 0.003073942032928989,
+      "rmse": 0.12647396858449872
+    }
+  ],
+  "content_sha256": "9f769ea2fcd98e775b5b5c3e02246b4cf19e76894a14940f0691316ca34c951b",
+  "rows": [
+    {
+      "N": 4,
+      "alpha": 0.8,
+      "gauss_def": 0,
+      "gauss_phaseL1": 6.283185307179586,
+      "gauss_ssp": 6,
+      "phi_def": 4,
+      "phi_phaseL1": 18.84955592153876,
+      "phi_ssp": 2
+    },
+    {
+      "N": 4,
+      "alpha": 0.7,
+      "gauss_def": 0,
+      "gauss_phaseL1": 6.283185307179586,
+      "gauss_ssp": 6,
+      "phi_def": 4,
+      "phi_phaseL1": 18.84955592153876,
+      "phi_ssp": 2
+    },
+    {
+      "N": 4,
+      "alpha": 0.6,
+      "gauss_def": 0,
+      "gauss_phaseL1": 6.283185307179586,
+      "gauss_ssp": 6,
+      "phi_def": 6,
+      "phi_phaseL1": 18.84955592153876,
+      "phi_ssp": 2
+    },
+    {
+      "N": 4,
+      "alpha": 0.5,
+      "gauss_def": 0,
+      "gauss_phaseL1": 6.283185307179586,
+      "gauss_ssp": 6,
+      "phi_def": 6,
+      "phi_phaseL1": 25.132741228718345,
+      "phi_ssp": 0
+    },
+    {
+      "N": 4,
+      "alpha": 0.45,
+      "gauss_def": 4,
+      "gauss_phaseL1": 18.84955592153876,
+      "gauss_ssp": 2,
+      "phi_def": 8,
+      "phi_phaseL1": 25.132741228718345,
+      "phi_ssp": 0
+    },
+    {
+      "N": 4,
+      "alpha": 0.4,
+      "gauss_def": 4,
+      "gauss_phaseL1": 18.84955592153876,
+      "gauss_ssp": 2,
+      "phi_def": 8,
+      "phi_phaseL1": 25.132741228718345,
+      "phi_ssp": 0
+    },
+    {
+      "N": 4,
+      "alpha": 0.35,
+      "gauss_def": 4,
+      "gauss_phaseL1": 18.84955592153876,
+      "gauss_ssp": 2,
+      "phi_def": 8,
+      "phi_phaseL1": 25.132741228718345,
+      "phi_ssp": 0
+    },
+    {
+      "N": 4,
+      "alpha": 0.3,
+      "gauss_def": 8,
+      "gauss_phaseL1": 25.132741228718345,
+      "gauss_ssp": 0,
+      "phi_def": 8,
+      "phi_phaseL1": 25.132741228718345,
+      "phi_ssp": 0
+    },
+    {
+      "N": 4,
+      "alpha": 0.25,
+      "gauss_def": 8,
+      "gauss_phaseL1": 25.132741228718345,
+      "gauss_ssp": 0,
+      "phi_def": 8,
+      "phi_phaseL1": 25.132741228718345,
+      "phi_ssp": 0
+    },
+    {
+      "N": 4,
+      "alpha": 0.2,
+      "gauss_def": 8,
+      "gauss_phaseL1": 25.132741228718345,
+      "gauss_ssp": 0,
+      "phi_def": 8,
+      "phi_phaseL1": 25.132741228718345,
+      "phi_ssp": 0
+    },
+    {
+      "N": 6,
+      "alpha": 0.8,
+      "gauss_def": 0,
+      "gauss_phaseL1": 6.283185307179586,
+      "gauss_ssp": 10,
+      "phi_def": 4,
+      "phi_phaseL1": 18.84955592153876,
+      "phi_ssp": 6
+    },
+    {
+      "N": 6,
+      "alpha": 0.7,
+      "gauss_def": 0,
+      "gauss_phaseL1": 6.283185307179586,
+      "gauss_ssp": 10,
+      "phi_def": 4,
+      "phi_phaseL1": 18.84955592153876,
+      "phi_ssp": 6
+    },
+    {
+      "N": 6,
+      "alpha": 0.6,
+      "gauss_def": 0,
+      "gauss_phaseL1": 6.283185307179586,
+      "gauss_ssp": 10,
+      "phi_def": 8,
+      "phi_phaseL1": 25.132741228718345,
+      "phi_ssp": 4
+    },
+    {
+      "N": 6,
+      "alpha": 0.5,
+      "gauss_def": 0,
+      "gauss_phaseL1": 6.283185307179586,
+      "gauss_ssp": 10,
+      "phi_def": 8,
+      "phi_phaseL1": 31.41592653589793,
+      "phi_ssp": 2
+    },
+    {
+      "N": 6,
+      "alpha": 0.45,
+      "gauss_def": 4,
+      "gauss_phaseL1": 18.84955592153876,
+      "gauss_ssp": 6,
+      "phi_def": 10,
+      "phi_phaseL1": 31.41592653589793,
+      "phi_ssp": 2
+    },
+    {
+      "N": 6,
+      "alpha": 0.4,
+      "gauss_def": 4,
+      "gauss_phaseL1": 18.84955592153876,
+      "gauss_ssp": 6,
+      "phi_def": 10,
+      "phi_phaseL1": 31.41592653589793,
+      "phi_ssp": 2
+    },
+    {
+      "N": 6,
+      "alpha": 0.35,
+      "gauss_def": 4,
+      "gauss_phaseL1": 18.84955592153876,
+      "gauss_ssp": 6,
+      "phi_def": 10,
+      "phi_phaseL1": 37.69911184307752,
+      "phi_ssp": 0
+    },
+    {
+      "N": 6,
+      "alpha": 0.3,
+      "gauss_def": 8,
+      "gauss_phaseL1": 31.41592653589793,
+      "gauss_ssp": 2,
+      "phi_def": 12,
+      "phi_phaseL1": 37.69911184307752,
+      "phi_ssp": 0
+    },
+    {
+      "N": 6,
+      "alpha": 0.25,
+      "gauss_def": 8,
+      "gauss_phaseL1": 31.41592653589793,
+      "gauss_ssp": 2,
+      "phi_def": 12,
+      "phi_phaseL1": 37.69911184307752,
+      "phi_ssp": 0
+    },
+    {
+      "N": 6,
+      "alpha": 0.2,
+      "gauss_def": 12,
+      "gauss_phaseL1": 37.69911184307752,
+      "gauss_ssp": 0,
+      "phi_def": 12,
+      "phi_phaseL1": 37.69911184307752,
+      "phi_ssp": 0
+    }
+  ],
+  "schema": "riemann.x8455.comp8.gauss_deep.v1",
+  "status": "EMPIRICAL_PROVISIONAL"
+}
