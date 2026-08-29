@@ -1,0 +1,39 @@
+{
+  "experiment_id": "X-0901-XI-CROSSCHECK",
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "grid": {
+    "center": "4709203636353.65",
+    "offset_low": -4.0,
+    "offset_high": 4.0,
+    "step": 0.02,
+    "points": 401,
+    "negative_curvature_points": 0,
+    "minimum_no_remainder_curvature": 30.75821602091934,
+    "minimum_t": "4709203636353.6309"
+  },
+  "high_precision_scalar_controls": [
+    {
+      "sigma": "0.5001",
+      "t": "4709203636353.6309",
+      "Re_xi_logderivative": "0.003075858402209985605605396",
+      "Im_xi_logderivative": "0.1408135315561362192877205",
+      "abs_zeta": "257.7534423204533435294927"
+    },
+    {
+      "sigma": "0.501",
+      "t": "4709203636353.6309",
+      "Re_xi_logderivative": "0.03075851163716509840771233",
+      "Im_xi_logderivative": "0.1408154278229619233996915",
+      "abs_zeta": "254.605300609616983438882"
+    },
+    {
+      "sigma": "0.505",
+      "t": "4709203636353.6309",
+      "Re_xi_logderivative": "0.153783784996700311016007",
+      "Im_xi_logderivative": "0.1408613942436567931475311",
+      "abs_zeta": "241.1449659588768962936142"
+    }
+  ],
+  "counterexample_candidate": null,
+  "warning": "The curvature screen omits the Riemann-Siegel remainder and the scalar controls use ordinary mpmath high precision, not directed balls."
+}

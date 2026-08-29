@@ -1,0 +1,20 @@
+{
+  "schema": "riemann.weil-rayleigh-dyadic.v1",
+  "claim_id": "TEST-ONLY-NOT-A-RIEMANN-CANDIDATE",
+  "matrix": {
+    "dimension": 2,
+    "basis": "synthetic unit test",
+    "entries_upper": [
+      {"i": 0, "j": 0, "lower_num": -3, "upper_num": -3, "scale_bits": 0},
+      {"i": 0, "j": 1, "lower_num": 0, "upper_num": 0, "scale_bits": 0},
+      {"i": 1, "j": 1, "lower_num": 1, "upper_num": 1, "scale_bits": 0}
+    ]
+  },
+  "vector": {
+    "numerators": [1, 0],
+    "scale_bits": 0
+  },
+  "provenance": {
+    "warning": "Synthetic verifier test only. These entries are not a Weil matrix."
+  }
+}

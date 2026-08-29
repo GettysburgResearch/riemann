@@ -1,0 +1,74 @@
+{
+  "carrier": 4709203636353.65,
+  "cells": [
+    {
+      "archimedean_bound": 4.4919376734176423e-10,
+      "carrier": 4709203636353.65,
+      "cells": 1024,
+      "correction_can_reverse_reported_sign": false,
+      "cutoff": 100000000,
+      "empirical_leading_margin": 0.006643091775833554,
+      "integration_by_parts_constant": 6645.497781817128,
+      "log_cutoff": 18.420680743952367,
+      "margin_to_bound_ratio": 14788921.341926865,
+      "pole_bound": 3.268205938714305e-17,
+      "total_bound": 4.4919380002382363e-10
+    },
+    {
+      "archimedean_bound": 4.4546448776608055e-10,
+      "carrier": 4709203636353.65,
+      "cells": 1024,
+      "correction_can_reverse_reported_sign": false,
+      "cutoff": 1000000000,
+      "empirical_leading_margin": 0.0023504233978552946,
+      "integration_by_parts_constant": 6590.331361615225,
+      "log_cutoff": 20.72326583694641,
+      "margin_to_bound_ratio": 5276341.835739748,
+      "pole_bound": 9.186644114511886e-17,
+      "total_bound": 4.454645796325217e-10
+    },
+    {
+      "archimedean_bound": 4.424810641055335e-10,
+      "carrier": 4709203636353.65,
+      "cells": 1024,
+      "correction_can_reverse_reported_sign": false,
+      "cutoff": 10000000000,
+      "empirical_leading_margin": 0.0006076603725748697,
+      "integration_by_parts_constant": 6546.198225453702,
+      "log_cutoff": 23.025850929940457,
+      "margin_to_bound_ratio": 1373301.7360745391,
+      "pole_bound": 2.614564750971444e-16,
+      "total_bound": 4.424813255620086e-10
+    },
+    {
+      "archimedean_bound": 8.887884081137602e-10,
+      "carrier": 4709203636353.65,
+      "cells": 2048,
+      "correction_can_reverse_reported_sign": false,
+      "cutoff": 10000000000,
+      "empirical_leading_margin": 0.0006027589005261902,
+      "integration_by_parts_constant": 13149.047394019388,
+      "log_cutoff": 23.025850929940457,
+      "margin_to_bound_ratio": 678179.6271933613,
+      "pole_bound": 1.0458259003885775e-15,
+      "total_bound": 8.887894539396606e-10
+    },
+    {
+      "archimedean_bound": 4.400400811105406e-10,
+      "carrier": 4709203636353.65,
+      "cells": 1024,
+      "correction_can_reverse_reported_sign": false,
+      "cutoff": 100000000000,
+      "empirical_leading_margin": 0.00026896626427230785,
+      "integration_by_parts_constant": 6510.089295867003,
+      "log_cutoff": 25.328436022934504,
+      "margin_to_bound_ratio": 611230.2410538694,
+      "pole_bound": 7.516345184600634e-16,
+      "total_bound": 4.4004083274505903e-10
+    }
+  ],
+  "counterexample_candidate": null,
+  "experiment_id": "X-0902",
+  "status": "PROPOSED_BOUND_WITH_ORDINARY_FLOAT_EVALUATION",
+  "warning": "The analytic inequality is recorded in L-0901. These decimal evaluations are not directed-rounding certificates, and the underlying prime Toeplitz margins remain ordinary numerical values."
+}

@@ -1,0 +1,64 @@
+{
+  "experiment_id": "X-0801",
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "generated_utc": "2026-07-22T23:18:00Z",
+  "carrier": "3157430112465.8695095",
+  "phase_reduction": "numpy.longdouble product and remainder; float64 trigonometry and accumulation",
+  "complete_prime_power_results": [
+    {
+      "cutoff": 10000000,
+      "prime_power_terms": 665134,
+      "integer_lattice_3_cells_leading_margin": 0.2424555508874695,
+      "integer_lattice_5_cells_leading_margin": 0.23952933698010703,
+      "piecewise_autocorrelation_1024_cells_leading_margin": 0.18329376870023406
+    },
+    {
+      "cutoff": 100000000,
+      "prime_power_terms": 5762859,
+      "integer_lattice_3_cells_leading_margin": 0.128999718578509,
+      "integer_lattice_5_cells_leading_margin": 0.11580570730258799,
+      "piecewise_autocorrelation_1024_cells_leading_margin": 0.10215479244064696
+    },
+    {
+      "cutoff": 1000000000,
+      "prime_count": 50847534,
+      "higher_prime_power_terms": 3689,
+      "prime_power_terms": 50851223,
+      "integer_lattice_3_cells_leading_margin": 0.06088254774709245,
+      "integer_lattice_5_cells_leading_margin": 0.046750508139019153,
+      "piecewise_autocorrelation_1024_cells_leading_margin": 0.026188862029098203
+    },
+    {
+      "cutoff": 10000000000,
+      "prime_count": 455052511,
+      "higher_prime_power_terms": 10084,
+      "prime_power_terms": 455062595,
+      "archimedean_leading_scalar": 4.288096112637454,
+      "integer_lattice_3_cells_leading_margin": 0.0312777183699291,
+      "integer_lattice_5_cells_leading_margin": 0.019647526261402426,
+      "piecewise_autocorrelation_1024_cells_largest_prime_eigenvalue": 4.277449690268786,
+      "piecewise_autocorrelation_1024_cells_leading_margin": 0.010646422368668418,
+      "piecewise_autocorrelation_1024_cells_top_ten_leading_margins": [
+        0.010646422368668418,
+        0.20738909,
+        0.50383299,
+        0.54111168,
+        0.55187333,
+        0.55844697,
+        0.62035779,
+        0.64293999,
+        0.65301052,
+        0.66463594
+      ]
+    }
+  ],
+  "counterexample_candidate": null,
+  "interpretation": "Every complete leading screen remained positive. The richer piecewise autocorrelation family reduced the c=10^10 margin to about 0.0106464 but did not cross zero.",
+  "proof_boundary": [
+    "Every prime and every higher prime power through each declared cutoff was included.",
+    "The phase and eigensystem arithmetic are ordinary floating point, not interval arithmetic.",
+    "The piecewise prime Toeplitz matrix is exact for the proposed D-0801 family, but the displayed margin uses the high-carrier leading archimedean scalar.",
+    "The exact archimedean block, pole block, admissibility details, and Guinand-Weil normalization remain to be independently audited.",
+    "A positive finite search is not evidence for RH beyond the tested finite families."
+  ]
+}
