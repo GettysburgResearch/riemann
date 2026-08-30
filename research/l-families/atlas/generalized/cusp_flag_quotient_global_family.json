@@ -1,10 +1,14 @@
 {
-  "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL",
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": [
+    "CERTIFIED_INTEGER_COVERAGE",
+    "EXACT_RATIONAL"
+  ],
   "artifact_sha256_lf": {
     "research/l-families/atlas/generalized/CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md": "d5c95db34c62d31e0bb735e09aae5599e3abf29194cd74a50ce1bbebafab1530",
-    "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.py": "859c9e545ce5c0268054d878aa9642bd82bf9f6eb378a48aaa2731b0c0aae56f",
+    "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.py": "34120d58416c902db94fbeaf69ceb004694888908341b630a1b750f2f1e8316a",
     "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.sources.json": "f754ecdff30b4fd3a3f8f4b8436e46ab3633ba59738021f5538051fae9e43b7a",
-    "tests/test_cusp_flag_quotient_global_family.py": "3f6e343d9953223dba7b9922bdde9ce619c5307a520db7a5795797eee562de82"
+    "tests/test_cusp_flag_quotient_global_family.py": "84603f0412d8a7f1d2c2384c7055f55b4956db3df68b42dde7074d18cbe8265b"
   },
   "caps": {
     "input_bits": 32,
@@ -4999,6 +5003,7 @@
     }
   ],
   "partition_majorant_sum": "14400/12167",
+  "rounding_contract": "exact Python integers and Fraction; no rounding",
   "schema": "cusp-flag-quotient-global-family-v1",
   "scope": {
     "RH_GRH_or_exhaustive_novelty_claim": false,

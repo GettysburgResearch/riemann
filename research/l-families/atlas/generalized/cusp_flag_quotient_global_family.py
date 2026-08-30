@@ -537,7 +537,9 @@ def build_report():
         {
             "schema": "cusp-flag-quotient-global-family-v1",
             "status": "PROPOSED_ALL_WEIGHT_THEOREM_WITH_CLASSICAL_INPUTS_REQUIRING_REVIEW",
-            "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL",
+            "arithmetic_class": "MIXED",
+            "arithmetic_components": ["CERTIFIED_INTEGER_COVERAGE", "EXACT_RATIONAL"],
+            "rounding_contract": "exact Python integers and Fraction; no rounding",
             "source_authentication": auth,
             "artifact_sha256_lf": artifact_digests(),
             "caps": {

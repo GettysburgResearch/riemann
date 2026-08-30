@@ -111,6 +111,29 @@ class CuspFlagTests(unittest.TestCase):
     def test_complete_fixture(self):
         m.validate_report(m.read_json(m.FIXTURE))
 
+    def test_exact_arithmetic_taxonomy_and_rounding(self):
+        self.assertEqual(self.report["arithmetic_class"], "MIXED")
+        self.assertEqual(
+            self.report["arithmetic_components"],
+            ["CERTIFIED_INTEGER_COVERAGE", "EXACT_RATIONAL"],
+        )
+        self.assertEqual(
+            self.report["rounding_contract"],
+            "exact Python integers and Fraction; no rounding",
+        )
+        for key, value in (
+            ("arithmetic_class", "EXACT_INTEGER_AND_RATIONAL"),
+            ("arithmetic_components", ["EXACT_RATIONAL"]),
+            ("rounding_contract", "rounded"),
+        ):
+            bad = copy.deepcopy(self.report)
+            bad[key] = value
+            with (
+                mock.patch.object(m, "build_report", return_value=self.report),
+                self.assertRaises(ValueError),
+            ):
+                m.validate_report(bad)
+
     def test_complete_family_coverage(self):
         self.assertEqual(len(self.report["family"]), 138)
         self.assertEqual(
