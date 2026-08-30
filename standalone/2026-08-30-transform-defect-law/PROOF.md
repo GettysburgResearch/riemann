@@ -2,8 +2,9 @@
 
 ```text
 Status:  PROVED for the parts marked Theorem/Lemma below (complete proofs);
-         VERIFIED EXACT (machine, m <= 5, plus 12 integer instantiations
-         per m) for the tabulated defects; CONJECTURED where marked
+         VERIFIED EXACT (machine, m <= 6 symbolic, plus 12 integer
+         instantiations per m) for the tabulated defects; CONJECTURED
+         where marked
 Scope:   local/exact for the generic degree-2 local object over Q(a,b);
          global statements are formal Euler-product identities valid in the
          stated half-planes of absolute convergence, with bad primes
@@ -265,9 +266,12 @@ EXACT cancellation: `N_2 = 1 + bT` divides `det(1 - Sym^2(A) T)
 sum_k h_k^2 T^k |_{a=0} = 1 / (1 - b^2 T^2),
 ```
 
-of denominator degree 2 < 3. (Verified exactly; the analogous cancellations
-for higher m on their degeneration loci are recorded in
-`matrix/defects.json` runs.) Interpretation, stated within its finite
+of denominator degree 2 < 3. (Verified exactly for m=2 in X-108500 check
+D2; for m <= 6 the trace-zero instantiation `(a,b) = (0,7)` passes the
+cross-multiplied rational-equality checks of `matrix/defect_powers_run.py`,
+which is how the degeneration is exercised there — explicit higher-m
+degeneration rows are not separately emitted; wording corrected after the
+adversarial wave.) Interpretation, stated within its finite
 scope: the defect law's SHAPE is generically rigid but its degree can drop
 on special fibers; any global consumer of the law must treat the
 supersingular-type primes separately. *Proof:* at `a = 0`,
@@ -293,15 +297,25 @@ frequencies among the degree-`j` monomials in the `alpha_i` — the weights
 of `Sym^j(A)` — and `f(h_k) = sum_j f_j h_k^j` has frequencies among the
 weights of `⊕_{j<=m} Sym^j(A)`. A sequence `sum_w gamma_w w^k` is rational
 with denominator `prod_w (1 - wT)`; the degree bound is the total number of
-weights. Degenerate data: by Kronecker's rationality criterion, a sequence
-is the coefficient sequence of a rational function of denominator degree
-`<= B` iff every `(B+1) x (B+1)` minor of its infinite Hankel matrix
-vanishes. Each such minor of the sequence `f(h_k)` is a polynomial function
-of the local data `(e_1, ..., e_d)` (each `h_k`, hence each `f(h_k)`, is);
-the generic case shows every one of these polynomials vanishes on a Zariski-
-dense subset of data space, hence identically; so the rank bound — and with
-it rationality at degree `<= B = sum_{j<=m} C(d+j-1, j)` — holds for ALL
-local data. ∎
+weights. Degenerate data (argument tightened after the adversarial wave):
+the locus of data with `d` DISTINCT NONZERO inverse roots is the complement
+of the hypersurface `{disc x e_d = 0}`, a nonempty Zariski-open — hence
+dense — subset of data space over a characteristic-0 field. Now consider
+
+```text
+R(T) := ( sum_k f(h_k) T^k ) x prod_{j<=m} det(1 - Sym^j(A) T) .
+```
+
+Every coefficient of `R` is a polynomial function of the local data
+`(e_1, ..., e_d)` (each `h_k`, hence each `f(h_k)`, is, and so is each
+symmetric-power determinant). On the dense generic locus, `R` is a
+polynomial of degree `<= B := sum_{j<=m} C(d+j-1, j)` (the generic
+computation above: the series is a proper fraction over the product of the
+symmetric-power factors). So each coefficient of `R` beyond degree `B`
+vanishes on a dense subset, hence identically — i.e. `R` is a polynomial
+of degree `<= B` for ALL local data, which gives BOTH the divisibility of
+the (reduced) denominator into `prod_{j<=m} det(1 - Sym^j(A) T)` and the
+uniform degree bound at once. ∎
 
 **Survival reading (#764 ladder):** every polynomial pointwise transform of
 every bounded-degree local system passes L3 with a uniform bound — the

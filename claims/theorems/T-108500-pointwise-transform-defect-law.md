@@ -3,7 +3,7 @@
 ```text
 Claim ID: T-108500
 Status:   PROVED (statements 1-4, Theorems 2-3, Lemma 4 of the standalone
-          proof; complete proofs) + VERIFIED EXACT (machine, m <= 5
+          proof; complete proofs) + VERIFIED EXACT (machine, m <= 6
           symbolic, 24 integer instantiations stdlib) + CONJECTURE only in
           the labelled trichotomy target
 Created:  2026-08-30

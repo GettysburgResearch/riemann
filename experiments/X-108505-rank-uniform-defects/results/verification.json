@@ -18,9 +18,9 @@
    "detail": "recorded witness (1,2,3,2) -> [1,2,-1,-7,2,-8,-8]"
   },
   {
-   "name": "V4_self_duality_fails_rank3",
+   "name": "V4_self_duality_fails_rank3_any_scale",
    "ok": true,
-   "detail": "N=['1', '2', '-3', '-9'] not palindromic up to scale det^2"
+   "detail": "N=['1', '2', '-3', '-9']: forced lam=-9, c=1/6 already fail at j=2: 2 != 3/4"
   },
   {
    "name": "V5_rank4_sporadic_palindrome",

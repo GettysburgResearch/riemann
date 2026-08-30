@@ -96,15 +96,21 @@ def main():
     check("V3_gauss_sign_refuted_rank4", ok,
           "recorded witness (1,2,3,2) -> [1,2,-1,-7,2,-8,-8]")
 
-    # V4: self-duality fails at rank 3 (witness (1,2,3))
+    # V4: self-duality fails at rank 3 under ANY scale (adversarial-review
+    # strengthening: the old check tested only the scale det^2). A scaled
+    # palindrome means: exist rationals lam, c with
+    # P[dN-j] = lam * c^j * P[j] for all j. With P[0]=1 and P[1] != 0 both
+    # lam and c are forced by j=0,1; refute by checking j=2,3.
     (P, _), _ = square_defect((1, 2, 3))
     dN = len(P) - 1
-    det = Fr(3)
-    palin = (P[dN] != 0 and all(
-        P[dN - j] * P[0] * det ** (2 * j) == P[j] * P[dN]
-        for j in range(dN + 1)))
-    check("V4_self_duality_fails_rank3", not palin,
-          f"N={[str(x) for x in P]} not palindromic up to scale det^2")
+    assert P[0] == 1 and P[1] != 0 and P[dN] != 0
+    lam = P[dN] / P[0]
+    c = P[dN - 1] / (lam * P[1])
+    any_scale_palin = all(P[dN - j] == lam * c ** j * P[j]
+                          for j in range(dN + 1))
+    check("V4_self_duality_fails_rank3_any_scale", not any_scale_palin,
+          f"N={[str(x) for x in P]}: forced lam={lam}, c={c} already fail "
+          f"at j=2: {P[dN-2]} != {lam * c**2 * P[2]}")
 
     # V5: rank-4 sporadic palindrome recorded as data
     (P, _), _ = square_defect((1, 0, 2, -1))

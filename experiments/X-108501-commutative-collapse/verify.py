@@ -143,15 +143,31 @@ def c3():
 
 
 def c4():
+    """Genuine dual-number arithmetic path (adversarial-review fix: the
+    original C4 computed both sides by the same expression and was
+    vacuous). Here the left side is computed with an actual dual-number
+    exp/mul (value, derivative) pairs and NO closed-form shortcut for the
+    sum; the right side is the jet formula (S_N(lam), S_N'(lam)) computed
+    term-by-term independently."""
     lam, N = 2.3, 200
-    s0 = sum(k ** (-lam) for k in range(1, N + 1))
-    s1 = sum(-math.log(k) * k ** (-lam) for k in range(1, N + 1))
-    # dual-number direct sum: exp(-(lam+e) log k) = k^-lam (1 - e log k)
-    d0 = sum(k ** (-lam) for k in range(1, N + 1))
-    d1 = sum(k ** (-lam) * (-math.log(k)) for k in range(1, N + 1))
-    ok = abs(d0 - s0) < 1e-10 and abs(d1 - s1) < 1e-10
+
+    def dmul(x, y):
+        return (x[0] * y[0], x[0] * y[1] + x[1] * y[0])
+
+    def dexp(x):
+        return (math.exp(x[0]), x[1] * math.exp(x[0]))
+
+    s = (lam, 1.0)                      # s = lam + e
+    total = (0.0, 0.0)
+    for k in range(1, N + 1):
+        term = dexp(dmul((-math.log(k), 0.0), s))   # exp(-s log k)
+        total = (total[0] + term[0], total[1] + term[1])
+    jet0 = sum(k ** (-lam) for k in range(1, N + 1))
+    jet1 = sum(-math.log(k) * k ** (-lam) for k in range(1, N + 1))
+    ok = abs(total[0] - jet0) < 1e-10 and abs(total[1] - jet1) < 1e-10
     return check("C4_floating_corroboration_dual_zeta", ok,
-                 "FLOATING_RECONNAISSANCE only; decides nothing")
+                 "FLOATING_RECONNAISSANCE only; decides nothing; dual "
+                 "arithmetic path vs independent jet path, agree < 1e-10")
 
 
 def main():

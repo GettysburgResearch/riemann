@@ -26,9 +26,9 @@ out = {"transforms": [], "sympy_version": sp.__version__,
 
 for m in range(2, 7):
     D = sym_power_satake(m)                      # det(1 - Sym^m(A) T)
-    e_list = [sp.Integer(1)] + [(-1) ** k * D.coeff(T, k) * (-1) ** k
-                                for k in range(1, m + 2)]
     # e_k(Sym^m) with sign convention: D = sum (-1)^k e_k T^k
+    # (coefficient formula = standalone PROOF.md Theorem 1 statement 3,
+    # summarized as item 1 in the claim file T-108500)
     e = [sp.Integer(1)] + [sp.expand((-1) ** k * D.coeff(T, k))
                            for k in range(1, m + 2)]
     h = coefficients(m + 1)
@@ -40,14 +40,19 @@ for m in range(2, 7):
         c.append(sp.expand(acc))
     N = sum(ci * T ** i for i, ci in enumerate(c))
 
-    # (i) symbolic verification: D * sum h_k^m T^k == N to enough terms
+    # (i) symbolic verification: D * sum h_k^m T^k == N to enough terms.
+    # The head coefficients i < m are DEFINITIONAL (c_r is constructed as
+    # (D*S)_r), so the real content is the TAIL VANISHING i >= m — checked
+    # exclusively here (adversarial-review fix: the old head comparison was
+    # tautological). The coefficient VALUES are pinned independently by the
+    # stdlib Berlekamp-Massey instantiation checks (ii) and by X-108500.
     n_terms = 2 * (m + 1) + 6
     hs = coefficients(n_terms)
     S = sum(sp.expand(x ** m) * T ** k for k, x in enumerate(hs))
     prod = sp.expand(D * S)
-    ok_sym = all(sp.expand(prod.coeff(T, i) - (c[i] if i < m else 0)) == 0
-                 for i in range(n_terms - (m + 2)))
-    assert ok_sym, f"symbolic verification failed at m={m}"
+    ok_sym = all(sp.expand(prod.coeff(T, i)) == 0
+                 for i in range(m, n_terms - (m + 2)))
+    assert ok_sym, f"symbolic tail-vanishing failed at m={m}"
 
     # self-duality check: N(T) == b^{m(m-1)/2} T^{m-1} N(1/(b^m T))
     rhs = sp.expand(sp.cancel(b ** (m * (m - 1) // 2) * T ** (m - 1)

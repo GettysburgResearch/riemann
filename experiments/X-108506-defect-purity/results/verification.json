@@ -18,14 +18,14 @@
    "detail": "pure=[3, 5, 7, 17, 19, 23, 29, 37, 43, 53, 59, 67, 71, 73, 83, 97], impure=[2, 13, 31, 41, 47, 61, 79, 89], boundary=[]"
   },
   {
-   "name": "W4_pure_case_modulus",
+   "name": "W4_pure_case_modulus_from_reconstruction",
    "ok": true,
-   "detail": "product of inverse roots = p^3 exactly when disc < 0"
+   "detail": "N_3 reconstructed by BM from actual cubed sequences at 8 primes (supersingular p=19 handled as the reduced degenerate form); purity criterion applied to the reconstructed numerator"
   },
   {
-   "name": "W5_m2_always_pure",
+   "name": "W5_m2_always_pure_from_reconstruction",
    "ok": true,
-   "detail": "1 + pT: inverse root -p, modulus^2 = p^2 at every prime \u2014 the m=2 defect is uniformly pure of weight 2; stratification starts at m=3, where the defect exits the character ring"
+   "detail": "m=2 defect [1, p] reconstructed from actual squared sequences at 5 primes: uniformly pure; stratification starts at m=3"
   }
  ],
  "all_ok": true,

@@ -51,8 +51,9 @@ zeta_A(s) := sum_{n >= 1} exp(-s log n)   in A_C,
 ```
 
 where `exp` is the algebra exponential (absolutely convergent power series).
-This is the definition every "hypercomplex zeta" in the literature
-specializes; nothing below depends on a different convention.
+This is the definition every SERIES/FUNCTIONAL-CALCULUS hypercomplex zeta
+specializes; non-power-series function theories (e.g. slice-regular) are
+outside this definition and outside this theorem's scope (Section 5).
 
 ## 2. Structure of the algebra
 
@@ -135,7 +136,13 @@ compatible with polynomials and limits); for `zeta` on `Re λ > 1` the series
 of Definition 1 agrees with it by the computation above, and each side of
 the classical global identities (Euler product on `Re λ > 1`, the completed
 functional equation after the standard continuation of each jet coordinate)
-is then an identity of finite jet packages of scalar identities. ∎
+is then an identity of finite jet packages of scalar identities. (In what
+sense the continued object is unique and analytic: on each local factor
+`B_i` the residue `lambda_i` is a LINEAR functional of `s`, so the jet
+package is an `A_C`-valued analytic function of `s` wherever every
+`lambda_i(s)` avoids the scalar poles, agrees with the series on the
+common domain, and is the unique componentwise continuation by the scalar
+identity theorem — sentence added after adversarial review.) ∎
 
 ## 3b. Corollary: the associative case collapses too
 

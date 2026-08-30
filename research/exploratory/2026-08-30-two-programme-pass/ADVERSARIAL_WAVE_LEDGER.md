@@ -25,8 +25,8 @@ Full verdicts: workflow wf_755727c9-97d journal. Disposition:
   (genuinely finite-rank — correctly certified by the improved detector);
   replaced by the primes, lesson recorded.
 
-## Accepted, deferred to the next pass (all MINOR; none affects a proved
-   statement's validity; recorded here so nothing is silently dropped)
+## Minors — APPLIED in the 2026-08-31 continuation pass (every item below
+   is now fixed in place; list retained as the record of what changed)
 
 - T-108500 Lemma 4: state Zariski-density of the distinct-nonzero-roots
   locus explicitly and either weaken the degenerate-case conclusion to the

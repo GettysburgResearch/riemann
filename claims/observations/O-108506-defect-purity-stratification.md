@@ -3,8 +3,9 @@
 ```text
 Claim ID: O-108506
 Status:   OBSERVATION, PROVED at the stated finite/local scope (exact
-          two-case criterion + exact witnesses); the density remark is an
-          imported-conjecture reading, labelled
+          two-case criterion + exact witnesses); the density remark uses
+          the Sato-Tate THEOREM (non-CM case; 11a1 is non-CM) as a
+          labelled external input, not verified here
 Created:  2026-08-30
 Programme: bridge #763 x #764 — the #763 detector's purity axiom applied
           to the #764 defect objects of T-108500
@@ -34,8 +35,8 @@ discriminant `36 - 108 < 0`, PURE of weight 3.
 
 The obstruction object attached to the pointwise cube is a boundary
 object for the #764 ladder in a sharper sense than "fails L4": it is
-integral and self-dual EVERYWHERE but pure only on the part of the prime
-set where the Satake angle satisfies `|cos theta_p| < 1/2`. Under the
+integral and self-dual EVERYWHERE but pure only on the part of the set of
+good primes where the Satake angle satisfies `|cos theta_p| < 1/2`. Under the
 Sato-Tate law (a theorem for non-CM elliptic curves — Clozel-Harris-
 Shepherd-Barron-Taylor et al.; used here only as a labelled reading, not
 an input) the impure stratum has a fixed positive density. So the ladder's
