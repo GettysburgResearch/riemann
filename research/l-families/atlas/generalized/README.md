@@ -15,6 +15,15 @@ locks are in `multiplicative_recurrence_mixed_parents.json`; this is a local
 representation/recurrence result, not a new global L-function. The frozen
 eleven-packet base below is retained unchanged.
 
+The separately frozen companion
+[Circle-probe geometry](CIRCLE_PROBE_GEOMETRY.md) classifies every real
+circle center, including the origin-touching and centered degeneracies.
+At fixed order, the touching circle admits infinitely many false positives;
+every positive non-touching center eliminates them. Connected pointwise-
+continuous families passing the touching probe are nevertheless constant.
+Its source-bound exact controls are in `circle_probe_geometry.json`, and
+the [independent review](REVIEW_ee731886.md) names the frozen companion SHA.
+
 For the current eleven-packet result and the next global completion gates,
 start with [CONTINUATION_RESULTS.md](CONTINUATION_RESULTS.md).
 The packet introductions below and the wave-2 research map record the

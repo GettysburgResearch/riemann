@@ -15,6 +15,7 @@ L-object. Neither lane is a new arithmetic L-function.
 | Lane | New repository result | Exact stopping boundary |
 |---|---|---|
 | [Multiplicative recurrence preservers](MULTIPLICATIVE_RECURRENCE_AND_MIXED_PARENTS.md) | One nondegenerate shifted-circle recurrence test classifies every continuous multiplicative map as `z^m bar(z)^n`; the bounded-degree moduli and continuous-deformation obstruction are exact | Continuous scalar maps and ordinary recurrences; no prime-indexed or ramified family |
+| [Complete circle-probe geometry](CIRCLE_PROBE_GEOMETRY.md) | An origin-touching circle leaves infinitely many false positives at each fixed positive degree; every positive non-touching center eliminates them. Connected pointwise-continuous families passing the touching probe are constant | Prose classification for irrational rotations; no natural-boundary theorem or general local-constancy claim in the degenerate topology |
 | [Mixed-rank representation parents](MULTIPLICATIVE_RECURRENCE_AND_MIXED_PARENTS.md#4-the-mixed-rank-determinant-parent-question) | A universal finite graded determinant parent exists exactly when the nontrivial input ranks are empty, one rank, or `(2,2)`; the unique formal escape has a negative second relation module whenever at least two ranks exceed one | Universal representation identities, not fitted matrix eigenvalues or convergent infinite determinants |
 | [Fixed-label cycle response](../../../exploratory/fixed-label-cycle-response/README.md) | Two colored directed sources with the same entire commutative determinant have different three-sheet lift responses; the real part of the third-trace gap is an exact commutator energy | Fixed label identifications matter; the response is not vertexwise gauge invariant and is not attached to zeta |
 
@@ -33,6 +34,9 @@ desired scalar output.
   `0f7be357b`; corrected core freeze: `8834fdc7a0dfe15f6bb95eefe0729cb77c93c807`.
   The [independent frozen-source review](REVIEW_8834fdc7.md) covers that
   core and found no remaining mathematical or implementation blocker.
+- Circle companion freeze: `ee7318869424ee7c333a03b87992f33e12072bf9`.
+  Its [independent review](REVIEW_ee731886.md) found no remaining blocker
+  for the complete probe classification and connected-family corollary.
 - Graph source: `26314df4e5ed9a5c16b7da61e155a48d325789cc`, imported by
   cherry-pick. The integration at `b800f754d3c53d61746dfb3a068e250c53b62771`
   includes the reviewed real-part wording and packet-local LF checkout
@@ -71,14 +75,12 @@ arithmetic geometry.
 
 The corrected core packet passed 27 focused tests under ordinary Python and
 the same 27 under optimized Python, together with both full producer checks
-and focused Ruff validation. The integrated graph packet passed 18 tests in
-each mode and both producer checks. Independent reviews are bound to the
-frozen core source above and the graph source in its own review sidecar;
-they report the serialized test results without claiming independent runs.
-
-A separate companion on origin-touching and inside-origin circle probes is
-in development. It is not part of this verified checkpoint, and no pending
-companion theorem or replay result is included in these acceptance claims.
+and focused Ruff validation. The circle companion passed 14 tests in each
+mode, both producer checks, and Ruff validation. The integrated graph packet
+passed 18 tests in each mode and both producer checks. Independent reviews
+are bound to the frozen core and companion sources above and the graph
+source in its own review sidecar; they report the serialized test results
+without claiming independent runs.
 
 The root agent serialized these runs to avoid competing with another
 active Codex agent. The core replay took about three seconds per complete
@@ -86,6 +88,10 @@ validation cycle on this host. It uses 16 circle rows, a bounded mixed-rank
 census, eight local Gaussian-rational controls, four small tensor-matrix
 controls, and bounded integer moduli counts. No build, CAS, prime sweep,
 zero scan, large-field enumeration, or parallel local test farm is required.
+The circle companion adds 29 exact touching-circle controls, 24 polynomial
+probe controls, 36 explicitly labeled theorem specializations, and two
+held-out-center controls. The specializations are not finite certificates
+of analytic nonrationality.
 
 From this branch, the release checks are:
 
@@ -94,6 +100,10 @@ python -B research/l-families/atlas/generalized/multiplicative_recurrence_mixed_
 python -B -O research/l-families/atlas/generalized/multiplicative_recurrence_mixed_parents.py --check
 python -B -m unittest tests.test_multiplicative_recurrence_mixed_parents
 python -B -O -m unittest tests.test_multiplicative_recurrence_mixed_parents
+python -B research/l-families/atlas/generalized/circle_probe_geometry.py --check
+python -B -O research/l-families/atlas/generalized/circle_probe_geometry.py --check
+python -B -m unittest tests.test_circle_probe_geometry
+python -B -O -m unittest tests.test_circle_probe_geometry
 python -B research/exploratory/fixed-label-cycle-response/cycle_response.py --check
 python -B -O research/exploratory/fixed-label-cycle-response/cycle_response.py --check
 python -B -m unittest discover -s research/exploratory/fixed-label-cycle-response/tests
