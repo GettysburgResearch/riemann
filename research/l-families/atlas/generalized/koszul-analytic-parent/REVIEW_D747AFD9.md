@@ -1,0 +1,25 @@
+# Independent review: local analytic natural boundary
+
+Reviewed scientific commit: `d747afd9cbeb75f10366e64cb94f71530b212f1f`.
+
+This review covers the five new files in `research/l-families/atlas/generalized/koszul-analytic-parent`: `LOCAL_NATURAL_BOUNDARY.md`, `LOCAL_BOUNDARY_REPLAY.md`, `local_boundary_replay.py`, `tests/test_local_boundary.py`, and `local_boundary.verification.json`. The reviewer independently read the proof, producer and 17 test definitions and checked the frozen file inventory. No test or producer execution was performed by the reviewer. The main agent reports focused Ruff, producer write, normal and optimized checks, and 17 tests in each Python mode passing at this freeze.
+
+## Mathematical assessment
+
+No blocking error found in the stated scope. The canonical source remains the previously constructed Segre/Koszul parent; neither poles nor eigenvalues are used to define it retrospectively. The new continuation concerns a single local grade variable, not a product over arithmetic primes.
+
+For the identity strip, differentiating the convergent Adams identities gives the stated meromorphic continuations of the primitive derivative and the regularized logarithmic derivative on the open unit disk. On each compact subdisk only finitely many rational summands can have poles; the remaining derivative terms converge uniformly by their geometric decay. At a root of `t^m=-rho`, the residues are respectively `mu(m)/m` and `-a_p(m)/m`. Distinct indices have distinct pole moduli in this one-root strip. For primes `ell>=p`, the latter residue is `1/ell`; the lifted prime root sets approach every point of the unit circle. This proves the asserted meromorphic natural boundary for the derivatives. Fractional residues yield local branching of the continued determinant germ, not a globally meromorphic determinant on the enlarged disk. The proof correctly allows zero or integral residues at other indices.
+
+The all-mixed identity extension is also sound. A lower scalar root of modulus parameter `lambda_j>1` can collide with a lift of the largest root at prime index `ell` only if `n/ell=log(lambda_j)/log(R)`. An irrational ratio never collides. A reduced rational ratio `a/b` in `(0,1)` forces `b|ell`, excluding at most one prime per lower root. There are finitely many lower roots. Roots with `lambda_j<=1` produce no interior collision. Thus all sufficiently large prime grids remain available. This argument proves the claimed identity-source extension without asserting that every composite-index grid is uncollided or treating general nonscalar inputs as identity inputs.
+
+At the first Schatten boundary, `a_p(p)=-1` gives `D_p(t)=(1+q t^p)^(1/p) G_p(t)` with the specified normalized nonvanishing analytic factor. The finite-grade logarithm has leading term `-H_N/p`; the exponentially decaying deviation correction and higher Adams terms have summable tails. Consequently the cutoff is `N^(1/p)` and the limit is `exp(-gamma/p) G_p(tau)`. There is no additional factor of `p` with this chosen local factor. The mixed-rank corollary correctly restricts the enlarged disk by both the next Adams radius and the second scalar-root radius. At the critical point the underlying operator is compact but outside the relevant Schatten class: the continued value is not asserted to be an ordinary `det_p` value there.
+
+## Producer and falsification assessment
+
+The producer uses exact rational and Gaussian-rational arithmetic, compressed multiplicities, explicit bounds and bounded ranks. The three critical controls use actual source strips with `q=4,8,4`, orders `p=2,3,4`, and exact points `i/2`, `-1/2`, `(1+i)/2`. The rank-nine case is explicitly within the declared cap. Source-grade and Adams evaluations use different finite sums, with proved infinite-tail enclosures; overlap of the enclosures is described as a finite consistency check rather than a numerical proof of the analytic identity.
+
+I checked the factors in the deviation tail, higher-log tail, scalar-log truncation and Adams tail bounds. The source-grade correction uses `epsilon_n*rho^n-1/n` and the harmonic normalization `H_N/p`. The test definitions include critical-point/domain rejection, conjugation, residue vanishing, first-order and prime-index residues, finite caps, boolean/type rejection, source authentication and counterfeit controls. Authentication of the frozen precursor occurs before importing its executable code, and the new fixture binds the new files. No expanded state lists or unbounded search is required.
+
+## Scope and residual risks
+
+This is an exact mathematical extension of a specified local source parent, using classical continuation and natural-boundary arguments. It does not establish external priority, an arithmetic Euler product, a new global L-function, or RH. Finite residue tables do not prove the infinite accumulation theorem; the written argument supplies it. The report certifies an independent read and mathematical/code audit, not an independent execution or formal proof-assistant verification.
