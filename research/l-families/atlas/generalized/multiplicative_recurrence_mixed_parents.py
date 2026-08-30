@@ -344,8 +344,8 @@ def sturm_negative_simple(poly: list[int]) -> tuple[int, bool]:
             raise TypeError("Sturm input coefficients must be integers")
         need(value.bit_length() <= 128, "Sturm coefficient too large")
     need(poly[-1] != 0, "untrimmed polynomial")
+    need(poly[0] != 0, "zero endpoint excluded from negative-root Sturm control")
     if len(poly) == 1:
-        need(poly[0] != 0, "zero polynomial")
         return 0, True
     sequence = [
         [Fraction(value) for value in poly],

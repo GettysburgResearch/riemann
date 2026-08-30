@@ -194,6 +194,8 @@ class MixedRankTests(unittest.TestCase):
         self.assertEqual(M.sturm_negative_simple([1, 2, 1]), (1, False))
         self.assertEqual(M.sturm_negative_simple([1, -2, 1]), (0, False))
         self.assertEqual(M.sturm_negative_simple([-1, 0, 1]), (1, True))
+        with self.assertRaisesRegex(ValueError, "zero endpoint excluded"):
+            M.sturm_negative_simple([0, 1])
 
     def test_rank_profile_prescan_refusals(self):
         for ranks in ((), (0,), (6,), (5, 5, 5), (1,) * 6):
