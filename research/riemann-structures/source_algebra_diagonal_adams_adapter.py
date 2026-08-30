@@ -155,6 +155,8 @@ def primitive_trace(source: Source, degree: int) -> Fraction:
 
 
 def extract_primitive(source: Source, degree: int, *, after_pushforward: bool = False) -> Fraction:
+    if type(after_pushforward) is not bool:
+        raise TypeError("after_pushforward must be Boolean")
     d = order(degree)
     trace = pushed_adams_trace if after_pushforward else source_adams_trace
     return sum((mobius(e) * trace(source, d // e, e) for e in range(1, d + 1) if d % e == 0), Fraction(0)) / d
@@ -180,6 +182,8 @@ def projected_diagonal_trace(left: Source, right: Source, exponent: int) -> Frac
 
 
 def projector_commutator_size(source: Source, *, partial: bool) -> int:
+    if type(partial) is not bool:
+        raise TypeError("partial must be Boolean")
     mismatches = 0
     for x, y in product(range(len(source.sigma)), repeat=2):
         target_x = source.sigma[x]
@@ -214,6 +218,10 @@ def counterfeit() -> dict:
         "source_Adams2_trace1": str(source_adams_trace(cycle, 1, 2)),
         "pushed_Adams2_trace1": str(pushed_adams_trace(cycle, 1, 2)),
         "incorrect_pushed_P2_extraction": str(extract_primitive(cycle, 2, after_pushforward=True)),
+        "cycle_geometric_normal_order_degree2": str(traces[1] ** 2 - dc[1]),
+        "cycle_closed_point_normal_order_degree2": str(
+            primitive_trace(cycle, 2) ** 2 - primitive_trace(tensor_over_source(cycle, cycle), 2)
+        ),
         "cycle_single_cell_Wick_at_d24over35": "0",
         "split_single_cell_Wick_at_d24over35": str(-2 * Fraction(24, 35)),
         "universal_all_n_equality_proof": "explicit invertible intertwiner, not the eight displayed traces",
@@ -277,6 +285,9 @@ def build_report() -> dict:
     return {
         "schema": "source-algebra-diagonal-adams-adapter-v1",
         "scope": "exact finite Frobenius-set algebra; native source realization remains open",
+        "arithmetic_class": "MIXED",
+        "arithmetic_components": ["CERTIFIED_INTEGER_COVERAGE", "EXACT_RATIONAL"],
+        "coverage": "declared bounded permutation corpus only; not complete native coverage",
         "source_lock": source_locks(),
         "census_source_count": len(census),
         "census_order_max": 6,

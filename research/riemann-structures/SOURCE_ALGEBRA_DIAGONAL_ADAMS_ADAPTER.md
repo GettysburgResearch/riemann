@@ -6,6 +6,9 @@ interface to the native source, not a native Weil realization or trace bound**.
 Scope: finite source sets with an invertible Frobenius action and finite
 coefficient spaces in characteristic zero.  All universal statements below
 have algebraic proofs; bounded rank-one computations are regression controls.
+Arithmetic class: `MIXED`, comprising `CERTIFIED_INTEGER_COVERAGE` for the
+declared permutation census and `EXACT_RATIONAL` for its trace identities.
+Coverage is only the bounded declared corpus, not native source enumeration.
 
 Sources: the shared-fibre occupancy theorem at
 `6675c19f20760301d8c91dedc4a7836170003512`, and the external-plus-diagonal
@@ -227,6 +230,16 @@ The same source-aware extraction applies to the literal diagonal object
 diagonal guessed after aggregation.  Combining it with the existing
 two-place extractor yields the external-plus-diagonal normal-ordering
 formula in the frozen #760 packet.
+
+Here `X` denotes **geometric points**; closed points are the `sigma`-orbits.
+These levels must not be identified.  In the cycle example, the geometric
+off-diagonal trace at extension degree two is `2*2-2=2`, whereas the
+closed-point degree-two normal ordering is `P_2(V)^2-P_2(V tensor V)=1-1=0`.
+The separate Adams extraction channels relate these quantities; they are
+not a raw equality or division by the extension degree.  In particular
+`D_1=0` for the nonsplit cycle is not the Hermitian norm of two static native
+FFPS atoms.  Equation (1.1) is recovered only in the split, trace-matched
+case specified in Section 2; the complete native Frobenius model is open.
 
 ## 5. Partial Frobenius and the honest complexity boundary
 

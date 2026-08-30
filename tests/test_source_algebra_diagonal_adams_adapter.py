@@ -104,6 +104,17 @@ class SourceAlgebraAdapterTests(unittest.TestCase):
         self.assertEqual(result["cycle_P2"], "1")
         self.assertEqual(result["split_P2"], "0")
 
+    def test_geometric_points_are_not_closed_point_orbits(self):
+        result = adapter.counterfeit()
+        self.assertEqual(result["cycle_geometric_normal_order_degree2"], "2")
+        self.assertEqual(result["cycle_closed_point_normal_order_degree2"], "0")
+
+    def test_boolean_operation_guards(self):
+        with self.assertRaises(TypeError):
+            adapter.extract_primitive(self.cycle, 2, after_pushforward=1)
+        with self.assertRaises(TypeError):
+            adapter.projector_commutator_size(self.cycle, partial=1)
+
 
 if __name__ == "__main__":
     unittest.main()

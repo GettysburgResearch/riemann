@@ -21,6 +21,7 @@
       ]
     ],
     "cycle_P2": "1",
+    "cycle_closed_point_normal_order_degree2": "0",
     "cycle_diagonal_traces_1_to_8": [
       "0",
       "2",
@@ -31,6 +32,7 @@
       "0",
       "2"
     ],
+    "cycle_geometric_normal_order_degree2": "2",
     "cycle_single_cell_Wick_at_d24over35": "0",
     "incorrect_pushed_P2_extraction": "0",
     "intertwiner": [
@@ -70,9 +72,15 @@
     "split_single_cell_Wick_at_d24over35": "-48/35",
     "universal_all_n_equality_proof": "explicit invertible intertwiner, not the eight displayed traces"
   },
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": [
+    "CERTIFIED_INTEGER_COVERAGE",
+    "EXACT_RATIONAL"
+  ],
   "census_order_max": 6,
   "census_sha256": "e6f70393b72cb27e4ee27c2547c3019b4de3fcc68db6ceed710b0ac6f262a2cd",
   "census_source_count": 442,
+  "coverage": "declared bounded permutation corpus only; not complete native coverage",
   "firewalls": {
     "Adams": "source local Adams before pushforward; pushed Adams has extra orbit terms",
     "Hermitian_partner": "conjugate traces must be specified; dual is not automatically conjugate",
@@ -131,10 +139,10 @@
       }
     ],
     "current_files_sha256_lf": {
-      "research/riemann-structures/SOURCE_ALGEBRA_DIAGONAL_ADAMS_ADAPTER.md": "e2a342eefd5bbb199ae2328e1472a7d9b5b8565a5674ca3d04bd25753608ed32",
-      "research/riemann-structures/source_algebra_diagonal_adams_adapter.py": "20797ed035ea97896ec23881c205a9ad0fee1de42a77e2f78bffef5add5c405b",
+      "research/riemann-structures/SOURCE_ALGEBRA_DIAGONAL_ADAMS_ADAPTER.md": "1d20f67639143ac9086007ed105ebd238b2c2a6bd83e0c5a00f1de7d5c66db84",
+      "research/riemann-structures/source_algebra_diagonal_adams_adapter.py": "5a94ddf391dd59502d41ec28df30aa3fe0d2102415a54e3215f9bc018e4b8958",
       "research/riemann-structures/source_algebra_diagonal_adams_adapter.sources.json": "4f5482f041e2b9f021bdad993a3ff5a15fcc2952146ae18e5f7a4c935a779a3d",
-      "tests/test_source_algebra_diagonal_adams_adapter.py": "baa38c9ecdb6bdd4fb7cd987943198dcbb8c6ba7f3720f5869be3e24f78fff6a"
+      "tests/test_source_algebra_diagonal_adams_adapter.py": "aca44fbf0bb4ebc3c9ae298ddc2a842fe5365e697ca07e8ea6723e02ada9cbb7"
     }
   }
 }
