@@ -218,10 +218,21 @@ switched on and off.
 Required output: minimal counterexamples showing which combinations are
 cheap to counterfeit and which force a genuine source.
 
-Immediate target: construct two families with identical averaged trace data
-and opposite behaviour in one selected member.  Any proposed
-family-to-principal theorem must distinguish them using an explicit binding
-axiom.
+Completed structural firewall:
+[`FAMILY_BINDING_PERMUTATION_FIREWALL.md`](FAMILY_BINDING_PERMUTATION_FIREWALL.md)
+constructs two labelings of the same complete unlabeled scalar-trace family
+with identical every-order averages and opposite selected traces.  The
+principal value is recoverable on a full permutation orbit exactly when
+all entries are equal, including `N=1`.  A nonnegative first mean alone pays
+the sharp factor `N`; signed mean-zero examples show why nonnegativity is
+essential.  This is elementary exact interface algebra, not a novelty claim
+or a counterfeit arithmetic `L`-function.
+
+Next target: test a proposed binding axiom against the pair and quantify
+its additional source information.  The firewall does not prohibit bounds
+on every member from stronger symmetric data: the complete multiset knows
+the maximum, and higher moments may improve the first-mean loss.  Nor does
+it obstruct labeled signed extraction such as `P=A-K=C-S`.
 
 Falsifier: a “counterfeit” defined by first choosing the desired zero set is
 uninformative.  The synthetic world must be specified upstream by local or
@@ -240,7 +251,7 @@ enough to reject fitted structures.
 | function-field analogue | clean trace/weight examples | one literal relative pushforward with partial Frobenius |
 | archimedean block | `GL(1)` real/complex gamma data | dual, parity, and tensor rule not used to fit the model |
 | dynamical block | one finite graph/Ihara determinant | one Anosov/transfer determinant and one arithmetic twist schema |
-| family-binding block | averaged identities with controlled members | exceptional member inserted without changing the trained averages |
+| family-binding block | complete unlabeled scalar-trace multiset; every-order moment invariance; sharp nonnegative first-mean tax | a principal-label swap invisible to all symmetric data; `N=1`, repeated/all-equal, and signed controls |
 
 The finite-cell rows test formulas; they are not evidence for live native
 occupancy.  Broad finite-field or zero sweeps are not the next bottleneck.
@@ -298,6 +309,13 @@ Give an explicit positive domination, affordable amplifier, exact inversion,
 or rigidity theorem that sends the family-level result to the principal
 consumer without a fatal family-size tax.
 
+The permutation firewall rules out recovery from a purely label-erasing
+interface, not from the labeled signed source.  In the already available
+`P=A-K=C-S` architecture, proving either requisite pair of signed global
+bounds already extracts `P`; no third algebraic amplifier is required.
+For a positive-average route, any improvement over the sharp first-mean
+factor `N` must use stronger moments or additional structure.
+
 ### T6. `ARCHRIGID`: archimedean uniqueness or no-go
 
 Classify the smallest determinant models satisfying gamma, duality, parity,
@@ -341,7 +359,7 @@ packets are reviewed.
 | 4:00--5:00 | compose the adapter with partial Adams extraction and audit commuting Frobenius requirements | do not claim a sheaf if only finite matrices exist |
 | 5:00--6:00 | push the full signed coefficient ledger through conductor recombination | take no absolute value before the source-cancellation question is answered |
 | 6:00--7:00 | run the `GL(1)` archimedean compatibility census as an independent lane | determinant matching alone does not pass |
-| 7:00--8:00 | build one family-binding counterfeit pair, update the portfolio, and decide promotion/pause | no zero plots or novelty claims |
+| 7:00--8:00 | test a proposed labeled binding mechanism against the exact family-binding counterfeit pair and quantify its cost | a symmetric bound is not principal recovery; no zero plots or novelty claims |
 
 ## 9. Ranked continuation queue
 
@@ -356,8 +374,10 @@ packets are reviewed.
    invalid carrier.
 4. **Archimedean compatibility rigidity.**  Keep this independent so a
    finite-place failure does not consume the entire programme.
-5. **Synthetic family-binding counterfeits.**  They can falsify weak
-   individualization principles cheaply and exactly.
+5. **Source-sensitive family binding after the counterfeit.**  The exact
+   permutation pair and sharp first-mean tax now supply the baseline
+   firewall.  Proceed only with a binding axiom or stronger estimate that
+   explicitly escapes it, rather than producing more relabelings.
 6. **Dynamical/graph held-out transfer.**  Promote only if one schema predicts
    an identity not used in construction.
 7. **Scaling-site, categorical, or new-language moonshots.**  Open a separate
@@ -385,8 +405,9 @@ open inequality with no new cancellation mechanism.
 
 ## 11. Scientific firewall
 
-The current exact mathematics is finite fixed-fibre algebra plus authenticated
-source identities.  It does not construct `ONEPLACEWEIL`, prove `RELTRACE`,
+The current exact mathematics is finite fixed-fibre algebra, elementary
+finite-family recovery/mean-tax theorems, and authenticated source identities.
+It does not construct `ONEPLACEWEIL`, prove `RELTRACE`,
 bind the principal member, transfer function-field purity to number fields,
 or prove a critical-line theorem.  The literature map is a boundary audit,
 not a priority claim.  Every proposed object above remains a proposal until

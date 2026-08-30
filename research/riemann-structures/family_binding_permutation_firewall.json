@@ -1,0 +1,910 @@
+{
+  "artifact_sha256_lf": {
+    "research/riemann-structures/FAMILY_BINDING_PERMUTATION_FIREWALL.md": "54cf5c3696bd4026eb5c08bee16bd356b8713f2365b34c5324600f8a64bf1f21",
+    "research/riemann-structures/family_binding_permutation_firewall.py": "c9db1f7d6cde3a1c59a5df14b4d5a152cffa36f5de92eff933a9c07c3519673f",
+    "research/riemann-structures/family_binding_permutation_firewall.sources.json": "c23952211e9817ab1d483603ebfc0195e25100823878a7a56c160a13af0df754",
+    "tests/test_family_binding_permutation_firewall.py": "c35bc93aa33c8373bca7089af4ece94b3ec13612ee531272b78acd69db7ae341"
+  },
+  "computation_caps": {
+    "census_max_N": 4,
+    "max_N": 8,
+    "max_input_bits": 32,
+    "max_moment_order": 12
+  },
+  "documentary_sources": [
+    {
+      "commit": "6675c19f20760301d8c91dedc4a7836170003512",
+      "git_blob": "f5e0eb316f29d5e44cc3c7124401cb3e784fef49",
+      "path": "research/riemann-structures/RIEMANN_STRUCTURES_WAVE2_PORTFOLIO.md",
+      "role": "portfolio_synthetic_counterfeit_target",
+      "sha256_lf": "23d5a5a7ccdf7669cbbfab6bf4a71d904c71ca5986caecb424d33d67bcd70a8c"
+    },
+    {
+      "commit": "6675c19f20760301d8c91dedc4a7836170003512",
+      "git_blob": "47c148187db578357035926f8ff12419b0cf3652",
+      "path": "research/l-families/atlas/function_field/FFPS_PRINCIPAL_ANOMALY_TRANSFER_DICHOTOMY.md",
+      "role": "labeled_signed_extraction_is_outside_the_no_go",
+      "sha256_lf": "1c2c2159e6cb6f55e4fd3605c1b3181b36d318cb02e67608399b1c4a37cbfd70"
+    }
+  ],
+  "edge_controls": {
+    "all_equal": {
+      "N": 3,
+      "common_moments_0_through_12": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64",
+        "128",
+        "256",
+        "512",
+        "1024",
+        "2048",
+        "4096"
+      ],
+      "identifiable_from_complete_multiset": true,
+      "left": [
+        "2",
+        "2",
+        "2"
+      ],
+      "principal_label": 1,
+      "right": [
+        "2",
+        "2",
+        "2"
+      ],
+      "selected_values": [
+        "2",
+        "2"
+      ],
+      "unlabeled_multiset": [
+        "2",
+        "2",
+        "2"
+      ]
+    },
+    "all_zero": {
+      "N": 4,
+      "common_moments_0_through_12": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "identifiable_from_complete_multiset": true,
+      "left": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "principal_label": 3,
+      "right": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "selected_values": [
+        "0",
+        "0"
+      ],
+      "unlabeled_multiset": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "repeated_nonconstant": {
+      "N": 4,
+      "common_moments_0_through_12": [
+        "1",
+        "5/4",
+        "13/4",
+        "23/4",
+        "49/4",
+        "95/4",
+        "193/4",
+        "383/4",
+        "769/4",
+        "1535/4",
+        "3073/4",
+        "6143/4",
+        "12289/4"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "2",
+        "2",
+        "-1",
+        "2"
+      ],
+      "principal_label": 1,
+      "right": [
+        "2",
+        "-1",
+        "2",
+        "2"
+      ],
+      "selected_values": [
+        "2",
+        "-1"
+      ],
+      "unlabeled_multiset": [
+        "-1",
+        "2",
+        "2",
+        "2"
+      ]
+    },
+    "singleton": {
+      "N": 1,
+      "common_moments_0_through_12": [
+        "1",
+        "5/3",
+        "25/9",
+        "125/27",
+        "625/81",
+        "3125/243",
+        "15625/729",
+        "78125/2187",
+        "390625/6561",
+        "1953125/19683",
+        "9765625/59049",
+        "48828125/177147",
+        "244140625/531441"
+      ],
+      "identifiable_from_complete_multiset": true,
+      "left": [
+        "5/3"
+      ],
+      "principal_label": 0,
+      "right": [
+        "5/3"
+      ],
+      "selected_values": [
+        "5/3",
+        "5/3"
+      ],
+      "unlabeled_multiset": [
+        "5/3"
+      ]
+    }
+  },
+  "exhaustive_census": {
+    "all_distinct_permutations_enumerated": true,
+    "alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "identifiable_marked_cases": 30,
+    "lengths": [
+      1,
+      4
+    ],
+    "marked_tuple_count": 426,
+    "nonnegative_marked_cases": 98,
+    "transcript_sha256": "90a45fbc3a4e43e939bac0393ab0c5f9448bca197411b1e402597f0609b6eed9",
+    "tuple_count": 120
+  },
+  "nonnegative_spikes": [
+    {
+      "N": 1,
+      "N_times_mean": "3/2",
+      "common_moments_0_through_12": [
+        "1",
+        "3/2",
+        "9/4",
+        "27/8",
+        "81/16",
+        "243/32",
+        "729/64",
+        "2187/128",
+        "6561/256",
+        "19683/512",
+        "59049/1024",
+        "177147/2048",
+        "531441/4096"
+      ],
+      "identifiable_from_complete_multiset": true,
+      "left": [
+        "3/2"
+      ],
+      "mean": "3/2",
+      "optimal_mean_only_constant": 1,
+      "principal_label": 0,
+      "right": [
+        "3/2"
+      ],
+      "selected_values": [
+        "3/2",
+        "3/2"
+      ],
+      "unlabeled_multiset": [
+        "3/2"
+      ]
+    },
+    {
+      "N": 2,
+      "N_times_mean": "3/2",
+      "common_moments_0_through_12": [
+        "1",
+        "3/4",
+        "9/8",
+        "27/16",
+        "81/32",
+        "243/64",
+        "729/128",
+        "2187/256",
+        "6561/512",
+        "19683/1024",
+        "59049/2048",
+        "177147/4096",
+        "531441/8192"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "0"
+      ],
+      "mean": "3/4",
+      "optimal_mean_only_constant": 2,
+      "principal_label": 0,
+      "right": [
+        "0",
+        "3/2"
+      ],
+      "selected_values": [
+        "3/2",
+        "0"
+      ],
+      "unlabeled_multiset": [
+        "0",
+        "3/2"
+      ]
+    },
+    {
+      "N": 3,
+      "N_times_mean": "3/2",
+      "common_moments_0_through_12": [
+        "1",
+        "1/2",
+        "3/4",
+        "9/8",
+        "27/16",
+        "81/32",
+        "243/64",
+        "729/128",
+        "2187/256",
+        "6561/512",
+        "19683/1024",
+        "59049/2048",
+        "177147/4096"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "0",
+        "0"
+      ],
+      "mean": "1/2",
+      "optimal_mean_only_constant": 3,
+      "principal_label": 0,
+      "right": [
+        "0",
+        "3/2",
+        "0"
+      ],
+      "selected_values": [
+        "3/2",
+        "0"
+      ],
+      "unlabeled_multiset": [
+        "0",
+        "0",
+        "3/2"
+      ]
+    },
+    {
+      "N": 4,
+      "N_times_mean": "3/2",
+      "common_moments_0_through_12": [
+        "1",
+        "3/8",
+        "9/16",
+        "27/32",
+        "81/64",
+        "243/128",
+        "729/256",
+        "2187/512",
+        "6561/1024",
+        "19683/2048",
+        "59049/4096",
+        "177147/8192",
+        "531441/16384"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "mean": "3/8",
+      "optimal_mean_only_constant": 4,
+      "principal_label": 0,
+      "right": [
+        "0",
+        "3/2",
+        "0",
+        "0"
+      ],
+      "selected_values": [
+        "3/2",
+        "0"
+      ],
+      "unlabeled_multiset": [
+        "0",
+        "0",
+        "0",
+        "3/2"
+      ]
+    },
+    {
+      "N": 5,
+      "N_times_mean": "3/2",
+      "common_moments_0_through_12": [
+        "1",
+        "3/10",
+        "9/20",
+        "27/40",
+        "81/80",
+        "243/160",
+        "729/320",
+        "2187/640",
+        "6561/1280",
+        "19683/2560",
+        "59049/5120",
+        "177147/10240",
+        "531441/20480"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "mean": "3/10",
+      "optimal_mean_only_constant": 5,
+      "principal_label": 0,
+      "right": [
+        "0",
+        "3/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "selected_values": [
+        "3/2",
+        "0"
+      ],
+      "unlabeled_multiset": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "3/2"
+      ]
+    },
+    {
+      "N": 6,
+      "N_times_mean": "3/2",
+      "common_moments_0_through_12": [
+        "1",
+        "1/4",
+        "3/8",
+        "9/16",
+        "27/32",
+        "81/64",
+        "243/128",
+        "729/256",
+        "2187/512",
+        "6561/1024",
+        "19683/2048",
+        "59049/4096",
+        "177147/8192"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "mean": "1/4",
+      "optimal_mean_only_constant": 6,
+      "principal_label": 0,
+      "right": [
+        "0",
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "selected_values": [
+        "3/2",
+        "0"
+      ],
+      "unlabeled_multiset": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "3/2"
+      ]
+    },
+    {
+      "N": 7,
+      "N_times_mean": "3/2",
+      "common_moments_0_through_12": [
+        "1",
+        "3/14",
+        "9/28",
+        "27/56",
+        "81/112",
+        "243/224",
+        "729/448",
+        "2187/896",
+        "6561/1792",
+        "19683/3584",
+        "59049/7168",
+        "177147/14336",
+        "531441/28672"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "mean": "3/14",
+      "optimal_mean_only_constant": 7,
+      "principal_label": 0,
+      "right": [
+        "0",
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "selected_values": [
+        "3/2",
+        "0"
+      ],
+      "unlabeled_multiset": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "3/2"
+      ]
+    },
+    {
+      "N": 8,
+      "N_times_mean": "3/2",
+      "common_moments_0_through_12": [
+        "1",
+        "3/16",
+        "9/32",
+        "27/64",
+        "81/128",
+        "243/256",
+        "729/512",
+        "2187/1024",
+        "6561/2048",
+        "19683/4096",
+        "59049/8192",
+        "177147/16384",
+        "531441/32768"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "mean": "3/16",
+      "optimal_mean_only_constant": 8,
+      "principal_label": 0,
+      "right": [
+        "0",
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "selected_values": [
+        "3/2",
+        "0"
+      ],
+      "unlabeled_multiset": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "3/2"
+      ]
+    }
+  ],
+  "payload_sha256": "a3c35f2dee49a45ee8ec227a402c76fcc3f3ea3d5f9d91172492e09b74ee9df8",
+  "schema": "riemann.riemann_structures.family_binding_permutation_firewall.v1",
+  "signed_opposite_pairs": [
+    {
+      "N": 2,
+      "common_moments_0_through_12": [
+        "1",
+        "0",
+        "9/4",
+        "0",
+        "81/16",
+        "0",
+        "729/64",
+        "0",
+        "6561/256",
+        "0",
+        "59049/1024",
+        "0",
+        "531441/4096"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "-3/2"
+      ],
+      "principal_label": 0,
+      "right": [
+        "-3/2",
+        "3/2"
+      ],
+      "selected_values": [
+        "3/2",
+        "-3/2"
+      ],
+      "unlabeled_multiset": [
+        "-3/2",
+        "3/2"
+      ]
+    },
+    {
+      "N": 3,
+      "common_moments_0_through_12": [
+        "1",
+        "0",
+        "3/2",
+        "0",
+        "27/8",
+        "0",
+        "243/32",
+        "0",
+        "2187/128",
+        "0",
+        "19683/512",
+        "0",
+        "177147/2048"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "-3/2",
+        "0"
+      ],
+      "principal_label": 0,
+      "right": [
+        "-3/2",
+        "3/2",
+        "0"
+      ],
+      "selected_values": [
+        "3/2",
+        "-3/2"
+      ],
+      "unlabeled_multiset": [
+        "-3/2",
+        "0",
+        "3/2"
+      ]
+    },
+    {
+      "N": 4,
+      "common_moments_0_through_12": [
+        "1",
+        "0",
+        "9/8",
+        "0",
+        "81/32",
+        "0",
+        "729/128",
+        "0",
+        "6561/512",
+        "0",
+        "59049/2048",
+        "0",
+        "531441/8192"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "-3/2",
+        "0",
+        "0"
+      ],
+      "principal_label": 0,
+      "right": [
+        "-3/2",
+        "3/2",
+        "0",
+        "0"
+      ],
+      "selected_values": [
+        "3/2",
+        "-3/2"
+      ],
+      "unlabeled_multiset": [
+        "-3/2",
+        "0",
+        "0",
+        "3/2"
+      ]
+    },
+    {
+      "N": 5,
+      "common_moments_0_through_12": [
+        "1",
+        "0",
+        "9/10",
+        "0",
+        "81/40",
+        "0",
+        "729/160",
+        "0",
+        "6561/640",
+        "0",
+        "59049/2560",
+        "0",
+        "531441/10240"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "-3/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "principal_label": 0,
+      "right": [
+        "-3/2",
+        "3/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "selected_values": [
+        "3/2",
+        "-3/2"
+      ],
+      "unlabeled_multiset": [
+        "-3/2",
+        "0",
+        "0",
+        "0",
+        "3/2"
+      ]
+    },
+    {
+      "N": 6,
+      "common_moments_0_through_12": [
+        "1",
+        "0",
+        "3/4",
+        "0",
+        "27/16",
+        "0",
+        "243/64",
+        "0",
+        "2187/256",
+        "0",
+        "19683/1024",
+        "0",
+        "177147/4096"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "-3/2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "principal_label": 0,
+      "right": [
+        "-3/2",
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "selected_values": [
+        "3/2",
+        "-3/2"
+      ],
+      "unlabeled_multiset": [
+        "-3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "3/2"
+      ]
+    },
+    {
+      "N": 7,
+      "common_moments_0_through_12": [
+        "1",
+        "0",
+        "9/14",
+        "0",
+        "81/56",
+        "0",
+        "729/224",
+        "0",
+        "6561/896",
+        "0",
+        "59049/3584",
+        "0",
+        "531441/14336"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "-3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "principal_label": 0,
+      "right": [
+        "-3/2",
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "selected_values": [
+        "3/2",
+        "-3/2"
+      ],
+      "unlabeled_multiset": [
+        "-3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "3/2"
+      ]
+    },
+    {
+      "N": 8,
+      "common_moments_0_through_12": [
+        "1",
+        "0",
+        "9/16",
+        "0",
+        "81/64",
+        "0",
+        "729/256",
+        "0",
+        "6561/1024",
+        "0",
+        "59049/4096",
+        "0",
+        "531441/16384"
+      ],
+      "identifiable_from_complete_multiset": false,
+      "left": [
+        "3/2",
+        "-3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "principal_label": 0,
+      "right": [
+        "-3/2",
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "selected_values": [
+        "3/2",
+        "-3/2"
+      ],
+      "unlabeled_multiset": [
+        "-3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "3/2"
+      ]
+    }
+  ],
+  "status": "EXACT_STRUCTURAL_FIREWALL_NOT_RH_ESTIMATE_NOT_NOVELTY_CLAIM",
+  "theorem_scope": {
+    "absolute_mean_tax": "absolute selected value <= N times mean absolute value; N is sharp",
+    "actual_arithmetic_family_or_RH_estimate": false,
+    "family_size": "every integer N>=1; unrestricted relabeling and a fixed external principal mark",
+    "mean_only_tax": "optimal constant N for nonnegative entries and the first average alone",
+    "recovery": "complete multiset identifies the principal value on its full orbit iff all entries are equal",
+    "signed_mean_failure": "N>=2; a positive selected value can coexist with zero signed average",
+    "signed_source_escape": "P=A-K=C-S retains labeled data; no extra amplifier is imposed after those signed gates",
+    "stronger_data_escape": "the complete multiset gives the maximum; higher moments may give stronger bounds",
+    "trace_moments": "all integer orders r>=0 agree by reindexing; not inferred from the finite checks"
+  }
+}

@@ -11,4 +11,12 @@ It separates exact results from proposals, maps the primary-literature and
 repository boundaries, compares four contrasting structural mechanisms, and
 ends with a ranked continuation queue.
 
-RH and GRH remain open.  Nothing in this directory is a proof claim.
+The first synthetic-world result is
+[FAMILY_BINDING_PERMUTATION_FIREWALL.md](FAMILY_BINDING_PERMUTATION_FIREWALL.md):
+the value at a fixed principal label is recoverable from its complete
+unlabeled trace family precisely on all-equal orbits, and a nonnegative first
+average alone has a sharp factor-`N` domination cost.  Its replay includes
+`N=1`, repeated values, signed cancellations, and the stronger-data escape.
+This is an exact structural firewall, not an amplifier or a novelty claim.
+
+RH and GRH remain open.  Nothing in this directory claims a proof of either.
