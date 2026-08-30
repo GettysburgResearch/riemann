@@ -1,0 +1,1746 @@
+{
+  "arithmetic": "integers and exact rational log intervals; no expanded Hilbert states",
+  "boundary_controls": [
+    {
+      "Schatten_two": true,
+      "all_block_eigenvalue_multiplicities_nonnegative": true,
+      "cut": 32,
+      "log_DN_plus_H_floor_N_over_2": [
+        [
+          -863127501643,
+          1000000000000
+        ],
+        [
+          -863127501641,
+          1000000000000
+        ]
+      ],
+      "log_N_times_DN": [
+        [
+          -97265074009,
+          125000000000
+        ],
+        [
+          -778120592071,
+          1000000000000
+        ]
+      ],
+      "log_limit_constant_27_exp_minus_gamma_over_32": [
+        [
+          -155607861557,
+          200000000000
+        ],
+        [
+          -44838417873,
+          62500000000
+        ]
+      ],
+      "log_regular_part_27_over_64": [
+        [
+          -215761554339,
+          250000000000
+        ],
+        [
+          -172609243471,
+          200000000000
+        ]
+      ],
+      "ordinary_trace_class": false,
+      "point": "t=i/sqrt(3), with t^2=-1/3 used exactly",
+      "proved_absolute_log_error": [
+        17974459392831015504125009513715256245794984962018661796008620090865740150323827287289549,
+        21623024532366794517131473725196210244355771163190755037852427268190894302090990222049280
+      ]
+    },
+    {
+      "Schatten_two": true,
+      "all_block_eigenvalue_multiplicities_nonnegative": true,
+      "cut": 48,
+      "log_DN_plus_H_floor_N_over_2": [
+        [
+          -863048433239,
+          1000000000000
+        ],
+        [
+          -431524216619,
+          500000000000
+        ]
+      ],
+      "log_N_times_DN": [
+        [
+          -153561120017,
+          200000000000
+        ],
+        [
+          -191951400021,
+          250000000000
+        ]
+      ],
+      "log_limit_constant_27_exp_minus_gamma_over_32": [
+        [
+          -767803384201,
+          1000000000000
+        ],
+        [
+          -9087267371,
+          12500000000
+        ]
+      ],
+      "log_regular_part_27_over_64": [
+        [
+          -215761554339,
+          250000000000
+        ],
+        [
+          -172609243471,
+          200000000000
+        ]
+      ],
+      "ordinary_trace_class": false,
+      "point": "t=i/sqrt(3), with t^2=-1/3 used exactly",
+      "proved_absolute_log_error": [
+        597331630276675179099256253689574152587228187613692649581731792698958041346620239416478872656743951949,
+        6086340326661886831980169880010818465474032811033504769449880269035832089803066403714330506057933127680
+      ]
+    },
+    {
+      "Schatten_two": true,
+      "all_block_eigenvalue_multiplicities_nonnegative": true,
+      "cut": 63,
+      "log_DN_plus_H_floor_N_over_2": [
+        [
+          -172609264017,
+          200000000000
+        ],
+        [
+          -215761580021,
+          250000000000
+        ]
+      ],
+      "log_N_times_DN": [
+        [
+          -74715678913,
+          100000000000
+        ],
+        [
+          -747156789129,
+          1000000000000
+        ]
+      ],
+      "log_limit_constant_27_exp_minus_gamma_over_32": [
+        [
+          -763157027747,
+          1000000000000
+        ],
+        [
+          -91426041179,
+          125000000000
+        ]
+      ],
+      "log_regular_part_27_over_64": [
+        [
+          -215761554339,
+          250000000000
+        ],
+        [
+          -172609243471,
+          200000000000
+        ]
+      ],
+      "ordinary_trace_class": false,
+      "point": "t=i/sqrt(3), with t^2=-1/3 used exactly",
+      "proved_absolute_log_error": [
+        2835867904786360361586787308844983274251245718706644755269729315099965578502679521602150985193076433482891673568907,
+        214144062712535128416320524739958451694828552688597818941827118420988561636159531290373181030841980229554932558069760
+      ]
+    },
+    {
+      "Schatten_two": true,
+      "all_block_eigenvalue_multiplicities_nonnegative": true,
+      "cut": 64,
+      "log_DN_plus_H_floor_N_over_2": [
+        [
+          -863046283869,
+          1000000000000
+        ],
+        [
+          -215761570967,
+          250000000000
+        ]
+      ],
+      "log_N_times_DN": [
+        [
+          -381329197973,
+          500000000000
+        ],
+        [
+          -152531679189,
+          200000000000
+        ]
+      ],
+      "log_limit_constant_27_exp_minus_gamma_over_32": [
+        [
+          -762658329433,
+          1000000000000
+        ],
+        [
+          -146377334153,
+          200000000000
+        ]
+      ],
+      "log_regular_part_27_over_64": [
+        [
+          -215761554339,
+          250000000000
+        ],
+        [
+          -172609243471,
+          200000000000
+        ]
+      ],
+      "ordinary_trace_class": false,
+      "point": "t=i/sqrt(3), with t^2=-1/3 used exactly",
+      "proved_absolute_log_error": [
+        19851075311933698782624471221788771585487607257472656164828498572172269584853535434480446195855337812591049817894349,
+        1713152501700281027330564197919667613558628421508782551534616947367908493089276250322985448246735841836439460464558080
+      ]
+    }
+  ],
+  "not_machine_proved": [
+    "all-unitary first-zero-circle theorem",
+    "all-k trigonometric radius inequalities",
+    "Mertens cutoff limit",
+    "every-point product behavior outside the analytic disk"
+  ],
+  "provenance": {
+    "frozen_critical_commit": "f8b385d69c8b5eea13ef7f474a23835bf0dbbd2f",
+    "owned_sha256_lf": {
+      "NONSCALAR_GRADE_RADIUS.md": "3e5a340b3e7d30d354ad77f3151a5e049b98524dbc3323a5fddf569711fa2ca5",
+      "NONSCALAR_REPLAY.md": "d04644f184f12f4372ca6e13ba8e800631cef2cc560ee56ce380441d2532c1e3",
+      "nonscalar_replay.py": "ad46fa9184ea284c6106ee9b1304e31152b84820b5d1d948e9b46663214ae6a9",
+      "tests/test_nonscalar.py": "79fd98250975bd11328b3c6f2f86c7c0a3968ac89285e50e0703e921c17f403d"
+    },
+    "pins": [
+      [
+        "critical_boundary_replay.py",
+        "5274f3a70d595ac730fd5520e4d540d568449b60",
+        "14d3c21b20fb1e3071810d2f32625997a284553c379a19ad115b7fbe332cfb3a"
+      ],
+      [
+        "CRITICAL_GRADE_BOUNDARY.md",
+        "c1ab0530d4d7c2485051792ae95fa66a2b0b2c92",
+        "6d83c759a177d85d6f64c8f64e8ffcb9527416c187191bd37d4959d9df240216"
+      ]
+    ]
+  },
+  "schema": "koszul-nonscalar-grade-radius-v1",
+  "source_controls": [
+    {
+      "coverage_through_degree": 64,
+      "input": "diag(1,-1) and identity_k",
+      "radius_formula": "tan(pi/(2k)); lies strictly between 1/(k-1) and its square root",
+      "ranks": [
+        2,
+        3
+      ],
+      "source_denominator": [
+        1,
+        0,
+        -3,
+        0,
+        3,
+        0,
+        -1
+      ],
+      "source_even_numerator": [
+        1,
+        0,
+        3,
+        0
+      ],
+      "source_involution_rows": [
+        {
+          "degree": 1,
+          "dimension": 6,
+          "minus_eigenspace": 3,
+          "plus_eigenspace": 3,
+          "trace": 0
+        },
+        {
+          "degree": 2,
+          "dimension": 3,
+          "minus_eigenspace": 3,
+          "plus_eigenspace": 0,
+          "trace": -3
+        },
+        {
+          "degree": 3,
+          "dimension": 2,
+          "minus_eigenspace": 1,
+          "plus_eigenspace": 1,
+          "trace": 0
+        },
+        {
+          "degree": 4,
+          "dimension": 3,
+          "minus_eigenspace": 0,
+          "plus_eigenspace": 3,
+          "trace": 3
+        },
+        {
+          "degree": 5,
+          "dimension": 6,
+          "minus_eigenspace": 3,
+          "plus_eigenspace": 3,
+          "trace": 0
+        },
+        {
+          "degree": 6,
+          "dimension": 11,
+          "minus_eigenspace": 9,
+          "plus_eigenspace": 2,
+          "trace": -7
+        },
+        {
+          "degree": 7,
+          "dimension": 18,
+          "minus_eigenspace": 9,
+          "plus_eigenspace": 9,
+          "trace": 0
+        },
+        {
+          "degree": 8,
+          "dimension": 30,
+          "minus_eigenspace": 6,
+          "plus_eigenspace": 24,
+          "trace": 18
+        },
+        {
+          "degree": 9,
+          "dimension": 56,
+          "minus_eigenspace": 28,
+          "plus_eigenspace": 28,
+          "trace": 0
+        },
+        {
+          "degree": 10,
+          "dimension": 105,
+          "minus_eigenspace": 75,
+          "plus_eigenspace": 30,
+          "trace": -45
+        },
+        {
+          "degree": 11,
+          "dimension": 186,
+          "minus_eigenspace": 93,
+          "plus_eigenspace": 93,
+          "trace": 0
+        },
+        {
+          "degree": 12,
+          "dimension": 335,
+          "minus_eigenspace": 110,
+          "plus_eigenspace": 225,
+          "trace": 115
+        },
+        {
+          "degree": 13,
+          "dimension": 630,
+          "minus_eigenspace": 315,
+          "plus_eigenspace": 315,
+          "trace": 0
+        },
+        {
+          "degree": 14,
+          "dimension": 1179,
+          "minus_eigenspace": 741,
+          "plus_eigenspace": 438,
+          "trace": -303
+        },
+        {
+          "degree": 15,
+          "dimension": 2182,
+          "minus_eigenspace": 1091,
+          "plus_eigenspace": 1091,
+          "trace": 0
+        },
+        {
+          "degree": 16,
+          "dimension": 4080,
+          "minus_eigenspace": 1638,
+          "plus_eigenspace": 2442,
+          "trace": 804
+        },
+        {
+          "degree": 17,
+          "dimension": 7710,
+          "minus_eigenspace": 3855,
+          "plus_eigenspace": 3855,
+          "trace": 0
+        },
+        {
+          "degree": 18,
+          "dimension": 14588,
+          "minus_eigenspace": 8372,
+          "plus_eigenspace": 6216,
+          "trace": -2156
+        },
+        {
+          "degree": 19,
+          "dimension": 27594,
+          "minus_eigenspace": 13797,
+          "plus_eigenspace": 13797,
+          "trace": 0
+        },
+        {
+          "degree": 20,
+          "dimension": 52377,
+          "minus_eigenspace": 23262,
+          "plus_eigenspace": 29115,
+          "trace": 5853
+        },
+        {
+          "degree": 21,
+          "dimension": 99858,
+          "minus_eigenspace": 49929,
+          "plus_eigenspace": 49929,
+          "trace": 0
+        },
+        {
+          "degree": 22,
+          "dimension": 190743,
+          "minus_eigenspace": 103377,
+          "plus_eigenspace": 87366,
+          "trace": -16011
+        },
+        {
+          "degree": 23,
+          "dimension": 364722,
+          "minus_eigenspace": 182361,
+          "plus_eigenspace": 182361,
+          "trace": 0
+        },
+        {
+          "degree": 24,
+          "dimension": 698870,
+          "minus_eigenspace": 327380,
+          "plus_eigenspace": 371490,
+          "trace": 44110
+        },
+        {
+          "degree": 25,
+          "dimension": 1342176,
+          "minus_eigenspace": 671088,
+          "plus_eigenspace": 671088,
+          "trace": 0
+        },
+        {
+          "degree": 26,
+          "dimension": 2581425,
+          "minus_eigenspace": 1351875,
+          "plus_eigenspace": 1229550,
+          "trace": -122325
+        },
+        {
+          "degree": 27,
+          "dimension": 4971008,
+          "minus_eigenspace": 2485504,
+          "plus_eigenspace": 2485504,
+          "trace": 0
+        },
+        {
+          "degree": 28,
+          "dimension": 9586395,
+          "minus_eigenspace": 4622670,
+          "plus_eigenspace": 4963725,
+          "trace": 341055
+        },
+        {
+          "degree": 29,
+          "dimension": 18512790,
+          "minus_eigenspace": 9256395,
+          "plus_eigenspace": 9256395,
+          "trace": 0
+        },
+        {
+          "degree": 30,
+          "dimension": 35792449,
+          "minus_eigenspace": 18373967,
+          "plus_eigenspace": 17418482,
+          "trace": -955485
+        },
+        {
+          "degree": 31,
+          "dimension": 69273666,
+          "minus_eigenspace": 34636833,
+          "plus_eigenspace": 34636833,
+          "trace": 0
+        },
+        {
+          "degree": 32,
+          "dimension": 134215680,
+          "minus_eigenspace": 65763654,
+          "plus_eigenspace": 68452026,
+          "trace": 2688372
+        },
+        {
+          "degree": 33,
+          "dimension": 260300986,
+          "minus_eigenspace": 130150493,
+          "plus_eigenspace": 130150493,
+          "trace": 0
+        },
+        {
+          "degree": 34,
+          "dimension": 505294125,
+          "minus_eigenspace": 256443375,
+          "plus_eigenspace": 248850750,
+          "trace": -7592625
+        },
+        {
+          "degree": 35,
+          "dimension": 981706806,
+          "minus_eigenspace": 490853403,
+          "plus_eigenspace": 490853403,
+          "trace": 0
+        },
+        {
+          "degree": 36,
+          "dimension": 1908866960,
+          "minus_eigenspace": 943675460,
+          "plus_eigenspace": 965191500,
+          "trace": 21516040
+        },
+        {
+          "degree": 37,
+          "dimension": 3714566310,
+          "minus_eigenspace": 1857283155,
+          "plus_eigenspace": 1857283155,
+          "trace": 0
+        },
+        {
+          "degree": 38,
+          "dimension": 7233642927,
+          "minus_eigenspace": 3647400393,
+          "plus_eigenspace": 3586242534,
+          "trace": -61157859
+        },
+        {
+          "degree": 39,
+          "dimension": 14096302710,
+          "minus_eigenspace": 7048151355,
+          "plus_eigenspace": 7048151355,
+          "trace": 0
+        },
+        {
+          "degree": 40,
+          "dimension": 27487764474,
+          "minus_eigenspace": 13656725736,
+          "plus_eigenspace": 13831038738,
+          "trace": 174313002
+        },
+        {
+          "degree": 41,
+          "dimension": 53634713550,
+          "minus_eigenspace": 26817356775,
+          "plus_eigenspace": 26817356775,
+          "trace": 0
+        },
+        {
+          "degree": 42,
+          "dimension": 104715442659,
+          "minus_eigenspace": 52606752341,
+          "plus_eigenspace": 52108690318,
+          "trace": -498062023
+        },
+        {
+          "degree": 43,
+          "dimension": 204560302842,
+          "minus_eigenspace": 102280151421,
+          "plus_eigenspace": 102280151421,
+          "trace": 0
+        },
+        {
+          "degree": 44,
+          "dimension": 399822314775,
+          "minus_eigenspace": 199197999150,
+          "plus_eigenspace": 200624315625,
+          "trace": 1426316475
+        },
+        {
+          "degree": 45,
+          "dimension": 781874934568,
+          "minus_eigenspace": 390937467284,
+          "plus_eigenspace": 390937467284,
+          "trace": 0
+        },
+        {
+          "degree": 46,
+          "dimension": 1529755490571,
+          "minus_eigenspace": 766924244949,
+          "plus_eigenspace": 762831245622,
+          "trace": -4092999327
+        },
+        {
+          "degree": 47,
+          "dimension": 2994414645858,
+          "minus_eigenspace": 1497207322929,
+          "plus_eigenspace": 1497207322929,
+          "trace": 0
+        },
+        {
+          "degree": 48,
+          "dimension": 5864061663920,
+          "minus_eigenspace": 2926147058180,
+          "plus_eigenspace": 2937914605740,
+          "trace": 11767547560
+        },
+        {
+          "degree": 49,
+          "dimension": 11488774559616,
+          "minus_eigenspace": 5744387279808,
+          "plus_eigenspace": 5744387279808,
+          "trace": 0
+        },
+        {
+          "degree": 50,
+          "dimension": 22517998807920,
+          "minus_eigenspace": 11275944840600,
+          "plus_eigenspace": 11242053967320,
+          "trace": -33890873280
+        },
+        {
+          "degree": 51,
+          "dimension": 44152937520670,
+          "minus_eigenspace": 22076468760335,
+          "plus_eigenspace": 22076468760335,
+          "trace": 0
+        },
+        {
+          "degree": 52,
+          "dimension": 86607683851185,
+          "minus_eigenspace": 43254960535710,
+          "plus_eigenspace": 43352723315475,
+          "trace": 97762779765
+        },
+        {
+          "degree": 53,
+          "dimension": 169947155749830,
+          "minus_eigenspace": 84973577874915,
+          "plus_eigenspace": 84973577874915,
+          "trace": 0
+        },
+        {
+          "degree": 54,
+          "dimension": 333599974878464,
+          "minus_eigenspace": 166941200964356,
+          "plus_eigenspace": 166658773914108,
+          "trace": -282427050248
+        },
+        {
+          "degree": 55,
+          "dimension": 655069036708398,
+          "minus_eigenspace": 327534518354199,
+          "plus_eigenspace": 327534518354199,
+          "trace": 0
+        },
+        {
+          "degree": 56,
+          "dimension": 1286742745883790,
+          "minus_eigenspace": 642962861187660,
+          "plus_eigenspace": 643779884696130,
+          "trace": 817023508470
+        },
+        {
+          "degree": 57,
+          "dimension": 2528336632900554,
+          "minus_eigenspace": 1264168316450277,
+          "plus_eigenspace": 1264168316450277,
+          "trace": 0
+        },
+        {
+          "degree": 58,
+          "dimension": 4969489253251425,
+          "minus_eigenspace": 2485927904365875,
+          "plus_eigenspace": 2483561348885550,
+          "trace": -2366555480325
+        },
+        {
+          "degree": 59,
+          "dimension": 9770521225481754,
+          "minus_eigenspace": 4885260612740877,
+          "plus_eigenspace": 4885260612740877,
+          "trace": 0
+        },
+        {
+          "degree": 60,
+          "dimension": 19215358392200893,
+          "minus_eigenspace": 9604247686181038,
+          "plus_eigenspace": 9611110706019855,
+          "trace": 6863019838817
+        },
+        {
+          "degree": 61,
+          "dimension": 37800705069076950,
+          "minus_eigenspace": 18900352534538475,
+          "plus_eigenspace": 18900352534538475,
+          "trace": 0
+        },
+        {
+          "degree": 62,
+          "dimension": 74382032589917283,
+          "minus_eigenspace": 37200978751773837,
+          "plus_eigenspace": 37181053838143446,
+          "trace": -19924913630391
+        },
+        {
+          "degree": 63,
+          "dimension": 146402730743693304,
+          "minus_eigenspace": 73201365371846652,
+          "plus_eigenspace": 73201365371846652,
+          "trace": 0
+        },
+        {
+          "degree": 64,
+          "dimension": 288230376084602880,
+          "minus_eigenspace": 144086234635405062,
+          "plus_eigenspace": 144144141449197818,
+          "trace": 57906813792756
+        }
+      ]
+    },
+    {
+      "coverage_through_degree": 64,
+      "input": "diag(1,-1) and identity_k",
+      "radius_formula": "tan(pi/(2k)); lies strictly between 1/(k-1) and its square root",
+      "ranks": [
+        2,
+        4
+      ],
+      "source_denominator": [
+        1,
+        0,
+        -4,
+        0,
+        6,
+        0,
+        -4,
+        0,
+        1
+      ],
+      "source_even_numerator": [
+        1,
+        0,
+        6,
+        0,
+        1
+      ],
+      "source_involution_rows": [
+        {
+          "degree": 1,
+          "dimension": 8,
+          "minus_eigenspace": 4,
+          "plus_eigenspace": 4,
+          "trace": 0
+        },
+        {
+          "degree": 2,
+          "dimension": 6,
+          "minus_eigenspace": 6,
+          "plus_eigenspace": 0,
+          "trace": -6
+        },
+        {
+          "degree": 3,
+          "dimension": 8,
+          "minus_eigenspace": 4,
+          "plus_eigenspace": 4,
+          "trace": 0
+        },
+        {
+          "degree": 4,
+          "dimension": 18,
+          "minus_eigenspace": 2,
+          "plus_eigenspace": 16,
+          "trace": 14
+        },
+        {
+          "degree": 5,
+          "dimension": 48,
+          "minus_eigenspace": 24,
+          "plus_eigenspace": 24,
+          "trace": 0
+        },
+        {
+          "degree": 6,
+          "dimension": 124,
+          "minus_eigenspace": 92,
+          "plus_eigenspace": 32,
+          "trace": -60
+        },
+        {
+          "degree": 7,
+          "dimension": 312,
+          "minus_eigenspace": 156,
+          "plus_eigenspace": 156,
+          "trace": 0
+        },
+        {
+          "degree": 8,
+          "dimension": 810,
+          "minus_eigenspace": 266,
+          "plus_eigenspace": 544,
+          "trace": 278
+        },
+        {
+          "degree": 9,
+          "dimension": 2184,
+          "minus_eigenspace": 1092,
+          "plus_eigenspace": 1092,
+          "trace": 0
+        },
+        {
+          "degree": 10,
+          "dimension": 5928,
+          "minus_eigenspace": 3624,
+          "plus_eigenspace": 2304,
+          "trace": -1320
+        },
+        {
+          "degree": 11,
+          "dimension": 16104,
+          "minus_eigenspace": 8052,
+          "plus_eigenspace": 8052,
+          "trace": 0
+        },
+        {
+          "degree": 12,
+          "dimension": 44220,
+          "minus_eigenspace": 18876,
+          "plus_eigenspace": 25344,
+          "trace": 6468
+        },
+        {
+          "degree": 13,
+          "dimension": 122640,
+          "minus_eigenspace": 61320,
+          "plus_eigenspace": 61320,
+          "trace": 0
+        },
+        {
+          "degree": 14,
+          "dimension": 341796,
+          "minus_eigenspace": 187140,
+          "plus_eigenspace": 154656,
+          "trace": -32484
+        },
+        {
+          "degree": 15,
+          "dimension": 956576,
+          "minus_eigenspace": 478288,
+          "plus_eigenspace": 478288,
+          "trace": 0
+        },
+        {
+          "degree": 16,
+          "dimension": 2690010,
+          "minus_eigenspace": 1261978,
+          "plus_eigenspace": 1428032,
+          "trace": 166054
+        },
+        {
+          "degree": 17,
+          "dimension": 7596480,
+          "minus_eigenspace": 3798240,
+          "plus_eigenspace": 3798240,
+          "trace": 0
+        },
+        {
+          "degree": 18,
+          "dimension": 21524412,
+          "minus_eigenspace": 11192860,
+          "plus_eigenspace": 10331552,
+          "trace": -861308
+        },
+        {
+          "degree": 19,
+          "dimension": 61171656,
+          "minus_eigenspace": 30585828,
+          "plus_eigenspace": 30585828,
+          "trace": 0
+        },
+        {
+          "degree": 20,
+          "dimension": 174336264,
+          "minus_eigenspace": 84907656,
+          "plus_eigenspace": 89428608,
+          "trace": 4520952
+        },
+        {
+          "degree": 21,
+          "dimension": 498111952,
+          "minus_eigenspace": 249055976,
+          "plus_eigenspace": 249055976,
+          "trace": 0
+        },
+        {
+          "degree": 22,
+          "dimension": 1426419852,
+          "minus_eigenspace": 725191020,
+          "plus_eigenspace": 701228832,
+          "trace": -23962188
+        },
+        {
+          "degree": 23,
+          "dimension": 4093181688,
+          "minus_eigenspace": 2046590844,
+          "plus_eigenspace": 2046590844,
+          "trace": 0
+        },
+        {
+          "degree": 24,
+          "dimension": 11767874940,
+          "minus_eigenspace": 5819915388,
+          "plus_eigenspace": 5947959552,
+          "trace": 128044164
+        },
+        {
+          "degree": 25,
+          "dimension": 33891544368,
+          "minus_eigenspace": 16945772184,
+          "plus_eigenspace": 16945772184,
+          "trace": 0
+        },
+        {
+          "degree": 26,
+          "dimension": 97764131640,
+          "minus_eigenspace": 49226539320,
+          "plus_eigenspace": 48537592320,
+          "trace": -688947000
+        },
+        {
+          "degree": 27,
+          "dimension": 282429535752,
+          "minus_eigenspace": 141214767876,
+          "plus_eigenspace": 141214767876,
+          "trace": 0
+        },
+        {
+          "degree": 28,
+          "dimension": 817028131140,
+          "minus_eigenspace": 406649656260,
+          "plus_eigenspace": 410378474880,
+          "trace": 3728818620
+        },
+        {
+          "degree": 29,
+          "dimension": 2366564736720,
+          "minus_eigenspace": 1183282368360,
+          "plus_eigenspace": 1183282368360,
+          "trace": 0
+        },
+        {
+          "degree": 30,
+          "dimension": 6863038212784,
+          "minus_eigenspace": 3441661467184,
+          "plus_eigenspace": 3421376745600,
+          "trace": -20284721584
+        },
+        {
+          "degree": 31,
+          "dimension": 19924948267224,
+          "minus_eigenspace": 9962474133612,
+          "plus_eigenspace": 9962474133612,
+          "trace": 0
+        },
+        {
+          "degree": 32,
+          "dimension": 57906879556410,
+          "minus_eigenspace": 28898019757754,
+          "plus_eigenspace": 29008859798656,
+          "trace": 110840040902
+        },
+        {
+          "degree": 33,
+          "dimension": 168456380799344,
+          "minus_eigenspace": 84228190399672,
+          "plus_eigenspace": 84228190399672,
+          "trace": 0
+        },
+        {
+          "degree": 34,
+          "dimension": 490505347906080,
+          "minus_eigenspace": 245556686614560,
+          "plus_eigenspace": 244948661291520,
+          "trace": -608025323040
+        },
+        {
+          "degree": 35,
+          "dimension": 1429472717114208,
+          "minus_eigenspace": 714736358557104,
+          "plus_eigenspace": 714736358557104,
+          "trace": 0
+        },
+        {
+          "degree": 36,
+          "dimension": 4169295414140220,
+          "minus_eigenspace": 2082974226113340,
+          "plus_eigenspace": 2086321188026880,
+          "trace": 3346961913540
+        },
+        {
+          "degree": 37,
+          "dimension": 12169835294351280,
+          "minus_eigenspace": 6084917647175640,
+          "plus_eigenspace": 6084917647175640,
+          "trace": 0
+        },
+        {
+          "degree": 38,
+          "dimension": 35548729443032988,
+          "minus_eigenspace": 17783605141857660,
+          "plus_eigenspace": 17765124301175328,
+          "trace": -18480840682332
+        },
+        {
+          "degree": 39,
+          "dimension": 103911670590189280,
+          "minus_eigenspace": 51955835295094640,
+          "plus_eigenspace": 51955835295094640,
+          "trace": 0
+        },
+        {
+          "degree": 40,
+          "dimension": 303941636389253448,
+          "minus_eigenspace": 151919653892802120,
+          "plus_eigenspace": 152021982496451328,
+          "trace": 102328603649208
+        },
+        {
+          "degree": 41,
+          "dimension": 889585277491970400,
+          "minus_eigenspace": 444792638745985200,
+          "plus_eigenspace": 444792638745985200,
+          "trace": 0
+        },
+        {
+          "degree": 42,
+          "dimension": 2605214027189712536,
+          "minus_eigenspace": 1302891020764231640,
+          "plus_eigenspace": 1302323006425480896,
+          "trace": -568014338750744
+        },
+        {
+          "degree": 43,
+          "dimension": 7633882962663652968,
+          "minus_eigenspace": 3816941481331826484,
+          "plus_eigenspace": 3816941481331826484,
+          "trace": 0
+        },
+        {
+          "degree": 44,
+          "dimension": 22381156867096140300,
+          "minus_eigenspace": 11188998359717203980,
+          "plus_eigenspace": 11192158507378936320,
+          "trace": 3160147661732340
+        },
+        {
+          "degree": 45,
+          "dimension": 65651393478907096224,
+          "minus_eigenspace": 32825696739453548112,
+          "plus_eigenspace": 32825696739453548112,
+          "trace": 0
+        },
+        {
+          "degree": 46,
+          "dimension": 192672567820579223364,
+          "minus_eigenspace": 96345092850117352740,
+          "plus_eigenspace": 96327474970461870624,
+          "trace": -17617879655482116
+        },
+        {
+          "degree": 47,
+          "dimension": 565719454445904325272,
+          "minus_eigenspace": 282859727222952162636,
+          "plus_eigenspace": 282859727222952162636,
+          "trace": 0
+        },
+        {
+          "degree": 48,
+          "dimension": 1661800897428959110140,
+          "minus_eigenspace": 830851245708866610684,
+          "plus_eigenspace": 830949651720092499456,
+          "trace": 98406011225888772
+        },
+        {
+          "degree": 49,
+          "dimension": 4883659780216684277304,
+          "minus_eigenspace": 2441829890108342138652,
+          "plus_eigenspace": 2441829890108342138652,
+          "trace": 0
+        },
+        {
+          "degree": 50,
+          "dimension": 14357959753853997546408,
+          "minus_eigenspace": 7179255182022219424680,
+          "plus_eigenspace": 7178704571831778121728,
+          "trace": -550610190441302952
+        },
+        {
+          "degree": 51,
+          "dimension": 42229293393638385042560,
+          "minus_eigenspace": 21114646696819192521280,
+          "plus_eigenspace": 21114646696819192521280,
+          "trace": 0
+        },
+        {
+          "degree": 52,
+          "dimension": 124251574792771758328920,
+          "minus_eigenspace": 62124244515896908184280,
+          "plus_eigenspace": 62127330276874850144640,
+          "trace": 3085760977941960360
+        },
+        {
+          "degree": 53,
+          "dimension": 365721616371321130128240,
+          "minus_eigenspace": 182860808185660565064120,
+          "plus_eigenspace": 182860808185660565064120,
+          "trace": 0
+        },
+        {
+          "degree": 54,
+          "dimension": 1076846981537920090748796,
+          "minus_eigenspace": 538432150277500546484060,
+          "plus_eigenspace": 538414831260419544264736,
+          "trace": -17319017081002219324
+        },
+        {
+          "degree": 55,
+          "dimension": 3171803836529457801290784,
+          "minus_eigenspace": 1585901918264728900645392,
+          "plus_eigenspace": 1585901918264728900645392,
+          "trace": 0
+        },
+        {
+          "degree": 56,
+          "dimension": 9345493446916743936090180,
+          "minus_eigenspace": 4672698054690660122002500,
+          "plus_eigenspace": 4672795392226083814087680,
+          "trace": 97337535423692085180
+        },
+        {
+          "degree": 57,
+          "dimension": 27544612264597922990846896,
+          "minus_eigenspace": 13772306132298961495423448,
+          "plus_eigenspace": 13772306132298961495423448,
+          "trace": 0
+        },
+        {
+          "degree": 58,
+          "dimension": 81209115469764025263775320,
+          "minus_eigenspace": 40604831615787538417966680,
+          "plus_eigenspace": 40604283853976486845808640,
+          "trace": -547761811051572158040
+        },
+        {
+          "degree": 59,
+          "dimension": 239498069351503974657030696,
+          "minus_eigenspace": 119749034675751987328515348,
+          "plus_eigenspace": 119749034675751987328515348,
+          "trace": 0
+        },
+        {
+          "degree": 60,
+          "dimension": 706519304586933293661251376,
+          "minus_eigenspace": 353258109208396269875597616,
+          "plus_eigenspace": 353261195378537023785653760,
+          "trace": 3086170140753910056144
+        },
+        {
+          "degree": 61,
+          "dimension": 2084811062715550992506283600,
+          "minus_eigenspace": 1042405531357775496253141800,
+          "plus_eigenspace": 1042405531357775496253141800,
+          "trace": 0
+        },
+        {
+          "degree": 62,
+          "dimension": 6153555233499136279065261012,
+          "minus_eigenspace": 3076786320387198619048734900,
+          "plus_eigenspace": 3076768913111937660016526112,
+          "trace": -17407275260959032208788
+        },
+        {
+          "degree": 63,
+          "dimension": 18167639260806944363103005136,
+          "minus_eigenspace": 9083819630403472181551502568,
+          "plus_eigenspace": 9083819630403472181551502568,
+          "trace": 0
+        },
+        {
+          "degree": 64,
+          "dimension": 53651309692070478619338441210,
+          "minus_eigenspace": 26825605702783752757682153722,
+          "plus_eigenspace": 26825703989286725861656287488,
+          "trace": 98286502973103974133766
+        }
+      ]
+    },
+    {
+      "coverage_through_degree": 64,
+      "input": "diag(1,-1) and identity_k",
+      "radius_formula": "tan(pi/(2k)); lies strictly between 1/(k-1) and its square root",
+      "ranks": [
+        2,
+        5
+      ],
+      "source_denominator": [
+        1,
+        0,
+        -5,
+        0,
+        10,
+        0,
+        -10,
+        0,
+        5,
+        0,
+        -1
+      ],
+      "source_even_numerator": [
+        1,
+        0,
+        10,
+        0,
+        5,
+        0
+      ],
+      "source_involution_rows": [
+        {
+          "degree": 1,
+          "dimension": 10,
+          "minus_eigenspace": 5,
+          "plus_eigenspace": 5,
+          "trace": 0
+        },
+        {
+          "degree": 2,
+          "dimension": 10,
+          "minus_eigenspace": 10,
+          "plus_eigenspace": 0,
+          "trace": -10
+        },
+        {
+          "degree": 3,
+          "dimension": 20,
+          "minus_eigenspace": 10,
+          "plus_eigenspace": 10,
+          "trace": 0
+        },
+        {
+          "degree": 4,
+          "dimension": 60,
+          "minus_eigenspace": 10,
+          "plus_eigenspace": 50,
+          "trace": 40
+        },
+        {
+          "degree": 5,
+          "dimension": 204,
+          "minus_eigenspace": 102,
+          "plus_eigenspace": 102,
+          "trace": 0
+        },
+        {
+          "degree": 6,
+          "dimension": 690,
+          "minus_eigenspace": 480,
+          "plus_eigenspace": 210,
+          "trace": -270
+        },
+        {
+          "degree": 7,
+          "dimension": 2340,
+          "minus_eigenspace": 1170,
+          "plus_eigenspace": 1170,
+          "trace": 0
+        },
+        {
+          "degree": 8,
+          "dimension": 8160,
+          "minus_eigenspace": 3090,
+          "plus_eigenspace": 5070,
+          "trace": 1980
+        },
+        {
+          "degree": 9,
+          "dimension": 29120,
+          "minus_eigenspace": 14560,
+          "plus_eigenspace": 14560,
+          "trace": 0
+        },
+        {
+          "degree": 10,
+          "dimension": 104958,
+          "minus_eigenspace": 60052,
+          "plus_eigenspace": 44906,
+          "trace": -15146
+        },
+        {
+          "degree": 11,
+          "dimension": 381300,
+          "minus_eigenspace": 190650,
+          "plus_eigenspace": 190650,
+          "trace": 0
+        },
+        {
+          "degree": 12,
+          "dimension": 1397740,
+          "minus_eigenspace": 638860,
+          "plus_eigenspace": 758880,
+          "trace": 120020
+        },
+        {
+          "degree": 13,
+          "dimension": 5162220,
+          "minus_eigenspace": 2581110,
+          "plus_eigenspace": 2581110,
+          "trace": 0
+        },
+        {
+          "degree": 14,
+          "dimension": 19175130,
+          "minus_eigenspace": 10075640,
+          "plus_eigenspace": 9099490,
+          "trace": -976150
+        },
+        {
+          "degree": 15,
+          "dimension": 71582716,
+          "minus_eigenspace": 35791358,
+          "plus_eigenspace": 35791358,
+          "trace": 0
+        },
+        {
+          "degree": 16,
+          "dimension": 268431360,
+          "minus_eigenspace": 130167650,
+          "plus_eigenspace": 138263710,
+          "trace": 8096060
+        },
+        {
+          "degree": 17,
+          "dimension": 1010580540,
+          "minus_eigenspace": 505290270,
+          "plus_eigenspace": 505290270,
+          "trace": 0
+        },
+        {
+          "degree": 18,
+          "dimension": 3817763040,
+          "minus_eigenspace": 1942974540,
+          "plus_eigenspace": 1874788500,
+          "trace": -68186040
+        },
+        {
+          "degree": 19,
+          "dimension": 14467258260,
+          "minus_eigenspace": 7233629130,
+          "plus_eigenspace": 7233629130,
+          "trace": 0
+        },
+        {
+          "degree": 20,
+          "dimension": 54975528948,
+          "minus_eigenspace": 27197087880,
+          "plus_eigenspace": 27778441068,
+          "trace": 581353188
+        },
+        {
+          "degree": 21,
+          "dimension": 209430785460,
+          "minus_eigenspace": 104715392730,
+          "plus_eigenspace": 104715392730,
+          "trace": 0
+        },
+        {
+          "degree": 22,
+          "dimension": 799645010850,
+          "minus_eigenspace": 402325661520,
+          "plus_eigenspace": 397319349330,
+          "trace": -5006312190
+        },
+        {
+          "degree": 23,
+          "dimension": 3059510616420,
+          "minus_eigenspace": 1529755308210,
+          "plus_eigenspace": 1529755308210,
+          "trace": 0
+        },
+        {
+          "degree": 24,
+          "dimension": 11728123327840,
+          "minus_eigenspace": 5842326804140,
+          "plus_eigenspace": 5885796523700,
+          "trace": 43469719560
+        },
+        {
+          "degree": 25,
+          "dimension": 45035996273664,
+          "minus_eigenspace": 22517998136832,
+          "plus_eigenspace": 22517998136832,
+          "trace": 0
+        },
+        {
+          "degree": 26,
+          "dimension": 173215372864590,
+          "minus_eigenspace": 86797727166980,
+          "plus_eigenspace": 86417645697610,
+          "trace": -380081469370
+        },
+        {
+          "degree": 27,
+          "dimension": 667199944785920,
+          "minus_eigenspace": 333599972392960,
+          "plus_eigenspace": 333599972392960,
+          "trace": 0
+        },
+        {
+          "degree": 28,
+          "dimension": 2573485491767580,
+          "minus_eigenspace": 1285071225627060,
+          "plus_eigenspace": 1288414266140520,
+          "trace": 3343040513460
+        },
+        {
+          "degree": 29,
+          "dimension": 9938978487990060,
+          "minus_eigenspace": 4969489243995030,
+          "plus_eigenspace": 4969489243995030,
+          "trace": 0
+        },
+        {
+          "degree": 30,
+          "dimension": 38430716855984502,
+          "minus_eigenspace": 19230135795120044,
+          "plus_eigenspace": 19200581060864458,
+          "trace": -29554734255586
+        },
+        {
+          "degree": 31,
+          "dimension": 148764065110560900,
+          "minus_eigenspace": 74382032555280450,
+          "plus_eigenspace": 74382032555280450,
+          "trace": 0
+        },
+        {
+          "degree": 32,
+          "dimension": 576460752169205760,
+          "minus_eigenspace": 288099151089187330,
+          "plus_eigenspace": 288361601080018430,
+          "trace": 262449990831100
+        },
+        {
+          "degree": 33,
+          "dimension": 2235968978631333700,
+          "minus_eigenspace": 1117984489315666850,
+          "plus_eigenspace": 1117984489315666850,
+          "trace": 0
+        },
+        {
+          "degree": 34,
+          "dimension": 8680820741074491030,
+          "minus_eigenspace": 4341580235350891740,
+          "plus_eigenspace": 4339240505723599290,
+          "trace": -2339729627292450
+        },
+        {
+          "degree": 35,
+          "dimension": 33731189163354608172,
+          "minus_eigenspace": 16865594581677304086,
+          "plus_eigenspace": 16865594581677304086,
+          "trace": 0
+        },
+        {
+          "degree": 36,
+          "dimension": 131176846744469693440,
+          "minus_eigenspace": 65577957870063327340,
+          "plus_eigenspace": 65598888874406366100,
+          "trace": 20931004343038760
+        },
+        {
+          "degree": 37,
+          "dimension": 510526106256177860940,
+          "minus_eigenspace": 255263053128088930470,
+          "plus_eigenspace": 255263053128088930470,
+          "trace": 0
+        },
+        {
+          "degree": 38,
+          "dimension": 1988364834899715824370,
+          "minus_eigenspace": 994276330711085361600,
+          "plus_eigenspace": 994088504188630462770,
+          "trace": -187826522454898830
+        },
+        {
+          "degree": 39,
+          "dimension": 7749524484709159655580,
+          "minus_eigenspace": 3874762242354579827790,
+          "plus_eigenspace": 3874762242354579827790,
+          "trace": 0
+        },
+        {
+          "degree": 40,
+          "dimension": 30223145490338241575328,
+          "minus_eigenspace": 15110727663930911069928,
+          "plus_eigenspace": 15112417826407330505400,
+          "trace": 1690162476419435472
+        },
+        {
+          "degree": 41,
+          "dimension": 117943982401427236556700,
+          "minus_eigenspace": 58971991200713618278350,
+          "plus_eigenspace": 58971991200713618278350,
+          "trace": 0
+        },
+        {
+          "degree": 42,
+          "dimension": 460543169377106299365570,
+          "minus_eigenspace": 230279208235654625993900,
+          "plus_eigenspace": 230263961141451673371670,
+          "trace": -15247094202952622230
+        },
+        {
+          "degree": 43,
+          "dimension": 1799331452449680632120820,
+          "minus_eigenspace": 899665726224840316060410,
+          "plus_eigenspace": 899665726224840316060410,
+          "trace": 0
+        },
+        {
+          "degree": 44,
+          "dimension": 7033750223211988103153100,
+          "minus_eigenspace": 3516806182661779880306460,
+          "plus_eigenspace": 3516944040550208222846640,
+          "trace": 137857888428342540180
+        },
+        {
+          "degree": 45,
+          "dimension": 27509778650786228307224896,
+          "minus_eigenspace": 13754889325393114153612448,
+          "plus_eigenspace": 13754889325393114153612448,
+          "trace": 0
+        },
+        {
+          "degree": 46,
+          "dimension": 107646959937860684094362490,
+          "minus_eigenspace": 53824104486117400889381080,
+          "plus_eigenspace": 53822855451743283204981410,
+          "trace": -1249034374117684399670
+        },
+        {
+          "degree": 47,
+          "dimension": 421426396352469880816723140,
+          "minus_eigenspace": 210713198176234940408361570,
+          "plus_eigenspace": 210713198176234940408361570,
+          "trace": 0
+        },
+        {
+          "degree": 48,
+          "dimension": 1650586719047167835714007040,
+          "minus_eigenspace": 825287690491532103785437740,
+          "plus_eigenspace": 825299028555635731928569300,
+          "trace": 11338064103628143131560
+        },
+        {
+          "degree": 49,
+          "dimension": 6467605103205252048452567040,
+          "minus_eigenspace": 3233802551602626024226283520,
+          "plus_eigenspace": 3233802551602626024226283520,
+          "trace": 0
+        },
+        {
+          "degree": 50,
+          "dimension": 25353012004564610547932179968,
+          "minus_eigenspace": 12676557552210955588453348168,
+          "plus_eigenspace": 12676454452353654959478831800,
+          "trace": -103099857300628974516368
+        },
+        {
+          "degree": 51,
+          "dimension": 99423576488488580509208489260,
+          "minus_eigenspace": 49711788244244290254604244630,
+          "plus_eigenspace": 49711788244244290254604244630,
+          "trace": 0
+        },
+        {
+          "degree": 52,
+          "dimension": 390046338531762806160531229140,
+          "minus_eigenspace": 195022699758253799313373134360,
+          "plus_eigenspace": 195023638773509006847158094780,
+          "trace": 939015255207533784960420
+        },
+        {
+          "degree": 53,
+          "dimension": 1530747894615220409354509531020,
+          "minus_eigenspace": 765373947307610204677254765510,
+          "plus_eigenspace": 765373947307610204677254765510,
+          "trace": 0
+        },
+        {
+          "degree": 54,
+          "dimension": 6009602845526421199953440931840,
+          "minus_eigenspace": 3004805705290695823610253356940,
+          "plus_eigenspace": 3004797140235725376343187574900,
+          "trace": -8565054970447267065782040
+        },
+        {
+          "degree": 55,
+          "dimension": 23601349356976489220593165056540,
+          "minus_eigenspace": 11800674678488244610296582528270,
+          "plus_eigenspace": 11800674678488244610296582528270,
+          "trace": 0
+        },
+        {
+          "degree": 56,
+          "dimension": 92719586759550492079873255200480,
+          "minus_eigenspace": 46359754263831337351241657724180,
+          "plus_eigenspace": 46359832495719154728631597476300,
+          "trace": 78231887817377389939752120
+        },
+        {
+          "degree": 57,
+          "dimension": 364371709370865096738977376122340,
+          "minus_eigenspace": 182185854685432548369488688061170,
+          "plus_eigenspace": 182185854685432548369488688061170,
+          "trace": 0
+        },
+        {
+          "degree": 58,
+          "dimension": 1432357754078573143874453748607470,
+          "minus_eigenspace": 716179234774565331013518460886500,
+          "plus_eigenspace": 716178519304007812860935287720970,
+          "trace": -715470557518152583173165530
+        },
+        {
+          "degree": 59,
+          "dimension": 5632322016037779122473758730001460,
+          "minus_eigenspace": 2816161008018889561236879365000730,
+          "plus_eigenspace": 2816161008018889561236879365000730,
+          "trace": 0
+        },
+        {
+          "degree": 60,
+          "dimension": 22153799929748597862514740935769092,
+          "minus_eigenspace": 11076896689307675822658009364572368,
+          "plus_eigenspace": 11076903240440922039856731571196724,
+          "trace": 6551133246217198722206624356
+        },
+        {
+          "degree": 61,
+          "dimension": 87162491526879729370741446575760300,
+          "minus_eigenspace": 43581245763439864685370723287880150,
+          "plus_eigenspace": 43581245763439864685370723287880150,
+          "trace": 0
+        },
+        {
+          "degree": 62,
+          "dimension": 343026579557397644694719338434079050,
+          "minus_eigenspace": 171513319804452742150031939111589320,
+          "plus_eigenspace": 171513259752944902544687399322489730,
+          "trace": -60051507839605344539789099590
+        },
+        {
+          "degree": 63,
+          "dimension": 1350326852860866918505454721585639360,
+          "minus_eigenspace": 675163426430433459252727360792819680,
+          "plus_eigenspace": 675163426430433459252727360792819680,
+          "trace": 0
+        },
+        {
+          "degree": 64,
+          "dimension": 5316911983139663491326997864969666560,
+          "minus_eigenspace": 2658455716049559193225534037667317570,
+          "plus_eigenspace": 2658456267090104298101463827302348990,
+          "trace": 551040545104875929789635031420
+        }
+      ]
+    }
+  ],
+  "strictly_beyond_trace_class_real_controls": [
+    {
+      "cut": 32,
+      "finite_source_log": [
+        [
+          1720468282343,
+          1000000000000
+        ],
+        [
+          215058535293,
+          125000000000
+        ]
+      ],
+      "ordinary_trace_class": false,
+      "proved_log_error": [
+        24327190889034594926149273219113442788802395186676338220638483767882938719795759726959155042012823291750862882015427636901,
+        117352155815518321054165030171452917758115813455980587384832000000000000000000000000000000000000000000000000000000000000000
+      ],
+      "source_F": [
+        122080000,
+        21717639
+      ],
+      "source_log": [
+        [
+          431637945009,
+          250000000000
+        ],
+        [
+          1726551780037,
+          1000000000000
+        ]
+      ],
+      "t": [
+        11,
+        20
+      ],
+      "within_nonscalar_grade_radius": true
+    },
+    {
+      "cut": 64,
+      "finite_source_log": [
+        [
+          1725896895721,
+          1000000000000
+        ],
+        [
+          862948447861,
+          500000000000
+        ]
+      ],
+      "ordinary_trace_class": false,
+      "proved_log_error": [
+        2159029527963905159629463235656940558565577757325268334215157349883601205803694815651468775979103160217382865572493073756555086674849318211964424066853499964733018315302964983253,
+        160000692026061263598245253483792347151245864872181760000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      ],
+      "source_F": [
+        122080000,
+        21717639
+      ],
+      "source_log": [
+        [
+          431637945009,
+          250000000000
+        ],
+        [
+          1726551780037,
+          1000000000000
+        ]
+      ],
+      "t": [
+        11,
+        20
+      ],
+      "within_nonscalar_grade_radius": true
+    }
+  ]
+}
