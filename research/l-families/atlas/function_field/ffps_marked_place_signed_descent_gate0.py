@@ -480,7 +480,11 @@ def build_report() -> dict[str, object]:
     return {
         "schema": "riemann.function_field.ffps_marked_place_signed_descent_gate0.v1",
         "status": "EXACT_SCOPED_NO_GO_AND_PARTITION_RECONCILIATION",
-        "arithmetic_class": "EXACT_RATIONAL_AND_FINITE_FIELD_EXTENSION_CONTROL",
+        "arithmetic_class": "MIXED",
+        "arithmetic_components": {
+            "matrix_and_cleanup_coefficients": "EXACT_RATIONAL",
+            "support_witnesses": "EXACT_FINITE_FIELD_EXTENSION_ARITHMETIC",
+        },
         "theorem_ledger": {
             "MPD-G0.1": "FIXED_LABEL_TRACE_EXTERNALITY_IMPORTED_AND_REDERIVED",
             "MPD-G0.2": "CLEAN_MARKED_SUPPORT_SHIFT_PROVED_ALL_ODD_Q_IN_NOTE",
@@ -543,6 +547,8 @@ def check_note_contract() -> None:
         "universal coefficient space",
         "base-field trace",
         "place at infinity is outside",
+        "label-decorated copies of the same shared-coordinate graph",
+        "does not introduce independent marked coordinates",
         "complete signed pushforward remains undecided",
         "ONEPLACEWEIL",
         "RH and GRH remain unproved",

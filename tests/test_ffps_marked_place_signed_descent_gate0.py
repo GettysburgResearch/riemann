@@ -97,6 +97,14 @@ class MarkedPlaceSignedDescentGate0Tests(unittest.TestCase):
         self.assertEqual(
             report["status"], "EXACT_SCOPED_NO_GO_AND_PARTITION_RECONCILIATION"
         )
+        self.assertEqual(report["arithmetic_class"], "MIXED")
+        self.assertEqual(
+            report["arithmetic_components"],
+            {
+                "matrix_and_cleanup_coefficients": "EXACT_RATIONAL",
+                "support_witnesses": "EXACT_FINITE_FIELD_EXTENSION_ARITHMETIC",
+            },
+        )
         self.assertIn(
             "noncancellation after the complete signed source pushforward",
             report["not_proved"],
@@ -130,6 +138,8 @@ class MarkedPlaceSignedDescentGate0Tests(unittest.TestCase):
             "universal coefficient space",
             "base-field trace",
             "place at infinity is outside",
+            "label-decorated copies of the same shared-coordinate graph",
+            "does not introduce independent marked coordinates",
             "MPD-G0.3 — post-cleanup generic-support survival",
             "complete signed pushforward remains undecided",
             "ONEPLACEWEIL",

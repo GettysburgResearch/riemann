@@ -309,9 +309,12 @@ off-atomic orientations
 \tag{5.2}
 \]
 
-On the labelled source cover their generic supports $Z_{01}$ and
-$Z_{10}$ are distinct from the deleted same-label diagonals. For normalized
-unit coefficients, each retained orientation has coefficient
+On the labelled source cover, $Z_{01}$ and $Z_{10}$ are
+label-decorated copies of the same shared-coordinate graph $Z$: both retain
+the single marked-coordinate pair $(\lambda,\rho)$ of (2.4). They are not
+$Z\times Z$ and do not introduce independent marked-place pairs. Their
+generic supports are distinct from the deleted same-label diagonals. For
+normalized unit coefficients, each retained orientation has coefficient
 
 \[
  1_{\Pi_0}\cdot1_{(c,d)=1}\cdot1_{0\ne1}=1.
@@ -388,7 +391,9 @@ live on disjoint labelled supports. Their flattening is
  M_q\oplus M_q,
 \]
 
-so
+This direct sum duplicates the universal single-fibre allocation in two
+retained label summands; it does not introduce independent marked coordinates.
+Consequently,
 
 \[
  \boxed{\operatorname{rank}_{\mathbf Q}(M_q\oplus M_q)=2q(q-1).}
@@ -526,3 +531,7 @@ thirteen upstream blobs, performs exact rational elimination, materializes
 quadratic-extension point transforms. It enumerates no source horizon,
 polynomial family, closed-place family, curve, sheaf, conductor family,
 `L`-function, or zero. **RH and GRH remain unproved.**
+
+The fixture's CONTRIBUTING taxonomy is `MIXED`: its components are exact
+rational matrix/cleanup arithmetic and exact finite-field-extension support
+witnesses. No floating-point arithmetic is used.

@@ -97,6 +97,10 @@ is an exact RH-equivalent open gate, not a completed estimate.
   firewalls.
 - `tests/test_function_field.py` independently exercises the arithmetic and
   replays the frozen fixture.
+- [`FFPS_MARKED_PLACE_SIGNED_DESCENT_GATE0.md`](FFPS_MARKED_PLACE_SIGNED_DESCENT_GATE0.md)
+  proves only a clean-chart post-cleanup support obstruction while reconciling
+  the fixed-label coefficient and marked-place partitions; complete signed
+  pushforward, `ONEPLACEWEIL`, `RELTRACE`, and principal binding remain open.
 
 The genus-one, genus-two, and cross-rank extensions are organized as
 source/note/JSON/test packets:

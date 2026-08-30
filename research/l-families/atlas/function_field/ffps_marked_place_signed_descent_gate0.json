@@ -1,5 +1,9 @@
 {
-  "arithmetic_class": "EXACT_RATIONAL_AND_FINITE_FIELD_EXTENSION_CONTROL",
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": {
+    "matrix_and_cleanup_coefficients": "EXACT_RATIONAL",
+    "support_witnesses": "EXACT_FINITE_FIELD_EXTENSION_ARITHMETIC"
+  },
   "cleanup_ledger": {
     "Pi_0_invariant_line_coefficient": "1",
     "combined_generic_support_coefficient": "1",
