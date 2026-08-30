@@ -1,14 +1,14 @@
 {
-  "classification": "PASS_T108440_DOUBLE_QUADRATIC_PRINCIPAL_ALIAS",
-  "double_quadratic_principal_alias_proved": true,
-  "exact_checks": 40990,
-  "gauss_weight_ratio_checks": 30,
+  "classification": "PASS_T108440_DOUBLE_QUADRATIC_PHYSICAL_ALIAS",
+  "double_quadratic_physical_alias_proved": true,
+  "exact_checks": 40960,
   "geometric_cancellation_of_double_row_refuted": true,
   "grh_established": false,
+  "legacy_gauss_weight_identification_claimed": false,
   "mixed_resonance_bound_proved": false,
-  "principal_bound_proved": false,
-  "proof_object_sha256": "a3bbb83df6607e71bc1faf9faeb7d28cb2d8bf6d63d2749e5893d1347ab4b389",
+  "principal_adapter_proved": false,
+  "proof_object_sha256": "eabf156b3f224769f9f984f192ad2658faedc901d642cf8b56ad0ffc65f3f285",
   "rh_established": false,
-  "schema": "riemann.x108440.double-quadratic-principal-alias.v1",
+  "schema": "riemann.x108440.double-quadratic-principal-alias.v2",
   "square_pullback_checks": 40960
 }
