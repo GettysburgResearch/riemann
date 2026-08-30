@@ -104,6 +104,25 @@ class XiActualLaplaceTests(unittest.TestCase):
         self.assertEqual(report["current_weight_identities_replayed"], 224)
         self.assertFalse(report["scope"]["analytic_proof_formally_machine_verified"])
 
+    def test_arithmetic_contract_is_canonical_and_not_transcendental_certification(
+        self,
+    ):
+        report = MODULE.build_report()
+        self.assertEqual(report["arithmetic_class"], "EXACT_RATIONAL")
+        self.assertIn("unevaluated symbolic labels", report["arithmetic_domain"])
+        self.assertIn(
+            "no rounded transcendental evaluation", report["rounding_contract"]
+        )
+        for key, value in (
+            ("arithmetic_class", "DIRECTED_INTERVAL"),
+            ("arithmetic_class", "EXACT_INTEGER_RATIONAL_WITH_SYMBOLIC_PI"),
+            ("rounding_contract", "all transcendental inequalities machine verified"),
+        ):
+            mutant = copy.deepcopy(report)
+            mutant[key] = value
+            with self.assertRaises(ValueError):
+                MODULE.validate_report(mutant)
+
     def test_mutated_coefficients_and_scopes_rejected(self):
         report = MODULE.build_report()
         for section, field, value in (

@@ -1,10 +1,11 @@
 {
-  "arithmetic_class": "EXACT_INTEGER_RATIONAL_WITH_SYMBOLIC_PI",
+  "arithmetic_class": "EXACT_RATIONAL",
+  "arithmetic_domain": "integers and rational coefficients; pi and exp(-2*pi) are unevaluated symbolic labels",
   "artifact_sha256_lf": {
     "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246",
-    "research/exploratory/xi_actual_kernel_laplace_concentration.py": "9e5326fd2524794ff32c5f8416dd08218eadac15709292eee783add9db380c3a",
+    "research/exploratory/xi_actual_kernel_laplace_concentration.py": "e339d8e7ea8fd71b2f1824a766e899eb36d39747924444d66eb8fbbe77a3aab3",
     "research/exploratory/xi_actual_kernel_laplace_concentration.sources.json": "7d2b884885fb4f46328a33628c875a66fabfa3db29e1fd61f99c7825758f3e74",
-    "tests/test_xi_actual_kernel_laplace_concentration.py": "e9452656450fc79da46efc1adde7030350b4f69d3f42c10314bc5338f8b58567"
+    "tests/test_xi_actual_kernel_laplace_concentration.py": "cd2d4ad75e6ec3fa53b18f88b8a1c973446d16a8e945de2b76a47c092cda9ba4"
   },
   "boundary_layer_controls": [
     {
@@ -474,6 +475,7 @@
       "zero_shift_times_pi_E_xi_squared_limit": "1/4"
     }
   ],
+  "rounding_contract": "no rounded transcendental evaluation; analytic inequalities are proved in the note",
   "schema": "xi-actual-kernel-laplace-v1",
   "scope": {
     "L105413_complex_ray_claim_imported": false,

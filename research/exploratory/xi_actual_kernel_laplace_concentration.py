@@ -306,7 +306,9 @@ def build_report() -> dict:
         {
             "schema": "xi-actual-kernel-laplace-v1",
             "status": "ANALYTIC_PROOF_IN_NOTE_WITH_EXACT_BOUNDED_ALGEBRA_CONTROLS",
-            "arithmetic_class": "EXACT_INTEGER_RATIONAL_WITH_SYMBOLIC_PI",
+            "arithmetic_class": "EXACT_RATIONAL",
+            "arithmetic_domain": "integers and rational coefficients; pi and exp(-2*pi) are unevaluated symbolic labels",
+            "rounding_contract": "no rounded transcendental evaluation; analytic inequalities are proved in the note",
             "source_authentication": authentication,
             "artifact_sha256_lf": {
                 path.relative_to(ROOT).as_posix(): sha256_lf(path.read_bytes())
