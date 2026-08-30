@@ -108,7 +108,6 @@ mechanism theorem (or refuting it with a constructed world) is the
 recommended next ambitious pass for #763; the corrected rank-4 defect law
 and the S1/S2/S3 stratum classification are the matching next pass
 for #764.
-```
 
 ## Continuation pass addendum (2026-08-31)
 
