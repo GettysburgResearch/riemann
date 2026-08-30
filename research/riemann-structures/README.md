@@ -23,3 +23,14 @@ average alone has a sharp factor-`N` domination cost.  Its replay includes
 This is an exact structural firewall, not an amplifier or a novelty claim.
 
 RH and GRH remain open.  Nothing in this directory claims a proof of either.
+
+The separately labelled [fixed-conductor multiplicity continuation](LIVE_FIXED_CONDUCTOR_MULTIPLICITY.md)
+proves that one live residue cell can contain arbitrarily large owner-disjoint
+arithmetic rectangles even with conductors fixed at 5 and 7. This supplies
+the previously conditional rank obstruction for faithful source-algebra
+carriers. It leaves the complete signed cross-group estimate open and does
+not assert that arbitrary coefficient vectors on live support are native.
+The [quantitative sequel](FIXED_CONDUCTOR_POWER_RANK_BARRIER.md) constructs
+owner-disjoint rectangles of sharp order `Y^(1/3)/(log Y)^2` in its stated
+window/core class. Consequently a carrier faithful to every arithmetic atom
+cannot have horizon-subpower rank, even with these two conductors fixed.
