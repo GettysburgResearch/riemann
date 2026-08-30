@@ -1,0 +1,621 @@
+{
+  "RH_conclusion": false,
+  "ambient_postcompletion_gauge_identified_with_induced_gauge": false,
+  "authenticated_native_source_examples": [
+    {
+      "bilateral_coefficient_diagonal_over_raw_diagonal": "1173748/733242875",
+      "bilateral_history_diagonal_over_raw_diagonal": "293437/733242875",
+      "completion": {
+        "a": 20914582006270297512128411607211,
+        "b": 21054629428529192246156773564643,
+        "c": 8363,
+        "d": 8419,
+        "ell": 8363,
+        "g": 2500846826051691679077892097,
+        "rho": 8419,
+        "squared_completion_norm_ratio": "5868740/5865943",
+        "weight": "2584292462719354379944798635334592083152381085516948247953702615262020/5865943"
+      },
+      "j": 52,
+      "left": {
+        "Boolean_multiplier": "2",
+        "N": 8517092802017344239486485516863575293716510979589811663064490424577085680299925649259158516281,
+        "P": 19471212689989821393665586626561,
+        "a": 20914582006270297512128411607211,
+        "coefficient_square": "1/212927320050433605987162137921589382342912774489745291576612260614427142007498141231478962907025",
+        "core": [
+          4548640815185921,
+          549800902657,
+          8363
+        ],
+        "core_integral_times_sqrt_N": "-3/25",
+        "cutoff": 4503599627370496,
+        "full_integral_times_sqrt_N": "-1/5",
+        "history_energy": 2,
+        "owner_integral_times_sqrt_N": "-2/25",
+        "owners": [
+          3602895190622209,
+          5404323928342529
+        ],
+        "raw_Euler_coefficient_square": "1/407232274566322995191339526185207924542937341329609845671731371",
+        "raw_mixed_monomial_full_integral": "0",
+        "rows": {
+          "balanced": -2,
+          "complete_allocations": 27,
+          "full_mu": -1,
+          "nonzero_balanced_histories": [
+            {
+              "coefficient": -1,
+              "groups": [
+                [
+                  4548640815185921
+                ],
+                [
+                  549800902657,
+                  8363
+                ],
+                []
+              ]
+            },
+            {
+              "coefficient": -1,
+              "groups": [
+                [
+                  549800902657,
+                  8363
+                ],
+                [
+                  4548640815185921
+                ],
+                []
+              ]
+            }
+          ],
+          "truncated_double_convolution": -1,
+          "twice_truncated_mu": 0,
+          "type_I": 1
+        },
+        "share": "1/10",
+        "source_first_tau_polynomial_times_sqrt_N": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/5"
+        ],
+        "support_depth": 5
+      },
+      "right": {
+        "Boolean_multiplier": "2",
+        "N": 8644990564666853882133530664866986058186565708685050879657084318878185976775598218400600000841,
+        "P": 19501558473764333659842263646209,
+        "a": 21054629428529192246156773564643,
+        "coefficient_square": "1/216124764116671347053338266621674651454664142717126271991427107971954649419389955460015000021025",
+        "core": [
+          4548640815185921,
+          549800902657,
+          8419
+        ],
+        "core_integral_times_sqrt_N": "-3/25",
+        "cutoff": 4503599627370496,
+        "full_integral_times_sqrt_N": "-1/5",
+        "history_energy": 2,
+        "owner_integral_times_sqrt_N": "-2/25",
+        "owners": [
+          3606258150014977,
+          5407698967330817
+        ],
+        "raw_Euler_coefficient_square": "1/410598086943901378943614874645777856725682591988336395543388387",
+        "raw_mixed_monomial_full_integral": "0",
+        "rows": {
+          "balanced": -2,
+          "complete_allocations": 27,
+          "full_mu": -1,
+          "nonzero_balanced_histories": [
+            {
+              "coefficient": -1,
+              "groups": [
+                [
+                  4548640815185921
+                ],
+                [
+                  549800902657,
+                  8419
+                ],
+                []
+              ]
+            },
+            {
+              "coefficient": -1,
+              "groups": [
+                [
+                  549800902657,
+                  8419
+                ],
+                [
+                  4548640815185921
+                ],
+                []
+              ]
+            }
+          ],
+          "truncated_double_convolution": -1,
+          "twice_truncated_mu": 0,
+          "type_I": 1
+        },
+        "share": "1/10",
+        "source_first_tau_polynomial_times_sqrt_N": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/5"
+        ],
+        "support_depth": 5
+      }
+    },
+    {
+      "bilateral_coefficient_diagonal_over_raw_diagonal": "1006429/628868250",
+      "bilateral_history_diagonal_over_raw_diagonal": "1006429/2515473000",
+      "completion": {
+        "a": 5354975906569320798142108763439449,
+        "b": 5391467463347903054761643726619083,
+        "c": 16729,
+        "d": 16843,
+        "ell": 16729,
+        "g": 320101375250721549294166343681,
+        "rho": 16843,
+        "squared_completion_norm_ratio": "5032145/5030946",
+        "weight": "145283955865018397101598031083749422391025970354676499395006324282272307715/5030946"
+      },
+      "j": 56,
+      "left": {
+        "Boolean_multiplier": "2",
+        "N": 142937639196864470132176288590196266478614609011925319425516379801453351544708654885388382999646458097,
+        "P": 4984614339925362513384838996688897,
+        "a": 5354975906569320798142108763439449,
+        "coefficient_square": "1/3573440979921611753304407214754906661965365225298132985637909495036333788617716372134709574991161452425",
+        "core": [
+          72778253579845633,
+          4398310752257,
+          16729
+        ],
+        "core_integral_times_sqrt_N": "-3/25",
+        "cutoff": 72057594037927936,
+        "full_integral_times_sqrt_N": "-1/5",
+        "history_energy": 2,
+        "owner_integral_times_sqrt_N": "-2/25",
+        "owners": [
+          57646182926647297,
+          86469113597132801
+        ],
+        "raw_Euler_coefficient_square": "1/26692489693840254711928323359587137997581675241697880360760350097753",
+        "raw_mixed_monomial_full_integral": "0",
+        "rows": {
+          "balanced": -2,
+          "complete_allocations": 27,
+          "full_mu": -1,
+          "nonzero_balanced_histories": [
+            {
+              "coefficient": -1,
+              "groups": [
+                [
+                  72778253579845633
+                ],
+                [
+                  4398310752257,
+                  16729
+                ],
+                []
+              ]
+            },
+            {
+              "coefficient": -1,
+              "groups": [
+                [
+                  4398310752257,
+                  16729
+                ],
+                [
+                  72778253579845633
+                ],
+                []
+              ]
+            }
+          ],
+          "truncated_double_convolution": -1,
+          "twice_truncated_mu": 0,
+          "type_I": 1
+        },
+        "share": "1/10",
+        "source_first_tau_polynomial_times_sqrt_N": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/5"
+        ],
+        "support_depth": 5
+      },
+      "right": {
+        "Boolean_multiplier": "2",
+        "N": 145118640613396361640544359318659816688843413297042588053813676948084874193424525124151149647679239929,
+        "P": 4992398272129784661985585382031361,
+        "a": 5391467463347903054761643726619083,
+        "coefficient_square": "1/3627966015334909041013608982966495417221085332426064701345341923702121854835613128103778741191980998225",
+        "core": [
+          72778253579845633,
+          4398310752257,
+          16843
+        ],
+        "core_integral_times_sqrt_N": "-3/25",
+        "cutoff": 72057594037927936,
+        "full_integral_times_sqrt_N": "-1/5",
+        "history_energy": 2,
+        "owner_integral_times_sqrt_N": "-2/25",
+        "owners": [
+          57700136305819649,
+          86523162539327489
+        ],
+        "raw_Euler_coefficient_square": "1/26916352848262024327752440555249250580530885502234015395955207061963",
+        "raw_mixed_monomial_full_integral": "0",
+        "rows": {
+          "balanced": -2,
+          "complete_allocations": 27,
+          "full_mu": -1,
+          "nonzero_balanced_histories": [
+            {
+              "coefficient": -1,
+              "groups": [
+                [
+                  72778253579845633
+                ],
+                [
+                  4398310752257,
+                  16843
+                ],
+                []
+              ]
+            },
+            {
+              "coefficient": -1,
+              "groups": [
+                [
+                  4398310752257,
+                  16843
+                ],
+                [
+                  72778253579845633
+                ],
+                []
+              ]
+            }
+          ],
+          "truncated_double_convolution": -1,
+          "twice_truncated_mu": 0,
+          "type_I": 1
+        },
+        "share": "1/10",
+        "source_first_tau_polynomial_times_sqrt_N": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/5"
+        ],
+        "support_depth": 5
+      }
+    },
+    {
+      "bilateral_coefficient_diagonal_over_raw_diagonal": "56292752/35178775875",
+      "bilateral_history_diagonal_over_raw_diagonal": "14073188/35178775875",
+      "completion": {
+        "a": 1369521456153455026588265613931610771,
+        "b": 1379846026319807695589379771191034767,
+        "c": 33427,
+        "d": 33679,
+        "ell": 33427,
+        "g": 40970516533145511909183163727873,
+        "rho": 33679,
+        "squared_completion_norm_ratio": "281463760/281430207",
+        "weight": "531890156324597052700433838839984983755579870638059092022051065448341439240562320/281430207"
+      },
+      "j": 60,
+      "left": {
+        "Boolean_multiplier": "2",
+        "N": 2393362422697292696130492706947769776718420028580770630319714548801613572521713284912593038053409209334734953,
+        "P": 1276059093236762663189003735434002433,
+        "a": 1369521456153455026588265613931610771,
+        "coefficient_square": "1/59834060567432317403262317673694244417960500714519265757992863720040339313042832122814825951335230233368373825",
+        "core": [
+          1164450727985152001,
+          35184414031873,
+          33427
+        ],
+        "core_integral_times_sqrt_N": "-3/25",
+        "cutoff": 1152921504606846976,
+        "full_integral_times_sqrt_N": "-1/5",
+        "history_energy": 2,
+        "owner_integral_times_sqrt_N": "-2/25",
+        "owners": [
+          922337314066137089,
+          1383505875536183297
+        ],
+        "raw_Euler_coefficient_square": "1/1747590307507468637297887523472450352973077580121972608981787455223005843",
+        "raw_mixed_monomial_full_integral": "0",
+        "rows": {
+          "balanced": -2,
+          "complete_allocations": 27,
+          "full_mu": -1,
+          "nonzero_balanced_histories": [
+            {
+              "coefficient": -1,
+              "groups": [
+                [
+                  1164450727985152001
+                ],
+                [
+                  35184414031873,
+                  33427
+                ],
+                []
+              ]
+            },
+            {
+              "coefficient": -1,
+              "groups": [
+                [
+                  35184414031873,
+                  33427
+                ],
+                [
+                  1164450727985152001
+                ],
+                []
+              ]
+            }
+          ],
+          "truncated_double_convolution": -1,
+          "twice_truncated_mu": 0,
+          "type_I": 1
+        },
+        "share": "1/10",
+        "source_first_tau_polynomial_times_sqrt_N": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/5"
+        ],
+        "support_depth": 5
+      },
+      "right": {
+        "Boolean_multiplier": "2",
+        "N": 2433382435376641068962618075399593722129348466680292792497926528250470482541047985734008180296167638844549601,
+        "P": 1278053736712715717957497457641259009,
+        "a": 1379846026319807695589379771191034767,
+        "coefficient_square": "1/60834560884416026724065451884989843053233711667007319812448163206261762063526199643350204507404190971113740025",
+        "core": [
+          1164450727985152001,
+          35184414031873,
+          33679
+        ],
+        "core_integral_times_sqrt_N": "-3/25",
+        "cutoff": 1152921504606846976,
+        "full_integral_times_sqrt_N": "-1/5",
+        "history_energy": 2,
+        "owner_integral_times_sqrt_N": "-2/25",
+        "owners": [
+          923201942522429441,
+          1384370718740840449
+        ],
+        "raw_Euler_coefficient_square": "1/1763517370026222507468879213695239327546242847001209932599697223370965903",
+        "raw_mixed_monomial_full_integral": "0",
+        "rows": {
+          "balanced": -2,
+          "complete_allocations": 27,
+          "full_mu": -1,
+          "nonzero_balanced_histories": [
+            {
+              "coefficient": -1,
+              "groups": [
+                [
+                  1164450727985152001
+                ],
+                [
+                  35184414031873,
+                  33679
+                ],
+                []
+              ]
+            },
+            {
+              "coefficient": -1,
+              "groups": [
+                [
+                  35184414031873,
+                  33679
+                ],
+                [
+                  1164450727985152001
+                ],
+                []
+              ]
+            }
+          ],
+          "truncated_double_convolution": -1,
+          "twice_truncated_mu": 0,
+          "type_I": 1
+        },
+        "share": "1/10",
+        "source_first_tau_polynomial_times_sqrt_N": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/5"
+        ],
+        "support_depth": 5
+      }
+    }
+  ],
+  "canonical_completed_Boolean_source_cancels": false,
+  "complete_Boolean_factor_histories_retained": true,
+  "complete_native_gamma_measure_adapter_asserted": false,
+  "complete_owner_column_controls": [
+    {
+      "coefficient_column_energy_before_completion": "9/25",
+      "history_column_energy_before_completion": "9/50",
+      "owner_only_column_energy": "1/10",
+      "support": [
+        3,
+        5,
+        7,
+        11,
+        13
+      ],
+      "unordered_pairs": 10
+    },
+    {
+      "coefficient_column_energy_before_completion": "4/75",
+      "history_column_energy_before_completion": "62/75",
+      "owner_only_column_energy": "1/15",
+      "support": [
+        3,
+        5,
+        7,
+        11,
+        13,
+        17
+      ],
+      "unordered_pairs": 15
+    }
+  ],
+  "full_principal_family_square_bound_asserted": false,
+  "proof_object_sha256": "1c097d5dcf22827221323660c8b18e69be232a6158b2b1d09aef0d4a7cc5ab79",
+  "raw_quotient_replay": {
+    "exact_scalar_checks": 864,
+    "local_source": {
+      "g_quadratic_tau_derivative": [
+        "-1/4",
+        "1/2"
+      ],
+      "g_x_coefficients": [
+        [
+          "1"
+        ],
+        [
+          "0"
+        ],
+        [
+          "0",
+          "-1/4",
+          "1/4"
+        ]
+      ],
+      "h_x_coefficients": [
+        [
+          "1"
+        ],
+        [
+          "0",
+          "-1"
+        ],
+        [
+          "-1",
+          "3/4",
+          "1/4"
+        ]
+      ]
+    },
+    "raw_columns": 27,
+    "squarefree_rows": 8
+  },
+  "same_sign_owner_core_derivative_split": true,
+  "schema": "riemann.source_first_boolean_principal_adapter.v1",
+  "sharp_completion_control": {
+    "a": 231,
+    "b": 385,
+    "c": 3,
+    "d": 5,
+    "ell": 3,
+    "g": 77,
+    "rho": 5,
+    "squared_completion_norm_ratio": "3",
+    "weight": "266805"
+  },
+  "source_first_induced_gauge": "identity",
+  "source_hashes": {
+    "research/riemann-structures/SOURCE_FIRST_BOOLEAN_PRINCIPAL_ADAPTER.md": "9aecec7c149e90a2262b75ff137cb99b64e5a90dec258946537107e74699ae59",
+    "research/riemann-structures/source_first_boolean_principal_adapter.py": "298927bfe2046b654b932cc11e12f613d97957b821476187821c1366efda6012",
+    "tests/test_source_first_boolean_principal_adapter.py": "43ad6a5d834f6f642486f4ef223fb133d1aa260499a04741a47f16164410a300"
+  },
+  "sources": [
+    {
+      "commit": "5ef9a0800e7d0f03bfef1ad4ba467f8843a90058",
+      "git_blob": "f8248cd97c4fc72ad4034d9baf83cec91396f27e",
+      "path": "research/riemann-structures/euler_activation_source_adapter.py"
+    },
+    {
+      "commit": "e501c45ecc39f71b3f26abfe952366eb529c7c2d",
+      "git_blob": "c379b6cd50c06ec29cf316e55e85157424b3563b",
+      "path": "research/riemann-structures/gauge_connection_source_transport.py"
+    },
+    {
+      "commit": "1623f1924c62035918a94bcacf2ccad7d3bb6cf7",
+      "git_blob": "b6464ebbd4560e50d9ad7033d051dc9cddd4a7f4",
+      "path": "research/riemann-structures/subcritical_observed_boolean_block.json"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "6192bec36636e2d35b2aba4fdd64eb4bcf93c2d9",
+      "path": "claims/lemmas/L-102706-euler-half-divisor-homotopies-are-subcritically-gauge-equivalent.md"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "db018c64dde45ff4ad17541eb6ba00b4f6fa9d49",
+      "path": "claims/lemmas/L-102746-wick-tail-has-a-canonical-equal-pair-owner.md"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "1a2f15e7b5fcb0a3fb17d20668c3735065d14224",
+      "path": "claims/lemmas/L-102951-harmonic-critical-class-is-the-squarefree-boolean-euler-class.md"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "8e0de55d193d6f9dafd025235dac8ab48e687081",
+      "path": "claims/lemmas/L-102952-owner-excluded-boolean-vaughan-coefficients-are-universal.md"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "65c63098dcea20bfe8a189355c86fe663908b00b",
+      "path": "claims/lemmas/L-102954-hodge-boolean-reduction-leaves-one-owner-indexed-restriction.md"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "d8f4557df6dc37e6b605b1821c5b8ab028136398",
+      "path": "claims/lemmas/L-102962-canonical-equal-pair-gauge-is-horizon-safe-on-the-boolean-balanced-source.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "346cc52420ec65457c2a5accc045d4a85635cc24",
+      "path": "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "388c7e166a0e6e534d7e908685f71a16de246575",
+      "path": "claims/lemmas/L-106026-mellin-plancherel-normal-form-for-owner-conductor-moment.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+      "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md"
+    }
+  ]
+}
