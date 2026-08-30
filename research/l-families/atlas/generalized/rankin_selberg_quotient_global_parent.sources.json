@@ -1,0 +1,50 @@
+{
+  "authoring_base": "246434f343029cc821aa236081c4d12080f571f2",
+  "context_sources": [
+    {
+      "commit": "246434f343029cc821aa236081c4d12080f571f2",
+      "git_blob": "3047f87a0a6e01c4ff6c6455e056a0aecb7e6cad",
+      "path": "research/l-families/atlas/generalized/CONTINUATION_RESULTS.md",
+      "role": "published_programme_checkpoint_not_analytic_dependency",
+      "sha256_lf": "516e70e412b82c6c8535d7a1637db14571965a89331a72f29c8981155dbdd5b1"
+    }
+  ],
+  "external_contracts": [
+    {
+      "contract": "Miller-Schmid (1.7)-(1.14): period and unfolding; completed pole-at-zero omission is corrected using Zagier",
+      "remote_bytes_authenticated": false,
+      "url": "https://arxiv.org/pdf/math/0605783"
+    },
+    {
+      "contract": "Zagier section1(a)-(c), equations3-17: completed E* poles0,1, residues-/+1/2, reflection and moderate growth",
+      "remote_bytes_authenticated": false,
+      "url": "https://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinRiemannZeta/eisenstein-zeta-978-3-662-00734-1_10.pdf"
+    },
+    {
+      "contract": "Zagier Elliptic Modular Forms sections2.1,2.2,2.4,4.1: E4/Delta, ring/dimension and Hecke algebra",
+      "remote_bytes_authenticated": false,
+      "url": "https://people.mpim-bonn.mpg.de/zagier/files-restricted/doi/10.1007/978-3-540-74119-0/fulltext.pdf"
+    },
+    {
+      "contract": "Anderson 1971 Shorted Operators: classical Schur/positive-form boundary",
+      "remote_bytes_authenticated": false,
+      "url": "https://doi.org/10.1137/0120053"
+    },
+    {
+      "contract": "Anderson-Trapp 1975 Shorted Operators II: classical positive operator boundary",
+      "remote_bytes_authenticated": false,
+      "url": "https://doi.org/10.1137/0128007"
+    }
+  ],
+  "primitive_definitions": {
+    "Delta": "q*product_(m>=1)(1-q^m)^24",
+    "E4": "1+240*sum_(n>=1) sigma_3(n)*q^n",
+    "completion": "A(s)=pi^(-s)*Gamma(s)*(4*pi)^(-s-23)*Gamma(s+23)",
+    "f0": "Delta*E4^3",
+    "f1": "Delta^2",
+    "q": "exp(2*pi*i*z)",
+    "scalar": "Q(s)=A(s)*zeta(2s)*(D00-D01*D10/D11)",
+    "shift": "w=s+23"
+  },
+  "schema": "rankin-selberg-quotient-sources-v1"
+}
