@@ -1,0 +1,519 @@
+{
+ "arithmetic_class": "EXACT_RATIONAL; zeta of a smooth projective genus-1 curve over F_5; H^1 is a weight-1 pure motive of rank 2; function-field analogue of a degree-2 L-function",
+ "critical_line": {
+  "citation": "H. Hasse (1936), proof of the Riemann hypothesis for elliptic curves over finite fields (|a| <= 2 sqrt(q), via positivity of the degree form on the endomorphism ring); A. Weil (1948), Riemann hypothesis for curves and abelian varieties over finite fields (Castelnuovo inequality / Hodge index positivity); P. Deligne (1974), La conjecture de Weil I (general purity)",
+  "detail": "ALL zeros of Z(T) = P(T)/((1-T)(1-5T)) lie on |T| = 5^(-1/2), equivalently Re(s) = 1/2 under T = 5^(-s).  For THIS INSTANCE the statement is a finite exact computation completed in this build: the complete degree-2 purity test (product of inverse roots = 5, disc = -11 < 0) plus the exact FE.  It presupposes P is the true numerator for all k, which is Hasse's theorem (imported) and is confirmed here against independent exhaustive counts for k = 1..6.  For the CLASS: Hasse (1936) for elliptic curves; Weil (1948) for curves and abelian varieties; Deligne (1974) for smooth projective varieties.  None of this transfers to RH over Q; rh_established = false.",
+  "rigor": "PROVED_HERE",
+  "status": "THEOREM",
+  "witness": "COMPLETE exact degree-2 purity certificate: alpha+beta = -3, alpha*beta = 5 (both exact integers from P = [1, 3, 5]), disc = (-3)^2 - 4*5 = -11 < 0, so alpha, beta are a complex-conjugate pair and |alpha|^2 = alpha*conj(alpha) = alpha*beta = 5 EXACTLY: |alpha| = |beta| = 5^(1/2).  Every zero T_0 of Z(T) is an inverse root of P, so |T_0| = 5^(-1/2); writing T = 5^(-s), |5^(-s)| = 5^(-Re s) = 5^(-1/2) iff Re(s) = 1/2: ALL zeros lie on the critical line, as an exact finite computation exact Sturm count: T^2 + 3T + 5 has 0 real roots in (-100, 100] (and |roots| <= 1 + 5 < 100 by the Cauchy bound, so 0 real roots anywhere): independent exact confirmation that disc < 0 route is sound"
+ },
+ "definition": "E: y^2 = x^3 + x + 1 over F_5 (nonsingular: cubic discriminant -31 == 4 mod 5).  Z(T) = exp(sum_{k>=1} #E(F_{5^k}) T^k / k) = P(T)/((1-T)(1-5T)) with P(T) = 1 + 3T + 5T^2 (a_1 = -3 from N_1 = 9).  Point counts N_k = [9, 27, 108, 675, 3069, 15552] for k = 1..6, by exhaustive enumeration over explicitly constructed fields F_{5^k}.",
+ "detector_runs": {
+  "description": "core.reconstruct.detect on exact coefficient data (window 12, holdout 4): E at weight (5,1), quadratic twist at (5,1), base changes at (25,1) and (125,1) -- all five axioms HOLD with the COMPLETE deg-2 A4 purity branch; one annotated traces-mode refusal; plus exact tensor checks",
+  "point_counts": {
+   "N_k_over_F_5^k, k=1..6": [
+    9,
+    27,
+    108,
+    675,
+    3069,
+    15552
+   ],
+   "closed_points_B_d": {
+    "1": 9,
+    "2": 9,
+    "3": 33,
+    "4": 162,
+    "5": 612,
+    "6": 2571
+   },
+   "family_sweep_members_(A,B,N,a)": [
+    [
+     0,
+     1,
+     6,
+     0
+    ],
+    [
+     0,
+     2,
+     6,
+     0
+    ],
+    [
+     0,
+     3,
+     6,
+     0
+    ],
+    [
+     0,
+     4,
+     6,
+     0
+    ],
+    [
+     1,
+     0,
+     4,
+     2
+    ],
+    [
+     1,
+     1,
+     9,
+     -3
+    ],
+    [
+     1,
+     2,
+     4,
+     2
+    ],
+    [
+     1,
+     3,
+     4,
+     2
+    ],
+    [
+     1,
+     4,
+     9,
+     -3
+    ],
+    [
+     2,
+     0,
+     2,
+     4
+    ],
+    [
+     2,
+     1,
+     7,
+     -1
+    ],
+    [
+     2,
+     4,
+     7,
+     -1
+    ],
+    [
+     3,
+     0,
+     10,
+     -4
+    ],
+    [
+     3,
+     2,
+     5,
+     1
+    ],
+    [
+     3,
+     3,
+     5,
+     1
+    ],
+    [
+     4,
+     0,
+     8,
+     -2
+    ],
+    [
+     4,
+     1,
+     8,
+     -2
+    ],
+    [
+     4,
+     2,
+     3,
+     3
+    ],
+    [
+     4,
+     3,
+     3,
+     3
+    ],
+    [
+     4,
+     4,
+     8,
+     -2
+    ]
+   ]
+  },
+  "runs": [
+   {
+    "mode": "coefficients",
+    "name": "E_over_F5_weight_(5,1)",
+    "series": "a_{5^k}-side coefficient data of 1/P, P = [1, 3, 5], window 12, holdout 4",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 3, 5]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=5, q^w=5, disc=-11"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 3, 5]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     5,
+     1
+    ]
+   },
+   {
+    "mode": "coefficients",
+    "name": "twist_E2_weight_(5,1)",
+    "series": "coefficient data of 1/P', P' = [1, -3, 5] (quadratic twist), window 12, holdout 4",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -3, 5]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=5, q^w=5, disc=-11"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -3, 5]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     5,
+     1
+    ]
+   },
+   {
+    "mode": "coefficients",
+    "name": "E_over_F25_weight_(25,1)",
+    "series": "coefficient data of 1/[1, 1, 25] (base change to F_25), window 12, holdout 4",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 1, 25]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=25, q^w=25, disc=-99"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 1, 25]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     25,
+     1
+    ]
+   },
+   {
+    "mode": "coefficients",
+    "name": "E_over_F125_weight_(125,1)",
+    "series": "coefficient data of 1/[1, -18, 125] (base change to F_125), window 12, holdout 4",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -18, 125]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=125, q^w=125, disc=-176"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -18, 125]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     125,
+     1
+    ]
+   },
+   {
+    "annotation": "HONEST ANNOTATION: the trace generating function sum_k p_k T^k = -T P'(T)/P(T) has numerator degree EQUAL to denominator degree; core.exact.minimal_rational_form only certifies proper forms (it truncates the numerator below deg Q), so the detector refuses at A1 in traces mode.  This is a properness limitation of the reconstruction interface, NOT a structural failure of the world: the same object is fully reconstructed and passes all five axioms in coefficient mode (see run E_over_F5_weight_(5,1)).  The refusal is deterministic and is recorded as detector metadata, not as evidence against E",
+    "mode": "traces",
+    "name": "E_traces_mode_refusal_annotated",
+    "series": "p_1..p_12 of P = [1, 3, 5]",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "FAILS",
+       "witness": "no certified minimal rational form on window of length 13 (recurrence order too large or unstable)"
+      }
+     ],
+     "object": null,
+     "refusal": "A1_FINITE_RANK",
+     "rh_established": false
+    },
+    "weight": [
+     5,
+     1
+    ]
+   }
+  ],
+  "tensor_checks": [
+   {
+    "detail": "H^1(E) (x) unit == H^1(E): A6 exact",
+    "name": "tensor_with_unit",
+    "result": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, 3, 5]"
+    }
+   },
+   {
+    "detail": "H^1(E) (x) H^1(E^(2)) degree-4 Satake predicted by op_tensor; A6 consistency of the exact tensor calculus (product series constructed from the same calculus, so this checks machinery coherence, not an independent count)",
+    "name": "tensor_E_with_twist",
+    "result": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, 9, 40, 225, 625]"
+    }
+   }
+  ]
+ },
+ "id": "ff_elliptic_f5",
+ "ladder": {
+  "L0_WELL_DEFINED": {
+   "citation": "E. Artin (1924), zeta functions of function fields (doctoral thesis work)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "disc(x^3 + x + 1) = -4*1 - 27*1 = -31 == 4 (mod 5), nonzero, so E: y^2 = x^3 + x + 1 is a nonsingular (elliptic) curve over F_5 (char 5 != 2,3, short Weierstrass discriminant criterion). exhaustive point counts over F_{5^k} = F_5[x]/(f_k), k=1..6: N = [9, 27, 108, 675, 3069, 15552]; moduli f_k (low-first int lists, monic, irreducibility proved by trial division vs all monic polys of degree <= k/2): f_1=[0, 1]; f_2=[1, 1, 1]; f_3=[1, 0, 1, 1]; f_4=[1, 0, 1, 1, 1]; f_5=[1, 0, 0, 0, 4, 1]; f_6=[1, 0, 0, 0, 1, 1, 1]. Z(T) = exp(sum N_k T^k / k) is a well-defined formal power series over Q with integer coefficients; its closed form P/((1-T)(1-5T)) is window-verified: exp(sum_{k=1..6} N_k T^k / k) == P/((1-T)(1-5T)) through T^6, formal exp computed with Fractions; series = [1, 9, 54, 279, 1404, 7029, 35154]"
+  },
+  "L1_MULTIPLICATIVITY": {
+   "citation": "F. K. Schmidt (1931), rationality and functional equation of zeta functions of curves over finite fields (Riemann-Roch)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "effective divisors on E form the FREE commutative monoid on closed points (a divisor is by definition a finite Z_{>=0}-combination of closed points), so the coefficient b_n factorizes over closed points -- a complete combinatorial proof of local-global multiplicativity; exact window witness: closed-point Euler product prod_{d<=6} (1 - T^d)^{-B_d} == P/((1-T)(1-5T)) through T^6, exact (binomial series, Fractions); the identity holds because effective divisors form the FREE commutative monoid on closed points (complete combinatorial proof of the Euler product shape), while the equality with P/Q is window-checked here and holds for all degrees by Hasse (imported). coefficients b_n of Z (numbers of effective divisors of degree n) are nonnegative integers with exact closed form b_n = 9(5^n - 1)/4 for 1 <= n <= 12 (b_0 = 1): b = [1, 9, 54, 279, 1404, 7029, 35154] ...; h = 9 is the class number"
+  },
+  "L2_EULER_PRODUCT": {
+   "citation": "E. Artin (1924), zeta functions of function fields (doctoral thesis work); F. K. Schmidt (1931), rationality and functional equation of zeta functions of curves over finite fields (Riemann-Roch)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "closed points of degree d (places of the function field): B = {1: 9, 2: 9, 3: 33, 4: 162, 5: 612, 6: 2571} by exact Moebius inversion of the counts (integrality asserted); inversion N_k = sum_{d|k} d B_d re-verified for k = 1..6. closed-point Euler product prod_{d<=6} (1 - T^d)^{-B_d} == P/((1-T)(1-5T)) through T^6, exact (binomial series, Fractions); the identity holds because effective divisors form the FREE commutative monoid on closed points (complete combinatorial proof of the Euler product shape), while the equality with P/Q is window-checked here and holds for all degrees by Hasse (imported)"
+  },
+  "L3_BOUNDED_DEGREE_RATIONAL": {
+   "citation": "F. K. Schmidt (1931), rationality and functional equation of zeta functions of curves over finite fields (Riemann-Roch); general varieties: B. Dwork (1960), rationality of zeta functions; A. Grothendieck (1965), etale cohomology and the Lefschetz trace formula for Frobenius (SGA; cohomological expression of zeta)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "each closed point x contributes the DEGREE-1 local factor (1 - N(x)^{-s})^{-1} in its own variable N(x)^{-s} (uniformly bounded degree, GL(1)-shaped places); globally Z(T) is the rational function [1,3,5]/[1,-6,5] with H^1 factor of degree exactly 2: detector A1 certifies P/Q on 12 terms with held-out tail (run E_over_F5_weight_(5,1)); P(1) = 9 != 0 and P(1/5) = 9/5 != 0: numerator and denominator of Z are exactly coprime; Z has simple poles at T = 1, 1/5 and no others"
+  },
+  "L4_WEIGHT_DUALITY": {
+   "citation": "F. K. Schmidt (1931), rationality and functional equation of zeta functions of curves over finite fields (Riemann-Roch); Poincare duality / Weil pairing: A. Weil (1948), Riemann hypothesis for curves and abelian varieties over finite fields (Castelnuovo inequality / Hodge index positivity)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "weight-1 self-duality of the H^1 datum, exact: op_dual_satake(P, det=5) = [1, 3/5, 1/5] and twisting T -> 5T returns exactly P: the involution alpha -> 5/alpha fixes the inverse-root multiset {alpha, beta} (Poincare duality / Weil pairing on H^1), exact; product of inverse roots = 5 = q; functional equation PROVED as an exact rational-function identity: (5T)^2 P(1/(5T)) = [5, 15, 25] = 5*P(T) and (5T)^2 Q(1/(5T)) = [5, -30, 25] = 5*Q(T) for Q = (1-T)(1-5T) = [1, -6, 5]; hence Z(1/(5T)) = (5P)/(5Q) = Z(T) exactly; cross-multiplication [(5T)^2 P(1/(5T))]*Q == P*[(5T)^2 Q(1/(5T))] asserted coefficientwise in Fractions. Root number +1; genus 1 so the FE has no T-power prefactor"
+  },
+  "L5_CONDUCTOR_GAMMA_ROOT": {
+   "citation": "F. K. Schmidt (1931), rationality and functional equation of zeta functions of curves over finite fields (Riemann-Roch)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "canonical completed object IS Z itself: H^0 and H^2 contribute the factors 1/(1-T) and 1/(1-5T) (the function-field analogue of the gamma factor), the conductor is trivial (E is smooth and proper over F_5; every place is a good place), and the root number is +1, read off exactly from the proved FE identity (5T)^2 P(1/(5T)) = +5 P(T); functional equation PROVED as an exact rational-function identity: (5T)^2 P(1/(5T)) = [5, 15, 25] = 5*P(T) and (5T)^2 Q(1/(5T)) = [5, -30, 25] = 5*Q(T) for Q = (1-T)(1-5T) = [1, -6, 5]; hence Z(1/(5T)) = (5P)/(5Q) = Z(T) exactly; cross-multiplication [(5T)^2 P(1/(5T))]*Q == P*[(5T)^2 Q(1/(5T))] asserted coefficientwise in Fractions. Root number +1; genus 1 so the FE has no T-power prefactor"
+  },
+  "L6_CONTINUATION_FE": {
+   "citation": "F. K. Schmidt (1931), rationality and functional equation of zeta functions of curves over finite fields (Riemann-Roch); H. Hasse (1936), proof of the Riemann hypothesis for elliptic curves over finite fields (|a| <= 2 sqrt(q), via positivity of the degree form on the endomorphism ring)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "continuation: Z is literally the rational function P/((1-T)(1-5T)) (entire in T except simple poles at T = 1, 1/5), window-identity with the defining series proved through T^6 and valid for all k by Hasse (imported, and confirmed 5-for-5 at k = 2..6: a_1 = 5+1-9 = -3 fixes P(T) = 1 + 3T + 5T^2; power sums p_k of P (exact, core.exact.power_sums_from_satake == the recursion a_k = -3 a_{k-1} - 5 a_{k-2}) give p = [-3, -1, 18, -49, 57, 74] and the predictions N_k = 5^k + 1 - p_k = [9, 27, 108, 675, 3069, 15552] agree with the independent exhaustive counts for ALL k = 1..6 (k = 2..6 are genuine confirmations, five for five)). FUNCTIONAL EQUATION PROVED EXACTLY HERE: functional equation PROVED as an exact rational-function identity: (5T)^2 P(1/(5T)) = [5, 15, 25] = 5*P(T) and (5T)^2 Q(1/(5T)) = [5, -30, 25] = 5*Q(T) for Q = (1-T)(1-5T) = [1, -6, 5]; hence Z(1/(5T)) = (5P)/(5Q) = Z(T) exactly; cross-multiplication [(5T)^2 P(1/(5T))]*Q == P*[(5T)^2 Q(1/(5T))] asserted coefficientwise in Fractions. Root number +1; genus 1 so the FE has no T-power prefactor"
+  },
+  "L7_TWIST_TENSOR_COMPAT": {
+   "citation": "standard; quadratic twists and base change of elliptic curves: H. Hasse (1936), proof of the Riemann hypothesis for elliptic curves over finite fields (|a| <= 2 sqrt(q), via positivity of the degree form on the endomorphism ring)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "quadratic twist by the non-square d = 2: E^(2): y^2 = x^3 + 4x + 3 (disc == 1 mod 5, nonsingular), counted independently and exhaustively: N'_1 = 3, N'_2 = 27, so a' = 3 = -a exactly (twist negates the trace, chi(2) = -1); P'(T) = 1 - 3T + 5T^2 passes the same complete purity test (product 5, disc = -11 < 0); over F_25 the twist trivializes: both curves have 27 points, exactly. base change = Adams operations, exactly: psi^2 gives Satake [1, 1, 25] over F_25 (N_2 = 25 + 1 - (-1) = 27 matches the raw exhaustive count) and psi^3 gives [1, -18, 125] over F_125 (N_3 = 125 + 1 - 18 = 108 matches); complete purity persists: products 25, 125 = q^k with discs -99 < 0, -176 < 0: RH for E/F_25 and E/F_125 also PROVED by finite exact computation. Sym^2(H^1): power sums (p_k^2 + p_{2k})/2 exact; Satake factor (1 - 5T)(1 + T + 25T^2) = [1, -4, 20, -125] (asserted, and exact division by (1 - 5T) leaves [1, 1, 25] with remainder 0); COMPLETE purity of weight 2: real inverse root 5 has 5^2 = 25 = q^2, and the quadratic factor has product 25 = q^2 with disc = -99 < 0, so |alpha^2| = |beta^2| = 5 exactly; Sym^2 + Ext^2 == tensor square on power sums, asserted for k = 1..6. Ext^2(H^1) power sums are exactly [5, 25, 125, 625, 3125, 15625] = 5^k: Ext^2 = det = the weight-2 Tate object, Satake [1, -5] -- Poincare duality pairing made exact"
+  },
+  "L8_REALIZATION": {
+   "citation": "A. Grothendieck (1965), etale cohomology and the Lefschetz trace formula for Frobenius (SGA; cohomological expression of zeta); elliptic case via End(E): H. Hasse (1936), proof of the Riemann hypothesis for elliptic curves over finite fields (|a| <= 2 sqrt(q), via positivity of the degree form on the endomorphism ring)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "geometric/motivic realization par excellence: P(T) = det(1 - Frob T | H^1) for the actual smooth projective curve E, and N_k = 5^k + 1 - p_k is the Lefschetz fixed-point identity, instantiated exactly here for k = 1..6 against raw exhaustive counts; eigenvalue package realized by an explicit integer matrix: Frobenius eigenvalue package realized by the exact integer companion matrix M = [[0, -5], [1, -3]]: charpoly_of_matrix(M) = T^2 + 3T + 5 (Faddeev-LeVerrier, exact) and M^2 + 3M + 5I = 0"
+  },
+  "L9_EXPLICIT_FORMULA_POSITIVITY": {
+   "citation": "H. Hasse (1936), proof of the Riemann hypothesis for elliptic curves over finite fields (|a| <= 2 sqrt(q), via positivity of the degree form on the endomorphism ring); A. Weil (1948), Riemann hypothesis for curves and abelian varieties over finite fields (Castelnuovo inequality / Hodge index positivity); P. Deligne (1974), La conjecture de Weil I (general purity)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "the explicit formula is FINITE and EXACT here: N_k = 5^k + 1 - alpha^k - beta^k pairs the zeros against point counts with no analytic remainder (verified k = 1..6, five independent confirmations); and -- unlike the zeta world -- the positivity slot is FILLED by an independent mechanism: POSITIVITY MECHANISM (Hasse degree form): deg(m + n phi) = m^2 - 3mn + 5n^2 on Z + Z phi in End(E) is positive definite; exact certificates: disc = -11 < 0 with leading coefficient 1, sum-of-squares identity 4(m^2 - 3mn + 5n^2) = (2m - 3n)^2 + 11 n^2 verified as a polynomial identity over Z, and Q(m,n) > 0 checked for all 0 < max(|m|,|n|) <= 25.  Positivity of the degree map (deg >= 0, = 0 only at 0: Castelnuovo-type positivity, geometric input) forces a^2 < 4q = 20 (indeed a^2 = 9), which IS the purity |alpha| = 5^(1/2).  The mechanism is identified, finite, and exactly checkable -- the model for the POSITIVITY_PURITY slot"
+  }
+ },
+ "mechanisms": {
+  "DUALITY_FE": {
+   "citation": "F. K. Schmidt (1931), rationality and functional equation of zeta functions of curves over finite fields (Riemann-Roch)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "supplied by Poincare duality / the Weil pairing on H^1; the FE is proved exactly as a rational-function identity: functional equation PROVED as an exact rational-function identity: (5T)^2 P(1/(5T)) = [5, 15, 25] = 5*P(T) and (5T)^2 Q(1/(5T)) = [5, -30, 25] = 5*Q(T) for Q = (1-T)(1-5T) = [1, -6, 5]; hence Z(1/(5T)) = (5P)/(5Q) = Z(T) exactly; cross-multiplication [(5T)^2 P(1/(5T))]*Q == P*[(5T)^2 Q(1/(5T))] asserted coefficientwise in Fractions. Root number +1; genus 1 so the FE has no T-power prefactor; op_dual_satake(P, det=5) = [1, 3/5, 1/5] and twisting T -> 5T returns exactly P: the involution alpha -> 5/alpha fixes the inverse-root multiset {alpha, beta} (Poincare duality / Weil pairing on H^1), exact"
+  },
+  "EULER_PRODUCT": {
+   "citation": "E. Artin (1924), zeta functions of function fields (doctoral thesis work)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "supplied by closed points of E/F_5 (free-monoid divisor structure); closed points of degree d (places of the function field): B = {1: 9, 2: 9, 3: 33, 4: 162, 5: 612, 6: 2571} by exact Moebius inversion of the counts (integrality asserted); inversion N_k = sum_{d|k} d B_d re-verified for k = 1..6; closed-point Euler product prod_{d<=6} (1 - T^d)^{-B_d} == P/((1-T)(1-5T)) through T^6, exact (binomial series, Fractions); the identity holds because effective divisors form the FREE commutative monoid on closed points (complete combinatorial proof of the Euler product shape), while the equality with P/Q is window-checked here and holds for all degrees by Hasse (imported)"
+  },
+  "FAMILY": {
+   "citation": "H. Hasse (1936), proof of the Riemann hypothesis for elliptic curves over finite fields (|a| <= 2 sqrt(q), via positivity of the degree form on the endomorphism ring)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "horizontal AND vertical family structure verified exactly: horizontal family sweep: all 20 nonsingular y^2 = x^3 + Ax + B over F_5 counted exhaustively; every member has a^2 <= 16 < 20 = 4q (strict Hasse inequality, hence disc(P_AB) = a^2 - 20 < 0 and the COMPLETE degree-2 purity test passes for the ENTIRE family); the quadratic-twist involution (A,B) -> (4A, 3B) exactly negates a across all 20 members; members (A,B,N,a): [(0, 1, 6, 0), (0, 2, 6, 0), (0, 3, 6, 0), (0, 4, 6, 0), (1, 0, 4, 2), (1, 1, 9, -3), (1, 2, 4, 2), (1, 3, 4, 2), (1, 4, 9, -3), (2, 0, 2, 4), (2, 1, 7, -1), (2, 4, 7, -1), (3, 0, 10, -4), (3, 2, 5, 1), (3, 3, 5, 1), (4, 0, 8, -2), (4, 1, 8, -2), (4, 2, 3, 3), (4, 3, 3, 3), (4, 4, 8, -2)]. Vertical: base changes to F_25 and F_125 carry complete purity certificates (discs -99 and -176 < 0). The Hasse structure P_AB = 1 - aT + 5T^2 for each member is imported; the sweep's strict inequality a^2 < 4q is exhaustive and exact"
+  },
+  "POSITIVITY_PURITY": {
+   "citation": "H. Hasse (1936), proof of the Riemann hypothesis for elliptic curves over finite fields (|a| <= 2 sqrt(q), via positivity of the degree form on the endomorphism ring); A. Weil (1948), Riemann hypothesis for curves and abelian varieties over finite fields (Castelnuovo inequality / Hodge index positivity); P. Deligne (1974), La conjecture de Weil I (general purity)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "THE MODEL CELL. Mechanism identified by name: Frobenius eigenvalue purity via Castelnuovo positivity -- concretely, positive-definiteness of the degree form on End(E) (Hasse). Exact instance certificates: POSITIVITY MECHANISM (Hasse degree form): deg(m + n phi) = m^2 - 3mn + 5n^2 on Z + Z phi in End(E) is positive definite; exact certificates: disc = -11 < 0 with leading coefficient 1, sum-of-squares identity 4(m^2 - 3mn + 5n^2) = (2m - 3n)^2 + 11 n^2 verified as a polynomial identity over Z, and Q(m,n) > 0 checked for all 0 < max(|m|,|n|) <= 25.  Positivity of the degree map (deg >= 0, = 0 only at 0: Castelnuovo-type positivity, geometric input) forces a^2 < 4q = 20 (indeed a^2 = 9), which IS the purity |alpha| = 5^(1/2).  The mechanism is identified, finite, and exactly checkable -- the model for the POSITIVITY_PURITY slot COMPLETE exact degree-2 purity certificate: alpha+beta = -3, alpha*beta = 5 (both exact integers from P = [1, 3, 5]), disc = (-3)^2 - 4*5 = -11 < 0, so alpha, beta are a complex-conjugate pair and |alpha|^2 = alpha*conj(alpha) = alpha*beta = 5 EXACTLY: |alpha| = |beta| = 5^(1/2).  Every zero T_0 of Z(T) is an inverse root of P, so |T_0| = 5^(-1/2); writing T = 5^(-s), |5^(-s)| = 5^(-Re s) = 5^(-1/2) iff Re(s) = 1/2: ALL zeros lie on the critical line, as an exact finite computation exact Sturm count: T^2 + 3T + 5 has 0 real roots in (-100, 100] (and |roots| <= 1 + 5 < 100 by the Cauchy bound, so 0 real roots anywhere): independent exact confirmation that disc < 0 route is sound. This is the mechanism that FORCES the critical line in this world, and its analogue is precisely what the zeta world lacks"
+  },
+  "TENSOR_OPS": {
+   "citation": "A. Weil (1948), Riemann hypothesis for curves and abelian varieties over finite fields (Castelnuovo inequality / Hodge index positivity)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "Sym^2, Ext^2, Adams (base change), dual and tensor all computed exactly on the Satake datum with purity preserved and COMPLETE certificates in degrees <= 3: Sym^2(H^1): power sums (p_k^2 + p_{2k})/2 exact; Satake factor (1 - 5T)(1 + T + 25T^2) = [1, -4, 20, -125] (asserted, and exact division by (1 - 5T) leaves [1, 1, 25] with remainder 0); COMPLETE purity of weight 2: real inverse root 5 has 5^2 = 25 = q^2, and the quadratic factor has product 25 = q^2 with disc = -99 < 0, so |alpha^2| = |beta^2| = 5 exactly; Sym^2 + Ext^2 == tensor square on power sums, asserted for k = 1..6; Ext^2(H^1) power sums are exactly [5, 25, 125, 625, 3125, 15625] = 5^k: Ext^2 = det = the weight-2 Tate object, Satake [1, -5] -- Poincare duality pairing made exact; base change = Adams operations, exactly: psi^2 gives Satake [1, 1, 25] over F_25 (N_2 = 25 + 1 - (-1) = 27 matches the raw exhaustive count) and psi^3 gives [1, -18, 125] over F_125 (N_3 = 125 + 1 - 18 = 108 matches); complete purity persists: products 25, 125 = q^k with discs -99 < 0, -176 < 0: RH for E/F_25 and E/F_125 also PROVED by finite exact computation; A6 machinery runs embedded in detector_runs"
+  },
+  "TRACE_FORMULA": {
+   "citation": "A. Grothendieck (1965), etale cohomology and the Lefschetz trace formula for Frobenius (SGA; cohomological expression of zeta); H. Hasse (1936), proof of the Riemann hypothesis for elliptic curves over finite fields (|a| <= 2 sqrt(q), via positivity of the degree form on the endomorphism ring)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "supplied by the Lefschetz fixed-point formula for Frobenius: N_k = 5^k + 1 - p_k, instantiated exactly for k = 1..6 (raw exhaustive counts vs power sums of P: a_1 = 5+1-9 = -3 fixes P(T) = 1 + 3T + 5T^2; power sums p_k of P (exact, core.exact.power_sums_from_satake == the recursion a_k = -3 a_{k-1} - 5 a_{k-2}) give p = [-3, -1, 18, -49, 57, 74] and the predictions N_k = 5^k + 1 - p_k = [9, 27, 108, 675, 3069, 15552] agree with the independent exhaustive counts for ALL k = 1..6 (k = 2..6 are genuine confirmations, five for five))"
+  }
+ },
+ "notes": "MODEL WORLD for the POSITIVITY_PURITY mechanism: every ladder row closes, and L9 closes through an IDENTIFIED, FINITE, EXACTLY-CHECKED positivity input (degree-form positive-definiteness, certified by disc = -11 < 0 and the SOS identity 4(m^2 - 3mn + 5n^2) = (2m - 3n)^2 + 11n^2), in deliberate contrast to the zeta world where the same slot is OPEN (Weil positivity is RH-equivalent, not supplied).  All witnesses are Fraction/integer computations; NO floats appear anywhere in this build.  The traces-mode detector refusal embedded in detector_runs is an annotated interface limitation (numerator degree = denominator degree), not evidence against the world.  Nothing here bears on RH over Q: rh_established = false.",
+ "rh_established": false,
+ "sources": [
+  "H. Hasse (1936), Riemann hypothesis for elliptic curves over finite fields (Crelle series of three papers on abstract elliptic function fields)",
+  "E. Artin (1924), thesis work on zeta functions of function fields",
+  "F. K. Schmidt (1931), rationality and functional equation for curve zeta functions",
+  "A. Weil (1948), Riemann hypothesis for curves and abelian varieties (Castelnuovo / Hodge index positivity)",
+  "P. Deligne (1974), La conjecture de Weil I",
+  "B. Dwork (1960), rationality of zeta functions of varieties over finite fields",
+  "A. Grothendieck (1965), etale cohomology, Lefschetz trace formula for Frobenius (SGA)",
+  "J. H. Silverman, The Arithmetic of Elliptic Curves (degree form positivity and the Hasse bound, ch. V)"
+ ],
+ "title": "Zeta of the elliptic curve y^2 = x^3 + x + 1 over F_5 (model world for positivity/purity)"
+}

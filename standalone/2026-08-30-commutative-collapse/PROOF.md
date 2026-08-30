@@ -169,9 +169,12 @@ construct an intrinsically coupled counterexample".
 
 - The **bicomplex** zeta (`BC ≅ C × C`, both `m_i = 1`): `zeta_BC` is the
   pair `(zeta(λ_1), zeta(λ_2))` of independent copies — the idempotent
-  decomposition known in the bicomplex literature (see the boundary audit;
-  the bicomplex special case is NOT claimed as new here). Its "zeros" and
-  "functional equation" are two independent copies of the classical ones.
+  decomposition PUBLISHED in the bicomplex literature: Rochon (2004) treats
+  the bicomplex Riemann zeta and its RH statement, which is equivalent to
+  classical RH precisely BECAUSE of this collapse; the underlying algebra
+  mechanism goes back to Scheffers-era hypercomplex function theory (see
+  also Plaksa-Shpakivskyi). None of this special case is claimed as new
+  here; this theorem is its uniform generalization with the jet bookkeeping.
 - **Multicomplex / dual-number / group-algebra** zetas: jets of `zeta`,
   by the theorem; a dual-number zeta is exactly `(zeta(λ), zeta'(λ))` — the
   first jet — so e.g. "simple zeros of zeta" is the precise content of

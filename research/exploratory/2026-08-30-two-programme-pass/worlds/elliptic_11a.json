@@ -1,0 +1,1826 @@
+{
+ "arithmetic_class": "degree-2 motivic L-function over Q, weight 1, conductor 11; h^1 of an elliptic curve; equivalently the unique weight-2 newform of level 11 (eta(z)^2 eta(11z)^2, LMFDB 11.2.a.a)",
+ "critical_line": {
+  "citation": "GRH for elliptic-curve L-functions: standard conjecture (see e.g. Iwaniec-Kowalski 2004, ch. 5); L(E,1) != 0 and rank 0 for 11a: V. Kolyvagin (1988-90) framework, B. Gross, D. Zagier (1986); CITATION-NEEDED: preferred primary reference for rank(11a) = 0 and E(Q) = Z/5Z (classical; Cremona tables)",
+  "detail": "GRH for L(E,s): all nontrivial zeros on the critical line Re s = 1 in the classical weight-2 normalization (center s = 1 of the functional equation s <-> 2-s; Re s = 1/2 after analytic normalization). Open even for this single curve of conductor 11. What IS known: entire continuation and FE (modularity); L(E,1) != 0 (analytic rank 0, consistent with the finite Mordell-Weil group E(Q) = Z/5Z via Kolyvagin/Gross-Zagier and BSD work); the LOCAL analogue at every good p is a theorem (Hasse) and is verified exactly here for p <= 97.",
+  "rigor": "OPEN",
+  "status": "CONJECTURE",
+  "witness": ""
+ },
+ "definition": "E: y^2 + y = x^3 - x^2 - 10x - 20 over Q, minimal model, Delta = -11^5, conductor 11 (E = X_0(11)). L(E,s) = prod_{p != 11} (1 - a_p p^{-s} + p^{1-2s})^{-1} * (1 - 11^{-s})^{-1} with a_p = p + 1 - #E(F_p). Local Satake datum at good p: det(1 - Frob_p T) = 1 - a_p T + p T^2 = [1, -a_p, p] (low-first). Computed here exactly: a_2=-2, a_3=-1, a_5=1, a_7=-2, a_13=4, a_17=-2, a_19=0, a_23=-1, a_29=0, a_31=7, a_37=3, a_41=-8, a_43=-6, a_47=8, a_53=-6, a_59=5, a_61=12, a_67=-7, a_71=-3, a_73=4, a_79=-10, a_83=-6, a_89=15, a_97=-7; a_11 = 1.",
+ "detector_runs": {
+  "description": "core.reconstruct.detect on the exact coefficient sequence of 1/(1 - a_p T + p T^2) (window 12, holdout 4) with purity weight (p, 1) at all 24 good p <= 97 \u2014 degree 2, so A4 purity is the COMPLETE exact test; plus exact Sym^2 runs at p = 2, 3 (degree 3: purity NECESSARY_ONLY, recorded as such)",
+  "runs": [
+   {
+    "a_p": -2,
+    "mode": "coefficients",
+    "prime": 2,
+    "series": [
+     "1",
+     "-2",
+     "2",
+     "0",
+     "-4",
+     "8",
+     "-8",
+     "0",
+     "16",
+     "-32",
+     "32",
+     "0"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 2, 2]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=2, q^w=2, disc=-4"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 2, 2]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     2,
+     1
+    ]
+   },
+   {
+    "a_p": -1,
+    "mode": "coefficients",
+    "prime": 3,
+    "series": [
+     "1",
+     "-1",
+     "-2",
+     "5",
+     "1",
+     "-16",
+     "13",
+     "35",
+     "-74",
+     "-31",
+     "253",
+     "-160"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 1, 3]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=3, q^w=3, disc=-11"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 1, 3]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     3,
+     1
+    ]
+   },
+   {
+    "a_p": 1,
+    "mode": "coefficients",
+    "prime": 5,
+    "series": [
+     "1",
+     "1",
+     "-4",
+     "-9",
+     "11",
+     "56",
+     "1",
+     "-279",
+     "-284",
+     "1111",
+     "2531",
+     "-3024"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1, 5]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=5, q^w=5, disc=-19"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -1, 5]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     5,
+     1
+    ]
+   },
+   {
+    "a_p": -2,
+    "mode": "coefficients",
+    "prime": 7,
+    "series": [
+     "1",
+     "-2",
+     "-3",
+     "20",
+     "-19",
+     "-102",
+     "337",
+     "40",
+     "-2439",
+     "4598",
+     "7877",
+     "-47940"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 2, 7]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=7, q^w=7, disc=-24"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 2, 7]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     7,
+     1
+    ]
+   },
+   {
+    "a_p": 4,
+    "mode": "coefficients",
+    "prime": 13,
+    "series": [
+     "1",
+     "4",
+     "3",
+     "-40",
+     "-199",
+     "-276",
+     "1483",
+     "9520",
+     "18801",
+     "-48556",
+     "-438637",
+     "-1123320"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -4, 13]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=13, q^w=13, disc=-36"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -4, 13]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     13,
+     1
+    ]
+   },
+   {
+    "a_p": -2,
+    "mode": "coefficients",
+    "prime": 17,
+    "series": [
+     "1",
+     "-2",
+     "-13",
+     "60",
+     "101",
+     "-1222",
+     "727",
+     "19320",
+     "-50999",
+     "-226442",
+     "1319867",
+     "1209780"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 2, 17]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=17, q^w=17, disc=-64"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 2, 17]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     17,
+     1
+    ]
+   },
+   {
+    "a_p": 0,
+    "mode": "coefficients",
+    "prime": 19,
+    "series": [
+     "1",
+     "0",
+     "-19",
+     "0",
+     "361",
+     "0",
+     "-6859",
+     "0",
+     "130321",
+     "0",
+     "-2476099",
+     "0"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 0, 19]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=19, q^w=19, disc=-76"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 0, 19]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     19,
+     1
+    ]
+   },
+   {
+    "a_p": -1,
+    "mode": "coefficients",
+    "prime": 23,
+    "series": [
+     "1",
+     "-1",
+     "-22",
+     "45",
+     "461",
+     "-1496",
+     "-9107",
+     "43515",
+     "165946",
+     "-1166791",
+     "-2649967",
+     "29486160"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 1, 23]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=23, q^w=23, disc=-91"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 1, 23]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     23,
+     1
+    ]
+   },
+   {
+    "a_p": 0,
+    "mode": "coefficients",
+    "prime": 29,
+    "series": [
+     "1",
+     "0",
+     "-29",
+     "0",
+     "841",
+     "0",
+     "-24389",
+     "0",
+     "707281",
+     "0",
+     "-20511149",
+     "0"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 0, 29]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=29, q^w=29, disc=-116"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 0, 29]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     29,
+     1
+    ]
+   },
+   {
+    "a_p": 7,
+    "mode": "coefficients",
+    "prime": 31,
+    "series": [
+     "1",
+     "7",
+     "18",
+     "-91",
+     "-1195",
+     "-5544",
+     "-1763",
+     "159523",
+     "1171314",
+     "3253985",
+     "-13532839",
+     "-195603408"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -7, 31]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=31, q^w=31, disc=-75"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -7, 31]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     31,
+     1
+    ]
+   },
+   {
+    "a_p": 3,
+    "mode": "coefficients",
+    "prime": 37,
+    "series": [
+     "1",
+     "3",
+     "-28",
+     "-195",
+     "451",
+     "8568",
+     "9017",
+     "-289965",
+     "-1203524",
+     "7118133",
+     "65884787",
+     "-65716560"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -3, 37]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=37, q^w=37, disc=-139"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -3, 37]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     37,
+     1
+    ]
+   },
+   {
+    "a_p": -8,
+    "mode": "coefficients",
+    "prime": 41,
+    "series": [
+     "1",
+     "-8",
+     "23",
+     "144",
+     "-2095",
+     "10856",
+     "-953",
+     "-437472",
+     "3538849",
+     "-10374440",
+     "-62097289",
+     "922130352"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 8, 41]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=41, q^w=41, disc=-100"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 8, 41]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     41,
+     1
+    ]
+   },
+   {
+    "a_p": -6,
+    "mode": "coefficients",
+    "prime": 43,
+    "series": [
+     "1",
+     "-6",
+     "-7",
+     "300",
+     "-1499",
+     "-3906",
+     "87893",
+     "-359400",
+     "-1622999",
+     "25192194",
+     "-81364207",
+     "-595079100"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 6, 43]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=43, q^w=43, disc=-136"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 6, 43]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     43,
+     1
+    ]
+   },
+   {
+    "a_p": 8,
+    "mode": "coefficients",
+    "prime": 47,
+    "series": [
+     "1",
+     "8",
+     "17",
+     "-240",
+     "-2719",
+     "-10472",
+     "44017",
+     "844320",
+     "4685761",
+     "-2196952",
+     "-237806383",
+     "-1799194320"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -8, 47]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=47, q^w=47, disc=-124"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -8, 47]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     47,
+     1
+    ]
+   },
+   {
+    "a_p": -6,
+    "mode": "coefficients",
+    "prime": 53,
+    "series": [
+     "1",
+     "-6",
+     "-17",
+     "420",
+     "-1619",
+     "-12546",
+     "161083",
+     "-301560",
+     "-6728039",
+     "56350914",
+     "18480583",
+     "-3097481940"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 6, 53]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=53, q^w=53, disc=-176"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 6, 53]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     53,
+     1
+    ]
+   },
+   {
+    "a_p": 5,
+    "mode": "coefficients",
+    "prime": 59,
+    "series": [
+     "1",
+     "5",
+     "-34",
+     "-465",
+     "-319",
+     "25840",
+     "148021",
+     "-784455",
+     "-12655514",
+     "-16994725",
+     "661701701",
+     "4311197280"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -5, 59]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=59, q^w=59, disc=-211"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -5, 59]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     59,
+     1
+    ]
+   },
+   {
+    "a_p": 12,
+    "mode": "coefficients",
+    "prime": 61,
+    "series": [
+     "1",
+     "12",
+     "83",
+     "264",
+     "-1895",
+     "-38844",
+     "-350533",
+     "-1836912",
+     "-660431",
+     "104126460",
+     "1289803811",
+     "9125931672"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -12, 61]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=61, q^w=61, disc=-100"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -12, 61]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     61,
+     1
+    ]
+   },
+   {
+    "a_p": -7,
+    "mode": "coefficients",
+    "prime": 67,
+    "series": [
+     "1",
+     "-7",
+     "-18",
+     "595",
+     "-2959",
+     "-19152",
+     "332317",
+     "-1043035",
+     "-14963994",
+     "174631303",
+     "-219831523",
+     "-10161476640"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 7, 67]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=67, q^w=67, disc=-219"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 7, 67]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     67,
+     1
+    ]
+   },
+   {
+    "a_p": -3,
+    "mode": "coefficients",
+    "prime": 71,
+    "series": [
+     "1",
+     "-3",
+     "-62",
+     "399",
+     "3205",
+     "-37944",
+     "-113723",
+     "3035193",
+     "-1031246",
+     "-212404965",
+     "710433361",
+     "12949452432"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 3, 71]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=71, q^w=71, disc=-275"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 3, 71]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     71,
+     1
+    ]
+   },
+   {
+    "a_p": 4,
+    "mode": "coefficients",
+    "prime": 73,
+    "series": [
+     "1",
+     "4",
+     "-57",
+     "-520",
+     "2081",
+     "46284",
+     "33223",
+     "-3245840",
+     "-15408639",
+     "175311764",
+     "1826077703",
+     "-5493447960"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -4, 73]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=73, q^w=73, disc=-276"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -4, 73]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     73,
+     1
+    ]
+   },
+   {
+    "a_p": -10,
+    "mode": "coefficients",
+    "prime": 79,
+    "series": [
+     "1",
+     "-10",
+     "21",
+     "580",
+     "-7459",
+     "28770",
+     "301561",
+     "-5288440",
+     "29061081",
+     "127175950",
+     "-3567584899",
+     "25628948940"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 10, 79]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=79, q^w=79, disc=-216"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 10, 79]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     79,
+     1
+    ]
+   },
+   {
+    "a_p": -6,
+    "mode": "coefficients",
+    "prime": 83,
+    "series": [
+     "1",
+     "-6",
+     "-47",
+     "780",
+     "-779",
+     "-60066",
+     "425053",
+     "2435160",
+     "-49890359",
+     "97223874",
+     "3557556553",
+     "-29414920860"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 6, 83]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=83, q^w=83, disc=-296"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 6, 83]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     83,
+     1
+    ]
+   },
+   {
+    "a_p": 15,
+    "mode": "coefficients",
+    "prime": 89,
+    "series": [
+     "1",
+     "15",
+     "136",
+     "705",
+     "-1529",
+     "-85680",
+     "-1149119",
+     "-9611265",
+     "-41897384",
+     "226941825",
+     "7132994551",
+     "86797095840"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -15, 89]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=89, q^w=89, disc=-131"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -15, 89]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     89,
+     1
+    ]
+   },
+   {
+    "a_p": -7,
+    "mode": "coefficients",
+    "prime": 97,
+    "series": [
+     "1",
+     "-7",
+     "-48",
+     "1015",
+     "-2449",
+     "-81312",
+     "806737",
+     "2240105",
+     "-93934224",
+     "440249383",
+     "6029874047",
+     "-84913308480"
+    ],
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 7, 97]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=97, q^w=97, disc=-339"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 7, 97]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     97,
+     1
+    ]
+   }
+  ],
+  "sym2_runs": [
+   {
+    "a_p": -2,
+    "closed_form": "[1, -(a_p^2-p), p a_p^2 - p^2, -p^3]",
+    "ext2_power_sums": [
+     "2",
+     "4",
+     "8"
+    ],
+    "prime": 2,
+    "purity_note": "Sym^2 has degree 3: detector purity at weight (p,2) is NECESSARY_ONLY (self-reciprocity), unlike the COMPLETE degree-2 test for E itself",
+    "sym2_detect": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 14 terms; deg Q = 3, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -2, 4, -8]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "NECESSARY_ONLY",
+       "status": "HOLDS",
+       "witness": "self-reciprocity holds"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 10 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 3,
+      "denominator": "[1, -2, 4, -8]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "sym2_satake": [
+     "1",
+     "-2",
+     "4",
+     "-8"
+    ],
+    "tensor_A6": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -4, 8, -16, 16]"
+    },
+    "tensor_decomposition": "p_k(E x E) == p_k(Sym^2) + p_k(Ext^2) exactly, k <= 3"
+   },
+   {
+    "a_p": -1,
+    "closed_form": "[1, -(a_p^2-p), p a_p^2 - p^2, -p^3]",
+    "ext2_power_sums": [
+     "3",
+     "9",
+     "27"
+    ],
+    "prime": 3,
+    "purity_note": "Sym^2 has degree 3: detector purity at weight (p,2) is NECESSARY_ONLY (self-reciprocity), unlike the COMPLETE degree-2 test for E itself",
+    "sym2_detect": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 14 terms; deg Q = 3, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 2, -6, -27]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "NECESSARY_ONLY",
+       "status": "HOLDS",
+       "witness": "self-reciprocity holds"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 10 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 3,
+      "denominator": "[1, 2, -6, -27]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "sym2_satake": [
+     "1",
+     "2",
+     "-6",
+     "-27"
+    ],
+    "tensor_A6": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -1, -12, -9, 81]"
+    },
+    "tensor_decomposition": "p_k(E x E) == p_k(Sym^2) + p_k(Ext^2) exactly, k <= 3"
+   }
+  ]
+ },
+ "id": "elliptic_11a",
+ "ladder": {
+  "L0_WELL_DEFINED": {
+   "citation": "invariant formulas: J. Silverman, The Arithmetic of Elliptic Curves (1986), III.1; convergence via H. Hasse (1936), Zur Theorie der abstrakten elliptischen Funktionenkoerper I-III (RH for elliptic function fields)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "Delta = -161051 = -(11^5) != 0 computed exactly from the a-invariants (0,-1,1,-10,-20); identities 4b8 = b2 b6 - b4^2 and c4^3 - c6^2 = 1728 Delta asserted; Delta % p != 0 for every good p <= 97 (good reduction proved here for these p); rational point (5,5) on E verified; L(E,s) well-defined for Re s > 3/2 by the Hasse bound (exact integer inequalities a_p^2 <= 4p (all strict) at every...)"
+  },
+  "L1_MULTIPLICATIVITY": {
+   "citation": "E. Hecke (1937), Euler products for modular forms; A. Wiles (1995), Modular elliptic curves and Fermat's Last Theorem; R. Taylor, A. Wiles (1995); C. Breuil, B. Conrad, F. Diamond, R. Taylor (2001); for THIS curve already classical: E = X_0(11), M. Eichler (1954), G. Shimura (1958)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "a_(p^(k+1)) = a_p a_(p^k) - p a_(p^(k-1)) verified exactly for k < 11 at all 24 good p <= 97; all a_(p^k) integers; a_n rebuilt multiplicatively from the exact local factors (deg-2 at good p, 1 - T at 11) equals the eta expansion coefficient for ALL n <= 100; per-prime witnesses proved here for p <= 97 / n <= 100; multiplicativity for ALL n imported (Hecke theory via modularity)"
+  },
+  "L2_EULER_PRODUCT": {
+   "citation": "H. Hasse (1936), Zur Theorie der abstrakten elliptischen Funktionenkoerper I-III (RH for elliptic function fields); Hasse-Weil L-function: H. Hasse (1930s), A. Weil (1952)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "a_n rebuilt multiplicatively from the exact local factors (deg-2 at good p, 1 - T at 11) equals the eta expansion coefficient for ALL n <= 100; a_11 = +1 read off the exact eta expansion; local factor at the bad prime 11 is 1 - T (split multiplicative reduction: 11 | Delta, 11 does not divide c4; classification criterion imported); the full Euler product over all p converges for Re s > 3/2 by the Hasse bound (imported for all p)"
+  },
+  "L3_BOUNDED_DEGREE_RATIONAL": {
+   "citation": "J. Silverman (1986); J. Tate (1975), algorithm for singular fibres",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "uniform degree 2 at every good prime: the detector reconstructs P/Q = 1/(1 - a_p T + p T^2) (Berlekamp-Massey certified on 12 exact terms, held-out tail of 4 predicted exactly) at ALL 24 good p <= 97; degree 1 factor 1 - T at p = 11; bounded degree for all p imported (good/bad reduction dichotomy)"
+  },
+  "L4_WEIGHT_DUALITY": {
+   "citation": "H. Hasse (1936), Zur Theorie der abstrakten elliptischen Funktionenkoerper I-III (RH for elliptic function fields); self-duality of L(E,s): Hecke theory via A. Wiles (1995), Modular elliptic curves and Fermat's Last Theorem; R. Taylor, A. Wiles (1995); C. Breuil, B. Conrad, F. Diamond, R. Taylor (2001); for THIS curve already classical: E = X_0(11), M. Eichler (1954), G. Shimura (1958)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "op_dual_satake + rescaling T -> pT fixes every local factor 1 - a_p T + p T^2 exactly (det Frob_p = p, eigenvalue multiset stable under alpha -> p/alpha), all 24 good p <= 97; exact integer inequalities a_p^2 <= 4p (all strict) at every good p <= 97: 2:4<=... \u2014 local data pure of weight 1 and exactly self-dual under alpha -> p/alpha at every good p <= 97 (proved here); coherence with the weight-2 self-dual functional equation s <-> 2-s imported"
+  },
+  "L5_CONDUCTOR_GAMMA_ROOT": {
+   "citation": "J. Tate (1975), Algorithm for determining the type of a singular fibre (Antwerp IV); epsilon and FE via modularity: E. Hecke (1936/37); tabulated for 11a: J. Cremona, Algorithms for Modular Elliptic Curves (1992/1997); CITATION-NEEDED: preferred primary reference for the root-number computation at level 11 (Atkin-Lehner eigenvalue)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "conductor N = 11: proved-here support computation (11 | Delta = -11^5, 11 does not divide c4 = 496 => multiplicative reduction => conductor exponent 1; criterion imported); gamma factor (2 pi)^{-s} Gamma(s); root number epsilon = +1, so Lambda(s) = 11^{s/2} (2 pi)^{-s} Gamma(s) L(E,s) = + Lambda(2-s)"
+  },
+  "L6_CONTINUATION_FE": {
+   "citation": "A. Wiles (1995), Modular elliptic curves and Fermat's Last Theorem; R. Taylor, A. Wiles (1995); C. Breuil, B. Conrad, F. Diamond, R. Taylor (2001); for THIS curve already classical: E = X_0(11), M. Eichler (1954), G. Shimura (1958); continuation/FE for newforms: E. Hecke (1936/37); CITATION-NEEDED: classical identification of eta(z)^2 eta(11z)^2 with the level-11 newform (dim S_2(Gamma_0(11)) = 1 = genus X_0(11); eta-quotient criteria, e.g. Ligozat 1975)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "L(E,s) = L(f,s) for the unique newform f in S_2(Gamma_0(11)); hence entire continuation and functional equation Lambda(s) = Lambda(2-s) by Hecke theory. Exact finite consistency witness computed here: exact q-expansion of q prod(1-q^n)^2(1-q^(11n))^2 to q^100 (integer arithmetic) has coefficient at q^p equal to the point-count a_p for ALL 24 good p <= 97 (finite consistency witness; modularity itself imported)"
+  },
+  "L7_TWIST_TENSOR_COMPAT": {
+   "citation": "S. Gelbart, H. Jacquet (1978), GL(2) -> GL(3) symmetric square lift; R. Rankin (1939), A. Selberg (1940), convolution; J. Newton, J. Thorne (2021), symmetric power functoriality for holomorphic modular forms",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "exact local witnesses proved here at p = 2, 3: op_sym2 gives the INTEGRAL degree-3 Satake factor [1, -(a_p^2-p), p a_p^2 - p^2, -p^3] (p=2: [1,-2,4,-8]; p=3: [1,2,-6,-27]); Ext^2 power sums exactly [p, p^2, p^3] (det = Tate twist); tensor square decomposes exactly as Sym^2 (+) Ext^2; A6 tensor_compatibility HOLDS for the degree-4 product factor. Global automorphy of the lifts imported: Sym^2 f on GL(3), Rankin-Selberg f x f, all symmetric powers"
+  },
+  "L8_REALIZATION": {
+   "citation": "A. Wiles (1995), Modular elliptic curves and Fermat's Last Theorem; R. Taylor, A. Wiles (1995); C. Breuil, B. Conrad, F. Diamond, R. Taylor (2001); for THIS curve already classical: E = X_0(11), M. Eichler (1954), G. Shimura (1958); X_0(11) has genus 1; CITATION-NEEDED: standard reference identifying X_0(11) with the isogeny class 11a (e.g. Ligozat 1975, Antwerp tables)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "triple realization: automorphic (weight-2 newform of level 11 on GL(2)/Q), motivic (h^1(E), pure of weight 1), and modular-geometric (E IS the modular curve X_0(11); the modular parametrization has degree 1). Exact finite consistency witness: point counts = eta-product coefficients for all good p <= 97 (proved here)"
+  },
+  "L9_EXPLICIT_FORMULA_POSITIVITY": {
+   "citation": "explicit formula framework: A. Weil (1952); for elliptic-curve L-functions: J.-F. Mestre (1986), Formules explicites et minorations de conducteurs; function-field contrast: A. Weil (1948), P. Deligne (1974)",
+   "rigor": "OPEN",
+   "status": "CONJECTURAL",
+   "witness": "SPLIT: (i) the explicit formula pairing zeros of L(E,s) against prime data {a_{p^k}} HOLDS as an IMPORTED_THEOREM (it needs only the continuation/FE from modularity); (ii) POSITIVITY of the associated Weil functional on the relevant test-function class is EQUIVALENT to GRH for L(E,s) and is OPEN; no independent positivity mechanism (no analogue of the Castelnuovo/Hodge-index input that closes the function-field case) is known for this world"
+  }
+ },
+ "mechanisms": {
+  "DUALITY_FE": {
+   "citation": "E. Hecke (1936/37); A. Wiles (1995), Modular elliptic curves and Fermat's Last Theorem; R. Taylor, A. Wiles (1995); C. Breuil, B. Conrad, F. Diamond, R. Taylor (2001); for THIS curve already classical: E = X_0(11), M. Eichler (1954), G. Shimura (1958)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "supplied by modularity + Hecke theory (Fricke involution w_11 on X_0(11)); exact local shadow proved here: op_dual_satake + rescaling T -> pT fixes every local factor 1 - a_p T + p T^2 exactly (det Frob_p = p, eigenvalue multiset stable under alpha -> p/alpha), all 24 good p <= 97"
+  },
+  "EULER_PRODUCT": {
+   "citation": "H. Hasse (1930s); E. Hecke (1937)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "supplied by the good/bad reduction of E: degree-2 factors 1 - a_p T + p T^2 at good p, 1 - T at 11; a_n rebuilt multiplicatively from the exact local factors (deg-2 at good p, 1 - T at 11) equals the eta expansion coefficient for ALL n <= 100 (proved here for n <= 100; all n imported via Hecke theory)"
+  },
+  "FAMILY": {
+   "citation": "J. Cremona, Algorithms for Modular Elliptic Curves (1992/1997); A. Wiles (1995), Modular elliptic curves and Fermat's Last Theorem; R. Taylor, A. Wiles (1995); C. Breuil, B. Conrad, F. Diamond, R. Taylor (2001); for THIS curve already classical: E = X_0(11), M. Eichler (1954), G. Shimura (1958)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "E sits in several structured families: the isogeny class 11a (three curves, one L-function); the family of all elliptic curves /Q ordered by conductor (modular by Wiles et al.); the family of weight-2 newforms; quadratic twists E_d with conductor-predictable L-functions"
+  },
+  "POSITIVITY_PURITY": {
+   "citation": "H. Hasse (1936), Zur Theorie der abstrakten elliptischen Funktionenkoerper I-III (RH for elliptic function fields) (for the class of all elliptic curves over finite fields); function-field global analogue: A. Weil (1948), P. Deligne (1974)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "LOCAL purity of weight 1 is a THEOREM and is proved here for every good p <= 97: exact integer inequalities a_p^2 <= 4p (all strict), equivalently both inverse roots of 1 - a_p T + p T^2 have modulus p^{1/2} \u2014 certified by the COMPLETE exact degree-2 purity test (product = p, discriminant < 0) in all 24 detector runs. SPLIT NOTE \u2014 do not conflate: local purity comes from positivity on the curve side (Hasse's proof; in modern terms Castelnuovo/Hodge-index positivity on E x E), one prime at a time. The GLOBAL mechanism that would force the zeros of L(E,s) itself to the critical line \u2014 a positivity structure playing that same role over Q \u2014 is NOT identified and remains OPEN. Local purity is an input to, not a proof of, the global critical-line statement."
+  },
+  "TENSOR_OPS": {
+   "citation": "S. Gelbart, H. Jacquet (1978); J. Newton, J. Thorne (2021)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "exact Sym^2 at p = 2, 3 proved here: op_sym2 -> integral degree-3 Satake [1,-2,4,-8] (p=2) and [1,2,-6,-27] (p=3), matching the closed form [1, -(a_p^2-p), p a_p^2 - p^2, -p^3]; Ext^2 = Tate twist ([p, p^2, p^3] power sums); tensor square = Sym^2 (+) Ext^2 exactly; A6 tensor_compatibility HOLDS; global automorphy of Sym^k f imported (Gelbart-Jacquet 1978; Newton-Thorne 2021)"
+  },
+  "TRACE_FORMULA": {
+   "citation": "Lefschetz trace for elliptic curves: H. Hasse (1936), Zur Theorie der abstrakten elliptischen Funktionenkoerper I-III (RH for elliptic function fields); Eichler-Selberg: M. Eichler (1956), A. Selberg (1956); CITATION-NEEDED: precise modern statement (e.g. D. Zagier's appendix, 1970s)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "two genuine trace formulas feed this world: (i) a_p = tr(Frob_p | H^1(E)) \u2014 the Lefschetz/Frobenius trace, realized here LITERALLY as the exact point count a_p = p + 1 - #E(F_p) at all 24 good p <= 97; (ii) the Eichler-Selberg trace formula computes tr(T_p | S_2(Gamma_0(11))) = a_p spectrally"
+  }
+ },
+ "notes": "This world is the sharpest classical contrast in the matrix: EVERY local cell is a theorem with an exact witness computed here (point counts, Hasse purity, complete degree-2 purity certification at 24 primes, Sym^2 integrality), and every global analytic cell is a real imported theorem (modularity), yet the global POSITIVITY mechanism \u2014 the one structural input that closes the function-field analogue \u2014 has no known counterpart, so L9 stays CONJECTURAL and critical_line stays CONJECTURE. The Hasse bound holding at every prime is LOCAL purity (proved, per prime, by positivity on E x E); it does not supply a global positivity for L(E,s). All exact witnesses are integer/Fraction computations; floats appear nowhere in the build. rh_established=false.",
+ "rh_established": false,
+ "sources": [
+  "J. Silverman, The Arithmetic of Elliptic Curves (1986)",
+  "J. Cremona, Algorithms for Modular Elliptic Curves (1992/1997), isogeny class 11a",
+  "LMFDB, elliptic curve isogeny class 11.a and newform 11.2.a.a",
+  "H. Hasse (1936), RH for elliptic function fields",
+  "A. Wiles (1995); R. Taylor, A. Wiles (1995); C. Breuil, B. Conrad, F. Diamond, R. Taylor (2001)",
+  "M. Eichler (1954); G. Shimura (1958), Eichler-Shimura for X_0(11)",
+  "S. Gelbart, H. Jacquet (1978), symmetric square lift",
+  "J. Newton, J. Thorne (2021), symmetric power functoriality",
+  "J.-F. Mestre (1986), explicit formulas",
+  "H. Iwaniec, E. Kowalski (2004), Analytic Number Theory"
+ ],
+ "title": "L-function of the elliptic curve 11a1 (X_0(11))"
+}
