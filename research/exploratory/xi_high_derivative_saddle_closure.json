@@ -1,0 +1,627 @@
+{
+  "Gaussian_moments": [
+    {
+      "power": 0,
+      "standard_normal_moment": 1
+    },
+    {
+      "power": 2,
+      "standard_normal_moment": 1
+    },
+    {
+      "power": 4,
+      "standard_normal_moment": 3
+    },
+    {
+      "power": 6,
+      "standard_normal_moment": 15
+    },
+    {
+      "power": 8,
+      "standard_normal_moment": 105
+    },
+    {
+      "power": 10,
+      "standard_normal_moment": 945
+    },
+    {
+      "power": 12,
+      "standard_normal_moment": 10395
+    },
+    {
+      "power": 14,
+      "standard_normal_moment": 135135
+    },
+    {
+      "power": 16,
+      "standard_normal_moment": 2027025
+    }
+  ],
+  "arithmetic_class": "EXACT_RATIONAL",
+  "arithmetic_domain": "integers and Fractions; symbolic transcendental comparison contracts",
+  "artifact_sha256_lf": {
+    "research/exploratory/XI_HIGH_DERIVATIVE_SADDLE_CLOSURE.md": "0d68d1791e3e270160f85272f92d0a99931546c5874e93a9aadb3e426847a2c4",
+    "research/exploratory/xi_high_derivative_saddle_closure.py": "b7688b8416264524f3cd63420de90e72929ac7da071b8e3335816fd757fc50d3",
+    "research/exploratory/xi_high_derivative_saddle_closure.sources.json": "fec8468ec447169fdbbb363d93cfca50a18a9241e1a508f3a89e935a67a76534",
+    "tests/test_xi_high_derivative_saddle_closure.py": "428298b01cf94a3fd679f1ec42afb0946b2c327ba6c344a4a58045f6353ea303"
+  },
+  "caps": {
+    "Gaussian_moment_index": 8,
+    "Taylor_order": 12,
+    "intermediate_bits": 4096,
+    "rational_input_bits": 96
+  },
+  "coverage": {
+    "Gaussian_moments": 9,
+    "Taylor_coefficients_compared": 34,
+    "fixed_window_controls": 3,
+    "parity_orders": 13,
+    "perturbation_budgets": 8,
+    "saddle_coordinate_cases": 4,
+    "unbounded_search": false
+  },
+  "curvature_control": {
+    "S_min": 64,
+    "a_min": 2,
+    "analytic_exponential_inequalities_proved_in_note_not_sampled": true,
+    "combined_coefficient": "12323/3600",
+    "global_loss_coefficient": "1/16",
+    "local_absolute_second_derivative_below_4S": true,
+    "local_exponential_coefficient_after_exp_quarter_below_4_over_3": "137/48",
+    "local_k_over_u_squared_coefficient": "128/225",
+    "normalization_log_loss_budget": 4,
+    "used_coarse_second_derivative_bound": 8
+  },
+  "descent_countercontrols": {
+    "descent_discharge": false,
+    "parent_derivative_defect_endpoint": [
+      [
+        0,
+        1,
+        2,
+        1
+      ],
+      [
+        0,
+        3,
+        4,
+        1
+      ]
+    ]
+  },
+  "disk_height_countercontrol": {
+    "H": "1/8",
+    "R_frequency": 511,
+    "T": 2,
+    "central_derivative_loss_strict_upper_bound": "1/534777856",
+    "core_half_width": "1/4096",
+    "disk_radius": "1/4",
+    "epsilon_formula": "c*exp(-(R-1)/8)/(1+R^2)",
+    "epsilon_sinh_R_over_four_strict_lower_bound": "2199023255552/130561",
+    "extra_conjugate_pair_inside_full_disk_proved_by_IVT": true,
+    "no_hyperbolic_values_numerically_sampled": true,
+    "not_an_actual_Xi_measure": true,
+    "original_phase_upper_using_exp_below_two": "25/16384",
+    "tail_c_exact": "1/1048576",
+    "u0": 1
+  },
+  "fixed_window_controls": [
+    {
+      "C_standard_deviations": 2,
+      "Gaussian_limit_is_native_analytic_proof_not_inferred_from_panel": true,
+      "Mills_upper_before_exp_bound": "4*exp(-C^2/2)/(C*sqrt(2*pi))",
+      "below_fixed_1_over_256_eventually": false,
+      "exponential_in_k_decay": false,
+      "fixed_C_tail_tends_to_zero": false,
+      "positive_limit_formula_at_h_zero": "4*normal_upper_tail(C)",
+      "strict_dyadic_upper_bound": "1/2"
+    },
+    {
+      "C_standard_deviations": 4,
+      "Gaussian_limit_is_native_analytic_proof_not_inferred_from_panel": true,
+      "Mills_upper_before_exp_bound": "4*exp(-C^2/2)/(C*sqrt(2*pi))",
+      "below_fixed_1_over_256_eventually": true,
+      "exponential_in_k_decay": false,
+      "fixed_C_tail_tends_to_zero": false,
+      "positive_limit_formula_at_h_zero": "4*normal_upper_tail(C)",
+      "strict_dyadic_upper_bound": "1/256"
+    },
+    {
+      "C_standard_deviations": 6,
+      "Gaussian_limit_is_native_analytic_proof_not_inferred_from_panel": true,
+      "Mills_upper_before_exp_bound": "4*exp(-C^2/2)/(C*sqrt(2*pi))",
+      "below_fixed_1_over_256_eventually": true,
+      "exponential_in_k_decay": false,
+      "fixed_C_tail_tends_to_zero": false,
+      "positive_limit_formula_at_h_zero": "4*normal_upper_tail(C)",
+      "strict_dyadic_upper_bound": "1/393216"
+    }
+  ],
+  "moment_majorants": {
+    "B_weight_cap": 1,
+    "M1": 25758000,
+    "M2": 168980256,
+    "S_min_for_B_one": 1024,
+    "e_upper_bound": 3,
+    "limits_or_transcendental_integrals_numerically_evaluated": false,
+    "near_integral_bounds_before_exp8": [
+      16,
+      96
+    ],
+    "pi_upper_bound": 4
+  },
+  "normalization": {
+    "frequency_rescaled": false,
+    "full_line_multiple_of_phi0": 2,
+    "half_line_cosine_multiple_of_phi0": 4,
+    "probability_measure_unchanged_by_positive_scalar": true
+  },
+  "parity_controls": [
+    {
+      "actual_derivative_cos_sin": [
+        1,
+        0
+      ],
+      "actual_scalar_sign": 1,
+      "k": 0,
+      "normalized_F_cos_sin": [
+        1,
+        0
+      ]
+    },
+    {
+      "actual_derivative_cos_sin": [
+        0,
+        -1
+      ],
+      "actual_scalar_sign": -1,
+      "k": 1,
+      "normalized_F_cos_sin": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_derivative_cos_sin": [
+        -1,
+        0
+      ],
+      "actual_scalar_sign": 1,
+      "k": 2,
+      "normalized_F_cos_sin": [
+        -1,
+        0
+      ]
+    },
+    {
+      "actual_derivative_cos_sin": [
+        0,
+        1
+      ],
+      "actual_scalar_sign": -1,
+      "k": 3,
+      "normalized_F_cos_sin": [
+        0,
+        -1
+      ]
+    },
+    {
+      "actual_derivative_cos_sin": [
+        1,
+        0
+      ],
+      "actual_scalar_sign": 1,
+      "k": 4,
+      "normalized_F_cos_sin": [
+        1,
+        0
+      ]
+    },
+    {
+      "actual_derivative_cos_sin": [
+        0,
+        -1
+      ],
+      "actual_scalar_sign": -1,
+      "k": 5,
+      "normalized_F_cos_sin": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_derivative_cos_sin": [
+        -1,
+        0
+      ],
+      "actual_scalar_sign": 1,
+      "k": 6,
+      "normalized_F_cos_sin": [
+        -1,
+        0
+      ]
+    },
+    {
+      "actual_derivative_cos_sin": [
+        0,
+        1
+      ],
+      "actual_scalar_sign": -1,
+      "k": 7,
+      "normalized_F_cos_sin": [
+        0,
+        -1
+      ]
+    },
+    {
+      "actual_derivative_cos_sin": [
+        1,
+        0
+      ],
+      "actual_scalar_sign": 1,
+      "k": 8,
+      "normalized_F_cos_sin": [
+        1,
+        0
+      ]
+    },
+    {
+      "actual_derivative_cos_sin": [
+        0,
+        -1
+      ],
+      "actual_scalar_sign": -1,
+      "k": 9,
+      "normalized_F_cos_sin": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_derivative_cos_sin": [
+        -1,
+        0
+      ],
+      "actual_scalar_sign": 1,
+      "k": 10,
+      "normalized_F_cos_sin": [
+        -1,
+        0
+      ]
+    },
+    {
+      "actual_derivative_cos_sin": [
+        0,
+        1
+      ],
+      "actual_scalar_sign": -1,
+      "k": 11,
+      "normalized_F_cos_sin": [
+        0,
+        -1
+      ]
+    },
+    {
+      "actual_derivative_cos_sin": [
+        1,
+        0
+      ],
+      "actual_scalar_sign": 1,
+      "k": 12,
+      "normalized_F_cos_sin": [
+        1,
+        0
+      ]
+    }
+  ],
+  "perturbation_budgets": [
+    {
+      "accepted_sufficient_budget": true,
+      "alpha_one_over_a_sqrtS": "1/26376192000",
+      "dependent_beta": "1/695703504420864000000",
+      "formal_budget_not_an_actual_Xi_sample": true,
+      "laguerre_relative_error_bound": "28654237763450971/3664611052093440000",
+      "laguerre_relative_reserve": "3635956814329989029/3664611052093440000",
+      "normalized_F_Fprime_Fsecond_errors": [
+        "1/1024",
+        "1/512",
+        "262113408021731/89468043264000000"
+      ],
+      "rho_R_over_sqrtS": "1/26376192000",
+      "rouche_margin": "507/5120",
+      "rouche_reference_lower_bound": "1/10"
+    },
+    {
+      "accepted_sufficient_budget": true,
+      "alpha_one_over_a_sqrtS": "1/26376192000",
+      "dependent_beta": "1/695703504420864000000",
+      "formal_budget_not_an_actual_Xi_sample": true,
+      "laguerre_relative_error_bound": "19909293120412889/1696579190784000000",
+      "laguerre_relative_reserve": "1676669897663587111/1696579190784000000",
+      "normalized_F_Fprime_Fsecond_errors": [
+        "1/512",
+        "3/1024",
+        "349484544021731/89468043264000000"
+      ],
+      "rho_R_over_sqrtS": "1/13188096000",
+      "rouche_margin": "251/2560",
+      "rouche_reference_lower_bound": "1/10"
+    },
+    {
+      "accepted_sufficient_budget": true,
+      "alpha_one_over_a_sqrtS": "1/26376192000",
+      "dependent_beta": "1/695703504420864000000",
+      "formal_budget_not_an_actual_Xi_sample": true,
+      "laguerre_relative_error_bound": "1434197197462317737/91615276302336000000",
+      "laguerre_relative_reserve": "90181079104873682263/91615276302336000000",
+      "normalized_F_Fprime_Fsecond_errors": [
+        "3/1024",
+        "1/256",
+        "436855680021731/89468043264000000"
+      ],
+      "rho_R_over_sqrtS": "1/8792064000",
+      "rouche_margin": "497/5120",
+      "rouche_reference_lower_bound": "1/10"
+    },
+    {
+      "accepted_sufficient_budget": true,
+      "alpha_one_over_a_sqrtS": "1/26376192000",
+      "dependent_beta": "1/695703504420864000000",
+      "formal_budget_not_an_actual_Xi_sample": true,
+      "laguerre_relative_error_bound": "448410512741584867/22903819075584000000",
+      "laguerre_relative_reserve": "22455408562842415133/22903819075584000000",
+      "normalized_F_Fprime_Fsecond_errors": [
+        "1/256",
+        "5/1024",
+        "524226816021731/89468043264000000"
+      ],
+      "rho_R_over_sqrtS": "1/6594048000",
+      "rouche_margin": "123/1280",
+      "rouche_reference_lower_bound": "1/10"
+    },
+    {
+      "accepted_sufficient_budget": true,
+      "alpha_one_over_a_sqrtS": "1/26376192000",
+      "dependent_beta": "1/695703504420864000000",
+      "formal_budget_not_an_actual_Xi_sample": true,
+      "laguerre_relative_error_bound": "717812129671453733/30538425434112000000",
+      "laguerre_relative_reserve": "29820613304440546267/30538425434112000000",
+      "normalized_F_Fprime_Fsecond_errors": [
+        "5/1024",
+        "3/512",
+        "611597952021731/89468043264000000"
+      ],
+      "rho_R_over_sqrtS": "1/5275238400",
+      "rouche_margin": "487/5120",
+      "rouche_reference_lower_bound": "1/10"
+    },
+    {
+      "accepted_sufficient_budget": true,
+      "alpha_one_over_a_sqrtS": "1/26376192000",
+      "dependent_beta": "1/695703504420864000000",
+      "formal_budget_not_an_actual_Xi_sample": true,
+      "laguerre_relative_error_bound": "251358021160638293/9161527630233600000",
+      "laguerre_relative_reserve": "8910169609072961707/9161527630233600000",
+      "normalized_F_Fprime_Fsecond_errors": [
+        "3/512",
+        "7/1024",
+        "698969088021731/89468043264000000"
+      ],
+      "rho_R_over_sqrtS": "1/4396032000",
+      "rouche_margin": "241/2560",
+      "rouche_reference_lower_bound": "1/10"
+    },
+    {
+      "accepted_sufficient_budget": true,
+      "alpha_one_over_a_sqrtS": "1/26376192000",
+      "dependent_beta": "1/695703504420864000000",
+      "formal_budget_not_an_actual_Xi_sample": true,
+      "laguerre_relative_error_bound": "2874073518742404661/91615276302336000000",
+      "laguerre_relative_reserve": "88741202783593595339/91615276302336000000",
+      "normalized_F_Fprime_Fsecond_errors": [
+        "7/1024",
+        "1/128",
+        "786340224021731/89468043264000000"
+      ],
+      "rho_R_over_sqrtS": "7/26376192000",
+      "rouche_margin": "477/5120",
+      "rouche_reference_lower_bound": "1/10"
+    },
+    {
+      "accepted_sufficient_budget": true,
+      "alpha_one_over_a_sqrtS": "1/26376192000",
+      "dependent_beta": "1/695703504420864000000",
+      "formal_budget_not_an_actual_Xi_sample": true,
+      "laguerre_relative_error_bound": "134788179600934433/3817303179264000000",
+      "laguerre_relative_reserve": "3682514999663065567/3817303179264000000",
+      "normalized_F_Fprime_Fsecond_errors": [
+        "1/128",
+        "9/1024",
+        "873711360021731/89468043264000000"
+      ],
+      "rho_R_over_sqrtS": "1/3297024000",
+      "rouche_margin": "59/640",
+      "rouche_reference_lower_bound": "1/10"
+    }
+  ],
+  "repaired_tail_budget": {
+    "complex_error_bound": "1/64",
+    "eta": "1/32",
+    "phase_budget": "1/256",
+    "real_laguerre_reserve_lower_bound": "149/256",
+    "reference_lower_bound": "1/10",
+    "requires_Hstar_max_H_disk_radius": true,
+    "requires_holomorphic_neighborhood_not_just_one_moment": true,
+    "weighted_tail_at_enlarged_height": "1/256"
+  },
+  "rounding_contract": "no floating Xi/saddle/quadrature/zero evaluation and no numerical proof of limits",
+  "saddle_controls": [
+    {
+      "S_formal": "64",
+      "S_sigma_squared": "64/169",
+      "S_sigma_squared_between_64_over_169_and_one_half": true,
+      "a_formal": "2",
+      "coordinates_are_not_claimed_actual_transcendental_saddles": true,
+      "independent_coefficients": [
+        "0",
+        "0",
+        "-169/2",
+        "-121/3",
+        "-149/6"
+      ],
+      "k_formal_equals_aS": "128",
+      "logratio_coefficients": [
+        "0",
+        "0",
+        "-169/2",
+        "-121/3",
+        "-149/6"
+      ],
+      "order": 4,
+      "precision": "169",
+      "sigma_squared": "1/169",
+      "sigma_squared_below_one_over_2S": true,
+      "square_of_S_times_sigma_lower_bound": "4096/169"
+    },
+    {
+      "S_formal": "128",
+      "S_sigma_squared": "384/923",
+      "S_sigma_squared_between_64_over_169_and_one_half": true,
+      "a_formal": "3",
+      "coordinates_are_not_claimed_actual_transcendental_saddles": true,
+      "independent_coefficients": [
+        "0",
+        "0",
+        "-923/6",
+        "-2257/27",
+        "-2449/54",
+        "-7027/405",
+        "-4357/729"
+      ],
+      "k_formal_equals_aS": "384",
+      "logratio_coefficients": [
+        "0",
+        "0",
+        "-923/6",
+        "-2257/27",
+        "-2449/54",
+        "-7027/405",
+        "-4357/729"
+      ],
+      "order": 6,
+      "precision": "923/3",
+      "sigma_squared": "3/923",
+      "sigma_squared_below_one_over_2S": true,
+      "square_of_S_times_sigma_lower_bound": "4096/169"
+    },
+    {
+      "S_formal": "1024",
+      "S_sigma_squared": "7168/16447",
+      "S_sigma_squared_between_64_over_169_and_one_half": true,
+      "a_formal": "7/2",
+      "coordinates_are_not_claimed_actual_transcendental_saddles": true,
+      "independent_coefficients": [
+        "0",
+        "0",
+        "-16447/14",
+        "-96697/147",
+        "-717839/2058",
+        "-977941/7203",
+        "-34817759/756315",
+        "-481058866/37059435",
+        "-243478553/74118870"
+      ],
+      "k_formal_equals_aS": "3584",
+      "logratio_coefficients": [
+        "0",
+        "0",
+        "-16447/14",
+        "-96697/147",
+        "-717839/2058",
+        "-977941/7203",
+        "-34817759/756315",
+        "-481058866/37059435",
+        "-243478553/74118870"
+      ],
+      "order": 8,
+      "precision": "16447/7",
+      "sigma_squared": "7/16447",
+      "sigma_squared_below_one_over_2S": true,
+      "square_of_S_times_sigma_lower_bound": "4096/169"
+    },
+    {
+      "S_formal": "4096",
+      "S_sigma_squared": "4096/8713",
+      "S_sigma_squared_between_64_over_169_and_one_half": true,
+      "a_formal": "8",
+      "coordinates_are_not_claimed_actual_transcendental_saddles": true,
+      "independent_coefficients": [
+        "0",
+        "0",
+        "-8713/2",
+        "-8137/3",
+        "-8213/6",
+        "-8198/15",
+        "-131231/720",
+        "-1049683/20160",
+        "-16795963/1290240",
+        "-33590981/11612160",
+        "-537463571/928972800",
+        "-4299671713/40874803200",
+        "-68795130133/3923981107200"
+      ],
+      "k_formal_equals_aS": "32768",
+      "logratio_coefficients": [
+        "0",
+        "0",
+        "-8713/2",
+        "-8137/3",
+        "-8213/6",
+        "-8198/15",
+        "-131231/720",
+        "-1049683/20160",
+        "-16795963/1290240",
+        "-33590981/11612160",
+        "-537463571/928972800",
+        "-4299671713/40874803200",
+        "-68795130133/3923981107200"
+      ],
+      "order": 12,
+      "precision": "8713",
+      "sigma_squared": "1/8713",
+      "sigma_squared_below_one_over_2S": true,
+      "square_of_S_times_sigma_lower_bound": "4096/169"
+    }
+  ],
+  "schema": "xi-high-derivative-saddle-v1",
+  "scope": {
+    "RH_or_percentage": false,
+    "XICURV107110_discharged": false,
+    "Xi_numerical_samples": 0,
+    "actual_theta_kernel_not_Gaussian_substitution": true,
+    "all_sufficiently_large_integer_orders_by_native_proof": true,
+    "analytic_proof_formally_machine_verified": false,
+    "both_parities": true,
+    "cosine_universality_novelty_claim": false,
+    "exact_rectangle_endpoint_count_claimed": false,
+    "finite_controls_are_actual_transcendental_saddles": false,
+    "fixed_C_sigma_tail_exponentially_small_in_k": false,
+    "fixed_H_one_half_allowed": true,
+    "fixed_four_sigma_tail_limit": "4*normal_upper_tail(4), strictly positive and less than 1/256",
+    "full_disk_height": "max(H,1/(4*a_k))",
+    "full_theta_kernel_log_concavity_assumed": false,
+    "global_origin_side_tail_controlled": true,
+    "growing_rectangle": "T+H=o(sqrt(k/log(k)))",
+    "horizontal_enlargement": "T+O(1/a_k)",
+    "load_bearing_route": "native global real density bound and weighted moments",
+    "old_complex_moving_ray_theorem_imported": false,
+    "reverse_Rolle_descent_discharged": false,
+    "source_Pick_transfer": false
+  },
+  "source_authentication": {
+    "manifest_sha256_canonical_json": "256334fcd0c58290da92dd927f40f2e6cf1224dc194fdc5b97154bad273a930f",
+    "remote_bytes_authenticated": false,
+    "source_count": 7
+  },
+  "status": "NATIVE_ANALYTIC_ENDPOINT_PROOF_SUBJECT_TO_INDEPENDENT_REVIEW"
+}
