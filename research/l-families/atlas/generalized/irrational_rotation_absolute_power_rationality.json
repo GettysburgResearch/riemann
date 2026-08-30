@@ -552,14 +552,14 @@
     "proof_uses_standard_recurrence_and_fourier_facts": true,
     "self_contained_proof_is_not_a_priority_claim": true
   },
-  "payload_sha256": "9623e65a8bf3faf4624cc4f12c88ebf80afb1376b50500c65096bbda1950f02d",
+  "payload_sha256": "6d2e2dbac27472638678dd692324dfa17a8299b3eb54120745150cc6b6d15698",
   "producer": {
     "note": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
-    "note_sha256_lf_normalized": "b600a65d1222b16133dd1b92eed8351670b64cc19f09f8c90889ed4a91058c08",
+    "note_sha256_lf_normalized": "213efe84034449a7ece87b273653bc683c11b28ea4f62e599e3f2b0bbac7c8a2",
     "script": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.py",
-    "script_sha256_lf_normalized": "4d07e7b9fa52d7f4be140bacf3941ddb4e201c19f46bbcf5ea3fe561b4fec3b0",
+    "script_sha256_lf_normalized": "e6e1bf91db5c91f7a5320ecfb5ec40cb1f37ad91e0ea15a3918c44e5b39ff3c7",
     "test": "tests/test_irrational_rotation_absolute_power_rationality.py",
-    "test_sha256_lf_normalized": "31a3c96ab6c34084eab6c0eab7d9accb7e8c8134e627738178a54538e7a44a23"
+    "test_sha256_lf_normalized": "7e6afa0c92493ba80bc932a290a87601e26364ceba7c803d7d4a07cc8b100eb4"
   },
   "programme_issue": 764,
   "resource_contract": {
@@ -599,8 +599,8 @@
         "url": "https://abel.math.harvard.edu/~knill/kam/papers/denjoy/index.html"
       }
     ],
-    "file_sha256_lf_normalized": "a14f8d74be5575f761c107117535c8f096afb121c3236b45cd650b7ec1d82937",
-    "imported_parent_state_commit": "3b08e3ecdd04a9ccbc4d0659976eb822a50d3ac4",
+    "file_sha256_lf_normalized": "4f070750c83d04ed1ed74a5ddcdd42c6b6ce0746a548ce11a3086b6fc37da66b",
+    "imported_parent_state_commit": "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
     "path": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
     "scope_firewall": {
       "absolute_powers_not_complex_powers": true,
@@ -616,24 +616,28 @@
     },
     "verified_sources": [
       {
-        "file_sha256_lf_normalized": "41e2f3442d57d28795229e55f18a617d2987dcefc37f97573b83f11203f1fb00",
+        "file_sha256_lf_normalized": "587b42bd2f52de05018d94e6336b608388f5d381e82264b1614ddea12d314828",
+        "git_blob": "67e5dfa63684078586e4727530d7b9e66d557636",
         "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.json",
-        "payload_sha256": "4acc9097a55ef6eee6377f5cbc63018b361acc04ca2f3aa5767fd94f585c9e9d",
+        "payload_sha256": "d809d5bed68618ff8dc9fd657b6c63c9cd0c8eca9ea83ffedda0b6d84a4ce7c3",
         "role": "adjacent exact integer-power denominator and numerator replay",
         "schema": "riemann.atlas.generalized.nonintegral_local_power_rationality.v1"
       },
       {
-        "file_sha256_lf_normalized": "8cec1b713c252e0b879b1ab1b3ddec761ce98adc5ad5015e623db6fc829a28a9",
+        "file_sha256_lf_normalized": "fba40d932e947c81441cf7a9187e5915ed7e227bf2b2d1167ffb0a648599467e",
+        "git_blob": "e3cac8b29d38717157253b5b31e24e78434ce8c0",
         "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
         "role": "reused exact Laurent, Dickson, canonical-hash, and resource-contract implementation"
       },
       {
         "file_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c",
+        "git_blob": "5eeb1e7c6129646ac646c697276bcd4adb04aa0c",
         "path": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
         "role": "adjacent hyperbolic-chamber theorem and scalar-versus-full-factor firewall"
       },
       {
-        "file_sha256_lf_normalized": "5d402c43a75548e26f24d0fa659838d89553f0872f2742dd4125cf696bfb425d",
+        "file_sha256_lf_normalized": "99df382aaf78cec91f474f6a10cdce6a41370f9a2ad3c68645bb2cd571ceca6b",
+        "git_blob": "db48a8a7f44d2e768b248a162cf3c48c71ac4494",
         "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
         "role": "inherited atlas normalization and provenance boundary"
       }

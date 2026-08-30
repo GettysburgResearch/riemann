@@ -31,10 +31,10 @@ TEST_PATH = (
 PARENT_PATH = PACKET_ROOT / "nonintegral_local_power_rationality.py"
 
 EXPECTED_SOURCES_SHA256_LF = (
-    "a14f8d74be5575f761c107117535c8f096afb121c3236b45cd650b7ec1d82937"
+    "4f070750c83d04ed1ed74a5ddcdd42c6b6ce0746a548ce11a3086b6fc37da66b"
 )
 EXPECTED_BASE_COMMIT = "f2f8044fb867fa7f109be92350f3f194479d36c6"
-EXPECTED_IMPORTED_PARENT_COMMIT = "3b08e3ecdd04a9ccbc4d0659976eb822a50d3ac4"
+EXPECTED_IMPORTED_PARENT_COMMIT = "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6"
 DEFAULT_MAX_M = 6
 MAX_ALLOWED_M = 10
 DEFAULT_RESOURCE_CAP_EXCLUSIVE = 50_000
@@ -66,6 +66,10 @@ def _lf_sha256(path: Path) -> str:
 
 def _canonical_sha256(value: object) -> str:
     return PARENT.ATLAS_CORE.sha256_hex(value)
+
+
+def _git_blob_at(commit: str, path: str) -> str:
+    return PARENT._git_blob_at(commit, path)
 
 
 def _validate_m(value: int) -> None:
@@ -253,10 +257,16 @@ def verify_sources_manifest() -> dict[str, object]:
         actual_hash = _lf_sha256(path)
         if actual_hash != source_record["file_sha256_lf_normalized"]:
             raise RuntimeError(f"source hash mismatch: {source_record['path']}")
+        actual_blob = _git_blob_at(
+            manifest["imported_parent_state_commit"], source_record["path"]
+        )
+        if actual_blob != source_record["git_blob"]:
+            raise RuntimeError(f"source git blob mismatch: {source_record['path']}")
         row: dict[str, object] = {
             "path": source_record["path"],
             "role": source_record["role"],
             "file_sha256_lf_normalized": actual_hash,
+            "git_blob": actual_blob,
         }
         if "payload_sha256" in source_record:
             source = json.loads(path.read_text(encoding="utf-8"))

@@ -5,30 +5,34 @@
     "url": "https://github.com/gfreund123/riemann/issues/764"
   },
   "base_commit": "f2f8044fb867fa7f109be92350f3f194479d36c6",
-  "imported_parent_state_commit": "3b08e3ecdd04a9ccbc4d0659976eb822a50d3ac4",
+  "imported_parent_state_commit": "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
   "normalization": "determinant-one tempered recurrence u_0=1, u_1=2*cos(theta), u_(r+2)=2*cos(theta)*u_(r+1)-u_r with theta/pi irrational",
   "sources": [
     {
       "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.json",
       "role": "adjacent exact integer-power denominator and numerator replay",
       "schema": "riemann.atlas.generalized.nonintegral_local_power_rationality.v1",
-      "payload_sha256": "4acc9097a55ef6eee6377f5cbc63018b361acc04ca2f3aa5767fd94f585c9e9d",
-      "file_sha256_lf_normalized": "41e2f3442d57d28795229e55f18a617d2987dcefc37f97573b83f11203f1fb00"
+      "payload_sha256": "d809d5bed68618ff8dc9fd657b6c63c9cd0c8eca9ea83ffedda0b6d84a4ce7c3",
+      "file_sha256_lf_normalized": "587b42bd2f52de05018d94e6336b608388f5d381e82264b1614ddea12d314828",
+      "git_blob": "67e5dfa63684078586e4727530d7b9e66d557636"
     },
     {
       "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
       "role": "reused exact Laurent, Dickson, canonical-hash, and resource-contract implementation",
-      "file_sha256_lf_normalized": "8cec1b713c252e0b879b1ab1b3ddec761ce98adc5ad5015e623db6fc829a28a9"
+      "file_sha256_lf_normalized": "fba40d932e947c81441cf7a9187e5915ed7e227bf2b2d1167ffb0a648599467e",
+      "git_blob": "e3cac8b29d38717157253b5b31e24e78434ce8c0"
     },
     {
       "path": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
       "role": "adjacent hyperbolic-chamber theorem and scalar-versus-full-factor firewall",
-      "file_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c"
+      "file_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c",
+      "git_blob": "5eeb1e7c6129646ac646c697276bcd4adb04aa0c"
     },
     {
       "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
       "role": "inherited atlas normalization and provenance boundary",
-      "file_sha256_lf_normalized": "5d402c43a75548e26f24d0fa659838d89553f0872f2742dd4125cf696bfb425d"
+      "file_sha256_lf_normalized": "99df382aaf78cec91f474f6a10cdce6a41370f9a2ad3c68645bb2cd571ceca6b",
+      "git_blob": "db48a8a7f44d2e768b248a162cf3c48c71ac4494"
     }
   ],
   "external_references": [

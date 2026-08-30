@@ -326,7 +326,8 @@ construction.
 The source-lineage base is commit
 \(f2f8044fb867fa7f109be92350f3f194479d36c6\). This packet imports the first
 local-power packet at its metadata-corrected state
-\(3b08e3ecdd04a9ccbc4d0659976eb822a50d3ac4\), with exact file and payload
+\(6b5fe8f112b38e59bd73ad80b448d52fff2da2d6\), with exact file, payload,
+and Git-blob
 hashes in the colocated sources manifest.
 
 The adjacent dependency-free producer is reused for canonical hashing,

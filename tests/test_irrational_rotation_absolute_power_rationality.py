@@ -217,16 +217,30 @@ class IrrationalRotationAbsolutePowerRationalityTests(unittest.TestCase):
             subject.EXPECTED_IMPORTED_PARENT_COMMIT,
         )
         self.assertEqual(len(source["verified_sources"]), 4)
+        self.assertEqual(
+            [row["git_blob"] for row in source["verified_sources"]],
+            [
+                "67e5dfa63684078586e4727530d7b9e66d557636",
+                "e3cac8b29d38717157253b5b31e24e78434ce8c0",
+                "5eeb1e7c6129646ac646c697276bcd4adb04aa0c",
+                "db48a8a7f44d2e768b248a162cf3c48c71ac4494",
+            ],
+        )
         fixture_source = source["verified_sources"][0]
         self.assertEqual(
             fixture_source["payload_sha256"],
-            "4acc9097a55ef6eee6377f5cbc63018b361acc04ca2f3aa5767fd94f585c9e9d",
+            "d809d5bed68618ff8dc9fd657b6c63c9cd0c8eca9ea83ffedda0b6d84a4ce7c3",
         )
         references = source["external_references"]
         self.assertEqual(len(references), 1)
         self.assertEqual(references[0]["authors"], "Oliver Knill and John Lesieutre")
         self.assertIn("almost periodic coefficients", references[0]["title"])
         self.assertTrue(source["scope_firewall"]["rational_rotations_excluded"])
+        with self.assertRaisesRegex(RuntimeError, "git object lookup failed"):
+            subject._git_blob_at(
+                subject.EXPECTED_IMPORTED_PARENT_COMMIT,
+                "research/l-families/atlas/generalized/definitely_missing",
+            )
 
     def test_claims_survival_and_scope_firewalls(self) -> None:
         self.assertEqual(
