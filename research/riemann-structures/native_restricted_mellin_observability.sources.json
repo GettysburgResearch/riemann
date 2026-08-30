@@ -1,0 +1,67 @@
+{
+  "schema": "riemann.structures.native_restricted_mellin.sources.v1",
+  "status": "EXACT_COEFFICIENT_PROJECTION_NOT_COMPLETE_WEIGHTED_ASSEMBLY",
+  "sources": [
+    {
+      "commit": "9547f4cdc2c8e27a36704029fd74470de844d401",
+      "path": "research/riemann-structures/LIVE_FIXED_CONDUCTOR_MULTIPLICITY.md",
+      "git_blob": "c9c5f9e7e1ddab7e9a6aff629165a098fdf597a8",
+      "role": "reviewed live source, positive histories, literal diagonal normalization"
+    },
+    {
+      "commit": "9547f4cdc2c8e27a36704029fd74470de844d401",
+      "path": "research/riemann-structures/FIXED_CONDUCTOR_POWER_RANK_BARRIER.md",
+      "git_blob": "3348165d3f9224b7a7348d6557d358bf3ef439f2",
+      "role": "all-horizon lower bound and owner-disjoint upper bound"
+    },
+    {
+      "commit": "9547f4cdc2c8e27a36704029fd74470de844d401",
+      "path": "research/riemann-structures/live_fixed_conductor_multiplicity.py",
+      "git_blob": "04f8828301ef4096973829c7df8b1f5fa186fd83",
+      "role": "authenticated inherited live-panel producer, checked before import"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/lemmas/L-106026-mellin-plancherel-normal-form-for-owner-conductor-moment.md",
+      "git_blob": "388c7e166a0e6e534d7e908685f71a16de246575",
+      "role": "finite-shell log-field, exact Fourier monomials, common filter"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md",
+      "git_blob": "346cc52420ec65457c2a5accc045d4a85635cc24",
+      "role": "exact Boolean replacement of the frozen balanced source"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md",
+      "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+      "role": "bilateral conjugate-left/right orientation and fixed physical cell"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/lemmas/L-106191-source-dual-centered-double-incidence-correlation.md",
+      "git_blob": "85c4ef92ead7d8b235f9c195c3c0acd16d16030f",
+      "role": "source-dual rescaling and literal same-cell Wick form"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "path": "claims/lemmas/L-102746-wick-tail-has-a-canonical-equal-pair-owner.md",
+      "git_blob": "db018c64dde45ff4ad17541eb6ba00b4f6fa9d49",
+      "role": "canonical coefficient-level pair share, not a free weight"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md",
+      "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+      "role": "exact original bilateral Wick Mellin measure"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "path": "claims/lemmas/L-102880-logarithmic-derivative-outer-detector-has-zero-square-lattice-moment.md",
+      "git_blob": "d7330d114ebba1a7a16e22fa9ba6aa6b5eb7cdd6",
+      "role": "nonzero compact native derivative kernel"
+    }
+  ],
+  "boundary": "Specified coefficient-level finite-shell projection only; exact constant-generator linear realizations only. No complete source recombination, numerical stability, global signed estimate, RH or GRH."
+}
