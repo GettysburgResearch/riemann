@@ -23,6 +23,37 @@ PSG/PPT/RMI results constrain that alternative shortcut, not the correctly
 ordered native quotient gauge. Likewise the EA/PLC raw mixed-monomial
 cancellations do not cancel the nonzero canonical completed Boolean source.
 
+The subsequent readout is now tested directly. The
+[PQR principal readout theorem](POST_QUOTIENT_PRINCIPAL_READOUT_BARRIER.md)
+shows sharp diagonal-relative amplification on the earlier fixed-conductor
+source, though that example remains absolutely small. The
+[off-atomic conductor construction](NATIVE_OFF_ATOMIC_CONDUCTOR_CANCELLATION.md)
+realizes power-growing additive and Kummer corrections with a small
+principal difference. Finally the
+[dense-owner coefficient family](DENSE_OWNER_PRINCIPAL_COEFFICIENT_FAMILY.md)
+has a power-growing principal moment from distinct arithmetic owner pairs,
+despite its shrinking literal diagonal. All three preserve their declared
+coefficient projection; none identifies it with the complete gamma source.
+In particular that projection is not known to be orthogonal for the
+physical Mellin norm and its growth is not a full-source lower bound.
+
+The final [complete Boolean fibre theorem](COMPLETE_BOOLEAN_FIBRE_POSITIVITY_OBSTRUCTION.md)
+goes further for the explicitly defined **arithmetic candidate**: it includes
+every owner and every allowed core cofactor in its selected conductor
+fibres. The physical horizon allows at most three rough core primes;
+the complete Boolean coefficient is positive at depth two and cancels at
+depth three. A fixed observation interval therefore controls the complete
+positive ratio-eight fibre, giving a candidate lower bound
+`Y^(1/2)/log(Y)^11`. An exact kernel transform also proves the entirely
+unmasked candidate lower bound `Y^(1/2)/log(Y)^14`.
+These are full-candidate lower bounds, not full-native lower bounds.
+Conditional on a subpower native principal moment, the corresponding
+same-space decoder correction cannot have subpower norm.
+This complete-candidate result is frozen at
+`4353858fbfedc3acacb568bf8357c39a16da093f`, with source-authenticated
+ordinary/optimized replay and ten tests in each mode. Its exact scope is
+the arithmetic candidate; no full native residual was computed.
+
 ## 1. Source operations, outcomes, and surviving obligations
 
 | Native operation | What the new packet proves | What it does not provide |
@@ -38,6 +69,10 @@ cancellations do not cancel the nonzero canonical completed Boolean source.
 | Sum every marked split owner configuration before the class square | [MOP](COMPLETE_MARKED_OWNER_PUSHFORWARD.md) constructs the ordered-root source, exact class counts and literal Wick correction; a coupled Kummer bit survives complete owner summation on a cofinal finite-field sequence | A transfer from that polynomial projection to all integer carrier geometry, or a growing absolute original moment |
 | Demand finite independent partial-Frobenius closure | [MKO](MARKED_KUMMER_ORBIT_OBSTRUCTION.md) gives distinct graph-divisor Kummer classes and a finite-rank/finite-cover obstruction in the stated generic category | An exclusion of all derived/correspondence parents, or an equality between the actual derived owner pushforward and its finite trace model |
 | Take the raw Boolean quotient, then complete the owned source | [Source-first adapter](SOURCE_FIRST_BOOLEAN_PRINCIPAL_ADAPTER.md) identifies the trivial induced gauge, the nonzero completed source derivative, and the exact principal completion weight ratio ell*rho*c_ell*c_rho/(c*d)<=3 | The complete retained-gamma family-square bound after physical/conductor summation |
+| Sum actual arithmetic pairs inside a fixed principal member | [PQR](POST_QUOTIENT_PRINCIPAL_READOUT_BARRIER.md) proves (25/2904)mn <= E/D_literal <= 4mn for the actual fixed-conductor vector | A full-gamma comparison or an absolute growing principal moment in that particular example |
+| Remove literal atoms before the conductor-family trace | [OAC](NATIVE_OFF_ATOMIC_CONDUCTOR_CANCELLATION.md) constructs actual positive Boolean histories whose remaining additive and Kummer traces grow as Y^(1/2)/log^3 while their principal difference shrinks | A new history-recombination identity or a full-source counterexample; the predecessor SRECOMB identity already explains the correction |
+| Retain complete dense owner sums and their actual quadratic classes | [Dense-owner theorem](DENSE_OWNER_PRINCIPAL_COEFFICIENT_FAMILY.md) proves coefficient principal energy Theta(Y^(1/2)/log^11) with literal diagonal Theta(Y^(-1/6)/log^7) | A lower bound after omitted gamma phases or complementary source are restored |
+| Complete every core cofactor and owner in the selected canonical fibres | [Complete-fibre theorem](COMPLETE_BOOLEAN_FIBRE_POSITIVITY_OBSTRUCTION.md) proves positivity after exact rough-core cancellation, a power-growing complete arithmetic candidate, and a necessary large decoder correction | Identification of that arithmetic candidate with the full native source, or a native principal-moment lower bound |
 
 The earlier [fixed-conductor multiplicity](LIVE_FIXED_CONDUCTOR_MULTIPLICITY.md),
 [power-rank barrier](FIXED_CONDUCTOR_POWER_RANK_BARRIER.md), and
@@ -108,6 +143,37 @@ unamplified logarithmic L1 estimate to a principal L2 family estimate. The
 full-source remainder and its diagonal must remain in the conclusion-facing
 ledger unless their transfer is proved in that exact target norm.
 
+For the full source the remaining operation is exactly
+
+\[
+ D_{\rm PP}=\int\sum_{\iota,\omega}|y_{\iota,\omega}(t)|^2d\nu(t)
+ \quad\longrightarrow\quad
+ P_{\rm PP}=\int\sum_\iota\left|\sum_\omega
+ y_{\iota,\omega}(t)\right|^2d\nu(t),
+\]
+
+where y=sqrt(w_iota) z, w_iota=g^2 ell rho c_ell c_rho and
+dnu=|kappahat(t)|^2 dt/(2pi). The difference is the complete off-atomic
+sum. The gamma coefficients and their inherited measure remain inside
+the readout. If gamma depends on t, scalar autocorrelation formulas must
+not replace the actual inner products. Identifying spectator tags before
+the square is a distinct non-orthogonal map, not the diagonal-preserving
+tensor extension proved by the source-first adapter.
+
+Concurrent PR #765 work was inspected at
+`5b25f2dace65dd4d46e16d566f2dc7a34b98f41d`. Its canonical Boolean
+principal-diagonal theorem overlaps the coefficient-diagonal question;
+its exploratory native-decoder memo explicitly leaves complete native
+identification open. No priority claim is made for that diagonal argument.
+The dense-owner principal growth is a different readout theorem, and the
+decoder's error-norm identity remains conditional on a common full-source
+comparison. No concurrent branch was rebased, merged or edited here.
+The complete-fibre result applies that comparison to a fully specified
+positive arithmetic candidate and proves its moment grows. It therefore
+rules out a subpower-error identification with that candidate if the
+intended native moment is subpower. It does not construct the actual
+native residual or identify the particular missing carrier cancellation.
+
 ## 4. The actual success criterion for the next research step
 
 A substantive next result must reach one of the following at the complete
@@ -118,9 +184,12 @@ native family, with all required gamma labels and the exact Wick correction:
 * a signed global additive or Kummer estimate after the required conductor
   recombination, rather than a bound on each fibre separately;
 * an explicit failure of a proposed full-source architecture on its actual
-  canonical coefficient vector, together with the missing term or invariant.
+  retained-gamma vector, together with the missing term or invariant.
 
-The continuation provides exact restrictions, source complements, positive
-transport sectors and falsified shortcuts. It has not completed any of those
-three full-target steps. That limitation should remain visible in every
-front-door summary and PR description.
+The continuation now falsifies a small-error decoder to the specified
+complete positive arithmetic candidate, conditional on the intended
+native moment bound. It has not reconstructed the full native residual
+or proved either signed global target. That distinction should remain
+visible in every front-door summary and PR description. The new
+[four-hour handoff](FOUR_HOUR_NATIVE_HANDOFF.md) records the frozen results,
+bounded replays, concurrent source overlap and exact acquisition paths.
