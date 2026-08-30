@@ -1,0 +1,51 @@
+{
+  "authoring_base": "282ce03941444d0e02daba5fde260ccb54a3f909",
+  "external_context": {
+    "remote_bytes_authenticated": false,
+    "role": "Zagier sections2.2/2.4, Proposition5 and equation23: Eisenstein coefficients and Delta identity",
+    "url": "https://people.mpim-bonn.mpg.de/zagier/files-restricted/doi/10.1007/978-3-540-74119-0/fulltext.pdf"
+  },
+  "frozen_sources": [
+    {
+      "commit": "282ce03941444d0e02daba5fde260ccb54a3f909",
+      "git_blob": "d241501272a32771717494dd4c59aa17a6888e98",
+      "id": "positive_spectrum",
+      "kind": "scientific_source",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_POSITIVE_SPECTRUM_BOUNDARY.md",
+      "sha256_lf": "62925bbe9ebe327ed491f99e886eea5599253295c69f05878d278dd453abe0d7"
+    },
+    {
+      "commit": "b62dfc6348661992bca659c99de226a1b6b22e14",
+      "git_blob": "4a3f9f0b6644bffdc94214e6fb2b60dfafdd93ca",
+      "id": "weight24",
+      "kind": "scientific_source",
+      "path": "research/l-families/atlas/generalized/RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT.md",
+      "sha256_lf": "1828196e08782ce692f28e3fdec2feae55c6d24e9b3eb5c35ff1c315434aee75"
+    },
+    {
+      "commit": "b62dfc6348661992bca659c99de226a1b6b22e14",
+      "git_blob": "f44fe4d65225601e04d86c58e6d6d296c51126c7",
+      "id": "weight24_coefficients",
+      "kind": "coefficient_fixture",
+      "path": "research/l-families/atlas/generalized/rankin_selberg_quotient_global_parent.json",
+      "sha256_lf": "ff9c5e7cc43db1d9c63f317cd842e4337066ec30c30a2f8be6f45958648ce856"
+    },
+    {
+      "commit": "8e9f05211954e0a7aae5e63c9367f1d520d3671d",
+      "git_blob": "383cf031153ef080fd1e8631b9d1788a0d0dc3b6",
+      "id": "weight24_review",
+      "kind": "review_context",
+      "path": "research/l-families/atlas/generalized/RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT_AUDIT.md",
+      "sha256_lf": "f48587c5300d3c27835a49be36b700e4f574546da9521e8b8c5348d8a85d247f"
+    }
+  ],
+  "primitive_contract": {
+    "F": "B(w)-2^w*C(w)^2/(1+U(w))",
+    "L": "zeta(2w-46)*F(w)",
+    "method": "complete rho<=12 prefix plus every omitted word, exact rational log bounds",
+    "negative_atom": "-88203653222400 at 9/2",
+    "source": "g=Delta*E4^3-696*Delta^2, b=Delta^2, standard q=exp(2*pi*i*z)",
+    "variable": "w=s+23; derivatives are d/dw before evaluation"
+  },
+  "schema": "cusp_flag_effective_negative_derivative-sources-v1"
+}
