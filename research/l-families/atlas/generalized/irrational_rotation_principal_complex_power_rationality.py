@@ -34,22 +34,22 @@ TEST_PATH = (
 )
 PARENT_PATH = PACKET_ROOT / "rational_rotation_branch_census.py"
 
-EXPECTED_BASE_COMMIT = "834a24e71878a584e00215edf1e0c813faa9f578"
+EXPECTED_BASE_COMMIT = "d1e976f1fcda762f66291987938f9132892b123f"
 EXPECTED_SOURCES_SHA256_LF = (
-    "ad891e0c0c87c49e0fb6fa592501aa19e2ff643650730699465ec76cb2ace52a"
+    "c450cdc36e8fccf99e5154ed1d6694b326bd07663f60ca48c9eb40518c1dff5e"
 )
 EXPECTED_SOURCE_OBJECTS = {
     "research/l-families/atlas/generalized/RATIONAL_ROTATION_BRANCH_CENSUS.md": (
-        "d0ff4d4d17787b6dffc4c8c1ccd14a20c69076d0"
+        "650933e62d3b467ffc3be0f253c9ac65a0bd2e48"
     ),
     "research/l-families/atlas/generalized/rational_rotation_branch_census.py": (
-        "a2fff9a394585fe91a1dacad429f68f99603e9a2"
+        "01254baba2032efa5d90e59f267ffea971803455"
     ),
     "research/l-families/atlas/generalized/rational_rotation_branch_census.json": (
-        "c92c6e79df09bfcd34b992a56667655de530f11a"
+        "31e6051f6efcf573ab346eec34a102f488562261"
     ),
     "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json": (
-        "103a568fe71f08886b5b3837c944bc630ad4cf3d"
+        "315cd0a669fec3ace855b45590ea5ca6c10c6fbb"
     ),
     "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md": (
         "8f27df80a4983b4d393ee3a2477a744afaeb1d3a"

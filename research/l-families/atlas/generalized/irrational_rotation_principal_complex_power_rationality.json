@@ -3438,12 +3438,12 @@
     "recurrence": "u_0=1; u_1=2*cos(theta); u_(r+2)=2*cos(theta)*u_(r+1)-u_r",
     "theta_domain": "0<theta<pi and theta/pi irrational"
   },
-  "payload_sha256": "36b320e4305bfaedb032539d15e3ec5736a055ad667d94c1304293e3ac4cc7b3",
+  "payload_sha256": "34f0e4b15a569cc0ab27e46991cc310fa1b05168aebd23d366c08873f4bc0474",
   "producer": {
     "note": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_PRINCIPAL_COMPLEX_POWER_RATIONALITY.md",
     "note_sha256_lf_normalized": "b635c9fc8051007f46fc1efdb342c88118362edb79ed1d63624df21ef367ddf4",
     "script": "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.py",
-    "script_sha256_lf_normalized": "c5df80a6b24023eaac66cc629576b62bdc6f67c62fa0aa3d3a7caf3c4267979d",
+    "script_sha256_lf_normalized": "48cbef5a6c4e56e3ef0ceb76d49c28d3b18b2266fec5b73eefb75249dc1d45bf",
     "test": "tests/test_irrational_rotation_principal_complex_power_rationality.py",
     "test_sha256_lf_normalized": "71281b220880510d5134d99be84dc05e9a77f682c755ddfb3cbfe5bd37dc5a84"
   },
@@ -3475,7 +3475,7 @@
     "tempered_irrational_rotation_only": true
   },
   "source_lock": {
-    "base_commit": "834a24e71878a584e00215edf1e0c813faa9f578",
+    "base_commit": "d1e976f1fcda762f66291987938f9132892b123f",
     "external_references": [
       {
         "authors": "Oliver Knill and John Lesieutre",
@@ -3492,7 +3492,7 @@
         "url": "https://people.freebsd.org/~das/kahan86branch.pdf"
       }
     ],
-    "file_sha256_lf_normalized": "ad891e0c0c87c49e0fb6fa592501aa19e2ff643650730699465ec76cb2ace52a",
+    "file_sha256_lf_normalized": "c450cdc36e8fccf99e5154ed1d6694b326bd07663f60ca48c9eb40518c1dff5e",
     "manifest": "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
     "scope_firewall": {
       "external_novelty_unreviewed": true,
@@ -3509,28 +3509,28 @@
     },
     "verified_sources": [
       {
-        "file_sha256_lf_normalized": "29e5691ad63666caed092920229f9d27655d6a064b01542a24e8241a54316333",
-        "git_blob": "d0ff4d4d17787b6dffc4c8c1ccd14a20c69076d0",
+        "file_sha256_lf_normalized": "09814f28391c8ad93d122a953912d4ea6e34e41cb1843b88034113495c33edeb",
+        "git_blob": "650933e62d3b467ffc3be0f253c9ac65a0bd2e48",
         "path": "research/l-families/atlas/generalized/RATIONAL_ROTATION_BRANCH_CENSUS.md",
         "role": "exact real-axis branch convention, zero convention, and scalar-observable versus state-space parent boundary"
       },
       {
-        "file_sha256_lf_normalized": "1d57f51238b96447da95343dadbbeab7dc4e1efee332bf05d2eb0424384b2ebe",
-        "git_blob": "a2fff9a394585fe91a1dacad429f68f99603e9a2",
+        "file_sha256_lf_normalized": "12d6d7c0d2f84ea6b9fc7b6a4b96327b60e985e408e6c10590959bf80668aafd",
+        "git_blob": "01254baba2032efa5d90e59f267ffea971803455",
         "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
         "role": "reused canonical hashing, branch metadata, and fail-closed Git-object verification"
       },
       {
-        "file_sha256_lf_normalized": "520231c5a0e2bb8574ef041a54ee6b5801de4609af8919465192caa728a700a6",
-        "git_blob": "c92c6e79df09bfcd34b992a56667655de530f11a",
+        "file_sha256_lf_normalized": "d9db197bbfc0633791d1899d7c45ef0f6a1df657fe628d938322d31990dd39a2",
+        "git_blob": "31e6051f6efcf573ab346eec34a102f488562261",
         "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.json",
-        "payload_sha256": "cf06ebaecb19ae16874db084cc0050d70d6531ff9878e92e6bec10a0b60379e6",
+        "payload_sha256": "7e49054015be1b6ada0aeef72f7572cb74a0275e4d62a8791bcbb07c31d945ca",
         "role": "adjacent exact branch and integer-spectrum fixture",
         "schema": "riemann.atlas.generalized.rational_rotation_branch_census.v1"
       },
       {
-        "file_sha256_lf_normalized": "03370f909ae1b4f53edece1db54d9e5e2335523761744d9d81aed48411a63017",
-        "git_blob": "103a568fe71f08886b5b3837c944bc630ad4cf3d",
+        "file_sha256_lf_normalized": "c1d9ed9862fe572169ead10a9c909df63b4ddd0a5ae209fa1e9ab3ab7acaed0b",
+        "git_blob": "315cd0a669fec3ace855b45590ea5ca6c10c6fbb",
         "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
         "role": "inherited source and branch-cut literature boundary"
       },

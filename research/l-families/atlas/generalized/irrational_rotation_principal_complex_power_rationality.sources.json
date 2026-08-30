@@ -4,34 +4,34 @@
     "number": 764,
     "url": "https://github.com/gfreund123/riemann/issues/764"
   },
-  "base_commit": "834a24e71878a584e00215edf1e0c813faa9f578",
+  "base_commit": "d1e976f1fcda762f66291987938f9132892b123f",
   "normalization": "determinant-one tempered recurrence u_0=1, u_1=2*cos(theta), u_(r+2)=2*cos(theta)*u_(r+1)-u_r with theta/pi irrational and a fixed real-axis logarithm branch",
   "sources": [
     {
       "path": "research/l-families/atlas/generalized/RATIONAL_ROTATION_BRANCH_CENSUS.md",
       "role": "exact real-axis branch convention, zero convention, and scalar-observable versus state-space parent boundary",
-      "file_sha256_lf_normalized": "29e5691ad63666caed092920229f9d27655d6a064b01542a24e8241a54316333",
-      "git_blob": "d0ff4d4d17787b6dffc4c8c1ccd14a20c69076d0"
+      "file_sha256_lf_normalized": "09814f28391c8ad93d122a953912d4ea6e34e41cb1843b88034113495c33edeb",
+      "git_blob": "650933e62d3b467ffc3be0f253c9ac65a0bd2e48"
     },
     {
       "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
       "role": "reused canonical hashing, branch metadata, and fail-closed Git-object verification",
-      "file_sha256_lf_normalized": "1d57f51238b96447da95343dadbbeab7dc4e1efee332bf05d2eb0424384b2ebe",
-      "git_blob": "a2fff9a394585fe91a1dacad429f68f99603e9a2"
+      "file_sha256_lf_normalized": "12d6d7c0d2f84ea6b9fc7b6a4b96327b60e985e408e6c10590959bf80668aafd",
+      "git_blob": "01254baba2032efa5d90e59f267ffea971803455"
     },
     {
       "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.json",
       "role": "adjacent exact branch and integer-spectrum fixture",
       "schema": "riemann.atlas.generalized.rational_rotation_branch_census.v1",
-      "payload_sha256": "cf06ebaecb19ae16874db084cc0050d70d6531ff9878e92e6bec10a0b60379e6",
-      "file_sha256_lf_normalized": "520231c5a0e2bb8574ef041a54ee6b5801de4609af8919465192caa728a700a6",
-      "git_blob": "c92c6e79df09bfcd34b992a56667655de530f11a"
+      "payload_sha256": "7e49054015be1b6ada0aeef72f7572cb74a0275e4d62a8791bcbb07c31d945ca",
+      "file_sha256_lf_normalized": "d9db197bbfc0633791d1899d7c45ef0f6a1df657fe628d938322d31990dd39a2",
+      "git_blob": "31e6051f6efcf573ab346eec34a102f488562261"
     },
     {
       "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
       "role": "inherited source and branch-cut literature boundary",
-      "file_sha256_lf_normalized": "03370f909ae1b4f53edece1db54d9e5e2335523761744d9d81aed48411a63017",
-      "git_blob": "103a568fe71f08886b5b3837c944bc630ad4cf3d"
+      "file_sha256_lf_normalized": "c1d9ed9862fe572169ead10a9c909df63b4ddd0a5ae209fa1e9ab3ab7acaed0b",
+      "git_blob": "315cd0a669fec3ace855b45590ea5ca6c10c6fbb"
     },
     {
       "path": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
