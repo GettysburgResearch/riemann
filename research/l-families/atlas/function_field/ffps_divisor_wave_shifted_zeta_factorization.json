@@ -1,0 +1,176 @@
+{
+  "architecture": "A: direct beta/primitive-pair route",
+  "divisor_laurent_product": {
+    "local_factor": "z+z^-1",
+    "number_of_primes": 4,
+    "orientation_count": 16,
+    "product_equal": true
+  },
+  "exact_theorems": {
+    "prefix_fourier_hyperbola": true,
+    "shifted_reciprocal_zeta_factorization": true,
+    "squarefree_divisor_product": true,
+    "zero_frequency_double_reciprocal_zeta": true
+  },
+  "factorization": {
+    "E_local_minus_one": "-p^(-2s)/[(1-p^(-(s-i*xi)))(1-p^(-(s+i*xi)))]",
+    "F_xi": "E_xi(s)/[zeta^(67)(s-i*xi) zeta^(67)(s+i*xi)]"
+  },
+  "finite_euler_product": {
+    "coefficient_count": 16,
+    "local_t_values": [
+      "2",
+      "-1",
+      "0",
+      "1"
+    ],
+    "squarefree_product_equal": true
+  },
+  "hyperbola_interval": {
+    "rows": [
+      {
+        "N": 30,
+        "T": 10,
+        "alpha": 0,
+        "divisors": [
+          3,
+          5,
+          6,
+          10
+        ],
+        "interval_equal": true
+      },
+      {
+        "N": 210,
+        "T": 30,
+        "alpha": 0,
+        "divisors": [
+          7,
+          10,
+          14,
+          15,
+          21,
+          30
+        ],
+        "interval_equal": true
+      },
+      {
+        "N": 30,
+        "T": 70,
+        "alpha": 1,
+        "divisors": [
+          1
+        ],
+        "interval_equal": true
+      },
+      {
+        "N": 66,
+        "T": 20,
+        "alpha": 0,
+        "divisors": [
+          6,
+          11
+        ],
+        "interval_equal": true
+      }
+    ]
+  },
+  "local_shifted_zeta_factor": {
+    "identity": "(1-t*x) = (1-t*x+x^2) * [(1-t*x)/(1-t*x+x^2)]",
+    "rows": [
+      {
+        "correction_coefficients": [
+          "1",
+          "0",
+          "-1",
+          "2",
+          "-3",
+          "4",
+          "-5",
+          "6",
+          "-7"
+        ],
+        "product_recovers_1_minus_t_x": true,
+        "t": "-2"
+      },
+      {
+        "correction_coefficients": [
+          "1",
+          "0",
+          "-1",
+          "1",
+          "0",
+          "-1",
+          "1",
+          "0",
+          "-1"
+        ],
+        "product_recovers_1_minus_t_x": true,
+        "t": "-1"
+      },
+      {
+        "correction_coefficients": [
+          "1",
+          "0",
+          "-1",
+          "0",
+          "1",
+          "0",
+          "-1",
+          "0",
+          "1"
+        ],
+        "product_recovers_1_minus_t_x": true,
+        "t": "0"
+      },
+      {
+        "correction_coefficients": [
+          "1",
+          "0",
+          "-1",
+          "-1",
+          "0",
+          "1",
+          "1",
+          "0",
+          "-1"
+        ],
+        "product_recovers_1_minus_t_x": true,
+        "t": "1"
+      },
+      {
+        "correction_coefficients": [
+          "1",
+          "0",
+          "-1",
+          "-2",
+          "-3",
+          "-4",
+          "-5",
+          "-6",
+          "-7"
+        ],
+        "product_recovers_1_minus_t_x": true,
+        "t": "2"
+      }
+    ]
+  },
+  "resource_caps": {
+    "formal_orientation_primes": 4,
+    "local_series_order": 8,
+    "zeta_zeros": 0
+  },
+  "scope_firewall": {
+    "fourier_mode_bound_proved": false,
+    "highgcdwave_proved": false,
+    "pole_survival_at_every_local_exception_proved": false,
+    "rh_or_grh_proved": false
+  },
+  "source_contract": {
+    "commit": "cf5cf6876dce5c8a969ad4636055215f7cec395d",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_HIGH_GCD_WAVE_LOCALIZATION.md": "1493a630000c211717339b8dd2e92244b624a6cd",
+      "research/l-families/atlas/function_field/ffps_high_gcd_wave_localization.py": "951ef7a801fa2691e9649403072d9469ea190d8d"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "architecture": "B: family/sheaf amplification route",
+  "character_algebra": {
+    "adams_checks_per_alignment": 144,
+    "four_physical_parity_profiles": [
+      {
+        "distinct_lines": 1,
+        "line_mass": "16",
+        "parity_x_y": [
+          0,
+          0
+        ],
+        "profile_digest": "c76ba4de4da155e2b8bea9ece16aa9a1bfc804339553cd2fa17c6a05bd073a5e"
+      },
+      {
+        "distinct_lines": 4,
+        "line_mass": "16",
+        "parity_x_y": [
+          0,
+          1
+        ],
+        "profile_digest": "738f1076ce803035307b2b62659058332cc6899b52c1e028299dcc9fd7aa5d20"
+      },
+      {
+        "distinct_lines": 4,
+        "line_mass": "16",
+        "parity_x_y": [
+          1,
+          0
+        ],
+        "profile_digest": "9f26a1877b9d3288cd2388aa244e5a80c40bb24897cff9461898b8e579bb9539"
+      },
+      {
+        "distinct_lines": 16,
+        "line_mass": "16",
+        "parity_x_y": [
+          1,
+          1
+        ],
+        "profile_digest": "69cb82cba9f03da3a9c3343b6b3011e06f3686bf4c84ca3afc7bb0b7151fa097"
+      }
+    ],
+    "hard_minus_selected_equals_relative": true,
+    "partial_adams_preserves_difference": true,
+    "rows": [
+      {
+        "alignment": -1,
+        "checks": 144,
+        "hard_absolute_weighted_line_mass": "24",
+        "hard_distinct_lines": 48,
+        "relative_absolute_weighted_line_mass": "16",
+        "relative_distinct_lines": 16,
+        "selected_absolute_weighted_line_mass": "8",
+        "selected_distinct_lines": 32
+      },
+      {
+        "alignment": 1,
+        "checks": 144,
+        "hard_absolute_weighted_line_mass": "24",
+        "hard_distinct_lines": 48,
+        "relative_absolute_weighted_line_mass": "16",
+        "relative_distinct_lines": 16,
+        "selected_absolute_weighted_line_mass": "8",
+        "selected_distinct_lines": 32
+      }
+    ]
+  },
+  "closed_point_adams": {
+    "diagonal_correction_checks": 3,
+    "one_place_checks": 12,
+    "term_count_checks": 156,
+    "theorems": {
+      "one_place": "d P_d(V)=sum_(e|d) mu(e) A_(d/e)(psi^e V)",
+      "two_place": "ab P_(a,b)(K)=sum_(e|a,f|b) mu(e)mu(f) A_(a/e,b/f)^partial(psi_1^e psi_2^f K)"
+    },
+    "two_place_checks": 144
+  },
+  "exact_theorems": {
+    "clean_physical_deck_profiles": 4,
+    "clean_relative_weighted_line_mass": 16,
+    "closed_point_extractor_applies_directly_to_relative_class": true,
+    "relative_first_identity": "psi_1^e psi_2^f(C-S)=psi_1^e psi_2^f(R) for every e,f",
+    "relative_only_partial_frobenius_suffices": true
+  },
+  "open_gates": {
+    "NATREL": "construct the complete owner/Boolean/Artin-Schreier/incidence/Wick source as one common relative projector object",
+    "PRINCIPAL_BINDING": "identify the extracted relative trace with the native principal consumer at every horizon and normalization",
+    "RELPARTFROB": "show the resulting relative class is separable or has commuting partial Frobenii",
+    "RELTRACE": "prove a conductor-uniform signed trace/Betti estimate after the double Adams-Mobius recombination"
+  },
+  "resource_caps": {
+    "adams_exponent_limit": 12,
+    "closed_point_degree_limit": 12,
+    "conductors": 0,
+    "curves": 0,
+    "finite_fields": 0,
+    "l_functions": 0,
+    "zeta_zeros": 0
+  },
+  "scope_firewall": {
+    "architecture_a_claims": false,
+    "native_source_adapter_constructed": false,
+    "physical_profiles_do_not_control_non_deck_adams_eigenvalues": true,
+    "principal_binding_proved_for_new_object": false,
+    "relative_partial_frobenius_proved": false,
+    "rh_or_grh_proved": false,
+    "uniform_betti_or_trace_estimate_proved": false
+  },
+  "source_contract": {
+    "commit": "b870366141fe8d5f43d5b81f6e50a67d2a888070",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_CLOSED_POINT_ADAMS_COMPRESSION.md": "c79e52ebf0099fe416bc2c79dcb041cc21e025fb",
+      "research/l-families/atlas/function_field/FFPS_CYCLIC_CLOSURE_BUDGET.md": "b576c8a114d7e502b9b474cfed0db7e4cf6e2475",
+      "research/l-families/atlas/function_field/FFPS_CYCLIC_TORSOR_RELATIVE_PROJECTOR.md": "ab16e6c0894e51303119692e67b2f2bf59ba73e4",
+      "research/l-families/atlas/function_field/FFPS_PRINCIPAL_ANOMALY_TRANSFER_DICHOTOMY.md": "47c148187db578357035926f8ff12419b0cf3652",
+      "research/l-families/atlas/function_field/FFPS_TERNARY_UNIVERSAL_NORM_TORSOR.md": "21645bdb609320cf176893aa589af7a17c741d9a"
+    }
+  }
+}

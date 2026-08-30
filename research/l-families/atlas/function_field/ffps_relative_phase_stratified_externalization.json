@@ -1,0 +1,113 @@
+{
+  "architecture": "B: relative-first family/sheaf route",
+  "coprimality_externalization": {
+    "absolute_mass_bound": "sum |mu(m)|/m^2 <= zeta(2) < 2",
+    "outer_weight": "mu(m)/m^2",
+    "partial_mass_through_100": "134101049593204353038670868282140939214298774728673711170806689394056834/88594060606198055782799368050946552375416821220556156438410444499697415",
+    "rows": [
+      {
+        "cap": 4,
+        "direct": "217/160",
+        "external": "217/160"
+      },
+      {
+        "cap": 7,
+        "direct": "349871/282240",
+        "external": "349871/282240"
+      },
+      {
+        "cap": 10,
+        "direct": "1857352451/1536796800",
+        "external": "1857352451/1536796800"
+      }
+    ]
+  },
+  "exact_theorems": {
+    "coprimality_has_signed_externalization": true,
+    "coprimality_outer_mass_is_uniform": true,
+    "fixed_label_phase_is_external": true,
+    "mixed_bilinear_phase_requires_rank_p_minus_1": true
+  },
+  "mixed_phase_firewall": {
+    "bounded_rank_as_prime_grows": false,
+    "rows": [
+      {
+        "constant_eigenvalue": 1,
+        "external_rank_lower_bound": 2,
+        "gram": "p I - J",
+        "matrix_size": 2,
+        "orthogonal_eigenvalue": 3,
+        "prime": 3,
+        "rank": 2
+      },
+      {
+        "constant_eigenvalue": 1,
+        "external_rank_lower_bound": 4,
+        "gram": "p I - J",
+        "matrix_size": 4,
+        "orthogonal_eigenvalue": 5,
+        "prime": 5,
+        "rank": 4
+      },
+      {
+        "constant_eigenvalue": 1,
+        "external_rank_lower_bound": 6,
+        "gram": "p I - J",
+        "matrix_size": 6,
+        "orthogonal_eigenvalue": 7,
+        "prime": 7,
+        "rank": 6
+      },
+      {
+        "constant_eigenvalue": 1,
+        "external_rank_lower_bound": 10,
+        "gram": "p I - J",
+        "matrix_size": 10,
+        "orthogonal_eigenvalue": 11,
+        "prime": 11,
+        "rank": 10
+      }
+    ]
+  },
+  "phase_factorization": {
+    "fixed_label_external_rank": 1,
+    "rows": [
+      {
+        "ell": 5,
+        "joint_pair_equal": true,
+        "left_exponent_mod_rho": 3,
+        "rho": 7,
+        "right_exponent_mod_ell": 4
+      },
+      {
+        "ell": 7,
+        "joint_pair_equal": true,
+        "left_exponent_mod_rho": 5,
+        "rho": 11,
+        "right_exponent_mod_ell": 6
+      },
+      {
+        "ell": 11,
+        "joint_pair_equal": true,
+        "left_exponent_mod_rho": 12,
+        "rho": 13,
+        "right_exponent_mod_ell": 10
+      }
+    ]
+  },
+  "resource_caps": {
+    "largest_integer_cap": 100,
+    "largest_prime": 11
+  },
+  "scope_firewall": {
+    "complete_native_source_externalized": false,
+    "natrel_proved": false,
+    "relpartfrob_proved": false,
+    "reltrace_proved": false,
+    "rh_or_grh_proved": false
+  },
+  "source_contract": {
+    "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b:claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+    "aaccfe767c3d36a353056c9a2483e3824d89949f:research/l-families/atlas/function_field/FFPS_RELATIVE_FIRST_ADAMS_CLOSURE.md": "aba88795dd1c95cb320d45c1dc367cd71d73e1d5"
+  }
+}

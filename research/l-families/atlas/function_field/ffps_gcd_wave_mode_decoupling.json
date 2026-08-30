@@ -1,0 +1,97 @@
+{
+  "architecture": "A: direct beta / primitive-pair route",
+  "critical_coupling": {
+    "integer_plus_integral_bound": "576/289",
+    "nonzero_after_deleting_primes_at_most_13": true,
+    "normal_convergence": true,
+    "rows": [
+      {
+        "delta_bound": "32/289",
+        "prime": 17
+      },
+      {
+        "delta_bound": "32/361",
+        "prime": 19
+      },
+      {
+        "delta_bound": "32/529",
+        "prime": 23
+      },
+      {
+        "delta_bound": "200/7569",
+        "prime": 29
+      },
+      {
+        "delta_bound": "200/8649",
+        "prime": 31
+      },
+      {
+        "delta_bound": "18/1369",
+        "prime": 37
+      },
+      {
+        "delta_bound": "18/1681",
+        "prime": 41
+      },
+      {
+        "delta_bound": "18/1849",
+        "prime": 43
+      }
+    ],
+    "tail_majorant": "|H_p-1|<<p^-2 uniformly on Re(s),Re(t)>=1/2"
+  },
+  "exact_global_identity": "G_(xi,eta)(s,t)=H_(xi,eta)(s,t) F_xi(s) F_eta(t)",
+  "local_decoupling": {
+    "identity": "L_p=L_x,p*L_y,p+(2/p)A_p(xi)B_p(eta)x_p y_p",
+    "rows": [
+      {
+        "coupling_coefficient_per_weight": "2/5",
+        "coupling_monomials": 4,
+        "prime": 5
+      },
+      {
+        "coupling_coefficient_per_weight": "2/7",
+        "coupling_monomials": 4,
+        "prime": 7
+      },
+      {
+        "coupling_coefficient_per_weight": "2/11",
+        "coupling_monomials": 4,
+        "prime": 11
+      },
+      {
+        "coupling_coefficient_per_weight": "2/13",
+        "coupling_monomials": 4,
+        "prime": 13
+      },
+      {
+        "coupling_coefficient_per_weight": "2/17",
+        "coupling_monomials": 4,
+        "prime": 17
+      },
+      {
+        "coupling_coefficient_per_weight": "2/29",
+        "coupling_monomials": 4,
+        "prime": 29
+      }
+    ]
+  },
+  "resource_caps": {
+    "local_primes": 6,
+    "majorant_primes": 8
+  },
+  "scope_firewall": {
+    "highgcdwave_proved": false,
+    "joint_mode_mean_estimate_proved": false,
+    "rh_or_grh_proved": false,
+    "sharp_height_cutoff_decoupled": false
+  },
+  "source_blobs": {
+    "research/l-families/atlas/function_field/FFPS_DIVISOR_WAVE_SHIFTED_ZETA_FACTORIZATION.md": "21ef6a6e0078beb85f81fc880e5f161fc6288a8f",
+    "research/l-families/atlas/function_field/FFPS_HIGH_GCD_FAR_GAP_LOCALIZATION.md": "72a4dbf21f452041c939c2c308716abfd49195a9",
+    "research/l-families/atlas/function_field/FFPS_HIGH_GCD_WAVE_LOCALIZATION.md": "1493a630000c211717339b8dd2e92244b624a6cd",
+    "research/l-families/atlas/function_field/FFPS_PRIMITIVE_CORE_GCD_GRAM_CLOSURE.md": "d3b5a372b554f48fda50fc5d4b8de9a37b1ba036"
+  },
+  "source_commit": "5122e939df2fa322b5a3185cf1d78d4b402f3d5f",
+  "updated_gate": "sharp hyperbola/Perron assembly of two one-variable Witt-zeta modes"
+}
