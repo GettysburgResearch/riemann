@@ -33,6 +33,36 @@
     "0.8": 0
    },
    "verdict": "no off-line discrepancy found for r <= 0.8 in t-window (0.05,20.0); no claim beyond that window/radius"
+  },
+  "y_dir_(0,1)": {
+   "coarse": {
+    "0.2": 0,
+    "0.4": 0,
+    "0.6": 2
+   },
+   "verdict": "first off-line discrepancy in t-window (0.05,20.0) at radius in (0.569, 0.575]",
+   "radius_bracket": [
+    0.56875,
+    0.575
+   ]
+  },
+  "diag_(1,1)": {
+   "coarse": {
+    "0.2": 0,
+    "0.4": 0,
+    "0.6": 0,
+    "0.8": 0
+   },
+   "verdict": "no off-line discrepancy found for r <= 0.8 in t-window (0.05,20.0); no claim beyond that window/radius"
+  },
+  "shallow_(2,1)": {
+   "coarse": {
+    "0.2": 0,
+    "0.4": 0,
+    "0.6": 0,
+    "0.8": 0
+   },
+   "verdict": "no off-line discrepancy found for r <= 0.8 in t-window (0.05,20.0); no claim beyond that window/radius"
   }
  }
 }

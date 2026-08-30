@@ -67,9 +67,24 @@ point at y = 2. Together with the parent-shadow ladder reading, this is a
 measured instance of "the critical-line property as a function on moduli
 space, peaked at the arithmetic points" — deposited as a phenomenon
 description at stated precision, with the one-parameter phenomenon itself
-credited to the published literature above. The two-parameter departure-
-locus grid (E4) did not run (session limits) and is first in the lab's
-continuation queue, together with resolving the path-A event's pair
-localization and the geometric-invariant correlation, which needs more
-events than two paths provide.
+credited to the published literature above.
+
+## E4 departure-locus sketch (2026-08-31 continuation run; e4_locus.json)
+
+Four directions from z = i, coarse radii to 0.8 with bisection on the
+first discrepant direction, t-window (0.05, 20):
+
+- **rectangular direction (0,1): first off-line discrepancy at radius in
+  (0.569, 0.575]** — refining path B's (1.5, 1.6) bracket to y* ~ 1.57;
+- directions (1,0), (1,1)/sqrt2, (2,1)/sqrt5: NO discrepancy through
+  r = 0.8 in this t-window (no claim beyond that window and radius).
+
+Together with the path-A resolution (the (1,0) direction DOES depart by
+r <= 0.35 once the window reaches t = 35): the measured departure locus
+around the CM point is ANISOTROPIC AND HEIGHT-STRATIFIED — which zero
+pair breaks first, and at what moduli distance, depends on both the
+deformation direction and the height window: the rectangular direction
+breaks first at low height (t ~ 11-16 pairs), the x-slide first at
+t ~ 24-30. The geometric-invariant correlation still needs more events
+than four directions provide and remains the lab's continuation target.
 ```
