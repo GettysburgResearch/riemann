@@ -1,0 +1,19 @@
+{
+  "exact_checks": 170,
+  "open_status": {
+    "density_one": false,
+    "more_than_ninety_percent": false,
+    "riemann_hypothesis": false,
+    "xi31transfer107400": false
+  },
+  "proof_object_sha256": "dba5ab28a8cdbfda7f3aec842638bb2a26baed42eb2beeff7812b51c7fc815ef",
+  "proved_exact": {
+    "all_odd_central_constant": true,
+    "conrey_alpha31_gt_999_over_1000": true,
+    "endpoint31_margin": true,
+    "hardy_radial_input_identity": true,
+    "unit_index_firewall": true
+  },
+  "schema": "riemann.x107400.endpoint31-source-pick.v1",
+  "verdict": "PASS_X_107400_ENDPOINT31_SOURCE_PICK_REDUCTION"
+}
