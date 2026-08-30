@@ -7,8 +7,11 @@ This is a checkpoint during the requested research pass, not a statement
 that eight hours have elapsed. No new automorphic L-function or external
 novelty is claimed.
 
-Checkpoint updated: 2026-08-31. Sixteen exact packets are resident,
-including the independently reviewed Rankin--Selberg quotient.
+Checkpoint updated: 2026-08-31. Eighteen exact packets are resident,
+including the independently reviewed all-weight cusp-flag quotient family
+and its positive-spectrum boundary. The family and boundary releases have
+separate arithmetic-taxonomy repairs; their mathematical outputs did not
+change.
 
 ## The main conclusion
 
@@ -34,6 +37,12 @@ frequency. This is a concrete global quotient, not another fitted local
 recurrence. It remains in the rational closure of classical period entries
 and is not a new automorphic representation.
 
+The construction now covers every level-one cusp-form weight of dimension
+at least two. It also exhibits a useful obstruction: the uncompleted
+quotients are positive and strictly decreasing on a right half-line, yet
+have no positive Laplace measure there. Neither real positivity nor a finite
+list of alternating derivative signs certifies a positive spectrum.
+
 ## Exact packet map
 
 | Packet | What it settles | Scope boundary |
@@ -54,6 +63,8 @@ and is not a new automorphic representation.
 | [Global graded boundary](GRADED_PARENT_GLOBAL_BOUNDARY.md) | Natural boundary, finite-gamma obstruction, graded convergence threshold, and an explicit centered change of object | Theorems concern the stated divisor-power model, not arbitrary varying automorphic parameters |
 | [Classical Segre Lie parent](SEGRE_KOSZUL_LIE_PARENT.md) | Actual signed dual Lie modules in every grade and strict all-grade signs | This is established Koszul duality; no analytic completion or positive Euler parent |
 | [Rankin--Selberg quotient](RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT.md) | Canonical cusp-flag quotient, global reflection, positive real quotient metric, and first noninteger frequency 9/2 | Possible denominator-zero poles; no ordinary expandable Euler product or new automorphic representation |
+| [All-weight cusp-flag family](CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md) | Canonical quotient for every level-one cusp space of dimension at least two, nonzero leading fractional atom, and the two exceptional weights | Fixed-weight absolute convergence; no uniform-weight theorem, new automorphic representation or denominator-zero control |
+| [Positive-spectrum boundary](CUSP_FLAG_POSITIVE_SPECTRUM_BOUNDARY.md) | Strict positivity/decrease, exact moving-minimizer curvature identity, and wrong-sign derivatives on every right tail | Uncompleted F and L in fixed w coordinates; no actual negative-curvature claim, completed-Q implication or RH consequence |
 
 Each row links to its resident proof and reproduction contract. The later
 analytic/parent packets and the earlier exact-degree, single-grade and
@@ -110,6 +121,66 @@ The [exact-source audit](RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT_AUDIT.md)
 records separate proof review, independent q/frequency reconstruction,
 and the correction of an introductory completed-pole omission in the
 Miller--Schmid source. The analytic imports are not machine-certified.
+
+## The all-weight extension and its positive-spectrum boundary
+
+Write k=12d+r with r in {0,4,6,8,10,14} and d=dim S_k>=2. The integral
+Miller basis f_1,...,f_d satisfies [q^i]f_j=delta_ij for i,j<=d.
+With ell=[q], W=span(f_2,...,f_d), and N=d+1, the same actual Eisenstein
+period defines
+
+    Q_k(s)=det I(s)/det I_W(s)=A_k(s) L_k(s+k-1),
+    L_k(w)=zeta(2w-2k+2) F_k(w),
+    F_k=D_11-D_1W D_W^-1 D_W1.
+
+The completed quotient is globally meromorphic and obeys Q_k(s)=Q_k(1-s).
+Both endpoint poles survive, with residues of opposite signs and magnitude
+det(G)/(2 det(G_W)). Possible poles at zeros of det(I_W) remain unpaid.
+The source is relative to the normalized cusp flag; parameter-dependent
+changes of flag are not silently allowed.
+
+The [family proof](CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md) establishes that
+c_N=[q^N]f_1 is nonzero at every weight. Usually the first noninteger
+frequency is N^2/d, with coefficient -c_N^2 b_d(N)^2,
+where b_d(N)=[q^N]f_d.
+At weights 124 and 248, the top coefficient vanishes. The next active
+direction instead gives frequencies 121/9 and 441/19, again with a strictly
+negative coefficient. Exact closed-word bounds prove complete local
+frequency coverage, and zeta multiplication cannot cancel this first
+fractional atom. This excludes ordinary absolutely expandable Dirichlet
+series/Euler products at every weight in the family, with the same limited
+meaning as the weight-24 theorem.
+
+The [independent family audit](CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY_AUDIT.md)
+checks the all-weight argument separately from six bounded frequency
+prefixes and 138 exact coefficient rows. A subsequent
+[taxonomy-repair audit](CUSP_FLAG_ARITHMETIC_TAXONOMY_REPAIR_AUDIT.md)
+records the MIXED arithmetic release without rewriting the frozen proof.
+
+For real w>k, the [positive-spectrum theorem](CUSP_FLAG_POSITIVE_SPECTRUM_BOUNDARY.md)
+gives F_k(w)>1, F_k'(w)<0 and F_k(w)->1; the same holds for L_k.
+The second derivative retains the moving minimizer's correction:
+
+    F_k''=a*D''a-2 g*D_W^-1 g,
+    a=(1,-D_W^-1 D_W1),  g=(D'a)_W.
+
+A finite generic positive-matrix example has negative curvature, but it is
+not an actual modular-form counterexample. For the actual cusp quotients,
+the first negative fractional atom is isolated by derivatives of growing
+order at w_m=w0+m/log(rho_*). The normalized alternating derivative tends
+to that strictly negative atom. Consequently neither fixed-normalization
+F_k nor L_k has a positive Borel Laplace representation on any right
+half-line. Every fixed finite derivative order is nevertheless eventually
+of the expected alternating sign. The order and evaluation point cannot
+be interchanged in that conclusion.
+
+The [boundary audit](CUSP_FLAG_POSITIVE_SPECTRUM_BOUNDARY_AUDIT.md)
+records source authentication, symbolic curvature/gap checks and the
+separate arithmetic-taxonomy repair. An explicit actual weight-24 onset
+certificate and a signed divisor/explicit-formula bridge are being reviewed;
+neither is included in this eighteen-packet checkpoint. No positive Weil
+form, fixed positive spectral parent, critical-line conclusion or new
+abstract theory follows from the accepted results.
 
 ## Why the parent distinction changes the programme
 
@@ -172,7 +243,7 @@ series by renaming it.
 | L4: weights, determinant, duality | Finite representation and determinant identities are explicit; no general ramified or global compatibility theorem is supplied |
 | L5--L6: completion and continuation | The actual period quotient has global meromorphy and reflection, with possible denominator-zero poles; the divisor-power obstructions remain unchanged |
 | L7--L8: functoriality and realization | Honest local state-space, a classical signed Lie parent and an actual flagged period source exist; no new automorphic representation or twist compatibility is inferred |
-| L9: explicit formula and zeros | Local-factor obstructions and a quotient pole ledger are explicit; no critical-line or complex zero-free theorem, RH or GRH consequence |
+| L9: explicit formula and zeros | The quotient pole ledger and failure of a positive Laplace spectrum are explicit; a signed explicit-formula bridge is under review, with no critical-line or complex zero-free theorem, RH or GRH consequence |
 
 ## The all-prime tests now have answers
 
@@ -225,10 +296,12 @@ observable, not completing the original series.
 
 Do not reopen the closed scalar catalogue or present the classical
 Koszul construction as new territory. The period quotient now supplies
-one actual coupled global object and a tested quotient operation. Its
-next burdens are denominator-zero cancellation/control and a justified
-extension to other intrinsic cusp flags. A higher-rank first-frequency
-formula is under investigation, not imported as a theorem here.
+an actual coupled all-weight family and a tested quotient operation. Its
+next burdens are denominator-zero cancellation/control, a source-specific
+signed divisor formula, and extensions to genuinely different intrinsic
+cusp flags. The higher-rank first-frequency formula and positive-spectrum
+obstruction are now proved. A quantitative actual derivative certificate
+and the divisor bridge must pass exact-source review before being promoted.
 
 An added variable, fitted matrix, formal regularization or ad hoc gamma
 factor is not enough. Cross-prime or twist compatibility must be proved
@@ -238,7 +311,7 @@ family.
 
 The [wave-2 research map](WAVE2_RESEARCH_MAP.md) remains the historical
 literature map. Its six-packet status and queue are superseded by this
-sixteen-packet checkpoint.
+eighteen-packet checkpoint.
 
 ## Earlier work is not displaced
 
@@ -257,9 +330,9 @@ global or non-scalar theorem, not through another periodic example.
 ## Replay and exact identities
 
 Every packet has a bounded exact producer and tests. The current
-changed-test-module scope contains 260 tests in sixteen modules. All
-260 tests passed in normal Python (37.580 seconds) and under -O
-(37.710 seconds). All sixteen producers passed checks in both modes.
+changed-test-module scope contains 332 tests in eighteen modules. All
+332 tests passed in normal Python (45.758 seconds) and under -O
+(46.002 seconds). All eighteen producers passed checks in both modes.
 Source manifests bind frozen Git blobs, not just internally consistent
 derived JSON. For the new period quotient, the pinned programme file is
 context; modularity and Eisenstein continuation are explicit primary-source
@@ -269,7 +342,7 @@ an all-parameter classification or analytic continuation.
 Original scientific commits named by the reviews are retained on
 durable source refs. For this programme fetch:
 
-    git fetch --no-tags origin refs/heads/codex/review-sources-universal-euler-wave2 refs/heads/codex/review-sources-finite-graded-parent-wave2 refs/heads/codex/review-sources-satake-tensor-wave2 refs/heads/codex/review-sources-graded-global-wave2 refs/heads/codex/review-sources-segre-koszul-lie-wave2 refs/heads/codex/review-sources-rankin-selberg-quotient-wave2
+    git fetch --no-tags origin refs/heads/codex/review-sources-universal-euler-wave2 refs/heads/codex/review-sources-finite-graded-parent-wave2 refs/heads/codex/review-sources-satake-tensor-wave2 refs/heads/codex/review-sources-graded-global-wave2 refs/heads/codex/review-sources-segre-koszul-lie-wave2 refs/heads/codex/review-sources-rankin-selberg-quotient-wave2 refs/heads/codex/review-sources-cusp-flag-family-wave2 refs/heads/codex/review-sources-cusp-flag-positive-spectrum-wave2
 
 Their exact targets, in that order, are:
 
@@ -278,17 +351,21 @@ Their exact targets, in that order, are:
 - 0d7503b8575db40a46303315b8130973ed214d50;
 - a432061f12fd15658e9790966e5bf3d1e9830e07;
 - 39f19e361c476c77cd016d314662448f43df7a80;
-- b62dfc6348661992bca659c99de226a1b6b22e14.
+- b62dfc6348661992bca659c99de226a1b6b22e14;
+- 43ecb4ac3f2487ee944b6bb6bef72e1ad92f2678;
+- 282ce03941444d0e02daba5fde260ccb54a3f909.
 
 The first retains 02e53055; the third retains b895598a; the fourth
 retains the global proof 334bec3b and its independent review. The sixth
-retains the original five-file quotient proof reviewed in the audit. These refs
+retains the original five-file quotient proof reviewed in the audit. The
+seventh retains the all-weight family proof; the eighth retains both
+arithmetic-taxonomy repairs and the positive-spectrum source. These refs
 are acquisition aids; commit/path/blob checks remain authoritative.
 
-The recursive source-acquisition audit passed for all sixteen root
-manifests: 23 frozen manifest versions, 86 literal source edges, 55 unique
-commit/path file versions and fourteen source commits. Every such commit
-is reachable from this programme or one of the six source refs above.
+The recursive source-acquisition audit passed for all eighteen root
+manifests: 27 frozen manifest versions, 105 literal source edges, 66 unique
+commit/path file versions and seventeen source commits. Every such commit
+is reachable from this programme or one of the eight source refs above.
 The audit follows the manifest's explicit imported-parent identity where
 it differs from a historical base identity; it does not authenticate a
 different file merely because the path matches.
