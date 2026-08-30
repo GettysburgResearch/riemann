@@ -58,10 +58,14 @@ Three previously separate exact facts — defect self-duality, character-
 ring exit, angle-stratified purity — are one fact seen three ways:
 **deformations obstruct each other**: the failure of the cube point of the
 deformation space to be functorial is measured by the local L-data of the
-trace-doubling point. Whether this obstruction duality extends (are the
-m >= 5 defects products of L-data of other named deformations? the
-recurring `a^2 - b` factors in the m=5,6 tables are suggestive) is
-deposited as an open question, not a claim.
+trace-doubling point. First data on the extension of this obstruction
+duality (matrix/layer_probes.json): `N_5` is irreducible over `Q(a,b)`,
+and under the symmetric self-dual-pair ansatz it splits into two
+self-dual quadratics over `Q(a,b)(sqrt(16a^4 - 48a^2 b + 41b^2))` — so if
+an m=5 bridge exists, its "deformation" is a CONJUGATE PAIR over a new
+quadratic extension (versus m=3's single deformation over
+`sqrt(a^2-b)`); the obstruction-duality tower appears to deepen with m.
+Deposited as an exact observation + open question, not a claim.
 
 ## Novelty position
 

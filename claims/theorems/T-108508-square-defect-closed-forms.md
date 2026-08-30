@@ -59,8 +59,11 @@ d = 5:  N = G_5 + 2 (e4 h2 - e5 h1) T^3
 2. **The `h`-pattern of the first layers**:
    `corr_3 = 2(e_4 h_2 - e_5 h_1)` and `corr_4 = -2 e_5 h_3` — complete
    homogeneous polynomials paired against deep elementaries with
-   alternating signs; conjectured continuation `corr_3(d) =
-   2 sum_{i >= 4} (-1)^i e_i h_{6-i}` (testable at rank 6; OPEN).
+   alternating signs; the continuation
+   `corr_3(d) = 2 sum_{i>=4} (-1)^i e_i h_{6-i}` is now CONFIRMED at
+   rank 6 by exact instantiation (five for five, including `e_6 h_0`
+   terms: matrix/layer_probes.json) — proved at ranks 4-5, exact-verified
+   at rank 6, general d OPEN.
 3. **Top-coefficient sign law, proved for d <= 5**:
    `N_{2,d}` has top coefficient `(-1)^{(d-1)(d-2)/2} (det A)^{d-1}` —
    the Gauss-sign prediction is corrected at the top exactly when
