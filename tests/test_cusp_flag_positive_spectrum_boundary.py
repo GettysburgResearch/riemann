@@ -79,6 +79,29 @@ class PositiveSpectrumTests(unittest.TestCase):
     def test_complete_fixture(self):
         m.validate_report(m.parse_json(m.FIXTURE.read_text()))
 
+    def test_exact_arithmetic_taxonomy_and_rounding(self):
+        self.assertEqual(self.report["arithmetic_class"], "MIXED")
+        self.assertEqual(
+            self.report["arithmetic_components"],
+            ["CERTIFIED_INTEGER_COVERAGE", "EXACT_RATIONAL"],
+        )
+        self.assertEqual(
+            self.report["rounding_contract"],
+            "exact Python integers and Fraction; no rounding",
+        )
+        for key, value in (
+            ("arithmetic_class", "EXACT_INTEGER_AND_RATIONAL"),
+            ("arithmetic_components", ["EXACT_RATIONAL"]),
+            ("rounding_contract", "rounded"),
+        ):
+            bad = copy.deepcopy(self.report)
+            bad[key] = value
+            with (
+                mock.patch.object(m, "build_report", return_value=self.report),
+                self.assertRaises(ValueError),
+            ):
+                m.validate_report(bad)
+
     def test_six_frozen_bindings(self):
         source, auth = m.authenticate_sources()
         self.assertEqual(auth["frozen_source_count"], 6)
