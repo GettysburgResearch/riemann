@@ -13,19 +13,16 @@ import hashlib
 import importlib.util
 import json
 import math
+from collections.abc import Iterable, Sequence
 from fractions import Fraction
 from pathlib import Path
-from typing import Iterable, Sequence
-
 
 SCRIPT_PATH = Path(__file__).resolve()
 PACKET_ROOT = SCRIPT_PATH.parent
 ATLAS_ROOT = PACKET_ROOT.parent
 REPO_ROOT = SCRIPT_PATH.parents[4]
 OUTPUT_PATH = PACKET_ROOT / "nonintegral_local_power_rationality.json"
-SOURCE_MANIFEST_PATH = (
-    PACKET_ROOT / "nonintegral_local_power_rationality.sources.json"
-)
+SOURCE_MANIFEST_PATH = PACKET_ROOT / "nonintegral_local_power_rationality.sources.json"
 NOTE_PATH = PACKET_ROOT / "NONINTEGRAL_LOCAL_POWER_RATIONALITY.md"
 TEST_PATH = REPO_ROOT / "tests" / "test_nonintegral_local_power_rationality.py"
 
@@ -69,7 +66,9 @@ def _canonical_sha256(value: object) -> str:
 
 
 def _clean_laurent(value: Laurent) -> Laurent:
-    return {exponent: coefficient for exponent, coefficient in value.items() if coefficient}
+    return {
+        exponent: coefficient for exponent, coefficient in value.items() if coefficient
+    }
 
 
 def laurent_add(left: Laurent, right: Laurent) -> Laurent:
@@ -179,9 +178,8 @@ def xpoly_add(left: XPolynomial, right: XPolynomial) -> XPolynomial:
     length = max(len(left), len(right))
     result = [0] * length
     for index in range(length):
-        result[index] = (
-            (left[index] if index < len(left) else 0)
-            + (right[index] if index < len(right) else 0)
+        result[index] = (left[index] if index < len(left) else 0) + (
+            right[index] if index < len(right) else 0
         )
     return _xpoly_clean(result)
 
@@ -271,17 +269,27 @@ def generalized_binomial(value: Fraction, index: int) -> Fraction:
 
 
 def fraction_text(value: Fraction) -> str:
-    return str(value.numerator) if value.denominator == 1 else f"{value.numerator}/{value.denominator}"
+    return (
+        str(value.numerator)
+        if value.denominator == 1
+        else f"{value.numerator}/{value.denominator}"
+    )
 
 
-def rational_power_hostile_control(value: Fraction, terms: int = 10) -> dict[str, object]:
+def rational_power_hostile_control(
+    value: Fraction, terms: int = 10
+) -> dict[str, object]:
     coefficients = [generalized_binomial(value, index) for index in range(terms)]
     pole_exponents = [Fraction(2 * index) - value for index in range(terms)]
     return {
         "lambda": fraction_text(value),
-        "binomial_coefficients": [fraction_text(coefficient) for coefficient in coefficients],
+        "binomial_coefficients": [
+            fraction_text(coefficient) for coefficient in coefficients
+        ],
         "all_displayed_coefficients_nonzero": all(coefficients),
-        "pole_exponents_2j_minus_lambda": [fraction_text(item) for item in pole_exponents],
+        "pole_exponents_2j_minus_lambda": [
+            fraction_text(item) for item in pole_exponents
+        ],
         "displayed_poles_pairwise_distinct": len(set(pole_exponents)) == terms,
         "finite_prefix_is_not_the_nonrationality_proof": True,
     }
@@ -305,7 +313,9 @@ def determinant_fraction(matrix: list[list[Fraction]]) -> Fraction:
     sign = 1
     determinant = Fraction(1)
     for column in range(len(work)):
-        pivot = next((row for row in range(column, len(work)) if work[row][column]), None)
+        pivot = next(
+            (row for row in range(column, len(work)) if work[row][column]), None
+        )
         if pivot is None:
             return Fraction(0)
         if pivot != column:
@@ -324,10 +334,14 @@ def determinant_fraction(matrix: list[list[Fraction]]) -> Fraction:
 
 
 def reciprocal_hankel_control(trace: int, maximum_size: int) -> dict[str, object]:
-    sequence = [Fraction(1, hecke_integer(trace, index)) for index in range(2 * maximum_size)]
+    sequence = [
+        Fraction(1, hecke_integer(trace, index)) for index in range(2 * maximum_size)
+    ]
     determinants: list[Fraction] = []
     for size in range(1, maximum_size + 1):
-        matrix = [[sequence[row + column] for column in range(size)] for row in range(size)]
+        matrix = [
+            [sequence[row + column] for column in range(size)] for row in range(size)
+        ]
         determinants.append(determinant_fraction(matrix))
     return {
         "trace": trace,
@@ -341,17 +355,15 @@ def reciprocal_hankel_control(trace: int, maximum_size: int) -> dict[str, object
 
 def polynomial_root_exponents(nonzero_degrees: Iterable[int]) -> tuple[int, ...]:
     degrees = tuple(sorted(set(nonzero_degrees)))
-    if any(isinstance(degree, bool) or not isinstance(degree, int) for degree in degrees):
+    if any(
+        isinstance(degree, bool) or not isinstance(degree, int) for degree in degrees
+    ):
         raise TypeError("polynomial degrees must be integers")
     if any(degree < 0 for degree in degrees):
         raise ValueError("polynomial degrees must be nonnegative")
     return tuple(
         sorted(
-            {
-                degree - 2 * index
-                for degree in degrees
-                for index in range(degree + 1)
-            }
+            {degree - 2 * index for degree in degrees for index in range(degree + 1)}
         )
     )
 
@@ -375,11 +387,17 @@ def normalized_multiplicative_monomial(
     coefficients: Sequence[Fraction | int],
 ) -> int | None:
     normalized = [Fraction(value) for value in coefficients]
-    if not normalized or sum(normalized) != 1 or not multiplicativity_identity(normalized):
+    if (
+        not normalized
+        or sum(normalized) != 1
+        or not multiplicativity_identity(normalized)
+    ):
         return None
     support = [index for index, coefficient in enumerate(normalized) if coefficient]
     if len(support) != 1 or normalized[support[0]] != 1:
-        raise ArithmeticError("formal coefficient comparison returned an impossible support")
+        raise ArithmeticError(
+            "formal coefficient comparison returned an impossible support"
+        )
     return support[0]
 
 
@@ -555,7 +573,9 @@ def build_fixture(
     for power, expected in expected_examples.items():
         actual = integer_rows[power]["numerator"]["x_coefficient_vectors"]
         if actual != expected:
-            raise ArithmeticError(f"unexpected numerator defect for k={power}: {actual}")
+            raise ArithmeticError(
+                f"unexpected numerator defect for k={power}: {actual}"
+            )
 
     all_degree_roots = polynomial_root_exponents(range(max_k + 1))
     parity_roots = polynomial_root_exponents(range(max_k % 2, max_k + 1, 2))
@@ -571,9 +591,15 @@ def build_fixture(
     ):
         multiplicativity_controls.append(
             {
-                "coefficients_ascending": [fraction_text(Fraction(value)) for value in coefficients],
-                "formal_multiplicativity_identity": multiplicativity_identity(coefficients),
-                "normalized_monomial_exponent": normalized_multiplicative_monomial(coefficients),
+                "coefficients_ascending": [
+                    fraction_text(Fraction(value)) for value in coefficients
+                ],
+                "formal_multiplicativity_identity": multiplicativity_identity(
+                    coefficients
+                ),
+                "normalized_monomial_exponent": normalized_multiplicative_monomial(
+                    coefficients
+                ),
             }
         )
 
@@ -584,7 +610,7 @@ def build_fixture(
         "claims": {
             "GLO764.LOCAL_POWER_RATIONALITY": {
                 "status": "PROVED_IN_COMPANION_NOTE",
-            "scope": "for each fixed real x>2 in the hyperbolic non-tempered chamber and complex lambda under the positive-real logarithm",
+                "scope": "for each fixed real x>2 in the hyperbolic non-tempered chamber and complex lambda under the positive-real logarithm",
                 "statement": "sum_r u_r(x)^lambda*T^r is rational in T iff lambda is a nonnegative integer",
                 "proof_mechanism": "binomial meromorphic continuation with finitely versus infinitely many distinct actual poles",
             },
@@ -634,10 +660,22 @@ def build_fixture(
             "negative_one_exact_hankel": reciprocal_hankel_control(3, 5),
             "analytic_proof_not_a_finite_hankel_inference": True,
             "excluded_domain_controls": [
-                {"case": "x=2", "reason": "coalesced alpha=1 boundary requires a different proof"},
-                {"case": "x<-2", "reason": "u_r changes sign and no positive-real logarithm is canonical"},
-                {"case": "abs(x)<2", "reason": "oscillation and coefficient zeros create branch and definition failures"},
-                {"case": "raw determinant q_local!=1", "reason": "requires a separately normalized two-parameter theorem"},
+                {
+                    "case": "x=2",
+                    "reason": "coalesced alpha=1 boundary requires a different proof",
+                },
+                {
+                    "case": "x<-2",
+                    "reason": "u_r changes sign and no positive-real logarithm is canonical",
+                },
+                {
+                    "case": "abs(x)<2",
+                    "reason": "oscillation and coefficient zeros create branch and definition failures",
+                },
+                {
+                    "case": "raw determinant q_local!=1",
+                    "reason": "requires a separately normalized two-parameter theorem",
+                },
             ],
         },
         "polynomial_transform_replay": {
@@ -741,7 +779,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = parser.parse_args(argv)
     serialized = _serialized_fixture()
     if args.check:
-        if not OUTPUT_PATH.exists() or OUTPUT_PATH.read_text(encoding="utf-8") != serialized:
+        if (
+            not OUTPUT_PATH.exists()
+            or OUTPUT_PATH.read_text(encoding="utf-8") != serialized
+        ):
             raise SystemExit("stored nonintegral local-power fixture is stale")
         print(f"verified {OUTPUT_PATH}")
         return 0

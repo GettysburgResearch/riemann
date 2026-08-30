@@ -9,7 +9,6 @@ import unittest
 from fractions import Fraction
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 PACKET_ROOT = ROOT / "research" / "l-families" / "atlas" / "generalized"
 MODULE_PATH = PACKET_ROOT / "nonintegral_local_power_rationality.py"
@@ -31,7 +30,7 @@ def evaluate_x_polynomial(coefficients: tuple[int, ...], value: Fraction) -> Fra
 
 def reject_float(value: object) -> None:
     if isinstance(value, float):
-        raise AssertionError(f"unexpected float {value!r}")
+        raise TypeError(f"unexpected float {value!r}")
     if isinstance(value, dict):
         for child in value.values():
             reject_float(child)
@@ -49,7 +48,7 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
         x_laurent = {1: 1, -1: 1}
         self.assertEqual(subject.hecke_laurent(0), {0: 1})
         self.assertEqual(subject.hecke_laurent(1), x_laurent)
-        for index in range(0, 20):
+        for index in range(20):
             expected = {index - 2 * j: 1 for j in range(index + 1)}
             self.assertEqual(subject.hecke_laurent(index), expected)
             recurrence = subject.laurent_add(
@@ -71,7 +70,7 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
                 previous, current = current, x * current - previous
 
     def test_symbolic_denominator_and_numerator_annihilation(self) -> None:
-        for power in range(0, 9):
+        for power in range(9):
             denominator = subject.denominator_laurent(power)
             numerator = subject.numerator_laurent(power)
             self.assertEqual(len(denominator), power + 2)
@@ -82,7 +81,7 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
                     coefficient,
                     {exponent: coefficient[-exponent] for exponent in coefficient},
                 )
-            for index in range(0, 4 * (power + 1)):
+            for index in range(4 * (power + 1)):
                 coefficient: subject.Laurent = {}
                 for degree in range(min(index, len(denominator) - 1) + 1):
                     coefficient = subject.laurent_add(
@@ -113,7 +112,7 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
     def test_exact_numeric_specialization_and_minimal_root_rows(self) -> None:
         alpha = Fraction(2)
         x = alpha + 1 / alpha
-        for power in range(0, 9):
+        for power in range(9):
             denominator = [
                 evaluate_x_polynomial(polynomial, x)
                 for polynomial in subject.denominator_in_x(power)
@@ -149,7 +148,9 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
                 self.assertEqual(convolution, expected, (power, index))
 
             fixture_row = self.fixture["integer_power_replay"]["rows"][power]
-            self.assertEqual(fixture_row["minimal_denominator_degree_for_x_gt_2"], power + 1)
+            self.assertEqual(
+                fixture_row["minimal_denominator_degree_for_x_gt_2"], power + 1
+            )
             self.assertTrue(fixture_row["weights_pairwise_distinct"])
             self.assertTrue(
                 all(
@@ -161,7 +162,7 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
             )
 
     def test_generalized_binomial_termination_and_hostile_prefixes(self) -> None:
-        for power in range(0, 10):
+        for power in range(10):
             coefficients = [
                 subject.generalized_binomial(Fraction(power), index)
                 for index in range(power + 5)
@@ -169,7 +170,9 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
             self.assertTrue(all(coefficients[: power + 1]))
             self.assertFalse(any(coefficients[power + 1 :]))
         for value in (Fraction(-1), Fraction(1, 2), Fraction(3, 2), Fraction(-3, 2)):
-            coefficients = [subject.generalized_binomial(value, index) for index in range(40)]
+            coefficients = [
+                subject.generalized_binomial(value, index) for index in range(40)
+            ]
             self.assertTrue(all(coefficients))
 
         controls = self.fixture["noninteger_hostile_controls"]
@@ -183,7 +186,7 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
 
     def test_polynomial_root_bound_handles_mixed_parity(self) -> None:
         self.assertEqual(subject.polynomial_root_exponents((0,)), (0,))
-        for degree in range(0, 13):
+        for degree in range(13):
             all_roots = subject.polynomial_root_exponents(range(degree + 1))
             self.assertEqual(all_roots, tuple(range(-degree, degree + 1)))
             self.assertEqual(len(all_roots), 2 * degree + 1)
@@ -234,9 +237,7 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
             "046f76f43a2af3ac296f5c18c258e61f138e122bee38ec618af489e7e3a9e50e",
         )
         self.assertTrue(source["scope_firewall"]["local_only"])
-        self.assertTrue(
-            source["scope_firewall"]["hyperbolic_non_tempered_chamber"]
-        )
+        self.assertTrue(source["scope_firewall"]["hyperbolic_non_tempered_chamber"])
         self.assertTrue(
             source["scope_firewall"]["tempered_GL2_trace_chamber_not_treated"]
         )
@@ -254,9 +255,7 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
             },
         )
         rows = self.fixture["survival_ladder"]["rows"]
-        noninteger = next(
-            row for row in rows if row["object"].startswith("noninteger")
-        )
+        noninteger = next(row for row in rows if row["object"].startswith("noninteger"))
         self.assertEqual(noninteger["first_failure_level"], "L3")
         self.assertIn("INFINITELY_MANY", noninteger["statuses"]["L3"])
         firewall = self.fixture["scope_firewall"]
@@ -283,7 +282,9 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
         )
         self.assertEqual(resources["float_operations"], 0)
         self.assertFalse(resources["external_symbolic_engine"])
-        self.assertEqual(resources["prime_curve_field_zero_or_conductor_enumerations"], 0)
+        self.assertEqual(
+            resources["prime_curve_field_zero_or_conductor_enumerations"], 0
+        )
         reject_float(self.fixture)
 
         with self.assertRaisesRegex(RuntimeError, "exclusive cap"):
