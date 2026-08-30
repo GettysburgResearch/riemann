@@ -1,0 +1,51 @@
+{
+  "schema": "riemann.atlas.generalized.nonintegral_local_power.sources.v1",
+  "programme_issue": {
+    "number": 764,
+    "url": "https://github.com/gfreund123/riemann/issues/764"
+  },
+  "base_commit": "10446e8ea9c55162c317810f63c1f7a379466459",
+  "normalization": "determinant-one unramified rank-two trace recurrence u_0=1, u_1=x, u_(r+2)=x*u_(r+1)-u_r",
+  "sources": [
+    {
+      "path": "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.json",
+      "role": "existing Dickson/SU(2) recurrence normalization and integer symmetric-power boundary",
+      "schema": "riemann.function_field.elliptic_symmetric_power_trace_aliasing.v1",
+      "payload_sha256": "046f76f43a2af3ac296f5c18c258e61f138e122bee38ec618af489e7e3a9e50e",
+      "file_sha256_lf_normalized": "7a6e249fd696f9526154375f60bd97c2c40d251791f08eec6ecdc70b3177b941"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/ELLIPTIC_SYMMETRIC_POWER_TRACE_ALIASING.md",
+      "role": "human-readable normalization, scalar-versus-full-factor, and literature firewall",
+      "file_sha256_lf_normalized": "2eda8ab189c4292b51bb4dd7d6a0c261119e3b82502d3b1dfbc8d1ecea9aeaf7"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py",
+      "role": "independent existing exact Dickson recurrence producer",
+      "file_sha256_lf_normalized": "74d3f8cb65a99ab0c5c7943df6a4aba9f29ba91f6876ea935e0673cfd1dcf043"
+    },
+    {
+      "path": "research/l-families/atlas/core/atlas_core.py",
+      "role": "canonical JSON normalization and digest implementation reused by this packet",
+      "file_sha256_lf_normalized": "c24c0a1a34923efc0f08e2a9dd85e6682bb09d6ae1a470acea071ae194f77880"
+    },
+    {
+      "path": "research/l-families/atlas/schema/l-function-spec.schema.json",
+      "role": "existing atlas boundary between local Euler data and completed global L-function claims",
+      "file_sha256_lf_normalized": "8a3a917aeb918d8d4490b7b78a264ce79b2c5543c1752932c6c890d58ab708e7"
+    }
+  ],
+  "scope_firewall": {
+    "local_only": true,
+    "positive_real_trace_chamber_only": true,
+    "hyperbolic_non_tempered_chamber": true,
+    "tempered_GL2_trace_chamber_not_treated": true,
+    "not_an_automorphic_nonintegral_symmetric_power_no_go": true,
+    "determinant_one_only": true,
+    "no_global_euler_product_constructed": true,
+    "no_completion_or_functional_equation_claim": true,
+    "no_automorphy_motive_or_categorical_no_go": true,
+    "no_RH_GRH_or_zero_distribution_consequence": true,
+    "external_novelty_unreviewed": true
+  }
+}

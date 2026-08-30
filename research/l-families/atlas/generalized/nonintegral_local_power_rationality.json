@@ -1,0 +1,1841 @@
+{
+  "claims": {
+    "GLO764.INTEGER_MINIMAL_DENOMINATOR": {
+      "scope": "k>=0, x>2, determinant-one normalization",
+      "statement": "the reduced denominator is product_(j=0)^k (1-alpha^(k-2j)T)",
+      "status": "PROVED_IN_COMPANION_NOTE_AND_EXACTLY_REPLAYED"
+    },
+    "GLO764.LOCAL_POWER_RATIONALITY": {
+      "proof_mechanism": "binomial meromorphic continuation with finitely versus infinitely many distinct actual poles",
+      "scope": "for each fixed real x>2 in the hyperbolic non-tempered chamber and complex lambda under the positive-real logarithm",
+      "statement": "sum_r u_r(x)^lambda*T^r is rational in T iff lambda is a nonnegative integer",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.POLYNOMIAL_MULTIPLICATIVITY_RIGIDITY": {
+      "scope": "Phi in C[z], Phi(1)=1, identity in C[X,Y]",
+      "statement": "Phi(XY)=Phi(X)Phi(Y) iff Phi=X^m for a unique m>=0",
+      "status": "PROVED_IN_COMPANION_NOTE_AND_FORMALLY_REPLAYED"
+    },
+    "GLO764.POLYNOMIAL_RECURRENCE_BOUND": {
+      "scope": "Phi in C[z]",
+      "statement": "local recurrence order is at most 2*deg(Phi)+1; cancellation may lower it",
+      "status": "PROVED_IN_COMPANION_NOTE_AND_EXACTLY_REPLAYED"
+    }
+  },
+  "integer_power_replay": {
+    "maximum_k": 8,
+    "required_numerator_defects": {
+      "k2": "1+T",
+      "k3": "1+2*x*T+T^2",
+      "k4": "(1+T)*(1+(3*x^2-2)*T+T^2)"
+    },
+    "rows": [
+      {
+        "characteristic_weight_exponents": [
+          0
+        ],
+        "denominator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "-1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              -1
+            ]
+          ]
+        },
+        "k": 0,
+        "minimal_denominator_degree_for_x_gt_2": 1,
+        "numerator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ]
+          ]
+        },
+        "partial_fraction_coefficients_without_common_factor": [
+          {
+            "j": 0,
+            "nonzero": true,
+            "q_exponent": 0,
+            "signed_binomial": 1
+          }
+        ],
+        "tail_annihilation_checked_through_index": 3,
+        "weights_pairwise_distinct": true
+      },
+      {
+        "characteristic_weight_exponents": [
+          1,
+          -1
+        ],
+        "denominator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "-x",
+            "1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              0,
+              -1
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "k": 1,
+        "minimal_denominator_degree_for_x_gt_2": 2,
+        "numerator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ]
+          ]
+        },
+        "partial_fraction_coefficients_without_common_factor": [
+          {
+            "j": 0,
+            "nonzero": true,
+            "q_exponent": 0,
+            "signed_binomial": 1
+          },
+          {
+            "j": 1,
+            "nonzero": true,
+            "q_exponent": 1,
+            "signed_binomial": -1
+          }
+        ],
+        "tail_annihilation_checked_through_index": 6,
+        "weights_pairwise_distinct": true
+      },
+      {
+        "characteristic_weight_exponents": [
+          2,
+          0,
+          -2
+        ],
+        "denominator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "-x^2+1",
+            "x^2-1",
+            "-1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              1,
+              0,
+              -1
+            ],
+            [
+              -1,
+              0,
+              1
+            ],
+            [
+              -1
+            ]
+          ]
+        },
+        "k": 2,
+        "minimal_denominator_degree_for_x_gt_2": 3,
+        "numerator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "partial_fraction_coefficients_without_common_factor": [
+          {
+            "j": 0,
+            "nonzero": true,
+            "q_exponent": 0,
+            "signed_binomial": 1
+          },
+          {
+            "j": 1,
+            "nonzero": true,
+            "q_exponent": 1,
+            "signed_binomial": -2
+          },
+          {
+            "j": 2,
+            "nonzero": true,
+            "q_exponent": 2,
+            "signed_binomial": 1
+          }
+        ],
+        "tail_annihilation_checked_through_index": 9,
+        "weights_pairwise_distinct": true
+      },
+      {
+        "characteristic_weight_exponents": [
+          3,
+          1,
+          -1,
+          -3
+        ],
+        "denominator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "-x^3+2*x",
+            "x^4-3*x^2+2",
+            "-x^3+2*x",
+            "1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              0,
+              2,
+              0,
+              -1
+            ],
+            [
+              2,
+              0,
+              -3,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              0,
+              -1
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "k": 3,
+        "minimal_denominator_degree_for_x_gt_2": 4,
+        "numerator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "2*x",
+            "1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "partial_fraction_coefficients_without_common_factor": [
+          {
+            "j": 0,
+            "nonzero": true,
+            "q_exponent": 0,
+            "signed_binomial": 1
+          },
+          {
+            "j": 1,
+            "nonzero": true,
+            "q_exponent": 1,
+            "signed_binomial": -3
+          },
+          {
+            "j": 2,
+            "nonzero": true,
+            "q_exponent": 2,
+            "signed_binomial": 3
+          },
+          {
+            "j": 3,
+            "nonzero": true,
+            "q_exponent": 3,
+            "signed_binomial": -1
+          }
+        ],
+        "tail_annihilation_checked_through_index": 12,
+        "weights_pairwise_distinct": true
+      },
+      {
+        "characteristic_weight_exponents": [
+          4,
+          2,
+          0,
+          -2,
+          -4
+        ],
+        "denominator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "-x^4+3*x^2-1",
+            "x^6-5*x^4+7*x^2-2",
+            "-x^6+5*x^4-7*x^2+2",
+            "x^4-3*x^2+1",
+            "-1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              -1,
+              0,
+              3,
+              0,
+              -1
+            ],
+            [
+              -2,
+              0,
+              7,
+              0,
+              -5,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              -7,
+              0,
+              5,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              -3,
+              0,
+              1
+            ],
+            [
+              -1
+            ]
+          ]
+        },
+        "k": 4,
+        "minimal_denominator_degree_for_x_gt_2": 5,
+        "numerator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "3*x^2-1",
+            "3*x^2-1",
+            "1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              -1,
+              0,
+              3
+            ],
+            [
+              -1,
+              0,
+              3
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "partial_fraction_coefficients_without_common_factor": [
+          {
+            "j": 0,
+            "nonzero": true,
+            "q_exponent": 0,
+            "signed_binomial": 1
+          },
+          {
+            "j": 1,
+            "nonzero": true,
+            "q_exponent": 1,
+            "signed_binomial": -4
+          },
+          {
+            "j": 2,
+            "nonzero": true,
+            "q_exponent": 2,
+            "signed_binomial": 6
+          },
+          {
+            "j": 3,
+            "nonzero": true,
+            "q_exponent": 3,
+            "signed_binomial": -4
+          },
+          {
+            "j": 4,
+            "nonzero": true,
+            "q_exponent": 4,
+            "signed_binomial": 1
+          }
+        ],
+        "tail_annihilation_checked_through_index": 15,
+        "weights_pairwise_distinct": true
+      },
+      {
+        "characteristic_weight_exponents": [
+          5,
+          3,
+          1,
+          -1,
+          -3,
+          -5
+        ],
+        "denominator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "-x^5+4*x^3-3*x",
+            "x^8-7*x^6+16*x^4-13*x^2+3",
+            "-x^9+8*x^7-22*x^5+23*x^3-6*x",
+            "x^8-7*x^6+16*x^4-13*x^2+3",
+            "-x^5+4*x^3-3*x",
+            "1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              0,
+              -3,
+              0,
+              4,
+              0,
+              -1
+            ],
+            [
+              3,
+              0,
+              -13,
+              0,
+              16,
+              0,
+              -7,
+              0,
+              1
+            ],
+            [
+              0,
+              -6,
+              0,
+              23,
+              0,
+              -22,
+              0,
+              8,
+              0,
+              -1
+            ],
+            [
+              3,
+              0,
+              -13,
+              0,
+              16,
+              0,
+              -7,
+              0,
+              1
+            ],
+            [
+              0,
+              -3,
+              0,
+              4,
+              0,
+              -1
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "k": 5,
+        "minimal_denominator_degree_for_x_gt_2": 6,
+        "numerator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "4*x^3-3*x",
+            "6*x^4-8*x^2+2",
+            "4*x^3-3*x",
+            "1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              0,
+              -3,
+              0,
+              4
+            ],
+            [
+              2,
+              0,
+              -8,
+              0,
+              6
+            ],
+            [
+              0,
+              -3,
+              0,
+              4
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "partial_fraction_coefficients_without_common_factor": [
+          {
+            "j": 0,
+            "nonzero": true,
+            "q_exponent": 0,
+            "signed_binomial": 1
+          },
+          {
+            "j": 1,
+            "nonzero": true,
+            "q_exponent": 1,
+            "signed_binomial": -5
+          },
+          {
+            "j": 2,
+            "nonzero": true,
+            "q_exponent": 2,
+            "signed_binomial": 10
+          },
+          {
+            "j": 3,
+            "nonzero": true,
+            "q_exponent": 3,
+            "signed_binomial": -10
+          },
+          {
+            "j": 4,
+            "nonzero": true,
+            "q_exponent": 4,
+            "signed_binomial": 5
+          },
+          {
+            "j": 5,
+            "nonzero": true,
+            "q_exponent": 5,
+            "signed_binomial": -1
+          }
+        ],
+        "tail_annihilation_checked_through_index": 18,
+        "weights_pairwise_distinct": true
+      },
+      {
+        "characteristic_weight_exponents": [
+          6,
+          4,
+          2,
+          0,
+          -2,
+          -4,
+          -6
+        ],
+        "denominator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "-x^6+5*x^4-6*x^2+1",
+            "x^10-9*x^8+29*x^6-40*x^4+22*x^2-3",
+            "-x^12+11*x^10-46*x^8+90*x^6-81*x^4+28*x^2-3",
+            "x^12-11*x^10+46*x^8-90*x^6+81*x^4-28*x^2+3",
+            "-x^10+9*x^8-29*x^6+40*x^4-22*x^2+3",
+            "x^6-5*x^4+6*x^2-1",
+            "-1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              1,
+              0,
+              -6,
+              0,
+              5,
+              0,
+              -1
+            ],
+            [
+              -3,
+              0,
+              22,
+              0,
+              -40,
+              0,
+              29,
+              0,
+              -9,
+              0,
+              1
+            ],
+            [
+              -3,
+              0,
+              28,
+              0,
+              -81,
+              0,
+              90,
+              0,
+              -46,
+              0,
+              11,
+              0,
+              -1
+            ],
+            [
+              3,
+              0,
+              -28,
+              0,
+              81,
+              0,
+              -90,
+              0,
+              46,
+              0,
+              -11,
+              0,
+              1
+            ],
+            [
+              3,
+              0,
+              -22,
+              0,
+              40,
+              0,
+              -29,
+              0,
+              9,
+              0,
+              -1
+            ],
+            [
+              -1,
+              0,
+              6,
+              0,
+              -5,
+              0,
+              1
+            ],
+            [
+              -1
+            ]
+          ]
+        },
+        "k": 6,
+        "minimal_denominator_degree_for_x_gt_2": 7,
+        "numerator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "5*x^4-6*x^2+1",
+            "10*x^6-25*x^4+16*x^2-2",
+            "10*x^6-25*x^4+16*x^2-2",
+            "5*x^4-6*x^2+1",
+            "1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              1,
+              0,
+              -6,
+              0,
+              5
+            ],
+            [
+              -2,
+              0,
+              16,
+              0,
+              -25,
+              0,
+              10
+            ],
+            [
+              -2,
+              0,
+              16,
+              0,
+              -25,
+              0,
+              10
+            ],
+            [
+              1,
+              0,
+              -6,
+              0,
+              5
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "partial_fraction_coefficients_without_common_factor": [
+          {
+            "j": 0,
+            "nonzero": true,
+            "q_exponent": 0,
+            "signed_binomial": 1
+          },
+          {
+            "j": 1,
+            "nonzero": true,
+            "q_exponent": 1,
+            "signed_binomial": -6
+          },
+          {
+            "j": 2,
+            "nonzero": true,
+            "q_exponent": 2,
+            "signed_binomial": 15
+          },
+          {
+            "j": 3,
+            "nonzero": true,
+            "q_exponent": 3,
+            "signed_binomial": -20
+          },
+          {
+            "j": 4,
+            "nonzero": true,
+            "q_exponent": 4,
+            "signed_binomial": 15
+          },
+          {
+            "j": 5,
+            "nonzero": true,
+            "q_exponent": 5,
+            "signed_binomial": -6
+          },
+          {
+            "j": 6,
+            "nonzero": true,
+            "q_exponent": 6,
+            "signed_binomial": 1
+          }
+        ],
+        "tail_annihilation_checked_through_index": 21,
+        "weights_pairwise_distinct": true
+      },
+      {
+        "characteristic_weight_exponents": [
+          7,
+          5,
+          3,
+          1,
+          -1,
+          -3,
+          -5,
+          -7
+        ],
+        "denominator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "-x^7+6*x^5-10*x^3+4*x",
+            "x^12-11*x^10+46*x^8-91*x^6+86*x^4-34*x^2+4",
+            "-x^15+14*x^13-79*x^11+229*x^9-359*x^7+292*x^5-106*x^3+12*x",
+            "x^16-15*x^14+92*x^12-296*x^10+533*x^8-532*x^6+277*x^4-68*x^2+6",
+            "-x^15+14*x^13-79*x^11+229*x^9-359*x^7+292*x^5-106*x^3+12*x",
+            "x^12-11*x^10+46*x^8-91*x^6+86*x^4-34*x^2+4",
+            "-x^7+6*x^5-10*x^3+4*x",
+            "1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              0,
+              4,
+              0,
+              -10,
+              0,
+              6,
+              0,
+              -1
+            ],
+            [
+              4,
+              0,
+              -34,
+              0,
+              86,
+              0,
+              -91,
+              0,
+              46,
+              0,
+              -11,
+              0,
+              1
+            ],
+            [
+              0,
+              12,
+              0,
+              -106,
+              0,
+              292,
+              0,
+              -359,
+              0,
+              229,
+              0,
+              -79,
+              0,
+              14,
+              0,
+              -1
+            ],
+            [
+              6,
+              0,
+              -68,
+              0,
+              277,
+              0,
+              -532,
+              0,
+              533,
+              0,
+              -296,
+              0,
+              92,
+              0,
+              -15,
+              0,
+              1
+            ],
+            [
+              0,
+              12,
+              0,
+              -106,
+              0,
+              292,
+              0,
+              -359,
+              0,
+              229,
+              0,
+              -79,
+              0,
+              14,
+              0,
+              -1
+            ],
+            [
+              4,
+              0,
+              -34,
+              0,
+              86,
+              0,
+              -91,
+              0,
+              46,
+              0,
+              -11,
+              0,
+              1
+            ],
+            [
+              0,
+              4,
+              0,
+              -10,
+              0,
+              6,
+              0,
+              -1
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "k": 7,
+        "minimal_denominator_degree_for_x_gt_2": 8,
+        "numerator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "6*x^5-10*x^3+4*x",
+            "15*x^8-56*x^6+65*x^4-27*x^2+3",
+            "20*x^9-90*x^7+132*x^5-68*x^3+8*x",
+            "15*x^8-56*x^6+65*x^4-27*x^2+3",
+            "6*x^5-10*x^3+4*x",
+            "1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              0,
+              4,
+              0,
+              -10,
+              0,
+              6
+            ],
+            [
+              3,
+              0,
+              -27,
+              0,
+              65,
+              0,
+              -56,
+              0,
+              15
+            ],
+            [
+              0,
+              8,
+              0,
+              -68,
+              0,
+              132,
+              0,
+              -90,
+              0,
+              20
+            ],
+            [
+              3,
+              0,
+              -27,
+              0,
+              65,
+              0,
+              -56,
+              0,
+              15
+            ],
+            [
+              0,
+              4,
+              0,
+              -10,
+              0,
+              6
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "partial_fraction_coefficients_without_common_factor": [
+          {
+            "j": 0,
+            "nonzero": true,
+            "q_exponent": 0,
+            "signed_binomial": 1
+          },
+          {
+            "j": 1,
+            "nonzero": true,
+            "q_exponent": 1,
+            "signed_binomial": -7
+          },
+          {
+            "j": 2,
+            "nonzero": true,
+            "q_exponent": 2,
+            "signed_binomial": 21
+          },
+          {
+            "j": 3,
+            "nonzero": true,
+            "q_exponent": 3,
+            "signed_binomial": -35
+          },
+          {
+            "j": 4,
+            "nonzero": true,
+            "q_exponent": 4,
+            "signed_binomial": 35
+          },
+          {
+            "j": 5,
+            "nonzero": true,
+            "q_exponent": 5,
+            "signed_binomial": -21
+          },
+          {
+            "j": 6,
+            "nonzero": true,
+            "q_exponent": 6,
+            "signed_binomial": 7
+          },
+          {
+            "j": 7,
+            "nonzero": true,
+            "q_exponent": 7,
+            "signed_binomial": -1
+          }
+        ],
+        "tail_annihilation_checked_through_index": 24,
+        "weights_pairwise_distinct": true
+      },
+      {
+        "characteristic_weight_exponents": [
+          8,
+          6,
+          4,
+          2,
+          0,
+          -2,
+          -4,
+          -6,
+          -8
+        ],
+        "denominator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "-x^8+7*x^6-15*x^4+10*x^2-1",
+            "x^14-13*x^12+67*x^10-174*x^8+239*x^6-166*x^4+50*x^2-4",
+            "-x^18+17*x^16-121*x^14+467*x^12-1057*x^10+1415*x^8-1073*x^6+416*x^4-70*x^2+4",
+            "x^20-19*x^18+154*x^16-694*x^14+1900*x^12-3244*x^10+3416*x^8-2121*x^6+711*x^4-110*x^2+6",
+            "-x^20+19*x^18-154*x^16+694*x^14-1900*x^12+3244*x^10-3416*x^8+2121*x^6-711*x^4+110*x^2-6",
+            "x^18-17*x^16+121*x^14-467*x^12+1057*x^10-1415*x^8+1073*x^6-416*x^4+70*x^2-4",
+            "-x^14+13*x^12-67*x^10+174*x^8-239*x^6+166*x^4-50*x^2+4",
+            "x^8-7*x^6+15*x^4-10*x^2+1",
+            "-1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              -1,
+              0,
+              10,
+              0,
+              -15,
+              0,
+              7,
+              0,
+              -1
+            ],
+            [
+              -4,
+              0,
+              50,
+              0,
+              -166,
+              0,
+              239,
+              0,
+              -174,
+              0,
+              67,
+              0,
+              -13,
+              0,
+              1
+            ],
+            [
+              4,
+              0,
+              -70,
+              0,
+              416,
+              0,
+              -1073,
+              0,
+              1415,
+              0,
+              -1057,
+              0,
+              467,
+              0,
+              -121,
+              0,
+              17,
+              0,
+              -1
+            ],
+            [
+              6,
+              0,
+              -110,
+              0,
+              711,
+              0,
+              -2121,
+              0,
+              3416,
+              0,
+              -3244,
+              0,
+              1900,
+              0,
+              -694,
+              0,
+              154,
+              0,
+              -19,
+              0,
+              1
+            ],
+            [
+              -6,
+              0,
+              110,
+              0,
+              -711,
+              0,
+              2121,
+              0,
+              -3416,
+              0,
+              3244,
+              0,
+              -1900,
+              0,
+              694,
+              0,
+              -154,
+              0,
+              19,
+              0,
+              -1
+            ],
+            [
+              -4,
+              0,
+              70,
+              0,
+              -416,
+              0,
+              1073,
+              0,
+              -1415,
+              0,
+              1057,
+              0,
+              -467,
+              0,
+              121,
+              0,
+              -17,
+              0,
+              1
+            ],
+            [
+              4,
+              0,
+              -50,
+              0,
+              166,
+              0,
+              -239,
+              0,
+              174,
+              0,
+              -67,
+              0,
+              13,
+              0,
+              -1
+            ],
+            [
+              1,
+              0,
+              -10,
+              0,
+              15,
+              0,
+              -7,
+              0,
+              1
+            ],
+            [
+              -1
+            ]
+          ]
+        },
+        "k": 8,
+        "minimal_denominator_degree_for_x_gt_2": 9,
+        "numerator": {
+          "coefficient_order": "ascending powers of T; each x coefficient also ascending",
+          "x_coefficient_text": [
+            "1",
+            "7*x^6-15*x^4+10*x^2-1",
+            "21*x^10-105*x^8+183*x^6-138*x^4+42*x^2-3",
+            "35*x^12-231*x^10+560*x^8-610*x^6+293*x^4-52*x^2+3",
+            "35*x^12-231*x^10+560*x^8-610*x^6+293*x^4-52*x^2+3",
+            "21*x^10-105*x^8+183*x^6-138*x^4+42*x^2-3",
+            "7*x^6-15*x^4+10*x^2-1",
+            "1"
+          ],
+          "x_coefficient_vectors": [
+            [
+              1
+            ],
+            [
+              -1,
+              0,
+              10,
+              0,
+              -15,
+              0,
+              7
+            ],
+            [
+              -3,
+              0,
+              42,
+              0,
+              -138,
+              0,
+              183,
+              0,
+              -105,
+              0,
+              21
+            ],
+            [
+              3,
+              0,
+              -52,
+              0,
+              293,
+              0,
+              -610,
+              0,
+              560,
+              0,
+              -231,
+              0,
+              35
+            ],
+            [
+              3,
+              0,
+              -52,
+              0,
+              293,
+              0,
+              -610,
+              0,
+              560,
+              0,
+              -231,
+              0,
+              35
+            ],
+            [
+              -3,
+              0,
+              42,
+              0,
+              -138,
+              0,
+              183,
+              0,
+              -105,
+              0,
+              21
+            ],
+            [
+              -1,
+              0,
+              10,
+              0,
+              -15,
+              0,
+              7
+            ],
+            [
+              1
+            ]
+          ]
+        },
+        "partial_fraction_coefficients_without_common_factor": [
+          {
+            "j": 0,
+            "nonzero": true,
+            "q_exponent": 0,
+            "signed_binomial": 1
+          },
+          {
+            "j": 1,
+            "nonzero": true,
+            "q_exponent": 1,
+            "signed_binomial": -8
+          },
+          {
+            "j": 2,
+            "nonzero": true,
+            "q_exponent": 2,
+            "signed_binomial": 28
+          },
+          {
+            "j": 3,
+            "nonzero": true,
+            "q_exponent": 3,
+            "signed_binomial": -56
+          },
+          {
+            "j": 4,
+            "nonzero": true,
+            "q_exponent": 4,
+            "signed_binomial": 70
+          },
+          {
+            "j": 5,
+            "nonzero": true,
+            "q_exponent": 5,
+            "signed_binomial": -56
+          },
+          {
+            "j": 6,
+            "nonzero": true,
+            "q_exponent": 6,
+            "signed_binomial": 28
+          },
+          {
+            "j": 7,
+            "nonzero": true,
+            "q_exponent": 7,
+            "signed_binomial": -8
+          },
+          {
+            "j": 8,
+            "nonzero": true,
+            "q_exponent": 8,
+            "signed_binomial": 1
+          }
+        ],
+        "tail_annihilation_checked_through_index": 27,
+        "weights_pairwise_distinct": true
+      }
+    ]
+  },
+  "literature_firewall": {
+    "external_specialist_novelty_review_required": true,
+    "hadamard_closure_is_classical": true,
+    "integer_power_formula_is_classical": true,
+    "references": [
+      {
+        "authors": "Pantelimon Stanica",
+        "boundary": "closed generating functions for nonnegative integer powers of nondegenerate second-order recurrences",
+        "title": "Generating Functions, Weighted and Non-Weighted Sums for Powers of Second-Order Recurrence Sequences",
+        "url": "https://arxiv.org/abs/math/0010149"
+      },
+      {
+        "authors": "Umberto Zannier",
+        "boundary": "Hadamard roots chosen in arithmetic recurrence settings; not the fixed positive-real complex power studied here",
+        "title": "A proof of Pisot's d-th root conjecture",
+        "url": "https://arxiv.org/abs/math/0010024"
+      },
+      {
+        "authors": "Andrea Ferretti and Umberto Zannier",
+        "boundary": "algebraic equations and roots in Hadamard rings; requires a specialist comparison before any novelty claim",
+        "title": "Equations in the Hadamard ring of rational functions",
+        "url": "https://arxiv.org/abs/math/0701772"
+      },
+      {
+        "authors": "Gessica Alecci, Stefano Barbero, and Nadir Murru",
+        "boundary": "modern account of Hadamard closure and characteristic-root bookkeeping",
+        "title": "Some notes on the algebraic structure of linear recurrent sequences",
+        "url": "https://arxiv.org/abs/2302.13867"
+      }
+    ],
+    "search_is_not_a_priority_proof": true
+  },
+  "noninteger_hostile_controls": {
+    "analytic_proof_not_a_finite_hankel_inference": true,
+    "binomial_pole_prefixes": [
+      {
+        "all_displayed_coefficients_nonzero": true,
+        "binomial_coefficients": [
+          "1",
+          "-1",
+          "1",
+          "-1",
+          "1",
+          "-1",
+          "1",
+          "-1",
+          "1",
+          "-1"
+        ],
+        "displayed_poles_pairwise_distinct": true,
+        "finite_prefix_is_not_the_nonrationality_proof": true,
+        "lambda": "-1",
+        "pole_exponents_2j_minus_lambda": [
+          "1",
+          "3",
+          "5",
+          "7",
+          "9",
+          "11",
+          "13",
+          "15",
+          "17",
+          "19"
+        ]
+      },
+      {
+        "all_displayed_coefficients_nonzero": true,
+        "binomial_coefficients": [
+          "1",
+          "1/2",
+          "-1/8",
+          "1/16",
+          "-5/128",
+          "7/256",
+          "-21/1024",
+          "33/2048",
+          "-429/32768",
+          "715/65536"
+        ],
+        "displayed_poles_pairwise_distinct": true,
+        "finite_prefix_is_not_the_nonrationality_proof": true,
+        "lambda": "1/2",
+        "pole_exponents_2j_minus_lambda": [
+          "-1/2",
+          "3/2",
+          "7/2",
+          "11/2",
+          "15/2",
+          "19/2",
+          "23/2",
+          "27/2",
+          "31/2",
+          "35/2"
+        ]
+      },
+      {
+        "all_displayed_coefficients_nonzero": true,
+        "binomial_coefficients": [
+          "1",
+          "3/2",
+          "3/8",
+          "-1/16",
+          "3/128",
+          "-3/256",
+          "7/1024",
+          "-9/2048",
+          "99/32768",
+          "-143/65536"
+        ],
+        "displayed_poles_pairwise_distinct": true,
+        "finite_prefix_is_not_the_nonrationality_proof": true,
+        "lambda": "3/2",
+        "pole_exponents_2j_minus_lambda": [
+          "-3/2",
+          "1/2",
+          "5/2",
+          "9/2",
+          "13/2",
+          "17/2",
+          "21/2",
+          "25/2",
+          "29/2",
+          "33/2"
+        ]
+      },
+      {
+        "all_displayed_coefficients_nonzero": true,
+        "binomial_coefficients": [
+          "1",
+          "-3/2",
+          "15/8",
+          "-35/16",
+          "315/128",
+          "-693/256",
+          "3003/1024",
+          "-6435/2048",
+          "109395/32768",
+          "-230945/65536"
+        ],
+        "displayed_poles_pairwise_distinct": true,
+        "finite_prefix_is_not_the_nonrationality_proof": true,
+        "lambda": "-3/2",
+        "pole_exponents_2j_minus_lambda": [
+          "3/2",
+          "7/2",
+          "11/2",
+          "15/2",
+          "19/2",
+          "23/2",
+          "27/2",
+          "31/2",
+          "35/2",
+          "39/2"
+        ]
+      }
+    ],
+    "excluded_domain_controls": [
+      {
+        "case": "x=2",
+        "reason": "coalesced alpha=1 boundary requires a different proof"
+      },
+      {
+        "case": "x<-2",
+        "reason": "u_r changes sign and no positive-real logarithm is canonical"
+      },
+      {
+        "case": "abs(x)<2",
+        "reason": "oscillation and coefficient zeros create branch and definition failures"
+      },
+      {
+        "case": "raw determinant q_local!=1",
+        "reason": "requires a separately normalized two-parameter theorem"
+      }
+    ],
+    "negative_one_exact_hankel": {
+      "all_displayed_nonzero": true,
+      "determinants": [
+        "1",
+        "1/72",
+        "1/12418560",
+        "1/224842838508288000",
+        "1/19864510365654717782127665356800000"
+      ],
+      "finite_hankel_prefix_is_not_an_infinite_rank_proof": true,
+      "lambda": "-1",
+      "sizes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "trace": 3
+    }
+  },
+  "normalization": {
+    "alpha": "(x+sqrt(x^2-4))/2 > 1",
+    "binet": "u_r=alpha^r*(1-q^(r+1))/(1-q)",
+    "complex_power": "u_r^lambda=exp(lambda*log(u_r)) with the real logarithm of u_r>0",
+    "power_series_radius": "alpha^(-Re(lambda))",
+    "q": "alpha^(-2) in (0,1)",
+    "recurrence": "u_0=1; u_1=x; u_(r+2)=x*u_(r+1)-u_r",
+    "tempered_GL2_trace_chamber": "[-2,2] is not treated",
+    "trace_domain": "real x>2 (hyperbolic non-tempered determinant-one chamber)"
+  },
+  "payload_sha256": "e2b0bf29d228ac02d9ef14396c6f76fb06844772652d8b969f241976e8837d99",
+  "polynomial_transform_replay": {
+    "all_degrees_0_through_d": {
+      "d": 8,
+      "order": 17,
+      "root_exponents": [
+        -8,
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "sharp_upper_bound_2d_plus_1": 17
+    },
+    "formal_multiplicativity_controls": [
+      {
+        "coefficients_ascending": [
+          "1"
+        ],
+        "formal_multiplicativity_identity": true,
+        "normalized_monomial_exponent": 0
+      },
+      {
+        "coefficients_ascending": [
+          "0",
+          "1"
+        ],
+        "formal_multiplicativity_identity": true,
+        "normalized_monomial_exponent": 1
+      },
+      {
+        "coefficients_ascending": [
+          "0",
+          "0",
+          "1"
+        ],
+        "formal_multiplicativity_identity": true,
+        "normalized_monomial_exponent": 2
+      },
+      {
+        "coefficients_ascending": [
+          "1",
+          "1"
+        ],
+        "formal_multiplicativity_identity": false,
+        "normalized_monomial_exponent": null
+      },
+      {
+        "coefficients_ascending": [
+          "0",
+          "2"
+        ],
+        "formal_multiplicativity_identity": false,
+        "normalized_monomial_exponent": null
+      },
+      {
+        "coefficients_ascending": [
+          "0",
+          "0",
+          "0"
+        ],
+        "formal_multiplicativity_identity": true,
+        "normalized_monomial_exponent": null
+      },
+      {
+        "coefficients_ascending": [
+          "1/2",
+          "1/2"
+        ],
+        "formal_multiplicativity_identity": false,
+        "normalized_monomial_exponent": null
+      }
+    ],
+    "one_parity_only": {
+      "d": 8,
+      "order": 9,
+      "root_exponents": [
+        -8,
+        -6,
+        -4,
+        -2,
+        0,
+        2,
+        4,
+        6,
+        8
+      ]
+    },
+    "single_fixed_L_function_is_not_a_universality_hypothesis": true
+  },
+  "producer": {
+    "note": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+    "note_sha256_lf_normalized": "068133191dd5cf6d22d34d0834348634c13448d1863d299d123f47d118f48de3",
+    "script": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
+    "script_sha256_lf_normalized": "703463cf781dbef2e3468f23235c8e18b5579410a71ce264806b64ecd14d89da",
+    "test": "tests/test_nonintegral_local_power_rationality.py",
+    "test_sha256_lf_normalized": "16856fed290d656d3fde3a555b48e645c7e3abc5d4464b367471bdb4825077c7"
+  },
+  "programme_issue": 764,
+  "resource_contract": {
+    "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL_SYNTHETIC_ALGEBRA",
+    "declared_work_units": 15858,
+    "external_symbolic_engine": false,
+    "float_operations": 0,
+    "maximum_allowed_k": 12,
+    "maximum_k": 8,
+    "prime_curve_field_zero_or_conductor_enumerations": 0,
+    "random_samples": 0,
+    "work_unit_cap_exclusive": 50000
+  },
+  "schema": "riemann.atlas.generalized.nonintegral_local_power_rationality.v1",
+  "scope_firewall": {
+    "does_not_classify_arbitrary_holomorphic_Phi": true,
+    "does_not_construct_a_global_Euler_product": true,
+    "does_not_construct_or_rule_out_an_infinite_dimensional_interpolation": true,
+    "does_not_prove_automorphy_motivic_origin_or_a_zero_theorem": true,
+    "does_not_prove_convergence_of_any_defect_Euler_product": true,
+    "does_not_supply_ramified_factors_gamma_factors_or_a_functional_equation": true,
+    "does_not_treat_branch_choices_or_zero_coefficients_globally": true,
+    "external_novelty_unreviewed": true,
+    "local_positive_chamber_theorem_only": true,
+    "no_RH_GRH_or_zero_distribution_consequence": true,
+    "not_an_automorphic_nonintegral_symmetric_power_no_go": true,
+    "tempered_GL2_trace_chamber_not_treated": true,
+    "x_gt_2_is_hyperbolic_non_tempered": true
+  },
+  "sources_manifest": {
+    "base_commit": "10446e8ea9c55162c317810f63c1f7a379466459",
+    "file_sha256_lf_normalized": "5d402c43a75548e26f24d0fa659838d89553f0872f2742dd4125cf696bfb425d",
+    "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+    "scope_firewall": {
+      "determinant_one_only": true,
+      "external_novelty_unreviewed": true,
+      "hyperbolic_non_tempered_chamber": true,
+      "local_only": true,
+      "no_RH_GRH_or_zero_distribution_consequence": true,
+      "no_automorphy_motive_or_categorical_no_go": true,
+      "no_completion_or_functional_equation_claim": true,
+      "no_global_euler_product_constructed": true,
+      "not_an_automorphic_nonintegral_symmetric_power_no_go": true,
+      "positive_real_trace_chamber_only": true,
+      "tempered_GL2_trace_chamber_not_treated": true
+    },
+    "verified_sources": [
+      {
+        "file_sha256_lf_normalized": "7a6e249fd696f9526154375f60bd97c2c40d251791f08eec6ecdc70b3177b941",
+        "path": "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.json",
+        "payload_sha256": "046f76f43a2af3ac296f5c18c258e61f138e122bee38ec618af489e7e3a9e50e",
+        "role": "existing Dickson/SU(2) recurrence normalization and integer symmetric-power boundary",
+        "schema": "riemann.function_field.elliptic_symmetric_power_trace_aliasing.v1"
+      },
+      {
+        "file_sha256_lf_normalized": "2eda8ab189c4292b51bb4dd7d6a0c261119e3b82502d3b1dfbc8d1ecea9aeaf7",
+        "path": "research/l-families/atlas/function_field/ELLIPTIC_SYMMETRIC_POWER_TRACE_ALIASING.md",
+        "role": "human-readable normalization, scalar-versus-full-factor, and literature firewall"
+      },
+      {
+        "file_sha256_lf_normalized": "74d3f8cb65a99ab0c5c7943df6a4aba9f29ba91f6876ea935e0673cfd1dcf043",
+        "path": "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py",
+        "role": "independent existing exact Dickson recurrence producer"
+      },
+      {
+        "file_sha256_lf_normalized": "c24c0a1a34923efc0f08e2a9dd85e6682bb09d6ae1a470acea071ae194f77880",
+        "path": "research/l-families/atlas/core/atlas_core.py",
+        "role": "canonical JSON normalization and digest implementation reused by this packet"
+      },
+      {
+        "file_sha256_lf_normalized": "8a3a917aeb918d8d4490b7b78a264ce79b2c5543c1752932c6c890d58ab708e7",
+        "path": "research/l-families/atlas/schema/l-function-spec.schema.json",
+        "role": "existing atlas boundary between local Euler data and completed global L-function claims"
+      }
+    ]
+  },
+  "status": "PROPOSED_EXACT_LOCAL_THEOREM_EXTERNAL_NOVELTY_UNREVIEWED",
+  "survival_ladder": {
+    "levels": {
+      "L0": "well-defined and branch-independent",
+      "L1": "coefficient or local multiplicativity",
+      "L2": "formal Euler product",
+      "L3": "uniform bounded-degree rational local factors",
+      "L4": "weight, determinant, duality, and ramified-prime coherence",
+      "L5": "canonical conductor, gamma factors, and root number",
+      "L6": "analytic continuation and functional equation",
+      "L7": "twist, tensor, induction, and contragredient compatibility",
+      "L8": "automorphic, motivic, spectral, dynamical, or categorical realization",
+      "L9": "principled explicit formula, positivity, or zero theory"
+    },
+    "rows": [
+      {
+        "first_unresolved_level": "L4",
+        "object": "integer coefficient monomial z^k",
+        "statuses": {
+          "L0": "PROVED_PASS",
+          "L1": "PROVED_PASS_FOR_MULTIPLICATIVE_INPUT_COEFFICIENTS",
+          "L2": "PROVED_PASS_AS_A_FORMAL_EULER_PRODUCT",
+          "L3": "PROVED_PASS_LOCAL_DEGREE_K_PLUS_1",
+          "L4": "PARTIAL_SYM_K_DENOMINATOR_WITH_NONTRIVIAL_NUMERATOR_DEFECT",
+          "L5": "NOT_ESTABLISHED_BY_THIS_PACKET",
+          "L6": "NOT_ESTABLISHED_BY_THIS_PACKET",
+          "L7": "NOT_ESTABLISHED_BY_THIS_PACKET",
+          "L8": "NOT_ESTABLISHED_BY_THIS_PACKET",
+          "L9": "NOT_ESTABLISHED_BY_THIS_PACKET"
+        }
+      },
+      {
+        "first_failure_level": "L3",
+        "object": "noninteger complex power on the positive trace chamber",
+        "statuses": {
+          "L0": "PROVED_PASS_ONLY_AFTER_FIXING_X_GT_2_AND_POSITIVE_REAL_LOG",
+          "L1": "NOT_GLOBAL_BRANCH_COHERENT",
+          "L2": "NOT_ESTABLISHED",
+          "L3": "PROVED_FAIL_INFINITELY_MANY_MEROMORPHIC_POLES",
+          "L4": "NOT_REACHED",
+          "L5": "NOT_REACHED",
+          "L6": "NOT_REACHED",
+          "L7": "NOT_REACHED",
+          "L8": "NOT_EXCLUDED_IN_INFINITE_DIMENSIONAL_OR_CATEGORICAL_SETTINGS",
+          "L9": "NOT_REACHED"
+        }
+      },
+      {
+        "object": "arbitrary polynomial coefficient transform Phi",
+        "statuses": {
+          "L0": "PROVED_PASS",
+          "L1": "PROVED_PASS_UNIVERSALLY_IFF_PHI_IS_A_MONOMIAL_AFTER_NORMALIZATION",
+          "L2": "CONDITIONAL_ON_L1",
+          "L3": "PROVED_PASS_LOCAL_ORDER_AT_MOST_2_DEG_PHI_PLUS_1",
+          "L4": "NOT_ESTABLISHED_IN_GENERAL",
+          "L5": "NOT_ESTABLISHED",
+          "L6": "NOT_ESTABLISHED",
+          "L7": "NOT_ESTABLISHED",
+          "L8": "NOT_ESTABLISHED",
+          "L9": "NOT_ESTABLISHED"
+        },
+        "warning": "L3 can survive while L1 fails; the ladder is diagnostic, not a logical implication without hypotheses"
+      }
+    ]
+  }
+}
