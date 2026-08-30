@@ -1,0 +1,73 @@
+{
+  "authoring_base": "282ce03941444d0e02daba5fde260ccb54a3f909",
+  "external_context": [
+    {
+      "remote_bytes_authenticated": false,
+      "role": "printed page277 equations6-7; theta normalization and Poisson identity",
+      "url": "https://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinRiemannZeta/eisenstein-zeta-978-3-662-00734-1_10.pdf"
+    },
+    {
+      "remote_bytes_authenticated": false,
+      "role": "section2 and Theorem3.5/Corollary3.6; signed Poisson-Newton away from zero",
+      "url": "https://arxiv.org/pdf/1301.6511v2"
+    },
+    {
+      "remote_bytes_authenticated": false,
+      "role": "Theorem2.3 classical Rankin-Selberg context; not a hidden growth dependency",
+      "url": "https://people.math.osu.edu/cogdell.1/rorsc-www.pdf"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "77820c6af8d089d22547db6cda5ba025ed96f84f",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md",
+      "sha256_lf": "d5c95db34c62d31e0bb735e09aae5599e3abf29194cd74a50ce1bbebafab1530"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7e6ae5bb1fd9c53930cee1198eb185806a2ea118",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.py",
+      "sha256_lf": "34120d58416c902db94fbeaf69ceb004694888908341b630a1b750f2f1e8316a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7ca422e505e6ccd817aadee3362f1ace2fa83fd4",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.json",
+      "sha256_lf": "fb6ae6ad8535b8cc519d33ab0e901cf17b9cf53ddff9c0bde427daf61faa60db"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "90dc74d185b0b9a42f865a9f9df895ba7cd1c5dd",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.sources.json",
+      "sha256_lf": "f754ecdff30b4fd3a3f8f4b8436e46ab3633ba59738021f5538051fae9e43b7a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "c2d9dc7ea92a75c7e3fd99c5463e664fb79e0d3a",
+      "kind": "reviewed_family_release",
+      "path": "tests/test_cusp_flag_quotient_global_family.py",
+      "sha256_lf": "84603f0412d8a7f1d2c2384c7055f55b4956db3df68b42dde7074d18cbe8265b"
+    },
+    {
+      "commit": "1483ff25e9100276ac7064ba7d7d696b45afb9ea",
+      "git_blob": "d241501272a32771717494dd4c59aa17a6888e98",
+      "kind": "scientific_normalization_context",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_POSITIVE_SPECTRUM_BOUNDARY.md",
+      "sha256_lf": "62925bbe9ebe327ed491f99e886eea5599253295c69f05878d278dd453abe0d7"
+    }
+  ],
+  "primitive_contract": {
+    "atomic_mass_s": "lambda*b_lambda*exp(-(k-1)*lambda)",
+    "gamma_kernel": "-(1+exp(-(k-1)*t))/(1-exp(-t)); t>0",
+    "logarithm": "-log L(w); lambda=log(rho), w=s+k-1",
+    "object": "actual full cusp-flag quotient Q=det I/det I_W; CF1-CF12",
+    "parent_prefix": "complete reviewed CF9 frequency prefixes; parent q/word producer not rerun",
+    "test_space": "C_c^infinity((0,infinity)); origin excluded"
+  },
+  "schema": "cusp-flag-divisor-explicit-formula-sources-v1"
+}
