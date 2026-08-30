@@ -1,0 +1,1635 @@
+{
+  "coverage": "Every closed place of degree <=4 for each source, including infinity; larger degrees do not affect this truncation.",
+  "cutoff": 4,
+  "panels": [
+    {
+      "closed_place_censuses": [
+        {
+          "all_closed_records_sha256": "6519883e9b24f71b90fb0eaa39db748a509a3df94d3d131efab7191a964b03c2",
+          "closed_place_count": 5,
+          "degree": 1,
+          "factors": [
+            {
+              "count": 1,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1
+              ]
+            },
+            {
+              "count": 4,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            }
+          ],
+          "field_order": 5
+        },
+        {
+          "all_closed_records_sha256": "086e21718591b4edae278dd0455e5e8888c4d7934af28397b07b961cadd2bcfa",
+          "closed_place_count": 10,
+          "degree": 2,
+          "factors": [
+            {
+              "count": 8,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 2,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            }
+          ],
+          "field_order": 25
+        },
+        {
+          "all_closed_records_sha256": "2396a6cd30d0c81f2faacb06af1022b70fe05a4f8b10b57200d1a71893715896",
+          "closed_place_count": 40,
+          "degree": 3,
+          "factors": [
+            {
+              "count": 2,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 2,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 20,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 8,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 8,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 125
+        },
+        {
+          "all_closed_records_sha256": "1a16fbb2f9909019cd168260ce4f63a05b3b574a86ede1392a8f3bc427cdaf87",
+          "closed_place_count": 150,
+          "degree": 4,
+          "factors": [
+            {
+              "count": 12,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 10,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                -1
+              ],
+              "twisted": [
+                1,
+                1
+              ]
+            },
+            {
+              "count": 76,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 23,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 28,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 625
+        }
+      ],
+      "infinity_factors": {
+        "standard": [
+          1
+        ],
+        "twisted": [
+          1
+        ]
+      },
+      "source_id": "p5-s3-symmetric",
+      "standard_product_mod_T5": [
+        1,
+        2,
+        5,
+        0,
+        0
+      ],
+      "twisted_product_mod_T5": [
+        1,
+        0,
+        6,
+        0,
+        25
+      ]
+    },
+    {
+      "closed_place_censuses": [
+        {
+          "all_closed_records_sha256": "13e14d124e6e957f76cdca553aa30ad76696a32f301d6ea8568116df8160b2fb",
+          "closed_place_count": 5,
+          "degree": 1,
+          "factors": [
+            {
+              "count": 2,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 2,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1
+              ]
+            }
+          ],
+          "field_order": 5
+        },
+        {
+          "all_closed_records_sha256": "f563ac5f69281f9de25bbf9557e25f22254bf7e37f49ebef1f02f6bae8e4ffcd",
+          "closed_place_count": 10,
+          "degree": 2,
+          "factors": [
+            {
+              "count": 1,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 4,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 3,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 2,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 25
+        },
+        {
+          "all_closed_records_sha256": "cf7e65a6e0c4d59a4297b248e6e53137bd88546216b84da9a7c8631ea27ee6d5",
+          "closed_place_count": 40,
+          "degree": 3,
+          "factors": [
+            {
+              "count": 2,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 2,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 20,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 6,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 10,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 125
+        },
+        {
+          "all_closed_records_sha256": "f3206e29b79b33160a825f7b3d3c2bd04daf7755c7f19e689aba1c459c7dc467",
+          "closed_place_count": 150,
+          "degree": 4,
+          "factors": [
+            {
+              "count": 8,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 16,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                -1
+              ],
+              "twisted": [
+                1,
+                1
+              ]
+            },
+            {
+              "count": 84,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 25,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 16,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 625
+        }
+      ],
+      "infinity_factors": {
+        "standard": [
+          1
+        ],
+        "twisted": [
+          1
+        ]
+      },
+      "source_id": "p5-s3-generic",
+      "standard_product_mod_T5": [
+        1,
+        3,
+        5,
+        0,
+        0
+      ],
+      "twisted_product_mod_T5": [
+        1,
+        4,
+        11,
+        20,
+        25
+      ]
+    },
+    {
+      "closed_place_censuses": [
+        {
+          "all_closed_records_sha256": "42ae3eb885601ac6917d5ee9e78553e3b8b26d5035c0831c959e068d84023d61",
+          "closed_place_count": 5,
+          "degree": 1,
+          "factors": [
+            {
+              "count": 2,
+              "standard": [
+                1
+              ],
+              "twisted": [
+                1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1
+              ]
+            },
+            {
+              "count": 2,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            }
+          ],
+          "field_order": 5
+        },
+        {
+          "all_closed_records_sha256": "03c3bdc5cbedd1434f4c32624e1416cf6bb5c0fa9db20c940fc1c3d05466fe4c",
+          "closed_place_count": 10,
+          "degree": 2,
+          "factors": [
+            {
+              "count": 4,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 2,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 4,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 25
+        },
+        {
+          "all_closed_records_sha256": "50c44a01de3f57c89306dd06fe3f95d61b4cbd8c9e9ad737c1d7b888fd878d89",
+          "closed_place_count": 40,
+          "degree": 3,
+          "factors": [
+            {
+              "count": 40,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            }
+          ],
+          "field_order": 125
+        },
+        {
+          "all_closed_records_sha256": "af846b1bb19f6c745c899a30dada440cd745a5c7179a3869eddf4069984b20f7",
+          "closed_place_count": 150,
+          "degree": 4,
+          "factors": [
+            {
+              "count": 20,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 25,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 53,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 52,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 625
+        }
+      ],
+      "infinity_factors": {
+        "standard": [
+          1
+        ],
+        "twisted": [
+          1
+        ]
+      },
+      "source_id": "p5-cyclic-geometric",
+      "standard_product_mod_T5": [
+        1,
+        0,
+        5,
+        0,
+        0
+      ],
+      "twisted_product_mod_T5": [
+        1,
+        0,
+        -8,
+        0,
+        25
+      ]
+    },
+    {
+      "closed_place_censuses": [
+        {
+          "all_closed_records_sha256": "06f62ae5db7d8ac97f9482fce572c0e3e4ed1c8587ccbda04e445aaf3864c01d",
+          "closed_place_count": 7,
+          "degree": 1,
+          "factors": [
+            {
+              "count": 1,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1
+              ]
+            },
+            {
+              "count": 4,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 7
+        },
+        {
+          "all_closed_records_sha256": "e60fd578ce7aa16505a4c2284431fd34d98a9a42b56e85266940e042ca38a117",
+          "closed_place_count": 21,
+          "degree": 2,
+          "factors": [
+            {
+              "count": 4,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 2,
+              "standard": [
+                1,
+                -1
+              ],
+              "twisted": [
+                1,
+                -1
+              ]
+            },
+            {
+              "count": 8,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 4,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 3,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 49
+        },
+        {
+          "all_closed_records_sha256": "a088b546fe782c9a070c5523259a821498b0aa6e3974c9453581e613f0e8c885",
+          "closed_place_count": 112,
+          "degree": 3,
+          "factors": [
+            {
+              "count": 9,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 9,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 56,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 19,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 19,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 343
+        },
+        {
+          "all_closed_records_sha256": "34743fd7627e4f446538916c0a1443a7f8a695f068faa27146754766fc439447",
+          "closed_place_count": 588,
+          "degree": 4,
+          "factors": [
+            {
+              "count": 24,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 56,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 312,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 100,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 96,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 2401
+        }
+      ],
+      "infinity_factors": {
+        "standard": [
+          1
+        ],
+        "twisted": [
+          1
+        ]
+      },
+      "source_id": "p7-s3-symmetric",
+      "standard_product_mod_T5": [
+        1,
+        0,
+        7,
+        0,
+        0
+      ],
+      "twisted_product_mod_T5": [
+        1,
+        0,
+        14,
+        0,
+        49
+      ]
+    },
+    {
+      "closed_place_censuses": [
+        {
+          "all_closed_records_sha256": "12b68610aa9afbb3b25c4b7e5cf3582c1e1107d9ffd5269832c249e4709ef156",
+          "closed_place_count": 7,
+          "degree": 1,
+          "factors": [
+            {
+              "count": 4,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 7
+        },
+        {
+          "all_closed_records_sha256": "8bd0cb0ea65495f4665353ceeb50dd90a491c19605bd2114af4bd600a9234b22",
+          "closed_place_count": 21,
+          "degree": 2,
+          "factors": [
+            {
+              "count": 1,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 2,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 2,
+              "standard": [
+                1,
+                -1
+              ],
+              "twisted": [
+                1,
+                -1
+              ]
+            },
+            {
+              "count": 8,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 6,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 2,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 49
+        },
+        {
+          "all_closed_records_sha256": "782f5a69c9555ca5af9a3022f541611f2c4833e315b54676f734b56bc3189c9e",
+          "closed_place_count": 112,
+          "degree": 3,
+          "factors": [
+            {
+              "count": 11,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 11,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 56,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 17,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 17,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 343
+        },
+        {
+          "all_closed_records_sha256": "17fc09e3acc7187194e888b865656a8be8725c280e5f5fdf40b665e9e2229441",
+          "closed_place_count": 588,
+          "degree": 4,
+          "factors": [
+            {
+              "count": 52,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 43,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 312,
+              "standard": [
+                1,
+                0,
+                -1
+              ],
+              "twisted": [
+                1,
+                0,
+                -1
+              ]
+            },
+            {
+              "count": 89,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 92,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 2401
+        }
+      ],
+      "infinity_factors": {
+        "standard": [
+          1
+        ],
+        "twisted": [
+          1
+        ]
+      },
+      "source_id": "p7-s3-generic",
+      "standard_product_mod_T5": [
+        1,
+        -3,
+        7,
+        0,
+        0
+      ],
+      "twisted_product_mod_T5": [
+        1,
+        0,
+        7,
+        0,
+        49
+      ]
+    },
+    {
+      "closed_place_censuses": [
+        {
+          "all_closed_records_sha256": "a8ca7f9524cdb48c06b13156613515dfc063931ef3549e597ee42341b07e38b5",
+          "closed_place_count": 7,
+          "degree": 1,
+          "factors": [
+            {
+              "count": 2,
+              "standard": [
+                1
+              ],
+              "twisted": [
+                1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 1,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 7
+        },
+        {
+          "all_closed_records_sha256": "242dfd1dfc4c06c519e846224a1eee891e39d695c851d6f24cced25fdba2e605",
+          "closed_place_count": 21,
+          "degree": 2,
+          "factors": [
+            {
+              "count": 6,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 6,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 9,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 49
+        },
+        {
+          "all_closed_records_sha256": "ccaa1780efc1f8d341fb42c49304b1b2dbafac6670a4a2c48782fa366cf59827",
+          "closed_place_count": 112,
+          "degree": 3,
+          "factors": [
+            {
+              "count": 17,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 17,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 39,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 39,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 343
+        },
+        {
+          "all_closed_records_sha256": "044c274fa9a8aaa561dfaeaed25f7396f9725e0330d06ba739305d500f4e87ad",
+          "closed_place_count": 588,
+          "degree": 4,
+          "factors": [
+            {
+              "count": 92,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                -2,
+                1
+              ]
+            },
+            {
+              "count": 112,
+              "standard": [
+                1,
+                -2,
+                1
+              ],
+              "twisted": [
+                1,
+                2,
+                1
+              ]
+            },
+            {
+              "count": 188,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                -1,
+                1
+              ]
+            },
+            {
+              "count": 196,
+              "standard": [
+                1,
+                1,
+                1
+              ],
+              "twisted": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "field_order": 2401
+        }
+      ],
+      "infinity_factors": {
+        "standard": [
+          1
+        ],
+        "twisted": [
+          1
+        ]
+      },
+      "source_id": "p7-cyclic-arithmetic",
+      "standard_product_mod_T5": [
+        1,
+        4,
+        7,
+        0,
+        0
+      ],
+      "twisted_product_mod_T5": [
+        1,
+        0,
+        -14,
+        0,
+        49
+      ]
+    }
+  ],
+  "precursor_commit": "23ad35cc8010f72cf1df54f09eccb4dcba108879",
+  "precursor_source_hash": "51afca1ce7be4cc60bb82a382485a752c3859e5f7ad672abdd09f2a67654ed69",
+  "schema": "closed-point-euler-v1"
+}
