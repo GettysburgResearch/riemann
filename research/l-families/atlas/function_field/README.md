@@ -101,6 +101,11 @@ is an exact RH-equivalent open gate, not a completed estimate.
   proves only a clean-chart post-cleanup support obstruction while reconciling
   the fixed-label coefficient and marked-place partitions; complete signed
   pushforward, `ONEPLACEWEIL`, `RELTRACE`, and principal binding remain open.
+- [FFPS_SHARED_FIBRE_WICK_OCCUPANCY_SPECTRUM.md](FFPS_SHARED_FIBRE_WICK_OCCUPANCY_SPECTRUM.md)
+  replaces an invalid independent-conductor Wick product by the exact
+  shared-fibre occupancy operator and proves that residue aggregation without
+  literal diagonal energy is insufficient; live occupancy, signed
+  noncancellation, descent, and every principal gate remain open.
 
 The genus-one, genus-two, and cross-rank extensions are organized as
 source/note/JSON/test packets:

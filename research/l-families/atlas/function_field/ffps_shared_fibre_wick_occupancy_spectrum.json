@@ -1,0 +1,351 @@
+{
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": {
+    "complete_residue_envelope_counts": "CERTIFIED_INTEGER_COVERAGE",
+    "matrix_spectrum_and_quadratic_forms": "EXACT_RATIONAL"
+  },
+  "finite_controls": [
+    {
+      "ambient_residue_envelope_points": 16,
+      "centered_tensor_atomic_diagonal": "8/15",
+      "ell": 3,
+      "fixed_owner_class_cell_count": 2,
+      "full_ambient_envelope_inertia": {
+        "negative": 14,
+        "positive": 2,
+        "zero": 0
+      },
+      "held_out": false,
+      "literal_singleton_rank": 0,
+      "rho": 5,
+      "same_cell_contrast_pushforward": [
+        "0",
+        "0"
+      ],
+      "same_cell_contrast_wick_value": "-16/15",
+      "simple_complete_cell_inertia": {
+        "negative": 1,
+        "positive": 1,
+        "zero": 0
+      },
+      "simple_complete_cell_rank": 2,
+      "simple_complete_cell_spectrum": [
+        {
+          "eigenvalue": "7/15",
+          "multiplicity": 0,
+          "sign": 1,
+          "space": "mean_zero_x_mean_zero"
+        },
+        {
+          "eigenvalue": "1/15",
+          "multiplicity": 0,
+          "sign": 1,
+          "space": "mean_zero_x_constant"
+        },
+        {
+          "eigenvalue": "2/15",
+          "multiplicity": 1,
+          "sign": 1,
+          "space": "constant_x_mean_zero"
+        },
+        {
+          "eigenvalue": "-2/15",
+          "multiplicity": 1,
+          "sign": -1,
+          "space": "constant_x_constant"
+        }
+      ],
+      "strict_collision_only_simple_rank": 0,
+      "uniform_envelope_preimages_per_cell": 8
+    },
+    {
+      "ambient_residue_envelope_points": 36,
+      "centered_tensor_atomic_diagonal": "4/7",
+      "ell": 3,
+      "fixed_owner_class_cell_count": 3,
+      "full_ambient_envelope_inertia": {
+        "negative": 33,
+        "positive": 3,
+        "zero": 0
+      },
+      "held_out": false,
+      "literal_singleton_rank": 0,
+      "rho": 7,
+      "same_cell_contrast_pushforward": [
+        "0",
+        "0",
+        "0"
+      ],
+      "same_cell_contrast_wick_value": "-8/7",
+      "simple_complete_cell_inertia": {
+        "negative": 1,
+        "positive": 2,
+        "zero": 0
+      },
+      "simple_complete_cell_rank": 3,
+      "simple_complete_cell_spectrum": [
+        {
+          "eigenvalue": "3/7",
+          "multiplicity": 0,
+          "sign": 1,
+          "space": "mean_zero_x_mean_zero"
+        },
+        {
+          "eigenvalue": "0",
+          "multiplicity": 0,
+          "sign": 0,
+          "space": "mean_zero_x_constant"
+        },
+        {
+          "eigenvalue": "2/21",
+          "multiplicity": 2,
+          "sign": 1,
+          "space": "constant_x_mean_zero"
+        },
+        {
+          "eigenvalue": "-4/21",
+          "multiplicity": 1,
+          "sign": -1,
+          "space": "constant_x_constant"
+        }
+      ],
+      "strict_collision_only_simple_rank": 0,
+      "uniform_envelope_preimages_per_cell": 12
+    },
+    {
+      "ambient_residue_envelope_points": 144,
+      "centered_tensor_atomic_diagonal": "24/35",
+      "ell": 5,
+      "fixed_owner_class_cell_count": 6,
+      "full_ambient_envelope_inertia": {
+        "negative": 138,
+        "positive": 6,
+        "zero": 0
+      },
+      "held_out": false,
+      "literal_singleton_rank": 0,
+      "rho": 7,
+      "same_cell_contrast_pushforward": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "same_cell_contrast_wick_value": "-48/35",
+      "simple_complete_cell_inertia": {
+        "negative": 4,
+        "positive": 2,
+        "zero": 0
+      },
+      "simple_complete_cell_rank": 6,
+      "simple_complete_cell_spectrum": [
+        {
+          "eigenvalue": "11/35",
+          "multiplicity": 2,
+          "sign": 1,
+          "space": "mean_zero_x_mean_zero"
+        },
+        {
+          "eigenvalue": "-4/35",
+          "multiplicity": 1,
+          "sign": -1,
+          "space": "mean_zero_x_constant"
+        },
+        {
+          "eigenvalue": "-3/35",
+          "multiplicity": 2,
+          "sign": -1,
+          "space": "constant_x_mean_zero"
+        },
+        {
+          "eigenvalue": "-12/35",
+          "multiplicity": 1,
+          "sign": -1,
+          "space": "constant_x_constant"
+        }
+      ],
+      "strict_collision_only_simple_rank": 0,
+      "uniform_envelope_preimages_per_cell": 24
+    },
+    {
+      "ambient_residue_envelope_points": 900,
+      "centered_tensor_atomic_diagonal": "60/77",
+      "ell": 7,
+      "fixed_owner_class_cell_count": 15,
+      "full_ambient_envelope_inertia": {
+        "negative": 885,
+        "positive": 15,
+        "zero": 0
+      },
+      "held_out": true,
+      "literal_singleton_rank": 0,
+      "rho": 11,
+      "same_cell_contrast_pushforward": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "same_cell_contrast_wick_value": "-120/77",
+      "simple_complete_cell_inertia": {
+        "negative": 7,
+        "positive": 8,
+        "zero": 0
+      },
+      "simple_complete_cell_rank": 15,
+      "simple_complete_cell_spectrum": [
+        {
+          "eigenvalue": "17/77",
+          "multiplicity": 8,
+          "sign": 1,
+          "space": "mean_zero_x_mean_zero"
+        },
+        {
+          "eigenvalue": "-18/77",
+          "multiplicity": 2,
+          "sign": -1,
+          "space": "mean_zero_x_constant"
+        },
+        {
+          "eigenvalue": "-16/77",
+          "multiplicity": 4,
+          "sign": -1,
+          "space": "constant_x_mean_zero"
+        },
+        {
+          "eigenvalue": "-36/77",
+          "multiplicity": 1,
+          "sign": -1,
+          "space": "constant_x_constant"
+        }
+      ],
+      "strict_collision_only_simple_rank": 0,
+      "uniform_envelope_preimages_per_cell": 60
+    }
+  ],
+  "incomplete_occupancy_countercontrol": {
+    "ell": 5,
+    "null_vector": [
+      "-1",
+      "-1",
+      "-1",
+      "1",
+      "1",
+      "1"
+    ],
+    "occupied_cell_indices": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      7
+    ],
+    "rank": 5,
+    "rho": 11,
+    "scaled_by": 55,
+    "scaled_matrix": [
+      [
+        "0",
+        "-4",
+        "-4",
+        "-10",
+        "1",
+        "1"
+      ],
+      [
+        "-4",
+        "0",
+        "-4",
+        "1",
+        "-10",
+        "1"
+      ],
+      [
+        "-4",
+        "-4",
+        "0",
+        "1",
+        "1",
+        "-10"
+      ],
+      [
+        "-10",
+        "1",
+        "1",
+        "0",
+        "-4",
+        "-4"
+      ],
+      [
+        "1",
+        "-10",
+        "1",
+        "-4",
+        "0",
+        "-4"
+      ],
+      [
+        "1",
+        "1",
+        "-10",
+        "-4",
+        "-4",
+        "0"
+      ]
+    ]
+  },
+  "not_proved": [
+    "surjectivity or multiplicity of the complete live source on residue cells",
+    "noncancellation in any complete native conductor fibre",
+    "ONEPLACEWEIL for complete literal source amplitudes",
+    "RELPARTFROB for the complete relative class",
+    "WCADD106140 or WCCORR106191",
+    "WCKUM106140",
+    "ONEPLACETRACE or RELTRACE",
+    "principal binding to the frozen consumer",
+    "RH or GRH"
+  ],
+  "ontology": {
+    "exact_scalar_sufficient_statistic": "(physical aggregate Rz, literal diagonal energy sum |z_omega|^2)",
+    "fibre": "iota=(g,ell,rho,sigma,tau)",
+    "independent_atom_coordinates": "(Q mod ell,v mod ell,P mod rho,u mod rho) and primed copies",
+    "pair_space": "(Omega x_I Omega) minus the literal relative diagonal",
+    "physical_map": "x=-rho^2*(Q mod ell)*(v mod ell)^2 mod ell; y=ell^2*(P mod rho)*(u mod rho)^2 mod rho",
+    "rejected": "independent marked-place pairs Z0 x Z1",
+    "shared_coordinates": "ell,rho,sigma,tau"
+  },
+  "resource_ledger": {
+    "conductor_families_estimated": 0,
+    "control_pairs": 3,
+    "floating_point_operations": 0,
+    "held_out_pairs": 1,
+    "live_source_atoms_enumerated": 0,
+    "maximum_ambient_envelope_points": 900,
+    "maximum_simple_matrix_dimension": 15,
+    "nontrivial_incomplete_occupancy_atoms": 6,
+    "source_blobs_authenticated": 8
+  },
+  "schema": "riemann.function_field.ffps_shared_fibre_wick_occupancy_spectrum.v1",
+  "status": "EXACT_FIXED_FIBRE_IDENTITY_AND_RESIDUE_FORGETTING_NO_GO",
+  "theorem_ledger": {
+    "MPD-W2.1": "SHARED_FIBRE_OWNER_COFACTOR_RESIDUE_MAP_PROVED",
+    "MPD-W2.2": "EXACT_ARBITRARY_OCCUPANCY_PULLBACK_IDENTITY_PROVED",
+    "MPD-W2.3": "SIMPLE_COMPLETE_CELL_SPECTRUM_PROVED_ALL_DISTINCT_ODD_PRIMES",
+    "MPD-W2.4": "RESIDUE_ONLY_FORGETTING_REFUTED",
+    "MPD-W2.5": "LIVE_OCCUPANCY_AND_GLOBAL_SIGNED_RECOMBINATION_OPEN"
+  }
+}
