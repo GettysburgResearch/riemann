@@ -2,6 +2,9 @@
 
 Status: **proposed exact local mathematics; external novelty unreviewed**.
 
+For the independent two-lane continuation and its source/replay boundary,
+start with [FIVE_HOUR_PROGRAMME_HANDOFF.md](FIVE_HOUR_PROGRAMME_HANDOFF.md).
+
 The independent continuation
 [Multiplicative recurrence preservers and mixed-rank determinant parents](MULTIPLICATIVE_RECURRENCE_AND_MIXED_PARENTS.md)
 classifies all continuous multiplicative complex maps using one
