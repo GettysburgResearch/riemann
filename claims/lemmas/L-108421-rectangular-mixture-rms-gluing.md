@@ -98,27 +98,18 @@ Applying the positive-trace stability theorem `L-108400`,
 \tag{L-108421.5}
 \]
 
-This is an RMS gluing law. It is never worse than paying the pieces
-separately:
-
-\[
-2N\sqrt{\sum_aw_a\eta_a}
-\le
-2\sum_aN_a\sqrt{\eta_a}
-\]
-
-is generally false in that direction; rather Cauchy gives
+This is the exact safe payment for the **single globally mixed occupancy
+quotient**. If the positive trace itself decomposes as a direct sum over the
+pieces, a separate piecewise estimate may be smaller, because Cauchy gives
 
 \[
 \sum_aw_a\sqrt{\eta_a}
 \le
-\sqrt{\sum_aw_a\eta_a},
+\sqrt{\sum_aw_a\eta_a}.
 \]
 
-so the globally mixed bound in (L-108421.5) is the natural single-quotient
-payment, while piecewise trace comparison can be sharper when the quotient
-itself splits. The theorem records the exact safe global payment and makes no
-unsupported direct-sum claim.
+No such direct-sum structure is assumed here. Equation (L-108421.5) applies
+even when different rectangles overlap after physical pushforward.
 
 ## 2. Physical pushforward may be postponed
 
