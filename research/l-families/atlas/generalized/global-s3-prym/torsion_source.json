@@ -1,0 +1,12 @@
+{
+  "schema": "genus-two-three-torsion-graph-v1",
+  "precursor_commit": "567ae7aec00f6ee6d3e01bdde2004e76fec8ff6f",
+  "maximum_field_order": 2401,
+  "maximum_polynomial_degree": 12,
+  "curves": [
+    {"id": "p5-generic-F25", "p": 5, "degree": 2, "A": 1, "B": 1},
+    {"id": "p7-generic-F2401", "p": 7, "degree": 4, "A": 1, "B": 1}
+  ],
+  "primitive": "The frozen H,E,D2 equations and two degree-three maps; exact field reconstruction, division-polynomial torsion enumeration, map-fibre divisor pullback, and Cantor arithmetic precede kernel extraction.",
+  "coverage": "Every field x-coordinate in each declared field; all nine points of each elliptic three-torsion group; all 81 pairs for the Jacobian kernel; all pairing, homomorphism and Frobenius graph identities. No full Jacobian census is asserted."
+}
