@@ -1,0 +1,102 @@
+{
+  "authoring_base": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+  "external_context": [
+    {
+      "remote_bytes_authenticated": false,
+      "role": "section2 equation2.4 real-part crossings; section3 Lemma1 Jensen",
+      "url": "https://arxiv.org/pdf/1208.5846v2"
+    },
+    {
+      "remote_bytes_authenticated": false,
+      "role": "section4 Theorem41 classical argument-principle counting framework",
+      "url": "https://terrytao.wordpress.com/2014/12/15/254a-supplement-3-the-gamma-function-and-the-functional-equation-optional/"
+    },
+    {
+      "remote_bytes_authenticated": false,
+      "role": "Exercise1 classical maximum-principle strip damping",
+      "url": "https://terrytao.wordpress.com/2009/02/28/tricks-wiki-give-yourself-an-epsilon-of-room/"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "77820c6af8d089d22547db6cda5ba025ed96f84f",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md",
+      "sha256_lf": "d5c95db34c62d31e0bb735e09aae5599e3abf29194cd74a50ce1bbebafab1530"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7e6ae5bb1fd9c53930cee1198eb185806a2ea118",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.py",
+      "sha256_lf": "34120d58416c902db94fbeaf69ceb004694888908341b630a1b750f2f1e8316a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7ca422e505e6ccd817aadee3362f1ace2fa83fd4",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.json",
+      "sha256_lf": "fb6ae6ad8535b8cc519d33ab0e901cf17b9cf53ddff9c0bde427daf61faa60db"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "90dc74d185b0b9a42f865a9f9df895ba7cd1c5dd",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.sources.json",
+      "sha256_lf": "f754ecdff30b4fd3a3f8f4b8436e46ab3633ba59738021f5538051fae9e43b7a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "c2d9dc7ea92a75c7e3fd99c5463e664fb79e0d3a",
+      "kind": "reviewed_family_release",
+      "path": "tests/test_cusp_flag_quotient_global_family.py",
+      "sha256_lf": "84603f0412d8a7f1d2c2384c7055f55b4956db3df68b42dde7074d18cbe8265b"
+    },
+    {
+      "commit": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "git_blob": "1ec20ba529d34b833799d72515921fda7252da81",
+      "kind": "frozen_native_growth_parent",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_DIVISOR_EXPLICIT_FORMULA.md",
+      "sha256_lf": "c7123450f6201fc62af7b2c42a315a20c5e107d0348533b7348223fbbd24d373"
+    },
+    {
+      "commit": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "git_blob": "81f8f778488e83fe7ae7d0a2c9296031558449cb",
+      "kind": "frozen_native_growth_parent",
+      "path": "research/l-families/atlas/generalized/cusp_flag_divisor_explicit_formula.py",
+      "sha256_lf": "45ebd934c6d8e3547bde285ea30b3a6b2574cd2f634300dd76044662829f83d9"
+    },
+    {
+      "commit": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "git_blob": "2eef1c6196789b852db99391b931d668da383b8e",
+      "kind": "frozen_native_growth_parent",
+      "path": "research/l-families/atlas/generalized/cusp_flag_divisor_explicit_formula.json",
+      "sha256_lf": "bdf15afc43f5d246b494f0c9ebd3b0947a5ba6209c0ccfa0418513abc1db3922"
+    },
+    {
+      "commit": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "git_blob": "0649c2b51271f92499903fc209e575422c482d61",
+      "kind": "frozen_native_growth_parent",
+      "path": "research/l-families/atlas/generalized/cusp_flag_divisor_explicit_formula.sources.json",
+      "sha256_lf": "bc8beef55e1301354f3ab7ae6c4954b196bb92a9bef7cdf745d64e5b49ac8aa4"
+    },
+    {
+      "commit": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "git_blob": "cd121b856db740cf16bb78b7ff0cde1e4ad5a39a",
+      "kind": "frozen_native_growth_parent",
+      "path": "tests/test_cusp_flag_divisor_explicit_formula.py",
+      "sha256_lf": "cd1d67310afba80e1efa40735532bb4a8036b05ad592fb39a5249cb6abe67a6d"
+    }
+  ],
+  "primitive_contract": {
+    "constructor": "execute only authenticated frozen family producer bytes",
+    "count": "net signed ord Q, 0<Im rho<=T, all real parts",
+    "finite_Gram": "weights n^(-2); algebra only, not a continued period evaluation",
+    "growth": "EF5-EF11 actual theta growth plus native CF2 reflection",
+    "native_pivots": "full1..d; minor2..d; common product d! and coefficient1",
+    "object": "Q=det(I_k)/det(I_W), fixed full Miller first-coefficient flag",
+    "phase": "two Gamma factors and log(4*pi^2); log(d!) cancels"
+  },
+  "schema": "cusp-flag-signed-count-sources-v1"
+}
