@@ -1,0 +1,224 @@
+{
+  "Gamma0": "(384+128sqrt(2))*log(2)-288",
+  "RH_conclusion": false,
+  "cofinal_growth": {
+    "A": "Theta(Y^(1/2)/log(Y)^3)",
+    "K": "Theta(Y^(1/2)/log(Y)^3)",
+    "P": "Theta(Y^(-1/6)/log(Y)^3)",
+    "P_over_A": "Theta(Y^(-2/3))"
+  },
+  "cofinal_window_constants": {
+    "M_lower": "63063/62500",
+    "M_upper": "421576727/400000000",
+    "N_lower": "15827/15625",
+    "N_upper": "10705204827/10000000000",
+    "PNT_count_constant_U5_over_log3": "1/400000000"
+  },
+  "global_WCEQ_refuted": false,
+  "literal_diagonal_retained": true,
+  "prime_searches": 0,
+  "proof_object_sha256": "acd7b23ea9ba9382f67fcf5fac7309348a90dac69f849ef64cc3d3d0935bddeb",
+  "record": {
+    "A_divided_by_Gamma0": "188600/62167957462767871",
+    "K_divided_by_Gamma0": "3050647007741/1005580608327232579184400",
+    "M": 287897423615087,
+    "N": 290640986791787,
+    "NN_divided_by_Gamma0": "1271899/419444035572533400",
+    "P_divided_by_Gamma0": "17821/119544547843097579343600",
+    "P_over_A": "2548403/51861001680000",
+    "U": 256,
+    "Y": 281474976710656,
+    "a": 948587,
+    "arithmetic_pairs_in_fibre": 1,
+    "b": 1418897,
+    "canonical_share": "1/6",
+    "distinct_output_pairs_in_fibre": 0,
+    "ell": 3691,
+    "even_character_weights": {
+      "ell": {
+        "nonprincipal": "6806204/1845",
+        "nonprincipal_count": "1844",
+        "nonprincipal_each": "3691/1845",
+        "principal": "1846/1845"
+      },
+      "rho": {
+        "nonprincipal": "15232439/2760",
+        "nonprincipal_count": "2759",
+        "nonprincipal_each": "5521/2760",
+        "principal": "2761/2760"
+      }
+    },
+    "fibre": [
+      257,
+      3691,
+      5521,
+      1,
+      1
+    ],
+    "g": 257,
+    "left_boolean": {
+      "balanced": 2,
+      "complete_allocations": 9,
+      "full_mu": 1,
+      "nonzero_balanced_histories": [
+        {
+          "coefficient": 1,
+          "groups": [
+            [
+              257
+            ],
+            [
+              3691
+            ],
+            []
+          ]
+        },
+        {
+          "coefficient": 1,
+          "groups": [
+            [
+              3691
+            ],
+            [
+              257
+            ],
+            []
+          ]
+        }
+      ],
+      "truncated_double_convolution": 1,
+      "twice_truncated_mu": 0,
+      "type_I": -1
+    },
+    "literal_diagonal_without_weights": "1/27110632379353850432495088511956",
+    "literal_histories": 4,
+    "literal_off_atomic_without_weights": "1/9036877459784616810831696170652",
+    "merged_new_diagonal_without_weights": "1/6777658094838462608123772127989",
+    "merged_new_wick_form_without_weights": "0",
+    "mixed_divided_by_Gamma0": "23455505819/17094870341562953846134800",
+    "off_atomic_ordered_pairs": 12,
+    "one_literal_coefficient_square": "1/108442529517415401729980354047824",
+    "owners": {
+      "P": [
+        17,
+        19
+      ],
+      "Q": [
+        11,
+        13
+      ]
+    },
+    "primality_method": "BOUNDED_TRIAL_DIVISION_NO_SEARCH",
+    "principal_full_energy_divided_by_Gamma0": "17821/89658410882323184507700",
+    "principal_literal_diagonal_divided_by_Gamma0": "17821/358633643529292738030800",
+    "raw_residues": [
+      3477,
+      3817
+    ],
+    "rho": 5521,
+    "right_boolean": {
+      "balanced": 2,
+      "complete_allocations": 9,
+      "full_mu": 1,
+      "nonzero_balanced_histories": [
+        {
+          "coefficient": 1,
+          "groups": [
+            [
+              257
+            ],
+            [
+              5521
+            ],
+            []
+          ]
+        },
+        {
+          "coefficient": 1,
+          "groups": [
+            [
+              5521
+            ],
+            [
+              257
+            ],
+            []
+          ]
+        }
+      ],
+      "truncated_double_convolution": 1,
+      "twice_truncated_mu": 0,
+      "type_I": -1
+    }
+  },
+  "schema": "riemann.native_off_atomic_conductor_cancellation.v1",
+  "source_hashes": {
+    "research/riemann-structures/NATIVE_OFF_ATOMIC_CONDUCTOR_CANCELLATION.md": "405f9afb640a92c074f0a89d67ecd9cc96634a1fc42a3bc8cb02e4a25e19b8ac",
+    "research/riemann-structures/native_off_atomic_conductor_cancellation.py": "1ade3d34d3d72f6ca539b6afbdaff87dff74fe307342b4235b0f828febd94b8f",
+    "tests/test_native_off_atomic_conductor_cancellation.py": "0c0437bf667e1bea77154a8641c89ba4cc920fb692fe08c594fb3c393695bfbc"
+  },
+  "sources": [
+    {
+      "commit": "a30276a5be049749ebb2147f30f000dd5659298b",
+      "git_blob": "c5f77f48bd19cc9af39698d4de53ae266bd42e17",
+      "path": "research/l-families/atlas/function_field/FFPS_SIGNED_HISTORY_RECOMBINATION.md"
+    },
+    {
+      "commit": "5ef9a0800e7d0f03bfef1ad4ba467f8843a90058",
+      "git_blob": "f8248cd97c4fc72ad4034d9baf83cec91396f27e",
+      "path": "research/riemann-structures/euler_activation_source_adapter.py"
+    },
+    {
+      "commit": "e365528d750fded282bd3f7261898d8455c41e0a",
+      "git_blob": "c37145331aedf3c6a4ec0c70577a66da712a5edd",
+      "path": "research/riemann-structures/SOURCE_FIRST_BOOLEAN_PRINCIPAL_ADAPTER.md"
+    },
+    {
+      "commit": "6dbab098bb057d76748d12e37900efeff571f8a9",
+      "git_blob": "c9c5f9e7e1ddab7e9a6aff629165a098fdf597a8",
+      "path": "research/riemann-structures/LIVE_FIXED_CONDUCTOR_MULTIPLICITY.md"
+    },
+    {
+      "commit": "1623f1924c62035918a94bcacf2ccad7d3bb6cf7",
+      "git_blob": "b6464ebbd4560e50d9ad7033d051dc9cddd4a7f4",
+      "path": "research/riemann-structures/subcritical_observed_boolean_block.json"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "3b72653ea5f05405c587be165faf7ab2c52c3f2b",
+      "path": "claims/lemmas/L-102958-ratioeight-comparability-pays-both-opposite-owner-products.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "346cc52420ec65457c2a5accc045d4a85635cc24",
+      "path": "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+      "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "85c4ef92ead7d8b235f9c195c3c0acd16d16030f",
+      "path": "claims/lemmas/L-106191-source-dual-centered-double-incidence-correlation.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "37722c3f36ec7d1681f34d4329a3795e5028f7ae",
+      "path": "claims/lemmas/L-106131-wick-normal-ordering-additive-kummer-decomposition.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "8dde14dd382e0c4fc1bb54d5da21de85ea002f41",
+      "path": "claims/refutations/R-106131-complete-gauss-family-atomic-ledger-carries-phase-cardinality.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+      "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md"
+    }
+  ],
+  "whole_source_gamma_bound_asserted": false,
+  "whole_source_moment_counterexample": false
+}
