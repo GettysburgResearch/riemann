@@ -1,0 +1,71 @@
+{
+  "schema": "riemann.atlas.generalized.universal_coefficient_power_euler_obstruction.sources.v1",
+  "programme_issue": {
+    "number": 764,
+    "url": "https://github.com/gfreund123/riemann/issues/764"
+  },
+  "base_commit": "02e53055b6bdff73fa136ff28cced239d1627f80",
+  "normalization": "h_r(A) is [T^r]det(I-AT)^(-1); k is a nonnegative integer; k=0 means x^0=1; a virtual Euler factor is a finite ratio of representation determinants; the constructive route instead applies the formal exponential to balanced power traces",
+  "sources": [
+    {
+      "path": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+      "role": "existing integer Hadamard-power numerator defect and warning against symmetric-power Euler-factor identification",
+      "file_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c",
+      "git_blob": "5eeb1e7c6129646ac646c697276bcd4adb04aa0c"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/TRANSFER_MATRIX_SYMMETRIC_PARENT.md",
+      "role": "genuine tensor/symmetric state-space parent as a matrix coefficient, distinct from a representation Euler factor",
+      "file_sha256_lf_normalized": "84759dc5ca81ef896e2a6ab2d9a7d3d32c3865f5f61bb45db18aaf8633578456",
+      "git_blob": "9aef6f8a780e9dff5c3b7a53c012c0956be036dc"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/DENSE_TORUS_TRACE_ABSOLUTE_POWER_RATIONALITY.md",
+      "role": "balanced tensor multiplicities, exact root-lattice support, and dense-orbit scalar recurrence degree distinct from representation rank",
+      "file_sha256_lf_normalized": "b363866fa6ba9a3a54e3b93fca07d11c66bc395a3e16c749b0acb5e8482ab596",
+      "git_blob": "f8d08185ce73d83c1ebe4088a1d32591cfadc2e9"
+    }
+  ],
+  "external_references": [
+    {
+      "authors": "Marcel Morales",
+      "title": "Segre embeddings, Hilbert series and Newcomb's problem",
+      "version": "arXiv:1306.6910v2, 2014",
+      "url": "https://arxiv.org/abs/1306.6910v2",
+      "boundary": "published Segre Hilbert numerator and Simon Newcomb descent-number identification; the stable-sort proof is supplied directly in the companion note",
+      "machine_authenticated": false
+    },
+    {
+      "authors": "Danai Deligeorgaki, Bin Han, and Liam Solus",
+      "title": "Colored Multiset Eulerian Polynomials",
+      "version": "arXiv:2407.12076v2, 2025",
+      "url": "https://arxiv.org/abs/2407.12076v2",
+      "boundary": "multiset Eulerian and MacMahon-identity literature context, not an external novelty claim or a machine-authenticated proof dependency",
+      "machine_authenticated": false
+    },
+    {
+      "authors": "H. Jacquet, I. I. Piatetskii-Shapiro, and J. A. Shalika",
+      "title": "Rankin-Selberg Convolutions",
+      "journal": "American Journal of Mathematics 105 (1983), 367-464",
+      "doi": "10.2307/2374264",
+      "url": "https://www.math.columbia.edu/~hj/Rankin%20Selberg%20convolutions.pdf",
+      "boundary": "classical local tensor-product L-factor context at m=1; no global automorphy or new lifting theorem is inferred",
+      "machine_authenticated": false
+    }
+  ],
+  "scope_firewall": {
+    "universal_finite_virtual_representations_only": true,
+    "regular_at_identity_required_for_generic_extension": true,
+    "n_at_least_two_k_at_least_two_for_obstruction": true,
+    "n_one_k_zero_k_one_are_genuine_exceptions": true,
+    "no_negative_or_nonintegral_power_classification": true,
+    "matrix_coefficient_parents_not_excluded": true,
+    "constructive_repair_uses_power_traces_not_complete_symmetric_coefficients": true,
+    "unitarity_required_for_absolute_trace_interpretation": true,
+    "euler_degree_counts_weight_multiplicity_not_scalar_support": true,
+    "arbitrary_nonfunctorial_matrices_and_extra_artin_data_not_classified": true,
+    "no_prime_indexed_global_family_constructed": true,
+    "no_automorphy_motive_functional_equation_or_RH_GRH_consequence": true,
+    "external_novelty_unreviewed": true
+  }
+}
