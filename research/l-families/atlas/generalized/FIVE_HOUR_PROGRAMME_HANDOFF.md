@@ -57,7 +57,9 @@ desired scalar output.
   and integrated replay are separate from the original packet.
 - Positive-defect sequel source: `6b4f0f4a53bc9ff5bc6b84a2b6e3f603a04f2336`,
   imported at `eebbb8951`. Its proof and five additional tests leave the
-  original based-holonomy producer and canonical fixture unchanged.
+  original based-holonomy producer and canonical fixture unchanged. Its
+  [independent review](../../../exploratory/marked-holonomy-response/REVIEW_6B4F0F4A.md)
+  found no blocker for the stated finite mechanism and principal obstruction.
 - The separate #763 actual-source branch is not a mathematical dependency
   of these results. No sheaf/graph comparison map is assumed or constructed.
 - Active all-prime Satake-deformation and Estermann-completion work elsewhere
@@ -116,10 +118,13 @@ passed 18 tests in each mode and both producer checks. Independent reviews
 are bound to the frozen core and companion sources above and the graph
 source in its own review sidecar; they report the serialized test results
 without claiming independent runs.
-The based-holonomy companion and positive-defect sequel passed fourteen
-tests in each mode, with the original producer checks unchanged, at their
-source branch; final imported replay is a separate release check. This
-brings the four replay directories to 73 focused tests per Python mode.
+The final combined release was replayed at
+`2bf47346150cc558514016e1624590347df82346`, with the worktree unchanged and
+clean. All four producers passed ordinary and optimized `--check`; the
+combined test suites passed 73 tests in each mode (41 core plus geometry,
+18 fixed-label graph, and 14 based holonomy including the positive-defect
+sequel). Focused Ruff and `git diff --check` also passed. The original
+producer fixtures were not rewritten for the positive-defect sequel.
 
 The root agent serialized these runs to avoid competing with another
 active Codex agent. The core replay took about three seconds per complete
