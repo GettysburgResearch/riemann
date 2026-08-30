@@ -1,0 +1,33 @@
+{
+  "schema": "satake-deformation-completion-sources-v1",
+  "repository_context": {
+    "role": "context-only-not-a-mathematical-premise",
+    "commit": "e2f469142cd55086e74751293877ab533001e786",
+    "path": "research/l-families/atlas/generalized/FINITE_GRADED_VIRTUAL_PARENT_CLASSIFICATION.md",
+    "git_blob": "3932273279d43ffa34d929247152cb43b932fa1d",
+    "sha256_lf": "50daa223c5b6d0f061d771f24775a0a7a2d470f9185a1d6304f3b49e9fc799bc"
+  },
+  "external_theorems": [
+    {
+      "id": "D1",
+      "author": "Pierre Deligne",
+      "title": "La conjecture de Weil : I",
+      "year": 1974,
+      "doi": "10.1007/BF02684373",
+      "locator": "Theorem (8.2), printed p.302, PDF page 31",
+      "url": "https://www.numdam.org/article/PMIHES_1974__43__273_0.pdf",
+      "import": "absolute values of normalized Delta prime parameters are one"
+    },
+    {
+      "id": "D2",
+      "author": "Tom Barnet-Lamb; David Geraghty; Michael Harris; Richard Taylor",
+      "title": "A Family of Calabi-Yau Varieties and Potential Automorphy II",
+      "year": 2011,
+      "doi": "10.2977/PRIMS/31",
+      "locator": "Corollary C, printed p.32, PDF page 4",
+      "url": "https://ems.press/content/serial-article-files/41128?nt=1",
+      "import": "qualitative semicircle equidistribution of tau(p)/(2 p^(11/2)) over all primes"
+    }
+  ],
+  "external_authentication": "declarations pinned; external PDFs and their theorems are not machine-replayed"
+}

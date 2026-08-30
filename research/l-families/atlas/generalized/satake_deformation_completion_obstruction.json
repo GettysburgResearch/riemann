@@ -1,0 +1,1516 @@
+{
+  "arithmetic": {
+    "class": "MIXED",
+    "components": [
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "rounding": "none"
+  },
+  "artifact_sha256_lf": {
+    "research/l-families/atlas/generalized/SATAKE_DEFORMATION_COMPLETION_OBSTRUCTION.md": "131ce880eedd4da62e3f46884529a759e8842a0e556c1f7be26d8565e47201c2",
+    "research/l-families/atlas/generalized/satake_deformation_completion_obstruction.py": "0b17d9c83d70a4f7122274ae172ba808b32cc8cd9e2f59060d21510131e5b094",
+    "research/l-families/atlas/generalized/satake_deformation_completion_obstruction.sources.json": "3b4f77c8e493e4f958bcf4bf7f3c1ff9d9fcb0d34fb4ac56066ed26893bd2c7f",
+    "tests/test_satake_deformation_completion_obstruction.py": "015034c7723601348237ff5e0e03bca174b6a3340129a6f1d69e9f10a8673d5a"
+  },
+  "claim": "GLO764.SATAKE_FIXED_PARAMETER_NONMEROMORPHY_V1",
+  "coverage": {
+    "actual_delta_prime_samples": 0,
+    "epsilon_controls": 9,
+    "formal_degrees_inclusive": [
+      0,
+      12
+    ],
+    "local_cosine_controls": 7,
+    "sine_half_degrees_inclusive": [
+      0,
+      6
+    ],
+    "so3_controls": 6
+  },
+  "epsilon_bound_controls": [
+    {
+      "epsilon": [
+        0,
+        1
+      ],
+      "lower": [
+        0,
+        1
+      ],
+      "noninteger_order_obstruction": false,
+      "upper": [
+        0,
+        1
+      ]
+    },
+    {
+      "epsilon": [
+        1,
+        1
+      ],
+      "lower": [
+        15,
+        64
+      ],
+      "noninteger_order_obstruction": true,
+      "upper": [
+        1,
+        4
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        1
+      ],
+      "lower": [
+        15,
+        64
+      ],
+      "noninteger_order_obstruction": true,
+      "upper": [
+        1,
+        4
+      ]
+    },
+    {
+      "epsilon": [
+        1,
+        2
+      ],
+      "lower": [
+        63,
+        1024
+      ],
+      "noninteger_order_obstruction": true,
+      "upper": [
+        1,
+        16
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        2
+      ],
+      "lower": [
+        63,
+        1024
+      ],
+      "noninteger_order_obstruction": true,
+      "upper": [
+        1,
+        16
+      ]
+    },
+    {
+      "epsilon": [
+        1,
+        3
+      ],
+      "lower": [
+        143,
+        5184
+      ],
+      "noninteger_order_obstruction": true,
+      "upper": [
+        1,
+        36
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        3
+      ],
+      "lower": [
+        143,
+        5184
+      ],
+      "noninteger_order_obstruction": true,
+      "upper": [
+        1,
+        36
+      ]
+    },
+    {
+      "epsilon": [
+        2,
+        5
+      ],
+      "lower": [
+        99,
+        2500
+      ],
+      "noninteger_order_obstruction": true,
+      "upper": [
+        1,
+        25
+      ]
+    },
+    {
+      "epsilon": [
+        -2,
+        5
+      ],
+      "lower": [
+        99,
+        2500
+      ],
+      "noninteger_order_obstruction": true,
+      "upper": [
+        1,
+        25
+      ]
+    }
+  ],
+  "local_controls": [
+    {
+      "c": [
+        -1,
+        1
+      ],
+      "coefficients": [
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          -3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          -4,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          -5,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          -6,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "denominator": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "positive_evaluations": [
+        {
+          "denominator": [
+            9,
+            8
+          ],
+          "x": [
+            1,
+            2
+          ]
+        },
+        {
+          "denominator": [
+            32,
+            27
+          ],
+          "x": [
+            1,
+            3
+          ]
+        },
+        {
+          "denominator": [
+            147,
+            125
+          ],
+          "x": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "c": [
+        -5,
+        13
+      ],
+      "coefficients": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          -30,
+          169
+        ],
+        [
+          1990,
+          2197
+        ],
+        [
+          13731,
+          28561
+        ],
+        [
+          -102327,
+          371293
+        ],
+        [
+          3529540,
+          4826809
+        ],
+        [
+          44746380,
+          62748517
+        ],
+        [
+          -228225339,
+          815730721
+        ],
+        [
+          5324614543,
+          10604499373
+        ],
+        [
+          123182428710,
+          137858491849
+        ],
+        [
+          -339523750830,
+          1792160394037
+        ],
+        [
+          5875492178791,
+          23298085122481
+        ]
+      ],
+      "denominator": [
+        [
+          1,
+          1
+        ],
+        [
+          -3,
+          13
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "positive_evaluations": [
+        {
+          "denominator": [
+            85,
+            104
+          ],
+          "x": [
+            1,
+            2
+          ]
+        },
+        {
+          "denominator": [
+            320,
+            351
+          ],
+          "x": [
+            1,
+            3
+          ]
+        },
+        {
+          "denominator": [
+            1431,
+            1625
+          ],
+          "x": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "c": [
+        -1,
+        2
+      ],
+      "coefficients": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "denominator": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "positive_evaluations": [
+        {
+          "denominator": [
+            7,
+            8
+          ],
+          "x": [
+            1,
+            2
+          ]
+        },
+        {
+          "denominator": [
+            26,
+            27
+          ],
+          "x": [
+            1,
+            3
+          ]
+        },
+        {
+          "denominator": [
+            117,
+            125
+          ],
+          "x": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "c": [
+        0,
+        1
+      ],
+      "coefficients": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "denominator": [
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "positive_evaluations": [
+        {
+          "denominator": [
+            5,
+            8
+          ],
+          "x": [
+            1,
+            2
+          ]
+        },
+        {
+          "denominator": [
+            20,
+            27
+          ],
+          "x": [
+            1,
+            3
+          ]
+        },
+        {
+          "denominator": [
+            87,
+            125
+          ],
+          "x": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "c": [
+        1,
+        3
+      ],
+      "coefficients": [
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          2,
+          27
+        ],
+        [
+          -5,
+          81
+        ],
+        [
+          215,
+          243
+        ],
+        [
+          1204,
+          729
+        ],
+        [
+          2660,
+          2187
+        ],
+        [
+          1045,
+          6561
+        ],
+        [
+          -2167,
+          19683
+        ],
+        [
+          45310,
+          59049
+        ],
+        [
+          287270,
+          177147
+        ],
+        [
+          698191,
+          531441
+        ]
+      ],
+      "denominator": [
+        [
+          1,
+          1
+        ],
+        [
+          -5,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "positive_evaluations": [
+        {
+          "denominator": [
+            11,
+            24
+          ],
+          "x": [
+            1,
+            2
+          ]
+        },
+        {
+          "denominator": [
+            16,
+            27
+          ],
+          "x": [
+            1,
+            3
+          ]
+        },
+        {
+          "denominator": [
+            67,
+            125
+          ],
+          "x": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "c": [
+        3,
+        5
+      ],
+      "coefficients": [
+        [
+          1,
+          1
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          66,
+          25
+        ],
+        [
+          246,
+          125
+        ],
+        [
+          451,
+          625
+        ],
+        [
+          -319,
+          3125
+        ],
+        [
+          2436,
+          15625
+        ],
+        [
+          100716,
+          78125
+        ],
+        [
+          934021,
+          390625
+        ],
+        [
+          5039351,
+          1953125
+        ],
+        [
+          16651206,
+          9765625
+        ],
+        [
+          22751586,
+          48828125
+        ],
+        [
+          -35630009,
+          244140625
+        ]
+      ],
+      "denominator": [
+        [
+          1,
+          1
+        ],
+        [
+          -11,
+          5
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "positive_evaluations": [
+        {
+          "denominator": [
+            13,
+            40
+          ],
+          "x": [
+            1,
+            2
+          ]
+        },
+        {
+          "denominator": [
+            64,
+            135
+          ],
+          "x": [
+            1,
+            3
+          ]
+        },
+        {
+          "denominator": [
+            51,
+            125
+          ],
+          "x": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "c": [
+        1,
+        1
+      ],
+      "coefficients": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          21,
+          1
+        ],
+        [
+          28,
+          1
+        ],
+        [
+          36,
+          1
+        ],
+        [
+          45,
+          1
+        ],
+        [
+          55,
+          1
+        ],
+        [
+          66,
+          1
+        ],
+        [
+          78,
+          1
+        ],
+        [
+          91,
+          1
+        ]
+      ],
+      "denominator": [
+        [
+          1,
+          1
+        ],
+        [
+          -3,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "positive_evaluations": [
+        {
+          "denominator": [
+            1,
+            8
+          ],
+          "x": [
+            1,
+            2
+          ]
+        },
+        {
+          "denominator": [
+            8,
+            27
+          ],
+          "x": [
+            1,
+            3
+          ]
+        },
+        {
+          "denominator": [
+            27,
+            125
+          ],
+          "x": [
+            2,
+            5
+          ]
+        }
+      ]
+    }
+  ],
+  "matrix_controls": {
+    "generic_sl3_generator_trace": [
+      -19565,
+      216
+    ],
+    "so3_controls": [
+      {
+        "c": [
+          1,
+          1
+        ],
+        "generator": [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        ],
+        "s": [
+          0,
+          1
+        ]
+      },
+      {
+        "c": [
+          -1,
+          1
+        ],
+        "generator": [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        ],
+        "s": [
+          0,
+          1
+        ]
+      },
+      {
+        "c": [
+          0,
+          1
+        ],
+        "generator": [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        ],
+        "s": [
+          1,
+          1
+        ]
+      },
+      {
+        "c": [
+          0,
+          1
+        ],
+        "generator": [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        ],
+        "s": [
+          -1,
+          1
+        ]
+      },
+      {
+        "c": [
+          3,
+          5
+        ],
+        "generator": [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              -44,
+              125
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              44,
+              125
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        ],
+        "s": [
+          4,
+          5
+        ]
+      },
+      {
+        "c": [
+          -5,
+          13
+        ],
+        "generator": [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              828,
+              2197
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              -828,
+              2197
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        ],
+        "s": [
+          12,
+          13
+        ]
+      }
+    ]
+  },
+  "mean_coefficients": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      -1,
+      64
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2304
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      -1,
+      147456
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      14745600
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      -1,
+      2123366400
+    ]
+  ],
+  "negative_frequency_controls": [
+    {
+      "frequency": 1,
+      "linear_coefficient": [
+        -1,
+        2
+      ],
+      "phase": 1
+    },
+    {
+      "frequency": 2,
+      "linear_coefficient": [
+        -1,
+        2
+      ],
+      "phase": 2
+    },
+    {
+      "frequency": 3,
+      "linear_coefficient": [
+        -1,
+        2
+      ],
+      "phase": 3
+    }
+  ],
+  "payload_sha256": "bff3cd95a75f5953fde2d1331e736d17144851827bd92affa8e7bdd268ebc60f",
+  "phase_cancellations": [
+    {
+      "constant_terms": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "frequency": 3,
+      "phase": 1
+    },
+    {
+      "constant_terms": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "frequency": 3,
+      "phase": 2
+    }
+  ],
+  "resources": {
+    "max_bytes": 262144,
+    "max_input_bits": 128,
+    "max_order": 24,
+    "work_cap_exclusive": 2000000,
+    "work_majorant": 229700
+  },
+  "schema": "satake-deformation-completion-controls-v1",
+  "scope": "bounded exact synthetic controls; infinite theorem is written proof using imported D1/D2",
+  "sine_even_moments": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      5,
+      16
+    ],
+    [
+      35,
+      128
+    ],
+    [
+      63,
+      256
+    ],
+    [
+      231,
+      1024
+    ]
+  ],
+  "sources": {
+    "context_authenticated": true,
+    "external_theorems_machine_proved": false,
+    "manifest_sha256_lf": "3b4f77c8e493e4f958bcf4bf7f3c1ff9d9fcb0d34fb4ac56066ed26893bd2c7f"
+  },
+  "verdict": "EXACT_BOUNDED_CONTROLS_PASS_NOT_A_MACHINE_PROOF_OF_THE_GLOBAL_THEOREM"
+}
