@@ -1,0 +1,236 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_AND_FINITE_FIELD_EXTENSION_CONTROL",
+  "cleanup_ledger": {
+    "Pi_0_invariant_line_coefficient": "1",
+    "combined_generic_support_coefficient": "1",
+    "linear_core_Moebius_coprimality_on_distinct_open": 1,
+    "literal_Wick_ordered_off_atomic_coefficient": 1
+  },
+  "finite_controls": [
+    {
+      "fixed_label_coefficient_partition_ranks": [
+        1
+      ],
+      "frobenius_support_truth": {
+        "left_partial": false,
+        "original": true,
+        "right_partial": false,
+        "total": true
+      },
+      "frobenius_witness": {
+        "field": "F_3[t]/(t^2-2)",
+        "left_partial": {
+          "X": [
+            0,
+            1
+          ],
+          "Y": [
+            0,
+            2
+          ],
+          "lambda": [
+            0,
+            2
+          ],
+          "rho": [
+            1,
+            0
+          ]
+        },
+        "original": {
+          "X": [
+            0,
+            1
+          ],
+          "Y": [
+            0,
+            1
+          ],
+          "lambda": [
+            0,
+            1
+          ],
+          "rho": [
+            1,
+            0
+          ]
+        },
+        "right_partial": {
+          "X": [
+            0,
+            2
+          ],
+          "Y": [
+            0,
+            1
+          ],
+          "lambda": [
+            0,
+            1
+          ],
+          "rho": [
+            1,
+            0
+          ]
+        },
+        "total": {
+          "X": [
+            0,
+            2
+          ],
+          "Y": [
+            0,
+            2
+          ],
+          "lambda": [
+            0,
+            2
+          ],
+          "rho": [
+            1,
+            0
+          ]
+        }
+      },
+      "ordered_distinct_place_pairs": 6,
+      "post_cleanup_generic_support_coefficient": "1",
+      "post_wick_orientation_forgotten_rank": 6,
+      "post_wick_two_orientation_rank": 12,
+      "q": 3,
+      "separable_positive_control_rank": 1,
+      "source_blind_phase_only_rank": 1,
+      "source_faithful_marked_cross_rank": 6
+    },
+    {
+      "fixed_label_coefficient_partition_ranks": [
+        1
+      ],
+      "frobenius_support_truth": {
+        "left_partial": false,
+        "original": true,
+        "right_partial": false,
+        "total": true
+      },
+      "frobenius_witness": {
+        "field": "F_5[t]/(t^2-2)",
+        "left_partial": {
+          "X": [
+            3,
+            3
+          ],
+          "Y": [
+            3,
+            2
+          ],
+          "lambda": [
+            0,
+            4
+          ],
+          "rho": [
+            1,
+            0
+          ]
+        },
+        "original": {
+          "X": [
+            3,
+            3
+          ],
+          "Y": [
+            3,
+            3
+          ],
+          "lambda": [
+            0,
+            1
+          ],
+          "rho": [
+            1,
+            0
+          ]
+        },
+        "right_partial": {
+          "X": [
+            3,
+            2
+          ],
+          "Y": [
+            3,
+            3
+          ],
+          "lambda": [
+            0,
+            1
+          ],
+          "rho": [
+            1,
+            0
+          ]
+        },
+        "total": {
+          "X": [
+            3,
+            2
+          ],
+          "Y": [
+            3,
+            2
+          ],
+          "lambda": [
+            0,
+            4
+          ],
+          "rho": [
+            1,
+            0
+          ]
+        }
+      },
+      "ordered_distinct_place_pairs": 20,
+      "post_cleanup_generic_support_coefficient": "1",
+      "post_wick_orientation_forgotten_rank": 20,
+      "post_wick_two_orientation_rank": 40,
+      "q": 5,
+      "separable_positive_control_rank": 1,
+      "source_blind_phase_only_rank": 1,
+      "source_faithful_marked_cross_rank": 20
+    }
+  ],
+  "not_proved": [
+    "noncancellation after the complete signed source pushforward",
+    "ONEPLACEWEIL for the complete native amplitudes",
+    "commuting partial Frobenii for the complete relative object",
+    "uniform ONEPLACETRACE or RELTRACE",
+    "principal binding to the frozen RH consumer",
+    "RH or GRH"
+  ],
+  "reconciliation": {
+    "coefficient_partition": "fixed (ell,rho): (P,c)|(Q,d)",
+    "marked_place_partition": "(ell,h,Y,Y')|(rho,k,X,X')",
+    "verdict": "trace externality in the coefficient partition does not imply partial-Frobenius descent in the marked-place partition"
+  },
+  "resource_ledger": {
+    "base_field_labels_enumerated": 8,
+    "curves_or_pushforwards_computed": 0,
+    "floating_point_operations": 0,
+    "maximum_matrix_dimension": 40,
+    "maximum_matrix_entries": 1600,
+    "ordered_distinct_pairs_materialized": 26,
+    "polynomial_or_closed_place_families_enumerated": 0,
+    "q_controls": [
+      3,
+      5
+    ],
+    "quadratic_extension_point_transforms_checked": 8,
+    "source_blobs_authenticated": 13
+  },
+  "schema": "riemann.function_field.ffps_marked_place_signed_descent_gate0.v1",
+  "status": "EXACT_SCOPED_NO_GO_AND_PARTITION_RECONCILIATION",
+  "theorem_ledger": {
+    "MPD-G0.1": "FIXED_LABEL_TRACE_EXTERNALITY_IMPORTED_AND_REDERIVED",
+    "MPD-G0.2": "CLEAN_MARKED_SUPPORT_SHIFT_PROVED_ALL_ODD_Q_IN_NOTE",
+    "MPD-G0.3": "POST_CLEANUP_GENERIC_SUPPORT_SURVIVAL_PROVED_ON_CLEAN_STRATUM",
+    "MPD-G0.4": "PARTITION_RANK_TAX_PROVED_ALL_FINITE_INDEX_SETS_IN_NOTE",
+    "MPD-G0.5": "COMPLETE_SIGNED_PUSHFORWARD_AND_RELTRACE_REMAIN_OPEN"
+  }
+}
