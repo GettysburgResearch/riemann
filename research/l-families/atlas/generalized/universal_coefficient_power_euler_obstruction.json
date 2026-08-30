@@ -1,0 +1,1390 @@
+{
+  "claims": {
+    "GLO764.BALANCED_TRACE_EXPONENTIAL_EULER_REPAIR": {
+      "euler_degree": "n^(2m), with all weight multiplicities",
+      "representation": "End(V)^tensor_m = V^tensor_m tensor (V_dual)^tensor_m",
+      "status": "PROVED_IN_COMPANION_NOTE_AND_BOUNDED_EXACT_REPLAY",
+      "trace": "p_r(A)^m*p_r(A^-1)^m, equal to abs(p_r(A))^(2m) only under unitarity"
+    },
+    "GLO764.IDENTITY_POWER_SEGRE_EULERIAN_NUMERATOR": {
+      "numerator": "multiset descent polynomial, each of k letters repeated n-1 times",
+      "scope": "n>=1,k>=0; identity coefficients; k=0 means polynomial x^0=1",
+      "status": "PROVED_IN_COMPANION_NOTE_AND_INDEPENDENT_BOUNDED_CONSTRUCTIONS"
+    },
+    "GLO764.IDENTITY_SECOND_COEFFICIENT_OBSTRUCTION": {
+      "defect": "binom(n^k+1,2)-binom(n+1,2)^k>0 for n,k>=2",
+      "status": "PROVED_IN_COMPANION_NOTE_AND_BOUNDED_EXACT_REPLAY"
+    },
+    "GLO764.UNIVERSAL_VIRTUAL_REPRESENTATION_POWER_OBSTRUCTION": {
+      "conclusion": "no universal representation Euler factor for sum h_r(A)^k T^r",
+      "scope": "n>=2,k>=2; finite virtual algebraic GL_n representations; universal or Zariski-dense equality",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    }
+  },
+  "constructive_controls": {
+    "formal_trace_cutoff": 4,
+    "m_one_is_classical_tensor_dual_Rankin_Selberg_local_algebra": true,
+    "row_count": 6,
+    "rows": [
+      {
+        "all_weights_scalar_twist_blind": true,
+        "balanced_power_traces": [
+          [
+            4,
+            1
+          ],
+          [
+            25,
+            6
+          ],
+          [
+            169,
+            36
+          ],
+          [
+            1225,
+            216
+          ],
+          [
+            9409,
+            1296
+          ]
+        ],
+        "constant_weight_multiplicity": 2,
+        "declared_work_upper_bound": 269,
+        "determinant_character_exponent": [
+          0,
+          0
+        ],
+        "distinct_character_count_dense_scalar_recurrence_degree": 3,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            25,
+            6
+          ],
+          [
+            397,
+            36
+          ],
+          [
+            5125,
+            216
+          ],
+          [
+            58813,
+            1296
+          ]
+        ],
+        "identity_euler_denominator_degree": 4,
+        "identity_scalar_recurrence_degree": 1,
+        "independent_determinant_coefficients_equal": true,
+        "m": 1,
+        "multinomial_equals_independent_End_convolution": true,
+        "n": 2,
+        "representation_rank_and_euler_denominator_degree": 4,
+        "sample_diagonal": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "sample_is_nonunitary_algebraic_trace_pair_not_absolute_trace": true,
+        "self_dual_weight_symmetry": true,
+        "trace_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "weight_multiplicities_sha256": "01e7f087578ac9cef730665c40246fd52ec0bdb29f6fd259ae39870af3c6ab34"
+      },
+      {
+        "all_weights_scalar_twist_blind": true,
+        "balanced_power_traces": [
+          [
+            16,
+            1
+          ],
+          [
+            625,
+            36
+          ],
+          [
+            28561,
+            1296
+          ],
+          [
+            1500625,
+            46656
+          ],
+          [
+            88529281,
+            1679616
+          ]
+        ],
+        "constant_weight_multiplicity": 6,
+        "declared_work_upper_bound": 560,
+        "determinant_character_exponent": [
+          0,
+          0
+        ],
+        "distinct_character_count_dense_scalar_recurrence_degree": 5,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            625,
+            36
+          ],
+          [
+            209593,
+            1296
+          ],
+          [
+            50115625,
+            46656
+          ],
+          [
+            9583717801,
+            1679616
+          ]
+        ],
+        "identity_euler_denominator_degree": 16,
+        "identity_scalar_recurrence_degree": 1,
+        "independent_determinant_coefficients_equal": true,
+        "m": 2,
+        "multinomial_equals_independent_End_convolution": true,
+        "n": 2,
+        "representation_rank_and_euler_denominator_degree": 16,
+        "sample_diagonal": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "sample_is_nonunitary_algebraic_trace_pair_not_absolute_trace": true,
+        "self_dual_weight_symmetry": true,
+        "trace_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "weight_multiplicities_sha256": "d1b00c2722674f77cdcce58d4665491f64c7d27d8e33d2da254c9110c24a401a"
+      },
+      {
+        "all_weights_scalar_twist_blind": true,
+        "balanced_power_traces": [
+          [
+            9,
+            1
+          ],
+          [
+            31,
+            3
+          ],
+          [
+            6859,
+            450
+          ],
+          [
+            18364,
+            675
+          ],
+          [
+            22353481,
+            405000
+          ]
+        ],
+        "constant_weight_multiplicity": 3,
+        "declared_work_upper_bound": 577,
+        "determinant_character_exponent": [
+          0,
+          0,
+          0
+        ],
+        "distinct_character_count_dense_scalar_recurrence_degree": 7,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            31,
+            3
+          ],
+          [
+            6101,
+            100
+          ],
+          [
+            733631,
+            2700
+          ],
+          [
+            824979581,
+            810000
+          ]
+        ],
+        "identity_euler_denominator_degree": 9,
+        "identity_scalar_recurrence_degree": 1,
+        "independent_determinant_coefficients_equal": true,
+        "m": 1,
+        "multinomial_equals_independent_End_convolution": true,
+        "n": 3,
+        "representation_rank_and_euler_denominator_degree": 9,
+        "sample_diagonal": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "sample_is_nonunitary_algebraic_trace_pair_not_absolute_trace": true,
+        "self_dual_weight_symmetry": true,
+        "trace_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "weight_multiplicities_sha256": "b636a5edf15ca0a87249d930eab2a4d06eca359524f2b9586c77c870755a189a"
+      },
+      {
+        "all_weights_scalar_twist_blind": true,
+        "balanced_power_traces": [
+          [
+            81,
+            1
+          ],
+          [
+            961,
+            9
+          ],
+          [
+            47045881,
+            202500
+          ],
+          [
+            337236496,
+            455625
+          ],
+          [
+            499678112817361,
+            164025000000
+          ]
+        ],
+        "constant_weight_multiplicity": 15,
+        "declared_work_upper_bound": 2197,
+        "determinant_character_exponent": [
+          0,
+          0,
+          0
+        ],
+        "distinct_character_count_dense_scalar_recurrence_degree": 19,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            961,
+            9
+          ],
+          [
+            2355848381,
+            405000
+          ],
+          [
+            785696789797,
+            3645000
+          ],
+          [
+            4010402049166779683,
+            656100000000
+          ]
+        ],
+        "identity_euler_denominator_degree": 81,
+        "identity_scalar_recurrence_degree": 1,
+        "independent_determinant_coefficients_equal": true,
+        "m": 2,
+        "multinomial_equals_independent_End_convolution": true,
+        "n": 3,
+        "representation_rank_and_euler_denominator_degree": 81,
+        "sample_diagonal": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "sample_is_nonunitary_algebraic_trace_pair_not_absolute_trace": true,
+        "self_dual_weight_symmetry": true,
+        "trace_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "weight_multiplicities_sha256": "7efe010cde07bccc985363245a70286d60c605e941bb6327de073ac1ceaca45c"
+      },
+      {
+        "all_weights_scalar_twist_blind": true,
+        "balanced_power_traces": [
+          [
+            16,
+            1
+          ],
+          [
+            4199,
+            210
+          ],
+          [
+            539081,
+            14700
+          ],
+          [
+            805661639,
+            9261000
+          ],
+          [
+            51870365387,
+            216090000
+          ]
+        ],
+        "constant_weight_multiplicity": 4,
+        "declared_work_upper_bound": 1025,
+        "determinant_character_exponent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "distinct_character_count_dense_scalar_recurrence_degree": 13,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            4199,
+            210
+          ],
+          [
+            4812211,
+            22050
+          ],
+          [
+            8001568829,
+            4630500
+          ],
+          [
+            114566151647,
+            10290000
+          ]
+        ],
+        "identity_euler_denominator_degree": 16,
+        "identity_scalar_recurrence_degree": 1,
+        "independent_determinant_coefficients_equal": true,
+        "m": 1,
+        "multinomial_equals_independent_End_convolution": true,
+        "n": 4,
+        "representation_rank_and_euler_denominator_degree": 16,
+        "sample_diagonal": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            7,
+            1
+          ]
+        ],
+        "sample_is_nonunitary_algebraic_trace_pair_not_absolute_trace": true,
+        "self_dual_weight_symmetry": true,
+        "trace_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "weight_multiplicities_sha256": "87e1d1633b986465e0fee411e1c1c30a48c423b702ba7bcd794e787c77200d12"
+      },
+      {
+        "all_weights_scalar_twist_blind": true,
+        "balanced_power_traces": [
+          [
+            256,
+            1
+          ],
+          [
+            17631601,
+            44100
+          ],
+          [
+            290608324561,
+            216090000
+          ],
+          [
+            649090676556166321,
+            85766121000000
+          ],
+          [
+            2690534805380887659769,
+            46694888100000000
+          ]
+        ],
+        "constant_weight_multiplicity": 28,
+        "declared_work_upper_bound": 6237,
+        "determinant_character_exponent": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "distinct_character_count_dense_scalar_recurrence_degree": 55,
+        "exponential_coefficients": [
+          [
+            1,
+            1
+          ],
+          [
+            17631601,
+            44100
+          ],
+          [
+            1253955314977,
+            15558480
+          ],
+          [
+            187361271606531477193,
+            17153224200000
+          ],
+          [
+            99582712786836329246803,
+            88942644000000
+          ]
+        ],
+        "identity_euler_denominator_degree": 256,
+        "identity_scalar_recurrence_degree": 1,
+        "independent_determinant_coefficients_equal": true,
+        "m": 2,
+        "multinomial_equals_independent_End_convolution": true,
+        "n": 4,
+        "representation_rank_and_euler_denominator_degree": 256,
+        "sample_diagonal": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            7,
+            1
+          ]
+        ],
+        "sample_is_nonunitary_algebraic_trace_pair_not_absolute_trace": true,
+        "self_dual_weight_symmetry": true,
+        "trace_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "weight_multiplicities_sha256": "6a334929b3e9eed3f16cb73e0fdacd04b59aceb3fcea691ebb3819323135a49a"
+      }
+    ],
+    "rows_sha256": "2d797a546dd7263f52a377076eb7f88faf26d38b9c44e04e378ebc8f507e381c"
+  },
+  "identity_controls": {
+    "no_go_row_count": 9,
+    "row_count": 20,
+    "rows": [
+      {
+        "dynamic_program": {
+          "coefficient_additions": 0,
+          "visited_states": 1
+        },
+        "exact_identity_pole_order": 1,
+        "finite_difference_zero_tail_end_inclusive": 5,
+        "finite_difference_zero_tail_start": 1,
+        "first_coefficient_forced_virtual_dimension": 1,
+        "forced_euler_second_coefficient": 1,
+        "identity_numerator": [
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 0,
+        "n": 1,
+        "no_go_chamber": false,
+        "numerator_at_one_multiset_word_count": 1,
+        "numerator_degree": 0,
+        "omitted_even_flip_summands": [],
+        "pole_order_gap": 0,
+        "resource_bound": {
+          "declared_work_upper_bound": 12,
+          "dp_state_upper_bound": 1,
+          "dp_transition_coefficient_upper_bound": 1,
+          "finite_difference_summands": 11
+        },
+        "second_coefficient_defect": 0,
+        "target_second_coefficient": 1
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 0,
+          "visited_states": 1
+        },
+        "exact_identity_pole_order": 1,
+        "finite_difference_zero_tail_end_inclusive": 5,
+        "finite_difference_zero_tail_start": 1,
+        "first_coefficient_forced_virtual_dimension": 1,
+        "forced_euler_second_coefficient": 1,
+        "identity_numerator": [
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 1,
+        "n": 1,
+        "no_go_chamber": false,
+        "numerator_at_one_multiset_word_count": 1,
+        "numerator_degree": 0,
+        "omitted_even_flip_summands": [],
+        "pole_order_gap": 0,
+        "resource_bound": {
+          "declared_work_upper_bound": 13,
+          "dp_state_upper_bound": 2,
+          "dp_transition_coefficient_upper_bound": 2,
+          "finite_difference_summands": 11
+        },
+        "second_coefficient_defect": 0,
+        "target_second_coefficient": 1
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 0,
+          "visited_states": 1
+        },
+        "exact_identity_pole_order": 1,
+        "finite_difference_zero_tail_end_inclusive": 5,
+        "finite_difference_zero_tail_start": 1,
+        "first_coefficient_forced_virtual_dimension": 1,
+        "forced_euler_second_coefficient": 1,
+        "identity_numerator": [
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 2,
+        "n": 1,
+        "no_go_chamber": false,
+        "numerator_at_one_multiset_word_count": 1,
+        "numerator_degree": 0,
+        "omitted_even_flip_summands": [
+          {
+            "dimension": 0,
+            "j": 2
+          }
+        ],
+        "pole_order_gap": 0,
+        "resource_bound": {
+          "declared_work_upper_bound": 17,
+          "dp_state_upper_bound": 3,
+          "dp_transition_coefficient_upper_bound": 6,
+          "finite_difference_summands": 11
+        },
+        "second_coefficient_defect": 0,
+        "target_second_coefficient": 1
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 0,
+          "visited_states": 1
+        },
+        "exact_identity_pole_order": 1,
+        "finite_difference_zero_tail_end_inclusive": 5,
+        "finite_difference_zero_tail_start": 1,
+        "first_coefficient_forced_virtual_dimension": 1,
+        "forced_euler_second_coefficient": 1,
+        "identity_numerator": [
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 3,
+        "n": 1,
+        "no_go_chamber": false,
+        "numerator_at_one_multiset_word_count": 1,
+        "numerator_degree": 0,
+        "omitted_even_flip_summands": [
+          {
+            "dimension": 0,
+            "j": 2
+          }
+        ],
+        "pole_order_gap": 0,
+        "resource_bound": {
+          "declared_work_upper_bound": 23,
+          "dp_state_upper_bound": 4,
+          "dp_transition_coefficient_upper_bound": 12,
+          "finite_difference_summands": 11
+        },
+        "second_coefficient_defect": 0,
+        "target_second_coefficient": 1
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 0,
+          "visited_states": 1
+        },
+        "exact_identity_pole_order": 1,
+        "finite_difference_zero_tail_end_inclusive": 5,
+        "finite_difference_zero_tail_start": 1,
+        "first_coefficient_forced_virtual_dimension": 1,
+        "forced_euler_second_coefficient": 1,
+        "identity_numerator": [
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 4,
+        "n": 1,
+        "no_go_chamber": false,
+        "numerator_at_one_multiset_word_count": 1,
+        "numerator_degree": 0,
+        "omitted_even_flip_summands": [
+          {
+            "dimension": 0,
+            "j": 2
+          },
+          {
+            "dimension": 0,
+            "j": 4
+          }
+        ],
+        "pole_order_gap": 0,
+        "resource_bound": {
+          "declared_work_upper_bound": 31,
+          "dp_state_upper_bound": 5,
+          "dp_transition_coefficient_upper_bound": 20,
+          "finite_difference_summands": 11
+        },
+        "second_coefficient_defect": 0,
+        "target_second_coefficient": 1
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 0,
+          "visited_states": 1
+        },
+        "exact_identity_pole_order": 1,
+        "finite_difference_zero_tail_end_inclusive": 5,
+        "finite_difference_zero_tail_start": 1,
+        "first_coefficient_forced_virtual_dimension": 1,
+        "forced_euler_second_coefficient": 1,
+        "identity_numerator": [
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 0,
+        "n": 2,
+        "no_go_chamber": false,
+        "numerator_at_one_multiset_word_count": 1,
+        "numerator_degree": 0,
+        "omitted_even_flip_summands": [],
+        "pole_order_gap": 0,
+        "resource_bound": {
+          "declared_work_upper_bound": 12,
+          "dp_state_upper_bound": 1,
+          "dp_transition_coefficient_upper_bound": 1,
+          "finite_difference_summands": 11
+        },
+        "second_coefficient_defect": 0,
+        "target_second_coefficient": 1
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 1,
+          "visited_states": 2
+        },
+        "exact_identity_pole_order": 2,
+        "finite_difference_zero_tail_end_inclusive": 7,
+        "finite_difference_zero_tail_start": 2,
+        "first_coefficient_forced_virtual_dimension": 2,
+        "forced_euler_second_coefficient": 3,
+        "identity_numerator": [
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 1,
+        "n": 2,
+        "no_go_chamber": false,
+        "numerator_at_one_multiset_word_count": 1,
+        "numerator_degree": 0,
+        "omitted_even_flip_summands": [],
+        "pole_order_gap": 0,
+        "resource_bound": {
+          "declared_work_upper_bound": 29,
+          "dp_state_upper_bound": 4,
+          "dp_transition_coefficient_upper_bound": 8,
+          "finite_difference_summands": 21
+        },
+        "second_coefficient_defect": 0,
+        "target_second_coefficient": 3
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 5,
+          "visited_states": 5
+        },
+        "exact_identity_pole_order": 3,
+        "finite_difference_zero_tail_end_inclusive": 9,
+        "finite_difference_zero_tail_start": 3,
+        "first_coefficient_forced_virtual_dimension": 4,
+        "forced_euler_second_coefficient": 10,
+        "identity_numerator": [
+          1,
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 2,
+        "n": 2,
+        "no_go_chamber": true,
+        "numerator_at_one_multiset_word_count": 2,
+        "numerator_degree": 1,
+        "omitted_even_flip_summands": [
+          {
+            "dimension": 1,
+            "j": 2
+          }
+        ],
+        "pole_order_gap": 1,
+        "resource_bound": {
+          "declared_work_upper_bound": 106,
+          "dp_state_upper_bound": 12,
+          "dp_transition_coefficient_upper_bound": 72,
+          "finite_difference_summands": 34
+        },
+        "second_coefficient_defect": 1,
+        "target_second_coefficient": 9
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 22,
+          "visited_states": 13
+        },
+        "exact_identity_pole_order": 4,
+        "finite_difference_zero_tail_end_inclusive": 11,
+        "finite_difference_zero_tail_start": 4,
+        "first_coefficient_forced_virtual_dimension": 8,
+        "forced_euler_second_coefficient": 36,
+        "identity_numerator": [
+          1,
+          4,
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 3,
+        "n": 2,
+        "no_go_chamber": true,
+        "numerator_at_one_multiset_word_count": 6,
+        "numerator_degree": 2,
+        "omitted_even_flip_summands": [
+          {
+            "dimension": 9,
+            "j": 2
+          }
+        ],
+        "pole_order_gap": 4,
+        "resource_bound": {
+          "declared_work_upper_bound": 434,
+          "dp_state_upper_bound": 32,
+          "dp_transition_coefficient_upper_bound": 384,
+          "finite_difference_summands": 50
+        },
+        "second_coefficient_defect": 9,
+        "target_second_coefficient": 27
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 89,
+          "visited_states": 33
+        },
+        "exact_identity_pole_order": 5,
+        "finite_difference_zero_tail_end_inclusive": 13,
+        "finite_difference_zero_tail_start": 5,
+        "first_coefficient_forced_virtual_dimension": 16,
+        "forced_euler_second_coefficient": 136,
+        "identity_numerator": [
+          1,
+          11,
+          11,
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 4,
+        "n": 2,
+        "no_go_chamber": true,
+        "numerator_at_one_multiset_word_count": 24,
+        "numerator_degree": 3,
+        "omitted_even_flip_summands": [
+          {
+            "dimension": 54,
+            "j": 2
+          },
+          {
+            "dimension": 1,
+            "j": 4
+          }
+        ],
+        "pole_order_gap": 11,
+        "resource_bound": {
+          "declared_work_upper_bound": 1669,
+          "dp_state_upper_bound": 80,
+          "dp_transition_coefficient_upper_bound": 1600,
+          "finite_difference_summands": 69
+        },
+        "second_coefficient_defect": 55,
+        "target_second_coefficient": 81
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 0,
+          "visited_states": 1
+        },
+        "exact_identity_pole_order": 1,
+        "finite_difference_zero_tail_end_inclusive": 5,
+        "finite_difference_zero_tail_start": 1,
+        "first_coefficient_forced_virtual_dimension": 1,
+        "forced_euler_second_coefficient": 1,
+        "identity_numerator": [
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 0,
+        "n": 3,
+        "no_go_chamber": false,
+        "numerator_at_one_multiset_word_count": 1,
+        "numerator_degree": 0,
+        "omitted_even_flip_summands": [],
+        "pole_order_gap": 0,
+        "resource_bound": {
+          "declared_work_upper_bound": 12,
+          "dp_state_upper_bound": 1,
+          "dp_transition_coefficient_upper_bound": 1,
+          "finite_difference_summands": 11
+        },
+        "second_coefficient_defect": 0,
+        "target_second_coefficient": 1
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 2,
+          "visited_states": 3
+        },
+        "exact_identity_pole_order": 3,
+        "finite_difference_zero_tail_end_inclusive": 9,
+        "finite_difference_zero_tail_start": 3,
+        "first_coefficient_forced_virtual_dimension": 3,
+        "forced_euler_second_coefficient": 6,
+        "identity_numerator": [
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 1,
+        "n": 3,
+        "no_go_chamber": false,
+        "numerator_at_one_multiset_word_count": 1,
+        "numerator_degree": 0,
+        "omitted_even_flip_summands": [],
+        "pole_order_gap": 0,
+        "resource_bound": {
+          "declared_work_upper_bound": 52,
+          "dp_state_upper_bound": 6,
+          "dp_transition_coefficient_upper_bound": 18,
+          "finite_difference_summands": 34
+        },
+        "second_coefficient_defect": 0,
+        "target_second_coefficient": 6
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 24,
+          "visited_states": 13
+        },
+        "exact_identity_pole_order": 5,
+        "finite_difference_zero_tail_end_inclusive": 13,
+        "finite_difference_zero_tail_start": 5,
+        "first_coefficient_forced_virtual_dimension": 9,
+        "forced_euler_second_coefficient": 45,
+        "identity_numerator": [
+          1,
+          4,
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 2,
+        "n": 3,
+        "no_go_chamber": true,
+        "numerator_at_one_multiset_word_count": 6,
+        "numerator_degree": 2,
+        "omitted_even_flip_summands": [
+          {
+            "dimension": 9,
+            "j": 2
+          }
+        ],
+        "pole_order_gap": 4,
+        "resource_bound": {
+          "declared_work_upper_bound": 339,
+          "dp_state_upper_bound": 27,
+          "dp_transition_coefficient_upper_bound": 270,
+          "finite_difference_summands": 69
+        },
+        "second_coefficient_defect": 9,
+        "target_second_coefficient": 36
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 212,
+          "visited_states": 55
+        },
+        "exact_identity_pole_order": 7,
+        "finite_difference_zero_tail_end_inclusive": 17,
+        "finite_difference_zero_tail_start": 7,
+        "first_coefficient_forced_virtual_dimension": 27,
+        "forced_euler_second_coefficient": 378,
+        "identity_numerator": [
+          1,
+          20,
+          48,
+          20,
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 3,
+        "n": 3,
+        "no_go_chamber": true,
+        "numerator_at_one_multiset_word_count": 90,
+        "numerator_degree": 4,
+        "omitted_even_flip_summands": [
+          {
+            "dimension": 162,
+            "j": 2
+          }
+        ],
+        "pole_order_gap": 20,
+        "resource_bound": {
+          "declared_work_upper_bound": 2384,
+          "dp_state_upper_bound": 108,
+          "dp_transition_coefficient_upper_bound": 2268,
+          "finite_difference_summands": 116
+        },
+        "second_coefficient_defect": 162,
+        "target_second_coefficient": 216
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 1534,
+          "visited_states": 217
+        },
+        "exact_identity_pole_order": 9,
+        "finite_difference_zero_tail_end_inclusive": 21,
+        "finite_difference_zero_tail_start": 9,
+        "first_coefficient_forced_virtual_dimension": 81,
+        "forced_euler_second_coefficient": 3321,
+        "identity_numerator": [
+          1,
+          72,
+          603,
+          1168,
+          603,
+          72,
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 4,
+        "n": 3,
+        "no_go_chamber": true,
+        "numerator_at_one_multiset_word_count": 2520,
+        "numerator_degree": 6,
+        "omitted_even_flip_summands": [
+          {
+            "dimension": 1944,
+            "j": 2
+          },
+          {
+            "dimension": 81,
+            "j": 4
+          }
+        ],
+        "pole_order_gap": 72,
+        "resource_bound": {
+          "declared_work_upper_bound": 14755,
+          "dp_state_upper_bound": 405,
+          "dp_transition_coefficient_upper_bound": 14580,
+          "finite_difference_summands": 175
+        },
+        "second_coefficient_defect": 2025,
+        "target_second_coefficient": 1296
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 0,
+          "visited_states": 1
+        },
+        "exact_identity_pole_order": 1,
+        "finite_difference_zero_tail_end_inclusive": 5,
+        "finite_difference_zero_tail_start": 1,
+        "first_coefficient_forced_virtual_dimension": 1,
+        "forced_euler_second_coefficient": 1,
+        "identity_numerator": [
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 0,
+        "n": 4,
+        "no_go_chamber": false,
+        "numerator_at_one_multiset_word_count": 1,
+        "numerator_degree": 0,
+        "omitted_even_flip_summands": [],
+        "pole_order_gap": 0,
+        "resource_bound": {
+          "declared_work_upper_bound": 12,
+          "dp_state_upper_bound": 1,
+          "dp_transition_coefficient_upper_bound": 1,
+          "finite_difference_summands": 11
+        },
+        "second_coefficient_defect": 0,
+        "target_second_coefficient": 1
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 3,
+          "visited_states": 4
+        },
+        "exact_identity_pole_order": 4,
+        "finite_difference_zero_tail_end_inclusive": 11,
+        "finite_difference_zero_tail_start": 4,
+        "first_coefficient_forced_virtual_dimension": 4,
+        "forced_euler_second_coefficient": 10,
+        "identity_numerator": [
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 1,
+        "n": 4,
+        "no_go_chamber": false,
+        "numerator_at_one_multiset_word_count": 1,
+        "numerator_degree": 0,
+        "omitted_even_flip_summands": [],
+        "pole_order_gap": 0,
+        "resource_bound": {
+          "declared_work_upper_bound": 82,
+          "dp_state_upper_bound": 8,
+          "dp_transition_coefficient_upper_bound": 32,
+          "finite_difference_summands": 50
+        },
+        "second_coefficient_defect": 0,
+        "target_second_coefficient": 10
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 65,
+          "visited_states": 25
+        },
+        "exact_identity_pole_order": 7,
+        "finite_difference_zero_tail_end_inclusive": 17,
+        "finite_difference_zero_tail_start": 7,
+        "first_coefficient_forced_virtual_dimension": 16,
+        "forced_euler_second_coefficient": 136,
+        "identity_numerator": [
+          1,
+          9,
+          9,
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 2,
+        "n": 4,
+        "no_go_chamber": true,
+        "numerator_at_one_multiset_word_count": 20,
+        "numerator_degree": 3,
+        "omitted_even_flip_summands": [
+          {
+            "dimension": 36,
+            "j": 2
+          }
+        ],
+        "pole_order_gap": 9,
+        "resource_bound": {
+          "declared_work_upper_bound": 788,
+          "dp_state_upper_bound": 48,
+          "dp_transition_coefficient_upper_bound": 672,
+          "finite_difference_summands": 116
+        },
+        "second_coefficient_defect": 36,
+        "target_second_coefficient": 100
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 885,
+          "visited_states": 145
+        },
+        "exact_identity_pole_order": 10,
+        "finite_difference_zero_tail_end_inclusive": 23,
+        "finite_difference_zero_tail_start": 10,
+        "first_coefficient_forced_virtual_dimension": 64,
+        "forced_euler_second_coefficient": 2080,
+        "identity_numerator": [
+          1,
+          54,
+          405,
+          760,
+          405,
+          54,
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 3,
+        "n": 4,
+        "no_go_chamber": true,
+        "numerator_at_one_multiset_word_count": 1680,
+        "numerator_degree": 6,
+        "omitted_even_flip_summands": [
+          {
+            "dimension": 1080,
+            "j": 2
+          }
+        ],
+        "pole_order_gap": 54,
+        "resource_bound": {
+          "declared_work_upper_bound": 7889,
+          "dp_state_upper_bound": 256,
+          "dp_transition_coefficient_upper_bound": 7680,
+          "finite_difference_summands": 209
+        },
+        "second_coefficient_defect": 1080,
+        "target_second_coefficient": 1000
+      },
+      {
+        "dynamic_program": {
+          "coefficient_additions": 9019,
+          "visited_states": 769
+        },
+        "exact_identity_pole_order": 13,
+        "finite_difference_zero_tail_end_inclusive": 29,
+        "finite_difference_zero_tail_start": 13,
+        "first_coefficient_forced_virtual_dimension": 256,
+        "forced_euler_second_coefficient": 32896,
+        "identity_numerator": [
+          1,
+          243,
+          6750,
+          49682,
+          128124,
+          128124,
+          49682,
+          6750,
+          243,
+          1
+        ],
+        "independent_descent_numerator_equal": true,
+        "k": 4,
+        "n": 4,
+        "no_go_chamber": true,
+        "numerator_at_one_multiset_word_count": 369600,
+        "numerator_degree": 9,
+        "omitted_even_flip_summands": [
+          {
+            "dimension": 21600,
+            "j": 2
+          },
+          {
+            "dimension": 1296,
+            "j": 4
+          }
+        ],
+        "pole_order_gap": 243,
+        "resource_bound": {
+          "declared_work_upper_bound": 66889,
+          "dp_state_upper_bound": 1280,
+          "dp_transition_coefficient_upper_bound": 66560,
+          "finite_difference_summands": 329
+        },
+        "second_coefficient_defect": 22896,
+        "target_second_coefficient": 10000
+      }
+    ],
+    "rows_sha256": "ff146abc211fa6ec20947de82fccfc9c4cad987f2c617b3a4a47706ec2c5c9c3"
+  },
+  "payload_sha256": "35e95a2d5c953a22c71495b28f95dff7fbde590cd7c17f60e08c55f8b9fc8070",
+  "producer": {
+    "note": "research/l-families/atlas/generalized/UNIVERSAL_COEFFICIENT_POWER_EULER_OBSTRUCTION.md",
+    "note_sha256_lf_normalized": "856ed74576092294da15285cadb1cad44e57e19d775086407249e19dcdae2b7d",
+    "script": "research/l-families/atlas/generalized/universal_coefficient_power_euler_obstruction.py",
+    "script_sha256_lf_normalized": "1f48fb1f3bb988f34659edfb47df5b4531b29f0b82f7ce32e3e2ec5f3f78bd3e",
+    "test": "tests/test_universal_coefficient_power_euler_obstruction.py",
+    "test_sha256_lf_normalized": "4e6e9206adc50f234f8a99022ce778e08a2c2aa0ce27f1085e307b05f5003d35"
+  },
+  "programme_issue": {
+    "number": 764,
+    "url": "https://github.com/gfreund123/riemann/issues/764"
+  },
+  "resource_contract": {
+    "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL",
+    "balanced_row_cap_exclusive": 20000,
+    "constructive_work_upper_bound": 10865,
+    "declared_work_upper_bound": 106413,
+    "external_symbolic_engine": false,
+    "float_operations": 0,
+    "identity_row_cap_exclusive": 2000000,
+    "identity_work_upper_bound": 95548,
+    "maximum_allowed_k": 5,
+    "maximum_allowed_n": 5,
+    "maximum_balanced_m": 2,
+    "maximum_k": 4,
+    "maximum_n": 4,
+    "random_samples": 0,
+    "work_unit_cap_exclusive": 10000000,
+    "work_unit_definition": "named primary loops: DP coefficient additions, difference summands, weight-pair/convolution updates and finite trace/factor summands; not every diagnostic, hashing operation or bit operation"
+  },
+  "schema": "riemann.atlas.generalized.universal_coefficient_power_euler_obstruction.v1",
+  "scope_firewall": {
+    "arbitrary_nonfunctorial_matrices_and_extra_artin_data_not_classified": true,
+    "constructive_repair_uses_power_traces_not_complete_symmetric_coefficients": true,
+    "euler_degree_counts_weight_multiplicity_not_scalar_support": true,
+    "external_novelty_unreviewed": true,
+    "matrix_coefficient_parents_not_excluded": true,
+    "n_at_least_two_k_at_least_two_for_obstruction": true,
+    "n_one_k_zero_k_one_are_genuine_exceptions": true,
+    "no_automorphy_motive_functional_equation_or_RH_GRH_consequence": true,
+    "no_negative_or_nonintegral_power_classification": true,
+    "no_prime_indexed_global_family_constructed": true,
+    "regular_at_identity_required_for_generic_extension": true,
+    "unitarity_required_for_absolute_trace_interpretation": true,
+    "universal_finite_virtual_representations_only": true
+  },
+  "source_lock": {
+    "base_commit": "02e53055b6bdff73fa136ff28cced239d1627f80",
+    "external_references": [
+      {
+        "authors": "Marcel Morales",
+        "boundary": "published Segre Hilbert numerator and Simon Newcomb descent-number identification; the stable-sort proof is supplied directly in the companion note",
+        "machine_authenticated": false,
+        "title": "Segre embeddings, Hilbert series and Newcomb's problem",
+        "url": "https://arxiv.org/abs/1306.6910v2",
+        "version": "arXiv:1306.6910v2, 2014"
+      },
+      {
+        "authors": "Danai Deligeorgaki, Bin Han, and Liam Solus",
+        "boundary": "multiset Eulerian and MacMahon-identity literature context, not an external novelty claim or a machine-authenticated proof dependency",
+        "machine_authenticated": false,
+        "title": "Colored Multiset Eulerian Polynomials",
+        "url": "https://arxiv.org/abs/2407.12076v2",
+        "version": "arXiv:2407.12076v2, 2025"
+      },
+      {
+        "authors": "H. Jacquet, I. I. Piatetskii-Shapiro, and J. A. Shalika",
+        "boundary": "classical local tensor-product L-factor context at m=1; no global automorphy or new lifting theorem is inferred",
+        "doi": "10.2307/2374264",
+        "journal": "American Journal of Mathematics 105 (1983), 367-464",
+        "machine_authenticated": false,
+        "title": "Rankin-Selberg Convolutions",
+        "url": "https://www.math.columbia.edu/~hj/Rankin%20Selberg%20convolutions.pdf"
+      }
+    ],
+    "git_blob_contents_compared_to_working_tree": true,
+    "manifest": "research/l-families/atlas/generalized/universal_coefficient_power_euler_obstruction.sources.json",
+    "manifest_sha256_lf_normalized": "af2a7ebe6e3cfbe27f90a3e77a48a736154a16df81fdba8af17a7c3913196bd1",
+    "scope_firewall": {
+      "arbitrary_nonfunctorial_matrices_and_extra_artin_data_not_classified": true,
+      "constructive_repair_uses_power_traces_not_complete_symmetric_coefficients": true,
+      "euler_degree_counts_weight_multiplicity_not_scalar_support": true,
+      "external_novelty_unreviewed": true,
+      "matrix_coefficient_parents_not_excluded": true,
+      "n_at_least_two_k_at_least_two_for_obstruction": true,
+      "n_one_k_zero_k_one_are_genuine_exceptions": true,
+      "no_automorphy_motive_functional_equation_or_RH_GRH_consequence": true,
+      "no_negative_or_nonintegral_power_classification": true,
+      "no_prime_indexed_global_family_constructed": true,
+      "regular_at_identity_required_for_generic_extension": true,
+      "unitarity_required_for_absolute_trace_interpretation": true,
+      "universal_finite_virtual_representations_only": true
+    },
+    "verified_sources": [
+      {
+        "file_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c",
+        "git_blob": "5eeb1e7c6129646ac646c697276bcd4adb04aa0c",
+        "path": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+        "role": "existing integer Hadamard-power numerator defect and warning against symmetric-power Euler-factor identification"
+      },
+      {
+        "file_sha256_lf_normalized": "84759dc5ca81ef896e2a6ab2d9a7d3d32c3865f5f61bb45db18aaf8633578456",
+        "git_blob": "9aef6f8a780e9dff5c3b7a53c012c0956be036dc",
+        "path": "research/l-families/atlas/generalized/TRANSFER_MATRIX_SYMMETRIC_PARENT.md",
+        "role": "genuine tensor/symmetric state-space parent as a matrix coefficient, distinct from a representation Euler factor"
+      },
+      {
+        "file_sha256_lf_normalized": "b363866fa6ba9a3a54e3b93fca07d11c66bc395a3e16c749b0acb5e8482ab596",
+        "git_blob": "f8d08185ce73d83c1ebe4088a1d32591cfadc2e9",
+        "path": "research/l-families/atlas/generalized/DENSE_TORUS_TRACE_ABSOLUTE_POWER_RATIONALITY.md",
+        "role": "balanced tensor multiplicities, exact root-lattice support, and dense-orbit scalar recurrence degree distinct from representation rank"
+      }
+    ]
+  },
+  "universal_proof_obligations": {
+    "finite_rows_do_not_prove_universal_quantifiers": true,
+    "formal_exponential": "-log det(I-TB)=sum trace(B^r)T^r/r",
+    "identity": "every group representation sends the identity to the identity",
+    "pole_order": "degree-e polynomial coefficient sequence has exact pole order e+1",
+    "regular_extension": "coefficient functions agree at the identity if they agree on a Zariski-dense set",
+    "stable_sort": "merged weak lists are words with value increases at every descent"
+  }
+}
