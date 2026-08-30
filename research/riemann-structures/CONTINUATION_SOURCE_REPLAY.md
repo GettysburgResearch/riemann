@@ -5,7 +5,7 @@ can have different commit identities because packets were cherry-picked.
 Fetching only the programme branch can omit the original reviewed commit.
 Fetch these source refs without merging them:
 
-    git fetch --no-tags origin refs/heads/codex/review-sources-signed-history-wave2 refs/heads/codex/review-sources-xi-laplace-wave2 refs/heads/codex/review-sources-xi-physical-band-wave2 refs/heads/codex/review-sources-xi-positive-kernel-wave2 refs/heads/codex/review-sources-hardy-inner-width-wave2
+    git fetch --no-tags origin refs/heads/codex/review-sources-signed-history-wave2 refs/heads/codex/review-sources-xi-laplace-wave2 refs/heads/codex/review-sources-xi-physical-band-wave2 refs/heads/codex/review-sources-xi-positive-kernel-wave2 refs/heads/codex/review-sources-hardy-inner-width-wave2 refs/heads/codex/review-sources-canonical-boolean-diagonal-wave2 refs/heads/codex/review-sources-xi-companion-count-wave2
 
 Their exact targets for this checkpoint are:
 
@@ -16,13 +16,17 @@ Their exact targets for this checkpoint are:
 | xi-physical-band-wave2 | 1b5547c3fcd1ba116106953f44a2ee4ceb81b525 |
 | xi-positive-kernel-wave2 | e2d145ce1b113c1bb87dd2bc67f717f72be74328 |
 | hardy-inner-width-wave2 | ef7bbb8dca978269f24e7ff9d97b6dceeed5b460 |
+| canonical-boolean-diagonal-wave2 | 7ccd5a044e91b32a0aa66bcf30dcf39d99f96217 |
+| xi-companion-count-wave2 | 76454e3db0ccce8f500297ea27668d6088b5091a |
 
 The common prefix is codex/review-sources-. The signed source retains
 5dc85cd5; the actual-kernel source retains 939a2496. The physical-band ref
 retains the coarse confluent source 8ef225b8 and finite physical theorem
-a07e9c3b as well as the high-derivative theorem at its target. The last two
-refs preserve the exact positive-kernel and all-inner/source-duality
-scientific commits named by their reviews.
+a07e9c3b as well as the high-derivative theorem at its target. The remaining
+refs preserve the exact positive-kernel, all-inner/source-duality,
+canonical-diagonal and actual companion-count scientific states named by
+their reviews. The canonical-diagonal state includes its separate final
+manifest-whitespace/hash repair; the unrepaired fixture is not accepted.
 
 ## Older source branches still required
 
@@ -58,11 +62,11 @@ the explicit fetches and adequate history.
 
 The recursive structures-only source audit passed for:
 
-- fourteen root manifests and fourteen distinct manifest paths;
-- fifteen frozen manifest versions;
-- 118 literal source edges;
-- 56 unique frozen commit/path file versions;
-- nineteen source commits.
+- sixteen root manifests and sixteen distinct manifest paths;
+- seventeen frozen manifest versions;
+- 140 literal source edges;
+- 67 unique frozen commit/path file versions;
+- twenty-one source commits.
 
 Every required source commit is reachable from the programme or from the
 listed source/older branch tips. The earlier PR760 identity is necessary:

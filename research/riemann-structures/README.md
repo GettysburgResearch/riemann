@@ -8,9 +8,10 @@ atlas.
 Start with
 [RIEMANN_STRUCTURES_CONTINUATION_RESULTS.md](RIEMANN_STRUCTURES_CONTINUATION_RESULTS.md)
 for the current source-algebra, live-occupancy, signed-history, archimedean,
-actual-Xi concentration, all-inner physical-band and high-derivative results,
-including the explicit source-duality correction and descent firewall.
-Native total-charge and descent estimates remain open.
+canonical principal-diagonal, actual-Xi geographic count, concentration,
+all-inner physical-band and high-derivative results, including the explicit
+source-duality correction and descent firewall. Native masked identification,
+cofinal capture, total-charge and descent estimates remain open.
 The [wave-2 portfolio](RIEMANN_STRUCTURES_WAVE2_PORTFOLIO.md) is the historical
 mechanism/literature map; its queue is superseded by the continuation
 checkpoint. [Source acquisition](CONTINUATION_SOURCE_REPLAY.md) preserves

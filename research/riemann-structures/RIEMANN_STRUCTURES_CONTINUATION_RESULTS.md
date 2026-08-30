@@ -6,9 +6,10 @@ carried by [draft PR #765](https://github.com/gfreund123/riemann/pull/765).
 This is a research checkpoint, not completion of the requested eight-hour
 pass, a canonical repository integration, or an RH claim.
 
-Checkpoint updated: 2026-08-31. Fourteen exact packets are resident,
-including the all-inner width theorem and a separate source-convention
-correction.
+Checkpoint updated: 2026-08-31. Sixteen exact packets are resident,
+including the canonical Boolean principal-diagonal estimate, actual-Xi
+geographic count and scale-matched band bound, and the separate
+source-convention correction.
 
 ## Five-minute result
 
@@ -17,11 +18,12 @@ its physical metric are different requirements. The useful new results
 identify which operations actually survive. None constructs a new
 number-field geometry or supplies the missing RH-level estimate.
 
-The Xi work now has three independent conclusions: actual scalar
-concentration is proved; narrow physical-band bounds are proved for every
-inner numerator at finite denominator rank; and generic positivity plus
+The Xi work now has four distinct conclusions: actual scalar concentration
+is proved; narrow physical-band bounds hold for every inner numerator at
+finite denominator rank; a uniform actual companion count binds finite
+geographic packets to the physical scale; and generic positivity plus
 high-derivative concentration does not eliminate reverse-Rolle defects.
-Small band charge is not small total charge.
+Small band charge is not small total charge or native cofinal capture.
 
 Read the
 [source-duality correction](../exploratory/HARDY_INNER_WIDTH_SOURCE_DUALITY.md)
@@ -37,6 +39,7 @@ cannot be interchanged. Historical scientific files are preserved.
 | [Wick occupancy spectrum](../l-families/atlas/function_field/FFPS_SHARED_FIBRE_WICK_OCCUPANCY_SPECTRUM.md) | Exact aggregate/diagonal decomposition and full/incomplete occupancy controls | An indefinite free-vector form does not establish native coefficient freedom |
 | [Live shared fibres](../l-families/atlas/function_field/FFPS_LIVE_SHARED_FIBRE_COLLISIONS.md) | Actual owner/cofactor collisions satisfying the frozen windows | All coefficient, carrier and mask constraints remain attached |
 | [Signed history recombination](../l-families/atlas/function_field/FFPS_SIGNED_HISTORY_RECOMBINATION.md) | A subpower principal-channel payment in the original integrated source | Cross terms between distinct retained groups remain |
+| [Canonical Boolean principal diagonal](../l-families/atlas/function_field/FFPS_CANONICAL_BOOLEAN_PRINCIPAL_DIAGONAL.md) | A subpower candidate diagonal with original principal weights and Mellin measure | One exact 67-free arithmetic tuple per atom; native masked identification and full principal-moment difference remain unpaid |
 | [Source algebra and Adams](SOURCE_ALGEBRA_DIAGONAL_ADAMS_ADAPTER.md) | Literal diagonal tensor and primitive extraction before pushforward | No complete native partial-Frobenius realization or trace estimate |
 | [Archimedean ladder](ARCHIMEDEAN_LADDER_BOUNDARY.md) | Gamma determinants and exact finite/odd-parity boundaries | The infinite ladder does not become a finite positive Euler object |
 | [Family-binding firewall](FAMILY_BINDING_PERMUTATION_FIREWALL.md) | Exact label-erasure and first-mean-loss obstruction | Stronger labelled data and signed extraction are not excluded |
@@ -47,6 +50,7 @@ cannot be interchanged. Historical scientific files are preserved.
 | [High Xi derivatives](../exploratory/XI_HIGH_DERIVATIVE_SADDLE_CLOSURE.md) | Weighted saddle closure and simple real zeros on growing rectangles | The reverse-Rolle defect sum remains unpaid |
 | [Positive-kernel descent firewall](../exploratory/XI_POSITIVE_KERNEL_DESCENT_FIREWALL.md) | An exact-tail positive-kernel example with a wrong-sign critical point and surviving high-derivative asymptotics | Not a refutation of every quantitative defect or density bound |
 | [All-inner width and source duality](../exploratory/HARDY_INNER_WIDTH_SOURCE_DUALITY.md) | Width/height bounds for any inner numerator and the corrected physical source coefficients | Finite denominator accounting, native cofinal limits and total charge remain separate |
+| [Actual Xi companion count and width](../exploratory/XI_UNIFORM_COMPANION_COUNT_WIDTH.md) | Uniform geographic companion count and normalized shrinking-band bound at the physical constant scale | Actual finite geographic factors only; no complete native cofinal or omitted-direction ledger |
 
 Each row has a bounded exact producer, fixture, source manifest and tests.
 The later analytic and source-interface packets have separate frozen-source
@@ -75,16 +79,44 @@ For an independent global normalizer N,
     tr(G^-1 H_band)/N <= C sqrt[Delta (n/N)(S/N)].
 
 A height sum alone does not bound the number of arbitrarily shallow nodes.
-The count, window summation, common-zero, boundary and cofinal-exhaustion
-ledgers must still be justified. A source-relative estimate has a different
-normalization; its factor cannot simply be divided by n.
+The later actual-Xi count supplies a geographic bound, but common-zero,
+boundary and native cofinal-exhaustion ledgers must still be justified.
+A source-relative estimate has a different normalization; its factor
+cannot simply be divided by n.
 
 The actual scalar envelope at fixed odd K and fixed M has absolute width
 
     Delta_X = (KM/pi+o(1)) exp(-X)/X.
 
-Its relative width is of order exp(-X)/X^2. Neither X proportional to
-log(T) nor a native denominator count is supplied by the band theorem.
+Its relative width is of order exp(-X)/X^2. The band theorem by itself
+does not identify X or supply a native denominator count.
+
+### Actual-Xi geographic count and fixed-scale binding
+
+The [new count theorem](../exploratory/XI_UNIFORM_COMPANION_COUNT_WIDTH.md)
+uses the actual positive theta kernel and two opposite, noncancelling
+Jensen anchors. For every lambda in [0,1], the combined zero count of
+Xi+i lambda Xi-prime and Xi^(5)-i lambda Xi^(6) in abs(z)<=R is
+O(R log(R+2)), uniformly in lambda and with multiplicity.
+
+For the same native constant lambda_j=1/omega(t_j), the exact matching is
+X_j=2 omega(t_j)=log(t_j/(2pi))+O(T^-2). Thus
+
+    Delta_j = (2 K M+o(1))/(t_j log(t_j/(2pi))).
+
+Finite actual denominator factors with abs(b)<=C_0 T and 0<Im(b)<=eta,
+over J_T=ceil((log T)^B) windows, consequently satisfy
+
+    sum_j tr(G_j^-1 H_Ij)/N(T,2T)
+        = O(J_T/sqrt(T log T)) = o(1).
+
+The same bound holds for compatible physical source traces with the
+correct adjoint coefficients and retained outer metric. This does not
+require the earlier unproved cofinal height transfer. It also does not
+identify a native cofinal source with those geographic factors, control
+approximation zeros or omitted directions, or bound total charge.
+The [separate audit](../exploratory/XI_UNIFORM_COMPANION_COUNT_WIDTH_AUDIT.md)
+records the exact accepted state and this boundary.
 
 ### The source convention is a substantive correction
 
@@ -126,9 +158,25 @@ at the stated subpower scale.
 The unpaid cross-group source includes groups with equal arithmetic tuples
 but different masks, carriers or other retained labels. A canonical
 Boolean coefficient identity is not automatically an identity of the
-finer labelled atom space or its literal Wick diagonal. Current work is
-tracing that specific binding; no unfinished sign/lift claim is imported
-into this checkpoint.
+finer labelled atom space or its literal Wick diagonal.
+
+The [canonical-diagonal packet](../l-families/atlas/function_field/FFPS_CANONICAL_BOOLEAN_PRINCIPAL_DIAGONAL.md)
+now proves, on its ordinary-prime 67-free chart with one exact tuple per
+atom and masks of modulus at most one,
+
+    D_B <= 6 C_kappa zeta(2)^81 H_floor(16Y)^22 = Y^o(1),
+    C_kappa = 128(3+sqrt(2)) log(2)-288.
+
+This uses the original principal weight and the actual Mellin measure.
+It pays a candidate diagonal, not a native resolution change:
+
+    P_nat^circ-P_B^circ = (P_nat-P_B)+(D_B-D_lit).
+
+Only the second difference is bounded by the two diagonal budgets.
+The masked bilateral identity and P_nat-P_B remain open. The
+[independent audit](../l-families/atlas/function_field/FFPS_CANONICAL_BOOLEAN_PRINCIPAL_DIAGONAL_AUDIT.md)
+retains the label, exceptional-prime and multiplicity restrictions.
+No unfinished native sign/lift claim is imported into this checkpoint.
 
 ## Earlier work is explicitly retained
 
@@ -194,9 +242,9 @@ and free-energy gate remain open.
 1. Resolve the native chart-and-diagonal binding in the signed source.
    Carry every allocation, carrier, endpoint and selector label through
    any proposed recombination.
-2. Determine the exact denominator-count and cofinal ledger needed by the
-   physical band theorem. Then identify an additional Xi-specific bridge
-   if a conclusion about total charge is sought.
+2. Prove native cofinal capture beyond the now-proved geographic count,
+   including omitted denominator directions and approximation/boundary
+   terms. A separate Xi-specific bridge is still needed for total charge.
 3. Pursue a source-specific reverse-Rolle defect estimate. Re-proving
    high-derivative concentration or generic kernel positivity does not
    pay the missing sum.
@@ -207,15 +255,15 @@ and free-energy gate remain open.
    operation and survive a held-out test, not merely package formulas.
 
 The two programmes retain separate branches. The generalized-L programme
-now has local/global obstructions and a classical graded parent; it is
-also testing a coupled global-parent candidate. Its results are not
-dependencies of the signed finite-field or Xi estimates, and unfinished
-candidate work is not accepted here.
+now has local/global obstructions, a classical graded parent and a reviewed
+coupled Rankin--Selberg quotient parent. Its results are not dependencies
+of the signed finite-field or Xi estimates. Stronger unfinished family
+work is not accepted merely by being mentioned in this checkpoint.
 
 ## Reproduction and priority
 
-The current changed-test-module scope is fourteen modules: all 320 tests
-passed in normal Python and under -O. All fourteen complete producer
+The current changed-test-module scope is sixteen modules: all 382 tests
+passed in normal Python and under -O. All sixteen complete producer
 checks passed in both modes. This scope is not the differently selected
 focused/inherited suite counted at the earlier checkpoint.
 
