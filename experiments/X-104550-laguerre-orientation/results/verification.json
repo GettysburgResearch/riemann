@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "alpha3": "9873/10000",
+    "finite_correlation_fixtures": 3,
+    "nonnegative_fourier_coefficient_counts": [
+      9,
+      7,
+      9
+    ],
+    "orientation_transfer_examples": {
+      "1": "9873/10000",
+      "2/3": "3291/10000",
+      "3/4": "9873/20000",
+      "51/100": "9873/500000"
+    },
+    "positive_source_negative_control": {
+      "pointwise_nonnegative": false,
+      "positive_definite_transform": true,
+      "positive_source": true,
+      "transform_at_pi": "-1"
+    }
+  },
+  "proof_object_sha256": "3ffa8f870c8782419c955efd2dcb75490a90493e8fc9da7ce24443334da1f2d7",
+  "schema": "riemann.t104550.fixed_order_laguerre.v1",
+  "scope": {
+    "alpha2_from_alpha3_established": false,
+    "correlation_kernel_identity_proved_exact": true,
+    "laguerre_orientation_transfer_proved_exact": true,
+    "laguerre_profile_positive_definite": true,
+    "pointwise_lag2xi104550_proved": false,
+    "rh_established": false
+  },
+  "verdict": "PASS_T104550_FIXED_ORDER_LAGUERRE_KERNEL_ALGEBRA"
+}

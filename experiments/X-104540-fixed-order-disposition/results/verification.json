@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "alpha2": "599/625",
+    "alpha3": "9873/10000",
+    "cartwright_counterexample": {
+      "derivative_line_proportion": "1",
+      "function": "2+cos(z)",
+      "nonreal_parent_zero_height": "arcosh(2)",
+      "parent_line_proportion": "0",
+      "real_parent_zeros": 0
+    },
+    "good_extrema_lower_fraction": "9665/9873",
+    "wrong_extrema_upper_fraction": "208/9873"
+  },
+  "proof_object_sha256": "62b0ed9a29f38a959fdf9b30102d223a2a667a6a1ed7afa9dd37c258bae05efd",
+  "schema": "riemann.t104540.conrey_fixed_order.v1",
+  "scope": {
+    "alpha2_imported_unconditional": true,
+    "alpha3_imported_unconditional": true,
+    "conrey_proof_replayed": false,
+    "good_extrema_orientation_proved_from_both_rows": true,
+    "proportion_only_reverse_implication_refuted": true,
+    "rcmv104530_proved": false,
+    "rh_established": false
+  },
+  "verdict": "PASS_T104540_FIXED_ORDER_REVERSE_ROLLE_DISPOSITION"
+}

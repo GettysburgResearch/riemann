@@ -1,0 +1,156 @@
+# L-104538 — Stationary horizontal minima transfer the fixed-order line proportion
+
+Claim ID: `L-104538`  
+Status: **PROVED EXACT IMPLICATION**  
+Created: 2026-08-23  
+Depends on: `L-104527`, `L-104537`  
+RH status: **not assumed**
+
+Let `R_3(T)` be the number of simple real zeros of `Xi'''` in `(-T,T)` in the
+same short-window normalization used for the fixed-order Conrey proportion.
+At such a zero `c`, assume `Xi''(c) != 0` and define the stationary horizontal
+defect
+
+\[
+\delta_h(c)
+={1\over h^2}
+\log { |\Xi''(c-ih)|^2\over |\Xi''(c)|^2 }.
+\tag{L-104538.1}
+\]
+
+By `L-104537`,
+
+\[
+\delta_h(c)
+\longrightarrow
+{\mathcal L_2(c)\over \Xi''(c)^2}
+\qquad(h\to0),
+\tag{L-104538.2}
+\]
+
+where
+
+\[
+\mathcal L_2(c)
+=-\Xi''(c)\Xi''''(c).
+\]
+
+Thus the following are equivalent at every nondegenerate regular critical
+point:
+
+```text
+c is Rolle-generating for Xi'';
+Xi''(c) Xi''''(c) < 0;
+L_2(c) > 0;
+h=0 is a strict horizontal minimum of |Xi''(c-ih)|;
+delta_h(c) > 0 for all sufficiently small nonzero h.
+```
+
+## 1. Density form
+
+Let `Q_H(T)` count the real zeros `c` of `Xi'''` for which `h=0` is a
+nonnegative local horizontal minimum, equivalently `L_2(c)>=0`.  Suppose
+
+\[
+\liminf_{T\to\infty}{Q_H(T)\over R_3(T)}\ge q.
+\tag{L-104538.3}
+\]
+
+The exact factor-two reverse-Rolle count gives
+
+\[
+\boxed{
+\alpha_2\ge (2q-1)\alpha_3.
+}
+\tag{L-104538.4}
+\]
+
+In particular, with Conrey's unconditional input `alpha_3>0.9873`,
+
+\[
+\boxed{
+q>{1\over2}
+\quad\Longrightarrow\quad
+\alpha_2>(2q-1)\,0.9873.
+}
+\tag{L-104538.5}
+\]
+
+Examples:
+
+```text
+q >= 3/4    -> alpha_2 > 0.49365;
+q >= 9/10   -> alpha_2 > 0.78984;
+q = 1       -> alpha_2 >= alpha_3 > 0.9873.
+```
+
+The `alpha_3` premise is load bearing.  No independent lower bound for
+`alpha_2` is used in (L-104538.4--5).
+
+## 2. Finite-shift form and order of limits
+
+For `h>0`, let `Q_h(T)` count the regular real zeros `c` of `Xi'''` satisfying
+
+\[
+|\Xi''(c-ih)|\ge |\Xi''(c)|.
+\tag{L-104538.6}
+\]
+
+For each **fixed regular `T`**, the critical set in `(-T,T)` is finite.  If no
+point in that set is horizontally degenerate, (L-104538.2) implies
+
+\[
+\boxed{
+Q_H(T)=\lim_{h\downarrow0}Q_h(T).
+}
+\tag{L-104538.7}
+\]
+
+Consequently the fail-closed finite-shift hypothesis is
+
+\[
+\boxed{
+\liminf_{T\to\infty}
+\left[
+ \liminf_{h\downarrow0}{Q_h(T)\over R_3(T)}
+\right]
+\ge q,
+}
+\tag{L-104538.8}
+\]
+
+with the density of degenerate points `L_2(c)=0` equal to zero.  Then
+(L-104538.3), and hence (L-104538.4), follows.
+
+The order of limits in (L-104538.8) is essential.  Interchanging the limits
+would require a uniform Taylor-remainder theorem over all critical points up to
+height `T`; pointwise analyticity at each fixed critical point is not enough.
+
+A simultaneous choice `h=h(T)` is also sufficient if one proves both:
+
+```text
+uniform remainder:
+  max over regular Xi''' zeros |c|<T of
+  |delta_(h(T))(c)-L_2(c)/Xi''(c)^2| -> 0;
+
+small-curvature sparsity:
+  for every epsilon->0, the density of points with
+  |L_2(c)|/Xi''(c)^2 <= epsilon tends to zero.
+```
+
+This is the precise interface for a Levinson--Conrey finite-horizontal-shift
+mean-value calculation.
+
+## 3. Correct target
+
+The strongest global theorem `LAG2XI104550` asks for horizontal minima at every
+real ordinate.  The fixed-order descent only requires the weaker statement
+
+```text
+SHMIN104580:
+  more than half of Conrey's real Xi''' zeros are stationary horizontal minima
+  of |Xi''(t-ih)| at h=0.
+```
+
+Any quantitative improvement beyond one half immediately produces a positive
+unconditional `Xi''` line proportion from the `Xi'''` theorem alone.

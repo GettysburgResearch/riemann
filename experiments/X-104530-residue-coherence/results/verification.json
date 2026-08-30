@@ -1,0 +1,51 @@
+{
+  "checks": {
+    "corresponding_conclusions": [
+      "2233/5480",
+      "1421/4932"
+    ],
+    "fixtures": {
+      "coherent_partial": {
+        "A": "59/20",
+        "B": "1233/400",
+        "R": 4,
+        "cauchy_lower_bound": "3481/1233",
+        "coherence": "3481/4932",
+        "good_count": 3,
+        "transfer_constant": "1015/2466"
+      },
+      "cubic_all_good": {
+        "A": "2/3",
+        "B": "2/9",
+        "R": 2,
+        "cauchy_lower_bound": "2",
+        "coherence": "1",
+        "good_count": 2,
+        "transfer_constant": "1"
+      },
+      "quartic_firewall": {
+        "A": "1/4",
+        "B": "9/32",
+        "R": 3,
+        "cauchy_lower_bound": "2/9",
+        "coherence": "2/27",
+        "good_count": 1,
+        "transfer_constant": "-23/27"
+      }
+    },
+    "load_bearing_p_values": [
+      "99/100",
+      "7/10"
+    ],
+    "mean_variance_identity": true
+  },
+  "proof_object_sha256": "5b5b95054a1e6c42eb89eb79fa13b2c608293b84150c4613131fcaebf8646d9e",
+  "schema": "riemann.t104530.residue_coherence_transfer.v1",
+  "scope": {
+    "line_proportion_hypothesis_load_bearing": true,
+    "rcmv104530_proved": false,
+    "residue_coherence_transfer_proved_exact": true,
+    "rh_established": false
+  },
+  "verdict": "PASS_T104530_RESIDUE_COHERENCE_TRANSFER_ALGEBRA"
+}

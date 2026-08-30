@@ -1,0 +1,38 @@
+{
+  "schema": "riemann.t104630.source_lock.v2",
+  "imports": [
+    {
+      "pr": 731,
+      "head": "433490c133b26bce4163f4edf7ad04aeda9d33e3",
+      "paths": [
+        "claims/lemmas/L-106500-odd-endpoint-wronskian-is-a-positive-current-chaos.md",
+        "claims/lemmas/L-106501-odd-endpoint-cayley-and-cross-current-phase-normal-form.md",
+        "claims/lemmas/L-106612-finite-zeta-derivative-packet.md",
+        "claims/theorems/T-106590-macroscopic-height-to-microscopic-companion-correlation.md",
+        "claims/lemmas/L-106591-small-shift-cofinal-fifth-companion-height-budget.md",
+        "claims/lemmas/L-106630-canonical-correlation-primal-transport.md"
+      ]
+    },
+    {
+      "pr": 729,
+      "head": "e399156475cac82199275ea1470eaa83ec6ebbc3",
+      "paths": [
+        "claims/lemmas/L-105640-the-standard-xi-kernel-is-uniformly-strongly-logconcave.md",
+        "claims/lemmas/L-105625-causal-inner-phases-contract-monotone-source-profiles.md",
+        "claims/lemmas/L-105642-the-exponential-model-space-trace-is-a-midline-inner-defect.md"
+      ]
+    }
+  ],
+  "local_exact_inputs": [
+    "L-104602",
+    "X-104620",
+    "L-104634"
+  ],
+  "open": [
+    "FRACTRANS104630",
+    "FRACKRYLOV104633",
+    "FRACTRANS104635"
+  ],
+  "ninety_percent_established": false,
+  "rh_established": false
+}

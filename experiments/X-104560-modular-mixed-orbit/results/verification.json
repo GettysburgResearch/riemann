@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "diagonal_entries": [
+      "1",
+      "1"
+    ],
+    "mixed_frequency_counterexample": "-1/2",
+    "theta_differential_polynomial": [
+      "0",
+      "-6",
+      "4"
+    ]
+  },
+  "schema": "riemann.t104560.modular_mixed_orbit.v1",
+  "scope": {
+    "alpha2_from_alpha3_proved": false,
+    "mixed_matrix_identity_proved_analytically": true,
+    "modular_theta_identity_proved_analytically": true,
+    "mtsg104560_proved": false,
+    "rh_established": false
+  },
+  "verdict": "PASS_T104560_MODULAR_MIXED_ORBIT_ALGEBRA"
+}

@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "alpha0_lower": "225181/250000",
+    "alpha5_lower": "49/50",
+    "conrey_certificate_alpha_lower": "49/50",
+    "conrey_certificate_sha256": "842a3961fdd3f4e03444cb4597de3cef4523bd729a259289ff6c2095a9b59f35",
+    "deep_charge": "1/20",
+    "fractional_current_gate": "13/500",
+    "fractional_tail": "13/4000",
+    "margin_over_90": "181/250000",
+    "shallow_upper": "7319/250000",
+    "total_charge": "19819/250000"
+  },
+  "proof_object_sha256": "48790aed9f72534e58705e5bc57676da4bc811a75a3c11e2244cb19606e94ef4",
+  "schema": "riemann.t104635.self_contained_fifth.v1",
+  "scope": {
+    "alpha5_exact_certificate": true,
+    "fractrans104635_proved": false,
+    "ninety_percent_established": false,
+    "rh_established": false,
+    "self_contained_90_ledger": true
+  },
+  "verdict": "PASS_T104635_SELF_CONTAINED_FIFTH_LEDGER"
+}

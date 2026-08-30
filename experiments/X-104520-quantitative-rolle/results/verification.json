@@ -1,0 +1,37 @@
+{
+  "checks": {
+    "canonical_derivative_chain": 8,
+    "model_count_ratios": [
+      1.0555555555555556,
+      1.0277777777777777,
+      0.9857142857142858
+    ],
+    "open_vertical_flux": {
+      "imag": 0.022485965157046255,
+      "is_integer": false,
+      "real": 0.08262467026928395
+    },
+    "quartic_proportion_firewall": {
+      "derivative_roots": [
+        -1,
+        0,
+        1
+      ],
+      "p": "(x^2-1)^2+1",
+      "parent_real_roots": 0
+    }
+  },
+  "proof_object_sha256": "738e2ea90698479f344fa5654c6041ea5379cc9135c21a9b74dbb3dec48d473a",
+  "schema": "riemann.t104520.quantitative_reverse_rolle.v1",
+  "scope": {
+    "canonical_fourier_chain_proved_exact": true,
+    "eflux104518_proved": false,
+    "pres104518_proved": false,
+    "quantitative_c_less_than_one_descent_proved_in_high_band": true,
+    "rh_established": false,
+    "uniform_high_band_proved_analytically": true,
+    "universal_source_free_proportion_descent": false,
+    "vertical_only_flux_is_integer": false
+  },
+  "verdict": "PASS_T104520_QUANTITATIVE_XI_REVERSE_ROLLE_ALGEBRA"
+}

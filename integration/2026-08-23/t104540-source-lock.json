@@ -1,0 +1,23 @@
+{
+  "dependencies": [
+    {
+      "path": "claims/lemmas/L-104500-exact-real-reverse-rolle-defect-conservation.md",
+      "scope": "factor-two reverse-Rolle identity"
+    },
+    {
+      "path": "claims/theorems/T-104530-residue-coherence-proportion-cascade.md",
+      "scope": "conditional API only"
+    }
+  ],
+  "expected_parent_head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+  "external_source": {
+    "doi": "10.1016/0022-314X(83)90031-8",
+    "primary_pdf_redistributed": false,
+    "primary_table_page_pin_required_for_canonical_integration": true
+  },
+  "repository": "gfreund123/riemann",
+  "rh_established": false,
+  "schema": "riemann.t104540.source_lock.v1",
+  "target_branch": "research/gpt56-pro/104510-hermite-biehler-last-defect",
+  "target_pr": 720
+}

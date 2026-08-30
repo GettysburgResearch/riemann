@@ -1,0 +1,40 @@
+{
+  "checks": {
+    "cubic_orientation_sum": 2,
+    "marked_second_moment": "8",
+    "moment_fixture": {
+      "B": "1201/100",
+      "D": "59/10",
+      "G": 3,
+      "R": 4,
+      "eta": "1079/2402",
+      "lower_G": "3481/1201"
+    },
+    "phase_primitive_period_increments": [
+      1.9999999999999998,
+      2.0,
+      2.0,
+      2.0000000000000004,
+      1.9999999999999996
+    ],
+    "pointwise_numerator_identity": [
+      "3837/700",
+      "131/81",
+      "15905/8624"
+    ],
+    "quartic_orientation_sum": -1
+  },
+  "proof_object_sha256": "04217d866bdfcbd635c6a97a73c83781bbe23f92525f257450271b5164af117b",
+  "schema": "riemann.t104590.unit_weight_phase.v1",
+  "scope": {
+    "alpha2_from_alpha3_proved": false,
+    "cm2x104590_proved": false,
+    "lambda_uniform_phase_reduction_proved_exact": true,
+    "marked_contour_identity_proved_exact": true,
+    "rh_established": false,
+    "unit_amplitude_count_identity_proved_exact": true,
+    "uphase104590_proved": false,
+    "weighted_moment_count_bound_proved_exact": true
+  },
+  "verdict": "PASS_T104590_UNIT_WEIGHT_PHASE_ALGEBRA"
+}
