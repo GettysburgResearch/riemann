@@ -1,0 +1,16 @@
+{
+  "schema": "cubic-kummer-descent-v1",
+  "precursor_commit": "ed8139953de75d5ef0d1c9fab5402360b7b7e9b7",
+  "p": 5,
+  "m": 3,
+  "extensions": [1, 2, 3, 4, 5, 6],
+  "maximum_field_order": 15625,
+  "field_model": "first monic irreducible polynomial in increasing base-p coefficient code; exact polynomial reduction",
+  "character_convention": "in even extensions, use the smaller encoded nontrivial cube root eta, mapping eta to zeta_3; prove and check the special rational trace symmetry before comparing across field models",
+  "curves": [
+    {"id": "p5-generic-descent", "A": 1, "B": 1},
+    {"id": "p5-symmetric-descent", "A": -1, "B": 0}
+  ],
+  "equations": "E:y^2=f3(x); Eprime:z^3=f3(x); C:w^6=f3(x), f3=x^3+A*x+B",
+  "coverage": "All points in all six declared extensions of each curve; three even-extension character sums reconstruct the cubic over F25; the genus-four numerator uses four counts and proved reciprocity, then predicts two held-out extensions."
+}
