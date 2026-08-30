@@ -1,0 +1,1492 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "arithmetic_domain": "Gaussian rationals represented by exact Fraction pairs; complex matrices and polynomials",
+  "artifact_sha256_lf": {
+    "research/exploratory/HARDY_TRANSLATION_PHYSICAL_BAND_BOUND.md": "efa2a1535e30e12e0fa20b1fabf49762843b50c72d0c8f6e44a70bbaa2feba3c",
+    "research/exploratory/hardy_translation_physical_band_bound.py": "755bd0ed8ee76e612d2c0d65619e4b9492f8e0c08d4574758f9aac44e06dc2e7",
+    "research/exploratory/hardy_translation_physical_band_bound.sources.json": "7a5babd5c221c9703c4f0c622b40404f379d8ee61047c6dd049c51782cc1fb34",
+    "tests/test_hardy_translation_physical_band_bound.py": "3b4e9ca8a851c8959c3b0815dfea1197a020f056276ffaa94913a1590b1016b4"
+  },
+  "band_factors": [
+    {
+      "A": "1",
+      "B": "2",
+      "degree": 1,
+      "trace_bound": "1/2",
+      "unit_vector_bound": "1/2"
+    },
+    {
+      "A": "10",
+      "B": "11",
+      "degree": 1,
+      "trace_bound": "1/11",
+      "unit_vector_bound": "1/11"
+    },
+    {
+      "A": "100",
+      "B": "101",
+      "degree": 1,
+      "trace_bound": "1/101",
+      "unit_vector_bound": "1/101"
+    },
+    {
+      "A": "1",
+      "B": "2",
+      "degree": 2,
+      "trace_bound": "1",
+      "unit_vector_bound": "1"
+    },
+    {
+      "A": "10",
+      "B": "11",
+      "degree": 2,
+      "trace_bound": "2/11",
+      "unit_vector_bound": "2/11"
+    },
+    {
+      "A": "100",
+      "B": "101",
+      "degree": 2,
+      "trace_bound": "2/101",
+      "unit_vector_bound": "2/101"
+    },
+    {
+      "A": "1",
+      "B": "2",
+      "degree": 3,
+      "trace_bound": "3/2",
+      "unit_vector_bound": "1"
+    },
+    {
+      "A": "10",
+      "B": "11",
+      "degree": 3,
+      "trace_bound": "3/11",
+      "unit_vector_bound": "3/11"
+    },
+    {
+      "A": "100",
+      "B": "101",
+      "degree": 3,
+      "trace_bound": "3/101",
+      "unit_vector_bound": "3/101"
+    },
+    {
+      "A": "1",
+      "B": "2",
+      "degree": 4,
+      "trace_bound": "2",
+      "unit_vector_bound": "1"
+    },
+    {
+      "A": "10",
+      "B": "11",
+      "degree": 4,
+      "trace_bound": "4/11",
+      "unit_vector_bound": "4/11"
+    },
+    {
+      "A": "100",
+      "B": "101",
+      "degree": 4,
+      "trace_bound": "4/101",
+      "unit_vector_bound": "4/101"
+    },
+    {
+      "A": "1",
+      "B": "2",
+      "degree": 5,
+      "trace_bound": "5/2",
+      "unit_vector_bound": "1"
+    },
+    {
+      "A": "10",
+      "B": "11",
+      "degree": 5,
+      "trace_bound": "5/11",
+      "unit_vector_bound": "5/11"
+    },
+    {
+      "A": "100",
+      "B": "101",
+      "degree": 5,
+      "trace_bound": "5/101",
+      "unit_vector_bound": "5/101"
+    },
+    {
+      "A": "1",
+      "B": "2",
+      "degree": 6,
+      "trace_bound": "3",
+      "unit_vector_bound": "1"
+    },
+    {
+      "A": "10",
+      "B": "11",
+      "degree": 6,
+      "trace_bound": "6/11",
+      "unit_vector_bound": "6/11"
+    },
+    {
+      "A": "100",
+      "B": "101",
+      "degree": 6,
+      "trace_bound": "6/101",
+      "unit_vector_bound": "6/101"
+    }
+  ],
+  "caps": {
+    "Gaussian_intermediate_bits": 2048,
+    "polynomial_coefficients": 13,
+    "rational_input_bits": 16,
+    "total_degree": 6
+  },
+  "countercontrols": {
+    "delay_family": "[-(x-i*(2*m/T))/(x+i*(2*m/T))]^m",
+    "denominator_rank_and_height": [
+      1,
+      1
+    ],
+    "finite_degree_needed_not_actual_Xi_example": true,
+    "ideal_shift_band_mass": "1-exp(-2*L)",
+    "order_of_choices": "fixed L>0; T tends to infinity; then m sufficiently large for each T",
+    "physical_rank_one_polynomial": [
+      1,
+      -2
+    ],
+    "relative_band_width": "L/(T+L)",
+    "square_coefficient_at_t_one_before_exp_minus_two": "2",
+    "zero_at_t_half": "0"
+  },
+  "coverage": {
+    "band_rows": 18,
+    "predeclared_native_cases": 5,
+    "rational_identity_columns": 10,
+    "unbounded_search": false
+  },
+  "native_controls": [
+    {
+      "J_star_G_product_J_equals_G_denominator": true,
+      "d_product": 1,
+      "denominator_poles": [
+        {
+          "im": "0",
+          "re": "1"
+        }
+      ],
+      "m_numerator": 0,
+      "n_denominator": 1,
+      "numerator_poles": [],
+      "physical_inclusion_matrix": [
+        [
+          {
+            "im": "0",
+            "re": "1"
+          }
+        ]
+      ],
+      "rational_identity_columns_checked": 1,
+      "translation": {
+        "A": [
+          [
+            {
+              "im": "0",
+              "re": "-1"
+            }
+          ]
+        ],
+        "G": [
+          [
+            {
+              "im": "0",
+              "re": "1/2"
+            }
+          ]
+        ],
+        "basis_poles_and_orders": [
+          [
+            {
+              "im": "0",
+              "re": "1"
+            },
+            1
+          ]
+        ],
+        "both_Lyapunov_identities_exact": true,
+        "c": [
+          [
+            {
+              "im": "0",
+              "re": "1"
+            }
+          ]
+        ],
+        "dimension": 1,
+        "integrated_kernel": 1,
+        "origin_kernel": {
+          "im": "0",
+          "re": "2"
+        },
+        "positive_LDL_pivots": [
+          "1/2"
+        ]
+      }
+    },
+    {
+      "J_star_G_product_J_equals_G_denominator": true,
+      "d_product": 3,
+      "denominator_poles": [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "3",
+          "re": "2"
+        }
+      ],
+      "m_numerator": 1,
+      "n_denominator": 2,
+      "numerator_poles": [
+        {
+          "im": "1",
+          "re": "1/2"
+        }
+      ],
+      "physical_inclusion_matrix": [
+        [
+          {
+            "im": "-4/5",
+            "re": "-2/5"
+          },
+          {
+            "im": "8/25",
+            "re": "-6/25"
+          }
+        ],
+        [
+          {
+            "im": "4/5",
+            "re": "7/5"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-8/25",
+            "re": "31/25"
+          }
+        ]
+      ],
+      "rational_identity_columns_checked": 2,
+      "translation": {
+        "A": [
+          [
+            {
+              "im": "-1",
+              "re": "-1/2"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "-1"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "-3",
+              "re": "-2"
+            }
+          ]
+        ],
+        "G": [
+          [
+            {
+              "im": "0",
+              "re": "1"
+            },
+            {
+              "im": "4/13",
+              "re": "6/13"
+            },
+            {
+              "im": "-8/41",
+              "re": "10/41"
+            }
+          ],
+          [
+            {
+              "im": "-4/13",
+              "re": "6/13"
+            },
+            {
+              "im": "0",
+              "re": "1/2"
+            },
+            {
+              "im": "-1/6",
+              "re": "1/6"
+            }
+          ],
+          [
+            {
+              "im": "8/41",
+              "re": "10/41"
+            },
+            {
+              "im": "1/6",
+              "re": "1/6"
+            },
+            {
+              "im": "0",
+              "re": "1/4"
+            }
+          ]
+        ],
+        "basis_poles_and_orders": [
+          [
+            {
+              "im": "1",
+              "re": "1/2"
+            },
+            1
+          ],
+          [
+            {
+              "im": "0",
+              "re": "1"
+            },
+            1
+          ],
+          [
+            {
+              "im": "3",
+              "re": "2"
+            },
+            1
+          ]
+        ],
+        "both_Lyapunov_identities_exact": true,
+        "c": [
+          [
+            {
+              "im": "0",
+              "re": "1"
+            },
+            {
+              "im": "0",
+              "re": "1"
+            },
+            {
+              "im": "0",
+              "re": "1"
+            }
+          ]
+        ],
+        "dimension": 3,
+        "integrated_kernel": 3,
+        "origin_kernel": {
+          "im": "0",
+          "re": "7"
+        },
+        "positive_LDL_pivots": [
+          "1",
+          "5/26",
+          "125/1476"
+        ]
+      }
+    },
+    {
+      "J_star_G_product_J_equals_G_denominator": true,
+      "d_product": 3,
+      "denominator_poles": [
+        {
+          "im": "1",
+          "re": "1"
+        },
+        {
+          "im": "1",
+          "re": "1"
+        }
+      ],
+      "m_numerator": 1,
+      "n_denominator": 2,
+      "numerator_poles": [
+        {
+          "im": "1",
+          "re": "1"
+        }
+      ],
+      "physical_inclusion_matrix": [
+        [
+          {
+            "im": "0",
+            "re": "1"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "-2"
+          },
+          {
+            "im": "0",
+            "re": "1"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "-2"
+          }
+        ]
+      ],
+      "rational_identity_columns_checked": 2,
+      "translation": {
+        "A": [
+          [
+            {
+              "im": "-1",
+              "re": "-1"
+            },
+            {
+              "im": "0",
+              "re": "1"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "-1",
+              "re": "-1"
+            },
+            {
+              "im": "0",
+              "re": "1"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "-1",
+              "re": "-1"
+            }
+          ]
+        ],
+        "G": [
+          [
+            {
+              "im": "0",
+              "re": "1/2"
+            },
+            {
+              "im": "0",
+              "re": "1/4"
+            },
+            {
+              "im": "0",
+              "re": "1/8"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "1/4"
+            },
+            {
+              "im": "0",
+              "re": "1/4"
+            },
+            {
+              "im": "0",
+              "re": "3/16"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "1/8"
+            },
+            {
+              "im": "0",
+              "re": "3/16"
+            },
+            {
+              "im": "0",
+              "re": "3/16"
+            }
+          ]
+        ],
+        "basis_poles_and_orders": [
+          [
+            {
+              "im": "1",
+              "re": "1"
+            },
+            1
+          ],
+          [
+            {
+              "im": "1",
+              "re": "1"
+            },
+            2
+          ],
+          [
+            {
+              "im": "1",
+              "re": "1"
+            },
+            3
+          ]
+        ],
+        "both_Lyapunov_identities_exact": true,
+        "c": [
+          [
+            {
+              "im": "0",
+              "re": "1"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            }
+          ]
+        ],
+        "dimension": 3,
+        "integrated_kernel": 3,
+        "origin_kernel": {
+          "im": "0",
+          "re": "6"
+        },
+        "positive_LDL_pivots": [
+          "1/2",
+          "1/8",
+          "1/32"
+        ]
+      }
+    },
+    {
+      "J_star_G_product_J_equals_G_denominator": true,
+      "d_product": 5,
+      "denominator_poles": [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "-2",
+          "re": "3/2"
+        }
+      ],
+      "m_numerator": 2,
+      "n_denominator": 3,
+      "numerator_poles": [
+        {
+          "im": "1",
+          "re": "2"
+        },
+        {
+          "im": "1",
+          "re": "2"
+        }
+      ],
+      "physical_inclusion_matrix": [
+        [
+          {
+            "im": "-4",
+            "re": "-3"
+          },
+          {
+            "im": "4",
+            "re": "8"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-4",
+            "re": "-3"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "2784/1369",
+            "re": "-1463/1369"
+          }
+        ],
+        [
+          {
+            "im": "4",
+            "re": "4"
+          },
+          {
+            "im": "-4",
+            "re": "-8"
+          },
+          {
+            "im": "-2784/1369",
+            "re": "2832/1369"
+          }
+        ],
+        [
+          {
+            "im": "8",
+            "re": "-8"
+          },
+          {
+            "im": "-8",
+            "re": "0"
+          },
+          {
+            "im": "192/37",
+            "re": "-32/37"
+          }
+        ]
+      ],
+      "rational_identity_columns_checked": 3,
+      "translation": {
+        "A": [
+          [
+            {
+              "im": "0",
+              "re": "-1"
+            },
+            {
+              "im": "0",
+              "re": "1"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "-1"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "2",
+              "re": "-3/2"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "-1",
+              "re": "-2"
+            },
+            {
+              "im": "0",
+              "re": "1"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "-1",
+              "re": "-2"
+            }
+          ]
+        ],
+        "G": [
+          [
+            {
+              "im": "0",
+              "re": "1/2"
+            },
+            {
+              "im": "0",
+              "re": "1/4"
+            },
+            {
+              "im": "8/41",
+              "re": "10/41"
+            },
+            {
+              "im": "-1/10",
+              "re": "3/10"
+            },
+            {
+              "im": "-3/50",
+              "re": "2/25"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "1/4"
+            },
+            {
+              "im": "0",
+              "re": "1/4"
+            },
+            {
+              "im": "160/1681",
+              "re": "36/1681"
+            },
+            {
+              "im": "-3/50",
+              "re": "2/25"
+            },
+            {
+              "im": "-13/250",
+              "re": "9/250"
+            }
+          ],
+          [
+            {
+              "im": "-8/41",
+              "re": "10/41"
+            },
+            {
+              "im": "-160/1681",
+              "re": "36/1681"
+            },
+            {
+              "im": "0",
+              "re": "1/3"
+            },
+            {
+              "im": "-12/85",
+              "re": "14/85"
+            },
+            {
+              "im": "-336/7225",
+              "re": "52/7225"
+            }
+          ],
+          [
+            {
+              "im": "1/10",
+              "re": "3/10"
+            },
+            {
+              "im": "3/50",
+              "re": "2/25"
+            },
+            {
+              "im": "12/85",
+              "re": "14/85"
+            },
+            {
+              "im": "0",
+              "re": "1/4"
+            },
+            {
+              "im": "0",
+              "re": "1/16"
+            }
+          ],
+          [
+            {
+              "im": "3/50",
+              "re": "2/25"
+            },
+            {
+              "im": "13/250",
+              "re": "9/250"
+            },
+            {
+              "im": "336/7225",
+              "re": "52/7225"
+            },
+            {
+              "im": "0",
+              "re": "1/16"
+            },
+            {
+              "im": "0",
+              "re": "1/32"
+            }
+          ]
+        ],
+        "basis_poles_and_orders": [
+          [
+            {
+              "im": "0",
+              "re": "1"
+            },
+            1
+          ],
+          [
+            {
+              "im": "0",
+              "re": "1"
+            },
+            2
+          ],
+          [
+            {
+              "im": "-2",
+              "re": "3/2"
+            },
+            1
+          ],
+          [
+            {
+              "im": "1",
+              "re": "2"
+            },
+            1
+          ],
+          [
+            {
+              "im": "1",
+              "re": "2"
+            },
+            2
+          ]
+        ],
+        "both_Lyapunov_identities_exact": true,
+        "c": [
+          [
+            {
+              "im": "0",
+              "re": "1"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "1"
+            },
+            {
+              "im": "0",
+              "re": "1"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            }
+          ]
+        ],
+        "dimension": 5,
+        "integrated_kernel": 5,
+        "origin_kernel": {
+          "im": "0",
+          "re": "15"
+        },
+        "positive_LDL_pivots": [
+          "1/2",
+          "1/8",
+          "289/5043",
+          "37/8500",
+          "37/136000"
+        ]
+      }
+    },
+    {
+      "J_star_G_product_J_equals_G_denominator": true,
+      "d_product": 4,
+      "denominator_poles": [
+        {
+          "im": "-7",
+          "re": "1/2"
+        },
+        {
+          "im": "11",
+          "re": "1/3"
+        }
+      ],
+      "m_numerator": 2,
+      "n_denominator": 2,
+      "numerator_poles": [
+        {
+          "im": "-7",
+          "re": "1/5"
+        },
+        {
+          "im": "2",
+          "re": "5"
+        }
+      ],
+      "physical_inclusion_matrix": [
+        [
+          {
+            "im": "62295/5267314",
+            "re": "-101717/5267314"
+          },
+          {
+            "im": "-1000/867",
+            "re": "-1868/2601"
+          }
+        ],
+        [
+          {
+            "im": "-80919/91130",
+            "re": "47987/91130"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "56/27",
+            "re": "35/27"
+          }
+        ],
+        [
+          {
+            "im": "1266/1445",
+            "re": "712/1445"
+          },
+          {
+            "im": "-7184/7803",
+            "re": "3292/7803"
+          }
+        ]
+      ],
+      "rational_identity_columns_checked": 2,
+      "translation": {
+        "A": [
+          [
+            {
+              "im": "7",
+              "re": "-1/5"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "-11",
+              "re": "-1/3"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "7",
+              "re": "-1/2"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "0",
+              "re": "0"
+            },
+            {
+              "im": "-2",
+              "re": "-5"
+            }
+          ]
+        ],
+        "G": [
+          [
+            {
+              "im": "0",
+              "re": "5/2"
+            },
+            {
+              "im": "-2025/36482",
+              "re": "30/18241"
+            },
+            {
+              "im": "0",
+              "re": "10/7"
+            },
+            {
+              "im": "-225/2701",
+              "re": "130/2701"
+            }
+          ],
+          [
+            {
+              "im": "2025/36482",
+              "re": "30/18241"
+            },
+            {
+              "im": "0",
+              "re": "3/2"
+            },
+            {
+              "im": "648/11689",
+              "re": "30/11689"
+            },
+            {
+              "im": "81/985",
+              "re": "48/985"
+            }
+          ],
+          [
+            {
+              "im": "0",
+              "re": "10/7"
+            },
+            {
+              "im": "-648/11689",
+              "re": "30/11689"
+            },
+            {
+              "im": "0",
+              "re": "1"
+            },
+            {
+              "im": "-36/445",
+              "re": "22/445"
+            }
+          ],
+          [
+            {
+              "im": "225/2701",
+              "re": "130/2701"
+            },
+            {
+              "im": "-81/985",
+              "re": "48/985"
+            },
+            {
+              "im": "36/445",
+              "re": "22/445"
+            },
+            {
+              "im": "0",
+              "re": "1/10"
+            }
+          ]
+        ],
+        "basis_poles_and_orders": [
+          [
+            {
+              "im": "-7",
+              "re": "1/5"
+            },
+            1
+          ],
+          [
+            {
+              "im": "11",
+              "re": "1/3"
+            },
+            1
+          ],
+          [
+            {
+              "im": "-7",
+              "re": "1/2"
+            },
+            1
+          ],
+          [
+            {
+              "im": "2",
+              "re": "5"
+            },
+            1
+          ]
+        ],
+        "both_Lyapunov_identities_exact": true,
+        "c": [
+          [
+            {
+              "im": "0",
+              "re": "1"
+            },
+            {
+              "im": "0",
+              "re": "1"
+            },
+            {
+              "im": "0",
+              "re": "1"
+            },
+            {
+              "im": "0",
+              "re": "1"
+            }
+          ]
+        ],
+        "dimension": 4,
+        "integrated_kernel": 4,
+        "origin_kernel": {
+          "im": "0",
+          "re": "181/15"
+        },
+        "positive_LDL_pivots": [
+          "5/2",
+          "27339/18241",
+          "104985/572761",
+          "210681/2559818"
+        ]
+      }
+    }
+  ],
+  "rounding_contract": "no float/complex approximations, quadrature, numerical exponentials or eigenvalues",
+  "schema": "hardy-translation-physical-band-v1",
+  "scope": {
+    "RH_or_critical_line_percentage": false,
+    "Xi_numerical_samples": 0,
+    "actual_Xi_degree_bound_proved": false,
+    "analytic_proof_formally_machine_verified": false,
+    "arbitrary_finite_nodes_phases_and_confluence": true,
+    "finite_numerator_degree_is_paid": true,
+    "finite_physical_inner_band_Gram_controlled": true,
+    "height_sum_used_as_degree_bound": false,
+    "infinite_inner_approximation_error_controlled": false,
+    "kernel_diagonal_monotone_by_native_proof": true,
+    "literal_outer_source_jet_metric_retained": true,
+    "novelty_claim": false,
+    "outer_or_inner_commuted_with_projection": false,
+    "physical_cutoff": "m+n=o(X^2*exp(X))",
+    "pointwise_constant_claimed_optimal": false,
+    "pointwise_degree_coefficient": 1,
+    "topological_index_removed": false,
+    "total_free_energy_bound": false,
+    "unweighted_cutoff": "n=o(X^2*exp(X))"
+  },
+  "source_authentication": {
+    "manifest_sha256_canonical_json": "2659d6ff2d537bd0a2d385d74942fec3c01902d3edc898ec4ab6e4ebd13db770",
+    "remote_bytes_authenticated": false,
+    "source_count": 13
+  },
+  "source_covariance_control": {
+    "C": [
+      [
+        {
+          "im": "1",
+          "re": "1"
+        },
+        {
+          "im": "-1",
+          "re": "2"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "0"
+        },
+        {
+          "im": "1",
+          "re": "1"
+        }
+      ]
+    ],
+    "C_V_commute_but_neither_commutes_G_or_H": true,
+    "G": [
+      [
+        {
+          "im": "0",
+          "re": "1/2"
+        },
+        {
+          "im": "0",
+          "re": "1/4"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "1/4"
+        },
+        {
+          "im": "0",
+          "re": "1/4"
+        }
+      ]
+    ],
+    "G_O": [
+      [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "-3/2",
+          "re": "1"
+        }
+      ],
+      [
+        {
+          "im": "3/2",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "7/2"
+        }
+      ]
+    ],
+    "H": [
+      [
+        {
+          "im": "0",
+          "re": "1/8"
+        },
+        {
+          "im": "0",
+          "re": "1/16"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "1/16"
+        },
+        {
+          "im": "0",
+          "re": "5/64"
+        }
+      ]
+    ],
+    "H_below_half_G_by_positive_exact_LDL": true,
+    "H_is_abstract_positive_weight_not_claimed_actual_Xi_band": true,
+    "J_R": [
+      [
+        {
+          "im": "1",
+          "re": "3"
+        },
+        {
+          "im": "-2",
+          "re": "3"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "0"
+        },
+        {
+          "im": "1",
+          "re": "3"
+        }
+      ]
+    ],
+    "V": [
+      [
+        {
+          "im": "-1",
+          "re": "2"
+        },
+        {
+          "im": "1",
+          "re": "1"
+        }
+      ],
+      [
+        {
+          "im": "0",
+          "re": "0"
+        },
+        {
+          "im": "-1",
+          "re": "2"
+        }
+      ]
+    ],
+    "incorrect_dropped_outer_trace": {
+      "im": "0",
+      "re": "77/4"
+    },
+    "literal_and_reduced_trace": {
+      "im": "0",
+      "re": "41/8"
+    },
+    "total_trace": {
+      "im": "0",
+      "re": "18"
+    }
+  },
+  "status": "NATIVE_ANALYTIC_PROOF_WITH_BOUNDED_EXACT_CONTROLS"
+}
