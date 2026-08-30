@@ -43,7 +43,13 @@
     "based_holonomy": {
       "source_sha": "e7fc8b0af2c42ce43384543972df2ed44f343300",
       "proof_path": "research/exploratory/marked-holonomy-response/README.md",
-      "proof_url": "https://github.com/gfreund123/riemann/blob/e7fc8b0af2c42ce43384543972df2ed44f343300/research/exploratory/marked-holonomy-response/README.md"
+      "proof_url": "https://github.com/gfreund123/riemann/blob/e7fc8b0af2c42ce43384543972df2ed44f343300/research/exploratory/marked-holonomy-response/README.md",
+      "review_path": "research/exploratory/marked-holonomy-response/REVIEW_E7FC8B0A.md"
+    },
+    "positive_holonomy": {
+      "source_sha": "6b4f0f4a53bc9ff5bc6b84a2b6e3f603a04f2336",
+      "proof_path": "research/exploratory/marked-holonomy-response/POSITIVE_DEFECT_AND_CRITICAL_CIRCLE.md",
+      "proof_url": "https://github.com/gfreund123/riemann/blob/6b4f0f4a53bc9ff5bc6b84a2b6e3f603a04f2336/research/exploratory/marked-holonomy-response/POSITIVE_DEFECT_AND_CRITICAL_CIRCLE.md"
     }
   },
   "lanes": [
@@ -354,7 +360,8 @@
       "lane": "marked_holonomy_response",
       "domain": "Declared based free group F(a,b), c=(ab)^-1; two word-cycle automata (c,a,b),(c,b,a); one clock step per edge; unitary rho.",
       "proof_sources": [
-        "based_holonomy"
+        "based_holonomy",
+        "positive_holonomy"
       ],
       "levels": {
         "L0": {
@@ -379,7 +386,8 @@
           "status": "not_claimed"
         },
         "L6": {
-          "status": "not_claimed"
+          "status": "qualified",
+          "qualification": "The finite graph determinant is rational and self-inversive: D(t)=(-t)^(3d) conjugate(D(1/conjugate(t))). This is native unitary reciprocity, with no arithmetic gamma/conductor package or arithmetic functional equation."
         },
         "L7": {
           "status": "not_claimed"
@@ -390,17 +398,18 @@
         },
         "L9": {
           "status": "qualified",
-          "qualification": "The real third-trace gap is an exact nonnegative commutator energy; held-out permutation cases have predicted full lifted cycle lengths. No arithmetic positivity or zero-location theorem follows."
+          "qualification": "Native H=(I-K)*(I-K)/2 is positive semidefinite, and unitarity places the finite transfer determinant roots on |t|=1. For permutation sources the principal constant line lies in ker(H), even with positive trace response. Thus there is no principal lower bound, arithmetic positivity, or arithmetic zero-location conclusion."
         }
       },
       "enrichment_boundary": "This repairs a based comparison by adding common holonomy data; it does not invalidate the earlier unmarked/fixed-label operation counterexample.",
-      "L6_boundary": "The finite determinant expressions are rational and the trace series converges for |t|<1, but a canonical arithmetic continuation/functional-equation package is not claimed."
+      "L6_boundary": "The native reciprocal identity and trace-series convergence for |t|<1 do not supply a canonical arithmetic continuation/functional-equation package.",
+      "principal_obstruction": "For permutation K with r cycles, nullity(H)=r and rank(H)=d-r; the global constant line is always annihilated. A nonzero total commutator defect cannot select or control an arithmetic principal member."
     }
   ],
   "proof_vs_replay": "The linked prose proves infinite-parameter statements. Source-authenticated finite replay checks exact controls only; this map does not create any additional proof.",
   "source_acquisition": {
     "additional_branch": "refs/heads/codex/review-sources-fixed-label-cycle-five-hour",
     "fetch": "git fetch --no-tags origin refs/heads/codex/review-sources-fixed-label-cycle-five-hour",
-    "ancestry": "Core and circle freezes lie in this PR branch ancestry. The original graph freeze is preserved on the additional branch; shallow checkouts need the required full histories."
+    "ancestry": "Core and circle freezes lie in this PR branch ancestry. The original fixed-graph26314df4, based-holonomye7fc8b0a and positive-holonomy6b4f0f4a freezes are preserved on the additional branch; shallow checkouts need the required full histories."
   }
 }

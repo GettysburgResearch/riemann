@@ -26,6 +26,7 @@ representation, or commutator energy is not arithmetic L8 or L9 evidence.
 | [Mixed-rank representation parents](MULTIPLICATIVE_RECURRENCE_AND_MIXED_PARENTS.md#4-the-mixed-rank-determinant-parent-question) | A universal finite graded determinant parent exists exactly when the nontrivial input ranks are empty, one rank, or `(2,2)`; the unique formal escape has a negative second relation module whenever at least two ranks exceed one | Universal representation identities, not fitted matrix eigenvalues or convergent infinite determinants |
 | [Fixed-label cycle response](../../../exploratory/fixed-label-cycle-response/README.md) | Two colored directed sources with the same entire commutative determinant have different three-sheet lift responses; the real part of the third-trace gap is an exact commutator energy | Reusing fixed numerical labels after changing fibre identifications is not gauge invariant; no arithmetic zeta attachment |
 | [Based holonomy response](../../../exploratory/marked-holonomy-response/README.md) | Two marked word-cycle automata have identical responses under every abelianized representation; their full unitary responses agree exactly when the two holonomies commute. The based source makes the commutator response gauge covariant and predicts complete lifted cycle lengths | Additional based representation and word/clock data are declared, not recovered from the original scalar graph shadow; no arithmetic adapter |
+| [Positive holonomy defect](../../../exploratory/marked-holonomy-response/POSITIVE_DEFECT_AND_CRITICAL_CIRCLE.md) | The same finite source gives a positive Gram operator, unitary determinant roots on the unit circle, and reciprocal duality; permutation principal constants remain in the positive operator's kernel | Finite graph mechanisms only; positive total trace does not give a principal lower bound or any arithmetic critical-line statement |
 
 The first lane treats arbitrary continuous multiplicative maps and arbitrary
 mixed input ranks, beyond the eleven local-power packets already present at
@@ -51,8 +52,12 @@ desired scalar output.
   metadata. Its frozen fixture was replayed without changing expected output.
 - Based-holonomy source: `e7fc8b0af2c42ce43384543972df2ed44f343300`, imported
   at `d3c0b7c80`. It is a separately defined source with extra marked data,
-  not a rewrite of the original fixed-label obstruction. Its source review
-  and integrated replay are recorded separately from the original packet.
+  not a rewrite of the original fixed-label obstruction. Its
+  [source review](../../../exploratory/marked-holonomy-response/REVIEW_E7FC8B0A.md)
+  and integrated replay are separate from the original packet.
+- Positive-defect sequel source: `6b4f0f4a53bc9ff5bc6b84a2b6e3f603a04f2336`,
+  imported at `eebbb8951`. Its proof and five additional tests leave the
+  original based-holonomy producer and canonical fixture unchanged.
 - The separate #763 actual-source branch is not a mathematical dependency
   of these results. No sheaf/graph comparison map is assumed or constructed.
 - Active all-prime Satake-deformation and Estermann-completion work elsewhere
@@ -93,6 +98,14 @@ earlier counterexample about reusing numerical labels after discarding
 their common based identification, and it does not supply an arithmetic
 source map.
 
+The positive-defect sequel strengthens the finite mechanism to
+`H=(I-K)*(I-K)/2>=0`, reciprocal unitary determinant duality and an exact
+spectral circle. It also exposes the relevant limitation: in permutation
+sources the global constant vector lies in `ker(H)`, even when `tr(H)>0`.
+Thus the example supplies no positive lower bound on its principal line.
+This is a concrete failure of a proposed inference from total positivity,
+not an obstruction to every arithmetic method.
+
 ## Evidence and bounded replay
 
 The corrected core packet passed 27 focused tests under ordinary Python and
@@ -103,9 +116,10 @@ passed 18 tests in each mode and both producer checks. Independent reviews
 are bound to the frozen core and companion sources above and the graph
 source in its own review sidecar; they report the serialized test results
 without claiming independent runs.
-The based-holonomy companion passed nine tests in each mode and both
-producer checks at its source branch; final imported replay is a separate
-release check.
+The based-holonomy companion and positive-defect sequel passed fourteen
+tests in each mode, with the original producer checks unchanged, at their
+source branch; final imported replay is a separate release check. This
+brings the four replay directories to 73 focused tests per Python mode.
 
 The root agent serialized these runs to avoid competing with another
 active Codex agent. The core replay took about three seconds per complete
