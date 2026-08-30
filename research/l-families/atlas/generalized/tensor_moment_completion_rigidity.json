@@ -1,0 +1,2951 @@
+{
+  "arithmetic": {
+    "class": "MIXED",
+    "components": [
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "rounding": "none"
+  },
+  "artifact_sha256_lf": {
+    "research/l-families/atlas/generalized/TENSOR_MOMENT_COMPLETION_RIGIDITY.md": "c878f10dff6aa0b680bfe193d361d3795a7a0760bbb0697289264fd1428eb6a4",
+    "research/l-families/atlas/generalized/tensor_moment_completion_rigidity.py": "a5c5171e85fa510cfb96c99252501eaca991d0348b9cc8f72f7675c83e42011f",
+    "research/l-families/atlas/generalized/tensor_moment_completion_rigidity.sources.json": "276158ed28fb7717bc30a78230e22feb313a5dd9d4c04ca0075d79411570de29",
+    "tests/test_tensor_moment_completion_rigidity.py": "b26cd267b7f8976f361f9bfa0fb4d018780dafcaffc72398210495501fad1f6c"
+  },
+  "baseline_moments": [
+    1,
+    0,
+    1,
+    1,
+    3,
+    6,
+    15,
+    36,
+    91,
+    232,
+    603,
+    1585,
+    4213
+  ],
+  "claims": [
+    "GLO764.TENSOR_MOMENT_COMPLETION_RIGIDITY_V1",
+    "GLO764.FINITE_MOMENT_PRESERVING_DEFORMATION_V1"
+  ],
+  "coverage": {
+    "actual_delta_prime_samples": 0,
+    "complete_shift_cells": 104,
+    "density_controls_per_j": 5,
+    "j_inclusive": [
+      1,
+      8
+    ],
+    "m_inclusive": [
+      0,
+      12
+    ],
+    "numerical_inverse_cdf_evaluations": 0
+  },
+  "payload_sha256": "9eeb9b0fa03986830bc63b8cdbaa3f1796d4c7ed844ad70840660e7e137e53b8",
+  "perturbations": [
+    {
+      "cdf_control": {
+        "derivative_laurent": [
+          [
+            -2,
+            -1,
+            2
+          ],
+          [
+            -1,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            -1,
+            2
+          ]
+        ],
+        "integer_frequency_endpoint_sines_zero": true,
+        "sine_coefficients": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            -1,
+            2
+          ]
+        ]
+      },
+      "density_controls": [
+        {
+          "density_margin_lower_bound": [
+            1,
+            1
+          ],
+          "epsilon": [
+            0,
+            1
+          ],
+          "j": 1,
+          "jth_moment": [
+            0,
+            1
+          ],
+          "jth_nonmeromorphy_obstruction": false,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            1,
+            6
+          ],
+          "j": 1,
+          "jth_moment": [
+            1,
+            6
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            -1,
+            6
+          ],
+          "j": 1,
+          "jth_moment": [
+            -1,
+            6
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            1,
+            9
+          ],
+          "j": 1,
+          "jth_moment": [
+            1,
+            9
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            -1,
+            9
+          ],
+          "j": 1,
+          "jth_moment": [
+            -1,
+            9
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "j": 1,
+      "moment_shifts": [
+        0,
+        1,
+        1,
+        3,
+        6,
+        15,
+        36,
+        91,
+        232,
+        603,
+        1585,
+        4213,
+        11298
+      ],
+      "trace_polynomial": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "cdf_control": {
+        "derivative_laurent": [
+          [
+            -3,
+            -1,
+            2
+          ],
+          [
+            -2,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            -1,
+            2
+          ]
+        ],
+        "integer_frequency_endpoint_sines_zero": true,
+        "sine_coefficients": [
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            -1,
+            3
+          ]
+        ]
+      },
+      "density_controls": [
+        {
+          "density_margin_lower_bound": [
+            1,
+            1
+          ],
+          "epsilon": [
+            0,
+            1
+          ],
+          "j": 2,
+          "jth_moment": [
+            1,
+            1
+          ],
+          "jth_nonmeromorphy_obstruction": false,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            1,
+            10
+          ],
+          "j": 2,
+          "jth_moment": [
+            11,
+            10
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            -1,
+            10
+          ],
+          "j": 2,
+          "jth_moment": [
+            9,
+            10
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            1,
+            15
+          ],
+          "j": 2,
+          "jth_moment": [
+            16,
+            15
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            -1,
+            15
+          ],
+          "j": 2,
+          "jth_moment": [
+            14,
+            15
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        }
+      ],
+      "j": 2,
+      "moment_shifts": [
+        0,
+        0,
+        1,
+        2,
+        6,
+        15,
+        40,
+        105,
+        280,
+        750,
+        2025,
+        5500,
+        15026
+      ],
+      "trace_polynomial": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "cdf_control": {
+        "derivative_laurent": [
+          [
+            -4,
+            -1,
+            2
+          ],
+          [
+            -3,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ],
+          [
+            4,
+            -1,
+            2
+          ]
+        ],
+        "integer_frequency_endpoint_sines_zero": true,
+        "sine_coefficients": [
+          [
+            3,
+            1,
+            3
+          ],
+          [
+            4,
+            -1,
+            4
+          ]
+        ]
+      },
+      "density_controls": [
+        {
+          "density_margin_lower_bound": [
+            1,
+            1
+          ],
+          "epsilon": [
+            0,
+            1
+          ],
+          "j": 3,
+          "jth_moment": [
+            1,
+            1
+          ],
+          "jth_nonmeromorphy_obstruction": false,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            1,
+            14
+          ],
+          "j": 3,
+          "jth_moment": [
+            15,
+            14
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            -1,
+            14
+          ],
+          "j": 3,
+          "jth_moment": [
+            13,
+            14
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            1,
+            21
+          ],
+          "j": 3,
+          "jth_moment": [
+            22,
+            21
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            -1,
+            21
+          ],
+          "j": 3,
+          "jth_moment": [
+            20,
+            21
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "j": 3,
+      "moment_shifts": [
+        0,
+        0,
+        0,
+        1,
+        3,
+        10,
+        29,
+        84,
+        238,
+        672,
+        1890,
+        5313,
+        14938
+      ],
+      "trace_polynomial": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "cdf_control": {
+        "derivative_laurent": [
+          [
+            -5,
+            -1,
+            2
+          ],
+          [
+            -4,
+            1,
+            2
+          ],
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            5,
+            -1,
+            2
+          ]
+        ],
+        "integer_frequency_endpoint_sines_zero": true,
+        "sine_coefficients": [
+          [
+            4,
+            1,
+            4
+          ],
+          [
+            5,
+            -1,
+            5
+          ]
+        ]
+      },
+      "density_controls": [
+        {
+          "density_margin_lower_bound": [
+            1,
+            1
+          ],
+          "epsilon": [
+            0,
+            1
+          ],
+          "j": 4,
+          "jth_moment": [
+            3,
+            1
+          ],
+          "jth_nonmeromorphy_obstruction": false,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            1,
+            18
+          ],
+          "j": 4,
+          "jth_moment": [
+            55,
+            18
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            -1,
+            18
+          ],
+          "j": 4,
+          "jth_moment": [
+            53,
+            18
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            1,
+            27
+          ],
+          "j": 4,
+          "jth_moment": [
+            82,
+            27
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            -1,
+            27
+          ],
+          "j": 4,
+          "jth_moment": [
+            80,
+            27
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "j": 4,
+      "moment_shifts": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        4,
+        15,
+        49,
+        154,
+        468,
+        1398,
+        4125,
+        12078
+      ],
+      "trace_polynomial": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "cdf_control": {
+        "derivative_laurent": [
+          [
+            -6,
+            -1,
+            2
+          ],
+          [
+            -5,
+            1,
+            2
+          ],
+          [
+            5,
+            1,
+            2
+          ],
+          [
+            6,
+            -1,
+            2
+          ]
+        ],
+        "integer_frequency_endpoint_sines_zero": true,
+        "sine_coefficients": [
+          [
+            5,
+            1,
+            5
+          ],
+          [
+            6,
+            -1,
+            6
+          ]
+        ]
+      },
+      "density_controls": [
+        {
+          "density_margin_lower_bound": [
+            1,
+            1
+          ],
+          "epsilon": [
+            0,
+            1
+          ],
+          "j": 5,
+          "jth_moment": [
+            6,
+            1
+          ],
+          "jth_nonmeromorphy_obstruction": false,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            1,
+            22
+          ],
+          "j": 5,
+          "jth_moment": [
+            133,
+            22
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            -1,
+            22
+          ],
+          "j": 5,
+          "jth_moment": [
+            131,
+            22
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            1,
+            33
+          ],
+          "j": 5,
+          "jth_moment": [
+            199,
+            33
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            -1,
+            33
+          ],
+          "j": 5,
+          "jth_moment": [
+            197,
+            33
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        }
+      ],
+      "j": 5,
+      "moment_shifts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        5,
+        21,
+        76,
+        258,
+        837,
+        2640,
+        8162
+      ],
+      "trace_polynomial": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "cdf_control": {
+        "derivative_laurent": [
+          [
+            -7,
+            -1,
+            2
+          ],
+          [
+            -6,
+            1,
+            2
+          ],
+          [
+            6,
+            1,
+            2
+          ],
+          [
+            7,
+            -1,
+            2
+          ]
+        ],
+        "integer_frequency_endpoint_sines_zero": true,
+        "sine_coefficients": [
+          [
+            6,
+            1,
+            6
+          ],
+          [
+            7,
+            -1,
+            7
+          ]
+        ]
+      },
+      "density_controls": [
+        {
+          "density_margin_lower_bound": [
+            1,
+            1
+          ],
+          "epsilon": [
+            0,
+            1
+          ],
+          "j": 6,
+          "jth_moment": [
+            15,
+            1
+          ],
+          "jth_nonmeromorphy_obstruction": false,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            1,
+            26
+          ],
+          "j": 6,
+          "jth_moment": [
+            391,
+            26
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            -1,
+            26
+          ],
+          "j": 6,
+          "jth_moment": [
+            389,
+            26
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            1,
+            39
+          ],
+          "j": 6,
+          "jth_moment": [
+            586,
+            39
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            -1,
+            39
+          ],
+          "j": 6,
+          "jth_moment": [
+            584,
+            39
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ]
+          ]
+        }
+      ],
+      "j": 6,
+      "moment_shifts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        6,
+        28,
+        111,
+        405,
+        1397,
+        4642
+      ],
+      "trace_polynomial": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -2
+        ],
+        [
+          2,
+          -7
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          6,
+          1
+        ]
+      ]
+    },
+    {
+      "cdf_control": {
+        "derivative_laurent": [
+          [
+            -8,
+            -1,
+            2
+          ],
+          [
+            -7,
+            1,
+            2
+          ],
+          [
+            7,
+            1,
+            2
+          ],
+          [
+            8,
+            -1,
+            2
+          ]
+        ],
+        "integer_frequency_endpoint_sines_zero": true,
+        "sine_coefficients": [
+          [
+            7,
+            1,
+            7
+          ],
+          [
+            8,
+            -1,
+            8
+          ]
+        ]
+      },
+      "density_controls": [
+        {
+          "density_margin_lower_bound": [
+            1,
+            1
+          ],
+          "epsilon": [
+            0,
+            1
+          ],
+          "j": 7,
+          "jth_moment": [
+            36,
+            1
+          ],
+          "jth_nonmeromorphy_obstruction": false,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            1,
+            30
+          ],
+          "j": 7,
+          "jth_moment": [
+            1081,
+            30
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            -1,
+            30
+          ],
+          "j": 7,
+          "jth_moment": [
+            1079,
+            30
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            1,
+            45
+          ],
+          "j": 7,
+          "jth_moment": [
+            1621,
+            45
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            -1,
+            45
+          ],
+          "j": 7,
+          "jth_moment": [
+            1619,
+            45
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              15,
+              1
+            ]
+          ]
+        }
+      ],
+      "j": 7,
+      "moment_shifts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        7,
+        36,
+        155,
+        605,
+        2211
+      ],
+      "trace_polynomial": [
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          -15
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          1
+        ]
+      ]
+    },
+    {
+      "cdf_control": {
+        "derivative_laurent": [
+          [
+            -9,
+            -1,
+            2
+          ],
+          [
+            -8,
+            1,
+            2
+          ],
+          [
+            8,
+            1,
+            2
+          ],
+          [
+            9,
+            -1,
+            2
+          ]
+        ],
+        "integer_frequency_endpoint_sines_zero": true,
+        "sine_coefficients": [
+          [
+            8,
+            1,
+            8
+          ],
+          [
+            9,
+            -1,
+            9
+          ]
+        ]
+      },
+      "density_controls": [
+        {
+          "density_margin_lower_bound": [
+            1,
+            1
+          ],
+          "epsilon": [
+            0,
+            1
+          ],
+          "j": 8,
+          "jth_moment": [
+            91,
+            1
+          ],
+          "jth_nonmeromorphy_obstruction": false,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              36,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            1,
+            34
+          ],
+          "j": 8,
+          "jth_moment": [
+            3095,
+            34
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              36,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            1,
+            2
+          ],
+          "epsilon": [
+            -1,
+            34
+          ],
+          "j": 8,
+          "jth_moment": [
+            3093,
+            34
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              36,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            1,
+            51
+          ],
+          "j": 8,
+          "jth_moment": [
+            4642,
+            51
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              36,
+              1
+            ]
+          ]
+        },
+        {
+          "density_margin_lower_bound": [
+            2,
+            3
+          ],
+          "epsilon": [
+            -1,
+            51
+          ],
+          "j": 8,
+          "jth_moment": [
+            4640,
+            51
+          ],
+          "jth_nonmeromorphy_obstruction": true,
+          "lower_euler_meromorphy_proved": false,
+          "preserved_moments": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              36,
+              1
+            ]
+          ]
+        }
+      ],
+      "j": 8,
+      "moment_shifts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        8,
+        45,
+        209,
+        869
+      ],
+      "trace_polynomial": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -3
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          -25
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          14
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          1
+        ]
+      ]
+    }
+  ],
+  "resources": {
+    "max_bytes": 262144,
+    "max_input_bits": 128,
+    "max_j": 12,
+    "max_m": 24,
+    "work_budget_score": 70840,
+    "work_cap_exclusive": 500000
+  },
+  "schema": "tensor-moment-completion-controls-v1",
+  "scope": "finite algebra only; no machine proof of infinite moment rigidity or Euler meromorphy",
+  "sources": {
+    "authenticated_parent_files": [
+      {
+        "git_blob": "907bb4c262939d4f812b282f155857218a97b2e5",
+        "path": "research/l-families/atlas/generalized/SATAKE_DEFORMATION_COMPLETION_OBSTRUCTION.md",
+        "role": "mathematical-parent-D1-D2-Abel-and-integer-log-order",
+        "sha256_lf": "131ce880eedd4da62e3f46884529a759e8842a0e556c1f7be26d8565e47201c2"
+      },
+      {
+        "git_blob": "e3131456ec7d0f1678645ecfca0c8723ce66dabd",
+        "path": "research/l-families/atlas/generalized/satake_deformation_completion_obstruction.py",
+        "role": "parent-control-context-not-imported-by-this-producer",
+        "sha256_lf": "0b17d9c83d70a4f7122274ae172ba808b32cc8cd9e2f59060d21510131e5b094"
+      },
+      {
+        "git_blob": "c50b8eb8f4ea13e232f63bebd034a63ddcf110d7",
+        "path": "research/l-families/atlas/generalized/satake_deformation_completion_obstruction.sources.json",
+        "role": "parent-arithmetic-source-declarations",
+        "sha256_lf": "3b4f77c8e493e4f958bcf4bf7f3c1ff9d9fcb0d34fb4ac56066ed26893bd2c7f"
+      }
+    ],
+    "external_theorems_machine_proved": false,
+    "manifest_sha256_lf": "276158ed28fb7717bc30a78230e22feb313a5dd9d4c04ca0075d79411570de29"
+  },
+  "tensor_weights": [
+    {
+      "dimension": 1,
+      "m": 0,
+      "weights": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "dimension": 3,
+      "m": 1,
+      "weights": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "dimension": 9,
+      "m": 2,
+      "weights": [
+        [
+          -2,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "dimension": 27,
+      "m": 3,
+      "weights": [
+        [
+          -3,
+          1
+        ],
+        [
+          -2,
+          3
+        ],
+        [
+          -1,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "dimension": 81,
+      "m": 4,
+      "weights": [
+        [
+          -4,
+          1
+        ],
+        [
+          -3,
+          4
+        ],
+        [
+          -2,
+          10
+        ],
+        [
+          -1,
+          16
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "dimension": 243,
+      "m": 5,
+      "weights": [
+        [
+          -5,
+          1
+        ],
+        [
+          -4,
+          5
+        ],
+        [
+          -3,
+          15
+        ],
+        [
+          -2,
+          30
+        ],
+        [
+          -1,
+          45
+        ],
+        [
+          0,
+          51
+        ],
+        [
+          1,
+          45
+        ],
+        [
+          2,
+          30
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "dimension": 729,
+      "m": 6,
+      "weights": [
+        [
+          -6,
+          1
+        ],
+        [
+          -5,
+          6
+        ],
+        [
+          -4,
+          21
+        ],
+        [
+          -3,
+          50
+        ],
+        [
+          -2,
+          90
+        ],
+        [
+          -1,
+          126
+        ],
+        [
+          0,
+          141
+        ],
+        [
+          1,
+          126
+        ],
+        [
+          2,
+          90
+        ],
+        [
+          3,
+          50
+        ],
+        [
+          4,
+          21
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          1
+        ]
+      ]
+    },
+    {
+      "dimension": 2187,
+      "m": 7,
+      "weights": [
+        [
+          -7,
+          1
+        ],
+        [
+          -6,
+          7
+        ],
+        [
+          -5,
+          28
+        ],
+        [
+          -4,
+          77
+        ],
+        [
+          -3,
+          161
+        ],
+        [
+          -2,
+          266
+        ],
+        [
+          -1,
+          357
+        ],
+        [
+          0,
+          393
+        ],
+        [
+          1,
+          357
+        ],
+        [
+          2,
+          266
+        ],
+        [
+          3,
+          161
+        ],
+        [
+          4,
+          77
+        ],
+        [
+          5,
+          28
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          1
+        ]
+      ]
+    },
+    {
+      "dimension": 6561,
+      "m": 8,
+      "weights": [
+        [
+          -8,
+          1
+        ],
+        [
+          -7,
+          8
+        ],
+        [
+          -6,
+          36
+        ],
+        [
+          -5,
+          112
+        ],
+        [
+          -4,
+          266
+        ],
+        [
+          -3,
+          504
+        ],
+        [
+          -2,
+          784
+        ],
+        [
+          -1,
+          1016
+        ],
+        [
+          0,
+          1107
+        ],
+        [
+          1,
+          1016
+        ],
+        [
+          2,
+          784
+        ],
+        [
+          3,
+          504
+        ],
+        [
+          4,
+          266
+        ],
+        [
+          5,
+          112
+        ],
+        [
+          6,
+          36
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          1
+        ]
+      ]
+    },
+    {
+      "dimension": 19683,
+      "m": 9,
+      "weights": [
+        [
+          -9,
+          1
+        ],
+        [
+          -8,
+          9
+        ],
+        [
+          -7,
+          45
+        ],
+        [
+          -6,
+          156
+        ],
+        [
+          -5,
+          414
+        ],
+        [
+          -4,
+          882
+        ],
+        [
+          -3,
+          1554
+        ],
+        [
+          -2,
+          2304
+        ],
+        [
+          -1,
+          2907
+        ],
+        [
+          0,
+          3139
+        ],
+        [
+          1,
+          2907
+        ],
+        [
+          2,
+          2304
+        ],
+        [
+          3,
+          1554
+        ],
+        [
+          4,
+          882
+        ],
+        [
+          5,
+          414
+        ],
+        [
+          6,
+          156
+        ],
+        [
+          7,
+          45
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          1
+        ]
+      ]
+    },
+    {
+      "dimension": 59049,
+      "m": 10,
+      "weights": [
+        [
+          -10,
+          1
+        ],
+        [
+          -9,
+          10
+        ],
+        [
+          -8,
+          55
+        ],
+        [
+          -7,
+          210
+        ],
+        [
+          -6,
+          615
+        ],
+        [
+          -5,
+          1452
+        ],
+        [
+          -4,
+          2850
+        ],
+        [
+          -3,
+          4740
+        ],
+        [
+          -2,
+          6765
+        ],
+        [
+          -1,
+          8350
+        ],
+        [
+          0,
+          8953
+        ],
+        [
+          1,
+          8350
+        ],
+        [
+          2,
+          6765
+        ],
+        [
+          3,
+          4740
+        ],
+        [
+          4,
+          2850
+        ],
+        [
+          5,
+          1452
+        ],
+        [
+          6,
+          615
+        ],
+        [
+          7,
+          210
+        ],
+        [
+          8,
+          55
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          1
+        ]
+      ]
+    },
+    {
+      "dimension": 177147,
+      "m": 11,
+      "weights": [
+        [
+          -11,
+          1
+        ],
+        [
+          -10,
+          11
+        ],
+        [
+          -9,
+          66
+        ],
+        [
+          -8,
+          275
+        ],
+        [
+          -7,
+          880
+        ],
+        [
+          -6,
+          2277
+        ],
+        [
+          -5,
+          4917
+        ],
+        [
+          -4,
+          9042
+        ],
+        [
+          -3,
+          14355
+        ],
+        [
+          -2,
+          19855
+        ],
+        [
+          -1,
+          24068
+        ],
+        [
+          0,
+          25653
+        ],
+        [
+          1,
+          24068
+        ],
+        [
+          2,
+          19855
+        ],
+        [
+          3,
+          14355
+        ],
+        [
+          4,
+          9042
+        ],
+        [
+          5,
+          4917
+        ],
+        [
+          6,
+          2277
+        ],
+        [
+          7,
+          880
+        ],
+        [
+          8,
+          275
+        ],
+        [
+          9,
+          66
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          1
+        ]
+      ]
+    },
+    {
+      "dimension": 531441,
+      "m": 12,
+      "weights": [
+        [
+          -12,
+          1
+        ],
+        [
+          -11,
+          12
+        ],
+        [
+          -10,
+          78
+        ],
+        [
+          -9,
+          352
+        ],
+        [
+          -8,
+          1221
+        ],
+        [
+          -7,
+          3432
+        ],
+        [
+          -6,
+          8074
+        ],
+        [
+          -5,
+          16236
+        ],
+        [
+          -4,
+          28314
+        ],
+        [
+          -3,
+          43252
+        ],
+        [
+          -2,
+          58278
+        ],
+        [
+          -1,
+          69576
+        ],
+        [
+          0,
+          73789
+        ],
+        [
+          1,
+          69576
+        ],
+        [
+          2,
+          58278
+        ],
+        [
+          3,
+          43252
+        ],
+        [
+          4,
+          28314
+        ],
+        [
+          5,
+          16236
+        ],
+        [
+          6,
+          8074
+        ],
+        [
+          7,
+          3432
+        ],
+        [
+          8,
+          1221
+        ],
+        [
+          9,
+          352
+        ],
+        [
+          10,
+          78
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          12,
+          1
+        ]
+      ]
+    }
+  ],
+  "verdict": "EXACT_BOUNDED_CONTROLS_PASS_NOT_A_MEROMORPHY_CERTIFICATE"
+}
