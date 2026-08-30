@@ -1,0 +1,35 @@
+{
+  "branch": "research/gpt56-pro/108300-direct-fifth-companion-phase",
+  "parent_head": "1617b3165935460b9d43fe2d15ac8c4a6109dfce",
+  "parent_pr": 777,
+  "proof_object_sha256": "47dcd306f38d61e63ff5e9e779c3db870ed0dd08542909ab630043241e30b8db",
+  "repository": "gfreund123/riemann",
+  "rh_established": false,
+  "schema": "riemann.t108330.source-lock.v1",
+  "source_inputs": [
+    {
+      "commit": "a2b92cb4ba1d7bd3b9c4cc1dbd6ea10a3d8cf9ac",
+      "path": "research/exploratory/XI_POSITIVE_KERNEL_DESCENT_FIREWALL.md",
+      "role": "reviewed compact-positive Xi-tail perturbation estimates"
+    },
+    {
+      "commit": "a2b92cb4ba1d7bd3b9c4cc1dbd6ea10a3d8cf9ac",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+      "role": "actual Xi kernel normalization and fixed-odd source asymptotics"
+    },
+    {
+      "commit": "8d28e706de724c8a6a66fa1980bf4ef879871ae2",
+      "path": "claims/lemmas/L-107202-xi-positive-frequency-saddle-concentration.md",
+      "role": "high-derivative saddle interface"
+    },
+    {
+      "commit": "1617b3165935460b9d43fe2d15ac8c4a6109dfce",
+      "path": "claims/theorems/T-108320-direct-companion-winding-ninety-percent-frontier.md",
+      "role": "conclusion-facing winding coordinate"
+    }
+  ],
+  "theorem_scope": "arbitrarily many low-order reverse-Rolle defects under compact positive perturbations preserving the exact Xi tail and all current local asymptotic inputs",
+  "xi31wind108320_proved": false,
+  "ninety_percent_established": false,
+  "local_source_package_implies_winding": false
+}
