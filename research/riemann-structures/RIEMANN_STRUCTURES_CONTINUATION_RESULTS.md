@@ -6,147 +6,224 @@ carried by [draft PR #765](https://github.com/gfreund123/riemann/pull/765).
 This is a research checkpoint, not completion of the requested eight-hour
 pass, a canonical repository integration, or an RH claim.
 
+Checkpoint updated: 2026-08-31. Fourteen exact packets are resident,
+including the all-inner width theorem and a separate source-convention
+correction.
+
 ## Five-minute result
 
-The useful structural distinction is now sharper: retaining a scalar
-sequence, retaining its labelled source, and retaining its metric are
-different requirements. A successful structure must preserve the particular
-operation the consumer needs. None of the packets below constructs a new
+Retaining a scalar sequence, retaining its labelled source, and retaining
+its physical metric are different requirements. The useful new results
+identify which operations actually survive. None constructs a new
 number-field geometry or supplies the missing RH-level estimate.
 
-| Mechanism | Exact result now available | Boundary that still matters |
+The Xi work now has three independent conclusions: actual scalar
+concentration is proved; narrow physical-band bounds are proved for every
+inner numerator at finite denominator rank; and generic positivity plus
+high-derivative concentration does not eliminate reverse-Rolle defects.
+Small band charge is not small total charge.
+
+Read the
+[source-duality correction](../exploratory/HARDY_INNER_WIDTH_SOURCE_DUALITY.md)
+before using the earlier source-Pick matrix formulas with the explicit
+column Fourier Gram. A raw value matrix and a kernel coefficient matrix
+cannot be interchanged. Historical scientific files are preserved.
+
+## Exact packet map
+
+| Packet | What it supplies | Remaining boundary |
 |---|---|---|
-| Marked finite-field source | Shared-conductor support and the Wick occupancy spectrum; explicit live source collisions | A surviving cell and an indefinite form do not prove freedom of native coefficients or a signed trace bound |
-| Source algebra before pushforward | Literal diagonal tensor and relative Adams extraction require the retained finite source algebra | Isomorphic pushed Frobenius representations can give different diagonal and primitive-orbit data |
-| Signed history recombination | History-only representation interference has a subpower principal-channel payment in the original integrated source | Cross terms between distinct retained groups remain, including groups with the same arithmetic tuple but different labels |
-| Archimedean ladder | Infinite polynomial ladders reproduce gamma factors; finite virtual gamma cancellation and parity defects are explicit | The odd duality/tensor boundary is not repaired by calling the ladder a finite Euler object |
-| Unlabelled family control | A principal labelled value is not determined by its unlabelled family except on all-equal orbits | This does not forbid stronger labelled data or the native signed identity P=A-K |
-| Earlier actual-Xi source | A direct real-kernel proof gives sharp current concentration and carrier-mismatch asymptotics | Source-frequency softness is not a physical or outer-normalized Pick-metric bound |
+| [Marked-place Gate 0](../l-families/atlas/function_field/FFPS_MARKED_PLACE_SIGNED_DESCENT_GATE0.md) | A source-bound shared-conductor chart and support/rank tests | Not a complete native sheaf or signed descent theorem |
+| [Wick occupancy spectrum](../l-families/atlas/function_field/FFPS_SHARED_FIBRE_WICK_OCCUPANCY_SPECTRUM.md) | Exact aggregate/diagonal decomposition and full/incomplete occupancy controls | An indefinite free-vector form does not establish native coefficient freedom |
+| [Live shared fibres](../l-families/atlas/function_field/FFPS_LIVE_SHARED_FIBRE_COLLISIONS.md) | Actual owner/cofactor collisions satisfying the frozen windows | All coefficient, carrier and mask constraints remain attached |
+| [Signed history recombination](../l-families/atlas/function_field/FFPS_SIGNED_HISTORY_RECOMBINATION.md) | A subpower principal-channel payment in the original integrated source | Cross terms between distinct retained groups remain |
+| [Source algebra and Adams](SOURCE_ALGEBRA_DIAGONAL_ADAMS_ADAPTER.md) | Literal diagonal tensor and primitive extraction before pushforward | No complete native partial-Frobenius realization or trace estimate |
+| [Archimedean ladder](ARCHIMEDEAN_LADDER_BOUNDARY.md) | Gamma determinants and exact finite/odd-parity boundaries | The infinite ladder does not become a finite positive Euler object |
+| [Family-binding firewall](FAMILY_BINDING_PERMUTATION_FIREWALL.md) | Exact label-erasure and first-mean-loss obstruction | Stronger labelled data and signed extraction are not excluded |
+| [Near-adapted Xi scale](../exploratory/XI_NEAR_ADAPTED_SCALE_FIREWALL.md) | Exact mismatch law and the distinction between physical and frequency-dependent scales | No transfer of a scalar density ratio to the native Pick metric |
+| [Actual Xi concentration](../exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md) | Direct real-theta-kernel concentration and sharp current asymptotics | Scalar concentration alone does not bound total canonical charge |
+| [Confluent source band](../exploratory/XI_CONFLUENT_SOURCE_BAND_OBSTRUCTION.md) | Explicit outer-metric and confluence controls | Its physical source convention must be read with the later dual-jet correction |
+| [Finite physical-inner band](../exploratory/HARDY_TRANSLATION_PHYSICAL_BAND_BOUND.md) | Degree-paid translation bound with complex/confluent denominators | Full numerator degree is not inferred to be finite; the later theorem removes that restriction differently |
+| [High Xi derivatives](../exploratory/XI_HIGH_DERIVATIVE_SADDLE_CLOSURE.md) | Weighted saddle closure and simple real zeros on growing rectangles | The reverse-Rolle defect sum remains unpaid |
+| [Positive-kernel descent firewall](../exploratory/XI_POSITIVE_KERNEL_DESCENT_FIREWALL.md) | An exact-tail positive-kernel example with a wrong-sign critical point and surviving high-derivative asymptotics | Not a refutation of every quantitative defect or density bound |
+| [All-inner width and source duality](../exploratory/HARDY_INNER_WIDTH_SOURCE_DUALITY.md) | Width/height bounds for any inner numerator and the corrected physical source coefficients | Finite denominator accounting, native cofinal limits and total charge remain separate |
 
-## What to read first
+Each row has a bounded exact producer, fixture, source manifest and tests.
+The later analytic and source-interface packets have separate frozen-source
+audit reports. The [wave-2 portfolio](RIEMANN_STRUCTURES_WAVE2_PORTFOLIO.md)
+remains the historical mechanism/literature map; its old queue is superseded
+by this checkpoint.
 
-1. [Signed history recombination](../l-families/atlas/function_field/FFPS_SIGNED_HISTORY_RECOMBINATION.md)
-   and its [independent review](../l-families/atlas/function_field/FFPS_SIGNED_HISTORY_RECOMBINATION_AUDIT.md).
-   This identifies a real payment, not just an obstruction.
-2. [Source-algebra diagonal/Adams adapter](SOURCE_ALGEBRA_DIAGONAL_ADAMS_ADAPTER.md).
-   This is the cleanest finite example of why source identity matters.
-3. [Actual Xi concentration](../exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md)
-   and its [exact-source review](../exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION_AUDIT.md).
-   This supplies a previously conditional analytic input.
-4. [Archimedean ladder boundary](ARCHIMEDEAN_LADDER_BOUNDARY.md)
-   and its [review](ARCHIMEDEAN_LADDER_BOUNDARY_AUDIT.md).
-5. [Unlabelled-family firewall](FAMILY_BINDING_PERMUTATION_FIREWALL.md).
+## What changed in the physical Xi metric
 
-The [original wave-2 portfolio](RIEMANN_STRUCTURES_WAVE2_PORTFOLIO.md)
-remains the broader literature and mechanism map. Its unfinished-work
-lists are historical; this checkpoint supersedes their status.
+Let the denominator zeros be b_j=a_j+i y_j, counted with multiplicity,
+n their number, S=sum y_j, and Delta the absolute frequency-band measure.
+For any genuine inner numerator, including infinite Blaschke and singular
+inner factors, the accepted theorem gives
 
-## The finite-field result is not just a synthetic collision
+    tr(G^-1 H_band)
+      <= sum_j min(1, C sqrt(Delta y_j))
+      <= min(n, C sqrt(Delta) sum_j sqrt(y_j)),
+    C = 16/pi^(3/2) <4.
 
-The [live shared-fibre packet](../l-families/atlas/function_field/FFPS_LIVE_SHARED_FIBRE_COLLISIONS.md)
-constructs actual owner/cofactor labels obeying the frozen source windows.
-Its two-core-by-two-core control has four arithmetic pairs and sixteen
-histories in one residue cell. A separate one-pair control has one hundred
-histories, signed total 4, literal squared diagonal 676, and recombination
-defect -660.
+This is a physical band Gram. The proof does not commute the band
+projection with the multiplier. It uses a classical orthonormal rational
+basis and Hausdorff--Young, not a finite numerator approximation.
 
-Those controls establish physical occupancy. They do not let us choose
-arbitrary coefficients in the negative eigenspaces of the
-[occupancy form](../l-families/atlas/function_field/FFPS_SHARED_FIBRE_WICK_OCCUPANCY_SPECTRUM.md).
-The native coefficient and phase constraints must remain attached.
+For an independent global normalizer N,
 
-More importantly, grouping histories while retaining every other label
-gives an exact diagonal correction. The dangerous additive and character
-corrections cancel jointly to the principal correction. The original
-integrated principal diagonal and the subpower history multiplicity pay
-that correction. This preserves the uncentered principal source and its
-centered target at the stated subpower scale.
+    tr(G^-1 H_band)/N <= C sqrt[Delta (n/N)(S/N)].
 
-The unpaid object is the cross-group source. Distinct retained groups
-need not have distinct arithmetic tuples: masks, carriers, and other
-retained labels can differ. The full signed cancellation and principal
-binding problem has not disappeared.
+A height sum alone does not bound the number of arbitrarily shallow nodes.
+The count, window summation, common-zero, boundary and cofinal-exhaustion
+ledgers must still be justified. A source-relative estimate has a different
+normalization; its factor cannot simply be divided by n.
+
+The actual scalar envelope at fixed odd K and fixed M has absolute width
+
+    Delta_X = (KM/pi+o(1)) exp(-X)/X.
+
+Its relative width is of order exp(-X)/X^2. Neither X proportional to
+log(T) nor a native denominator count is supplied by the band theorem.
+
+### The source convention is a substantive correction
+
+With column kernels E_j(x)=i/[sqrt(2pi)(x-conjugate(b_j))], the Gram is
+G_ij=i/(b_i-conjugate(b_j)). If V contains raw values Bplus(b_j), the
+physical adverse Gram is V G V-star, not V-star G V.
+
+For confluence the coefficient matrix is the adjoint normalized value
+jet, A=J_Bplus-star; the HT4 basis also requires its diagonal phase
+conversion. The common outer metric is retained through C=J_O-star,
+Rc=J_R-star=CA=AC, and G_O=C-star G C.
+
+The exact three-node control has physical charge 235/117<3 but raw-value
+charge 1943/585>3. Its incorrectly oriented regularized determinant is
+already negative at tau=1/2. This is not fixed by regularization or by
+silently dropping the outer factor.
+
+The [independent audit](../exploratory/HARDY_INNER_WIDTH_SOURCE_DUALITY_AUDIT.md)
+records the convention-relative correction. Historical commuting-matrix
+covariance remains algebraically valid, but physical contraction and
+positive-determinant claims require consistent dual coefficients.
+The audit does not silently certify all historical downstream consumers.
+
+## The finite-field payment and remaining native work
+
+The live two-core-by-two-core control has four arithmetic pairs and
+sixteen histories in one residue cell. A separate one-pair control has
+one hundred histories, signed total 4, literal squared diagonal 676,
+and recombination defect -660. These are actual occupancy controls,
+not permission to choose arbitrary negative-eigenvector coefficients.
+
+Grouping only histories, while keeping every other label, gives an exact
+diagonal correction. The dangerous additive and character corrections
+cancel jointly to the principal correction. The original integrated
+principal diagonal and subpower history multiplicity pay that correction.
+The full uncentered principal source and its centered target are retained
+at the stated subpower scale.
+
+The unpaid cross-group source includes groups with equal arithmetic tuples
+but different masks, carriers or other retained labels. A canonical
+Boolean coefficient identity is not automatically an identity of the
+finer labelled atom space or its literal Wick diagonal. Current work is
+tracing that specific binding; no unfinished sign/lift claim is imported
+into this checkpoint.
 
 ## Earlier work is explicitly retained
 
 ### Architecture A: the central 67-free source
 
 [PR #760](https://github.com/gfreund123/riemann/pull/760) remains the
-separate home of the core-wavelet work. The new single-channel packet
-proves that the complete beta source is the stable second multiplicative
-difference of one 67-free Mobius source:
+separate home of the core-wavelet work. Its single-channel reduction is
 
     beta = (delta_1-delta_67)^(*2) * mu^(67-free).
 
-Its finite sharp-prefix inverse preserves the relevant positive-exponent
-maximal L2 bounds. It reduces the three exceptional panels to one central
-source for this purpose. The assembled central criterion remains
-RH-equivalent and unproved; the stronger positive core gates are sufficient
-routes, not estimates already supplied by the reduction.
+The finite sharp-prefix inverse preserves the relevant positive-exponent
+maximal L2 bounds. This reduces the three exceptional panels to one
+central source for this purpose. The assembled central criterion remains
+RH-equivalent and unproved. Stronger positive core gates are sufficient
+routes, not cancellation estimates already supplied by the reduction.
 
-That packet lives on the PR760 branch, not as a duplicate theorem on this
-branch. Its file is
-FFPS_BETA_SECOND_DIFFERENCE_SINGLE_CHANNEL_REDUCTION.md under the
-function-field atlas.
+The source-locked packet is
+FFPS_BETA_SECOND_DIFFERENCE_SINGLE_CHANNEL_REDUCTION.md in that branch's
+function-field atlas, not a duplicate theorem on this branch.
 
 ### Architecture B: relative extraction and source labels
 
-The earlier PR756/757/760 work supplies the relative-first extraction
-problem. The new finite source-algebra adapter explains why extracting
-after forgetting the source changes the problem. It constructs no
-complete native sheaf, partial-Frobenius realization, or uniform Betti
-bound. Those are still substantive targets.
+The earlier PR756/757/760 lineage supplies the relative-first extraction
+problem. The source-algebra adapter explains exactly why forgetting the
+source before diagonal or Adams extraction changes the problem. It does
+not construct a native sheaf, commuting partial Frobenii, a uniform Betti
+bound or the principal signed estimate.
 
-### Actual Xi: a new proof, not an inherited assertion
+### Actual Xi: concentration and high derivatives are now proved
 
-For every fixed positive odd K, the literal current measure now satisfies
+For every fixed positive odd K the literal current measure satisfies
 
-\[
- m_2\sim\frac{3}{2\pi}e^{-\xi},\qquad
- g_K\sim\frac{\pi}{K}\xi^2e^\xi,\qquad p_K\longrightarrow\frac1{2K}.
-\]
+    m2 ~ 3 exp(-xi)/(2 pi),
+    g_K ~ pi xi^2 exp(xi)/K,
+    p_K -> 1/(2K).
 
-The proof includes all-real tail domination, a positive denominator
-bound, and fixed exponential-weighted moments. It corrects an old
-factor-of-two Fourier-kernel normalization without editing the historical
-source; all normalized ratios are unchanged.
+The proof has all-real tail domination, a positive denominator bound and
+fixed exponential-weighted moments. It corrects an old amplitude
+normalization without rewriting the historical source; normalized ratios
+are unchanged.
 
-Together with the [near-adapted-scale scout](../exploratory/XI_NEAR_ADAPTED_SCALE_FIREWALL.md),
-it shows that bounded mismatch requires relative tuning on the scale
-exp(-xi)/xi^2. The common outer factor, physical constant companion,
-collective/confluent localization, and source-Pick free energy remain
-separate analytic requirements.
+The separate high-derivative proof gives the same actual saddle,
+weighted F/F-prime/F-second control, simple real zeros in selected full
+disks, and exclusion elsewhere in growing rectangles whenever
+T_k+H_k=o(sqrt(k/log k)). The full-disk height enlargement is explicit.
+It does not assert exact zero counts at vertical rectangle boundaries.
+A fixed four-sigma tail is eventually small enough, not exponentially
+small in derivative order.
+
+The positive-kernel firewall then shows why that endpoint is insufficient
+for descent. Its strictly positive smooth kernel equals the actual Xi
+kernel outside a fixed compact set, preserves the stated scalar tail and
+high-derivative asymptotics, yet has a simple wrong-sign negative maximum.
+The exact first-rung ledger is 0=1-2+1.
+
+This rules out discarding the defect from those generic properties. A
+finite off-real pair does not refute an unspecified o(N) defect bound.
+The Xi-specific defect estimate, total Pick charge, forced unit spectrum
+and free-energy gate remain open.
 
 ## Next scientific decisions
 
-1. Test the actual outer-retaining denominator-jet band metric. A confluent
-   packet extension is under construction; no result from that unfinished
-   packet is imported here.
-2. Analyze the native cross-group signed form, retaining its coefficient
-   factorization and all labels. Enlarging a free-vector matrix is not
-   a substitute.
-3. Attack an actual central-source cancellation estimate in Architecture A.
-   Do not spend another pass merely renaming an RH-equivalent norm.
-4. Use the archimedean and source-algebra examples as tests of any proposed
-   common categorical object. It must explain an operation and a held-out
-   phenomenon, not just contain the known scalar formulas.
+1. Resolve the native chart-and-diagonal binding in the signed source.
+   Carry every allocation, carrier, endpoint and selector label through
+   any proposed recombination.
+2. Determine the exact denominator-count and cofinal ledger needed by the
+   physical band theorem. Then identify an additional Xi-specific bridge
+   if a conclusion about total charge is sought.
+3. Pursue a source-specific reverse-Rolle defect estimate. Re-proving
+   high-derivative concentration or generic kernel positivity does not
+   pay the missing sum.
+4. Attack an actual central-source cancellation estimate in Architecture
+   A, not another equivalent norm formulation.
+5. Test proposed common objects against the source-algebra and
+   archimedean compatibility controls. A useful parent must explain an
+   operation and survive a held-out test, not merely package formulas.
 
-The two new programmes retain separate branches. The generalized-L
-programme tests scalar recovery, representation parents, and now global
-completion obstructions; its claims are not dependencies of the signed
-finite-field or Xi estimates.
+The two programmes retain separate branches. The generalized-L programme
+now has local/global obstructions and a classical graded parent; it is
+also testing a coupled global-parent candidate. Its results are not
+dependencies of the signed finite-field or Xi estimates, and unfinished
+candidate work is not accepted here.
 
-## Reproducibility and priority
+## Reproduction and priority
 
-Each packet has its own frozen source manifest, bounded exact producer,
-tests, and scope contract. Reviews identify the exact scientific commit.
-Normal and optimized Python are both required. Bounded algebra does not
-machine-prove an analytic asymptotic.
+The current changed-test-module scope is fourteen modules: all 320 tests
+passed in normal Python and under -O. All fourteen complete producer
+checks passed in both modes. This scope is not the differently selected
+focused/inherited suite counted at the earlier checkpoint.
 
-[Source acquisition instructions](CONTINUATION_SOURCE_REPLAY.md) retain
-the original cherry-picked scientific identities for independent review.
-Classical Frobenius, Adams, gamma, Hardy, and Laplace mathematics is
-acknowledged. The research contribution is the specific tested interface
-or obstruction; this checkpoint makes no external novelty claim.
+[Source acquisition instructions](CONTINUATION_SOURCE_REPLAY.md) preserve
+the original scientific identities across cherry-picks, including the
+older PR760 dependency. Acceptance is commit/path/blob/content based.
+Bounded exact algebra does not machine-prove an analytic asymptotic.
 
+Classical Frobenius, Adams, gamma, Hardy, Fourier and Laplace theory is
+acknowledged. No external novelty or publication-priority claim is made.
 RH and GRH remain unsolved.
