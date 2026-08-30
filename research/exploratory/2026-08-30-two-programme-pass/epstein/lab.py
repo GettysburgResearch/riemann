@@ -308,7 +308,7 @@ def r2_sieve(N):
     return r
 
 
-def direct_Z_i(s, R=2000, head=50000, navg=64, nstep=1000):
+def direct_Z_i(s, R=2000, head=50000, navg=257, nstep=1000):
     """Direct lattice sum Z_i(s) = sum_{(m,n)!=0} (m^2+n^2)^{-s} truncated at radius R
     (i.e. n <= N = R^2), with tail estimate.  Returns (value, spread) where spread is the
     max-min over the navg tail-corrected truncations (empirical residual indicator).
@@ -317,9 +317,15 @@ def direct_Z_i(s, R=2000, head=50000, navg=64, nstep=1000):
     with math.fsum (exactly-rounded double sums; term magnitudes there total < 1e-4 so
     double rounding contributes < 1e-19 absolute); tail estimate with the EXACT counting
     function A(N) = sum_{n<=N} r2(n):
-        tail_est(N) = s * pi * N^{1-s}/(s-1) - A(N) * N^{-s},
-    whose residual s int_N^inf P(u) u^{-s-1} du (P = circle-problem error) is suppressed
-    by averaging over navg truncation points N_j = N - j*nstep."""
+        tail_est(N) = s * pi * N^{1-s}/(s-1) - (A(N) + 1) * N^{-s}.
+    (The +1: A(u) = pi u + E(u) - 1 with E the Gauss-circle error INCLUDING the origin;
+    E has mean ~0 but the excluded origin shifts P = E - 1 to mean -1, contributing a
+    systematic -N^{-s} to the Abel-summation residual, which the +1 removes.)
+    The remaining residual s int_N^inf E(u) u^{-s-1} du (oscillatory
+    with local frequency ~ pi sqrt(n/N)) is suppressed by a TRIANGULAR (Cesaro) weighted
+    average over navg truncation points N_j = N - j*nstep: a triangular window of span S
+    damps a frequency-omega oscillation like (2/(omega S/2))^2, quadratically better than
+    a flat average."""
     import cmath
     N = R * R
     r = r2_sieve(N)
@@ -357,9 +363,14 @@ def direct_Z_i(s, R=2000, head=50000, navg=64, nstep=1000):
                 if r[ncur]:
                     S += r[ncur] * mp.power(ncur, -smp)
                     Acur += r[ncur]
-            tail = smp * mp.pi * mp.power(Nj, 1 - smp) / (smp - 1) - Acur * mp.power(Nj, -smp)
+            tail = (smp * mp.pi * mp.power(Nj, 1 - smp) / (smp - 1)
+                    - (Acur + 1) * mp.power(Nj, -smp))
             vals.append(S + tail)
-        avg = sum(vals) / len(vals)
+        # triangular (Cesaro) weights
+        c = (navg - 1) / 2
+        ws = [1 - abs(j - c) / (c + 1) for j in range(navg)]
+        wsum = math.fsum(ws)
+        avg = sum(w * v for (w, v) in zip(ws, vals)) / wsum
         spread = max(abs(v - avg) for v in vals) * 2
     return avg, spread
 

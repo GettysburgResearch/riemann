@@ -1,0 +1,34 @@
+{
+ "experiment": "X-108505-rank-uniform-defects",
+ "claim": "O-108505",
+ "checks": [
+  {
+   "name": "V1_sym2_denominator_and_degree",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V2_gauss_sign_law_rank3",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V3_gauss_sign_refuted_rank4",
+   "ok": true,
+   "detail": "recorded witness (1,2,3,2) -> [1,2,-1,-7,2,-8,-8]"
+  },
+  {
+   "name": "V4_self_duality_fails_rank3",
+   "ok": true,
+   "detail": "N=['1', '2', '-3', '-9'] not palindromic up to scale det^2"
+  },
+  {
+   "name": "V5_rank4_sporadic_palindrome",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "all_ok": true,
+ "arithmetic_class": "EXACT_RATIONAL",
+ "rh_established": false
+}

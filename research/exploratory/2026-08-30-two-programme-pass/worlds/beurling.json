@@ -1,0 +1,311 @@
+{
+ "arithmetic_class": "Beurling generalized prime systems (synthetic-control class); toy member: elementary rational modification of zeta; imported member: DMV-style continuum system",
+ "critical_line": {
+  "citation": "classical RH: B. Riemann (1859); class-level failure: CITATION-NEEDED: Diamond-Montgomery-Vorhauer (~2006), Beurling primes with large oscillation; Zhang (Beurling PNT results); note Hilberdink and Debruyne-Vindas refinements",
+  "detail": "SPLIT ACROSS THE TWO SUB-RECORDS. TOY (b): the elementary factor (1-2^{-s})/(1-3^{-s}) has all its zeros and poles on Re s = 0 (|2^{-s}| = 1 iff Re s = 0), so in the open strip 0 < Re s < 1 the zeros of zeta_B coincide exactly with those of zeta; the RH analogue for the toy is therefore EQUIVALENT to the classical Riemann Hypothesis \u2014 OPEN. CLASS/IMPORTED (a): the RH analogue FAILS for specific Beurling systems with regular counting (zeros approaching Re s = 1; imported theorem, attribution flagged), so no class-wide critical-line statement is even formulable. Recorded status is OPEN, scoped to the exact object (b) of this record; rh_established=false",
+  "rigor": "OPEN",
+  "status": "OPEN",
+  "witness": "exact input to the toy reduction: the coefficient identity zeta_B = zeta * (1-2^{-s})/(1-3^{-s}) is verified coefficient-wise for all n <= 3^8 in this build (PROVED_HERE); the strip-zero identification is elementary analysis on top of it"
+ },
+ "definition": "Beurling generalized prime system: any multiset P_B of reals > 1 (the 'generalized primes'), with generalized integers the free commutative monoid on P_B and zeta_B(s) = prod_{q in P_B} (1 - q^{-s})^{-1}. Sub-record (a), IMPORTED: a Diamond-Montgomery-Vorhauer style continuum system with regular integer counting whose zeta analogue violates the RH analogue. Sub-record (b), EXACT TOY (synthetic control): P_B = {3,3,5,7,11,13,...} (ordinary primes, 2 replaced by two copies of 3); zeta_B(s) = zeta(s) (1-2^{-s})/(1-3^{-s}) = sum b_n n^{-s} with b_n = 0 for even n and v_3(n)+1 for odd n (proved coefficient-wise here to n = 3^8 = 6561)",
+ "detector_runs": {
+  "description": "core.reconstruct.detect on exact toy local data: p=3 (doubled prime, window 12, weight (3,0), holdout 4 \u2014 degree-2 local factor [1,-2,1], all axioms HOLD including the complete degree-2 purity test); p=2 (deleted prime, window 13 \u2014 degree-0 factor, A4 honestly SKIPPED as vacuous); p=5 (untouched prime, window 12 \u2014 degree-1 factor [1,-1], all axioms HOLD). Plus exact structure checks: union-of-multisets = direct sum of Satake data; formal tensor calculus; vacuous local self-duality",
+  "runs": [
+   {
+    "mode": "coefficients",
+    "prime": 3,
+    "series": "b_{3^k} = k+1 (doubled prime), window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -2, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=1, q^w=1, disc=0"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -2, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     3,
+     0
+    ]
+   },
+   {
+    "mode": "coefficients",
+    "prime": 2,
+    "series": "b_{2^k} = [1,0,0,...] (deleted prime), window 13",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 13 terms; deg Q = 0, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "SKIPPED",
+       "witness": "degree-0 denominator: purity vacuous; virtual part not pure-tested"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 9 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 0,
+      "denominator": "[1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     2,
+     0
+    ]
+   },
+   {
+    "mode": "coefficients",
+    "prime": 5,
+    "series": "b_{5^k} = 1 (untouched prime), window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root 1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     5,
+     0
+    ]
+   }
+  ],
+  "structure_checks": [
+   {
+    "detail": "union of generalized-prime multisets = direct sum of local Satake data: op_direct_sum([1]*12,[1]*12) -> power sums [2]*12 -> Satake [1,-2,1], exactly the certified local factor of the toy at p=3",
+    "name": "union_is_direct_sum",
+    "result": {
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "satake_poly_from_power_sums == [1, -2, 1]"
+    }
+   },
+   {
+    "detail": "[1,-2,1] (x) [1,-1] predicts b_{3^k} = k+1 exactly (A6-style); records only that the exact tensor CALCULUS applies to local data \u2014 no global tensor structure on Beurling systems is claimed",
+    "name": "formal_tensor_on_local_data",
+    "result": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -2, 1]"
+    }
+   },
+   {
+    "detail": "op_dual_satake fixes [1,-2,1] and [1,-1] exactly; all inverse roots equal 1, pure of weight 0 (a^2 == p^0). This locally exact self-duality is VACUOUS: it feeds no global duality/functional equation (see L6)",
+    "name": "vacuous_local_self_duality",
+    "result": {
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "op_dual_satake(sat)==sat; a=1, a^2==p^0"
+    }
+   }
+  ]
+ },
+ "id": "beurling",
+ "ladder": {
+  "L0_WELL_DEFINED": {
+   "citation": "A. Beurling (1937), generalized primes and integers (introduced the class)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "TOY: free commutative monoid on the multiset {3,3,5,7,11,...}; b_n computed exactly as the triple Dirichlet convolution zeta * (1-2^{-s}) * (1-3^{-s})^{-1} and verified for ALL n <= 3^8 = 6561 to equal the closed form: b_n = 0 for even n, b_n = v_3(n)+1 for odd n; e.g. b_1..b_12 = 1,0,2,0,1,0,1,0,3,0,1,0; exact generalized-integer density check: sum_{n<=6561} b_n = 4925 and |4925 - 3N/4| = 17/4 < 10 (N = 6561), matching the exact residue of zeta_B at s = 1: (1-1/2)/(1-1/3) = 3/4 \u2014 the toy's counting function is regular, N_B(x) ~ (3/4) x. 0 <= b_n <= v_3(n)+1 <= log_3(n)+1, so the Dirichlet series converges for Re s > 1. CLASS: Beurling systems are well-defined for any nondecreasing sequence of reals > 1"
+  },
+  "L1_MULTIPLICATIVITY": {
+   "citation": "",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "TOY: b_{mn} = b_m b_n verified exactly for ALL coprime pairs (m,n) with mn <= 6561; b is multiplicative but NOT totally multiplicative: b_9 = 3 != b_3^2 = 4 (exact witness) \u2014 the two indistinguishable copies of 3 break total multiplicativity. The general statement for all coprime m,n follows from the Euler product over the generalized-prime multiset (standard formal-Dirichlet-series argument, each coefficient involves finitely many factors)"
+  },
+  "L2_EULER_PRODUCT": {
+   "citation": "A. Beurling (1937), generalized primes and integers (introduced the class)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "TOY: Euler product identity verified coefficient-wise EXACTLY: the truncated product over the generalized-prime multiset {3,3,5,7,11,...} (all generalized primes <= 6561; 2 deleted, 3 doubled) reproduces b_n for ALL n <= 3^8 = 6561 (Fraction arithmetic). Coefficients at level n depend only on factors with q <= n, so the same computation run at every N proves the formal-Dirichlet-series identity zeta_B = prod_{q in P_B} (1-q^{-s})^{-1}. CLASS: every Beurling system has an Euler product BY CONSTRUCTION \u2014 this world isolates the Euler-product mechanism with no duality attached"
+  },
+  "L3_BOUNDED_DEGREE_RATIONAL": {
+   "citation": "",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "TOY: minimal_rational_form certificates (Berlekamp-Massey, exact, full-window verified): p=2 -> P/Q = 1/1 (degree 0, prime deleted); p=3 -> 1/(1-T)^2 = 1/[1,-2,1] (degree 2, prime doubled); p=5,7 -> 1/(1-T) (degree 1). Grouped by rational prime the degrees are uniformly bounded by 2; grouped by generalized prime q every factor is (1-q^{-s})^{-1} of degree 1. CLASS: local factors of any Beurling system are degree-1 in q^{-s} per generalized prime by construction; bounded degree per RATIONAL prime holds for the toy (bound 2) but is not meaningful for continuum systems (imported row (a)), whose 'primes' are not integers"
+  },
+  "L4_WEIGHT_DUALITY": {
+   "citation": "",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "TOY: local self-duality holds exactly but VACUOUSLY (all inverse roots equal 1, weight 0: see structure_checks.vacuous_local_self_duality). No weight/duality structure coherent with a global functional equation is known for the toy or for any Beurling system; nonexistence is not proved, so the cell is OPEN, not FAILS"
+  },
+  "L5_CONDUCTOR_GAMMA_ROOT": {
+   "citation": "",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "no canonical conductor, gamma factor, or root number is known for any Beurling system. TOY: the elementary factor (1-2^{-s})/(1-3^{-s}) has zeros and poles on Re s = 0 in periodic progressions (2 pi i k / log 2, 2 pi i k / log 3); no gamma-factor completion producing a self-dual xi is known to us"
+  },
+  "L6_CONTINUATION_FE": {
+   "citation": "continuation of zeta: B. Riemann (1859); class regularity/continuation: CITATION-NEEDED: Diamond-Montgomery-Vorhauer (~2006), Beurling primes with large oscillation; Zhang (Beurling PNT results); note Hilberdink and Debruyne-Vindas refinements",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "SPLIT. (i) TOY continuation HOLDS: the coefficient identity zeta_B = zeta * (1-2^{-s})/(1-3^{-s}) is proved here exactly (it is the definition b = u*f*g plus the Euler-product verification), and the right side continues meromorphically to C since zeta does (imported: Riemann 1859); the elementary factor only adds zeros/poles on Re s = 0. (ii) FUNCTIONAL EQUATION: none is known for the toy or for ANY Beurling system \u2014 and nonexistence is unproved, so the cell is OPEN, not FAILS. (iii) CLASS: for general Beurling systems even continuation beyond the convergence abscissa is unavailable without regularity hypotheses on the counting function"
+  },
+  "L7_TWIST_TENSOR_COMPAT": {
+   "citation": "",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "no canonical twist or tensor theory exists for Beurling systems (no characters, no Rankin-Selberg). Exact structure found: the class carries a DIRECT-SUM monoidal operation (union of generalized-prime multisets = product of zetas), verified exactly at p=3 (structure_checks.union_is_direct_sum); the formal tensor calculus applies to the toy's local data (structure_checks.formal_tensor_on_local_data, A6-style HOLDS) but carries no known global meaning"
+  },
+  "L8_REALIZATION": {
+   "citation": "CITATION-NEEDED: Diamond-Montgomery-Vorhauer (~2006), Beurling primes with large oscillation; Zhang (Beurling PNT results); note Hilberdink and Debruyne-Vindas refinements",
+   "rigor": "SYNTHETIC_CONTROL",
+   "status": "HOLDS",
+   "witness": "TOY: combinatorial realization BY CONSTRUCTION \u2014 the free commutative monoid on {3,3,5,7,11,...} with the size homomorphism into (N, *); this world is a deliberate synthetic control. IMPORTED row (a): the DMV-style system is realized as a continuum measure (prime-counting measure chosen by construction). No automorphic, motivic, spectral, or dynamical realization is known for either \u2014 that ABSENCE is the point of the row"
+  },
+  "L9_EXPLICIT_FORMULA_POSITIVITY": {
+   "citation": "CITATION-NEEDED: Diamond-Montgomery-Vorhauer (~2006), Beurling primes with large oscillation; Zhang (Beurling PNT results); note Hilberdink and Debruyne-Vindas refinements",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "FAILS",
+   "witness": "CLASS-LEVEL FAILS (imported row (a)): there exists a Beurling generalized prime system whose integer counting function is regular enough to yield PNT-type asymptotics (with de la Vallee Poussin-shape error), while its zeta analogue has zeros violating the RH analogue (zeros approaching Re s = 1); hence NO explicit-formula positivity principle can hold uniformly over the Beurling class \u2014 Euler product + regular counting do NOT force positivity. Stated conservatively; attribution flagged for audit. TOY-LEVEL: open \u2014 equivalent to classical RH via the exact factorization (see critical_line)"
+  }
+ },
+ "mechanisms": {
+  "DUALITY_FE": {
+   "citation": "",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "no Beurling system with a genuine functional equation is known to us \u2014 flagged as a discovery question. The toy inherits meromorphic continuation from zeta but no reflection s -> 1-s; the class was designed to isolate the Euler product mechanism WITHOUT duality (complement of davenport_heilbronn, which has duality without Euler product)"
+  },
+  "EULER_PRODUCT": {
+   "citation": "A. Beurling (1937), generalized primes and integers (introduced the class)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "supplied by the free-monoid construction itself (unique factorization into generalized primes holds BY FIAT in the monoid). TOY: Euler product identity verified coefficient-wise EXACTLY: the truncated product over the generalized-prime multiset {3,3,5,7,11,...} (all generalized primes <= 6561; 2 deleted, 3 doubled) reproduces b_n for ALL n <= 3^8 = 6561 (Fraction arithmetic). Coefficients at level n depend only on factors with q <= n, so the same computation run at every N proves the formal-Dirichlet-series identity zeta_B = prod_{q in P_B} (1-q^{-s})^{-1}"
+  },
+  "FAMILY": {
+   "citation": "A. Beurling (1937), generalized primes and integers (introduced the class); CITATION-NEEDED: Diamond-Montgomery-Vorhauer (~2006), Beurling primes with large oscillation; Zhang (Beurling PNT results); note Hilberdink and Debruyne-Vindas refinements",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "the Beurling class is a genuine continuum family containing ordinary zeta (prime multiset = ordinary primes), the exact toy (this record), and RH-analogue-violating members (imported row (a)). Family membership supplies NO rigidity here \u2014 the family is anti-rigid, which is exactly its value as a control: it shows which mechanisms (Euler product, regular counting) are INSUFFICIENT"
+  },
+  "POSITIVITY_PURITY": {
+   "citation": "CITATION-NEEDED: Diamond-Montgomery-Vorhauer (~2006), Beurling primes with large oscillation; Zhang (Beurling PNT results); note Hilberdink and Debruyne-Vindas refinements",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "no positivity/purity mechanism is known. TOY: local weight-0 purity holds exactly but vacuously (all inverse roots equal 1); this supplies nothing global. CLASS: the imported row (a) shows regular counting + Euler product do not force an RH analogue, so any candidate positivity mechanism must come from structure the class lacks (duality? spectral realization?) \u2014 precisely the missing-mechanism contrast this row contributes to the matrix"
+  },
+  "TENSOR_OPS": {
+   "citation": "",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "only a DIRECT-SUM monoidal structure is present (union of generalized-prime multisets = product of zetas), verified exactly at p=3: op_direct_sum of two trivial rank-1 local data reproduces the certified [1,-2,1]. The formal tensor calculus on local data works exactly (A6-style check HOLDS) but no global tensor/twist structure on Beurling systems is known"
+  },
+  "TRACE_FORMULA": {
+   "citation": "CITATION-NEEDED: Debruyne-Vindas complex Tauberian theorems with applications to Beurling primes (~2016-2018); Diamond-Zhang monograph on Beurling generalized numbers (~2016)",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "no unconditional explicit-formula/trace identity is known for the toy or the class; Tauberian and explicit-formula-style analyses of Beurling zetas exist only under supplementary regularity hypotheses on the counting functions"
+  }
+ },
+ "notes": "ROLE: Euler product WITHOUT duality \u2014 the complement of the davenport_heilbronn row (duality without Euler product). TWO SUB-RECORDS scoped inside cells: (a) IMPORTED continuum system (all such content is IMPORTED_THEOREM with conservative statements and CITATION-NEEDED flags for the boundary audit; nothing about (a) is computed here); (b) EXACT discrete toy, a SYNTHETIC_CONTROL: every claim about it is computed and asserted in beurling_build.py with Fraction arithmetic \u2014 Dirichlet convolution to n = 3^8 = 6561, coefficient-wise Euler product verification over the multiset {3,3,5,7,...}, closed form b_n = [n odd](v_3(n)+1), full coprime multiplicativity check, non-total-multiplicativity witness b_9 = 3 != b_3^2 = 4, certified local factors (degrees 0/2/1 at p = 2/3/5), exact density sum b_n = 4925 vs 3N/4 (residue 3/4), detector runs, and exact direct-sum/tensor/duality structure checks. L6 is OPEN, not FAILS: no functional equation for a Beurling system is known to us (flagged as a discovery question), but nonexistence is unproved. L9 FAILS is scoped to the CLASS via the imported row; the toy's critical-line question is equivalent to classical RH and remains OPEN. No floats were used anywhere in this build. rh_established=false.",
+ "rh_established": false,
+ "sources": [
+  "A. Beurling (1937), on generalized primes and integers (class definition)",
+  "CITATION-NEEDED: H. G. Diamond, H. L. Montgomery, U. M. A. Vorhauer (~2006), Beurling primes with large oscillation",
+  "CITATION-NEEDED: W.-B. Zhang, results on the prime number theorem for Beurling generalized numbers",
+  "CITATION-NEEDED: T. Hilberdink, well-behaved Beurling systems and moments of zeta analogues",
+  "CITATION-NEEDED: G. Debruyne, J. Vindas, complex Tauberian theorems with applications to Beurling generalized primes (~2016-2018)",
+  "CITATION-NEEDED: H. G. Diamond, W.-B. Zhang, monograph on Beurling generalized numbers (AMS, ~2016)"
+ ],
+ "title": "Beurling generalized prime systems"
+}

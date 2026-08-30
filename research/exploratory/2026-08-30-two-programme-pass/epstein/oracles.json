@@ -1,0 +1,150 @@
+{
+ "meta": {
+  "arithmetic_class": "NON_DIRECTED_HIGH_PRECISION",
+  "dps": 40,
+  "mpmath_version": "1.3.0",
+  "rh_established": false,
+  "truncation": "incomplete-gamma lattice sum truncated at Q_z(m,n) <= Xmax=39.5; stated tail bound 20*(pi*X+10)*exp(-pi*X) < 1e-50 absolute (valid for |Re s - 1/2| <= 6.5, |Im s| <= 40); on-line scans dt=0.05 with two nested dt/10 dip rescans; box winding adaptive with |dphi| < pi/2; zero refinement to |interval| <= 1e-13*max(1,t)"
+ },
+ "oracles": {
+  "O0_build_assertions": {
+   "engine_crosscheck_rel_incgamma_vs_fourier": 1.5281481385338163e-37,
+   "enumerator_count_Qle10_at_i": 36,
+   "note_r2_table": "brute-force double-loop oracle gives sum_{n<=10} r2(n) = 36 with r2(1..10)=4,4,0,4,8,0,0,4,4,8; the value r2(10)=4 quoted in the task spec is a typo (10=1+9 has 8 representations); the spec designates the brute-force loop as the oracle and it is used",
+   "pass": true,
+   "theta_transform_maxdiff": 1.7516230804060213e-46
+  },
+  "O1_direct_sum_z_i": {
+   "Z_direct": [
+    5.410485310338295,
+    -1.1360386635756359
+   ],
+   "Z_from_Lambda": [
+    5.410485310338295,
+    -1.1360386635756359
+   ],
+   "averaging_spread": 5.052658936542032e-15,
+   "digits_agree": 17.7438363579414,
+   "pass": true,
+   "s": [
+    2.0,
+    0.5
+   ],
+   "seconds": 5.9,
+   "tail_scheme": "r2 divisor sieve to N=R^2=4e6; head n<=5e4 in mpmath dps 35; mid part in exactly-rounded double sums (math.fsum); tail s*pi*N^{1-s}/(s-1) - (A(N)+1)*N^{-s} with EXACT A(N) (the +1 removes the mean -1 of P = E_gauss - 1 from the excluded origin), triangular(Cesaro)-averaged over 257 truncation points N-256000..N step 1000",
+   "threshold_digits": 15
+  },
+  "O2_factorization_z_i": {
+   "beta_hurwitz_vs_nsum_digits": 46.06650160569813,
+   "pass": true,
+   "points": [
+    {
+     "digits_agree": 45.26745159739973,
+     "s": [
+      0.7,
+      3.0
+     ]
+    },
+    {
+     "digits_agree": 39.38189558679425,
+     "s": [
+      0.5,
+      14.0
+     ]
+    }
+   ],
+   "threshold_digits": 20
+  },
+  "O3_functional_equation": {
+   "abs_diff_fourier_engine": {
+    "z=0.13+1.07i": 0.0,
+    "z=i": 5.605193857299268e-45
+   },
+   "max_abs_diff_incgamma_engine": {
+    "z=0.13+1.07i": 0.0,
+    "z=i": 0.0
+   },
+   "note": "incomplete-gamma representation makes the FE manifest term-by-term, hence exact 0.0 diffs; the Fourier-engine diffs below are the non-manifest check",
+   "pass": true,
+   "sample_points_sigma_t": [
+    [
+     0.3,
+     2.3
+    ],
+    [
+     0.62,
+     5.9
+    ],
+    [
+     0.75,
+     8.1
+    ],
+    [
+     1.2,
+     11.7
+    ],
+    [
+     1.31,
+     14.2
+    ],
+    [
+     0.41,
+     17.3
+    ],
+    [
+     0.87,
+     20.9
+    ],
+    [
+     1.05,
+     24.6
+    ],
+    [
+     0.55,
+     27.2
+    ],
+    [
+     0.95,
+     29.5
+    ]
+   ],
+   "threshold": 1e-25
+  },
+  "O4_reality_on_line": {
+   "abs_Im_Lambda_fourier": {
+    "13.7": 4.293569098216663e-50,
+    "22.3": 1.3668334866644577e-56,
+    "5.0": 6.272236495025877e-49
+   },
+   "abs_Im_Lambda_incgamma": {
+    "13.7": 0.0,
+    "22.3": 0.0,
+    "5.0": 0.0
+   },
+   "note": "conjugate-pair cancellation is bitwise-exact in the incomplete-gamma engine; the Fourier-engine values are the non-manifest reality check",
+   "pass": true,
+   "threshold": 1e-25,
+   "z": [
+    0.13,
+    1.07
+   ]
+  },
+  "O5_arithmetic_zero_match": {
+   "beta_first_zero_independent": 6.020948904697596,
+   "match_beta": 8.881784197001252e-16,
+   "match_zeta": 0.0,
+   "pass": true,
+   "threshold": 1e-06,
+   "zeros_found_t_in_0_20": [
+    6.020948904697597,
+    10.243770304166555,
+    12.988098012312424,
+    14.134725141734695,
+    16.342607104587223,
+    18.291993196123535
+   ],
+   "zeta_first_zero_independent": 14.134725141734695
+  },
+  "all_pass": true
+ }
+}

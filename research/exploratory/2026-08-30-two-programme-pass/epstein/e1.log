@@ -1,0 +1,17 @@
+[18:59:14] pool: 4 workers, dps=40, Xmax=39.5
+[18:59:14] wrote SCOPE.md
+[18:59:14] E1: oracle suite
+[18:59:14] O0: selftest (enumerator, theta transform, engine cross-check)
+[18:59:16] O1: direct lattice sum at z=i (radius 2000, sieve + exact-A(N) tail, averaged)
+[18:59:22] O1: 17.7 digits agreement (threshold 15)
+[18:59:22] O2: factorization Z_i = 4 zeta beta
+[18:59:22] O2: [45.3, 39.4] digits (threshold 20)
+[18:59:22] O3: functional equation symmetry
+[18:59:32] O3: incgamma diffs {'z=i': 0.0, 'z=0.13+1.07i': 0.0} (manifest); fourier diffs {'z=i': 5.605193857299268e-45, 'z=0.13+1.07i': 0.0}
+[18:59:32] O4: reality on the critical line
+[18:59:34] O4: |Im Lambda| incgamma {'5.0': 0.0, '13.7': 0.0, '22.3': 0.0}; fourier {'5.0': 6.272236495025877e-49, '13.7': 4.293569098216663e-50, '22.3': 1.3668334866644577e-56}
+[18:59:34] O5: z=i low zeros vs independent beta and zeta zeros
+[18:59:46] O5: beta1=6.0209489047 matched to 8.88e-16; zeta1=14.1347251417 matched to 0.00e+00
+[18:59:46] wrote oracles.json
+[18:59:46] wrote ORACLES.md
+[18:59:46] done in 32s

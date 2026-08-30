@@ -1,0 +1,102 @@
+{
+ "atlas": {
+  "hexagonal": {
+   "box_info": {
+    "delta_used": 0.2,
+    "n_evals": 169,
+    "winding": 11.000000000000002
+   },
+   "disc": 0,
+   "labels": [
+    "L_chi_-3",
+    "L_chi_-3",
+    "zeta",
+    "L_chi_-3",
+    "L_chi_-3",
+    "L_chi_-3",
+    "zeta",
+    "L_chi_-3",
+    "zeta",
+    "L_chi_-3",
+    "L_chi_-3"
+   ],
+   "n_box": 11,
+   "n_line": 11,
+   "unresolved_dips": [],
+   "z": [
+    0.5,
+    0.8660254037844386
+   ],
+   "zeros_t": [
+    8.039737155681467,
+    11.249206207772936,
+    14.134725141734695,
+    15.704619176721625,
+    18.261997495693127,
+    20.455770807742493,
+    21.022039638771552,
+    24.059414856493454,
+    25.01085758014569,
+    26.577868735774587,
+    28.218164506233386
+   ]
+  },
+  "square_z_i": {
+   "box_info": {
+    "delta_used": 0.2,
+    "n_evals": 169,
+    "winding": 12.999999999999998
+   },
+   "disc": 0,
+   "labels": [
+    "beta_chi_-4",
+    "beta_chi_-4",
+    "beta_chi_-4",
+    "zeta",
+    "beta_chi_-4",
+    "beta_chi_-4",
+    "zeta",
+    "beta_chi_-4",
+    "beta_chi_-4",
+    "zeta",
+    "beta_chi_-4",
+    "beta_chi_-4",
+    "beta_chi_-4"
+   ],
+   "n_box": 13,
+   "n_line": 13,
+   "unresolved_dips": [],
+   "z": [
+    0.0,
+    1.0
+   ],
+   "zeros_t": [
+    6.020948904697597,
+    10.243770304166555,
+    12.988098012312424,
+    14.134725141734695,
+    16.342607104587223,
+    18.291993196123535,
+    21.022039638771556,
+    21.45061134398346,
+    23.27837652045953,
+    25.01085758014569,
+    25.728756425088726,
+    28.359634343025327,
+    29.65638401459315
+   ]
+  }
+ },
+ "meta": {
+  "arithmetic_class": "NON_DIRECTED_HIGH_PRECISION",
+  "delta": 0.2,
+  "dps": 40,
+  "mpmath_version": "1.3.0",
+  "rh_established": false,
+  "t_window": [
+   0.05,
+   30.0
+  ],
+  "truncation": "incomplete-gamma lattice sum truncated at Q_z(m,n) <= Xmax=39.5; stated tail bound 20*(pi*X+10)*exp(-pi*X) < 1e-50 absolute (valid for |Re s - 1/2| <= 6.5, |Im s| <= 40); on-line scans dt=0.05 with two nested dt/10 dip rescans; box winding adaptive with |dphi| < pi/2; zero refinement to |interval| <= 1e-13*max(1,t)"
+ }
+}
