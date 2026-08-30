@@ -2,6 +2,12 @@
 
 Status: **proposed exact local mathematics; external novelty unreviewed**.
 
+For the current eleven-packet result and the next global completion gates,
+start with [CONTINUATION_RESULTS.md](CONTINUATION_RESULTS.md).
+The packet introductions below and the wave-2 research map record the
+earlier six-packet stage; their open-work lists are superseded by that
+continuation checkpoint.
+
 This directory contains bounded theorem and obstruction packets for issue
 [#764](https://github.com/gfreund123/riemann/issues/764). It reuses the atlas
 normalization and provenance conventions but does not extend the atlas into a
