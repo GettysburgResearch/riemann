@@ -1,0 +1,65 @@
+{
+  "schema": "riemann.atlas.generalized.rational_rotation_branch_census.sources.v1",
+  "programme_issue": {
+    "number": 764,
+    "url": "https://github.com/gfreund123/riemann/issues/764"
+  },
+  "base_commit": "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+  "normalization": "determinant-one tempered recurrence u_0=1, u_1=2*cos(theta), u_(r+2)=2*cos(theta)*u_(r+1)-u_r with theta/pi=a/b in lowest terms",
+  "sources": [
+    {
+      "path": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+      "role": "adjacent irrational-rotation normalization, rationality convention, and dense-orbit boundary",
+      "file_sha256_lf_normalized": "213efe84034449a7ece87b273653bc683c11b28ea4f62e599e3f2b0bbac7c8a2",
+      "git_blob": "8f27df80a4983b4d393ee3a2477a744afaeb1d3a"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.py",
+      "role": "reused canonical hashing, exact Laurent conventions, and fail-closed Git-object verification",
+      "file_sha256_lf_normalized": "e6e1bf91db5c91f7a5320ecfb5ec40cb1f37ad91e0ea15a3918c44e5b39ff3c7",
+      "git_blob": "aee0fd3ed26dbffb036440390801278c6426ea08"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.json",
+      "role": "adjacent exact tempered absolute-power fixture",
+      "schema": "riemann.atlas.generalized.irrational_rotation_absolute_power_rationality.v1",
+      "payload_sha256": "6d2e2dbac27472638678dd692324dfa17a8299b3eb54120745150cc6b6d15698",
+      "file_sha256_lf_normalized": "dc12598d440f4bf9a8a105a461854ef874b820500c36de7588a57363e1ae17bc",
+      "git_blob": "d94b75287493134bdc0a9ca53dda1f81b61912cf"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "role": "inherited source and nearby-prior-art boundary",
+      "file_sha256_lf_normalized": "4f070750c83d04ed1ed74a5ddcdd42c6b6ce0746a548ce11a3086b6fc37da66b",
+      "git_blob": "3adf8f211fee7bd51e811520b31785af38ccd7c0"
+    }
+  ],
+  "external_references": [
+    {
+      "authors": "Oliver Knill and John Lesieutre",
+      "title": "Analytic continuation of Dirichlet series with almost periodic coefficients",
+      "journal": "Complex Analysis and Operator Theory 5 (2011), 237-255",
+      "doi": "10.1007/s11785-010-0064-7",
+      "url": "https://arxiv.org/abs/0811.1362",
+      "boundary": "nearby periodic and irrational rotation coefficient series; the paper explicitly decomposes rational rotations into finite residue classes, but it does not state this packet's local recurrence zero, branch, minimal-period, or grouped integer-power spectrum census"
+    },
+    {
+      "authors": "William Kahan",
+      "title": "Branch Cuts for Complex Elementary Functions, or Much Ado About Nothing's Sign Bit",
+      "url": "https://people.freebsd.org/~das/kahan86branch.pdf",
+      "boundary": "general branch-cut and principal-value background; not a source for the recurrence or rationality theorems in this packet"
+    }
+  ],
+  "scope_firewall": {
+    "one_unramified_determinant_one_local_recurrence": true,
+    "tempered_rational_rotation_only": true,
+    "absolute_and_fixed_real_axis_log_branches_only": true,
+    "zero_exponent_requires_an_explicit_zero_value": true,
+    "no_uniform_local_degree_over_unbounded_denominators": true,
+    "no_global_euler_product_constructed": true,
+    "no_completion_or_functional_equation_claim": true,
+    "no_automorphy_motive_or_categorical_no_go": true,
+    "no_RH_GRH_or_zero_distribution_consequence": true,
+    "external_novelty_unreviewed": true
+  }
+}

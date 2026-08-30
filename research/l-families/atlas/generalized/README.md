@@ -28,3 +28,14 @@ absolute powers rather than complex powers, excludes rational rotations,
 and makes no global or novelty claim. Its inherited inputs and nearby
 almost-periodic-series prior art are recorded in the colocated
 [sources manifest](irrational_rotation_absolute_power_rationality.sources.json).
+
+The third packet is
+[RATIONAL_ROTATION_BRANCH_CENSUS.md](RATIONAL_ROTATION_BRANCH_CENSUS.md).
+It closes the complementary rational tempered chamber: exact zero classes,
+minimal periods for absolute and fixed-branch complex powers, every
+\(\lambda=0\) zero-value convention, and the root-of-unity collision spectrum
+for positive integer powers.  It also separates the scalar observable from
+its finite-dimensional symmetric-power state-space parent.  Pointwise
+periodicity is not a uniform local-degree theorem as the angle denominator
+grows.  The exact inherited files and nearby literature are recorded in its
+colocated [sources manifest](rational_rotation_branch_census.sources.json).
