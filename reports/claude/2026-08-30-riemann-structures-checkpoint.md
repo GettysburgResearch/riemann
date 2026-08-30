@@ -95,7 +95,6 @@ observation, not as evidence.
    wrong-gamma obstruction lemma's method.
 5. Measure-valued mechanism cells (from O-108506) — joint schema revision
    with #764.
-```
 
 ## Continuation pass (2026-08-31)
 

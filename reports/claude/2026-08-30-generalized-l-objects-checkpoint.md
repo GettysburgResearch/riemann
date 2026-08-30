@@ -111,7 +111,6 @@ exact instance certificates.
    non-jet zero geometry or extend the collapse.
 7. Beurling system with a genuine functional equation: existence/
    impossibility (shared with #763; Hilberdink-Lapidus anchor).
-```
 
 ## Continuation pass (2026-08-31)
 

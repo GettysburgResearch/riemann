@@ -109,3 +109,27 @@ recommended next ambitious pass for #763; the corrected rank-4 defect law
 and the S1/S2/S3 stratum classification are the matching next pass
 for #764.
 ```
+
+## Continuation pass addendum (2026-08-31)
+
+The second pass completed every leftover and landed three theorem-level
+results; the deposits that change the picture:
+
+- **T-108507 (cube-defect bridge):** the m=3 obstruction IS the L-datum of
+  the trace-doubled deformation — deformations obstruct each other. This
+  converts #764's question 9 into an exact equivalence for the cube
+  transform and unifies three pass-1 facts into one.
+- **T-108508:** the square-defect closed forms are now PROVED through
+  rank 5 (resolving O-108505's open problem at the posed ranks), with the
+  correction layers exposed as h-polynomials against deep elementaries
+  and the top-sign law `(-1)^{(d-1)(d-2)/2} det^{d-1}`.
+- **L-108005 (mechanism dictionary):** graphs and curves share one exact
+  bound⟷line dictionary (certified one-for-one on the corpus by resultant
+  census); the number-field mechanism question is reduced to naming the
+  supplier of the bound.
+- **O-108004:** the detector on repo-native observables — label
+  bookkeeping read off the native duplicate-67 source; codex family trace
+  laws certified as Tate-monomial virtual objects. Corpus 13/13.
+- **Epstein lab completed:** path-A event resolved as a genuine off-line
+  pair (t in (24,30) at x=0.35 with window headroom); E4 four-direction
+  locus grid deposited; all seven adversarial minors applied.
