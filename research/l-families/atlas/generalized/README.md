@@ -1,8 +1,9 @@
 # Generalized L-object Gate-0 packets
 
-Status: **proposed exact local mathematics; external novelty unreviewed**.
+Status: **reviewed local/global obstruction packets and a classical signed
+parent; no new global L-function or external novelty claim**.
 
-For the current eleven-packet result and the next global completion gates,
+For the current fifteen-packet result and the remaining global-object gates,
 start with [CONTINUATION_RESULTS.md](CONTINUATION_RESULTS.md).
 The packet introductions below and the wave-2 research map record the
 earlier six-packet stage; their open-work lists are superseded by that
