@@ -1,0 +1,28 @@
+{
+  "base_branch": "research/gpt56-pro/107100-xi-reverse-rolle-execution",
+  "base_commit": "cdad9e88097db4925c3bbbf731f7d1ae1a9e6c57",
+  "base_pr": 767,
+  "base_tree": "0502b78e480cb18bd295cc9bb368cd296c6d62a8",
+  "claims": [
+    "L-107200",
+    "L-107201",
+    "L-107202",
+    "R-107200",
+    "T-107200"
+  ],
+  "external_scientific_source": {
+    "commit": "a30276a5be049749ebb2147f30f000dd5659298b",
+    "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+    "pr": 765,
+    "use": "literal standard Xi-kernel normalization and first-theta-orbit two-sided bounds"
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t107200.source-lock.v1",
+  "status": {
+    "density_one_established": false,
+    "ninety_percent_established": false,
+    "rh_established": false,
+    "xisaddle107110_proved": true,
+    "xiscreen107200_proved": false
+  }
+}

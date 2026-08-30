@@ -1,0 +1,36 @@
+{
+  "cauchy_layer_identity_checked": true,
+  "classification": "PASS_T107200_XI_CAUCHY_LAYER_AND_SADDLE",
+  "curvature_transport_checked": true,
+  "density_one_established": false,
+  "exact_checks": 34,
+  "ninety_percent_established": false,
+  "numerical_checks": 21,
+  "proof_object_sha256": "0bd37cd58b7dd348653920b3159db655b695e0dcf98caf56a6358e01c5c5def6",
+  "rh_established": false,
+  "saddle_rows": [
+    {
+      "a2": 0.00013420688758438337,
+      "k": 10000,
+      "w": 3.1182903352282425
+    },
+    {
+      "a2": 1.841022027378119e-05,
+      "k": 100000,
+      "w": 4.128642727355659
+    },
+    {
+      "a2": 2.355816183498988e-06,
+      "k": 1000000,
+      "w": 5.167622056618505
+    },
+    {
+      "a2": 2.881459136967731e-07,
+      "k": 10000000,
+      "w": 6.225762713516641
+    }
+  ],
+  "schema": "riemann.x107200.cauchy-layer-saddle.v1",
+  "xi_saddle_analytic_proof_replayed": false,
+  "xiscreen107200_proved": false
+}
