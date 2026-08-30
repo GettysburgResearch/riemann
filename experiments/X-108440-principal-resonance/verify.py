@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-from fractions import Fraction
 import hashlib
 import json
 from pathlib import Path
 
-CLASSIFICATION = "PASS_T108440_DOUBLE_QUADRATIC_PRINCIPAL_ALIAS"
+CLASSIFICATION = "PASS_T108440_DOUBLE_QUADRATIC_PHYSICAL_ALIAS"
 
 
 def legendre(a, p):
@@ -16,7 +15,6 @@ def legendre(a, p):
 def run():
     primes = (5, 13, 17, 29, 37, 41)
     square_checks = 0
-    ratio_checks = 0
 
     for ell in primes:
         for rho in primes:
@@ -31,30 +29,18 @@ def run():
                     assert legendre(P * c * c, rho) == legendre(P, rho)
                     square_checks += 1
 
-            w_ell = Fraction(2 * ell, ell - 1)
-            w_rho = Fraction(2 * rho, rho - 1)
-            c_ell = Fraction(ell + 1, ell - 1)
-            c_rho = Fraction(rho + 1, rho - 1)
-            assert (w_ell * w_rho) / (c_ell * c_rho) == Fraction(
-                4 * ell * rho, (ell + 1) * (rho + 1)
-            )
-            ratio_checks += 1
-
     assert square_checks == 40960
-    assert ratio_checks == 30
-    exact_checks = square_checks + ratio_checks
-    assert exact_checks == 40990
 
     payload = {
-        "schema": "riemann.x108440.double-quadratic-principal-alias.v1",
+        "schema": "riemann.x108440.double-quadratic-principal-alias.v2",
         "classification": CLASSIFICATION,
-        "exact_checks": exact_checks,
+        "exact_checks": square_checks,
         "square_pullback_checks": square_checks,
-        "gauss_weight_ratio_checks": ratio_checks,
-        "double_quadratic_principal_alias_proved": True,
+        "double_quadratic_physical_alias_proved": True,
+        "legacy_gauss_weight_identification_claimed": False,
         "geometric_cancellation_of_double_row_refuted": True,
         "mixed_resonance_bound_proved": False,
-        "principal_bound_proved": False,
+        "principal_adapter_proved": False,
         "rh_established": False,
         "grh_established": False,
     }
