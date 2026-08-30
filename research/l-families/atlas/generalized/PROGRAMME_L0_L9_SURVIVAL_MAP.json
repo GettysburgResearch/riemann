@@ -1,0 +1,416 @@
+{
+  "schema": "riemann.glo764.programme_survival_map.v1",
+  "programme": "https://github.com/gfreund123/riemann/issues/764",
+  "kind": "human-authored source-pinned comparison map, not a computational certificate",
+  "status_semantics": {
+    "qualified": "Read the qualification and native domain: a partial or negative theorem is recorded. This never means the full arithmetic ladder level survived.",
+    "not_claimed": "The whole named level is not established; this does not assert impossibility.",
+    "not_applicable": "The native object has no corresponding arithmetic input at this level."
+  },
+  "arithmetic_firewall": "No row constructs a prime-indexed global L-function. Finite graph dynamics, matrix coefficients, virtual representation parents, scalar twist weights, and commutator positivity do not establish arithmetic L4-L9.",
+  "default_scope_for_not_claimed": "No claim to all parts of this programme level. In particular there is no canonical conductor/gamma/root-number package or arithmetic continuation/functional equation.",
+  "level_definitions": {
+    "L0": "well-defined and branch-independent",
+    "L1": "coefficient or local multiplicativity",
+    "L2": "Euler product",
+    "L3": "uniform bounded-degree rational local factors",
+    "L4": "weight, determinant, duality and ramified-prime coherence",
+    "L5": "canonical conductor, gamma factors and root number",
+    "L6": "analytic continuation and functional equation",
+    "L7": "compatibility with twists, tensors, induction and contragredients",
+    "L8": "automorphic, motivic, spectral, dynamical or categorical realization",
+    "L9": "principled explicit formula, positivity or zero theory"
+  },
+  "sources": {
+    "core": {
+      "source_sha": "8834fdc7a0dfe15f6bb95eefe0729cb77c93c807",
+      "proof_path": "research/l-families/atlas/generalized/MULTIPLICATIVE_RECURRENCE_AND_MIXED_PARENTS.md",
+      "proof_url": "https://github.com/gfreund123/riemann/blob/8834fdc7a0dfe15f6bb95eefe0729cb77c93c807/research/l-families/atlas/generalized/MULTIPLICATIVE_RECURRENCE_AND_MIXED_PARENTS.md",
+      "review_path": "research/l-families/atlas/generalized/REVIEW_8834fdc7.md"
+    },
+    "probe": {
+      "source_sha": "ee7318869424ee7c333a03b87992f33e12072bf9",
+      "proof_path": "research/l-families/atlas/generalized/CIRCLE_PROBE_GEOMETRY.md",
+      "proof_url": "https://github.com/gfreund123/riemann/blob/ee7318869424ee7c333a03b87992f33e12072bf9/research/l-families/atlas/generalized/CIRCLE_PROBE_GEOMETRY.md",
+      "review_path": "research/l-families/atlas/generalized/REVIEW_ee731886.md"
+    },
+    "fixed_graph": {
+      "source_sha": "26314df4e5ed9a5c16b7da61e155a48d325789cc",
+      "proof_path": "research/exploratory/fixed-label-cycle-response/MATHEMATICS.md",
+      "proof_url": "https://github.com/gfreund123/riemann/blob/26314df4e5ed9a5c16b7da61e155a48d325789cc/research/exploratory/fixed-label-cycle-response/MATHEMATICS.md",
+      "review_path": "research/exploratory/fixed-label-cycle-response/REVIEW_26314df4.md"
+    },
+    "based_holonomy": {
+      "source_sha": "e7fc8b0af2c42ce43384543972df2ed44f343300",
+      "proof_path": "research/exploratory/marked-holonomy-response/README.md",
+      "proof_url": "https://github.com/gfreund123/riemann/blob/e7fc8b0af2c42ce43384543972df2ed44f343300/research/exploratory/marked-holonomy-response/README.md",
+      "review_path": "research/exploratory/marked-holonomy-response/REVIEW_E7FC8B0A.md"
+    },
+    "positive_holonomy": {
+      "source_sha": "6b4f0f4a53bc9ff5bc6b84a2b6e3f603a04f2336",
+      "proof_path": "research/exploratory/marked-holonomy-response/POSITIVE_DEFECT_AND_CRITICAL_CIRCLE.md",
+      "proof_url": "https://github.com/gfreund123/riemann/blob/6b4f0f4a53bc9ff5bc6b84a2b6e3f603a04f2336/research/exploratory/marked-holonomy-response/POSITIVE_DEFECT_AND_CRITICAL_CIRCLE.md",
+      "review_path": "research/exploratory/marked-holonomy-response/REVIEW_6B4F0F4A.md"
+    }
+  },
+  "lanes": [
+    "multiplicative_recurrence_and_mixed_parents",
+    "circle_probe_geometry",
+    "fixed_label_cycle_response",
+    "marked_holonomy_response"
+  ],
+  "objects": [
+    {
+      "id": "nondegenerate_polynomial_transform",
+      "lane": "multiplicative_recurrence_and_mixed_parents",
+      "domain": "Phi:C->C continuous, multiplicative, Phi(1)=1; irrational probe c+exp(ir theta), c>0 and c!=1. Exactly Phi=z^m conjugate(z)^n, m,n>=0.",
+      "proof_sources": [
+        "core",
+        "probe"
+      ],
+      "levels": {
+        "L0": {
+          "status": "qualified",
+          "qualification": "The map is globally single valued; m=n=0 is constant one including at zero."
+        },
+        "L1": {
+          "status": "qualified",
+          "qualification": "Scalar multiplicativity is exact and preserves any supplied multiplicative coefficient law. No such arithmetic family is supplied here."
+        },
+        "L2": {
+          "status": "not_claimed"
+        },
+        "L3": {
+          "status": "qualified",
+          "qualification": "Every recurrent sequence remains recurrent; the probe order is m+n+1. Generic local order for d distinct noncolliding complex roots is binom(d+m-1,m)binom(d+n-1,n). This is not a uniform bound across unbounded input ranks or transform degrees."
+        },
+        "L4": {
+          "status": "qualified",
+          "qualification": "Only scalar dilation degree m+n and unitary twist weight m-n are proved; determinant, duality and ramified-prime coherence as an arithmetic package are not established."
+        },
+        "L5": {
+          "status": "not_claimed"
+        },
+        "L6": {
+          "status": "not_claimed"
+        },
+        "L7": {
+          "status": "not_claimed"
+        },
+        "L8": {
+          "status": "qualified",
+          "qualification": "Finite state-space/matrix-coefficient recovery is available locally; its output vectors may depend on the matrix. This is not a universal determinant parent or an automorphic/motivic realization."
+        },
+        "L9": {
+          "status": "not_claimed"
+        }
+      },
+      "theorems": [
+        "GLO764.MULREC.SHIFTED_CIRCLE_RIGIDITY",
+        "GLO764.MULREC.GENERIC_BIDEGREE_ORDER",
+        "GLO764.MULREC.DISCRETE_DEFORMATION_MODULI"
+      ]
+    },
+    {
+      "id": "centered_probe",
+      "lane": "circle_probe_geometry",
+      "domain": "Phi(re^{it})=r^a exp(ikt), Re(a)>0, k integral, Phi(0)=0; or constant one. Probe c=0.",
+      "proof_sources": [
+        "probe"
+      ],
+      "levels": {
+        "L0": {
+          "status": "qualified",
+          "qualification": "These are exactly globally continuous normalized multiplicative maps, with the constant-one exception retaining value one at zero."
+        },
+        "L1": {
+          "status": "qualified",
+          "qualification": "Scalar multiplicativity is exact."
+        },
+        "L2": {
+          "status": "not_claimed"
+        },
+        "L3": {
+          "status": "qualified",
+          "qualification": "The centered probe always has order one because it sees only exp(ikr theta). This does not imply preservation of arbitrary recurrences; nonpolynomial maps fail every positive nondegenerate probe."
+        },
+        "L4": {
+          "status": "not_claimed"
+        },
+        "L5": {
+          "status": "not_claimed"
+        },
+        "L6": {
+          "status": "not_claimed"
+        },
+        "L7": {
+          "status": "not_claimed"
+        },
+        "L8": {
+          "status": "not_claimed"
+        },
+        "L9": {
+          "status": "not_claimed"
+        }
+      },
+      "first_exact_obstruction": {
+        "level": "L3",
+        "scope": "universal recurrence preservation",
+        "condition": "Phi is nonpolynomial",
+        "outcome": "fails despite the centered order-one false positive"
+      }
+    },
+    {
+      "id": "touching_probe",
+      "lane": "circle_probe_geometry",
+      "domain": "Probe c=1. Besides constant one, accepted maps have a=N in Z_{>0}, k=N modulo2, without a bound on |k|.",
+      "proof_sources": [
+        "probe"
+      ],
+      "levels": {
+        "L0": {
+          "status": "qualified",
+          "qualification": "The map is single valued with its continuous zero extension, even when the formal exponents (N+k)/2 or (N-k)/2 are negative."
+        },
+        "L1": {
+          "status": "qualified",
+          "qualification": "Scalar multiplicativity is exact."
+        },
+        "L2": {
+          "status": "not_claimed"
+        },
+        "L3": {
+          "status": "qualified",
+          "qualification": "The touching probe has order N+1. At fixed N it accepts infinitely many angular weights. If |k|>N, every positive c!=1 probe is nonrecurrent; this obstruction is proved by residues, not finite samples."
+        },
+        "L4": {
+          "status": "qualified",
+          "qualification": "Only the scalar radial degree N and angular weight k are known. Connected pointwise-continuous families passing this probe are constant; no arbitrary-parameter local-discreteness claim is made."
+        },
+        "L5": {
+          "status": "not_claimed"
+        },
+        "L6": {
+          "status": "not_claimed"
+        },
+        "L7": {
+          "status": "not_claimed"
+        },
+        "L8": {
+          "status": "not_claimed"
+        },
+        "L9": {
+          "status": "not_claimed"
+        }
+      },
+      "first_exact_obstruction": {
+        "level": "L3",
+        "scope": "universal recurrence preservation",
+        "condition": "|k|>N",
+        "outcome": "fails away from the touching/centered geometries"
+      }
+    },
+    {
+      "id": "mixed_rank_finite_parent_accepted",
+      "lane": "multiplicative_recurrence_and_mixed_parents",
+      "domain": "F(T)=sum_r product_i Tr(Sym^r A_i) T^r. After deleting rank-one factors, ranks are empty, a single rank, or (2,2).",
+      "proof_sources": [
+        "core"
+      ],
+      "levels": {
+        "L0": {
+          "status": "qualified",
+          "qualification": "The coefficient series and all-matrix representation identities are native and branch independent."
+        },
+        "L1": {
+          "status": "not_applicable"
+        },
+        "L2": {
+          "status": "not_claimed"
+        },
+        "L3": {
+          "status": "qualified",
+          "qualification": "The local coefficient series is rational. Ranks and construction degrees are fixed; no uniform arithmetic prime family is specified."
+        },
+        "L4": {
+          "status": "not_claimed"
+        },
+        "L5": {
+          "status": "not_claimed"
+        },
+        "L6": {
+          "status": "not_claimed"
+        },
+        "L7": {
+          "status": "not_claimed"
+        },
+        "L8": {
+          "status": "qualified",
+          "qualification": "A universal finite graded virtual determinant parent exists in the stated continuous complex representation category. For (2,2), F=(1-det(A)det(B)T^2)/det(1-T A tensor B). The negative relation is virtual, not an effective representation."
+        },
+        "L9": {
+          "status": "not_claimed"
+        }
+      },
+      "theorems": [
+        "GLO764.MULREC.MIXED_RANK_FINITE_GRADED_PARENT"
+      ],
+      "L2_boundary": "A finite graded determinant factorization is not asserted to be a prime Euler product."
+    },
+    {
+      "id": "mixed_rank_finite_parent_rejected",
+      "lane": "multiplicative_recurrence_and_mixed_parents",
+      "domain": "The same all-matrix problem, for every other nontrivial rank profile.",
+      "proof_sources": [
+        "core"
+      ],
+      "levels": {
+        "L0": {
+          "status": "qualified",
+          "qualification": "The original Hadamard coefficient series remains well defined."
+        },
+        "L1": {
+          "status": "not_applicable"
+        },
+        "L2": {
+          "status": "not_claimed"
+        },
+        "L3": {
+          "status": "qualified",
+          "qualification": "Local rationality survives; failure below concerns a stronger universal representation parent, not rationality itself."
+        },
+        "L4": {
+          "status": "not_claimed"
+        },
+        "L5": {
+          "status": "not_claimed"
+        },
+        "L6": {
+          "status": "not_claimed"
+        },
+        "L7": {
+          "status": "not_claimed"
+        },
+        "L8": {
+          "status": "qualified",
+          "qualification": "No universal finite graded virtual determinant parent of the stated kind exists. Identity specialization has a numerator root not a root of unity. A unique formal infinite virtual product remains, but convergence and a natural analytic parent are not established."
+        },
+        "L9": {
+          "status": "not_claimed"
+        }
+      },
+      "first_exact_obstruction": {
+        "level": "L8",
+        "scope": "universal finite graded virtual determinant parent only",
+        "outcome": "obstructed; does not exclude matrix coefficients or every possible categorical/spectral realization"
+      }
+    },
+    {
+      "id": "fixed_label_graph_pair",
+      "lane": "fixed_label_cycle_response",
+      "domain": "Finite colored directed graphs, loops and immediate returns allowed, with declared common numerical label spaces; source reversal holds labels fixed.",
+      "proof_sources": [
+        "fixed_graph"
+      ],
+      "levels": {
+        "L0": {
+          "status": "qualified",
+          "qualification": "Defined once fixed label identifications are part of the source. Reusing numerical labels after discarding/changing those identifications is not a gauge-invariant operation."
+        },
+        "L1": {
+          "status": "not_applicable"
+        },
+        "L2": {
+          "status": "qualified",
+          "qualification": "Native directed primitive-cycle Euler products equal inverse transfer determinants. No arithmetic prime Euler product is identified."
+        },
+        "L3": {
+          "status": "qualified",
+          "qualification": "Finite transfer determinants are rational, with degree controlled by declared vertex and label dimensions. These are graph factors, not arithmetic local factors."
+        },
+        "L4": {
+          "status": "not_claimed"
+        },
+        "L5": {
+          "status": "not_claimed"
+        },
+        "L6": {
+          "status": "not_claimed"
+        },
+        "L7": {
+          "status": "qualified",
+          "qualification": "Reversal together with transposed labels preserves the natural determinant duality. This partial operation law is not full arithmetic tensor/induction/twist coherence."
+        },
+        "L8": {
+          "status": "qualified",
+          "qualification": "The independently declared graph has a finite dynamical/transfer realization. Its fixed-label lift response does not descend from the entire commuting multivariable determinant. This is a graph-native statement only."
+        },
+        "L9": {
+          "status": "qualified",
+          "qualification": "The real third-trace gap for W=(UV)* is (3/2)||UV-VU||_F^2 under unitarity. This finite comparison positivity has no RH/GRH or arithmetic explicit-formula consequence."
+        }
+      },
+      "first_exact_obstruction": {
+        "level": "L8",
+        "scope": "recovering the enriched fixed-label response from the scalar shadow",
+        "outcome": "no descent; the native graph operator itself still exists"
+      }
+    },
+    {
+      "id": "based_holonomy_enrichment",
+      "lane": "marked_holonomy_response",
+      "domain": "Declared based free group F(a,b), c=(ab)^-1; two word-cycle automata (c,a,b),(c,b,a); one clock step per edge; unitary rho.",
+      "proof_sources": [
+        "based_holonomy",
+        "positive_holonomy"
+      ],
+      "levels": {
+        "L0": {
+          "status": "qualified",
+          "qualification": "The response is defined on Hom(F,U(d))/U(d). Source, marking and clock are additional data, not reconstructed from an unmarked scalar graph."
+        },
+        "L1": {
+          "status": "not_applicable"
+        },
+        "L2": {
+          "status": "qualified",
+          "qualification": "Native twisted primitive-cycle Euler factors and transfer trace laws arise from the same automata; permutation representations give literal finite lifted-cycle products."
+        },
+        "L3": {
+          "status": "qualified",
+          "qualification": "Determinants are (1-t^3)^d and det(1-t^3 K), K=(UV)*(VU). Bound 3d is for fixed representation dimension."
+        },
+        "L4": {
+          "status": "not_claimed"
+        },
+        "L5": {
+          "status": "not_claimed"
+        },
+        "L6": {
+          "status": "qualified",
+          "qualification": "The finite graph determinant is rational and self-inversive: D(t)=(-t)^(3d) conjugate(D(1/conjugate(t))). This is native unitary reciprocity, with no arithmetic gamma/conductor package or arithmetic functional equation."
+        },
+        "L7": {
+          "status": "not_claimed"
+        },
+        "L8": {
+          "status": "qualified",
+          "qualification": "A gauge-covariant finite graph/representation parent is explicit. Both responses agree for every abelianized representation and agree at a given unitary representation exactly when U,V commute. This is not arithmetic L8 survival."
+        },
+        "L9": {
+          "status": "qualified",
+          "qualification": "Native H=(I-K)*(I-K)/2 is positive semidefinite, and unitarity places the finite transfer determinant roots on |t|=1. For permutation sources the principal constant line lies in ker(H), even with positive trace response. Thus there is no principal lower bound, arithmetic positivity, or arithmetic zero-location conclusion."
+        }
+      },
+      "enrichment_boundary": "This repairs a based comparison by adding common holonomy data; it does not invalidate the earlier unmarked/fixed-label operation counterexample.",
+      "L6_boundary": "The native reciprocal identity and trace-series convergence for |t|<1 do not supply a canonical arithmetic continuation/functional-equation package.",
+      "principal_obstruction": "For permutation K with r cycles, nullity(H)=r and rank(H)=d-r; the global constant line is always annihilated. A nonzero total commutator defect cannot select or control an arithmetic principal member."
+    }
+  ],
+  "proof_vs_replay": "The linked prose proves infinite-parameter statements. Source-authenticated finite replay checks exact controls only; this map does not create any additional proof.",
+  "source_acquisition": {
+    "additional_branch": "refs/heads/codex/review-sources-fixed-label-cycle-five-hour",
+    "fetch": "git fetch --no-tags origin refs/heads/codex/review-sources-fixed-label-cycle-five-hour",
+    "ancestry": "Core and circle freezes lie in this PR branch ancestry. The original fixed-graph26314df4, based-holonomye7fc8b0a and positive-holonomy6b4f0f4a freezes are preserved on the additional branch; shallow checkouts need the required full histories."
+  }
+}
