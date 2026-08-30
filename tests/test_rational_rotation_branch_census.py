@@ -195,13 +195,15 @@ class RationalRotationBranchCensusTests(unittest.TestCase):
             "tempered_rational_rotations_only",
             "fixed_branch_index_is_data_for_noninteger_signed_powers",
             "termwise_varying_branch_indices_excluded",
-            "no_uniform_local_degree_over_unbounded_b",
+            "noninteger_uniform_local_degree_not_classified_in_this_packet",
             "no_global_Euler_product_completion_or_functional_equation",
             "no_automorphy_motivic_or_categorical_no_go",
             "no_RH_GRH_or_zero_distribution_consequence",
             "external_novelty_unreviewed",
         ):
             self.assertTrue(firewall[field])
+        self.assertIn("UNIFORM_BOUND", ladder[0]["L3"])
+        self.assertEqual(ladder[2]["first_unresolved_level"], "L4")
 
     def test_resource_refusals_and_no_floats(self) -> None:
         resources = self.fixture["resource_contract"]

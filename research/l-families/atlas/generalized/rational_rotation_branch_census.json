@@ -1709,14 +1709,14 @@
       }
     ]
   },
-  "payload_sha256": "cf06ebaecb19ae16874db084cc0050d70d6531ff9878e92e6bec10a0b60379e6",
+  "payload_sha256": "7e49054015be1b6ada0aeef72f7572cb74a0275e4d62a8791bcbb07c31d945ca",
   "producer": {
     "note": "research/l-families/atlas/generalized/RATIONAL_ROTATION_BRANCH_CENSUS.md",
-    "note_sha256_lf_normalized": "29e5691ad63666caed092920229f9d27655d6a064b01542a24e8241a54316333",
+    "note_sha256_lf_normalized": "09814f28391c8ad93d122a953912d4ea6e34e41cb1843b88034113495c33edeb",
     "script": "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
-    "script_sha256_lf_normalized": "1d57f51238b96447da95343dadbbeab7dc4e1efee332bf05d2eb0424384b2ebe",
+    "script_sha256_lf_normalized": "12d6d7c0d2f84ea6b9fc7b6a4b96327b60e985e408e6c10590959bf80668aafd",
     "test": "tests/test_rational_rotation_branch_census.py",
-    "test_sha256_lf_normalized": "5d22395953e271dcbcdbdcb32044686723c21c346fd2377e5f24ddf0f94ff0f6"
+    "test_sha256_lf_normalized": "80921b388c2d25380ac3a518f0861c2091388219a6f70d17bdde4c12844d26a1"
   },
   "programme_issue": 764,
   "resource_contract": {
@@ -1741,7 +1741,7 @@
     "no_RH_GRH_or_zero_distribution_consequence": true,
     "no_automorphy_motivic_or_categorical_no_go": true,
     "no_global_Euler_product_completion_or_functional_equation": true,
-    "no_uniform_local_degree_over_unbounded_b": true,
+    "noninteger_uniform_local_degree_not_classified_in_this_packet": true,
     "one_unramified_determinant_one_local_recurrence": true,
     "tempered_rational_rotations_only": true,
     "termwise_varying_branch_indices_excluded": true
@@ -1764,7 +1764,7 @@
         "url": "https://people.freebsd.org/~das/kahan86branch.pdf"
       }
     ],
-    "file_sha256_lf_normalized": "03370f909ae1b4f53edece1db54d9e5e2335523761744d9d81aed48411a63017",
+    "file_sha256_lf_normalized": "c1d9ed9862fe572169ead10a9c909df63b4ddd0a5ae209fa1e9ab3ab7acaed0b",
     "manifest": "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
     "scope_firewall": {
       "absolute_and_fixed_real_axis_log_branches_only": true,
@@ -1773,7 +1773,7 @@
       "no_automorphy_motive_or_categorical_no_go": true,
       "no_completion_or_functional_equation_claim": true,
       "no_global_euler_product_constructed": true,
-      "no_uniform_local_degree_over_unbounded_denominators": true,
+      "noninteger_uniform_local_degree_not_classified_in_this_packet": true,
       "one_unramified_determinant_one_local_recurrence": true,
       "tempered_rational_rotation_only": true,
       "zero_exponent_requires_an_explicit_zero_value": true
@@ -1827,8 +1827,8 @@
         "L0": "PASS_BRANCH_FREE_WITH_ZERO_VALUE_ZERO",
         "L1": "PASS_FOR_ABSOLUTE_VALUE_MULTIPLICATION",
         "L2": "FORMAL_IF_INPUT_COEFFICIENTS_ARE_MULTIPLICATIVE",
-        "L3": "PASS_POINTWISE_BUT_FAILS_UNIFORM_DEGREE_AS_b_IS_UNBOUNDED",
-        "first_failure_level": "UNIFORM_L3",
+        "L3": "PASS_POINTWISE; UNIFORM_BOUND_AT_EVEN_POSITIVE_INTEGERS",
+        "first_unresolved_level": "UNIFORM_L3_OUTSIDE_EVEN_INTEGER_CHAMBER",
         "object": "absolute power with Re(lambda)>0"
       },
       {
@@ -1843,8 +1843,8 @@
         "L0": "PASS_BRANCH_INDEPENDENT",
         "L1": "PASS_SCALAR_MULTIPLICATIVITY",
         "L2": "FORMAL_IF_INPUT_COEFFICIENTS_ARE_MULTIPLICATIVE",
-        "L3": "EXACT_FINITE_SPECTRUM_WITH_NO_UNIFORM_b_BOUND",
-        "first_unresolved_level": "UNIFORM_L3_OR_L4",
+        "L3": "EXACT_FINITE_SPECTRUM_WITH_UNIFORM_ORDER_AT_MOST_k_PLUS_1",
+        "first_unresolved_level": "L4",
         "object": "positive integer power"
       },
       {

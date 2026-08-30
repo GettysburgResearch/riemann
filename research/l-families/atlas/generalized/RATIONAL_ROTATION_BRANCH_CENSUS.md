@@ -14,11 +14,14 @@ the adjacent irrational-rotation theorem.  It treats one determinant-one,
 unramified, tempered rank-two recurrence.  The main mechanisms are finite
 orbits, exact zeros, and an explicitly chosen real-axis logarithm branch.
 
-Periodicity makes every fixed-branch series below rational, but the period
-denominator is unbounded as the angle denominator grows.  This is not a
-uniform bounded-local-degree theorem over primes.  A branch-dependent scalar
-power is not automatically multiplicative, and a rational local series is not
-automatically a local factor of an automorphic or motivic object.
+Periodicity makes every fixed-branch series below rational, and the displayed
+period denominator is unbounded as the angle denominator grows.  That fact
+alone does **not** decide reduced-denominator degree: in the integer polynomial
+chambers, (5.2) immediately gives the uniform bound \(k+1\).  This packet does
+not classify the complementary noninteger chambers uniformly.  A
+branch-dependent scalar power is not automatically multiplicative, and a
+rational local series is not automatically a local factor of an automorphic
+or motivic object.
 
 Nothing here constructs a global Euler product, ramified factors, completion,
 functional equation, conductor, root number, automorphic lift, motive,
@@ -360,9 +363,9 @@ identified with a symmetric-power local factor.
 
 For noninteger \(\lambda\), periodicity still gives a finite cyclic
 state-space realization after a branch is fixed, of dimension at most
-\(2b\).  Its dimension depends on the rational angle denominator and is not
-an interpolation of \(\operatorname{Sym}^k\) in a fixed finite-rank
-representation category.
+\(2b\).  This denominator-dependent construction supplies no fixed-rank
+interpolation of \(\operatorname{Sym}^k\); by itself it also supplies no lower
+bound on the minimal realization dimension.
 
 ## 7. Exact controls and source lock
 
@@ -397,9 +400,9 @@ statements are the proofs above, not an inference from the finite range.
 
 | Object | L0 | L1 | L2 | L3 | First stop |
 |---|---|---|---|---|---|
-| absolute power, \(\operatorname{Re}\lambda>0\) | branch-free and zeros fixed | preserves multiplication of absolute values | formal for multiplicative inputs | rational at each rational rotation, but degree \(b\) is not uniform | uniform L3 |
+| absolute power, \(\operatorname{Re}\lambda>0\) | branch-free and zeros fixed | preserves multiplication of absolute values | formal for multiplicative inputs | rational pointwise; if \(\lambda=2m\), (5.2) gives degree at most \(2m+1\); the complementary uniform question is not classified here | uniform L3 outside the even-integer chamber |
 | fixed-branch signed power | only after \(J\) is supplied | fails in general; on real scalars it requires \(c_{\lambda,J}^2=1\) | unavailable when L1 fails | the one-orbit series is rational | L1 |
-| positive integer power | branch-independent | multiplicative scalar map | formal for multiplicative inputs | exact finite spectrum (5.3), without a uniform \(b\)-bound | uniform L3 / L4 |
+| positive integer power \(k\) | branch-independent | multiplicative scalar map | formal for multiplicative inputs | exact finite spectrum (5.3), with the uniform bound \(d_{k,b}\leq k+1\) | L4 |
 | unspecified value of \(0^0\) | fails | not reached | not reached | not reached | L0 |
 
 The fixed branch can exceptionally satisfy L1 at noninteger \(\lambda\) if
@@ -437,5 +440,6 @@ The packet excludes \(\operatorname{Re}\lambda\leq0\) except for the
 explicit \(\lambda=0\) convention family.  Negative real part meets actual
 zeros and cannot use the definition (3.1); purely imaginary powers do not
 approach a branch-independent value at zero.  Unrestricted termwise branch
-choices, determinant other than one, ramified data, a uniform local-degree
-theorem, and any global or categorical realization remain open.
+choices, determinant other than one, ramified data, the noninteger uniform
+local-degree classification, and any global or categorical realization remain
+open.

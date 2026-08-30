@@ -27,7 +27,7 @@ PARENT_PATH = PACKET_ROOT / "irrational_rotation_absolute_power_rationality.py"
 
 EXPECTED_BASE_COMMIT = "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38"
 EXPECTED_SOURCES_SHA256_LF = (
-    "03370f909ae1b4f53edece1db54d9e5e2335523761744d9d81aed48411a63017"
+    "c1d9ed9862fe572169ead10a9c909df63b4ddd0a5ae209fa1e9ab3ab7acaed0b"
 )
 EXPECTED_SOURCE_OBJECTS = {
     "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md": (
@@ -344,8 +344,8 @@ def _survival_ladder() -> dict[str, object]:
                 "L0": "PASS_BRANCH_FREE_WITH_ZERO_VALUE_ZERO",
                 "L1": "PASS_FOR_ABSOLUTE_VALUE_MULTIPLICATION",
                 "L2": "FORMAL_IF_INPUT_COEFFICIENTS_ARE_MULTIPLICATIVE",
-                "L3": "PASS_POINTWISE_BUT_FAILS_UNIFORM_DEGREE_AS_b_IS_UNBOUNDED",
-                "first_failure_level": "UNIFORM_L3",
+                "L3": "PASS_POINTWISE; UNIFORM_BOUND_AT_EVEN_POSITIVE_INTEGERS",
+                "first_unresolved_level": "UNIFORM_L3_OUTSIDE_EVEN_INTEGER_CHAMBER",
             },
             {
                 "object": "fixed-branch signed power",
@@ -360,8 +360,8 @@ def _survival_ladder() -> dict[str, object]:
                 "L0": "PASS_BRANCH_INDEPENDENT",
                 "L1": "PASS_SCALAR_MULTIPLICATIVITY",
                 "L2": "FORMAL_IF_INPUT_COEFFICIENTS_ARE_MULTIPLICATIVE",
-                "L3": "EXACT_FINITE_SPECTRUM_WITH_NO_UNIFORM_b_BOUND",
-                "first_unresolved_level": "UNIFORM_L3_OR_L4",
+                "L3": "EXACT_FINITE_SPECTRUM_WITH_UNIFORM_ORDER_AT_MOST_k_PLUS_1",
+                "first_unresolved_level": "L4",
             },
             {
                 "object": "lambda zero without declared zero_value",
@@ -500,7 +500,7 @@ def build_fixture(
             "fixed_branch_index_is_data_for_noninteger_signed_powers": True,
             "termwise_varying_branch_indices_excluded": True,
             "Re_lambda_nonpositive_excluded_except_declared_lambda_zero_family": True,
-            "no_uniform_local_degree_over_unbounded_b": True,
+            "noninteger_uniform_local_degree_not_classified_in_this_packet": True,
             "no_global_Euler_product_completion_or_functional_equation": True,
             "no_automorphy_motivic_or_categorical_no_go": True,
             "no_RH_GRH_or_zero_distribution_consequence": True,
