@@ -111,6 +111,41 @@ class TransferMatrixSymmetricParentTests(unittest.TestCase):
                     (power, index),
                 )
 
+    def test_zero_eigenvalue_is_excluded_from_minimal_order_theorem(self) -> None:
+        terms = subject.symmetric_power_terms(
+            1,
+            alpha=Fraction(0),
+            beta=Fraction(1),
+            c_alpha=Fraction(1),
+            c_beta=Fraction(1),
+        )
+        weights = tuple(term[1] for term in terms)
+        self.assertEqual(weights, (Fraction(0), Fraction(1)))
+        self.assertEqual(len(set(weights)), 2)
+
+        sequence = subject.power_shadow_sequence(
+            1,
+            6,
+            alpha=Fraction(0),
+            beta=Fraction(1),
+            c_alpha=Fraction(1),
+            c_beta=Fraction(1),
+        )
+        denominator = subject.denominator_from_weights(weights)
+        self.assertEqual(sequence, (2, 1, 1, 1, 1, 1))
+        self.assertEqual(denominator, (Fraction(1), Fraction(-1)))
+        self.assertEqual(len(denominator) - 1, 1)
+        self.assertNotEqual(len(denominator) - 1, 2)
+        for index in range(2, len(sequence)):
+            self.assertEqual(subject.convolution_at(denominator, sequence, index), 0)
+
+        control = self.fixture["hostile_controls"]["zero_eigenvalue_transient"]
+        self.assertTrue(control["weights_pairwise_distinct"])
+        self.assertFalse(control["all_weights_nonzero"])
+        self.assertEqual(control["generating_function"], "(2-T)/(1-T)")
+        self.assertEqual(control["reduced_denominator_degree"], 1)
+        self.assertEqual(control["excluded_k_plus_1_conclusion"], 2)
+
     def test_exponent_triangle_and_parent_dimension(self) -> None:
         for degree in range(15):
             pairs = subject.exponent_triangle(degree)
@@ -260,7 +295,9 @@ class TransferMatrixSymmetricParentTests(unittest.TestCase):
             source["verified_sources"][0]["payload_sha256"],
             "d809d5bed68618ff8dc9fd657b6c63c9cd0c8eca9ea83ffedda0b6d84a4ce7c3",
         )
-        self.assertTrue(source["scope_firewall"]["local_rank_two_linear_algebra_only"])
+        self.assertTrue(
+            source["scope_firewall"]["local_finite_rank_linear_algebra_only"]
+        )
         with self.assertRaisesRegex(RuntimeError, "git object lookup failed"):
             subject._git_blob_at(
                 subject.EXPECTED_BASE_COMMIT,
@@ -293,7 +330,7 @@ class TransferMatrixSymmetricParentTests(unittest.TestCase):
             ]
         )
         for key in (
-            "local_rank_two_linear_algebra_only",
+            "local_finite_rank_linear_algebra_only",
             "integer_symmetric_powers_only",
             "matrix_coefficient_shadow_is_not_promoted_to_a_determinant_l_factor",
             "does_not_construct_a_global_Euler_product",
@@ -348,6 +385,9 @@ class TransferMatrixSymmetricParentTests(unittest.TestCase):
             "honest non-scalar object",
             "functorial in `A`",
             "not the determinant inverse itself",
+            "symmetric quotient",
+            "presentation with denominator",
+            "alpha*beta != 0",
             "does **not**",
             "pairwise distinct",
             "determinant-one spectral compression",

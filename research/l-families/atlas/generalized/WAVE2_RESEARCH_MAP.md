@@ -12,7 +12,7 @@ Exact theorem packets: the five notes linked from [README.md](README.md)
 | orbit type | irrational tempered rotations and every reduced rational rotation | nonperiodic higher-dimensional torus orbits |
 | scalar transform | positive, absolute, and fixed real-axis complex powers | rational functions, coupled coefficients, and termwise branch data |
 | zeros and branches | rational-orbit zero class, arbitrary \(0^0=z\), every fixed negative-axis logarithm branch | nonzero exponents with \(\operatorname{Re}\lambda\leq0\) |
-| local recurrence | exact rationality, reduced denominators in the classified integer chambers, and rational-orbit collision sums | a uniform degree theorem over varying local angles |
+| local recurrence | exact rationality, reduced denominators in the classified integer chambers, and rational-orbit collision sums | a uniform degree theorem for fixed noninteger transforms over varying rational angles |
 | parent comparison | integer powers as matrix coefficients or weighted resolvent traces of genuine \(\operatorname{Sym}^k\) state spaces | coherent noninteger infinite-rank or categorical parent |
 | determinant moduli | the filtered rank-\(n\) character count drops from \(\binom{n+d}{n}\) to \(\binom{n+d}{n}-\binom{d}{n}\) on the determinant-one torus | several independent monomial relations and scalar cancellation strata |
 
@@ -50,7 +50,7 @@ retuning only inside the present rank-two model:
 | L0 | fixed branch and zero conventions are explicit; integer powers are branch-independent | unrestricted termwise branches and the nonpositive-real-part boundary |
 | L1 | absolute powers and integer powers preserve scalar multiplicativity | a generic fixed-branch signed power does not; classify exceptional sign phases in broader coefficient fields |
 | L2 | a formal Euler product exists only when L1 is supplied by the input | no new global Euler product is constructed |
-| L3 | four determinant-one rank-two scalar chambers are classified; all integer polynomial shadows have finite symmetric parents; the rank-\(n\) determinant-one character quotient is exact | uniform degree over varying rational denominators; higher-rank dense-orbit scalar classification; cancellation strata |
+| L3 | four determinant-one rank-two scalar chambers are classified; all integer polynomial shadows have finite symmetric parents; the rank-\(n\) determinant-one character quotient is exact | fixed-noninteger uniform degree over varying rational denominators; higher-rank dense-orbit scalar classification; cancellation strata |
 | L4 | integer state-space weights, the determinant relation, and its character-lattice quotient are explicit | duality, ramified-prime coherence, and compatibility across a global family |
 | L5 | nothing new | canonical conductor, gamma factors, and root number |
 | L6 | nothing new | analytic continuation and functional equation |

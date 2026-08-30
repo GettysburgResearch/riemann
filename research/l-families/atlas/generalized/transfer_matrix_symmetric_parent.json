@@ -11,7 +11,7 @@
       "status": "PROVED_FROM_AUTHENTICATED_SOURCE_THEOREM_AND_FINITE_RESOLVENT_IDENTITY"
     },
     "GLO764.GENERIC_POWER_MINIMAL_DENOMINATOR": {
-      "statement": "with nonzero eigen-coordinates and k+1 distinct symmetric weights, the reduced denominator has degree k+1",
+      "statement": "with nonzero eigenvalues and eigen-coordinates and k+1 distinct symmetric weights, the reduced denominator has degree k+1",
       "status": "PROVED_IN_NOTE_AND_EXACTLY_REPLAYED"
     },
     "GLO764.HIGHER_RANK_DETERMINANT_QUOTIENT": {
@@ -20,7 +20,7 @@
       "status": "PROVED_IN_NOTE_AND_EXACTLY_REPLAYED"
     },
     "GLO764.TENSOR_PARENT_IDENTITY": {
-      "scope": "rank-two characteristic-zero linear algebra and integer k>=0",
+      "scope": "arbitrary finite-rank characteristic-zero linear algebra and integer k>=0",
       "statement": "(ell(A^r v))^k is the corresponding matrix coefficient of (Sym^k A)^r",
       "status": "PROVED_IN_NOTE_AND_EXACTLY_REPLAYED"
     }
@@ -2728,7 +2728,40 @@
     "resolvent_matrix_coefficient_is_not_determinant_inverse": true,
     "root_of_unity_ratio": "collides weights within a fixed symmetric power",
     "special_polynomial_coefficients": "can cancel scalar-shadow poles even when the direct-sum parent retains them",
-    "zero_eigen_coordinate": "removes some symmetric weights and invalidates minimality, but not the parent identity"
+    "zero_eigen_coordinate": "removes some symmetric weights and invalidates minimality, but not the parent identity",
+    "zero_eigenvalue_transient": {
+      "all_weights_nonzero": false,
+      "eigen_coordinates": [
+        "1",
+        "1"
+      ],
+      "eigenvalues": [
+        "0",
+        "1"
+      ],
+      "excluded_k_plus_1_conclusion": 2,
+      "generating_function": "(2-T)/(1-T)",
+      "k": 1,
+      "reduced_denominator_coefficients_ascending": [
+        "1",
+        "-1"
+      ],
+      "reduced_denominator_degree": 1,
+      "sequence_prefix": [
+        "2",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "tail_annihilation_starts_at_index": 2,
+      "weights": [
+        "0",
+        "1"
+      ],
+      "weights_pairwise_distinct": true
+    }
   },
   "literature_firewall": {
     "external_specialist_novelty_review_required": true,
@@ -3288,14 +3321,14 @@
       }
     ]
   },
-  "payload_sha256": "74014cc29cc4104e5e4fbbf0e288ea51a1188bd717c176658175a5f3a55fe6dd",
+  "payload_sha256": "315a6820f944d60dbf2fa1be5530ffbf6ae529854a7023f722bb427c78fbd619",
   "producer": {
     "note": "research/l-families/atlas/generalized/TRANSFER_MATRIX_SYMMETRIC_PARENT.md",
-    "note_sha256_lf_normalized": "f85aa4549fba2b897d70654d56ed32f69648427a109369af8fb9152e8e91f921",
+    "note_sha256_lf_normalized": "84759dc5ca81ef896e2a6ab2d9a7d3d32c3865f5f61bb45db18aaf8633578456",
     "script": "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.py",
-    "script_sha256_lf_normalized": "72a65c097b513c1041b5f89ed3fe37994e4779d3783e68164407a733b710f133",
+    "script_sha256_lf_normalized": "4afd7f3747e83bc4abb49e655b7b75e14686ae3825a8ae38324bc1ecae01c9dc",
     "test": "tests/test_transfer_matrix_symmetric_parent.py",
-    "test_sha256_lf_normalized": "00bc59e5dee179791da69254a779e48326b92baf8bb2cd7e6cc9cbff2d7d0891"
+    "test_sha256_lf_normalized": "d5738238137170d39a54f38d45120fc9fdadf69e9092942149fce0b1fedae7ea"
   },
   "programme_issue": 764,
   "resource_contract": {
@@ -3319,24 +3352,24 @@
     "does_not_supply_ramified_factors_completion_or_functional_equation": true,
     "external_novelty_unreviewed": true,
     "integer_symmetric_powers_only": true,
-    "local_rank_two_linear_algebra_only": true,
+    "local_finite_rank_linear_algebra_only": true,
     "matrix_coefficient_shadow_is_not_promoted_to_a_determinant_l_factor": true,
     "no_RH_GRH_or_zero_distribution_consequence": true
   },
   "sources_manifest": {
     "base_commit": "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
-    "file_sha256_lf_normalized": "a95301d2873b531f64ba77c7a5ac6c7ac4e61cc35830f1704119823440a6a924",
+    "file_sha256_lf_normalized": "282f627f3288350d238c979ec99d33a46f87d10a99f2d8b9f06f293b4943d829",
     "path": "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.sources.json",
     "scope_firewall": {
       "external_novelty_unreviewed": true,
       "generic_weight_counts_require_stated_independence_hypotheses": true,
       "integer_symmetric_powers_only": true,
-      "local_rank_two_linear_algebra_only": true,
+      "local_finite_rank_linear_algebra_only": true,
       "no_RH_GRH_or_zero_distribution_consequence": true,
       "no_automorphy_motive_or_zero_theorem": true,
       "no_ramified_factors_completion_or_functional_equation": true,
       "parent_is_honest_but_global_l_function_is_not_constructed": true,
-      "scalar_minimal_denominators_require_nonvanishing_coordinates": true
+      "scalar_minimal_denominators_require_nonzero_eigenvalues_and_coordinates": true
     },
     "verified_sources": [
       {

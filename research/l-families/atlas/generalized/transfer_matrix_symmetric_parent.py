@@ -1,4 +1,4 @@
-"""Exact replay for the rank-two symmetric-parent and determinant-compression packet."""
+"""Exact replay for the finite-rank symmetric-parent and determinant packet."""
 
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ NOTE_PATH = PACKET_ROOT / "TRANSFER_MATRIX_SYMMETRIC_PARENT.md"
 TEST_PATH = REPO_ROOT / "tests" / "test_transfer_matrix_symmetric_parent.py"
 
 EXPECTED_SOURCE_MANIFEST_SHA256_LF = (
-    "a95301d2873b531f64ba77c7a5ac6c7ac4e61cc35830f1704119823440a6a924"
+    "282f627f3288350d238c979ec99d33a46f87d10a99f2d8b9f06f293b4943d829"
 )
 EXPECTED_BASE_COMMIT = "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38"
 DEFAULT_MAX_DEGREE = 8
@@ -395,6 +395,61 @@ def _power_row(power: int) -> dict[str, object]:
     }
 
 
+def _zero_eigenvalue_row() -> dict[str, object]:
+    terms = symmetric_power_terms(
+        1,
+        alpha=Fraction(0),
+        beta=Fraction(1),
+        c_alpha=Fraction(1),
+        c_beta=Fraction(1),
+    )
+    weights = tuple(term[1] for term in terms)
+    sequence = power_shadow_sequence(
+        1,
+        6,
+        alpha=Fraction(0),
+        beta=Fraction(1),
+        c_alpha=Fraction(1),
+        c_beta=Fraction(1),
+    )
+    denominator = denominator_from_weights(weights)
+    numerator = tuple(
+        convolution_at(denominator, sequence, index)
+        for index in range(len(sequence))
+    )
+    if weights != (Fraction(0), Fraction(1)) or len(set(weights)) != 2:
+        raise ArithmeticError("zero-eigenvalue weights are not the hostile witness")
+    if sequence != (
+        Fraction(2),
+        Fraction(1),
+        Fraction(1),
+        Fraction(1),
+        Fraction(1),
+        Fraction(1),
+    ):
+        raise ArithmeticError("zero-eigenvalue transient sequence changed")
+    if denominator != (Fraction(1), Fraction(-1)):
+        raise ArithmeticError("zero-eigenvalue denominator did not lose a factor")
+    if numerator[:2] != (Fraction(2), Fraction(-1)) or any(numerator[2:]):
+        raise ArithmeticError("zero-eigenvalue reduced numerator is incorrect")
+    return {
+        "k": 1,
+        "eigenvalues": ["0", "1"],
+        "eigen_coordinates": ["1", "1"],
+        "weights": [fraction_text(weight) for weight in weights],
+        "weights_pairwise_distinct": True,
+        "all_weights_nonzero": False,
+        "sequence_prefix": [fraction_text(value) for value in sequence],
+        "generating_function": "(2-T)/(1-T)",
+        "reduced_denominator_coefficients_ascending": [
+            fraction_text(value) for value in denominator
+        ],
+        "reduced_denominator_degree": len(denominator) - 1,
+        "excluded_k_plus_1_conclusion": 2,
+        "tail_annihilation_starts_at_index": 2,
+    }
+
+
 def _spectrum_row(maximum_degree: int) -> dict[str, object]:
     pairs = exponent_triangle(maximum_degree)
     generic_weights = numerical_weights(pairs, alpha=Fraction(2), beta=Fraction(3))
@@ -551,11 +606,11 @@ def build_fixture(
             "GLO764.TENSOR_PARENT_IDENTITY": {
                 "status": "PROVED_IN_NOTE_AND_EXACTLY_REPLAYED",
                 "statement": "(ell(A^r v))^k is the corresponding matrix coefficient of (Sym^k A)^r",
-                "scope": "rank-two characteristic-zero linear algebra and integer k>=0",
+                "scope": "arbitrary finite-rank characteristic-zero linear algebra and integer k>=0",
             },
             "GLO764.GENERIC_POWER_MINIMAL_DENOMINATOR": {
                 "status": "PROVED_IN_NOTE_AND_EXACTLY_REPLAYED",
-                "statement": "with nonzero eigen-coordinates and k+1 distinct symmetric weights, the reduced denominator has degree k+1",
+                "statement": "with nonzero eigenvalues and eigen-coordinates and k+1 distinct symmetric weights, the reduced denominator has degree k+1",
             },
             "GLO764.DETERMINANT_ONE_SPECTRAL_COMPRESSION": {
                 "status": "PROVED_IN_NOTE_AND_EXACTLY_REPLAYED",
@@ -618,6 +673,7 @@ def build_fixture(
         },
         "hostile_controls": {
             "zero_eigen_coordinate": "removes some symmetric weights and invalidates minimality, but not the parent identity",
+            "zero_eigenvalue_transient": _zero_eigenvalue_row(),
             "root_of_unity_ratio": "collides weights within a fixed symmetric power",
             "multiplicatively_dependent_roots": "collide weights across different polynomial degrees",
             "special_polynomial_coefficients": "can cancel scalar-shadow poles even when the direct-sum parent retains them",
@@ -646,7 +702,7 @@ def build_fixture(
             "external_specialist_novelty_review_required": True,
         },
         "scope_firewall": {
-            "local_rank_two_linear_algebra_only": True,
+            "local_finite_rank_linear_algebra_only": True,
             "integer_symmetric_powers_only": True,
             "matrix_coefficient_shadow_is_not_promoted_to_a_determinant_l_factor": True,
             "does_not_construct_a_global_Euler_product": True,

@@ -65,8 +65,10 @@ Let `R` be a commutative characteristic-zero ring, let `V` be a finite free
  v\in V,\qquad \ell\in V^*.
 \]
 
-Put `a_r=ell(A^r v)`.  The symmetric tensor `v^(odot k)` lies in
-`Sym^k(V)`, and `ell^(odot k)` lies in its dual.
+Write `Sym^k(V)` for the symmetric quotient of `V^(tensor k)`.  The pure
+tensor `v^(tensor k)` maps to `v^(odot k)`, while the permutation-invariant
+functional `ell^(tensor k)` descends to a functional `ell^(odot k)` on that
+quotient.  Put `a_r=ell(A^r v)`.
 
 ### Theorem GLO764.TENSOR_PARENT_IDENTITY
 
@@ -92,12 +94,15 @@ Consequently, as a formal power series,
 \tag{1.2}
 \]
 
-Its reduced denominator divides
+The adjugate formula gives a presentation with denominator
 
 \[
  \det(I-T\operatorname{Sym}^k A).
 \tag{1.3}
 \]
+
+If `R` is a field, the reduced denominator divides (1.3).  Over a general
+ring, no canonical reduced denominator is asserted.
 
 The resolvent matrix coefficient in (1.2) is generally
 
@@ -122,10 +127,12 @@ The tensor identity
   ((A^{\otimes k})^rv^{\otimes k})
 \]
 
-is functorial.  Both pure tensors are symmetric, and the restriction of
-`A^(tensor k)` to the symmetric tensors is `Sym^k(A)`.  This proves (1.1).
-Summing the geometric resolvent gives (1.2), and every matrix coefficient of
-a finite resolvent has denominator dividing its characteristic determinant.
+is functorial.  The map `A^(tensor k)` respects the permutation relations and
+therefore descends to `Sym^k(A)` on the symmetric quotient.  Likewise,
+`ell^(tensor k)` is invariant under permutations, so it vanishes on those
+relations and descends to `ell^(odot k)`.  Evaluating the descended identity
+on `v^(odot k)` proves (1.1).  Summing the geometric resolvent gives (1.2),
+and the adjugate identity gives the presentation with denominator (1.3).
 \(\square\)
 
 This is an honest object rather than a fitted realization: `Sym^k` exists
@@ -134,8 +141,8 @@ change of basis, and is functorial in `A`.
 
 ## 2. Exact generic denominator in rank two
 
-Work over a field and suppose that `A` is diagonalizable with eigenvalues
-`alpha,beta`.  In an eigenbasis write
+Work over a characteristic-zero field and suppose that `A` is diagonalizable
+with eigenvalues `alpha,beta`.  In an eigenbasis write
 
 \[
  a_r=c_\alpha\alpha^r+c_\beta\beta^r.
@@ -155,7 +162,14 @@ Then
 
 ### Theorem GLO764.GENERIC_POWER_MINIMAL_DENOMINATOR
 
-Assume `c_alpha*c_beta != 0` and that the `k+1` weights
+Assume `alpha*beta != 0` and `c_alpha*c_beta != 0`, equivalently
+
+\[
+ \alpha\beta\,c_\alpha c_\beta\ne0,
+\tag{2.3}
+\]
+
+and that the `k+1` weights
 
 \[
  \alpha^{k-j}\beta^j,
@@ -170,7 +184,7 @@ are pairwise distinct.  Then the reduced denominator is exactly
  \prod_{j=0}^k
  (1-\alpha^{k-j}\beta^jT),
  }
-\tag{2.3}
+\tag{2.4}
 \]
 
 and the minimal recurrence order is `k+1`.
@@ -182,9 +196,11 @@ nonzero coefficients.  At the reciprocal of one weight, precisely one term
 has a nonzero residue.  No factor cancels. \(\square\)
 
 The hypotheses are necessary.  If one eigen-coordinate vanishes, some
-weights are absent.  If `alpha/beta` is a root of unity, distinct symmetric
-weights can collide.  These are structural degeneration loci, not failures
-of the parent identity.
+weights are absent.  If an eigenvalue is zero, a zero weight contributes only
+a finite transient rather than a pole; already at `k=1` the two weights can
+be distinct while the reduced denominator has degree one.  If `alpha/beta`
+is a root of unity, distinct symmetric weights can collide.  These are
+structural degeneration loci, not failures of the parent identity.
 
 ## 3. Polynomial transforms and the filtered parent
 
@@ -464,7 +480,7 @@ correctly located research frontier rather than conclusions of this packet.
 
 ## 7. Counterfeits and degeneration controls
 
-The exact replay includes three hostile controls.
+The exact replay includes four hostile controls.
 
 1. **Multiplicatively independent roots.** `alpha=2,beta=3` realizes the
    triangular count exactly.
@@ -472,6 +488,10 @@ The exact replay includes three hostile controls.
 3. **Dependent roots.** `alpha=2,beta=4` produces cross-degree collisions,
    showing that a numerical count without the independence hypothesis is not
    a moduli theorem.
+4. **Zero eigenvalue.** `alpha=0,beta=1`, with both eigen-coordinates nonzero
+   and `k=1`, has distinct weights `0,1` but reduced denominator `1-T` and
+   minimal eventual order one.  This is the exact counterexample excluded by
+   the nonzero-eigenvalue hypothesis in (2.3).
 
 The higher-rank replay adds ranks `2` through `5` and checks every degree
 through `8` against (4.4).  These rows test the quotient formula; the proof is
