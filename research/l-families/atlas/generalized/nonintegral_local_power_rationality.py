@@ -13,6 +13,7 @@ import hashlib
 import importlib.util
 import json
 import math
+import subprocess
 from collections.abc import Iterable, Sequence
 from fractions import Fraction
 from pathlib import Path
@@ -27,7 +28,7 @@ NOTE_PATH = PACKET_ROOT / "NONINTEGRAL_LOCAL_POWER_RATIONALITY.md"
 TEST_PATH = REPO_ROOT / "tests" / "test_nonintegral_local_power_rationality.py"
 
 EXPECTED_SOURCE_MANIFEST_SHA256_LF = (
-    "5d402c43a75548e26f24d0fa659838d89553f0872f2742dd4125cf696bfb425d"
+    "99df382aaf78cec91f474f6a10cdce6a41370f9a2ad3c68645bb2cd571ceca6b"
 )
 EXPECTED_BASE_COMMIT = "10446e8ea9c55162c317810f63c1f7a379466459"
 MAX_ALLOWED_K = 12
@@ -63,6 +64,27 @@ def _lf_sha256(path: Path) -> str:
 
 def _canonical_sha256(value: object) -> str:
     return ATLAS_CORE.sha256_hex(value)
+
+
+def _git_blob_at(commit: str, path: str) -> str:
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "--verify", f"{commit}:{path}"],
+            cwd=REPO_ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+    except OSError as exc:
+        raise RuntimeError("git object lookup could not be executed") from exc
+    blob = result.stdout.strip()
+    if (
+        result.returncode != 0
+        or len(blob) != 40
+        or any(character not in "0123456789abcdef" for character in blob)
+    ):
+        raise RuntimeError(f"git object lookup failed: {commit}:{path}")
+    return blob
 
 
 def _clean_laurent(value: Laurent) -> Laurent:
@@ -424,10 +446,14 @@ def verify_sources_manifest() -> dict[str, object]:
         actual_hash = _lf_sha256(path)
         if actual_hash != source_record["file_sha256_lf_normalized"]:
             raise RuntimeError(f"source hash mismatch: {source_record['path']}")
+        actual_blob = _git_blob_at(manifest["base_commit"], source_record["path"])
+        if actual_blob != source_record["git_blob"]:
+            raise RuntimeError(f"source git blob mismatch: {source_record['path']}")
         row: dict[str, object] = {
             "path": source_record["path"],
             "role": source_record["role"],
             "file_sha256_lf_normalized": actual_hash,
+            "git_blob": actual_blob,
         }
         if "payload_sha256" in source_record:
             source = json.loads(path.read_text(encoding="utf-8"))

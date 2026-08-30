@@ -231,6 +231,16 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
         )
         self.assertEqual(len(source["verified_sources"]), 5)
         self.assertTrue(source["path"].endswith(".sources.json"))
+        self.assertEqual(
+            [row["git_blob"] for row in source["verified_sources"]],
+            [
+                "c748de751401f2634707b7df076b2380e8d6720b",
+                "e5dda637ceaca4c48a33189a7e798896fde93df2",
+                "12e5b415acd7abd34b046336e09a8f55796710bd",
+                "adea1dbb5f189f65357f39e1fe6bf1548bd77acc",
+                "36a9767d780b796c878179a6947082c7e47da960",
+            ],
+        )
         fixture_lock = source["verified_sources"][0]
         self.assertEqual(
             fixture_lock["payload_sha256"],
@@ -242,6 +252,11 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
             source["scope_firewall"]["tempered_GL2_trace_chamber_not_treated"]
         )
         self.assertTrue(source["scope_firewall"]["external_novelty_unreviewed"])
+        with self.assertRaisesRegex(RuntimeError, "git object lookup failed"):
+            subject._git_blob_at(
+                subject.EXPECTED_BASE_COMMIT,
+                "research/l-families/atlas/definitely_missing",
+            )
 
     def test_survival_and_scope_firewalls(self) -> None:
         claims = self.fixture["claims"]

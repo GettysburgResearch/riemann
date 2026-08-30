@@ -1588,7 +1588,7 @@
     "tempered_GL2_trace_chamber": "[-2,2] is not treated",
     "trace_domain": "real x>2 (hyperbolic non-tempered determinant-one chamber)"
   },
-  "payload_sha256": "4acc9097a55ef6eee6377f5cbc63018b361acc04ca2f3aa5767fd94f585c9e9d",
+  "payload_sha256": "d809d5bed68618ff8dc9fd657b6c63c9cd0c8eca9ea83ffedda0b6d84a4ce7c3",
   "polynomial_transform_replay": {
     "all_degrees_0_through_d": {
       "d": 8,
@@ -1694,9 +1694,9 @@
     "note": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
     "note_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c",
     "script": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
-    "script_sha256_lf_normalized": "8cec1b713c252e0b879b1ab1b3ddec761ce98adc5ad5015e623db6fc829a28a9",
+    "script_sha256_lf_normalized": "fba40d932e947c81441cf7a9187e5915ed7e227bf2b2d1167ffb0a648599467e",
     "test": "tests/test_nonintegral_local_power_rationality.py",
-    "test_sha256_lf_normalized": "3f133d7d2218844eebb59f8a279d9edd9a9336d626f03502e38bf2836d925f7f"
+    "test_sha256_lf_normalized": "ca390ebb9680ebcb1e3b6e3c12ea639941f1684dffc344efd0651d8304288fc6"
   },
   "programme_issue": 764,
   "resource_contract": {
@@ -1729,7 +1729,7 @@
   },
   "sources_manifest": {
     "base_commit": "10446e8ea9c55162c317810f63c1f7a379466459",
-    "file_sha256_lf_normalized": "5d402c43a75548e26f24d0fa659838d89553f0872f2742dd4125cf696bfb425d",
+    "file_sha256_lf_normalized": "99df382aaf78cec91f474f6a10cdce6a41370f9a2ad3c68645bb2cd571ceca6b",
     "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
     "scope_firewall": {
       "determinant_one_only": true,
@@ -1747,6 +1747,7 @@
     "verified_sources": [
       {
         "file_sha256_lf_normalized": "7a6e249fd696f9526154375f60bd97c2c40d251791f08eec6ecdc70b3177b941",
+        "git_blob": "c748de751401f2634707b7df076b2380e8d6720b",
         "path": "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.json",
         "payload_sha256": "046f76f43a2af3ac296f5c18c258e61f138e122bee38ec618af489e7e3a9e50e",
         "role": "existing Dickson/SU(2) recurrence normalization and integer symmetric-power boundary",
@@ -1754,21 +1755,25 @@
       },
       {
         "file_sha256_lf_normalized": "2eda8ab189c4292b51bb4dd7d6a0c261119e3b82502d3b1dfbc8d1ecea9aeaf7",
+        "git_blob": "e5dda637ceaca4c48a33189a7e798896fde93df2",
         "path": "research/l-families/atlas/function_field/ELLIPTIC_SYMMETRIC_POWER_TRACE_ALIASING.md",
         "role": "human-readable normalization, scalar-versus-full-factor, and literature firewall"
       },
       {
         "file_sha256_lf_normalized": "74d3f8cb65a99ab0c5c7943df6a4aba9f29ba91f6876ea935e0673cfd1dcf043",
+        "git_blob": "12e5b415acd7abd34b046336e09a8f55796710bd",
         "path": "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py",
         "role": "independent existing exact Dickson recurrence producer"
       },
       {
         "file_sha256_lf_normalized": "c24c0a1a34923efc0f08e2a9dd85e6682bb09d6ae1a470acea071ae194f77880",
+        "git_blob": "adea1dbb5f189f65357f39e1fe6bf1548bd77acc",
         "path": "research/l-families/atlas/core/atlas_core.py",
         "role": "canonical JSON normalization and digest implementation reused by this packet"
       },
       {
         "file_sha256_lf_normalized": "8a3a917aeb918d8d4490b7b78a264ce79b2c5543c1752932c6c890d58ab708e7",
+        "git_blob": "36a9767d780b796c878179a6947082c7e47da960",
         "path": "research/l-families/atlas/schema/l-function-spec.schema.json",
         "role": "existing atlas boundary between local Euler data and completed global L-function claims"
       }
