@@ -52,10 +52,6 @@ finite-dimensional linear realizations; it does not exclude infinite-rank or
 categorical parents.  Exact dependencies and branch-cut prior art are in the
 colocated [sources manifest](irrational_rotation_principal_complex_power_rationality.sources.json).
 
-The concise [wave-2 research map](WAVE2_RESEARCH_MAP.md) records the axes now
-covered, held-out families, L0--L9 boundary, and ranked proof-sized queue.  It
-is a continuation plan, not another theorem packet.
-
 The fifth packet is
 [TRANSFER_MATRIX_SYMMETRIC_PARENT.md](TRANSFER_MATRIX_SYMMETRIC_PARENT.md).
 It replaces a fitted scalar recurrence by the honest local parent
@@ -66,3 +62,8 @@ whereas the determinant-one subtorus has
 \(\binom{n+d}{n}-\binom{d}{n}\).  This is standard local tensor and
 weight-lattice algebra, not a global symmetric-power \(L\)-function or a
 novelty claim; degeneration and cancellation loci are retained explicitly.
+
+The [wave-2 research map](WAVE2_RESEARCH_MAP.md) consolidates all five
+packets, the primary-literature boundary, held-out families, L0--L9 status,
+four broader deformation axes, and a ranked continuation queue.  It is a
+programme map, not another theorem packet.
