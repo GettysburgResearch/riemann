@@ -10,8 +10,10 @@ Start with
 for the current source-algebra, live-occupancy, signed-history, archimedean,
 canonical principal-diagonal, actual-Xi geographic count, concentration,
 all-inner physical-band and high-derivative results, including the explicit
-source-duality correction and descent firewall. Native masked identification,
-cofinal capture, total-charge and descent estimates remain open.
+source-duality correction, conditional finite-height cofinal capture and
+descent firewall. A separate exploratory decoder diagnostic narrows the
+native amplitude question. Native cofinal capture, total-charge and descent
+estimates remain open.
 The [wave-2 portfolio](RIEMANN_STRUCTURES_WAVE2_PORTFOLIO.md) is the historical
 mechanism/literature map; its queue is superseded by the continuation
 checkpoint. [Source acquisition](CONTINUATION_SOURCE_REPLAY.md) preserves

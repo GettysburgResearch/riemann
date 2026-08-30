@@ -6,10 +6,12 @@ carried by [draft PR #765](https://github.com/gfreund123/riemann/pull/765).
 This is a research checkpoint, not completion of the requested eight-hour
 pass, a canonical repository integration, or an RH claim.
 
-Checkpoint updated: 2026-08-31. Sixteen exact packets are resident,
+Checkpoint updated: 2026-08-31. Seventeen exact packets are resident,
 including the canonical Boolean principal-diagonal estimate, actual-Xi
-geographic count and scale-matched band bound, and the separate
-source-convention correction.
+geographic count and scale-matched band bound, conditional finite-height
+cofinal capture, and the separate source-convention correction. The native
+Boolean decoder memo is an additional exploratory diagnostic, not another
+theorem packet.
 
 ## Five-minute result
 
@@ -18,10 +20,11 @@ its physical metric are different requirements. The useful new results
 identify which operations actually survive. None constructs a new
 number-field geometry or supplies the missing RH-level estimate.
 
-The Xi work now has four distinct conclusions: actual scalar concentration
+The Xi work now has five distinct conclusions: actual scalar concentration
 is proved; narrow physical-band bounds hold for every inner numerator at
 finite denominator rank; a uniform actual companion count binds finite
-geographic packets to the physical scale; and generic positivity plus
+geographic packets to the physical scale; pure finite-height denominators
+admit fixed-configuration cofinal capture; and generic positivity plus
 high-derivative concentration does not eliminate reverse-Rolle defects.
 Small band charge is not small total charge or native cofinal capture.
 
@@ -51,6 +54,7 @@ cannot be interchanged. Historical scientific files are preserved.
 | [Positive-kernel descent firewall](../exploratory/XI_POSITIVE_KERNEL_DESCENT_FIREWALL.md) | An exact-tail positive-kernel example with a wrong-sign critical point and surviving high-derivative asymptotics | Not a refutation of every quantitative defect or density bound |
 | [All-inner width and source duality](../exploratory/HARDY_INNER_WIDTH_SOURCE_DUALITY.md) | Width/height bounds for any inner numerator and the corrected physical source coefficients | Finite denominator accounting, native cofinal limits and total charge remain separate |
 | [Actual Xi companion count and width](../exploratory/XI_UNIFORM_COMPANION_COUNT_WIDTH.md) | Uniform geographic companion count and normalized shrinking-band bound at the physical constant scale | Actual finite geographic factors only; no complete native cofinal or omitted-direction ledger |
+| [Finite-height cofinal source capture](../exploratory/HARDY_COFINAL_FINITE_HEIGHT_SOURCE_CAPTURE.md) | Conditional infinite-denominator capture and the exact physical omitted-source operator | Pure Blaschke denominator with finite total height, fixed numerator/projector and low-pass cost; no native Xi height or uniform-in-T capture theorem |
 
 Each row has a bounded exact producer, fixture, source manifest and tests.
 The later analytic and source-interface packets have separate frozen-source
@@ -118,6 +122,35 @@ approximation zeros or omitted directions, or bound total charge.
 The [separate audit](../exploratory/XI_UNIFORM_COMPANION_COUNT_WIDTH_AUDIT.md)
 records the exact accepted state and this boundary.
 
+### Conditional cofinal capture, with the actual source projection
+
+The [cofinal theorem](../exploratory/HARDY_COFINAL_FINITE_HEIGHT_SOURCE_CAPTURE.md)
+allows an infinite pure Blaschke denominator B when S=sum Im(b)<infinity,
+and any inner numerator U. For I contained in [0,L], write P_U for
+projection onto U H2. It proves
+
+    C_I = ||Pi_I P_U P_KB||_HS^2
+        <= T_I = ||Pi_I M_U P_KB||_HS^2 <= 2 L S.
+
+Both traces converge monotonically along nested finite divisor exhaustion
+at this fixed configuration. Geographic exhaustion additionally requires
+local finiteness in closed disks. The exact omitted physical source is
+
+    C_I(B,U)-C_I(B_m,U)
+      = ||Pi_I P_U M_Bm P_K(B/B_m)||_HS^2.
+
+The bare multiplier tail costs at most 2L S_tail, but the same estimate
+for the source projection is false: a fully specified geographic
+two-zero source gives a strict factor greater than one. Singular
+denominators and pure infinite-height lacunary controls show why zero
+count/growth alone cannot supply the missing hypothesis.
+
+This is a low-pass endpoint cost L, not a shrinking-width cost |I|.
+The actual Xi global finite-height assumption, native cofinal source
+compatibility, quantitative tail/boundary/approximation control and uniform
+order of limits remain open. The [independent audit](../exploratory/HARDY_COFINAL_FINITE_HEIGHT_SOURCE_CAPTURE_AUDIT.md)
+retains these distinctions and the literal source/outer congruence.
+
 ### The source convention is a substantive correction
 
 With column kernels E_j(x)=i/[sqrt(2pi)(x-conjugate(b_j))], the Gram is
@@ -177,6 +210,17 @@ The masked bilateral identity and P_nat-P_B remain open. The
 [independent audit](../l-families/atlas/function_field/FFPS_CANONICAL_BOOLEAN_PRINCIPAL_DIAGONAL_AUDIT.md)
 retains the label, exceptional-prime and multiplicity restrictions.
 No unfinished native sign/lift claim is imported into this checkpoint.
+
+The [exploratory decoder memo](../exploratory/NATIVE_BOOLEAN_DECODER_DIAGNOSTIC.md)
+narrows the next question. Physical-only masks commute with history
+aggregation, and the frozen sources resolve the least-prime assignment.
+The missing identity is the complete weighted carrier/colour/renewal
+incidence sum, not that elementary mask commutation. Two exact Boolean
+zero fibres, including a dyadic U=64 chart, provide executable cancellation
+tests for a future native decoder. Neither is a native counterexample.
+The memo also states the original-principal error norm that would transfer
+a future bound; a small error norm alone does not bound the difference
+while the candidate principal moment remains uncontrolled.
 
 ## Earlier work is explicitly retained
 
@@ -239,12 +283,13 @@ and free-energy gate remain open.
 
 ## Next scientific decisions
 
-1. Resolve the native chart-and-diagonal binding in the signed source.
-   Carry every allocation, carrier, endpoint and selector label through
-   any proposed recombination.
-2. Prove native cofinal capture beyond the now-proved geographic count,
-   including omitted denominator directions and approximation/boundary
-   terms. A separate Xi-specific bridge is still needed for total charge.
+1. Reconstruct a complete native coefficient over an exact physical tuple,
+   starting with the dyadic zero-Boolean diagnostic. Carry every allocation,
+   carrier, endpoint, regional selector and renewal weight through the map.
+2. Prove native cofinal capture beyond geographic count and the conditional
+   finite-height theorem, including omitted source directions and
+   approximation/boundary terms. A separate Xi-specific bridge is still
+   needed for total charge.
 3. Pursue a source-specific reverse-Rolle defect estimate. Re-proving
    high-derivative concentration or generic kernel positivity does not
    pay the missing sum.
@@ -255,17 +300,21 @@ and free-energy gate remain open.
    operation and survive a held-out test, not merely package formulas.
 
 The two programmes retain separate branches. The generalized-L programme
-now has local/global obstructions, a classical graded parent and a reviewed
-coupled Rankin--Selberg quotient parent. Its results are not dependencies
+now has local/global obstructions, a classical graded parent, a reviewed
+all-weight coupled cusp-flag quotient family and its positive-spectrum
+boundary. Its results are not dependencies
 of the signed finite-field or Xi estimates. Stronger unfinished family
 work is not accepted merely by being mentioned in this checkpoint.
 
 ## Reproduction and priority
 
-The current changed-test-module scope is sixteen modules: all 382 tests
-passed in normal Python and under -O. All sixteen complete producer
-checks passed in both modes. This scope is not the differently selected
-focused/inherited suite counted at the earlier checkpoint.
+The current changed-test-module scope is seventeen modules: all 412 tests
+passed in normal Python (77.070s) and under -O (77.221s). All seventeen
+complete producer checks passed in both modes. The separate decoder memo's
+literal code block also passed both modes, and its ten primitive identities
+were independently checked; it is not counted as a theorem/test module.
+This scope is not the differently selected focused/inherited suite counted
+at the earlier checkpoint.
 
 [Source acquisition instructions](CONTINUATION_SOURCE_REPLAY.md) preserve
 the original scientific identities across cherry-picks, including the
