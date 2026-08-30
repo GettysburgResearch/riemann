@@ -476,6 +476,399 @@ def arg_increments(vals):
 
 
 # ----------------------------------------------------------------------------
+# MACHINERY: on_line_scan / box_count / off_line_detector / departure_finder
+# All accept pluggable batch evaluators (serial defaults below; the driver plugs
+# in a multiprocessing pool).  Batch evaluators:
+#   line_batch(x, y, ts)          -> [float F_z(t)]
+#   lam_batch(x, y, [(sig,t)..])  -> [complex Lambda_z(sig+it)]
+#   refine_batch(x, y, [(a,b,fa,fb)..]) -> [float root]
+# ----------------------------------------------------------------------------
+
+def serial_line_batch(x, y, ts, X=None):
+    return [float(lam_line(x, y, t, X)) for t in ts]
+
+
+def serial_lam_batch(x, y, pts, X=None):
+    return [complex(lam(x, y, mpc(sg, t), X)) for (sg, t) in pts]
+
+
+def serial_refine_batch(x, y, ivs, X=None):
+    out = []
+    for (a, b, fa, fb) in ivs:
+        out.append(illinois(lambda t: float(lam_line(x, y, t, X)), a, b, fa, fb))
+    return out
+
+
+def tgrid(ta, tb, dt):
+    n = max(1, int(round((tb - ta) / dt)))
+    return [ta + (tb - ta) * j / n for j in range(n + 1)]
+
+
+def hunt_sign_changes(x, y, ta, tb, dt, depth=2, line_batch=None):
+    """Grid scan for sign changes of F_z(t), recursively rescanning dip cells (local
+    minima of |F| without a sign change) at dt/10 down to `depth` extra levels.
+    Returns (intervals, unresolved_dips): intervals = [(a,b,fa,fb)] each containing a
+    sign change; unresolved_dips = [(t, F)] dips still unresolved at the finest level
+    (candidate near-line pair or off-line pair; the box count disambiguates)."""
+    lb = line_batch or serial_line_batch
+    ts = tgrid(ta, tb, dt)
+    fs = lb(x, y, ts)
+    ints = []
+    dips = []
+    for k in sign_change_cells(ts, fs):
+        ints.append((ts[k], ts[k + 1], fs[k], fs[k + 1]))
+    for k in dip_cells(ts, fs):
+        if depth > 0:
+            si, sd = hunt_sign_changes(x, y, ts[k - 1], ts[k + 1], dt / 10, depth - 1, lb)
+            ints += si
+            dips += sd
+        else:
+            dips.append((ts[k], fs[k]))
+    ints.sort()
+    dedup = []
+    for iv in ints:
+        if dedup and abs(iv[0] - dedup[-1][0]) < 1e-12:
+            continue
+        dedup.append(iv)
+    return dedup, dips
+
+
+def on_line_scan(x, y, t0, t1, dt, depth=2, refine=True, line_batch=None, refine_batch=None):
+    """Sample the REAL function F_z(t) = Lambda_z(1/2+it) on [t0,t1] (reality verified in
+    oracles O3/O4), record sign changes, refine each by bracketed iteration to 12 digits.
+    Returns {'zeros': [t..], 'n', 'unresolved_dips', 'dt', 'depth'}."""
+    ints, dips = hunt_sign_changes(x, y, t0, t1, dt, depth, line_batch)
+    if refine and ints:
+        zeros = (refine_batch or serial_refine_batch)(x, y, ints)
+    else:
+        zeros = [0.5 * (a + b) for (a, b, _, _) in ints]
+    zeros = sorted(zeros)
+    return {'zeros': zeros, 'n': len(zeros),
+            'unresolved_dips': [(t, f) for (t, f) in dips], 'dt': dt, 'depth': depth}
+
+
+class _NudgeNeeded(Exception):
+    pass
+
+
+def box_count(x, y, t0, t1, delta=0.2, init_step_t=0.2, n_sigma=9,
+              lam_batch=None, max_rounds=64, nudge_max=3):
+    """Argument-principle winding number of Lambda_z around the boundary of
+    [1/2-delta, 1/2+delta] x [t0, t1] (counterclockwise), t0 > 0 so the poles s=0,1 are
+    outside.  Exploits the exact symmetry Lambda(1/2-d+it) = conj(Lambda(1/2+d+it))
+    (FE + real coefficients) so only the right edge is evaluated.  Adaptive sampling:
+    any consecutive phase jump >= pi/2 triggers subdivision.  The winding/2pi must be a
+    near-integer within 1e-6 (asserted).  If a boundary point sits (numerically) on a
+    zero, the box is re-run with delta nudged by +0.0137 (up to nudge_max times).
+    Returns (count, info)."""
+    lb = lam_batch or serial_lam_batch
+    last_err = None
+    for attempt in range(nudge_max + 1):
+        d = delta + 0.0137 * attempt
+        try:
+            cnt, info = _box_once(x, y, t0, t1, d, init_step_t, n_sigma, lb, max_rounds)
+            info['delta_used'] = d
+            info['nudges'] = attempt
+            return cnt, info
+        except _NudgeNeeded as e:
+            last_err = e
+            continue
+    raise RuntimeError(f"box_count: failed after {nudge_max} nudges: {last_err}")
+
+
+def _box_once(x, y, t0, t1, delta, init_step_t, n_sigma, lb, max_rounds):
+    s0 = 0.5 - delta
+    s1 = 0.5 + delta
+    tg = tgrid(t0, t1, init_step_t)
+    sg = [s0 + (s1 - s0) * j / (n_sigma - 1) for j in range(n_sigma)]
+    R = {}   # right edge  sigma = s1, keyed by t
+    B = {}   # bottom edge t = t0, keyed by sigma
+    T = {}   # top edge    t = t1, keyed by sigma
+    n_evals = 0
+    for _ in range(max_rounds):
+        missing = []
+        for t in tg:
+            if t not in R:
+                missing.append((s1, t, 'R', t))
+        for sig in sg:
+            if sig not in B:
+                missing.append((sig, t0, 'B', sig))
+            if sig not in T:
+                missing.append((sig, t1, 'T', sig))
+        if missing:
+            vals = lb(x, y, [(p[0], p[1]) for p in missing])
+            n_evals += len(missing)
+            for (p, v) in zip(missing, vals):
+                if v == 0:
+                    raise _NudgeNeeded("exact zero on contour")
+                {'R': R, 'B': B, 'T': T}[p[2]][p[3]] = v
+        # assemble counterclockwise cycle; left edge derived from right by conjugation
+        nodes = ([('b', s) for s in sg] +
+                 [('r', t) for t in tg[1:]] +
+                 [('t', s) for s in reversed(sg[:-1])] +
+                 [('l', t) for t in reversed(tg[:-1])])
+
+        def val(nd):
+            tag, c = nd
+            if tag == 'b':
+                return B[c]
+            if tag == 't':
+                return T[c]
+            if tag == 'r':
+                return R[c]
+            v = R[c]
+            return complex(v.real, -v.imag)
+
+        def point(nd):
+            tag, c = nd
+            if tag == 'b':
+                return (c, t0)
+            if tag == 't':
+                return (c, t1)
+            if tag == 'r':
+                return (s1, c)
+            return (s0, c)
+
+        total = 0.0
+        bad = []
+        nn = len(nodes)
+        for k in range(nn):
+            a = val(nodes[k])
+            b = val(nodes[(k + 1) % nn])
+            q = b / a
+            dphi = math.atan2(q.imag, q.real)
+            total += dphi
+            if abs(dphi) >= math.pi / 2:
+                bad.append((nodes[k], nodes[(k + 1) % nn]))
+        if not bad:
+            w = total / (2 * math.pi)
+            cnt = round(w)
+            if abs(w - cnt) > 1e-6:
+                raise _NudgeNeeded(f"winding not near-integer: {w}")
+            return cnt, {'n_evals': n_evals, 'winding': w,
+                         'n_tgrid': len(tg), 'n_sgrid': len(sg)}
+        newt = set()
+        news = set()
+        for (na, nb) in bad:
+            (sa, ta) = point(na)
+            (sb, tb) = point(nb)
+            if sa == sb:
+                if abs(tb - ta) < 1e-8:
+                    raise _NudgeNeeded("zero pinned on vertical edge")
+                newt.add(0.5 * (ta + tb))
+            elif ta == tb:
+                if abs(sb - sa) < 1e-8:
+                    raise _NudgeNeeded("zero pinned on horizontal edge")
+                news.add(0.5 * (sa + sb))
+            # else: wrap duplicate segment, zero length -- never bad
+        tg = sorted(set(tg) | newt)
+        sg = sorted(set(sg) | news)
+    raise _NudgeNeeded("box refinement did not converge")
+
+
+def off_line_detector(x, y, t0, t1, dt=0.05, depth=2, delta=0.2, refine=False,
+                      line_batch=None, lam_batch=None, refine_batch=None):
+    """Compare the argument-principle count in [1/2-delta,1/2+delta] x [t0,t1] with the
+    number of on-line sign changes.  disc = n_box - n_line; a discrepancy of 2 signals a
+    symmetric off-line pair (numerically, to the stated precision)."""
+    scan = on_line_scan(x, y, t0, t1, dt, depth=depth, refine=refine,
+                        line_batch=line_batch, refine_batch=refine_batch)
+    nbox, info = box_count(x, y, t0, t1, delta=delta, lam_batch=lam_batch)
+    disc = nbox - scan['n']
+    anomaly = None
+    if disc < 0 or disc % 2 != 0:
+        anomaly = f"nbox={nbox} < n_line={scan['n']} or odd disc -- investigate"
+    return {'n_line': scan['n'], 'n_box': nbox, 'disc': disc, 'scan': scan,
+            'box_info': info, 'anomaly': anomaly}
+
+
+def muller_zero(x, y, s0, X=None, maxsteps=60):
+    """Complex zero of Lambda_z near s0 via Muller iteration; returns mpc or None.
+    Accepts (sigma, t) tuple or complex seed."""
+    f = lambda s: lam(x, y, s, X)
+    seed = mpc(s0[0], s0[1]) if isinstance(s0, tuple) else mpc(s0)
+    try:
+        r = mp.findroot(f, seed, solver='muller', maxsteps=maxsteps, tol=mpf('1e-40'))
+    except Exception:
+        return None
+    # residual sanity: compare with a nearby non-zero value
+    try:
+        ref = abs(lam(x, y, r + mpf('0.07'), X))
+        if not (abs(f(r)) < mpf('1e-15') * max(ref, mpf('1e-40'))):
+            return None
+    except Exception:
+        return None
+    return r
+
+
+def find_offline_pair_near(x, y, t_center, delta=0.2, t0=None, t1=None, X=None):
+    """Locate the right-half member (sigma > 1/2) of an off-line pair near t_center by
+    Muller iteration from a deterministic ladder of seeds.  Returns (sigma, t) floats or None."""
+    seeds = [(0.54, t_center), (0.58, t_center), (0.63, t_center),
+             (0.56, t_center + 0.15), (0.56, t_center - 0.15),
+             (0.52, t_center), (0.67, t_center)]
+    for sd in seeds:
+        r = muller_zero(x, y, sd, X)
+        if r is None:
+            continue
+        sig = float(mp.re(r))
+        tt = float(mp.im(r))
+        if tt < 0:
+            tt = -tt   # conjugate zero; reflect
+        if not (0.5 + 1e-9 < sig < 0.5 + delta):
+            continue
+        if t0 is not None and not (t0 - 0.2 <= tt <= t1 + 0.2):
+            continue
+        return (sig, tt)
+    return None
+
+
+def count_window(x, y, wa, wb, dt=0.02, depth=2, line_batch=None):
+    """Number of on-line sign changes in [wa,wb] at fine resolution (classifier for
+    merge bisection: a merging pair goes 2 -> 0)."""
+    ints, _ = hunt_sign_changes(x, y, wa, wb, dt, depth, line_batch)
+    return len(ints)
+
+
+def dip_location(x, y, wa, wb, dt=0.02, levels=3, line_batch=None):
+    """Location and value of the minimum of |F| on [wa,wb] via `levels` nested rescans
+    (resolution dt/10^levels).  Returns (t_min, F(t_min))."""
+    lb = line_batch or serial_line_batch
+    a, b, d = wa, wb, dt
+    best_t, best_f = None, None
+    for _ in range(levels + 1):
+        ts = tgrid(a, b, d)
+        fs = lb(x, y, ts)
+        k = min(range(len(ts)), key=lambda j: abs(fs[j]))
+        best_t, best_f = ts[k], fs[k]
+        a = ts[max(0, k - 1)]
+        b = ts[min(len(ts) - 1, k + 1)]
+        d = d / 10
+    return best_t, best_f
+
+
+def departure_finder(pathfun, taus, t0, t1, dt=0.05, depth=2, delta=0.2, tau_tol=1e-6,
+                     line_batch=None, lam_batch=None, refine_batch=None, log=None):
+    """Along z(tau) = pathfun(tau) (returns (x, y)), at each tau: refined on-line zeros +
+    box count in [t0,t1].  Departure event: between consecutive grid taus the box-line
+    discrepancy jumps by +2 (a pair leaves the line: two on-line zeros merge, the on-line
+    count drops by 2, the box count stays).  tau* refined by bisection (to tau_tol) with
+    the local classifier count_window (2 sign changes -> 0).  A disc jump of -2 is
+    recorded as a re-entry event and refined the same way.  Returns (records, events)."""
+    def _log(msg):
+        if log:
+            log(msg)
+
+    records = []
+    for tau in taus:
+        x, y = pathfun(tau)
+        det = off_line_detector(x, y, t0, t1, dt=dt, depth=depth, delta=delta, refine=True,
+                                line_batch=line_batch, lam_batch=lam_batch,
+                                refine_batch=refine_batch)
+        records.append({'tau': tau, 'x': x, 'y': y, 'n_line': det['n_line'],
+                        'n_box': det['n_box'], 'disc': det['disc'],
+                        'zeros': det['scan']['zeros'],
+                        'unresolved_dips': det['scan']['unresolved_dips'],
+                        'anomaly': det['anomaly']})
+        _log(f"  tau={tau:.3f}: n_line={det['n_line']} n_box={det['n_box']} disc={det['disc']}")
+
+    events = []
+    for j in range(len(records) - 1):
+        ra, rb = records[j], records[j + 1]
+        if ra['disc'] is None or rb['disc'] is None:
+            continue
+        jump = rb['disc'] - ra['disc']
+        if jump == 0:
+            continue
+        direction = 'departure' if jump > 0 else 'reentry'
+        n_units = abs(jump) // 2
+        # identify candidate merge windows from the refined zero lists
+        za, zb = (ra['zeros'], rb['zeros']) if jump > 0 else (rb['zeros'], ra['zeros'])
+        cands = _merge_candidates(za, zb, t0, t1)
+        _log(f"  event {direction} between tau={ra['tau']:.3f} and {rb['tau']:.3f}: "
+             f"jump={jump}, candidates={[(round(u,3),round(v,3)) for (u,v,_,_) in cands]}")
+        used = 0
+        for (u, v, wa, wb) in cands:
+            if used >= n_units:
+                break
+            ev = _refine_event(pathfun, ra['tau'], rb['tau'], u, v, wa, wb,
+                               direction, tau_tol, line_batch, lam_batch, _log)
+            if ev is not None:
+                ev['path_tau_lo'] = ra['tau']
+                ev['path_tau_hi'] = rb['tau']
+                events.append(ev)
+                used += 1
+        if used < n_units:
+            events.append({'type': direction, 'tau_star': None,
+                           'tau_bracket': [ra['tau'], rb['tau']],
+                           'note': f"{n_units - used} unit(s) of |disc| jump {jump} not resolved "
+                                   f"to a specific merging pair (possible window-boundary "
+                                   f"entry/exit near t={t1}); see records."})
+    return records, events
+
+
+def _merge_candidates(za, zb, t0, t1):
+    """Adjacent zero pairs (u,v) in za with no counterpart of BOTH u and v surviving in zb.
+    Returns [(u, v, window_a, window_b)] sorted by gap (tightest pair first)."""
+    out = []
+    for k in range(len(za) - 1):
+        u, v = za[k], za[k + 1]
+        gap = v - u
+        # neighbours for window clipping
+        lo = za[k - 1] if k - 1 >= 0 else t0
+        hi = za[k + 2] if k + 2 < len(za) else t1
+        wa = max(t0, 0.5 * (lo + u) if k - 1 >= 0 else max(t0, u - 0.5))
+        wb = min(t1, 0.5 * (v + hi) if k + 2 < len(za) else min(t1, v + 0.5))
+        survivors = [w for w in zb if wa <= w <= wb]
+        if len(survivors) == 0:
+            out.append((u, v, wa, wb, gap))
+    out.sort(key=lambda c: c[4])
+    return [(u, v, wa, wb) for (u, v, wa, wb, _) in out]
+
+
+def _refine_event(pathfun, tau_lo, tau_hi, u, v, wa, wb, direction, tau_tol,
+                  line_batch, lam_batch, _log):
+    """Bisect tau between on-line (2 sign changes in [wa,wb]) and merged (0).
+    For a re-entry event the roles of lo/hi are swapped internally (the pair is ON the
+    line at tau_hi).  Returns event dict or None if the classifier does not confirm."""
+    on_at_lo = (direction == 'departure')
+
+    def n_at(tau):
+        x, y = pathfun(tau)
+        return count_window(x, y, wa, wb, dt=0.02, depth=2, line_batch=line_batch)
+
+    nlo = n_at(tau_lo)
+    nhi = n_at(tau_hi)
+    want_lo, want_hi = (2, 0) if on_at_lo else (0, 2)
+    if not (nlo == want_lo and nhi == want_hi):
+        _log(f"    classifier rejects window [{wa:.3f},{wb:.3f}]: n(tau_lo)={nlo}, n(tau_hi)={nhi}")
+        return None
+    a, b = tau_lo, tau_hi
+    while b - a > tau_tol:
+        m = 0.5 * (a + b)
+        nm = n_at(m)
+        if (nm >= 2) == on_at_lo:
+            a = m
+        else:
+            b = m
+    tau_star = 0.5 * (a + b)
+    # collision height: dip location on the merged side
+    tau_merged = b if on_at_lo else a
+    xm, ym = pathfun(tau_merged)
+    t_star, f_star = dip_location(xm, ym, wa, wb, dt=0.02, levels=3, line_batch=line_batch)
+    # off-line pair location at the merged-side path GRID endpoint
+    tau_off = tau_hi if on_at_lo else tau_lo
+    xo, yo = pathfun(tau_off)
+    pair = find_offline_pair_near(xo, yo, t_star, t0=wa, t1=wb)
+    return {'type': direction, 'tau_star': tau_star, 'tau_star_uncertainty': 0.5 * (b - a),
+            't_colliding_pair': [u, v], 't_star': t_star, 'F_at_t_star': f_star,
+            'z_star': list(pathfun(tau_star)),
+            'offline_pair_at_tau': tau_off,
+            'offline_pair_sigma_t': list(pair) if pair else None,
+            'window': [wa, wb]}
+
+
+# ----------------------------------------------------------------------------
 # selftest: enumerator + theta transform + engine cross-checks
 # ----------------------------------------------------------------------------
 

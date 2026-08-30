@@ -1,0 +1,63 @@
+{
+ "experiment": "X-108002-structure-detector",
+ "claim": "T-108002",
+ "checks": [
+  {
+   "name": "B1_genuine_full_pass",
+   "ok": true,
+   "detail": "['A1_FINITE_RANK:HOLDS', 'A2_EFFECTIVITY:HOLDS', 'A3_INTEGRALITY:HOLDS', 'A4_PURITY:HOLDS', 'A5_HELD_OUT:HOLDS']"
+  },
+  {
+   "name": "B2_mobius_virtual_refusal",
+   "ok": true,
+   "detail": "refusal=A2_EFFECTIVITY, object={'numerator': '[1, -1]', 'denominator': '[1]', 'degree': 0, 'mode': 'coefficients'}"
+  },
+  {
+   "name": "B3_structureless_refusal",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B4_nonintegral_refusal",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B5_weight_violation_refusal",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B6_corrupted_tail_caught",
+   "ok": true,
+   "detail": "refusal=A1_FINITE_RANK"
+  },
+  {
+   "name": "B7_tensor_compatibility_holds",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B8_tensor_incompatibility_fails",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B9_ff_mobius_virtual_q2",
+   "ok": true,
+   "detail": "refusal=A2_EFFECTIVITY, object={'numerator': '[1, -2]', 'denominator': '[1]', 'degree': 0, 'mode': 'coefficients'}"
+  },
+  {
+   "name": "B9_ff_mobius_virtual_q3",
+   "ok": true,
+   "detail": "refusal=A2_EFFECTIVITY, object={'numerator': '[1, -3]', 'denominator': '[1]', 'degree': 0, 'mode': 'coefficients'}"
+  }
+ ],
+ "all_ok": true,
+ "extra": {
+  "ff_mobius_q2_numerator": "[1, -2]",
+  "ff_mobius_q3_numerator": "[1, -3]"
+ },
+ "arithmetic_class": "EXACT_RATIONAL",
+ "rh_established": false
+}
