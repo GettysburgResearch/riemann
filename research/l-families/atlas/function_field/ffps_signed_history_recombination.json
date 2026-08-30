@@ -1,0 +1,947 @@
+{
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": [
+    "EXACT_RATIONAL",
+    "CERTIFIED_INTEGER_COVERAGE"
+  ],
+  "finite_coverage": {
+    "analytic_imports_reproved_by_computation": false,
+    "complete_native_fibre_enumerated": false,
+    "largest_group_count": 4,
+    "largest_literal_history_count": 100,
+    "owner_panels": 2,
+    "signed_history_groups": 1
+  },
+  "firewalls": [
+    "literal Wick normalization is recovered by restoring each exact channel correction",
+    "native coefficient-family nonfactorization remains open",
+    "same residue cell does not mean same arithmetic pair",
+    "distinct arithmetic-pair cross terms are unchanged by history aggregation",
+    "principal paid error does not prove WCEQ, WCADD, WCCORR, WCKUM, native geometric descent, RH, or GRH",
+    "no independent new amplifier or new native coefficient family has been introduced"
+  ],
+  "held_out_owner_panel": {
+    "arithmetic_pairs": [
+      {
+        "M": 5382928835,
+        "N": 1300491157,
+        "P": 133,
+        "Q": 515,
+        "c": 59,
+        "cell": [
+          5,
+          44
+        ],
+        "d": 61,
+        "g": 53,
+        "left_core": 3127,
+        "left_owner_labels": [
+          7,
+          19
+        ],
+        "one_history_rescaled_norm_prefactor": "1/249353581680",
+        "physical_ratio": "462973/1916315",
+        "principal_correction_prefactor": "31/2168773556126940",
+        "right_core": 3233,
+        "right_owner_labels": [
+          5,
+          103
+        ],
+        "sigma": -1,
+        "tau": -1,
+        "u": 1,
+        "v": 1
+      },
+      {
+        "M": 6616298937,
+        "N": 1300491157,
+        "P": 133,
+        "Q": 633,
+        "c": 59,
+        "cell": [
+          5,
+          44
+        ],
+        "d": 61,
+        "g": 53,
+        "left_core": 3127,
+        "left_owner_labels": [
+          7,
+          19
+        ],
+        "one_history_rescaled_norm_prefactor": "1/306487023696",
+        "physical_ratio": "462973/2355393",
+        "principal_correction_prefactor": "31/2665696429181268",
+        "right_core": 3233,
+        "right_owner_labels": [
+          3,
+          211
+        ],
+        "sigma": -1,
+        "tau": -1,
+        "u": 1,
+        "v": 1
+      },
+      {
+        "M": 5382928835,
+        "N": 1896957026,
+        "P": 194,
+        "Q": 515,
+        "c": 59,
+        "cell": [
+          5,
+          44
+        ],
+        "d": 61,
+        "g": 53,
+        "left_core": 3127,
+        "left_owner_labels": [
+          2,
+          97
+        ],
+        "one_history_rescaled_norm_prefactor": "1/363718758240",
+        "physical_ratio": "675314/1916315",
+        "principal_correction_prefactor": "31/3163474209688920",
+        "right_core": 3233,
+        "right_owner_labels": [
+          5,
+          103
+        ],
+        "sigma": -1,
+        "tau": -1,
+        "u": 1,
+        "v": 1
+      },
+      {
+        "M": 6616298937,
+        "N": 1896957026,
+        "P": 194,
+        "Q": 633,
+        "c": 59,
+        "cell": [
+          5,
+          44
+        ],
+        "d": 61,
+        "g": 53,
+        "left_core": 3127,
+        "left_owner_labels": [
+          2,
+          97
+        ],
+        "one_history_rescaled_norm_prefactor": "1/447056260128",
+        "physical_ratio": "675314/2355393",
+        "principal_correction_prefactor": "31/3888309077151624",
+        "right_core": 3233,
+        "right_owner_labels": [
+          3,
+          211
+        ],
+        "sigma": -1,
+        "tau": -1,
+        "u": 1,
+        "v": 1
+      }
+    ],
+    "corner_factorization_after_absorbing_history_sums": "2*d*Re(z00*conj(z11)+z01*conj(z10)) = 4*d*Re(conj(A0)*A1)*Re(B0*conj(B1)), when z_ij=conj(A_i)*B_j",
+    "cutoff": 45,
+    "fibre": [
+      53,
+      59,
+      61,
+      -1,
+      -1
+    ],
+    "horizon": 8589934592,
+    "matrix_replay": {
+      "Hermitian_polynomial_channels": {
+        "Kummer": {
+          "correction_diagonal": [
+            "1210668/104371",
+            "1210668/104371",
+            "1210668/104371",
+            "1210668/104371"
+          ],
+          "grouped": [
+            [
+              "0",
+              "1614224/104371",
+              "1614224/104371",
+              "1614224/104371"
+            ],
+            [
+              "1614224/104371",
+              "0",
+              "1614224/104371",
+              "1614224/104371"
+            ],
+            [
+              "1614224/104371",
+              "1614224/104371",
+              "0",
+              "1614224/104371"
+            ],
+            [
+              "1614224/104371",
+              "1614224/104371",
+              "1614224/104371",
+              "0"
+            ]
+          ],
+          "literal": [
+            [
+              "1210668/104371",
+              "1614224/104371",
+              "1614224/104371",
+              "1614224/104371"
+            ],
+            [
+              "1614224/104371",
+              "1210668/104371",
+              "1614224/104371",
+              "1614224/104371"
+            ],
+            [
+              "1614224/104371",
+              "1614224/104371",
+              "1210668/104371",
+              "1614224/104371"
+            ],
+            [
+              "1614224/104371",
+              "1614224/104371",
+              "1614224/104371",
+              "1210668/104371"
+            ]
+          ]
+        },
+        "additive": {
+          "correction_diagonal": [
+            "41760/3599",
+            "41760/3599",
+            "41760/3599",
+            "41760/3599"
+          ],
+          "grouped": [
+            [
+              "0",
+              "55680/3599",
+              "55680/3599",
+              "55680/3599"
+            ],
+            [
+              "55680/3599",
+              "0",
+              "55680/3599",
+              "55680/3599"
+            ],
+            [
+              "55680/3599",
+              "55680/3599",
+              "0",
+              "55680/3599"
+            ],
+            [
+              "55680/3599",
+              "55680/3599",
+              "55680/3599",
+              "0"
+            ]
+          ],
+          "literal": [
+            [
+              "41760/3599",
+              "55680/3599",
+              "55680/3599",
+              "55680/3599"
+            ],
+            [
+              "55680/3599",
+              "41760/3599",
+              "55680/3599",
+              "55680/3599"
+            ],
+            [
+              "55680/3599",
+              "55680/3599",
+              "41760/3599",
+              "55680/3599"
+            ],
+            [
+              "55680/3599",
+              "55680/3599",
+              "55680/3599",
+              "41760/3599"
+            ]
+          ]
+        },
+        "principal": {
+          "correction_diagonal": [
+            "372/104371",
+            "372/104371",
+            "372/104371",
+            "372/104371"
+          ],
+          "grouped": [
+            [
+              "0",
+              "496/104371",
+              "496/104371",
+              "496/104371"
+            ],
+            [
+              "496/104371",
+              "0",
+              "496/104371",
+              "496/104371"
+            ],
+            [
+              "496/104371",
+              "496/104371",
+              "0",
+              "496/104371"
+            ],
+            [
+              "496/104371",
+              "496/104371",
+              "496/104371",
+              "0"
+            ]
+          ],
+          "literal": [
+            [
+              "372/104371",
+              "496/104371",
+              "496/104371",
+              "496/104371"
+            ],
+            [
+              "496/104371",
+              "372/104371",
+              "496/104371",
+              "496/104371"
+            ],
+            [
+              "496/104371",
+              "496/104371",
+              "372/104371",
+              "496/104371"
+            ],
+            [
+              "496/104371",
+              "496/104371",
+              "496/104371",
+              "372/104371"
+            ]
+          ]
+        }
+      },
+      "coefficient_variables": "symbolic complete native w_i; not declared independently admissible",
+      "group_coefficient_sums": [
+        "4",
+        "4",
+        "4",
+        "4"
+      ],
+      "group_energy_corrections": [
+        "12",
+        "12",
+        "12",
+        "12"
+      ],
+      "literal_group_energies": [
+        "4",
+        "4",
+        "4",
+        "4"
+      ],
+      "weights": {
+        "Kummer": "100889/104371",
+        "additive": "3480/3599",
+        "principal": "31/104371"
+      }
+    },
+    "name": "Y_2_33_59_61_held_out",
+    "native_rescaled_one_history_amplitude": "w_ij=(1/36)*gamma_ij(t)/(g*sqrt(P_i*Q_j)); gamma retains all non-Boolean source labels and weights",
+    "opposite_corner_pairs": [
+      {
+        "additive_cross_coefficient": "55680/3599",
+        "distinct_owner_label_count": 8,
+        "groups": [
+          0,
+          3
+        ],
+        "history_correction_on_this_cross_term": "0",
+        "principal_cross_coefficient": "496/104371"
+      },
+      {
+        "additive_cross_coefficient": "55680/3599",
+        "distinct_owner_label_count": 8,
+        "groups": [
+          1,
+          2
+        ],
+        "history_correction_on_this_cross_term": "0",
+        "principal_cross_coefficient": "496/104371"
+      }
+    ],
+    "same_cell": [
+      5,
+      44
+    ],
+    "surviving_scope": "distinct arithmetic pairs, unchanged by this history ledger; no complete-fibre sign or native coefficient freedom claimed"
+  },
+  "owner_panel": {
+    "arithmetic_pairs": [
+      {
+        "M": 1242913731,
+        "N": 392348555,
+        "P": 155,
+        "Q": 411,
+        "c": 43,
+        "cell": [
+          3,
+          36
+        ],
+        "d": 47,
+        "g": 37,
+        "left_core": 1591,
+        "left_owner_labels": [
+          5,
+          31
+        ],
+        "one_history_rescaled_norm_prefactor": "1/113026939920",
+        "physical_ratio": "286595/907899",
+        "principal_correction_prefactor": "44/766183723710615",
+        "right_core": 1739,
+        "right_owner_labels": [
+          3,
+          137
+        ],
+        "sigma": 1,
+        "tau": 1,
+        "u": 1,
+        "v": 1
+      },
+      {
+        "M": 1502988137,
+        "N": 392348555,
+        "P": 155,
+        "Q": 497,
+        "c": 43,
+        "cell": [
+          3,
+          36
+        ],
+        "d": 47,
+        "g": 37,
+        "left_core": 1591,
+        "left_owner_labels": [
+          5,
+          31
+        ],
+        "one_history_rescaled_norm_prefactor": "1/136677345840",
+        "physical_ratio": "286595/1097873",
+        "principal_correction_prefactor": "44/926504405557605",
+        "right_core": 1739,
+        "right_owner_labels": [
+          7,
+          71
+        ],
+        "sigma": 1,
+        "tau": 1,
+        "u": 1,
+        "v": 1
+      },
+      {
+        "M": 1242913731,
+        "N": 511318762,
+        "P": 202,
+        "Q": 411,
+        "c": 43,
+        "cell": [
+          3,
+          36
+        ],
+        "d": 47,
+        "g": 37,
+        "left_core": 1591,
+        "left_owner_labels": [
+          2,
+          101
+        ],
+        "one_history_rescaled_norm_prefactor": "1/147299624928",
+        "physical_ratio": "373498/907899",
+        "principal_correction_prefactor": "22/499255200611433",
+        "right_core": 1739,
+        "right_owner_labels": [
+          3,
+          137
+        ],
+        "sigma": 1,
+        "tau": 1,
+        "u": 1,
+        "v": 1
+      },
+      {
+        "M": 1502988137,
+        "N": 511318762,
+        "P": 202,
+        "Q": 497,
+        "c": 43,
+        "cell": [
+          3,
+          36
+        ],
+        "d": 47,
+        "g": 37,
+        "left_core": 1591,
+        "left_owner_labels": [
+          2,
+          101
+        ],
+        "one_history_rescaled_norm_prefactor": "1/178121444256",
+        "physical_ratio": "373498/1097873",
+        "principal_correction_prefactor": "22/603722225556891",
+        "right_core": 1739,
+        "right_owner_labels": [
+          7,
+          71
+        ],
+        "sigma": 1,
+        "tau": 1,
+        "u": 1,
+        "v": 1
+      }
+    ],
+    "corner_factorization_after_absorbing_history_sums": "2*d*Re(z00*conj(z11)+z01*conj(z10)) = 4*d*Re(conj(A0)*A1)*Re(B0*conj(B1)), when z_ij=conj(A_i)*B_j",
+    "cutoff": 32,
+    "fibre": [
+      37,
+      43,
+      47,
+      1,
+      1
+    ],
+    "horizon": 1073741824,
+    "matrix_replay": {
+      "Hermitian_polynomial_channels": {
+        "Kummer": {
+          "correction_diagonal": [
+            "3730512/325381",
+            "3730512/325381",
+            "3730512/325381",
+            "3730512/325381"
+          ],
+          "grouped": [
+            [
+              "0",
+              "4974016/325381",
+              "4974016/325381",
+              "4974016/325381"
+            ],
+            [
+              "4974016/325381",
+              "0",
+              "4974016/325381",
+              "4974016/325381"
+            ],
+            [
+              "4974016/325381",
+              "4974016/325381",
+              "0",
+              "4974016/325381"
+            ],
+            [
+              "4974016/325381",
+              "4974016/325381",
+              "4974016/325381",
+              "0"
+            ]
+          ],
+          "literal": [
+            [
+              "3730512/325381",
+              "4974016/325381",
+              "4974016/325381",
+              "4974016/325381"
+            ],
+            [
+              "4974016/325381",
+              "3730512/325381",
+              "4974016/325381",
+              "4974016/325381"
+            ],
+            [
+              "4974016/325381",
+              "4974016/325381",
+              "3730512/325381",
+              "4974016/325381"
+            ],
+            [
+              "4974016/325381",
+              "4974016/325381",
+              "4974016/325381",
+              "3730512/325381"
+            ]
+          ]
+        },
+        "additive": {
+          "correction_diagonal": [
+            "23184/2021",
+            "23184/2021",
+            "23184/2021",
+            "23184/2021"
+          ],
+          "grouped": [
+            [
+              "0",
+              "30912/2021",
+              "30912/2021",
+              "30912/2021"
+            ],
+            [
+              "30912/2021",
+              "0",
+              "30912/2021",
+              "30912/2021"
+            ],
+            [
+              "30912/2021",
+              "30912/2021",
+              "0",
+              "30912/2021"
+            ],
+            [
+              "30912/2021",
+              "30912/2021",
+              "30912/2021",
+              "0"
+            ]
+          ],
+          "literal": [
+            [
+              "23184/2021",
+              "30912/2021",
+              "30912/2021",
+              "30912/2021"
+            ],
+            [
+              "30912/2021",
+              "23184/2021",
+              "30912/2021",
+              "30912/2021"
+            ],
+            [
+              "30912/2021",
+              "30912/2021",
+              "23184/2021",
+              "30912/2021"
+            ],
+            [
+              "30912/2021",
+              "30912/2021",
+              "30912/2021",
+              "23184/2021"
+            ]
+          ]
+        },
+        "principal": {
+          "correction_diagonal": [
+            "2112/325381",
+            "2112/325381",
+            "2112/325381",
+            "2112/325381"
+          ],
+          "grouped": [
+            [
+              "0",
+              "2816/325381",
+              "2816/325381",
+              "2816/325381"
+            ],
+            [
+              "2816/325381",
+              "0",
+              "2816/325381",
+              "2816/325381"
+            ],
+            [
+              "2816/325381",
+              "2816/325381",
+              "0",
+              "2816/325381"
+            ],
+            [
+              "2816/325381",
+              "2816/325381",
+              "2816/325381",
+              "0"
+            ]
+          ],
+          "literal": [
+            [
+              "2112/325381",
+              "2816/325381",
+              "2816/325381",
+              "2816/325381"
+            ],
+            [
+              "2816/325381",
+              "2112/325381",
+              "2816/325381",
+              "2816/325381"
+            ],
+            [
+              "2816/325381",
+              "2816/325381",
+              "2112/325381",
+              "2816/325381"
+            ],
+            [
+              "2816/325381",
+              "2816/325381",
+              "2816/325381",
+              "2112/325381"
+            ]
+          ]
+        }
+      },
+      "coefficient_variables": "symbolic complete native w_i; not declared independently admissible",
+      "group_coefficient_sums": [
+        "4",
+        "4",
+        "4",
+        "4"
+      ],
+      "group_energy_corrections": [
+        "12",
+        "12",
+        "12",
+        "12"
+      ],
+      "literal_group_energies": [
+        "4",
+        "4",
+        "4",
+        "4"
+      ],
+      "weights": {
+        "Kummer": "310876/325381",
+        "additive": "1932/2021",
+        "principal": "176/325381"
+      }
+    },
+    "name": "Y_2_30_43_47",
+    "native_rescaled_one_history_amplitude": "w_ij=(1/36)*gamma_ij(t)/(g*sqrt(P_i*Q_j)); gamma retains all non-Boolean source labels and weights",
+    "opposite_corner_pairs": [
+      {
+        "additive_cross_coefficient": "30912/2021",
+        "distinct_owner_label_count": 8,
+        "groups": [
+          0,
+          3
+        ],
+        "history_correction_on_this_cross_term": "0",
+        "principal_cross_coefficient": "2816/325381"
+      },
+      {
+        "additive_cross_coefficient": "30912/2021",
+        "distinct_owner_label_count": 8,
+        "groups": [
+          1,
+          2
+        ],
+        "history_correction_on_this_cross_term": "0",
+        "principal_cross_coefficient": "2816/325381"
+      }
+    ],
+    "same_cell": [
+      3,
+      36
+    ],
+    "surviving_scope": "distinct arithmetic pairs, unchanged by this history ledger; no complete-fibre sign or native coefficient freedom claimed"
+  },
+  "principal_transfer": {
+    "derived_bound": "abs(C_P(Y)) <= (m_Y-1)*D_PP(Y) = Y^o(1)",
+    "finite_identity": "P_literal - P_grouped = sum_fibre integral p_fibre*Delta_fibre with the original T106140 measure",
+    "imported_estimates": "uniform history multiplicity m_Y=Y^o(1) from L102883 and D_PP(Y)=Y^o(1) from corrected L106121/T106140",
+    "quantifiers": "fixed horizon and all original masks/labels; complete conductor sum and Mellin integral; no extra pointwise bound or maximal/supremum operation",
+    "separate_additive_or_Kummer_payment": "NOT_PROVED; d/p has conductor size",
+    "uncentered_principal_moment": "exactly invariant: complete source member unchanged"
+  },
+  "rounding_contract": "exact integers and Fraction, no rounding; native Mellin amplitudes remain symbolic",
+  "schema": "ffps-signed-history-recombination-v1",
+  "signed_history_control": {
+    "additive_to_principal_atomic_weight_ratio": "17929210000/33669",
+    "cutoff": 512,
+    "horizon": 18014398509481984,
+    "matrix_replay": {
+      "Hermitian_polynomial_channels": {
+        "Kummer": {
+          "correction_diagonal": [
+            "-2366651275692/3596225945"
+          ],
+          "grouped": [
+            [
+              "0"
+            ]
+          ],
+          "literal": [
+            [
+              "-2366651275692/3596225945"
+            ]
+          ]
+        },
+        "additive": {
+          "correction_diagonal": [
+            "-353496000/537151"
+          ],
+          "grouped": [
+            [
+              "0"
+            ]
+          ],
+          "literal": [
+            [
+              "-353496000/537151"
+            ]
+          ]
+        },
+        "principal": {
+          "correction_diagonal": [
+            "-4444308/3596225945"
+          ],
+          "grouped": [
+            [
+              "0"
+            ]
+          ],
+          "literal": [
+            [
+              "-4444308/3596225945"
+            ]
+          ]
+        }
+      },
+      "coefficient_variables": "symbolic complete native w_i; not declared independently admissible",
+      "group_coefficient_sums": [
+        "4"
+      ],
+      "group_energy_corrections": [
+        "-660"
+      ],
+      "literal_group_energies": [
+        "676"
+      ],
+      "weights": {
+        "Kummer": "17929176331/17981129725",
+        "additive": "535600/537151",
+        "principal": "33669/17981129725"
+      }
+    },
+    "native_original_one_history_amplitude": "z_h=c_h*(1/441)*gamma(t)/(g^2*ell*rho*sqrt(P*Q))",
+    "native_rescaled_one_history_amplitude": "ztilde_h=c_h*(1/441)*gamma(t)/(g*sqrt(P*Q))",
+    "original_common_norm_prefactor": "1/53634407832483579107536790876233027410",
+    "physical_correction_prefactors_multiplying_abs_gamma_squared": {
+      "Kummer": "-3259850242/431602490938314907104075",
+      "additive": "-82400/10909697019179557599",
+      "principal": "-2494/175838051863757925116475"
+    },
+    "physical_pair": {
+      "M": 20268453388818635,
+      "N": 13606477271387286,
+      "P": 6,
+      "Q": 35,
+      "c": 1031,
+      "cell": [
+        230,
+        205
+      ],
+      "d": 521,
+      "g": 46189,
+      "left_core": 47620859,
+      "left_owner_labels": [
+        2,
+        3
+      ],
+      "physical_ratio": "6377766/9500435",
+      "right_core": 24064469,
+      "right_owner_labels": [
+        5,
+        7
+      ],
+      "sigma": -1,
+      "tau": -1,
+      "u": 1,
+      "v": 1
+    },
+    "rescaled_common_norm_prefactor": "1/87131179523598210",
+    "verdict": "the negative hundred-history block is entirely an equal-arithmetic-output correction; its principal-weighted global transfer is inherited-paid, not its separate additive/Kummer transfer"
+  },
+  "sources": {
+    "current_source_sha256_lf": {
+      "research/l-families/atlas/function_field/FFPS_SIGNED_HISTORY_RECOMBINATION.md": "431cd4287b7c2397af90895162fa403de925bef8230573d6eae280caef71d2d9",
+      "research/l-families/atlas/function_field/ffps_signed_history_recombination.py": "94e8da784e14d403ed3f3d3e22430f1aaa165835094ff545fa8b977cfcce4879",
+      "research/l-families/atlas/function_field/ffps_signed_history_recombination.sources.json": "a3ec5d493dce97cdd7f5ccd256a6d14b87177f54b168b5c3d12fc3fd685beb71",
+      "tests/test_ffps_signed_history_recombination.py": "fad8218d9cf2081ce6dda6365cd0766f16e4f9361d40367834d444343ce59c21"
+    },
+    "frozen_sources": [
+      {
+        "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+        "git_blob": "b8a6eed2c8dda7d0ed28a8dd18fc57387e4c2e7b",
+        "path": "claims/lemmas/L-102883-balanced-vaughan-free-energy-and-equal-product-cost-are-subpower.md",
+        "sha256_lf": "6aef66bcc1f856ef06a88e64bfee55203908e203b577a19606e2db768c1ef4c1"
+      },
+      {
+        "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+        "git_blob": "b319572db9ecc89bc528b85368cbf49aa13206d0",
+        "path": "claims/theorems/T-102990-equal-pair-boolean-core-incidence-frontier.md",
+        "sha256_lf": "40e60f09df50228500632b8371f994755078efd5a68cee0dfc3cad91eac8b669"
+      },
+      {
+        "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+        "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+        "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md",
+        "sha256_lf": "2f1a1dfea2cdce53d84160261f746cdf19a67169b41a9bbd93acd9b8ccdd50d8"
+      },
+      {
+        "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+        "git_blob": "955c3ed0363ca330439eedbae1bf0041a4c96468",
+        "path": "claims/lemmas/L-106121-bilateral-tensor-moment-has-a-paid-atomic-diagonal.md",
+        "sha256_lf": "24f8661d8b3007e4a76202ca53cc3a19eecd966f1a9dc7608b40d879699e2f0c"
+      },
+      {
+        "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+        "git_blob": "37722c3f36ec7d1681f34d4329a3795e5028f7ae",
+        "path": "claims/lemmas/L-106131-wick-normal-ordering-additive-kummer-decomposition.md",
+        "sha256_lf": "6d079d71c450c059275cf289cce1172db6a0074fd90e194d3f42da8af3850099"
+      },
+      {
+        "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+        "git_blob": "85c4ef92ead7d8b235f9c195c3c0acd16d16030f",
+        "path": "claims/lemmas/L-106191-source-dual-centered-double-incidence-correlation.md",
+        "sha256_lf": "3b87066f23d7a336ae30bee64ff6820d405ade1c321ef4600baf8a4cf0f04ebd"
+      },
+      {
+        "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+        "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+        "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md",
+        "sha256_lf": "54592d5d8d67dd797f9aa2d134ab4825e8ccc52c3ed18edefaf226ea0852eb1d"
+      },
+      {
+        "commit": "5dc85cd5e38384efc3b8a65496f03e1c2ae599e3",
+        "git_blob": "b12efe62a07fa12843937f715adaa87ae769f2e8",
+        "path": "research/l-families/atlas/function_field/FFPS_LIVE_SHARED_FIBRE_COLLISIONS.md",
+        "sha256_lf": "edb5b5ab4e8fde27207bb304a7c9e4c249e66d71d2b55811ebd79db361cace7c"
+      },
+      {
+        "commit": "5dc85cd5e38384efc3b8a65496f03e1c2ae599e3",
+        "git_blob": "641a746ca6a4af2d041e238399c55dfe8e5c6424",
+        "path": "research/l-families/atlas/function_field/ffps_live_shared_fibre_collisions.py",
+        "sha256_lf": "a6af6e6e846cccf8fe017864d892f941735501c4a80836ef8e1edc5edb77c8a1"
+      }
+    ],
+    "upstream_collision_primitive_blobs_reauthenticated": 11
+  }
+}
