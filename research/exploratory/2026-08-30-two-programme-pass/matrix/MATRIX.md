@@ -20,6 +20,7 @@ o=open. Witness index below. rh_established=false throughout.
 | ff_elliptic_f5 | H(p) | H(p) | H(w) | H(w) | H(p) | H(p) | H(p) | H(w) | H(i) | H(p) | THEOREM |
 | ihara_nonramanujan | H(p) | H(w) | H(w) | H(w) | H(p) | H(p) | H(p) | H(w) | H(w) | F(r) | FALSE |
 | ihara_ramanujan | H(w) | H(w) | H(w) | H(w) | H(p) | H(i) | H(p) | H(w) | H(p) | H(p) | THEOREM |
+| native_imports | -(o) | -(o) | -(o) | -(o) | -(o) | -(o) | -(o) | -(o) | -(o) | -(o) | NOT_FORMULATED |
 | zeta | H(i) | H(p) | H(i) | H(w) | H(w) | H(i) | H(i) | H(w) | H(i) | C(o) | CONJECTURE |
 
 ## Mechanism view (#763)
@@ -37,6 +38,7 @@ o=open. Witness index below. rh_established=false throughout.
 | ff_elliptic_f5 | H(w) | H(p) | H(w) | H(p) | H(w) | H(p) | THEOREM |
 | ihara_nonramanujan | H(w) | H(p) | H(p) | F(r) | H(w) | H(w) | FALSE |
 | ihara_ramanujan | H(w) | H(p) | H(p) | H(p) | H(w) | H(i) | THEOREM |
+| native_imports | -(o) | -(o) | -(o) | -(o) | -(o) | -(o) | NOT_FORMULATED |
 | zeta | H(i) | H(i) | H(i) | O(o) | H(w) | H(i) | CONJECTURE |
 
 ## Witness index (every FAILS / REFUTED_BY_WITNESS cell)
