@@ -1,0 +1,140 @@
+{
+  "all_traces_counterfeit": {
+    "common_power_traces_1_to_8": [
+      "0",
+      "2",
+      "0",
+      "2",
+      "0",
+      "2",
+      "0",
+      "2"
+    ],
+    "cycle_F": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "cycle_P2": "1",
+    "cycle_diagonal_traces_1_to_8": [
+      "0",
+      "2",
+      "0",
+      "2",
+      "0",
+      "2",
+      "0",
+      "2"
+    ],
+    "cycle_single_cell_Wick_at_d24over35": "0",
+    "incorrect_pushed_P2_extraction": "0",
+    "intertwiner": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "intertwiner_determinant": -2,
+    "pushed_Adams2_trace1": "2",
+    "source_Adams2_trace1": "0",
+    "split_F": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    "split_P2": "0",
+    "split_diagonal_traces_1_to_8": [
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2"
+    ],
+    "split_single_cell_Wick_at_d24over35": "-48/35",
+    "universal_all_n_equality_proof": "explicit invertible intertwiner, not the eight displayed traces"
+  },
+  "census_order_max": 6,
+  "census_sha256": "e6f70393b72cb27e4ee27c2547c3019b4de3fcc68db6ceed710b0ac6f262a2cd",
+  "census_source_count": 442,
+  "firewalls": {
+    "Adams": "source local Adams before pushforward; pushed Adams has extra orbit terms",
+    "Hermitian_partner": "conjugate traces must be specified; dual is not automatically conjugate",
+    "RH_GRH": "not proved",
+    "diagonal": "tensor over retained source algebra, not aggregate scalar square",
+    "native_uniform_realization": "open",
+    "novelty": "not claimed; classical algebra used to sharpen the source interface",
+    "partial_Frobenius": "not required on literal diagonal, following frozen #760",
+    "rank_tax": "faithful source-algebra module only, not arbitrary nonlinear statistics",
+    "signed_trace_estimate": "open"
+  },
+  "heldout_five_cycle": {
+    "orbits": [
+      [
+        5,
+        "-3"
+      ]
+    ],
+    "partial_commutator_size": 10,
+    "sigma": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "weights": [
+      "1",
+      "2",
+      "3",
+      "-1",
+      "1/2"
+    ]
+  },
+  "schema": "source-algebra-diagonal-adams-adapter-v1",
+  "scope": "exact finite Frobenius-set algebra; native source realization remains open",
+  "source_lock": {
+    "authenticated_frozen_sources": [
+      {
+        "commit": "6675c19f20760301d8c91dedc4a7836170003512",
+        "git_blob": "3e7fff53f5cdbb3a660b24b2e765f4ac35c434c3",
+        "path": "research/l-families/atlas/function_field/FFPS_SHARED_FIBRE_WICK_OCCUPANCY_SPECTRUM.md",
+        "sha256_lf": "458281cb5e7cbae14ebb594053cb31c9d52f340e0dd17fe15828922b36b608fc"
+      },
+      {
+        "commit": "3a595dda92ef827a41e50d2395309692a93748ad",
+        "git_blob": "884f2fc949bbd5b076df0c0c7afd4711f81ce37e",
+        "path": "research/l-families/atlas/function_field/FFPS_RELATIVE_EXTERNAL_DIAGONAL_ADAMS.md",
+        "sha256_lf": "320e202fea3ae0b08c5a8718834ae50f66e92db7a369d51878024fa1bfe3ed2e"
+      },
+      {
+        "commit": "3a595dda92ef827a41e50d2395309692a93748ad",
+        "git_blob": "37647db8c43b983dc64bfc71a0c112539119a98a",
+        "path": "research/l-families/atlas/function_field/FFPS_RELATIVE_TRACE_TENSOR_CLOSURE.md",
+        "sha256_lf": "64d4b74f494fc76648cdd8c500f3e6f2b384ef740bc025f802a0fec05d5508b0"
+      }
+    ],
+    "current_files_sha256_lf": {
+      "research/riemann-structures/SOURCE_ALGEBRA_DIAGONAL_ADAMS_ADAPTER.md": "e2a342eefd5bbb199ae2328e1472a7d9b5b8565a5674ca3d04bd25753608ed32",
+      "research/riemann-structures/source_algebra_diagonal_adams_adapter.py": "20797ed035ea97896ec23881c205a9ad0fee1de42a77e2f78bffef5add5c405b",
+      "research/riemann-structures/source_algebra_diagonal_adams_adapter.sources.json": "4f5482f041e2b9f021bdad993a3ff5a15fcc2952146ae18e5f7a4c935a779a3d",
+      "tests/test_source_algebra_diagonal_adams_adapter.py": "baa38c9ecdb6bdd4fb7cd987943198dcbb8c6ba7f3720f5869be3e24f78fff6a"
+    }
+  }
+}
