@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "arithmetic_class": "NON_DIRECTED_HIGH_PRECISION",
+  "dps": 40,
+  "mpmath_version": "1.3.0",
+  "note": "see module docstring; every statement is numerical at stated precision",
+  "rh_established": false
+ },
+ "path_A_resolution": {
+  "x": 0.35,
+  "y": 1.02,
+  "window": [
+   0.05,
+   35.0
+  ],
+  "n_line": 13,
+  "n_box": 15,
+  "disc": 2,
+  "resolution": "PERSISTS; subwindow discs recorded",
+  "subwindows": {
+   "(0.05,12.0)": 0,
+   "(12.0,24.0)": 0,
+   "(24.0,30.0)": 2,
+   "(30.0,35.0)": 0
+  }
+ }
+}
