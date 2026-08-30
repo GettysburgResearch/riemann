@@ -2,9 +2,16 @@
 import hashlib
 import itertools
 import json
+import math
 from pathlib import Path
 
 CLASSIFICATION = "PASS_T108420_HELLINGER_MIXTURE_GLUE"
+
+
+def root(x):
+    r = math.isqrt(x)
+    assert r * r == x
+    return r
 
 
 def run():
@@ -13,12 +20,12 @@ def run():
 
     # Pointwise affinity inequality:
     #   sum_i sqrt(a_i b_i) <= sqrt(sum_i a_i sum_i b_i).
-    # All values are perfect squares, so this is exact integer arithmetic.
+    # All source entries are perfect squares, so the check is integral.
     for a in itertools.product(values, repeat=3):
         for b in itertools.product(values, repeat=3):
             if cauchy_checks >= 2000:
                 break
-            affinity = sum(int(x**0.5) * int(y**0.5) for x, y in zip(a, b))
+            affinity = sum(root(x) * root(y) for x, y in zip(a, b))
             assert affinity * affinity <= sum(a) * sum(b)
             cauchy_checks += 1
         if cauchy_checks >= 2000:
@@ -26,24 +33,23 @@ def run():
     assert cauchy_checks == 2000
 
     pushforward_checks = 0
-    # Two two-point fibres map to two physical cells. Check exact contraction
-    # of squared Hellinger distance under this deterministic map.
+    # Two two-point fibres map to two physical cells. For each fibre, exact
+    # Cauchy is equivalent to the increase of Hellinger affinity and hence to
+    # contraction of squared Hellinger distance.
     for a in itertools.product(values, repeat=4):
         for b in itertools.product(values, repeat=4):
             if pushforward_checks >= 1000:
                 break
-            source_affinity = sum(int(x**0.5) * int(y**0.5) for x, y in zip(a, b))
-            source_h2 = sum(a) + sum(b) - 2 * source_affinity
-
-            pa = (a[0] + a[1], a[2] + a[3])
-            pb = (b[0] + b[1], b[2] + b[3])
-            # Avoid floating point by checking each grouped Cauchy inequality
-            # and then using the resulting lower bound for the affinity.
-            lower_affinity = 0.0
-            for i in range(2):
-                lower_affinity += (pa[i] * pb[i]) ** 0.5
-            pushed_h2 = sum(pa) + sum(pb) - 2 * lower_affinity
-            assert pushed_h2 <= source_h2 + 1e-12
+            for lo in (0, 2):
+                source_affinity = (
+                    root(a[lo]) * root(b[lo])
+                    + root(a[lo + 1]) * root(b[lo + 1])
+                )
+                pushed_product = (
+                    (a[lo] + a[lo + 1])
+                    * (b[lo] + b[lo + 1])
+                )
+                assert source_affinity * source_affinity <= pushed_product
             pushforward_checks += 1
         if pushforward_checks >= 1000:
             break
