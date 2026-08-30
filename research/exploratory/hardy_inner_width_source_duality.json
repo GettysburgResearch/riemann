@@ -1,0 +1,2132 @@
+{
+  "MT_controls": [
+    {
+      "all_cross_Gram_entries_exact": true,
+      "dimension": 1,
+      "normalization": "multiply column j by sqrt(2*y_j); square roots not numerically evaluated",
+      "poles": [
+        {
+          "im": "0",
+          "re": "1"
+        }
+      ],
+      "rational_columns_checked": 1,
+      "unnormalized_squared_norms": [
+        "1/2"
+      ]
+    },
+    {
+      "all_cross_Gram_entries_exact": true,
+      "dimension": 3,
+      "normalization": "multiply column j by sqrt(2*y_j); square roots not numerically evaluated",
+      "poles": [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "1",
+          "re": "1"
+        },
+        {
+          "im": "2",
+          "re": "1"
+        }
+      ],
+      "rational_columns_checked": 3,
+      "unnormalized_squared_norms": [
+        "1/2",
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "all_cross_Gram_entries_exact": true,
+      "dimension": 2,
+      "normalization": "multiply column j by sqrt(2*y_j); square roots not numerically evaluated",
+      "poles": [
+        {
+          "im": "1",
+          "re": "1"
+        },
+        {
+          "im": "1",
+          "re": "1"
+        }
+      ],
+      "rational_columns_checked": 2,
+      "unnormalized_squared_norms": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "all_cross_Gram_entries_exact": true,
+      "dimension": 4,
+      "normalization": "multiply column j by sqrt(2*y_j); square roots not numerically evaluated",
+      "poles": [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "1"
+        }
+      ],
+      "rational_columns_checked": 4,
+      "unnormalized_squared_norms": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "all_cross_Gram_entries_exact": true,
+      "dimension": 3,
+      "normalization": "multiply column j by sqrt(2*y_j); square roots not numerically evaluated",
+      "poles": [
+        {
+          "im": "-2",
+          "re": "1/4"
+        },
+        {
+          "im": "3",
+          "re": "1/2"
+        },
+        {
+          "im": "-2",
+          "re": "1/4"
+        }
+      ],
+      "rational_columns_checked": 3,
+      "unnormalized_squared_norms": [
+        "2",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "all_cross_Gram_entries_exact": true,
+      "dimension": 4,
+      "normalization": "multiply column j by sqrt(2*y_j); square roots not numerically evaluated",
+      "poles": [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "1/8",
+          "re": "1"
+        },
+        {
+          "im": "-1",
+          "re": "2"
+        },
+        {
+          "im": "2",
+          "re": "3/2"
+        }
+      ],
+      "rational_columns_checked": 4,
+      "unnormalized_squared_norms": [
+        "1/2",
+        "1/2",
+        "1/4",
+        "1/3"
+      ]
+    }
+  ],
+  "arithmetic_class": "EXACT_RATIONAL",
+  "arithmetic_domain": "Gaussian rationals; exact Fraction pairs",
+  "artifact_sha256_lf": {
+    "research/exploratory/HARDY_INNER_WIDTH_SOURCE_DUALITY.md": "a946e53b956bc94b39687dffe59f0eb97d33948ace996a6d9f0797d71b20acd5",
+    "research/exploratory/hardy_inner_width_source_duality.py": "1b06c3bab64266be56a3bc86c0d8abedcc5c5c3af91963b0cee4716ecc257a3a",
+    "research/exploratory/hardy_inner_width_source_duality.sources.json": "3e44ac7eea2d22198607a6508e756783d99225e983a14666678e9877ae6b006a",
+    "tests/test_hardy_inner_width_source_duality.py": "33d22640b7628ff5bebd1c7f42671883918fb08e0d60dc1fa450e2d6cc802843"
+  },
+  "caps": {
+    "denominator_degree": 4,
+    "input_bits": 16,
+    "intermediate_bits": 2048,
+    "numerator_degree": 2,
+    "rational_degree": 8
+  },
+  "coverage": {
+    "MT_cases": 6,
+    "MT_columns": 17,
+    "bound_rows": 12,
+    "dual_source_cases": 6,
+    "unbounded_search": false
+  },
+  "dual_source_controls": [
+    {
+      "A_dual": [
+        [
+          {
+            "im": "0",
+            "re": "1"
+          }
+        ]
+      ],
+      "C_A_commute": true,
+      "C_A_noncommutation_with_G": [
+        false,
+        false
+      ],
+      "C_outer_dual": [
+        [
+          {
+            "im": "-2/3",
+            "re": "1"
+          }
+        ]
+      ],
+      "G_derivative": [
+        [
+          {
+            "im": "0",
+            "re": "1/2"
+          }
+        ]
+      ],
+      "HT4_A": [
+        [
+          {
+            "im": "0",
+            "re": "1"
+          }
+        ]
+      ],
+      "HT4_G": [
+        [
+          {
+            "im": "0",
+            "re": "1/2"
+          }
+        ]
+      ],
+      "J_value": [
+        [
+          {
+            "im": "0",
+            "re": "1"
+          }
+        ]
+      ],
+      "R_source_dual": [
+        [
+          {
+            "im": "-2/3",
+            "re": "1"
+          }
+        ]
+      ],
+      "correct_physical_charge": {
+        "im": "0",
+        "re": "1"
+      },
+      "correct_source_determinant_at_half": {
+        "im": "0",
+        "re": "1/2"
+      },
+      "denominator": [
+        {
+          "im": "0",
+          "re": "1"
+        }
+      ],
+      "incorrect_outer_metric_dropped": {
+        "im": "0",
+        "re": "91/216"
+      },
+      "inverse_metric_deficit": {
+        "principal_minors": [
+          "0"
+        ],
+        "rank": 0
+      },
+      "literal_and_reduced_band_surrogate": {
+        "im": "0",
+        "re": "7/24"
+      },
+      "numerator": [],
+      "physical_deficit": {
+        "principal_minors": [
+          "0"
+        ],
+        "rank": 0
+      },
+      "source_rational_identity_not_only_fitted_jets": true,
+      "weight_is_abstract_not_a_computed_band": true
+    },
+    {
+      "A_dual": [
+        [
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ]
+      ],
+      "C_A_commute": true,
+      "C_A_noncommutation_with_G": [
+        false,
+        false
+      ],
+      "C_outer_dual": [
+        [
+          {
+            "im": "-2/3",
+            "re": "1"
+          }
+        ]
+      ],
+      "G_derivative": [
+        [
+          {
+            "im": "0",
+            "re": "1/2"
+          }
+        ]
+      ],
+      "HT4_A": [
+        [
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ]
+      ],
+      "HT4_G": [
+        [
+          {
+            "im": "0",
+            "re": "1/2"
+          }
+        ]
+      ],
+      "J_value": [
+        [
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ]
+      ],
+      "R_source_dual": [
+        [
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ]
+      ],
+      "correct_physical_charge": {
+        "im": "0",
+        "re": "0"
+      },
+      "correct_source_determinant_at_half": {
+        "im": "0",
+        "re": "1"
+      },
+      "denominator": [
+        {
+          "im": "0",
+          "re": "1"
+        }
+      ],
+      "incorrect_outer_metric_dropped": {
+        "im": "0",
+        "re": "0"
+      },
+      "inverse_metric_deficit": {
+        "principal_minors": [
+          "2"
+        ],
+        "rank": 1
+      },
+      "literal_and_reduced_band_surrogate": {
+        "im": "0",
+        "re": "0"
+      },
+      "numerator": [
+        {
+          "im": "0",
+          "re": "1"
+        }
+      ],
+      "physical_deficit": {
+        "principal_minors": [
+          "1/2"
+        ],
+        "rank": 1
+      },
+      "source_rational_identity_not_only_fitted_jets": true,
+      "weight_is_abstract_not_a_computed_band": true
+    },
+    {
+      "A_dual": [
+        [
+          {
+            "im": "0",
+            "re": "-1/3"
+          },
+          {
+            "im": "4/9",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "-1/3"
+          }
+        ]
+      ],
+      "C_A_commute": true,
+      "C_A_noncommutation_with_G": [
+        true,
+        true
+      ],
+      "C_outer_dual": [
+        [
+          {
+            "im": "-2/3",
+            "re": "1"
+          },
+          {
+            "im": "-1/3",
+            "re": "-2/9"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-2/3",
+            "re": "1"
+          }
+        ]
+      ],
+      "G_derivative": [
+        [
+          {
+            "im": "0",
+            "re": "1/2"
+          },
+          {
+            "im": "-1/4",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "1/4",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "1/4"
+          }
+        ]
+      ],
+      "HT4_A": [
+        [
+          {
+            "im": "0",
+            "re": "-1/3"
+          },
+          {
+            "im": "0",
+            "re": "-4/9"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "-1/3"
+          }
+        ]
+      ],
+      "HT4_G": [
+        [
+          {
+            "im": "0",
+            "re": "1/2"
+          },
+          {
+            "im": "0",
+            "re": "1/4"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "1/4"
+          },
+          {
+            "im": "0",
+            "re": "1/4"
+          }
+        ]
+      ],
+      "J_value": [
+        [
+          {
+            "im": "0",
+            "re": "-1/3"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "-4/9",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "-1/3"
+          }
+        ]
+      ],
+      "R_source_dual": [
+        [
+          {
+            "im": "2/9",
+            "re": "-1/3"
+          },
+          {
+            "im": "5/9",
+            "re": "10/27"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "2/9",
+            "re": "-1/3"
+          }
+        ]
+      ],
+      "correct_physical_charge": {
+        "im": "0",
+        "re": "82/81"
+      },
+      "correct_source_determinant_at_half": {
+        "im": "0",
+        "re": "161/324"
+      },
+      "denominator": [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "1"
+        }
+      ],
+      "incorrect_outer_metric_dropped": {
+        "im": "0",
+        "re": "388/729"
+      },
+      "inverse_metric_deficit": {
+        "principal_minors": [
+          "256/81",
+          "64/9",
+          "0"
+        ],
+        "rank": 1
+      },
+      "literal_and_reduced_band_surrogate": {
+        "im": "0",
+        "re": "271/1053"
+      },
+      "numerator": [
+        {
+          "im": "0",
+          "re": "2"
+        }
+      ],
+      "physical_deficit": {
+        "principal_minors": [
+          "4/9",
+          "4/81",
+          "0"
+        ],
+        "rank": 1
+      },
+      "source_rational_identity_not_only_fitted_jets": true,
+      "weight_is_abstract_not_a_computed_band": true
+    },
+    {
+      "A_dual": [
+        [
+          {
+            "im": "0",
+            "re": "-1/3"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "2/5",
+            "re": "-1/5"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "8/13",
+            "re": "1/13"
+          }
+        ]
+      ],
+      "C_A_commute": true,
+      "C_A_noncommutation_with_G": [
+        true,
+        true
+      ],
+      "C_outer_dual": [
+        [
+          {
+            "im": "-2/3",
+            "re": "1"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-9/10",
+            "re": "7/10"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-12/13",
+            "re": "5/13"
+          }
+        ]
+      ],
+      "G_derivative": [
+        [
+          {
+            "im": "0",
+            "re": "1/2"
+          },
+          {
+            "im": "-1/5",
+            "re": "2/5"
+          },
+          {
+            "im": "-1/4",
+            "re": "1/4"
+          }
+        ],
+        [
+          {
+            "im": "1/5",
+            "re": "2/5"
+          },
+          {
+            "im": "0",
+            "re": "1/2"
+          },
+          {
+            "im": "-1/5",
+            "re": "2/5"
+          }
+        ],
+        [
+          {
+            "im": "1/4",
+            "re": "1/4"
+          },
+          {
+            "im": "1/5",
+            "re": "2/5"
+          },
+          {
+            "im": "0",
+            "re": "1/2"
+          }
+        ]
+      ],
+      "HT4_A": [
+        [
+          {
+            "im": "0",
+            "re": "-1/3"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "2/5",
+            "re": "-1/5"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "8/13",
+            "re": "1/13"
+          }
+        ]
+      ],
+      "HT4_G": [
+        [
+          {
+            "im": "0",
+            "re": "1/2"
+          },
+          {
+            "im": "-1/5",
+            "re": "2/5"
+          },
+          {
+            "im": "-1/4",
+            "re": "1/4"
+          }
+        ],
+        [
+          {
+            "im": "1/5",
+            "re": "2/5"
+          },
+          {
+            "im": "0",
+            "re": "1/2"
+          },
+          {
+            "im": "-1/5",
+            "re": "2/5"
+          }
+        ],
+        [
+          {
+            "im": "1/4",
+            "re": "1/4"
+          },
+          {
+            "im": "1/5",
+            "re": "2/5"
+          },
+          {
+            "im": "0",
+            "re": "1/2"
+          }
+        ]
+      ],
+      "J_value": [
+        [
+          {
+            "im": "0",
+            "re": "-1/3"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-2/5",
+            "re": "-1/5"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-8/13",
+            "re": "1/13"
+          }
+        ]
+      ],
+      "R_source_dual": [
+        [
+          {
+            "im": "2/9",
+            "re": "-1/3"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "23/50",
+            "re": "11/50"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "28/169",
+            "re": "101/169"
+          }
+        ]
+      ],
+      "correct_physical_charge": {
+        "im": "0",
+        "re": "235/117"
+      },
+      "correct_source_determinant_at_half": {
+        "im": "0",
+        "re": "233/936"
+      },
+      "denominator": [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "1",
+          "re": "1"
+        },
+        {
+          "im": "2",
+          "re": "1"
+        }
+      ],
+      "incorrect_outer_metric_dropped": {
+        "im": "0",
+        "re": "3160933/3832920"
+      },
+      "inverse_metric_deficit": {
+        "principal_minors": [
+          "160/9",
+          "40",
+          "160/13",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "rank": 1
+      },
+      "literal_and_reduced_band_surrogate": {
+        "im": "0",
+        "re": "10805/21294"
+      },
+      "numerator": [
+        {
+          "im": "0",
+          "re": "2"
+        }
+      ],
+      "physical_deficit": {
+        "principal_minors": [
+          "4/9",
+          "2/5",
+          "4/13",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "rank": 1
+      },
+      "source_rational_identity_not_only_fitted_jets": true,
+      "weight_is_abstract_not_a_computed_band": true
+    },
+    {
+      "A_dual": [
+        [
+          {
+            "im": "-24/41",
+            "re": "-49/123"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-1/10",
+            "re": "-1/5"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ]
+      ],
+      "C_A_commute": true,
+      "C_A_noncommutation_with_G": [
+        true,
+        true
+      ],
+      "C_outer_dual": [
+        [
+          {
+            "im": "4/41",
+            "re": "46/41"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-9/10",
+            "re": "7/10"
+          },
+          {
+            "im": "-3/25",
+            "re": "-17/50"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-9/10",
+            "re": "7/10"
+          }
+        ]
+      ],
+      "G_derivative": [
+        [
+          {
+            "im": "0",
+            "re": "1"
+          },
+          {
+            "im": "-4/15",
+            "re": "2/15"
+          },
+          {
+            "im": "4/75",
+            "re": "-16/225"
+          }
+        ],
+        [
+          {
+            "im": "4/15",
+            "re": "2/15"
+          },
+          {
+            "im": "0",
+            "re": "1/2"
+          },
+          {
+            "im": "-1/4",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "-4/75",
+            "re": "-16/225"
+          },
+          {
+            "im": "1/4",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "1/4"
+          }
+        ]
+      ],
+      "HT4_A": [
+        [
+          {
+            "im": "-24/41",
+            "re": "-49/123"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-1/5",
+            "re": "1/10"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ]
+      ],
+      "HT4_G": [
+        [
+          {
+            "im": "0",
+            "re": "1"
+          },
+          {
+            "im": "-4/15",
+            "re": "2/15"
+          },
+          {
+            "im": "-16/225",
+            "re": "-4/75"
+          }
+        ],
+        [
+          {
+            "im": "4/15",
+            "re": "2/15"
+          },
+          {
+            "im": "0",
+            "re": "1/2"
+          },
+          {
+            "im": "0",
+            "re": "1/4"
+          }
+        ],
+        [
+          {
+            "im": "16/225",
+            "re": "-4/75"
+          },
+          {
+            "im": "0",
+            "re": "1/4"
+          },
+          {
+            "im": "0",
+            "re": "1/4"
+          }
+        ]
+      ],
+      "J_value": [
+        [
+          {
+            "im": "24/41",
+            "re": "-49/123"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "1/10",
+            "re": "-1/5"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ]
+      ],
+      "R_source_dual": [
+        [
+          {
+            "im": "-3508/5043",
+            "re": "-1966/5043"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "11/100",
+            "re": "-23/100"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ]
+      ],
+      "correct_physical_charge": {
+        "im": "0",
+        "re": "46/41"
+      },
+      "correct_source_determinant_at_half": {
+        "im": "0",
+        "re": "77/164"
+      },
+      "denominator": [
+        {
+          "im": "1",
+          "re": "1"
+        },
+        {
+          "im": "1",
+          "re": "1"
+        },
+        {
+          "im": "-2",
+          "re": "1/2"
+        }
+      ],
+      "incorrect_outer_metric_dropped": {
+        "im": "0",
+        "re": "23881/67240"
+      },
+      "inverse_metric_deficit": {
+        "principal_minors": [
+          "41400/56129",
+          "194/37",
+          "360/37",
+          "36000/56129",
+          "259200/56129",
+          "25920/1369",
+          "0"
+        ],
+        "rank": 2
+      },
+      "literal_and_reduced_band_surrogate": {
+        "im": "0",
+        "re": "23/82"
+      },
+      "numerator": [
+        {
+          "im": "0",
+          "re": "2"
+        },
+        {
+          "im": "1",
+          "re": "1"
+        }
+      ],
+      "physical_deficit": {
+        "principal_minors": [
+          "184/369",
+          "1/2",
+          "9/40",
+          "296/1845",
+          "898/9225",
+          "1/20",
+          "0"
+        ],
+        "rank": 2
+      },
+      "source_rational_identity_not_only_fitted_jets": true,
+      "weight_is_abstract_not_a_computed_band": true
+    },
+    {
+      "A_dual": [
+        [
+          {
+            "im": "12/29",
+            "re": "-1/29"
+          },
+          {
+            "im": "252/841",
+            "re": "240/841"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "12/29",
+            "re": "-1/29"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "48/113",
+            "re": "71/113"
+          },
+          {
+            "im": "-180/12769",
+            "re": "1344/12769"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "48/113",
+            "re": "71/113"
+          }
+        ]
+      ],
+      "C_A_commute": true,
+      "C_A_noncommutation_with_G": [
+        true,
+        true
+      ],
+      "C_outer_dual": [
+        [
+          {
+            "im": "-2/3",
+            "re": "1"
+          },
+          {
+            "im": "-1/3",
+            "re": "-2/9"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-2/3",
+            "re": "1"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-17/25",
+            "re": "6/25"
+          },
+          {
+            "im": "27/625",
+            "re": "-86/625"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-17/25",
+            "re": "6/25"
+          }
+        ]
+      ],
+      "G_derivative": [
+        [
+          {
+            "im": "0",
+            "re": "1/2"
+          },
+          {
+            "im": "-1/4",
+            "re": "0"
+          },
+          {
+            "im": "-1/6",
+            "re": "1/6"
+          },
+          {
+            "im": "0",
+            "re": "-1/18"
+          }
+        ],
+        [
+          {
+            "im": "1/4",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "1/4"
+          },
+          {
+            "im": "0",
+            "re": "1/18"
+          },
+          {
+            "im": "-1/54",
+            "re": "-1/54"
+          }
+        ],
+        [
+          {
+            "im": "1/6",
+            "re": "1/6"
+          },
+          {
+            "im": "0",
+            "re": "1/18"
+          },
+          {
+            "im": "0",
+            "re": "1/4"
+          },
+          {
+            "im": "-1/16",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "-1/18"
+          },
+          {
+            "im": "1/54",
+            "re": "-1/54"
+          },
+          {
+            "im": "1/16",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "1/32"
+          }
+        ]
+      ],
+      "HT4_A": [
+        [
+          {
+            "im": "12/29",
+            "re": "-1/29"
+          },
+          {
+            "im": "240/841",
+            "re": "-252/841"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "12/29",
+            "re": "-1/29"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "48/113",
+            "re": "71/113"
+          },
+          {
+            "im": "1344/12769",
+            "re": "180/12769"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "48/113",
+            "re": "71/113"
+          }
+        ]
+      ],
+      "HT4_G": [
+        [
+          {
+            "im": "0",
+            "re": "1/2"
+          },
+          {
+            "im": "0",
+            "re": "1/4"
+          },
+          {
+            "im": "-1/6",
+            "re": "1/6"
+          },
+          {
+            "im": "-1/18",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "1/4"
+          },
+          {
+            "im": "0",
+            "re": "1/4"
+          },
+          {
+            "im": "-1/18",
+            "re": "0"
+          },
+          {
+            "im": "-1/54",
+            "re": "-1/54"
+          }
+        ],
+        [
+          {
+            "im": "1/6",
+            "re": "1/6"
+          },
+          {
+            "im": "1/18",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "1/4"
+          },
+          {
+            "im": "0",
+            "re": "1/16"
+          }
+        ],
+        [
+          {
+            "im": "1/18",
+            "re": "0"
+          },
+          {
+            "im": "1/54",
+            "re": "-1/54"
+          },
+          {
+            "im": "0",
+            "re": "1/16"
+          },
+          {
+            "im": "0",
+            "re": "1/32"
+          }
+        ]
+      ],
+      "J_value": [
+        [
+          {
+            "im": "-12/29",
+            "re": "-1/29"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "-252/841",
+            "re": "240/841"
+          },
+          {
+            "im": "-12/29",
+            "re": "-1/29"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-48/113",
+            "re": "71/113"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "180/12769",
+            "re": "1344/12769"
+          },
+          {
+            "im": "-48/113",
+            "re": "71/113"
+          }
+        ]
+      ],
+      "R_source_dual": [
+        [
+          {
+            "im": "38/87",
+            "re": "7/29"
+          },
+          {
+            "im": "73/2523",
+            "re": "4774/7569"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "38/87",
+            "re": "7/29"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-919/2825",
+            "re": "1242/2825"
+          },
+          {
+            "im": "-848043/7980625",
+            "re": "-711326/7980625"
+          }
+        ],
+        [
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "0",
+            "re": "0"
+          },
+          {
+            "im": "-919/2825",
+            "re": "1242/2825"
+          }
+        ]
+      ],
+      "correct_physical_charge": {
+        "im": "0",
+        "re": "32321812/10738729"
+      },
+      "correct_source_determinant_at_half": {
+        "im": "0",
+        "re": "21371833/171819664"
+      },
+      "denominator": [
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "0",
+          "re": "1"
+        },
+        {
+          "im": "3",
+          "re": "2"
+        },
+        {
+          "im": "3",
+          "re": "2"
+        }
+      ],
+      "incorrect_outer_metric_dropped": {
+        "im": "0",
+        "re": "828915227039666/826687493536875"
+      },
+      "inverse_metric_deficit": {
+        "principal_minors": [
+          "644544/21025",
+          "15552/725",
+          "59920128/1596125",
+          "248832/2825",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "rank": 1
+      },
+      "literal_and_reduced_band_surrogate": {
+        "im": "0",
+        "re": "341766133721/440899996553"
+      },
+      "numerator": [
+        {
+          "im": "-1",
+          "re": "3/2"
+        }
+      ],
+      "physical_deficit": {
+        "principal_minors": [
+          "12/29",
+          "48/841",
+          "12/113",
+          "48/12769",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "rank": 1
+      },
+      "source_rational_identity_not_only_fitted_jets": true,
+      "weight_is_abstract_not_a_computed_band": true
+    }
+  ],
+  "orientation_falsifier": {
+    "correct_charge": {
+      "im": "0",
+      "re": "235/117"
+    },
+    "correct_deficit_rank": 1,
+    "raw_value_physical_identification_refuted_with_this_Gram": true,
+    "raw_values": [
+      {
+        "im": "0",
+        "re": "-1/3"
+      },
+      {
+        "im": "-2/5",
+        "re": "-1/5"
+      },
+      {
+        "im": "-8/13",
+        "re": "1/13"
+      }
+    ],
+    "wrong_charge": {
+      "im": "0",
+      "re": "1943/585"
+    },
+    "wrong_deficit_determinant": {
+      "im": "0",
+      "re": "-64/14625"
+    }
+  },
+  "rounding_contract": "no float, binary complex, Fourier quadrature, numerical pi or Xi values",
+  "schema": "hardy-inner-width-source-duality-v1",
+  "scope": {
+    "RH_or_percentage": false,
+    "analytic_proof_formally_verified": false,
+    "any_genuine_inner_numerator_by_analytic_proof": true,
+    "correct_physical_source_dual_jets_required": true,
+    "finite_denominator_with_complex_nodes_and_confluence": true,
+    "free_energy_or_descent_closure": false,
+    "height_sum_used_as_count": false,
+    "historical_covariance_algebra_preserved": true,
+    "historical_value_coefficient_physical_mismatch_explicit": true,
+    "infinite_numerator_degree_or_phase_moment_needed": false,
+    "native_cofinal_denominator_count": false,
+    "novelty_claim": false,
+    "numerical_Xi_samples": 0,
+    "source_relative_bound_divided_by_rank": false,
+    "total_charge_bound": false
+  },
+  "source_authentication": {
+    "manifest_sha256_canonical_json": "0ee631d98a5df69dd4df728df1d15a5b9d437bc3ac0091de8fbbd8155a477e4e",
+    "remote_bytes_authenticated": false,
+    "resident_executable_helper_authenticated": true,
+    "source_count": 8
+  },
+  "square_height_bounds": [
+    {
+      "Cauchy_Schwarz_gap": "0",
+      "Delta": "0",
+      "S": "1",
+      "coarse_beta_squared_with_constant_4": "0",
+      "coarse_rank_normalized_bound_squared": "0",
+      "pi_and_exact_HY_constant_not_numerically_evaluated": true,
+      "rank": 1,
+      "sum_sqrt_height": "1"
+    },
+    {
+      "Cauchy_Schwarz_gap": "0",
+      "Delta": "1/100",
+      "S": "1",
+      "coarse_beta_squared_with_constant_4": "4/25",
+      "coarse_rank_normalized_bound_squared": "4/25",
+      "pi_and_exact_HY_constant_not_numerically_evaluated": true,
+      "rank": 1,
+      "sum_sqrt_height": "1"
+    },
+    {
+      "Cauchy_Schwarz_gap": "0",
+      "Delta": "1",
+      "S": "1",
+      "coarse_beta_squared_with_constant_4": "16",
+      "coarse_rank_normalized_bound_squared": "16",
+      "pi_and_exact_HY_constant_not_numerically_evaluated": true,
+      "rank": 1,
+      "sum_sqrt_height": "1"
+    },
+    {
+      "Cauchy_Schwarz_gap": "1",
+      "Delta": "0",
+      "S": "5",
+      "coarse_beta_squared_with_constant_4": "0",
+      "coarse_rank_normalized_bound_squared": "0",
+      "pi_and_exact_HY_constant_not_numerically_evaluated": true,
+      "rank": 2,
+      "sum_sqrt_height": "3"
+    },
+    {
+      "Cauchy_Schwarz_gap": "1",
+      "Delta": "1/100",
+      "S": "5",
+      "coarse_beta_squared_with_constant_4": "36/25",
+      "coarse_rank_normalized_bound_squared": "2/5",
+      "pi_and_exact_HY_constant_not_numerically_evaluated": true,
+      "rank": 2,
+      "sum_sqrt_height": "3"
+    },
+    {
+      "Cauchy_Schwarz_gap": "1",
+      "Delta": "1",
+      "S": "5",
+      "coarse_beta_squared_with_constant_4": "144",
+      "coarse_rank_normalized_bound_squared": "40",
+      "pi_and_exact_HY_constant_not_numerically_evaluated": true,
+      "rank": 2,
+      "sum_sqrt_height": "3"
+    },
+    {
+      "Cauchy_Schwarz_gap": "7/72",
+      "Delta": "0",
+      "S": "61/144",
+      "coarse_beta_squared_with_constant_4": "0",
+      "coarse_rank_normalized_bound_squared": "0",
+      "pi_and_exact_HY_constant_not_numerically_evaluated": true,
+      "rank": 3,
+      "sum_sqrt_height": "13/12"
+    },
+    {
+      "Cauchy_Schwarz_gap": "7/72",
+      "Delta": "1/100",
+      "S": "61/144",
+      "coarse_beta_squared_with_constant_4": "169/900",
+      "coarse_rank_normalized_bound_squared": "61/2700",
+      "pi_and_exact_HY_constant_not_numerically_evaluated": true,
+      "rank": 3,
+      "sum_sqrt_height": "13/12"
+    },
+    {
+      "Cauchy_Schwarz_gap": "7/72",
+      "Delta": "1",
+      "S": "61/144",
+      "coarse_beta_squared_with_constant_4": "169/9",
+      "coarse_rank_normalized_bound_squared": "61/27",
+      "pi_and_exact_HY_constant_not_numerically_evaluated": true,
+      "rank": 3,
+      "sum_sqrt_height": "13/12"
+    },
+    {
+      "Cauchy_Schwarz_gap": "0",
+      "Delta": "0",
+      "S": "4",
+      "coarse_beta_squared_with_constant_4": "0",
+      "coarse_rank_normalized_bound_squared": "0",
+      "pi_and_exact_HY_constant_not_numerically_evaluated": true,
+      "rank": 4,
+      "sum_sqrt_height": "4"
+    },
+    {
+      "Cauchy_Schwarz_gap": "0",
+      "Delta": "1/100",
+      "S": "4",
+      "coarse_beta_squared_with_constant_4": "64/25",
+      "coarse_rank_normalized_bound_squared": "4/25",
+      "pi_and_exact_HY_constant_not_numerically_evaluated": true,
+      "rank": 4,
+      "sum_sqrt_height": "4"
+    },
+    {
+      "Cauchy_Schwarz_gap": "0",
+      "Delta": "1",
+      "S": "4",
+      "coarse_beta_squared_with_constant_4": "256",
+      "coarse_rank_normalized_bound_squared": "16",
+      "pi_and_exact_HY_constant_not_numerically_evaluated": true,
+      "rank": 4,
+      "sum_sqrt_height": "4"
+    }
+  ],
+  "status": "NATIVE_PROOF_AND_BOUNDED_EXACT_CONTROLS_REQUIRING_INDEPENDENT_REVIEW"
+}
