@@ -1,0 +1,1256 @@
+{
+  "panels": [
+    {
+      "P_E": [
+        1,
+        2,
+        5
+      ],
+      "P_prym": [
+        1,
+        0,
+        6,
+        0,
+        25
+      ],
+      "arithmetic_monodromy": "S3",
+      "counts": [
+        {
+          "W_local_sum": 2,
+          "W_twist_local_sum": 0,
+          "affine_fibre_types": {
+            "identity": 1,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 0,
+            "three_cycle": 0,
+            "transposition": 4
+          },
+          "elliptic_points": 8,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            0,
+            1
+          ],
+          "n": 1,
+          "old_branch_factors": [],
+          "p": 5,
+          "q": 5,
+          "quartic_cover_points": 8,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": 6,
+          "W_twist_local_sum": 12,
+          "affine_fibre_types": {
+            "identity": 5,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 0,
+            "three_cycle": 4,
+            "transposition": 16
+          },
+          "elliptic_points": 32,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            2,
+            0,
+            1
+          ],
+          "n": 2,
+          "old_branch_factors": [],
+          "p": 5,
+          "q": 25,
+          "quartic_cover_points": 44,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": -22,
+          "W_twist_local_sum": 0,
+          "affine_fibre_types": {
+            "identity": 13,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 0,
+            "three_cycle": 48,
+            "transposition": 64
+          },
+          "elliptic_points": 104,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "n": 3,
+          "old_branch_factors": [],
+          "p": 5,
+          "q": 125,
+          "quartic_cover_points": 104,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": 14,
+          "W_twist_local_sum": 28,
+          "affine_fibre_types": {
+            "identity": 109,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 4,
+            "three_cycle": 208,
+            "transposition": 304
+          },
+          "elliptic_points": 640,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 4,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 125,
+              "twist_frobenius": -1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 250,
+              "twist_frobenius": -1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 375,
+              "twist_frobenius": -1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 500,
+              "twist_frobenius": -1
+            }
+          ],
+          "p": 5,
+          "q": 625,
+          "quartic_cover_points": 668,
+          "twist_zero_invariants": 0
+        }
+      ],
+      "elliptic_held_out_degrees": [
+        3,
+        4
+      ],
+      "geometric_monodromy": "S3",
+      "prym_held_out_degrees_using_proved_reciprocity": [
+        3,
+        4
+      ],
+      "prym_independent_newton_degrees": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source": {
+        "A": -1,
+        "B": 0,
+        "extensions": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "id": "p5-s3-symmetric",
+        "p": 5
+      }
+    },
+    {
+      "P_E": [
+        1,
+        3,
+        5
+      ],
+      "P_prym": [
+        1,
+        4,
+        11,
+        20,
+        25
+      ],
+      "arithmetic_monodromy": "S3",
+      "counts": [
+        {
+          "W_local_sum": 3,
+          "W_twist_local_sum": 4,
+          "affine_fibre_types": {
+            "identity": 2,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 0,
+            "three_cycle": 1,
+            "transposition": 2
+          },
+          "elliptic_points": 9,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            0,
+            1
+          ],
+          "n": 1,
+          "old_branch_factors": [],
+          "p": 5,
+          "q": 5,
+          "quartic_cover_points": 13,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": 1,
+          "W_twist_local_sum": 6,
+          "affine_fibre_types": {
+            "identity": 6,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 0,
+            "three_cycle": 11,
+            "transposition": 8
+          },
+          "elliptic_points": 27,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            2,
+            0,
+            1
+          ],
+          "n": 2,
+          "old_branch_factors": [],
+          "p": 5,
+          "q": 25,
+          "quartic_cover_points": 33,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": -18,
+          "W_twist_local_sum": -8,
+          "affine_fibre_types": {
+            "identity": 15,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 0,
+            "three_cycle": 48,
+            "transposition": 62
+          },
+          "elliptic_points": 108,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "n": 3,
+          "old_branch_factors": [],
+          "p": 5,
+          "q": 125,
+          "quartic_cover_points": 100,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": 49,
+          "W_twist_local_sum": -14,
+          "affine_fibre_types": {
+            "identity": 110,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 4,
+            "three_cycle": 175,
+            "transposition": 336
+          },
+          "elliptic_points": 675,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 4,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 130,
+              "twist_frobenius": -1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 265,
+              "twist_frobenius": -1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 385,
+              "twist_frobenius": -1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 520,
+              "twist_frobenius": -1
+            }
+          ],
+          "p": 5,
+          "q": 625,
+          "quartic_cover_points": 661,
+          "twist_zero_invariants": 0
+        }
+      ],
+      "elliptic_held_out_degrees": [
+        3,
+        4
+      ],
+      "geometric_monodromy": "S3",
+      "prym_held_out_degrees_using_proved_reciprocity": [
+        3,
+        4
+      ],
+      "prym_independent_newton_degrees": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source": {
+        "A": 1,
+        "B": 1,
+        "extensions": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "id": "p5-s3-generic",
+        "p": 5
+      }
+    },
+    {
+      "P_E": [
+        1,
+        0,
+        5
+      ],
+      "P_prym": [
+        1,
+        0,
+        -8,
+        0,
+        25
+      ],
+      "arithmetic_monodromy": "S3",
+      "counts": [
+        {
+          "W_local_sum": 0,
+          "W_twist_local_sum": 0,
+          "affine_fibre_types": {
+            "identity": 0,
+            "ramified_three_cycle": 2,
+            "ramified_transposition": 0,
+            "three_cycle": 0,
+            "transposition": 3
+          },
+          "elliptic_points": 6,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            0,
+            1
+          ],
+          "n": 1,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 1,
+              "twist_frobenius": 0
+            },
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 4,
+              "twist_frobenius": 0
+            }
+          ],
+          "p": 5,
+          "q": 5,
+          "quartic_cover_points": 6,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": 10,
+          "W_twist_local_sum": -16,
+          "affine_fibre_types": {
+            "identity": 11,
+            "ramified_three_cycle": 2,
+            "ramified_transposition": 0,
+            "three_cycle": 12,
+            "transposition": 0
+          },
+          "elliptic_points": 36,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            2,
+            0,
+            1
+          ],
+          "n": 2,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 1,
+              "twist_frobenius": 0
+            },
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 4,
+              "twist_frobenius": 0
+            }
+          ],
+          "p": 5,
+          "q": 25,
+          "quartic_cover_points": 20,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": 0,
+          "W_twist_local_sum": 0,
+          "affine_fibre_types": {
+            "identity": 0,
+            "ramified_three_cycle": 2,
+            "ramified_transposition": 0,
+            "three_cycle": 0,
+            "transposition": 123
+          },
+          "elliptic_points": 126,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "n": 3,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 1,
+              "twist_frobenius": 0
+            },
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 4,
+              "twist_frobenius": 0
+            }
+          ],
+          "p": 5,
+          "q": 125,
+          "quartic_cover_points": 126,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": -50,
+          "W_twist_local_sum": -28,
+          "affine_fibre_types": {
+            "identity": 191,
+            "ramified_three_cycle": 2,
+            "ramified_transposition": 0,
+            "three_cycle": 432,
+            "transposition": 0
+          },
+          "elliptic_points": 576,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "n": 4,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 1,
+              "twist_frobenius": 0
+            },
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 4,
+              "twist_frobenius": 0
+            }
+          ],
+          "p": 5,
+          "q": 625,
+          "quartic_cover_points": 548,
+          "twist_zero_invariants": 0
+        }
+      ],
+      "elliptic_held_out_degrees": [
+        3,
+        4
+      ],
+      "geometric_monodromy": "C3",
+      "prym_held_out_degrees_using_proved_reciprocity": [
+        3,
+        4
+      ],
+      "prym_independent_newton_degrees": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source": {
+        "A": 0,
+        "B": 1,
+        "extensions": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "id": "p5-cyclic-geometric",
+        "p": 5
+      }
+    },
+    {
+      "P_E": [
+        1,
+        0,
+        7
+      ],
+      "P_prym": [
+        1,
+        0,
+        14,
+        0,
+        49
+      ],
+      "arithmetic_monodromy": "S3",
+      "counts": [
+        {
+          "W_local_sum": 0,
+          "W_twist_local_sum": 0,
+          "affine_fibre_types": {
+            "identity": 1,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 0,
+            "three_cycle": 2,
+            "transposition": 4
+          },
+          "elliptic_points": 8,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            0,
+            1
+          ],
+          "n": 1,
+          "old_branch_factors": [],
+          "p": 7,
+          "q": 7,
+          "quartic_cover_points": 8,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": 14,
+          "W_twist_local_sum": 28,
+          "affine_fibre_types": {
+            "identity": 13,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 4,
+            "three_cycle": 16,
+            "transposition": 16
+          },
+          "elliptic_points": 64,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            1,
+            0,
+            1
+          ],
+          "n": 2,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 8,
+              "twist_frobenius": 1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 13,
+              "twist_frobenius": 1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 43,
+              "twist_frobenius": 1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 48,
+              "twist_frobenius": 1
+            }
+          ],
+          "p": 7,
+          "q": 49,
+          "quartic_cover_points": 92,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": 0,
+          "W_twist_local_sum": 0,
+          "affine_fibre_types": {
+            "identity": 57,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 0,
+            "three_cycle": 114,
+            "transposition": 172
+          },
+          "elliptic_points": 344,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "n": 3,
+          "old_branch_factors": [],
+          "p": 7,
+          "q": 343,
+          "quartic_cover_points": 344,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": -98,
+          "W_twist_local_sum": -196,
+          "affine_fibre_types": {
+            "identity": 349,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 4,
+            "three_cycle": 800,
+            "transposition": 1248
+          },
+          "elliptic_points": 2304,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "n": 4,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 1270,
+              "twist_frobenius": 1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 1272,
+              "twist_frobenius": 1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 1528,
+              "twist_frobenius": 1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 1530,
+              "twist_frobenius": 1
+            }
+          ],
+          "p": 7,
+          "q": 2401,
+          "quartic_cover_points": 2108,
+          "twist_zero_invariants": 0
+        }
+      ],
+      "elliptic_held_out_degrees": [
+        3,
+        4
+      ],
+      "geometric_monodromy": "S3",
+      "prym_held_out_degrees_using_proved_reciprocity": [
+        3,
+        4
+      ],
+      "prym_independent_newton_degrees": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source": {
+        "A": -1,
+        "B": 0,
+        "extensions": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "id": "p7-s3-symmetric",
+        "p": 7
+      }
+    },
+    {
+      "P_E": [
+        1,
+        -3,
+        7
+      ],
+      "P_prym": [
+        1,
+        0,
+        7,
+        0,
+        49
+      ],
+      "arithmetic_monodromy": "S3",
+      "counts": [
+        {
+          "W_local_sum": -3,
+          "W_twist_local_sum": 0,
+          "affine_fibre_types": {
+            "identity": 0,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 0,
+            "three_cycle": 3,
+            "transposition": 4
+          },
+          "elliptic_points": 5,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            0,
+            1
+          ],
+          "n": 1,
+          "old_branch_factors": [],
+          "p": 7,
+          "q": 7,
+          "quartic_cover_points": 5,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": 5,
+          "W_twist_local_sum": 14,
+          "affine_fibre_types": {
+            "identity": 10,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 4,
+            "three_cycle": 19,
+            "transposition": 16
+          },
+          "elliptic_points": 55,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            1,
+            0,
+            1
+          ],
+          "n": 2,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 7,
+              "twist_frobenius": 1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 14,
+              "twist_frobenius": 1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 35,
+              "twist_frobenius": 1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 42,
+              "twist_frobenius": 1
+            }
+          ],
+          "p": 7,
+          "q": 49,
+          "quartic_cover_points": 69,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": 36,
+          "W_twist_local_sum": 0,
+          "affine_fibre_types": {
+            "identity": 69,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 0,
+            "three_cycle": 102,
+            "transposition": 172
+          },
+          "elliptic_points": 380,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "n": 3,
+          "old_branch_factors": [],
+          "p": 7,
+          "q": 343,
+          "quartic_cover_points": 380,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": 73,
+          "W_twist_local_sum": 98,
+          "affine_fibre_types": {
+            "identity": 406,
+            "ramified_three_cycle": 0,
+            "ramified_transposition": 4,
+            "three_cycle": 743,
+            "transposition": 1248
+          },
+          "elliptic_points": 2475,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "n": 4,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 657,
+              "twist_frobenius": 1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 1271,
+              "twist_frobenius": 1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 1529,
+              "twist_frobenius": 1
+            },
+            {
+              "W_frobenius": 1,
+              "invariant_dimension": 1,
+              "t": 2143,
+              "twist_frobenius": 1
+            }
+          ],
+          "p": 7,
+          "q": 2401,
+          "quartic_cover_points": 2573,
+          "twist_zero_invariants": 0
+        }
+      ],
+      "elliptic_held_out_degrees": [
+        3,
+        4
+      ],
+      "geometric_monodromy": "S3",
+      "prym_held_out_degrees_using_proved_reciprocity": [
+        3,
+        4
+      ],
+      "prym_independent_newton_degrees": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source": {
+        "A": 1,
+        "B": 1,
+        "extensions": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "id": "p7-s3-generic",
+        "p": 7
+      }
+    },
+    {
+      "P_E": [
+        1,
+        4,
+        7
+      ],
+      "P_prym": [
+        1,
+        0,
+        -14,
+        0,
+        49
+      ],
+      "arithmetic_monodromy": "C3",
+      "counts": [
+        {
+          "W_local_sum": 4,
+          "W_twist_local_sum": 0,
+          "affine_fibre_types": {
+            "identity": 3,
+            "ramified_three_cycle": 2,
+            "ramified_transposition": 0,
+            "three_cycle": 2,
+            "transposition": 0
+          },
+          "elliptic_points": 12,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            0,
+            1
+          ],
+          "n": 1,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 1,
+              "twist_frobenius": 0
+            },
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 6,
+              "twist_frobenius": 0
+            }
+          ],
+          "p": 7,
+          "q": 7,
+          "quartic_cover_points": 12,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": -2,
+          "W_twist_local_sum": -28,
+          "affine_fibre_types": {
+            "identity": 15,
+            "ramified_three_cycle": 2,
+            "ramified_transposition": 0,
+            "three_cycle": 32,
+            "transposition": 0
+          },
+          "elliptic_points": 48,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            1,
+            0,
+            1
+          ],
+          "n": 2,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 1,
+              "twist_frobenius": 0
+            },
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 6,
+              "twist_frobenius": 0
+            }
+          ],
+          "p": 7,
+          "q": 49,
+          "quartic_cover_points": 20,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": -20,
+          "W_twist_local_sum": 0,
+          "affine_fibre_types": {
+            "identity": 107,
+            "ramified_three_cycle": 2,
+            "ramified_transposition": 0,
+            "three_cycle": 234,
+            "transposition": 0
+          },
+          "elliptic_points": 324,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "n": 3,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 1,
+              "twist_frobenius": 0
+            },
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 6,
+              "twist_frobenius": 0
+            }
+          ],
+          "p": 7,
+          "q": 343,
+          "quartic_cover_points": 324,
+          "twist_zero_invariants": 0
+        },
+        {
+          "W_local_sum": 94,
+          "W_twist_local_sum": -196,
+          "affine_fibre_types": {
+            "identity": 831,
+            "ramified_three_cycle": 2,
+            "ramified_transposition": 0,
+            "three_cycle": 1568,
+            "transposition": 0
+          },
+          "elliptic_points": 2496,
+          "infinity": {
+            "C_points": 1,
+            "E_points": 1,
+            "W_invariants": 0,
+            "W_twist_invariants": 0
+          },
+          "modulus_low_to_high": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "n": 4,
+          "old_branch_factors": [
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 1,
+              "twist_frobenius": 0
+            },
+            {
+              "W_frobenius": 0,
+              "invariant_dimension": 0,
+              "t": 6,
+              "twist_frobenius": 0
+            }
+          ],
+          "p": 7,
+          "q": 2401,
+          "quartic_cover_points": 2300,
+          "twist_zero_invariants": 0
+        }
+      ],
+      "elliptic_held_out_degrees": [
+        3,
+        4
+      ],
+      "geometric_monodromy": "C3",
+      "prym_held_out_degrees_using_proved_reciprocity": [
+        3,
+        4
+      ],
+      "prym_independent_newton_degrees": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source": {
+        "A": 0,
+        "B": 1,
+        "extensions": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "id": "p7-cyclic-arithmetic",
+        "p": 7
+      }
+    }
+  ],
+  "projector": {
+    "C3_augmentation_P_nonzero": true,
+    "C3_commutator_H_zero": true,
+    "P": [
+      [
+        "2/3",
+        "-1/3",
+        "-1/3"
+      ],
+      [
+        "-1/3",
+        "2/3",
+        "-1/3"
+      ],
+      [
+        "-1/3",
+        "-1/3",
+        "2/3"
+      ]
+    ],
+    "S3_H_equals_three_halves_P": true,
+    "augmentation_rank": 2
+  },
+  "schema": "global-s3-prym-replay-v1",
+  "scope": "Complete exact finite replay for listed panels, not a computational proof of the all-field theorems.",
+  "source_hash": "51afca1ce7be4cc60bb82a382485a752c3859e5f7ad672abdd09f2a67654ed69"
+}

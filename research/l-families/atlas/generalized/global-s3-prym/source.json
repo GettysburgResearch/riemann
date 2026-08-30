@@ -1,0 +1,17 @@
+{
+  "schema": "global-s3-prym-source-v1",
+  "normalization": "E:y^2=x^3+A*x+B; C:w^4=x^3+A*x+B; t=y=w^2; one rational point at infinity",
+  "frobenius": "point_count=1+q^n-trace(F^n|H1)",
+  "arithmetic": "exact integers and polynomial finite fields; no floating point",
+  "field_limit": 2401,
+  "panels": [
+    {"id": "p5-s3-symmetric", "p": 5, "A": -1, "B": 0, "extensions": [1, 2, 3, 4]},
+    {"id": "p5-s3-generic", "p": 5, "A": 1, "B": 1, "extensions": [1, 2, 3, 4]},
+    {"id": "p5-cyclic-geometric", "p": 5, "A": 0, "B": 1, "extensions": [1, 2, 3, 4]},
+    {"id": "p7-s3-symmetric", "p": 7, "A": -1, "B": 0, "extensions": [1, 2, 3, 4]},
+    {"id": "p7-s3-generic", "p": 7, "A": 1, "B": 1, "extensions": [1, 2, 3, 4]},
+    {"id": "p7-cyclic-arithmetic", "p": 7, "A": 0, "B": 1, "extensions": [1, 2, 3, 4]}
+  ],
+  "coverage": "All x,t,w in each listed finite extension. Only these six curves and extensions are computationally covered; all-field statements are proved separately.",
+  "acceptance": "Rebuild primitive fields and complete point/stalk counts; compare exact artifact and LF-normalized source bindings. Do not accept merely internally consistent derived polynomials."
+}
