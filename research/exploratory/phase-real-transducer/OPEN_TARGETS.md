@@ -1,89 +1,79 @@
 # Ranked continuation queue
 
-## Closed at global level: source-defined response abscissa
+## 1. Source-only bound for the prime-knot real spline
 
-`PFR-T5` now constructs a global actual-Xi response directly from the real
-prime/archimedean source and proves that its weighted-`L2` abscissa is the
-global supremal off-critical displacement.  This closes the unwindowed form of
-the former first target.
-
-It does **not** supply a new prime-side stability estimate; boundedness of the
-response remains RH-equivalent.
-
-## 1. Height-localized source resolvent
-
-Highest priority. Construct a source-defined ordinate localizer whose response
-energy has abscissa equal to the largest off-critical displacement in a chosen
-height window. `PFR-R2` rules out an exact hard window from any
-zero-independent holomorphic exponential-mode multiplier.  A viable design
-must therefore quantify leakage, use a non-holomorphic/nonlocal projection, or
-exploit extra global structure without inserting zero locations.
-
-## 2. Flower curvature-defect transfer
-
-Use `PFR-T6` to control the exact defect
+Use the source formula and the differential ladder
 
 ```text
-D_j = integral theta' (C_H)_-/(theta'^2 Z^2+Z'^2) dt
-      + (Delta theta_j-pi)_+
+(a-D)^m R_(a,m)
+  = archimedean field - sum Lambda(n)/sqrt(n) delta_(log n)
 ```
 
-or equivalently `sum_j (K_abs(j)-2*pi)=2 sum_j D_j`, where
+to prove `R_(a,m)` bounded, or its weighted energy finite for every positive
+damping.  By `PFR-T5`, this is exactly RH-strength.  `PFR-T7` now exposes the
+local prime knots and the global zero-growth burden in one real object.
+
+## 2. In-band lower frame bound for soft Gamma localization
+
+`PFR-T9` gives a zero-independent complex-Gamma filter with explicit exterior
+leakage on every finite horizon.  The missing theorem is a source-defined lower
+bound for the selected in-band signal which survives cancellation and the
+transition band.  This, rather than another filter, is the next localization
+frontier.
+
+## 3. Full curvature--Speiser adapter
+
+`PFR-T8` identifies the open flower defect as
 
 ```text
-C_H = theta'^2 Z^2 + 2 Z'^2 - Z Z'' + (theta''/theta') Z Z'.
+integral (Re zeta''/zeta')_+ dt.
 ```
 
-The target is a new critical-line zero count after exact endpoint,
-multiplicity and Riemann--von Mangoldt boundary accounting.
+Construct the complete canonical-product / Littlewood ledger for `zeta'`,
+including its pole, trivial/background terms, and finite-window boundaries.
+Do not identify positive curvature with a bare left-zero count without this
+adapter.
 
-## 3. Certified phase/curvature experiment
+## 4. Curvature-defect source estimate
 
-Use ball arithmetic on a modest finite window to certify:
-
-- `V_y(x)=-d_x arg X(x+iy)`;
-- Fourier/Poisson and Gamma-resolvent evolution at selected modes;
-- zeta and zeta-prime critical points;
-- critical-line petal areas, angular spans, signed turns and absolute
-  curvatures.
-
-This is a structural regression, not a counterexample search.
-
-## 4. Petal-area and curvature concentration
-
-Compute source-locked distributions of
+Bound
 
 ```text
-A_j = 1/2 integral_(gamma_j)^(gamma_(j+1)) theta'(t) Z(t)^2 dt
-K_j = total absolute curvature of the closed petal
+sum_j [ integral_(petal j) (Re zeta''/zeta')_+ dt
+        + (Delta theta_j-pi)_+ ]
 ```
 
-and test whether participation ratios and curvature defects obey stable
-scaling. Every empirical law must be converted into a theorem target and
-countertested on RH-false zeta-like functions.
+by a source, trace, or positive energy strong enough to improve a critical-line
+zero count.  Existing curvature identities by themselves do not provide the
+sign or the global boundary closure.
 
-## 5. Global Speiser adapter
+## 5. Certified computational pass
 
-Seek an exact identity linking the de-Poissonized/resolvent growth defect to
-the left-of-line `zeta'` count. The quartet firewall requires genuinely global
-input: pole, boundary, functional equation, or arithmetic source.
+With interval or ball arithmetic, certify on a modest finite window:
 
-## 6. Prime-side stability mechanism
+- critical-line petal areas and angular spans;
+- signed and absolute curvature, plus `Re zeta''/zeta'`;
+- `zeta'` critical points and Newton-flow separatrices;
+- Gamma-resolvent source values and derivative jumps at selected prime powers;
+- complex-Gamma soft-band leakage for predeclared parameters.
 
-Prove boundedness, subexponentiality, or every-positive-damping `L2`
-integrability of the explicit prime formula in `PFR-T5` without assuming zero
-locations. This is an RH-strength target and must not be presented as a solved
-consequence of smoothing.
+The result is structural regression, not a global proof or counterexample.
+
+## 6. Arithmetic-to-geometry comparison
+
+Compare the prime-knot spline, the flower curvature defect, PR #729's
+backward-Poisson phase field, and PR #762's beta spectral abscissa.  Seek an
+exact common producer or prove that the observables remain genuinely distinct.
 
 ## Stop conditions
 
-Pause the lane if review shows that:
+Pause or redirect the lane if review proves that:
 
-- the curvature ledger adds only notation to `N_0(T)` and supplies no
-  independently controllable defect;
-- the resolvent criterion is only an unmodified known criterion with no useful
-  source representation;
-- every proposed finite invariant survives the quartet or a known RH-false
-  zeta analogue;
-- an exact height window necessarily assumes the zero information it is meant
-  to recover.
+- the prime-knot spline is only a standard explicit-formula smoothing with no
+  usable new source inequality;
+- the curvature ledger reduces to a known one-way conditional theorem and no
+  quantitative boundary adapter survives;
+- the soft localizer admits no source-defined in-band lower frame bound;
+- every finite invariant survives a known RH-false zeta analogue;
+- or a claimed source formula, jump normalization, pole residue, or endpoint
+  term fails hostile review.

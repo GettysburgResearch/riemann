@@ -1,72 +1,61 @@
-# Phase-flow / real-only Gate-0 packet
+# Phase-flow and real-response Gate 0
 
-This exploratory packet studies:
+Status: `PROPOSED / EXACT FINITE / EXACT ANALYTIC / NON_DIRECTED_HIGH_PRECISION`  
+Scope: finite models plus source-defined actual-Xi transforms; RH unproved  
+Base: current `main` lineage, continued on draft PR #768  
+Programmes: issue #763; overlaps issue #17, issue #39, issue #744 / PR #729, and PR #762
 
-1. the flower/petal geometry of `zeta(1/2+it)`;
-2. real-only phase and explicit-formula representations of zero displacement.
+## Scientific map
 
-Start with [`MATHEMATICS.md`](MATHEMATICS.md), then read the
-[`continuation index`](CONTINUATION_108260.md),
-[`flower theorem`](FLOWER_CURVATURE_108260.md),
-[`actual-Xi resolvent theorem`](XI_GAMMA_RESOLVENT_108260.md), and
-[`localization firewall`](LOCALIZATION_FIREWALL_108260.md).
+```text
+PFR-T1  Hardy flower area, curvature, and participation bounds
+PFR-T2  safe centered-Xi phase velocity = real prime cosine field
+PFR-T3  finite inverse-Poisson response energy detects off-axis height
+PFR-T4  critical explicit formula in phase/de-Poissonized form
+PFR-R1  local quartet -> local Speiser critical point is false
+PFR-T5  actual-Xi Gamma resolvent has exact zero-displacement abscissa
+PFR-T6  petal turn, self-intersection, and curvature-defect ledger
+PFR-R2  exact holomorphic hard ordinate window is impossible
+PFR-T7  the actual-Xi resolvent is a real prime-knot spline
+PFR-T8  flower curvature defect = positive zeta-prime phase variation
+PFR-R3  nonvanishing filters preserve the infinite-time abscissa
+PFR-T9  complex Gamma filters give finite-horizon soft localization
+```
 
-## Principal results
+The latest continuation is `CONTINUATION_108320.md`.  It adds three structural
+advances:
 
-### Initial Gate 0
-
-- `PFR-T1`: exact Hardy-flower area, speed, curvature, weighted Wirtinger,
-  and participation-count identities;
-- `PFR-T2`: the centered-Xi flower phase velocity above the zero strip is an
-  absolutely convergent real prime cosine signal on `Re(s)>1`;
-- `PFR-T3`: for every finite real zero model, inverse Poisson evolution gives
-  a real response whose weighted-energy abscissa is exactly the maximal
-  off-axis zero height;
-- `PFR-T4`: the same de-Poissonization is the critical-weight explicit formula
-  for actual Xi, in distributional form;
-- `PFR-R1`: an Xi-symmetric off-axis quartet can have only real derivative
-  critical points, closing any generic one-quartet/one-Speiser-branch rule.
-
-### Continuation 108260
-
-- `PFR-T5`: for every `a>1/2` and integer `m>=2`, one entirely real,
-  prime-defined actual-Xi Gamma-resolvent has a safe logarithmic-derivative
-  Taylor-remainder transform, and its weighted-`L2` abscissa and pointwise
-  exponential type are exactly the supremal off-critical zero displacement;
-  RH is equivalent to boundedness of this function;
-- `PFR-T6`: a fixed-sign Hardy petal is simple exactly up to angular span
-  `2*pi`, its open signed turn is `-(span+pi)`, and an explicit normalized
-  negative-curvature integral plus the origin corner exactly accounts for the
-  total curvature defect that pays for missing petal count;
-- `PFR-R2`: a zero-independent holomorphic exponential-mode multiplier
-  cannot produce an exact hard ordinate window; any viable localization must
-  quantify leakage or use additional non-holomorphic/global structure;
-- `PFR-C2`: exact height localization of the resolvent remains open under that
-  firewall;
-- `PFR-C3`: transferring the curvature-defect ledger into a new zero count
-  remains open.
+1. the real Gamma resolvent recovers `Lambda(n)/sqrt(n)` as universal derivative
+   jumps at `t=log n`, while its global growth still records `Theta-1/2`;
+2. the petal-curvature defect is exactly the positive variation of
+   `arg zeta'(1/2+it)`, with a finite signed-Poisson critical-point model;
+3. hard and infinite-time height localization are closed at a no-go boundary,
+   while finite-horizon complex-Gamma localization has an explicit leakage
+   estimate.
 
 ## Replay
 
 ```bash
-python3 code/verify_phase_real.py
-python3 code/verify_phase_resolvent.py
-python3 -m unittest discover -s tests -p 'test_*.py' -v
+python3 research/exploratory/phase-real-transducer/code/verify_phase_real.py
+python3 research/exploratory/phase-real-transducer/code/verify_phase_resolvent.py
+python3 research/exploratory/phase-real-transducer/code/verify_flower_curvature.py
+python3 research/exploratory/phase-real-transducer/code/verify_phase_speiser_localization.py
+python3 -m unittest discover \
+  -s research/exploratory/phase-real-transducer/tests \
+  -p 'test_*.py' -v
 ```
 
-Expected terminal markers include:
+The replays authenticate finite formulas and bounded non-directed regressions.
+They do not machine-prove the analytic manuscripts or external novelty.
 
-```text
-PASS_PFR_PHASE_REAL_TRANSDUCER
-PASS_PFR_T5_T6_CONTINUATION
-RH_UNPROVEN
-```
+## Claims
 
-The replays authenticate finite algebra and floating-reconnaissance regressions only.
-The analytic proofs are in the manuscripts and require ordinary mathematical
-review.
+- `PFR-T1` -- `PFR-T9`: exact statements with distinct imported/project-native boundaries.
+- `PFR-R1` -- `PFR-R3`: reusable structural firewalls.
+- `PFR-C1`: source-only boundedness of the global real spline, equivalent to RH and open.
+- `PFR-C2`: exact hard height localization closed by `PFR-R2`/`PFR-R3`.
+- `PFR-C3`: full curvature-defect plus Riemann--von Mangoldt boundary closure, open.
+- `PFR-C4`: source-defined in-band lower frame bound for the soft finite-horizon localizer, open.
 
-## Scope
-
-No zero is newly located. No zero proportion is improved. No RH or GRH claim is
-made. External novelty and priority are explicitly unreviewed.
+No new critical-line zero proportion, off-line zero, `zeta'` zero, RH theorem,
+or external priority claim is made.
