@@ -1,0 +1,1287 @@
+{
+  "arithmetic": "exact integers and fractions; logarithm intervals from atanh series with directed rational rounding",
+  "coverage": "identity rank strips (2,k), k=3,4,5; compressed critical singular blocks; named complex boundary phases",
+  "critical_arc_controls": [
+    {
+      "certified_error_squared_bound": [
+        1243225,
+        1413721
+      ],
+      "critical_circle_not_trace_class": true,
+      "grade_cut": 8,
+      "phase_z": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "relative_error_squared": [
+        106777873733034813820320934872232711535752188331769214136189044823979448520492364073400222874449316611650223016809892249457820053489568111116697239777426636629457574859964183905577507014809,
+        36722554515890342807309207688265915852632139877789573732657714297870475582553424541246662885264132276305429226066153123736169214966960991272811624040528704271997298311382303468325590934749184
+      ],
+      "source_F_at_rho_z": [
+        [
+          32,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "certified_error_squared_bound": [
+        1243225,
+        1413721
+      ],
+      "critical_circle_not_trace_class": true,
+      "grade_cut": 8,
+      "phase_z": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "relative_error_squared": [
+        260305954004796502121570318911331548123181928609567044622311931472017862761714639034010889022194789847949549320172347864141155912850774882570265136622907424140607739433,
+        38539643528271783607040779502487052034414809260421093074497566596299039605246488759112298424918818084692409618294812443722672119559795380705863183706949286128118879223808
+      ],
+      "source_F_at_rho_z": [
+        [
+          -496,
+          625
+        ],
+        [
+          272,
+          625
+        ]
+      ]
+    },
+    {
+      "certified_error_squared_bound": [
+        1243225,
+        1413721
+      ],
+      "critical_circle_not_trace_class": true,
+      "grade_cut": 8,
+      "phase_z": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "relative_error_squared": [
+        260305954004796502121570318911331548123181928609567044622311931472017862761714639034010889022194789847949549320172347864141155912850774882570265136622907424140607739433,
+        38539643528271783607040779502487052034414809260421093074497566596299039605246488759112298424918818084692409618294812443722672119559795380705863183706949286128118879223808
+      ],
+      "source_F_at_rho_z": [
+        [
+          -496,
+          625
+        ],
+        [
+          -272,
+          625
+        ]
+      ]
+    }
+  ],
+  "critical_rate_controls": [
+    {
+      "constant_formula": "exp(-EulerGamma) * rho * Fprime(-rho)",
+      "grade_cut": 8,
+      "log_DN_plus_HN": [
+        [
+          -811259372057,
+          500000000000
+        ],
+        [
+          -1622518744113,
+          1000000000000
+        ]
+      ],
+      "log_N_times_DN": [
+        [
+          -565233586323,
+          250000000000
+        ],
+        [
+          -2260934345291,
+          1000000000000
+        ]
+      ],
+      "log_limit_constant": [
+        [
+          -226027603361,
+          100000000000
+        ],
+        [
+          -2142492997953,
+          1000000000000
+        ]
+      ],
+      "log_rho_Fprime": [
+        [
+          -1621860432433,
+          1000000000000
+        ],
+        [
+          -101366277027,
+          62500000000
+        ]
+      ],
+      "proved_B_tail_bound": [
+        67,
+        256
+      ],
+      "q": 2,
+      "rho_Fprime_at_negative_rho": [
+        16,
+        81
+      ]
+    },
+    {
+      "constant_formula": "exp(-EulerGamma) * rho * Fprime(-rho)",
+      "grade_cut": 16,
+      "log_DN_plus_HN": [
+        [
+          -1621806548209,
+          1000000000000
+        ],
+        [
+          -101362909263,
+          62500000000
+        ]
+      ],
+      "log_N_times_DN": [
+        [
+          -1114973409599,
+          500000000000
+        ],
+        [
+          -2229946819197,
+          1000000000000
+        ]
+      ],
+      "log_limit_constant": [
+        [
+          -1115000351711,
+          500000000000
+        ],
+        [
+          -433875216321,
+          200000000000
+        ]
+      ],
+      "log_rho_Fprime": [
+        [
+          -1621860432433,
+          1000000000000
+        ],
+        [
+          -101366277027,
+          62500000000
+        ]
+      ],
+      "proved_B_tail_bound": [
+        1027,
+        65536
+      ],
+      "q": 2,
+      "rho_Fprime_at_negative_rho": [
+        16,
+        81
+      ]
+    },
+    {
+      "constant_formula": "exp(-EulerGamma) * rho * Fprime(-rho)",
+      "grade_cut": 24,
+      "log_DN_plus_HN": [
+        [
+          -1621857453747,
+          1000000000000
+        ],
+        [
+          -810928726873,
+          500000000000
+        ]
+      ],
+      "log_N_times_DN": [
+        [
+          -2219761801153,
+          1000000000000
+        ],
+        [
+          -34683778143,
+          15625000000
+        ]
+      ],
+      "log_limit_constant": [
+        [
+          -2219764779839,
+          1000000000000
+        ],
+        [
+          -2178942785317,
+          1000000000000
+        ]
+      ],
+      "log_rho_Fprime": [
+        [
+          -1621860432433,
+          1000000000000
+        ],
+        [
+          -101366277027,
+          62500000000
+        ]
+      ],
+      "proved_B_tail_bound": [
+        16387,
+        16777216
+      ],
+      "q": 2,
+      "rho_Fprime_at_negative_rho": [
+        16,
+        81
+      ]
+    },
+    {
+      "constant_formula": "exp(-EulerGamma) * rho * Fprime(-rho)",
+      "grade_cut": 8,
+      "log_DN_plus_HN": [
+        [
+          -1438277263823,
+          1000000000000
+        ],
+        [
+          -719138631911,
+          500000000000
+        ]
+      ],
+      "log_N_times_DN": [
+        [
+          -415338573,
+          200000000
+        ],
+        [
+          -2076692864999,
+          1000000000000
+        ]
+      ],
+      "log_limit_constant": [
+        [
+          -2076825963437,
+          1000000000000
+        ],
+        [
+          -1959042927779,
+          1000000000000
+        ]
+      ],
+      "log_rho_Fprime": [
+        [
+          -1438410362259,
+          1000000000000
+        ],
+        [
+          -719205181129,
+          500000000000
+        ]
+      ],
+      "proved_B_tail_bound": [
+        217,
+        5832
+      ],
+      "q": 3,
+      "rho_Fprime_at_negative_rho": [
+        243,
+        1024
+      ]
+    },
+    {
+      "constant_formula": "exp(-EulerGamma) * rho * Fprime(-rho)",
+      "grade_cut": 16,
+      "log_DN_plus_HN": [
+        [
+          -719204156079,
+          500000000000
+        ],
+        [
+          -1438408312157,
+          1000000000000
+        ]
+      ],
+      "log_N_times_DN": [
+        [
+          -2046548583147,
+          1000000000000
+        ],
+        [
+          -1023274291573,
+          500000000000
+        ]
+      ],
+      "log_limit_constant": [
+        [
+          -2046550633249,
+          1000000000000
+        ],
+        [
+          -1985926011431,
+          1000000000000
+        ]
+      ],
+      "log_rho_Fprime": [
+        [
+          -1438410362259,
+          1000000000000
+        ],
+        [
+          -719205181129,
+          500000000000
+        ]
+      ],
+      "proved_B_tail_bound": [
+        17497,
+        38263752
+      ],
+      "q": 3,
+      "rho_Fprime_at_negative_rho": [
+        243,
+        1024
+      ]
+    },
+    {
+      "constant_formula": "exp(-EulerGamma) * rho * Fprime(-rho)",
+      "grade_cut": 24,
+      "log_DN_plus_HN": [
+        [
+          -28768206879,
+          20000000000
+        ],
+        [
+          -1438410343949,
+          1000000000000
+        ]
+      ],
+      "log_N_times_DN": [
+        [
+          -509078672839,
+          250000000000
+        ],
+        [
+          -407262938271,
+          200000000000
+        ]
+      ],
+      "log_limit_constant": [
+        [
+          -407262941933,
+          200000000000
+        ],
+        [
+          -249436589393,
+          125000000000
+        ]
+      ],
+      "log_rho_Fprime": [
+        [
+          -1438410362259,
+          1000000000000
+        ],
+        [
+          -719205181129,
+          500000000000
+        ]
+      ],
+      "proved_B_tail_bound": [
+        1417177,
+        251048476872
+      ],
+      "q": 3,
+      "rho_Fprime_at_negative_rho": [
+        243,
+        1024
+      ]
+    },
+    {
+      "constant_formula": "exp(-EulerGamma) * rho * Fprime(-rho)",
+      "grade_cut": 8,
+      "log_DN_plus_HN": [
+        [
+          -1338810984273,
+          1000000000000
+        ],
+        [
+          -83675686517,
+          62500000000
+        ]
+      ],
+      "log_N_times_DN": [
+        [
+          -1977226585451,
+          1000000000000
+        ],
+        [
+          -39544531709,
+          20000000000
+        ]
+      ],
+      "log_limit_constant": [
+        [
+          -1977276909063,
+          1000000000000
+        ],
+        [
+          -929746936703,
+          500000000000
+        ]
+      ],
+      "log_rho_Fprime": [
+        [
+          -669430653943,
+          500000000000
+        ],
+        [
+          -267772261577,
+          200000000000
+        ]
+      ],
+      "proved_B_tail_bound": [
+        1025,
+        98304
+      ],
+      "q": 4,
+      "rho_Fprime_at_negative_rho": [
+        4096,
+        15625
+      ]
+    },
+    {
+      "constant_formula": "exp(-EulerGamma) * rho * Fprime(-rho)",
+      "grade_cut": 16,
+      "log_DN_plus_HN": [
+        [
+          -1338861138401,
+          1000000000000
+        ],
+        [
+          -1673576423,
+          1250000000
+        ]
+      ],
+      "log_N_times_DN": [
+        [
+          -194700140939,
+          100000000000
+        ],
+        [
+          -1947001409389,
+          1000000000000
+        ]
+      ],
+      "log_limit_constant": [
+        [
+          -15576012631,
+          8000000000
+        ],
+        [
+          -943188478529,
+          500000000000
+        ]
+      ],
+      "log_rho_Fprime": [
+        [
+          -669430653943,
+          500000000000
+        ],
+        [
+          -267772261577,
+          200000000000
+        ]
+      ],
+      "proved_B_tail_bound": [
+        262145,
+        6442450944
+      ],
+      "q": 4,
+      "rho_Fprime_at_negative_rho": [
+        4096,
+        15625
+      ]
+    },
+    {
+      "constant_formula": "exp(-EulerGamma) * rho * Fprime(-rho)",
+      "grade_cut": 24,
+      "log_DN_plus_HN": [
+        [
+          -1338861307421,
+          1000000000000
+        ],
+        [
+          -66943065371,
+          50000000000
+        ]
+      ],
+      "log_N_times_DN": [
+        [
+          -1936765654827,
+          1000000000000
+        ],
+        [
+          -968382827413,
+          500000000000
+        ]
+      ],
+      "log_limit_constant": [
+        [
+          -1936765655291,
+          1000000000000
+        ],
+        [
+          -189594366077,
+          100000000000
+        ]
+      ],
+      "log_rho_Fprime": [
+        [
+          -669430653943,
+          500000000000
+        ],
+        [
+          -267772261577,
+          200000000000
+        ]
+      ],
+      "proved_B_tail_bound": [
+        67108865,
+        422212465065984
+      ],
+      "q": 4,
+      "rho_Fprime_at_negative_rho": [
+        4096,
+        15625
+      ]
+    }
+  ],
+  "distribution_controls": [
+    {
+      "expanded_singular_value_list": false,
+      "grade_cut": 8,
+      "last_block_lower_jlogj_s_power": [
+        [
+          764066993247,
+          1000000000000
+        ],
+        [
+          23877093539,
+          31250000000
+        ]
+      ],
+      "last_block_singular_value_power": [
+        1,
+        256
+      ],
+      "last_block_upper_jlogj_s_power": [
+        [
+          674192149111,
+          500000000000
+        ],
+        [
+          1348384298223,
+          1000000000000
+        ]
+      ],
+      "last_grade_multiplicity": 30,
+      "partial_singular_power_sum": [
+        615,
+        128
+      ],
+      "q": 2,
+      "singular_value_count": 79,
+      "sum_minus_loglog_count": [
+        [
+          133202033937,
+          40000000000
+        ],
+        [
+          1665025424213,
+          500000000000
+        ]
+      ],
+      "sum_over_loglog_count": [
+        [
+          814554469209,
+          250000000000
+        ],
+        [
+          3258217876837,
+          1000000000000
+        ]
+      ],
+      "theorem_liminf": [
+        [
+          693147180559,
+          1000000000000
+        ],
+        [
+          8664339757,
+          12500000000
+        ]
+      ],
+      "theorem_limsup": [
+        [
+          1386294361119,
+          1000000000000
+        ],
+        [
+          8664339757,
+          6250000000
+        ]
+      ]
+    },
+    {
+      "expanded_singular_value_list": false,
+      "grade_cut": 16,
+      "last_block_lower_jlogj_s_power": [
+        [
+          307017693769,
+          500000000000
+        ],
+        [
+          614035387539,
+          1000000000000
+        ]
+      ],
+      "last_block_singular_value_power": [
+        1,
+        65536
+      ],
+      "last_block_upper_jlogj_s_power": [
+        [
+          306124725111,
+          250000000000
+        ],
+        [
+          244899780089,
+          200000000000
+        ]
+      ],
+      "last_grade_multiplicity": 4080,
+      "partial_singular_power_sum": [
+        44785,
+        8192
+      ],
+      "q": 2,
+      "singular_value_count": 8832,
+      "sum_minus_loglog_count": [
+        [
+          3260169125423,
+          1000000000000
+        ],
+        [
+          203760570339,
+          62500000000
+        ]
+      ],
+      "sum_over_loglog_count": [
+        [
+          2477362361623,
+          1000000000000
+        ],
+        [
+          309670295203,
+          125000000000
+        ]
+      ],
+      "theorem_liminf": [
+        [
+          693147180559,
+          1000000000000
+        ],
+        [
+          8664339757,
+          12500000000
+        ]
+      ],
+      "theorem_limsup": [
+        [
+          1386294361119,
+          1000000000000
+        ],
+        [
+          8664339757,
+          6250000000
+        ]
+      ]
+    },
+    {
+      "expanded_singular_value_list": false,
+      "grade_cut": 24,
+      "last_block_lower_jlogj_s_power": [
+        [
+          618974536777,
+          1000000000000
+        ],
+        [
+          309487268389,
+          500000000000
+        ]
+      ],
+      "last_block_singular_value_power": [
+        1,
+        16777216
+      ],
+      "last_block_upper_jlogj_s_power": [
+        [
+          123999172167,
+          100000000000
+        ],
+        [
+          1239991721671,
+          1000000000000
+        ]
+      ],
+      "last_grade_multiplicity": 698870,
+      "partial_singular_power_sum": [
+        49175691,
+        8388608
+      ],
+      "q": 2,
+      "singular_value_count": 1465294,
+      "sum_minus_loglog_count": [
+        [
+          320912861321,
+          100000000000
+        ],
+        [
+          3209128613211,
+          1000000000000
+        ]
+      ],
+      "sum_over_loglog_count": [
+        [
+          2209590368449,
+          1000000000000
+        ],
+        [
+          44191807369,
+          20000000000
+        ]
+      ],
+      "theorem_liminf": [
+        [
+          693147180559,
+          1000000000000
+        ],
+        [
+          8664339757,
+          12500000000
+        ]
+      ],
+      "theorem_limsup": [
+        [
+          1386294361119,
+          1000000000000
+        ],
+        [
+          8664339757,
+          6250000000
+        ]
+      ]
+    },
+    {
+      "expanded_singular_value_list": false,
+      "grade_cut": 8,
+      "last_block_lower_jlogj_s_power": [
+        [
+          250593208951,
+          500000000000
+        ],
+        [
+          501186417903,
+          1000000000000
+        ]
+      ],
+      "last_block_singular_value_power": [
+        1,
+        6561
+      ],
+      "last_block_upper_jlogj_s_power": [
+        [
+          182887141063,
+          125000000000
+        ],
+        [
+          292619425701,
+          200000000000
+        ]
+      ],
+      "last_grade_multiplicity": 810,
+      "partial_singular_power_sum": [
+        1090,
+        243
+      ],
+      "q": 3,
+      "singular_value_count": 1334,
+      "sum_minus_loglog_count": [
+        [
+          62802002879,
+          25000000000
+        ],
+        [
+          2512080115161,
+          1000000000000
+        ]
+      ],
+      "sum_over_loglog_count": [
+        [
+          9091581443,
+          4000000000
+        ],
+        [
+          2272895360751,
+          1000000000000
+        ]
+      ],
+      "theorem_liminf": [
+        [
+          274653072167,
+          500000000000
+        ],
+        [
+          109861228867,
+          200000000000
+        ]
+      ],
+      "theorem_limsup": [
+        [
+          823959216501,
+          500000000000
+        ],
+        [
+          1647918433003,
+          1000000000000
+        ]
+      ]
+    },
+    {
+      "expanded_singular_value_list": false,
+      "grade_cut": 16,
+      "last_block_lower_jlogj_s_power": [
+        [
+          12307093113,
+          25000000000
+        ],
+        [
+          492283724521,
+          1000000000000
+        ]
+      ],
+      "last_block_singular_value_power": [
+        1,
+        43046721
+      ],
+      "last_block_upper_jlogj_s_power": [
+        [
+          1480726067583,
+          1000000000000
+        ],
+        [
+          11568172403,
+          7812500000
+        ]
+      ],
+      "last_grade_multiplicity": 2690010,
+      "partial_singular_power_sum": [
+        73876808,
+        14348907
+      ],
+      "q": 3,
+      "singular_value_count": 4180792,
+      "sum_minus_loglog_count": [
+        [
+          2424283859413,
+          1000000000000
+        ],
+        [
+          1212141929707,
+          500000000000
+        ]
+      ],
+      "sum_over_loglog_count": [
+        [
+          944934096827,
+          500000000000
+        ],
+        [
+          377973638731,
+          200000000000
+        ]
+      ],
+      "theorem_liminf": [
+        [
+          274653072167,
+          500000000000
+        ],
+        [
+          109861228867,
+          200000000000
+        ]
+      ],
+      "theorem_limsup": [
+        [
+          823959216501,
+          500000000000
+        ],
+        [
+          1647918433003,
+          1000000000000
+        ]
+      ]
+    },
+    {
+      "expanded_singular_value_list": false,
+      "grade_cut": 24,
+      "last_block_lower_jlogj_s_power": [
+        [
+          31387139603,
+          62500000000
+        ],
+        [
+          502194233649,
+          1000000000000
+        ]
+      ],
+      "last_block_singular_value_power": [
+        1,
+        282429536481
+      ],
+      "last_block_upper_jlogj_s_power": [
+        [
+          1509702199279,
+          1000000000000
+        ],
+        [
+          18871277491,
+          12500000000
+        ]
+      ],
+      "last_grade_multiplicity": 11767874940,
+      "partial_singular_power_sum": [
+        173971353460,
+        31381059609
+      ],
+      "q": 3,
+      "singular_value_count": 18054398036,
+      "sum_minus_loglog_count": [
+        [
+          2381880798197,
+          1000000000000
+        ],
+        [
+          1190940399099,
+          500000000000
+        ]
+      ],
+      "sum_over_loglog_count": [
+        [
+          109580898429,
+          62500000000
+        ],
+        [
+          350658874973,
+          200000000000
+        ]
+      ],
+      "theorem_liminf": [
+        [
+          274653072167,
+          500000000000
+        ],
+        [
+          109861228867,
+          200000000000
+        ]
+      ],
+      "theorem_limsup": [
+        [
+          823959216501,
+          500000000000
+        ],
+        [
+          1647918433003,
+          1000000000000
+        ]
+      ]
+    },
+    {
+      "expanded_singular_value_list": false,
+      "grade_cut": 8,
+      "last_block_lower_jlogj_s_power": [
+        [
+          103203888859,
+          250000000000
+        ],
+        [
+          412815555437,
+          1000000000000
+        ]
+      ],
+      "last_block_singular_value_power": [
+        1,
+        65536
+      ],
+      "last_block_upper_jlogj_s_power": [
+        [
+          327954338277,
+          200000000000
+        ],
+        [
+          819885845693,
+          500000000000
+        ]
+      ],
+      "last_grade_multiplicity": 8160,
+      "partial_singular_power_sum": [
+        17641,
+        4096
+      ],
+      "q": 4,
+      "singular_value_count": 11494,
+      "sum_minus_loglog_count": [
+        [
+          1035776648079,
+          500000000000
+        ],
+        [
+          2071553296159,
+          1000000000000
+        ]
+      ],
+      "sum_over_loglog_count": [
+        [
+          1926732041513,
+          1000000000000
+        ],
+        [
+          963366020757,
+          500000000000
+        ]
+      ],
+      "theorem_liminf": [
+        [
+          462098120373,
+          1000000000000
+        ],
+        [
+          231049060187,
+          500000000000
+        ]
+      ],
+      "theorem_limsup": [
+        [
+          1848392481493,
+          1000000000000
+        ],
+        [
+          924196240747,
+          500000000000
+        ]
+      ]
+    },
+    {
+      "expanded_singular_value_list": false,
+      "grade_cut": 16,
+      "last_block_lower_jlogj_s_power": [
+        [
+          419149563901,
+          1000000000000
+        ],
+        [
+          209574781951,
+          500000000000
+        ]
+      ],
+      "last_block_singular_value_power": [
+        1,
+        4294967296
+      ],
+      "last_block_upper_jlogj_s_power": [
+        [
+          42040830963,
+          25000000000
+        ],
+        [
+          1681633238521,
+          1000000000000
+        ]
+      ],
+      "last_grade_multiplicity": 268431360,
+      "partial_singular_power_sum": [
+        1334072393,
+        268435456
+      ],
+      "q": 4,
+      "singular_value_count": 366276038,
+      "sum_minus_loglog_count": [
+        [
+          159058359,
+          80000000
+        ],
+        [
+          1988229487501,
+          1000000000000
+        ]
+      ],
+      "sum_over_loglog_count": [
+        [
+          166683811409,
+          100000000000
+        ],
+        [
+          1666838114091,
+          1000000000000
+        ]
+      ],
+      "theorem_liminf": [
+        [
+          462098120373,
+          1000000000000
+        ],
+        [
+          231049060187,
+          500000000000
+        ]
+      ],
+      "theorem_limsup": [
+        [
+          1848392481493,
+          1000000000000
+        ],
+        [
+          924196240747,
+          500000000000
+        ]
+      ]
+    },
+    {
+      "expanded_singular_value_list": false,
+      "grade_cut": 24,
+      "last_block_lower_jlogj_s_power": [
+        [
+          213821832327,
+          500000000000
+        ],
+        [
+          85528732931,
+          200000000000
+        ]
+      ],
+      "last_block_singular_value_power": [
+        1,
+        281474976710656
+      ],
+      "last_block_upper_jlogj_s_power": [
+        [
+          107118339099,
+          62500000000
+        ],
+        [
+          342778685117,
+          200000000000
+        ]
+      ],
+      "last_grade_multiplicity": 11728123327840,
+      "partial_singular_power_sum": [
+        94382716665441,
+        17592186044416
+      ],
+      "q": 4,
+      "singular_value_count": 15871347147396,
+      "sum_minus_loglog_count": [
+        [
+          390148104713,
+          200000000000
+        ],
+        [
+          975370261783,
+          500000000000
+        ]
+      ],
+      "sum_over_loglog_count": [
+        [
+          392836228407,
+          250000000000
+        ],
+        [
+          1571344913629,
+          1000000000000
+        ]
+      ],
+      "theorem_liminf": [
+        [
+          462098120373,
+          1000000000000
+        ],
+        [
+          231049060187,
+          500000000000
+        ]
+      ],
+      "theorem_limsup": [
+        [
+          1848392481493,
+          1000000000000
+        ],
+        [
+          924196240747,
+          500000000000
+        ]
+      ]
+    }
+  ],
+  "not_machine_proved": [
+    "critical Lorentz classification",
+    "all-rank block oscillation and loglog limit",
+    "complex boundary convergence",
+    "Mertens constant limit",
+    "general nonscalar boundary recovery"
+  ],
+  "provenance": {
+    "frozen_companion_commit": "4499c6e44d425b6e43fbf004f2750123a9b20c31",
+    "owned_sha256_lf": {
+      "CRITICAL_BOUNDARY_REPLAY.md": "595f33447001833af86e3a68f98ebcbcd27f60148c65e1e634207bbb2827a5f9",
+      "CRITICAL_GRADE_BOUNDARY.md": "6d83c759a177d85d6f64c8f64e8ffcb9527416c187191bd37d4959d9df240216",
+      "critical_boundary_replay.py": "14d3c21b20fb1e3071810d2f32625997a284553c379a19ad115b7fbe332cfb3a",
+      "tests/test_critical_boundary.py": "15ee507617dc53fd5365ad103681b298663fbaf66e411af979d036ae47ed1357"
+    },
+    "pins": [
+      [
+        "regularization_replay.py",
+        "5c92eb951078a2fa61eca82a46f5ddca5b1883a0",
+        "91e0847f820343675bd37a1462e62afa646848553841274b4e818060ab44b3b5"
+      ],
+      [
+        "MIXED_RANKS_AND_REGULARIZATION.md",
+        "8a5c94646cce3e88756fa92c7be23757adb96cfe",
+        "9d8b635fd87fbb61b50c29e20b3af5c5217c6d34b4f56224ff164e4b1e357ae7"
+      ]
+    ]
+  },
+  "schema": "koszul-critical-grade-boundary-v1"
+}
