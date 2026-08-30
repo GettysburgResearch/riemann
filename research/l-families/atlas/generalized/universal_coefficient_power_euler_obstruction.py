@@ -16,16 +16,20 @@ import math
 import subprocess
 from collections.abc import Iterator, Sequence
 from fractions import Fraction
-from functools import lru_cache
+from functools import cache
 from pathlib import Path
 
 SCRIPT_PATH = Path(__file__).resolve()
 PACKET_ROOT = SCRIPT_PATH.parent
 REPO_ROOT = SCRIPT_PATH.parents[4]
 OUTPUT_PATH = PACKET_ROOT / "universal_coefficient_power_euler_obstruction.json"
-SOURCES_PATH = PACKET_ROOT / "universal_coefficient_power_euler_obstruction.sources.json"
+SOURCES_PATH = (
+    PACKET_ROOT / "universal_coefficient_power_euler_obstruction.sources.json"
+)
 NOTE_PATH = PACKET_ROOT / "UNIVERSAL_COEFFICIENT_POWER_EULER_OBSTRUCTION.md"
-TEST_PATH = REPO_ROOT / "tests" / "test_universal_coefficient_power_euler_obstruction.py"
+TEST_PATH = (
+    REPO_ROOT / "tests" / "test_universal_coefficient_power_euler_obstruction.py"
+)
 EXPECTED_BASE_COMMIT = "02e53055b6bdff73fa136ff28cced239d1627f80"
 EXPECTED_SOURCES_SHA256_LF = (
     "af2a7ebe6e3cfbe27f90a3e77a48a736154a16df81fdba8af17a7c3913196bd1"
@@ -67,9 +71,9 @@ def _lf_sha256(path: Path) -> str:
 
 def _canonical_sha256(value: object) -> str:
     return hashlib.sha256(
-        json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode(
-            "utf-8"
-        )
+        json.dumps(
+            value, sort_keys=True, separators=(",", ":"), ensure_ascii=True
+        ).encode("utf-8")
     ).hexdigest()
 
 
@@ -77,13 +81,17 @@ def _git_blob_at(commit: str, path: str) -> str:
     try:
         result = subprocess.run(
             ["git", "rev-parse", "--verify", f"{commit}:{path}"],
-            cwd=REPO_ROOT, check=False, capture_output=True, text=True,
+            cwd=REPO_ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
         )
     except OSError as exc:
         raise RuntimeError("git object lookup could not be executed") from exc
     blob = result.stdout.strip()
     if (
-        result.returncode != 0 or len(blob) != 40
+        result.returncode != 0
+        or len(blob) != 40
         or any(character not in "0123456789abcdef" for character in blob)
     ):
         raise RuntimeError(f"git object lookup failed: {commit}:{path}")
@@ -94,7 +102,9 @@ def _git_blob_bytes(blob: str) -> bytes:
     try:
         result = subprocess.run(
             ["git", "cat-file", "blob", blob],
-            cwd=REPO_ROOT, check=False, capture_output=True,
+            cwd=REPO_ROOT,
+            check=False,
+            capture_output=True,
         )
     except OSError as exc:
         raise RuntimeError("git blob read could not be executed") from exc
@@ -172,7 +182,7 @@ def multiset_descent_numerator(
         raise RuntimeError("identity work bound reaches exclusive cap")
     additions = 0
 
-    @lru_cache(maxsize=None)
+    @cache
     def walk(remaining: tuple[int, ...], last: int) -> tuple[int, ...]:
         nonlocal additions
         if not any(remaining):
@@ -233,7 +243,8 @@ def identity_row(n: int, k: int) -> dict[str, object]:
     if (dimension > d) != no_go or (defect > 0) != no_go:
         raise ArithmeticError("obstruction and exception chambers disagree")
     return {
-        "n": n, "k": k,
+        "n": n,
+        "k": k,
         "no_go_chamber": no_go,
         "first_coefficient_forced_virtual_dimension": dimension,
         "exact_identity_pole_order": d,
@@ -278,9 +289,11 @@ def balanced_work_bound(n: int, m: int) -> int:
     end_convolution_bound = sum(n ** (2 * j) for j in range(1, m + 1))
     size = TRACE_CUTOFF + 1
     return (
-        pair_bound + end_convolution_bound
+        pair_bound
+        + end_convolution_bound
         + (2 * n + 2 * size**2) * pair_bound
-        + size**2 + 2 * n * size
+        + size**2
+        + 2 * n * size
     )
 
 
@@ -346,7 +359,8 @@ def balanced_trace_row(n: int, m: int) -> dict[str, object]:
         for r in range(TRACE_CUTOFF + 1)
     ]
     if any(
-        traces[r] != sum(multiplicity * value**r for value, multiplicity in weight_values)
+        traces[r]
+        != sum(multiplicity * value**r for value, multiplicity in weight_values)
         for r in range(TRACE_CUTOFF + 1)
     ):
         raise ArithmeticError("balanced algebraic power-trace identity failed")
@@ -373,7 +387,8 @@ def balanced_trace_row(n: int, m: int) -> dict[str, object]:
         for exponent in sorted(coefficients)
     ]
     return {
-        "n": n, "m": m,
+        "n": n,
+        "m": m,
         "representation_rank_and_euler_denominator_degree": rank,
         "distinct_character_count_dense_scalar_recurrence_degree": len(coefficients),
         "weight_multiplicities_sha256": _canonical_sha256(records),
@@ -402,7 +417,9 @@ def verify_sources_manifest() -> dict[str, object]:
     if manifest.get("base_commit") != EXPECTED_BASE_COMMIT:
         raise RuntimeError("universal-Euler source base commit mismatch")
     sources = manifest.get("sources")
-    if not isinstance(sources, list) or any(not isinstance(row, dict) for row in sources):
+    if not isinstance(sources, list) or any(
+        not isinstance(row, dict) for row in sources
+    ):
         raise TypeError("sources must be a list of objects")
     index = {row.get("path"): row for row in sources}
     if len(index) != len(sources) or set(index) != set(EXPECTED_SOURCE_OBJECTS):
@@ -437,18 +454,24 @@ def verify_sources_manifest() -> dict[str, object]:
 
 
 def build_fixture(
-    *, max_n: int = DEFAULT_MAX_N, max_k: int = DEFAULT_MAX_K,
+    *,
+    max_n: int = DEFAULT_MAX_N,
+    max_k: int = DEFAULT_MAX_K,
     resource_cap: int = DEFAULT_RESOURCE_CAP_EXCLUSIVE,
 ) -> dict[str, object]:
     _rank_power(max_n, max_k)
     _integer(resource_cap, "resource_cap", 1)
-    identity_parameters = [(n, k) for n in range(1, max_n + 1) for k in range(max_k + 1)]
+    identity_parameters = [
+        (n, k) for n in range(1, max_n + 1) for k in range(max_k + 1)
+    ]
     balanced_parameters = [
-        (n, m) for n in range(2, min(4, max_n) + 1)
+        (n, m)
+        for n in range(2, min(4, max_n) + 1)
         for m in range(1, min(MAX_BALANCED_M, max_k) + 1)
     ]
     identity_bound = sum(
-        identity_work_bound(n, k)["declared_work_upper_bound"] for n, k in identity_parameters
+        identity_work_bound(n, k)["declared_work_upper_bound"]
+        for n, k in identity_parameters
     )
     constructive_bound = sum(balanced_work_bound(n, m) for n, m in balanced_parameters)
     declared_work = identity_bound + constructive_bound
@@ -459,7 +482,10 @@ def build_fixture(
     constructive_rows = [balanced_trace_row(n, m) for n, m in balanced_parameters]
     fixture: dict[str, object] = {
         "schema": "riemann.atlas.generalized.universal_coefficient_power_euler_obstruction.v1",
-        "programme_issue": {"number": 764, "url": "https://github.com/gfreund123/riemann/issues/764"},
+        "programme_issue": {
+            "number": 764,
+            "url": "https://github.com/gfreund123/riemann/issues/764",
+        },
         "claims": {
             "GLO764.UNIVERSAL_VIRTUAL_REPRESENTATION_POWER_OBSTRUCTION": {
                 "status": "PROVED_IN_COMPANION_NOTE",
@@ -484,11 +510,14 @@ def build_fixture(
         },
         "source_lock": source_lock,
         "identity_controls": {
-            "row_count": len(rows), "rows": rows, "rows_sha256": _canonical_sha256(rows),
+            "row_count": len(rows),
+            "rows": rows,
+            "rows_sha256": _canonical_sha256(rows),
             "no_go_row_count": sum(bool(row["no_go_chamber"]) for row in rows),
         },
         "constructive_controls": {
-            "row_count": len(constructive_rows), "rows": constructive_rows,
+            "row_count": len(constructive_rows),
+            "rows": constructive_rows,
             "rows_sha256": _canonical_sha256(constructive_rows),
             "formal_trace_cutoff": TRACE_CUTOFF,
             "m_one_is_classical_tensor_dual_Rankin_Selberg_local_algebra": True,
@@ -503,9 +532,13 @@ def build_fixture(
         },
         "scope_firewall": source_lock["scope_firewall"],
         "resource_contract": {
-            "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL",
-            "maximum_n": max_n, "maximum_k": max_k,
-            "maximum_allowed_n": MAX_ALLOWED_N, "maximum_allowed_k": MAX_ALLOWED_K,
+            "arithmetic_class": "MIXED",
+            "arithmetic_components": ["CERTIFIED_INTEGER_COVERAGE", "EXACT_RATIONAL"],
+            "rounding_contract": "exact Python integers and Fraction; no rounding",
+            "maximum_n": max_n,
+            "maximum_k": max_k,
+            "maximum_allowed_n": MAX_ALLOWED_N,
+            "maximum_allowed_k": MAX_ALLOWED_K,
             "maximum_balanced_m": MAX_BALANCED_M,
             "identity_work_upper_bound": identity_bound,
             "constructive_work_upper_bound": constructive_bound,
@@ -514,12 +547,17 @@ def build_fixture(
             "work_unit_cap_exclusive": resource_cap,
             "identity_row_cap_exclusive": IDENTITY_ROW_CAP_EXCLUSIVE,
             "balanced_row_cap_exclusive": BALANCED_ROW_CAP_EXCLUSIVE,
-            "float_operations": 0, "random_samples": 0, "external_symbolic_engine": False,
+            "float_operations": 0,
+            "random_samples": 0,
+            "external_symbolic_engine": False,
         },
         "producer": {
-            "script": _relative(SCRIPT_PATH), "script_sha256_lf_normalized": _lf_sha256(SCRIPT_PATH),
-            "note": _relative(NOTE_PATH), "note_sha256_lf_normalized": _lf_sha256(NOTE_PATH),
-            "test": _relative(TEST_PATH), "test_sha256_lf_normalized": _lf_sha256(TEST_PATH),
+            "script": _relative(SCRIPT_PATH),
+            "script_sha256_lf_normalized": _lf_sha256(SCRIPT_PATH),
+            "note": _relative(NOTE_PATH),
+            "note_sha256_lf_normalized": _lf_sha256(NOTE_PATH),
+            "test": _relative(TEST_PATH),
+            "test_sha256_lf_normalized": _lf_sha256(TEST_PATH),
         },
     }
     fixture["payload_sha256"] = _canonical_sha256(fixture)
@@ -528,11 +566,16 @@ def build_fixture(
 
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="fail unless stored fixture is current")
+    parser.add_argument(
+        "--check", action="store_true", help="fail unless stored fixture is current"
+    )
     args = parser.parse_args(argv)
     serialized = json.dumps(build_fixture(), indent=2, sort_keys=True) + "\n"
     if args.check:
-        if not OUTPUT_PATH.exists() or OUTPUT_PATH.read_text(encoding="utf-8") != serialized:
+        if (
+            not OUTPUT_PATH.exists()
+            or OUTPUT_PATH.read_text(encoding="utf-8") != serialized
+        ):
             raise SystemExit("stored universal-Euler fixture is stale")
         print(f"verified {OUTPUT_PATH}")
         return 0

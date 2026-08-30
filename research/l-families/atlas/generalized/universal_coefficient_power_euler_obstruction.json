@@ -1264,21 +1264,25 @@
     ],
     "rows_sha256": "ff146abc211fa6ec20947de82fccfc9c4cad987f2c617b3a4a47706ec2c5c9c3"
   },
-  "payload_sha256": "35e95a2d5c953a22c71495b28f95dff7fbde590cd7c17f60e08c55f8b9fc8070",
+  "payload_sha256": "eca8266501292c191154ee03a2b7d5d278def04165a2ee5553d3cc85f003b89f",
   "producer": {
     "note": "research/l-families/atlas/generalized/UNIVERSAL_COEFFICIENT_POWER_EULER_OBSTRUCTION.md",
-    "note_sha256_lf_normalized": "856ed74576092294da15285cadb1cad44e57e19d775086407249e19dcdae2b7d",
+    "note_sha256_lf_normalized": "7d20466862ec8ce5c70760fe626cc6b82ca3d0ae6dfde872b8a235db7e9bc24d",
     "script": "research/l-families/atlas/generalized/universal_coefficient_power_euler_obstruction.py",
-    "script_sha256_lf_normalized": "1f48fb1f3bb988f34659edfb47df5b4531b29f0b82f7ce32e3e2ec5f3f78bd3e",
+    "script_sha256_lf_normalized": "947e1be5fefd6550d2c5304e3002047c34dc3d15befe58476f991c8a45e6f019",
     "test": "tests/test_universal_coefficient_power_euler_obstruction.py",
-    "test_sha256_lf_normalized": "4e6e9206adc50f234f8a99022ce778e08a2c2aa0ce27f1085e307b05f5003d35"
+    "test_sha256_lf_normalized": "ba3d367d550399cb8ca3d795a40c2cbd8ddbb708a88bbad2611eb40261a4ddf7"
   },
   "programme_issue": {
     "number": 764,
     "url": "https://github.com/gfreund123/riemann/issues/764"
   },
   "resource_contract": {
-    "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL",
+    "arithmetic_class": "MIXED",
+    "arithmetic_components": [
+      "CERTIFIED_INTEGER_COVERAGE",
+      "EXACT_RATIONAL"
+    ],
     "balanced_row_cap_exclusive": 20000,
     "constructive_work_upper_bound": 10865,
     "declared_work_upper_bound": 106413,
@@ -1292,6 +1296,7 @@
     "maximum_k": 4,
     "maximum_n": 4,
     "random_samples": 0,
+    "rounding_contract": "exact Python integers and Fraction; no rounding",
     "work_unit_cap_exclusive": 10000000,
     "work_unit_definition": "named primary loops: DP coefficient additions, difference summands, weight-pair/convolution updates and finite trace/factor summands; not every diagnostic, hashing operation or bit operation"
   },

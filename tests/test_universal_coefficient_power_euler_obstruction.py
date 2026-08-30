@@ -15,10 +15,16 @@ from unittest import mock
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = (
-    REPO_ROOT / "research" / "l-families" / "atlas" / "generalized"
+    REPO_ROOT
+    / "research"
+    / "l-families"
+    / "atlas"
+    / "generalized"
     / "universal_coefficient_power_euler_obstruction.py"
 )
-spec = importlib.util.spec_from_file_location("universal_euler_obstruction", MODULE_PATH)
+spec = importlib.util.spec_from_file_location(
+    "universal_euler_obstruction", MODULE_PATH
+)
 if spec is None or spec.loader is None:
     raise RuntimeError("cannot load universal Euler obstruction producer")
 subject = importlib.util.module_from_spec(spec)
@@ -27,7 +33,7 @@ spec.loader.exec_module(subject)
 
 def reject_float(value: object) -> None:
     if isinstance(value, float):
-        raise AssertionError("floating-point fixture value")
+        raise TypeError("floating-point fixture value")
     if isinstance(value, dict):
         for item in value.values():
             reject_float(item)
@@ -45,11 +51,55 @@ def brute_descents(n: int, k: int) -> list[int]:
     for word in itertools.product(range(k), repeat=e):
         if any(word.count(letter) != n - 1 for letter in range(k)):
             continue
-        descents = sum(left > right for left, right in zip(word, word[1:]))
+        descents = sum(left > right for left, right in itertools.pairwise(word))
         result[descents] += 1
     while len(result) > 1 and result[-1] == 0:
         result.pop()
     return result
+
+
+def matrix_product(left, right):
+    return tuple(
+        tuple(
+            sum(left[i][k] * right[k][j] for k in range(len(right)))
+            for j in range(len(right[0]))
+        )
+        for i in range(len(left))
+    )
+
+
+def matrix_tensor(left, right):
+    return tuple(
+        tuple(
+            left[i][j] * right[k][l]
+            for j, l in itertools.product(range(len(left)), range(len(right)))
+        )
+        for i, k in itertools.product(range(len(left)), range(len(right)))
+    )
+
+
+def matrix_identity(size):
+    return tuple(tuple(Fraction(i == j) for j in range(size)) for i in range(size))
+
+
+def matrix_transpose(matrix):
+    return tuple(zip(*matrix))
+
+
+def matrix_trace(matrix):
+    return sum(matrix[i][i] for i in range(len(matrix)))
+
+
+def inverse_two(matrix):
+    a, b = matrix[0]
+    c, d = matrix[1]
+    determinant = a * d - b * c
+    if determinant == 0:
+        raise ValueError("audit matrix must be invertible")
+    return (
+        (Fraction(d, determinant), Fraction(-b, determinant)),
+        (Fraction(-c, determinant), Fraction(a, determinant)),
+    )
 
 
 class UniversalEulerObstructionTests(unittest.TestCase):
@@ -59,7 +109,9 @@ class UniversalEulerObstructionTests(unittest.TestCase):
 
     def test_smallest_witness_and_exact_positive_two_jet_gap(self) -> None:
         row = subject.identity_row(2, 2)
-        self.assertEqual([subject.identity_coefficient(2, 2, r) for r in range(3)], [1, 4, 9])
+        self.assertEqual(
+            [subject.identity_coefficient(2, 2, r) for r in range(3)], [1, 4, 9]
+        )
         self.assertEqual(row["first_coefficient_forced_virtual_dimension"], 4)
         self.assertEqual(row["exact_identity_pole_order"], 3)
         self.assertEqual(row["second_coefficient_defect"], 1)
@@ -73,13 +125,18 @@ class UniversalEulerObstructionTests(unittest.TestCase):
                 self.assertGreater(forced, target)
                 self.assertEqual(row["second_coefficient_defect"], forced - target)
                 self.assertEqual(
-                    sum(piece["dimension"] for piece in row["omitted_even_flip_summands"]),
+                    sum(
+                        piece["dimension"]
+                        for piece in row["omitted_even_flip_summands"]
+                    ),
                     forced - target,
                 )
                 self.assertGreater(row["pole_order_gap"], 0)
 
     def test_exception_chambers_and_polynomial_zero_power(self) -> None:
-        for n, k in [(n, k) for n in range(1, 6) for k in (0, 1)] + [(1, k) for k in range(6)]:
+        for n, k in [(n, k) for n in range(1, 6) for k in (0, 1)] + [
+            (1, k) for k in range(6)
+        ]:
             row = subject.identity_row(n, k)
             self.assertFalse(row["no_go_chamber"])
             self.assertEqual(row["identity_numerator"], [1])
@@ -100,7 +157,8 @@ class UniversalEulerObstructionTests(unittest.TestCase):
             for r in range(6):
                 recovered = sum(
                     count * math.comb(r - descents + e, e)
-                    for descents, count in enumerate(enumerated) if r >= descents
+                    for descents, count in enumerate(enumerated)
+                    if r >= descents
                 )
                 self.assertEqual(recovered, subject.identity_coefficient(n, k, r))
         with self.assertRaisesRegex(ValueError, "exclusive cap"):
@@ -120,12 +178,118 @@ class UniversalEulerObstructionTests(unittest.TestCase):
         for (n, k), numerator in expected.items():
             row = subject.identity_row(n, k)
             self.assertEqual(row["identity_numerator"], numerator)
-            self.assertEqual(sum(numerator), row["numerator_at_one_multiset_word_count"])
+            self.assertEqual(
+                sum(numerator), row["numerator_at_one_multiset_word_count"]
+            )
         for n in range(1, subject.MAX_ALLOWED_N + 1):
             numerator, _ = subject.finite_difference_numerator(n, 2)
             self.assertEqual(numerator, [math.comb(n - 1, j) ** 2 for j in range(n)])
 
-    def test_balanced_weights_against_independent_tensor_basis_enumeration(self) -> None:
+    def test_stable_sort_is_an_explicit_bijection_including_empty_edges(self) -> None:
+        for n, k, r in ((3, 3, 2), (2, 4, 2), (4, 2, 2), (1, 3, 2), (3, 0, 2)):
+            a, e = n - 1, (n - 1) * k
+            lists = tuple(itertools.combinations_with_replacement(range(r + 1), a))
+            images = set()
+            word_counts = {}
+            for source in itertools.product(lists, repeat=k):
+                merged = sorted(
+                    (value, letter)
+                    for letter, row in enumerate(source)
+                    for value in row
+                )
+                values = tuple(value for value, _ in merged)
+                word = tuple(letter for _, letter in merged)
+                recovered = tuple(
+                    tuple(value for value, label in merged if label == letter)
+                    for letter in range(k)
+                )
+                self.assertEqual(recovered, source)
+                self.assertNotIn((word, values), images)
+                images.add((word, values))
+                word_counts[word] = word_counts.get(word, 0) + 1
+                for i in range(e - 1):
+                    if word[i] > word[i + 1]:
+                        self.assertLess(values[i], values[i + 1])
+            self.assertEqual(len(images), math.comb(r + a, a) ** k)
+            for word, count in word_counts.items():
+                descents = sum(left > right for left, right in itertools.pairwise(word))
+                self.assertEqual(count, math.comb(r - descents + e, e))
+
+    def test_zero_complete_coefficient_has_polynomial_zero_power_one(self) -> None:
+        # A=diag(1,-1) is invertible and h_r(A)=0 for every odd r.
+        complete_coefficients = [sum((-1) ** j for j in range(r + 1)) for r in range(7)]
+        self.assertEqual(complete_coefficients, [1, 0, 1, 0, 1, 0, 1])
+        self.assertEqual([value**0 for value in complete_coefficients], [1] * 7)
+        self.assertEqual(
+            [subject.identity_coefficient(2, 0, r) for r in range(7)], [1] * 7
+        )
+
+    def test_non_diagonal_End_matrices_and_full_determinant_degree(self) -> None:
+        # Independent matrices, not the producer's diagonal weight expansion.
+        gram = tuple(
+            tuple(
+                Fraction(i == l and j == k)
+                for k, l in itertools.product(range(2), repeat=2)
+            )
+            for i, j in itertools.product(range(2), repeat=2)
+        )
+        for original in (((1, 1), (0, 1)), ((2, 1), (1, 1)), ((0, -1), (1, 0))):
+            inverse = inverse_two(original)
+            end = matrix_tensor(original, matrix_transpose(inverse))
+            self.assertEqual(
+                matrix_product(matrix_transpose(end), matrix_product(gram, end)), gram
+            )
+            twisted = tuple(tuple(3 * value for value in row) for row in original)
+            self.assertEqual(
+                matrix_tensor(twisted, matrix_transpose(inverse_two(twisted))), end
+            )
+            for m in (1, 2):
+                representation = end if m == 1 else matrix_tensor(end, end)
+                rank = 4**m
+                current = matrix_identity(rank)
+                left = right = matrix_identity(2)
+                traces = [Fraction(rank)]
+                for _ in range(1, rank + 1):
+                    current = matrix_product(current, representation)
+                    left = matrix_product(left, original)
+                    right = matrix_product(right, inverse)
+                    traces.append(matrix_trace(current))
+                    self.assertEqual(
+                        traces[-1], matrix_trace(left) ** m * matrix_trace(right) ** m
+                    )
+                # Newton's determinant coefficients from the actual matrix traces.
+                determinant = [Fraction(1)]
+                for degree in range(1, rank + 1):
+                    determinant.append(
+                        -sum(
+                            traces[r] * determinant[degree - r]
+                            for r in range(1, degree + 1)
+                        )
+                        / degree
+                    )
+                self.assertEqual(determinant[-1], 1)  # rank is even; det(W)=1.
+                self.assertEqual(len(determinant) - 1, rank)
+                if original == ((1, 1), (0, 1)):
+                    self.assertEqual(
+                        determinant,
+                        [
+                            Fraction((-1) ** j * math.comb(rank, j))
+                            for j in range(rank + 1)
+                        ],
+                    )
+                if original == ((0, -1), (1, 0)):
+                    expected = [Fraction(0)] * (rank + 1)
+                    for j in range(rank // 2 + 1):
+                        expected[2 * j] = Fraction((-1) ** j * math.comb(rank // 2, j))
+                    self.assertEqual(determinant, expected)
+                    self.assertEqual(traces[1:5], [0, rank, 0, rank])
+                    # This nondense unitary orbit has scalar recurrence order 2,
+                    # not the dense support count, while Euler degree stays rank.
+                    self.assertNotEqual(rank, 2)
+
+    def test_balanced_weights_against_independent_tensor_basis_enumeration(
+        self,
+    ) -> None:
         for n, m in ((2, 1), (2, 2), (3, 1), (3, 2)):
             coefficients = subject.balanced_weights(n, m)
             enumerated: dict[tuple[int, ...], int] = {}
@@ -136,28 +300,50 @@ class UniversalEulerObstructionTests(unittest.TestCase):
                 enumerated[exponent] = enumerated.get(exponent, 0) + 1
             self.assertEqual(coefficients, enumerated)
             self.assertEqual(sum(coefficients.values()), n ** (2 * m))
-        self.assertEqual(subject.balanced_weights(2, 2), {
-            (-2, 2): 1, (-1, 1): 4, (0, 0): 6, (1, -1): 4, (2, -2): 1,
-        })
+        self.assertEqual(
+            subject.balanced_weights(2, 2),
+            {
+                (-2, 2): 1,
+                (-1, 1): 4,
+                (0, 0): 6,
+                (1, -1): 4,
+                (2, -2): 1,
+            },
+        )
 
     def test_balanced_repair_keeps_rank_multiplicity_and_exact_rationals(self) -> None:
-        for n, m, rank, support in ((2, 1, 4, 3), (2, 2, 16, 5), (3, 2, 81, 19), (5, 2, 625, 131)):
+        for n, m, rank, support in (
+            (2, 1, 4, 3),
+            (2, 2, 16, 5),
+            (3, 2, 81, 19),
+            (5, 2, 625, 131),
+        ):
             row = subject.balanced_trace_row(n, m)
-            self.assertEqual(row["representation_rank_and_euler_denominator_degree"], rank)
-            self.assertEqual(row["distinct_character_count_dense_scalar_recurrence_degree"], support)
+            self.assertEqual(
+                row["representation_rank_and_euler_denominator_degree"], rank
+            )
+            self.assertEqual(
+                row["distinct_character_count_dense_scalar_recurrence_degree"], support
+            )
             self.assertGreater(rank, support)
             self.assertEqual(row["determinant_character_exponent"], [0] * n)
-            self.assertTrue(row["sample_is_nonunitary_algebraic_trace_pair_not_absolute_trace"])
+            self.assertTrue(
+                row["sample_is_nonunitary_algebraic_trace_pair_not_absolute_trace"]
+            )
             self.assertTrue(row["independent_determinant_coefficients_equal"])
             traces = [Fraction(*value) for value in row["balanced_power_traces"]]
-            exponential = [Fraction(*value) for value in row["exponential_coefficients"]]
+            exponential = [
+                Fraction(*value) for value in row["exponential_coefficients"]
+            ]
             self.assertEqual(traces[0], rank)
             self.assertEqual(exponential[0], 1)
             self.assertEqual(exponential[1], traces[1])
             self.assertEqual(exponential[2], (traces[1] ** 2 + traces[2]) / 2)
             self.assertEqual(row["identity_scalar_recurrence_degree"], 1)
             self.assertEqual(row["identity_euler_denominator_degree"], rank)
-        self.assertEqual(subject.balanced_trace_row(1, 2)["exponential_coefficients"], [[1, 1]] * 5)
+        self.assertEqual(
+            subject.balanced_trace_row(1, 2)["exponential_coefficients"], [[1, 1]] * 5
+        )
 
     def test_unitary_exact_sign_controls_and_scalar_twists(self) -> None:
         for diagonal in ((1, -1), (1, 1, -1)):
@@ -168,7 +354,8 @@ class UniversalEulerObstructionTests(unittest.TestCase):
                     trace = sum(z**r for z in diagonal)
                     # Integral unitary roots avoid any floating-point absolute-value test.
                     weight_trace = sum(
-                        count * math.prod(
+                        count
+                        * math.prod(
                             Fraction(z) ** (r * v) for z, v in zip(diagonal, exponent)
                         )
                         for exponent, count in weights.items()
@@ -177,7 +364,9 @@ class UniversalEulerObstructionTests(unittest.TestCase):
                 for exponent in weights:
                     self.assertEqual(sum(exponent), 0)
                     self.assertEqual(
-                        math.prod(Fraction(3 * z) ** v for z, v in zip(diagonal, exponent)),
+                        math.prod(
+                            Fraction(3 * z) ** v for z, v in zip(diagonal, exponent)
+                        ),
                         math.prod(Fraction(z) ** v for z, v in zip(diagonal, exponent)),
                     )
 
@@ -187,25 +376,46 @@ class UniversalEulerObstructionTests(unittest.TestCase):
         self.assertTrue(lock["git_blob_contents_compared_to_working_tree"])
         self.assertEqual(len(lock["verified_sources"]), 3)
         for row in lock["verified_sources"]:
-            content = subject._normalized_bytes(subject._git_blob_bytes(row["git_blob"]))
-            self.assertEqual(hashlib.sha256(content).hexdigest(), row["file_sha256_lf_normalized"])
-        with mock.patch.object(subject, "_git_blob_bytes", return_value=b"wrong blob bytes\n"):
-            with self.assertRaisesRegex(RuntimeError, "Git blob content hash mismatch"):
-                subject.verify_sources_manifest()
-        with mock.patch.object(subject, "_lf_sha256", return_value="0" * 64):
-            with self.assertRaisesRegex(RuntimeError, "manifest hash mismatch"):
-                subject.verify_sources_manifest()
+            content = subject._normalized_bytes(
+                subject._git_blob_bytes(row["git_blob"])
+            )
+            self.assertEqual(
+                hashlib.sha256(content).hexdigest(), row["file_sha256_lf_normalized"]
+            )
+        with (
+            mock.patch.object(
+                subject, "_git_blob_bytes", return_value=b"wrong blob bytes\n"
+            ),
+            self.assertRaisesRegex(RuntimeError, "Git blob content hash mismatch"),
+        ):
+            subject.verify_sources_manifest()
+        with (
+            mock.patch.object(subject, "_lf_sha256", return_value="0" * 64),
+            self.assertRaisesRegex(RuntimeError, "manifest hash mismatch"),
+        ):
+            subject.verify_sources_manifest()
         with self.assertRaisesRegex(RuntimeError, "git object lookup failed"):
-            subject._git_blob_at(subject.EXPECTED_BASE_COMMIT, "missing-universal-Euler-source")
+            subject._git_blob_at(
+                subject.EXPECTED_BASE_COMMIT, "missing-universal-Euler-source"
+            )
         with self.assertRaisesRegex(RuntimeError, "git blob read failed"):
             subject._git_blob_bytes("0" * 40)
 
     def test_strict_resource_bounds_refusals_and_no_float_payloads(self) -> None:
         resources = self.fixture["resource_contract"]
         declared = resources["declared_work_upper_bound"]
-        self.assertEqual(declared, resources["identity_work_upper_bound"] + resources["constructive_work_upper_bound"])
+        self.assertEqual(
+            declared,
+            resources["identity_work_upper_bound"]
+            + resources["constructive_work_upper_bound"],
+        )
         self.assertLess(declared, resources["work_unit_cap_exclusive"])
         self.assertEqual(resources["float_operations"], 0)
+        self.assertEqual(resources["arithmetic_class"], "MIXED")
+        self.assertEqual(
+            resources["arithmetic_components"],
+            ["CERTIFIED_INTEGER_COVERAGE", "EXACT_RATIONAL"],
+        )
         self.assertFalse(resources["external_symbolic_engine"])
         reject_float(self.fixture)
         with self.assertRaisesRegex(RuntimeError, "exclusive cap"):
@@ -213,11 +423,19 @@ class UniversalEulerObstructionTests(unittest.TestCase):
         row_bound = subject.identity_work_bound(2, 2)["declared_work_upper_bound"]
         with self.assertRaisesRegex(RuntimeError, "exclusive cap"):
             subject.multiset_descent_numerator(2, 2, resource_cap=row_bound)
-        self.assertEqual(subject.multiset_descent_numerator(2, 2, resource_cap=row_bound + 1)[0], [1, 1])
+        self.assertEqual(
+            subject.multiset_descent_numerator(2, 2, resource_cap=row_bound + 1)[0],
+            [1, 1],
+        )
         balanced_bound = subject.balanced_work_bound(2, 1)
         with self.assertRaisesRegex(RuntimeError, "exclusive cap"):
             subject.balanced_weights(2, 1, resource_cap=balanced_bound)
-        self.assertEqual(sum(subject.balanced_weights(2, 1, resource_cap=balanced_bound + 1).values()), 4)
+        self.assertEqual(
+            sum(
+                subject.balanced_weights(2, 1, resource_cap=balanced_bound + 1).values()
+            ),
+            4,
+        )
         for kwargs in ({"max_n": 6}, {"max_k": 6}, {"max_n": 0}, {"max_k": -1}):
             with self.assertRaises(ValueError):
                 subject.build_fixture(**kwargs)
@@ -241,15 +459,23 @@ class UniversalEulerObstructionTests(unittest.TestCase):
         for claim in self.fixture["claims"]:
             self.assertIn(claim, note)
         for required in (
-            "Zariski-dense", "stable sorting", "self-dual", "unitarity",
-            "not a priority claim", "not a new automorphic lift",
-            "n^{2m}", "scalar recurrence", "Negative virtual multiplicities",
+            "Zariski-dense",
+            "stable sorting",
+            "self-dual",
+            "unitarity",
+            "not a priority claim",
+            "not a new automorphic lift",
+            "n^{2m}",
+            "scalar recurrence",
+            "Negative virtual multiplicities",
         ):
             self.assertIn(required, note)
         for field, value in self.fixture["scope_firewall"].items():
             self.assertTrue(value, field)
         self.assertTrue(
-            self.fixture["universal_proof_obligations"]["finite_rows_do_not_prove_universal_quantifiers"]
+            self.fixture["universal_proof_obligations"][
+                "finite_rows_do_not_prove_universal_quantifiers"
+            ]
         )
 
     def test_stored_fixture_and_all_artifact_hashes(self) -> None:
@@ -259,7 +485,10 @@ class UniversalEulerObstructionTests(unittest.TestCase):
         payload_hash = unhashed.pop("payload_sha256")
         self.assertEqual(payload_hash, subject._canonical_sha256(unhashed))
         for field in ("identity_controls", "constructive_controls"):
-            self.assertEqual(stored[field]["rows_sha256"], subject._canonical_sha256(stored[field]["rows"]))
+            self.assertEqual(
+                stored[field]["rows_sha256"],
+                subject._canonical_sha256(stored[field]["rows"]),
+            )
         for path, field in (
             (MODULE_PATH, "script_sha256_lf_normalized"),
             (subject.NOTE_PATH, "note_sha256_lf_normalized"),

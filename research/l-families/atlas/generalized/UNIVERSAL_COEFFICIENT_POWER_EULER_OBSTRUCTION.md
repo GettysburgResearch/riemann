@@ -400,7 +400,7 @@ For diagonal \(A\) with eigenvalues \(z_1,\ldots,z_n\), its Euler factor is
 
 Its denominator has degree \(\sum_vC_v=N=n^{2m}\), even when eigenvalues
 collide. This differs from the scalar recurrence degree for
-\(|p_r(A)|^{2m}\), which, along a dense full or determinant-one torus
+\(|p_r(A)|^{2m}\), which, along a dense full or determinant-one compact unitary torus
 orbit with \(n\geq2\), counts distinct supported characters,
 
 \[
@@ -501,7 +501,10 @@ or RH/GRH consequence is asserted.
 ## 7. Exact replay and refusal contract
 
 The producer and tests use standard-library exact integer and rational
-arithmetic. The default identity rectangle is
+arithmetic. The arithmetic class is `MIXED`, comprising
+`CERTIFIED_INTEGER_COVERAGE` for the declared finite combinatorial rows and
+`EXACT_RATIONAL` for trace/determinant coefficients, with no rounding.
+The default identity rectangle is
 \(1\leq n\leq4,\ 0\leq k\leq4\), with hard maxima \(n,k\leq5\).
 Two independent constructions are compared:
 
@@ -575,3 +578,11 @@ Finite replay does not machine-prove the universal representation
 quantifier, extension from a Zariski-dense set, the unbounded stable-sort
 bijection, or a global \(L\)-function. Those are explicit proof or scope
 obligations, not conclusions extrapolated from finite rows.
+
+An independent audit of the original packet at
+`330c6f8b85fa1923f2d4914ce3ab1775b0e56c75`, with release-only repairs and
+additional exact controls, is recorded in
+[the audit report](UNIVERSAL_COEFFICIENT_POWER_EULER_OBSTRUCTION_AUDIT_330C6F8B.md).
+The compact-unitary qualifier above makes the imported scalar recurrence
+hypothesis explicit; the algebraic trace-pair repair still applies to every
+invertible complex matrix.
