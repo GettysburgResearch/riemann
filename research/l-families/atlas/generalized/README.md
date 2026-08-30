@@ -55,3 +55,14 @@ colocated [sources manifest](irrational_rotation_principal_complex_power_rationa
 The concise [wave-2 research map](WAVE2_RESEARCH_MAP.md) records the axes now
 covered, held-out families, L0--L9 boundary, and ranked proof-sized queue.  It
 is a continuation plan, not another theorem packet.
+
+The fifth packet is
+[TRANSFER_MATRIX_SYMMETRIC_PARENT.md](TRANSFER_MATRIX_SYMMETRIC_PARENT.md).
+It replaces a fitted scalar recurrence by the honest local parent
+\(\operatorname{Sym}^k(A)\), proves the exact matrix-coefficient identity,
+and isolates a load-bearing determinant effect.  Across all degrees through
+\(d\), a generic rank-\(n\) torus has \(\binom{n+d}{n}\) distinct weights,
+whereas the determinant-one subtorus has
+\(\binom{n+d}{n}-\binom{d}{n}\).  This is standard local tensor and
+weight-lattice algebra, not a global symmetric-power \(L\)-function or a
+novelty claim; degeneration and cancellation loci are retained explicitly.

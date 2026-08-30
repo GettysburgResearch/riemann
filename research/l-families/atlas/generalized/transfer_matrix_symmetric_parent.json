@@ -1,0 +1,3425 @@
+{
+  "claims": {
+    "GLO764.DETERMINANT_ONE_SPECTRAL_COMPRESSION": {
+      "statement": "the full filtered rank-two spectrum through d drops from binomial(d+2,2) generically to 2d+1 on det=1",
+      "status": "PROVED_IN_NOTE_AND_EXACTLY_REPLAYED"
+    },
+    "GLO764.FINITE_PARENT_INTERPOLATION_OBSTRUCTION": {
+      "open_beyond_scope": "infinite-dimensional, nuclear, regularized, categorical, and complex-rank parents",
+      "scope": "positive-real branch for the fixed hyperbolic recurrence x>2",
+      "statement": "u_r(x)^lambda is an exact finite-dimensional matrix coefficient iff lambda is a nonnegative integer",
+      "status": "PROVED_FROM_AUTHENTICATED_SOURCE_THEOREM_AND_FINITE_RESOLVENT_IDENTITY"
+    },
+    "GLO764.GENERIC_POWER_MINIMAL_DENOMINATOR": {
+      "statement": "with nonzero eigen-coordinates and k+1 distinct symmetric weights, the reduced denominator has degree k+1",
+      "status": "PROVED_IN_NOTE_AND_EXACTLY_REPLAYED"
+    },
+    "GLO764.HIGHER_RANK_DETERMINANT_QUOTIENT": {
+      "mechanism": "quotient the exponent simplex by the all-ones character and choose the unique representative with minimum coordinate zero",
+      "statement": "the full filtered rank-n spectrum through d drops from binomial(n+d,n) to binomial(n+d,n)-binomial(d,n) on the generic determinant-one torus",
+      "status": "PROVED_IN_NOTE_AND_EXACTLY_REPLAYED"
+    },
+    "GLO764.TENSOR_PARENT_IDENTITY": {
+      "scope": "rank-two characteristic-zero linear algebra and integer k>=0",
+      "statement": "(ell(A^r v))^k is the corresponding matrix coefficient of (Sym^k A)^r",
+      "status": "PROVED_IN_NOTE_AND_EXACTLY_REPLAYED"
+    }
+  },
+  "filtered_parent_spectrum": {
+    "degrees": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "held_out_prediction": "freeing determinant generically restores triangular rather than linear spectral growth across degrees",
+    "load_bearing_parameter": "delta=alpha*beta; setting delta=1 forgets one exponent coordinate",
+    "rows": [
+      {
+        "d": 0,
+        "determinant_one": {
+          "distinct_weight_count": 1,
+          "predicted_linear_count": 1,
+          "projected_exponents": [
+            0
+          ],
+          "witness": {
+            "alpha": "2",
+            "beta": "1/2"
+          }
+        },
+        "filtered_parent_dimension": 1,
+        "generic_two_torus": {
+          "distinct_weight_count": 1,
+          "exponent_pair_count": 1,
+          "predicted_triangular_count": 1,
+          "witness": {
+            "alpha": "2",
+            "beta": "3"
+          }
+        },
+        "multiplicatively_dependent_counterfeit": {
+          "distinct_weight_count": 1,
+          "strictly_below_generic_count": null,
+          "witness": {
+            "alpha": "2",
+            "beta": "4"
+          }
+        }
+      },
+      {
+        "d": 1,
+        "determinant_one": {
+          "distinct_weight_count": 3,
+          "predicted_linear_count": 3,
+          "projected_exponents": [
+            -1,
+            0,
+            1
+          ],
+          "witness": {
+            "alpha": "2",
+            "beta": "1/2"
+          }
+        },
+        "filtered_parent_dimension": 3,
+        "generic_two_torus": {
+          "distinct_weight_count": 3,
+          "exponent_pair_count": 3,
+          "predicted_triangular_count": 3,
+          "witness": {
+            "alpha": "2",
+            "beta": "3"
+          }
+        },
+        "multiplicatively_dependent_counterfeit": {
+          "distinct_weight_count": 3,
+          "strictly_below_generic_count": null,
+          "witness": {
+            "alpha": "2",
+            "beta": "4"
+          }
+        }
+      },
+      {
+        "d": 2,
+        "determinant_one": {
+          "distinct_weight_count": 5,
+          "predicted_linear_count": 5,
+          "projected_exponents": [
+            -2,
+            -1,
+            0,
+            1,
+            2
+          ],
+          "witness": {
+            "alpha": "2",
+            "beta": "1/2"
+          }
+        },
+        "filtered_parent_dimension": 6,
+        "generic_two_torus": {
+          "distinct_weight_count": 6,
+          "exponent_pair_count": 6,
+          "predicted_triangular_count": 6,
+          "witness": {
+            "alpha": "2",
+            "beta": "3"
+          }
+        },
+        "multiplicatively_dependent_counterfeit": {
+          "distinct_weight_count": 5,
+          "strictly_below_generic_count": true,
+          "witness": {
+            "alpha": "2",
+            "beta": "4"
+          }
+        }
+      },
+      {
+        "d": 3,
+        "determinant_one": {
+          "distinct_weight_count": 7,
+          "predicted_linear_count": 7,
+          "projected_exponents": [
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3
+          ],
+          "witness": {
+            "alpha": "2",
+            "beta": "1/2"
+          }
+        },
+        "filtered_parent_dimension": 10,
+        "generic_two_torus": {
+          "distinct_weight_count": 10,
+          "exponent_pair_count": 10,
+          "predicted_triangular_count": 10,
+          "witness": {
+            "alpha": "2",
+            "beta": "3"
+          }
+        },
+        "multiplicatively_dependent_counterfeit": {
+          "distinct_weight_count": 7,
+          "strictly_below_generic_count": true,
+          "witness": {
+            "alpha": "2",
+            "beta": "4"
+          }
+        }
+      },
+      {
+        "d": 4,
+        "determinant_one": {
+          "distinct_weight_count": 9,
+          "predicted_linear_count": 9,
+          "projected_exponents": [
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "witness": {
+            "alpha": "2",
+            "beta": "1/2"
+          }
+        },
+        "filtered_parent_dimension": 15,
+        "generic_two_torus": {
+          "distinct_weight_count": 15,
+          "exponent_pair_count": 15,
+          "predicted_triangular_count": 15,
+          "witness": {
+            "alpha": "2",
+            "beta": "3"
+          }
+        },
+        "multiplicatively_dependent_counterfeit": {
+          "distinct_weight_count": 9,
+          "strictly_below_generic_count": true,
+          "witness": {
+            "alpha": "2",
+            "beta": "4"
+          }
+        }
+      },
+      {
+        "d": 5,
+        "determinant_one": {
+          "distinct_weight_count": 11,
+          "predicted_linear_count": 11,
+          "projected_exponents": [
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "witness": {
+            "alpha": "2",
+            "beta": "1/2"
+          }
+        },
+        "filtered_parent_dimension": 21,
+        "generic_two_torus": {
+          "distinct_weight_count": 21,
+          "exponent_pair_count": 21,
+          "predicted_triangular_count": 21,
+          "witness": {
+            "alpha": "2",
+            "beta": "3"
+          }
+        },
+        "multiplicatively_dependent_counterfeit": {
+          "distinct_weight_count": 11,
+          "strictly_below_generic_count": true,
+          "witness": {
+            "alpha": "2",
+            "beta": "4"
+          }
+        }
+      },
+      {
+        "d": 6,
+        "determinant_one": {
+          "distinct_weight_count": 13,
+          "predicted_linear_count": 13,
+          "projected_exponents": [
+            -6,
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "witness": {
+            "alpha": "2",
+            "beta": "1/2"
+          }
+        },
+        "filtered_parent_dimension": 28,
+        "generic_two_torus": {
+          "distinct_weight_count": 28,
+          "exponent_pair_count": 28,
+          "predicted_triangular_count": 28,
+          "witness": {
+            "alpha": "2",
+            "beta": "3"
+          }
+        },
+        "multiplicatively_dependent_counterfeit": {
+          "distinct_weight_count": 13,
+          "strictly_below_generic_count": true,
+          "witness": {
+            "alpha": "2",
+            "beta": "4"
+          }
+        }
+      },
+      {
+        "d": 7,
+        "determinant_one": {
+          "distinct_weight_count": 15,
+          "predicted_linear_count": 15,
+          "projected_exponents": [
+            -7,
+            -6,
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "witness": {
+            "alpha": "2",
+            "beta": "1/2"
+          }
+        },
+        "filtered_parent_dimension": 36,
+        "generic_two_torus": {
+          "distinct_weight_count": 36,
+          "exponent_pair_count": 36,
+          "predicted_triangular_count": 36,
+          "witness": {
+            "alpha": "2",
+            "beta": "3"
+          }
+        },
+        "multiplicatively_dependent_counterfeit": {
+          "distinct_weight_count": 15,
+          "strictly_below_generic_count": true,
+          "witness": {
+            "alpha": "2",
+            "beta": "4"
+          }
+        }
+      },
+      {
+        "d": 8,
+        "determinant_one": {
+          "distinct_weight_count": 17,
+          "predicted_linear_count": 17,
+          "projected_exponents": [
+            -8,
+            -7,
+            -6,
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "witness": {
+            "alpha": "2",
+            "beta": "1/2"
+          }
+        },
+        "filtered_parent_dimension": 45,
+        "generic_two_torus": {
+          "distinct_weight_count": 45,
+          "exponent_pair_count": 45,
+          "predicted_triangular_count": 45,
+          "witness": {
+            "alpha": "2",
+            "beta": "3"
+          }
+        },
+        "multiplicatively_dependent_counterfeit": {
+          "distinct_weight_count": 17,
+          "strictly_below_generic_count": true,
+          "witness": {
+            "alpha": "2",
+            "beta": "4"
+          }
+        }
+      }
+    ]
+  },
+  "finite_parent_interpolation_obstruction": {
+    "classification": "finite-dimensional exact matrix-coefficient parent iff lambda is a nonnegative integer",
+    "finite_matrix_coefficient_implication": "phi((I-T*B)^(-1)w) is rational",
+    "integer_parent": "u_r=ell(A^r v), hence u_r^k is a matrix coefficient of Sym^k(A)",
+    "not_excluded": [
+      "infinite-dimensional or nuclear operators",
+      "regularized determinants",
+      "Deligne or other complex-rank tensor categories",
+      "categorical traces",
+      "approximate or weakened shadows"
+    ],
+    "source_classification": "sum_r u_r(x)^lambda*T^r is rational iff lambda is a nonnegative integer"
+  },
+  "higher_rank_determinant_quotient": {
+    "asymptotic_for_fixed_n_at_least_2": "n/(n-1)! * d^(n-1) + O_n(d^(n-2))",
+    "determinant_one_formula": "binomial(n+d,n)-binomial(d,n)",
+    "further_frontier": "quotient exponent polytopes by higher-rank monomial-relation lattices",
+    "generic_formula": "binomial(n+d,n)",
+    "maximum_degree": 8,
+    "maximum_rank": 5,
+    "rows": [
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 0,
+        "determinant_one_character_count": 1,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 1,
+        "rank": 2,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 1,
+        "determinant_one_character_count": 3,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 3,
+        "rank": 2,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 1,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 2,
+        "determinant_one_character_count": 5,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 6,
+        "rank": 2,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 3,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 3,
+        "determinant_one_character_count": 7,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 10,
+        "rank": 2,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 6,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 4,
+        "determinant_one_character_count": 9,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 15,
+        "rank": 2,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 10,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 5,
+        "determinant_one_character_count": 11,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 21,
+        "rank": 2,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 15,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 6,
+        "determinant_one_character_count": 13,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 28,
+        "rank": 2,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 21,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 7,
+        "determinant_one_character_count": 15,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 36,
+        "rank": 2,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 28,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 8,
+        "determinant_one_character_count": 17,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 45,
+        "rank": 2,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 0,
+        "determinant_one_character_count": 1,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 1,
+        "rank": 3,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 1,
+        "determinant_one_character_count": 4,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 4,
+        "rank": 3,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 2,
+        "determinant_one_character_count": 10,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 10,
+        "rank": 3,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 1,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 3,
+        "determinant_one_character_count": 19,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 20,
+        "rank": 3,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 4,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 4,
+        "determinant_one_character_count": 31,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 35,
+        "rank": 3,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            2,
+            2
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 10,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 5,
+        "determinant_one_character_count": 46,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 56,
+        "rank": 3,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 20,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 6,
+        "determinant_one_character_count": 64,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 84,
+        "rank": 3,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 35,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 7,
+        "determinant_one_character_count": 85,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 120,
+        "rank": 3,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            7
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 56,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 8,
+        "determinant_one_character_count": 109,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 165,
+        "rank": 3,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            7
+          ],
+          [
+            0,
+            0,
+            8
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 0,
+        "determinant_one_character_count": 1,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 1,
+        "rank": 4,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 1,
+        "determinant_one_character_count": 5,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 5,
+        "rank": 4,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 2,
+        "determinant_one_character_count": 15,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 15,
+        "rank": 4,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 3,
+        "determinant_one_character_count": 35,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 35,
+        "rank": 4,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 1,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 4,
+        "determinant_one_character_count": 69,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 70,
+        "rank": 4,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            2
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 5,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 5,
+        "determinant_one_character_count": 121,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 126,
+        "rank": 4,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            0,
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 15,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 6,
+        "determinant_one_character_count": 195,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 210,
+        "rank": 4,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            1,
+            4
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 35,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 7,
+        "determinant_one_character_count": 295,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 330,
+        "rank": 4,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            7
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            1,
+            3
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 70,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 8,
+        "determinant_one_character_count": 425,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 495,
+        "rank": 4,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            7
+          ],
+          [
+            0,
+            0,
+            0,
+            8
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 0,
+        "determinant_one_character_count": 1,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 1,
+        "rank": 5,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 1,
+        "determinant_one_character_count": 6,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 6,
+        "rank": 5,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 2,
+        "determinant_one_character_count": 21,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 21,
+        "rank": 5,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 3,
+        "determinant_one_character_count": 56,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 56,
+        "rank": 5,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 0,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 4,
+        "determinant_one_character_count": 126,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 126,
+        "rank": 5,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            2
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 1,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 5,
+        "determinant_one_character_count": 251,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 252,
+        "rank": 5,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 6,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 6,
+        "determinant_one_character_count": 456,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 462,
+        "rank": 5,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            4
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 21,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 7,
+        "determinant_one_character_count": 771,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 792,
+        "rank": 5,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            7
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            3
+          ]
+        ]
+      },
+      {
+        "all_positive_exponent_count": 56,
+        "canonical_representatives_have_minimum_zero": true,
+        "d": 8,
+        "determinant_one_character_count": 1231,
+        "formula": "binomial(n+d,n)-binomial(d,n)",
+        "generic_character_count": 1287,
+        "rank": 5,
+        "sample_canonical_representatives": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            7
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            2
+          ]
+        ]
+      }
+    ]
+  },
+  "hostile_controls": {
+    "fitted_scalar_realization_is_not_the_parent": true,
+    "multiplicatively_dependent_roots": "collide weights across different polynomial degrees",
+    "parent_does_not_identify_coefficient_power_with_symmetric_power_l_factor": true,
+    "resolvent_matrix_coefficient_is_not_determinant_inverse": true,
+    "root_of_unity_ratio": "collides weights within a fixed symmetric power",
+    "special_polynomial_coefficients": "can cancel scalar-shadow poles even when the direct-sum parent retains them",
+    "zero_eigen_coordinate": "removes some symmetric weights and invalidates minimality, but not the parent identity"
+  },
+  "literature_firewall": {
+    "external_specialist_novelty_review_required": true,
+    "integer_power_recurrence_generating_functions_are_classical": true,
+    "references": [
+      {
+        "authors": "Pantelimon Stanica",
+        "boundary": "closed generating functions for integer powers of second-order recurrences",
+        "title": "Generating Functions, Weighted and Non-Weighted Sums for Powers of Second-Order Recurrence Sequences",
+        "url": "https://arxiv.org/abs/math/0010149"
+      },
+      {
+        "authors": "Pavel Etingof",
+        "boundary": "established interpolating tensor categories; not excluded by a finite-dimensional vector-space obstruction",
+        "title": "Representation theory in complex rank, I",
+        "url": "https://arxiv.org/abs/1401.6321"
+      }
+    ],
+    "tensor_parent_is_standard_representation_theory": true
+  },
+  "nonunit_determinant_power_parent": {
+    "base_sequence": {
+      "determinant": "6",
+      "eigenvalues": [
+        "3",
+        "2"
+      ],
+      "formula": "a_r=3*3^r-2*2^r",
+      "initial_values": [
+        1,
+        5
+      ],
+      "recurrence": "a_(r+2)=5*a_(r+1)-6*a_r"
+    },
+    "rows": [
+      {
+        "k": 0,
+        "minimal_denominator_coefficients_ascending": [
+          "1",
+          "-1"
+        ],
+        "minimal_denominator_degree": 1,
+        "parent": "Sym^0(A)",
+        "parent_dimension": 1,
+        "shadow_equals_parent_matrix_coefficient_through_index": 7,
+        "tail_annihilation_checked_through_index": 7,
+        "terms": [
+          {
+            "coefficient": "1",
+            "exponent_pair": [
+              0,
+              0
+            ],
+            "weight": "1"
+          }
+        ]
+      },
+      {
+        "k": 1,
+        "minimal_denominator_coefficients_ascending": [
+          "1",
+          "-5",
+          "6"
+        ],
+        "minimal_denominator_degree": 2,
+        "parent": "Sym^1(A)",
+        "parent_dimension": 2,
+        "shadow_equals_parent_matrix_coefficient_through_index": 10,
+        "tail_annihilation_checked_through_index": 10,
+        "terms": [
+          {
+            "coefficient": "3",
+            "exponent_pair": [
+              1,
+              0
+            ],
+            "weight": "3"
+          },
+          {
+            "coefficient": "-2",
+            "exponent_pair": [
+              0,
+              1
+            ],
+            "weight": "2"
+          }
+        ]
+      },
+      {
+        "k": 2,
+        "minimal_denominator_coefficients_ascending": [
+          "1",
+          "-19",
+          "114",
+          "-216"
+        ],
+        "minimal_denominator_degree": 3,
+        "parent": "Sym^2(A)",
+        "parent_dimension": 3,
+        "shadow_equals_parent_matrix_coefficient_through_index": 13,
+        "tail_annihilation_checked_through_index": 13,
+        "terms": [
+          {
+            "coefficient": "9",
+            "exponent_pair": [
+              2,
+              0
+            ],
+            "weight": "9"
+          },
+          {
+            "coefficient": "-12",
+            "exponent_pair": [
+              1,
+              1
+            ],
+            "weight": "6"
+          },
+          {
+            "coefficient": "4",
+            "exponent_pair": [
+              0,
+              2
+            ],
+            "weight": "4"
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "minimal_denominator_coefficients_ascending": [
+          "1",
+          "-65",
+          "1482",
+          "-14040",
+          "46656"
+        ],
+        "minimal_denominator_degree": 4,
+        "parent": "Sym^3(A)",
+        "parent_dimension": 4,
+        "shadow_equals_parent_matrix_coefficient_through_index": 16,
+        "tail_annihilation_checked_through_index": 16,
+        "terms": [
+          {
+            "coefficient": "27",
+            "exponent_pair": [
+              3,
+              0
+            ],
+            "weight": "27"
+          },
+          {
+            "coefficient": "-54",
+            "exponent_pair": [
+              2,
+              1
+            ],
+            "weight": "18"
+          },
+          {
+            "coefficient": "36",
+            "exponent_pair": [
+              1,
+              2
+            ],
+            "weight": "12"
+          },
+          {
+            "coefficient": "-8",
+            "exponent_pair": [
+              0,
+              3
+            ],
+            "weight": "8"
+          }
+        ]
+      },
+      {
+        "k": 4,
+        "minimal_denominator_coefficients_ascending": [
+          "1",
+          "-211",
+          "16458",
+          "-592488",
+          "9844416",
+          "-60466176"
+        ],
+        "minimal_denominator_degree": 5,
+        "parent": "Sym^4(A)",
+        "parent_dimension": 5,
+        "shadow_equals_parent_matrix_coefficient_through_index": 19,
+        "tail_annihilation_checked_through_index": 19,
+        "terms": [
+          {
+            "coefficient": "81",
+            "exponent_pair": [
+              4,
+              0
+            ],
+            "weight": "81"
+          },
+          {
+            "coefficient": "-216",
+            "exponent_pair": [
+              3,
+              1
+            ],
+            "weight": "54"
+          },
+          {
+            "coefficient": "216",
+            "exponent_pair": [
+              2,
+              2
+            ],
+            "weight": "36"
+          },
+          {
+            "coefficient": "-96",
+            "exponent_pair": [
+              1,
+              3
+            ],
+            "weight": "24"
+          },
+          {
+            "coefficient": "16",
+            "exponent_pair": [
+              0,
+              4
+            ],
+            "weight": "16"
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "minimal_denominator_coefficients_ascending": [
+          "1",
+          "-665",
+          "168378",
+          "-20737080",
+          "1309307328",
+          "-40210007040",
+          "470184984576"
+        ],
+        "minimal_denominator_degree": 6,
+        "parent": "Sym^5(A)",
+        "parent_dimension": 6,
+        "shadow_equals_parent_matrix_coefficient_through_index": 22,
+        "tail_annihilation_checked_through_index": 22,
+        "terms": [
+          {
+            "coefficient": "243",
+            "exponent_pair": [
+              5,
+              0
+            ],
+            "weight": "243"
+          },
+          {
+            "coefficient": "-810",
+            "exponent_pair": [
+              4,
+              1
+            ],
+            "weight": "162"
+          },
+          {
+            "coefficient": "1080",
+            "exponent_pair": [
+              3,
+              2
+            ],
+            "weight": "108"
+          },
+          {
+            "coefficient": "-720",
+            "exponent_pair": [
+              2,
+              3
+            ],
+            "weight": "72"
+          },
+          {
+            "coefficient": "240",
+            "exponent_pair": [
+              1,
+              4
+            ],
+            "weight": "48"
+          },
+          {
+            "coefficient": "-32",
+            "exponent_pair": [
+              0,
+              5
+            ],
+            "weight": "32"
+          }
+        ]
+      },
+      {
+        "k": 6,
+        "minimal_denominator_coefficients_ascending": [
+          "1",
+          "-2059",
+          "1643082",
+          "-656886888",
+          "141887567808",
+          "-16558480899072",
+          "968110883241984",
+          "-21936950640377856"
+        ],
+        "minimal_denominator_degree": 7,
+        "parent": "Sym^6(A)",
+        "parent_dimension": 7,
+        "shadow_equals_parent_matrix_coefficient_through_index": 25,
+        "tail_annihilation_checked_through_index": 25,
+        "terms": [
+          {
+            "coefficient": "729",
+            "exponent_pair": [
+              6,
+              0
+            ],
+            "weight": "729"
+          },
+          {
+            "coefficient": "-2916",
+            "exponent_pair": [
+              5,
+              1
+            ],
+            "weight": "486"
+          },
+          {
+            "coefficient": "4860",
+            "exponent_pair": [
+              4,
+              2
+            ],
+            "weight": "324"
+          },
+          {
+            "coefficient": "-4320",
+            "exponent_pair": [
+              3,
+              3
+            ],
+            "weight": "216"
+          },
+          {
+            "coefficient": "2160",
+            "exponent_pair": [
+              2,
+              4
+            ],
+            "weight": "144"
+          },
+          {
+            "coefficient": "-576",
+            "exponent_pair": [
+              1,
+              5
+            ],
+            "weight": "96"
+          },
+          {
+            "coefficient": "64",
+            "exponent_pair": [
+              0,
+              6
+            ],
+            "weight": "64"
+          }
+        ]
+      },
+      {
+        "k": 7,
+        "minimal_denominator_coefficients_ascending": [
+          "1",
+          "-6305",
+          "15578394",
+          "-19628776440",
+          "13763094077376",
+          "-5494801161507840",
+          "1220787823768141824",
+          "-138312473787582382080",
+          "6140942214464815497216"
+        ],
+        "minimal_denominator_degree": 8,
+        "parent": "Sym^7(A)",
+        "parent_dimension": 8,
+        "shadow_equals_parent_matrix_coefficient_through_index": 28,
+        "tail_annihilation_checked_through_index": 28,
+        "terms": [
+          {
+            "coefficient": "2187",
+            "exponent_pair": [
+              7,
+              0
+            ],
+            "weight": "2187"
+          },
+          {
+            "coefficient": "-10206",
+            "exponent_pair": [
+              6,
+              1
+            ],
+            "weight": "1458"
+          },
+          {
+            "coefficient": "20412",
+            "exponent_pair": [
+              5,
+              2
+            ],
+            "weight": "972"
+          },
+          {
+            "coefficient": "-22680",
+            "exponent_pair": [
+              4,
+              3
+            ],
+            "weight": "648"
+          },
+          {
+            "coefficient": "15120",
+            "exponent_pair": [
+              3,
+              4
+            ],
+            "weight": "432"
+          },
+          {
+            "coefficient": "-6048",
+            "exponent_pair": [
+              2,
+              5
+            ],
+            "weight": "288"
+          },
+          {
+            "coefficient": "1344",
+            "exponent_pair": [
+              1,
+              6
+            ],
+            "weight": "192"
+          },
+          {
+            "coefficient": "-128",
+            "exponent_pair": [
+              0,
+              7
+            ],
+            "weight": "128"
+          }
+        ]
+      },
+      {
+        "k": 8,
+        "minimal_denominator_coefficients_ascending": [
+          "1",
+          "-19171",
+          "145047786",
+          "-565869583656",
+          "1250484723020736",
+          "-1620628201034873856",
+          "1231774914182055100416",
+          "-530317686996348369371136",
+          "117728003193504977897127936",
+          "-10314424798490535546171949056"
+        ],
+        "minimal_denominator_degree": 9,
+        "parent": "Sym^8(A)",
+        "parent_dimension": 9,
+        "shadow_equals_parent_matrix_coefficient_through_index": 31,
+        "tail_annihilation_checked_through_index": 31,
+        "terms": [
+          {
+            "coefficient": "6561",
+            "exponent_pair": [
+              8,
+              0
+            ],
+            "weight": "6561"
+          },
+          {
+            "coefficient": "-34992",
+            "exponent_pair": [
+              7,
+              1
+            ],
+            "weight": "4374"
+          },
+          {
+            "coefficient": "81648",
+            "exponent_pair": [
+              6,
+              2
+            ],
+            "weight": "2916"
+          },
+          {
+            "coefficient": "-108864",
+            "exponent_pair": [
+              5,
+              3
+            ],
+            "weight": "1944"
+          },
+          {
+            "coefficient": "90720",
+            "exponent_pair": [
+              4,
+              4
+            ],
+            "weight": "1296"
+          },
+          {
+            "coefficient": "-48384",
+            "exponent_pair": [
+              3,
+              5
+            ],
+            "weight": "864"
+          },
+          {
+            "coefficient": "16128",
+            "exponent_pair": [
+              2,
+              6
+            ],
+            "weight": "576"
+          },
+          {
+            "coefficient": "-3072",
+            "exponent_pair": [
+              1,
+              7
+            ],
+            "weight": "384"
+          },
+          {
+            "coefficient": "256",
+            "exponent_pair": [
+              0,
+              8
+            ],
+            "weight": "256"
+          }
+        ]
+      }
+    ]
+  },
+  "payload_sha256": "74014cc29cc4104e5e4fbbf0e288ea51a1188bd717c176658175a5f3a55fe6dd",
+  "producer": {
+    "note": "research/l-families/atlas/generalized/TRANSFER_MATRIX_SYMMETRIC_PARENT.md",
+    "note_sha256_lf_normalized": "f85aa4549fba2b897d70654d56ed32f69648427a109369af8fb9152e8e91f921",
+    "script": "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.py",
+    "script_sha256_lf_normalized": "72a65c097b513c1041b5f89ed3fe37994e4779d3783e68164407a733b710f133",
+    "test": "tests/test_transfer_matrix_symmetric_parent.py",
+    "test_sha256_lf_normalized": "00bc59e5dee179791da69254a779e48326b92baf8bb2cd7e6cc9cbff2d7d0891"
+  },
+  "programme_issue": 764,
+  "resource_contract": {
+    "arithmetic_class": "EXACT_RATIONAL",
+    "declared_work_units": 6975,
+    "exact_method": "integer exponent lattices, rational binomial expansions, exact polynomial products, and recurrence convolutions",
+    "external_symbolic_engine": false,
+    "float_operations": 0,
+    "maximum_allowed_degree": 14,
+    "maximum_allowed_rank": 7,
+    "maximum_degree": 8,
+    "maximum_rank": 5,
+    "prime_curve_field_zero_or_conductor_enumerations": 0,
+    "random_samples": 0,
+    "work_unit_cap_exclusive": 100000
+  },
+  "schema": "riemann.atlas.generalized.transfer_matrix_symmetric_parent.v1",
+  "scope_firewall": {
+    "does_not_construct_a_global_Euler_product": true,
+    "does_not_prove_automorphy_motivic_origin_or_a_zero_theorem": true,
+    "does_not_supply_ramified_factors_completion_or_functional_equation": true,
+    "external_novelty_unreviewed": true,
+    "integer_symmetric_powers_only": true,
+    "local_rank_two_linear_algebra_only": true,
+    "matrix_coefficient_shadow_is_not_promoted_to_a_determinant_l_factor": true,
+    "no_RH_GRH_or_zero_distribution_consequence": true
+  },
+  "sources_manifest": {
+    "base_commit": "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+    "file_sha256_lf_normalized": "a95301d2873b531f64ba77c7a5ac6c7ac4e61cc35830f1704119823440a6a924",
+    "path": "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.sources.json",
+    "scope_firewall": {
+      "external_novelty_unreviewed": true,
+      "generic_weight_counts_require_stated_independence_hypotheses": true,
+      "integer_symmetric_powers_only": true,
+      "local_rank_two_linear_algebra_only": true,
+      "no_RH_GRH_or_zero_distribution_consequence": true,
+      "no_automorphy_motive_or_zero_theorem": true,
+      "no_ramified_factors_completion_or_functional_equation": true,
+      "parent_is_honest_but_global_l_function_is_not_constructed": true,
+      "scalar_minimal_denominators_require_nonvanishing_coordinates": true
+    },
+    "verified_sources": [
+      {
+        "file_sha256_lf_normalized": "587b42bd2f52de05018d94e6336b608388f5d381e82264b1614ddea12d314828",
+        "git_blob": "67e5dfa63684078586e4727530d7b9e66d557636",
+        "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.json",
+        "payload_sha256": "d809d5bed68618ff8dc9fd657b6c63c9cd0c8eca9ea83ffedda0b6d84a4ce7c3",
+        "role": "authenticated determinant-one scalar-shadow packet whose linear filtered recurrence bound is explained here",
+        "schema": "riemann.atlas.generalized.nonintegral_local_power_rationality.v1"
+      },
+      {
+        "file_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c",
+        "git_blob": "5eeb1e7c6129646ac646c697276bcd4adb04aa0c",
+        "path": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+        "role": "source theorem and normalization for determinant-one integer coefficient powers"
+      },
+      {
+        "file_sha256_lf_normalized": "fba40d932e947c81441cf7a9187e5915ed7e227bf2b2d1167ffb0a648599467e",
+        "git_blob": "e3cac8b29d38717157253b5b31e24e78434ce8c0",
+        "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
+        "role": "independent existing determinant-one Laurent and recurrence replay"
+      },
+      {
+        "file_sha256_lf_normalized": "213efe84034449a7ece87b273653bc683c11b28ea4f62e599e3f2b0bbac7c8a2",
+        "git_blob": "8f27df80a4983b4d393ee3a2477a744afaeb1d3a",
+        "path": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+        "role": "contrasting scalar-only tempered Gate-0 chamber"
+      },
+      {
+        "file_sha256_lf_normalized": "c24c0a1a34923efc0f08e2a9dd85e6682bb09d6ae1a470acea071ae194f77880",
+        "git_blob": "adea1dbb5f189f65357f39e1fe6bf1548bd77acc",
+        "path": "research/l-families/atlas/core/atlas_core.py",
+        "role": "canonical JSON normalization and digest implementation reused by this packet"
+      }
+    ]
+  },
+  "status": "PROPOSED_EXACT_LOCAL_PARENT_THEOREM_EXTERNAL_NOVELTY_UNREVIEWED",
+  "survival_ladder": {
+    "levels": {
+      "L0": "well-defined and branch-independent",
+      "L1": "coefficient or local multiplicativity",
+      "L2": "formal Euler product",
+      "L3": "uniform bounded-degree rational local factors",
+      "L4": "weight, determinant, duality, and ramified-prime coherence",
+      "L5": "canonical conductor, gamma factors, and root number",
+      "L6": "analytic continuation and functional equation",
+      "L7": "twist, tensor, induction, and contragredient compatibility",
+      "L8": "automorphic, motivic, spectral, dynamical, or categorical realization",
+      "L9": "principled explicit formula, positivity, or zero theory"
+    },
+    "rows": [
+      {
+        "first_unresolved_level": "L4",
+        "object": "integer monomial shadow a_r^k with parent Sym^k(A)",
+        "statuses": {
+          "L0": "PROVED_PASS",
+          "L1": "CONDITIONAL_ON_PRIMEWISE_MULTIPLICATIVE_INPUT",
+          "L2": "FORMAL_IF_L1_INPUT_IS_SUPPLIED",
+          "L3": "PROVED_PASS_LOCAL_DEGREE_AT_MOST_K_PLUS_1",
+          "L4": "OPEN_GLOBAL_COHERENCE_PROBLEM",
+          "L5": "NOT_ESTABLISHED",
+          "L6": "NOT_ESTABLISHED",
+          "L7": "LOCAL_SYMMETRIC_TENSOR_FUNCTORIALITY_ONLY",
+          "L8": "HONEST_LOCAL_LINEAR_PARENT_ONLY",
+          "L9": "NOT_ESTABLISHED"
+        }
+      },
+      {
+        "first_failure_level": "L1",
+        "object": "polynomial scalar transform Phi(a_r)",
+        "statuses": {
+          "L0": "PROVED_PASS",
+          "L1": "PROVED_FAIL_UNIVERSALLY_EXCEPT_NORMALIZED_MONOMIALS_IN_SOURCE_PACKET",
+          "L2": "NOT_ESTABLISHED_IN_GENERAL",
+          "L3": "PROVED_PASS_VIA_DIRECT_SUM_OF_SYMMETRIC_PARENTS",
+          "L4": "NOT_ESTABLISHED",
+          "L5": "NOT_ESTABLISHED",
+          "L6": "NOT_ESTABLISHED",
+          "L7": "DIRECT_SUM_PARENT_IS_FUNCTORIAL_LOCALLY",
+          "L8": "HONEST_LOCAL_PARENT_BUT_NOT_A_GLOBAL_REALIZATION",
+          "L9": "NOT_ESTABLISHED"
+        }
+      }
+    ]
+  }
+}
