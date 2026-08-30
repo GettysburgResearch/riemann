@@ -1,0 +1,44 @@
+{
+  "external": [
+    {
+      "id": "ESTERMANN",
+      "locator": "Delabarre (2013), section 1.2, printed p.227, one-variable theorem",
+      "role": "imported meromorphic continuation and every-point natural boundary theorem",
+      "url": "https://www.numdam.org/item/10.24033/bsmf.2647.pdf"
+    },
+    {
+      "id": "DAHLQUIST",
+      "locator": "section 1.2 p.534 and Lemma 2.1 pp.536-537",
+      "role": "prior-art comparison; unmodified zeta-product warning and small-prime separation",
+      "url": "https://doi.org/10.1007/BF02591361"
+    },
+    {
+      "id": "ZETA_AND_GAMMA",
+      "role": "standard zeta zero, pole, reflection and gamma divisor facts",
+      "urls": [
+        "https://dlmf.nist.gov/25.10",
+        "https://dlmf.nist.gov/25.6.E1",
+        "https://dlmf.nist.gov/25.2",
+        "https://dlmf.nist.gov/25.4",
+        "https://dlmf.nist.gov/5.2"
+      ]
+    }
+  ],
+  "external_theorems_machine_proved": false,
+  "parent_sources": [
+    {
+      "git_blob": "3932273279d43ffa34d929247152cb43b932fa1d",
+      "path": "research/l-families/atlas/generalized/FINITE_GRADED_VIRTUAL_PARENT_CLASSIFICATION.md",
+      "role": "native identity numerator, simple negative roots and integer formal grades",
+      "sha256_lf": "50daa223c5b6d0f061d771f24775a0a7a2d470f9185a1d6304f3b49e9fc799bc"
+    },
+    {
+      "git_blob": "c6a9b701f6c4cd410e7dd6b67d6d7d22431f6ce3",
+      "path": "research/l-families/atlas/generalized/FINITE_GRADED_VIRTUAL_PARENT_CLASSIFICATION_AUDIT.md",
+      "role": "independent exact-source parent review",
+      "sha256_lf": "a67a1a901cc33f8c42059351325ffc5c8358bb8b2acf2433944676bab45e50d7"
+    }
+  ],
+  "schema": "graded-parent-global-boundary-sources-v1",
+  "source_commit": "e2f469142cd55086e74751293877ab533001e786"
+}
