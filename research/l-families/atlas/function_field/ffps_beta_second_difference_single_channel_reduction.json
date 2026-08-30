@@ -1,0 +1,267 @@
+{
+  "architecture": "A: assembled beta / primitive core-wavelet route",
+  "central_panel_replay": {
+    "X": 90,
+    "identity": "S_H^U(X)=sum_(d<=X/H,sf,67-free) d^-1 P_0(d;H,min(2H,X/d))",
+    "kernel": "symmetric rational ratio-16 toy kernel",
+    "rows": [
+      {
+        "H": 1,
+        "radical_terms": 1,
+        "rational_component": "0",
+        "sha256": "49aad024c4efb586f4885a96a1fceaf21f0dd9bee4b081d312422d3d742191e9"
+      },
+      {
+        "H": 2,
+        "radical_terms": 2,
+        "rational_component": "0",
+        "sha256": "53ee70213015e2e9f4604ceddf3e2c3032279e20fadbc983e618cf6e0aec94b4"
+      },
+      {
+        "H": 4,
+        "radical_terms": 10,
+        "rational_component": "0",
+        "sha256": "5ebd311da72fe261f1664976d5ae7e751811b03081e1af554b4176af630f0343"
+      },
+      {
+        "H": 8,
+        "radical_terms": 27,
+        "rational_component": "0",
+        "sha256": "1c16eb872675e0230d23d5675d7edcfbfdf210e52aa1bbde3e8c057f5cb753f6"
+      },
+      {
+        "H": 16,
+        "radical_terms": 96,
+        "rational_component": "0",
+        "sha256": "3443ea9bfeba51d6c37ee0e53e8444191d7db1c0e5bd02e7ec9e9fa02a0ec4ef"
+      },
+      {
+        "H": 32,
+        "radical_terms": 355,
+        "rational_component": "0",
+        "sha256": "8e725c0201c7b9e0adce059a75b6cc02425a0712675852ea696833db00492005"
+      }
+    ]
+  },
+  "conditioning_replay": {
+    "amplitude_annulus": {
+      "lower": {
+        "rational": "68/67",
+        "sqrt_67": "-2/67"
+      },
+      "upper": {
+        "rational": "68/67",
+        "sqrt_67": "2/67"
+      }
+    },
+    "energy_annulus": {
+      "lower": {
+        "rational": "4892/4489",
+        "sqrt_67": "-272/4489"
+      },
+      "upper": {
+        "rational": "4892/4489",
+        "sqrt_67": "272/4489"
+      }
+    },
+    "frequency_symbol": "h(theta)=(1-67^(-1/2) exp(-i theta log 67))^2",
+    "inverse_coefficients": [
+      {
+        "coefficient": "1*67^(-0/2)",
+        "j": 0
+      },
+      {
+        "coefficient": "2*67^(-1/2)",
+        "j": 1
+      },
+      {
+        "coefficient": "3*67^(-2/2)",
+        "j": 2
+      },
+      {
+        "coefficient": "4*67^(-3/2)",
+        "j": 3
+      },
+      {
+        "coefficient": "5*67^(-4/2)",
+        "j": 4
+      },
+      {
+        "coefficient": "6*67^(-5/2)",
+        "j": 5
+      },
+      {
+        "coefficient": "7*67^(-6/2)",
+        "j": 6
+      },
+      {
+        "coefficient": "8*67^(-7/2)",
+        "j": 7
+      }
+    ],
+    "maximal_norm_conditioning": "(1-67^(-1/2))^2 M_U <= M_G <= (1+67^(-1/2))^2 M_U",
+    "sigma_phase_boundary": "sum_j (j+1)67^(-j sigma) converges exactly for sigma>0; at sigma=0 the symbol vanishes at theta=0"
+  },
+  "exact_theorems": {
+    "beta_energy_equivalent_to_67free_energy": "proved at the all-positive-exponent scale",
+    "central_gate_chain": "COREWAVE_0 -> COREAGG_0 <=> PRIMCAR_0 -> PRIMLS_0 -> RH",
+    "sharp_prefix_forward_and_inverse": true,
+    "single_channel_assembled_equivalent_to_rh": "proved using the frozen beta boundary criterion",
+    "source_second_difference": true,
+    "uniform_maximal_norm_conditioning": true
+  },
+  "prefix_transform_replay": {
+    "identity": "G=(I-q^(-1/2)S)^2 U",
+    "inverse": "U=sum_(j>=0)(j+1)q^(-j/2)S^j G; finite at each prefix",
+    "inverse_convolution_first_13": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "q": 67,
+    "rows": [
+      {
+        "beta_digest": "c225d2e273bb8361eebeca28bb41c33004c744c38509066a2e6e771c69deead5",
+        "formal_beta_atoms": 19,
+        "formal_u_atoms": 19,
+        "inverse_digest": "c225d2e273bb8361eebeca28bb41c33004c744c38509066a2e6e771c69deead5",
+        "q_adic_horizon_level": 0
+      },
+      {
+        "beta_digest": "32a8c334a3dad5031632c2e860dd0bdedddd450439556e9028f1eb3440d27252",
+        "formal_beta_atoms": 38,
+        "formal_u_atoms": 19,
+        "inverse_digest": "c225d2e273bb8361eebeca28bb41c33004c744c38509066a2e6e771c69deead5",
+        "q_adic_horizon_level": 1
+      },
+      {
+        "beta_digest": "bd2eb5ce906a1946443c970c1f0b9f4d45840712c755cbf3341a868f4e60585a",
+        "formal_beta_atoms": 57,
+        "formal_u_atoms": 19,
+        "inverse_digest": "c225d2e273bb8361eebeca28bb41c33004c744c38509066a2e6e771c69deead5",
+        "q_adic_horizon_level": 2
+      },
+      {
+        "beta_digest": "bd2eb5ce906a1946443c970c1f0b9f4d45840712c755cbf3341a868f4e60585a",
+        "formal_beta_atoms": 57,
+        "formal_u_atoms": 19,
+        "inverse_digest": "c225d2e273bb8361eebeca28bb41c33004c744c38509066a2e6e771c69deead5",
+        "q_adic_horizon_level": 3
+      },
+      {
+        "beta_digest": "bd2eb5ce906a1946443c970c1f0b9f4d45840712c755cbf3341a868f4e60585a",
+        "formal_beta_atoms": 57,
+        "formal_u_atoms": 19,
+        "inverse_digest": "c225d2e273bb8361eebeca28bb41c33004c744c38509066a2e6e771c69deead5",
+        "q_adic_horizon_level": 4
+      }
+    ]
+  },
+  "resource_caps": {
+    "central_panel_X": 90,
+    "finite_fields": 0,
+    "formal_base_cap": 30,
+    "primes_scanned": 0,
+    "source_probe_q_values": [
+      5,
+      67
+    ],
+    "zeta_zeros": 0
+  },
+  "scope_firewall": {
+    "architecture_b_claims": false,
+    "central_assembled_estimate_proved": false,
+    "central_coreagg_proved": false,
+    "central_corewave_proved": false,
+    "central_primcar_proved": false,
+    "central_primls_proved": false,
+    "exceptional_positive_gates_implied_by_central_gate": false,
+    "exceptional_positive_gates_shown_unnecessary_for_sufficiency": true,
+    "rh_or_grh_proved": false
+  },
+  "source_contract": {
+    "commit": "3a595dda92ef827a41e50d2395309692a93748ad",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_BOUNDARY_FIELD_NEAR_CORRELATION_CRITERION.md": "105837343b6b8ef148488f492c66da8feae0334a",
+      "research/l-families/atlas/function_field/FFPS_BOUNDARY_FIELD_PRIMITIVE_PAIR_LARGE_SIEVE_GATE.md": "2abd49b975837c924009e33912e786b4b720e29c",
+      "research/l-families/atlas/function_field/FFPS_HIGH_GCD_PRINCIPAL_FREQUENCY_IDENTITY.md": "5a14ad1f04cd26a17d202d24f6086bccf9976b85",
+      "research/l-families/atlas/function_field/FFPS_PRIMITIVE_CORE_WAVELET_CLOSURE.md": "af735a493a5c74b7158c314079dbf4b72ee11b46"
+    }
+  },
+  "source_replay": [
+    {
+      "identity": "beta_q=(delta_1-delta_q)^2*mu_qfree",
+      "local_rows": [
+        {
+          "beta": 1,
+          "q_adic_exponent": 0,
+          "second_difference": 1
+        },
+        {
+          "beta": -2,
+          "q_adic_exponent": 1,
+          "second_difference": -2
+        },
+        {
+          "beta": 1,
+          "q_adic_exponent": 2,
+          "second_difference": 1
+        },
+        {
+          "beta": 0,
+          "q_adic_exponent": 3,
+          "second_difference": 0
+        },
+        {
+          "beta": 0,
+          "q_adic_exponent": 4,
+          "second_difference": 0
+        }
+      ],
+      "probe_count": 32,
+      "q": 5
+    },
+    {
+      "identity": "beta_q=(delta_1-delta_q)^2*mu_qfree",
+      "local_rows": [
+        {
+          "beta": 1,
+          "q_adic_exponent": 0,
+          "second_difference": 1
+        },
+        {
+          "beta": -2,
+          "q_adic_exponent": 1,
+          "second_difference": -2
+        },
+        {
+          "beta": 1,
+          "q_adic_exponent": 2,
+          "second_difference": 1
+        },
+        {
+          "beta": 0,
+          "q_adic_exponent": 3,
+          "second_difference": 0
+        },
+        {
+          "beta": 0,
+          "q_adic_exponent": 4,
+          "second_difference": 0
+        }
+      ],
+      "probe_count": 230,
+      "q": 67
+    }
+  ]
+}

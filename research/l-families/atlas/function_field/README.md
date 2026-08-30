@@ -86,6 +86,20 @@ Start at:
 Nothing in that successor proves RH or GRH. The native reflection estimate
 is an exact RH-equivalent open gate, not a completed estimate.
 
+## PR #760 Architecture A source-cancellation continuation
+
+[`FFPS_BETA_SECOND_DIFFERENCE_SINGLE_CHANNEL_REDUCTION.md`](FFPS_BETA_SECOND_DIFFERENCE_SINGLE_CHANNEL_REDUCTION.md)
+keeps the complete `(1,-2,1)` beta source assembled before taking positive
+channel norms.  It proves that the beta boundary field is a uniformly
+invertible second multiplicative difference of the single 67-free Möbius
+field, with an exact finite inverse at every sharp prefix.  Consequently the
+central assembled primitive scalar alone remains RH-equivalent, and the
+conditional core route sharpens to
+`COREWAVE_0 -> COREAGG_0 <=> PRIMCAR_0 -> PRIMLS_0 -> RH`.
+No central-channel estimate, RH, or GRH is proved; the packet shows that the
+two exceptional positive channel gates are unnecessary for sufficiency, not
+that they follow from the central gate.
+
 ## Files
 
 - `pilot.py` implements dependency-free polynomial arithmetic, factorization,
