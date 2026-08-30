@@ -1,0 +1,2598 @@
+{
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": [
+    "CERTIFIED_INTEGER_COVERAGE",
+    "EXACT_RATIONAL"
+  ],
+  "artifact_sha256_lf": {
+    "research/l-families/atlas/generalized/CUSP_FLAG_SIGNED_RIEMANN_VON_MANGOLDT.md": "33fd982f0c08333bf6d21b0240e7ed47d79d5513625ee29f12d1a26f17bb3ff3",
+    "research/l-families/atlas/generalized/cusp_flag_signed_riemann_von_mangoldt.py": "dbc60997f09d7ad6c772925253ccd5951823c7f1e614d6327c2ed66f4a6dd104",
+    "research/l-families/atlas/generalized/cusp_flag_signed_riemann_von_mangoldt.sources.json": "6a6c9a58d51896319e84be35ba5d29866c87e5c801d049e390c9a9f3cc083a69",
+    "tests/test_cusp_flag_signed_riemann_von_mangoldt.py": "636bbaa363ad1e67f4a03ea55009a833e3006fa2d969796c814fc9368647eaaa"
+  },
+  "caps": {
+    "bits": 4096,
+    "bytes": 2000000,
+    "columns": 21,
+    "dimension": 20,
+    "frozen_family_work": 2000000,
+    "subsets": 4096,
+    "work": 5000000
+  },
+  "coverage": {
+    "charged_frozen_family_work": 122745,
+    "charged_work": 364330,
+    "complete_Miller_constructions": 40,
+    "frozen_Miller_constructor_called": true,
+    "frozen_family_report_rerun": false,
+    "native_determinants": 40,
+    "native_sources": 20
+  },
+  "frozen_sources": [
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "77820c6af8d089d22547db6cda5ba025ed96f84f",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md",
+      "sha256_lf": "d5c95db34c62d31e0bb735e09aae5599e3abf29194cd74a50ce1bbebafab1530"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7e6ae5bb1fd9c53930cee1198eb185806a2ea118",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.py",
+      "sha256_lf": "34120d58416c902db94fbeaf69ceb004694888908341b630a1b750f2f1e8316a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7ca422e505e6ccd817aadee3362f1ace2fa83fd4",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.json",
+      "sha256_lf": "fb6ae6ad8535b8cc519d33ab0e901cf17b9cf53ddff9c0bde427daf61faa60db"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "90dc74d185b0b9a42f865a9f9df895ba7cd1c5dd",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.sources.json",
+      "sha256_lf": "f754ecdff30b4fd3a3f8f4b8436e46ab3633ba59738021f5538051fae9e43b7a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "c2d9dc7ea92a75c7e3fd99c5463e664fb79e0d3a",
+      "kind": "reviewed_family_release",
+      "path": "tests/test_cusp_flag_quotient_global_family.py",
+      "sha256_lf": "84603f0412d8a7f1d2c2384c7055f55b4956db3df68b42dde7074d18cbe8265b"
+    },
+    {
+      "commit": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "git_blob": "1ec20ba529d34b833799d72515921fda7252da81",
+      "kind": "frozen_native_growth_parent",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_DIVISOR_EXPLICIT_FORMULA.md",
+      "sha256_lf": "c7123450f6201fc62af7b2c42a315a20c5e107d0348533b7348223fbbd24d373"
+    },
+    {
+      "commit": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "git_blob": "81f8f778488e83fe7ae7d0a2c9296031558449cb",
+      "kind": "frozen_native_growth_parent",
+      "path": "research/l-families/atlas/generalized/cusp_flag_divisor_explicit_formula.py",
+      "sha256_lf": "45ebd934c6d8e3547bde285ea30b3a6b2574cd2f634300dd76044662829f83d9"
+    },
+    {
+      "commit": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "git_blob": "2eef1c6196789b852db99391b931d668da383b8e",
+      "kind": "frozen_native_growth_parent",
+      "path": "research/l-families/atlas/generalized/cusp_flag_divisor_explicit_formula.json",
+      "sha256_lf": "bdf15afc43f5d246b494f0c9ebd3b0947a5ba6209c0ccfa0418513abc1db3922"
+    },
+    {
+      "commit": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "git_blob": "0649c2b51271f92499903fc209e575422c482d61",
+      "kind": "frozen_native_growth_parent",
+      "path": "research/l-families/atlas/generalized/cusp_flag_divisor_explicit_formula.sources.json",
+      "sha256_lf": "bc8beef55e1301354f3ab7ae6c4954b196bb92a9bef7cdf745d64e5b49ac8aa4"
+    },
+    {
+      "commit": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "git_blob": "cd121b856db740cf16bb78b7ff0cde1e4ad5a39a",
+      "kind": "frozen_native_growth_parent",
+      "path": "tests/test_cusp_flag_divisor_explicit_formula.py",
+      "sha256_lf": "cd1d67310afba80e1efa40735532bb4a8036b05ad592fb39a5249cb6abe67a6d"
+    }
+  ],
+  "native_panels": [
+    {
+      "complete_basis_sha256_canonical_json": "2f99284a2c0a3719d49def9f2baf75080ec2f82527daabe1643d3de73b01e3d4",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "4253649425/4",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "2": "1",
+            "3": "2304",
+            "6": "38282835600"
+          },
+          "finite_Gram_determinant": "4253649425/4",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2,
+          "rank": 2,
+          "retained_nodes": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "1025/4",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "2": "1",
+            "3": "2304"
+          },
+          "finite_Gram_determinant": "1025/4",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2,
+          "rank": 1,
+          "retained_nodes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "dimension": 2,
+      "phase": {
+        "P": 2,
+        "determinants": [
+          {
+            "P": 2,
+            "gamma_arguments": [
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 23
+              }
+            ],
+            "phase_T": -4,
+            "phase_T_log_2": -4,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 4,
+            "phase_T_log_pi": -4,
+            "positive_count_pi_multiplier": 4,
+            "rank": 2,
+            "real_endpoint_poles_each": 2
+          },
+          {
+            "P": 2,
+            "gamma_arguments": [
+              {
+                "multiplicity": 1,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 1,
+                "s_coefficient": 1,
+                "shift": 23
+              }
+            ],
+            "phase_T": -2,
+            "phase_T_log_2": -2,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 2,
+            "phase_T_log_pi": -2,
+            "positive_count_pi_multiplier": 2,
+            "rank": 1,
+            "real_endpoint_poles_each": 1
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 24
+      },
+      "residual": 0,
+      "source_q_order": 4,
+      "weight": 24
+    },
+    {
+      "complete_basis_sha256_canonical_json": "7b7816a1f7b0c08f42b8f5bb06132adf95b6ee4281f56ecdb3c4a11b37e05de4",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "2558352785/4",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "2": "1",
+            "3": "36864",
+            "6": "23025027600"
+          },
+          "finite_Gram_determinant": "2558352785/4",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2,
+          "rank": 2,
+          "retained_nodes": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "16385/4",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "2": "1",
+            "3": "36864"
+          },
+          "finite_Gram_determinant": "16385/4",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2,
+          "rank": 1,
+          "retained_nodes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "dimension": 2,
+      "phase": {
+        "P": 2,
+        "determinants": [
+          {
+            "P": 2,
+            "gamma_arguments": [
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 27
+              }
+            ],
+            "phase_T": -4,
+            "phase_T_log_2": -4,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 4,
+            "phase_T_log_pi": -4,
+            "positive_count_pi_multiplier": 4,
+            "rank": 2,
+            "real_endpoint_poles_each": 2
+          },
+          {
+            "P": 2,
+            "gamma_arguments": [
+              {
+                "multiplicity": 1,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 1,
+                "s_coefficient": 1,
+                "shift": 27
+              }
+            ],
+            "phase_T": -2,
+            "phase_T_log_2": -2,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 2,
+            "phase_T_log_pi": -2,
+            "positive_count_pi_multiplier": 2,
+            "rank": 1,
+            "real_endpoint_poles_each": 1
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 28
+      },
+      "residual": 4,
+      "source_q_order": 4,
+      "weight": 28
+    },
+    {
+      "complete_basis_sha256_canonical_json": "a49e2f9e5a8bee2d3e8ebec0f666af4f475b5afb25eb54c2e9987a6d4f3b55cf",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "1093099025/4",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "2": "1",
+            "3": "304704",
+            "6": "9836672400"
+          },
+          "finite_Gram_determinant": "1093099025/4",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2,
+          "rank": 2,
+          "retained_nodes": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "135425/4",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "2": "1",
+            "3": "304704"
+          },
+          "finite_Gram_determinant": "135425/4",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2,
+          "rank": 1,
+          "retained_nodes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "dimension": 2,
+      "phase": {
+        "P": 2,
+        "determinants": [
+          {
+            "P": 2,
+            "gamma_arguments": [
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 29
+              }
+            ],
+            "phase_T": -4,
+            "phase_T_log_2": -4,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 4,
+            "phase_T_log_pi": -4,
+            "positive_count_pi_multiplier": 4,
+            "rank": 2,
+            "real_endpoint_poles_each": 2
+          },
+          {
+            "P": 2,
+            "gamma_arguments": [
+              {
+                "multiplicity": 1,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 1,
+                "s_coefficient": 1,
+                "shift": 29
+              }
+            ],
+            "phase_T": -2,
+            "phase_T_log_2": -2,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 2,
+            "phase_T_log_pi": -2,
+            "positive_count_pi_multiplier": 2,
+            "rank": 1,
+            "real_endpoint_poles_each": 1
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 30
+      },
+      "residual": 6,
+      "source_q_order": 4,
+      "weight": 30
+    },
+    {
+      "complete_basis_sha256_canonical_json": "2b5d8a8d058984efe4b2f43d13e7bf94164484faa59ce9d645c5e6eb1aa95dcf",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "280310545/4",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "2": "1",
+            "3": "186624",
+            "6": "2522048400"
+          },
+          "finite_Gram_determinant": "280310545/4",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2,
+          "rank": 2,
+          "retained_nodes": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "82945/4",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "2": "1",
+            "3": "186624"
+          },
+          "finite_Gram_determinant": "82945/4",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2,
+          "rank": 1,
+          "retained_nodes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "dimension": 2,
+      "phase": {
+        "P": 2,
+        "determinants": [
+          {
+            "P": 2,
+            "gamma_arguments": [
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 31
+              }
+            ],
+            "phase_T": -4,
+            "phase_T_log_2": -4,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 4,
+            "phase_T_log_pi": -4,
+            "positive_count_pi_multiplier": 4,
+            "rank": 2,
+            "real_endpoint_poles_each": 2
+          },
+          {
+            "P": 2,
+            "gamma_arguments": [
+              {
+                "multiplicity": 1,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 1,
+                "s_coefficient": 1,
+                "shift": 31
+              }
+            ],
+            "phase_T": -2,
+            "phase_T_log_2": -2,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 2,
+            "phase_T_log_pi": -2,
+            "positive_count_pi_multiplier": 2,
+            "rank": 1,
+            "real_endpoint_poles_each": 1
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 32
+      },
+      "residual": 8,
+      "source_q_order": 4,
+      "weight": 32
+    },
+    {
+      "complete_basis_sha256_canonical_json": "242fd86c16ad008c9fe3da32dff44fcaeb87f3801ac5b89472f163d5fe44682e",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "54507665/4",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "2": "1",
+            "3": "97344",
+            "6": "490179600"
+          },
+          "finite_Gram_determinant": "54507665/4",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2,
+          "rank": 2,
+          "retained_nodes": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "43265/4",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "2": "1",
+            "3": "97344"
+          },
+          "finite_Gram_determinant": "43265/4",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2,
+          "rank": 1,
+          "retained_nodes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "dimension": 2,
+      "phase": {
+        "P": 2,
+        "determinants": [
+          {
+            "P": 2,
+            "gamma_arguments": [
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 33
+              }
+            ],
+            "phase_T": -4,
+            "phase_T_log_2": -4,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 4,
+            "phase_T_log_pi": -4,
+            "positive_count_pi_multiplier": 4,
+            "rank": 2,
+            "real_endpoint_poles_each": 2
+          },
+          {
+            "P": 2,
+            "gamma_arguments": [
+              {
+                "multiplicity": 1,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 1,
+                "s_coefficient": 1,
+                "shift": 33
+              }
+            ],
+            "phase_T": -2,
+            "phase_T_log_2": -2,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 2,
+            "phase_T_log_pi": -2,
+            "positive_count_pi_multiplier": 2,
+            "rank": 1,
+            "real_endpoint_poles_each": 1
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 34
+      },
+      "residual": 10,
+      "source_q_order": 4,
+      "weight": 34
+    },
+    {
+      "complete_basis_sha256_canonical_json": "e6704271475bca13024d2a604b5824d10e69f911c4788bcb0bbfdf9d424df1fd",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "812305/4",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "2": "1",
+            "3": "5184",
+            "6": "7290000"
+          },
+          "finite_Gram_determinant": "812305/4",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2,
+          "rank": 2,
+          "retained_nodes": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "2305/4",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "2": "1",
+            "3": "5184"
+          },
+          "finite_Gram_determinant": "2305/4",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2,
+          "rank": 1,
+          "retained_nodes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "dimension": 2,
+      "phase": {
+        "P": 2,
+        "determinants": [
+          {
+            "P": 2,
+            "gamma_arguments": [
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 37
+              }
+            ],
+            "phase_T": -4,
+            "phase_T_log_2": -4,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 4,
+            "phase_T_log_pi": -4,
+            "positive_count_pi_multiplier": 4,
+            "rank": 2,
+            "real_endpoint_poles_each": 2
+          },
+          {
+            "P": 2,
+            "gamma_arguments": [
+              {
+                "multiplicity": 1,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 1,
+                "s_coefficient": 1,
+                "shift": 37
+              }
+            ],
+            "phase_T": -2,
+            "phase_T_log_2": -2,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 2,
+            "phase_T_log_pi": -2,
+            "positive_count_pi_multiplier": 2,
+            "rank": 1,
+            "real_endpoint_poles_each": 1
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 38
+      },
+      "residual": 14,
+      "source_q_order": 4,
+      "weight": 38
+    },
+    {
+      "complete_basis_sha256_canonical_json": "81e2a85d99cd951f8cce7799beecb59dffb51bda5ea6c330060d474311bdb586",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "203735720445365/36",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "6": "1",
+            "8": "5184",
+            "12": "37707425856",
+            "24": "3259620697375744"
+          },
+          "finite_Gram_determinant": "203735720445365/36",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 6,
+          "rank": 3,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "9426859381/36",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "6": "1",
+            "8": "5184",
+            "12": "37707425856"
+          },
+          "finite_Gram_determinant": "9426859381/36",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 6,
+          "rank": 2,
+          "retained_nodes": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "dimension": 3,
+      "phase": {
+        "P": 6,
+        "determinants": [
+          {
+            "P": 6,
+            "gamma_arguments": [
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 35
+              }
+            ],
+            "phase_T": -6,
+            "phase_T_log_2": -6,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 6,
+            "phase_T_log_pi": -6,
+            "positive_count_pi_multiplier": 6,
+            "rank": 3,
+            "real_endpoint_poles_each": 3
+          },
+          {
+            "P": 6,
+            "gamma_arguments": [
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 35
+              }
+            ],
+            "phase_T": -4,
+            "phase_T_log_2": -4,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 4,
+            "phase_T_log_pi": -4,
+            "positive_count_pi_multiplier": 4,
+            "rank": 2,
+            "real_endpoint_poles_each": 2
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 36
+      },
+      "residual": 0,
+      "source_q_order": 5,
+      "weight": 36
+    },
+    {
+      "complete_basis_sha256_canonical_json": "489db2c9b384cb55090a518ee17b2a4563572a637dafa5faedee82037354ed15",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "23265408563285/36",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "6": "1",
+            "8": "28224",
+            "12": "24343488576",
+            "24": "372149162804224"
+          },
+          "finite_Gram_determinant": "23265408563285/36",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 6,
+          "rank": 3,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "6085888021/36",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "6": "1",
+            "8": "28224",
+            "12": "24343488576"
+          },
+          "finite_Gram_determinant": "6085888021/36",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 6,
+          "rank": 2,
+          "retained_nodes": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "dimension": 3,
+      "phase": {
+        "P": 6,
+        "determinants": [
+          {
+            "P": 6,
+            "gamma_arguments": [
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 39
+              }
+            ],
+            "phase_T": -6,
+            "phase_T_log_2": -6,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 6,
+            "phase_T_log_pi": -6,
+            "positive_count_pi_multiplier": 6,
+            "rank": 3,
+            "real_endpoint_poles_each": 3
+          },
+          {
+            "P": 6,
+            "gamma_arguments": [
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 39
+              }
+            ],
+            "phase_T": -4,
+            "phase_T_log_2": -4,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 4,
+            "phase_T_log_pi": -4,
+            "positive_count_pi_multiplier": 4,
+            "rank": 2,
+            "real_endpoint_poles_each": 2
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 40
+      },
+      "residual": 4,
+      "source_q_order": 5,
+      "weight": 40
+    },
+    {
+      "complete_basis_sha256_canonical_json": "6a6e5608671e888c1eb36077875c8b2d73a638fc4615dbb6a1e7623929df4daf",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "5569154069825/36",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "6": "1",
+            "8": "331776",
+            "12": "12713013504",
+            "24": "89055610077184"
+          },
+          "finite_Gram_determinant": "5569154069825/36",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 6,
+          "rank": 3,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "3178440001/36",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "6": "1",
+            "8": "331776",
+            "12": "12713013504"
+          },
+          "finite_Gram_determinant": "3178440001/36",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 6,
+          "rank": 2,
+          "retained_nodes": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "dimension": 3,
+      "phase": {
+        "P": 6,
+        "determinants": [
+          {
+            "P": 6,
+            "gamma_arguments": [
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 41
+              }
+            ],
+            "phase_T": -6,
+            "phase_T_log_2": -6,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 6,
+            "phase_T_log_pi": -6,
+            "positive_count_pi_multiplier": 6,
+            "rank": 3,
+            "real_endpoint_poles_each": 3
+          },
+          {
+            "P": 6,
+            "gamma_arguments": [
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 41
+              }
+            ],
+            "phase_T": -4,
+            "phase_T_log_2": -4,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 4,
+            "phase_T_log_pi": -4,
+            "positive_count_pi_multiplier": 4,
+            "rank": 2,
+            "real_endpoint_poles_each": 2
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 42
+      },
+      "residual": 6,
+      "source_q_order": 5,
+      "weight": 42
+    },
+    {
+      "complete_basis_sha256_canonical_json": "367555591b5499b7fa16677386d6ce6b8b0de5ff6af8c0504002b229ef7152d6",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "977668640405/36",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "6": "1",
+            "8": "166464",
+            "12": "3631749696",
+            "24": "15628169749504"
+          },
+          "finite_Gram_determinant": "977668640405/36",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 6,
+          "rank": 3,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "908031061/36",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "6": "1",
+            "8": "166464",
+            "12": "3631749696"
+          },
+          "finite_Gram_determinant": "908031061/36",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 6,
+          "rank": 2,
+          "retained_nodes": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "dimension": 3,
+      "phase": {
+        "P": 6,
+        "determinants": [
+          {
+            "P": 6,
+            "gamma_arguments": [
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 43
+              }
+            ],
+            "phase_T": -6,
+            "phase_T_log_2": -6,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 6,
+            "phase_T_log_pi": -6,
+            "positive_count_pi_multiplier": 6,
+            "rank": 3,
+            "real_endpoint_poles_each": 3
+          },
+          {
+            "P": 6,
+            "gamma_arguments": [
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 43
+              }
+            ],
+            "phase_T": -4,
+            "phase_T_log_2": -4,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 4,
+            "phase_T_log_pi": -4,
+            "positive_count_pi_multiplier": 4,
+            "rank": 2,
+            "real_endpoint_poles_each": 2
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 44
+      },
+      "residual": 8,
+      "source_q_order": 5,
+      "weight": 44
+    },
+    {
+      "complete_basis_sha256_canonical_json": "caf780c0cd4b26e519b12f0fefce18c820edbc1043e732849d45984b20039abf",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "143859280145/36",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "6": "1",
+            "8": "112896",
+            "12": "897122304",
+            "24": "2298158977024"
+          },
+          "finite_Gram_determinant": "143859280145/36",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 6,
+          "rank": 3,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "224344081/36",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "6": "1",
+            "8": "112896",
+            "12": "897122304"
+          },
+          "finite_Gram_determinant": "224344081/36",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 6,
+          "rank": 2,
+          "retained_nodes": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "dimension": 3,
+      "phase": {
+        "P": 6,
+        "determinants": [
+          {
+            "P": 6,
+            "gamma_arguments": [
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 45
+              }
+            ],
+            "phase_T": -6,
+            "phase_T_log_2": -6,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 6,
+            "phase_T_log_pi": -6,
+            "positive_count_pi_multiplier": 6,
+            "rank": 3,
+            "real_endpoint_poles_each": 3
+          },
+          {
+            "P": 6,
+            "gamma_arguments": [
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 45
+              }
+            ],
+            "phase_T": -4,
+            "phase_T_log_2": -4,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 4,
+            "phase_T_log_pi": -4,
+            "positive_count_pi_multiplier": 4,
+            "rank": 2,
+            "real_endpoint_poles_each": 2
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 46
+      },
+      "residual": 10,
+      "source_q_order": 5,
+      "weight": 46
+    },
+    {
+      "complete_basis_sha256_canonical_json": "b9afd6cc30f553e82476b6a43173f335cf403c7aad81493f4ada4f37774e19ff",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "1633934465/36",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "6": "1",
+            "8": "9216",
+            "12": "22581504",
+            "24": "26052542464"
+          },
+          "finite_Gram_determinant": "1633934465/36",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 6,
+          "rank": 3,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "5650561/36",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "6": "1",
+            "8": "9216",
+            "12": "22581504"
+          },
+          "finite_Gram_determinant": "5650561/36",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 6,
+          "rank": 2,
+          "retained_nodes": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "dimension": 3,
+      "phase": {
+        "P": 6,
+        "determinants": [
+          {
+            "P": 6,
+            "gamma_arguments": [
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 49
+              }
+            ],
+            "phase_T": -6,
+            "phase_T_log_2": -6,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 6,
+            "phase_T_log_pi": -6,
+            "positive_count_pi_multiplier": 6,
+            "rank": 3,
+            "real_endpoint_poles_each": 3
+          },
+          {
+            "P": 6,
+            "gamma_arguments": [
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 2,
+                "s_coefficient": 1,
+                "shift": 49
+              }
+            ],
+            "phase_T": -4,
+            "phase_T_log_2": -4,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 4,
+            "phase_T_log_pi": -4,
+            "positive_count_pi_multiplier": 4,
+            "rank": 2,
+            "real_endpoint_poles_each": 2
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 50
+      },
+      "residual": 14,
+      "source_q_order": 5,
+      "weight": 50
+    },
+    {
+      "complete_basis_sha256_canonical_json": "822e904f7f43d7abef93939311ec1b7aef4fd05923fd6cdae4e449918ec80ef0",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "11710820461450471177/2880",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "24": "1",
+            "30": "9216",
+            "40": "36914705424",
+            "60": "3810219566104576",
+            "120": "58538861096755441284"
+          },
+          "finite_Gram_determinant": "11710820461450471177/2880",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 24,
+          "rank": 4,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "15241210496914601/14400",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "24": "1",
+            "30": "9216",
+            "40": "36914705424",
+            "60": "3810219566104576"
+          },
+          "finite_Gram_determinant": "15241210496914601/14400",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 24,
+          "rank": 3,
+          "retained_nodes": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "dimension": 4,
+      "phase": {
+        "P": 24,
+        "determinants": [
+          {
+            "P": 24,
+            "gamma_arguments": [
+              {
+                "multiplicity": 4,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 4,
+                "s_coefficient": 1,
+                "shift": 47
+              }
+            ],
+            "phase_T": -8,
+            "phase_T_log_2": -8,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 8,
+            "phase_T_log_pi": -8,
+            "positive_count_pi_multiplier": 8,
+            "rank": 4,
+            "real_endpoint_poles_each": 4
+          },
+          {
+            "P": 24,
+            "gamma_arguments": [
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 47
+              }
+            ],
+            "phase_T": -6,
+            "phase_T_log_2": -6,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 6,
+            "phase_T_log_pi": -6,
+            "positive_count_pi_multiplier": 6,
+            "rank": 3,
+            "real_endpoint_poles_each": 3
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 48
+      },
+      "residual": 0,
+      "source_q_order": 6,
+      "weight": 48
+    },
+    {
+      "complete_basis_sha256_canonical_json": "b8370f0fb722dbc5cc8404bab2257b46649303369bd32d6cc412def1357e97ae",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "622923546352815817/2880",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "24": "1",
+            "30": "20736",
+            "40": "25514311824",
+            "60": "533008460824576",
+            "120": "3112485468291642564"
+          },
+          "finite_Gram_determinant": "622923546352815817/2880",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 24,
+          "rank": 4,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "2132263472436521/14400",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "24": "1",
+            "30": "20736",
+            "40": "25514311824",
+            "60": "533008460824576"
+          },
+          "finite_Gram_determinant": "2132263472436521/14400",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 24,
+          "rank": 3,
+          "retained_nodes": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "dimension": 4,
+      "phase": {
+        "P": 24,
+        "determinants": [
+          {
+            "P": 24,
+            "gamma_arguments": [
+              {
+                "multiplicity": 4,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 4,
+                "s_coefficient": 1,
+                "shift": 51
+              }
+            ],
+            "phase_T": -8,
+            "phase_T_log_2": -8,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 8,
+            "phase_T_log_pi": -8,
+            "positive_count_pi_multiplier": 8,
+            "rank": 4,
+            "real_endpoint_poles_each": 4
+          },
+          {
+            "P": 24,
+            "gamma_arguments": [
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 51
+              }
+            ],
+            "phase_T": -6,
+            "phase_T_log_2": -6,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 6,
+            "phase_T_log_pi": -6,
+            "positive_count_pi_multiplier": 6,
+            "rank": 3,
+            "real_endpoint_poles_each": 3
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 52
+      },
+      "residual": 4,
+      "source_q_order": 6,
+      "weight": 52
+    },
+    {
+      "complete_basis_sha256_canonical_json": "b1c0d3815bc3cb2a238222f15ba6871b3b79680993911bb4e7ba08f57580ec83",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "22499211491228501/576",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "24": "1",
+            "30": "360000",
+            "40": "16103610000",
+            "60": "152097955840000",
+            "120": "561871750519102500"
+          },
+          "finite_Gram_determinant": "22499211491228501/576",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 24,
+          "rank": 4,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "24341470464401/576",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "24": "1",
+            "30": "360000",
+            "40": "16103610000",
+            "60": "152097955840000"
+          },
+          "finite_Gram_determinant": "24341470464401/576",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 24,
+          "rank": 3,
+          "retained_nodes": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "dimension": 4,
+      "phase": {
+        "P": 24,
+        "determinants": [
+          {
+            "P": 24,
+            "gamma_arguments": [
+              {
+                "multiplicity": 4,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 4,
+                "s_coefficient": 1,
+                "shift": 53
+              }
+            ],
+            "phase_T": -8,
+            "phase_T_log_2": -8,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 8,
+            "phase_T_log_pi": -8,
+            "positive_count_pi_multiplier": 8,
+            "rank": 4,
+            "real_endpoint_poles_each": 4
+          },
+          {
+            "P": 24,
+            "gamma_arguments": [
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 53
+              }
+            ],
+            "phase_T": -6,
+            "phase_T_log_2": -6,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 6,
+            "phase_T_log_pi": -6,
+            "positive_count_pi_multiplier": 6,
+            "rank": 3,
+            "real_endpoint_poles_each": 3
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 54
+      },
+      "residual": 6,
+      "source_q_order": 6,
+      "weight": 54
+    },
+    {
+      "complete_basis_sha256_canonical_json": "b73feb388ac89687ebfc6d30bd3c7ec67e3bd5e33d8901f1f800710f2a50ec96",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "16176278815884937/2880",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "24": "1",
+            "30": "147456",
+            "40": "4862551824",
+            "60": "30565152587776",
+            "120": "80759089703747844"
+          },
+          "finite_Gram_determinant": "16176278815884937/2880",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 24,
+          "rank": 4,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "122304375676841/14400",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "24": "1",
+            "30": "147456",
+            "40": "4862551824",
+            "60": "30565152587776"
+          },
+          "finite_Gram_determinant": "122304375676841/14400",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 24,
+          "rank": 3,
+          "retained_nodes": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "dimension": 4,
+      "phase": {
+        "P": 24,
+        "determinants": [
+          {
+            "P": 24,
+            "gamma_arguments": [
+              {
+                "multiplicity": 4,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 4,
+                "s_coefficient": 1,
+                "shift": 55
+              }
+            ],
+            "phase_T": -8,
+            "phase_T_log_2": -8,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 8,
+            "phase_T_log_pi": -8,
+            "positive_count_pi_multiplier": 8,
+            "rank": 4,
+            "real_endpoint_poles_each": 4
+          },
+          {
+            "P": 24,
+            "gamma_arguments": [
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 55
+              }
+            ],
+            "phase_T": -6,
+            "phase_T_log_2": -6,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 6,
+            "phase_T_log_pi": -6,
+            "positive_count_pi_multiplier": 6,
+            "rank": 3,
+            "real_endpoint_poles_each": 3
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 56
+      },
+      "residual": 8,
+      "source_q_order": 6,
+      "weight": 56
+    },
+    {
+      "complete_basis_sha256_canonical_json": "e9f11b79a28a74e2f40df7d682d1a229f1a6b2306ad9029033471c3921c3052f",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "409558170920981/576",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "24": "1",
+            "30": "129600",
+            "40": "1469955600",
+            "60": "5507845734400",
+            "120": "10216909658412900"
+          },
+          "finite_Gram_determinant": "409558170920981/576",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 24,
+          "rank": 4,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "881784584465/576",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "24": "1",
+            "30": "129600",
+            "40": "1469955600",
+            "60": "5507845734400"
+          },
+          "finite_Gram_determinant": "881784584465/576",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 24,
+          "rank": 3,
+          "retained_nodes": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "dimension": 4,
+      "phase": {
+        "P": 24,
+        "determinants": [
+          {
+            "P": 24,
+            "gamma_arguments": [
+              {
+                "multiplicity": 4,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 4,
+                "s_coefficient": 1,
+                "shift": 57
+              }
+            ],
+            "phase_T": -8,
+            "phase_T_log_2": -8,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 8,
+            "phase_T_log_pi": -8,
+            "positive_count_pi_multiplier": 8,
+            "rank": 4,
+            "real_endpoint_poles_each": 4
+          },
+          {
+            "P": 24,
+            "gamma_arguments": [
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 57
+              }
+            ],
+            "phase_T": -6,
+            "phase_T_log_2": -6,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 6,
+            "phase_T_log_pi": -6,
+            "positive_count_pi_multiplier": 6,
+            "rank": 3,
+            "real_endpoint_poles_each": 3
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 58
+      },
+      "residual": 10,
+      "source_q_order": 6,
+      "weight": 58
+    },
+    {
+      "complete_basis_sha256_canonical_json": "3aabba54af8fad8abcecd5d26d9cdf5eeb7ca9cea07d578bac3cc7cdc041b770",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "3992692057301/576",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "24": "1",
+            "30": "14400",
+            "40": "54464400",
+            "60": "95951257600",
+            "120": "99433005992100"
+          },
+          "finite_Gram_determinant": "3992692057301/576",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 24,
+          "rank": 4,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "15371817617/576",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "24": "1",
+            "30": "14400",
+            "40": "54464400",
+            "60": "95951257600"
+          },
+          "finite_Gram_determinant": "15371817617/576",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 24,
+          "rank": 3,
+          "retained_nodes": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "dimension": 4,
+      "phase": {
+        "P": 24,
+        "determinants": [
+          {
+            "P": 24,
+            "gamma_arguments": [
+              {
+                "multiplicity": 4,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 4,
+                "s_coefficient": 1,
+                "shift": 61
+              }
+            ],
+            "phase_T": -8,
+            "phase_T_log_2": -8,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 8,
+            "phase_T_log_pi": -8,
+            "positive_count_pi_multiplier": 8,
+            "rank": 4,
+            "real_endpoint_poles_each": 4
+          },
+          {
+            "P": 24,
+            "gamma_arguments": [
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 3,
+                "s_coefficient": 1,
+                "shift": 61
+              }
+            ],
+            "phase_T": -6,
+            "phase_T_log_2": -6,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 6,
+            "phase_T_log_pi": -6,
+            "positive_count_pi_multiplier": 6,
+            "rank": 3,
+            "real_endpoint_poles_each": 3
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 62
+      },
+      "residual": 14,
+      "source_q_order": 6,
+      "weight": 62
+    },
+    {
+      "complete_basis_sha256_canonical_json": "8e9257e39e5c0febf648b23e8de5877e8bca0841b64f73abc2662ab5da6fbb66",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "311502121993481503304050149495325945043/6584094720000",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "3628800": "1",
+            "4435200": "28860573456",
+            "4989600": "2216857855590400",
+            "5702400": "46721536754183468100",
+            "6652800": "457899025776241935384576",
+            "7983360": "2597263441042425333409000000",
+            "9979200": "9631609226657131363443161432064",
+            "13305600": "25250786416324351308685185136235025",
+            "19958400": "49422961883499638524379927572538982400",
+            "39916800": "75185594263640082627126250725581560725264"
+          },
+          "finite_Gram_determinant": "311502121993481503304050149495325945043/6584094720000",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 3628800,
+          "rank": 10,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "817848176786946993611096910278173451/6584094720000",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "3628800": "1",
+            "4435200": "28860573456",
+            "4989600": "2216857855590400",
+            "5702400": "46721536754183468100",
+            "6652800": "457899025776241935384576",
+            "7983360": "2597263441042425333409000000",
+            "9979200": "9631609226657131363443161432064",
+            "13305600": "25250786416324351308685185136235025",
+            "19958400": "49422961883499638524379927572538982400"
+          },
+          "finite_Gram_determinant": "817848176786946993611096910278173451/6584094720000",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 3628800,
+          "rank": 9,
+          "retained_nodes": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "dimension": 10,
+      "phase": {
+        "P": 3628800,
+        "determinants": [
+          {
+            "P": 3628800,
+            "gamma_arguments": [
+              {
+                "multiplicity": 10,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 10,
+                "s_coefficient": 1,
+                "shift": 123
+              }
+            ],
+            "phase_T": -20,
+            "phase_T_log_2": -20,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 20,
+            "phase_T_log_pi": -20,
+            "positive_count_pi_multiplier": 20,
+            "rank": 10,
+            "real_endpoint_poles_each": 10
+          },
+          {
+            "P": 3628800,
+            "gamma_arguments": [
+              {
+                "multiplicity": 9,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 9,
+                "s_coefficient": 1,
+                "shift": 123
+              }
+            ],
+            "phase_T": -18,
+            "phase_T_log_2": -18,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 18,
+            "phase_T_log_pi": -18,
+            "positive_count_pi_multiplier": 18,
+            "rank": 9,
+            "real_endpoint_poles_each": 9
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 124
+      },
+      "residual": 4,
+      "source_q_order": 12,
+      "weight": 124
+    },
+    {
+      "complete_basis_sha256_canonical_json": "03ee42e37795da7c0b4877312ee1db12c9118ebfa4acdef56e29899657f233fb",
+      "determinants": [
+        {
+          "Cauchy_Binet_weighted_sum": "143862578794771896185347579794965783964468124633375314982177104089458493/116059062380194660498381209600000000",
+          "W_n1_zero_column_checked": false,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "10218188434341888000": "2378267422925068182510036101236935866531738785712102141019140625",
+            "12772735542927360000": "3022642980545243895110395072544720719620111840052478560971735957504",
+            "17030314057236480000": "3428265396098173683995183280325399248081508688959741210991087223193600",
+            "2432902008176640000": "1",
+            "25545471085854720000": "3494565544145698789587518023560302319333516151290135435936328360919040000",
+            "2688996956405760000": "20415837456",
+            "2838385676206080000": "2619343267430400",
+            "3005349539512320000": "107096231447589428100",
+            "3193183885731840000": "2230737332033192076509184",
+            "3406062811447296000": "28576374174208289037609000000",
+            "3649353012264960000": "249798604400934094888505022873600",
+            "3930072474746880000": "1592769979402878271583450747885211225",
+            "4257578514309120000": "7762130081737221463210467357265336729600",
+            "4644631106519040000": "29931719437638923665894109298335600917246224",
+            "5109094217170944000": "93810829360346319996826224921196417253376000000",
+            "51090942171709440000": "3221604094686262976867141470018507764971283895293870782545445018569805814084",
+            "5676771352412160000": "244138395842539749128973418273488648962703512472804",
+            "6386367771463680000": "536873627144301219229437912007729367983000232814182400",
+            "7298706024529920000": "1012238853318399504705727995149434536743623720141057166400",
+            "8515157028618240000": "1656599580343965101428739526849401315875630966388616610185216"
+          },
+          "finite_Gram_determinant": "143862578794771896185347579794965783964468124633375314982177104089458493/116059062380194660498381209600000000",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2432902008176640000,
+          "rank": 20,
+          "retained_nodes": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ]
+        },
+        {
+          "Cauchy_Binet_weighted_sum": "10588938009789675160628077966793410562032271984409241661904935378839873/1973004060463309228472480563200000000",
+          "W_n1_zero_column_checked": true,
+          "all_infinite_tail_coefficients_computed": false,
+          "coefficient_map": {
+            "10218188434341888000": "2378267422925068182510036101236935866531738785712102141019140625",
+            "12772735542927360000": "3022642980545243895110395072544720719620111840052478560971735957504",
+            "17030314057236480000": "3428265396098173683995183280325399248081508688959741210991087223193600",
+            "2432902008176640000": "1",
+            "25545471085854720000": "3494565544145698789587518023560302319333516151290135435936328360919040000",
+            "2688996956405760000": "20415837456",
+            "2838385676206080000": "2619343267430400",
+            "3005349539512320000": "107096231447589428100",
+            "3193183885731840000": "2230737332033192076509184",
+            "3406062811447296000": "28576374174208289037609000000",
+            "3649353012264960000": "249798604400934094888505022873600",
+            "3930072474746880000": "1592769979402878271583450747885211225",
+            "4257578514309120000": "7762130081737221463210467357265336729600",
+            "4644631106519040000": "29931719437638923665894109298335600917246224",
+            "5109094217170944000": "93810829360346319996826224921196417253376000000",
+            "5676771352412160000": "244138395842539749128973418273488648962703512472804",
+            "6386367771463680000": "536873627144301219229437912007729367983000232814182400",
+            "7298706024529920000": "1012238853318399504705727995149434536743623720141057166400",
+            "8515157028618240000": "1656599580343965101428739526849401315875630966388616610185216"
+          },
+          "finite_Gram_determinant": "10588938009789675160628077966793410562032271984409241661904935378839873/1973004060463309228472480563200000000",
+          "finite_Gram_weight_exponent": 2,
+          "infinite_period_evaluated": false,
+          "leading_coefficient": 1,
+          "leading_product": 2432902008176640000,
+          "rank": 19,
+          "retained_nodes": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ]
+        }
+      ],
+      "dimension": 20,
+      "phase": {
+        "P": 2432902008176640000,
+        "determinants": [
+          {
+            "P": 2432902008176640000,
+            "gamma_arguments": [
+              {
+                "multiplicity": 20,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 20,
+                "s_coefficient": 1,
+                "shift": 247
+              }
+            ],
+            "phase_T": -40,
+            "phase_T_log_2": -40,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 40,
+            "phase_T_log_pi": -40,
+            "positive_count_pi_multiplier": 40,
+            "rank": 20,
+            "real_endpoint_poles_each": 20
+          },
+          {
+            "P": 2432902008176640000,
+            "gamma_arguments": [
+              {
+                "multiplicity": 19,
+                "s_coefficient": 1,
+                "shift": 0
+              },
+              {
+                "multiplicity": 19,
+                "s_coefficient": 1,
+                "shift": 247
+              }
+            ],
+            "phase_T": -38,
+            "phase_T_log_2": -38,
+            "phase_T_log_P": -1,
+            "phase_T_log_T": 38,
+            "phase_T_log_pi": -38,
+            "positive_count_pi_multiplier": 38,
+            "rank": 19,
+            "real_endpoint_poles_each": 19
+          }
+        ],
+        "logs_pi_gamma_or_phase_evaluated": false,
+        "quotient_difference": {
+          "phase_T": -2,
+          "phase_T_log_2": -2,
+          "phase_T_log_P": 0,
+          "phase_T_log_T": 2,
+          "phase_T_log_pi": -2,
+          "positive_count_pi_multiplier": 2,
+          "real_endpoint_poles_each": 1
+        },
+        "symbolic_contract": "pi*N_Q^+(T) = 2*T*log(T/(2*pi*e)) + O_k(log(T+2))",
+        "weight": 248
+      },
+      "residual": 8,
+      "source_q_order": 22,
+      "weight": 248
+    }
+  ],
+  "non_native_divisor_algebra": [
+    {
+      "actual_cusp_flag_divisor_sample": false,
+      "full_count": 1,
+      "height": "2",
+      "minor_count": 2,
+      "net_absolute_count": 3,
+      "net_signed_count": -1
+    },
+    {
+      "actual_cusp_flag_divisor_sample": false,
+      "full_count": 1,
+      "height": "5/2",
+      "minor_count": 2,
+      "net_absolute_count": 3,
+      "net_signed_count": -1
+    },
+    {
+      "actual_cusp_flag_divisor_sample": false,
+      "full_count": 5,
+      "height": "3",
+      "minor_count": 5,
+      "net_absolute_count": 4,
+      "net_signed_count": 0
+    }
+  ],
+  "payload_sha256": "0ba0cc755d9d8257ab6f22798245c8fc50ee0b8aca8d6ba9c0c4f43d5731b83d",
+  "rounding_contract": "exact integers and Fraction; no rounding; logs and pi symbolic",
+  "schema": "cusp-flag-signed-riemann-von-mangoldt-v1",
+  "scope": {
+    "Q_count_assumed_monotone": false,
+    "actual_period_phase_or_zero_samples": 0,
+    "all_real_parts_included": true,
+    "critical_line_density_or_RH": false,
+    "fixed_weight_native_signed_law_by_written_proof": true,
+    "height_cutoff": "0<Im rho<=T; exceptional heights included by limits",
+    "net_multiplicities_after_common_cancellation": true,
+    "new_abstract_theory_or_novelty_claim": false,
+    "numerical_analytic_proof_certificate": false,
+    "polynomial_strip_growth_not_inferred_from_order_alone": true,
+    "real_endpoint_poles_in_positive_count": false,
+    "uncancelled_or_finitely_many_poles_asserted": false,
+    "uniform_in_weight_or_effective_error_constant": false,
+    "unsigned_Q_count_given_same_asymptotic": false
+  },
+  "status": "PROPOSED_REQUIRING_INDEPENDENT_FROZEN_REVIEW",
+  "strip_geometry_controls": [
+    {
+      "F_left_power": "10",
+      "H_left_power": "11",
+      "actual_right_zero_free_abscissa_certified": false,
+      "inner_Jensen_radius": "6",
+      "left": "-2",
+      "outer_Jensen_radius": "12",
+      "rank": 1,
+      "right": "3",
+      "window_inside_gap": "10"
+    },
+    {
+      "F_left_power": "24",
+      "H_left_power": "26",
+      "actual_right_zero_free_abscissa_certified": false,
+      "inner_Jensen_radius": "7",
+      "left": "-5/2",
+      "outer_Jensen_radius": "14",
+      "rank": 2,
+      "right": "7/2",
+      "window_inside_gap": "12"
+    },
+    {
+      "F_left_power": "600",
+      "H_left_power": "620",
+      "actual_right_zero_free_abscissa_certified": false,
+      "inner_Jensen_radius": "16",
+      "left": "-7",
+      "outer_Jensen_radius": "32",
+      "rank": 20,
+      "right": "8",
+      "window_inside_gap": "30"
+    }
+  ]
+}
