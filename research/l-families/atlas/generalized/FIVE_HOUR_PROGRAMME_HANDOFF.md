@@ -17,7 +17,8 @@ L-object. Neither lane is a new arithmetic L-function.
 | [Multiplicative recurrence preservers](MULTIPLICATIVE_RECURRENCE_AND_MIXED_PARENTS.md) | One nondegenerate shifted-circle recurrence test classifies every continuous multiplicative map as `z^m bar(z)^n`; the bounded-degree moduli and continuous-deformation obstruction are exact | Continuous scalar maps and ordinary recurrences; no prime-indexed or ramified family |
 | [Complete circle-probe geometry](CIRCLE_PROBE_GEOMETRY.md) | An origin-touching circle leaves infinitely many false positives at each fixed positive degree; every positive non-touching center eliminates them. Connected pointwise-continuous families passing the touching probe are constant | Prose classification for irrational rotations; no natural-boundary theorem or general local-constancy claim in the degenerate topology |
 | [Mixed-rank representation parents](MULTIPLICATIVE_RECURRENCE_AND_MIXED_PARENTS.md#4-the-mixed-rank-determinant-parent-question) | A universal finite graded determinant parent exists exactly when the nontrivial input ranks are empty, one rank, or `(2,2)`; the unique formal escape has a negative second relation module whenever at least two ranks exceed one | Universal representation identities, not fitted matrix eigenvalues or convergent infinite determinants |
-| [Fixed-label cycle response](../../../exploratory/fixed-label-cycle-response/README.md) | Two colored directed sources with the same entire commutative determinant have different three-sheet lift responses; the real part of the third-trace gap is an exact commutator energy | Fixed label identifications matter; the response is not vertexwise gauge invariant and is not attached to zeta |
+| [Fixed-label cycle response](../../../exploratory/fixed-label-cycle-response/README.md) | Two colored directed sources with the same entire commutative determinant have different three-sheet lift responses; the real part of the third-trace gap is an exact commutator energy | Reusing fixed numerical labels after changing fibre identifications is not gauge invariant; no arithmetic zeta attachment |
+| [Based holonomy response](../../../exploratory/marked-holonomy-response/README.md) | Two marked word-cycle automata have identical responses under every abelianized representation; their full unitary responses agree exactly when the two holonomies commute. The based source makes the commutator response gauge covariant and predicts complete lifted cycle lengths | Additional based representation and word/clock data are declared, not recovered from the original scalar graph shadow; no arithmetic adapter |
 
 The first lane treats arbitrary continuous multiplicative maps and arbitrary
 mixed input ranks, beyond the eleven local-power packets already present at
@@ -41,6 +42,10 @@ desired scalar output.
   cherry-pick. The integration at `b800f754d3c53d61746dfb3a068e250c53b62771`
   includes the reviewed real-part wording and packet-local LF checkout
   metadata. Its frozen fixture was replayed without changing expected output.
+- Based-holonomy source: `e7fc8b0af2c42ce43384543972df2ed44f343300`, imported
+  at `d3c0b7c80`. It is a separately defined source with extra marked data,
+  not a rewrite of the original fixed-label obstruction. Its source review
+  and integrated replay are recorded separately from the original packet.
 - The separate #763 actual-source branch is not a mathematical dependency
   of these results. No sheaf/graph comparison map is assumed or constructed.
 - Active all-prime Satake-deformation and Estermann-completion work elsewhere
@@ -71,6 +76,16 @@ response that differs. This distinction and the explicit failure of
 vertexwise gauge invariance prevent a misleading claim of intrinsic
 arithmetic geometry.
 
+The based-holonomy companion addresses that boundary by declaring extra
+source data: a free-group representation and marked word-cycle automata,
+with one clock step per edge. Its character response descends under
+simultaneous conjugation, and basis changes on each already defined
+automaton preserve its determinant and trace. This is an explicit
+enrichment that makes the comparison natural. It does not reverse the
+earlier counterexample about reusing numerical labels after discarding
+their common based identification, and it does not supply an arithmetic
+source map.
+
 ## Evidence and bounded replay
 
 The corrected core packet passed 27 focused tests under ordinary Python and
@@ -81,6 +96,9 @@ passed 18 tests in each mode and both producer checks. Independent reviews
 are bound to the frozen core and companion sources above and the graph
 source in its own review sidecar; they report the serialized test results
 without claiming independent runs.
+The based-holonomy companion passed nine tests in each mode and both
+producer checks at its source branch; final imported replay is a separate
+release check.
 
 The root agent serialized these runs to avoid competing with another
 active Codex agent. The core replay took about three seconds per complete
@@ -108,6 +126,10 @@ python -B research/exploratory/fixed-label-cycle-response/cycle_response.py --ch
 python -B -O research/exploratory/fixed-label-cycle-response/cycle_response.py --check
 python -B -m unittest discover -s research/exploratory/fixed-label-cycle-response/tests
 python -B -O -m unittest discover -s research/exploratory/fixed-label-cycle-response/tests
+python -B research/exploratory/marked-holonomy-response/holonomy_response.py --check
+python -B -O research/exploratory/marked-holonomy-response/holonomy_response.py --check
+python -B -m unittest discover -s research/exploratory/marked-holonomy-response/tests
+python -B -O -m unittest discover -s research/exploratory/marked-holonomy-response/tests
 ```
 
 The JSON certificates bind source files and exact outputs. They are not
@@ -121,10 +143,11 @@ scientific validation does not depend on Python `assert` statements.
    grades, specify an independently defined topology and operator, and
    prove the scalar recovery and determinant convergence contract. Stop if
    the proposal only places preselected coefficients on a diagonal.
-2. **An intrinsic extension of the graph observable.** Replace the fixed
-   sheet-space identification with extra declared source data or a
-   gauge-invariant comparison and prove which information survives. Stop
-   if a gauge change silently alters the comparison being claimed.
+2. **A native adapter to the based holonomy source.** The finite-model
+   gauge repair is now explicit. Select an independently defined arithmetic
+   or geometric source and prove a literal map preserving a specified native
+   observable. Stop if the map is fitted to the desired scalar output or
+   silently discards the marking, representation, or clock needed for it.
 3. **Actual arithmetic coherence.** Select one existing arithmetic family
    and prove a literal twist/duality/ramification compatibility statement.
    Do not label scalar twist weight, local rationality, or a formal
