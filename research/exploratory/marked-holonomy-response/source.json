@@ -1,0 +1,70 @@
+{
+  "census_degrees": [
+    1,
+    2,
+    3
+  ],
+  "clock": "one per automaton edge, not reduced free-group length",
+  "equivalence": "simultaneous conjugation of the based representation",
+  "held_out_s4_pairs": [
+    [
+      [
+        1,
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        2,
+        3,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        2,
+        3,
+        0
+      ],
+      [
+        1,
+        0,
+        2,
+        3
+      ]
+    ],
+    [
+      [
+        1,
+        0,
+        3,
+        2
+      ],
+      [
+        2,
+        3,
+        0,
+        1
+      ]
+    ]
+  ],
+  "maximum_degree": 4,
+  "maximum_full_transfer_dimension": 6,
+  "maximum_sparse_lift_vertices": 12,
+  "schema": "riemann.marked-holonomy-source.v1",
+  "source_group": "free group on a,b; c=(ab)^-1",
+  "words": [
+    [
+      "c",
+      "a",
+      "b"
+    ],
+    [
+      "c",
+      "b",
+      "a"
+    ]
+  ]
+}
