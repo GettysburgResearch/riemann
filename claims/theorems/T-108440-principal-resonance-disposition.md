@@ -1,4 +1,4 @@
-# T-108440 — The shared-fibre geometric route ends at the principal resonance
+# T-108440 — The shared-fibre geometric route ends at a principal-shaped resonance
 
 Claim ID: `T-108440`  
 Status: **EXACT DISPOSITION THEOREM; NONRESONANT GEOMETRY CLOSED LOCALLY, PRINCIPAL ARITHMETIC OPEN**  
@@ -25,88 +25,66 @@ Thus there is no remaining local object, family-size, atom-multiplicity or
 positive rectangle-gluing obstruction in the complete clean nonresonant
 sector.
 
-## 2. What cannot be closed geometrically
+## 2. What cannot be closed by nonconstant trace estimates
 
 When both marked residue fields admit the even quadratic character,
-`L-108440` proves
+`L-108440` proves in the physical squareclass normalization
 
 \[
 \widehat Z(\kappa_\ell,\kappa_\rho)
 =
-\sigma\tau\widehat Z(\mathbf1,\mathbf1).
+\sigma\tau\widehat Z(\mathbf1,\mathbf1),
 \]
 
-Therefore the double quadratic resonance is exactly the principal physical
-member, and its positive moment differs from the principal moment only by the
-explicit factor
+and therefore equality of their squared moduli.
 
-\[
-{4\ell\rho\over(\ell+1)(\rho+1)}.
-\]
+The double quadratic physical transform has no nonconstant core variable and
+cannot receive Deligne or square-root cancellation. A weighted comparison
+with the historical tensor-Gauss principal member requires the exact
+source-to-squareclass root and normalization adapter; no generic weight ratio
+is asserted.
 
-It has no nonconstant core variable and cannot receive Deligne or
-square-root cancellation. Any theorem bounding that row after an absolute
-value is already a theorem bounding the principal conclusion channel.
-
-Hence `QRESBIND107300` was not a finite local cleanup. Its double-resonance
-component contains the original principal arithmetic problem.
+Nevertheless `QRESBIND107300` is not a finite geometric cleanup: its double
+physical resonance is conclusion-shaped and must be recombined with the
+principal/root ledger before any absolute value is taken.
 
 ## 3. Correct remaining split
 
-Replace the former single gate by:
+Replace the former undifferentiated gate by:
 
 ```text
 MIXEDRES108440:
   control the one-coordinate quadratic rows, live masks and endpoints after
   exact signed recombination;
 
-PRINCIPALCELL108440:
-  control the literal principal physical cell energy, equivalently the
-  double-quadratic row on fibres where it exists, with valid principal
-  binding.
+PRINCIPALADAPT108440:
+  carry the double-quadratic physical transform and the historical principal
+  member through the exact root/normalization adapter, then prove the required
+  signed principal binding.
 ```
 
-The exact implication becomes
-
-\[
-\boxed{
-\mathrm{COEFCELL}_{108430}
-\wedge
-\mathrm{MIXEDRES}_{108440}
-\wedge
-\mathrm{PRINCIPALCELL}_{108440}
-\Longrightarrow
-\mathrm{CBKM}_{106130}
-\Longrightarrow
-\mathrm{BCI}_{102990}
-\Longrightarrow
-\mathrm{RH}.
-}
-\tag{T-108440.1}
-\]
-
-But `PRINCIPALCELL108440` is the conclusion-bearing arithmetic estimate. It
-is not supplied by the function-field nonresonant trace theorem.
+Together with the source-weighted cell estimate, these are sufficient for the
+existing connected-Kummer consumer. Neither is proved.
 
 ## 4. Programme verdict
 
 The shared-fibre route has produced a useful local mechanism and a faithful
 source coordinate, but it has **not** moved the principal number-field
-obstruction into geometry. The clean nonresonant sector is solved; the
-remaining double resonance is the principal channel itself.
+obstruction into nonresonant geometry. The clean nonresonant sector is solved;
+the remaining double resonance is physically identical to the unphased cell
+transform up to the fixed owner sign.
 
 Future work on this branch is justified only if it attacks the literal
-principal cell energy or proves a new signed principal/resonance
-recombination. More occupancy, rank or complete-fibre geometry will not close
-RH.
+principal cell energy or constructs the exact signed principal/resonance
+adapter. More occupancy, rank or complete-fibre geometry will not close RH.
 
 ```text
-clean nonresonant local geometry            CLOSED
-positive source-vector quotient             CLOSED
-unweighted occupancy necessity              REFUTED
-double quadratic row = principal member     PROVED EXACT
-geometric disposal of double row            IMPOSSIBLE
-mixed one-coordinate rows                    OPEN
-principal arithmetic cell energy             OPEN / CONCLUSION-BEARING
-RH / GRH                                      UNPROVED
+clean nonresonant local geometry               CLOSED
+positive source-vector quotient                CLOSED
+unweighted occupancy necessity                 REFUTED
+double quadratic physical transform alias      PROVED EXACT
+legacy Gauss-weight identification              NOT CLAIMED
+mixed one-coordinate rows                       OPEN
+principal/root normalization and binding         OPEN / CONCLUSION-BEARING
+RH / GRH                                         UNPROVED
 ```
