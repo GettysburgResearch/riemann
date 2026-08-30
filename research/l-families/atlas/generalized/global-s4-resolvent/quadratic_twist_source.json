@@ -1,0 +1,12 @@
+{
+  "schema": "bring-s4-quadratic-twist-source-v1",
+  "precursor_commit": "d19f421b438485c953469be59c4df8f79a30d2bf",
+  "helper_commit": "3d3b52541ed33b516c25ec0a27ba3eb568ec513b",
+  "maximum_field_order": 15625,
+  "curves": [
+    {"id": "p5-bring", "p": 5, "b": 1, "c": 1, "extensions": [1, 2, 3, 4, 5, 6]},
+    {"id": "p7-bring", "p": 7, "b": 1, "c": 1, "extensions": [1, 2, 3, 4]},
+    {"id": "p7-nonsplit-branch", "p": 7, "b": 3, "c": 4, "extensions": [1, 2, 3, 4]}
+  ],
+  "coverage": "Every point of four explicit twisted quotient curves; all finite local twist classes and normalized infinity; full degree-ten determinant only over p5 with its sixth trace held out, and p7 degree-ten prefixes explicitly truncated."
+}

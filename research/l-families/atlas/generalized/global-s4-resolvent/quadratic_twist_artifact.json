@@ -1,0 +1,1427 @@
+{
+  "panels": [
+    {
+      "b": 1,
+      "c": 1,
+      "curve_polynomials": {
+        "Cchi": [
+          1,
+          4,
+          28,
+          78,
+          348,
+          820,
+          3223,
+          7448,
+          27014,
+          61412,
+          199440,
+          435068,
+          1288259,
+          2722316,
+          7596286,
+          15740558,
+          41743165,
+          83279280,
+          208715825,
+          393513950,
+          949535750,
+          1701447500,
+          4025809375,
+          6797937500,
+          15581250000,
+          23989062500,
+          52761718750,
+          72734375000,
+          157373046875,
+          200195312500,
+          424804687500,
+          476074218750,
+          854492187500,
+          610351562500,
+          762939453125
+        ],
+        "Dchi": [
+          1,
+          -4,
+          13,
+          -32,
+          65,
+          -100,
+          125
+        ],
+        "Rchi": [
+          1,
+          1,
+          7,
+          4,
+          42,
+          20,
+          175,
+          125,
+          625
+        ],
+        "X": [
+          1,
+          7,
+          28,
+          73,
+          140,
+          175,
+          125
+        ],
+        "Ztilde": [
+          1,
+          18,
+          209,
+          1792,
+          12774,
+          78620,
+          434834,
+          2200944,
+          10394959,
+          46265590,
+          196097931,
+          795886064,
+          3111891710,
+          11760352548,
+          43123661122,
+          153767905088,
+          534602403375,
+          1815074003542,
+          6029662387767,
+          19621390244352,
+          62636403247056,
+          196320684957280,
+          604818179435640,
+          1832744996424416,
+          5467299746185640,
+          16064795080206048,
+          46527360811638304,
+          132881229400686624,
+          374440703845542300,
+          1041409834876597320,
+          2860077554472991532,
+          7758502429791386976,
+          20796271357095596893,
+          55093890619592190506,
+          144300244636992293781,
+          373731388726458007264,
+          957399153184038088462,
+          2426241510796351671516,
+          6083803791406003957826,
+          15096232395626545138672,
+          37075761028095502006449,
+          90131935587786767471114,
+          216918070602466865912429,
+          516854575114961096073648,
+          1219396364379508930322506,
+          2848666053963371602869948,
+          6590141566178481405258750,
+          15097679392356760005356160,
+          34254155186567890136780250,
+          76966074871049456718908700,
+          171270775932839450683901250,
+          377441984808919000133904000,
+          823767695772310175657343750,
+          1780416283727107251793717500,
+          3810613638685965407257831250,
+          8075852736171267126150750000,
+          16946724265817723899408515625,
+          35207787338979206043403906250,
+          72413595757999027356345703125,
+          147424144488540479869843750000,
+          297060732002246287003222656250,
+          592344118846765544803710937500,
+          1168700138164108994704589843750,
+          2281075370644885298242187500000,
+          4403693989166024590484619140625,
+          8406660555968046647033691406250,
+          15866295896221616281890869140625,
+          29596338004270122436523437500000,
+          54551650132617788925170898437500,
+          99316581237468463897705078125000,
+          178547241137286329269409179687500,
+          316813539029804763793945312500000,
+          554649362702826309204101562500000,
+          957536404145124435424804687500000,
+          1629382296259891986846923828125000,
+          2731002861893796920776367187500000,
+          4506246592369973659515380859375000,
+          7313515430587530136108398437500000,
+          11666939267340302467346191406250000,
+          18273843679904937744140625000000000,
+          28077803495186381042003631591796875,
+          42260484852408990263938903808593750,
+          62235910838353447616100311279296875,
+          89504700787365436553955078125000000,
+          125506372196832671761512756347656250,
+          171135653334204107522964477539062500,
+          226419921818887814879417419433593750,
+          289541663369163870811462402343750000,
+          356700058546266518533229827880859375,
+          420783089793985709547996520996093750,
+          472708006782340817153453826904296875,
+          500436726724728941917419433593750000,
+          494349023938411846756935119628906250,
+          446902959083672612905502319335937500,
+          363058916263980790972709655761718750,
+          254658516496419906616210937500000000,
+          148503431773860938847064971923828125,
+          63948846218409016728401184082031250,
+          17763568394002504646778106689453125
+        ]
+      },
+      "degree_ten_held_out_extensions": [
+        6
+      ],
+      "full_degree_ten_available": true,
+      "id": "p5-bring",
+      "p": 5,
+      "rows": [
+        {
+          "Z_points_from_normalized_regular_character": 12,
+          "Ztilde_points_from_normalized_joint_regular_character": 24,
+          "counts": {
+            "Cchi": 10,
+            "Dchi": 2,
+            "Rchi": 7,
+            "X": 13
+          },
+          "extension": 1,
+          "field_order": 5,
+          "finite_class_census": {
+            "three_cycle:chi=-1": 2,
+            "three_cycle:chi=0": 1,
+            "transposition:chi=1": 2
+          },
+          "modulus": [
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 10,
+            "D": 8,
+            "E": 9,
+            "R": 5
+          },
+          "projective_exceptional_points": {
+            "Cchi": 8,
+            "Dchi": 1,
+            "Rchi": 3,
+            "X": 4
+          },
+          "rational_branch_twists": [],
+          "signed_regular_source_sum": 12,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": -4,
+            "std": 4,
+            "tw": 0,
+            "two": 2
+          }
+        },
+        {
+          "Z_points_from_normalized_regular_character": 84,
+          "Ztilde_points_from_normalized_joint_regular_character": 120,
+          "counts": {
+            "Cchi": 66,
+            "Dchi": 36,
+            "Rchi": 39,
+            "X": 33
+          },
+          "extension": 2,
+          "field_order": 25,
+          "finite_class_census": {
+            "branch_split:chi=-1": 2,
+            "double_transposition:chi=-1": 2,
+            "double_transposition:chi=1": 4,
+            "four_cycle:chi=-1": 4,
+            "identity:chi=1": 2,
+            "three_cycle:chi=-1": 4,
+            "three_cycle:chi=0": 1,
+            "three_cycle:chi=1": 6
+          },
+          "modulus": [
+            2,
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 50,
+            "D": 42,
+            "E": 27,
+            "R": 35
+          },
+          "projective_exceptional_points": {
+            "Cchi": 8,
+            "Dchi": 1,
+            "Rchi": 3,
+            "X": 4
+          },
+          "rational_branch_twists": [
+            {
+              "chi_u": -1,
+              "old_class": "branch_split",
+              "u": 5
+            },
+            {
+              "chi_u": -1,
+              "old_class": "branch_split",
+              "u": 20
+            }
+          ],
+          "signed_regular_source_sum": 36,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": 10,
+            "std": 6,
+            "tw": 0,
+            "two": 4
+          }
+        },
+        {
+          "Z_points_from_normalized_regular_character": 228,
+          "Ztilde_points_from_normalized_joint_regular_character": 48,
+          "counts": {
+            "Cchi": 88,
+            "Dchi": 122,
+            "Rchi": 118,
+            "X": 100
+          },
+          "extension": 3,
+          "field_order": 125,
+          "finite_class_census": {
+            "double_transposition:chi=-1": 6,
+            "double_transposition:chi=1": 6,
+            "four_cycle:chi=-1": 30,
+            "four_cycle:chi=1": 24,
+            "identity:chi=-1": 8,
+            "identity:chi=0": 1,
+            "three_cycle:chi=-1": 12,
+            "three_cycle:chi=1": 18,
+            "transposition:chi=-1": 6,
+            "transposition:chi=1": 14
+          },
+          "modulus": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 136,
+            "D": 104,
+            "E": 108,
+            "R": 140
+          },
+          "projective_exceptional_points": {
+            "Cchi": 8,
+            "Dchi": 1,
+            "Rchi": 3,
+            "X": 4
+          },
+          "rational_branch_twists": [],
+          "signed_regular_source_sum": -180,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": -4,
+            "std": -8,
+            "tw": -36,
+            "two": -22
+          }
+        },
+        {
+          "Z_points_from_normalized_regular_character": 660,
+          "Ztilde_points_from_normalized_joint_regular_character": 1224,
+          "counts": {
+            "Cchi": 738,
+            "Dchi": 612,
+            "Rchi": 707,
+            "X": 661
+          },
+          "extension": 4,
+          "field_order": 625,
+          "finite_class_census": {
+            "branch_split:chi=-1": 4,
+            "branch_split:chi=1": 2,
+            "double_transposition:chi=-1": 24,
+            "double_transposition:chi=1": 36,
+            "four_cycle:chi=-1": 56,
+            "four_cycle:chi=1": 96,
+            "identity:chi=1": 24,
+            "three_cycle:chi=-1": 124,
+            "three_cycle:chi=0": 1,
+            "three_cycle:chi=1": 82,
+            "transposition:chi=-1": 104,
+            "transposition:chi=1": 72
+          },
+          "modulus": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 634,
+            "D": 590,
+            "E": 675,
+            "R": 595
+          },
+          "projective_exceptional_points": {
+            "Cchi": 8,
+            "Dchi": 1,
+            "Rchi": 3,
+            "X": 4
+          },
+          "rational_branch_twists": [
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 25
+            },
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 100
+            },
+            {
+              "chi_u": -1,
+              "old_class": "branch_split",
+              "u": 125
+            },
+            {
+              "chi_u": -1,
+              "old_class": "branch_split",
+              "u": 250
+            },
+            {
+              "chi_u": -1,
+              "old_class": "branch_split",
+              "u": 375
+            },
+            {
+              "chi_u": -1,
+              "old_class": "branch_split",
+              "u": 500
+            }
+          ],
+          "signed_regular_source_sum": 564,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": -14,
+            "std": -14,
+            "tw": 132,
+            "two": 112
+          }
+        },
+        {
+          "Z_points_from_normalized_regular_character": 2892,
+          "Ztilde_points_from_normalized_joint_regular_character": 3384,
+          "counts": {
+            "Cchi": 3330,
+            "Dchi": 3202,
+            "Rchi": 3107,
+            "X": 2993
+          },
+          "extension": 5,
+          "field_order": 3125,
+          "finite_class_census": {
+            "double_transposition:chi=-1": 180,
+            "double_transposition:chi=1": 200,
+            "four_cycle:chi=-1": 370,
+            "four_cycle:chi=1": 410,
+            "identity:chi=-1": 50,
+            "identity:chi=1": 70,
+            "three_cycle:chi=-1": 552,
+            "three_cycle:chi=0": 1,
+            "three_cycle:chi=1": 550,
+            "transposition:chi=-1": 410,
+            "transposition:chi=1": 332
+          },
+          "modulus": [
+            1,
+            4,
+            0,
+            0,
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 3170,
+            "D": 3208,
+            "E": 3069,
+            "R": 3025
+          },
+          "projective_exceptional_points": {
+            "Cchi": 8,
+            "Dchi": 1,
+            "Rchi": 3,
+            "X": 4
+          },
+          "rational_branch_twists": [],
+          "signed_regular_source_sum": 492,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": 76,
+            "std": -76,
+            "tw": 160,
+            "two": 82
+          }
+        },
+        {
+          "Z_points_from_normalized_regular_character": 15900,
+          "Ztilde_points_from_normalized_joint_regular_character": 18864,
+          "counts": {
+            "Cchi": 16776,
+            "Dchi": 15684,
+            "Rchi": 15594,
+            "X": 16020
+          },
+          "extension": 6,
+          "field_order": 15625,
+          "finite_class_census": {
+            "branch_split:chi=-1": 2,
+            "double_transposition:chi=-1": 1052,
+            "double_transposition:chi=1": 910,
+            "four_cycle:chi=-1": 1972,
+            "four_cycle:chi=1": 1980,
+            "identity:chi=-1": 268,
+            "identity:chi=0": 1,
+            "identity:chi=1": 392,
+            "three_cycle:chi=-1": 2574,
+            "three_cycle:chi=1": 2622,
+            "transposition:chi=-1": 1944,
+            "transposition:chi=1": 1908
+          },
+          "modulus": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 15692,
+            "D": 15642,
+            "E": 15552,
+            "R": 15680
+          },
+          "projective_exceptional_points": {
+            "Cchi": 8,
+            "Dchi": 1,
+            "Rchi": 3,
+            "X": 4
+          },
+          "rational_branch_twists": [
+            {
+              "chi_u": -1,
+              "old_class": "branch_split",
+              "u": 8840
+            },
+            {
+              "chi_u": -1,
+              "old_class": "branch_split",
+              "u": 10060
+            }
+          ],
+          "signed_regular_source_sum": 2964,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": 58,
+            "std": 468,
+            "tw": 558,
+            "two": -86
+          }
+        }
+      ],
+      "tw_prefix_mod_T5": [
+        1,
+        0,
+        0,
+        -12,
+        33
+      ],
+      "twisted_polynomials": {
+        "sign": [
+          1,
+          -4,
+          13,
+          -32,
+          65,
+          -100,
+          125
+        ],
+        "std": [
+          1,
+          4,
+          11,
+          20,
+          25
+        ],
+        "tw": [
+          1,
+          0,
+          0,
+          -12,
+          33,
+          32,
+          165,
+          -300,
+          0,
+          0,
+          3125
+        ],
+        "two": [
+          1,
+          2,
+          4,
+          -2,
+          20,
+          50,
+          125
+        ]
+      }
+    },
+    {
+      "b": 1,
+      "c": 1,
+      "curve_polynomials": {
+        "Cchi": null,
+        "Dchi": [
+          1,
+          0,
+          12,
+          0,
+          84,
+          0,
+          343
+        ],
+        "Rchi": [
+          1,
+          2,
+          10,
+          6,
+          42,
+          42,
+          490,
+          686,
+          2401
+        ],
+        "X": [
+          1,
+          4,
+          7,
+          0,
+          49,
+          196,
+          343
+        ],
+        "Ztilde": null
+      },
+      "degree_ten_held_out_extensions": [],
+      "full_degree_ten_available": false,
+      "id": "p7-bring",
+      "p": 7,
+      "rows": [
+        {
+          "Z_points_from_normalized_regular_character": 48,
+          "Ztilde_points_from_normalized_joint_regular_character": 48,
+          "counts": {
+            "Cchi": 20,
+            "Dchi": 8,
+            "Rchi": 10,
+            "X": 12
+          },
+          "extension": 1,
+          "field_order": 7,
+          "finite_class_census": {
+            "four_cycle:chi=-1": 1,
+            "four_cycle:chi=0": 1,
+            "four_cycle:chi=1": 1,
+            "identity:chi=-1": 1,
+            "identity:chi=1": 1,
+            "three_cycle:chi=-1": 1,
+            "three_cycle:chi=1": 1
+          },
+          "modulus": [
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 20,
+            "D": 8,
+            "E": 12,
+            "R": 10
+          },
+          "projective_exceptional_points": {
+            "Cchi": 0,
+            "Dchi": 1,
+            "Rchi": 1,
+            "X": 2
+          },
+          "rational_branch_twists": [],
+          "signed_regular_source_sum": 0,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 0,
+            "tw": 0,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": 0,
+            "std": 0,
+            "tw": 0,
+            "two": 0
+          }
+        },
+        {
+          "Z_points_from_normalized_regular_character": 60,
+          "Ztilde_points_from_normalized_joint_regular_character": 120,
+          "counts": {
+            "Cchi": 96,
+            "Dchi": 74,
+            "Rchi": 66,
+            "X": 48
+          },
+          "extension": 2,
+          "field_order": 49,
+          "finite_class_census": {
+            "double_transposition:chi=-1": 4,
+            "double_transposition:chi=0": 1,
+            "double_transposition:chi=1": 8,
+            "four_cycle:chi=-1": 4,
+            "identity:chi=1": 2,
+            "three_cycle:chi=-1": 8,
+            "three_cycle:chi=1": 14,
+            "transposition:chi=-1": 8
+          },
+          "modulus": [
+            1,
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 64,
+            "D": 76,
+            "E": 48,
+            "R": 60
+          },
+          "projective_exceptional_points": {
+            "Cchi": 8,
+            "Dchi": 1,
+            "Rchi": 3,
+            "X": 4
+          },
+          "rational_branch_twists": [],
+          "signed_regular_source_sum": 60,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": 24,
+            "std": 0,
+            "tw": 8,
+            "two": 6
+          }
+        },
+        {
+          "Z_points_from_normalized_regular_character": 240,
+          "Ztilde_points_from_normalized_joint_regular_character": 240,
+          "counts": {
+            "Cchi": 332,
+            "Dchi": 344,
+            "Rchi": 310,
+            "X": 324
+          },
+          "extension": 3,
+          "field_order": 343,
+          "finite_class_census": {
+            "double_transposition:chi=-1": 18,
+            "double_transposition:chi=1": 18,
+            "four_cycle:chi=-1": 46,
+            "four_cycle:chi=0": 1,
+            "four_cycle:chi=1": 46,
+            "identity:chi=-1": 5,
+            "identity:chi=1": 5,
+            "three_cycle:chi=-1": 63,
+            "three_cycle:chi=1": 63,
+            "transposition:chi=-1": 39,
+            "transposition:chi=1": 39
+          },
+          "modulus": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 332,
+            "D": 344,
+            "E": 324,
+            "R": 310
+          },
+          "projective_exceptional_points": {
+            "Cchi": 0,
+            "Dchi": 1,
+            "Rchi": 1,
+            "X": 2
+          },
+          "rational_branch_twists": [],
+          "signed_regular_source_sum": 0,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 0,
+            "tw": 0,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": 0,
+            "std": 0,
+            "tw": 0,
+            "two": 0
+          }
+        },
+        {
+          "Z_points_from_normalized_regular_character": 2964,
+          "Ztilde_points_from_normalized_joint_regular_character": 3408,
+          "counts": {
+            "Cchi": 2632,
+            "Dchi": 2450,
+            "Rchi": 2466,
+            "X": 2692
+          },
+          "extension": 4,
+          "field_order": 2401,
+          "finite_class_census": {
+            "double_transposition:chi=-1": 120,
+            "double_transposition:chi=1": 132,
+            "four_cycle:chi=-1": 368,
+            "four_cycle:chi=1": 280,
+            "identity:chi=-1": 52,
+            "identity:chi=0": 1,
+            "identity:chi=1": 70,
+            "three_cycle:chi=-1": 380,
+            "three_cycle:chi=1": 374,
+            "transposition:chi=-1": 280,
+            "transposition:chi=1": 344
+          },
+          "modulus": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 2496,
+            "D": 2260,
+            "E": 2496,
+            "R": 2400
+          },
+          "projective_exceptional_points": {
+            "Cchi": 8,
+            "Dchi": 1,
+            "Rchi": 3,
+            "X": 4
+          },
+          "rational_branch_twists": [],
+          "signed_regular_source_sum": 444,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": 48,
+            "std": 196,
+            "tw": -108,
+            "two": 66
+          }
+        }
+      ],
+      "tw_prefix_mod_T5": [
+        1,
+        0,
+        4,
+        0,
+        -19
+      ],
+      "twisted_polynomials": {
+        "sign": [
+          1,
+          0,
+          12,
+          0,
+          84,
+          0,
+          343
+        ],
+        "std": [
+          1,
+          0,
+          0,
+          0,
+          49
+        ],
+        "tw": null,
+        "two": [
+          1,
+          0,
+          3,
+          0,
+          21,
+          0,
+          343
+        ]
+      }
+    },
+    {
+      "b": 3,
+      "c": 4,
+      "curve_polynomials": {
+        "Cchi": null,
+        "Dchi": [
+          1,
+          0,
+          -3,
+          0,
+          -21,
+          0,
+          343
+        ],
+        "Rchi": [
+          1,
+          -3,
+          1,
+          18,
+          -84,
+          126,
+          49,
+          -1029,
+          2401
+        ],
+        "X": [
+          1,
+          1,
+          14,
+          7,
+          98,
+          49,
+          343
+        ],
+        "Ztilde": null
+      },
+      "degree_ten_held_out_extensions": [],
+      "full_degree_ten_available": false,
+      "id": "p7-nonsplit-branch",
+      "p": 7,
+      "rows": [
+        {
+          "Z_points_from_normalized_regular_character": 0,
+          "Ztilde_points_from_normalized_joint_regular_character": 0,
+          "counts": {
+            "Cchi": 10,
+            "Dchi": 8,
+            "Rchi": 5,
+            "X": 9
+          },
+          "extension": 1,
+          "field_order": 7,
+          "finite_class_census": {
+            "branch_nonsplit:chi=-1": 1,
+            "branch_nonsplit:chi=1": 1,
+            "three_cycle:chi=-1": 2,
+            "three_cycle:chi=0": 1,
+            "three_cycle:chi=1": 2
+          },
+          "modulus": [
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 10,
+            "D": 12,
+            "E": 9,
+            "R": 5
+          },
+          "projective_exceptional_points": {
+            "Cchi": 0,
+            "Dchi": 1,
+            "Rchi": 1,
+            "X": 2
+          },
+          "rational_branch_twists": [
+            {
+              "chi_u": 1,
+              "old_class": "branch_nonsplit",
+              "u": 1
+            },
+            {
+              "chi_u": -1,
+              "old_class": "branch_nonsplit",
+              "u": 6
+            }
+          ],
+          "signed_regular_source_sum": 0,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 0,
+            "tw": 0,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": 0,
+            "std": 0,
+            "tw": 0,
+            "two": 0
+          }
+        },
+        {
+          "Z_points_from_normalized_regular_character": 84,
+          "Ztilde_points_from_normalized_joint_regular_character": 168,
+          "counts": {
+            "Cchi": 98,
+            "Dchi": 44,
+            "Rchi": 43,
+            "X": 77
+          },
+          "extension": 2,
+          "field_order": 49,
+          "finite_class_census": {
+            "branch_split:chi=1": 6,
+            "double_transposition:chi=-1": 8,
+            "four_cycle:chi=1": 4,
+            "three_cycle:chi=-1": 8,
+            "three_cycle:chi=0": 1,
+            "three_cycle:chi=1": 10,
+            "transposition:chi=-1": 8,
+            "transposition:chi=1": 4
+          },
+          "modulus": [
+            1,
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 66,
+            "D": 62,
+            "E": 63,
+            "R": 55
+          },
+          "projective_exceptional_points": {
+            "Cchi": 8,
+            "Dchi": 1,
+            "Rchi": 3,
+            "X": 4
+          },
+          "rational_branch_twists": [
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 1
+            },
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 6
+            },
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 7
+            },
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 21
+            },
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 28
+            },
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 42
+            }
+          ],
+          "signed_regular_source_sum": 84,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": -6,
+            "std": 14,
+            "tw": 24,
+            "two": -12
+          }
+        },
+        {
+          "Z_points_from_normalized_regular_character": 264,
+          "Ztilde_points_from_normalized_joint_regular_character": 264,
+          "counts": {
+            "Cchi": 280,
+            "Dchi": 344,
+            "Rchi": 380,
+            "X": 324
+          },
+          "extension": 3,
+          "field_order": 343,
+          "finite_class_census": {
+            "branch_nonsplit:chi=-1": 1,
+            "branch_nonsplit:chi=1": 1,
+            "double_transposition:chi=-1": 27,
+            "double_transposition:chi=1": 27,
+            "four_cycle:chi=-1": 45,
+            "four_cycle:chi=1": 45,
+            "identity:chi=-1": 5,
+            "identity:chi=0": 1,
+            "identity:chi=1": 5,
+            "three_cycle:chi=-1": 48,
+            "three_cycle:chi=1": 48,
+            "transposition:chi=-1": 45,
+            "transposition:chi=1": 45
+          },
+          "modulus": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 280,
+            "D": 324,
+            "E": 324,
+            "R": 380
+          },
+          "projective_exceptional_points": {
+            "Cchi": 0,
+            "Dchi": 1,
+            "Rchi": 1,
+            "X": 2
+          },
+          "rational_branch_twists": [
+            {
+              "chi_u": 1,
+              "old_class": "branch_nonsplit",
+              "u": 1
+            },
+            {
+              "chi_u": -1,
+              "old_class": "branch_nonsplit",
+              "u": 6
+            }
+          ],
+          "signed_regular_source_sum": 0,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 0,
+            "tw": 0,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": 0,
+            "std": 0,
+            "tw": 0,
+            "two": 0
+          }
+        },
+        {
+          "Z_points_from_normalized_regular_character": 2484,
+          "Ztilde_points_from_normalized_joint_regular_character": 2664,
+          "counts": {
+            "Cchi": 2530,
+            "Dchi": 2300,
+            "Rchi": 2235,
+            "X": 2429
+          },
+          "extension": 4,
+          "field_order": 2401,
+          "finite_class_census": {
+            "branch_split:chi=1": 6,
+            "double_transposition:chi=-1": 212,
+            "double_transposition:chi=1": 108,
+            "four_cycle:chi=-1": 296,
+            "four_cycle:chi=1": 336,
+            "identity:chi=-1": 48,
+            "identity:chi=1": 52,
+            "three_cycle:chi=-1": 364,
+            "three_cycle:chi=0": 1,
+            "three_cycle:chi=1": 410,
+            "transposition:chi=-1": 280,
+            "transposition:chi=1": 288
+          },
+          "modulus": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "old_counts": {
+            "C": 2378,
+            "D": 2398,
+            "E": 2331,
+            "R": 2475
+          },
+          "projective_exceptional_points": {
+            "Cchi": 8,
+            "Dchi": 1,
+            "Rchi": 3,
+            "X": 4
+          },
+          "rational_branch_twists": [
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 1
+            },
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 6
+            },
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 964
+            },
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 1271
+            },
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 1529
+            },
+            {
+              "chi_u": 1,
+              "old_class": "branch_split",
+              "u": 1836
+            }
+          ],
+          "signed_regular_source_sum": 180,
+          "twisted_infinity_stalk_dimensions": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_infinity_stalk_traces": {
+            "one": 0,
+            "sign": 0,
+            "std": 2,
+            "tw": 2,
+            "two": 0
+          },
+          "twisted_stalk_sums": {
+            "one": 0,
+            "sign": -102,
+            "std": 98,
+            "tw": 156,
+            "two": -240
+          }
+        }
+      ],
+      "tw_prefix_mod_T5": [
+        1,
+        0,
+        12,
+        0,
+        111
+      ],
+      "twisted_polynomials": {
+        "sign": [
+          1,
+          0,
+          -3,
+          0,
+          -21,
+          0,
+          343
+        ],
+        "std": [
+          1,
+          0,
+          7,
+          0,
+          49
+        ],
+        "tw": null,
+        "two": [
+          1,
+          0,
+          -6,
+          0,
+          -42,
+          0,
+          343
+        ]
+      }
+    }
+  ],
+  "schema": "bring-s4-quadratic-twist-artifact-v1",
+  "source_hash": "3724d303ecef59e3504f958e416381b4f87d865b433d8301d2ce9a1c18d09cf0"
+}
