@@ -621,7 +621,7 @@ def build_fixture(
             },
             "GLO764.POLYNOMIAL_RECURRENCE_BOUND": {
                 "status": "PROVED_IN_COMPANION_NOTE_AND_EXACTLY_REPLAYED",
-                "scope": "Phi in C[z]",
+                "scope": "nonzero Phi in C[z]",
                 "statement": "local recurrence order is at most 2*deg(Phi)+1; cancellation may lower it",
             },
             "GLO764.POLYNOMIAL_MULTIPLICATIVITY_RIGIDITY": {

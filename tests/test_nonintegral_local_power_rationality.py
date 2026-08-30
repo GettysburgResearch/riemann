@@ -254,6 +254,10 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
                 "GLO764.POLYNOMIAL_MULTIPLICATIVITY_RIGIDITY",
             },
         )
+        self.assertEqual(
+            claims["GLO764.POLYNOMIAL_RECURRENCE_BOUND"]["scope"],
+            "nonzero Phi in C[z]",
+        )
         rows = self.fixture["survival_ladder"]["rows"]
         noninteger = next(row for row in rows if row["object"].startswith("noninteger"))
         self.assertEqual(noninteger["first_failure_level"], "L3")

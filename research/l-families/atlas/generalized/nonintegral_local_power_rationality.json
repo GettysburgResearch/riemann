@@ -17,7 +17,7 @@
       "status": "PROVED_IN_COMPANION_NOTE_AND_FORMALLY_REPLAYED"
     },
     "GLO764.POLYNOMIAL_RECURRENCE_BOUND": {
-      "scope": "Phi in C[z]",
+      "scope": "nonzero Phi in C[z]",
       "statement": "local recurrence order is at most 2*deg(Phi)+1; cancellation may lower it",
       "status": "PROVED_IN_COMPANION_NOTE_AND_EXACTLY_REPLAYED"
     }
@@ -1588,7 +1588,7 @@
     "tempered_GL2_trace_chamber": "[-2,2] is not treated",
     "trace_domain": "real x>2 (hyperbolic non-tempered determinant-one chamber)"
   },
-  "payload_sha256": "aeef39e2d11dad919074c1e8626f15ed16e613e04ae3db406adf66cd579c676f",
+  "payload_sha256": "4acc9097a55ef6eee6377f5cbc63018b361acc04ca2f3aa5767fd94f585c9e9d",
   "polynomial_transform_replay": {
     "all_degrees_0_through_d": {
       "d": 8,
@@ -1694,9 +1694,9 @@
     "note": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
     "note_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c",
     "script": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
-    "script_sha256_lf_normalized": "1823be1b7d3d20d55e0154a7eefe54218eae73c90eb71297a96dd906bc59556d",
+    "script_sha256_lf_normalized": "8cec1b713c252e0b879b1ab1b3ddec761ce98adc5ad5015e623db6fc829a28a9",
     "test": "tests/test_nonintegral_local_power_rationality.py",
-    "test_sha256_lf_normalized": "d5fc59497e47f7bea973491af1836e290699659b843f34029b0b2304a932f72b"
+    "test_sha256_lf_normalized": "3f133d7d2218844eebb59f8a279d9edd9a9336d626f03502e38bf2836d925f7f"
   },
   "programme_issue": 764,
   "resource_contract": {
