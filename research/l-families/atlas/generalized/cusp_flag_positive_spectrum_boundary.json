@@ -1,10 +1,14 @@
 {
-  "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL",
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": [
+    "CERTIFIED_INTEGER_COVERAGE",
+    "EXACT_RATIONAL"
+  ],
   "artifact_sha256_lf": {
     "research/l-families/atlas/generalized/CUSP_FLAG_POSITIVE_SPECTRUM_BOUNDARY.md": "62925bbe9ebe327ed491f99e886eea5599253295c69f05878d278dd453abe0d7",
-    "research/l-families/atlas/generalized/cusp_flag_positive_spectrum_boundary.py": "4e61a4d3405ae4e47c2e18d049bed9fabb07c0b3b31db613b382fe52decd5075",
+    "research/l-families/atlas/generalized/cusp_flag_positive_spectrum_boundary.py": "e0185cc4c899e41b1bfdccf05021995474eccca2514b1b4ec40d6502ab8afcb8",
     "research/l-families/atlas/generalized/cusp_flag_positive_spectrum_boundary.sources.json": "722c45c8ba2a2020667b5ea089be703ab54bc2078c5c8b0b9bd1f384cf37be85",
-    "tests/test_cusp_flag_positive_spectrum_boundary.py": "a68cde929a9c93678f789438ae63b7482da2fc3095a0f037f806346bde6f225c"
+    "tests/test_cusp_flag_positive_spectrum_boundary.py": "80a13b3099212f99976afc9c77695b5b029bcc50a451bce6d6feef753aef0f05"
   },
   "caps": {
     "atoms": 8,
@@ -3786,7 +3790,8 @@
       "source_kind": "FINITE_RATIONAL_GRAM_CALIBRATION_NOT_CUSP_FORMS"
     }
   ],
-  "payload_sha256_canonical_json": "542d504af6ee2fa5b4cac631ef697547406e5d86f6dd3603ace0ec2012f6e4ab",
+  "payload_sha256_canonical_json": "2d9a02f5eb3a23861c65f9a54dad5ddaceae82912559bf01b8f686ff56eb097d",
+  "rounding_contract": "exact Python integers and Fraction; no rounding",
   "schema": "cusp-flag-positive-spectrum-boundary-v1",
   "scope": {
     "F_and_L_strictly_gt_one_and_decreasing_w_gt_k": true,
