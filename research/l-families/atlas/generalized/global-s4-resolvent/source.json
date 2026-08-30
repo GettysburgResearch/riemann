@@ -1,0 +1,12 @@
+{
+  "schema": "bring-quartic-s4-resolvent-source-v1",
+  "field_helper_commit": "dc4db621017ddaa8aeca1acfb211374dc0f04501",
+  "maximum_field_order": 15625,
+  "curves": [
+    {"id": "p5-bring", "p": 5, "b": 1, "c": 1, "extensions": [1, 2, 3, 4, 5, 6]},
+    {"id": "p7-bring", "p": 7, "b": 1, "c": 1, "extensions": [1, 2, 3, 4]},
+    {"id": "p7-nonsplit-branch", "p": 7, "b": 3, "c": 4, "extensions": [1, 2, 3, 4]}
+  ],
+  "equations": "f=x^4+b*x+c; g=-16*x^6-40*b*x^3-27*b^2; E:y^2=f; D:s^2=256*(c-u^2)^3-27*b^4; R:Y^2=-z^4+4*c*z^2+b^2*z; C:y^2=f,v^2=g; G:v^2=g; H:w^2=f*g",
+  "coverage": "Complete primitive field and point counts for all six curves; every finite base fibre and all invariant Frobenius classes; the degree-eight sign-standard determinant reconstructed from four traces and proved reciprocity, predicting the two extra p5 traces."
+}

@@ -1,0 +1,1090 @@
+{
+  "panels": [
+    {
+      "b": 1,
+      "c": 1,
+      "id": "p5-bring",
+      "p": 5,
+      "polynomials": {
+        "C": [
+          1,
+          4,
+          20,
+          62,
+          194,
+          508,
+          1285,
+          2980,
+          6425,
+          12700,
+          24250,
+          38750,
+          62500,
+          62500,
+          78125
+        ],
+        "D": [
+          1,
+          2,
+          10,
+          10,
+          25
+        ],
+        "E": [
+          1,
+          3,
+          5
+        ],
+        "G": [
+          1,
+          0,
+          10,
+          0,
+          25
+        ],
+        "H": [
+          1,
+          1,
+          2,
+          11,
+          26,
+          55,
+          50,
+          125,
+          625
+        ],
+        "R": [
+          1,
+          -1,
+          5
+        ],
+        "Z": [
+          1,
+          6,
+          47,
+          244,
+          1209,
+          5234,
+          21147,
+          79080,
+          279039,
+          931098,
+          2961729,
+          8989332,
+          26224997,
+          73364826,
+          198118363,
+          515151688,
+          1295453250,
+          3145580660,
+          7392428250,
+          16801501200,
+          36962141250,
+          78639516500,
+          161931656250,
+          321969805000,
+          619119884375,
+          1146325406250,
+          2048827890625,
+          3511457812500,
+          5784626953125,
+          9092753906250,
+          13624951171875,
+          19306640625000,
+          25814208984375,
+          31945800781250,
+          36895751953125,
+          37231445312500,
+          35858154296875,
+          22888183593750,
+          19073486328125
+        ],
+        "tw": [
+          1,
+          -1,
+          4,
+          13,
+          -10,
+          65,
+          100,
+          -125,
+          625
+        ]
+      },
+      "rows": [
+        {
+          "Z_points_from_normalized_local_regular_character": 12,
+          "curve_points": {
+            "C": 10,
+            "D": 8,
+            "E": 9,
+            "G": 6,
+            "H": 7,
+            "R": 5
+          },
+          "extension": 1,
+          "field_order": 5,
+          "finite_branch_character_minus_two": -1,
+          "finite_branch_points": [],
+          "finite_class_census": {
+            "three_cycle": 3,
+            "transposition": 2
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": 1,
+            "std": 1,
+            "tw": 1,
+            "two": 2
+          },
+          "local_stalk_sums": {
+            "one": 6,
+            "sign": 2,
+            "std": 3,
+            "tw": -1,
+            "two": -1
+          },
+          "modulus": [
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 4,
+            "D": 2,
+            "E": 2,
+            "G": 2,
+            "H": 2,
+            "R": 2
+          },
+          "resolvent_affine_map_checks": 2
+        },
+        {
+          "Z_points_from_normalized_local_regular_character": 84,
+          "curve_points": {
+            "C": 50,
+            "D": 42,
+            "E": 27,
+            "G": 46,
+            "H": 29,
+            "R": 35
+          },
+          "extension": 2,
+          "field_order": 25,
+          "finite_branch_character_minus_two": 1,
+          "finite_branch_points": [
+            5,
+            20
+          ],
+          "finite_class_census": {
+            "branch_split": 2,
+            "double_transposition": 6,
+            "four_cycle": 4,
+            "identity": 2,
+            "three_cycle": 11
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": 1,
+            "std": 1,
+            "tw": 1,
+            "two": 2
+          },
+          "local_stalk_sums": {
+            "one": 26,
+            "sign": 16,
+            "std": 1,
+            "tw": 7,
+            "two": 9
+          },
+          "modulus": [
+            2,
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 4,
+            "D": 2,
+            "E": 2,
+            "G": 2,
+            "H": 2,
+            "R": 2
+          },
+          "resolvent_affine_map_checks": 32
+        },
+        {
+          "Z_points_from_normalized_local_regular_character": 228,
+          "curve_points": {
+            "C": 136,
+            "D": 104,
+            "E": 108,
+            "G": 126,
+            "H": 154,
+            "R": 140
+          },
+          "extension": 3,
+          "field_order": 125,
+          "finite_branch_character_minus_two": -1,
+          "finite_branch_points": [],
+          "finite_class_census": {
+            "double_transposition": 12,
+            "four_cycle": 54,
+            "identity": 9,
+            "three_cycle": 30,
+            "transposition": 20
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": 1,
+            "std": 1,
+            "tw": 1,
+            "two": 2
+          },
+          "local_stalk_sums": {
+            "one": 126,
+            "sign": -22,
+            "std": -18,
+            "tw": 50,
+            "two": 14
+          },
+          "modulus": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 4,
+            "D": 2,
+            "E": 2,
+            "G": 2,
+            "H": 2,
+            "R": 2
+          },
+          "resolvent_affine_map_checks": 137
+        },
+        {
+          "Z_points_from_normalized_local_regular_character": 660,
+          "curve_points": {
+            "C": 634,
+            "D": 590,
+            "E": 675,
+            "G": 526,
+            "H": 685,
+            "R": 595
+          },
+          "extension": 4,
+          "field_order": 625,
+          "finite_branch_character_minus_two": 1,
+          "finite_branch_points": [
+            25,
+            100,
+            125,
+            250,
+            375,
+            500
+          ],
+          "finite_class_census": {
+            "branch_split": 6,
+            "double_transposition": 60,
+            "four_cycle": 152,
+            "identity": 24,
+            "three_cycle": 207,
+            "transposition": 176
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": 1,
+            "std": 1,
+            "tw": 1,
+            "two": 2
+          },
+          "local_stalk_sums": {
+            "one": 626,
+            "sign": -36,
+            "std": 49,
+            "tw": -5,
+            "two": -31
+          },
+          "modulus": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 4,
+            "D": 2,
+            "E": 2,
+            "G": 2,
+            "H": 2,
+            "R": 2
+          },
+          "resolvent_affine_map_checks": 592
+        },
+        {
+          "Z_points_from_normalized_local_regular_character": 2892,
+          "curve_points": {
+            "C": 3170,
+            "D": 3208,
+            "E": 3069,
+            "G": 3126,
+            "H": 3227,
+            "R": 3025
+          },
+          "extension": 5,
+          "field_order": 3125,
+          "finite_branch_character_minus_two": -1,
+          "finite_branch_points": [],
+          "finite_class_census": {
+            "double_transposition": 380,
+            "four_cycle": 780,
+            "identity": 120,
+            "three_cycle": 1103,
+            "transposition": 742
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": 1,
+            "std": 1,
+            "tw": 1,
+            "two": 2
+          },
+          "local_stalk_sums": {
+            "one": 3126,
+            "sign": 82,
+            "std": -57,
+            "tw": 19,
+            "two": -101
+          },
+          "modulus": [
+            1,
+            4,
+            0,
+            0,
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 4,
+            "D": 2,
+            "E": 2,
+            "G": 2,
+            "H": 2,
+            "R": 2
+          },
+          "resolvent_affine_map_checks": 3022
+        },
+        {
+          "Z_points_from_normalized_local_regular_character": 15900,
+          "curve_points": {
+            "C": 15692,
+            "D": 15642,
+            "E": 15552,
+            "G": 16126,
+            "H": 15266,
+            "R": 15680
+          },
+          "extension": 6,
+          "field_order": 15625,
+          "finite_branch_character_minus_two": 1,
+          "finite_branch_points": [
+            8840,
+            10060
+          ],
+          "finite_class_census": {
+            "branch_split": 2,
+            "double_transposition": 1962,
+            "four_cycle": 3952,
+            "identity": 661,
+            "three_cycle": 5196,
+            "transposition": 3852
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": 1,
+            "std": 1,
+            "tw": 1,
+            "two": 2
+          },
+          "local_stalk_sums": {
+            "one": 15626,
+            "sign": 16,
+            "std": -74,
+            "tw": 124,
+            "two": 54
+          },
+          "modulus": [
+            2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 4,
+            "D": 2,
+            "E": 2,
+            "G": 2,
+            "H": 2,
+            "R": 2
+          },
+          "resolvent_affine_map_checks": 15677
+        }
+      ]
+    },
+    {
+      "b": 1,
+      "c": 1,
+      "id": "p7-bring",
+      "p": 7,
+      "polynomials": {
+        "C": [
+          1,
+          12,
+          79,
+          368,
+          1368,
+          4336,
+          12454,
+          33672,
+          87178,
+          212464,
+          469224,
+          883568,
+          1327753,
+          1411788,
+          823543
+        ],
+        "D": [
+          1,
+          0,
+          13,
+          0,
+          49
+        ],
+        "E": [
+          1,
+          4,
+          7
+        ],
+        "G": [
+          1,
+          6,
+          19,
+          42,
+          49
+        ],
+        "H": [
+          1,
+          2,
+          9,
+          18,
+          68,
+          126,
+          441,
+          686,
+          2401
+        ],
+        "R": [
+          1,
+          2,
+          7
+        ],
+        "Z": [
+          1,
+          40,
+          805,
+          10832,
+          109433,
+          884936,
+          5971801,
+          34674256,
+          177538735,
+          818613368,
+          3461492267,
+          13627631744,
+          50526000621,
+          177738797400,
+          595648396161,
+          1905546039344,
+          5827437415466,
+          17063222391104,
+          47926192596950,
+          129326569001312,
+          335483348178650,
+          836097897164096,
+          1998811033504838,
+          4575216040464944,
+          10011062594277927,
+          20910791775312600,
+          41610334129420203,
+          78560585105442944,
+          139683698576057069,
+          231238014960528632,
+          351052088633890105,
+          479936335776997456,
+          578601889237533007,
+          600184013194702664,
+          519539898717592319,
+          359979103929918032,
+          187267563759701635,
+          65136543916417960,
+          11398895185373143
+        ],
+        "tw": [
+          1,
+          8,
+          27,
+          48,
+          80,
+          336,
+          1323,
+          2744,
+          2401
+        ]
+      },
+      "rows": [
+        {
+          "Z_points_from_normalized_local_regular_character": 48,
+          "curve_points": {
+            "C": 20,
+            "D": 8,
+            "E": 12,
+            "G": 14,
+            "H": 10,
+            "R": 10
+          },
+          "extension": 1,
+          "field_order": 7,
+          "finite_branch_character_minus_two": -1,
+          "finite_branch_points": [],
+          "finite_class_census": {
+            "four_cycle": 3,
+            "identity": 2,
+            "three_cycle": 2
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": -1,
+            "std": 1,
+            "tw": -1,
+            "two": 0
+          },
+          "local_stalk_sums": {
+            "one": 8,
+            "sign": 0,
+            "std": 4,
+            "tw": 8,
+            "two": 2
+          },
+          "modulus": [
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 0,
+            "D": 0,
+            "E": 2,
+            "G": 0,
+            "H": 0,
+            "R": 0
+          },
+          "resolvent_affine_map_checks": 9
+        },
+        {
+          "Z_points_from_normalized_local_regular_character": 60,
+          "curve_points": {
+            "C": 64,
+            "D": 76,
+            "E": 48,
+            "G": 52,
+            "H": 64,
+            "R": 60
+          },
+          "extension": 2,
+          "field_order": 49,
+          "finite_branch_character_minus_two": 1,
+          "finite_branch_points": [],
+          "finite_class_census": {
+            "double_transposition": 13,
+            "four_cycle": 4,
+            "identity": 2,
+            "three_cycle": 22,
+            "transposition": 8
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": 1,
+            "std": 1,
+            "tw": 1,
+            "two": 2
+          },
+          "local_stalk_sums": {
+            "one": 50,
+            "sign": 26,
+            "std": -2,
+            "tw": -10,
+            "two": 10
+          },
+          "modulus": [
+            1,
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 4,
+            "D": 2,
+            "E": 2,
+            "G": 2,
+            "H": 2,
+            "R": 2
+          },
+          "resolvent_affine_map_checks": 57
+        },
+        {
+          "Z_points_from_normalized_local_regular_character": 240,
+          "curve_points": {
+            "C": 332,
+            "D": 344,
+            "E": 324,
+            "G": 344,
+            "H": 352,
+            "R": 310
+          },
+          "extension": 3,
+          "field_order": 343,
+          "finite_branch_character_minus_two": -1,
+          "finite_branch_points": [],
+          "finite_class_census": {
+            "double_transposition": 36,
+            "four_cycle": 93,
+            "identity": 10,
+            "three_cycle": 126,
+            "transposition": 78
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": -1,
+            "std": 1,
+            "tw": -1,
+            "two": 0
+          },
+          "local_stalk_sums": {
+            "one": 344,
+            "sign": 0,
+            "std": -20,
+            "tw": 8,
+            "two": -34
+          },
+          "modulus": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 0,
+            "D": 0,
+            "E": 2,
+            "G": 0,
+            "H": 0,
+            "R": 0
+          },
+          "resolvent_affine_map_checks": 309
+        },
+        {
+          "Z_points_from_normalized_local_regular_character": 2964,
+          "curve_points": {
+            "C": 2496,
+            "D": 2260,
+            "E": 2496,
+            "G": 2308,
+            "H": 2496,
+            "R": 2400
+          },
+          "extension": 4,
+          "field_order": 2401,
+          "finite_branch_character_minus_two": 1,
+          "finite_branch_points": [],
+          "finite_class_census": {
+            "double_transposition": 252,
+            "four_cycle": 648,
+            "identity": 123,
+            "three_cycle": 754,
+            "transposition": 624
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": 1,
+            "std": 1,
+            "tw": 1,
+            "two": 2
+          },
+          "local_stalk_sums": {
+            "one": 2402,
+            "sign": -142,
+            "std": 94,
+            "tw": 142,
+            "two": -2
+          },
+          "modulus": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 4,
+            "D": 2,
+            "E": 2,
+            "G": 2,
+            "H": 2,
+            "R": 2
+          },
+          "resolvent_affine_map_checks": 2397
+        }
+      ]
+    },
+    {
+      "b": 3,
+      "c": 4,
+      "id": "p7-nonsplit-branch",
+      "p": 7,
+      "polynomials": {
+        "C": [
+          1,
+          2,
+          10,
+          -4,
+          0,
+          -98,
+          463,
+          392,
+          3241,
+          -4802,
+          0,
+          -9604,
+          168070,
+          235298,
+          823543
+        ],
+        "D": [
+          1,
+          4,
+          14,
+          28,
+          49
+        ],
+        "E": [
+          1,
+          1,
+          7
+        ],
+        "G": [
+          1,
+          0,
+          -2,
+          0,
+          49
+        ],
+        "H": [
+          1,
+          1,
+          4,
+          -11,
+          -42,
+          -77,
+          196,
+          343,
+          2401
+        ],
+        "R": [
+          1,
+          -3,
+          7
+        ],
+        "Z": [
+          1,
+          -8,
+          49,
+          -248,
+          1093,
+          -4112,
+          14753,
+          -51016,
+          172031,
+          -571336,
+          1911455,
+          -6140752,
+          18997001,
+          -56923000,
+          167038769,
+          -474340536,
+          1343590962,
+          -3774368808,
+          10380995486,
+          -27677137264,
+          72666968402,
+          -184944071592,
+          460851699966,
+          -1138891626936,
+          2807420590583,
+          -6696934027000,
+          15644847194543,
+          -35400213270352,
+          77134103868185,
+          -161388278862664,
+          340161496925033,
+          -706127107846216,
+          1429403570534471,
+          -2788853275555088,
+          5189084730367699,
+          -8241766781261048,
+          11398895185373143,
+          -13027308783283592,
+          11398895185373143
+        ],
+        "tw": [
+          1,
+          -3,
+          0,
+          1,
+          30,
+          7,
+          0,
+          -1029,
+          2401
+        ]
+      },
+      "rows": [
+        {
+          "Z_points_from_normalized_local_regular_character": 0,
+          "curve_points": {
+            "C": 10,
+            "D": 12,
+            "E": 9,
+            "G": 8,
+            "H": 9,
+            "R": 5
+          },
+          "extension": 1,
+          "field_order": 7,
+          "finite_branch_character_minus_two": -1,
+          "finite_branch_points": [
+            1,
+            6
+          ],
+          "finite_class_census": {
+            "branch_nonsplit": 2,
+            "three_cycle": 5
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": -1,
+            "std": 1,
+            "tw": -1,
+            "two": 0
+          },
+          "local_stalk_sums": {
+            "one": 8,
+            "sign": 4,
+            "std": 1,
+            "tw": -3,
+            "two": -3
+          },
+          "modulus": [
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 0,
+            "D": 0,
+            "E": 2,
+            "G": 0,
+            "H": 0,
+            "R": 0
+          },
+          "resolvent_affine_map_checks": 4
+        },
+        {
+          "Z_points_from_normalized_local_regular_character": 84,
+          "curve_points": {
+            "C": 66,
+            "D": 62,
+            "E": 63,
+            "G": 46,
+            "H": 57,
+            "R": 55
+          },
+          "extension": 2,
+          "field_order": 49,
+          "finite_branch_character_minus_two": 1,
+          "finite_branch_points": [
+            1,
+            6,
+            7,
+            21,
+            28,
+            42
+          ],
+          "finite_class_census": {
+            "branch_split": 6,
+            "double_transposition": 8,
+            "four_cycle": 4,
+            "three_cycle": 19,
+            "transposition": 12
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": 1,
+            "std": 1,
+            "tw": 1,
+            "two": 2
+          },
+          "local_stalk_sums": {
+            "one": 50,
+            "sign": 12,
+            "std": 13,
+            "tw": -9,
+            "two": 5
+          },
+          "modulus": [
+            1,
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 4,
+            "D": 2,
+            "E": 2,
+            "G": 2,
+            "H": 2,
+            "R": 2
+          },
+          "resolvent_affine_map_checks": 52
+        },
+        {
+          "Z_points_from_normalized_local_regular_character": 264,
+          "curve_points": {
+            "C": 280,
+            "D": 324,
+            "E": 324,
+            "G": 344,
+            "H": 300,
+            "R": 380
+          },
+          "extension": 3,
+          "field_order": 343,
+          "finite_branch_character_minus_two": -1,
+          "finite_branch_points": [
+            1,
+            6
+          ],
+          "finite_class_census": {
+            "branch_nonsplit": 2,
+            "double_transposition": 54,
+            "four_cycle": 90,
+            "identity": 11,
+            "three_cycle": 96,
+            "transposition": 90
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": -1,
+            "std": 1,
+            "tw": -1,
+            "two": 0
+          },
+          "local_stalk_sums": {
+            "one": 344,
+            "sign": -20,
+            "std": -20,
+            "tw": -24,
+            "two": 36
+          },
+          "modulus": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 0,
+            "D": 0,
+            "E": 2,
+            "G": 0,
+            "H": 0,
+            "R": 0
+          },
+          "resolvent_affine_map_checks": 379
+        },
+        {
+          "Z_points_from_normalized_local_regular_character": 2484,
+          "curve_points": {
+            "C": 2378,
+            "D": 2398,
+            "E": 2331,
+            "G": 2590,
+            "H": 2261,
+            "R": 2475
+          },
+          "extension": 4,
+          "field_order": 2401,
+          "finite_branch_character_minus_two": 1,
+          "finite_branch_points": [
+            1,
+            6,
+            964,
+            1271,
+            1529,
+            1836
+          ],
+          "finite_class_census": {
+            "branch_split": 6,
+            "double_transposition": 320,
+            "four_cycle": 632,
+            "identity": 100,
+            "three_cycle": 775,
+            "transposition": 568
+          },
+          "infinity_stalk_traces": {
+            "one": 1,
+            "sign": 1,
+            "std": 1,
+            "tw": 1,
+            "two": 2
+          },
+          "local_stalk_sums": {
+            "one": 2402,
+            "sign": -4,
+            "std": -71,
+            "tw": 51,
+            "two": 73
+          },
+          "modulus": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "projective_infinity_points": {
+            "C": 4,
+            "D": 2,
+            "E": 2,
+            "G": 2,
+            "H": 2,
+            "R": 2
+          },
+          "resolvent_affine_map_checks": 2472
+        }
+      ]
+    }
+  ],
+  "schema": "bring-quartic-s4-resolvent-artifact-v1",
+  "source_hash": "358242be11b7eb6e893c45e666d57e53bdf8c1c60adc8e03c0c8666589ccd6af"
+}
