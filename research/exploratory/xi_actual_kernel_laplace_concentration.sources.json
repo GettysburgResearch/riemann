@@ -1,0 +1,67 @@
+{
+  "concentration_dependency": "new real-kernel proof in note; L106502 concentration is not assumed",
+  "external_formulas": [
+    {
+      "formula": "xi_R(z)=z(z-1)*pi^(-z/2)*Gamma(z/2)*zeta(z)/2",
+      "remote_content_machine_authenticated": false,
+      "url": "https://dlmf.nist.gov/25.4.E4"
+    },
+    {
+      "formula": "theta(x)=x^(-1/2)*theta(1/x), x>0; theta(x)=sum_{n in Z}exp(-pi*n^2*x)",
+      "remote_content_machine_authenticated": false,
+      "url": "https://dlmf.nist.gov/20.7.E32"
+    },
+    {
+      "formula": "integral_0^infty x^(z-1)*(theta(x^2)-1) dx=pi^(-z/2)*Gamma(z/2)*zeta(z), Re z>1",
+      "remote_content_machine_authenticated": false,
+      "url": "https://dlmf.nist.gov/20.10.E2"
+    }
+  ],
+  "normalization": "PhiXi=2*phi0; no frequency rescaling; quadratic densities multiply by four",
+  "schema": "xi-actual-kernel-laplace-sources-v1",
+  "scout_base": "939a24962a4c6a449c0b56e3b20f78b936f35f6c",
+  "sources": [
+    {
+      "commit": "686e23d9e5b1005aae83e3362ac1ed53a28a0352",
+      "git_blob": "dfe76fc1985d3366f50489ce21bdcc2cfdd325ff",
+      "path": "claims/lemmas/L-105413-explicit-xi-kernel-gives-global-shifted-ray-dominance.md",
+      "role": "literal_half_kernel_only_not_complex_ray_theorem",
+      "sha256_lf": "ae4b3b43c4ad4744337a5278d50d3887a4c83a61b9fdbd424640e5143a82475c"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "1424cf2a073d16c0f4a6cdd89600e3ebb40b54fc",
+      "path": "claims/lemmas/L-106401-xi-turan-exterior-square-hankel-source.md",
+      "role": "full_line_Fourier_convention",
+      "sha256_lf": "bf68ecbd1c32969df9491a90da617389ee35ab4fe8f19b76ebd8f706c311a694"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "4c790971237897406b5e0492a13129fad24f37a9",
+      "path": "claims/lemmas/L-106500-odd-endpoint-wronskian-is-a-positive-current-chaos.md",
+      "role": "literal_positive_odd_current",
+      "sha256_lf": "397460968e1718911857eb3c70e87c8fde77458ce4fe4f0fb12f31c09aabadd9"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "6600a6c3026f0b7911f247e97be1e4c68b344715",
+      "path": "claims/lemmas/L-106502-xi-odd-current-profile-saturates-at-high-frequency.md",
+      "role": "real_concentration_reproved_not_assumed",
+      "sha256_lf": "2750ae045bb63bc2c3d0cefbbf8cf28cd3bf3aece5e0d01eedb5fad1de0c0fd2"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "92245b0f9cf5dcccf8f4cee0ea28c1a7c9980d85",
+      "path": "claims/lemmas/L-106710-carrier-adapted-antiphase-density-is-source-soft.md",
+      "role": "antiphase_density_and_scale_definition",
+      "sha256_lf": "4590cdc00533a3ef8536bbff3e78444667ea68caa1b03c97ece422bc2279ce6c"
+    },
+    {
+      "commit": "939a24962a4c6a449c0b56e3b20f78b936f35f6c",
+      "git_blob": "0461a5c159d9d1094a9849e362d02ac1149a0143",
+      "path": "research/exploratory/XI_NEAR_ADAPTED_SCALE_FIREWALL.md",
+      "role": "near_adapted_scale_scout_before_concentration_reproof",
+      "sha256_lf": "b770dc30ee6ab5406e159230c6ea617a1e5b1616b818dabb4c4c7f37f4408eac"
+    }
+  ]
+}
