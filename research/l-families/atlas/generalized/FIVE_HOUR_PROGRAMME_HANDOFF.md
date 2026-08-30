@@ -30,10 +30,13 @@ desired scalar output.
   when this branch began. Existing #766 files were not rewritten; a README
   entry and separately named theorem/replay files were added.
 - Core first proof: `4f4950e47`; exact replay and discrete-moduli checkpoint:
-  `0f7be357b`. Frozen-source review and any later repairs must name their
-  own exact commit.
+  `0f7be357b`; corrected core freeze: `8834fdc7a0dfe15f6bb95eefe0729cb77c93c807`.
+  The [independent frozen-source review](REVIEW_8834fdc7.md) covers that
+  core and found no remaining mathematical or implementation blocker.
 - Graph source: `26314df4e5ed9a5c16b7da61e155a48d325789cc`, imported by
-  cherry-pick. Subsequent reviewed wording fixes keep their own commits.
+  cherry-pick. The integration at `b800f754d3c53d61746dfb3a068e250c53b62771`
+  includes the reviewed real-part wording and packet-local LF checkout
+  metadata. Its frozen fixture was replayed without changing expected output.
 - The separate #763 actual-source branch is not a mathematical dependency
   of these results. No sheaf/graph comparison map is assumed or constructed.
 - Active all-prime Satake-deformation and Estermann-completion work elsewhere
@@ -66,11 +69,16 @@ arithmetic geometry.
 
 ## Evidence and bounded replay
 
-The core packet passed 27 focused tests under ordinary Python and the same
-27 under optimized Python, together with both full producer checks and
-focused Ruff validation. The graph packet separately passed 18 tests in
-each mode and both producer checks before import. The mathematical proofs
-were independently read; a frozen final-source review is a separate gate.
+The corrected core packet passed 27 focused tests under ordinary Python and
+the same 27 under optimized Python, together with both full producer checks
+and focused Ruff validation. The integrated graph packet passed 18 tests in
+each mode and both producer checks. Independent reviews are bound to the
+frozen core source above and the graph source in its own review sidecar;
+they report the serialized test results without claiming independent runs.
+
+A separate companion on origin-touching and inside-origin circle probes is
+in development. It is not part of this verified checkpoint, and no pending
+companion theorem or replay result is included in these acceptance claims.
 
 The root agent serialized these runs to avoid competing with another
 active Codex agent. The core replay took about three seconds per complete
