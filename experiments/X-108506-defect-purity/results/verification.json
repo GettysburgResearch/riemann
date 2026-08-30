@@ -1,0 +1,65 @@
+{
+ "experiment": "X-108506-defect-purity",
+ "claim": "O-108506",
+ "checks": [
+  {
+   "name": "W1_exact_point_counts",
+   "ok": true,
+   "detail": "a_2=-2, a_3=-1"
+  },
+  {
+   "name": "W2_witness_discriminants",
+   "ok": true,
+   "detail": "disc(p=2)=32>0 (impure), disc(p=3)=-72<0 (pure)"
+  },
+  {
+   "name": "W3_criterion_all_good_primes_le_97",
+   "ok": true,
+   "detail": "pure=[3, 5, 7, 17, 19, 23, 29, 37, 43, 53, 59, 67, 71, 73, 83, 97], impure=[2, 13, 31, 41, 47, 61, 79, 89], boundary=[]"
+  },
+  {
+   "name": "W4_pure_case_modulus",
+   "ok": true,
+   "detail": "product of inverse roots = p^3 exactly when disc < 0"
+  },
+  {
+   "name": "W5_m2_always_pure",
+   "ok": true,
+   "detail": "1 + pT: inverse root -p, modulus^2 = p^2 at every prime \u2014 the m=2 defect is uniformly pure of weight 2; stratification starts at m=3, where the defect exits the character ring"
+  }
+ ],
+ "all_ok": true,
+ "strata_11a1_le_97": {
+  "pure": [
+   3,
+   5,
+   7,
+   17,
+   19,
+   23,
+   29,
+   37,
+   43,
+   53,
+   59,
+   67,
+   71,
+   73,
+   83,
+   97
+  ],
+  "impure": [
+   2,
+   13,
+   31,
+   41,
+   47,
+   61,
+   79,
+   89
+  ],
+  "boundary": []
+ },
+ "arithmetic_class": "EXACT_RATIONAL",
+ "rh_established": false
+}

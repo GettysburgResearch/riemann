@@ -1,0 +1,87 @@
+{
+ "transforms": [
+  {
+   "name": "pointwise_power_2",
+   "defect_coefficients": [
+    "1",
+    "b"
+   ],
+   "defect_degree": 1,
+   "denominator": "det(1 - Sym^2(A) T)",
+   "self_duality_verified": true,
+   "linear_coeff_equals_a^m_minus_h_m": true,
+   "symbolic_series_terms_checked": 8,
+   "integer_instantiation_checks": 12
+  },
+  {
+   "name": "pointwise_power_3",
+   "defect_coefficients": [
+    "1",
+    "2*a*b",
+    "b**3"
+   ],
+   "defect_degree": 2,
+   "denominator": "det(1 - Sym^3(A) T)",
+   "self_duality_verified": true,
+   "linear_coeff_equals_a^m_minus_h_m": true,
+   "symbolic_series_terms_checked": 9,
+   "integer_instantiation_checks": 12
+  },
+  {
+   "name": "pointwise_power_4",
+   "defect_coefficients": [
+    "1",
+    "b*(3*a**2 - b)",
+    "b**3*(3*a**2 - b)",
+    "b**6"
+   ],
+   "defect_degree": 3,
+   "denominator": "det(1 - Sym^4(A) T)",
+   "self_duality_verified": true,
+   "linear_coeff_equals_a^m_minus_h_m": true,
+   "symbolic_series_terms_checked": 10,
+   "integer_instantiation_checks": 12
+  },
+  {
+   "name": "pointwise_power_5",
+   "defect_coefficients": [
+    "1",
+    "a*b*(4*a**2 - 3*b)",
+    "2*b**3*(a**2 - b)*(3*a**2 - b)",
+    "a*b**6*(4*a**2 - 3*b)",
+    "b**10"
+   ],
+   "defect_degree": 4,
+   "denominator": "det(1 - Sym^5(A) T)",
+   "self_duality_verified": true,
+   "linear_coeff_equals_a^m_minus_h_m": true,
+   "symbolic_series_terms_checked": 11,
+   "integer_instantiation_checks": 12
+  },
+  {
+   "name": "pointwise_power_6",
+   "defect_coefficients": [
+    "1",
+    "b*(a**2 - b)*(5*a**2 - b)",
+    "b**3*(10*a**6 - 25*a**4*b + 16*a**2*b**2 - 2*b**3)",
+    "b**6*(10*a**6 - 25*a**4*b + 16*a**2*b**2 - 2*b**3)",
+    "b**10*(a**2 - b)*(5*a**2 - b)",
+    "b**15"
+   ],
+   "defect_degree": 5,
+   "denominator": "det(1 - Sym^6(A) T)",
+   "self_duality_verified": true,
+   "linear_coeff_equals_a^m_minus_h_m": true,
+   "symbolic_series_terms_checked": 12,
+   "integer_instantiation_checks": 12
+  },
+  {
+   "name": "adams_relabel_2",
+   "identity": "sum h_2k T^k = (1 + bT)/det(1 - psi^2(A) T)",
+   "verified_terms": 17
+  }
+ ],
+ "sympy_version": "1.14.0",
+ "construction": "proved coefficient formula (T-108500 st.3)",
+ "rh_established": false
+}

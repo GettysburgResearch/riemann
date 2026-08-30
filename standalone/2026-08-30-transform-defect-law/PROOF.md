@@ -92,11 +92,21 @@ Machine-verified table (exact symbolic + 12 exact integer instantiations
 each; `matrix/defects.json`):
 
 ```text
-m=2:  N_2 = 1 + b T                                    over  det(1 - Sym^2 T)
-m=3:  N_3 = 1 + 2ab T + b^3 T^2                        over  det(1 - Sym^3 T)
-m=4:  N_4 = 1 + b(3a^2-b) T + b^3(3a^2-b) T^2 + b^6 T^3  over  det(1 - Sym^4 T)
-m=5:  see matrix/defects.json (defect degree 4)
+m=2:  N_2 = 1 + b T                                      over det(1 - Sym^2 T)
+m=3:  N_3 = 1 + 2ab T + b^3 T^2                          over det(1 - Sym^3 T)
+m=4:  N_4 = 1 + b(3a^2-b) T + b^3(3a^2-b) T^2 + b^6 T^3  over det(1 - Sym^4 T)
+m=5:  N_5 = 1 + ab(4a^2-3b) T + 2b^3(a^2-b)(3a^2-b) T^2
+          + ab^6(4a^2-3b) T^3 + b^10 T^4                 over det(1 - Sym^5 T)
+m=6:  see matrix/defects.json (degree 5; same palindrome)
 ```
+
+Recurring structure worth recording: the factor `a^2 - b = trace(Sym^2 A)`
+appears in the higher defects (`c_2` of `N_5`; `c_1, c_4` of `N_6`) — the
+same quantity whose non-squareness proves Theorem 2 and whose SIGN decides
+the purity stratification of O-108506. All rows are constructed from the
+proved coefficient formula, re-verified by symbolic series multiplication,
+and cross-checked at 12 exact integer instantiations each
+(`matrix/defect_powers_run.py`, `matrix/defects.json`).
 
 ### Proof
 

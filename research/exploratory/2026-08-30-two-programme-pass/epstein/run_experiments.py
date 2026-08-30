@@ -410,29 +410,53 @@ def path_B(tau):
     return (0.0, 1.0 + tau)
 
 
+E3_TAU_TOL = 1e-3   # coordinator budget guidance: refine tau to 3 decimals
+E3_TAUS = [round(0.1 * k, 10) for k in range(11)]          # coarse grid per guidance
+E3_EXT_TAUS = [1.0, 5.0 / 3.0, 7.0 / 3.0]                  # path-A extension: x=0.25, 0.35
+
+
 def run_e3():
-    log("E3: departure paths")
-    taus = [round(0.05 * k, 10) for k in range(21)]
+    log("E3: departure paths (tau step 0.1, tau* to 1e-3 -- coordinator budget guidance)")
     results = {}
     for (pf, name) in ((path_A, 'A_x_slide_y1.02'), (path_B, 'B_y_stretch_x0')):
         log(f"E3 path {name}")
-        records, events = lab.departure_finder(pf, taus, T0, T1, dt=DT_SCAN,
-                                               delta=DELTA, tau_tol=1e-6,
+        records, events = lab.departure_finder(pf, E3_TAUS, T0, T1, dt=DT_SCAN,
+                                               delta=DELTA, tau_tol=E3_TAU_TOL,
                                                log=log, **BATCH)
-        results[name] = {'records': records, 'events': events,
-                         'path': ('z = 0.15*tau + 1.02i' if pf is path_A
-                                  else 'z = i*(1+tau)')}
-    out = {'meta': meta(t_window=[T0, T1], delta=DELTA, tau_grid=taus), 'paths': results}
+        extended = False
+        if (pf is path_A and not events
+                and all((r['disc'] or 0) == 0 for r in records)):
+            # coordinator guidance: class-number effects need larger x -- extend to x=0.35
+            log("E3 path A quiet to tau=1; extending along x to 0.35 (tau to 7/3)")
+            ext_rec, ext_ev = lab.departure_finder(pf, E3_EXT_TAUS, T0, T1, dt=DT_SCAN,
+                                                   delta=DELTA, tau_tol=E3_TAU_TOL,
+                                                   log=log, **BATCH)
+            records += ext_rec[1:]   # drop duplicated tau=1.0 record
+            events += ext_ev
+            extended = True
+        results[name] = {'records': records, 'events': events, 'extended': extended,
+                         'path': ('z = 0.15*tau + 1.02i (extension: same line to x=0.35)'
+                                  if pf is path_A else 'z = i*(1+tau)')}
+        # incremental deposit after EACH completed path (coordinator guidance)
+        dump('e3_events.json',
+             {'meta': meta(t_window=[T0, T1], delta=DELTA, tau_grid=E3_TAUS,
+                           tau_tol=E3_TAU_TOL, status=f'through path {name}'),
+              'paths': {k: {'events': v['events'], 'records': v['records']}
+                        for (k, v) in results.items()}})
+    out = {'meta': meta(t_window=[T0, T1], delta=DELTA, tau_grid=E3_TAUS,
+                        tau_tol=E3_TAU_TOL), 'paths': results}
     dump('departure_paths.json', out)
-    write_e3_md(results, taus)
+    write_e3_md(results, E3_TAUS)
     return results
 
 
 def write_e3_md(results, taus):
     md = f"""# E3 — Two departure paths through moduli space (t in (0,30))
 
-NON_DIRECTED_HIGH_PRECISION, dps={DPS}. tau grid 0.05; departure events refined by
-bisection in tau to 1e-6; "departure" means: two on-line zeros (12-digit locations)
+NON_DIRECTED_HIGH_PRECISION, dps={DPS}. tau grid 0.1 with events refined by bisection
+in tau to 1e-3 (coordinator budget guidance; the spec's 0.05/1e-6 was coarsened — see
+SCOPE.md); path A is extended along x up to 0.35 when quiet to tau=1.
+"Departure" means: two on-line zeros (12-digit locations)
 merge and the on-line count drops by 2 while the argument-principle box count in
 [0.3,0.7] x ({T0},{T1}) is unchanged — i.e. the pair moves off the line as a symmetric
 pair, numerically to the stated precision.
@@ -495,10 +519,15 @@ Potter–Titchmarsh) — the lab measures WHERE they sit in this family.
 # E4: departure locus sketch around z = i
 # ----------------------------------------------------------------------------
 
-E4_DIRS = [0, 45, 90, 270, 315]           # computed
-E4_MIRROR = {135: 45, 180: 0, 225: 315}   # exact reflection symmetry Lambda(-x+iy)=Lambda(x+iy)
+# coordinator budget guidance: 4 directions (+-x and two diagonals), t-window (0,15),
+# radius bisection to 2 decimals.  180 deg is the exact mirror of 0 deg
+# (Lambda(-x+iy) = Lambda(x+iy)), so 3 directions are computed and 180 is derived.
+E4_DIRS = [0, 45, 315]                    # computed
+E4_MIRROR = {180: 0}                      # exact reflection symmetry Lambda(-x+iy)=Lambda(x+iy)
 E4_RMAX = 0.30
 E4_RSTEP = 0.02
+E4_T1 = 15.0
+E4_BISECT_STEPS = 2                       # 0.02 -> 0.005 bracket (2-decimal report)
 
 
 def z_dir(theta_deg, r):
@@ -507,7 +536,7 @@ def z_dir(theta_deg, r):
 
 
 def full_disc(x, y):
-    det = lab.off_line_detector(x, y, T0, T1, dt=DT_SCAN, delta=DELTA, refine=False, **BATCH)
+    det = lab.off_line_detector(x, y, T0, E4_T1, dt=DT_SCAN, delta=DELTA, refine=False, **BATCH)
     return det
 
 
@@ -533,21 +562,21 @@ def run_e4():
             r = round(r + E4_RSTEP, 10)
         if r_hit is None:
             rows.append({'theta_deg': th, 'computed': True, 'r_first_offline': None,
-                         'note': f"no off-line pair in t<({T1}) up to r={E4_RMAX}"})
+                         'note': f"no off-line pair in t<({E4_T1}) up to r={E4_RMAX}"})
             continue
         za = det_prev['scan']['zeros'] if det_prev else []
         zb = det_hit['scan']['zeros']
         # approximate zero lists (refine=False gives cell midpoints; adequate for windows)
-        cands = lab._merge_candidates(sorted(za), sorted(zb), T0, T1)
+        cands = lab._merge_candidates(sorted(za), sorted(zb), T0, E4_T1)
         if cands:
             u, v, wa, wb = cands[0]
         else:
-            wa, wb = T0, T1
+            wa, wb = T0, E4_T1
             u = v = None
         # bisect r on the local classifier (2 -> 0 sign changes in [wa,wb])
         a, b = r_prev, r_hit
         if u is not None:
-            for _ in range(6):
+            for _ in range(E4_BISECT_STEPS):
                 m = 0.5 * (a + b)
                 x, y = z_dir(th, m)
                 n = lab.count_window(x, y, wa, wb, dt=0.02, depth=2, line_batch=line_batch)
@@ -560,7 +589,7 @@ def run_e4():
             confirmed = (chk['disc'] == 0)
         else:
             # fall back: full-window bisection
-            for _ in range(6):
+            for _ in range(E4_BISECT_STEPS):
                 m = 0.5 * (a + b)
                 det = full_disc(*z_dir(th, m))
                 if det['disc'] == 0:
@@ -572,10 +601,10 @@ def run_e4():
         x, y = z_dir(th, r_hit)
         tsd, fsd = (lab.dip_location(x, y, wa, wb, dt=0.02, line_batch=line_batch)
                     if u is not None else (None, None))
-        pair = lab.find_offline_pair_near(x, y, tsd if tsd else 0.5 * (T0 + T1),
+        pair = lab.find_offline_pair_near(x, y, tsd if tsd else 0.5 * (T0 + E4_T1),
                                           t0=wa, t1=wb) if tsd else None
         rows.append({'theta_deg': th, 'computed': True,
-                     'r_first_offline': round(r_star, 4),
+                     'r_first_offline': round(r_star, 3),
                      'r_bracket': [a, b], 'bisection_resolution': 0.5 * (b - a),
                      'full_window_confirmed_below': bool(confirmed),
                      'colliding_pair_t_at_r_below': ([u, v] if u is not None else None),
@@ -612,19 +641,21 @@ def run_e4():
 def write_e4_md(rows):
     md = f"""# E4 — Departure-locus sketch around the CM point z = i (first pass)
 
-NON_DIRECTED_HIGH_PRECISION, dps={DPS}. For 8 directions from z=i, the table gives the
-smallest radius r* (bisection to <1e-3) at which an off-line pair exists with
-t in (0,{int(T1)}) — i.e. box count minus on-line count > 0 in [0.3,0.7] x ({T0},{T1}).
+NON_DIRECTED_HIGH_PRECISION, dps={DPS}. For 4 directions from z=i (reduced from the
+spec's 8 by coordinator budget guidance — see SCOPE.md), the table gives the smallest
+radius r* (bisection bracket 0.005, reported to ~2 decimals) at which an off-line pair
+exists with t in (0,{int(E4_T1)}) — i.e. box count minus on-line count > 0 in
+[0.3,0.7] x ({T0},{E4_T1}).
 
 CAVEAT (window truncation): r* is a t-window-limited proxy. For r < r* a pair may
-already be off the line at some t > {int(T1)}; the true departure locus around a CM
+already be off the line at some t > {int(E4_T1)}; the true departure locus around a CM
 point can only shrink as the window grows. This is the first sketch of the
 'departure curve' around z = i in the two-parameter moduli atlas — the moduli-space
 geometry (departure radius vs direction around a CM point) is the new measurement here;
 the one-parameter collision phenomenon itself is published (Arenstorf–Brewer 1993;
 Travenec–Samaj arXiv:1909.07112; Betermin–Samaj–Travenec arXiv:2110.09368).
 
-| theta (deg) | r* (first off-line pair, 3 digits) | colliding pair t1,t2 | t* | source |
+| theta (deg) | r* (first off-line pair, +-0.005) | colliding pair t1,t2 | t* | source |
 |---|---|---|---|---|
 """
     for r in rows:
@@ -636,11 +667,10 @@ Travenec–Samaj arXiv:1909.07112; Betermin–Samaj–Travenec arXiv:2110.09368)
         src = 'computed' if r.get('computed') else f"mirror of {r['mirrored_from_deg']} deg"
         md += f"| {r['theta_deg']} | {rstar} | {cptxt} | {tstxt} | {src} |\n"
     md += """
-Directions 135/180/225 follow from 45/0/315 by the exact symmetry
-Lambda(-x+iy) = Lambda(x+iy) (numerically asserted in lab.selftest). Direction 270
-(straight down) leaves the fundamental domain at |z|=1 and continues in the
-SL2(Z)-equivalent chart (Lambda_z is SL2(Z)-invariant), so it probes the same vertical
-geodesic as 90 in a different parametrization.
+Direction 180 follows from 0 by the exact symmetry Lambda(-x+iy) = Lambda(x+iy)
+(numerically asserted in lab.selftest); 45 and 315 are the two computed diagonals
+(down-diagonal 315 dips toward the |z|=1 boundary of the fundamental domain but stays
+inside the upper half-plane where Lambda_z is defined and SL2(Z)-invariant).
 
 Reading (conjecture-generating only): the departure radius as a function of direction is
 a first numeric probe of how far the "arithmetic protection" of the CM point extends into
