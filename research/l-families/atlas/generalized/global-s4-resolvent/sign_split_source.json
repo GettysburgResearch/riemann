@@ -1,0 +1,14 @@
+{
+  "schema": "bring-s4-sign-polarization-v1",
+  "precursor_commit": "d19f421b438485c953469be59c4df8f79a30d2bf",
+  "helper_commit": "3d3b52541ed33b516c25ec0a27ba3eb568ec513b",
+  "count_extensions": [1, 2, 3, 4],
+  "source_panels": ["p5-bring", "p7-bring", "p7-nonsplit-branch"],
+  "torsion_fields": [
+    {"p": 5, "degree": 2, "b": 1, "c": 1},
+    {"p": 7, "degree": 3, "b": 1, "c": 1},
+    {"p": 7, "degree": 1, "b": 3, "c": 4}
+  ],
+  "maximum_field_order": 2401,
+  "coverage": "Complete elliptic and source-curve point counts, every rational affine quotient-map image, normalized infinity maps, and all four two-torsion points with every group, Frobenius and pairing identity in the three declared splitting fields."
+}

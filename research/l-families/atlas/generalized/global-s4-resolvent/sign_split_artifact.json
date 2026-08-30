@@ -1,0 +1,759 @@
+{
+  "panels": [
+    {
+      "b": 1,
+      "c": 1,
+      "id": "p5-bring",
+      "p": 5,
+      "polynomials": {
+        "minus": [
+          1,
+          2,
+          5
+        ],
+        "plus": [
+          1,
+          0,
+          5
+        ]
+      },
+      "rows": [
+        {
+          "affine_map_checks": 6,
+          "counts": {
+            "D": 8,
+            "minus": 8,
+            "plus": 6
+          },
+          "degree": 1,
+          "infinity_images": [
+            {
+              "minus": [
+                0,
+                3
+              ],
+              "plus": null,
+              "source_s_over_u3": 2
+            },
+            {
+              "minus": [
+                0,
+                2
+              ],
+              "plus": null,
+              "source_s_over_u3": 3
+            }
+          ],
+          "minus_origin_hits": 2,
+          "modulus": [
+            0,
+            1
+          ],
+          "q": 5
+        },
+        {
+          "affine_map_checks": 40,
+          "counts": {
+            "D": 42,
+            "minus": 32,
+            "plus": 36
+          },
+          "degree": 2,
+          "infinity_images": [
+            {
+              "minus": [
+                0,
+                3
+              ],
+              "plus": null,
+              "source_s_over_u3": 2
+            },
+            {
+              "minus": [
+                0,
+                2
+              ],
+              "plus": null,
+              "source_s_over_u3": 3
+            }
+          ],
+          "minus_origin_hits": 2,
+          "modulus": [
+            2,
+            0,
+            1
+          ],
+          "q": 25
+        },
+        {
+          "affine_map_checks": 102,
+          "counts": {
+            "D": 104,
+            "minus": 104,
+            "plus": 126
+          },
+          "degree": 3,
+          "infinity_images": [
+            {
+              "minus": [
+                0,
+                3
+              ],
+              "plus": null,
+              "source_s_over_u3": 2
+            },
+            {
+              "minus": [
+                0,
+                2
+              ],
+              "plus": null,
+              "source_s_over_u3": 3
+            }
+          ],
+          "minus_origin_hits": 2,
+          "modulus": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "q": 125
+        },
+        {
+          "affine_map_checks": 588,
+          "counts": {
+            "D": 590,
+            "minus": 640,
+            "plus": 576
+          },
+          "degree": 4,
+          "infinity_images": [
+            {
+              "minus": [
+                0,
+                3
+              ],
+              "plus": null,
+              "source_s_over_u3": 2
+            },
+            {
+              "minus": [
+                0,
+                2
+              ],
+              "plus": null,
+              "source_s_over_u3": 3
+            }
+          ],
+          "minus_origin_hits": 2,
+          "modulus": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "q": 625
+        }
+      ]
+    },
+    {
+      "b": 1,
+      "c": 1,
+      "id": "p7-bring",
+      "p": 7,
+      "polynomials": {
+        "minus": [
+          1,
+          -1,
+          7
+        ],
+        "plus": [
+          1,
+          1,
+          7
+        ]
+      },
+      "rows": [
+        {
+          "affine_map_checks": 8,
+          "counts": {
+            "D": 8,
+            "minus": 7,
+            "plus": 9
+          },
+          "degree": 1,
+          "infinity_images": [],
+          "minus_origin_hits": 0,
+          "modulus": [
+            0,
+            1
+          ],
+          "q": 7
+        },
+        {
+          "affine_map_checks": 74,
+          "counts": {
+            "D": 76,
+            "minus": 63,
+            "plus": 63
+          },
+          "degree": 2,
+          "infinity_images": [
+            {
+              "minus": [
+                0,
+                21
+              ],
+              "plus": null,
+              "source_s_over_u3": 14
+            },
+            {
+              "minus": [
+                0,
+                28
+              ],
+              "plus": null,
+              "source_s_over_u3": 35
+            }
+          ],
+          "minus_origin_hits": 2,
+          "modulus": [
+            1,
+            0,
+            1
+          ],
+          "q": 49
+        },
+        {
+          "affine_map_checks": 344,
+          "counts": {
+            "D": 344,
+            "minus": 364,
+            "plus": 324
+          },
+          "degree": 3,
+          "infinity_images": [],
+          "minus_origin_hits": 0,
+          "modulus": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "q": 343
+        },
+        {
+          "affine_map_checks": 2258,
+          "counts": {
+            "D": 2260,
+            "minus": 2331,
+            "plus": 2331
+          },
+          "degree": 4,
+          "infinity_images": [
+            {
+              "minus": [
+                0,
+                1836
+              ],
+              "plus": null,
+              "source_s_over_u3": 657
+            },
+            {
+              "minus": [
+                0,
+                964
+              ],
+              "plus": null,
+              "source_s_over_u3": 2143
+            }
+          ],
+          "minus_origin_hits": 2,
+          "modulus": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "q": 2401
+        }
+      ]
+    },
+    {
+      "b": 3,
+      "c": 4,
+      "id": "p7-nonsplit-branch",
+      "p": 7,
+      "polynomials": {
+        "minus": [
+          1,
+          0,
+          7
+        ],
+        "plus": [
+          1,
+          4,
+          7
+        ]
+      },
+      "rows": [
+        {
+          "affine_map_checks": 12,
+          "counts": {
+            "D": 12,
+            "minus": 8,
+            "plus": 12
+          },
+          "degree": 1,
+          "infinity_images": [],
+          "minus_origin_hits": 2,
+          "modulus": [
+            0,
+            1
+          ],
+          "q": 7
+        },
+        {
+          "affine_map_checks": 60,
+          "counts": {
+            "D": 62,
+            "minus": 64,
+            "plus": 48
+          },
+          "degree": 2,
+          "infinity_images": [
+            {
+              "minus": [
+                0,
+                14
+              ],
+              "plus": null,
+              "source_s_over_u3": 14
+            },
+            {
+              "minus": [
+                0,
+                35
+              ],
+              "plus": null,
+              "source_s_over_u3": 35
+            }
+          ],
+          "minus_origin_hits": 2,
+          "modulus": [
+            1,
+            0,
+            1
+          ],
+          "q": 49
+        },
+        {
+          "affine_map_checks": 324,
+          "counts": {
+            "D": 324,
+            "minus": 344,
+            "plus": 324
+          },
+          "degree": 3,
+          "infinity_images": [],
+          "minus_origin_hits": 2,
+          "modulus": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "q": 343
+        },
+        {
+          "affine_map_checks": 2396,
+          "counts": {
+            "D": 2398,
+            "minus": 2304,
+            "plus": 2496
+          },
+          "degree": 4,
+          "infinity_images": [
+            {
+              "minus": [
+                0,
+                657
+              ],
+              "plus": null,
+              "source_s_over_u3": 657
+            },
+            {
+              "minus": [
+                0,
+                2143
+              ],
+              "plus": null,
+              "source_s_over_u3": 2143
+            }
+          ],
+          "minus_origin_hits": 2,
+          "modulus": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "q": 2401
+        }
+      ]
+    }
+  ],
+  "schema": "bring-s4-sign-split-artifact-v1",
+  "source_hash": "ecebf695ad5df78af16d943e245681f60c65ee2359e6398e3a190ee76f1657a4",
+  "torsion_graphs": [
+    {
+      "addition_table": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          0
+        ]
+      ],
+      "b": 1,
+      "c": 1,
+      "common_roots_r": [
+        3,
+        10,
+        15
+      ],
+      "common_source_divisor_polynomials_u": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          15,
+          0,
+          1
+        ],
+        [
+          10,
+          0,
+          1
+        ]
+      ],
+      "degree": 2,
+      "frobenius_indices": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "kernel_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "minus_points": [
+        null,
+        [
+          3,
+          0
+        ],
+        [
+          20,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "modulus": [
+        2,
+        0,
+        1
+      ],
+      "origin_difference_principal_function": "u",
+      "p": 5,
+      "plus_points": [
+        null,
+        [
+          3,
+          0
+        ],
+        [
+          16,
+          0
+        ],
+        [
+          11,
+          0
+        ]
+      ],
+      "q": 25
+    },
+    {
+      "addition_table": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          0
+        ]
+      ],
+      "b": 1,
+      "c": 1,
+      "common_roots_r": [
+        22,
+        36,
+        43
+      ],
+      "common_source_divisor_polynomials_u": [
+        [
+          34,
+          0,
+          1
+        ],
+        [
+          20,
+          0,
+          1
+        ],
+        [
+          13,
+          0,
+          1
+        ]
+      ],
+      "degree": 3,
+      "frobenius_indices": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "kernel_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "minus_points": [
+        null,
+        [
+          67,
+          0
+        ],
+        [
+          109,
+          0
+        ],
+        [
+          228,
+          0
+        ]
+      ],
+      "modulus": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "origin_difference_principal_function": "u",
+      "p": 7,
+      "plus_points": [
+        null,
+        [
+          7,
+          0
+        ],
+        [
+          28,
+          0
+        ],
+        [
+          14,
+          0
+        ]
+      ],
+      "q": 343
+    },
+    {
+      "addition_table": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          0
+        ]
+      ],
+      "b": 3,
+      "c": 4,
+      "common_roots_r": [
+        1,
+        5,
+        6
+      ],
+      "common_source_divisor_polynomials_u": [
+        [
+          6,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "degree": 1,
+      "frobenius_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "kernel_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "minus_points": [
+        null,
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "modulus": [
+        0,
+        1
+      ],
+      "origin_difference_principal_function": "u",
+      "p": 7,
+      "plus_points": [
+        null,
+        [
+          6,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "q": 7
+    }
+  ]
+}
