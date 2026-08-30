@@ -1,0 +1,363 @@
+{
+ "arithmetic_class": "degree-1 primitive L-function over Q (GL(1), trivial character); Tate motive Q(0)",
+ "critical_line": {
+  "citation": "Riemann (1859); Hardy (1914); Selberg (1942); Conrey (1989); de la Vallee Poussin (1896)",
+  "detail": "Riemann Hypothesis: every nontrivial zero of zeta has Re s = 1/2. Open since 1859. Unconditional partial results: infinitely many zeros on the line (Hardy 1914); a positive proportion (Selberg 1942); more than two fifths (Conrey 1989); zero-free region Re s >= 1 - c/log|t| (de la Vallee Poussin 1896). Numerical verification of initial zeros exists but is not evidence used here.",
+  "rigor": "OPEN",
+  "status": "CONJECTURE",
+  "witness": ""
+ },
+ "definition": "zeta(s) = sum_{n>=1} n^{-s} = prod_p (1 - p^{-s})^{-1} for Re s > 1, continued meromorphically to C. Local Satake datum at every prime p: A = [1], det(1 - A T) = 1 - T = [1, -1] (low-first), so a_{p^k} = 1 and a_n = 1 for all n.",
+ "detector_runs": {
+  "description": "core.reconstruct.detect on the all-ones coefficient sequence (window 12, holdout 4) with purity weight (p, 0), p in {2,3,5,7}; plus exact tensor checks",
+  "runs": [
+   {
+    "mode": "coefficients",
+    "prime": 2,
+    "series": "all-ones a_{p^k}=1, window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root 1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     2,
+     0
+    ]
+   },
+   {
+    "mode": "coefficients",
+    "prime": 3,
+    "series": "all-ones a_{p^k}=1, window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root 1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     3,
+     0
+    ]
+   },
+   {
+    "mode": "coefficients",
+    "prime": 5,
+    "series": "all-ones a_{p^k}=1, window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root 1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     5,
+     0
+    ]
+   },
+   {
+    "mode": "coefficients",
+    "prime": 7,
+    "series": "all-ones a_{p^k}=1, window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root 1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     7,
+     0
+    ]
+   }
+  ],
+  "tensor_checks": [
+   {
+    "detail": "[1,-1] (x) [1,-1] predicts all-ones sequence",
+    "name": "zeta_tensor_zeta_local",
+    "result": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -1]"
+    }
+   },
+   {
+    "detail": "twist by nontrivial character mod 4 at p=3: [1,-1] (x) [1,1] predicts a_{3^k} = (-1)^k, the local data of L(s, chi_4)",
+    "name": "zeta_tensor_chi4_at_p3",
+    "result": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, 1]"
+    }
+   },
+   {
+    "detail": "op_tensor power sums give Satake [1, 1] == chi_4 local factor at 3 (exact)",
+    "name": "tensor_satake_crosscheck",
+    "result": {
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "satake_poly_from_power_sums == [1, 1]"
+    }
+   }
+  ]
+ },
+ "id": "zeta",
+ "ladder": {
+  "L0_WELL_DEFINED": {
+   "citation": "Dirichlet series sum n^{-s} converges absolutely for Re s > 1; Euler (1737); B. Riemann (1859), 'Ueber die Anzahl der Primzahlen unter einer gegebenen Groesse'",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "coefficient_sequence_from_satake([1,-1],16) == [1]*16 (exact Fractions): a_{p^k} = 1 for all k"
+  },
+  "L1_MULTIPLICATIVITY": {
+   "citation": "total multiplicativity of a_n == 1 is immediate; unique factorization: Euclid; Gauss (1801)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "a_n == 1 identically, hence a_{mn} = a_m a_n for all m,n (trivial complete proof); exact check for all m,n <= 60"
+  },
+  "L2_EULER_PRODUCT": {
+   "citation": "L. Euler (1737): zeta(s) = prod_p (1 - p^{-s})^{-1} for Re s > 1",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "a_n = prod_p a_(p^v_p(n)) verified exactly for all n <= 200 from the degree-1 local data [1,-1]"
+  },
+  "L3_BOUNDED_DEGREE_RATIONAL": {
+   "citation": "",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "every local factor has degree exactly 1: detector reconstructs P/Q = 1/(1 - T) (Berlekamp-Massey certified on 12 terms, held-out tail predicted exactly) at p = 2, 3, 5, 7; the same [1,-1] datum defines the local factor at every p by construction"
+  },
+  "L4_WEIGHT_DUALITY": {
+   "citation": "B. Riemann (1859), 'Ueber die Anzahl der Primzahlen unter einer gegebenen Groesse'",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "op_dual_satake([1,-1], det=1) == [1,-1]: local data is exactly self-dual at every p (trivial character); inverse root a = 1 satisfies a^2 == p^0 exactly at p in {2,3,5,7}: local data pure of weight 0 (unitary normalization) \u2014 trivially, at EVERY p; consistent with the self-dual functional equation s <-> 1-s of weight-0 (Tate motive Q(0)) type"
+  },
+  "L5_CONDUCTOR_GAMMA_ROOT": {
+   "citation": "B. Riemann (1859), 'Ueber die Anzahl der Primzahlen unter einer gegebenen Groesse'",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "conductor N = 1, gamma factor pi^{-s/2} Gamma(s/2), root number +1: xi(s) = pi^{-s/2} Gamma(s/2) zeta(s) satisfies xi(s) = xi(1-s)"
+  },
+  "L6_CONTINUATION_FE": {
+   "citation": "B. Riemann (1859), 'Ueber die Anzahl der Primzahlen unter einer gegebenen Groesse'; J. Hadamard (1893), product factorization of xi",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "zeta continues meromorphically to C with a single simple pole at s = 1 (residue 1) and functional equation xi(s) = xi(1-s); Hadamard product for xi"
+  },
+  "L7_TWIST_TENSOR_COMPAT": {
+   "citation": "P. G. L. Dirichlet (1837), L-functions of characters; functional equation of L(s,chi): Hurwitz (1882) / standard",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "exact local tensor checks embedded in tensor_checks: zeta (x) zeta -> zeta locally, and zeta (x) chi_4 -> L(s, chi_4) locally at p = 3; globally, twisting zeta by any Dirichlet character chi gives L(s, chi), which has its own continuation and functional equation"
+  },
+  "L8_REALIZATION": {
+   "citation": "J. Tate (1950), doctoral thesis, Fourier analysis in number fields (published in Cassels-Froehlich 1967); B. Riemann (1859), 'Ueber die Anzahl der Primzahlen unter einer gegebenen Groesse'",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "automorphic: zeta is the standard L-function of the trivial Hecke character on GL(1)/Q, with continuation and FE from adelic Poisson summation (Tate's thesis); motivic: L-function of the Tate motive Q(0) = H^0(Spec Q); classical: Mellin transform of the theta function (Riemann's second proof)"
+  },
+  "L9_EXPLICIT_FORMULA_POSITIVITY": {
+   "citation": "explicit formula: Riemann (1859), proved by H. von Mangoldt (1895); distributional form: A. P. Guinand (1948), A. Weil (1952); positivity criterion equivalent to RH: A. Weil (1952)",
+   "rigor": "OPEN",
+   "status": "CONJECTURAL",
+   "witness": "SPLIT: (i) the explicit formula itself is a THEOREM \u2014 sum over zeros of h(rho) = arch. terms - sum_p log p * (g(log p^k) + g(-log p^k))/p^{k/2} as a distribution identity; (ii) the POSITIVITY of the Weil functional W(g*g~) >= 0 on the relevant class is EQUIVALENT to RH (Weil's criterion) and is OPEN; no independent positivity input (no analogue of Frobenius weights / Castelnuovo positivity) is known for zeta"
+  }
+ },
+ "mechanisms": {
+  "DUALITY_FE": {
+   "citation": "B. Riemann (1859), 'Ueber die Anzahl der Primzahlen unter einer gegebenen Groesse'",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "supplied by theta inversion / Poisson summation; self-dual: op_dual_satake([1,-1], det=1) == [1,-1]: local data is exactly self-dual at every p (trivial character)"
+  },
+  "EULER_PRODUCT": {
+   "citation": "L. Euler (1737)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "supplied by unique factorization in Z; local factors degree 1; a_n = prod_p a_(p^v_p(n)) verified exactly for all n <= 200 from the degree-1 local data [1,-1]"
+  },
+  "FAMILY": {
+   "citation": "P. G. L. Dirichlet (1837); functional equations: Hurwitz (1882), Hecke (1917) for zeta_K",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "zeta is the q = 1 member of the family of Dirichlet L-functions {L(s, chi)}, each with Euler product, continuation and functional equation; it is also the Dedekind zeta of Q inside {zeta_K}"
+  },
+  "POSITIVITY_PURITY": {
+   "citation": "function-field contrast: A. Weil (1948), P. Deligne (1974)",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "local purity of weight 0 holds trivially and exactly (inverse root a = 1 satisfies a^2 == p^0 exactly at p in {2,3,5,7}: local data pure of weight 0 (unitary normalization) \u2014 trivially, at EVERY p), but this is vacuous for the global question; no independently defined positivity mechanism known \u2014 this is precisely the missing structure (#763). In the function-field analogue this slot is filled by Frobenius weights via the Castelnuovo/Hodge-index positivity (Weil 1948, Deligne 1974); no analogue over Q is known"
+  },
+  "TENSOR_OPS": {
+   "citation": "P. G. L. Dirichlet (1837)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "degree-1 objects: tensor operations are trivially closed; exact checks zeta (x) zeta and zeta (x) chi_4 at p = 3 embedded in tensor_checks (A6 HOLDS in both); twists land in the Dirichlet L family"
+  },
+  "TRACE_FORMULA": {
+   "citation": "Riemann (1859); von Mangoldt (1895); Guinand (1948); Weil (1952)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "the Riemann-von Mangoldt / Guinand-Weil explicit formula is an unconditional distribution identity pairing zeros against prime powers \u2014 a genuine 'trace formula' shape; what it is the trace OF (a self-adjoint operator) is not known \u2014 see POSITIVITY_PURITY"
+  }
+ },
+ "notes": "The single degree of structural freedom this world is missing is the POSITIVITY_PURITY mechanism: every other row of the matrix is filled by a classical theorem, and L9 fails to close only because Weil positivity is RH-equivalent rather than independently supplied. All exact witnesses in this record are Fraction computations; no floats were used anywhere in the build. rh_established=false.",
+ "rh_established": false,
+ "sources": [
+  "Riemann (1859), Ueber die Anzahl der Primzahlen unter einer gegebenen Groesse",
+  "E. C. Titchmarsh, The Theory of the Riemann Zeta-function (2nd ed., rev. D. R. Heath-Brown, 1986)",
+  "H. Davenport, Multiplicative Number Theory",
+  "A. Weil (1952), explicit formula and positivity criterion",
+  "J. Tate (1950), thesis (in Cassels-Froehlich 1967)",
+  "H. Iwaniec, E. Kowalski (2004), Analytic Number Theory (explicit formula, ch. 5)"
+ ],
+ "title": "Riemann zeta function"
+}
