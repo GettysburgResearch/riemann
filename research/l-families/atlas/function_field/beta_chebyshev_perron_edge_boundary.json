@@ -1,0 +1,125 @@
+{
+  "all_threshold_coefficients_proved": true,
+  "beta_source_cancellation_proved": false,
+  "classification": "PASS_T108000_BETA_CHEBYSHEV_PERRON_EDGE_BOUNDARY",
+  "closed_boundary_profile_zero_free_proved": true,
+  "cut_boundary": [
+    {
+      "right_face_imaginary_part": -0.8606243606666407,
+      "y": 5.0
+    },
+    {
+      "right_face_imaginary_part": -0.06035193116353859,
+      "y": 8.0
+    },
+    {
+      "right_face_imaginary_part": -0.02381690643117043,
+      "y": 10.0
+    },
+    {
+      "right_face_imaginary_part": -0.03438619883306657,
+      "y": 13.0
+    }
+  ],
+  "finite_checks": 36,
+  "finite_edge_airy_asymptotic_proved": false,
+  "finite_edge_scout": {
+    "conjectured_amplitude_exponent": "1/3",
+    "conjectured_window_exponent": "2/3",
+    "rows": [
+      {
+        "imag": -4.621659110387789,
+        "magnitude": 6.8625181823620425,
+        "magnitude_over_n_one_third": 2.1615577783110607,
+        "n": 32,
+        "real": 5.072910690187555
+      },
+      {
+        "imag": -5.834418841058841,
+        "magnitude": 9.241833438024097,
+        "magnitude_over_n_one_third": 2.3104583595060246,
+        "n": 64,
+        "real": 7.167359491701103
+      },
+      {
+        "imag": -7.354696741539343,
+        "magnitude": 12.25183493100305,
+        "magnitude_over_n_one_third": 2.431071957251872,
+        "n": 128,
+        "real": 9.798770076725805
+      },
+      {
+        "imag": -9.26761517418548,
+        "magnitude": 16.05612700290682,
+        "magnitude_over_n_one_third": 2.528681548843473,
+        "n": 256,
+        "real": 13.11146533827095
+      }
+    ],
+    "status": "DISCOVERY_ONLY",
+    "successive_log2_slopes": [
+      0.42944102203749107,
+      0.40674684102843445,
+      0.3901260987338031
+    ]
+  },
+  "first_threshold": {
+    "predicted_288_over_pi_cubed": 9.288441916761455,
+    "scaled_value": 9.205952879279856
+  },
+  "new_zero_free_region_proved": false,
+  "plemelj_jump_proved": true,
+  "proof_object_sha256": "2a7909321f91401f6a6872ba3e11d50f3b6da36097667ab768cb0c3ce53f5046",
+  "rh_established": false,
+  "schema": "riemann.t108000.beta-chebyshev-perron-edge.v1",
+  "subthreshold": [
+    {
+      "phi_iy": 1.0125794850298564,
+      "right_limit_imag": -5.064614727414329e-09,
+      "right_limit_real": 1.0125794850298573,
+      "y": 0.5
+    },
+    {
+      "phi_iy": 1.0521437583749802,
+      "right_limit_imag": -1.1020876596314444e-08,
+      "right_limit_real": 1.0521437583749742,
+      "y": 1.0
+    },
+    {
+      "phi_iy": 1.251797793314515,
+      "right_limit_imag": -3.2198056992010695e-08,
+      "right_limit_real": 1.251797793314499,
+      "y": 2.0
+    },
+    {
+      "phi_iy": 1.8798587847170878,
+      "right_limit_imag": -1.187573728845015e-07,
+      "right_limit_real": 1.8798587847169765,
+      "y": 3.0
+    },
+    {
+      "phi_iy": 2.9409186999513934,
+      "right_limit_imag": -3.8277141211887745e-07,
+      "right_limit_real": 2.940918699950726,
+      "y": 3.5
+    }
+  ],
+  "subthreshold_boundary_proved": true,
+  "threshold_density": [
+    {
+      "odd_mode": 1,
+      "predicted": 2.956602889349089,
+      "scaled_density": 2.9566026116834356
+    },
+    {
+      "odd_mode": 3,
+      "predicted": 0.10950381071663294,
+      "scaled_density": 0.10951348864003982
+    },
+    {
+      "odd_mode": 5,
+      "predicted": 0.023652823114792713,
+      "scaled_density": 0.023655508368046366
+    }
+  ]
+}
