@@ -1,0 +1,75 @@
+{
+  "authoring_base": "24bfc73fc9aa3ba115902340affa8727dfa18970",
+  "external_context": [
+    {
+      "remote_bytes_authenticated": false,
+      "role": "equations4-6 normalization; equation14 printed coefficient discrepancy",
+      "url": "https://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinRiemannZeta/eisenstein-zeta-978-3-662-00734-1_10.pdf"
+    },
+    {
+      "remote_bytes_authenticated": false,
+      "role": "equations10.5-10.6 same completion and coefficient4; printed cosine variable corrected by CZ4",
+      "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v172-n2-p05-p.pdf"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "77820c6af8d089d22547db6cda5ba025ed96f84f",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md",
+      "sha256_lf": "d5c95db34c62d31e0bb735e09aae5599e3abf29194cd74a50ce1bbebafab1530"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7e6ae5bb1fd9c53930cee1198eb185806a2ea118",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.py",
+      "sha256_lf": "34120d58416c902db94fbeaf69ceb004694888908341b630a1b750f2f1e8316a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7ca422e505e6ccd817aadee3362f1ace2fa83fd4",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.json",
+      "sha256_lf": "fb6ae6ad8535b8cc519d33ab0e901cf17b9cf53ddff9c0bde427daf61faa60db"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "90dc74d185b0b9a42f865a9f9df895ba7cd1c5dd",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.sources.json",
+      "sha256_lf": "f754ecdff30b4fd3a3f8f4b8436e46ab3633ba59738021f5538051fae9e43b7a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "c2d9dc7ea92a75c7e3fd99c5463e664fb79e0d3a",
+      "kind": "reviewed_family_release",
+      "path": "tests/test_cusp_flag_quotient_global_family.py",
+      "sha256_lf": "84603f0412d8a7f1d2c2384c7055f55b4956db3df68b42dde7074d18cbe8265b"
+    },
+    {
+      "commit": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "git_blob": "1ec20ba529d34b833799d72515921fda7252da81",
+      "kind": "frozen_native_analytic_parent",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_DIVISOR_EXPLICIT_FORMULA.md",
+      "sha256_lf": "c7123450f6201fc62af7b2c42a315a20c5e107d0348533b7348223fbbd24d373"
+    },
+    {
+      "commit": "24bfc73fc9aa3ba115902340affa8727dfa18970",
+      "git_blob": "64c12988bda07d931fe4b9971f005ed5c238505f",
+      "kind": "frozen_authoring_context",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_SIGNED_RIEMANN_VON_MANGOLDT.md",
+      "sha256_lf": "33fd982f0c08333bf6d21b0240e7ed47d79d5513625ee29f12d1a26f17bb3ff3"
+    }
+  ],
+  "primitive_contract": {
+    "analytic_threshold": "all d>=512 by written bounds, not q-prefix sampling",
+    "flag_boundary": "ord Q=ord full minus ord W; no noncancellation assertion",
+    "measure": "y^k*dx*dy/y^2; full fundamental domain; no truncated replacement",
+    "normalization": "half-lattice Mellin; central cosine coefficient4; CF completion unchanged",
+    "object": "full CF period matrix, k=12d; actual h_d=Delta*E4^(3d-3)",
+    "source_constructor": "only authenticated frozen family primitive bytes executed"
+  },
+  "schema": "cusp-period-off-central-real-zeros-sources-v1"
+}
