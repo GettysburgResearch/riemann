@@ -28,7 +28,7 @@ SPEC.loader.exec_module(MODULE)
 class BetaSecondDifferenceSingleChannelTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.result = MODULE.run(check_sources=False)
+        cls.result = MODULE.run()
 
     def test_canonical_fixture(self) -> None:
         expected = json.loads(FIXTURE.read_text(encoding="utf-8"))
@@ -85,6 +85,21 @@ class BetaSecondDifferenceSingleChannelTests(unittest.TestCase):
         self.assertFalse(firewall["central_coreagg_proved"])
         self.assertFalse(firewall["central_primcar_proved"])
         self.assertFalse(firewall["rh_or_grh_proved"])
+        self.assertFalse(firewall["same_prefix_fourier_multiplier_identity_claimed"])
+
+    def test_source_authentication_cannot_be_silently_skipped(self) -> None:
+        self.assertTrue(self.result["source_contract"]["frozen_and_working_sources_authenticated"])
+        unbound = MODULE.run(check_sources=False)
+        self.assertFalse(unbound["source_contract"]["frozen_and_working_sources_authenticated"])
+        self.assertNotEqual(unbound, self.result)
+
+    def test_authentication_flag_is_typed(self) -> None:
+        with self.assertRaises(TypeError):
+            MODULE.run(check_sources=1)
+
+    def test_note_contains_no_embedded_control_bytes(self) -> None:
+        raw = MODULE.NOTE_PATH.read_bytes().replace(b"\r\n", b"\n")
+        self.assertFalse(any(byte < 32 and byte not in (9, 10) for byte in raw))
 
 
 if __name__ == "__main__":

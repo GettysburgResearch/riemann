@@ -70,6 +70,9 @@ def check_source_blobs() -> None:
 
 
 def check_scope_markers() -> None:
+    raw = NOTE_PATH.read_bytes().replace(b"\r\n", b"\n")
+    if any(byte < 32 and byte not in (9, 10) for byte in raw):
+        raise RuntimeError("note contains an unexpected control byte")
     note = NOTE_PATH.read_text(encoding="utf-8")
     for marker in (
         "second multiplicative difference",
@@ -420,6 +423,8 @@ def central_panel_replay() -> dict[str, object]:
 
 
 def run(*, check_sources: bool = True) -> dict[str, object]:
+    if type(check_sources) is not bool:
+        raise TypeError("check_sources must be Boolean")
     if check_sources:
         check_source_blobs()
     check_scope_markers()
@@ -453,8 +458,23 @@ def run(*, check_sources: bool = True) -> dict[str, object]:
             "exceptional_positive_gates_implied_by_central_gate": False,
             "rh_or_grh_proved": False,
             "architecture_b_claims": False,
+            "same_prefix_fourier_multiplier_identity_claimed": False,
         },
-        "source_contract": {"commit": SOURCE_COMMIT, "git_blobs": SOURCE_BLOBS},
+        "source_contract": {
+            "commit": SOURCE_COMMIT,
+            "git_blobs": SOURCE_BLOBS,
+            "frozen_and_working_sources_authenticated": check_sources,
+            "current_artifacts_sha256_lf": {
+                str(path.relative_to(ROOT)).replace("\\", "/"): hashlib.sha256(
+                    path.read_bytes().replace(b"\r\n", b"\n")
+                ).hexdigest()
+                for path in (
+                    NOTE_PATH,
+                    Path(__file__).resolve(),
+                    ROOT / "tests/test_ffps_beta_second_difference_single_channel_reduction.py",
+                )
+            },
+        },
         "resource_caps": {
             "source_probe_q_values": [5, Q],
             "formal_base_cap": BASE_CAP,
@@ -472,6 +492,8 @@ def main() -> None:
     parser.add_argument("--no-source-lock", action="store_true")
     parser.add_argument("--write-json", type=Path)
     args = parser.parse_args()
+    if args.check and args.no_source_lock:
+        parser.error("authoritative --check requires source authentication")
     rendered = json.dumps(
         run(check_sources=not args.no_source_lock), indent=2, sort_keys=True
     ) + "\n"

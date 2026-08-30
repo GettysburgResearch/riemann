@@ -187,10 +187,17 @@
     "central_primls_proved": false,
     "exceptional_positive_gates_implied_by_central_gate": false,
     "exceptional_positive_gates_shown_unnecessary_for_sufficiency": true,
-    "rh_or_grh_proved": false
+    "rh_or_grh_proved": false,
+    "same_prefix_fourier_multiplier_identity_claimed": false
   },
   "source_contract": {
     "commit": "3a595dda92ef827a41e50d2395309692a93748ad",
+    "current_artifacts_sha256_lf": {
+      "research/l-families/atlas/function_field/FFPS_BETA_SECOND_DIFFERENCE_SINGLE_CHANNEL_REDUCTION.md": "7a29bfb6c679f649d9677f3701d5c9407187e498b16fa19493353390f8c94373",
+      "research/l-families/atlas/function_field/ffps_beta_second_difference_single_channel_reduction.py": "610f0dd95bc6bfbe1e225e53600c924f27a1e9aaac1efac3928fcd6e64b781fc",
+      "tests/test_ffps_beta_second_difference_single_channel_reduction.py": "c02ce0de37dbf37f0975baeecd8df967c85a79029b639aefbf2b5e116b4fa76c"
+    },
+    "frozen_and_working_sources_authenticated": true,
     "git_blobs": {
       "research/l-families/atlas/function_field/FFPS_BOUNDARY_FIELD_NEAR_CORRELATION_CRITERION.md": "105837343b6b8ef148488f492c66da8feae0334a",
       "research/l-families/atlas/function_field/FFPS_BOUNDARY_FIELD_PRIMITIVE_PAIR_LARGE_SIEVE_GATE.md": "2abd49b975837c924009e33912e786b4b720e29c",

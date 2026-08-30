@@ -256,7 +256,7 @@ For squarefree 67-free `d`, define the already frozen central panel
 \[
  \begin{aligned}
  \mathcal P_0(d;H,V)
- =\sum_{\substack{a,b\ {m squarefree},\ q\nmid ab\\
+ =\sum_{\substack{a,b\ \mathrm{squarefree},\ q\nmid ab\\
  (a,b)=1,\ (ab,d)=1\\H<\max(a,b)\le V}}
  {\mu(a)\mu(b)\over\sqrt{ab}}
  \mathcal R\!\left(\log{a\over b}\right).
@@ -269,7 +269,7 @@ An exact common-factor decomposition gives, for each dyadic primitive shell,
 \[
  \boxed{
  \mathcal S_H^U(X)=
- \sum_{\substack{d\le X/H\\d\ {m squarefree},\ q\nmid d}}
+ \sum_{\substack{d\le X/H\\d\ \mathrm{squarefree},\ q\nmid d}}
  {1\over d}\,
  \mathcal P_0\!\left(
  d;H,\min\left(2H,{X\over d}\right)\right).}
@@ -328,7 +328,9 @@ Crucially, (3.5) does **not** show that RH implies `PRIMCAR_0` or
 
 ## 4. Frequency firewall and the load-bearing half-weight
 
-On a logarithmic Fourier mode `exp(i theta t)`, the source filter has symbol
+The translation component of the source difference has the formal
+logarithmic Fourier symbol below. Equivalently, it is the finite local
+Dirichlet factor evaluated at `s=1/2+i theta`:
 
 \[
  h_q(\theta)=
@@ -364,6 +366,12 @@ They are summable exactly for `sigma>0`.  At `sigma=0`, the symbol
 grows quadratically with the q-adic horizon.  Thus the stable reduction is a
 genuine consequence of the native `n^-1/2` normalization, not a formal
 license to remove arbitrary source differences.
+
+The exact prefix operator (2.1) also changes `X` to `X/q`. Accordingly
+(4.1) is not a claim that the Fourier transforms of two fields at the same
+frozen prefix satisfy a scalar multiplier identity. No Fourier transform
+of an unbounded infinite source, or limiting `L^2` passage, is needed for
+the finite identities and maximal norm bounds in Sections 1--3.
 
 ## 5. Consequence for the next Architecture A pass
 
