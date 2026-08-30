@@ -1,0 +1,1153 @@
+{
+  "analytic_proof_obligations": {
+    "character_evaluation": "density makes chi -> chi(tau) injective",
+    "complex_cusp": "a simple trace zero gives |t|^lambda times a nonzero real-analytic factor",
+    "cusp_conclusion": "analyticity forces lambda to be a positive even integer",
+    "determinant_one_support_injection": "sum(v)=sum(w)=0 and v-w=k*(1,...,1) force k=0",
+    "finite_replay_is_not_universal_proof": true,
+    "finite_spectrum": "a nonzero polynomial has only finitely many roots",
+    "fourier_multiplier": "Q(chi(tau))*fhat(chi)=0",
+    "positive_orbit_tail": "every tail is dense in the stated compact torus",
+    "recurrence_extension": "a continuous recurrence residual vanishing on the tail vanishes everywhere"
+  },
+  "claims": {
+    "GLO764.DENSE_TORUS_FINITE_CHARACTER": {
+      "conclusion": "eventual recurrence iff finite character support",
+      "scope": "continuous function on a compact torus with dense cyclic translation",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.DENSE_UNITARY_TRACE_ABSOLUTE_GATE": {
+      "classification": "rational iff lambda is a positive even integer",
+      "scope": "n>=2, Re(lambda)>0, dense full or determinant-one unitary torus",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.TRACE_EVEN_POWER_ROOT_LATTICE_SUPPORT": {
+      "degree": "A_(n-1) root-lattice ball count",
+      "same_count_on_full_and_determinant_one_tori": true,
+      "status": "PROVED_IN_COMPANION_NOTE_AND_FINITE_ROWS_EXACTLY_REPLAYED",
+      "support": "v in Z^n, sum(v)=0, sum(abs(v))<=2m"
+    }
+  },
+  "exact_polynomial_controls": {
+    "all_rank_three_counts_are_1_plus_3m_m_plus_1": true,
+    "all_rank_two_counts_are_2m_plus_1": true,
+    "degree_table": [
+      {
+        "counts": [
+          1,
+          3,
+          5,
+          7,
+          9
+        ],
+        "m_values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "n": 2
+      },
+      {
+        "counts": [
+          1,
+          7,
+          19,
+          37,
+          61
+        ],
+        "m_values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "n": 3
+      },
+      {
+        "counts": [
+          1,
+          13,
+          55,
+          147,
+          309
+        ],
+        "m_values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "n": 4
+      },
+      {
+        "counts": [
+          1,
+          21,
+          131,
+          471,
+          1251
+        ],
+        "m_values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "n": 5
+      }
+    ],
+    "row_count": 20,
+    "rows": [
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": false,
+        "coefficient_mass_at_identity": 1,
+        "composition_pair_units": 1,
+        "dense_orbit_minimal_order": null,
+        "determinant_one_character_count": 1,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 1,
+        "lambda_2m": 0,
+        "m": 0,
+        "m_zero_is_polynomial_control_only": true,
+        "n": 2,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "894831f98b3e954b9533e698a9486c067a1c7d0fcae300e85bd84c56d0e449a9",
+        "support_count": 1
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 4,
+        "composition_pair_units": 4,
+        "dense_orbit_minimal_order": 3,
+        "determinant_one_character_count": 3,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 3,
+        "lambda_2m": 2,
+        "m": 1,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 2,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -1,
+              1
+            ]
+          },
+          {
+            "coefficient": 2,
+            "exponent": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              1,
+              -1
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "b7625d62241fc392d127307e218c63d9676ae6c86be145aa4e6dc27246fe6153",
+        "support_count": 3
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 16,
+        "composition_pair_units": 9,
+        "dense_orbit_minimal_order": 5,
+        "determinant_one_character_count": 5,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 5,
+        "lambda_2m": 4,
+        "m": 2,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 2,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -2,
+              2
+            ]
+          },
+          {
+            "coefficient": 6,
+            "exponent": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              2,
+              -2
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "70cc9059de418ac888ef9dc4ee8f1126c593287ea66b7b4041ccac41d4967715",
+        "support_count": 5
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 64,
+        "composition_pair_units": 16,
+        "dense_orbit_minimal_order": 7,
+        "determinant_one_character_count": 7,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 7,
+        "lambda_2m": 6,
+        "m": 3,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 2,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -3,
+              3
+            ]
+          },
+          {
+            "coefficient": 20,
+            "exponent": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              3,
+              -3
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "9304c908d7ae209cd99e13c70f7be981f43c1df619921d525056edc79531c97e",
+        "support_count": 7
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 256,
+        "composition_pair_units": 25,
+        "dense_orbit_minimal_order": 9,
+        "determinant_one_character_count": 9,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 9,
+        "lambda_2m": 8,
+        "m": 4,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 2,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -4,
+              4
+            ]
+          },
+          {
+            "coefficient": 70,
+            "exponent": [
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              4,
+              -4
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "bcfcd99cdd922379ebc163289719e0aa31c2518c57fa1accee30b6bbf3f9646d",
+        "support_count": 9
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": false,
+        "coefficient_mass_at_identity": 1,
+        "composition_pair_units": 1,
+        "dense_orbit_minimal_order": null,
+        "determinant_one_character_count": 1,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 1,
+        "lambda_2m": 0,
+        "m": 0,
+        "m_zero_is_polynomial_control_only": true,
+        "n": 3,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "17af096fc18e95733d1a606ce50377c23c6b9121b3cae4ca7ceec9b57ce771f5",
+        "support_count": 1
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 9,
+        "composition_pair_units": 9,
+        "dense_orbit_minimal_order": 7,
+        "determinant_one_character_count": 7,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 7,
+        "lambda_2m": 2,
+        "m": 1,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 3,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -1,
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": 3,
+            "exponent": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              1,
+              0,
+              -1
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "a5f8ade7efee6715ec9b217b56c3f4560d5681f48a00bec8783727fda5325bd9",
+        "support_count": 7
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 81,
+        "composition_pair_units": 36,
+        "dense_orbit_minimal_order": 19,
+        "determinant_one_character_count": 19,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 19,
+        "lambda_2m": 4,
+        "m": 2,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 3,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -2,
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": 15,
+            "exponent": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              2,
+              0,
+              -2
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "b99fd01af1cc4dbad8a73d3716df219bdedeae7ac8d084d2ee40d8baf47f6383",
+        "support_count": 19
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 729,
+        "composition_pair_units": 100,
+        "dense_orbit_minimal_order": 37,
+        "determinant_one_character_count": 37,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 37,
+        "lambda_2m": 6,
+        "m": 3,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 3,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -3,
+              0,
+              3
+            ]
+          },
+          {
+            "coefficient": 93,
+            "exponent": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              3,
+              0,
+              -3
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "50cac154f2f9bdd1ac5df452d813d38cf2e951b27035e3d8a4089f018b43ff12",
+        "support_count": 37
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 6561,
+        "composition_pair_units": 225,
+        "dense_orbit_minimal_order": 61,
+        "determinant_one_character_count": 61,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 61,
+        "lambda_2m": 8,
+        "m": 4,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 3,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -4,
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": 639,
+            "exponent": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              4,
+              0,
+              -4
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "28fc900bf81d4c6e46f5110bad4f430783d47a2e3eb5788bc3c2fa761f833237",
+        "support_count": 61
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": false,
+        "coefficient_mass_at_identity": 1,
+        "composition_pair_units": 1,
+        "dense_orbit_minimal_order": null,
+        "determinant_one_character_count": 1,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 1,
+        "lambda_2m": 0,
+        "m": 0,
+        "m_zero_is_polynomial_control_only": true,
+        "n": 4,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "0be36f5cab8c6b5a3c4838c97499e7e9f58a8edfb73a46850386a894430483dd",
+        "support_count": 1
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 16,
+        "composition_pair_units": 16,
+        "dense_orbit_minimal_order": 13,
+        "determinant_one_character_count": 13,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 13,
+        "lambda_2m": 2,
+        "m": 1,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 4,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -1,
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": 4,
+            "exponent": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              1,
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "a46c1dbed37218eccfac234fe8baefbe057ab71d9e69bd73afc7cae59ae38249",
+        "support_count": 13
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 256,
+        "composition_pair_units": 100,
+        "dense_orbit_minimal_order": 55,
+        "determinant_one_character_count": 55,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 55,
+        "lambda_2m": 4,
+        "m": 2,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 4,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -2,
+              0,
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": 28,
+            "exponent": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              2,
+              0,
+              0,
+              -2
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "37d4e789fc73c08a5d2ab5d9b7a5e2123550a7c91eed48d3c28ab7fa89c2e378",
+        "support_count": 55
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 4096,
+        "composition_pair_units": 400,
+        "dense_orbit_minimal_order": 147,
+        "determinant_one_character_count": 147,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 147,
+        "lambda_2m": 6,
+        "m": 3,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 4,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -3,
+              0,
+              0,
+              3
+            ]
+          },
+          {
+            "coefficient": 256,
+            "exponent": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              3,
+              0,
+              0,
+              -3
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "e67a1185d62ec1a2367bba095b8899470858e2b55e076b1f3a210ae23cfecb45",
+        "support_count": 147
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 65536,
+        "composition_pair_units": 1225,
+        "dense_orbit_minimal_order": 309,
+        "determinant_one_character_count": 309,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 309,
+        "lambda_2m": 8,
+        "m": 4,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 4,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -4,
+              0,
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": 2716,
+            "exponent": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              4,
+              0,
+              0,
+              -4
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "34d974187b71bce0673f6c5d9d84c844a8ea31c8a8621719fb68c8101d5d22f8",
+        "support_count": 309
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": false,
+        "coefficient_mass_at_identity": 1,
+        "composition_pair_units": 1,
+        "dense_orbit_minimal_order": null,
+        "determinant_one_character_count": 1,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 1,
+        "lambda_2m": 0,
+        "m": 0,
+        "m_zero_is_polynomial_control_only": true,
+        "n": 5,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "0de68a3e47394ff12798ea1c96b1d99d3fc4406f6fb6e7c9b060d458aa4e81d6",
+        "support_count": 1
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 25,
+        "composition_pair_units": 25,
+        "dense_orbit_minimal_order": 21,
+        "determinant_one_character_count": 21,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 21,
+        "lambda_2m": 2,
+        "m": 1,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 5,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -1,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": 5,
+            "exponent": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              1,
+              0,
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "548d099b0054e848ebb07073794871158fced571144d9739bc712fa5adac39ea",
+        "support_count": 21
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 625,
+        "composition_pair_units": 225,
+        "dense_orbit_minimal_order": 131,
+        "determinant_one_character_count": 131,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 131,
+        "lambda_2m": 4,
+        "m": 2,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 5,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -2,
+              0,
+              0,
+              0,
+              2
+            ]
+          },
+          {
+            "coefficient": 45,
+            "exponent": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              2,
+              0,
+              0,
+              0,
+              -2
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "834c23241919b1bb0f2caadecb5da30d0c951562723b1f14e122ba8eec258013",
+        "support_count": 131
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 15625,
+        "composition_pair_units": 1225,
+        "dense_orbit_minimal_order": 471,
+        "determinant_one_character_count": 471,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 471,
+        "lambda_2m": 6,
+        "m": 3,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 5,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -3,
+              0,
+              0,
+              0,
+              3
+            ]
+          },
+          {
+            "coefficient": 545,
+            "exponent": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              3,
+              0,
+              0,
+              0,
+              -3
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "47feb3c389575afdd1bb614b4770e7516f2a9d808951766ec739494d4cfe0438",
+        "support_count": 471
+      },
+      {
+        "all_coefficients_positive": true,
+        "analytic_positive_exponent_chamber": true,
+        "coefficient_mass_at_identity": 390625,
+        "composition_pair_units": 4900,
+        "dense_orbit_minimal_order": 1251,
+        "determinant_one_character_count": 1251,
+        "determinant_one_no_collisions": true,
+        "full_torus_character_count": 1251,
+        "lambda_2m": 8,
+        "m": 4,
+        "m_zero_is_polynomial_control_only": false,
+        "n": 5,
+        "representative_coefficients": [
+          {
+            "coefficient": 1,
+            "exponent": [
+              -4,
+              0,
+              0,
+              0,
+              4
+            ]
+          },
+          {
+            "coefficient": 7885,
+            "exponent": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "exponent": [
+              4,
+              0,
+              0,
+              0,
+              -4
+            ]
+          }
+        ],
+        "support_and_coefficients_sha256": "2e03a02d9a3ec6f1b605cc58cc98f80a3944d4e800fdd52d068ea9d3104d7841",
+        "support_count": 1251
+      }
+    ],
+    "rows_sha256": "3bf9e3cbde5e6ffc49b59cd347ee7828686dbebdf3a6badcadf8134cd6d5e232"
+  },
+  "payload_sha256": "ab47652945f13b9052df7b81ed2b2e4d49adc6ab913ef24e4a76955e731a868e",
+  "producer": {
+    "note": "research/l-families/atlas/generalized/DENSE_TORUS_TRACE_ABSOLUTE_POWER_RATIONALITY.md",
+    "note_sha256_lf_normalized": "b363866fa6ba9a3a54e3b93fca07d11c66bc395a3e16c749b0acb5e8482ab596",
+    "script": "research/l-families/atlas/generalized/dense_torus_trace_absolute_power_rationality.py",
+    "script_sha256_lf_normalized": "445bfee08b34fb504306987864e6ffecf3cdc1e26c190cb379d7c3663b8180c6",
+    "test": "tests/test_dense_torus_trace_absolute_power_rationality.py",
+    "test_sha256_lf_normalized": "52b55ca205ef60b2c69f7f9ee070057b7cf522d1257cf4aee038c2e2b73f7d37"
+  },
+  "programme_issue": {
+    "number": 764,
+    "url": "https://github.com/gfreund123/riemann/issues/764"
+  },
+  "resource_contract": {
+    "arithmetic_class": "EXACT_INTEGER_MULTINOMIAL_ROOT_EXPONENT",
+    "declared_work_units": 11094,
+    "expansion_pair_units": 8544,
+    "external_symbolic_engine": false,
+    "float_operations": 0,
+    "maximum_allowed_m": 5,
+    "maximum_allowed_n": 7,
+    "maximum_m": 4,
+    "maximum_n": 5,
+    "random_samples": 0,
+    "root_vector_units": 2550,
+    "single_expansion_pair_cap_exclusive": 300000,
+    "work_unit_cap_exclusive": 1000000,
+    "work_unit_definition": "one multinomial pair or one independently enumerated root-lattice vector"
+  },
+  "schema": "riemann.atlas.generalized.dense_torus_trace_absolute_power_rationality.v1",
+  "scope_firewall": {
+    "dense_full_or_determinant_one_orbit_required": true,
+    "external_novelty_unreviewed": true,
+    "finite_dimensional_constant_state_space_only": true,
+    "m_zero_rows_are_polynomial_controls_not_lambda_zero_claims": true,
+    "no_automorphy_motive_or_RH_GRH_consequence": true,
+    "no_prime_indexed_global_family_constructed": true,
+    "no_ramified_factors_completion_or_functional_equation": true,
+    "nondense_diagonal_constant_absolute_trace_counterexample_recorded": true,
+    "rank_one_is_a_counterexample_and_excluded": true,
+    "strictly_positive_real_part_required": true,
+    "zero_value_fixed_to_zero": true
+  },
+  "source_lock": {
+    "base_commit": "902b7dfeb12c5bee9028d97b420e3c2f42ac31fd",
+    "external_references": [
+      {
+        "authors": "Yitzhak Katznelson",
+        "boundary": "standard character, Haar-Fourier, uniqueness, and compact-abelian background; the recurrence-to-finite-support implication is proved directly here",
+        "doi": "10.1017/CBO9781139165372",
+        "edition": "Third edition",
+        "publisher": "Cambridge University Press",
+        "title": "An Introduction to Harmonic Analysis",
+        "url": "https://www.cambridge.org/core/books/an-introduction-to-harmonic-analysis/67C4CE356E7420BA17F3F1337291EF82",
+        "year": 2004
+      },
+      {
+        "authors": "Michael Baake and Uwe Grimm",
+        "boundary": "published root-lattice coordination-sequence context for the A-type ball count; the trace-expansion support identification and composition proof are given directly here",
+        "journal": "Zeitschrift fuer Kristallographie 212 (1997), 253-256",
+        "title": "Coordination sequences for root lattices and related graphs",
+        "url": "https://arxiv.org/abs/cond-mat/9706122"
+      }
+    ],
+    "git_blob_contents_compared_to_working_tree": true,
+    "manifest": "research/l-families/atlas/generalized/dense_torus_trace_absolute_power_rationality.sources.json",
+    "manifest_sha256_lf_normalized": "901ee79a73442c531f110284ec26e69013c59b3b65d0f7b3bbb1a8fefaefd7c1",
+    "scope_firewall": {
+      "dense_full_or_determinant_one_torus_only": true,
+      "external_novelty_unreviewed": true,
+      "finite_dimensional_constant_state_space_only": true,
+      "lambda_zero_and_nonpositive_real_part_excluded": true,
+      "no_automorphy_motive_or_RH_consequence": true,
+      "no_prime_indexed_global_family_constructed": true,
+      "no_ramification_completion_or_functional_equation": true,
+      "rank_at_least_two": true,
+      "strictly_positive_real_part": true,
+      "zero_value_fixed_to_zero": true
+    },
+    "verified_sources": [
+      {
+        "file_sha256_lf_normalized": "213efe84034449a7ece87b273653bc683c11b28ea4f62e599e3f2b0bbac7c8a2",
+        "git_blob": "8f27df80a4983b4d393ee3a2477a744afaeb1d3a",
+        "path": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+        "role": "one-circle dense-orbit recurrence gate, absolute-power cusp, and even-power rationality boundary"
+      },
+      {
+        "file_sha256_lf_normalized": "b635c9fc8051007f46fc1efdb342c88118362edb79ed1d63624df21ef367ddf4",
+        "git_blob": "e6308d8e4b9122598f7857b34967f058a64a4f59",
+        "path": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_PRINCIPAL_COMPLEX_POWER_RATIONALITY.md",
+        "role": "strict-positive-real-part continuity convention and local analytic exclusion for complex exponents"
+      },
+      {
+        "file_sha256_lf_normalized": "5436df6de5f8a1a1af480b1d014cda80ac59f5c379969b6a374d987f6c4c9fb3",
+        "git_blob": "9548280426316237de50c7e71e2dd704aa68f00b",
+        "path": "research/l-families/atlas/generalized/RATIONAL_ROTATION_UNIFORM_DEGREE_GATE.md",
+        "role": "reduced-denominator degree as surviving character count and finite-spectrum sampling boundary"
+      },
+      {
+        "file_sha256_lf_normalized": "84759dc5ca81ef896e2a6ab2d9a7d3d32c3865f5f61bb45db18aaf8633578456",
+        "git_blob": "9aef6f8a780e9dff5c3b7a53c012c0956be036dc",
+        "path": "research/l-families/atlas/generalized/TRANSFER_MATRIX_SYMMETRIC_PARENT.md",
+        "role": "finite-character state-space interpretation and determinant-one character-quotient boundary"
+      }
+    ]
+  },
+  "trace_zero_curve_certificates": [
+    {
+      "curve": "(q_1 exp(it), q_2 exp(-it), q_3, ..., q_n)",
+      "determinant_equals_one": true,
+      "geometric_ratio_order": 2,
+      "n": 2,
+      "product_eta_exponent_mod_2n": 0,
+      "q_eta_exponents_mod_2n": [
+        1,
+        3
+      ],
+      "root_model": "eta=exp(pi*i/n), q_j=eta^(n-1+2(j-1)), j=1,...,n",
+      "trace_derivative": "i(q_1-q_2)",
+      "trace_derivative_nonzero": true,
+      "trace_zero_reason": "complete geometric n-cycle of a nontrivial nth root"
+    },
+    {
+      "curve": "(q_1 exp(it), q_2 exp(-it), q_3, ..., q_n)",
+      "determinant_equals_one": true,
+      "geometric_ratio_order": 3,
+      "n": 3,
+      "product_eta_exponent_mod_2n": 0,
+      "q_eta_exponents_mod_2n": [
+        2,
+        4,
+        0
+      ],
+      "root_model": "eta=exp(pi*i/n), q_j=eta^(n-1+2(j-1)), j=1,...,n",
+      "trace_derivative": "i(q_1-q_2)",
+      "trace_derivative_nonzero": true,
+      "trace_zero_reason": "complete geometric n-cycle of a nontrivial nth root"
+    },
+    {
+      "curve": "(q_1 exp(it), q_2 exp(-it), q_3, ..., q_n)",
+      "determinant_equals_one": true,
+      "geometric_ratio_order": 4,
+      "n": 4,
+      "product_eta_exponent_mod_2n": 0,
+      "q_eta_exponents_mod_2n": [
+        3,
+        5,
+        7,
+        1
+      ],
+      "root_model": "eta=exp(pi*i/n), q_j=eta^(n-1+2(j-1)), j=1,...,n",
+      "trace_derivative": "i(q_1-q_2)",
+      "trace_derivative_nonzero": true,
+      "trace_zero_reason": "complete geometric n-cycle of a nontrivial nth root"
+    },
+    {
+      "curve": "(q_1 exp(it), q_2 exp(-it), q_3, ..., q_n)",
+      "determinant_equals_one": true,
+      "geometric_ratio_order": 5,
+      "n": 5,
+      "product_eta_exponent_mod_2n": 0,
+      "q_eta_exponents_mod_2n": [
+        4,
+        6,
+        8,
+        0,
+        2
+      ],
+      "root_model": "eta=exp(pi*i/n), q_j=eta^(n-1+2(j-1)), j=1,...,n",
+      "trace_derivative": "i(q_1-q_2)",
+      "trace_derivative_nonzero": true,
+      "trace_zero_reason": "complete geometric n-cycle of a nontrivial nth root"
+    }
+  ]
+}
