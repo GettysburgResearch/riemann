@@ -36,6 +36,10 @@ remaining concrete source gate was whether real live multiplicities grow.
    The generator has minimal dimension `mn` among exact autonomous linear
    state/readout models, even for this one fixed vector. A faithful
    source-algebra action and arbitrary coefficient freedom are not assumed.
+   The two one-sided flows already give an `m+n` dimensional direct sum
+   with the bilinear readout `conj(A)B`. Tensoring converts this to the
+   minimal `mn` dimensional linear-readout realization. Neither dimension
+   is a universal lower bound for all source parents.
 4. The same note proves that this projection is inexpensive analytically:
    its source-dual restricted literal Wick, principal and Kummer integrals
    are absolutely `O(Y^(-2/3)/(log Y)^4)`. No cross terms with the
@@ -143,12 +147,7 @@ proofs and inspected code, without claiming an independent test execution.
    growing parameter space, derived cancellation, nonlinear readouts or
     approximate compression.
 
-There is already a concrete escape from the linear-readout model: keep the
-two one-sided dilation flows in an `m+n` dimensional direct sum and use the
-bilinear readout `conj(A)B`. Tensoring converts this to the minimal `mn`
-dimensional linear-readout realization. Neither dimension statement is a
-universal lower bound for all source parents.
-
-No source primitive, effective rank upper bound for a full parent,
+No binding theorem for a full source parent, effective rank upper bound
+for that parent,
 ONEPLACEWEIL/RELTRACE estimate, complete signed current estimate, RH or
 GRH follows from these packets. No external priority claim was checked.
