@@ -51,3 +51,7 @@ state-space parent.  The noninteger corollary excludes only constant
 finite-dimensional linear realizations; it does not exclude infinite-rank or
 categorical parents.  Exact dependencies and branch-cut prior art are in the
 colocated [sources manifest](irrational_rotation_principal_complex_power_rationality.sources.json).
+
+The concise [wave-2 research map](WAVE2_RESEARCH_MAP.md) records the axes now
+covered, held-out families, L0--L9 boundary, and ranked proof-sized queue.  It
+is a continuation plan, not another theorem packet.
