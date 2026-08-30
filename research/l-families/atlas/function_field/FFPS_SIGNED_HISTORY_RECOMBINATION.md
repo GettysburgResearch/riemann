@@ -19,7 +19,8 @@ weight checks, primitive Git-source authentication, and normal/optimized
 unit tests. The amplitudes containing Mellin phases remain symbolic.
 
 Smallest remaining gap: estimate the complete, signed, history-aggregated
-principal current between distinct arithmetic pairs, or construct a
+principal current between all distinct retained groups, including equal
+arithmetic tuples distinguished by remaining source labels, or construct a
 source-faithful geometric object that supplies that estimate uniformly.
 
 ## 0. Decisive verdict
@@ -170,6 +171,16 @@ on equal arithmetic pairs with different histories, a definite
 equal-output subledger. The complete physical-output quotient `nu` may
 identify additional labels; no classification of that larger quotient is
 needed or claimed.
+
+The converse identification is not available: because `a` retains every
+non-history label, `a!=b` need not mean different arithmetic tuples. Equal
+tuples in different retained carrier, colour, mask or other source labels
+remain distinct groups. Their cross terms are not paid by this correction.
+As a structural example, two such singleton groups with coefficients `1,1`
+have `Delta=0` but principal cross term `2p_iota`; this does not assert that
+those scalars form an admissible native input. No uniqueness of the remaining
+labels is assumed. Any complete grouped principal estimate must include
+these terms as well as genuinely distinct arithmetic-pair interactions.
 
 ## 3. `SRECOMB-2`: the complete principal transfer is inherited-paid
 
@@ -417,13 +428,15 @@ Growing that example does not attack a new principal obstruction: (3.4)
 already pays its principal representation ledger.
 
 The useful continuation is the signed, jointly assembled principal current
-on genuinely distinct arithmetic pairs, keeping the original source weights
-and outer observation. A proposed geometry should first show that it carries
-these aggregated amplitudes and their principal pairing, rather than merely
-retaining residue-cell sums. The four-atom live collision panels show why
-that last quotient still forgets different arithmetic interactions.
+on all distinct retained groups, keeping the original source weights and
+outer observation. This includes genuinely distinct arithmetic pairs and
+equal tuples distinguished by remaining source labels. A proposed geometry
+should first show that it carries these aggregated amplitudes and their
+principal pairing, rather than merely retaining residue-cell sums. The
+four-atom live collision panels show why that last quotient still forgets
+different arithmetic interactions.
 
-Open gates remain native geometric realization, the distinct-pair signed
+Open gates remain native geometric realization, the complete cross-group signed
 estimate, admissible native coefficient-family nonfactorization, `WCEQ`,
 `WCADD/WCCORR`, `WCKUM`, and the RH-facing principal bound. RH and GRH remain
 unproved. No external novelty claim is made for the finite aggregation

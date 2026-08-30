@@ -72,6 +72,20 @@ class SignedHistoryRecombinationTests(unittest.TestCase):
             report["channels"]["additive"]["grouped"], [[0, 4 * d], [4 * d, 0]]
         )
 
+    def test_equal_tuple_distinct_retained_labels_are_not_paid(self):
+        groups = (
+            group("same_tuple_colour_0", (1, 1), (1,)),
+            group("same_tuple_colour_1", (1, 1), (1,)),
+        )
+        report = module.matrices(5, 7, groups)
+        p = module.channel_weights(5, 7)["principal"]
+        self.assertEqual(report["deltas"], [0, 0])
+        self.assertEqual(report["channels"]["principal"]["grouped"], [[0, p], [p, 0]])
+        self.assertEqual(
+            sum(sum(row) for row in report["channels"]["principal"]["grouped"]),
+            2 * p,
+        )
+
     def test_distinct_cells_preserve_centered_negative_background(self):
         groups = (
             group("a", (1, 1), (1, -2)),
