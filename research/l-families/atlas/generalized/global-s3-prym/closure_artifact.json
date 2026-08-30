@@ -1,0 +1,1372 @@
+{
+  "panels": [
+    {
+      "elliptic_held_out_degrees": [
+        3,
+        4
+      ],
+      "extensions": [
+        {
+          "affine_H_map_points_checked": 8,
+          "affine_deck_points_checked": 12,
+          "affine_transposition_fixed_points": 0,
+          "complete_finite_fibre_count": 5,
+          "counts": {
+            "D": 6,
+            "D2": 6,
+            "E": 9,
+            "H": 9,
+            "Z": 12,
+            "conic": 6
+          },
+          "degree": 1,
+          "field_order": 5,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 1,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 2,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 2,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 0,
+          "infinity": {
+            "D": 0,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 0,
+            "conic": 0
+          },
+          "modulus": [
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": 1,
+          "second_map_affine_points_to_zero": 0,
+          "sign_stalk_sum": 0,
+          "standard_stalk_sum": 3
+        },
+        {
+          "affine_H_map_points_checked": 36,
+          "affine_deck_points_checked": 36,
+          "affine_transposition_fixed_points": 0,
+          "complete_finite_fibre_count": 25,
+          "counts": {
+            "D": 36,
+            "D2": 36,
+            "E": 27,
+            "H": 37,
+            "Z": 38,
+            "conic": 26
+          },
+          "degree": 2,
+          "field_order": 25,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 11,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 8,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 6,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            2,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 0,
+          "sign_stalk_sum": 10,
+          "standard_stalk_sum": 1
+        },
+        {
+          "affine_H_map_points_checked": 107,
+          "affine_deck_points_checked": 90,
+          "affine_transposition_fixed_points": 0,
+          "complete_finite_fibre_count": 125,
+          "counts": {
+            "D": 126,
+            "D2": 126,
+            "E": 108,
+            "H": 108,
+            "Z": 90,
+            "conic": 126
+          },
+          "degree": 3,
+          "field_order": 125,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 48,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 62,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 15,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 0,
+          "infinity": {
+            "D": 0,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 0,
+            "conic": 0
+          },
+          "modulus": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": 1,
+          "second_map_affine_points_to_zero": 3,
+          "sign_stalk_sum": 0,
+          "standard_stalk_sum": -18
+        },
+        {
+          "affine_H_map_points_checked": 624,
+          "affine_deck_points_checked": 672,
+          "affine_transposition_fixed_points": 4,
+          "complete_finite_fibre_count": 625,
+          "counts": {
+            "D": 576,
+            "D2": 576,
+            "E": 675,
+            "H": 625,
+            "Z": 674,
+            "conic": 626
+          },
+          "degree": 4,
+          "field_order": 625,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 175,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 336,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 3,
+              "distinct_roots": 2,
+              "number": 4,
+              "sign_trace": 0
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 110,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 0,
+          "sign_stalk_sum": -50,
+          "standard_stalk_sum": 49
+        }
+      ],
+      "polynomials": {
+        "D": [
+          1,
+          0,
+          5
+        ],
+        "D2": [
+          1,
+          0,
+          5
+        ],
+        "E": [
+          1,
+          3,
+          5
+        ],
+        "H": [
+          1,
+          3,
+          10,
+          15,
+          25
+        ],
+        "Z": [
+          1,
+          6,
+          24,
+          60,
+          120,
+          150,
+          125
+        ]
+      },
+      "scope": "Genus-two polynomial uses four independent complete counts; closure degree-six factorization uses the proved source decomposition and predicts four counted traces, not six independent reconstruction counts.",
+      "source": {
+        "A": 1,
+        "B": 1,
+        "id": "p5-generic",
+        "p": 5
+      }
+    },
+    {
+      "elliptic_held_out_degrees": [
+        3,
+        4
+      ],
+      "extensions": [
+        {
+          "affine_H_map_points_checked": 3,
+          "affine_deck_points_checked": 6,
+          "affine_transposition_fixed_points": 0,
+          "complete_finite_fibre_count": 5,
+          "counts": {
+            "D": 2,
+            "D2": 2,
+            "E": 8,
+            "H": 4,
+            "Z": 6,
+            "conic": 6
+          },
+          "degree": 1,
+          "field_order": 5,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 4,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 1,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 0,
+          "infinity": {
+            "D": 0,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 0,
+            "conic": 0
+          },
+          "modulus": [
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": 1,
+          "second_map_affine_points_to_zero": 3,
+          "sign_stalk_sum": -4,
+          "standard_stalk_sum": 2
+        },
+        {
+          "affine_H_map_points_checked": 25,
+          "affine_deck_points_checked": 30,
+          "affine_transposition_fixed_points": 0,
+          "complete_finite_fibre_count": 25,
+          "counts": {
+            "D": 20,
+            "D2": 20,
+            "E": 32,
+            "H": 26,
+            "Z": 32,
+            "conic": 26
+          },
+          "degree": 2,
+          "field_order": 25,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 4,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 16,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 5,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            2,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 3,
+          "sign_stalk_sum": -6,
+          "standard_stalk_sum": 6
+        },
+        {
+          "affine_H_map_points_checked": 99,
+          "affine_deck_points_checked": 78,
+          "affine_transposition_fixed_points": 0,
+          "complete_finite_fibre_count": 125,
+          "counts": {
+            "D": 122,
+            "D2": 122,
+            "E": 104,
+            "H": 100,
+            "Z": 78,
+            "conic": 126
+          },
+          "degree": 3,
+          "field_order": 125,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 48,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 64,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 13,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 0,
+          "infinity": {
+            "D": 0,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 0,
+            "conic": 0
+          },
+          "modulus": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": 1,
+          "second_map_affine_points_to_zero": 3,
+          "sign_stalk_sum": -4,
+          "standard_stalk_sum": -22
+        },
+        {
+          "affine_H_map_points_checked": 653,
+          "affine_deck_points_checked": 666,
+          "affine_transposition_fixed_points": 4,
+          "complete_finite_fibre_count": 625,
+          "counts": {
+            "D": 640,
+            "D2": 640,
+            "E": 640,
+            "H": 654,
+            "Z": 668,
+            "conic": 626
+          },
+          "degree": 4,
+          "field_order": 625,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 208,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 304,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 3,
+              "distinct_roots": 2,
+              "number": 4,
+              "sign_trace": 0
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 109,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 3,
+          "sign_stalk_sum": 14,
+          "standard_stalk_sum": 14
+        }
+      ],
+      "polynomials": {
+        "D": [
+          1,
+          -4,
+          5
+        ],
+        "D2": [
+          1,
+          -4,
+          5
+        ],
+        "E": [
+          1,
+          2,
+          5
+        ],
+        "H": [
+          1,
+          -2,
+          2,
+          -10,
+          25
+        ],
+        "Z": [
+          1,
+          0,
+          3,
+          -16,
+          15,
+          0,
+          125
+        ]
+      },
+      "scope": "Genus-two polynomial uses four independent complete counts; closure degree-six factorization uses the proved source decomposition and predicts four counted traces, not six independent reconstruction counts.",
+      "source": {
+        "A": -1,
+        "B": 0,
+        "id": "p5-symmetric",
+        "p": 5
+      }
+    },
+    {
+      "elliptic_held_out_degrees": [
+        3,
+        4
+      ],
+      "extensions": [
+        {
+          "affine_H_map_points_checked": 4,
+          "affine_deck_points_checked": 0,
+          "affine_transposition_fixed_points": 0,
+          "complete_finite_fibre_count": 7,
+          "counts": {
+            "D": 8,
+            "D2": 8,
+            "E": 5,
+            "H": 5,
+            "Z": 2,
+            "conic": 8
+          },
+          "degree": 1,
+          "field_order": 7,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 3,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 4,
+              "sign_trace": -1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 0,
+          "sign_stalk_sum": 0,
+          "standard_stalk_sum": -3
+        },
+        {
+          "affine_H_map_points_checked": 68,
+          "affine_deck_points_checked": 72,
+          "affine_transposition_fixed_points": 4,
+          "complete_finite_fibre_count": 49,
+          "counts": {
+            "D": 64,
+            "D2": 64,
+            "E": 55,
+            "H": 69,
+            "Z": 74,
+            "conic": 50
+          },
+          "degree": 2,
+          "field_order": 49,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 19,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 16,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 3,
+              "distinct_roots": 2,
+              "number": 4,
+              "sign_trace": 0
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 10,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            1,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 0,
+          "sign_stalk_sum": 14,
+          "standard_stalk_sum": 5
+        },
+        {
+          "affine_H_map_points_checked": 379,
+          "affine_deck_points_checked": 414,
+          "affine_transposition_fixed_points": 0,
+          "complete_finite_fibre_count": 343,
+          "counts": {
+            "D": 344,
+            "D2": 344,
+            "E": 380,
+            "H": 380,
+            "Z": 416,
+            "conic": 344
+          },
+          "degree": 3,
+          "field_order": 343,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 102,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 172,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 69,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 3,
+          "sign_stalk_sum": 0,
+          "standard_stalk_sum": 36
+        },
+        {
+          "affine_H_map_points_checked": 2376,
+          "affine_deck_points_checked": 2448,
+          "affine_transposition_fixed_points": 4,
+          "complete_finite_fibre_count": 2401,
+          "counts": {
+            "D": 2304,
+            "D2": 2304,
+            "E": 2475,
+            "H": 2377,
+            "Z": 2450,
+            "conic": 2402
+          },
+          "degree": 4,
+          "field_order": 2401,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 743,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 1248,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 3,
+              "distinct_roots": 2,
+              "number": 4,
+              "sign_trace": 0
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 406,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 0,
+          "sign_stalk_sum": -98,
+          "standard_stalk_sum": 73
+        }
+      ],
+      "polynomials": {
+        "D": [
+          1,
+          0,
+          7
+        ],
+        "D2": [
+          1,
+          0,
+          7
+        ],
+        "E": [
+          1,
+          -3,
+          7
+        ],
+        "H": [
+          1,
+          -3,
+          14,
+          -21,
+          49
+        ],
+        "Z": [
+          1,
+          -6,
+          30,
+          -84,
+          210,
+          -294,
+          343
+        ]
+      },
+      "scope": "Genus-two polynomial uses four independent complete counts; closure degree-six factorization uses the proved source decomposition and predicts four counted traces, not six independent reconstruction counts.",
+      "source": {
+        "A": 1,
+        "B": 1,
+        "id": "p7-generic",
+        "p": 7
+      }
+    },
+    {
+      "elliptic_held_out_degrees": [
+        3,
+        4
+      ],
+      "extensions": [
+        {
+          "affine_H_map_points_checked": 7,
+          "affine_deck_points_checked": 6,
+          "affine_transposition_fixed_points": 0,
+          "complete_finite_fibre_count": 7,
+          "counts": {
+            "D": 8,
+            "D2": 8,
+            "E": 8,
+            "H": 8,
+            "Z": 8,
+            "conic": 8
+          },
+          "degree": 1,
+          "field_order": 7,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 2,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 4,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 1,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 0,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 3,
+          "sign_stalk_sum": 0,
+          "standard_stalk_sum": 0
+        },
+        {
+          "affine_H_map_points_checked": 77,
+          "affine_deck_points_checked": 90,
+          "affine_transposition_fixed_points": 4,
+          "complete_finite_fibre_count": 49,
+          "counts": {
+            "D": 64,
+            "D2": 64,
+            "E": 64,
+            "H": 78,
+            "Z": 92,
+            "conic": 50
+          },
+          "degree": 2,
+          "field_order": 49,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 16,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 16,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 3,
+              "distinct_roots": 2,
+              "number": 4,
+              "sign_trace": 0
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 13,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            1,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 3,
+          "sign_stalk_sum": 14,
+          "standard_stalk_sum": 14
+        },
+        {
+          "affine_H_map_points_checked": 343,
+          "affine_deck_points_checked": 342,
+          "affine_transposition_fixed_points": 0,
+          "complete_finite_fibre_count": 343,
+          "counts": {
+            "D": 344,
+            "D2": 344,
+            "E": 344,
+            "H": 344,
+            "Z": 344,
+            "conic": 344
+          },
+          "degree": 3,
+          "field_order": 343,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 114,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 172,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 57,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 0,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 3,
+          "sign_stalk_sum": 0,
+          "standard_stalk_sum": 0
+        },
+        {
+          "affine_H_map_points_checked": 2205,
+          "affine_deck_points_checked": 2106,
+          "affine_transposition_fixed_points": 4,
+          "complete_finite_fibre_count": 2401,
+          "counts": {
+            "D": 2304,
+            "D2": 2304,
+            "E": 2304,
+            "H": 2206,
+            "Z": 2108,
+            "conic": 2402
+          },
+          "degree": 4,
+          "field_order": 2401,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 800,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 1248,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 3,
+              "distinct_roots": 2,
+              "number": 4,
+              "sign_trace": 0
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 349,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 3,
+          "sign_stalk_sum": -98,
+          "standard_stalk_sum": -98
+        }
+      ],
+      "polynomials": {
+        "D": [
+          1,
+          0,
+          7
+        ],
+        "D2": [
+          1,
+          0,
+          7
+        ],
+        "E": [
+          1,
+          0,
+          7
+        ],
+        "H": [
+          1,
+          0,
+          14,
+          0,
+          49
+        ],
+        "Z": [
+          1,
+          0,
+          21,
+          0,
+          147,
+          0,
+          343
+        ]
+      },
+      "scope": "Genus-two polynomial uses four independent complete counts; closure degree-six factorization uses the proved source decomposition and predicts four counted traces, not six independent reconstruction counts.",
+      "source": {
+        "A": -1,
+        "B": 0,
+        "id": "p7-symmetric",
+        "p": 7
+      }
+    },
+    {
+      "elliptic_held_out_degrees": [
+        3,
+        4
+      ],
+      "extensions": [
+        {
+          "affine_H_map_points_checked": 5,
+          "affine_deck_points_checked": 6,
+          "affine_transposition_fixed_points": 2,
+          "complete_finite_fibre_count": 7,
+          "counts": {
+            "D": 4,
+            "D2": 4,
+            "E": 10,
+            "H": 6,
+            "Z": 8,
+            "conic": 8
+          },
+          "degree": 1,
+          "field_order": 7,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 5,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 3,
+              "distinct_roots": 2,
+              "number": 2,
+              "sign_trace": 0
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 1,
+          "sign_stalk_sum": -4,
+          "standard_stalk_sum": 2
+        },
+        {
+          "affine_H_map_points_checked": 57,
+          "affine_deck_points_checked": 66,
+          "affine_transposition_fixed_points": 4,
+          "complete_finite_fibre_count": 49,
+          "counts": {
+            "D": 48,
+            "D2": 48,
+            "E": 60,
+            "H": 58,
+            "Z": 68,
+            "conic": 50
+          },
+          "degree": 2,
+          "field_order": 49,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 12,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 24,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 3,
+              "distinct_roots": 2,
+              "number": 4,
+              "sign_trace": 0
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 9,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            1,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 3,
+          "sign_stalk_sum": -2,
+          "standard_stalk_sum": 10
+        },
+        {
+          "affine_H_map_points_checked": 329,
+          "affine_deck_points_checked": 294,
+          "affine_transposition_fixed_points": 2,
+          "complete_finite_fibre_count": 343,
+          "counts": {
+            "D": 364,
+            "D2": 364,
+            "E": 310,
+            "H": 330,
+            "Z": 296,
+            "conic": 344
+          },
+          "degree": 3,
+          "field_order": 343,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 132,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 161,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 3,
+              "distinct_roots": 2,
+              "number": 2,
+              "sign_trace": 0
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 48,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 1,
+          "sign_stalk_sum": 20,
+          "standard_stalk_sum": -34
+        },
+        {
+          "affine_H_map_points_checked": 2493,
+          "affine_deck_points_checked": 2490,
+          "affine_transposition_fixed_points": 4,
+          "complete_finite_fibre_count": 2401,
+          "counts": {
+            "D": 2496,
+            "D2": 2496,
+            "E": 2400,
+            "H": 2494,
+            "Z": 2492,
+            "conic": 2402
+          },
+          "degree": 4,
+          "field_order": 2401,
+          "finite_fibre_histogram": [
+            {
+              "closure_points": 0,
+              "distinct_roots": 0,
+              "number": 832,
+              "sign_trace": 1
+            },
+            {
+              "closure_points": 0,
+              "distinct_roots": 1,
+              "number": 1152,
+              "sign_trace": -1
+            },
+            {
+              "closure_points": 3,
+              "distinct_roots": 2,
+              "number": 4,
+              "sign_trace": 0
+            },
+            {
+              "closure_points": 6,
+              "distinct_roots": 3,
+              "number": 413,
+              "sign_trace": 1
+            }
+          ],
+          "first_map_affine_points_to_infinity": 2,
+          "infinity": {
+            "D": 2,
+            "D2": 1,
+            "E": 1,
+            "H": 1,
+            "Z": 2,
+            "conic": 2
+          },
+          "modulus": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "quadratic_gauss_sum": -1,
+          "second_map_affine_points_to_zero": 3,
+          "sign_stalk_sum": 94,
+          "standard_stalk_sum": -2
+        }
+      ],
+      "polynomials": {
+        "D": [
+          1,
+          -4,
+          7
+        ],
+        "D2": [
+          1,
+          -4,
+          7
+        ],
+        "E": [
+          1,
+          2,
+          7
+        ],
+        "H": [
+          1,
+          -2,
+          6,
+          -14,
+          49
+        ],
+        "Z": [
+          1,
+          0,
+          9,
+          -16,
+          63,
+          0,
+          343
+        ]
+      },
+      "scope": "Genus-two polynomial uses four independent complete counts; closure degree-six factorization uses the proved source decomposition and predicts four counted traces, not six independent reconstruction counts.",
+      "source": {
+        "A": 4,
+        "B": 4,
+        "id": "p7-negative-branch",
+        "p": 7
+      }
+    }
+  ],
+  "schema": "s3-genus-two-closure-replay-v1",
+  "source_hash": "bb588efaa1e3f6f281a7a8eaa090ea4835e905a854fb024d8ac2085c0c67a296"
+}
