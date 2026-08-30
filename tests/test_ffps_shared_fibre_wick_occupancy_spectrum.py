@@ -118,6 +118,21 @@ class SharedFibreWickOccupancySpectrumTests(unittest.TestCase):
             -Fraction(1, 2) * MODULE.atomic_diagonal(ell, rho),
         )
 
+    def test_residue_sufficiency_is_equivalent_to_injective_aggregation(self) -> None:
+        self.assertTrue(MODULE.aggregation_is_injective((0, 2, 4, 6)))
+        self.assertFalse(MODULE.aggregation_is_injective((0, 2, 2, 6)))
+
+        ell, rho = 5, 7
+        assignments = (0, 1, 4)
+        vector = tuple(Fraction(value) for value in (2, -3, 5))
+        aggregate = MODULE.aggregate_vector(
+            len(MODULE.allowed_cells(ell, rho)), assignments, vector
+        )
+        self.assertEqual(
+            sum((value * value for value in aggregate), Fraction()),
+            sum((value * value for value in vector), Fraction()),
+        )
+
     def test_simple_complete_cell_spectrum_is_full_rank_indefinite(self) -> None:
         for ell, rho in (*MODULE.CONTROL_PAIRS, MODULE.HELD_OUT_PAIR):
             MODULE.verify_spectrum(ell, rho)
@@ -162,6 +177,42 @@ class SharedFibreWickOccupancySpectrumTests(unittest.TestCase):
             ["0", "-4", "-4", "-10", "1", "1"],
         )
 
+    def test_exact_singular_rectangle_family_and_symmetric_orientation(self) -> None:
+        parameters = (
+            *MODULE.RECTANGLE_CONTROL_PARAMETERS,
+            MODULE.RECTANGLE_HELD_OUT_PARAMETER,
+        )
+        for base_prime, n in parameters:
+            for transposed in (False, True):
+                control = MODULE.singular_rectangle_family_member(
+                    base_prime, n, transposed=transposed
+                )
+                self.assertEqual(control["rank"], 2 * n - 1)
+                self.assertEqual(len(control["occupied_cell_indices"]), 2 * n)
+                self.assertEqual(
+                    control["shape"], [n, 2] if transposed else [2, n]
+                )
+                self.assertEqual(
+                    control["rho"] if transposed else control["ell"],
+                    base_prime,
+                )
+
+        unmaterialized = MODULE.singular_rectangle_symbolic_spectrum(5, 13)
+        self.assertEqual(unmaterialized["large_prime"], 61)
+        self.assertEqual(unmaterialized["dimension"], 26)
+        self.assertEqual(unmaterialized["rank"], 25)
+        self.assertEqual(unmaterialized["nullity"], 1)
+        self.assertEqual(
+            [
+                row["multiplicity"]
+                for row in unmaterialized["spectral_blocks"]
+                if row["eigenvalue"] == "0"
+            ],
+            [1],
+        )
+        with self.assertRaises(RuntimeError):
+            MODULE.singular_rectangle_family_member(5, 13)
+
     def test_ambient_envelope_control_has_both_signs_and_full_rank(self) -> None:
         for ell, rho in (*MODULE.CONTROL_PAIRS, MODULE.HELD_OUT_PAIR):
             positive, negative, zero = MODULE.ambient_envelope_inertia(ell, rho)
@@ -175,7 +226,7 @@ class SharedFibreWickOccupancySpectrumTests(unittest.TestCase):
         report = MODULE.build_report()
         self.assertEqual(
             report["status"],
-            "EXACT_FIXED_FIBRE_IDENTITY_AND_RESIDUE_FORGETTING_NO_GO",
+            "EXACT_FIXED_FIBRE_IDENTITY_AND_RESIDUE_FORGETTING_CRITERION",
         )
         self.assertEqual(report["arithmetic_class"], "MIXED")
         self.assertIn(
@@ -189,6 +240,8 @@ class SharedFibreWickOccupancySpectrumTests(unittest.TestCase):
         resources = report["resource_ledger"]
         self.assertEqual(resources["maximum_simple_matrix_dimension"], 15)
         self.assertEqual(resources["maximum_ambient_envelope_points"], 900)
+        self.assertEqual(resources["singular_rectangle_control_members"], 8)
+        self.assertEqual(resources["maximum_singular_rectangle_atoms"], 14)
         self.assertEqual(resources["floating_point_operations"], 0)
         self.assertEqual(resources["live_source_atoms_enumerated"], 0)
 
@@ -205,6 +258,12 @@ class SharedFibreWickOccupancySpectrumTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             MODULE.aggregation_matrix(2, (0, 2))
         with self.assertRaises(ValueError):
+            MODULE.aggregation_is_injective((0, -1))
+        with self.assertRaises(ValueError):
+            MODULE.singular_rectangle_family_member(3, 3)
+        with self.assertRaises(ValueError):
+            MODULE.singular_rectangle_family_member(5, 5)
+        with self.assertRaises(ValueError):
             MODULE.matrix_rank(((Fraction(1),), (Fraction(1), Fraction(2))))
 
     def test_note_preserves_ontology_and_global_firewalls(self) -> None:
@@ -214,7 +273,7 @@ class SharedFibreWickOccupancySpectrumTests(unittest.TestCase):
             "not an independent marked-place product",
             "raw Legendre class",
             "MPD-W2.2 — exact arbitrary-occupancy pullback",
-            "residue-only forgetting no-go",
+            "residue-only forgetting criterion",
             "exact sufficient statistic",
             "live occupancy",
             "ONEPLACEWEIL",
@@ -246,7 +305,7 @@ class SharedFibreWickOccupancySpectrumTests(unittest.TestCase):
             timeout=20.0,
         )
         self.assertIn(
-            "EXACT_FIXED_FIBRE_IDENTITY_AND_RESIDUE_FORGETTING_NO_GO",
+            "EXACT_FIXED_FIBRE_IDENTITY_AND_RESIDUE_FORGETTING_CRITERION",
             completed.stdout,
         )
 

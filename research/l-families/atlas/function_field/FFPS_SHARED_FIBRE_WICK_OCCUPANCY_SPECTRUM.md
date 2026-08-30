@@ -1,14 +1,15 @@
 # Shared-fibre Wick occupancy spectrum
 
 Status: **exact fixed-fibre source map, arbitrary-occupancy operator identity,
-and residue-only forgetting no-go; live occupancy and global signed
+and residue-only sufficiency criterion; live occupancy and global signed
 recombination remain open**
 
 Scope: distinct odd prime marked conductors in one complete bilateral fibre;
-exact rational algebra for every such pair; dependency-free finite controls
-at \((3,5),(3,7),(5,7)\) and the held-out pair \((7,11)\). There is no
-constructible sheaf, partial-Frobenius descent, trace estimate, principal
-binding, RH, or GRH theorem here.
+exact rational algebra for every such pair; dependency-free complete-cell
+controls at \((3,5),(3,7),(5,7)\) and held-out \((7,11)\); singular-rectangle
+controls at \((p,n)=(5,3),(5,7),(7,5)\) and held-out \((7,7)\), in both
+orientations. There is no constructible sheaf, partial-Frobenius descent,
+trace estimate, principal binding, RH, or GRH theorem here.
 
 Exact sources or dependencies:
 [ffps_shared_fibre_wick_occupancy_spectrum.sources.json](ffps_shared_fibre_wick_occupancy_spectrum.sources.json).
@@ -22,9 +23,11 @@ Canonical output:
 
 Smallest remaining gap: determine the actual occupied physical cells,
 multiplicities, and coefficients in the complete live source before the
-conductor sum. The quotient occupancy remains a finite gate. The aggregate
-residue trace alone provably loses literal diagonal energy.
-The live occupancy remains open.
+conductor sum. The quotient occupancy remains a finite gate. As a statistic
+for arbitrary coefficient vectors, residue aggregation loses literal diagonal
+energy exactly when the aggregation map has a kernel; whether a live fibre
+has such a collision remains open.
+Live occupancy remains open. RH and GRH remain unproved.
 
 ## 0. Verdict
 
@@ -57,10 +60,10 @@ one \(\rho\).
 This packet proves the exact replacement:
 
 1. an explicit fixed-fibre owner/cofactor residue envelope and physical map;
-2. the exact Wick operator for arbitrary live occupancy;
+2. the exact Wick operator for any specified occupancy;
 3. a complete-cell spectrum, used only as a finite algebraic control;
-4. an exact no-go showing that residue aggregation alone loses the literal
-   diagonal energy required by Wick normal ordering.
+4. an exact criterion: residue aggregation alone determines the Wick scalar
+   for all coefficient vectors if and only if it is injective.
 
 The complete-cell operator is full-rank indefinite. That statement does not
 promote: a singleton occupancy is zero, and a nontrivial six-cell occupancy
@@ -338,7 +341,7 @@ Put
 
 The spectrum over \(\mathbf Q\), and hence over \(\mathbf C\), is
 
-| eigenspace | eigenvalue | multiplicity |
+| spectral block | eigenvalue | multiplicity |
 |---|---:|---:|
 | mean-zero \(\otimes\) mean-zero | \(1-d\) | \((m_\ell-1)(m_\rho-1)\) |
 | mean-zero \(\otimes\) constant | \(a_\rho-d\) | \(m_\ell-1\) |
@@ -396,7 +399,7 @@ envelope control, not a source-realization theorem. Indeed \(n\ge8\), every
 eigenvalue of \(H_\ell\otimes H_\rho\) is greater than \(1/4\), and
 \(d<1\), so the cell-sum eigenvalues \(n\lambda-d\) are positive.
 
-## 5. MPD-W2.4 — residue-only forgetting no-go
+## 5. MPD-W2.4 — residue-only forgetting criterion
 
 Equation (3.5) separates two pieces:
 
@@ -408,40 +411,80 @@ Equation (3.5) separates two pieces:
 \]
 
 The first is the aggregate physical residue trace. The second is literal
-diagonal energy. The first does not determine the second.
+diagonal energy. Whether the first determines the second depends exactly on
+the occupancy map.
 
-Conversely, the two-channel pair
+Say that residue aggregation is sufficient for the Wick scalar if there is a
+function \(F\) on \(\operatorname{im}R_\iota\) such that
 
 \[
- \boxed{\left(R_\iota z,\ \sum_\omega|z_\omega|^2\right)}
+ z^*B_{R_\iota}z=F(R_\iota z)
+ \qquad(z\in\mathbf C^{\Omega_\iota}).
 \tag{5.2}
 \]
 
-is an exact sufficient statistic for the fixed-fibre Wick scalar, by (3.5).
-This is a concrete replacement target for a scalar ONEPLACEWEIL
-adapter: one physical aggregate channel plus one literal diagonal-energy
-channel.
+Then
 
-Take two distinct literal atoms in one physical cell and coefficients
-\(z=(1,-1)\). Then
+\[
+ \boxed{
+ R_\iota z\text{ is sufficient for every coefficient vector}
+ \quad\Longleftrightarrow\quad
+ \ker R_\iota=0.}
+\tag{5.3}
+\]
+
+Indeed, if \(0\ne h\in\ker R_\iota\), then (3.5) gives
+
+\[
+ R_\iota h=R_\iota0=0,
+ \qquad
+ h^*B_{R_\iota}h=-d_{\ell,\rho}\lVert h\rVert^2\ne0.
+\tag{5.4}
+\]
+
+Conversely, if \(R_\iota\) is injective, \(R_\iota z\) determines \(z\) and
+hence the Wick scalar. For this incidence map, injectivity is equivalent to
+having at most one literal atom in every occupied physical cell. In that case
+\(D=\lVert R_\iota z\rVert^2\).
+
+For every occupancy, injective or not, the two-channel pair
+
+\[
+ \boxed{\left(R_\iota z,\ \sum_\omega|z_\omega|^2\right)}
+\tag{5.5}
+\]
+
+is an exact sufficient statistic for the fixed-fibre Wick scalar, by (3.5).
+It is therefore a concrete replacement target for an adapter intended to work
+uniformly over arbitrary occupancies: one physical aggregate channel plus one
+literal diagonal-energy channel.
+
+In particular, for any occupancy that contains two distinct literal atoms in
+one physical cell, take coefficients \(z=(1,-1)\) on those atoms and zero
+elsewhere. Then
 
 \[
  R_\iota z=0,
  \qquad
  z^*B_{R_\iota}z=-2d_{\ell,\rho}\ne0.
-\tag{5.3}
+\tag{5.6}
 \]
 
 The zero coefficient vector has the same residue aggregate and a different
-Wick value. Hence:
+Wick value. Hence the exact conclusion is:
 
-> **MPD-W2.4 — residue-only forgetting no-go.** Any scalar adapter which
-> retains only \(R_\iota z\) and forgets \(D\) cannot reconstruct native
-> literal Wick normal ordering for all source coefficients.
+> **MPD-W2.4 — residue-only forgetting criterion.** A scalar adapter retaining
+> only \(R_\iota z\) reconstructs the fixed-occupancy Wick scalar for every
+> coefficient vector if and only if \(R_\iota\) is injective. It fails for
+> every occupancy with a duplicate cell. An adapter universal over arbitrary
+> occupancies must retain \(D\) or equivalent literal-diagonal data.
 
-This is a no-go for a residue-only trace pushforward, not for every derived
-or correspondence category. PR #760's external-plus-literal-diagonal
-formalism retains exactly the extra datum that (5.3) forces.
+No duplicate occupied cell has yet been proved in a complete live fibre, and
+the native coefficient vectors have not been shown to vary freely in a
+kernel direction. Thus (5.3) is not a no-go for the as-yet-unclassified live
+occupancy. Nor is it a no-go for every derived or correspondence category.
+PR #760's external-plus-literal-diagonal formalism retains exactly the extra
+datum required uniformly over arbitrary occupancies.
 
 ### Counterfeit controls
 
@@ -453,15 +496,58 @@ Three controls prevent stronger misreadings.
    strict joint collision and deleting the literal diagonal gives the zero
    matrix. The true matrix (4.1) is full rank because the one-coordinate and
    constant centered backgrounds are load-bearing.
-3. **Nontrivial singular occupancy.** For \((\ell,\rho)=(5,11)\), occupy
-   the \(2\times3\) rectangle
+3. **Exact singular rectangle family.** Let \(p\ge5\) be prime, \(n\ge2\),
+   and suppose
 
    \[
-   T=\{0,1\}\times\{0,1,2\}
-   \subset\mathcal Q_5^\epsilon\times\mathcal Q_{11}^{\epsilon'}.
+   q=p(n-1)+1
+   \tag{5.7}
    \]
 
-   In row-major order,
+   is an odd prime. Choose distinct
+   \(x_1,x_2\in\mathcal Q_p^\epsilon\) and distinct
+   \(y_1,\ldots,y_n\in\mathcal Q_q^{\epsilon'}\), and occupy one atom in
+   every cell of
+
+   \[
+   T=\{x_1,x_2\}\times\{y_1,\ldots,y_n\}.
+   \tag{5.8}
+   \]
+
+   These elements exist: \(m_p\ge2\), while
+   \(m_q=p(n-1)/2\ge n\). On
+   \(w=(-\mathbf1_n,\mathbf1_n)\), the two-row restriction of \(H_p\)
+   has eigenvalue \(1\), and the constant line of the \(n\)-column
+   restriction of \(H_q\) has eigenvalue \(1-n/q\). Equation (5.7) gives
+
+   \[
+   1-{n\over q}
+   ={(p-1)(q-1)\over pq}
+   =d_{p,q},
+   \]
+
+   so \(B_Tw=0\). The other three spectral blocks have eigenvalues and
+   multiplicities
+
+   \[
+   1-d_{p,q}\quad(n-1),\qquad
+   {p-q-1\over pq}\quad(n-1),\qquad
+   -{2d_{p,q}\over p}\quad(1),
+   \]
+
+   all nonzero. Hence
+
+   \[
+   \boxed{\operatorname{rank}B_T=2n-1.}
+   \tag{5.9}
+   \]
+
+   Swapping \(p\) and \(q\) gives the symmetric \(n\times2\) orientation.
+   This is an exact incomplete-occupancy singular family without duplicate
+   cells; it is not a statement about live occupancy.
+
+   For the canonical member \((p,q,n)=(5,11,3)\), index the chosen cells in
+   (5.8) row-major. Then
 
    \[
    55B_T=
@@ -473,12 +559,11 @@ Three controls prevent stronger misreadings.
    1&-10&1&-4&0&-4\\
    1&1&-10&-4&-4&0
    \end{pmatrix}.
-   \tag{5.4}
+   \tag{5.10}
    \]
 
    The vector \((-1,-1,-1,1,1,1)\) is null, so
-   \(\operatorname{rank}B_T=5\). This is an exact incomplete-occupancy
-   obstruction even without duplicate cells.
+   \(\operatorname{rank}B_T=5\), as (5.9) predicts.
 
 The live source might occupy a nonsingular panel, a singular panel, or a
 weighted combination across fibres. The present sources do not decide which.
@@ -492,7 +577,7 @@ The Wave-2 theorem changes the required interface but closes no global gate.
 | correct Wick carrier | **PROVED** | retain \(\Omega\times_{\mathcal I}\Omega-\Delta\), never independent conductors |
 | physical map | **PROVED ON THE RESIDUE ENVELOPE** | classify the actual live image, multiplicities, and coefficients |
 | fixed-fibre Wick algebra | **PROVED FOR ARBITRARY OCCUPANCY** | exploit (3.9) without taking fibrewise absolute values |
-| residue-only scalar pushforward | **REFUTED AS SUFFICIENT** | retain literal diagonal energy or an equivalent external-plus-diagonal object |
+| residue-only scalar pushforward | **FOR ALL COEFFICIENT VECTORS, SUFFICIENT IFF \(R\) IS INJECTIVE; LIVE \(R\) UNKNOWN** | classify live multiplicities and native coefficient freedom; retain literal diagonal data for a universal arbitrary-occupancy adapter |
 | complete signed pushforward / RELPARTFROB | **OPEN** | construct the complete relative object with all source labels and compatible partial Frobenii |
 | ONEPLACEWEIL | **OPEN** | realize complete one-sided amplitudes together with the atom map and diagonal datum, uniformly |
 | WCADD / WCCORR | **OPEN** | prove coherent additive conductor recombination before absolute value |
@@ -519,7 +604,7 @@ Consequently the principal chain remains
       -> RH.
 
 Neither input estimate is proved. Indefiniteness in (4.5) is not an estimate,
-and the singular control (5.4) rules out inferring one from complete-cell
+and the singular family (5.9) rules out inferring one from complete-cell
 rank.
 
 ## 7. Wave-2 programme boundary map
@@ -541,7 +626,8 @@ Ranked continuation queue:
    an honest theorem, singularity, or no-go.
 2. **Atom-plus-diagonal geometry.** Build the smallest one-place adapter that
    retains both \(Rz\) and \(D\), then test partial Frobenius and closed-point
-   Adams. A residue-only adapter should no longer be attempted.
+   Adams. Such enrichment is forced for an arbitrary-occupancy adapter; first
+   test whether the native live aggregation is injective.
 3. **Signed conductor recombination.** Seek cancellation in the assembled
    occupancy forms before an outer absolute value; a source-blind Schur or
    energy bound is excluded by L-106191.
@@ -564,8 +650,9 @@ to abandon the geometric, additive, or Kummer programmes.
 | kernel and quotient spectral reduction (3.8)--(3.9) | **PROVED EXACTLY** |
 | complete-cell spectrum and full rank | **PROVED FOR ALL DISTINCT ODD PRIMES** |
 | finite panels and held-out panel | **EXACT RATIONAL / CERTIFIED INTEGER COVERAGE** |
-| residue-only forgetting no-go | **PROVED BY (3.5) AND THE EXACT COUNTEREXAMPLE (5.3)** |
-| singleton, collision-only, and singular-subset controls | **REPLAYED EXACTLY** |
+| residue-only sufficiency criterion | **PROVED IFF \(\ker R=0\) BY (3.5)** |
+| singleton, collision-only, and singular-rectangle-family controls | **PROVED AND REPLAYED EXACTLY** |
+| duplicate-cell live occupancy and native kernel-direction coefficient freedom | **NOT PROVED** |
 | live source occupancy | **NOT PROVED** |
 | native fixed-fibre or global noncancellation | **NOT PROVED** |
 | ONEPLACEWEIL, RELPARTFROB, RELTRACE, principal binding | **NOT PROVED** |
@@ -574,8 +661,8 @@ to abandon the geometric, additive, or Kummer programmes.
 No external novelty or priority claim is made for fibre products, incidence
 matrices, tensor spectra, or Wick pullbacks separately. The project-specific
 advance is the source-locked identification of the correct fixed-fibre
-occupancy operator and the exact diagonal-energy loss under physical residue
-forgetting.
+occupancy operator and the exact criterion for diagonal-energy loss under
+physical residue forgetting.
 
 ## 9. Replay and resource boundary
 
@@ -587,15 +674,18 @@ Run from the repository root:
     python -B -O -m unittest tests.test_ffps_shared_fibre_wick_occupancy_spectrum
 
 The replay uses only exact integers and rational arithmetic. It enumerates at
-most 900 ambient residue-envelope tuples and materializes simple matrices of
-dimension at most 15. It enumerates no live source family, curve, sheaf,
-closed-place tower, or L-function zero and performs no floating-point
-operation.
+most 900 ambient residue-envelope tuples, materializes complete-cell matrices
+of dimension at most 15 and rectangle matrices of dimension at most 14, and
+checks eight rectangle family members including two held-out orientations. It
+enumerates no live source family, curve, sheaf, closed-place tower, or
+L-function zero and performs no floating-point operation.
 
 The Wave-2 statement is therefore:
 
 > The native shared-fibre Wick form admits the exact arbitrary-occupancy
-> pullback (3.4), and residue aggregation without literal diagonal energy is
-> insufficient. Quotient occupancy remains a finite gate. Complete signed
-> noncancellation, descent, ONEPLACEWEIL, RELTRACE, principal binding, RH and
-> GRH are not proved. RH and GRH remain unproved.
+> pullback (3.4). Residue aggregation determines its scalar for every
+> coefficient vector exactly when the occupancy map is injective; a universal
+> arbitrary-occupancy adapter also needs literal diagonal energy. Native live
+> injectivity remains a finite gate. Complete signed noncancellation, descent,
+> ONEPLACEWEIL, RELTRACE, principal binding, RH and GRH are not proved. RH and
+> GRH remain unproved.

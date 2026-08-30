@@ -13,16 +13,17 @@ second wave now changes the diagnosis more sharply:
 
 1. the Wick pair lives in a relative self-product over one fixed conductor
    fibre; an independent product of two marked charts is the wrong object;
-2. the exact finite operator depends on both the aggregated residue field and
-   an atomic diagonal-energy channel;
-3. residue aggregation alone provably forgets source cancellation;
+2. the exact finite operator separates into an aggregated residue term and an
+   atomic diagonal-energy term;
+3. residue aggregation alone is sufficient for every coefficient vector if
+   and only if the live occupancy map is injective;
 4. complete-cell occupancy is full-rank and indefinite, while incomplete
    occupancy can be singular.
 
-This is a useful structural no-go, not native noncancellation.  It identifies
-the next object that should be sought: a source-faithful relative or derived
-pushforward which retains literal diagonal data before label forgetting and
-signed conductor recombination.
+This is a useful structural criterion, not native noncancellation.  It makes
+live occupancy classification the first gate.  In parallel, an adapter meant
+to work uniformly over arbitrary occupancies must retain literal diagonal data
+before label forgetting and signed conductor recombination.
 
 The programme should nevertheless remain broader than this one sheaf lane.
 Four mechanisms are retained below: relative Frobenius geometry,
@@ -71,16 +72,17 @@ For a coefficient vector `z`,
 \tag{1.2}
 \]
 
-Equation (1.2) gives both a no-go and a replacement design.
+Equation (1.2) gives both an exact sufficiency criterion and a universal
+replacement design.
 
 | verdict | exact content | what it does not prove |
 |---|---|---|
 | shared-fibre carrier | the correct pair object is `(Omega x_I Omega) minus Delta`, with literal source diagonal | existence of a descended sheaf or commuting partial Frobenii |
 | two-channel sufficiency | `(Rz, sum abs(z)^2)` reconstructs the finite Wick form exactly | that both channels occur canonically after native pushforward |
-| residue-forgetting no-go | two same-cell atoms with coefficients `(1,-1)` have `Rz=0` but Wick value `-2d` | failure of every richer relative or derived realization |
+| residue-forgetting criterion | `Rz` determines the scalar for all vectors iff `ker R=0`; two same-cell atoms give the exact failure witness | a duplicate cell or free kernel-direction coefficients in the complete live source |
 | kernel theorem | on `ker R`, `B_R=-dI`; source-difference energy is invisible to residue totals | a favourable sign after all source coefficients are inserted |
-| complete-cell spectrum | one atom in every allowed cell gives four explicit, nonzero eigenspaces and a full-rank indefinite operator for distinct odd primes | heredity to the live incomplete occupancy |
-| incomplete-occupancy obstruction | singleton occupancy is zero; a `2 by n` rectangle has an exact null vector when `rho-1=ell(n-1)` | classification of the actual native occupancy matrix |
+| complete-cell spectrum | one atom in every allowed cell gives four spectral blocks, every positive-multiplicity eigenvalue nonzero, and a full-rank indefinite operator for distinct odd primes | heredity to the live incomplete occupancy |
+| incomplete-occupancy obstruction | singleton occupancy is zero; for `n>=2` and odd primes `p>=5`, `q=p(n-1)+1`, a `2 by n` rectangle and its transpose have nullity one | classification of the actual native occupancy matrix |
 
 The exact source-locked theorem packet is
 `FFPS_SHARED_FIBRE_WICK_OCCUPANCY_SPECTRUM.md` in the function-field atlas.
@@ -88,18 +90,21 @@ Its replay, not this programme map, is the canonical proof artifact.
 
 ### Structural interpretation
 
-The forgotten term in (1.2) is not a bookkeeping nuisance.  It is precisely
-the normal-ordering correction that distinguishes literal atom equality from
-equality after physical collapse.  Therefore a residue-only
-`ONEPLACEWEIL` object cannot be source-faithful.  A viable construction must
-retain either:
+The second term in (1.2) is not a bookkeeping nuisance.  It is precisely the
+normal-ordering correction that distinguishes literal atom equality from
+equality after physical collapse.  If the live occupancy is injective, it is
+recoverable from `Rz`; if a cell is duplicated, it is not.  Therefore a
+`ONEPLACEWEIL` object intended to work without first proving live injectivity
+must retain either:
 
 - the literal relative diagonal and its cone/complement;
 - a second quadratic-energy channel compatible with pushforward; or
 - an equivalent enriched object from which both statistics descend.
 
-This is the strongest current bridge to the unfinished #760 relative-first
-architecture.
+No duplicate occupied cell has yet been proved in a complete live fibre, and
+native coefficients have not been shown to range freely in a kernel
+direction.  The injectivity test and the universal enriched construction are
+the two honest bridges to the unfinished #760 relative-first architecture.
 
 ## 2. Repository boundary map
 
@@ -152,9 +157,11 @@ Required outputs:
 3. produce a signed trace with a uniform complexity bound;
 4. bind the resulting family statement to the principal consumer.
 
-Falsifier: any construction whose pushforward factors only through `Rz` is
-already ruled out.  A construction that recreates the target quadratic form
-by choosing a bespoke inner product is fitted, not geometric.
+Falsifier: after a duplicate live cell is proved, any construction whose
+pushforward factors only through `Rz` is ruled out for arbitrary coefficient
+vectors on that fibre.  Independently, a construction that recreates the
+target quadratic form by choosing a bespoke inner product is fitted, not
+geometric.
 
 Promotion test: one honest complex should explain normal ordering and partial
 Frobenius, then predict an unused conductor-recombination identity.
@@ -228,7 +235,7 @@ enough to reject fitted structures.
 | corpus block | calibration data | held-out requirement |
 |---|---|---|
 | native shared fibres | distinct odd marked primes and the exact atom/residue map | arbitrary live occupancy and label multiplicity, not only one atom per cell |
-| diagonal controls | singleton; two same-cell atoms; complete cell grid | incomplete rectangles and source coefficients with cancellations |
+| diagonal controls | singleton; two same-cell atoms; complete cell grid | exact `2 by n` singular family in both orientations and source coefficients with cancellations |
 | source lineage | exact claims `L-106120`, `L-106131`, `L-106191`, `T-106140` | signed conductor recombination and equal-output split |
 | function-field analogue | clean trace/weight examples | one literal relative pushforward with partial Frobenius |
 | archimedean block | `GL(1)` real/complex gamma data | dual, parity, and tensor rule not used to fit the model |
@@ -242,7 +249,8 @@ occupancy.  Broad finite-field or zero sweeps are not the next bottleneck.
 
 ### T1. `DIAGREL`: a two-channel relative object
 
-Construct a canonical relative triangle or graded object whose trace gives
+Construct a canonical relative triangle or graded object, valid without an
+injectivity hypothesis, whose trace gives
 
 \[
  (Rz)^*S(Rz)-d\sum|z|^2
@@ -251,9 +259,9 @@ Construct a canonical relative triangle or graded object whose trace gives
 before source labels are forgotten.  Prove compatibility with the partial
 Frobenius used by the #760 relative-first Adams extractor.
 
-This is the highest-priority object theorem.  It is stronger than adding the
-diagonal term by hand: the term must arise functorially from the literal
-relative diagonal.
+This is the highest-priority universal-object theorem after the live
+injectivity audit.  It is stronger than adding the diagonal term by hand: the
+term must arise functorially from the literal relative diagonal.
 
 ### T2. `OCCSPEC`: live occupancy classification
 
@@ -268,8 +276,8 @@ on the aggregated quotient, together with the fixed `-d` source-difference
 space.  Then determine which multiplicity patterns the native owner/cofactor
 constraints actually permit.
 
-The rectangle null family shows that full-cell invertibility is not the right
-conjecture.
+The exact rectangle null family `q=p(n-1)+1`, including the transposed
+orientation, shows that full-cell invertibility is not the right conjecture.
 
 ### T3. `SIGNEDRECOMB`: cancellation before norms
 
@@ -309,9 +317,9 @@ lineage.
 
 | earlier frontier | present decision | reason |
 |---|---|---|
-| source-faithful function-field relative sheaf and principal extraction | **absorbed as priority 1 of #763** | the two-channel diagonal obstruction now specifies what the carrier must retain |
+| source-faithful function-field relative sheaf and principal extraction | **absorbed as priority 1 of #763** | first classify live injectivity; a universal carrier must retain the two-channel diagonal datum |
 | full primitive divisor wavelet / `COREWAVE` | **continue in parallel, separately source-locked** | it is the strongest exact one-variable reduction on Architecture A, but progress must use signed Möbius cancellation rather than another positive-norm relaxation |
-| complete assembled beta source | **retain after carrier repair** | assembling more source into a residue-only object would preserve the present forgetting error |
+| complete assembled beta source | **retain after occupancy audit** | it may prove live injectivity or expose the duplicate cells that force carrier enrichment |
 | literal function-field mirror | **retain as the first `CROSSWORLD` held-out** | useful only when the same object and operations transfer literally, not by analogy |
 | Xi/explicit-formula descent | **defer one dependency level** | a descent claim is premature before the finite and archimedean carriers are both source-faithful |
 | bounded quartic moonshot | **keep as an independent low-cost scout** | it should not displace `DIAGREL`, but an exact multi-observable or no-go result could justify its own later branch |
@@ -329,7 +337,7 @@ packets are reviewed.
 |---|---|---|
 | 0:00--1:00 | extract the actual live occupancy/multiplicity map from the complete source labels | stop if any source coordinate has been silently collapsed |
 | 1:00--2:15 | prove `OCCSPEC` for the first structured multiplicity families and isolate singularity equations | no broad enumeration; retain counterexamples |
-| 2:15--4:00 | design and test the literal diagonal triangle/two-channel `DIAGREL` adapter | reject any independent-conductor or residue-only model |
+| 2:15--4:00 | design and test the literal diagonal triangle/two-channel `DIAGREL` adapter | reject independent conductors; call residue-only invalid only after noninjectivity is proved |
 | 4:00--5:00 | compose the adapter with partial Adams extraction and audit commuting Frobenius requirements | do not claim a sheaf if only finite matrices exist |
 | 5:00--6:00 | push the full signed coefficient ledger through conductor recombination | take no absolute value before the source-cancellation question is answered |
 | 6:00--7:00 | run the `GL(1)` archimedean compatibility census as an independent lane | determinant matching alone does not pass |
@@ -337,9 +345,10 @@ packets are reviewed.
 
 ## 9. Ranked continuation queue
 
-1. **`DIAGREL` plus the actual live occupancy map.**  This directly repairs
-   the source-forgetting obstruction and continues the most important #760
-   leftover.
+1. **The actual live occupancy map plus `DIAGREL`.**  The first decides
+   whether residue forgetting occurs natively; the second supplies a
+   source-faithful adapter uniformly over arbitrary occupancies and continues
+   the most important #760 leftover.
 2. **Signed conductor recombination.**  Source cancellation, not a larger
    positive container, is the remaining leverage.
 3. **`RELTRACE` and `PRINCIPAL_BINDING`.**  These are the true RH-facing

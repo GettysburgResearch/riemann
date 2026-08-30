@@ -55,8 +55,11 @@ SOURCE_BLOBS = {
 
 CONTROL_PAIRS = ((3, 5), (3, 7), (5, 7))
 HELD_OUT_PAIR = (7, 11)
+RECTANGLE_CONTROL_PARAMETERS = ((5, 3), (5, 7), (7, 5))
+RECTANGLE_HELD_OUT_PARAMETER = (7, 7)
 MAX_SIMPLE_MATRIX_DIMENSION = 15
 MAX_ENVELOPE_POINTS = 900
+MAX_RECTANGLE_ATOMS = 14
 
 Matrix = tuple[tuple[Fraction, ...], ...]
 
@@ -344,6 +347,19 @@ def aggregation_matrix(cell_count: int, assignments: tuple[int, ...]) -> Matrix:
     )
 
 
+def aggregation_is_injective(assignments: tuple[int, ...]) -> bool:
+    """Whether physical residue aggregation loses no literal atom coordinate."""
+
+    if not assignments:
+        raise ValueError("at least one assignment is required")
+    if any(
+        isinstance(cell, bool) or not isinstance(cell, int) or cell < 0
+        for cell in assignments
+    ):
+        raise ValueError("assignments must be nonnegative integer cell indices")
+    return len(set(assignments)) == len(assignments)
+
+
 def occupancy_wick_matrix(ell: int, rho: int, assignments: tuple[int, ...]) -> Matrix:
     kernel = tensor_kernel(ell, rho)
     incidence = aggregation_matrix(len(kernel), assignments)
@@ -475,27 +491,150 @@ def ambient_envelope_inertia(ell: int, rho: int) -> tuple[int, int, int]:
     return cells, (multiplicity - 1) * cells, 0
 
 
-def singular_rectangle_control() -> dict[str, object]:
-    """The nontrivial incomplete-occupancy kernel at (ell,rho)=(5,11)."""
+def singular_rectangle_symbolic_spectrum(
+    base_prime: int, n: int
+) -> dict[str, object]:
+    """Exact four-block spectrum for rho=base_prime*(n-1)+1."""
 
-    ell, rho = 5, 11
-    assignments = (0, 1, 2, 5, 6, 7)
+    if not is_prime(base_prime) or base_prime < 5:
+        raise ValueError("base_prime must be an odd prime at least five")
+    if isinstance(n, bool) or not isinstance(n, int) or n < 2:
+        raise ValueError("n must be an integer at least two")
+    large_prime = base_prime * (n - 1) + 1
+    if not is_prime(large_prime):
+        raise ValueError("base_prime*(n-1)+1 must be prime")
+    validate_pair(base_prime, large_prime)
+
+    diagonal = atomic_diagonal(base_prime, large_prime)
+    rows = (
+        ("row_difference_x_column_mean_zero", Fraction(1) - diagonal, n - 1),
+        (
+            "row_difference_x_column_constant",
+            Fraction(1) - Fraction(n, large_prime) - diagonal,
+            1,
+        ),
+        (
+            "row_constant_x_column_mean_zero",
+            Fraction(base_prime - 2, base_prime) - diagonal,
+            n - 1,
+        ),
+        (
+            "row_constant_x_column_constant",
+            Fraction(base_prime - 2, base_prime)
+            * (Fraction(1) - Fraction(n, large_prime))
+            - diagonal,
+            1,
+        ),
+    )
+    expected = (
+        Fraction(1) - diagonal,
+        Fraction(),
+        Fraction(base_prime - large_prime - 1, base_prime * large_prime),
+        -Fraction(2, base_prime) * diagonal,
+    )
+    if tuple(value for _, value, _ in rows) != expected:
+        raise ArithmeticError("singular-rectangle symbolic spectrum changed")
+    if sum(multiplicity for _, value, multiplicity in rows if value == 0) != 1:
+        raise ArithmeticError("singular-rectangle symbolic nullity changed")
+    return {
+        "base_prime": base_prime,
+        "n": n,
+        "large_prime": large_prime,
+        "dimension": 2 * n,
+        "rank": 2 * n - 1,
+        "nullity": 1,
+        "spectral_blocks": [
+            {
+                "space": name,
+                "eigenvalue": fraction_text(value),
+                "multiplicity": multiplicity,
+            }
+            for name, value, multiplicity in rows
+        ],
+    }
+
+
+def singular_rectangle_family_member(
+    base_prime: int, n: int, *, transposed: bool = False
+) -> dict[str, object]:
+    """Materialize one bounded 2-by-n or transposed family control."""
+
+    certificate = singular_rectangle_symbolic_spectrum(base_prime, n)
+    large_prime = int(certificate["large_prime"])
+
+    if transposed:
+        ell, rho = large_prime, base_prime
+        row_count, column_count = n, 2
+        null_vector = tuple(
+            Fraction(sign) for _ in range(n) for sign in (-1, 1)
+        )
+    else:
+        ell, rho = base_prime, large_prime
+        row_count, column_count = 2, n
+        null_vector = tuple([Fraction(-1)] * n + [Fraction(1)] * n)
+
+    available_rows = (ell - 1) // 2
+    available_columns = (rho - 1) // 2
+    if row_count > available_rows or column_count > available_columns:
+        raise ArithmeticError("rectangle does not fit in the allowed cell panel")
+    assignments = tuple(
+        row * available_columns + column
+        for row in range(row_count)
+        for column in range(column_count)
+    )
+    if len(assignments) > MAX_RECTANGLE_ATOMS:
+        raise RuntimeError("rectangle-atom cap exceeded")
     matrix = occupancy_wick_matrix(ell, rho, assignments)
-    null_vector = tuple(Fraction(value) for value in (-1, -1, -1, 1, 1, 1))
-    if matrix_rank(matrix) != 5:
-        raise ArithmeticError("(5,11) rectangle did not have rank five")
+    expected_rank = int(certificate["rank"])
+    if matrix_rank(matrix) != expected_rank:
+        raise ArithmeticError("singular rectangle did not have nullity one")
     image = matrix_multiply(matrix, tuple((entry,) for entry in null_vector))
     if any(entry for row in image for entry in row):
-        raise ArithmeticError("(5,11) rectangle null vector changed")
-    scaled = scalar_matrix(Fraction(55), matrix)
+        raise ArithmeticError("singular rectangle null vector changed")
+    scaled_by = ell * rho
+    scaled = scalar_matrix(Fraction(scaled_by), matrix)
     return {
+        "base_prime": base_prime,
+        "n": n,
         "ell": ell,
         "rho": rho,
+        "orientation": "n_by_2" if transposed else "2_by_n",
+        "shape": [row_count, column_count],
+        "prime_relation": f"{large_prime}-1={base_prime}*({n}-1)",
         "occupied_cell_indices": list(assignments),
         "rank": matrix_rank(matrix),
         "null_vector": [fraction_text(entry) for entry in null_vector],
-        "scaled_by": 55,
+        "scaled_by": scaled_by,
         "scaled_matrix": [[fraction_text(entry) for entry in row] for row in scaled],
+    }
+
+
+def singular_rectangle_control() -> dict[str, object]:
+    """Backward-compatible canonical member at (ell,rho,n)=(5,11,3)."""
+
+    return singular_rectangle_family_member(5, 3)
+
+
+def singular_rectangle_family_summary(
+    base_prime: int, n: int, *, transposed: bool, held_out: bool
+) -> dict[str, object]:
+    """Compact replay certificate for one singular-rectangle family member."""
+
+    control = singular_rectangle_family_member(
+        base_prime, n, transposed=transposed
+    )
+    return {
+        "base_prime": control["base_prime"],
+        "n": control["n"],
+        "ell": control["ell"],
+        "rho": control["rho"],
+        "orientation": control["orientation"],
+        "shape": control["shape"],
+        "prime_relation": control["prime_relation"],
+        "atom_count": len(control["occupied_cell_indices"]),
+        "rank": control["rank"],
+        "nullity": 1,
+        "held_out": held_out,
     }
 
 
@@ -539,7 +678,7 @@ def build_pair_panel(ell: int, rho: int, held_out: bool) -> dict[str, object]:
         raise ArithmeticError("duplicate-cell contrast did not push forward to zero")
     contrast_value = quadratic_form(duplicate, contrast)
     if contrast_value != -2 * atomic_diagonal(ell, rho):
-        raise ArithmeticError("residue-forgetting counterfeit changed")
+        raise ArithmeticError("duplicate-cell criterion control changed")
     if matrix_rank(strict_double_collision_matrix(simple_assignments)) != 0:
         raise ArithmeticError("strict-collision counterfeit should vanish")
 
@@ -565,6 +704,10 @@ def build_pair_panel(ell: int, rho: int, held_out: bool) -> dict[str, object]:
         "strict_collision_only_simple_rank": matrix_rank(
             strict_double_collision_matrix(simple_assignments)
         ),
+        "simple_occupancy_aggregation_is_injective": aggregation_is_injective(
+            simple_assignments
+        ),
+        "duplicate_cell_aggregation_is_injective": aggregation_is_injective((0, 0)),
         "same_cell_contrast_pushforward": [
             fraction_text(entry)
             for entry in aggregate_vector(dimension, (0, 0), contrast)
@@ -613,21 +756,38 @@ def check_source_lock_manifest() -> None:
 def build_report() -> dict[str, object]:
     panels = [build_pair_panel(ell, rho, held_out=False) for ell, rho in CONTROL_PAIRS]
     panels.append(build_pair_panel(*HELD_OUT_PAIR, held_out=True))
+    rectangle_controls = [
+        singular_rectangle_family_summary(
+            base_prime, n, transposed=transposed, held_out=False
+        )
+        for base_prime, n in RECTANGLE_CONTROL_PARAMETERS
+        for transposed in (False, True)
+    ]
+    rectangle_controls.extend(
+        singular_rectangle_family_summary(
+            *RECTANGLE_HELD_OUT_PARAMETER,
+            transposed=transposed,
+            held_out=True,
+        )
+        for transposed in (False, True)
+    )
     return {
         "schema": (
             "riemann.function_field.ffps_shared_fibre_wick_occupancy_spectrum.v1"
         ),
-        "status": "EXACT_FIXED_FIBRE_IDENTITY_AND_RESIDUE_FORGETTING_NO_GO",
+        "status": "EXACT_FIXED_FIBRE_IDENTITY_AND_RESIDUE_FORGETTING_CRITERION",
         "arithmetic_class": "MIXED",
         "arithmetic_components": {
             "matrix_spectrum_and_quadratic_forms": "EXACT_RATIONAL",
             "complete_residue_envelope_counts": "CERTIFIED_INTEGER_COVERAGE",
+            "singular_rectangle_symbolic_spectrum": "EXACT_RATIONAL",
         },
         "theorem_ledger": {
             "MPD-W2.1": "SHARED_FIBRE_OWNER_COFACTOR_RESIDUE_MAP_PROVED",
             "MPD-W2.2": "EXACT_ARBITRARY_OCCUPANCY_PULLBACK_IDENTITY_PROVED",
             "MPD-W2.3": "SIMPLE_COMPLETE_CELL_SPECTRUM_PROVED_ALL_DISTINCT_ODD_PRIMES",
-            "MPD-W2.4": "RESIDUE_ONLY_FORGETTING_REFUTED",
+            "MPD-W2.4": "RESIDUE_ONLY_SUFFICIENCY_IFF_AGGREGATION_INJECTIVE",
+            "MPD-W2.4R": "TWO_BY_N_SINGULAR_RECTANGLE_FAMILY_PROVED",
             "MPD-W2.5": "LIVE_OCCUPANCY_AND_GLOBAL_SIGNED_RECOMBINATION_OPEN",
         },
         "ontology": {
@@ -648,8 +808,10 @@ def build_report() -> dict[str, object]:
         },
         "finite_controls": panels,
         "incomplete_occupancy_countercontrol": singular_rectangle_control(),
+        "singular_rectangle_family_controls": rectangle_controls,
         "not_proved": [
             "surjectivity or multiplicity of the complete live source on residue cells",
+            "a duplicate occupied cell in any complete live conductor fibre",
             "noncancellation in any complete native conductor fibre",
             "ONEPLACEWEIL for complete literal source amplitudes",
             "RELPARTFROB for the complete relative class",
@@ -669,6 +831,10 @@ def build_report() -> dict[str, object]:
                 panel["ambient_residue_envelope_points"] for panel in panels
             ),
             "nontrivial_incomplete_occupancy_atoms": 6,
+            "singular_rectangle_control_members": len(rectangle_controls),
+            "maximum_singular_rectangle_atoms": max(
+                int(control["atom_count"]) for control in rectangle_controls
+            ),
             "source_blobs_authenticated": len(SOURCE_BLOBS),
             "floating_point_operations": 0,
             "live_source_atoms_enumerated": 0,
@@ -688,8 +854,8 @@ def check_note_contract() -> None:
         "shared marked fibre",
         "not an independent marked-place product",
         "literal diagonal energy",
-        "residue-only forgetting no-go",
-        "live occupancy remains open",
+        "residue-only forgetting criterion",
+        "Live occupancy remains open",
         "ONEPLACEWEIL",
         "RELTRACE",
         "principal binding",

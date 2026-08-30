@@ -103,9 +103,11 @@ is an exact RH-equivalent open gate, not a completed estimate.
   pushforward, `ONEPLACEWEIL`, `RELTRACE`, and principal binding remain open.
 - [FFPS_SHARED_FIBRE_WICK_OCCUPANCY_SPECTRUM.md](FFPS_SHARED_FIBRE_WICK_OCCUPANCY_SPECTRUM.md)
   replaces an invalid independent-conductor Wick product by the exact
-  shared-fibre occupancy operator and proves that residue aggregation without
-  literal diagonal energy is insufficient; live occupancy, signed
-  noncancellation, descent, and every principal gate remain open.
+  shared-fibre occupancy operator. Residue aggregation determines the Wick
+  scalar for all coefficient vectors exactly when the occupancy map is
+  injective; the packet also proves and replays a symmetric singular rectangle
+  family. Live occupancy and injectivity, signed noncancellation, descent, and
+  every principal gate remain open.
 
 The genus-one, genus-two, and cross-rank extensions are organized as
 source/note/JSON/test packets:
