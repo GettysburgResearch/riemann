@@ -125,6 +125,11 @@ Let `A=C[u]` and, for any complex `mu`, let `F_mu=A e_mu` carry the connection
  \Theta_\mu=-2u\frac{d}{du}-\mu.
 \]
 
+Here connection means a differential-module operator for the fixed
+derivation `D=-2u d/du`: `Theta(a x)=D(a)x+a Theta(x)`. All balanced tensor
+and dual statements below are algebraic over this differential ring, not
+assertions about completed Hilbert tensor products.
+
 It is rank one over `A` but infinite-dimensional over `C`.  Its distinguished
 basis `u^n e_mu`, `n>=0`, has eigenvalues `-(2n+mu)`.  On the completion with
 this basis orthonormal the diagonal operator has its natural closed domain;
@@ -239,8 +244,12 @@ Associativity is exact, not a fitted pairwise rule, because
 Both sides equal `floor((epsilon+eta+kappa)/2)`.  The even trivial type is
 the unit and the maps are symmetric.  This defines a **lax**, not strong,
 monoidal assignment on the category of these types and scalar maps.
-Extension by finite direct sums is allowed; no representation category
-beyond this specified one is asserted.
+Precisely, scalar endomorphisms of one type are allowed and morphisms between
+distinct types are zero; arbitrary scalars between distinct types would not
+intertwine their connections. Extension by finite direct sums is allowed;
+no representation category beyond this specified one is asserted. The maps
+are canonical relative to the fixed coordinate `u` and generators `e_mu`,
+not a claim of a canonical arithmetic realization.
 
 Likewise the `A`-linear connection dual of `F_mu` is `F_{-mu}`.  For an odd
 type, the character dual ladder is instead `F_{-mu+2}`.  The natural map
@@ -257,7 +266,10 @@ parity carry, and the finite gamma quotient (1.1) record one exact defect.
 
 After localization to `C[u,u^{-1}]` the maps become invertible.  But the
 spectrum becomes two-sided and the positive-time heat trace in (3.2)
-diverges.  The particular one-sided regularization in (3.3) no longer
+diverges. With the same orthonormal monomial completion, the diagonal
+positive-time exponential is already unbounded: the magnitudes
+`exp(-(2n+Re(mu))t)` tend to infinity as `n` tends to negative infinity.
+The particular one-sided regularization in (3.3) no longer
 applies.  Localization is therefore not a free repair that preserves all
 the analytic data.  This does not exclude a different, justified
 two-sided regularization.
@@ -301,3 +313,19 @@ imported assumptions; the replay does not download or certify them.
 Rational-shift fixtures are exact `Fraction` arithmetic.  The proof of
 (2.1), not a finite scan, covers arbitrary complex shifts and every finite
 list.  No numerical gamma or zero calculation is used.
+
+Replay limits are implementation bounds, not theorem hypotheses: at most
+32 terms, 64 numerator/denominator bits, 64 absolute recurrence steps per
+shift, absolute multiplicity at most 32, total shift/multiplicity weight at
+most 256, and basis degrees `0..64`. The rational helpers intentionally
+reject complex floating-point inputs; arbitrary complex shifts belong to
+the proof of (2.1), not those helpers.
+
+The complete typed source manifest is checked, then its canonical JSON hash
+is recorded so a CRLF checkout cannot alter its identity. The frozen source
+is read from Git and verified by both blob ID and LF-normalized SHA-256.
+Current note, producer, tests, and manifest are bound by LF-normalized hashes.
+Typed canonical comparison prevents Python's `True == 1` coercion from
+accepting altered fixture fields. Checks use no optimization-removable
+`assert`. The audit of original head `86f41e9dce082677508eb79e37f3a3bf417027aa`
+is recorded in `ARCHIMEDEAN_LADDER_BOUNDARY_AUDIT.md`.

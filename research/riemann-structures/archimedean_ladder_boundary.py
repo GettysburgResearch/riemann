@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import ast
 import hashlib
 import json
 import subprocess
@@ -20,12 +21,31 @@ SOURCES = HERE / "archimedean_ladder_boundary.sources.json"
 SOURCE_COMMIT = "6675c19f20760301d8c91dedc4a7836170003512"
 SOURCE_PATH = "research/riemann-structures/RIEMANN_STRUCTURES_WAVE2_PORTFOLIO.md"
 SOURCE_BLOB = "f5e0eb316f29d5e44cc3c7124401cb3e784fef49"
+SOURCE_SHA256_LF = "23d5a5a7ccdf7669cbbfab6bf4a71d904c71ca5986caecb424d33d67bcd70a8c"
+NOTE = HERE / "ARCHIMEDEAN_LADDER_BOUNDARY.md"
+TEST = ROOT / "tests/test_archimedean_ladder_boundary.py"
+MAX_INPUT_BITS, MAX_TERMS, MAX_SHIFT_STEPS = 64, 32, 64
+MAX_MULTIPLICITY, MAX_REDUCTION_WEIGHT, MAX_BASIS_DEGREE = 32, 256, 64
+
+
+def canonical_json(data: object) -> str:
+    return json.dumps(data, sort_keys=True, separators=(",", ":"), ensure_ascii=True)
+
+
+def sha256_lf(data: bytes) -> str:
+    return hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest()
 
 
 def exact_fraction(value: int | Fraction) -> Fraction:
-    if isinstance(value, bool) or not isinstance(value, (int, Fraction)):
+    if type(value) not in (int, Fraction):
         raise TypeError("exact int or Fraction required")
-    return Fraction(value)
+    value = Fraction(value)
+    if (
+        max(value.numerator.bit_length(), value.denominator.bit_length())
+        > MAX_INPUT_BITS
+    ):
+        raise ValueError("exact input exceeds the bounded bit-length contract")
+    return value
 
 
 @dataclass(frozen=True)
@@ -35,12 +55,33 @@ class GammaTerm:
 
     def __post_init__(self) -> None:
         object.__setattr__(self, "shift", exact_fraction(self.shift))
-        if isinstance(self.multiplicity, bool) or not isinstance(self.multiplicity, int):
+        if isinstance(self.multiplicity, bool) or not isinstance(
+            self.multiplicity, int
+        ):
             raise TypeError("integer multiplicity required")
+        if abs(self.shift // 2) > MAX_SHIFT_STEPS:
+            raise ValueError("shift exceeds the bounded recurrence-step contract")
+        if abs(self.multiplicity) > MAX_MULTIPLICITY:
+            raise ValueError("multiplicity exceeds the bounded replay contract")
+
+
+def validate_terms(terms: tuple[GammaTerm, ...]) -> None:
+    if type(terms) is not tuple:
+        raise TypeError("a tuple of GammaTerm objects is required")
+    if len(terms) > MAX_TERMS:
+        raise ValueError("too many terms for the bounded replay")
+    if any(type(term) is not GammaTerm for term in terms):
+        raise TypeError("a tuple of GammaTerm objects is required")
+    if (
+        sum(abs(term.shift // 2) * abs(term.multiplicity) for term in terms)
+        > MAX_REDUCTION_WEIGHT
+    ):
+        raise ValueError("total shift/multiplicity weight exceeds the replay cap")
 
 
 def reduce_shifts(terms: tuple[GammaTerm, ...]) -> dict:
     """F = prod Gamma_R(s+c)^M_c * (2pi)^h * prod (s+a)^e_a."""
+    validate_terms(terms)
     tails: Counter = Counter()
     linear: Counter = Counter()
     two_pi_power = 0
@@ -55,9 +96,7 @@ def reduce_shifts(terms: tuple[GammaTerm, ...]) -> dict:
             linear[c + 2 * j] += sign * term.multiplicity
     return {
         "rational": all(value == 0 for value in tails.values()),
-        "tail_multiplicities": [
-            [str(c), tails[c]] for c in sorted(tails) if tails[c]
-        ],
+        "tail_multiplicities": [[str(c), tails[c]] for c in sorted(tails) if tails[c]],
         "two_pi_power": two_pi_power,
         "linear_factors": [[str(a), linear[a]] for a in sorted(linear) if linear[a]],
     }
@@ -65,6 +104,7 @@ def reduce_shifts(terms: tuple[GammaTerm, ...]) -> dict:
 
 def divisor_order(terms: tuple[GammaTerm, ...], point: int | Fraction) -> int:
     """Positive is a zero, negative is a pole; exact at rational points."""
+    validate_terms(terms)
     s = exact_fraction(point)
     result = 0
     for term in terms:
@@ -75,6 +115,7 @@ def divisor_order(terms: tuple[GammaTerm, ...], point: int | Fraction) -> int:
 
 
 def stable_tails(terms: tuple[GammaTerm, ...]) -> list[dict]:
+    validate_terms(terms)
     groups: dict[Fraction, list[GammaTerm]] = defaultdict(list)
     for term in terms:
         groups[term.shift % 2].append(term)
@@ -86,7 +127,9 @@ def stable_tails(terms: tuple[GammaTerm, ...]) -> list[dict]:
         orders = [divisor_order(terms, point) for point in points]
         if orders != [expected] * 3:
             raise ArithmeticError("stable divisor-tail identity failed")
-        rows.append({"coset": str(c), "points": list(map(str, points)), "orders": orders})
+        rows.append(
+            {"coset": str(c), "points": list(map(str, points)), "orders": orders}
+        )
     return rows
 
 
@@ -118,10 +161,14 @@ def tensor_data(epsilon: int, eta: int) -> tuple[int, int]:
     return e ^ f, e * f
 
 
-def basis_weight(par: int, twist: int | Fraction, degree: int) -> tuple[Fraction, Fraction]:
+def basis_weight(
+    par: int, twist: int | Fraction, degree: int
+) -> tuple[Fraction, Fraction]:
     parity(par)
-    if isinstance(degree, bool) or not isinstance(degree, int) or degree < 0:
-        raise ValueError("one-sided degree must be a nonnegative integer")
+    if type(degree) is not int or not 0 <= degree <= MAX_BASIS_DEGREE:
+        raise ValueError(
+            "one-sided degree must be an integer in the bounded range 0..64"
+        )
     return Fraction(2 * degree + par), exact_fraction(twist)
 
 
@@ -132,7 +179,9 @@ def pair_record(epsilon: int, eta: int) -> dict:
         left = basis_weight(epsilon, Fraction(2, 3), n)
         right = basis_weight(eta, Fraction(-5, 7), m)
         source = tuple(a + b for a, b in zip(left, right))
-        target = basis_weight(target_parity, Fraction(2, 3) - Fraction(5, 7), n + m + carry)
+        target = basis_weight(
+            target_parity, Fraction(2, 3) - Fraction(5, 7), n + m + carry
+        )
         if source != target:
             raise ArithmeticError("balanced tensor map failed to intertwine")
         checks += 1
@@ -153,7 +202,11 @@ def triple_record(epsilon: int, eta: int, kappa: int) -> dict:
     left, right = first + second, third + fourth
     if left != right or left != (epsilon + eta + kappa) // 2:
         raise ArithmeticError("parity carry is not associative")
-    return {"parities": [epsilon, eta, kappa], "left_u_power": left, "right_u_power": right}
+    return {
+        "parities": [epsilon, eta, kappa],
+        "left_u_power": left,
+        "right_u_power": right,
+    }
 
 
 def dual_record(epsilon: int) -> dict:
@@ -164,33 +217,75 @@ def dual_record(epsilon: int) -> dict:
         connection_dual_after_map = (Fraction(2 * (n + e) - e), -twist)
         if character_dual != connection_dual_after_map:
             raise ArithmeticError("dual boundary failed to intertwine")
-    return {"parity": e, "u_power": e, "cokernel_dimension": e, "perfect_over_A": e == 0}
+    return {
+        "parity": e,
+        "u_power": e,
+        "cokernel_dimension": e,
+        "perfect_over_A": e == 0,
+    }
+
+
+def expected_source_manifest() -> dict:
+    return {
+        "schema": "archimedean-ladder-source-lock-v1",
+        "source_commit": SOURCE_COMMIT,
+        "frozen_programme_path": SOURCE_PATH,
+        "frozen_programme_blob": SOURCE_BLOB,
+        "frozen_programme_sha256_lf": SOURCE_SHA256_LF,
+        "current_programme_may_evolve": True,
+        "imported_analytic_facts": [
+            {
+                "url": "https://dlmf.nist.gov/5.2",
+                "fact": "Gamma has no zeros and simple poles at nonpositive integers",
+            },
+            {
+                "url": "https://dlmf.nist.gov/5.5",
+                "fact": "Gamma recurrence and duplication, equations 5.5.1 and 5.5.5",
+            },
+            {
+                "url": "https://dlmf.nist.gov/25.11",
+                "fact": "Hurwitz zeta continuation and values 25.11.13 and 25.11.18",
+            },
+        ],
+        "literature_boundary": "https://arxiv.org/abs/1211.4239",
+        "replay_scope": "exact finite algebra only; no certification of imported analytic theorems",
+    }
+
+
+def git_bytes(*args: str) -> bytes:
+    return subprocess.check_output(["git", *args], cwd=ROOT, timeout=15)
 
 
 def authenticate_sources() -> dict:
     data = json.loads(SOURCES.read_text(encoding="utf-8"))
-    expected = {
+    if canonical_json(data) != canonical_json(expected_source_manifest()):
+        raise ValueError(
+            "source manifest differs from the complete typed source contract"
+        )
+    ref = f"{SOURCE_COMMIT}:{SOURCE_PATH}"
+    if git_bytes("rev-parse", ref).decode().strip() != SOURCE_BLOB:
+        raise ValueError("frozen programme blob mismatch")
+    if sha256_lf(git_bytes("show", ref)) != SOURCE_SHA256_LF:
+        raise ValueError("frozen programme content mismatch")
+    return {
         "source_commit": SOURCE_COMMIT,
         "frozen_programme_path": SOURCE_PATH,
         "frozen_programme_blob": SOURCE_BLOB,
+        "frozen_programme_sha256_lf": SOURCE_SHA256_LF,
         "current_programme_may_evolve": True,
-    }
-    for key, value in expected.items():
-        if data.get(key) != value:
-            raise ValueError(f"source manifest mismatch: {key}")
-    raw = subprocess.check_output(
-        ["git", "rev-parse", f"{SOURCE_COMMIT}:{SOURCE_PATH}"], cwd=ROOT, text=True
-    ).strip()
-    if raw != SOURCE_BLOB:
-        raise ValueError("frozen programme blob mismatch")
-    return {
-        **expected,
-        "source_manifest_sha256": hashlib.sha256(SOURCES.read_bytes()).hexdigest(),
+        "source_manifest_sha256_canonical_json": hashlib.sha256(
+            canonical_json(data).encode()
+        ).hexdigest(),
         "imported_analytic_facts_are_not_computationally_certified": True,
     }
 
 
 def build_report() -> dict:
+    if any(
+        isinstance(node, ast.Assert)
+        for node in ast.walk(ast.parse(Path(__file__).read_text(encoding="utf-8")))
+    ):
+        raise ValueError("result-bearing checks must survive Python -O")
     examples = {
         "empty_product": (),
         "one_effective_real_type": (GammaTerm(0, 1),),
@@ -198,18 +293,31 @@ def build_report() -> dict:
         "forward_shift": (GammaTerm(2, 1), GammaTerm(0, -1)),
         "backward_shift": (GammaTerm(-2, 1), GammaTerm(0, -1)),
         "false_total_rank_cancellation": (GammaTerm(1, 1), GammaTerm(0, -1)),
-        "fractional_shift_balanced": (GammaTerm(Fraction(9, 2), 1), GammaTerm(Fraction(1, 2), -1)),
-        "mixed_balanced": (GammaTerm(4, 2), GammaTerm(0, -2), GammaTerm(3, -1), GammaTerm(1, 1)),
-        "mixed_unbalanced": (GammaTerm(Fraction(-7, 3), 2), GammaTerm(Fraction(5, 3), -1)),
+        "fractional_shift_balanced": (
+            GammaTerm(Fraction(9, 2), 1),
+            GammaTerm(Fraction(1, 2), -1),
+        ),
+        "mixed_balanced": (
+            GammaTerm(4, 2),
+            GammaTerm(0, -2),
+            GammaTerm(3, -1),
+            GammaTerm(1, 1),
+        ),
+        "mixed_unbalanced": (
+            GammaTerm(Fraction(-7, 3), 2),
+            GammaTerm(Fraction(5, 3), -1),
+        ),
     }
     rows = []
     for name, terms in examples.items():
-        rows.append({
-            "name": name,
-            "terms": [[str(t.shift), t.multiplicity] for t in terms],
-            **reduce_shifts(terms),
-            "stable_tail_checks": stable_tails(terms),
-        })
+        rows.append(
+            {
+                "name": name,
+                "terms": [[str(t.shift), t.multiplicity] for t in terms],
+                **reduce_shifts(terms),
+                "stable_tail_checks": stable_tails(terms),
+            }
+        )
     ordinary_multiplicities = [
         sum(1 for n in range(k + 1) for m in range(k + 1) if n + m == k)
         for k in range(7)
@@ -223,6 +331,18 @@ def build_report() -> dict:
         "schema": "archimedean-ladder-boundary-v1",
         "scope": "exact finite algebra, not a gamma or global-L proof certificate",
         "source_authentication": authenticate_sources(),
+        "artifact_sha256_lf": {
+            path.relative_to(ROOT).as_posix(): sha256_lf(path.read_bytes())
+            for path in (NOTE, Path(__file__), TEST, SOURCES)
+        },
+        "computation_caps_not_theorem_hypotheses": {
+            "input_numerator_denominator_bits": MAX_INPUT_BITS,
+            "terms": MAX_TERMS,
+            "absolute_shift_steps": MAX_SHIFT_STEPS,
+            "absolute_multiplicity": MAX_MULTIPLICITY,
+            "total_shift_multiplicity_weight": MAX_REDUCTION_WEIGHT,
+            "basis_degree": MAX_BASIS_DEGREE,
+        },
         "gamma_shift_examples": rows,
         "tensor_pairs": [pair_record(e, f) for e, f in product((0, 1), repeat=2)],
         "tensor_associativity": [triple_record(*p) for p in product((0, 1), repeat=3)],
@@ -247,6 +367,11 @@ def build_report() -> dict:
     }
 
 
+def validate_report(report: object) -> None:
+    if canonical_json(report) != canonical_json(build_report()):
+        raise ValueError("fixture differs from exact typed replay")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group(required=True)
@@ -257,10 +382,14 @@ def main() -> None:
     if args.write:
         FIXTURE.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
         print(f"wrote {FIXTURE.name}")
-    elif json.loads(FIXTURE.read_text(encoding="utf-8")) != report:
+    elif canonical_json(
+        json.loads(FIXTURE.read_text(encoding="utf-8"))
+    ) != canonical_json(report):
         raise SystemExit("fixture differs from exact replay")
     else:
-        print("archimedean ladder: source lock, 9 shift fixtures, 100 basis maps, 8 parity triples PASS")
+        print(
+            "archimedean ladder: source lock, 9 shift fixtures, 100 basis maps, 8 parity triples PASS"
+        )
 
 
 if __name__ == "__main__":

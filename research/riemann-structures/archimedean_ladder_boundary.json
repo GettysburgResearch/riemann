@@ -5,9 +5,24 @@
     "source_commit": "6675c19f20760301d8c91dedc4a7836170003512",
     "frozen_programme_path": "research/riemann-structures/RIEMANN_STRUCTURES_WAVE2_PORTFOLIO.md",
     "frozen_programme_blob": "f5e0eb316f29d5e44cc3c7124401cb3e784fef49",
+    "frozen_programme_sha256_lf": "23d5a5a7ccdf7669cbbfab6bf4a71d904c71ca5986caecb424d33d67bcd70a8c",
     "current_programme_may_evolve": true,
-    "source_manifest_sha256": "814de02b24413584d728ea2d7c925b127b1e903c00f9088c79dc85ea32470d76",
+    "source_manifest_sha256_canonical_json": "13e55004c7a1bbe074247d68deed0a03036f46b7f96a0d060b6434d11c493db7",
     "imported_analytic_facts_are_not_computationally_certified": true
+  },
+  "artifact_sha256_lf": {
+    "research/riemann-structures/ARCHIMEDEAN_LADDER_BOUNDARY.md": "d3b5e522cc228b7870db314f39627672df9a1c89f5242e094bdb242470ebbb3f",
+    "research/riemann-structures/archimedean_ladder_boundary.py": "1272c353d5060128040429ecef281cefa68e322e6dfbe4b96765b900bd24c652",
+    "tests/test_archimedean_ladder_boundary.py": "be851ffb294468826105006ec17658dcaf95574e41cd1180b34c8032492073d4",
+    "research/riemann-structures/archimedean_ladder_boundary.sources.json": "ee672d71bae749d81e2cda91f32ddac0cc8c10a7f9165c81bbced0e9211ffcb7"
+  },
+  "computation_caps_not_theorem_hypotheses": {
+    "input_numerator_denominator_bits": 64,
+    "terms": 32,
+    "absolute_shift_steps": 64,
+    "absolute_multiplicity": 32,
+    "total_shift_multiplicity_weight": 256,
+    "basis_degree": 64
   },
   "gamma_shift_examples": [
     {
