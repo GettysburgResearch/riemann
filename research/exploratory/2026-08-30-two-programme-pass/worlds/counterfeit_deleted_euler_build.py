@@ -104,7 +104,6 @@ IMPORTS (the complete list — everything else is PROVED_HERE):
 from fractions import Fraction
 
 from core.exact import (
-    F,
     power_sums_from_satake,
     op_tensor,
     op_dual_satake,
