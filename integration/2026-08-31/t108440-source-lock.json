@@ -1,0 +1,32 @@
+{
+  "branch": "research/gpt56-pro/108400-shared-fibre-hellinger-trace",
+  "double_quadratic_physical_alias_proved": true,
+  "grh_established": false,
+  "legacy_gauss_weight_identification_claimed": false,
+  "mixed_resonance_bound_proved": false,
+  "parent_head": "685eb8aaf11609bac8abb2345dcbfaf9cc86cc3c",
+  "parent_pr": 778,
+  "principal_adapter_proved": false,
+  "proof_object_sha256": "eabf156b3f224769f9f984f192ad2658faedc901d642cf8b56ad0ffc65f3f285",
+  "repository": "gfreund123/riemann",
+  "rh_established": false,
+  "schema": "riemann.t108440.source-lock.v2",
+  "source_inputs": [
+    {
+      "commit": "a30276a5be049749ebb2147f30f000dd5659298b",
+      "path": "research/l-families/atlas/function_field/FFPS_SHARED_FIBRE_WICK_OCCUPANCY_SPECTRUM.md",
+      "role": "literal physical squareclass map and owner-class fibre"
+    },
+    {
+      "commit": "bffe68cec24fd785f7b16087d6ce8fea4561eece",
+      "path": "claims/lemmas/L-107301-square-pullback-resonance-classification.md",
+      "role": "even quadratic resonance classification"
+    },
+    {
+      "commit": "bffe68cec24fd785f7b16087d6ce8fea4561eece",
+      "path": "claims/lemmas/L-107302-shared-conductor-relative-augmentation-object.md",
+      "role": "double quadratic row in the physical projector decomposition"
+    }
+  ],
+  "theorem_scope": "coefficientwise physical squareclass identity between the double quadratic transform and the unphased transform; historical Gauss-family weights excluded"
+}
