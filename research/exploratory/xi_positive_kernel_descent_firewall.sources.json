@@ -1,0 +1,75 @@
+{
+  "authoring_base": "58be12463b3ff909eff0d491f606e87149efa9e4",
+  "external_contracts": [
+    {
+      "contract": "Farmer Section 4.2 pp8-9: moved cosine zeros and differentiation non-descent; not an exact positive theta-tail theorem",
+      "remote_bytes_authenticated": false,
+      "url": "https://arxiv.org/pdf/2008.07206"
+    },
+    {
+      "contract": "Gunns-Hughes Theorem 3.1 pp10-11: compact-domain scaled cosine universality; growing rectangles are not imported from it",
+      "remote_bytes_authenticated": false,
+      "url": "https://eprints.whiterose.ac.uk/134951/1/ManyDerivsXi_Resubmitted.pdf"
+    }
+  ],
+  "schema": "xi-positive-kernel-descent-sources-v1",
+  "source_scope": "literal real theta and reviewed endpoint proofs plus exact defect definitions; no complex-ray or arithmetic transport imported",
+  "sources": [
+    {
+      "commit": "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+      "git_blob": "fa24f9c8e0a87709d1a297a4e72136c1135d066c",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+      "role": "actual_kernel",
+      "sha256_lf": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246"
+    },
+    {
+      "commit": "f3d074190e64a97ac935b93c5b628568cde90858",
+      "git_blob": "da9032e15eb7be89557a54120b74fc9596c527d9",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION_AUDIT.md",
+      "role": "actual_kernel_review",
+      "sha256_lf": "aaf60c26b34296aa2e23bdad1469fce8ed3efe5ec27063d14d666f3fa5ce0536"
+    },
+    {
+      "commit": "1b5547c3fcd1ba116106953f44a2ee4ceb81b525",
+      "git_blob": "6ad6f85b53a18295f84306393118cbaf4d829627",
+      "path": "research/exploratory/XI_HIGH_DERIVATIVE_SADDLE_CLOSURE.md",
+      "role": "high_derivative_endpoint",
+      "sha256_lf": "0d68d1791e3e270160f85272f92d0a99931546c5874e93a9aadb3e426847a2c4"
+    },
+    {
+      "commit": "58be12463b3ff909eff0d491f606e87149efa9e4",
+      "git_blob": "c0da90c7d8db37cd2002e0bda0bc7de609ce4e1b",
+      "path": "research/exploratory/XI_HIGH_DERIVATIVE_SADDLE_CLOSURE_AUDIT.md",
+      "role": "high_derivative_review",
+      "sha256_lf": "d212d5aa9feb2d0da5fd7cf5dfc215eeac0aeefe63663afca796c0a44c631da4"
+    },
+    {
+      "commit": "cdad9e88097db4925c3bbbf731f7d1ae1a9e6c57",
+      "git_blob": "1117fe08c334540d54e57c62af32ec7634ee0d48",
+      "path": "claims/lemmas/L-107100-exact-multiplicity-sensitive-reverse-rolle.md",
+      "role": "literal_defect_definition",
+      "sha256_lf": "6e5fbc4d4998273d91e1eceef14a0d93602f27060a95c054057d46c054413858"
+    },
+    {
+      "commit": "cdad9e88097db4925c3bbbf731f7d1ae1a9e6c57",
+      "git_blob": "36f938decae31a07a9d30ef01526cc862eefda3b",
+      "path": "claims/theorems/T-107100-exact-xi-reverse-rolle-defect-cascade.md",
+      "role": "literal_defect_cascade",
+      "sha256_lf": "fcf604acfe3ee9cc40195673a4909fd2e9370e8988ddd8f6d9ec66a266a6482a"
+    },
+    {
+      "commit": "cdad9e88097db4925c3bbbf731f7d1ae1a9e6c57",
+      "git_blob": "6e74e43da002e1640d347312d4822fd9f459ad8f",
+      "path": "claims/refutations/R-107100-derivative-line-concentration-alone-does-not-descend.md",
+      "role": "earlier_nondescent_firewall",
+      "sha256_lf": "44dd3d888e0277a080819e1a3b6b448e3020cbfb7f8fa9f8c78d2f8c7f11f887"
+    },
+    {
+      "commit": "686e23d9e5b1005aae83e3362ac1ed53a28a0352",
+      "git_blob": "dfe76fc1985d3366f50489ce21bdcc2cfdd325ff",
+      "path": "claims/lemmas/L-105413-explicit-xi-kernel-gives-global-shifted-ray-dominance.md",
+      "role": "literal_theta_series_only",
+      "sha256_lf": "ae4b3b43c4ad4744337a5278d50d3887a4c83a61b9fdbd424640e5143a82475c"
+    }
+  ]
+}
