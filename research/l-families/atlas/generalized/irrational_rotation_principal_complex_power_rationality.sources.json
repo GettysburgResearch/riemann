@@ -1,0 +1,78 @@
+{
+  "schema": "riemann.atlas.generalized.irrational_rotation_principal_complex_power.sources.v1",
+  "programme_issue": {
+    "number": 764,
+    "url": "https://github.com/gfreund123/riemann/issues/764"
+  },
+  "base_commit": "834a24e71878a584e00215edf1e0c813faa9f578",
+  "normalization": "determinant-one tempered recurrence u_0=1, u_1=2*cos(theta), u_(r+2)=2*cos(theta)*u_(r+1)-u_r with theta/pi irrational and a fixed real-axis logarithm branch",
+  "sources": [
+    {
+      "path": "research/l-families/atlas/generalized/RATIONAL_ROTATION_BRANCH_CENSUS.md",
+      "role": "exact real-axis branch convention, zero convention, and scalar-observable versus state-space parent boundary",
+      "file_sha256_lf_normalized": "29e5691ad63666caed092920229f9d27655d6a064b01542a24e8241a54316333",
+      "git_blob": "d0ff4d4d17787b6dffc4c8c1ccd14a20c69076d0"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
+      "role": "reused canonical hashing, branch metadata, and fail-closed Git-object verification",
+      "file_sha256_lf_normalized": "1d57f51238b96447da95343dadbbeab7dc4e1efee332bf05d2eb0424384b2ebe",
+      "git_blob": "a2fff9a394585fe91a1dacad429f68f99603e9a2"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.json",
+      "role": "adjacent exact branch and integer-spectrum fixture",
+      "schema": "riemann.atlas.generalized.rational_rotation_branch_census.v1",
+      "payload_sha256": "cf06ebaecb19ae16874db084cc0050d70d6531ff9878e92e6bec10a0b60379e6",
+      "file_sha256_lf_normalized": "520231c5a0e2bb8574ef041a54ee6b5801de4609af8919465192caa728a700a6",
+      "git_blob": "c92c6e79df09bfcd34b992a56667655de530f11a"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+      "role": "inherited source and branch-cut literature boundary",
+      "file_sha256_lf_normalized": "03370f909ae1b4f53edece1db54d9e5e2335523761744d9d81aed48411a63017",
+      "git_blob": "103a568fe71f08886b5b3837c944bc630ad4cf3d"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+      "role": "adjacent dense-orbit finite-spectrum lemma and absolute-power comparison",
+      "file_sha256_lf_normalized": "213efe84034449a7ece87b273653bc683c11b28ea4f62e599e3f2b0bbac7c8a2",
+      "git_blob": "8f27df80a4983b4d393ee3a2477a744afaeb1d3a"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "role": "inherited nearby almost-periodic-series reference boundary",
+      "file_sha256_lf_normalized": "4f070750c83d04ed1ed74a5ddcdd42c6b6ce0746a548ce11a3086b6fc37da66b",
+      "git_blob": "3adf8f211fee7bd51e811520b31785af38ccd7c0"
+    }
+  ],
+  "external_references": [
+    {
+      "authors": "Oliver Knill and John Lesieutre",
+      "title": "Analytic continuation of Dirichlet series with almost periodic coefficients",
+      "journal": "Complex Analysis and Operator Theory 5 (2011), 237-255",
+      "doi": "10.1007/s11785-010-0064-7",
+      "url": "https://arxiv.org/abs/0811.1362",
+      "boundary": "nearby irrational-rotation Taylor and Dirichlet series, Fourier partial fractions, and natural-boundary results under additional hypotheses; not this exact fixed-branch rationality and minimal-order classification"
+    },
+    {
+      "authors": "William Kahan",
+      "title": "Branch Cuts for Complex Elementary Functions, or Much Ado About Nothing's Sign Bit",
+      "url": "https://people.freebsd.org/~das/kahan86branch.pdf",
+      "boundary": "general principal-value and branch-cut background; not a source for the dense-orbit or recurrence theorem"
+    }
+  ],
+  "scope_firewall": {
+    "one_unramified_determinant_one_local_recurrence": true,
+    "tempered_irrational_rotation_only": true,
+    "fixed_real_axis_logarithm_branch": true,
+    "lambda_domain_zero_or_strictly_positive_real_part": true,
+    "no_claim_for_nonzero_lambda_with_nonpositive_real_part": true,
+    "finite_dimensional_constant_state_space_no_go_only": true,
+    "no_global_euler_product_constructed": true,
+    "no_completion_or_functional_equation_claim": true,
+    "no_automorphy_motive_or_infinite_dimensional_no_go": true,
+    "no_RH_GRH_or_zero_distribution_consequence": true,
+    "external_novelty_unreviewed": true
+  }
+}

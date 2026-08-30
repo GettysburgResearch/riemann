@@ -1,0 +1,3593 @@
+{
+  "branch_controls": [
+    {
+      "adjacent_branch_multiplier": "exp(2*pi*i*lambda)",
+      "all_fixed_branches_have_same_rationality_verdict": true,
+      "coefficient_sequence_branch_independent": true,
+      "integer_multiplier_value": "1",
+      "lambda": {
+        "imaginary": "0",
+        "real": "0"
+      }
+    },
+    {
+      "adjacent_branch_multiplier": "exp(2*pi*i*lambda)",
+      "all_fixed_branches_have_same_rationality_verdict": true,
+      "coefficient_sequence_branch_independent": false,
+      "integer_multiplier_value": null,
+      "lambda": {
+        "imaginary": "0",
+        "real": "1/2"
+      }
+    },
+    {
+      "adjacent_branch_multiplier": "exp(2*pi*i*lambda)",
+      "all_fixed_branches_have_same_rationality_verdict": true,
+      "coefficient_sequence_branch_independent": true,
+      "integer_multiplier_value": "1",
+      "lambda": {
+        "imaginary": "0",
+        "real": "1"
+      }
+    },
+    {
+      "adjacent_branch_multiplier": "exp(2*pi*i*lambda)",
+      "all_fixed_branches_have_same_rationality_verdict": true,
+      "coefficient_sequence_branch_independent": true,
+      "integer_multiplier_value": "1",
+      "lambda": {
+        "imaginary": "0",
+        "real": "2"
+      }
+    },
+    {
+      "adjacent_branch_multiplier": "exp(2*pi*i*lambda)",
+      "all_fixed_branches_have_same_rationality_verdict": true,
+      "coefficient_sequence_branch_independent": false,
+      "integer_multiplier_value": null,
+      "lambda": {
+        "imaginary": "1/2",
+        "real": "1"
+      }
+    }
+  ],
+  "claims": {
+    "GLO764.IRRATIONAL_FIXED_BRANCH_COMPLEX_POWER_RATIONALITY": {
+      "scope": "lambda=0 or Re(lambda)>0; every fixed real-axis branch J",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.IRRATIONAL_PRINCIPAL_POWER_MINIMAL_DENOMINATOR": {
+      "scope": "principal J=0; integer k>=0; theta/pi irrational",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.NONINTEGER_POWER_FINITE_STATE_NO_GO": {
+      "scope": "constant finite-dimensional complex linear state space only",
+      "status": "PROVED_BY_CAYLEY_HAMILTON_FROM_RATIONALITY_THEOREM"
+    }
+  },
+  "classification": {
+    "coefficient_sequence_branch_independent_iff": "lambda is a nonnegative integer",
+    "nonzero_lambda_with_Re_nonpositive": "EXCLUDED_NO_VERDICT",
+    "rational_iff": "lambda is a nonnegative integer",
+    "same_verdict_for_every_fixed_branch_J": true
+  },
+  "cusp_controls": {
+    "all_domain_classification_proved_in_note": "smooth and finite Fourier only for nonnegative integers",
+    "positive_side_model": "t^lambda*h_lambda(t)",
+    "rows": [
+      {
+        "classification": "SEPARATE_ZERO_EXPONENT",
+        "first_forced_divergent_derivative_order": null,
+        "lambda": {
+          "imaginary": "0",
+          "real": "0"
+        },
+        "smooth": true
+      },
+      {
+        "classification": "POSITIVE_REAL_NONINTEGER",
+        "falling_factorial": {
+          "imaginary": "0",
+          "real": "1/2"
+        },
+        "first_forced_divergent_derivative_order": 1,
+        "lambda": {
+          "imaginary": "0",
+          "real": "1/2"
+        },
+        "magnitude_power_at_zero": "-1/2",
+        "smooth": false
+      },
+      {
+        "classification": "POSITIVE_INTEGER",
+        "first_forced_divergent_derivative_order": null,
+        "lambda": {
+          "imaginary": "0",
+          "real": "1"
+        },
+        "smooth": true
+      },
+      {
+        "classification": "POSITIVE_REAL_NONINTEGER",
+        "falling_factorial": {
+          "imaginary": "0",
+          "real": "3/4"
+        },
+        "first_forced_divergent_derivative_order": 2,
+        "lambda": {
+          "imaginary": "0",
+          "real": "3/2"
+        },
+        "magnitude_power_at_zero": "-1/2",
+        "smooth": false
+      },
+      {
+        "classification": "POSITIVE_INTEGER",
+        "first_forced_divergent_derivative_order": null,
+        "lambda": {
+          "imaginary": "0",
+          "real": "2"
+        },
+        "smooth": true
+      },
+      {
+        "classification": "GENUINELY_COMPLEX",
+        "falling_factorial": {
+          "imaginary": "1/2",
+          "real": "-1/4"
+        },
+        "first_forced_divergent_derivative_order": 2,
+        "lambda": {
+          "imaginary": "1/2",
+          "real": "1"
+        },
+        "magnitude_power_at_zero": "-1",
+        "smooth": false
+      },
+      {
+        "classification": "GENUINELY_COMPLEX",
+        "falling_factorial": {
+          "imaginary": "-17/27",
+          "real": "-1/3"
+        },
+        "first_forced_divergent_derivative_order": 3,
+        "lambda": {
+          "imaginary": "-1/3",
+          "real": "2"
+        },
+        "magnitude_power_at_zero": "-1",
+        "smooth": false
+      },
+      {
+        "classification": "GENUINELY_COMPLEX",
+        "falling_factorial": {
+          "imaginary": "665/192",
+          "real": "-563/108"
+        },
+        "first_forced_divergent_derivative_order": 3,
+        "lambda": {
+          "imaginary": "5/4",
+          "real": "7/3"
+        },
+        "magnitude_power_at_zero": "-2/3",
+        "smooth": false
+      }
+    ]
+  },
+  "dense_orbit_fourier_gate": {
+    "eventual_recurrence_to_continuous_translate_identity": true,
+    "finite_fourier_support_implies_trigonometric_polynomial": true,
+    "frequency_points_exp_i_n_theta_pairwise_distinct": true,
+    "periodic_domain": "R/(2*pi*Z)",
+    "tail_orbit_dense": true
+  },
+  "integer_power_replay": {
+    "lambda_zero_handled_separately": {
+      "generating_function": "1/(1-T)",
+      "minimal_order": 1,
+      "sequence": "1,1,1,..."
+    },
+    "maximum_k": 10,
+    "representative_polynomials": [
+      {
+        "k": 0,
+        "minimal_denominator": {
+          "alpha_laurent_coefficients": [
+            [
+              {
+                "alpha_exponent": 0,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": 0,
+                "coefficient": -1
+              }
+            ]
+          ],
+          "coefficient_order": "ascending powers of T"
+        },
+        "scaled_numerator": {
+          "alpha_laurent_coefficients": [
+            [
+              {
+                "alpha_exponent": 0,
+                "coefficient": 1
+              }
+            ]
+          ],
+          "coefficient_order": "ascending powers of T"
+        }
+      },
+      {
+        "k": 1,
+        "minimal_denominator": {
+          "alpha_laurent_coefficients": [
+            [
+              {
+                "alpha_exponent": 0,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -1,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 1,
+                "coefficient": -1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": 0,
+                "coefficient": 1
+              }
+            ]
+          ],
+          "coefficient_order": "ascending powers of T"
+        },
+        "scaled_numerator": {
+          "alpha_laurent_coefficients": [
+            [
+              {
+                "alpha_exponent": -1,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 1,
+                "coefficient": 1
+              }
+            ]
+          ],
+          "coefficient_order": "ascending powers of T"
+        }
+      },
+      {
+        "k": 2,
+        "minimal_denominator": {
+          "alpha_laurent_coefficients": [
+            [
+              {
+                "alpha_exponent": 0,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -2,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": 0,
+                "coefficient": -1
+              }
+            ]
+          ],
+          "coefficient_order": "ascending powers of T"
+        },
+        "scaled_numerator": {
+          "alpha_laurent_coefficients": [
+            [
+              {
+                "alpha_exponent": -2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 1
+              }
+            ]
+          ],
+          "coefficient_order": "ascending powers of T"
+        }
+      },
+      {
+        "k": 3,
+        "minimal_denominator": {
+          "alpha_laurent_coefficients": [
+            [
+              {
+                "alpha_exponent": 0,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -3,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -1,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 1,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 3,
+                "coefficient": -1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -4,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -3,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -1,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 1,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 3,
+                "coefficient": -1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": 0,
+                "coefficient": 1
+              }
+            ]
+          ],
+          "coefficient_order": "ascending powers of T"
+        },
+        "scaled_numerator": {
+          "alpha_laurent_coefficients": [
+            [
+              {
+                "alpha_exponent": -3,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -1,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": 1,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": 3,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -4,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 4
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -4
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 2
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -3,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -1,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": 1,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": 3,
+                "coefficient": 1
+              }
+            ]
+          ],
+          "coefficient_order": "ascending powers of T"
+        }
+      },
+      {
+        "k": 6,
+        "minimal_denominator": {
+          "alpha_laurent_coefficients": [
+            [
+              {
+                "alpha_exponent": 0,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -6,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": -1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -10,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -12,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -4
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -4
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -5
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -4
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -4
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": -1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -12,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 4
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 4
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": 5
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 4
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 4
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -10,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": -1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -6,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": 0,
+                "coefficient": -1
+              }
+            ]
+          ],
+          "coefficient_order": "ascending powers of T"
+        },
+        "scaled_numerator": {
+          "alpha_laurent_coefficients": [
+            [
+              {
+                "alpha_exponent": -6,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -6
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 15
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -20
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 15
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -6
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -10,
+                "coefficient": 5
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": -16
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -20
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": -16
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 5
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -12,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": -25
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 6
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 9
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 26
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -16
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -20
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -16
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 26
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 9
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 6
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": -25
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": 10
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -12,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": -25
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 6
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 9
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 26
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -16
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -20
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -16
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 26
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 9
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 6
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": -25
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": 10
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -10,
+                "coefficient": 5
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": -16
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -20
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": -16
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 5
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -6,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -6
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 15
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -20
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 15
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -6
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 1
+              }
+            ]
+          ],
+          "coefficient_order": "ascending powers of T"
+        }
+      },
+      {
+        "k": 10,
+        "minimal_denominator": {
+          "alpha_laurent_coefficients": [
+            [
+              {
+                "alpha_exponent": 0,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -10,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": -1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -18,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 4
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 4
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 5
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": 5
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 5
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 4
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 4
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -24,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -22,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -20,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": -18,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": -4
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": -5
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": -7
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": -8
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": -10
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": -11
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -12
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -12
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -13
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -12
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -12
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": -11
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": -10
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": -8
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": -7
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": -5
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": -4
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": 20,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": 22,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 24,
+                "coefficient": -1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -28,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -26,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -24,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": -22,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": -20,
+                "coefficient": 5
+              },
+              {
+                "alpha_exponent": -18,
+                "coefficient": 6
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": 9
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": 11
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": 14
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": 16
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 19
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 20
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 23
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 23
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": 24
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 23
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 23
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 20
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 19
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 16
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": 14
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": 11
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": 9
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": 6
+              },
+              {
+                "alpha_exponent": 20,
+                "coefficient": 5
+              },
+              {
+                "alpha_exponent": 22,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": 24,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": 26,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 28,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -30,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -28,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -26,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": -24,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": -22,
+                "coefficient": -5
+              },
+              {
+                "alpha_exponent": -20,
+                "coefficient": -7
+              },
+              {
+                "alpha_exponent": -18,
+                "coefficient": -10
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": -12
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": -16
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": -19
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": -23
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": -25
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": -29
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -30
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -32
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -32
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -32
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -30
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": -29
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": -25
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": -23
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": -19
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": -16
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": -12
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": -10
+              },
+              {
+                "alpha_exponent": 20,
+                "coefficient": -7
+              },
+              {
+                "alpha_exponent": 22,
+                "coefficient": -5
+              },
+              {
+                "alpha_exponent": 24,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": 26,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": 28,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 30,
+                "coefficient": -1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -30,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -28,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -26,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": -24,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": -22,
+                "coefficient": 5
+              },
+              {
+                "alpha_exponent": -20,
+                "coefficient": 7
+              },
+              {
+                "alpha_exponent": -18,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": 12
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": 16
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": 19
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": 23
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 25
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 29
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 30
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 32
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": 32
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 32
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 30
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 29
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 25
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 23
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": 19
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": 16
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": 12
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": 20,
+                "coefficient": 7
+              },
+              {
+                "alpha_exponent": 22,
+                "coefficient": 5
+              },
+              {
+                "alpha_exponent": 24,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": 26,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": 28,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 30,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -28,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -26,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -24,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": -22,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": -20,
+                "coefficient": -5
+              },
+              {
+                "alpha_exponent": -18,
+                "coefficient": -6
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": -9
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": -11
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": -14
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": -16
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": -19
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": -20
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -23
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -23
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -24
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -23
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -23
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": -20
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": -19
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": -16
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": -14
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": -11
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": -9
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": -6
+              },
+              {
+                "alpha_exponent": 20,
+                "coefficient": -5
+              },
+              {
+                "alpha_exponent": 22,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": 24,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": 26,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 28,
+                "coefficient": -1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -24,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -22,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -20,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": -18,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": 4
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": 5
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": 7
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": 8
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 11
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 12
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 12
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": 13
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 12
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 12
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 11
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 8
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": 7
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": 5
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": 4
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": 3
+              },
+              {
+                "alpha_exponent": 20,
+                "coefficient": 2
+              },
+              {
+                "alpha_exponent": 22,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 24,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -18,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": -4
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -4
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -5
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -5
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -5
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -4
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": -4
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": -2
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": -1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -10,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": 0,
+                "coefficient": -1
+              }
+            ]
+          ],
+          "coefficient_order": "ascending powers of T"
+        },
+        "scaled_numerator": {
+          "alpha_laurent_coefficients": [
+            [
+              {
+                "alpha_exponent": -10,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": -10
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 45
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -120
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 210
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -252
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 210
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -120
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 45
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": -10
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 1
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -18,
+                "coefficient": 9
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": -46
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": 84
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": -81
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": 126
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": -204
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 36
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 201
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -252
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 201
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 36
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": -204
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 126
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": -81
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": 84
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": -46
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": 9
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -24,
+                "coefficient": 36
+              },
+              {
+                "alpha_exponent": -22,
+                "coefficient": -129
+              },
+              {
+                "alpha_exponent": -20,
+                "coefficient": 127
+              },
+              {
+                "alpha_exponent": -18,
+                "coefficient": -90
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": 331
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": -381
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": -130
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 382
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": -121
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 135
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -173
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": 6
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -173
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 135
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": -121
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 382
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": -130
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": -381
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": 331
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": -90
+              },
+              {
+                "alpha_exponent": 20,
+                "coefficient": 127
+              },
+              {
+                "alpha_exponent": 22,
+                "coefficient": -129
+              },
+              {
+                "alpha_exponent": 24,
+                "coefficient": 36
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -28,
+                "coefficient": 84
+              },
+              {
+                "alpha_exponent": -26,
+                "coefficient": -246
+              },
+              {
+                "alpha_exponent": -24,
+                "coefficient": 135
+              },
+              {
+                "alpha_exponent": -22,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -20,
+                "coefficient": 255
+              },
+              {
+                "alpha_exponent": -18,
+                "coefficient": -46
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": -201
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": -253
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": 120
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": -130
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 463
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 293
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -345
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -250
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -345
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 293
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 463
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": -130
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": 120
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": -253
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": -201
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": -46
+              },
+              {
+                "alpha_exponent": 20,
+                "coefficient": 255
+              },
+              {
+                "alpha_exponent": 22,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 24,
+                "coefficient": 135
+              },
+              {
+                "alpha_exponent": 26,
+                "coefficient": -246
+              },
+              {
+                "alpha_exponent": 28,
+                "coefficient": 84
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -30,
+                "coefficient": 126
+              },
+              {
+                "alpha_exponent": -28,
+                "coefficient": -336
+              },
+              {
+                "alpha_exponent": -26,
+                "coefficient": 120
+              },
+              {
+                "alpha_exponent": -24,
+                "coefficient": 81
+              },
+              {
+                "alpha_exponent": -22,
+                "coefficient": 256
+              },
+              {
+                "alpha_exponent": -20,
+                "coefficient": -130
+              },
+              {
+                "alpha_exponent": -18,
+                "coefficient": 127
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": -336
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": -206
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": -301
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": 511
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 125
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 673
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -257
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -71
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -764
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -71
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -257
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 673
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 125
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 511
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": -301
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": -206
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": -336
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": 127
+              },
+              {
+                "alpha_exponent": 20,
+                "coefficient": -130
+              },
+              {
+                "alpha_exponent": 22,
+                "coefficient": 256
+              },
+              {
+                "alpha_exponent": 24,
+                "coefficient": 81
+              },
+              {
+                "alpha_exponent": 26,
+                "coefficient": 120
+              },
+              {
+                "alpha_exponent": 28,
+                "coefficient": -336
+              },
+              {
+                "alpha_exponent": 30,
+                "coefficient": 126
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -30,
+                "coefficient": 126
+              },
+              {
+                "alpha_exponent": -28,
+                "coefficient": -336
+              },
+              {
+                "alpha_exponent": -26,
+                "coefficient": 120
+              },
+              {
+                "alpha_exponent": -24,
+                "coefficient": 81
+              },
+              {
+                "alpha_exponent": -22,
+                "coefficient": 256
+              },
+              {
+                "alpha_exponent": -20,
+                "coefficient": -130
+              },
+              {
+                "alpha_exponent": -18,
+                "coefficient": 127
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": -336
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": -206
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": -301
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": 511
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 125
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 673
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -257
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -71
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -764
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -71
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -257
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 673
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 125
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 511
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": -301
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": -206
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": -336
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": 127
+              },
+              {
+                "alpha_exponent": 20,
+                "coefficient": -130
+              },
+              {
+                "alpha_exponent": 22,
+                "coefficient": 256
+              },
+              {
+                "alpha_exponent": 24,
+                "coefficient": 81
+              },
+              {
+                "alpha_exponent": 26,
+                "coefficient": 120
+              },
+              {
+                "alpha_exponent": 28,
+                "coefficient": -336
+              },
+              {
+                "alpha_exponent": 30,
+                "coefficient": 126
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -28,
+                "coefficient": 84
+              },
+              {
+                "alpha_exponent": -26,
+                "coefficient": -246
+              },
+              {
+                "alpha_exponent": -24,
+                "coefficient": 135
+              },
+              {
+                "alpha_exponent": -22,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": -20,
+                "coefficient": 255
+              },
+              {
+                "alpha_exponent": -18,
+                "coefficient": -46
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": -201
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": -253
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": 120
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": -130
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 463
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 293
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -345
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -250
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -345
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 293
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": -3
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 463
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": -130
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": 120
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": -253
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": -201
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": -46
+              },
+              {
+                "alpha_exponent": 20,
+                "coefficient": 255
+              },
+              {
+                "alpha_exponent": 22,
+                "coefficient": -1
+              },
+              {
+                "alpha_exponent": 24,
+                "coefficient": 135
+              },
+              {
+                "alpha_exponent": 26,
+                "coefficient": -246
+              },
+              {
+                "alpha_exponent": 28,
+                "coefficient": 84
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -24,
+                "coefficient": 36
+              },
+              {
+                "alpha_exponent": -22,
+                "coefficient": -129
+              },
+              {
+                "alpha_exponent": -20,
+                "coefficient": 127
+              },
+              {
+                "alpha_exponent": -18,
+                "coefficient": -90
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": 331
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": -381
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": -130
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": 382
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": -121
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 135
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": -173
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": 6
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": -173
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 135
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": -121
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": 382
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": -130
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": 10
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": -381
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": 331
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": -90
+              },
+              {
+                "alpha_exponent": 20,
+                "coefficient": 127
+              },
+              {
+                "alpha_exponent": 22,
+                "coefficient": -129
+              },
+              {
+                "alpha_exponent": 24,
+                "coefficient": 36
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -18,
+                "coefficient": 9
+              },
+              {
+                "alpha_exponent": -16,
+                "coefficient": -46
+              },
+              {
+                "alpha_exponent": -14,
+                "coefficient": 84
+              },
+              {
+                "alpha_exponent": -12,
+                "coefficient": -81
+              },
+              {
+                "alpha_exponent": -10,
+                "coefficient": 126
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": -204
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 36
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": 201
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -252
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": 201
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 36
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": -204
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 126
+              },
+              {
+                "alpha_exponent": 12,
+                "coefficient": -81
+              },
+              {
+                "alpha_exponent": 14,
+                "coefficient": 84
+              },
+              {
+                "alpha_exponent": 16,
+                "coefficient": -46
+              },
+              {
+                "alpha_exponent": 18,
+                "coefficient": 9
+              }
+            ],
+            [
+              {
+                "alpha_exponent": -10,
+                "coefficient": 1
+              },
+              {
+                "alpha_exponent": -8,
+                "coefficient": -10
+              },
+              {
+                "alpha_exponent": -6,
+                "coefficient": 45
+              },
+              {
+                "alpha_exponent": -4,
+                "coefficient": -120
+              },
+              {
+                "alpha_exponent": -2,
+                "coefficient": 210
+              },
+              {
+                "alpha_exponent": 0,
+                "coefficient": -252
+              },
+              {
+                "alpha_exponent": 2,
+                "coefficient": 210
+              },
+              {
+                "alpha_exponent": 4,
+                "coefficient": -120
+              },
+              {
+                "alpha_exponent": 6,
+                "coefficient": 45
+              },
+              {
+                "alpha_exponent": 8,
+                "coefficient": -10
+              },
+              {
+                "alpha_exponent": 10,
+                "coefficient": 1
+              }
+            ]
+          ],
+          "coefficient_order": "ascending powers of T"
+        }
+      }
+    ],
+    "rows": [
+      {
+        "characteristic_root_alpha_exponents": [
+          0
+        ],
+        "k": 0,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "6ac8d661f946e2694818cc124251e634e1be6800d7b72265467f53f06cf45991"
+        },
+        "minimal_recurrence_order": 1,
+        "scaled_fourier_coefficients": [
+          {
+            "alpha_exponent": 0,
+            "coefficient": 1
+          }
+        ],
+        "scaled_numerator_certificate": {
+          "canonical_payload_sha256": "23c67cb3bb168262cf5da37961e90dfe3eb0a26f3cdcf745b74d24b05e530020"
+        }
+      },
+      {
+        "characteristic_root_alpha_exponents": [
+          1,
+          -1
+        ],
+        "k": 1,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "1c486867fb43e023dbbeb120992d579bd1c4dc4bc63258e0845227ec5b1e02c9"
+        },
+        "minimal_recurrence_order": 2,
+        "scaled_fourier_coefficients": [
+          {
+            "alpha_exponent": -1,
+            "coefficient": -1
+          },
+          {
+            "alpha_exponent": 1,
+            "coefficient": 1
+          }
+        ],
+        "scaled_numerator_certificate": {
+          "canonical_payload_sha256": "f2be1753bac4077a924fbd42f464430c3d22e36971e7840a20c49868c2fcf65c"
+        }
+      },
+      {
+        "characteristic_root_alpha_exponents": [
+          2,
+          0,
+          -2
+        ],
+        "k": 2,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "59bbfaf521d379ffd60bda361ba26c405ef3a4257439b263e6aa0ac8c2ba8eb0"
+        },
+        "minimal_recurrence_order": 3,
+        "scaled_fourier_coefficients": [
+          {
+            "alpha_exponent": -2,
+            "coefficient": 1
+          },
+          {
+            "alpha_exponent": 0,
+            "coefficient": -2
+          },
+          {
+            "alpha_exponent": 2,
+            "coefficient": 1
+          }
+        ],
+        "scaled_numerator_certificate": {
+          "canonical_payload_sha256": "75b10d39faa6eab1de454b1acfd41fd21758b61a9da756b5aae485b1573ecdc6"
+        }
+      },
+      {
+        "characteristic_root_alpha_exponents": [
+          3,
+          1,
+          -1,
+          -3
+        ],
+        "k": 3,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "1a232bc515e2719bbcfd5d9da4963d8f0690a5e26c132469b62dfb0ead74cd76"
+        },
+        "minimal_recurrence_order": 4,
+        "scaled_fourier_coefficients": [
+          {
+            "alpha_exponent": -3,
+            "coefficient": -1
+          },
+          {
+            "alpha_exponent": -1,
+            "coefficient": 3
+          },
+          {
+            "alpha_exponent": 1,
+            "coefficient": -3
+          },
+          {
+            "alpha_exponent": 3,
+            "coefficient": 1
+          }
+        ],
+        "scaled_numerator_certificate": {
+          "canonical_payload_sha256": "d8532176631e90f157a02a3f20bf57434dfa422ead9cd67da817c8b9bb6d1403"
+        }
+      },
+      {
+        "characteristic_root_alpha_exponents": [
+          4,
+          2,
+          0,
+          -2,
+          -4
+        ],
+        "k": 4,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "ea0d2522272e3344d1be40fbb3f1da8c0275abca0a718eacbc9a088b32ed3a3a"
+        },
+        "minimal_recurrence_order": 5,
+        "scaled_fourier_coefficients": [
+          {
+            "alpha_exponent": -4,
+            "coefficient": 1
+          },
+          {
+            "alpha_exponent": -2,
+            "coefficient": -4
+          },
+          {
+            "alpha_exponent": 0,
+            "coefficient": 6
+          },
+          {
+            "alpha_exponent": 2,
+            "coefficient": -4
+          },
+          {
+            "alpha_exponent": 4,
+            "coefficient": 1
+          }
+        ],
+        "scaled_numerator_certificate": {
+          "canonical_payload_sha256": "34e1782ad3ffeed487abfbe76ec794b0c35d02f539cd583eb839b8688cf135b1"
+        }
+      },
+      {
+        "characteristic_root_alpha_exponents": [
+          5,
+          3,
+          1,
+          -1,
+          -3,
+          -5
+        ],
+        "k": 5,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "a702670cfacf8e44caf413a60a33d03dad19215ae9b26a182029a742ef642fa2"
+        },
+        "minimal_recurrence_order": 6,
+        "scaled_fourier_coefficients": [
+          {
+            "alpha_exponent": -5,
+            "coefficient": -1
+          },
+          {
+            "alpha_exponent": -3,
+            "coefficient": 5
+          },
+          {
+            "alpha_exponent": -1,
+            "coefficient": -10
+          },
+          {
+            "alpha_exponent": 1,
+            "coefficient": 10
+          },
+          {
+            "alpha_exponent": 3,
+            "coefficient": -5
+          },
+          {
+            "alpha_exponent": 5,
+            "coefficient": 1
+          }
+        ],
+        "scaled_numerator_certificate": {
+          "canonical_payload_sha256": "dafaaee0b59f42ae72fad515eef9f9d67ca94642e3fae48ebbf91780223898e8"
+        }
+      },
+      {
+        "characteristic_root_alpha_exponents": [
+          6,
+          4,
+          2,
+          0,
+          -2,
+          -4,
+          -6
+        ],
+        "k": 6,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "d08664e4cc7835920b67194ef20c92f1ee534e607981002622a485b65913c26d"
+        },
+        "minimal_recurrence_order": 7,
+        "scaled_fourier_coefficients": [
+          {
+            "alpha_exponent": -6,
+            "coefficient": 1
+          },
+          {
+            "alpha_exponent": -4,
+            "coefficient": -6
+          },
+          {
+            "alpha_exponent": -2,
+            "coefficient": 15
+          },
+          {
+            "alpha_exponent": 0,
+            "coefficient": -20
+          },
+          {
+            "alpha_exponent": 2,
+            "coefficient": 15
+          },
+          {
+            "alpha_exponent": 4,
+            "coefficient": -6
+          },
+          {
+            "alpha_exponent": 6,
+            "coefficient": 1
+          }
+        ],
+        "scaled_numerator_certificate": {
+          "canonical_payload_sha256": "c3d160f4ee6e039944a757550cae4a4ae55b43de3ca59b13b8a9785f2ec6a6b9"
+        }
+      },
+      {
+        "characteristic_root_alpha_exponents": [
+          7,
+          5,
+          3,
+          1,
+          -1,
+          -3,
+          -5,
+          -7
+        ],
+        "k": 7,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "33aaa5b4493ae33d2101886cb0d2bb9b8e4b69665cfa9cb98fd2febb9afbfcc6"
+        },
+        "minimal_recurrence_order": 8,
+        "scaled_fourier_coefficients": [
+          {
+            "alpha_exponent": -7,
+            "coefficient": -1
+          },
+          {
+            "alpha_exponent": -5,
+            "coefficient": 7
+          },
+          {
+            "alpha_exponent": -3,
+            "coefficient": -21
+          },
+          {
+            "alpha_exponent": -1,
+            "coefficient": 35
+          },
+          {
+            "alpha_exponent": 1,
+            "coefficient": -35
+          },
+          {
+            "alpha_exponent": 3,
+            "coefficient": 21
+          },
+          {
+            "alpha_exponent": 5,
+            "coefficient": -7
+          },
+          {
+            "alpha_exponent": 7,
+            "coefficient": 1
+          }
+        ],
+        "scaled_numerator_certificate": {
+          "canonical_payload_sha256": "3544d00b1369edf3b43184db4b6c1c30c7291fec23495b317ee285a2ce0147be"
+        }
+      },
+      {
+        "characteristic_root_alpha_exponents": [
+          8,
+          6,
+          4,
+          2,
+          0,
+          -2,
+          -4,
+          -6,
+          -8
+        ],
+        "k": 8,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "6ea3d96637d70fca77fefbe9cc9b37472103161f8efc58bbfce3668c78f080ee"
+        },
+        "minimal_recurrence_order": 9,
+        "scaled_fourier_coefficients": [
+          {
+            "alpha_exponent": -8,
+            "coefficient": 1
+          },
+          {
+            "alpha_exponent": -6,
+            "coefficient": -8
+          },
+          {
+            "alpha_exponent": -4,
+            "coefficient": 28
+          },
+          {
+            "alpha_exponent": -2,
+            "coefficient": -56
+          },
+          {
+            "alpha_exponent": 0,
+            "coefficient": 70
+          },
+          {
+            "alpha_exponent": 2,
+            "coefficient": -56
+          },
+          {
+            "alpha_exponent": 4,
+            "coefficient": 28
+          },
+          {
+            "alpha_exponent": 6,
+            "coefficient": -8
+          },
+          {
+            "alpha_exponent": 8,
+            "coefficient": 1
+          }
+        ],
+        "scaled_numerator_certificate": {
+          "canonical_payload_sha256": "81f308810fe707eb1da9e182c9db954b563113661c8f03da998cca7eeaaf6df9"
+        }
+      },
+      {
+        "characteristic_root_alpha_exponents": [
+          9,
+          7,
+          5,
+          3,
+          1,
+          -1,
+          -3,
+          -5,
+          -7,
+          -9
+        ],
+        "k": 9,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "56bfaa0b9dad767ecc83be1e4968c79fbc8333066485169e3c680ba9f3823d0e"
+        },
+        "minimal_recurrence_order": 10,
+        "scaled_fourier_coefficients": [
+          {
+            "alpha_exponent": -9,
+            "coefficient": -1
+          },
+          {
+            "alpha_exponent": -7,
+            "coefficient": 9
+          },
+          {
+            "alpha_exponent": -5,
+            "coefficient": -36
+          },
+          {
+            "alpha_exponent": -3,
+            "coefficient": 84
+          },
+          {
+            "alpha_exponent": -1,
+            "coefficient": -126
+          },
+          {
+            "alpha_exponent": 1,
+            "coefficient": 126
+          },
+          {
+            "alpha_exponent": 3,
+            "coefficient": -84
+          },
+          {
+            "alpha_exponent": 5,
+            "coefficient": 36
+          },
+          {
+            "alpha_exponent": 7,
+            "coefficient": -9
+          },
+          {
+            "alpha_exponent": 9,
+            "coefficient": 1
+          }
+        ],
+        "scaled_numerator_certificate": {
+          "canonical_payload_sha256": "5293e3cedecccc5855b12fb76f03c98e70891797d7b898d5ff1ea48272214a58"
+        }
+      },
+      {
+        "characteristic_root_alpha_exponents": [
+          10,
+          8,
+          6,
+          4,
+          2,
+          0,
+          -2,
+          -4,
+          -6,
+          -8,
+          -10
+        ],
+        "k": 10,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "c6b1e2c88042a09dd92fea3d0697d41979287e23fcf855fc97a0680ed5d40621"
+        },
+        "minimal_recurrence_order": 11,
+        "scaled_fourier_coefficients": [
+          {
+            "alpha_exponent": -10,
+            "coefficient": 1
+          },
+          {
+            "alpha_exponent": -8,
+            "coefficient": -10
+          },
+          {
+            "alpha_exponent": -6,
+            "coefficient": 45
+          },
+          {
+            "alpha_exponent": -4,
+            "coefficient": -120
+          },
+          {
+            "alpha_exponent": -2,
+            "coefficient": 210
+          },
+          {
+            "alpha_exponent": 0,
+            "coefficient": -252
+          },
+          {
+            "alpha_exponent": 2,
+            "coefficient": 210
+          },
+          {
+            "alpha_exponent": 4,
+            "coefficient": -120
+          },
+          {
+            "alpha_exponent": 6,
+            "coefficient": 45
+          },
+          {
+            "alpha_exponent": 8,
+            "coefficient": -10
+          },
+          {
+            "alpha_exponent": 10,
+            "coefficient": 1
+          }
+        ],
+        "scaled_numerator_certificate": {
+          "canonical_payload_sha256": "3cd5a41cd49b9d651a6779faee73d33dceac2fc0071b4385fa1968cbe94791f8"
+        }
+      }
+    ]
+  },
+  "non_scalar_parent": {
+    "dimension": "k+1",
+    "infinite_dimensional_categorical_and_nonlinear_parents_not_ruled_out": true,
+    "minimal_denominator": "det(I-T*B_(k,theta))",
+    "noninteger_no_go": "no fixed finite-dimensional B,v,ell with a_r=ell(B^r v)",
+    "not_equal_to_standard_determinant_inverse": true,
+    "parent": "B_(k,theta)=Sym^k(diag(exp(i theta),exp(-i theta)))",
+    "scalar_series": "trace(C_(k,theta)*(I-T*B_(k,theta))^-1)"
+  },
+  "normalization": {
+    "branch": "P_(lambda,J)(y<0)=exp(lambda*(log|y|+(2J+1)*pi*i)); principal convention J=0",
+    "closed_form": "u_r=sin((r+1)*theta)/sin(theta)",
+    "lambda_domain": "{0} union {Re(lambda)>0}",
+    "rationality": "analytic germ at T=0 belongs to C(T)",
+    "recurrence": "u_0=1; u_1=2*cos(theta); u_(r+2)=2*cos(theta)*u_(r+1)-u_r",
+    "theta_domain": "0<theta<pi and theta/pi irrational"
+  },
+  "payload_sha256": "36b320e4305bfaedb032539d15e3ec5736a055ad667d94c1304293e3ac4cc7b3",
+  "producer": {
+    "note": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_PRINCIPAL_COMPLEX_POWER_RATIONALITY.md",
+    "note_sha256_lf_normalized": "b635c9fc8051007f46fc1efdb342c88118362edb79ed1d63624df21ef367ddf4",
+    "script": "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.py",
+    "script_sha256_lf_normalized": "c5df80a6b24023eaac66cc629576b62bdc6f67c62fa0aa3d3a7caf3c4267979d",
+    "test": "tests/test_irrational_rotation_principal_complex_power_rationality.py",
+    "test_sha256_lf_normalized": "71281b220880510d5134d99be84dc05e9a77f682c755ddfb3cbfe5bd37dc5a84"
+  },
+  "programme_issue": 764,
+  "resource_contract": {
+    "arithmetic_class": "EXACT_RATIONAL",
+    "declared_work_units": 4356,
+    "exact_method": "integer Laurent-polynomial Fourier and recurrence algebra plus complex-rational cusp controls",
+    "external_symbolic_engine": false,
+    "float_operations": 0,
+    "maximum_allowed_k": 18,
+    "maximum_k": 10,
+    "prime_curve_field_zero_or_conductor_enumerations": 0,
+    "random_samples": 0,
+    "theta_handling": "SYMBOLIC_IRRATIONAL_ROTATION_HYPOTHESIS",
+    "work_unit_cap_exclusive": 100000
+  },
+  "schema": "riemann.atlas.generalized.irrational_rotation_principal_complex_power_rationality.v1",
+  "scope_firewall": {
+    "external_novelty_unreviewed": true,
+    "finite_dimensional_constant_state_space_no_go_only": true,
+    "fixed_real_axis_branch_required_for_nonintegers": true,
+    "lambda_zero_or_strictly_positive_real_part_only": true,
+    "no_RH_GRH_or_zero_distribution_consequence": true,
+    "no_automorphy_motivic_or_infinite_dimensional_no_go": true,
+    "no_global_Euler_product_completion_or_functional_equation": true,
+    "no_verdict_for_nonzero_lambda_with_nonpositive_real_part": true,
+    "one_unramified_determinant_one_local_recurrence": true,
+    "tempered_irrational_rotation_only": true
+  },
+  "source_lock": {
+    "base_commit": "834a24e71878a584e00215edf1e0c813faa9f578",
+    "external_references": [
+      {
+        "authors": "Oliver Knill and John Lesieutre",
+        "boundary": "nearby irrational-rotation Taylor and Dirichlet series, Fourier partial fractions, and natural-boundary results under additional hypotheses; not this exact fixed-branch rationality and minimal-order classification",
+        "doi": "10.1007/s11785-010-0064-7",
+        "journal": "Complex Analysis and Operator Theory 5 (2011), 237-255",
+        "title": "Analytic continuation of Dirichlet series with almost periodic coefficients",
+        "url": "https://arxiv.org/abs/0811.1362"
+      },
+      {
+        "authors": "William Kahan",
+        "boundary": "general principal-value and branch-cut background; not a source for the dense-orbit or recurrence theorem",
+        "title": "Branch Cuts for Complex Elementary Functions, or Much Ado About Nothing's Sign Bit",
+        "url": "https://people.freebsd.org/~das/kahan86branch.pdf"
+      }
+    ],
+    "file_sha256_lf_normalized": "ad891e0c0c87c49e0fb6fa592501aa19e2ff643650730699465ec76cb2ace52a",
+    "manifest": "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+    "scope_firewall": {
+      "external_novelty_unreviewed": true,
+      "finite_dimensional_constant_state_space_no_go_only": true,
+      "fixed_real_axis_logarithm_branch": true,
+      "lambda_domain_zero_or_strictly_positive_real_part": true,
+      "no_RH_GRH_or_zero_distribution_consequence": true,
+      "no_automorphy_motive_or_infinite_dimensional_no_go": true,
+      "no_claim_for_nonzero_lambda_with_nonpositive_real_part": true,
+      "no_completion_or_functional_equation_claim": true,
+      "no_global_euler_product_constructed": true,
+      "one_unramified_determinant_one_local_recurrence": true,
+      "tempered_irrational_rotation_only": true
+    },
+    "verified_sources": [
+      {
+        "file_sha256_lf_normalized": "29e5691ad63666caed092920229f9d27655d6a064b01542a24e8241a54316333",
+        "git_blob": "d0ff4d4d17787b6dffc4c8c1ccd14a20c69076d0",
+        "path": "research/l-families/atlas/generalized/RATIONAL_ROTATION_BRANCH_CENSUS.md",
+        "role": "exact real-axis branch convention, zero convention, and scalar-observable versus state-space parent boundary"
+      },
+      {
+        "file_sha256_lf_normalized": "1d57f51238b96447da95343dadbbeab7dc4e1efee332bf05d2eb0424384b2ebe",
+        "git_blob": "a2fff9a394585fe91a1dacad429f68f99603e9a2",
+        "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
+        "role": "reused canonical hashing, branch metadata, and fail-closed Git-object verification"
+      },
+      {
+        "file_sha256_lf_normalized": "520231c5a0e2bb8574ef041a54ee6b5801de4609af8919465192caa728a700a6",
+        "git_blob": "c92c6e79df09bfcd34b992a56667655de530f11a",
+        "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.json",
+        "payload_sha256": "cf06ebaecb19ae16874db084cc0050d70d6531ff9878e92e6bec10a0b60379e6",
+        "role": "adjacent exact branch and integer-spectrum fixture",
+        "schema": "riemann.atlas.generalized.rational_rotation_branch_census.v1"
+      },
+      {
+        "file_sha256_lf_normalized": "03370f909ae1b4f53edece1db54d9e5e2335523761744d9d81aed48411a63017",
+        "git_blob": "103a568fe71f08886b5b3837c944bc630ad4cf3d",
+        "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+        "role": "inherited source and branch-cut literature boundary"
+      },
+      {
+        "file_sha256_lf_normalized": "213efe84034449a7ece87b273653bc683c11b28ea4f62e599e3f2b0bbac7c8a2",
+        "git_blob": "8f27df80a4983b4d393ee3a2477a744afaeb1d3a",
+        "path": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+        "role": "adjacent dense-orbit finite-spectrum lemma and absolute-power comparison"
+      },
+      {
+        "file_sha256_lf_normalized": "4f070750c83d04ed1ed74a5ddcdd42c6b6ce0746a548ce11a3086b6fc37da66b",
+        "git_blob": "3adf8f211fee7bd51e811520b31785af38ccd7c0",
+        "path": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+        "role": "inherited nearby almost-periodic-series reference boundary"
+      }
+    ]
+  },
+  "status": "PROPOSED_EXACT_LOCAL_THEOREM_EXTERNAL_NOVELTY_UNREVIEWED",
+  "survival_ladder": {
+    "L4_through_L9_not_established": true,
+    "levels": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7",
+      "L8",
+      "L9"
+    ],
+    "rows": [
+      {
+        "L0": "FAIL_NEGATIVE_REAL_VALUES_AMBIGUOUS",
+        "first_failure_level": "L0",
+        "object": "noninteger complex power without branch datum"
+      },
+      {
+        "L0": "PASS_AFTER_J_IS_FIXED",
+        "L1": "FAILS_IN_GENERAL",
+        "L2": "NOT_REACHED_WHEN_L1_FAILS",
+        "L3": "FAIL_EVERY_IRRATIONAL_TEMPERED_ROTATION",
+        "first_failure_levels": [
+          "L1",
+          "L3"
+        ],
+        "object": "fixed-branch noninteger power with Re(lambda)>0"
+      },
+      {
+        "L0": "PASS_BRANCH_INDEPENDENT",
+        "L1": "PASS_SCALAR_MULTIPLICATIVITY",
+        "L2": "FORMAL_IF_INPUT_COEFFICIENTS_ARE_MULTIPLICATIVE",
+        "L3": "PASS_EXACT_DEGREE_k_PLUS_1",
+        "first_unresolved_level": "L4",
+        "object": "integer k>=0"
+      }
+    ]
+  }
+}

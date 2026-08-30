@@ -39,3 +39,15 @@ its finite-dimensional symmetric-power state-space parent.  Pointwise
 periodicity is not a uniform local-degree theorem as the angle denominator
 grows.  The exact inherited files and nearby literature are recorded in its
 colocated [sources manifest](rational_rotation_branch_census.sources.json).
+
+The fourth packet is
+[IRRATIONAL_ROTATION_PRINCIPAL_COMPLEX_POWER_RATIONALITY.md](IRRATIONAL_ROTATION_PRINCIPAL_COMPLEX_POWER_RATIONALITY.md).
+For any fixed real-axis logarithm branch, \(\lambda=0\) or
+\(\operatorname{Re}\lambda>0\), it proves that the signed complex-power
+series on an irrational tempered orbit is rational exactly at nonnegative
+integer exponents.  At \(k\), its minimal order is \(k+1\), and it is a
+weighted resolvent trace of the genuine \(\operatorname{Sym}^k\) local
+state-space parent.  The noninteger corollary excludes only constant
+finite-dimensional linear realizations; it does not exclude infinite-rank or
+categorical parents.  Exact dependencies and branch-cut prior art are in the
+colocated [sources manifest](irrational_rotation_principal_complex_power_rationality.sources.json).
