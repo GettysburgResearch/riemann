@@ -1,4 +1,4 @@
-# L-108440 — The double quadratic resonance is exactly the principal physical member
+# L-108440 — The double quadratic resonance is exactly the principal physical transform
 
 Claim ID: `L-108440`  
 Status: **PROVED EXACT SOURCE-LEVEL ALIAS THEOREM**  
@@ -80,52 +80,34 @@ The identity is coefficientwise and survives every source mask, endpoint
 colour, Mellin parameter, Boolean history and physical shell retained inside
 the fixed fibre.
 
-## 1. Exact Gauss-weight ratio
+## 1. Normalization boundary
 
-In the bilateral tensor normalization of `L-106120`, a nonprincipal even
-character has weight
+Equation (L-108440.5) is an identity in the physical squareclass Fourier
+normalization of `L-107300--L-107304`. It does **not** by itself identify the
+legacy `eta=chi^2` index and Gauss weight of `L-106120` with the physical
+quadratic character. That source-to-squareclass adapter must retain its root
+choice and normalization explicitly.
 
-\[
-w_q={2q\over q-1},
-\]
-
-while the principal member has weight
-
-\[
-c_q={q+1\over q-1}.
-\]
-
-Consequently, after applying the exact source-to-squareclass adapter, the
-double quadratic row has the fixed positive weight ratio
-
-\[
-\boxed{
-{w_\ell w_\rho\over c_\ell c_\rho}
-=
-{4\ell\rho\over(\ell+1)(\rho+1)}.
-}
-\tag{L-108440.6}
-\]
-
-Thus a positive or absolute-value bound for the double quadratic row is,
-fibre by fibre, the same bound as for the principal physical member up to the
-explicit factor (L-108440.6).
+Accordingly the theorem claims equality of the raw physical transforms and
+of their squared moduli. Any later comparison of weighted family moments
+must use the exact adapter; no generic nonprincipal/principal weight ratio is
+asserted here.
 
 ## 2. Geometric meaning
 
 The pullback of each quadratic Kummer sheaf by the square map is constant.
 For the double row both core variables disappear, leaving only the fixed
 owner-class scalar `sigma tau`. Deligne cancellation and nonconstant trace
-estimates have no leverage on this row.
+estimates have no leverage on this physical transform.
 
 The row must instead be recombined with the principal/root ledger before any
 absolute value is taken. Calling it one of “at most three finite resonance
-errors” hides the conclusion channel.
+errors” hides the conclusion-shaped physical coefficient.
 
 ## 3. Scope
 
-The theorem does not prove the principal estimate. It proves that the double
-quadratic part of `QRESBIND107300` is not an independently disposable local
-error. When one or both quadratic characters are absent, the corresponding
-row is absent. The one-coordinate quadratic rows remain separate one-sided
-arithmetic problems.
+The theorem does not prove the principal estimate or identify every historical
+Gauss-family normalization. It proves that the double quadratic physical
+transform is not an independently oscillating local error. When one or both
+quadratic characters are absent, the corresponding row is absent. The
+one-coordinate quadratic rows remain separate one-sided arithmetic problems.
