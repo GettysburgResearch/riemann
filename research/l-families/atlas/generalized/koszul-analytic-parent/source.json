@@ -1,0 +1,13 @@
+{
+  "schema": "koszul23-primitive-source-v1",
+  "field": "C",
+  "ranks": [2, 3],
+  "generators_row_column": [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2]],
+  "quadratic_map": "ordered words map to row totals and column totals",
+  "dual_relations": "one sum of all ordered words in each quadratic-map fibre",
+  "generator_parity": "odd",
+  "parent": "dual of the Lie superalgebra generated in the quadratic-dual quotient",
+  "arithmetic": "integers, fractions, and Gaussian fractions; no floats",
+  "coverage": "all words and all source relation fibres through tensor degree 3; finite controls do not prove Koszulness or analytic continuation",
+  "caps": {"tensor_degree": 3, "tensor_dimension": 216, "series_degree": 24, "multiplicity_degree": 64}
+}
