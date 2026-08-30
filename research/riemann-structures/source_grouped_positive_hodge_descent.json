@@ -1,0 +1,336 @@
+{
+  "classification": "PASS_T108104_SOURCE_GROUPED_POSITIVE_HODGE_DESCENT",
+  "complete_live_occupancy_census_proved": false,
+  "cross_group_zero_current": {
+    "cell_labels": [
+      0
+    ],
+    "cell_multiplicities": [
+      4
+    ],
+    "cell_sums": [
+      {
+        "denominator": 1,
+        "numerator": 0
+      }
+    ],
+    "group_energies": [
+      {
+        "denominator": 1,
+        "numerator": 2
+      },
+      {
+        "denominator": 1,
+        "numerator": 2
+      }
+    ],
+    "group_mean_energy": {
+      "denominator": 1,
+      "numerator": 4
+    },
+    "group_sums": [
+      {
+        "denominator": 1,
+        "numerator": 2
+      },
+      {
+        "denominator": 1,
+        "numerator": -2
+      }
+    ],
+    "quotient_input_energy": {
+      "denominator": 1,
+      "numerator": 0
+    },
+    "total_energy": {
+      "denominator": 1,
+      "numerator": 4
+    },
+    "total_kernel_energy": {
+      "denominator": 1,
+      "numerator": 4
+    },
+    "within_cell_group_variance": {
+      "denominator": 1,
+      "numerator": 4
+    },
+    "within_history_variance": {
+      "denominator": 1,
+      "numerator": 0
+    }
+  },
+  "finite_checks": 31,
+  "full_wick_value": {
+    "denominator": 15,
+    "numerator": -206
+  },
+  "global_relative_trace_proved": false,
+  "live": {
+    "cell_labels": [
+      0
+    ],
+    "cell_multiplicities": [
+      100
+    ],
+    "cell_sums": [
+      {
+        "denominator": 1,
+        "numerator": 4
+      }
+    ],
+    "group_energies": [
+      {
+        "denominator": 1,
+        "numerator": 676
+      }
+    ],
+    "group_mean_energy": {
+      "denominator": 25,
+      "numerator": 4
+    },
+    "group_sums": [
+      {
+        "denominator": 1,
+        "numerator": 4
+      }
+    ],
+    "quotient_input_energy": {
+      "denominator": 25,
+      "numerator": 4
+    },
+    "total_energy": {
+      "denominator": 1,
+      "numerator": 676
+    },
+    "total_kernel_energy": {
+      "denominator": 25,
+      "numerator": 16896
+    },
+    "within_cell_group_variance": {
+      "denominator": 1,
+      "numerator": 0
+    },
+    "within_history_variance": {
+      "denominator": 25,
+      "numerator": 16896
+    }
+  },
+  "live_factor_4225_recovered": true,
+  "positive_part_invariant_under_authorized_history_aggregation": true,
+  "principal_binding_proved": false,
+  "proof_object_sha256": "8e0db5e65bd32f0ad64ce84004b211fecd512fa2594886f23ab6dc0dbd734998",
+  "quotient_wick_value": {
+    "denominator": 5,
+    "numerator": 73
+  },
+  "rh_or_grh_established": false,
+  "same_cell_cross_group_zero_current_exact_negative_d_block": true,
+  "schema": "riemann.t108104.source-grouped-positive-hodge.v1",
+  "signed_cross_conductor_recombination_proved": false,
+  "toy": {
+    "cell_labels": [
+      0,
+      1
+    ],
+    "cell_multiplicities": [
+      5,
+      5
+    ],
+    "cell_sums": [
+      {
+        "denominator": 1,
+        "numerator": 3
+      },
+      {
+        "denominator": 1,
+        "numerator": 4
+      }
+    ],
+    "group_energies": [
+      {
+        "denominator": 1,
+        "numerator": 10
+      },
+      {
+        "denominator": 1,
+        "numerator": 9
+      },
+      {
+        "denominator": 1,
+        "numerator": 16
+      },
+      {
+        "denominator": 1,
+        "numerator": 4
+      }
+    ],
+    "group_mean_energy": {
+      "denominator": 3,
+      "numerator": 55
+    },
+    "group_sums": [
+      {
+        "denominator": 1,
+        "numerator": 2
+      },
+      {
+        "denominator": 1,
+        "numerator": 1
+      },
+      {
+        "denominator": 1,
+        "numerator": 4
+      },
+      {
+        "denominator": 1,
+        "numerator": 0
+      }
+    ],
+    "quotient_input_energy": {
+      "denominator": 1,
+      "numerator": 5
+    },
+    "total_energy": {
+      "denominator": 1,
+      "numerator": 39
+    },
+    "total_kernel_energy": {
+      "denominator": 1,
+      "numerator": 34
+    },
+    "within_cell_group_variance": {
+      "denominator": 3,
+      "numerator": 40
+    },
+    "within_history_variance": {
+      "denominator": 3,
+      "numerator": 62
+    }
+  },
+  "toy_changed_lift": {
+    "cell_labels": [
+      0,
+      1
+    ],
+    "cell_multiplicities": [
+      5,
+      5
+    ],
+    "cell_sums": [
+      {
+        "denominator": 1,
+        "numerator": 3
+      },
+      {
+        "denominator": 1,
+        "numerator": 4
+      }
+    ],
+    "group_energies": [
+      {
+        "denominator": 1,
+        "numerator": 4
+      },
+      {
+        "denominator": 1,
+        "numerator": 1
+      },
+      {
+        "denominator": 1,
+        "numerator": 16
+      },
+      {
+        "denominator": 1,
+        "numerator": 0
+      }
+    ],
+    "group_mean_energy": {
+      "denominator": 3,
+      "numerator": 55
+    },
+    "group_sums": [
+      {
+        "denominator": 1,
+        "numerator": 2
+      },
+      {
+        "denominator": 1,
+        "numerator": 1
+      },
+      {
+        "denominator": 1,
+        "numerator": 4
+      },
+      {
+        "denominator": 1,
+        "numerator": 0
+      }
+    ],
+    "quotient_input_energy": {
+      "denominator": 1,
+      "numerator": 5
+    },
+    "total_energy": {
+      "denominator": 1,
+      "numerator": 21
+    },
+    "total_kernel_energy": {
+      "denominator": 1,
+      "numerator": 16
+    },
+    "within_cell_group_variance": {
+      "denominator": 3,
+      "numerator": 40
+    },
+    "within_history_variance": {
+      "denominator": 3,
+      "numerator": 8
+    }
+  },
+  "toy_changed_spectral": {
+    "full_negative": {
+      "denominator": 30,
+      "numerator": 403
+    },
+    "kernel_negative": {
+      "denominator": 3,
+      "numerator": 40
+    },
+    "positive": {
+      "denominator": 10,
+      "numerator": 147
+    },
+    "quotient_negative": {
+      "denominator": 10,
+      "numerator": 1
+    },
+    "wick_value": {
+      "denominator": 15,
+      "numerator": 19
+    }
+  },
+  "toy_spectral": {
+    "full_negative": {
+      "denominator": 30,
+      "numerator": 853
+    },
+    "kernel_negative": {
+      "denominator": 3,
+      "numerator": 85
+    },
+    "positive": {
+      "denominator": 10,
+      "numerator": 147
+    },
+    "quotient_negative": {
+      "denominator": 10,
+      "numerator": 1
+    },
+    "wick_value": {
+      "denominator": 15,
+      "numerator": -206
+    }
+  },
+  "two_stage_atom_group_cell_factorization_proved": true,
+  "within_history_fluctuations_exact_negative_d_block": true
+}
