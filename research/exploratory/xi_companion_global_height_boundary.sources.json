@@ -1,0 +1,95 @@
+{
+  "authoring_base": "5b25f2dace65dd4d46e16d566f2dc7a34b98f41d",
+  "external_contracts": [
+    {
+      "remote_bytes_authenticated": false,
+      "role": "xi definition and functional equation 25.4.3-4",
+      "url": "https://dlmf.nist.gov/25.4"
+    },
+    {
+      "remote_bytes_authenticated": false,
+      "role": "classical digamma asymptotic on the positive real axis",
+      "url": "https://dlmf.nist.gov/5.11.E2"
+    },
+    {
+      "remote_bytes_authenticated": false,
+      "role": "classical differentiated polygamma bounds used through order five",
+      "url": "https://dlmf.nist.gov/5.15.E9"
+    },
+    {
+      "remote_bytes_authenticated": false,
+      "role": "Section 2.1 page 4: meromorphic inner factorization and mass at infinity",
+      "url": "https://people.math.wisc.edu/~poltoratski/ToeplitzOrder.pdf"
+    }
+  ],
+  "other_classical_imports": [
+    "Hadamard factorization for entire functions of order at most one",
+    "Rolle, locally uniform derivative convergence and Hurwitz"
+  ],
+  "schema": "xi-companion-global-height-boundary-sources-v1",
+  "sources": [
+    {
+      "commit": "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+      "git_blob": "fa24f9c8e0a87709d1a297a4e72136c1135d066c",
+      "id": "kernel",
+      "kind": "scientific_source",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+      "role": "XL1-XL4 actual full-line Xi normalization, positive even kernel and XL11 tail",
+      "sha256_lf": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246"
+    },
+    {
+      "commit": "76454e3db0ccce8f500297ea27668d6088b5091a",
+      "git_blob": "a97d25f556a2bd085a4749d1e96d883a0646e666",
+      "id": "count",
+      "kind": "scientific_source",
+      "path": "research/exploratory/XI_UNIFORM_COMPANION_COUNT_WIDTH.md",
+      "role": "UC2-UC6 actual companion definitions and order-one growth; finite geographic scope",
+      "sha256_lf": "adaef750b277b755494d57e17a3e913e8f44f1614806d8274495ac88912fb0bc"
+    },
+    {
+      "commit": "90e8dff3d184cbfe59974969ca89615856c33c51",
+      "git_blob": "72ac1f93b6fb0a74200ed2cc7e8399a4a10064c2",
+      "id": "capture",
+      "kind": "scientific_source",
+      "path": "research/exploratory/HARDY_COFINAL_FINITE_HEIGHT_SOURCE_CAPTURE.md",
+      "role": "HC1 global finite unweighted height and pure denominator hypothesis; HC10 unpaid source tail",
+      "sha256_lf": "490373dafd09ed491a2c3ad31b44dc152cd0936c84f58e1676aef0ffd1013a0b"
+    },
+    {
+      "commit": "ef7bbb8dca978269f24e7ff9d97b6dceeed5b460",
+      "git_blob": "955b92fe277bcdb3d6e260b5cc9dc02dd3f49144",
+      "id": "duality",
+      "kind": "scientific_source",
+      "path": "research/exploratory/HARDY_INNER_WIDTH_SOURCE_DUALITY.md",
+      "role": "IW corrected adjoint physical source retained; raw-value convention not imported",
+      "sha256_lf": "a946e53b956bc94b39687dffe59f0eb97d33948ace996a6d9f0797d71b20acd5"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "7fbf3731f286ddfc9eb1d10ede5941ab2156817a",
+      "id": "frozen_lambda",
+      "kind": "literal_source_definition",
+      "path": "claims/lemmas/L-106620-mesoscopic-frozen-riemann-siegel-gauge.md",
+      "role": "L-106620.1 and .4-.6 constant positive lambda and exact C/R companion allocation",
+      "sha256_lf": "23e368f246606b0a8b4f53bec9e65e1dec21bdd207197387461268b4ca1bb7d0"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "8db4fc42c3ea964c592224b64d0ad92b6c264018",
+      "id": "native",
+      "kind": "historical_context",
+      "path": "claims/theorems/T-106620-mesoscopic-riemann-siegel-gauge-ninety-percent-frontier.md",
+      "role": "native U5 quotient with reduced inner factors; common-zero and cofinal ledger remains unpaid",
+      "sha256_lf": "f926698271d06b2db02bd1d7e00a05034934d8b77a75496e137d127c565795b0"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "fafa4b390bc140c8bb514dba83d41a5643cb77f1",
+      "id": "height",
+      "kind": "historical_context",
+      "path": "claims/lemmas/L-106621-constant-scale-companion-height-budget.md",
+      "role": "finite-window companion height context only; not an imported entire global-height bound",
+      "sha256_lf": "e41462ea71fd1f46849f75f7ff5dd6189514743e27bd3292bd1aec9292ec9065"
+    }
+  ]
+}
