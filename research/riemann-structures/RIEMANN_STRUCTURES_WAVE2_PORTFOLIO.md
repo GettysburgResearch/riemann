@@ -1,0 +1,386 @@
+# Riemann Structures: wave-2 portfolio and research boundary
+
+Status: **programme map with exact finite-algebra results, open geometric and
+analytic gates, and externally unreviewed novelty**
+
+Issue: [#763](https://github.com/gfreund123/riemann/issues/763)
+
+## Bottom line
+
+The first marked-descent packet found a clean universal chart, but it did not
+construct the complete native source or prove descent.  The source-faithful
+second wave now changes the diagnosis more sharply:
+
+1. the Wick pair lives in a relative self-product over one fixed conductor
+   fibre; an independent product of two marked charts is the wrong object;
+2. the exact finite operator depends on both the aggregated residue field and
+   an atomic diagonal-energy channel;
+3. residue aggregation alone provably forgets source cancellation;
+4. complete-cell occupancy is full-rank and indefinite, while incomplete
+   occupancy can be singular.
+
+This is a useful structural no-go, not native noncancellation.  It identifies
+the next object that should be sought: a source-faithful relative or derived
+pushforward which retains literal diagonal data before label forgetting and
+signed conductor recombination.
+
+The programme should nevertheless remain broader than this one sheaf lane.
+Four mechanisms are retained below: relative Frobenius geometry,
+archimedean local objects, transfer/operator parents, and synthetic
+counterfeit worlds.  They have different failure modes and held-out tests.
+
+RH and GRH remain unproved.
+
+## 1. Exact wave-2 result ledger
+
+Let one native conductor fibre be indexed by
+
+\[
+ \iota=(g,\ell,\rho,\sigma,\tau),\qquad \ell\ne\rho,
+\]
+
+and let `Omega_iota` be its retained source atoms.  Two Wick atoms share
+`iota`; they do not carry independently chosen marked primes.  If `R` is the
+cell-by-atom incidence matrix for the crossed physical residue map, put
+
+\[
+ m_q=\frac{q-1}{2},\qquad
+ H_q=I_{m_q}-\frac1qJ_{m_q},
+\]
+
+\[
+ S=H_\ell\otimes H_\rho,
+ \qquad
+ d=\left(1-\frac1\ell\right)
+   \left(1-\frac1\rho\right).
+\]
+
+The normalized fixed-fibre Wick operator is
+
+\[
+ \boxed{B_R=R^*SR-dI.}
+\tag{1.1}
+\]
+
+For a coefficient vector `z`,
+
+\[
+ \boxed{
+ z^*B_Rz=(Rz)^*S(Rz)-d\sum_\omega|z_\omega|^2.
+ }
+\tag{1.2}
+\]
+
+Equation (1.2) gives both a no-go and a replacement design.
+
+| verdict | exact content | what it does not prove |
+|---|---|---|
+| shared-fibre carrier | the correct pair object is `(Omega x_I Omega) minus Delta`, with literal source diagonal | existence of a descended sheaf or commuting partial Frobenii |
+| two-channel sufficiency | `(Rz, sum abs(z)^2)` reconstructs the finite Wick form exactly | that both channels occur canonically after native pushforward |
+| residue-forgetting no-go | two same-cell atoms with coefficients `(1,-1)` have `Rz=0` but Wick value `-2d` | failure of every richer relative or derived realization |
+| kernel theorem | on `ker R`, `B_R=-dI`; source-difference energy is invisible to residue totals | a favourable sign after all source coefficients are inserted |
+| complete-cell spectrum | one atom in every allowed cell gives four explicit, nonzero eigenspaces and a full-rank indefinite operator for distinct odd primes | heredity to the live incomplete occupancy |
+| incomplete-occupancy obstruction | singleton occupancy is zero; a `2 by n` rectangle has an exact null vector when `rho-1=ell(n-1)` | classification of the actual native occupancy matrix |
+
+The exact source-locked theorem packet is
+`FFPS_SHARED_FIBRE_WICK_OCCUPANCY_SPECTRUM.md` in the function-field atlas.
+Its replay, not this programme map, is the canonical proof artifact.
+
+### Structural interpretation
+
+The forgotten term in (1.2) is not a bookkeeping nuisance.  It is precisely
+the normal-ordering correction that distinguishes literal atom equality from
+equality after physical collapse.  Therefore a residue-only
+`ONEPLACEWEIL` object cannot be source-faithful.  A viable construction must
+retain either:
+
+- the literal relative diagonal and its cone/complement;
+- a second quadratic-energy channel compatible with pushforward; or
+- an equivalent enriched object from which both statistics descend.
+
+This is the strongest current bridge to the unfinished #760 relative-first
+architecture.
+
+## 2. Repository boundary map
+
+| lineage | exact inheritance | boundary that remains open |
+|---|---|---|
+| [#737](https://github.com/gfreund123/riemann/issues/737) | function-field mirror and physical-occupancy problem | a source-faithful object binding the literal native source |
+| [#739](https://github.com/gfreund123/riemann/issues/739) | trace-formula attack vocabulary and memberwise target | a usable relative trace theorem with principal individualization |
+| [#743](https://github.com/gfreund123/riemann/issues/743) | common-mother and physical-restriction interfaces | exact gluing without source-blind collapse |
+| [#746](https://github.com/gfreund123/riemann/issues/746) | Frobenius--Hodge and `F_1` candidate language | an honest object, polarization, and local--global theorem |
+| [PR #756](https://github.com/gfreund123/riemann/pull/756) | exact residual mechanisms and physical-squareclass bridge | `CYSEL`, source port, and principal binding |
+| [PR #757](https://github.com/gfreund123/riemann/pull/757) | cyclic torsor, partial Adams masks, divisor wavelet, and named trace gates | native external-product adapter and uniform trace control |
+| [PR #760](https://github.com/gfreund123/riemann/pull/760) | full core-wavelet reduction and relative-first Adams interface | `NATREL`, `RELPARTFROB`, `RELTRACE`, and new principal binding |
+| [PR #765](https://github.com/gfreund123/riemann/pull/765) | fixed-label rank-one trace externality and clean-chart support/rank tax | complete occupancy, signed descent, `ONEPLACEWEIL`, and member binding |
+
+The present wave does not replace any open analytic gate by finite linear
+algebra.  It refines `NATREL`: a native relative adapter must preserve the
+diagonal-energy channel in (1.2).
+
+## 3. Primary-literature boundary
+
+These references mark established territories.  They are not evidence that
+the repository packet is new.
+
+| territory | primary boundary | lesson for this programme |
+|---|---|---|
+| weights and Frobenius | Pierre Deligne, [*La conjecture de Weil II*](https://publications.ias.edu/node/386) | a critical-line theorem in the function-field world uses an actual sheaf/cohomology/weight package, not the word “Frobenius” |
+| trace and local `L`-functions | [SGA 4½, Exposé II: Trace formula and L-functions](https://grothendiecksga.com/read/sga4.5/en/II_3.html) | pointwise traces, compactly supported cohomology, and Euler factors are tied by a literal functorial trace formula |
+| archimedean determinant models | Christopher Deninger, [*Local L-factors of motives and regularized determinants*](https://doi.org/10.1007/BF01231885) | writing a gamma factor as a determinant is established; naturality, duality, and tensor compatibility are the real tests |
+| dynamical parents | Giulietti--Liverani--Pollicott, [*Anosov Flows and Dynamical Zeta Functions*](https://arxiv.org/abs/1203.0904) | a transfer operator acts on independently defined spaces and controls meromorphic continuation; a fitted finite matrix is not analogous |
+| relative trace comparison | Yiannis Sakellaridis, [*Beyond Endoscopy for the Relative Trace Formula II*](https://arxiv.org/abs/1402.3524) | nonstandard transfer operators between trace formulae are established and highly structured; repository terminology alone creates no novelty |
+| explicit-formula axioms | Andrew Booker, [*L-functions as distributions*](https://arxiv.org/abs/1308.3067) | Euler, functional-equation, and explicit-formula data can be organized distributionally; synthetic worlds must be compared with this existing framework |
+| characteristic-one geometry | Connes--Consani, [*Geometry of the scaling site*](https://arxiv.org/abs/1603.03191) | arithmetic/scaling-site and tropical Riemann--Roch programmes already exist; any `F_1` proposal needs a precise non-overlap and stronger exact output |
+
+The literature audit yields one immediate rule: “new Riemann structure” is
+too strong a label until an independently defined object explains at least
+two distinct phenomena and survives a held-out prediction or counterfeit.
+
+## 4. Four contrasting mechanism lanes
+
+### M1. Source-faithful relative Frobenius geometry
+
+Candidate object: a relative complex on the shared conductor fibre product,
+with a literal diagonal triangle and commuting total/partial Frobenius where
+defined.
+
+Required outputs:
+
+1. recover both terms of (1.2), not only the residue aggregate;
+2. support partial Adams extraction on the relative channel;
+3. produce a signed trace with a uniform complexity bound;
+4. bind the resulting family statement to the principal consumer.
+
+Falsifier: any construction whose pushforward factors only through `Rz` is
+already ruled out.  A construction that recreates the target quadratic form
+by choosing a bespoke inner product is fitted, not geometric.
+
+Promotion test: one honest complex should explain normal ordering and partial
+Frobenius, then predict an unused conductor-recombination identity.
+
+### M2. Archimedean local object and compatibility rigidity
+
+Candidate object: an independently defined archimedean complex, flow, or
+regularized operator carrying real/complex local types.
+
+Required outputs:
+
+1. the correct gamma factors;
+2. contragredient/duality shifts;
+3. tensor and parity rules;
+4. the archimedean term of an explicit formula.
+
+Falsifier: multiplying a determinant by an ad hoc entire symmetric factor can
+preserve a formal functional equation.  Determinant form plus reflection is
+therefore insufficient.
+
+First bounded experiment: encode the `GL(1)` real and complex gamma factors,
+their parity shifts, duals, and the smallest tensor products; classify
+finite-rank determinant models satisfying all rules before allowing
+regularization.  Failure is valuable if it isolates the exact need for an
+infinite-dimensional object.
+
+### M3. Transfer-operator or dynamical parent
+
+Candidate object: a fixed dynamical system and Banach/Hilbert complex whose
+periodic orbits produce prime-power terms and whose resonances produce the
+spectral side.
+
+Required outputs:
+
+1. an independently defined orbit set;
+2. a nuclear/Fredholm determinant or justified regularization;
+3. a duality/time-reversal operation;
+4. functorial behaviour across at least one twist family.
+
+Falsifier: inserting prime powers as chosen orbit lengths or known zeros as
+eigenvalues is circular.  Matching one explicit formula is not a held-out
+prediction.
+
+Held-out comparison: apply the same object schema without retuning to one
+Ihara/graph example and one arithmetic twist.  The graph side is a calibration
+world, not evidence that the number-field transfer exists.
+
+### M4. Synthetic explicit-formula and family-binding worlds
+
+Candidate objects: exact distributions or finite trace systems in which
+Euler data, reflection, positivity, and member selection can be independently
+switched on and off.
+
+Required output: minimal counterexamples showing which combinations are
+cheap to counterfeit and which force a genuine source.
+
+Immediate target: construct two families with identical averaged trace data
+and opposite behaviour in one selected member.  Any proposed
+family-to-principal theorem must distinguish them using an explicit binding
+axiom.
+
+Falsifier: a “counterfeit” defined by first choosing the desired zero set is
+uninformative.  The synthetic world must be specified upstream by local or
+trace data.
+
+## 5. Exact bounded corpus and held-out tests
+
+The first corpus is deliberately small enough for exact replay and broad
+enough to reject fitted structures.
+
+| corpus block | calibration data | held-out requirement |
+|---|---|---|
+| native shared fibres | distinct odd marked primes and the exact atom/residue map | arbitrary live occupancy and label multiplicity, not only one atom per cell |
+| diagonal controls | singleton; two same-cell atoms; complete cell grid | incomplete rectangles and source coefficients with cancellations |
+| source lineage | exact claims `L-106120`, `L-106131`, `L-106191`, `T-106140` | signed conductor recombination and equal-output split |
+| function-field analogue | clean trace/weight examples | one literal relative pushforward with partial Frobenius |
+| archimedean block | `GL(1)` real/complex gamma data | dual, parity, and tensor rule not used to fit the model |
+| dynamical block | one finite graph/Ihara determinant | one Anosov/transfer determinant and one arithmetic twist schema |
+| family-binding block | averaged identities with controlled members | exceptional member inserted without changing the trained averages |
+
+The finite-cell rows test formulas; they are not evidence for live native
+occupancy.  Broad finite-field or zero sweeps are not the next bottleneck.
+
+## 6. Proof-sized targets
+
+### T1. `DIAGREL`: a two-channel relative object
+
+Construct a canonical relative triangle or graded object whose trace gives
+
+\[
+ (Rz)^*S(Rz)-d\sum|z|^2
+\]
+
+before source labels are forgotten.  Prove compatibility with the partial
+Frobenius used by the #760 relative-first Adams extractor.
+
+This is the highest-priority object theorem.  It is stronger than adding the
+diagonal term by hand: the term must arise functorially from the literal
+relative diagonal.
+
+### T2. `OCCSPEC`: live occupancy classification
+
+If cell multiplicities are recorded in a diagonal matrix `M`, classify the
+zero and sign loci of
+
+\[
+ M^{1/2}SM^{1/2}-dI
+\]
+
+on the aggregated quotient, together with the fixed `-d` source-difference
+space.  Then determine which multiplicity patterns the native owner/cofactor
+constraints actually permit.
+
+The rectangle null family shows that full-cell invertibility is not the right
+conjecture.
+
+### T3. `SIGNEDRECOMB`: cancellation before norms
+
+Carry the complete coefficient ledger through label forgetting and conductor
+recombination while preserving the two-channel statistic.  Prove either a
+noncancellation theorem or an exact further cancellation identity.  Both
+outcomes are progress.
+
+### T4. `RELTRACE`: uniform signed trace control
+
+Only after `DIAGREL` exists, prove a conductor/Betti or operator-norm bound for
+the relative trace.  A positive-norm bound that discards the signed source is
+not a substitute.
+
+### T5. `PRINCIPAL_BINDING`: member selection
+
+Give an explicit positive domination, affordable amplifier, exact inversion,
+or rigidity theorem that sends the family-level result to the principal
+consumer without a fatal family-size tax.
+
+### T6. `ARCHRIGID`: archimedean uniqueness or no-go
+
+Classify the smallest determinant models satisfying gamma, duality, parity,
+and tensor constraints.  Either obtain a canonical object or prove that
+finite rank cannot support the package.
+
+### T7. `CROSSWORLD`: one schema, two worlds
+
+Require a promoted structure to recover one function-field or graph identity
+used for calibration and predict a second identity in a held-out world.
+Without this, “unification” remains analogy.
+
+## 7. Earlier high-priority leftovers
+
+The new programmes do not erase the strongest unfinished work from the prior
+lineage.
+
+| earlier frontier | present decision | reason |
+|---|---|---|
+| source-faithful function-field relative sheaf and principal extraction | **absorbed as priority 1 of #763** | the two-channel diagonal obstruction now specifies what the carrier must retain |
+| full primitive divisor wavelet / `COREWAVE` | **continue in parallel, separately source-locked** | it is the strongest exact one-variable reduction on Architecture A, but progress must use signed Möbius cancellation rather than another positive-norm relaxation |
+| complete assembled beta source | **retain after carrier repair** | assembling more source into a residue-only object would preserve the present forgetting error |
+| literal function-field mirror | **retain as the first `CROSSWORLD` held-out** | useful only when the same object and operations transfer literally, not by analogy |
+| Xi/explicit-formula descent | **defer one dependency level** | a descent claim is premature before the finite and archimedean carriers are both source-faithful |
+| bounded quartic moonshot | **keep as an independent low-cost scout** | it should not displace `DIAGREL`, but an exact multi-observable or no-go result could justify its own later branch |
+
+This ordering is deliberate.  The central lesson of the earlier work is that
+the next gain must exploit source cancellation rather than optimize the
+container in which absolute values are taken.
+
+## 8. Eight-hour continuation design
+
+This is the recommended next concentrated pass after the current wave-2
+packets are reviewed.
+
+| time | work product | hard stop |
+|---|---|---|
+| 0:00--1:00 | extract the actual live occupancy/multiplicity map from the complete source labels | stop if any source coordinate has been silently collapsed |
+| 1:00--2:15 | prove `OCCSPEC` for the first structured multiplicity families and isolate singularity equations | no broad enumeration; retain counterexamples |
+| 2:15--4:00 | design and test the literal diagonal triangle/two-channel `DIAGREL` adapter | reject any independent-conductor or residue-only model |
+| 4:00--5:00 | compose the adapter with partial Adams extraction and audit commuting Frobenius requirements | do not claim a sheaf if only finite matrices exist |
+| 5:00--6:00 | push the full signed coefficient ledger through conductor recombination | take no absolute value before the source-cancellation question is answered |
+| 6:00--7:00 | run the `GL(1)` archimedean compatibility census as an independent lane | determinant matching alone does not pass |
+| 7:00--8:00 | build one family-binding counterfeit pair, update the portfolio, and decide promotion/pause | no zero plots or novelty claims |
+
+## 9. Ranked continuation queue
+
+1. **`DIAGREL` plus the actual live occupancy map.**  This directly repairs
+   the source-forgetting obstruction and continues the most important #760
+   leftover.
+2. **Signed conductor recombination.**  Source cancellation, not a larger
+   positive container, is the remaining leverage.
+3. **`RELTRACE` and `PRINCIPAL_BINDING`.**  These are the true RH-facing
+   analytic and family-to-member gates, but they should not be attacked on an
+   invalid carrier.
+4. **Archimedean compatibility rigidity.**  Keep this independent so a
+   finite-place failure does not consume the entire programme.
+5. **Synthetic family-binding counterfeits.**  They can falsify weak
+   individualization principles cheaply and exactly.
+6. **Dynamical/graph held-out transfer.**  Promote only if one schema predicts
+   an identity not used in construction.
+7. **Scaling-site, categorical, or new-language moonshots.**  Open a separate
+   branch only after an honest object and a nontrivial operation are defined.
+
+## 10. Branch and promotion policy
+
+Keep the shared-fibre, occupancy, diagonal, signed recombination, and
+principal-binding work in the existing #763 branch: they are one dependency
+chain.  A separate archimedean or dynamical branch becomes justified only
+when it produces an independent exact theorem or reusable counterfeit suite.
+Opening a new programme merely to hold speculation would fragment review.
+
+Promote a lane when it produces at least one of:
+
+- an honest object explaining two distinct phenomena;
+- a source-faithful trace or determinant theorem;
+- a rigidity/no-go theorem closing a broad ontology;
+- a held-out cross-world prediction;
+- a family individualization mechanism with quantified cost.
+
+Pause a lane when it only renames existing theory, fits a target quadratic
+form, repeats a scalar function in extra coordinates, or reaches the same
+open inequality with no new cancellation mechanism.
+
+## 11. Scientific firewall
+
+The current exact mathematics is finite fixed-fibre algebra plus authenticated
+source identities.  It does not construct `ONEPLACEWEIL`, prove `RELTRACE`,
+bind the principal member, transfer function-field purity to number fields,
+or prove a critical-line theorem.  The literature map is a boundary audit,
+not a priority claim.  Every proposed object above remains a proposal until
+its carrier, operations, trace law, and held-out test are exact.
+
+RH and GRH remain open.
