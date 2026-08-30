@@ -491,6 +491,8 @@ measure the finitely many low-height departures only.
             pair = ev.get('offline_pair_sigma_t')
             pairtxt = (f"sigma = {pair[0]:.6f} (pair 1/2 +- {pair[0]-0.5:.6f}), t = {pair[1]:.6f}"
                        if pair else "not localized")
+            if ev.get('method'):
+                pairtxt += f" [method: {ev['method']}]"
             md += (f"- **{ev['type']}** at tau* = {ev['tau_star']:.6f} "
                    f"(z* = {ev['z_star'][0]:.6f} + {ev['z_star'][1]:.6f} i): colliding zeros "
                    f"t = {ev['t_colliding_pair'][0]:.9f}, {ev['t_colliding_pair'][1]:.9f} "

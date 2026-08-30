@@ -759,30 +759,41 @@ def dip_location(x, y, wa, wb, dt=0.02, levels=3, line_batch=None):
 
 
 def departure_finder(pathfun, taus, t0, t1, dt=0.05, depth=2, delta=0.2, tau_tol=1e-6,
-                     line_batch=None, lam_batch=None, refine_batch=None, log=None):
+                     line_batch=None, lam_batch=None, refine_batch=None, log=None,
+                     records=None):
     """Along z(tau) = pathfun(tau) (returns (x, y)), at each tau: refined on-line zeros +
     box count in [t0,t1].  Departure event: between consecutive grid taus the box-line
     discrepancy jumps by +2 (a pair leaves the line: two on-line zeros merge, the on-line
     count drops by 2, the box count stays).  tau* refined by bisection (to tau_tol) with
     the local classifier count_window (2 sign changes -> 0).  A disc jump of -2 is
-    recorded as a re-entry event and refined the same way.  Returns (records, events)."""
+    recorded as a re-entry event and refined the same way.  Returns (records, events).
+    If `records` (from a previous identical run) is passed, the scan phase is skipped and
+    only the event phase runs (deterministic: records are themselves deterministic)."""
     def _log(msg):
         if log:
             log(msg)
 
-    records = []
-    for tau in taus:
-        x, y = pathfun(tau)
-        det = off_line_detector(x, y, t0, t1, dt=dt, depth=depth, delta=delta, refine=True,
-                                line_batch=line_batch, lam_batch=lam_batch,
-                                refine_batch=refine_batch)
-        records.append({'tau': tau, 'x': x, 'y': y, 'n_line': det['n_line'],
-                        'n_box': det['n_box'], 'disc': det['disc'],
-                        'zeros': det['scan']['zeros'],
-                        'unresolved_dips': det['scan']['unresolved_dips'],
-                        'anomaly': det['anomaly']})
-        _log(f"  tau={tau:.3f}: n_line={det['n_line']} n_box={det['n_box']} disc={det['disc']}")
+    if records is None:
+        records = []
+        for tau in taus:
+            x, y = pathfun(tau)
+            det = off_line_detector(x, y, t0, t1, dt=dt, depth=depth, delta=delta,
+                                    refine=True, line_batch=line_batch,
+                                    lam_batch=lam_batch, refine_batch=refine_batch)
+            records.append({'tau': tau, 'x': x, 'y': y, 'n_line': det['n_line'],
+                            'n_box': det['n_box'], 'disc': det['disc'],
+                            'zeros': det['scan']['zeros'],
+                            'unresolved_dips': det['scan']['unresolved_dips'],
+                            'anomaly': det['anomaly']})
+            _log(f"  tau={tau:.3f}: n_line={det['n_line']} n_box={det['n_box']} "
+                 f"disc={det['disc']}")
+    events = _find_events(pathfun, records, t0, t1, dt, depth, delta, tau_tol,
+                          line_batch, lam_batch, refine_batch, _log)
+    return records, events
 
+
+def _find_events(pathfun, records, t0, t1, dt, depth, delta, tau_tol,
+                 line_batch, lam_batch, refine_batch, _log):
     events = []
     for j in range(len(records) - 1):
         ra, rb = records[j], records[j + 1]
@@ -799,23 +810,112 @@ def departure_finder(pathfun, taus, t0, t1, dt=0.05, depth=2, delta=0.2, tau_tol
         _log(f"  event {direction} between tau={ra['tau']:.3f} and {rb['tau']:.3f}: "
              f"jump={jump}, candidates={[(round(u,3),round(v,3)) for (u,v,_,_) in cands]}")
         used = 0
+        refined_here = []
         for (u, v, wa, wb) in cands:
             if used >= n_units:
                 break
             ev = _refine_event(pathfun, ra['tau'], rb['tau'], u, v, wa, wb,
                                direction, tau_tol, line_batch, lam_batch, _log)
-            if ev is not None:
-                ev['path_tau_lo'] = ra['tau']
-                ev['path_tau_hi'] = rb['tau']
-                events.append(ev)
-                used += 1
-        if used < n_units:
-            events.append({'type': direction, 'tau_star': None,
-                           'tau_bracket': [ra['tau'], rb['tau']],
-                           'note': f"{n_units - used} unit(s) of |disc| jump {jump} not resolved "
-                                   f"to a specific merging pair (possible window-boundary "
-                                   f"entry/exit near t={t1}); see records."})
-    return records, events
+            if ev is None:
+                continue
+            # dedupe: overlapping candidate windows can converge onto the SAME merge
+            # (both windows lose their zeros at the earlier of two events); a duplicate
+            # is recognized by identical (tau*, t*) and discarded without consuming a
+            # disc unit, letting the loop reach the correctly-attributed window.
+            if any(abs(ev['tau_star'] - p['tau_star']) < 5 * tau_tol
+                   and abs(ev['t_star'] - p['t_star']) < 0.1 for p in refined_here):
+                _log(f"    duplicate attribution (tau*={ev['tau_star']:.4f}, "
+                     f"t*={ev['t_star']:.3f}) discarded; trying next window")
+                continue
+            ev['path_tau_lo'] = ra['tau']
+            ev['path_tau_hi'] = rb['tau']
+            refined_here.append(ev)
+            events.append(ev)
+            used += 1
+        while used < n_units:
+            # fallback: full-window bisection on the box-line discrepancy itself
+            # (handles wide tau intervals where zero drift defeats pair matching)
+            ev = _refine_event_fullwindow(pathfun, ra, rb, t0, t1, dt, depth, delta,
+                                          direction, tau_tol, refined_here,
+                                          line_batch, lam_batch, refine_batch, _log)
+            if ev is None:
+                events.append({'type': direction, 'tau_star': None,
+                               'tau_bracket': [ra['tau'], rb['tau']],
+                               'note': f"{n_units - used} unit(s) of |disc| jump {jump} "
+                                       f"not resolved to a specific merging pair "
+                                       f"(possible window-boundary entry/exit near "
+                                       f"t={t1}); see records."})
+                break
+            ev['path_tau_lo'] = ra['tau']
+            ev['path_tau_hi'] = rb['tau']
+            refined_here.append(ev)
+            events.append(ev)
+            used += 1
+    return events
+
+
+def _refine_event_fullwindow(pathfun, ra, rb, t0, t1, dt, depth, delta, direction,
+                             tau_tol, refined_here, line_batch, lam_batch,
+                             refine_batch, _log):
+    """Bisect tau on the FULL-window discrepancy (first change from ra['disc']),
+    then localize the responsible pair by sub-box subdivision at the off-line side.
+    Used when local pair matching fails (e.g. wide tau steps with strong zero drift)."""
+    disc_a = ra['disc']
+    a, b = ra['tau'], rb['tau']
+    _log(f"    full-window tau bisection on disc != {disc_a} in [{a:.4f},{b:.4f}]")
+    it = 0
+    while b - a > tau_tol and it < 14:
+        m = 0.5 * (a + b)
+        x, y = pathfun(m)
+        det = off_line_detector(x, y, t0, t1, dt=dt, depth=depth, delta=delta,
+                                refine=False, line_batch=line_batch,
+                                lam_batch=lam_batch, refine_batch=refine_batch)
+        if det['disc'] == disc_a:
+            a = m
+        else:
+            b = m
+        it += 1
+    tau_star = 0.5 * (a + b)
+    # off-line side endpoint and on-line side endpoint of the final bracket
+    tau_off = b if direction == 'departure' else a
+    tau_on = a if direction == 'departure' else b
+    xo, yo = pathfun(tau_off)
+    det_off = off_line_detector(xo, yo, t0, t1, dt=dt, depth=depth, delta=delta,
+                                refine=True, line_batch=line_batch,
+                                lam_batch=lam_batch, refine_batch=refine_batch)
+    # localize the extra pair: 6-way subdivision, sub-box count vs zeros in sub-window
+    w = None
+    nseg = 6
+    for k in range(nseg):
+        wa = t0 + (t1 - t0) * k / nseg
+        wb = t0 + (t1 - t0) * (k + 1) / nseg
+        nb, _info = box_count(xo, yo, wa, wb, delta=delta, lam_batch=lam_batch)
+        nl = sum(1 for z in det_off['scan']['zeros'] if wa <= z <= wb)
+        if nb - nl >= 2:
+            w = (wa, wb)
+            break
+    if w is None:
+        return None
+    t_dip, f_dip = dip_location(xo, yo, w[0], w[1], dt=0.02, line_batch=line_batch)
+    pair = find_offline_pair_near(xo, yo, t_dip, delta=delta, t0=w[0], t1=w[1])
+    if pair is not None:
+        t_center = pair[1]
+    else:
+        t_center = t_dip
+    # colliding pair: the two refined on-line zeros nearest t_center on the on-line side
+    xn, yn = pathfun(tau_on)
+    ints, _d = hunt_sign_changes(xn, yn, max(t0, t_center - 2.0), min(t1, t_center + 2.0),
+                                 0.02, depth=2, line_batch=line_batch)
+    zs = serial_refine_batch(xn, yn, ints) if ints else []
+    zs.sort(key=lambda z: abs(z - t_center))
+    coll = sorted(zs[:2]) if len(zs) >= 2 else None
+    return {'type': direction, 'method': 'full_window_bisection',
+            'tau_star': tau_star, 'tau_star_uncertainty': 0.5 * (b - a),
+            't_colliding_pair': coll, 't_star': t_dip, 'F_at_t_star': f_dip,
+            'z_star': list(pathfun(tau_star)),
+            'offline_pair_at_tau': tau_off,
+            'offline_pair_sigma_t': list(pair) if pair else None,
+            'window': [w[0], w[1]]}
 
 
 def _merge_candidates(za, zb, t0, t1):
