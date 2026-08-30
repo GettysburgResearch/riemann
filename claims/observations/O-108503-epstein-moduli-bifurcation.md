@@ -45,9 +45,11 @@ RH status: unproved; unaddressed.
   EVERY z, L2 (Euler product) exactly on the arithmetic factorization
   locus.
 - **Path A** (x-slide at y=1.02, x in [0, 0.35]): quiet through x = 0.25;
-  a departure with |disc| jump 2 bracketed in x between 0.25 and 0.35
-  (candidate-pair localization incomplete near the window edge — recorded
-  honestly, not resolved).
+  a departure with |disc| jump 2 bracketed in x between 0.25 and 0.35.
+  RESOLVED in the 2026-08-31 continuation run: with the window widened to
+  t in (0.05, 35) the discrepancy PERSISTS (n_box - n_line = 2) and is
+  localized to the subwindow t in (24, 30) — a genuine off-line pair, not
+  a window-boundary artifact (epstein/e4_locus.json, path_A_resolution).
 - **Path B** (rectangular lattices, y in [1,2] at x=0 — from the CM point
   z=i to the CM point z=2i, i.e. the class-number-1 form x^2+4y^2):
   departure of TWO zero pairs bracketed at y in (1.5, 1.6) with colliding

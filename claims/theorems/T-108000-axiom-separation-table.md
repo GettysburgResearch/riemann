@@ -86,9 +86,9 @@ line" in a defined class containing the corpus) is the ranked next target.
 
 ## Caveats
 
-- native_imports (repo-native observables as corpus rows) was lost to
-  session limits and is deferred; the detector's native runs stand on the
-  11a1/zeta/Dirichlet/function-field rows (T-108002).
+- native_imports was completed in the 2026-08-31 continuation pass
+  (corpus 13/13; see O-108004 for the runs and their pinned provenance);
+  this caveat is retained as the record of the pass-1 gap.
 - The Epstein pair's generic member and the DH world import their
   known-zero locations; only the finite algebraic layers are proved here.
 ```
