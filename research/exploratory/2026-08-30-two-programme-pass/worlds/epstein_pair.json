@@ -1,0 +1,985 @@
+{
+ "arithmetic_class": "EXACT_INTEGER / EXACT_RATIONAL (Python ints, Fractions). No floating point anywhere in the build.",
+ "critical_line": {
+  "citation": "Davenport and Heilbronn (1936), On the zeros of certain Dirichlet series I, II, J. London Math. Soc. \u2014 CITATION-NEEDED: which paper carries the class-number>1 Epstein case and the exact statement; Potter and Titchmarsh (1935), The zeros of Epstein's zeta-functions \u2014 CITATION-NEEDED: precise scope (infinitely many zeros on the line; off-line zeros in the strip for specific forms); Voronin (1976 era) off-line zeros in the strip for class number > 1 \u2014 CITATION-NEEDED",
+  "detail": "Recorded for the GENERIC member Q2 (class number 2): FALSE \u2014 imported: Epstein zeta functions of positive definite binary forms with class number > 1 have zeros off the critical line, indeed infinitely many zeros in the region of absolute convergence Re s > 1 (Davenport-Heilbronn phenomenon), consistent with the exact structural decomposition proved coefficientwise here: Z_Q2 = zeta L(chi_-20) + L(chi_-4) L(chi_5) is a sum of two Euler products with independent phases.  Sub-row Q1 (class number 1): CONJECTURE \u2014 Z_Q1 = 4 zeta(s) L(s, chi_-4) (exact to n = 400 here; Jacobi), so its nontrivial zeros lie on Re s = 1/2 iff RH holds for zeta AND GRH holds for L(chi_-4).  Unproved; nothing in this record moves either conjecture.  Also imported: Z_Q for binary forms has infinitely many zeros ON the critical line (Potter-Titchmarsh era).",
+  "rigor": "IMPORTED_THEOREM",
+  "status": "FALSE",
+  "witness": "structural exact witness for the sub-row split: r_Q2(2) = r_Q2(3) = 0, r_Q2(6) = 4 (no Euler product) vs r_Q1 = 4 (1 * chi_-4) exact to n = 400 (Euler product on the CM locus)"
+ },
+ "definition": "Z_Q(s) = sum_((x,y) in Z^2, (x,y) != 0) Q(x,y)^(-s), Re s > 1, for the positive definite binary quadratic forms Q1 = x^2 + y^2 (disc -4, h = 1) and Q2 = x^2 + 5y^2 (disc -20, h = 2), treated as ONE world with two sub-rows.  Exact coefficient layer (this build, n <= 400): r_Q1 = 4 (1 * chi_-4), so Z_Q1 = 4 zeta(s) L(s, chi_-4) = 4 zeta_Q(i)(s); r_Q2 = (1 * chi_-20) + (chi_-4 * chi_5), so Z_Q2 = zeta(s) L(s, chi_-20) + L(s, chi_-4) L(s, chi_5) \u2014 a sum of two Euler products, itself NOT an Euler product (exact witness at n = 6).  Genus partner Q2' = 2x^2 + 2xy + 3y^2 carried as an exact side object: r_Q2 + r_Q2' = 2 (1 * chi_-20).",
+ "detector_runs": {
+  "q1_local_battery": [
+   {
+    "holdout": 3,
+    "note": "ramified: local factor 1/(1-T), the chi_-4 factor is trivial at 2",
+    "prime": 2,
+    "series": "r_Q1(p^k)/4",
+    "sub_row": "Q1",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 10 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root 1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 7 terms exactly predicts the withheld 3 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": [
+     2,
+     0
+    ],
+    "window": 10
+   },
+   {
+    "holdout": 3,
+    "note": "split p = 1 mod 4: local factor 1/(1-T)^2, A4 complete deg-2 purity test HOLDS (double root 1)",
+    "prime": 5,
+    "series": "r_Q1(p^k)/4",
+    "sub_row": "Q1",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 10 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -2, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=1, q^w=1, disc=0"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 7 terms exactly predicts the withheld 3 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -2, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": [
+     5,
+     0
+    ],
+    "window": 10
+   },
+   {
+    "holdout": 3,
+    "note": "split p = 1 mod 4: local factor 1/(1-T)^2, A4 complete deg-2 purity test HOLDS (double root 1)",
+    "prime": 13,
+    "series": "r_Q1(p^k)/4",
+    "sub_row": "Q1",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 10 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -2, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=1, q^w=1, disc=0"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 7 terms exactly predicts the withheld 3 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -2, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": [
+     13,
+     0
+    ],
+    "window": 10
+   },
+   {
+    "a4_note": "weight claim deliberately withheld from the full deg-2 run: detect()'s complete deg-2 A4 test requires product of inverse roots = q^w, which the PURE split-sign pair {+1, -1} violates (product -1, q^w = 1).  Purity is certified manually by the exact factorization Q = (1-T)(1+T), inverse roots +-1, alpha^2 = 1 = p^0; and factorwise by detect() on the zeta factor 1/(1-T) and the chi factor 1/(1+T), each with A1-A5 all HOLDS at weight (p, 0)",
+    "factor_runs": {
+     "chi_factor": {
+      "cells": [
+       {
+        "axiom": "A1_FINITE_RANK",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "P/Q certified on 10 terms; deg Q = 1, deg P = 0"
+       },
+       {
+        "axiom": "A2_EFFECTIVITY",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "numerator is 1: pure denominator local factor"
+       },
+       {
+        "axiom": "A3_INTEGRALITY",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "local factor in Z[T], constant term 1: [1, 1]"
+       },
+       {
+        "axiom": "A4_PURITY",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "inverse root -1, a^2 == q^w=1"
+       },
+       {
+        "axiom": "A5_HELD_OUT",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "prefix of 7 terms exactly predicts the withheld 3 terms"
+       }
+      ],
+      "object": {
+       "degree": 1,
+       "denominator": "[1, 1]",
+       "mode": "coefficients",
+       "numerator": "[1]"
+      },
+      "refusal": null,
+      "rh_established": false
+     },
+     "zeta_factor": {
+      "cells": [
+       {
+        "axiom": "A1_FINITE_RANK",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "P/Q certified on 10 terms; deg Q = 1, deg P = 0"
+       },
+       {
+        "axiom": "A2_EFFECTIVITY",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "numerator is 1: pure denominator local factor"
+       },
+       {
+        "axiom": "A3_INTEGRALITY",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "local factor in Z[T], constant term 1: [1, -1]"
+       },
+       {
+        "axiom": "A4_PURITY",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "inverse root 1, a^2 == q^w=1"
+       },
+       {
+        "axiom": "A5_HELD_OUT",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "prefix of 7 terms exactly predicts the withheld 3 terms"
+       }
+      ],
+      "object": {
+       "degree": 1,
+       "denominator": "[1, -1]",
+       "mode": "coefficients",
+       "numerator": "[1]"
+      },
+      "refusal": null,
+      "rh_established": false
+     }
+    },
+    "holdout": 3,
+    "prime": 3,
+    "series": "r_Q1(p^k)/4",
+    "sub_row": "Q1",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 10 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 0, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "SKIPPED",
+       "witness": "no weight claim supplied"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 7 terms exactly predicts the withheld 3 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 0, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": null,
+    "window": 10
+   },
+   {
+    "a4_note": "weight claim deliberately withheld from the full deg-2 run: detect()'s complete deg-2 A4 test requires product of inverse roots = q^w, which the PURE split-sign pair {+1, -1} violates (product -1, q^w = 1).  Purity is certified manually by the exact factorization Q = (1-T)(1+T), inverse roots +-1, alpha^2 = 1 = p^0; and factorwise by detect() on the zeta factor 1/(1-T) and the chi factor 1/(1+T), each with A1-A5 all HOLDS at weight (p, 0)",
+    "factor_runs": {
+     "chi_factor": {
+      "cells": [
+       {
+        "axiom": "A1_FINITE_RANK",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "P/Q certified on 10 terms; deg Q = 1, deg P = 0"
+       },
+       {
+        "axiom": "A2_EFFECTIVITY",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "numerator is 1: pure denominator local factor"
+       },
+       {
+        "axiom": "A3_INTEGRALITY",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "local factor in Z[T], constant term 1: [1, 1]"
+       },
+       {
+        "axiom": "A4_PURITY",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "inverse root -1, a^2 == q^w=1"
+       },
+       {
+        "axiom": "A5_HELD_OUT",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "prefix of 7 terms exactly predicts the withheld 3 terms"
+       }
+      ],
+      "object": {
+       "degree": 1,
+       "denominator": "[1, 1]",
+       "mode": "coefficients",
+       "numerator": "[1]"
+      },
+      "refusal": null,
+      "rh_established": false
+     },
+     "zeta_factor": {
+      "cells": [
+       {
+        "axiom": "A1_FINITE_RANK",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "P/Q certified on 10 terms; deg Q = 1, deg P = 0"
+       },
+       {
+        "axiom": "A2_EFFECTIVITY",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "numerator is 1: pure denominator local factor"
+       },
+       {
+        "axiom": "A3_INTEGRALITY",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "local factor in Z[T], constant term 1: [1, -1]"
+       },
+       {
+        "axiom": "A4_PURITY",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "inverse root 1, a^2 == q^w=1"
+       },
+       {
+        "axiom": "A5_HELD_OUT",
+        "rigor": "EXACT_RATIONAL",
+        "status": "HOLDS",
+        "witness": "prefix of 7 terms exactly predicts the withheld 3 terms"
+       }
+      ],
+      "object": {
+       "degree": 1,
+       "denominator": "[1, -1]",
+       "mode": "coefficients",
+       "numerator": "[1]"
+      },
+      "refusal": null,
+      "rh_established": false
+     }
+    },
+    "holdout": 3,
+    "prime": 7,
+    "series": "r_Q1(p^k)/4",
+    "sub_row": "Q1",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 10 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 0, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "SKIPPED",
+       "witness": "no weight claim supplied"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 7 terms exactly predicts the withheld 3 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 0, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": null,
+    "window": 10
+   }
+  ],
+  "q1_tensor_battery": [
+   {
+    "a6": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -1]"
+    },
+    "prime": 3,
+    "statement": "chi_-4 (x) chi_-4 = chi_0 at p"
+   },
+   {
+    "a6": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -1]"
+    },
+    "prime": 5,
+    "statement": "chi_-4 (x) chi_-4 = chi_0 at p"
+   },
+   {
+    "a6": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -1]"
+    },
+    "prime": 7,
+    "statement": "chi_-4 (x) chi_-4 = chi_0 at p"
+   },
+   {
+    "a6": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -1]"
+    },
+    "prime": 13,
+    "statement": "chi_-4 (x) chi_-4 = chi_0 at p"
+   }
+  ],
+  "q2_slice_and_constituent_battery": [
+   {
+    "holdout": 3,
+    "note": "slice is rational and effective: 1/(1-T^2) = 1/((1-T)(1+T)), pure split-sign roots +-1 (weight claim withheld for the same deg-2 A4 product-form reason as Q1 at inert p; purity manual: alpha^2 = 1)",
+    "prime": 2,
+    "series": "r_Q2(2^k)/2",
+    "sub_row": "Q2",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 14 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 0, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "SKIPPED",
+       "witness": "no weight claim supplied"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 11 terms exactly predicts the withheld 3 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 0, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": null,
+    "window": 14
+   },
+   {
+    "holdout": 3,
+    "note": "REFUSAL at A2_EFFECTIVITY: the principal-class slice at a split-nonprincipal prime is (1+T^2)/(1-T^2)^2 \u2014 rational (A1) and integral (A3) with pure roots (A4, necessary conditions at degree 4) but carries the virtual numerator 1 + T^2: NOT an effective Euler factor",
+    "prime": 3,
+    "series": "r_Q2(p^k)/2",
+    "sub_row": "Q2",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 14 terms; deg Q = 4, deg P = 2"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "FAILS",
+       "witness": "virtual part present: numerator [1, 0, 1]"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 0, -2, 0, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "NECESSARY_ONLY",
+       "status": "HOLDS",
+       "witness": "self-reciprocity holds"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 11 terms exactly predicts the withheld 3 terms"
+      }
+     ],
+     "object": {
+      "degree": 4,
+      "denominator": "[1, 0, -2, 0, 1]",
+      "mode": "coefficients",
+      "numerator": "[1, 0, 1]"
+     },
+     "refusal": "A2_EFFECTIVITY",
+     "rh_established": false
+    },
+    "weight_claim": [
+     3,
+     0
+    ],
+    "window": 14
+   },
+   {
+    "holdout": 3,
+    "note": "REFUSAL at A2_EFFECTIVITY: the principal-class slice at a split-nonprincipal prime is (1+T^2)/(1-T^2)^2 \u2014 rational (A1) and integral (A3) with pure roots (A4, necessary conditions at degree 4) but carries the virtual numerator 1 + T^2: NOT an effective Euler factor",
+    "prime": 7,
+    "series": "r_Q2(p^k)/2",
+    "sub_row": "Q2",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 14 terms; deg Q = 4, deg P = 2"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "FAILS",
+       "witness": "virtual part present: numerator [1, 0, 1]"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 0, -2, 0, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "NECESSARY_ONLY",
+       "status": "HOLDS",
+       "witness": "self-reciprocity holds"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 11 terms exactly predicts the withheld 3 terms"
+      }
+     ],
+     "object": {
+      "degree": 4,
+      "denominator": "[1, 0, -2, 0, 1]",
+      "mode": "coefficients",
+      "numerator": "[1, 0, 1]"
+     },
+     "refusal": "A2_EFFECTIVITY",
+     "rh_established": false
+    },
+    "weight_claim": [
+     7,
+     0
+    ],
+    "window": 14
+   },
+   {
+    "holdout": 3,
+    "note": "split-PRINCIPAL prime: the slice 1/(1-T)^2 passes every axiom including complete deg-2 purity \u2014 locally the generic Epstein zeta can look perfectly motivic",
+    "prime": 29,
+    "series": "r_Q2(29^k)/2",
+    "sub_row": "Q2",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 9 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -2, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=1, q^w=1, disc=0"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 6 terms exactly predicts the withheld 3 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -2, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": [
+     29,
+     0
+    ],
+    "window": 9
+   },
+   {
+    "constituent": "zeta_K_slice_p3",
+    "holdout": 3,
+    "note": "constituent zeta(s)L(s,chi_-20) local slice at split p=3: 1/(1-T)^2, all axioms HOLD",
+    "sub_row": "Q2",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 10 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -2, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=1, q^w=1, disc=0"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 7 terms exactly predicts the withheld 3 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -2, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    }
+   },
+   {
+    "constituent": "psi_slice_p3",
+    "holdout": 3,
+    "note": "constituent L(chi_-4)L(chi_5) (genus character psi) local slice at p=3: 1/(1+T)^2, all axioms HOLD incl. complete deg-2 purity (double root -1)",
+    "sub_row": "Q2",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 10 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 2, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=1, q^w=1, disc=0"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 7 terms exactly predicts the withheld 3 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 2, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    }
+   },
+   {
+    "constituent": "psi_slice_p2",
+    "holdout": 3,
+    "note": "psi slice at ramified p=2: 1/(1+T), all axioms HOLD",
+    "sub_row": "Q2",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 14 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root -1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 11 terms exactly predicts the withheld 3 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    }
+   }
+  ]
+ },
+ "id": "epstein_pair",
+ "ladder": {
+  "L0_WELL_DEFINED": {
+   "citation": "Epstein (1903), Zur Theorie allgemeiner Zetafunktionen (Math. Annalen ~56)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "both forms (and the genus partner (2,2,3)) certified positive definite by integer coefficient identities 4a Q = (2ax+by)^2 + |D| y^2; representation numbers r_Q(n) computed for all n <= 400 by exhaustive search with PROVED box bounds and cross-validated by an independent exact per-n counter (three forms, all n agree); convergence of Z_Q(s) for Re s > 1 and meromorphy are imported (Epstein 1903)"
+  },
+  "L1_MULTIPLICATIVITY": {
+   "citation": "Jacobi (1829), Fundamenta Nova (two-squares theorem, for the Q1 sub-row identity)",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "generic member Q2: EXACT witness: r_Q2(2) = 0, r_Q2(3) = 0, r_Q2(6) = 4 with gcd(2,3) = 1.  This refutes multiplicativity of c*r_Q2 for EVERY nonzero scalar normalization c (LHS c*4 != 0 = RHS); in the posed /4-normalization: r(6)/4 = 1 != 0 = (r(2)/4)(r(3)/4).  Exhaustive tally over all 486 unordered coprime pairs 2 <= m <= n, mn <= 400: 71 failures of 2 r(mn) = r(m) r(n) (= the r/2 unit normalization; 0 with both factors nonzero, e.g. none needed), 113 failures of the /4 normalization; first failing pair (2, 3).  Structural reason (classical): 2 and 3 are represented by the OTHER class of the genus (2x^2+2xy+3y^2: r_Q2'(2) = 2, r_Q2'(3) = 4) while their product 6 is represented by the principal form.  control on the CM locus: the identical scan over all 486 coprime pairs found 0 failures of 4 r_Q1(mn) = r_Q1(m) r_Q1(n).  Sub-row Q1 HOLDS: r_Q1(n) = 4 sum_(d|n) chi_-4(d) verified exactly for ALL 1 <= n <= 400 (two independent exact counters agree on r_Q1); hence Z_Q1(s) = 4 zeta(s) L(s, chi_-4) coefficientwise to n = 400; the identity for all n is imported (Jacobi 1829, two-squares theorem)"
+  },
+  "L2_EULER_PRODUCT": {
+   "citation": "Euler product of zeta: Euler (1737); of Dirichlet L-series: Dirichlet (1837)",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "generic member Q2: the would-be Euler product assembled from the certified rational prime-power slices predicts a_6 = c(2) c(3) = 0 and a_14 = c(2) c(7) = 0 in the unit normalization c = r_Q2/2; the true exact values are c(6) = 2 and c(14) = 2.  Local rationality of every slice does NOT assemble into a global Euler product.  Sub-row Q1 HOLDS on the class-number-1 locus: Z_Q1/4 = zeta L(chi_-4) coefficientwise to n = 400 (exact), Euler products of zeta and L(chi_-4) imported"
+  },
+  "L3_BOUNDED_DEGREE_RATIONAL": {
+   "citation": "",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "no local factors exist for the generic member: any Euler factorization would force a_6 = a_2 a_3 in every normalization (refuted: the would-be Euler product assembled from the certified rational prime-power slices predicts a_6 = c(2) c(3) = 0 and a_14 = c(2) c(7) = 0 in the unit normalization c = r_Q2/2; the true exact values are c(6) = 2 and c(14) = 2.  Local rationality of every slice does NOT assemble into a global Euler product).  Remarkably, every TESTED prime-power slice of Q2 is individually rational of degree <= 4 with exact BM certificates (p = 2: 1/(1-T^2); p = 3, 7: (1+T^2)/(1-T^2)^2, A2-refused virtual numerator; p = 29: 1/(1-T)^2) \u2014 slice rationality does not assemble.  Q1 sub-row: uniformly degree <= 2 local factors certified A1-A5"
+  },
+  "L4_WEIGHT_DUALITY": {
+   "citation": "Epstein (1903) for the FE-level self-duality",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "generic member has NO local weight data to be coherent: EXACT witness: r_Q2(2) = 0, r_Q2(3) = 0, r_Q2(6) = 4 with gcd(2,3) = 1.  This refutes multiplicativity of c*r_Q2 for EVERY nonzero scalar normalization c (LHS c*4 != 0 = RHS); in t... (see L1).  What DOES hold for both sub-rows: global self-duality \u2014 real coefficients and the Epstein FE s <-> 1-s (imported).  Q1 sub-row: local weight-0 purity exact (inverse roots +-1 and double root 1 at split p; detect A4 HOLDS at p = 2, 5, 13 and factorwise at 3, 7)"
+  },
+  "L5_CONDUCTOR_GAMMA_ROOT": {
+   "citation": "Epstein (1903); CITATION-NEEDED: exact normalization conventions of the completed Epstein FE (Epstein 1903; cf. also Chowla-Selberg 1949-1967 era treatments)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "class-number-INDEPENDENT: every Z_Q of a positive definite binary form has the canonical completed form Lambda_Q(s) = (2 pi / sqrt(det A_Q))^(-s) Gamma(s) Z_Q(s) with det A_Q the Gram determinant (1 for Q1; 5 for Q2 and Q2'), gamma factor Gamma(s) (2 pi)^(-s) (degree-2, Gamma_C type), root number +1 (symmetric FE).  The Gram determinant plays the conductor role"
+  },
+  "L6_CONTINUATION_FE": {
+   "citation": "Epstein (1903), Zur Theorie allgemeiner Zetafunktionen; CITATION-NEEDED: precise statement/volume; theta-transformation method after Riemann (1859), Jacobi theta inversion",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "Epstein 1903: Z_Q(s) continues meromorphically to C with a single simple pole at s = 1, and Lambda_Q(s) = Lambda_Q(1-s).  Holds for BOTH sub-rows \u2014 continuation+FE are blind to class number.  Q1 cross-check: consistent with the completed FEs of zeta (Riemann 1859) and L(chi_-4) via Z_Q1 = 4 zeta L(chi_-4) (exact coefficient identity to n = 400 here)"
+  },
+  "L7_TWIST_TENSOR_COMPAT": {
+   "citation": "",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "generic member: no local Satake data exists to twist or tensor (see L1/L2 witness: r_Q2(2) = r_Q2(3) = 0, r_Q2(6) = 4).  Sub-row Q1: Q1 local object certified as a DIRECT SUM zeta_p (+) chi_-4,p by exact power-sum calculus at p in {3, 5, 7, 13}: op_direct_sum of the two degree-1 power-sum lists reproduces the Satake polynomial and the full r_Q1(p^k)/4 window; chi (x) chi = trivial certified by the exact A6 tensor axiom at the same primes.  Constituent level for Q2: the psi-part is EXACTLY the convolution chi_-4 * chi_5 (verified n <= 400) \u2014 twisting lives on the Hecke constituents, not on the Epstein zeta itself"
+  },
+  "L8_REALIZATION": {
+   "citation": "Epstein (1903); Gauss (1801) genus theory and reduced forms; Hecke (1918-1920) Groessen-charaktere; CITATION-NEEDED: standard identity Epstein zeta = zeta(2s)-normalized real-analytic Eisenstein series (classical, e.g. Chowla-Selberg 1967 era)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "lattice/theta realization is literally computed: r_Q(0..400) are the theta coefficients of the lattices Z^2 and Z + Z sqrt(-5) (and the nonprincipal ideal lattice for Q2').  splitting laws verified exactly for all 77 odd primes p <= 400: #(x mod p : x^2 = -1) = 1 + chi_-4(p) and #(x mod p : x^2 = -20) = 1 + chi_-20(p) (p = 5 ramified included, 1 root); finite instances of the splitting of p in Q(i) and Q(sqrt(-5)) \u2014 chi_-4 and chi_-20 are the field characters.  exhaustive reduced-form enumeration (|b| <= a <= c <= over the proved bound a <= sqrt(|D|/3)): disc -4 has exactly one reduced form (1,0,1), h(-4) = 1; disc -20 has exactly two, (1,0,5) and (2,2,3), h(-20) = 2.  Bijection reduced forms <-> classes is imported (Gauss 1801).  Imported: real-analytic Eisenstein-series realization Z_Q(s) ~ E(z_Q, s) on SL(2,Z)\\H; Q1 motivic/automorphic: Z_Q1/4 = zeta_Q(i) (Dedekind zeta, GL(1) Hecke); Q2 constituents are Hecke L-functions of Q(sqrt(-5))"
+  },
+  "L9_EXPLICIT_FORMULA_POSITIVITY": {
+   "citation": "Davenport and Heilbronn (1936), On the zeros of certain Dirichlet series, J. London Math. Soc. (CITATION-NEEDED: precise paper I/II and the class-number>1 Epstein statement); Weil (1952) explicit formula/positivity criterion",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "FAILS",
+   "witness": "generic member Q2: any Weil-positivity functional for Z_Q2 is impossible \u2014 Z_Q2 has zeros OFF the critical line, and (imported, Davenport-Heilbronn phenomenon for class number > 1) even infinitely many zeros in Re s > 1; an explicit formula still exists via the constituents but its positivity half is dead.  Sub-row Q1: explicit formula unconditional for zeta and L(chi_-4); positivity (Weil criterion) OPEN, equivalent to RH+GRH(chi_-4) \u2014 NOT claimed"
+  }
+ },
+ "mechanisms": {
+  "DUALITY_FE": {
+   "citation": "Epstein (1903); CITATION-NEEDED: exact completed normalization",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "supplied for EVERY member of the lattice family by the Epstein FE (theta transformation / Poisson): Lambda_Q(s) = Lambda_Q(1-s), root number +1, real coefficients (self-dual).  The one mechanism here that is blind to class number \u2014 it survives exactly where the Euler product dies"
+  },
+  "EULER_PRODUCT": {
+   "citation": "Jacobi (1829) for the Q1 identity",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "generic member Q2: r_Q2(2) = 0, r_Q2(3) = 0, r_Q2(6) = 4 \u2014 no normalization is multiplicative; the would-be Euler product assembled from the certified rational prime-power slices predicts a_6 = c(2) c(3) = 0 and a_14 = c(2) c(7) = 0 in the unit normalization c = r_Q2/2; the true exact values are c(6) = 2 and c(14) = 2.  Local rationality of every slice does NOT assemble into a global Euler product.  HOLDS exactly on the CM/class-number-1 locus: Q1 sub-row, r_Q1/4 = 1 * chi_-4 exact to n = 400 (Jacobi), Euler products imported"
+  },
+  "FAMILY": {
+   "citation": "Gauss (1801) genus theory",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "the pair spans the bifurcation locus of the 2-parameter lattice moduli space SL(2,Z)\\H (the pass's epstein/ zero-bifurcation lab lives on this family).  Exact family results here: exhaustive reduced-form enumeration (|b| <= a <= c <= over the proved bound a <= sqrt(|D|/3)): disc -4 has exactly one reduced form (1,0,1), h(-4) = 1; disc -20 has exactly two, (1,0,5) and (2,2,3), h(-20) = 2.  Bijection reduced forms <-> classes is imported (Gauss 1801).  genus identity r_Q2(n) + r_Q2'(n) = 2 sum_(d|n) chi_-20(d) verified exactly for all 1 <= n <= 400 (Q2' = 2x^2+2xy+3y^2, the second reduced class of disc -20): averaging over the genus/family RESTORES multiplicativity exactly, and the genus average (r_Q2 + r_Q2')/2 = 1 * chi_-20 is multiplicative with ZERO failures over all coprime pairs mn <= 400 \u2014 the FAMILY average restores the Euler-product mechanism that the individual member loses"
+  },
+  "POSITIVITY_PURITY": {
+   "citation": "Davenport and Heilbronn (1936); CITATION-NEEDED as in L9",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "FAILS",
+   "witness": "FAILS for the generic member Q2: off-critical-line zeros (imported, Davenport-Heilbronn) refute any positivity mechanism, and there is no purity structure on the raw coefficients (non-multiplicativity witness at (2,3,6)).  Sub-row Q1: unitarized local purity is exact (all inverse roots of modulus 1, certified), but positivity forcing GRH is OPEN \u2014 none known.  The detector adds a sharp exact point: the Q2 slice at p = 3, 7 has a VIRTUAL part (numerator 1 + T^2, A2 refusal) \u2014 effectivity/positivity of local data already fails at the slice level"
+  },
+  "TENSOR_OPS": {
+   "citation": "",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "generic member: no local objects exist to tensor (witness (2,3,6) as in L1).  Sub-row Q1: Q1 local object certified as a DIRECT SUM zeta_p (+) chi_-4,p by exact power-sum calculus at p in {3, 5, 7, 13}: op_direct_sum of the two degree-1 power-sum lists reproduces the Satake polynomial and the full r_Q1(p^k)/4 window; chi (x) chi = trivial certified by the exact A6 tensor axiom at the same primes"
+  },
+  "TRACE_FORMULA": {
+   "citation": "Jacobi theta inversion (1829 era); Riemann (1859) method; Epstein (1903)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "Poisson summation on the lattice L_Q (= the trace formula for R^2/L_Q) gives the theta transformation theta_Q(1/t) = (t / sqrt(det A_Q)) theta_Q(t), which supplies L6 by the Riemann method; the exact theta coefficients r_Q(0..400) computed here are the geometric side data"
+  }
+ },
+ "notes": "Two-sub-row semantics: where cells differ between the sub-rows, the recorded status is that of the GENERIC member Q2 and the witness carries the Q1/CM-locus exception explicitly (per the pass convention for family worlds).  The exact theta data r_Q(0..400) for Q1, Q2 and the genus partner Q2' = 2x^2+2xy+3y^2, plus the divisor-sum sequences 1*chi_-4 and 1*chi_-20 and the genus-character convolution chi_-4*chi_5, are embedded in the sibling data file worlds/epstein_pair_data.json for reuse by the epstein/ bifurcation lab.  First terms: r_Q1(0..20) = [1, 4, 4, 0, 4, 8, 0, 0, 4, 4, 8, 0, 0, 8, 0, 0, 4, 8, 4, 0, 8]; r_Q2(0..20) = [1, 2, 0, 0, 2, 2, 4, 0, 0, 6, 0, 0, 0, 0, 4, 0, 2, 0, 0, 0, 2]; r_Q2'(0..20) = [1, 0, 2, 4, 0, 0, 0, 4, 2, 0, 2, 0, 4, 0, 0, 4, 0, 0, 6, 0, 0].  Key structural exact results: (i) genus identity r_Q2(n) + r_Q2'(n) = 2 sum_(d|n) chi_-20(d) verified exactly for all 1 <= n <= 400 (Q2' = 2x^2+2xy+3y^2, the second reduced class of disc -20): averaging over the genus/family RESTORES multiplicativity exactly; (ii) full genus-character decomposition, coefficientwise for all n <= 400: r_Q2 = (1 * chi_-20) + (chi_-4 * chi_5) and r_Q2' = (1 * chi_-20) - (chi_-4 * chi_5) (Dirichlet convolutions, exact).  I.e. Z_Q2(s) = zeta(s) L(s, chi_-20) + L(s, chi_-4) L(s, chi_5): a SUM of two Euler products sharing gamma factor and conductor data \u2014 not itself an Euler product.  The psi-part b(n) = r_Q2(n) - (1*chi_-20)(n) IS multiplicative (it is a convolution of completely multiplicative characters); global identification with the class-group/genus character of Q(sqrt(-5)) is imported (Gauss genus theory / Kronecker factor formula; Hecke L-functions); (iii) BOTH Hecke constituents of Z_Q2 = zeta L(chi_-20) + L(chi_-4) L(chi_5) are certified locally by the detector (all axioms HOLD: zeta_K slice 1/(1-T)^2 at p=3; psi slices 1/(1+T)^2 at p=3 and 1/(1+T) at p=2, exact deg-2 purity where applicable), while the RAW principal-form slice at p in {3, 7} is REFUSED at A2_EFFECTIVITY with virtual numerator 1 + T^2.  The detector separates the sum into its Euler-product parts.  Detector caveat recorded honestly: detect()'s complete deg-2 A4 purity test demands product of inverse roots = q^w and therefore mis-flags the PURE split-sign pair {+1,-1}; wherever that configuration occurs (Q1 inert primes, Q2 slice at p=2) the weight claim was withheld and purity was certified manually by exact factorization (1-T)(1+T), alpha^2 = 1 = p^0.  Nothing here establishes RH/GRH; rh_established = false.",
+ "rh_established": false,
+ "sources": [
+  "P. Epstein (1903), Zur Theorie allgemeiner Zetafunktionen, Mathematische Annalen (~56): definition, continuation, functional equation",
+  "C. G. J. Jacobi (1829), Fundamenta Nova Theoriae Functionum Ellipticarum: r(n) = 4 sum chi_-4(d) (two squares)",
+  "C. F. Gauss (1801), Disquisitiones Arithmeticae: reduction theory, class numbers, genus theory / genus characters",
+  "H. Davenport and H. Heilbronn (1936), On the zeros of certain Dirichlet series I, II, J. London Math. Soc.: zeros of Epstein zetas with h > 1 off the line / in Re s > 1 (CITATION-NEEDED: precise statement location)",
+  "H. S. A. Potter and E. C. Titchmarsh (1935), The zeros of Epstein's zeta-functions (CITATION-NEEDED: precise scope)",
+  "E. Hecke (1918-1920), Groessencharaktere: the constituents of Z_Q2 as Hecke L-functions of Q(sqrt(-5))",
+  "S. Chowla and A. Selberg (1949/1967), Epstein zeta and Eisenstein series / Kronecker limit circle (CITATION-NEEDED: which statements are used is descriptive only)"
+ ],
+ "sub_rows": {
+  "Q1": {
+   "class_number": 1,
+   "critical_line": "CONJECTURE (iff RH for zeta and GRH for L(chi_-4))",
+   "disc": -4,
+   "euler_product": "HOLDS (exact to n <= 400; Jacobi imported for all n)",
+   "form": "x^2 + y^2",
+   "gram_det": 1,
+   "key_witness": "r_Q1(n) = 4 sum_(d|n) chi_-4(d), all n <= 400, exact"
+  },
+  "Q2": {
+   "class_number": 2,
+   "critical_line": "FALSE (imported: Davenport-Heilbronn)",
+   "disc": -20,
+   "euler_product": "FAILS (exact witness (2,3,6); no normalization multiplicative)",
+   "form": "x^2 + 5y^2",
+   "gram_det": 5,
+   "key_witness": "r_Q2 = (1*chi_-20) + (chi_-4*chi_5), all n <= 400, exact; r_Q2(2)=r_Q2(3)=0, r_Q2(6)=4"
+  }
+ },
+ "title": "Epstein pair: Z_(x^2+y^2) vs Z_(x^2+5y^2) (class number 1 vs 2)"
+}

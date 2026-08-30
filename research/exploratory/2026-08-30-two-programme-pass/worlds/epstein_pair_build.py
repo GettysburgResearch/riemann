@@ -620,7 +620,7 @@ def main():
     bp3 = [F(count_reps(FORM_Q2, 3 ** k)
              - sum(chi_m20(3) ** j for j in range(k + 1))) for k in range(W1)]
     assert bp3 == [F((k + 1) * (-1) ** k) for k in range(W1)]
-    assert bp3 == [F(conv(chi_m4, chi_5, 3 ** k)) for k in range(6)] + bp3[6:]
+    assert bp3 == [F(conv(chi_m4, chi_5, 3 ** k)) for k in range(W1)]
     assert bp3 == coefficient_sequence_from_satake([F(1), F(2), F(1)], W1)
     vps3 = detect(bp3, weight=(3, 0), holdout=HOLDOUT)
     assert vps3.refusal is None and all(c["status"] == HOLDS for c in vps3.cells)
@@ -1035,12 +1035,6 @@ def main():
     print(f"wrote {path}")
     print(f"wrote {data_path}")
     print("epstein_pair: all exact assertions passed; rh_established=false")
-
-
-def gcd(a, b):
-    while b:
-        a, b = b, a % b
-    return a
 
 
 if __name__ == "__main__":
