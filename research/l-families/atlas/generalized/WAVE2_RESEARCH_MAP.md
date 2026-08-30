@@ -2,7 +2,7 @@
 
 Status: **exploration and continuation map; not an additional theorem**
 Issue: [#764](https://github.com/gfreund123/riemann/issues/764)
-Exact theorem packets: the five notes linked from [README.md](README.md)
+Exact theorem packets: the six notes linked from [README.md](README.md)
 
 ## What wave 2 closed
 
@@ -12,15 +12,17 @@ Exact theorem packets: the five notes linked from [README.md](README.md)
 | orbit type | irrational tempered rotations and every reduced rational rotation | nonperiodic higher-dimensional torus orbits |
 | scalar transform | positive, absolute, and fixed real-axis complex powers | rational functions, coupled coefficients, and termwise branch data |
 | zeros and branches | rational-orbit zero class, arbitrary \(0^0=z\), every fixed negative-axis logarithm branch | nonzero exponents with \(\operatorname{Re}\lambda\leq0\) |
-| local recurrence | exact rationality, reduced denominators in the classified integer chambers, and rational-orbit collision sums | a uniform degree theorem for fixed noninteger transforms over varying rational angles |
+| local recurrence | exact rationality, integer-chamber denominators, rational-orbit collision sums, and the sharp rational-angle uniform-degree classification | quantitative noninteger degree growth and exact finite-denominator cancellation strata |
 | parent comparison | integer powers as matrix coefficients or weighted resolvent traces of genuine \(\operatorname{Sym}^k\) state spaces | coherent noninteger infinite-rank or categorical parent |
 | determinant moduli | the filtered rank-\(n\) character count drops from \(\binom{n+d}{n}\) to \(\binom{n+d}{n}-\binom{d}{n}\) on the determinant-one torus | several independent monomial relations and scalar cancellation strata |
 
-The two wave-2 packets add complementary information.  Rational rotations
-show that pointwise local rationality is cheap: every fixed-branch sequence is
-periodic, but its period can grow with the angle denominator.  Irrational
+The rotation and parent packets add complementary information.  Rational
+rotations show that pointwise local rationality is cheap: every fixed-branch
+sequence is periodic, but its period can grow with the angle denominator.  Irrational
 rotations restore rigidity: a fixed-branch complex power has a finite
 recurrence exactly at nonnegative integers in the proved exponent domain.
+The sampled-mode persistence theorem now proves that rational reduced degrees
+are uniformly bounded only in the corresponding polynomial chambers.
 The symmetric-parent packet then identifies the honest finite-dimensional
 object at integer exponents, proves a finite-parent obstruction in the
 positive hyperbolic chamber, and shows that determinant-one normalization
@@ -50,7 +52,7 @@ retuning only inside the present rank-two model:
 | L0 | fixed branch and zero conventions are explicit; integer powers are branch-independent | unrestricted termwise branches and the nonpositive-real-part boundary |
 | L1 | absolute powers and integer powers preserve scalar multiplicativity | a generic fixed-branch signed power does not; classify exceptional sign phases in broader coefficient fields |
 | L2 | a formal Euler product exists only when L1 is supplied by the input | no new global Euler product is constructed |
-| L3 | four determinant-one rank-two scalar chambers are classified; all integer polynomial shadows have finite symmetric parents; the rank-\(n\) determinant-one character quotient is exact | fixed-noninteger uniform degree over varying rational denominators; higher-rank dense-orbit scalar classification; cancellation strata |
+| L3 | four determinant-one rank-two scalar chambers are classified; rational-angle degree is uniformly bounded exactly in the polynomial exponent chambers; all integer shadows have finite symmetric parents; the rank-\(n\) determinant-one character quotient is exact | quantitative rational-angle degree growth; higher-rank dense-orbit scalar classification; cancellation strata |
 | L4 | integer state-space weights, the determinant relation, and its character-lattice quotient are explicit | duality, ramified-prime coherence, and compatibility across a global family |
 | L5 | nothing new | canonical conductor, gamma factors, and root number |
 | L6 | nothing new | analytic continuation and functional equation |
@@ -60,13 +62,12 @@ retuning only inside the present rank-two model:
 
 ## Ranked proof-sized queue
 
-1. **Uniform-degree rational-angle rigidity.**  For a fixed noninteger
-   exponent, prove that the number of nonzero discrete Fourier modes of
-   \(|\sin(na\pi/b)|^\lambda\), or of its fixed-branch analogue, is
-   unbounded with \(b\).  The strongest form would classify every vanishing
-   mode.  This would turn pointwise periodic rationality into an exact
-   uniform-L3 obstruction.  First audit the literature on power-sine windows,
-   chordal-distance kernels, and conditionally positive definite functions.
+1. **Quantitative rational-angle spectra.**  Uniform-degree rigidity is now
+   proved: fixed nonpolynomial exponents have unbounded sampled Fourier
+   support.  Determine a rate in \(b\), classify exceptional vanishing modes,
+   and decide whether fixed real exponents have cofinally full or
+   positive-density support.  Do not infer a rate from the qualitative
+   Riemann-sum argument.
 
 2. **Several-relation weight-polytopes.**  Generalize the proved
    determinant-one count by quotienting the exponent simplex by a saturated
@@ -105,12 +106,12 @@ retuning only inside the present rank-two model:
 
 ## Programme breadth beyond local powers
 
-The five exact packets are probes, not the whole programme.  The next work
+The six exact packets are probes, not the whole programme.  The next work
 should keep four contrasting axes alive.
 
 | axis | current exact foothold | next bounded target | rejection test |
 |---|---|---|---|
-| coefficient, zero, and branch transforms | four rank-two scalar chambers with exact rationality and recurrence verdicts | uniform Fourier-mode lower bound across rational denominators; scalar varying-determinant classification | a finite period at each parameter is not uniform L3 |
+| coefficient, zero, and branch transforms | four rank-two scalar chambers plus the sharp rational-angle uniform-degree gate | quantitative support growth and scalar varying-determinant classification | a finite period at each parameter is not uniform L3 |
 | local parameters and representation parents | `Sym^k` matrix-coefficient identity; higher-rank determinant quotient | quotient exponent polytopes by several monomial relations; impose one duality and twist law | a scalar resolvent fit is not a determinant `L`-factor |
 | multivariable and higher-dimensional parents | none claimed by these packets | compare one Brown-type completed object and one Weyl-group multiple Dirichlet series under a common specialization/coupling schema | a Cartesian or slice-wise repetition with no mixed coefficient or larger symmetry is rejected |
 | prime, frequency, and dynamical worlds | none claimed by these packets | construct exact lower-level counterfeits using a Beurling or transfer-operator calibration and record the first survival failure | chosen primes, orbit lengths, or spectra fitted to desired zeros are circular |
@@ -142,7 +143,7 @@ under twist and duality—not in renaming one established class.
 
 ## Machine-readable corpus and held-outs
 
-The exact corpus is carried by the five canonical JSON fixtures:
+The exact corpus is carried by the six canonical JSON fixtures:
 
 ```text
 nonintegral_local_power_rationality.json
@@ -150,6 +151,7 @@ irrational_rotation_absolute_power_rationality.json
 rational_rotation_branch_census.json
 irrational_rotation_principal_complex_power_rationality.json
 transfer_matrix_symmetric_parent.json
+rational_rotation_uniform_degree_gate.json
 ```
 
 Each fixture records claims, arithmetic class, scope firewalls, source
@@ -175,8 +177,8 @@ continuation, a functional equation, automorphy, or a zero theorem.
 
 | time | work product | scientific stop |
 |---|---|---|
-| 0:00--1:15 | literature audit and exact formulation of the rational-angle Fourier-support target | do not infer unbounded support from finite denominators |
-| 1:15--2:30 | prove or refute the first uniform Fourier-mode lower bound for a fixed noninteger exponent | retain exceptional modes and failed bounds |
+| 0:00--1:15 | literature audit and exact formulation of the rational-angle Fourier-support target — **completed** | do not infer unbounded support from finite denominators |
+| 1:15--2:30 | prove or refute the first uniform Fourier-mode lower bound for a fixed noninteger exponent — **completed sharply at the bounded/unbounded level** | a quantitative growth rate remains open |
 | 2:30--3:45 | classify the scalar varying-determinant normalization with every square-root/power branch explicit | parent weight counts alone do not settle scalar branches |
 | 3:45--5:00 | prove the dense-torus recurrence lemma in rank `n` and test singular-hyperplane transforms | no smoothness claim across an unhandled branch divisor |
 | 5:00--6:00 | impose determinant, contragredient, and one twist law on the smallest local moduli | do not attach ramified or gamma data ad hoc |

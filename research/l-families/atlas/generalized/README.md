@@ -36,9 +36,10 @@ minimal periods for absolute and fixed-branch complex powers, every
 \(\lambda=0\) zero-value convention, and the root-of-unity collision spectrum
 for positive integer powers.  It also separates the scalar observable from
 its finite-dimensional symmetric-power state-space parent.  Pointwise
-periodicity is not a uniform local-degree theorem as the angle denominator
-grows.  The exact inherited files and nearby literature are recorded in its
-colocated [sources manifest](rational_rotation_branch_census.sources.json).
+periodicity alone is not a uniform local-degree theorem as the angle
+denominator grows; the sixth packet below supplies the missing reduced-degree
+argument.  The exact inherited files and nearby literature are recorded in
+its colocated [sources manifest](rational_rotation_branch_census.sources.json).
 
 The fourth packet is
 [IRRATIONAL_ROTATION_PRINCIPAL_COMPLEX_POWER_RATIONALITY.md](IRRATIONAL_ROTATION_PRINCIPAL_COMPLEX_POWER_RATIONALITY.md).
@@ -63,7 +64,18 @@ whereas the determinant-one subtorus has
 weight-lattice algebra, not a global symmetric-power \(L\)-function or a
 novelty claim; degeneration and cancellation loci are retained explicitly.
 
-The [wave-2 research map](WAVE2_RESEARCH_MAP.md) consolidates all five
+The sixth packet is
+[RATIONAL_ROTATION_UNIFORM_DEGREE_GATE.md](RATIONAL_ROTATION_UNIFORM_DEGREE_GATE.md).
+It proves the sharp uniform-L3 classification over all reduced rational
+angles.  For \(\operatorname{Re}\lambda>0\), absolute powers have uniformly
+bounded reduced degree exactly at positive even integers, and a fixed
+real-axis branch has uniformly bounded degree exactly at positive integers.
+The sharp bounds are \(2m+1\) and \(k+1\); at the excluded absolute exponent
+\(\lambda=1\), every denominator \(b\) has full recurrence order \(b\).
+The obstruction is finite-dimensional and local, not a global
+\(L\)-function or infinite-parent no-go theorem.
+
+The [wave-2 research map](WAVE2_RESEARCH_MAP.md) consolidates all six
 packets, the primary-literature boundary, held-out families, L0--L9 status,
 four broader deformation axes, and a ranked continuation queue.  It is a
 programme map, not another theorem packet.
