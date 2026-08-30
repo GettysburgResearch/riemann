@@ -1588,7 +1588,7 @@
     "tempered_GL2_trace_chamber": "[-2,2] is not treated",
     "trace_domain": "real x>2 (hyperbolic non-tempered determinant-one chamber)"
   },
-  "payload_sha256": "7f1d940fefa7df2084e8a390d16ed2a32fad8fbb92669c26c0f6e198af826d73",
+  "payload_sha256": "aeef39e2d11dad919074c1e8626f15ed16e613e04ae3db406adf66cd579c676f",
   "polynomial_transform_replay": {
     "all_degrees_0_through_d": {
       "d": 8,
@@ -1692,16 +1692,17 @@
   },
   "producer": {
     "note": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
-    "note_sha256_lf_normalized": "068133191dd5cf6d22d34d0834348634c13448d1863d299d123f47d118f48de3",
+    "note_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c",
     "script": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
-    "script_sha256_lf_normalized": "fe35c760775cb5885d7f757dce9ab5bacc4efc54fcbdeb0fb241b86628fc23ac",
+    "script_sha256_lf_normalized": "1823be1b7d3d20d55e0154a7eefe54218eae73c90eb71297a96dd906bc59556d",
     "test": "tests/test_nonintegral_local_power_rationality.py",
-    "test_sha256_lf_normalized": "5229ba73b938694016218b80d43a288a66a2ed4e6978091119e86d792abab3a6"
+    "test_sha256_lf_normalized": "d5fc59497e47f7bea973491af1836e290699659b843f34029b0b2304a932f72b"
   },
   "programme_issue": 764,
   "resource_contract": {
-    "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL_SYNTHETIC_ALGEBRA",
+    "arithmetic_class": "EXACT_RATIONAL",
     "declared_work_units": 15858,
+    "exact_method": "integer and rational Laurent-polynomial, recurrence, Hankel, and formal coefficient algebra",
     "external_symbolic_engine": false,
     "float_operations": 0,
     "maximum_allowed_k": 12,

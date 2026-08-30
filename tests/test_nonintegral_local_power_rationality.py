@@ -277,6 +277,8 @@ class NonintegralLocalPowerRationalityTests(unittest.TestCase):
 
     def test_resource_refusals_and_arithmetic_class(self) -> None:
         resources = self.fixture["resource_contract"]
+        self.assertEqual(resources["arithmetic_class"], "EXACT_RATIONAL")
+        self.assertIn("Laurent-polynomial", resources["exact_method"])
         self.assertLess(
             resources["declared_work_units"], resources["work_unit_cap_exclusive"]
         )

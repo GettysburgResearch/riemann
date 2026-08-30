@@ -742,7 +742,11 @@ def build_fixture(
             "external_novelty_unreviewed": True,
         },
         "resource_contract": {
-            "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL_SYNTHETIC_ALGEBRA",
+            "arithmetic_class": "EXACT_RATIONAL",
+            "exact_method": (
+                "integer and rational Laurent-polynomial, recurrence, "
+                "Hankel, and formal coefficient algebra"
+            ),
             "maximum_k": max_k,
             "maximum_allowed_k": MAX_ALLOWED_K,
             "declared_work_units": work_units,

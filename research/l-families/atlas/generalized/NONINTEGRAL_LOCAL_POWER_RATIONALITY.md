@@ -357,8 +357,9 @@ of one fixed \(L\)-function.
 
 ## 5. Hostile controls and exact replay
 
-The dependency-free producer performs only exact integer and rational
-arithmetic. It:
+The dependency-free producer declares the repository arithmetic class
+EXACT_RATIONAL and performs only exact integer and rational
+Laurent-polynomial, recurrence, Hankel, and formal coefficient algebra. It:
 
 1. reconstructs \(u_r(\alpha+\alpha^{-1})\) as the Laurent polynomial
    \(\sum_{j=0}^{r}\alpha^{r-2j}\);
