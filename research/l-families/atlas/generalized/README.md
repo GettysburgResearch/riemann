@@ -2,6 +2,16 @@
 
 Status: **proposed exact local mathematics; external novelty unreviewed**.
 
+The independent continuation
+[Multiplicative recurrence preservers and mixed-rank determinant parents](MULTIPLICATIVE_RECURRENCE_AND_MIXED_PARENTS.md)
+classifies all continuous multiplicative complex maps using one
+nondegenerate shifted-circle recurrence test, gives sharp generic complex
+orders and collision semantics, and proves the finite graded determinant
+boundary for arbitrary mixed input ranks. Its exact controls and source
+locks are in `multiplicative_recurrence_mixed_parents.json`; this is a local
+representation/recurrence result, not a new global L-function. The frozen
+eleven-packet base below is retained unchanged.
+
 For the current eleven-packet result and the next global completion gates,
 start with [CONTINUATION_RESULTS.md](CONTINUATION_RESULTS.md).
 The packet introductions below and the wave-2 research map record the

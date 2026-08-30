@@ -205,6 +205,43 @@ symmetric-coefficient series
 `sum_r Phi(Tr(Sym^r A))T^r` with a determinant inverse of that tensor
 representation. Sections 4--6 classify this different question.
 
+### Theorem GLO764.MULREC.DISCRETE_DEFORMATION_MODULI
+
+For an integer `D>=1`, the normalized continuous multiplicative maps whose
+shifted-circle order is at most `D` form exactly
+
+\[
+ \{z^m\bar z^n:m,n\ge0,\ m+n\le D-1\}.
+\]
+
+Their number is `D(D+1)/2`. At fixed integral unitary twist weight `w`,
+the number is
+
+\[
+ \max\left(0,1+\left\lfloor\frac{D-1-|w|}{2}\right\rfloor\right).
+\tag{2.3}
+\]
+
+Moreover, any family of maps satisfying Theorem 1 for which evaluation at
+each fixed complex number varies continuously has locally constant
+exponents `(m,n)`. In particular a family over a connected parameter space
+is constant, even without a prescribed uniform order bound.
+
+Proof: Theorem 1 gives order `m+n+1`; counting the integer triangle proves
+the first assertion. At fixed `w=m-n`, the possible total degrees are
+`|w|,|w|+2,...,D-1`, giving (2.3). For the last assertion, evaluation at
+`2` has value `2^{m+n}` in a discrete set. The total degree is therefore
+locally constant. On a neighborhood where it is `K`, only `K+1`
+bidegrees remain. Evaluation at one fixed `eta=exp(i alpha)` with
+`alpha/(2pi)` irrational distinguishes their integer weights. Its finite
+image is discrete, so the weight, and hence both exponents, are locally
+constant. A locally constant map on a connected space is constant. QED.
+
+This is a precise obstruction to continuous interpolation **inside these
+scalar axioms**. It says nothing about p-adic interpolation, discontinuous
+families, changing target categories, or infinite-dimensional parents that
+do not retain the recurrence hypothesis.
+
 ## 3. Sharp generic orders and exact cancellation semantics
 
 ### Theorem GLO764.MULREC.GENERIC_BIDEGREE_ORDER
@@ -256,14 +293,18 @@ For a rank-`d` semisimple matrix with distinct nonzero eigenvalues,
 Hence this theorem applies to the actual local coefficient normalization.
 It also constructs a matrix-coefficient parent on
 `Sym^m(C^d) tensor Sym^n(conjugate(C^d))`, using the Binet state realization
-and tensoring its input/output vectors. It is an honest finite state-space
-representation, but its scalar output vectors still matter.
+and tensoring its input/output vectors. The Binet output vectors depend on
+the matrix and can become singular when eigenvalues coalesce. This is an
+honest representation state space with a recovery map on the distinct-root
+locus, not one universal fixed matrix coefficient valid for every matrix.
 
 Reality, determinant constraints, torsion, repeated roots, or special output
 vectors may lower the count. For real roots, conjugation already identifies
-weights, so (3.3) must not be used. For nondiagonalizable matrices the
-sequence remains recurrent, but polynomial-in-`r` factors can create higher
-pole orders; the simple-pole formula (3.2) is asserted only as stated.
+weights, so (3.3) must not be used. Repeated eigenvalues, even in diagonalizable
+matrices, can produce polynomial-in-`r` factors and higher pole orders in
+the complete symmetric-coefficient sequence. Such sequences, including
+Jordan cases, remain recurrent; the simple-pole formula (3.2) is asserted
+only as stated.
 
 ## 4. The mixed-rank determinant-parent question
 
