@@ -1,0 +1,46 @@
+{
+  "schema": "tensor-moment-completion-sources-v1",
+  "parent_sources": [
+    {
+      "commit": "b895598abd936a2e42e5b7d14a7e10cc2bf41486",
+      "path": "research/l-families/atlas/generalized/SATAKE_DEFORMATION_COMPLETION_OBSTRUCTION.md",
+      "git_blob": "907bb4c262939d4f812b282f155857218a97b2e5",
+      "sha256_lf": "131ce880eedd4da62e3f46884529a759e8842a0e556c1f7be26d8565e47201c2",
+      "role": "mathematical-parent-D1-D2-Abel-and-integer-log-order"
+    },
+    {
+      "commit": "b895598abd936a2e42e5b7d14a7e10cc2bf41486",
+      "path": "research/l-families/atlas/generalized/satake_deformation_completion_obstruction.py",
+      "git_blob": "e3131456ec7d0f1678645ecfca0c8723ce66dabd",
+      "sha256_lf": "0b17d9c83d70a4f7122274ae172ba808b32cc8cd9e2f59060d21510131e5b094",
+      "role": "parent-control-context-not-imported-by-this-producer"
+    },
+    {
+      "commit": "b895598abd936a2e42e5b7d14a7e10cc2bf41486",
+      "path": "research/l-families/atlas/generalized/satake_deformation_completion_obstruction.sources.json",
+      "git_blob": "c50b8eb8f4ea13e232f63bebd034a63ddcf110d7",
+      "sha256_lf": "3b4f77c8e493e4f958bcf4bf7f3c1ff9d9fcb0d34fb4ac56066ed26893bd2c7f",
+      "role": "parent-arithmetic-source-declarations"
+    }
+  ],
+  "prior_art": [
+    {
+      "id": "LARSEN2002",
+      "author": "Michael Larsen",
+      "title": "Rigidity in the Invariant Theory of Compact Groups",
+      "url": "https://arxiv.org/pdf/math/0212193",
+      "version": "arXiv:math/0212193v1, 15 December 2002",
+      "locator": "Introduction and Theorem 3.3 (PDF p.8)",
+      "role": "prior-art-only; compact-group trace moments and isolation, not imported as a proof"
+    },
+    {
+      "id": "LARSEN_PINK",
+      "author": "Michael Larsen; Richard Pink",
+      "title": "Determining Representations from Invariant Dimensions",
+      "url": "https://people.math.ethz.ch/~pink/ftp/LP1.pdf",
+      "locator": "Introduction Theorems 1-3 and section 1",
+      "role": "prior-art-only; invariant dimensions and reconstruction boundaries"
+    }
+  ],
+  "external_authentication": "declarations pinned; no external PDF or arithmetic theorem is machine-proved"
+}
