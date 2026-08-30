@@ -1,0 +1,68 @@
+{
+  "authoring_base": "a07e9c3ba093abb348b849e0356f6babdf591e84",
+  "external_contracts": [
+    {
+      "contract": "Ki 2006 publisher abstract: repeated Xi derivatives converge after scaling on compact complex sets; no growing-domain theorem imported",
+      "remote_bytes_authenticated": false,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0022314X05002489"
+    },
+    {
+      "contract": "Gunns-Hughes 2019 primary accepted manuscript, Theorem 3.1 pp10-11: extended-Selberg compact-domain scaled cosine limit and explicit saddle",
+      "remote_bytes_authenticated": false,
+      "url": "https://eprints.whiterose.ac.uk/134951/1/ManyDerivsXi_Resubmitted.pdf"
+    }
+  ],
+  "schema": "xi-high-derivative-saddle-sources-v1",
+  "source_scope": "real theta bounds only; PR767 full-disk tail-height repair; no imported moving-ray theorem",
+  "sources": [
+    {
+      "commit": "cdad9e88097db4925c3bbbf731f7d1ae1a9e6c57",
+      "git_blob": "8e83995d592b6e5666a90f7fbf10a427e4361dfb",
+      "path": "claims/lemmas/L-107102-spectral-concentration-forces-laguerre-positivity-and-real-zero-localization.md",
+      "role": "PR767_full_disk_gate",
+      "sha256_lf": "68cafeb7a9cabad1fe393a1866b67eacd1f7c3955729f30ac5dd13e362d3b332"
+    },
+    {
+      "commit": "cdad9e88097db4925c3bbbf731f7d1ae1a9e6c57",
+      "git_blob": "75fe03b66d89244b3aaafa9e55a86192fb0d382a",
+      "path": "claims/theorems/T-107110-xi-saddle-concentration-frontier.md",
+      "role": "PR767_endpoint_frontier",
+      "sha256_lf": "a517f6d71804e1ac3f2737cd6c69a7d8f82d85104c7287c9ccefb82e12db1df2"
+    },
+    {
+      "commit": "cdad9e88097db4925c3bbbf731f7d1ae1a9e6c57",
+      "git_blob": "36f938decae31a07a9d30ef01526cc862eefda3b",
+      "path": "claims/theorems/T-107100-exact-xi-reverse-rolle-defect-cascade.md",
+      "role": "retained_descent_ledger",
+      "sha256_lf": "fcf604acfe3ee9cc40195673a4909fd2e9370e8988ddd8f6d9ec66a266a6482a"
+    },
+    {
+      "commit": "cdad9e88097db4925c3bbbf731f7d1ae1a9e6c57",
+      "git_blob": "6e74e43da002e1640d347312d4822fd9f459ad8f",
+      "path": "claims/refutations/R-107100-derivative-line-concentration-alone-does-not-descend.md",
+      "role": "descent_counterexample_firewall",
+      "sha256_lf": "44dd3d888e0277a080819e1a3b6b448e3020cbfb7f8fa9f8c78d2f8c7f11f887"
+    },
+    {
+      "commit": "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+      "git_blob": "fa24f9c8e0a87709d1a297a4e72136c1135d066c",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+      "role": "actual_theta_normalization_and_real_bounds",
+      "sha256_lf": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246"
+    },
+    {
+      "commit": "686e23d9e5b1005aae83e3362ac1ed53a28a0352",
+      "git_blob": "dfe76fc1985d3366f50489ce21bdcc2cfdd325ff",
+      "path": "claims/lemmas/L-105413-explicit-xi-kernel-gives-global-shifted-ray-dominance.md",
+      "role": "literal_theta_series_not_complex_ray_theorem",
+      "sha256_lf": "ae4b3b43c4ad4744337a5278d50d3887a4c83a61b9fdbd424640e5143a82475c"
+    },
+    {
+      "commit": "f3d074190e64a97ac935b93c5b628568cde90858",
+      "git_blob": "da9032e15eb7be89557a54120b74fc9596c527d9",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION_AUDIT.md",
+      "role": "actual_real_kernel_independent_review",
+      "sha256_lf": "aaf60c26b34296aa2e23bdad1469fce8ed3efe5ec27063d14d666f3fa5ce0536"
+    }
+  ]
+}
