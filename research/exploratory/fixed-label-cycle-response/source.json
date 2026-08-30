@@ -1,0 +1,16 @@
+{
+  "schema": "riemann.fixed-label-cycle-source.v1",
+  "vertices": [0, 1],
+  "edges": [[0, 1, "a"], [1, 0, "b"], [0, 0, "c"]],
+  "reversal": "reverse incidence, retain every color and numerical label",
+  "cycle_convention": "directed edge words modulo rotation, not reversal; returns allowed",
+  "sheet_trivialization": "one fixed labeled copy at each vertex",
+  "s3_U": [1, 0, 2],
+  "s3_V": [0, 2, 1],
+  "alignment": "W=(UV)^T for the exact real-orthogonal fixtures",
+  "held_out_s4_pairs": [
+    [[1, 0, 2, 3], [0, 2, 3, 1]],
+    [[1, 2, 3, 0], [1, 0, 2, 3]],
+    [[1, 0, 3, 2], [2, 3, 0, 1]]
+  ]
+}
