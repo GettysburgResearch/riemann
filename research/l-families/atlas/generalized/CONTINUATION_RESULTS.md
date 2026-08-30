@@ -1,13 +1,14 @@
 # Generalized L-objects: continuation checkpoint
 
-Status: exact local classifications and representation-parent boundaries
+Status: exact local/global boundaries and a source-specified global quotient
 for [programme #764](https://github.com/gfreund123/riemann/issues/764),
 carried by [draft PR #766](https://github.com/gfreund123/riemann/pull/766).
 This is a checkpoint during the requested research pass, not a statement
-that eight hours have elapsed or that a new global L-function exists.
+that eight hours have elapsed. No new automorphic L-function or external
+novelty is claimed.
 
-Checkpoint updated: 2026-08-31. Fifteen exact packets are resident,
-including global obstructions and a classical constructive parent.
+Checkpoint updated: 2026-08-31. Sixteen exact packets are resident,
+including the independently reviewed Rankin--Selberg quotient.
 
 ## The main conclusion
 
@@ -25,6 +26,13 @@ An affirmative answer at one level does not supply the next. Here the
 infinite grades do have a classical Koszul--Lie realization, but the
 unaltered divisor-power models still face a global natural boundary or
 a finite-gamma obstruction.
+
+There is now a distinct constructive answer: a canonical quotient of an
+actual, genuinely coupled automorphic period matrix. It inherits a global
+meromorphic reflection law but acquires a provably noninteger Dirichlet
+frequency. This is a concrete global quotient, not another fitted local
+recurrence. It remains in the rational closure of classical period entries
+and is not a new automorphic representation.
 
 ## Exact packet map
 
@@ -45,10 +53,63 @@ a finite-gamma obstruction.
 | [Tensor-moment rigidity](TENSOR_MOMENT_COMPLETION_RIGIDITY.md) | Meromorphic completion of every tensor moment forces the stated connected monotone folded-angle deformation to be trivial | Common-interval continuity and monotonicity are essential; finitely many moments do not suffice |
 | [Global graded boundary](GRADED_PARENT_GLOBAL_BOUNDARY.md) | Natural boundary, finite-gamma obstruction, graded convergence threshold, and an explicit centered change of object | Theorems concern the stated divisor-power model, not arbitrary varying automorphic parameters |
 | [Classical Segre Lie parent](SEGRE_KOSZUL_LIE_PARENT.md) | Actual signed dual Lie modules in every grade and strict all-grade signs | This is established Koszul duality; no analytic completion or positive Euler parent |
+| [Rankin--Selberg quotient](RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT.md) | Canonical cusp-flag quotient, global reflection, positive real quotient metric, and first noninteger frequency 9/2 | Possible denominator-zero poles; no ordinary expandable Euler product or new automorphic representation |
 
-Each row links to its resident proof and reproduction contract. The four
-new packets and the earlier exact-degree, single-grade and finite-graded
-packets have separate exact-source audit reports in this directory.
+Each row links to its resident proof and reproduction contract. The later
+analytic/parent packets and the earlier exact-degree, single-grade and
+finite-graded packets have separate exact-source audit reports here.
+
+## An actual global quotient, with its loss of ordinary frequencies
+
+Let V=S24(SL2Z), f0=Delta E4^3, f1=Delta^2, and ell(f)=[q]f.
+The functional and normalized cusp coordinate specify the flag
+W=ker ell=span(f1). Form the actual completed Eisenstein period matrix
+
+    I_ij(s)=integral_(Gamma\H) y^24 conjugate(f_i) f_j E*(z,s) dmu,
+    I(s)=A(s) zeta(2s) D(s),
+    A(s)=pi^(-s) Gamma(s) (4pi)^(-s-23) Gamma(s+23).
+
+Its canonical one-dimensional quotient is
+
+    Q(s)=det I(s)/I_11(s)=A(s) L_Q(s),
+    L_Q(s)=zeta(2s) [D00-D01 D10/D11],
+    Q(s)=Q(1-s).
+
+This is invariant under all constant complex changes preserving the
+normalized flag. For real sigma>1 it is the strictly positive minimum
+of the period norm over ell(f)=1. No constant basis diagonalizes the
+entire period family: its first three coefficient directions already
+rule that out. Parameter-dependent diagonalization is not excluded.
+
+Both completed endpoint poles, zero and one, survive, with opposite
+residues det(G)/(2G11), where G is the Petersson Gram. Additional poles
+can occur at zeros of I11; the exact local cancellation condition is
+stated in the proof. Real positivity does not settle complex zeros.
+
+The first noninteger frequency is an exact source calculation. For
+w=s+23, after the shear g=f0-696 f1, one has b1=0,b2=1,c2=0,
+b3=-48 and c3=195660. Consequently the quotient has the
+fractional-frequency contribution
+
+    [(9/2)^(-w)] F = -88203653222400.
+
+An absolute Neumann expansion on a right half-plane justifies the
+calculation globally as a generalized Dirichlet series. The multiplier
+zeta(2s) leaves that first noninteger coefficient unchanged. Therefore
+neither F nor L_Q can be an absolutely convergent integer-indexed
+Dirichlet series on any right half-plane, or an ordinary-prime Euler
+product with normalized power-series factors and absolute expansion.
+
+Generalized prime/norm systems, conditional or formal products, and
+other modified objects are not excluded. The completion is inherited
+from the actual period, not fitted afterward. Schur quotients, modular
+forms and Rankin--Selberg periods are classical; no priority claim is
+made for this source-specified construction.
+
+The [exact-source audit](RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT_AUDIT.md)
+records separate proof review, independent q/frequency reconstruction,
+and the correction of an introductory completed-pole omission in the
+Miller--Schmid source. The analytic imports are not machine-certified.
 
 ## Why the parent distinction changes the programme
 
@@ -109,9 +170,9 @@ series by renaming it.
 | L0--L1: definition and multiplicativity | Several branch/zero chambers and the monomial multiplicativity obstruction are exact |
 | L2--L3: Euler structure and finite degree | Formal multiplicative products require their input hypotheses; scalar degrees and universal representation obstructions are now sharply separated |
 | L4: weights, determinant, duality | Finite representation and determinant identities are explicit; no general ramified or global compatibility theorem is supplied |
-| L5--L6: completion and continuation | Explicit all-prime completion obstructions now supplement the local results; a centered zeta-ratio completes a different object |
-| L7--L8: functoriality and realization | Honest local state-space and a classical signed Lie parent exist; the stated tensor-completion rigidity is exact; global realization is not inferred |
-| L9: explicit formula and zeros | The divisor-power model has explicit local-factor zeros and boundary obstructions; no new automorphic zero theorem or RH/GRH consequence |
+| L5--L6: completion and continuation | The actual period quotient has global meromorphy and reflection, with possible denominator-zero poles; the divisor-power obstructions remain unchanged |
+| L7--L8: functoriality and realization | Honest local state-space, a classical signed Lie parent and an actual flagged period source exist; no new automorphic representation or twist compatibility is inferred |
+| L9: explicit formula and zeros | Local-factor obstructions and a quotient pole ledger are explicit; no critical-line or complex zero-free theorem, RH or GRH consequence |
 
 ## The all-prime tests now have answers
 
@@ -163,9 +224,11 @@ observable, not completing the original series.
 ## What still merits research
 
 Do not reopen the closed scalar catalogue or present the classical
-Koszul construction as new territory. A genuinely different continuation
-should identify an independently defined coupled/non-scalar object and
-test a load-bearing global operation before scalar specialization.
+Koszul construction as new territory. The period quotient now supplies
+one actual coupled global object and a tested quotient operation. Its
+next burdens are denominator-zero cancellation/control and a justified
+extension to other intrinsic cusp flags. A higher-rank first-frequency
+formula is under investigation, not imported as a theorem here.
 
 An added variable, fitted matrix, formal regularization or ad hoc gamma
 factor is not enough. Cross-prime or twist compatibility must be proved
@@ -175,7 +238,7 @@ family.
 
 The [wave-2 research map](WAVE2_RESEARCH_MAP.md) remains the historical
 literature map. Its six-packet status and queue are superseded by this
-fifteen-packet checkpoint.
+sixteen-packet checkpoint.
 
 ## Earlier work is not displaced
 
@@ -194,17 +257,19 @@ global or non-scalar theorem, not through another periodic example.
 ## Replay and exact identities
 
 Every packet has a bounded exact producer and tests. The current
-changed-test-module scope contains 230 tests in fifteen modules. All
-230 tests and all fifteen producer checks passed in normal and optimized
-Python.
+changed-test-module scope contains 260 tests in sixteen modules. All
+260 tests passed in normal Python (37.580 seconds) and under -O
+(37.710 seconds). All sixteen producers passed checks in both modes.
 Source manifests bind frozen Git blobs, not just internally consistent
-derived JSON. No finite census is the
-proof of an all-parameter classification.
+derived JSON. For the new period quotient, the pinned programme file is
+context; modularity and Eisenstein continuation are explicit primary-source
+imports, not consequences of that context hash. No finite census proves
+an all-parameter classification or analytic continuation.
 
 Original scientific commits named by the reviews are retained on
 durable source refs. For this programme fetch:
 
-    git fetch --no-tags origin refs/heads/codex/review-sources-universal-euler-wave2 refs/heads/codex/review-sources-finite-graded-parent-wave2 refs/heads/codex/review-sources-satake-tensor-wave2 refs/heads/codex/review-sources-graded-global-wave2 refs/heads/codex/review-sources-segre-koszul-lie-wave2
+    git fetch --no-tags origin refs/heads/codex/review-sources-universal-euler-wave2 refs/heads/codex/review-sources-finite-graded-parent-wave2 refs/heads/codex/review-sources-satake-tensor-wave2 refs/heads/codex/review-sources-graded-global-wave2 refs/heads/codex/review-sources-segre-koszul-lie-wave2 refs/heads/codex/review-sources-rankin-selberg-quotient-wave2
 
 Their exact targets, in that order, are:
 
@@ -212,16 +277,18 @@ Their exact targets, in that order, are:
 - 7c9e7bde7980c4cfc0b3c3e521fa022319244caa;
 - 0d7503b8575db40a46303315b8130973ed214d50;
 - a432061f12fd15658e9790966e5bf3d1e9830e07;
-- 39f19e361c476c77cd016d314662448f43df7a80.
+- 39f19e361c476c77cd016d314662448f43df7a80;
+- b62dfc6348661992bca659c99de226a1b6b22e14.
 
 The first retains 02e53055; the third retains b895598a; the fourth
-retains the global proof 334bec3b and its independent review. These refs
+retains the global proof 334bec3b and its independent review. The sixth
+retains the original five-file quotient proof reviewed in the audit. These refs
 are acquisition aids; commit/path/blob checks remain authoritative.
 
-The recursive source-acquisition audit passed for all fifteen root
-manifests: 22 frozen manifest versions, 85 literal source edges, 54 unique
-commit/path file versions and thirteen source commits. Every such commit
-is reachable from this programme or one of the five source refs above.
+The recursive source-acquisition audit passed for all sixteen root
+manifests: 23 frozen manifest versions, 86 literal source edges, 55 unique
+commit/path file versions and fourteen source commits. Every such commit
+is reachable from this programme or one of the six source refs above.
 The audit follows the manifest's explicit imported-parent identity where
 it differs from a historical base identity; it does not authenticate a
 different file merely because the path matches.

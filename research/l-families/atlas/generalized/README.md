@@ -1,10 +1,14 @@
 # Generalized L-object Gate-0 packets
 
-Status: **reviewed local/global obstruction packets and a classical signed
-parent; no new global L-function or external novelty claim**.
+Status: **reviewed local/global boundaries, a classical signed parent, and
+an actual global period quotient; no new automorphic L-function or external
+novelty claim**.
 
-For the current fifteen-packet result and the remaining global-object gates,
+For the current sixteen-packet result and the remaining global-object gates,
 start with [CONTINUATION_RESULTS.md](CONTINUATION_RESULTS.md).
+The [Rankin--Selberg quotient](RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT.md)
+and its [independent audit](RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT_AUDIT.md)
+give the new constructive result and its precise pole/Euler boundaries.
 The packet introductions below and the wave-2 research map record the
 earlier six-packet stage; their open-work lists are superseded by that
 continuation checkpoint.
