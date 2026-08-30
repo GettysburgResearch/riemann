@@ -148,18 +148,17 @@ sum_j (-1)^j C(m,j) w_j^{u+1} = (alpha^{u+1} - beta^{u+1})^m
 
 which yields `c_r = (-1)^r sum_u (-1)^u e_{r-u}(w) h_u^m` — statement 3
 after the sign bookkeeping `(-1)^r(-1)^u = (-1)^{r-u}`. For `r = 1`:
-`c_1 = e_1(w) ... `; explicitly `c_1 = -(-1)^0 e_1(w) h_0^m + ... ` — by the
-formula `c_1 = e_1(w)(-1)^{1-0}h_0^m ... ` written out:
-`c_1 = (-1)^{1} e_1(w) h_0^m + (-1)^{0} e_0(w) h_1^m = h_1^m - e_1(w)
-= a^m - h_m`, since `e_1(w) = sum_j w_j = h_m(alpha,beta)` (the sum of the
-degree-m monomials... note `sum_j alpha^{m-j} beta^j` is exactly `h_m`) and
-`h_1 = a`. Exactness of the denominator: the partial-fraction coefficient
-of `1/(1 - w_j T)` in (*) is `(-1)^j C(m,j) w_j (alpha-beta)^{-m}
-prod_{i != j} (1 - w_i / w_j)^{-1} ... ` — more directly, from the second
-display, the residue coefficient at `w_j` is `(-1)^j C(m,j) w_j
-(alpha-beta)^{-m}`, a visibly nonzero element of `K` for generic
-`(alpha, beta)`; a vanishing gcd factor `(1 - w_j T) | N_m` would force
-that residue to vanish. Since all `w_j` are distinct generically, the
+
+```text
+c_1 = (-1)^1 e_1(w) h_0^m + (-1)^0 e_0(w) h_1^m = h_1^m - e_1(w) = a^m - h_m ,
+```
+
+since `e_1(w) = sum_j alpha^{m-j} beta^j = h_m` and `h_1 = a`.
+Exactness of the denominator: from the second display, the
+partial-fraction coefficient of `w_j/(1 - w_j T)` is
+`(-1)^j C(m,j) (alpha-beta)^{-m}`, a visibly nonzero element of `K`; a
+common factor `(1 - w_j T)` of `N_m` and the denominator would force that
+coefficient to vanish. Since all `w_j` are distinct generically, the
 reduced denominator is the full product. Membership `N_m ∈ Z[a,b][T]`:
 each `c_r` is a symmetric polynomial in `(alpha, beta)` with integer
 coefficients (statement 3 exhibits it as such), hence a polynomial in
@@ -211,14 +210,33 @@ coefficient system is therefore `Sym^3` times an Euler factor whose roots
 generate a nontrivial quadratic extension of the function field of the
 local data.
 
-*Proof.* A monic-after-normalization quadratic `1 + 2ab T + b^3 T^2`
-factors over `K` iff its discriminant `(2ab)^2 - 4 b^3 = 4 b^2 (a^2 - b)`
-is a square in `K`. Squares in `Q(a,b)` are squares up to unit squares;
-`4 b^2` is a square, so factorization requires `a^2 - b` to be a square in
-`Q(a,b)`. It is not: `a^2 - b` is a squarefree polynomial of odd degree 1
-in the variable `b` (a square rational function that is a polynomial is a
-square polynomial, and a square polynomial has even degree in each
-variable). ∎
+*Proof.* Step 1 (irreducibility over `K = Q(a,b)`): the quadratic
+`1 + 2ab T + b^3 T^2` factors over `K` iff its discriminant
+`(2ab)^2 - 4 b^3 = 4 b^2 (a^2 - b)` is a square in `K`; `4b^2` is a
+square, so this requires `a^2 - b` to be a square in `K`. It is not: a
+rational function that is a square and a polynomial is a square
+polynomial (in the UFD `Q[a,b]`, `(f/g)^2 = h` with `gcd(f,g)=1` forces
+`g` to be a unit), and a square polynomial has even degree in each
+variable, while `a^2 - b` has degree 1 in `b`.
+
+Step 2 (the roots are not virtual-character weights — the inference
+irreducibility-over-`K` alone does NOT give this, since monomial weights
+live in the quadratic extension `Q(alpha, beta)`, and e.g. the Satake
+polynomial itself is `K`-irreducible with monomial roots; this gap was
+found by the pass's adversarial review, which also supplied the following
+repair): if both inverse roots of `N_3` were of the form
+`c alpha^i beta^j` with `c ∈ Q`, they would lie in `Q(alpha, beta)`, so
+the splitting field of `N_3` over `K` — which by Step 1 and the
+discriminant is `K(sqrt(a^2 - b))` — would embed in
+`Q(alpha, beta) = K(sqrt(a^2 - 4b))` (the Satake splitting field, degree
+2 over `K`). Two quadratic extensions coincide iff the product of their
+discriminant classes is a square: this would force `a^2 - b` or
+`(a^2 - b)(a^2 - 4b)` to be a square in `K`. Neither is: `a^2 - b` by
+Step 1's parity argument, and `(a^2 - b)(a^2 - 4b)` because it is a
+product of two non-associate irreducibles of `Q[a,b]` (each of degree 1
+in `b`, with distinct `b`-leading data), hence squarefree. So the
+inverse roots of `N_3` generate a genuinely different quadratic
+extension and are not rational multiples of weight monomials. ∎
 
 Contrast (both classical, machine-verified here as oracles):
 - m = 2: `N_2 = 1 + bT = 1 - (-det A) T` — the sign-twisted determinant, a
@@ -290,7 +308,8 @@ every bounded-degree local system passes L3 with a uniform bound — the
 ladder's discriminating power against such transforms begins at L4/L6, and
 Theorems 1-2 locate the failure exactly: a nontrivial defect numerator for
 every `m >= 2` (by the linear-coefficient law `c_1 = a^m - h_m != 0` for
-`m >= 2` generically), leaving the character ring entirely from `m = 3`.
+`m >= 2` generically), with the character-ring exit PROVED at `m = 3`
+(Theorem 2) and conjectural for `m >= 4`.
 
 ## Survival trichotomy (positioning corrected by the boundary audit)
 

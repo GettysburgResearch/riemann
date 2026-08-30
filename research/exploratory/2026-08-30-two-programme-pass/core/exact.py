@@ -172,19 +172,27 @@ def minimal_rational_form(series: Sequence, check_all: bool = True
                           ) -> Optional[Tuple[Poly, Poly]]:
     """Given series coefficients a_0..a_N of f(T) = sum a_k T^k, return (P, Q)
     with f = P/Q exactly on the given window, Q(0)=1, Q the Berlekamp-Massey
-    minimal denominator, deg P < deg Q required for a proper local factor tail
-    (deg P >= deg Q is allowed and reported as-is).  Returns None if the
-    window is too short to certify (recurrence order L needs 2L+2 <= N+1)."""
+    minimal denominator.  IMPROPER numerators (deg P >= deg Q) are supported:
+    the coefficients of P = (series * Q) are exact for every index < window
+    length, so P is read off directly and certified by re-expansion; this is
+    required e.g. for trace generating series -T Q'(T)/Q(T), whose numerator
+    degree equals deg Q (adversarial-review fix, 2026-08-30).  Returns None
+    when the window cannot certify: the recurrence needs 2L+2 <= N+1 AND the
+    read-off numerator must be followed by an observed zero tail of length
+    >= 2 inside the window."""
     a = [F(x) for x in series]
     Q = berlekamp_massey(a)
     L = len(Q) - 1
     if 2 * L + 2 > len(a):
         return None
-    P = poly_mul(a, Q)[: max(L, 1)] if L > 0 else poly_trim(a)
-    P = poly_trim(P)
+    prod = poly_mul(a, Q)
+    P = poly_trim(prod[: len(a)])
+    if len(P) > len(a) - 2:
+        return None            # no observed zero tail: cannot certify
+    if not P:
+        P = []
     if check_all:
-        # verify P/Q reproduces the entire window
-        recon = series_of_rational(P, Q, len(a))
+        recon = series_of_rational(P if P else [Fraction(0)], Q, len(a))
         if recon != a[: len(recon)] or len(recon) < len(a):
             return None
     return P, Q

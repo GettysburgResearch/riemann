@@ -33,9 +33,13 @@ For the generic degree-2 local object with Satake polynomial
    `N_m(T) = b^{m(m-1)/2} T^{m-1} N_m(1/(b^m T))` — the obstruction to
    functoriality is itself self-dual (proved via inversion-closure of the
    weight multiset at `b = 1` plus weighted homogenization);
-4. the m=3 defect `1 + 2abT + b^3T^2` is irreducible over `Q(a,b)`: odd
-   pointwise powers >= 3 EXIT the character ring, while m=2's defect is the
-   sign-twisted determinant (classical Rankin-Selberg);
+4. the m=3 defect `1 + 2abT + b^3T^2` is irreducible over `Q(a,b)` AND its
+   inverse roots are not rational multiples of weight monomials (the
+   second statement needs a splitting-field argument beyond
+   irreducibility — supplied after the adversarial wave flagged the gap):
+   the m=3 defect EXITS the character ring, while m=2's defect is the
+   sign-twisted determinant (classical Rankin-Selberg). For m >= 4 the
+   exit is CONJECTURAL, not proved;
 5. exact degeneration on the trace-zero (supersingular-type) locus:
    the m=2 defect cancels and the reduced local factor drops degree;
 6. (Lemma) every polynomial pointwise transform of every bounded-degree

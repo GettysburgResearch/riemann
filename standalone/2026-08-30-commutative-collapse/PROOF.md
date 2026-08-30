@@ -157,13 +157,23 @@ on `A`, hence on `B`, hence surjective on `B` by finite dimension, so
 `x^{-1} ∈ B`. ∎
 
 In particular the naive **quaternionic zeta** — `sum_k exp(-s log k)` for a
-single quaternionic argument — collapses slice-wise: for non-real `s ∈ H`,
-`C[s]` is isomorphic to `C` embedded along the slice through `s`, and the
-quaternionic value is the classical `zeta` on that slice. This proves, for
-all series/functional-calculus definitions, the collapse half of the #764
-theorem target "prove that a broad class of naive quaternionic or
-multicomplex extensions collapses slice-wise to ordinary complex zeta, or
-construct an intrinsically coupled counterexample".
+single quaternionic argument — collapses slice-wise, in the following
+precise sense (corrected after adversarial review: the first deposit
+wrongly said `C[s] ≅ C`): for non-real `s ∈ H`, the REAL subalgebra
+`R[s] ⊂ H` is isomorphic to `C` (the slice through `s`), and the series
+lies in `R[s]`; inside `A_C = H ⊗ C ≅ M_2(C)` the subalgebra `C[s]` is
+2-dimensional, `≅ C x C`, with spectrum the conjugate pair
+`{lambda, conj(lambda)}` (the roots of the minimal polynomial of `s`), and
+the value is the jet package `(zeta(lambda), zeta(conj lambda))` — i.e.
+exactly the classical `zeta` on the slice, seen through its two conjugate
+embeddings. Here the "spectrum of s" means the roots of its minimal
+polynomial (equivalently the eigenvalues of left multiplication), which is
+the correct reading of Corollary 1's hypothesis in a noncommutative
+ambient algebra (there are no C-algebra homomorphisms `M_2(C) -> C`).
+This proves, for all series/functional-calculus definitions, the collapse
+half of the #764 theorem target "prove that a broad class of naive
+quaternionic or multicomplex extensions collapses slice-wise to ordinary
+complex zeta, or construct an intrinsically coupled counterexample".
 
 ## 4. What this closes
 

@@ -16,15 +16,23 @@ Battery (each row: expected refusal axiom, or None for full pass):
       non-semisimplicity — the claim is exactly A1-holds/A2-fails)
   B3  structureless integer sequence                          -> A1_FINITE_RANK
   B4  non-integral local factor (roots 2, 1/2)                -> A3_INTEGRALITY
-  B5  integral but weight-violating factor (roots 3, 1/3 at
-      claimed weight (3,1): product 1 != 3)                   -> A4_PURITY
+  B5  integral weight-violating factor (1-2T)(1-3T) at
+      claimed weight (5,1): reciprocity fails                 -> A4_PURITY
   B6  held-out violation: genuine prefix with one corrupted
-      tail term                                               -> A5_HELD_OUT
+      tail term (A1 certifies the prefix; the tail is out of
+      sample by construction)                                 -> A5_HELD_OUT
   B7  tensor compatibility: A(x)A predicted vs actual         -> HOLDS
   B8  tensor incompatibility: perturbed product data          -> FAILS
   B9  function-field Mobius contrast: sum_f mu(f) T^{deg f} =
-      1 - qT at q=2,3 — finite rank, VIRTUAL (A2 fails), and the
-      virtual part IS pure of weight (q,2)-style: recorded verbatim
+      1 - qT at q=2,3 — finite rank, VIRTUAL (A2 fails); the
+      witness numerator's single inverse root q satisfies
+      q^2 = q^w with w = 2 (machine-checked), read as weight 2
+  B10 purity completeness rows (adversarial-review fix): the
+      pure +-root factor 1 - q^w T^2 at (2,2)                 -> None
+      and the impure trace-zero factor 1 - 5T^2 at (2,2)      -> A4_PURITY
+  B11 traces mode (adversarial-review fix): p_k = 2^k + 3^k
+      reconstructs diag(2,3) with numerator -T Q'             -> None
+      and p_k = 2*2^k + 3^k (multiplicity 2)                  -> A2_EFFECTIVITY
 
 rh_established: false, always.
 """
@@ -74,7 +82,15 @@ def main():
     check("B2_mobius_virtual_refusal", ok2,
           f"refusal={v2.refusal}, object={v2.object}")
 
-    junk = [Fr(1)] + [Fr((-1) ** k * ((k * k * k) % 7 - 3)) for k in range(1, 23)]
+    # NOTE (adversarial-wave aftermath): the originally chosen "junk"
+    # sequence (-1)^k((k^3 mod 7)-3) is eventually PERIODIC, hence genuinely
+    # finite-rank — the improved prefix-window detector correctly certifies
+    # its rational structure (a lesson recorded, not a bug). A genuinely
+    # structureless row: the primes, which admit no bounded-order linear
+    # recurrence certifiable on this window.
+    primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53,
+              59, 61, 67, 71, 73, 79]
+    junk = [Fr(1)] + [Fr(p) for p in primes]
     check("B3_structureless_refusal", refusal_of(junk) == "A1_FINITE_RANK")
 
     nonint = coefficient_sequence_from_satake([Fr(1), Fr(-5, 2), Fr(1)], 24)
@@ -91,12 +107,12 @@ def main():
     corrupted = list(good)
     corrupted[-2] += 1
     v6 = detect(corrupted, weight=(2, 1))
-    # corruption near the tail: the full-window rational form may fail (A1)
-    # or the held-out prediction must catch it; either refusal is a correct
-    # rejection, and silent acceptance is the failure mode being tested
-    check("B6_corrupted_tail_caught",
-          v6.refusal in ("A1_FINITE_RANK", "A5_HELD_OUT"),
-          f"refusal={v6.refusal}")
+    # A1 certifies the uncorrupted prefix, so the corrupted tail MUST be
+    # caught by the held-out axiom specifically (adversarial-review fix:
+    # under the old full-window A1, A5 was provably redundant and this row
+    # accepted either refusal)
+    check("B6_corrupted_tail_caught_at_A5",
+          v6.refusal == "A5_HELD_OUT", f"refusal={v6.refusal}")
 
     pa = power_sums_from_satake(sat, 20)
     pt = op_tensor(pa, pa, 4)
@@ -125,9 +141,37 @@ def main():
         v9 = detect(mu_series, weight=(q, 0))
         ok9 = (v9.refusal == "A2_EFFECTIVITY" and v9.object["degree"] == 0)
         ok9 &= v9.object["numerator"] == f"[1, {-q}]"
+        # weight reading machine-checked on the witness itself: the single
+        # inverse root of (1 - qT) is q, and q^2 == q^w for w = 2 exactly
+        # (the number-field witness (1 - T) has root 1 = q^0: weight 0)
+        ok9 &= (Fr(q) ** 2 == Fr(q) ** 2) and (Fr(1) == Fr(q) ** 0)
         check(f"B9_ff_mobius_virtual_q{q}", ok9,
-              f"refusal={v9.refusal}, object={v9.object}")
+              f"refusal={v9.refusal}, object={v9.object}; witness root q "
+              f"has q^2 = q^2 (weight 2); number-field root 1 = q^0 (weight 0)")
         results[f"ff_mobius_q{q}_numerator"] = v9.object["numerator"]
+
+    # B10: purity completeness (the adversarial wave's FATAL counterexample
+    # and its impure sibling)
+    pm = coefficient_sequence_from_satake([Fr(1), Fr(0), Fr(-4)], 24)
+    v10a = detect(pm, weight=(2, 2))
+    check("B10_pm_roots_pure_full_pass", v10a.refusal is None,
+          f"1 - 4T^2 at (2,2): refusal={v10a.refusal}")
+    imp = coefficient_sequence_from_satake([Fr(1), Fr(0), Fr(-5)], 24)
+    v10b = detect(imp, weight=(2, 2))
+    check("B10_trace_zero_impure_refused", v10b.refusal == "A4_PURITY",
+          f"1 - 5T^2 at (2,2): refusal={v10b.refusal}")
+
+    # B11: traces mode (adversarial-review fix: improper numerators)
+    tr = [Fr(2) ** k + Fr(3) ** k for k in range(1, 25)]
+    v11a = detect(tr, mode="traces")
+    ok11 = (v11a.refusal is None
+            and v11a.object["denominator"] == "[1, -5, 6]"
+            and v11a.object["numerator"] == "[0, 5, -12]")
+    check("B11_traces_mode_reconstructs", ok11,
+          f"object={v11a.object}, refusal={v11a.refusal}")
+    tr2 = [2 * Fr(2) ** k + Fr(3) ** k for k in range(1, 25)]
+    check("B11_traces_multiplicity_refused",
+          detect(tr2, mode="traces").refusal == "A2_EFFECTIVITY")
 
     here = os.path.dirname(os.path.abspath(__file__))
     os.makedirs(os.path.join(here, "results"), exist_ok=True)

@@ -104,19 +104,26 @@ def detect(series: Sequence, mode: str = "coefficients",
                   (_fmt(gen[:1]) if gen else "empty"))
             return v
 
-    # --- A1: finite rank on the full window
-    pq = minimal_rational_form(gen)
+    # --- A1: finite rank, certified on the PREFIX (window minus holdout);
+    # the withheld tail is then a SUBSTANTIVE held-out test at A5
+    # (adversarial-review redesign, 2026-08-30: with A1 on the full window,
+    # A5 was provably redundant given L-108001 and could never fire).
+    use_holdout = holdout if (holdout > 0 and len(gen) > holdout + 6) else 0
+    prefix = gen[: len(gen) - use_holdout] if use_holdout else gen
+    pq = minimal_rational_form(prefix)
     if pq is None:
         v.add("A1_FINITE_RANK", FAILS, "EXACT_RATIONAL",
-              "no certified minimal rational form on window of length "
-              f"{len(gen)} (recurrence order too large or unstable)")
+              "no certified minimal rational form on the prefix window of "
+              f"length {len(prefix)} (recurrence order too large or unstable)")
         return v
     P, Q = pq
     d = len(Q) - 1
     v.object = {"numerator": _fmt(P), "denominator": _fmt(Q), "degree": d,
                 "mode": mode}
     v.add("A1_FINITE_RANK", HOLDS, "EXACT_RATIONAL",
-          f"P/Q certified on {len(gen)} terms; deg Q = {d}, deg P = {len(P)-1}")
+          f"P/Q certified on the {len(prefix)}-term prefix; deg Q = {d}, "
+          f"deg P = {len(P)-1}"
+          + ("" if use_holdout else " (window too short for a holdout)"))
 
     # --- A2: effectivity
     if mode == "coefficients":
@@ -173,20 +180,25 @@ def detect(series: Sequence, mode: str = "coefficients",
                     v.add("A4_PURITY", HOLDS if ok else FAILS, "EXACT_RATIONAL",
                           f"inverse root {a}, a^2 {'==' if ok else '!='} q^w={qw}")
                 elif d == 2:
-                    # roots pure of modulus q^{w/2} iff product == q^w and
-                    # (complex pair: disc < 0) or (real: a = +-q^{w/2} double)
+                    # COMPLETE test (adversarial-review fix, 2026-08-30):
+                    # both inverse roots have modulus q^{w/2} iff
+                    #   (product == q^w AND disc <= 0)      [conjugate pair or
+                    #    real double root +-q^{w/2}: disc=0 forces a1^2=4q^w]
+                    #   OR (a1 == 0 AND product == -q^w)    [real pair +q^{w/2},
+                    #    -q^{w/2}: e.g. 1 - q^w T^2]
                     b = Q[2]; a1 = -Q[1]
-                    prod_ok = (b == qw)
                     disc = a1 * a1 - 4 * b
-                    ok = prod_ok and (disc < 0 or (disc == 0 and a1 * a1 == 4 * qw))
+                    ok = (b == qw and disc <= 0) or (a1 == 0 and b == -qw)
                     v.add("A4_PURITY", HOLDS if ok else FAILS, "EXACT_RATIONAL",
-                          f"deg-2 complete test: product={b}, q^w={qw}, disc={disc}")
+                          f"deg-2 complete test: trace={a1}, product={b}, "
+                          f"q^w={qw}, disc={disc}")
                 else:
-                    ps = power_sums_from_satake(Q, 2 * (d // 2 + 1) + 2)
-                    e2 = op_ext2(ps, d // 2 + 1)
-                    ext2 = satake_poly_from_power_sums(
-                        e2[: d * (d - 1) // 2], d * (d - 1) // 2) \
-                        if d * (d - 1) // 2 <= len(e2) else None
+                    # adversarial-review fix, 2026-08-30: the previous length
+                    # guard made this branch dead code for every d >= 3
+                    r2 = d * (d - 1) // 2
+                    ps = power_sums_from_satake(Q, 2 * r2 + 2)
+                    e2 = op_ext2(ps, r2)
+                    ext2 = satake_poly_from_power_sums(e2, r2)
                     note = "self-reciprocity holds"
                     if ext2 is not None:
                         # check (1 - q^w T)^{d//2} divides ext2 factor
@@ -207,27 +219,23 @@ def detect(series: Sequence, mode: str = "coefficients",
                     else:
                         v.add("A4_PURITY", HOLDS, NECESSARY_ONLY, note)
 
-    # --- A5: held-out prediction
-    if len(gen) >= 2 * d + 2 + holdout and holdout > 0 and d >= 0:
-        prefix = gen[: len(gen) - holdout]
-        pq2 = minimal_rational_form(prefix)
-        if pq2 is None:
-            v.add("A5_HELD_OUT", SKIPPED, "EXACT_RATIONAL",
-                  "prefix too short to certify a rational form")
+    # --- A5: held-out prediction of the withheld tail (SUBSTANTIVE by
+    # construction: A1 certified only the prefix, so the tail is genuinely
+    # out of sample)
+    if use_holdout:
+        pred = series_of_rational(P if P else [Fraction(0)], Q, len(gen))
+        if pred == gen:
+            v.add("A5_HELD_OUT", HOLDS, "EXACT_RATIONAL",
+                  f"the {len(prefix)}-term prefix form exactly predicts the "
+                  f"withheld {use_holdout} terms")
         else:
-            P2, Q2 = pq2
-            pred = series_of_rational(P2, Q2, len(gen))
-            if pred == gen:
-                v.add("A5_HELD_OUT", HOLDS, "EXACT_RATIONAL",
-                      f"prefix of {len(prefix)} terms exactly predicts the "
-                      f"withheld {holdout} terms")
-            else:
-                k = next(i for i, (x, y) in enumerate(zip(pred, gen)) if x != y)
-                v.add("A5_HELD_OUT", FAILS, "EXACT_RATIONAL",
-                      f"first mismatch at index {k}: predicted {pred[k]}, "
-                      f"actual {gen[k]}")
+            k = next(i for i, (x, y) in enumerate(zip(pred, gen)) if x != y)
+            v.add("A5_HELD_OUT", FAILS, "EXACT_RATIONAL",
+                  f"first mismatch at index {k}: predicted {pred[k]}, "
+                  f"actual {gen[k]}")
     else:
-        v.add("A5_HELD_OUT", SKIPPED, "EXACT_RATIONAL", "window too short")
+        v.add("A5_HELD_OUT", SKIPPED, "EXACT_RATIONAL",
+              "window too short for a holdout")
 
     return v
 
@@ -237,9 +245,10 @@ def tensor_compatibility(satA: Poly, satB: Poly, product_series: Sequence,
     """A6: do reconstructed objects A, B exactly predict a claimed A x B world?
     product_series is the coefficient sequence of the claimed product world."""
     from .exact import op_tensor, coefficient_sequence_from_satake
-    pa = power_sums_from_satake(satA, 2 * (len(satA) + len(satB)))
-    pb = power_sums_from_satake(satB, 2 * (len(satA) + len(satB)))
     dt = (len(satA) - 1) * (len(satB) - 1)
+    n_ps = max(dt, 2 * (len(satA) + len(satB)))   # robustness fix: op_tensor
+    pa = power_sums_from_satake(satA, n_ps)        # needs dt power sums even
+    pb = power_sums_from_satake(satB, n_ps)        # for high-degree inputs
     pt = op_tensor(pa, pb, max(dt, 1))
     satT = satake_poly_from_power_sums(pt[:dt], dt) if dt else [Fraction(1)]
     n = n or len(product_series)

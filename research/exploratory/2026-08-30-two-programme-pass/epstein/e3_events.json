@@ -5,7 +5,7 @@
   "dps": 40,
   "mpmath_version": "1.3.0",
   "rh_established": false,
-  "status": "through path B_y_stretch_x0",
+  "status": "events refit through path B_y_stretch_x0",
   "t_window": [
    0.05,
    30.0
@@ -30,13 +30,31 @@
   "A_x_slide_y1.02": {
    "events": [
     {
-     "note": "1 unit(s) of |disc| jump 2 not resolved to a specific merging pair (possible window-boundary entry/exit near t=30.0); see records.",
-     "tau_bracket": [
-      1.6666666666666667,
-      2.3333333333333335
+     "F_at_t_star": 8.176277516982483e-20,
+     "method": "full_window_bisection",
+     "offline_pair_at_tau": 2.322265625,
+     "offline_pair_sigma_t": [
+      0.5344292992109648,
+      24.249573852388373
      ],
-     "tau_star": null,
-     "type": "departure"
+     "path_tau_hi": 2.3333333333333335,
+     "path_tau_lo": 1.6666666666666667,
+     "t_colliding_pair": [
+      24.23583887305265,
+      24.26326373542817
+     ],
+     "t_star": 24.2501391,
+     "tau_star": 2.321940104166667,
+     "tau_star_uncertainty": 0.0003255208333332593,
+     "type": "departure",
+     "window": [
+      20.016666666666666,
+      25.008333333333333
+     ],
+     "z_star": [
+      0.34829101562500003,
+      1.02
+     ]
     }
    ],
    "records": [
@@ -381,29 +399,26 @@
      ]
     },
     {
-     "F_at_t_star": -1.783587884679355e-19,
+     "F_at_t_star": -8.408303350460737e-17,
      "offline_pair_at_tau": 0.6,
-     "offline_pair_sigma_t": [
-      0.6521497384681477,
-      24.55049056088849
-     ],
+     "offline_pair_sigma_t": null,
      "path_tau_hi": 0.6,
      "path_tau_lo": 0.5,
      "t_colliding_pair": [
-      23.599431046501138,
-      25.11702404053291
+      22.052566151146145,
+      23.599431046501138
      ],
-     "t_star": 25.208448112066073,
-     "tau_star": 0.501953125,
-     "tau_star_uncertainty": 0.0003906250000000333,
+     "t_star": 22.48625687016651,
+     "tau_star": 0.566796875,
+     "tau_star_uncertainty": 0.0003906249999999778,
      "type": "departure",
      "window": [
-      22.82599859882364,
-      25.22300995606129
+      21.1559854713491,
+      24.358227543517025
      ],
      "z_star": [
       0.0,
-      1.501953125
+      1.566796875
      ]
     },
     {

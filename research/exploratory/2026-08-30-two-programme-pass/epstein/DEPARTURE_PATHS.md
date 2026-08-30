@@ -41,7 +41,7 @@ measure the finitely many low-height departures only.
 
 ### events
 
-- UNRESOLVED unit: 1 unit(s) of |disc| jump 2 not resolved to a specific merging pair (possible window-boundary entry/exit near t=30.0); see records.
+- **departure** at tau* = 2.321940 (z* = 0.348291 + 1.020000 i): colliding zeros t = 24.235838873, 24.263263735 -> t* = 24.250139; off-line pair at tau = 2.32: sigma = 0.534429 (pair 1/2 +- 0.034429), t = 24.249574 [method: full_window_bisection]
 
 ## Path B_y_stretch_x0:  z = i*(1+tau)
 
@@ -62,7 +62,7 @@ measure the finitely many low-height departures only.
 ### events
 
 - **departure** at tau* = 0.501953 (z* = 0.000000 + 1.501953 i): colliding zeros t = 25.117024041, 25.328995872 -> t* = 25.208434; off-line pair at tau = 0.60: sigma = 0.652150 (pair 1/2 +- 0.152150), t = 24.550491
-- **departure** at tau* = 0.501953 (z* = 0.000000 + 1.501953 i): colliding zeros t = 23.599431047, 25.117024041 -> t* = 25.208448; off-line pair at tau = 0.60: sigma = 0.652150 (pair 1/2 +- 0.152150), t = 24.550491
+- **departure** at tau* = 0.566797 (z* = 0.000000 + 1.566797 i): colliding zeros t = 22.052566151, 23.599431047 -> t* = 22.486257; off-line pair at tau = 0.60: not localized
 - **reentry** at tau* = 0.608984 (z* = 0.000000 + 1.608984 i): colliding zeros t = 24.051919617, 24.781544280 -> t* = 24.524595; off-line pair at tau = 0.60: sigma = 0.652150 (pair 1/2 +- 0.152150), t = 24.550491
 - **reentry** at tau* = 0.730078 (z* = 0.000000 + 1.730078 i): colliding zeros t = 10.930978277, 11.280623232 -> t* = 11.296586; off-line pair at tau = 0.70: sigma = 0.666386 (pair 1/2 +- 0.166386), t = 11.379312
 
