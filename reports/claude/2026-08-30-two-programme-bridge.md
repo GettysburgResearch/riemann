@@ -38,20 +38,28 @@ Claim bands: 1080xx (#763), 1085xx (#764). Contract: M-108000.
    ten-check battery, and the weight separation of the two Mobius
    ontologies (virtual weight 0 at number-field primes; virtual weight 2
    for the affine function-field object).
-4. **T-108000 (#763):** [AS-BUILT SLOT — the witnessed/provably-empty/open
-   axiom-separation table over the corpus, aggregated from
-   matrix/MATRIX.md.]
-5. **The corpus itself:** [AS-BUILT SLOT — world count, cell counts,
-   witness index size; the sharpest single record is
+4. **T-108000 (#763):** the witnessed/provably-empty/open axiom-separation
+   table over the corpus (matrix/MATRIX.md, machine-validated), with the
+   machine-derived corpus headline: the purity/critical-line co-occurrence
+   is EXACT in both directions across the built worlds.
+5. **The corpus itself:** 12 of 13 planned world records built, zero
+   validation problems, every FAILS cell witnessed (native_imports lost to
+   session limits; deferred). The sharpest single record is
    worlds/ihara_nonramanujan.json: Euler product exact, FE proved as
-   coefficient identities, the Bass trace identity proved in full, purity
-   refuted by Sturm certificates, critical line FALSE — with the
-   refinement that self-adjointness supplies spectrum realness but not
-   the purity bound: two distinct mechanisms.]
-6. **The Epstein-Eisenstein laboratory:** [AS-BUILT SLOT — oracles,
-   arithmetic-point atlases, departure events; positioned strictly under
-   the published prior work (Betermin-Samaj-Travenec; Travenec-Samaj;
-   Arenstorf-Brewer).]
+   coefficient identities, the Bass trace identity proved in full from 96
+   exact non-backtracking traces, purity refuted by Sturm certificates,
+   critical line FALSE — with the refinement that self-adjointness
+   supplies spectrum realness but not the purity bound: two distinct
+   mechanisms. Honorable mention: davenport_heilbronn's fully exact
+   Q(zeta_20) self-duality derivation with the norm-6400
+   non-multiplicativity witness.
+6. **The Epstein-Eisenstein laboratory (O-108503):** oracles green to the
+   stated precisions, labelled zero atlases at both arithmetic points,
+   parent-shadow identities verified, and on the rectangular CM-to-CM path
+   the measured bifurcation story — departure of two pairs near y ~ 1.5-1.6,
+   reentries by y ~ 1.8, line full again at the second CM point z = 2i;
+   positioned strictly under the published one-parameter prior work
+   (Betermin-Samaj-Travenec; Travenec-Samaj; Arenstorf-Brewer).
 
 ## How the programmes fed each other (the coordination the issues mandate)
 
@@ -80,8 +88,14 @@ Claim bands: 1080xx (#763), 1085xx (#764). Contract: M-108000.
   (Brauer-Nesbitt; F-108002-1) — the honest invariant is the effectivity
   refusal with witness numerator.
 - Naive coefficientwise checks break on degeneration loci (F-108500-2).
-- [AS-BUILT SLOT — additional firewalls from the worlds builders and the
-  adversarial wave.]
+- The adversarial wave's full harvest (one FATAL, five majors, all fixed
+  with counterexample battery rows; minors deposited in
+  ADVERSARIAL_WAVE_LEDGER.md): the degree-2 purity trace-zero branch;
+  improper-numerator support for trace data; the substantive-A5 redesign;
+  L-108001's properness hypotheses; the Theorem 2 splitting-field repair;
+  the quaternionic C[s] = C x C correction. Plus the instructive
+  mislabel: an eventually periodic sequence is NOT structureless — the
+  detector was right and the test data was wrong.
 
 ## The frontier after this pass
 

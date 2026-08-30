@@ -67,18 +67,27 @@ symmetry; line reality); zero atlas at the square and hexagonal points
 labels every strip zero by its classical factor and finds no off-line
 zeros at low height (consistent with GRH numerically, nothing more);
 parent-shadow identities `Lambda_z = 2 zeta(2s) E_1(z,s)`-normalized
-verified to 23-44 digits. Departure-path and departure-locus results:
-[AS-BUILT SLOT — filled at wrap from epstein/e3_events.json and the final
-lab summary; positioning per the boundary audit: the collision/departure
-phenomenon is published (Betermin-Samaj-Travenec; Travenec-Samaj;
-Arenstorf-Brewer 1993) — this lab contributes certification, the
-two-parameter moduli atlas, k-indexing, and the geometric-invariant
-correlation only.]
+verified to 23-44 digits. Departure paths (O-108503; positioned strictly
+under the published one-parameter literature — Betermin-Samaj-Travenec,
+Travenec-Samaj, Arenstorf-Brewer): path A (x-slide, y=1.02) quiet through
+x=0.25 with one bracketed departure in (0.25, 0.35); path B (rectangular
+lattices from the CM point z=i to the CM point z=2i) shows the full
+bifurcation story — two zero pairs depart at y in (1.5,1.6) with colliding
+pairs localized near t ~ 22-25, reentries at y in (1.6,1.7) and (1.7,1.8),
+and the line full again by y=1.8: the off-line excursion is confined to
+the middle of the CM-to-CM path. The E4 departure-locus grid did not run
+(session limits); it heads the lab's continuation queue.
 
 ## Survival matrix
 
-[AS-BUILT SLOT — matrix/MATRIX.md ladder view over the 13-world corpus;
-filled at wrap.]
+As built (matrix/MATRIX.md; 12 of 13 world records, zero validation
+problems; native_imports lost to session limits and deferred): the ladder
+view separates cleanly — the counterfeits hold L1-L3 cheaply and fail or
+open at L4-L6 exactly as designed, Davenport-Heilbronn holds L6 with a
+fully exact Q(zeta_20) derivation while failing L1/L2 by exact witness,
+the 2-deleted zeta does the converse, and the two theorem-worlds
+(function-field elliptic, Ramanujan graphs) hold the entire ladder with
+exact instance certificates.
 
 ## Ranked continuation queue (#764)
 

@@ -24,7 +24,9 @@ class TestX108002(unittest.TestCase):
         self.assertEqual(data["extra"]["ff_mobius_q3_numerator"], "[1, -3]")
         names = {c["name"] for c in data["checks"]}
         self.assertIn("B2_mobius_virtual_refusal", names)
-        self.assertEqual(len(data["checks"]), 10)
+        self.assertIn("B10_pm_roots_pure_full_pass", names)
+        self.assertIn("B11_traces_mode_reconstructs", names)
+        self.assertEqual(len(data["checks"]), 14)
 
 
 if __name__ == "__main__":

@@ -9,9 +9,12 @@ Sibling: #764 checkpoint report (same date); bridge report ties the two
 ## The instrument (proved + battery-verified)
 
 **T-108002 — the refusal-capable structure detector** (`core/reconstruct.py`,
-backbone L-108001, replay `X-108002` with 10 exact checks): from exact
-local coefficient or trace data it reconstructs the unique candidate
-finite-rank local object or REFUSES at the first failing axiom of
+backbone L-108001, replay `X-108002` with 14 exact checks after the
+adversarial wave's fixes — see the claim's failure ledger, which records
+one FATAL and four majors found and repaired, with counterexample rows
+added): from exact local coefficient or trace data it reconstructs the
+unique candidate finite-rank local object or REFUSES at the first failing
+axiom of
 
 ```text
 A1 FINITE_RANK -> A2 EFFECTIVITY -> A3 INTEGRALITY -> A4 PURITY -> A5 HELD_OUT (+ A6 TENSOR)
@@ -42,20 +45,20 @@ holds on true products and fails with indexed witnesses on perturbed ones.
 
 ## The ablation/independence table
 
-[AS-BUILT SLOT — T-108000 aggregates matrix/MATRIX.md after assembly.
-Structure fixed in advance per the audit: three cell types —
-WITNESSED (exact corpus witness: non-Ramanujan prism with Sturm
-certificates for {Euler, FE, trace} not forcing the line; the 2-deleted
-zeta for {Euler} not forcing FE, fully proved via the exact zero
-s0 = 2 pi i/log 2 plus the classical nonvanishing zeta(1+it) != 0;
-Davenport-Heilbronn for {FE} without Euler product, with the density-zero
-caveat; the wrong-gamma obstruction for archimedean non-freeness),
-PROVABLY-EMPTY (dependence theorems: Hamburger uniqueness at degree 1;
-Kaczorowski-Perelli degree classification; Weil converse at GL(2) with
-twists — imported, cited), and OPEN (the discovery frontier). Every
-individual separation is folklore or classical and cited as such (Terras's
-zeta dictionary named as the direct ancestor); the table artifact — one
-schema, witnesses attached, empties proved — is the pass's contribution.]
+As built: T-108000 aggregates matrix/MATRIX.md (12 worlds, zero
+validation problems) into the three-cell-type table the audit mandated —
+WITNESSED separations with exact corpus certificates ({Euler, FE, trace}
+not forcing the line via the Sturm-certified non-Ramanujan graphs, with
+the refinement that self-adjointness gives spectrum realness but not the
+purity gap; {Euler} not forcing FE via the fully proved 2-deleted zeta;
+{FE} without Euler product via the exact Q(zeta_20) Davenport-Heilbronn
+derivation; archimedean non-freeness via the proved non-entire
+wrong-gamma pole transport), PROVABLY-EMPTY cells carrying Hamburger,
+Kaczorowski-Perelli, and Weil-converse citations, and OPEN cells as the
+frontier. Every individual separation is classical and cited (Terras's
+zeta dictionary as the direct ancestor); the machine-validated table with
+witnesses attached is the pass's artifact. The cross-tabulation also
+yields the corpus headline below.
 
 ## The central open cell (stated as the programme's sharpest question)
 
