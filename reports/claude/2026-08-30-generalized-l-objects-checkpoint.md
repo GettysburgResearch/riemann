@@ -112,3 +112,36 @@ exact instance certificates.
 7. Beurling system with a genuine functional equation: existence/
    impossibility (shared with #763; Hilberdink-Lapidus anchor).
 ```
+
+## Continuation pass (2026-08-31)
+
+The three ambitious targets of the second pass landed as theorems:
+
+1. **T-108507 — the cube-defect bridge** (proved + `X-108507`, 5 exact
+   checks): `N_3(T) = det(1 + b A_2 T)` where `A_2` is the TRACE-DOUBLED
+   deformation (trace `2a`, determinant kept) — the obstruction to cubing
+   is the local L-datum of another point of the deformation space. The
+   splitting field of the defect is `A_2`'s Satake field (explaining the
+   character-ring exit), the purity stratification is `A_2`'s
+   temperedness stratification (Ramanujan violated exactly on
+   `{a_p^2 > p}`, Sato-Tate density `2/3 - sqrt3/(2pi) = 0.391`), and
+   globally `sum' a_n^3 = L(Sym^3) x D(A_2-twisted)` — verified exactly
+   on all good-support `n <= 300` for 11a1. Natural-boundary corollary
+   stated CONDITIONAL on the pinned Estermann/Dahlquist/Kurokawa criteria
+   (Kurokawa, Proc. LMS 1986 I-II). Structural reading: **deformations
+   obstruct each other** — three previously separate exact facts
+   (self-duality, exit, stratified purity) are one fact seen three ways.
+2. **T-108508 — square-defect closed forms proved for ranks <= 5**
+   (symbolic-expansion proofs): rank 4 is the Gauss-sign polynomial plus
+   `2 e4 h2 T^3 - 2 e4^2 e2 T^5` (the perfect-matching/`det`-pairing
+   layer); the full rank-5 correction list is proved, with the
+   `h`-polynomial layer pattern (`corr_3 = 2(e4 h2 - e5 h1)`,
+   `corr_4 = -2 e5 h3`) and the top-sign law
+   `(-1)^{(d-1)(d-2)/2} det^{d-1}` for `d <= 5`. General rank OPEN with
+   proved data points — O-108505's open problem resolved at the ranks it
+   posed.
+3. **Epstein lab completion**: the pending path-A event RESOLVED as a
+   genuine off-line pair (persists with window headroom to t=35,
+   localized to t in (24,30) at x=0.35, y=1.02); E4 four-direction
+   departure-locus grid run (see epstein/e4_locus.json). All seven
+   ledgered adversarial minors applied (ledger updated in place).

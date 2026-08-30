@@ -96,3 +96,29 @@ observation, not as evidence.
 5. Measure-valued mechanism cells (from O-108506) — joint schema revision
    with #764.
 ```
+
+## Continuation pass (2026-08-31)
+
+1. **O-108004 — the held-out first, delivered**: the detector on
+   repository-native observables. The T-99930 native duplicate-67 source's
+   Euler factorization was re-verified exactly to n = 500, and the
+   detector READS THE LABEL BOOKKEEPING: witness numerator
+   `(1-T)^{#labels(p)}` — multiplicity 2 at the duplicated prime 67,
+   1 elsewhere; uniformly virtual, uniformly weight 0. The codex genus-2
+   family trace laws (pinned to their branch blobs, PROVED status recorded
+   in their own lane) evaluated along prime-power towers are certified as
+   TATE-MONOMIAL VIRTUAL objects: multiplicity vectors exactly the law
+   coefficients, no Frobenius angles surviving family aggregation — the
+   sharpest available contrast between individual-object data (carries
+   angles) and family-aggregated data (provably does not, at these laws).
+   Corpus now 13/13, matrix reassembled, zero validation problems.
+2. **L-108005 — the quantitative mechanism dictionary** (+`X-108005`,
+   exact): the standard tree-spectrum parametrization assembled into a
+   two-directional dictionary `Re s = 1/2 ∓ arccosh(|lambda|/2 sqrt q)/log q`
+   with the Vieta pairing as the functional-equation shadow; certified
+   one-for-one on the corpus (prism: one untempered eigenvalue-square,
+   one off-circle pole by exact resultant census; Petersen: zero and
+   zero); and the transfer statement: graphs and curves share ONE
+   algebraic dictionary, differing only in the SUPPLIER of the bound
+   (spectral gap vs Weil purity) — reducing the next-pass mechanism
+   theorem to naming what supplies the bound at number fields.
