@@ -1,0 +1,19 @@
+{
+  "schema": "kummer-tower-source-v1",
+  "primitive_commit": "23ad35cc8010f72cf1df54f09eccb4dcba108879",
+  "helper_commit": "4ba9cf883ecf49fe0034d6b05a878caf2768d263",
+  "equations": "E:y^2=x^3+A*x+B; C_m:w^(2m)=x^3+A*x+B; t=y=w^m",
+  "character": "smallest primitive generator g of Fp*, eta=g^((p-1)/m), eta maps to zeta_m; extension characters use norm to Fp",
+  "coefficient_ring": "Z[zeta_m], exact integer pairs, zeta_m^2-s*zeta_m+1=0; s=-1,0,1 for m=3,4,6",
+  "maximum_field_order": 2401,
+  "extensions": [1, 2, 3, 4],
+  "panels": [
+    {"id": "cubic-generic-p7", "p": 7, "m": 3, "A": 1, "B": 1},
+    {"id": "cubic-symmetric-p7", "p": 7, "m": 3, "A": -1, "B": 0},
+    {"id": "quartic-generic-p5", "p": 5, "m": 4, "A": 1, "B": 1},
+    {"id": "quartic-symmetric-p5", "p": 5, "m": 4, "A": -1, "B": 0},
+    {"id": "sextic-generic-p7", "p": 7, "m": 6, "A": 1, "B": 1},
+    {"id": "sextic-symmetric-p7", "p": 7, "m": 6, "A": -1, "B": 0}
+  ],
+  "coverage": "All field elements in every listed extension for every panel and all deck characters; no all-m theorem is inferred from the finite panels."
+}

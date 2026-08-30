@@ -1,0 +1,2146 @@
+{
+  "panels": [
+    {
+      "character_degrees": [
+        2,
+        3,
+        3
+      ],
+      "character_polynomials": [
+        [
+          [
+            1,
+            0
+          ],
+          [
+            -3,
+            0
+          ],
+          [
+            7,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            21,
+            14
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            -3,
+            -8
+          ],
+          [
+            7,
+            -14
+          ]
+        ]
+      ],
+      "counts": [
+        {
+          "affine_character_sums": [
+            [
+              -3,
+              0
+            ],
+            [
+              0,
+              -2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              -3,
+              0
+            ],
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              2
+            ]
+          ],
+          "degree": 1,
+          "elliptic_points": 5,
+          "field_order": 7,
+          "infinity_character_traces": [
+            0,
+            1,
+            1
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            0,
+            1
+          ],
+          "tower_points": 9
+        },
+        {
+          "affine_character_sums": [
+            [
+              5,
+              0
+            ],
+            [
+              12,
+              24
+            ],
+            [
+              -12,
+              -24
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              5,
+              0
+            ],
+            [
+              13,
+              24
+            ],
+            [
+              -11,
+              -24
+            ]
+          ],
+          "degree": 2,
+          "elliptic_points": 55,
+          "field_order": 49,
+          "infinity_character_traces": [
+            0,
+            1,
+            1
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            1,
+            0,
+            1
+          ],
+          "tower_points": 57
+        },
+        {
+          "affine_character_sums": [
+            [
+              36,
+              0
+            ],
+            [
+              -20,
+              -18
+            ],
+            [
+              -2,
+              18
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              36,
+              0
+            ],
+            [
+              -19,
+              -18
+            ],
+            [
+              -1,
+              18
+            ]
+          ],
+          "degree": 3,
+          "elliptic_points": 380,
+          "field_order": 343,
+          "infinity_character_traces": [
+            0,
+            1,
+            1
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "tower_points": 360
+        },
+        {
+          "affine_character_sums": [
+            [
+              73,
+              0
+            ],
+            [
+              132,
+              -16
+            ],
+            [
+              148,
+              16
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              73,
+              0
+            ],
+            [
+              133,
+              -16
+            ],
+            [
+              149,
+              16
+            ]
+          ],
+          "degree": 4,
+          "elliptic_points": 2475,
+          "field_order": 2401,
+          "infinity_character_traces": [
+            0,
+            1,
+            1
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "tower_points": 2757
+        }
+      ],
+      "genus": 4,
+      "individual_self_reciprocity": [
+        true,
+        false,
+        false
+      ],
+      "primitive_prediction_boundary": "Each character factor reconstructed from its proved degree; degree-three factors independently predict extension four. Total high-degree product checked against all four primitive curve counts, not independently reconstructed at every degree.",
+      "source": {
+        "A": 1,
+        "B": 1,
+        "id": "cubic-generic-p7",
+        "m": 3,
+        "p": 7
+      },
+      "tower_polynomial": [
+        1,
+        1,
+        4,
+        9,
+        102,
+        63,
+        196,
+        343,
+        2401
+      ]
+    },
+    {
+      "character_degrees": [
+        2,
+        3,
+        3
+      ],
+      "character_polynomials": [
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            7,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            21,
+            14
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            -3,
+            -8
+          ],
+          [
+            7,
+            -14
+          ]
+        ]
+      ],
+      "counts": [
+        {
+          "affine_character_sums": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              -2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              2
+            ]
+          ],
+          "degree": 1,
+          "elliptic_points": 8,
+          "field_order": 7,
+          "infinity_character_traces": [
+            0,
+            1,
+            1
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            0,
+            1
+          ],
+          "tower_points": 12
+        },
+        {
+          "affine_character_sums": [
+            [
+              14,
+              0
+            ],
+            [
+              12,
+              24
+            ],
+            [
+              -12,
+              -24
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              14,
+              0
+            ],
+            [
+              13,
+              24
+            ],
+            [
+              -11,
+              -24
+            ]
+          ],
+          "degree": 2,
+          "elliptic_points": 64,
+          "field_order": 49,
+          "infinity_character_traces": [
+            0,
+            1,
+            1
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            1,
+            0,
+            1
+          ],
+          "tower_points": 66
+        },
+        {
+          "affine_character_sums": [
+            [
+              0,
+              0
+            ],
+            [
+              -20,
+              -18
+            ],
+            [
+              -2,
+              18
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              0,
+              0
+            ],
+            [
+              -19,
+              -18
+            ],
+            [
+              -1,
+              18
+            ]
+          ],
+          "degree": 3,
+          "elliptic_points": 344,
+          "field_order": 343,
+          "infinity_character_traces": [
+            0,
+            1,
+            1
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "tower_points": 324
+        },
+        {
+          "affine_character_sums": [
+            [
+              -98,
+              0
+            ],
+            [
+              132,
+              -16
+            ],
+            [
+              148,
+              16
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              -98,
+              0
+            ],
+            [
+              133,
+              -16
+            ],
+            [
+              149,
+              16
+            ]
+          ],
+          "degree": 4,
+          "elliptic_points": 2304,
+          "field_order": 2401,
+          "infinity_character_traces": [
+            0,
+            1,
+            1
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "tower_points": 2586
+        }
+      ],
+      "genus": 4,
+      "individual_self_reciprocity": [
+        true,
+        false,
+        false
+      ],
+      "primitive_prediction_boundary": "Each character factor reconstructed from its proved degree; degree-three factors independently predict extension four. Total high-degree product checked against all four primitive curve counts, not independently reconstructed at every degree.",
+      "source": {
+        "A": -1,
+        "B": 0,
+        "id": "cubic-symmetric-p7",
+        "m": 3,
+        "p": 7
+      },
+      "tower_polynomial": [
+        1,
+        4,
+        16,
+        36,
+        126,
+        252,
+        784,
+        1372,
+        2401
+      ]
+    },
+    {
+      "character_degrees": [
+        2,
+        4,
+        4,
+        4
+      ],
+      "character_polynomials": [
+        [
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            5,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            15,
+            -20
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            11,
+            0
+          ],
+          [
+            20,
+            0
+          ],
+          [
+            25,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            -1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            15,
+            20
+          ]
+        ]
+      ],
+      "counts": [
+        {
+          "affine_character_sums": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "degree": 1,
+          "elliptic_points": 9,
+          "field_order": 5,
+          "infinity_character_traces": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "infinity_points": 1,
+          "modulus": [
+            0,
+            1
+          ],
+          "tower_points": 13
+        },
+        {
+          "affine_character_sums": [
+            [
+              1,
+              0
+            ],
+            [
+              -4,
+              2
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              -4,
+              -2
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              1,
+              0
+            ],
+            [
+              -4,
+              2
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              -4,
+              -2
+            ]
+          ],
+          "degree": 2,
+          "elliptic_points": 27,
+          "field_order": 25,
+          "infinity_character_traces": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "infinity_points": 1,
+          "modulus": [
+            2,
+            0,
+            1
+          ],
+          "tower_points": 25
+        },
+        {
+          "affine_character_sums": [
+            [
+              -18,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -8,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              -18,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -8,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "degree": 3,
+          "elliptic_points": 108,
+          "field_order": 125,
+          "infinity_character_traces": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "infinity_points": 1,
+          "modulus": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "tower_points": 100
+        },
+        {
+          "affine_character_sums": [
+            [
+              49,
+              0
+            ],
+            [
+              54,
+              -72
+            ],
+            [
+              -14,
+              0
+            ],
+            [
+              54,
+              72
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              49,
+              0
+            ],
+            [
+              54,
+              -72
+            ],
+            [
+              -14,
+              0
+            ],
+            [
+              54,
+              72
+            ]
+          ],
+          "degree": 4,
+          "elliptic_points": 675,
+          "field_order": 625,
+          "infinity_character_traces": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "infinity_points": 1,
+          "modulus": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "tower_points": 769
+        }
+      ],
+      "genus": 7,
+      "individual_self_reciprocity": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "primitive_prediction_boundary": "Each character factor reconstructed from its proved degree; degree-three factors independently predict extension four. Total high-degree product checked against all four primitive curve counts, not independently reconstructed at every degree.",
+      "source": {
+        "A": 1,
+        "B": 1,
+        "id": "quartic-generic-p5",
+        "m": 4,
+        "p": 5
+      },
+      "tower_polynomial": [
+        1,
+        7,
+        24,
+        45,
+        63,
+        128,
+        445,
+        1155,
+        2225,
+        3200,
+        7875,
+        28125,
+        75000,
+        109375,
+        78125
+      ]
+    },
+    {
+      "character_degrees": [
+        2,
+        4,
+        4,
+        4
+      ],
+      "character_polynomials": [
+        [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            5,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            15,
+            -20
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            25,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            15,
+            20
+          ]
+        ]
+      ],
+      "counts": [
+        {
+          "affine_character_sums": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              2,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "degree": 1,
+          "elliptic_points": 8,
+          "field_order": 5,
+          "infinity_character_traces": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "infinity_points": 1,
+          "modulus": [
+            0,
+            1
+          ],
+          "tower_points": 8
+        },
+        {
+          "affine_character_sums": [
+            [
+              6,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              6,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "degree": 2,
+          "elliptic_points": 32,
+          "field_order": 25,
+          "infinity_character_traces": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "infinity_points": 1,
+          "modulus": [
+            2,
+            0,
+            1
+          ],
+          "tower_points": 44
+        },
+        {
+          "affine_character_sums": [
+            [
+              -22,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              -22,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "degree": 3,
+          "elliptic_points": 104,
+          "field_order": 125,
+          "infinity_character_traces": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "infinity_points": 1,
+          "modulus": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "tower_points": 104
+        },
+        {
+          "affine_character_sums": [
+            [
+              14,
+              0
+            ],
+            [
+              60,
+              -80
+            ],
+            [
+              28,
+              0
+            ],
+            [
+              60,
+              80
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              14,
+              0
+            ],
+            [
+              60,
+              -80
+            ],
+            [
+              28,
+              0
+            ],
+            [
+              60,
+              80
+            ]
+          ],
+          "degree": 4,
+          "elliptic_points": 640,
+          "field_order": 625,
+          "infinity_character_traces": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "infinity_points": 1,
+          "modulus": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "tower_points": 788
+        }
+      ],
+      "genus": 7,
+      "individual_self_reciprocity": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "primitive_prediction_boundary": "Each character factor reconstructed from its proved degree; degree-three factors independently predict extension four. Total high-degree product checked against all four primitive curve counts, not independently reconstructed at every degree.",
+      "source": {
+        "A": -1,
+        "B": 0,
+        "id": "quartic-symmetric-p5",
+        "m": 4,
+        "p": 5
+      },
+      "tower_polynomial": [
+        1,
+        2,
+        11,
+        12,
+        85,
+        110,
+        455,
+        360,
+        2275,
+        2750,
+        10625,
+        7500,
+        34375,
+        31250,
+        78125
+      ]
+    },
+    {
+      "character_degrees": [
+        2,
+        4,
+        3,
+        4,
+        3,
+        4
+      ],
+      "character_polynomials": [
+        [
+          [
+            1,
+            0
+          ],
+          [
+            -3,
+            0
+          ],
+          [
+            7,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -21,
+            56
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            -2
+          ],
+          [
+            -3,
+            8
+          ],
+          [
+            7,
+            14
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            49,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            -8
+          ],
+          [
+            21,
+            -14
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            -4
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            35,
+            -56
+          ]
+        ]
+      ],
+      "counts": [
+        {
+          "affine_character_sums": [
+            [
+              -3,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              -3,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              3,
+              -2
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "degree": 1,
+          "elliptic_points": 5,
+          "field_order": 7,
+          "infinity_character_traces": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            0,
+            1
+          ],
+          "tower_points": 9
+        },
+        {
+          "affine_character_sums": [
+            [
+              5,
+              0
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              -12,
+              24
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              12,
+              -24
+            ],
+            [
+              12,
+              -8
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              5,
+              0
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              -11,
+              24
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              13,
+              -24
+            ],
+            [
+              12,
+              -8
+            ]
+          ],
+          "degree": 2,
+          "elliptic_points": 55,
+          "field_order": 49,
+          "infinity_character_traces": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            1,
+            0,
+            1
+          ],
+          "tower_points": 87
+        },
+        {
+          "affine_character_sums": [
+            [
+              36,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -2,
+              -18
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -20,
+              18
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              36,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              -18
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -19,
+              18
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "degree": 3,
+          "elliptic_points": 380,
+          "field_order": 343,
+          "infinity_character_traces": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "tower_points": 360
+        },
+        {
+          "affine_character_sums": [
+            [
+              73,
+              0
+            ],
+            [
+              -60,
+              160
+            ],
+            [
+              148,
+              -16
+            ],
+            [
+              98,
+              0
+            ],
+            [
+              132,
+              16
+            ],
+            [
+              100,
+              -160
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              73,
+              0
+            ],
+            [
+              -60,
+              160
+            ],
+            [
+              149,
+              -16
+            ],
+            [
+              98,
+              0
+            ],
+            [
+              133,
+              16
+            ],
+            [
+              100,
+              -160
+            ]
+          ],
+          "degree": 4,
+          "elliptic_points": 2475,
+          "field_order": 2401,
+          "infinity_character_traces": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "tower_points": 2895
+        }
+      ],
+      "genus": 10,
+      "individual_self_reciprocity": [
+        true,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "primitive_prediction_boundary": "Each character factor reconstructed from its proved degree; degree-three factors independently predict extension four. Total high-degree product checked against all four primitive curve counts, not independently reconstructed at every degree.",
+      "source": {
+        "A": 1,
+        "B": 1,
+        "id": "sextic-generic-p7",
+        "m": 6,
+        "p": 7
+      },
+      "tower_polynomial": [
+        1,
+        1,
+        19,
+        24,
+        309,
+        345,
+        3392,
+        3689,
+        31850,
+        31311,
+        239610,
+        219177,
+        1560650,
+        1265327,
+        8144192,
+        5798415,
+        36353541,
+        19765032,
+        109531219,
+        40353607,
+        282475249
+      ]
+    },
+    {
+      "character_degrees": [
+        2,
+        4,
+        3,
+        4,
+        3,
+        4
+      ],
+      "character_polynomials": [
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            7,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            -4
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -21,
+            56
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            -2
+          ],
+          [
+            -3,
+            8
+          ],
+          [
+            7,
+            14
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            14,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            49,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            -8
+          ],
+          [
+            21,
+            -14
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -6,
+            4
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            35,
+            -56
+          ]
+        ]
+      ],
+      "counts": [
+        {
+          "affine_character_sums": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              3,
+              -2
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "degree": 1,
+          "elliptic_points": 8,
+          "field_order": 7,
+          "infinity_character_traces": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            0,
+            1
+          ],
+          "tower_points": 12
+        },
+        {
+          "affine_character_sums": [
+            [
+              14,
+              0
+            ],
+            [
+              -4,
+              -8
+            ],
+            [
+              -12,
+              24
+            ],
+            [
+              28,
+              0
+            ],
+            [
+              12,
+              -24
+            ],
+            [
+              -12,
+              8
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              14,
+              0
+            ],
+            [
+              -4,
+              -8
+            ],
+            [
+              -11,
+              24
+            ],
+            [
+              28,
+              0
+            ],
+            [
+              13,
+              -24
+            ],
+            [
+              -12,
+              8
+            ]
+          ],
+          "degree": 2,
+          "elliptic_points": 64,
+          "field_order": 49,
+          "infinity_character_traces": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            1,
+            0,
+            1
+          ],
+          "tower_points": 78
+        },
+        {
+          "affine_character_sums": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -2,
+              -18
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -20,
+              18
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              -18
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              -19,
+              18
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "degree": 3,
+          "elliptic_points": 344,
+          "field_order": 343,
+          "infinity_character_traces": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "tower_points": 324
+        },
+        {
+          "affine_character_sums": [
+            [
+              -98,
+              0
+            ],
+            [
+              -60,
+              160
+            ],
+            [
+              148,
+              -16
+            ],
+            [
+              -196,
+              0
+            ],
+            [
+              132,
+              16
+            ],
+            [
+              100,
+              -160
+            ]
+          ],
+          "complete_character_sums": [
+            [
+              -98,
+              0
+            ],
+            [
+              -60,
+              160
+            ],
+            [
+              149,
+              -16
+            ],
+            [
+              -196,
+              0
+            ],
+            [
+              133,
+              16
+            ],
+            [
+              100,
+              -160
+            ]
+          ],
+          "degree": 4,
+          "elliptic_points": 2304,
+          "field_order": 2401,
+          "infinity_character_traces": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "infinity_points": 3,
+          "modulus": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "tower_points": 2430
+        }
+      ],
+      "genus": 10,
+      "individual_self_reciprocity": [
+        true,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "primitive_prediction_boundary": "Each character factor reconstructed from its proved degree; degree-three factors independently predict extension four. Total high-degree product checked against all four primitive curve counts, not independently reconstructed at every degree.",
+      "source": {
+        "A": -1,
+        "B": 0,
+        "id": "sextic-symmetric-p7",
+        "m": 6,
+        "p": 7
+      },
+      "tower_polynomial": [
+        1,
+        4,
+        22,
+        60,
+        201,
+        384,
+        1008,
+        1344,
+        294,
+        -8232,
+        -28812,
+        -57624,
+        14406,
+        460992,
+        2420208,
+        6453888,
+        23647449,
+        49412580,
+        126825622,
+        161414428,
+        282475249
+      ]
+    }
+  ],
+  "schema": "kummer-tower-replay-v1",
+  "source_hash": "3eaf292f276de319dfda022e827a9526f555f4944d8c66a7495db6bf1f7a10cb"
+}
