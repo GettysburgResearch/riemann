@@ -1,0 +1,36 @@
+{
+  "branch": "research/gpt56-pro/108400-shared-fibre-hellinger-trace",
+  "coefcell108430_proved": false,
+  "grh_established": false,
+  "parent_head": "cd9a595075320e97ffb004c65d977eaf552ecace",
+  "parent_pr": 778,
+  "proof_object_sha256": "2a4ea86c850e5f9faf6b7c53985bfd8d131e9570d993f77032ecac8c82edcbdb",
+  "qresbind107300_proved": false,
+  "repository": "gfreund123/riemann",
+  "rh_established": false,
+  "schema": "riemann.t108430.source-lock.v1",
+  "source_inputs": [
+    {
+      "commit": "098802565e3f9a00b7f4d0e4e77855620e446e7f",
+      "path": "research/riemann-structures/SHARED_FIBRE_POSITIVE_QUOTIENT.md",
+      "role": "exact positive occupancy quotient"
+    },
+    {
+      "commit": "abe712bdeca0968167f6decc2fbc0651fdd73592",
+      "path": "claims/lemmas/L-107300-native-rectangular-shared-fibre-factorization.md",
+      "role": "native rank-one rectangular source geometry"
+    },
+    {
+      "commit": "bffe68cec24fd785f7b16087d6ce8fea4561eece",
+      "path": "claims/lemmas/L-107304-physical-squareclass-twisted-plancherel.md",
+      "role": "rank-free physical character diagonalization"
+    },
+    {
+      "commit": "d3a3c36805824c6e57db4b1b29032ecd541668a8",
+      "path": "research/riemann-structures/LIVE_FIXED_CONDUCTOR_MULTIPLICITY.md",
+      "role": "live multiplicity and source-rank firewall"
+    }
+  ],
+  "theorem_scope": "literal source-vector positive quotient bound and native rectangular cell-energy factorization",
+  "unweighted_occupancy_is_canonical_gate": false
+}
