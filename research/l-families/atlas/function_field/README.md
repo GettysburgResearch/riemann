@@ -88,6 +88,9 @@ is an exact RH-equivalent open gate, not a completed estimate.
 
 ## PR #760 Architecture A source-cancellation continuation
 
+[Current checkpoint and replay](CORE_SOURCE_CONTINUATION_CHECKPOINT.md)
+summarizes the new reduction and its explicitly open estimate.
+
 [`FFPS_BETA_SECOND_DIFFERENCE_SINGLE_CHANNEL_REDUCTION.md`](FFPS_BETA_SECOND_DIFFERENCE_SINGLE_CHANNEL_REDUCTION.md)
 keeps the complete `(1,-2,1)` beta source assembled before taking positive
 channel norms.  It proves that the beta boundary field is a uniformly
