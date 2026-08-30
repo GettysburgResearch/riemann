@@ -1,0 +1,14 @@
+{
+  "schema": "archimedean-ladder-source-lock-v1",
+  "source_commit": "6675c19f20760301d8c91dedc4a7836170003512",
+  "frozen_programme_path": "research/riemann-structures/RIEMANN_STRUCTURES_WAVE2_PORTFOLIO.md",
+  "frozen_programme_blob": "f5e0eb316f29d5e44cc3c7124401cb3e784fef49",
+  "current_programme_may_evolve": true,
+  "imported_analytic_facts": [
+    {"url": "https://dlmf.nist.gov/5.2", "fact": "Gamma has no zeros and simple poles at nonpositive integers"},
+    {"url": "https://dlmf.nist.gov/5.5", "fact": "Gamma recurrence and duplication, equations 5.5.1 and 5.5.5"},
+    {"url": "https://dlmf.nist.gov/25.11", "fact": "Hurwitz zeta continuation and values 25.11.13 and 25.11.18"}
+  ],
+  "literature_boundary": "https://arxiv.org/abs/1211.4239",
+  "replay_scope": "exact finite algebra only; no certification of imported analytic theorems"
+}
