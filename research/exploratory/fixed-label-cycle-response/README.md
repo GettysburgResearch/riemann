@@ -16,8 +16,8 @@ or zero set is calculated.
 
 The packet proves that two sources with the **same entire commutative
 multivariable determinant** can have different fixed-label three-sheet cover
-responses. For unitary label matrices, the first distinguishing trace is an
-exact nonnegative commutator energy. Three is the smallest permutation-sheet
+responses. For unitary label matrices, the real part of the first trace
+difference is an exact nonnegative commutator energy. Three is the smallest permutation-sheet
 degree for this pair; two-dimensional orthogonal matrix labels already suffice.
 
 The labels use a fixed identification of sheet spaces. The response is not
