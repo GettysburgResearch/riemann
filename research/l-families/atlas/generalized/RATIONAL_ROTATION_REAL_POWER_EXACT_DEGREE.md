@@ -297,6 +297,13 @@ cyclotomic polynomial \(\Phi_{4b}\). The producer constructs these
 monic cyclotomic polynomials by exact division of \(X^n-1\);
 there is no numerical trigonometry or tolerance.
 
+The repository arithmetic class is `MIXED`, with components
+`EXACT_RATIONAL` for exact integer-polynomial coefficient arithmetic and
+`CERTIFIED_INTEGER_COVERAGE` for the declared finite spectrum/sign census.
+The arithmetic domain remains integer polynomials modulo cyclotomic
+polynomials; the symbolic root of unity is not replaced by a rational or
+floating approximation.
+
 The default rectangle is \(2\le b\le16,\ 1\le k\le8\).
 Hard maxima are \(b\le24,\ k\le12\). Separate exact integer
 quadrant tests check every sign-variation row through \(b=64\);

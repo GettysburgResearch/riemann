@@ -1,8 +1,8 @@
 {
   "artifacts": {
-    "research/l-families/atlas/generalized/RATIONAL_ROTATION_REAL_POWER_EXACT_DEGREE.md": "0158270607d276207f42443ec38f2b2ad83cdff0a70b2ed03ab5463530b67d54",
-    "research/l-families/atlas/generalized/rational_rotation_real_power_exact_degree.py": "a43932faf2fdf863674211575a9d5fed3357b28bd12faa72781be4802d033a04",
-    "tests/test_rational_rotation_real_power_exact_degree.py": "c3f05d780dd64fa2e75b44c8f2ac3767b78a94bd6b1863113b7001203fcab967"
+    "research/l-families/atlas/generalized/RATIONAL_ROTATION_REAL_POWER_EXACT_DEGREE.md": "2bff80f055b0f9881b90a83dfd5804f0ad2fc9bf8de3e1d5529db9578cb381f6",
+    "research/l-families/atlas/generalized/rational_rotation_real_power_exact_degree.py": "1248980c49c1eab25b7ab2652725496838100acc7dffc4d984be62a499aef92f",
+    "tests/test_rational_rotation_real_power_exact_degree.py": "39383c57c4eecd8796e6d6366b901e8520ee64694e0455fbfc593c3068549515"
   },
   "claims": {
     "GLO764.RATIONAL_ABSOLUTE_REAL_EXACT_DEGREE": {
@@ -90,7 +90,7 @@
     "row_count": 120,
     "rows_sha256": "84c6af698dc0e072c0d89f1a43525cd65f6c91c129a77d62eca66f07da53463a"
   },
-  "payload_sha256": "4a9bf0a1ed7aee60e6c495c0db8cfc61227e02b1a7c0a9bb856f14c13df9919f",
+  "payload_sha256": "aa3f1dcacbb69aecfe678416dd768bf36736a696fc90b3950dabe7ae9ac16079",
   "programme_issue": 764,
   "proof_boundary": {
     "external_novelty_unreviewed": true,
@@ -101,7 +101,11 @@
     "zero_exponent_conventions_excluded": true
   },
   "resource_contract": {
-    "arithmetic_class": "EXACT",
+    "arithmetic_class": "MIXED",
+    "arithmetic_components": [
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
     "arithmetic_domain": "integer polynomials modulo cyclotomic polynomials",
     "counts_named_algebraic_loops_not_bit_operations": true,
     "external_symbolic_engine": false,

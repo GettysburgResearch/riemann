@@ -7,6 +7,7 @@ import importlib.util
 import json
 import math
 import unittest
+from fractions import Fraction
 from pathlib import Path
 from unittest.mock import patch
 
@@ -145,6 +146,16 @@ class ExactRealDegreeTests(unittest.TestCase):
             M.work_bound(M.MAX_B, M.MAX_K, M.MAX_SIGN_B)["total"], M.WORK_CAP_EXCLUSIVE
         )
 
+    def test_raw_polynomial_types_are_checked_before_zero_trimming(self):
+        for zero in (False, 0.0, Fraction(0)):
+            for dividend, divisor in (((1, zero), (1,)), ((1,), (1, zero))):
+                with (
+                    self.subTest(dividend=dividend, divisor=divisor),
+                    self.assertRaises(TypeError),
+                ):
+                    M.divide_monic(dividend, divisor)
+        self.assertEqual(M.divide_monic((1, 0), (1, 0)), ((1,), ()))
+
     def test_source_authentication_and_mutation_refusal(self):
         authenticated = M.verify_sources()
         self.assertTrue(authenticated["frozen_blobs_and_worktree_bytes_authenticated"])
@@ -174,6 +185,16 @@ class ExactRealDegreeTests(unittest.TestCase):
         ):
             M.verify_sources()
 
+    def test_checkout_newline_hash_equivalence(self):
+        read_bytes = Path.read_bytes
+
+        def crlf_bytes(path):
+            return read_bytes(path).replace(b"\r\n", b"\n").replace(b"\n", b"\r\n")
+
+        expected = M.build_fixture()
+        with patch.object(Path, "read_bytes", crlf_bytes):
+            self.assertEqual(M.build_fixture(), expected)
+
     def test_exact_stored_fixture_and_artifact_hashes(self):
         got = M.build_fixture()
         stored = json.loads(M.OUTPUT_PATH.read_text(encoding="utf-8"))
@@ -181,6 +202,15 @@ class ExactRealDegreeTests(unittest.TestCase):
         digest = stored.pop("payload_sha256")
         self.assertEqual(digest, M.canonical_sha(stored))
         self.assertEqual(got["integer_power_census"]["row_count"], 120)
+        self.assertEqual(got["resource_contract"]["arithmetic_class"], "MIXED")
+        self.assertEqual(
+            got["resource_contract"]["arithmetic_components"],
+            ["EXACT_RATIONAL", "CERTIFIED_INTEGER_COVERAGE"],
+        )
+        self.assertEqual(
+            got["resource_contract"]["arithmetic_domain"],
+            "integer polynomials modulo cyclotomic polynomials",
+        )
         self.assertEqual(got["resource_contract"]["float_operations"], 0)
         self.assertTrue(
             got["proof_boundary"][

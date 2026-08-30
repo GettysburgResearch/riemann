@@ -75,11 +75,12 @@ def divide_monic(
     dividend: Sequence[int], divisor: Sequence[int]
 ) -> tuple[tuple[int, ...], tuple[int, ...]]:
     """Integer long division; the caller may require remainder zero."""
-    a, b = list(trim(dividend)), trim(divisor)
-    if not b or b[-1] != 1:
-        raise ValueError("divisor must be a nonzero monic integer polynomial")
+    a, b = tuple(dividend), tuple(divisor)
     if any(isinstance(x, bool) or not isinstance(x, int) for x in (*a, *b)):
         raise TypeError("polynomial coefficients must be integers")
+    a, b = list(trim(a)), trim(b)
+    if not b or b[-1] != 1:
+        raise ValueError("divisor must be a nonzero monic integer polynomial")
     if len(a) < len(b):
         return (), tuple(a)
     quotient = [0] * (len(a) - len(b) + 1)
@@ -345,7 +346,11 @@ def build_fixture(
             "proof": "native positive-real-log exponential identity, not complex floating point",
         },
         "resource_contract": {
-            "arithmetic_class": "EXACT",
+            "arithmetic_class": "MIXED",
+            "arithmetic_components": [
+                "EXACT_RATIONAL",
+                "CERTIFIED_INTEGER_COVERAGE",
+            ],
             "arithmetic_domain": "integer polynomials modulo cyclotomic polynomials",
             "work_bound": work,
             "work_cap_exclusive": resource_cap,
