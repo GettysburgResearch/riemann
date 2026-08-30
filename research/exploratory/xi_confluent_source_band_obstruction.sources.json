@@ -1,0 +1,95 @@
+{
+  "authoring_base": "f3d074190e64a97ac935b93c5b628568cde90858",
+  "external_formulas": [
+    {
+      "formula": "integral_0^infinity exp(-x)*L_j(x)*L_k(x) dx=delta_jk",
+      "remote_content_machine_authenticated": false,
+      "url": "https://dlmf.nist.gov/18.3"
+    },
+    {
+      "formula": "x*L_j=(2*j+1)*L_j-(j+1)*L_(j+1)-j*L_(j-1)",
+      "remote_content_machine_authenticated": false,
+      "url": "https://dlmf.nist.gov/18.9.T2"
+    },
+    {
+      "formula": "x*L_j''+(1-x)*L_j'+j*L_j=0",
+      "remote_content_machine_authenticated": false,
+      "url": "https://dlmf.nist.gov/18.8"
+    }
+  ],
+  "native_object": "one confluent denominator cluster; literal common-outer source jets and Gram",
+  "schema": "xi-confluent-source-band-sources-v1",
+  "source_concentration": "reviewed fixed-positive-odd-K actual Xi theorem; not growing K",
+  "sources": [
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "7fbf3731f286ddfc9eb1d10ede5941ab2156817a",
+      "path": "claims/lemmas/L-106620-mesoscopic-frozen-riemann-siegel-gauge.md",
+      "role": "frozen_gauge",
+      "sha256_lf": "23e368f246606b0a8b4f53bec9e65e1dec21bdd207197387461268b4ca1bb7d0"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "d0488eccf2507bcb71c7e46f3f6f9c7013dd3998",
+      "path": "claims/lemmas/L-106671-endpoint-free-energy-is-a-source-evaluation-pick-determinant.md",
+      "role": "source_Pick_and_confluent_jets",
+      "sha256_lf": "fc9bc89d9129ca22a9ededed2e3a6daf78c1371c9582d023487c326309d42764"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "cadbbee0c5864d4cdb9b110bc0ddc0938e0bcb54",
+      "path": "claims/lemmas/L-106673-unregularized-cauchy-volume-is-logarithmic-laplace-transport.md",
+      "role": "Hardy_Laplace_normalization",
+      "sha256_lf": "f7d68d9e64c2fb31da6db72bcd93971630cac2273fcb789052baa0679ad36b20"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "8e80ee4e7460618807e8a041197ec6a63137672c",
+      "path": "claims/lemmas/L-106650-truncated-toeplitz-value-nonnormality-split.md",
+      "role": "value_nonnormality_boundary",
+      "sha256_lf": "178dd723a0e255bc897145a9459e03b685f6f03e75fa463aa2d42c8b7472dfe2"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "9a61689c19b244f0176f753cef146b252256eab0",
+      "path": "claims/theorems/T-106670-regularized-pick-free-energy-ninety-percent-equivalence.md",
+      "role": "physical_free_energy_target",
+      "sha256_lf": "b96ffe1ec8e5fc7d825e521c57c956066e25f0494e80aa4c13d4017ea98c8ae7"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "b06d973198898a93d584b67dbe26ce24823e2ffc",
+      "path": "claims/theorems/T-106710-xi-carrier-adapted-source-softening-frontier.md",
+      "role": "open_Xi_transfer",
+      "sha256_lf": "1a1f27c31dccd2a3393675acfc444e712a1449b476a2e1d7812f0e4c5559eb9f"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "e17fdf16e87d6791c64fbb6f0ac8f604ca46c396",
+      "path": "claims/refutations/R-106710-diagonal-source-softening-does-not-control-topological-free-energy.md",
+      "role": "source_softening_firewall",
+      "sha256_lf": "889fd0cf65cefcf83705e54d0dda5525880fc94c4542ca0be6fa40724e1107c1"
+    },
+    {
+      "commit": "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+      "git_blob": "fa24f9c8e0a87709d1a297a4e72136c1135d066c",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+      "role": "reviewed_actual_Xi_concentration",
+      "sha256_lf": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246"
+    },
+    {
+      "commit": "f3d074190e64a97ac935b93c5b628568cde90858",
+      "git_blob": "da9032e15eb7be89557a54120b74fc9596c527d9",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION_AUDIT.md",
+      "role": "independent_concentration_review",
+      "sha256_lf": "aaf60c26b34296aa2e23bdad1469fce8ed3efe5ec27063d14d666f3fa5ce0536"
+    },
+    {
+      "commit": "939a24962a4c6a449c0b56e3b20f78b936f35f6c",
+      "git_blob": "0461a5c159d9d1094a9849e362d02ac1149a0143",
+      "path": "research/exploratory/XI_NEAR_ADAPTED_SCALE_FIREWALL.md",
+      "role": "earlier_single_kernel_scout",
+      "sha256_lf": "b770dc30ee6ab5406e159230c6ea617a1e5b1616b818dabb4c4c7f37f4408eac"
+    }
+  ]
+}
