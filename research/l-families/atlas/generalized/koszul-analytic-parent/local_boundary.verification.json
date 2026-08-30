@@ -1,0 +1,2571 @@
+{
+  "fractional_cutoff_constants": [
+    {
+      "Adams_error": [
+        248328024418065014049706797108115121843301118465554513506076613667079578958877342316886157488271929768522429424574873747384959292649978285011237131906933723827607249212368891063112217671605948732272813400635855314259550325708394931416104759327436725210442411576816549916021100375626627949381371468962772519661094430686563518901606019998073865772246373501332803011345065057464935517113972553932129056709702536190888609308089855263674527344476262102710045325662844224220671826827039263182751618932889387756813656107428659770438243520577454529301,
+        447784861248085116245360372202855623072494149235578773002392237824016380491633285318239672138803267611957312630295833195386083380466860487044864590199772253675105772643735253788712093422877948075265152937166979265765405376315207807267749762439507335694801635421488157805759950762665031912312457368332792245533455629900686852124251571274967617377799100166398927389540499204105079971301511299973736248008856803317992724925943855771036381377404451935983860621112195086279842753201194614277131657770826438941005047237886746645132500922089732154038405044371456
+      ],
+      "Adams_log_G_interval": {
+        "imaginary": [
+          [
+            -352385959679,
+            1000000000000
+          ],
+          [
+            -352385959677,
+            1000000000000
+          ]
+        ],
+        "real": [
+          [
+            -619454444489,
+            1000000000000
+          ],
+          [
+            -619454444487,
+            1000000000000
+          ]
+        ]
+      },
+      "critical_exponent": [
+        1,
+        2
+      ],
+      "cutoff_limit": "exp(-EulerGamma/p)*G_p(tau), with N^(1/p), no additional p factor",
+      "cuts": {
+        "Adams_indices": 40,
+        "scalar_log_powers": 40,
+        "source_grades": 24,
+        "source_powers": 40
+      },
+      "ordinary_Sp_at_point": false,
+      "parent_error": [
+        112700092841779,
+        567237380265536913408
+      ],
+      "parent_log_G_interval": {
+        "imaginary": [
+          [
+            -352386158039,
+            1000000000000
+          ],
+          [
+            -352385760673,
+            1000000000000
+          ]
+        ],
+        "real": [
+          [
+            -309727321547,
+            500000000000
+          ],
+          [
+            -19357945179,
+            31250000000
+          ]
+        ]
+      },
+      "q": 4,
+      "rational_norm_bound": [
+        1,
+        2
+      ],
+      "regularization_order": 2,
+      "source_ranks": [
+        2,
+        5
+      ],
+      "tau": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "tau_power_identity": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "Adams_error": [
+        3504622265548247529703238725515511206943385406380020226790915562465346886179671701238076853297645743724055419737248874044839903466001832227500147057942741191145245722077167469628991213577223883990524568295812427392506250980649111230579109634840231215552706985127175317345669649880846988396168853967381055593018159275096450260741411705003409167938179834575760937760174578918726433291346547711728458237100731992892506352771867608330623903294528035118837903631436649631075637722440701306109,
+        1632953903971589996675794817017667764204692055172343416727532360279704962301692741703201190309617304886033794451437278793302165691026463841666709409322308756254727128657774608309419875604054982882592379454327336849826841346674523842165008022121520167603830579548753546182249502562871725060356436106491626197470721362458796161176357068606378939999546001837526202070132645563190896384582811615795473918496101185025383068662277593048027185686054681484208026032868839051134407888234435172255771970764800
+      ],
+      "Adams_log_G_interval": {
+        "imaginary": [
+          [
+            -3,
+            1000000000000
+          ],
+          [
+            3,
+            1000000000000
+          ]
+        ],
+        "real": [
+          [
+            -270622933313,
+            1000000000000
+          ],
+          [
+            -67655733327,
+            250000000000
+          ]
+        ]
+      },
+      "critical_exponent": [
+        1,
+        3
+      ],
+      "cutoff_limit": "exp(-EulerGamma/p)*G_p(tau), with N^(1/p), no additional p factor",
+      "cuts": {
+        "Adams_indices": 40,
+        "scalar_log_powers": 40,
+        "source_grades": 24,
+        "source_powers": 40
+      },
+      "ordinary_Sp_at_point": false,
+      "parent_error": [
+        30297681421728797,
+        338829795144664388468736
+      ],
+      "parent_log_G_interval": {
+        "imaginary": [
+          [
+            -89419,
+            1000000000000
+          ],
+          [
+            89419,
+            1000000000000
+          ]
+        ],
+        "real": [
+          [
+            -270623022931,
+            1000000000000
+          ],
+          [
+            -270622844093,
+            1000000000000
+          ]
+        ]
+      },
+      "q": 8,
+      "rational_norm_bound": [
+        1,
+        2
+      ],
+      "regularization_order": 3,
+      "source_ranks": [
+        2,
+        9
+      ],
+      "tau": [
+        [
+          -1,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "tau_power_identity": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "Adams_error": [
+        2368859692054417306203400750750235646820526572739531398132413969816556179973404737399089347255046946661966722722985124817584722250332288412177115227259216601184103995317452184993046412150848986143506939450295477310203448692913442267595400013406657282649711414004447473552543386322223204589780147482063252213214837298380490018803040050689203307912911260720513452530546505741882914577620123286862438847072629235997794110698264968053113267849385223992866857145876284177686236320948930742678035164140924158516510495596502834063058333061160445468182034359341618264106628981943282965717220864390342303907707803144324031600670244109231992265109875329193332314963160350233636505664931038062608629418773720911741607185809363144553549440033221782566494668784087242532601893449673022778258757845702365924616565932297873438697520539150646333353524067795309155249956918271315115453583305299811330147692754377114127150841016902535729542657463177553701134415443613577139038553568719403565241444528239459112886743751706958367734756159969085735007511058087934063507226845212425602815558422935958011794416676861343139972177175952697431964908944027283598687392456011452185707680124409268902354775190594787145635447996250695271865662022952954075446071370925750633324621808855652692747269070191553237561151846912521794861124842922658474868558498599703101870336573572976120455183777817760434447102421140338105284070506169851604207763105678389572702843638161857733682522958328848864270191001957072580050504104796228660755181223092122855520431118120965966141219085125001992336174797,
+        188877364013493528812152895744984096940437955868237752087793303494621797698802304802859319315966257770528347700316439463582489298256978952557911428905325990331871062072466029242635548728141946233201254597232017255614456893028890783045883906123709405051836458207198197100117036561315813959549709235674728750404325647660992162450966800504100525206704326742908346890823757610256909828169246225789545659712025675824149278882771760988264804504170598071209056595939769220578410082645421288645073397622839394652628901258684783894140656602640880057570146215808370550061484707332429156411075130690066414147191603403717723988913815666637103959437391797167419547572145351592554368350018515061808715048210821348737937496423442786466926849391187956566712079409772007256050630344379740074226520554905324558882207645633094398531174084058810000809908008990563723863266884813277001712410687596358389961753926438787324580082331237774077334653275528244933689341390507903664562431275328049544468711934873134473234521180147676711597504280712031040335572764712962821740634346013222253808467982633898612823471448253442715324496861889724317118820680407826290329747591706153493638561485700759949256974915663855827162596105130690621152096869480816165980553314178441510991970202371887693832314341391636907614879582298414607516330701469074514976629942459923915949206564452734501410807612363886832992989450278511740461263662851054287476138803732962247792066298324048322484936310473196802712469637755402824847384905442400218326780219141553933225526697428202520672651866698657327321149008248832
+      ],
+      "Adams_log_G_interval": {
+        "imaginary": [
+          [
+            -66765954353,
+            125000000000
+          ],
+          [
+            -534102551249,
+            1000000000000
+          ]
+        ],
+        "real": [
+          [
+            -85007030467,
+            200000000000
+          ],
+          [
+            -425010068759,
+            1000000000000
+          ]
+        ]
+      },
+      "critical_exponent": [
+        1,
+        4
+      ],
+      "cutoff_limit": "exp(-EulerGamma/p)*G_p(tau), with N^(1/p), no additional p factor",
+      "cuts": {
+        "Adams_indices": 40,
+        "scalar_log_powers": 40,
+        "source_grades": 24,
+        "source_powers": 40
+      },
+      "ordinary_Sp_at_point": false,
+      "parent_error": [
+        500329161766791195588424499634149725712347231422854674210738681292844540172923111496629961847167365661382178639002094169213791244882381681363919,
+        100030318840746662849550539347808255266000864417106153923475450746137701348450720176147765529517462802909165686237493860488841450918094028465504256
+      ],
+      "parent_log_G_interval": {
+        "imaginary": [
+          [
+            -26955754299,
+            50000000000
+          ],
+          [
+            -66138941963,
+            125000000000
+          ]
+        ],
+        "real": [
+          [
+            -53753020273,
+            125000000000
+          ],
+          [
+            -105005152977,
+            250000000000
+          ]
+        ]
+      },
+      "q": 4,
+      "rational_norm_bound": [
+        5,
+        7
+      ],
+      "regularization_order": 4,
+      "source_ranks": [
+        2,
+        5
+      ],
+      "tau": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "tau_power_identity": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "not_machine_proved": [
+    "infinitely many prime-index branch points",
+    "dense unit-circle accumulation",
+    "meromorphic natural boundary",
+    "fractional critical-cutoff limit",
+    "any arithmetic Euler-product statement"
+  ],
+  "primitive_source": {
+    "algebra": "Segre ranks (2,q+1), identity action, genuine quadratic-dual Lie parent",
+    "arithmetic": "integers and Gaussian fractions; directed rational enclosures",
+    "degree_cap": 64,
+    "p_cap": 6,
+    "q_cap": 8,
+    "source_rank_second_factor_cap": 9
+  },
+  "provenance": {
+    "frozen_nonscalar_commit": "6365e26a5a77d2944e720470fec0b28855777f1c",
+    "owned_sha256_lf": {
+      "LOCAL_BOUNDARY_REPLAY.md": "75689f7f584453f1bc2e714cf5d668ad99acbb3f440d107eddab5d46c8416dce",
+      "LOCAL_NATURAL_BOUNDARY.md": "3506da7393c87edd8965f1f60d984c595bc63fb72e581e660a9f07f39359b7b5",
+      "local_boundary_replay.py": "ba094a4a2db83ec0ff5d45c042e891642b1faad408924cbe08648e07e8d55ee0",
+      "tests/test_local_boundary.py": "c86052a5a53bc4813082341c31a3a3f006aa53fdec22350fa3ab78030f26bc3a"
+    },
+    "pins": [
+      [
+        "nonscalar_replay.py",
+        "2603e7b808907700b7f7d7f5b7036816f0126e9a",
+        "ad46fa9184ea284c6106ee9b1304e31152b84820b5d1d948e9b46663214ae6a9"
+      ],
+      [
+        "NONSCALAR_GRADE_RADIUS.md",
+        "83f3cb6ebb3c4d6f9f4562ad4ad80c421245b17c",
+        "3e5a340b3e7d30d354ad77f3151a5e049b98524dbc3323a5fddf569711fa2ca5"
+      ]
+    ]
+  },
+  "residue_controls": [
+    {
+      "index": 1,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        2
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        2
+      ]
+    },
+    {
+      "index": 3,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        3
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        5
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        6
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        7
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 9,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 10,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        10
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        11
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 13,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        13
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        14
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        14
+      ]
+    },
+    {
+      "index": 15,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        15
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        15
+      ]
+    },
+    {
+      "index": 16,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 17,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        17
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        17
+      ]
+    },
+    {
+      "index": 18,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 19,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        19
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        19
+      ]
+    },
+    {
+      "index": 20,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 21,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        21
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        21
+      ]
+    },
+    {
+      "index": 22,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        22
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        22
+      ]
+    },
+    {
+      "index": 23,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        23
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        23
+      ]
+    },
+    {
+      "index": 24,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 25,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 26,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        26
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        26
+      ]
+    },
+    {
+      "index": 27,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 28,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 29,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        29
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        29
+      ]
+    },
+    {
+      "index": 30,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        -1,
+        30
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        30
+      ]
+    },
+    {
+      "index": 31,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 2,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        31
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        31
+      ]
+    },
+    {
+      "index": 32,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 2,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 1,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        2
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        3
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        5
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        6
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        7
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 9,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 10,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        10
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 11,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        11
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        13
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        14
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 15,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        15
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        15
+      ]
+    },
+    {
+      "index": 16,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 17,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        17
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        17
+      ]
+    },
+    {
+      "index": 18,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 19,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        19
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        19
+      ]
+    },
+    {
+      "index": 20,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        20
+      ]
+    },
+    {
+      "index": 21,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        21
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        21
+      ]
+    },
+    {
+      "index": 22,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        22
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 23,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        23
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        23
+      ]
+    },
+    {
+      "index": 24,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 25,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 26,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        26
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 27,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 28,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        28
+      ]
+    },
+    {
+      "index": 29,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        29
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        29
+      ]
+    },
+    {
+      "index": 30,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        -1,
+        30
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 31,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 3,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        31
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        31
+      ]
+    },
+    {
+      "index": 32,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 3,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 1,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        2
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        3
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        5
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        6
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        7
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 9,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        10
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 11,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        11
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        12
+      ]
+    },
+    {
+      "index": 13,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        13
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        14
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 15,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        15
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 16,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 17,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        17
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        17
+      ]
+    },
+    {
+      "index": 18,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        18
+      ]
+    },
+    {
+      "index": 19,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        19
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        19
+      ]
+    },
+    {
+      "index": 20,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        20
+      ]
+    },
+    {
+      "index": 21,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        21
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 22,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        22
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 23,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        23
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        23
+      ]
+    },
+    {
+      "index": 24,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 25,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 26,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        26
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 27,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 28,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        28
+      ]
+    },
+    {
+      "index": 29,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        29
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        29
+      ]
+    },
+    {
+      "index": 30,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        -1,
+        30
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        30
+      ]
+    },
+    {
+      "index": 31,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 4,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        31
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        31
+      ]
+    },
+    {
+      "index": 32,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 4,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 1,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        2
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        3
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        5
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        6
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        7
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        10
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 11,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        11
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 13,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        13
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        14
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 15,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        15
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 16,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 17,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        17
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        17
+      ]
+    },
+    {
+      "index": 18,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        18
+      ]
+    },
+    {
+      "index": 19,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        19
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        19
+      ]
+    },
+    {
+      "index": 20,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 21,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        21
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 22,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        22
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 23,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        23
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        23
+      ]
+    },
+    {
+      "index": 24,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        24
+      ]
+    },
+    {
+      "index": 25,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 26,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        26
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 27,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 28,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 29,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        29
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        29
+      ]
+    },
+    {
+      "index": 30,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        -1,
+        30
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        30
+      ]
+    },
+    {
+      "index": 31,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 5,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        31
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        31
+      ]
+    },
+    {
+      "index": 32,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 5,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 1,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        2
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        3
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 4,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        5
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 6,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        6
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        6
+      ]
+    },
+    {
+      "index": 7,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        7
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        7
+      ]
+    },
+    {
+      "index": 8,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        8
+      ]
+    },
+    {
+      "index": 9,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        9
+      ]
+    },
+    {
+      "index": 10,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        10
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        10
+      ]
+    },
+    {
+      "index": 11,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        11
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 13,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        13
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        13
+      ]
+    },
+    {
+      "index": 14,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        14
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 15,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        15
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        15
+      ]
+    },
+    {
+      "index": 16,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 17,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        17
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        17
+      ]
+    },
+    {
+      "index": 18,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        18
+      ]
+    },
+    {
+      "index": 19,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        19
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        19
+      ]
+    },
+    {
+      "index": 20,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 21,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        21
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 22,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        22
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 23,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        23
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        23
+      ]
+    },
+    {
+      "index": 24,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        24
+      ]
+    },
+    {
+      "index": 25,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        25
+      ]
+    },
+    {
+      "index": 26,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        1,
+        26
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 27,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 28,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 29,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        29
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        29
+      ]
+    },
+    {
+      "index": 30,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        -1,
+        30
+      ],
+      "regularized_log_derivative_residue": [
+        -1,
+        15
+      ]
+    },
+    {
+      "index": 31,
+      "nonintegral_regularized_monodromy_exponent": true,
+      "p": 6,
+      "prime_index": true,
+      "primitive_derivative_residue": [
+        -1,
+        31
+      ],
+      "regularized_log_derivative_residue": [
+        1,
+        31
+      ]
+    },
+    {
+      "index": 32,
+      "nonintegral_regularized_monodromy_exponent": false,
+      "p": 6,
+      "prime_index": false,
+      "primitive_derivative_residue": [
+        0,
+        1
+      ],
+      "regularized_log_derivative_residue": [
+        0,
+        1
+      ]
+    }
+  ],
+  "schema": "koszul-local-natural-boundary-v1"
+}
