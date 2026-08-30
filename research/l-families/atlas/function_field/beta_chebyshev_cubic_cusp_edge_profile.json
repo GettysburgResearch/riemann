@@ -1,0 +1,155 @@
+{
+  "amplitude_exponent_one_third_proved": true,
+  "beta_source_cancellation_proved": false,
+  "classification": "PASS_T108002_BETA_CHEBYSHEV_CUBIC_CUSP_EDGE_PROFILE",
+  "critical_window_exponent_two_thirds_proved": true,
+  "edge_gamma_constant": {
+    "imag": -1.4596366465270922,
+    "magnitude": 2.919273293054185,
+    "real": 2.5281648323743786
+  },
+  "exact_edge_gamma_constant_proved": true,
+  "finite_checks": 32,
+  "finite_cubic_cusp_profile_proved": true,
+  "finite_edge_airy_asymptotic_proved": false,
+  "finite_edge_lambda_two": [
+    {
+      "absolute_error_to_limit": 0.7489227797405644,
+      "n": 32,
+      "scaled_profile": {
+        "imag": -1.1342856843822624,
+        "magnitude": 1.433357617739607,
+        "real": 0.8763047680673798
+      }
+    },
+    {
+      "absolute_error_to_limit": 0.6182861263759473,
+      "n": 64,
+      "scaled_profile": {
+        "imag": -1.184506405675725,
+        "magnitude": 1.5497620239610284,
+        "real": 0.9993532437656655
+      }
+    },
+    {
+      "absolute_error_to_limit": 0.507388201892506,
+      "n": 128,
+      "scaled_profile": {
+        "imag": -1.2205600977401094,
+        "magnitude": 1.6469224006016905,
+        "real": 1.10570630883987
+      }
+    },
+    {
+      "absolute_error_to_limit": 0.41396000226121477,
+      "n": 256,
+      "scaled_profile": {
+        "imag": -1.245900766008545,
+        "magnitude": 1.7273884302910525,
+        "real": 1.1964957460696244
+      }
+    },
+    {
+      "absolute_error_to_limit": 0.33600856521601924,
+      "n": 512,
+      "scaled_profile": {
+        "imag": -1.2633330779354919,
+        "magnitude": 1.7934433669637468,
+        "real": 1.2729605825398904
+      }
+    }
+  ],
+  "finite_edge_lambda_zero": [
+    {
+      "absolute_error_to_limit": 0.9303062884471142,
+      "n": 32,
+      "scaled_profile": {
+        "imag": -1.4557313996539967,
+        "magnitude": 2.161557778311064,
+        "real": 1.5978667407010132
+      }
+    },
+    {
+      "absolute_error_to_limit": 0.7363256825618477,
+      "n": 64,
+      "scaled_profile": {
+        "imag": -1.4586047102647142,
+        "magnitude": 2.3104583595060273,
+        "real": 1.791839872925277
+      }
+    },
+    {
+      "absolute_error_to_limit": 0.5838426585318051,
+      "n": 128,
+      "scaled_profile": {
+        "imag": -1.4593566680533165,
+        "magnitude": 2.4310719572518624,
+        "real": 1.9443222409736312
+      }
+    },
+    {
+      "absolute_error_to_limit": 0.463238442230587,
+      "n": 256,
+      "scaled_profile": {
+        "imag": -1.459557930035153,
+        "magnitude": 2.5286815488434415,
+        "real": 2.064926396831801
+      }
+    },
+    {
+      "absolute_error_to_limit": 0.3676305766643529,
+      "n": 512,
+      "scaled_profile": {
+        "imag": -1.45961350669944,
+        "magnitude": 2.6073702963297554,
+        "real": 2.1605342564382726
+      }
+    }
+  ],
+  "lambda_two_profile": {
+    "imag": -1.297490767638438,
+    "magnitude": 2.0655908566321677,
+    "real": 1.6072284513706907
+  },
+  "lambda_zero_oscillatory_boundary_proved": true,
+  "new_zero_free_region_proved": false,
+  "outer_matching": [
+    {
+      "absolute_error": 0.03010728350300505,
+      "lambda": 8.0,
+      "sqrt_lambda_times_profile": {
+        "imag": -2.2974749773599004,
+        "magnitude": 3.278912401730782,
+        "real": 2.339417719568066
+      }
+    },
+    {
+      "absolute_error": 0.004000611774960766,
+      "lambda": 16.0,
+      "sqrt_lambda_times_profile": {
+        "imag": -2.3192039814057104,
+        "magnitude": 3.2838512213886712,
+        "real": 2.3248595090559276
+      }
+    },
+    {
+      "absolute_error": 0.0005010758255568442,
+      "lambda": 32.0,
+      "sqrt_lambda_times_profile": {
+        "imag": -2.3217549186820112,
+        "magnitude": 3.283958405448131,
+        "real": 2.3224635425102624
+      }
+    }
+  ],
+  "outer_matching_constant": {
+    "imag": -2.3221104791903637,
+    "magnitude": 3.2839601329996992,
+    "real": 2.322110479190364
+  },
+  "outer_matching_to_stieltjes_threshold_proved": true,
+  "positive_lambda_profile_integral_proved": true,
+  "proof_object_sha256": "19623ecda36a676bd0770233edfaa73be6731619f76329eb55362c66d184ab52",
+  "rh_established": false,
+  "schema": "riemann.t108002.beta-chebyshev-cubic-cusp-edge.v1"
+}
