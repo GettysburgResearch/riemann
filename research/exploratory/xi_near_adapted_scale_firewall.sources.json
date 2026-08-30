@@ -1,0 +1,50 @@
+{
+  "schema": "xi-near-adapted-scale-sources-v1",
+  "pr731_head": "6d440eb6c82d989c046e87e13f9bdabf087f920f",
+  "scientific_head": "81d52e569cc8bb566e54043fd692fd6157406aab",
+  "concentration_status": "L-106502 is imported conditionally; its independent constant review remains open",
+  "sources": [
+    {
+      "role": "exact_mismatch_identity",
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "path": "claims/lemmas/L-106710-carrier-adapted-antiphase-density-is-source-soft.md",
+      "git_blob": "92245b0f9cf5dcccf8f4cee0ea28c1a7c9980d85",
+      "sha256_lf": "4590cdc00533a3ef8536bbff3e78444667ea68caa1b03c97ece422bc2279ce6c"
+    },
+    {
+      "role": "conditional_concentration_and_raw_Hardy_node",
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "path": "claims/lemmas/L-106502-xi-odd-current-profile-saturates-at-high-frequency.md",
+      "git_blob": "6600a6c3026f0b7911f247e97be1e4c68b344715",
+      "sha256_lf": "2750ae045bb63bc2c3d0cefbbf8cf28cd3bf3aece5e0d01eedb5fad1de0c0fd2"
+    },
+    {
+      "role": "open_bridge_target",
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "path": "claims/theorems/T-106710-xi-carrier-adapted-source-softening-frontier.md",
+      "git_blob": "b06d973198898a93d584b67dbe26ce24823e2ffc",
+      "sha256_lf": "1a1f27c31dccd2a3393675acfc444e712a1449b476a2e1d7812f0e4c5559eb9f"
+    },
+    {
+      "role": "physical_carrier_is_a_different_variable",
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "path": "claims/lemmas/L-106620-mesoscopic-frozen-riemann-siegel-gauge.md",
+      "git_blob": "7fbf3731f286ddfc9eb1d10ede5941ab2156817a",
+      "sha256_lf": "23e368f246606b0a8b4f53bec9e65e1dec21bdd207197387461268b4ca1bb7d0"
+    },
+    {
+      "role": "literal_outer_normalized_source_Pick_metric",
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "path": "claims/theorems/T-106670-regularized-pick-free-energy-ninety-percent-equivalence.md",
+      "git_blob": "9a61689c19b244f0176f753cef146b252256eab0",
+      "sha256_lf": "b96ffe1ec8e5fc7d825e521c57c956066e25f0494e80aa4c13d4017ea98c8ae7"
+    },
+    {
+      "role": "nonlocality_outer_and_topological_firewall",
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "path": "claims/refutations/R-106710-diagonal-source-softening-does-not-control-topological-free-energy.md",
+      "git_blob": "e17fdf16e87d6791c64fbb6f0ac8f604ca46c396",
+      "sha256_lf": "889fd0cf65cefcf83705e54d0dda5525880fc94c4542ca0be6fa40724e1107c1"
+    }
+  ]
+}
