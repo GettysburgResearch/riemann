@@ -1,0 +1,710 @@
+{
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": [
+    "EXACT_RATIONAL",
+    "CERTIFIED_INTEGER_COVERAGE"
+  ],
+  "caps": {
+    "bytes": 524288,
+    "degree": 4,
+    "input_bits": 16,
+    "internal_bits": 1024,
+    "panel": 8,
+    "polynomial_coefficients": 8
+  },
+  "finite_grams": [
+    {
+      "degree": 1,
+      "gram": [
+        [
+          [
+            "1/2",
+            "0"
+          ]
+        ]
+      ],
+      "height_sum": "1",
+      "lyapunov_identity_exact": true,
+      "nodes": [
+        [
+          "0",
+          "1",
+          1
+        ]
+      ],
+      "origin_kernel": [
+        "2",
+        "0"
+      ],
+      "positive_principal_minors": [
+        "1/2"
+      ]
+    },
+    {
+      "degree": 2,
+      "gram": [
+        [
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "20/89",
+            "-32/89"
+          ]
+        ],
+        [
+          [
+            "20/89",
+            "32/89"
+          ],
+          [
+            "2",
+            "0"
+          ]
+        ]
+      ],
+      "height_sum": "5/4",
+      "lyapunov_identity_exact": true,
+      "nodes": [
+        [
+          "0",
+          "1",
+          1
+        ],
+        [
+          "2",
+          "1/4",
+          1
+        ]
+      ],
+      "origin_kernel": [
+        "5/2",
+        "0"
+      ],
+      "positive_principal_minors": [
+        "1/2",
+        "2",
+        "73/89"
+      ]
+    },
+    {
+      "degree": 3,
+      "gram": [
+        [
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "1/4",
+            "0"
+          ],
+          [
+            "20/89",
+            "-32/89"
+          ]
+        ],
+        [
+          [
+            "1/4",
+            "0"
+          ],
+          [
+            "1/4",
+            "0"
+          ],
+          [
+            "-624/7921",
+            "-1280/7921"
+          ]
+        ],
+        [
+          [
+            "20/89",
+            "32/89"
+          ],
+          [
+            "-624/7921",
+            "1280/7921"
+          ],
+          [
+            "2",
+            "0"
+          ]
+        ]
+      ],
+      "height_sum": "9/4",
+      "lyapunov_identity_exact": true,
+      "nodes": [
+        [
+          "0",
+          "1",
+          2
+        ],
+        [
+          "2",
+          "1/4",
+          1
+        ]
+      ],
+      "origin_kernel": [
+        "9/2",
+        "0"
+      ],
+      "positive_principal_minors": [
+        "1/2",
+        "1/4",
+        "2",
+        "1/16",
+        "73/89",
+        "7409/15842",
+        "5329/63368"
+      ]
+    },
+    {
+      "degree": 4,
+      "gram": [
+        [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "1",
+            "0"
+          ],
+          [
+            "10/89",
+            "-16/89"
+          ],
+          [
+            "-156/7921",
+            "-320/7921"
+          ]
+        ],
+        [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "2",
+            "0"
+          ],
+          [
+            "-156/7921",
+            "-320/7921"
+          ],
+          [
+            "-13360/704969",
+            "-1408/704969"
+          ]
+        ],
+        [
+          [
+            "10/89",
+            "16/89"
+          ],
+          [
+            "-156/7921",
+            "320/7921"
+          ],
+          [
+            "1/4",
+            "0"
+          ],
+          [
+            "1/16",
+            "0"
+          ]
+        ],
+        [
+          [
+            "-156/7921",
+            "320/7921"
+          ],
+          [
+            "-13360/704969",
+            "1408/704969"
+          ],
+          [
+            "1/16",
+            "0"
+          ],
+          [
+            "1/32",
+            "0"
+          ]
+        ]
+      ],
+      "height_sum": "5",
+      "lyapunov_identity_exact": true,
+      "nodes": [
+        [
+          "-1",
+          "1/2",
+          2
+        ],
+        [
+          "3",
+          "2",
+          2
+        ]
+      ],
+      "origin_kernel": [
+        "10",
+        "0"
+      ],
+      "positive_principal_minors": [
+        "1",
+        "2",
+        "1/4",
+        "1/32",
+        "1",
+        "73/356",
+        "7409/253472",
+        "7889/15842",
+        "700873/11279504",
+        "1/256",
+        "5329/31684",
+        "626121/22559008",
+        "5329/2027776",
+        "696201/90236032",
+        "28398241/16062013696"
+      ]
+    }
+  ],
+  "finite_height_infinite_rank": [
+    {
+      "finite_total_bound": "3",
+      "height_partial_sum": "1/2",
+      "height_remainder": "1/2",
+      "infinite_total_bound": "6",
+      "low_pass_endpoint": "3",
+      "rank": 1,
+      "source_tail_bound_asserted": false,
+      "total_charge_when_U_equals_one": 1
+    },
+    {
+      "finite_total_bound": "9/2",
+      "height_partial_sum": "3/4",
+      "height_remainder": "1/4",
+      "infinite_total_bound": "6",
+      "low_pass_endpoint": "3",
+      "rank": 2,
+      "source_tail_bound_asserted": false,
+      "total_charge_when_U_equals_one": 2
+    },
+    {
+      "finite_total_bound": "45/8",
+      "height_partial_sum": "15/16",
+      "height_remainder": "1/16",
+      "infinite_total_bound": "6",
+      "low_pass_endpoint": "3",
+      "rank": 4,
+      "source_tail_bound_asserted": false,
+      "total_charge_when_U_equals_one": 4
+    },
+    {
+      "finite_total_bound": "765/128",
+      "height_partial_sum": "255/256",
+      "height_remainder": "1/256",
+      "infinite_total_bound": "6",
+      "low_pass_endpoint": "3",
+      "rank": 8,
+      "source_tail_bound_asserted": false,
+      "total_charge_when_U_equals_one": 8
+    }
+  ],
+  "geographic_source_leakage": {
+    "adjoint_source_coefficients": [
+      [
+        "8/73",
+        "64/219"
+      ],
+      [
+        "69/73",
+        "-32/73"
+      ]
+    ],
+    "derivative_majorant": "4195/876",
+    "full_polynomial_identity_exact": true,
+    "geographic_radius": "3/2",
+    "literal_residual": "R=U-B; O=1; source values at denominator nodes equal U",
+    "numerator_zero": [
+      "0",
+      "1/2"
+    ],
+    "omitted_node": [
+      "2",
+      "1/4"
+    ],
+    "origin_ratio": [
+      "77/73",
+      "-32/219"
+    ],
+    "origin_ratio_squared": "745/657",
+    "physical_poles": [
+      [
+        "0",
+        "-1"
+      ],
+      [
+        "0",
+        "-1/2"
+      ],
+      [
+        "2",
+        "-1/4"
+      ]
+    ],
+    "physical_time_coefficients": [
+      [
+        "24/73",
+        "64/73"
+      ],
+      [
+        "4/73",
+        "-32/219"
+      ],
+      [
+        "49/73",
+        "-64/73"
+      ]
+    ],
+    "positive_prefix_cutoff": "24/4195",
+    "raw_value_substitution_matches": false,
+    "real_amplitude_lower": "75/73",
+    "retained_node": [
+      "0",
+      "1"
+    ],
+    "tail_bound_violation_factor": "5625/5329"
+  },
+  "lacunary_infinite_height": [
+    {
+      "Gram_operator_upper": "5/4",
+      "band_mass_symbol": "exp(-2A)-exp(-2D)>0 for fixed 0<=A<D",
+      "band_trace_lower_coefficient": "4/5",
+      "centers": [
+        32
+      ],
+      "height_each": "1",
+      "off_diagonal_row_majorants": [
+        "0"
+      ],
+      "rank": 1,
+      "scope": "infinite limit proved in note; not actual Xi data"
+    },
+    {
+      "Gram_operator_upper": "5/4",
+      "band_mass_symbol": "exp(-2A)-exp(-2D)>0 for fixed 0<=A<D",
+      "band_trace_lower_coefficient": "8/5",
+      "centers": [
+        32,
+        64
+      ],
+      "height_each": "1",
+      "off_diagonal_row_majorants": [
+        "1/16",
+        "1/16"
+      ],
+      "rank": 2,
+      "scope": "infinite limit proved in note; not actual Xi data"
+    },
+    {
+      "Gram_operator_upper": "5/4",
+      "band_mass_symbol": "exp(-2A)-exp(-2D)>0 for fixed 0<=A<D",
+      "band_trace_lower_coefficient": "16/5",
+      "centers": [
+        32,
+        64,
+        128,
+        256
+      ],
+      "height_each": "1",
+      "off_diagonal_row_majorants": [
+        "31/336",
+        "5/48",
+        "13/192",
+        "47/1344"
+      ],
+      "rank": 4,
+      "scope": "infinite limit proved in note; not actual Xi data"
+    },
+    {
+      "Gram_operator_upper": "5/4",
+      "band_mass_symbol": "exp(-2A)-exp(-2D)>0 for fixed 0<=A<D",
+      "band_trace_lower_coefficient": "32/5",
+      "centers": [
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "height_each": "1",
+      "off_diagonal_row_majorants": [
+        "1982837/19842480",
+        "17533/156240",
+        "15977/208320",
+        "79/1680",
+        "737/26880",
+        "12871/833280",
+        "83891/9999360",
+        "5331961/1269918720"
+      ],
+      "rank": 8,
+      "scope": "infinite limit proved in note; not actual Xi data"
+    }
+  ],
+  "payload_sha256": "d24be1ae5ffcfe27d8e1cd76565b712cc5c5b94287439ae4e68d14ae636278ed",
+  "rounding_contract": "exact Fraction/Gaussian pairs; no floating or transcendental evaluation",
+  "schema": "hardy-cofinal-finite-height-source-capture-v1",
+  "scope": {
+    "analytic_limits_machine_verified": false,
+    "corrected_adjoint_source": true,
+    "countercontrols_are_actual_Xi": false,
+    "finite_total_height_required": true,
+    "low_pass_bound": "C_I<=T_I<=2*L*S for I subset [0,L]",
+    "native_Xi_finite_total_height_proved": false,
+    "numerator_may_be_any_inner": true,
+    "pure_blaschke_denominator_required": true,
+    "quantitative_bare_tail": "T_I(B,U)-T_I(B_m,U)<=2*L*S_tail",
+    "same_physical_projector": true,
+    "same_quantitative_source_tail": false,
+    "shrinking_width_substitution_proved": false,
+    "source_tail_limit": "nonquantitative monotone convergence at fixed B,U,I",
+    "total_charge_bound_proved": false,
+    "uniform_in_T_capture_proved": false
+  },
+  "singular_denominator": [
+    {
+      "band": [
+        "1/2",
+        "1"
+      ],
+      "delay": "2",
+      "denominator_is_pure_blaschke": false,
+      "denominator_zero_count": 0,
+      "intervals": [
+        [
+          "1/2",
+          "1"
+        ]
+      ],
+      "physical_band_trace": 1,
+      "rank": 1,
+      "squared_indicator_amplitude": "2",
+      "zero_height_sum": "0"
+    },
+    {
+      "band": [
+        "1/2",
+        "1"
+      ],
+      "delay": "2",
+      "denominator_is_pure_blaschke": false,
+      "denominator_zero_count": 0,
+      "intervals": [
+        [
+          "1/2",
+          "3/4"
+        ],
+        [
+          "3/4",
+          "1"
+        ]
+      ],
+      "physical_band_trace": 2,
+      "rank": 2,
+      "squared_indicator_amplitude": "4",
+      "zero_height_sum": "0"
+    },
+    {
+      "band": [
+        "1/2",
+        "1"
+      ],
+      "delay": "2",
+      "denominator_is_pure_blaschke": false,
+      "denominator_zero_count": 0,
+      "intervals": [
+        [
+          "1/2",
+          "5/8"
+        ],
+        [
+          "5/8",
+          "3/4"
+        ],
+        [
+          "3/4",
+          "7/8"
+        ],
+        [
+          "7/8",
+          "1"
+        ]
+      ],
+      "physical_band_trace": 4,
+      "rank": 4,
+      "squared_indicator_amplitude": "8",
+      "zero_height_sum": "0"
+    },
+    {
+      "band": [
+        "1/2",
+        "1"
+      ],
+      "delay": "2",
+      "denominator_is_pure_blaschke": false,
+      "denominator_zero_count": 0,
+      "intervals": [
+        [
+          "1/2",
+          "9/16"
+        ],
+        [
+          "9/16",
+          "5/8"
+        ],
+        [
+          "5/8",
+          "11/16"
+        ],
+        [
+          "11/16",
+          "3/4"
+        ],
+        [
+          "3/4",
+          "13/16"
+        ],
+        [
+          "13/16",
+          "7/8"
+        ],
+        [
+          "7/8",
+          "15/16"
+        ],
+        [
+          "15/16",
+          "1"
+        ]
+      ],
+      "physical_band_trace": 8,
+      "rank": 8,
+      "squared_indicator_amplitude": "16",
+      "zero_height_sum": "0"
+    }
+  ],
+  "sources": {
+    "current_artifacts": {
+      "research/exploratory/HARDY_COFINAL_FINITE_HEIGHT_SOURCE_CAPTURE.md": {
+        "kind": "current_artifact",
+        "sha256_lf": "490373dafd09ed491a2c3ad31b44dc152cd0936c84f58e1676aef0ffd1013a0b"
+      },
+      "research/exploratory/hardy_cofinal_finite_height_source_capture.py": {
+        "kind": "current_artifact",
+        "sha256_lf": "2f497a7069ea7b36fe30a27cd6baf151e83bba0327aa1af040fed4922c70f603"
+      },
+      "research/exploratory/hardy_cofinal_finite_height_source_capture.sources.json": {
+        "kind": "current_artifact",
+        "sha256_lf": "35d483e8770346e9d2edf29357754d0e6bc3aff26abe2b2e4ea9f678a582a4bb"
+      },
+      "tests/test_hardy_cofinal_finite_height_source_capture.py": {
+        "kind": "current_artifact",
+        "sha256_lf": "7a6646f9a47670489d3189bc41bdad76f80d9307db6f8b549ae4e98b87087ae5"
+      }
+    },
+    "frozen_sources": [
+      {
+        "commit": "a07e9c3ba093abb348b849e0356f6babdf591e84",
+        "git_blob": "95338634d08fb5bde4d56d10197833b44ec64788",
+        "id": "translation",
+        "kind": "scientific_source",
+        "path": "research/exploratory/HARDY_TRANSLATION_PHYSICAL_BAND_BOUND.md",
+        "role": "HT1 and HT5-HT6 finite origin-height identity only; historical raw jets not imported",
+        "sha256_lf": "efa2a1535e30e12e0fa20b1fabf49762843b50c72d0c8f6e44a70bbaa2feba3c"
+      },
+      {
+        "commit": "ef7bbb8dca978269f24e7ff9d97b6dceeed5b460",
+        "git_blob": "955b92fe277bcdb3d6e260b5cc9dc02dd3f49144",
+        "id": "inner",
+        "kind": "scientific_source",
+        "path": "research/exploratory/HARDY_INNER_WIDTH_SOURCE_DUALITY.md",
+        "role": "IW2-IW6 corrected adjoint source and physical projection",
+        "sha256_lf": "a946e53b956bc94b39687dffe59f0eb97d33948ace996a6d9f0797d71b20acd5"
+      },
+      {
+        "commit": "76454e3db0ccce8f500297ea27668d6088b5091a",
+        "git_blob": "a97d25f556a2bd085a4749d1e96d883a0646e666",
+        "id": "count",
+        "kind": "scientific_source",
+        "path": "research/exploratory/XI_UNIFORM_COMPANION_COUNT_WIDTH.md",
+        "role": "actual Xi geographic count and explicitly unpaid cofinal capture",
+        "sha256_lf": "adaef750b277b755494d57e17a3e913e8f44f1614806d8274495ac88912fb0bc"
+      },
+      {
+        "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+        "git_blob": "fafa4b390bc140c8bb514dba83d41a5643cb77f1",
+        "id": "height",
+        "kind": "historical_context",
+        "path": "claims/lemmas/L-106621-constant-scale-companion-height-budget.md",
+        "role": "finite-window height ledger is not an imported global-height theorem",
+        "sha256_lf": "e41462ea71fd1f46849f75f7ff5dd6189514743e27bd3292bd1aec9292ec9065"
+      },
+      {
+        "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+        "git_blob": "8db4fc42c3ea964c592224b64d0ad92b6c264018",
+        "id": "native",
+        "kind": "historical_context",
+        "path": "claims/theorems/T-106620-mesoscopic-riemann-siegel-gauge-ninety-percent-frontier.md",
+        "role": "native partition, boundary and cofinal-exhaustion terms",
+        "sha256_lf": "f926698271d06b2db02bd1d7e00a05034934d8b77a75496e137d127c565795b0"
+      },
+      {
+        "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+        "git_blob": "9a61689c19b244f0176f753cef146b252256eab0",
+        "id": "pick",
+        "kind": "historical_context",
+        "path": "claims/theorems/T-106670-regularized-pick-free-energy-ninety-percent-equivalence.md",
+        "role": "historical total source charge remains outside this band result",
+        "sha256_lf": "b96ffe1ec8e5fc7d825e521c57c956066e25f0494e80aa4c13d4017ea98c8ae7"
+      },
+      {
+        "commit": "5852e785a24a2d30a8ba6c742e3650a7f6438567",
+        "git_blob": "7cf4400eac9ade2dbd8eda1271ab8cce9db0819e",
+        "id": "translation_review",
+        "kind": "review_context",
+        "path": "research/exploratory/HARDY_TRANSLATION_PHYSICAL_BAND_BOUND_AUDIT.md",
+        "role": "frozen origin-height and translation review",
+        "sha256_lf": "1b9a9426143cbe540a683887f7e351611df0028ed51aca22d7bceaa27b95d5a0"
+      },
+      {
+        "commit": "5852e785a24a2d30a8ba6c742e3650a7f6438567",
+        "git_blob": "4f823a855cb4bcf199985856dcec7e3774c0b3d4",
+        "id": "inner_review",
+        "kind": "review_context",
+        "path": "research/exploratory/HARDY_INNER_WIDTH_SOURCE_DUALITY_AUDIT.md",
+        "role": "frozen all-inner and adjoint-convention review",
+        "sha256_lf": "0ce623e47c0d2e01ffd276dd13c715f92e18730bfd285e4064a9d5aff6b04cc5"
+      },
+      {
+        "commit": "5852e785a24a2d30a8ba6c742e3650a7f6438567",
+        "git_blob": "2c160b9723850098fe80dafc4ca8309b8f3e0c1c",
+        "id": "count_review",
+        "kind": "review_context",
+        "path": "research/exploratory/XI_UNIFORM_COMPANION_COUNT_WIDTH_AUDIT.md",
+        "role": "frozen geographic versus cofinal review",
+        "sha256_lf": "79b0def4835824e8e03bd629362f4e11226e5f9ea54a520c19ff02ac2103c7a7"
+      }
+    ]
+  }
+}
