@@ -4,6 +4,9 @@ Status: **proposed exact local mathematics; external novelty unreviewed**.
 
 For the independent two-lane continuation and its source/replay boundary,
 start with [FIVE_HOUR_PROGRAMME_HANDOFF.md](FIVE_HOUR_PROGRAMME_HANDOFF.md).
+Its source-pinned [L0-L9 survival map](PROGRAMME_L0_L9_SURVIVAL_MAP.json)
+distinguishes local transformation results, finite graph-native structure,
+and arithmetic properties that remain unclaimed.
 
 The independent continuation
 [Multiplicative recurrence preservers and mixed-rank determinant parents](MULTIPLICATIVE_RECURRENCE_AND_MIXED_PARENTS.md)

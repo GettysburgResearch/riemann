@@ -12,6 +12,13 @@ hours have elapsed. RH and GRH remain unproved.
 Two independent mathematical lanes test different meanings of a generalized
 L-object. Neither lane is a new arithmetic L-function.
 
+The machine-readable [L0-L9 survival map](PROGRAMME_L0_L9_SURVIVAL_MAP.json)
+compares seven transformation/source classes across all ten programme
+levels and pins their proof commits. Its `qualified` status may record a
+partial theorem or an obstruction; it never means that the entire
+arithmetic level survived. In particular a finite graph operator, virtual
+representation, or commutator energy is not arithmetic L8 or L9 evidence.
+
 | Lane | New repository result | Exact stopping boundary |
 |---|---|---|
 | [Multiplicative recurrence preservers](MULTIPLICATIVE_RECURRENCE_AND_MIXED_PARENTS.md) | One nondegenerate shifted-circle recurrence test classifies every continuous multiplicative map as `z^m bar(z)^n`; the bounded-degree moduli and continuous-deformation obstruction are exact | Continuous scalar maps and ordinary recurrences; no prime-indexed or ramified family |
@@ -112,6 +119,21 @@ held-out-center controls. The specializations are not finite certificates
 of analytic nonrationality.
 
 From this branch, the release checks are:
+
+The core and circle source freezes are direct ancestors of this branch.
+The original graph commits have different identities from their imported
+cherry-picks and are preserved on a separate review-source branch. Before
+replay, acquire that history with:
+
+```text
+git fetch --no-tags origin refs/heads/codex/review-sources-fixed-label-cycle-five-hour
+```
+
+A shallow checkout must also acquire the required full histories. Check
+with `git rev-parse --is-shallow-repository`; if it reports `true`, run
+`git fetch --unshallow --no-tags origin`, then fetch the review-source
+branch above. A missing frozen object is a provenance failure to repair by
+fetching its history, not by weakening the checker or replacing its SHA.
 
 ```text
 python -B research/l-families/atlas/generalized/multiplicative_recurrence_mixed_parents.py --check
