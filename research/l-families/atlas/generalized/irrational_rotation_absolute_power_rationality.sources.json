@@ -1,0 +1,54 @@
+{
+  "schema": "riemann.atlas.generalized.irrational_rotation_absolute_power.sources.v1",
+  "programme_issue": {
+    "number": 764,
+    "url": "https://github.com/gfreund123/riemann/issues/764"
+  },
+  "base_commit": "f2f8044fb867fa7f109be92350f3f194479d36c6",
+  "imported_parent_state_commit": "3b08e3ecdd04a9ccbc4d0659976eb822a50d3ac4",
+  "normalization": "determinant-one tempered recurrence u_0=1, u_1=2*cos(theta), u_(r+2)=2*cos(theta)*u_(r+1)-u_r with theta/pi irrational",
+  "sources": [
+    {
+      "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.json",
+      "role": "adjacent exact integer-power denominator and numerator replay",
+      "schema": "riemann.atlas.generalized.nonintegral_local_power_rationality.v1",
+      "payload_sha256": "4acc9097a55ef6eee6377f5cbc63018b361acc04ca2f3aa5767fd94f585c9e9d",
+      "file_sha256_lf_normalized": "41e2f3442d57d28795229e55f18a617d2987dcefc37f97573b83f11203f1fb00"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
+      "role": "reused exact Laurent, Dickson, canonical-hash, and resource-contract implementation",
+      "file_sha256_lf_normalized": "8cec1b713c252e0b879b1ab1b3ddec761ce98adc5ad5015e623db6fc829a28a9"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+      "role": "adjacent hyperbolic-chamber theorem and scalar-versus-full-factor firewall",
+      "file_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "role": "inherited atlas normalization and provenance boundary",
+      "file_sha256_lf_normalized": "5d402c43a75548e26f24d0fa659838d89553f0872f2742dd4125cf696bfb425d"
+    }
+  ],
+  "external_references": [
+    {
+      "authors": "Oliver Knill and John Lesieutre",
+      "title": "Analytic continuation of Dirichlet series with almost periodic coefficients",
+      "url": "https://abel.math.harvard.edu/~knill/kam/papers/denjoy/index.html",
+      "boundary": "nearby irrational-rotation Taylor-series theory: trigonometric-polynomial meromorphic continuation and natural-boundary results under additional smoothness, Fourier-support, and Diophantine hypotheses; not the exact rationality classification proved here"
+    }
+  ],
+  "scope_firewall": {
+    "one_unramified_determinant_one_local_recurrence": true,
+    "tempered_irrational_rotation_only": true,
+    "rational_rotations_excluded": true,
+    "absolute_powers_not_complex_powers": true,
+    "no_uniform_statement_over_primes": true,
+    "no_global_euler_product_constructed": true,
+    "no_completion_or_functional_equation_claim": true,
+    "no_automorphy_motive_or_categorical_no_go": true,
+    "no_RH_GRH_or_zero_distribution_consequence": true,
+    "external_novelty_unreviewed": true
+  }
+}
