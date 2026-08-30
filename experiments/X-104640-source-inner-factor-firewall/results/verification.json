@@ -1,0 +1,26 @@
+{
+  "bezout_identity_verified": true,
+  "classification": "PASS_T104640_SOURCE_INNER_FACTOR_FIREWALL",
+  "countermodel_canonical_charge_per_period": 2,
+  "countermodel_denominator_inner_degree": 2,
+  "countermodel_numerator_inner_degree": 0,
+  "finite_checks": 19,
+  "frozen_source_transport_zero_residual_verified": true,
+  "grade_zero_is_exact_model_projection": true,
+  "higher_krylov_grades_create_new_source_leverage": false,
+  "more_than_ninety_percent_established": false,
+  "proof_object_sha256": "afeb3d1091ce59a838821a7fd75112e7414a88e44f8819608989c6e5776842ff",
+  "rh_established": false,
+  "ridge_excess_positive": true,
+  "schema": "riemann.x104640.source-inner-factor-firewall.v1",
+  "self_contained_topological_threshold": {
+    "denominator": 250000,
+    "numerator": 7319
+  },
+  "selfkrylov104636_proved": false,
+  "sharp_topological_threshold": {
+    "denominator": 1000000,
+    "numerator": 21701
+  },
+  "universal_source_to_inner_promotion_proved": false
+}
