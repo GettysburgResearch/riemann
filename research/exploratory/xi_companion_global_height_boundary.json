@@ -1,0 +1,1444 @@
+{
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": [
+    "CERTIFIED_INTEGER_COVERAGE",
+    "EXACT_RATIONAL"
+  ],
+  "axis_phases": [
+    {
+      "denominator": [
+        "19/3",
+        "0"
+      ],
+      "h": "3",
+      "lambda": "2/3",
+      "next_h": "5",
+      "next_phase": [
+        "0",
+        "-1"
+      ],
+      "numerator": [
+        "-1/3",
+        "0"
+      ],
+      "order": 0,
+      "phase": [
+        "1",
+        "0"
+      ],
+      "ratio": [
+        "-1/19",
+        "0"
+      ]
+    },
+    {
+      "denominator": [
+        "0",
+        "-19/3"
+      ],
+      "h": "3",
+      "lambda": "2/3",
+      "next_h": "5",
+      "next_phase": [
+        "-1",
+        "0"
+      ],
+      "numerator": [
+        "0",
+        "1/3"
+      ],
+      "order": 1,
+      "phase": [
+        "0",
+        "-1"
+      ],
+      "ratio": [
+        "-1/19",
+        "0"
+      ]
+    },
+    {
+      "denominator": [
+        "-19/3",
+        "0"
+      ],
+      "h": "3",
+      "lambda": "2/3",
+      "next_h": "5",
+      "next_phase": [
+        "0",
+        "1"
+      ],
+      "numerator": [
+        "1/3",
+        "0"
+      ],
+      "order": 2,
+      "phase": [
+        "-1",
+        "0"
+      ],
+      "ratio": [
+        "-1/19",
+        "0"
+      ]
+    },
+    {
+      "denominator": [
+        "0",
+        "19/3"
+      ],
+      "h": "3",
+      "lambda": "2/3",
+      "next_h": "5",
+      "next_phase": [
+        "1",
+        "0"
+      ],
+      "numerator": [
+        "0",
+        "-1/3"
+      ],
+      "order": 3,
+      "phase": [
+        "0",
+        "1"
+      ],
+      "ratio": [
+        "-1/19",
+        "0"
+      ]
+    },
+    {
+      "denominator": [
+        "19/3",
+        "0"
+      ],
+      "h": "3",
+      "lambda": "2/3",
+      "next_h": "5",
+      "next_phase": [
+        "0",
+        "-1"
+      ],
+      "numerator": [
+        "-1/3",
+        "0"
+      ],
+      "order": 4,
+      "phase": [
+        "1",
+        "0"
+      ],
+      "ratio": [
+        "-1/19",
+        "0"
+      ]
+    },
+    {
+      "denominator": [
+        "0",
+        "-19/3"
+      ],
+      "h": "3",
+      "lambda": "2/3",
+      "next_h": "5",
+      "next_phase": [
+        "-1",
+        "0"
+      ],
+      "numerator": [
+        "0",
+        "1/3"
+      ],
+      "order": 5,
+      "phase": [
+        "0",
+        "-1"
+      ],
+      "ratio": [
+        "-1/19",
+        "0"
+      ]
+    },
+    {
+      "denominator": [
+        "-19/3",
+        "0"
+      ],
+      "h": "3",
+      "lambda": "2/3",
+      "next_h": "5",
+      "next_phase": [
+        "0",
+        "1"
+      ],
+      "numerator": [
+        "1/3",
+        "0"
+      ],
+      "order": 6,
+      "phase": [
+        "-1",
+        "0"
+      ],
+      "ratio": [
+        "-1/19",
+        "0"
+      ]
+    }
+  ],
+  "bell_asymptotic_algebra": {
+    "GH14_residual": [
+      {
+        "D_power": 0,
+        "coefficient": -5,
+        "inverse_y_power": 5,
+        "powers": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "D_power": 0,
+        "coefficient": -50,
+        "inverse_y_power": 4,
+        "powers": [
+          0,
+          2,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "D_power": 1,
+        "coefficient": 1,
+        "inverse_y_power": 5,
+        "powers": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "D_power": 1,
+        "coefficient": 10,
+        "inverse_y_power": 4,
+        "powers": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "D_power": 1,
+        "coefficient": -10,
+        "inverse_y_power": 4,
+        "powers": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "D_power": 1,
+        "coefficient": -60,
+        "inverse_y_power": 3,
+        "powers": [
+          1,
+          3,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "D_power": 2,
+        "coefficient": 5,
+        "inverse_y_power": 4,
+        "powers": [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "D_power": 3,
+        "coefficient": 10,
+        "inverse_y_power": 3,
+        "powers": [
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "D_power": 3,
+        "coefficient": -20,
+        "inverse_y_power": 2,
+        "powers": [
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "D_power": 4,
+        "coefficient": 10,
+        "inverse_y_power": 2,
+        "powers": [
+          4,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "bell_polynomials": [
+      {
+        "order": 0,
+        "terms": [
+          {
+            "coefficient": 1,
+            "powers": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "order": 1,
+        "terms": [
+          {
+            "coefficient": 1,
+            "powers": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "terms": [
+          {
+            "coefficient": 1,
+            "powers": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "powers": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "terms": [
+          {
+            "coefficient": 1,
+            "powers": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 3,
+            "powers": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "powers": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "terms": [
+          {
+            "coefficient": 1,
+            "powers": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 3,
+            "powers": [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 4,
+            "powers": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 6,
+            "powers": [
+              2,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "powers": [
+              4,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "terms": [
+          {
+            "coefficient": 1,
+            "powers": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": 10,
+            "powers": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 5,
+            "powers": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 15,
+            "powers": [
+              1,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 10,
+            "powers": [
+              2,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 10,
+            "powers": [
+              3,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "powers": [
+              5,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "order": 6,
+        "terms": [
+          {
+            "coefficient": 1,
+            "powers": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "coefficient": 10,
+            "powers": [
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 15,
+            "powers": [
+              0,
+              1,
+              0,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 15,
+            "powers": [
+              0,
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 6,
+            "powers": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "coefficient": 60,
+            "powers": [
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 15,
+            "powers": [
+              2,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 45,
+            "powers": [
+              2,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 20,
+            "powers": [
+              3,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 15,
+            "powers": [
+              4,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "coefficient": 1,
+            "powers": [
+              6,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "leading_constants_without_lambda": {
+      "D5_minus_D_times_y_log_y": "5",
+      "D_over_log_y": "1/2",
+      "Dprime_times_y": "1/2",
+      "component_attenuation_times_log_y": "4",
+      "ratio_times_y_log_y_cubed": "40"
+    },
+    "residual_absolute_coefficient_sum": 181
+  },
+  "caps": {
+    "Bell_order": 6,
+    "bytes": 1048576,
+    "degree": 8,
+    "input_bits": 16,
+    "internal_bits": 1024,
+    "sparse_terms": 64,
+    "sparse_weight": 7
+  },
+  "common_divisor_controls": [
+    {
+      "actual_Xi_example": false,
+      "common_prefix": [],
+      "component_heights": [
+        "2",
+        "2"
+      ],
+      "reduced_heights": [
+        "2",
+        "2"
+      ],
+      "reduced_left": [
+        [
+          "0",
+          "2",
+          1
+        ]
+      ],
+      "reduced_right": [
+        [
+          "10",
+          "1",
+          1
+        ],
+        [
+          "11",
+          "1",
+          1
+        ]
+      ],
+      "squared_modulus_ratio": "12753/1825"
+    },
+    {
+      "actual_Xi_example": false,
+      "common_prefix": [
+        [
+          "1",
+          "1",
+          1
+        ]
+      ],
+      "component_heights": [
+        "3",
+        "3"
+      ],
+      "reduced_heights": [
+        "2",
+        "2"
+      ],
+      "reduced_left": [
+        [
+          "0",
+          "2",
+          1
+        ]
+      ],
+      "reduced_right": [
+        [
+          "10",
+          "1",
+          1
+        ],
+        [
+          "11",
+          "1",
+          1
+        ]
+      ],
+      "squared_modulus_ratio": "7300/2533"
+    },
+    {
+      "actual_Xi_example": false,
+      "common_prefix": [
+        [
+          "1",
+          "1",
+          1
+        ],
+        [
+          "2",
+          "1",
+          1
+        ]
+      ],
+      "component_heights": [
+        "4",
+        "4"
+      ],
+      "reduced_heights": [
+        "2",
+        "2"
+      ],
+      "reduced_left": [
+        [
+          "0",
+          "2",
+          1
+        ]
+      ],
+      "reduced_right": [
+        [
+          "10",
+          "1",
+          1
+        ],
+        [
+          "11",
+          "1",
+          1
+        ]
+      ],
+      "squared_modulus_ratio": "316625/164529"
+    },
+    {
+      "actual_Xi_example": false,
+      "common_prefix": [
+        [
+          "1",
+          "1",
+          1
+        ],
+        [
+          "2",
+          "1",
+          1
+        ],
+        [
+          "4",
+          "1",
+          1
+        ],
+        [
+          "8",
+          "1",
+          1
+        ]
+      ],
+      "component_heights": [
+        "6",
+        "6"
+      ],
+      "reduced_heights": [
+        "2",
+        "2"
+      ],
+      "reduced_left": [
+        [
+          "0",
+          "2",
+          1
+        ]
+      ],
+      "reduced_right": [
+        [
+          "10",
+          "1",
+          1
+        ],
+        [
+          "11",
+          "1",
+          1
+        ]
+      ],
+      "squared_modulus_ratio": "1310309/975125"
+    }
+  ],
+  "finite_blaschke_height_controls": [
+    {
+      "factor_controls": [
+        {
+          "dominating_height_bound_per_copy": "8",
+          "inverse_squared_modulus": "4",
+          "node": [
+            "0",
+            "1",
+            1
+          ],
+          "y_log_upper_bound_per_copy": "9/2"
+        }
+      ],
+      "finite_height_limit_from_slope": "2",
+      "nodes": [
+        [
+          "0",
+          "1",
+          1
+        ]
+      ],
+      "product_squared_modulus": "1/4",
+      "reciprocal_axis_denominator": [
+        "1",
+        "2",
+        "1"
+      ],
+      "reciprocal_axis_numerator": [
+        "1",
+        "-2",
+        "1"
+      ],
+      "squared_modulus_derivative_at_zero": "-4",
+      "total_height": "1",
+      "y": "3"
+    },
+    {
+      "factor_controls": [
+        {
+          "dominating_height_bound_per_copy": "8",
+          "inverse_squared_modulus": "25/16",
+          "node": [
+            "0",
+            "1",
+            3
+          ],
+          "y_log_upper_bound_per_copy": "81/32"
+        }
+      ],
+      "finite_height_limit_from_slope": "6",
+      "nodes": [
+        [
+          "0",
+          "1",
+          3
+        ]
+      ],
+      "product_squared_modulus": "4096/15625",
+      "reciprocal_axis_denominator": [
+        "1",
+        "6",
+        "15",
+        "20",
+        "15",
+        "6",
+        "1"
+      ],
+      "reciprocal_axis_numerator": [
+        "1",
+        "-6",
+        "15",
+        "-20",
+        "15",
+        "-6",
+        "1"
+      ],
+      "squared_modulus_derivative_at_zero": "-12",
+      "total_height": "3",
+      "y": "9"
+    },
+    {
+      "factor_controls": [
+        {
+          "dominating_height_bound_per_copy": "4",
+          "inverse_squared_modulus": "353/233",
+          "node": [
+            "-2",
+            "1/2",
+            2
+          ],
+          "y_log_upper_bound_per_copy": "225/233"
+        },
+        {
+          "dominating_height_bound_per_copy": "2",
+          "inverse_squared_modulus": "20/17",
+          "node": [
+            "3",
+            "1/4",
+            1
+          ],
+          "y_log_upper_bound_per_copy": "45/136"
+        }
+      ],
+      "finite_height_limit_from_slope": "5/2",
+      "nodes": [
+        [
+          "-2",
+          "1/2",
+          2
+        ],
+        [
+          "3",
+          "1/4",
+          1
+        ]
+      ],
+      "product_squared_modulus": "922913/2492180",
+      "reciprocal_axis_denominator": [
+        "1",
+        "5/2",
+        "313/16",
+        "251/8",
+        "3469/32",
+        "1377/16",
+        "41905/256"
+      ],
+      "reciprocal_axis_numerator": [
+        "1",
+        "-5/2",
+        "313/16",
+        "-251/8",
+        "3469/32",
+        "-1377/16",
+        "41905/256"
+      ],
+      "squared_modulus_derivative_at_zero": "-5",
+      "total_height": "5/4",
+      "y": "15/4"
+    },
+    {
+      "factor_controls": [
+        {
+          "dominating_height_bound_per_copy": "16/3",
+          "inverse_squared_modulus": "1937/1601",
+          "node": [
+            "1/3",
+            "2/3",
+            1
+          ],
+          "y_log_upper_bound_per_copy": "2352/1601"
+        },
+        {
+          "dominating_height_bound_per_copy": "16",
+          "inverse_squared_modulus": "305/193",
+          "node": [
+            "7",
+            "2",
+            2
+          ],
+          "y_log_upper_bound_per_copy": "784/193"
+        }
+      ],
+      "finite_height_limit_from_slope": "28/3",
+      "nodes": [
+        [
+          "1/3",
+          "2/3",
+          1
+        ],
+        [
+          "7",
+          "2",
+          2
+        ]
+      ],
+      "product_squared_modulus": "59635649/180189425",
+      "reciprocal_axis_denominator": [
+        "1",
+        "28/3",
+        "1199/9",
+        "5320/9",
+        "30979/9",
+        "35828/9",
+        "14045/9"
+      ],
+      "reciprocal_axis_numerator": [
+        "1",
+        "-28/3",
+        "1199/9",
+        "-5320/9",
+        "30979/9",
+        "-35828/9",
+        "14045/9"
+      ],
+      "squared_modulus_derivative_at_zero": "-56/3",
+      "total_height": "14/3",
+      "y": "14"
+    }
+  ],
+  "lambda_zero_exception": {
+    "denominator": [
+      "0",
+      "-3"
+    ],
+    "h": "3",
+    "lambda": "0",
+    "next_h": "5",
+    "next_phase": [
+      "-1",
+      "0"
+    ],
+    "numerator": [
+      "0",
+      "-3"
+    ],
+    "order": 5,
+    "phase": [
+      "0",
+      "-1"
+    ],
+    "ratio": [
+      "1",
+      "0"
+    ]
+  },
+  "nonnative_fourth_power_height_prefixes": [
+    {
+      "n": 1,
+      "partial_height_at_c_one": "1",
+      "tail_lower": "1/24",
+      "tail_upper": "1/3",
+      "transcendental_zero_placement_evaluated": false
+    },
+    {
+      "n": 2,
+      "partial_height_at_c_one": "17/16",
+      "tail_lower": "1/81",
+      "tail_upper": "1/24",
+      "transcendental_zero_placement_evaluated": false
+    },
+    {
+      "n": 4,
+      "partial_height_at_c_one": "22369/20736",
+      "tail_lower": "1/375",
+      "tail_upper": "1/192",
+      "transcendental_zero_placement_evaluated": false
+    },
+    {
+      "n": 8,
+      "partial_height_at_c_one": "538589354801/497871360000",
+      "tail_lower": "1/2187",
+      "tail_upper": "1/1536",
+      "transcendental_zero_placement_evaluated": false
+    }
+  ],
+  "payload_sha256": "d85e44df89abd56f9a05f34c6c5f81be846df9fdde08f394ae93a37d796ba7ea",
+  "real_root_cayley_controls": [
+    {
+      "denominator_minus_numerator_norm_squared": "2",
+      "lambda": "1/2",
+      "log_derivative": [
+        "0",
+        "-1"
+      ],
+      "point": [
+        "0",
+        "1"
+      ],
+      "roots": [
+        [
+          "-1",
+          1
+        ],
+        [
+          "1",
+          1
+        ]
+      ],
+      "theta": [
+        "1/3",
+        "0"
+      ]
+    },
+    {
+      "denominator_minus_numerator_norm_squared": "4",
+      "lambda": "2/3",
+      "log_derivative": [
+        "9/10",
+        "-3/2"
+      ],
+      "point": [
+        "1",
+        "1/3"
+      ],
+      "roots": [
+        [
+          "0",
+          3
+        ],
+        [
+          "2",
+          2
+        ]
+      ],
+      "theta": [
+        "-9/109",
+        "-30/109"
+      ]
+    },
+    {
+      "denominator_minus_numerator_norm_squared": "387306/98753",
+      "lambda": "1",
+      "log_derivative": [
+        "-20121/197506",
+        "-193653/197506"
+      ],
+      "point": [
+        "2/3",
+        "2"
+      ],
+      "roots": [
+        [
+          "-3",
+          2
+        ],
+        [
+          "1",
+          1
+        ],
+        [
+          "4",
+          2
+        ]
+      ],
+      "theta": [
+        "5581/776737",
+        "40242/776737"
+      ]
+    },
+    {
+      "denominator_minus_numerator_norm_squared": "24/13",
+      "lambda": "2",
+      "log_derivative": [
+        "2/13",
+        "-3/13"
+      ],
+      "point": [
+        "2",
+        "3"
+      ],
+      "roots": [
+        [
+          "0",
+          1
+        ]
+      ],
+      "theta": [
+        "9/29",
+        "-8/29"
+      ]
+    }
+  ],
+  "removable_real_zeros": [
+    {
+      "common_order": 0,
+      "lambda_for_this_finite_control": "1",
+      "polynomial": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "18",
+        "-3",
+        "-4",
+        "1"
+      ],
+      "removed_ratio": [
+        "-1",
+        "0"
+      ],
+      "roots": [
+        [
+          "-2",
+          1
+        ],
+        [
+          "0",
+          4
+        ],
+        [
+          "3",
+          2
+        ]
+      ],
+      "selected_root": "-2"
+    },
+    {
+      "common_order": 3,
+      "lambda_for_this_finite_control": "1",
+      "polynomial": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "18",
+        "-3",
+        "-4",
+        "1"
+      ],
+      "removed_ratio": [
+        "-1",
+        "0"
+      ],
+      "roots": [
+        [
+          "-2",
+          1
+        ],
+        [
+          "0",
+          4
+        ],
+        [
+          "3",
+          2
+        ]
+      ],
+      "selected_root": "0"
+    },
+    {
+      "common_order": 1,
+      "lambda_for_this_finite_control": "1",
+      "polynomial": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "18",
+        "-3",
+        "-4",
+        "1"
+      ],
+      "removed_ratio": [
+        "-1",
+        "0"
+      ],
+      "roots": [
+        [
+          "-2",
+          1
+        ],
+        [
+          "0",
+          4
+        ],
+        [
+          "3",
+          2
+        ]
+      ],
+      "selected_root": "3"
+    }
+  ],
+  "rounding_contract": "exact integers and Fraction/Gaussian pairs; no rounding or transcendental evaluation",
+  "schema": "xi-companion-global-height-boundary-v1",
+  "scope": {
+    "RH_proved": false,
+    "actual_Xi_normalization": true,
+    "actual_reduced_denominator_infinite_height_proved": false,
+    "analytic_limits_machine_verified": false,
+    "component_height_divergence": "k=0 and k=5 under the explicit premise; written analytic proof",
+    "conditional_real_zero_or_explicit_inner_premise": true,
+    "corrected_adjoint_source_preserved": true,
+    "finite_band_trace_infinity_proved": false,
+    "fixed_positive_lambda": true,
+    "native_cofinal_capture_failure_proved": false,
+    "native_quotient_orientation": "Theta0/Theta5 before common-inner cancellation",
+    "nonnative_controls_are_actual_Xi": false,
+    "reduced_height_dichotomy": "both infinite, or both finite and equal; not decided",
+    "uniform_lambda_limit_proved": false
+  },
+  "sources": {
+    "current_artifacts": {
+      "research/exploratory/XI_COMPANION_GLOBAL_HEIGHT_BOUNDARY.md": {
+        "kind": "current_artifact",
+        "sha256_lf": "5bf33ffd58c3fe277f4bfb0408f0805eae1b2f34aab49bb71e4c714afb80dc6d"
+      },
+      "research/exploratory/xi_companion_global_height_boundary.py": {
+        "kind": "current_artifact",
+        "sha256_lf": "7ccbedc1dc4f1ab4be4d700ef1ea4cda08639b5c93376f72ff2ace87cd9e5827"
+      },
+      "research/exploratory/xi_companion_global_height_boundary.sources.json": {
+        "kind": "current_artifact",
+        "sha256_lf": "531494d59692acae72597a56f5caa6af082054dda103abe1c2605207c03850fd"
+      },
+      "tests/test_xi_companion_global_height_boundary.py": {
+        "kind": "current_artifact",
+        "sha256_lf": "0c637ca6c546cc4fe94a8e507963cb70d6ccfbfe32f0d963d6dbd5edd3c6b178"
+      }
+    },
+    "frozen_sources": [
+      {
+        "commit": "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+        "git_blob": "fa24f9c8e0a87709d1a297a4e72136c1135d066c",
+        "id": "kernel",
+        "kind": "scientific_source",
+        "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+        "role": "XL1-XL4 actual full-line Xi normalization, positive even kernel and XL11 tail",
+        "sha256_lf": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246"
+      },
+      {
+        "commit": "76454e3db0ccce8f500297ea27668d6088b5091a",
+        "git_blob": "a97d25f556a2bd085a4749d1e96d883a0646e666",
+        "id": "count",
+        "kind": "scientific_source",
+        "path": "research/exploratory/XI_UNIFORM_COMPANION_COUNT_WIDTH.md",
+        "role": "UC2-UC6 actual companion definitions and order-one growth; finite geographic scope",
+        "sha256_lf": "adaef750b277b755494d57e17a3e913e8f44f1614806d8274495ac88912fb0bc"
+      },
+      {
+        "commit": "90e8dff3d184cbfe59974969ca89615856c33c51",
+        "git_blob": "72ac1f93b6fb0a74200ed2cc7e8399a4a10064c2",
+        "id": "capture",
+        "kind": "scientific_source",
+        "path": "research/exploratory/HARDY_COFINAL_FINITE_HEIGHT_SOURCE_CAPTURE.md",
+        "role": "HC1 global finite unweighted height and pure denominator hypothesis; HC10 unpaid source tail",
+        "sha256_lf": "490373dafd09ed491a2c3ad31b44dc152cd0936c84f58e1676aef0ffd1013a0b"
+      },
+      {
+        "commit": "ef7bbb8dca978269f24e7ff9d97b6dceeed5b460",
+        "git_blob": "955b92fe277bcdb3d6e260b5cc9dc02dd3f49144",
+        "id": "duality",
+        "kind": "scientific_source",
+        "path": "research/exploratory/HARDY_INNER_WIDTH_SOURCE_DUALITY.md",
+        "role": "IW corrected adjoint physical source retained; raw-value convention not imported",
+        "sha256_lf": "a946e53b956bc94b39687dffe59f0eb97d33948ace996a6d9f0797d71b20acd5"
+      },
+      {
+        "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+        "git_blob": "7fbf3731f286ddfc9eb1d10ede5941ab2156817a",
+        "id": "frozen_lambda",
+        "kind": "literal_source_definition",
+        "path": "claims/lemmas/L-106620-mesoscopic-frozen-riemann-siegel-gauge.md",
+        "role": "L-106620.1 and .4-.6 constant positive lambda and exact C/R companion allocation",
+        "sha256_lf": "23e368f246606b0a8b4f53bec9e65e1dec21bdd207197387461268b4ca1bb7d0"
+      },
+      {
+        "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+        "git_blob": "8db4fc42c3ea964c592224b64d0ad92b6c264018",
+        "id": "native",
+        "kind": "historical_context",
+        "path": "claims/theorems/T-106620-mesoscopic-riemann-siegel-gauge-ninety-percent-frontier.md",
+        "role": "native U5 quotient with reduced inner factors; common-zero and cofinal ledger remains unpaid",
+        "sha256_lf": "f926698271d06b2db02bd1d7e00a05034934d8b77a75496e137d127c565795b0"
+      },
+      {
+        "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+        "git_blob": "fafa4b390bc140c8bb514dba83d41a5643cb77f1",
+        "id": "height",
+        "kind": "historical_context",
+        "path": "claims/lemmas/L-106621-constant-scale-companion-height-budget.md",
+        "role": "finite-window companion height context only; not an imported entire global-height bound",
+        "sha256_lf": "e41462ea71fd1f46849f75f7ff5dd6189514743e27bd3292bd1aec9292ec9065"
+      }
+    ]
+  }
+}
