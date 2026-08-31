@@ -1,4 +1,49 @@
-# Six-hour source pass: sixth checkpoint
+# Six-hour source pass: seventh checkpoint
+
+The pass remains active until at least 17:41:25+03 on 31 August 2026.
+Completed checks now comprise the previous 487 per interpreter mode and
+16 additional composed-prefix controls per mode: 503 total. The latter
+certify source loading and fresh polynomial checks, not degree seven.
+
+The accepted prefix is frozen at ed8c7251719a381abf6d55f57d768d69e76b776d.
+It authenticates the full source chain, imports the accepted degree-six
+maps and exhaustive coordinate comparison as proved inputs, and freshly
+checks all lower polynomial compositions, weights and degrees. The proof
+object is 2301613316c82b81debf817ecf4580a1476e1b78e663dd23a57317a03eda8bb3.
+Independent reports distinguish the prefix, central implementation and
+global promotion theorem; none substitutes a review for execution.
+
+The new global theorem shows that only one actual central relation is
+needed: it must satisfy every original D2 row and lie outside the complete
+old central span. The independent Tor theorem then supplies the missing
+minimal class; graded Nakayama and Tor4=0 prove global exactness. This
+is conditional on acquiring that witness. The global dimensions 775 and
+776 would then be deductions, not measured full matrices.
+
+Two independently named contracts preserve all earlier incomplete work.
+The central full-kernel contract is frozen at
+547d91b6c8f8432f0f594c634e8a58349c929288; its twelve prechecks passed in
+both modes, but its actual acquisition has been interrupted by the RAM
+reserve. A lighter single-witness contract is frozen at
+596189377cb5d167c95334bfc5ddb74af2d1cc5f. It retains all 592 original
+central columns and all 49 old columns, certifies an invertible old
+coordinate minor, and uses bounded Dixon lifting only to propose a
+candidate. Acceptance requires an exact integer residual in every
+original row, zero gauge coordinates and exact nonmembership.
+
+Eighteen ordinary prechecks for the lighter contract passed; its
+optimized prechecks, actual witness and final 26-test suite remain
+pending at this checkpoint. No top relation or completed minimal
+resolution is claimed here. Neither new contract completes the earlier
+20/52/42/26-test or full-composed obligations by implication.
+
+Workers remain serialized, with the 128 MiB cap and 2 GiB free-memory
+reserve unchanged. Gate waits and reserve stops are recorded separately
+from mathematical failures. Other processes are untouched. All results
+remain proposed research outside canonical integration, with no RH/GRH
+conclusion.
+
+## Sixth checkpoint history
 
 The six-hour pass remains active. Completed final-packet tests remain487
 per interpreter mode:460 mathematical and27 cache/acquisition checks.
