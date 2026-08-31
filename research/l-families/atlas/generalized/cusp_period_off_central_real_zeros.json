@@ -1,0 +1,609 @@
+{
+  "Poisson_sign_pair_controls": [
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 4,
+      "n": 1,
+      "tau": 1
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 8,
+      "n": 2,
+      "tau": 2
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 8,
+      "n": 3,
+      "tau": 2
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 12,
+      "n": 4,
+      "tau": 3
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 8,
+      "n": 5,
+      "tau": 2
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 16,
+      "n": 6,
+      "tau": 4
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 8,
+      "n": 7,
+      "tau": 2
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 16,
+      "n": 8,
+      "tau": 4
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 12,
+      "n": 9,
+      "tau": 3
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 16,
+      "n": 10,
+      "tau": 4
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 8,
+      "n": 11,
+      "tau": 2
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 24,
+      "n": 12,
+      "tau": 6
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 8,
+      "n": 13,
+      "tau": 2
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 16,
+      "n": 14,
+      "tau": 4
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 16,
+      "n": 15,
+      "tau": 4
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 20,
+      "n": 16,
+      "tau": 5
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 8,
+      "n": 17,
+      "tau": 2
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 24,
+      "n": 18,
+      "tau": 6
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 8,
+      "n": 19,
+      "tau": 2
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 24,
+      "n": 20,
+      "tau": 6
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 16,
+      "n": 21,
+      "tau": 4
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 16,
+      "n": 22,
+      "tau": 4
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 8,
+      "n": 23,
+      "tau": 2
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 32,
+      "n": 24,
+      "tau": 8
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 12,
+      "n": 25,
+      "tau": 3
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 16,
+      "n": 26,
+      "tau": 4
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 16,
+      "n": 27,
+      "tau": 4
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 24,
+      "n": 28,
+      "tau": 6
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 8,
+      "n": 29,
+      "tau": 2
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 32,
+      "n": 30,
+      "tau": 8
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 8,
+      "n": 31,
+      "tau": 2
+    },
+    {
+      "cosine_K0_coefficient_without_sqrt_y": 24,
+      "n": 32,
+      "tau": 6
+    }
+  ],
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": [
+    "CERTIFIED_INTEGER_COVERAGE",
+    "EXACT_RATIONAL"
+  ],
+  "artifact_sha256_lf": {
+    "research/l-families/atlas/generalized/CUSP_PERIOD_OFF_CENTRAL_REAL_ZEROS.md": "cb792b56a687922573711027d9d6a43221d468c0d42311251d4b882c2d7f7906",
+    "research/l-families/atlas/generalized/cusp_period_off_central_real_zeros.py": "cc573a19d3e64344bcb217dafb86094470b4af15304f0c647f090eb12d3fd66c",
+    "research/l-families/atlas/generalized/cusp_period_off_central_real_zeros.sources.json": "35490b7422b93e2623cc492ab8fc3689f6aa969d9daec2d2caaf5c49e4887721",
+    "tests/test_cusp_period_off_central_real_zeros.py": "f256d73577dc6babd3fa652f1f69738e72d26d23edc219ae8eb103d639c920ff"
+  },
+  "caps": {
+    "bits": 4096,
+    "bytes": 2000000,
+    "dimension": 1024,
+    "exponent": 3072,
+    "frozen_primitive_work": 100000,
+    "json_nodes": 20000,
+    "q_order": 8,
+    "work": 2000000
+  },
+  "constant_controls": {
+    "Bernoulli_error_at_k24_upper": "45/512",
+    "all_integer_k_threshold_proved_in_note_not_enumerated": true,
+    "available_power2_exponent": 6144,
+    "base_k_square": 37748736,
+    "combined_required_power2_exponent": 54,
+    "compact_E_star_absolute_bound": 43,
+    "compact_mass_base": 64,
+    "compact_mass_upper_coefficient": 100,
+    "comparison_power2_exponent": 26,
+    "domain_area_upper": 2,
+    "monotonicity_polynomial_coefficients_low_first": [
+      -1,
+      -2,
+      1
+    ],
+    "positive_Taylor_lower_sums": [
+      {
+        "degree": 6,
+        "exceeds": 100,
+        "sum": "16289/144",
+        "x": 5
+      },
+      {
+        "degree": 4,
+        "exceeds": 16,
+        "sum": "131/8",
+        "x": 3
+      },
+      {
+        "degree": 4,
+        "exceeds": 32,
+        "sum": "103/3",
+        "x": 4
+      }
+    ],
+    "positive_mass_elementary_base_divisor": 48,
+    "positive_mass_elementary_coefficient": 32,
+    "positive_slab_coefficient": "1/8",
+    "positive_slab_native_measure_power": "k-2",
+    "power3_16": 43046721,
+    "radial_boundary": {
+      "Delta_over_q_lower": "25/33",
+      "E4_cofactor": "3703670000/3169966833",
+      "E4_minus_one_bound": "2962936000/1056655611",
+      "E_star_Fourier_tail_bound": "4/99",
+      "r": "1/100"
+    },
+    "successive_gap_polynomial_coefficients_low_first": [
+      -1,
+      2
+    ],
+    "threshold_base_divisor": 3072,
+    "threshold_d": 512,
+    "threshold_k": 6144
+  },
+  "coverage": {
+    "charged_frozen_primitive_work": 685,
+    "charged_work": 9944,
+    "complete_high_weight_Miller_basis_constructed": false,
+    "native_prefixes": 10,
+    "q_order": 8
+  },
+  "frozen_sources": [
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "77820c6af8d089d22547db6cda5ba025ed96f84f",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md",
+      "sha256_lf": "d5c95db34c62d31e0bb735e09aae5599e3abf29194cd74a50ce1bbebafab1530"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7e6ae5bb1fd9c53930cee1198eb185806a2ea118",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.py",
+      "sha256_lf": "34120d58416c902db94fbeaf69ceb004694888908341b630a1b750f2f1e8316a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7ca422e505e6ccd817aadee3362f1ace2fa83fd4",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.json",
+      "sha256_lf": "fb6ae6ad8535b8cc519d33ab0e901cf17b9cf53ddff9c0bde427daf61faa60db"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "90dc74d185b0b9a42f865a9f9df895ba7cd1c5dd",
+      "kind": "reviewed_family_release",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.sources.json",
+      "sha256_lf": "f754ecdff30b4fd3a3f8f4b8436e46ab3633ba59738021f5538051fae9e43b7a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "c2d9dc7ea92a75c7e3fd99c5463e664fb79e0d3a",
+      "kind": "reviewed_family_release",
+      "path": "tests/test_cusp_flag_quotient_global_family.py",
+      "sha256_lf": "84603f0412d8a7f1d2c2384c7055f55b4956db3df68b42dde7074d18cbe8265b"
+    },
+    {
+      "commit": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "git_blob": "1ec20ba529d34b833799d72515921fda7252da81",
+      "kind": "frozen_native_analytic_parent",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_DIVISOR_EXPLICIT_FORMULA.md",
+      "sha256_lf": "c7123450f6201fc62af7b2c42a315a20c5e107d0348533b7348223fbbd24d373"
+    },
+    {
+      "commit": "24bfc73fc9aa3ba115902340affa8727dfa18970",
+      "git_blob": "64c12988bda07d931fe4b9971f005ed5c238505f",
+      "kind": "frozen_authoring_context",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_SIGNED_RIEMANN_VON_MANGOLDT.md",
+      "sha256_lf": "33fd982f0c08333bf6d21b0240e7ed47d79d5513625ee29f12d1a26f17bb3ff3"
+    }
+  ],
+  "native_prefixes": [
+    {
+      "E4_power": 3,
+      "Miller_f_d_identification": false,
+      "delta_power": 1,
+      "dimension": 2,
+      "first_coefficient": 1,
+      "is_in_W": false,
+      "period_or_eigenvalue_evaluated": false,
+      "q_order": 8,
+      "q_prefix": [
+        0,
+        1,
+        696,
+        162252,
+        12831808,
+        34188270,
+        -882400608,
+        -833380744,
+        25487347200
+      ],
+      "weight": 24
+    },
+    {
+      "E4_power": 0,
+      "Miller_f_d_identification": true,
+      "delta_power": 2,
+      "dimension": 2,
+      "first_coefficient": 0,
+      "is_in_W": true,
+      "period_or_eigenvalue_evaluated": false,
+      "q_order": 8,
+      "q_prefix": [
+        0,
+        0,
+        1,
+        -48,
+        1080,
+        -15040,
+        143820,
+        -985824,
+        4857920
+      ],
+      "weight": 24
+    },
+    {
+      "E4_power": 6,
+      "Miller_f_d_identification": false,
+      "delta_power": 1,
+      "dimension": 3,
+      "first_coefficient": 1,
+      "is_in_W": false,
+      "period_or_eigenvalue_evaluated": false,
+      "q_order": 8,
+      "q_prefix": [
+        0,
+        1,
+        1416,
+        842652,
+        271386688,
+        50558976510,
+        5356057835232,
+        290719504250456,
+        6290601678021120
+      ],
+      "weight": 36
+    },
+    {
+      "E4_power": 3,
+      "Miller_f_d_identification": false,
+      "delta_power": 2,
+      "dimension": 3,
+      "first_coefficient": 0,
+      "is_in_W": true,
+      "period_or_eigenvalue_evaluated": false,
+      "q_order": 8,
+      "q_prefix": [
+        0,
+        0,
+        1,
+        672,
+        145800,
+        9111680,
+        -233907300,
+        1295217216,
+        10850707520
+      ],
+      "weight": 36
+    },
+    {
+      "E4_power": 1533,
+      "Miller_f_d_identification": false,
+      "delta_power": 1,
+      "dimension": 512,
+      "first_coefficient": 1,
+      "is_in_W": false,
+      "period_or_eigenvalue_evaluated": false,
+      "q_order": 8,
+      "q_prefix": [
+        0,
+        1,
+        367896,
+        67632894252,
+        8283946992812608,
+        760528437166519166670,
+        55824004729767576958965792,
+        3412577522085117700182102595256,
+        178704043031612526254447460498470400
+      ],
+      "weight": 6144
+    },
+    {
+      "E4_power": 1530,
+      "Miller_f_d_identification": false,
+      "delta_power": 2,
+      "dimension": 512,
+      "first_coefficient": 0,
+      "is_in_W": true,
+      "period_or_eigenvalue_evaluated": false,
+      "q_order": 8,
+      "q_prefix": [
+        0,
+        0,
+        1,
+        367152,
+        67359536280,
+        8233759189972160,
+        754389250421897656620,
+        55261116583882270401636576,
+        3371314547140859020223208633920
+      ],
+      "weight": 6144
+    },
+    {
+      "E4_power": 1536,
+      "Miller_f_d_identification": false,
+      "delta_power": 1,
+      "dimension": 513,
+      "first_coefficient": 1,
+      "is_in_W": false,
+      "period_or_eigenvalue_evaluated": false,
+      "q_order": 8,
+      "q_prefix": [
+        0,
+        1,
+        368616,
+        67897958652,
+        8332708650023488,
+        766505010464537522910,
+        56373071497376355610945632,
+        3452907293506292111438351138456,
+        181171119872795609621015888949496320
+      ],
+      "weight": 6156
+    },
+    {
+      "E4_power": 1533,
+      "Miller_f_d_identification": false,
+      "delta_power": 2,
+      "dimension": 513,
+      "first_coefficient": 0,
+      "is_in_W": true,
+      "period_or_eigenvalue_evaluated": false,
+      "q_order": 8,
+      "q_prefix": [
+        0,
+        0,
+        1,
+        367872,
+        67624065000,
+        8282323896058880,
+        760329639481639477500,
+        55805754134730668844335616,
+        3411237937612575800989151443520
+      ],
+      "weight": 6156
+    },
+    {
+      "E4_power": 3069,
+      "Miller_f_d_identification": false,
+      "delta_power": 1,
+      "dimension": 1024,
+      "first_coefficient": 1,
+      "is_in_W": false,
+      "period_or_eigenvalue_evaluated": false,
+      "q_order": 8,
+      "q_prefix": [
+        0,
+        1,
+        736536,
+        271160881452,
+        66533117662216768,
+        12239931217772529862350,
+        1800856188887973533726218272,
+        220732748578951164567408722908856,
+        23183372464158381820224423489770288640
+      ],
+      "weight": 12288
+    },
+    {
+      "E4_power": 3066,
+      "Miller_f_d_identification": false,
+      "delta_power": 2,
+      "dimension": 1024,
+      "first_coefficient": 0,
+      "is_in_W": true,
+      "period_or_eigenvalue_evaluated": false,
+      "q_order": 8,
+      "q_prefix": [
+        0,
+        0,
+        1,
+        735792,
+        270613255320,
+        66331636513092800,
+        12190527184970827438380,
+        1791773371207299666433042656,
+        219397267645068466274012712941120
+      ],
+      "weight": 12288
+    }
+  ],
+  "native_primitives": {
+    "Delta": [
+      0,
+      1,
+      -24,
+      252,
+      -1472,
+      4830,
+      -6048,
+      -16744,
+      84480
+    ],
+    "E4": [
+      1,
+      240,
+      2160,
+      6720,
+      17520,
+      30240,
+      60480,
+      82560,
+      140400
+    ]
+  },
+  "payload_sha256": "d15fb8ee64ad91d8cd388a03a87ae945539e2aba91abf83e0751fad95d3c1a6b",
+  "rounding_contract": "exact integers and Fraction; no rounding; analytic constants symbolic",
+  "schema": "cusp-period-off-central-real-zeros-v1",
+  "scope": {
+    "Q_uncancelled_zero_or_pole_asserted": false,
+    "W_negative_definite_at_center_assumed": false,
+    "W_witness_threshold": "for each fixed j>=2, eventually in d; no common explicit onset",
+    "actual_full_period_zero_by_written_proof": "k=12d, d>=512; one real zero in each (0,1/2),(1/2,1)",
+    "all_weights_all_minors_or_general_structures": false,
+    "analytic_continuation_inertia_integrals_machine_certified": false,
+    "finite_controls_prove_analytic_limits": false,
+    "h_d_is_CF_g1_not_Miller_f_d": true,
+    "new_automorphic_family_or_exhaustive_novelty": false,
+    "numeric_period_or_zero_samples": 0,
+    "off_central_zeros_equal_order_by_reflection": true,
+    "relative_inertia_gap_asserted": false,
+    "simplicity_uniqueness_or_optimal_onset": false,
+    "zeta_RH_counterexample": false
+  },
+  "status": "PROPOSED_REQUIRING_INDEPENDENT_FROZEN_REVIEW",
+  "threshold_induction_controls": [
+    {
+      "analytic_period_sample": false,
+      "integer_k": 3,
+      "monotonicity_gap": 2,
+      "ratio_for_2_power_over_square": "9/8",
+      "successive_gap_difference": 5
+    },
+    {
+      "analytic_period_sample": false,
+      "integer_k": 4,
+      "monotonicity_gap": 7,
+      "ratio_for_2_power_over_square": "32/25",
+      "successive_gap_difference": 7
+    },
+    {
+      "analytic_period_sample": false,
+      "integer_k": 24,
+      "monotonicity_gap": 527,
+      "ratio_for_2_power_over_square": "1152/625",
+      "successive_gap_difference": 47
+    },
+    {
+      "analytic_period_sample": false,
+      "integer_k": 6144,
+      "monotonicity_gap": 37736447,
+      "ratio_for_2_power_over_square": "75497472/37761025",
+      "successive_gap_difference": 12287
+    },
+    {
+      "analytic_period_sample": false,
+      "integer_k": 6145,
+      "monotonicity_gap": 37748734,
+      "ratio_for_2_power_over_square": "37761025/18886658",
+      "successive_gap_difference": 12289
+    },
+    {
+      "analytic_period_sample": false,
+      "integer_k": 12288,
+      "monotonicity_gap": 150970367,
+      "ratio_for_2_power_over_square": "301989888/151019521",
+      "successive_gap_difference": 24575
+    }
+  ]
+}

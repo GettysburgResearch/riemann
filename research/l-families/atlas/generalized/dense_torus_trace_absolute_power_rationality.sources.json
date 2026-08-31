@@ -1,0 +1,66 @@
+{
+  "schema": "riemann.atlas.generalized.dense_torus_trace_absolute_power_rationality.sources.v1",
+  "programme_issue": {
+    "number": 764,
+    "url": "https://github.com/gfreund123/riemann/issues/764"
+  },
+  "base_commit": "902b7dfeb12c5bee9028d97b420e3c2f42ac31fd",
+  "normalization": "rank n>=2 unitary trace sampled along a dense cyclic orbit of the full or determinant-one torus; absolute complex exponent has strictly positive real part and zeros are assigned zero",
+  "sources": [
+    {
+      "path": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+      "role": "one-circle dense-orbit recurrence gate, absolute-power cusp, and even-power rationality boundary",
+      "file_sha256_lf_normalized": "213efe84034449a7ece87b273653bc683c11b28ea4f62e599e3f2b0bbac7c8a2",
+      "git_blob": "8f27df80a4983b4d393ee3a2477a744afaeb1d3a"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_PRINCIPAL_COMPLEX_POWER_RATIONALITY.md",
+      "role": "strict-positive-real-part continuity convention and local analytic exclusion for complex exponents",
+      "file_sha256_lf_normalized": "b635c9fc8051007f46fc1efdb342c88118362edb79ed1d63624df21ef367ddf4",
+      "git_blob": "e6308d8e4b9122598f7857b34967f058a64a4f59"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/RATIONAL_ROTATION_UNIFORM_DEGREE_GATE.md",
+      "role": "reduced-denominator degree as surviving character count and finite-spectrum sampling boundary",
+      "file_sha256_lf_normalized": "5436df6de5f8a1a1af480b1d014cda80ac59f5c379969b6a374d987f6c4c9fb3",
+      "git_blob": "9548280426316237de50c7e71e2dd704aa68f00b"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/TRANSFER_MATRIX_SYMMETRIC_PARENT.md",
+      "role": "finite-character state-space interpretation and determinant-one character-quotient boundary",
+      "file_sha256_lf_normalized": "84759dc5ca81ef896e2a6ab2d9a7d3d32c3865f5f61bb45db18aaf8633578456",
+      "git_blob": "9aef6f8a780e9dff5c3b7a53c012c0956be036dc"
+    }
+  ],
+  "external_references": [
+    {
+      "authors": "Yitzhak Katznelson",
+      "title": "An Introduction to Harmonic Analysis",
+      "edition": "Third edition",
+      "publisher": "Cambridge University Press",
+      "year": 2004,
+      "doi": "10.1017/CBO9781139165372",
+      "url": "https://www.cambridge.org/core/books/an-introduction-to-harmonic-analysis/67C4CE356E7420BA17F3F1337291EF82",
+      "boundary": "standard character, Haar-Fourier, uniqueness, and compact-abelian background; the recurrence-to-finite-support implication is proved directly here"
+    },
+    {
+      "authors": "Michael Baake and Uwe Grimm",
+      "title": "Coordination sequences for root lattices and related graphs",
+      "journal": "Zeitschrift fuer Kristallographie 212 (1997), 253-256",
+      "url": "https://arxiv.org/abs/cond-mat/9706122",
+      "boundary": "published root-lattice coordination-sequence context for the A-type ball count; the trace-expansion support identification and composition proof are given directly here"
+    }
+  ],
+  "scope_firewall": {
+    "rank_at_least_two": true,
+    "strictly_positive_real_part": true,
+    "zero_value_fixed_to_zero": true,
+    "dense_full_or_determinant_one_torus_only": true,
+    "lambda_zero_and_nonpositive_real_part_excluded": true,
+    "finite_dimensional_constant_state_space_only": true,
+    "no_prime_indexed_global_family_constructed": true,
+    "no_ramification_completion_or_functional_equation": true,
+    "no_automorphy_motive_or_RH_consequence": true,
+    "external_novelty_unreviewed": true
+  }
+}

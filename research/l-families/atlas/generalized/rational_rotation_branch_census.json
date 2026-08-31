@@ -1,0 +1,3765 @@
+{
+  "claims": {
+    "GLO764.FIXED_BRANCH_POWER_PERIOD": {
+      "scope": "fixed real-axis logarithm branch J and Re(lambda)>0",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.INTEGER_POWER_COLLISION_SPECTRUM": {
+      "scope": "positive integer k with exact root-of-unity collision sums",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.RATIONAL_ROTATION_ZERO_PERIOD": {
+      "scope": "reduced a/b, Re(lambda)>0, absolute power",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.ZERO_EXPONENT_CONVENTION_SPECTRUM": {
+      "scope": "declared complex zero value z; integer controls exact",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    }
+  },
+  "fixed_branch_period": {
+    "branch_independent_iff": "lambda is a positive integer",
+    "decision_table": [
+      {
+        "a_parity": "EVEN",
+        "negative_phase_equals_one": true,
+        "period_multiplier_times_b": 1
+      },
+      {
+        "a_parity": "EVEN",
+        "negative_phase_equals_one": false,
+        "period_multiplier_times_b": 1
+      },
+      {
+        "a_parity": "ODD",
+        "negative_phase_equals_one": true,
+        "period_multiplier_times_b": 1
+      },
+      {
+        "a_parity": "ODD",
+        "negative_phase_equals_one": false,
+        "period_multiplier_times_b": 2
+      }
+    ],
+    "negative_phase": "c_(lambda,J)=exp((2J+1)*pi*i*lambda)",
+    "principal_branch_period_b_for_odd_a_iff": "lambda is a positive even integer"
+  },
+  "integer_power_collision_spectrum": {
+    "exhaustive_row_count": 720,
+    "exhaustive_rows_digest": "b00b19b80a0acac832d012fd1029de653e045095e6746e032f2a5734989bd4b9",
+    "hostile_cancellation_digest": "0f8841688106f07adcef599e818f2adec81e0a6f7187d9231dadef3fe0851ebf",
+    "hostile_cancellation_row_count": 122,
+    "maximum_k": 16,
+    "minimal_order_histogram": {
+      "10": 76,
+      "11": 44,
+      "12": 24,
+      "2": 74,
+      "3": 58,
+      "4": 92,
+      "5": 64,
+      "6": 88,
+      "7": 64,
+      "8": 88,
+      "9": 48
+    },
+    "representative_rows": [
+      {
+        "a": 1,
+        "all_grouped_binomial_amplitudes": [
+          1,
+          -1
+        ],
+        "b": 2,
+        "k": 1,
+        "minimal_recurrence_order": 2,
+        "reduced_denominator": "product_(retained c) (1-zeta_(2b)^(a*(k-2c))*T)",
+        "retained_modes": [
+          {
+            "grouped_binomial_amplitude": 1,
+            "residue_c_mod_b": 0,
+            "root_exponent_mod_2b": 1
+          },
+          {
+            "grouped_binomial_amplitude": -1,
+            "residue_c_mod_b": 1,
+            "root_exponent_mod_2b": 3
+          }
+        ],
+        "theta_over_pi": "1/2"
+      },
+      {
+        "a": 1,
+        "all_grouped_binomial_amplitudes": [
+          0,
+          -3,
+          3
+        ],
+        "b": 3,
+        "k": 3,
+        "minimal_recurrence_order": 2,
+        "reduced_denominator": "product_(retained c) (1-zeta_(2b)^(a*(k-2c))*T)",
+        "retained_modes": [
+          {
+            "grouped_binomial_amplitude": -3,
+            "residue_c_mod_b": 1,
+            "root_exponent_mod_2b": 1
+          },
+          {
+            "grouped_binomial_amplitude": 3,
+            "residue_c_mod_b": 2,
+            "root_exponent_mod_2b": 5
+          }
+        ],
+        "theta_over_pi": "1/3"
+      },
+      {
+        "a": 2,
+        "all_grouped_binomial_amplitudes": [
+          -3,
+          -3,
+          6
+        ],
+        "b": 3,
+        "k": 4,
+        "minimal_recurrence_order": 3,
+        "reduced_denominator": "product_(retained c) (1-zeta_(2b)^(a*(k-2c))*T)",
+        "retained_modes": [
+          {
+            "grouped_binomial_amplitude": -3,
+            "residue_c_mod_b": 0,
+            "root_exponent_mod_2b": 2
+          },
+          {
+            "grouped_binomial_amplitude": -3,
+            "residue_c_mod_b": 1,
+            "root_exponent_mod_2b": 4
+          },
+          {
+            "grouped_binomial_amplitude": 6,
+            "residue_c_mod_b": 2,
+            "root_exponent_mod_2b": 0
+          }
+        ],
+        "theta_over_pi": "2/3"
+      },
+      {
+        "a": 1,
+        "all_grouped_binomial_amplitudes": [
+          0,
+          -5,
+          10,
+          -10,
+          5
+        ],
+        "b": 5,
+        "k": 5,
+        "minimal_recurrence_order": 4,
+        "reduced_denominator": "product_(retained c) (1-zeta_(2b)^(a*(k-2c))*T)",
+        "retained_modes": [
+          {
+            "grouped_binomial_amplitude": -5,
+            "residue_c_mod_b": 1,
+            "root_exponent_mod_2b": 3
+          },
+          {
+            "grouped_binomial_amplitude": 10,
+            "residue_c_mod_b": 2,
+            "root_exponent_mod_2b": 1
+          },
+          {
+            "grouped_binomial_amplitude": -10,
+            "residue_c_mod_b": 3,
+            "root_exponent_mod_2b": 9
+          },
+          {
+            "grouped_binomial_amplitude": 5,
+            "residue_c_mod_b": 4,
+            "root_exponent_mod_2b": 7
+          }
+        ],
+        "theta_over_pi": "1/5"
+      },
+      {
+        "a": 3,
+        "all_grouped_binomial_amplitudes": [
+          1,
+          -7,
+          21,
+          -35,
+          35,
+          -21,
+          7,
+          -1
+        ],
+        "b": 8,
+        "k": 7,
+        "minimal_recurrence_order": 8,
+        "reduced_denominator": "product_(retained c) (1-zeta_(2b)^(a*(k-2c))*T)",
+        "retained_modes": [
+          {
+            "grouped_binomial_amplitude": 1,
+            "residue_c_mod_b": 0,
+            "root_exponent_mod_2b": 5
+          },
+          {
+            "grouped_binomial_amplitude": -7,
+            "residue_c_mod_b": 1,
+            "root_exponent_mod_2b": 15
+          },
+          {
+            "grouped_binomial_amplitude": 21,
+            "residue_c_mod_b": 2,
+            "root_exponent_mod_2b": 9
+          },
+          {
+            "grouped_binomial_amplitude": -35,
+            "residue_c_mod_b": 3,
+            "root_exponent_mod_2b": 3
+          },
+          {
+            "grouped_binomial_amplitude": 35,
+            "residue_c_mod_b": 4,
+            "root_exponent_mod_2b": 13
+          },
+          {
+            "grouped_binomial_amplitude": -21,
+            "residue_c_mod_b": 5,
+            "root_exponent_mod_2b": 7
+          },
+          {
+            "grouped_binomial_amplitude": 7,
+            "residue_c_mod_b": 6,
+            "root_exponent_mod_2b": 1
+          },
+          {
+            "grouped_binomial_amplitude": -1,
+            "residue_c_mod_b": 7,
+            "root_exponent_mod_2b": 11
+          }
+        ],
+        "theta_over_pi": "3/8"
+      }
+    ],
+    "specific_b3_k3": {
+      "a": 1,
+      "all_grouped_binomial_amplitudes": [
+        0,
+        -3,
+        3
+      ],
+      "b": 3,
+      "k": 3,
+      "minimal_recurrence_order": 2,
+      "reduced_denominator": "product_(retained c) (1-zeta_(2b)^(a*(k-2c))*T)",
+      "retained_modes": [
+        {
+          "grouped_binomial_amplitude": -3,
+          "residue_c_mod_b": 1,
+          "root_exponent_mod_2b": 1
+        },
+        {
+          "grouped_binomial_amplitude": 3,
+          "residue_c_mod_b": 2,
+          "root_exponent_mod_2b": 5
+        }
+      ],
+      "theta_over_pi": "1/3"
+    }
+  },
+  "non_scalar_parent": {
+    "integer_parent": "B_(k,theta)=Sym^k(A_theta), dimension k+1",
+    "not_identified_with_standard_symmetric_power_local_factor": true,
+    "rank_two_parent": "A_theta=diag(alpha,alpha^-1)",
+    "scalar_denominator_can_merge_and_cancel_parent_weights": true,
+    "scalar_observable": "u_r^k=trace(C_(k,theta)*B_(k,theta)^r)"
+  },
+  "normalization": {
+    "closed_form": "u_r=sin((r+1)*theta)/sin(theta)",
+    "rationality": "analytic germ at T=0 belongs to C(T)",
+    "recurrence": "u_0=1; u_1=2*cos(theta); u_(r+2)=2*cos(theta)*u_(r+1)-u_r",
+    "theta_over_pi": "a/b with 1<=a<b and gcd(a,b)=1"
+  },
+  "orbit_skeleton": {
+    "maximum_b": 12,
+    "reduced_rotation_count": 45,
+    "rows": [
+      {
+        "a": 1,
+        "absolute_minimal_period": 2,
+        "b": 2,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 4,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          0,
+          -1,
+          0
+        ],
+        "theta_over_pi": "1/2",
+        "u_zero_residue_r_mod_b": 1,
+        "zero_n_indices": [
+          2,
+          4
+        ]
+      },
+      {
+        "a": 1,
+        "absolute_minimal_period": 3,
+        "b": 3,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 6,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "1/3",
+        "u_zero_residue_r_mod_b": 2,
+        "zero_n_indices": [
+          3,
+          6
+        ]
+      },
+      {
+        "a": 2,
+        "absolute_minimal_period": 3,
+        "b": 3,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 3,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "2/3",
+        "u_zero_residue_r_mod_b": 2,
+        "zero_n_indices": [
+          3,
+          6
+        ]
+      },
+      {
+        "a": 1,
+        "absolute_minimal_period": 4,
+        "b": 4,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 8,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "1/4",
+        "u_zero_residue_r_mod_b": 3,
+        "zero_n_indices": [
+          4,
+          8
+        ]
+      },
+      {
+        "a": 3,
+        "absolute_minimal_period": 4,
+        "b": 4,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 8,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "3/4",
+        "u_zero_residue_r_mod_b": 3,
+        "zero_n_indices": [
+          4,
+          8
+        ]
+      },
+      {
+        "a": 1,
+        "absolute_minimal_period": 5,
+        "b": 5,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 10,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "1/5",
+        "u_zero_residue_r_mod_b": 4,
+        "zero_n_indices": [
+          5,
+          10
+        ]
+      },
+      {
+        "a": 2,
+        "absolute_minimal_period": 5,
+        "b": 5,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 5,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          -1,
+          -1,
+          0,
+          1,
+          1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "2/5",
+        "u_zero_residue_r_mod_b": 4,
+        "zero_n_indices": [
+          5,
+          10
+        ]
+      },
+      {
+        "a": 3,
+        "absolute_minimal_period": 5,
+        "b": 5,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 10,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "3/5",
+        "u_zero_residue_r_mod_b": 4,
+        "zero_n_indices": [
+          5,
+          10
+        ]
+      },
+      {
+        "a": 4,
+        "absolute_minimal_period": 5,
+        "b": 5,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 5,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "4/5",
+        "u_zero_residue_r_mod_b": 4,
+        "zero_n_indices": [
+          5,
+          10
+        ]
+      },
+      {
+        "a": 1,
+        "absolute_minimal_period": 6,
+        "b": 6,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 12,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "1/6",
+        "u_zero_residue_r_mod_b": 5,
+        "zero_n_indices": [
+          6,
+          12
+        ]
+      },
+      {
+        "a": 5,
+        "absolute_minimal_period": 6,
+        "b": 6,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 12,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "5/6",
+        "u_zero_residue_r_mod_b": 5,
+        "zero_n_indices": [
+          6,
+          12
+        ]
+      },
+      {
+        "a": 1,
+        "absolute_minimal_period": 7,
+        "b": 7,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 14,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "1/7",
+        "u_zero_residue_r_mod_b": 6,
+        "zero_n_indices": [
+          7,
+          14
+        ]
+      },
+      {
+        "a": 2,
+        "absolute_minimal_period": 7,
+        "b": 7,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 7,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          0,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "2/7",
+        "u_zero_residue_r_mod_b": 6,
+        "zero_n_indices": [
+          7,
+          14
+        ]
+      },
+      {
+        "a": 3,
+        "absolute_minimal_period": 7,
+        "b": 7,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 14,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "3/7",
+        "u_zero_residue_r_mod_b": 6,
+        "zero_n_indices": [
+          7,
+          14
+        ]
+      },
+      {
+        "a": 4,
+        "absolute_minimal_period": 7,
+        "b": 7,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 7,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "4/7",
+        "u_zero_residue_r_mod_b": 6,
+        "zero_n_indices": [
+          7,
+          14
+        ]
+      },
+      {
+        "a": 5,
+        "absolute_minimal_period": 7,
+        "b": 7,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 14,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "5/7",
+        "u_zero_residue_r_mod_b": 6,
+        "zero_n_indices": [
+          7,
+          14
+        ]
+      },
+      {
+        "a": 6,
+        "absolute_minimal_period": 7,
+        "b": 7,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 7,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "6/7",
+        "u_zero_residue_r_mod_b": 6,
+        "zero_n_indices": [
+          7,
+          14
+        ]
+      },
+      {
+        "a": 1,
+        "absolute_minimal_period": 8,
+        "b": 8,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 16,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "1/8",
+        "u_zero_residue_r_mod_b": 7,
+        "zero_n_indices": [
+          8,
+          16
+        ]
+      },
+      {
+        "a": 3,
+        "absolute_minimal_period": 8,
+        "b": 8,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 16,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "3/8",
+        "u_zero_residue_r_mod_b": 7,
+        "zero_n_indices": [
+          8,
+          16
+        ]
+      },
+      {
+        "a": 5,
+        "absolute_minimal_period": 8,
+        "b": 8,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 16,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "5/8",
+        "u_zero_residue_r_mod_b": 7,
+        "zero_n_indices": [
+          8,
+          16
+        ]
+      },
+      {
+        "a": 7,
+        "absolute_minimal_period": 8,
+        "b": 8,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 16,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "7/8",
+        "u_zero_residue_r_mod_b": 7,
+        "zero_n_indices": [
+          8,
+          16
+        ]
+      },
+      {
+        "a": 1,
+        "absolute_minimal_period": 9,
+        "b": 9,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 18,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "1/9",
+        "u_zero_residue_r_mod_b": 8,
+        "zero_n_indices": [
+          9,
+          18
+        ]
+      },
+      {
+        "a": 2,
+        "absolute_minimal_period": 9,
+        "b": 9,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 9,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "2/9",
+        "u_zero_residue_r_mod_b": 8,
+        "zero_n_indices": [
+          9,
+          18
+        ]
+      },
+      {
+        "a": 4,
+        "absolute_minimal_period": 9,
+        "b": 9,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 9,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          0,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "4/9",
+        "u_zero_residue_r_mod_b": 8,
+        "zero_n_indices": [
+          9,
+          18
+        ]
+      },
+      {
+        "a": 5,
+        "absolute_minimal_period": 9,
+        "b": 9,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 18,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "5/9",
+        "u_zero_residue_r_mod_b": 8,
+        "zero_n_indices": [
+          9,
+          18
+        ]
+      },
+      {
+        "a": 7,
+        "absolute_minimal_period": 9,
+        "b": 9,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 18,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "7/9",
+        "u_zero_residue_r_mod_b": 8,
+        "zero_n_indices": [
+          9,
+          18
+        ]
+      },
+      {
+        "a": 8,
+        "absolute_minimal_period": 9,
+        "b": 9,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 9,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "8/9",
+        "u_zero_residue_r_mod_b": 8,
+        "zero_n_indices": [
+          9,
+          18
+        ]
+      },
+      {
+        "a": 1,
+        "absolute_minimal_period": 10,
+        "b": 10,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 20,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "1/10",
+        "u_zero_residue_r_mod_b": 9,
+        "zero_n_indices": [
+          10,
+          20
+        ]
+      },
+      {
+        "a": 3,
+        "absolute_minimal_period": 10,
+        "b": 10,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 20,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "3/10",
+        "u_zero_residue_r_mod_b": 9,
+        "zero_n_indices": [
+          10,
+          20
+        ]
+      },
+      {
+        "a": 7,
+        "absolute_minimal_period": 10,
+        "b": 10,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 20,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "7/10",
+        "u_zero_residue_r_mod_b": 9,
+        "zero_n_indices": [
+          10,
+          20
+        ]
+      },
+      {
+        "a": 9,
+        "absolute_minimal_period": 10,
+        "b": 10,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 20,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "9/10",
+        "u_zero_residue_r_mod_b": 9,
+        "zero_n_indices": [
+          10,
+          20
+        ]
+      },
+      {
+        "a": 1,
+        "absolute_minimal_period": 11,
+        "b": 11,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 22,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "1/11",
+        "u_zero_residue_r_mod_b": 10,
+        "zero_n_indices": [
+          11,
+          22
+        ]
+      },
+      {
+        "a": 2,
+        "absolute_minimal_period": 11,
+        "b": 11,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 11,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "2/11",
+        "u_zero_residue_r_mod_b": 10,
+        "zero_n_indices": [
+          11,
+          22
+        ]
+      },
+      {
+        "a": 3,
+        "absolute_minimal_period": 11,
+        "b": 11,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 22,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "3/11",
+        "u_zero_residue_r_mod_b": 10,
+        "zero_n_indices": [
+          11,
+          22
+        ]
+      },
+      {
+        "a": 4,
+        "absolute_minimal_period": 11,
+        "b": 11,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 11,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          0,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "4/11",
+        "u_zero_residue_r_mod_b": 10,
+        "zero_n_indices": [
+          11,
+          22
+        ]
+      },
+      {
+        "a": 5,
+        "absolute_minimal_period": 11,
+        "b": 11,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 22,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "5/11",
+        "u_zero_residue_r_mod_b": 10,
+        "zero_n_indices": [
+          11,
+          22
+        ]
+      },
+      {
+        "a": 6,
+        "absolute_minimal_period": 11,
+        "b": 11,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 11,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "6/11",
+        "u_zero_residue_r_mod_b": 10,
+        "zero_n_indices": [
+          11,
+          22
+        ]
+      },
+      {
+        "a": 7,
+        "absolute_minimal_period": 11,
+        "b": 11,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 22,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "7/11",
+        "u_zero_residue_r_mod_b": 10,
+        "zero_n_indices": [
+          11,
+          22
+        ]
+      },
+      {
+        "a": 8,
+        "absolute_minimal_period": 11,
+        "b": 11,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 11,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "8/11",
+        "u_zero_residue_r_mod_b": 10,
+        "zero_n_indices": [
+          11,
+          22
+        ]
+      },
+      {
+        "a": 9,
+        "absolute_minimal_period": 11,
+        "b": 11,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 22,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "9/11",
+        "u_zero_residue_r_mod_b": 10,
+        "zero_n_indices": [
+          11,
+          22
+        ]
+      },
+      {
+        "a": 10,
+        "absolute_minimal_period": 11,
+        "b": 11,
+        "signed_b_shift_multiplier": 1,
+        "signed_orbit_minimal_period": 11,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "10/11",
+        "u_zero_residue_r_mod_b": 10,
+        "zero_n_indices": [
+          11,
+          22
+        ]
+      },
+      {
+        "a": 1,
+        "absolute_minimal_period": 12,
+        "b": 12,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 24,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "1/12",
+        "u_zero_residue_r_mod_b": 11,
+        "zero_n_indices": [
+          12,
+          24
+        ]
+      },
+      {
+        "a": 5,
+        "absolute_minimal_period": 12,
+        "b": 12,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 24,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "5/12",
+        "u_zero_residue_r_mod_b": 11,
+        "zero_n_indices": [
+          12,
+          24
+        ]
+      },
+      {
+        "a": 7,
+        "absolute_minimal_period": 12,
+        "b": 12,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 24,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "7/12",
+        "u_zero_residue_r_mod_b": 11,
+        "zero_n_indices": [
+          12,
+          24
+        ]
+      },
+      {
+        "a": 11,
+        "absolute_minimal_period": 12,
+        "b": 12,
+        "signed_b_shift_multiplier": -1,
+        "signed_orbit_minimal_period": 24,
+        "sine_signs_for_n_1_through_2b": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "theta_over_pi": "11/12",
+        "u_zero_residue_r_mod_b": 11,
+        "zero_n_indices": [
+          12,
+          24
+        ]
+      }
+    ]
+  },
+  "payload_sha256": "7e49054015be1b6ada0aeef72f7572cb74a0275e4d62a8791bcbb07c31d945ca",
+  "producer": {
+    "note": "research/l-families/atlas/generalized/RATIONAL_ROTATION_BRANCH_CENSUS.md",
+    "note_sha256_lf_normalized": "09814f28391c8ad93d122a953912d4ea6e34e41cb1843b88034113495c33edeb",
+    "script": "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
+    "script_sha256_lf_normalized": "12d6d7c0d2f84ea6b9fc7b6a4b96327b60e985e408e6c10590959bf80668aafd",
+    "test": "tests/test_rational_rotation_branch_census.py",
+    "test_sha256_lf_normalized": "80921b388c2d25380ac3a518f0861c2091388219a6f70d17bdde4c12844d26a1"
+  },
+  "programme_issue": 764,
+  "resource_contract": {
+    "arithmetic_class": "EXACT_RATIONAL",
+    "declared_work_units": 1468,
+    "exact_method": "integer sign residues, binomial collision sums, symbolic root-of-unity exponents, and canonical JSON hashing",
+    "external_symbolic_engine": false,
+    "float_operations": 0,
+    "maximum_allowed_b": 20,
+    "maximum_allowed_k": 30,
+    "maximum_b": 12,
+    "maximum_k": 16,
+    "prime_curve_field_zero_or_conductor_enumerations": 0,
+    "random_samples": 0,
+    "work_unit_cap_exclusive": 200000
+  },
+  "schema": "riemann.atlas.generalized.rational_rotation_branch_census.v1",
+  "scope_firewall": {
+    "Re_lambda_nonpositive_excluded_except_declared_lambda_zero_family": true,
+    "external_novelty_unreviewed": true,
+    "fixed_branch_index_is_data_for_noninteger_signed_powers": true,
+    "no_RH_GRH_or_zero_distribution_consequence": true,
+    "no_automorphy_motivic_or_categorical_no_go": true,
+    "no_global_Euler_product_completion_or_functional_equation": true,
+    "noninteger_uniform_local_degree_not_classified_in_this_packet": true,
+    "one_unramified_determinant_one_local_recurrence": true,
+    "tempered_rational_rotations_only": true,
+    "termwise_varying_branch_indices_excluded": true
+  },
+  "source_lock": {
+    "base_commit": "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+    "external_references": [
+      {
+        "authors": "Oliver Knill and John Lesieutre",
+        "boundary": "nearby periodic and irrational rotation coefficient series; the paper explicitly decomposes rational rotations into finite residue classes, but it does not state this packet's local recurrence zero, branch, minimal-period, or grouped integer-power spectrum census",
+        "doi": "10.1007/s11785-010-0064-7",
+        "journal": "Complex Analysis and Operator Theory 5 (2011), 237-255",
+        "title": "Analytic continuation of Dirichlet series with almost periodic coefficients",
+        "url": "https://arxiv.org/abs/0811.1362"
+      },
+      {
+        "authors": "William Kahan",
+        "boundary": "general branch-cut and principal-value background; not a source for the recurrence or rationality theorems in this packet",
+        "title": "Branch Cuts for Complex Elementary Functions, or Much Ado About Nothing's Sign Bit",
+        "url": "https://people.freebsd.org/~das/kahan86branch.pdf"
+      }
+    ],
+    "file_sha256_lf_normalized": "c1d9ed9862fe572169ead10a9c909df63b4ddd0a5ae209fa1e9ab3ab7acaed0b",
+    "manifest": "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+    "scope_firewall": {
+      "absolute_and_fixed_real_axis_log_branches_only": true,
+      "external_novelty_unreviewed": true,
+      "no_RH_GRH_or_zero_distribution_consequence": true,
+      "no_automorphy_motive_or_categorical_no_go": true,
+      "no_completion_or_functional_equation_claim": true,
+      "no_global_euler_product_constructed": true,
+      "noninteger_uniform_local_degree_not_classified_in_this_packet": true,
+      "one_unramified_determinant_one_local_recurrence": true,
+      "tempered_rational_rotation_only": true,
+      "zero_exponent_requires_an_explicit_zero_value": true
+    },
+    "verified_sources": [
+      {
+        "file_sha256_lf_normalized": "213efe84034449a7ece87b273653bc683c11b28ea4f62e599e3f2b0bbac7c8a2",
+        "git_blob": "8f27df80a4983b4d393ee3a2477a744afaeb1d3a",
+        "path": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+        "role": "adjacent irrational-rotation normalization, rationality convention, and dense-orbit boundary"
+      },
+      {
+        "file_sha256_lf_normalized": "e6e1bf91db5c91f7a5320ecfb5ec40cb1f37ad91e0ea15a3918c44e5b39ff3c7",
+        "git_blob": "aee0fd3ed26dbffb036440390801278c6426ea08",
+        "path": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.py",
+        "role": "reused canonical hashing, exact Laurent conventions, and fail-closed Git-object verification"
+      },
+      {
+        "file_sha256_lf_normalized": "dc12598d440f4bf9a8a105a461854ef874b820500c36de7588a57363e1ae17bc",
+        "git_blob": "d94b75287493134bdc0a9ca53dda1f81b61912cf",
+        "path": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.json",
+        "payload_sha256": "6d2e2dbac27472638678dd692324dfa17a8299b3eb54120745150cc6b6d15698",
+        "role": "adjacent exact tempered absolute-power fixture",
+        "schema": "riemann.atlas.generalized.irrational_rotation_absolute_power_rationality.v1"
+      },
+      {
+        "file_sha256_lf_normalized": "4f070750c83d04ed1ed74a5ddcdd42c6b6ce0746a548ce11a3086b6fc37da66b",
+        "git_blob": "3adf8f211fee7bd51e811520b31785af38ccd7c0",
+        "path": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+        "role": "inherited source and nearby-prior-art boundary"
+      }
+    ]
+  },
+  "status": "PROPOSED_EXACT_LOCAL_THEOREM_EXTERNAL_NOVELTY_UNREVIEWED",
+  "survival_ladder": {
+    "L4_through_L9_not_established": true,
+    "levels": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7",
+      "L8",
+      "L9"
+    ],
+    "rows": [
+      {
+        "L0": "PASS_BRANCH_FREE_WITH_ZERO_VALUE_ZERO",
+        "L1": "PASS_FOR_ABSOLUTE_VALUE_MULTIPLICATION",
+        "L2": "FORMAL_IF_INPUT_COEFFICIENTS_ARE_MULTIPLICATIVE",
+        "L3": "PASS_POINTWISE; UNIFORM_BOUND_AT_EVEN_POSITIVE_INTEGERS",
+        "first_unresolved_level": "UNIFORM_L3_OUTSIDE_EVEN_INTEGER_CHAMBER",
+        "object": "absolute power with Re(lambda)>0"
+      },
+      {
+        "L0": "PASS_ONLY_AFTER_BRANCH_INDEX_J_IS_DATA",
+        "L1": "FAILS_IN_GENERAL; REAL_SCALAR_MULTIPLICATIVITY_REQUIRES_c_SQUARED_1",
+        "L2": "NOT_REACHED_WHEN_L1_FAILS",
+        "L3": "ONE_RATIONAL_ORBIT_IS_PERIODIC",
+        "first_failure_level": "L1",
+        "object": "fixed-branch signed power"
+      },
+      {
+        "L0": "PASS_BRANCH_INDEPENDENT",
+        "L1": "PASS_SCALAR_MULTIPLICATIVITY",
+        "L2": "FORMAL_IF_INPUT_COEFFICIENTS_ARE_MULTIPLICATIVE",
+        "L3": "EXACT_FINITE_SPECTRUM_WITH_UNIFORM_ORDER_AT_MOST_k_PLUS_1",
+        "first_unresolved_level": "L4",
+        "object": "positive integer power"
+      },
+      {
+        "L0": "FAIL_0_POW_0_UNSPECIFIED",
+        "first_failure_level": "L0",
+        "object": "lambda zero without declared zero_value"
+      }
+    ]
+  },
+  "zero_exponent_spectrum": {
+    "rows": [
+      {
+        "b": 2,
+        "block": [
+          1,
+          1
+        ],
+        "minimal_recurrence_order": 1,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 2,
+            "root_exponent_mod_b": 0
+          }
+        ],
+        "reduced_denominator": "1-T",
+        "zero_value_z": 1
+      },
+      {
+        "b": 2,
+        "block": [
+          1,
+          0
+        ],
+        "minimal_recurrence_order": 2,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 1
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 0
+      },
+      {
+        "b": 2,
+        "block": [
+          1,
+          -1
+        ],
+        "minimal_recurrence_order": 1,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -2,
+            "root_exponent_mod_b": 1
+          }
+        ],
+        "reduced_denominator": "(1-T^b)/(1-T)",
+        "zero_value_z": -1
+      },
+      {
+        "b": 2,
+        "block": [
+          1,
+          2
+        ],
+        "minimal_recurrence_order": 2,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 3,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 1
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 2
+      },
+      {
+        "b": 3,
+        "block": [
+          1,
+          1,
+          1
+        ],
+        "minimal_recurrence_order": 1,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 3,
+            "root_exponent_mod_b": 0
+          }
+        ],
+        "reduced_denominator": "1-T",
+        "zero_value_z": 1
+      },
+      {
+        "b": 3,
+        "block": [
+          1,
+          1,
+          0
+        ],
+        "minimal_recurrence_order": 3,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 2,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 2
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 0
+      },
+      {
+        "b": 3,
+        "block": [
+          1,
+          1,
+          -2
+        ],
+        "minimal_recurrence_order": 2,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -3,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -3,
+            "root_exponent_mod_b": 2
+          }
+        ],
+        "reduced_denominator": "(1-T^b)/(1-T)",
+        "zero_value_z": -2
+      },
+      {
+        "b": 3,
+        "block": [
+          1,
+          1,
+          2
+        ],
+        "minimal_recurrence_order": 3,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 4,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 2
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 2
+      },
+      {
+        "b": 4,
+        "block": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "minimal_recurrence_order": 1,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 4,
+            "root_exponent_mod_b": 0
+          }
+        ],
+        "reduced_denominator": "1-T",
+        "zero_value_z": 1
+      },
+      {
+        "b": 4,
+        "block": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "minimal_recurrence_order": 4,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 3,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 3
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 0
+      },
+      {
+        "b": 4,
+        "block": [
+          1,
+          1,
+          1,
+          -3
+        ],
+        "minimal_recurrence_order": 3,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -4,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -4,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -4,
+            "root_exponent_mod_b": 3
+          }
+        ],
+        "reduced_denominator": "(1-T^b)/(1-T)",
+        "zero_value_z": -3
+      },
+      {
+        "b": 4,
+        "block": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "minimal_recurrence_order": 4,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 5,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 3
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 2
+      },
+      {
+        "b": 5,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "minimal_recurrence_order": 1,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 5,
+            "root_exponent_mod_b": 0
+          }
+        ],
+        "reduced_denominator": "1-T",
+        "zero_value_z": 1
+      },
+      {
+        "b": 5,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "minimal_recurrence_order": 5,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 4,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 4
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 0
+      },
+      {
+        "b": 5,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          -4
+        ],
+        "minimal_recurrence_order": 4,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -5,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -5,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -5,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -5,
+            "root_exponent_mod_b": 4
+          }
+        ],
+        "reduced_denominator": "(1-T^b)/(1-T)",
+        "zero_value_z": -4
+      },
+      {
+        "b": 5,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "minimal_recurrence_order": 5,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 6,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 4
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 2
+      },
+      {
+        "b": 6,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "minimal_recurrence_order": 1,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 6,
+            "root_exponent_mod_b": 0
+          }
+        ],
+        "reduced_denominator": "1-T",
+        "zero_value_z": 1
+      },
+      {
+        "b": 6,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "minimal_recurrence_order": 6,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 5,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 5
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 0
+      },
+      {
+        "b": 6,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          -5
+        ],
+        "minimal_recurrence_order": 5,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -6,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -6,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -6,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -6,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -6,
+            "root_exponent_mod_b": 5
+          }
+        ],
+        "reduced_denominator": "(1-T^b)/(1-T)",
+        "zero_value_z": -5
+      },
+      {
+        "b": 6,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "minimal_recurrence_order": 6,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 7,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 5
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 2
+      },
+      {
+        "b": 7,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "minimal_recurrence_order": 1,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 7,
+            "root_exponent_mod_b": 0
+          }
+        ],
+        "reduced_denominator": "1-T",
+        "zero_value_z": 1
+      },
+      {
+        "b": 7,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "minimal_recurrence_order": 7,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 6,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 6
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 0
+      },
+      {
+        "b": 7,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -6
+        ],
+        "minimal_recurrence_order": 6,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -7,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -7,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -7,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -7,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -7,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": -7,
+            "root_exponent_mod_b": 6
+          }
+        ],
+        "reduced_denominator": "(1-T^b)/(1-T)",
+        "zero_value_z": -6
+      },
+      {
+        "b": 7,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "minimal_recurrence_order": 7,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 8,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 6
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 2
+      },
+      {
+        "b": 8,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "minimal_recurrence_order": 1,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 8,
+            "root_exponent_mod_b": 0
+          }
+        ],
+        "reduced_denominator": "1-T",
+        "zero_value_z": 1
+      },
+      {
+        "b": 8,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "minimal_recurrence_order": 8,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 7,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 7
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 0
+      },
+      {
+        "b": 8,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -7
+        ],
+        "minimal_recurrence_order": 7,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -8,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -8,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -8,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -8,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -8,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": -8,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": -8,
+            "root_exponent_mod_b": 7
+          }
+        ],
+        "reduced_denominator": "(1-T^b)/(1-T)",
+        "zero_value_z": -7
+      },
+      {
+        "b": 8,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "minimal_recurrence_order": 8,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 9,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 7
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 2
+      },
+      {
+        "b": 9,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "minimal_recurrence_order": 1,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 9,
+            "root_exponent_mod_b": 0
+          }
+        ],
+        "reduced_denominator": "1-T",
+        "zero_value_z": 1
+      },
+      {
+        "b": 9,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "minimal_recurrence_order": 9,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 8,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 7
+          },
+          {
+            "fourier_omega_exponent_mod_b": 8,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 8
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 0
+      },
+      {
+        "b": 9,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -8
+        ],
+        "minimal_recurrence_order": 8,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -9,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -9,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -9,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -9,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -9,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": -9,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": -9,
+            "root_exponent_mod_b": 7
+          },
+          {
+            "fourier_omega_exponent_mod_b": 8,
+            "fourier_scalar": -9,
+            "root_exponent_mod_b": 8
+          }
+        ],
+        "reduced_denominator": "(1-T^b)/(1-T)",
+        "zero_value_z": -8
+      },
+      {
+        "b": 9,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "minimal_recurrence_order": 9,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 10,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 7
+          },
+          {
+            "fourier_omega_exponent_mod_b": 8,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 8
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 2
+      },
+      {
+        "b": 10,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "minimal_recurrence_order": 1,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 10,
+            "root_exponent_mod_b": 0
+          }
+        ],
+        "reduced_denominator": "1-T",
+        "zero_value_z": 1
+      },
+      {
+        "b": 10,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "minimal_recurrence_order": 10,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 9,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 7
+          },
+          {
+            "fourier_omega_exponent_mod_b": 8,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 8
+          },
+          {
+            "fourier_omega_exponent_mod_b": 9,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 9
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 0
+      },
+      {
+        "b": 10,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -9
+        ],
+        "minimal_recurrence_order": 9,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -10,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -10,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -10,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -10,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -10,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": -10,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": -10,
+            "root_exponent_mod_b": 7
+          },
+          {
+            "fourier_omega_exponent_mod_b": 8,
+            "fourier_scalar": -10,
+            "root_exponent_mod_b": 8
+          },
+          {
+            "fourier_omega_exponent_mod_b": 9,
+            "fourier_scalar": -10,
+            "root_exponent_mod_b": 9
+          }
+        ],
+        "reduced_denominator": "(1-T^b)/(1-T)",
+        "zero_value_z": -9
+      },
+      {
+        "b": 10,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "minimal_recurrence_order": 10,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 11,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 7
+          },
+          {
+            "fourier_omega_exponent_mod_b": 8,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 8
+          },
+          {
+            "fourier_omega_exponent_mod_b": 9,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 9
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 2
+      },
+      {
+        "b": 11,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "minimal_recurrence_order": 1,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 11,
+            "root_exponent_mod_b": 0
+          }
+        ],
+        "reduced_denominator": "1-T",
+        "zero_value_z": 1
+      },
+      {
+        "b": 11,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "minimal_recurrence_order": 11,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 10,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 7
+          },
+          {
+            "fourier_omega_exponent_mod_b": 8,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 8
+          },
+          {
+            "fourier_omega_exponent_mod_b": 9,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 9
+          },
+          {
+            "fourier_omega_exponent_mod_b": 10,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 10
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 0
+      },
+      {
+        "b": 11,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -10
+        ],
+        "minimal_recurrence_order": 10,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -11,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -11,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -11,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -11,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -11,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": -11,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": -11,
+            "root_exponent_mod_b": 7
+          },
+          {
+            "fourier_omega_exponent_mod_b": 8,
+            "fourier_scalar": -11,
+            "root_exponent_mod_b": 8
+          },
+          {
+            "fourier_omega_exponent_mod_b": 9,
+            "fourier_scalar": -11,
+            "root_exponent_mod_b": 9
+          },
+          {
+            "fourier_omega_exponent_mod_b": 10,
+            "fourier_scalar": -11,
+            "root_exponent_mod_b": 10
+          }
+        ],
+        "reduced_denominator": "(1-T^b)/(1-T)",
+        "zero_value_z": -10
+      },
+      {
+        "b": 11,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "minimal_recurrence_order": 11,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 12,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 7
+          },
+          {
+            "fourier_omega_exponent_mod_b": 8,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 8
+          },
+          {
+            "fourier_omega_exponent_mod_b": 9,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 9
+          },
+          {
+            "fourier_omega_exponent_mod_b": 10,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 10
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 2
+      },
+      {
+        "b": 12,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "minimal_recurrence_order": 1,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 12,
+            "root_exponent_mod_b": 0
+          }
+        ],
+        "reduced_denominator": "1-T",
+        "zero_value_z": 1
+      },
+      {
+        "b": 12,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "minimal_recurrence_order": 12,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 11,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 7
+          },
+          {
+            "fourier_omega_exponent_mod_b": 8,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 8
+          },
+          {
+            "fourier_omega_exponent_mod_b": 9,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 9
+          },
+          {
+            "fourier_omega_exponent_mod_b": 10,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 10
+          },
+          {
+            "fourier_omega_exponent_mod_b": 11,
+            "fourier_scalar": -1,
+            "root_exponent_mod_b": 11
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 0
+      },
+      {
+        "b": 12,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -11
+        ],
+        "minimal_recurrence_order": 11,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": -12,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": -12,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": -12,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": -12,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": -12,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": -12,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": -12,
+            "root_exponent_mod_b": 7
+          },
+          {
+            "fourier_omega_exponent_mod_b": 8,
+            "fourier_scalar": -12,
+            "root_exponent_mod_b": 8
+          },
+          {
+            "fourier_omega_exponent_mod_b": 9,
+            "fourier_scalar": -12,
+            "root_exponent_mod_b": 9
+          },
+          {
+            "fourier_omega_exponent_mod_b": 10,
+            "fourier_scalar": -12,
+            "root_exponent_mod_b": 10
+          },
+          {
+            "fourier_omega_exponent_mod_b": 11,
+            "fourier_scalar": -12,
+            "root_exponent_mod_b": 11
+          }
+        ],
+        "reduced_denominator": "(1-T^b)/(1-T)",
+        "zero_value_z": -11
+      },
+      {
+        "b": 12,
+        "block": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "minimal_recurrence_order": 12,
+        "nonzero_fourier_modes": [
+          {
+            "fourier_omega_exponent_mod_b": 0,
+            "fourier_scalar": 13,
+            "root_exponent_mod_b": 0
+          },
+          {
+            "fourier_omega_exponent_mod_b": 1,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 1
+          },
+          {
+            "fourier_omega_exponent_mod_b": 2,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 2
+          },
+          {
+            "fourier_omega_exponent_mod_b": 3,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 3
+          },
+          {
+            "fourier_omega_exponent_mod_b": 4,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 4
+          },
+          {
+            "fourier_omega_exponent_mod_b": 5,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 5
+          },
+          {
+            "fourier_omega_exponent_mod_b": 6,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 6
+          },
+          {
+            "fourier_omega_exponent_mod_b": 7,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 7
+          },
+          {
+            "fourier_omega_exponent_mod_b": 8,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 8
+          },
+          {
+            "fourier_omega_exponent_mod_b": 9,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 9
+          },
+          {
+            "fourier_omega_exponent_mod_b": 10,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 10
+          },
+          {
+            "fourier_omega_exponent_mod_b": 11,
+            "fourier_scalar": 1,
+            "root_exponent_mod_b": 11
+          }
+        ],
+        "reduced_denominator": "1-T^b",
+        "zero_value_z": 2
+      }
+    ],
+    "zero_value_is_required_L0_data": true
+  }
+}

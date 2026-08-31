@@ -1,0 +1,88 @@
+{
+  "authoring_base": "ec5bdd9b02ea68bddfcf34ac40a85d283faf64cf",
+  "contract": {
+    "analytic_claims_machine_certified": false,
+    "arithmetic_class": "MIXED",
+    "caps": {
+      "container_length": 5000,
+      "derivative_order": 16,
+      "feature_rows": 5,
+      "integer_bits": 4096,
+      "json_bytes": 3000000,
+      "json_depth": 24,
+      "json_nodes": 200000,
+      "matrix_dimension": 6,
+      "polynomial_length": 20,
+      "q_order": 4,
+      "string_length": 4096,
+      "work_units": 2000000
+    },
+    "components": [
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "no_period_theta_gamma_zeta_zero_evaluation": true,
+    "rounding": "none"
+  },
+  "final_control_design": "8cf1538b336acd2b60faba2d7129edba3676932c",
+  "frozen_sources": [
+    {
+      "commit": "b62dfc6348661992bca659c99de226a1b6b22e14",
+      "git_blob": "4a3f9f0b6644bffdc94214e6fb2b60dfafdd93ca",
+      "path": "research/l-families/atlas/generalized/RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT.md",
+      "sha256_lf": "1828196e08782ce692f28e3fdec2feae55c6d24e9b3eb5c35ff1c315434aee75"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "77820c6af8d089d22547db6cda5ba025ed96f84f",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md",
+      "sha256_lf": "d5c95db34c62d31e0bb735e09aae5599e3abf29194cd74a50ce1bbebafab1530"
+    },
+    {
+      "commit": "ec5bdd9b02ea68bddfcf34ac40a85d283faf64cf",
+      "git_blob": "ba8dd0d08aface85ef346106b158636177a88979",
+      "path": "research/l-families/atlas/generalized/CUSP_WEIGHT24_FIXED_DIVISOR_INFINITY.md",
+      "sha256_lf": "d8737b8551ddd71249b799a1a2ebd61cb2c0ad01bc15ca7954cb36fe73d2f26f"
+    },
+    {
+      "commit": "0f29fd2d687c57402a14723dde2bc2b7e74fa317",
+      "git_blob": "91c1896791ef94b6f1f753fa48bc48eb7e91df7b",
+      "path": "research/l-families/atlas/generalized/CUSP_WEIGHT24_FIXED_DIVISOR_INFINITY_AUDIT_EC5BDD9B.md",
+      "sha256_lf": "0e86da5a218b066a7d46aa5336d35817ce0c7ad4c8da89a12797e23eed309655"
+    },
+    {
+      "commit": "2bd3de4ec14077868a38def1ba8883c9b8feefb9",
+      "git_blob": "0071be9480527d0a53c03d57a66ebc795cff4a00",
+      "path": "research/l-families/atlas/generalized/CUSP_MATRIX_PERIOD_POSITIVITY.md",
+      "sha256_lf": "dbe1a0fdf5c4bd7d249c8891a088d0b088f08f9d5a2ab1c01afc0dfe83951e9b"
+    },
+    {
+      "commit": "aa93b79f38792aeffd55e44f0a6800ee255c2274",
+      "git_blob": "75b2efa3b065757866aa7ff554e58188e52cebd1",
+      "path": "research/l-families/atlas/generalized/CUSP_MATRIX_PERIOD_POSITIVITY.md",
+      "sha256_lf": "6d18b0599f1e6678a8e99869b5165dfb75a61acce65b7b839c93f5b49719e557"
+    },
+    {
+      "commit": "8cf1538b336acd2b60faba2d7129edba3676932c",
+      "git_blob": "5096f10f12da22a0c58dda1384d224a6bfd8b7ef",
+      "path": "research/l-families/atlas/generalized/CUSP_MATRIX_PERIOD_POSITIVITY.md",
+      "sha256_lf": "7b6b8e0db2d358332b00f2195d7c25149d47f8d9e20d77b09451e680e0f1ccfa"
+    }
+  ],
+  "references": [
+    {
+      "passage": "equations2,4,6,7 printed pp275-277; theta and completed Eisenstein normalization",
+      "url": "https://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinRiemannZeta/eisenstein-zeta-978-3-662-00734-1_10.pdf"
+    },
+    {
+      "passage": "Gamma and digamma asymptotics",
+      "url": "https://dlmf.nist.gov/5.11"
+    },
+    {
+      "passage": "classical quotient/shorted-form context; finite proof supplied",
+      "url": "https://doi.org/10.1137/0128007"
+    }
+  ],
+  "remote_bytes_authenticated": false,
+  "schema": "cusp_matrix_period_positivity-sources-v1"
+}

@@ -1,0 +1,428 @@
+{
+  "Hecke_calibration": {
+    "T2": [
+      [
+        696,
+        1
+      ],
+      [
+        20736000,
+        384
+      ]
+    ],
+    "coefficient_checks": 24,
+    "defect_coefficients": [
+      -995328000,
+      14976,
+      48
+    ]
+  },
+  "arithmetic_class": "EXACT_RATIONAL",
+  "artifact_sha256_lf": {
+    "research/l-families/atlas/generalized/RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT.md": "1828196e08782ce692f28e3fdec2feae55c6d24e9b3eb5c35ff1c315434aee75",
+    "research/l-families/atlas/generalized/rankin_selberg_quotient_global_parent.py": "214644425a7ee02aa145c14b8df45dc20d9dc5a8706f0e597657443728521098",
+    "research/l-families/atlas/generalized/rankin_selberg_quotient_global_parent.sources.json": "f7675378cf26d6d026959ebe718cf90f99245a8ab98c2ac229e29fe90ada6415",
+    "tests/test_rankin_selberg_quotient_global_parent.py": "db1df7d9c4dac3ab5a038e6d78a6647ec57c6611c477d9c8b40ead510bca16db"
+  },
+  "caps": {
+    "frequency_cutoff": 12,
+    "input_bits": 32,
+    "internal_bits": 4096,
+    "max_work": 200000,
+    "q_order": 24,
+    "series_terms": 256
+  },
+  "coverage": {
+    "finite_Gram_controls": 3,
+    "frequency_cutoffs": 4,
+    "independent_Delta_recurrence": true,
+    "q_coefficients_each": 24,
+    "unbounded_search": false,
+    "work_units": 12373
+  },
+  "finite_Gram_controls": [
+    {
+      "Gram": [
+        [
+          "484417",
+          "696"
+        ],
+        [
+          "696",
+          "1"
+        ]
+      ],
+      "formal_endpoint_residues": [
+        "1/2",
+        "-1/2"
+      ],
+      "line_scale": "1",
+      "not_an_evaluated_Petersson_or_Eisenstein_Gram": true,
+      "quotient": "1",
+      "shear": "0",
+      "weights": [
+        "1",
+        "1"
+      ]
+    },
+    {
+      "Gram": [
+        [
+          "52653037733/10",
+          "-7786936/5"
+        ],
+        [
+          "-7786936/5",
+          "6917/15"
+        ]
+      ],
+      "formal_endpoint_residues": [
+        "76565678117/27668",
+        "-76565678117/27668"
+      ],
+      "line_scale": "-3/2",
+      "not_an_evaluated_Petersson_or_Eisenstein_Gram": true,
+      "quotient": "76565678117/13834",
+      "shear": "2/3",
+      "weights": [
+        "1/2",
+        "1/3",
+        "1/5"
+      ]
+    },
+    {
+      "Gram": [
+        [
+          "4678287887184881285",
+          "-763956680511696"
+        ],
+        [
+          "-763956680511696",
+          "125240834914"
+        ]
+      ],
+      "formal_endpoint_residues": [
+        "1141435630319009145490194037/125240834914",
+        "-1141435630319009145490194037/125240834914"
+      ],
+      "line_scale": "2",
+      "not_an_evaluated_Petersson_or_Eisenstein_Gram": true,
+      "quotient": "1141435630319009145490194037/62620417457",
+      "shear": "-696",
+      "weights": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    }
+  ],
+  "first_three_direction_minors": [
+    1,
+    -48,
+    -195660
+  ],
+  "frequency_controls": [
+    {
+      "L_Q_zeta_times_F": {
+        "1": "1",
+        "3": "38282835600",
+        "4": "216298236674048",
+        "9/2": "-88203653222400"
+      },
+      "bare_F": {
+        "1": "1",
+        "3": "38282835600",
+        "4": "145929492496384",
+        "9/2": "-88203653222400"
+      },
+      "cutoff": "9/2",
+      "first_noninteger_coefficient_in_w_coordinates": -88203653222400,
+      "first_noninteger_frequency": "9/2",
+      "full_q_tail_and_word_coverage_by_RQ10": true,
+      "max_geometric_depth": 0,
+      "next_depth_min_frequency": "27/4"
+    },
+    {
+      "L_Q_zeta_times_F": {
+        "1": "1",
+        "3": "38282835600",
+        "4": "216298236674048",
+        "5": "1994168160332100",
+        "6": "1210362754036137984",
+        "9/2": "-88203653222400"
+      },
+      "bare_F": {
+        "1": "1",
+        "3": "38282835600",
+        "4": "145929492496384",
+        "5": "1994168160332100",
+        "6": "1210362754036137984",
+        "9/2": "-88203653222400"
+      },
+      "cutoff": "6",
+      "first_noninteger_coefficient_in_w_coordinates": -88203653222400,
+      "first_noninteger_frequency": "9/2",
+      "full_q_tail_and_word_coverage_by_RQ10": true,
+      "max_geometric_depth": 0,
+      "next_depth_min_frequency": "27/4"
+    },
+    {
+      "L_Q_zeta_times_F": {
+        "1": "1",
+        "3": "38282835600",
+        "4": "216298236674048",
+        "5": "1994168160332100",
+        "6": "1210362754036137984",
+        "7": "21681749687617600",
+        "8": "318473460521946316800",
+        "9": "5822756046404299728018",
+        "10": "112296330872932899225600",
+        "15/2": "-12615428526557184000",
+        "27/4": "203221217024409600",
+        "9/2": "-88203653222400"
+      },
+      "bare_F": {
+        "1": "1",
+        "3": "38282835600",
+        "4": "145929492496384",
+        "5": "1994168160332100",
+        "6": "1210362754036137984",
+        "7": "21681749687617600",
+        "8": "318473460521946316800",
+        "9": "-3040182073248201367911",
+        "10": "112296330872932899225600",
+        "15/2": "-12615428526557184000",
+        "27/4": "203221217024409600",
+        "9/2": "-88203653222400"
+      },
+      "cutoff": "10",
+      "first_noninteger_coefficient_in_w_coordinates": -88203653222400,
+      "first_noninteger_frequency": "9/2",
+      "full_q_tail_and_word_coverage_by_RQ10": true,
+      "max_geometric_depth": 1,
+      "next_depth_min_frequency": "81/8"
+    },
+    {
+      "L_Q_zeta_times_F": {
+        "1": "1",
+        "3": "38282835600",
+        "4": "216298236674048",
+        "5": "1994168160332100",
+        "6": "1210362754036137984",
+        "7": "21681749687617600",
+        "8": "318473460521946316800",
+        "9": "5822756046404299728018",
+        "10": "112296330872932899225600",
+        "11": "166071181243207236497424",
+        "12": "10200933389813681435443200",
+        "15/2": "-12615428526557184000",
+        "21/2": "2726589966641875353600",
+        "27/4": "203221217024409600",
+        "45/4": "49017754809939787776000",
+        "81/8": "-468221684024239718400",
+        "9/2": "-88203653222400"
+      },
+      "bare_F": {
+        "1": "1",
+        "3": "38282835600",
+        "4": "145929492496384",
+        "5": "1994168160332100",
+        "6": "1210362754036137984",
+        "7": "21681749687617600",
+        "8": "318473460521946316800",
+        "9": "-3040182073248201367911",
+        "10": "112296330872932899225600",
+        "11": "166071181243207236497424",
+        "12": "7507018325081713331404800",
+        "15/2": "-12615428526557184000",
+        "21/2": "2726589966641875353600",
+        "27/4": "203221217024409600",
+        "45/4": "49017754809939787776000",
+        "81/8": "-468221684024239718400",
+        "9/2": "-88203653222400"
+      },
+      "cutoff": "12",
+      "first_noninteger_coefficient_in_w_coordinates": -88203653222400,
+      "first_noninteger_frequency": "9/2",
+      "full_q_tail_and_word_coverage_by_RQ10": true,
+      "max_geometric_depth": 2,
+      "next_depth_min_frequency": "243/16"
+    }
+  ],
+  "schema": "rankin-selberg-quotient-global-parent-v1",
+  "scope": {
+    "RH_GRH_or_novelty_claim": false,
+    "additional_denominator_zero_poles_allowed": true,
+    "all_possible_direct_sum_representations_excluded": false,
+    "analytic_proof_machine_verified": false,
+    "canonical_relative_to_cusp_flag": true,
+    "classical_period_source": true,
+    "completed_endpoint_poles": [
+      0,
+      1
+    ],
+    "completed_reflection_by_written_proof": true,
+    "generalized_prime_systems_excluded": false,
+    "new_automorphic_representation": false,
+    "numerical_period_or_zero_samples": 0,
+    "ordinary_absolutely_convergent_Dirichlet_series_excluded": true,
+    "ordinary_prime_absolutely_expandable_Euler_product_excluded": true,
+    "positivity_only_claimed_real_sigma_gt_one": true
+  },
+  "source_authentication": {
+    "analytic_imports_formally_verified": false,
+    "context_source_count": 1,
+    "manifest_sha256_canonical_json": "a0cfa61d1ce68b0df9fcf6d0291e2a2f477d49841da4e1be9cec6a85eed6adf1",
+    "remote_bytes_authenticated": false
+  },
+  "source_q_rows": [
+    [
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      2,
+      696,
+      1,
+      0
+    ],
+    [
+      3,
+      162252,
+      -48,
+      195660
+    ],
+    [
+      4,
+      12831808,
+      1080,
+      12080128
+    ],
+    [
+      5,
+      34188270,
+      -15040,
+      44656110
+    ],
+    [
+      6,
+      -882400608,
+      143820,
+      -982499328
+    ],
+    [
+      7,
+      -833380744,
+      -985824,
+      -147247240
+    ],
+    [
+      8,
+      25487347200,
+      4857920,
+      22106234880
+    ],
+    [
+      9,
+      -20041723323,
+      -16295040,
+      -8700375483
+    ],
+    [
+      10,
+      -288074404080,
+      28412910,
+      -307849789440
+    ],
+    [
+      11,
+      434433753732,
+      38671600,
+      407518320132
+    ],
+    [
+      12,
+      1007032271616,
+      -424520544,
+      1302498570240
+    ],
+    [
+      13,
+      2385917303462,
+      1268350272,
+      1503145514150
+    ],
+    [
+      14,
+      -21022079461824,
+      -1211937160,
+      -20178571198464
+    ],
+    [
+      15,
+      20516848304040,
+      -4306546080,
+      23514204375720
+    ],
+    [
+      16,
+      10832015527936,
+      18293091840,
+      -1899976392704
+    ],
+    [
+      17,
+      123344605696626,
+      -23522231424,
+      139716078767730
+    ],
+    [
+      18,
+      -351842988872808,
+      -26299018683,
+      -333538871869440
+    ],
+    [
+      19,
+      23536401203900,
+      137218594320,
+      -71967740442820
+    ],
+    [
+      20,
+      101878321292160,
+      -150999182320,
+      206973752186880
+    ],
+    [
+      21,
+      846000537796512,
+      -134713340160,
+      939761022547872
+    ],
+    [
+      22,
+      1104260190197472,
+      449283648132,
+      791558771097600
+    ],
+    [
+      23,
+      -4088944650338328,
+      -106334043808,
+      -4014936155847960
+    ],
+    [
+      24,
+      -699850739865600,
+      -362433219840,
+      -447597218856960
+    ]
+  ],
+  "status": "PROPOSED_NATIVE_THEOREM_WITH_CLASSICAL_IMPORTS_REQUIRING_REVIEW"
+}

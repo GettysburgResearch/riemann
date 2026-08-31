@@ -1,0 +1,695 @@
+{
+  "claims": {
+    "GLO764.DENSE_ORBIT_FINITE_SPECTRUM": {
+      "scope": "continuous pi-periodic functions sampled on an irrational orbit",
+      "statement": "an eventual constant-coefficient recurrence forces finite Fourier support",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY": {
+      "scope": "theta in (0,pi), theta/pi irrational, x=2*cos(theta), real lambda>=0",
+      "statement": "sum_r |u_r(x)|^lambda*T^r is rational iff lambda is an even nonnegative integer",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.IRRATIONAL_ROTATION_EVEN_POWER_MINIMAL_DENOMINATOR": {
+      "scope": "lambda=2m with m>=0 under the same irrationality hypothesis",
+      "statement": "the reduced denominator is product_(k=-m)^m(1-exp(2*i*k*theta)*T), of degree 2m+1",
+      "status": "PROVED_IN_COMPANION_NOTE_AND_EXACTLY_REPLAYED"
+    }
+  },
+  "cusp_controls": {
+    "general_classification_proved_in_note": "C_infinity iff lambda is an even nonnegative integer",
+    "local_model": "|sin(t)|^lambda=|t|^lambda*h_lambda(t)",
+    "rows": [
+      {
+        "classification": "EVEN_NONNEGATIVE_INTEGER",
+        "first_failed_derivative_order": null,
+        "lambda": "0",
+        "smooth": true
+      },
+      {
+        "classification": "NONINTEGER_REAL_CONTROL",
+        "first_failed_derivative_order": 1,
+        "lambda": "1/2",
+        "smooth": false
+      },
+      {
+        "classification": "ODD_POSITIVE_INTEGER",
+        "first_failed_derivative_order": 1,
+        "lambda": "1",
+        "smooth": false
+      },
+      {
+        "classification": "NONINTEGER_REAL_CONTROL",
+        "first_failed_derivative_order": 2,
+        "lambda": "3/2",
+        "smooth": false
+      },
+      {
+        "classification": "EVEN_NONNEGATIVE_INTEGER",
+        "first_failed_derivative_order": null,
+        "lambda": "2",
+        "smooth": true
+      },
+      {
+        "classification": "NONINTEGER_REAL_CONTROL",
+        "first_failed_derivative_order": 3,
+        "lambda": "5/2",
+        "smooth": false
+      },
+      {
+        "classification": "ODD_POSITIVE_INTEGER",
+        "first_failed_derivative_order": 3,
+        "lambda": "3",
+        "smooth": false
+      },
+      {
+        "classification": "EVEN_NONNEGATIVE_INTEGER",
+        "first_failed_derivative_order": null,
+        "lambda": "4",
+        "smooth": true
+      }
+    ],
+    "smooth_positive_factor": "h_lambda(t)=|sin(t)/t|^lambda near zero"
+  },
+  "dense_orbit_fourier_gate": {
+    "continuity_extends_identity_to_all_translates": true,
+    "eventual_recurrence_to_translate_identity": true,
+    "finite_fourier_support_implies_trigonometric_polynomial": true,
+    "fourier_multiplier": "P(exp(2*i*k*theta))*f_hat(k)=0",
+    "multipliers_pairwise_distinct": true,
+    "nonzero_polynomial_has_only_finitely_many_multiplier_zeros": true,
+    "tail_orbit_dense_modulo_pi": true,
+    "trigonometric_polynomial_is_C_infinity": true
+  },
+  "even_power_replay": {
+    "lambda_zero_handled_separately": {
+      "generating_function": "1/(1-T)",
+      "minimal_order": 1,
+      "sequence": "1,1,1,..."
+    },
+    "maximum_m": 6,
+    "rows": [
+      {
+        "all_fourier_coefficients_nonzero": true,
+        "characteristic_root_exponents_k": [
+          0
+        ],
+        "fourier_convention": "sin(t)^(2m)=2^(-2m)*sum_k c_k*exp(2*i*k*t)",
+        "inherited_normalized_u_power_numerator_certificate": {
+          "canonical_payload_sha256": "5b524f570e940c3f1b6294e1488e6b3708c85f78bb982e235be00c6ec5444a86",
+          "degree": 0
+        },
+        "lambda": 0,
+        "m": 0,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "177d653fdc76e9ca929e33d338b8c3332e5cf4c2cdc45fb1e25b9ae1cc866f3b",
+          "degree": 1
+        },
+        "minimal_recurrence_order": 1,
+        "roots_distinct_under_theta_over_pi_irrational": true,
+        "scaled_fourier_coefficients": [
+          {
+            "c_k": 1,
+            "k": 0
+          }
+        ],
+        "scaled_sine_power_numerator_certificate": {
+          "canonical_payload_sha256": "ad9b3250337c32ce011e40574c6d1f8cf9cb079cfebc3aa77b54439b0c70996f",
+          "degree": 0
+        },
+        "tail_annihilation_checked_through_index": 3
+      },
+      {
+        "all_fourier_coefficients_nonzero": true,
+        "characteristic_root_exponents_k": [
+          -1,
+          0,
+          1
+        ],
+        "fourier_convention": "sin(t)^(2m)=2^(-2m)*sum_k c_k*exp(2*i*k*t)",
+        "inherited_normalized_u_power_numerator_certificate": {
+          "canonical_payload_sha256": "bf8520bfdf33b6f3fea41185ed2793c79ca83b7a6ced3af6068679367b7a991f",
+          "degree": 1
+        },
+        "lambda": 2,
+        "m": 1,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "c80f4724a680dc99204519c328bff29f945712db05f1fc45fe5c22564031903c",
+          "degree": 3
+        },
+        "minimal_recurrence_order": 3,
+        "roots_distinct_under_theta_over_pi_irrational": true,
+        "scaled_fourier_coefficients": [
+          {
+            "c_k": -1,
+            "k": -1
+          },
+          {
+            "c_k": 2,
+            "k": 0
+          },
+          {
+            "c_k": -1,
+            "k": 1
+          }
+        ],
+        "scaled_sine_power_numerator_certificate": {
+          "canonical_payload_sha256": "311c07375b11045dcbafcaae5538bd65f89ad3ebecb9b1a8b1e0d4e1f644a1aa",
+          "degree": 1
+        },
+        "tail_annihilation_checked_through_index": 9
+      },
+      {
+        "all_fourier_coefficients_nonzero": true,
+        "characteristic_root_exponents_k": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "fourier_convention": "sin(t)^(2m)=2^(-2m)*sum_k c_k*exp(2*i*k*t)",
+        "inherited_normalized_u_power_numerator_certificate": {
+          "canonical_payload_sha256": "5a9a9778e240db2e568bb6df992519d6c8b2ab245e2bb519cdcc48d924e90156",
+          "degree": 3
+        },
+        "lambda": 4,
+        "m": 2,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "c746ed60f0092a54665c0d40e9c2ad4fd0004ece178fa974ba8350c9058a1824",
+          "degree": 5
+        },
+        "minimal_recurrence_order": 5,
+        "roots_distinct_under_theta_over_pi_irrational": true,
+        "scaled_fourier_coefficients": [
+          {
+            "c_k": 1,
+            "k": -2
+          },
+          {
+            "c_k": -4,
+            "k": -1
+          },
+          {
+            "c_k": 6,
+            "k": 0
+          },
+          {
+            "c_k": -4,
+            "k": 1
+          },
+          {
+            "c_k": 1,
+            "k": 2
+          }
+        ],
+        "scaled_sine_power_numerator_certificate": {
+          "canonical_payload_sha256": "7029e30ab446426e579bfa8fcb1a0025117b9e5bea095e7f301a457d3e617202",
+          "degree": 3
+        },
+        "tail_annihilation_checked_through_index": 15
+      },
+      {
+        "all_fourier_coefficients_nonzero": true,
+        "characteristic_root_exponents_k": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ],
+        "fourier_convention": "sin(t)^(2m)=2^(-2m)*sum_k c_k*exp(2*i*k*t)",
+        "inherited_normalized_u_power_numerator_certificate": {
+          "canonical_payload_sha256": "c16d3e789275527a6b899c7dc51b796b4a276283bfe4d66996e51565e4b8fdc2",
+          "degree": 5
+        },
+        "lambda": 6,
+        "m": 3,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "1df164250db4d210aed2770c76f9116d3fe9add17d0736b79bccbf59ea911413",
+          "degree": 7
+        },
+        "minimal_recurrence_order": 7,
+        "roots_distinct_under_theta_over_pi_irrational": true,
+        "scaled_fourier_coefficients": [
+          {
+            "c_k": -1,
+            "k": -3
+          },
+          {
+            "c_k": 6,
+            "k": -2
+          },
+          {
+            "c_k": -15,
+            "k": -1
+          },
+          {
+            "c_k": 20,
+            "k": 0
+          },
+          {
+            "c_k": -15,
+            "k": 1
+          },
+          {
+            "c_k": 6,
+            "k": 2
+          },
+          {
+            "c_k": -1,
+            "k": 3
+          }
+        ],
+        "scaled_sine_power_numerator_certificate": {
+          "canonical_payload_sha256": "0161cbb9277db0daa6462539cf21b79aa8b3090a65ef306da861548f79bed888",
+          "degree": 5
+        },
+        "tail_annihilation_checked_through_index": 21
+      },
+      {
+        "all_fourier_coefficients_nonzero": true,
+        "characteristic_root_exponents_k": [
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "fourier_convention": "sin(t)^(2m)=2^(-2m)*sum_k c_k*exp(2*i*k*t)",
+        "inherited_normalized_u_power_numerator_certificate": {
+          "canonical_payload_sha256": "22d802fc6ef637c41738f391b253b5b54457e53ee7cab427caffd847c453c552",
+          "degree": 7
+        },
+        "lambda": 8,
+        "m": 4,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "e1eba433c18c202aae8cec4a82635a2b3092398c699cffd2ecf6b4346b988327",
+          "degree": 9
+        },
+        "minimal_recurrence_order": 9,
+        "roots_distinct_under_theta_over_pi_irrational": true,
+        "scaled_fourier_coefficients": [
+          {
+            "c_k": 1,
+            "k": -4
+          },
+          {
+            "c_k": -8,
+            "k": -3
+          },
+          {
+            "c_k": 28,
+            "k": -2
+          },
+          {
+            "c_k": -56,
+            "k": -1
+          },
+          {
+            "c_k": 70,
+            "k": 0
+          },
+          {
+            "c_k": -56,
+            "k": 1
+          },
+          {
+            "c_k": 28,
+            "k": 2
+          },
+          {
+            "c_k": -8,
+            "k": 3
+          },
+          {
+            "c_k": 1,
+            "k": 4
+          }
+        ],
+        "scaled_sine_power_numerator_certificate": {
+          "canonical_payload_sha256": "7608816d43fc335031754b3bed7c88fc683800af1bbf14356223e3e09ca30d85",
+          "degree": 7
+        },
+        "tail_annihilation_checked_through_index": 27
+      },
+      {
+        "all_fourier_coefficients_nonzero": true,
+        "characteristic_root_exponents_k": [
+          -5,
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "fourier_convention": "sin(t)^(2m)=2^(-2m)*sum_k c_k*exp(2*i*k*t)",
+        "inherited_normalized_u_power_numerator_certificate": {
+          "canonical_payload_sha256": "b15dadeb31f3f55da3f2f5f9c7e22c5460b0de3b6fb4f683a6e26a6b4d056322",
+          "degree": 9
+        },
+        "lambda": 10,
+        "m": 5,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "0f733cbd439175c649cefccdebfbecf6613a7f749bf09d86da6b9f31f570b4ca",
+          "degree": 11
+        },
+        "minimal_recurrence_order": 11,
+        "roots_distinct_under_theta_over_pi_irrational": true,
+        "scaled_fourier_coefficients": [
+          {
+            "c_k": -1,
+            "k": -5
+          },
+          {
+            "c_k": 10,
+            "k": -4
+          },
+          {
+            "c_k": -45,
+            "k": -3
+          },
+          {
+            "c_k": 120,
+            "k": -2
+          },
+          {
+            "c_k": -210,
+            "k": -1
+          },
+          {
+            "c_k": 252,
+            "k": 0
+          },
+          {
+            "c_k": -210,
+            "k": 1
+          },
+          {
+            "c_k": 120,
+            "k": 2
+          },
+          {
+            "c_k": -45,
+            "k": 3
+          },
+          {
+            "c_k": 10,
+            "k": 4
+          },
+          {
+            "c_k": -1,
+            "k": 5
+          }
+        ],
+        "scaled_sine_power_numerator_certificate": {
+          "canonical_payload_sha256": "4483151f12ba5ebb158480779ffedd30a7c9f51f0f6b5f3e37c6af8df2d9ef3c",
+          "degree": 9
+        },
+        "tail_annihilation_checked_through_index": 33
+      },
+      {
+        "all_fourier_coefficients_nonzero": true,
+        "characteristic_root_exponents_k": [
+          -6,
+          -5,
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "fourier_convention": "sin(t)^(2m)=2^(-2m)*sum_k c_k*exp(2*i*k*t)",
+        "inherited_normalized_u_power_numerator_certificate": {
+          "canonical_payload_sha256": "0129bd648a263b63e7de4f611cddd88f35c27065f8b3cbe98c929fd4a52648ac",
+          "degree": 11
+        },
+        "lambda": 12,
+        "m": 6,
+        "minimal_denominator_certificate": {
+          "canonical_payload_sha256": "fcfad135b224e438dbe1ff5994f0bf0b1feace8e6aa8d05ee29aea5009098877",
+          "degree": 13
+        },
+        "minimal_recurrence_order": 13,
+        "roots_distinct_under_theta_over_pi_irrational": true,
+        "scaled_fourier_coefficients": [
+          {
+            "c_k": 1,
+            "k": -6
+          },
+          {
+            "c_k": -12,
+            "k": -5
+          },
+          {
+            "c_k": 66,
+            "k": -4
+          },
+          {
+            "c_k": -220,
+            "k": -3
+          },
+          {
+            "c_k": 495,
+            "k": -2
+          },
+          {
+            "c_k": -792,
+            "k": -1
+          },
+          {
+            "c_k": 924,
+            "k": 0
+          },
+          {
+            "c_k": -792,
+            "k": 1
+          },
+          {
+            "c_k": 495,
+            "k": 2
+          },
+          {
+            "c_k": -220,
+            "k": 3
+          },
+          {
+            "c_k": 66,
+            "k": 4
+          },
+          {
+            "c_k": -12,
+            "k": 5
+          },
+          {
+            "c_k": 1,
+            "k": 6
+          }
+        ],
+        "scaled_sine_power_numerator_certificate": {
+          "canonical_payload_sha256": "86dca05acbe9438b7c4558e2aa34e515cfebd1f6fa19a03daaa2cce53ece7728",
+          "degree": 11
+        },
+        "tail_annihilation_checked_through_index": 39
+      }
+    ]
+  },
+  "hostile_controls": {
+    "finite_controls_are_not_the_dense_orbit_proof": true,
+    "rational_rotation_counterexample": {
+      "absolute_power_pattern": [
+        "1",
+        "0",
+        "1",
+        "0"
+      ],
+      "generating_function": "1/(1-T^2)",
+      "lambda": "1/2",
+      "purpose": "irrationality is essential; this case is outside the theorem",
+      "theta_over_pi": "1/2",
+      "u_prefix": [
+        1,
+        0,
+        -1,
+        0,
+        1,
+        0,
+        -1,
+        0
+      ],
+      "verdict": "RATIONAL_DESPITE_NON_EVEN_LAMBDA",
+      "x": "0"
+    }
+  },
+  "normalization": {
+    "absolute_power": "a_r=|u_r|^lambda for real lambda>=0",
+    "lambda_zero_convention": "a_r=1; no zero-to-zero ambiguity occurs",
+    "nonvanishing": "u_r!=0 for every r because theta/pi is irrational",
+    "recurrence": "u_0=1; u_1=x; u_(r+2)=x*u_(r+1)-u_r",
+    "theta_domain": "theta in (0,pi) with theta/pi irrational",
+    "trace": "x=2*cos(theta) in (-2,2)",
+    "trigonometric_form": "u_r=sin((r+1)*theta)/sin(theta)"
+  },
+  "novelty_firewall": {
+    "external_specialist_novelty_review_required": true,
+    "proof_uses_standard_recurrence_and_fourier_facts": true,
+    "self_contained_proof_is_not_a_priority_claim": true
+  },
+  "payload_sha256": "6d2e2dbac27472638678dd692324dfa17a8299b3eb54120745150cc6b6d15698",
+  "producer": {
+    "note": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+    "note_sha256_lf_normalized": "213efe84034449a7ece87b273653bc683c11b28ea4f62e599e3f2b0bbac7c8a2",
+    "script": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.py",
+    "script_sha256_lf_normalized": "e6e1bf91db5c91f7a5320ecfb5ec40cb1f37ad91e0ea15a3918c44e5b39ff3c7",
+    "test": "tests/test_irrational_rotation_absolute_power_rationality.py",
+    "test_sha256_lf_normalized": "7e6afa0c92493ba80bc932a290a87601e26364ceba7c803d7d4a07cc8b100eb4"
+  },
+  "programme_issue": 764,
+  "resource_contract": {
+    "arithmetic_class": "EXACT_RATIONAL",
+    "declared_work_units": 5153,
+    "exact_method": "integer and rational Laurent-polynomial, Fourier, recurrence, cusp-control, and formal coefficient algebra",
+    "external_symbolic_engine": false,
+    "float_operations": 0,
+    "maximum_allowed_m": 10,
+    "maximum_m": 6,
+    "prime_curve_field_zero_or_conductor_enumerations": 0,
+    "random_samples": 0,
+    "theta_handling": "SYMBOLIC_IRRATIONAL_ROTATION_HYPOTHESIS",
+    "work_unit_cap_exclusive": 50000
+  },
+  "schema": "riemann.atlas.generalized.irrational_rotation_absolute_power_rationality.v1",
+  "scope_firewall": {
+    "absolute_powers_erase_phase_and_are_not_complex_powers": true,
+    "does_not_classify_signed_or_branched_noninteger_powers": true,
+    "does_not_construct_a_global_Euler_product": true,
+    "does_not_give_a_uniform_statement_over_primes": true,
+    "does_not_prove_automorphy_motivic_origin_or_categorical_no_go": true,
+    "does_not_supply_ramified_factors_completion_or_functional_equation": true,
+    "external_novelty_unreviewed": true,
+    "no_RH_GRH_or_zero_distribution_consequence": true,
+    "one_unramified_determinant_one_local_recurrence": true,
+    "rational_rotations_excluded_and_can_be_counterexamples": true,
+    "tempered_irrational_rotation_only": true
+  },
+  "sources_manifest": {
+    "base_commit": "f2f8044fb867fa7f109be92350f3f194479d36c6",
+    "external_references": [
+      {
+        "authors": "Oliver Knill and John Lesieutre",
+        "boundary": "nearby irrational-rotation Taylor-series theory: trigonometric-polynomial meromorphic continuation and natural-boundary results under additional smoothness, Fourier-support, and Diophantine hypotheses; not the exact rationality classification proved here",
+        "title": "Analytic continuation of Dirichlet series with almost periodic coefficients",
+        "url": "https://abel.math.harvard.edu/~knill/kam/papers/denjoy/index.html"
+      }
+    ],
+    "file_sha256_lf_normalized": "4f070750c83d04ed1ed74a5ddcdd42c6b6ce0746a548ce11a3086b6fc37da66b",
+    "imported_parent_state_commit": "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+    "path": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+    "scope_firewall": {
+      "absolute_powers_not_complex_powers": true,
+      "external_novelty_unreviewed": true,
+      "no_RH_GRH_or_zero_distribution_consequence": true,
+      "no_automorphy_motive_or_categorical_no_go": true,
+      "no_completion_or_functional_equation_claim": true,
+      "no_global_euler_product_constructed": true,
+      "no_uniform_statement_over_primes": true,
+      "one_unramified_determinant_one_local_recurrence": true,
+      "rational_rotations_excluded": true,
+      "tempered_irrational_rotation_only": true
+    },
+    "verified_sources": [
+      {
+        "file_sha256_lf_normalized": "587b42bd2f52de05018d94e6336b608388f5d381e82264b1614ddea12d314828",
+        "git_blob": "67e5dfa63684078586e4727530d7b9e66d557636",
+        "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.json",
+        "payload_sha256": "d809d5bed68618ff8dc9fd657b6c63c9cd0c8eca9ea83ffedda0b6d84a4ce7c3",
+        "role": "adjacent exact integer-power denominator and numerator replay",
+        "schema": "riemann.atlas.generalized.nonintegral_local_power_rationality.v1"
+      },
+      {
+        "file_sha256_lf_normalized": "fba40d932e947c81441cf7a9187e5915ed7e227bf2b2d1167ffb0a648599467e",
+        "git_blob": "e3cac8b29d38717157253b5b31e24e78434ce8c0",
+        "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
+        "role": "reused exact Laurent, Dickson, canonical-hash, and resource-contract implementation"
+      },
+      {
+        "file_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c",
+        "git_blob": "5eeb1e7c6129646ac646c697276bcd4adb04aa0c",
+        "path": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+        "role": "adjacent hyperbolic-chamber theorem and scalar-versus-full-factor firewall"
+      },
+      {
+        "file_sha256_lf_normalized": "99df382aaf78cec91f474f6a10cdce6a41370f9a2ad3c68645bb2cd571ceca6b",
+        "git_blob": "db48a8a7f44d2e768b248a162cf3c48c71ac4494",
+        "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+        "role": "inherited atlas normalization and provenance boundary"
+      }
+    ]
+  },
+  "status": "PROPOSED_EXACT_LOCAL_THEOREM_EXTERNAL_NOVELTY_UNREVIEWED",
+  "survival_ladder": {
+    "levels": {
+      "L0": "well-defined and branch-independent",
+      "L1": "coefficient or local multiplicativity",
+      "L2": "formal Euler product",
+      "L3": "uniform bounded-degree rational local factors",
+      "L4": "weight, determinant, duality, and ramified-prime coherence",
+      "L5": "canonical conductor, gamma factors, and root number",
+      "L6": "analytic continuation and functional equation",
+      "L7": "twist, tensor, induction, and contragredient compatibility",
+      "L8": "automorphic, motivic, spectral, dynamical, or categorical realization",
+      "L9": "principled explicit formula, positivity, or zero theory"
+    },
+    "rows": [
+      {
+        "first_unresolved_level": "L4",
+        "object": "absolute power lambda=2m on an irrational tempered orbit",
+        "statuses": {
+          "L0": "PROVED_PASS",
+          "L1": "PROVED_PASS_IF_THE_INPUT_COEFFICIENT_SYSTEM_IS_MULTIPLICATIVE",
+          "L2": "PROVED_PASS_AS_A_FORMAL_EULER_PRODUCT_UNDER_L1",
+          "L3": "PROVED_PASS_LOCALLY_WITH_MINIMAL_DEGREE_2M_PLUS_1",
+          "L4": "NOT_ESTABLISHED_BY_THIS_PACKET",
+          "L5": "NOT_ESTABLISHED",
+          "L6": "NOT_ESTABLISHED",
+          "L7": "NOT_ESTABLISHED",
+          "L8": "NOT_ESTABLISHED",
+          "L9": "NOT_ESTABLISHED"
+        }
+      },
+      {
+        "first_failure_level": "L3",
+        "object": "absolute power lambda>=0 not an even integer",
+        "statuses": {
+          "L0": "PROVED_PASS_ON_THE_IRRATIONAL_ORBIT",
+          "L1": "PROVED_PASS_IF_THE_INPUT_COEFFICIENT_SYSTEM_IS_MULTIPLICATIVE",
+          "L2": "PROVED_PASS_AS_A_FORMAL_EULER_PRODUCT_UNDER_L1",
+          "L3": "PROVED_FAIL_AT_EACH_IRRATIONAL_ROTATION_LOCAL_RECURRENCE",
+          "L4": "NOT_REACHED",
+          "L5": "NOT_REACHED",
+          "L6": "NOT_REACHED",
+          "L7": "NOT_REACHED",
+          "L8": "NO_INFINITE_DIMENSIONAL_OR_CATEGORICAL_NO_GO",
+          "L9": "NOT_REACHED"
+        }
+      }
+    ]
+  }
+}

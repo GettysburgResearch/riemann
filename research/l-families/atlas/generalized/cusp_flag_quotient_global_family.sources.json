@@ -1,0 +1,85 @@
+{
+  "authoring_base": "8e9f05211954e0a7aae5e63c9367f1d520d3671d",
+  "external_contracts": [
+    {
+      "contract": "Duke-Jenkins equations2-8 and Corollary1: canonical integral basis and weight-two coefficient duality",
+      "remote_bytes_authenticated": false,
+      "url": "https://www.math.ucla.edu/~wdduke/preprints/serre.pdf"
+    },
+    {
+      "contract": "Stein Lemma2.20: Miller basis and triangular integral construction; original thesis not inspected",
+      "remote_bytes_authenticated": false,
+      "url": "https://wstein.org/books/modform/modform/level_one.html#the-miller-basis"
+    },
+    {
+      "contract": "Miller-Schmid1.7-1.14: unfolding; completed reflected pole corrected using Zagier",
+      "remote_bytes_authenticated": false,
+      "url": "https://arxiv.org/pdf/math/0605783"
+    },
+    {
+      "contract": "Zagier1(a)-(c): completed Eisenstein poles0,1, reflection, growth and period",
+      "remote_bytes_authenticated": false,
+      "url": "https://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinRiemannZeta/eisenstein-zeta-978-3-662-00734-1_10.pdf"
+    },
+    {
+      "contract": "Anderson-Trapp1975: classical shorted-form boundary, not an imported proof dependency",
+      "remote_bytes_authenticated": false,
+      "url": "https://doi.org/10.1137/0128007"
+    },
+    {
+      "contract": "Boecherer-Chiera2008: adjacent Rankin-Selberg/Petersson work, no exact-quotient priority inference",
+      "remote_bytes_authenticated": false,
+      "url": "https://www.numdam.org/item/AIF_2008__58_3_801_0/"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "b62dfc6348661992bca659c99de226a1b6b22e14",
+      "git_blob": "4a3f9f0b6644bffdc94214e6fb2b60dfafdd93ca",
+      "path": "research/l-families/atlas/generalized/RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT.md",
+      "sha256_lf": "1828196e08782ce692f28e3fdec2feae55c6d24e9b3eb5c35ff1c315434aee75"
+    },
+    {
+      "commit": "b62dfc6348661992bca659c99de226a1b6b22e14",
+      "git_blob": "524c8ce891d79d751a324f70528e95e12bd5bc00",
+      "path": "research/l-families/atlas/generalized/rankin_selberg_quotient_global_parent.py",
+      "sha256_lf": "214644425a7ee02aa145c14b8df45dc20d9dc5a8706f0e597657443728521098"
+    },
+    {
+      "commit": "b62dfc6348661992bca659c99de226a1b6b22e14",
+      "git_blob": "f44fe4d65225601e04d86c58e6d6d296c51126c7",
+      "path": "research/l-families/atlas/generalized/rankin_selberg_quotient_global_parent.json",
+      "sha256_lf": "ff9c5e7cc43db1d9c63f317cd842e4337066ec30c30a2f8be6f45958648ce856"
+    },
+    {
+      "commit": "b62dfc6348661992bca659c99de226a1b6b22e14",
+      "git_blob": "5fc1c031e34a879496165407f6c500d9abfeac5a",
+      "path": "research/l-families/atlas/generalized/rankin_selberg_quotient_global_parent.sources.json",
+      "sha256_lf": "f7675378cf26d6d026959ebe718cf90f99245a8ab98c2ac229e29fe90ada6415"
+    },
+    {
+      "commit": "b62dfc6348661992bca659c99de226a1b6b22e14",
+      "git_blob": "479567d07bb4f553bcd9b00bcbe515ac53ad0b24",
+      "path": "tests/test_rankin_selberg_quotient_global_parent.py",
+      "sha256_lf": "db1df7d9c4dac3ab5a038e6d78a6647ec57c6611c477d9c8b40ead510bca16db"
+    },
+    {
+      "commit": "8e9f05211954e0a7aae5e63c9367f1d520d3671d",
+      "git_blob": "383cf031153ef080fd1e8631b9d1788a0d0dc3b6",
+      "path": "research/l-families/atlas/generalized/RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT_AUDIT.md",
+      "sha256_lf": "f48587c5300d3c27835a49be36b700e4f574546da9521e8b8c5348d8a85d247f"
+    }
+  ],
+  "primitive_definitions": {
+    "Delta": "(E4^3-E6^2)/1728=q*product(1-q^n)^24",
+    "E4": "1+240*sum sigma_3(n)q^n",
+    "E6": "1-504*sum sigma_5(n)q^n",
+    "completion": "pi^(-s)Gamma(s)(4pi)^(-s-k+1)Gamma(s+k-1)",
+    "flag": "ell=[q], W=ker ell; integral Miller q-echelon basis",
+    "q": "exp(2*pi*i*z)",
+    "quotient": "Q=det(I_k)/det(I_W)=A_k*zeta(2s)*(B-C^t D_W^(-1) C)",
+    "shift": "w=s+k-1",
+    "weights": "k=12d+r,d>=2,r in {0,4,6,8,10,14}"
+  },
+  "schema": "cusp-flag-quotient-sources-v1"
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "segre-koszul-lie-sources-v1",
+  "parents": [
+    {
+      "commit": "4597d652b8be56f14339c7689f932289b7fe3ab2",
+      "path": "research/l-families/atlas/generalized/FINITE_GRADED_VIRTUAL_PARENT_CLASSIFICATION.md",
+      "git_blob": "3932273279d43ffa34d929247152cb43b932fa1d",
+      "sha256_lf": "50daa223c5b6d0f061d771f24775a0a7a2d470f9185a1d6304f3b49e9fc799bc",
+      "role": "formal-virtual-grade-uniqueness-and-exact-finite-parent-exceptions"
+    },
+    {
+      "commit": "4597d652b8be56f14339c7689f932289b7fe3ab2",
+      "path": "research/l-families/atlas/generalized/GRADED_PARENT_GLOBAL_BOUNDARY.md",
+      "git_blob": "1a49f7075b590e16c8367c7b2ef8b8d5b77c9819",
+      "sha256_lf": "c545339d97aead843ed6591a8a2b8dadc27e0518607fa03b4d7d68b088ec1eef",
+      "role": "unchanged-global-natural-boundary-and-completion-firewall"
+    }
+  ],
+  "prior_art": [
+    {
+      "id": "GORBOUNOV_SCHECHTMAN_2009",
+      "title": "Homological Algebra and Divergent Series",
+      "url": "https://sigma-journal.com/2009/034/sigma09-034.pdf",
+      "locator": "sections 3.4.1--3.4.5; equation (3.13), printed pp.26--29",
+      "role": "classical-odd-Lie-dual-Chevalley-resolution-alternating-Euler-and-character-mechanism"
+    },
+    {
+      "id": "CEDERWALL_ET_AL_2024",
+      "title": "Canonical Supermultiplets and Their Koszul Duals",
+      "url": "https://link.springer.com/article/10.1007/s00220-024-04990-z",
+      "locator": "sections 3.2.1--3.2.3; equations (42)--(45)",
+      "role": "classical-commutative-quadratic-Lie-duality-and-highest-weight-orbit-context"
+    },
+    {
+      "id": "MORALES_2013",
+      "title": "Segre embeddings, Hilbert series and Newcomb's problem",
+      "url": "https://arxiv.org/pdf/1306.6910",
+      "locator": "Lemma 3 and Theorem 4, section 3.1, printed pp.8--9",
+      "role": "classical-coordinatewise-sorting-Groebner-basis; native-proof-also-in-note"
+    },
+    {
+      "id": "PRIDDY_1970",
+      "title": "Koszul resolutions",
+      "url": "https://math.mit.edu/~hrm/palestine/priddy-koszul-resolutions.pdf",
+      "locator": "Theorem 5.3, printed p.51; Koszul complex in section 3",
+      "role": "imported-quadratic-PBW-implies-Koszul-theorem"
+    },
+    {
+      "id": "GORODENTSEV_KHOROSHKIN_RUDAKOV",
+      "title": "On syzygies of highest weight orbits",
+      "url": "https://arxiv.org/pdf/math/0602316",
+      "locator": "sections 3.1--3.6, especially Theorem 3.6.1",
+      "role": "prior-art-only-general-Lie-cohomology-syzygy-relationship"
+    }
+  ],
+  "external_authentication": "URLs and locators declared; no external theorem or infinite conclusion machine-proved"
+}

@@ -1,0 +1,248 @@
+{
+  "analytic_proof_obligations": {
+    "absolute_finite_spectrum_iff": "lambda is a positive even integer",
+    "arbitrary_finite_mode_retention": "choose finitely many nonzero continuous modes, then take q large enough for distinct residues and nonzero approximants",
+    "finite_replay_is_not_universal_proof": true,
+    "fixed_branch_finite_spectrum_iff": "lambda is a positive integer",
+    "fixed_mode_grid_limit": "normalized discrete coefficient is a Riemann sum converging to the continuous Fourier coefficient",
+    "periodic_minimal_order": "number of nonzero discrete Fourier modes, by distinct simple poles"
+  },
+  "claims": {
+    "GLO764.ABSOLUTE_FIRST_POWER_FULL_SPECTRUM": {
+      "classification": "d_abs(1;1,b)=b for every b>=2",
+      "status": "PROVED_AND_EXACTLY_REPLAYED"
+    },
+    "GLO764.ABSOLUTE_UNIFORM_DEGREE_GATE": {
+      "classification": "for Re(lambda)>0, uniformly bounded over rational rotations iff lambda is a positive even integer",
+      "sharp_integer_order": "2m+1 at lambda=2m",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.FIXED_BRANCH_UNIFORM_DEGREE_GATE": {
+      "classification": "for fixed J and Re(lambda)>0, uniformly bounded over rational rotations iff lambda is a positive integer",
+      "sharp_integer_order": "k+1 at lambda=k",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.PERIODIC_DFT_MINIMAL_ORDER": {
+      "scope": "arbitrary complex periodic sequence",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.SAMPLED_MODE_PERSISTENCE": {
+      "scope": "continuous complex periodic function sampled on full grids",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    }
+  },
+  "exact_alias_controls": {
+    "collision_with_cancellation": [],
+    "no_collision": [
+      {
+        "coefficient": -2,
+        "residue_modulus": 0
+      },
+      {
+        "coefficient": 1,
+        "residue_modulus": 2
+      },
+      {
+        "coefficient": 1,
+        "residue_modulus": 5
+      }
+    ],
+    "sine_power_k_6_mod_5": [
+      {
+        "coefficient": -20,
+        "residue_modulus": 0
+      },
+      {
+        "coefficient": -5,
+        "residue_modulus": 1
+      },
+      {
+        "coefficient": 15,
+        "residue_modulus": 2
+      },
+      {
+        "coefficient": 15,
+        "residue_modulus": 3
+      },
+      {
+        "coefficient": -5,
+        "residue_modulus": 4
+      }
+    ]
+  },
+  "first_absolute_power_full_spectrum": {
+    "all_orders_equal_b": true,
+    "representative_rows": [
+      {
+        "angle": "theta=pi/b",
+        "b": 2,
+        "minimal_recurrence_order": 2,
+        "mode_certificate_digest": "f9502d64385c196bdcd01f5e8328df3131ca2cc972643978cebe82708a79a782",
+        "nonzero_mode_count": 2
+      },
+      {
+        "angle": "theta=pi/b",
+        "b": 5,
+        "minimal_recurrence_order": 5,
+        "mode_certificate_digest": "00759b398b553640b9253c713d757d6725af60a015e42a9f50930ada5d8e585f",
+        "nonzero_mode_count": 5
+      },
+      {
+        "angle": "theta=pi/b",
+        "b": 18,
+        "minimal_recurrence_order": 18,
+        "mode_certificate_digest": "7701459961d0c3ddc0cfa4cdf61f3756b5ba07f0cf5390cef1b79e4ed8f74a4c",
+        "nonzero_mode_count": 18
+      }
+    ],
+    "row_count": 17,
+    "rows_digest": "9687b330075d59a25adf05e7811d382e64b5965f636851f3050c319f4a8f3471"
+  },
+  "integer_polynomial_controls": {
+    "absolute_even_uniform_bound": "order<=2m+1 at k=2m",
+    "collision_free_sharp_row_count": 1083,
+    "collision_free_sharp_rows_digest": "d163aa06ff5873299a56f4f0e18c016a78081a5488085ef17bc383eb1a72d2a9",
+    "maximum_b": 18,
+    "maximum_k": 14,
+    "maximum_order_minus_k_plus_1": 0,
+    "order_histogram": {
+      "10": 114,
+      "11": 90,
+      "12": 84,
+      "13": 68,
+      "14": 50,
+      "15": 38,
+      "2": 126,
+      "3": 112,
+      "4": 140,
+      "5": 116,
+      "6": 134,
+      "7": 114,
+      "8": 130,
+      "9": 98
+    },
+    "row_count": 1414,
+    "rows_digest": "92a0583298aa8b7a37ef960a419fa3d4ad8db595376490e1818a2fe2791fb982",
+    "signed_integer_uniform_bound": "order<=k+1"
+  },
+  "payload_sha256": "36bdb066ea7a97b91de0411dcfe3d7f10956fe368e529db3e3b4720db6a1ab68",
+  "producer": {
+    "note": "research/l-families/atlas/generalized/RATIONAL_ROTATION_UNIFORM_DEGREE_GATE.md",
+    "note_sha256_lf_normalized": "5436df6de5f8a1a1af480b1d014cda80ac59f5c379969b6a374d987f6c4c9fb3",
+    "script": "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.py",
+    "script_sha256_lf_normalized": "0704b1e619665b0505315fcb453472676005dc9eff423e734816c25cd2bf2f2b",
+    "test": "tests/test_rational_rotation_uniform_degree_gate.py",
+    "test_sha256_lf_normalized": "13c51eeeee69820311171c216d2a6b3c72f78503e1fc9c8131ba1c1634701c7e"
+  },
+  "programme_issue": {
+    "number": 764,
+    "url": "https://github.com/gfreund123/riemann/issues/764"
+  },
+  "resource_contract": {
+    "arithmetic_class": "EXACT_INTEGER_ROOT_EXPONENT",
+    "declared_work_units": 1584,
+    "exact_method": "integer root exponents modulo 2b, grouped binomial sums, finite Fourier aliasing, and canonical JSON hashing",
+    "external_symbolic_engine": false,
+    "float_operations": 0,
+    "maximum_allowed_b": 32,
+    "maximum_allowed_k": 24,
+    "maximum_b": 18,
+    "maximum_k": 14,
+    "random_samples": 0,
+    "work_unit_cap_exclusive": 500000
+  },
+  "schema": "riemann.atlas.generalized.rational_rotation_uniform_degree_gate.v1",
+  "scope_firewall": {
+    "external_novelty_unreviewed": true,
+    "finite_dimensional_constant_state_space_obstruction_only": true,
+    "fixed_exponent_with_strictly_positive_real_part": true,
+    "lambda_zero_convention_family_excluded": true,
+    "no_RH_GRH_or_zero_distribution_consequence": true,
+    "no_automorphy_motive_or_infinite_dimensional_no_go": true,
+    "no_prime_indexed_global_family_constructed": true,
+    "no_quantitative_degree_growth_rate": true,
+    "no_ramified_factors_completion_or_functional_equation": true,
+    "one_unramified_determinant_one_local_recurrence": true,
+    "tempered_rational_rotations_only": true
+  },
+  "source_lock": {
+    "base_commit": "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+    "external_references": [
+      {
+        "authors": "Oliver Knill and John Lesieutre",
+        "boundary": "nearby Taylor and Dirichlet series generated by periodic functions on irrational rotations, with an explicit rational-periodic contrast; not the uniform reduced-denominator degree classification over rational grids proved here",
+        "doi": "10.1007/s11785-010-0064-7",
+        "journal": "Complex Analysis and Operator Theory 5 (2011), 237-255",
+        "title": "Analytic continuation of Dirichlet series with almost periodic coefficients",
+        "url": "https://arxiv.org/abs/0811.1362"
+      },
+      {
+        "authors": "NIST Digital Library of Mathematical Functions",
+        "boundary": "authoritative Fourier convention and uniqueness background; the sampled-mode persistence and recurrence-order statements are proved self-contained in this packet",
+        "title": "Section 1.8: Fourier Series",
+        "url": "https://dlmf.nist.gov/1.8"
+      }
+    ],
+    "file_sha256_lf_normalized": "5d69ab76861bf4a6ebfad8856247a2e4c799eb87372b25f2cf3b191b637cfe97",
+    "manifest": "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.sources.json",
+    "scope_firewall": {
+      "external_novelty_unreviewed": true,
+      "finite_dimensional_constant_state_space_obstruction_only": true,
+      "fixed_exponent_with_strictly_positive_real_part": true,
+      "no_RH_GRH_or_zero_distribution_consequence": true,
+      "no_automorphy_motive_or_infinite_dimensional_no_go": true,
+      "no_prime_indexed_global_family_constructed": true,
+      "no_quantitative_degree_growth_rate": true,
+      "no_ramified_factors_completion_or_functional_equation": true,
+      "one_unramified_determinant_one_local_recurrence": true,
+      "tempered_rational_rotations_only": true,
+      "uniformity_only_over_reduced_rational_angle_denominators": true
+    },
+    "verified_sources": [
+      {
+        "file_sha256_lf_normalized": "09814f28391c8ad93d122a953912d4ea6e34e41cb1843b88034113495c33edeb",
+        "git_blob": "650933e62d3b467ffc3be0f253c9ac65a0bd2e48",
+        "path": "research/l-families/atlas/generalized/RATIONAL_ROTATION_BRANCH_CENSUS.md",
+        "role": "corrected pointwise rationality, branch convention, zero convention, and exact grouped integer-power spectrum"
+      },
+      {
+        "file_sha256_lf_normalized": "12d6d7c0d2f84ea6b9fc7b6a4b96327b60e985e408e6c10590959bf80668aafd",
+        "git_blob": "01254baba2032efa5d90e59f267ffea971803455",
+        "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
+        "role": "reused exact grouped-binomial spectrum and fail-closed source authentication"
+      },
+      {
+        "file_sha256_lf_normalized": "d9db197bbfc0633791d1899d7c45ef0f6a1df657fe628d938322d31990dd39a2",
+        "git_blob": "31e6051f6efcf573ab346eec34a102f488562261",
+        "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.json",
+        "payload_sha256": "7e49054015be1b6ada0aeef72f7572cb74a0275e4d62a8791bcbb07c31d945ca",
+        "role": "adjacent exact rational-orbit and collision fixture",
+        "schema": "riemann.atlas.generalized.rational_rotation_branch_census.v1"
+      },
+      {
+        "file_sha256_lf_normalized": "213efe84034449a7ece87b273653bc683c11b28ea4f62e599e3f2b0bbac7c8a2",
+        "git_blob": "8f27df80a4983b4d393ee3a2477a744afaeb1d3a",
+        "path": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+        "role": "dense-orbit finite-spectrum lemma and absolute-power cusp classification"
+      },
+      {
+        "file_sha256_lf_normalized": "b635c9fc8051007f46fc1efdb342c88118362edb79ed1d63624df21ef367ddf4",
+        "git_blob": "e6308d8e4b9122598f7857b34967f058a64a4f59",
+        "path": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_PRINCIPAL_COMPLEX_POWER_RATIONALITY.md",
+        "role": "fixed-branch complex-power convention and complex cusp theorem"
+      },
+      {
+        "file_sha256_lf_normalized": "c450cdc36e8fccf99e5154ed1d6694b326bd07663f60ca48c9eb40518c1dff5e",
+        "git_blob": "f946f4d12c01500958643d3f3984fe8dcf93f150",
+        "path": "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+        "role": "authenticated nearby almost-periodic and branch-cut literature boundary"
+      }
+    ]
+  },
+  "uniform_state_space_boundary": {
+    "integer_absolute_parent": "Sym^(2m), rank 2m+1",
+    "integer_signed_parent": "Sym^k, rank k+1",
+    "noninteger_rational_orbits": "each is finite state, but no dimension bound uniform in b",
+    "obstruction_scope": "finite-dimensional constant state-space only"
+  }
+}

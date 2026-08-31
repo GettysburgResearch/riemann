@@ -1,0 +1,64 @@
+{
+  "schema": "riemann.atlas.generalized.positive_determinant_power_release.sources.v1",
+  "base_commit": "522493abae0f8e5526ceff4192d73b2cc617c069",
+  "sources": [
+    {
+      "path": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+      "role": "authenticated determinant-one positive-chamber rationality theorem transported by the release",
+      "file_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c",
+      "git_blob": "5eeb1e7c6129646ac646c697276bcd4adb04aa0c"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.json",
+      "role": "machine-readable source classification and survival boundary",
+      "schema": "riemann.atlas.generalized.nonintegral_local_power_rationality.v1",
+      "payload_sha256": "d809d5bed68618ff8dc9fd657b6c63c9cd0c8eca9ea83ffedda0b6d84a4ce7c3",
+      "file_sha256_lf_normalized": "587b42bd2f52de05018d94e6336b608388f5d381e82264b1614ddea12d314828",
+      "git_blob": "67e5dfa63684078586e4727530d7b9e66d557636"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "role": "inherited determinant-one normalization and prior-art boundary",
+      "file_sha256_lf_normalized": "99df382aaf78cec91f474f6a10cdce6a41370f9a2ad3c68645bb2cd571ceca6b",
+      "git_blob": "db48a8a7f44d2e768b248a162cf3c48c71ac4494"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/TRANSFER_MATRIX_SYMMETRIC_PARENT.md",
+      "role": "source distinction between a scalar matrix-coefficient shadow, its symmetric parent, and determinant scaling",
+      "file_sha256_lf_normalized": "84759dc5ca81ef896e2a6ab2d9a7d3d32c3865f5f61bb45db18aaf8633578456",
+      "git_blob": "9aef6f8a780e9dff5c3b7a53c012c0956be036dc"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.json",
+      "role": "machine-readable parent-shadow and nonzero-eigenvalue boundary",
+      "schema": "riemann.atlas.generalized.transfer_matrix_symmetric_parent.v1",
+      "payload_sha256": "315a6820f944d60dbf2fa1be5530ffbf6ae529854a7023f722bb427c78fbd619",
+      "file_sha256_lf_normalized": "9e58fa46ee29effba4304aaac185125a6f105b7e654780e14e863c4e58c69205",
+      "git_blob": "4a569b7e97197fb7b04856be2d602e4ddaadb43f"
+    },
+    {
+      "path": "research/l-families/atlas/core/atlas_core.py",
+      "role": "canonical JSON normalization and payload digest implementation",
+      "file_sha256_lf_normalized": "c24c0a1a34923efc0f08e2a9dd85e6682bb09d6ae1a470acea071ae194f77880",
+      "git_blob": "adea1dbb5f189f65357f39e1fe6bf1548bd77acc"
+    }
+  ],
+  "corollary_audit": {
+    "new_nonrationality_mechanism": false,
+    "source_theorem_is_logically_sufficient": true,
+    "new_value": "exact positive-determinant coordinate release, branch firewall, and transported sharp integer denominator",
+    "external_novelty_claimed": false
+  },
+  "scope_firewall": {
+    "positive_distinct_real_roots_only": true,
+    "positive_delta_and_t_strictly_above_two_sqrt_delta_only": true,
+    "positive_real_logarithm_only": true,
+    "positive_square_root_normalization_only": true,
+    "coalesced_nonpositive_and_complex_determinants_excluded": true,
+    "no_tempered_or_sign_changing_classification": true,
+    "no_global_euler_product_or_ramified_factors": true,
+    "no_completion_functional_equation_or_automorphy": true,
+    "no_motive_explicit_formula_or_zero_theorem": true,
+    "no_RH_GRH_or_zero_distribution_consequence": true
+  }
+}

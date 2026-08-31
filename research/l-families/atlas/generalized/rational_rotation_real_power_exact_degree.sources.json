@@ -1,0 +1,40 @@
+{
+  "schema": "riemann.atlas.generalized.rational_rotation_real_power_exact_degree.sources.v1",
+  "base_commit": "3fd6c34d1cd8109eab3622d3966e05a0ad8fc7a4",
+  "sources": [
+    {
+      "path": "research/l-families/atlas/generalized/RATIONAL_ROTATION_UNIFORM_DEGREE_GATE.md",
+      "role": "previous complex-exponent uniform degree gate and periodic Fourier minimality",
+      "git_blob": "9548280426316237de50c7e71e2dd704aa68f00b",
+      "sha256_lf": "5436df6de5f8a1a1af480b1d014cda80ac59f5c379969b6a374d987f6c4c9fb3"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/RATIONAL_ROTATION_BRANCH_CENSUS.md",
+      "role": "rational-angle normalization and zero/branch conventions",
+      "git_blob": "650933e62d3b467ffc3be0f253c9ac65a0bd2e48",
+      "sha256_lf": "09814f28391c8ad93d122a953912d4ea6e34e41cb1843b88034113495c33edeb"
+    }
+  ],
+  "literature_boundary": {
+    "author": "G. J. O. Jameson",
+    "title": "Counting zeros of generalised polynomials: Descartes' rule of signs and Laguerre's extensions",
+    "doi": "10.1017/S0025557200179628",
+    "url": "https://www.cambridge.org/core/journals/mathematical-gazette/article/abs/counting-zeros-of-generalised-polynomials-descartes-rule-of-signs-and-laguerres-extensions/CCA0F4742F4040DE65C7378D337DE475",
+    "access_boundary": "publisher metadata and extract checked; full article not imported as a proof dependency"
+  },
+  "adjacent_literature": {
+    "author": "Tanvi Jain",
+    "title": "Hadamard powers of some positive matrices",
+    "url": "https://arxiv.org/html/1803.06803v1",
+    "section": "3",
+    "boundary": "absolute cosine powers on odd grids; closely analogous Fourier/Descartes eigenvalue-zero and inertia argument, not used as a proof dependency"
+  },
+  "scope": {
+    "real_positive_exponents_only": true,
+    "absolute_power_only": true,
+    "one_local_rank_two_determinant_one_model": true,
+    "complex_pointwise_extension_refuted": true,
+    "no_global_L_function_or_RH_GRH_consequence": true,
+    "external_novelty_unreviewed": true
+  }
+}

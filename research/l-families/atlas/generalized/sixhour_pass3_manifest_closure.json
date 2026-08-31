@@ -1,0 +1,1141 @@
+{
+  "all_declared_seals_match": true,
+  "all_local_objects_present": true,
+  "base": "10446e8ea9c55162c317810f63c1f7a379466459",
+  "contract": {
+    "blob_limit_bytes": 40000000,
+    "external_papers_authenticated": false,
+    "implicit_schema_scope": [
+      "riemann.atlas.generalized.*",
+      "graded-parent-global-boundary-sources-v1"
+    ],
+    "inherited_precedence": [
+      "imported_parent_state_commit",
+      "source_commit",
+      "base_commit"
+    ],
+    "remote_acquisition_verified": false,
+    "scope": "Local manifest-binding closure, including explicit legacy defaults; not all prose or executable dependencies.",
+    "special_schema": "archimedean-ladder-source-lock-v1"
+  },
+  "counts": {
+    "edges": 368,
+    "implicit_edges": 75,
+    "manifest_versions": 59,
+    "roots": 37,
+    "source_commits": 48,
+    "source_versions": 160
+  },
+  "edges_sha256": "3c21016c2f9701cb325b230a81785b42e24073e7c2b0442efec1204ec62f5cdb",
+  "head": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+  "implicit_resolutions": [
+    [
+      "522493abae0f8e5526ceff4192d73b2cc617c069",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/0",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.json",
+      "inherited_base_commit"
+    ],
+    [
+      "522493abae0f8e5526ceff4192d73b2cc617c069",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/1",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/function_field/ELLIPTIC_SYMMETRIC_POWER_TRACE_ALIASING.md",
+      "inherited_base_commit"
+    ],
+    [
+      "522493abae0f8e5526ceff4192d73b2cc617c069",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/2",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py",
+      "inherited_base_commit"
+    ],
+    [
+      "522493abae0f8e5526ceff4192d73b2cc617c069",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/3",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/core/atlas_core.py",
+      "inherited_base_commit"
+    ],
+    [
+      "522493abae0f8e5526ceff4192d73b2cc617c069",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/4",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/schema/l-function-spec.schema.json",
+      "inherited_base_commit"
+    ],
+    [
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/0",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.json",
+      "inherited_base_commit"
+    ],
+    [
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/1",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/function_field/ELLIPTIC_SYMMETRIC_POWER_TRACE_ALIASING.md",
+      "inherited_base_commit"
+    ],
+    [
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/2",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py",
+      "inherited_base_commit"
+    ],
+    [
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/3",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/core/atlas_core.py",
+      "inherited_base_commit"
+    ],
+    [
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/4",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/schema/l-function-spec.schema.json",
+      "inherited_base_commit"
+    ],
+    [
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "/sources/0",
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.json",
+      "inherited_imported_parent_state_commit"
+    ],
+    [
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "/sources/1",
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
+      "inherited_imported_parent_state_commit"
+    ],
+    [
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "/sources/2",
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+      "inherited_imported_parent_state_commit"
+    ],
+    [
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "/sources/3",
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "inherited_imported_parent_state_commit"
+    ],
+    [
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "/sources/0",
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.json",
+      "inherited_imported_parent_state_commit"
+    ],
+    [
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "/sources/1",
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
+      "inherited_imported_parent_state_commit"
+    ],
+    [
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "/sources/2",
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+      "inherited_imported_parent_state_commit"
+    ],
+    [
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "/sources/3",
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "inherited_imported_parent_state_commit"
+    ],
+    [
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+      "/sources/0",
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+      "inherited_base_commit"
+    ],
+    [
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+      "/sources/1",
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.py",
+      "inherited_base_commit"
+    ],
+    [
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+      "/sources/2",
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.json",
+      "inherited_base_commit"
+    ],
+    [
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+      "/sources/3",
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "inherited_base_commit"
+    ],
+    [
+      "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+      "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "/sources/0",
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/RATIONAL_ROTATION_BRANCH_CENSUS.md",
+      "inherited_base_commit"
+    ],
+    [
+      "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+      "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "/sources/1",
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
+      "inherited_base_commit"
+    ],
+    [
+      "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+      "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "/sources/2",
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.json",
+      "inherited_base_commit"
+    ],
+    [
+      "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+      "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "/sources/3",
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+      "inherited_base_commit"
+    ],
+    [
+      "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+      "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "/sources/4",
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+      "inherited_base_commit"
+    ],
+    [
+      "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+      "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "/sources/5",
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/dense_torus_trace_absolute_power_rationality.sources.json",
+      "/sources/0",
+      "902b7dfeb12c5bee9028d97b420e3c2f42ac31fd",
+      "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/dense_torus_trace_absolute_power_rationality.sources.json",
+      "/sources/1",
+      "902b7dfeb12c5bee9028d97b420e3c2f42ac31fd",
+      "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_PRINCIPAL_COMPLEX_POWER_RATIONALITY.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/dense_torus_trace_absolute_power_rationality.sources.json",
+      "/sources/2",
+      "902b7dfeb12c5bee9028d97b420e3c2f42ac31fd",
+      "research/l-families/atlas/generalized/RATIONAL_ROTATION_UNIFORM_DEGREE_GATE.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/dense_torus_trace_absolute_power_rationality.sources.json",
+      "/sources/3",
+      "902b7dfeb12c5bee9028d97b420e3c2f42ac31fd",
+      "research/l-families/atlas/generalized/TRANSFER_MATRIX_SYMMETRIC_PARENT.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/graded_parent_global_boundary.sources.json",
+      "/parent_sources/0",
+      "e2f469142cd55086e74751293877ab533001e786",
+      "research/l-families/atlas/generalized/FINITE_GRADED_VIRTUAL_PARENT_CLASSIFICATION.md",
+      "inherited_source_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/graded_parent_global_boundary.sources.json",
+      "/parent_sources/1",
+      "e2f469142cd55086e74751293877ab533001e786",
+      "research/l-families/atlas/generalized/FINITE_GRADED_VIRTUAL_PARENT_CLASSIFICATION_AUDIT.md",
+      "inherited_source_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "/sources/0",
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.json",
+      "inherited_imported_parent_state_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "/sources/1",
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
+      "inherited_imported_parent_state_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "/sources/2",
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+      "inherited_imported_parent_state_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "/sources/3",
+      "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "inherited_imported_parent_state_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "/sources/0",
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/RATIONAL_ROTATION_BRANCH_CENSUS.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "/sources/1",
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "/sources/2",
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "/sources/3",
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "/sources/4",
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "/sources/5",
+      "d1e976f1fcda762f66291987938f9132892b123f",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/0",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/1",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/function_field/ELLIPTIC_SYMMETRIC_POWER_TRACE_ALIASING.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/2",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/3",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/core/atlas_core.py",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "/sources/4",
+      "10446e8ea9c55162c317810f63c1f7a379466459",
+      "research/l-families/atlas/schema/l-function-spec.schema.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/positive_determinant_power_release.sources.json",
+      "/sources/0",
+      "522493abae0f8e5526ceff4192d73b2cc617c069",
+      "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/positive_determinant_power_release.sources.json",
+      "/sources/1",
+      "522493abae0f8e5526ceff4192d73b2cc617c069",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/positive_determinant_power_release.sources.json",
+      "/sources/2",
+      "522493abae0f8e5526ceff4192d73b2cc617c069",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/positive_determinant_power_release.sources.json",
+      "/sources/3",
+      "522493abae0f8e5526ceff4192d73b2cc617c069",
+      "research/l-families/atlas/generalized/TRANSFER_MATRIX_SYMMETRIC_PARENT.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/positive_determinant_power_release.sources.json",
+      "/sources/4",
+      "522493abae0f8e5526ceff4192d73b2cc617c069",
+      "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/positive_determinant_power_release.sources.json",
+      "/sources/5",
+      "522493abae0f8e5526ceff4192d73b2cc617c069",
+      "research/l-families/atlas/core/atlas_core.py",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+      "/sources/0",
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+      "/sources/1",
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.py",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+      "/sources/2",
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+      "/sources/3",
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/rational_rotation_real_power_exact_degree.sources.json",
+      "/sources/0",
+      "3fd6c34d1cd8109eab3622d3966e05a0ad8fc7a4",
+      "research/l-families/atlas/generalized/RATIONAL_ROTATION_UNIFORM_DEGREE_GATE.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/rational_rotation_real_power_exact_degree.sources.json",
+      "/sources/1",
+      "3fd6c34d1cd8109eab3622d3966e05a0ad8fc7a4",
+      "research/l-families/atlas/generalized/RATIONAL_ROTATION_BRANCH_CENSUS.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.sources.json",
+      "/sources/0",
+      "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+      "research/l-families/atlas/generalized/RATIONAL_ROTATION_BRANCH_CENSUS.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.sources.json",
+      "/sources/1",
+      "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.sources.json",
+      "/sources/2",
+      "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+      "research/l-families/atlas/generalized/rational_rotation_branch_census.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.sources.json",
+      "/sources/3",
+      "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+      "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.sources.json",
+      "/sources/4",
+      "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+      "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_PRINCIPAL_COMPLEX_POWER_RATIONALITY.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.sources.json",
+      "/sources/5",
+      "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+      "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.sources.json",
+      "/sources/0",
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.json",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.sources.json",
+      "/sources/1",
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.sources.json",
+      "/sources/2",
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.sources.json",
+      "/sources/3",
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.sources.json",
+      "/sources/4",
+      "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "research/l-families/atlas/core/atlas_core.py",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/universal_coefficient_power_euler_obstruction.sources.json",
+      "/sources/0",
+      "02e53055b6bdff73fa136ff28cced239d1627f80",
+      "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/universal_coefficient_power_euler_obstruction.sources.json",
+      "/sources/1",
+      "02e53055b6bdff73fa136ff28cced239d1627f80",
+      "research/l-families/atlas/generalized/TRANSFER_MATRIX_SYMMETRIC_PARENT.md",
+      "inherited_base_commit"
+    ],
+    [
+      "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "research/l-families/atlas/generalized/universal_coefficient_power_euler_obstruction.sources.json",
+      "/sources/2",
+      "02e53055b6bdff73fa136ff28cced239d1627f80",
+      "research/l-families/atlas/generalized/DENSE_TORUS_TRACE_ABSOLUTE_POWER_RATIONALITY.md",
+      "inherited_base_commit"
+    ]
+  ],
+  "manifest_catalog": [
+    {
+      "commit": "1653565cc80cde6fa882ae9e150626187d3071d0",
+      "git_blob": "496034972646f6c0ac1cb73bbf5ccf51afdcee54",
+      "outgoing_edges": 10,
+      "path": "research/l-families/atlas/generalized/cusp_flag_local_simple_endpoint_zero.sources.json",
+      "sha256_lf": "b2abe7c462b1f87c5da3e8e46106dffe4defcc8ed080543a2f4bb534959b483a"
+    },
+    {
+      "commit": "27496745df9dd49fcde17699d333a54cf8620772",
+      "git_blob": "0e6a9c3aabb80def9638192f6af7a40b39f027ff",
+      "outgoing_edges": 10,
+      "path": "research/l-families/atlas/generalized/cusp_flag_effective_endpoint_separation.sources.json",
+      "sha256_lf": "9049ba583f6f1e489726576bbc3e787e31b6291db3bb3bd68be6943cef7938fb"
+    },
+    {
+      "commit": "2f636755ef8605eff725562094017f501fb1db70",
+      "git_blob": "9c863a41a744e7966765b6e61e71458c77f9d5ac",
+      "outgoing_edges": 15,
+      "path": "research/l-families/atlas/generalized/cusp_flag_native_denominator_poles.sources.json",
+      "sha256_lf": "cdb76a5afc3c81f087533466ba3ed08e42100ac73cf5a0427ba1a8f4d28b5f9b"
+    },
+    {
+      "commit": "43ecb4ac3f2487ee944b6bb6bef72e1ad92f2678",
+      "git_blob": "90dc74d185b0b9a42f865a9f9df895ba7cd1c5dd",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.sources.json",
+      "sha256_lf": "f754ecdff30b4fd3a3f8f4b8436e46ab3633ba59738021f5538051fae9e43b7a"
+    },
+    {
+      "commit": "4a317ea5c9d7aa016fba58a1d74746e437329ec7",
+      "git_blob": "87f2fbc59137b41eb89a6a2553e33026eb1ea3ba",
+      "outgoing_edges": 9,
+      "path": "research/l-families/atlas/generalized/segre_recurrence_syzygy_bridge.sources.json",
+      "sha256_lf": "6e9780e76a33e4f7de7e4f06c2bfdc29696d028dccbdf913b9cb2b708dd61448"
+    },
+    {
+      "commit": "522493abae0f8e5526ceff4192d73b2cc617c069",
+      "git_blob": "db48a8a7f44d2e768b248a162cf3c48c71ac4494",
+      "outgoing_edges": 5,
+      "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "sha256_lf": "99df382aaf78cec91f474f6a10cdce6a41370f9a2ad3c68645bb2cd571ceca6b"
+    },
+    {
+      "commit": "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+      "git_blob": "db48a8a7f44d2e768b248a162cf3c48c71ac4494",
+      "outgoing_edges": 5,
+      "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "sha256_lf": "99df382aaf78cec91f474f6a10cdce6a41370f9a2ad3c68645bb2cd571ceca6b"
+    },
+    {
+      "commit": "7ee5e024e1d8c3dd187b40ea5d48f9c9ff46d95e",
+      "git_blob": "635f70f3b4833cff5aac9b83fdab2824d15446cb",
+      "outgoing_edges": 2,
+      "path": "research/l-families/atlas/generalized/segre_koszul_lie_parent.sources.json",
+      "sha256_lf": "2712c1a6722e01b64d4c63c3ff54e3cdba2b70a5bcb8fa5c023b22bccedcaf72"
+    },
+    {
+      "commit": "98b4058ac29ba88cf993d7a3ce67579fab0c7844",
+      "git_blob": "1c07e50b1a25bdeed5c98a536ce561c383c174c1",
+      "outgoing_edges": 10,
+      "path": "research/l-families/atlas/generalized/cusp_flag_all_weight_endpoint_separation.sources.json",
+      "sha256_lf": "6acf346bf72e6323dea4fd4b4f3e4ae137e85f7e2299409fc24226d688b06349"
+    },
+    {
+      "commit": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+      "git_blob": "0d5ec23bab396ccf2d16cff89247805b935706e3",
+      "outgoing_edges": 7,
+      "path": "research/l-families/atlas/generalized/cusp_period_off_central_real_zeros.sources.json",
+      "sha256_lf": "35490b7422b93e2623cc492ab8fc3689f6aa969d9daec2d2caaf5c49e4887721"
+    },
+    {
+      "commit": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "git_blob": "0649c2b51271f92499903fc209e575422c482d61",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/cusp_flag_divisor_explicit_formula.sources.json",
+      "sha256_lf": "bc8beef55e1301354f3ab7ae6c4954b196bb92a9bef7cdf745d64e5b49ac8aa4"
+    },
+    {
+      "commit": "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+      "git_blob": "4b94a34636da981d05c48fab8690eb93745d346b",
+      "outgoing_edges": 7,
+      "path": "research/l-families/atlas/generalized/theta_source_quotient_tensor_coherence.sources.json",
+      "sha256_lf": "12ebd09865d1b184d08fd519a8801970457854d42f93789ecd69e2ddbb0d0f7a"
+    },
+    {
+      "commit": "b62dfc6348661992bca659c99de226a1b6b22e14",
+      "git_blob": "5fc1c031e34a879496165407f6c500d9abfeac5a",
+      "outgoing_edges": 1,
+      "path": "research/l-families/atlas/generalized/rankin_selberg_quotient_global_parent.sources.json",
+      "sha256_lf": "f7675378cf26d6d026959ebe718cf90f99245a8ab98c2ac229e29fe90ada6415"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "90dc74d185b0b9a42f865a9f9df895ba7cd1c5dd",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.sources.json",
+      "sha256_lf": "f754ecdff30b4fd3a3f8f4b8436e46ab3633ba59738021f5538051fae9e43b7a"
+    },
+    {
+      "commit": "b895598abd936a2e42e5b7d14a7e10cc2bf41486",
+      "git_blob": "c50b8eb8f4ea13e232f63bebd034a63ddcf110d7",
+      "outgoing_edges": 1,
+      "path": "research/l-families/atlas/generalized/satake_deformation_completion_obstruction.sources.json",
+      "sha256_lf": "3b4f77c8e493e4f958bcf4bf7f3c1ff9d9fcb0d34fb4ac56066ed26893bd2c7f"
+    },
+    {
+      "commit": "bcd3ad5ff0c42e7b205663b68a010e2dbde6d941",
+      "git_blob": "42f86fe7bd6a40250ff5fd69f4047c6aea4e17ce",
+      "outgoing_edges": 10,
+      "path": "research/l-families/atlas/generalized/cusp_flag_uncancelled_off_central_real_zeros.sources.json",
+      "sha256_lf": "c6bb8d62e913c358d6e8c236294e7bd010ce87076faf571752647cd657a3de44"
+    },
+    {
+      "commit": "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+      "git_blob": "3adf8f211fee7bd51e811520b31785af38ccd7c0",
+      "outgoing_edges": 4,
+      "path": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "sha256_lf": "4f070750c83d04ed1ed74a5ddcdd42c6b6ce0746a548ce11a3086b6fc37da66b"
+    },
+    {
+      "commit": "d1e976f1fcda762f66291987938f9132892b123f",
+      "git_blob": "3adf8f211fee7bd51e811520b31785af38ccd7c0",
+      "outgoing_edges": 4,
+      "path": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "sha256_lf": "4f070750c83d04ed1ed74a5ddcdd42c6b6ce0746a548ce11a3086b6fc37da66b"
+    },
+    {
+      "commit": "d1e976f1fcda762f66291987938f9132892b123f",
+      "git_blob": "315cd0a669fec3ace855b45590ea5ca6c10c6fbb",
+      "outgoing_edges": 4,
+      "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+      "sha256_lf": "c1d9ed9862fe572169ead10a9c909df63b4ddd0a5ae209fa1e9ab3ab7acaed0b"
+    },
+    {
+      "commit": "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+      "git_blob": "f946f4d12c01500958643d3f3984fe8dcf93f150",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "sha256_lf": "c450cdc36e8fccf99e5154ed1d6694b326bd07663f60ca48c9eb40518c1dff5e"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "1c07e50b1a25bdeed5c98a536ce561c383c174c1",
+      "outgoing_edges": 10,
+      "path": "research/l-families/atlas/generalized/cusp_flag_all_weight_endpoint_separation.sources.json",
+      "sha256_lf": "6acf346bf72e6323dea4fd4b4f3e4ae137e85f7e2299409fc24226d688b06349"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "0649c2b51271f92499903fc209e575422c482d61",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/cusp_flag_divisor_explicit_formula.sources.json",
+      "sha256_lf": "bc8beef55e1301354f3ab7ae6c4954b196bb92a9bef7cdf745d64e5b49ac8aa4"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "0e6a9c3aabb80def9638192f6af7a40b39f027ff",
+      "outgoing_edges": 10,
+      "path": "research/l-families/atlas/generalized/cusp_flag_effective_endpoint_separation.sources.json",
+      "sha256_lf": "9049ba583f6f1e489726576bbc3e787e31b6291db3bb3bd68be6943cef7938fb"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "f175a6adb7495cc1b4d69ac23b3b7b9748591984",
+      "outgoing_edges": 4,
+      "path": "research/l-families/atlas/generalized/cusp_flag_effective_negative_derivative.sources.json",
+      "sha256_lf": "c87006abae8a38b5f055de72d26624dc9dc6a30e62ff062bc6045150fd179297"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "1b7d9673eb16e33060406c6f9d4835ff045810ed",
+      "outgoing_edges": 14,
+      "path": "research/l-families/atlas/generalized/cusp_flag_fixed_depth_divisor_ladder.sources.json",
+      "sha256_lf": "c81a5fb42ec346b371f2f25ff38edc33c2b2f58245ebe576df5ff161d9921987"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "31201458c9ef415e3990264f1b6865c1ea1884cd",
+      "outgoing_edges": 7,
+      "path": "research/l-families/atlas/generalized/cusp_flag_hecke_source_concentration.sources.json",
+      "sha256_lf": "a56fa5d45486f4661f310764880641d5d30684c50dcabc89f7b9c3eda6fd7c6f"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "496034972646f6c0ac1cb73bbf5ccf51afdcee54",
+      "outgoing_edges": 10,
+      "path": "research/l-families/atlas/generalized/cusp_flag_local_simple_endpoint_zero.sources.json",
+      "sha256_lf": "b2abe7c462b1f87c5da3e8e46106dffe4defcc8ed080543a2f4bb534959b483a"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "9c863a41a744e7966765b6e61e71458c77f9d5ac",
+      "outgoing_edges": 15,
+      "path": "research/l-families/atlas/generalized/cusp_flag_native_denominator_poles.sources.json",
+      "sha256_lf": "cdb76a5afc3c81f087533466ba3ed08e42100ac73cf5a0427ba1a8f4d28b5f9b"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "8138fc876d80a7d87b4f0faee8b5aff2bcfd1a0e",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/cusp_flag_positive_spectrum_boundary.sources.json",
+      "sha256_lf": "722c45c8ba2a2020667b5ea089be703ab54bc2078c5c8b0b9bd1f384cf37be85"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "90dc74d185b0b9a42f865a9f9df895ba7cd1c5dd",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.sources.json",
+      "sha256_lf": "f754ecdff30b4fd3a3f8f4b8436e46ab3633ba59738021f5538051fae9e43b7a"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "9cb1fbaf70cc1bae4afdec0bbf5c448cc58a72b8",
+      "outgoing_edges": 10,
+      "path": "research/l-families/atlas/generalized/cusp_flag_signed_riemann_von_mangoldt.sources.json",
+      "sha256_lf": "6a6c9a58d51896319e84be35ba5d29866c87e5c801d049e390c9a9f3cc083a69"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "42f86fe7bd6a40250ff5fd69f4047c6aea4e17ce",
+      "outgoing_edges": 10,
+      "path": "research/l-families/atlas/generalized/cusp_flag_uncancelled_off_central_real_zeros.sources.json",
+      "sha256_lf": "c6bb8d62e913c358d6e8c236294e7bd010ce87076faf571752647cd657a3de44"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "8841b26a3256556df178e90d78c657c775d3c01d",
+      "outgoing_edges": 7,
+      "path": "research/l-families/atlas/generalized/cusp_matrix_period_positivity.sources.json",
+      "sha256_lf": "82a568b0d338cf45a1168206fdecbc9132bbb57c28684b22777c3768e4f3b17b"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "0d5ec23bab396ccf2d16cff89247805b935706e3",
+      "outgoing_edges": 7,
+      "path": "research/l-families/atlas/generalized/cusp_period_off_central_real_zeros.sources.json",
+      "sha256_lf": "35490b7422b93e2623cc492ab8fc3689f6aa969d9daec2d2caaf5c49e4887721"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "ae88cdddbf66c738c19c609db06e266d2f9388a9",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/cusp_weight24_complex_flag_divisors.sources.json",
+      "sha256_lf": "d88ca12980f8b203a0d43ac770ebec09469e66d4237b65d73f6fd5dec1142e8f"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "baede0e0426950a3c1591e7d59f3d9dad358858a",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/cusp_weight24_fixed_divisor_infinity.sources.json",
+      "sha256_lf": "44b7d0eb1076c394313b1cfc081d4b5a675b4eda32273c3713c33580cc853eab"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "e20ccbb9eae840b1ea640b9ec0432eb392de9500",
+      "outgoing_edges": 7,
+      "path": "research/l-families/atlas/generalized/cusp_weight36_subspace_divisors.sources.json",
+      "sha256_lf": "bb2c0d5e85042e235f8add938fcd4fdab0d4a0fbdd44ab2841d65ba7add613cf"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "c7f244b887e4751524585407a4cb8d43551fc534",
+      "outgoing_edges": 4,
+      "path": "research/l-families/atlas/generalized/dense_torus_trace_absolute_power_rationality.sources.json",
+      "sha256_lf": "901ee79a73442c531f110284ec26e69013c59b3b65d0f7b3bbb1a8fefaefd7c1"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "6774f7e1a9dc7d6f61afcb47d2adf558440da243",
+      "outgoing_edges": 3,
+      "path": "research/l-families/atlas/generalized/finite_graded_virtual_parent_classification.sources.json",
+      "sha256_lf": "2692004c2d76f142a66c6f4907be9aafa6970f4c53e740d21e69bf0bd2acfa32"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "2526528722b7247e43dbbf33a81539a7deb03dff",
+      "outgoing_edges": 2,
+      "path": "research/l-families/atlas/generalized/graded_parent_global_boundary.sources.json",
+      "sha256_lf": "7a18134dd183398954b49f7f12e8cc822006af8341805b055e707e0ce0e448d8"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "3adf8f211fee7bd51e811520b31785af38ccd7c0",
+      "outgoing_edges": 4,
+      "path": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+      "sha256_lf": "4f070750c83d04ed1ed74a5ddcdd42c6b6ce0746a548ce11a3086b6fc37da66b"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "f946f4d12c01500958643d3f3984fe8dcf93f150",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+      "sha256_lf": "c450cdc36e8fccf99e5154ed1d6694b326bd07663f60ca48c9eb40518c1dff5e"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "db48a8a7f44d2e768b248a162cf3c48c71ac4494",
+      "outgoing_edges": 5,
+      "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+      "sha256_lf": "99df382aaf78cec91f474f6a10cdce6a41370f9a2ad3c68645bb2cd571ceca6b"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "8249c6dec322376a14b1badaabc89f7299ace59a",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/positive_determinant_power_release.sources.json",
+      "sha256_lf": "6c4b007ce204ea2e9cfd6cb46907e31633a9123e1d9846be226b100a1e3da7eb"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "5fc1c031e34a879496165407f6c500d9abfeac5a",
+      "outgoing_edges": 1,
+      "path": "research/l-families/atlas/generalized/rankin_selberg_quotient_global_parent.sources.json",
+      "sha256_lf": "f7675378cf26d6d026959ebe718cf90f99245a8ab98c2ac229e29fe90ada6415"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "315cd0a669fec3ace855b45590ea5ca6c10c6fbb",
+      "outgoing_edges": 4,
+      "path": "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+      "sha256_lf": "c1d9ed9862fe572169ead10a9c909df63b4ddd0a5ae209fa1e9ab3ab7acaed0b"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "902a0c977d2108fcb439bfab8d08b85bdc0de802",
+      "outgoing_edges": 2,
+      "path": "research/l-families/atlas/generalized/rational_rotation_real_power_exact_degree.sources.json",
+      "sha256_lf": "7dd697d7e59dd5e8f5d96386a03a21066652d537988f9bf4c739bdd324f1e4da"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "5ff48bd60a52276874050d9ff9ed2780c4053ee4",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.sources.json",
+      "sha256_lf": "5d69ab76861bf4a6ebfad8856247a2e4c799eb87372b25f2cf3b191b637cfe97"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "c50b8eb8f4ea13e232f63bebd034a63ddcf110d7",
+      "outgoing_edges": 1,
+      "path": "research/l-families/atlas/generalized/satake_deformation_completion_obstruction.sources.json",
+      "sha256_lf": "3b4f77c8e493e4f958bcf4bf7f3c1ff9d9fcb0d34fb4ac56066ed26893bd2c7f"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "78890223b0ff530d7e01e97069b76a6cce7c3392",
+      "outgoing_edges": 7,
+      "path": "research/l-families/atlas/generalized/segre_higher_power_unitary_chambers.sources.json",
+      "sha256_lf": "ec7f025a147e6fcf7d70ceca824901b2380494e926162fa4940e0907b2a21320"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "635f70f3b4833cff5aac9b83fdab2824d15446cb",
+      "outgoing_edges": 2,
+      "path": "research/l-families/atlas/generalized/segre_koszul_lie_parent.sources.json",
+      "sha256_lf": "2712c1a6722e01b64d4c63c3ff54e3cdba2b70a5bcb8fa5c023b22bccedcaf72"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "87f2fbc59137b41eb89a6a2553e33026eb1ea3ba",
+      "outgoing_edges": 9,
+      "path": "research/l-families/atlas/generalized/segre_recurrence_syzygy_bridge.sources.json",
+      "sha256_lf": "6e9780e76a33e4f7de7e4f06c2bfdc29696d028dccbdf913b9cb2b708dd61448"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "0b6c2f1cab1feb01b403c2ae9d1165b21cfb73ad",
+      "outgoing_edges": 3,
+      "path": "research/l-families/atlas/generalized/tensor_moment_completion_rigidity.sources.json",
+      "sha256_lf": "276158ed28fb7717bc30a78230e22feb313a5dd9d4c04ca0075d79411570de29"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "7baca39340e1495e573c958836bcca8c60c2d3a8",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/theta_positive_source_real_zero_firewall.sources.json",
+      "sha256_lf": "bf18dcf1281bf5737c063e2f204c915ea4e3320cd173be5bea4a9e60213d24d9"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "4b94a34636da981d05c48fab8690eb93745d346b",
+      "outgoing_edges": 7,
+      "path": "research/l-families/atlas/generalized/theta_source_quotient_tensor_coherence.sources.json",
+      "sha256_lf": "12ebd09865d1b184d08fd519a8801970457854d42f93789ecd69e2ddbb0d0f7a"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "297299386ae4f93be986c1f936b456a3d8e04735",
+      "outgoing_edges": 5,
+      "path": "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.sources.json",
+      "sha256_lf": "282f627f3288350d238c979ec99d33a46f87d10a99f2d8b9f06f293b4943d829"
+    },
+    {
+      "commit": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "git_blob": "52cb0cdd88ef3e1bd32c9a2b5ab36fa31d714607",
+      "outgoing_edges": 3,
+      "path": "research/l-families/atlas/generalized/universal_coefficient_power_euler_obstruction.sources.json",
+      "sha256_lf": "af2a7ebe6e3cfbe27f90a3e77a48a736154a16df81fdba8af17a7c3913196bd1"
+    },
+    {
+      "commit": "ec5bdd9b02ea68bddfcf34ac40a85d283faf64cf",
+      "git_blob": "baede0e0426950a3c1591e7d59f3d9dad358858a",
+      "outgoing_edges": 6,
+      "path": "research/l-families/atlas/generalized/cusp_weight24_fixed_divisor_infinity.sources.json",
+      "sha256_lf": "44b7d0eb1076c394313b1cfc081d4b5a675b4eda32273c3713c33580cc853eab"
+    },
+    {
+      "commit": "fdd349dcf6ba1b104e27866ae66b4c89752d5f05",
+      "git_blob": "8841b26a3256556df178e90d78c657c775d3c01d",
+      "outgoing_edges": 7,
+      "path": "research/l-families/atlas/generalized/cusp_matrix_period_positivity.sources.json",
+      "sha256_lf": "82a568b0d338cf45a1168206fdecbc9132bbb57c28684b22777c3768e4f3b17b"
+    }
+  ],
+  "payload_sha256": "826699dd279de60c2ae005be18e73a6090d44f24b17e007f83dea5c232d9f4eb",
+  "programme": "G",
+  "root_paths": [
+    "research/l-families/atlas/generalized/cusp_flag_all_weight_endpoint_separation.sources.json",
+    "research/l-families/atlas/generalized/cusp_flag_divisor_explicit_formula.sources.json",
+    "research/l-families/atlas/generalized/cusp_flag_effective_endpoint_separation.sources.json",
+    "research/l-families/atlas/generalized/cusp_flag_effective_negative_derivative.sources.json",
+    "research/l-families/atlas/generalized/cusp_flag_fixed_depth_divisor_ladder.sources.json",
+    "research/l-families/atlas/generalized/cusp_flag_hecke_source_concentration.sources.json",
+    "research/l-families/atlas/generalized/cusp_flag_local_simple_endpoint_zero.sources.json",
+    "research/l-families/atlas/generalized/cusp_flag_native_denominator_poles.sources.json",
+    "research/l-families/atlas/generalized/cusp_flag_positive_spectrum_boundary.sources.json",
+    "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.sources.json",
+    "research/l-families/atlas/generalized/cusp_flag_signed_riemann_von_mangoldt.sources.json",
+    "research/l-families/atlas/generalized/cusp_flag_uncancelled_off_central_real_zeros.sources.json",
+    "research/l-families/atlas/generalized/cusp_matrix_period_positivity.sources.json",
+    "research/l-families/atlas/generalized/cusp_period_off_central_real_zeros.sources.json",
+    "research/l-families/atlas/generalized/cusp_weight24_complex_flag_divisors.sources.json",
+    "research/l-families/atlas/generalized/cusp_weight24_fixed_divisor_infinity.sources.json",
+    "research/l-families/atlas/generalized/cusp_weight36_subspace_divisors.sources.json",
+    "research/l-families/atlas/generalized/dense_torus_trace_absolute_power_rationality.sources.json",
+    "research/l-families/atlas/generalized/finite_graded_virtual_parent_classification.sources.json",
+    "research/l-families/atlas/generalized/graded_parent_global_boundary.sources.json",
+    "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.sources.json",
+    "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.sources.json",
+    "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+    "research/l-families/atlas/generalized/positive_determinant_power_release.sources.json",
+    "research/l-families/atlas/generalized/rankin_selberg_quotient_global_parent.sources.json",
+    "research/l-families/atlas/generalized/rational_rotation_branch_census.sources.json",
+    "research/l-families/atlas/generalized/rational_rotation_real_power_exact_degree.sources.json",
+    "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.sources.json",
+    "research/l-families/atlas/generalized/satake_deformation_completion_obstruction.sources.json",
+    "research/l-families/atlas/generalized/segre_higher_power_unitary_chambers.sources.json",
+    "research/l-families/atlas/generalized/segre_koszul_lie_parent.sources.json",
+    "research/l-families/atlas/generalized/segre_recurrence_syzygy_bridge.sources.json",
+    "research/l-families/atlas/generalized/tensor_moment_completion_rigidity.sources.json",
+    "research/l-families/atlas/generalized/theta_positive_source_real_zero_firewall.sources.json",
+    "research/l-families/atlas/generalized/theta_source_quotient_tensor_coherence.sources.json",
+    "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.sources.json",
+    "research/l-families/atlas/generalized/universal_coefficient_power_euler_obstruction.sources.json"
+  ],
+  "schema": "sixhour-complete-local-manifest-closure-v1",
+  "source_catalog_sha256": "94a6bf9a82dab9f1425a5466f851b26cf7513977e3b3e821bb7b12efe13e3d25",
+  "source_commits": [
+    "02e53055b6bdff73fa136ff28cced239d1627f80",
+    "070751bf7e96c1dbd6d4b3cfbb05dc70f5a2aa22",
+    "0f29fd2d687c57402a14723dde2bc2b7e74fa317",
+    "0f716ed43f97ecd3fd3260b16548a17f239d619b",
+    "10446e8ea9c55162c317810f63c1f7a379466459",
+    "1483ff25e9100276ac7064ba7d7d696b45afb9ea",
+    "14fa39a02267c043ac27cd68ef7157ef77afe83b",
+    "1653565cc80cde6fa882ae9e150626187d3071d0",
+    "246434f343029cc821aa236081c4d12080f571f2",
+    "24bfc73fc9aa3ba115902340affa8727dfa18970",
+    "27496745df9dd49fcde17699d333a54cf8620772",
+    "282ce03941444d0e02daba5fde260ccb54a3f909",
+    "2bd3de4ec14077868a38def1ba8883c9b8feefb9",
+    "2f636755ef8605eff725562094017f501fb1db70",
+    "3c6dd97bb497d5b25c00883362fd2fff4d5f6af6",
+    "3fd6c34d1cd8109eab3622d3966e05a0ad8fc7a4",
+    "43ecb4ac3f2487ee944b6bb6bef72e1ad92f2678",
+    "4597d652b8be56f14339c7689f932289b7fe3ab2",
+    "4a317ea5c9d7aa016fba58a1d74746e437329ec7",
+    "522493abae0f8e5526ceff4192d73b2cc617c069",
+    "64c8664a2fee08ae2e249743d6f784a7bec61b83",
+    "67f88c148bb5914897cc13b6cbce61960a277cd1",
+    "6b5fe8f112b38e59bd73ad80b448d52fff2da2d6",
+    "7ee5e024e1d8c3dd187b40ea5d48f9c9ff46d95e",
+    "8cf1538b336acd2b60faba2d7129edba3676932c",
+    "8e9f05211954e0a7aae5e63c9367f1d520d3671d",
+    "902b7dfeb12c5bee9028d97b420e3c2f42ac31fd",
+    "98b4058ac29ba88cf993d7a3ce67579fab0c7844",
+    "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+    "a27781310ded92125ef16d97d78db4d97cec4c1b",
+    "aa93b79f38792aeffd55e44f0a6800ee255c2274",
+    "acd91a621244872d49e0e4dfde76775879eadfc1",
+    "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+    "b62dfc6348661992bca659c99de226a1b6b22e14",
+    "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+    "b895598abd936a2e42e5b7d14a7e10cc2bf41486",
+    "bcd3ad5ff0c42e7b205663b68a010e2dbde6d941",
+    "bd53c016dbd006ac5e40d4fff412162a68e99525",
+    "c29ae6f3d134e076fa41aef9ae39920478f16ac0",
+    "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+    "d1e976f1fcda762f66291987938f9132892b123f",
+    "d8905affa82c0523fcf0ebac5107f4d257ea1284",
+    "e21e44d84077b7703c6795a81c91fc305b3fe344",
+    "e2c659ef1c1af926de63b69bf6c9ead6a95feaf5",
+    "e2f469142cd55086e74751293877ab533001e786",
+    "eaa8e8263bb34b8b669f911580c9dd9e55766ba2",
+    "ec5bdd9b02ea68bddfcf34ac40a85d283faf64cf",
+    "fdd349dcf6ba1b104e27866ae66b4c89752d5f05"
+  ]
+}

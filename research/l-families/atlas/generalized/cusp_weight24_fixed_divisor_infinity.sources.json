@@ -1,0 +1,75 @@
+{
+  "authoring_base": "eaa8e8263bb34b8b669f911580c9dd9e55766ba2",
+  "frozen_sources": [
+    {
+      "commit": "b62dfc6348661992bca659c99de226a1b6b22e14",
+      "git_blob": "4a3f9f0b6644bffdc94214e6fb2b60dfafdd93ca",
+      "path": "research/l-families/atlas/generalized/RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT.md",
+      "sha256_lf": "1828196e08782ce692f28e3fdec2feae55c6d24e9b3eb5c35ff1c315434aee75"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "77820c6af8d089d22547db6cda5ba025ed96f84f",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md",
+      "sha256_lf": "d5c95db34c62d31e0bb735e09aae5599e3abf29194cd74a50ce1bbebafab1530"
+    },
+    {
+      "commit": "eaa8e8263bb34b8b669f911580c9dd9e55766ba2",
+      "git_blob": "6fdf7dca06b7b29bfdc65973b8105f29d19baaa6",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_HECKE_SOURCE_CONCENTRATION.md",
+      "sha256_lf": "8394c28669c3266bbde916948ff5a05f0b6e67b5ae37c13ec5db0cab5301b13f"
+    },
+    {
+      "commit": "eaa8e8263bb34b8b669f911580c9dd9e55766ba2",
+      "git_blob": "79be911d4744480ec3ad86716c7e25fc580ad8c5",
+      "path": "research/l-families/atlas/generalized/cusp_flag_hecke_source_concentration.py",
+      "sha256_lf": "1efd5bb84d15adf7bd9f36ed93b3bd0918e66c5ad144c646dadc4e53000791cd"
+    },
+    {
+      "commit": "eaa8e8263bb34b8b669f911580c9dd9e55766ba2",
+      "git_blob": "9851ec556ee234083f5891fdaf55009f50a52119",
+      "path": "research/l-families/atlas/generalized/cusp_flag_hecke_source_concentration.json",
+      "sha256_lf": "1454e3fe336ac1366c607ae9ec1f3fa9dfd8d8cca30b251cdc5937e79a7f33c6"
+    },
+    {
+      "commit": "eaa8e8263bb34b8b669f911580c9dd9e55766ba2",
+      "git_blob": "00db6212cfccf9095e6902d51b65caf35abafb41",
+      "path": "tests/test_cusp_flag_hecke_source_concentration.py",
+      "sha256_lf": "8b28896b1fc4b4690e79f0093641a0b5c6d4815cb8ee6043b42e9f949322151d"
+    }
+  ],
+  "primary_references": [
+    {
+      "id": "BT",
+      "passage": "Theorem1.2 hypotheses; Proposition3.1 p2034; pp2040-2041",
+      "url": "https://msp.org/ant/2014/8-9/ant-v8-n9-p01-s.pdf"
+    },
+    {
+      "id": "BT-correction",
+      "passage": "both pages; corrected Lemma2.1 leaves Proposition3.1 intact",
+      "url": "https://msp.org/ant/2014/8-9/ant-v8-n9-x01-Correction-ZerosOfLFunctions.pdf"
+    },
+    {
+      "id": "GJ",
+      "passage": "p472 adjoint normalization; Theorem9.3(3) p534",
+      "url": "https://www.numdam.org/article/ASENS_1978_4_11_4_471_0.pdf"
+    },
+    {
+      "id": "R",
+      "passage": "Proposition2.3.1(2) and TheoremM pp53-54",
+      "url": "https://www.maths.tcd.ie/EMIS/journals/Annals/152_1/ramak.pdf"
+    },
+    {
+      "id": "R-correction",
+      "passage": "one-page running-header correction",
+      "url": "https://emis.muni.cz/journals/Annals/152_3/correction.pdf"
+    },
+    {
+      "id": "HS",
+      "passage": "section2 unitary normalization and Deligne bounds",
+      "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v172-n2-p18-p.pdf"
+    }
+  ],
+  "remote_bytes": "not_authenticated_by_offline_git_checker",
+  "schema": "fixed-divisor-sources-v1"
+}

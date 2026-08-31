@@ -1,0 +1,1467 @@
+{
+  "all_science_input_hashes_unchanged": true,
+  "boundary": "Exact declared test/producer input hashes only; fixtures and sources are checked by their producers. Analytic proof review remains separate.",
+  "interpreters": {
+    "system": {
+      "path": "C:\\Users\\gideo\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    }
+  },
+  "module_count": 37,
+  "observed_head_after": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+  "observed_head_before": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+  "optimized": false,
+  "panel_science_head": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+  "panel_sha256_lf": "4881c4efd3f8dae235d0db095b7ebf63489f582be75c3ceaa6c800563f64b5a3",
+  "producer_checks": 37,
+  "programme": "G",
+  "records": [
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_flag_all_weight_endpoint_separation.py"
+      ],
+      "elapsed_seconds": 5.531,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "65c974990e57462102e542c125b95cb4722ebb24835e6e2431b5d849327d7d52",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_flag_all_weight_endpoint_separation.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_flag_all_weight_endpoint_separation.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.781,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "05c4c77056d6962333c694643a01646101f2cf7f058b20028d379eba9dd249b2",
+      "test": "tests/test_cusp_flag_all_weight_endpoint_separation.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_flag_divisor_explicit_formula.py"
+      ],
+      "elapsed_seconds": 3.281,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e8086ff1c0571a8487669a3b0016efa68fcccbf82023c03198435ccc2f237672",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_flag_divisor_explicit_formula.py",
+      "tests_run": 36
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_flag_divisor_explicit_formula.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.188,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3015d560992397d0c7438128c0c4b9160f9850f2fc1dfabeb1914bd55537239c",
+      "test": "tests/test_cusp_flag_divisor_explicit_formula.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_flag_effective_endpoint_separation.py"
+      ],
+      "elapsed_seconds": 6.297,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "d100856f0817e8bdcb2e0a40bbeba0ecfd0d8402ac39ce1d01a7c4c84c9c5d67",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_flag_effective_endpoint_separation.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_flag_effective_endpoint_separation.py",
+        "--check"
+      ],
+      "elapsed_seconds": 2.328,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3f85788435d5aa96fbd67da1a84b6cb31f2366103296f2f78085e27a5957e92a",
+      "test": "tests/test_cusp_flag_effective_endpoint_separation.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_flag_effective_negative_derivative.py"
+      ],
+      "elapsed_seconds": 2.578,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "2a2a239ddd8a759aee68317f3172ed3e0cfde3ba76c1ea544d5e3af18e22f3c4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_flag_effective_negative_derivative.py",
+      "tests_run": 30
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_flag_effective_negative_derivative.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.281,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "20854bfa02587fd5bb8e8597f0a19f9862e1d83124b25b7322c7eed0a9b8ea71",
+      "test": "tests/test_cusp_flag_effective_negative_derivative.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_flag_fixed_depth_divisor_ladder.py"
+      ],
+      "elapsed_seconds": 12.328,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "b5ce25d233dd06b448215b63b59460348fa323e75d588ec026391adb4e736cf4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_flag_fixed_depth_divisor_ladder.py",
+      "tests_run": 40
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_flag_fixed_depth_divisor_ladder.py",
+        "--check"
+      ],
+      "elapsed_seconds": 3.141,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b2d7f8c5399dec278e3f8f0d7348185727809c668aec8e1af73217df372c882e",
+      "test": "tests/test_cusp_flag_fixed_depth_divisor_ladder.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_flag_hecke_source_concentration.py"
+      ],
+      "elapsed_seconds": 26.312,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "2e5d2edb3d50213d166a459243ae1456e7c21b73a4e946d5a6b2a9f593c4cfbd",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_flag_hecke_source_concentration.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_flag_hecke_source_concentration.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.204,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a6f6957ff2d3d44670bfae0619dc372e664b3d872444ae91eed442d999d325ba",
+      "test": "tests/test_cusp_flag_hecke_source_concentration.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_flag_local_simple_endpoint_zero.py"
+      ],
+      "elapsed_seconds": 10.125,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "887057ec5b540766112e6c3fb84bbfec28c3f17d45e4651092b10c41b084acde",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_flag_local_simple_endpoint_zero.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_flag_local_simple_endpoint_zero.py",
+        "--check"
+      ],
+      "elapsed_seconds": 2.5,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "6d09c254f246b6efb843c78419554e77acaa8c2fecf742e0c966ff294c693124",
+      "test": "tests/test_cusp_flag_local_simple_endpoint_zero.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_flag_native_denominator_poles.py"
+      ],
+      "elapsed_seconds": 12.875,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "6b7486e0e789a4fc6828ff61c1642a568efc6c0a989791007129cc00494a7e8f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_flag_native_denominator_poles.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_flag_native_denominator_poles.py",
+        "--check"
+      ],
+      "elapsed_seconds": 2.875,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "24a0788a83db670f7a5c97630add8afe943aa4475febc85cb34c76269446f993",
+      "test": "tests/test_cusp_flag_native_denominator_poles.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_flag_positive_spectrum_boundary.py"
+      ],
+      "elapsed_seconds": 4.218,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "dcafd89364892aca6ab531e2b0802f44b83216c997902fafa0295681f4649f5c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_flag_positive_spectrum_boundary.py",
+      "tests_run": 36
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_flag_positive_spectrum_boundary.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.282,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "75b72445d0d518a5d07a7b2f6e284a44878155f3b2f5884a692d9c0a2a07979d",
+      "test": "tests/test_cusp_flag_positive_spectrum_boundary.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_flag_quotient_global_family.py"
+      ],
+      "elapsed_seconds": 7.671,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "66011ec7b7963ef13935bc2b7af98f07f617454c2eb519dcaa803cf76cb6aa42",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_flag_quotient_global_family.py",
+      "tests_run": 36
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.py",
+        "--check"
+      ],
+      "elapsed_seconds": 3.266,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c00662038efe28ad247b7ee54329cb7d889a6e0251473c371bde1a8f0612adb8",
+      "test": "tests/test_cusp_flag_quotient_global_family.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_flag_signed_riemann_von_mangoldt.py"
+      ],
+      "elapsed_seconds": 6.75,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "1cf02b9b4401eb894c73a6fd3fb35e9a4a5cfc8a2e02694440037a6e250f38e0",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_flag_signed_riemann_von_mangoldt.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_flag_signed_riemann_von_mangoldt.py",
+        "--check"
+      ],
+      "elapsed_seconds": 2.047,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fe73194cbf52402c07d52f8fa80f2938a2d85f2863ff723805887c58777c58f6",
+      "test": "tests/test_cusp_flag_signed_riemann_von_mangoldt.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_flag_uncancelled_off_central_real_zeros.py"
+      ],
+      "elapsed_seconds": 6.766,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "bac40afd2233907b3081c9db7f9fdb610caf2971f7201adb09b16cab21b06a79",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_flag_uncancelled_off_central_real_zeros.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_flag_uncancelled_off_central_real_zeros.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.953,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "555eb48ba63badc0448400582998f9dc0ace07542db99a3dfdbb5c5430661a96",
+      "test": "tests/test_cusp_flag_uncancelled_off_central_real_zeros.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_matrix_period_positivity.py"
+      ],
+      "elapsed_seconds": 41.062,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "7e675f399fc39b47294e38bce6373075ec155ac0457225c7ff24a9810ec41a64",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_matrix_period_positivity.py",
+      "tests_run": 36
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_matrix_period_positivity.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.485,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1b3be205c84f7eb9f5d386ba32aa9e48b7b0dc97c04d4abc2155ede7112dc5a3",
+      "test": "tests/test_cusp_matrix_period_positivity.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_period_off_central_real_zeros.py"
+      ],
+      "elapsed_seconds": 4.406,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "b725ce3e890ec1d894ed361674990a20d720acac72329bd168fa308ba8bb3a2e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_period_off_central_real_zeros.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_period_off_central_real_zeros.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.453,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "096da268a19c162a741696947d2ba74dba1b4bba76013a9e737732506a27b2d7",
+      "test": "tests/test_cusp_period_off_central_real_zeros.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_weight24_complex_flag_divisors.py"
+      ],
+      "elapsed_seconds": 34.937,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "c601d49406e073458a685aa415d4b8cfda8667cb25fb79fbc4322d1171f958c4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_weight24_complex_flag_divisors.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_weight24_complex_flag_divisors.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.61,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a9b7f890225c3ebc719bc08c1ec8e19b407878f696ffd71e504a252d18c070e0",
+      "test": "tests/test_cusp_weight24_complex_flag_divisors.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_weight24_fixed_divisor_infinity.py"
+      ],
+      "elapsed_seconds": 17.828,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "708b608f33aa29e5c79cc19d11874d02efc788f31a5bc85f4a7ea2f5fb2532fa",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_weight24_fixed_divisor_infinity.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_weight24_fixed_divisor_infinity.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.828,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "94662a23d9a0bd58ebe14e57acb984c5d020b555485938361ffbd2299f146b0f",
+      "test": "tests/test_cusp_weight24_fixed_divisor_infinity.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_cusp_weight36_subspace_divisors.py"
+      ],
+      "elapsed_seconds": 26.531,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "06ceeada680f7b6c5898651e86eeed3ff574b489e90f70c508d3f411a1048854",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_cusp_weight36_subspace_divisors.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/cusp_weight36_subspace_divisors.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.219,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7d2e081d645373e96d12427d1d89160e91b00210ad04ad9353d6068cde01353c",
+      "test": "tests/test_cusp_weight36_subspace_divisors.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_dense_torus_trace_absolute_power_rationality.py"
+      ],
+      "elapsed_seconds": 2.891,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "1a0214723b9586b35930c1e30b7be2f8240bf4006a5e61d1fa98441bb001a158",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_dense_torus_trace_absolute_power_rationality.py",
+      "tests_run": 10
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/dense_torus_trace_absolute_power_rationality.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.937,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "cd8b8826619b2fc4ec33978bbeeb755b39e4e1d5acf75e7e2faeb79f246cfe0c",
+      "test": "tests/test_dense_torus_trace_absolute_power_rationality.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_finite_graded_virtual_parent_classification.py"
+      ],
+      "elapsed_seconds": 5.891,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "5f67731e4a6be6d1b4c8d556542efcc53ec5937770af45056c692cbc53aa5102",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_finite_graded_virtual_parent_classification.py",
+      "tests_run": 21
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/finite_graded_virtual_parent_classification.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.094,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ded8c87cf1d0c2fcf06054df009b6f865d522aa304f03d28cb212de6666d4cfe",
+      "test": "tests/test_finite_graded_virtual_parent_classification.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_graded_parent_global_boundary.py"
+      ],
+      "elapsed_seconds": 5.203,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "4f15e20d68c83e595aa3ef52b4df886c6c68dddbfc92a0adf05acfe53f0752f0",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_graded_parent_global_boundary.py",
+      "tests_run": 25
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/graded_parent_global_boundary.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.875,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "775cbad7166fdb748b932065c478f12390402665e780d539bb17789c6facf172",
+      "test": "tests/test_graded_parent_global_boundary.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_irrational_rotation_absolute_power_rationality.py"
+      ],
+      "elapsed_seconds": 6.062,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "ce1cc4f5b7d876e786e6a3ab109d8ee05a4adbd9784299b086a66415f7051980",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_irrational_rotation_absolute_power_rationality.py",
+      "tests_run": 12
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.py",
+        "--check"
+      ],
+      "elapsed_seconds": 4.703,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a2f8de84e0ecae9363b1d6d3211455b367f9a5053efb31d1b4940a113a19523d",
+      "test": "tests/test_irrational_rotation_absolute_power_rationality.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_irrational_rotation_principal_complex_power_rationality.py"
+      ],
+      "elapsed_seconds": 1.875,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "d1fdf3db4b70e9c072699b7a59b97275cfe1a422ff27d11feff74c8544b0ac23",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_irrational_rotation_principal_complex_power_rationality.py",
+      "tests_run": 10
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.922,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d08bb2e4e0a86546b494f5dca985ceaacb446452c42052d32b3ff08b842c3af4",
+      "test": "tests/test_irrational_rotation_principal_complex_power_rationality.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_nonintegral_local_power_rationality.py"
+      ],
+      "elapsed_seconds": 3.703,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "a2bebc6e60895b9de3d90de0242c83a2af992209118147b6762be5df9fb9502b",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_nonintegral_local_power_rationality.py",
+      "tests_run": 12
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.141,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "cf4caa936a2796ff14ab0d9613cbc05db1161b370bbed5a336953750c346c25a",
+      "test": "tests/test_nonintegral_local_power_rationality.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_positive_determinant_power_release.py"
+      ],
+      "elapsed_seconds": 1.625,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "948a4013f221f7741b68729197517ed540d0abe65fc702621e1861c22c64d9df",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_positive_determinant_power_release.py",
+      "tests_run": 11
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/positive_determinant_power_release.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.812,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e0b8ec4a9bf5555bf23ed741bbc1772d11d7442e74539554311114667e564c2b",
+      "test": "tests/test_positive_determinant_power_release.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_rankin_selberg_quotient_global_parent.py"
+      ],
+      "elapsed_seconds": 2.016,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "86c06822dbb51fd80113fe1f9428411fc548b4d7378d57d4e05c0a910f28127b",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_rankin_selberg_quotient_global_parent.py",
+      "tests_run": 30
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/rankin_selberg_quotient_global_parent.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.438,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "71ff99869261f51ca95212da98b62ea334db9ec455de4063e51d502e5316ea33",
+      "test": "tests/test_rankin_selberg_quotient_global_parent.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_rational_rotation_branch_census.py"
+      ],
+      "elapsed_seconds": 1.343,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "19495a5371675b880000144561454a1c031dc280889a2f666a68bff1a2ff507d",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_rational_rotation_branch_census.py",
+      "tests_run": 10
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.86,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8cc7067626c529ea2a5a3a5578b8e433c51b52b68e69d69adf3d2f8ea7b46790",
+      "test": "tests/test_rational_rotation_branch_census.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_rational_rotation_real_power_exact_degree.py"
+      ],
+      "elapsed_seconds": 2.687,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "7a3b547cff33d60f366a0dca0315a33c2b6da42c9fcf80ae95f198aae446c9b0",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_rational_rotation_real_power_exact_degree.py",
+      "tests_run": 16
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/rational_rotation_real_power_exact_degree.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.719,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a5867a34b93ec28578cb5e4340d802b3ba9d794afd73d9b10da163e9b63ed25b",
+      "test": "tests/test_rational_rotation_real_power_exact_degree.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_rational_rotation_uniform_degree_gate.py"
+      ],
+      "elapsed_seconds": 2.406,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "6ef467969b053348b0227210581e5097ed7c32b27c6e8d8cf03d16d8045f83f3",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_rational_rotation_uniform_degree_gate.py",
+      "tests_run": 8
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.281,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "07c78b0011691ebc369187995b4c1b7a37d932422c0adf953477ac88a7b77f09",
+      "test": "tests/test_rational_rotation_uniform_degree_gate.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_satake_deformation_completion_obstruction.py"
+      ],
+      "elapsed_seconds": 3.532,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "95f552534a1a8d186483460eb4ceb5674347b0b8ede86933061953150cdab2b3",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_satake_deformation_completion_obstruction.py",
+      "tests_run": 20
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/satake_deformation_completion_obstruction.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.531,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8c8b789a28f141b1d71e8a7c5cf6759b5832bde2577cf0009a9e1d7ecc4bdfb9",
+      "test": "tests/test_satake_deformation_completion_obstruction.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_segre_higher_power_unitary_chambers.py"
+      ],
+      "elapsed_seconds": 26.125,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "8804bc82bbb01dfd8ef0b6174f3f200b62252672ce022055b6dd9292e62405a7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_segre_higher_power_unitary_chambers.py",
+      "tests_run": 39
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/segre_higher_power_unitary_chambers.py",
+        "--check"
+      ],
+      "elapsed_seconds": 24.062,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "13e2532fef1bc48b7f193d3cf0c06a9669d34d289432b1508ba2dd11f0691bd6",
+      "test": "tests/test_segre_higher_power_unitary_chambers.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_segre_koszul_lie_parent.py"
+      ],
+      "elapsed_seconds": 1.329,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "03ac8cf12b5f78e4fe1398c162f751536f100dc6fe4fa12809d4c70ad661b913",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_segre_koszul_lie_parent.py",
+      "tests_run": 25
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/segre_koszul_lie_parent.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.187,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ef136af606b75c7b0e3957cff0c5f2ddd19e1bdd03502200bab528948a3c9a3a",
+      "test": "tests/test_segre_koszul_lie_parent.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_segre_recurrence_syzygy_bridge.py"
+      ],
+      "elapsed_seconds": 7.906,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e599d70155026f4f0a6badb27fd2739646d84264a18be59dbad546bbe668e581",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_segre_recurrence_syzygy_bridge.py",
+      "tests_run": 33
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/segre_recurrence_syzygy_bridge.py",
+        "--check"
+      ],
+      "elapsed_seconds": 6.688,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3e760d5c1d64f52bc3f021f17ee9dcf44fd5bf21dbf0131635959ad954c3e9a",
+      "test": "tests/test_segre_recurrence_syzygy_bridge.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_tensor_moment_completion_rigidity.py"
+      ],
+      "elapsed_seconds": 7.672,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "42146265ae4041adfa9595781085a0b90140f5eab3315e34d968ae92ff4a767f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_tensor_moment_completion_rigidity.py",
+      "tests_run": 20
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/tensor_moment_completion_rigidity.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.109,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f3fae8625bea4173aba96567bfb1880eebc5027caf70fbec38fd57d307f1500f",
+      "test": "tests/test_tensor_moment_completion_rigidity.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_theta_positive_source_real_zero_firewall.py"
+      ],
+      "elapsed_seconds": 11.188,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "a802738c55a2366e9573dc1052d034d066bff5dddfc3892eea2b0b1d50b9e443",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_theta_positive_source_real_zero_firewall.py",
+      "tests_run": 28
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/theta_positive_source_real_zero_firewall.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.687,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8a3d97f3a8309292848a0e4d06df48110b6a2a4c06cb0272aaedf895022d502c",
+      "test": "tests/test_theta_positive_source_real_zero_firewall.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_theta_source_quotient_tensor_coherence.py"
+      ],
+      "elapsed_seconds": 51.297,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "c204ae74da256665e0f45505ca9bbdbbcf049165001278f1bbe6c5fd193051db",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_theta_source_quotient_tensor_coherence.py",
+      "tests_run": 36
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/theta_source_quotient_tensor_coherence.py",
+        "--check"
+      ],
+      "elapsed_seconds": 2.766,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c46fe72aaa44052cd3472bfc9d8620c4af9acc0128656bdecfc9c5a4bfa1a418",
+      "test": "tests/test_theta_source_quotient_tensor_coherence.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_transfer_matrix_symmetric_parent.py"
+      ],
+      "elapsed_seconds": 1.421,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "62782a2d0cfce3bcd294fe6144e7ba23658e7c582a682b827c33239ceefd24b7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_transfer_matrix_symmetric_parent.py",
+      "tests_run": 16
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.594,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a0f0b368ee42d56254e4abed36dfdcae018bc4b648bcc78360b8e70e554b3d6f",
+      "test": "tests/test_transfer_matrix_symmetric_parent.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_universal_coefficient_power_euler_obstruction.py"
+      ],
+      "elapsed_seconds": 3.11,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "cca8a377f6d66018d4d6ee8bb2e023a85f04241ce40468e60a5bbb0dfb248dcf",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_universal_coefficient_power_euler_obstruction.py",
+      "tests_run": 14
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "research/l-families/atlas/generalized/universal_coefficient_power_euler_obstruction.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.781,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b6671c5bbec307df0dc6f053cde8abf7d543abdbd5e90eb3a6603ba14234bd90",
+      "test": "tests/test_universal_coefficient_power_euler_obstruction.py",
+      "tests_run": null
+    }
+  ],
+  "runner_sha256_lf": "4bf7cb0cfb598b76d01ad7a48f082aaf110eb6a017e6831e67c307933f5e1a88",
+  "schema": "sixhour-pass3-programme-replay-v1",
+  "status": "PASS",
+  "total_tests": 962
+}

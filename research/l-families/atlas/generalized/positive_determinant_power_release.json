@@ -1,0 +1,2456 @@
+{
+  "audit_verdict": {
+    "exact_relation_to_source": "G_(lambda;t,delta)(T)=G_(lambda;x,1)(sqrt(delta)^lambda*T)",
+    "independent_nonrationality_theorem": false,
+    "why_packetized": "closes the positive determinant coordinate release with a source lock, branch firewall, and sharp transported integer denominator"
+  },
+  "claims": {
+    "GLO764.POSITIVE_DETERMINANT_BRANCH_GATE": {
+      "statement": "the transport uses only the unique positive sqrt(delta) and positive-real logarithms; other determinant chambers are excluded",
+      "status": "PROVED_IN_COMPANION_NOTE"
+    },
+    "GLO764.POSITIVE_DETERMINANT_INTEGER_MINIMAL_DENOMINATOR": {
+      "statement": "at k>=0 the reduced denominator is product_j(1-alpha^(k-j)*beta^j*T), of degree k+1",
+      "status": "PROVED_NATIVELY_AND_EXACTLY_REPLAYED"
+    },
+    "GLO764.POSITIVE_DETERMINANT_POWER_RATIONALITY": {
+      "statement": "for alpha>beta>0 under the positive log, sum_r u_r^lambda*T^r is rational iff lambda is a nonnegative integer",
+      "status": "PROVED_AS_COROLLARY_OF_AUTHENTICATED_SOURCE_THEOREM"
+    }
+  },
+  "determinant_normalization_controls": [
+    {
+      "a": "2",
+      "a_inverse": "1/2",
+      "all_complex_lambda_transport": "PROVED_BY_POSITIVE_LOG_ADDITIVITY_IN_NOTE",
+      "alpha": "4",
+      "beta": "1",
+      "delta": "4",
+      "integer_lambda_transport_controls": [
+        {
+          "lambda": -2,
+          "s_to_lambda": "1/4",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": -1,
+          "s_to_lambda": "1/2",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": 0,
+          "s_to_lambda": "1",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": 1,
+          "s_to_lambda": "2",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": 2,
+          "s_to_lambda": "4",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": 3,
+          "s_to_lambda": "8",
+          "transport_checked_through_index": 15
+        }
+      ],
+      "normalized_trace_x": "5/2",
+      "positive_sqrt_delta_s": "2",
+      "u_r_equals_s_to_r_v_r_through_index": 15
+    },
+    {
+      "a": "3/2",
+      "a_inverse": "2/3",
+      "all_complex_lambda_transport": "PROVED_BY_POSITIVE_LOG_ADDITIVITY_IN_NOTE",
+      "alpha": "9",
+      "beta": "4",
+      "delta": "36",
+      "integer_lambda_transport_controls": [
+        {
+          "lambda": -2,
+          "s_to_lambda": "1/36",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": -1,
+          "s_to_lambda": "1/6",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": 0,
+          "s_to_lambda": "1",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": 1,
+          "s_to_lambda": "6",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": 2,
+          "s_to_lambda": "36",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": 3,
+          "s_to_lambda": "216",
+          "transport_checked_through_index": 15
+        }
+      ],
+      "normalized_trace_x": "13/6",
+      "positive_sqrt_delta_s": "6",
+      "u_r_equals_s_to_r_v_r_through_index": 15
+    },
+    {
+      "a": "2",
+      "a_inverse": "1/2",
+      "all_complex_lambda_transport": "PROVED_BY_POSITIVE_LOG_ADDITIVITY_IN_NOTE",
+      "alpha": "2",
+      "beta": "1/2",
+      "delta": "1",
+      "integer_lambda_transport_controls": [
+        {
+          "lambda": -2,
+          "s_to_lambda": "1",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": -1,
+          "s_to_lambda": "1",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": 0,
+          "s_to_lambda": "1",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": 1,
+          "s_to_lambda": "1",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": 2,
+          "s_to_lambda": "1",
+          "transport_checked_through_index": 15
+        },
+        {
+          "lambda": 3,
+          "s_to_lambda": "1",
+          "transport_checked_through_index": 15
+        }
+      ],
+      "normalized_trace_x": "5/2",
+      "positive_sqrt_delta_s": "1",
+      "u_r_equals_s_to_r_v_r_through_index": 15
+    }
+  ],
+  "hostile_controls": {
+    "complex_determinant": "EXCLUDED_REQUIRES_SQUARE_ROOT_AND_LOG_BRANCH_DATA",
+    "equal_roots": "REJECTED_COALESCED_BOUNDARY",
+    "integer_denominator_requires_distinct_nonzero_weights": true,
+    "negative_root": "REJECTED_POSITIVE_LOG_FAILURE",
+    "negative_square_root": "REJECTED_BRANCH_AND_SIGN_CHANGE",
+    "reversed_roots": "REJECTED_ORDERING_FAILURE",
+    "zero_root": "REJECTED_STRICT_POSITIVITY_FAILURE"
+  },
+  "normalization": {
+    "binet": "u_r=(alpha^(r+1)-beta^(r+1))/(alpha-beta)",
+    "complex_power": "positive-real logarithm only",
+    "determinant": "delta=alpha*beta>0",
+    "determinant_one_root": "a=sqrt(alpha/beta)>1",
+    "equivalent_trace_chamber": "t>2*sqrt(delta)",
+    "positive_scale": "s=sqrt(delta)>0",
+    "recurrence": "u_0=1; u_1=t; u_(r+2)=t*u_(r+1)-delta*u_r",
+    "root_chamber": "alpha>beta>0",
+    "trace": "t=alpha+beta",
+    "transport": "u_r=s^r*v_r and G_(lambda;t,delta)(T)=G_(lambda;x,1)(s^lambda*T)"
+  },
+  "payload_sha256": "82298c7bff11f7d2e19c69a24181d307d725cc7bc4bf8ca013750ac62bbd1b8a",
+  "producer": {
+    "note": "research/l-families/atlas/generalized/POSITIVE_DETERMINANT_POWER_RELEASE.md",
+    "note_sha256_lf_normalized": "1a94c75bd5ce8d6e938baafa04bc617b06d3d493c57cb22bf527ffd32bbbf0eb",
+    "script": "research/l-families/atlas/generalized/positive_determinant_power_release.py",
+    "script_sha256_lf_normalized": "4970309485f8af80f4246cda6ef233d86199b642959b0c4dc4c2beb1c8694f54",
+    "test": "tests/test_positive_determinant_power_release.py",
+    "test_sha256_lf_normalized": "65cc7d4389f26ad27b4deba1452d3fdd3f54d28b349ada625fd324dbbe0472b1"
+  },
+  "programme_issue": 764,
+  "resource_contract": {
+    "arithmetic_class": "EXACT_RATIONAL",
+    "declared_work_units": 8100,
+    "exact_method": "integer and fractional recurrences, Binet identities, binomial power terms, and polynomial convolutions",
+    "external_symbolic_engine": false,
+    "float_operations": 0,
+    "maximum_allowed_power": 14,
+    "maximum_power": 8,
+    "prime_curve_field_zero_or_conductor_enumerations": 0,
+    "random_samples": 0,
+    "work_unit_cap_exclusive": 100000
+  },
+  "root_pair_corpus": [
+    {
+      "alpha": "3",
+      "beta": "2",
+      "binet_equals_recurrence_through_index": 33,
+      "determinant_delta": "6",
+      "integer_power_rows": [
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 0,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-1"
+          ],
+          "minimal_denominator_degree": 1,
+          "tail_annihilation_checked_through_index": 9,
+          "terms": [
+            {
+              "coefficient": "1",
+              "exponent_pair": [
+                0,
+                0
+              ],
+              "weight": "1"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 1,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-5",
+            "6"
+          ],
+          "minimal_denominator_degree": 2,
+          "tail_annihilation_checked_through_index": 12,
+          "terms": [
+            {
+              "coefficient": "3",
+              "exponent_pair": [
+                1,
+                0
+              ],
+              "weight": "3"
+            },
+            {
+              "coefficient": "-2",
+              "exponent_pair": [
+                0,
+                1
+              ],
+              "weight": "2"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 2,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-19",
+            "114",
+            "-216"
+          ],
+          "minimal_denominator_degree": 3,
+          "tail_annihilation_checked_through_index": 15,
+          "terms": [
+            {
+              "coefficient": "9",
+              "exponent_pair": [
+                2,
+                0
+              ],
+              "weight": "9"
+            },
+            {
+              "coefficient": "-12",
+              "exponent_pair": [
+                1,
+                1
+              ],
+              "weight": "6"
+            },
+            {
+              "coefficient": "4",
+              "exponent_pair": [
+                0,
+                2
+              ],
+              "weight": "4"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 3,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-65",
+            "1482",
+            "-14040",
+            "46656"
+          ],
+          "minimal_denominator_degree": 4,
+          "tail_annihilation_checked_through_index": 18,
+          "terms": [
+            {
+              "coefficient": "27",
+              "exponent_pair": [
+                3,
+                0
+              ],
+              "weight": "27"
+            },
+            {
+              "coefficient": "-54",
+              "exponent_pair": [
+                2,
+                1
+              ],
+              "weight": "18"
+            },
+            {
+              "coefficient": "36",
+              "exponent_pair": [
+                1,
+                2
+              ],
+              "weight": "12"
+            },
+            {
+              "coefficient": "-8",
+              "exponent_pair": [
+                0,
+                3
+              ],
+              "weight": "8"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 4,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-211",
+            "16458",
+            "-592488",
+            "9844416",
+            "-60466176"
+          ],
+          "minimal_denominator_degree": 5,
+          "tail_annihilation_checked_through_index": 21,
+          "terms": [
+            {
+              "coefficient": "81",
+              "exponent_pair": [
+                4,
+                0
+              ],
+              "weight": "81"
+            },
+            {
+              "coefficient": "-216",
+              "exponent_pair": [
+                3,
+                1
+              ],
+              "weight": "54"
+            },
+            {
+              "coefficient": "216",
+              "exponent_pair": [
+                2,
+                2
+              ],
+              "weight": "36"
+            },
+            {
+              "coefficient": "-96",
+              "exponent_pair": [
+                1,
+                3
+              ],
+              "weight": "24"
+            },
+            {
+              "coefficient": "16",
+              "exponent_pair": [
+                0,
+                4
+              ],
+              "weight": "16"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 5,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-665",
+            "168378",
+            "-20737080",
+            "1309307328",
+            "-40210007040",
+            "470184984576"
+          ],
+          "minimal_denominator_degree": 6,
+          "tail_annihilation_checked_through_index": 24,
+          "terms": [
+            {
+              "coefficient": "243",
+              "exponent_pair": [
+                5,
+                0
+              ],
+              "weight": "243"
+            },
+            {
+              "coefficient": "-810",
+              "exponent_pair": [
+                4,
+                1
+              ],
+              "weight": "162"
+            },
+            {
+              "coefficient": "1080",
+              "exponent_pair": [
+                3,
+                2
+              ],
+              "weight": "108"
+            },
+            {
+              "coefficient": "-720",
+              "exponent_pair": [
+                2,
+                3
+              ],
+              "weight": "72"
+            },
+            {
+              "coefficient": "240",
+              "exponent_pair": [
+                1,
+                4
+              ],
+              "weight": "48"
+            },
+            {
+              "coefficient": "-32",
+              "exponent_pair": [
+                0,
+                5
+              ],
+              "weight": "32"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 6,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-2059",
+            "1643082",
+            "-656886888",
+            "141887567808",
+            "-16558480899072",
+            "968110883241984",
+            "-21936950640377856"
+          ],
+          "minimal_denominator_degree": 7,
+          "tail_annihilation_checked_through_index": 27,
+          "terms": [
+            {
+              "coefficient": "729",
+              "exponent_pair": [
+                6,
+                0
+              ],
+              "weight": "729"
+            },
+            {
+              "coefficient": "-2916",
+              "exponent_pair": [
+                5,
+                1
+              ],
+              "weight": "486"
+            },
+            {
+              "coefficient": "4860",
+              "exponent_pair": [
+                4,
+                2
+              ],
+              "weight": "324"
+            },
+            {
+              "coefficient": "-4320",
+              "exponent_pair": [
+                3,
+                3
+              ],
+              "weight": "216"
+            },
+            {
+              "coefficient": "2160",
+              "exponent_pair": [
+                2,
+                4
+              ],
+              "weight": "144"
+            },
+            {
+              "coefficient": "-576",
+              "exponent_pair": [
+                1,
+                5
+              ],
+              "weight": "96"
+            },
+            {
+              "coefficient": "64",
+              "exponent_pair": [
+                0,
+                6
+              ],
+              "weight": "64"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 7,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-6305",
+            "15578394",
+            "-19628776440",
+            "13763094077376",
+            "-5494801161507840",
+            "1220787823768141824",
+            "-138312473787582382080",
+            "6140942214464815497216"
+          ],
+          "minimal_denominator_degree": 8,
+          "tail_annihilation_checked_through_index": 30,
+          "terms": [
+            {
+              "coefficient": "2187",
+              "exponent_pair": [
+                7,
+                0
+              ],
+              "weight": "2187"
+            },
+            {
+              "coefficient": "-10206",
+              "exponent_pair": [
+                6,
+                1
+              ],
+              "weight": "1458"
+            },
+            {
+              "coefficient": "20412",
+              "exponent_pair": [
+                5,
+                2
+              ],
+              "weight": "972"
+            },
+            {
+              "coefficient": "-22680",
+              "exponent_pair": [
+                4,
+                3
+              ],
+              "weight": "648"
+            },
+            {
+              "coefficient": "15120",
+              "exponent_pair": [
+                3,
+                4
+              ],
+              "weight": "432"
+            },
+            {
+              "coefficient": "-6048",
+              "exponent_pair": [
+                2,
+                5
+              ],
+              "weight": "288"
+            },
+            {
+              "coefficient": "1344",
+              "exponent_pair": [
+                1,
+                6
+              ],
+              "weight": "192"
+            },
+            {
+              "coefficient": "-128",
+              "exponent_pair": [
+                0,
+                7
+              ],
+              "weight": "128"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 8,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-19171",
+            "145047786",
+            "-565869583656",
+            "1250484723020736",
+            "-1620628201034873856",
+            "1231774914182055100416",
+            "-530317686996348369371136",
+            "117728003193504977897127936",
+            "-10314424798490535546171949056"
+          ],
+          "minimal_denominator_degree": 9,
+          "tail_annihilation_checked_through_index": 33,
+          "terms": [
+            {
+              "coefficient": "6561",
+              "exponent_pair": [
+                8,
+                0
+              ],
+              "weight": "6561"
+            },
+            {
+              "coefficient": "-34992",
+              "exponent_pair": [
+                7,
+                1
+              ],
+              "weight": "4374"
+            },
+            {
+              "coefficient": "81648",
+              "exponent_pair": [
+                6,
+                2
+              ],
+              "weight": "2916"
+            },
+            {
+              "coefficient": "-108864",
+              "exponent_pair": [
+                5,
+                3
+              ],
+              "weight": "1944"
+            },
+            {
+              "coefficient": "90720",
+              "exponent_pair": [
+                4,
+                4
+              ],
+              "weight": "1296"
+            },
+            {
+              "coefficient": "-48384",
+              "exponent_pair": [
+                3,
+                5
+              ],
+              "weight": "864"
+            },
+            {
+              "coefficient": "16128",
+              "exponent_pair": [
+                2,
+                6
+              ],
+              "weight": "576"
+            },
+            {
+              "coefficient": "-3072",
+              "exponent_pair": [
+                1,
+                7
+              ],
+              "weight": "384"
+            },
+            {
+              "coefficient": "256",
+              "exponent_pair": [
+                0,
+                8
+              ],
+              "weight": "256"
+            }
+          ]
+        }
+      ],
+      "sequence_prefix": [
+        "1",
+        "5",
+        "19",
+        "65",
+        "211",
+        "665",
+        "2059",
+        "6305",
+        "19171",
+        "58025"
+      ],
+      "strict_hyperbolic_inequality": "t>2*sqrt(delta)",
+      "trace_t": "5"
+    },
+    {
+      "alpha": "4",
+      "beta": "1",
+      "binet_equals_recurrence_through_index": 33,
+      "determinant_delta": "4",
+      "integer_power_rows": [
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 0,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-1"
+          ],
+          "minimal_denominator_degree": 1,
+          "tail_annihilation_checked_through_index": 9,
+          "terms": [
+            {
+              "coefficient": "1",
+              "exponent_pair": [
+                0,
+                0
+              ],
+              "weight": "1"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 1,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-5",
+            "4"
+          ],
+          "minimal_denominator_degree": 2,
+          "tail_annihilation_checked_through_index": 12,
+          "terms": [
+            {
+              "coefficient": "4/3",
+              "exponent_pair": [
+                1,
+                0
+              ],
+              "weight": "4"
+            },
+            {
+              "coefficient": "-1/3",
+              "exponent_pair": [
+                0,
+                1
+              ],
+              "weight": "1"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 2,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-21",
+            "84",
+            "-64"
+          ],
+          "minimal_denominator_degree": 3,
+          "tail_annihilation_checked_through_index": 15,
+          "terms": [
+            {
+              "coefficient": "16/9",
+              "exponent_pair": [
+                2,
+                0
+              ],
+              "weight": "16"
+            },
+            {
+              "coefficient": "-8/9",
+              "exponent_pair": [
+                1,
+                1
+              ],
+              "weight": "4"
+            },
+            {
+              "coefficient": "1/9",
+              "exponent_pair": [
+                0,
+                2
+              ],
+              "weight": "1"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 3,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-85",
+            "1428",
+            "-5440",
+            "4096"
+          ],
+          "minimal_denominator_degree": 4,
+          "tail_annihilation_checked_through_index": 18,
+          "terms": [
+            {
+              "coefficient": "64/27",
+              "exponent_pair": [
+                3,
+                0
+              ],
+              "weight": "64"
+            },
+            {
+              "coefficient": "-16/9",
+              "exponent_pair": [
+                2,
+                1
+              ],
+              "weight": "16"
+            },
+            {
+              "coefficient": "4/9",
+              "exponent_pair": [
+                1,
+                2
+              ],
+              "weight": "4"
+            },
+            {
+              "coefficient": "-1/27",
+              "exponent_pair": [
+                0,
+                3
+              ],
+              "weight": "1"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 4,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-341",
+            "23188",
+            "-371008",
+            "1396736",
+            "-1048576"
+          ],
+          "minimal_denominator_degree": 5,
+          "tail_annihilation_checked_through_index": 21,
+          "terms": [
+            {
+              "coefficient": "256/81",
+              "exponent_pair": [
+                4,
+                0
+              ],
+              "weight": "256"
+            },
+            {
+              "coefficient": "-256/81",
+              "exponent_pair": [
+                3,
+                1
+              ],
+              "weight": "64"
+            },
+            {
+              "coefficient": "32/27",
+              "exponent_pair": [
+                2,
+                2
+              ],
+              "weight": "16"
+            },
+            {
+              "coefficient": "-16/81",
+              "exponent_pair": [
+                1,
+                3
+              ],
+              "weight": "4"
+            },
+            {
+              "coefficient": "1/81",
+              "exponent_pair": [
+                0,
+                4
+              ],
+              "weight": "1"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 5,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-1365",
+            "372372",
+            "-24115520",
+            "381308928",
+            "-1431306240",
+            "1073741824"
+          ],
+          "minimal_denominator_degree": 6,
+          "tail_annihilation_checked_through_index": 24,
+          "terms": [
+            {
+              "coefficient": "1024/243",
+              "exponent_pair": [
+                5,
+                0
+              ],
+              "weight": "1024"
+            },
+            {
+              "coefficient": "-1280/243",
+              "exponent_pair": [
+                4,
+                1
+              ],
+              "weight": "256"
+            },
+            {
+              "coefficient": "640/243",
+              "exponent_pair": [
+                3,
+                2
+              ],
+              "weight": "64"
+            },
+            {
+              "coefficient": "-160/243",
+              "exponent_pair": [
+                2,
+                3
+              ],
+              "weight": "16"
+            },
+            {
+              "coefficient": "20/243",
+              "exponent_pair": [
+                1,
+                4
+              ],
+              "weight": "4"
+            },
+            {
+              "coefficient": "-1/243",
+              "exponent_pair": [
+                0,
+                5
+              ],
+              "weight": "1"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 6,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-5461",
+            "5963412",
+            "-1549351232",
+            "99158478848",
+            "-1563272675328",
+            "5863704100864",
+            "-4398046511104"
+          ],
+          "minimal_denominator_degree": 7,
+          "tail_annihilation_checked_through_index": 27,
+          "terms": [
+            {
+              "coefficient": "4096/729",
+              "exponent_pair": [
+                6,
+                0
+              ],
+              "weight": "4096"
+            },
+            {
+              "coefficient": "-2048/243",
+              "exponent_pair": [
+                5,
+                1
+              ],
+              "weight": "1024"
+            },
+            {
+              "coefficient": "1280/243",
+              "exponent_pair": [
+                4,
+                2
+              ],
+              "weight": "256"
+            },
+            {
+              "coefficient": "-1280/729",
+              "exponent_pair": [
+                3,
+                3
+              ],
+              "weight": "64"
+            },
+            {
+              "coefficient": "80/243",
+              "exponent_pair": [
+                2,
+                4
+              ],
+              "weight": "16"
+            },
+            {
+              "coefficient": "-8/243",
+              "exponent_pair": [
+                1,
+                5
+              ],
+              "weight": "4"
+            },
+            {
+              "coefficient": "1/729",
+              "exponent_pair": [
+                0,
+                6
+              ],
+              "weight": "1"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 7,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-21845",
+            "95436436",
+            "-99253893440",
+            "25483729063936",
+            "-1626175790120960",
+            "25618523216674816",
+            "-96075326035066880",
+            "72057594037927936"
+          ],
+          "minimal_denominator_degree": 8,
+          "tail_annihilation_checked_through_index": 30,
+          "terms": [
+            {
+              "coefficient": "16384/2187",
+              "exponent_pair": [
+                7,
+                0
+              ],
+              "weight": "16384"
+            },
+            {
+              "coefficient": "-28672/2187",
+              "exponent_pair": [
+                6,
+                1
+              ],
+              "weight": "4096"
+            },
+            {
+              "coefficient": "7168/729",
+              "exponent_pair": [
+                5,
+                2
+              ],
+              "weight": "1024"
+            },
+            {
+              "coefficient": "-8960/2187",
+              "exponent_pair": [
+                4,
+                3
+              ],
+              "weight": "256"
+            },
+            {
+              "coefficient": "2240/2187",
+              "exponent_pair": [
+                3,
+                4
+              ],
+              "weight": "64"
+            },
+            {
+              "coefficient": "-112/729",
+              "exponent_pair": [
+                2,
+                5
+              ],
+              "weight": "16"
+            },
+            {
+              "coefficient": "28/2187",
+              "exponent_pair": [
+                1,
+                6
+              ],
+              "weight": "4"
+            },
+            {
+              "coefficient": "-1/2187",
+              "exponent_pair": [
+                0,
+                7
+              ],
+              "weight": "1"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 8,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-87381",
+            "1527070356",
+            "-6353776163136",
+            "6530186889547776",
+            "-1671727843724230656",
+            "106598675104583909376",
+            "-1679031612854035808256",
+            "6296464624628180975616",
+            "-4722366482869645213696"
+          ],
+          "minimal_denominator_degree": 9,
+          "tail_annihilation_checked_through_index": 33,
+          "terms": [
+            {
+              "coefficient": "65536/6561",
+              "exponent_pair": [
+                8,
+                0
+              ],
+              "weight": "65536"
+            },
+            {
+              "coefficient": "-131072/6561",
+              "exponent_pair": [
+                7,
+                1
+              ],
+              "weight": "16384"
+            },
+            {
+              "coefficient": "114688/6561",
+              "exponent_pair": [
+                6,
+                2
+              ],
+              "weight": "4096"
+            },
+            {
+              "coefficient": "-57344/6561",
+              "exponent_pair": [
+                5,
+                3
+              ],
+              "weight": "1024"
+            },
+            {
+              "coefficient": "17920/6561",
+              "exponent_pair": [
+                4,
+                4
+              ],
+              "weight": "256"
+            },
+            {
+              "coefficient": "-3584/6561",
+              "exponent_pair": [
+                3,
+                5
+              ],
+              "weight": "64"
+            },
+            {
+              "coefficient": "448/6561",
+              "exponent_pair": [
+                2,
+                6
+              ],
+              "weight": "16"
+            },
+            {
+              "coefficient": "-32/6561",
+              "exponent_pair": [
+                1,
+                7
+              ],
+              "weight": "4"
+            },
+            {
+              "coefficient": "1/6561",
+              "exponent_pair": [
+                0,
+                8
+              ],
+              "weight": "1"
+            }
+          ]
+        }
+      ],
+      "sequence_prefix": [
+        "1",
+        "5",
+        "21",
+        "85",
+        "341",
+        "1365",
+        "5461",
+        "21845",
+        "87381",
+        "349525"
+      ],
+      "strict_hyperbolic_inequality": "t>2*sqrt(delta)",
+      "trace_t": "5"
+    },
+    {
+      "alpha": "9",
+      "beta": "4",
+      "binet_equals_recurrence_through_index": 33,
+      "determinant_delta": "36",
+      "integer_power_rows": [
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 0,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-1"
+          ],
+          "minimal_denominator_degree": 1,
+          "tail_annihilation_checked_through_index": 9,
+          "terms": [
+            {
+              "coefficient": "1",
+              "exponent_pair": [
+                0,
+                0
+              ],
+              "weight": "1"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 1,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-13",
+            "36"
+          ],
+          "minimal_denominator_degree": 2,
+          "tail_annihilation_checked_through_index": 12,
+          "terms": [
+            {
+              "coefficient": "9/5",
+              "exponent_pair": [
+                1,
+                0
+              ],
+              "weight": "9"
+            },
+            {
+              "coefficient": "-4/5",
+              "exponent_pair": [
+                0,
+                1
+              ],
+              "weight": "4"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 2,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-133",
+            "4788",
+            "-46656"
+          ],
+          "minimal_denominator_degree": 3,
+          "tail_annihilation_checked_through_index": 15,
+          "terms": [
+            {
+              "coefficient": "81/25",
+              "exponent_pair": [
+                2,
+                0
+              ],
+              "weight": "81"
+            },
+            {
+              "coefficient": "-72/25",
+              "exponent_pair": [
+                1,
+                1
+              ],
+              "weight": "36"
+            },
+            {
+              "coefficient": "16/25",
+              "exponent_pair": [
+                0,
+                2
+              ],
+              "weight": "16"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 3,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-1261",
+            "464436",
+            "-58833216",
+            "2176782336"
+          ],
+          "minimal_denominator_degree": 4,
+          "tail_annihilation_checked_through_index": 18,
+          "terms": [
+            {
+              "coefficient": "729/125",
+              "exponent_pair": [
+                3,
+                0
+              ],
+              "weight": "729"
+            },
+            {
+              "coefficient": "-972/125",
+              "exponent_pair": [
+                2,
+                1
+              ],
+              "weight": "324"
+            },
+            {
+              "coefficient": "432/125",
+              "exponent_pair": [
+                1,
+                2
+              ],
+              "weight": "144"
+            },
+            {
+              "coefficient": "-64/125",
+              "exponent_pair": [
+                0,
+                3
+              ],
+              "weight": "64"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 4,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-11605",
+            "40524660",
+            "-52519959360",
+            "25261559009280",
+            "-3656158440062976"
+          ],
+          "minimal_denominator_degree": 5,
+          "tail_annihilation_checked_through_index": 21,
+          "terms": [
+            {
+              "coefficient": "6561/625",
+              "exponent_pair": [
+                4,
+                0
+              ],
+              "weight": "6561"
+            },
+            {
+              "coefficient": "-11664/625",
+              "exponent_pair": [
+                3,
+                1
+              ],
+              "weight": "2916"
+            },
+            {
+              "coefficient": "7776/625",
+              "exponent_pair": [
+                2,
+                2
+              ],
+              "weight": "1296"
+            },
+            {
+              "coefficient": "-2304/625",
+              "exponent_pair": [
+                1,
+                3
+              ],
+              "weight": "576"
+            },
+            {
+              "coefficient": "256/625",
+              "exponent_pair": [
+                0,
+                4
+              ],
+              "weight": "256"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 5,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-105469",
+            "3389449140",
+            "-41648327772480",
+            "204947028242288640",
+            "-385611374515002015744",
+            "221073919720733357899776"
+          ],
+          "minimal_denominator_degree": 6,
+          "tail_annihilation_checked_through_index": 24,
+          "terms": [
+            {
+              "coefficient": "59049/3125",
+              "exponent_pair": [
+                5,
+                0
+              ],
+              "weight": "59049"
+            },
+            {
+              "coefficient": "-26244/625",
+              "exponent_pair": [
+                4,
+                1
+              ],
+              "weight": "26244"
+            },
+            {
+              "coefficient": "23328/625",
+              "exponent_pair": [
+                3,
+                2
+              ],
+              "weight": "11664"
+            },
+            {
+              "coefficient": "-10368/625",
+              "exponent_pair": [
+                2,
+                3
+              ],
+              "weight": "5184"
+            },
+            {
+              "coefficient": "2304/625",
+              "exponent_pair": [
+                1,
+                4
+              ],
+              "weight": "2304"
+            },
+            {
+              "coefficient": "-1024/3125",
+              "exponent_pair": [
+                0,
+                5
+              ],
+              "weight": "1024"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 6,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-953317",
+            "278433389556",
+            "-31486168824010560",
+            "1469018692653036687360",
+            "-28277682978347552049463296",
+            "210753525926410362552940756992",
+            "-481229803398374426442198455156736"
+          ],
+          "minimal_denominator_degree": 7,
+          "tail_annihilation_checked_through_index": 27,
+          "terms": [
+            {
+              "coefficient": "531441/15625",
+              "exponent_pair": [
+                6,
+                0
+              ],
+              "weight": "531441"
+            },
+            {
+              "coefficient": "-1417176/15625",
+              "exponent_pair": [
+                5,
+                1
+              ],
+              "weight": "236196"
+            },
+            {
+              "coefficient": "314928/3125",
+              "exponent_pair": [
+                4,
+                2
+              ],
+              "weight": "104976"
+            },
+            {
+              "coefficient": "-186624/3125",
+              "exponent_pair": [
+                3,
+                3
+              ],
+              "weight": "46656"
+            },
+            {
+              "coefficient": "62208/3125",
+              "exponent_pair": [
+                2,
+                4
+              ],
+              "weight": "20736"
+            },
+            {
+              "coefficient": "-55296/15625",
+              "exponent_pair": [
+                1,
+                5
+              ],
+              "weight": "9216"
+            },
+            {
+              "coefficient": "4096/15625",
+              "exponent_pair": [
+                0,
+                6
+              ],
+              "weight": "4096"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 7,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-8596237",
+            "22693676865588",
+            "-23322927137717024064",
+            "10014300427815751097733120",
+            "-1827681689419108464564076806144",
+            "139360558265312925827769522620203008",
+            "-4136765441475831984436204721561174802432",
+            "37711171281396032013366321198900157303750656"
+          ],
+          "minimal_denominator_degree": 8,
+          "tail_annihilation_checked_through_index": 30,
+          "terms": [
+            {
+              "coefficient": "4782969/78125",
+              "exponent_pair": [
+                7,
+                0
+              ],
+              "weight": "4782969"
+            },
+            {
+              "coefficient": "-14880348/78125",
+              "exponent_pair": [
+                6,
+                1
+              ],
+              "weight": "2125764"
+            },
+            {
+              "coefficient": "19840464/78125",
+              "exponent_pair": [
+                5,
+                2
+              ],
+              "weight": "944784"
+            },
+            {
+              "coefficient": "-2939328/15625",
+              "exponent_pair": [
+                4,
+                3
+              ],
+              "weight": "419904"
+            },
+            {
+              "coefficient": "1306368/15625",
+              "exponent_pair": [
+                3,
+                4
+              ],
+              "weight": "186624"
+            },
+            {
+              "coefficient": "-1741824/78125",
+              "exponent_pair": [
+                2,
+                5
+              ],
+              "weight": "82944"
+            },
+            {
+              "coefficient": "258048/78125",
+              "exponent_pair": [
+                1,
+                6
+              ],
+              "weight": "36864"
+            },
+            {
+              "coefficient": "-16384/78125",
+              "exponent_pair": [
+                0,
+                7
+              ],
+              "weight": "16384"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 8,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-77431669",
+            "1843258093004916",
+            "-17122881360767827731264",
+            "66818095303161364238350503936",
+            "-112228741960714677956561320018968576",
+            "81134741498157328226446621682823849836544",
+            "-24639742491922730286036719662781696196388847616",
+            "2920038932263363408772384558820920144391953253924864",
+            "-106387358923716524807713475752456393740167855629859291136"
+          ],
+          "minimal_denominator_degree": 9,
+          "tail_annihilation_checked_through_index": 33,
+          "terms": [
+            {
+              "coefficient": "43046721/390625",
+              "exponent_pair": [
+                8,
+                0
+              ],
+              "weight": "43046721"
+            },
+            {
+              "coefficient": "-153055008/390625",
+              "exponent_pair": [
+                7,
+                1
+              ],
+              "weight": "19131876"
+            },
+            {
+              "coefficient": "238085568/390625",
+              "exponent_pair": [
+                6,
+                2
+              ],
+              "weight": "8503056"
+            },
+            {
+              "coefficient": "-211631616/390625",
+              "exponent_pair": [
+                5,
+                3
+              ],
+              "weight": "3779136"
+            },
+            {
+              "coefficient": "23514624/78125",
+              "exponent_pair": [
+                4,
+                4
+              ],
+              "weight": "1679616"
+            },
+            {
+              "coefficient": "-41803776/390625",
+              "exponent_pair": [
+                3,
+                5
+              ],
+              "weight": "746496"
+            },
+            {
+              "coefficient": "9289728/390625",
+              "exponent_pair": [
+                2,
+                6
+              ],
+              "weight": "331776"
+            },
+            {
+              "coefficient": "-1179648/390625",
+              "exponent_pair": [
+                1,
+                7
+              ],
+              "weight": "147456"
+            },
+            {
+              "coefficient": "65536/390625",
+              "exponent_pair": [
+                0,
+                8
+              ],
+              "weight": "65536"
+            }
+          ]
+        }
+      ],
+      "sequence_prefix": [
+        "1",
+        "13",
+        "133",
+        "1261",
+        "11605",
+        "105469",
+        "953317",
+        "8596237",
+        "77431669",
+        "697147165"
+      ],
+      "strict_hyperbolic_inequality": "t>2*sqrt(delta)",
+      "trace_t": "13"
+    },
+    {
+      "alpha": "2",
+      "beta": "1/2",
+      "binet_equals_recurrence_through_index": 33,
+      "determinant_delta": "1",
+      "integer_power_rows": [
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 0,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-1"
+          ],
+          "minimal_denominator_degree": 1,
+          "tail_annihilation_checked_through_index": 9,
+          "terms": [
+            {
+              "coefficient": "1",
+              "exponent_pair": [
+                0,
+                0
+              ],
+              "weight": "1"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 1,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-5/2",
+            "1"
+          ],
+          "minimal_denominator_degree": 2,
+          "tail_annihilation_checked_through_index": 12,
+          "terms": [
+            {
+              "coefficient": "4/3",
+              "exponent_pair": [
+                1,
+                0
+              ],
+              "weight": "2"
+            },
+            {
+              "coefficient": "-1/3",
+              "exponent_pair": [
+                0,
+                1
+              ],
+              "weight": "1/2"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 2,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-21/4",
+            "21/4",
+            "-1"
+          ],
+          "minimal_denominator_degree": 3,
+          "tail_annihilation_checked_through_index": 15,
+          "terms": [
+            {
+              "coefficient": "16/9",
+              "exponent_pair": [
+                2,
+                0
+              ],
+              "weight": "4"
+            },
+            {
+              "coefficient": "-8/9",
+              "exponent_pair": [
+                1,
+                1
+              ],
+              "weight": "1"
+            },
+            {
+              "coefficient": "1/9",
+              "exponent_pair": [
+                0,
+                2
+              ],
+              "weight": "1/4"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 3,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-85/8",
+            "357/16",
+            "-85/8",
+            "1"
+          ],
+          "minimal_denominator_degree": 4,
+          "tail_annihilation_checked_through_index": 18,
+          "terms": [
+            {
+              "coefficient": "64/27",
+              "exponent_pair": [
+                3,
+                0
+              ],
+              "weight": "8"
+            },
+            {
+              "coefficient": "-16/9",
+              "exponent_pair": [
+                2,
+                1
+              ],
+              "weight": "2"
+            },
+            {
+              "coefficient": "4/9",
+              "exponent_pair": [
+                1,
+                2
+              ],
+              "weight": "1/2"
+            },
+            {
+              "coefficient": "-1/27",
+              "exponent_pair": [
+                0,
+                3
+              ],
+              "weight": "1/8"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 4,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-341/16",
+            "5797/64",
+            "-5797/64",
+            "341/16",
+            "-1"
+          ],
+          "minimal_denominator_degree": 5,
+          "tail_annihilation_checked_through_index": 21,
+          "terms": [
+            {
+              "coefficient": "256/81",
+              "exponent_pair": [
+                4,
+                0
+              ],
+              "weight": "16"
+            },
+            {
+              "coefficient": "-256/81",
+              "exponent_pair": [
+                3,
+                1
+              ],
+              "weight": "4"
+            },
+            {
+              "coefficient": "32/27",
+              "exponent_pair": [
+                2,
+                2
+              ],
+              "weight": "1"
+            },
+            {
+              "coefficient": "-16/81",
+              "exponent_pair": [
+                1,
+                3
+              ],
+              "weight": "1/4"
+            },
+            {
+              "coefficient": "1/81",
+              "exponent_pair": [
+                0,
+                4
+              ],
+              "weight": "1/16"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 5,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-1365/32",
+            "93093/256",
+            "-376805/512",
+            "93093/256",
+            "-1365/32",
+            "1"
+          ],
+          "minimal_denominator_degree": 6,
+          "tail_annihilation_checked_through_index": 24,
+          "terms": [
+            {
+              "coefficient": "1024/243",
+              "exponent_pair": [
+                5,
+                0
+              ],
+              "weight": "32"
+            },
+            {
+              "coefficient": "-1280/243",
+              "exponent_pair": [
+                4,
+                1
+              ],
+              "weight": "8"
+            },
+            {
+              "coefficient": "640/243",
+              "exponent_pair": [
+                3,
+                2
+              ],
+              "weight": "2"
+            },
+            {
+              "coefficient": "-160/243",
+              "exponent_pair": [
+                2,
+                3
+              ],
+              "weight": "1/2"
+            },
+            {
+              "coefficient": "20/243",
+              "exponent_pair": [
+                1,
+                4
+              ],
+              "weight": "1/8"
+            },
+            {
+              "coefficient": "-1/243",
+              "exponent_pair": [
+                0,
+                5
+              ],
+              "weight": "1/32"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 6,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-5461/64",
+            "1490853/1024",
+            "-24208613/4096",
+            "24208613/4096",
+            "-1490853/1024",
+            "5461/64",
+            "-1"
+          ],
+          "minimal_denominator_degree": 7,
+          "tail_annihilation_checked_through_index": 27,
+          "terms": [
+            {
+              "coefficient": "4096/729",
+              "exponent_pair": [
+                6,
+                0
+              ],
+              "weight": "64"
+            },
+            {
+              "coefficient": "-2048/243",
+              "exponent_pair": [
+                5,
+                1
+              ],
+              "weight": "16"
+            },
+            {
+              "coefficient": "1280/243",
+              "exponent_pair": [
+                4,
+                2
+              ],
+              "weight": "4"
+            },
+            {
+              "coefficient": "-1280/729",
+              "exponent_pair": [
+                3,
+                3
+              ],
+              "weight": "1"
+            },
+            {
+              "coefficient": "80/243",
+              "exponent_pair": [
+                2,
+                4
+              ],
+              "weight": "1/4"
+            },
+            {
+              "coefficient": "-8/243",
+              "exponent_pair": [
+                1,
+                5
+              ],
+              "weight": "1/16"
+            },
+            {
+              "coefficient": "1/729",
+              "exponent_pair": [
+                0,
+                6
+              ],
+              "weight": "1/64"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 7,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-21845/128",
+            "23859109/4096",
+            "-1550842085/32768",
+            "6221613541/65536",
+            "-1550842085/32768",
+            "23859109/4096",
+            "-21845/128",
+            "1"
+          ],
+          "minimal_denominator_degree": 8,
+          "tail_annihilation_checked_through_index": 30,
+          "terms": [
+            {
+              "coefficient": "16384/2187",
+              "exponent_pair": [
+                7,
+                0
+              ],
+              "weight": "128"
+            },
+            {
+              "coefficient": "-28672/2187",
+              "exponent_pair": [
+                6,
+                1
+              ],
+              "weight": "32"
+            },
+            {
+              "coefficient": "7168/729",
+              "exponent_pair": [
+                5,
+                2
+              ],
+              "weight": "8"
+            },
+            {
+              "coefficient": "-8960/2187",
+              "exponent_pair": [
+                4,
+                3
+              ],
+              "weight": "2"
+            },
+            {
+              "coefficient": "2240/2187",
+              "exponent_pair": [
+                3,
+                4
+              ],
+              "weight": "1/2"
+            },
+            {
+              "coefficient": "-112/729",
+              "exponent_pair": [
+                2,
+                5
+              ],
+              "weight": "1/8"
+            },
+            {
+              "coefficient": "28/2187",
+              "exponent_pair": [
+                1,
+                6
+              ],
+              "weight": "1/32"
+            },
+            {
+              "coefficient": "-1/2187",
+              "exponent_pair": [
+                0,
+                7
+              ],
+              "weight": "1/128"
+            }
+          ]
+        },
+        {
+          "all_coefficients_nonzero": true,
+          "all_weights_positive_and_pairwise_distinct": true,
+          "k": 8,
+          "minimal_denominator_coefficients_ascending": [
+            "1",
+            "-87381/256",
+            "381767589/16384",
+            "-99277752549/262144",
+            "1594283908581/1048576",
+            "-1594283908581/1048576",
+            "99277752549/262144",
+            "-381767589/16384",
+            "87381/256",
+            "-1"
+          ],
+          "minimal_denominator_degree": 9,
+          "tail_annihilation_checked_through_index": 33,
+          "terms": [
+            {
+              "coefficient": "65536/6561",
+              "exponent_pair": [
+                8,
+                0
+              ],
+              "weight": "256"
+            },
+            {
+              "coefficient": "-131072/6561",
+              "exponent_pair": [
+                7,
+                1
+              ],
+              "weight": "64"
+            },
+            {
+              "coefficient": "114688/6561",
+              "exponent_pair": [
+                6,
+                2
+              ],
+              "weight": "16"
+            },
+            {
+              "coefficient": "-57344/6561",
+              "exponent_pair": [
+                5,
+                3
+              ],
+              "weight": "4"
+            },
+            {
+              "coefficient": "17920/6561",
+              "exponent_pair": [
+                4,
+                4
+              ],
+              "weight": "1"
+            },
+            {
+              "coefficient": "-3584/6561",
+              "exponent_pair": [
+                3,
+                5
+              ],
+              "weight": "1/4"
+            },
+            {
+              "coefficient": "448/6561",
+              "exponent_pair": [
+                2,
+                6
+              ],
+              "weight": "1/16"
+            },
+            {
+              "coefficient": "-32/6561",
+              "exponent_pair": [
+                1,
+                7
+              ],
+              "weight": "1/64"
+            },
+            {
+              "coefficient": "1/6561",
+              "exponent_pair": [
+                0,
+                8
+              ],
+              "weight": "1/256"
+            }
+          ]
+        }
+      ],
+      "sequence_prefix": [
+        "1",
+        "5/2",
+        "21/4",
+        "85/8",
+        "341/16",
+        "1365/32",
+        "5461/64",
+        "21845/128",
+        "87381/256",
+        "349525/512"
+      ],
+      "strict_hyperbolic_inequality": "t>2*sqrt(delta)",
+      "trace_t": "5/2"
+    }
+  ],
+  "schema": "riemann.atlas.generalized.positive_determinant_power_release.v1",
+  "scope_firewall": {
+    "coalesced_nonpositive_and_complex_determinants_excluded": true,
+    "no_RH_GRH_or_zero_distribution_consequence": true,
+    "no_completion_functional_equation_or_automorphy": true,
+    "no_global_euler_product_or_ramified_factors": true,
+    "no_motive_explicit_formula_or_zero_theorem": true,
+    "no_tempered_or_sign_changing_classification": true,
+    "positive_delta_and_t_strictly_above_two_sqrt_delta_only": true,
+    "positive_distinct_real_roots_only": true,
+    "positive_real_logarithm_only": true,
+    "positive_square_root_normalization_only": true
+  },
+  "sources": {
+    "base_commit": "522493abae0f8e5526ceff4192d73b2cc617c069",
+    "corollary_audit": {
+      "external_novelty_claimed": false,
+      "new_nonrationality_mechanism": false,
+      "new_value": "exact positive-determinant coordinate release, branch firewall, and transported sharp integer denominator",
+      "source_theorem_is_logically_sufficient": true
+    },
+    "file_sha256_lf_normalized": "6c4b007ce204ea2e9cfd6cb46907e31633a9123e1d9846be226b100a1e3da7eb",
+    "manifest": "research/l-families/atlas/generalized/positive_determinant_power_release.sources.json",
+    "scope_firewall": {
+      "coalesced_nonpositive_and_complex_determinants_excluded": true,
+      "no_RH_GRH_or_zero_distribution_consequence": true,
+      "no_completion_functional_equation_or_automorphy": true,
+      "no_global_euler_product_or_ramified_factors": true,
+      "no_motive_explicit_formula_or_zero_theorem": true,
+      "no_tempered_or_sign_changing_classification": true,
+      "positive_delta_and_t_strictly_above_two_sqrt_delta_only": true,
+      "positive_distinct_real_roots_only": true,
+      "positive_real_logarithm_only": true,
+      "positive_square_root_normalization_only": true
+    },
+    "verified_sources": [
+      {
+        "file_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c",
+        "git_blob": "5eeb1e7c6129646ac646c697276bcd4adb04aa0c",
+        "path": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+        "role": "authenticated determinant-one positive-chamber rationality theorem transported by the release"
+      },
+      {
+        "file_sha256_lf_normalized": "587b42bd2f52de05018d94e6336b608388f5d381e82264b1614ddea12d314828",
+        "git_blob": "67e5dfa63684078586e4727530d7b9e66d557636",
+        "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.json",
+        "payload_sha256": "d809d5bed68618ff8dc9fd657b6c63c9cd0c8eca9ea83ffedda0b6d84a4ce7c3",
+        "role": "machine-readable source classification and survival boundary",
+        "schema": "riemann.atlas.generalized.nonintegral_local_power_rationality.v1"
+      },
+      {
+        "file_sha256_lf_normalized": "99df382aaf78cec91f474f6a10cdce6a41370f9a2ad3c68645bb2cd571ceca6b",
+        "git_blob": "db48a8a7f44d2e768b248a162cf3c48c71ac4494",
+        "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.sources.json",
+        "role": "inherited determinant-one normalization and prior-art boundary"
+      },
+      {
+        "file_sha256_lf_normalized": "84759dc5ca81ef896e2a6ab2d9a7d3d32c3865f5f61bb45db18aaf8633578456",
+        "git_blob": "9aef6f8a780e9dff5c3b7a53c012c0956be036dc",
+        "path": "research/l-families/atlas/generalized/TRANSFER_MATRIX_SYMMETRIC_PARENT.md",
+        "role": "source distinction between a scalar matrix-coefficient shadow, its symmetric parent, and determinant scaling"
+      },
+      {
+        "file_sha256_lf_normalized": "9e58fa46ee29effba4304aaac185125a6f105b7e654780e14e863c4e58c69205",
+        "git_blob": "4a569b7e97197fb7b04856be2d602e4ddaadb43f",
+        "path": "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.json",
+        "payload_sha256": "315a6820f944d60dbf2fa1be5530ffbf6ae529854a7023f722bb427c78fbd619",
+        "role": "machine-readable parent-shadow and nonzero-eigenvalue boundary",
+        "schema": "riemann.atlas.generalized.transfer_matrix_symmetric_parent.v1"
+      },
+      {
+        "file_sha256_lf_normalized": "c24c0a1a34923efc0f08e2a9dd85e6682bb09d6ae1a470acea071ae194f77880",
+        "git_blob": "adea1dbb5f189f65357f39e1fe6bf1548bd77acc",
+        "path": "research/l-families/atlas/core/atlas_core.py",
+        "role": "canonical JSON normalization and payload digest implementation"
+      }
+    ]
+  },
+  "status": "EXACT_TRANSPORT_COROLLARY_NO_NEW_MECHANISM_OR_NOVELTY_CLAIM",
+  "survival_ladder": {
+    "L4_through_L9_not_established": true,
+    "levels": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7",
+      "L8",
+      "L9"
+    ],
+    "rows": [
+      {
+        "L0": "PASS_POSITIVE_LOG_BRANCH_INDEPENDENT",
+        "L1": "CONDITIONAL_ON_PRIMEWISE_MULTIPLICATIVE_INPUT",
+        "L2": "FORMAL_IF_L1_INPUT_IS_SUPPLIED",
+        "L3": "PASS_EXACT_DEGREE_k_PLUS_1",
+        "first_unresolved_level": "L4",
+        "object": "positive-determinant integer power"
+      },
+      {
+        "L0": "PASS_POSITIVE_LOG_FIXED",
+        "L1": "NO_GLOBAL_COHERENCE_PROVED",
+        "L3": "FAIL_NONRATIONAL_BY_TRANSPORTED_SOURCE_THEOREM",
+        "first_failure_levels": [
+          "L1",
+          "L3"
+        ],
+        "object": "positive-determinant noninteger power"
+      },
+      {
+        "L0": "FAIL_WITHOUT_SQUARE_ROOT_AND_LOG_BRANCH_DATA",
+        "first_failure_level": "L0",
+        "object": "complex or nonpositive determinant"
+      }
+    ]
+  }
+}

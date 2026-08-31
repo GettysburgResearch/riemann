@@ -1,0 +1,49 @@
+{
+  "schema": "riemann.atlas.generalized.transfer_matrix_symmetric_parent.sources.v1",
+  "base_commit": "cdaa8bcb863b0aa30044fc599efdf4ac549a5c38",
+  "sources": [
+    {
+      "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.json",
+      "role": "authenticated determinant-one scalar-shadow packet whose linear filtered recurrence bound is explained here",
+      "schema": "riemann.atlas.generalized.nonintegral_local_power_rationality.v1",
+      "payload_sha256": "d809d5bed68618ff8dc9fd657b6c63c9cd0c8eca9ea83ffedda0b6d84a4ce7c3",
+      "file_sha256_lf_normalized": "587b42bd2f52de05018d94e6336b608388f5d381e82264b1614ddea12d314828",
+      "git_blob": "67e5dfa63684078586e4727530d7b9e66d557636"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/NONINTEGRAL_LOCAL_POWER_RATIONALITY.md",
+      "role": "source theorem and normalization for determinant-one integer coefficient powers",
+      "file_sha256_lf_normalized": "5ba0595bd4a5297310e66d737ffb05200b95a472a2609d2569d350b24dd28e4c",
+      "git_blob": "5eeb1e7c6129646ac646c697276bcd4adb04aa0c"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
+      "role": "independent existing determinant-one Laurent and recurrence replay",
+      "file_sha256_lf_normalized": "fba40d932e947c81441cf7a9187e5915ed7e227bf2b2d1167ffb0a648599467e",
+      "git_blob": "e3cac8b29d38717157253b5b31e24e78434ce8c0"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/IRRATIONAL_ROTATION_ABSOLUTE_POWER_RATIONALITY.md",
+      "role": "contrasting scalar-only tempered Gate-0 chamber",
+      "file_sha256_lf_normalized": "213efe84034449a7ece87b273653bc683c11b28ea4f62e599e3f2b0bbac7c8a2",
+      "git_blob": "8f27df80a4983b4d393ee3a2477a744afaeb1d3a"
+    },
+    {
+      "path": "research/l-families/atlas/core/atlas_core.py",
+      "role": "canonical JSON normalization and digest implementation reused by this packet",
+      "file_sha256_lf_normalized": "c24c0a1a34923efc0f08e2a9dd85e6682bb09d6ae1a470acea071ae194f77880",
+      "git_blob": "adea1dbb5f189f65357f39e1fe6bf1548bd77acc"
+    }
+  ],
+  "scope_firewall": {
+    "local_finite_rank_linear_algebra_only": true,
+    "integer_symmetric_powers_only": true,
+    "parent_is_honest_but_global_l_function_is_not_constructed": true,
+    "generic_weight_counts_require_stated_independence_hypotheses": true,
+    "scalar_minimal_denominators_require_nonzero_eigenvalues_and_coordinates": true,
+    "no_ramified_factors_completion_or_functional_equation": true,
+    "no_automorphy_motive_or_zero_theorem": true,
+    "no_RH_GRH_or_zero_distribution_consequence": true,
+    "external_novelty_unreviewed": true
+  }
+}
