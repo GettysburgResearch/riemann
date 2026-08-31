@@ -1,0 +1,95 @@
+{
+  "authoring_base": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+  "contract": {
+    "arithmetic": "pinned FLINT complex balls; exact Fraction guards; outward Fraction matrix test route",
+    "boundary": "416 exact arcs each; 32 Taylor terms and analytic Cauchy tail; rational polygon homotopy",
+    "common_factor": "conditional component innerness; raw local nonvanishing survives any common inner divisor; P_U >= P_raw globally",
+    "coverage": "complete R5 counts 3/5/6 in (26,38),(58,70),(122,134) plus i(0,1); zero-free FULL closed boundaries",
+    "exclusions": "no Fourier-band, native outer-metric, cofinal, HS-infinity, global-parameter-nonexceptionality, stability or RH claim",
+    "increments": "orthogonal INPUT span increments; Loewner applied to each difference projection before taking trace",
+    "joint": "all cross-box entries of one fixed-source operator; 3/8/14-dimensional nested input spans",
+    "metric": "boundary dx Hardy norm; global P_U=P_(U H2); H_raw=V_raw G V_rawstar",
+    "primitive": "actual unrescaled Xi; ONE exact lambda64 independent of z and box",
+    "roots": "14 individually certified simple R5 zeros, C5/R0/C0/f6/W/R5prime nonzero throughout each rectangle",
+    "trust": "same pinned OA FLINT implementation; not formally verified special functions"
+  },
+  "documentation": [
+    {
+      "role": "Ball enclosure, certified comparisons, exact rational inputs, series cap",
+      "url": "https://python-flint.readthedocs.io/en/latest/general.html"
+    },
+    {
+      "role": "Taylor-series gamma, exp, zeta; no numerical finite differences",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb_series.html"
+    },
+    {
+      "role": "Pinned library-version series API documentation",
+      "url": "https://github.com/flintlib/flint/blob/v3.6.0/doc/source/acb_poly.rst"
+    },
+    {
+      "role": "rigorous non-approx matrix inverse and arithmetic API",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb_mat.html"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "2860d9c9bb90f4423f17f0d272229e78a30ae62b",
+      "id": "BC1",
+      "path": "research/exploratory/XI_COMPANION_BOX_COUNT_COMPRESSION.md",
+      "role": "complete parent proof and global projection convention",
+      "sha256_lf": "22d11bf3dccb72fa25633deeee063164611dbaa977c5e66fca84f4350ae79c65"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "698211f63f2268f421faa1ed76d4dd8749a4b311",
+      "id": "BC2",
+      "path": "research/exploratory/xi_companion_box_count_compression.py",
+      "role": "executed ball boundary and authenticated source helpers",
+      "sha256_lf": "cea67ec0b5335ecef7a6df8d453859a249b73d1b716b8c87565709d27ec95e58"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "346a452e1c3136f19139debe1620577ef41e6b43",
+      "id": "BC3",
+      "path": "research/exploratory/xi_companion_box_count_compression.json",
+      "role": "frozen comparison fixture",
+      "sha256_lf": "9148321153c7319518dc9475adee61f2ba5b646663f1cb35b762f31f280834e4"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "fcbfb819e09f97f9f4e9af60141ffe198238bf1c",
+      "id": "BC4",
+      "path": "research/exploratory/xi_companion_box_count_compression.sources.json",
+      "role": "transitive source closure",
+      "sha256_lf": "b916af0286ddd686e700b56032a2f10f9b0bc08212bed6ca60bb99270b85299f"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "ea093cc50fb8b9de415ce4e71bc370ffe456d8ed",
+      "id": "BC5",
+      "path": "tests/test_xi_companion_box_count_compression.py",
+      "role": "independent outward rational finite-matrix controls",
+      "sha256_lf": "e9b40aaa100f1f8ae74ad2d90978b8e7621303ac750a847cbfc8ec045a2e05b5"
+    },
+    {
+      "commit": "e669d257711d8d4a6a0ab7aeb21254fd220f7dc3",
+      "git_blob": "a11b631e88343ad0782e2d7db511282eb473a30c",
+      "id": "PREREG",
+      "path": "research/exploratory/XI_FIXED_LAMBDA_JOINT_BOX_COMPRESSION.md",
+      "role": "fixed boxes and ONE lambda declared before new computations",
+      "sha256_lf": "d8e1f3cc061fc0671b45ef26e09c83b0e165545e3c56e049cf301221377ebc95"
+    }
+  ],
+  "preregistration_commit": "e669d257711d8d4a6a0ab7aeb21254fd220f7dc3",
+  "runtime": {
+    "flint": "3.6.0",
+    "machine": "AMD64",
+    "native_files": 44,
+    "native_files_sha256": "36c07323af58dec0eb6fd82a99bf871924eb69f1833d9af626fc09437ae5b0cc",
+    "python": "3.12.10",
+    "python_flint": "0.9.0",
+    "system": "Windows"
+  },
+  "schema": "xi_fixed_lambda_joint_box_compression-sources-v1"
+}
