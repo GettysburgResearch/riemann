@@ -199,7 +199,7 @@ Using pi<4 and e<3 in the positive term of CZ14 gives
 \]
 Thus strict positivity follows from
 \[
- \left(\frac{k}{3072}\right)^k>rac{25}{8}3^{16}k^2.
+ \left(\frac{k}{3072}\right)^k>\frac{25}{8}3^{16}k^2.
                                                                \tag{CZ15}
 \]
 For EVERY integer k>=6144, the left side is at least 2^k. The sequence
