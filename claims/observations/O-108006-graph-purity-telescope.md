@@ -56,6 +56,22 @@ RH status: unproved; unaddressed.
    non-Ramanujan, and ALL 31 breach at the negative end (zero
    positive-end, zero both-end; separation guard clean). The law now
    covers all 37 non-Ramanujan graphs in scope through n = 14.
+   **OPEN QUESTION ANSWERED (continuation run; gp24_certificate.json):
+   positive-end-only breaches EXIST — first certified witness
+   GP(24, 2) on 48 vertices**: exactly one untempered eigenvalue-square
+   in (8, 9), separation guard clean, one eigenvalue in (283/100, 3)
+   beyond the trivial 3 and ZERO in (-3, -283/100] — an
+   expansion-side purity failure with NO near-bipartiteness (girth 5,
+   diameter 8, non-bipartite: the negative-end breachers at n = 12
+   were all girth 3, and the sides swap girth profiles exactly as the
+   mechanism reading predicts), fully Sturm-certified on the exact
+   degree-48 characteristic polynomial (22 s). Family reading (float + closed-form block reconnaissance,
+   labelled): GP(n,2) has lambda_min >= -sqrt 5 > -2 sqrt 2 for ALL n
+   (block minima), while lambda_2 crosses 2 sqrt 2 between n = 22 and
+   n = 24 — so GP(n,2), n >= 24, appears to be an entire
+   positive-end-only family; only the n = 24 member is certified here.
+   The MINIMAL order of a positive-end-only cubic breach is now
+   bracketed in (14, 48] and stays open.
 4. **Fields where purity breaks**: the breach eigenvalue's minimal
    polynomial per graph — GP(9,1): x^3 + 3x^2 - 1, i.e. the breach
    value is 2 cos(8 pi/9) - 1 in the real cyclotomic field
