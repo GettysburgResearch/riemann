@@ -1,5 +1,8 @@
 # Exploratory research
 
+For the latest reviewed checkpoint, start with
+[`FIVEHOUR_PASS4_CHECKPOINT.md`](FIVEHOUR_PASS4_CHECKPOINT.md).
+
 Exploration is intentionally free-form.
 
 A contribution may be a speculative reformulation, synthetic countermodel, numerical reconnaissance, literature connection, failed proof, or unconventional attack. It does not need the full machine provenance schema or an integrated-packet format.
