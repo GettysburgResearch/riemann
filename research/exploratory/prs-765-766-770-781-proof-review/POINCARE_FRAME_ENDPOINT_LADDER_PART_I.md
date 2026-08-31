@@ -5,7 +5,7 @@
 **Repository effect:** proof/exposition only; no producer, fixture, or inherited certificate is modified.  
 **RH/GRH:** RH and GRH remain unproved.
 
-This packet replaces the growing Miller-echel​​on constants by the exact
+This packet replaces the growing Miller-echelon constants by the exact
 source-normalized Poincare coefficient frame already constructed in PR #766.
 The resulting theorem reaches the natural endpoint range
 
@@ -102,7 +102,7 @@ Stirling yields, uniformly under PF0,
 \[
 \delta_{k,M}
 \le
-\exp\!\left[-c k\log\frac{k}{C M}ight]
+\exp\!\left[-c k\log\frac{k}{C M}\right]
 \tag{PF5}
 \]
 
@@ -338,7 +338,7 @@ H_{ll}(c)=T_l(c)+\rho_{k,M}A_l,
 and, for `l!=m`,
 
 \[
-H_{lm}(c)=B_{lm}(c)+ho_{k,M}\sqrt{A_lA_m},
+H_{lm}(c)=B_{lm}(c)+\rho_{k,M}\sqrt{A_lA_m},
 \tag{PF23}
 \]
 
@@ -372,7 +372,7 @@ Cauchy's estimate. No numerical period evaluation enters.
 ### Lemma 7.1
 
 Uniformly for `1<=m<=M`, the scalar `T_m(c)` has one simple real zero
-`chat_{k,m}` in the endpoint range, and
+`c_hat(k,m)` in the endpoint range, and
 
 \[
 \boxed{
@@ -396,7 +396,7 @@ Moreover
 \]
 
 uniformly for `m<M`, and on every fixed disc
-`|c-chat_{k,m}|<=6`,
+`|c-c_hat(k,m)|<=6`,
 
 \[
 \frac{T_m'(c)}{kA_m}
@@ -429,9 +429,9 @@ and uniform Gamma-ratio Stirling estimates in PF18. With
 \frac{T_m(c)}{kA_m}
 =
 \frac1{24m}-\frac1{2c}
--rac{L_m}{k}
+-\frac{L_m}{k}
 +O\!\left(
-\frac1k+rac{m\log^2(k/m+2)}{k^2}
+\frac1k+\frac{m\log^2(k/m+2)}{k^2}
 \right)
 \tag{PF29}
 \]
@@ -447,7 +447,7 @@ O\!\left(\frac{m\log(k/m+2)}k\right)=o(1)
 
 under PF0, and the remainder has the same property. This proves PF26. ∎
 
-The absolute displacement `chat_{k,m}-12m` need not tend to zero near the
+The absolute displacement `c_hat(k,m)-12m` need not tend to zero near the
 largest PF0 depths. Recentring is therefore essential. The fixed center
 `12m` is appropriate only in the smaller regime
 
