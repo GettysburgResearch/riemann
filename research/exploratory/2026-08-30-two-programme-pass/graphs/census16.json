@@ -1,0 +1,2719 @@
+{
+ "scope_note": "Hamiltonian cubic n=16 by DISTINCT SPECTRUM (chord diagrams, dihedral dedup, charpoly grouping): purity/side verdicts exact per spectrum; cospectral iso-classes merge \u2014 counts are of spectra, not graphs",
+ "n_spectra": 3801,
+ "n_ramanujan": 3495,
+ "breach_sides": {
+  "neg_only": 286,
+  "pos_only": 2,
+  "both": 0
+ },
+ "flagged": [
+  41,
+  107,
+  640,
+  706,
+  707,
+  1288,
+  1608,
+  1928,
+  1940,
+  2310,
+  2509,
+  3093,
+  3268,
+  3278,
+  3280,
+  3301,
+  3337,
+  3355
+ ],
+ "pos_only": [
+  708,
+  709
+ ],
+ "nonramanujan_rows": [
+  {
+   "idx": 7,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 15,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 19,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 41,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 44,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 55,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 58,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 107,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 109,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 135,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 140,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 151,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 162,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 165,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 166,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 167,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 173,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 183,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 219,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 229,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 235,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 246,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 273,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 278,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 323,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 327,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 361,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 495,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 496,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 508,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 513,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 588,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 605,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 613,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 621,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 640,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 643,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 649,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 652,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 681,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 700,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 706,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 707,
+   "untempered_squares": 2,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 708,
+   "untempered_squares": 1,
+   "breach_pos": 1,
+   "breach_neg": 0,
+   "girth": 3,
+   "diameter": 7,
+   "bipartite": false
+  },
+  {
+   "idx": 709,
+   "untempered_squares": 1,
+   "breach_pos": 1,
+   "breach_neg": 0,
+   "girth": 3,
+   "diameter": 7,
+   "bipartite": false
+  },
+  {
+   "idx": 726,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 728,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 734,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 737,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 766,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 784,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 791,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 798,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 804,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 806,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 808,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 823,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 855,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 867,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 908,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 910,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 918,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 926,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 928,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 936,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 943,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 945,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 981,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 984,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 997,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1003,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1016,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1057,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1064,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1108,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1110,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1132,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1134,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1136,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1139,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1202,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1217,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1284,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1288,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 1303,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1311,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1314,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1321,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1359,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1360,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1364,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1412,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1422,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1426,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1431,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1485,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1528,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1530,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1551,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1573,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1578,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1580,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1586,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1587,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1593,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1608,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 1616,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 1622,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 1624,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1629,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 1634,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 1645,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 1647,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1651,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1654,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1676,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1688,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 1692,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 6,
+   "bipartite": false
+  },
+  {
+   "idx": 1698,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1703,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1704,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1715,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1716,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1724,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1727,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1762,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1764,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1775,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1779,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1784,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1785,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1790,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1797,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1798,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1822,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1823,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1850,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1880,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1886,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1901,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1912,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1914,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1918,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1919,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1928,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 1929,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1940,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 1941,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1946,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1950,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 1956,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1963,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1966,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 1973,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2011,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2024,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2027,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2038,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2040,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2070,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2081,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2083,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2091,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2124,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2128,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2130,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2137,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2141,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2143,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2149,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2181,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2203,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2268,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2307,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2310,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 2335,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2342,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2348,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2372,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2378,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2396,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2453,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2476,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2494,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2509,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 2510,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2526,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2539,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2551,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2567,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2568,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2572,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2575,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2580,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2581,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2589,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2595,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2600,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2602,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2606,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2608,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2641,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2644,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2646,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2684,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2708,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2745,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2781,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2793,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2835,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2904,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2926,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2937,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2975,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 2984,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2996,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2997,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2998,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 2999,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3000,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3004,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3009,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false
+  },
+  {
+   "idx": 3010,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3016,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3019,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3025,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3026,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3028,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3029,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3031,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3033,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3034,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3035,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3036,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3037,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3038,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3039,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3040,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3041,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3042,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3045,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3046,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3047,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3049,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3051,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3052,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3059,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3087,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3090,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3092,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3093,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 3099,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3104,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3108,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3116,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3122,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3123,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3124,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3128,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3130,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3131,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3139,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3141,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3165,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3174,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3178,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3191,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3253,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3254,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3255,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3268,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 3278,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 3280,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 3284,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3301,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 3334,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3337,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 3342,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3343,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3344,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3346,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3355,
+   "untempered_squares": 1,
+   "flag": "square in (8, 8.0089]"
+  },
+  {
+   "idx": 3356,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3363,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3367,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3373,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3376,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3377,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3379,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3380,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3386,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false
+  },
+  {
+   "idx": 3390,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3403,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3408,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3483,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3495,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3510,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3557,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3571,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3575,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3586,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3587,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3601,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3603,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3615,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  },
+  {
+   "idx": 3743,
+   "untempered_squares": 1,
+   "breach_pos": 0,
+   "breach_neg": 1,
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false
+  }
+ ],
+ "rh_established": false
+}
