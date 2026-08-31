@@ -14,8 +14,10 @@ Status:  PROVED. Theorem 1 (coarse bridge, all m): complete proof from
          identification for general rank at m = 2 is a DEPOSITED
          DIRECTION, labelled, not a claim.
 Machine: research/exploratory/2026-08-30-two-programme-pass/matrix/
-         segre_coarse_check.py (symbolic verification of Theorem 1,
-         m = 2..4 complete over Q(alpha, beta)),
+         segre_coarse_fast.py (FULL symbolic verification of
+         Theorem 1, m = 2..6, sparse-dict exact; authored by the
+         adversarial verification wave and adopted) and
+         segre_coarse_check.py (sympy route, m = 2..4),
          segre3_betti.py + segre3_betti.json (+ .log) (the Theorem 2
          table; stdlib-exact), segre_rank3_check.py (the Corollary 2
          held-out rank-3 identity), and the independent stdlib replay
@@ -41,7 +43,9 @@ RH status: RH and GRH are unproved; nothing here addresses them.
 are the coefficients (`h_0 = 1`, `h_1 = a`,
 `h_r = a h_{r-1} - b h_{r-2}`), and `N_m(T)` is the T-108500 defect
 numerator: `sum_r h_r^m T^r = N_m(T) / det(1 - Sym^m(A) T)` with
-`N_m(0) = 1`, `deg N_m = m - 1`.
+`N_m(0) = 1` and `deg N_m = m - 1` EXACTLY for generic A: T-108500(1)
+gives deg <= m-1, and the functional equation T-108500(3) with
+`N_m(0) = 1` forces the top coefficient `b^{m(m-1)/2} != 0`.
 
 The object that opens the bridge is the **Segre ring**
 
@@ -87,7 +91,11 @@ sum_{i=0}^{m-2k} alpha^{m-2k-i} beta^i`. For `k <= m/2` the monomial
 `alpha^{m-k} beta^k` occurs in the k'-th character iff `k' <= k`, each
 time with coefficient 1; comparing coefficients gives
 `C(m, k) = sum_{k' <= k} c_{k'}`, i.e.
-`c_k = C(m,k) - C(m,k-1)`. ∎
+`c_k = C(m,k) - C(m,k-1)` (with the convention `C(m,-1) = 0`, so
+`c_0 = 1`). Both sides are symmetric in `alpha, beta` and homogeneous
+of degree m, so agreement at the monomials `alpha^{m-k} beta^k`,
+`k <= m/2`, forces full character equality — and character equality
+determines the decomposition (complete reducibility, char 0). ∎
 
 ## Theorem 1 (the coarse bridge, every m)
 
@@ -117,14 +125,18 @@ Two readings, both exact:
 
 Example (m = 4): `K_4 = N_4 * det(1 - b Sym^2(A) T)^3 * (1 - b^2 T)^2`.
 
-Machine: symbolic over `Q(alpha, beta)` for m = 2, 3, 4
-(segre_coarse_check.py: tail-vanishing window + coefficientwise
-equality, all True); exact integer instantiations for m = 2..6 through
-an INDEPENDENT route — actual Kronecker-product and symmetric-power
-matrices, integral Faddeev-LeVerrier determinants — in
-X-108515-segre-bridge (all PASS). The m = 5, 6 symbolic expansions are
-computationally heavy and were not completed; the proof above covers
-all m, so machine work is corroboration, not the basis of the claim.
+Machine: FULL symbolic verification over `Q(alpha, beta)` for
+m = 2..6 (segre_coarse_fast.py — sparse homogeneous-dict arithmetic,
+written by the adversarial verification wave and adopted; also the
+Lemma 1 character identity for m = 1..14, the degree bookkeeping to
+m = 40, and Corollary 1 against BOTH the descent count and the
+Worpitzky route for m = 2..6; the earlier sympy route
+segre_coarse_check.py covers m = 2..4); exact integer instantiations
+for m = 2..6 through an INDEPENDENT route — actual Kronecker-product
+and symmetric-power matrices, integral Faddeev-LeVerrier
+determinants — in X-108515-segre-bridge (all PASS). The proof above
+covers all m; machine work is corroboration, not the basis of the
+claim.
 
 ## Corollary 1 (the defect is an equivariant Eulerian polynomial)
 
@@ -228,8 +240,13 @@ Danilov — IMPORTED_THEOREM): for a pointed, full-dimensional normal
 affine semigroup of rank d,
 `Hilb(x^{-1}) = (-1)^d Hilb_interior(x)` as rational functions. Here
 d = m + 1 and inversion of all fine weights is
-`(alpha, beta, T) -> (alpha^{-1}, beta^{-1}, T^{-1})` (the character
-map is linear on the cone lattice), so with Lemma B:
+`(alpha, beta, T) -> (alpha^{-1}, beta^{-1}, T^{-1})`: the character
+map `(s; r) -> alpha^{mr - sum s} beta^{sum s} T^r` is linear on the
+cone lattice, the substitution is a well-defined specialization of
+the rational-function identity because every denominator factor
+`1 - alpha^{m-j} beta^j T` specializes to a nonzero element of
+`Q(alpha, beta, T)` and every T-degree slice of the specialized
+series is finite; so with Lemma B:
 
 ```text
 Hilb_{R_m}(alpha^{-1}, beta^{-1}; T^{-1})
@@ -247,7 +264,10 @@ N_m(inv) = Q_m(inv) * Hilb(inv) = b^{-m(m-1)/2} T^{-(m-1)} N_m .
 ```
 
 Finally, the T^i-coefficient `c_i in Z[a, b]` of `N_m` is homogeneous
-of degree `m i` in `(alpha, beta)` and symmetric, and for a symmetric
+of degree `m i` in `(alpha, beta)` and symmetric — both immediate
+from T-108500(1)'s closed coefficient formula
+`c_r = sum_u (-1)^{r-u} e_{r-u}(Sym^m) h_u^m` (each term has degree
+`m(r-u) + mu = mr` and is a polynomial in a, b) — and for a symmetric
 homogeneous polynomial of degree `mi`,
 `c_i(alpha^{-1}, beta^{-1}) = b^{-mi} c_i(alpha, beta)` (each monomial
 `alpha^p beta^q`, `p + q = mi`, inverts to `b^{-mi}` times its
@@ -260,7 +280,10 @@ obstruction to functoriality is itself self-dual" — IS Gorenstein
 duality of the unit cube (`[-1,1]^m` reflexive, canonical module =
 `det^m`-twisted 2-shift). A functional equation discovered by
 coefficient algebra now has a geometry supplying it. (Machine: V4 of
-X-108515 checks the coefficientwise FE at every integer point.)
+X-108515 checks the coefficientwise FE at each of its 17 tested
+(m, point) instances, m = 2..6; the identity itself is polynomial in
+Z[a, b], so these are corroboration of an identity that T-108500(3)
+proves at all points.)
 
 ## Corollary 2 (held-out test at rank 3, and the general-rank m = 2 bridge)
 
