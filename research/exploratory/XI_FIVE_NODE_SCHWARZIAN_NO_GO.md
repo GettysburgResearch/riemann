@@ -102,6 +102,32 @@ small positive epsilon. FN6 simultaneously makes the full determinant
 negative. This already proves a finite-data separation between all
 order-at-most-four signs and order five.
 
+### Held-out outcome
+
+The panel fixed in section 1 was then run without alteration. Every proper
+principal minor was positive in all three held-out cells. HELDOUT-A gave
+
+\[
+ -\frac{777606279}{6941722489000000000000000000}<0,
+\]
+
+and the independent atoms/nodes of HELDOUT-B gave
+
+\[
+ -\frac{2126823001}{35614488430668169000000000}<0.
+\]
+
+HELDOUT-C, the predeclared opposite-coordinate increase, instead gave
+
+\[
+ \frac{133394400643}{14003428343249488000000000}>0.
+\]
+
+The positive C outcome is retained: the fifth residual is oriented and is
+not forced negative by every departure from a rank-four Stieltjes model.
+Across both bases, all ten coordinate perturbation determinants were exact
+quadratics and all six post-reconstruction evaluations agreed.
+
 ## 4. A global smooth paired-Schwarzian countermodel
 
 The finite values can be realized without sacrificing the entire scalar
