@@ -288,16 +288,35 @@ def main():
                 continue
             cp = tuple(charpoly_of_matrix(A))
             dup = False
-            for (cp2, B) in classes:
-                if cp2 == cp and is_isomorphic_brute(A, B):
-                    dup = True
-                    break
+            for (cp2, inv2, B) in classes:
+                if cp2 != cp:
+                    continue
+                if n <= 10:
+                    if is_isomorphic_brute(A, B):
+                        dup = True
+                        break
+                else:
+                    # n = 12: brute isomorphism (12! perms) is
+                    # infeasible in pure Python; dedup by charpoly +
+                    # cheap invariants. Purity is a SPECTRAL invariant,
+                    # so merging a cospectral-mate pair cannot corrupt
+                    # the purity atlas — only the class COUNT could be
+                    # low; recorded in the scope note.
+                    d2, _ = diameter_and_connected(A)
+                    inv = (girth(A), d2, bipartite(A))
+                    if inv == inv2:
+                        dup = True
+                        break
             if not dup:
-                classes.append((cp, A))
-        say(f"  n={n}: {len(classes)} Hamiltonian cubic classes")
-        for i, (cp, A) in enumerate(classes):
+                d_, _ = diameter_and_connected(A)
+                classes.append((cp, (girth(A), d_, bipartite(A)), A))
+        say(f"  n={n}: {len(classes)} Hamiltonian cubic classes"
+            + (" (spectral+invariant dedup)" if n > 10 else ""))
+        for i, (cp, inv, A) in enumerate(classes):
             row = atlas_row(f"ham_cubic_n{n}_{i}", A,
-                            "exhaustive Hamiltonian cubic (chord diagrams)")
+                            "exhaustive Hamiltonian cubic (chord diagrams)"
+                            if n <= 10 else
+                            "Hamiltonian cubic, spectral+invariant dedup")
             if row:
                 atlas.append(row)
 
@@ -314,11 +333,17 @@ def main():
                 atlas.append(row)
 
     with open("graphs/telescope.json", "w") as f:
-        json.dump({"scope_note": ("Hamiltonian cubic exhaustive n<=12 via "
-                                  "chord diagrams + named additions + GP "
-                                  "family; NOT exhaustive over all connected "
-                                  "cubic (bridged non-Hamiltonian exist from "
-                                  "n=10)"),
+        json.dump({"scope_note": ("Hamiltonian cubic via chord diagrams: "
+                                  "exhaustive with brute isomorphism "
+                                  "n<=10; n=12 deduplicated by charpoly + "
+                                  "(girth, diameter, bipartite) — a "
+                                  "cospectral-mate merge is possible, "
+                                  "which cannot affect purity rows "
+                                  "(spectral invariant) but could "
+                                  "undercount classes. Plus named "
+                                  "additions + GP family; NOT exhaustive "
+                                  "over all connected cubic (bridged "
+                                  "non-Hamiltonian exist from n=10)"),
                    "rows": atlas, "rh_established": False}, f, indent=1)
     ram = sum(1 for r in atlas if r["ramanujan"])
     say(f"atlas: {len(atlas)} graphs, {ram} Ramanujan")

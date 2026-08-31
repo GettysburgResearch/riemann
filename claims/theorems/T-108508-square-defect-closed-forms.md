@@ -68,7 +68,11 @@ d = 5:  N = G_5 + 2 (e4 h2 - e5 h1) T^3
    `N_{2,d}` has top coefficient `(-1)^{(d-1)(d-2)/2} (det A)^{d-1}` —
    the Gauss-sign prediction is corrected at the top exactly when
    `d ≡ 1 (mod 4)`-type parity flips it (d = 5: `+e_5^4` vs predicted
-   `-e_5^4`).
+   `-e_5^4`). **Pass-3 addendum (2026-08-31): now proved for ALL d** by
+   T-108510 (defect codimension law), whose reciprocity argument gives
+   `c_top(N_{2,d}) = (-1)^{C(d-1,2)} e_d^{d-1}` directly (the two sign
+   forms agree; exponents differ by the even number 2d); the same law
+   proves `deg N_{m,d} = C(d+m-1,m) - d` for every m, d.
 4. Degeneration loci (reduced denominators) occur at special
    instantiations and are recorded, consistent with T-108500(5).
 

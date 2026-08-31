@@ -67,6 +67,18 @@ quadratic extension (versus m=3's single deformation over
 `sqrt(a^2-b)`); the obstruction-duality tower appears to deepen with m.
 Deposited as an exact observation + open question, not a claim.
 
+**Pass-3 addendum (2026-08-31):** the open question above is now CLOSED
+by T-108509 (deformation spectrum): for every m the defect is a
+canonical product of `floor((m-1)/2)` self-dual rank-2 deformations of
+determinant `b^m`, with spectrum polynomial `M_m` (`M_3 = z + 2ab`
+recovers this bridge; `M_4 = z + b(3a^2-2b)` is the next one) and tower
+invariants `D_m = disc_z M_m` (`D_5` derives the m=5 ansatz invariant).
+Additionally, campaign C4 (matrix/c4_boundary_telescope.json) places
+the CONJECTURAL accumulation line for the corollary's natural boundary
+at `Re s = 3/2` (the zero constellation of `D(s)`: tempered primes
+exactly on the line, untempered band `O(1/log p)`), with the honest
+control that dense local zeros alone do not imply a boundary.
+
 ## Novelty position
 
 The ingredients are elementary; the m=2 analogue (Rankin-Selberg) is
