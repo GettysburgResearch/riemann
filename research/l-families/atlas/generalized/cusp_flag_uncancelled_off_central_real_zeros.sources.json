@@ -1,0 +1,102 @@
+{
+  "authoring_base": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+  "external_context": [
+    {
+      "remote_bytes_authenticated": false,
+      "role": "positive-real K_nu integral, orders0..1/2",
+      "url": "https://dlmf.nist.gov/10.32.E9"
+    },
+    {
+      "remote_bytes_authenticated": false,
+      "role": "exact positive-real K_1/2",
+      "url": "https://dlmf.nist.gov/10.39.E2"
+    },
+    {
+      "remote_bytes_authenticated": false,
+      "role": "digamma asymptotic5.11.2 and positive-real remainder",
+      "url": "https://dlmf.nist.gov/5.11"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "77820c6af8d089d22547db6cda5ba025ed96f84f",
+      "kind": "native_family",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md",
+      "sha256_lf": "d5c95db34c62d31e0bb735e09aae5599e3abf29194cd74a50ce1bbebafab1530"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7e6ae5bb1fd9c53930cee1198eb185806a2ea118",
+      "kind": "native_family",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.py",
+      "sha256_lf": "34120d58416c902db94fbeaf69ceb004694888908341b630a1b750f2f1e8316a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7ca422e505e6ccd817aadee3362f1ace2fa83fd4",
+      "kind": "native_family",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.json",
+      "sha256_lf": "fb6ae6ad8535b8cc519d33ab0e901cf17b9cf53ddff9c0bde427daf61faa60db"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "90dc74d185b0b9a42f865a9f9df895ba7cd1c5dd",
+      "kind": "native_family",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.sources.json",
+      "sha256_lf": "f754ecdff30b4fd3a3f8f4b8436e46ab3633ba59738021f5538051fae9e43b7a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "c2d9dc7ea92a75c7e3fd99c5463e664fb79e0d3a",
+      "kind": "native_family",
+      "path": "tests/test_cusp_flag_quotient_global_family.py",
+      "sha256_lf": "84603f0412d8a7f1d2c2384c7055f55b4956db3df68b42dde7074d18cbe8265b"
+    },
+    {
+      "commit": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+      "git_blob": "0fcafec61b564a1f2db4c15d24c881d99b8ebcd1",
+      "kind": "reviewed_cusp_parent_release",
+      "path": "research/l-families/atlas/generalized/CUSP_PERIOD_OFF_CENTRAL_REAL_ZEROS.md",
+      "sha256_lf": "cb792b56a687922573711027d9d6a43221d468c0d42311251d4b882c2d7f7906"
+    },
+    {
+      "commit": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+      "git_blob": "40e65f048cf602f937e326b1e1594c08da81c471",
+      "kind": "reviewed_cusp_parent_release",
+      "path": "research/l-families/atlas/generalized/cusp_period_off_central_real_zeros.py",
+      "sha256_lf": "cc573a19d3e64344bcb217dafb86094470b4af15304f0c647f090eb12d3fd66c"
+    },
+    {
+      "commit": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+      "git_blob": "ec6698279aed159326220061ccf36d6cd7ae15cd",
+      "kind": "reviewed_cusp_parent_release",
+      "path": "research/l-families/atlas/generalized/cusp_period_off_central_real_zeros.json",
+      "sha256_lf": "ea44f9b40af18e6657729b6bb2e2b2ffdf9d814c596f77d7b8542b4249406514"
+    },
+    {
+      "commit": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+      "git_blob": "0d5ec23bab396ccf2d16cff89247805b935706e3",
+      "kind": "reviewed_cusp_parent_release",
+      "path": "research/l-families/atlas/generalized/cusp_period_off_central_real_zeros.sources.json",
+      "sha256_lf": "35490b7422b93e2623cc492ab8fc3689f6aa969d9daec2d2caaf5c49e4887721"
+    },
+    {
+      "commit": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+      "git_blob": "4f047bf05250ea6e70f93ae06ab26903b019b2ff",
+      "kind": "reviewed_cusp_parent_release",
+      "path": "tests/test_cusp_period_off_central_real_zeros.py",
+      "sha256_lf": "f256d73577dc6babd3fa652f1f69738e72d26d23edc219ae8eb103d639c920ff"
+    }
+  ],
+  "primitive_contract": {
+    "completion": "CF/CZ half-lattice E*; Lambda2=pi/6 and residue1/2 unchanged",
+    "constructor": "only authenticated frozen family/CZ producer bytes executed",
+    "moving_interval": "real s in [1-18/k,1), eventually k=12d",
+    "new_uniform_gate": "all W Parseval moment <=[1+(k-1)/(8pi)]G; no coefficient freedom",
+    "object": "actual CF canonical ell=[q] flag quotient; no generic flag replacement",
+    "onset": "exists k0; no numerical onset or transfer of6144",
+    "witness": "h_d=Delta E4^(3d-3)=CF g1, not Miller f_d"
+  },
+  "schema": "cusp-flag-uncancelled-real-zeros-sources-v1"
+}
