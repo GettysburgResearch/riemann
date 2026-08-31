@@ -7,7 +7,7 @@ numbering is continuous.
 
 ## 9. Uniform invertibility of the far deep space
 
-Retain `M=2L` and the recentered discs `Omega_{k,J}` from PF32.  For
+Retain `M=2L` and the recentered discs `Omega_{k,J}` from PF32. For
 `f in W_{M+1}`, the parent source moment estimate gives
 
 \[
@@ -28,7 +28,7 @@ Laurent calculation as in the fixed-depth parent yields
 \tag{PF36}
 \]
 
-By PF25, `Re c` is comparable with `J` and `|Im c|<=Delta`.  Since
+By PF25, `Re c` is comparable with `J` and `|Im c|<=Delta`. Since
 `J<=L` and `M=2L`,
 
 \[
@@ -37,7 +37,7 @@ By PF25, `Re c` is comparable with `J` and `|Im c|<=Delta`.  Since
 \tag{PF37}
 \]
 
-uniformly for all declared discs.  Condition PF0 therefore gives
+uniformly for all declared discs. Condition PF0 therefore gives
 
 \[
 -\Re I_{1-c/k}|_{W_{M+1}}
@@ -45,7 +45,7 @@ uniformly for all declared discs.  Condition PF0 therefore gives
 \tag{PF38}
 \]
 
-for all sufficiently large `k`.  Hence the far block `E(c)` is holomorphic
+for all sufficiently large `k`. Hence the far block `E(c)` is holomorphic
 and invertible there, with
 
 \[
@@ -71,7 +71,7 @@ T(c)&E(c)
 \end{pmatrix}
 \]
 
-with the first block indexed by `w_1,...,w_M`.  Part I's complete residual
+with the first block indexed by `w_1,...,w_M`. Part I's complete residual
 estimate implies
 
 \[
@@ -83,7 +83,7 @@ p(k,L)\sqrt{\varepsilon_{k,M}A_l},
 \tag{PF40}
 \]
 
-where `p` is a fixed polynomial.  The pure constant-term cross vanishes by
+where `p` is a fixed polynomial. The pure constant-term cross vanishes by
 Fourier support, the pure nonconstant cross has first reserve frequency
 `M+1`, and every remaining term contains a residual factor from PF15.
 
@@ -107,7 +107,7 @@ where
 \tag{PF42}
 \]
 
-faster than every inverse power.  After eliminating `W_{M+1}`, the finite
+faster than every inverse power. After eliminating `W_{M+1}`, the finite
 matrix, still denoted `H`, therefore obeys PF22--PF23 with a possibly enlarged
 `rho_{k,M}`.
 
@@ -126,13 +126,8 @@ Scale the finite matrix symmetrically by the source energies:
 \tag{PF43}
 \]
 
-Its diagonal is
-
-\[
-t_l(c)=T_l(c)/A_l+o(1),
-\]
-
-and PF21--PF23 give, for `l!=m`,
+Its diagonal is `t_l(c)=T_l(c)/A_l+O(rho_{k,M})`, and PF21--PF23 give,
+for `l!=m`,
 
 \[
 |\widetilde H_{lm}(c)|
@@ -141,9 +136,9 @@ C(1+\log M)e^{-c_0k|l-m|/M}+\rho_{k,M}.
 \tag{PF44}
 \]
 
-Fix a suffix `I_i={i,i+1,...,M}` containing `J`.  On
+Fix a suffix `I_i={i,i+1,...,M}` containing `J`. On
 `partial Omega_{k,J}`, let `D(c)=diag(t_l(c):l in I_i)` and let `U` be the
-off-diagonal part.  PF33--PF34 imply
+off-diagonal part. PF33--PF34 imply
 
 \[
 \left\|
@@ -161,19 +156,19 @@ where one may take
 C\frac{L^2}{k}
 \sum_{h\ge1}\frac{(1+\log(h+1))e^{-c_0kh/L}}
                     {\sqrt{h}}
-+C\frac{L^2}{k}\rho_{k,M},
++C\frac{L^2}{k}\rho_{k,M}.
 \tag{PF46}
 \]
 
-and
+Under PF0 the exponential beats every polynomial, so the stronger estimate
 
 \[
-\omega_{k,L}\to0
+\boxed{M\omega_{k,L}\longrightarrow0}
 \tag{PF47}
 \]
 
-uniformly over every `i<=J<=L`.  The same estimate holds for suffixes not
-containing `J`.
+holds uniformly over every `i<=J<=L`. The same estimate holds for suffixes
+not containing `J`.
 
 Since determinant is unchanged up to the nonzero source scaling,
 
@@ -186,8 +181,18 @@ Since determinant is unchanged up to the nonzero source scaling,
 \]
 
 A continuous choice of square roots is made only on the contour; the final
-identity is algebraic and independent of that choice.  PF45 makes the last
-determinant uniformly `1+o(1)`.
+identity is algebraic and independent of that choice. If `V` denotes the
+normalized off-diagonal matrix, PF45 gives `||V||<1/2`. Hence
+
+\[
+|\log\det(I+V)|
+\le2\dim(I_i)\|V\|
+\le2M\omega_{k,L}=o(1).
+\tag{PF48a}
+\]
+
+Therefore the last determinant is uniformly `1+o(1)`, not merely nonzero.
+This dimension-paid estimate is the form needed for Rouché.
 
 ---
 
@@ -195,7 +200,7 @@ determinant uniformly `1+o(1)`.
 
 ### Theorem 12.1
 
-Let `L=L(k)` satisfy PF0 and fix `0<Delta<5`.  For all sufficiently large
+Let `L=L(k)` satisfy PF0 and fix `0<Delta<5`. For all sufficiently large
 even `k`, simultaneously for every `1<=J<=L(k)` and every `1<=i<=J`:
 
 1. `D_i` has exactly one zero, counting multiplicity, in
@@ -216,33 +221,32 @@ Reflection supplies the corresponding left endpoint discs.
 
 #### Proof
 
-On `partial Omega_{k,J}`, PF48 compares the actual suffix determinant with
-its diagonal product.  That product has exactly one zero inside, namely the
-simple one-mode zero of `T_J`; every other one-mode center lies outside by
-PF26.  The determinant factor in PF48 is uniformly nonzero and close to one.
-Rouche therefore gives exactly one zero for every suffix containing `J` and
-none for the suffix beginning at `J+1`.
+On `partial Omega_{k,J}`, PF48--PF48a compare the actual suffix determinant
+with its diagonal product with relative error `o(1)`. That product has exactly
+one zero inside, namely the simple one-mode zero of `T_J`; every other
+one-mode center lies outside by PF26. Rouché gives exactly one zero for every
+suffix containing `J` and none for the suffix beginning at `J+1`.
 
 The source has Schwarz symmetry, so a nonreal zero would bring a distinct
-conjugate zero into the same conjugation-invariant disc.  The unique zero is
-real.  Counting multiplicity one makes it simple.  Repeating the contour
-argument with a radius tending to zero more slowly than `omega_{k,L}` gives
+conjugate zero into the same conjugation-invariant disc. The unique zero is
+real. Counting multiplicity one makes it simple. Repeating the contour
+argument with a radius tending to zero but dominating `M omega_{k,L}` gives
 PF49.
 
-All eliminated factors are nonzero.  Therefore the suffix zero is exactly
-the zero of `D_i`.  The statement about `Q_i=D_i/D_{i+1}` is then immediate.
+All eliminated factors are nonzero. Therefore the suffix zero is exactly
+the zero of `D_i`. The statement about `Q_i=D_i/D_{i+1}` is immediate.
 Reflection follows from the completed period functional equation. ∎
 
-This is a growing fixed-weight determinant census in the near-maximal
-endpoint range `L=o(k/log k)`.  It deliberately distinguishes determinant
-zeros from uncancelled quotient divisors.
+This is a growing fixed-weight determinant census in the endpoint range
+`L=o(k/log k)`. It deliberately distinguishes determinant zeros from
+uncancelled quotient divisors.
 
 ---
 
 ## 13. Exact weak interlacing and the cancellation criterion
 
 Fix `i<J` and eliminate all nonvanishing blocks except the source directions
-corresponding to `i` and `J`.  On the real interval, the resulting exact
+corresponding to `i` and `J`. On the real interval, the resulting exact
 matrix is
 
 \[
@@ -262,7 +266,8 @@ Q_i=a_i-\frac{b_i^2}{d_i},
 \tag{PF51}
 \]
 
-and `d_i=delta_{i+1}`.  Diagonal dominance gives, throughout the cluster,
+and `d_i=delta_{i+1}`. Diagonal dominance and the derivative form of PF45
+give, throughout the cluster,
 
 \[
 a_i(c)>0,
@@ -314,10 +319,9 @@ c_{i,J}-c_{i+1,J}
 \tag{PF57}
 \]
 
-for an intermediate point `xi_{i,J}`.  At equality, the two simple
-determinant factors cancel in their quotient.  Thus strict interlacing is
-precisely a source-coupling problem, not a consequence of determinant
-existence alone.
+for an intermediate point `xi_{i,J}`. At equality, the two simple
+determinant factors cancel in their quotient. Thus strict interlacing is
+precisely a source-coupling problem.
 
 ---
 
@@ -345,16 +349,16 @@ For `S_n=sigma_{-1}(n)`,
 
 #### Proof
 
-Expand both divisor sums.  For divisors `d|r`, `e|h-r`, write `r=dm`.
-The congruence for `m` has modulus `e/(d,e)` when it is soluble.  The
-harmonic sum in one residue class is bounded by
+Expand both divisor sums. For divisors `d|r`, `e|h-r`, write `r=dm`.
+The congruence for `m` has modulus `e/(d,e)` when it is soluble. The harmonic
+sum in one residue class is bounded by
 
 \[
 1+\frac{(d,e)}e\log(h+1).
 \]
 
-After multiplication by the coefficient `1/(d^2e)`, the first terms sum to
-`O(log h)` and the logarithmic terms to
+After multiplication by `1/(d^2e)`, the first terms sum to `O(log h)` and
+the logarithmic terms to
 
 \[
 O(\log h)
@@ -381,22 +385,22 @@ on the real cluster interval.
 #### Proof
 
 Use column scaling by the exact `A_m` on the earlier block
-`m=i+1,...,J-1`.  Its diagonal at the `J`-th cluster is comparable with
+`m=i+1,...,J-1`. Its diagonal at the `J`-th cluster is comparable with
 
 \[
 \frac{k(J-m)}{J^2},
 \]
 
 and its upper entry at distance `h` is `S_h(1+o(1))`; the reverse entry is
-exponentially suppressed.  The row norm of the diagonal-normalized upper
+exponentially suppressed. The row norm of the diagonal-normalized upper
 part is `O(L^2/k)`, so Neumann inversion is valid.
 
 The first Schur correction is bounded by PF59 and is
-`O((L^2/k)log L)A_J`.  The higher corrections form a geometric series in
-the row norm.  PF58 proves PF60.  The Poincare-frame residual and far-block
+`O((L^2/k)log L)A_J`. The higher corrections form a geometric series in
+the row norm. PF58 proves PF60. The Poincare-frame residual and far-block
 corrections are superpolynomially smaller. ∎
 
-Consequently all inequalities in PF55 are strict in the PF58 regime.  Put
+Consequently all inequalities in PF55 are strict in the PF58 regime. Put
 
 \[
 \mathcal F_{i,J}
@@ -437,20 +441,20 @@ L^2\log(k/L+2)=o(k),
 \tag{PF64}
 \]
 
-then PF25 gives `chat_{k,J}=12J+o(1)`,
+then PF25 gives `c_hat(k,J)=12J+o(1)`,
 `mathcal T'_J=(288J^2)^{-1}(1+o(1))`, and PF62--PF63 reduce to the
-fixed-center formulas of the parent.  This improves the previous cube-root
+fixed-center formulas of the parent. This improves the previous cube-root
 range to the source-natural square-root/logarithmic range.
 
 ---
 
 ## 15. Boundary of the theorem
 
-The determinant theorem requires only PF0.  Strict quotient interlacing with
-the unmodified divisor coefficient `S_h` requires PF58.  Between those
-regimes the coupling is nonperturbative and may vanish.  The next packet
+The determinant theorem requires only PF0. Strict quotient interlacing with
+the unmodified divisor coefficient `S_h` requires PF58. Between those
+regimes the coupling is nonperturbative and may vanish. The next packet
 derives its exact fixed-offset scaling law.
 
 No claim is made that every weak inequality is strict under PF0, that a
 common determinant zero cannot occur, or that the parent gap law remains
-unchanged when `J^2/k` is not small.  RH and GRH remain unproved.
+unchanged when `J^2/k` is not small. RH and GRH remain unproved.
