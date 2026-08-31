@@ -1,0 +1,71 @@
+{
+  "X": 100000000,
+  "all_windows_succeeded": true,
+  "candidate_count": 66,
+  "half_width": 100,
+  "kernel_face_result_known_at_acquisition": false,
+  "ratio": "51/50",
+  "schema": "riemann.native_six_hour.face_prime_acquisition.v1",
+  "windows": [
+    {
+      "complete_trial_division": true,
+      "exact_target": "100000000",
+      "first_prime": 99999931,
+      "index": 0,
+      "lower": 99999900,
+      "odd_candidates_attempted": 16,
+      "upper": 100000100,
+      "window_changed": false
+    },
+    {
+      "complete_trial_division": true,
+      "exact_target": "102000000",
+      "first_prime": 101999927,
+      "index": 1,
+      "lower": 101999900,
+      "odd_candidates_attempted": 14,
+      "upper": 102000100,
+      "window_changed": false
+    },
+    {
+      "complete_trial_division": true,
+      "exact_target": "104040000",
+      "first_prime": 104039917,
+      "index": 2,
+      "lower": 104039900,
+      "odd_candidates_attempted": 9,
+      "upper": 104040100,
+      "window_changed": false
+    },
+    {
+      "complete_trial_division": true,
+      "exact_target": "106120800",
+      "first_prime": 106120717,
+      "index": 3,
+      "lower": 106120700,
+      "odd_candidates_attempted": 9,
+      "upper": 106120900,
+      "window_changed": false
+    },
+    {
+      "complete_trial_division": true,
+      "exact_target": "108243216",
+      "first_prime": 108243127,
+      "index": 4,
+      "lower": 108243116,
+      "odd_candidates_attempted": 6,
+      "upper": 108243316,
+      "window_changed": false
+    },
+    {
+      "complete_trial_division": true,
+      "exact_target": "2760202008/25",
+      "first_prime": 110408003,
+      "index": 5,
+      "lower": 110407981,
+      "odd_candidates_attempted": 12,
+      "upper": 110408180,
+      "window_changed": false
+    }
+  ]
+}
