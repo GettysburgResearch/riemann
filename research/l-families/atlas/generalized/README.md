@@ -4,8 +4,16 @@ Status: **reviewed local/global boundaries, a classical signed parent, and
 an actual global period quotient; no new automorphic L-function or external
 novelty claim**.
 
-For the current twenty-seven-packet result and the remaining global-object gates,
-start with [CONTINUATION_RESULTS.md](CONTINUATION_RESULTS.md).
+For the latest six-hour pass and its thirty-seven scientific replay modules,
+start with [SIXHOUR_PASS3_RESULTS.md](SIXHOUR_PASS3_RESULTS.md). It includes the
+exact Segre bridge, higher-rank purity chambers, all-fixed-depth flag ladder,
+fixed-weight complex-subspace divisors, source-first theta completion and its
+positive-source zero firewall. The thirty-seven-module panel passes 962 tests
+and all producer checks in both normal and optimized Python.
+
+The earlier twenty-seven-packet result and historical open gates are preserved
+in [CONTINUATION_RESULTS.md](CONTINUATION_RESULTS.md). The following introduction
+describes that earlier stage; its queue is superseded by the latest map.
 The [all-weight cusp-flag family](CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md)
 extends the [weight-24 quotient](RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT.md).
 Its [positive-spectrum boundary](CUSP_FLAG_POSITIVE_SPECTRUM_BOUNDARY.md)

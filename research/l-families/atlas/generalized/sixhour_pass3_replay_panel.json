@@ -1,0 +1,266 @@
+{
+  "modules": [
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_flag_all_weight_endpoint_separation.py",
+      "producer_sha256_lf": "04c2f8ac0b93be7d7621bcab8284fab63de5987e18f86e4e204107483fac782b",
+      "runtime": "system",
+      "test": "tests/test_cusp_flag_all_weight_endpoint_separation.py",
+      "test_sha256_lf": "326b7cd43f7e77c264513e245c2fab6efeab95734bd2f713c9a7edc9efac66fe"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_flag_divisor_explicit_formula.py",
+      "producer_sha256_lf": "45ebd934c6d8e3547bde285ea30b3a6b2574cd2f634300dd76044662829f83d9",
+      "runtime": "system",
+      "test": "tests/test_cusp_flag_divisor_explicit_formula.py",
+      "test_sha256_lf": "cd1d67310afba80e1efa40735532bb4a8036b05ad592fb39a5249cb6abe67a6d"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_flag_effective_endpoint_separation.py",
+      "producer_sha256_lf": "21f898a0944c13cf25a973c290f27b4703363f7d626922ad391c56ec625e1ce5",
+      "runtime": "system",
+      "test": "tests/test_cusp_flag_effective_endpoint_separation.py",
+      "test_sha256_lf": "a76a841fabad63f85f4c3156cf1aad2ddaf91468ec9b479325e768c69b5c1904"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_flag_effective_negative_derivative.py",
+      "producer_sha256_lf": "54b2fe71070c5b5bad9e4bcd1d2b74359d00d334c32aa0ac9f2ca9a92473355e",
+      "runtime": "system",
+      "test": "tests/test_cusp_flag_effective_negative_derivative.py",
+      "test_sha256_lf": "c5b6670e03fbac8a8ea55707ffd93f89c298597c1a2e056c6b424b2faf35a173"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_flag_fixed_depth_divisor_ladder.py",
+      "producer_sha256_lf": "8e50ded1ce1ff52cf0461698fa9d52ed1780aa8992ec586e5bc01c3f0fd71569",
+      "runtime": "system",
+      "test": "tests/test_cusp_flag_fixed_depth_divisor_ladder.py",
+      "test_sha256_lf": "96cb9c535fc1ca7a70960eda54ca88b39dc88663920f10ab1efb50357fde33bf"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_flag_hecke_source_concentration.py",
+      "producer_sha256_lf": "1efd5bb84d15adf7bd9f36ed93b3bd0918e66c5ad144c646dadc4e53000791cd",
+      "runtime": "system",
+      "test": "tests/test_cusp_flag_hecke_source_concentration.py",
+      "test_sha256_lf": "be8ce02b72bb14013ebed9c53fc86d85d4a712d890dacc4af1cb1a9dc37b9f00"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_flag_local_simple_endpoint_zero.py",
+      "producer_sha256_lf": "ddceb433c84a3d15b6e0298a415303aa75488990951ddb1b9bedb539176a3ef2",
+      "runtime": "system",
+      "test": "tests/test_cusp_flag_local_simple_endpoint_zero.py",
+      "test_sha256_lf": "17b15156c68918a52cba9198204cdb2fdbd475c5673a55499c516bece7457345"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_flag_native_denominator_poles.py",
+      "producer_sha256_lf": "60c3f727f1e3da4e2a16abe26bfae1994208f3d797e7620a52c39296418a953e",
+      "runtime": "system",
+      "test": "tests/test_cusp_flag_native_denominator_poles.py",
+      "test_sha256_lf": "200576bc492ba7dbb0ecb2420aa7c73faf25e36ae990c580793e4f4ee8864a6b"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_flag_positive_spectrum_boundary.py",
+      "producer_sha256_lf": "e0185cc4c899e41b1bfdccf05021995474eccca2514b1b4ec40d6502ab8afcb8",
+      "runtime": "system",
+      "test": "tests/test_cusp_flag_positive_spectrum_boundary.py",
+      "test_sha256_lf": "80a13b3099212f99976afc9c77695b5b029bcc50a451bce6d6feef753aef0f05"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.py",
+      "producer_sha256_lf": "34120d58416c902db94fbeaf69ceb004694888908341b630a1b750f2f1e8316a",
+      "runtime": "system",
+      "test": "tests/test_cusp_flag_quotient_global_family.py",
+      "test_sha256_lf": "84603f0412d8a7f1d2c2384c7055f55b4956db3df68b42dde7074d18cbe8265b"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_flag_signed_riemann_von_mangoldt.py",
+      "producer_sha256_lf": "dbc60997f09d7ad6c772925253ccd5951823c7f1e614d6327c2ed66f4a6dd104",
+      "runtime": "system",
+      "test": "tests/test_cusp_flag_signed_riemann_von_mangoldt.py",
+      "test_sha256_lf": "636bbaa363ad1e67f4a03ea55009a833e3006fa2d969796c814fc9368647eaaa"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_flag_uncancelled_off_central_real_zeros.py",
+      "producer_sha256_lf": "1c8ebbae726b78067e83285d29a14f8363704758e6cd06bdaa1822aa94f1f416",
+      "runtime": "system",
+      "test": "tests/test_cusp_flag_uncancelled_off_central_real_zeros.py",
+      "test_sha256_lf": "3aaa629162c869eb5717bb8473102b114867e9d2329e5d8f52546c818a9db665"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_matrix_period_positivity.py",
+      "producer_sha256_lf": "719f7b8fa6d52efb88ec0d7162a15a5c146b51256eacdfef514b6ca12b788eed",
+      "runtime": "system",
+      "test": "tests/test_cusp_matrix_period_positivity.py",
+      "test_sha256_lf": "0c681025da1e6957e412abd853052454ef5c8f03c56b3c9c64cb8379bf3764a5"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_period_off_central_real_zeros.py",
+      "producer_sha256_lf": "cc573a19d3e64344bcb217dafb86094470b4af15304f0c647f090eb12d3fd66c",
+      "runtime": "system",
+      "test": "tests/test_cusp_period_off_central_real_zeros.py",
+      "test_sha256_lf": "f256d73577dc6babd3fa652f1f69738e72d26d23edc219ae8eb103d639c920ff"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_weight24_complex_flag_divisors.py",
+      "producer_sha256_lf": "88181ef8cc8bcc419718511b073abb61db6bcb6cb68ceea29069a00a9a3d4968",
+      "runtime": "system",
+      "test": "tests/test_cusp_weight24_complex_flag_divisors.py",
+      "test_sha256_lf": "5327c08de86236a6e23a360c5e726a2f22b712380f83a2d6fd45a58b4c7a2baa"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_weight24_fixed_divisor_infinity.py",
+      "producer_sha256_lf": "6e47e87af92ad046ecd7101660c2d9b6bf930009cb386f8ceb17463134f4f0ef",
+      "runtime": "system",
+      "test": "tests/test_cusp_weight24_fixed_divisor_infinity.py",
+      "test_sha256_lf": "30dc82e50613936dcba0e29fa4cbea21c947ededae8d83775ed498c9a408314c"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/cusp_weight36_subspace_divisors.py",
+      "producer_sha256_lf": "91bb1196277f9055a0930fd266dc5c8541e4f72cd03cbe6238a7eb24f564714a",
+      "runtime": "system",
+      "test": "tests/test_cusp_weight36_subspace_divisors.py",
+      "test_sha256_lf": "f6877923f4f19b66c8d4daf3429923364d56964e407fc7cc1d9c3317f6d551e7"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/dense_torus_trace_absolute_power_rationality.py",
+      "producer_sha256_lf": "445bfee08b34fb504306987864e6ffecf3cdc1e26c190cb379d7c3663b8180c6",
+      "runtime": "system",
+      "test": "tests/test_dense_torus_trace_absolute_power_rationality.py",
+      "test_sha256_lf": "52b55ca205ef60b2c69f7f9ee070057b7cf522d1257cf4aee038c2e2b73f7d37"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/finite_graded_virtual_parent_classification.py",
+      "producer_sha256_lf": "8aa22c60fdabe80514725a1fb79fd6fb57e2a213e18961b2d779b8c198dabc71",
+      "runtime": "system",
+      "test": "tests/test_finite_graded_virtual_parent_classification.py",
+      "test_sha256_lf": "c21b69acdaf6e7f951f8ed1636bcac768a5a5dfe181faf8c707cda0b37b4d755"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/graded_parent_global_boundary.py",
+      "producer_sha256_lf": "716c25f10f86ac10d759d7464e2c0d58b31642db42b5b0c15a8569c78976c9ca",
+      "runtime": "system",
+      "test": "tests/test_graded_parent_global_boundary.py",
+      "test_sha256_lf": "19adc76da6f5500aa30f15816a42cf3a8ef36dea53b90b9b4db66b4408a58b52"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.py",
+      "producer_sha256_lf": "e6e1bf91db5c91f7a5320ecfb5ec40cb1f37ad91e0ea15a3918c44e5b39ff3c7",
+      "runtime": "system",
+      "test": "tests/test_irrational_rotation_absolute_power_rationality.py",
+      "test_sha256_lf": "7e6afa0c92493ba80bc932a290a87601e26364ceba7c803d7d4a07cc8b100eb4"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.py",
+      "producer_sha256_lf": "48cbef5a6c4e56e3ef0ceb76d49c28d3b18b2266fec5b73eefb75249dc1d45bf",
+      "runtime": "system",
+      "test": "tests/test_irrational_rotation_principal_complex_power_rationality.py",
+      "test_sha256_lf": "71281b220880510d5134d99be84dc05e9a77f682c755ddfb3cbfe5bd37dc5a84"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
+      "producer_sha256_lf": "fba40d932e947c81441cf7a9187e5915ed7e227bf2b2d1167ffb0a648599467e",
+      "runtime": "system",
+      "test": "tests/test_nonintegral_local_power_rationality.py",
+      "test_sha256_lf": "ca390ebb9680ebcb1e3b6e3c12ea639941f1684dffc344efd0651d8304288fc6"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/positive_determinant_power_release.py",
+      "producer_sha256_lf": "4970309485f8af80f4246cda6ef233d86199b642959b0c4dc4c2beb1c8694f54",
+      "runtime": "system",
+      "test": "tests/test_positive_determinant_power_release.py",
+      "test_sha256_lf": "65cc7d4389f26ad27b4deba1452d3fdd3f54d28b349ada625fd324dbbe0472b1"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/rankin_selberg_quotient_global_parent.py",
+      "producer_sha256_lf": "214644425a7ee02aa145c14b8df45dc20d9dc5a8706f0e597657443728521098",
+      "runtime": "system",
+      "test": "tests/test_rankin_selberg_quotient_global_parent.py",
+      "test_sha256_lf": "db1df7d9c4dac3ab5a038e6d78a6647ec57c6611c477d9c8b40ead510bca16db"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
+      "producer_sha256_lf": "12d6d7c0d2f84ea6b9fc7b6a4b96327b60e985e408e6c10590959bf80668aafd",
+      "runtime": "system",
+      "test": "tests/test_rational_rotation_branch_census.py",
+      "test_sha256_lf": "80921b388c2d25380ac3a518f0861c2091388219a6f70d17bdde4c12844d26a1"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/rational_rotation_real_power_exact_degree.py",
+      "producer_sha256_lf": "1248980c49c1eab25b7ab2652725496838100acc7dffc4d984be62a499aef92f",
+      "runtime": "system",
+      "test": "tests/test_rational_rotation_real_power_exact_degree.py",
+      "test_sha256_lf": "39383c57c4eecd8796e6d6366b901e8520ee64694e0455fbfc593c3068549515"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.py",
+      "producer_sha256_lf": "0704b1e619665b0505315fcb453472676005dc9eff423e734816c25cd2bf2f2b",
+      "runtime": "system",
+      "test": "tests/test_rational_rotation_uniform_degree_gate.py",
+      "test_sha256_lf": "13c51eeeee69820311171c216d2a6b3c72f78503e1fc9c8131ba1c1634701c7e"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/satake_deformation_completion_obstruction.py",
+      "producer_sha256_lf": "0b17d9c83d70a4f7122274ae172ba808b32cc8cd9e2f59060d21510131e5b094",
+      "runtime": "system",
+      "test": "tests/test_satake_deformation_completion_obstruction.py",
+      "test_sha256_lf": "015034c7723601348237ff5e0e03bca174b6a3340129a6f1d69e9f10a8673d5a"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/segre_higher_power_unitary_chambers.py",
+      "producer_sha256_lf": "826fc363d45221b21dd1b568505fe40454d218d28443235ed97a0239e719a6cd",
+      "runtime": "system",
+      "test": "tests/test_segre_higher_power_unitary_chambers.py",
+      "test_sha256_lf": "4266aa70550de2517170a1e7eab5c450eddb1b8bb8997ab9bd06d097dbd9dfb3"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/segre_koszul_lie_parent.py",
+      "producer_sha256_lf": "58c95e9840d8aff56fb45ffea795fe66fe029a1da9cb9d09974c169bd898bed0",
+      "runtime": "system",
+      "test": "tests/test_segre_koszul_lie_parent.py",
+      "test_sha256_lf": "2613530f60069d5c30c7f40f561135c7ff18eaff8a8570e7512aa9729c85e37c"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/segre_recurrence_syzygy_bridge.py",
+      "producer_sha256_lf": "650b709402a6d79e5263c629377b195b7dbeaa57a6c054d2f08b5886b25d2771",
+      "runtime": "system",
+      "test": "tests/test_segre_recurrence_syzygy_bridge.py",
+      "test_sha256_lf": "e4974748050c8087160103a17c889c8ba92a309e763ee9d369deb71f43db7590"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/tensor_moment_completion_rigidity.py",
+      "producer_sha256_lf": "a5c5171e85fa510cfb96c99252501eaca991d0348b9cc8f72f7675c83e42011f",
+      "runtime": "system",
+      "test": "tests/test_tensor_moment_completion_rigidity.py",
+      "test_sha256_lf": "b26cd267b7f8976f361f9bfa0fb4d018780dafcaffc72398210495501fad1f6c"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/theta_positive_source_real_zero_firewall.py",
+      "producer_sha256_lf": "dfc332c93311b1db9598cb456ae3754cf8d8804c3a56a577b707908ce26f49b9",
+      "runtime": "system",
+      "test": "tests/test_theta_positive_source_real_zero_firewall.py",
+      "test_sha256_lf": "828f77053253600bca07cefdb61680f8bdcc4446afdd8fc1cd15bd8136a077de"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/theta_source_quotient_tensor_coherence.py",
+      "producer_sha256_lf": "b04d4f8ca1088d39b1efef9aa8b6e412bd76590d3ba10b70f0a1be620faa5ed1",
+      "runtime": "system",
+      "test": "tests/test_theta_source_quotient_tensor_coherence.py",
+      "test_sha256_lf": "a29dcc3059a3a1a7c9c9cd41ee7d62ee5033bf8b1628e2f59d07a278b60a8f32"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.py",
+      "producer_sha256_lf": "4afd7f3747e83bc4abb49e655b7b75e14686ae3825a8ae38324bc1ecae01c9dc",
+      "runtime": "system",
+      "test": "tests/test_transfer_matrix_symmetric_parent.py",
+      "test_sha256_lf": "d5738238137170d39a54f38d45120fc9fdadf69e9092942149fce0b1fedae7ea"
+    },
+    {
+      "producer": "research/l-families/atlas/generalized/universal_coefficient_power_euler_obstruction.py",
+      "producer_sha256_lf": "947e1be5fefd6550d2c5304e3002047c34dc3d15befe58476f991c8a45e6f019",
+      "runtime": "system",
+      "test": "tests/test_universal_coefficient_power_euler_obstruction.py",
+      "test_sha256_lf": "ba3d367d550399cb8ca3d795a40c2cbd8ddbb708a88bbad2611eb40261a4ddf7"
+    }
+  ],
+  "programme": "G",
+  "schema": "sixhour-pass3-explicit-replay-panel-v1",
+  "science_head": "dde680d50358fb6d269485b1b8f61f23ba6b221e"
+}
