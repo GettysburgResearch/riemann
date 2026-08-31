@@ -61,3 +61,98 @@ independent zero census, physical capture result, RH or novelty claim.
 The program generalizes the selected INDEX only, not any arithmetic or
 analytic guard. Literal unchanged JP numerical helpers may be reused;
 the new per-index loop will have explicit source-bound failure handling.
+
+## Analytic proof and implementation boundary
+
+For each fixed index i, the authenticated QT critical certificate supplies
+a unique simple REAL t_i with f6(t_i)=0 in the complete inherited interval.
+Its512-bit complete cover supplies |f(t_i+z)|<=M_i on |z|<=7/8 for every
+admissible t_i. The fresh40-term signed actual-Xi series is evaluated on
+the entire real interval, not at its center. Its T,a,c,lambda and modulus
+coefficients8..39 must agree exactly with the frozen QT source metadata.
+A disagreement is an authentication/replay error, not an unresolved
+scientific criterion.
+
+The JP proof, sections5-6, applies separately and without modification.
+After checking ac<0, q=-a/(lambda*c)>0,2q<lambda, put
+d=sqrt(lambda^2-2lambda*q), y=2lambda*q/(lambda+d), r=y/2.
+The factorization
+P(w)=(c/2)(w-iy)(w-i(lambda+d)) gives the lower margin
+|c|r(d-r/2), provided0<r<min(y,2d).
+
+The exact equation f6(t_i)=0 removes the constant/linear source terms
+algebraically. The finite companion remainder coefficients are
+A2=-i*lambda*f8(t_i)/2 and
+A_n=(f^(n+5)(t_i)-i*lambda*f^(n+6)(t_i))/n! for3<=n<=31.
+Cauchy plus the factorwise binomial inequality proved in JP bounds the
+two n>=32 tails by
+
+    M_i*x^32*[5!*binom(37,5)/(R^5*(1-x)^6)
+              +lambda*6!*binom(38,6)/(R^6*(1-x)^7)],
+
+where R=7/8 and x=h/R, h=upper(y+r)<R. This is a uniform bound on the
+TRUE circle, not an assumption that rectangular arc enclosures all lie
+inside |w|<=h. Exactly64 closed angular intervals cover0..2pi. Outward
+sine/cosine/Horner bounds enclose each finite polynomial arc. Strict
+error-upper < margin-lower on all64 arcs implies by Rouche exactly one
+simple companion zero inside the disc. No innerness assumption enters.
+
+The separate distance-upper < radius-lower check contains the ENTIRE
+HA root rectangle for EVERY allowed t_i,y_i,r_i, identifying the transported
+zero with the existing certified root. Failure of any prerequisite, any
+arc inequality, or matching remains recorded as unresolved. A failure is
+never recast as nonexistence or as the all-radius impossibility result for
+a different remainder test. If geometry blocks contour evaluation, every
+one of64 arc positions is explicitly labelled not evaluated.
+
+The per-index producer uses the unchanged JP numerical helpers for the
+signed coefficient formula, uniform tail, angular enclosures and Horner
+evaluation. It does not alter JP globals or files; only the new source-bound
+loop selects i=0,...,25. Its independent rational finite controls are the
+inherited eight polynomial equalities and130 binomial checks, not an
+infinite-tail proof by enumeration.
+
+Complete signed complex jets and complete detailed arc records are freshly
+rebuilt and hashed before compacting. The fixture keeps all40 real
+coefficient enclosures, every ordered arc's strict outcome and exact
+error upper bound, with the common exact margin once per point.
+The canonical full-stream hashes additionally bind angle/rectangle/
+polynomial diagnostic fields. Positive acceptance reconstructs every
+primitive and those omitted duplicate fields; it does not trust a digest
+without recalculation.
+
+The known index19 record must reproduce JP's FULL signed-jet and FULL64-arc
+stream exactly, and remains outside the primary25-point denominator.
+The complete finite panel does not imply a new high-height asymptotic,
+cofinal behavior, physical capture, RH, or external priority.
+
+## Replay
+
+    python -B -m unittest tests.test_xi_joint_polynomial_panel_transport
+    python -B -O -m unittest tests.test_xi_joint_polynomial_panel_transport
+    python -B research/exploratory/xi_joint_polynomial_panel_transport.py --check
+
+The parser has explicit type/size/depth caps, rejects duplicate keys and
+floating/nonfinite primitives, and compares a source/artifact/payload-bound
+fresh complete reconstruction. There are no assertion-based acceptance
+conditions. Normal/optimized tests and exact emits are separate from the
+required independent scientific review.
+
+## Preregistered panel outcome
+
+The primary25-untried panel has SEVEN matched transport successes,
+at indices17,18,20,21,23,24,25, and eighteen unresolved points.
+The separately known index19 control succeeds, giving eight total.
+All eight are in the inherited1024 box; no new window was introduced.
+
+Every one of1664 arcs was evaluated:650strict comparisons pass and1014
+are unresolved. Indices12,13,22 have41,44,53 passing arcs respectively;
+the other noncertifying points have zero passing arcs. There are no
+prerequisite guard failures. ALL26 complete HA rectangles satisfy the
+separate containment comparison, but that alone cannot establish any
+transport success when the full circle does not pass.
+
+These are outcomes of this exact sufficient-criterion panel. No failure
+is claimed impossible at all radii, and none asserts a missing companion
+root. The known-positive control is not counted among the seven new
+criterion successes.
