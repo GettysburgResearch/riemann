@@ -2,13 +2,14 @@
 
 ```text
 Claim ID: O-108523
-Status:   OBSERVATION (exact, 96/96 at odd m over the committed
-          factorizations INCLUDING four fully held-out sieve rows:
+Status:   OBSERVATION (exact, 114/114 at odd m over the committed
+          factorizations INCLUDING five fully held-out sieve rows:
           m = 19 (12/12, entries psi_9/psi_18), m = 21 (13/13, entry
           psi_20), m = 23 (15/15, entries psi_11/psi_22 — the first
-          odd-order R = N regime), m = 25 (16/16, entry psi_24); the
+          odd-order R = N regime), m = 25 (16/16, entry psi_24),
+          m = 27 (18/18, entries psi_13/psi_26); the
           even-m bookkeeping is OPEN with the systematic deviations
-          recorded, 79 cells through the m = 24 sieve row, all
+          recorded, 95 cells through the m = 26 sieve row, all
           overshoots). The interior term is now PROVED under
           machine-certified transversality at seven cells
           (L-108524); the general law's remaining obstruction is
@@ -46,17 +47,19 @@ STATEMENT that this quantity first becomes positive at m = 2R+1 via
 an interior pair; the law refines the threshold into the full
 growth profile of each resonance.
 
-**Held-out confirmations at m = 19, 21, 23, 25 (56/56 across the
-four rows).** The memory-lean sieve rows, computed AFTER the law was
+**Held-out confirmations at m = 19, 21, 23, 25, 27 (74/74 across
+the five rows).** The memory-lean sieve rows, computed AFTER the law was
 frozen, match the prediction in EVERY cell: m = 19 (12/12), m = 21
-(13/13), m = 23 (15/15), m = 25 (16/16) — including the a = 0 tower
-continuing as k(k+1) = 72, 90, 110, 132, and SIX classes never in
+(13/13), m = 23 (15/15), m = 25 (16/16), m = 27 (18/18) — including the
+a = 0 tower continuing as k(k+1) = 72, 90, 110, 132, 156, and
+EIGHT classes never in
 any fitting data entering at their T-108513 thresholds with exactly
 the predicted multiplicity 2: psi_9/psi_18 at 19, psi_20 at 21,
 psi_11/psi_22 at 23 — the first odd orders beyond 9, i.e. the
 R = N crowding regime, structurally different from everything the
-law was fitted on — and psi_24 at 25. Full comparison table in
-mult_law_check.json ("sieve_rows"). Odd-m score: 96/96.
+law was fitted on — psi_24 at 25, and psi_13/psi_26 at 27. Full
+comparison table in mult_law_check.json ("sieve_rows").
+Odd-m score: 114/114.
 
 ## Update: interior mechanism now PROVED conditionally (L-108524)
 
@@ -86,7 +89,7 @@ interior collisions, pair-branching at the boundary.
 
 ## Even m: OPEN, with the deviation table recorded
 
-The same formula overshoots at EVERY even-m cell (79/79 through the
+The same formula overshoots at EVERY even-m cell (95/95 through the
 m = 24 sieve row; deviations recorded in mult_law_check.json — e.g.
 the m = 24 predictions overshoot by 2 to 22 per cell). The discrepancy
 concentrates in the boundary classes, where the even-m trivial

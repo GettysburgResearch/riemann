@@ -13,11 +13,11 @@ Status:   PROVED: the forward half for ALL m (collisions forced from
           polynomials — the ord-16 quartic duly entering at 17 — and
           the single remaining factor has non-unit leading coefficient,
           deg 292 / lc ~ 2.2e32 and deg 384 / lc ~ 6.1e41), EXTENDED
-          TO m <= 25 by the memory-lean two-stage sieve (addendum
-          below; m = 26, 27 runs in flight at freeze). Held-out
+          TO m <= 27 by the memory-lean two-stage sieve (addendum
+          below). Held-out
           entries confirmed at every new threshold: psi_9/psi_18 at
           19, psi_20 at 21, psi_11/psi_22 at 23 (the first odd-order
-          R = N entries), psi_24 at 25 — each with the doubled-pair
+          R = N entries), psi_24 at 25, psi_13/psi_26 at 27 — each with the doubled-pair
           multiplicity 2, and each ABSENT at the even m before it.
           The converse for larger m remains open, reduced to the
           same checkable normal form per m
@@ -111,25 +111,24 @@ Results (`matrix/m18_sieve.json`, `matrix/m19_sieve.json`):
   `m = 2*9 + 1 = 19` (multiplicity 2 each — the doubled `(z-a)^2`
   collision pair), extending the entry table to sixteen classes;
   no other torsion order divides the remainder.
-- **The march m = 20..25** (same pipeline per m): converse
+- **The march m = 20..27** (same pipeline per m): converse
   established at EVERY m — all provably exhaustive candidate lists
-  clean (2432, 2998, 3306, 3991, 4387, 5201 candidates) —
+  clean (2432, 2998, 3306, 3991, 4387, 5201, 5705, 6617 candidates) —
   with the held-out entries `psi_20` at 21, `psi_11`/`psi_22` at 23
   (the first odd orders beyond 9: the R = N regime), `psi_24` at 25,
   each with multiplicity 2 and each correctly ABSENT at the even m
   before it.
 
 So the COMPLETE two-sided law now holds for every torsion point of
-every order in the range `m <= 25` (m = 26, 27 in flight at
-freeze). The multiplicity refinement of these factorizations is
-O-108523 (exact 96/96 on odd m including four fully held-out rows).
+every order in the range `m <= 27`. The multiplicity refinement of these factorizations is
+O-108523 (exact 114/114 on odd m including five fully held-out rows).
 
 ## What remains open
 
 The converse for `m >= 20`: for `m < 2R + 1` the cofactor `G`
 (explicit binomial sums `D_c`) never accidentally vanishes at a
 doubled class or acquires repeated roots. Sixteen classes x all
-sub-threshold m <= 25 are certified exact (zero accidental
+sub-threshold m <= 27 are certified exact (zero accidental
 collisions observed); a proof needs non-vanishing of explicit
 binomial-sum resultants and is the deposited next problem.
 ```
