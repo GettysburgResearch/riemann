@@ -111,3 +111,9 @@ neighborhood theorem, all-moderate four-node theorem, or RH conclusion.
    carrier, colour and renewal aggregation before transporting the optimizer.
 4. Treat prime collision as a renormalization problem; do not seek a uniform
    all-prime frame by diagonal coordinate scaling.
+
+The untracked compact-two-low bootstrap and the ordered/dual/mixed discovery
+scripts remain exploratory working material. They were deliberately excluded
+from the reviewed checkpoint. The invalid quadratic output is different: it
+is committed on purpose as provenance for the caught lower-clip failure and
+is explicitly rejected by the accepted producer.
