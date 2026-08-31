@@ -10,9 +10,13 @@
 
 3. The ternary-cubic invariant-sector resolution, its Hessian component, skew middle map, and self-duality.
 
-4. Koszul complexes, equivariant Hilbert-series Euler characteristics, change-of-rings spectral sequences, Schur–Weyl duality, character orthogonality, and standard tensor-cycle trace identities.
+4. Koszul complexes, equivariant Hilbert-series Euler characteristics, change-of-rings spectral sequences, Schur–Weyl duality, character orthogonality, standard tensor-cycle trace identities, equivariant contractions, and the homological perturbation lemma.
 
-5. [Snowden's finite-master-syzygy theorem](https://arxiv.org/abs/1006.5248) for fixed ambient homological degree, and the Lascoux/[Netay](https://arxiv.org/abs/1108.3733) descriptions for the two-factor ambient Segre problem.
+5. [Rubei's property-\(N_p\) theorem](https://arxiv.org/abs/math/0404417) for Segre products with at least three nontrivial factors: property \(N_p\) holds exactly for \(p\le3\).
+
+6. [Oeding--Raicu--Sam](https://arxiv.org/abs/1708.03803) on sharp Segre syzygy nonvanishing, including the first quadratic-strand class \(K_{4,2}\), and split functoriality under enlarging the factor spaces.
+
+7. [Snowden's finite-master-syzygy theorem](https://arxiv.org/abs/1006.5248) for fixed ambient homological degree, and the Lascoux/[Netay](https://arxiv.org/abs/1108.3733) descriptions for the two-factor ambient Segre problem.
 
 ## New or new-in-repository synthesis proved here
 
@@ -38,7 +42,35 @@ External novelty is not asserted without a dedicated literature audit.
 
 4. The exact term-by-term rank-three/power-three reconciliation in the representation ring, plus the no-go theorem showing why the ordinary alternant alone cannot recover \(S_3\)-types.
 
-5. The precise canonical interpretation of the PR #769 top relation as a Hessian-dual map, together with the correction separating its canonical quotient class from its particular 379-term marked lift.
+5. The exact source-bound rank-65 transgression
+   \[
+   d^2_{2,1,4}:E^2_{2,1,4}\twoheadrightarrow B_{2,4},
+   \]
+   proving nondegeneration at \(E^2\) and killing the complete first nonlinear Chow strand.
+
+6. The finite transferred model
+   \[
+   \left(\Lambda C\otimes B,
+   \Delta_1+\Delta_2+\Delta_3+\Delta_4\right)
+   \]
+   together with the exact classification of six ordinary action slots and twelve support-allowed higher operations.
+
+7. A noncomputational proof that the Chow Koszul complex is not formal as a derived \(S_C\)-module. Geometry forces the disappearance of \(B_{2,4}\); the exact replay identifies the responsible page-two source.
+
+8. The degree-six representation identity
+   \[
+   [K_{4,2}]-[K_{5,1}]=\mathscr D_6,
+   \qquad
+   \dim K_{5,1}-\dim K_{4,2}=61370,
+   \]
+   and the split-functorial master embedding
+   \[
+   S_{(3,3)}V_1\boxtimes S_{(3,3)}V_2\boxtimes S_{(3,3)}V_3
+   \hookrightarrow K_{4,2},
+   \]
+   which gives \(\dim K_{4,2}\ge1000\) and \(\dim K_{5,1}\ge62370\) in rank three.
+
+9. The precise canonical interpretation of the PR #769 top relation as a Hessian-dual map, together with the correction separating its canonical quotient class from its particular 379-term marked lift.
 
 ---
 
@@ -48,65 +80,85 @@ External novelty is not asserted without a dedicated literature audit.
    **Correct:** \(N_{m,d}\) is an additive alternating Tor character over \(S_W\). PR #766's cyclotomic-at-identity obstruction rules out the proposed natural finite determinant interpretation in explicit cases.
 
 2. **False:** the ambient Segre Tor table and the Chow-base Tor table are the same resolution.  
-   **Correct:** they are resolutions over \(S_E\) and \(S_W\), connected by the spectral sequence in Theorem I.
+   **Correct:** they are resolutions over \(S_E\) and \(S_W\), connected by a genuinely nondegenerate spectral sequence.
 
-3. **False:** the ordinary alternant determines the \(S_m\)-isotypic structure.  
+3. **False:** after the Chow homology is known, ambient Tor is termwise \(\Lambda C\otimes B\).  
+   **Correct:** the differential transfers to four arities. At least one higher operation is forced, and the first source-bound \(d^2\) is nonzero and surjective.
+
+4. **False:** the individual transferred maps \(\delta_r\) are canonical matrices.  
+   **Correct:** their filtered gauge class and induced spectral-sequence differentials are canonical; literal representatives depend on the chosen contraction.
+
+5. **False:** the coefficient \(-61370\) of the ambient numerator is the negative dimension of one degree-six syzygy module.  
+   **Correct:** it is
+   \[
+   \dim K_{4,2}-\dim K_{5,1},
+   \]
+   and both modules are nonzero in the rank-three ternary case.
+
+6. **Unproved:** the 1000-dimensional master submodule is all of \(K_{4,2}\). The packet proves an embedding and lower bound, not equality or the full character.
+
+7. **False:** the ordinary alternant determines the \(S_m\)-isotypic structure.  
    **Correct:** it determines only the identity class trace. Twisted cycle-index alternants are required.
 
-4. **False:** the 379-term top vector is automatically the unique equivariant top differential.  
+8. **False:** the 379-term top vector is automatically the unique equivariant top differential.  
    **Correct:** its quotient class is canonical; the vector can differ from the unique equivariant lift by an old relation.
 
-5. **False:** the stable linear correction-layer law continues for all depths.  
-   **Correct:** PR #781 refutes it at depth \(5\) and again at depth \(6\).
+9. **False:** the stable linear correction-layer law continues for all depths.  
+   **Correct:** PR #781 refutes the original law at depths \(5\) and \(6\); the corrected large-part head is period four and returns at depths \(7\) and \(8\).
 
-6. **Unproved:** the full odd-\(m\) torsion multiplicity law without separation/transversality, and the even-\(m\) correction. The exact atlas is strong evidence, not a general theorem.
+10. **Unproved:** the full odd-\(m\) torsion multiplicity law without separation/transversality, and the even-\(m\) correction. The exact atlas is strong evidence, not a general theorem.
 
 ---
 
 # 7. Ranked continuation list
 
-## 1. Highest priority: implement and review the cycle-index alternant theorem
+## 1. Highest priority: split internal degree six
 
-For each conjugacy class of \(S_m\), produce the exact twisted numerator
-
-\[
-D_W\sum_r\prod_{c}h_r(A^{|c|})T^r
-\]
-
-from the existing multilinear alternant engine, then invert the \(S_m\) character table. For \(m=3\), verify symbolically that it reproduces every \(GL_3\times S_3\) row in PR #769, not only dimensions or sampled class traces. This is finite, theorem-driven, and directly checks Theorem II.
-
-## 2. Canonicalize the 379-term top map
-
-Apply the \(S_3\)-invariant and \(SL_3\)-isotypic projector to the marked degree-seven kernel, remove the old subspace, primitively normalize, and compare the resulting column with the dual Hessian coefficient map. This determines whether the existing 379-term column is already canonical or differs by an explicit old relation.
-
-## 3. Compute the first Chow-base strands uniformly
-
-Use the complexes
+Decompose the four-term complex in `INTERNAL_DEGREE_SIX_CLOSURE.md` into \(GL_3\times S_3\) multiplicity spaces, determine its transferred differential, and compute the full characters
 
 \[
-\Lambda^\bullet(\operatorname{Sym}^mV)
-\otimes(\operatorname{Sym}^{j-\bullet}V)^{\otimes m}
+K_{4,2}=\operatorname{Tor}^{S_E}_4(R,k)_6,
+\qquad
+K_{5,1}=\operatorname{Tor}^{S_E}_5(R,k)_6.
 \]
 
-to derive closed Schur formulas for \(B_{0,j}\) and \(B_{1,j}\) for the first fixed internal degrees, separating stable from small-rank exceptions. Snowden's ambient \(\Delta\)-module results should be treated as comparison data, not silently transferred across the change-of-rings spectral sequence.
+This is the first degree where the Euler polynomial does not determine the actual modules, and it contains eleven of the twelve possible higher operations.
 
-## 4. Analyze degeneration/nondegeneration of the spectral sequence
+## 2. Replace the total rank-65 certificate by four irreducible nonvanishing proofs
 
-Find the first \((d,m)\) where a higher differential is forced by comparing ambient and Chow-base Tor characters. A nondegeneration theorem in a stable range would be major; an explicit nonzero differential would also be valuable and would block naive tensor-product strand formulas.
+The target is
 
-## 5. Stable correction layers
+\[
+[552]\otimes\mathbf1
+\oplus[552]\otimes\sigma
+\oplus[642]\otimes\varepsilon
+\oplus[543]\otimes\varepsilon.
+\]
 
-Rewrite the square-defect alternant in a plethystic-logarithm or partition-lattice basis and prove or refute the observed shifted head for all \(j\ge5\). The already-refuted linear law must not be revived.
+Construct one highest-weight cycle for each summand, evaluate the \(d^2\) zig-zag, and prove the four resulting scalar pairings are nonzero. Schur's lemma then explains the full surjection representation by representation.
 
-## 6. Torsion multiplicities
+## 3. Prove cyclic/self-dual transfer before exploiting duality
 
-Replace cellwise separation by an equivariant discriminant/intersection calculation on the quotient of residue classes by \(c\mapsto-c\). First solve the odd-\(m\) boundary-free case globally; then add the fixed classes and ramification at \(z=\pm2\) for even \(m\).
+Choose a contraction compatible with the Chow Gorenstein pairing, prove the resulting transferred model is cyclic or self-dual in the required graded sense, and only then use adjointness to relate opposite higher blocks. This should reduce the number of independent maps and control the sole higher slot first appearing in internal degree seven.
+
+## 4. Canonicalize the 379-term top map
+
+Add accepted marked \(\mathfrak{sl}_3\) and factor-permutation action matrices, apply the intrinsic projector, primitively normalize, and compare the result with the dual Hessian coefficient map.
+
+## 5. Secondary algebraic programs
+
+- Compute uniform low Chow-base strands from the functorial Chow-Koszul complexes.
+- Extend the cycle-index reconstruction to \(m=4\).
+- Determine the stable correction core where all elementary indices are at most the layer depth.
+- Attack the remaining torsion-multiplicity boundary and transversality questions.
+
+These remain worthwhile, but none should replace the central task of splitting \(K_{4,2}\) from \(K_{5,1}\).
 
 ---
 
 # 8. Bottom line
 
-The strongest synthesis is algebraic rather than analytic:
+The strongest synthesis is now derived rather than merely additive:
 
 \[
 \boxed{
@@ -120,11 +172,12 @@ and
 
 \[
 \boxed{
-\text{ambient Segre Tor}
-\quad\text{is linked to it by a change-of-rings spectral sequence.}
+\operatorname{Tor}^{S_E}(R,k)
+=H\!\left(\Lambda C\otimes B,
+\Delta_1+\Delta_2+\Delta_3+\Delta_4\right).
 }
 \]
 
-The alternant computes the identity class trace of that Euler character. Cycle-index alternants recover the full tensor-factor representation. In the ternary cube, the top one-dimensional class is canonically the Gorenstein dual of the Hessian component; the 379-term relation is a valid marked lift of that class, but literal canonicality still requires projection and comparison.
+The completed Chow table supplies every homology strand \(B_{q,j}\). The rank-65 transgression proves that their derived gluing is nontrivial. Internal degree six is the first place where that gluing must be determined rather than hidden inside an Euler characteristic; it already contains all but one possible higher operation.
 
 No automorphy, analytic continuation, RH, or GRH conclusion follows.
