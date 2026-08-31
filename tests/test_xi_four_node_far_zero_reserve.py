@@ -173,6 +173,12 @@ class FarReserveTests(unittest.TestCase):
     def test_28_exact_determinant_swap(self):
         self.assertEqual(p.determinant([[Q(0), Q(1)], [Q(1), Q(0)]]), -1)
 
+    def test_29_boolean_integer_alias_rejected(self):
+        bad = copy.deepcopy(self.value)
+        bad["constants"]["margin"]["H_plus_3_lt_2_pow_64"] = 1
+        with self.assertRaises(ValueError):
+            p.validate(self.reseal(bad))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -132,7 +132,8 @@ Let N(T) count upper zeros with multiplicities. The imported estimate is
                                                                \tag{FR4}
 \]
 
-It holds for T>=2 in the cited statement. We only use T>=2000, where
+We invoke this estimate only for T>=H; no estimate below T>=2000 is
+required.  For T>=2000,
 the right side is less than 2 log T. This weakening follows from
 log log T <= log T and 1.588<log T. If a counting convention assigns a
 midpoint at a zero, take left/right limits from nonzero heights; the

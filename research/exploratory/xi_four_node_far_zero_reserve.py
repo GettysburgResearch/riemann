@@ -210,6 +210,21 @@ def validate_tree(value, depth=0, visits=None):
         validate_tree(item, depth + 1, visits)
 
 
+def same_typed_tree(left, right):
+    """Equality which does not identify JSON booleans with integers."""
+    if type(left) is not type(right):
+        return False
+    if type(left) is dict:
+        return set(left) == set(right) and all(
+            same_typed_tree(left[key], right[key]) for key in left
+        )
+    if type(left) is list:
+        return len(left) == len(right) and all(
+            same_typed_tree(a, b) for a, b in zip(left, right)
+        )
+    return left == right
+
+
 def load(path):
     data = path.read_bytes()
     require(len(data) <= MAX_BYTES, "file cap")
@@ -423,10 +438,11 @@ def validate(value):
         "top schema",
     )
     require(
-        value["schema"] == CONTRACT["schema"] and value["contract"] == CONTRACT,
+        value["schema"] == CONTRACT["schema"]
+        and same_typed_tree(value["contract"], CONTRACT),
         "contract",
     )
-    require(value == build(), "fresh exact reconstruction mismatch")
+    require(same_typed_tree(value, build()), "fresh exact reconstruction mismatch")
     payload = {k: v for k, v in value.items() if k != "payload_sha256"}
     require(value["payload_sha256"] == sha(canonical(payload)), "payload seal")
     require(load(MANIFEST) == source_manifest(), "source lock")
