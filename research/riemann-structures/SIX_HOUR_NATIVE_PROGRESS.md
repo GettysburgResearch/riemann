@@ -46,7 +46,11 @@ eliminations; it does not rerun those calculations or claim a monolithic
 replay. Combined with the earlier certificate through 900, the complete
 physical observation is faithful on the twenty-dimensional current
 variation space for every integer 450<=H<=2^48.
-The interval from there to H2 remains unproved.
+A subsequent row-envelope corollary at
+b3edc8a1b2c37d4827c72ca86a398c14196a7598 improves the eventual threshold
+to H3=354270587548199562597657, for the same 64 rows and unchanged
+accepted inverse. See FULL_SUPPORT_ROW_ENVELOPE_REFINEMENT.md in the
+native-six-hour directory. The interval from 2^48 to H3 remains unproved.
 
 Completed focused final-packet controls total 423 in ordinary Python
 and 423 with -O: the eighth-checkpoint 403, twelve effective-minor controls
