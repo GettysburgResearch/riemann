@@ -6,10 +6,14 @@ Status:  PROVED per instance (directed-rounding interval arithmetic,
          inequality proved below; the one classical analytic input is
          the 1-D Jacobi theta transformation, IMPORTED and labelled).
          The PHENOMENON — real off-line zeros of rectangular Epstein
-         zetas — is classical (Bateman-Grosswald; CITATION-NEEDED for
-         the precise threshold theorem); the contribution is the
-         certificate: the lab's first PROVED-grade zero statement, at
-         an exact rational modulus, self-contained and replayable.
+         zetas — is classical: Selberg-Chowla proved a real zero in
+         (1/2, 1) for binary Epstein zetas, refined by P. T. Bateman
+         and E. Grosswald, "On Epstein's zeta function", Acta Arith.
+         9 (1964), 365-373 (citation resolved 2026-08-31;
+         Potter-Titchmarsh 1935 for rectangular lattices); the
+         contribution is the certificate: the lab's first
+         PROVED-grade zero statement, at an exact rational modulus,
+         self-contained and replayable.
 Machine: research/exploratory/2026-08-30-two-programme-pass/epstein/
          wall_certificate.py + wall_certificate.json
 Context: O-108503 (the Epstein moduli lab; all its zero statements

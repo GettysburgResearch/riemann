@@ -6,9 +6,12 @@ Status:   PROVED per instance (directed-rounding interval arithmetic
           with every truncation explicitly bounded; the 1-D Jacobi
           theta transformation is the one labelled classical import;
           iv.gamma enclosures independently checked by the reflection
-          identity). Phenomenon classical (Bateman-Grosswald real
-          zeros of rectangular Epstein zetas; CITATION-NEEDED);
-          the certificate is the repo's first PROVED Epstein zero.
+          identity). Phenomenon classical (Selberg-Chowla real zero
+          in (1/2, 1); P. T. Bateman, E. Grosswald, "On Epstein's
+          zeta function", Acta Arith. 9 (1964), 365-373;
+          Potter-Titchmarsh 1935 for rectangular lattices — citation
+          resolved 2026-08-31); the certificate is the repo's first
+          PROVED Epstein zero.
 Created:  2026-08-31 (pass 3 continuation, Lane 4)
 Programme: #764 (Epstein moduli lab, O-108503/C8)
 Proof:    standalone/2026-08-31-epstein-wall-certificate/PROOF.md

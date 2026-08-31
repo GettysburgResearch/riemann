@@ -42,11 +42,12 @@ sum_r h_r^m T^r = sum_{jvec} [prod_t x_{j_t}^{d-1} / prod_t
 
 gives every `K_{m,d}` and `N_{m,d}` explicitly. The T-108510
 top-coefficient law `(-1)^{C(d-1,2)} e_d^{d-1}` drops out in three
-lines. Novelty position: the partial-fraction treatment of Hadamard
-products is classical in flavor (CITATION-NEEDED at the next
-boundary audit); the N_{2,d} closed form, the top-coefficient
-rederivation, and the Segre-strand identification are the claimed
-new content.
+lines. Novelty position (boundary check 2026-08-31): Hadamard-product
+rationality is classical (Jungen) and denominators come from
+resultants, but the literature states no general closed NUMERATOR
+form is known (Kar, RHUMJ 23 (2023)); the alternant is a closed
+numerator for Hadamard powers of degree-d rational series — claimed
+new in context, technique elementary/classical.
 
 ## Why it matters
 

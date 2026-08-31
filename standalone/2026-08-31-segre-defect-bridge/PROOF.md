@@ -234,11 +234,15 @@ becomes `0 <= s_i - 1 <= r - 2`, and the character ratio is
 index 2 — and `omega_{R_m} ~= b^m * R_m(-2)`, the general-m form of
 Theorem 2(3).)
 
-**Imported ingredient (labelled).** Stanley's reciprocity theorem for
-normal affine semigroup rings (fine-graded form; Stanley 1974 /
-Danilov — IMPORTED_THEOREM): for a pointed, full-dimensional normal
-affine semigroup of rank d,
-`Hilb(x^{-1}) = (-1)^d Hilb_interior(x)` as rational functions. Here
+**Imported ingredient (labelled; references resolved 2026-08-31).**
+The classical package for normal affine semigroup rings: normality
+(Lemma A) implies Cohen-Macaulayness (Hochster), the canonical
+module is the interior ideal (Danilov; Stanley), and Stanley's
+Hilbert-series reciprocity for graded CM algebras with canonical
+module gives `Hilb_omega(x) = (-1)^d Hilb(x^{-1})` as rational
+functions, d = Krull dimension (textbook treatment: Bruns-Herzog,
+Cohen-Macaulay Rings, Ch. 6). Combined:
+`Hilb(x^{-1}) = (-1)^d Hilb_interior(x)`. Here
 d = m + 1 and inversion of all fine weights is
 `(alpha, beta, T) -> (alpha^{-1}, beta^{-1}, T^{-1})`: the character
 map `(s; r) -> alpha^{mr - sum s} beta^{sum s} T^r` is linear on the

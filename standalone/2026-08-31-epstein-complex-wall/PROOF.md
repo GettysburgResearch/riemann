@@ -16,8 +16,11 @@ Context: C8 campaign (O-108503): the theta80 dirty probe of the
          at the EXACT RATIONAL point z* = 4341/50000 + 3731/2500 i
          locates the off-line pair at rho ~ 0.90837 + 12.29624 i and
          its FE/conjugate partners.
-Imports (labelled): Spouge 1994 (explicit-error Gamma approximation,
-         |eps| <= a^{-1/2} (2pi)^{-(a+1/2)} for Re z >= 0);
+Imports (labelled): J. L. Spouge, "Computation of the gamma,
+         digamma, and trigamma functions", SIAM J. Numer. Anal. 31(3)
+         (1994), 931-944 (explicit-error Gamma approximation,
+         |eps| <= a^{-1/2} (2pi)^{-(a+1/2)}, stated for Re z > 0,
+         a > 2; used here at Re z >= 1.8, a = 41);
          the classical Epstein/Chowla-Selberg Fourier expansion (used
          ONLY for the sup-bound B, never for the evaluation);
          1-D Jacobi theta transformation (Poisson summation).

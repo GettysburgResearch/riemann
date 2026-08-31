@@ -15,13 +15,18 @@ Resolves: the OPEN general-d law of T-108508 (square defects had
          proved closed forms only for d <= 5, found by expansion);
          supplies the analytic engine predicted by T-108515
          Corollary 2 (the Lascoux-strand deposit).
-Novelty position: the partial-fraction/divided-difference treatment
-         of Hadamard products of rational series is classical in
-         flavor (Jungen-era; CITATION-NEEDED for the precise
-         reference at the next boundary audit); claimed new in
-         context: the closed alternant for N_{2,d} answering
-         T-108508, the top-coefficient rederivation, and the
-         identification with the diagonal Segre K-polynomial data.
+Novelty position (boundary check 2026-08-31, web): rationality of
+         Hadamard products of rational series is classical (Jungen),
+         and the DENOMINATOR is classically computed by resultants;
+         the current literature states that a general closed form for
+         the Hadamard-product NUMERATOR "has not been found" (Kar,
+         Rose-Hulman Undergrad. Math. J. 23 (2023); resultant/
+         determinant methods compute instances). The alternant here
+         is a closed numerator for the special family of Hadamard
+         POWERS of a degree-d rational series — apparently stronger
+         than what is standard, but the partial-fraction technique is
+         elementary, so we position it as: new-in-context closed form
+         answering T-108508's open law, with the technique classical.
 RH status: RH and GRH are unproved; nothing here addresses them.
 ```
 
