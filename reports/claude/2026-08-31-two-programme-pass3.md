@@ -40,7 +40,7 @@ RH status: RH and GRH are unproved; nothing in this pass addresses
 | L-108516 | LEMMA | Two-parameter plane: fibration, Dahlquist axis, purity wedge, integrality Z^2; RIGIDITY: exactly four integral weight-1-pure points |
 | O-108517 | OBSERVATION | Two-invariant phase diagram: positive breach <=> h <= 1/4; entry side = f in {2,4}; unique minimal realizations; 6/6-head atlas |
 | T-108518 | THEOREM (per instance) | First PROVED Epstein zero: Z(s,10i) real zero in (81/100, 41/50), interval certificate |
-| T-108519 | THEOREM (per instance) | First PROVED COMPLEX Epstein zero: winding = 1 at the archipelago modulus; Re rho >= 0.83 |
+| T-108519 | THEOREM (per instance) | First PROVED COMPLEX Epstein zeros: winding = 1 at the archipelago modulus twice — Re rho >= 0.83 (t ~ 12.3) and Re rho >= 0.62 (t ~ 18.95, edge-parallel walk, interval [0.9987, 1.0013]) |
 | L-108520 | LEMMA | Corridor forcing: induced 2x15 ladder breaches both ends (50 > 49); window finiteness |
 | L-108521 | LEMMA | Frustration bound lambda_min <= -3 + 4f/n; positive-only needs linear frustration |
 | T-108522 | THEOREM | Alternant closed form: general-rank square defect solved; stable layer theorems; multilinear triple-product defects with degree law |
@@ -303,6 +303,21 @@ the winding unpinned (per-sample tail boxes accumulated over ~3750
 angle increments); the bound-budgeting lesson — size enclosure
 widths against the SUM, not the step — is recorded in the standalone
 status block, and the fixed run (tail 5.1e-14) pinned the integer.
+SECOND ZERO (same day): the same modulus's t ~ 18.95 zero is now
+certified as well — winding interval [0.9987069141, 1.001293088]
+==> exactly one zero in [62/100, 77/100] x [1886/100, 1904/100],
+Re rho >= 0.62. The run was retuned for the smaller margins at
+t ~ 19 (X_CUT = 28, tail 4.9e-21; second-order Euler-Maclaurin in
+the zeta bound) and, after a container restart killed the
+sequential walk at ~9600 of ~20000 steps, was redesigned as FOUR
+PARALLEL EDGE WORKERS (the winding sum is a single per-step
+principal-argument sum, so splitting at the exact rational corners
+and adding per-edge interval sums is associativity; corner
+enclosures are deterministic identical boxes; cross-process
+endpoints outward-padded) — 27046 steps total, min ell 2.85e-14,
+about a quarter of the sequential wall-clock. The archipelago
+modulus now carries TWO disjoint proof-grade off-line rectangles —
+eight certified zeros with the FE/conjugate reflections.
 
 **Torsion multiplicity law (O-108523)**: the growth profile of every
 torsion resonance in the tower invariant is
@@ -392,6 +407,13 @@ honest irrationalities).
   symbolic spectra BEFORE its first new-m run — and the still-running
   62-min/5.8 GB sympy m = 18 job was then killed in its favor
   (3 s for the same output, proved by exact re-evaluation).
+- A container restart killed the second-zero sequential winding walk
+  at ~9600 of ~20000 steps (~1.8 h of compute; winding walks carry
+  no checkpoint) and the m = 22..27 march mid-m = 22. Recovery:
+  the walk was recast as four per-edge workers (soundness =
+  associativity of the one step sum; documented in the standalone
+  and in wall_complex2.py) rather than restarted sequentially, and
+  the march relaunched — both completed inside the window.
 - The first version of the factoring-free sieve's exhaustive step
   capped candidates at N <= 2000 — insufficient once
   deg(remainder) >= ~480 (N = 2310 has phi/2 = 240): a RIGOR GAP

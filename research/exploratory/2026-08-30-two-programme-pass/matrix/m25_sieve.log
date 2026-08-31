@@ -10,3 +10,45 @@
 [15:36:16]   a0 = 1400 (589s)
 [15:38:06]   a0 = 1600 (699s)
 [15:39:58]   a0 = 1800 (811s)
+[15:41:53]   a0 = 2000 (927s)
+[15:43:52]   a0 = 2200 (1045s)
+[15:45:53]   a0 = 2400 (1166s)
+[15:47:57]   a0 = 2600 (1290s)
+[15:50:03]   a0 = 2800 (1417s)
+[15:52:12]   a0 = 3000 (1545s)
+[15:54:22]   a0 = 3200 (1675s)
+[15:55:39] S2 done (1750s); max digits 7692
+[15:55:39] S3: modular interpolation + CRT ...
+[15:57:34] S3 CRT stable after 30 primes (1868s)
+[15:57:34] candidate deg = 2156
+[15:57:34] S3 PROOF: exact evaluation at all nodes ...
+[15:57:34]   verified through 0 (1868s)
+[15:57:35]   verified through 400 (1868s)
+[15:57:36]   verified through 800 (1869s)
+[15:57:36]   verified through 1200 (1869s)
+[15:57:37]   verified through 1600 (1870s)
+[15:57:38]   verified through 2000 (1871s)
+[15:57:38]   verified through 2400 (1872s)
+[15:57:39]   verified through 2800 (1872s)
+[15:57:40]   verified through 3200 (1873s)
+[15:57:40] S3 proof complete: candidate == disc (1874s)
+[15:57:40] S4: dividing out torsion factors ...
+[15:57:41]   psi_3 divides with multiplicity 74
+[15:57:41]   psi_4 divides with multiplicity 132
+[15:57:41]   psi_5 divides with multiplicity 32
+[15:57:41]   psi_6 divides with multiplicity 74
+[15:57:41]   psi_7 divides with multiplicity 16
+[15:57:41]   psi_8 divides with multiplicity 50
+[15:57:41]   psi_9 divides with multiplicity 8
+[15:57:41]   psi_10 divides with multiplicity 32
+[15:57:42]   psi_11 divides with multiplicity 4
+[15:57:42]   psi_12 divides with multiplicity 24
+[15:57:42]   psi_14 divides with multiplicity 16
+[15:57:42]   psi_16 divides with multiplicity 12
+[15:57:42]   psi_18 divides with multiplicity 8
+[15:57:42]   psi_20 divides with multiplicity 6
+[15:57:42]   psi_22 divides with multiplicity 4
+[15:57:42]   psi_24 divides with multiplicity 2
+[15:57:42] remainder deg 1336, content 4, lc 1763451163857235018205887307978328406355635715046155569132895838394703175735968066082098066345580036096
+[15:57:42] S4: exhaustive candidate torsion minpolys ...
+[15:57:51]   exhaustive bound N <= 14279168; 5201 candidate N

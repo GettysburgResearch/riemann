@@ -148,9 +148,13 @@ classical — Selberg-Chowla, Bateman-Grosswald Acta Arith. 9 (1964)).
 proves EXACTLY ONE zero in `[83/100, 99/100] x [1221/100, 1238/100]`
 — `Re rho >= 0.83`, a certified off-line quadruple at an
 archipelago-adjacent modulus
-(standalone/2026-08-31-epstein-complex-wall/, T-108519). Every
-other zero statement in this claim remains
-NON_DIRECTED_HIGH_PRECISION; the second off-line zero here
-(t ~ 18.9) and a clean 75-degree island point are the deposited next
-certification targets.
+(standalone/2026-08-31-epstein-complex-wall/, T-108519). (iii) The
+SECOND complex zero of the SAME modulus is now certified too:
+winding = 1 (interval [0.9987, 1.0013], 27046 steps over four
+parallel edge workers) in `[62/100, 77/100] x [1886/100, 1904/100]`
+— `Re rho >= 0.62`, float 0.69403 + 18.94679 i — so `z*` carries
+TWO disjoint proof-grade off-line rectangles (T-108519 addendum;
+epstein/wall_complex2.json). Every other zero statement in this
+claim remains NON_DIRECTED_HIGH_PRECISION; a clean 75-degree island
+point is the deposited next certification target.
 ```

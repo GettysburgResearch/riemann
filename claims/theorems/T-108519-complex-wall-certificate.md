@@ -19,7 +19,9 @@ Programme: #764 (Epstein moduli lab, O-108503/C8)
 Proof:    standalone/2026-08-31-epstein-complex-wall/PROOF.md
 Machine:  research/exploratory/2026-08-30-two-programme-pass/epstein/
           wall_complex.py + wall_complex.json (mpmath.iv dps 30;
-          adversarial-wave-style validation layer asserted pre-walk)
+          adversarial-wave-style validation layer asserted pre-walk);
+          second zero: wall_complex2.py (edge-parallel workers) +
+          wall_complex2_combine.py + wall_complex2.json
 RH status: RH and GRH are unproved. Epstein zetas are not the
           Riemann zeta; nothing here bears on them.
 ```
@@ -49,7 +51,26 @@ the three new lemmas (the K-Bessel rotated-contour bound
 `|K_{a+i mu}(x)| <= e^{-mu theta} K_a(x cos theta)` is the piece
 that makes a REALISTIC Lipschitz bound possible at height t ~ 12).
 The remaining archipelago statements (thinness, angular
-intermittency, CM-proximity) stay labelled diagnostics; certifying
-the SECOND off-line zero at this modulus (t ~ 18.9) and a clean
-point of the 75-degree island are the deposited next targets.
+intermittency, CM-proximity) stay labelled diagnostics.
+
+## Addendum (same day): the SECOND zero, certified
+
+The deposited second target is DONE: `Z(s, z*)` also has EXACTLY ONE
+zero in `Re s in [62/100, 77/100]`, `Im s in [1886/100, 1904/100]`
+— `Re rho >= 0.62 > 1/2`, float location `0.69403 + 18.94679 i` —
+by the same machinery retuned for t ~ 19 (`X_CUT = 28`, tail box
+4.906e-21 five orders under the smaller margins; second-order
+Euler-Maclaurin zeta bound) and run as FOUR PARALLEL EDGE WORKERS
+after a container restart killed the sequential walk mid-flight:
+the winding sum is one per-step principal-argument sum, so
+partitioning the steps at the exact rational corners and adding the
+per-edge interval sums is associativity (corner enclosures are
+deterministic identical boxes; the zero-length closing term
+enclosing 0 is omitted; cross-process endpoints outward-padded).
+Certificate: 27046 steps, min ell 2.847e-14, winding interval
+[0.9987069141, 1.001293088] ==> winding = 1. The modulus now
+carries TWO disjoint certified off-line rectangles (t ~ 12.3 and
+t ~ 18.95) — eight certified zeros with the FE/conjugate
+reflections. The clean 75-degree-island point stays the deposited
+next target.
 ```

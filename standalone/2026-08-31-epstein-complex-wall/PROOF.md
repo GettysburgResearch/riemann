@@ -193,6 +193,43 @@ interval Lambda midpoint vs an independent float evaluation ~4e-24;
 B-bound components A1 = 2.61e-7, A2 = 9.41e-7, K = 1.25e-7
 (B = 1.33e-6, M = 1.33e-5, Cauchy radius r = 1/10).
 
+## The second zero (same modulus, t ~ 18.95; edge-parallel walk)
+
+The SAME machinery certifies a second, higher zero of the SAME
+`Z(s, z*)` (epstein/wall_complex2.py; parameters retuned:
+`X_CUT = 28` so the tail box 4.906e-21 stays five orders below the
+much smaller contour margins at t ~ 19; second-order Euler-Maclaurin
+in the zeta bound; 88 lattice vectors):
+
+```text
+rectangle   Re s in [62/100, 77/100], Im s in [1886/100, 1904/100]
+walk        27046 adaptive steps over FOUR PARALLEL EDGE WORKERS;
+            every step satisfied M h_j <= 0.8 ell_j and
+            Re(ratio) > 0
+min ell     2.847e-14
+tail box    4.906e-21
+winding     interval [0.9987069141, 1.001293088]  ==> EXACTLY 1
+```
+
+Edge-parallel soundness: `2 pi * winding` is ONE sum of per-step
+principal arguments over the closed contour (the winding lemma is
+per-step), so partitioning the steps at the four exact rational
+corners and summing per-edge interval totals is associativity of
+that sum; the corner enclosures are deterministic identical boxes
+across workers, and the zero-length closing term (which encloses 0)
+is omitted. Per-edge sums cross processes as 40-digit decimal
+strings, outward-padded by 1e-30 in the combiner
+(wall_complex2_combine.py; certificate wall_complex2.json, per-edge
+sums wall_complex2_edge{0..3}.json).
+
+Hence `Z(s, z*)` has EXACTLY ONE zero in this second rectangle too —
+`Re rho >= 62/100 > 1/2`, float location 0.69403 + 18.94679 i — and
+with the reflections a SECOND certified off-line quadruple at the
+same exact modulus. The two proved rectangles are disjoint in t
+(12.21-12.38 vs 18.86-19.04), so Z(s, z*) carries at least TWO
+independent certified off-line zeros (eight zeros counting the
+quadruple reflections). ∎
+
 ## Honesty notes
 
 - The zero is found by float reconnaissance and PROVED by the
@@ -200,6 +237,12 @@ B-bound components A1 = 2.61e-7, A2 = 9.41e-7, K = 1.25e-7
   belongs to the C8 dirty set's structure) remains a float-level
   statement of O-108503 — what is proved is the existence and
   location rectangle of the zero at this exact modulus.
+- The second-zero run was interrupted twice: a first sequential walk
+  was killed by a container restart at ~9600 of ~20000 steps (no
+  checkpoint — sequential winding walks don't resume), which forced
+  the edge-parallel design above; the parallel run then completed in
+  about a quarter of the wall-clock. The restart and the redesign
+  are recorded in the pass honesty trail.
 - The Chowla-Selberg expansion enters ONLY the sup bound B. An error
   in it could only make M wrong; the walk's per-step conditions
   (`M h_j < ell_j`) and the final integer-pinning are the actual
