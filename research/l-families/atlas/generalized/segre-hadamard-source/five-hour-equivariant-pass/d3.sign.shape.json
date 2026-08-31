@@ -1,0 +1,132 @@
+{
+  "complete_Q_dimensions": [
+    512,
+    336
+  ],
+  "complete_internal4_W_blocks": [
+    {
+      "chain_dimensions": [
+        57,
+        172,
+        166,
+        54,
+        3
+      ],
+      "weight": [
+        7,
+        3,
+        2
+      ]
+    },
+    {
+      "chain_dimensions": [
+        57,
+        172,
+        166,
+        54,
+        3
+      ],
+      "weight": [
+        7,
+        2,
+        3
+      ]
+    },
+    {
+      "chain_dimensions": [
+        75,
+        238,
+        244,
+        86,
+        6
+      ],
+      "weight": [
+        6,
+        4,
+        2
+      ]
+    },
+    {
+      "chain_dimensions": [
+        85,
+        288,
+        303,
+        107,
+        8
+      ],
+      "weight": [
+        6,
+        3,
+        3
+      ]
+    },
+    {
+      "chain_dimensions": [
+        75,
+        238,
+        244,
+        86,
+        6
+      ],
+      "weight": [
+        6,
+        2,
+        4
+      ]
+    },
+    {
+      "chain_dimensions": [
+        105,
+        364,
+        401,
+        146,
+        10
+      ],
+      "weight": [
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "chain_dimensions": [
+        105,
+        364,
+        401,
+        146,
+        10
+      ],
+      "weight": [
+        5,
+        3,
+        4
+      ]
+    }
+  ],
+  "full_internal5_refused_dimensions": [
+    180,
+    763,
+    1143,
+    730,
+    178,
+    9
+  ],
+  "maximum_eliminated_dimension": 512,
+  "rank_calculation_performed": false,
+  "schema": "equivariant-pass/d3-sign-shape/v1",
+  "sign_internal5_chain_dimensions": [
+    27,
+    110,
+    150,
+    76,
+    8,
+    0
+  ],
+  "source_freeze": "2c65d7ba3f02786bf827868d9a9446dd1971ee07",
+  "target_weight": [
+    7,
+    4,
+    4
+  ],
+  "within_registered_512_cap": true
+}
