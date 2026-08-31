@@ -252,6 +252,19 @@ that a positive coupling correction holds for general node/value sets.
 
 ## 4. Arithmetic, provenance and reproducibility
 
+Metadata-only clarification following the frozen scientific identity
+0e3fc9b482f0f115a49a6209ccbfeffae640014a: the canonical arithmetic class
+is MIXED, with components DIRECTED_BALL_ENCLOSURES, EXACT_RATIONAL and
+CERTIFIED_INTEGER_COVERAGE. FLINT real/complex balls round outward;
+acceptance uses exact rational endpoints and integer winding counts.
+Scouts and approximate eigenvectors are not certificates. The finite
+actual-Xi evaluations are unconditional relative to the pinned runtime;
+the global Hardy lower bounds require component innerness. Neither a
+Fourier-band nor a cofinal conclusion is added. This clarification changes
+no source formula, domain, cap, proof, witness, boundary, root or matrix
+value. The canonical scientific payload excluding contract, artifacts and
+payload seal remains18b2bd7d928ae50fd6ebaf9dc751424b71cd756931ae04dd17f717d83150e7df.
+
 The adjacent producer, fixture, manifest and tests are the remaining
 four packet files. Six direct frozen bindings comprise all five BC files
 at 7fbcd592042a5cc98c17d0db2fac62f8171267f2 and the original preregistration.
