@@ -187,3 +187,41 @@ preregistration, and the inherited executable BC/OA source and runtime
 closure. It will retain source/artifact hashes and a payload seal, exact
 finite algebra controls, both-mode replay and independently resealed hostile
 checks. Analytic theorem review remains separate from finite machine replay.
+
+## 5. Post-scout source-evaluation refinement, frozen before its test
+
+The initial declared node (the first HA node in the box centered at256)
+converged to a certified simple real f6 critical point. Its q is about
+0.263602, while the unchanged lambda64 is about0.861699; these decimals
+are descriptive scouts, not acceptance data. All five initial quadratic
+attempts failed. The direct whole-rectangle Xi evaluation at outer radius
+7/8 was nonfinite, preventing the Taylor/Cauchy route; direct whole-region
+f8 bounds were too wide at256/512 bits and could be nonfinite at1024 bits.
+The linear comparison also failed. These initial failures are retained,
+not reclassified as successes of the original evaluation implementation.
+
+Before any refined replay, a bounded implementation refinement is now
+declared: evaluate the SAME outer rectangle by a complete fixed16 by16
+rectangular cover. Its full real extent is `[t0-R-epsilon,t0+R+epsilon]`
+and imaginary extent is `[-R,R]`, with R=7/8 and epsilon=2^-120 unchanged.
+Divide each extent into16 equal closed rational subintervals. There are
+exactly256 cells, with shared exact endpoints and no gaps. Every cell
+is evaluated using the SAME actual Xi scalar wrapper, inside the unchanged
+source domain, at the already declared precision. Every cell is attempted;
+one nonfinite cell makes this cover route unavailable at that precision.
+
+If all256 upper moduli are finite, their maximum is a valid global scalar
+bound for the outer rectangle and therefore for the radius-R circle about
+every true t in T. Record the complete ordered cell stream's SHA256,
+the number of attempted and finite cells, any failed indices, and the
+global maximum. A fresh authenticated producer recomputes every cell; the
+hash is not substituted for primitive replay. The direct whole-rectangle
+attempt remains separately recorded. The smaller of its bound and the
+complete-cover bound may be used when valid. One cover is shared across
+the five ratios and the linear comparison at that critical point and
+precision; it is not retuned for a favorable radius or cell.
+
+This refines interval evaluation only. It changes no node, radius ratio,
+critical-point uncertainty, outer radius, Taylor order, precision tier,
+domain, or analytical inequality. It adds no new height survey or raw
+alignment test. All mathematical failures remain valid outcomes.
