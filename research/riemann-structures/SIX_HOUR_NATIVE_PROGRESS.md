@@ -1,4 +1,67 @@
-# Six-hour native pass: fifth checkpoint
+# Six-hour native pass: sixth checkpoint
+
+The six-hour pass remains active. Completed focused final-packet tests
+now total321 in ordinary Python and the same321 under -O: the previous
+289 plus14 higher-horizon path tests and18 positive-tail tests. Final
+write/check/optimized-check runs passed with the frozen final bytes.
+The H450 and fixed-minor tail final certificates remain separate work
+in progress and are not included in that count. These are local packet
+checks, not repository-wide CI or a count of theorems.
+
+The actual fixed-prime source now has an infinite-exponent completion.
+At822646ffea23d906c385f0273a8c45693e982c4d the literal current converges
+uniformly over every monotone path and every real observation parameter,
+with an explicit H^(-1/2) tail. It preserves the original kernel and has
+an attained infinite minimum. Independent local radical monodromies and
+continuous prime-log phase density prove that the infinite observation
+is faithful on the entire tensor carrier, hence on its20-dimensional
+curvature variation space. Finite physical rank20 therefore holds at
+every sufficiently large horizon, with no numerical threshold claimed.
+
+The proof packet059d54f23b39b692c23f375338d9ad443b56b74f goes further:
+the imaginary completed current has the same strict sign for EVERY
+admissible path on0<t<pi/log(max P). Its local phase derivative is
+independent of the corresponding schedule coordinate. An explicit
+positive envelope and the original kernel first moment
+8(sqrt(2)-1)(log(2))^2 give a closed positive primitive energy gap, with
+no unknown singular-value constant. The adjacent transpose theorem
+identifies the fixed endpoint sector and exactly eight affine constraints
+on28 skew carrier coordinates, leaving20 actual variation directions.
+The carrier projections are not legal path deformations. The independent
+exact-freeze review is native-six-hour/REVIEW_059d54f2.md.
+
+Completed final path certificates at284ddc66a75387cf77ec7551f93fa990724decf0
+cover H25,H30,H60. All16 starts at each horizon pass the full source cone;
+the H30 and H60 minima are about160.76732 and173.72543, with both endpoint
+clips. A new unchanged-executable held-out acquisition at
+a4f6ea24a703d183e569d4257ed8d7e867089b86 reaches H450, the first horizon
+with all20 source directions:614 ordered records,265 ratios, and all35245
+upper physical kernel pairs. All16 full-cone certificates pass, giving
+a global minimum near178.6045826115. The acquisition took16.84 seconds
+and less than37 MB; its separate final replay is still pending here.
+
+The final positive completion-tail certificate is frozen at
+358da8bebee2dcbebd696b6f3077cbf9ea8ed99a. AtH=2^20 it bounds the omitted
+field by0.0446997473 uniformly in path and real parameter; the resulting
+energy/minimum-value error bound is111.41443. These are upper bounds,
+not evaluations of a signed tail or evidence of optimizer persistence.
+Every retained coefficient is independently reconstructed from all
+ordered exponent allocations and all derivative sites.
+
+The fixed-minor tail campaign retains two mathematically UNKNOWN
+noncontractive outcomes, atH900 andH2^20, frozen at3ba479241acf9db1554af067d5e2bea85533dde5
+and179d4c78a81cbe9eb7214c2b5a9eca041d197c46. Both exact20-by20 inverses
+exist, so the second is also an isolated physical-rank20 certificate.
+Neither supplies a numerical all-future threshold or bridges the
+unmeasured intervening horizons. Eighteen source/matrix controls passed
+in both modes; the separate final acceptance packet remains pending.
+
+Only one root-owned scientific worker runs at a time. Unchanged RAM
+gates and reserves remain active, and no other agent's process is
+stopped. These fixed-prime results do not identify the full retained-gamma
+source, an all-prime limit, a principal-member bound, or RH/GRH.
+
+## Fifth checkpoint history
 
 The six-hour pass remains active. Completed focused tests now total289
 in ordinary Python and the same289 under -O: the previous205 plus16
