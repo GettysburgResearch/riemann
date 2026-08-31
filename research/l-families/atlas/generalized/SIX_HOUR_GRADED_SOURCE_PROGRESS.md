@@ -1,4 +1,37 @@
-# Six-hour source pass: seventh checkpoint
+# Six-hour source pass: eighth checkpoint
+
+The pass remains active until at least 17:41:25+03 on 31 August 2026.
+The explicit minimal resolution is now complete. The newly acquired top
+relation is frozen at 4019ecd9d0b674fa6d9b26eee2c70c2717f33543, with
+proof object 31507a0ebecc931dc2073cd2c81df45c1c25f182cf2da9c6ece483cd8d54ba0a.
+The fixed single-witness contract remains 596189377cb5d167c95334bfc5ddb74af2d1cc5f.
+
+The first registered prime, 65521, produced an accepted primitive
+379-term relation after two Dixon lifts. The failed first lift is retained.
+Acceptance checks every original central column and every supported
+original equation, all 49 old columns, an invertible old coordinate minor,
+zero gauge coordinates, and exact nonmembership in the old span. It is an
+actual source relation, not an inferred dimension or a modular-only kernel.
+
+The full third differential now has 29 columns in degrees 5,6,7 with
+multiplicities 11,17,1. Every polynomial composition is checked freshly.
+The independent Tor and graded-Nakayama argument proves global exactness
+and minimality after this actual top class is supplied. The global
+degree-seven dimensions 775 and 776 remain deductions, not claimed
+measurements of an unrun full matrix. The chosen marked lift is not
+claimed to be GL3-equivariant.
+
+Write, ordinary check, optimized check, and all 26 final controls in
+both interpreter modes passed. Completed focused final-packet controls
+now total 529 per mode (503 plus 26). The old central full-kernel,
+640-column and other incomplete contracts remain explicitly incomplete;
+this successful separate proof does not relabel their unrun jobs.
+
+The source remains proposed research outside canonical integration.
+There is no RH/GRH conclusion. Scientific workers remain serialized and
+the original RAM caps and reserves remain unchanged.
+
+## Seventh checkpoint history
 
 The pass remains active until at least 17:41:25+03 on 31 August 2026.
 Completed checks now comprise the previous 487 per interpreter mode and
