@@ -71,7 +71,18 @@ RH status: unproved; unaddressed.
    n = 24 — so GP(n,2), n >= 24, appears to be an entire
    positive-end-only family; only the n = 24 member is certified here.
    The MINIMAL order of a positive-end-only cubic breach is now
-   bracketed in (14, 48] and stays open.
+   bracketed in (14, 48] and stays open, with exact negative evidence
+   inside the bracket from two targeted searches (both Sturm-exact,
+   no floats — an earlier float screen was found unreliable and
+   discarded): (i) all 774 two-edge-bottleneck dumbbells built from
+   the five 8-vertex cubic classes, Petersen, and Mobius ladders
+   M8/M10 (each minus an edge; both pairings; n = 16, 18, 20): zero
+   positive-end-only; (ii) GP(n, k) for 13 <= n <= 20, k >= 2 (26-40
+   vertices): zero positive-end-only, but FIVE new negative-end
+   members found and certified — GP(17,3), GP(17,6), GP(18,8),
+   GP(19,3), GP(19,6) — extending the negative-end census beyond
+   prisms. (dp20_certificate.json records one dumbbell certified
+   Ramanujan as the float screen's false positive.)
 4. **Fields where purity breaks**: the breach eigenvalue's minimal
    polynomial per graph — GP(9,1): x^3 + 3x^2 - 1, i.e. the breach
    value is 2 cos(8 pi/9) - 1 in the real cyclotomic field
