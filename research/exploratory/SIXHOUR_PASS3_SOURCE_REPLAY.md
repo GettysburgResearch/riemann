@@ -63,9 +63,11 @@ git remote add origin https://github.com/gfreund123/riemann.git
 git fetch --no-tags origin refs/heads/codex/riemann-structures-marked-descent-gate0:refs/remotes/origin/codex/riemann-structures-marked-descent-gate0 refs/heads/codex/generalized-l-objects-gate0:refs/remotes/origin/codex/generalized-l-objects-gate0 "refs/heads/codex/review-sources-*:refs/remotes/origin/codex/review-sources-*"
 ```
 
-Select the programme branch in a separate worktree. Preserve the exact
-scientific heads recorded by the replay panels when verifying a historical
-run; later workflow/documentation commits do not replace those identities.
+Select the fetched publication checkpoint in a separate worktree; that
+checkout contains the replay runner and reports. The panel's scientific
+head is an ancestral proof/source reference, not necessarily a checkout
+containing the later workflow files. Preserve both identities when verifying
+a historical run; later documentation does not replace the science source.
 
 ## Local closure versus actual network acquisition
 
@@ -81,12 +83,20 @@ observation: its historical zero newly-advertised-archive count is not edited
 after publication. The eight archives above were subsequently published on
 2026-08-31.
 
-A final network-acquisition report, recorded separately, must verify the exact
-advertised programme tips and all 40 archive mappings, fetch into a newly
-initialized object store, and rerun the final manifest closure there.
-Availability in the author's shared local Git object store is not that test.
-Neither closure tool claims to discover every dynamic import, shortened prose
-identity, external paper or undeclared dependency.
+The [final network-acquisition report](SIXHOUR_PASS3_NETWORK_ACQUISITION.md)
+records the completed HTTPS-only acquisition at publication checkpoints
+S408a9bd84a44d4878b957175516caddb81540f33 and
+G64885db5848252b8f013a24333fa3c2462101dee. All42 refs, all63 full result-map
+commit identities, four analytic-note seals and both manifest closures pass.
+An independent reviewer observed the initially empty store and checked the
+acquired identities and isolation. Fresh G full replay and S producer-only
+replay pass in both modes, with the precise scopes retained in that report.
+
+Later documentation/evidence-only tips may contain this report without being
+the HEADs observed during those runs. Availability in the author's original
+shared Git object store is not substituted for network acquisition. Neither
+closure tool claims every dynamic import, shortened prose identity, external
+paper or undeclared dependency.
 
 ## Scientific replay
 

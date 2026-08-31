@@ -300,6 +300,10 @@ preserved as historical checkpoints, not represented as the full final panel.
 Their integration HEAD changed during those early runs while their declared
 input hashes stayed fixed; they are NOT used as a frozen-HEAD release gate.
 
-Publication and fresh HTTPS acquisition are documented separately at their
-exact checkpoints in the source replay guide. Test replay does not replace
-independent mathematical review or prove unlisted analytic dependencies.
+The [fresh HTTPS acquisition and replay report](../exploratory/SIXHOUR_PASS3_NETWORK_ACQUISITION.md)
+binds publication checkpoint408a9bd84a44d4878b957175516caddb81540f33.
+All38 S producer checks pass again from the independently fetched source in
+each mode, with matching output hashes. This is NOT a second run of all1056
+S unit tests. The separate G full replay also passes from that network store.
+Later report/documentation-only tips do not replace the recorded run HEADs.
+Test replay does not replace mathematical review or prove unlisted dependencies.
