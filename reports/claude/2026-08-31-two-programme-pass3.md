@@ -7,10 +7,15 @@ Branch/PR: claude/riemann-repo-review-m7dk1x / PR #781
 Design: computation-first (campaigns C1-C8 producing machine-readable
         atlases for others to mine), with the standing conversion rule:
         any pattern surviving a held-out test gets a same-pass proof
-        attempt. Five conversions succeeded (T-108509, T-108510,
-        T-108513, T-108514 — the infinite expansion-side family — and
-        T-108515, the Segre bridge identifying the defect with the
-        K-polynomial of the Segre embedding of (P^1)^m), and multiple
+        attempt. Conversions: T-108509, T-108510, T-108513, T-108514,
+        T-108515 (Segre bridge), T-108518/T-108519 (the Epstein lab's
+        first proof-grade zeros, real and complex), T-108522 (the
+        alternant closed form solving the general-rank square defect,
+        with stable layer theorems and the multilinear Theorem C),
+        plus lemmas L-108516 (plane rigidity), L-108520 (window
+        finiteness, 50 > 49), L-108521 (frustration bound) and
+        observations O-108517 (two-invariant phase diagram) and
+        O-108523 (torsion multiplicity law). Multiple
         same-pass conjectures were refuted by
         their own tests and corrected before commit (the Hadamard
         min-law, the D_m positivity guess, the girth-profile swap,
@@ -32,6 +37,14 @@ RH status: RH and GRH are unproved; nothing in this pass addresses
 | T-108513 | THEOREM | Resonance threshold: class crowding forces collisions from m = 2R+1 (all m), collision at z = a; converse proved for all torsion points, m <= 17 |
 | T-108514 | THEOREM | GP(n,2) positive-end-only for ALL n >= 24 (exact threshold; infinite expansion-side family; three pieces, all adversarially verified sound) |
 | T-108515 | THEOREM | Segre bridge: N_m = equivariant K-polynomial cofactor of the Segre embedding of (P^1)^m; m=3 Betti table exact; defect FE = Gorenstein duality of the cube; N_m(2,1) = Eulerian polynomial |
+| L-108516 | LEMMA | Two-parameter plane: fibration, Dahlquist axis, purity wedge, integrality Z^2; RIGIDITY: exactly four integral weight-1-pure points |
+| O-108517 | OBSERVATION | Two-invariant phase diagram: positive breach <=> h <= 1/4; entry side = f in {2,4}; unique minimal realizations; 6/6-head atlas |
+| T-108518 | THEOREM (per instance) | First PROVED Epstein zero: Z(s,10i) real zero in (81/100, 41/50), interval certificate |
+| T-108519 | THEOREM (per instance) | First PROVED COMPLEX Epstein zero: winding = 1 at the archipelago modulus; Re rho >= 0.83 |
+| L-108520 | LEMMA | Corridor forcing: induced 2x15 ladder breaches both ends (50 > 49); window finiteness |
+| L-108521 | LEMMA | Frustration bound lambda_min <= -3 + 4f/n; positive-only needs linear frustration |
+| T-108522 | THEOREM | Alternant closed form: general-rank square defect solved; stable layer theorems; multilinear triple-product defects with degree law |
+| O-108523 | OBSERVATION | Torsion multiplicity law: odd-m growth profile of every resonance exact 40/40; even-m bookkeeping open |
 
 Pass-2 claims T-108507 and T-108508 received addenda: the spectrum
 theorem closes T-108507's tower question; the codimension law proves
