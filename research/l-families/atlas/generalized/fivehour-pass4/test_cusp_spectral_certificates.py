@@ -117,7 +117,7 @@ class CuspCertificateTests(unittest.TestCase):
                         )
                     )
 
-    def test_512_bit_fixture_nests_in_256_bit_fixture(self):
+    def test_512_bit_fixture_overlaps_256_bit_fixture(self):
         directory = Path(c.__file__).resolve().parent
         low = c.strict_json((directory / "cusp_certificates_256.json").read_bytes())
         high = c.strict_json((directory / "cusp_certificates_512.json").read_bytes())
@@ -142,7 +142,9 @@ class CuspCertificateTests(unittest.TestCase):
         self.assertEqual(low_balls.keys(), high_balls.keys())
         for path in low_balls:
             with self.subTest(path=path):
-                self.assertTrue(low_balls[path].contains(high_balls[path]))
+                # Separate Arb evaluations are not required to be nested;
+                # directed overlap is the precision-replay acceptance rule.
+                self.assertTrue(low_balls[path].overlaps(high_balls[path]))
 
 
 if __name__ == "__main__":
