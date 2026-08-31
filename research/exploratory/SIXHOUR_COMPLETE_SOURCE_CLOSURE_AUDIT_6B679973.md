@@ -173,4 +173,3 @@ exception rather than a custom ValueError; this remains fail-closed.
 No source-fetch, publication, PR mutation, release-tree merge or mathematical
 claim was made by this audit. Source interfaces, native capture, and RH remain
 at their independently stated scientific boundaries.
-
