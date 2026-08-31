@@ -21,7 +21,7 @@ Machine:  research/exploratory/2026-08-30-two-programme-pass/matrix/
           mult_law_check.py + mult_law_check.json, over the exact
           factorizations disc_slice_factor_lcs.json,
           disc_slice_m16_m17.json (m = 5..17, ten torsion points) and
-          the memory-lean sieve rows m18_sieve.json / m19_sieve.json
+          the memory-lean sieve rows m{18..27}_sieve.json
           (multiplicities keyed by the psi index N = M directly)
 RH status: RH and GRH are unproved; this claim does not address them.
 ```
@@ -90,7 +90,7 @@ interior collisions, pair-branching at the boundary.
 ## Even m: OPEN, with the deviation table recorded
 
 The same formula overshoots at EVERY even-m cell (95/95 through the
-m = 24 sieve row; deviations recorded in mult_law_check.json — e.g.
+m = 26 sieve row; deviations recorded in mult_law_check.json — e.g.
 the m = 24 predictions overshoot by 2 to 22 per cell). The discrepancy
 concentrates in the boundary classes, where the even-m trivial
 factor `(1 + T)` interferes with the `z = -2` count and the `z = +2`

@@ -116,7 +116,8 @@ Results (`matrix/m18_sieve.json`, `matrix/m19_sieve.json`):
   clean (2432, 2998, 3306, 3991, 4387, 5201, 5705, 6617 candidates) —
   with the held-out entries `psi_20` at 21, `psi_11`/`psi_22` at 23
   (the first odd orders beyond 9: the R = N regime), `psi_24` at 25,
-  each with multiplicity 2 and each correctly ABSENT at the even m
+  and `psi_13`/`psi_26` at 27, each with multiplicity 2 and each
+  correctly ABSENT at the even m
   before it.
 
 So the COMPLETE two-sided law now holds for every torsion point of
@@ -125,7 +126,7 @@ O-108523 (exact 114/114 on odd m including five fully held-out rows).
 
 ## What remains open
 
-The converse for `m >= 20`: for `m < 2R + 1` the cofactor `G`
+The converse for `m >= 28`: for `m < 2R + 1` the cofactor `G`
 (explicit binomial sums `D_c`) never accidentally vanishes at a
 doubled class or acquires repeated roots. Sixteen classes x all
 sub-threshold m <= 27 are certified exact (zero accidental
