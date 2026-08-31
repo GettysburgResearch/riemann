@@ -223,6 +223,26 @@ class TestNativeAcquisition(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "fresh reconstruction"):
             M.check_report(self.reseal(bad))
 
+    def test_release_arithmetic_taxonomy(self):
+        expected = {
+            "arithmetic_class": "MIXED",
+            "components": ["EXACT_RATIONAL", "CERTIFIED_INTEGER_COVERAGE"],
+            "rounding": "none",
+        }
+        for key, value in expected.items():
+            self.assertEqual(self.report["contract"][key], value)
+            for replacement in (None, "incorrect"):
+                bad = copy.deepcopy(self.report)
+                if replacement is None:
+                    bad["contract"].pop(key)
+                else:
+                    bad["contract"][key] = replacement
+                with (
+                    self.subTest(key=key, replacement=replacement),
+                    self.assertRaisesRegex(ValueError, "fresh reconstruction"),
+                ):
+                    M.check_report(self.reseal(bad))
+
 
 if __name__ == "__main__":
     unittest.main()

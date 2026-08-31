@@ -2,12 +2,18 @@
   "authoring_base": "1904d20cdb76ecd26e0e63472625da930075303e",
   "contract": {
     "arithmetic": "exact integer coverage and exact rational",
+    "arithmetic_class": "MIXED",
     "character": "signed history permutation character; no native group action",
+    "components": [
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
     "excluded": "full gamma decoder, principal bound, native cancellation, RH",
     "measure": "Beta theta and Euler tau are separate declared integrals",
     "native_reconstruction_complete": false,
     "native_zero_or_nonzero": "undetermined",
     "range": "Q<=2gc and P<=2gd; no uniform coherent g^-2 saving",
+    "rounding": "none",
     "source_order": "raw squarefree quotient before Boolean owner completion"
   },
   "frozen_sources": [
