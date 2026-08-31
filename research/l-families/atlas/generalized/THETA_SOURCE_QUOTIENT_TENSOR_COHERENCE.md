@@ -173,3 +173,27 @@ manifest/tests, and its own final artifacts. It must distinguish written
 analytic proof from exact finite algebra. Full source equality, strict
 types/caps, normal/-O replay, resealed hostile reports and source/artifact
 tampering will be checked before scientific freeze and independent review.
+
+## 7. Amended regularity design, still before finite computation
+
+The first design is frozen at
+`bd53c016dbd006ac5e40d4fff412162a68e99525`. Its unconditional tensor-closure
+obligation for the locally L1 class is FALSE. It is not silently retained.
+On the upper side take the scalar G=1, alpha=1 and
+
+    H(t)=1+|t-3/2|^(-2/3) for 0<|t-3/2|<1/8,
+    H(t)=1 otherwise (including at the single point t=3/2).
+
+Extend below1 by the specified reciprocal law. Every value is finite,
+the field is measurable, locally L1 and has compact upper tail. Its tensor
+square has the nonintegrable local term |t-3/2|^(-4/3). Thus local L1
+alone does not support tensor closure or even the tensor Mellin integral.
+
+The corrected target is two-tiered. Quotient, same-weight direct sum,
+continuation, positivity and averaging hold under their stated local-L1
+hypotheses. Tensor closure holds if the tensor field is locally integrable;
+in particular the locally BOUNDED measurable subclass is tensor-closed.
+The actual MP theta sources are locally bounded (indeed continuous), as
+are all complete synthetic sources fixed in sections2--5. No finite panel,
+matrix, point, measure or count changes. This amendment is to be frozen
+as a new design identity BEFORE executing those controls.
