@@ -1,0 +1,26 @@
+{
+  "claim": "T-107120",
+  "branch": "research/gpt56-pro/107100-beta-qadic-annular-interference",
+  "checkpoint_parent": "f5fcd109da353587cdc2b08e0de5e5908a1e595b",
+  "sources": [
+    {
+      "commit": "f5fcd109da353587cdc2b08e0de5e5908a1e595b",
+      "path": "claims/theorems/T-107110-stationary-annular-high-primitive-frontier.md"
+    },
+    {
+      "commit": "55af2c8020d257047cc1f9965c51b623cc074a76",
+      "path": "claims/theorems/T-106800-single-harmonic-spectral-abscissa-and-vk-energy.md"
+    },
+    {
+      "commit": "cd256e8a82a6dbb32e8728da492ea900cd15995c",
+      "path": "claims/lemmas/L-107020-hyperbolic-zero-free-smoother-and-native-beta-equivalence.md"
+    }
+  ],
+  "classical_external_input": "Dirichlet-polynomial mean-value theorem proved by Hilbert inequality",
+  "replay": "experiments/X-107120-beta-additive-chowla/results/verification.json",
+  "open": [
+    "low-frequency additive/Fourier cancellation",
+    "any fixed power saving",
+    "Riemann Hypothesis"
+  ]
+}
