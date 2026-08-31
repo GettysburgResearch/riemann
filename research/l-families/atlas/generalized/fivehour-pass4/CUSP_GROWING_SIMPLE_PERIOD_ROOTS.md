@@ -211,6 +211,13 @@ because the entire domain lies near the positive center
 Finally the zero condition and (R11) give (R2). Since
 `lambda_j~k/(24j)` and `j^2 log k/k=o(1)` under (R1), inversion gives (R3).
 
+For fixed `j`, the previously proved first scalar-quotient root has a
+`log(k)/k^2` displacement from `12j/k`. This is consistent with (R2): the
+finite-part eigenvalue contributes only part of that displacement, while the
+exact-period remainder in (R4) is itself `O(log k)` in the reciprocal
+endpoint coordinate. The present theorem deliberately does not claim the
+fine coefficient of that correction.
+
 ## 5. Exact boundaries
 
 The cube-root range is produced by comparing an `O(j log k)` analytic
