@@ -26,6 +26,11 @@ statements, finite certificates, and abstract countermodels.
    lower-frame constant must decay at least as
    `O(log(P)/sqrt(P))` on nested prime panels, and prices any compensating
    coordinate change through its inverse source map.
+5. `XI_FIVE_NODE_SCHWARZIAN_NO_GO.md` gives an independently reviewed abstract
+   smooth countermodel: positivity, monotonicity, both paired Schwarzian
+   signs, and every proper Pick minor can coexist with a negative five-node
+   determinant.  This is not an Xi counterexample; it proves that a genuinely
+   new fifth-order inequality is required.
 
 ## What this changes
 
@@ -40,7 +45,8 @@ form to a positive self-adjoint operator.
 ## Exact frontier
 
 - RH is equivalent to positivity of every finite safe Pick matrix, while this
-  pass proves only ordinary orders at most four.
+  pass proves only ordinary orders at most four.  The first undecided literal
+  Xi order is five, and the lower-order scalar package cannot settle it.
 - The literal retained-gamma native tuple and its complete source measure
   remain unresolved.
 - Fixed-prime coercivity does not extend uniformly in the unweighted raw
