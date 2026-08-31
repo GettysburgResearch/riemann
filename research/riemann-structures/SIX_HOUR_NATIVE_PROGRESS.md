@@ -1,4 +1,78 @@
-# Six-hour native pass: fourth checkpoint
+# Six-hour native pass: fifth checkpoint
+
+The six-hour pass remains active. Completed focused tests now total289
+in ordinary Python and the same289 under -O: the previous205 plus16
+source-fibre,16 support-functional,12 synchronized-face,14 global-optimum,
+12 complete-grid and14 horizon-atlas tests. Final-bound write/check and
+optimized-check runs passed for these packets. These are local packet
+checks, not repository-wide CI or a count of theorems.
+
+The complete original H25 physical energy now has a certified GLOBAL
+minimum near157.4673352726. The unique oriented path, modulo pauses and
+nondecreasing reparameterizations, keeps w=0, follows the lower-clipped
+profile v=clip(lambda+mu*u), completes the planar endpoint, then raises w.
+The certified parameters are approximately lambda=-0.267524382746 and
+mu=1.206702516665. All16 prescribed floating starts only propose centers;
+exact outward root boxes and strict source support inequalities prove the
+result. Every rational witness retains all63 ordered records and45 ratios.
+
+The all-path gap controls the squared profile distance, premature
+third-coordinate activation and the original observed-field distance.
+A separate proof establishes source-metric stability of this optimum
+under sufficiently small coefficient perturbations, without claiming
+that arbitrary such perturbations are arithmetic source deformations.
+This is a finite original-source theorem, not a full retained-gamma map
+or a principal-member bound.
+
+The source now has an exact all-horizon filtration theorem. For three
+independent prime schedules its full affine variation dimension is20;
+for r singleton prime groups it is r*3^(r-1)-2^r+1. For primes2,3,5,
+the first full literal source rank occurs at450. An unchanged held-out
+atlas retains all954 ordered records through900. Independent modular
+lower bounds meet the proved raw upper bound in all83 supported panels,
+so actual physical collection preserves the full source rank at EVERY
+integer horizon through900. No physical-rank theorem beyond900 is inferred.
+
+Two exact obstructions delimit simpler constructions. The synchronized
+image of two paths can differ although their original source agrees at
+every height. Also, at H50 two fully collected physical coefficients
+already prevent any fixed finite activation staircase from reproducing
+the diagonal source on the same planar path. The exact k-activation
+penalty in the detecting source functional is1/(12k^2). This is not an
+energy gap or a prohibition on changing the planar path.
+
+| New final packet | Scientific freeze | Tests per mode |
+|---|---|---:|
+| All-height source-fibre obstruction |b84b88b11497b917fa21ed5a2325b7b2f7236967|16|
+| Exact source support functional |808a0353e38fa8eaf6b2999bb97426d167ab598d|16|
+| Complete synchronized subclass |7be6c91633c44b8dbef97a282e2ef224c8674a5b|12|
+| Global H25 optimum and strict gap |19fca51dd4549215be166921dab888162e0c4afc|14|
+| Complete N2/N3/N4 monotone grids |be8ddbadb1180c351191fea1e570e45ea5d2da61|12|
+| Original source and physical ranks through900 |a4d610431d5edaf26b00bae903bb9111837e4c31|14|
+
+The exact global certificate has independent review REVIEW_19fca51d.md.
+The final optimized binding, described as pending in the historical
+scientific note, subsequently passed with the same final bytes. Two
+earlier optimized attempts were stopped by the unchanged RAM reserve;
+they remain resource stops, not mathematical failures. Only root-owned
+scientific workers run, one at a time; other agents' processes are untouched.
+
+Proof-only additions include the multigroup dimension law and explicit
+twenty-moment decoder at b58909695c2feb6cc74af7d4b3b41089b41c4871,
+the literal horizon filtration and eight-quadratic support cone at
+2952d7c0c9fd0fbbbf04fa6321cc2ff4bb392c8a, and the exact H50 physical
+compression obstruction at0daaef322d86bcc3de26037e98e24b53b72e7441.
+The N4 grid's alternating winner does not imply an all-N rule: its
+large-N limit is worse than an already available fixed path.
+
+The next registered campaign uses the same complete twenty-moment source,
+original Gamma metric,16 starts and root-box rules at H25 calibration and
+H30/H60 held-out horizons. It tests all eight source support quadratics.
+Failed or uncertain sufficient cones will remain distinct from evidence
+of an actual descent direction. No result of that ongoing campaign is
+included in this checkpoint's completed test count.
+
+## Fourth checkpoint history
 
 The six-hour pass remains active. This checkpoint records 205 distinct
 focused tests in ordinary Python and the same 205 under -O: the previous
