@@ -482,6 +482,8 @@ class CuspPeriodRealZeroTests(unittest.TestCase):
 
     def test_32_full_note_preserves_analytic_and_flag_contract(self):
         note = M.NOTE.read_text(encoding="utf-8")
+        self.assertFalse(any(ord(ch) < 32 and ch not in "\t\n\r" for ch in note))
+        self.assertIn(r"\left(\frac{k}{3072}\right)^k>\frac{25}{8}3^{16}k^2.", note)
         for token in (
             "h_d is CF1's g_1, NOT Miller f_d",
             "largest eigenvalue is continuous",
