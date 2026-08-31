@@ -135,9 +135,16 @@ exactly the k = 3 column of this table. The window phenomenon is
 therefore CAP-SELECTIVE: the cap decides whether the expansion end
 opens before the bipartite end catches up.
 
-## Open
+## Open — both questions now ANSWERED
 
-Non-diamond heads (do other 4-vertex heads admit windows at larger
-k?); and the GP(n,2) permanence — PROVED as T-108514
-(standalone/2026-08-31-gp-positive-family/).
+Non-diamond heads: the diamond is the ONLY valid 4-vertex head
+(parallel-chord exclusion), and the 6-vertex-head atlas
+(head_cap_atlas.py + json; O-108517 addendum) shows windows occur for
+EXACTLY the window-type x window-type block pairs — including with no
+diamond present — while the crossing block at either end kills the
+window; the three minimal witnesses re-decompose as 6/6 ladders with
+the s709 block common to all three. GP(n,2) permanence — PROVED as
+T-108514 (standalone/2026-08-31-gp-positive-family/). Window
+finiteness in EVERY capped-ladder family — PROVED as L-108520
+(induced 2x15 ladder forces both-end; integer pivot 50 > 49).
 ```

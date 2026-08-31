@@ -202,6 +202,22 @@ is the proof-grade anchor for the lab's rectangular bifurcation story
 and the certification template; the complex archipelago point is
 deposited as the next target with its missing ingredients listed.
 
+**Lane 3 completions (O-108517 addendum + L-108520)**: (i) exhaustive
+n = 16 rescan: the three minimal positive-end-only spectra have
+UNIQUE graph realizations (3 graphs in 65,346 canonicals; cospectral
+caveat closed), all with f = 4 — the f >= 3 necessity holds
+exhaustively at minimal order; (ii) the 6-head x 6-cap atlas (50
+exact rows) answers the deposited non-diamond-head question: windows
+occur for exactly the window-type x window-type block pairs, the
+crossing block kills them, the f-dichotomy extends (f = 4 / 2 / 0),
+and the three witnesses re-decompose as 6/6 ladders with a common
+s709 block; (iii) WINDOW FINITENESS IS PROVED (L-108520): an induced
+2x15 ladder forces lambda_2 > 2 sqrt 2 AND lambda_min < -2 sqrt 2
+(Dirichlet ladder modes + Courant-Fischer; threshold settled by
+50 > 49), so every capped-ladder family leaves positive-only by
+corridor length 15 — the transient-window vs permanent-regime
+dichotomy of O-108006/T-108514 is now proved at both poles.
+
 ## Process notes (honesty trail)
 
 - The X-108510 replay's mixed-triple test was written expecting the

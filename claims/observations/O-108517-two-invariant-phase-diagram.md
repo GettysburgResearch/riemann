@@ -82,4 +82,38 @@ of universality. GP(24,2)+ (T-108514's infinite family) is outside
 the exhaustive-h range (2^47 subsets); its corridor structure
 suggests h -> 0 along the family, consistent with fact 1, but that is
 unverified reconnaissance, not a row.
+
+## Addendum (same day): three sharpenings
+
+1. **The f >= 3 question is SETTLED EXHAUSTIVELY at minimal order**
+   (graphs/pos16_frustration.py + .json): re-enumerating all
+   2,027,025 chord diagrams (65,346 canonical) and matching exact
+   charpolys, the three positive-end-only spectra at n = 16 are
+   realized by EXACTLY THREE graphs — each spectrum has a UNIQUE
+   realization (the census's cospectral-mate caveat closes at the
+   minimal order) — and every one has frustration f = 4 and
+   h = 1/4. So at n = 16, positive-end-only forces f = 4, exhaustively.
+2. **Non-diamond heads open windows too — the window property is a
+   property of the BLOCK SHAPES, not the diamond**
+   (graphs/head_cap_atlas.py + .json; answers the deposited
+   WITNESS16_STRUCTURE question): over all 5 x 5 pairs of the valid
+   six-vertex 3-chord blocks joined by a k-rung corridor
+   (k = 2..6, n = 16..24, 50 charpoly-distinct rows, exact verdicts):
+   a positive-only window occurs for EXACTLY the pairs where BOTH
+   end blocks are window-type ({s708, s709, s706}), and NEVER when
+   either end is the crossing block (those enter NEG or go BOTH
+   immediately; cross/cross is bipartite, where a one-sided breach is
+   impossible by spectral symmetry). The f-dichotomy extends
+   verbatim: window pairs have f = 4, cross pairs f = 2, cross/cross
+   f = 0. And the three minimal witnesses THEMSELVES re-decompose as
+   6/6 ladders — 708 = s708+corridor+s709, 709 = s709+s709,
+   706 = s709+s706 (exact charpoly matches) — with the s709 block
+   common to all three.
+3. **Window finiteness is now a THEOREM** (L-108520): any cubic graph
+   with an induced 2x15 ladder is both-end non-Ramanujan
+   (`lambda_2 >= 1 + 2cos(pi/8) > 2 sqrt 2` by the integer
+   inequality 50 > 49, and the mirror bound at the negative end), so
+   every capped-ladder family leaves the positive-only phase by
+   corridor length 15; threshold instances Sturm-verified
+   (708cap and crosscap at k = 15, n = 40: both BOTH).
 ```
