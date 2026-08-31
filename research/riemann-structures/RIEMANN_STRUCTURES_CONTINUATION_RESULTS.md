@@ -6,10 +6,11 @@ carried by [draft PR #765](https://github.com/gfreund123/riemann/pull/765).
 This is a research checkpoint, not completion of the requested eight-hour
 pass, a canonical repository integration, or an RH claim.
 
-Checkpoint updated: 2026-08-31. Seventeen exact packets are resident,
+Checkpoint updated: 2026-08-31. Nineteen exact packets are resident,
 including the canonical Boolean principal-diagonal estimate, actual-Xi
 geographic count and scale-matched band bound, conditional finite-height
-cofinal capture, and the separate source-convention correction. The native
+cofinal capture, conditional actual-Xi component-height divergence,
+the bare low-pass height equivalence, and the separate source-convention correction. The native
 Boolean decoder memo is an additional exploratory diagnostic, not another
 theorem packet.
 
@@ -20,12 +21,15 @@ its physical metric are different requirements. The useful new results
 identify which operations actually survive. None constructs a new
 number-field geometry or supplies the missing RH-level estimate.
 
-The Xi work now has five distinct conclusions: actual scalar concentration
+The Xi work has separate conclusions: actual scalar concentration
 is proved; narrow physical-band bounds hold for every inner numerator at
 finite denominator rank; a uniform actual companion count binds finite
 geographic packets to the physical scale; pure finite-height denominators
-admit fixed-configuration cofinal capture; and generic positivity plus
-high-derivative concentration does not eliminate reverse-Rolle defects.
+admit fixed-configuration cofinal capture; under the stated inner/RH premise,
+both unreduced companions have infinite height and infinite bare low-pass
+trace; and generic positivity plus high-derivative concentration does not
+eliminate reverse-Rolle defects. Reduced-divisor and physical projection
+questions are not answered by the bare trace result.
 Small band charge is not small total charge or native cofinal capture.
 
 Read the
@@ -55,6 +59,8 @@ cannot be interchanged. Historical scientific files are preserved.
 | [All-inner width and source duality](../exploratory/HARDY_INNER_WIDTH_SOURCE_DUALITY.md) | Width/height bounds for any inner numerator and the corrected physical source coefficients | Finite denominator accounting, native cofinal limits and total charge remain separate |
 | [Actual Xi companion count and width](../exploratory/XI_UNIFORM_COMPANION_COUNT_WIDTH.md) | Uniform geographic companion count and normalized shrinking-band bound at the physical constant scale | Actual finite geographic factors only; no complete native cofinal or omitted-direction ledger |
 | [Finite-height cofinal source capture](../exploratory/HARDY_COFINAL_FINITE_HEIGHT_SOURCE_CAPTURE.md) | Conditional infinite-denominator capture and the exact physical omitted-source operator | Pure Blaschke denominator with finite total height, fixed numerator/projector and low-pass cost; no native Xi height or uniform-in-T capture theorem |
+| [Actual-Xi component global height](../exploratory/XI_COMPANION_GLOBAL_HEIGHT_BOUNDARY.md) | Infinite zero-height sum for both actual zeroth/fifth companions under the stated inner/RH premise; precise signed axis comparison | Unreduced components only; common-inner cancellation can remove infinite height and no reduced-denominator conclusion follows |
+| [Bare low-pass height equivalence](../exploratory/HARDY_LOW_PASS_HEIGHT_EQUIVALENCE.md) | For any pure Blaschke product, finite total height iff some/every bare low-pass trace is finite; no real-boundary continuation needed | U=1 and intervals starting at zero; not arbitrary shifted bands, native numerator or corrected physical capture |
 
 Each row has a bounded exact producer, fixture, source manifest and tests.
 The later analytic and source-interface packets have separate frozen-source
@@ -146,10 +152,47 @@ denominators and pure infinite-height lacunary controls show why zero
 count/growth alone cannot supply the missing hypothesis.
 
 This is a low-pass endpoint cost L, not a shrinking-width cost |I|.
-The actual Xi global finite-height assumption, native cofinal source
+The reduced actual-Xi finite-height possibility, native cofinal source
 compatibility, quantitative tail/boundary/approximation control and uniform
 order of limits remain open. The [independent audit](../exploratory/HARDY_COFINAL_FINITE_HEIGHT_SOURCE_CAPTURE_AUDIT.md)
 retains these distinctions and the literal source/outer congruence.
+
+### Actual component height and the bare low-pass boundary
+
+For each fixed lambda>0, define
+
+    Theta_k=(Xi^(k)-i lambda Xi^(k+1))/(Xi^(k)+i lambda Xi^(k+1)), k=0,5.
+
+Under RH, or the explicitly sufficient premise that both companions are
+inner, the [global-height theorem](../exploratory/XI_COMPANION_GLOBAL_HEIGHT_BOUNDARY.md)
+proves that they are pure Blaschke products with infinite total zero height.
+Its actual imaginary-axis asymptotics are
+
+    y[-log|Theta_k(iy)|] ~ 4y/(lambda log y) -> infinity,
+    log|Theta_5(iy)/Theta_0(iy)| ~ 40/[lambda y(log y)^3].
+
+The native quotient is Theta_0/Theta_5: the zeroth component supplies the
+numerator, not the denominator. After removing the maximal common inner
+factor, the two reduced height sums are either both infinite or finite
+and equal. Neither alternative is selected. A nonnative finite-height
+example matches the signed asymptotic, so it cannot settle that choice.
+The [audit](../exploratory/XI_COMPANION_GLOBAL_HEIGHT_BOUNDARY_AUDIT.md)
+retains the fixed-lambda and conditional scope.
+
+The [low-pass theorem](../exploratory/HARDY_LOW_PASS_HEIGHT_EQUIVALENCE.md)
+then characterizes ANY pure Blaschke product B:
+
+    sum Im(b)<infinity iff tr(Pi_[0,L] P_KB Pi_[0,L])<infinity
+    for some L>0, equivalently every L>0.
+
+It uses the decreasing model-space diagonal and the exact horizontal
+defect bridge with denominator 4pi y. Repeated zeros and real-boundary
+accumulation are allowed. Thus the conditional unreduced Xi components
+have infinite bare low-pass trace. This says nothing comparable about
+P_U physical capture or the reduced denominator. Exponential inner delay
+and a pure lacunary shifted-band example show why those extensions fail
+in general. Its [audit](../exploratory/HARDY_LOW_PASS_HEIGHT_EQUIVALENCE_AUDIT.md)
+checks complex/confluent controls independently of the analytic argument.
 
 ### The source convention is a substantive correction
 
@@ -286,8 +329,9 @@ and free-energy gate remain open.
 1. Reconstruct a complete native coefficient over an exact physical tuple,
    starting with the dyadic zero-Boolean diagnostic. Carry every allocation,
    carrier, endpoint, regional selector and renewal weight through the map.
-2. Prove native cofinal capture beyond geographic count and the conditional
-   finite-height theorem, including omitted source directions and
+2. Determine the native reduced divisor and corrected physical projection
+   beyond geographic count, conditional component-height divergence and
+   the bare low-pass equivalence, including omitted source directions and
    approximation/boundary terms. A separate Xi-specific bridge is still
    needed for total charge.
 3. Pursue a source-specific reverse-Rolle defect estimate. Re-proving
@@ -308,8 +352,8 @@ work is not accepted merely by being mentioned in this checkpoint.
 
 ## Reproduction and priority
 
-The current changed-test-module scope is seventeen modules: all 412 tests
-passed in normal Python (77.070s) and under -O (77.221s). All seventeen
+The current changed-test-module scope is nineteen modules: all 479 tests
+passed in normal Python (89.615s) and under -O (89.188s). All nineteen
 complete producer checks passed in both modes. The separate decoder memo's
 literal code block also passed both modes, and its ten primitive identities
 were independently checked; it is not counted as a theorem/test module.

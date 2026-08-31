@@ -5,7 +5,7 @@ can have different commit identities because packets were cherry-picked.
 Fetching only the programme branch can omit the original reviewed commit.
 Fetch these source refs without merging them:
 
-    git fetch --no-tags origin refs/heads/codex/review-sources-signed-history-wave2 refs/heads/codex/review-sources-xi-laplace-wave2 refs/heads/codex/review-sources-xi-physical-band-wave2 refs/heads/codex/review-sources-xi-positive-kernel-wave2 refs/heads/codex/review-sources-hardy-inner-width-wave2 refs/heads/codex/review-sources-canonical-boolean-diagonal-wave2 refs/heads/codex/review-sources-xi-companion-count-wave2 refs/heads/codex/review-sources-hardy-cofinal-capture-wave2 refs/heads/codex/review-sources-native-boolean-diagnostic-wave2
+    git fetch --no-tags origin refs/heads/codex/review-sources-signed-history-wave2 refs/heads/codex/review-sources-xi-laplace-wave2 refs/heads/codex/review-sources-xi-physical-band-wave2 refs/heads/codex/review-sources-xi-positive-kernel-wave2 refs/heads/codex/review-sources-hardy-inner-width-wave2 refs/heads/codex/review-sources-canonical-boolean-diagonal-wave2 refs/heads/codex/review-sources-xi-companion-count-wave2 refs/heads/codex/review-sources-hardy-cofinal-capture-wave2 refs/heads/codex/review-sources-native-boolean-diagnostic-wave2 refs/heads/codex/review-sources-xi-companion-global-height-wave2 refs/heads/codex/review-sources-hardy-low-pass-height-wave2
 
 Their exact targets for this checkpoint are:
 
@@ -20,6 +20,8 @@ Their exact targets for this checkpoint are:
 | xi-companion-count-wave2 | 76454e3db0ccce8f500297ea27668d6088b5091a |
 | hardy-cofinal-capture-wave2 | 90e8dff3d184cbfe59974969ca89615856c33c51 |
 | native-boolean-diagnostic-wave2 | 2e1293a03486fb74580eef0ddd7ed0caf9ab7808 |
+| xi-companion-global-height-wave2 | 9da33e7ea2b15a4badb3cb436e38e54762ad5e1d |
+| hardy-low-pass-height-wave2 | 36eddbbf065959f535ca4a7b08455d489ed4bd18 |
 
 The common prefix is codex/review-sources-. The signed source retains
 5dc85cd5; the actual-kernel source retains 939a2496. The physical-band ref
@@ -29,9 +31,11 @@ refs preserve the exact positive-kernel, all-inner/source-duality,
 canonical-diagonal and actual companion-count scientific states named by
 their reviews. The canonical-diagonal state includes its separate final
 manifest-whitespace/hash repair; the unrepaired fixture is not accepted.
-The cofinal ref preserves the pure finite-height theorem. The final ref
+The cofinal ref preserves the pure finite-height theorem. The diagnostic ref
 preserves the one-file exploratory native-decoder diagnostic, which is
-not counted as an additional theorem packet.
+not counted as an additional theorem packet. The last two refs retain the
+conditional actual-Xi component-height theorem and pure Blaschke bare
+low-pass equivalence, respectively.
 
 ## Older source branches still required
 
@@ -67,11 +71,11 @@ the explicit fetches and adequate history.
 
 The recursive structures-only source audit passed for:
 
-- seventeen root manifests and seventeen distinct manifest paths;
-- eighteen frozen manifest versions;
-- 149 literal source edges;
-- 71 unique frozen commit/path file versions;
-- twenty-three source commits.
+- nineteen root manifests and nineteen distinct manifest paths;
+- twenty frozen manifest versions;
+- 158 literal source edges;
+- 73 unique frozen commit/path file versions;
+- twenty-five source commits.
 
 The exploratory decoder memo has no separate sources manifest. Its ten
 literal commit/path/blob/LF-SHA table entries were independently checked,
