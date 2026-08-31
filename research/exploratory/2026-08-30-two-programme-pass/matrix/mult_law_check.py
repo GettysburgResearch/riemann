@@ -72,14 +72,17 @@ def main():
                         else:
                             bad += 1
         print(f"{'odd' if parity else 'even'} m: {ok} ok, {bad} off")
-    # m = 18, 19 rows from the memory-lean sieve (multiplicities keyed
+    # m >= 18 rows from the memory-lean sieve (multiplicities keyed
     # directly by the psi index N = the per-root cyclotomic order M)
-    import os
+    import glob
+    import re
     out["sieve_rows"] = []
-    for m in (18, 19):
-        f = f'matrix/m{m}_sieve.json'
-        if not os.path.exists(f):
-            continue
+    files = sorted(glob.glob('matrix/m*_sieve.json'),
+                   key=lambda f: int(re.findall(r'\d+', f)[0]))
+    for f in files:
+        m = int(re.findall(r'\d+', f)[0])
+        if m < 18:      # m <= 17 already covered by the exact
+            continue    # sympy factorizations above
         mults = {int(k): v for k, v in
                  json.load(open(f))["torsion_multiplicities"].items()}
         ok = bad = 0

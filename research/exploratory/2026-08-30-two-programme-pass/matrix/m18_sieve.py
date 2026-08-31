@@ -243,8 +243,12 @@ def psi_N(N):
     return out
 
 
-KNOWN = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18]  # incl. N=9,18 (threshold 19)
-# (we divide by ALL psi_N that actually divide, discovered dynamically)
+KNOWN = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
+         16, 18, 20, 22, 24, 26]   # all N with threshold 2R+1 <= 27
+# (we divide by ALL psi_N that actually divide, discovered
+# dynamically — a psi_N below its threshold simply divides 0 times,
+# and any candidate outside this list is caught by the exhaustive
+# S4 scan as a reported divisor rather than silently missed)
 
 
 def main():
