@@ -2,12 +2,14 @@
 
 ```text
 Claim ID: T-108513
-Status:   PROVED (the forward half of O-108512's entry law: collisions
-          are FORCED from m = 2R+1 on, the first forced collision value
-          is z = a, the m = 2R near-miss and the a = 0, m = 6 gap are
-          derived); the CONVERSE (no accidental collision below the
-          threshold) remains EMPIRICAL — certified exact at ten torsion
-          points for every m from 5 up to each entry
+Status:   PROVED: the forward half for ALL m (collisions forced from
+          m = 2R+1, first collision at z = a, the m = 2R near-miss and
+          the a = 0, m = 6 gap derived) AND — via the monic-sieve
+          addendum — the COMPLETE two-sided law for every torsion point
+          of every order in the range m <= 15 (exact factorizations +
+          Gauss's lemma; matrix/disc_slice_factor_lcs.json). The
+          converse for m >= 16 remains open, reduced to an explicitly
+          checkable normal form per m
 Created:  2026-08-31 (pass 3 continuation; converts O-108512's law)
 Programme: #764 (moduli resonances of the defect tower)
 Depends on: T-108500, T-108509; grew from O-108512's held-out rounds

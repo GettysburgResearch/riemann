@@ -160,15 +160,54 @@ spectrum-trivial collision invisible to `disc_z M`). At `m = 8`,
 `n_{c=0} = 5` gives `mult_T(1) = 4`, i.e. TWO spectrum points at
 `z = 2`, and the collision reappears — matching the table. ∎
 
+## Addendum: the converse is PROVED for all m <= 15, for ALL torsion points
+
+**Lemma (monic sieve).** Let `p in Z[a]` be a primitive irreducible
+polynomial with `|lc(p)| != 1`. Then `p` has no root of the form
+`2 cos(2 pi k / N)` (any torsion value). *Proof.* A torsion value is
+an algebraic integer, so its minimal polynomial `q` is monic with
+integer coefficients and irreducible. If the value were a root of
+`p`, then `q | p` in `Q[a]`; irreducibility of `p` forces
+`q = p / lc(p)`, and `q in Z[a]` would force `lc(p)` to divide every
+coefficient of `p`, contradicting primitivity. ∎
+
+**Computation (matrix/disc_slice_factor_lcs.json; exact sympy
+factorizations over Z of `disc_z M_m(a, 1)` for m = 5..15).** At every
+m in this range the factorization consists of (i) monic factors that
+are PRECISELY the torsion minimal polynomials with threshold
+`2 ord(alpha^2) + 1 <= m` — e.g. at m = 15: `a, a -+ 1, a^2 - 2,
+a^2 - 3, a^2 -+ a - 1` and both ord-7 cubics, and nothing else — and
+(ii) a SINGLE remaining irreducible factor of large degree whose
+leading coefficient is never a unit (16; 5, 5; 2025; 21609;
+157351936; 740710656; ~3.2e13; ~1.1e15; ~1.2e21; ~1.8e22; ~1.2e29 for
+m = 5..15).
+
+**Corollary (complete law for m <= 15).** By the monic sieve, no
+torsion point of ANY order is a root of the non-monic factor, so for
+`5 <= m <= 15` and EVERY torsion point:
+
+```text
+disc_z M_m (theta) = 0   <=>   m >= 2 ord(alpha^2) + 1 .
+```
+
+Together with the Theorem (forced entry, all m), the entry law of
+O-108512 is a COMPLETE THEOREM in the range m <= 15 — for all torsion
+points simultaneously, not merely the fourteen tested — and remains
+proved in the forward direction for every m. ∎
+
 ## What is proved and what remains
 
 PROVED: collisions are forced from `m = 2R + 1` on (with the explicit
 exceptional bookkeeping at `T = +-1` classes), the first forced
-collision value is `z = a`, the `m = 2R` non-entry, and the `a = 0`,
-`m = 6` gap. OPEN: the converse (no collision strictly below
-`2R + 1`), which requires controlling the cofactor `G` — equivalently
-the non-vanishing of explicit binomial-sum resultants; the ten-point
-exact table is the current evidence. The reading of O-108512 is
+collision value is `z = a`, the `m = 2R` non-entry, the `a = 0`,
+`m = 6` gap, and — by the monic sieve over the exact factorizations —
+the FULL two-sided law for all torsion points in the range
+`m <= 15`. OPEN: the converse for `m >= 16`, which by the same sieve
+reduces to a single verifiable property per m: that after removing
+the (known) torsion factors, the remaining factor of
+`disc_z M_m(a, 1)` has non-unit leading coefficient and no monic
+irreducible torsion divisors — an explicitly checkable normal form
+whose persistence for all m is the deposited conjecture. The reading of O-108512 is
 upgraded accordingly: the torsion entry law's threshold is now a
 THEOREM in one direction, with the resonance mechanism identified as
 CLASS CROWDING of the Sym^m weight monomials modulo the torsion order

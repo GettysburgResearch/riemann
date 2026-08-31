@@ -6,10 +6,11 @@ Status:   OBSERVATION, half-CONVERTED: the entry law's FORWARD half is
           now PROVED as T-108513 (collisions forced from m = 2R+1,
           first collision at z = a, the m = 2R near-miss and the a=0
           m=6 gap derived — mechanism: class crowding of the Sym^m
-          weight monomials mod the torsion order); the CONVERSE (no
-          accidental collision below threshold) remains empirical,
-          certified exact at ten points for every sub-threshold m
-          (torsion_field_probe.json). Each stated factorization/
+          weight monomials mod the torsion order); the CONVERSE is now
+          ALSO PROVED for all m <= 15 for every torsion point of every
+          order (monic-sieve addendum in the T-108513 standalone;
+          disc_slice_factor_lcs.json), and for m >= 16 remains
+          empirical (fourteen points certified). Each stated factorization/
           vanishing is an exact machine-verified polynomial fact.
 Created:  2026-08-31 (pass 3; grows out of T-108509)
 Programme: #764 (moduli of local data; resonances of the defect tower)
