@@ -1,0 +1,77 @@
+{
+  "authoring_base": "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+  "contract": {
+    "RH_counterexample": false,
+    "Taylor_order": 16,
+    "actual_modular_source": false,
+    "all_complex_zero_count": false,
+    "analytic_proof_machine_certified": false,
+    "arithmetic_class": "MIXED",
+    "candidate_A2_bracket_expected_failure_not_blinded": true,
+    "caps": {
+      "container_length": 2000,
+      "integer_bits": 4096,
+      "json_bytes": 1000000,
+      "json_depth": 24,
+      "json_nodes": 50000,
+      "polynomial_length": 8,
+      "string_length": 4096,
+      "taylor_order": 32,
+      "work_units": 100000
+    },
+    "components": [
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "fixed_b": "1",
+    "rounding": "none",
+    "smooth_persistence_is_written_existence_proof": true
+  },
+  "design": "67f88c148bb5914897cc13b6cbce61960a277cd1",
+  "frozen_sources": [
+    {
+      "commit": "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+      "git_blob": "9873196dcaf7f5ed92c429fe17b146531f2325ac",
+      "path": "research/l-families/atlas/generalized/THETA_SOURCE_QUOTIENT_TENSOR_COHERENCE.md",
+      "sha256_lf": "3472b74946925ca4ac6a8f8fe80853d5a96ef0e2e52a5142ff2ba5ac3901c9bd"
+    },
+    {
+      "commit": "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+      "git_blob": "a184b4a0460d9450a23b3b3c15741a54700f9e8a",
+      "path": "research/l-families/atlas/generalized/theta_source_quotient_tensor_coherence.py",
+      "sha256_lf": "b04d4f8ca1088d39b1efef9aa8b6e412bd76590d3ba10b70f0a1be620faa5ed1"
+    },
+    {
+      "commit": "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+      "git_blob": "e51c72d319e61929e4b82c007c3568d82a328285",
+      "path": "research/l-families/atlas/generalized/theta_source_quotient_tensor_coherence.json",
+      "sha256_lf": "6413c704116108ab3f1a06400087b8154297ffe13f3631436a96b49502ee3419"
+    },
+    {
+      "commit": "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+      "git_blob": "4b94a34636da981d05c48fab8690eb93745d346b",
+      "path": "research/l-families/atlas/generalized/theta_source_quotient_tensor_coherence.sources.json",
+      "sha256_lf": "12ebd09865d1b184d08fd519a8801970457854d42f93789ecd69e2ddbb0d0f7a"
+    },
+    {
+      "commit": "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+      "git_blob": "2d59d62afcbdb2b35926cc9cf2ce420e7ba403ae",
+      "path": "tests/test_theta_source_quotient_tensor_coherence.py",
+      "sha256_lf": "a29dcc3059a3a1a7c9c9cd41ee7d62ee5033bf8b1628e2f59d07a278b60a8f32"
+    },
+    {
+      "commit": "67f88c148bb5914897cc13b6cbce61960a277cd1",
+      "git_blob": "f96926a2b075ef76adaa53d8235881a9874d1d3a",
+      "path": "research/l-families/atlas/generalized/THETA_POSITIVE_SOURCE_REAL_ZERO_FIREWALL.md",
+      "sha256_lf": "4937a44b9ce0cb2cd484c22471bc86af6453b4ebbc23ddf38ca303ace3f74abf"
+    }
+  ],
+  "references": [
+    {
+      "passage": "sectioniv argument principle and Rouche theorem; local persistence only",
+      "url": "https://dlmf.nist.gov/1.10"
+    }
+  ],
+  "remote_bytes_authenticated": false,
+  "schema": "theta_positive_source_real_zero_firewall-sources-v1"
+}
