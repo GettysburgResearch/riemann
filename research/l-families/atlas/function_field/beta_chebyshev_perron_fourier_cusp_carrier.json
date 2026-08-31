@@ -1,0 +1,144 @@
+{
+  "beta_source_correlation_estimate_proved": false,
+  "classification": "PASS_T108004_BETA_CHEBYSHEV_PERRON_FOURIER_CUSP_CARRIER",
+  "complex_cusp_extension_proved": true,
+  "cusp_rows": [
+    {
+      "finite": [
+        {
+          "absolute_error_to_limit": 0.7489227797405699,
+          "imag": -1.1342856843822635,
+          "n": 32,
+          "real": 0.8763047680673802
+        },
+        {
+          "absolute_error_to_limit": 0.6182861263759524,
+          "imag": -1.1845064056757222,
+          "n": 64,
+          "real": 0.9993532437656669
+        },
+        {
+          "absolute_error_to_limit": 0.5073882018925316,
+          "imag": -1.220560097740097,
+          "n": 128,
+          "real": 1.105706308839852
+        },
+        {
+          "absolute_error_to_limit": 0.41396000226122753,
+          "imag": -1.2459007660085424,
+          "n": 256,
+          "real": 1.1964957460696177
+        }
+      ],
+      "inverse_dual_error": 7.021666937153402e-16,
+      "lambda": 2.0,
+      "limit_imag": -1.2974907676384422,
+      "limit_real": 1.607228451370696,
+      "tau": 0.0
+    },
+    {
+      "finite": [
+        {
+          "absolute_error_to_limit": 0.7238837771594633,
+          "imag": -1.1038013998971745,
+          "n": 32,
+          "real": 0.6883789931793747
+        },
+        {
+          "absolute_error_to_limit": 0.6019250474534861,
+          "imag": -1.1605501764479151,
+          "n": 64,
+          "real": 0.8002162269551087
+        },
+        {
+          "absolute_error_to_limit": 0.49675703625552664,
+          "imag": -1.2011525143495394,
+          "n": 128,
+          "real": 0.8994365300558218
+        },
+        {
+          "absolute_error_to_limit": 0.4070913886103483,
+          "imag": -1.2295526902782963,
+          "n": 256,
+          "real": 0.985710204670606
+        }
+      ],
+      "inverse_dual_error": 4.965068306494546e-16,
+      "lambda": 2.0,
+      "limit_imag": -1.2867454270718581,
+      "limit_real": 1.3887640342501846,
+      "tau": 1.0
+    },
+    {
+      "finite": [
+        {
+          "absolute_error_to_limit": 0.6572764752518201,
+          "imag": -0.9333202653416045,
+          "n": 32,
+          "real": 0.2867413955606926
+        },
+        {
+          "absolute_error_to_limit": 0.5590231903337238,
+          "imag": -0.9909810931724059,
+          "n": 64,
+          "real": 0.37296303384891794
+        },
+        {
+          "absolute_error_to_limit": 0.46936049160541155,
+          "imag": -1.0325882366036714,
+          "n": 128,
+          "real": 0.4556999480247793
+        },
+        {
+          "absolute_error_to_limit": 0.3896938303405474,
+          "imag": -1.0618331734821538,
+          "n": 256,
+          "real": 0.5314842125864395
+        }
+      ],
+      "inverse_dual_error": 2.482534153247273e-16,
+      "lambda": 2.0,
+      "limit_imag": -1.1209501736439822,
+      "limit_real": 0.9166678852639736,
+      "tau": 2.0
+    }
+  ],
+  "dual_sample": {
+    "imag": -0.6614083915564992,
+    "real": 1.362031708382364
+  },
+  "evenness_error": 0.0,
+  "exact_dual_lag_carrier_proved": true,
+  "finite_checks": 23,
+  "frequency_split_identity_proved": true,
+  "natural_frequency_window": "t=tau*n^(1/3)",
+  "natural_log_ratio_window": "log(m/n)=v*n^(-1/3)",
+  "new_zero_free_region_proved": false,
+  "proof_object_sha256": "dea01a840209fcd24106eacde3d9187cf94a59b91761d09c3d20f318041aa269",
+  "rh_established": false,
+  "schema": "riemann.t108004.beta-chebyshev-perron-fourier-cusp.v1",
+  "split_rows": [
+    {
+      "absolute_error": 6.582812753581314e-17,
+      "frequency": 0.75,
+      "order": 3,
+      "z_imag": 4.0,
+      "z_real": 3.0
+    },
+    {
+      "absolute_error": 6.754877118031842e-16,
+      "frequency": 1.25,
+      "order": 7,
+      "z_imag": 6.0,
+      "z_real": 2.5
+    },
+    {
+      "absolute_error": 7.497199618271271e-16,
+      "frequency": 2.0,
+      "order": 12,
+      "z_imag": 3.0,
+      "z_real": 4.0
+    }
+  ],
+  "two_parameter_perron_fourier_cusp_proved": true
+}

@@ -1,0 +1,154 @@
+{
+  "chiral_inverse_fourier_rows": [
+    {
+      "absolute_error": 1.7281005654554056e-14,
+      "directed_profile": {
+        "imag": -1.297490767638422,
+        "magnitude": 2.0655908566321504,
+        "real": 1.6072284513706818
+      },
+      "lambda": 2.0,
+      "one_sided_inverse_fourier": {
+        "imag": -1.2974907676384373,
+        "magnitude": 2.0655908566321663,
+        "real": 1.6072284513706898
+      },
+      "tau": 0.0
+    },
+    {
+      "absolute_error": 2.216223186218465e-14,
+      "directed_profile": {
+        "imag": -1.8200983457583755,
+        "magnitude": 2.1440216841777864,
+        "real": 1.133168563803363
+      },
+      "lambda": 2.0,
+      "one_sided_inverse_fourier": {
+        "imag": -1.820098345758362,
+        "magnitude": 2.1440216841777655,
+        "real": 1.1331685638033455
+      },
+      "tau": 1.0
+    },
+    {
+      "absolute_error": 1.0223701381680905e-14,
+      "directed_profile": {
+        "imag": -1.8326303548349232,
+        "magnitude": 1.8666995276723288,
+        "real": 0.35501142115391005
+      },
+      "lambda": 2.0,
+      "one_sided_inverse_fourier": {
+        "imag": -1.8326303548349148,
+        "magnitude": 1.8666995276723217,
+        "real": 0.3550114211539158
+      },
+      "tau": 2.0
+    }
+  ],
+  "chiral_l1_norm_lambda_two": 14.590250444496641,
+  "classification": "PASS_T108006_BETA_CHEBYSHEV_CHIRAL_CUSP_SOURCE_CONVOLUTION",
+  "direct_lambda_zero_nonzero_tau_boundary_theorem_proved": false,
+  "directed_boundary_constant": {
+    "imag": 1.3862214864600837,
+    "magnitude": 1.6006706967283448,
+    "real": 0.8003353483641723
+  },
+  "directed_boundary_rows": [
+    {
+      "absolute_error_to_limit": 0.5079772003626146,
+      "n": 32,
+      "scaled_directed_boundary_carrier": {
+        "imag": 0.8782443310272559,
+        "magnitude": 1.1880689525815586,
+        "real": 0.800121697685252
+      }
+    },
+    {
+      "absolute_error_to_limit": 0.4031431698278462,
+      "n": 64,
+      "scaled_directed_boundary_carrier": {
+        "imag": 0.9830783253368413,
+        "magnitude": 1.2676141262084812,
+        "real": 0.8002515724546894
+      }
+    },
+    {
+      "absolute_error_to_limit": 0.31996695004397496,
+      "n": 128,
+      "scaled_directed_boundary_carrier": {
+        "imag": 1.0662545381170718,
+        "magnitude": 1.3331851337620455,
+        "real": 0.8003023558811212
+      }
+    },
+    {
+      "absolute_error_to_limit": 0.2539562657271309,
+      "n": 256,
+      "scaled_directed_boundary_carrier": {
+        "imag": 1.1322652210671962,
+        "magnitude": 1.3865570110889414,
+        "real": 0.800322318920041
+      }
+    },
+    {
+      "absolute_error_to_limit": 0.20156486908024113,
+      "n": 512,
+      "scaled_directed_boundary_carrier": {
+        "imag": 1.1846566174457571,
+        "magnitude": 1.4296641983222351,
+        "real": 0.8003301935490977
+      }
+    }
+  ],
+  "exceptional_67_dual_shift_formula_proved": true,
+  "exceptional_dual_rows": [
+    {
+      "dual_l1_difference_bound": 0.0007941666496850127,
+      "exceptional_coefficient_magnitude": 2.721529168106599e-05,
+      "local_shift": 8.409385238781931,
+      "n": 8
+    },
+    {
+      "dual_l1_difference_bound": 1.185307469232787e-05,
+      "exceptional_coefficient_magnitude": 4.0619838329949236e-07,
+      "local_shift": 12.614077858172898,
+      "n": 27
+    },
+    {
+      "dual_l1_difference_bound": 1.7691152717774718e-07,
+      "exceptional_coefficient_magnitude": 6.062662437305857e-09,
+      "local_shift": 16.81877047756386,
+      "n": 64
+    },
+    {
+      "dual_l1_difference_bound": 2.6404705470070825e-09,
+      "exceptional_coefficient_magnitude": 9.048749906426685e-11,
+      "local_shift": 21.023463096954824,
+      "n": 125
+    }
+  ],
+  "exceptional_numerator_max_error": 2.220446049251323e-16,
+  "finite_checks": 58,
+  "global_source_pairing": {
+    "beta_evenness_max_error": 0.0,
+    "directed_face_sum_error": 2.5018537765542006e-17,
+    "vertical_coordinate_max_error": 7.021666937153402e-16
+  },
+  "local_source_pairing": {
+    "beta_evenness_max_error": 0.0,
+    "chiral_reduction_sum_error": 7.105427357601002e-15
+  },
+  "new_zero_free_region_proved": false,
+  "one_sided_cubic_log_ratio_carrier_proved": true,
+  "outer_frequency_control_proved": false,
+  "perron_boundary_shift_proved": false,
+  "positive_lambda_exceptional_channel_decoupling_proved": true,
+  "proof_object_sha256": "d8936218b29b4b53f9bb6c12cab5fcdc817f21c917504f4bee7aaa65fd639b06",
+  "reflected_vertical_beta_convolution_proved": true,
+  "rh_established": false,
+  "schema": "riemann.t108006.beta-chebyshev-chiral-cusp-source.v1",
+  "signed_reciprocal_zeta_correlation_estimate_proved": false,
+  "symmetric_cusp_reduced_to_one_chirality_inside_source": true,
+  "two_face_source_pairing_reduced_to_one_directed_face": true
+}

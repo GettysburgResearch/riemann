@@ -1,0 +1,384 @@
+{
+  "beta_pair_evenness_oriented_reduction_proved": true,
+  "classification": "PASS_T108008_BETA_CHIRAL_SOURCE_CAUCHY_DECOMPOSITION",
+  "diagonal_beta_square_euler_product_proved": true,
+  "diagonal_has_no_cusp_amplification_proved": true,
+  "direct_lambda_zero_tau_nonzero_boundary_proved": false,
+  "directed_orientation_fixture": {
+    "distributional_evaluation": "H(-log(m/k))",
+    "fourier_convention": "D(tau)=(2pi)^-1 int H(v) exp(i tau v) dv",
+    "negative_carrier_support_selects": "m>k",
+    "rows": [
+      {
+        "carrier_argument": 0.5108256237659907,
+        "denominator": 5,
+        "log_ratio": -0.5108256237659907,
+        "numerator": 3,
+        "selected_by_negative_carrier_support": false
+      },
+      {
+        "carrier_argument": -0.5108256237659907,
+        "denominator": 3,
+        "log_ratio": 0.5108256237659907,
+        "numerator": 5,
+        "selected_by_negative_carrier_support": true
+      },
+      {
+        "carrier_argument": -0.0,
+        "denominator": 7,
+        "log_ratio": 0.0,
+        "numerator": 7,
+        "selected_by_negative_carrier_support": false
+      },
+      {
+        "carrier_argument": -1.7047480922384253,
+        "denominator": 2,
+        "log_ratio": 1.7047480922384253,
+        "numerator": 11,
+        "selected_by_negative_carrier_support": true
+      }
+    ],
+    "source_phase": "exp(i tau log(m/k))"
+  },
+  "duplicate67_cross_scale_field_identity_proved": true,
+  "edge_channel_rows": [
+    {
+      "n": 32,
+      "pole_error": 0.0,
+      "sigma": 6.3496042078727974
+    },
+    {
+      "n": 64,
+      "pole_error": 0.0,
+      "sigma": 7.999999999999999
+    },
+    {
+      "n": 128,
+      "pole_error": 0.0,
+      "sigma": 10.079368399158984
+    }
+  ],
+  "exact_cauchy_transfer_proved": true,
+  "exceptional_euler_fixture": {
+    "direct": [
+      87399338,
+      60453363
+    ],
+    "exceptional_local_factor": [
+      20169078,
+      20151121
+    ],
+    "power": 2,
+    "product": [
+      87399338,
+      60453363
+    ]
+  },
+  "finite_checks": 76,
+  "finite_jump_spectrum_inserted_before_source_norm": true,
+  "first_edge_two_cauchy_channels_proved": true,
+  "new_zero_free_region_proved": false,
+  "outer_frequency_tails_paid": false,
+  "pair_transfer_fixture": {
+    "diagonal": 18.0,
+    "off_diagonal_imag": -2.220446049250313e-16,
+    "off_diagonal_real": -7.529742080657456,
+    "oriented_off_diagonal_real": -7.529742080657456,
+    "total_imag": -2.220446049250313e-16,
+    "total_real": 10.470257919342544
+  },
+  "partial_fraction_rows": [
+    {
+      "absolute_error": 0.0
+    },
+    {
+      "absolute_error": 1.5515838457795457e-17
+    },
+    {
+      "absolute_error": 2.083474391183281e-17
+    }
+  ],
+  "proof_object_sha256": "eefc82d2de02d280490e11abf2848d2c7ee8ba32e82603fe2adb2580b5f6d4ea",
+  "rational_cell_fixture": {
+    "boundaries": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "energy": [
+      85,
+      4
+    ],
+    "interval_count": 14,
+    "jump_masses": [
+      1,
+      -2,
+      2,
+      -1
+    ],
+    "samples": [
+      {
+        "field": [
+          2,
+          1
+        ],
+        "left": [
+          0,
+          1
+        ],
+        "right": [
+          1,
+          8
+        ]
+      },
+      {
+        "field": [
+          1,
+          1
+        ],
+        "left": [
+          1,
+          8
+        ],
+        "right": [
+          1,
+          4
+        ]
+      },
+      {
+        "field": [
+          -3,
+          1
+        ],
+        "left": [
+          1,
+          4
+        ],
+        "right": [
+          3,
+          8
+        ]
+      },
+      {
+        "field": [
+          -1,
+          1
+        ],
+        "left": [
+          3,
+          8
+        ],
+        "right": [
+          1,
+          2
+        ]
+      },
+      {
+        "field": [
+          2,
+          1
+        ],
+        "left": [
+          1,
+          2
+        ],
+        "right": [
+          3,
+          4
+        ]
+      },
+      {
+        "field": [
+          0,
+          1
+        ],
+        "left": [
+          3,
+          4
+        ],
+        "right": [
+          7,
+          8
+        ]
+      },
+      {
+        "field": [
+          -4,
+          1
+        ],
+        "left": [
+          7,
+          8
+        ],
+        "right": [
+          1,
+          1
+        ]
+      },
+      {
+        "field": [
+          -6,
+          1
+        ],
+        "left": [
+          1,
+          1
+        ],
+        "right": [
+          9,
+          8
+        ]
+      },
+      {
+        "field": [
+          -1,
+          1
+        ],
+        "left": [
+          9,
+          8
+        ],
+        "right": [
+          5,
+          4
+        ]
+      },
+      {
+        "field": [
+          6,
+          1
+        ],
+        "left": [
+          5,
+          4
+        ],
+        "right": [
+          3,
+          2
+        ]
+      },
+      {
+        "field": [
+          1,
+          1
+        ],
+        "left": [
+          3,
+          2
+        ],
+        "right": [
+          13,
+          8
+        ]
+      },
+      {
+        "field": [
+          -3,
+          1
+        ],
+        "left": [
+          13,
+          8
+        ],
+        "right": [
+          15,
+          8
+        ]
+      },
+      {
+        "field": [
+          -1,
+          1
+        ],
+        "left": [
+          15,
+          8
+        ],
+        "right": [
+          2,
+          1
+        ]
+      },
+      {
+        "field": [
+          1,
+          1
+        ],
+        "left": [
+          2,
+          1
+        ],
+        "right": [
+          9,
+          4
+        ]
+      }
+    ]
+  },
+  "rh_established": false,
+  "scale_filter_rows": [
+    {
+      "absolute_error": 0.0,
+      "cap": 80,
+      "t": 0.0
+    },
+    {
+      "absolute_error": 2.7755575615628914e-17,
+      "cap": 80,
+      "t": 0.7
+    },
+    {
+      "absolute_error": 0.0,
+      "cap": 80,
+      "t": 2.0
+    },
+    {
+      "absolute_error": 3.3306690738754696e-16,
+      "cap": 134,
+      "t": 0.0
+    },
+    {
+      "absolute_error": 2.482534153247273e-16,
+      "cap": 134,
+      "t": 0.7
+    },
+    {
+      "absolute_error": 3.1401849173675503e-16,
+      "cap": 134,
+      "t": 2.0
+    },
+    {
+      "absolute_error": 4.440892098500626e-16,
+      "cap": 256,
+      "t": 0.0
+    },
+    {
+      "absolute_error": 2.618455766672135e-16,
+      "cap": 256,
+      "t": 0.7
+    },
+    {
+      "absolute_error": 4.965068306494546e-16,
+      "cap": 256,
+      "t": 2.0
+    }
+  ],
+  "schema": "riemann.t108008.beta-chiral-source-cauchy-decomposition.v1",
+  "signed_chebyshev_cell_current_identity_proved": true,
+  "signed_off_diagonal_cusp_correlation_estimate_proved": false,
+  "t108006_chiral_source_front_door_authenticated": true,
+  "t108006_primitive_pair_orientation_sign_corrected": true
+}

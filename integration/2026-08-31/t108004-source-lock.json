@@ -1,0 +1,42 @@
+{
+  "beta_source_correlation_estimate_proved": false,
+  "continuation_pr": 775,
+  "new_zero_free_region_proved": false,
+  "prior_checkpoint_commit": "9e4bd5ba7b4efb08bb114b0689c823e646e8d6b6",
+  "repository": "gfreund123/riemann",
+  "rh_established": false,
+  "schema": "riemann.t108004.source-lock.v1",
+  "sources": [
+    {
+      "blob": "9ffa128b9d64b981499e81c25d39dd9f8c7dac96",
+      "commit": "9e4bd5ba7b4efb08bb114b0689c823e646e8d6b6",
+      "path": "research/l-families/atlas/function_field/BETA_CHEBYSHEV_CUBIC_CUSP_EDGE_PROFILE.md"
+    },
+    {
+      "blob": "db42aa1ac15fa2fcdd7c7665654cb98398900e4f",
+      "commit": "9e4bd5ba7b4efb08bb114b0689c823e646e8d6b6",
+      "path": "research/l-families/atlas/function_field/beta_chebyshev_cubic_cusp_edge_profile.py"
+    },
+    {
+      "blob": "b955919e40a81febb0d74bed30990efaa63eaf94",
+      "commit": "9e4bd5ba7b4efb08bb114b0689c823e646e8d6b6",
+      "path": "research/l-families/atlas/function_field/beta_chebyshev_cubic_cusp_edge_profile.json"
+    },
+    {
+      "blob": "cdbc61875c084a7680842a3fddb064380a82f0ed",
+      "commit": "9e4bd5ba7b4efb08bb114b0689c823e646e8d6b6",
+      "path": "tests/test_beta_chebyshev_cubic_cusp_edge_profile.py"
+    },
+    {
+      "blob": "e7959b8788b8a374920aa53bcafd1fb28cda3b72",
+      "commit": "d79692ece0b7604ad309c459f565b24e9926f5c5",
+      "path": "research/l-families/atlas/function_field/FFPS_BANDPASS_ASSEMBLED_PERRON_LEAKAGE.md"
+    },
+    {
+      "blob": "52023bb4527a32a2c9983fdd25707da3361242e8",
+      "commit": "d79692ece0b7604ad309c459f565b24e9926f5c5",
+      "path": "research/l-families/atlas/function_field/ffps_bandpass_assembled_perron_leakage.py"
+    }
+  ],
+  "theorem_scope": "exact frequency split, two-parameter first-edge Perron-Fourier cusp, and its cubic-phase log-ratio carrier"
+}

@@ -1,0 +1,76 @@
+{
+  "chiral_primitive_pair_orientation_sign_corrected": true,
+  "chiral_source_front_door_authenticated": true,
+  "continuation_pr": 775,
+  "direct_lambda_zero_tau_nonzero_boundary_proved": false,
+  "new_zero_free_region_proved": false,
+  "outer_frequency_tails_paid": false,
+  "prior_checkpoint_commit": "bbfb9761c2b4bb37e35342e8d9279895f8d44be0",
+  "repository": "gfreund123/riemann",
+  "rh_established": false,
+  "schema": "riemann.t108008.source-lock.v1",
+  "signed_off_diagonal_cusp_correlation_estimate_proved": false,
+  "sources": [
+    {
+      "blob": "a47efcd778e9d4332f3d534df41e64679f214dc2",
+      "commit": "bbfb9761c2b4bb37e35342e8d9279895f8d44be0",
+      "path": "README_108006.md"
+    },
+    {
+      "blob": "f63274b3f938867b6fb9f94c363f3d07be7c7cbe",
+      "commit": "bbfb9761c2b4bb37e35342e8d9279895f8d44be0",
+      "path": "integration/2026-08-31/t108006-source-lock.json"
+    },
+    {
+      "blob": "17b2bb796d5217b7939e784b5d5f28c7f9d99b90",
+      "commit": "bbfb9761c2b4bb37e35342e8d9279895f8d44be0",
+      "path": "research/l-families/atlas/function_field/BETA_CHEBYSHEV_CHIRAL_CUSP_SOURCE_CONVOLUTION.md"
+    },
+    {
+      "blob": "0a6aa29a4adf82fd989823a4561422b29f4d320e",
+      "commit": "bbfb9761c2b4bb37e35342e8d9279895f8d44be0",
+      "path": "research/l-families/atlas/function_field/beta_chebyshev_chiral_cusp_source_convolution.py"
+    },
+    {
+      "blob": "00c7d8b17ae1572795943b98dba6a29d27eefce1",
+      "commit": "bbfb9761c2b4bb37e35342e8d9279895f8d44be0",
+      "path": "research/l-families/atlas/function_field/beta_chebyshev_chiral_cusp_source_convolution.json"
+    },
+    {
+      "blob": "ec6a3f7e8352b67bbcd351472f5dfcdffd501e3f",
+      "commit": "bbfb9761c2b4bb37e35342e8d9279895f8d44be0",
+      "path": "tests/test_beta_chebyshev_chiral_cusp_source_convolution.py"
+    },
+    {
+      "blob": "f46a7b283061ad35c38a5060a99c5098d4c14aff",
+      "commit": "b41a4e4b9fd518dfb97229a6a94346b2d49e528f",
+      "path": "research/l-families/atlas/function_field/BETA_CHEBYSHEV_PERRON_FOURIER_CUSP_CARRIER.md"
+    },
+    {
+      "blob": "027a306e69f65661fbf44de4ee503dc03004a315",
+      "commit": "b41a4e4b9fd518dfb97229a6a94346b2d49e528f",
+      "path": "research/l-families/atlas/function_field/beta_chebyshev_perron_fourier_cusp_carrier.py"
+    },
+    {
+      "blob": "216de6ac6230e99b233fa7af913c7daf3952a09a",
+      "commit": "b41a4e4b9fd518dfb97229a6a94346b2d49e528f",
+      "path": "research/l-families/atlas/function_field/beta_chebyshev_perron_fourier_cusp_carrier.json"
+    },
+    {
+      "blob": "21ef8f5215ca349f0efffd52dca1543ef6d988d6",
+      "commit": "d79692ece0b7604ad309c459f565b24e9926f5c5",
+      "path": "research/l-families/atlas/function_field/FFPS_ASSEMBLED_BETA_PERRON_FOURIER_BRIDGE.md"
+    },
+    {
+      "blob": "2dbe93508eadcc9ba9ed15a5f64d02f13c728ef3",
+      "commit": "d79692ece0b7604ad309c459f565b24e9926f5c5",
+      "path": "research/l-families/atlas/function_field/ffps_assembled_beta_perron_fourier_bridge.py"
+    },
+    {
+      "blob": "1223ab8049492f58cf5e64a25f80d5799aa165f7",
+      "commit": "d79692ece0b7604ad309c459f565b24e9926f5c5",
+      "path": "research/l-families/atlas/function_field/ffps_assembled_beta_perron_fourier_bridge.json"
+    }
+  ],
+  "theorem_scope": "authenticated chiral source reduction, correction of the primitive-pair orientation sign under the stated Fourier convention, exact Cauchy transfer, oriented diagonal/off-diagonal decomposition, finite jump-spectrum insertion, and signed multiplicative-cell coordinates"
+}
