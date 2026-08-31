@@ -1,4 +1,64 @@
-# Six-hour native-source pass: seventh checkpoint
+# Six-hour native-source pass: eighth checkpoint
+
+The pass remains active until at least 17:41:25+03 on 31 August 2026.
+Completed focused final-packet controls now total 403 per interpreter mode:
+the previous 321, 32 original/final physical-tail controls, 14 H450 controls,
+18 extended-tail controls and 18 event-campaign controls. Their required
+write/check/optimized-check runs passed. Target event panels and new
+replacement-minor experiments are not included by implication.
+
+The complete attainable three-moment body of a single monotone pair
+path is now proved and constructively realized at
+6aa24e9c81c5a618ae7b740872f48266a5a86892. The sharp upper envelope joins
+the earlier lower envelope; every equality profile is classified, and an
+explicit interpolation realizes each admissible triple by one actual
+path. This also realizes the complete two-coordinate current, retaining
+endpoint constants. It is not a retained-gamma decoder or a physical
+energy optimum.
+
+A decisive obstruction is frozen at
+78918a6f3297d4c88b3b3c42140eba4c0f11778e. The specific twenty-row physical
+minor becomes singular at infinite horizon: its eight pure-prime rows
+collapse to at most three, so the limiting rank is at most 15. At least
+five singular values are O(H^(-1/2)), its determinant is O(H^(-5/2)),
+and its inverse norm is bounded below by a constant times sqrt(H)
+whenever it is invertible. Therefore no honest strict uniform Neumann
+tail bound can ever certify this fixed selection at any anchor. This
+does not contradict finite nonsingularity or faithfulness of the entire
+infinite observation.
+
+The exact 2^48 experiment is retained at
+987ccb82d0bf097942389027c6e785925847e6a7, proof
+aa3f9ad57373bb321996f9e5615652ec5322ef8e0147af5fd18c51cf93f0f2a1.
+Its reproducible comparison bound is about 1396.6011279204 and remains
+UNKNOWN_TAIL_NOT_CONTRACTIVE. The new singular-limit proof explains why
+merely increasing the cutoff cannot rescue this selected-minor route.
+Additional coarse rational diagnostics remain separately pending.
+
+A constructive direction is now justified at
+e12f2f7865809281f6fed50f5b091fccfd996864. Positive one-sided Fourier
+coefficients with every prime present distinguish the full 4^r tensor
+source. Some four positive shifts per prime yield an invertible
+Kronecker evaluation matrix; some twenty resulting rows distinguish
+the actual three-prime curvature source. This theorem is existential:
+no particular shifts, effective horizon or stable physical decoder
+are claimed yet. A separate fixed-shift experiment is being prepared.
+
+The event-by-event campaign is calibrated and frozen at
+390b94a5b5a1f87d69cca71ef258df5d74d67ffd, with proof
+1637bcc69d4c714818587af8d29cdb0e16a65c660692a47d6b02afde5122f269.
+It can still certify finite intervals for the old minor; the new
+limiting obstruction rules out combining it with that minor's strict
+all-future tail premise. No unexecuted target panel is claimed here.
+
+The H450 global path optimum and its complete original-kernel replay
+have now passed all final checks and fourteen controls in both modes.
+The previously proved source representation laws, Reynolds obstruction
+and sharp path-image stability remain in force. RAM safety limits are
+unchanged and scientific workers run one at a time. No all-prime,
+retained-gamma, principal-member, RH or GRH conclusion is asserted.
+
+## Seventh checkpoint history
 
 The pass remains active until at least 17:41:25+03 on 31 August 2026.
 The completed final-packet count remains 321 focused tests per
