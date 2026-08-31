@@ -253,8 +253,28 @@ POINTS = {
 }
 
 
+ENTRY = {"ord6_a1": 7, "ord8_a2m2": 9, "ord5_golden": 11,
+         "ord10_golden": 11, "ord12_a2m3": 13, "ord9_2cos2pi9": 19,
+         "ord18_2cospi9": 19, "ord20_2cospi10": 21,
+         "ord11_2cos2pi11": 23, "ord13_2cos2pi13": 27}
+
+
+def entry_z_equals_a(K, m):
+    """(z - a)^2 | M_m over K?  (the Theorem's collision-at-the-trace
+    statement: M(a) = M'(a) = 0.)"""
+    a = K.gen
+    M, nu = defect_and_spectrum(K, m)
+    val, dval, p = K.zero, K.zero, K.one
+    for j in range(nu + 1):
+        val = K.add(val, K.mul(M[j], p))
+        if j + 1 <= nu:
+            dval = K.add(dval, K.scal(Fr(j + 1), K.mul(M[j + 1], p)))
+        p = K.mul(p, a)
+    return K.is_zero(val) and K.is_zero(dval)
+
+
 def main():
-    out = {}
+    out = {"table": {}, "entry_collision_at_z_equals_a": {}}
     for m in range(5, 28):
         t0 = time.time()
         row = {}
@@ -266,10 +286,16 @@ def main():
                 continue
             M, nu = r
             row[name] = bool(disc_is_zero(K, M, nu)) if nu >= 1 else False
-        out[str(m)] = row
+        out["table"][str(m)] = row
         print(f"m={m} ({time.time()-t0:.1f}s) {row}", flush=True)
         json.dump(out, open("matrix/torsion_field_probe.json", "w"),
                   indent=1)
+    for name, m in ENTRY.items():
+        ok = entry_z_equals_a(NF(POINTS[name]), m)
+        out["entry_collision_at_z_equals_a"][name] = {"m": m, "ok": ok}
+        print(f"entry z=a check {name} m={m}: {ok}", flush=True)
+    json.dump(out, open("matrix/torsion_field_probe.json", "w"),
+              indent=1)
 
 
 if __name__ == "__main__":

@@ -2,10 +2,15 @@
 
 ```text
 Claim ID: O-108512
-Status:   OBSERVATION (each stated factorization/vanishing is an exact,
-          machine-verified polynomial fact for the named m; the ENTRY
-          LAW is a pattern over m <= 15 with THREE held-out rounds —
-          seven predictions, zero misses; the mechanism is OPEN)
+Status:   OBSERVATION, half-CONVERTED: the entry law's FORWARD half is
+          now PROVED as T-108513 (collisions forced from m = 2R+1,
+          first collision at z = a, the m = 2R near-miss and the a=0
+          m=6 gap derived — mechanism: class crowding of the Sym^m
+          weight monomials mod the torsion order); the CONVERSE (no
+          accidental collision below threshold) remains empirical,
+          certified exact at ten points for every sub-threshold m
+          (torsion_field_probe.json). Each stated factorization/
+          vanishing is an exact machine-verified polynomial fact.
 Created:  2026-08-31 (pass 3; grows out of T-108509)
 Programme: #764 (moduli of local data; resonances of the defect tower)
 Machine:  matrix/spectrum_collision_loci.json (m = 5..11; from
