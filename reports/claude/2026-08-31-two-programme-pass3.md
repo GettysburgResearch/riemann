@@ -108,8 +108,13 @@ from m = 2R on; at m = 2R the triple lands on the boundary class
 at m = 2R+1 on c = +-1, forcing two spectrum points to collide AT THE
 ORIGINAL TRACE z = a ((z-a)^2 | M_{2R+1}, machine-confirmed 10/10);
 the a = 0 m = 6 gap and its m = 8 return are derived by the same
-counting. The CONVERSE (no accidental sub-threshold collision) stays
-empirical — the deposited next problem.
+counting. The CONVERSE was then ALSO PROVED for all m <= 15 for every
+torsion point of every order (monic sieve: torsion minimal polynomials
+are monic-integral, and the exact factorizations of disc_z M_m(a,1)
+show the non-torsion factor has non-unit leading coefficient at every
+m in range — disc_slice_factor_lcs.json), making the entry law a
+complete two-sided theorem in that range; the m >= 16 converse is
+reduced to a checkable normal form per m.
 
 ## Process notes (honesty trail)
 
