@@ -1,0 +1,12 @@
+{
+  "all_passed": true,
+  "checks": {
+    "loewner_difference_rows": 75,
+    "stieltjes_loewner_grams": {
+      "cell_rows": 50,
+      "square_rows": 8
+    }
+  },
+  "schema": "xi-architecture-e-loewner-checks-v1",
+  "scope": "finite exact rational divided-difference and discrete-Stieltjes checks only; no Xi, zeta-zero, PF-infinity, or RH certification"
+}
