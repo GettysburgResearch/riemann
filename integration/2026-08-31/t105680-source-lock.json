@@ -1,0 +1,27 @@
+{
+  "claim": "T-105680",
+  "branch": "research/gpt56-pro/105660-cauchy-translation-first-contact",
+  "checkpoint_parent": "8331f8dca53469f6d4e43fee8fe5184883524b50",
+  "sources": [
+    {
+      "commit": "8331f8dca53469f6d4e43fee8fe5184883524b50",
+      "path": "claims/theorems/T-105670-two-ended-all-rank-cauchy-translation-frontier.md"
+    },
+    {
+      "commit": "9328abfd96d26467176450a527d87cca9aa937eb",
+      "path": "claims/refutations/R-105660-multiplicative-cauchy-concavity-fails-in-rank-two.md"
+    },
+    {
+      "commit": "14f3ef3cb40854fb559deb2528932e5113f72038",
+      "path": "claims/theorems/T-105655-cauchy-translation-trace-frontier.md"
+    }
+  ],
+  "replay": "experiments/X-105680-cauchy-determinant-extension/results/verification.json",
+  "open": [
+    "REC105681 return compensation",
+    "arbitrary-rank trace CTI",
+    "cofinal Xi passage",
+    "pointwise Xi localization",
+    "Riemann Hypothesis"
+  ]
+}
