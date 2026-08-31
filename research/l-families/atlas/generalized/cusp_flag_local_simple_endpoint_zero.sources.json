@@ -1,0 +1,92 @@
+{
+  "authoring_base": "98b4058ac29ba88cf993d7a3ce67579fab0c7844",
+  "frozen_sources": [
+    {
+      "commit": "98b4058ac29ba88cf993d7a3ce67579fab0c7844",
+      "git_blob": "3e6a8d13959a69bf7f261747f65ea5e52f3d82ff",
+      "kind": "native_all_weight_real_endpoint",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_ALL_WEIGHT_ENDPOINT_SEPARATION.md",
+      "sha256_lf": "920a7fcf1e63de46e902846b747bed2b7da5defbd34e9fec9b98a61866cb1d2d"
+    },
+    {
+      "commit": "98b4058ac29ba88cf993d7a3ce67579fab0c7844",
+      "git_blob": "1f1ec4ba008f86de0c4ad553748aabe98cd38bef",
+      "kind": "native_all_weight_real_endpoint",
+      "path": "research/l-families/atlas/generalized/cusp_flag_all_weight_endpoint_separation.py",
+      "sha256_lf": "04c2f8ac0b93be7d7621bcab8284fab63de5987e18f86e4e204107483fac782b"
+    },
+    {
+      "commit": "98b4058ac29ba88cf993d7a3ce67579fab0c7844",
+      "git_blob": "4174d3423c2b901f09fc320a51afbda32c5ad1f9",
+      "kind": "native_all_weight_real_endpoint",
+      "path": "research/l-families/atlas/generalized/cusp_flag_all_weight_endpoint_separation.json",
+      "sha256_lf": "0cfd9a8742b4f9ef9eb503e6a818a87ecb27774989403f9a3f07aff49aefcf23"
+    },
+    {
+      "commit": "98b4058ac29ba88cf993d7a3ce67579fab0c7844",
+      "git_blob": "1c07e50b1a25bdeed5c98a536ce561c383c174c1",
+      "kind": "native_all_weight_real_endpoint",
+      "path": "research/l-families/atlas/generalized/cusp_flag_all_weight_endpoint_separation.sources.json",
+      "sha256_lf": "6acf346bf72e6323dea4fd4b4f3e4ae137e85f7e2299409fc24226d688b06349"
+    },
+    {
+      "commit": "98b4058ac29ba88cf993d7a3ce67579fab0c7844",
+      "git_blob": "4b7222beb363d83e2468c72aae757a835e5c2bfc",
+      "kind": "native_all_weight_real_endpoint",
+      "path": "tests/test_cusp_flag_all_weight_endpoint_separation.py",
+      "sha256_lf": "326b7cd43f7e77c264513e245c2fab6efeab95734bd2f713c9a7edc9efac66fe"
+    },
+    {
+      "commit": "27496745df9dd49fcde17699d333a54cf8620772",
+      "git_blob": "c95b70b98052c9b608ab15cd7adae39edab55363",
+      "kind": "native_endpoint_analytic_bounds",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_EFFECTIVE_ENDPOINT_SEPARATION.md",
+      "sha256_lf": "55ed2486b59066ec825efcf2beabb47da9b685f7891c1824f794733001b73941"
+    },
+    {
+      "commit": "27496745df9dd49fcde17699d333a54cf8620772",
+      "git_blob": "7e7bed2c227e58a7c27e69a8ae3bf70e9805393d",
+      "kind": "native_endpoint_analytic_bounds",
+      "path": "research/l-families/atlas/generalized/cusp_flag_effective_endpoint_separation.py",
+      "sha256_lf": "21f898a0944c13cf25a973c290f27b4703363f7d626922ad391c56ec625e1ce5"
+    },
+    {
+      "commit": "27496745df9dd49fcde17699d333a54cf8620772",
+      "git_blob": "fd2ec70a97d1aff5b2a878dae30ef02cb4982e94",
+      "kind": "native_endpoint_analytic_bounds",
+      "path": "research/l-families/atlas/generalized/cusp_flag_effective_endpoint_separation.json",
+      "sha256_lf": "45bff65cecca10a128efa142e29b6281ce81d3490e9ebceec3bcf961ecbc8b2b"
+    },
+    {
+      "commit": "27496745df9dd49fcde17699d333a54cf8620772",
+      "git_blob": "0e6a9c3aabb80def9638192f6af7a40b39f027ff",
+      "kind": "native_endpoint_analytic_bounds",
+      "path": "research/l-families/atlas/generalized/cusp_flag_effective_endpoint_separation.sources.json",
+      "sha256_lf": "9049ba583f6f1e489726576bbc3e787e31b6291db3bb3bd68be6943cef7938fb"
+    },
+    {
+      "commit": "27496745df9dd49fcde17699d333a54cf8620772",
+      "git_blob": "5b411d018ad3b6f88757a01e1b7e12e5f7a1d173",
+      "kind": "native_endpoint_analytic_bounds",
+      "path": "tests/test_cusp_flag_effective_endpoint_separation.py",
+      "sha256_lf": "a76a841fabad63f85f4c3156cf1aad2ddaf91468ec9b479325e768c69b5c1904"
+    }
+  ],
+  "primary_analytic_references": [
+    "https://dlmf.nist.gov/10.32.E9",
+    "https://dlmf.nist.gov/10.39.E2",
+    "https://terrytao.wordpress.com/2016/10/11/math-246a-notes-4-singularities-of-holomorphic-functions/"
+  ],
+  "primitive_contract": {
+    "AW": "real compact asymptotic12/288; six actual classes; no inherited simplicity",
+    "EP": "all-vector q-order moment bound; native half-lattice Fourier normalization",
+    "Rouche": "each fixed0<delta<12 eventually exactly one zero counting multiplicity",
+    "excluded": "no effective simplicity onset, global uniqueness, RH, or variable-delta result",
+    "new_complex": "Hermitian-part coercivity; separate row/column bounds; holomorphic local boundedness",
+    "normal_family": "real interval convergence plus proved compact bounds; no complex rate",
+    "object": "actual all-six-class canonical ell=[q] quotient and Petersson metric",
+    "source_execution": "only fixed authenticated AW/EP finite functions with separate capped budget"
+  },
+  "remote_bytes_authenticated_offline": false,
+  "schema": "cusp-flag-local-simple-endpoint-sources-v1"
+}
