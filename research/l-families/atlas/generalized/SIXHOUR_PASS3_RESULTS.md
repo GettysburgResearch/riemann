@@ -13,8 +13,9 @@ numerical search.
 
 [Segre recurrence and syzygy bridge](SEGRE_RECURRENCE_SYZYGY_BRIDGE.md)
 identifies coefficient-power series with the character Hilbert series of
-the actual Segre graded algebra. Its numerator is an equivariant
-K-polynomial, an ADDITIVE alternating Tor-character expression. It is not
+the actual Segre graded algebra. Its unreduced numerator relative to the
+full tensor denominator is an equivariant K-polynomial, an ADDITIVE
+alternating Tor-character expression. It is not
 automatically the superdeterminant of a canonical finite syzygy operator.
 
 One must also distinguish the denominator associated with the full tensor
@@ -167,6 +168,11 @@ quotient may be assumed to supply that answer.
 The Xi and native-source programme remains separate and essential:
 physical source/metric conventions and the unresolved retained-gamma
 decoder cannot be replaced by a scalar Hilbert-series identity.
+
+The shared [next research agenda](../../../exploratory/SIXHOUR_PASS3_NEXT_RESEARCH.md)
+sets out the proper theta-quotient zero problem, a source-controlled Xi
+comparator, the older native decoder and higher-rank Segre selection.
+Those proposals are not additional completed theorem packets.
 
 ## Exact scientific and review identities
 
