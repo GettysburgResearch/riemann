@@ -1,0 +1,63 @@
+{
+  "schema": "segre-higher-power-sources-v1",
+  "parents": [
+    {
+      "commit": "4a317ea5c9d7aa016fba58a1d74746e437329ec7",
+      "path": "research/l-families/atlas/generalized/SEGRE_RECURRENCE_SYZYGY_BRIDGE.md",
+      "git_blob": "acc3a0382f3ad919037b156749b4a07a971b429a",
+      "sha256_lf": "7dd4af9c9f14c73413d7a233cf64d7b608d94b60af334d08e1a0e0561a5f94a2",
+      "current_copy_required": true
+    },
+    {
+      "commit": "4a317ea5c9d7aa016fba58a1d74746e437329ec7",
+      "path": "research/l-families/atlas/generalized/segre_recurrence_syzygy_bridge.py",
+      "git_blob": "cd7bddb3953106ded6a923a916e2f4c6d72c328f",
+      "sha256_lf": "650b709402a6d79e5263c629377b195b7dbeaa57a6c054d2f08b5886b25d2771",
+      "current_copy_required": true
+    },
+    {
+      "commit": "4a317ea5c9d7aa016fba58a1d74746e437329ec7",
+      "path": "research/l-families/atlas/generalized/segre_recurrence_syzygy_bridge.json",
+      "git_blob": "13f8fcc7d527d00ec97835d4c224af065dd698b7",
+      "sha256_lf": "6b7bc07acebf80812e0b743acfd7476d6a1e7694b9689236cdd5dbdb8f75abac",
+      "current_copy_required": true
+    },
+    {
+      "commit": "4a317ea5c9d7aa016fba58a1d74746e437329ec7",
+      "path": "research/l-families/atlas/generalized/segre_recurrence_syzygy_bridge.sources.json",
+      "git_blob": "87f2fbc59137b41eb89a6a2553e33026eb1ea3ba",
+      "sha256_lf": "6e9780e76a33e4f7de7e4f06c2bfdc29696d028dccbdf913b9cb2b708dd61448",
+      "current_copy_required": true
+    },
+    {
+      "commit": "4a317ea5c9d7aa016fba58a1d74746e437329ec7",
+      "path": "tests/test_segre_recurrence_syzygy_bridge.py",
+      "git_blob": "ae6b004d2c758208148593e914a28786850a5026",
+      "sha256_lf": "e4974748050c8087160103a17c889c8ba92a309e763ee9d369deb71f43db7590",
+      "current_copy_required": true
+    },
+    {
+      "commit": "e21e44d84077b7703c6795a81c91fc305b3fe344",
+      "path": "research/l-families/atlas/generalized/SEGRE_HIGHER_POWER_UNITARY_CHAMBERS.md",
+      "git_blob": "b1f9b328f9852919200ffca33a294fb1d2b69014",
+      "sha256_lf": "5ea3ed98e388f34b4986d60dcc6cdcf2db8b3d2e903ce273d5307dad175dcf4f",
+      "current_copy_required": false
+    },
+    {
+      "commit": "acd91a621244872d49e0e4dfde76775879eadfc1",
+      "path": "research/l-families/atlas/generalized/SEGRE_RECURRENCE_SYZYGY_BRIDGE_AUDIT_4A317EA5.md",
+      "git_blob": "9917525809b5c22627d216e8180a4ea29ae32b0c",
+      "sha256_lf": "b5abd8d8c788563a241242e4b83d70640643c1b1898df5eb0b358b5e79191ae7",
+      "current_copy_required": false
+    }
+  ],
+  "prior_art": [
+    {
+      "id": "CARNEVALE_VOLL_MACMAHON",
+      "title": "Orbit Dirichlet Series and Multiset Permutations",
+      "url": "https://angelacarnevale.github.io/papers/orbit.pdf",
+      "locator": "Proposition 1.2; equations (2.1)--(2.3); Lemma 2.5; section 2.2",
+      "role": "classical Hadamard/Gaussian-binomial/multiset Eulerian dictionary; their bivariate unitary-factor notion differs from pointwise torus purity"
+    }
+  ]
+}
