@@ -278,7 +278,13 @@ then computed): `K_{P^2 x P^2}` equals
 Gauss-sign exterior-square polynomial — matching `N_{2,3} = G_3`
 (T-108508) — verified symbolically in the inverse roots
 (alpha, beta, gamma), tail window zero. Rank 2 by hand:
-`K_{2,2} = (1 + bT)(1 - bT) = 1 - b^2 T^2`.
+`K_{2,2} = (1 + bT)(1 - bT) = 1 - b^2 T^2`. **Rank 4** (X-108515 V5,
+exact integer points through actual companion/Sym^2/Lambda^2/Kronecker
+matrices): the identity holds with `N_{2,4} = G_4 + 2 e_4 h_2 T^3 -
+2 e_4^2 e_2 T^5` — the first rank whose defect carries CORRECTION
+LAYERS beyond the Gauss-sign polynomial — so the determinantal
+K-polynomial of `P^3 x P^3` genuinely contains T-108508's correction
+structure, exactly as the Lascoux deposit predicts.
 
 **Deposited direction (not a claim):** `P^{d-1} x P^{d-1}` is the
 determinantal variety of 2x2 minors of a generic d x d matrix, whose

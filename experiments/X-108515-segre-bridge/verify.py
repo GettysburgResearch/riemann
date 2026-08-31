@@ -157,6 +157,100 @@ def eulerian(m):
 POINTS = [(1, 2), (3, 1), (-2, 5), (0, 1)]
 
 
+# ---------------- rank-d machinery for V5 (d = 3, 4; m = 2) ----------
+
+def companion(elems):
+    """d x d companion with det(1 - A T) = 1 - e1 T + e2 T^2 - ...
+    (verified per instance by the V5 sanity check)."""
+    d = len(elems)
+    A = [[0] * d for _ in range(d)]
+    for i in range(1, d):
+        A[i][i - 1] = 1
+    for i in range(d):
+        k = d - i                      # e_k goes to row i with sign
+        A[i][d - 1] = (-1) ** (k + 1) * elems[k - 1]
+    return A
+
+
+def h_seq_rank(elems, n):
+    d = len(elems)
+    h = [1]
+    for r in range(1, n + 1):
+        s = 0
+        for k in range(1, min(r, d) + 1):
+            s += (-1) ** (k + 1) * elems[k - 1] * h[r - k]
+        h.append(s)
+    return h
+
+
+def sym2_matrix(A):
+    d = len(A)
+    basis = [(i, j) for i in range(d) for j in range(i, d)]
+    idx = {b: t for t, b in enumerate(basis)}
+    S = [[0] * len(basis) for _ in range(len(basis))]
+    for (i, j) in basis:
+        col = idx[(i, j)]
+        for k in range(d):
+            for l in range(d):
+                c = A[k][i] * A[l][j]
+                kk, ll = min(k, l), max(k, l)
+                S[idx[(kk, ll)]][col] += c
+    # e_i e_j with i != j maps via (Ae_i)(Ae_j); e_i^2 via (Ae_i)^2:
+    # the double loop above counts e_i e_j (i<j) once per (k,l) pair
+    # and e_i^2 correctly, since (i,j) fixed with i <= j and (k,l)
+    # ranges over ordered pairs, merging k>l into (l,k).
+    return S
+
+
+def lam2_matrix(A):
+    d = len(A)
+    basis = [(i, j) for i in range(d) for j in range(i + 1, d)]
+    idx = {b: t for t, b in enumerate(basis)}
+    L = [[0] * len(basis) for _ in range(len(basis))]
+    for (i, j) in basis:
+        col = idx[(i, j)]
+        for k in range(d):
+            for l in range(k + 1, d):
+                L[idx[(k, l)]][col] += (A[k][i] * A[l][j]
+                                        - A[k][j] * A[l][i])
+    return L
+
+
+def v5():
+    """coarse bridge at m = 2, ranks 3 and 4 (exact integer points):
+    det(1 - A tensor A T) * sum h_r^2 T^r == N_{2,d} * det(1 - Lam^2 T),
+    where N_{2,d} is computed from the Sym^2 route (T-108500). Rank 4
+    is the first rank whose defect carries correction layers beyond
+    the Gauss-sign polynomial (T-108508), so this tests the bridge
+    against a structurally nontrivial defect."""
+    cases = {3: [(1, 2, 3), (2, -1, 2), (0, 1, -2)],
+             4: [(1, 2, 3, 2), (2, -1, 0, 3), (1, 0, -2, 1)]}
+    for d, pts in cases.items():
+        for elems in pts:
+            A = companion(list(elems))
+            # sanity: charpoly of A must be 1 - e1 T + e2 T^2 - ...
+            cp = det_one_minus_T(A)
+            expect = [1] + [(-1) ** k * elems[k - 1]
+                            for k in range(1, d + 1)]
+            check(f"V5 companion d={d} {elems}", cp == expect,
+                  f"cp={cp}")
+            n2 = d * d
+            h = h_seq_rank(list(elems), n2 + 10)
+            D = det_one_minus_T(tensor_power(A, 2))
+            K = series_times_poly(D, h, 2, n2 + 8)
+            tail_ok = all(v == 0 for v in K[n2 + 1:])
+            Q = det_one_minus_T(sym2_matrix(A))
+            NN = series_times_poly(Q, h, 2, len(Q) + 8)
+            deg_n = (d * (d - 1)) // 2
+            ntail = all(v == 0 for v in NN[deg_n + 1:])
+            N = NN[:deg_n + 1]
+            R = poly_mul(N, det_one_minus_T(lam2_matrix(A)))
+            R = R + [0] * (n2 + 1 - len(R))
+            check(f"V5 bridge d={d} m=2 {elems}",
+                  tail_ok and ntail and K[:n2 + 1] == R[:n2 + 1],
+                  f"K={K[:n2+1]} R={R[:n2+1]}")
+
+
 def v12():
     for m in range(2, 7):
         pts = POINTS if m <= 5 else [(1, 2)]
@@ -207,6 +301,7 @@ def main():
     v12()
     v3()
     v4()
+    v5()
     os.makedirs(os.path.join(os.path.dirname(__file__), "results"),
                 exist_ok=True)
     allok = all(c["ok"] for c in CHECKS)

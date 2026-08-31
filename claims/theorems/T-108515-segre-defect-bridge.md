@@ -53,7 +53,9 @@ Let `R_m = (+)_r (Sym^r V)^{tensor m}` be the Segre ring of `(P^1)^m`
    Eulerian palindromy.
 6. **Held-out rank-3 corollary**: for dim V = d, m = 2:
    `K_{2,d} = N_{2,d} * det(1 - Lambda^2(A) T)`; at d = 3 this was
-   predicted then machine-verified against T-108508's `N_{2,3} = G_3`.
+   predicted then machine-verified against T-108508's `N_{2,3} = G_3`,
+   and at d = 4 verified against the correction-layered
+   `N_{2,4} = G_4 + 2 e_4 h_2 T^3 - 2 e_4^2 e_2 T^5` (X-108515 V5).
    Deposited direction: read T-108508's correction layers off the
    Lascoux resolution strands of `P^{d-1} x P^{d-1}`.
 
