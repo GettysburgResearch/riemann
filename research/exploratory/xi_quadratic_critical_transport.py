@@ -6,6 +6,9 @@ import argparse
 import hashlib
 import json
 import math
+import subprocess
+import sys
+import sysconfig
 from fractions import Fraction as Q
 from pathlib import Path
 
@@ -23,6 +26,11 @@ TEST = ROOT / "tests" / ("test_" + STEM + ".py")
 BASE = "64165b8c805d182dbc43f2e5855e64a86cf1aaf9"
 PREREG = "9162b5ea6112c346e200c044f9f3f2324ed4fc59"
 REFINEMENT = "24c52d25f9cf606f5db9c40e4919a78c196b9565"
+TIMEOUT_PREREG = "edb7d1ccffdc83c8e2b95e533da078508d009990"
+BROAD_HISTORY_SHA256 = (
+    "20e3b2d04d62b9b26119c77613a68fc9f4d76eba4be09bdee28d4f4bd7d8cd2e"
+)
+NATIVE_TIMEOUT = 30
 EPS = Q(1, 2**120)
 OUTER = Q(7, 8)
 TERMS = 32
@@ -72,17 +80,25 @@ BINDINGS = [
         "git_blob": "d9bbf53508c079e2558526baaa6a77e86249e71d",
         "sha256_lf": "d6483e2ca82beb4d889842a635fdfd30688e51b06ad7327f222d3164864328ba",
     },
+    {
+        "commit": TIMEOUT_PREREG,
+        "path": "research/exploratory/XI_QUADRATIC_CRITICAL_TRANSPORT.md",
+        "git_blob": "679022e3a03c263270aba6ebd61548080ebca71a",
+        "sha256_lf": "768df469cd46943918fba844f392be6f8a762a5a9dd8898007d083b7ecf9ad4a",
+    },
 ]
 CONTRACT = {
-    "primitive": "actual unrescaled Xi(1/2+iz), g=f5, one fixed lambda64",
+    "primitive": "actual unrescaled Xi(1/2+iz), g=f5, one fixed calibrated lambda_(64), not lambda=64",
     "panel": "exactly26 new HA nodes in frozen order; boxes256/512/1024 only",
     "critical": "real Newton from HA real center;24steps/256bits;2^-170stop;2^-180center;2^-120certification disc",
     "ratios": [oa.pair(q) for q in RATIOS],
     "tiers": list(TIERS),
     "third_derivative": "actual f8: direct full square AND32term Taylor/Cauchy with fixed outer radius7/8 including real critical uncertainty",
     "outer_refinement": "post-scout fixed16x16 complete SAME-rectangle cover; every256cells replayed; original direct failure retained",
+    "broad_history": "pinned canonical environmental attempt ledger;30s wallcap only for broad outer-Xi and broad f8; historical unresolved supplies no bound; every historical success freshly reproduced",
     "geometry": "r=ratio*y exact unknown radius; upper-error/lower-margin guards and whole HA rectangle containment",
     "linear": "originalHA3 independently tested on2q region at same criticalpoint/lambda",
+    "postresult_diagnostic": "same26 certified criticalpoints only,1024bits; point|f8(t)| lower may obstruct the sufficient inequality, otherwise unresolved; not a transport certificate",
     "domain": "20<Re z<1100,-1<Im z<2, unchanged HA wrapper; series cap40",
     "arithmetic_class": "MIXED",
     "arithmetic_components": [
@@ -99,6 +115,7 @@ CONTRACT = {
         "series_cap": 40,
         "taylor_terms": 32,
         "outer_cover_cells": 256,
+        "broad_tasks": 546,
         "json_bytes": MAX_BYTES,
         "source_bytes": MAX_SOURCE_BYTES,
         "json_nodes": 300000,
@@ -179,6 +196,8 @@ def manifest():
         "authoring_base": BASE,
         "preregistration": PREREG,
         "post_scout_refinement": REFINEMENT,
+        "timeout_preregistration": TIMEOUT_PREREG,
+        "broad_history_sha256": BROAD_HISTORY_SHA256,
         "frozen_sources": BINDINGS,
         "runtime": oa.RUNTIME,
         "contract": CONTRACT,
@@ -242,6 +261,192 @@ def region(center, radius):
     center, radius = oa.rational(center), oa.rational(radius)
     require(radius > 0, "positive region radius")
     return acb(arb(oa.qarb(center), oa.qarb(radius + EPS)), arb(0, oa.qarb(radius)))
+
+
+class ReplayFailure(RuntimeError):
+    """A formerly successful bound failed replay; never a scientific failure."""
+
+
+def native_task(task):
+    require(
+        type(task) is dict and set(task) == {"route", "center", "radius", "bits"},
+        "native task shape",
+    )
+    require(task["route"] in ("outer_direct", "third_direct"), "native route")
+    require(type(task["bits"]) is int and task["bits"] in TIERS, "native precision")
+    center, radius = oa.unpair(task["center"]), oa.unpair(task["radius"])
+    require(20 < center < 1100 and 0 < radius < 2, "native task domain cap")
+    require(task["route"] != "outer_direct" or radius == OUTER, "fixed outer radius")
+    return center, radius
+
+
+def native_worker(task):
+    center, radius = native_task(task)
+    try:
+        with ha.precision(task["bits"]):
+            z = region(center, radius)
+            value = (
+                ha.xi_value(z) if task["route"] == "outer_direct" else ha.xi_jet(z)[8]
+            )
+            upper = oa.endpoint(value.abs_upper())
+            return {"status": "PASS", "upper": oa.pair(upper)}
+    except (ValueError, ZeroDivisionError, OverflowError) as error:
+        return {"status": "UNRESOLVED_NATIVE", "reason": str(error)}
+
+
+def execute_native(task):
+    native_task(task)
+    # Run the real CPython binary, not the Windows venv redirector: killing
+    # a timed-out redirector could leave its native child holding stdout.
+    boot = (
+        "import sys,runpy;"
+        + "sys.path.insert(0,"
+        + repr(sysconfig.get_path("purelib"))
+        + ");"
+        + "sys.path.insert(0,"
+        + repr(str(HERE))
+        + ");"
+        + "sys.argv=["
+        + repr(__file__)
+        + ",'--native-task'];"
+        + "runpy.run_path("
+        + repr(__file__)
+        + ",run_name='__main__')"
+    )
+    try:
+        run = subprocess.run(
+            [
+                sys._base_executable,
+                "-B",
+                *(["-O"] if sys.flags.optimize else []),
+                "-c",
+                boot,
+            ],
+            input=canonical(task),
+            capture_output=True,
+            timeout=NATIVE_TIMEOUT,
+            check=False,
+        )
+    except subprocess.TimeoutExpired:
+        return {
+            "status": "TIMEOUT_UNRESOLVED",
+            "reason": "historical30s wallcap; environmental, not mathematical",
+        }
+    if run.returncode != 0:
+        return {
+            "status": "UNRESOLVED_WORKER",
+            "reason": "native subprocess did not complete normally",
+        }
+    result = decode(run.stdout)
+    validate_native_result(result)
+    return result
+
+
+def validate_native_result(result):
+    require(type(result) is dict and "status" in result, "native result shape")
+    if result["status"] == "PASS":
+        require(set(result) == {"status", "upper"}, "native success shape")
+        require(oa.unpair(result["upper"]) >= 0, "native nonnegative upper")
+    else:
+        require(
+            result["status"]
+            in ("UNRESOLVED_NATIVE", "TIMEOUT_UNRESOLVED", "UNRESOLVED_WORKER"),
+            "native historical status",
+        )
+        require(
+            set(result) == {"status", "reason"} and type(result["reason"]) is str,
+            "native unresolved shape",
+        )
+    canonical(result)
+
+
+class NativeRunner:
+    def __init__(self, history=None):
+        self.collecting = history is None
+        self.entries, self.used = {}, set()
+        if history is not None:
+            require(
+                type(history) is dict
+                and set(history) == {"schema", "wallcap_seconds", "entries"},
+                "history shape",
+            )
+            require(
+                history["schema"] == STEM + "-environmental-history-v1",
+                "history schema",
+            )
+            require(
+                type(history["wallcap_seconds"]) is int
+                and history["wallcap_seconds"] == NATIVE_TIMEOUT,
+                "historical wallcap",
+            )
+            require(
+                oa.digest(canonical(history)) == BROAD_HISTORY_SHA256,
+                "frozen environmental history pin",
+            )
+            require(
+                type(history["entries"]) is list and len(history["entries"]) <= 546,
+                "history task cap",
+            )
+            for entry in history["entries"]:
+                require(
+                    type(entry) is dict
+                    and set(entry) == {"task_id", "task", "outcome"},
+                    "history entry shape",
+                )
+                native_task(entry["task"])
+                validate_native_result(entry["outcome"])
+                key = oa.digest(canonical(entry["task"]))
+                require(
+                    entry["task_id"] == key and key not in self.entries,
+                    "history task identity/duplicate",
+                )
+                self.entries[key] = entry
+            require(
+                list(self.entries) == sorted(self.entries), "canonical history ordering"
+            )
+
+    def evaluate(self, route, center, radius):
+        task = {
+            "route": route,
+            "center": oa.pair(center),
+            "radius": oa.pair(radius),
+            "bits": ctx.prec,
+        }
+        native_task(task)
+        key = oa.digest(canonical(task))
+        if key not in self.used:
+            if self.collecting:
+                require(len(self.entries) < 546, "native task cap")
+                self.entries[key] = {
+                    "task_id": key,
+                    "task": task,
+                    "outcome": execute_native(task),
+                }
+            else:
+                if key not in self.entries:
+                    raise ReplayFailure(
+                        "new task absent from frozen environmental history"
+                    )
+                old = self.entries[key]["outcome"]
+                if old["status"] == "PASS" and canonical(
+                    execute_native(task)
+                ) != canonical(old):
+                    raise ReplayFailure(
+                        "historically successful native bound did not reproduce"
+                    )
+            self.used.add(key)
+        return dict(self.entries[key]["outcome"])
+
+    def history(self):
+        require(
+            self.used == set(self.entries),
+            "every historical task requested by fresh panel",
+        )
+        return {
+            "schema": STEM + "-environmental-history-v1",
+            "wallcap_seconds": NATIVE_TIMEOUT,
+            "entries": [self.entries[k] for k in sorted(self.entries)],
+        }
 
 
 def newton(parent):
@@ -386,7 +591,7 @@ def outer_cover(center):
     return record, None
 
 
-def prepared(center):
+def prepared(center, runner):
     t = arb(oa.qarb(center), oa.qarb(EPS))
     coeff = ha.xi_series(acb(t), 40)
     require(all(v.imag.contains(0) for v in coeff), "real Taylor coefficients")
@@ -404,12 +609,11 @@ def prepared(center):
     }
     choices = []
     outer_record = {}
-    try:
-        upper = oa.endpoint(ha.xi_value(region(center, OUTER)).abs_upper())
-        outer_record["direct"] = {"status": "PASS", "upper": oa.pair(upper)}
+    direct = runner.evaluate("outer_direct", center, OUTER)
+    outer_record["direct"] = direct
+    if direct["status"] == "PASS":
+        upper = oa.unpair(direct["upper"])
         choices.append((upper, "direct"))
-    except (ValueError, ZeroDivisionError, OverflowError) as error:
-        outer_record["direct"] = {"status": "FAILED", "reason": str(error)}
     cover, bound = outer_cover(center)
     outer_record["fixed_cover"] = cover
     if bound is not None:
@@ -437,17 +641,15 @@ def prepared(center):
     return data, t, lam, a, c, q, coeff, upper
 
 
-def third_bound(center, h, coeff, outer_upper):
+def third_bound(center, h, coeff, outer_upper, runner):
     h = oa.rational(h)
     require(h > 0, "positive third derivative radius")
     record = {"radius_upper": oa.pair(h)}
     choices = []
-    try:
-        direct = oa.endpoint(ha.xi_jet(region(center, h))[8].abs_upper())
-        record["direct"] = {"status": "PASS", "upper": oa.pair(direct)}
-        choices.append((direct, "direct"))
-    except (ValueError, ZeroDivisionError, OverflowError) as error:
-        record["direct"] = {"status": "FAILED", "reason": str(error)}
+    direct = runner.evaluate("third_direct", center, h)
+    record["direct"] = direct
+    if direct["status"] == "PASS":
+        choices.append((oa.unpair(direct["upper"]), "direct"))
     try:
         require(outer_upper is not None, "missing outer scalar bound")
         tail = taylor_tail(outer_upper, h)
@@ -482,7 +684,7 @@ def parent_rectangle(parent):
     return acb(arb(oa.qarb(x), oa.qarb(radius)), arb(oa.qarb(y), oa.qarb(radius)))
 
 
-def quadratic_attempt(center, parent, prep, ratio):
+def quadratic_attempt(center, parent, prep, ratio, runner=None):
     require(type(ratio) is Q and ratio in RATIOS, "declared radius ratio")
     _, t, lam, _, c, q, coeff, outer_upper = prep
     record = {
@@ -499,7 +701,7 @@ def quadratic_attempt(center, parent, prep, ratio):
         require(r > 0 and r < y and r < 2 * d, "quadratic radius geometry")
         h = scalar_upper(y + r)
         record.update(d=oa.rbounds(d), y=oa.rbounds(y), radius=oa.rbounds(r))
-        bounds, m3 = third_bound(center, h, coeff, outer_upper)
+        bounds, m3 = third_bound(center, h, coeff, outer_upper, runner)
         record["third_derivative"] = bounds
         require(m3 is not None, "no valid third-derivative bound")
         left = m3 * (y + r) ** 2 * ((y + r) / 6 + lam / 2)
@@ -523,11 +725,13 @@ def quadratic_attempt(center, parent, prep, ratio):
     return record
 
 
-def linear_attempt(center, parent, prep):
+def linear_attempt(center, parent, prep, runner):
     _, t, lam, _, c, q, coeff, outer_upper = prep
     record = {"bits": ctx.prec, "transport_certified": False, "parent_matched": False}
     try:
-        bounds, m3 = third_bound(center, scalar_upper(2 * q), coeff, outer_upper)
+        bounds, m3 = third_bound(
+            center, scalar_upper(2 * q), coeff, outer_upper, runner
+        )
         record["third_derivative"] = bounds
         require(m3 is not None, "no valid linear third-derivative bound")
         delta = 2 * q / lam + m3 / abs(c) * (4 * q * q / (3 * lam) + 2 * q)
@@ -551,7 +755,7 @@ def linear_attempt(center, parent, prep):
     return record
 
 
-def node_record(index, parent):
+def node_record(index, parent, runner):
     oa.integer(index, 0, 25)
     nums = [oa.unpair(v) * 2**180 for v in parent["center"]]
     require(all(v.denominator == 1 for v in nums), "frozen dyadic parent center")
@@ -587,16 +791,18 @@ def node_record(index, parent):
     for bits in TIERS:
         with ha.precision(bits):
             try:
-                prep = prepared(center)
+                prep = prepared(center, runner)
                 record["jet_tiers"].append(prep[0])
                 for item, ratio in zip(record["quadratic"], RATIOS):
                     if not item["attempts"] or item["attempts"][-1]["status"] != "PASS":
                         item["attempts"].append(
-                            quadratic_attempt(center, parent, prep, ratio)
+                            quadratic_attempt(center, parent, prep, ratio, runner)
                         )
                 item = record["linear"]
                 if not item["attempts"] or item["attempts"][-1]["status"] != "PASS":
-                    item["attempts"].append(linear_attempt(center, parent, prep))
+                    item["attempts"].append(
+                        linear_attempt(center, parent, prep, runner)
+                    )
             except (ValueError, ZeroDivisionError, OverflowError) as error:
                 failure = {
                     "bits": bits,
@@ -627,6 +833,9 @@ def summary(records):
     def passed(item):
         return bool(item["attempts"] and item["attempts"][-1]["status"] == "PASS")
 
+    def transported(item):
+        return any(a.get("transport_certified", False) for a in item["attempts"])
+
     return {
         "nodes": 26,
         "newton_converged": sum(
@@ -635,6 +844,14 @@ def summary(records):
         "simple_real_critical": sum(
             r.get("critical", {}).get("simple_real_critical", False) for r in records
         ),
+        "critical_intervals_pairwise_disjoint": all(
+            abs(oa.unpair(a["critical"]["center"]) - oa.unpair(b["critical"]["center"]))
+            > 2 * EPS
+            for i, a in enumerate(records)
+            for b in records[i + 1 :]
+            if a.get("critical", {}).get("simple_real_critical", False)
+            and b.get("critical", {}).get("simple_real_critical", False)
+        ),
         "quadratic_matched_by_ratio": [
             {
                 "ratio": oa.pair(q),
@@ -642,6 +859,17 @@ def summary(records):
             }
             for j, q in enumerate(RATIOS)
         ],
+        "quadratic_transport_by_ratio": [
+            {
+                "ratio": oa.pair(q),
+                "count": sum(transported(r["quadratic"][j]) for r in records),
+            }
+            for j, q in enumerate(RATIOS)
+        ],
+        "quadratic_any_transport": sum(
+            any(transported(x) for x in r["quadratic"]) for r in records
+        ),
+        "linear_transport": sum(transported(r["linear"]) for r in records),
         "quadratic_any_matched": sum(
             any(passed(x) for x in r["quadratic"]) for r in records
         ),
@@ -653,22 +881,137 @@ def summary(records):
     }
 
 
-def build_report():
+def polynomial_control():
+    lam, q, d, y, c, m3 = Q(1), Q(3, 8), Q(1, 2), Q(1, 2), Q(-1), Q(1, 100)
+    rows = []
+    for ratio in RATIOS:
+        r = ratio * y
+        left = m3 * (y + r) ** 2 * ((y + r) / 6 + lam / 2)
+        right = abs(c) * r * (d - r / 2)
+        require(0 < r < min(y, 2 * d) and left < right, "exact polynomial control")
+        rows.append(
+            {"ratio": oa.pair(ratio), "left": oa.pair(left), "right": oa.pair(right)}
+        )
+    delta = 2 * q / lam + m3 / abs(c) * (4 * q * q / (3 * lam) + 2 * q)
+    require(
+        delta == Q(243, 320) and delta > Q(1, 2), "linear strict-improvement control"
+    )
+    return {
+        "g": "3/8-w^2/2+w^3/600",
+        "lambda": [1, 1],
+        "quadratic": rows,
+        "linear_delta": oa.pair(delta),
+    }
+
+
+def necessary_bound_diagnostics(records):
+    """Post-result pointwise obstructions, not favorable source resampling."""
+    output = []
+    for row in records:
+        entry = {
+            "index": row["index"],
+            "bits": 1024,
+            "ratios": [
+                {
+                    "ratio": oa.pair(ratio),
+                    "criterion_impossible": False,
+                    "status": "UNRESOLVED",
+                }
+                for ratio in RATIOS
+            ],
+        }
+        output.append(entry)
+        try:
+            require(
+                row.get("critical", {}).get("simple_real_critical", False),
+                "missing real critical certificate",
+            )
+            center = oa.unpair(row["critical"]["center"])
+            entry["critical_center"] = oa.pair(center)
+            with ha.precision(1024):
+                coeff = ha.xi_series(acb(arb(oa.qarb(center), oa.qarb(EPS))), 40)
+                require(all(v.imag.contains(0) for v in coeff), "real point jets")
+                require(coeff[6].real.contains(0), "critical interval consistency")
+                a, c = (
+                    (coeff[5] * math.factorial(5)).real,
+                    (coeff[7] * math.factorial(7)).real,
+                )
+                m_lower = oa.endpoint(coeff[8].abs_lower()) * math.factorial(8)
+                lam = ha.fixed_lambda()
+                require(a * c < 0, "diagnostic opposite signs")
+                q = -a / (lam * c)
+                require(q > 0 and 2 * q < lam, "diagnostic discriminant")
+                d = (lam * lam - 2 * lam * q).sqrt()
+                y = 2 * lam * q / (lam + d)
+                entry["point_f8_lower"] = oa.pair(m_lower)
+                for ratio, result in zip(RATIOS, entry["ratios"]):
+                    r = oa.qarb(ratio) * y
+                    if not (r > 0 and r < y and r < 2 * d):
+                        result.update(
+                            status="UNRESOLVED", reason="radius geometry not certified"
+                        )
+                        continue
+                    left = scalar_lower(
+                        oa.qarb(m_lower) * (y + r) ** 2 * ((y + r) / 6 + lam / 2)
+                    )
+                    right = scalar_upper(abs(c) * r * (d - r / 2))
+                    impossible = left >= right
+                    result.update(
+                        left_lower=oa.pair(left),
+                        right_upper=oa.pair(right),
+                        criterion_impossible=impossible,
+                        status="CRITERION_IMPOSSIBLE" if impossible else "UNRESOLVED",
+                    )
+                entry["status"] = "COMPLETE"
+        except (ValueError, ZeroDivisionError, OverflowError) as error:
+            entry.update(status="UNRESOLVED", reason=str(error))
+    return {
+        "design": CONTRACT["postresult_diagnostic"],
+        "records": output,
+        "impossible_by_ratio": [
+            {
+                "ratio": oa.pair(ratio),
+                "count": sum(
+                    any(
+                        r["ratio"] == oa.pair(ratio) and r["criterion_impossible"]
+                        for r in e["ratios"]
+                    )
+                    for e in output
+                ),
+            }
+            for ratio in RATIOS
+        ],
+    }
+
+
+def build_with_runner(runner):
     authenticate()
-    records = [node_record(i, row) for i, row in enumerate(parent_panel())]
+    records = [node_record(i, row, runner) for i, row in enumerate(parent_panel())]
+    return assemble_report(records, runner.history())
+
+
+def assemble_report(records, history):
     value = {
         "schema": STEM + "-v1",
         "contract": CONTRACT,
         "frozen_sources": BINDINGS,
         "runtime": oa.RUNTIME,
+        "environmental_attempt_history": history,
         "records": records,
         "summary": summary(records),
+        "exact_polynomial_control": polynomial_control(),
+        "postresult_necessary_bound": necessary_bound_diagnostics(records),
         "artifacts": {
             p.relative_to(ROOT).as_posix(): oa.digest(lf(p.read_bytes()))
             for p in (NOTE, Path(__file__), MANIFEST, TEST)
         },
     }
     return {**value, "payload_sha256": oa.digest(canonical(value))}
+
+
+def build_report():
+    history = decode(FIXTURE.read_bytes())["environmental_attempt_history"]
+    return build_with_runner(NativeRunner(history))
 
 
 def check_report(value):
@@ -688,8 +1031,11 @@ def main():
     mode.add_argument("--check", action="store_true")
     mode.add_argument("--emit", action="store_true")
     mode.add_argument("--emit-sources", action="store_true")
+    mode.add_argument("--native-task", action="store_true")
     args = parser.parse_args()
-    if args.emit_sources:
+    if args.native_task:
+        value = native_worker(decode(sys.stdin.buffer.read(MAX_BYTES + 1)))
+    elif args.emit_sources:
         value = manifest()
     elif args.emit:
         value = build_report()

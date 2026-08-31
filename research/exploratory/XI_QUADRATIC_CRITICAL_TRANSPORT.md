@@ -1,8 +1,9 @@
 # Exact quadratic transport from actual Xi critical jets
 
-Status: PREREGISTERED THEOREM AND FINITE TEST DESIGN; no panel tested yet.
+Status: preregistered theorem/design followed by explicitly separated
+implementation refinements and a bounded finite test; see final outcomes below.
 Authoring base: `64165b8c805d182dbc43f2e5855e64a86cf1aaf9` (HA).
-Scope: one fixed actual-Xi parameter lambda64 and exactly the twenty-six
+Scope: one fixed actual-Xi parameter lambda_(64) and exactly the twenty-six
 new HA nodes in its three boxes centered at 256, 512 and 1024. This is a
 local transport theorem and a bounded actual-source test, not a cofinal
 zero/alignment/capture assertion or RH claim.
@@ -62,7 +63,9 @@ For actual `f(z)=xi_R(1/2+i z)`, use `g=f^(5)`. Thus a=f5(t), c=f7(t),
 and the load-bearing third derivative is the ACTUAL f8 on a complex region.
 The parent lambda is held fixed:
 
-`lambda64=[Re psi(1/4+32i)/2-log(pi)/2]^-1`.
+`lambda_(64)=[Re psi(1/4+32i)/2-log(pi)/2]^-1`, about0.8616990871.
+
+The subscript64 is its calibration location, not the value lambda=64.
 
 There is no exponential gauge or parameter change with the node height.
 
@@ -192,7 +195,7 @@ checks. Analytic theorem review remains separate from finite machine replay.
 
 The initial declared node (the first HA node in the box centered at256)
 converged to a certified simple real f6 critical point. Its q is about
-0.263602, while the unchanged lambda64 is about0.861699; these decimals
+0.263602, while the unchanged lambda_(64) is about0.861699; these decimals
 are descriptive scouts, not acceptance data. All five initial quadratic
 attempts failed. The direct whole-rectangle Xi evaluation at outer radius
 7/8 was nonfinite, preventing the Taylor/Cauchy route; direct whole-region
@@ -279,3 +282,130 @@ certify the sufficient inequality, not that the true inequality is false.
 This checkpoint also preserves the initial uncapped producer, manifest
 and tests as an implementation record; it is not a science release or a
 claim that a missing final fixture passed its tests.
+
+The Windows implementation launches the real CPython binary with the same
+locked virtual-environment site-packages, not the virtual-environment
+redirector. This makes the capped subprocess the actual native call;
+otherwise killing a redirector could leave a child holding its output pipe.
+A preliminary redirector-based collection was stopped before its first
+timeout, after nodes0--8 had completed with certified real critical points
+and no transport match. Only its verified owned process tree was stopped.
+The final environmental ledger comes from a full restart with the safe
+worker implementation, not a mixture of favorable attempts. These earlier
+progress observations are historical and are not certificate inputs.
+
+## 7. Separately labelled post-result necessary-bound diagnostic
+
+After the complete26-node collection, make one additional diagnostic on
+those SAME certified real critical-point intervals only, at1024bits and
+with the same actual40-term source wrapper. No new point is located or
+selected. Let m be an outward lower bound for `|f8(t)|`, valid for every
+t in the certified real interval. Since the derivative-bound disc always
+contains t, every admissible M3 satisfies `M3>=|f8(t)|>=m`.
+
+Consequently, if outward interval arithmetic proves
+
+`lower[m*(y+r)^2*((y+r)/6+lambda/2)]`
+`  >= upper[|c|*r*(d-r/2)]`,
+
+then NO valid M3 can satisfy the strict sufficient inequality at that
+exact critical point and prescribed ratio. This is labelled
+CRITERION_IMPOSSIBLE. It is a genuine obstruction to this particular
+sufficient test, unlike a wide upper enclosure or a timeout. Otherwise
+the diagnostic is UNRESOLVED: it gives no converse and no certificate.
+All five ratios remain present even when a prerequisite is unresolved.
+The original transport outcomes and environmental history are not rewritten.
+
+The finite tests additionally reconstruct these obstruction comparisons
+using Fraction intervals and integer-square-root bounds, separately from
+the producer's directed-ball evaluation. This is independent finite
+arithmetic, not an independent special-function implementation.
+
+For an exact calibration control, take
+`g(w)=3/8-w^2/2+w^3/600`, `lambda=1`. Here q=3/8, d=y=1/2,
+and M3=1/100 on every disc. All five quadratic ratios pass strictly.
+The old linear sufficient quantity is `Delta=243/320>1/2`, so that
+linear criterion does not certify. Thus the quadratic improvement is
+strict as a theorem even if the actual-Xi panel yields no new transport
+certificate. This polynomial control is not a surrogate for actual Xi.
+
+## 8. Complete finite outcomes and interpretation
+
+At the ONE calibrated lambda_(64), all26 prescribed Newton sequences
+converge and all26 independent tiny-disc Rouche tests certify simple REAL
+zeros of f6. Their real intervals are pairwise disjoint. These are finite
+critical-point certificates, not a census of all real f6 zeros.
+
+All390 quadratic attempts (26 nodes times5 ratios times3 tiers) reach a
+valid actual third-derivative bound but do not certify the strict Rouche
+inequality. All78 linear attempts likewise do not certify Delta<1/2.
+There is no quadratic or linear transport certificate, matched or unmatched.
+This does not retract HA's separate26 companion-root certificates.
+
+The separately evaluated pointwise diagnostic gives:
+
+| Exact r/y | Matched quadratic certificates | Criterion impossible | Unresolved diagnostic |
+|---|---:|---:|---:|
+| 1/16 | 0 | 26 | 0 |
+| 1/8 | 0 | 26 | 0 |
+| 1/4 | 0 | 26 | 0 |
+| 1/2 | 0 | 21 | 5 |
+| 3/4 | 0 | 19 | 7 |
+
+Thus118 of the130 exact critical-point/radius cases cannot satisfy this
+particular sufficient inequality for ANY valid M3, already because of
+the lower bound at the critical point itself. The remaining12 diagnostic
+cases remain unresolved; their available upper bounds did not certify
+transport, but that does not prove impossibility. There is no claim about
+untried radii, other calibration parameters or larger heights.
+
+All78 complete fixed outer covers pass, with exactly19,968 primitive cell
+evaluations in a full fresh replay. The separate546-task broad evaluation
+ledger records373 finite successful bounds,161 native-nonfinite unresolved
+attempts and12 environmental timeouts. The timeouts are exactly the direct
+outer calls at zero-based nodes22--25 at each of the three tiers. Its
+canonical SHA256 is
+`20e3b2d04d62b9b26119c77613a68fc9f4d76eba4be09bdee28d4f4bd7d8cd2e`.
+All373 successful broad bounds are freshly reproduced; the173 unresolved
+entries supply no bound and are preserved as explicitly historical records.
+Every task specification and its successful identity are checked, and every
+ledger task must be requested by the fresh fixed panel. A changed or timed-
+out formerly successful bound blocks replay; it cannot be demoted and hidden.
+
+The exact quadratic lemma removes one linear-model loss, but a uniform
+absolute third-derivative remainder remains a serious obstruction in these
+actual finite boxes. The evidence does not establish cofinal transport,
+alignment lower bounds, a uniform infinite-family Bessel bound, physical
+capture, innerness, global parameter nonexceptionality, or RH. The tests
+concern companion roots and real derivative critical points, not off-line
+zeros of the classical Xi function. No novelty or priority claim is made
+for Rouche's theorem, Cauchy estimates or the finite control methods.
+
+## 9. Source, arithmetic and replay boundary
+
+Eight direct frozen bindings authenticate HA's five files and the original
+design, complete-cover refinement and runtime-history preregistrations.
+Inherited HA authentication closes the unchanged BC/OA executable sources,
+the literal actual-Xi formula and native binary lock. Four current artifacts
+are LF-hashed, and the complete canonical payload is sealed. The source
+manifest separately pins the environmental ledger hash; merely resealing
+a modified fixture cannot change that pin or bypass primitive reconstruction.
+
+The48 finite tests include two independent arithmetic routes for polynomial
+and point-obstruction controls, source/runtime authentication, coverage and
+containment checks, fixed-cap/type attacks, successful-bound replay failure,
+and historical-unresolved separation. The full reconstruction is performed
+with and without Python optimization; it does not rely on assertions.
+
+    python -B [-O] -m unittest tests.test_xi_quadratic_critical_transport
+    python -B [-O] research/exploratory/xi_quadratic_critical_transport.py --check
+    python -B [-O] research/exploratory/xi_quadratic_critical_transport.py --emit
+    python -B [-O] research/exploratory/xi_quadratic_critical_transport.py --emit-sources
+
+The primary ball/series documentation is inherited literally through HA:
+[complex balls](https://python-flint.readthedocs.io/en/latest/acb.html) and
+[complex series](https://python-flint.readthedocs.io/en/latest/acb_series.html).
+Finite machine replay remains relative to the pinned FLINT implementation;
+it is not a second special-function implementation or formal verification
+of the analytic theorems. Wall-clock unresolved history is provenance, not
+deterministic scientific arithmetic.

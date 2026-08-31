@@ -1,5 +1,6 @@
 {
   "authoring_base": "64165b8c805d182dbc43f2e5855e64a86cf1aaf9",
+  "broad_history_sha256": "20e3b2d04d62b9b26119c77613a68fc9f4d76eba4be09bdee28d4f4bd7d8cd2e",
   "contract": {
     "arithmetic_class": "MIXED",
     "arithmetic_components": [
@@ -7,7 +8,9 @@
       "EXACT_RATIONAL",
       "CERTIFIED_INTEGER_COVERAGE"
     ],
+    "broad_history": "pinned canonical environmental attempt ledger;30s wallcap only for broad outer-Xi and broad f8; historical unresolved supplies no bound; every historical success freshly reproduced",
     "caps": {
+      "broad_tasks": 546,
       "container": 20000,
       "integer_bits": 4096,
       "json_bytes": 12000000,
@@ -28,7 +31,8 @@
     "linear": "originalHA3 independently tested on2q region at same criticalpoint/lambda",
     "outer_refinement": "post-scout fixed16x16 complete SAME-rectangle cover; every256cells replayed; original direct failure retained",
     "panel": "exactly26 new HA nodes in frozen order; boxes256/512/1024 only",
-    "primitive": "actual unrescaled Xi(1/2+iz), g=f5, one fixed lambda64",
+    "postresult_diagnostic": "same26 certified criticalpoints only,1024bits; point|f8(t)| lower may obstruct the sufficient inequality, otherwise unresolved; not a transport certificate",
+    "primitive": "actual unrescaled Xi(1/2+iz), g=f5, one fixed calibrated lambda_(64), not lambda=64",
     "ratios": [
       [
         1,
@@ -121,6 +125,12 @@
       "git_blob": "d9bbf53508c079e2558526baaa6a77e86249e71d",
       "path": "research/exploratory/XI_QUADRATIC_CRITICAL_TRANSPORT.md",
       "sha256_lf": "d6483e2ca82beb4d889842a635fdfd30688e51b06ad7327f222d3164864328ba"
+    },
+    {
+      "commit": "edb7d1ccffdc83c8e2b95e533da078508d009990",
+      "git_blob": "679022e3a03c263270aba6ebd61548080ebca71a",
+      "path": "research/exploratory/XI_QUADRATIC_CRITICAL_TRANSPORT.md",
+      "sha256_lf": "768df469cd46943918fba844f392be6f8a762a5a9dd8898007d083b7ecf9ad4a"
     }
   ],
   "post_scout_refinement": "24c52d25f9cf606f5db9c40e4919a78c196b9565",
@@ -134,5 +144,6 @@
     "python_flint": "0.9.0",
     "system": "Windows"
   },
-  "schema": "xi_quadratic_critical_transport-sources-v1"
+  "schema": "xi_quadratic_critical_transport-sources-v1",
+  "timeout_preregistration": "edb7d1ccffdc83c8e2b95e533da078508d009990"
 }
