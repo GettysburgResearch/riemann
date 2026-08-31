@@ -78,12 +78,21 @@ contraction
 \mathop{\rightleftarrows}^{\iota}_{\pi}
 (K_W,d_W),
 \qquad
+\pi\iota=1_B,
+\qquad
  d_Wh+hd_W=1-\iota\pi,
 \tag{1.2}
 \]
 
-with \(h\) of homological degree \(+1\). No \(S_C\)-linearity is asserted or
-needed for this choice.
+with \(h\) of homological degree \(+1\). By the usual normalization of a
+contraction we may also arrange
+
+\[
+h\iota=0,\qquad \pi h=0,\qquad h^2=0.
+\tag{1.3}
+\]
+
+No \(S_C\)-linearity is asserted or needed for this choice.
 
 ## 2. The transferred-model theorem
 
@@ -184,7 +193,8 @@ the perturbation \(d_C\). It gives a transferred differential
 \]
 
 and filtered quasi-isomorphisms between the transferred complex and
-\(K_E\). Formula (2.3) follows.
+\(K_E\). The inverse in (2.9) is a finite sum on every vector because each
+\(d_C\) lowers the finite \(C\)-wedge degree. Formula (2.3) follows.
 
 Each occurrence of \(d_C\) removes one \(C\)-wedge factor, while each
 occurrence of \(h\) raises the \(W\)-Koszul homological degree by one. This
@@ -275,8 +285,9 @@ K_W\not\simeq\bigoplus_q B_q[-q].
 \tag{4.1}
 \]
 
-In particular, at least one higher transferred operation is unavoidable in
-every filtered model.
+Here the right side carries the ordinary induced \(S_C\)-module structures
+on the homology modules and zero differential. In particular, at least one
+higher transferred operation is unavoidable in every filtered model.
 
 ### Proof
 
