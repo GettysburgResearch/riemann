@@ -1,0 +1,111 @@
+{
+  "authoring_base": "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+  "contract": {
+    "analytic": "conditional local derivative-jet transport lemma; actual cofinal jet hypotheses unpaid",
+    "arithmetic_class": "MIXED",
+    "arithmetic_components": [
+      "DIRECTED_BALL_ENCLOSURES",
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "coverage": "three heldout full closed boxes256/512/1024,width12,y0..1; complete counts8/9/9",
+    "exclusions": "no uniform infinite Bessel bound, weighted divergence, physical HS-infinity, native outer metric, parameter stability or RH",
+    "metric": "complete40x40 normalized Hardy Gram including ALL old/new cross entries; finite Bessel row-sum ceilings only",
+    "primitive": "actual unrescaled Xi; ONE fixed lambda64; new domain20<x<1100, no parent edits",
+    "roots": "26 new and14 rebuilt old simple noncommon nodes; raw values on entire root rectangles",
+    "rounding": "FLINT outward complex/real balls; exact Fraction acceptance; no scout or floating value certifies a claim",
+    "scouting": "fixed196seeds perbox; all588 terminal outcomes retained; 24Newtonsteps maximum; scouts are not proofs",
+    "source_execution": "FC5 historical files authenticated as frozen Git blobs; old14 rebuilt with this extended Xi wrapper; unchanged BC5/OA5 local executable locks retained",
+    "source_quantifiers": "finite evaluations unconditional; Hardy physical interpretation conditional on component innerness; no finite-to-cofinal implication",
+    "tiers": "fixed (256bits,1/16,32terms),(512,1/32,40),(1024,1/64,48); all failed tiers retained",
+    "trust": "pinned FLINT implementation, not formal verification of special functions",
+    "weight": "sum |rawTheta0(b)|^2 Im(b)/|Re(b)|; NOT a physical trace"
+  },
+  "documentation": [
+    {
+      "role": "Ball enclosure, certified comparisons, exact rational inputs, series cap",
+      "url": "https://python-flint.readthedocs.io/en/latest/general.html"
+    },
+    {
+      "role": "Taylor-series gamma, exp, zeta; no numerical finite differences",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb_series.html"
+    },
+    {
+      "role": "Pinned library-version series API documentation",
+      "url": "https://github.com/flintlib/flint/blob/v3.6.0/doc/source/acb_poly.rst"
+    },
+    {
+      "role": "rigorous non-approx matrix inverse and arithmetic API",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb_mat.html"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+      "git_blob": "27e4db71377788b6e03b14005035d59c9e930611",
+      "id": "FC1",
+      "path": "research/exploratory/XI_FIXED_LAMBDA_JOINT_BOX_COMPRESSION.md",
+      "role": "complete prior fixed-source proof",
+      "sha256_lf": "7f6efdcd6375d14db36ade51c073d3c04dc73f5e2c9c5cd27aa94d8107497460"
+    },
+    {
+      "commit": "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+      "git_blob": "62f94b71810a49646830694cab25bb14c1eab470",
+      "id": "FC2",
+      "path": "research/exploratory/xi_fixed_lambda_joint_box_compression.py",
+      "role": "historical producer, authenticated but not executed",
+      "sha256_lf": "69e51a36a9180df97ae6b994104308a46b9ab84331027e1d8ed288c6490d5300"
+    },
+    {
+      "commit": "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+      "git_blob": "d3ef5908f68a7b3025428bf55e8e1fa81970e273",
+      "id": "FC3",
+      "path": "research/exploratory/xi_fixed_lambda_joint_box_compression.json",
+      "role": "frozen fourteen-node reference",
+      "sha256_lf": "504071292138882ad5192fc62f765edc5615c3140542c7f597651679ba682cdb"
+    },
+    {
+      "commit": "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+      "git_blob": "62eb2fa59113bc87158659e538fb1fea5b7f7ca4",
+      "id": "FC4",
+      "path": "research/exploratory/xi_fixed_lambda_joint_box_compression.sources.json",
+      "role": "transitive source closure",
+      "sha256_lf": "b775a9c8bc054312644116b362960b1c1e950d23a8dfc82d556d86f67a30c819"
+    },
+    {
+      "commit": "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+      "git_blob": "6cdac911a7e62d12273d7eafd2fdef199b282d33",
+      "id": "FC5",
+      "path": "tests/test_xi_fixed_lambda_joint_box_compression.py",
+      "role": "frozen finite controls",
+      "sha256_lf": "deb2696c5c160e0da970c31f35e5ed472baabc4fb1d3db831b4e48371935ae80"
+    },
+    {
+      "commit": "24544028cd033ea66a6b64bec254da5ea43230c9",
+      "git_blob": "db03a1b0c1f5abc0e27be92c4232968f68f816b8",
+      "id": "PREREG",
+      "path": "research/exploratory/XI_FIXED_LAMBDA_HELDOUT_ALIGNMENT.md",
+      "role": "fixed heldout boxes, tiers and scouting schedule before computation",
+      "sha256_lf": "714bf76812826957269bb26d10c3a919909ad7af97b0ec9becfb8a4e5f0c79bd"
+    },
+    {
+      "commit": "a7479e85fdc2a464cdc753021435cfef7a1f3910",
+      "git_blob": "90e6bd89ca9a23c401d6d947c04a9d548f6b3030",
+      "id": "LB",
+      "path": "research/exploratory/XI_LAPLACE_LOW_PASS_LOWER_BOUND.md",
+      "role": "LB3 weighted native alignment criterion and unpaid cofinal hypotheses",
+      "sha256_lf": "c56d29037b85c45398bcb34dc7fb8450ba0e4b0f32fa7293edcaf5d1d2ea4b64"
+    }
+  ],
+  "preregistration_commit": "24544028cd033ea66a6b64bec254da5ea43230c9",
+  "runtime": {
+    "flint": "3.6.0",
+    "machine": "AMD64",
+    "native_files": 44,
+    "native_files_sha256": "36c07323af58dec0eb6fd82a99bf871924eb69f1833d9af626fc09437ae5b0cc",
+    "python": "3.12.10",
+    "python_flint": "0.9.0",
+    "system": "Windows"
+  },
+  "schema": "xi_fixed_lambda_heldout_alignment-sources-v1"
+}
