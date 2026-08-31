@@ -1,0 +1,17 @@
+[13:29:41] m = 19: rigorous node bound B = 4427, interp window K = 111
+[13:29:41] E1: evaluating pipeline at all nodes ...
+[13:29:41]   node 0 (0s)
+[13:29:41]   node 500 (0s)
+[13:29:42]   node 1000 (1s)
+[13:29:42]   node 1500 (1s)
+[13:29:43]   node 2000 (2s)
+[13:29:43]   node 2500 (2s)
+[13:29:43]   node 3000 (2s)
+[13:29:44]   node 3500 (3s)
+[13:29:44]   node 4000 (3s)
+[13:29:45] E1 done: 4428 nodes, all structural asserts passed (4s)
+[13:29:45] E3: interpolating mu_j over first K+1 nodes ...
+[13:29:46] E3 done; degrees [81, 80, 77, 72, 65, 56, 45, 32, 17, 0]
+[13:29:46] E4 PROOF: exact evaluation of candidates at ALL nodes ...
+[13:29:46] E4 proof complete (5s)
+[13:29:46] saved matrix/m19_spectrum.json (5s)

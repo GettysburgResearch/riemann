@@ -1,0 +1,30 @@
+[13:30:16] nu = 8, degree bound D = 1080
+[13:30:16] S2: exact resultants at 0..D ...
+[13:30:16]   a0 = 0 (0s)
+[13:30:17]   a0 = 200 (1s)
+[13:30:19]   a0 = 400 (3s)
+[13:30:21]   a0 = 600 (5s)
+[13:30:23]   a0 = 800 (7s)
+[13:30:26]   a0 = 1000 (10s)
+[13:30:27] S2 done (11s); max digits 2082
+[13:30:27] S3: modular interpolation + CRT ...
+[13:30:32] S3 CRT stable after 12 primes (16s)
+[13:30:32] candidate deg = 672
+[13:30:32] S3 PROOF: exact evaluation at all nodes ...
+[13:30:32]   verified through 0 (16s)
+[13:30:32]   verified through 400 (16s)
+[13:30:32]   verified through 800 (16s)
+[13:30:32] S3 proof complete: candidate == disc (16s)
+[13:30:32] S4: dividing out torsion factors ...
+[13:30:32]   psi_3 divides with multiplicity 32
+[13:30:32]   psi_4 divides with multiplicity 48
+[13:30:32]   psi_5 divides with multiplicity 12
+[13:30:32]   psi_6 divides with multiplicity 32
+[13:30:32]   psi_7 divides with multiplicity 4
+[13:30:32]   psi_8 divides with multiplicity 16
+[13:30:32]   psi_10 divides with multiplicity 12
+[13:30:32]   psi_12 divides with multiplicity 4
+[13:30:32]   psi_14 divides with multiplicity 4
+[13:30:32]   psi_16 divides with multiplicity 2
+[13:30:32] remainder deg 440, content 1, lc 31056928493960715836967495251031375216640000
+[13:30:32] S4: exhaustive candidate torsion minpolys ...
