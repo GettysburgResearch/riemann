@@ -1,7 +1,8 @@
-# Chain-level continuation of the Segre--Chow synthesis
+# Chain-level and derived continuation of the Segre--Chow synthesis
 
 ```text
-Status: proposed theorem synthesis plus exact finite replays;
+Status: proposed theorem synthesis plus exact finite replays and a
+        noncomputational transferred-model continuation;
         independent mathematical/code review required.
 Branch: research/gpt56-pro/20260831-segre-chow-equivariant-synthesis
 Parent packet: PR #782, initial head 552fe0b78fd96b02fe5836269e6795a992c935be
@@ -12,7 +13,7 @@ Source heads retained:
 RH status: RH and GRH remain unproved; nothing here addresses either.
 ```
 
-This continuation attacks the three principal targets deposited in the first
+This continuation attacks the principal targets deposited in the first
 PR #782 packet. It does not modify any source branch or replace the exact
 atlases that those branches proved.
 
@@ -40,7 +41,7 @@ sequence of the literal two-block Koszul bicomplex
  \Lambda^p C\otimes\Lambda^qW\otimes R.
 \]
 
-The new exact calculation proves
+The exact calculation proves
 
 \[
  C\otimes B_{1,2}\longrightarrow B_{1,3}
@@ -113,7 +114,7 @@ by Frobenius characteristic and character orthogonality reconstructs the
 full \(GL(V)\times S_m\) alternating Chow-Tor character.
 
 This closes the all-\((d,m)\) theorem proposed in `THEOREM_II.md`; the exact
-formula and proof are now in `FROBENIUS_CYCLE_INDEX_ALTERNANT.md`.
+formula and proof are in `FROBENIUS_CYCLE_INDEX_ALTERNANT.md`.
 
 At \((d,m)=(3,3)\), an independent exact replay checks:
 
@@ -139,7 +140,7 @@ from a scalar reciprocal factorization.
 
 Let \(\operatorname{corr}_j\) be the stable weight-\(2j\) correction between
 the square-defect coefficient and the Gauss-sign exterior-square term. The
-new theorem gives the entire part containing an elementary factor of index
+theorem gives the entire part containing an elementary factor of index
 strictly larger than \(j\) by one generating identity:
 
 \[
@@ -185,7 +186,7 @@ predictions.
 The first packet proved that the degree-seven quotient class is the unique
 \([777]\otimes\mathbf1\) top Tor line and that the invariant top differential
 is dual to the ternary-cubic Hessian component. The continuation makes the
-canonicalization procedure completely explicit:
+canonicalization procedure explicit:
 
 \[
  L_{\mathrm{can}}=
@@ -213,10 +214,155 @@ source coordinates. The branch currently authenticates the kernel vector,
 old-space obstruction and quotient class, but does not contain those action
 matrices in an accepted executable contract.
 
-## 5. Corrections and scope
+## 5. Finite transferred model and rank-free non-formality
 
-- The change-of-rings spectral sequence is now proved nondegenerate at `E2`
-  in the ternary cube.
+`TRANSFERRED_KOSZUL_MODEL.md` replaces the open-ended instruction “compute
+all later pages” by a finite derived object. A graded equivariant contraction
+of the W-Koszul complex and the homological perturbation lemma give
+
+\[
+\boxed{
+\operatorname{Tor}^{S_E}(R,k)
+=H\!\left(
+\Lambda C\otimes B,
+\Delta_1+\Delta_2+\Delta_3+\Delta_4
+\right).
+}
+\tag{5.1}
+\]
+
+The arity-r component has structure map
+
+\[
+\delta_r:\Lambda^rC\otimes B_{q,j}
+\longrightarrow B_{q+r-1,j+r}.
+\tag{5.2}
+\]
+
+Because Chow homology is supported only in homological degrees zero through
+three, all arities at least five vanish. The completed bidegree table leaves
+exactly six ordinary C-action slots and twelve higher slots: six of arity two,
+four of arity three, and two of arity four. Literal representatives depend on
+the contraction, but their filtered gauge class and the induced
+spectral-sequence differentials are canonical.
+
+The same note gives a noncomputational non-formality theorem. The class
+
+\[
+E^2_{0,2,4}=B_{2,4}
+\]
+
+has dimension 65, lies in column zero, and cannot survive because ambient
+property \(N_3\) gives
+
+\[
+\operatorname{Tor}^{S_E}_2(R,k)_4=0.
+\]
+
+Thus some incoming higher operation is forced in every model. The exact
+replay strengthens this geometric conclusion by proving that the page-two
+operation alone is already surjective.
+
+## 6. Internal degree six: the central closure theorem
+
+`INTERNAL_DEGREE_SIX_CLOSURE.md` isolates the first internal degree where the
+ambient numerator no longer determines the actual Tor modules. The transferred
+complex is
+
+\[
+0\to\Lambda^6C\otimes B_{0,0}
+\to
+\begin{matrix}
+\Lambda^5C\otimes B_{0,1}\\
+\oplus\Lambda^4C\otimes B_{1,2}
+\end{matrix}
+\to
+\begin{matrix}
+\Lambda^4C\otimes B_{0,2}\\
+\oplus\Lambda^3C\otimes B_{1,3}\\
+\oplus\Lambda^2C\otimes B_{2,4}\\
+\oplus C\otimes B_{3,5}
+\end{matrix}
+\to
+\begin{matrix}
+C\otimes B_{2,5}\\
+\oplus B_{3,6}
+\end{matrix}
+\to0.
+\tag{6.1}
+\]
+
+Its dimensions are
+
+\[
+12376\longrightarrow152796\longrightarrow79407\longrightarrow357,
+\tag{6.2}
+\]
+
+and its Euler characteristic is \(-61370\). Minimality kills total degree six,
+while property \(N_3\) kills total degree three. Therefore its only homology is
+
+\[
+K_{4,2}=\operatorname{Tor}^{S_E}_4(R,k)_6,
+\qquad
+K_{5,1}=\operatorname{Tor}^{S_E}_5(R,k)_6,
+\]
+
+and the packet proves the exact representation-valued identity
+
+\[
+[K_{4,2}]-[K_{5,1}]=\mathscr D_6,
+\qquad
+\dim K_{5,1}-\dim K_{4,2}=61370.
+\tag{6.3}
+\]
+
+Eleven of the twelve support-allowed higher operations act in this one
+complex. Only
+
+\[
+\Lambda^2C\otimes B_{2,5}\to B_{3,7}
+\]
+
+first appears in degree seven.
+
+A split-functorial argument from the top syzygy of
+\((\mathbf P^1)^3\) supplies a product-group embedding
+
+\[
+S_{(3,3)}V_1\boxtimes S_{(3,3)}V_2\boxtimes S_{(3,3)}V_3
+\hookrightarrow K_{4,2}(V_1,V_2,V_3).
+\tag{6.4}
+\]
+
+For three-dimensional factors this gives
+
+\[
+\boxed{
+\dim K_{4,2}\ge1000,
+\qquad
+\dim K_{5,1}\ge62370.
+}
+\tag{6.5}
+\]
+
+No equality with the displayed 1000-dimensional submodule is claimed. The
+remaining target is to determine the differential of (6.1) and split the
+virtual class \(\mathscr D_6\) into the genuine two modules.
+
+## 7. Corrections and scope
+
+- The change-of-rings spectral sequence is proved nondegenerate at `E2` in
+  the ternary cube.
+- The Chow Koszul complex is independently proved non-formal as a derived
+  \(S_C\)-module; this does not depend on the modular rank certificate.
+- The ambient resolution is controlled up to filtered homotopy by four
+  arities and twelve possible higher support slots, not by an infinite list
+  of unconstrained operations.
+- The degree-six Euler coefficient is not the dimension of one module; it is
+  \([K_{4,2}]-[K_{5,1}]\).
+- The 1000-dimensional master submodule is a rigorous lower bound, not a
+  complete decomposition of \(K_{4,2}\).
 - The scalar alternant is insufficient for factor-permutation types; the
   cycle-index refinement is the exact repair.
 - The depth-5/6 failure of the simple correction law is not permanent
@@ -227,17 +373,21 @@ matrices in an accepted executable contract.
 - No local rationality or finite syzygy geometry is promoted to automorphy,
   analytic continuation, RH or GRH.
 
-## 6. Ranked continuation after this pass
+## 8. Ranked continuation after this pass
 
-1. Compute the full ternary change-of-rings spectral sequence by internal
-   degree, beginning with the transgression into \(B_{3,5}\) and the incoming
-   differential controlling \(E^2_{1,1,4}\).
-2. Decompose the rank-65 transgression representation-equivariantly, not only
-   by total rank; the target table predicts its exact three isotypic pieces.
-3. Add the marked \(\mathfrak{sl}_3\) and factor-permutation actions to the
+1. **Close internal degree six.** Decompose every term of (6.1) into
+   \(GL_3\times S_3\) multiplicity spaces, determine the transferred
+   differential, and extract the full characters of \(K_{4,2}\) and
+   \(K_{5,1}\).
+2. **Explain the rank-65 transgression irreducibly.** Construct four
+   highest-weight cycles and prove nonzero projection onto
+   \([552]\otimes\mathbf1\), \([552]\otimes\sigma\),
+   \([642]\otimes\varepsilon\), and \([543]\otimes\varepsilon\).
+3. **Prove chain-level dual compatibility before using it.** Build a cyclic
+   or self-dual transferred contraction, then relate opposite higher blocks
+   and determine the one support slot first appearing in degree seven.
+4. Add the marked \(\mathfrak{sl}_3\) and factor-permutation actions to the
    top-witness artifact and execute the canonical projection contract.
-4. Expand the stable-head generating identity beyond `k=4`; it is recursive
-   in shallower square-defect coefficients and should expose the complete
-   partition-lattice law.
-5. Extend the cycle-index replay to \(m=4\) and use all five conjugacy classes
-   to predict the first uncomputed \(GL(V)\times S_4\) Chow-Tor character.
+5. Treat the stable correction core and the \(m=4\) cycle-index extension as
+   secondary programs. Both remain valuable, but neither splits the first
+   nonlinear ambient Tor modules.
