@@ -1,0 +1,39 @@
+{
+  "authoring_base": "9da33e7ea2b15a4badb3cb436e38e54762ad5e1d",
+  "external_context": [
+    {
+      "remote_bytes_authenticated": false,
+      "role": "printed pages11-12: boundary dx Hardy model and reproducing kernel",
+      "url": "https://arxiv.org/pdf/1605.07418v2"
+    },
+    {
+      "remote_bytes_authenticated": false,
+      "role": "Lemma17 and disk automorphisms: Schwarz-Pick derivation in LP11",
+      "url": "https://terrytao.wordpress.com/2016/10/18/246a-notes-5-conformal-mapping/"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "90e8dff3d184cbfe59974969ca89615856c33c51",
+      "git_blob": "72ac1f93b6fb0a74200ed2cc7e8399a4a10064c2",
+      "kind": "finite_Gram_and_capture_parent",
+      "path": "research/exploratory/HARDY_COFINAL_FINITE_HEIGHT_SOURCE_CAPTURE.md",
+      "sha256_lf": "490373dafd09ed491a2c3ad31b44dc152cd0936c84f58e1676aef0ffd1013a0b"
+    },
+    {
+      "commit": "9da33e7ea2b15a4badb3cb436e38e54762ad5e1d",
+      "git_blob": "e592a4c031876f56f07d28b7e18a8a7cf6e826f4",
+      "kind": "conditional_actual_companion_height_parent",
+      "path": "research/exploratory/XI_COMPANION_GLOBAL_HEIGHT_BOUNDARY.md",
+      "sha256_lf": "5bf33ffd58c3fe277f4bfb0408f0805eae1b2f34aab49bb71e4c714afb80dc6d"
+    }
+  ],
+  "primitive_contract": {
+    "Fourier": "(2pi)^(-1/2) integral_0^infinity h(t) exp(izt) dt; boundary dx",
+    "Xi_corollary": "only GH-premised UNREDUCED components at each fixed lambda>0",
+    "bridge": "integral exp(-2yt) k_B(t)dt = integral (1-|B(x+iy)|^2)dx/(4pi*y)",
+    "height": "unweighted sum Im b with multiplicity; no boundary extension needed",
+    "object": "BARE U=1 trace of Pi_[0,L] P_KB Pi_[0,L]; PURE Blaschke"
+  },
+  "schema": "hardy-low-pass-height-sources-v1"
+}
