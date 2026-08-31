@@ -82,9 +82,16 @@ new torsion at m = 12, (ii) `a^2 - 3` (ord alpha = 12, ord alpha^2
 = 6) entering at m = 13, (iii) the ord-7 cubic
 `a^3 + a^2 - 2a - 1` NOT entering at m = 13. All three held: m = 12
 carries only the previously-entered factors, m = 13 gains exactly
-`(a^2 - 3)^2`, and the ord-7 cubic divides neither. Two held-out
-confirmations plus one held-out non-entry; the remaining posed test is
-the joint ord(alpha) = 7 and 14 entry (`ord alpha^2 = 7`) at m = 15.
+`(a^2 - 3)^2`, and the ord-7 cubic divides neither. THIRD held-out
+round (matrix/m14_m15_spectrum.json; the predictions were written into
+matrix/m14_m15_test.py before the run): m = 14 adds no new torsion;
+m = 15 gains BOTH ord-7-related cubics `a^3 + a^2 - 2a - 1`
+(2cos 2pi/7, ord alpha = 7) and `a^3 - a^2 - 2a + 1` (2cos pi/7,
+ord alpha = 14) — the JOINT entry the `ord(alpha^2) = 7` form demands
+— each squared; and the ord-9 cubic `a^3 - 3a + 1`
+(`ord(alpha^2) = 9`, predicted entry m = 19) stays absent. Three
+held-out rounds, seven predictions, zero misses. Next posed test:
+ord-9 entering at m = 19, with nothing new at m = 16..18.
 
 ## Reading (conjecture-generating; mechanism OPEN)
 
