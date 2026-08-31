@@ -2,9 +2,11 @@
 
 ```text
 Claim ID: T-108509
-Status:   PROVED (Theorems 1-2 and the m<=9 part of Theorem 3 of the
-          standalone proof; elementary complete proofs, machine-verified
-          two independent ways)
+Status:   PROVED (Theorems 1-3; Theorem 3's odd case for ALL m by a
+          supersingular-specialization argument; the even case's factor
+          SIMPLICITY is machine-verified for m <= 10 and labelled as
+          data beyond; elementary complete proofs, machine-verified two
+          independent ways)
 Created:  2026-08-31 (pass 3)
 Programme: #764, axes A/B, question 9; generalizes T-108507 (m=3) to all
           m and closes the "obstruction-duality tower" question it posed

@@ -185,21 +185,51 @@ of rank-2 spectrum points. In particular the defect degree `m - 1`
 decomposes canonically as `eps + 2 nu`.
 
 **Proof.** Part (ii) of Theorem 1 shows the divisibility for even `m`.
-For odd `m`, `N_m(-b^{-m/2})` cannot vanish identically in `(a, b)`
-since `b^{m/2}` is not in `K` while `N_m in K[T]` — a root at
-`-b^{-m/2}` for all `(a,b)` would force the conjugate root
-`+b^{-m/2}` as well (Galois conjugation of `sqrt b` over `K`), i.e.
-`(1 - b^m T^2) | N_m`; but `1 - b^m T^2 = T (b^m T + 1/T) - ...` — in
-spectrum coordinates this is the point `z = 0` with
-`b^m T^2 + 1 = 0`... concretely `(1 - b^m T^2) | N_m` iff
-`M_m(z)` vanishes at the image of the pair `{b^{-m/2}, -b^{-m/2}}`,
-whose `z`-values are `+-2 b^{m/2}` — again not in `K` unless
-`M_m` has the even factor `z^2 - 4b^m`; degree count rules this out
-for `m = 3, 5` (`nu <= 2` with `M_m` visibly not of that form) and the
-computed `M_m` (m <= 9) verify it in general for the stated range. ∎
-(The general-`m` claim in Theorem 3 beyond `m <= 9` rests on the
-computed non-divisibility for those `m`; for larger odd `m` we assert
-only what Theorem 1 gives: no forced linear factor.)
+
+*Odd m, ALL m (specialization argument).* Since `b^{m/2}` is not in
+`K` for odd `m`, a root of `N_m` at `-b^{-m/2}` holding identically
+would force the Galois-conjugate root `+b^{-m/2}` too, i.e.
+`(1 - b^m T^2) | N_m` in `K[T]`. Specialize `a = 0` (supersingular),
+`b` generic: the recurrence gives `h_{2j} = (-b)^j`, `h_{2j+1} = 0`,
+so `F(T) = sum h_k^m T^k = 1/(1 - (-b)^m T^2)` and, since the defect
+identity is a polynomial identity that specializes,
+
+```text
+N_m(0, b; T) = det(1 - Sym^m(A) T)|_{a=0} / (1 - (-b)^m T^2).
+```
+
+At `T_0` with `T_0^2 = b^{-m}` and `m` ODD the denominator factor is
+`1 - (-1)^m = 2 != 0`. The Satake roots at `a = 0` are
+`alpha = i sqrt b`, `beta = -i sqrt b`, so the `Sym^m` eigenvalues are
+`mu_i = alpha^i beta^{m-i}` with
+
+```text
+mu_i T_0 = +- (i)^i (-i)^{m-i} = +- (-i)^m (-1)^i  in  {+i, -i}
+```
+
+(`m` odd makes `(-i)^m` purely imaginary). Hence every factor
+`(1 - mu_i T_0)` equals `1 -+ i != 0`, so
+`N_m(0, b; T_0) = det(...)/2 != 0`. A polynomial that is nonzero at
+the specialization `a = 0` is nonzero in `K[T]`, so
+`(1 - b^m T^2)` never divides `N_m` for odd `m`: NO linear factor,
+for EVERY odd `m`. ∎
+
+*Even m: the factor is GENERICALLY simple, and the jump locus is
+explicit.* `(1 + b^{m/2} T)^2 | N_m` iff `M_m(-2 b^{m/2}) = 0` (not
+excluded by Galois, since `b^{m/2} in K`). As an element of `K` the
+value `M_m(-2 b^{m/2})` is a nonzero polynomial — for `m = 4` it is
+`b(3a^2 - 4b)` — so the factor is simple generically, while on the
+proper subvariety `{M_m(-2 b^{m/2}) = 0}` the multiplicity JUMPS: at
+`(a, b) = (-2, 3)` (on `3a^2 = 4b`) one finds `N_4 = (1 + 9T)^3`, the
+spectrum quadratic degenerating onto the trivial factor's root. This
+jump stratum is the even-m boundary companion of the collision loci of
+`disc_z M_m` (see the spectrum-collision data), and was FOUND by the
+X-108509 V5 replay, whose first version asserted unconditional
+simplicity and was corrected by its own counterexample. V5 now
+certifies the dichotomy at every instantiation: double division
+succeeds iff `M_m(-2 b^{m/2}) = 0` there. Nonvanishing of
+`M_m(-2 b^{m/2})` in `K` is machine-verified for even `m <= 10`;
+beyond that it is asserted only as verified data.
 
 ## What is new here, and what is not
 

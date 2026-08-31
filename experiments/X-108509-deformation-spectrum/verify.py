@@ -325,10 +325,81 @@ def v4():
           ok_split)
 
 
+
+# ---------- V5: even-m factor simplicity -----------------------------------
+
+def v5():
+    """Even-m factor dichotomy (Theorem 3, even case): the second
+    division by (1 + b^{m/2} T) succeeds IFF M_m(-2 b^{m/2}) = 0 at the
+    instantiation (the explicit jump locus; for m = 4 it is
+    b(3a^2 - 4b), witnessed by N_4 = (1+9T)^3 at (a,b) = (-2,3)).
+    HISTORY NOTE: the first version of this check asserted
+    unconditional simplicity and was refuted by its own (-2,3) run;
+    the proof was corrected to the generic statement + jump locus."""
+    ok = True
+    n_generic = n_jump = 0
+    pts5 = PTS + [(-2, 3), (2, 3)]        # include the jump witness
+    for m in (2, 4, 6, 8, 10):
+        eps_nu = (m - 2) // 2
+        for (av, bv) in pts5:
+            r = numerator_by_bm(av, bv, m)
+            if r is None or len(r[0]) - 1 != m - 1:
+                continue
+            N = r[0]
+            c = Fr(bv) ** (m // 2)
+            # first division must always succeed (Theorem 1(ii))
+            quo, rem = None, None
+            for attempt in range(2):
+                quo = [Fr(0)] * (len(N) - 1)
+                rem = N[:]
+                for i in range(len(N) - 2, -1, -1):
+                    quo[i] = rem[i + 1] / c
+                    rem[i + 1] -= quo[i] * c
+                    rem[i] -= quo[i]
+                divisible = not poly_trim(rem)
+                if attempt == 0:
+                    if not divisible:
+                        ok = False
+                        check("V5-first-division", False,
+                              f"m={m} pt=({av},{bv})")
+                        break
+                    N = quo
+                else:
+                    # extract M from quo and evaluate at z = -2 b^{m/2}
+                    nu = eps_nu
+                    Amat = [[Fr(0)] * (nu + 1) for _ in range(len(N))]
+                    for j in range(nu + 1):
+                        wc = w_basis_coeffs(bv, m, nu, j)
+                        for i, v in enumerate(wc):
+                            Amat[i][j] = v
+                    sol = solve_linear(Amat, N + [Fr(0)]
+                                       * (len(Amat) - len(N)))
+                    if sol is None or not sol[1]:
+                        ok = False
+                        continue
+                    mus, _ = sol
+                    zval = Fr(-2) * Fr(bv) ** (m // 2)
+                    Mval = sum(mu * zval ** j for j, mu in enumerate(mus))
+                    if divisible != (Mval == 0):
+                        ok = False
+                        check("V5-dichotomy", False,
+                              f"m={m} pt=({av},{bv}) div={divisible} "
+                              f"Mval={Mval}")
+                    if Mval == 0:
+                        n_jump += 1
+                    else:
+                        n_generic += 1
+    check(f"V5 even-m factor dichotomy: second division succeeds iff "
+          f"M_m(-2 b^(m/2)) = 0 ({n_generic} generic, {n_jump} "
+          f"jump-locus instantiations incl. the (-2,3) witness)",
+          ok and n_jump >= 1)
+
+
 def main():
     v12()
     v3b()
     v4()
+    v5()
     os.makedirs(os.path.join(os.path.dirname(__file__), "results"),
                 exist_ok=True)
     allok = all(c["ok"] for c in CHECKS)
