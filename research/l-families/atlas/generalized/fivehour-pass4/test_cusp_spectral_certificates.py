@@ -3,6 +3,7 @@
 import copy
 import json
 import unittest
+from pathlib import Path
 
 from flint import arb, ctx
 
@@ -91,6 +92,57 @@ class CuspCertificateTests(unittest.TestCase):
         for raw in bad:
             with self.subTest(raw=raw[:20]), self.assertRaises(ValueError):
                 c.strict_json(raw)
+
+    def test_all_reported_gamma_values_have_finite_sum_control(self):
+        for k in c.OPERATOR_WEIGHTS:
+            for j in c.operator_indices(k):
+                argument = 4 * arb.pi() * j
+                self.assertTrue(
+                    c.gamma_q(k, argument).overlaps(
+                        c.gamma_q_finite_sum(k, argument)
+                    )
+                )
+        for k in c.PERIOD_WEIGHTS:
+            for denominator in c.EPS_DENOMINATORS:
+                for margin_denominator in c.MARGIN_DENOMINATORS:
+                    row = c.period_cell(k, denominator, margin_denominator)
+                    if "gamma_q" not in row:
+                        continue
+                    argument = (
+                        4 * arb.pi() * row["jminus"] * c.unpack(row["height"])
+                    )
+                    self.assertTrue(
+                        c.gamma_q(k - 1, argument).overlaps(
+                            c.gamma_q_finite_sum(k - 1, argument)
+                        )
+                    )
+
+    def test_512_bit_fixture_nests_in_256_bit_fixture(self):
+        directory = Path(c.__file__).resolve().parent
+        low = c.strict_json((directory / "cusp_certificates_256.json").read_bytes())
+        high = c.strict_json((directory / "cusp_certificates_512.json").read_bytes())
+
+        def collect(value):
+            output = {}
+
+            def visit(item, path=()):
+                if type(item) is dict and set(item) == {"mid", "rad", "exp10"}:
+                    output[path] = c.unpack(item)
+                elif type(item) is dict:
+                    for key, child in item.items():
+                        visit(child, path + (key,))
+                elif type(item) is list:
+                    for index, child in enumerate(item):
+                        visit(child, path + (index,))
+
+            visit(value)
+            return output
+
+        low_balls, high_balls = collect(low), collect(high)
+        self.assertEqual(low_balls.keys(), high_balls.keys())
+        for path in low_balls:
+            with self.subTest(path=path):
+                self.assertTrue(low_balls[path].contains(high_balls[path]))
 
 
 if __name__ == "__main__":
