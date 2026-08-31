@@ -1,0 +1,73 @@
+{
+  "authoring_base": "e5e43625b157ecc5f602532e16a1197679594824",
+  "external_content_machine_authenticated": false,
+  "external_primary": [
+    {
+      "read": "Theorem 1 rendered page 2",
+      "sha256": "3362f66af9fa9373977eee70e2282ec33989d5d8b97e0852df9e32cc25b52885",
+      "url": "https://arxiv.org/pdf/2004.09765"
+    },
+    {
+      "read": "Theorem 1.5 rendered page 3",
+      "sha256": "a1d3f37e458d43a87bc33d5fe9c0d0d8d52ec34e8f610053dbdcb0f72a7c5be",
+      "url": "https://www.cs.uleth.ca/~kadiri/articles/New-Bounds-for-Psi-Math-Comp-Faber-Sept2013.pdf"
+    },
+    {
+      "read": "complete four-page corrigendum; zero-count constants retained",
+      "sha256": "d8f1c4ca69f53346465ec6fa1bbcdcc3c12946c51be56d6a8205efc826a95ddc",
+      "url": "https://www.cs.uleth.ca/~kadiri/articles/New-Bounds-for-Psi-Math-Comp-Faber-Corrigendum-Nov2017.pdf"
+    }
+  ],
+  "preregistered_design": "79345ae1fd7f1721b5ef3d89f135f74c0ebd02e8",
+  "schema": "xi-four-node-far-zero-reserve-sources-v1",
+  "sources": [
+    {
+      "commit": "79345ae1fd7f1721b5ef3d89f135f74c0ebd02e8",
+      "git_blob": "2e249f288a7d57fa252a83e531427ffec205f5ab",
+      "path": "research/exploratory/XI_FOUR_NODE_FAR_ZERO_RESERVE.md",
+      "sha256_lf": "f7fa6a1c62edfba4eadfa46ab1cb252bc6b00407c9287b09a424a4c78362ba00"
+    },
+    {
+      "commit": "e5e43625b157ecc5f602532e16a1197679594824",
+      "git_blob": "888c1e4713cb79a2abd205b8380f6f5e3e679b82",
+      "path": "research/exploratory/XI_SOURCE_POLARIZATION_FOUR_NODE.md",
+      "sha256_lf": "b9b550fc3c8836f1f4ba2d24ebadba6fbb3adc0b420636afd6efc4e740578f71"
+    },
+    {
+      "commit": "e5e43625b157ecc5f602532e16a1197679594824",
+      "git_blob": "8b65cf851349b3a7b639b347238689286a90c07b",
+      "path": "research/exploratory/xi_source_polarization_four_node.py",
+      "sha256_lf": "cd163d70c720eced1a1ed01912412877ac91c0388e4837d8e65620f50453812b"
+    },
+    {
+      "commit": "8f01064df805624c045877655893c324a220975d",
+      "git_blob": "f16e936294172dc272e67edcdffc822ba6edf5e6",
+      "path": "research/integrated/xi_pick/ORDER_THREE_CANONICAL.md",
+      "sha256_lf": "cb6e0c2456a4828c650778a8d7cbf901a2aa073918c94be5fb970ed020d0de96"
+    },
+    {
+      "commit": "8f01064df805624c045877655893c324a220975d",
+      "git_blob": "490de4b4e276713f7f3b7f00208469cfbcd9cd84",
+      "path": "research/integrated/xi_pick/SOURCE_MANIFEST.tsv",
+      "sha256_lf": "ddfe12952dda8bb8bd31dc21fc903e215a0ef48a49532af7b4686e8f58b529fc"
+    },
+    {
+      "commit": "c079c2ef21022be951027de1316aecf1168422c1",
+      "git_blob": "6f8f386df351e2f3873f9cc4428b6a42e4d51b68",
+      "path": "claims/lemmas/L-92000-three-node-caratheodory-determinant-factors-into-two-scalar-curvatures.md",
+      "sha256_lf": "97a90b397828fe8772ba7e071b14dc4de670dd07901073f804102c29e06a9757"
+    },
+    {
+      "commit": "880d14cb4bcbf542ec199137d60c58d9a8fd723d",
+      "git_blob": "98b6cea25126a10ff4fd4d1d5ed4fe2334bd3306",
+      "path": "claims/lemmas/L-92102-the-complete-hypothetical-off-line-curvature-budget-uses-less-than-one-critical-orbit.md",
+      "sha256_lf": "4e6f1369fa2159617f205043fb4a570d3d0e5bf3459be0e43c0a8cc8fc25a61e"
+    },
+    {
+      "commit": "db9a767e312d9928f5ef827762dcb4ef95494af0",
+      "git_blob": "a7886b25c17789731ac3b422212c7eae5e294750",
+      "path": "claims/lemmas/L-92202-verified-critical-reserve-closes-the-schwarzian-xi-impedance-curvature.md",
+      "sha256_lf": "b051480a3e7df1ca8b79c5dd14435fb1d21b53c6a356502f0a462d4ad2d72a5f"
+    }
+  ]
+}
