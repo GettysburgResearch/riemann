@@ -143,9 +143,120 @@ def v2():
         check(f"V2 series m={m} x={xv}", ok)
 
 
+# ---- V4: stable layer theorems at their determining ranks ----------
+# (symbolic in d variables via dict polynomials; self-contained —
+# no campaign imports. corr_5's determining rank d = 10 takes ~5 min
+# and lives in the campaign artifact matrix/stable_layers.py; here we
+# replay corr_3 (d = 6) and corr_4 (d = 8), which are seconds.)
+
+def dp_mul(p, q):
+    r = {}
+    for k1, c1 in p.items():
+        for k2, c2 in q.items():
+            k = tuple(a + b for a, b in zip(k1, k2))
+            r[k] = r.get(k, 0) + c1 * c2
+    return {k: v for k, v in r.items() if v}
+
+
+def dp_add(p, q):
+    r = dict(p)
+    for k, v in q.items():
+        r[k] = r.get(k, 0) + v
+        if not r[k]:
+            del r[k]
+    return r
+
+
+def dp_scale(p, c):
+    return {k: c * v for k, v in p.items()} if c else {}
+
+
+def dp_one(d):
+    return {(0,) * d: 1}
+
+
+def dp_var(d, i):
+    e = [0] * d
+    e[i] = 1
+    return {tuple(e): 1}
+
+
+def dp_ts_mul(P, Q, J):
+    R = [dict() for _ in range(J + 1)]
+    for i, pi in enumerate(P[:J + 1]):
+        if not pi:
+            continue
+        for j, qj in enumerate(Q[:J + 1 - i]):
+            if qj:
+                R[i + j] = dp_add(R[i + j], dp_mul(pi, qj))
+    return R
+
+
+def dp_h(d, r):
+    if r == 0:
+        return dp_one(d)
+    out = {}
+
+    def rec(pos, rem, cur):
+        if pos == d - 1:
+            out[tuple(cur + [rem])] = 1
+            return
+        for v in range(rem + 1):
+            rec(pos + 1, rem - v, cur + [v])
+    rec(0, r, [])
+    return out
+
+
+def dp_e(d, k):
+    from itertools import combinations as C
+    if k == 0:
+        return dp_one(d)
+    out = {}
+    for S in C(range(d), k):
+        e = [0] * d
+        for i in S:
+            e[i] = 1
+        out[tuple(e)] = 1
+    return out
+
+
+def dp_corr(d, J):
+    Q = [dp_one(d)]
+    for i in range(d):
+        for j in range(i, d):
+            w = dp_mul(dp_var(d, i), dp_var(d, j))
+            Q = dp_ts_mul(Q, [dp_one(d), dp_scale(w, -1)], J)
+    S = [dp_mul(dp_h(d, r), dp_h(d, r)) for r in range(J + 1)]
+    N = dp_ts_mul(Q, S, J)
+    P = [dp_one(d)]
+    for i in range(d):
+        for j in range(i + 1, d):
+            w = dp_mul(dp_var(d, i), dp_var(d, j))
+            P = dp_ts_mul(P, [dp_one(d), w], J)
+    G = [dp_scale(P[j], (-1) ** (j * (j - 1) // 2))
+         for j in range(J + 1)]
+    return [dp_add(N[j], dp_scale(G[j], -1)) for j in range(J + 1)]
+
+
+def v4_layers():
+    for (j, d) in [(3, 6), (4, 8)]:
+        layers = dp_corr(d, j)
+        check(f"V4 corr_1, corr_2 vanish at d={d}",
+              not layers[1] and not layers[2])
+        for jj in range(3, j + 1):
+            cand = {}
+            for i in range(jj + 1, 2 * jj + 1):
+                cand = dp_add(cand, dp_scale(
+                    dp_mul(dp_e(d, i), dp_h(d, 2 * jj - i)),
+                    2 * (-1) ** i))
+            check(f"V4 layer law corr_{jj} at d={d}",
+                  dp_add(layers[jj], dp_scale(cand, -1)) == {})
+
+
 def main():
     v1_v3()
     v2()
+    v4_layers()
     os.makedirs(os.path.join(os.path.dirname(__file__), "results"),
                 exist_ok=True)
     allok = all(c["ok"] for c in CHECKS)
