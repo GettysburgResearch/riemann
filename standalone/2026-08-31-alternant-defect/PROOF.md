@@ -182,15 +182,33 @@ to exactly T-108508's `-2 e_5 h_3`. Both theorems verified again by
 the direct identity checks `corr_j == 2 sum_{i>=j+1} (-1)^i e_i
 h_{2j-i}` at d = 6 and d = 8.
 
-**The T^5 layer.** The same linear law CANNOT be complete at j = 5:
-T-108508's rank-5 closed form has terms quadratic in the deep
-elementaries (`e_2 e_4^2`, `e_5^2`) which the linear form cannot
-produce at d = 5 (where all `e_i, i >= 6`, vanish). The stable
-`corr_5` at the determining rank d = 10 — the first SECOND-LAYER
-stable form — is computed by the same script (in progress at the
-time of this addendum; deposited in stable_layers.json when
-complete, with the linear part `2 sum_{i>=6} (-1)^i e_i h_{10-i}`
-split off).
+**Layer Theorem 3 (new; the T^5 layer for all d — and the linear law
+TERMINATES).** The stable form at the determining rank d = 10:
+
+```text
+corr_5 = 2 e_8 e_2 - 2 e_7 e_2 e_1 + 2 e_6 e_4 - 2 e_6 e_3 e_1
+       - 2 e_6 e_2^2 + 2 e_6 e_2 e_1^2 - 4 e_5^2 + 4 e_5 e_4 e_1
+       + 4 e_5 e_3 e_2 - 2 e_5 e_3 e_1^2 - 2 e_4^2 e_2
+                                          for EVERY rank d.
+```
+
+STRUCTURAL DISCOVERY: the alternating linear law does NOT continue —
+`corr_5` contains NO `e_10` or `e_9 e_1` terms (the candidate
+`2 sum_{i>=6} (-1)^i e_i h_{10-i}` is refuted at d = 10): the first
+layer is EMPTY at j = 5, and every monomial above has at least two
+non-h factors — the T^5 stratum is purely second-layer. At d = 5 the
+form collapses to exactly T-108508's rank-5 quadratic coefficient
+`-2(e_1^2 e_3 e_5 - 2 e_1 e_4 e_5 - 2 e_2 e_3 e_5 + e_2 e_4^2
++ 2 e_5^2)` (machine-checked term-by-term), so the deposited
+"e_5-layers with non-constant resonances" of T-108508 are the shadow
+of this single stable form. The compact structure of the
+second-layer generating rule (and whether a two-alphabet identity
+like `e_k({x_i x_j})` organizes it) is the deposited next question.
+
+(All three layer computations, the decompositions, and the direct
+identity checks are in stable_layers.py — pure stdlib, so the
+campaign script is replay-grade — with results in
+stable_layers.json.)
 
 ## What this changes
 
