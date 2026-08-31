@@ -201,7 +201,8 @@ Subject to independent review, the dossier contributes:
 7. the Loewner-difference decomposition of the safe Pick matrix;
 8. the functional-equation invariant coordinate `u=s(s-1)`;
 9. the scalar E–Widder criterion and the absolutely convergent source inequality `(EW)`;
-10. the accompanying proof-boundary and failed-shortcut firewalls.
+10. the exact differential recurrences, normalized Hausdorff microscope and attack plan;
+11. the accompanying proof-boundary and failed-shortcut firewalls.
 
 No external priority claim is made.
 
@@ -213,7 +214,9 @@ No external priority claim is made.
 4. [`04_FIREWALLS_AND_SCOPE.md`](04_FIREWALLS_AND_SCOPE.md)
 5. [`05_IMPORTED_VS_NEW_CLAIM_LEDGER.md`](05_IMPORTED_VS_NEW_CLAIM_LEDGER.md)
 6. [`06_NEXT_ATTACK.md`](06_NEXT_ATTACK.md)
-7. [`verify_widder_atom.py`](verify_widder_atom.py)
+7. [`07_LITERATURE_BOUNDARY.md`](07_LITERATURE_BOUNDARY.md)
+8. [`VALIDATION.md`](VALIDATION.md)
+9. [`verify_widder_atom.py`](verify_widder_atom.py)
 
 ## Validation boundary
 
@@ -223,7 +226,7 @@ The included checker verifies finite algebraic identities only.  It does not pro
 Architecture translations                 PROPOSED COMPLETE / REVIEW
 E–Widder equivalence                       PROPOSED COMPLETE / REVIEW
 Euler-safe source expansion                PROPOSED COMPLETE / REVIEW
-finite symbolic atom checks                INCLUDED
+exact bounded algebra                      217 AUTHORING CHECKS
 E–Widder arithmetic inequality (EW)        OPEN / RH-EQUIVALENT
 Riemann Hypothesis                         UNPROVED
 ```
