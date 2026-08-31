@@ -1,0 +1,86 @@
+{
+  "authoring_base": "27496745df9dd49fcde17699d333a54cf8620772",
+  "frozen_sources": [
+    {
+      "commit": "27496745df9dd49fcde17699d333a54cf8620772",
+      "git_blob": "c95b70b98052c9b608ab15cd7adae39edab55363",
+      "kind": "native_effective_endpoint_parent",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_EFFECTIVE_ENDPOINT_SEPARATION.md",
+      "sha256_lf": "55ed2486b59066ec825efcf2beabb47da9b685f7891c1824f794733001b73941"
+    },
+    {
+      "commit": "27496745df9dd49fcde17699d333a54cf8620772",
+      "git_blob": "7e7bed2c227e58a7c27e69a8ae3bf70e9805393d",
+      "kind": "native_effective_endpoint_parent",
+      "path": "research/l-families/atlas/generalized/cusp_flag_effective_endpoint_separation.py",
+      "sha256_lf": "21f898a0944c13cf25a973c290f27b4703363f7d626922ad391c56ec625e1ce5"
+    },
+    {
+      "commit": "27496745df9dd49fcde17699d333a54cf8620772",
+      "git_blob": "fd2ec70a97d1aff5b2a878dae30ef02cb4982e94",
+      "kind": "native_effective_endpoint_parent",
+      "path": "research/l-families/atlas/generalized/cusp_flag_effective_endpoint_separation.json",
+      "sha256_lf": "45bff65cecca10a128efa142e29b6281ce81d3490e9ebceec3bcf961ecbc8b2b"
+    },
+    {
+      "commit": "27496745df9dd49fcde17699d333a54cf8620772",
+      "git_blob": "0e6a9c3aabb80def9638192f6af7a40b39f027ff",
+      "kind": "native_effective_endpoint_parent",
+      "path": "research/l-families/atlas/generalized/cusp_flag_effective_endpoint_separation.sources.json",
+      "sha256_lf": "9049ba583f6f1e489726576bbc3e787e31b6291db3bb3bd68be6943cef7938fb"
+    },
+    {
+      "commit": "27496745df9dd49fcde17699d333a54cf8620772",
+      "git_blob": "5b411d018ad3b6f88757a01e1b7e12e5f7a1d173",
+      "kind": "native_effective_endpoint_parent",
+      "path": "tests/test_cusp_flag_effective_endpoint_separation.py",
+      "sha256_lf": "a76a841fabad63f85f4c3156cf1aad2ddaf91468ec9b479325e768c69b5c1904"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "77820c6af8d089d22547db6cda5ba025ed96f84f",
+      "kind": "all_weight_native_family",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md",
+      "sha256_lf": "d5c95db34c62d31e0bb735e09aae5599e3abf29194cd74a50ce1bbebafab1530"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7e6ae5bb1fd9c53930cee1198eb185806a2ea118",
+      "kind": "all_weight_native_family",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.py",
+      "sha256_lf": "34120d58416c902db94fbeaf69ceb004694888908341b630a1b750f2f1e8316a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "7ca422e505e6ccd817aadee3362f1ace2fa83fd4",
+      "kind": "all_weight_native_family",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.json",
+      "sha256_lf": "fb6ae6ad8535b8cc519d33ab0e901cf17b9cf53ddff9c0bde427daf61faa60db"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "90dc74d185b0b9a42f865a9f9df895ba7cd1c5dd",
+      "kind": "all_weight_native_family",
+      "path": "research/l-families/atlas/generalized/cusp_flag_quotient_global_family.sources.json",
+      "sha256_lf": "f754ecdff30b4fd3a3f8f4b8436e46ab3633ba59738021f5538051fae9e43b7a"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "c2d9dc7ea92a75c7e3fd99c5463e664fb79e0d3a",
+      "kind": "all_weight_native_family",
+      "path": "tests/test_cusp_flag_quotient_global_family.py",
+      "sha256_lf": "84603f0412d8a7f1d2c2384c7055f55b4956db3df68b42dde7074d18cbe8265b"
+    }
+  ],
+  "primitive_contract": {
+    "asymptotic": "same normalized12/288 and C12, uniform six classes, noneffective error onset",
+    "effective": "every even k>=65536, sufficient not optimal",
+    "excluded": "no uniqueness, simplicity, RH, optimality or new automorphic family",
+    "new_modular_input": "E6 error1008rho and abs277/25; squared/complex product envelopes",
+    "object": "actual six CF classes, ell=[q], native Petersson norm",
+    "r14": "k mod12=2 uses r14 and d=(k-14)/12, not r2",
+    "source_execution": "only frozen authenticated endpoint/family code; capped finite functions",
+    "witness": "Delta E4^(3d-3+a) E6^b; not generally Miller f1"
+  },
+  "schema": "cusp-flag-all-weight-endpoint-sources-v1"
+}
