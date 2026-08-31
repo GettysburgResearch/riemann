@@ -49,6 +49,18 @@ form is known (Kar, RHUMJ 23 (2023)); the alternant is a closed
 numerator for Hadamard powers of degree-d rational series — claimed
 new in context, technique elementary/classical.
 
+## Stable layer theorems (same-day addendum)
+
+Via a restriction-stability lemma (each T^j-correction is a
+weight-2j symmetric function determined by its d = 2j
+specialization), three layer laws are now THEOREMS for every rank:
+`corr_3 = 2 sum_{i>=4} (-1)^i e_i h_{6-i}` (T-108508's guess),
+`corr_4 = 2 sum_{i>=5} (-1)^i e_i h_{8-i}` (new, same alternating
+law), and the eleven-monomial stable `corr_5` — where the linear law
+TERMINATES (no first-layer terms at j = 5; the stratum is purely
+second-layer, collapsing at d = 5 to T-108508's quadratic
+coefficient). Machine: stable_layers.py (stdlib-exact, replay-grade).
+
 ## Why it matters
 
 The #764 defect programme's central objects — the obstructions to
