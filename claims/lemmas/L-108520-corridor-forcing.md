@@ -30,7 +30,10 @@ In particular, for `k >= 15` both ends breach temperedness:
 `lambda_2 > 2 sqrt 2` and `lambda_min < -2 sqrt 2` — the graph is
 both-end non-Ramanujan. CONSEQUENCE (window finiteness): in every
 capped-ladder family (arbitrary fixed caps joined by a growing rung
-corridor) the Ramanujan and positive-only regimes are FINITE — every
+corridor — the corridor is automatically induced there: interior
+rung vertices are degree-saturated in a cubic graph, and the end
+vertices' free edges go into the caps) the Ramanujan and
+positive-only regimes are FINITE — every
 family ends in the both-end phase, as the cap-window tables observed;
 positive-only can only ever be a transitional window there, in exact
 contrast to the lambda_min-bounded permanent regime of GP(n,2)
@@ -88,10 +91,13 @@ inequality. Monotonicity in `k` extends both to all `k >= 15`. ∎
 ## Remarks
 
 - The constant 15 is not optimized: the exact family data
-  (phase_diagram.json; head_cap_atlas.json) shows both-end entry at
-  corridor lengths 5-6 already. The content is FINITENESS with an
-  explicit, fully proved ceiling: no capped-ladder family can stay
-  positive-only past corridor length 14.
+  (phase_diagram.json; head_cap_atlas.json) shows both-end entry by
+  corridor length 6 in every family (as early as k = 3 for the
+  crossing-block families, k = 5-6 for the window families). The
+  content is FINITENESS with an explicit, fully proved ceiling: no
+  capped-ladder family can stay positive-only past corridor length
+  14. For bipartite members (cross/cross) the negative-end breach is
+  also nontrivial: `-lambda_2 < -2 sqrt 2` by spectral symmetry.
 - Contrapositive mechanism reading: an infinite family that stays
   positive-end-only forever (T-108514's GP(n,2)) can contain no
   arbitrarily long induced ladders — its lambda_min-boundedness and
@@ -100,4 +106,3 @@ inequality. Monotonicity in `k` extends both to all `k >= 15`. ∎
   heads, caps, and the rest of the graph are arbitrary, so this
   applies verbatim to every family in the cap-window tables and to
   any future corridor construction.
-```

@@ -232,6 +232,10 @@ def main():
         say(f"  refine Lambda({p}/{q}): {sgn} "
             f"[{mp.nstr(lo, 12)}, {mp.nstr(hi, 12)}]")
     out["refinement"] = refine
+    # the headline bracket (81/100, 41/50) rests on the refinement
+    # signs — assert them in the VERIFIED gate (verification-wave fix)
+    ok = ok and [r["sign"] for r in refine] == \
+        ["POSITIVE", "POSITIVE", "POSITIVE", "POSITIVE", "NEGATIVE"]
     out["conclusion"] = {
         "verified": ok,
         "statement": ("Z_Q(s) has a real zero sigma_0 with "

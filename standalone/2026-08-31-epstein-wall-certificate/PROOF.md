@@ -105,8 +105,10 @@ A = q/(1-q), q = e^{-pi/20}   (m-direction, geometric domination via
 B = q'/(1-q'), q' = e^{-5 pi}  (n-direction).
 ```
 
-All factors are evaluated as intervals; the resulting tail bound
-(`~2.6e-18`) is added to the sum as the interval `[-bound, +bound]`.
+Assembled with Bound 1's per-term factor: the total tail is
+`<= (2/(pi X)) e^{-pi X/2} [(1+2A)(1+2B) - 1]`. All factors are
+evaluated as intervals; the resulting bound (`~2.6e-18`) is added to
+the sum as the interval `[-bound, +bound]`.
 
 **Bound 3 (lower-gamma series truncation).** Each
 `Gamma(a, x) = Gamma(a) - x^a e^{-x} sum_{k >= 0} x^k / (a(a+1)...(a+k))`;
@@ -114,8 +116,9 @@ the series has positive terms with ratio `x/(a+k+1) < 1/2` for all
 `k >= K = 2 ceil(x) + 60` (asserted per call), so the truncation tail
 is at most the last term, added as `[0, term_K]`.
 
-**Gamma enclosures.** `Gamma(a)` comes from iv.gamma; at each of the
-four needed points it is independently checked by the reflection
+**Gamma enclosures.** `Gamma(a)` comes from iv.gamma; at `s` and
+`1-s` for EVERY evaluated sigma (seven points, fourteen gamma
+evaluations) it is independently checked by the reflection
 identity — the intervals `Gamma(a) Gamma(1-a)` and `pi / sin(pi a)`
 must intersect (both enclose the same real number); they do.
 
