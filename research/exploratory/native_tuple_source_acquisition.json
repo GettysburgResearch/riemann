@@ -1,0 +1,1400 @@
+{
+  "artifacts": {
+    "research/exploratory/NATIVE_TUPLE_SOURCE_ACQUISITION.md": "6d8c5df2000afd7f7b644c5c2294b448cd134cac680ea5a6aa5b75e28e61296b",
+    "research/exploratory/native_tuple_source_acquisition.py": "011d3240c4bd9c02d2d3c9c044d165ce83967334441e3ffbff90519ef4585334",
+    "research/exploratory/native_tuple_source_acquisition.sources.json": "6308ca557eecfb50fa851f1f87d80b402fdd3c4b4f64a74aa92e4c05d8a83805",
+    "tests/test_native_tuple_source_acquisition.py": "916eca907f8ccb41b9c4906e435aed0da958d1d3108e2080fe413a45cbd3c46f"
+  },
+  "characters": [
+    {
+      "cycle_type": [
+        1
+      ],
+      "degree": 1,
+      "fixed_negative": 0,
+      "fixed_positive": 0,
+      "permutation": [
+        0
+      ],
+      "virtual_character": 0
+    },
+    {
+      "cycle_type": [
+        2
+      ],
+      "degree": 2,
+      "fixed_negative": 0,
+      "fixed_positive": 0,
+      "permutation": [
+        1,
+        0
+      ],
+      "virtual_character": 0
+    },
+    {
+      "cycle_type": [
+        1,
+        1
+      ],
+      "degree": 2,
+      "fixed_negative": 0,
+      "fixed_positive": 2,
+      "permutation": [
+        0,
+        1
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        3
+      ],
+      "degree": 3,
+      "fixed_negative": 0,
+      "fixed_positive": 0,
+      "permutation": [
+        1,
+        2,
+        0
+      ],
+      "virtual_character": 0
+    },
+    {
+      "cycle_type": [
+        2,
+        1
+      ],
+      "degree": 3,
+      "fixed_negative": 0,
+      "fixed_positive": 2,
+      "permutation": [
+        1,
+        0,
+        2
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        1
+      ],
+      "degree": 3,
+      "fixed_negative": 6,
+      "fixed_positive": 6,
+      "permutation": [
+        0,
+        1,
+        2
+      ],
+      "virtual_character": 0
+    },
+    {
+      "cycle_type": [
+        4
+      ],
+      "degree": 4,
+      "fixed_negative": 0,
+      "fixed_positive": 0,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "virtual_character": 0
+    },
+    {
+      "cycle_type": [
+        3,
+        1
+      ],
+      "degree": 4,
+      "fixed_negative": 0,
+      "fixed_positive": 2,
+      "permutation": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        2,
+        2
+      ],
+      "degree": 4,
+      "fixed_negative": 0,
+      "fixed_positive": 2,
+      "permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        2,
+        1,
+        1
+      ],
+      "degree": 4,
+      "fixed_negative": 4,
+      "fixed_positive": 8,
+      "permutation": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "virtual_character": 4
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "degree": 4,
+      "fixed_negative": 24,
+      "fixed_positive": 26,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        5
+      ],
+      "degree": 5,
+      "fixed_negative": 0,
+      "fixed_positive": 0,
+      "permutation": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "virtual_character": 0
+    },
+    {
+      "cycle_type": [
+        4,
+        1
+      ],
+      "degree": 5,
+      "fixed_negative": 0,
+      "fixed_positive": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        0,
+        4
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        3,
+        2
+      ],
+      "degree": 5,
+      "fixed_negative": 0,
+      "fixed_positive": 2,
+      "permutation": [
+        1,
+        2,
+        0,
+        4,
+        3
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        3,
+        1,
+        1
+      ],
+      "degree": 5,
+      "fixed_negative": 6,
+      "fixed_positive": 6,
+      "permutation": [
+        1,
+        2,
+        0,
+        3,
+        4
+      ],
+      "virtual_character": 0
+    },
+    {
+      "cycle_type": [
+        2,
+        2,
+        1
+      ],
+      "degree": 5,
+      "fixed_negative": 2,
+      "fixed_positive": 10,
+      "permutation": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ],
+      "virtual_character": 8
+    },
+    {
+      "cycle_type": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "degree": 5,
+      "fixed_negative": 24,
+      "fixed_positive": 26,
+      "permutation": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "degree": 5,
+      "fixed_negative": 90,
+      "fixed_positive": 90,
+      "permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "virtual_character": 0
+    },
+    {
+      "cycle_type": [
+        6
+      ],
+      "degree": 6,
+      "fixed_negative": 0,
+      "fixed_positive": 0,
+      "permutation": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        0
+      ],
+      "virtual_character": 0
+    },
+    {
+      "cycle_type": [
+        5,
+        1
+      ],
+      "degree": 6,
+      "fixed_negative": 0,
+      "fixed_positive": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        4,
+        0,
+        5
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        4,
+        2
+      ],
+      "degree": 6,
+      "fixed_negative": 0,
+      "fixed_positive": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        0,
+        5,
+        4
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        4,
+        1,
+        1
+      ],
+      "degree": 6,
+      "fixed_negative": 4,
+      "fixed_positive": 8,
+      "permutation": [
+        1,
+        2,
+        3,
+        0,
+        4,
+        5
+      ],
+      "virtual_character": 4
+    },
+    {
+      "cycle_type": [
+        3,
+        3
+      ],
+      "degree": 6,
+      "fixed_negative": 0,
+      "fixed_positive": 2,
+      "permutation": [
+        1,
+        2,
+        0,
+        4,
+        5,
+        3
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        3,
+        2,
+        1
+      ],
+      "degree": 6,
+      "fixed_negative": 4,
+      "fixed_positive": 8,
+      "permutation": [
+        1,
+        2,
+        0,
+        4,
+        3,
+        5
+      ],
+      "virtual_character": 4
+    },
+    {
+      "cycle_type": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "degree": 6,
+      "fixed_negative": 24,
+      "fixed_positive": 26,
+      "permutation": [
+        1,
+        2,
+        0,
+        3,
+        4,
+        5
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        2,
+        2,
+        2
+      ],
+      "degree": 6,
+      "fixed_negative": 0,
+      "fixed_positive": 12,
+      "permutation": [
+        1,
+        0,
+        3,
+        2,
+        5,
+        4
+      ],
+      "virtual_character": 12
+    },
+    {
+      "cycle_type": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "degree": 6,
+      "fixed_negative": 20,
+      "fixed_positive": 30,
+      "permutation": [
+        1,
+        0,
+        3,
+        2,
+        4,
+        5
+      ],
+      "virtual_character": 10
+    },
+    {
+      "cycle_type": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "degree": 6,
+      "fixed_negative": 88,
+      "fixed_positive": 92,
+      "permutation": [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "virtual_character": 4
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "degree": 6,
+      "fixed_negative": 300,
+      "fixed_positive": 302,
+      "permutation": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        7
+      ],
+      "degree": 7,
+      "fixed_negative": 0,
+      "fixed_positive": 0,
+      "permutation": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0
+      ],
+      "virtual_character": 0
+    },
+    {
+      "cycle_type": [
+        6,
+        1
+      ],
+      "degree": 7,
+      "fixed_negative": 0,
+      "fixed_positive": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        0,
+        6
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        5,
+        2
+      ],
+      "degree": 7,
+      "fixed_negative": 0,
+      "fixed_positive": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        4,
+        0,
+        6,
+        5
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        5,
+        1,
+        1
+      ],
+      "degree": 7,
+      "fixed_negative": 6,
+      "fixed_positive": 6,
+      "permutation": [
+        1,
+        2,
+        3,
+        4,
+        0,
+        5,
+        6
+      ],
+      "virtual_character": 0
+    },
+    {
+      "cycle_type": [
+        4,
+        3
+      ],
+      "degree": 7,
+      "fixed_negative": 0,
+      "fixed_positive": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        0,
+        5,
+        6,
+        4
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        4,
+        2,
+        1
+      ],
+      "degree": 7,
+      "fixed_negative": 2,
+      "fixed_positive": 10,
+      "permutation": [
+        1,
+        2,
+        3,
+        0,
+        5,
+        4,
+        6
+      ],
+      "virtual_character": 8
+    },
+    {
+      "cycle_type": [
+        4,
+        1,
+        1,
+        1
+      ],
+      "degree": 7,
+      "fixed_negative": 24,
+      "fixed_positive": 26,
+      "permutation": [
+        1,
+        2,
+        3,
+        0,
+        4,
+        5,
+        6
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        3,
+        3,
+        1
+      ],
+      "degree": 7,
+      "fixed_negative": 6,
+      "fixed_positive": 6,
+      "permutation": [
+        1,
+        2,
+        0,
+        4,
+        5,
+        3,
+        6
+      ],
+      "virtual_character": 0
+    },
+    {
+      "cycle_type": [
+        3,
+        2,
+        2
+      ],
+      "degree": 7,
+      "fixed_negative": 2,
+      "fixed_positive": 10,
+      "permutation": [
+        1,
+        2,
+        0,
+        4,
+        3,
+        6,
+        5
+      ],
+      "virtual_character": 8
+    },
+    {
+      "cycle_type": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "degree": 7,
+      "fixed_negative": 24,
+      "fixed_positive": 26,
+      "permutation": [
+        1,
+        2,
+        0,
+        4,
+        3,
+        5,
+        6
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "degree": 7,
+      "fixed_negative": 90,
+      "fixed_positive": 90,
+      "permutation": [
+        1,
+        2,
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "virtual_character": 0
+    },
+    {
+      "cycle_type": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "degree": 7,
+      "fixed_negative": 12,
+      "fixed_positive": 38,
+      "permutation": [
+        1,
+        0,
+        3,
+        2,
+        5,
+        4,
+        6
+      ],
+      "virtual_character": 26
+    },
+    {
+      "cycle_type": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "degree": 7,
+      "fixed_negative": 86,
+      "fixed_positive": 94,
+      "permutation": [
+        1,
+        0,
+        3,
+        2,
+        4,
+        5,
+        6
+      ],
+      "virtual_character": 8
+    },
+    {
+      "cycle_type": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "degree": 7,
+      "fixed_negative": 300,
+      "fixed_positive": 302,
+      "permutation": [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "virtual_character": 2
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "degree": 7,
+      "fixed_negative": 966,
+      "fixed_positive": 966,
+      "permutation": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "virtual_character": 0
+    }
+  ],
+  "contract": {
+    "arithmetic": "exact integer coverage and exact rational",
+    "character": "signed history permutation character; no native group action",
+    "excluded": "full gamma decoder, principal bound, native cancellation, RH",
+    "measure": "Beta theta and Euler tau are separate declared integrals",
+    "native_reconstruction_complete": false,
+    "native_zero_or_nonzero": "undetermined",
+    "range": "Q<=2gc and P<=2gd; no uniform coherent g^-2 saving",
+    "source_order": "raw squarefree quotient before Boolean owner completion"
+  },
+  "frozen_sources": [
+    {
+      "commit": "1904d20cdb76ecd26e0e63472625da930075303e",
+      "git_blob": "7cebffd3b6b0db96128755e392f622029a74435a",
+      "id": "DIAGNOSTIC",
+      "path": "research/exploratory/NATIVE_BOOLEAN_DECODER_DIAGNOSTIC.md",
+      "role": "Exact U64 tuple, literal histories and missing complete native weights",
+      "sha256_lf": "6694dc66c23f1f3cc833c0d71ddb3243d84c524fa13c78905ec5684ceb5eea4a"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "346cc52420ec65457c2a5accc045d4a85635cc24",
+      "id": "BOOLEAN",
+      "path": "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md",
+      "role": "Complete disjoint triple-history source",
+      "sha256_lf": "8efc34b198fe4bc642f6292bb0cfc4b937922a25b0e3cee35bdc2e51a62e5b7d"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "b988b14eb982504a799158eed4c76e7f033c96f0",
+      "id": "BETA",
+      "path": "claims/lemmas/L-106133-canonical-equal-pair-boolean-source-is-a-beta-half-source-square.md",
+      "role": "Exact rational Beta measure and half-source",
+      "sha256_lf": "2c38355491c82c85886b9b528c4a79d492b74f32ed133d2f1335cd1e6b133a4f"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "cb8665b8cdbe2bc7e6eb223d6bc009e8e4f5a5df",
+      "id": "AMPLIFIER",
+      "path": "claims/lemmas/L-106093-mellin-polarization-places-the-anchor-inside-one-amplified-family-moment.md",
+      "role": "Complete A_alpha and anchor-dependent incidence before squaring",
+      "sha256_lf": "11c781a133698ab823c60e2f44036ce04b19789d33baa8a3f78e0afdc185af74"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "388c7e166a0e6e534d7e908685f71a16de246575",
+      "id": "PLANCHEREL",
+      "path": "claims/lemmas/L-106026-mellin-plancherel-normal-form-for-owner-conductor-moment.md",
+      "role": "Finite source-owned omega_i retained in exact observation",
+      "sha256_lf": "1f2259fde8b6763c878354d09b13c7bd858b16dddd7b7784d43e53e52ad77fee"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+      "id": "TARGET",
+      "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md",
+      "role": "Complete retained principal member and literal diagonal",
+      "sha256_lf": "54592d5d8d67dd797f9aa2d134ab4825e8ccc52c3ed18edefaf226ea0852eb1d"
+    },
+    {
+      "commit": "b79aa2dcddd27a84d629e39fbbf39d31e5470aac",
+      "git_blob": "c37145331aedf3c6a4ec0c70577a66da712a5edd",
+      "id": "SOURCE_FIRST",
+      "path": "research/riemann-structures/SOURCE_FIRST_BOOLEAN_PRINCIPAL_ADAPTER.md",
+      "role": "Squarefree quotient before completion; trivial induced gauge, spectator limitation",
+      "sha256_lf": "9aecec7c149e90a2262b75ff137cb99b64e5a90dec258946537107e74699ae59"
+    },
+    {
+      "commit": "b79aa2dcddd27a84d629e39fbbf39d31e5470aac",
+      "git_blob": "1e069c3353406924d9ffee0751ffd5fa81dbbc7d",
+      "id": "OBSERVATION_GAP",
+      "path": "research/riemann-structures/NATIVE_DECODER_OBSERVATION_GAP.md",
+      "role": "Prior norm/observation interface audit; no native decoder inferred",
+      "sha256_lf": "2af45d0c47d49a442e46c95a857cb8f7ef1e6d506e2c54cc325dd6c050ec7e39"
+    },
+    {
+      "commit": "b79aa2dcddd27a84d629e39fbbf39d31e5470aac",
+      "git_blob": "d36fc9cc8f22be90a03d56ab1d43f186192e419a",
+      "id": "ACQUISITION",
+      "path": "research/riemann-structures/NEXT_NATIVE_DECODER_GATE.md",
+      "role": "Latest prescribed native acquisition route and stop condition",
+      "sha256_lf": "439d16814b62d72cce09a47e9b482806032d69d206480af5f148842241ae01e3"
+    },
+    {
+      "commit": "b79aa2dcddd27a84d629e39fbbf39d31e5470aac",
+      "git_blob": "8813e809f12e7c0d2736869d66658fb494e5064a",
+      "id": "RANGE",
+      "path": "research/riemann-structures/FIXED_CORE_OWNER_RANGE_CORRECTION.md",
+      "role": "Full cores Q<=2gc and P<=2gd; no uniform extra g^-2 energy saving",
+      "sha256_lf": "d89e2f7ffae27b0b1fe4e266f62fc736f2de8c87bc0a609a20296c658d004716"
+    },
+    {
+      "commit": "b79aa2dcddd27a84d629e39fbbf39d31e5470aac",
+      "git_blob": "8632b4442b9610535078ef55a97b46a77a342dfe",
+      "id": "EULER",
+      "path": "research/riemann-structures/EULER_ACTIVATION_SOURCE_ADAPTER.md",
+      "role": "Raw mixed-monomial projection is not the source-first completed source",
+      "sha256_lf": "1977a5e7cef25cd5fac017213f07bae7296c29b50affe8fafab1b690fd1e9e53"
+    }
+  ],
+  "parameters": [
+    {
+      "Beta_integral": [
+        0,
+        1
+      ],
+      "Beta_theta_density": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "core_depth": 3,
+      "raw_mixed_core_integral": [
+        1,
+        10
+      ],
+      "raw_mixed_owner_integral": [
+        -1,
+        10
+      ],
+      "source_first_complete_derivative_integral": [
+        0,
+        1
+      ],
+      "source_first_core_integral": [
+        0,
+        1
+      ],
+      "source_first_owner_integral": [
+        0,
+        1
+      ],
+      "source_first_tau_path": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "Beta_integral": [
+        1,
+        3
+      ],
+      "Beta_theta_density": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          -4,
+          1
+        ]
+      ],
+      "core_depth": 2,
+      "raw_mixed_core_integral": [
+        -1,
+        6
+      ],
+      "raw_mixed_owner_integral": [
+        1,
+        6
+      ],
+      "source_first_complete_derivative_integral": [
+        1,
+        3
+      ],
+      "source_first_core_integral": [
+        1,
+        6
+      ],
+      "source_first_owner_integral": [
+        1,
+        6
+      ],
+      "source_first_tau_path": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    }
+  ],
+  "payload_sha256": "5db24c8de028bcd7d8d3b850a1d1ae4463a0f8ff71db4fab96ff75284e04f72b",
+  "schema": "native-tuple-source-acquisition-v1",
+  "tuple": {
+    "U": 64,
+    "Y": 68719476736,
+    "balanced_coefficients": [
+      0,
+      2
+    ],
+    "bilateral_coefficients": [
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        -1,
+        60
+      ],
+      [
+        -1,
+        60
+      ],
+      [
+        -1,
+        60
+      ],
+      [
+        -1,
+        60
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        -1,
+        60
+      ],
+      [
+        -1,
+        60
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        -1,
+        60
+      ],
+      [
+        -1,
+        60
+      ],
+      [
+        -1,
+        60
+      ],
+      [
+        -1,
+        60
+      ],
+      [
+        -1,
+        60
+      ],
+      [
+        -1,
+        60
+      ]
+    ],
+    "bilateral_sum": [
+      0,
+      1
+    ],
+    "interior_point": [
+      133143986176,
+      1
+    ],
+    "least_primes": [
+      71,
+      401
+    ],
+    "left_half_source": [
+      -1,
+      4
+    ],
+    "left_histories": [
+      {
+        "assignment": [
+          0,
+          0,
+          1
+        ],
+        "coefficient": 1,
+        "products": [
+          5183,
+          79,
+          1
+        ]
+      },
+      {
+        "assignment": [
+          0,
+          1,
+          0
+        ],
+        "coefficient": 1,
+        "products": [
+          5609,
+          73,
+          1
+        ]
+      },
+      {
+        "assignment": [
+          0,
+          1,
+          1
+        ],
+        "coefficient": 1,
+        "products": [
+          71,
+          5767,
+          1
+        ]
+      },
+      {
+        "assignment": [
+          0,
+          1,
+          2
+        ],
+        "coefficient": -1,
+        "products": [
+          71,
+          73,
+          79
+        ]
+      },
+      {
+        "assignment": [
+          0,
+          2,
+          1
+        ],
+        "coefficient": -1,
+        "products": [
+          71,
+          79,
+          73
+        ]
+      },
+      {
+        "assignment": [
+          1,
+          0,
+          0
+        ],
+        "coefficient": 1,
+        "products": [
+          5767,
+          71,
+          1
+        ]
+      },
+      {
+        "assignment": [
+          1,
+          0,
+          1
+        ],
+        "coefficient": 1,
+        "products": [
+          73,
+          5609,
+          1
+        ]
+      },
+      {
+        "assignment": [
+          1,
+          0,
+          2
+        ],
+        "coefficient": -1,
+        "products": [
+          73,
+          71,
+          79
+        ]
+      },
+      {
+        "assignment": [
+          1,
+          1,
+          0
+        ],
+        "coefficient": 1,
+        "products": [
+          79,
+          5183,
+          1
+        ]
+      },
+      {
+        "assignment": [
+          1,
+          2,
+          0
+        ],
+        "coefficient": -1,
+        "products": [
+          79,
+          71,
+          73
+        ]
+      },
+      {
+        "assignment": [
+          2,
+          0,
+          1
+        ],
+        "coefficient": -1,
+        "products": [
+          73,
+          79,
+          71
+        ]
+      },
+      {
+        "assignment": [
+          2,
+          1,
+          0
+        ],
+        "coefficient": -1,
+        "products": [
+          79,
+          73,
+          71
+        ]
+      }
+    ],
+    "literal_diagonal": [
+      1,
+      150
+    ],
+    "physical_N_M": [
+      1005930209094,
+      997518551435
+    ],
+    "physical_residue": [
+      38,
+      157
+    ],
+    "physical_squared_prefactor": [
+      1,
+      1003434045020153543749890
+    ],
+    "right_half_source": [
+      0,
+      1
+    ],
+    "right_histories": [
+      {
+        "assignment": [
+          0,
+          1
+        ],
+        "coefficient": 1,
+        "products": [
+          401,
+          421,
+          1
+        ]
+      },
+      {
+        "assignment": [
+          1,
+          0
+        ],
+        "coefficient": 1,
+        "products": [
+          421,
+          401,
+          1
+        ]
+      }
+    ],
+    "tuple_P_Q_g_c_d": [
+      6,
+      35,
+      1,
+      409457,
+      168821
+    ]
+  }
+}
