@@ -89,9 +89,47 @@ m = 15 gains BOTH ord-7-related cubics `a^3 + a^2 - 2a - 1`
 (2cos 2pi/7, ord alpha = 7) and `a^3 - a^2 - 2a + 1` (2cos pi/7,
 ord alpha = 14) — the JOINT entry the `ord(alpha^2) = 7` form demands
 — each squared; and the ord-9 cubic `a^3 - 3a + 1`
-(`ord(alpha^2) = 9`, predicted entry m = 19) stays absent. Three
-held-out rounds, seven predictions, zero misses. Next posed test:
-ord-9 entering at m = 19, with nothing new at m = 16..18.
+(`ord(alpha^2) = 9`, predicted entry m = 19) stays absent.
+
+## The definitive table (m = 5..27 x 10 torsion points; exact)
+
+The fourth/fifth rounds (predictions recorded in
+matrix/m16_m19_test.py before any run) were executed by a NEW ENGINE,
+matrix/torsion_field_probe.py (stdlib, EXACT_RATIONAL): the entire
+defect computation — h-powers, Sym^m data, the T-108500 numerator with
+tail certification, even division, triangular Laurent peeling to
+`M_m`, monicity check, and the `disc_z = 0` test as a gcd-degree test
+— is run with `a` = the generator of the number field `Q[a]/(C)` at
+`b = 1`. Since each `C` is irreducible and `M_m` is monic in `z`
+(T-108509), `disc = 0 in the field` is EXACTLY `C | disc_z M_m(a,1)`;
+each cell costs seconds. Result (torsion_field_probe.json), first
+entries and monotone persistence:
+
+```text
+point (min poly of 2cos)        ord(alpha^2) = R    first entry   2R+1
+a - 1            (ord 6)                3                7           7
+a^2 - 2          (ord 8)                4                9           9
+a^2 + a - 1      (ord 5)                5               11          11
+a^2 - a - 1      (ord 10)               5               11          11
+a^2 - 3          (ord 12)               6               13          13
+a^3 - 3a + 1     (ord 9)                9               19          19
+a^3 - 3a - 1     (ord 18)               9               19          19
+a^4 - 5a^2 + 5   (ord 20)              10               21          21
+ord-11 quintic   (ord 11)              11               23          23
+ord-13 sextic    (ord 13)              13               27          27
+```
+
+TEN points, TEN exact matches with `m = 2R + 1`, complete absence
+certified at every earlier m (5..entry-1, not spot checks), and
+monotone persistence at every point after entry (the sole known
+non-monotone case remains the a = 0 z-level gap at m = 6, explained
+above as a spectrum-trivial collision). Six of the ten entries were
+held-out predictions (ord 10 joint; ord 12; ord 9/18 joint; ord 20;
+ord 11; ord 13). The supersingular point a = 0 (R = 2, entry 5) is
+covered by the earlier symbolic data. The law's remaining status:
+empirically exact wherever tested; the proof — plausibly via the same
+field engine, where the entry threshold becomes a statement about
+gcd(M_m, M_m') over `Q(2cos theta)` — is the deposited problem.
 
 ## Collapse lemma at the {0, +-1}-valued slices (PROVED; 5 lines)
 
