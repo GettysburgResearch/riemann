@@ -1,4 +1,68 @@
-# Six-hour native pass: second checkpoint
+# Six-hour native pass: third checkpoint
+
+The six-hour pass remains active. This checkpoint records 139 unique
+focused tests in ordinary Python and the same 139 under -O, including
+final-bound producer checks. The previous 74 plus 65 new tests give this
+total. Counts exclude ongoing drafts and are not repository-wide CI.
+
+The higher-arity source theorem now separates a leading distance
+optimization from exact finite-kernel support selection. Direct complete
+subset reconstruction through arity 16 verifies single-coordinate
+activation at 11,13,15, and a stability proof realizes those exact vertices
+in cofinal actual-prime families. There is no asserted all-arity law.
+
+For fixed actual four- and six-prime panels, directed rational enclosures
+of the original observation kernel certify central two-coordinate support
+and strictly positive inactive slacks. The complete 16 and 64 source
+allocations remain present. The four-prime effect is not inferred from a
+zero leading slack; a cubic remainder and second-order calculation
+establish the finite face. Raw prime acquisition and every failed/retried
+numerical serialization attempt remain separate from final proof claims.
+
+The complete three-prime horizon 25 source has exactly six independent
+path-variation directions. Six literal monotone rectangle differences
+span them; the corrected physical ratio observation is injective on this
+span. A common quadratic path on every 63 ordered source pair improves
+the original finite energy by more than 6.16. Its tangent metric has rank 2,
+but a finite common parameter translation is not generally a gauge
+symmetry. All 18 declared path tests, including worse paths, are retained.
+The four distinct diagonals are not equated with the full Wick diagonal.
+
+Exact-freeze review reports cover the higher-arity, single-activation,
+finite-face and curvature packets. The final joint-tangent independent
+review report is pending at this checkpoint; its tests and final primitive
+replays have passed. This is proposed research, not canonical integration.
+
+| New final packet | Scientific freeze | Tests per mode |
+|---|---|---:|
+| Higher-arity source and cofinal shapes |755b27c2c9747f3db255238c59c2622dee6cad8b|10|
+| Exact single native activation |ca107571d2693e00947df8fee1860b0575fc1f97|15|
+| Original-kernel finite face certificate |2e772b2048a00af9b6d59aa594f2e64ec96a5529|11|
+| Complete curvature and physical rank |6b18fbd9bc0a493e739166e6fcb9fbefd8e4d537|16|
+| Joint tangent metric and finite paths |c251614fa6ff2367c7c6dd30c1d6b5f33fbc5161|13|
+
+Discovery freezes remain independently inspectable: actual-prime
+acquisition 1d1088d36f0d873ffc94d786415616df95b00edc; full arity 2--16
+scan 39d689b7485a423a1e0323a755ffc6a68ee084ed; finite faces
+e44e99b59593eacc943ac526193516357d25d34e; curvature
+bae7184724093d3589ad16b278dc104322428d6a; joint paths
+b3a8a85021cedefae034aaef7c14a6976429142b. They add no separate test count.
+
+A curvature-test worker was stopped at the 1.5 GiB free-memory reserve;
+the clean retry and optimized run passed all 16 tests. No other process
+was stopped. The finite-face review records a portability limitation:
+its owned hashes use raw LF bytes, so a CRLF checkout needs those files
+restored to their authenticated byte form. The newer curvature and
+occupation conventions normalize LF explicitly.
+
+Still in progress and excluded here: the full curved occupation-moment
+body, constrained all-path energy optimization, and the four-prime
+boundary-layer phase diagram. A six-dimensional affine span does not
+prove that one path can attain its unconstrained energy minimizer.
+The complete post-renewal carrier/selector/gamma decoder remains open.
+No principal-moment or RH claim is made.
+
+## Second checkpoint history
 
 The six-hour pass remains active. This checkpoint has 74 unique focused tests
 in ordinary Python and the same 74 under -O, with all final-bound producer
