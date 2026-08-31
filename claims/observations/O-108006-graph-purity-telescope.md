@@ -49,8 +49,13 @@ RH status: unproved; unaddressed.
    the bipartite value -3), not by expansion failure (lambda_2 > 2
    sqrt 2). The two failure directions of the same mechanism have
    different size thresholds; how large the smallest positive-end
-   breach is, is deposited as the campaign's open question (n = 14
-   census extension: census14.json).
+   breach is, is deposited as the campaign's open question.
+   **n = 14 extension (census14.json)**: 471 Hamiltonian-cubic classes
+   (spectral+invariant dedup; count may slightly undercount from
+   cospectral merges — purity/side rows are unaffected), 31
+   non-Ramanujan, and ALL 31 breach at the negative end (zero
+   positive-end, zero both-end; separation guard clean). The law now
+   covers all 37 non-Ramanujan graphs in scope through n = 14.
 4. **Fields where purity breaks**: the breach eigenvalue's minimal
    polynomial per graph — GP(9,1): x^3 + 3x^2 - 1, i.e. the breach
    value is 2 cos(8 pi/9) - 1 in the real cyclotomic field
