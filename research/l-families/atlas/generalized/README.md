@@ -1,5 +1,8 @@
 # Generalized L-object Gate-0 packets
 
+For the latest reviewed checkpoint, start with
+[FIVEHOUR_PASS4_CHECKPOINT.md](FIVEHOUR_PASS4_CHECKPOINT.md).
+
 Status: **reviewed local/global boundaries, a classical signed parent, and
 an actual global period quotient; no new automorphic L-function or external
 novelty claim**.
