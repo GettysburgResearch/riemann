@@ -1,0 +1,2497 @@
+{
+  "models": [
+    {
+      "all_active_supports_checked": 3,
+      "all_source_subset_count": 4,
+      "arity": 2,
+      "bands": [
+        {
+          "cardinality": 1,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                0
+              ],
+              "left_location": 0,
+              "right_location": 1,
+              "total_mass_on_simplex": 1
+            }
+          ],
+          "distinct_subset_sum_count": 2,
+          "source_subset_count": 2
+        },
+        {
+          "cardinality": 2,
+          "cuts": [],
+          "distinct_subset_sum_count": 1,
+          "source_subset_count": 1
+        }
+      ],
+      "complete_same_cardinality_ordered_pair_count_excluding_empty": 5,
+      "constant_kernel_band_mass": 2,
+      "exact_leading_matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "exact_objective": "1/2",
+      "full_finite_kernel_optimized": false,
+      "inactive_KKT_slacks": [
+        "0",
+        "0"
+      ],
+      "objective_gain": "0",
+      "physical_leading_improvement_prefactor": "8*A*epsilon/(4^2*K)",
+      "shape": [
+        0,
+        1
+      ],
+      "shape_wall_claimed_as_literal_prime_product_equality": false,
+      "uniform_objective": "1/2",
+      "unique_activation": [
+        "1/2",
+        "1/2"
+      ],
+      "unique_active_support": [
+        0,
+        1
+      ]
+    },
+    {
+      "all_active_supports_checked": 7,
+      "all_source_subset_count": 8,
+      "arity": 3,
+      "bands": [
+        {
+          "cardinality": 1,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                0,
+                0
+              ],
+              "left_location": 0,
+              "right_location": 1,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 2,
+              "total_mass_on_simplex": 1
+            }
+          ],
+          "distinct_subset_sum_count": 3,
+          "source_subset_count": 3
+        },
+        {
+          "cardinality": 2,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 2,
+              "total_mass_on_simplex": 2
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                1,
+                1
+              ],
+              "left_location": 2,
+              "right_location": 3,
+              "total_mass_on_simplex": 2
+            }
+          ],
+          "distinct_subset_sum_count": 3,
+          "source_subset_count": 3
+        },
+        {
+          "cardinality": 3,
+          "cuts": [],
+          "distinct_subset_sum_count": 1,
+          "source_subset_count": 1
+        }
+      ],
+      "complete_same_cardinality_ordered_pair_count_excluding_empty": 19,
+      "constant_kernel_band_mass": 6,
+      "exact_leading_matrix": [
+        [
+          2,
+          5,
+          6
+        ],
+        [
+          5,
+          4,
+          5
+        ],
+        [
+          6,
+          5,
+          2
+        ]
+      ],
+      "exact_objective": "9/2",
+      "full_finite_kernel_optimized": false,
+      "inactive_KKT_slacks": [
+        "0",
+        "0",
+        "0"
+      ],
+      "objective_gain": "1/18",
+      "physical_leading_improvement_prefactor": "8*A*epsilon/(4^3*K)",
+      "shape": [
+        0,
+        1,
+        2
+      ],
+      "shape_wall_claimed_as_literal_prime_product_equality": false,
+      "uniform_objective": "40/9",
+      "unique_activation": [
+        "1/4",
+        "1/2",
+        "1/4"
+      ],
+      "unique_active_support": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "all_active_supports_checked": 7,
+      "all_source_subset_count": 8,
+      "arity": 3,
+      "bands": [
+        {
+          "cardinality": 1,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                0,
+                0
+              ],
+              "left_location": 0,
+              "right_location": 1,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 4,
+              "total_mass_on_simplex": 1
+            }
+          ],
+          "distinct_subset_sum_count": 3,
+          "source_subset_count": 3
+        },
+        {
+          "cardinality": 2,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 4,
+              "total_mass_on_simplex": 2
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                1,
+                1
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 2
+            }
+          ],
+          "distinct_subset_sum_count": 3,
+          "source_subset_count": 3
+        },
+        {
+          "cardinality": 3,
+          "cuts": [],
+          "distinct_subset_sum_count": 1,
+          "source_subset_count": 1
+        }
+      ],
+      "complete_same_cardinality_ordered_pair_count_excluding_empty": 19,
+      "constant_kernel_band_mass": 6,
+      "exact_leading_matrix": [
+        [
+          6,
+          9,
+          12
+        ],
+        [
+          9,
+          8,
+          11
+        ],
+        [
+          12,
+          11,
+          2
+        ]
+      ],
+      "exact_objective": "9",
+      "full_finite_kernel_optimized": false,
+      "inactive_KKT_slacks": [
+        "0",
+        "0",
+        "0"
+      ],
+      "objective_gain": "1/9",
+      "physical_leading_improvement_prefactor": "8*A*epsilon/(4^3*K)",
+      "shape": [
+        0,
+        1,
+        4
+      ],
+      "shape_wall_claimed_as_literal_prime_product_equality": false,
+      "uniform_objective": "80/9",
+      "unique_activation": [
+        "1/4",
+        "1/2",
+        "1/4"
+      ],
+      "unique_active_support": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "all_active_supports_checked": 15,
+      "all_source_subset_count": 16,
+      "arity": 4,
+      "bands": [
+        {
+          "cardinality": 1,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "left_location": 0,
+              "right_location": 1,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 2,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 2,
+              "right_location": 3,
+              "total_mass_on_simplex": 1
+            }
+          ],
+          "distinct_subset_sum_count": 4,
+          "source_subset_count": 4
+        },
+        {
+          "cardinality": 2,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 2,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                1,
+                1,
+                0
+              ],
+              "left_location": 2,
+              "right_location": 3,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                1
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                3,
+                2,
+                2
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 3
+            }
+          ],
+          "distinct_subset_sum_count": 5,
+          "source_subset_count": 6
+        },
+        {
+          "cardinality": 3,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                2,
+                1,
+                1
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                2
+              ],
+              "left_location": 5,
+              "right_location": 6,
+              "total_mass_on_simplex": 3
+            }
+          ],
+          "distinct_subset_sum_count": 4,
+          "source_subset_count": 4
+        },
+        {
+          "cardinality": 4,
+          "cuts": [],
+          "distinct_subset_sum_count": 1,
+          "source_subset_count": 1
+        }
+      ],
+      "complete_same_cardinality_ordered_pair_count_excluding_empty": 69,
+      "constant_kernel_band_mass": 20,
+      "exact_leading_matrix": [
+        [
+          16,
+          24,
+          28,
+          32
+        ],
+        [
+          24,
+          24,
+          28,
+          28
+        ],
+        [
+          28,
+          28,
+          24,
+          24
+        ],
+        [
+          32,
+          28,
+          24,
+          16
+        ]
+      ],
+      "exact_objective": "26",
+      "full_finite_kernel_optimized": false,
+      "inactive_KKT_slacks": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "objective_gain": "1/2",
+      "physical_leading_improvement_prefactor": "8*A*epsilon/(4^4*K)",
+      "shape": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shape_wall_claimed_as_literal_prime_product_equality": false,
+      "uniform_objective": "51/2",
+      "unique_activation": [
+        "0",
+        "1/2",
+        "1/2",
+        "0"
+      ],
+      "unique_active_support": [
+        1,
+        2
+      ]
+    },
+    {
+      "all_active_supports_checked": 15,
+      "all_source_subset_count": 16,
+      "arity": 4,
+      "bands": [
+        {
+          "cardinality": 1,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "left_location": 0,
+              "right_location": 1,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 2,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 2,
+              "right_location": 4,
+              "total_mass_on_simplex": 1
+            }
+          ],
+          "distinct_subset_sum_count": 4,
+          "source_subset_count": 4
+        },
+        {
+          "cardinality": 2,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 2,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                1,
+                1,
+                0
+              ],
+              "left_location": 2,
+              "right_location": 3,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                2,
+                2,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                1
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                3,
+                2,
+                2
+              ],
+              "left_location": 5,
+              "right_location": 6,
+              "total_mass_on_simplex": 3
+            }
+          ],
+          "distinct_subset_sum_count": 6,
+          "source_subset_count": 6
+        },
+        {
+          "cardinality": 3,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 5,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                2,
+                1,
+                1
+              ],
+              "left_location": 5,
+              "right_location": 6,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                2
+              ],
+              "left_location": 6,
+              "right_location": 7,
+              "total_mass_on_simplex": 3
+            }
+          ],
+          "distinct_subset_sum_count": 4,
+          "source_subset_count": 4
+        },
+        {
+          "cardinality": 4,
+          "cuts": [],
+          "distinct_subset_sum_count": 1,
+          "source_subset_count": 1
+        }
+      ],
+      "complete_same_cardinality_ordered_pair_count_excluding_empty": 69,
+      "constant_kernel_band_mass": 20,
+      "exact_leading_matrix": [
+        [
+          24,
+          32,
+          36,
+          42
+        ],
+        [
+          32,
+          32,
+          36,
+          38
+        ],
+        [
+          36,
+          36,
+          32,
+          34
+        ],
+        [
+          42,
+          38,
+          34,
+          16
+        ]
+      ],
+      "exact_objective": "308/9",
+      "full_finite_kernel_optimized": false,
+      "inactive_KKT_slacks": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "objective_gain": "17/36",
+      "physical_leading_improvement_prefactor": "8*A*epsilon/(4^4*K)",
+      "shape": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "shape_wall_claimed_as_literal_prime_product_equality": false,
+      "uniform_objective": "135/4",
+      "unique_activation": [
+        "1/18",
+        "4/9",
+        "7/18",
+        "1/9"
+      ],
+      "unique_active_support": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "all_active_supports_checked": 15,
+      "all_source_subset_count": 16,
+      "arity": 4,
+      "bands": [
+        {
+          "cardinality": 1,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "left_location": 0,
+              "right_location": 2,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 2,
+              "right_location": 3,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 1
+            }
+          ],
+          "distinct_subset_sum_count": 4,
+          "source_subset_count": 4
+        },
+        {
+          "cardinality": 2,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 2,
+              "right_location": 3,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                1,
+                1,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                1,
+                1,
+                1
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                1
+              ],
+              "left_location": 5,
+              "right_location": 6,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                3,
+                2,
+                2
+              ],
+              "left_location": 6,
+              "right_location": 7,
+              "total_mass_on_simplex": 3
+            }
+          ],
+          "distinct_subset_sum_count": 6,
+          "source_subset_count": 6
+        },
+        {
+          "cardinality": 3,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 5,
+              "right_location": 6,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                2,
+                1,
+                1
+              ],
+              "left_location": 6,
+              "right_location": 7,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                2
+              ],
+              "left_location": 7,
+              "right_location": 9,
+              "total_mass_on_simplex": 3
+            }
+          ],
+          "distinct_subset_sum_count": 4,
+          "source_subset_count": 4
+        },
+        {
+          "cardinality": 4,
+          "cuts": [],
+          "distinct_subset_sum_count": 1,
+          "source_subset_count": 1
+        }
+      ],
+      "complete_same_cardinality_ordered_pair_count_excluding_empty": 69,
+      "constant_kernel_band_mass": 20,
+      "exact_leading_matrix": [
+        [
+          16,
+          34,
+          38,
+          42
+        ],
+        [
+          34,
+          32,
+          36,
+          36
+        ],
+        [
+          38,
+          36,
+          32,
+          32
+        ],
+        [
+          42,
+          36,
+          32,
+          24
+        ]
+      ],
+      "exact_objective": "308/9",
+      "full_finite_kernel_optimized": false,
+      "inactive_KKT_slacks": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "objective_gain": "17/36",
+      "physical_leading_improvement_prefactor": "8*A*epsilon/(4^4*K)",
+      "shape": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "shape_wall_claimed_as_literal_prime_product_equality": false,
+      "uniform_objective": "135/4",
+      "unique_activation": [
+        "1/9",
+        "7/18",
+        "4/9",
+        "1/18"
+      ],
+      "unique_active_support": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "all_active_supports_checked": 15,
+      "all_source_subset_count": 16,
+      "arity": 4,
+      "bands": [
+        {
+          "cardinality": 1,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "left_location": 0,
+              "right_location": 1,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 3,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 1
+            }
+          ],
+          "distinct_subset_sum_count": 4,
+          "source_subset_count": 4
+        },
+        {
+          "cardinality": 2,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 3,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                1,
+                1,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                1
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                3,
+                2,
+                2
+              ],
+              "left_location": 5,
+              "right_location": 7,
+              "total_mass_on_simplex": 3
+            }
+          ],
+          "distinct_subset_sum_count": 5,
+          "source_subset_count": 6
+        },
+        {
+          "cardinality": 3,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                2,
+                1,
+                1
+              ],
+              "left_location": 5,
+              "right_location": 7,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                2
+              ],
+              "left_location": 7,
+              "right_location": 8,
+              "total_mass_on_simplex": 3
+            }
+          ],
+          "distinct_subset_sum_count": 4,
+          "source_subset_count": 4
+        },
+        {
+          "cardinality": 4,
+          "cuts": [],
+          "distinct_subset_sum_count": 1,
+          "source_subset_count": 1
+        }
+      ],
+      "complete_same_cardinality_ordered_pair_count_excluding_empty": 69,
+      "constant_kernel_band_mass": 20,
+      "exact_leading_matrix": [
+        [
+          24,
+          32,
+          40,
+          44
+        ],
+        [
+          32,
+          32,
+          40,
+          40
+        ],
+        [
+          40,
+          40,
+          32,
+          32
+        ],
+        [
+          44,
+          40,
+          32,
+          24
+        ]
+      ],
+      "exact_objective": "36",
+      "full_finite_kernel_optimized": false,
+      "inactive_KKT_slacks": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "objective_gain": "1/2",
+      "physical_leading_improvement_prefactor": "8*A*epsilon/(4^4*K)",
+      "shape": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "shape_wall_claimed_as_literal_prime_product_equality": false,
+      "uniform_objective": "71/2",
+      "unique_activation": [
+        "0",
+        "1/2",
+        "1/2",
+        "0"
+      ],
+      "unique_active_support": [
+        1,
+        2
+      ]
+    },
+    {
+      "all_active_supports_checked": 15,
+      "all_source_subset_count": 16,
+      "arity": 4,
+      "bands": [
+        {
+          "cardinality": 1,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "left_location": 0,
+              "right_location": 1,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 4,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 4,
+              "right_location": 6,
+              "total_mass_on_simplex": 1
+            }
+          ],
+          "distinct_subset_sum_count": 4,
+          "source_subset_count": 4
+        },
+        {
+          "cardinality": 2,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 4,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                1,
+                1,
+                0
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                2,
+                2,
+                0
+              ],
+              "left_location": 5,
+              "right_location": 6,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                1
+              ],
+              "left_location": 6,
+              "right_location": 7,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                3,
+                2,
+                2
+              ],
+              "left_location": 7,
+              "right_location": 10,
+              "total_mass_on_simplex": 3
+            }
+          ],
+          "distinct_subset_sum_count": 6,
+          "source_subset_count": 6
+        },
+        {
+          "cardinality": 3,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 5,
+              "right_location": 7,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                2,
+                1,
+                1
+              ],
+              "left_location": 7,
+              "right_location": 10,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                2
+              ],
+              "left_location": 10,
+              "right_location": 11,
+              "total_mass_on_simplex": 3
+            }
+          ],
+          "distinct_subset_sum_count": 4,
+          "source_subset_count": 4
+        },
+        {
+          "cardinality": 4,
+          "cuts": [],
+          "distinct_subset_sum_count": 1,
+          "source_subset_count": 1
+        }
+      ],
+      "complete_same_cardinality_ordered_pair_count_excluding_empty": 69,
+      "constant_kernel_band_mass": 20,
+      "exact_leading_matrix": [
+        [
+          40,
+          48,
+          60,
+          66
+        ],
+        [
+          48,
+          48,
+          60,
+          62
+        ],
+        [
+          60,
+          60,
+          48,
+          50
+        ],
+        [
+          66,
+          62,
+          50,
+          32
+        ]
+      ],
+      "exact_objective": "488/9",
+      "full_finite_kernel_optimized": false,
+      "inactive_KKT_slacks": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "objective_gain": "17/36",
+      "physical_leading_improvement_prefactor": "8*A*epsilon/(4^4*K)",
+      "shape": [
+        0,
+        1,
+        4,
+        6
+      ],
+      "shape_wall_claimed_as_literal_prime_product_equality": false,
+      "uniform_objective": "215/4",
+      "unique_activation": [
+        "1/18",
+        "4/9",
+        "7/18",
+        "1/9"
+      ],
+      "unique_active_support": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "all_active_supports_checked": 15,
+      "all_source_subset_count": 16,
+      "arity": 4,
+      "bands": [
+        {
+          "cardinality": 1,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "left_location": 0,
+              "right_location": 3,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 1
+            }
+          ],
+          "distinct_subset_sum_count": 4,
+          "source_subset_count": 4
+        },
+        {
+          "cardinality": 2,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                1,
+                1,
+                0
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                1,
+                1,
+                1
+              ],
+              "left_location": 5,
+              "right_location": 7,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                1
+              ],
+              "left_location": 7,
+              "right_location": 8,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                3,
+                2,
+                2
+              ],
+              "left_location": 8,
+              "right_location": 9,
+              "total_mass_on_simplex": 3
+            }
+          ],
+          "distinct_subset_sum_count": 6,
+          "source_subset_count": 6
+        },
+        {
+          "cardinality": 3,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 7,
+              "right_location": 8,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                2,
+                1,
+                1
+              ],
+              "left_location": 8,
+              "right_location": 9,
+              "total_mass_on_simplex": 3
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                2
+              ],
+              "left_location": 9,
+              "right_location": 12,
+              "total_mass_on_simplex": 3
+            }
+          ],
+          "distinct_subset_sum_count": 4,
+          "source_subset_count": 4
+        },
+        {
+          "cardinality": 4,
+          "cuts": [],
+          "distinct_subset_sum_count": 1,
+          "source_subset_count": 1
+        }
+      ],
+      "complete_same_cardinality_ordered_pair_count_excluding_empty": 69,
+      "constant_kernel_band_mass": 20,
+      "exact_leading_matrix": [
+        [
+          16,
+          44,
+          48,
+          52
+        ],
+        [
+          44,
+          40,
+          44,
+          44
+        ],
+        [
+          48,
+          44,
+          40,
+          40
+        ],
+        [
+          52,
+          44,
+          40,
+          32
+        ]
+      ],
+      "exact_objective": "638/15",
+      "full_finite_kernel_optimized": false,
+      "inactive_KKT_slacks": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "objective_gain": "8/15",
+      "physical_leading_improvement_prefactor": "8*A*epsilon/(4^4*K)",
+      "shape": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "shape_wall_claimed_as_literal_prime_product_equality": false,
+      "uniform_objective": "42",
+      "unique_activation": [
+        "2/15",
+        "11/30",
+        "13/30",
+        "1/15"
+      ],
+      "unique_active_support": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "all_active_supports_checked": 31,
+      "all_source_subset_count": 32,
+      "arity": 5,
+      "bands": [
+        {
+          "cardinality": 1,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "left_location": 0,
+              "right_location": 1,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 2,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 2,
+              "right_location": 3,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 1
+            }
+          ],
+          "distinct_subset_sum_count": 5,
+          "source_subset_count": 5
+        },
+        {
+          "cardinality": 2,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 2,
+              "total_mass_on_simplex": 4
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 2,
+              "right_location": 3,
+              "total_mass_on_simplex": 4
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                1,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 4
+            },
+            {
+              "cumulative_coefficient_counts": [
+                4,
+                3,
+                2,
+                2,
+                1
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 4
+            },
+            {
+              "cumulative_coefficient_counts": [
+                4,
+                4,
+                3,
+                3,
+                2
+              ],
+              "left_location": 5,
+              "right_location": 6,
+              "total_mass_on_simplex": 4
+            },
+            {
+              "cumulative_coefficient_counts": [
+                4,
+                4,
+                4,
+                3,
+                3
+              ],
+              "left_location": 6,
+              "right_location": 7,
+              "total_mass_on_simplex": 4
+            }
+          ],
+          "distinct_subset_sum_count": 7,
+          "source_subset_count": 10
+        },
+        {
+          "cardinality": 3,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 6
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                2,
+                1,
+                1,
+                0
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 6
+            },
+            {
+              "cumulative_coefficient_counts": [
+                4,
+                3,
+                2,
+                2,
+                1
+              ],
+              "left_location": 5,
+              "right_location": 6,
+              "total_mass_on_simplex": 6
+            },
+            {
+              "cumulative_coefficient_counts": [
+                5,
+                4,
+                4,
+                3,
+                2
+              ],
+              "left_location": 6,
+              "right_location": 7,
+              "total_mass_on_simplex": 6
+            },
+            {
+              "cumulative_coefficient_counts": [
+                6,
+                5,
+                5,
+                4,
+                4
+              ],
+              "left_location": 7,
+              "right_location": 8,
+              "total_mass_on_simplex": 6
+            },
+            {
+              "cumulative_coefficient_counts": [
+                6,
+                6,
+                5,
+                5,
+                5
+              ],
+              "left_location": 8,
+              "right_location": 9,
+              "total_mass_on_simplex": 6
+            }
+          ],
+          "distinct_subset_sum_count": 7,
+          "source_subset_count": 10
+        },
+        {
+          "cardinality": 4,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 6,
+              "right_location": 7,
+              "total_mass_on_simplex": 4
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                2,
+                2,
+                1,
+                1
+              ],
+              "left_location": 7,
+              "right_location": 8,
+              "total_mass_on_simplex": 4
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                3,
+                2,
+                2,
+                2
+              ],
+              "left_location": 8,
+              "right_location": 9,
+              "total_mass_on_simplex": 4
+            },
+            {
+              "cumulative_coefficient_counts": [
+                4,
+                3,
+                3,
+                3,
+                3
+              ],
+              "left_location": 9,
+              "right_location": 10,
+              "total_mass_on_simplex": 4
+            }
+          ],
+          "distinct_subset_sum_count": 5,
+          "source_subset_count": 5
+        },
+        {
+          "cardinality": 5,
+          "cuts": [],
+          "distinct_subset_sum_count": 1,
+          "source_subset_count": 1
+        }
+      ],
+      "complete_same_cardinality_ordered_pair_count_excluding_empty": 251,
+      "constant_kernel_band_mass": 70,
+      "exact_leading_matrix": [
+        [
+          92,
+          115,
+          130,
+          143,
+          156
+        ],
+        [
+          115,
+          122,
+          133,
+          138,
+          143
+        ],
+        [
+          130,
+          133,
+          128,
+          133,
+          130
+        ],
+        [
+          143,
+          138,
+          133,
+          122,
+          115
+        ],
+        [
+          156,
+          143,
+          130,
+          115,
+          92
+        ]
+      ],
+      "exact_objective": "1049/8",
+      "full_finite_kernel_optimized": false,
+      "inactive_KKT_slacks": [
+        "7/4",
+        "0",
+        "0",
+        "0",
+        "7/4"
+      ],
+      "objective_gain": "401/200",
+      "physical_leading_improvement_prefactor": "8*A*epsilon/(4^5*K)",
+      "shape": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "shape_wall_claimed_as_literal_prime_product_equality": false,
+      "uniform_objective": "3228/25",
+      "unique_activation": [
+        "0",
+        "5/16",
+        "3/8",
+        "5/16",
+        "0"
+      ],
+      "unique_active_support": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "all_active_supports_checked": 63,
+      "all_source_subset_count": 64,
+      "arity": 6,
+      "bands": [
+        {
+          "cardinality": 1,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "left_location": 0,
+              "right_location": 1,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 2,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left_location": 2,
+              "right_location": 3,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 1
+            },
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 1
+            }
+          ],
+          "distinct_subset_sum_count": 6,
+          "source_subset_count": 6
+        },
+        {
+          "cardinality": 2,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "left_location": 1,
+              "right_location": 2,
+              "total_mass_on_simplex": 5
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                1,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left_location": 2,
+              "right_location": 3,
+              "total_mass_on_simplex": 5
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                2,
+                2,
+                1,
+                0,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 5
+            },
+            {
+              "cumulative_coefficient_counts": [
+                4,
+                3,
+                2,
+                2,
+                1,
+                0
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 5
+            },
+            {
+              "cumulative_coefficient_counts": [
+                5,
+                4,
+                3,
+                3,
+                2,
+                1
+              ],
+              "left_location": 5,
+              "right_location": 6,
+              "total_mass_on_simplex": 5
+            },
+            {
+              "cumulative_coefficient_counts": [
+                5,
+                5,
+                4,
+                3,
+                3,
+                2
+              ],
+              "left_location": 6,
+              "right_location": 7,
+              "total_mass_on_simplex": 5
+            },
+            {
+              "cumulative_coefficient_counts": [
+                5,
+                5,
+                5,
+                4,
+                4,
+                3
+              ],
+              "left_location": 7,
+              "right_location": 8,
+              "total_mass_on_simplex": 5
+            },
+            {
+              "cumulative_coefficient_counts": [
+                5,
+                5,
+                5,
+                5,
+                4,
+                4
+              ],
+              "left_location": 8,
+              "right_location": 9,
+              "total_mass_on_simplex": 5
+            }
+          ],
+          "distinct_subset_sum_count": 9,
+          "source_subset_count": 15
+        },
+        {
+          "cardinality": 3,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                0,
+                0,
+                0
+              ],
+              "left_location": 3,
+              "right_location": 4,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                2,
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 4,
+              "right_location": 5,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                4,
+                3,
+                2,
+                2,
+                1,
+                0
+              ],
+              "left_location": 5,
+              "right_location": 6,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                6,
+                5,
+                4,
+                3,
+                2,
+                1
+              ],
+              "left_location": 6,
+              "right_location": 7,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                8,
+                6,
+                6,
+                4,
+                4,
+                2
+              ],
+              "left_location": 7,
+              "right_location": 8,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                9,
+                8,
+                7,
+                6,
+                5,
+                4
+              ],
+              "left_location": 8,
+              "right_location": 9,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                10,
+                9,
+                8,
+                8,
+                7,
+                6
+              ],
+              "left_location": 9,
+              "right_location": 10,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                10,
+                10,
+                9,
+                9,
+                8,
+                8
+              ],
+              "left_location": 10,
+              "right_location": 11,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                10,
+                10,
+                10,
+                9,
+                9,
+                9
+              ],
+              "left_location": 11,
+              "right_location": 12,
+              "total_mass_on_simplex": 10
+            }
+          ],
+          "distinct_subset_sum_count": 10,
+          "source_subset_count": 20
+        },
+        {
+          "cardinality": 4,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                1,
+                0,
+                0
+              ],
+              "left_location": 6,
+              "right_location": 7,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                2,
+                2,
+                1,
+                1,
+                0
+              ],
+              "left_location": 7,
+              "right_location": 8,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                4,
+                4,
+                3,
+                2,
+                2,
+                1
+              ],
+              "left_location": 8,
+              "right_location": 9,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                6,
+                5,
+                4,
+                4,
+                3,
+                2
+              ],
+              "left_location": 9,
+              "right_location": 10,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                8,
+                7,
+                6,
+                6,
+                5,
+                4
+              ],
+              "left_location": 10,
+              "right_location": 11,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                9,
+                8,
+                8,
+                7,
+                6,
+                6
+              ],
+              "left_location": 11,
+              "right_location": 12,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                10,
+                9,
+                9,
+                8,
+                8,
+                8
+              ],
+              "left_location": 12,
+              "right_location": 13,
+              "total_mass_on_simplex": 10
+            },
+            {
+              "cumulative_coefficient_counts": [
+                10,
+                10,
+                9,
+                9,
+                9,
+                9
+              ],
+              "left_location": 13,
+              "right_location": 14,
+              "total_mass_on_simplex": 10
+            }
+          ],
+          "distinct_subset_sum_count": 9,
+          "source_subset_count": 15
+        },
+        {
+          "cardinality": 5,
+          "cuts": [
+            {
+              "cumulative_coefficient_counts": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              "left_location": 10,
+              "right_location": 11,
+              "total_mass_on_simplex": 5
+            },
+            {
+              "cumulative_coefficient_counts": [
+                2,
+                2,
+                2,
+                2,
+                1,
+                1
+              ],
+              "left_location": 11,
+              "right_location": 12,
+              "total_mass_on_simplex": 5
+            },
+            {
+              "cumulative_coefficient_counts": [
+                3,
+                3,
+                3,
+                2,
+                2,
+                2
+              ],
+              "left_location": 12,
+              "right_location": 13,
+              "total_mass_on_simplex": 5
+            },
+            {
+              "cumulative_coefficient_counts": [
+                4,
+                4,
+                3,
+                3,
+                3,
+                3
+              ],
+              "left_location": 13,
+              "right_location": 14,
+              "total_mass_on_simplex": 5
+            },
+            {
+              "cumulative_coefficient_counts": [
+                5,
+                4,
+                4,
+                4,
+                4,
+                4
+              ],
+              "left_location": 14,
+              "right_location": 15,
+              "total_mass_on_simplex": 5
+            }
+          ],
+          "distinct_subset_sum_count": 6,
+          "source_subset_count": 6
+        },
+        {
+          "cardinality": 6,
+          "cuts": [],
+          "distinct_subset_sum_count": 1,
+          "source_subset_count": 1
+        }
+      ],
+      "complete_same_cardinality_ordered_pair_count_excluding_empty": 923,
+      "constant_kernel_band_mass": 252,
+      "exact_leading_matrix": [
+        [
+          472,
+          542,
+          594,
+          640,
+          684,
+          730
+        ],
+        [
+          542,
+          576,
+          612,
+          638,
+          662,
+          684
+        ],
+        [
+          594,
+          612,
+          616,
+          634,
+          638,
+          640
+        ],
+        [
+          640,
+          638,
+          634,
+          616,
+          612,
+          594
+        ],
+        [
+          684,
+          662,
+          638,
+          612,
+          576,
+          542
+        ],
+        [
+          730,
+          684,
+          640,
+          594,
+          542,
+          472
+        ]
+      ],
+      "exact_objective": "625",
+      "full_finite_kernel_optimized": false,
+      "inactive_KKT_slacks": [
+        "8",
+        "0",
+        "0",
+        "0",
+        "0",
+        "8"
+      ],
+      "objective_gain": "70/9",
+      "physical_leading_improvement_prefactor": "8*A*epsilon/(4^6*K)",
+      "shape": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "shape_wall_claimed_as_literal_prime_product_equality": false,
+      "uniform_objective": "5555/9",
+      "unique_activation": [
+        "0",
+        "0",
+        "1/2",
+        "1/2",
+        "0",
+        "0"
+      ],
+      "unique_active_support": [
+        2,
+        3
+      ]
+    }
+  ],
+  "schema": "riemann.native_six_hour.higher_cluster_discovery.v1",
+  "sources": [
+    {
+      "blob": "6810bcece309b0c54ae6c8fc84b314990004549c",
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "path": "claims/lemmas/L-102707-continuous-half-divisor-geodesic-and-polarized-hankel-current.md"
+    },
+    {
+      "blob": "d7330d114ebba1a7a16e22fa9ba6aa6b5eb7cdd6",
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "path": "claims/lemmas/L-102880-logarithmic-derivative-outer-detector-has-zero-square-lattice-moment.md"
+    }
+  ]
+}

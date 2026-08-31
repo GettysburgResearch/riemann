@@ -1,0 +1,192 @@
+{
+  "RH_or_GRH_conclusion": false,
+  "actual_derived_pushforward_identification_asserted": false,
+  "all_geometric_parent_impossibility_asserted": false,
+  "all_sign_evaluations": 1024,
+  "cover_degree_controls": [
+    {
+      "independent_lines": 1,
+      "minimum_degree": 2
+    },
+    {
+      "independent_lines": 2,
+      "minimum_degree": 4
+    },
+    {
+      "independent_lines": 4,
+      "minimum_degree": 16
+    },
+    {
+      "independent_lines": 8,
+      "minimum_degree": 256
+    },
+    {
+      "independent_lines": 32,
+      "minimum_degree": 4294967296
+    }
+  ],
+  "crossed_odd_terms": 352,
+  "finite_graph_controls": [
+    {
+      "divisor_incidence": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "index": -4
+    },
+    {
+      "divisor_incidence": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "index": -3
+    },
+    {
+      "divisor_incidence": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "index": -2
+    },
+    {
+      "divisor_incidence": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "index": -1
+    },
+    {
+      "divisor_incidence": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "index": 0
+    },
+    {
+      "divisor_incidence": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "index": 1
+    },
+    {
+      "divisor_incidence": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "index": 2
+    },
+    {
+      "divisor_incidence": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "index": 3
+    },
+    {
+      "divisor_incidence": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "index": 4
+    }
+  ],
+  "frozen_owner_proof": "8fa0e40d7ed45b7db82a417e9ac7929cdc0eff01c14c4d62ad0502fceba17671",
+  "frozen_source_commit": "faf74a47dac33927d081a890f2b5a7ead48b869b",
+  "frozen_sources": {
+    "research/riemann-structures/COMPLETE_MARKED_OWNER_PUSHFORWARD.md": "1c65af708e013cd60c8afffba64a43aee9835d33",
+    "research/riemann-structures/complete_marked_owner_pushforward.json": "ea9da0fa3b3acb63dbf0b68c1cb2ae8efaeefce3",
+    "research/riemann-structures/complete_marked_owner_pushforward.py": "4564146cc8b3984c5ef5004d7548d6db6263d280"
+  },
+  "full_original_carrier_binding_asserted": false,
+  "infinite_orbit_proved_by_divisors_not_finite_controls": true,
+  "polynomial_four_J_terms": 704,
+  "polynomial_sha256": "63e51dcdf7104f8e414cfa65b4162fbdd99f8b603f34ec434e8d8d13ba6f0f1d",
+  "proof_object_sha256": "d9a61c79638355542ef38ea346bba42eef722d5b2208be92a7d2f307507514fd",
+  "schema": "riemann.marked_kummer_orbit.v1",
+  "source_hashes": {
+    "research/riemann-structures/MARKED_KUMMER_ORBIT_OBSTRUCTION.md": "0466ade696a18046323d86d180f7836331e4380919354c0f1fd437b48c2679a7",
+    "research/riemann-structures/marked_kummer_orbit_obstruction.py": "ef620557a3e687c98b5d9dfd79045c3dd9eedce0792f524bda6d023f740c2b70",
+    "tests/test_marked_kummer_orbit_obstruction.py": "38214c87a29b9d75999b510be3804bc50f1b76988e85692fd62671200625309f"
+  },
+  "source_specializations": [
+    {
+      "J_defect": -336420864,
+      "four_J_odd_coefficient": 672841728,
+      "n": 19
+    },
+    {
+      "J_defect": -6804060632064,
+      "four_J_odd_coefficient": 13608121264128,
+      "n": 119
+    },
+    {
+      "J_defect": -28737320204888064,
+      "four_J_odd_coefficient": 57474640409776128,
+      "n": 619
+    }
+  ]
+}

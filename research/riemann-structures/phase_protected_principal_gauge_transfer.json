@@ -1,0 +1,667 @@
+{
+  "RH_conclusion": false,
+  "a_tau": "-1/18",
+  "absolute_schur_checks": {
+    "derivative": {
+      "majorant": "263119512748140225/7142427534032896",
+      "max_absolute_column": "1178/6561",
+      "max_absolute_row": "78914723/287686728"
+    },
+    "forward": {
+      "majorant": "87706504249380075/57139420272263168",
+      "max_absolute_column": "351253/314928",
+      "max_absolute_row": "3475861105/2959063488"
+    },
+    "inverse_derivative": {
+      "majorant": "263119512748140225/7142427534032896",
+      "max_absolute_column": "1178/6561",
+      "max_absolute_row": "29893253/109594944"
+    },
+    "true_inverse": {
+      "majorant": "87706504249380075/57139420272263168",
+      "max_absolute_column": "351253/314928",
+      "max_absolute_row": "193022767/164392416"
+    }
+  },
+  "deleted_intermediates": [
+    {
+      "M": 31603,
+      "N": 24115675,
+      "g": 1,
+      "left": [
+        5,
+        29
+      ],
+      "right": [
+        13
+      ],
+      "state": [
+        0,
+        0,
+        1
+      ],
+      "weight": "455/4"
+    },
+    {
+      "M": 26578123,
+      "N": 28675,
+      "g": 1,
+      "left": [
+        5
+      ],
+      "right": [
+        13,
+        29
+      ],
+      "state": [
+        0,
+        0,
+        2
+      ],
+      "weight": "455/4"
+    }
+  ],
+  "differentiated_inverse_verified": true,
+  "exact_arithmetic": "Fraction; no floating point",
+  "full_dimension": 24,
+  "full_native_gamma_diagonal_adapter_asserted": false,
+  "horizon": 100000000,
+  "horizon_dimension": 10,
+  "matrix_digests": {
+    "derivative": "5d9f17e331643721921e42177bde1e89ffaaab2e61df18d0334b5aab37584df1",
+    "forward": "b069c3d4633055bd24c838b3a5f513e2037f12716fbafa4baf5de7cfd58cc778",
+    "inverse": "e321000bc4e99e82de37e2edc5b133281d7b09829b85f60d98cb0ac0e2d36acd",
+    "inverse_derivative": "ae8a8ab48d6c0d41e54212955463fb2a04026059323acc962aa3e2c5e8e4e87d"
+  },
+  "off_phase_blocks_bounded_here": false,
+  "owners": [
+    [
+      31,
+      37
+    ],
+    [
+      11,
+      17
+    ]
+  ],
+  "phase_primes": [
+    5,
+    13
+  ],
+  "proof_object_sha256": "b59337496ee1ea062cdf3c0f31dbb0e2ee01c6bc590bdd44c0fb1b0db053efb9",
+  "ratio_mask_dimension": 5,
+  "ratio_mask_endpoints": [
+    {
+      "M": 31603,
+      "N": 28675,
+      "g": 1,
+      "left": [
+        5
+      ],
+      "right": [
+        13
+      ],
+      "state": [
+        0,
+        0,
+        0
+      ],
+      "weight": "455/4"
+    },
+    {
+      "M": 26578123,
+      "N": 24115675,
+      "g": 29,
+      "left": [
+        5,
+        29
+      ],
+      "right": [
+        13,
+        29
+      ],
+      "state": [
+        0,
+        0,
+        3
+      ],
+      "weight": "382655/4"
+    }
+  ],
+  "ratio_mask_inverse_defect": "1/4698",
+  "records": [
+    {
+      "M": 31603,
+      "N": 28675,
+      "g": 1,
+      "left": [
+        5
+      ],
+      "right": [
+        13
+      ],
+      "state": [
+        0,
+        0,
+        0
+      ],
+      "weight": "455/4"
+    },
+    {
+      "M": 31603,
+      "N": 24115675,
+      "g": 1,
+      "left": [
+        5,
+        29
+      ],
+      "right": [
+        13
+      ],
+      "state": [
+        0,
+        0,
+        1
+      ],
+      "weight": "455/4"
+    },
+    {
+      "M": 26578123,
+      "N": 28675,
+      "g": 1,
+      "left": [
+        5
+      ],
+      "right": [
+        13,
+        29
+      ],
+      "state": [
+        0,
+        0,
+        2
+      ],
+      "weight": "455/4"
+    },
+    {
+      "M": 26578123,
+      "N": 24115675,
+      "g": 29,
+      "left": [
+        5,
+        29
+      ],
+      "right": [
+        13,
+        29
+      ],
+      "state": [
+        0,
+        0,
+        3
+      ],
+      "weight": "382655/4"
+    },
+    {
+      "M": 31603,
+      "N": 1405075,
+      "g": 1,
+      "left": [
+        5,
+        7
+      ],
+      "right": [
+        13
+      ],
+      "state": [
+        0,
+        1,
+        0
+      ],
+      "weight": "455/4"
+    },
+    {
+      "M": 31603,
+      "N": 1181668075,
+      "g": 1,
+      "left": [
+        5,
+        7,
+        29
+      ],
+      "right": [
+        13
+      ],
+      "state": [
+        0,
+        1,
+        1
+      ],
+      "weight": "455/4"
+    },
+    {
+      "M": 26578123,
+      "N": 1405075,
+      "g": 1,
+      "left": [
+        5,
+        7
+      ],
+      "right": [
+        13,
+        29
+      ],
+      "state": [
+        0,
+        1,
+        2
+      ],
+      "weight": "455/4"
+    },
+    {
+      "M": 26578123,
+      "N": 1181668075,
+      "g": 29,
+      "left": [
+        5,
+        7,
+        29
+      ],
+      "right": [
+        13,
+        29
+      ],
+      "state": [
+        0,
+        1,
+        3
+      ],
+      "weight": "382655/4"
+    },
+    {
+      "M": 1548547,
+      "N": 1405075,
+      "g": 7,
+      "left": [
+        5,
+        7
+      ],
+      "right": [
+        13,
+        7
+      ],
+      "state": [
+        0,
+        3,
+        0
+      ],
+      "weight": "22295/4"
+    },
+    {
+      "M": 1548547,
+      "N": 1181668075,
+      "g": 7,
+      "left": [
+        5,
+        7,
+        29
+      ],
+      "right": [
+        13,
+        7
+      ],
+      "state": [
+        0,
+        3,
+        1
+      ],
+      "weight": "22295/4"
+    },
+    {
+      "M": 1302328027,
+      "N": 1405075,
+      "g": 7,
+      "left": [
+        5,
+        7
+      ],
+      "right": [
+        13,
+        7,
+        29
+      ],
+      "state": [
+        0,
+        3,
+        2
+      ],
+      "weight": "22295/4"
+    },
+    {
+      "M": 1302328027,
+      "N": 1181668075,
+      "g": 203,
+      "left": [
+        5,
+        7,
+        29
+      ],
+      "right": [
+        13,
+        7,
+        29
+      ],
+      "state": [
+        0,
+        3,
+        3
+      ],
+      "weight": "18750095/4"
+    },
+    {
+      "M": 284427,
+      "N": 258075,
+      "g": 3,
+      "left": [
+        5,
+        3
+      ],
+      "right": [
+        13,
+        3
+      ],
+      "state": [
+        3,
+        0,
+        0
+      ],
+      "weight": "4095/4"
+    },
+    {
+      "M": 284427,
+      "N": 217041075,
+      "g": 3,
+      "left": [
+        5,
+        3,
+        29
+      ],
+      "right": [
+        13,
+        3
+      ],
+      "state": [
+        3,
+        0,
+        1
+      ],
+      "weight": "4095/4"
+    },
+    {
+      "M": 239203107,
+      "N": 258075,
+      "g": 3,
+      "left": [
+        5,
+        3
+      ],
+      "right": [
+        13,
+        3,
+        29
+      ],
+      "state": [
+        3,
+        0,
+        2
+      ],
+      "weight": "4095/4"
+    },
+    {
+      "M": 239203107,
+      "N": 217041075,
+      "g": 87,
+      "left": [
+        5,
+        3,
+        29
+      ],
+      "right": [
+        13,
+        3,
+        29
+      ],
+      "state": [
+        3,
+        0,
+        3
+      ],
+      "weight": "3443895/4"
+    },
+    {
+      "M": 284427,
+      "N": 12645675,
+      "g": 3,
+      "left": [
+        5,
+        3,
+        7
+      ],
+      "right": [
+        13,
+        3
+      ],
+      "state": [
+        3,
+        1,
+        0
+      ],
+      "weight": "4095/4"
+    },
+    {
+      "M": 284427,
+      "N": 10635012675,
+      "g": 3,
+      "left": [
+        5,
+        3,
+        7,
+        29
+      ],
+      "right": [
+        13,
+        3
+      ],
+      "state": [
+        3,
+        1,
+        1
+      ],
+      "weight": "4095/4"
+    },
+    {
+      "M": 239203107,
+      "N": 12645675,
+      "g": 3,
+      "left": [
+        5,
+        3,
+        7
+      ],
+      "right": [
+        13,
+        3,
+        29
+      ],
+      "state": [
+        3,
+        1,
+        2
+      ],
+      "weight": "4095/4"
+    },
+    {
+      "M": 239203107,
+      "N": 10635012675,
+      "g": 87,
+      "left": [
+        5,
+        3,
+        7,
+        29
+      ],
+      "right": [
+        13,
+        3,
+        29
+      ],
+      "state": [
+        3,
+        1,
+        3
+      ],
+      "weight": "3443895/4"
+    },
+    {
+      "M": 13936923,
+      "N": 12645675,
+      "g": 21,
+      "left": [
+        5,
+        3,
+        7
+      ],
+      "right": [
+        13,
+        3,
+        7
+      ],
+      "state": [
+        3,
+        3,
+        0
+      ],
+      "weight": "200655/4"
+    },
+    {
+      "M": 13936923,
+      "N": 10635012675,
+      "g": 21,
+      "left": [
+        5,
+        3,
+        7,
+        29
+      ],
+      "right": [
+        13,
+        3,
+        7
+      ],
+      "state": [
+        3,
+        3,
+        1
+      ],
+      "weight": "200655/4"
+    },
+    {
+      "M": 11720952243,
+      "N": 12645675,
+      "g": 21,
+      "left": [
+        5,
+        3,
+        7
+      ],
+      "right": [
+        13,
+        3,
+        7,
+        29
+      ],
+      "state": [
+        3,
+        3,
+        2
+      ],
+      "weight": "200655/4"
+    },
+    {
+      "M": 11720952243,
+      "N": 10635012675,
+      "g": 609,
+      "left": [
+        5,
+        3,
+        7,
+        29
+      ],
+      "right": [
+        13,
+        3,
+        7,
+        29
+      ],
+      "state": [
+        3,
+        3,
+        3
+      ],
+      "weight": "168750855/4"
+    }
+  ],
+  "schema": "riemann.phase_protected_principal_gauge.v1",
+  "source_hashes": {
+    "research/riemann-structures/PHASE_PROTECTED_PRINCIPAL_GAUGE_TRANSFER.md": "d2e036c73138a061162eca7943f76717e31973ddbcfe16b39ceabd4eb90328b2",
+    "research/riemann-structures/phase_protected_principal_gauge_transfer.py": "fbef55cd3e8e004be7e706f9ef2390084dd930dd1551f9372920e0070fe5b262",
+    "tests/test_phase_protected_principal_gauge_transfer.py": "45d52b6f8893ac67639f62dcae7597b2d312eb11bc02de6d07d97dd8c301c39f"
+  },
+  "sources": [
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "6192bec36636e2d35b2aba4fdd64eb4bcf93c2d9",
+      "path": "claims/lemmas/L-102706-euler-half-divisor-homotopies-are-subcritically-gauge-equivalent.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "dadf3a4a65d2575983d692dafc0c94142c9a038d",
+      "path": "claims/lemmas/L-106090-least-discrepancy-prime-triangularizes-the-coprime-boolean-core.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+      "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "955c3ed0363ca330439eedbae1bf0041a4c96468",
+      "path": "claims/lemmas/L-106121-bilateral-tensor-moment-has-a-paid-atomic-diagonal.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+      "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md"
+    },
+    {
+      "commit": "e501c45ecc39f71b3f26abfe952366eb529c7c2d",
+      "git_blob": "35390e5f48304e8c586c1268b8ae215bbb252aaf",
+      "path": "research/riemann-structures/GAUGE_CONNECTION_SOURCE_TRANSPORT.md"
+    },
+    {
+      "commit": "ce0cc6e48e3cdaedd9d5f52fb087b03e8f86c257",
+      "git_blob": "a4757412c5e9d085e2970e768cbb1d5c4953e554",
+      "path": "research/riemann-structures/PRINCIPAL_SELECTOR_GAUGE_OBSTRUCTION.md"
+    }
+  ],
+  "tau": "1/3",
+  "true_inverse_low_prime_corner": "-1/972",
+  "true_inverse_middle_prime_corner": "0",
+  "two_sided_inverse_verified": true,
+  "uniform_subpower_bound_is_symbolic_theorem": true,
+  "variable_primes": [
+    3,
+    7,
+    29
+  ]
+}

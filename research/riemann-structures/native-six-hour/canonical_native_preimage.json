@@ -1,0 +1,4382 @@
+{
+  "colour_measure": "independent fair endpoint choices; probability measure",
+  "complete_post_renewal_gamma_identified": false,
+  "depth_measure": "(1-theta) dtheta; theta^core_depth remains in the integrand",
+  "held_out_positive_chart": {
+    "M": 1371037021510894364441527385665889191,
+    "N": 1362959078243490213227960963218969783,
+    "coefficient_before_1_over_sqrt_NM": "1/9",
+    "common_completed_Mellin_phase": true,
+    "complete_nested_stream_sha256": "bf3be7d542b5231d2b79593e4a32c9f4910a884b2abc288158eb910e93557d77",
+    "diagonals_before_1_over_NM": {
+      "continuous": "1/2025",
+      "history": "1/324",
+      "integrated_site": "1/20736",
+      "recombined": "1/81"
+    },
+    "history_count": 4,
+    "left": {
+      "N": 1362959078243490213227960963218969783,
+      "beta_per_owner_order": "1/12",
+      "coefficient": "1/3",
+      "complete_Boolean_partition_count": 9,
+      "core": [
+        1053821,
+        1054903
+      ],
+      "cutoff": 1048576,
+      "diagonals_before_1_over_N": {
+        "continuous": "1/45",
+        "history": "1/18",
+        "integrated_site": "1/144",
+        "recombined": "1/9"
+      },
+      "histories": [
+        {
+          "A": [
+            1053821
+          ],
+          "B": [
+            1054903
+          ],
+          "D": [],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "1/6",
+          "completion_multiplier_square": "1/1235830053106455262215769",
+          "raw_cone": "1049639,1050713",
+          "raw_product": 1102869342607
+        },
+        {
+          "A": [
+            1054903
+          ],
+          "B": [
+            1053821
+          ],
+          "D": [],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "1/6",
+          "completion_multiplier_square": "1/1235830053106455262215769",
+          "raw_cone": "1049639,1050713",
+          "raw_product": 1102869342607
+        }
+      ],
+      "nested_sites": [
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1049639,
+            1050713
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1049639,
+            1050713
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1049639,
+            1050713
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1049639,
+            1050713
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1050713,
+            1049639
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1050713,
+            1049639
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1050713,
+            1049639
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1050713,
+            1049639
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1049639,
+            1050713
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1049639,
+            1050713
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1049639,
+            1050713
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1049639,
+            1050713
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1050713,
+            1049639
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1050713,
+            1049639
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1050713,
+            1049639
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1050713,
+            1049639
+          ],
+          "raw_site": 3
+        }
+      ],
+      "owners": [
+        1049639,
+        1050713
+      ],
+      "raw_cones": {
+        "1049639,1050713": {
+          "K": 1102869342607,
+          "coefficient": "1",
+          "colour_probability_diagonal": "1",
+          "colour_weighted_counting_diagonal": "1/4",
+          "complete_factor_count": 4,
+          "endpoint_colours": [
+            {
+              "E_on_left": [],
+              "E_on_right": [
+                1049639,
+                1050713
+              ],
+              "coefficient": 1,
+              "probability": "1/4"
+            },
+            {
+              "E_on_left": [
+                1050713
+              ],
+              "E_on_right": [
+                1049639
+              ],
+              "coefficient": 1,
+              "probability": "1/4"
+            },
+            {
+              "E_on_left": [
+                1049639
+              ],
+              "E_on_right": [
+                1050713
+              ],
+              "coefficient": 1,
+              "probability": "1/4"
+            },
+            {
+              "E_on_left": [
+                1049639,
+                1050713
+              ],
+              "E_on_right": [],
+              "coefficient": 1,
+              "probability": "1/4"
+            }
+          ],
+          "labels": [
+            1049639,
+            1050713
+          ],
+          "primitive_site_diagonal": "1/6",
+          "root_free_left_retained": true,
+          "sites": [
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                1050713
+              ],
+              "raw_m": 1049639,
+              "raw_n": 1050713,
+              "right": [
+                1049639
+              ],
+              "site": 1050713,
+              "square_integral_2ds": "1/24"
+            },
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                1049639
+              ],
+              "raw_m": 1050713,
+              "raw_n": 1049639,
+              "right": [
+                1050713
+              ],
+              "site": 1049639,
+              "square_integral_2ds": "1/24"
+            },
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                1049639,
+                1050713
+              ],
+              "raw_m": 1,
+              "raw_n": 1102869342607,
+              "right": [],
+              "site": 1049639,
+              "square_integral_2ds": "1/24"
+            },
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                1049639,
+                1050713
+              ],
+              "raw_m": 1,
+              "raw_n": 1102869342607,
+              "right": [],
+              "site": 1050713,
+              "square_integral_2ds": "1/24"
+            }
+          ]
+        }
+      },
+      "zero_history_count": 7
+    },
+    "nested_coefficient_histogram": {
+      "1/2304": 256
+    },
+    "nested_site_count": 256,
+    "right": {
+      "N": 1371037021510894364441527385665889191,
+      "beta_per_owner_order": "1/12",
+      "coefficient": "1/3",
+      "complete_Boolean_partition_count": 9,
+      "core": [
+        1053821,
+        1055917
+      ],
+      "cutoff": 1048576,
+      "diagonals_before_1_over_N": {
+        "continuous": "1/45",
+        "history": "1/18",
+        "integrated_site": "1/144",
+        "recombined": "1/9"
+      },
+      "histories": [
+        {
+          "A": [
+            1053821
+          ],
+          "B": [
+            1055917
+          ],
+          "D": [],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "1/6",
+          "completion_multiplier_square": "1/1238207018467459293446449",
+          "raw_cone": "1051747,1052797",
+          "raw_product": 1107276086359
+        },
+        {
+          "A": [
+            1055917
+          ],
+          "B": [
+            1053821
+          ],
+          "D": [],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "1/6",
+          "completion_multiplier_square": "1/1238207018467459293446449",
+          "raw_cone": "1051747,1052797",
+          "raw_product": 1107276086359
+        }
+      ],
+      "nested_sites": [
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1051747,
+            1052797
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1051747,
+            1052797
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1051747,
+            1052797
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1051747,
+            1052797
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1052797,
+            1051747
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1052797,
+            1051747
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1052797,
+            1051747
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1052797,
+            1051747
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1051747,
+            1052797
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1051747,
+            1052797
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1051747,
+            1052797
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1051747,
+            1052797
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1052797,
+            1051747
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1052797,
+            1051747
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1052797,
+            1051747
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            1052797,
+            1051747
+          ],
+          "raw_site": 3
+        }
+      ],
+      "owners": [
+        1051747,
+        1052797
+      ],
+      "raw_cones": {
+        "1051747,1052797": {
+          "K": 1107276086359,
+          "coefficient": "1",
+          "colour_probability_diagonal": "1",
+          "colour_weighted_counting_diagonal": "1/4",
+          "complete_factor_count": 4,
+          "endpoint_colours": [
+            {
+              "E_on_left": [],
+              "E_on_right": [
+                1051747,
+                1052797
+              ],
+              "coefficient": 1,
+              "probability": "1/4"
+            },
+            {
+              "E_on_left": [
+                1052797
+              ],
+              "E_on_right": [
+                1051747
+              ],
+              "coefficient": 1,
+              "probability": "1/4"
+            },
+            {
+              "E_on_left": [
+                1051747
+              ],
+              "E_on_right": [
+                1052797
+              ],
+              "coefficient": 1,
+              "probability": "1/4"
+            },
+            {
+              "E_on_left": [
+                1051747,
+                1052797
+              ],
+              "E_on_right": [],
+              "coefficient": 1,
+              "probability": "1/4"
+            }
+          ],
+          "labels": [
+            1051747,
+            1052797
+          ],
+          "primitive_site_diagonal": "1/6",
+          "root_free_left_retained": true,
+          "sites": [
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                1052797
+              ],
+              "raw_m": 1051747,
+              "raw_n": 1052797,
+              "right": [
+                1051747
+              ],
+              "site": 1052797,
+              "square_integral_2ds": "1/24"
+            },
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                1051747
+              ],
+              "raw_m": 1052797,
+              "raw_n": 1051747,
+              "right": [
+                1052797
+              ],
+              "site": 1051747,
+              "square_integral_2ds": "1/24"
+            },
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                1051747,
+                1052797
+              ],
+              "raw_m": 1,
+              "raw_n": 1107276086359,
+              "right": [],
+              "site": 1051747,
+              "square_integral_2ds": "1/24"
+            },
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                1051747,
+                1052797
+              ],
+              "raw_m": 1,
+              "raw_n": 1107276086359,
+              "right": [],
+              "site": 1052797,
+              "square_integral_2ds": "1/24"
+            }
+          ]
+        }
+      },
+      "zero_history_count": 7
+    }
+  },
+  "native_principal_moment_bound_claimed": false,
+  "primitive_measure": "2 ds",
+  "primitive_ratio_readout_preserved": false,
+  "product_collapse_before_owner_extraction": true,
+  "proof_object_sha256": "cdf3dbe481df2f2ddafe8e32ad8d1d81e0812800cc1a03d61224d3e8d31d3b47",
+  "schema": "riemann.native_six_hour.canonical_preimage.v1",
+  "source_hashes": {
+    "research/riemann-structures/native-six-hour/CANONICAL_NATIVE_PREIMAGE.md": "3a55144c232f16397fb0f0ff9955133775c89082233a78750a7c16c156b35620",
+    "research/riemann-structures/native-six-hour/canonical_native_preimage.py": "8ce8be08f12ed7cd8a47e12fee87431df027328b6f60f6579d1d8db73f7895d1",
+    "tests/test_native_six_hour_canonical_preimage.py": "ded75782172847dcec5cd31bf7a119f17c746fdb94c7c61d650daa39ef380128"
+  },
+  "sources": [
+    {
+      "blob": "c88f87c164ab1ea5504913c00f257f5b030ab854",
+      "commit": "15967a52e846f1037bb0446db43f3d4a9c3fc821",
+      "path": "research/riemann-structures/native-six-hour/geodesic_factor_exchange.py"
+    },
+    {
+      "blob": "6d68773121a8c9d32e151f9e83d1546da4814d80",
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "path": "claims/lemmas/L-102700-half-divisor-factorization-of-completion-defect.md"
+    },
+    {
+      "blob": "70eb455a3b2bb0398f8bba22dee82c39ef803156",
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "path": "claims/lemmas/L-102701-common-mother-ratiofour-two-field-form.md"
+    },
+    {
+      "blob": "6810bcece309b0c54ae6c8fc84b314990004549c",
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "path": "claims/lemmas/L-102707-continuous-half-divisor-geodesic-and-polarized-hankel-current.md"
+    },
+    {
+      "blob": "d7330d114ebba1a7a16e22fa9ba6aa6b5eb7cdd6",
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "path": "claims/lemmas/L-102880-logarithmic-derivative-outer-detector-has-zero-square-lattice-moment.md"
+    },
+    {
+      "blob": "cf40354ff8810a2d4bea9459cf142c300ba36237",
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/lemmas/L-106134-common-mother-is-a-differential-self-convolution.md"
+    },
+    {
+      "blob": "7cebffd3b6b0db96128755e392f622029a74435a",
+      "commit": "1904d20cdb76ecd26e0e63472625da930075303e",
+      "path": "research/exploratory/NATIVE_BOOLEAN_DECODER_DIAGNOSTIC.md"
+    },
+    {
+      "blob": "1c289fb3c7d8e959b010267751834ebad6914ec5",
+      "commit": "1fea3c9ce079325d19f5b43c6daa59c76afff921",
+      "path": "research/riemann-structures/dense_owner_principal_coefficient_family.json"
+    },
+    {
+      "blob": "f393a1d8583c5680b98a4b3e26d9b5a61c8d2b7a",
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/lemmas/L-106132-boolean-half-source-least-prime-calderon-row.md"
+    },
+    {
+      "blob": "b988b14eb982504a799158eed4c76e7f033c96f0",
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/lemmas/L-106133-canonical-equal-pair-boolean-source-is-a-beta-half-source-square.md"
+    },
+    {
+      "blob": "f0bdbf09e620027eafe9a198350f588edafdd269",
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "path": "claims/lemmas/L-102904-endpoint-color-walsh-expansion-has-only-squared-activity-off-the-midpoint.md"
+    }
+  ],
+  "zero_chart": {
+    "M": 997518551435,
+    "N": 1005930209094,
+    "coefficient_before_1_over_sqrt_NM": "0",
+    "common_completed_Mellin_phase": true,
+    "complete_nested_stream_sha256": "2cd63fbcb1daaf162b0bac827f9cbd640df5748d56254b45c7f807f59a21358f",
+    "diagonals_before_1_over_NM": {
+      "continuous": "29/25200",
+      "history": "1/150",
+      "integrated_site": "1/14400",
+      "recombined": "0"
+    },
+    "history_count": 24,
+    "left": {
+      "N": 1005930209094,
+      "beta_per_owner_order": "1/20",
+      "coefficient": "0",
+      "complete_Boolean_partition_count": 27,
+      "core": [
+        71,
+        73,
+        79
+      ],
+      "cutoff": 64,
+      "diagonals_before_1_over_N": {
+        "continuous": "29/560",
+        "history": "3/25",
+        "integrated_site": "1/100",
+        "recombined": "0"
+      },
+      "histories": [
+        {
+          "A": [
+            71,
+            73
+          ],
+          "B": [
+            79
+          ],
+          "D": [],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "1/10",
+          "completion_multiplier_square": "1/167655034849",
+          "raw_cone": "2,3",
+          "raw_product": 6
+        },
+        {
+          "A": [
+            71,
+            79
+          ],
+          "B": [
+            73
+          ],
+          "D": [],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "1/10",
+          "completion_multiplier_square": "1/167655034849",
+          "raw_cone": "2,3",
+          "raw_product": 6
+        },
+        {
+          "A": [
+            71
+          ],
+          "B": [
+            73,
+            79
+          ],
+          "D": [],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "1/10",
+          "completion_multiplier_square": "1/167655034849",
+          "raw_cone": "2,3",
+          "raw_product": 6
+        },
+        {
+          "A": [
+            71
+          ],
+          "B": [
+            73
+          ],
+          "D": [
+            79
+          ],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "-1/10",
+          "completion_multiplier_square": "1/2122215631",
+          "raw_cone": "2,3,79",
+          "raw_product": 474
+        },
+        {
+          "A": [
+            71
+          ],
+          "B": [
+            79
+          ],
+          "D": [
+            73
+          ],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "-1/10",
+          "completion_multiplier_square": "1/2296644313",
+          "raw_cone": "2,3,73",
+          "raw_product": 438
+        },
+        {
+          "A": [
+            73,
+            79
+          ],
+          "B": [
+            71
+          ],
+          "D": [],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "1/10",
+          "completion_multiplier_square": "1/167655034849",
+          "raw_cone": "2,3",
+          "raw_product": 6
+        },
+        {
+          "A": [
+            73
+          ],
+          "B": [
+            71,
+            79
+          ],
+          "D": [],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "1/10",
+          "completion_multiplier_square": "1/167655034849",
+          "raw_cone": "2,3",
+          "raw_product": 6
+        },
+        {
+          "A": [
+            73
+          ],
+          "B": [
+            71
+          ],
+          "D": [
+            79
+          ],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "-1/10",
+          "completion_multiplier_square": "1/2122215631",
+          "raw_cone": "2,3,79",
+          "raw_product": 474
+        },
+        {
+          "A": [
+            79
+          ],
+          "B": [
+            71,
+            73
+          ],
+          "D": [],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "1/10",
+          "completion_multiplier_square": "1/167655034849",
+          "raw_cone": "2,3",
+          "raw_product": 6
+        },
+        {
+          "A": [
+            79
+          ],
+          "B": [
+            71
+          ],
+          "D": [
+            73
+          ],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "-1/10",
+          "completion_multiplier_square": "1/2296644313",
+          "raw_cone": "2,3,73",
+          "raw_product": 438
+        },
+        {
+          "A": [
+            73
+          ],
+          "B": [
+            79
+          ],
+          "D": [
+            71
+          ],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "-1/10",
+          "completion_multiplier_square": "1/2361338519",
+          "raw_cone": "2,3,71",
+          "raw_product": 426
+        },
+        {
+          "A": [
+            79
+          ],
+          "B": [
+            73
+          ],
+          "D": [
+            71
+          ],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "-1/10",
+          "completion_multiplier_square": "1/2361338519",
+          "raw_cone": "2,3,71",
+          "raw_product": 426
+        }
+      ],
+      "nested_sites": [
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 0,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 0,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 0,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 0,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 0,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 0,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 0,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 0,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 1,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 1,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 1,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 1,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 1,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 1,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 1,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 1,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 2,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 2,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 2,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 2,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 2,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 2,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 2,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 2,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 4
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 5
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 6
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 7
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 8
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 9
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 10
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 11
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 4
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 5
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 6
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 7
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 8
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 9
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 10
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 3,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 11
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 4
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 5
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 6
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 7
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 8
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 9
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 10
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 11
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 4
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 5
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 6
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 7
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 8
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 9
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 10
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 4,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 11
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 5,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 5,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 5,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 5,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 5,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 5,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 5,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 5,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 6,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 6,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 6,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 6,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 6,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 6,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 6,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 6,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 4
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 5
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 6
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 7
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 8
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 9
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 10
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 11
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 4
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 5
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 6
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 7
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 8
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 9
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 10
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 7,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 11
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 8,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 8,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 8,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 8,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 8,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 8,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 8,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/1344",
+          "history": 8,
+          "integrated_coefficient": "1/80",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 4
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 5
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 6
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 7
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 8
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 9
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 10
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 11
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 4
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 5
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 6
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 7
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 8
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 9
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 10
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 9,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 11
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 4
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 5
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 6
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 7
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 8
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 9
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 10
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 11
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 4
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 5
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 6
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 7
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 8
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 9
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 10
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 10,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 11
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 4
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 5
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 6
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 7
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 8
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 9
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 10
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            2,
+            3
+          ],
+          "raw_site": 11
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 4
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 5
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 6
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 7
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 8
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 9
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 10
+        },
+        {
+          "continuous_square_integral": "1/8960",
+          "history": 11,
+          "integrated_coefficient": "-1/240",
+          "owner_order": [
+            3,
+            2
+          ],
+          "raw_site": 11
+        }
+      ],
+      "owners": [
+        2,
+        3
+      ],
+      "raw_cones": {
+        "2,3": {
+          "K": 6,
+          "coefficient": "1",
+          "colour_probability_diagonal": "1",
+          "colour_weighted_counting_diagonal": "1/4",
+          "complete_factor_count": 4,
+          "endpoint_colours": [
+            {
+              "E_on_left": [],
+              "E_on_right": [
+                2,
+                3
+              ],
+              "coefficient": 1,
+              "probability": "1/4"
+            },
+            {
+              "E_on_left": [
+                3
+              ],
+              "E_on_right": [
+                2
+              ],
+              "coefficient": 1,
+              "probability": "1/4"
+            },
+            {
+              "E_on_left": [
+                2
+              ],
+              "E_on_right": [
+                3
+              ],
+              "coefficient": 1,
+              "probability": "1/4"
+            },
+            {
+              "E_on_left": [
+                2,
+                3
+              ],
+              "E_on_right": [],
+              "coefficient": 1,
+              "probability": "1/4"
+            }
+          ],
+          "labels": [
+            2,
+            3
+          ],
+          "primitive_site_diagonal": "1/6",
+          "root_free_left_retained": true,
+          "sites": [
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                3
+              ],
+              "raw_m": 2,
+              "raw_n": 3,
+              "right": [
+                2
+              ],
+              "site": 3,
+              "square_integral_2ds": "1/24"
+            },
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                2
+              ],
+              "raw_m": 3,
+              "raw_n": 2,
+              "right": [
+                3
+              ],
+              "site": 2,
+              "square_integral_2ds": "1/24"
+            },
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                2,
+                3
+              ],
+              "raw_m": 1,
+              "raw_n": 6,
+              "right": [],
+              "site": 2,
+              "square_integral_2ds": "1/24"
+            },
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                2,
+                3
+              ],
+              "raw_m": 1,
+              "raw_n": 6,
+              "right": [],
+              "site": 3,
+              "square_integral_2ds": "1/24"
+            }
+          ]
+        },
+        "2,3,71": {
+          "K": 426,
+          "coefficient": "-1",
+          "colour_probability_diagonal": "1",
+          "colour_weighted_counting_diagonal": "1/8",
+          "complete_factor_count": 8,
+          "endpoint_colours": [
+            {
+              "E_on_left": [],
+              "E_on_right": [
+                2,
+                3,
+                71
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                71
+              ],
+              "E_on_right": [
+                2,
+                3
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                3
+              ],
+              "E_on_right": [
+                2,
+                71
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                3,
+                71
+              ],
+              "E_on_right": [
+                2
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                2
+              ],
+              "E_on_right": [
+                3,
+                71
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                2,
+                71
+              ],
+              "E_on_right": [
+                3
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                2,
+                3
+              ],
+              "E_on_right": [
+                71
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                2,
+                3,
+                71
+              ],
+              "E_on_right": [],
+              "coefficient": -1,
+              "probability": "1/8"
+            }
+          ],
+          "labels": [
+            2,
+            3,
+            71
+          ],
+          "primitive_site_diagonal": "3/40",
+          "root_free_left_retained": true,
+          "sites": [
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                71
+              ],
+              "raw_m": 6,
+              "raw_n": 71,
+              "right": [
+                2,
+                3
+              ],
+              "site": 71,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                3
+              ],
+              "raw_m": 142,
+              "raw_n": 3,
+              "right": [
+                2,
+                71
+              ],
+              "site": 3,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                3,
+                71
+              ],
+              "raw_m": 2,
+              "raw_n": 213,
+              "right": [
+                2
+              ],
+              "site": 3,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                3,
+                71
+              ],
+              "raw_m": 2,
+              "raw_n": 213,
+              "right": [
+                2
+              ],
+              "site": 71,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2
+              ],
+              "raw_m": 213,
+              "raw_n": 2,
+              "right": [
+                3,
+                71
+              ],
+              "site": 2,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                71
+              ],
+              "raw_m": 3,
+              "raw_n": 142,
+              "right": [
+                3
+              ],
+              "site": 2,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                71
+              ],
+              "raw_m": 3,
+              "raw_n": 142,
+              "right": [
+                3
+              ],
+              "site": 71,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3
+              ],
+              "raw_m": 71,
+              "raw_n": 6,
+              "right": [
+                71
+              ],
+              "site": 2,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3
+              ],
+              "raw_m": 71,
+              "raw_n": 6,
+              "right": [
+                71
+              ],
+              "site": 3,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3,
+                71
+              ],
+              "raw_m": 1,
+              "raw_n": 426,
+              "right": [],
+              "site": 2,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3,
+                71
+              ],
+              "raw_m": 1,
+              "raw_n": 426,
+              "right": [],
+              "site": 3,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3,
+                71
+              ],
+              "raw_m": 1,
+              "raw_n": 426,
+              "right": [],
+              "site": 71,
+              "square_integral_2ds": "1/160"
+            }
+          ]
+        },
+        "2,3,73": {
+          "K": 438,
+          "coefficient": "-1",
+          "colour_probability_diagonal": "1",
+          "colour_weighted_counting_diagonal": "1/8",
+          "complete_factor_count": 8,
+          "endpoint_colours": [
+            {
+              "E_on_left": [],
+              "E_on_right": [
+                2,
+                3,
+                73
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                73
+              ],
+              "E_on_right": [
+                2,
+                3
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                3
+              ],
+              "E_on_right": [
+                2,
+                73
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                3,
+                73
+              ],
+              "E_on_right": [
+                2
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                2
+              ],
+              "E_on_right": [
+                3,
+                73
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                2,
+                73
+              ],
+              "E_on_right": [
+                3
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                2,
+                3
+              ],
+              "E_on_right": [
+                73
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                2,
+                3,
+                73
+              ],
+              "E_on_right": [],
+              "coefficient": -1,
+              "probability": "1/8"
+            }
+          ],
+          "labels": [
+            2,
+            3,
+            73
+          ],
+          "primitive_site_diagonal": "3/40",
+          "root_free_left_retained": true,
+          "sites": [
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                73
+              ],
+              "raw_m": 6,
+              "raw_n": 73,
+              "right": [
+                2,
+                3
+              ],
+              "site": 73,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                3
+              ],
+              "raw_m": 146,
+              "raw_n": 3,
+              "right": [
+                2,
+                73
+              ],
+              "site": 3,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                3,
+                73
+              ],
+              "raw_m": 2,
+              "raw_n": 219,
+              "right": [
+                2
+              ],
+              "site": 3,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                3,
+                73
+              ],
+              "raw_m": 2,
+              "raw_n": 219,
+              "right": [
+                2
+              ],
+              "site": 73,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2
+              ],
+              "raw_m": 219,
+              "raw_n": 2,
+              "right": [
+                3,
+                73
+              ],
+              "site": 2,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                73
+              ],
+              "raw_m": 3,
+              "raw_n": 146,
+              "right": [
+                3
+              ],
+              "site": 2,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                73
+              ],
+              "raw_m": 3,
+              "raw_n": 146,
+              "right": [
+                3
+              ],
+              "site": 73,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3
+              ],
+              "raw_m": 73,
+              "raw_n": 6,
+              "right": [
+                73
+              ],
+              "site": 2,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3
+              ],
+              "raw_m": 73,
+              "raw_n": 6,
+              "right": [
+                73
+              ],
+              "site": 3,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3,
+                73
+              ],
+              "raw_m": 1,
+              "raw_n": 438,
+              "right": [],
+              "site": 2,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3,
+                73
+              ],
+              "raw_m": 1,
+              "raw_n": 438,
+              "right": [],
+              "site": 3,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3,
+                73
+              ],
+              "raw_m": 1,
+              "raw_n": 438,
+              "right": [],
+              "site": 73,
+              "square_integral_2ds": "1/160"
+            }
+          ]
+        },
+        "2,3,79": {
+          "K": 474,
+          "coefficient": "-1",
+          "colour_probability_diagonal": "1",
+          "colour_weighted_counting_diagonal": "1/8",
+          "complete_factor_count": 8,
+          "endpoint_colours": [
+            {
+              "E_on_left": [],
+              "E_on_right": [
+                2,
+                3,
+                79
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                79
+              ],
+              "E_on_right": [
+                2,
+                3
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                3
+              ],
+              "E_on_right": [
+                2,
+                79
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                3,
+                79
+              ],
+              "E_on_right": [
+                2
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                2
+              ],
+              "E_on_right": [
+                3,
+                79
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                2,
+                79
+              ],
+              "E_on_right": [
+                3
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                2,
+                3
+              ],
+              "E_on_right": [
+                79
+              ],
+              "coefficient": -1,
+              "probability": "1/8"
+            },
+            {
+              "E_on_left": [
+                2,
+                3,
+                79
+              ],
+              "E_on_right": [],
+              "coefficient": -1,
+              "probability": "1/8"
+            }
+          ],
+          "labels": [
+            2,
+            3,
+            79
+          ],
+          "primitive_site_diagonal": "3/40",
+          "root_free_left_retained": true,
+          "sites": [
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                79
+              ],
+              "raw_m": 6,
+              "raw_n": 79,
+              "right": [
+                2,
+                3
+              ],
+              "site": 79,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                3
+              ],
+              "raw_m": 158,
+              "raw_n": 3,
+              "right": [
+                2,
+                79
+              ],
+              "site": 3,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                3,
+                79
+              ],
+              "raw_m": 2,
+              "raw_n": 237,
+              "right": [
+                2
+              ],
+              "site": 3,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                3,
+                79
+              ],
+              "raw_m": 2,
+              "raw_n": 237,
+              "right": [
+                2
+              ],
+              "site": 79,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2
+              ],
+              "raw_m": 237,
+              "raw_n": 2,
+              "right": [
+                3,
+                79
+              ],
+              "site": 2,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                79
+              ],
+              "raw_m": 3,
+              "raw_n": 158,
+              "right": [
+                3
+              ],
+              "site": 2,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                79
+              ],
+              "raw_m": 3,
+              "raw_n": 158,
+              "right": [
+                3
+              ],
+              "site": 79,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3
+              ],
+              "raw_m": 79,
+              "raw_n": 6,
+              "right": [
+                79
+              ],
+              "site": 2,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3
+              ],
+              "raw_m": 79,
+              "raw_n": 6,
+              "right": [
+                79
+              ],
+              "site": 3,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3,
+                79
+              ],
+              "raw_m": 1,
+              "raw_n": 474,
+              "right": [],
+              "site": 2,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3,
+                79
+              ],
+              "raw_m": 1,
+              "raw_n": 474,
+              "right": [],
+              "site": 3,
+              "square_integral_2ds": "1/160"
+            },
+            {
+              "integrand": [
+                "0",
+                "0",
+                "-1/8"
+              ],
+              "integrated_2ds": "-1/12",
+              "left": [
+                2,
+                3,
+                79
+              ],
+              "raw_m": 1,
+              "raw_n": 474,
+              "right": [],
+              "site": 79,
+              "square_integral_2ds": "1/160"
+            }
+          ]
+        }
+      },
+      "zero_history_count": 15
+    },
+    "nested_coefficient_histogram": {
+      "-1/11520": 2304,
+      "1/3840": 768
+    },
+    "nested_site_count": 3072,
+    "right": {
+      "N": 997518551435,
+      "beta_per_owner_order": "1/12",
+      "coefficient": "1/3",
+      "complete_Boolean_partition_count": 9,
+      "core": [
+        401,
+        421
+      ],
+      "cutoff": 64,
+      "diagonals_before_1_over_N": {
+        "continuous": "1/45",
+        "history": "1/18",
+        "integrated_site": "1/144",
+        "recombined": "1/9"
+      },
+      "histories": [
+        {
+          "A": [
+            401
+          ],
+          "B": [
+            421
+          ],
+          "D": [],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "1/6",
+          "completion_multiplier_square": "1/28500530041",
+          "raw_cone": "5,7",
+          "raw_product": 35
+        },
+        {
+          "A": [
+            421
+          ],
+          "B": [
+            401
+          ],
+          "D": [],
+          "a_U_A": -1,
+          "a_U_B": -1,
+          "coefficient": "1/6",
+          "completion_multiplier_square": "1/28500530041",
+          "raw_cone": "5,7",
+          "raw_product": 35
+        }
+      ],
+      "nested_sites": [
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            5,
+            7
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            5,
+            7
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            5,
+            7
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            5,
+            7
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            7,
+            5
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            7,
+            5
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            7,
+            5
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 0,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            7,
+            5
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            5,
+            7
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            5,
+            7
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            5,
+            7
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            5,
+            7
+          ],
+          "raw_site": 3
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            7,
+            5
+          ],
+          "raw_site": 0
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            7,
+            5
+          ],
+          "raw_site": 1
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            7,
+            5
+          ],
+          "raw_site": 2
+        },
+        {
+          "continuous_square_integral": "1/720",
+          "history": 1,
+          "integrated_coefficient": "1/48",
+          "owner_order": [
+            7,
+            5
+          ],
+          "raw_site": 3
+        }
+      ],
+      "owners": [
+        5,
+        7
+      ],
+      "raw_cones": {
+        "5,7": {
+          "K": 35,
+          "coefficient": "1",
+          "colour_probability_diagonal": "1",
+          "colour_weighted_counting_diagonal": "1/4",
+          "complete_factor_count": 4,
+          "endpoint_colours": [
+            {
+              "E_on_left": [],
+              "E_on_right": [
+                5,
+                7
+              ],
+              "coefficient": 1,
+              "probability": "1/4"
+            },
+            {
+              "E_on_left": [
+                7
+              ],
+              "E_on_right": [
+                5
+              ],
+              "coefficient": 1,
+              "probability": "1/4"
+            },
+            {
+              "E_on_left": [
+                5
+              ],
+              "E_on_right": [
+                7
+              ],
+              "coefficient": 1,
+              "probability": "1/4"
+            },
+            {
+              "E_on_left": [
+                5,
+                7
+              ],
+              "E_on_right": [],
+              "coefficient": 1,
+              "probability": "1/4"
+            }
+          ],
+          "labels": [
+            5,
+            7
+          ],
+          "primitive_site_diagonal": "1/6",
+          "root_free_left_retained": true,
+          "sites": [
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                7
+              ],
+              "raw_m": 5,
+              "raw_n": 7,
+              "right": [
+                5
+              ],
+              "site": 7,
+              "square_integral_2ds": "1/24"
+            },
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                5
+              ],
+              "raw_m": 7,
+              "raw_n": 5,
+              "right": [
+                7
+              ],
+              "site": 5,
+              "square_integral_2ds": "1/24"
+            },
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                5,
+                7
+              ],
+              "raw_m": 1,
+              "raw_n": 35,
+              "right": [],
+              "site": 5,
+              "square_integral_2ds": "1/24"
+            },
+            {
+              "integrand": [
+                "0",
+                "1/4"
+              ],
+              "integrated_2ds": "1/4",
+              "left": [
+                5,
+                7
+              ],
+              "raw_m": 1,
+              "raw_n": 35,
+              "right": [],
+              "site": 7,
+              "square_integral_2ds": "1/24"
+            }
+          ]
+        }
+      },
+      "zero_history_count": 7
+    }
+  }
+}

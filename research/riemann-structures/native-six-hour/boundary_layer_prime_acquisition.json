@@ -1,0 +1,46 @@
+{
+  "all_windows_succeeded": true,
+  "fixed_prefix": [
+    99999931,
+    101999927,
+    104039917
+  ],
+  "kernel_phase_known_at_acquisition": false,
+  "original_fourth_prime": 106120717,
+  "schema": "riemann.native_six_hour.boundary_layer_prime_acquisition.v1",
+  "sources": [
+    {
+      "blob": "ad1a0c502b151fdb6b3c2729f3df6764da19485f",
+      "commit": "1d1088d36f0d873ffc94d786415616df95b00edc",
+      "path": "research/riemann-structures/native-six-hour/native_face_prime_scout.py"
+    },
+    {
+      "blob": "4dcfad8765a0e9f52f56c1a77f3c28dc27ad760e",
+      "commit": "1d1088d36f0d873ffc94d786415616df95b00edc",
+      "path": "research/riemann-structures/native-six-hour/native_face_prime_acquisition.json"
+    }
+  ],
+  "total_candidates": 18,
+  "windows": [
+    {
+      "complete_trial_division": true,
+      "exact_target": "2654081208/25",
+      "first_prime": 106163179,
+      "lower": 106163149,
+      "multiplier": "2501/2500",
+      "odd_candidates_attempted": 16,
+      "upper": 106163348,
+      "window_changed": false
+    },
+    {
+      "complete_trial_division": true,
+      "exact_target": "2656203624/25",
+      "first_prime": 106248047,
+      "lower": 106248045,
+      "multiplier": "2503/2500",
+      "odd_candidates_attempted": 2,
+      "upper": 106248244,
+      "window_changed": false
+    }
+  ]
+}

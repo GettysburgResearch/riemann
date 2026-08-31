@@ -46,3 +46,28 @@ average alone has a sharp factor-`N` domination cost.  Its replay includes
 This is an exact structural firewall, not an amplifier or a novelty claim.
 
 RH and GRH remain open.  Nothing in this directory claims a proof of either.
+
+The separately labelled [fixed-conductor multiplicity continuation](LIVE_FIXED_CONDUCTOR_MULTIPLICITY.md)
+proves that one live residue cell can contain arbitrarily large owner-disjoint
+arithmetic rectangles even with conductors fixed at 5 and 7. This supplies
+the previously conditional rank obstruction for faithful source-algebra
+carriers. It leaves the complete signed cross-group estimate open and does
+not assert that arbitrary coefficient vectors on live support are native.
+The [quantitative sequel](FIXED_CONDUCTOR_POWER_RANK_BARRIER.md) constructs
+owner-disjoint rectangles of sharp order `Y^(1/3)/(log Y)^2` in its stated
+window/core class. Consequently a carrier faithful to every arithmetic atom
+cannot have horizon-subpower rank, even with these two conductors fixed.
+
+The [restricted Mellin adapter](NATIVE_RESTRICTED_MELLIN_OBSERVABILITY.md)
+retains the actual positive Boolean coefficients and irrational reciprocal
+weights on a specified finite-shell projection. Its physical dilation
+generator needs exactly one state per distinct arithmetic-pair frequency
+among finite exact autonomous linear realizations, without assuming a
+faithful source-algebra action. The same projection has an absolutely small
+Wick contribution, so this is not an unpaid analytic obstruction or a lower
+bound for approximate compression. The complete weighted source assembly
+remains outside that projection theorem.
+
+The [native continuation handoff](FIXED_CONDUCTOR_NATIVE_HANDOFF.md) records
+source acquisition, frozen review identities, replay commands, changes of
+direction, and the remaining native gates.

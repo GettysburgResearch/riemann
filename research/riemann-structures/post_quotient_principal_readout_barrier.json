@@ -1,0 +1,166 @@
+{
+  "RH_conclusion": false,
+  "absolute_energy_tends_to_zero": true,
+  "actual_source_coefficients_retained": true,
+  "complete_native_gamma_source_bound": false,
+  "complete_principal_moment_counterexample": false,
+  "diagonal_resolution": "FOUR_LITERAL_HISTORIES_PER_ARITHMETIC_PAIR",
+  "floating_quadrature_or_logarithms": false,
+  "kernel_bounds": {
+    "Gamma0_strict_lower": "1617804/15625",
+    "Gamma0_upper": 384,
+    "Gamma_difference_strict_lower": "17804/15625",
+    "energy_over_literal_diagonal_lower_per_pair": "25/2904",
+    "energy_over_literal_diagonal_upper_per_pair": 4,
+    "frequency_difference_strict_radius": "1/5",
+    "log2_three_term_strict_lower": "842/1215",
+    "log2_weaker_strict_lower": "693/1000",
+    "sqrt2_strict_lower": "707/500"
+  },
+  "panels": [
+    {
+      "all_frequency_difference_ratio_checks": 81,
+      "arithmetic_pairs": 9,
+      "certified_energy_lower": "2542184743/374476861883827533156985077760",
+      "certified_energy_over_literal_diagonal_lower": "54488710461982420483390736465850232384982979375/603220025070196647593694190914899419072292716544",
+      "certified_literal_diagonal_upper": "88595864673618248192/1178859673224399146898070462388013309375",
+      "coefficient_branch": "POSITIVE_SYMBOLIC_SQUARE_ROOT",
+      "common_core": 19057,
+      "fibre": [
+        19057,
+        5,
+        7,
+        1,
+        1
+      ],
+      "horizon": 281474976710656,
+      "literal_diagonal_divided_by_Gamma0": "692155192762642564/3536579019673197440694211387164039928125",
+      "literal_histories": 36,
+      "name": "U256_three_by_three",
+      "native_coefficient_squares": [
+        "8/2338485419103097676498225851359375",
+        "8/2322218637450302376447226656984375",
+        "8/2339840984240830618169142450890625",
+        "16/4695737420040547129438511923453125",
+        "16/4663073314168141723634058765328125",
+        "16/4698459428863247579922216353296875",
+        "16/4685860271706677773416374965171875",
+        "16/4653264872448385423244792738296875",
+        "16/4688576554978202135930673484078125"
+      ],
+      "pair_diagonal_divided_by_Gamma0": "2768620771050570256/3536579019673197440694211387164039928125",
+      "raw_cell": [
+        1,
+        4
+      ],
+      "rectangle_shape": [
+        3,
+        3
+      ],
+      "universal_energy_over_literal_diagonal_lower": "75/968",
+      "universal_energy_over_literal_diagonal_upper": 36,
+      "weight": "25421847430"
+    },
+    {
+      "all_frequency_difference_ratio_checks": 144,
+      "arithmetic_pairs": 12,
+      "certified_energy_lower": "801085604767/3534007049340267054668569064075427840",
+      "certified_energy_over_literal_diagonal_lower": "834540293741190863831530486964521221409939256559471004290755625/7575265696096322899046839982619074223132071295924787959077797888",
+      "certified_literal_diagonal_upper": "1061049530240096483892417769984/515672036725764236087740782779240686749680156853665625",
+      "coefficient_branch": "POSITIVE_SYMBOLIC_SQUARE_ROOT",
+      "common_core": 338291,
+      "fibre": [
+        338291,
+        5,
+        7,
+        1,
+        1
+      ],
+      "horizon": 1152921504606846976,
+      "literal_diagonal_divided_by_Gamma0": "8289449455000753780409513828/1547016110177292708263222348337722060249040470560996875",
+      "literal_histories": 48,
+      "name": "U1024_four_by_three_held_out",
+      "native_coefficient_squares": [
+        "8/35878053857508492135693245891548924359375",
+        "8/35840528259319589980289151995940646546875",
+        "8/35845645386345349365116982981705411703125",
+        "16/71833839426713830455261338466750870515625",
+        "16/71758706929131918024017988409164925828125",
+        "16/71768952269711269719187536144290281921875",
+        "16/71788396272183366532380658867076796234375",
+        "16/71713311304536163463853249826752955921875",
+        "16/71723550163760782064106987423160752328125",
+        "16/71852973386516131054368993035034691265625",
+        "16/71777820876330130470403141496496281578125",
+        "16/71788068945900948731853030342660610171875"
+      ],
+      "pair_diagonal_divided_by_Gamma0": "33157797820003015121638055312/1547016110177292708263222348337722060249040470560996875",
+      "raw_cell": [
+        1,
+        4
+      ],
+      "rectangle_shape": [
+        4,
+        3
+      ],
+      "universal_energy_over_literal_diagonal_lower": "25/242",
+      "universal_energy_over_literal_diagonal_upper": 48,
+      "weight": "8010856047670"
+    }
+  ],
+  "prime_searches": 0,
+  "proof_object_sha256": "897377d047b1f5fca7e7d4813f154860605b07c9c82d47693bba84f924d2ce4f",
+  "schema": "riemann.post_quotient_principal_readout.v1",
+  "source_hashes": {
+    "research/riemann-structures/POST_QUOTIENT_PRINCIPAL_READOUT_BARRIER.md": "d1627f987cf845bc1c6bf53b6b1f18b6dd9102b0b1496f979233d0a828ebc788",
+    "research/riemann-structures/post_quotient_principal_readout_barrier.py": "2ee1b88bf530a75fb9613110c16d045804a67ea65055ce93b05f7c2055f36e4c",
+    "tests/test_post_quotient_principal_readout_barrier.py": "5be23a0f9d0f8fe60f3dd21d875ceca42d85619d3f63161b14922fdd2ac3e716"
+  },
+  "sources": [
+    {
+      "commit": "e365528d750fded282bd3f7261898d8455c41e0a",
+      "git_blob": "c37145331aedf3c6a4ec0c70577a66da712a5edd",
+      "path": "research/riemann-structures/SOURCE_FIRST_BOOLEAN_PRINCIPAL_ADAPTER.md"
+    },
+    {
+      "commit": "6dbab098bb057d76748d12e37900efeff571f8a9",
+      "git_blob": "c9c5f9e7e1ddab7e9a6aff629165a098fdf597a8",
+      "path": "research/riemann-structures/LIVE_FIXED_CONDUCTOR_MULTIPLICITY.md"
+    },
+    {
+      "commit": "6dbab098bb057d76748d12e37900efeff571f8a9",
+      "git_blob": "3348165d3f9224b7a7348d6557d358bf3ef439f2",
+      "path": "research/riemann-structures/FIXED_CONDUCTOR_POWER_RANK_BARRIER.md"
+    },
+    {
+      "commit": "6dbab098bb057d76748d12e37900efeff571f8a9",
+      "git_blob": "88989aaa947885df02272c0bb01a31f6d1ac0694",
+      "path": "research/riemann-structures/NATIVE_RESTRICTED_MELLIN_OBSERVABILITY.md"
+    },
+    {
+      "commit": "6dbab098bb057d76748d12e37900efeff571f8a9",
+      "git_blob": "f6aaa4a5805c9d95c58cfc3c468ea7cbbd390db8",
+      "path": "research/riemann-structures/native_restricted_mellin_observability.json"
+    },
+    {
+      "commit": "1623f1924c62035918a94bcacf2ccad7d3bb6cf7",
+      "git_blob": "6aa04020b9f4afd538928688be9ed68c01e293ae",
+      "path": "research/riemann-structures/SUBCRITICAL_OBSERVED_BOOLEAN_BLOCK.md"
+    },
+    {
+      "commit": "1623f1924c62035918a94bcacf2ccad7d3bb6cf7",
+      "git_blob": "b6464ebbd4560e50d9ad7033d051dc9cddd4a7f4",
+      "path": "research/riemann-structures/subcritical_observed_boolean_block.json"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+      "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+      "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md"
+    }
+  ]
+}

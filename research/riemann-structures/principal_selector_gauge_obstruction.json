@@ -1,0 +1,244 @@
+{
+  "Boolean_cutoff": 584,
+  "RH_conclusion": false,
+  "T": 1000,
+  "cofinal_operator_power_loss_proved_symbolically": true,
+  "complete_Boolean_rows": {
+    "after_left": {
+      "balanced": 2,
+      "complete_allocations": 81,
+      "full_mu": 1,
+      "nonzero_balanced_histories": [
+        {
+          "coefficient": 1,
+          "groups": [
+            [
+              1009
+            ],
+            [
+              1021
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        },
+        {
+          "coefficient": 1,
+          "groups": [
+            [
+              1021
+            ],
+            [
+              1009
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        }
+      ],
+      "truncated_double_convolution": 1,
+      "twice_truncated_mu": 0,
+      "type_I": -1
+    },
+    "before_left": {
+      "balanced": -2,
+      "complete_allocations": 27,
+      "full_mu": -1,
+      "nonzero_balanced_histories": [
+        {
+          "coefficient": -1,
+          "groups": [
+            [
+              1009
+            ],
+            [
+              1021
+            ],
+            [
+              5
+            ]
+          ]
+        },
+        {
+          "coefficient": -1,
+          "groups": [
+            [
+              1021
+            ],
+            [
+              1009
+            ],
+            [
+              5
+            ]
+          ]
+        }
+      ],
+      "truncated_double_convolution": -1,
+      "twice_truncated_mu": 0,
+      "type_I": 1
+    },
+    "right": {
+      "balanced": -2,
+      "complete_allocations": 27,
+      "full_mu": -1,
+      "nonzero_balanced_histories": [
+        {
+          "coefficient": -1,
+          "groups": [
+            [
+              1201
+            ],
+            [
+              1223
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        {
+          "coefficient": -1,
+          "groups": [
+            [
+              1223
+            ],
+            [
+              1201
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      ],
+      "truncated_double_convolution": -1,
+      "twice_truncated_mu": 0,
+      "type_I": 1
+    }
+  },
+  "complete_principal_vector_counterexample_asserted": false,
+  "fixed_primes": {
+    "A": 1009,
+    "B": 1021,
+    "C": 1201,
+    "D": 1223
+  },
+  "global_horizon": 40000000000000000,
+  "integrated_constant_path_squared_ratio": "721801/1728000",
+  "literal_Euler_path_squared_ratio": "65683891/97152000",
+  "native_transition": {
+    "after": {
+      "M": 6271681002491403,
+      "N": 34146985663823175,
+      "c": 5150945,
+      "d": 1468823,
+      "ell": 5,
+      "g": 3,
+      "left_labels": [
+        3,
+        5,
+        1009,
+        1021
+      ],
+      "native_denominator_without_sqrt_PQ": 68092438389615,
+      "physical_ratio": "3794109518202575/696853444721267",
+      "quadratic_classes": [
+        -1,
+        1
+      ],
+      "rho": 1201,
+      "right_labels": [
+        3,
+        1201,
+        1223
+      ],
+      "weight": "6496209/80"
+    },
+    "before": {
+      "M": 6271681002491403,
+      "N": 3794109518202575,
+      "c": 5150945,
+      "d": 4406469,
+      "ell": 5,
+      "g": 1,
+      "left_labels": [
+        5,
+        1009,
+        1021
+      ],
+      "native_denominator_without_sqrt_PQ": 22697479463205,
+      "physical_ratio": "3794109518202575/6271681002491403",
+      "quadratic_classes": [
+        -1,
+        -1
+      ],
+      "rho": 3,
+      "right_labels": [
+        3,
+        1201,
+        1223
+      ],
+      "weight": "45"
+    },
+    "gauge_physical_coefficient": "-1/48",
+    "weighted_matrix_entry_squared": "721801/921600"
+  },
+  "new_prime_search": false,
+  "proof_object_sha256": "f360d9aaf7f87832faa8cf9eae1d8b4fe2cb5e416da4468f6644be9ae3323a7a",
+  "retained_gauge_provenance_not_fresh_owner_reallocation": true,
+  "schema": "riemann.principal_selector_gauge.v1",
+  "single_unchanged_width_eight_shell_asserted": false,
+  "source_hashes": {
+    "research/riemann-structures/PRINCIPAL_SELECTOR_GAUGE_OBSTRUCTION.md": "17a673844e25b2659773725a5dd18b74ae11cf730434d1206c2cd25f63dda3a9",
+    "research/riemann-structures/principal_selector_gauge_obstruction.py": "1075e3402c2977810c2e388720684d9efcaa29ebaf8c0657d8d83206a71fe73b",
+    "tests/test_principal_selector_gauge_obstruction.py": "d86c9be74cdf807e9634e643bff1d0644886e16d519f9660adb97bf725693c60"
+  },
+  "sources": [
+    {
+      "commit": "5ef9a0800e7d0f03bfef1ad4ba467f8843a90058",
+      "git_blob": "f8248cd97c4fc72ad4034d9baf83cec91396f27e",
+      "path": "research/riemann-structures/euler_activation_source_adapter.py"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "6192bec36636e2d35b2aba4fdd64eb4bcf93c2d9",
+      "path": "claims/lemmas/L-102706-euler-half-divisor-homotopies-are-subcritically-gauge-equivalent.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "346cc52420ec65457c2a5accc045d4a85635cc24",
+      "path": "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "dadf3a4a65d2575983d692dafc0c94142c9a038d",
+      "path": "claims/lemmas/L-106090-least-discrepancy-prime-triangularizes-the-coprime-boolean-core.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+      "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "955c3ed0363ca330439eedbae1bf0041a4c96468",
+      "path": "claims/lemmas/L-106121-bilateral-tensor-moment-has-a-paid-atomic-diagonal.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+      "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md"
+    }
+  ],
+  "symbolic_window_bounds": {
+    "M_over_T4_upper": "643911223923/100000000",
+    "input_ratio_lower": "221000000/382597281",
+    "input_ratio_upper": "15475804487/24922245888",
+    "output_N_over_T4_upper": "139282240383/4000000"
+  }
+}

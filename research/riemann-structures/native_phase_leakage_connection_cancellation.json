@@ -1,0 +1,241 @@
+{
+  "RH_conclusion": false,
+  "actual_source_column": {
+    "beta_integral_route": [
+      "-1/11880",
+      "1/11088",
+      "-1/166320"
+    ],
+    "connection_polynomial": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1/12",
+      "2/3",
+      "-9/4",
+      "25/6",
+      "-55/12",
+      "3",
+      "-13/12",
+      "1/6"
+    ],
+    "core_count": 6,
+    "core_transport_polynomial": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/2",
+      "-3",
+      "15/2",
+      "-10",
+      "15/2",
+      "-3",
+      "1/2"
+    ],
+    "gauge_polynomial": [
+      "0",
+      "-1/12",
+      "1/12"
+    ],
+    "individual_activation_site_diagonal": "1/316141056",
+    "input_polynomial": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "-6",
+      "15",
+      "-20",
+      "15",
+      "-6",
+      "1"
+    ],
+    "inserted_prime": 3,
+    "integrated_three_terms": [
+      "-1/11880",
+      "1/11088",
+      "-1/166320"
+    ],
+    "integrated_total": "0",
+    "owner_count": 4,
+    "owner_plus_connection_residual": "-1/11088",
+    "owner_transport_polynomial": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "-1/3",
+      "7/3",
+      "-7",
+      "35/3",
+      "-35/3",
+      "7",
+      "-7/3",
+      "1/3"
+    ],
+    "tau_density_residual": "1/123552",
+    "three_group_diagonal": "211/13831171200",
+    "transport_without_connection_residual": "1/166320",
+    "two_mechanism_continuous_tau_diagonal": "41/13768017120",
+    "two_mechanism_diagonal": "1/13831171200"
+  },
+  "all_three_terms_share_physical_output_and_primitive_phase": true,
+  "common_output_mellin_ratio": "3794109518202575/696853444721267",
+  "complete_integrated_connection_column_cancels": true,
+  "conjugated_left_mellin_shift": "9^(it)",
+  "full_T106140_balanced_gamma_adapter_asserted": false,
+  "input_amplitude_square": "1/23795444586682899614553449962725",
+  "literal_native_diagonal_resolution_identified": false,
+  "native_selector_transition": {
+    "after": {
+      "M": 6271681002491403,
+      "N": 34146985663823175,
+      "c": 5150945,
+      "d": 1468823,
+      "ell": 5,
+      "g": 3,
+      "left_labels": [
+        3,
+        5,
+        1009,
+        1021
+      ],
+      "native_denominator_without_sqrt_PQ": 68092438389615,
+      "physical_ratio": "3794109518202575/696853444721267",
+      "quadratic_classes": [
+        -1,
+        1
+      ],
+      "rho": 1201,
+      "right_labels": [
+        3,
+        1201,
+        1223
+      ],
+      "weight": "6496209/80"
+    },
+    "before": {
+      "M": 6271681002491403,
+      "N": 3794109518202575,
+      "c": 5150945,
+      "d": 4406469,
+      "ell": 5,
+      "g": 1,
+      "left_labels": [
+        5,
+        1009,
+        1021
+      ],
+      "native_denominator_without_sqrt_PQ": 22697479463205,
+      "physical_ratio": "3794109518202575/6271681002491403",
+      "quadratic_classes": [
+        -1,
+        -1
+      ],
+      "rho": 3,
+      "right_labels": [
+        3,
+        1201,
+        1223
+      ],
+      "weight": "45"
+    },
+    "gauge_physical_coefficient": "-1/48",
+    "weighted_matrix_entry_squared": "721801/921600"
+  },
+  "observed_gram_divided_by_Gamma0": [
+    [
+      "601/24855996258486365268648218546908800000",
+      "-601/23198929841253940917405003977114880000",
+      "601/347983947618809113761075059656723200000"
+    ],
+    [
+      "-601/23198929841253940917405003977114880000",
+      "601/21652334518503678189578003711973888000",
+      "-601/324785017777555172843670055679608320000"
+    ],
+    [
+      "601/347983947618809113761075059656723200000",
+      "-601/324785017777555172843670055679608320000",
+      "601/4871775266663327592655050835194124800000"
+    ]
+  ],
+  "observed_individual_site_diagonal_divided_by_Gamma0": "601/55677431619009458201772009545075712000",
+  "observed_three_group_diagonal_divided_by_Gamma0": "126811/2435887633331663796327525417597062400000",
+  "observed_two_mechanism_diagonal_divided_by_Gamma0": "601/2435887633331663796327525417597062400000",
+  "proof_object_sha256": "69b3b96209f0f65fd1ec224912f82564c564600cddcfa9295233efec5ec66d8f",
+  "schema": "riemann.native_phase_leakage_connection.v1",
+  "source_hashes": {
+    "research/riemann-structures/NATIVE_PHASE_LEAKAGE_CONNECTION_CANCELLATION.md": "d6a73979a9a81644163b67e7f9fa485866cd66b332e047946f64e44bac39a083",
+    "research/riemann-structures/native_phase_leakage_connection_cancellation.py": "9140481125ff9ea8d71ec4a43f5a1a75da08c666eef384ebb8f39dbf0ce5b981",
+    "tests/test_native_phase_leakage_connection_cancellation.py": "9c015f1e7317e79a6bcec65777620ab997760832369debb07a5aee2ee0b2ef43"
+  },
+  "sources": [
+    {
+      "commit": "5ef9a0800e7d0f03bfef1ad4ba467f8843a90058",
+      "git_blob": "f8248cd97c4fc72ad4034d9baf83cec91396f27e",
+      "path": "research/riemann-structures/euler_activation_source_adapter.py"
+    },
+    {
+      "commit": "ce0cc6e48e3cdaedd9d5f52fb087b03e8f86c257",
+      "git_blob": "5007fc3a3a6f5cff1d7aaacece78829ec6e4616d",
+      "path": "research/riemann-structures/principal_selector_gauge_obstruction.py"
+    },
+    {
+      "commit": "5ef9a0800e7d0f03bfef1ad4ba467f8843a90058",
+      "git_blob": "8632b4442b9610535078ef55a97b46a77a342dfe",
+      "path": "research/riemann-structures/EULER_ACTIVATION_SOURCE_ADAPTER.md"
+    },
+    {
+      "commit": "e501c45ecc39f71b3f26abfe952366eb529c7c2d",
+      "git_blob": "35390e5f48304e8c586c1268b8ae215bbb252aaf",
+      "path": "research/riemann-structures/GAUGE_CONNECTION_SOURCE_TRANSPORT.md"
+    },
+    {
+      "commit": "ce0cc6e48e3cdaedd9d5f52fb087b03e8f86c257",
+      "git_blob": "a4757412c5e9d085e2970e768cbb1d5c4953e554",
+      "path": "research/riemann-structures/PRINCIPAL_SELECTOR_GAUGE_OBSTRUCTION.md"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "6192bec36636e2d35b2aba4fdd64eb4bcf93c2d9",
+      "path": "claims/lemmas/L-102706-euler-half-divisor-homotopies-are-subcritically-gauge-equivalent.md"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "db018c64dde45ff4ad17541eb6ba00b4f6fa9d49",
+      "path": "claims/lemmas/L-102746-wick-tail-has-a-canonical-equal-pair-owner.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "346cc52420ec65457c2a5accc045d4a85635cc24",
+      "path": "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "dadf3a4a65d2575983d692dafc0c94142c9a038d",
+      "path": "claims/lemmas/L-106090-least-discrepancy-prime-triangularizes-the-coprime-boolean-core.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+      "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "955c3ed0363ca330439eedbae1bf0041a4c96468",
+      "path": "claims/lemmas/L-106121-bilateral-tensor-moment-has-a-paid-atomic-diagonal.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+      "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md"
+    }
+  ],
+  "tau_dependent_density_correction_retained": true,
+  "unconjugated_left_mellin_shift": "9^(-it)"
+}

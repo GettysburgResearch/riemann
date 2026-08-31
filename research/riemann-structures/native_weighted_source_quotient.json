@@ -1,0 +1,252 @@
+{
+  "T106140_word_atomization_asserted": false,
+  "arithmetic": "EXACT_INTEGER_RATIONAL",
+  "carrier": [
+    {
+      "coefficient_per_word": "1/2",
+      "complete_coefficient": "1",
+      "degree": 2,
+      "diagonal_amplification": "2",
+      "occupation_diagonal": "1",
+      "ordered_words": 2,
+      "probability_diagonal": "1",
+      "word_counting_diagonal": "1/2"
+    },
+    {
+      "coefficient_per_word": "-1/6",
+      "complete_coefficient": "-1",
+      "degree": 3,
+      "diagonal_amplification": "6",
+      "occupation_diagonal": "1",
+      "ordered_words": 6,
+      "probability_diagonal": "1",
+      "word_counting_diagonal": "1/6"
+    },
+    {
+      "coefficient_per_word": "1/24",
+      "complete_coefficient": "1",
+      "degree": 4,
+      "diagonal_amplification": "24",
+      "occupation_diagonal": "1",
+      "ordered_words": 24,
+      "probability_diagonal": "1",
+      "word_counting_diagonal": "1/24"
+    },
+    {
+      "coefficient_per_word": "-1/120",
+      "complete_coefficient": "-1",
+      "degree": 5,
+      "diagonal_amplification": "120",
+      "occupation_diagonal": "1",
+      "ordered_words": 120,
+      "probability_diagonal": "1",
+      "word_counting_diagonal": "1/120"
+    },
+    {
+      "coefficient_per_word": "1/720",
+      "complete_coefficient": "1",
+      "degree": 6,
+      "diagonal_amplification": "720",
+      "occupation_diagonal": "1",
+      "ordered_words": 720,
+      "probability_diagonal": "1",
+      "word_counting_diagonal": "1/720"
+    },
+    {
+      "coefficient_per_word": "-1/5040",
+      "complete_coefficient": "-1",
+      "degree": 7,
+      "diagonal_amplification": "5040",
+      "occupation_diagonal": "1",
+      "ordered_words": 5040,
+      "probability_diagonal": "1",
+      "word_counting_diagonal": "1/5040"
+    }
+  ],
+  "coverage": "DECLARED_SMALL_SOURCE_INTERFACES_NOT_COMPLETE_NATIVE_HORIZON",
+  "full_principal_bound_proved": false,
+  "occupations": [
+    {
+      "coefficient": "-1/2",
+      "counting_diagonal": "1/12",
+      "occupation": [
+        2,
+        1
+      ],
+      "occupation_diagonal": "1/4",
+      "words": 3
+    },
+    {
+      "coefficient": "-1/12",
+      "counting_diagonal": "1/1440",
+      "occupation": [
+        3,
+        2
+      ],
+      "occupation_diagonal": "1/144",
+      "words": 10
+    },
+    {
+      "coefficient": "-1/4",
+      "counting_diagonal": "1/480",
+      "occupation": [
+        2,
+        2,
+        1
+      ],
+      "occupation_diagonal": "1/16",
+      "words": 30
+    },
+    {
+      "coefficient": "1/4",
+      "counting_diagonal": "1/2880",
+      "occupation": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "occupation_diagonal": "1/16",
+      "words": 180
+    }
+  ],
+  "proof_object_sha256": "4e63313ed01e6bf3220f61dc7c74f784e14ec4821d5759eb923043dcf431988c",
+  "renewal": {
+    "assignment_coverage": 729,
+    "hard_ancestors": 248,
+    "literal_paths": 316,
+    "maximum_terminal_preimages": 13,
+    "support": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "terminal_outputs": 108
+  },
+  "schema": "riemann.native_weighted_quotient.v1",
+  "source_hashes": {
+    "research/riemann-structures/NATIVE_WEIGHTED_SOURCE_QUOTIENT.md": "27f13df9006ded6160e2b7a528d987aa29b1f713395cc7d3a5ea5f558d781a71",
+    "research/riemann-structures/native_weighted_source_quotient.py": "539ced9bc0030e5591c53ac8352f9f10947566c1f6ab2c71309fe04292992623",
+    "research/riemann-structures/native_weighted_source_quotient.sources.json": "bd8a548829144916818501e2e9ca805c74ffae09cc343f982d3a4954691d68f7",
+    "tests/test_native_weighted_source_quotient.py": "cc7674bb4406198f260d9b1ff37aa8ee651512cd81c35b9b495a23774c1cffcc"
+  },
+  "sources": [
+    {
+      "bytes": 2364,
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "b526c4889f7027fee0fd1db69c41621cab8a0a23",
+      "path": "claims/lemmas/L-102741-wick-gauge-and-exact-prime-carrier-quotient.md"
+    },
+    {
+      "bytes": 3130,
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "a96ecfee909abe684841171faa45e9c6682548f3",
+      "path": "claims/lemmas/L-102830-largest-two-owner-is-an-exact-subpower-gauge.md"
+    },
+    {
+      "bytes": 2152,
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "ca83a373043a18a6dc60b6eadb99646d6860199b",
+      "path": "claims/lemmas/L-102831-largest-two-completion-produces-a-unique-semiprime-squareclass.md"
+    },
+    {
+      "bytes": 2432,
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "39e336892eca5829d51ab312379226861a582de7",
+      "path": "claims/lemmas/L-102860-balanced-cross-side-phase-after-common-factor-extraction.md"
+    },
+    {
+      "bytes": 2248,
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "28d16897b210c52869227688b6e2f2f6ae308b04",
+      "path": "claims/lemmas/L-102862-owner-core-overlaps-are-a-polylogarithmic-common-factor-renewal.md"
+    },
+    {
+      "bytes": 2708,
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "f0bdbf09e620027eafe9a198350f588edafdd269",
+      "path": "claims/lemmas/L-102904-endpoint-color-walsh-expansion-has-only-squared-activity-off-the-midpoint.md"
+    },
+    {
+      "bytes": 2591,
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "6810bcece309b0c54ae6c8fc84b314990004549c",
+      "path": "claims/lemmas/L-102707-continuous-half-divisor-geodesic-and-polarized-hankel-current.md"
+    },
+    {
+      "bytes": 4013,
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "955c3ed0363ca330439eedbae1bf0041a4c96468",
+      "path": "claims/lemmas/L-106121-bilateral-tensor-moment-has-a-paid-atomic-diagonal.md"
+    },
+    {
+      "bytes": 9609,
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+      "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md"
+    }
+  ],
+  "transport": {
+    "ancestral_transport_ratios": [
+      "210",
+      "10"
+    ],
+    "bare_recompletion_intertwines": false,
+    "extracted_prime": 7,
+    "literal_extracted_products": [
+      180,
+      25025
+    ],
+    "literal_extraction_intertwines": true,
+    "original_owners": [
+      [
+        5,
+        7
+      ],
+      [
+        11,
+        13
+      ]
+    ],
+    "original_products": [
+      1260,
+      175175
+    ],
+    "original_supports": [
+      [
+        2,
+        3,
+        5,
+        7
+      ],
+      [
+        5,
+        7,
+        11,
+        13
+      ]
+    ],
+    "ratio_defect": "21",
+    "recompleted_owners": [
+      [
+        3,
+        5
+      ],
+      [
+        11,
+        13
+      ]
+    ],
+    "recompleted_products": [
+      60,
+      175175
+    ],
+    "terminal_products": [
+      6,
+      175175
+    ]
+  }
+}

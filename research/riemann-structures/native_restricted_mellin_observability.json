@@ -1,0 +1,646 @@
+{
+  "arithmetic": {
+    "class": "EXACT_RATIONAL_AND_SYMBOLIC_POSITIVE_SQUARE_ROOT",
+    "native_irrational_weights_replaced": false,
+    "rounding": "NONE"
+  },
+  "controls": [
+    {
+      "literal_terms": 2,
+      "modes": 0,
+      "name": "same_frequency_signed_cancellation"
+    },
+    {
+      "literal_terms": 2,
+      "modes": 1,
+      "name": "same_frequency_positive_aggregation"
+    },
+    {
+      "certificate": {
+        "coefficient_branch": "POSITIVE_SQUARE_ROOT_OF_RECORDED_RATIONAL",
+        "exact_mode_count": 1,
+        "logarithms_or_square_roots_evaluated": false,
+        "minimal_autonomous_dimension_by_NMO_2": 1,
+        "rational_vandermonde_surrogate": "1",
+        "sorted_rational_ratios": [
+          "1"
+        ],
+        "surrogate_is_native_derivative_hankel": false
+      },
+      "name": "single_constant_mode"
+    }
+  ],
+  "coverage": {
+    "fixed_panels": 2,
+    "max_modes": 16,
+    "searches": 0
+  },
+  "inherited_authenticated_sources": 12,
+  "owned_file_sha256_lf": {
+    "research/riemann-structures/NATIVE_RESTRICTED_MELLIN_OBSERVABILITY.md": "ef93187af25e8a3ca43553880f42e46d211f57ad3571d4cbc50dd354481ad43b",
+    "research/riemann-structures/native_restricted_mellin_observability.py": "4c7536682113ce6e57b9742c2d09e6f7f2fe9758fa4d4d95a9c12d2ee0229266",
+    "research/riemann-structures/native_restricted_mellin_observability.sources.json": "c175471528e51ca6904d9485e67963079a8e1388bceb1a7000928ad6400aecf0",
+    "tests/test_native_restricted_mellin_observability.py": "9b48b73ad93770e0a0f33701e01d7696f4a56fef755c34dc1e73ad427389f1da"
+  },
+  "panels": [
+    {
+      "common_core": 19057,
+      "complete_weighted_source_assembly_replayed": false,
+      "conductors": [
+        5,
+        7
+      ],
+      "entries": [
+        {
+          "M": 306986603010451,
+          "N": 300940198183850,
+          "P": 33146,
+          "Q": 17251,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            0,
+            0
+          ],
+          "left_amplitude_square": "2/33855772295683125",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "8/2338485419103097676498225851359375",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "828650/845299",
+          "right_amplitude_square": "4/69071985677351475",
+          "source_dual_coefficient_square": "8/5256413350855466304375"
+        },
+        {
+          "M": 304851167826331,
+          "N": 300940198183850,
+          "P": 33146,
+          "Q": 17131,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            0,
+            1
+          ],
+          "left_amplitude_square": "2/33855772295683125",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "8/2322218637450302376447226656984375",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "828650/839419",
+          "right_amplitude_square": "4/68591512760924475",
+          "source_dual_coefficient_square": "8/5219849116776128529375"
+        },
+        {
+          "M": 307164555942461,
+          "N": 300940198183850,
+          "P": 33146,
+          "Q": 17261,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            0,
+            2
+          ],
+          "left_amplitude_square": "2/33855772295683125",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "8/2339840984240830618169142450890625",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "828650/845789",
+          "right_amplitude_square": "4/69112025087053725",
+          "source_dual_coefficient_square": "8/5259460370362077785625"
+        },
+        {
+          "M": 306986603010451,
+          "N": 302147735936775,
+          "P": 33279,
+          "Q": 17251,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            1,
+            0
+          ],
+          "left_amplitude_square": "4/67983240585774375",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/4695737420040547129438511923453125",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "831975/845299",
+          "right_amplitude_square": "4/69071985677351475",
+          "source_dual_coefficient_square": "16/10555009950106743688125"
+        },
+        {
+          "M": 304851167826331,
+          "N": 302147735936775,
+          "P": 33279,
+          "Q": 17131,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            1,
+            1
+          ],
+          "left_amplitude_square": "4/67983240585774375",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/4663073314168141723634058765328125",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "831975/839419",
+          "right_amplitude_square": "4/68591512760924475",
+          "source_dual_coefficient_square": "16/10481588050274107363125"
+        },
+        {
+          "M": 307164555942461,
+          "N": 302147735936775,
+          "P": 33279,
+          "Q": 17261,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            1,
+            2
+          ],
+          "left_amplitude_square": "4/67983240585774375",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/4698459428863247579922216353296875",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "831975/845789",
+          "right_amplitude_square": "4/69112025087053725",
+          "source_dual_coefficient_square": "16/10561128441759463381875"
+        },
+        {
+          "M": 306986603010451,
+          "N": 301512189751025,
+          "P": 33209,
+          "Q": 17251,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            2,
+            0
+          ],
+          "left_amplitude_square": "4/67840242693980625",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/4685860271706677773416374965171875",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "830225/845299",
+          "right_amplitude_square": "4/69071985677351475",
+          "source_dual_coefficient_square": "16/10532808240424737856875"
+        },
+        {
+          "M": 304851167826331,
+          "N": 301512189751025,
+          "P": 33209,
+          "Q": 17131,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            2,
+            1
+          ],
+          "left_amplitude_square": "4/67840242693980625",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/4653264872448385423244792738296875",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "830225/839419",
+          "right_amplitude_square": "4/68591512760924475",
+          "source_dual_coefficient_square": "16/10459540778315238781875"
+        },
+        {
+          "M": 307164555942461,
+          "N": 301512189751025,
+          "P": 33209,
+          "Q": 17261,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            2,
+            2
+          ],
+          "left_amplitude_square": "4/67840242693980625",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/4688576554978202135930673484078125",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "830225/845789",
+          "right_amplitude_square": "4/69112025087053725",
+          "source_dual_coefficient_square": "16/10538913862267196113125"
+        }
+      ],
+      "horizon": 281474976710656,
+      "literal_history_count": 36,
+      "mellin_integral_upper_multiplier": "||kappa||_2^2",
+      "mode_certificate": {
+        "coefficient_branch": "POSITIVE_SQUARE_ROOT_OF_RECORDED_RATIONAL",
+        "exact_mode_count": 9,
+        "logarithms_or_square_roots_evaluated": false,
+        "minimal_autonomous_dimension_by_NMO_2": 9,
+        "rational_vandermonde_surrogate": "148984142833412490510145407919748111029285678159382793992322391708205705080557064901754632416505858604831192657651133582592181695454676724201255974665725201333543736836872994899749755859375000000000000000000000000000000000000000/1404379257288801514872032085230905534233673406289000268653164480792990409229647996042471889694854101902209993155954970863966077189898704937899327525366291845762867033654023012208948192121036230454085783551009117059392451727736750898003793279316946208473794824417312968513627825331098989035831606061518092483565432119",
+        "sorted_rational_ratios": [
+          "828650/845789",
+          "828650/845299",
+          "830225/845789",
+          "830225/845299",
+          "831975/845789",
+          "831975/845299",
+          "828650/839419",
+          "830225/839419",
+          "831975/839419"
+        ],
+        "surrogate_is_native_derivative_hankel": false
+      },
+      "name": "U256_three_by_three",
+      "one_sided_boolean_history_sum": 2,
+      "one_sided_equal_pair_share": "1/15",
+      "source_dual_literal_diagonal": "346077596381321282/101045114847805641162691753918972569375",
+      "source_dual_sum_strict_upper": "133399/351843720888320",
+      "sum_coefficients_strict_lower": "1/1935140464885760",
+      "sum_coefficients_strict_upper": "1/1759218604441600",
+      "wick_absolute_pointwise_upper": "7626554229/77371252455336267181195264000"
+    },
+    {
+      "common_core": 338291,
+      "complete_weighted_source_assembly_replayed": false,
+      "conductors": [
+        5,
+        7
+      ],
+      "entries": [
+        {
+          "M": 1179508030346068829,
+          "N": 1201691349590874550,
+          "P": 420022,
+          "Q": 210341,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            0,
+            0
+          ],
+          "left_amplitude_square": "2/135190276828973386875",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "8/35878053857508492135693245891548924359375",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "10500550/10306709",
+          "right_amplitude_square": "4/265389306827865486525",
+          "source_dual_coefficient_square": "8/255924522166347820518069375"
+        },
+        {
+          "M": 1178274358514727649,
+          "N": 1201691349590874550,
+          "P": 420022,
+          "Q": 210121,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            0,
+            1
+          ],
+          "left_amplitude_square": "2/135190276828973386875",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "8/35840528259319589980289151995940646546875",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "10500550/10295929",
+          "right_amplitude_square": "4/265111730665813721025",
+          "source_dual_coefficient_square": "8/255656845418226453212056875"
+        },
+        {
+          "M": 1178442586491728719,
+          "N": 1201691349590874550,
+          "P": 420022,
+          "Q": 210151,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            0,
+            2
+          ],
+          "left_amplitude_square": "2/135190276828973386875",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "8/35845645386345349365116982981705411703125",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "10500550/10297399",
+          "right_amplitude_square": "4/265149581960638961775",
+          "source_dual_coefficient_square": "8/255693346792970276026513125"
+        },
+        {
+          "M": 1179508030346068829,
+          "N": 1202993113698620925,
+          "P": 420477,
+          "Q": 210341,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            1,
+            0
+          ],
+          "left_amplitude_square": "4/270673450582189708125",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/71833839426713830455261338466750870515625",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "10511925/10306709",
+          "right_amplitude_square": "4/265389306827865486525",
+          "source_dual_coefficient_square": "16/512403518420175288570485625"
+        },
+        {
+          "M": 1178274358514727649,
+          "N": 1202993113698620925,
+          "P": 420477,
+          "Q": 210121,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            1,
+            1
+          ],
+          "left_amplitude_square": "4/270673450582189708125",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/71758706929131918024017988409164925828125",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "10511925/10295929",
+          "right_amplitude_square": "4/265111730665813721025",
+          "source_dual_coefficient_square": "16/511867584988022552948398125"
+        },
+        {
+          "M": 1178442586491728719,
+          "N": 1202993113698620925,
+          "P": 420477,
+          "Q": 210151,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            1,
+            2
+          ],
+          "left_amplitude_square": "4/270673450582189708125",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/71768952269711269719187536144290281921875",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "10511925/10297399",
+          "right_amplitude_square": "4/265149581960638961775",
+          "source_dual_coefficient_square": "16/511940666819679744169591875"
+        },
+        {
+          "M": 1179508030346068829,
+          "N": 1202232082374092275,
+          "P": 420211,
+          "Q": 210341,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            2,
+            0
+          ],
+          "left_amplitude_square": "4/270502218534170761875",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/71788396272183366532380658867076796234375",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "10505275/10306709",
+          "right_amplitude_square": "4/265389306827865486525",
+          "source_dual_coefficient_square": "16/512079364338264110011944375"
+        },
+        {
+          "M": 1178274358514727649,
+          "N": 1202232082374092275,
+          "P": 420211,
+          "Q": 210121,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            2,
+            1
+          ],
+          "left_amplitude_square": "4/270502218534170761875",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/71713311304536163463853249826752955921875",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "10505275/10295929",
+          "right_amplitude_square": "4/265111730665813721025",
+          "source_dual_coefficient_square": "16/511543769945566451903431875"
+        },
+        {
+          "M": 1178442586491728719,
+          "N": 1202232082374092275,
+          "P": 420211,
+          "Q": 210151,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            2,
+            2
+          ],
+          "left_amplitude_square": "4/270502218534170761875",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/71723550163760782064106987423160752328125",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "10505275/10297399",
+          "right_amplitude_square": "4/265149581960638961775",
+          "source_dual_coefficient_square": "16/511616805544570678009138125"
+        },
+        {
+          "M": 1179508030346068829,
+          "N": 1203313547940527725,
+          "P": 420589,
+          "Q": 210341,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            3,
+            0
+          ],
+          "left_amplitude_square": "4/270745548286618738125",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/71852973386516131054368993035034691265625",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "10514725/10306709",
+          "right_amplitude_square": "4/265389306827865486525",
+          "source_dual_coefficient_square": "16/512540004349401047963555625"
+        },
+        {
+          "M": 1178274358514727649,
+          "N": 1203313547940527725,
+          "P": 420589,
+          "Q": 210121,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            3,
+            1
+          ],
+          "left_amplitude_square": "4/270745548286618738125",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/71777820876330130470403141496496281578125",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "10514725/10295929",
+          "right_amplitude_square": "4/265111730665813721025",
+          "source_dual_coefficient_square": "16/512003928163793542862068125"
+        },
+        {
+          "M": 1178442586491728719,
+          "N": 1203313547940527725,
+          "P": 420589,
+          "Q": 210151,
+          "cell": [
+            1,
+            4
+          ],
+          "index": [
+            3,
+            2
+          ],
+          "left_amplitude_square": "4/270745548286618738125",
+          "literal_histories_per_mode": 4,
+          "native_coefficient_square": "16/71788068945900948731853030342660610171875",
+          "positive_coefficient_branch_from_histories": true,
+          "ratio_N_over_M": "10514725/10297399",
+          "right_amplitude_square": "4/265149581960638961775",
+          "source_dual_coefficient_square": "16/512077029461830929921361875"
+        }
+      ],
+      "horizon": 1152921504606846976,
+      "literal_history_count": 48,
+      "mellin_integral_upper_multiplier": "||kappa||_2^2",
+      "mode_certificate": {
+        "coefficient_branch": "POSITIVE_SQUARE_ROOT_OF_RECORDED_RATIONAL",
+        "exact_mode_count": 12,
+        "logarithms_or_square_roots_evaluated": false,
+        "minimal_autonomous_dimension_by_NMO_2": 12,
+        "rational_vandermonde_surrogate": "4191653944471750670578197857623209670889243720585950960976403701118419702223574177610165734648567746804415912380195902854596453443967075117635917071808274316817871185071039390973052293814065057283948383180167608727719625882878869815970272053031429227017284120478707188537692003882286727532290456575160320753985527694171732915589017737332981681116407951164317974984685477579660073388367891311645507812500000000000000000000000000000000000000000000000000000000000000000000000000000/105041727883287629011998300273663303810355957522367227140872124706156721334302915766256951577983496645984788098846998034826009343855359859216336232484803393178805282977090100785618832662260368458577808558731911934766047567466997306603112254229677307461019284680844348667033743224180502110436200002887240224554897630329803611679334429458577568178837967081474006055455741638032377850204081512940560094944611366947316901643869057885961060153559863019707069534640989243576030449186541614753055998906177895835932485442593606201856455529524845780977574999958148934649050592420028681600152337633644155324999104031181779578481132394919255052668333781576356569199340309117517498291118836368376764421",
+        "sorted_rational_ratios": [
+          "10500550/10306709",
+          "10505275/10306709",
+          "10500550/10297399",
+          "10500550/10295929",
+          "10511925/10306709",
+          "10514725/10306709",
+          "10505275/10297399",
+          "10505275/10295929",
+          "10511925/10297399",
+          "10511925/10295929",
+          "10514725/10297399",
+          "10514725/10295929"
+        ],
+        "surrogate_is_native_derivative_hankel": false
+      },
+      "name": "U1024_four_by_three_held_out",
+      "one_sided_boolean_history_sum": 2,
+      "one_sided_equal_pair_share": "1/15",
+      "source_dual_literal_diagonal": "4144724727500376890204756914/44200460290779791664663495666792058864258299158885625",
+      "source_dual_sum_strict_upper": "2368037/1080863910568919040",
+      "sum_coefficients_strict_lower": "1/5944751508129054720",
+      "sum_coefficients_strict_upper": "1/5404319552844595200",
+      "wick_absolute_pointwise_upper": "801085604767/243388915243820045087367015432192000"
+    }
+  ],
+  "proof_boundary": {
+    "GRH": "UNPROVED",
+    "RH": "UNPROVED",
+    "all_horizon_PNT_machine_reproved": false,
+    "approximate_compression_lower_bound": false,
+    "constant_generator_exact_realization_only": true,
+    "full_source_projection_survival_proved": false,
+    "global_signed_current_estimated": false,
+    "single_integrated_observation_injective": false
+  },
+  "reviewed_predecessor": "9547f4cdc2c8e27a36704029fd74470de844d401",
+  "schema": "riemann.structures.native_restricted_mellin.v1",
+  "sources": [
+    {
+      "bytes": 17128,
+      "commit": "9547f4cdc2c8e27a36704029fd74470de844d401",
+      "git_blob": "c9c5f9e7e1ddab7e9a6aff629165a098fdf597a8",
+      "path": "research/riemann-structures/LIVE_FIXED_CONDUCTOR_MULTIPLICITY.md"
+    },
+    {
+      "bytes": 8990,
+      "commit": "9547f4cdc2c8e27a36704029fd74470de844d401",
+      "git_blob": "3348165d3f9224b7a7348d6557d358bf3ef439f2",
+      "path": "research/riemann-structures/FIXED_CONDUCTOR_POWER_RANK_BARRIER.md"
+    },
+    {
+      "bytes": 23527,
+      "commit": "9547f4cdc2c8e27a36704029fd74470de844d401",
+      "git_blob": "04f8828301ef4096973829c7df8b1f5fa186fd83",
+      "path": "research/riemann-structures/live_fixed_conductor_multiplicity.py"
+    },
+    {
+      "bytes": 4142,
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "388c7e166a0e6e534d7e908685f71a16de246575",
+      "path": "claims/lemmas/L-106026-mellin-plancherel-normal-form-for-owner-conductor-moment.md"
+    },
+    {
+      "bytes": 4677,
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "346cc52420ec65457c2a5accc045d4a85635cc24",
+      "path": "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md"
+    },
+    {
+      "bytes": 4676,
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+      "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md"
+    },
+    {
+      "bytes": 6539,
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "85c4ef92ead7d8b235f9c195c3c0acd16d16030f",
+      "path": "claims/lemmas/L-106191-source-dual-centered-double-incidence-correlation.md"
+    },
+    {
+      "bytes": 2446,
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "db018c64dde45ff4ad17541eb6ba00b4f6fa9d49",
+      "path": "claims/lemmas/L-102746-wick-tail-has-a-canonical-equal-pair-owner.md"
+    },
+    {
+      "bytes": 9609,
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+      "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md"
+    },
+    {
+      "bytes": 3105,
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "d7330d114ebba1a7a16e22fa9ba6aa6b5eb7cdd6",
+      "path": "claims/lemmas/L-102880-logarithmic-derivative-outer-detector-has-zero-square-lattice-moment.md"
+    }
+  ],
+  "status": "EXACT_RESTRICTED_SOURCE_PROJECTION_AND_SEPARATE_PROOF"
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "native-quadratic-dual-global-certificate/v1",
+  "status": "CERTIFIED_GLOBAL_ORIGINAL_OPTIMIZER",
+  "root_input_sha256": "6bdceb004b51241de904383f2a7318c52077e2c3adbcf7ea8dc9b06582c8769c",
+  "variational_base_sha256": "aa25f2aec339ca0502f1591d6219bfe9a0b883a7ec19528383ac9c2230db04db",
+  "k_of_u": "3*u^2",
+  "B_minus_k_lower": "198924004005652019662027949666378899148723347289717183349/1569275433846670190958947355801916604025588861116008628224",
+  "w_quadratic_lower": "3827499226256622098748741043634401966805199652363566815679/1569275433846670190958947355801916604025588861116008628224",
+  "subdivision": {
+    "early_cells": 33,
+    "late_cells": 49,
+    "maximum_depth": 18
+  },
+  "global_all_monotone_paths": true,
+  "full_retained_gamma_identified": false,
+  "producer_sha256": "7c7d4893e0917e3d64613f75b1dda2b8485c0f4d74735b1aaca95b490c248955",
+  "preregistration_sha256": "27dc3b98877937e1e0eb3be209363c85faec818b433069bf2af0a8054044b4a2"
+}

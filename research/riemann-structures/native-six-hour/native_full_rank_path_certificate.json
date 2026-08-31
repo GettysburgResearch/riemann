@@ -1,0 +1,261 @@
+{
+  "acquisition_proof_objects": {
+    "calibration": "1edfdd38801369780286973f29e956a614116cec14c33c8eb252d88659804bd3",
+    "heldout": "6387035d7036030a10dc8dff819bf36e381e56e2b25686fbe08f51dc38702de0"
+  },
+  "all_height_optimizer_claimed": false,
+  "full_gamma_identified": false,
+  "full_unchanged_acquisition_replayed": true,
+  "independent_monomial_controls": {
+    "cases": 1728,
+    "exact_coefficient_digest": "f7ea468d32169531b230ecb9ab6598c075e47d389febf5d2890bb3d98e507a39",
+    "literal_measure_factor": 2
+  },
+  "independent_original_kernel_stream_control": {
+    "complete_upper_pair_count": 3,
+    "four_rational_plane_vectors": [
+      [
+        "1",
+        "2"
+      ],
+      [
+        "3",
+        "0"
+      ],
+      [
+        "0",
+        "5"
+      ],
+      [
+        "-2",
+        "7"
+      ]
+    ],
+    "physical_denominator_retained": true,
+    "ratios": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ]
+  },
+  "owned_sha256_lf": {
+    "research/riemann-structures/native-six-hour/FULL_RANK_NATIVE_PATH_OPTIMUM.md": "23a5b7c869b1465fd5cf6d3f42437a33fd4be37c783f58debcac3741674dc769",
+    "research/riemann-structures/native-six-hour/native_full_rank_path_certificate.py": "63d57f53b8b318aca3cb63c29bed622adb075dcfce7e8173b974606366147ca2",
+    "tests/test_native_six_hour_full_rank_path.py": "9f78c27a2e1f176f01538f7d257404f456ae156516a935be65c1198004a1d00d"
+  },
+  "panels": [
+    {
+      "H": 25,
+      "all_global_certificate_attempts": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "complete_upper_pair_count": 1035,
+      "first_actual_witness_root_index": 0,
+      "first_global_clipping": {
+        "left_breakpoint": {
+          "approximate_midpoint": 0.22169870291256905,
+          "lower": "2972493614326956044503800026297942526476625407937249959891064329519809540433191618060160415261075500161403055461036645379502861978225150154378072072195173/13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096",
+          "upper": "2972493639611306426279518171929586571021813130855518510238662059748618791546537905721996479531900857826847662461260545325119689572709944432104548118127095/13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096"
+        },
+        "lower_clipped": true,
+        "right_breakpoint": {
+          "approximate_midpoint": 1.0,
+          "lower": "1",
+          "upper": "1"
+        },
+        "upper_clipped": false
+      },
+      "first_global_energy": {
+        "approximate_midpoint": 157.46733527260562,
+        "lower": "2111291784934031940046814595683560817580585520433363510362182061569469628992802078470861062008449899199262984152244533325454501290637787995709131161205890051/13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096",
+        "upper": "2111291788215910957586163275501516727263256978084131705210193933791194472347723916987835257372415602394078813165629716959373458917175682269021676568964413699/13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096"
+      },
+      "first_global_root_box": [
+        {
+          "approximate_midpoint": -0.26752438274590634,
+          "lower": "-4819290858565159/18014398509481984",
+          "upper": "-4819290825010727/18014398509481984"
+        },
+        {
+          "approximate_midpoint": 1.2067025166647434,
+          "lower": "2717252500102037/2251799813685248",
+          "upper": "2717252504296341/2251799813685248"
+        }
+      ],
+      "nonlinear_power_path": [
+        1,
+        2,
+        3
+      ],
+      "nonlinear_source_coefficient_sha256": "53e89590cfc458d75fe22f17548e26613b184a8c93a26c2938ed921a08619618",
+      "physical_direction_rank_mod65521": 6,
+      "ratios": 45,
+      "records": 63,
+      "strict_unique_path_attempts": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "H": 450,
+      "all_global_certificate_attempts": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "complete_upper_pair_count": 35245,
+      "first_actual_witness_root_index": 0,
+      "first_global_clipping": {
+        "left_breakpoint": {
+          "approximate_midpoint": 0.1090465256280184,
+          "lower": "182759357388808100376053640608883590501505420341962315314795977704473556582710592369039002171162067047665303132977027285847597731974753121669720354003363/1675975991242824637446753124775730765934920727574049172215445180465220503759193372100234287270862928461253982273310756356719235351493321243304206125760512",
+          "upper": "731037441492801436461344208765643456914938639064889380870071690138982888220887396460441854342744108073170728979956777736074083163050431612397918526866081/6703903964971298549787012499102923063739682910296196688861780721860882015036773488400937149083451713845015929093243025426876941405973284973216824503042048"
+        },
+        "lower_clipped": true,
+        "right_breakpoint": {
+          "approximate_midpoint": 0.9710484204154382,
+          "lower": "1627453836298543563189336437945518152114505521709370504976103206768047149953680996847315460932392483796049631246239993371819616508604482901560179542662859/1675975991242824637446753124775730765934920727574049172215445180465220503759193372100234287270862928461253982273310756356719235351493321243304206125760512",
+          "upper": "1627453841602542549306817107438545760467006286308263044455555879423942659072626516882293753693944483122726100993756486917386826068998883911487136330347061/1675975991242824637446753124775730765934920727574049172215445180465220503759193372100234287270862928461253982273310756356719235351493321243304206125760512"
+        },
+        "upper_clipped": true
+      },
+      "first_global_energy": {
+        "approximate_midpoint": 178.6045826114902,
+        "lower": "2394695931557880990256382909763070326396503821027611822017965401132060376930185176046860451900811236567639026347738754139771947947844225874856865317032216983/13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096",
+        "upper": "1197347973283485463844342136757930525894101948571210359344207011313359544101451500489491113065553200598033151242858641518679752848480089384917429622406969081/6703903964971298549787012499102923063739682910296196688861780721860882015036773488400937149083451713845015929093243025426876941405973284973216824503042048"
+      },
+      "first_global_root_box": [
+        {
+          "approximate_midpoint": -0.12650381198397553,
+          "lower": "-1139445049412567/9007199254740992",
+          "upper": "-1139445032635351/9007199254740992"
+        },
+        {
+          "approximate_midpoint": 1.1600902573962582,
+          "lower": "5224582046731627/4503599627370496",
+          "upper": "5224582055120235/4503599627370496"
+        }
+      ],
+      "nonlinear_power_path": [
+        1,
+        2,
+        3
+      ],
+      "nonlinear_source_coefficient_sha256": "473dae700fdc5a5d38f989b59c6e63a8400925fae526f0f60b2e600e48a288f3",
+      "physical_direction_rank_mod65521": 20,
+      "ratios": 265,
+      "records": 614,
+      "strict_unique_path_attempts": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    }
+  ],
+  "proof_object_sha256": "b8f305587bd14ddc8ee99991743dc77e538562a346a7a696f527d58f80394e67",
+  "schema": "riemann.native_six_hour.full_rank_path_certificate.v1",
+  "sources": [
+    {
+      "blob": "a0c7840dc3360dfc13668fde710ec62b5ea6e9d9",
+      "commit": "530ab2d0ee328c4902b102a693941ab49c860949",
+      "path": "research/riemann-structures/native-six-hour/native_full_rank_path_scout.py",
+      "role": "scout"
+    },
+    {
+      "blob": "6fdef16d18889ad406ad033d42090d9a4a1f5c6c",
+      "commit": "530ab2d0ee328c4902b102a693941ab49c860949",
+      "path": "research/riemann-structures/native-six-hour/native_full_rank_path.calibration.json",
+      "role": "calibration"
+    },
+    {
+      "blob": "edd11b956a231ccdbcbdb7737c00a6079b2c566c",
+      "commit": "530ab2d0ee328c4902b102a693941ab49c860949",
+      "path": "research/riemann-structures/native-six-hour/NATIVE_FULL_RANK_PATH_PREREGISTRATION.md",
+      "role": "preregistration"
+    },
+    {
+      "blob": "a0c7840dc3360dfc13668fde710ec62b5ea6e9d9",
+      "commit": "a4f6ea24a703d183e569d4257ed8d7e867089b86",
+      "path": "research/riemann-structures/native-six-hour/native_full_rank_path_scout.py",
+      "role": "heldout_scout"
+    },
+    {
+      "blob": "3ef7cfb60878a8d26466df1293ddcca5293014d3",
+      "commit": "a4f6ea24a703d183e569d4257ed8d7e867089b86",
+      "path": "research/riemann-structures/native-six-hour/native_full_rank_path.heldout.json",
+      "role": "heldout"
+    },
+    {
+      "blob": "b4d0868196f65d75ad54059debd7b897dfd959cf",
+      "commit": "284ddc66a75387cf77ec7551f93fa990724decf0",
+      "path": "research/riemann-structures/native-six-hour/native_horizon_path_certificate.py",
+      "role": "controls"
+    },
+    {
+      "blob": "e6489149479e68ee20bd042c4f03bab58e3e48bf",
+      "commit": "2952d7c0c9fd0fbbbf04fa6321cc2ff4bb392c8a",
+      "path": "research/riemann-structures/native-six-hour/SOURCE_CURVATURE_HORIZON_FILTRATION.md",
+      "role": "filtration"
+    }
+  ]
+}
