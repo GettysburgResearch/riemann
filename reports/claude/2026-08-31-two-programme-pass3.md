@@ -7,9 +7,11 @@ Branch/PR: claude/riemann-repo-review-m7dk1x / PR #781
 Design: computation-first (campaigns C1-C8 producing machine-readable
         atlases for others to mine), with the standing conversion rule:
         any pattern surviving a held-out test gets a same-pass proof
-        attempt. Four conversions succeeded (T-108509, T-108510, T-108513,
-        and — final leg — T-108514, the infinite expansion-side
-        family), and multiple same-pass conjectures were refuted by
+        attempt. Five conversions succeeded (T-108509, T-108510,
+        T-108513, T-108514 — the infinite expansion-side family — and
+        T-108515, the Segre bridge identifying the defect with the
+        K-polynomial of the Segre embedding of (P^1)^m), and multiple
+        same-pass conjectures were refuted by
         their own tests and corrected before commit (the Hadamard
         min-law, the D_m positivity guess, the girth-profile swap,
         the unconditional even-factor simplicity; see the honesty
@@ -29,6 +31,7 @@ RH status: RH and GRH are unproved; nothing in this pass addresses
 | O-108512 | OBSERVATION (half-converted) | Torsion resonance entry law m = 2 ord(alpha^2)+1: ten points, ten exact matches, six held-out |
 | T-108513 | THEOREM | Resonance threshold: class crowding forces collisions from m = 2R+1 (all m), collision at z = a; converse proved for all torsion points, m <= 17 |
 | T-108514 | THEOREM | GP(n,2) positive-end-only for ALL n >= 24 (exact threshold; infinite expansion-side family; three pieces, all adversarially verified sound) |
+| T-108515 | THEOREM | Segre bridge: N_m = equivariant K-polynomial cofactor of the Segre embedding of (P^1)^m; m=3 Betti table exact; defect FE = Gorenstein duality of the cube; N_m(2,1) = Eulerian polynomial |
 
 Pass-2 claims T-108507 and T-108508 received addenda: the spectrum
 theorem closes T-108507's tower question; the codimension law proves
@@ -119,6 +122,33 @@ m in range — disc_slice_factor_lcs.json), making the entry law a
 complete two-sided theorem in that range; the m >= 16 converse is
 reduced to a checkable normal form per m.
 
+**Segre bridge (Lane 1 of the six-hour continuation; T-108515,
+standalone/2026-08-31-segre-defect-bridge/)**: the powered-coefficient
+series sum h_r^m T^r is recognized as the equivariant Hilbert series
+of the Segre ring of (P^1)^m, and the defect numerator N_m is PROVED
+(all m) to be the Segre variety's equivariant K-polynomial divided by
+explicit ballot-multiplicity excess factors
+det(1 - Sym^{m-2k}(A) b^k T)^{C(m,k)-C(m,k-1)}. At m = 3 the full
+equivariant Betti table of the 2x2x2 Segre was computed exactly
+(stdlib Fraction Koszul homology, matrix/segre3_betti.py): C;
+3 det^2 Sym^2 @ 2; 2 det^3 Sym^3 + 4 det^4 Sym^1 @ 3; 3 det^5 Sym^2
+@ 4; det^9 @ 6 — det^9-self-dual, reassembling to
+K_3 = N_3 (1 - abT + b^3 T^2)^2. The defect functional equation
+T-108500(3) received a second, geometric proof: R_m is the normal
+toric ring of the unit m-cube (explicit saturation), [-1,1]^m is
+reflexive with omega = b^m R(-2), and Stanley reciprocity (imported,
+labelled) forces the FE — the self-duality of the obstruction IS
+Gorenstein duality of the cube. Two corollaries: N_m(2,1) = the
+Eulerian polynomial A_m (the defect is a GL_2-equivariant Eulerian
+deformation, its FE deforms Eulerian palindromy), and the held-out
+rank-3 test K_{2,3} = G_3 det(1 - Lambda^2 A T) — predicted by the
+bridge, then machine-verified against T-108508 — depositing the
+Lascoux-strand route to the general-rank square-defect law. Replay:
+experiments/X-108515-segre-bridge (integer-exact through actual
+Kronecker/symmetric-power matrices and integral Faddeev-LeVerrier,
+m = 2..6, all green incl. -O). This realizes Priority 1 of the
+external programme review, proved independently of its sketch.
+
 ## Process notes (honesty trail)
 
 - The X-108510 replay's mixed-triple test was written expecting the
@@ -148,4 +178,7 @@ reduced to a checkable normal form per m.
    identities.
 4. graphs/spectroscopy.json + claims/observations/O-108006 — the
    discrete moduli laboratory and the negative-end law.
+5. standalone/2026-08-31-segre-defect-bridge/PROOF.md — the defect's
+   second life as geometry: Segre K-polynomial, cube Gorenstein
+   duality, Eulerian deformation.
 ```
