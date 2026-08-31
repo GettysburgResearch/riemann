@@ -11,14 +11,49 @@
 
 **Analytic status:** RH and GRH remain unproved. Nothing in this packet proves or materially advances either conjecture.
 
-**Review target:** verify Theorem I's change-of-rings and duality bookkeeping, Theorem II's cycle-index reconstruction, and Theorem III's uniqueness/Hessian-dual identification. The packet distinguishes imported classical inputs from the proposed new synthesis and records the exact points where stronger formulations fail.
+**Review target:** verify Theorem I's change-of-rings and duality bookkeeping, Theorem II's cycle-index reconstruction, Theorem III's uniqueness/Hessian-dual identification, the four-arity transferred model, and the degree-six split/master-class argument. The packet distinguishes imported classical inputs from the proposed new synthesis and records the exact points where stronger formulations fail.
 
 ## Packet map
+
+### Core synthesis
 
 - [Theorem I — master Segre–Chow cofactor, canonical Tor strands, change of rings, and duality](THEOREM_I.md)
 - [Theorem II — cycle-index alternants and the full tensor-factor character](THEOREM_II.md)
 - [Theorem III — canonical top syzygy and Hessian-dual identification](THEOREM_III.md)
 - [Imported inputs, proposed new content, corrected statements, and ranked continuation](SCOPE_AND_CONTINUATION.md)
+
+### Chain-level and derived continuation
+
+- [First nonzero ternary Segre–Chow transgression](CHAIN_LEVEL_TERNARY_TRANSGRESSION.md)
+- [Finite transferred Koszul model and non-formality theorem](TRANSFERRED_KOSZUL_MODEL.md)
+- [Internal degree six: first nonlinear closure problem](INTERNAL_DEGREE_SIX_CLOSURE.md)
+- [All-cycle Frobenius alternant](FROBENIUS_CYCLE_INDEX_ALTERNANT.md)
+- [All-depth stable correction head](STABLE_LAYER_HEAD_THEOREM.md)
+- [Canonical top projection protocol](CANONICAL_TOP_PROJECTION.md)
+- [Current continuation results and ranked next target](CONTINUATION_RESULTS.md)
+- [Focused validation and review ledger](VALIDATION.md)
+
+The current algebraic endgame is no longer “compare two numerators.” The completed Chow homology transfers to
+
+\[
+\left(\Lambda C\otimes B,\Delta_1+\Delta_2+\Delta_3+\Delta_4\right),
+\]
+
+and internal degree six contains eleven of the twelve support-allowed higher operations. Its only possible homology is
+
+\[
+K_{4,2}\quad\text{and}\quad K_{5,1},
+\]
+
+with
+
+\[
+\dim K_{5,1}-\dim K_{4,2}=61370,
+\qquad
+\dim K_{4,2}\ge1000.
+\]
+
+Determining those two modules, not another Euler characteristic, is the highest-priority closure target.
 
 ---
 
