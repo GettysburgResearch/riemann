@@ -4,7 +4,7 @@ Status: **reviewed local/global boundaries, a classical signed parent, and
 an actual global period quotient; no new automorphic L-function or external
 novelty claim**.
 
-For the current twenty-six-packet result and the remaining global-object gates,
+For the current twenty-seven-packet result and the remaining global-object gates,
 start with [CONTINUATION_RESULTS.md](CONTINUATION_RESULTS.md).
 The [all-weight cusp-flag family](CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md)
 extends the [weight-24 quotient](RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT.md).
@@ -27,6 +27,10 @@ The [local simplicity theorem](CUSP_FLAG_LOCAL_SIMPLE_ENDPOINT_ZERO.md)
 separately proves eventual uniqueness, simplicity and reality in each fixed
 shrinking disc around 12/k and 1-12/k. Its sufficient threshold is not
 computed; 65536 is an existence bound, not a simplicity bound.
+The [native denominator-pole theorem](CUSP_FLAG_NATIVE_DENOMINATOR_POLES.md)
+now proves an eventual simple real reflected pole pair near 24/k and
+1-24/k. It pays the entire higher-flag correction and a positive surviving
+cross-period; no effective pole onset or global pole census is claimed.
 Each has an independent exact-source audit in the continuation map.
 The packet introductions below and the wave-2 research map record the
 earlier six-packet stage; their open-work lists are superseded by that
