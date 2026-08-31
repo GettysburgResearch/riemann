@@ -78,11 +78,35 @@ near-bipartite direction can break; at n = 16 the corridor mechanism
 opens the expansion direction, three spectra thread the window; by
 n = 20-22 the same corridors break both ends at once.
 
+## Completion: idx 706 decoded — the classification closes (exact)
+
+The third positive-only spectrum's representative (from the census
+reps cache) is the identity 16-cycle plus chords
+`(0,2),(1,3),(4,15),(5,14),(6,13),(7,9),(8,11),(10,12)`: the SAME
+diamond head `{0,1,2,3}` and the SAME 3-rung corridor as 708/709, with
+a THIRD cap variant — two triangles `(7,8,9)` and `(10,11,12)` joined
+through the chord `(8,11)` (a two-triangle chain; 4 triangles total,
+min cut again 2 via parallel corridor cross-sections; chord distance 3
+from each of 708/709, so not a single 2-switch of either).
+
+**Classification (exact, by the exhaustive census):** the three
+minimal positive-end-only cubic spectra at n = 16 are precisely the
+three DIAMOND-HEADED 3-RUNG CAPPED LADDERS, one per cap variant:
+
+```text
+idx 709: cap = diamond            (second K4-minus-edge)
+idx 708: cap = one-triangle block
+idx 706: cap = two-triangle chain (barely untempered: square within
+                                   0.0089 of the threshold 8)
+```
+
+One family shape, three caps — the expansion-side breach at minimal
+order has exactly one mechanism. (Counts are of SPECTRA: cospectral
+mates would merge; each decoded representative is as stated.)
+
 ## Open
 
-Whether idx 706 (the third n=16 positive-only spectrum, barely
-untempered, adjacency re-derivable from the census enumeration) is a
-member or a 2-switch neighbor of these families; whether P/Q-type
-windows exist for other cap choices; and a proof of the GP(n,2)
-permanence (λ_2 monotonicity in n along the family).
+Whether P/Q-type windows exist for other cap choices beyond these
+three; and the GP(n,2) permanence — now PROVED as T-108514
+(standalone/2026-08-31-gp-positive-family/).
 ```

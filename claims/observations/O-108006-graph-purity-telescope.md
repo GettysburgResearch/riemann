@@ -110,7 +110,13 @@ RH status: unproved; unaddressed.
    positive-end-only for EVERY n >= 24, with exact threshold
    (GP(23,2) certified below) and lambda_min > -2 sqrt 2 for every
    n >= 5. Two distinct mechanisms, one exactly witnessed as a
-   window, one proved as an infinite family. Earlier negative
+   window, one proved as an infinite family. FINAL CLASSIFICATION:
+   idx 706 decoded (same diamond head + 3-rung corridor, third cap
+   variant: a two-triangle chain), so the three minimal positive-only
+   spectra are precisely the three diamond-headed 3-rung capped
+   ladders, one per cap variant (diamond / one-triangle block /
+   two-triangle chain) — the expansion-side breach at minimal order
+   has exactly one structural mechanism (WITNESS16_STRUCTURE.md). Earlier negative
    evidence inside the (14, 48] bracket, from before the census
    (both searches Sturm-exact, no floats — an earlier float screen
    was found unreliable and discarded): (i) all 774
