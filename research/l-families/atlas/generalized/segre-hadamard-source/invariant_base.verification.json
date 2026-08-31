@@ -1,0 +1,329 @@
+{
+  "exact_source_resolution_slices": [
+    {
+      "all_compositions_zero": true,
+      "augmentation_then_differential_ranks": [
+        2
+      ],
+      "exact_in_every_present_homological_degree": true,
+      "free_slice_dimensions": [
+        2
+      ],
+      "internal_degree": 1,
+      "odd_source_dimension": 2
+    },
+    {
+      "all_compositions_zero": true,
+      "augmentation_then_differential_ranks": [
+        4,
+        2
+      ],
+      "exact_in_every_present_homological_degree": true,
+      "free_slice_dimensions": [
+        6,
+        2
+      ],
+      "internal_degree": 3,
+      "odd_source_dimension": 4
+    },
+    {
+      "all_compositions_zero": true,
+      "augmentation_then_differential_ranks": [
+        6,
+        4,
+        2
+      ],
+      "exact_in_every_present_homological_degree": true,
+      "free_slice_dimensions": [
+        10,
+        6,
+        2
+      ],
+      "internal_degree": 5,
+      "odd_source_dimension": 6
+    },
+    {
+      "all_compositions_zero": true,
+      "augmentation_then_differential_ranks": [
+        8,
+        6,
+        4,
+        2
+      ],
+      "exact_in_every_present_homological_degree": true,
+      "free_slice_dimensions": [
+        14,
+        10,
+        6,
+        2
+      ],
+      "internal_degree": 7,
+      "odd_source_dimension": 8
+    },
+    {
+      "all_compositions_zero": true,
+      "augmentation_then_differential_ranks": [
+        10,
+        8,
+        6,
+        4,
+        2
+      ],
+      "exact_in_every_present_homological_degree": true,
+      "free_slice_dimensions": [
+        18,
+        14,
+        10,
+        6,
+        2
+      ],
+      "internal_degree": 9,
+      "odd_source_dimension": 10
+    },
+    {
+      "all_compositions_zero": true,
+      "augmentation_then_differential_ranks": [
+        12,
+        10,
+        8,
+        6,
+        4,
+        2
+      ],
+      "exact_in_every_present_homological_degree": true,
+      "free_slice_dimensions": [
+        22,
+        18,
+        14,
+        10,
+        6,
+        2
+      ],
+      "internal_degree": 11,
+      "odd_source_dimension": 12
+    },
+    {
+      "all_compositions_zero": true,
+      "augmentation_then_differential_ranks": [
+        14,
+        12,
+        10,
+        8,
+        6,
+        4,
+        2
+      ],
+      "exact_in_every_present_homological_degree": true,
+      "free_slice_dimensions": [
+        26,
+        22,
+        18,
+        14,
+        10,
+        6,
+        2
+      ],
+      "internal_degree": 13,
+      "odd_source_dimension": 14
+    }
+  ],
+  "invariant_base_normal_forms": [
+    {
+      "degree": 0,
+      "normal_form_count": 1
+    },
+    {
+      "degree": 2,
+      "normal_form_count": 3
+    },
+    {
+      "degree": 4,
+      "normal_form_count": 5
+    },
+    {
+      "degree": 6,
+      "normal_form_count": 7
+    },
+    {
+      "degree": 8,
+      "normal_form_count": 9
+    },
+    {
+      "degree": 10,
+      "normal_form_count": 11
+    },
+    {
+      "degree": 12,
+      "normal_form_count": 13
+    }
+  ],
+  "literal_Chow_quotient": [
+    {
+      "grade": 0,
+      "image_plus_minus": [
+        0,
+        0
+      ],
+      "literal_W_multiplication_columns": 0,
+      "quotient_plus_minus": [
+        1,
+        0
+      ],
+      "source_dimension": 1,
+      "source_plus_minus": [
+        1,
+        0
+      ]
+    },
+    {
+      "grade": 1,
+      "image_plus_minus": [
+        2,
+        2
+      ],
+      "literal_W_multiplication_columns": 4,
+      "quotient_plus_minus": [
+        2,
+        2
+      ],
+      "source_dimension": 8,
+      "source_plus_minus": [
+        4,
+        4
+      ]
+    },
+    {
+      "grade": 2,
+      "image_plus_minus": [
+        14,
+        12
+      ],
+      "literal_W_multiplication_columns": 32,
+      "quotient_plus_minus": [
+        0,
+        1
+      ],
+      "source_dimension": 27,
+      "source_plus_minus": [
+        14,
+        13
+      ]
+    },
+    {
+      "grade": 3,
+      "image_plus_minus": [
+        32,
+        32
+      ],
+      "literal_W_multiplication_columns": 108,
+      "quotient_plus_minus": [
+        0,
+        0
+      ],
+      "source_dimension": 64,
+      "source_plus_minus": [
+        32,
+        32
+      ]
+    }
+  ],
+  "not_claimed": [
+    "canonical choice of the free or invariant-module splitting",
+    "finite free resolution after taking invariants",
+    "a new abstract hypersurface periodicity theorem",
+    "arithmetic or infinite-operator completion"
+  ],
+  "polynomial_matrix_factorization": {
+    "D_squared": "-(u*w-v^2)*I_2",
+    "entries_have_degree": 2,
+    "identity_checked_before_quotient": true,
+    "relation": "u*w-v^2"
+  },
+  "proved_not_inferred_from_cutoff": [
+    "infinite exact minimal resolution",
+    "infinite projective dimension over the singular invariant base",
+    "finite maximal Cohen-Macaulay module of rank six"
+  ],
+  "provenance": {
+    "freeze": "a895f47628b0bc7c7ee5e0392df2f79c24166f92",
+    "owned_sha256_lf": {
+      "INVARIANT_BASE_MATRIX_FACTORIZATION.md": "cb3cd891b85670da4370ee4a3281e813bf37c10037d39116da3d2c4b33604966",
+      "INVARIANT_BASE_REPLAY.md": "0c8415788af6bbb982400f9819cc7155a38eb682a51316ac9df994ece78149e6",
+      "invariant_base_replay.py": "c9c4ff565ee0a3ae29d9b71d08ff1c61139d07fc668672f0891fff344733f456"
+    },
+    "pins": [
+      [
+        "MATHEMATICS.md",
+        "bbd847461b4955a93b4533fa687cdd8724e2347c"
+      ],
+      [
+        "verification.json",
+        "310ffc95cb6eaf19281de52dd18d2f2884bc0f49"
+      ]
+    ],
+    "test_sha256_lf": "74d66b2adf17ae47e129921623d12d602a32d8e4064282b7b1e7b0c673566e47"
+  },
+  "schema": "segre-hadamard-full-invariant-base/v1",
+  "source_module_Hilbert_comparison": {
+    "all_present_minimal_resolution_rows_used": true,
+    "cutoff": 16,
+    "false_free_on_minimal_generators": [
+      1,
+      4,
+      14,
+      32,
+      67,
+      118,
+      196,
+      298,
+      437,
+      608,
+      826,
+      1084,
+      1399,
+      1762,
+      2192,
+      2678,
+      3241
+    ],
+    "first_false_free_difference": 4,
+    "full_invariant_base_decomposition": [
+      1,
+      4,
+      14,
+      32,
+      63,
+      108,
+      172,
+      256,
+      365,
+      500,
+      666,
+      864,
+      1099,
+      1372,
+      1688,
+      2048,
+      2457
+    ],
+    "literal_source_invariants": [
+      1,
+      4,
+      14,
+      32,
+      63,
+      108,
+      172,
+      256,
+      365,
+      500,
+      666,
+      864,
+      1099,
+      1372,
+      1688,
+      2048,
+      2457
+    ]
+  }
+}
