@@ -6,7 +6,7 @@
 
 The recentered determinant ladder survives throughout
 `J=o(k/log k)`, but strict zero--pole separation is controlled by a smaller
-finite-block coupling.  This note derives that coupling exactly when
+finite-block coupling. This note derives that coupling exactly when
 
 \[
 \frac{J^2}{k}\longrightarrow\tau\in(0,\infty)
@@ -15,7 +15,7 @@ finite-block coupling.  This note derives that coupling exactly when
 
 and the flag offset `h=J-i` is fixed.
 
-The outcome is an explicit divisor-renewal polynomial `g_h(tau)`.  Its zeros
+The outcome is an explicit divisor-renewal polynomial `g_h(tau)`. Its zeros
 are the leading-order merger resonances of adjacent determinant clusters.
 This proves that the fixed-depth coefficient `S_h=sigma_{-1}(h)` cannot be
 used uniformly through the square-root scale.
@@ -42,9 +42,9 @@ i=J-h.
 \]
 
 Work in the recentered disc about the exact one-mode zero
-`chat_{k,J}` from PF25.  Eliminate the far block `W_{2J+1}`, every mode above
+`c_hat(k,J)` from PF25. Eliminate the far block `W_{2J+1}`, every mode above
 `J`, and the intermediate modes `i+1,...,J-1`, using the exact source Schur
-operations.  The final real two-by-two block is
+operations. The final real two-by-two block is
 
 \[
 \begin{pmatrix}
@@ -84,8 +84,8 @@ m_r=J-r,
 \qquad r=1,\ldots,h-1.
 \]
 
-Column-scale the period block by `A_{m_r}`.  At
-`c=chat_{k,J}+o(1)`, the diagonal limit is
+Column-scale the period block by `A_{m_r}`. At
+`c=c_hat(k,J)+o(1)`, the diagonal limit is
 
 \[
 \frac{T_{m_r}(c)}{A_{m_r}}
@@ -112,7 +112,7 @@ whereas the reverse column-scaled entry contains
 \]
 
 The Poincare-frame residual and both deep eliminations are
-superpolynomially smaller.  Thus the limiting intermediate matrix is lower
+superpolynomially smaller. Thus the limiting intermediate matrix is lower
 triangular:
 
 \[
@@ -215,7 +215,7 @@ Combining DR11 and DR15 yields the closed form
 \[
 \boxed{
  g_h(\tau)
- =-rac{h}{24\tau}
+ =-\frac{h}{24\tau}
  [z^h]\exp[-24\tau\Phi(z)].
 }
 \tag{DR16}
@@ -258,9 +258,9 @@ S_h-u^T C^{-1}v+o(1),
 \]
 
 where `C` is the column-scaled intermediate period block,
-`u_r=S_{h-r}+o(1)`, and `v_r=S_r+o(1)`.  Equations DR5--DR8 give entrywise
+`u_r=S_{h-r}+o(1)`, and `v_r=S_r+o(1)`. Equations DR5--DR8 give entrywise
 convergence of this fixed-size matrix to `mathcal C(tau)`, whose diagonal is
-nonzero.  Hence its inverse converges.  The limiting Schur expression is
+nonzero. Hence its inverse converges. The limiting Schur expression is
 DR10, and DR16 identifies it with `g_h(tau)`. ∎
 
 The theorem is local in fixed `h`; it does not replace the uniform
@@ -324,8 +324,8 @@ then
 \]
 
 and the zero--pole gap and residue are smaller than the scales displayed in
-DR21--DR22.  The present theorem does **not** assert exact finite-`k`
-cancellation at a resonance.  A second-order expansion is required there.
+DR21--DR22. The present theorem does **not** assert exact finite-`k`
+cancellation at a resonance. A second-order expansion is required there.
 
 Thus the finite set
 
@@ -360,13 +360,13 @@ g_3(\tau)=\frac43-54\tau+288\tau^2,
 
 \[
 g_4(\tau)=
-\frac74-rac{209}{3}\tau+864\tau^2-2304\tau^3,
+\frac74-\frac{209}{3}\tau+864\tau^2-2304\tau^3,
 \tag{DR28}
 \]
 
 \[
 g_5(\tau)=
-\frac65-rac{185}{2}\tau+1450\tau^2
+\frac65-\frac{185}{2}\tau+1450\tau^2
 -8640\tau^3+13824\tau^4.
 \tag{DR29}
 \]
@@ -380,7 +380,7 @@ In particular, the first resonance is exact:
 
 So for the quotient two levels above the active mode, the leading direct
 coupling and the one intermediate Schur path cancel when
-`J^2/k ->1/16`.  This is an analytic phase transition, not a numerical
+`J^2/k ->1/16`. This is an analytic phase transition, not a numerical
 pattern.
 
 No assertion is made that every `g_h` has only real roots, that the positive
@@ -406,12 +406,12 @@ g_h(\tau)=S_h+O(\tau\log(L+2))
 \tag{DR31}
 \]
 
-whenever `tau log(L+2)=o(1)`.  This is exactly condition PF58 and proves that
+whenever `tau log(L+2)=o(1)`. This is exactly condition PF58 and proves that
 the strict subcritical theorem is the small-coupling side of the same
 renewal law.
 
 The square-root scale is therefore not merely where an old error bound
-fails.  It is where the source Schur paths contribute at leading order.
+fails. It is where the source Schur paths contribute at leading order.
 
 ---
 
@@ -482,6 +482,6 @@ Not claimed:
 * a self-adjoint Jacobi realization;
 * critical-line purity, RH, or GRH.
 
-At a resonance, relative gap and residue asymptotics must stop.  Finite
+At a resonance, relative gap and residue asymptotics must stop. Finite
 experiments may guide the next scaling, but cannot replace the missing
 second-order source expansion.
