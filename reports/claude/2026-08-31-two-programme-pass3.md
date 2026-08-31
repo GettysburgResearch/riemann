@@ -7,11 +7,13 @@ Branch/PR: claude/riemann-repo-review-m7dk1x / PR #781
 Design: computation-first (campaigns C1-C8 producing machine-readable
         atlases for others to mine), with the standing conversion rule:
         any pattern surviving a held-out test gets a same-pass proof
-        attempt. Three conversions succeeded (T-108509, T-108510, and —
-        continuation leg — T-108513, proving the forward half of
-        O-108512's repeatedly-held-out entry law), and one conjecture
-        of this pass was refuted by its own test and corrected before
-        commit (the Hadamard min-law; see T-108510).
+        attempt. Four conversions succeeded (T-108509, T-108510, T-108513,
+        and — final leg — T-108514, the infinite expansion-side
+        family), and multiple same-pass conjectures were refuted by
+        their own tests and corrected before commit (the Hadamard
+        min-law, the D_m positivity guess, the girth-profile swap,
+        the unconditional even-factor simplicity; see the honesty
+        trail).
 RH status: RH and GRH are unproved; nothing in this pass addresses
         them. Every artifact carries rh_established: false.
 ```
@@ -25,7 +27,8 @@ RH status: RH and GRH are unproved; nothing in this pass addresses
 | L-108511 | LEMMA | Trace-scaling line crosses the survival trichotomy: Z_0 = zeta(4s-2)/zeta(2s-1), Z_{-1} = L(Sym^2,2s)/(zeta(2s-1)L(f,s)), exact |
 | O-108006 | OBSERVATION | Graph purity telescope: 605-graph certified corpus, negative-end breach law (37/37 through n=14), certified walk bifurcations |
 | O-108512 | OBSERVATION (half-converted) | Torsion resonance entry law m = 2 ord(alpha^2)+1: ten points, ten exact matches, six held-out |
-| T-108513 | THEOREM | Resonance threshold PROVED (forward): class crowding forces collisions from m = 2R+1, first collision at z = a; m = 2R near-miss and a=0 m=6 gap derived |
+| T-108513 | THEOREM | Resonance threshold: class crowding forces collisions from m = 2R+1 (all m), collision at z = a; converse proved for all torsion points, m <= 17 |
+| T-108514 | THEOREM | GP(n,2) positive-end-only for ALL n >= 24 (exact threshold; infinite expansion-side family; three pieces, all adversarially verified sound) |
 
 Pass-2 claims T-108507 and T-108508 received addenda: the spectrum
 theorem closes T-108507's tower question; the codimension law proves
