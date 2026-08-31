@@ -1,4 +1,50 @@
-# Six-hour source pass: fifth checkpoint
+# Six-hour source pass: sixth checkpoint
+
+The six-hour pass remains active. Completed final-packet tests remain487
+per interpreter mode:460 mathematical and27 cache/acquisition checks.
+The old27 original-row prechecks and37 new streamed-method prechecks
+have passed in both modes but remain excluded while their separate
+42- and52-test final contracts are incomplete.
+
+The new640-column method is frozen at
+4bbbc01566f5928bcb3b6b0bcc92e70bf4b53fb9. It keeps the old512-column
+source and tests unchanged. Before degree seven, its lazy original
+coordinates were exhaustively compared against the unchanged constructor:
+all28600 target descriptors/addresses and all3775 degree-six source
+columns and weights agree. That complete calibration is frozen at
+41b74441d26dc69c3c2134cc2b839ce522f9f183, proof object
+6811029c4411d48e1b9b33f5004576dddaf1757a61761c03cb40d88699850bc5.
+The successful coordinate acquisition took26.9 seconds and about61.4 MB.
+
+The accepted full degree-six map remains
+d3bda0446a379ce0bd8dfe4024f0184451adb1d5: rank3648 in3775 columns,
+kernel127, and17 new minimal third-differential relations. It is a
+complete discovery with all original-row checks, not a claim that an
+unfinished final suite ran. The independent global exactness argument
+at423a25c35996ec5bf2c4dfaac6594d31f89f1081 explains precisely how the
+remaining actual degree-seven kernel and quotient will complete the
+minimal resolution.
+
+Degree seven is still being acquired. Several runs have been stopped
+by the unchanged2 GiB free-memory reserve, not by a mathematical
+contradiction or a changed cap. No degree-seven rank, new top relation,
+or complete resolution is claimed in this checkpoint. A separately
+identified composed certificate is being designed to use already proved
+lower-stage maps and the exhaustive coordinate comparison as authenticated
+inputs, freshly check map compositions, and perform all new degree-seven
+kernel/quotient work. It will explicitly distinguish those dependencies
+from rerunning lower-stage elimination, and cannot complete either old
+test contract by implication.
+
+The actual grade-seven source has86515 target rows,15400 columns and
+maximum weight-block width592. All new full rows and kernel residuals
+remain checked; no full target dictionary is needed. The640-column,
+4096-bit stored-coefficient and128 MiB worker limits, and the2 GiB free
+reserve, are unchanged. Only root launches scientific workers, serially.
+No other agent's process is touched. Work remains proposed research
+outside canonical integration, with no RH/GRH conclusion.
+
+## Fifth checkpoint history
 
 The six-hour pass remains active. The completed packet count remains487
 focused tests per interpreter mode:460 mathematical and27 cache/acquisition
