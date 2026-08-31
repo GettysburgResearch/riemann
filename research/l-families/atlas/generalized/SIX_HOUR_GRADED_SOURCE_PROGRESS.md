@@ -1,4 +1,39 @@
-# Six-hour source pass: eighth checkpoint
+# Six-hour source pass: final mathematical checkpoint
+
+The explicit minimal resolution of the ternary Segre/Hadamard source is
+complete. The self-contained theorem and exact trace bridge are in
+[COMPLETED_TERNARY_CUBE_RESOLUTION.md](segre-hadamard-source/COMPLETED_TERNARY_CUBE_RESOLUTION.md),
+frozen at 47890a7a07a525494dedac37ab6e197c2169f902 and independently
+reviewed in REVIEW_47890a7a.md.
+
+Over S=Sym(Sym^3 Q^3), the four free modules have degree multiplicities
+(1,17,11), (20,65), (65,20), and (11,17,1). The final 379-term integral
+top relation was actually acquired and checked at
+4019ecd9d0b674fa6d9b26eee2c70c2717f33543, proof object
+31507a0ebecc931dc2073cd2c81df45c1c25f182cf2da9c6ece483cd8d54ba0a.
+Its first Dixon lift failed reconstruction and remains recorded; the
+second supplied the accepted exact witness. Every original residual and
+the complete old-space coordinate obstruction were checked.
+
+The independent Tor theorem and graded Nakayama now prove global
+exactness and minimality. The marked matrices are not claimed to be a
+preferred equivariant splitting. The coefficientwise cube series is the
+character Hilbert series of the honest source; its numerator is the
+alternating Tor character, not an assumed finite superdeterminant.
+The classical geometric and representation-theoretic inputs are credited.
+
+Completed final-packet controls total 529 in ordinary Python and the same
+529 with -O. The final witness passed write/check/optimized-check and
+26 controls in each mode. These are focused packet controls, not a
+repository-wide CI claim. The separately interrupted full-kernel and
+640-column contracts remain incomplete; the completed proof does not
+retroactively mark their jobs as run.
+
+Scientific jobs were serialized under the unchanged memory limits.
+This remains proposed research outside canonical integration, with no
+RH/GRH, arithmetic purity, or retained-gamma source-identification claim.
+
+## Eighth checkpoint history
 
 The pass remains active until at least 17:41:25+03 on 31 August 2026.
 The explicit minimal resolution is now complete. The newly acquired top
