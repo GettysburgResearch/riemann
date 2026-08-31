@@ -232,11 +232,17 @@ proved d = 3, 4 forms; verified at exact points for d = 5, 6, 7 —
 ranks with no previously known closed form), and re-deriving
 T-108510's top-coefficient sign law in three lines. The proof is
 three elementary lemmas (bialternant expansion; partial fractions;
-multiplication bookkeeping); the partial-fraction treatment of
-Hadamard products is classical in flavor (flagged CITATION-NEEDED
-for the next boundary audit); the closed N_{2,d}, the sign-law
-rederivation, and the Segre-strand identification are the new
-content. Ground truth added: the exact equivariant Betti table of
+multiplication bookkeeping); boundary check: the literature itself
+states no general closed Hadamard-numerator form is known (Kar,
+RHUMJ 23 (2023)), so the alternant is claimed new-in-context with
+classical technique. STABLE LAYER THEOREMS followed the same day:
+each T^j-correction is a weight-2j symmetric function determined at
+d = 2j, so single symbolic computations prove for ALL ranks that
+corr_3 = 2 sum_{i>=4}(-1)^i e_i h_{6-i} (T-108508's guess),
+corr_4 = 2 sum_{i>=5}(-1)^i e_i h_{8-i} (new), and the
+eleven-monomial corr_5 — where the linear law TERMINATES (first
+layer empty at j = 5; purely second-stratum, collapsing at d = 5 to
+T-108508's quadratic coefficient). Ground truth added: the exact equivariant Betti table of
 P^2 x P^2 ((1,9,16,9,1) at twists 0,2,3,4,6, per-weight characters;
 matrix/segre_d3m2_betti.py). Replays: matrix/alternant_defect.py
 (sympy+exact) and X-108522 (stdlib), all green.
