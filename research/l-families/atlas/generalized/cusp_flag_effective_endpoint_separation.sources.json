@@ -1,0 +1,103 @@
+{
+  "authoring_base": "bcd3ad5ff0c42e7b205663b68a010e2dbde6d941",
+  "external_context": [
+    {
+      "remote_bytes_authenticated": false,
+      "role": "positive-real Euler fractional-part formula",
+      "url": "https://dlmf.nist.gov/25.11.E5"
+    },
+    {
+      "remote_bytes_authenticated": false,
+      "role": "Gamma integral and derivative",
+      "url": "https://dlmf.nist.gov/5.9.E19"
+    },
+    {
+      "remote_bytes_authenticated": false,
+      "role": "positive-real digamma over shrinking intervals",
+      "url": "https://dlmf.nist.gov/5.11.E2"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "bcd3ad5ff0c42e7b205663b68a010e2dbde6d941",
+      "git_blob": "5c6472b64dc70930bba76dea115ea8e745233c8d",
+      "kind": "native_UQ_scientific_parent",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_UNCANCELLED_OFF_CENTRAL_REAL_ZEROS.md",
+      "sha256_lf": "bf219006f997d75c53e9cdda0c505f6402b8cfde57d3b444ee9d70591df72873"
+    },
+    {
+      "commit": "bcd3ad5ff0c42e7b205663b68a010e2dbde6d941",
+      "git_blob": "816dbff2bd777bdec0322eb27d60e2064f32c544",
+      "kind": "native_UQ_scientific_parent",
+      "path": "research/l-families/atlas/generalized/cusp_flag_uncancelled_off_central_real_zeros.py",
+      "sha256_lf": "1c8ebbae726b78067e83285d29a14f8363704758e6cd06bdaa1822aa94f1f416"
+    },
+    {
+      "commit": "bcd3ad5ff0c42e7b205663b68a010e2dbde6d941",
+      "git_blob": "0c569db7bf4336cc987e1187421747eefb1ecaee",
+      "kind": "native_UQ_scientific_parent",
+      "path": "research/l-families/atlas/generalized/cusp_flag_uncancelled_off_central_real_zeros.json",
+      "sha256_lf": "cc120e9d2af305db0e26fbb7a3635062b94eb3cf95d34c1f58d8168e41b1acce"
+    },
+    {
+      "commit": "bcd3ad5ff0c42e7b205663b68a010e2dbde6d941",
+      "git_blob": "42f86fe7bd6a40250ff5fd69f4047c6aea4e17ce",
+      "kind": "native_UQ_scientific_parent",
+      "path": "research/l-families/atlas/generalized/cusp_flag_uncancelled_off_central_real_zeros.sources.json",
+      "sha256_lf": "c6bb8d62e913c358d6e8c236294e7bd010ce87076faf571752647cd657a3de44"
+    },
+    {
+      "commit": "bcd3ad5ff0c42e7b205663b68a010e2dbde6d941",
+      "git_blob": "e2697a6bdb4a71bdc4503ba7c35c1539acb3e8fb",
+      "kind": "native_UQ_scientific_parent",
+      "path": "tests/test_cusp_flag_uncancelled_off_central_real_zeros.py",
+      "sha256_lf": "3aaa629162c869eb5717bb8473102b114867e9d2329e5d8f52546c818a9db665"
+    },
+    {
+      "commit": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+      "git_blob": "0fcafec61b564a1f2db4c15d24c881d99b8ebcd1",
+      "kind": "native_CZ_release",
+      "path": "research/l-families/atlas/generalized/CUSP_PERIOD_OFF_CENTRAL_REAL_ZEROS.md",
+      "sha256_lf": "cb792b56a687922573711027d9d6a43221d468c0d42311251d4b882c2d7f7906"
+    },
+    {
+      "commit": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+      "git_blob": "40e65f048cf602f937e326b1e1594c08da81c471",
+      "kind": "native_CZ_release",
+      "path": "research/l-families/atlas/generalized/cusp_period_off_central_real_zeros.py",
+      "sha256_lf": "cc573a19d3e64344bcb217dafb86094470b4af15304f0c647f090eb12d3fd66c"
+    },
+    {
+      "commit": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+      "git_blob": "ec6698279aed159326220061ccf36d6cd7ae15cd",
+      "kind": "native_CZ_release",
+      "path": "research/l-families/atlas/generalized/cusp_period_off_central_real_zeros.json",
+      "sha256_lf": "ea44f9b40af18e6657729b6bb2e2b2ffdf9d814c596f77d7b8542b4249406514"
+    },
+    {
+      "commit": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+      "git_blob": "0d5ec23bab396ccf2d16cff89247805b935706e3",
+      "kind": "native_CZ_release",
+      "path": "research/l-families/atlas/generalized/cusp_period_off_central_real_zeros.sources.json",
+      "sha256_lf": "35490b7422b93e2623cc492ab8fc3689f6aa969d9daec2d2caaf5c49e4887721"
+    },
+    {
+      "commit": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+      "git_blob": "4f047bf05250ea6e70f93ae06ab26903b019b2ff",
+      "kind": "native_CZ_release",
+      "path": "tests/test_cusp_period_off_central_real_zeros.py",
+      "sha256_lf": "f256d73577dc6babd3fa652f1f69738e72d26d23edc219ae8eb103d639c920ff"
+    }
+  ],
+  "primitive_contract": {
+    "asymptotic_scope": "c in fixed compact subset(0,24); no effective error onset",
+    "completion": "unchanged half-lattice E*, residue1/2, cosine4sqrt(y)",
+    "effective_threshold": "all k=12d>=65536, first65544; sufficient not optimal",
+    "execution": "no ancestor code executed; frozen prefix data compared exactly",
+    "location": "12/k+(288logk+O(1))/k^2; no uniqueness or simplicity",
+    "new_cross_input": "complex h/q-1 product telescoping and exact high-cusp q orthogonality",
+    "object": "actual canonical CF quotient and h_d=Delta E4^(3d-3)",
+    "uniform_space": "all W=ker[q], original Petersson norm, no dimension loss"
+  },
+  "schema": "cusp-flag-effective-endpoint-sources-v1"
+}
