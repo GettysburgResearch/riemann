@@ -72,6 +72,29 @@ def main():
                         else:
                             bad += 1
         print(f"{'odd' if parity else 'even'} m: {ok} ok, {bad} off")
+    # m = 18, 19 rows from the memory-lean sieve (multiplicities keyed
+    # directly by the psi index N = the per-root cyclotomic order M)
+    import os
+    out["sieve_rows"] = []
+    for m in (18, 19):
+        f = f'matrix/m{m}_sieve.json'
+        if not os.path.exists(f):
+            continue
+        mults = {int(k): v for k, v in
+                 json.load(open(f))["torsion_multiplicities"].items()}
+        ok = bad = 0
+        for N in sorted(mults):
+            p = predict(N, m)
+            rec = {"m": m, "M": N, "data": mults[N], "predicted": p,
+                   "ok": p == mults[N]}
+            out["sieve_rows"].append(rec)
+            if p == mults[N]:
+                ok += 1
+            else:
+                bad += 1
+        print(f"m = {m} (sieve, {'odd' if m % 2 else 'even'}): "
+              f"{ok} ok, {bad} off; details "
+              f"{[(r['M'], r['data'], r['predicted']) for r in out['sieve_rows'] if r['m'] == m]}")
     json.dump(out, open('matrix/mult_law_check.json', 'w'), indent=1)
 
 
