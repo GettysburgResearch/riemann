@@ -1,0 +1,43 @@
+{
+  "claim": "T-107110",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/107100-beta-qadic-annular-interference",
+  "checkpoint_parent": "c05f44f3f74683f00c6b2867d4cef2bd9515d4d3",
+  "locked_sources": [
+    {
+      "commit": "c05f44f3f74683f00c6b2867d4cef2bd9515d4d3",
+      "path": "claims/lemmas/L-107100-common-grid-qadic-beta-frame.md",
+      "blob": "f564fafc59f902660738270bf635be3e38d99fb6"
+    },
+    {
+      "commit": "c05f44f3f74683f00c6b2867d4cef2bd9515d4d3",
+      "path": "claims/lemmas/L-107102-annular-primitive-core-interference.md",
+      "blob": "74ace73e4780c7ee080f4739a610bdf95391e184"
+    },
+    {
+      "commit": "c05f44f3f74683f00c6b2867d4cef2bd9515d4d3",
+      "path": "claims/theorems/T-107100-qadic-annular-beta-spectral-abscissa.md",
+      "blob": "fbc37270167beec3a599a2e7c7b871c5cce517f8"
+    },
+    {
+      "commit": "55af2c8020d257047cc1f9965c51b623cc074a76",
+      "path": "claims/theorems/T-106800-single-harmonic-spectral-abscissa-and-vk-energy.md",
+      "blob": "23b37a5afd2d2bb17cebab55639bd690073a8610"
+    },
+    {
+      "commit": "cd256e8a82a6dbb32e8728da492ea900cd15995c",
+      "path": "claims/theorems/T-107020-log-log-bandwidth-native-beta-rh-criterion.md",
+      "blob": "be4c2d75309d6de0452ce7e281b1f2462757f80c"
+    }
+  ],
+  "replay": {
+    "verdict": "PASS_T107110_STATIONARY_QADIC_COAREA",
+    "checks": 4026,
+    "proof_object": "f5e71155375fc5bbb78993e1e5f3b4995c666accd9935c3401df0bc4d55324d9"
+  },
+  "open": [
+    "T107110 high-primitive signed interference",
+    "Riemann Hypothesis"
+  ],
+  "rh_established": false
+}
