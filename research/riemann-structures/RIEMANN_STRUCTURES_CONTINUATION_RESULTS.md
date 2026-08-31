@@ -6,12 +6,13 @@ carried by [draft PR #765](https://github.com/gfreund123/riemann/pull/765).
 This is a source-bound research checkpoint, not a canonical repository
 integration or an RH claim.
 
-Checkpoint updated: 2026-08-31. Twenty-one exact packets are resident,
+Checkpoint updated: 2026-08-31. Twenty-two exact packets are resident,
 including the canonical Boolean principal-diagonal estimate, actual-Xi
 geographic count and scale-matched band bound, conditional finite-height
 cofinal capture, conditional actual-Xi component-height divergence,
 the bare low-pass height equivalence, coprime infinite-height physical
-capture, actual-Xi axis sampling, and the separate source-convention correction. The native
+capture, actual-Xi axis sampling, generic-parameter coprimality, and the separate
+source-convention correction. The native
 Boolean decoder memo is an additional exploratory diagnostic, not another
 theorem packet.
 
@@ -28,7 +29,9 @@ finite denominator rank; a uniform actual companion count binds finite
 geographic packets to the physical scale; pure finite-height denominators
 admit fixed-configuration cofinal capture; under the stated inner/RH premise,
 both unreduced companions have infinite height and infinite bare low-pass
-trace; coprime infinite-height products can nevertheless have finite corrected
+trace; outside an exact countable exceptional parameter set, the same now
+holds for the reduced companions under that premise. Coprime infinite-height
+products can nevertheless have finite corrected
 physical capture; and the actual Xi small-lambda family has a global operator
 norm tending to one under the inner premise. The last statement uses one
 near-origin axis direction, not the retained high-T geography.
@@ -68,6 +71,7 @@ cannot be interchanged. Historical scientific files are preserved.
 | [Bare low-pass height equivalence](../exploratory/HARDY_LOW_PASS_HEIGHT_EQUIVALENCE.md) | For any pure Blaschke product, finite total height iff some/every bare low-pass trace is finite; no real-boundary continuation needed | U=1 and intervals starting at zero; not arbitrary shifted bands, native numerator or corrected physical capture |
 | [Coprime infinite-height physical capture](../exploratory/COPRIME_INFINITE_HEIGHT_PHYSICAL_CAPTURE.md) | Pure coprime infinite-height products with global corrected capture below 1/9 and an explicit orthogonal-input tail rate | Nonnative model; bare trace remains infinite and transmitted bounded-band behavior is not decided |
 | [Actual-Xi imaginary-axis sampling](../exploratory/XI_COMPANION_IMAGINARY_AXIS_SAMPLING.md) | Unconditional axis-zero classification and no common axis zeros; conditional global capture norm tends to one at small lambda | One near-origin direction, not retained high-T capture or trace divergence; raw large-branch smallness does not upper-bound the reduced numerator |
+| [Generic native Xi coprimality](../exploratory/XI_COMPANION_GENERIC_PARAMETER_COPRIMALITY.md) | Exact cancellation-safe countable exceptional set for common companion zeros; outside it, innerness gives constant common factor and infinite reduced heights/bare low-pass traces | No explicit good parameter or prescribed physical sequence avoidance; no parameter stability or corrected physical capture conclusion |
 
 Each row has a bounded exact producer, fixture, source manifest and tests.
 The later analytic and source-interface packets have separate frozen-source
@@ -159,7 +163,9 @@ denominators and pure infinite-height lacunary controls show why zero
 count/growth alone cannot supply the missing hypothesis.
 
 This is a low-pass endpoint cost L, not a shrinking-width cost |I|.
-The reduced actual-Xi finite-height possibility, native cofinal source
+Under the inner premise, the reduced actual-Xi finite-height possibility is
+now excluded outside the countable exceptional set by the later generic
+theorem; exceptional parameters are not settled. Native cofinal source
 compatibility, quantitative tail/boundary/approximation control and uniform
 order of limits remain open. The [independent audit](../exploratory/HARDY_COFINAL_FINITE_HEIGHT_SOURCE_CAPTURE_AUDIT.md)
 retains these distinctions and the literal source/outer congruence.
@@ -181,7 +187,9 @@ Its actual imaginary-axis asymptotics are
 The native quotient is Theta_0/Theta_5: the zeroth component supplies the
 numerator, not the denominator. After removing the maximal common inner
 factor, the two reduced height sums are either both infinite or finite
-and equal. Neither alternative is selected. A nonnative finite-height
+and equal. The global-height theorem alone selects neither alternative;
+the later generic theorem selects infinite heights outside its exceptional
+set. A nonnative finite-height
 example matches the signed asymptotic, so it cannot settle that choice.
 The [audit](../exploratory/XI_COMPANION_GLOBAL_HEIGHT_BOUNDARY_AUDIT.md)
 retains the fixed-lambda and conditional scope.
@@ -195,8 +203,9 @@ then characterizes ANY pure Blaschke product B:
 It uses the decreasing model-space diagonal and the exact horizontal
 defect bridge with denominator 4pi y. Repeated zeros and real-boundary
 accumulation are allowed. Thus the conditional unreduced Xi components
-have infinite bare low-pass trace. This says nothing comparable about
-P_U physical capture or the reduced denominator. Exponential inner delay
+have infinite bare low-pass trace. The generic theorem below supplies the
+reduced-denominator conclusion under additional parameter avoidance, but
+neither theorem controls P_U physical capture. Exponential inner delay
 and a pure lacunary shifted-band example show why those extensions fail
 in general. Its [audit](../exploratory/HARDY_LOW_PASS_HEIGHT_EQUIVALENCE_AUDIT.md)
 checks complex/confluent controls independently of the analytic argument.
@@ -254,6 +263,10 @@ At the large branch y5^+~2pi exp(2/lambda),
 y0-y5^+~5lambda and the RAW Theta0 sample tends to zero like
 5/[y5^+(log(y5^+))^2]. Division by the common inner G can increase that
 sample, so no corresponding upper bound for reduced U follows.
+This restriction belongs to the axis theorem alone. At parameters outside
+E where the generic theorem's inner premise holds, G is constant, so raw
+and reduced moduli coincide. Even there, an imaginary-axis sample is not
+retained high-T physical capture.
 The [audit](../exploratory/XI_COMPANION_IMAGINARY_AXIS_SAMPLING_AUDIT.md)
 preserves the unconditional/conditional split and both geographic limitations.
 
@@ -261,6 +274,40 @@ The exact remaining bridge uses R5=R0^(5) and
 U-B=2i lambda (Xi Xi^(6)-Xi' Xi^(5))/(G C0 C5).
 Reduced off-axis values and confluent jets, with the adjoint source
 convention and retained outer metric, are the unpaid inputs.
+
+### Generic native coprimality and its exact exceptional set
+
+The [generic theorem](../exploratory/XI_COMPANION_GENERIC_PARAMETER_COPRIMALITY.md)
+uses the actual f=Xi, g=f^(5), and the parameter-independent entire function
+
+    W=f g'-f'g,    W(0)=-mu0 mu6<0.
+
+After all removable cancellations, the two companions have a common zero
+at b in C+ exactly when
+
+    W(b)=0,  f'(b)g'(b)!=0,
+    lambda=f(b)/(i f'(b)) is positive real.
+
+The set E of these positive parameters is at most countable, because W is
+nonzero entire. Each bounded closed b-disc contributes only finitely many
+parameters. This is an unconditional statement about the literal Xi source.
+Internal multiple zeros of f or g instead give removable companion value
+-1; raw numerator zeros cannot be substituted for genuine common zeros.
+NA excludes imaginary-axis witnesses, and off-axis witnesses occur in
+distinct reflected pairs with the same lambda.
+
+For lambda outside E AND both companions inner, the common inner factor G
+is constant. Both reduced products consequently have infinite height and
+infinite bare [0,L] trace for every fixed L>0. This closes the global-height
+cancellation gate at generic fixed parameters, not at every parameter.
+The [independent release audit](../exploratory/XI_COMPANION_GENERIC_PARAMETER_COPRIMALITY_AUDIT.md)
+records the narrow polynomial-label correction and exact frozen acceptance.
+
+E is not proved discrete or locally finite in parameter space. A prescribed
+countable sequence lambda_j may lie entirely in a countable E. No good
+rational parameter, permission to change the physical gauge, or uniform
+order of limits is supplied. CP still prevents inferring corrected physical
+Hilbert--Schmidt divergence from coprimality and infinite bare trace.
 
 ### The source convention is a substantive correction
 
@@ -348,6 +395,10 @@ central source for this purpose. The assembled central criterion remains
 RH-equivalent and unproved. Stronger positive core gates are sufficient
 routes, not cancellation estimates already supplied by the reduction.
 
+A final read-only replay at its unchanged e3747c946379735d27658c010976cfff051843e9
+checkpoint passed all twelve retained modules: 77 tests normally and under
+-O, plus all twelve producer checks in both modes with source locks enabled.
+
 The source-locked packet is
 FFPS_BETA_SECOND_DIFFERENCE_SINGLE_CHANNEL_REDUCTION.md in that branch's
 function-field atlas, not a duplicate theorem on this branch.
@@ -397,7 +448,8 @@ and free-energy gate remain open.
 1. Reconstruct a complete native coefficient over an exact physical tuple,
    starting with the dyadic zero-Boolean diagnostic. Carry every allocation,
    carrier, endpoint, regional selector and renewal weight through the map.
-2. Control the actual reduced off-axis numerator and its confluent jets,
+2. Determine exceptional-set membership for the prescribed physical
+   parameters, and control the actual reduced off-axis numerator and its confluent jets,
    then the corrected physical projection in the retained high-T geometry.
    Neither infinite denominator height nor the one-direction axis lower
    bound supplies this. Include omitted source directions, approximation
@@ -420,8 +472,8 @@ work is not accepted merely by being mentioned in this checkpoint.
 
 ## Reproduction and priority
 
-The current changed-test-module scope is twenty-one modules: all 543 tests
-passed in normal Python (82.030s) and under -O (76.106s). All twenty-one
+The current changed-test-module scope is twenty-two modules: all 575 tests
+passed in normal Python (82.767s) and under -O (92.674s). All twenty-two
 complete producer checks passed in both modes. The separate decoder memo's
 literal code block also passed both modes, and its ten primitive identities
 were independently checked; it is not counted as a theorem/test module.

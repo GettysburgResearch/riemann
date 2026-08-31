@@ -13,10 +13,14 @@ all-inner physical-band and high-derivative results, including the explicit
 source-duality correction, conditional finite-height cofinal capture,
 conditional actual-Xi component-height divergence, the bare low-pass
 height equivalence, coprime infinite-height physical capture, actual-Xi
-axis sampling and the descent firewall. A separate exploratory decoder
+axis sampling, generic-parameter coprimality and the descent firewall.
+A separate exploratory decoder
 diagnostic narrows the
 native amplitude question. The actual axis theorem is unconditional;
 its global operator consequence retains the inner-function premise.
+The new generic coprimality theorem is also unconditional; its reduced-height
+and bare low-pass consequences require innerness and exclusion of the exact
+countable exceptional set. No prescribed physical parameter is certified.
 Native high-T cofinal capture, total-charge and descent estimates remain open.
 The [wave-2 portfolio](RIEMANN_STRUCTURES_WAVE2_PORTFOLIO.md) is the historical
 mechanism/literature map; its queue is superseded by the continuation
