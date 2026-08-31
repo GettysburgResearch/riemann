@@ -78,8 +78,8 @@ def content(P):
 
 # ---------------- S1: load spectrum, degree bound -------------------
 
-def load_M():
-    d = json.load(open('matrix/m18_spectrum.json'))
+def load_M(m=18):
+    d = json.load(open(f'matrix/m{m}_spectrum.json'))
     nu = d["nu"]
     mus = {int(j): [int(c) for c in v]
            for j, v in d["coeffs_low_to_high"].items()}
@@ -243,13 +243,14 @@ def psi_N(N):
     return out
 
 
-KNOWN = [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16]  # N with threshold <= 18-ish
+KNOWN = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18]  # incl. N=9,18 (threshold 19)
 # (we divide by ALL psi_N that actually divide, discovered dynamically)
 
 
 def main():
+    m = int(sys.argv[1]) if len(sys.argv) > 1 else 18
     t0 = time.time()
-    nu, mus = load_M()
+    nu, mus = load_M(m)
     D = sylvester_deg_bound(nu, mus)
     say(f"nu = {nu}, degree bound D = {D}")
     say("S2: exact resultants at 0..D ...")
@@ -328,7 +329,7 @@ def main():
     say(f"checked {checked} candidate psi_N; divisors of remainder: "
         f"{hits}")
     ok = (not hits) and abs(P[-1] // cP if cP else P[-1]) != 1
-    json.dump({"m": 18, "degree_bound": D, "disc_degree": len(disc)-1,
+    json.dump({"m": m, "degree_bound": D, "disc_degree": len(disc)-1,
                "torsion_multiplicities": {str(k): v
                                           for k, v in mults.items()},
                "remainder_degree": degP,
@@ -339,8 +340,8 @@ def main():
                "remainder_torsion_divisors": hits,
                "converse_m18_established": bool(ok),
                "rh_established": False},
-              open('matrix/m18_sieve.json', 'w'), indent=1)
-    say(f"done ({time.time()-t0:.0f}s); converse m=18: {ok}")
+              open(f'matrix/m{m}_sieve.json', 'w'), indent=1)
+    say(f"done ({time.time()-t0:.0f}s); converse m={m}: {ok}")
 
 
 if __name__ == "__main__":

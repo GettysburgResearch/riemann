@@ -84,7 +84,7 @@ def spectrum_b1(N, m):
 
 
 def main():
-    m = 18
+    m = int(sys.argv[1]) if len(sys.argv) > 1 else 18
     t0 = time.time()
     N = defect_numerator_b1(m)
     print(f"N done ({time.time()-t0:.0f}s)", flush=True)
@@ -96,7 +96,7 @@ def main():
         out[str(j)] = [str(c) for c in reversed(p.all_coeffs())]
     json.dump({"m": m, "nu": nu, "coeffs_low_to_high": out,
                "rh_established": False},
-              open('matrix/m18_spectrum.json', 'w'))
+              open(f'matrix/m{m}_spectrum.json', 'w'))
     print(f"saved ({time.time()-t0:.0f}s)", flush=True)
 
 
