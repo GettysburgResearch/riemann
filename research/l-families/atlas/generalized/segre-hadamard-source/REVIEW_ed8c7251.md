@@ -68,4 +68,3 @@ native gamma, or RH.
 Reviewer: generalized_l_review, independently of the central theorem's
 author. The reviewer had previously read relevant source and global
 exactness proofs but did not author this central-only contract.
-
