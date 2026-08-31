@@ -1,0 +1,74 @@
+{
+  "classification": "PASS_T108102_LIVE_SIGNED_HISTORY_POSITIVE_COMPRESSION",
+  "complete_live_occupancy_census_proved": false,
+  "complete_one_cell_positive_negative_spectrum_proved": true,
+  "factor_4225_input_energy_compression_proved": true,
+  "finite_checks": 31,
+  "full_live_fibre_positive_trace_evaluated": false,
+  "grh_established": false,
+  "live_history_block": {
+    "complete_one_cell_ledger": {
+      "cell_multiplicity": 100,
+      "full_magnitude_to_positive_ratio": "125/3",
+      "full_wick_value": "-353496000/537151",
+      "negative_eigenvalue": "-535600/537151",
+      "negative_multiplicity": 99,
+      "negative_payment_magnitude": "361979904/537151",
+      "negative_to_positive_ratio": "128/3",
+      "positive_eigenvalue": "53024400/537151",
+      "positive_payment": "8483904/537151"
+    },
+    "diagonal_energy": 676,
+    "history_count": 100,
+    "minimum_full_cell_projection": {
+      "aggregation_coherence": "1/4225",
+      "ambient_cell_multiplicity": 100,
+      "kernel_energy": "16896/25",
+      "quotient_input_energy": "4/25",
+      "source_energy": "676"
+    },
+    "multiplicities": [
+      {
+        "coefficient_ratio": 9,
+        "multiplicity": 4
+      },
+      {
+        "coefficient_ratio": -3,
+        "multiplicity": 32
+      },
+      {
+        "coefficient_ratio": 1,
+        "multiplicity": 64
+      }
+    ],
+    "positive_quotient_norm_bound": "<z,(B_R)_+z> <= ||(Q_R)_+|| * (4/25)|w|^2 = ||(Q_R)_+|| * E/4225",
+    "signed_total": 4
+  },
+  "live_source_bound_to_positive_quotient": true,
+  "marked_conductors": {
+    "atomic_diagonal": "535600/537151",
+    "ell": 1031,
+    "rho": 521
+  },
+  "one_place_trace_proved": false,
+  "partial_frobenius_global_lift_constructed": false,
+  "principal_binding_proved": false,
+  "proof_object_sha256": "e8e1af3877acb4f7a570134d26563e7d9dc924c56af7f50dda1192000e467e84",
+  "rh_established": false,
+  "schema": "riemann.t108102.live-signed-history-positive-compression.v1",
+  "signed_conductor_recombination_proved": false,
+  "zero_sum_internal_subpacket": {
+    "admissibility_note": "exact internal source subpacket; not asserted to be an admissible complete native input",
+    "diagonal_energy": 12,
+    "full_wick_value": "-6427200/537151",
+    "positive_payment": "0",
+    "ratios": [
+      -3,
+      1,
+      1,
+      1
+    ],
+    "signed_total": 0
+  },
+  "zero_sum_subpacket_has_zero_positive_debt": true
+}

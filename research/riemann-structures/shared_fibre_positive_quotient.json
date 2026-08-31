@@ -1,0 +1,70 @@
+{
+  "classification": "PASS_T108100_SHARED_FIBRE_POSITIVE_QUOTIENT",
+  "exact_atom_to_quotient_decomposition": true,
+  "finite_checks": 26,
+  "fixtures": [
+    {
+      "atomic_diagonal": "8/15",
+      "atoms": 5,
+      "cells": 2,
+      "checks": {
+        "aggregation_preserved": true,
+        "block_reducing": true,
+        "full_trace_zero": true,
+        "kernel_block_negative_scalar": true,
+        "projection_idempotent": true,
+        "projection_self_adjoint": true,
+        "quotient_form": true,
+        "quotient_intertwining": true,
+        "quotient_trace_balance": true,
+        "section_right_inverse": true
+      },
+      "ell": 3,
+      "history_symmetry": true,
+      "kernel_dimension": 3,
+      "positive_part_max_error": 1.1102230246251565e-16,
+      "quotient_trace": "8/5",
+      "rho": 5
+    },
+    {
+      "atomic_diagonal": "4/7",
+      "atoms": 9,
+      "cells": 3,
+      "checks": {
+        "aggregation_preserved": true,
+        "block_reducing": true,
+        "full_trace_zero": true,
+        "kernel_block_negative_scalar": true,
+        "projection_idempotent": true,
+        "projection_self_adjoint": true,
+        "quotient_form": true,
+        "quotient_intertwining": true,
+        "quotient_trace_balance": true,
+        "section_right_inverse": true
+      },
+      "ell": 3,
+      "history_symmetry": true,
+      "kernel_dimension": 6,
+      "positive_part_max_error": 2.7755575615628914e-16,
+      "quotient_trace": "24/7",
+      "rho": 7
+    }
+  ],
+  "full_wick_operator_traceless": true,
+  "grh_established": false,
+  "one_place_trace_proved": false,
+  "partial_frobenius_global_lift_constructed": false,
+  "partial_frobenius_lift_fixture": {
+    "balanced_cell_swap_lifts": true,
+    "criterion": "a bijective atom lift exists iff occupancy is constant on each cell-permutation orbit",
+    "unbalanced_cell_swap_obstructed": true
+  },
+  "partial_frobenius_orbit_criterion_proved": true,
+  "positive_part_residue_sufficient_without_injectivity": true,
+  "principal_binding_proved": false,
+  "proof_object_sha256": "066bd31fefaf2625ce0f1d56297a2e36620d5d94f9995d9576e5df2df60552f2",
+  "rh_established": false,
+  "schema": "riemann.t108100.shared-fibre-positive-quotient.v1",
+  "signed_conductor_recombination_proved": false,
+  "within_cell_history_debt_purely_negative": true
+}
