@@ -30,3 +30,25 @@ Recorded before constructing the new rank-three maps in this worktree:
 
 These predictions will be checked against actual maps and whole characters,
 not used to set their matrix ranks. A failure is a failed prediction.
+
+### Additional analytic predictions, before the slice producer
+
+For A=diag(t,1,t^-1), x=t+t^-1, set C_1=x, C_2=x^2-2,
+C_3=x^3-3x. The cubic coefficient series is predicted to equal P_x/D_7,
+where
+
+\[
+D_7=(1-T)\prod_{j=1}^3(1-C_j(x)T+T^2),\qquad
+P_x=1+B T+C T^2+B T^3+T^4,
+\]
+\[
+B=2x^2+5x+2,\qquad C=x^3+6x^2+7x+2.
+\]
+
+The reciprocal spectrum polynomial is z^2+Bz+(C-2), with discriminant
+Delta=4x^4+16x^3+9x^2-8x+4. For unitary input, x in [-2,2], the defect
+is pure exactly on [x_*,0], where x_* is the unique root of Delta in
+(-5/3,-13/8). This statement includes multiplicities and reduction.
+At the additional nonunitary controls x=-3 and x=-8, the reduced numerator
+is respectively (1+T)^2 and (1-T)(1+92T+T^2), with denominator degrees
+5 and 6. These are cancellations without coincident input eigenvalues.
