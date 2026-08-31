@@ -1,0 +1,244 @@
+{
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": [
+    "EXACT_RATIONAL",
+    "CERTIFIED_INTEGER_COVERAGE"
+  ],
+  "artifact_sha256_lf": {
+    "research/l-families/atlas/generalized/THETA_POSITIVE_SOURCE_REAL_ZERO_FIREWALL.md": "9a44018ccc7200f934c3afd86be627a8d637222933fe28e54967faaaa8f381f0",
+    "research/l-families/atlas/generalized/theta_positive_source_real_zero_firewall.py": "dfc332c93311b1db9598cb456ae3754cf8d8804c3a56a577b707908ce26f49b9",
+    "research/l-families/atlas/generalized/theta_positive_source_real_zero_firewall.sources.json": "bf18dcf1281bf5737c063e2f204c915ea4e3320cd173be5bea4a9e60213d24d9",
+    "tests/test_theta_positive_source_real_zero_firewall.py": "828f77053253600bca07cefdb61680f8bdcc4446afdd8fc1cd15bd8136a077de"
+  },
+  "fixture_sha256_lf": "3987133d0fd7e71fcf17d05675ce9a10d3edfb0a906714eb6e13c997cc3e0dfc",
+  "hostile_controls": {
+    "fully_resealed_unmocked_attacks": 32,
+    "primitive_type_cap_guards": 20
+  },
+  "independent_controls": {
+    "Taylor_intervals": [
+      {
+        "N": 16,
+        "both_inequalities_strict": true,
+        "enclosure": [
+          "741487247931125633802979001/654360199605194317627392000",
+          "36786846933072783995409019417/32464278474290354819432448000"
+        ],
+        "x": "1/8"
+      },
+      {
+        "N": 16,
+        "both_inequalities_strict": true,
+        "enclosure": [
+          "1068561697523468318300443/734410998434561523712000",
+          "9391588759533763049543656409/6454738265241361231904768000"
+        ],
+        "x": "3/8"
+      },
+      {
+        "N": 16,
+        "both_inequalities_strict": true,
+        "enclosure": [
+          "753573314139152971/457065319366656000",
+          "448376121912796017751/271953865023160320000"
+        ],
+        "x": "1/2"
+      },
+      {
+        "N": 16,
+        "both_inequalities_strict": true,
+        "enclosure": [
+          "88020417428420142215047189/47113934371573990869172224",
+          "207992246383356796164019788857/111330226920029340423853965312"
+        ],
+        "x": "5/8"
+      },
+      {
+        "N": 16,
+        "both_inequalities_strict": true,
+        "enclosure": [
+          "19221165504346275768665119/8012573872716665113804800",
+          "223830472298112409811474370413/93306422747785565250256896000"
+        ],
+        "x": "7/8"
+      },
+      {
+        "N": 16,
+        "both_inequalities_strict": true,
+        "enclosure": [
+          "56874039553217/20922789888000",
+          "2348085347268533/863812325376000"
+        ],
+        "x": "1"
+      }
+    ],
+    "additional_Horner_factorial_tail_controls": 512,
+    "analytic_all_b_and_smoothing_proofs_not_machine_certified": true,
+    "direct_z_coefficients": {
+      "1": [
+        "0",
+        "0"
+      ],
+      "2": [
+        "2",
+        "-1/2"
+      ],
+      "3": [
+        "0",
+        "0"
+      ],
+      "4": [
+        "1/3",
+        "-1/24"
+      ],
+      "5": [
+        "0",
+        "0"
+      ],
+      "6": [
+        "1/60",
+        "-1/720"
+      ],
+      "7": [
+        "0",
+        "0"
+      ],
+      "8": [
+        "1/2520",
+        "-1/40320"
+      ]
+    },
+    "general_c_b": {
+      "factor": "exp(b/2)",
+      "polynomial_in_b": [
+        "0",
+        "2",
+        "-1/2"
+      ]
+    },
+    "independent_antiderivatives": [
+      [
+        "2"
+      ],
+      [
+        "16",
+        "-8",
+        "2"
+      ]
+    ],
+    "margins": [
+      {
+        "b_squared": "1",
+        "lower_bound": "1/64",
+        "margin": "113/64",
+        "z": "1/8"
+      },
+      {
+        "b_squared": "1",
+        "lower_bound": "1/16",
+        "margin": "29/16",
+        "z": "1/4"
+      },
+      {
+        "b_squared": "1",
+        "lower_bound": "9/64",
+        "margin": "121/64",
+        "z": "3/8"
+      },
+      {
+        "b_squared": "4",
+        "lower_bound": "1/16",
+        "margin": "17/16",
+        "z": "1/8"
+      },
+      {
+        "b_squared": "4",
+        "lower_bound": "1/4",
+        "margin": "5/4",
+        "z": "1/4"
+      },
+      {
+        "b_squared": "4",
+        "lower_bound": "9/16",
+        "margin": "25/16",
+        "z": "3/8"
+      },
+      {
+        "b_squared": "8",
+        "lower_bound": "1/8",
+        "margin": "1/8",
+        "z": "1/8"
+      },
+      {
+        "b_squared": "8",
+        "lower_bound": "1/2",
+        "margin": "1/2",
+        "z": "1/4"
+      },
+      {
+        "b_squared": "8",
+        "lower_bound": "9/8",
+        "margin": "9/8",
+        "z": "3/8"
+      }
+    ],
+    "signs": [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "threshold": [
+      "135976932511580160000/176422256889635697751",
+      "228532659683328000/296507994772496971"
+    ]
+  },
+  "payload_sha256": "8dcd652c852b2db9a78c07f9599b0a482a7b0e74a117ba9ada5024a8bf47dd5a",
+  "rounding": "none",
+  "science": "dd498bdc20bdd658d34d0a56d7d22f3c5182b569",
+  "scope": "finite independent review controls; analytic verdict resides in audit note",
+  "source_bindings": [
+    {
+      "commit": "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+      "git_blob": "9873196dcaf7f5ed92c429fe17b146531f2325ac",
+      "path": "research/l-families/atlas/generalized/THETA_SOURCE_QUOTIENT_TENSOR_COHERENCE.md",
+      "sha256_lf": "3472b74946925ca4ac6a8f8fe80853d5a96ef0e2e52a5142ff2ba5ac3901c9bd"
+    },
+    {
+      "commit": "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+      "git_blob": "a184b4a0460d9450a23b3b3c15741a54700f9e8a",
+      "path": "research/l-families/atlas/generalized/theta_source_quotient_tensor_coherence.py",
+      "sha256_lf": "b04d4f8ca1088d39b1efef9aa8b6e412bd76590d3ba10b70f0a1be620faa5ed1"
+    },
+    {
+      "commit": "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+      "git_blob": "e51c72d319e61929e4b82c007c3568d82a328285",
+      "path": "research/l-families/atlas/generalized/theta_source_quotient_tensor_coherence.json",
+      "sha256_lf": "6413c704116108ab3f1a06400087b8154297ffe13f3631436a96b49502ee3419"
+    },
+    {
+      "commit": "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+      "git_blob": "4b94a34636da981d05c48fab8690eb93745d346b",
+      "path": "research/l-families/atlas/generalized/theta_source_quotient_tensor_coherence.sources.json",
+      "sha256_lf": "12ebd09865d1b184d08fd519a8801970457854d42f93789ecd69e2ddbb0d0f7a"
+    },
+    {
+      "commit": "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+      "git_blob": "2d59d62afcbdb2b35926cc9cf2ce420e7ba403ae",
+      "path": "tests/test_theta_source_quotient_tensor_coherence.py",
+      "sha256_lf": "a29dcc3059a3a1a7c9c9cd41ee7d62ee5033bf8b1628e2f59d07a278b60a8f32"
+    },
+    {
+      "commit": "67f88c148bb5914897cc13b6cbce61960a277cd1",
+      "git_blob": "f96926a2b075ef76adaa53d8235881a9874d1d3a",
+      "path": "research/l-families/atlas/generalized/THETA_POSITIVE_SOURCE_REAL_ZERO_FIREWALL.md",
+      "sha256_lf": "4937a44b9ce0cb2cd484c22471bc86af6453b4ebbc23ddf38ca303ace3f74abf"
+    }
+  ],
+  "source_payload_sha256": "7acae9c2697842a4dbfd4e5bb229ecec3f7ddaff9fbb8825f277614a5faa7007"
+}
