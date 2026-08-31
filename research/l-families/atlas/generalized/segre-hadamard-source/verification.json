@@ -1,0 +1,7568 @@
+{
+  "owned_sha256_canonical_lf": {
+    "MATHEMATICS.md": "de7d8d8507a47fdd35d04bfdeee430a64e81c054ad8a8c61cb303d70a0d17e6a",
+    "PREREGISTRATION.md": "85ffbd83a407ec5311361eeb21952d8456916f0b90c7be59a9bd7cdbac09fd3d",
+    "REPLAY.md": "9083886ed85c361e13e7790cc42aab18e71ce205e67cc22a8d0572cbba3f1525",
+    "replay.py": "1e1b983e28e0333d51898449612129db86eb148db00c1273b68279b206d8cad4",
+    "sources.json": "44ebd716cc81bd7395324f74ab5fdc4ae09847da2ed13f5dbdbe6aa58b00e897",
+    "tests/test_segre_hadamard_source.py": "e223e1ad3b3700799525073ee716475bc0d5d9c770f6166e3f54f73a8959cbe6"
+  },
+  "proof_object_sha256": "a77adf64e530388435bb878b227975dfcdd0969350c6d6de943342e243a9497e",
+  "result": {
+    "arithmetic": "integers and characteristic-zero rational elimination",
+    "binary_quotient_dimensions": [
+      {
+        "m": 2,
+        "quotient_dimensions": [
+          1,
+          1
+        ],
+        "total_rank": 2
+      },
+      {
+        "m": 3,
+        "quotient_dimensions": [
+          1,
+          4,
+          1
+        ],
+        "total_rank": 6
+      },
+      {
+        "m": 4,
+        "quotient_dimensions": [
+          1,
+          11,
+          11,
+          1
+        ],
+        "total_rank": 24
+      },
+      {
+        "m": 5,
+        "quotient_dimensions": [
+          1,
+          26,
+          66,
+          26,
+          1
+        ],
+        "total_rank": 120
+      },
+      {
+        "m": 6,
+        "quotient_dimensions": [
+          1,
+          57,
+          302,
+          302,
+          57,
+          1
+        ],
+        "total_rank": 720
+      },
+      {
+        "m": 7,
+        "quotient_dimensions": [
+          1,
+          120,
+          1191,
+          2416,
+          1191,
+          120,
+          1
+        ],
+        "total_rank": 5040
+      },
+      {
+        "m": 8,
+        "quotient_dimensions": [
+          1,
+          247,
+          4293,
+          15619,
+          15619,
+          4293,
+          247,
+          1
+        ],
+        "total_rank": 40320
+      }
+    ],
+    "caps": {
+      "max_source_grade": 3,
+      "total_chain_basis": 5000,
+      "weight_block": 800
+    },
+    "characters": [
+      {
+        "ambient_relation_checked_through": 3,
+        "comparison_or_heldout": "comparison",
+        "dimension": 2,
+        "distinct_symmetric_weights": true,
+        "eigenvalues": [
+          2,
+          3
+        ],
+        "factor_count": 2,
+        "s_D_c_degree": [
+          3,
+          3,
+          0,
+          1
+        ],
+        "top_det_exponent": 1,
+        "universal_numerator": [
+          1,
+          6
+        ]
+      },
+      {
+        "ambient_relation_checked_through": 4,
+        "comparison_or_heldout": "comparison",
+        "dimension": 2,
+        "distinct_symmetric_weights": true,
+        "eigenvalues": [
+          2,
+          3
+        ],
+        "factor_count": 3,
+        "s_D_c_degree": [
+          4,
+          4,
+          0,
+          2
+        ],
+        "top_det_exponent": 3,
+        "universal_numerator": [
+          1,
+          60,
+          216
+        ]
+      },
+      {
+        "ambient_relation_checked_through": 5,
+        "comparison_or_heldout": "comparison",
+        "dimension": 2,
+        "distinct_symmetric_weights": true,
+        "eigenvalues": [
+          2,
+          3
+        ],
+        "factor_count": 4,
+        "s_D_c_degree": [
+          5,
+          5,
+          0,
+          3
+        ],
+        "top_det_exponent": 6,
+        "universal_numerator": [
+          1,
+          414,
+          14904,
+          46656
+        ]
+      },
+      {
+        "ambient_relation_checked_through": 6,
+        "comparison_or_heldout": "comparison",
+        "dimension": 2,
+        "distinct_symmetric_weights": true,
+        "eigenvalues": [
+          2,
+          3
+        ],
+        "factor_count": 5,
+        "s_D_c_degree": [
+          6,
+          6,
+          0,
+          4
+        ],
+        "top_det_exponent": 10,
+        "universal_numerator": [
+          1,
+          2460,
+          566352,
+          19128960,
+          60466176
+        ]
+      },
+      {
+        "ambient_relation_checked_through": 7,
+        "comparison_or_heldout": "comparison",
+        "dimension": 2,
+        "distinct_symmetric_weights": true,
+        "eigenvalues": [
+          2,
+          3
+        ],
+        "factor_count": 6,
+        "s_D_c_degree": [
+          7,
+          7,
+          0,
+          5
+        ],
+        "top_det_exponent": 15,
+        "universal_numerator": [
+          1,
+          13566,
+          16517088,
+          3567691008,
+          136714023936,
+          470184984576
+        ]
+      },
+      {
+        "ambient_relation_checked_through": 8,
+        "comparison_or_heldout": "comparison",
+        "dimension": 2,
+        "distinct_symmetric_weights": true,
+        "eigenvalues": [
+          2,
+          3
+        ],
+        "factor_count": 7,
+        "s_D_c_degree": [
+          8,
+          8,
+          0,
+          6
+        ],
+        "top_det_exponent": 21,
+        "universal_numerator": [
+          1,
+          71820,
+          416872008,
+          463799831040,
+          116697482431488,
+          5628114265374720,
+          21936950640377856
+        ]
+      },
+      {
+        "ambient_relation_checked_through": 9,
+        "comparison_or_heldout": "comparison",
+        "dimension": 2,
+        "distinct_symmetric_weights": true,
+        "eigenvalues": [
+          2,
+          3
+        ],
+        "factor_count": 8,
+        "s_D_c_degree": [
+          9,
+          9,
+          0,
+          7
+        ],
+        "top_det_exponent": 28,
+        "universal_numerator": [
+          1,
+          371454,
+          9639938952,
+          49146347654208,
+          63693666559853568,
+          20984048830831951872,
+          1358094677195152687104,
+          6140942214464815497216
+        ]
+      },
+      {
+        "ambient_relation_checked_through": 5,
+        "comparison_or_heldout": "comparison",
+        "dimension": 3,
+        "distinct_symmetric_weights": true,
+        "eigenvalues": [
+          2,
+          3,
+          5
+        ],
+        "factor_count": 2,
+        "s_D_c_degree": [
+          6,
+          5,
+          1,
+          3
+        ],
+        "top_det_exponent": 2,
+        "universal_numerator": [
+          1,
+          31,
+          -300,
+          -900
+        ]
+      },
+      {
+        "ambient_relation_checked_through": 9,
+        "comparison_or_heldout": "comparison",
+        "dimension": 3,
+        "distinct_symmetric_weights": true,
+        "eigenvalues": [
+          2,
+          3,
+          5
+        ],
+        "factor_count": 3,
+        "s_D_c_degree": [
+          10,
+          7,
+          3,
+          7
+        ],
+        "top_det_exponent": 7,
+        "universal_numerator": [
+          1,
+          590,
+          -11609,
+          -2448270,
+          72883800,
+          296514000,
+          -14337000000,
+          -21870000000
+        ]
+      },
+      {
+        "ambient_relation_checked_through": 14,
+        "comparison_or_heldout": "new source-replay heldout",
+        "dimension": 3,
+        "distinct_symmetric_weights": true,
+        "eigenvalues": [
+          2,
+          3,
+          5
+        ],
+        "factor_count": 4,
+        "s_D_c_degree": [
+          15,
+          9,
+          6,
+          12
+        ],
+        "top_det_exponent": 16,
+        "universal_numerator": [
+          1,
+          7739,
+          2253179,
+          -2255452019,
+          227952304500,
+          51317350180200,
+          -10254708530550000,
+          440511945137370000,
+          16563433870143000000,
+          -1437503974512300000000,
+          13334118639030000000000,
+          382159223100000000000000,
+          430467210000000000000000
+        ]
+      }
+    ],
+    "collisions_and_functor_boundaries": {
+      "identity_cube_reduced_numerator": [
+        1,
+        20,
+        48,
+        20,
+        1
+      ],
+      "identity_cube_universal_N": [
+        1,
+        17,
+        -9,
+        -65,
+        65,
+        9,
+        -17,
+        -1
+      ],
+      "literal_binary_unipotent_symmetric_power_traces": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "mixed_symmetry_coefficients": [
+        14,
+        15
+      ],
+      "premature_fixed_generator_dimensions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "proportional_mixed_symmetry_coefficients": [
+        12,
+        12
+      ],
+      "ramified_invariant_dimensions": [
+        1,
+        2,
+        5,
+        8,
+        13,
+        18,
+        25,
+        32,
+        41,
+        50,
+        61,
+        72,
+        85
+      ],
+      "unipotent_character_collision_is_not_matrix_identity": true,
+      "universal_vs_reduced_denominator_degrees": [
+        10,
+        7
+      ]
+    },
+    "cube_degree_two_invariant_quotient_dimension": 1,
+    "false_betti_inference_rejected": true,
+    "finite_superdeterminant_constructed": false,
+    "full_resolution_computed": false,
+    "literal_koszul_sources": [
+      {
+        "chain_dimensions": [
+          8,
+          4
+        ],
+        "dimension": 2,
+        "factor_count": 3,
+        "grade": 1,
+        "homology_factor_class_traces": [
+          {
+            "identity": 4,
+            "three_cycle": -2,
+            "transposition": 0
+          },
+          {
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          }
+        ],
+        "homology_weight_rows": [
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              0
+            ]
+          }
+        ],
+        "literal_differential_sha256": "5b52ba63569b4f6a8939818335c92e195206a0e0fa7ff2735e669914578672af",
+        "source_d_squared_zero": true,
+        "weight_block_count": 4
+      },
+      {
+        "chain_dimensions": [
+          27,
+          32,
+          6
+        ],
+        "dimension": 2,
+        "factor_count": 3,
+        "grade": 2,
+        "homology_factor_class_traces": [
+          {
+            "identity": 1,
+            "three_cycle": 1,
+            "transposition": -1
+          },
+          {
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          },
+          {
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          }
+        ],
+        "homology_weight_rows": [
+          {
+            "differential_ranks": [
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              6
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              6,
+              0
+            ]
+          }
+        ],
+        "literal_differential_sha256": "e80624a166a1cad119596a5f0f7519a525902460dfdb227e9e18f675bd5c7a16",
+        "source_d_squared_zero": true,
+        "weight_block_count": 7
+      },
+      {
+        "chain_dimensions": [
+          64,
+          108,
+          48,
+          4
+        ],
+        "dimension": 2,
+        "factor_count": 3,
+        "grade": 3,
+        "homology_factor_class_traces": [
+          {
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          },
+          {
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          },
+          {
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          },
+          {
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          }
+        ],
+        "homology_weight_rows": [
+          {
+            "differential_ranks": [
+              1,
+              0,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              9
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              8
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              4,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              7
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              7,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              6
+            ]
+          },
+          {
+            "differential_ranks": [
+              12,
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              12,
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              7,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              6,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              4,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              7,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              8,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1,
+              0,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              9,
+              0
+            ]
+          }
+        ],
+        "literal_differential_sha256": "f269c79e8a8f78996cd27a99b6f71c2acef679e71ba27727a5478e0d768303e2",
+        "source_d_squared_zero": true,
+        "weight_block_count": 10
+      },
+      {
+        "chain_dimensions": [
+          9,
+          6
+        ],
+        "dimension": 3,
+        "factor_count": 2,
+        "grade": 1,
+        "homology_factor_class_traces": [
+          {
+            "identity": 3,
+            "transposition": -3
+          },
+          {
+            "identity": 0,
+            "transposition": 0
+          }
+        ],
+        "homology_weight_rows": [
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              0,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              2,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              0,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              0,
+              0
+            ]
+          }
+        ],
+        "literal_differential_sha256": "a62c1da74ee8ae70f8cd74c26ed5a8a27692ad320f0af54f7d6a33968899cefa",
+        "source_d_squared_zero": true,
+        "weight_block_count": 6
+      },
+      {
+        "chain_dimensions": [
+          36,
+          54,
+          15
+        ],
+        "dimension": 3,
+        "factor_count": 2,
+        "grade": 2,
+        "homology_factor_class_traces": [
+          {
+            "identity": 0,
+            "transposition": 0
+          },
+          {
+            "identity": 3,
+            "transposition": -3
+          },
+          {
+            "identity": 0,
+            "transposition": 0
+          }
+        ],
+        "homology_weight_rows": [
+          {
+            "differential_ranks": [
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              0,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              2,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              2,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              2,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              3,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              4,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              2,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              0,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              1,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              2,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              2,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              3,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              0,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              1,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              2,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              2,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              0,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              2,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              0,
+              0
+            ]
+          }
+        ],
+        "literal_differential_sha256": "695cf0fc2d60ad2095f7e9d18397f1f99b0b3e6b39870459ac57f8f26ff5df43",
+        "source_d_squared_zero": true,
+        "weight_block_count": 15
+      },
+      {
+        "chain_dimensions": [
+          100,
+          216,
+          135,
+          20
+        ],
+        "dimension": 3,
+        "factor_count": 2,
+        "grade": 3,
+        "homology_factor_class_traces": [
+          {
+            "identity": 0,
+            "transposition": 0
+          },
+          {
+            "identity": 1,
+            "transposition": 1
+          },
+          {
+            "identity": 0,
+            "transposition": 0
+          },
+          {
+            "identity": 0,
+            "transposition": 0
+          }
+        ],
+        "homology_weight_rows": [
+          {
+            "differential_ranks": [
+              1,
+              0,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              0,
+              6
+            ]
+          },
+          {
+            "differential_ranks": [
+              2,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              1,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              3,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              2,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              3,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              3,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              4,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              2,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              5,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1,
+              0,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              6,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              2,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              0,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              5,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              1,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              9,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              9,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              3,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              5,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              4,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              2,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              5,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              3,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              0,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              9,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              7,
+              13,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 1,
+                "transposition": 1
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              9,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              3,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              4,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              0,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              9,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              9,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              2,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              3,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              3,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              0,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              5,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              1,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              3,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              2,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              2,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              0,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              2,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              1,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1,
+              0,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              6,
+              0,
+              0
+            ]
+          }
+        ],
+        "literal_differential_sha256": "c8e31b0001629df8c0c4c141b4b16708d652f74dbd33a774c0cded6745ca39ce",
+        "source_d_squared_zero": true,
+        "weight_block_count": 28
+      },
+      {
+        "chain_dimensions": [
+          27,
+          10
+        ],
+        "dimension": 3,
+        "factor_count": 3,
+        "grade": 1,
+        "homology_factor_class_traces": [
+          {
+            "identity": 17,
+            "three_cycle": -7,
+            "transposition": -1
+          },
+          {
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          }
+        ],
+        "homology_weight_rows": [
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              0,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              3,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 5,
+                "three_cycle": -1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              1,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              0,
+              0
+            ]
+          }
+        ],
+        "literal_differential_sha256": "95aaf441ee780358e3fcb9d2efb88054d7b881fdddf09e0eaffd1f0ba7fe8793",
+        "source_d_squared_zero": true,
+        "weight_block_count": 10
+      },
+      {
+        "chain_dimensions": [
+          216,
+          270,
+          45
+        ],
+        "dimension": 3,
+        "factor_count": 3,
+        "grade": 2,
+        "homology_factor_class_traces": [
+          {
+            "identity": 11,
+            "three_cycle": 11,
+            "transposition": -9
+          },
+          {
+            "identity": 20,
+            "three_cycle": -10,
+            "transposition": 0
+          },
+          {
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          }
+        ],
+        "homology_weight_rows": [
+          {
+            "differential_ranks": [
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              0,
+              6
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              1,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              2,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              3,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              4,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              5,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              6,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              0,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              9,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              1,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              14,
+              3
+            ],
+            "homology": [
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              14,
+              3
+            ],
+            "homology": [
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              3,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              9,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              4,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              5,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              0,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              14,
+              3
+            ],
+            "homology": [
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              19,
+              3
+            ],
+            "homology": [
+              {
+                "identity": 2,
+                "three_cycle": 2,
+                "transposition": 0
+              },
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              14,
+              3
+            ],
+            "homology": [
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              4,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              0,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              14,
+              3
+            ],
+            "homology": [
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              14,
+              3
+            ],
+            "homology": [
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              2,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              3,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              0,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              9,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 2,
+                "three_cycle": -1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              1,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              2,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              0,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              1,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              6,
+              0,
+              0
+            ]
+          }
+        ],
+        "literal_differential_sha256": "90c9d7466b0a393f8586a70ac93b842584acd32d812484289b3fb9a2058589d6",
+        "source_d_squared_zero": true,
+        "weight_block_count": 28
+      },
+      {
+        "chain_dimensions": [
+          1000,
+          2160,
+          1215,
+          120
+        ],
+        "dimension": 3,
+        "factor_count": 3,
+        "grade": 3,
+        "homology_factor_class_traces": [
+          {
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          },
+          {
+            "identity": 65,
+            "three_cycle": 35,
+            "transposition": -25
+          },
+          {
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          },
+          {
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          }
+        ],
+        "homology_weight_rows": [
+          {
+            "differential_ranks": [
+              1,
+              0,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              0,
+              9
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              1,
+              8
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              4,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              2,
+              7
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              7,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              3,
+              6
+            ]
+          },
+          {
+            "differential_ranks": [
+              12,
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              4,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              12,
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              5,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              7,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              6,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              4,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              7,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              8,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1,
+              0,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              9,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              0,
+              8
+            ]
+          },
+          {
+            "differential_ranks": [
+              9,
+              7,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              1,
+              7
+            ]
+          },
+          {
+            "differential_ranks": [
+              18,
+              19,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              2,
+              6
+            ]
+          },
+          {
+            "differential_ranks": [
+              27,
+              30,
+              4
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              3,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              30,
+              36,
+              4
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              4,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              27,
+              30,
+              4
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              5,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              18,
+              19,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              6,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              9,
+              7,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              7,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              8,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              4,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              0,
+              7
+            ]
+          },
+          {
+            "differential_ranks": [
+              18,
+              19,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              1,
+              6
+            ]
+          },
+          {
+            "differential_ranks": [
+              33,
+              41,
+              4
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 4,
+                "three_cycle": 1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              2,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              45,
+              58,
+              6
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 6,
+                "three_cycle": 3,
+                "transposition": -2
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              45,
+              58,
+              6
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 6,
+                "three_cycle": 3,
+                "transposition": -2
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              4,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              33,
+              41,
+              4
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 4,
+                "three_cycle": 1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              5,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              18,
+              19,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              6,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              4,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              7,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              7,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              0,
+              6
+            ]
+          },
+          {
+            "differential_ranks": [
+              27,
+              30,
+              4
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              1,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              45,
+              58,
+              6
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 6,
+                "three_cycle": 3,
+                "transposition": -2
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              2,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              55,
+              69,
+              9
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 8,
+                "three_cycle": 5,
+                "transposition": -4
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              45,
+              58,
+              6
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 6,
+                "three_cycle": 3,
+                "transposition": -2
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              4,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              27,
+              30,
+              4
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              5,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              7,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              6,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              12,
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              0,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              30,
+              36,
+              4
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              1,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              45,
+              58,
+              6
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 6,
+                "three_cycle": 3,
+                "transposition": -2
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              2,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              45,
+              58,
+              6
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 6,
+                "three_cycle": 3,
+                "transposition": -2
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              3,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              30,
+              36,
+              4
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              4,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              12,
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              5,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              12,
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              0,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              27,
+              30,
+              4
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              1,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              33,
+              41,
+              4
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 4,
+                "three_cycle": 1,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              2,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              27,
+              30,
+              4
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 1,
+                "three_cycle": 1,
+                "transposition": -1
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              3,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              12,
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              4,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              7,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              6,
+              0,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              18,
+              19,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              6,
+              1,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              18,
+              19,
+              2
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              6,
+              2,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              7,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              6,
+              3,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              4,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              7,
+              0,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              9,
+              7,
+              1
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              7,
+              1,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              6,
+              4,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              7,
+              2,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              8,
+              0,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              3,
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              8,
+              1,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1,
+              0,
+              0
+            ],
+            "homology": [
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              9,
+              0,
+              0
+            ]
+          }
+        ],
+        "literal_differential_sha256": "c35adc3bcfeefdfd50f33ae9ffe4bc5659aa9cc1b207389f9a9392705d7f65e2",
+        "source_d_squared_zero": true,
+        "weight_block_count": 55
+      },
+      {
+        "chain_dimensions": [
+          81,
+          15
+        ],
+        "dimension": 3,
+        "factor_count": 4,
+        "grade": 1,
+        "homology_factor_class_traces": [
+          {
+            "double_transposition": -6,
+            "four_cycle": -12,
+            "identity": 66,
+            "three_cycle": -6,
+            "transposition": 12
+          },
+          {
+            "double_transposition": 0,
+            "four_cycle": 0,
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          }
+        ],
+        "homology_weight_rows": [
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              0,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 1,
+                "four_cycle": -1,
+                "identity": 5,
+                "three_cycle": -1,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              2,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              3,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              4,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              0,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 11,
+                "three_cycle": -1,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              1,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 11,
+                "three_cycle": -1,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              2,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              3,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 1,
+                "four_cycle": -1,
+                "identity": 5,
+                "three_cycle": -1,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              0,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 11,
+                "three_cycle": -1,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              1,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 1,
+                "four_cycle": -1,
+                "identity": 5,
+                "three_cycle": -1,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              2,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              0,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              0,
+              0
+            ]
+          }
+        ],
+        "literal_differential_sha256": "ee42a70ab6ac823975ad6e627b7dbb3f337dbceb5902de7ef8c19d321b461e02",
+        "source_d_squared_zero": true,
+        "weight_block_count": 15
+      },
+      {
+        "chain_dimensions": [
+          1296,
+          1215,
+          105
+        ],
+        "dimension": 3,
+        "factor_count": 4,
+        "grade": 2,
+        "homology_factor_class_traces": [
+          {
+            "double_transposition": -15,
+            "four_cycle": 45,
+            "identity": 249,
+            "three_cycle": 6,
+            "transposition": -63
+          },
+          {
+            "double_transposition": -21,
+            "four_cycle": -21,
+            "identity": 63,
+            "three_cycle": 0,
+            "transposition": 21
+          },
+          {
+            "double_transposition": 0,
+            "four_cycle": 0,
+            "identity": 0,
+            "three_cycle": 0,
+            "transposition": 0
+          }
+        ],
+        "homology_weight_rows": [
+          {
+            "differential_ranks": [
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              0,
+              8
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              1,
+              7
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              2,
+              6
+            ]
+          },
+          {
+            "differential_ranks": [
+              13,
+              2
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": 1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": -1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              3,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              14,
+              2
+            ],
+            "homology": [
+              {
+                "double_transposition": 1,
+                "four_cycle": 1,
+                "identity": 5,
+                "three_cycle": -1,
+                "transposition": -1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              4,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              13,
+              2
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": 1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": -1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              5,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              6,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              7,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              0,
+              8,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              0,
+              7
+            ]
+          },
+          {
+            "differential_ranks": [
+              16,
+              2
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              1,
+              6
+            ]
+          },
+          {
+            "differential_ranks": [
+              33,
+              3
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": 1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": -1
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              2,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              40,
+              4
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 2,
+                "identity": 12,
+                "three_cycle": 0,
+                "transposition": -4
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              3,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              40,
+              4
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 2,
+                "identity": 12,
+                "three_cycle": 0,
+                "transposition": -4
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              4,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              33,
+              3
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": 1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": -1
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              5,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              16,
+              2
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              6,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              1,
+              7,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              0,
+              6
+            ]
+          },
+          {
+            "differential_ranks": [
+              33,
+              3
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": 1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": -1
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              1,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              56,
+              4
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 2,
+                "identity": 16,
+                "three_cycle": 1,
+                "transposition": -2
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              2,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              62,
+              5
+            ],
+            "homology": [
+              {
+                "double_transposition": -2,
+                "four_cycle": 4,
+                "identity": 26,
+                "three_cycle": 2,
+                "transposition": -6
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              3,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              56,
+              4
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 2,
+                "identity": 16,
+                "three_cycle": 1,
+                "transposition": -2
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              4,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              33,
+              3
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": 1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": -1
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              5,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              2,
+              6,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              13,
+              2
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": 1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": -1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              0,
+              5
+            ]
+          },
+          {
+            "differential_ranks": [
+              40,
+              4
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 2,
+                "identity": 12,
+                "three_cycle": 0,
+                "transposition": -4
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              1,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              62,
+              5
+            ],
+            "homology": [
+              {
+                "double_transposition": -2,
+                "four_cycle": 4,
+                "identity": 26,
+                "three_cycle": 2,
+                "transposition": -6
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              2,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              62,
+              5
+            ],
+            "homology": [
+              {
+                "double_transposition": -2,
+                "four_cycle": 4,
+                "identity": 26,
+                "three_cycle": 2,
+                "transposition": -6
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              3,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              40,
+              4
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 2,
+                "identity": 12,
+                "three_cycle": 0,
+                "transposition": -4
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              4,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              13,
+              2
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": 1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": -1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              3,
+              5,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              14,
+              2
+            ],
+            "homology": [
+              {
+                "double_transposition": 1,
+                "four_cycle": 1,
+                "identity": 5,
+                "three_cycle": -1,
+                "transposition": -1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              0,
+              4
+            ]
+          },
+          {
+            "differential_ranks": [
+              40,
+              4
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 2,
+                "identity": 12,
+                "three_cycle": 0,
+                "transposition": -4
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              1,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              56,
+              4
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 2,
+                "identity": 16,
+                "three_cycle": 1,
+                "transposition": -2
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              2,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              40,
+              4
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 2,
+                "identity": 12,
+                "three_cycle": 0,
+                "transposition": -4
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              3,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              14,
+              2
+            ],
+            "homology": [
+              {
+                "double_transposition": 1,
+                "four_cycle": 1,
+                "identity": 5,
+                "three_cycle": -1,
+                "transposition": -1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              4,
+              4,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              13,
+              2
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": 1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": -1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              0,
+              3
+            ]
+          },
+          {
+            "differential_ranks": [
+              33,
+              3
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": 1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": -1
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              1,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              33,
+              3
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": 1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": -1
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              2,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              13,
+              2
+            ],
+            "homology": [
+              {
+                "double_transposition": -1,
+                "four_cycle": 1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": -1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              5,
+              3,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              6,
+              0,
+              2
+            ]
+          },
+          {
+            "differential_ranks": [
+              16,
+              2
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": -1,
+                "four_cycle": -1,
+                "identity": 3,
+                "three_cycle": 0,
+                "transposition": 1
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              6,
+              1,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              10,
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              6,
+              2,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              7,
+              0,
+              1
+            ]
+          },
+          {
+            "differential_ranks": [
+              4,
+              1
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              7,
+              1,
+              0
+            ]
+          },
+          {
+            "differential_ranks": [
+              1,
+              0
+            ],
+            "homology": [
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              },
+              {
+                "double_transposition": 0,
+                "four_cycle": 0,
+                "identity": 0,
+                "three_cycle": 0,
+                "transposition": 0
+              }
+            ],
+            "weight": [
+              8,
+              0,
+              0
+            ]
+          }
+        ],
+        "literal_differential_sha256": "ca52c51e4f1ef37bb977c0c8e75b3aa068a56d52d3d78f0056b0da06c3b7af6f",
+        "source_d_squared_zero": true,
+        "weight_block_count": 45
+      }
+    ],
+    "source_invariants_may_replace_full_base": false,
+    "status": "bounded exact source replay; classical all-grade theorem separately cited"
+  },
+  "source_contract": {
+    "arithmetic": "exact rational and integer",
+    "captured_sources": [
+      {
+        "commit": "ac1cc5eaf229087b6d805e908897c7c8c99a58b7",
+        "git_blob": "b232a40659a1e09d065b34603c6e74043223fd79",
+        "path": "claims/theorems/T-108500-pointwise-transform-defect-law.md",
+        "snapshot": "sources/T-108500.md"
+      },
+      {
+        "commit": "ac1cc5eaf229087b6d805e908897c7c8c99a58b7",
+        "git_blob": "f6c22bf9116de00959a7024b62faaf3a370f2754",
+        "path": "claims/theorems/T-108510-defect-codimension-law.md",
+        "snapshot": "sources/T-108510.md"
+      },
+      {
+        "commit": "7ee5e024e1d8c3dd187b40ea5d48f9c9ff46d95e",
+        "git_blob": "6036546493e416fdb44e57e6c9746e9a92844a5c",
+        "path": "research/l-families/atlas/generalized/SEGRE_KOSZUL_LIE_PARENT.md",
+        "snapshot": "sources/SEGRE_KOSZUL_LIE_PARENT.md"
+      }
+    ],
+    "characteristic": "zero",
+    "concurrent_ambient_bridge": {
+      "commit": "64c8664a2fee08ae2e249743d6f784a7bec61b83",
+      "path": "research/l-families/atlas/generalized/SEGRE_RECURRENCE_SYZYGY_BRIDGE.md",
+      "relation": "Different full ambient polynomial base; rank-three cube is comparison, not untouched heldout"
+    },
+    "primary_classical_source": {
+      "authors": "Raicu, Sam, Weyman",
+      "inspected_sections": [
+        "Proposition 2.7",
+        "3.2-3.5",
+        "3.11",
+        "Example 4.5"
+      ],
+      "title": "On some modules supported in the Chow variety",
+      "url": "https://arxiv.org/abs/2108.10910"
+    },
+    "runtime_imports": "none"
+  }
+}

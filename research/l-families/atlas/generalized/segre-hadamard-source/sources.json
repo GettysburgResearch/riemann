@@ -1,0 +1,41 @@
+{
+  "primary_classical_source": {
+    "url": "https://arxiv.org/abs/2108.10910",
+    "title": "On some modules supported in the Chow variety",
+    "authors": "Raicu, Sam, Weyman",
+    "inspected_sections": [
+      "Proposition 2.7",
+      "3.2-3.5",
+      "3.11",
+      "Example 4.5"
+    ]
+  },
+  "arithmetic": "exact rational and integer",
+  "concurrent_ambient_bridge": {
+    "path": "research/l-families/atlas/generalized/SEGRE_RECURRENCE_SYZYGY_BRIDGE.md",
+    "commit": "64c8664a2fee08ae2e249743d6f784a7bec61b83",
+    "relation": "Different full ambient polynomial base; rank-three cube is comparison, not untouched heldout"
+  },
+  "captured_sources": [
+    {
+      "path": "claims/theorems/T-108500-pointwise-transform-defect-law.md",
+      "git_blob": "b232a40659a1e09d065b34603c6e74043223fd79",
+      "commit": "ac1cc5eaf229087b6d805e908897c7c8c99a58b7",
+      "snapshot": "sources/T-108500.md"
+    },
+    {
+      "path": "claims/theorems/T-108510-defect-codimension-law.md",
+      "git_blob": "f6c22bf9116de00959a7024b62faaf3a370f2754",
+      "commit": "ac1cc5eaf229087b6d805e908897c7c8c99a58b7",
+      "snapshot": "sources/T-108510.md"
+    },
+    {
+      "path": "research/l-families/atlas/generalized/SEGRE_KOSZUL_LIE_PARENT.md",
+      "git_blob": "6036546493e416fdb44e57e6c9746e9a92844a5c",
+      "commit": "7ee5e024e1d8c3dd187b40ea5d48f9c9ff46d95e",
+      "snapshot": "sources/SEGRE_KOSZUL_LIE_PARENT.md"
+    }
+  ],
+  "characteristic": "zero",
+  "runtime_imports": "none"
+}
