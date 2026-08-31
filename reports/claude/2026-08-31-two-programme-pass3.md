@@ -185,6 +185,23 @@ smaller than the observed threshold — the dichotomy is a corpus
 pattern beyond current inequalities, and "does positive-end-only
 force f >= 3?" is deposited as the sharpest open question.
 
+**Certified Epstein wall point (Lane 4; T-108518)**: the lab's first
+PROVED off-critical-line zero — Z(s, 10i) has a real zero in
+(81/100, 41/50) (FE partner in (9/50, 19/100)). Method: self-dual
+theta -> incomplete-gamma representation (derived inline; verified
+against the independent Chowla-Selberg formula to ~1e-40 at two
+points), then directed-rounding interval evaluation (mpmath.iv,
+dps 120) at rational sigma with three proved truncation bounds
+(Gamma(a,x) <= x^{a-1}e^{-x} for the term bound; a theta-geometric
+lattice-tail bound; a ratio-1/2 series truncation) and
+reflection-identity checks on the gamma enclosures. Certified margins
+of order 1 against interval widths ~5e-18. Honesty: the phenomenon is
+classical (Bateman-Grosswald real zeros; CITATION-NEEDED), Epstein
+zetas are not zeta, and nothing here bears on RH — the contribution
+is the proof-grade anchor for the lab's rectangular bifurcation story
+and the certification template; the complex archipelago point is
+deposited as the next target with its missing ingredients listed.
+
 ## Process notes (honesty trail)
 
 - The X-108510 replay's mixed-triple test was written expecting the

@@ -136,4 +136,17 @@ point. Findings, stated with the campaign's grid caveat below:
   moduli curve — "zeros leave the line where a different CM basin
   begins" — is deposited as the campaign's question, with these
   measurements as its first data and NO claim beyond them.
+
+## Certification anchor (2026-08-31 continuation; T-108518)
+
+The lab's first PROVED zero: `Z(s, 10i)` has a real zero in
+`(81/100, 41/50)` off the critical line, certified by
+directed-rounding interval arithmetic on the incomplete-gamma
+representation with explicit tail bounds
+(standalone/2026-08-31-epstein-wall-certificate/,
+epstein/wall_certificate.py + .json). Phenomenon classical
+(Bateman-Grosswald; CITATION-NEEDED); every other zero statement in
+this claim remains NON_DIRECTED_HIGH_PRECISION. The complex
+archipelago-point certification is deposited there as the next
+target, with the template's missing ingredients listed.
 ```

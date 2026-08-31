@@ -1,0 +1,78 @@
+{
+ "target": {
+  "z": "10*i",
+  "form": "m^2 + 100 n^2 (disc -400)",
+  "normalized_Q": "(m^2 + 100 n^2)/10"
+ },
+ "rh_established": false,
+ "note": "phenomenon classical (Bateman-Grosswald real zeros; CITATION-NEEDED); certificate new to the lab. Epstein zeta != Riemann zeta; no bearing on RH.",
+ "cross_check_float": {
+  "0.6": {
+   "incomplete_gamma": "2.077211813862635446141896",
+   "chowla_selberg": "2.077211813862635446141896",
+   "abs_diff": "9.1835e-40"
+  },
+  "0.8": {
+   "incomplete_gamma": "0.3049953292800229399818624",
+   "chowla_selberg": "0.3049953292800229399818624",
+   "abs_diff": "5.7397e-41"
+  }
+ },
+ "certificate": [
+  {
+   "sigma": "3/4",
+   "interval_lo": "1.11331163927371664130037556123",
+   "interval_hi": "1.11331163927371664658020799349",
+   "width": "5.2798e-18",
+   "lattice_vectors": 80,
+   "tail_bound": "2.6399e-18",
+   "sign": "POSITIVE"
+  },
+  {
+   "sigma": "17/20",
+   "interval_lo": "-1.15816481787417878933684401639",
+   "interval_hi": "-1.15816481787417878405701158413",
+   "width": "5.2798e-18",
+   "lattice_vectors": 80,
+   "tail_bound": "2.6399e-18",
+   "sign": "NEGATIVE"
+  }
+ ],
+ "refinement": [
+  {
+   "sigma": "39/50",
+   "sign": "POSITIVE",
+   "interval_lo": "0.681604252896869460209583",
+   "interval_hi": "0.6816042528968694654894154"
+  },
+  {
+   "sigma": "79/100",
+   "sign": "POSITIVE",
+   "interval_lo": "0.5038964737959393063746238",
+   "interval_hi": "0.5038964737959393116544563"
+  },
+  {
+   "sigma": "4/5",
+   "sign": "POSITIVE",
+   "interval_lo": "0.3049953292800229373419462",
+   "interval_hi": "0.3049953292800229426217786"
+  },
+  {
+   "sigma": "81/100",
+   "sign": "POSITIVE",
+   "interval_lo": "0.08150536470144138357563468",
+   "interval_hi": "0.08150536470144138885546711"
+  },
+  {
+   "sigma": "41/50",
+   "sign": "NEGATIVE",
+   "interval_lo": "-0.1707288084009684190668552",
+   "interval_hi": "-0.1707288084009684137870227"
+  }
+ ],
+ "conclusion": {
+  "verified": true,
+  "statement": "Z_Q(s) has a real zero sigma_0 with 3/4 < sigma_0 < 17/20 \u2014 strictly off the critical line Re s = 1/2 \u2014 and by the functional equation a partner zero in (3/20, 1/4)."
+ },
+ "arithmetic_class": "PROVED (directed-rounding interval arithmetic, mpmath.iv dps 120; all truncations bounded explicitly; iv.gamma cross-checked by the reflection identity)"
+}
