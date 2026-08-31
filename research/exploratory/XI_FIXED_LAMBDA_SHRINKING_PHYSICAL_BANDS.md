@@ -1,6 +1,9 @@
-# One fixed Xi calibration: preregistered shrinking physical-band floors
+# One fixed Xi calibration: certified shrinking physical-band floors
 
-Status: PREREGISTRATION, before new numerical evaluation.
+Status: proposed finite source-bound theorem and directed-ball certificate.
+Sections1-4 were frozen before new arithmetic at design
+`f7cc9bea51c6ab0b969acdc6e279ed09f608acac`; this final note adds proof and
+outcomes without changing that panel. Independent review is still required.
 Base: HA `64165b8c805d182dbc43f2e5855e64a86cf1aaf9`.
 Analytic parent: LB `a7479e85fdc2a464cdc753021435cfef7a1f3910`.
 No parent scientific file is modified. This is finite physical-band
@@ -116,3 +119,145 @@ Full coverage, strict bool/int/rational/byte/work caps, source corruption,
 resealed report attacks, normal/-O replay and independent review are required.
 No actual innerness, global divisor capture, outer-metric transport,
 infinite Bessel bound, weighted divergence, HS infinity or RH is concluded.
+
+## 5. Proof of the physical finite-frame theorem
+
+PB1. Let the conditional inner premise in section1 hold, and let E be the
+span of any one of the four literal HA prefixes. All nodes are distinct
+simple denominator zeros and the inherited nonzero guards show R0 is
+nonzero there. Thus they survive division by the common Gamma, and their
+unit Hardy kernels e_b belong to K_B. No new arithmetic identity or
+assumption of free source coefficients enters this statement.
+
+For any inner U, the normalized reproducing-kernel identity is
+
+    P_(UH2)e_b=conjugate(U(b)) U e_b.
+
+Use the isometric Laplace realization on L2(0,infinity). Evaluation at ih
+gives the modulus of the integral of exp(-ht) Ue_b(t) as
+
+    |U(ih)| sqrt(2y)/sqrt((h+y)^2+x^2).
+
+Split that integral at D. Cauchy-Schwarz on the two pieces, together with
+||Ue_b||=1, gives
+
+    sqrt(2h)|Laplace(Ue_b)(h)|
+       <= sqrt(1-exp(-2hD)) ||Pi_[0,D]Ue_b||+exp(-hD).
+
+Rearrange and multiply by |U(b)|. Since |Gamma|<=1 inside C+,
+|U(b)|>=|rawTheta0(b)| and |U(ih)|>=|rawTheta0(ih)|. The resulting
+quantity is monotone in both nonnegative moduli, yielding exactly l_D
+in section1. This is the proof of LB1-2 at the pinned LB source, repeated
+to specify the operator, normalization and scalar-only substitutions.
+It does NOT assert an order relation between band-compressed operators.
+
+PB2. Write F: C^N -> E for the synthesis map of these unit kernels.
+The inherited complete normalized Gram certificate says
+
+    ||F||^2=||F*F||<C_prefix, hence FF*<=C_prefix P_E.
+
+For S=Pi_[0,D]P_(UH2), finite-dimensional trace cyclicity and positivity
+give sum_j ||S e_bj||^2 <= C_prefix ||S P_E||_HS^2. Apply PB1 for
+each j, choosing only the best h in the preregistered finite set. The
+operator-norm lower bound follows because every e_bj is a unit vector
+in E. This proves the two inequalities of section2. Since E is a
+subspace of K_B, enlarging the input space to K_B cannot decrease norm
+or squared Hilbert-Schmidt norm (the latter may be infinite). No finite
+lower bound here proves that it is infinite.
+
+PB3. Every directed-ball input used in PB1 contains the exact value:
+the HA root's disk is contained in its center-plus/minus-radius rectangle;
+its raw value ball is already proved for that disk. The fresh axis ball
+comes from the reflected completed Xi logarithmic derivative at
+sigma=h+1/2>1. The functional equation and differentiation give the
+formula in section2, with the SAME fixed lambda_(64). All denominators
+are proved positive. Ball arithmetic is outward; an unresolved positive
+part is safely replaced by zero. A positive reported endpoint is at
+most the exact PB1 value. Squaring nonnegative endpoints and dividing
+by the exact inherited C_prefix preserves a lower bound. Final decimal
+floors are strictly below each positive rational endpoint.
+
+## 6. Complete preregistered outcomes
+
+The following decimals are EXACT terminating rational strict floors,
+not rounded midpoint estimates. Each norm bound holds already for the
+14-node prefix, and hence for each larger prefix and for K_B, subject
+to the same unpaid inner premise:
+
+| D | strict norm floor | positive cells | zero-floor cells |
+|---|---:|---:|---:|
+| 1/256 | 0.010246276673 | 242 | 198 |
+| 1/1024 | 0.006033839168 | 160 | 280 |
+| 1/4096 | 0.003284576367 | 80 | 360 |
+
+Each of the40 nodes has a positive best witness at EVERY one of the
+three widths. All838 zero-floor cells remain in the fixture; none was
+dropped. There are1320 cells, exactly as preregistered. The full lower
+endpoint and the Laplace, tail, bracket, denominator and raw-modulus
+enclosures are retained for every cell.
+
+| prefix | squared HS floor, D=1/256 | D=1/1024 | D=1/4096 |
+|---:|---:|---:|---:|
+| 14 | 0.0002763434053678 | 0.0000955538803072 | 0.0000280819286077 |
+| 22 | 0.0003161629493892 | 0.0001093530249566 | 0.0000320300089711 |
+| 31 | 0.0003635507425742 | 0.0001264211670816 | 0.0000368694134846 |
+| 40 | 0.0004038295912204 | 0.0001432989644834 | 0.0000416271711265 |
+
+PB4. ALL39 adjacent full-rectangle comparisons pass, including gaps
+between the widely separated boxes; all40 full x-intervals lie strictly
+inside unambiguous, pairwise distinct unit cells. For any horizontal
+interval J of length L consider the selected nodes in its Carleson box
+J x (0,L]. A singleton contributes at most L. For selected indices
+i1<...<iq, q>=2, summing all consecutive original gap inequalities
+between i1 and iq gives
+
+    x_iq-x_i1 >= y_i1+y_iq+2 sum_(i1<j<iq)y_j
+               >= sum_(j selected)y_j.
+
+The actual span is at most L. Thus every box satisfies mu(box)<=L.
+This proves a finite global Carleson-box constant<=1, not just the
+unit-cell claim. It uses every original intermediate height, so omitted
+points of a particular box cause no gap in the argument. The unit-cell
+costs are also<=1. Neither conclusion replaces the normalized Gram
+ceilings in PB2, nor asserts an infinite source is Bessel.
+
+## 7. Certificate inheritance, arithmetic and audit boundary
+
+The immutable source manifest lists35 complete Git/LF records: HA5,
+LB5, the frozen preregistration and24 recursive FC/BC/OA or native
+source records. Every frozen source byte string is checked against its
+Git blob identity and LF-normalized SHA256. Child manifests must close
+inside this list. The HA and LB full fixtures are authenticated including
+their payload seals, all four artifact seals and the pinned runtime.
+Only unchanged, hash-locked BC/OA helper code executes locally. The HA
+19.7MB root/Gram certificate is inherited, not reproduced or freshly
+certified by this producer. This is a theorem-dependency boundary, not
+an assertion that hashes themselves prove root existence.
+
+The pinned runtime is CPython3.12.10, python-flint0.9.0, FLINT3.6.0,
+WindowsAMD64 with44 authenticated native binaries and aggregate
+`36c07323af58dec0eb6fd82a99bf871924eb69f1833d9af626fc09437ae5b0cc`.
+Fresh computations use256-bit outward balls. Axis ell is formed before
+endpoint export: zeta' at a very large positive sigma is never silently
+zeroed or exported as a standalone huge-denominator rational. The
+reported ell and Theta balls remain within the rational resource cap.
+
+Arithmetic is MIXED: DIRECTED_BALL_ENCLOSURES, EXACT_RATIONAL and
+CERTIFIED_INTEGER_COVERAGE. Rounding is pinned-FLINT outward rounding,
+then exact rational comparisons and downward strict decimal floors.
+The producer is not a machine certificate of the analytic inner premise,
+the Laplace theorem, inherited root proofs, or any infinite quantifier.
+
+Limits are explicit: source bytes24MB, report bytes8MB, integer4096bits,
+JSON600000nodes/depth24, work10000units, fixed40nodes/1320cells/256bits.
+The32 tests include independent exact prefix aggregation, full-interval
+gap and membership checks, fixed-grid and bool/int/rational/cap guards,
+runtime/source/artifact authentication and fresh fully resealed report
+attacks. Negative controls force failure of the gap certificate and
+unresolved unit membership; neither may be disguised as a positive
+geometric statement. Normal and optimized Python must both pass.
+
+This extends the frozen LB physical estimate to ALL40 HA nodes with
+ONE lambda_(64) and two additional shrinking widths. It is a finite,
+conditional physical lower bound, not a new zero-census method, proof
+of actual innerness, cofinal capture, physical free energy, or RH.
