@@ -93,6 +93,32 @@ ord alpha = 14) — the JOINT entry the `ord(alpha^2) = 7` form demands
 held-out rounds, seven predictions, zero misses. Next posed test:
 ord-9 entering at m = 19, with nothing new at m = 16..18.
 
+## Collapse lemma at the {0, +-1}-valued slices (PROVED; 5 lines)
+
+At the three tempered torsion slices `(a, b) in {(0,1), (1,1), (-1,1)}`
+the h-sequence takes values in `{0, +-1}` (immediate induction on
+`h_k = a h_{k-1} - h_{k-2}`: periods 4, 6, 6), so for EVERY odd `m`,
+`h_k^m = h_k` pointwise and the whole defect series collapses to the
+original local factor:
+
+```text
+sum_k h_k^m T^k = 1 / (1 - aT + T^2),  i.e.
+N_m (1 - aT + T^2) = det(1 - Sym^m(A) T)   exactly at these slices.
+```
+
+These three slices are the ONLY real points with this property
+(`h_1 = a` forces `a in {0, +-1}`), and the lemma makes every
+collision statement there finitely checkable: the defect numerator at
+`a in {0, +-1}` is the fully explicit cyclotomic-type product
+`det(1 - Sym^m(A)T)/(1 - aT + T^2)`, so its repeated factors are
+Sym^m-monomial coincidences — which is why the `a`- and `(a -+ 1)`-
+factors dominate the collision loci with ever-growing multiplicities.
+(Machine cross-check: exact for odd m <= 11, k < 60, and the a = +-2
+slices provably do not collapse.) The remaining OPEN part of the
+mechanism is the slices where `h` leaves `{0, +-1}` (`a^2 = 2`, the
+golden points, ...), where `h_k^m != h_k` and the entry threshold
+`m = 2 ord(alpha^2) + 1` still awaits a derivation.
+
 ## Reading (conjecture-generating; mechanism OPEN)
 
 The defect tower RESONATES at the torsion points of the Satake
