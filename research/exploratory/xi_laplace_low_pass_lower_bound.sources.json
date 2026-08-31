@@ -1,0 +1,75 @@
+{
+  "authoring_base": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+  "contract": {
+    "analytic_quantifiers": "all-D positivity and conditional cofinal criterion are written proofs, not finite-grid certificates",
+    "arithmetic_class": "MIXED",
+    "arithmetic_components": [
+      "DIRECTED_BALL_ENCLOSURES",
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "common_factor": "two scalar modulus comparisons at b and ih; no band Loewner implication",
+    "exclusions": "no actual Xi Bessel/alignment divergence proof, outer metric, cofinal capture, RH, or parameter selection",
+    "finite_coverage": "all14nodes x4widths x11calibrationheights; no omitted failed grid values",
+    "inner_premise": "Theta0 and Theta5 inner, separately for each fixed lambda32/64/128",
+    "output": "Fourier low-pass [0,D], boundary-dx Hardy norm, physical P_U not multiplication alone",
+    "primitive": "actual Xi, fixed lambda per anchor, fourteen surviving BC nodes rebuilt locally",
+    "primitive_replay": "local root certificates and raw values rerun; BC complete boundary census not needed or rerun here",
+    "rounding": "pinned FLINT outward balls; tails below 2^-512 widened to an outward ball enclosing [0,2^-512]; exact dyadic endpoints and rational final floors; no float acceptance"
+  },
+  "preregistration": "2df9e543c07eba1f17d18043afc7dda110304b03",
+  "runtime": {
+    "flint": "3.6.0",
+    "machine": "AMD64",
+    "native_files": 44,
+    "native_files_sha256": "36c07323af58dec0eb6fd82a99bf871924eb69f1833d9af626fc09437ae5b0cc",
+    "python": "3.12.10",
+    "python_flint": "0.9.0",
+    "system": "Windows"
+  },
+  "schema": "xi_laplace_low_pass_lower_bound-sources-v1",
+  "sources": [
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "2860d9c9bb90f4423f17f0d272229e78a30ae62b",
+      "path": "research/exploratory/XI_COMPANION_BOX_COUNT_COMPRESSION.md",
+      "role": "BCproof",
+      "sha256_lf": "22d11bf3dccb72fa25633deeee063164611dbaa977c5e66fca84f4350ae79c65"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "698211f63f2268f421faa1ed76d4dd8749a4b311",
+      "path": "research/exploratory/xi_companion_box_count_compression.py",
+      "role": "BCproducer",
+      "sha256_lf": "cea67ec0b5335ecef7a6df8d453859a249b73d1b716b8c87565709d27ec95e58"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "346a452e1c3136f19139debe1620577ef41e6b43",
+      "path": "research/exploratory/xi_companion_box_count_compression.json",
+      "role": "BCfixture",
+      "sha256_lf": "9148321153c7319518dc9475adee61f2ba5b646663f1cb35b762f31f280834e4"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "fcbfb819e09f97f9f4e9af60141ffe198238bf1c",
+      "path": "research/exploratory/xi_companion_box_count_compression.sources.json",
+      "role": "BCmanifest",
+      "sha256_lf": "b916af0286ddd686e700b56032a2f10f9b0bc08212bed6ca60bb99270b85299f"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "ea093cc50fb8b9de415ce4e71bc370ffe456d8ed",
+      "path": "tests/test_xi_companion_box_count_compression.py",
+      "role": "BCtests",
+      "sha256_lf": "e9b40aaa100f1f8ae74ad2d90978b8e7621303ac750a847cbfc8ec045a2e05b5"
+    },
+    {
+      "commit": "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+      "git_blob": "fa24f9c8e0a87709d1a297a4e72136c1135d066c",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+      "role": "positive_full_theta_kernel",
+      "sha256_lf": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246"
+    }
+  ]
+}

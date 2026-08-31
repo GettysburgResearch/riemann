@@ -181,6 +181,53 @@ optimistically rounded value. The Gram row-sum bound must be outward and
 the final trace/norm floors strict rational comparisons. The full declared
 grid is retained even when a cell gives no positive bound.
 
+When exp(-hD)<2^-512, the code deliberately WIDENS it to an outward ball
+enclosing [0,2^-512] before using it in the bound. The ball radius itself
+rounds outward; its endpoints may extend slightly past that target interval.
+This prevents huge rational denominators and can only weaken the lower
+bound. No tiny term is silently set equal to zero.
+
 The finite ball results are unconditional evaluations; their Hardy operator
 interpretation explicitly assumes innerness. The all-D positivity and LB3
 are written analytic arguments. No finite grid certifies their quantifiers.
+
+## 6. Result of the complete preregistered grid
+
+All twelve operator/width cells give a strictly positive bound, and every
+one of the fourteen nodes has a positive bound for every declared width.
+The following entries are strict operator-norm lower bounds (exact terminating
+decimal rationals); they are not approximations to the actual operator norm.
+
+| D | lambda32 | lambda64 | lambda128 |
+|---|---:|---:|---:|
+| 1/4 | 0.028821 | 0.014155 | 0.006141 |
+| 1/16 | 0.028596 | 0.014155 | 0.006141 |
+| 1/64 | 0.022245 | 0.013479 | 0.006076 |
+| 1/256 | 0.013492 | 0.009297 | 0.005122 |
+
+For D=1/256, strict squared-HS lower bounds from the normalized Gram estimate
+are respectively0.0002733628,0.0001128045,0.0000341993. The fixture contains
+the exact floors for all twelve cells, all616 node/calibration/width records,
+all33 axis calibrations and the fresh fourteen local root certificates.
+Grid points with nonpositive certified brackets remain present with bound0.
+Repeated displayed floors at different widths reflect the conservative finite
+calibration grid, not a theorem that the actual band energy is constant.
+
+The calibration identity is also checked by a direct reflected Xi/gamma
+product at nine selected anchor/height pairs in the producer and all33 pairs
+in the tests. A one-factor Blaschke control has an independently integrated
+exact Fourier-band energy. A pure exponential-delay control has zero band
+energy below its delay and is correctly not assigned a positive lower bound.
+The rational trace recombination, positive-part inequality and complete grid
+coverage are separately checked; arithmetic guards remain active under -O.
+
+    python -B research/exploratory/xi_laplace_low_pass_lower_bound.py --check
+    python -B -O research/exploratory/xi_laplace_low_pass_lower_bound.py --check
+    python -B -m unittest discover -s tests -p test_xi_laplace_low_pass_lower_bound.py
+
+These commands require the pinned OA FLINT runtime. The producer executes
+authenticated BC/OA helpers but does not rerun BC's boundary census, which
+is unnecessary for a lower bound from the declared surviving nodes. It DOES
+rebuild every local node, noncommon guard and raw value from primitive Xi.
+The tested arithmetic is MIXED directed-ball enclosure, exact rational and
+complete finite coverage; the analytic arguments are not formally verified.
