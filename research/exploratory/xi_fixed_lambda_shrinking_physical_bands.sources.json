@@ -1,0 +1,282 @@
+{
+  "authoring_base": "64165b8c805d182dbc43f2e5855e64a86cf1aaf9",
+  "contract": {
+    "RH": false,
+    "actual_innerness_proved": false,
+    "all_failed_or_zero_grid_cells_retained": true,
+    "analytic_quantifiers_machine_certified": false,
+    "arithmetic_class": "MIXED",
+    "arithmetic_components": [
+      "DIRECTED_BALL_ENCLOSURES",
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "caps": {
+      "container_length": 100000,
+      "grid_cells": 1320,
+      "integer_bits": 4096,
+      "json_depth": 24,
+      "json_nodes": 600000,
+      "nodes": 40,
+      "precision_bits": 256,
+      "report_bytes": 8000000,
+      "series_cap": 2,
+      "source_bindings": 40,
+      "source_bytes": 24000000,
+      "string_length": 4096,
+      "work_units": 10000
+    },
+    "cofinal_capture": false,
+    "fresh_arithmetic": "11 axis values,1320 node/width/height bounds,12 prefix-band summaries,39 gap tests,40 cell-membership tests",
+    "inner_premise": "Theta0 and Theta5 inner with Gamma common divisor, U and B reduced factors; UNPAID",
+    "metric": "only inherited normalized Gram ceilings2.342,2.396,2.414,2.420 in HS denominator; Carleson cost is not Gram norm",
+    "physical_operator": "Pi_[0,D] P_(UH2) P_E in boundary-dx Hardy norm; same lower bounds for E replaced by K_B",
+    "primitive": "actual unrescaled Xi; ONE lambda_(64) fixed by exact digamma formula, not numeric64",
+    "raw_comparison": "scalar at b and ih only; NEVER band Loewner",
+    "rounding": "pinned FLINT outward balls; exact rational acceptance; strict final downward decimal floors12/16",
+    "source_inheritance": "HA40 root/raw/fullGram and LB axis certificates inherited from authenticated frozen sources; no new root/census replay"
+  },
+  "design": "f7cc9bea51c6ab0b969acdc6e279ed09f608acac",
+  "direct_source_count": 11,
+  "documentation": [
+    {
+      "role": "Ball enclosure, certified comparisons, exact rational inputs, series cap",
+      "url": "https://python-flint.readthedocs.io/en/latest/general.html"
+    },
+    {
+      "role": "Taylor-series gamma, exp, zeta; no numerical finite differences",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb_series.html"
+    },
+    {
+      "role": "Pinned library-version series API documentation",
+      "url": "https://github.com/flintlib/flint/blob/v3.6.0/doc/source/acb_poly.rst"
+    },
+    {
+      "role": "rigorous non-approx matrix inverse and arithmetic API",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb_mat.html"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "64165b8c805d182dbc43f2e5855e64a86cf1aaf9",
+      "git_blob": "3e9a15404532e72255acb3e55751987eb29a4043",
+      "path": "research/exploratory/XI_FIXED_LAMBDA_HELDOUT_ALIGNMENT.md",
+      "sha256_lf": "592c8313e5e46c68af6e5b3b9aa46c2724e84f51394cac3bd6934d0139eb26b7"
+    },
+    {
+      "commit": "64165b8c805d182dbc43f2e5855e64a86cf1aaf9",
+      "git_blob": "b472d18a3404ceebbde76e02bd6346678f4bdcfa",
+      "path": "research/exploratory/xi_fixed_lambda_heldout_alignment.py",
+      "sha256_lf": "1ad06f941f1c24f4732ef4db772c915f8bdf080abbdf2b8754816ea70fff01f0"
+    },
+    {
+      "commit": "64165b8c805d182dbc43f2e5855e64a86cf1aaf9",
+      "git_blob": "e5f1bc4e97be9b92f715e24b3670d64171071334",
+      "path": "research/exploratory/xi_fixed_lambda_heldout_alignment.json",
+      "sha256_lf": "eb6464cc2eed61f8aecf2eff6e2f36a5ee5f850252237f0f95bd9b0e4e51b206"
+    },
+    {
+      "commit": "64165b8c805d182dbc43f2e5855e64a86cf1aaf9",
+      "git_blob": "0dac7784b5c2a912d44c479e069e045b9f1b85e1",
+      "path": "research/exploratory/xi_fixed_lambda_heldout_alignment.sources.json",
+      "sha256_lf": "3bb7fdccc56b8e7ac2e3c6fb1c0a62874645893683e8d626f4cdca8becdf9ad6"
+    },
+    {
+      "commit": "64165b8c805d182dbc43f2e5855e64a86cf1aaf9",
+      "git_blob": "c244417d71e8f31d59d3bbafb29543643bbb8c06",
+      "path": "tests/test_xi_fixed_lambda_heldout_alignment.py",
+      "sha256_lf": "8ece2393f6039ae3ea42b137cd079ef727a0db932de440f9a641020c9a0b0392"
+    },
+    {
+      "commit": "a7479e85fdc2a464cdc753021435cfef7a1f3910",
+      "git_blob": "90e6bd89ca9a23c401d6d947c04a9d548f6b3030",
+      "path": "research/exploratory/XI_LAPLACE_LOW_PASS_LOWER_BOUND.md",
+      "sha256_lf": "c56d29037b85c45398bcb34dc7fb8450ba0e4b0f32fa7293edcaf5d1d2ea4b64"
+    },
+    {
+      "commit": "a7479e85fdc2a464cdc753021435cfef7a1f3910",
+      "git_blob": "6c04e959ac106ebbc1e33621cb50cb121da2b27b",
+      "path": "research/exploratory/xi_laplace_low_pass_lower_bound.py",
+      "sha256_lf": "cc5fa52704fb26742ded7c2605ee561f676166c7be1974090bbe8161d2b3a009"
+    },
+    {
+      "commit": "a7479e85fdc2a464cdc753021435cfef7a1f3910",
+      "git_blob": "7c5a3813dec44105c729fe907011f23512ed79a0",
+      "path": "research/exploratory/xi_laplace_low_pass_lower_bound.json",
+      "sha256_lf": "1f6b37f040eff6fc9d67f98a9b9af4ff2dd0e96ac84d3019a7d15f82ee529252"
+    },
+    {
+      "commit": "a7479e85fdc2a464cdc753021435cfef7a1f3910",
+      "git_blob": "ca17786f2fea78b1ca30a114a21637233f8d9af3",
+      "path": "research/exploratory/xi_laplace_low_pass_lower_bound.sources.json",
+      "sha256_lf": "96be4f20f167972f491c784090f4d9adcdcc8eb2afcdff13125a1e9648c26782"
+    },
+    {
+      "commit": "a7479e85fdc2a464cdc753021435cfef7a1f3910",
+      "git_blob": "e7ea79ce7ab8aebb5cf3edd77cbb13c0bd4eb034",
+      "path": "tests/test_xi_laplace_low_pass_lower_bound.py",
+      "sha256_lf": "6e03d1a7e1285d30602bb2057144dacff820567bdbbca8d72548415c4fd46b35"
+    },
+    {
+      "commit": "f7cc9bea51c6ab0b969acdc6e279ed09f608acac",
+      "git_blob": "54363a5f28a7e202dad2898dab64d5430a0fdc5f",
+      "path": "research/exploratory/XI_FIXED_LAMBDA_SHRINKING_PHYSICAL_BANDS.md",
+      "sha256_lf": "19e4f2c6ce491c430b458cab92eb4c467730f24c1759a63c1f71e893a2beffac"
+    },
+    {
+      "commit": "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+      "git_blob": "27e4db71377788b6e03b14005035d59c9e930611",
+      "path": "research/exploratory/XI_FIXED_LAMBDA_JOINT_BOX_COMPRESSION.md",
+      "sha256_lf": "7f6efdcd6375d14db36ade51c073d3c04dc73f5e2c9c5cd27aa94d8107497460"
+    },
+    {
+      "commit": "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+      "git_blob": "62f94b71810a49646830694cab25bb14c1eab470",
+      "path": "research/exploratory/xi_fixed_lambda_joint_box_compression.py",
+      "sha256_lf": "69e51a36a9180df97ae6b994104308a46b9ab84331027e1d8ed288c6490d5300"
+    },
+    {
+      "commit": "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+      "git_blob": "d3ef5908f68a7b3025428bf55e8e1fa81970e273",
+      "path": "research/exploratory/xi_fixed_lambda_joint_box_compression.json",
+      "sha256_lf": "504071292138882ad5192fc62f765edc5615c3140542c7f597651679ba682cdb"
+    },
+    {
+      "commit": "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+      "git_blob": "62eb2fa59113bc87158659e538fb1fea5b7f7ca4",
+      "path": "research/exploratory/xi_fixed_lambda_joint_box_compression.sources.json",
+      "sha256_lf": "b775a9c8bc054312644116b362960b1c1e950d23a8dfc82d556d86f67a30c819"
+    },
+    {
+      "commit": "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+      "git_blob": "6cdac911a7e62d12273d7eafd2fdef199b282d33",
+      "path": "tests/test_xi_fixed_lambda_joint_box_compression.py",
+      "sha256_lf": "deb2696c5c160e0da970c31f35e5ed472baabc4fb1d3db831b4e48371935ae80"
+    },
+    {
+      "commit": "24544028cd033ea66a6b64bec254da5ea43230c9",
+      "git_blob": "db03a1b0c1f5abc0e27be92c4232968f68f816b8",
+      "path": "research/exploratory/XI_FIXED_LAMBDA_HELDOUT_ALIGNMENT.md",
+      "sha256_lf": "714bf76812826957269bb26d10c3a919909ad7af97b0ec9becfb8a4e5f0c79bd"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "2860d9c9bb90f4423f17f0d272229e78a30ae62b",
+      "path": "research/exploratory/XI_COMPANION_BOX_COUNT_COMPRESSION.md",
+      "sha256_lf": "22d11bf3dccb72fa25633deeee063164611dbaa977c5e66fca84f4350ae79c65"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "698211f63f2268f421faa1ed76d4dd8749a4b311",
+      "path": "research/exploratory/xi_companion_box_count_compression.py",
+      "sha256_lf": "cea67ec0b5335ecef7a6df8d453859a249b73d1b716b8c87565709d27ec95e58"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "346a452e1c3136f19139debe1620577ef41e6b43",
+      "path": "research/exploratory/xi_companion_box_count_compression.json",
+      "sha256_lf": "9148321153c7319518dc9475adee61f2ba5b646663f1cb35b762f31f280834e4"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "fcbfb819e09f97f9f4e9af60141ffe198238bf1c",
+      "path": "research/exploratory/xi_companion_box_count_compression.sources.json",
+      "sha256_lf": "b916af0286ddd686e700b56032a2f10f9b0bc08212bed6ca60bb99270b85299f"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "ea093cc50fb8b9de415ce4e71bc370ffe456d8ed",
+      "path": "tests/test_xi_companion_box_count_compression.py",
+      "sha256_lf": "e9b40aaa100f1f8ae74ad2d90978b8e7621303ac750a847cbfc8ec045a2e05b5"
+    },
+    {
+      "commit": "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+      "git_blob": "fa24f9c8e0a87709d1a297a4e72136c1135d066c",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+      "sha256_lf": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246"
+    },
+    {
+      "commit": "e669d257711d8d4a6a0ab7aeb21254fd220f7dc3",
+      "git_blob": "a11b631e88343ad0782e2d7db511282eb473a30c",
+      "path": "research/exploratory/XI_FIXED_LAMBDA_JOINT_BOX_COMPRESSION.md",
+      "sha256_lf": "d8e1f3cc061fc0671b45ef26e09c83b0e165545e3c56e049cf301221377ebc95"
+    },
+    {
+      "commit": "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+      "git_blob": "625cc29f67510bd58ed667f6f5fec242b84e4a11",
+      "path": "research/exploratory/XI_COMPANION_OFF_AXIS_BALL_CERTIFICATES.md",
+      "sha256_lf": "020597b67044d996e12e2f76655550557cc33cd52cf717553e2fc6be9d48e396"
+    },
+    {
+      "commit": "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+      "git_blob": "b0cecac35dcdb3a583ae891609d7d89b378b537b",
+      "path": "research/exploratory/xi_companion_off_axis_ball_certificates.py",
+      "sha256_lf": "319e9abf775199e1747b0642dd99f24e52d9700bf71c04385d02cf5be9aac15f"
+    },
+    {
+      "commit": "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+      "git_blob": "e7cdd61fcc046d142ccc95b5796d3106a79139c4",
+      "path": "research/exploratory/xi_companion_off_axis_ball_certificates.json",
+      "sha256_lf": "268e67f84bdae5d41a4acb95df96fff18e00c3d0ae3430a9be8c89f633ff7c5b"
+    },
+    {
+      "commit": "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+      "git_blob": "06434dc776028d155b8107f8cb5ea8687a3ce9dc",
+      "path": "research/exploratory/xi_companion_off_axis_ball_certificates.sources.json",
+      "sha256_lf": "eec3231292d8d5b030c68ffaed9520dd5697657dcd17f15c91e4f34ee8f9be4c"
+    },
+    {
+      "commit": "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+      "git_blob": "f1f323d579968949cf07c662dd245172380759ba",
+      "path": "tests/test_xi_companion_off_axis_ball_certificates.py",
+      "sha256_lf": "3cfd3a3c2177ccbb242aeb5a9fa7e83b27859f9485a532489304019499b8dcd7"
+    },
+    {
+      "commit": "7aed2ec0b99b9d7f2fb94a774922a83d5b84a870",
+      "git_blob": "cd74bd06267eb4d60bc977353d11f6a0fb72ba6a",
+      "path": "research/exploratory/COPRIME_INFINITE_HEIGHT_PHYSICAL_CAPTURE.md",
+      "sha256_lf": "b9ab266898129389b94a9ed494b140422fc823552c6b69bf22ed36a9dbb2e7f7"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "7fbf3731f286ddfc9eb1d10ede5941ab2156817a",
+      "path": "claims/lemmas/L-106620-mesoscopic-frozen-riemann-siegel-gauge.md",
+      "sha256_lf": "23e368f246606b0a8b4f53bec9e65e1dec21bdd207197387461268b4ca1bb7d0"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "16ab64a193e59608c9e2c9fd9762addc58809c3f",
+      "path": "claims/lemmas/L-106610-riemann-siegel-gauge-factorization.md",
+      "sha256_lf": "11c87fd9b50c309249b76f39fd87c3d20953779355a39a0338ef281d3cb57c87"
+    },
+    {
+      "commit": "d38961c15fc76d671cef4fddfc92d3c866af4fd5",
+      "git_blob": "9688e30825fcc3d2b13570539bf03299407eae87",
+      "path": "research/exploratory/XI_COMPANION_IMAGINARY_AXIS_SAMPLING.md",
+      "sha256_lf": "a9d6b51b3b2f1ccb388fb8d74e115023c622115b169d3214f071ef9005034081"
+    },
+    {
+      "commit": "9da33e7ea2b15a4badb3cb436e38e54762ad5e1d",
+      "git_blob": "e592a4c031876f56f07d28b7e18a8a7cf6e826f4",
+      "path": "research/exploratory/XI_COMPANION_GLOBAL_HEIGHT_BOUNDARY.md",
+      "sha256_lf": "5bf33ffd58c3fe277f4bfb0408f0805eae1b2f34aab49bb71e4c714afb80dc6d"
+    },
+    {
+      "commit": "d76a1a8eb8ec40b19a351af95439b9a6514bee87",
+      "git_blob": "797f7b581580ad5a441c7702015c64a53eca6f4d",
+      "path": "research/exploratory/XI_COMPANION_GENERIC_PARAMETER_COPRIMALITY.md",
+      "sha256_lf": "55aa96745c3f269ac464ea7c0b8227e14e7d8ceb33f8bec2fc13f9642b33d44d"
+    }
+  ],
+  "recursive_source_count": 35,
+  "runtime": {
+    "flint": "3.6.0",
+    "machine": "AMD64",
+    "native_files": 44,
+    "native_files_sha256": "36c07323af58dec0eb6fd82a99bf871924eb69f1833d9af626fc09437ae5b0cc",
+    "python": "3.12.10",
+    "python_flint": "0.9.0",
+    "system": "Windows"
+  },
+  "schema": "xi_fixed_lambda_shrinking_physical_bands-sources-v1"
+}
