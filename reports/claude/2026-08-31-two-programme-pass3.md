@@ -169,6 +169,22 @@ by weighted homogeneity the (a,b)-resonance atlas is universal for
 the plane. Machine: matrix/tu_atlas.py + tu_atlas.json (stdlib-exact,
 n <= 20000 coefficientwise in Z[t,u], 9591-prime wedge scan, ALL OK).
 
+**Two-invariant phase diagram (Lane 3; O-108517)**: over a 45-graph
+exact corpus (capped-ladder families k = 2..6, all GP(n,k) n <= 11,
+Moebius ladders; exhaustive-subset Cheeger constants h, exhaustive
+max-cut frustration indices f, Sturm verdicts with adaptive cuts),
+the two structural invariants organize the breach sides exactly:
+positive-end breach <=> h <= 1/4 (16/16 vs 0/29, empty gap
+(1/4, 1/3)); among all non-Ramanujan rows the FIRST breach side is
+predicted by f = 2 (negative entry, all five NEG-only rows) vs f = 4
+(positive entry, all eight POS rows); the positive families go
+both-end at CONSTANT f = 4 as the corridor dilutes frustration
+density (f/m: 2/15 -> 2/33). Honest calibration: the Cheeger
+inequality would prove a breach only below h ~ 0.0858, three times
+smaller than the observed threshold — the dichotomy is a corpus
+pattern beyond current inequalities, and "does positive-end-only
+force f >= 3?" is deposited as the sharpest open question.
+
 ## Process notes (honesty trail)
 
 - The X-108510 replay's mixed-triple test was written expecting the
