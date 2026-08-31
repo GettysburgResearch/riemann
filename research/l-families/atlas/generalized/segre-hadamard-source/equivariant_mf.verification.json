@@ -1,0 +1,1747 @@
+{
+  "all_degree_trace_claim_uses_explicit_delta_power_formula": true,
+  "finite_order_trace_controls": {
+    "arithmetic_Frobenius_realization_asserted": false,
+    "degree_one_ordinary_determinant_low_to_high": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        -1,
+        0
+      ]
+    ],
+    "independent_finite_order_control": {
+      "Tor_weight_rows": [
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          "homological_degree": 0,
+          "internal_degree": 1,
+          "trace": [
+            0,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          "homological_degree": 1,
+          "internal_degree": 3,
+          "trace": [
+            0,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          "homological_degree": 2,
+          "internal_degree": 5,
+          "trace": [
+            0,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          "homological_degree": 3,
+          "internal_degree": 7,
+          "trace": [
+            0,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          "homological_degree": 4,
+          "internal_degree": 9,
+          "trace": [
+            0,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          "homological_degree": 5,
+          "internal_degree": 11,
+          "trace": [
+            0,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              -1
+            ]
+          ],
+          "homological_degree": 6,
+          "internal_degree": 13,
+          "trace": [
+            0,
+            0
+          ]
+        }
+      ],
+      "actual_Chow_invariant_character": [
+        [
+          1,
+          0
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "diagonal": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "invariant_base_character": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "odd_module_character": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "source_generator_weights": {
+        "a": [
+          1,
+          0
+        ],
+        "b": [
+          0,
+          1
+        ],
+        "delta": [
+          1,
+          0
+        ],
+        "r": [
+          0,
+          1
+        ],
+        "s": [
+          0,
+          -1
+        ],
+        "x": [
+          1,
+          0
+        ],
+        "z": [
+          -1,
+          0
+        ]
+      },
+      "visible_resolution_Euler_rows_checked": true
+    },
+    "primary": {
+      "Tor_weight_rows": [
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              -1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "homological_degree": 0,
+          "internal_degree": 1,
+          "trace": [
+            0,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              1,
+              0
+            ],
+            [
+              -1,
+              0
+            ]
+          ],
+          "homological_degree": 1,
+          "internal_degree": 3,
+          "trace": [
+            0,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              -1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "homological_degree": 2,
+          "internal_degree": 5,
+          "trace": [
+            0,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              1,
+              0
+            ],
+            [
+              -1,
+              0
+            ]
+          ],
+          "homological_degree": 3,
+          "internal_degree": 7,
+          "trace": [
+            0,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              -1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "homological_degree": 4,
+          "internal_degree": 9,
+          "trace": [
+            0,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              1,
+              0
+            ],
+            [
+              -1,
+              0
+            ]
+          ],
+          "homological_degree": 5,
+          "internal_degree": 11,
+          "trace": [
+            0,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              -1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "homological_degree": 6,
+          "internal_degree": 13,
+          "trace": [
+            0,
+            0
+          ]
+        }
+      ],
+      "actual_Chow_invariant_character": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "diagonal": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "invariant_base_character": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "odd_module_character": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "source_generator_weights": {
+        "a": [
+          0,
+          1
+        ],
+        "b": [
+          1,
+          0
+        ],
+        "delta": [
+          -1,
+          0
+        ],
+        "r": [
+          -1,
+          0
+        ],
+        "s": [
+          1,
+          0
+        ],
+        "x": [
+          0,
+          -1
+        ],
+        "z": [
+          0,
+          1
+        ]
+      },
+      "visible_resolution_Euler_rows_checked": true
+    },
+    "primary_squared_operator": {
+      "Tor_weight_rows": [
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "homological_degree": 0,
+          "internal_degree": 1,
+          "trace": [
+            2,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "homological_degree": 1,
+          "internal_degree": 3,
+          "trace": [
+            2,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "homological_degree": 2,
+          "internal_degree": 5,
+          "trace": [
+            2,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "homological_degree": 3,
+          "internal_degree": 7,
+          "trace": [
+            2,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "homological_degree": 4,
+          "internal_degree": 9,
+          "trace": [
+            2,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "homological_degree": 5,
+          "internal_degree": 11,
+          "trace": [
+            2,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "homological_degree": 6,
+          "internal_degree": 13,
+          "trace": [
+            2,
+            0
+          ]
+        }
+      ],
+      "actual_Chow_invariant_character": [
+        [
+          1,
+          0
+        ],
+        [
+          -4,
+          0
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          -32,
+          0
+        ],
+        [
+          63,
+          0
+        ],
+        [
+          -108,
+          0
+        ],
+        [
+          172,
+          0
+        ],
+        [
+          -256,
+          0
+        ],
+        [
+          365,
+          0
+        ],
+        [
+          -500,
+          0
+        ],
+        [
+          666,
+          0
+        ],
+        [
+          -864,
+          0
+        ],
+        [
+          1099,
+          0
+        ]
+      ],
+      "diagonal": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "invariant_base_character": [
+        [
+          1,
+          0
+        ],
+        [
+          -2,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          -10,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          -28,
+          0
+        ],
+        [
+          44,
+          0
+        ],
+        [
+          -60,
+          0
+        ],
+        [
+          85,
+          0
+        ],
+        [
+          -110,
+          0
+        ],
+        [
+          146,
+          0
+        ],
+        [
+          -182,
+          0
+        ],
+        [
+          231,
+          0
+        ]
+      ],
+      "odd_module_character": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          -4,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          -16,
+          0
+        ],
+        [
+          28,
+          0
+        ],
+        [
+          -40,
+          0
+        ],
+        [
+          60,
+          0
+        ],
+        [
+          -80,
+          0
+        ],
+        [
+          110,
+          0
+        ],
+        [
+          -140,
+          0
+        ],
+        [
+          182,
+          0
+        ],
+        [
+          -224,
+          0
+        ]
+      ],
+      "source_generator_weights": {
+        "a": [
+          -1,
+          0
+        ],
+        "b": [
+          1,
+          0
+        ],
+        "delta": [
+          1,
+          0
+        ],
+        "r": [
+          1,
+          0
+        ],
+        "s": [
+          1,
+          0
+        ],
+        "x": [
+          -1,
+          0
+        ],
+        "z": [
+          -1,
+          0
+        ]
+      },
+      "visible_resolution_Euler_rows_checked": true
+    },
+    "second_power_degree_one_trace": [
+      2,
+      0
+    ]
+  },
+  "finite_resolution_or_module_vanishing_inferred_from_trace": false,
+  "generic_noncollapse_controls": [
+    {
+      "Tor_weight_rows": [
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              12,
+              0
+            ],
+            [
+              27,
+              0
+            ]
+          ],
+          "homological_degree": 0,
+          "internal_degree": 1,
+          "trace": [
+            39,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              3888,
+              0
+            ],
+            [
+              8748,
+              0
+            ]
+          ],
+          "homological_degree": 1,
+          "internal_degree": 3,
+          "trace": [
+            12636,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              1259712,
+              0
+            ],
+            [
+              2834352,
+              0
+            ]
+          ],
+          "homological_degree": 2,
+          "internal_degree": 5,
+          "trace": [
+            4094064,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              408146688,
+              0
+            ],
+            [
+              918330048,
+              0
+            ]
+          ],
+          "homological_degree": 3,
+          "internal_degree": 7,
+          "trace": [
+            1326476736,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              132239526912,
+              0
+            ],
+            [
+              297538935552,
+              0
+            ]
+          ],
+          "homological_degree": 4,
+          "internal_degree": 9,
+          "trace": [
+            429778462464,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              42845606719488,
+              0
+            ],
+            [
+              96402615118848,
+              0
+            ]
+          ],
+          "homological_degree": 5,
+          "internal_degree": 11,
+          "trace": [
+            139248221838336,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              13881976577114112,
+              0
+            ],
+            [
+              31234447298506752,
+              0
+            ]
+          ],
+          "homological_degree": 6,
+          "internal_degree": 13,
+          "trace": [
+            45116423875620864,
+            0
+          ]
+        }
+      ],
+      "actual_Chow_invariant_character": [
+        [
+          1,
+          0
+        ],
+        [
+          62,
+          0
+        ],
+        [
+          3601,
+          0
+        ],
+        [
+          136214,
+          0
+        ],
+        [
+          4780153,
+          0
+        ],
+        [
+          145863494,
+          0
+        ],
+        [
+          4414172113,
+          0
+        ],
+        [
+          124318840022,
+          0
+        ],
+        [
+          3555877524265,
+          0
+        ],
+        [
+          96900746747750,
+          0
+        ],
+        [
+          2707254299395009,
+          0
+        ],
+        [
+          72738807084355958,
+          0
+        ],
+        [
+          2011664726449094809,
+          0
+        ]
+      ],
+      "diagonal": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "invariant_base_character": [
+        [
+          1,
+          0
+        ],
+        [
+          26,
+          0
+        ],
+        [
+          1729,
+          0
+        ],
+        [
+          41210,
+          0
+        ],
+        [
+          1762489,
+          0
+        ],
+        [
+          39890474,
+          0
+        ],
+        [
+          1478322001,
+          0
+        ],
+        [
+          32692143770,
+          0
+        ],
+        [
+          1145146550185,
+          0
+        ],
+        [
+          25066141601930,
+          0
+        ],
+        [
+          857373082302529,
+          0
+        ],
+        [
+          18682175749187834,
+          0
+        ],
+        [
+          632438056281559321,
+          0
+        ]
+      ],
+      "odd_module_character": [
+        [
+          0,
+          0
+        ],
+        [
+          39,
+          0
+        ],
+        [
+          1014,
+          0
+        ],
+        [
+          54795,
+          0
+        ],
+        [
+          1278654,
+          0
+        ],
+        [
+          50983491,
+          0
+        ],
+        [
+          1141444590,
+          0
+        ],
+        [
+          41135906955,
+          0
+        ],
+        [
+          905165559870,
+          0
+        ],
+        [
+          31332681603795,
+          0
+        ],
+        [
+          684305881077390,
+          0
+        ],
+        [
+          23285761370169051,
+          0
+        ],
+        [
+          506889748749251166,
+          0
+        ]
+      ],
+      "source_generator_weights": {
+        "a": [
+          2,
+          0
+        ],
+        "b": [
+          3,
+          0
+        ],
+        "delta": [
+          324,
+          0
+        ],
+        "r": [
+          12,
+          0
+        ],
+        "s": [
+          27,
+          0
+        ],
+        "x": [
+          8,
+          0
+        ],
+        "z": [
+          18,
+          0
+        ]
+      },
+      "visible_resolution_Euler_rows_checked": true
+    },
+    {
+      "Tor_weight_rows": [
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              9,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "homological_degree": 0,
+          "internal_degree": 1,
+          "trace": [
+            10,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              81,
+              0
+            ],
+            [
+              9,
+              0
+            ]
+          ],
+          "homological_degree": 1,
+          "internal_degree": 3,
+          "trace": [
+            90,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              729,
+              0
+            ],
+            [
+              81,
+              0
+            ]
+          ],
+          "homological_degree": 2,
+          "internal_degree": 5,
+          "trace": [
+            810,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              6561,
+              0
+            ],
+            [
+              729,
+              0
+            ]
+          ],
+          "homological_degree": 3,
+          "internal_degree": 7,
+          "trace": [
+            7290,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              59049,
+              0
+            ],
+            [
+              6561,
+              0
+            ]
+          ],
+          "homological_degree": 4,
+          "internal_degree": 9,
+          "trace": [
+            65610,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              531441,
+              0
+            ],
+            [
+              59049,
+              0
+            ]
+          ],
+          "homological_degree": 5,
+          "internal_degree": 11,
+          "trace": [
+            590490,
+            0
+          ]
+        },
+        {
+          "dimension": 2,
+          "generator_eigenvalues": [
+            [
+              4782969,
+              0
+            ],
+            [
+              531441,
+              0
+            ]
+          ],
+          "homological_degree": 6,
+          "internal_degree": 13,
+          "trace": [
+            5314410,
+            0
+          ]
+        }
+      ],
+      "actual_Chow_invariant_character": [
+        [
+          1,
+          0
+        ],
+        [
+          36,
+          0
+        ],
+        [
+          1270,
+          0
+        ],
+        [
+          36000,
+          0
+        ],
+        [
+          999271,
+          0
+        ],
+        [
+          27128556,
+          0
+        ],
+        [
+          734709340,
+          0
+        ],
+        [
+          19849248000,
+          0
+        ],
+        [
+          536111266141,
+          0
+        ],
+        [
+          14475984744276,
+          0
+        ],
+        [
+          390866297668210,
+          0
+        ],
+        [
+          10553469469452000,
+          0
+        ],
+        [
+          284944867172120611,
+          0
+        ]
+      ],
+      "diagonal": [
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "invariant_base_character": [
+        [
+          1,
+          0
+        ],
+        [
+          30,
+          0
+        ],
+        [
+          910,
+          0
+        ],
+        [
+          24870,
+          0
+        ],
+        [
+          679771,
+          0
+        ],
+        [
+          18378660,
+          0
+        ],
+        [
+          496896220,
+          0
+        ],
+        [
+          13418215140,
+          0
+        ],
+        [
+          362346287941,
+          0
+        ],
+        [
+          9783513211890,
+          0
+        ],
+        [
+          264159269665930,
+          0
+        ],
+        [
+          7132313519814810,
+          0
+        ],
+        [
+          192572822484732511,
+          0
+        ]
+      ],
+      "odd_module_character": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          300,
+          0
+        ],
+        [
+          9010,
+          0
+        ],
+        [
+          246000,
+          0
+        ],
+        [
+          6716620,
+          0
+        ],
+        [
+          181572600,
+          0
+        ],
+        [
+          4908512620,
+          0
+        ],
+        [
+          132547998000,
+          0
+        ],
+        [
+          3579286265830,
+          0
+        ],
+        [
+          96642200136900,
+          0
+        ],
+        [
+          2609379120266830,
+          0
+        ],
+        [
+          70453355396916000,
+          0
+        ]
+      ],
+      "source_generator_weights": {
+        "a": [
+          3,
+          0
+        ],
+        "b": [
+          1,
+          0
+        ],
+        "delta": [
+          9,
+          0
+        ],
+        "r": [
+          9,
+          0
+        ],
+        "s": [
+          1,
+          0
+        ],
+        "x": [
+          27,
+          0
+        ],
+        "z": [
+          3,
+          0
+        ]
+      },
+      "visible_resolution_Euler_rows_checked": true
+    }
+  ],
+  "owned_sha256_lf": {
+    "EQUIVARIANT_MATRIX_FACTORIZATION_TRACE.md": "9817dede36593c31621ee0922000e0e260a100a1ef32ba250d1f1f57c04bdb87",
+    "EQUIVARIANT_MF_REPLAY.md": "147aeb3614e58ebf57ba294f6f4562c5edb7e679628c84fa42bfd0f3f858ed99",
+    "equivariant_mf_replay.py": "1840a5ec110a5a04f16f1631ac989d1551bdf158d58799976f580b559de73903"
+  },
+  "schema": "segre-hadamard-equivariant-MF-trace/v1",
+  "source": {
+    "freeze": "a895f47628b0bc7c7ee5e0392df2f79c24166f92",
+    "pins": [
+      [
+        "MATHEMATICS.md",
+        "bbd847461b4955a93b4533fa687cdd8724e2347c"
+      ],
+      [
+        "verification.json",
+        "310ffc95cb6eaf19281de52dd18d2f2884bc0f49"
+      ]
+    ]
+  },
+  "test_sha256_lf": "aac52ce5b798e2585606614b98cc3d43fa171e31f6225d400e0a2f6b218e59b6"
+}
