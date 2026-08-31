@@ -156,3 +156,14 @@ These are outcomes of this exact sufficient-criterion panel. No failure
 is claimed impossible at all radii, and none asserts a missing companion
 root. The known-positive control is not counted among the seven new
 criterion successes.
+
+Implementation provenance: the initial complete-panel prototype, preserved
+at 9cb2989fedf3d5624b8c1f492d4c5b52ecae14bb, used the algebraically identical
+operation y/2 instead of JP's literal qarb(1/2)*y. Directed-ball radius and
+margin endpoints differed, although all known-control polynomial/error
+enclosures and strict outcomes agreed. The exact known-control stream
+check correctly rejected that port. The final implementation restores
+JP's literal multiplication and reruns ALL26 points; no parameter or
+criterion is changed. The original observed counts were7new,8total and
+650passing arcs and are retained here, not relabelled as an accepted
+artifact before the exact stream check passed.

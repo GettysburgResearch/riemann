@@ -274,7 +274,7 @@ def point(index, row, parent):
             require(q > 0 and 2 * q < lam, "quadratic discriminant")
             d = (lam * lam - 2 * lam * q).sqrt()
             y = 2 * lam * q / (lam + d)
-            radius = y / 2
+            radius = oa.qarb(jp.RATIO) * y
             result.update(d=oa.rbounds(d), y=oa.rbounds(y), radius=oa.rbounds(radius))
             require(0 < radius < y and radius < 2 * d, "quadratic radius")
             margin = qt.scalar_lower(abs(c) * radius * (d - radius / 2))
