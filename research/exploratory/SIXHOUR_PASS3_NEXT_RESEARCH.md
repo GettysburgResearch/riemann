@@ -143,6 +143,45 @@ must not be set to one. A successful canonical coefficient identity is
 not a substitute for this decoder. This older task remains important even
 if the new auxiliary-function geometry continues to improve.
 
+The already authenticated local target is concrete:
+
+    U=64, (P,Q,g,c,d)=(6,35,1,409457,168821),
+    c=71*73*79, d=401*421,
+    (N,M)=(1005930209094,997518551435).
+
+The 24 bilateral Boolean histories have twelve coefficients +1/60 and twelve
+coefficients -1/60. Their sum is zero, while their literal diagonal is 1/150
+before the squared physical prefactor. The next equality to establish or
+refute FROM THE NATIVE SOURCE is
+
+    Z_a(t) = integral_(pi(omega)=a) z_omega(t) dmu_native(omega)
+           ?= exp[it log(P*c^2/(Q*d^2))]
+              * B_U(c)*B_U(d)/(g^2*c*d*sqrt(P*Q)) = 0.
+
+This requires the actual regional source occurrence and density, not just
+label names. A common non-Boolean multiplier across all histories would
+suffice, but that common-spectator identification is precisely unpaid.
+Carrier compensation, colour probability, renewal/exclusion ancestry,
+selectors and marked-prime labels must survive the comparison. The Beta
+theta measure and Euler-homotopy parameter are not interchangeable.
+
+The target norm also remains the original one:
+
+    ||W||_H^2 = sum_(g,l,rho,sigma,tau) g^2*l*rho*c_l*c_rho
+                * integral |W_iota(t)|^2 |kappahat(t)|^2 dt/(2*pi),
+    c_q=(q+1)/(q-1).
+
+All t-dependent carrier amplitudes stay inside W, complete members are
+summed BEFORE squaring, and the Wick diagonal retains the original atoms.
+A fixed-observation logarithmic-L1 remainder estimate is not automatically
+a bound in this norm. Keep Q<=2gc and P<=2gd; no uniform extra g^-2
+coherent-energy saving is imported.
+
+See the frozen [tuple acquisition](https://github.com/gfreund123/riemann/blob/6c5c99a0d2f2d2ecca5087da0fd171998b444d2b/research/exploratory/NATIVE_TUPLE_SOURCE_ACQUISITION.md)
+and [observation/norm audit](https://github.com/gfreund123/riemann/blob/b79aa2dcddd27a84d629e39fbbf39d31e5470aac/research/riemann-structures/NATIVE_DECODER_OBSERVATION_GAP.md).
+A proved weighted cancellation OR an authenticated native residual would
+settle a local decoder rule, not the global principal estimate or RH.
+
 ## 4. Generalized L-objects: selection beyond positive completion
 
 The new source-first quotient has a genuine minimum-energy universal

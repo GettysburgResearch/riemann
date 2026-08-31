@@ -6,8 +6,9 @@ published twenty-seven-packet baseline remains documented in
 [CONTINUATION_RESULTS.md](CONTINUATION_RESULTS.md).
 The positive-source real-zero counterexample has also passed independent
 fixed-SHA review. Four separately reviewed native-source analytic notes in
-Section 5 culminate in a uniform effective theorem: every depth j>=1 and
-every even weight k>=96j gives a real off-central pair in its proper quotient.
+Section 5 culminate in a uniform effective theorem for the actual level-one
+cusp-space theta source: every depth j>=1 and every even weight k>=96j gives
+a real off-central pair in its proper quotient.
 These analytic proofs are not numerical searches or extra test modules.
 
 ## 1. The Segre bridge is real, but its proposed determinant was too strong
@@ -277,7 +278,13 @@ certificate and does not claim to discover arbitrary dynamic imports or
 all prose dependencies. The independent closure-workflow suite adds
 35 passing tests in each mode; these are separate from the 962 science tests.
 
-Publication/acquisition status is recorded separately in the
+The [fresh HTTPS acquisition and replay report](../../../exploratory/SIXHOUR_PASS3_NETWORK_ACQUISITION.md)
+binds publication checkpoint64885db5848252b8f013a24333fa3c2462101dee.
+All962 tests and37 producers pass again in each mode from that independently
+fetched checkout, with fixed observed HEADs and matching declared input hashes.
+The four analytic proof/review seals and their ancestry are checked separately.
+Later documentation/evidence-only tips do not replace those run identities.
+Acquisition commands and all40 archive mappings remain in the
 [source replay guide](../../../exploratory/SIXHOUR_PASS3_SOURCE_REPLAY.md).
 No RH/GRH, complete zero census, effective first ordinate,
 new automorphic lift or external priority claim is made.
