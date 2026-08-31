@@ -4,8 +4,8 @@
 Claim ID: O-108512
 Status:   OBSERVATION (each stated factorization/vanishing is an exact,
           machine-verified polynomial fact for the named m; the ENTRY
-          LAW is a pattern over m <= 11 with ONE genuine held-out
-          confirmation; the mechanism is OPEN)
+          LAW is a pattern over m <= 15 with THREE held-out rounds —
+          seven predictions, zero misses; the mechanism is OPEN)
 Created:  2026-08-31 (pass 3; grows out of T-108509)
 Programme: #764 (moduli of local data; resonances of the defect tower)
 Machine:  matrix/spectrum_collision_loci.json (m = 5..11; from
