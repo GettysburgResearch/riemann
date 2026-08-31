@@ -1,4 +1,69 @@
-# Six-hour native pass: third checkpoint
+# Six-hour native pass: fourth checkpoint
+
+The six-hour pass remains active. This checkpoint records 205 distinct
+focused tests in ordinary Python and the same 205 under -O: the previous
+139 plus 24 occupation, 12 boundary-layer, 14 synchronization and 16
+affine-floor tests. Final-bound producer checks passed. These are local
+packet results, not repository-wide CI; ongoing final certificates are
+excluded from this count.
+
+The complete horizon-25 source now has six exact occupation coordinates.
+Its attainable body has a curved projection and is not a finite polytope.
+A source-defined synchronization retraction has a sharp one-third-power
+stability bound, but all eight declared original-metric probes show that
+it is nonorthogonal. The common quadratic schedule family has affine
+dimension five, whereas the full source variation span has dimension six.
+
+The original physical quadratic has an affine minimum near 102.20988,
+but its minimizing coordinates violate source moment constraints. Exact
+source halfspaces instead give an all-path lower bound above 138.77749
+in this finite chart. A previously fixed actual path gives an upper
+bound below 160.56. This does not identify the all-path optimum or bind
+the finite chart to the full amplified principal member.
+
+The four-prime boundary layer has three proved activation regimes:
+central two-coordinate support, then three-coordinate support, then
+interior support. Three actual-prime panels certify the respective
+regimes using the original kernel, all 16 allocations and all 15
+nonempty faces. Threshold equalities remain outside the asymptotic claim.
+
+| New final packet | Scientific freeze | Tests per mode |
+|---|---|---:|
+| Actual occupation moments and curved body |a75f3bbef5f75bb6a4bd7f3c91d051cfb132f3dc|24|
+| Three original-kernel boundary phases |b292538edeb0d83f0c967290187a9bdde1d63e65|12|
+| Sharp synchronization and template obstruction |a455dbe07c8d32fa3e7f3e74361abcfcafc681f9|14|
+| Source-feasible physical energy floor |1138133b06ad644f624e92a3ab300a76bd3a8663|16|
+
+Two further discoveries are frozen with proofs and complete source data;
+their separate final acceptance certificates remain in progress.
+
+At `f97b7e00ba0bd3d6153167b477c44c6f153da10f`, two legal labelled paths
+have identical original integrated source at every height, yet their
+synchronized fields differ at ratio 3/5. The exact rational coalesced
+difference is 1/16243587360 before the common 1/sqrt(15) factor.
+The all-height equality follows from the polynomial proof, not a finite
+scan. The finite controls retain all 140 horizon-60 and 474 horizon-300
+records; measured source and physical ranks both grow from three to
+seven. Thus the horizon-25 retraction cannot simply be extended to an
+operation on the larger observed source fibres.
+
+At `bff003bc35b10c83fc1afa02533aec9dd478bb23`, complete original-kernel
+KKT and interval Sturm checks certify the unique minimum within the
+exactly attainable synchronized subclass. Its coordinates are (D,E)=(0,0):
+activate colours 2 and 3 together, then colour 5. Its actual energy is
+about 158.3333445170, improving the prior quadratic path by more than
+2.22. The full-subclass bound I(D,E)-I(0,0)>=10D follows from certified
+endpoint gradients. This is a subclass optimum, not the all-path optimum.
+
+Independent exact-freeze reviews now cover the earlier tangent packet,
+occupation moments, boundary phases and synchronization. The affine
+packet has independent full reading and passed all final checks; its
+separate exact report is pending. The new discovery certificates,
+grouped-source enrichment theorem, exact support-functional reduction
+and exhaustive legal-path grids remain active work. No complete
+post-renewal carrier/selector/gamma decoder or RH claim is made.
+
+## Third checkpoint history
 
 The six-hour pass remains active. This checkpoint records 139 unique
 focused tests in ordinary Python and the same 139 under -O, including
