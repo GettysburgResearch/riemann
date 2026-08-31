@@ -1,0 +1,39 @@
+{
+  "fresh_resealed_attacks_rejected": [
+    "source_energy",
+    "vacuum_energy",
+    "reciprocal",
+    "coordinate_map",
+    "tensor_weight",
+    "tensor_cross_term",
+    "sum_weight",
+    "nested_lift",
+    "averaging_variance",
+    "averaging_equality",
+    "observation_polynomial",
+    "unequal_weight",
+    "weak_tensor",
+    "tensor_class",
+    "source_pin",
+    "no_scope_firewall"
+  ],
+  "optimized": false,
+  "producer_replays": [
+    {
+      "mode": "--emit",
+      "stdout_sha256_lf": "6413c704116108ab3f1a06400087b8154297ffe13f3631436a96b49502ee3419"
+    },
+    {
+      "mode": "--emit-sources",
+      "stdout_sha256_lf": "12ebd09865d1b184d08fd519a8801970457854d42f93789ecd69e2ddbb0d0f7a"
+    },
+    {
+      "mode": "--check",
+      "stdout_sha256_lf": "cfcc67ed1d05df415b25aa476727dbe4627d37b36380c7294d0b51059e67b522"
+    }
+  ],
+  "schema": "SC-hostile-independent-replay-v1",
+  "science_head": "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+  "script_sha256_lf": "71a99a7bc4f9e2d91eeb94055d9a506fc082a888fecb77e10248c814ec2af979",
+  "status": "PASS"
+}
