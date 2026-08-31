@@ -1,0 +1,140 @@
+{
+  "authoring_base": "96543552b5bc5976d96c35123bfb82e609a27972",
+  "contract": {
+    "arithmetic_class": "MIXED",
+    "arithmetic_components": [
+      "DIRECTED_BALL_ENCLOSURES",
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "bits": 512,
+    "bounds": "same JP Horner joint-polynomial/Cauchy bound; inherited per-node QT512 complete256-cell cover",
+    "caps": {
+      "arcs": 64,
+      "container": 8000,
+      "depth": 24,
+      "integer_bits": 4096,
+      "jet": 40,
+      "json_bytes": 24000000,
+      "nodes": 800000,
+      "points": 26,
+      "source_bytes": 24000000,
+      "string": 4096
+    },
+    "closed_arcs": 64,
+    "domain": "unchanged HA 20<x<1100,-1<y<2; no parameter/radius/tier/degree/arc tuning",
+    "evidence": "40 real coefficient intervals plus fullsignedjet hash;64 exact error/margin decisions plus complete uncompressed arc hash; fresh allprimitive replay",
+    "exclusions": "no independent zero census, cofinal transport, physical capture, RH or novelty",
+    "failure": "all failedguards/unresolvedarcs/unmatchedrectangles retained;64not-evaluated slots after guardfailure",
+    "known_control": 19,
+    "outer_radius": [
+      7,
+      8
+    ],
+    "panel": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "polynomial_terms": 32,
+    "primitive": "same literal Xi and calibrated lambda_(64); full unknown-t interval; algebraic f6(t)=0",
+    "ratio": [
+      1,
+      2
+    ],
+    "rounding": "unchanged pinned FLINT outward balls and exact rational endpoint comparisons",
+    "selection": "fixed QT26; index19 known positive control,25 primary untried points",
+    "signed_jet_terms": 40,
+    "source_quantifiers": "complete declared finite panel only; no innerness premise"
+  },
+  "documentation": [
+    {
+      "role": "Ball enclosure, certified comparisons, exact rational inputs, series cap",
+      "url": "https://python-flint.readthedocs.io/en/latest/general.html"
+    },
+    {
+      "role": "Taylor-series gamma, exp, zeta; no numerical finite differences",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb_series.html"
+    },
+    {
+      "role": "Pinned library-version series API documentation",
+      "url": "https://github.com/flintlib/flint/blob/v3.6.0/doc/source/acb_poly.rst"
+    },
+    {
+      "role": "rigorous non-approx matrix inverse and arithmetic API",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb_mat.html"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "96543552b5bc5976d96c35123bfb82e609a27972",
+      "git_blob": "a0409d4682177e805f96ca623db0c44d31d76bd4",
+      "path": "research/exploratory/XI_JOINT_POLYNOMIAL_POINT_TRANSPORT.md",
+      "sha256_lf": "487411b452c5082ec086ec1a2edbc6571e83a179c9c80a90ca31d4b1a4e1d7b7"
+    },
+    {
+      "commit": "96543552b5bc5976d96c35123bfb82e609a27972",
+      "git_blob": "1b12d3c95fee0c6cef2480453d52bc7a1b7f563e",
+      "path": "research/exploratory/xi_joint_polynomial_point_transport.py",
+      "sha256_lf": "b09a81ec048ff42fbd4334692741204992ce59d2add020b99935eb2534cd4167"
+    },
+    {
+      "commit": "96543552b5bc5976d96c35123bfb82e609a27972",
+      "git_blob": "67982e66d9c8cf097b917a9e44a3a41623c61d32",
+      "path": "research/exploratory/xi_joint_polynomial_point_transport.json",
+      "sha256_lf": "aef1379325c101b31bdad40940066daa1fdae3a37496008a28fb22fe31cdc735"
+    },
+    {
+      "commit": "96543552b5bc5976d96c35123bfb82e609a27972",
+      "git_blob": "4bad9c73cc4301bcae3b754a0ce386d04c56bc8b",
+      "path": "research/exploratory/xi_joint_polynomial_point_transport.sources.json",
+      "sha256_lf": "eeb969218c44ae573476522be185de7c500e29c35c5329b82660968826a1a649"
+    },
+    {
+      "commit": "96543552b5bc5976d96c35123bfb82e609a27972",
+      "git_blob": "0b7148472d5faf668e44815951a702440c132aaf",
+      "path": "tests/test_xi_joint_polynomial_point_transport.py",
+      "sha256_lf": "e5799df7b3770e7fa1996c5e925537408b4ca5409fe90e61128ef131087e5979"
+    },
+    {
+      "commit": "0cc801421768e3e42ebf0f1c7960081707e52968",
+      "git_blob": "38764a517090590019ab0cb7de6f0f298e822f6f",
+      "path": "research/exploratory/XI_JOINT_POLYNOMIAL_PANEL_TRANSPORT.md",
+      "sha256_lf": "d5eff0088dd3961a7043d5ebb712e18f3d60a11c02814ddd161213042f261957"
+    }
+  ],
+  "preregistration_commit": "0cc801421768e3e42ebf0f1c7960081707e52968",
+  "runtime": {
+    "flint": "3.6.0",
+    "machine": "AMD64",
+    "native_files": 44,
+    "native_files_sha256": "36c07323af58dec0eb6fd82a99bf871924eb69f1833d9af626fc09437ae5b0cc",
+    "python": "3.12.10",
+    "python_flint": "0.9.0",
+    "system": "Windows"
+  },
+  "schema": "xi_joint_polynomial_panel_transport-sources-v1"
+}
