@@ -110,3 +110,21 @@ The top Hessian comparison is secondary and is not part of this initial
 finite panel. Classical Koszul/change-of-rings machinery, the Chow module,
 canonical duality and the known ambient syzygy characters retain their
 primary-source attribution. No external novelty is asserted by this design.
+
+## 5. Separate degree-four design amendment
+
+After completion of the degree-three panel (rank a=65) and the held-out
+degree-two m=4 panel, but before computing degree four, extend only the
+(d,m)=(3,3) Chow bicomplex to internal degree four. Keep all other caps.
+The new falsifiable prediction is that the horizontal map
+Lambda^2 C tensor B_(1,2) -> C tensor B_(1,3) has rank 1105, and that
+the actual transgression d2:E2_(2,1),4 -> E2_(0,2),4 has rank 65.
+This predicts non-degeneration, not degeneration, of this comparison.
+Neither statement follows merely from the Euler characteristic: a later
+d3 from E3_(3,0),4 could in principle affect the same target.
+
+Compute the transgression by lifting each horizontal cycle to literal
+W-Koszul chains, solving its C-image as a W boundary, and applying C again.
+Retain the actual sparse transgression matrices and at least one full
+nonzero zigzag. Check every chain identity exactly. Any failed prediction,
+resource refusal, or new design change will remain in the history.
