@@ -29,10 +29,17 @@ displacement.
 
 The accepted Segre/Hadamard/Koszul work remains the honest source above the
 universal recurrence numerator: scalar alternants and palindromy are Euler
-shadows, not purity.  This pass targets the missing chain maps rather than
-another scalar factorization.  Any frozen transgression packet included next
-to this checkpoint is finite characteristic-zero algebra and must retain its
-own exact-SHA review; it supplies no automorphy or spectral positivity.
+shadows, not purity.  `SEGRE_CHOW_CHAIN_COMPARISON.md` now constructs the
+literal change-of-rings maps for the ternary cube.  Its degree-four
+transgression
+
+`d2:E2_(2,1),4 -> E2_(0,2),4`
+
+has rank 65 and is onto, so the spectral sequence does not degenerate at
+`E2`; the surviving ambient `Tor_(3,4)` dimension is 9234.  The packet stores
+all 46 weight blocks and a nonzero chain-level zigzag.  This is finite
+characteristic-zero algebra, not automorphy, spectral positivity, or a
+canonical one-scalar differential.
 
 ## Exact frontier
 
