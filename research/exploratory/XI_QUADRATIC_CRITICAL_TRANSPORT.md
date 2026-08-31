@@ -225,3 +225,57 @@ This refines interval evaluation only. It changes no node, radius ratio,
 critical-point uncertainty, outer radius, Taylor order, precision tier,
 domain, or analytical inequality. It adds no new height survey or raw
 alignment test. All mathematical failures remain valid outcomes.
+
+## 6. Diagnosed runtime obstruction and frozen replay policy
+
+The uncapped refined run completed nodes0--21, certifying their real critical
+points but not matching a quadratic or linear transport certificate. It then
+stalled at node22 (the sixth sorted HA node in the1024 box), tier256, in the
+DIRECT whole-outer-rectangle scalar Xi call. A separate diagnostic run with
+repeated faulthandler tracebacks identified the exact inherited operation:
+HA `xi_value`, line271, `s.zeta()`, called before the fixed outer cover.
+This was not growth of exact rational powers. The original and diagnostic
+owned processes were stopped at14:38:51+03 on2026-08-31 after the original
+had run approximately10.5 minutes, with approximately9.5 minutes without
+node progress. No other research process or file was removed.
+
+Before capped replay, the following implementation policy is fixed. The
+two broad native routes, direct whole-outer-rectangle Xi and direct full-
+region f8, run in isolated subprocesses with a30-second wall cap. This
+same cap applies to every such task in the unchanged26-node panel. Point
+jets and the fixed256 small-cell cover are unchanged. A timeout is labelled
+TIMEOUT_UNRESOLVED: it says nothing about the mathematical hypothesis.
+Task inputs and outputs have strict type/size caps; a worker evaluates only
+one of these two named native operations in the declared source domain.
+
+Wall-clock classifications depend on the execution environment and are NOT
+deterministic scientific arithmetic. The first capped collection therefore
+produces a separately identified canonical broad-task/outcome ledger. Its
+SHA256 is pinned in the final producer. It contains all successful, nonfinite
+and timed-out broad tasks and exact inputs, without making elapsed-time
+numbers part of a mathematical certificate.
+
+Fresh acceptance authenticates this frozen performance ledger and then:
+
+- Recomputes every historically successful broad bound and requires its
+  exact outward enclosure to agree. A replay timeout or changed enclosure
+  blocks acceptance; the prior value is not blindly reused.
+- Explicitly retains historically unresolved/nonfinite broad entries as
+  environmental history. They supply NO numerical bound and no negative
+  mathematical conclusion. They are not silently presented as freshly
+  evaluated failures.
+- Freshly recomputes the real critical certificates, actual interval jets,
+  every fixed256-cell cover, Taylor/Cauchy bounds, all prescribed radius
+  inequalities and whole-parent-rectangle matching. No history entry can
+  bypass these primitive arithmetic checks.
+
+Thus every numerical bound used by the final theorem test is freshly
+revalidated. A future successful evaluation of a historically unresolved
+broad task may be reported as additional evidence in a successor; it does
+not rewrite this failed historical attempt. A FAIL outcome below means
+that this frozen collection and its available validated bounds did not
+certify the sufficient inequality, not that the true inequality is false.
+
+This checkpoint also preserves the initial uncapped producer, manifest
+and tests as an implementation record; it is not a science release or a
+claim that a missing final fixture passed its tests.
