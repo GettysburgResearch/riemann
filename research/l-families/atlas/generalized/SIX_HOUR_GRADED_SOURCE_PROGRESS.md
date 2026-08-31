@@ -1,4 +1,56 @@
-# Six-hour source pass: second checkpoint
+# Six-hour source pass: third checkpoint
+
+The six-hour research pass remains active. This checkpoint records 432
+unique focused tests per interpreter mode: the previous 320 plus 112 new
+tests, each run in ordinary Python and under -O. Final-bound producers
+passed both checks. These are focused packet results, not repository-wide
+CI or a count of new theorems. Earlier checkpoint descriptions remain below.
+
+The actual Frobenius ladder now has a proved unit-circle natural boundary:
+its logarithmic derivative has explicit nonintegral residues on dense
+dyadic singularity circles. The fixed finite-field source factor cannot
+remove their fractional monodromy. This is a statement about the specified
+AFTER source; no corresponding full BEFORE theorem is inferred.
+
+Two complementary completion theorems identify the remaining freedom.
+A grading-dependent canonical-product genus gives normal unit-disk
+convergence precisely when its positive integer orders tend to infinity.
+An absolute Frobenius-power cutoff restores an exact same-cutoff cyclic
+norm law. Different cutoffs still differ by explicit holomorphic units.
+Thus norm coherence constrains normalization without uniquely choosing it.
+
+At the actual cyclic-infinity stalk, the repaired invariant base supports
+a maximal Cohen--Macaulay module of generic rank 3 needing 33 minimal
+generators. Its positive minimal grades have zero nonsplit residual trace
+but nonzero dimensions 12,16,4. A relative A2 matrix factorization and the
+infinite projective dimension at the graded vertex are proved. Omitting
+quadratic inertia produces the distinct 17-generator calibration.
+Classical invariant theory and Auslander--Buchsbaum are credited.
+
+| New final packet | Scientific freeze | Tests per mode |
+|---|---|---:|
+| Frobenius ladder natural boundary |a896adce6fef1d198aaefa7c712634c1150e8291|29|
+| Grading-genus convergence and completion |32c4a249d188612729f093815b4a445b796893a0|28|
+| Absolute Frobenius cutoff and norm law |3537e8aee15ebb3d5ba4084806f9a1cfefa7bcb3|27|
+| Actual cyclic-infinity invariant module |d4fcbe331751e1e506cc2f38864c0c1580df92e8|28|
+
+Separate discoveries construct the full 65 degree-four second-differential
+columns and then 20 new degree-five columns, together with 11 initial third
+differentials. Their freezes are 1a5a63f1148fb884e9ae7aae9e9324a40aee9f33 and
+b1c48ff9f09ec521a7f33b2ecbf81f661e8145cd. The successful degree-five
+calculation has a 659-dimensional actual kernel and a 639-dimensional
+old-multiple span. A complete higher resolution is not yet certified;
+the final 22-test draft is excluded from the count.
+
+A later degree-six launch was stopped by the machine-wide free-memory
+reserve while repeating degree five, before reaching its intended stage.
+Only the owned worker was stopped. A separately authenticated durable
+cache is being developed; the reserve is not lowered. Other agents'
+processes remain untouched. Independent exact-freeze reviews record their
+reading scope separately from root executions. No packet is integrated
+into the canonical proof tree, and no RH/GRH conclusion is asserted.
+
+## Second checkpoint history
 
 The pass is still active. The first checkpoint below is preserved as history.
 This second checkpoint freezes 320 unique focused tests per interpreter mode,
