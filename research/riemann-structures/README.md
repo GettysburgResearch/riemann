@@ -5,9 +5,19 @@ This directory is the broad programme front door for issue
 rather than replaces, the source-locked theorem packets in the `L`-family
 atlas.
 
-Start with
+Start with [SIXHOUR_PASS3_RESULTS.md](SIXHOUR_PASS3_RESULTS.md) for the latest
+six-hour pass: fixed-calibration actual-Xi certificates, physical-band floors,
+double scaling, the native decoder boundary and precise hypothesis accounting.
+In particular, the literal two-raw-component-innerness assumption used for
+physical capture is RH-equivalent; those conditional Hardy-space theorems
+must not be counted as an independent reduction of RH. The finite
+companion-zero, raw-value and Gram certificates are unconditional.
+The final38-module panel passes1056 tests and all producer checks in both
+normal and optimized Python, with a fixed observed scientific HEAD.
+
+The earlier checkpoint is preserved in
 [RIEMANN_STRUCTURES_CONTINUATION_RESULTS.md](RIEMANN_STRUCTURES_CONTINUATION_RESULTS.md)
-for the current source-algebra, live-occupancy, signed-history, archimedean,
+for the previous source-algebra, live-occupancy, signed-history, archimedean,
 canonical principal-diagonal, actual-Xi geographic count, concentration,
 all-inner physical-band and high-derivative results, including the explicit
 source-duality correction, conditional finite-height cofinal capture,

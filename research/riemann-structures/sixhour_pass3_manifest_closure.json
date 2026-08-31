@@ -1,0 +1,472 @@
+{
+  "all_declared_seals_match": true,
+  "all_local_objects_present": true,
+  "base": "b870366141fe8d5f43d5b81f6e50a67d2a888070",
+  "contract": {
+    "blob_limit_bytes": 40000000,
+    "external_papers_authenticated": false,
+    "implicit_schema_scope": [
+      "riemann.atlas.generalized.*",
+      "graded-parent-global-boundary-sources-v1"
+    ],
+    "inherited_precedence": [
+      "imported_parent_state_commit",
+      "source_commit",
+      "base_commit"
+    ],
+    "remote_acquisition_verified": false,
+    "scope": "Local manifest-binding closure, including explicit legacy defaults; not all prose or executable dependencies.",
+    "special_schema": "archimedean-ladder-source-lock-v1"
+  },
+  "counts": {
+    "edges": 389,
+    "implicit_edges": 1,
+    "manifest_versions": 47,
+    "roots": 38,
+    "source_commits": 54,
+    "source_versions": 142
+  },
+  "edges_sha256": "4091444d2c9b2b5e31a9cd83f6eb764c83ff27394d24553d1b0db5e2a8fd240a",
+  "head": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+  "implicit_resolutions": [
+    [
+      "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "research/riemann-structures/archimedean_ladder_boundary.sources.json",
+      "/frozen_programme_path",
+      "6675c19f20760301d8c91dedc4a7836170003512",
+      "research/riemann-structures/RIEMANN_STRUCTURES_WAVE2_PORTFOLIO.md",
+      "archimedean_single_file_lock"
+    ]
+  ],
+  "manifest_catalog": [
+    {
+      "commit": "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+      "git_blob": "62eb2fa59113bc87158659e538fb1fea5b7f7ca4",
+      "outgoing_edges": 6,
+      "path": "research/exploratory/xi_fixed_lambda_joint_box_compression.sources.json",
+      "sha256_lf": "b775a9c8bc054312644116b362960b1c1e950d23a8dfc82d556d86f67a30c819"
+    },
+    {
+      "commit": "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+      "git_blob": "06434dc776028d155b8107f8cb5ea8687a3ce9dc",
+      "outgoing_edges": 6,
+      "path": "research/exploratory/xi_companion_off_axis_ball_certificates.sources.json",
+      "sha256_lf": "eec3231292d8d5b030c68ffaed9520dd5697657dcd17f15c91e4f34ee8f9be4c"
+    },
+    {
+      "commit": "530732c5fd7f50364381f8af50e97ce809b674c5",
+      "git_blob": "58bd03b1d15ce4d2eb91addb4c209a0f43fab80c",
+      "outgoing_edges": 8,
+      "path": "research/exploratory/xi_quadratic_critical_transport.sources.json",
+      "sha256_lf": "66aa6f3d483bc638eed43315592c3cc5f3f8ef2baa9d9518e2fa0de3e685d757"
+    },
+    {
+      "commit": "64165b8c805d182dbc43f2e5855e64a86cf1aaf9",
+      "git_blob": "0dac7784b5c2a912d44c479e069e045b9f1b85e1",
+      "outgoing_edges": 7,
+      "path": "research/exploratory/xi_fixed_lambda_heldout_alignment.sources.json",
+      "sha256_lf": "3bb7fdccc56b8e7ac2e3c6fb1c0a62874645893683e8d626f4cdca8becdf9ad6"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "134669bea673b36d367c2d4c4f6eb42b6347fc11",
+      "outgoing_edges": 2,
+      "path": "research/exploratory/coprime_infinite_height_physical_capture.sources.json",
+      "sha256_lf": "44878ab3781324e720be2a8423f0a3dc6ed90b1125b2f991924c122269bace2d"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "3e37d97dd584617b8805bdc3d4c342cc8d4bb40c",
+      "outgoing_edges": 9,
+      "path": "research/exploratory/hardy_cofinal_finite_height_source_capture.sources.json",
+      "sha256_lf": "35d483e8770346e9d2edf29357754d0e6bc3aff26abe2b2e4ea9f678a582a4bb"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "7aebd109b49d211b635ecc848a4063aaf7ceedb3",
+      "outgoing_edges": 8,
+      "path": "research/exploratory/hardy_inner_width_source_duality.sources.json",
+      "sha256_lf": "3e44ac7eea2d22198607a6508e756783d99225e983a14666678e9877ae6b006a"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "5f0132c38c52198b6ae8a61734282fe8d386e32e",
+      "outgoing_edges": 2,
+      "path": "research/exploratory/hardy_low_pass_height_equivalence.sources.json",
+      "sha256_lf": "e378690657458b2ce64038ab67b60d8ac910264445bcd36022e4c09e5d1d4403"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "b6fcefacca9e6577167bb246b6682dc904a831a0",
+      "outgoing_edges": 13,
+      "path": "research/exploratory/hardy_translation_physical_band_bound.sources.json",
+      "sha256_lf": "7a5babd5c221c9703c4f0c622b40404f379d8ee61047c6dd049c51782cc1fb34"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "dc048aab8ffe9bfe1f90dbf677a5355638f80db2",
+      "outgoing_edges": 11,
+      "path": "research/exploratory/native_tuple_source_acquisition.sources.json",
+      "sha256_lf": "d13dda2663fcf5de5fd503aedfd6750bf291daba55a679dc292ef5cf0c10e0dc"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "f6174bd3413e8f4b2b8d633c8983efd4b08dce5d",
+      "outgoing_edges": 6,
+      "path": "research/exploratory/xi_actual_kernel_laplace_concentration.sources.json",
+      "sha256_lf": "7d2b884885fb4f46328a33628c875a66fabfa3db29e1fd61f99c7825758f3e74"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "a0bf6249400af22d51672e49d844600271dcce85",
+      "outgoing_edges": 38,
+      "path": "research/exploratory/xi_all_radius_transport_obstruction.sources.json",
+      "sha256_lf": "315beb981c8dcfe2506aa2ca1b1f410ac63dea17ecc8ca9d4254df73013fc585"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "fcbfb819e09f97f9f4e9af60141ffe198238bf1c",
+      "outgoing_edges": 8,
+      "path": "research/exploratory/xi_companion_box_count_compression.sources.json",
+      "sha256_lf": "b916af0286ddd686e700b56032a2f10f9b0bc08212bed6ca60bb99270b85299f"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "0114f1f3fa62b3d242e399085993eecb5f4439e5",
+      "outgoing_edges": 6,
+      "path": "research/exploratory/xi_companion_generic_parameter_coprimality.sources.json",
+      "sha256_lf": "e88ba14281edab6365a87bedeea7edbfb8e704300dc106f262a78f5b14a246d5"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "5e16e68864a9b6600461d99d4f4e8b91d0f78cf0",
+      "outgoing_edges": 7,
+      "path": "research/exploratory/xi_companion_global_height_boundary.sources.json",
+      "sha256_lf": "531494d59692acae72597a56f5caa6af082054dda103abe1c2605207c03850fd"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "fcb84c28f5be15aa7aa1e52a2387be7b86dc7fe6",
+      "outgoing_edges": 6,
+      "path": "research/exploratory/xi_companion_imaginary_axis_sampling.sources.json",
+      "sha256_lf": "36bf089acff0559fe0a92287e774d11cef3f442dc81a42b170567a88c0739b86"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "06434dc776028d155b8107f8cb5ea8687a3ce9dc",
+      "outgoing_edges": 6,
+      "path": "research/exploratory/xi_companion_off_axis_ball_certificates.sources.json",
+      "sha256_lf": "eec3231292d8d5b030c68ffaed9520dd5697657dcd17f15c91e4f34ee8f9be4c"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "81d10485724b346b69b0644af91847eb5db4ce32",
+      "outgoing_edges": 10,
+      "path": "research/exploratory/xi_confluent_source_band_obstruction.sources.json",
+      "sha256_lf": "0cf43fe403ac3a936745a95f1b668e401de903a7f9a07b705b27ebbe357ef33c"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "ec4bdeb54725f9c87e00230fe6e1d1424710f23b",
+      "outgoing_edges": 7,
+      "path": "research/exploratory/xi_current_radial_semigroup.sources.json",
+      "sha256_lf": "057ee7d17a0ffdc03dedeb7863068cfcbb4c95c305d13e6d0f8f22c763ac2442"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "0dac7784b5c2a912d44c479e069e045b9f1b85e1",
+      "outgoing_edges": 7,
+      "path": "research/exploratory/xi_fixed_lambda_heldout_alignment.sources.json",
+      "sha256_lf": "3bb7fdccc56b8e7ac2e3c6fb1c0a62874645893683e8d626f4cdca8becdf9ad6"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "ee5d44f7c32d3eab7917cfcee10b458e19c46077",
+      "outgoing_edges": 6,
+      "path": "research/exploratory/xi_fixed_lambda_joint_box_compression.sources.json",
+      "sha256_lf": "98b36c73b6d897980f8df63c5ff9b58263978e70a7c4395227c99675190373cf"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "7275266ef446c391f6df31f497a98204e8114983",
+      "outgoing_edges": 35,
+      "path": "research/exploratory/xi_fixed_lambda_shrinking_physical_bands.sources.json",
+      "sha256_lf": "686c9c920353aa8311dd68283c406ca9dc4852f22fcf11435f6b18c12c3f9e35"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "27ef5ae91212a6a0e5c743d40fe4f9156d4c0fa7",
+      "outgoing_edges": 4,
+      "path": "research/exploratory/xi_global_odd_order_saddle.sources.json",
+      "sha256_lf": "d2004cc18bba1907f9b8683c0f274543cfd90e7b044d8cd3ec246852de58c62c"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "6173a27246e686e2c81a80db0db6fee4980c2134",
+      "outgoing_edges": 7,
+      "path": "research/exploratory/xi_high_derivative_saddle_closure.sources.json",
+      "sha256_lf": "fec8468ec447169fdbbb363d93cfca50a18a9241e1a508f3a89e935a67a76534"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "2de9a466a76ff36c236a1b54c159b7ee15841abf",
+      "outgoing_edges": 6,
+      "path": "research/exploratory/xi_joint_polynomial_panel_transport.sources.json",
+      "sha256_lf": "090b245ee930be7f7750007e5bd9b033fcc11d95b156f9d85ef0d3d33e635989"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "4bad9c73cc4301bcae3b754a0ce386d04c56bc8b",
+      "outgoing_edges": 8,
+      "path": "research/exploratory/xi_joint_polynomial_point_transport.sources.json",
+      "sha256_lf": "eeb969218c44ae573476522be185de7c500e29c35c5329b82660968826a1a649"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "ca17786f2fea78b1ca30a114a21637233f8d9af3",
+      "outgoing_edges": 6,
+      "path": "research/exploratory/xi_laplace_low_pass_lower_bound.sources.json",
+      "sha256_lf": "96be4f20f167972f491c784090f4d9adcdcc8eb2afcdff13125a1e9648c26782"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "73d7a7fcff3114cb036e1891d30526de77f334fe",
+      "outgoing_edges": 6,
+      "path": "research/exploratory/xi_near_adapted_scale_firewall.sources.json",
+      "sha256_lf": "3196edda434f1c2a1f90d22a07a3b4a675c01f8e7d852297740da8149327d476"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "32e8289fb5bc71cf4e180785dca54c64d1b8961d",
+      "outgoing_edges": 4,
+      "path": "research/exploratory/xi_occupancy_carleson_capture.sources.json",
+      "sha256_lf": "2a1b1a5de72dde0bdec382021fbcc35e41479ad5224eb3357d33823a66a9de80"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "ab9d950ea9b28b121a640ea5b15ee9907968bd39",
+      "outgoing_edges": 4,
+      "path": "research/exploratory/xi_odd_current_scaling.sources.json",
+      "sha256_lf": "40faa58ea354d2f7f86ee9859d1112227ed5b12e716546c28b6d20320142bdda"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "870e40a232e1b30df91d4c7709f27dad923bd7e8",
+      "outgoing_edges": 8,
+      "path": "research/exploratory/xi_positive_kernel_descent_firewall.sources.json",
+      "sha256_lf": "b5e8482b555de52b837ddb2b1beb843ab782e41266bef854c305695cf78801b4"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "58bd03b1d15ce4d2eb91addb4c209a0f43fab80c",
+      "outgoing_edges": 8,
+      "path": "research/exploratory/xi_quadratic_critical_transport.sources.json",
+      "sha256_lf": "66aa6f3d483bc638eed43315592c3cc5f3f8ef2baa9d9518e2fa0de3e685d757"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "95227de29ab8b441d99c0b8a43eebf6d44ae9e89",
+      "outgoing_edges": 6,
+      "path": "research/exploratory/xi_quadratic_joint_remainder_transport.sources.json",
+      "sha256_lf": "2464d6080ccf0b1cc442bf81be285c14f07e3efdf4a813f7a1ca9ac9690931ff"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "b63b5f7431c4580ceea956765c0b61a5e3e75aa7",
+      "outgoing_edges": 10,
+      "path": "research/exploratory/xi_uniform_companion_count_width.sources.json",
+      "sha256_lf": "2a211e15a3fff291ca312dbc2991668bb7ad2c745409958f2ed71d07612d0516"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "50513bf33f0e381a6f23e7a01c2806df9196ae18",
+      "outgoing_edges": 12,
+      "path": "research/l-families/atlas/function_field/ffps_canonical_boolean_principal_diagonal.sources.json",
+      "sha256_lf": "6d66bb4e40b7112a3124ccaabdd859d567a06af5d09cd3b91f303c3189b2c461"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "f451eaaa9fe688b17fc2c9c04d3189054a866dbb",
+      "outgoing_edges": 11,
+      "path": "research/l-families/atlas/function_field/ffps_live_shared_fibre_collisions.sources.json",
+      "sha256_lf": "8f047e7cba793af7135ef50b4f38d222c2912993655efe8c4dc7820607a0ee77"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "b62cc787177e51bd89ef33307bd08916c16d8d1d",
+      "outgoing_edges": 13,
+      "path": "research/l-families/atlas/function_field/ffps_marked_place_signed_descent_gate0.sources.json",
+      "sha256_lf": "d843b33c6057f4e3f9cae63ca8a5ecb03829b6ef9fa0a1aff8d7fe185531e5ff"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "f64847cf73a2d6c029524bca276c418ed82f6da2",
+      "outgoing_edges": 8,
+      "path": "research/l-families/atlas/function_field/ffps_shared_fibre_wick_occupancy_spectrum.sources.json",
+      "sha256_lf": "88542a2b58cb0202fa486e1d65c4e61ad55e60bb76833833a29c312d53521df9"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "ad6ee425f493036e104610e4299504c5a5e5ced2",
+      "outgoing_edges": 9,
+      "path": "research/l-families/atlas/function_field/ffps_signed_history_recombination.sources.json",
+      "sha256_lf": "a3ec5d493dce97cdd7f5ccd256a6d14b87177f54b168b5c3d12fc3fd685beb71"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "61df3b8318df068369ca4c8c919aaf65a6a6d539",
+      "outgoing_edges": 1,
+      "path": "research/riemann-structures/archimedean_ladder_boundary.sources.json",
+      "sha256_lf": "ee672d71bae749d81e2cda91f32ddac0cc8c10a7f9165c81bbced0e9211ffcb7"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "efa323df79298484192c5129e98fd848470dfe96",
+      "outgoing_edges": 2,
+      "path": "research/riemann-structures/family_binding_permutation_firewall.sources.json",
+      "sha256_lf": "c23952211e9817ab1d483603ebfc0195e25100823878a7a56c160a13af0df754"
+    },
+    {
+      "commit": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "git_blob": "9322d4c47f65f9fe6f6d0e131339b39a8ca32bec",
+      "outgoing_edges": 3,
+      "path": "research/riemann-structures/source_algebra_diagonal_adams_adapter.sources.json",
+      "sha256_lf": "4f5482f041e2b9f021bdad993a3ff5a15fcc2952146ae18e5f7a4c935a779a3d"
+    },
+    {
+      "commit": "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+      "git_blob": "fcbfb819e09f97f9f4e9af60141ffe198238bf1c",
+      "outgoing_edges": 8,
+      "path": "research/exploratory/xi_companion_box_count_compression.sources.json",
+      "sha256_lf": "b916af0286ddd686e700b56032a2f10f9b0bc08212bed6ca60bb99270b85299f"
+    },
+    {
+      "commit": "96543552b5bc5976d96c35123bfb82e609a27972",
+      "git_blob": "4bad9c73cc4301bcae3b754a0ce386d04c56bc8b",
+      "outgoing_edges": 8,
+      "path": "research/exploratory/xi_joint_polynomial_point_transport.sources.json",
+      "sha256_lf": "eeb969218c44ae573476522be185de7c500e29c35c5329b82660968826a1a649"
+    },
+    {
+      "commit": "a7479e85fdc2a464cdc753021435cfef7a1f3910",
+      "git_blob": "ca17786f2fea78b1ca30a114a21637233f8d9af3",
+      "outgoing_edges": 6,
+      "path": "research/exploratory/xi_laplace_low_pass_lower_bound.sources.json",
+      "sha256_lf": "96be4f20f167972f491c784090f4d9adcdcc8eb2afcdff13125a1e9648c26782"
+    },
+    {
+      "commit": "af809698fe6cb5046a5bcc00e9175296e4597060",
+      "git_blob": "ab9d950ea9b28b121a640ea5b15ee9907968bd39",
+      "outgoing_edges": 4,
+      "path": "research/exploratory/xi_odd_current_scaling.sources.json",
+      "sha256_lf": "40faa58ea354d2f7f86ee9859d1112227ed5b12e716546c28b6d20320142bdda"
+    },
+    {
+      "commit": "b8cf095e7446583af80cbe4ff5d04257b6901d97",
+      "git_blob": "b62cc787177e51bd89ef33307bd08916c16d8d1d",
+      "outgoing_edges": 13,
+      "path": "research/l-families/atlas/function_field/ffps_marked_place_signed_descent_gate0.sources.json",
+      "sha256_lf": "d843b33c6057f4e3f9cae63ca8a5ecb03829b6ef9fa0a1aff8d7fe185531e5ff"
+    }
+  ],
+  "payload_sha256": "3a94ac77519aec0925c7a82118fde0df1b2b99d7ffb558a68837d6de5b270c0d",
+  "programme": "S",
+  "root_paths": [
+    "research/exploratory/coprime_infinite_height_physical_capture.sources.json",
+    "research/exploratory/hardy_cofinal_finite_height_source_capture.sources.json",
+    "research/exploratory/hardy_inner_width_source_duality.sources.json",
+    "research/exploratory/hardy_low_pass_height_equivalence.sources.json",
+    "research/exploratory/hardy_translation_physical_band_bound.sources.json",
+    "research/exploratory/native_tuple_source_acquisition.sources.json",
+    "research/exploratory/xi_actual_kernel_laplace_concentration.sources.json",
+    "research/exploratory/xi_all_radius_transport_obstruction.sources.json",
+    "research/exploratory/xi_companion_box_count_compression.sources.json",
+    "research/exploratory/xi_companion_generic_parameter_coprimality.sources.json",
+    "research/exploratory/xi_companion_global_height_boundary.sources.json",
+    "research/exploratory/xi_companion_imaginary_axis_sampling.sources.json",
+    "research/exploratory/xi_companion_off_axis_ball_certificates.sources.json",
+    "research/exploratory/xi_confluent_source_band_obstruction.sources.json",
+    "research/exploratory/xi_current_radial_semigroup.sources.json",
+    "research/exploratory/xi_fixed_lambda_heldout_alignment.sources.json",
+    "research/exploratory/xi_fixed_lambda_joint_box_compression.sources.json",
+    "research/exploratory/xi_fixed_lambda_shrinking_physical_bands.sources.json",
+    "research/exploratory/xi_global_odd_order_saddle.sources.json",
+    "research/exploratory/xi_high_derivative_saddle_closure.sources.json",
+    "research/exploratory/xi_joint_polynomial_panel_transport.sources.json",
+    "research/exploratory/xi_joint_polynomial_point_transport.sources.json",
+    "research/exploratory/xi_laplace_low_pass_lower_bound.sources.json",
+    "research/exploratory/xi_near_adapted_scale_firewall.sources.json",
+    "research/exploratory/xi_occupancy_carleson_capture.sources.json",
+    "research/exploratory/xi_odd_current_scaling.sources.json",
+    "research/exploratory/xi_positive_kernel_descent_firewall.sources.json",
+    "research/exploratory/xi_quadratic_critical_transport.sources.json",
+    "research/exploratory/xi_quadratic_joint_remainder_transport.sources.json",
+    "research/exploratory/xi_uniform_companion_count_width.sources.json",
+    "research/l-families/atlas/function_field/ffps_canonical_boolean_principal_diagonal.sources.json",
+    "research/l-families/atlas/function_field/ffps_live_shared_fibre_collisions.sources.json",
+    "research/l-families/atlas/function_field/ffps_marked_place_signed_descent_gate0.sources.json",
+    "research/l-families/atlas/function_field/ffps_shared_fibre_wick_occupancy_spectrum.sources.json",
+    "research/l-families/atlas/function_field/ffps_signed_history_recombination.sources.json",
+    "research/riemann-structures/archimedean_ladder_boundary.sources.json",
+    "research/riemann-structures/family_binding_permutation_firewall.sources.json",
+    "research/riemann-structures/source_algebra_diagonal_adams_adapter.sources.json"
+  ],
+  "schema": "sixhour-complete-local-manifest-closure-v1",
+  "source_catalog_sha256": "6bee852c6a1ffa023b62d44eec13efb4a866b4e41e287acacd4ea83a071e9da6",
+  "source_commits": [
+    "08187bdfae119f66c8c82baca2d1c1068e48ff40",
+    "0cc801421768e3e42ebf0f1c7960081707e52968",
+    "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+    "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+    "1904d20cdb76ecd26e0e63472625da930075303e",
+    "1b5547c3fcd1ba116106953f44a2ee4ceb81b525",
+    "24544028cd033ea66a6b64bec254da5ea43230c9",
+    "24c52d25f9cf606f5db9c40e4919a78c196b9565",
+    "36eddbbf065959f535ca4a7b08455d489ed4bd18",
+    "3a595dda92ef827a41e50d2395309692a93748ad",
+    "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+    "3f00e46e79cf928f724a9170116cb69e14f7b02f",
+    "4f38c14b260fe939c3848884584b49ca3c3f7941",
+    "530732c5fd7f50364381f8af50e97ce809b674c5",
+    "5852e785a24a2d30a8ba6c742e3650a7f6438567",
+    "58be12463b3ff909eff0d491f606e87149efa9e4",
+    "5dc85cd5e38384efc3b8a65496f03e1c2ae599e3",
+    "64165b8c805d182dbc43f2e5855e64a86cf1aaf9",
+    "6675c19f20760301d8c91dedc4a7836170003512",
+    "686e23d9e5b1005aae83e3362ac1ed53a28a0352",
+    "689a93971cdd741a2b154f9506672667aa1a32dc",
+    "76454e3db0ccce8f500297ea27668d6088b5091a",
+    "7aed2ec0b99b9d7f2fb94a774922a83d5b84a870",
+    "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+    "800b5e212f61a4df9a640788d294b0bbbf37862b",
+    "81d52e569cc8bb566e54043fd692fd6157406aab",
+    "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+    "8ef225b8753e2cd1f9c031fbb8038d1321c7f308",
+    "90e8dff3d184cbfe59974969ca89615856c33c51",
+    "9162b5ea6112c346e200c044f9f3f2324ed4fc59",
+    "939a24962a4c6a449c0b56e3b20f78b936f35f6c",
+    "96543552b5bc5976d96c35123bfb82e609a27972",
+    "980801ae4c23d9482975f363390249a1b3a14ac2",
+    "99163530fdd311f42e138e33851a94e26c6b0f32",
+    "99a7eb0310ca86392ef28b91b7c6d1fe81f35e61",
+    "9da33e7ea2b15a4badb3cb436e38e54762ad5e1d",
+    "a07e9c3ba093abb348b849e0356f6babdf591e84",
+    "a7479e85fdc2a464cdc753021435cfef7a1f3910",
+    "a99a357b96abf535af79a20d5e1948aed6bd3da7",
+    "af809698fe6cb5046a5bcc00e9175296e4597060",
+    "b79aa2dcddd27a84d629e39fbbf39d31e5470aac",
+    "b870366141fe8d5f43d5b81f6e50a67d2a888070",
+    "b8cf095e7446583af80cbe4ff5d04257b6901d97",
+    "cdad9e88097db4925c3bbbf731f7d1ae1a9e6c57",
+    "d38961c15fc76d671cef4fddfc92d3c866af4fd5",
+    "d76a1a8eb8ec40b19a351af95439b9a6514bee87",
+    "d79692ece0b7604ad309c459f565b24e9926f5c5",
+    "e669d257711d8d4a6a0ab7aeb21254fd220f7dc3",
+    "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+    "edb7d1ccffdc83c8e2b95e533da078508d009990",
+    "ef7bbb8dca978269f24e7ff9d97b6dceeed5b460",
+    "f3d074190e64a97ac935b93c5b628568cde90858",
+    "f7cc9bea51c6ab0b969acdc6e279ed09f608acac",
+    "f8003a2569ba8cd9c62516d6f72aa8dfca9ce7b4"
+  ]
+}
