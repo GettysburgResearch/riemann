@@ -307,7 +307,10 @@ def main():
     args = parser.parse_args()
     result = replay()
     if args.check:
-        need(json.loads(OUT.read_bytes()) == result, "independent review report")
+        need(
+            canonical(json.loads(OUT.read_bytes())) == canonical(result),
+            "type-exact independent review report",
+        )
         print(
             "PASS independent ZF controls: 6+9+9 primitives, 512 extra Taylor controls, 32 resealed attacks, 20 guards"
         )
