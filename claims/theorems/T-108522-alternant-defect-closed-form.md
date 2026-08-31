@@ -65,13 +65,22 @@ at rank 2 x 2) in one line. Machine: multilinear_defect.py, ALL OK.
 
 Via a restriction-stability lemma (each T^j-correction is a
 weight-2j symmetric function determined by its d = 2j
-specialization), three layer laws are now THEOREMS for every rank:
+specialization), four layer laws are now THEOREMS for every rank:
 `corr_3 = 2 sum_{i>=4} (-1)^i e_i h_{6-i}` (T-108508's guess),
 `corr_4 = 2 sum_{i>=5} (-1)^i e_i h_{8-i}` (new, same alternating
-law), and the eleven-monomial stable `corr_5` — where the linear law
+law), the eleven-monomial stable `corr_5` — where the linear law
 TERMINATES (no first-layer terms at j = 5; the stratum is purely
 second-layer, collapsing at d = 5 to T-108508's quadratic
-coefficient). Machine: stable_layers.py (stdlib-exact, replay-grade).
+coefficient) — and the 21-monomial stable `corr_6` (determining rank
+d = 12, a 991,057-monomial computation solved by exact point
+evaluation and verified symbolically), which confirms the
+termination is structural: no `e_12` or `e_11 e_1` terms either.
+Bonus machine observation (j = 5, 6; not yet a theorem): the
+monomials of `corr_j` with leading part >= 2j-4 are shift-stable —
+`2 e_{2j-2} e_2 - 2 e_{2j-3} e_2 e_1 + 2 e_{2j-4} (e_4 - e_3 e_1
+- e_2^2 + e_2 e_1^2)` — the first handle on the second-layer
+generating rule. Machine: stable_layers.py (stdlib-exact,
+replay-grade) + stable_layer6.py.
 
 ## Why it matters
 

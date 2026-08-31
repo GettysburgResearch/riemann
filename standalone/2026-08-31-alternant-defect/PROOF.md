@@ -256,10 +256,49 @@ of this single stable form. The compact structure of the
 second-layer generating rule (and whether a two-alphabet identity
 like `e_k({x_i x_j})` organizes it) is the deposited next question.
 
-(All three layer computations, the decompositions, and the direct
-identity checks are in stable_layers.py — pure stdlib, so the
-campaign script is replay-grade — with results in
-stable_layers.json.)
+**Layer Theorem 4 (the T^6 layer for all d; termination is not an
+accident).** The stable form at the determining rank d = 12
+(21 monomials, coefficients in the e-basis, partitions of weight 12):
+
+```text
+corr_6 = 2 e_{10} e_2 - 2 e_9 e_2 e_1 + 2 e_8 e_4 - 2 e_8 e_3 e_1
+       - 2 e_8 e_2^2 + 2 e_8 e_2 e_1^2 - 2 e_7 e_4 e_1
+       - 2 e_7 e_3 e_2 + 2 e_7 e_3 e_1^2 + 4 e_7 e_2^2 e_1
+       - 2 e_7 e_2 e_1^3 - 4 e_6^2 + 6 e_6 e_5 e_1 + 2 e_6 e_4 e_2
+       - 2 e_6 e_4 e_1^2 + 4 e_6 e_3^2 - 6 e_6 e_3 e_2 e_1
+       + 2 e_6 e_3 e_1^3 - 2 e_5^2 e_1^2 - 2 e_5 e_4 e_3
+       + 2 e_5 e_4 e_2 e_1              for EVERY rank d.
+```
+
+Machine route: corr_6 at d = 12 is a 991,057-monomial polynomial;
+the decomposition over the 77 candidate weight-12 e-partitions was
+solved by exact point evaluation and then verified as a SYMBOLIC
+identity (stable_layer6.py, `symbolic verification: True`); the
+Stability Lemma lifts it to all d. The linear law stays dead:
+corr_6 contains NO `e_12` and NO `e_11 e_1` term (which the
+candidate `2 sum_{i>=7} (-1)^i e_i h_{12-i}` would force), so the
+j = 5 termination is structural, not a one-off.
+
+OBSERVED SHIFT-STABILITY OF THE HEAD (machine fact at j = 5, 6;
+not yet a theorem): the monomials of `corr_j` with leading part
+`>= 2j - 4` are IDENTICAL under the shift (leading part -> +2):
+
+```text
+2 e_{2j-2} e_2 - 2 e_{2j-3} e_2 e_1 + 2 e_{2j-4} e_4
+  - 2 e_{2j-4} e_3 e_1 - 2 e_{2j-4} e_2^2 + 2 e_{2j-4} e_2 e_1^2
+```
+
+exactly for j = 5 and j = 6 (checked coefficient-by-coefficient),
+while the `2j - 5` stratum already differs between the two. This is
+the first quantitative handle on the deposited second-layer
+generating rule: the second layer appears to be an h-like expansion
+in a SECOND alphabet whose head is universal. Deposited with two
+data points; a proof (or refutation at j = 7) is future work.
+
+(All four layer computations, the decompositions, and the direct
+identity checks are in stable_layers.py and stable_layer6.py — pure
+stdlib plus sympy verification for j = 6 — with results in
+stable_layers.json and stable_layer6.json.)
 
 ## What this changes
 

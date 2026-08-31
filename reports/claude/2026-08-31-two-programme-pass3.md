@@ -255,7 +255,17 @@ corr_3 = 2 sum_{i>=4}(-1)^i e_i h_{6-i} (T-108508's guess),
 corr_4 = 2 sum_{i>=5}(-1)^i e_i h_{8-i} (new), and the
 eleven-monomial corr_5 — where the linear law TERMINATES (first
 layer empty at j = 5; purely second-stratum, collapsing at d = 5 to
-T-108508's quadratic coefficient). MULTILINEAR EXTENSION (Theorem
+T-108508's quadratic coefficient). The j = 6 layer landed later the
+same day: the 21-monomial stable corr_6 (determining rank d = 12; a
+991,057-monomial polynomial decomposed by exact point evaluation
+over the 77 weight-12 e-partitions, then verified symbolically)
+confirms the termination is structural — no e_12 or e_11 e_1 terms
+— and yields the first quantitative handle on the second layer: the
+leading strata of corr_5 and corr_6 are IDENTICAL under the shift
+(leading part -> +2), i.e. corr_j begins 2 e_{2j-2} e_2
+- 2 e_{2j-3} e_2 e_1 + 2 e_{2j-4}(e_4 - e_3 e_1 - e_2^2 + e_2 e_1^2)
+at both data points (deposited as an observation; proof or j = 7
+refutation is future work). MULTILINEAR EXTENSION (Theorem
 C): closed-form defect numerators for naive TRIPLE products
 sum a_n b_n c_n n^{-s} against the automorphic triple-product
 denominator, at every rank tuple, with the degree law deg N_{ABC} =
