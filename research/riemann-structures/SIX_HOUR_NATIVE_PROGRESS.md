@@ -2,8 +2,9 @@
 
 A compact map of the source, proofs, computations and remaining limits is
 [SIX_HOUR_RESEARCH_SYNTHESIS.md](native-six-hour/SIX_HOUR_RESEARCH_SYNTHESIS.md).
-All results below retain the literal primes 2,3,5, derivative sites,
+Results summarized here use the literal primes 2,3,5, derivative sites,
 factor-two current, physical weights, observation measure and aliases.
+General-arity statements retain their explicitly declared scopes.
 
 The accepted H450 certificate proves a global optimum over actual
 monotone paths, with energy about 178.6045826115; the path-image stability
@@ -43,7 +44,8 @@ minor at EVERY integer 900<=H<=281474976710656 (=2^48), with no gaps.
 It composes the already verified local source updates and modular
 eliminations; it does not rerun those calculations or claim a monolithic
 replay. Combined with the earlier certificate through 900, the complete
-physical observation is faithful for every integer 450<=H<=2^48.
+physical observation is faithful on the twenty-dimensional current
+variation space for every integer 450<=H<=2^48.
 The interval from there to H2 remains unproved.
 
 Completed focused final-packet controls total 423 in ordinary Python
