@@ -1,0 +1,91 @@
+{
+  "authoring_base": "ac7fa9af27c3fbcb3314f3ed58c8eed35b318052",
+  "contract": {
+    "RH": "not assumed for local certificates and not concluded",
+    "arithmetic": "FLINT directed complex balls plus exact rational acceptance",
+    "coverage": "nine declared disks only; exactly one simple R5 zero per disk",
+    "inner_premise": "only needed for reduced-inner and global projection interpretation",
+    "lambda": "fixed inverse exact Riemann-Siegel phase derivative at anchor",
+    "local_noncommon": "C5, R0, C0, f6, W and R5prime exclude zero on each enclosing rectangle",
+    "native_quotient": "nine genuine simple poles of R0*C5/(C0*R5), with residue enclosures",
+    "orientation": "R5 zeros in C+; conjugate C5 zeros in C-",
+    "parameter_exception": "no global exception membership decision at any anchor",
+    "physical_capture": "no band, high-T, outer-metric or Hilbert-Schmidt conclusion",
+    "primitive": "unrescaled xi(1/2+i*z), exact zeta-gamma product",
+    "proof_trust": "pinned FLINT ball implementation; not a verified implementation of FLINT"
+  },
+  "external_documentation": [
+    {
+      "role": "Ball enclosure, certified comparisons, exact rational inputs, series cap",
+      "url": "https://python-flint.readthedocs.io/en/latest/general.html"
+    },
+    {
+      "role": "Taylor-series gamma, exp, zeta; no numerical finite differences",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb_series.html"
+    },
+    {
+      "role": "Pinned library-version series API documentation",
+      "url": "https://github.com/flintlib/flint/blob/v3.6.0/doc/source/acb_poly.rst"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "d38961c15fc76d671cef4fddfc92d3c866af4fd5",
+      "git_blob": "9688e30825fcc3d2b13570539bf03299407eae87",
+      "id": "NA",
+      "path": "research/exploratory/XI_COMPANION_IMAGINARY_AXIS_SAMPLING.md",
+      "role": "AX1-2 moments and companion; AX7 no common axis zero; AX21 Wronskian",
+      "sha256_lf": "a9d6b51b3b2f1ccb388fb8d74e115023c622115b169d3214f071ef9005034081"
+    },
+    {
+      "commit": "9da33e7ea2b15a4badb3cb436e38e54762ad5e1d",
+      "git_blob": "e592a4c031876f56f07d28b7e18a8a7cf6e826f4",
+      "id": "GH",
+      "path": "research/exploratory/XI_COMPANION_GLOBAL_HEIGHT_BOUNDARY.md",
+      "role": "GH1-4 native ratio and inner premise; GH3/16 pure component infinite height",
+      "sha256_lf": "5bf33ffd58c3fe277f4bfb0408f0805eae1b2f34aab49bb71e4c714afb80dc6d"
+    },
+    {
+      "commit": "7aed2ec0b99b9d7f2fb94a774922a83d5b84a870",
+      "git_blob": "cd74bd06267eb4d60bc977353d11f6a0fb72ba6a",
+      "id": "CP",
+      "path": "research/exploratory/COPRIME_INFINITE_HEIGHT_PHYSICAL_CAPTURE.md",
+      "role": "CP2-4 coprime infinite-height does not imply corrected physical trace divergence",
+      "sha256_lf": "b9ab266898129389b94a9ed494b140422fc823552c6b69bf22ed36a9dbb2e7f7"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "7fbf3731f286ddfc9eb1d10ede5941ab2156817a",
+      "id": "L106620",
+      "path": "claims/lemmas/L-106620-mesoscopic-frozen-riemann-siegel-gauge.md",
+      "role": "L106620.1,.4-.6 constant positive lambda and native Theta0/Theta5",
+      "sha256_lf": "23e368f246606b0a8b4f53bec9e65e1dec21bdd207197387461268b4ca1bb7d0"
+    },
+    {
+      "commit": "d76a1a8eb8ec40b19a351af95439b9a6514bee87",
+      "git_blob": "797f7b581580ad5a441c7702015c64a53eca6f4d",
+      "id": "GC",
+      "path": "research/exploratory/XI_COMPANION_GENERIC_PARAMETER_COPRIMALITY.md",
+      "role": "Cancellation-safe local zeros, exact W identity, countable parameter exception limitation",
+      "sha256_lf": "55aa96745c3f269ac464ea7c0b8227e14e7d8ceb33f8bec2fc13f9642b33d44d"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "16ab64a193e59608c9e2c9fd9762addc58809c3f",
+      "id": "L106610",
+      "path": "claims/lemmas/L-106610-riemann-siegel-gauge-factorization.md",
+      "role": "Exact Riemann-Siegel phase and digamma derivative of the native freezing scale",
+      "sha256_lf": "11c87fd9b50c309249b76f39fd87c3d20953779355a39a0338ef281d3cb57c87"
+    }
+  ],
+  "runtime": {
+    "flint": "3.6.0",
+    "machine": "AMD64",
+    "native_files": 44,
+    "native_files_sha256": "36c07323af58dec0eb6fd82a99bf871924eb69f1833d9af626fc09437ae5b0cc",
+    "python": "3.12.10",
+    "python_flint": "0.9.0",
+    "system": "Windows"
+  },
+  "schema": "xi_companion_off_axis_ball_certificates-sources-v1"
+}
