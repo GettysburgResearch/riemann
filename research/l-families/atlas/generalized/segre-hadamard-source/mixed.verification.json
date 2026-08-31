@@ -1,0 +1,337 @@
+{
+  "owned_sha256_canonical_lf": {
+    "MIXED_RANK_CANONICAL_DEGREE.md": "81eaf5524b564bb275f8dd469b317d2e56be6f446c5fda601a55be4576a89299",
+    "MIXED_REPLAY.md": "e8c388cebe49c737d445f089bbee0f5a5eefd9ab362524ec63c93ed829080a20",
+    "mixed_replay.py": "ed6b759f2f529ba589b959cab243be63cd0e138aaaa5988a56b2e37872ca2e47",
+    "tests/test_segre_hadamard_mixed.py": "7751d108f958935fcca9c1ffc24bc73c1585e97f9c753be99c6ee49d4775359d"
+  },
+  "proof_object_sha256": "8776b3a6602517dd5183dd6f135d64d05eba435f0447f10372db0f6941166e6e",
+  "result": {
+    "deformation": [
+      {
+        "actual_degree": 6,
+        "leading_character": -144074700,
+        "parameter": -3,
+        "top_space_dimension": 4
+      },
+      {
+        "actual_degree": 6,
+        "leading_character": -4743200,
+        "parameter": -2,
+        "top_space_dimension": 4
+      },
+      {
+        "actual_degree": 5,
+        "leading_character": 0,
+        "parameter": -1,
+        "top_space_dimension": 4
+      },
+      {
+        "actual_degree": 6,
+        "leading_character": 592900,
+        "parameter": 1,
+        "top_space_dimension": 4
+      },
+      {
+        "actual_degree": 6,
+        "leading_character": 42688800,
+        "parameter": 2,
+        "top_space_dimension": 4
+      },
+      {
+        "actual_degree": 6,
+        "leading_character": 576298800,
+        "parameter": 3,
+        "top_space_dimension": 4
+      }
+    ],
+    "degree_loss_without_pole_collision": {
+      "A": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "B_diagonal": [
+        5,
+        7,
+        11,
+        13
+      ],
+      "all_eight_poles_distinct_and_retained": true,
+      "denominator": [
+        1,
+        -36,
+        830,
+        -11664,
+        120135,
+        -830736,
+        4200806,
+        -12792780,
+        25050025
+      ],
+      "gcd_N_Q": [
+        1
+      ],
+      "gcd_Q_derivative": [
+        1
+      ],
+      "generic_vs_actual_degree_deficit": [
+        4,
+        5
+      ],
+      "numerator": [
+        1,
+        0,
+        -466,
+        2556
+      ],
+      "source_h_A": [
+        1,
+        1,
+        0,
+        -1,
+        -1,
+        0,
+        1,
+        1,
+        0,
+        -1,
+        -1,
+        0,
+        1
+      ],
+      "source_top_tor_space_removed": false
+    },
+    "full_resolution_computed": false,
+    "generic_comparison": {
+      "actual_numerator_degree": 6,
+      "canonical_leading_character": 28814940000,
+      "denominator": [
+        1,
+        -437,
+        82517,
+        -8847175,
+        594010794,
+        -25911723708,
+        734479199208,
+        -13043994939360,
+        131658918652800,
+        -575100098496000
+      ],
+      "distinct_generator_weights": true,
+      "fixed_top_tor_dimension_at_identity": 4,
+      "groups": [
+        [
+          [
+            2,
+            3
+          ],
+          2
+        ],
+        [
+          [
+            5,
+            7,
+            11
+          ],
+          1
+        ]
+      ],
+      "numerator": [
+        1,
+        138,
+        -38076,
+        2067816,
+        -11672856,
+        -1583200080,
+        28814940000
+      ],
+      "s_D_c_M_generic_degree": [
+        9,
+        5,
+        4,
+        3,
+        6
+      ],
+      "tail_checked_through": 9
+    },
+    "multiplicity_reversed_heldout": {
+      "actual_numerator_degree": 9,
+      "canonical_leading_character": 21102765984011250000,
+      "denominator": [
+        1,
+        -1810,
+        1457051,
+        -690672520,
+        214920864899,
+        -46286152430410,
+        7078204321881349,
+        -774727283762886300,
+        60250295460234379500,
+        -3247226085804263640000,
+        115121980733626160910000,
+        -2410020286438020795000000,
+        22521293913456486225000000
+      ],
+      "distinct_generator_weights": true,
+      "fixed_top_tor_dimension_at_identity": 2,
+      "groups": [
+        [
+          [
+            2,
+            3
+          ],
+          1
+        ],
+        [
+          [
+            5,
+            7,
+            11
+          ],
+          2
+        ]
+      ],
+      "numerator": [
+        1,
+        835,
+        -840563,
+        198222715,
+        -4341039534,
+        -4598776805700,
+        688687294414350,
+        -35567051375047500,
+        256460240971935000,
+        21102765984011250000
+      ],
+      "s_D_c_M_generic_degree": [
+        12,
+        6,
+        6,
+        3,
+        9
+      ],
+      "tail_checked_through": 12
+    },
+    "scalar_degree_loss_implies_betti_jump": false,
+    "status": "exact bounded grouped-source comparison; all-grade proof separate",
+    "trace_zero_comparison": {
+      "actual_numerator_degree": 5,
+      "canonical_leading_character": 0,
+      "denominator": [
+        1,
+        -23,
+        -28,
+        4100,
+        -22386,
+        -159042,
+        1551668,
+        -509740,
+        -24753575,
+        57066625
+      ],
+      "distinct_generator_weights": false,
+      "fixed_top_tor_dimension_at_identity": 4,
+      "groups": [
+        [
+          [
+            1,
+            -1
+          ],
+          2
+        ],
+        [
+          [
+            5,
+            7,
+            11
+          ],
+          1
+        ]
+      ],
+      "numerator": [
+        1,
+        -23,
+        334,
+        -4226,
+        27889,
+        -64295
+      ],
+      "s_D_c_M_generic_degree": [
+        9,
+        5,
+        4,
+        3,
+        6
+      ],
+      "tail_checked_through": 9
+    },
+    "trace_zero_heldout": {
+      "actual_numerator_degree": 8,
+      "canonical_leading_character": 0,
+      "denominator": [
+        1,
+        0,
+        -27846,
+        0,
+        254540559,
+        0,
+        -1020827938964,
+        0,
+        1935716238831375,
+        0,
+        -1641387014020503750,
+        0,
+        482709488885812890625
+      ],
+      "distinct_generator_weights": true,
+      "fixed_top_tor_dimension_at_identity": 2,
+      "groups": [
+        [
+          [
+            1,
+            -1
+          ],
+          1
+        ],
+        [
+          [
+            5,
+            7,
+            11
+          ],
+          2
+        ]
+      ],
+      "numerator": [
+        1,
+        0,
+        103198,
+        0,
+        254978256,
+        0,
+        -1332004100350,
+        0,
+        -612739475280625
+      ],
+      "s_D_c_M_generic_degree": [
+        12,
+        6,
+        6,
+        3,
+        9
+      ],
+      "tail_checked_through": 12
+    }
+  },
+  "source": {
+    "commit": "ac1cc5eaf229087b6d805e908897c7c8c99a58b7",
+    "git_blob": "f6c22bf9116de00959a7024b62faaf3a370f2754",
+    "path": "claims/theorems/T-108510-defect-codimension-law.md"
+  }
+}
