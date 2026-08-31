@@ -202,7 +202,10 @@ exceptional bookkeeping at `T = +-1` classes), the first forced
 collision value is `z = a`, the `m = 2R` non-entry, the `a = 0`,
 `m = 6` gap, and — by the monic sieve over the exact factorizations —
 the FULL two-sided law for all torsion points in the range
-`m <= 15`. OPEN: the converse for `m >= 16`, which by the same sieve
+`m <= 17` (the m = 16, 17 factorizations — disc_slice_m16_m17.json —
+continue the normal form: the ord-16 quartic `a^4 - 4a^2 + 2` enters
+exactly at its threshold 17, and the non-torsion factors have leading
+coefficients ~2.2e32 and ~6.1e41). OPEN: the converse for `m >= 18`, which by the same sieve
 reduces to a single verifiable property per m: that after removing
 the (known) torsion factors, the remaining factor of
 `disc_z M_m(a, 1)` has non-unit leading coefficient and no monic

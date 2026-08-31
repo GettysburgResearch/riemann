@@ -6,9 +6,14 @@ Status:   PROVED: the forward half for ALL m (collisions forced from
           m = 2R+1, first collision at z = a, the m = 2R near-miss and
           the a = 0, m = 6 gap derived) AND — via the monic-sieve
           addendum — the COMPLETE two-sided law for every torsion point
-          of every order in the range m <= 15 (exact factorizations +
-          Gauss's lemma; matrix/disc_slice_factor_lcs.json). The
-          converse for m >= 16 remains open, reduced to an explicitly
+          of every order in the range m <= 17 (exact factorizations +
+          Gauss's lemma; matrix/disc_slice_factor_lcs.json extended by
+          matrix/disc_slice_m16_m17.json: at m = 16 and 17 the monic
+          factors are again exactly the threshold-respecting torsion
+          polynomials — the ord-16 quartic duly entering at 17 — and
+          the single remaining factor has non-unit leading coefficient,
+          deg 292 / lc ~ 2.2e32 and deg 384 / lc ~ 6.1e41). The
+          converse for m >= 18 remains open, reduced to the same
           checkable normal form per m
 Created:  2026-08-31 (pass 3 continuation; converts O-108512's law)
 Programme: #764 (moduli resonances of the defect tower)
