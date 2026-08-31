@@ -29,6 +29,18 @@ Preregistered bounded controls, before computation:
   basis. Positive finite Gram controls authenticate their algebra, not an
   infinite period, gamma phase, or analytic continuation.
 
+The three finite feature systems are fixed as follows (rows, frequencies,
+positive weights, and invertible complex basis matrix):
+
+1. Rows (1,0),(1,1),(0,1); frequencies0,1,2; weights1,1/2,1/4;
+   basis matrix [[1,i],[0,1]].
+2. The four literal (g,b) coefficient rows at n=1,2,3,4; frequencies1,2,3,4
+   (declared rational proxies, NOT logarithms); weights n^-25;
+   basis matrix [[1,1+i],[i,2]].
+3. Rows (1,0,0),(0,1,0),(0,0,1),(1,1,1),(1,-1,2);
+   frequencies0,1/2,1,3/2,2; weights1,1/3,1/9,1/27,1/81;
+   basis matrix [[1,i,0],[0,1,1],[1,0,1]].
+
 Classical feature-kernel, matrix-variance, Schur-complement, Stirling, and
 modular-form inputs will be credited. Analytic quantifiers require the
 written proofs and subsequent independent exact-SHA review.
