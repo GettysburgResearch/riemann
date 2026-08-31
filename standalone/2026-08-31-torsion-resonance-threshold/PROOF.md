@@ -1,16 +1,18 @@
 # The torsion resonance threshold: forced spectrum collisions begin at m = 2 ord(alpha^2) + 1, and the spectrum first collides at z = a
 
 ```text
-Status:  PROVED (Lemmas 1-4, Theorem, Proposition, Corollary below —
-         complete elementary proofs). The theorem is the FORWARD half
-         of the empirical entry law of O-108512 (collision from
-         m = 2R+1 onward, first entry forced, collision value z = a);
-         the CONVERSE half (no accidental collision below the
-         threshold) remains empirical: certified exact at ten torsion
-         points for every m from 5 up to each entry.
+Status:  PROVED (Lemmas 1-4, Theorem, Proposition, Corollary,
+         Addendum below — complete elementary proofs). Forward half of
+         O-108512's entry law for ALL m (collision from m = 2R+1
+         onward, first entry forced, collision value z = a); converse
+         half PROVED for all m <= 17 for every torsion point of every
+         order (monic sieve over the exact factorizations); converse
+         for m >= 18 open, reduced to the normal-form conjecture.
 Machine: matrix/torsion_field_probe.py + torsion_field_probe.json
-         (number-field-exact table m = 5..27 x 10 points, including
-         the (z - a)^2 divisibility at every entry: 10/10).
+         (number-field-exact table m = 5..27, fourteen points, with
+         the (z - a)^2 divisibility at every entry: 12/12);
+         matrix/disc_slice_factor_lcs.json + disc_slice_m16_m17.json
+         (the normal-form factorizations m = 5..17).
 Depends: T-108500 (defect law), T-108509 (spectrum polynomial M_m,
          monicity), T-108510 (used only for context).
 RH status: RH and GRH are unproved; nothing here addresses them.
