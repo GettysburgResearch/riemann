@@ -2,19 +2,24 @@
 
 ```text
 Claim ID: O-108523
-Status:   OBSERVATION (exact, 40/40 at odd m over the committed
-          factorizations; the even-m bookkeeping is OPEN with the
-          systematic deviations recorded). The class-count inputs are
-          the PROVED objects of T-108513; the law's mechanism reading
-          is identified but its local-branching proof is deposited,
+Status:   OBSERVATION (exact, 52/52 at odd m over the committed
+          factorizations INCLUDING the held-out m = 19 row — 12/12
+          cells with the two brand-new classes psi_9/psi_18 predicted
+          exactly at their entry; the even-m bookkeeping is OPEN with
+          the systematic deviations recorded, now 39 cells with the
+          m = 18 sieve row). The class-count inputs are the PROVED
+          objects of T-108513; the law's mechanism reading is
+          identified but its local-branching proof is deposited,
           not claimed.
 Created:  2026-08-31 (pass 3 continuation; quantitative refinement of
           O-108512/T-108513)
 Programme: #764 (deformation spectrum towers)
 Machine:  research/exploratory/2026-08-30-two-programme-pass/matrix/
           mult_law_check.py + mult_law_check.json, over the exact
-          factorizations disc_slice_factor_lcs.json and
-          disc_slice_m16_m17.json (m = 5..17, ten torsion points)
+          factorizations disc_slice_factor_lcs.json,
+          disc_slice_m16_m17.json (m = 5..17, ten torsion points) and
+          the memory-lean sieve rows m18_sieve.json / m19_sieve.json
+          (multiplicities keyed by the psi index N = M directly)
 RH status: RH and GRH are unproved; this claim does not address them.
 ```
 
@@ -39,6 +44,15 @@ STATEMENT that this quantity first becomes positive at m = 2R+1 via
 an interior pair; the law refines the threshold into the full
 growth profile of each resonance.
 
+**Held-out confirmation at m = 19 (12/12).** The memory-lean sieve
+row (m19_sieve.json), computed AFTER the law was frozen, matches the
+prediction in every cell — including the a = 0 tower continuing as
+k(k+1) = 72 at k = 8, and the two classes psi_9, psi_18 that were
+never in any fitting data entering at their T-108513 threshold with
+exactly the predicted multiplicity 2 (a single interior pair with
+mu = 2). Full comparison table in mult_law_check.json
+("sieve_rows"). Odd-m score: 52/52.
+
 ## Mechanism reading (identified, not yet proved)
 
 The interior term is exactly what transversal separation predicts:
@@ -55,8 +69,9 @@ interior collisions, pair-branching at the boundary.
 
 ## Even m: OPEN, with the deviation table recorded
 
-The same formula overshoots at EVERY even-m cell (29/29; deviations
--2 to -14, recorded in mult_law_check.json). The discrepancy
+The same formula overshoots at EVERY even-m cell (39/39 with the
+m = 18 sieve row; deviations recorded in mult_law_check.json — the
+m = 18 predictions overshoot by 2 to 16 per cell). The discrepancy
 concentrates in the boundary classes, where the even-m trivial
 factor `(1 + T)` interferes with the `z = -2` count and the `z = +2`
 class `c = 0` (absent at odd m) needs its own rule; partial fits

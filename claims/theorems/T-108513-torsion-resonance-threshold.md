@@ -12,9 +12,10 @@ Status:   PROVED: the forward half for ALL m (collisions forced from
           factors are again exactly the threshold-respecting torsion
           polynomials — the ord-16 quartic duly entering at 17 — and
           the single remaining factor has non-unit leading coefficient,
-          deg 292 / lc ~ 2.2e32 and deg 384 / lc ~ 6.1e41). The
-          converse for m >= 18 remains open, reduced to the same
-          checkable normal form per m
+          deg 292 / lc ~ 2.2e32 and deg 384 / lc ~ 6.1e41), EXTENDED
+          TO m <= 19 by the memory-lean two-stage sieve (see the
+          m = 18/19 addendum below). The converse for m >= 20 remains
+          open, reduced to the same checkable normal form per m
 Created:  2026-08-31 (pass 3 continuation; converts O-108512's law)
 Programme: #764 (moduli resonances of the defect tower)
 Depends on: T-108500, T-108509; grew from O-108512's held-out rounds
@@ -70,11 +71,53 @@ inherits a forced double root away from `T = +-1`. "Extra symmetry
 forces spectral degeneracy", here as an exact statement about binomial
 partial fractions — no analysis involved.
 
+## Addendum: the converse at m = 18 and 19 (memory-lean sieve)
+
+The direct sympy factorization route OOMed at m = 18 (12.7 GB), so
+the extension runs a two-stage EXACT pipeline with no factoring:
+
+1. `matrix/m_eval_spectrum.py` — the committed defect-numerator +
+   spectrum pipeline evaluated at integer nodes over plain ints
+   (evaluation commutes with the ring operations; every structural
+   assert checked at every node), then modular Newton interpolation
+   + CRT with an exact re-evaluation PROOF at all `B + 1` nodes for
+   the rigorous coarse bound `B` (3 s at m = 18, 5 s at m = 19;
+   validated coefficient-exact against the committed symbolic
+   spectra at m = 9, 10, 11 and the full m = 9 sieve row).
+2. `matrix/m18_sieve.py` — `disc_z M_m` by exact Fraction
+   resultants at `D + 1` nodes (`D` the Sylvester bound), modular
+   interpolation with exact re-evaluation proof, then a
+   FACTORING-FREE sieve: divide out each real-cyclotomic
+   `psi_N = minpoly(2 cos(2 pi / N))` to maximal multiplicity and
+   verify `psi_N` does NOT divide the remainder for EVERY N with
+   `phi(N)/2 <= deg P` — a PROVABLY exhaustive candidate list via
+   `phi(N) >= sqrt(N/2)`, so `N <= 2 (2 deg P)^2` (1725 candidates
+   at m = 18, 2155 at m = 19; an earlier `N <= 2000` cutoff was a
+   rigor gap caught in self-review and fixed — honesty trail).
+
+Results (`matrix/m18_sieve.json`, `matrix/m19_sieve.json`):
+
+- **m = 18**: dividing `psi_N` exactly `N in {3,4,5,6,7,8,10,12,
+  14,16}` — precisely the classes with threshold `2R + 1 <= 18` —
+  and `psi_9`/`psi_18` (threshold 19) correctly ABSENT: a held-out
+  NEGATIVE prediction confirmed. No other torsion order divides
+  (all 1725 provably-exhaustive candidates tested).
+- **m = 19**: `psi_9` and `psi_18` both ENTER at exactly
+  `m = 2*9 + 1 = 19` (multiplicity 2 each — the doubled `(z-a)^2`
+  collision pair), extending the entry table to sixteen classes;
+  no other torsion order divides the remainder.
+
+So the COMPLETE two-sided law now holds for every torsion point of
+every order in the range `m <= 19`. The multiplicity refinement of
+these factorizations is O-108523 (exact 52/52 on odd m including
+the held-out m = 19 row).
+
 ## What remains open
 
-The converse: for `m < 2R + 1` the cofactor `G` (explicit binomial
-sums `D_c`) never accidentally vanishes at a doubled class or acquires
-repeated roots. Ten points x all sub-threshold m are certified exact
-(zero accidental collisions observed); a proof needs non-vanishing of
-explicit binomial-sum resultants and is the deposited next problem.
+The converse for `m >= 20`: for `m < 2R + 1` the cofactor `G`
+(explicit binomial sums `D_c`) never accidentally vanishes at a
+doubled class or acquires repeated roots. Sixteen classes x all
+sub-threshold m <= 19 are certified exact (zero accidental
+collisions observed); a proof needs non-vanishing of explicit
+binomial-sum resultants and is the deposited next problem.
 ```

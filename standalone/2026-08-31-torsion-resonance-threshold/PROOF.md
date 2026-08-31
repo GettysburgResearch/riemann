@@ -197,20 +197,81 @@ O-108512 is a COMPLETE THEOREM in the range m <= 15 — for all torsion
 points simultaneously, not merely the fourteen tested — and remains
 proved in the forward direction for every m. ∎
 
+## Addendum 2: the converse at m = 18 and 19 — factoring-free sieve
+
+The sympy factorization route exhausts memory beyond m = 17 (12.7 GB
+OOM at m = 18), so the extension replaces BOTH stages with exact
+machinery that never factors and never builds symbolic expression
+trees:
+
+**Stage 1 (spectrum; matrix/m_eval_spectrum.py).** The committed
+defect-numerator + spectrum-peeling pipeline is a composition of
+ring operations and exact integer divisions, so it commutes with
+evaluation `a -> a0`: running it over plain ints at integer nodes
+`a0 = 0..B` gives `mu_j(a0)` exactly, with every structural assert
+(the three vanishing tail coefficients, the zero remainders, the
+monic top) checked AT EVERY NODE. `B` is the rigorous coarse degree
+bound (deg of the e-recursion plus deg `h^m`), so Newton
+interpolation through all `B + 1` nodes determines `mu_j`
+rigorously; the modular/CRT interpolant is then PROVED by exact
+re-evaluation at all nodes. Runtime: 3 s at m = 18, 5 s at m = 19
+(the killed sympy job had spent 62 min and 5.8 GB on m = 18 without
+finishing). Validation: coefficient-exact agreement with the
+committed symbolic spectra at m = 9, 10, 11, both parities.
+
+**Stage 2 (disc + sieve; matrix/m18_sieve.py).** `disc_z M_m(a,1)`
+by exact `Fraction` resultants at Sylvester-many integer nodes,
+modular interpolation, and again an exact re-evaluation PROOF at
+all nodes. Then the sieve without factoring: (i) divide out each
+real-cyclotomic minimal polynomial `psi_N = minpoly(2cos(2pi/N))`
+(monic, so division over Z is decisive) to maximal multiplicity;
+(ii) any OTHER torsion value rooting disc would force its monic
+`psi_N` to divide the remainder P (Gauss + distinct irreducibles),
+and `deg psi_N = phi(N)/2 <= deg P` is necessary; since
+`phi(N) >= sqrt(N/2)` for every N (per-prime-power check), the
+candidate list `{N <= 2 (2 deg P)^2 : phi(N)/2 <= deg P}` is
+PROVABLY exhaustive — every candidate is tested by exact division.
+
+**Results.**
+
+- m = 18 (deg disc 672): dividing `psi_N` exactly
+  `N in {3,4,5,6,7,8,10,12,14,16}` — precisely the classes with
+  threshold `2R+1 <= 18`; `psi_9`/`psi_18` (threshold 19) correctly
+  ABSENT — a held-out negative prediction confirmed. Remainder:
+  deg 440, lc ~3.1e43, no `psi_N` divisor among all 1725 provably
+  exhaustive candidates.
+- m = 19 (deg disc 774): `psi_9` and `psi_18` both ENTER at exactly
+  `m = 2*9 + 1 = 19`, each with multiplicity 2 (the doubled
+  `(z - a)^2` collision pair of the Theorem); remainder deg 552,
+  no `psi_N` divisor among all 2155 provably exhaustive candidates.
+
+The multiplicities of ALL dividing factors at both m match the
+O-108523 ledger (odd m exactly; even m recorded as deviation data).
+
+**Honesty note.** The first version of step (ii) capped candidates
+at `N <= 2000`, which is NOT exhaustive once `deg P >= ~480`
+(N = 2310 has `phi/2 = 240`); the gap was caught in same-day
+self-review, the bound above installed, and both sieves re-run
+under the corrected enumeration — the results quoted above are the
+corrected runs. The m = 9 control reproduces the committed
+factorization row exactly under the new enumeration.
+
 ## What is proved and what remains
 
 PROVED: collisions are forced from `m = 2R + 1` on (with the explicit
 exceptional bookkeeping at `T = +-1` classes), the first forced
 collision value is `z = a`, the `m = 2R` non-entry, the `a = 0`,
-`m = 6` gap, and — by the monic sieve over the exact factorizations —
+`m = 6` gap, and — by the monic sieve over the exact factorizations,
+extended by the factoring-free sieve of Addendum 2 —
 the FULL two-sided law for all torsion points in the range
-`m <= 17` (the m = 16, 17 factorizations — disc_slice_m16_m17.json —
+`m <= 19` (the m = 16, 17 factorizations — disc_slice_m16_m17.json —
 continue the normal form: the ord-16 quartic `a^4 - 4a^2 + 2` enters
 exactly at its threshold 17, and the non-torsion factors have leading
-coefficients ~2.2e32 and ~6.1e41). OPEN: the converse for `m >= 18`, which by the same sieve
+coefficients ~2.2e32 and ~6.1e41; m = 18, 19 per Addendum 2). OPEN:
+the converse for `m >= 20`, which by the same sieve
 reduces to a single verifiable property per m: that after removing
 the (known) torsion factors, the remaining factor of
-`disc_z M_m(a, 1)` has non-unit leading coefficient and no monic
+`disc_z M_m(a, 1)` has no monic
 irreducible torsion divisors — an explicitly checkable normal form
 whose persistence for all m is the deposited conjecture. The reading of O-108512 is
 upgraded accordingly: the torsion entry law's threshold is now a

@@ -316,18 +316,37 @@ def main():
     say(f"remainder deg {len(P)-1}, content {cP}, lc {P[-1]}")
     degP = len(P) - 1
     say("S4: exhaustive candidate torsion minpolys ...")
+    # Exhaustiveness: any torsion value rooting disc has its MONIC
+    # minimal polynomial psi_N dividing disc over Z (Gauss); distinct
+    # irreducibles then force psi_N | P after the divisions above,
+    # so deg psi_N = phi(N)/2 <= deg P is necessary (N >= 3).
+    # LEMMA phi(N) >= sqrt(N/2) for all N (per odd prime power
+    # phi(p^k) >= p^{k/2}; phi(2^k) = 2^{k-1} >= 2^{k/2}/sqrt 2;
+    # multiply). Hence every candidate has N <= 2 (2 deg P)^2 and
+    # enumerating to that bound is PROVABLY exhaustive. (The first
+    # version cut off at N <= 2000, which does NOT cover e.g.
+    # N = 2310 with phi/2 = 240 <= deg P — gap caught in self-review
+    # and fixed; recorded in the honesty trail.)
+    from array import array
+    lim = 2 * (2 * degP) ** 2
+    phi = array('q', range(lim + 1))
+    for i in range(2, lim + 1):
+        if phi[i] == i:            # i prime
+            for j in range(i, lim + 1, i):
+                phi[j] -= phi[j] // i
+    cand = [N for N in range(1, lim + 1)
+            if N <= 2 or phi[N] // 2 <= degP]
+    say(f"  exhaustive bound N <= {lim}; {len(cand)} candidate N")
     checked = 0
     hits = []
-    for N in range(1, 2001):
-        import sympy as sp
-        if N > 2 and sp.totient(N) // 2 > degP:
-            continue
+    for N in cand:
         q = psi_N(N)
+        assert len(q) - 1 <= max(degP, 1)
         checked += 1
         if pdiv_exact(P, q) is not None:
             hits.append(N)
-    say(f"checked {checked} candidate psi_N; divisors of remainder: "
-        f"{hits}")
+    say(f"checked {checked} candidate psi_N (provably all); divisors "
+        f"of remainder: {hits}")
     ok = (not hits) and abs(P[-1] // cP if cP else P[-1]) != 1
     json.dump({"m": m, "degree_bound": D, "disc_degree": len(disc)-1,
                "torsion_multiplicities": {str(k): v
@@ -337,6 +356,7 @@ def main():
                "remainder_lc": str(P[-1]),
                "remainder_primitive_lc_abs": str(abs(P[-1] // cP)),
                "psi_candidates_checked": checked,
+               "psi_exhaustive_bound": lim,
                "remainder_torsion_divisors": hits,
                "converse_m18_established": bool(ok),
                "rh_established": False},

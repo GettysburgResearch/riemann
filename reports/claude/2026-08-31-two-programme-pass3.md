@@ -34,7 +34,7 @@ RH status: RH and GRH are unproved; nothing in this pass addresses
 | L-108511 | LEMMA | Trace-scaling line crosses the survival trichotomy: Z_0 = zeta(4s-2)/zeta(2s-1), Z_{-1} = L(Sym^2,2s)/(zeta(2s-1)L(f,s)), exact |
 | O-108006 | OBSERVATION | Graph purity telescope: 605-graph certified corpus, negative-end breach law (37/37 through n=14), certified walk bifurcations |
 | O-108512 | OBSERVATION (half-converted) | Torsion resonance entry law m = 2 ord(alpha^2)+1: ten points, ten exact matches, six held-out |
-| T-108513 | THEOREM | Resonance threshold: class crowding forces collisions from m = 2R+1 (all m), collision at z = a; converse proved for all torsion points, m <= 17 |
+| T-108513 | THEOREM | Resonance threshold: class crowding forces collisions from m = 2R+1 (all m), collision at z = a; converse proved for all torsion points, m <= 19 (memory-lean exact sieve at 18/19) |
 | T-108514 | THEOREM | GP(n,2) positive-end-only for ALL n >= 24 (exact threshold; infinite expansion-side family; three pieces, all adversarially verified sound) |
 | T-108515 | THEOREM | Segre bridge: N_m = equivariant K-polynomial cofactor of the Segre embedding of (P^1)^m; m=3 Betti table exact; defect FE = Gorenstein duality of the cube; N_m(2,1) = Eulerian polynomial |
 | L-108516 | LEMMA | Two-parameter plane: fibration, Dahlquist axis, purity wedge, integrality Z^2; RIGIDITY: exactly four integral weight-1-pure points |
@@ -44,7 +44,7 @@ RH status: RH and GRH are unproved; nothing in this pass addresses
 | L-108520 | LEMMA | Corridor forcing: induced 2x15 ladder breaches both ends (50 > 49); window finiteness |
 | L-108521 | LEMMA | Frustration bound lambda_min <= -3 + 4f/n; positive-only needs linear frustration |
 | T-108522 | THEOREM | Alternant closed form: general-rank square defect solved; stable layer theorems; multilinear triple-product defects with degree law |
-| O-108523 | OBSERVATION | Torsion multiplicity law: odd-m growth profile of every resonance exact 40/40; even-m bookkeeping open |
+| O-108523 | OBSERVATION | Torsion multiplicity law: odd-m growth profile of every resonance exact 52/52 incl. held-out m=19 (12/12, two brand-new classes); even-m bookkeeping open |
 
 Pass-2 claims T-108507 and T-108508 received addenda: the spectrum
 theorem closes T-108507's tower question; the codimension law proves
@@ -314,7 +314,38 @@ is identified (interior pairs separate linearly; boundary z = +-2
 branches in pairs) with the Puiseux proof deposited. Even m: the
 formula overshoots at all 29 cells; the boundary/trivial-factor
 bookkeeping is deposited OPEN with the deviation table rather than
-guessed (machine: mult_law_check.py + json).
+guessed (machine: mult_law_check.py + json). HELD-OUT CONFIRMATION
+(same day): the m = 19 sieve row, computed after the law froze,
+matches 12/12 — including the a = 0 tower at k(k+1) = 72 and the
+two never-fitted classes psi_9/psi_18 entering at their threshold
+with exactly the predicted multiplicity 2. Odd-m score 52/52; the
+m = 18 row adds ten more even-m deviation cells (all overshoots,
++2..+16) to the open bookkeeping.
+
+**m = 18/19 converse extension (T-108513 addendum)**: the direct
+sympy factor route OOMed (12.7 GB at m = 18; the m = 19 stage was
+OOM-killed at 8.4 GB), so the extension runs a memory-lean EXACT
+two-stage pipeline: (1) the committed defect-numerator + spectrum
+pipeline evaluated at integer nodes over plain ints — evaluation
+commutes with ring operations, every structural assert checked at
+every node — then modular Newton interpolation with an exact
+re-evaluation PROOF at all B+1 nodes for the rigorous coarse degree
+bound B (matrix/m_eval_spectrum.py: m = 18 in 3 s, m = 19 in 5 s,
+against 62 min/5.8 GB of sympy not finishing; validated
+coefficient-exact against committed symbolic spectra at m = 9, 10,
+11); (2) disc_z by exact Fraction resultants at Sylvester-many
+nodes + the same interpolate-and-prove step, then a FACTORING-FREE
+sieve: divide out each psi_N to maximal multiplicity and verify no
+other real-cyclotomic minimal polynomial divides the remainder,
+with the candidate list provably exhaustive via
+phi(N) >= sqrt(N/2) (matrix/m18_sieve.py). Results: at m = 18 the
+dividing psi_N are exactly the threshold <= 17 classes with
+psi_9/psi_18 correctly ABSENT (a held-out negative); at m = 19 both
+enter at exactly 2*9+1 = 19 with multiplicity 2. The two-sided law
+now stands for every torsion point of every order, m <= 19. The
+observed degree law of the spectrum coefficients
+(deg mu_{nu-k} = k(2nu-k) odd / k(2nu-k+1) even) holds exactly at
+both new m.
 
 ## Process notes (honesty trail)
 
@@ -332,6 +363,21 @@ guessed (machine: mult_law_check.py + json).
   REFUTED within minutes (D_m vanishes at torsion points — which
   became O-108512's discovery). Failed guesses are recorded, not
   hidden.
+- The m = 18 direct factor route OOMed at 12.7 GB and the m = 19
+  sympy stage-1 was OOM-killed at 8.4 GB (cgroup, killer log
+  verified); both were replaced by the evaluation+interpolation
+  pipeline above, which was validated against three committed
+  symbolic spectra BEFORE its first new-m run — and the still-running
+  62-min/5.8 GB sympy m = 18 job was then killed in its favor
+  (3 s for the same output, proved by exact re-evaluation).
+- The first version of the factoring-free sieve's exhaustive step
+  capped candidates at N <= 2000 — insufficient once
+  deg(remainder) >= ~480 (N = 2310 has phi/2 = 240): a RIGOR GAP
+  caught in same-day self-review, before any external review. Fixed
+  with the provably exhaustive phi(N) >= sqrt(N/2) bound and the
+  sieves re-run under the corrected enumeration (the committed
+  m18/m19_sieve.json are the corrected runs); the m = 9 control
+  reproduced the identical candidate set.
 
 ## Where a reader should start
 
