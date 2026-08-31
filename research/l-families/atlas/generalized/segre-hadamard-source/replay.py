@@ -660,6 +660,17 @@ def payload():
     return record
 
 
+def replay_equal(candidate, expected):
+    """Compare canonical JSON types as well as values; bool is not an integer."""
+    candidate_json = json.dumps(
+        candidate, sort_keys=True, separators=(",", ":"), allow_nan=False
+    )
+    expected_json = json.dumps(
+        expected, sort_keys=True, separators=(",", ":"), allow_nan=False
+    )
+    need(candidate_json == expected_json, "typed source replay differs from fixture")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group(required=True)
@@ -677,10 +688,7 @@ def main():
         )
     else:
         need(FIXTURE.exists(), "verification fixture missing")
-        need(
-            json.loads(FIXTURE.read_text(encoding="utf-8")) == record,
-            "source replay differs from frozen fixture",
-        )
+        replay_equal(json.loads(FIXTURE.read_text(encoding="utf-8")), record)
     print(f"PASS {record['proof_object_sha256']}")
 
 

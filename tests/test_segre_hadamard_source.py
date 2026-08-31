@@ -192,6 +192,28 @@ class CharacterAndFunctorControls(unittest.TestCase):
             ):
                 R.authenticate_sources()
 
+    def test_typed_fixture_counts_do_not_accept_boolean_or_float_counterfeits(self):
+        expected = {"result": {"count": 1}, "proof_object_sha256": "unchanged"}
+        for counterfeit in (True, 1.0):
+            candidate = {
+                "result": {"count": counterfeit},
+                "proof_object_sha256": "unchanged",
+            }
+            self.assertEqual(candidate, expected)  # The historical trap.
+            with self.subTest(counterfeit=counterfeit), self.assertRaises(ValueError):
+                R.replay_equal(candidate, expected)
+
+    def test_typed_fixture_rejects_nonfinite_numbers(self):
+        for counterfeit in (float("nan"), float("inf"), -float("inf")):
+            with self.subTest(counterfeit=counterfeit), self.assertRaises(ValueError):
+                R.replay_equal({"value": counterfeit}, {"value": 1})
+
+    def test_typed_fixture_still_accepts_reordered_json_objects(self):
+        R.replay_equal(
+            {"result": {"count": 1, "exact": "1/3"}, "version": 1},
+            {"version": 1, "result": {"exact": "1/3", "count": 1}},
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
