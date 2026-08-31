@@ -128,3 +128,12 @@ W-Koszul chains, solving its C-image as a W boundary, and applying C again.
 Retain the actual sparse transgression matrices and at least one full
 nonzero zigzag. Check every chain identity exactly. Any failed prediction,
 resource refusal, or new design change will remain in the history.
+
+### Resource refusal and bounded amendment
+
+The first degree-four run stopped at the unchanged 1024-row cap while
+constructing E1_(3,0),4; it did not compute a transgression. A subsequent
+allocation-only count from the pinned Chow characters gives maximum 1126
+rows and 23401 total E1 cells (31609 W-chain cells). Before retrying, raise
+only the row cap to 1152. Keep the 2048-column, 100000-cell, bit and byte
+caps, all predictions, and the complete weight coverage unchanged.
