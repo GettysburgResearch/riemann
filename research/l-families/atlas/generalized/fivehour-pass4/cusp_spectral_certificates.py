@@ -31,11 +31,69 @@ PERIOD_WEIGHTS = (384, 1536, 6144, 24576, 98304)
 EPS_DENOMINATORS = (16, 32, 64, 128, 256)
 MARGIN_DENOMINATORS = (4, 8, 16)
 ALLOWED_BITS = (256, 512)
+EXPECTED_RUNTIME = {"python_flint": "0.9.0", "flint": "3.6.0"}
 
 
 def require(condition: bool, message: str) -> None:
     if not condition:
         raise ValueError(message)
+
+
+def strict_json(raw: bytes) -> object:
+    """Bound parsing work and reject duplicate keys, floats and booleans-as-ints."""
+    require(type(raw) is bytes and len(raw) <= 5_000_000, "JSON bytes/cap")
+
+    def pairs(items):
+        result = {}
+        for key, value in items:
+            require(key not in result, "duplicate JSON key")
+            result[key] = value
+        return result
+
+    def forbidden(_):
+        raise ValueError("floating or nonfinite JSON number")
+
+    value = json.loads(
+        raw, object_pairs_hook=pairs, parse_float=forbidden, parse_constant=forbidden
+    )
+    visits = 0
+
+    def walk(item, depth):
+        nonlocal visits
+        visits += 1
+        require(visits <= 200_000 and depth <= 24, "JSON work cap")
+        if type(item) is int:
+            require(item.bit_length() <= 4096, "integer cap")
+        elif type(item) is str:
+            require(len(item) <= 1000, "string cap")
+        elif type(item) is list:
+            require(len(item) <= 10000, "list cap")
+            for child in item:
+                walk(child, depth + 1)
+        elif type(item) is dict:
+            require(len(item) <= 10000, "dict cap")
+            for key, child in item.items():
+                require(type(key) is str and len(key) <= 1000, "key cap")
+                walk(child, depth + 1)
+        else:
+            require(type(item) is bool or item is None, "JSON scalar type")
+
+    walk(value, 0)
+    return value
+
+
+def same_typed_tree(actual: object, expected: object) -> bool:
+    if type(actual) is not type(expected):
+        return False
+    if type(actual) is dict:
+        return actual.keys() == expected.keys() and all(
+            same_typed_tree(actual[key], expected[key]) for key in actual
+        )
+    if type(actual) is list:
+        return len(actual) == len(expected) and all(
+            same_typed_tree(a, b) for a, b in zip(actual, expected)
+        )
+    return actual == expected
 
 
 def pack(value: arb) -> dict:
@@ -199,7 +257,9 @@ def source_locks() -> dict:
         blob = subprocess.check_output(["git", "rev-parse", f"{PROOF_COMMIT}:{path}"], cwd=root).decode().strip()
         entries.append({"path": path, "git_blob": blob, "sha256": hashlib.sha256(data).hexdigest()})
     return {"proof_commit": PROOF_COMMIT, "proof_files": entries,
-            "producer_sha256": hashlib.sha256(here.read_bytes()).hexdigest()}
+            "producer_sha256_lf": hashlib.sha256(
+                here.read_bytes().replace(b"\r\n", b"\n")
+            ).hexdigest()}
 
 
 def build_report(bits: int) -> dict:
@@ -207,6 +267,8 @@ def build_report(bits: int) -> dict:
     previous = ctx.prec
     try:
         ctx.prec = bits
+        require(flint.__version__ == EXPECTED_RUNTIME["python_flint"], "python-flint version")
+        require(flint.__FLINT_VERSION__ == EXPECTED_RUNTIME["flint"], "FLINT version")
         operator = [operator_cell(k, j) for k in OPERATOR_WEIGHTS for j in operator_indices(k)]
         period = [period_cell(k, e, m) for k in PERIOD_WEIGHTS
                   for e in EPS_DENOMINATORS for m in MARGIN_DENOMINATORS]
@@ -220,6 +282,7 @@ def build_report(bits: int) -> dict:
                              "library": pack(library), "finite_sum": pack(explicit)})
         return {"schema": "native-cusp-analytic-bounds-v1", "precision_bits": bits,
                 "arithmetic": "ARB_DIRECTED_REAL_BALLS", "python_flint": flint.__version__,
+                "flint": flint.__FLINT_VERSION__,
                 "coverage": "complete preregistered Cartesian panels; unresolved cells retained",
                 "scope": "finite instances of analytic source inequalities, not direct period quadrature",
                 "source": source_locks(), "constants": {k: pack(v) for k, v in constants().items()},
@@ -230,7 +293,8 @@ def build_report(bits: int) -> dict:
 
 def validate_against(actual: dict, expected: dict) -> None:
     require(type(actual) is dict, "report object required")
-    require(actual == expected, "report differs from complete primitive reconstruction")
+    require(same_typed_tree(actual, expected),
+            "report differs from complete typed primitive reconstruction")
 
 
 def summary(report: dict) -> dict:
@@ -253,8 +317,7 @@ def main() -> int:
     if args.emit is not None:
         args.emit.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     else:
-        require(args.check.stat().st_size <= 5000000, "report byte cap")
-        actual = json.loads(args.check.read_text(encoding="utf-8"))
+        actual = strict_json(args.check.read_bytes())
         validate_against(actual, report)
     print(json.dumps(summary(report), sort_keys=True))
     return 0

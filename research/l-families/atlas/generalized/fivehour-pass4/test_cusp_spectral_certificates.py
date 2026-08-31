@@ -1,6 +1,7 @@
 """Finite algebra, primitive-formula and strict-checker controls."""
 
 import copy
+import json
 import unittest
 
 from flint import arb, ctx
@@ -75,6 +76,21 @@ class CuspCertificateTests(unittest.TestCase):
         for mutant in mutants:
             with self.assertRaises(ValueError):
                 c.validate_against(mutant, expected)
+
+        bool_mutant = copy.deepcopy(expected)
+        bool_mutant["cells"][0]["k"] = True
+        with self.assertRaises(ValueError):
+            c.validate_against(bool_mutant, expected)
+
+    def test_strict_json_guards(self):
+        bad = (
+            b'{"a":1,"a":2}', b'{"a":1.0}', b'{"a":NaN}',
+            json.dumps(2**4097).encode(), json.dumps("x" * 1001).encode(),
+            b"[" * 25 + b"0" + b"]" * 25,
+        )
+        for raw in bad:
+            with self.subTest(raw=raw[:20]), self.assertRaises(ValueError):
+                c.strict_json(raw)
 
 
 if __name__ == "__main__":
