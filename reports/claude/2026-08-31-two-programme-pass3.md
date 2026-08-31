@@ -149,6 +149,26 @@ Kronecker/symmetric-power matrices and integral Faddeev-LeVerrier,
 m = 2..6, all green incl. -O). This realizes Priority 1 of the
 external programme review, proved independently of its sketch.
 
+**Two-parameter deformation plane (Lane 2; L-108516)**: L-108511's
+trace-scaling line extends to the full plane
+Z_{t,u} = prod (1 - t a_p p^{-s} + u p^{1-2s})^{-1}. Proved
+unconditionally: every coefficient b_n(t,u) is weighted-homogeneous
+of degree Omega(n) (wt t = 1, wt u = 2) — so the upper half-plane
+FIBERS over the line by root-scaling, t -> -t is the Liouville twist,
+and the parabola u = t^2 is the Omega-graded flow through L(f); the
+t = 0 axis is Dahlquist's family with
+Z_{0,u} = zeta_{u^2}(4s-2)/zeta_u(2s-1) (and the collapse
+Z_{0,-1} = zeta(2s-1) exactly); the purity wedge is
+{u >= t^2} union {t = 0} (inside: Hasse, unconditional; outside:
+p = 2 witnesses); the integrality locus is exactly Z^2. RIGIDITY
+THEOREM (unconditional): the integral + weight-1-pure points of the
+whole plane are EXACTLY four classical points — (1,1) = L(f),
+(-1,1) = the Liouville-twist quotient, (0,1) = zeta(4s-2)/zeta(2s-1),
+(0,-1) = zeta(2s-1). Two parameters buy no new arithmetic points; and
+by weighted homogeneity the (a,b)-resonance atlas is universal for
+the plane. Machine: matrix/tu_atlas.py + tu_atlas.json (stdlib-exact,
+n <= 20000 coefficientwise in Z[t,u], 9591-prime wedge scan, ALL OK).
+
 ## Process notes (honesty trail)
 
 - The X-108510 replay's mixed-triple test was written expecting the
