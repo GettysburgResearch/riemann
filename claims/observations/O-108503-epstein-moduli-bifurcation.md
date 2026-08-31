@@ -115,6 +115,16 @@ point. Findings, stated with the campaign's grid caveat below:
   straddled. Every C8 "clean" verdict therefore means "clean at the
   five coarse radii", nothing stronger; the two dirty verdicts are
   positive certificates at stated precision.
+- **The island is an ARCHIPELAGO (island_probe.json, five follow-up
+  calls)**: at radius 0.5 the dirty set is {75 deg, 80 deg} with a
+  CLEAN angle 77.5 deg BETWEEN the two dirty ones (and clean 70,
+  72.5, 82.5); radially the 75-deg spot is thin (dirty at r = 0.500,
+  clean at 0.481 and 0.55). The off-line locus at this height is a
+  fragmented, speckled shell confined to y ~ 1.47-1.50 — consistent
+  with a single zero pair's off-line excursion sweeping a thin
+  angularly-intermittent band, and a direct demonstration that ANY
+  coarse grid systematically under-detects this locus (the grid
+  caveat above, now measured twice).
 - **Invariant correlation (2 events; suggestive only)**: both
   first-departure points lie hyperbolically CLOSE TO A CM POINT OTHER
   THAN the base point i — the 75-deg point at distance 0.101 from
