@@ -13,8 +13,15 @@ Programme: #764 (moduli resonances of the defect tower)
 Depends on: T-108500, T-108509; grew from O-108512's held-out rounds
 Proof:    standalone/2026-08-31-torsion-resonance-threshold/PROOF.md
 Machine:  matrix/torsion_field_probe.py + torsion_field_probe.json
-          (exact number-field table m = 5..27 x 10 points + the
-          (z-a)^2-at-entry check, 10/10)
+          (exact number-field table m = 5..27, now FOURTEEN points:
+          twelve entries all at exactly m = 2R+1 with (z-a)^2 at entry
+          12/12 — ord-16 at m=17 and ord-24 at m=25 were the sixth and
+          seventh held-out rounds, predicted in-code before their run —
+          plus ord-15/ord-30 (R=15, entry 31) certified absent through
+          m=27); replay experiments/X-108513-torsion-threshold/
+          (self-contained stdlib: direct regrouping-lemma divisibility
+          in K[T], the entry table, the z=a collision, the m=2R
+          near-miss — all green)
 RH status: RH and GRH are unproved; this claim does not address them.
 ```
 

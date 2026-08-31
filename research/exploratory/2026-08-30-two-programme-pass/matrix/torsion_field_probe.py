@@ -250,13 +250,19 @@ POINTS = {
     "ord20_2cospi10": [5, 0, -5, 0, 1],       # (R=10, entry 21)
     "ord11_2cos2pi11": [1, 3, -3, -4, 1, 1],  # (R=11, entry 23)
     "ord13_2cos2pi13": [-1, 3, 6, -4, -5, 1, 1],  # (R=13, entry 27)
+    # sixth/seventh held-out round — predictions recorded BEFORE the run:
+    "ord16_2cospi8": [2, 0, -4, 0, 1],        # (R=8,  entry 17 predicted)
+    "ord24_2cospi12": [1, 0, -4, 0, 1],       # (R=12, entry 25 predicted)
+    "ord15_2cos2pi15": [1, 4, -4, -1, 1],     # (R=15, entry 31: absent<=27)
+    "ord30_2cospi15": [1, -4, -4, 1, 1],      # (R=15, entry 31: absent<=27)
 }
 
 
 ENTRY = {"ord6_a1": 7, "ord8_a2m2": 9, "ord5_golden": 11,
          "ord10_golden": 11, "ord12_a2m3": 13, "ord9_2cos2pi9": 19,
          "ord18_2cospi9": 19, "ord20_2cospi10": 21,
-         "ord11_2cos2pi11": 23, "ord13_2cos2pi13": 27}
+         "ord11_2cos2pi11": 23, "ord13_2cos2pi13": 27,
+         "ord16_2cospi8": 17, "ord24_2cospi12": 25}
 
 
 def entry_z_equals_a(K, m):
