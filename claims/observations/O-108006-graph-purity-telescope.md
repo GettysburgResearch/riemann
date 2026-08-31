@@ -70,19 +70,37 @@ RH status: unproved; unaddressed.
    (block minima), while lambda_2 crosses 2 sqrt 2 between n = 22 and
    n = 24 — so GP(n,2), n >= 24, appears to be an entire
    positive-end-only family; only the n = 24 member is certified here.
-   The MINIMAL order of a positive-end-only cubic breach is now
-   bracketed in (14, 48] and stays open, with exact negative evidence
-   inside the bracket from two targeted searches (both Sturm-exact,
-   no floats — an earlier float screen was found unreliable and
-   discarded): (i) all 774 two-edge-bottleneck dumbbells built from
-   the five 8-vertex cubic classes, Petersen, and Mobius ladders
-   M8/M10 (each minus an edge; both pairings; n = 16, 18, 20): zero
-   positive-end-only; (ii) GP(n, k) for 13 <= n <= 20, k >= 2 (26-40
-   vertices): zero positive-end-only, but FIVE new negative-end
-   members found and certified — GP(17,3), GP(17,6), GP(18,8),
-   GP(19,3), GP(19,6) — extending the negative-end census beyond
-   prisms. (dp20_certificate.json records one dumbbell certified
-   Ramanujan as the float screen's false positive.)
+   The MINIMAL order question was then SETTLED within the
+   Hamiltonian-cubic scope by the exhaustive n = 16 spectral census
+   (census16.py + census16.json: 2,027,025 chord diagrams -> 65,346
+   canonical -> 3,801 distinct spectra, verdicts exact per spectrum):
+   3,495 Ramanujan spectra and 306 non-Ramanujan with the FINAL side
+   tally — after the 18 guard-flagged spectra (untempered square
+   inside (8, 8.0089]) were resolved by adaptive rational cuts
+   (witness16.py + witness16.json: per-spectrum Sturm-isolated cut r
+   with 8 < r^2 <= smallest square, exact) — of:
+   302 negative-end-only, THREE POSITIVE-END-ONLY (idx 706, 708, 709;
+   all girth 3, non-bipartite; 708/709 with adjacency matrices and
+   charpolys deposited in witness16.json; 706's untempered square
+   lies within 0.0089 of the threshold 8 — a barely-untempered
+   graph), and ONE BOTH-END spectrum (idx 707) — the census's first.
+   Since all Hamiltonian cubic n <= 14 are negative-only or Ramanujan
+   and cubic orders are even, the minimal Hamiltonian-cubic
+   positive-end-only order is EXACTLY 16. A correction this result
+   forces on earlier text: the girth-profile-swap reading suggested
+   by GP(24,2) (girth 5) is REFUTED — all three n = 16 positive-end
+   witnesses have girth 3. Earlier negative
+   evidence inside the (14, 48] bracket, from before the census
+   (both searches Sturm-exact, no floats — an earlier float screen
+   was found unreliable and discarded): (i) all 774
+   two-edge-bottleneck dumbbells from the five 8-vertex cubic
+   classes, Petersen, and Mobius ladders M8/M10 (n = 16, 18, 20):
+   zero positive-end-only — showing the n = 16 witnesses are NOT of
+   dumbbell type; (ii) GP(n, k) for 13 <= n <= 20, k >= 2: zero
+   positive-end-only, but FIVE new negative-end members certified —
+   GP(17,3), GP(17,6), GP(18,8), GP(19,3), GP(19,6).
+   (dp20_certificate.json records one dumbbell certified Ramanujan as
+   the float screen's false positive.)
 4. **Fields where purity breaks**: the breach eigenvalue's minimal
    polynomial per graph — GP(9,1): x^3 + 3x^2 - 1, i.e. the breach
    value is 2 cos(8 pi/9) - 1 in the real cyclotomic field
