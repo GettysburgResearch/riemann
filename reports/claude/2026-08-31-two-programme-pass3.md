@@ -34,7 +34,7 @@ RH status: RH and GRH are unproved; nothing in this pass addresses
 | L-108511 | LEMMA | Trace-scaling line crosses the survival trichotomy: Z_0 = zeta(4s-2)/zeta(2s-1), Z_{-1} = L(Sym^2,2s)/(zeta(2s-1)L(f,s)), exact |
 | O-108006 | OBSERVATION | Graph purity telescope: 605-graph certified corpus, negative-end breach law (37/37 through n=14), certified walk bifurcations |
 | O-108512 | OBSERVATION (half-converted) | Torsion resonance entry law m = 2 ord(alpha^2)+1: ten points, ten exact matches, six held-out |
-| T-108513 | THEOREM | Resonance threshold: class crowding forces collisions from m = 2R+1 (all m), collision at z = a; converse proved for all torsion points, m <= 19 (memory-lean exact sieve at 18/19) |
+| T-108513 | THEOREM | Resonance threshold: class crowding forces collisions from m = 2R+1 (all m), collision at z = a; converse proved for all torsion points, m <= 25 (memory-lean exact sieve march; every held-out entry on threshold: psi_9/18@19, psi_20@21, psi_11/22@23, psi_24@25) |
 | T-108514 | THEOREM | GP(n,2) positive-end-only for ALL n >= 24 (exact threshold; infinite expansion-side family; three pieces, all adversarially verified sound) |
 | T-108515 | THEOREM | Segre bridge: N_m = equivariant K-polynomial cofactor of the Segre embedding of (P^1)^m; m=3 Betti table exact; defect FE = Gorenstein duality of the cube; N_m(2,1) = Eulerian polynomial |
 | L-108516 | LEMMA | Two-parameter plane: fibration, Dahlquist axis, purity wedge, integrality Z^2; RIGIDITY: exactly four integral weight-1-pure points |
@@ -44,7 +44,7 @@ RH status: RH and GRH are unproved; nothing in this pass addresses
 | L-108520 | LEMMA | Corridor forcing: induced 2x15 ladder breaches both ends (50 > 49); window finiteness |
 | L-108521 | LEMMA | Frustration bound lambda_min <= -3 + 4f/n; positive-only needs linear frustration |
 | T-108522 | THEOREM | Alternant closed form: general-rank square defect solved; stable layer theorems; multilinear triple-product defects with degree law |
-| O-108523 | OBSERVATION | Torsion multiplicity law: odd-m growth profile of every resonance exact 80/80 incl. held-out m=19/21/23 rows (the m=23 row: 15/15 with the first odd-order R=N entries psi_11/psi_22); even-m bookkeeping open |
+| O-108523 | OBSERVATION | Torsion multiplicity law: odd-m growth profile of every resonance exact 96/96 incl. four fully held-out rows m=19/21/23/25 (six never-fitted entry classes, all exact; m=23: the first odd-order R=N regime); even-m bookkeeping open (79 recorded deviation cells) |
 | L-108524 | LEMMA | Multiplicity law's interior term = transversal branch counting: conditional theorem (three checkable hypotheses) + exact machine certificates at seven cells (a=0 tower m=5..13, golden m=11/13) — O-108523's first proved-by-mechanism cells |
 
 Pass-2 claims T-108507 and T-108508 received addenda: the spectrum
@@ -357,11 +357,18 @@ with the candidate list provably exhaustive via
 phi(N) >= sqrt(N/2) (matrix/m18_sieve.py). Results: at m = 18 the
 dividing psi_N are exactly the threshold <= 17 classes with
 psi_9/psi_18 correctly ABSENT (a held-out negative); at m = 19 both
-enter at exactly 2*9+1 = 19 with multiplicity 2. The two-sided law
-now stands for every torsion point of every order, m <= 19. The
-observed degree law of the spectrum coefficients
+enter at exactly 2*9+1 = 19 with multiplicity 2. THE MARCH
+CONTINUED THROUGH m = 25 (one run per m, converse established at
+every step, all exhaustive candidate lists clean — 2432 to 5201
+candidates): psi_20 enters at exactly 21, psi_11 and psi_22 at
+exactly 23 — the first odd orders beyond 9, the R = N crowding
+regime the original table barely touched — and psi_24 at exactly
+25, each with the doubled-pair multiplicity 2 and each absent at
+the even m before it. The two-sided law now stands for every
+torsion point of every order, m <= 25 (m = 26, 27 in flight at
+freeze). The observed degree law of the spectrum coefficients
 (deg mu_{nu-k} = k(2nu-k) odd / k(2nu-k+1) even) holds exactly at
-both new m.
+every new m.
 
 **Multiplicity mechanism proved under certificates (L-108524)**: the
 interior term of O-108523 is transversal branch counting — a

@@ -2,17 +2,22 @@
 
 ```text
 Status:  PROVED (Lemmas 1-4, Theorem, Proposition, Corollary,
-         Addendum below — complete elementary proofs). Forward half of
+         Addenda below — complete elementary proofs). Forward half of
          O-108512's entry law for ALL m (collision from m = 2R+1
          onward, first entry forced, collision value z = a); converse
-         half PROVED for all m <= 17 for every torsion point of every
-         order (monic sieve over the exact factorizations); converse
-         for m >= 18 open, reduced to the normal-form conjecture.
+         half PROVED for all m <= 25 for every torsion point of every
+         order (monic sieve over the exact factorizations for
+         m <= 17; the factoring-free exhaustive sieve of Addendum 2
+         for m = 18..25); converse for m >= 26 open, reduced to the
+         normal-form conjecture (m = 26, 27 runs in flight at
+         freeze).
 Machine: matrix/torsion_field_probe.py + torsion_field_probe.json
          (number-field-exact table m = 5..27, fourteen points, with
          the (z - a)^2 divisibility at every entry: 12/12);
          matrix/disc_slice_factor_lcs.json + disc_slice_m16_m17.json
-         (the normal-form factorizations m = 5..17).
+         (the normal-form factorizations m = 5..17);
+         matrix/m_eval_spectrum.py + matrix/m18_sieve.py with
+         m{18..25}_spectrum.json / m{18..25}_sieve.json (Addendum 2).
 Depends: T-108500 (defect law), T-108509 (spectrum polynomial M_m,
          monicity), T-108510 (used only for context).
 RH status: RH and GRH are unproved; nothing here addresses them.
@@ -248,6 +253,25 @@ PROVABLY exhaustive — every candidate is tested by exact division.
 The multiplicities of ALL dividing factors at both m match the
 O-108523 ledger (odd m exactly; even m recorded as deviation data).
 
+**The march m = 20..25 (same pipeline, one run per m).** Converse
+established at every m — provably exhaustive candidate lists all
+clean (2432, 2998, 3306, 3991, 4387, 5201 candidates at
+m = 20..25) — with every held-out entry landing exactly on its
+threshold with the doubled-pair multiplicity 2, and absent at the
+even m before it:
+
+```text
+psi_20          enters at m = 21 = 2*10 + 1   (absent at 20)
+psi_11, psi_22  enter  at m = 23 = 2*11 + 1   (absent at 22)
+psi_24          enters at m = 25 = 2*12 + 1   (absent at 24)
+```
+
+The psi_11 entry is the first odd order beyond 9 — the R = N
+crowding regime — confirming the threshold law in the regime the
+original fourteen-point table barely touched. The full multiplicity
+rows are O-108523 data (odd m exact 96/96; even m deviation cells).
+m = 26, 27 (the psi_13/psi_26 level) were in flight at freeze.
+
 **Honesty note.** The first version of step (ii) capped candidates
 at `N <= 2000`, which is NOT exhaustive once `deg P >= ~480`
 (N = 2310 has `phi/2 = 240`); the gap was caught in same-day
@@ -264,11 +288,11 @@ collision value is `z = a`, the `m = 2R` non-entry, the `a = 0`,
 `m = 6` gap, and — by the monic sieve over the exact factorizations,
 extended by the factoring-free sieve of Addendum 2 —
 the FULL two-sided law for all torsion points in the range
-`m <= 19` (the m = 16, 17 factorizations — disc_slice_m16_m17.json —
+`m <= 25` (the m = 16, 17 factorizations — disc_slice_m16_m17.json —
 continue the normal form: the ord-16 quartic `a^4 - 4a^2 + 2` enters
 exactly at its threshold 17, and the non-torsion factors have leading
-coefficients ~2.2e32 and ~6.1e41; m = 18, 19 per Addendum 2). OPEN:
-the converse for `m >= 20`, which by the same sieve
+coefficients ~2.2e32 and ~6.1e41; m = 18..25 per Addendum 2). OPEN:
+the converse for `m >= 26`, which by the same sieve
 reduces to a single verifiable property per m: that after removing
 the (known) torsion factors, the remaining factor of
 `disc_z M_m(a, 1)` has no monic
