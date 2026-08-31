@@ -1,0 +1,897 @@
+{
+  "actual_global_coefficients": [
+    {
+      "actual_standard_stalk_sum_including_ramification": 3,
+      "closed_degree_two_first_grade_unchanged": -6,
+      "elliptic_polynomial": [
+        1,
+        3,
+        5
+      ],
+      "new_B_coefficients_by_all_stalks": [
+        1,
+        12,
+        75
+      ],
+      "new_B_coefficients_by_elliptic_cohomology": [
+        1,
+        12,
+        75
+      ],
+      "original_E_chi_coefficients": [
+        1,
+        12,
+        72
+      ],
+      "parameters": [
+        5,
+        1,
+        1
+      ],
+      "primitive_field_orders": [
+        5,
+        25
+      ]
+    },
+    {
+      "actual_standard_stalk_sum_including_ramification": -3,
+      "closed_degree_two_first_grade_unchanged": 0,
+      "elliptic_polynomial": [
+        1,
+        -3,
+        7
+      ],
+      "new_B_coefficients_by_all_stalks": [
+        1,
+        0,
+        11
+      ],
+      "new_B_coefficients_by_elliptic_cohomology": [
+        1,
+        0,
+        11
+      ],
+      "original_E_chi_coefficients": [
+        1,
+        0,
+        14
+      ],
+      "parameters": [
+        7,
+        1,
+        1
+      ],
+      "primitive_field_orders": [
+        7,
+        49
+      ]
+    },
+    {
+      "actual_standard_stalk_sum_including_ramification": 2,
+      "closed_degree_two_first_grade_unchanged": -9,
+      "elliptic_polynomial": [
+        1,
+        2,
+        7
+      ],
+      "new_B_coefficients_by_all_stalks": [
+        1,
+        0,
+        20
+      ],
+      "new_B_coefficients_by_elliptic_cohomology": [
+        1,
+        0,
+        20
+      ],
+      "original_E_chi_coefficients": [
+        1,
+        0,
+        18
+      ],
+      "parameters": [
+        7,
+        4,
+        4
+      ],
+      "primitive_field_orders": [
+        7,
+        49
+      ]
+    }
+  ],
+  "extension_order_controls": [
+    {
+      "infinity_order_controls": [
+        {
+          "ambient_first": [
+            1,
+            0,
+            6,
+            0,
+            38,
+            0,
+            136,
+            0,
+            365
+          ],
+          "declared": [
+            1,
+            0,
+            6,
+            0,
+            25,
+            0,
+            66,
+            0,
+            135
+          ],
+          "declared_and_ambient_grade_four": [
+            25,
+            38
+          ],
+          "kind": "C3"
+        },
+        {
+          "ambient_first": [
+            1,
+            0,
+            2,
+            0,
+            4,
+            0,
+            6,
+            0,
+            9
+          ],
+          "declared": [
+            1,
+            0,
+            2,
+            0,
+            3,
+            0,
+            4,
+            0,
+            5
+          ],
+          "declared_and_ambient_grade_four": [
+            3,
+            4
+          ],
+          "kind": "C3s"
+        }
+      ],
+      "old_C2_ambient_first": [
+        1,
+        -3,
+        11,
+        -26,
+        59,
+        -112,
+        205,
+        -342,
+        554
+      ],
+      "old_C2_declared": [
+        1,
+        -3,
+        11,
+        -23,
+        50,
+        -86,
+        150,
+        -230,
+        355
+      ],
+      "old_C2_degree_three_pair": [
+        -23,
+        -26
+      ],
+      "quadratic_sign": -1,
+      "zero_commuting_controls": [
+        {
+          "both_operations": [
+            1,
+            0,
+            20,
+            0,
+            114,
+            0,
+            404,
+            0,
+            1099
+          ],
+          "kind": "e"
+        },
+        {
+          "both_operations": [
+            1,
+            0,
+            2,
+            0,
+            4,
+            0,
+            6,
+            0,
+            9
+          ],
+          "kind": "s"
+        },
+        {
+          "both_operations": [
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            -2
+          ],
+          "kind": "c"
+        }
+      ]
+    },
+    {
+      "infinity_order_controls": [
+        {
+          "ambient_first": [
+            1,
+            0,
+            6,
+            0,
+            38,
+            0,
+            136,
+            0,
+            365
+          ],
+          "declared": [
+            1,
+            0,
+            6,
+            0,
+            25,
+            0,
+            66,
+            0,
+            135
+          ],
+          "declared_and_ambient_grade_four": [
+            25,
+            38
+          ],
+          "kind": "C3"
+        },
+        {
+          "ambient_first": [
+            1,
+            0,
+            2,
+            0,
+            4,
+            0,
+            6,
+            0,
+            9
+          ],
+          "declared": [
+            1,
+            0,
+            2,
+            0,
+            3,
+            0,
+            4,
+            0,
+            5
+          ],
+          "declared_and_ambient_grade_four": [
+            3,
+            4
+          ],
+          "kind": "C3s"
+        }
+      ],
+      "old_C2_ambient_first": [
+        1,
+        3,
+        11,
+        26,
+        59,
+        112,
+        205,
+        342,
+        554
+      ],
+      "old_C2_declared": [
+        1,
+        3,
+        11,
+        23,
+        50,
+        86,
+        150,
+        230,
+        355
+      ],
+      "old_C2_degree_three_pair": [
+        23,
+        26
+      ],
+      "quadratic_sign": 1,
+      "zero_commuting_controls": [
+        {
+          "both_operations": [
+            1,
+            0,
+            20,
+            0,
+            114,
+            0,
+            404,
+            0,
+            1099
+          ],
+          "kind": "e"
+        },
+        {
+          "both_operations": [
+            1,
+            0,
+            2,
+            0,
+            4,
+            0,
+            6,
+            0,
+            9
+          ],
+          "kind": "s"
+        },
+        {
+          "both_operations": [
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            -2
+          ],
+          "kind": "c"
+        }
+      ]
+    }
+  ],
+  "good_source_tensor_controls": [
+    {
+      "Frobenius_kind": "e",
+      "declared_B_series": [
+        1,
+        -6,
+        20,
+        -52,
+        114,
+        -224,
+        404,
+        -684,
+        1099
+      ],
+      "original_A_series": [
+        1,
+        -6,
+        18,
+        -40,
+        75,
+        -126,
+        196,
+        -288,
+        405
+      ],
+      "place": "good",
+      "quadratic_sign": -1,
+      "standard_stalk_determinant_in_t_squared": [
+        1,
+        0,
+        -2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tensor_Sym_series": [
+        1,
+        -6,
+        20,
+        -52,
+        114,
+        -224,
+        404,
+        -684,
+        1099
+      ]
+    },
+    {
+      "Frobenius_kind": "e",
+      "declared_B_series": [
+        1,
+        6,
+        20,
+        52,
+        114,
+        224,
+        404,
+        684,
+        1099
+      ],
+      "original_A_series": [
+        1,
+        6,
+        18,
+        40,
+        75,
+        126,
+        196,
+        288,
+        405
+      ],
+      "place": "good",
+      "quadratic_sign": 1,
+      "standard_stalk_determinant_in_t_squared": [
+        1,
+        0,
+        -2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tensor_Sym_series": [
+        1,
+        6,
+        20,
+        52,
+        114,
+        224,
+        404,
+        684,
+        1099
+      ]
+    },
+    {
+      "Frobenius_kind": "s",
+      "declared_B_series": [
+        1,
+        0,
+        2,
+        0,
+        4,
+        0,
+        6,
+        0,
+        9
+      ],
+      "original_A_series": [
+        1,
+        0,
+        2,
+        0,
+        3,
+        0,
+        4,
+        0,
+        5
+      ],
+      "place": "good",
+      "quadratic_sign": -1,
+      "standard_stalk_determinant_in_t_squared": [
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tensor_Sym_series": [
+        1,
+        0,
+        2,
+        0,
+        4,
+        0,
+        6,
+        0,
+        9
+      ]
+    },
+    {
+      "Frobenius_kind": "s",
+      "declared_B_series": [
+        1,
+        0,
+        2,
+        0,
+        4,
+        0,
+        6,
+        0,
+        9
+      ],
+      "original_A_series": [
+        1,
+        0,
+        2,
+        0,
+        3,
+        0,
+        4,
+        0,
+        5
+      ],
+      "place": "good",
+      "quadratic_sign": 1,
+      "standard_stalk_determinant_in_t_squared": [
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tensor_Sym_series": [
+        1,
+        0,
+        2,
+        0,
+        4,
+        0,
+        6,
+        0,
+        9
+      ]
+    },
+    {
+      "Frobenius_kind": "c",
+      "declared_B_series": [
+        1,
+        0,
+        -1,
+        -1,
+        0,
+        1,
+        2,
+        0,
+        -2
+      ],
+      "original_A_series": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "place": "good",
+      "quadratic_sign": -1,
+      "standard_stalk_determinant_in_t_squared": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tensor_Sym_series": [
+        1,
+        0,
+        -1,
+        -1,
+        0,
+        1,
+        2,
+        0,
+        -2
+      ]
+    },
+    {
+      "Frobenius_kind": "c",
+      "declared_B_series": [
+        1,
+        0,
+        -1,
+        1,
+        0,
+        -1,
+        2,
+        0,
+        -2
+      ],
+      "original_A_series": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "place": "good",
+      "quadratic_sign": 1,
+      "standard_stalk_determinant_in_t_squared": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tensor_Sym_series": [
+        1,
+        0,
+        -1,
+        1,
+        0,
+        -1,
+        2,
+        0,
+        -2
+      ]
+    }
+  ],
+  "not_claimed": [
+    "j_* commutes with tensor or symmetric powers",
+    "new B equals original A",
+    "new B equals ambient-first extension",
+    "fully resonant clearance holds without resonance",
+    "old degree-one Koszul parity transfers to internal degree-two generators",
+    "one infinite-rank constructible sheaf or new ordinary Fredholm convergence",
+    "an archimedean or RH consequence"
+  ],
+  "provenance": {
+    "owned_sha256_lf": {
+      "CONSTRUCTIBLE_POLE_CLEARING_REPLAY.md": "e82a3c28aab5b636c03976f55b917013abc9f47bb960a5484f6e37613dfdb6f6",
+      "CONSTRUCTIBLE_POLE_CLEARING_SOURCE.md": "5182dde9511c093f9ba8f1f5fe554e6d7db1a45f724a42d52c9b11af882a0224",
+      "constructible_pole_clearing_replay.py": "b957296cf28ac371d982d9f4325cfb992229b6b6c1280a6c7f7893a4bffce3e5",
+      "tests/test_constructible_pole_clearing.py": "a1afba18550dd219907044d149f76ea327cec3ab5cc93cf5dc1c954a2ba6550a"
+    },
+    "pins": [
+      [
+        "finite_resonant_poles_replay.py",
+        "aa3a3d92c7123200de683e963dffa7766b8f251b",
+        "9b10306e55d4376ecce752a76fc6cde2104075412ab64dc9f43ac6c5d63fb1ba"
+      ],
+      [
+        "FINITE_RESONANT_COHERENT_POLES.md",
+        "c415abc8a9b363a1cef6e0cd52adca16a4f6c754",
+        "e505816f1e38adab31b24aa5272f07a3e879d9649b12eb43b3721c040973d79b"
+      ]
+    ],
+    "source_freeze": "e196fa1e4265b482ad1fa495436ed0e4ff088419"
+  },
+  "schema": "constructible-source-elliptic-pole-clearing-v1",
+  "sharp_analytic_dichotomy": {
+    "actual_eighth_relation": {
+      "actual_characters": [
+        30,
+        -2,
+        0
+      ],
+      "exact_twice_B_plus_C": 32,
+      "grade": 8,
+      "multiplicities": [
+        4,
+        6,
+        10
+      ]
+    },
+    "actual_fourth_relation": {
+      "actual_characters": [
+        3,
+        -1,
+        0
+      ],
+      "exact_twice_B_plus_C": 4,
+      "grade": 4,
+      "multiplicities": [
+        0,
+        1,
+        1
+      ]
+    },
+    "actual_second_relation": {
+      "actual_characters": [
+        3,
+        1,
+        0
+      ],
+      "exact_twice_B_plus_C": 2,
+      "grade": 2,
+      "multiplicities": [
+        1,
+        0,
+        1
+      ]
+    },
+    "constructible_source_defined_in_both_cases": true,
+    "fully_resonant_new_root_limsup": 1,
+    "fully_resonant_source": {
+      "actual_alpha_E": -7,
+      "inherited_source_parameters": [
+        7,
+        1,
+        0
+      ],
+      "minimal_normalized_pole_clearing_polynomial": [
+        1,
+        0,
+        14,
+        0,
+        49
+      ],
+      "modified_function_distinct_from_original": true,
+      "new_field_enumerated": false,
+      "primitive_field_order_reused": 7,
+      "recurrence_lags_zero_two_four": [
+        1,
+        14,
+        49
+      ],
+      "source_Q": 49
+    },
+    "nonsquare_source_cases": [
+      {
+        "E_and_D_have_common_roots": false,
+        "elliptic_polynomials_E_D": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            1,
+            0,
+            5
+          ]
+        ],
+        "grade_four_order_control": {
+          "double_grade_trivial_multiplicity": 4,
+          "elliptic_denominator_order": 1,
+          "grade": 4,
+          "pole_order": 1,
+          "resonance_zero_correction": 0,
+          "signed_order": -1,
+          "zero_order": 0
+        },
+        "new_root_growth_power_of_Q": [
+          1,
+          8
+        ],
+        "nonresonance_from_nonsquare_Q_and_integral_positive_determinant": true,
+        "parameters": [
+          5,
+          1,
+          1
+        ]
+      },
+      {
+        "E_and_D_have_common_roots": false,
+        "elliptic_polynomials_E_D": [
+          [
+            1,
+            -3,
+            7
+          ],
+          [
+            1,
+            0,
+            7
+          ]
+        ],
+        "grade_four_order_control": {
+          "double_grade_trivial_multiplicity": 4,
+          "elliptic_denominator_order": 1,
+          "grade": 4,
+          "pole_order": 1,
+          "resonance_zero_correction": 0,
+          "signed_order": -1,
+          "zero_order": 0
+        },
+        "new_root_growth_power_of_Q": [
+          1,
+          8
+        ],
+        "nonresonance_from_nonsquare_Q_and_integral_positive_determinant": true,
+        "parameters": [
+          7,
+          1,
+          1
+        ]
+      },
+      {
+        "E_and_D_have_common_roots": false,
+        "elliptic_polynomials_E_D": [
+          [
+            1,
+            2,
+            7
+          ],
+          [
+            1,
+            -4,
+            7
+          ]
+        ],
+        "grade_four_order_control": {
+          "double_grade_trivial_multiplicity": 4,
+          "elliptic_denominator_order": 1,
+          "grade": 4,
+          "pole_order": 1,
+          "resonance_zero_correction": 0,
+          "signed_order": -1,
+          "zero_order": 0
+        },
+        "new_root_growth_power_of_Q": [
+          1,
+          8
+        ],
+        "nonresonance_from_nonsquare_Q_and_integral_positive_determinant": true,
+        "parameters": [
+          7,
+          4,
+          4
+        ]
+      }
+    ],
+    "ordinary_single_infinite_sheaf_or_old_Lie_parity_not_claimed": true
+  },
+  "standard_stalk_determinants": {
+    "C2": [
+      1,
+      -1
+    ],
+    "C3": [
+      1
+    ],
+    "c": [
+      1,
+      1,
+      1
+    ],
+    "e": [
+      1,
+      -2,
+      1
+    ],
+    "s": [
+      1,
+      0,
+      -1
+    ]
+  }
+}
