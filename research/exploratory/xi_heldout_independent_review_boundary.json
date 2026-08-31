@@ -1,0 +1,42 @@
+{
+  "author_code_executed": false,
+  "mode": "boundary",
+  "outcomes": [
+    {
+      "arcs": 832,
+      "bits": 384,
+      "box_center": 256,
+      "convex_hull_stream_sha256": "78d25966612233f84350a876b2f35c2a9471b8c1fdaadfbecae4d86ef8fbcd12",
+      "count": 8,
+      "mesh_denominator": 32,
+      "terms": 36
+    },
+    {
+      "arcs": 832,
+      "bits": 384,
+      "box_center": 512,
+      "convex_hull_stream_sha256": "812a13a8d286fa6e22050f14bf22b1453637f90ea4d5e985cebf80fefb3d2eef",
+      "count": 9,
+      "mesh_denominator": 32,
+      "terms": 36
+    },
+    {
+      "arcs": 3328,
+      "bits": 1152,
+      "box_center": 1024,
+      "convex_hull_stream_sha256": "629b032c6a471feca91858b31f62ce7e50cd6f1f76ebd5d8b001c3a7cb9e5c6b",
+      "count": 9,
+      "mesh_denominator": 128,
+      "terms": 52
+    }
+  ],
+  "payload_sha256": "63afc0e4b6d11afcb904df8fd153de87cad8f54464a4beef7f12f130324dfd81",
+  "recursive_source_files": 24,
+  "reviewer_helper_commit": "26201b3a7de6293ea47621f06b45dd9837521a20",
+  "reviewer_helper_git_blob": "35f8baf0486625490f3fb9afe998956f75fe5280",
+  "schema": "xi-heldout-independent-review-v1",
+  "science_commit": "64165b8c805d182dbc43f2e5855e64a86cf1aaf9",
+  "science_fixture_sha256_lf": "eb6464cc2eed61f8aecf2eff6e2f36a5ee5f850252237f0f95bd9b0e4e51b206",
+  "script_sha256_lf": "9e1b4a2393fc514afab8e445b82b73e123c5abbb2cf3ea5f825808668ee2ba40",
+  "shared_special_function_library": true
+}
