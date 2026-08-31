@@ -1,0 +1,40 @@
+{
+  "claim": "T-105670",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105660-cauchy-translation-first-contact",
+  "checkpoint_parent": "9328abfd96d26467176450a527d87cca9aa937eb",
+  "locked_sources": [
+    {
+      "commit": "9328abfd96d26467176450a527d87cca9aa937eb",
+      "path": "claims/lemmas/L-105661-all-rank-first-contact-cti-is-strict.md",
+      "blob": "33f76322f9d2632d8eba0d63208799a45ca29693"
+    },
+    {
+      "commit": "9328abfd96d26467176450a527d87cca9aa937eb",
+      "path": "claims/lemmas/L-105662-current-prefactor-and-cauchy-determinant-absorb-the-universal-gap.md",
+      "blob": "aa275ce22a40a364b303c5e8eafe424073dc0502"
+    },
+    {
+      "commit": "9328abfd96d26467176450a527d87cca9aa937eb",
+      "path": "claims/theorems/T-105660-cauchy-translation-first-contact-and-sharp-global-near-closure.md",
+      "blob": "d65c0c9f277f9b8f145fe05008e80b18b707d9ed"
+    },
+    {
+      "commit": "14f3ef3cb40854fb559deb2528932e5113f72038",
+      "path": "claims/theorems/T-105655-cauchy-translation-trace-frontier.md",
+      "blob": "9b35ab7746d8881626b5c45b08dce0d6e259f8e3"
+    }
+  ],
+  "replay": {
+    "verdict": "PASS_T105670_CAUCHY_LAGUERRE_ENDPOINT",
+    "checks": 97,
+    "proof_object": "28e5db953aaccd25a328f7380b9d8162407c54ada77dc640c895531aff54eaaa"
+  },
+  "open": [
+    "ISC105670 intermediate stationary contact exclusion",
+    "cofinal Xi passage",
+    "pointwise Xi localization",
+    "Riemann Hypothesis"
+  ],
+  "rh_established": false
+}
