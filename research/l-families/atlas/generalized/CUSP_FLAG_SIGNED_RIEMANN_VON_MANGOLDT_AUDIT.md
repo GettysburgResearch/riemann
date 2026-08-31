@@ -208,4 +208,3 @@ Riemann--von Mangoldt theory. It neither locates zeros on the critical
 line nor proves cancellation, absence/finiteness of additional poles,
 a positive explicit formula, RH or GRH. Quantitative distribution of
 the reduced quotient's separate zeros and poles remains open here.
-

@@ -103,7 +103,7 @@ Remote paper bytes are not claimed to be offline authenticated.
 6. The native measure remains y^k dx dy/y^2. Therefore the slab
    contribution is greater than L^(k-2)exp(-k-4pi)/8. Replacing
    pi<4 and e<3 gives the lower bound
-   [32/(k^2 3^16)](k/48)^k. No analytic period or eigenvalue
+   `32 (k/48)^k/(k^2 3^16)`. No analytic period or eigenvalue
    has been substituted by a finite coefficient evaluation.
 
 7. Positivity follows from (k/3072)^k>(25/8)3^16 k^2.
@@ -205,4 +205,3 @@ Corrected frozen Git blobs:
 This is a classical-mechanism, source-specific full-parent zero theorem.
 No exhaustive novelty claim, new representation, uncancelled quotient
 zero, or conclusion about RH/GRH is attached to this acceptance.
-
