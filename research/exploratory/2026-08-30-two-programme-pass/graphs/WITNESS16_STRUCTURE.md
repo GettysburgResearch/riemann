@@ -104,9 +104,40 @@ One family shape, three caps — the expansion-side breach at minimal
 order has exactly one mechanism. (Counts are of SPECTRA: cospectral
 mates would merge; each decoded representative is as stated.)
 
+## The complete cap-window table (exact; graphs/cap_windows.json)
+
+The deposited question — do windows exist for other caps? — is now
+answered exhaustively: of the 15 chord-matchings on the far 6
+positions, 5 are simple-graph-valid, and 4 are distinct up to the
+corridor mirror (cap `(0,4),(1,3),(2,5)` is the mirror of 708's cap).
+Verdict sequences over corridor length k = 2..7 (n = 2k+10; exact
+Sturm; the two GUARD cells are the census's adaptively-resolved
+n = 16 spectra):
+
+```text
+cap (0,3),(1,5),(2,4)  [708]:  RAM  POS  POS  POS  BOTH BOTH
+cap (0,5),(1,3),(2,4)  [709]:  RAM  POS  POS  BOTH BOTH BOTH
+cap (0,2),(1,4),(3,5)  [706]:  RAM  POS* POS  POS  BOTH BOTH
+                               (*guard cell = idx 706, resolved POS
+                                by the adaptive cut, barely)
+cap (0,3),(1,4),(2,5) [cross]: NEG  BOTH* BOTH BOTH BOTH BOTH
+                               (*guard cell = the census's unique
+                                both-end spectrum idx 707)
+```
+
+So: EXACTLY the three witness caps have positive-only windows (of
+lengths 3, 2, 3 with different offsets), the crossing cap never does
+(it enters at the NEGATIVE end at k = 2 — the only diamond-headed
+frame member to do so — and goes two-sided immediately after), and
+every cap ends BOTH-END as the corridor lengthens. The n = 16 census
+rows (3 positive-only + 1 both-end among diamond-headed frames) are
+exactly the k = 3 column of this table. The window phenomenon is
+therefore CAP-SELECTIVE: the cap decides whether the expansion end
+opens before the bipartite end catches up.
+
 ## Open
 
-Whether P/Q-type windows exist for other cap choices beyond these
-three; and the GP(n,2) permanence — now PROVED as T-108514
+Non-diamond heads (do other 4-vertex heads admit windows at larger
+k?); and the GP(n,2) permanence — PROVED as T-108514
 (standalone/2026-08-31-gp-positive-family/).
 ```
