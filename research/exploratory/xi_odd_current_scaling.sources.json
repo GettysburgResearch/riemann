@@ -1,0 +1,36 @@
+{
+  "authoring_base": "1904d20cdb76ecd26e0e63472625da930075303e",
+  "normalization": "full-line PhiXi=2*historical phi0; no frequency rescaling",
+  "parameter_firewall": "K varies; no prescribed physical lambda is changed",
+  "schema": "xi-odd-current-scaling-sources-v1",
+  "sources": [
+    {
+      "commit": "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+      "git_blob": "fa24f9c8e0a87709d1a297a4e72136c1135d066c",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+      "role": "actual_full_line_kernel_and_global_real_tail_bound",
+      "sha256_lf": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "1424cf2a073d16c0f4a6cdd89600e3ebb40b54fc",
+      "path": "claims/lemmas/L-106401-xi-turan-exterior-square-hankel-source.md",
+      "role": "full_line_Fourier_convention",
+      "sha256_lf": "bf68ecbd1c32969df9491a90da617389ee35ab4fe8f19b76ebd8f706c311a694"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "4c790971237897406b5e0492a13129fad24f37a9",
+      "path": "claims/lemmas/L-106500-odd-endpoint-wronskian-is-a-positive-current-chaos.md",
+      "role": "literal_positive_odd_current",
+      "sha256_lf": "397460968e1718911857eb3c70e87c8fde77458ce4fe4f0fb12f31c09aabadd9"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "92245b0f9cf5dcccf8f4cee0ea28c1a7c9980d85",
+      "path": "claims/lemmas/L-106710-carrier-adapted-antiphase-density-is-source-soft.md",
+      "role": "literal_scalar_carrier_gain_phase",
+      "sha256_lf": "4590cdc00533a3ef8536bbff3e78444667ea68caa1b03c97ece422bc2279ce6c"
+    }
+  ]
+}
