@@ -86,11 +86,19 @@ i sqrt 2; 0.149 from rho) — two events, deposited as a question with
 data, not a law. Full details in the O-108503 C8 addendum.
 
 **Torsion resonance follow-up** (matrix/spectrum_collision_loci.json,
-m10_m11_spectrum.json): the collision loci of the deformation spectrum
-on the self-dual slice contain the order-N torsion minimal polynomials
-from m = N+1 (orders 4, 6, 8 observed; order 10 PREDICTED then
-confirmed at m = 11 by fresh computation; order 12 at m = 13 is the
-posed next test); all torsion factors have even multiplicity.
+m10_m11_spectrum.json, m12_m13_spectrum.json, m14_m15_spectrum.json,
+torsion_field_probe.py + json): the collision loci of the deformation
+spectrum on the self-dual slice acquire the minimal polynomial of the
+torsion point with R = ord(alpha^2) at EXACTLY m = 2R + 1. Definitive
+exact table via the number-field engine (the whole defect computation
+run in Q[a]/(C) at b = 1; each cell seconds): ten torsion points
+(R = 3, 4, 5, 5, 6, 9, 9, 10, 11, 13), ten exact matches with 2R + 1
+(entries 7, 9, 11, 11, 13, 19, 19, 21, 23, 27), complete absence
+certified at every earlier m, monotone persistence after entry; six of
+the ten entries were held-out predictions recorded before their runs.
+All torsion factors carry even multiplicity; the {0, +-1}-slice
+collapse lemma (proved) explains the a and (a -+ 1) dominance;
+mechanism for the threshold OPEN.
 
 ## Process notes (honesty trail)
 
