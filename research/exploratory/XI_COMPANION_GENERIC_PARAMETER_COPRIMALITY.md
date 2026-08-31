@@ -215,10 +215,12 @@ derivative linkage g=f^(5), for the following explicitly NONNATIVE controls:
 | 5-15z^2-5z^4-z^6 | b=i, lambda=1 | 1,1 | 3 |
 | 1-25z^2-60z^4-42z^6-9z^8-z^10 | b=i, any lambda>0 | neither; both values -1 | 4 |
 
-In the third control g=-30240z(z^2+1)^2; both f and g vanish to order two,
+For f=1-25z^2-60z^4-42z^6-9z^8-z^10, g=-30240z(z^2+1)^2;
+both f and g vanish to order two,
 so both raw numerators have simple zeros that disappear internally.
-The second has W=-3600(z^2+1)^3 and disproves equality in GC9 in general.
-For the first, g=-720z and W=-3600(1+z^6); the positive-real ratio condition
+The control f=5-15z^2-5z^4-z^6 has W=-3600(z^2+1)^3 and disproves
+equality in GC9 in general. For f=5-z^6, g=-720z and W=-3600(1+z^6);
+the positive-real ratio condition
 forces b=i lambda, hence lambda^6=1 and lambda=1. This finite model has
 exceptional set {1}, but is NOT an enumeration of E for Xi.
 The additional real-rooted control (5-z^2)^3 has g=-720z and
