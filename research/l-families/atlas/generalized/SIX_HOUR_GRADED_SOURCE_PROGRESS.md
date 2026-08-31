@@ -1,4 +1,60 @@
-# Six-hour source pass: fourth checkpoint
+# Six-hour source pass: fifth checkpoint
+
+The six-hour pass remains active. The completed packet count remains487
+focused tests per interpreter mode:460 mathematical and27 cache/acquisition
+tests. A further27 tests for the separately frozen original-row method
+passed in both modes; its full42-test final contract is not yet complete
+and is excluded from the completed-packet count.
+
+The complete degree-six source calculation has now succeeded. The actual
+3775-column second differential has rank3648 and kernel dimension127.
+The110 actual old multiples leave17 new minimal third-differential
+relations, making28 third-differential columns through degree six.
+Every relation was multiplied by every ORIGINAL supported row, including
+the898-row block which exceeded the earlier full-matrix preflight.
+The new method retains the original512-column cap and proves the full
+kernel from independent original rows, complete residual checks and the
+matching kernel dimension. No frozen limit was retroactively changed.
+
+The complete discovery is frozen at
+`d3bda0446a379ce0bd8dfe4024f0184451adb1d5`, in
+`segre-hadamard-source/row_restricted_grade6.discovery.json`.
+Its proof object is
+`82804857869343db3371d42b7aa64bd5a71cecde7f02269a6df7ff05afb25d5c`.
+The successful run took99.16 seconds, peaked at62.8 MB, and retained
+the2 GiB free-memory reserve. Earlier interrupted attempts remain
+incomplete resource attempts; completed keyed blocks were fully
+reverified before reuse. No other agent's process was touched.
+
+A separate exact shape preflight at
+`5cb770ce6ef7e20535de155d9b232698424d2e3c` shows that the degree-seven
+central weight has592 columns. It is therefore INELIGIBLE for the
+frozen512-column method. A new independently named640-column method
+is being prepared, with per-weight original-coordinate reconstruction
+instead of a full86515-row target dictionary. It must first compare
+every degree-six source column with the unchanged constructor, replay
+the accepted degree-six maps, then compute and check the final quotient.
+The128 MiB worker and2 GiB free-memory guards are unchanged. No
+degree-seven differential or complete resolution is yet claimed.
+
+Proof-only source work now explains how successful computation would
+promote to global exactness. At
+`423a25c35996ec5bf2c4dfaac6594d31f89f1081`, independent Cohen--Macaulay
+and dual Tor information confines the missing generators. Actual
+minimal kernel covers then imply global exactness by graded Nakayama
+and dimension shifting. A matching signed Hilbert numerator is not
+accepted as a substitute. This proof's final computational hypotheses
+remain explicit until degree seven succeeds.
+
+The finite-cut homological theorem now has an exact-freeze independent
+report, `extension-order-defect/REVIEW_27373cd6.md`. Its conclusion
+distinguishes nontrivial finite maximal Cohen--Macaulay cuts of infinite
+projective dimension from wholly trivial free cuts. It does not assign
+Noetherian depth to the infinite completion or select an analytic frame.
+The work remains proposed research outside canonical integration,
+with no RH/GRH conclusion.
+
+## Fourth checkpoint history
 
 The six-hour pass remains active. There are now 460 focused mathematical
 packet tests per interpreter mode, plus 27 cache/acquisition acceptance
