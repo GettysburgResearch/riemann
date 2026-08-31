@@ -8,6 +8,12 @@ The all-weight assertions below import classical Hecke/Deligne/Rankin--Selberg
 theorems and the stated symmetric-square lower bound. The finite checker does
 not prove those imports, evaluate a period, or certify a numerical zero.
 
+Arithmetic taxonomy: MIXED: EXACT_RATIONAL / CERTIFIED_INTEGER_COVERAGE.
+All finite coefficient, rational-inequality, and coverage controls use exact
+integers and reduced rational numbers; rounding: none. The analytic integrals,
+limits, and imported theorems are not machine-certified by this finite replay.
+This metadata release preserves scientific source eaa8e8263bb34b8b669f911580c9dd9e55766ba2.
+
 ## 1. Source, normalization, and the two different rank scales
 
 Use the EXACT CF/DL space V_k=S_k(SL(2,Z)), q=exp(2*pi*i*z), standard domain

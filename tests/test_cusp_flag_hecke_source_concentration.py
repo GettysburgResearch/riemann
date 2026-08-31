@@ -352,6 +352,9 @@ class TestHeckeConcentration(unittest.TestCase):
 
     def test_32_proof_controls_and_scope(self):
         proof = (ROOT / P.ARTIFACTS[0]).read_text(encoding="utf-8")
+        self.assertIn("MIXED: EXACT_RATIONAL / CERTIFIED_INTEGER_COVERAGE", proof)
+        self.assertIn("rounding: none", proof)
+        self.assertIn("not machine-certified by this finite replay", proof)
         self.assertFalse(any(ord(c) < 32 and c not in "\n\r\t" for c in proof))
         for marker in (
             "(HC3)",
