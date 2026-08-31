@@ -3,14 +3,15 @@
 Status: source-bound exact results and explicit open interfaces for
 [programme #763](https://github.com/gfreund123/riemann/issues/763),
 carried by [draft PR #765](https://github.com/gfreund123/riemann/pull/765).
-This is a research checkpoint, not completion of the requested eight-hour
-pass, a canonical repository integration, or an RH claim.
+This is a source-bound research checkpoint, not a canonical repository
+integration or an RH claim.
 
-Checkpoint updated: 2026-08-31. Nineteen exact packets are resident,
+Checkpoint updated: 2026-08-31. Twenty-one exact packets are resident,
 including the canonical Boolean principal-diagonal estimate, actual-Xi
 geographic count and scale-matched band bound, conditional finite-height
 cofinal capture, conditional actual-Xi component-height divergence,
-the bare low-pass height equivalence, and the separate source-convention correction. The native
+the bare low-pass height equivalence, coprime infinite-height physical
+capture, actual-Xi axis sampling, and the separate source-convention correction. The native
 Boolean decoder memo is an additional exploratory diagnostic, not another
 theorem packet.
 
@@ -27,9 +28,13 @@ finite denominator rank; a uniform actual companion count binds finite
 geographic packets to the physical scale; pure finite-height denominators
 admit fixed-configuration cofinal capture; under the stated inner/RH premise,
 both unreduced companions have infinite height and infinite bare low-pass
-trace; and generic positivity plus high-derivative concentration does not
-eliminate reverse-Rolle defects. Reduced-divisor and physical projection
-questions are not answered by the bare trace result.
+trace; coprime infinite-height products can nevertheless have finite corrected
+physical capture; and the actual Xi small-lambda family has a global operator
+norm tending to one under the inner premise. The last statement uses one
+near-origin axis direction, not the retained high-T geography.
+Generic positivity plus high-derivative concentration still does not
+eliminate reverse-Rolle defects. Reduced off-axis source and physical projection
+questions are not answered by the bare trace result or the axis lower bound.
 Small band charge is not small total charge or native cofinal capture.
 
 Read the
@@ -61,6 +66,8 @@ cannot be interchanged. Historical scientific files are preserved.
 | [Finite-height cofinal source capture](../exploratory/HARDY_COFINAL_FINITE_HEIGHT_SOURCE_CAPTURE.md) | Conditional infinite-denominator capture and the exact physical omitted-source operator | Pure Blaschke denominator with finite total height, fixed numerator/projector and low-pass cost; no native Xi height or uniform-in-T capture theorem |
 | [Actual-Xi component global height](../exploratory/XI_COMPANION_GLOBAL_HEIGHT_BOUNDARY.md) | Infinite zero-height sum for both actual zeroth/fifth companions under the stated inner/RH premise; precise signed axis comparison | Unreduced components only; common-inner cancellation can remove infinite height and no reduced-denominator conclusion follows |
 | [Bare low-pass height equivalence](../exploratory/HARDY_LOW_PASS_HEIGHT_EQUIVALENCE.md) | For any pure Blaschke product, finite total height iff some/every bare low-pass trace is finite; no real-boundary continuation needed | U=1 and intervals starting at zero; not arbitrary shifted bands, native numerator or corrected physical capture |
+| [Coprime infinite-height physical capture](../exploratory/COPRIME_INFINITE_HEIGHT_PHYSICAL_CAPTURE.md) | Pure coprime infinite-height products with global corrected capture below 1/9 and an explicit orthogonal-input tail rate | Nonnative model; bare trace remains infinite and transmitted bounded-band behavior is not decided |
+| [Actual-Xi imaginary-axis sampling](../exploratory/XI_COMPANION_IMAGINARY_AXIS_SAMPLING.md) | Unconditional axis-zero classification and no common axis zeros; conditional global capture norm tends to one at small lambda | One near-origin direction, not retained high-T capture or trace divergence; raw large-branch smallness does not upper-bound the reduced numerator |
 
 Each row has a bounded exact producer, fixture, source manifest and tests.
 The later analytic and source-interface packets have separate frozen-source
@@ -193,6 +200,67 @@ P_U physical capture or the reduced denominator. Exponential inner delay
 and a pure lacunary shifted-band example show why those extensions fail
 in general. Its [audit](../exploratory/HARDY_LOW_PASS_HEIGHT_EQUIVALENCE_AUDIT.md)
 checks complex/confluent controls independently of the analytic argument.
+
+### Coprimeness does not turn infinite height into physical divergence
+
+The [coprime countercontrol](../exploratory/COPRIME_INFINITE_HEIGHT_PHYSICAL_CAPTURE.md)
+constructs pure products B,U with zeros
+
+    b_n=16*2^n+i,  u_n=16*2^n+i*(1+2^-n), n>=1.
+
+Their zero divisors are disjoint and both total height sums are infinite.
+Nevertheless, for the corrected projection P_U onto U H2,
+
+    ||P_U P_KB||_HS^2 <1/9.
+
+Every measurable output projection is a contraction, so this is stronger
+than finite capture on a bounded band. The bare trace, in contrast, is
+infinite on every positive-measure subset of the positive Fourier half-line.
+This is an already reduced denominator, not a common-factor cancellation trick.
+
+For fixed infinite U and P_N=P_K(B_N), the actual orthogonal-input tail obeys
+
+    ||P_U(P_KB-P_N)||_HS^2 <=4^-N(2/9+2N/243).
+
+The omitted height is infinite at every N. Raw kernel tails are not
+orthogonal-input tails; unmatched finite numerator prefixes do not inherit
+the small bound. The [audit](../exploratory/COPRIME_INFINITE_HEIGHT_PHYSICAL_CAPTURE_AUDIT.md)
+retains these distinctions. This model does not identify the actual Xi source.
+
+### The actual Xi axis gives the opposite global small-scale test
+
+For the actual h(y)=Xi(iy), put D0=h'/h and D5=h^(6)/h^(5).
+The [axis theorem](../exploratory/XI_COMPANION_IMAGINARY_AXIS_SAMPLING.md)
+proves D0 strictly increasing and D5 with exactly one nondegenerate
+minimum. For every lambda>0, Theta0 has exactly one simple positive-axis
+zero iy0. According to lambda's position below, at or above the reciprocal
+minimum of D5, Theta5 has two simple, one double, or no positive-axis zeros.
+Every denominator axis zero satisfies lambda<y<y0 and Theta0(iy)>0.
+These statements do not assume RH.
+
+Under the existing two-component inner premise, every such denominator
+axis zero survives the common-inner reduction. On the small branch,
+
+    y5^-=lambda+(mu8/(3mu6))lambda^3+O(lambda^5),
+    Theta0(i y5^-)=1-2(mu2/mu0)lambda^2+O(lambda^4),
+    1>=||P_U P_KB||_op>=|U(i y5^-)|>=Theta0(i y5^-).
+
+Thus the actual global operator norm tends to one as lambda tends to zero.
+This prevents importing the synthetic global <1/9 suppression uniformly
+into the actual family. It uses one direction with real part zero, and
+proves neither fixed-lambda infinite trace nor high-T geographic capture.
+
+At the large branch y5^+~2pi exp(2/lambda),
+y0-y5^+~5lambda and the RAW Theta0 sample tends to zero like
+5/[y5^+(log(y5^+))^2]. Division by the common inner G can increase that
+sample, so no corresponding upper bound for reduced U follows.
+The [audit](../exploratory/XI_COMPANION_IMAGINARY_AXIS_SAMPLING_AUDIT.md)
+preserves the unconditional/conditional split and both geographic limitations.
+
+The exact remaining bridge uses R5=R0^(5) and
+U-B=2i lambda (Xi Xi^(6)-Xi' Xi^(5))/(G C0 C5).
+Reduced off-axis values and confluent jets, with the adjoint source
+convention and retained outer metric, are the unpaid inputs.
 
 ### The source convention is a substantive correction
 
@@ -329,11 +397,11 @@ and free-energy gate remain open.
 1. Reconstruct a complete native coefficient over an exact physical tuple,
    starting with the dyadic zero-Boolean diagnostic. Carry every allocation,
    carrier, endpoint, regional selector and renewal weight through the map.
-2. Determine the native reduced divisor and corrected physical projection
-   beyond geographic count, conditional component-height divergence and
-   the bare low-pass equivalence, including omitted source directions and
-   approximation/boundary terms. A separate Xi-specific bridge is still
-   needed for total charge.
+2. Control the actual reduced off-axis numerator and its confluent jets,
+   then the corrected physical projection in the retained high-T geometry.
+   Neither infinite denominator height nor the one-direction axis lower
+   bound supplies this. Include omitted source directions, approximation
+   and boundary terms; total charge still needs a Xi-specific bridge.
 3. Pursue a source-specific reverse-Rolle defect estimate. Re-proving
    high-derivative concentration or generic kernel positivity does not
    pay the missing sum.
@@ -352,8 +420,8 @@ work is not accepted merely by being mentioned in this checkpoint.
 
 ## Reproduction and priority
 
-The current changed-test-module scope is nineteen modules: all 479 tests
-passed in normal Python (89.615s) and under -O (89.188s). All nineteen
+The current changed-test-module scope is twenty-one modules: all 543 tests
+passed in normal Python (82.030s) and under -O (76.106s). All twenty-one
 complete producer checks passed in both modes. The separate decoder memo's
 literal code block also passed both modes, and its ten primitive identities
 were independently checked; it is not counted as a theorem/test module.

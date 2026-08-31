@@ -12,10 +12,12 @@ canonical principal-diagonal, actual-Xi geographic count, concentration,
 all-inner physical-band and high-derivative results, including the explicit
 source-duality correction, conditional finite-height cofinal capture,
 conditional actual-Xi component-height divergence, the bare low-pass
-height equivalence and descent firewall. A separate exploratory decoder
+height equivalence, coprime infinite-height physical capture, actual-Xi
+axis sampling and the descent firewall. A separate exploratory decoder
 diagnostic narrows the
-native amplitude question. Native cofinal capture, total-charge and descent
-estimates remain open.
+native amplitude question. The actual axis theorem is unconditional;
+its global operator consequence retains the inner-function premise.
+Native high-T cofinal capture, total-charge and descent estimates remain open.
 The [wave-2 portfolio](RIEMANN_STRUCTURES_WAVE2_PORTFOLIO.md) is the historical
 mechanism/literature map; its queue is superseded by the continuation
 checkpoint. [Source acquisition](CONTINUATION_SOURCE_REPLAY.md) preserves

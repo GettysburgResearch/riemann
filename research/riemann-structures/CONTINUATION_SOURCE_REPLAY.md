@@ -5,7 +5,7 @@ can have different commit identities because packets were cherry-picked.
 Fetching only the programme branch can omit the original reviewed commit.
 Fetch these source refs without merging them:
 
-    git fetch --no-tags origin refs/heads/codex/review-sources-signed-history-wave2 refs/heads/codex/review-sources-xi-laplace-wave2 refs/heads/codex/review-sources-xi-physical-band-wave2 refs/heads/codex/review-sources-xi-positive-kernel-wave2 refs/heads/codex/review-sources-hardy-inner-width-wave2 refs/heads/codex/review-sources-canonical-boolean-diagonal-wave2 refs/heads/codex/review-sources-xi-companion-count-wave2 refs/heads/codex/review-sources-hardy-cofinal-capture-wave2 refs/heads/codex/review-sources-native-boolean-diagnostic-wave2 refs/heads/codex/review-sources-xi-companion-global-height-wave2 refs/heads/codex/review-sources-hardy-low-pass-height-wave2
+    git fetch --no-tags origin refs/heads/codex/review-sources-signed-history-wave2 refs/heads/codex/review-sources-xi-laplace-wave2 refs/heads/codex/review-sources-xi-physical-band-wave2 refs/heads/codex/review-sources-xi-positive-kernel-wave2 refs/heads/codex/review-sources-hardy-inner-width-wave2 refs/heads/codex/review-sources-canonical-boolean-diagonal-wave2 refs/heads/codex/review-sources-xi-companion-count-wave2 refs/heads/codex/review-sources-hardy-cofinal-capture-wave2 refs/heads/codex/review-sources-native-boolean-diagnostic-wave2 refs/heads/codex/review-sources-xi-companion-global-height-wave2 refs/heads/codex/review-sources-hardy-low-pass-height-wave2 refs/heads/codex/review-sources-coprime-physical-capture-wave2 refs/heads/codex/review-sources-xi-companion-axis-sampling-wave2
 
 Their exact targets for this checkpoint are:
 
@@ -22,6 +22,8 @@ Their exact targets for this checkpoint are:
 | native-boolean-diagnostic-wave2 | 2e1293a03486fb74580eef0ddd7ed0caf9ab7808 |
 | xi-companion-global-height-wave2 | 9da33e7ea2b15a4badb3cb436e38e54762ad5e1d |
 | hardy-low-pass-height-wave2 | 36eddbbf065959f535ca4a7b08455d489ed4bd18 |
+| coprime-physical-capture-wave2 | 7aed2ec0b99b9d7f2fb94a774922a83d5b84a870 |
+| xi-companion-axis-sampling-wave2 | d38961c15fc76d671cef4fddfc92d3c866af4fd5 |
 
 The common prefix is codex/review-sources-. The signed source retains
 5dc85cd5; the actual-kernel source retains 939a2496. The physical-band ref
@@ -33,9 +35,10 @@ their reviews. The canonical-diagonal state includes its separate final
 manifest-whitespace/hash repair; the unrepaired fixture is not accepted.
 The cofinal ref preserves the pure finite-height theorem. The diagnostic ref
 preserves the one-file exploratory native-decoder diagnostic, which is
-not counted as an additional theorem packet. The last two refs retain the
+not counted as an additional theorem packet. The next two refs retain the
 conditional actual-Xi component-height theorem and pure Blaschke bare
-low-pass equivalence, respectively.
+low-pass equivalence, respectively. The final two preserve the nonnative
+coprime physical-capture countercontrol and the actual-Xi axis theorem.
 
 ## Older source branches still required
 
@@ -71,11 +74,11 @@ the explicit fetches and adequate history.
 
 The recursive structures-only source audit passed for:
 
-- nineteen root manifests and nineteen distinct manifest paths;
-- twenty frozen manifest versions;
-- 158 literal source edges;
-- 73 unique frozen commit/path file versions;
-- twenty-five source commits.
+- twenty-one root manifests and twenty-one distinct manifest paths;
+- twenty-two frozen manifest versions;
+- 166 literal source edges;
+- 75 unique frozen commit/path file versions;
+- twenty-seven source commits.
 
 The exploratory decoder memo has no separate sources manifest. Its ten
 literal commit/path/blob/LF-SHA table entries were independently checked,
