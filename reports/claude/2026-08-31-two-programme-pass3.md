@@ -72,12 +72,18 @@ cyclotomic cubic of 2cos(2pi/9)).
 **C7 — census extension** (graphs/census14.py + json): n = 14: 471
 classes, 31 non-Ramanujan, all negative-end. Law: 37/37 through n=14.
 
-**C8 — Epstein direction campaign** (epstein/c8_run.py, RUNNING at
-report time; c8_campaign.json incremental): 12 directions from z = i
-with bisection and geometric invariants (hyperbolic CM distance,
-systole, cusp height) at each first departure; first four directions
-(0-45 deg) clean through r = 0.8 in the (0.05, 20) window, consistent
-with E4's anisotropy. Final harvest lands in this pass's last commit.
+**C8 — Epstein direction campaign** (epstein/c8_run.py +
+c8_campaign.json; 12 runs, ~2h at dps 40): a departure ISLAND at
+theta = 75 deg (radius (0.481, 0.500], point ~ (0.129, 1.483)) with
+clean corridors at 60 and 82.5-88 deg — the low-height locus is lobed,
+not star-shaped; the high window (18, 32) flips the ordering (the
+x-slide departs at (0.444, 0.463] there while clean below); a measured
+grid caveat (theta = 90 coarse-clean while E4's fine bisection is
+dirty at (0.569, 0.575] — narrow dirty intervals can be straddled);
+and the first invariant correlation: BOTH first-departure points lie
+hyperbolically close to a CM point other than the base (0.101 from
+i sqrt 2; 0.149 from rho) — two events, deposited as a question with
+data, not a law. Full details in the O-108503 C8 addendum.
 
 **Torsion resonance follow-up** (matrix/spectrum_collision_loci.json,
 m10_m11_spectrum.json): the collision loci of the deformation spectrum

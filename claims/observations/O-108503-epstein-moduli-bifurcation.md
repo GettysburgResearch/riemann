@@ -87,4 +87,43 @@ deformation direction and the height window: the rectangular direction
 breaks first at low height (t ~ 11-16 pairs), the x-slide first at
 t ~ 24-30. The geometric-invariant correlation still needs more events
 than four directions provide and remains the lab's continuation target.
+
+## C8 twelve-direction campaign (2026-08-31 pass 3; c8_run.py, c8_campaign.json)
+
+Ten angles (0..90 deg) at window (0.05, 20), radii 0.2..0.8 with
+bisection to 0.02 on the first dirty COARSE radius, plus two
+height-stratified runs at (18, 32); every event NON_DIRECTED_HIGH_
+PRECISION at dps 40, geometric invariants recorded per first-dirty
+point. Findings, stated with the campaign's grid caveat below:
+
+- **A departure ISLAND off the symmetry axes**: theta = 75 deg departs
+  at radius (0.481, 0.500] (first-dirty point z ~ (0.129, 1.483)),
+  while BOTH neighbors sampled at 60 and 82.5-88 deg are clean through
+  r = 0.8 at the coarse radii — the low-height departure locus is
+  lobed, with clean corridors between lobes, not star-shaped around
+  the CM point.
+- **Height stratification sharpened**: at window (18, 32) the x-slide
+  ray theta = 0 (through y = 1.0 exactly) departs at radius
+  (0.444, 0.463], while it is clean through 0.8 in the low window —
+  the direction that is quiet at low height is the FIRST to break in
+  the high window; theta = 45 stays clean in both.
+- **GRID CAVEAT (a measured instance, not hypothetical)**: theta = 90
+  reads "clean through r = 0.8" on the COARSE radii, yet E4's fine
+  bisection certified a discrepancy at radius (0.569, 0.575] and path
+  B's reentry brackets put the pair back on-line by y ~ 1.6-1.7: the
+  dirty interval is NARROWER than the 0.15 coarse step and was
+  straddled. Every C8 "clean" verdict therefore means "clean at the
+  five coarse radii", nothing stronger; the two dirty verdicts are
+  positive certificates at stated precision.
+- **Invariant correlation (2 events; suggestive only)**: both
+  first-departure points lie hyperbolically CLOSE TO A CM POINT OTHER
+  THAN the base point i — the 75-deg point at distance 0.101 from
+  z = i sqrt 2 (systole 0.674, cusp height 1.483), the high-window
+  theta-0 point at distance 0.149 from the hexagonal point rho
+  (systole 1.0, cusp height 1.0); and the earlier x = 0 departure
+  height y ~ 1.57 is itself at distance ~0.11 from i sqrt 2. Whether
+  departures preferentially occur near OTHER arithmetic points of the
+  moduli curve — "zeros leave the line where a different CM basin
+  begins" — is deposited as the campaign's question, with these
+  measurements as its first data and NO claim beyond them.
 ```

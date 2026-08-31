@@ -1,0 +1,204 @@
+{
+ "meta": {
+  "arithmetic_class": "NON_DIRECTED_HIGH_PRECISION",
+  "dps": 40,
+  "mpmath_version": "1.3.0",
+  "rh_established": false
+ },
+ "runs": {
+  "theta0.0_w0.05-20": {
+   "coarse": {
+    "0.2": 0,
+    "0.35": 0,
+    "0.5": 0,
+    "0.65": 0,
+    "0.8": 0
+   },
+   "theta_deg": 0.0,
+   "window": [
+    0.05,
+    20.0
+   ],
+   "verdict": "clean through r=0.8 in window (0.05,20.0)"
+  },
+  "theta15.0_w0.05-20": {
+   "coarse": {
+    "0.2": 0,
+    "0.35": 0,
+    "0.5": 0,
+    "0.65": 0,
+    "0.8": 0
+   },
+   "theta_deg": 15.0,
+   "window": [
+    0.05,
+    20.0
+   ],
+   "verdict": "clean through r=0.8 in window (0.05,20.0)"
+  },
+  "theta30.0_w0.05-20": {
+   "coarse": {
+    "0.2": 0,
+    "0.35": 0,
+    "0.5": 0,
+    "0.65": 0,
+    "0.8": 0
+   },
+   "theta_deg": 30.0,
+   "window": [
+    0.05,
+    20.0
+   ],
+   "verdict": "clean through r=0.8 in window (0.05,20.0)"
+  },
+  "theta45.0_w0.05-20": {
+   "coarse": {
+    "0.2": 0,
+    "0.35": 0,
+    "0.5": 0,
+    "0.65": 0,
+    "0.8": 0
+   },
+   "theta_deg": 45.0,
+   "window": [
+    0.05,
+    20.0
+   ],
+   "verdict": "clean through r=0.8 in window (0.05,20.0)"
+  },
+  "theta60.0_w0.05-20": {
+   "coarse": {
+    "0.2": 0,
+    "0.35": 0,
+    "0.5": 0,
+    "0.65": 0,
+    "0.8": 0
+   },
+   "theta_deg": 60.0,
+   "window": [
+    0.05,
+    20.0
+   ],
+   "verdict": "clean through r=0.8 in window (0.05,20.0)"
+  },
+  "theta75.0_w0.05-20": {
+   "coarse": {
+    "0.2": 0,
+    "0.35": 0,
+    "0.5": 2
+   },
+   "theta_deg": 75.0,
+   "window": [
+    0.05,
+    20.0
+   ],
+   "radius_bracket": [
+    0.4813,
+    0.5
+   ],
+   "invariants_at_first_dirty": {
+    "cm_dist": 0.10114434905297497,
+    "systole": 0.6743256969788677,
+    "cusp_height": 1.482962913144534
+   },
+   "verdict": "departure radius in (0.481, 0.500]"
+  },
+  "theta82.5_w0.05-20": {
+   "coarse": {
+    "0.2": 0,
+    "0.35": 0,
+    "0.5": 0,
+    "0.65": 0,
+    "0.8": 0
+   },
+   "theta_deg": 82.5,
+   "window": [
+    0.05,
+    20.0
+   ],
+   "verdict": "clean through r=0.8 in window (0.05,20.0)"
+  },
+  "theta86.0_w0.05-20": {
+   "coarse": {
+    "0.2": 0,
+    "0.35": 0,
+    "0.5": 0,
+    "0.65": 0,
+    "0.8": 0
+   },
+   "theta_deg": 86.0,
+   "window": [
+    0.05,
+    20.0
+   ],
+   "verdict": "clean through r=0.8 in window (0.05,20.0)"
+  },
+  "theta88.0_w0.05-20": {
+   "coarse": {
+    "0.2": 0,
+    "0.35": 0,
+    "0.5": 0,
+    "0.65": 0,
+    "0.8": 0
+   },
+   "theta_deg": 88.0,
+   "window": [
+    0.05,
+    20.0
+   ],
+   "verdict": "clean through r=0.8 in window (0.05,20.0)"
+  },
+  "theta90.0_w0.05-20": {
+   "coarse": {
+    "0.2": 0,
+    "0.35": 0,
+    "0.5": 0,
+    "0.65": 0,
+    "0.8": 0
+   },
+   "theta_deg": 90.0,
+   "window": [
+    0.05,
+    20.0
+   ],
+   "verdict": "clean through r=0.8 in window (0.05,20.0)"
+  },
+  "theta0.0_w18-32": {
+   "coarse": {
+    "0.2": 0,
+    "0.35": 0,
+    "0.5": 2
+   },
+   "theta_deg": 0.0,
+   "window": [
+    18.0,
+    32.0
+   ],
+   "radius_bracket": [
+    0.4437,
+    0.4625
+   ],
+   "invariants_at_first_dirty": {
+    "cm_dist": 0.149359423840625,
+    "systole": 1.0,
+    "cusp_height": 1.0
+   },
+   "verdict": "departure radius in (0.444, 0.463]"
+  },
+  "theta45.0_w18-32": {
+   "coarse": {
+    "0.2": 0,
+    "0.35": 0,
+    "0.5": 0,
+    "0.65": 0,
+    "0.8": 0
+   },
+   "theta_deg": 45.0,
+   "window": [
+    18.0,
+    32.0
+   ],
+   "verdict": "clean through r=0.8 in window (18.0,32.0)"
+  }
+ }
+}
