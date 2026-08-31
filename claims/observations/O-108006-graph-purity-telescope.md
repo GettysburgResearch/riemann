@@ -89,7 +89,24 @@ RH status: unproved; unaddressed.
    positive-end-only order is EXACTLY 16. A correction this result
    forces on earlier text: the girth-profile-swap reading suggested
    by GP(24,2) (girth 5) is REFUTED — all three n = 16 positive-end
-   witnesses have girth 3. Earlier negative
+   witnesses have girth 3.
+   **The witnesses DECODED (graphs/WITNESS16_STRUCTURE.md;
+   adversarially verified, 20/21 exact claims confirmed, the 21st a
+   naming ambiguity with members exactly re-certified):** both primary
+   witnesses are CAPPED LADDERS — a diamond (K4 minus an edge) joined
+   through a two-rail rung corridor to a far cap (a second diamond
+   for 709, |Aut| = 16, lambda_min = -(1+sqrt 3); a one-triangle
+   block for 708, |Aut| = 4) — differing by a single 2-switch and
+   non-isomorphic. Their minimum cut is 2 but realized by 4-5
+   PARALLEL corridor cross-sections, which is exactly why the
+   single-neck dumbbell search missed them. Extending the families
+   exactly: n = 14 members are Ramanujan, n = 16-20 members are
+   positive-end-only (two non-isomorphic examples at n = 18), and
+   n = 20-22 members breach BOTH ends — the positive-end-only
+   property is a FINITE TRANSITIONAL WINDOW in near-bipartite
+   corridor families, versus the apparently permanent positive-only
+   regime of the lambda_min-bounded GP(n,2) family. Two distinct
+   mechanisms, both now exactly witnessed. Earlier negative
    evidence inside the (14, 48] bracket, from before the census
    (both searches Sturm-exact, no floats — an earlier float screen
    was found unreliable and discarded): (i) all 774
