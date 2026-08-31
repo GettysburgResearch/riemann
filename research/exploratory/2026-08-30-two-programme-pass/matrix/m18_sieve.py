@@ -34,6 +34,9 @@ import time
 from fractions import Fraction as Fr
 
 sys.path.insert(0, '.')
+# resultant values exceed Python 3.11's 4300-digit int->str guard
+# from m = 22 on (the S2 digit-count line and the JSON lc fields)
+sys.set_int_max_str_digits(10_000_000)
 
 
 def say(m):
