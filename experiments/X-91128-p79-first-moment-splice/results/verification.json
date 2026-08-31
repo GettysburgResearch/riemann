@@ -1,10 +1,8 @@
 {
-  "bounded_divisors": 51,
   "classification": "PASS_P79_CHILD_FIRST_MOMENT_UPPER",
   "maximum_at": 1,
   "maximum_prefix": "1",
-  "minimum_at": 13,
-  "minimum_prefix": "-2323/30030",
   "residual_score_target_coefficient": "58/2075",
-  "scope": "Exact Fraction enumeration of every P79 prefix below 83. Together with the certified parent prefix A_P79(x)>1/25 for x>=83, it proves A_P79(py)-A_P79(y)/p>58/2075 for p>=83 and 1<=y<83."
+  "scope": "Exact Fraction enumeration of every P79 prefix below 83. Together with A_P79(x)>1/25 for x>=83, this proves the one-prime score-minus-target splice is uniformly positive.",
+  "upper_endpoint": 83
 }
