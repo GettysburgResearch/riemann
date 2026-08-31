@@ -44,7 +44,8 @@ RH status: RH and GRH are unproved; nothing in this pass addresses
 | L-108520 | LEMMA | Corridor forcing: induced 2x15 ladder breaches both ends (50 > 49); window finiteness |
 | L-108521 | LEMMA | Frustration bound lambda_min <= -3 + 4f/n; positive-only needs linear frustration |
 | T-108522 | THEOREM | Alternant closed form: general-rank square defect solved; stable layer theorems; multilinear triple-product defects with degree law |
-| O-108523 | OBSERVATION | Torsion multiplicity law: odd-m growth profile of every resonance exact 52/52 incl. held-out m=19 (12/12, two brand-new classes); even-m bookkeeping open |
+| O-108523 | OBSERVATION | Torsion multiplicity law: odd-m growth profile of every resonance exact 80/80 incl. held-out m=19/21/23 rows (the m=23 row: 15/15 with the first odd-order R=N entries psi_11/psi_22); even-m bookkeeping open |
+| L-108524 | LEMMA | Multiplicity law's interior term = transversal branch counting: conditional theorem (three checkable hypotheses) + exact machine certificates at seven cells (a=0 tower m=5..13, golden m=11/13) — O-108523's first proved-by-mechanism cells |
 
 Pass-2 claims T-108507 and T-108508 received addenda: the spectrum
 theorem closes T-108507's tower question; the codimension law proves
@@ -346,6 +347,27 @@ now stands for every torsion point of every order, m <= 19. The
 observed degree law of the spectrum coefficients
 (deg mu_{nu-k} = k(2nu-k) odd / k(2nu-k+1) even) holds exactly at
 both new m.
+
+**Multiplicity mechanism proved under certificates (L-108524)**: the
+interior term of O-108523 is transversal branch counting — a
+conditional theorem with three explicitly checkable hypotheses: (B)
+no crowded boundary class; (C) a gcd certificate that the multiple
+roots of M_m(.; a0) are exactly the crowded class points with their
+crowding multiplicities; (T) diagonal Newton transversality (the
+below-diagonal coefficients vanish, the associated polynomial A_c
+has degree mu_c and nonzero discriminant). Under (B)+(C)+(T), the
+single-segment Newton-Puiseux split gives mu_c analytic branches
+with distinct slopes (the roots of A_c), every within-cluster pair
+difference vanishes to order exactly 1, and
+mult_p(disc) = sum mu_c(mu_c - 1) follows with Galois-uniform ord.
+branch_slopes.py certifies all three hypotheses in exact arithmetic
+at seven full cells (a = 0 tower m = 5..13; golden point m = 11 and
+13) — the law's first proved-by-mechanism cells. The tower's
+associated-polynomial family shows structure (lc = +-2^mu mu!,
+constant 1, linear coefficient +-(mu+1); discriminants 41, 133788,
+...): the deposited route to the unconditional law is uniform
+separability of this family, not slope formulas (the slopes are
+honest irrationalities).
 
 ## Process notes (honesty trail)
 
