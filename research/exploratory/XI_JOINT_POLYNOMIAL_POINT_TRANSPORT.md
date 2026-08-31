@@ -14,9 +14,14 @@ or calibration.
 
 Use ONLY zero-based QT critical-point index19, its full certified real
 interval, lambda_(64), ratio r/y=1/2 and source precision512bits.
-Use the inherited512-bit actual Xi coefficient array and its certified
-complete16x16 outer-cover bound for R=7/8. These are accepted source
-certificates subject to QT independent review, not new point/cover evaluations.
+QT stores only coefficient-modulus upper bounds at orders8 through39,
+not the signed complex coefficients needed below. BEFORE evaluating this
+new criterion, explicitly correct that prerequisite: freshly evaluate one
+40-term actual Xi jet at512bits over the inherited FULL certified real
+critical interval, using the unchanged HA actual-Xi helper. No midpoint
+substitution is allowed. The complete16x16 outer-cover bound for R=7/8
+remains inherited from QT, whose exact science530732 has independent
+reviewa99a357b. No new outer-cover evaluation is part of this experiment.
 
 Use exactly N=32 terms of the joint companion remainder and exactly64
 equal closed angular arcs covering the circle |w-i*y|=r. Each arc is
@@ -72,3 +77,12 @@ This tests one deliberately selected existing source point. It does not
 give a cofinal theorem, an independent new zero census, general capture,
 innerness, RH or novelty/priority. It is not excluded by the all-radius
 obstruction to the DIFFERENT separate-triangle criterion.
+
+## 4. Preregistration correction before new arithmetic
+
+The original design689a93971cdd741a2b154f9506672667aa1a32dc incorrectly
+described a reusable inherited signed coefficient array. The correction
+above is frozen in a separate successor commit BEFORE any new arithmetic.
+It adds only the necessary fresh signed40-term real-interval jet. Node19,
+ratio1/2, precision512bits, N32, all64equalclosedarcs, source rectangle,
+outer-cover bound and all no-tuning conditions are unchanged.
