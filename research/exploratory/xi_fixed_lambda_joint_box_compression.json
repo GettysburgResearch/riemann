@@ -1,8 +1,8 @@
 {
   "artifacts": {
-    "research/exploratory/XI_FIXED_LAMBDA_JOINT_BOX_COMPRESSION.md": "7f6efdcd6375d14db36ade51c073d3c04dc73f5e2c9c5cd27aa94d8107497460",
-    "research/exploratory/xi_fixed_lambda_joint_box_compression.py": "69e51a36a9180df97ae6b994104308a46b9ab84331027e1d8ed288c6490d5300",
-    "research/exploratory/xi_fixed_lambda_joint_box_compression.sources.json": "b775a9c8bc054312644116b362960b1c1e950d23a8dfc82d556d86f67a30c819",
+    "research/exploratory/XI_FIXED_LAMBDA_JOINT_BOX_COMPRESSION.md": "e661225093b88905519d34fae4bb89186adfd78c854c68aedb10df4c17c213b3",
+    "research/exploratory/xi_fixed_lambda_joint_box_compression.py": "aab4939203b42933ca9ca246f7b8c6791391058afe6a785cc320d39fea9e4b73",
+    "research/exploratory/xi_fixed_lambda_joint_box_compression.sources.json": "98b36c73b6d897980f8df63c5ff9b58263978e70a7c4395227c99675190373cf",
     "tests/test_xi_fixed_lambda_joint_box_compression.py": "deb2696c5c160e0da970c31f35e5ed472baabc4fb1d3db831b4e48371935ae80"
   },
   "boxes": [
@@ -68043,6 +68043,12 @@
   ],
   "contract": {
     "arithmetic": "pinned FLINT complex balls; exact Fraction guards; outward Fraction matrix test route",
+    "arithmetic_class": "MIXED",
+    "arithmetic_components": [
+      "DIRECTED_BALL_ENCLOSURES",
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
     "boundary": "416 exact arcs each; 32 Taylor terms and analytic Cauchy tail; rational polygon homotopy",
     "common_factor": "conditional component innerness; raw local nonvanishing survives any common inner divisor; P_U >= P_raw globally",
     "coverage": "complete R5 counts 3/5/6 in (26,38),(58,70),(122,134) plus i(0,1); zero-free FULL closed boundaries",
@@ -68052,6 +68058,8 @@
     "metric": "boundary dx Hardy norm; global P_U=P_(U H2); H_raw=V_raw G V_rawstar",
     "primitive": "actual unrescaled Xi; ONE exact lambda64 independent of z and box",
     "roots": "14 individually certified simple R5 zeros, C5/R0/C0/f6/W/R5prime nonzero throughout each rectangle",
+    "rounding": "FLINT real/complex balls round outward; exact rational endpoint acceptance and integer winding; scouts and approximate eigenvectors are not certificates",
+    "source_quantifiers": "finite actual-Xi certificates are unconditional relative to the pinned runtime; global Hardy lower bounds require component innerness; no band or cofinal conclusion",
     "trust": "same pinned OA FLINT implementation; not formally verified special functions"
   },
   "frozen_sources": [
@@ -68199,7 +68207,7 @@
     }
   ],
   "parameter_anchor": 64,
-  "payload_sha256": "f52949481e44d6c7e831960afb29270992c00ab8e0f86c23815a5ac24484efc1",
+  "payload_sha256": "dcaa4a2737521e8ba9367b521f1afe6d5b9232d7066b7b805bcf5ce9545d1db2",
   "precision_bits": 256,
   "roots": [
     {

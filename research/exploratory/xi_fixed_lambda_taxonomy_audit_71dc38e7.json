@@ -1,0 +1,46 @@
+{
+  "allowed_contract_additions": [
+    "arithmetic_class",
+    "arithmetic_components",
+    "rounding",
+    "source_quantifiers"
+  ],
+  "arithmetic_class": "MIXED",
+  "entire_original_proof": "identical after deleting metadata paragraph",
+  "full_producer_AST_except_added_contract": "identical",
+  "new": "71dc38e7619409a27dd4d1973dec985b0e655a30",
+  "old": "0e3fc9b482f0f115a49a6209ccbfeffae640014a",
+  "resealed_metadata_rejections": 4,
+  "review_limit": "metadata/identity/assurance successor, not an independent new special-function implementation",
+  "rounding": "none in semantic comparison",
+  "runtime": {
+    "flint": "3.6.0",
+    "machine": "AMD64",
+    "native_files": 44,
+    "native_files_sha256": "36c07323af58dec0eb6fd82a99bf871924eb69f1833d9af626fc09437ae5b0cc",
+    "python": "3.12.10",
+    "python_flint": "0.9.0",
+    "system": "Windows"
+  },
+  "schema": "fixed-lambda-metadata-review-v1",
+  "source_bindings": 6,
+  "source_file_sha256_lf": {
+    "new": {
+      "research/exploratory/XI_FIXED_LAMBDA_JOINT_BOX_COMPRESSION.md": "e661225093b88905519d34fae4bb89186adfd78c854c68aedb10df4c17c213b3",
+      "research/exploratory/xi_fixed_lambda_joint_box_compression.json": "2059059f8510b50d0e1baec364b86377371d84bf9141ea05c7d2b2355c813cfb",
+      "research/exploratory/xi_fixed_lambda_joint_box_compression.py": "aab4939203b42933ca9ca246f7b8c6791391058afe6a785cc320d39fea9e4b73",
+      "research/exploratory/xi_fixed_lambda_joint_box_compression.sources.json": "98b36c73b6d897980f8df63c5ff9b58263978e70a7c4395227c99675190373cf",
+      "tests/test_xi_fixed_lambda_joint_box_compression.py": "deb2696c5c160e0da970c31f35e5ed472baabc4fb1d3db831b4e48371935ae80"
+    },
+    "old": {
+      "research/exploratory/XI_FIXED_LAMBDA_JOINT_BOX_COMPRESSION.md": "7f6efdcd6375d14db36ade51c073d3c04dc73f5e2c9c5cd27aa94d8107497460",
+      "research/exploratory/xi_fixed_lambda_joint_box_compression.json": "504071292138882ad5192fc62f765edc5615c3140542c7f597651679ba682cdb",
+      "research/exploratory/xi_fixed_lambda_joint_box_compression.py": "69e51a36a9180df97ae6b994104308a46b9ab84331027e1d8ed288c6490d5300",
+      "research/exploratory/xi_fixed_lambda_joint_box_compression.sources.json": "b775a9c8bc054312644116b362960b1c1e950d23a8dfc82d556d86f67a30c819",
+      "tests/test_xi_fixed_lambda_joint_box_compression.py": "deb2696c5c160e0da970c31f35e5ed472baabc4fb1d3db831b4e48371935ae80"
+    }
+  },
+  "unchanged_science_sha256": "18b2bd7d928ae50fd6ebaf9dc751424b71cd756931ae04dd17f717d83150e7df",
+  "unchanged_test_sha256_lf": "deb2696c5c160e0da970c31f35e5ed472baabc4fb1d3db831b4e48371935ae80",
+  "verdict": "PASS metadata-only; prior scientific verdict not widened"
+}
