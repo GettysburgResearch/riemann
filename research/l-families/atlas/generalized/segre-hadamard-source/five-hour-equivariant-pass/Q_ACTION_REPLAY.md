@@ -1,0 +1,9 @@
+# Q-action replay
+
+Status: the first complete acquisition passed on 2026-09-01 in 4.656 seconds, with observed peak working set 33,820,672 bytes. The preregistration preceded the calculation. The 1,559,174-byte initial artifact retained every action and boundary witness. Its source binding is regenerated after these validation notes; the original elapsed time is a measured first-run outcome, not a deterministic artifact field.
+
+The producer authenticates frozen primitives, independently rebuilds their literal low-grade Koszul maps, and retains full source-derived complementary-variable action matrices with boundary witnesses. It imports no executable predecessor modules, accesses no old untracked continuation/cache files, and does not infer ambient Tor from the numerator.
+
+All 19 focused source/hostile tests passed in ordinary Python (0.045 seconds in the initial run). They cover exact calibration homology, the complement, actual multiplication identities and factor action, W homotopy signs, omitted or altered action columns, changed cycles and boundary witnesses, duplicate/floating/nonfinite JSON, Boolean integer counterfeits, fresh-hash numeric substitution, sparse coverage, bit/grade bounds, and span/annihilator controls. The first run returned first-Tor action ranks 1 and65 for m=2 and3. The m=3 positive quotient-action rank is11 and both recorded Q-linear annihilators vanish.
+
+The root independently read the complete mathematics and producer through the action construction and found no blocker. All19 optimized tests also passed (0.045 seconds). Ruff formatting/checking passed. The bound --write, --check and optimized --check all passed, in 4.468,4.515,4.579 seconds respectively, with measured peak working sets below34.2MB. A final note-binding replay follows this validation paragraph; no numerical or scientific code was changed by it. A later exact-SHA review remains separate. The d2 sequel is not part of this first artifact.
