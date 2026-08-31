@@ -241,6 +241,15 @@ P^2 x P^2 ((1,9,16,9,1) at twists 0,2,3,4,6, per-weight characters;
 matrix/segre_d3m2_betti.py). Replays: matrix/alternant_defect.py
 (sympy+exact) and X-108522 (stdlib), all green.
 
+**Frustration bound (L-108521)**: lambda_min <= -3 + 4f/n for every
+cubic graph (one-paragraph Rayleigh proof via the bipartition vector
+of a frustration-optimal spanning subgraph). Corollaries: f <
+n(3-2sqrt2)/4 forces a negative-end breach (f = 2 suffices at every
+n >= 47), and positive-end-only families need LINEARLY growing
+frustration. With L-108520 (corridor forcing), both poles of the
+O-108517 two-invariant diagram now have proved mechanisms; the open
+middle is the h <= 1/4 expansion dichotomy.
+
 ## Process notes (honesty trail)
 
 - The X-108510 replay's mixed-triple test was written expecting the

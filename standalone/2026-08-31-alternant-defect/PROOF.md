@@ -136,6 +136,62 @@ five (m, d) pairs (A3). For d = 2 this re-expresses the T-108509
 deformation-spectrum objects; the two-parameter (t, u)-plane of
 L-108516 acts on it by the weighted scaling of every `x`-monomial.
 
+## Addendum (same day): the stable layer theorems
+
+T-108508's correction layers become theorems for ALL d via a
+stability argument on the alternant.
+
+**Stability Lemma.** (a) Setting `x_d = 0` maps `N_{2,d} ->
+N_{2,d-1}` and `G_d -> G_{d-1}` (the h-series and the Sym^2/Lambda^2
+weight multisets restrict; one line from Theorem A as well). Hence
+each correction `corr_j(d) := [T^j](N_{2,d} - G_d)` is a sequence of
+weight-2j symmetric polynomials compatible under restriction. (b)
+The inverse limit of the weight-w graded pieces under restriction is
+the weight-w part of the ring of symmetric functions, and the
+projection to d variables is injective (indeed bijective) for
+`d >= w`. So the WHOLE sequence is determined by its member at
+`d = 2j`, and any e-polynomial identity verified symbolically in
+`2j` variables holds for every d. ∎
+
+**Layer Theorem 1 (T-108508's continuation guess, now for all d).**
+
+```text
+corr_3 = 2 sum_{i >= 4} (-1)^i e_i h_{6-i}
+       = 2 (e_4 h_2 - e_5 h_1 + e_6)          for EVERY rank d.
+```
+
+Machine-verified as an exact symbolic identity at the determining
+rank d = 6 (stable_layers.py; e-basis decomposition
+`2 e_6 - 2 e_{5,1} - 2 e_{4,2} + 2 e_{4,1,1}` matches); the
+Stability Lemma lifts it to all d. This upgrades T-108508's
+"proved at ranks 4-5, exact-verified at rank 6, general d OPEN" to
+PROVED for all d.
+
+**Layer Theorem 2 (new; the T^4 layer for all d).**
+
+```text
+corr_4 = 2 sum_{i >= 5} (-1)^i e_i h_{8-i}
+       = 2 (-e_5 h_3 + e_6 h_2 - e_7 h_1 + e_8)   for EVERY rank d
+```
+
+— the SAME alternating law with threshold shifted to `i >= j+1`.
+Machine-verified at the determining rank d = 8 (e-basis
+`2e_8 - 2e_{7,1} - 2e_{6,2} + 2e_{6,1,1} - 2e_{5,3} + 4e_{5,2,1}
+- 2e_{5,1,1,1}`, equal to the displayed form); at d = 5 it collapses
+to exactly T-108508's `-2 e_5 h_3`. Both theorems verified again by
+the direct identity checks `corr_j == 2 sum_{i>=j+1} (-1)^i e_i
+h_{2j-i}` at d = 6 and d = 8.
+
+**The T^5 layer.** The same linear law CANNOT be complete at j = 5:
+T-108508's rank-5 closed form has terms quadratic in the deep
+elementaries (`e_2 e_4^2`, `e_5^2`) which the linear form cannot
+produce at d = 5 (where all `e_i, i >= 6`, vanish). The stable
+`corr_5` at the determining rank d = 10 — the first SECOND-LAYER
+stable form — is computed by the same script (in progress at the
+time of this addendum; deposited in stable_layers.json when
+complete, with the linear part `2 sum_{i>=6} (-1)^i e_i h_{10-i}`
+split off).
+
 ## What this changes
 
 - T-108508's structure problem ("the general-d law is OPEN, the layer
