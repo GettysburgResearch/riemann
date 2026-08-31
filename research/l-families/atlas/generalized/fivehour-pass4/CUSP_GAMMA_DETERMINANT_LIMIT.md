@@ -54,8 +54,11 @@ these functions are holomorphic for all sufficiently large weights, and
 locally uniformly. Thus the whole fixed-endpoint ladder is encoded by one
 limiting entire function, rather than separate finite depth fits.
 
-In any fixed disk around \(c=12j\) containing no other positive multiple of
-12, (G4) implies exactly one full-period determinant zero for large weights.
+In any fixed disk \(|c-12j|<r\), with \(0<r<12\), (G4) implies exactly
+one full-period determinant zero for large weights. More generally the
+boundary must contain no zero of the limiting function, and the interior
+must contain only \(12j\); absence of other interior zeros alone is not
+enough for this application of Rouche's theorem.
 It is simple and real by multiplicity counting and conjugation symmetry.
 This recovers the full-determinant part of the accepted fixed-depth ladder;
 the NEW content here is the regularized entire-function/operator limit.
