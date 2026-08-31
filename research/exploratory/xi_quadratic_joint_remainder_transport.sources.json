@@ -1,0 +1,69 @@
+{
+  "authoring_base": "530732c5fd7f50364381f8af50e97ce809b674c5",
+  "contract": {
+    "arithmetic_class": "MIXED",
+    "arithmetic_components": [
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "caps": {
+      "bytes": 24000000,
+      "cells": 390,
+      "container": 30000,
+      "integer_bits": 12288,
+      "json_depth": 28,
+      "json_nodes": 600000,
+      "source_versions": 100,
+      "sqrt_bits": 512
+    },
+    "criterion": "M3*(y+r)^2*(lambda/2-(y-r)/6)<abs(c)*r*(d-r/2)",
+    "exclusions": "no QR-old-criterion retraction, RH, innerness, novelty or physical capture",
+    "inheritance": "authenticated QT critical/jet/M3/root certificates; no parent special-function or runtime-binary replay",
+    "matching": "separate entire HA rectangle squared-displacement upper < lower-radius squared",
+    "nonpass": "inherited bounds did not certify; NOT impossibility for every valid M3",
+    "panel": "all26 nodes times5 ratios times3 tiers, all390 outcomes retained",
+    "primitive": "actual f(z)=xi_R(1/2+iz), g=f5, inherited fixed positive lambda_(64)",
+    "rounding": "exact rational operations; fixed512-bit dyadic square-root endpoints outward",
+    "source_domain": "unchanged QT disc and wrapper; no new M3, gauge, radius ratio or source window"
+  },
+  "frozen_sources": [
+    {
+      "commit": "530732c5fd7f50364381f8af50e97ce809b674c5",
+      "git_blob": "cb634e9ac1e5ddbdffad01286a0b37ca958ac92b",
+      "path": "research/exploratory/XI_QUADRATIC_CRITICAL_TRANSPORT.md",
+      "sha256_lf": "b9e7cf4911688d81c44ec9d871104e063c7bf46f574d86b479c6d912559d7269"
+    },
+    {
+      "commit": "530732c5fd7f50364381f8af50e97ce809b674c5",
+      "git_blob": "a5e48dea3a25e1ff7419b2f6e2cfeef3de230185",
+      "path": "research/exploratory/xi_quadratic_critical_transport.py",
+      "sha256_lf": "28033a330ade30e0079f6e24cd0f4b07e9de9ba70438f92c88fe5c0f7fe8c373"
+    },
+    {
+      "commit": "530732c5fd7f50364381f8af50e97ce809b674c5",
+      "git_blob": "322281110f34af24575be29aed32acfd25657959",
+      "path": "research/exploratory/xi_quadratic_critical_transport.json",
+      "sha256_lf": "45e9d81f5cfe22662ad9e07b9a994796b3c3b18743ae74c8cbd3ce095f3a4cce"
+    },
+    {
+      "commit": "530732c5fd7f50364381f8af50e97ce809b674c5",
+      "git_blob": "58bd03b1d15ce4d2eb91addb4c209a0f43fab80c",
+      "path": "research/exploratory/xi_quadratic_critical_transport.sources.json",
+      "sha256_lf": "66aa6f3d483bc638eed43315592c3cc5f3f8ef2baa9d9518e2fa0de3e685d757"
+    },
+    {
+      "commit": "530732c5fd7f50364381f8af50e97ce809b674c5",
+      "git_blob": "cde20699d7b3894bf40db419b2d90a3d93459751",
+      "path": "tests/test_xi_quadratic_critical_transport.py",
+      "sha256_lf": "d5493e8c31d53d66fdb00f35dfa1198b173513e23b2bfd3bdcb2d39d80423749"
+    },
+    {
+      "commit": "99a7eb0310ca86392ef28b91b7c6d1fe81f35e61",
+      "git_blob": "0b13e70ffef6610f9ae2a2dc484ac17ebb3294f3",
+      "path": "research/exploratory/XI_QUADRATIC_JOINT_REMAINDER_TRANSPORT.md",
+      "sha256_lf": "7f2c0270404fce9b627154c68464d5f96f58823f7644228e17fd1a1b8a92e1c9"
+    }
+  ],
+  "post_QT_design": "99a7eb0310ca86392ef28b91b7c6d1fe81f35e61",
+  "schema": "xi_quadratic_joint_remainder_transport-sources-v1"
+}
