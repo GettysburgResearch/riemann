@@ -276,3 +276,18 @@ and reject a freshly resealed report that changes coverage or scope.
 No priority claim is made for Gaussian, Bessel, likelihood-ratio, or
 semigroup methods. No actual Xi zero, physical capture, native decoder,
 archimedean object or principal-member selection is established here.
+
+The bounded packet reconstructs all13 moments,117 moment compositions,
+31 adjacent-order MLR polynomials and36 Laplace compositions. Seven direct
+Git/LF source bindings and all four bindings in the authenticated parent
+manifest are checked. The parent analytic acceptance includes its separate
+non-author review; no later growing-order theorem is imported.
+
+    python -B [-O] research/exploratory/xi_current_radial_semigroup.py --check
+    python -B [-O] -m unittest tests.test_xi_current_radial_semigroup tests.test_xi_odd_current_scaling
+
+The fixture binds the four current proof/producer/test/manifest artifacts.
+Full fresh reconstruction, duplicate-key and numeric-type checks, source
+tampering controls and resealed scientific-scope attacks run under both
+normal and optimized Python. The finite controls require only the standard
+library and do not invoke a numerical Xi evaluator.

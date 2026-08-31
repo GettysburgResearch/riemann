@@ -1,0 +1,70 @@
+{
+  "authoring_base": "af809698fe6cb5046a5bcc00e9175296e4597060",
+  "classical_reference": {
+    "location": "section4.4.2, pp17--18",
+    "role": "classical radial Brownian identification; Gaussian proof supplied in note",
+    "title": "Pitman--Yor, A guide to Brownian motion and related stochastic processes",
+    "url": "https://www.stat.berkeley.edu/users/aldous/205B/pitman_yor_guide_bm.pdf"
+  },
+  "contract": {
+    "analytic_boundary": "all-order and limit quantifiers are written proofs, not certified by finite rows",
+    "arithmetic_class": "MIXED",
+    "arithmetic_components": [
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "auxiliary": "order-to-radius Markov kernel with declared odd-order quantization, not a native physical time",
+    "exclusions": "no growing-step diffusion limit, iterated unbounded-moment convergence, Xi zeros, capture, decoder, or RH",
+    "finite_work": "Gaussian multinomial moments, radial generator, full finite composition and MLR polynomial panels",
+    "rounding": "none; integers and canonical rational strings only",
+    "semigroup": "fixed finite compositions converge; finite-xi family fails exact semigroup identity",
+    "source": "literal source-pinned Xi odd-current compact-kappa theorem",
+    "universality": "same limit for substituted Gaussian kernels; not a source-faithfulness criterion"
+  },
+  "preregistration": "980801ae4c23d9482975f363390249a1b3a14ac2",
+  "schema": "xi_current_radial_semigroup-sources-v1",
+  "sources": [
+    {
+      "commit": "af809698fe6cb5046a5bcc00e9175296e4597060",
+      "git_blob": "682e5b89ae99dee92741a290b5d7357bf8feef73",
+      "path": "research/exploratory/XI_ODD_CURRENT_DOUBLE_SCALING.md",
+      "sha256_lf": "3c7c16677311d40d8219a88ffb236984ea8704a8ef4e1a30f8b9da1637342e41"
+    },
+    {
+      "commit": "af809698fe6cb5046a5bcc00e9175296e4597060",
+      "git_blob": "1fe1f33b9c6e5812f0d1f60f88622659e95e7521",
+      "path": "research/exploratory/xi_odd_current_scaling.py",
+      "sha256_lf": "3ec353766ba53206af647adc84eec139503d7404a5113057fd00de985b62bd95"
+    },
+    {
+      "commit": "af809698fe6cb5046a5bcc00e9175296e4597060",
+      "git_blob": "40b457271e96cb9d08b8eae0ec975529bd489331",
+      "path": "research/exploratory/xi_odd_current_scaling.json",
+      "sha256_lf": "359f64f45165db33318f714689912efa68e4e0935139ab9a6195a7b858ad7749"
+    },
+    {
+      "commit": "af809698fe6cb5046a5bcc00e9175296e4597060",
+      "git_blob": "ab9d950ea9b28b121a640ea5b15ee9907968bd39",
+      "path": "research/exploratory/xi_odd_current_scaling.sources.json",
+      "sha256_lf": "40faa58ea354d2f7f86ee9859d1112227ed5b12e716546c28b6d20320142bdda"
+    },
+    {
+      "commit": "af809698fe6cb5046a5bcc00e9175296e4597060",
+      "git_blob": "55f713ec9182fd607aa75751fd7b22ae5bd02e9e",
+      "path": "tests/test_xi_odd_current_scaling.py",
+      "sha256_lf": "98ae7beab3a0d970b5760076783dcbf30e71d025503f1db96451e62219cb96e9"
+    },
+    {
+      "commit": "3f00e46e79cf928f724a9170116cb69e14f7b02f",
+      "git_blob": "551c55d32e8013f7b963287be6371a5d1893e0fb",
+      "path": "research/exploratory/XI_ODD_CURRENT_SCALING_AUDIT_AF809698.md",
+      "sha256_lf": "dd86a7c0449b9cd26300767a7b13c348c63e2a8e3842c29390f300c6a6dc2d87"
+    },
+    {
+      "commit": "980801ae4c23d9482975f363390249a1b3a14ac2",
+      "git_blob": "dba123e0af5296571e800f8235789bbab97ca9c8",
+      "path": "research/exploratory/XI_CURRENT_RADIAL_SEMIGROUP.md",
+      "sha256_lf": "0b61d44e82756f0c3d3a7d2c8fe7335d97e9358eaf5901b1b1fa62805fb1dc80"
+    }
+  ]
+}
