@@ -7,12 +7,15 @@ This is a checkpoint during the requested research pass, not a statement
 that eight hours have elapsed. No new automorphic L-function or external
 novelty is claimed.
 
-Checkpoint updated: 2026-08-31. Twenty exact packets are resident,
+Checkpoint updated: 2026-08-31. Twenty-two exact packets are resident,
 including the independently reviewed all-weight cusp-flag quotient family
 and its positive-spectrum boundary, an effective actual weight-24 derivative
-certificate, and a signed divisor explicit formula. The family and boundary
+certificate, a signed divisor explicit formula, the signed counting law,
+and the actual full-period off-central real-zero theorem. The family and boundary
 releases have separate arithmetic-taxonomy repairs; their mathematical
 outputs did not change.
+The real-zero packet has a separate typographic release repairing one
+fraction command and adding a control-character guard; its science is unchanged.
 
 ## The main conclusion
 
@@ -47,6 +50,9 @@ The derivative obstruction now has a rigorous explicit evaluation point
 and order. A separate divisor formula connects the global quotient to its
 generalized frequencies, counting zeros and poles with signed multiplicity.
 This is not a positive Weil formula or a critical-line theorem.
+The signed count now has a Riemann--von Mangoldt asymptotic. Separately,
+large-weight full determinants necessarily have off-central real zeros;
+whether a specified full-parent zero survives the quotient is a distinct gate.
 
 ## Exact packet map
 
@@ -72,6 +78,8 @@ This is not a positive Weil formula or a critical-line theorem.
 | [Positive-spectrum boundary](CUSP_FLAG_POSITIVE_SPECTRUM_BOUNDARY.md) | Strict positivity/decrease, exact moving-minimizer curvature identity, and wrong-sign derivatives on every right tail | Uncompleted F and L in fixed w coordinates; no actual negative-curvature claim, completed-Q implication or RH consequence |
 | [Effective actual derivative](CUSP_FLAG_EFFECTIVE_NEGATIVE_DERIVATIVE.md) | Exact negative normalized derivatives of F and L at order 8192 and w=96+8192/log(9/2), with absolute infinite-tail control | Actual weight 24, not the completed Q; no minimal-order or numerical-derivative claim |
 | [Signed divisor explicit formula](CUSP_FLAG_DIVISOR_EXPLICIT_FORMULA.md) | Order-at-most-one quotient, signed zero/pole distribution, surviving fractional atom and exact gamma kernel | Smooth compactly supported tests away from zero; no pointwise zero sum, unsigned zero asymptotic or positivity theorem |
+| [Signed Riemann--von Mangoldt law](CUSP_FLAG_SIGNED_RIEMANN_VON_MANGOLDT.md) | Native fixed-weight zero-minus-pole asymptotic with logarithmic error; common arithmetic leading factors cancel | All real parts, inclusive positive heights, net multiplicities; no unsigned zero count, effective error constant or critical-line claim |
+| [Full-period off-central real zeros](CUSP_PERIOD_OFF_CENTRAL_REAL_ZEROS.md) | Actual full determinant has reflected real zeros in (0,1/2) and (1/2,1) for every k=12d>=6144 | Full parent only; W also has positive central directions eventually, and no uncancelled Q zero follows from this packet |
 
 Each row links to its resident proof and reproduction contract. The later
 analytic/parent packets and the earlier exact-degree, single-grade and
@@ -243,9 +251,41 @@ gamma-multiplicity and rational zero/pole controls. Classical
 Poisson--Newton/Hadamard theory is credited; no new general explicit-formula
 theory is claimed.
 
-A further signed Riemann--von Mangoldt count is under independent review
-and is not included in this twenty-packet checkpoint. Denominator zeros
-and the reduced divisor still require their own control.
+## Signed counting and a full-parent zero obstruction
+
+The [counting theorem](CUSP_FLAG_SIGNED_RIEMANN_VON_MANGOLDT.md) proves,
+at each fixed weight and for every T>=2,
+
+    sum_(rho: 0<Im rho<=T) ord_rho Q_k
+       = (2/pi) T log(T/(2pi e)) + O_k(log(T+2)).
+
+Orders are signed and net, and all real parts are included. The full
+Miller determinant begins at coefficient indices 1,...,d; the W
+determinant begins at 2,...,d because its n=1 column vanishes. Both
+leading products are d!, with coefficient one. Their -T log(d!) phase
+terms therefore cancel. Actual theta growth, reflection, a proved
+polynomial strip bound and a Jensen/argument-principle calculation supply
+the error estimate. The [independent audit](CUSP_FLAG_SIGNED_RIEMANN_VON_MANGOLDT_AUDIT.md)
+checks the analytic chain and reconstructs all 40 native finite determinant
+controls by other arithmetic routes. It does not turn the signed count
+into an unsigned zero count or assert that poles are finite in number.
+
+The [real-zero theorem](CUSP_PERIOD_OFF_CENTRAL_REAL_ZEROS.md) tests the
+actual full arithmetic parent more directly. For k=12d>=6144,
+h_d=Delta E4^(3d-3) has positive central period. Cusp localization and an
+all-integer threshold proof establish this without period sampling.
+Near s=1 from the left, the positive Petersson residue makes the whole
+matrix negative definite. A continuous Hermitian eigenvalue therefore
+crosses zero in (1/2,1), and reflection supplies an equal-order zero in
+(0,1/2). The [audit](CUSP_PERIOD_OFF_CENTRAL_REAL_ZEROS_AUDIT.md) retains the
+exact Eisenstein completion, documented printed Fourier discrepancies,
+native measure and separate typographic release.
+
+For each fixed j>=2, Delta^j E4^(3(d-j)) is an actual W vector with positive
+central period eventually as d grows. Thus the restricted determinant can
+also have real zeros. No relative inertia gap or noncancellation follows
+from these separate central witnesses. A further near-endpoint canonical
+flag separation is being researched; it is not accepted in this checkpoint.
 
 ## Why the parent distinction changes the programme
 
@@ -308,7 +348,7 @@ series by renaming it.
 | L4: weights, determinant, duality | Finite representation and determinant identities are explicit; no general ramified or global compatibility theorem is supplied |
 | L5--L6: completion and continuation | The actual period quotient has global meromorphy and reflection, with possible denominator-zero poles; the divisor-power obstructions remain unchanged |
 | L7--L8: functoriality and realization | Honest local state-space, a classical signed Lie parent and an actual flagged period source exist; no new automorphic representation or twist compatibility is inferred |
-| L9: explicit formula and zeros | A source-specific signed divisor explicit formula, an O_k(R log R) divisor upper bound and an effective positive-spectrum obstruction are proved; no unsigned asymptotic, critical-line theorem, RH or GRH consequence |
+| L9: explicit formula and zeros | Signed explicit formula and Riemann--von Mangoldt law, effective positive-spectrum obstruction, and large-weight full-parent off-central real zeros; no unsigned quotient asymptotic, uncancelled-Q conclusion, RH or GRH consequence |
 
 ## The all-prime tests now have answers
 
@@ -366,9 +406,11 @@ next burdens are denominator-zero cancellation/control, sharp signed and
 unsigned divisor information, and extensions to genuinely different
 intrinsic cusp flags. The higher-rank first-frequency formula,
 positive-spectrum obstruction, effective actual derivative certificate and
-signed divisor bridge are now proved and independently reviewed. A signed
-zero-minus-pole asymptotic is being reviewed separately; it is not yet part
-of this checkpoint.
+signed divisor bridge, signed zero-minus-pole asymptotic and full-parent
+real-zero theorem are now proved and independently reviewed. The next
+specific target is a uniform estimate on the literal W=ker([q]) that
+would establish a surviving quotient zero near an endpoint; central
+positive-vector arguments alone do not provide it.
 
 An added variable, fitted matrix, formal regularization or ad hoc gamma
 factor is not enough. Cross-prime or twist compatibility must be proved
@@ -378,7 +420,7 @@ family.
 
 The [wave-2 research map](WAVE2_RESEARCH_MAP.md) remains the historical
 literature map. Its six-packet status and queue are superseded by this
-twenty-packet checkpoint.
+twenty-two-packet checkpoint.
 
 ## Earlier work is not displaced
 
@@ -397,9 +439,9 @@ global or non-scalar theorem, not through another periodic example.
 ## Replay and exact identities
 
 Every packet has a bounded exact producer and tests. The current
-changed-test-module scope contains 398 tests in twenty modules. All
-398 tests passed in normal Python (50.040 seconds) and under -O
-(49.963 seconds). All twenty producers passed checks in both modes.
+changed-test-module scope contains 462 tests in twenty-two modules. All
+462 tests passed in normal Python (66.540 seconds) and under -O
+(66.872 seconds). All twenty-two complete producers passed in both modes.
 Source manifests bind frozen Git blobs, not just internally consistent
 derived JSON. For the new period quotient, the pinned programme file is
 context; modularity and Eisenstein continuation are explicit primary-source
@@ -409,7 +451,7 @@ an all-parameter classification or analytic continuation.
 Original scientific commits named by the reviews are retained on
 durable source refs. For this programme fetch:
 
-    git fetch --no-tags origin refs/heads/codex/review-sources-universal-euler-wave2 refs/heads/codex/review-sources-finite-graded-parent-wave2 refs/heads/codex/review-sources-satake-tensor-wave2 refs/heads/codex/review-sources-graded-global-wave2 refs/heads/codex/review-sources-segre-koszul-lie-wave2 refs/heads/codex/review-sources-rankin-selberg-quotient-wave2 refs/heads/codex/review-sources-cusp-flag-family-wave2 refs/heads/codex/review-sources-cusp-flag-positive-spectrum-wave2 refs/heads/codex/review-sources-cusp-flag-effective-derivative-wave2 refs/heads/codex/review-sources-cusp-flag-divisor-explicit-formula-wave2
+    git fetch --no-tags origin refs/heads/codex/review-sources-universal-euler-wave2 refs/heads/codex/review-sources-finite-graded-parent-wave2 refs/heads/codex/review-sources-satake-tensor-wave2 refs/heads/codex/review-sources-graded-global-wave2 refs/heads/codex/review-sources-segre-koszul-lie-wave2 refs/heads/codex/review-sources-rankin-selberg-quotient-wave2 refs/heads/codex/review-sources-cusp-flag-family-wave2 refs/heads/codex/review-sources-cusp-flag-positive-spectrum-wave2 refs/heads/codex/review-sources-cusp-flag-effective-derivative-wave2 refs/heads/codex/review-sources-cusp-flag-divisor-explicit-formula-wave2 refs/heads/codex/review-sources-cusp-flag-signed-count-wave2 refs/heads/codex/review-sources-cusp-period-real-zeros-wave2
 
 Their exact targets, in that order, are:
 
@@ -422,7 +464,9 @@ Their exact targets, in that order, are:
 - 43ecb4ac3f2487ee944b6bb6bef72e1ad92f2678;
 - 282ce03941444d0e02daba5fde260ccb54a3f909;
 - a32a3923f34e2a281737cc1f2cd610bc5c69279e;
-- a27781310ded92125ef16d97d78db4d97cec4c1b.
+- a27781310ded92125ef16d97d78db4d97cec4c1b;
+- 24bfc73fc9aa3ba115902340affa8727dfa18970;
+- a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717.
 
 The first retains 02e53055; the third retains b895598a; the fourth
 retains the global proof 334bec3b and its independent review. The sixth
@@ -430,13 +474,15 @@ retains the original five-file quotient proof reviewed in the audit. The
 seventh retains the all-weight family proof; the eighth retains both
 arithmetic-taxonomy repairs and the positive-spectrum source. The ninth
 retains the effective derivative proof; the tenth retains the divisor
-explicit-formula proof. These refs are acquisition aids; commit/path/blob
+explicit-formula proof. The last two retain the signed counting proof and
+the corrected real-zero release (including original 3c867a117), respectively.
+These refs are acquisition aids; commit/path/blob
 checks remain authoritative.
 
-The recursive source-acquisition audit passed for all twenty root
-manifests: 30 frozen manifest versions, 121 literal source edges, 73 unique
-commit/path file versions and twenty source commits. Every such commit
-is reachable from this programme or one of the ten source refs above.
+The recursive source-acquisition audit passed for all twenty-two root
+manifests: 33 frozen manifest versions, 144 literal source edges, 79 unique
+commit/path file versions and twenty-two source commits. Every such commit
+is reachable from this programme or one of the twelve source refs above.
 The audit follows the manifest's explicit imported-parent identity where
 it differs from a historical base identity; it does not authenticate a
 different file merely because the path matches.

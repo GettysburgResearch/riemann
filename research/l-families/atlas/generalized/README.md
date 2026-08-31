@@ -4,7 +4,7 @@ Status: **reviewed local/global boundaries, a classical signed parent, and
 an actual global period quotient; no new automorphic L-function or external
 novelty claim**.
 
-For the current twenty-packet result and the remaining global-object gates,
+For the current twenty-two-packet result and the remaining global-object gates,
 start with [CONTINUATION_RESULTS.md](CONTINUATION_RESULTS.md).
 The [all-weight cusp-flag family](CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md)
 extends the [weight-24 quotient](RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT.md).
@@ -14,6 +14,10 @@ The [effective derivative certificate](CUSP_FLAG_EFFECTIVE_NEGATIVE_DERIVATIVE.m
 now gives an exact wrong-sign derivative for the actual weight-24 quotient.
 The [signed divisor explicit formula](CUSP_FLAG_DIVISOR_EXPLICIT_FORMULA.md)
 retains the fractional-frequency atom and both gamma ladders.
+The [signed counting law](CUSP_FLAG_SIGNED_RIEMANN_VON_MANGOLDT.md)
+counts zeros minus poles. The [full-period real-zero theorem](CUSP_PERIOD_OFF_CENTRAL_REAL_ZEROS.md)
+forces off-central real zeros at k=12d>=6144 without claiming they survive
+in the quotient.
 Each has an independent exact-source audit in the continuation map.
 The packet introductions below and the wave-2 research map record the
 earlier six-packet stage; their open-work lists are superseded by that
