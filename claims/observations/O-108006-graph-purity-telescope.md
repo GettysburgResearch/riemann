@@ -104,9 +104,13 @@ RH status: unproved; unaddressed.
    positive-end-only (two non-isomorphic examples at n = 18), and
    n = 20-22 members breach BOTH ends — the positive-end-only
    property is a FINITE TRANSITIONAL WINDOW in near-bipartite
-   corridor families, versus the apparently permanent positive-only
-   regime of the lambda_min-bounded GP(n,2) family. Two distinct
-   mechanisms, both now exactly witnessed. Earlier negative
+   corridor families, versus the positive-only regime of the
+   lambda_min-bounded GP(n,2) family — which is now a THEOREM
+   (T-108514, adversarially verified three-piece proof): GP(n,2) is
+   positive-end-only for EVERY n >= 24, with exact threshold
+   (GP(23,2) certified below) and lambda_min > -2 sqrt 2 for every
+   n >= 5. Two distinct mechanisms, one exactly witnessed as a
+   window, one proved as an infinite family. Earlier negative
    evidence inside the (14, 48] bracket, from before the census
    (both searches Sturm-exact, no floats — an earlier float screen
    was found unreliable and discarded): (i) all 774
