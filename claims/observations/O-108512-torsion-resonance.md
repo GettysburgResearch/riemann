@@ -132,10 +132,14 @@ non-monotone case remains the a = 0 z-level gap at m = 6, explained
 above as a spectrum-trivial collision). Six of the ten entries were
 held-out predictions (ord 10 joint; ord 12; ord 9/18 joint; ord 20;
 ord 11; ord 13). The supersingular point a = 0 (R = 2, entry 5) is
-covered by the earlier symbolic data. The law's remaining status:
-empirically exact wherever tested; the proof — plausibly via the same
-field engine, where the entry threshold becomes a statement about
-gcd(M_m, M_m') over `Q(2cos theta)` — is the deposited problem.
+covered by the earlier symbolic data. LATER ROUNDS extended the table
+to FOURTEEN points (ord-16 entering at m = 17 and ord-24 at m = 25,
+both predicted in-code before their runs; ord-15/ord-30 certified
+absent through m = 27 consistent with entry 31) — twelve entries,
+twelve matches, nine held-out. FINAL STATUS: the law is now a
+THEOREM — forward for all m and two-sided for all torsion points in
+the range m <= 15 (T-108513 with its monic-sieve addendum); the
+m >= 16 converse is reduced to a checkable normal form per m.
 
 ## Collapse lemma at the {0, +-1}-valued slices (PROVED; 5 lines)
 
