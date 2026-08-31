@@ -360,6 +360,10 @@ The working precision adds the decimal length of K plus 24 cancellation
 guard digits. This is bounded NON_DIRECTED_HIGH_PRECISION: the theta-series
 stopping test and quadrature window are not interval certificates. Artifact
 hashes bind these numerical records; the exact producer does not rerun them.
+K is transported as a canonical DECIMAL STRING, never as a JSON floating-point
+number. The exact producer checks case coverage, positive odd K, producer and
+parent hashes, window/precision settings, and the non-certification labels.
+This checks the transport contract, not the transcendental quadrature values.
 
 Selected falsification controls (b=1):
 
@@ -388,3 +392,12 @@ Ordinary JSON loading is used for the fixed authenticated fixture. No hostile
 unbounded-input parser or directed numerical oracle is claimed. Local code
 rejects its declared integer, rational, precision, parameter and window caps;
 those finite execution caps do not limit the theorem's all-K quantifier.
+
+Release correction: independent review found that the campaign aggregation in
+the initial source `a45d816a2b390de0efaa468622be65bb87737361` had converted four
+large integer orders through JavaScript binary64 JSON numbers. The live Python
+scout and the analytic proof were unaffected, but that campaign artifact was
+not an exact record of the orders used. This successor source regenerates every
+case with decimal-string K and adds a replay beyond 2^53 plus explicit rejection
+of numeric, rounded, even and noncanonical K. The original commit is preserved;
+its campaign must not be cited as accepted exact-order provenance.

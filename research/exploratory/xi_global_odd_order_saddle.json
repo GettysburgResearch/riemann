@@ -1,12 +1,12 @@
 {
   "arithmetic_class": "EXACT_RATIONAL",
   "artifact_sha256_lf": {
-    "research/exploratory/XI_GLOBAL_ODD_ORDER_SADDLE.md": "7f1a47052335a2916204dbb0161d3390566e2e6dbb13885a911b9c916cd4e2b9",
-    "research/exploratory/xi_global_odd_order_saddle.py": "667b4906d996e2e8fffe57e8742b62ed390969db4ec7324063d20484afeb6bf8",
+    "research/exploratory/XI_GLOBAL_ODD_ORDER_SADDLE.md": "eddb18ed5fdc4ba95fb449f3b8362e1cd30ef0eddf9f781981ecf95c72489341",
+    "research/exploratory/xi_global_odd_order_saddle.py": "2328de4b82b279a7eb60db2d4cbb7a8e2c62526e54f014dab5a571541d62a5a7",
     "research/exploratory/xi_global_odd_order_saddle.sources.json": "d2004cc18bba1907f9b8683c0f274543cfd90e7b044d8cd3ec246852de58c62c",
-    "research/exploratory/xi_global_odd_order_scout.py": "7af88a760414d8dd720e11e6771dfaea6c3c07cf98ca15c2b9cda135fb02f6d4",
-    "research/exploratory/xi_global_odd_order_scout_results.json": "8d94aa0c3e45a8312f9ed258961587629c1702897af35478ae2fd86d3f6048e2",
-    "tests/test_xi_global_odd_order_saddle.py": "50373289983b158d8eedc0cd074e2d809a4204679e3306a7f543324e00a9fc8a"
+    "research/exploratory/xi_global_odd_order_scout.py": "bc762426bcf556e8388706c1eade716c4add639edb0354677378912198bccec6",
+    "research/exploratory/xi_global_odd_order_scout_results.json": "01f4c5477c9d911d3df35ae859a19e4a6d9608c6de923f96bbf3012d820054eb",
+    "tests/test_xi_global_odd_order_saddle.py": "4e8be1241a3902faa032f791ef7abe897986787d30c6beeb27bbf3255b61d1ba"
   },
   "control_caps": {
     "gaussian_moment_index": 12,
@@ -109,6 +109,12 @@
     "literal_Xi_evaluated_by_exact_producer": false,
     "numerical_scout_certified": false,
     "physical_gauge_selected": false
+  },
+  "scout_campaign_contract": {
+    "canonical_odd_order_decimal_strings": true,
+    "case_count": 10,
+    "scout_source_hashes_verified": true,
+    "transcendental_values_recomputed_by_exact_producer": false
   },
   "source_authentication": {
     "ancestral_code_executed_by_exact_producer": false,

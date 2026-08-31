@@ -28,6 +28,18 @@ SCOUT = HERE / "xi_global_odd_order_scout.py"
 SCOUT_RESULTS = HERE / "xi_global_odd_order_scout_results.json"
 TEST = ROOT / "tests/test_xi_global_odd_order_saddle.py"
 MAX_K, MAX_INPUT_BITS = 127, 64
+SCOUT_CASES = (
+    (4, "1.5", "1"),
+    (8, "1.5", "1"),
+    (12, "1.5", "1"),
+    (12, "0.75", "1"),
+    (8, "2", "1"),
+    (8, "2", "2*pi"),
+    (12, "3", "1"),
+    (12, "4", "1"),
+    (12, "5", "1"),
+    (20, "5", "1"),
+)
 SOURCE_ROWS = (
     (
         "full_line_kernel_and_complete_theta_tail",
@@ -223,6 +235,61 @@ def gaussian_response_coefficients(max_index=12):
     return rows
 
 
+def validate_scout_campaign(campaign):
+    """Transport/source contract only; does not re-evaluate transcendental data."""
+    if type(campaign) is not dict or campaign.get("certified") is not False:
+        raise ValueError("non-certified scout campaign required")
+    if (
+        campaign.get("arithmetic_class") != "NON_DIRECTED_HIGH_PRECISION"
+        or campaign.get("bounded_quadrature_not_full_integral_certificate") is not True
+    ):
+        raise ValueError("scout scope contract")
+    rows = campaign.get("cases")
+    if type(rows) is not list or len(rows) != len(SCOUT_CASES):
+        raise ValueError("complete declared scout panel required")
+    scout_hash = sha256_lf(SCOUT.read_bytes())
+    for row, case in zip(rows, SCOUT_CASES):
+        if type(row) is not dict or type(row.get("xi")) is not int:
+            raise ValueError("strict scout record types")
+        if (row["xi"], row.get("gamma"), row.get("b")) != case:
+            raise ValueError("declared scout case/order mismatch")
+        k = row.get("K")
+        if (
+            type(k) is not str
+            or not 1 <= len(k) <= 310
+            or not k.isascii()
+            or not k.isdecimal()
+            or str(int(k)) != k
+            or int(k) < 1
+            or int(k) % 2 != 1
+            or int(k).bit_length() > 1024
+        ):
+            raise ValueError(
+                "exact odd K must survive transport as canonical decimal text"
+            )
+        if (
+            row.get("parent_commit") != BASE
+            or row.get("parent_scout_sha256_lf") != SOURCE_ROWS[-1][-1]
+            or row.get("producer_sha256_lf") != scout_hash
+        ):
+            raise ValueError("scout producer/parent identity")
+        if (
+            row.get("certified") is not False
+            or row.get("arithmetic_class") != "NON_DIRECTED_HIGH_PRECISION"
+            or row.get("bounded_quadrature_not_full_integral_certificate") is not True
+            or type(row.get("requested_decimal_digits")) is not int
+            or row["requested_decimal_digits"] != 50
+            or row.get("quadrature_upper") != "24.0"
+        ):
+            raise ValueError("scout precision/window/scope contract")
+    return {
+        "case_count": len(rows),
+        "canonical_odd_order_decimal_strings": True,
+        "scout_source_hashes_verified": True,
+        "transcendental_values_recomputed_by_exact_producer": False,
+    }
+
+
 def build_report():
     source = authenticate_sources()
     if any(
@@ -242,6 +309,9 @@ def build_report():
         "arithmetic_class": "EXACT_RATIONAL",
         "rounding_contract": "no rounded transcendental evaluation in exact producer; analytic estimates require proof review",
         "source_authentication": source,
+        "scout_campaign_contract": validate_scout_campaign(
+            json.loads(SCOUT_RESULTS.read_text(encoding="utf-8"))
+        ),
         "artifact_sha256_lf": {
             p.relative_to(ROOT).as_posix(): sha256_lf(p.read_bytes())
             for p in (NOTE, SCOUT, SCOUT_RESULTS, TEST, MANIFEST, Path(__file__))

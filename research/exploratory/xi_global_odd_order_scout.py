@@ -216,7 +216,7 @@ def run_case(xi_value, gamma_text, b_text="1", dps=55, radius=24):
             "xi": xi_value,
             "gamma": gamma_text,
             "b": b_text,
-            "K": k,
+            "K": str(k),
             "phase_branch": branch,
             "saddle_a": out(a),
             "saddle_J": out(j),

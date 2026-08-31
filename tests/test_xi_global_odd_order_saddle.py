@@ -195,6 +195,49 @@ class GlobalXiSaddleTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 SCOUT.global_saddle(mp.mpf(2), k)
 
+    def test_scout_campaign_odd_integer_transport(self):
+        data = json.loads(MODULE.SCOUT_RESULTS.read_text(encoding="utf-8"))
+        self.assertEqual(MODULE.validate_scout_campaign(data)["case_count"], 10)
+        row = data["cases"][7]
+        self.assertEqual(row["K"], "8420083094517158086385")
+        for bad in (
+            8420083094517158086385,
+            8.420083094517158e21,
+            True,
+            "08420083094517158086385",
+            "8420083094517158086384",
+            "8.420083094517158e21",
+        ):
+            mutant = copy.deepcopy(data)
+            mutant["cases"][7]["K"] = bad
+            with self.assertRaises(ValueError):
+                MODULE.validate_scout_campaign(mutant)
+
+    def test_scout_campaign_case_source_scope_contract(self):
+        data = json.loads(MODULE.SCOUT_RESULTS.read_text(encoding="utf-8"))
+        for key, value in (
+            ("xi", True),
+            ("gamma", "5"),
+            ("producer_sha256_lf", "0" * 64),
+            ("certified", True),
+            ("requested_decimal_digits", 51),
+            ("quadrature_upper", "48.0"),
+        ):
+            mutant = copy.deepcopy(data)
+            mutant["cases"][7][key] = value
+            with self.assertRaises(ValueError):
+                MODULE.validate_scout_campaign(mutant)
+        mutant = copy.deepcopy(data)
+        mutant["cases"].pop()
+        with self.assertRaises(ValueError):
+            MODULE.validate_scout_campaign(mutant)
+
+    def test_scout_above_binary64_integer_limit_replay(self):
+        row = SCOUT.run_case(12, "4", "1", dps=40, radius=16)
+        self.assertIs(type(row["K"]), str)
+        self.assertEqual(row["K"], "8420083094517158086385")
+        self.assertEqual(int(row["K"]) % 2, 1)
+
 
 if __name__ == "__main__":
     unittest.main()
