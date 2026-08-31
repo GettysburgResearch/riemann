@@ -1,4 +1,57 @@
-# Six-hour source pass: third checkpoint
+# Six-hour source pass: fourth checkpoint
+
+The six-hour pass remains active. There are now 460 focused mathematical
+packet tests per interpreter mode, plus 27 cache/acquisition acceptance
+tests, for 487 distinct tests in ordinary Python and the same under -O.
+The new mathematical packet adds 28 to the previous 432. These are local
+focused results, not repository-wide CI or a theorem count.
+
+The prescribed simultaneous invariant source is now identified as the
+normalization of its full invariant base in the specified cyclic cubic
+field. Its local nonflat fibre has length five, while its generic rank
+is three and its graded vertex needs 33 generators. These are different
+invariants. The source is canonical in this algebraic category; scalar
+Euler data alone do not choose the category or an analytic frame.
+
+The exact minimal-generator quotient also gives an infinite-source
+criterion: finiteness over the full invariant base holds precisely when
+only finitely many nontrivial character directions occur. For actual
+even Lie grades the minimal-generator growth is proved, including its
+logarithmic factor. A separate proof-only corollary shows that every
+nontrivial finite cut is maximal Cohen--Macaulay but has infinite
+projective dimension over its own invariant base. Classical invariant
+theory and Auslander--Buchsbaum supply the underlying tools.
+
+| New completed item | Scientific freeze | Tests per mode |
+|---|---|---:|
+| Normalization and exact invariant-base generators |03b1a04df3427a09781cdf4d43a9326671a2e566|28|
+| Finite-cut homological corollary |27373cd629b20c4388c4a8e6731cdb6208750145|proof only|
+| Certified stage-five cache verifier |356160f075ee72aed21ee03a6daf30fa3222799a|13|
+| Durable weight blocks and complete cached maps |742d68b6d3c37191589b0e6463bc122af6d90f76|14|
+
+All 192 stage-five weight blocks are now durable. The complete maps were
+then independently checked by exact integer compositions, kernel
+independence, fixed-prime rank certificates and the original old/new
+quotient calculation. Ordinary and optimized cache checks passed. The
+9.53 MB cache contains actual maps, not only their predicted dimensions.
+Its proof object is
+`0ef850edcef35a4b01ed19e305e589ba1dd5efcc855b948c4062df7777e718f4`.
+
+Degree six remains incomplete. The next run reached a weight block with
+898 supported rows and 202 columns, exceeding the preregistered 512-row
+limit. It stopped at preflight after 23.4 seconds, at about 62.7 MB, without
+a memory-reserve violation. This is a retained limit failure, not a
+validated higher differential. A separately registered row-restriction
+method is being prepared; every resulting relation must be checked in
+all original rows. No frozen source or earlier limit is silently changed.
+
+The normalization packet has an independent exact-freeze report. The
+finite-cut corollary has independent proof reading; its separate exact
+report is pending. Cache acceptance tests and producer checks are not
+substitutes for a complete resolution review. Proposed research remains
+outside canonical integration, and no RH/GRH conclusion is asserted.
+
+## Third checkpoint history
 
 The six-hour research pass remains active. This checkpoint records 432
 unique focused tests per interpreter mode: the previous 320 plus 112 new
