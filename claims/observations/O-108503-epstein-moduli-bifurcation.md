@@ -137,16 +137,20 @@ point. Findings, stated with the campaign's grid caveat below:
   begins" — is deposited as the campaign's question, with these
   measurements as its first data and NO claim beyond them.
 
-## Certification anchor (2026-08-31 continuation; T-108518)
+## Certification anchors (2026-08-31 continuation; T-108518, T-108519)
 
-The lab's first PROVED zero: `Z(s, 10i)` has a real zero in
-`(81/100, 41/50)` off the critical line, certified by
-directed-rounding interval arithmetic on the incomplete-gamma
-representation with explicit tail bounds
-(standalone/2026-08-31-epstein-wall-certificate/,
-epstein/wall_certificate.py + .json). Phenomenon classical
-(Bateman-Grosswald; CITATION-NEEDED); every other zero statement in
-this claim remains NON_DIRECTED_HIGH_PRECISION. The complex
-archipelago-point certification is deposited there as the next
-target, with the template's missing ingredients listed.
+The lab's first PROVED zeros. (i) REAL: `Z(s, 10i)` has a real zero
+in `(81/100, 41/50)` off the critical line
+(standalone/2026-08-31-epstein-wall-certificate/; phenomenon
+classical — Selberg-Chowla, Bateman-Grosswald Acta Arith. 9 (1964)).
+(ii) COMPLEX: at the exact-rationalized theta80 dirty probe
+`z* = 4341/50000 + (3731/2500) i`, a rigorous winding number 1
+proves EXACTLY ONE zero in `[83/100, 99/100] x [1221/100, 1238/100]`
+— `Re rho >= 0.83`, a certified off-line quadruple at an
+archipelago-adjacent modulus
+(standalone/2026-08-31-epstein-complex-wall/, T-108519). Every
+other zero statement in this claim remains
+NON_DIRECTED_HIGH_PRECISION; the second off-line zero here
+(t ~ 18.9) and a clean 75-degree island point are the deposited next
+certification targets.
 ```

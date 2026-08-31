@@ -256,6 +256,23 @@ frustration. With L-108520 (corridor forcing), both poles of the
 O-108517 two-invariant diagram now have proved mechanisms; the open
 middle is the h <= 1/4 expansion dichotomy.
 
+**Certified COMPLEX wall point (Lane 4 stage 2; T-108519)**: rigorous
+winding number 1 (interval [0.97335, 1.02666], 3696 adaptive contour
+steps, every step passing the exact-step lemma's conditions) proves
+Z_Q has exactly one zero in [83/100, 99/100] x [1221/100, 1238/100]
+at the exact-rationalized theta80 dirty probe of the C8 archipelago
+— the repo's first proof-grade COMPLEX Epstein zero (Re rho >= 0.83;
+a certified off-line quadruple with conjugate/FE partners). New
+machinery: complex-rectangle intervals over mpmath.iv, Spouge Gamma
+with explicit error, two-branch incomplete gamma, and the
+rotated-contour K-Bessel bound |K_{a+i mu}(x)| <= e^{-mu theta}
+K_a(x cos theta) that makes the Lipschitz sup bound realistic at
+t ~ 12. Honesty: a first run walked all its steps soundly but left
+the winding unpinned (per-sample tail boxes accumulated over ~3750
+angle increments); the bound-budgeting lesson — size enclosure
+widths against the SUM, not the step — is recorded in the standalone
+status block, and the fixed run (tail 5.1e-14) pinned the integer.
+
 ## Process notes (honesty trail)
 
 - The X-108510 replay's mixed-triple test was written expecting the

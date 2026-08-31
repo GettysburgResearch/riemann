@@ -1,12 +1,18 @@
 # A PROVED complex off-critical-line zero at an exact archipelago-adjacent modulus: rigorous winding number for Z(s, z*), z* = 4341/50000 + (3731/2500) i
 
 ```text
-Status:  DRAFT PENDING MACHINE COMPLETION — the winding computation
-         (epstein/wall_complex.py) is running; this file's lemmas and
-         derivations are complete, and the certificate section below
-         is filled from wall_complex.json when the run lands. If the
-         run does NOT land (winding not pinned), this file stays as
-         an honest record of the attempt with the failure noted.
+Status:  PROVED per instance — the winding computation completed
+         with the integer PINNED: winding interval
+         [0.97335, 1.02666] ∋ 1, over 3696 contour steps with every
+         per-step condition passing. (A first run at lattice cutoff
+         X = 14 walked all its steps soundly but left the winding
+         interval unpinned at [-19.4, 21.6]: the per-sample tail box
+         ~3.5e-11 was individually harmless against ell ~ 2e-9 but
+         its angle-width accumulated over ~3750 steps; honesty
+         record kept in git history. The fix — X = 18, tail box
+         5.1e-14 — is a bound-budgeting lesson recorded here: in an
+         accumulated-argument certificate the per-sample enclosure
+         width must be sized against the SUM, not the step.)
 Machine: research/exploratory/2026-08-30-two-programme-pass/epstein/
          wall_complex.py + wall_complex.json
 Context: C8 campaign (O-108503): the theta80 dirty probe of the
@@ -164,9 +170,28 @@ verified positive). The interval sum then pins the integer. ∎
 ## The certificate
 
 ```text
-[FILLED FROM wall_complex.json ON COMPLETION — winding interval,
-step count, minimum contour enclosure, verdict.]
+modulus     z* = 4341/50000 + (3731/2500) i   (exact rationals)
+rectangle   Re s in [83/100, 99/100], Im s in [1221/100, 1238/100]
+walk        3696 adaptive steps; every step satisfied
+            M h_j <= 0.8 ell_j and Re(ratio) > 0
+min ell     2.209e-9   (contour |Lambda| enclosure lower bound)
+tail box    5.064e-14  (lattice cutoff Q <= 18, 58 vectors)
+winding     interval [0.973349..., 1.026658...]  ==> EXACTLY 1
 ```
+
+Hence `Lambda`, and so `Z_Q`, has EXACTLY ONE zero (with
+multiplicity) in the rectangle — a zero `rho` with
+`Re rho >= 83/100 > 1/2` (float location 0.90837 + 12.29624 i), at
+an exact rational modulus adjacent to the C8 archipelago's dirty
+theta80 probe. By `Z(conj s) = conj Z(s)` and the functional
+equation, `conj rho`, `1 - rho`, `1 - conj rho` are also zeros:
+a certified off-line quadruple. ∎
+
+Validation layer (all asserted before the walk): Spouge vs direct
+Gamma ~1e-24; both incomplete-gamma branches vs mpmath ~1e-26; the
+interval Lambda midpoint vs an independent float evaluation ~4e-24;
+B-bound components A1 = 2.61e-7, A2 = 9.41e-7, K = 1.25e-7
+(B = 1.33e-6, M = 1.33e-5, Cauchy radius r = 1/10).
 
 ## Honesty notes
 

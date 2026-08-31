@@ -15,16 +15,16 @@
   ]
  },
  "winding_interval": [
-  "-19.3730088225133267630488621053",
-  "21.5613913130008620565661273299"
+  "0.973349399135284749558958640239",
+  "1.02665816107942321407447012899"
  ],
- "winding": -19,
- "pinned": false,
- "steps": 3752,
- "min_contour_enclosure_lower": "2.1634242e-9",
- "lattice_tail_bound": "3.486e-11",
+ "winding": 1,
+ "pinned": true,
+ "steps": 3696,
+ "min_contour_enclosure_lower": "2.2090469e-9",
+ "lattice_tail_bound": "5.064e-14",
  "float_zero_location": "0.9083696189931 + 12.2962410860869 i",
- "conclusion": "NOT ESTABLISHED",
- "verified": false,
+ "conclusion": "Z_Q has 1 zero(s) in the rectangle; its left edge Re s = 83/100 > 1/2: a PROVED complex off-critical-line zero at an exact archipelago-adjacent modulus.",
+ "verified": true,
  "rh_established": false
 }
