@@ -280,6 +280,19 @@ angle increments); the bound-budgeting lesson — size enclosure
 widths against the SUM, not the step — is recorded in the standalone
 status block, and the fixed run (tail 5.1e-14) pinned the integer.
 
+**Torsion multiplicity law (O-108523)**: the growth profile of every
+torsion resonance in the tower invariant is
+mult(m) = sum over interior class-pairs mu_c(mu_c - 1) +
+2 floor(mu_{M/2}/2)^2 with mu_c = n_c(m) - 1 (T-108513's crowding
+counts) — EXACT at all 40 odd-m cells of the committed
+factorizations (the a = 0 tower is k(k+1)); T-108513's threshold is
+its first-positivity statement. The transversal-separation mechanism
+is identified (interior pairs separate linearly; boundary z = +-2
+branches in pairs) with the Puiseux proof deposited. Even m: the
+formula overshoots at all 29 cells; the boundary/trivial-factor
+bookkeeping is deposited OPEN with the deviation table rather than
+guessed (machine: mult_law_check.py + json).
+
 ## Process notes (honesty trail)
 
 - The X-108510 replay's mixed-triple test was written expecting the

@@ -1,0 +1,559 @@
+{
+ "odd": [
+  {
+   "m": 5,
+   "factor": "a",
+   "M": 4,
+   "data": 2,
+   "predicted": 2,
+   "ok": true
+  },
+  {
+   "m": 7,
+   "factor": "a - 1",
+   "M": 6,
+   "data": 2,
+   "predicted": 2,
+   "ok": true
+  },
+  {
+   "m": 7,
+   "factor": "a + 1",
+   "M": 3,
+   "data": 2,
+   "predicted": 2,
+   "ok": true
+  },
+  {
+   "m": 7,
+   "factor": "a",
+   "M": 4,
+   "data": 6,
+   "predicted": 6,
+   "ok": true
+  },
+  {
+   "m": 9,
+   "factor": "a - 1",
+   "M": 6,
+   "data": 4,
+   "predicted": 4,
+   "ok": true
+  },
+  {
+   "m": 9,
+   "factor": "a + 1",
+   "M": 3,
+   "data": 4,
+   "predicted": 4,
+   "ok": true
+  },
+  {
+   "m": 9,
+   "factor": "a",
+   "M": 4,
+   "data": 12,
+   "predicted": 12,
+   "ok": true
+  },
+  {
+   "m": 9,
+   "factor": "a**2 - 2",
+   "M": 8,
+   "data": 2,
+   "predicted": 2,
+   "ok": true
+  },
+  {
+   "m": 11,
+   "factor": "a - 1",
+   "M": 6,
+   "data": 8,
+   "predicted": 8,
+   "ok": true
+  },
+  {
+   "m": 11,
+   "factor": "a + 1",
+   "M": 3,
+   "data": 8,
+   "predicted": 8,
+   "ok": true
+  },
+  {
+   "m": 11,
+   "factor": "a",
+   "M": 4,
+   "data": 20,
+   "predicted": 20,
+   "ok": true
+  },
+  {
+   "m": 11,
+   "factor": "a**2 - a - 1",
+   "M": 10,
+   "data": 2,
+   "predicted": 2,
+   "ok": true
+  },
+  {
+   "m": 11,
+   "factor": "a**2 + a - 1",
+   "M": 5,
+   "data": 2,
+   "predicted": 2,
+   "ok": true
+  },
+  {
+   "m": 11,
+   "factor": "a**2 - 2",
+   "M": 8,
+   "data": 4,
+   "predicted": 4,
+   "ok": true
+  },
+  {
+   "m": 13,
+   "factor": "a - 1",
+   "M": 6,
+   "data": 14,
+   "predicted": 14,
+   "ok": true
+  },
+  {
+   "m": 13,
+   "factor": "a + 1",
+   "M": 3,
+   "data": 14,
+   "predicted": 14,
+   "ok": true
+  },
+  {
+   "m": 13,
+   "factor": "a",
+   "M": 4,
+   "data": 30,
+   "predicted": 30,
+   "ok": true
+  },
+  {
+   "m": 13,
+   "factor": "a**2 - 3",
+   "M": 12,
+   "data": 2,
+   "predicted": 2,
+   "ok": true
+  },
+  {
+   "m": 13,
+   "factor": "a**2 - a - 1",
+   "M": 10,
+   "data": 4,
+   "predicted": 4,
+   "ok": true
+  },
+  {
+   "m": 13,
+   "factor": "a**2 + a - 1",
+   "M": 5,
+   "data": 4,
+   "predicted": 4,
+   "ok": true
+  },
+  {
+   "m": 13,
+   "factor": "a**2 - 2",
+   "M": 8,
+   "data": 8,
+   "predicted": 8,
+   "ok": true
+  },
+  {
+   "m": 15,
+   "factor": "a - 1",
+   "M": 6,
+   "data": 20,
+   "predicted": 20,
+   "ok": true
+  },
+  {
+   "m": 15,
+   "factor": "a + 1",
+   "M": 3,
+   "data": 20,
+   "predicted": 20,
+   "ok": true
+  },
+  {
+   "m": 15,
+   "factor": "a",
+   "M": 4,
+   "data": 42,
+   "predicted": 42,
+   "ok": true
+  },
+  {
+   "m": 15,
+   "factor": "a**2 - 3",
+   "M": 12,
+   "data": 4,
+   "predicted": 4,
+   "ok": true
+  },
+  {
+   "m": 15,
+   "factor": "a**2 - a - 1",
+   "M": 10,
+   "data": 6,
+   "predicted": 6,
+   "ok": true
+  },
+  {
+   "m": 15,
+   "factor": "a**2 + a - 1",
+   "M": 5,
+   "data": 6,
+   "predicted": 6,
+   "ok": true
+  },
+  {
+   "m": 15,
+   "factor": "a**2 - 2",
+   "M": 8,
+   "data": 12,
+   "predicted": 12,
+   "ok": true
+  },
+  {
+   "m": 15,
+   "factor": "a**3 - a**2 - 2*a + 1",
+   "M": 14,
+   "data": 2,
+   "predicted": 2,
+   "ok": true
+  },
+  {
+   "m": 15,
+   "factor": "a**3 + a**2 - 2*a - 1",
+   "M": 7,
+   "data": 2,
+   "predicted": 2,
+   "ok": true
+  },
+  {
+   "m": 17,
+   "factor": "a - 1",
+   "M": 6,
+   "data": 28,
+   "predicted": 28,
+   "ok": true
+  },
+  {
+   "m": 17,
+   "factor": "a + 1",
+   "M": 3,
+   "data": 28,
+   "predicted": 28,
+   "ok": true
+  },
+  {
+   "m": 17,
+   "factor": "a",
+   "M": 4,
+   "data": 56,
+   "predicted": 56,
+   "ok": true
+  },
+  {
+   "m": 17,
+   "factor": "a**2 - 3",
+   "M": 12,
+   "data": 6,
+   "predicted": 6,
+   "ok": true
+  },
+  {
+   "m": 17,
+   "factor": "a**2 - a - 1",
+   "M": 10,
+   "data": 10,
+   "predicted": 10,
+   "ok": true
+  },
+  {
+   "m": 17,
+   "factor": "a**2 + a - 1",
+   "M": 5,
+   "data": 10,
+   "predicted": 10,
+   "ok": true
+  },
+  {
+   "m": 17,
+   "factor": "a**2 - 2",
+   "M": 8,
+   "data": 18,
+   "predicted": 18,
+   "ok": true
+  },
+  {
+   "m": 17,
+   "factor": "a**3 - a**2 - 2*a + 1",
+   "M": 14,
+   "data": 4,
+   "predicted": 4,
+   "ok": true
+  },
+  {
+   "m": 17,
+   "factor": "a**3 + a**2 - 2*a - 1",
+   "M": 7,
+   "data": 4,
+   "predicted": 4,
+   "ok": true
+  },
+  {
+   "m": 17,
+   "factor": "a**4 - 4*a**2 + 2",
+   "M": 16,
+   "data": 2,
+   "predicted": 2,
+   "ok": true
+  }
+ ],
+ "even": [
+  {
+   "m": 8,
+   "factor": "a - 1",
+   "M": 6,
+   "data": 2,
+   "predicted": 4,
+   "ok": false
+  },
+  {
+   "m": 8,
+   "factor": "a + 1",
+   "M": 3,
+   "data": 2,
+   "predicted": 4,
+   "ok": false
+  },
+  {
+   "m": 8,
+   "factor": "a",
+   "M": 4,
+   "data": 4,
+   "predicted": 10,
+   "ok": false
+  },
+  {
+   "m": 10,
+   "factor": "a - 1",
+   "M": 6,
+   "data": 6,
+   "predicted": 8,
+   "ok": false
+  },
+  {
+   "m": 10,
+   "factor": "a + 1",
+   "M": 3,
+   "data": 6,
+   "predicted": 8,
+   "ok": false
+  },
+  {
+   "m": 10,
+   "factor": "a",
+   "M": 4,
+   "data": 8,
+   "predicted": 16,
+   "ok": false
+  },
+  {
+   "m": 10,
+   "factor": "a**2 - 2",
+   "M": 8,
+   "data": 2,
+   "predicted": 4,
+   "ok": false
+  },
+  {
+   "m": 12,
+   "factor": "a - 1",
+   "M": 6,
+   "data": 10,
+   "predicted": 14,
+   "ok": false
+  },
+  {
+   "m": 12,
+   "factor": "a + 1",
+   "M": 3,
+   "data": 10,
+   "predicted": 14,
+   "ok": false
+  },
+  {
+   "m": 12,
+   "factor": "a",
+   "M": 4,
+   "data": 16,
+   "predicted": 26,
+   "ok": false
+  },
+  {
+   "m": 12,
+   "factor": "a**2 - a - 1",
+   "M": 10,
+   "data": 2,
+   "predicted": 4,
+   "ok": false
+  },
+  {
+   "m": 12,
+   "factor": "a**2 - 2",
+   "M": 8,
+   "data": 2,
+   "predicted": 6,
+   "ok": false
+  },
+  {
+   "m": 12,
+   "factor": "a**2 + a - 1",
+   "M": 5,
+   "data": 2,
+   "predicted": 4,
+   "ok": false
+  },
+  {
+   "m": 14,
+   "factor": "a - 1",
+   "M": 6,
+   "data": 16,
+   "predicted": 20,
+   "ok": false
+  },
+  {
+   "m": 14,
+   "factor": "a + 1",
+   "M": 3,
+   "data": 16,
+   "predicted": 20,
+   "ok": false
+  },
+  {
+   "m": 14,
+   "factor": "a",
+   "M": 4,
+   "data": 24,
+   "predicted": 36,
+   "ok": false
+  },
+  {
+   "m": 14,
+   "factor": "a**2 - 3",
+   "M": 12,
+   "data": 2,
+   "predicted": 4,
+   "ok": false
+  },
+  {
+   "m": 14,
+   "factor": "a**2 - a - 1",
+   "M": 10,
+   "data": 4,
+   "predicted": 6,
+   "ok": false
+  },
+  {
+   "m": 14,
+   "factor": "a**2 + a - 1",
+   "M": 5,
+   "data": 4,
+   "predicted": 6,
+   "ok": false
+  },
+  {
+   "m": 14,
+   "factor": "a**2 - 2",
+   "M": 8,
+   "data": 6,
+   "predicted": 10,
+   "ok": false
+  },
+  {
+   "m": 16,
+   "factor": "a - 1",
+   "M": 6,
+   "data": 24,
+   "predicted": 28,
+   "ok": false
+  },
+  {
+   "m": 16,
+   "factor": "a + 1",
+   "M": 3,
+   "data": 24,
+   "predicted": 28,
+   "ok": false
+  },
+  {
+   "m": 16,
+   "factor": "a",
+   "M": 4,
+   "data": 36,
+   "predicted": 50,
+   "ok": false
+  },
+  {
+   "m": 16,
+   "factor": "a**2 - 3",
+   "M": 12,
+   "data": 4,
+   "predicted": 6,
+   "ok": false
+  },
+  {
+   "m": 16,
+   "factor": "a**2 - a - 1",
+   "M": 10,
+   "data": 8,
+   "predicted": 10,
+   "ok": false
+  },
+  {
+   "m": 16,
+   "factor": "a**2 + a - 1",
+   "M": 5,
+   "data": 8,
+   "predicted": 10,
+   "ok": false
+  },
+  {
+   "m": 16,
+   "factor": "a**2 - 2",
+   "M": 8,
+   "data": 10,
+   "predicted": 16,
+   "ok": false
+  },
+  {
+   "m": 16,
+   "factor": "a**3 - a**2 - 2*a + 1",
+   "M": 14,
+   "data": 2,
+   "predicted": 4,
+   "ok": false
+  },
+  {
+   "m": 16,
+   "factor": "a**3 + a**2 - 2*a - 1",
+   "M": 7,
+   "data": 2,
+   "predicted": 4,
+   "ok": false
+  }
+ ],
+ "rh_established": false
+}
