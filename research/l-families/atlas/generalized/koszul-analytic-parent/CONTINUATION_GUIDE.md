@@ -21,6 +21,7 @@ operators and convergence domains must not be identified.
 | Infinite graded global cohomology | The direct sum of those actual finite H^i spaces with their source multiplicity spaces. Growth is polynomial, unlike M_n. | K_i(z) acts by z^n times finite Frobenius; the ratio of det(1-TK_i(z)) equals product_n L_n(Tz^n). | Every S_p for abs(z)<1, bounded noncompact at abs(z)=1, unbounded outside. Meromorphic for all finite T; fixed quadratic twists here are entire in T. The initial true Euler product requires abs(T)<1/Q. | Closed points require z^(n deg v). Finite-cutoff duality sends (T,z) to (1/(QT),1/z), outside the same trace-class disk. Zero circles stack with n. For fixed real 0<T<1/Q, the proved source-count obstructions give a natural boundary at abs(z)=1 under the stated hypotheses. |
 | Arithmetic cohomology of the actual Lie source | The S3 local systems M_n themselves, with their full ramified stalks. Their actual finite cohomology still has exponential growth asymptotic to constants times 2^n/n. | Parity-signed ratio with determinant exponent (-1)^(n+i) on H^i_n. M_1 is the regular S3 representation and gives the actual closure zeta factor. | Each cohomological parity block is in S_p exactly for abs(z)<2^(-1/p). Ordinary signed Fredholm ratio for abs(z)<1/2 and all T. Actual place Euler product initially requires Q abs(Tz)<1 as well. | At T=1, unramified place factors recover F_Frobenius(z^deg); bad places need explicit invariant-Lie corrections. Near z=-1/2 the continued local exponent is T times #Z(F_Q)/6. For Q=1 modulo 3 the arithmetic T=1 source has cubic monodromy. |
 | Full invariant-Segre place Euler source | The original finite R_j algebra at every place, including full bad-place inertia and residual Frobenius. | E_R(z)=product_v sum_j tr(Frobenius on R_j^I) z^(j deg v). Compact-support Lie cohomology provides finite extraction factors. | Initially abs(z)<1/Q. The new source theorem gives single-valued meromorphic continuation to abs(z)<1 by finite extraction, without enlarging any infinite Lie operator's trace-class disk. | The bad-place correction cancels the first fractional branch and leaves zero order equal to the number of rational split good places. Surviving split-place zeros in all large degrees give a natural boundary at abs(z)=1. This is a distinct completion from the infinite polynomial-growth cohomology sum. |
+| Coherent quadratic full place Euler source | The actual algebra R_j tensor chi^j on the joint S3 times C2 cover. New full inertia at zero and infinity retains even grades. | E_chi(z) has the source-defined sign in each closed residue field and uses the homogeneous Lie twist M_n tensor chi^n for finite extraction. | Meromorphic continuation to abs(z)<1; the first Taylor poles are the roots of P_E(z^2), at radius Q^(-1/4). | The actual first grade has no H^2, so the untwisted main Q^n term disappears. The same even second Lie grade keeps the elliptic coefficient scale. The unit circle remains a natural boundary. |
 
 The Hilbert metrics are specified in the proofs. In particular the
 arithmetic construction fixes complex realizations and norms on finitely
@@ -60,6 +61,25 @@ continues that corrected source to the unit disk by classical finite
 Koszul extraction and proves its different, later natural boundary.
 Its proof does not identify analytic continuation with the same Hilbert
 operator beyond the trace-class disk.
+
+For the untwisted full place source, the finite first four Lie grades
+give a more precise arithmetic conclusion: its coefficients satisfy
+a_n=A_Q Q^n plus an error with exact root-limsup Q^(1/4), with A_Q>0.
+The first two primitive extension counts already give a proved rational
+interval for A_Q; the infinite omitted-place bound is part of the proof.
+The subleading poles are exactly those of the actual elliptic factor
+P_E(z^2), with noncancellation checked against every good and bad local
+source. This is a statement about the constructed Euler coefficients,
+not a new prime-counting or RH estimate.
+
+The [coherent quadratic place-Euler sequel](COHERENT_QUADRATIC_PLACE_EULER.md)
+applies a different source operation from merely twisting each completed
+cohomological factor. The actual algebra law changes the odd Lie grades
+and the new inertia, removes the first H^2 constituent, and retains the
+second elliptic denominator. Its signed coefficients have the untwisted
+weighted-divisor coefficients as a majorant, but the sharper cancellation
+comes from source cohomology and noncancellation. The source is frozen
+and validated as recorded below.
 
 ## Bind arithmetic sources before taking the infinite sum
 
@@ -163,23 +183,36 @@ the independent reviewer separately reads proofs, code and controls.
 The individual replay notes and exact-SHA reports distinguish those two
 forms of evidence.
 
-Packets 1 through 14 have passed their focused Ruff checks, producer
+Packets 1 through 16 have passed their focused Ruff checks, producer
 write/check and optimized checks, and all normal/optimized tests. Packet
 13's coherent-algebra source is frozen at
 `4fb6ffd9b626af2d9ee22fdd075280ccadb7a675`, with 24 tests passing in each
 mode. Packet 14's actual global Lie source is frozen at
 `83506c9741bded6c8932163ff8e56b78892155b2`, with all 29 localization,
 ramification and branch-cancellation tests passing in each mode. Its
-exact-freeze independent review is available. Checkpoint 5 includes
-these completed sources and this guide.
+exact-freeze independent review is available. Checkpoint 5 included
+these completed sources and the then-current guide.
 
-Packet 15, the full place-Euler theorem linked above, is active work
-outside checkpoint 5. Its proof and bounded source replay are being
-extended and independently read; its final source binding and validation
-are not yet complete. In particular its meromorphic-continuation,
-natural-boundary and coefficient-asymptotic statements must be read as
-this explicitly marked continuation until its separate freeze. No
-pending packet is included in the passed test count.
+Packet 15, the full place-Euler theorem, is now frozen at
+`65204d3f6e43b737e36c40b090685cbd068e34e6`. All 32 tests passed in each
+mode, all producer modes and focused Ruff checks passed, and its
+exact-SHA independent review is available. It proves the continuation,
+natural boundary and sharp quarter-power residual scale with the
+specified source and ramification.
+
+Packet 16, the coherent quadratic full place-Euler sequel, is frozen at
+`5104c38614461a3e080c93631b855094d0e5961a`. Its 26 tests passed in each
+mode, all producer modes and focused Ruff checks passed, and its proof,
+runtime and controls have been independently read. Exact-freeze review
+is being deposited with the source. Through this checkpoint, root reports
+490 new GLO tests passing per mode across the analytic and geometric
+continuation packets; this is not a count restricted to this directory.
+
+Packet 17 is active outside checkpoint 6. Its four-domain Euler-order
+note and exact arithmetic pole-divisor companion are being assembled
+with bounded source controls. Their final source binding, execution and
+exact-freeze review are pending. No pending packet is included in the
+passed test count.
 
 The current packets' source freezes are direct ancestors of this branch.
 The earlier graph companions retain their separately published review
