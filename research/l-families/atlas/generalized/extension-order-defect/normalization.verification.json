@@ -1,0 +1,2219 @@
+{
+  "actual_A_covariants": [
+    {
+      "character": 1,
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          0,
+          0
+        ]
+      ],
+      "polynomial": [
+        0,
+        0,
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "character": 2,
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          2,
+          0
+        ],
+        [
+          2,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          2,
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          0,
+          4,
+          0
+        ]
+      ],
+      "polynomial": [
+        0,
+        0,
+        6,
+        0,
+        2
+      ]
+    }
+  ],
+  "actual_C6_minimal_polynomial": [
+    1,
+    0,
+    0,
+    0,
+    12,
+    0,
+    16,
+    0,
+    4
+  ],
+  "actual_ladder_minimal_polynomials": [
+    {
+      "C_polynomial": [
+        0,
+        0,
+        1
+      ],
+      "cutoff": 2,
+      "expanded_Lie_generator_basis": false,
+      "full_minimal_polynomial": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        0,
+        16,
+        0,
+        4
+      ],
+      "generic_field_degree": 3,
+      "linear_only_lower_bound": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        0,
+        4
+      ],
+      "number_of_minimal_generators": 33
+    },
+    {
+      "C_polynomial": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "cutoff": 4,
+      "expanded_Lie_generator_basis": false,
+      "full_minimal_polynomial": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        0,
+        28,
+        0,
+        20,
+        0,
+        16,
+        0,
+        4
+      ],
+      "generic_field_degree": 3,
+      "linear_only_lower_bound": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        0,
+        16,
+        0,
+        4
+      ],
+      "number_of_minimal_generators": 81
+    },
+    {
+      "C_polynomial": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        4,
+        0,
+        10
+      ],
+      "cutoff": 8,
+      "expanded_Lie_generator_basis": false,
+      "full_minimal_polynomial": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        0,
+        28,
+        0,
+        68,
+        0,
+        200,
+        0,
+        228,
+        0,
+        296,
+        0,
+        560,
+        0,
+        820,
+        0,
+        220
+      ],
+      "generic_field_degree": 3,
+      "linear_only_lower_bound": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        0,
+        16,
+        0,
+        52,
+        0,
+        136,
+        0,
+        40
+      ],
+      "number_of_minimal_generators": 2433
+    },
+    {
+      "C_polynomial": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        4,
+        0,
+        10,
+        0,
+        35,
+        0,
+        112
+      ],
+      "cutoff": 12,
+      "expanded_Lie_generator_basis": false,
+      "full_minimal_polynomial": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        0,
+        28,
+        0,
+        68,
+        0,
+        200,
+        0,
+        648,
+        0,
+        2200,
+        0,
+        2912,
+        0,
+        4432,
+        0,
+        10804,
+        0,
+        24192,
+        0,
+        54040,
+        0,
+        91616,
+        0,
+        25312
+      ],
+      "generic_field_degree": 3,
+      "linear_only_lower_bound": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        0,
+        16,
+        0,
+        52,
+        0,
+        136,
+        0,
+        460,
+        0,
+        1484,
+        0,
+        448
+      ],
+      "number_of_minimal_generators": 216465
+    },
+    {
+      "C_polynomial": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        4,
+        0,
+        10,
+        0,
+        35,
+        0,
+        112,
+        0,
+        393,
+        0,
+        1360
+      ],
+      "cutoff": 16,
+      "expanded_Lie_generator_basis": false,
+      "full_minimal_polynomial": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        0,
+        28,
+        0,
+        68,
+        0,
+        200,
+        0,
+        648,
+        0,
+        2200,
+        0,
+        7628,
+        0,
+        27040,
+        0,
+        38852,
+        0,
+        66388,
+        0,
+        178208,
+        0,
+        457356,
+        0,
+        1234124,
+        0,
+        3123356,
+        0,
+        7332724,
+        0,
+        13243680,
+        0,
+        3701920
+      ],
+      "generic_field_degree": 3,
+      "linear_only_lower_bound": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        0,
+        16,
+        0,
+        52,
+        0,
+        136,
+        0,
+        460,
+        0,
+        1484,
+        0,
+        5164,
+        0,
+        17892,
+        0,
+        5440
+      ],
+      "number_of_minimal_generators": 29414433
+    }
+  ],
+  "actual_origin_fibre": {
+    "C3_characteristic_polynomial": [
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "C3_trace_in_basis_1_omega": [
+      -1,
+      0
+    ],
+    "C3_weights": [
+      0,
+      1,
+      2,
+      2,
+      1
+    ],
+    "basis_p_q": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "fibre_length": 5,
+    "finite_flat_at_origin": false,
+    "full_homogeneous_vertex_minimum": 33,
+    "generic_field_degree": 3,
+    "multiplication_p": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "multiplication_q": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "phi_characteristic_polynomial": [
+      1,
+      -1,
+      -2,
+      2,
+      1,
+      -1
+    ],
+    "residual_phi": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "residual_phi_square": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "all_sixteen_rows_match_frozen_source": true,
+  "asymptotic_calibration": {
+    "all_grade_asymptotic_from_proof": true,
+    "asymptotic_fitted_from_samples": false,
+    "harmonic_identity_controls": [
+      {
+        "j": 2,
+        "sum": [
+          1,
+          1
+        ]
+      },
+      {
+        "j": 3,
+        "sum": [
+          1,
+          1
+        ]
+      },
+      {
+        "j": 7,
+        "sum": [
+          7,
+          10
+        ]
+      },
+      {
+        "j": 16,
+        "sum": [
+          1195757,
+          2882880
+        ]
+      }
+    ],
+    "leading_constant_even_half_grade": [
+      13,
+      144
+    ],
+    "uniform_O_remainder_claimed": false
+  },
+  "fixed_locus": {
+    "actual_minors": [
+      [
+        {
+          "coefficient": 1,
+          "exponents": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "coefficient": -1,
+          "exponents": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        {
+          "coefficient": 1,
+          "exponents": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": -1,
+          "exponents": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        {
+          "coefficient": 1,
+          "exponents": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "coefficient": -1,
+          "exponents": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    ],
+    "coordinate_order": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f"
+    ],
+    "dimension_A": 4,
+    "fixed_P_codimension": 2,
+    "fixed_specialization": [
+      [],
+      [],
+      [
+        {
+          "coefficient": -1,
+          "exponents": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    ],
+    "geometric_fixed_codimension_A": 3,
+    "geometric_fixed_dimension_A": 1,
+    "scheme_fixed_A_reduced_claimed": false,
+    "weights": [
+      1,
+      2,
+      0,
+      2,
+      0,
+      1
+    ]
+  },
+  "held_out_ladder_cutoff": 16,
+  "independent_PBW_source_rows": [
+    {
+      "class_traces": [
+        6,
+        0,
+        0
+      ],
+      "grade": 1,
+      "multiplicities": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_traces": [
+        3,
+        1,
+        0
+      ],
+      "grade": 2,
+      "multiplicities": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "class_traces": [
+        2,
+        0,
+        -1
+      ],
+      "grade": 3,
+      "multiplicities": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "class_traces": [
+        3,
+        -1,
+        0
+      ],
+      "grade": 4,
+      "multiplicities": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "class_traces": [
+        6,
+        0,
+        0
+      ],
+      "grade": 5,
+      "multiplicities": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_traces": [
+        11,
+        1,
+        -1
+      ],
+      "grade": 6,
+      "multiplicities": [
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "class_traces": [
+        18,
+        0,
+        0
+      ],
+      "grade": 7,
+      "multiplicities": [
+        3,
+        3,
+        6
+      ]
+    },
+    {
+      "class_traces": [
+        30,
+        -2,
+        0
+      ],
+      "grade": 8,
+      "multiplicities": [
+        4,
+        6,
+        10
+      ]
+    },
+    {
+      "class_traces": [
+        56,
+        0,
+        -1
+      ],
+      "grade": 9,
+      "multiplicities": [
+        9,
+        9,
+        19
+      ]
+    },
+    {
+      "class_traces": [
+        105,
+        3,
+        0
+      ],
+      "grade": 10,
+      "multiplicities": [
+        19,
+        16,
+        35
+      ]
+    },
+    {
+      "class_traces": [
+        186,
+        0,
+        0
+      ],
+      "grade": 11,
+      "multiplicities": [
+        31,
+        31,
+        62
+      ]
+    },
+    {
+      "class_traces": [
+        335,
+        -5,
+        -1
+      ],
+      "grade": 12,
+      "multiplicities": [
+        53,
+        58,
+        112
+      ]
+    },
+    {
+      "class_traces": [
+        630,
+        0,
+        0
+      ],
+      "grade": 13,
+      "multiplicities": [
+        105,
+        105,
+        210
+      ]
+    },
+    {
+      "class_traces": [
+        1179,
+        9,
+        0
+      ],
+      "grade": 14,
+      "multiplicities": [
+        201,
+        192,
+        393
+      ]
+    },
+    {
+      "class_traces": [
+        2182,
+        0,
+        -2
+      ],
+      "grade": 15,
+      "multiplicities": [
+        363,
+        363,
+        728
+      ]
+    },
+    {
+      "class_traces": [
+        4080,
+        -16,
+        0
+      ],
+      "grade": 16,
+      "multiplicities": [
+        672,
+        688,
+        1360
+      ]
+    }
+  ],
+  "literal_polynomial_covariant_controls": [
+    {
+      "generators_degree_charge": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "linear_only_is_full": false,
+      "linear_only_lower_bound": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        0,
+        4
+      ],
+      "literal_Pbar1": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "literal_Pbar2": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "minimal_polynomial": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        0,
+        16,
+        0,
+        4
+      ],
+      "polynomial_length_cutoff": 8
+    },
+    {
+      "generators_degree_charge": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "linear_only_is_full": false,
+      "linear_only_lower_bound": [
+        1,
+        0,
+        0,
+        6,
+        0,
+        8,
+        0,
+        2
+      ],
+      "literal_Pbar1": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "literal_Pbar2": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "minimal_polynomial": [
+        1,
+        0,
+        0,
+        6,
+        6,
+        8,
+        8,
+        2,
+        8,
+        0,
+        2
+      ],
+      "polynomial_length_cutoff": 4
+    },
+    {
+      "generators_degree_charge": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "linear_only_is_full": false,
+      "linear_only_lower_bound": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        6,
+        10,
+        2,
+        2
+      ],
+      "literal_Pbar1": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      ],
+      "literal_Pbar2": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      ],
+      "minimal_polynomial": [
+        1,
+        0,
+        0,
+        0,
+        12,
+        6,
+        22,
+        8,
+        18,
+        2,
+        10,
+        0,
+        2
+      ],
+      "polynomial_length_cutoff": 4
+    },
+    {
+      "generators_degree_charge": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "linear_only_is_full": true,
+      "linear_only_lower_bound": [
+        1
+      ],
+      "literal_Pbar1": [],
+      "literal_Pbar2": [],
+      "minimal_polynomial": [
+        1
+      ],
+      "polynomial_length_cutoff": 4
+    },
+    {
+      "generators_degree_charge": [
+        [
+          3,
+          2
+        ]
+      ],
+      "linear_only_is_full": false,
+      "linear_only_lower_bound": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        2
+      ],
+      "literal_Pbar1": [
+        [
+          2
+        ]
+      ],
+      "literal_Pbar2": [
+        [
+          1
+        ]
+      ],
+      "minimal_polynomial": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        2,
+        6,
+        0,
+        2
+      ],
+      "polynomial_length_cutoff": 4
+    },
+    {
+      "generators_degree_charge": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "linear_only_is_full": false,
+      "linear_only_lower_bound": [
+        1,
+        0,
+        0,
+        12,
+        0,
+        16,
+        0,
+        4
+      ],
+      "literal_Pbar1": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ]
+      ],
+      "literal_Pbar2": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "minimal_polynomial": [
+        1,
+        0,
+        0,
+        12,
+        12,
+        16,
+        16,
+        4,
+        16,
+        0,
+        4
+      ],
+      "polynomial_length_cutoff": 4
+    }
+  ],
+  "owned_sha256_lf": {
+    "research/l-families/atlas/generalized/extension-order-defect/NORMALIZATION_AND_INFINITE_BASE.md": "0225b145d101f59fd912e5d2c77b06ab7a23e9137864d1d04c5a7dc2905a5c6b",
+    "research/l-families/atlas/generalized/extension-order-defect/NORMALIZATION_PREREGISTRATION.md": "6114b7624aefadc996a597d7ada416d21544525b7a60d1fa840ec1585bbfbc17",
+    "research/l-families/atlas/generalized/extension-order-defect/NORMALIZATION_REPLAY.md": "e41bf3c340897ebe275b7138faa890a0fb7f0df9106f2b6eab8bb00e8b79274d",
+    "research/l-families/atlas/generalized/extension-order-defect/normalization_replay.py": "59a983720a604b942a2b3adc30d02ffcac67791f3dfd1d441fe6e16cf3fba26a",
+    "tests/test_extension_order_normalization.py": "939b8a0bcc08895adfa5eaa0edeb295729d9ab155f65a716068c2a97d982e7dc"
+  },
+  "proof_object_sha256": "276d29dc00e8a530d23f0e7192e7426759227b6459e4bd51c0f2a321913a9777",
+  "scaled_source_chart": {
+    "all_grade_descent_proved_separately": true,
+    "bounded_monomials": [
+      {
+        "s_x_y": [
+          0,
+          0,
+          0
+        ],
+        "z_p_q": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          -2,
+          0,
+          3
+        ],
+        "z_p_q": [
+          0,
+          0,
+          3
+        ]
+      },
+      {
+        "s_x_y": [
+          -4,
+          0,
+          6
+        ],
+        "z_p_q": [
+          0,
+          0,
+          6
+        ]
+      },
+      {
+        "s_x_y": [
+          -1,
+          1,
+          1
+        ],
+        "z_p_q": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "s_x_y": [
+          -3,
+          1,
+          4
+        ],
+        "z_p_q": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "s_x_y": [
+          -5,
+          1,
+          7
+        ],
+        "z_p_q": [
+          0,
+          1,
+          7
+        ]
+      },
+      {
+        "s_x_y": [
+          -2,
+          2,
+          2
+        ],
+        "z_p_q": [
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "s_x_y": [
+          -4,
+          2,
+          5
+        ],
+        "z_p_q": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "s_x_y": [
+          -1,
+          3,
+          0
+        ],
+        "z_p_q": [
+          0,
+          3,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          -3,
+          3,
+          3
+        ],
+        "z_p_q": [
+          0,
+          3,
+          3
+        ]
+      },
+      {
+        "s_x_y": [
+          -2,
+          4,
+          1
+        ],
+        "z_p_q": [
+          0,
+          4,
+          1
+        ]
+      },
+      {
+        "s_x_y": [
+          -4,
+          4,
+          4
+        ],
+        "z_p_q": [
+          0,
+          4,
+          4
+        ]
+      },
+      {
+        "s_x_y": [
+          -3,
+          5,
+          2
+        ],
+        "z_p_q": [
+          0,
+          5,
+          2
+        ]
+      },
+      {
+        "s_x_y": [
+          -2,
+          6,
+          0
+        ],
+        "z_p_q": [
+          0,
+          6,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          -3,
+          7,
+          1
+        ],
+        "z_p_q": [
+          0,
+          7,
+          1
+        ]
+      },
+      {
+        "s_x_y": [
+          -1,
+          0,
+          2
+        ],
+        "z_p_q": [
+          1,
+          0,
+          2
+        ]
+      },
+      {
+        "s_x_y": [
+          -3,
+          0,
+          5
+        ],
+        "z_p_q": [
+          1,
+          0,
+          5
+        ]
+      },
+      {
+        "s_x_y": [
+          0,
+          1,
+          0
+        ],
+        "z_p_q": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          -2,
+          1,
+          3
+        ],
+        "z_p_q": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "s_x_y": [
+          -4,
+          1,
+          6
+        ],
+        "z_p_q": [
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "s_x_y": [
+          -1,
+          2,
+          1
+        ],
+        "z_p_q": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "s_x_y": [
+          -3,
+          2,
+          4
+        ],
+        "z_p_q": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "s_x_y": [
+          -2,
+          3,
+          2
+        ],
+        "z_p_q": [
+          1,
+          3,
+          2
+        ]
+      },
+      {
+        "s_x_y": [
+          -1,
+          4,
+          0
+        ],
+        "z_p_q": [
+          1,
+          4,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          -3,
+          4,
+          3
+        ],
+        "z_p_q": [
+          1,
+          4,
+          3
+        ]
+      },
+      {
+        "s_x_y": [
+          -2,
+          5,
+          1
+        ],
+        "z_p_q": [
+          1,
+          5,
+          1
+        ]
+      },
+      {
+        "s_x_y": [
+          -2,
+          7,
+          0
+        ],
+        "z_p_q": [
+          1,
+          7,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          0,
+          0,
+          1
+        ],
+        "z_p_q": [
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "s_x_y": [
+          -2,
+          0,
+          4
+        ],
+        "z_p_q": [
+          2,
+          0,
+          4
+        ]
+      },
+      {
+        "s_x_y": [
+          -1,
+          1,
+          2
+        ],
+        "z_p_q": [
+          2,
+          1,
+          2
+        ]
+      },
+      {
+        "s_x_y": [
+          -3,
+          1,
+          5
+        ],
+        "z_p_q": [
+          2,
+          1,
+          5
+        ]
+      },
+      {
+        "s_x_y": [
+          0,
+          2,
+          0
+        ],
+        "z_p_q": [
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          -2,
+          2,
+          3
+        ],
+        "z_p_q": [
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "s_x_y": [
+          -1,
+          3,
+          1
+        ],
+        "z_p_q": [
+          2,
+          3,
+          1
+        ]
+      },
+      {
+        "s_x_y": [
+          -2,
+          4,
+          2
+        ],
+        "z_p_q": [
+          2,
+          4,
+          2
+        ]
+      },
+      {
+        "s_x_y": [
+          -1,
+          5,
+          0
+        ],
+        "z_p_q": [
+          2,
+          5,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          1,
+          0,
+          0
+        ],
+        "z_p_q": [
+          3,
+          0,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          -1,
+          0,
+          3
+        ],
+        "z_p_q": [
+          3,
+          0,
+          3
+        ]
+      },
+      {
+        "s_x_y": [
+          0,
+          1,
+          1
+        ],
+        "z_p_q": [
+          3,
+          1,
+          1
+        ]
+      },
+      {
+        "s_x_y": [
+          -2,
+          1,
+          4
+        ],
+        "z_p_q": [
+          3,
+          1,
+          4
+        ]
+      },
+      {
+        "s_x_y": [
+          -1,
+          2,
+          2
+        ],
+        "z_p_q": [
+          3,
+          2,
+          2
+        ]
+      },
+      {
+        "s_x_y": [
+          0,
+          3,
+          0
+        ],
+        "z_p_q": [
+          3,
+          3,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          -1,
+          4,
+          1
+        ],
+        "z_p_q": [
+          3,
+          4,
+          1
+        ]
+      },
+      {
+        "s_x_y": [
+          0,
+          0,
+          2
+        ],
+        "z_p_q": [
+          4,
+          0,
+          2
+        ]
+      },
+      {
+        "s_x_y": [
+          1,
+          1,
+          0
+        ],
+        "z_p_q": [
+          4,
+          1,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          -1,
+          1,
+          3
+        ],
+        "z_p_q": [
+          4,
+          1,
+          3
+        ]
+      },
+      {
+        "s_x_y": [
+          0,
+          2,
+          1
+        ],
+        "z_p_q": [
+          4,
+          2,
+          1
+        ]
+      },
+      {
+        "s_x_y": [
+          0,
+          4,
+          0
+        ],
+        "z_p_q": [
+          4,
+          4,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          1,
+          0,
+          1
+        ],
+        "z_p_q": [
+          5,
+          0,
+          1
+        ]
+      },
+      {
+        "s_x_y": [
+          0,
+          1,
+          2
+        ],
+        "z_p_q": [
+          5,
+          1,
+          2
+        ]
+      },
+      {
+        "s_x_y": [
+          1,
+          2,
+          0
+        ],
+        "z_p_q": [
+          5,
+          2,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          2,
+          0,
+          0
+        ],
+        "z_p_q": [
+          6,
+          0,
+          0
+        ]
+      },
+      {
+        "s_x_y": [
+          1,
+          1,
+          1
+        ],
+        "z_p_q": [
+          6,
+          1,
+          1
+        ]
+      },
+      {
+        "s_x_y": [
+          2,
+          1,
+          0
+        ],
+        "z_p_q": [
+          7,
+          1,
+          0
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "identity": "x^3=s*u",
+        "left": [
+          3,
+          3,
+          0
+        ],
+        "right": [
+          3,
+          3,
+          0
+        ]
+      },
+      {
+        "identity": "x*y=s*v",
+        "left": [
+          3,
+          1,
+          1
+        ],
+        "right": [
+          3,
+          1,
+          1
+        ]
+      },
+      {
+        "identity": "y^3=s^2*w",
+        "left": [
+          6,
+          0,
+          3
+        ],
+        "right": [
+          6,
+          0,
+          3
+        ]
+      },
+      {
+        "identity": "u*w=v^3",
+        "left": [
+          0,
+          3,
+          3
+        ],
+        "right": [
+          0,
+          3,
+          3
+        ]
+      }
+    ],
+    "s_is_inverted": true
+  },
+  "schema": "riemann.extension_order.normalization.v1",
+  "scope": {
+    "all_degree_covariant_series_proved_not_extrapolated": true,
+    "analytic_frame_selected_by_normalization": false,
+    "arbitrary_Euler_source_uniqueness": false,
+    "infinite_algebra_CM_claimed": false,
+    "infinite_finiteness_iff_finitely_many_nontrivial_generator_directions": true,
+    "new_arithmetic_field_counts": false,
+    "normalization_relative_to_prescribed_field_and_base": true,
+    "old_C_over_B_cokernel_is_a_Bprime_module": false,
+    "ordinary_Fredholm_domain_enlarged": false
+  },
+  "sources": [
+    {
+      "blob": "66540ad1ff0818cd04b9a75ad75b3eb50abe9466",
+      "commit": "d4fcbe331751e1e506cc2f38864c0c1580df92e8",
+      "path": "research/l-families/atlas/generalized/extension-order-defect/CYCLIC_INFINITY_INVARIANT_MODULE.md",
+      "sha256": "ee0efbf72660d0a423fcf19ba62ce9cc2fe1b495088d64a8d1157d198d4bcba1"
+    },
+    {
+      "blob": "8a8964436633d7528a19928388563b6af321ff6e",
+      "commit": "d4fcbe331751e1e506cc2f38864c0c1580df92e8",
+      "path": "research/l-families/atlas/generalized/extension-order-defect/cyclic_infinity_replay.py",
+      "sha256": "eb8d38e6c36bdc11b8fe8b4389becdea3cb2417cc60f01f9795919d77fc792d0"
+    },
+    {
+      "blob": "dfb7fcbf1115846664fa99e71116a3635b14d7a0",
+      "commit": "0018b73f60e42bc793d172c381547de34322d8ca",
+      "path": "research/l-families/atlas/generalized/extension-order-defect/EXTENSION_ORDER_DEFECT.md",
+      "sha256": "de1ed55a560e0f71602d7ff7f1a10b3a4ffe8b64d0089a087c6275aeed65945d"
+    },
+    {
+      "blob": "6fc43276dc337c68ae4c3d9f70de22a114d14fa3",
+      "commit": "7b320b3a9a55a16e73d99dd9bbab5bf592d50c93",
+      "path": "research/l-families/atlas/generalized/koszul-analytic-parent/GLOBAL_KOSZUL_LIE_COHOMOLOGY.md",
+      "sha256": "6f9e63828238f87fbdb57a48d8372d083bc30054b3fc69ed11e92c9d4587fca4"
+    },
+    {
+      "blob": "f6420dd1053cd1aab611747b2dec7c4310d55a96",
+      "commit": "7b320b3a9a55a16e73d99dd9bbab5bf592d50c93",
+      "path": "research/l-families/atlas/generalized/koszul-analytic-parent/global_lie_cohomology_replay.py",
+      "sha256": "a664886a2b543bcbc0abf2c3657c3b2bdfc2a45210fa491486abb7a47de736a3"
+    },
+    {
+      "blob": "67845de2de4c49c0a11b58bbf09efbe183897174",
+      "commit": "7b320b3a9a55a16e73d99dd9bbab5bf592d50c93",
+      "path": "research/l-families/atlas/generalized/koszul-analytic-parent/global_lie_cohomology.verification.json",
+      "sha256": "9a685da8ab5207bd23265bda3a35447b64ad727a16833b3225993580b9736828"
+    }
+  ]
+}
