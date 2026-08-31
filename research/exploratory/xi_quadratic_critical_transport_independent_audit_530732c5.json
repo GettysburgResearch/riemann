@@ -1,0 +1,419 @@
+{
+  "finite": {
+    "complete_cover_geometries": 78,
+    "exact_tail_and_polynomial_checks": 468,
+    "exact_task_identities": 546,
+    "extra_binomial_controls": 505,
+    "history_counts": {
+      "PASS": 373,
+      "TIMEOUT_UNRESOLVED": 12,
+      "UNRESOLVED_NATIVE": 161
+    },
+    "point_impossible_by_ratio": [
+      26,
+      26,
+      26,
+      21,
+      19
+    ],
+    "quadratic_attempts": 390,
+    "timeout_geography": [
+      [
+        22,
+        256,
+        "outer_direct"
+      ],
+      [
+        22,
+        512,
+        "outer_direct"
+      ],
+      [
+        22,
+        1024,
+        "outer_direct"
+      ],
+      [
+        23,
+        256,
+        "outer_direct"
+      ],
+      [
+        23,
+        512,
+        "outer_direct"
+      ],
+      [
+        23,
+        1024,
+        "outer_direct"
+      ],
+      [
+        24,
+        256,
+        "outer_direct"
+      ],
+      [
+        24,
+        512,
+        "outer_direct"
+      ],
+      [
+        24,
+        1024,
+        "outer_direct"
+      ],
+      [
+        25,
+        256,
+        "outer_direct"
+      ],
+      [
+        25,
+        512,
+        "outer_direct"
+      ],
+      [
+        25,
+        1024,
+        "outer_direct"
+      ]
+    ]
+  },
+  "fixture_sha256_lf": "45e9d81f5cfe22662ad9e07b9a994796b3c3b18743ae74c8cbd3ce095f3a4cce",
+  "native": {
+    "additional_complete_native_covers": [
+      {
+        "bits": 512,
+        "bound_stream_sha256": "f8339a59ad9f24b54c31f0dd96154d21fe3e229fa4fcda2a2f895b92b6515dcd",
+        "cells": 256,
+        "index": 0,
+        "upper": [
+          5882542609527223072196922252521867829045832203435777210581283330298388321726358676494546621301743419153090074315591153469431058926303068982167063244550571,
+          49680578953622685924767343630800081768220352547734291556449665216833630485964060362588109082516687294415607382308194342597490561411674060526217192801317796454542559232667196977608489140211150234408415974198927000028571099322113851392
+        ]
+      },
+      {
+        "bits": 512,
+        "bound_stream_sha256": "c855c24a2dfb1278642b92efe7ea1507a572481d5898287ea908f3b133013912",
+        "cells": 256,
+        "index": 12,
+        "upper": [
+          6714219561856404068327063552112119684852496046935019232951984346496066003133207579487740126359532076185721127457730801712233028895221689179663095759664601,
+          1581267603963364205878869896241541461324661326282360299663291859589299527874963647593440497667477535118649045814975093057732880760826511538023542187037019608761854877160674698159897716735103252665935684988068320848140683464255411707953932466009059033912578566502802887127604801681488301032705683661296923932091466727292928
+        ]
+      },
+      {
+        "bits": 512,
+        "bound_stream_sha256": "758d207587311b0b54b8c455013233702c67202a2683ee47f852d318a0bc3a9e",
+        "cells": 256,
+        "index": 25,
+        "upper": [
+          1988942622293628229161775157268459747895610296868698376322904114141902426484932555406082490657176757646115472307500660700051513948773487408233920381558129,
+          25030115284779067606215814464341263129845567019730407905165858037314880885778991695276909187083511720130162316106380306848964779375889006927100521175821950637595577907661016323584724562528566005587351697961368721524448316263806708272638340799123548991667328074818897367500803588235708298977181072154716884877872107761733949414746536311042239101323209092315028303337644113623575178366436677500350834327644353912091151462678024100713019721296957931103378736467725136570721563652787701095808800653312
+        ]
+      }
+    ],
+    "independent_reflected_Rouche": 26,
+    "independent_reflected_point_counts": [
+      26,
+      26,
+      26,
+      21,
+      19
+    ],
+    "records": [
+      {
+        "index": 0,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 1,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 2,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 3,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 4,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 5,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 6,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 7,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 8,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 9,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 10,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 11,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 12,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 13,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 14,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 15,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 16,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 17,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 18,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 19,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 20,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 21,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 22,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 23,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 24,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+        "reflected_critical_pass": true
+      },
+      {
+        "index": 25,
+        "point_impossible": [
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+        "reflected_critical_pass": true
+      }
+    ]
+  },
+  "payload_sha256": "cd08ea66f1efd75140242cba00ca6c87039f68abfddd82fe9f71eea1a621af65",
+  "science": "530732c5fd7f50364381f8af50e97ce809b674c5",
+  "scope": "Independent algebra/primitive formula, SAME pinned FLINT implementation; no new nodes,radii,or cofinal claim.",
+  "source_closure_sha256": "9990c0900288d2d88452889cd3f8fefab2f8496fe82a7885b251ade19e3c4b42",
+  "transitive_bindings": 32
+}
