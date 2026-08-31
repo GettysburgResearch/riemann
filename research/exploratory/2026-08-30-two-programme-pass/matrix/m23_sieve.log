@@ -1,0 +1,49 @@
+[14:22:58] nu = 11, degree bound D = 2541
+[14:22:58] S2: exact resultants at 0..D ...
+[14:22:58]   a0 = 0 (0s)
+[14:23:22]   a0 = 200 (24s)
+[14:24:00]   a0 = 400 (62s)
+[14:24:45]   a0 = 600 (107s)
+[14:25:36]   a0 = 800 (158s)
+[14:26:28]   a0 = 1000 (210s)
+[14:27:24]   a0 = 1200 (267s)
+[14:28:23]   a0 = 1400 (325s)
+[14:29:24]   a0 = 1600 (386s)
+[14:30:26]   a0 = 1800 (448s)
+[14:31:31]   a0 = 2000 (513s)
+[14:32:37]   a0 = 2200 (579s)
+[14:33:45]   a0 = 2400 (647s)
+[14:34:33] S2 done (694s); max digits 5703
+[14:34:33] S3: modular interpolation + CRT ...
+[14:35:41] S3 CRT stable after 24 primes (763s)
+[14:35:41] candidate deg = 1650
+[14:35:41] S3 PROOF: exact evaluation at all nodes ...
+[14:35:41]   verified through 0 (763s)
+[14:35:41]   verified through 400 (763s)
+[14:35:41]   verified through 800 (764s)
+[14:35:42]   verified through 1200 (764s)
+[14:35:43]   verified through 1600 (765s)
+[14:35:43]   verified through 2000 (765s)
+[14:35:44]   verified through 2400 (766s)
+[14:35:44] S3 proof complete: candidate == disc (766s)
+[14:35:44] S4: dividing out torsion factors ...
+[14:35:45]   psi_3 divides with multiplicity 60
+[14:35:45]   psi_4 divides with multiplicity 110
+[14:35:45]   psi_5 divides with multiplicity 26
+[14:35:45]   psi_6 divides with multiplicity 60
+[14:35:45]   psi_7 divides with multiplicity 12
+[14:35:45]   psi_8 divides with multiplicity 40
+[14:35:45]   psi_9 divides with multiplicity 6
+[14:35:45]   psi_10 divides with multiplicity 26
+[14:35:45]   psi_11 divides with multiplicity 2
+[14:35:45]   psi_12 divides with multiplicity 18
+[14:35:45]   psi_14 divides with multiplicity 12
+[14:35:45]   psi_16 divides with multiplicity 8
+[14:35:45]   psi_18 divides with multiplicity 6
+[14:35:45]   psi_20 divides with multiplicity 4
+[14:35:45]   psi_22 divides with multiplicity 2
+[14:35:45] remainder deg 1024, content 64, lc -3893409567845039136873834070876566974681570882422696746869284950091939715481600000000
+[14:35:45] S4: exhaustive candidate torsion minpolys ...
+[14:35:52]   exhaustive bound N <= 8388608; 3991 candidate N
+[14:49:27] checked 3991 candidate psi_N (provably all); divisors of remainder: []
+[14:49:27] done (1589s); converse m=23: True

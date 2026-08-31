@@ -53,6 +53,18 @@ exactly the predicted multiplicity 2 (a single interior pair with
 mu = 2). Full comparison table in mult_law_check.json
 ("sieve_rows"). Odd-m score: 52/52.
 
+## Update: interior mechanism now PROVED conditionally (L-108524)
+
+L-108524 proves: three explicitly checkable hypotheses (no crowded
+boundary; the gcd-certified separation/no-accident pattern; diagonal
+Newton transversality per crowded class) imply the interior term
+EXACTLY, and machine-certifies all three at seven full cells — the
+a = 0 tower m = 5..13 and the golden point at m = 11, 13 — making
+those the law's first proved-by-mechanism cells. The remaining
+obstruction to the full odd-m law is named: uniform separability of
+the associated polynomials (structure recorded there), plus the
+boundary mechanism below.
+
 ## Mechanism reading (identified, not yet proved)
 
 The interior term is exactly what transversal separation predicts:

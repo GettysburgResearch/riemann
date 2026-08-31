@@ -1,0 +1,48 @@
+[14:50:09] nu = 11, degree bound D = 2772
+[14:50:09] S2: exact resultants at 0..D ...
+[14:50:09]   a0 = 0 (0s)
+[14:50:36]   a0 = 200 (27s)
+[14:51:20]   a0 = 400 (71s)
+[14:52:11]   a0 = 600 (122s)
+[14:53:07]   a0 = 800 (178s)
+[14:54:08]   a0 = 1000 (239s)
+[14:55:12]   a0 = 1200 (302s)
+[14:56:19]   a0 = 1400 (370s)
+[14:57:29]   a0 = 1600 (440s)
+[14:58:42]   a0 = 1800 (512s)
+[14:59:56]   a0 = 2000 (586s)
+[15:01:10]   a0 = 2200 (661s)
+[15:02:27]   a0 = 2400 (738s)
+[15:03:46]   a0 = 2600 (817s)
+[15:04:56] S2 done (885s); max digits 6147
+[15:04:56] S3: modular interpolation + CRT ...
+[15:06:21] S3 CRT stable after 25 primes (971s)
+[15:06:21] candidate deg = 1760
+[15:06:21] S3 PROOF: exact evaluation at all nodes ...
+[15:06:21]   verified through 0 (971s)
+[15:06:21]   verified through 400 (972s)
+[15:06:22]   verified through 800 (972s)
+[15:06:22]   verified through 1200 (973s)
+[15:06:23]   verified through 1600 (974s)
+[15:06:24]   verified through 2000 (974s)
+[15:06:24]   verified through 2400 (975s)
+[15:06:25] S3 proof complete: candidate == disc (976s)
+[15:06:25] S4: dividing out torsion factors ...
+[15:06:25]   psi_3 divides with multiplicity 66
+[15:06:26]   psi_4 divides with multiplicity 100
+[15:06:26]   psi_5 divides with multiplicity 28
+[15:06:26]   psi_6 divides with multiplicity 66
+[15:06:26]   psi_7 divides with multiplicity 14
+[15:06:26]   psi_8 divides with multiplicity 36
+[15:06:26]   psi_9 divides with multiplicity 6
+[15:06:26]   psi_10 divides with multiplicity 28
+[15:06:26]   psi_11 divides with multiplicity 2
+[15:06:26]   psi_12 divides with multiplicity 16
+[15:06:26]   psi_14 divides with multiplicity 14
+[15:06:26]   psi_16 divides with multiplicity 6
+[15:06:26]   psi_18 divides with multiplicity 6
+[15:06:26]   psi_20 divides with multiplicity 4
+[15:06:26]   psi_22 divides with multiplicity 2
+[15:06:26] remainder deg 1132, content 1, lc -1213465840931535663133183058177942031989648671340299121682027401968368559789344272040000
+[15:06:26] S4: exhaustive candidate torsion minpolys ...
+[15:06:35]   exhaustive bound N <= 10251392; 4387 candidate N
