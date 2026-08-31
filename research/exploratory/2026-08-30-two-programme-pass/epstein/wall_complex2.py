@@ -387,7 +387,21 @@ def compute_B():
 
 # ---------------- winding walk --------------------------------------
 
-def walk():
+def walk(edge_only=None):
+    """Full contour (edge_only None) or a single edge k in 0..3.
+
+    Edge-parallel soundness: the winding number is (1/2pi) times the
+    sum over ALL steps of the true arg increments, each of which lies
+    in its step's iv.atan2 enclosure (exact-step lemma, per step).
+    Splitting the step set at the exact rational corners is
+    associativity of that same sum: each edge worker starts from
+    lam_c(corner_e) and ends at lam_c(corner_{e+1}) — deterministic
+    interval boxes, identical across processes — so the four per-edge
+    interval sums add to an enclosure of the full loop's total. (The
+    sequential version's zero-length closing term encloses 0 and is
+    simply omitted.) Interval endpoints cross processes as 40-digit
+    decimal strings and are outward-padded by 1e-30 in the combiner,
+    dwarfing any decimal-representation rounding at these dps."""
     B, r = compute_B()
     M = B / r
     say(f"Lipschitz M = {mp.nstr(M, 4)}")
@@ -404,10 +418,10 @@ def walk():
     nsteps = 0
     min_ell = mp.inf
     t_start = time.time()
-    cur = corners[0]
+    cur = corners[edge_only if edge_only is not None else 0]
     Wcur = lam_c(cpt(*cur))
     W0 = Wcur
-    for edge in range(4):
+    for edge in ([edge_only] if edge_only is not None else range(4)):
         tgt = corners[(edge + 1) % 4]
         dx = tgt[0] - cur[0]
         dy = tgt[1] - cur[1]
@@ -438,6 +452,22 @@ def walk():
                     f"ell~{mp.nstr(ell, 3)}, "
                     f"{(time.time()-t_start):.0f}s")
         cur = tgt
+    if edge_only is not None:
+        e = edge_only
+        start = corners[e]
+        out = {"edge": e,
+               "start": [str(start[0]), str(start[1])],
+               "end": [str(cur[0]), str(cur[1])],
+               "sum_lo": mp.nstr(mp.mpf(total.a), 40),
+               "sum_hi": mp.nstr(mp.mpf(total.b), 40),
+               "steps": nsteps,
+               "min_ell": mp.nstr(min_ell, 8),
+               "rh_established": False}
+        json.dump(out, open(f'epstein/wall_complex2_edge{e}.json', 'w'),
+                  indent=1)
+        say(f"steps: {nsteps}; min ell: {mp.nstr(min_ell, 4)}")
+        say(f"EDGE {e} DONE")
+        return None
     # close the loop: last Wcur is at corner 0 again (pos wrapped)
     ratio = cdiv(W0, Wcur)
     assert mp.mpf(ratio.re.a) > 0
@@ -520,7 +550,7 @@ def main():
         "lattice_tail_bound": mp.nstr(TAILB, 4),
         "float_zero_location": "0.6940279890724 + 18.9467935267590 i",
         "conclusion": (f"Z_Q has {k} zero(s) in the rectangle; its left "
-                       "edge Re s = 83/100 > 1/2: a PROVED complex "
+                       "edge Re s = 62/100 > 1/2: a PROVED complex "
                        "off-critical-line zero at an exact archipelago-"
                        "adjacent modulus." if ok else "NOT ESTABLISHED"),
         "verified": bool(ok),
@@ -532,4 +562,9 @@ def main():
 
 
 if __name__ == "__main__":
+    import sys
+    if len(sys.argv) > 1:          # single-edge worker mode
+        validate()
+        walk(int(sys.argv[1]))
+        raise SystemExit(0)
     raise SystemExit(main())

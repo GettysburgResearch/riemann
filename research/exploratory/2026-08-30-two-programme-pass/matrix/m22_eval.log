@@ -1,22 +1,22 @@
-[13:59:22] m = 22: rigorous node bound B = 6644, interp window K = 140
-[13:59:22] E1: evaluating pipeline at all nodes ...
-[13:59:22]   node 0 (0s)
-[13:59:22]   node 500 (0s)
-[13:59:23]   node 1000 (1s)
-[13:59:24]   node 1500 (2s)
-[13:59:24]   node 2000 (3s)
-[13:59:25]   node 2500 (4s)
-[13:59:26]   node 3000 (4s)
-[13:59:27]   node 3500 (5s)
-[13:59:28]   node 4000 (6s)
-[13:59:29]   node 4500 (7s)
-[13:59:30]   node 5000 (8s)
-[13:59:31]   node 5500 (9s)
-[13:59:32]   node 6000 (10s)
-[13:59:33]   node 6500 (11s)
-[13:59:33] E1 done: 6645 nodes, all structural asserts passed (12s)
-[13:59:33] E3: interpolating mu_j over first K+1 nodes ...
-[13:59:34] E3 done; degrees [110, 108, 104, 98, 90, 80, 68, 54, 38, 20, 0]
-[13:59:34] E4 PROOF: exact evaluation of candidates at ALL nodes ...
-[13:59:35] E4 proof complete (13s)
-[13:59:35] saved matrix/m22_spectrum.json (13s)
+[14:09:30] m = 22: rigorous node bound B = 6644, interp window K = 140
+[14:09:30] E1: evaluating pipeline at all nodes ...
+[14:09:30]   node 0 (0s)
+[14:09:31]   node 500 (1s)
+[14:09:32]   node 1000 (2s)
+[14:09:32]   node 1500 (2s)
+[14:09:33]   node 2000 (3s)
+[14:09:35]   node 2500 (5s)
+[14:09:36]   node 3000 (6s)
+[14:09:37]   node 3500 (7s)
+[14:09:38]   node 4000 (8s)
+[14:09:39]   node 4500 (9s)
+[14:09:41]   node 5000 (11s)
+[14:09:42]   node 5500 (12s)
+[14:09:43]   node 6000 (13s)
+[14:09:45]   node 6500 (15s)
+[14:09:45] E1 done: 6645 nodes, all structural asserts passed (15s)
+[14:09:45] E3: interpolating mu_j over first K+1 nodes ...
+[14:09:47] E3 done; degrees [110, 108, 104, 98, 90, 80, 68, 54, 38, 20, 0]
+[14:09:47] E4 PROOF: exact evaluation of candidates at ALL nodes ...
+[14:09:48] E4 proof complete (18s)
+[14:09:48] saved matrix/m22_spectrum.json (18s)
