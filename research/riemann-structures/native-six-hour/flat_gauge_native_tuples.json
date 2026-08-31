@@ -1,0 +1,1724 @@
+{
+  "RH_conclusion": false,
+  "all_integrated_scalar_functionals_excluded": false,
+  "coinvariant_controls": [
+    {
+      "D": 1,
+      "L_equals_difference_times_unit": true,
+      "ambient_basis_count": 3,
+      "difference_ideal_basis_count": 1,
+      "finite_inverse_verified": true,
+      "physical_ratio_degree_one_formal_modes": [
+        {
+          "coefficient": 1,
+          "ratio_exponent": 1,
+          "total_activity_degree": 1
+        },
+        {
+          "coefficient": -1,
+          "ratio_exponent": -1,
+          "total_activity_degree": 1
+        }
+      ],
+      "physical_ratio_readout_is_truncated_ring_homomorphism": false,
+      "quotient_basis_count": 2
+    },
+    {
+      "D": 2,
+      "L_equals_difference_times_unit": true,
+      "ambient_basis_count": 6,
+      "difference_ideal_basis_count": 3,
+      "finite_inverse_verified": true,
+      "physical_ratio_degree_one_formal_modes": [
+        {
+          "coefficient": 1,
+          "ratio_exponent": 1,
+          "total_activity_degree": 1
+        },
+        {
+          "coefficient": -1,
+          "ratio_exponent": -1,
+          "total_activity_degree": 1
+        }
+      ],
+      "physical_ratio_readout_is_truncated_ring_homomorphism": false,
+      "quotient_basis_count": 3
+    },
+    {
+      "D": 3,
+      "L_equals_difference_times_unit": true,
+      "ambient_basis_count": 10,
+      "difference_ideal_basis_count": 6,
+      "finite_inverse_verified": true,
+      "physical_ratio_degree_one_formal_modes": [
+        {
+          "coefficient": 1,
+          "ratio_exponent": 1,
+          "total_activity_degree": 1
+        },
+        {
+          "coefficient": -1,
+          "ratio_exponent": -1,
+          "total_activity_degree": 1
+        }
+      ],
+      "physical_ratio_readout_is_truncated_ring_homomorphism": false,
+      "quotient_basis_count": 4
+    },
+    {
+      "D": 4,
+      "L_equals_difference_times_unit": true,
+      "ambient_basis_count": 15,
+      "difference_ideal_basis_count": 10,
+      "finite_inverse_verified": true,
+      "physical_ratio_degree_one_formal_modes": [
+        {
+          "coefficient": 1,
+          "ratio_exponent": 1,
+          "total_activity_degree": 1
+        },
+        {
+          "coefficient": -1,
+          "ratio_exponent": -1,
+          "total_activity_degree": 1
+        }
+      ],
+      "physical_ratio_readout_is_truncated_ring_homomorphism": false,
+      "quotient_basis_count": 5
+    },
+    {
+      "D": 5,
+      "L_equals_difference_times_unit": true,
+      "ambient_basis_count": 21,
+      "difference_ideal_basis_count": 15,
+      "finite_inverse_verified": true,
+      "physical_ratio_degree_one_formal_modes": [
+        {
+          "coefficient": 1,
+          "ratio_exponent": 1,
+          "total_activity_degree": 1
+        },
+        {
+          "coefficient": -1,
+          "ratio_exponent": -1,
+          "total_activity_degree": 1
+        }
+      ],
+      "physical_ratio_readout_is_truncated_ring_homomorphism": false,
+      "quotient_basis_count": 6
+    },
+    {
+      "D": 6,
+      "L_equals_difference_times_unit": true,
+      "ambient_basis_count": 28,
+      "difference_ideal_basis_count": 21,
+      "finite_inverse_verified": true,
+      "physical_ratio_degree_one_formal_modes": [
+        {
+          "coefficient": 1,
+          "ratio_exponent": 1,
+          "total_activity_degree": 1
+        },
+        {
+          "coefficient": -1,
+          "ratio_exponent": -1,
+          "total_activity_degree": 1
+        }
+      ],
+      "physical_ratio_readout_is_truncated_ring_homomorphism": false,
+      "quotient_basis_count": 7
+    }
+  ],
+  "complete_local_source_products": [
+    {
+      "complete_allocation_count": 1,
+      "midpoint_allocations": [
+        "1"
+      ],
+      "midpoint_ratio_energy_over_Gamma0_p_minus_n": "1",
+      "orthogonality_scope": "one odd prime p>=3; spacing 2log(p)>log(8)",
+      "product_coefficient": 1,
+      "temperature_polynomials": [
+        [
+          "1"
+        ]
+      ],
+      "total_exponent": 0
+    },
+    {
+      "complete_allocation_count": 2,
+      "midpoint_allocations": [
+        "-1/2",
+        "-1/2"
+      ],
+      "midpoint_ratio_energy_over_Gamma0_p_minus_n": "1/2",
+      "orthogonality_scope": "one odd prime p>=3; spacing 2log(p)>log(8)",
+      "product_coefficient": -1,
+      "temperature_polynomials": [
+        [
+          "0",
+          "-1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "total_exponent": 1
+    },
+    {
+      "complete_allocation_count": 3,
+      "midpoint_allocations": [
+        "-5/8",
+        "1/4",
+        "-5/8"
+      ],
+      "midpoint_ratio_energy_over_Gamma0_p_minus_n": "27/32",
+      "orthogonality_scope": "one odd prime p>=3; spacing 2log(p)>log(8)",
+      "product_coefficient": -1,
+      "temperature_polynomials": [
+        [
+          "-1",
+          "1/2",
+          "1/2"
+        ],
+        [
+          "0",
+          "1",
+          "-1"
+        ],
+        [
+          "0",
+          "-3/2",
+          "1/2"
+        ]
+      ],
+      "total_exponent": 2
+    },
+    {
+      "complete_allocation_count": 4,
+      "midpoint_allocations": [
+        "3/16",
+        "5/16",
+        "5/16",
+        "3/16"
+      ],
+      "midpoint_ratio_energy_over_Gamma0_p_minus_n": "17/64",
+      "orthogonality_scope": "one odd prime p>=3; spacing 2log(p)>log(8)",
+      "product_coefficient": 1,
+      "temperature_polynomials": [
+        [
+          "0",
+          "2/3",
+          "-1/2",
+          "-1/6"
+        ],
+        [
+          "1",
+          "-3/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "0",
+          "0",
+          "3/2",
+          "-1/2"
+        ],
+        [
+          "0",
+          "5/6",
+          "-1",
+          "1/6"
+        ]
+      ],
+      "total_exponent": 3
+    },
+    {
+      "complete_allocation_count": 5,
+      "midpoint_allocations": [
+        "-13/128",
+        "-3/32",
+        "25/64",
+        "-3/32",
+        "-13/128"
+      ],
+      "midpoint_ratio_energy_over_Gamma0_p_minus_n": "1563/8192",
+      "orthogonality_scope": "one odd prime p>=3; spacing 2log(p)>log(8)",
+      "product_coefficient": 0,
+      "temperature_polynomials": [
+        [
+          "0",
+          "-1/4",
+          "-1/24",
+          "1/4",
+          "1/24"
+        ],
+        [
+          "0",
+          "-2/3",
+          "7/6",
+          "-1/3",
+          "-1/6"
+        ],
+        [
+          "0",
+          "3/2",
+          "-5/4",
+          "-1/2",
+          "1/4"
+        ],
+        [
+          "0",
+          "0",
+          "-5/6",
+          "1",
+          "-1/6"
+        ],
+        [
+          "0",
+          "-7/12",
+          "23/24",
+          "-5/12",
+          "1/24"
+        ]
+      ],
+      "total_exponent": 4
+    },
+    {
+      "complete_allocation_count": 6,
+      "midpoint_allocations": [
+        "17/256",
+        "13/256",
+        "-15/128",
+        "-15/128",
+        "13/256",
+        "17/256"
+      ],
+      "midpoint_ratio_energy_over_Gamma0_p_minus_n": "679/16384",
+      "orthogonality_scope": "one odd prime p>=3; spacing 2log(p)>log(8)",
+      "product_coefficient": 0,
+      "temperature_polynomials": [
+        [
+          "0",
+          "2/15",
+          "1/12",
+          "-1/8",
+          "-1/12",
+          "-1/120"
+        ],
+        [
+          "0",
+          "1/4",
+          "-5/24",
+          "-7/24",
+          "5/24",
+          "1/24"
+        ],
+        [
+          "0",
+          "0",
+          "-1",
+          "13/12",
+          "0",
+          "-1/12"
+        ],
+        [
+          "0",
+          "-5/6",
+          "17/12",
+          "-1/4",
+          "-5/12",
+          "1/12"
+        ],
+        [
+          "0",
+          "0",
+          "7/12",
+          "-23/24",
+          "5/12",
+          "-1/24"
+        ],
+        [
+          "0",
+          "9/20",
+          "-7/8",
+          "13/24",
+          "-1/8",
+          "1/120"
+        ]
+      ],
+      "total_exponent": 5
+    },
+    {
+      "complete_allocation_count": 7,
+      "midpoint_allocations": [
+        "-49/1024",
+        "-17/512",
+        "65/1024",
+        "9/256",
+        "65/1024",
+        "-17/512",
+        "-49/1024"
+      ],
+      "midpoint_ratio_energy_over_Gamma0_p_minus_n": "4215/262144",
+      "orthogonality_scope": "one odd prime p>=3; spacing 2log(p)>log(8)",
+      "product_coefficient": 0,
+      "temperature_polynomials": [
+        [
+          "0",
+          "-1/12",
+          "-7/90",
+          "1/16",
+          "11/144",
+          "1/48",
+          "1/720"
+        ],
+        [
+          "0",
+          "-2/15",
+          "1/20",
+          "5/24",
+          "-1/24",
+          "-3/40",
+          "-1/120"
+        ],
+        [
+          "0",
+          "0",
+          "3/8",
+          "-1/16",
+          "-19/48",
+          "1/16",
+          "1/48"
+        ],
+        [
+          "0",
+          "0",
+          "5/9",
+          "-13/12",
+          "17/36",
+          "1/12",
+          "-1/36"
+        ],
+        [
+          "0",
+          "7/12",
+          "-5/4",
+          "29/48",
+          "11/48",
+          "-3/16",
+          "1/48"
+        ],
+        [
+          "0",
+          "0",
+          "-9/20",
+          "7/8",
+          "-13/24",
+          "1/8",
+          "-1/120"
+        ],
+        [
+          "0",
+          "-11/30",
+          "287/360",
+          "-29/48",
+          "29/144",
+          "-7/240",
+          "1/720"
+        ]
+      ],
+      "total_exponent": 6
+    },
+    {
+      "complete_allocation_count": 8,
+      "midpoint_allocations": [
+        "75/2048",
+        "49/2048",
+        "-85/2048",
+        "-39/2048",
+        "-39/2048",
+        "-85/2048",
+        "49/2048",
+        "75/2048"
+      ],
+      "midpoint_ratio_energy_over_Gamma0_p_minus_n": "4193/524288",
+      "orthogonality_scope": "one odd prime p>=3; spacing 2log(p)>log(8)",
+      "product_coefficient": 0,
+      "temperature_polynomials": [
+        [
+          "0",
+          "2/35",
+          "1/15",
+          "-11/360",
+          "-1/16",
+          "-19/720",
+          "-1/240",
+          "-1/5040"
+        ],
+        [
+          "0",
+          "1/12",
+          "-1/180",
+          "-101/720",
+          "-1/72",
+          "1/18",
+          "7/360",
+          "1/720"
+        ],
+        [
+          "0",
+          "0",
+          "-1/5",
+          "-7/120",
+          "11/48",
+          "1/16",
+          "-7/240",
+          "-1/240"
+        ],
+        [
+          "0",
+          "0",
+          "-5/24",
+          "31/144",
+          "5/24",
+          "-2/9",
+          "0",
+          "1/144"
+        ],
+        [
+          "0",
+          "0",
+          "-7/18",
+          "67/72",
+          "-95/144",
+          "11/144",
+          "7/144",
+          "-1/144"
+        ],
+        [
+          "0",
+          "-9/20",
+          "11/10",
+          "-181/240",
+          "-1/24",
+          "1/5",
+          "-7/120",
+          "1/240"
+        ],
+        [
+          "0",
+          "0",
+          "11/30",
+          "-287/360",
+          "29/48",
+          "-29/144",
+          "7/240",
+          "-1/720"
+        ],
+        [
+          "0",
+          "13/42",
+          "-263/360",
+          "457/720",
+          "-19/72",
+          "1/18",
+          "-1/180",
+          "1/5040"
+        ]
+      ],
+      "total_exponent": 7
+    },
+    {
+      "complete_allocation_count": 9,
+      "midpoint_allocations": [
+        "-957/32768",
+        "-75/4096",
+        "245/8192",
+        "51/4096",
+        "169/16384",
+        "51/4096",
+        "245/8192",
+        "-75/4096",
+        "-957/32768"
+      ],
+      "midpoint_ratio_energy_over_Gamma0_p_minus_n": "2459835/536870912",
+      "orthogonality_scope": "one odd prime p>=3; spacing 2log(p)>log(8)",
+      "product_coefficient": 0,
+      "temperature_polynomials": [
+        [
+          "0",
+          "-1/24",
+          "-569/10080",
+          "19/1440",
+          "287/5760",
+          "1/36",
+          "19/2880",
+          "1/1440",
+          "1/40320"
+        ],
+        [
+          "0",
+          "-2/35",
+          "-1/105",
+          "7/72",
+          "23/720",
+          "-13/360",
+          "-1/45",
+          "-1/252",
+          "-1/5040"
+        ],
+        [
+          "0",
+          "0",
+          "1/8",
+          "3/40",
+          "-191/1440",
+          "-1/12",
+          "1/144",
+          "1/120",
+          "1/1440"
+        ],
+        [
+          "0",
+          "0",
+          "1/9",
+          "-23/360",
+          "-119/720",
+          "5/72",
+          "1/18",
+          "-1/180",
+          "-1/720"
+        ],
+        [
+          "0",
+          "0",
+          "7/48",
+          "-31/144",
+          "-47/576",
+          "2/9",
+          "-19/288",
+          "-1/144",
+          "1/576"
+        ],
+        [
+          "0",
+          "0",
+          "3/10",
+          "-97/120",
+          "521/720",
+          "-5/24",
+          "-1/45",
+          "1/60",
+          "-1/720"
+        ],
+        [
+          "0",
+          "11/30",
+          "-353/360",
+          "59/72",
+          "-151/1440",
+          "-31/180",
+          "61/720",
+          "-1/72",
+          "1/1440"
+        ],
+        [
+          "0",
+          "0",
+          "-13/42",
+          "263/360",
+          "-457/720",
+          "19/72",
+          "-1/18",
+          "1/180",
+          "-1/5040"
+        ],
+        [
+          "0",
+          "-15/56",
+          "151/224",
+          "-311/480",
+          "1807/5760",
+          "-1/12",
+          "7/576",
+          "-1/1120",
+          "1/40320"
+        ]
+      ],
+      "total_exponent": 8
+    }
+  ],
+  "complete_post_renewal_gamma_identification": false,
+  "endpoint_probability_measure": "independent uniform signs from L-102904",
+  "held_out_positive_tuple": {
+    "M": 1371037021510894364441527385665889191,
+    "N": 1362959078243490213227960963218969783,
+    "P": 1102869342607,
+    "Q": 1107276086359,
+    "U": 1048576,
+    "all_omitted_physical_prime_labels_have_constant_coefficient_one": true,
+    "canonical_coefficient_square": "1/151362055761171296576684642011512888781688562022771168111816907972080559793",
+    "canonical_stripped_coefficient": "1/9",
+    "endpoint_probability": {
+      "complete_colour_count": 128,
+      "complete_walsh_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "mean_stripped_coefficient": "0",
+      "native_mean_coefficient_square": "0",
+      "native_probability_diagonal": "0",
+      "native_probability_diagonal_stripped": "0",
+      "nonzero_colour_coefficients": [],
+      "probability_per_colour": "1/128",
+      "regrouped_mean_diagonal_stripped": "0",
+      "walsh_nonzero_count": 0
+    },
+    "g": 1053821,
+    "incidence": [
+      [
+        1049639,
+        1,
+        0
+      ],
+      [
+        1050713,
+        1,
+        0
+      ],
+      [
+        1051747,
+        0,
+        1
+      ],
+      [
+        1052797,
+        0,
+        1
+      ],
+      [
+        1053821,
+        2,
+        2
+      ],
+      [
+        1054903,
+        2,
+        0
+      ],
+      [
+        1055917,
+        0,
+        2
+      ]
+    ],
+    "left_boolean": {
+      "b_U": 2,
+      "complete_allocations": 9,
+      "nonzero_histories": [
+        {
+          "coefficient": 1,
+          "m": 1,
+          "r": 1053821,
+          "s": 1054903
+        },
+        {
+          "coefficient": 1,
+          "m": 1,
+          "r": 1054903,
+          "s": 1053821
+        }
+      ],
+      "owner_pair_share": "1/6"
+    },
+    "name": "held_out_positive",
+    "post_renewal_gamma_identified": false,
+    "raw_temperature_polynomial": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "9/4",
+      "-33/4",
+      "157/16",
+      "-15/8",
+      "-69/16",
+      "5/2",
+      "3/16",
+      "-3/8",
+      "1/16"
+    ],
+    "raw_tensor_coefficient_equals_canonical_coefficient_claimed": false,
+    "right_boolean": {
+      "b_U": 2,
+      "complete_allocations": 9,
+      "nonzero_histories": [
+        {
+          "coefficient": 1,
+          "m": 1,
+          "r": 1053821,
+          "s": 1055917
+        },
+        {
+          "coefficient": 1,
+          "m": 1,
+          "r": 1055917,
+          "s": 1053821
+        }
+      ],
+      "owner_pair_share": "1/6"
+    },
+    "temperature_panels": [
+      {
+        "physical_coefficient_square": "0",
+        "raw_stripped_coefficient": "0",
+        "temperature": "0"
+      },
+      {
+        "physical_coefficient_square": "630247042161/134651673664008550826104543477758682222143717846514386901712898318244158544934312353988608",
+        "raw_stripped_coefficient": "793881/268435456",
+        "temperature": "1/4"
+      },
+      {
+        "physical_coefficient_square": "390625/8025865177155050684577497451171796454318983426482342892987304825678119572695154688",
+        "raw_stripped_coefficient": "625/65536",
+        "temperature": "1/2"
+      },
+      {
+        "physical_coefficient_square": "630247042161/134651673664008550826104543477758682222143717846514386901712898318244158544934312353988608",
+        "raw_stripped_coefficient": "793881/268435456",
+        "temperature": "3/4"
+      },
+      {
+        "physical_coefficient_square": "0",
+        "raw_stripped_coefficient": "0",
+        "temperature": "1"
+      }
+    ]
+  },
+  "module_coinvariants_not_differential_connection_quotient": true,
+  "native_principal_moment_counterexample": false,
+  "native_temperature_probability_measure_invented": false,
+  "original_Mellin_measure_retained": true,
+  "proof_object_sha256": "d511b5790d41fc663bc3f4147e1eeeafe7fa1204a396363a548915a237fd66bb",
+  "schema": "riemann.native_six_hour.flat_gauge_tuples.v1",
+  "source_hashes": {
+    "research/riemann-structures/native-six-hour/FLAT_GAUGE_NATIVE_TUPLES.md": "fcc9cc7757b36ee57d4ee1ac83bbcd443539629cc1304d227a29b353bacb589a",
+    "research/riemann-structures/native-six-hour/flat_gauge_native_tuples.py": "e199077036179c419fa6059c0d29fabed6f33cf3e8d30c6b3fc890d46a2bf0a0",
+    "tests/test_native_six_hour_flat_gauge.py": "fb7bfec8b1f7f3b40286c7bf040afd8179a742fcb26b517ce8e88e09899f8bde"
+  },
+  "sources": [
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "65fa60eb0ac25ea9797eba3d057bc765cb10c1cd",
+      "path": "claims/lemmas/L-102901-primewise-complementary-temperatures-form-an-infinite-dimensional-flat-gauge.md"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "1adb6a98327784259114d5da29823a7ec6405e8a",
+      "path": "claims/lemmas/L-102903-sparse-endpoint-gauge-gives-unique-critical-prime-placement.md"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "f0bdbf09e620027eafe9a198350f588edafdd269",
+      "path": "claims/lemmas/L-102904-endpoint-color-walsh-expansion-has-only-squared-activity-off-the-midpoint.md"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "d7330d114ebba1a7a16e22fa9ba6aa6b5eb7cdd6",
+      "path": "claims/lemmas/L-102880-logarithmic-derivative-outer-detector-has-zero-square-lattice-moment.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "346cc52420ec65457c2a5accc045d4a85635cc24",
+      "path": "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "b988b14eb982504a799158eed4c76e7f033c96f0",
+      "path": "claims/lemmas/L-106133-canonical-equal-pair-boolean-source-is-a-beta-half-source-square.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "388c7e166a0e6e534d7e908685f71a16de246575",
+      "path": "claims/lemmas/L-106026-mellin-plancherel-normal-form-for-owner-conductor-moment.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "cb8665b8cdbe2bc7e6eb223d6bc009e8e4f5a5df",
+      "path": "claims/lemmas/L-106093-mellin-polarization-places-the-anchor-inside-one-amplified-family-moment.md"
+    },
+    {
+      "commit": "1904d20cdb76ecd26e0e63472625da930075303e",
+      "git_blob": "7cebffd3b6b0db96128755e392f622029a74435a",
+      "path": "research/exploratory/NATIVE_BOOLEAN_DECODER_DIAGNOSTIC.md"
+    },
+    {
+      "commit": "1fea3c9ce079325d19f5b43c6daa59c76afff921",
+      "git_blob": "1c289fb3c7d8e959b010267751834ebad6914ec5",
+      "path": "research/riemann-structures/dense_owner_principal_coefficient_family.json"
+    }
+  ],
+  "two_distinct_prime_frequency_classification": "proof_only_unique_factorization",
+  "zero_tuple": {
+    "M": 997518551435,
+    "N": 1005930209094,
+    "P": 6,
+    "Q": 35,
+    "U": 64,
+    "all_omitted_physical_prime_labels_have_constant_coefficient_one": true,
+    "canonical_coefficient_square": "0",
+    "canonical_stripped_coefficient": "0",
+    "endpoint_probability": {
+      "complete_colour_count": 512,
+      "complete_walsh_coefficients": [
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "-1/512",
+        "1/512",
+        "1/512",
+        "1/512",
+        "1/512"
+      ],
+      "mean_stripped_coefficient": "-1/512",
+      "native_mean_coefficient_square": "1/263044214297763130572771164160",
+      "native_probability_diagonal": "1/513758231050318614399943680",
+      "native_probability_diagonal_stripped": "1/512",
+      "nonzero_colour_coefficients": [
+        {
+          "coefficient": -1,
+          "index": 124
+        }
+      ],
+      "probability_per_colour": "1/512",
+      "regrouped_mean_diagonal_stripped": "1/262144",
+      "walsh_nonzero_count": 512
+    },
+    "g": 1,
+    "incidence": [
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        3,
+        1,
+        0
+      ],
+      [
+        5,
+        0,
+        1
+      ],
+      [
+        7,
+        0,
+        1
+      ],
+      [
+        71,
+        2,
+        0
+      ],
+      [
+        73,
+        2,
+        0
+      ],
+      [
+        79,
+        2,
+        0
+      ],
+      [
+        401,
+        0,
+        2
+      ],
+      [
+        421,
+        0,
+        2
+      ]
+    ],
+    "left_boolean": {
+      "b_U": 0,
+      "complete_allocations": 27,
+      "nonzero_histories": [
+        {
+          "coefficient": 1,
+          "m": 1,
+          "r": 5183,
+          "s": 79
+        },
+        {
+          "coefficient": 1,
+          "m": 1,
+          "r": 5609,
+          "s": 73
+        },
+        {
+          "coefficient": 1,
+          "m": 1,
+          "r": 71,
+          "s": 5767
+        },
+        {
+          "coefficient": -1,
+          "m": 79,
+          "r": 71,
+          "s": 73
+        },
+        {
+          "coefficient": -1,
+          "m": 73,
+          "r": 71,
+          "s": 79
+        },
+        {
+          "coefficient": 1,
+          "m": 1,
+          "r": 5767,
+          "s": 71
+        },
+        {
+          "coefficient": 1,
+          "m": 1,
+          "r": 73,
+          "s": 5609
+        },
+        {
+          "coefficient": -1,
+          "m": 79,
+          "r": 73,
+          "s": 71
+        },
+        {
+          "coefficient": 1,
+          "m": 1,
+          "r": 79,
+          "s": 5183
+        },
+        {
+          "coefficient": -1,
+          "m": 73,
+          "r": 79,
+          "s": 71
+        },
+        {
+          "coefficient": -1,
+          "m": 71,
+          "r": 73,
+          "s": 79
+        },
+        {
+          "coefficient": -1,
+          "m": 71,
+          "r": 79,
+          "s": 73
+        }
+      ],
+      "owner_pair_share": "1/10"
+    },
+    "name": "zero_boolean",
+    "post_renewal_gamma_identified": false,
+    "raw_temperature_polynomial": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-27/8",
+      "27/2",
+      "-603/32",
+      "247/32",
+      "177/32",
+      "-189/32",
+      "31/32",
+      "21/32",
+      "-9/32",
+      "1/32"
+    ],
+    "raw_tensor_coefficient_equals_canonical_coefficient_claimed": false,
+    "right_boolean": {
+      "b_U": 2,
+      "complete_allocations": 9,
+      "nonzero_histories": [
+        {
+          "coefficient": 1,
+          "m": 1,
+          "r": 401,
+          "s": 421
+        },
+        {
+          "coefficient": 1,
+          "m": 1,
+          "r": 421,
+          "s": 401
+        }
+      ],
+      "owner_pair_share": "1/6"
+    },
+    "temperature_panels": [
+      {
+        "physical_coefficient_square": "0",
+        "raw_stripped_coefficient": "0",
+        "temperature": "0"
+      },
+      {
+        "physical_coefficient_square": "25419964033827/24680121364445227729215595001917108199096320",
+        "raw_stripped_coefficient": "-8732691/8589934592",
+        "temperature": "1/4"
+      },
+      {
+        "physical_coefficient_square": "1953125/55164370010298254480694819246047232",
+        "raw_stripped_coefficient": "-3125/524288",
+        "temperature": "1/2"
+      },
+      {
+        "physical_coefficient_square": "153150031245123/24680121364445227729215595001917108199096320",
+        "raw_stripped_coefficient": "-21434787/8589934592",
+        "temperature": "3/4"
+      },
+      {
+        "physical_coefficient_square": "0",
+        "raw_stripped_coefficient": "0",
+        "temperature": "1"
+      }
+    ]
+  }
+}
