@@ -1,0 +1,66 @@
+{
+  "authoring_base": "070751bf7e96c1dbd6d4b3cfbb05dc70f5a2aa22",
+  "frozen_sources": [
+    {
+      "commit": "c29ae6f3d134e076fa41aef9ae39920478f16ac0",
+      "git_blob": "88d8353622e5ed3cd6fc76a2aef199b8f5d59975",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_FIXED_DEPTH_DIVISOR_LADDER_AUDIT.md",
+      "sha256_lf": "92bd1e1c7fb26a2bce9a6264f0dbe792ea4f6cf46f4d3229025a575b785aab98"
+    },
+    {
+      "commit": "070751bf7e96c1dbd6d4b3cfbb05dc70f5a2aa22",
+      "git_blob": "fc5a71b861d4f4eb6bac212ec89d272659e56e93",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_FIXED_DEPTH_DIVISOR_LADDER.md",
+      "sha256_lf": "be346d4cb35af90ac3f6e3b298d0e40e743d59d48688d3f4da42e50f2b3a812e"
+    },
+    {
+      "commit": "070751bf7e96c1dbd6d4b3cfbb05dc70f5a2aa22",
+      "git_blob": "126d033f3c06c65c97f829d9e0a873871d0b574a",
+      "path": "research/l-families/atlas/generalized/cusp_flag_fixed_depth_divisor_ladder.py",
+      "sha256_lf": "8e50ded1ce1ff52cf0461698fa9d52ed1780aa8992ec586e5bc01c3f0fd71569"
+    },
+    {
+      "commit": "070751bf7e96c1dbd6d4b3cfbb05dc70f5a2aa22",
+      "git_blob": "817d6510b956f28d8df3f3563397400e371b1daa",
+      "path": "tests/test_cusp_flag_fixed_depth_divisor_ladder.py",
+      "sha256_lf": "96cb9c535fc1ca7a70960eda54ca88b39dc88663920f10ab1efb50357fde33bf"
+    },
+    {
+      "commit": "b69c854d9e3dd1db7b82d95fe6f032fe47d5306b",
+      "git_blob": "77820c6af8d089d22547db6cda5ba025ed96f84f",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md",
+      "sha256_lf": "d5c95db34c62d31e0bb735e09aae5599e3abf29194cd74a50ce1bbebafab1530"
+    },
+    {
+      "commit": "1653565cc80cde6fa882ae9e150626187d3071d0",
+      "git_blob": "0fa98ad20e040ea9b2e81c9906042ed56782bfaf",
+      "path": "research/l-families/atlas/generalized/CUSP_FLAG_LOCAL_SIMPLE_ENDPOINT_ZERO.md",
+      "sha256_lf": "a8a3e87b075f0d4c4f8834001c5b40b1b027bff23c5c32df88821116a0bcc13f"
+    },
+    {
+      "commit": "b62dfc6348661992bca659c99de226a1b6b22e14",
+      "git_blob": "4a3f9f0b6644bffdc94214e6fb2b60dfafdd93ca",
+      "path": "research/l-families/atlas/generalized/RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT.md",
+      "sha256_lf": "1828196e08782ce692f28e3fdec2feae55c6d24e9b3eb5c35ff1c315434aee75"
+    }
+  ],
+  "primary_references": [
+    {
+      "id": "HS",
+      "passage": "section2 (2.1)-(2.2), p1523; holomorphic weight-aspect imports",
+      "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v172-n2-p18-p.pdf"
+    },
+    {
+      "id": "GHL",
+      "passage": "pp177-180; p178 holomorphic-weight remark and level-one exclusion",
+      "url": "https://www.math.columbia.edu/~goldfeld/EffectiveZeroFreeRegion.pdf"
+    },
+    {
+      "id": "ILS",
+      "passage": "section2 Proposition2.1, (2.14)-(2.20), Lemma2.5; pp68,71,74",
+      "url": "https://www.numdam.org/article/PMIHES_2000__91__55_0.pdf"
+    }
+  ],
+  "remote_bytes": "not_authenticated_by_offline_git_checker",
+  "schema": "hecke-source-manifest-v1"
+}
