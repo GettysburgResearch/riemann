@@ -1,8 +1,11 @@
-# Source quotient and tensor coherence: preregistered proof/control target
+# Theta-source quotient and tensor coherence
 
-Status: PREREGISTRATION, frozen BEFORE executing any new finite control.
+Status: PROPOSED SOURCE-EXACT THEOREM; independent review required.
 Authoring base: MP `fdd349dcf6ba1b104e27866ae66b4c89752d5f05`.
-No result in this note is a report of a completed computation.
+Sections1--6 retain the original preregistered design, not a computation
+report. Section7 records the necessary regularity correction, itself frozen
+before arithmetic at `e2c659ef1c1af926de63b69bf6c9ead6a95feaf5`.
+Sections8--12 give the corrected theorem, proof and complete finite outcomes.
 
 Target: an exact source-level closure/coherence theorem extending MP's
 Petersson-vacuum theta completion. Quotient metrics, Schur complements,
@@ -188,6 +191,10 @@ Extend below1 by the specified reciprocal law. Every value is finite,
 the field is measurable, locally L1 and has compact upper tail. Its tensor
 square has the nonintegrable local term |t-3/2|^(-4/3). Thus local L1
 alone does not support tensor closure or even the tensor Mellin integral.
+Indeed integral_0^epsilon u^(-2/3)du=3epsilon^(1/3), whereas
+integral_eta^epsilon u^(-4/3)du=3(eta^(-1/3)-epsilon^(-1/3)) diverges
+as eta decreases to0. Every fixed real Mellin weight is bounded above and
+below by positive constants on this compact neighborhood of3/2.
 
 The corrected target is two-tiered. Quotient, same-weight direct sum,
 continuation, positivity and averaging hold under their stated local-L1
@@ -197,3 +204,242 @@ The actual MP theta sources are locally bounded (indeed continuous), as
 are all complete synthetic sources fixed in sections2--5. No finite panel,
 matrix, point, measure or count changes. This amendment is to be frozen
 as a new design identity BEFORE executing those controls.
+
+## 8. Exact quotient theorem and the corrected source class
+
+All spaces are finite-dimensional complex spaces, all maps are fixed
+independently of t and s, and * is conjugate transpose. Matrix inequalities
+are inequalities of Hermitian forms. A weak source (G,H,alpha) satisfies
+section1's hypotheses: G>0, alpha>0, every H(t) is finite Hermitian and >=G,
+H is measurable and locally integrable, H(t)=t^-alpha H(1/t) at every t>0,
+and ||H(t)-G||=O_A(t^-A) as t->infinity for each A>0. A bounded source also
+has H locally bounded. Bounds depend on the fixed source, not universally
+on all sources. No dimension or regularity conclusion is inferred from
+the finite panel.
+
+**SC1 (quotient and its universal property).** For any fixed surjection
+pi:V->Q with1<=dim Q<=dim V, set
+
+    H_Q=(pi H^-1 pi*)^-1,    J_pi(H)=H^-1 pi* H_Q.             (SC1)
+
+The matrix inside the inverse is positive definite because pi* is
+injective. Direct multiplication gives
+
+    pi J_pi=I_Q,  J_pi* H J_pi=H_Q,
+    J_pi* H v=0 for v in ker pi.                             (SC2)
+
+Every lift of y has the unique form J_pi y+v with v in ker pi. Its
+H-energy is y*H_Q y+v*Hv. This proves the unique minimum-energy property.
+It also proves pi*H_Q pi<=H. Conversely, if a Hermitian F on Q satisfies
+pi*F pi<=H, then evaluating on the minimizing lift gives F<=H_Q. Thus H_Q
+is the MAXIMAL quotient metric under that inequality. This maximality is
+not a statement that C_Q=(H_Q-G_Q)/2 is a maximal metric without its vacuum.
+
+For another surjection rho:Q->R, inversion yields
+
+    (H_Q)_R=(rho pi H^-1 pi* rho*)^-1=H_R,
+    J_pi(H) J_rho(H_Q)=J_(rho pi)(H).                         (SC3)
+
+These are associativity of the actual quotient and of its canonical lifts,
+not just equality of dimensions. Repeat the same operations on G to obtain
+G_Q and G_R. Iteration acts on H_Q=G_Q+2C_Q; applying it to C_Q alone would
+be a different operation and may fail even to be invertible.
+
+Under coordinates H'=C*HC,G'=C*GC,pi'=B^-1 pi C, with C,B invertible,
+
+    H'_Q=B*H_Q B,  G'_Q=B*G_Q B,
+    J_pi'(H')=C^-1 J_pi(H) B.                                (SC4)
+
+This follows by substituting the inverses. Both source and vacuum must
+transform. A nonunitary basis change does not leave the identity vacuum
+fixed. The formulas are invariant statements on quotient Hermitian spaces.
+
+**SC2 (descent of regularity and positivity).** Quotienting a weak source
+produces a weak source of the same weight. It preserves local boundedness
+when that is imposed. To see all assertions without differentiability,
+choose fixed G-orthonormal coordinates adapted to ker pi and quotient
+coordinates adapted to its G-minimal lift. Write H=I+R with R>=0. Then
+
+    H_Q-G_Q=R11-R12(I+R22)^-1 R21,
+    0<=H_Q-G_Q<=R11.                                         (SC5)
+
+The lower bound is the energy minimum or monotonicity derived from SC2;
+the upper bound comes from choosing the vacuum-minimal lift with zero
+kernel component. Fixed coordinate changes preserve integrability and
+decay. Inversion is continuous on the positive cone, so measurability also
+descends. SC5 pays local L1, local boundedness when available, and the
+all-order rapid tail. Homogeneity of SC1 gives
+
+    H_Q(t)=t^-alpha H_Q(1/t),
+    C_Q(t)=t^-alpha C_Q(1/t)+(t^-alpha-1)G_Q/2.                (SC6)
+
+Consequently C_Q>=0 everywhere and C_Q>0 on0<t<1. On t>=1 strictness is
+not forced: the preregistered t=3 cases have C_Q=0. For the actual MP
+theta source H>G everywhere, strictness everywhere follows separately.
+
+## 9. Tensor/direct-sum closure and completed observations
+
+**SC3 (tensor coherence, with necessary function-space scope).** Let
+(G_i,H_i,alpha_i),i=1,2 be bounded sources. Then
+
+    G=G1 tensor G2, H(t)=H1(t) tensor H2(t),
+    alpha=alpha1+alpha2                                      (SC7)
+
+is a bounded source. The pointwise order follows from
+
+    H-G=(H1-G1) tensor H2+G1 tensor (H2-G2)>=0.
+
+Finite products of locally bounded measurable functions are locally
+bounded. Both H_i tend to G_i, so the same expansion pays every rapid-tail
+bound. The reciprocal weights add. These arguments also work for weak
+sources IF their tensor field is locally integrable; the counterexample
+of section7 proves this extra condition cannot be discarded.
+
+For pi=pi1 tensor pi2, the inverse/product rules give exactly
+
+    H_Q=(H1)_Q1 tensor (H2)_Q2,
+    G_Q=(G1)_Q1 tensor (G2)_Q2,
+    J_pi=J_pi1 tensor J_pi2.                                 (SC8)
+
+Thus tensoring commutes with the quotient AND with its minimal lift.
+Iterated tensors associate using the canonical linear tensor identifications;
+weights add, and quotient compositions associate by SC3. No unit at weight0
+is asserted in this alpha>0 class. Direct sums preserve a fixed common
+weight and commute with block-diagonal quotient maps; this follows directly
+from block-diagonal inversion. Distinct weights generally have no common
+scalar reciprocity, as the retained factors2 and4 demonstrate.
+
+**SC4 (completed matrix observation).** For a weak source and any fixed
+quotient define L_Q(s)=integral_0^infinity C_Q(t)t^(s-1)dt for Re s>alpha.
+This is absolutely convergent: at infinity use rapid decay; at zero SC6
+is the explicit O(t^-alpha) vacuum term plus a rapidly flat remainder.
+Compact intervals are covered by local L1. Splitting at1 and substituting
+u=1/t gives
+
+    L_Q(s)=alpha G_Q/[2s(s-alpha)]
+          + integral_1^infinity
+              [t^(s-1)+t^(alpha-s-1)] C_Q(t)dt.               (SC9)
+
+For every compact s-set, a sufficiently strong rapid-tail bound dominates
+the integrand and every s derivative (powers of log t). Hence the integral
+term is entire. This proves meromorphic continuation, reflection
+L_Q(s)=L_Q(alpha-s), Schwarz symmetry L_Q(bar s)=L_Q(s)*, and exactly the
+nonzero simple matrix residues -G_Q/2 at0 and+G_Q/2 at alpha. There are no
+other entrywise poles; no claim that a determinant has simple endpoint
+poles is intended. Its endpoint pole order can equal the quotient rank.
+
+The kernel L_Q(z+bar w) is positive on Re z>alpha/2. Its finite quadratic
+sum is the integral of the C_Q-energy of sum_j t^(bar z_j)v_j with measure
+dt/t. Convergence follows from pairwise Cauchy--Schwarz in the positive
+measure and Re z_j>alpha/2. The strict positivity on0<t<1 also makes each
+L_Q(sigma)>0 for real sigma>alpha. This is a Mellin feature kernel, not a
+pointwise Herglotz assertion or a zero-location theorem.
+
+The actual MP source is H=G+2B(t),alpha1, with the exact Petersson vacuum
+and theta density MP1. MP's cusp domination is locally uniform in t, so
+dominated convergence gives continuity of B(t), hence local boundedness.
+MP proves its all-order tail and reciprocal identity. SC7--SC9 therefore
+give integer-weight tensor/quotient completions from that actual source.
+They are source-derived globally completed matrix families, not new
+automorphic representations or independently established Euler products.
+
+Tensor coherence holds BEFORE observation. Put C_i=((H_i)_Qi-(G_i)_Qi)/2.
+Then the tensor excess is
+
+    C_tensor=C1 tensor G_Q2+G_Q1 tensor C2+2C1 tensor C2.       (SC10)
+
+This is a pointwise product rule, not multiplication of the Mellin
+transforms. The complete scalar control H_alpha(t)=max(1,t^-alpha) has
+H1H2=H3 and L_alpha=alpha/[2s(s-alpha)], but
+
+    L3-L1 L2=(3s^3-9s^2+5s+3)
+                /[2s^2(s-1)(s-2)(s-3)] !=0.                 (SC11)
+
+There is a genuine pole at3 absent from L1L2. Thus the source tensor law
+does not turn observation into a multiplicative functor on these Mellin
+functions. This sharply separates an honest source operation from an
+unjustified scalar multiplication prescription.
+
+## 10. Averaging: exact obstruction to commuting elimination and integration
+
+Let mu be a finite nonzero positive compactly supported measure, and let
+H(t)=[[A,B],[B*,D]] be positive definite, measurable and entrywise integrable
+with respect to mu. Suppose D(t)>=d I for some fixed d>0 almost everywhere.
+Put L(t)=D(t)^-1 B(t)*, Dbar=integral D, and
+Lbar=Dbar^-1 integral B*. The block coefficient L is the NEGATIVE of the
+kernel part in the minimum-energy lift [I;-L]. Since
+0<=L*DL=B D^-1 B*<=A, all quadratic terms below are integrable. Dbar>0.
+
+Writing S(H)=A-BD^-1B*, direct expansion gives
+
+    S(integral H)-integral S(H)
+       = integral L*DL-Lbar*Dbar Lbar
+       = integral (L-Lbar)*D(L-Lbar)>=0.                     (SC12)
+
+The cross terms simplify because integral DL=integral B*=Dbar Lbar.
+This proves the formula for a finite, not necessarily probability, measure.
+Equality of the full matrices holds iff L=Lbar almost everywhere: take
+the trace of the nonnegative integrand and use D>=dI. Directional equality
+on v only requires L(t)v=Lbar v almost everywhere, a weaker condition.
+No commutation of D_j is assumed. The preregistered variable-lift control
+has zero common kernel for L2 and L3 after L1=0, hence strict defect.
+
+Applied to a compact positive weighting of an actual source, SC12 precisely
+measures the failure of a single minimizing lift to minimize at every t.
+It cannot be applied to an unrenormalized Mellin integral of H on(0,infinity):
+the vacuum G has a divergent integral. SC9 performs the required pointwise
+subtraction and endpoint continuation instead. In particular neither SC12
+nor tensor closure identifies the new source quotient with the old
+period-side Schur quotient, whose genuine interior poles survive in FI.
+
+## 11. Completed finite replay and source contract
+
+All declared controls were run only after both frozen design commits.
+The exact Gaussian-rational producer independently builds the full matrices,
+not just target booleans. It records all six base source cells, three
+tensor cells, three common-weight direct sums, three nested chains each
+with all three stages for BOTH source and vacuum, two averaging controls,
+and the three rational observation values plus their polynomial identity.
+The variable-lift defect has determinant77/2316>0; the common-lift defect
+is the zero matrix. The t=3 base excesses are zero while their reciprocal
+excesses are strictly positive. No failed t-value or panel is discarded.
+
+The source manifest binds all five MP scientific files and both frozen
+design notes by literal Git blob and LF-normalized SHA256. It also binds
+the final note, producer, manifest and tests through the fixture, with a
+canonical full-payload digest. Arithmetic is MIXED with EXACT_RATIONAL
+and CERTIFIED_INTEGER_COVERAGE components; rounding is NONE. These are
+finite algebra and complete declared coverage, not analytic certificates.
+No floating theta, special function, integral or asymptotic limit is used.
+
+The acceptance rule is equality with a complete fresh, source-authenticated
+primitive reconstruction. Merely resealing an altered fixture is insufficient.
+The tests include independent permutation determinants/adjugate inverses,
+energy and averaging routes, strict type/dimension/bit/work/JSON bounds,
+source and artifact tampering and resealed scope/coverage attacks. The
+producer's 4-dimensional matrix bound is a computational cap, not the
+dimension scope of SC1--SC12. Final command counts and fresh-SHA results
+are supplied with the frozen handoff; independent review remains necessary.
+
+## 12. Classical credit, exact contribution and remaining burden
+
+The underlying extremal shorted form and quotient identities are classical:
+[Anderson, Shorted operators, 1971](https://doi.org/10.1137/0120053),
+[Anderson--Trapp, Shorted Operators II, 1975](https://doi.org/10.1137/0128007),
+and [Ando, Generalized Schur complements, 1979](https://doi.org/10.1016/0024-3795(79)90040-5).
+Their publisher abstracts were checked for the maximality/quotient context;
+no inaccessible full-text theorem is silently imported. SC1--SC12 have
+complete finite-dimensional proofs above. The Mellin split is the classical
+theta-completion mechanism with the specified transformed vacuum.
+
+The programme application is a coherent, positive-source completion class
+generated by MP's actual theta matrix, including nested quotients and tensor
+weights, together with precise observation-operation and regularity boundaries.
+It does not select a privileged flag, give a categorical archimedean/Euler
+description, establish critical-line zeros, or prove RH/GRH. The scalar
+Mellin functions are not claimed to multiply under source tensoring.
+External priority has not been exhaustively researched. The smallest
+load-bearing analytic obligations are local integrability of the actual
+source, its all-order tail, and the homogeneous source identity; MP pays
+them for the actual example, while section7 prevents extending the tensor
+claim to an insufficient function space.

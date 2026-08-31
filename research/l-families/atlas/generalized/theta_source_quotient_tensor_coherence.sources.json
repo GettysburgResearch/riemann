@@ -1,0 +1,89 @@
+{
+  "authoring_base": "fdd349dcf6ba1b104e27866ae66b4c89752d5f05",
+  "contract": {
+    "analytic_claims_machine_certified": false,
+    "arithmetic_class": "MIXED",
+    "caps": {
+      "container_length": 5000,
+      "integer_bits": 4096,
+      "json_bytes": 3000000,
+      "json_depth": 32,
+      "json_nodes": 200000,
+      "matrix_dimension": 4,
+      "string_length": 4096,
+      "work_units": 2000000
+    },
+    "components": [
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "full_quantifiers_require_written_proof": true,
+    "local_L1_tensor_closure": false,
+    "matrices_are_preregistered_synthetic_sources": true,
+    "native_theta_evaluations": false,
+    "rounding": "none",
+    "tensor_closed_source_class": "locally bounded measurable",
+    "weaker_quotient_class": "locally integrable measurable"
+  },
+  "final_control_design": "e2c659ef1c1af926de63b69bf6c9ead6a95feaf5",
+  "frozen_sources": [
+    {
+      "commit": "fdd349dcf6ba1b104e27866ae66b4c89752d5f05",
+      "git_blob": "c901150a44e981ed2ef548d8b123d4e6e99f2c27",
+      "path": "research/l-families/atlas/generalized/CUSP_MATRIX_PERIOD_POSITIVITY.md",
+      "sha256_lf": "fabb13f35e0f6a45ddbc3b5f54f0376e9c0aec5d75b44ae9b4ae10cf17136c0c"
+    },
+    {
+      "commit": "fdd349dcf6ba1b104e27866ae66b4c89752d5f05",
+      "git_blob": "5044fd2901aaafad015ee056388966bb2d8e2674",
+      "path": "research/l-families/atlas/generalized/cusp_matrix_period_positivity.py",
+      "sha256_lf": "719f7b8fa6d52efb88ec0d7162a15a5c146b51256eacdfef514b6ca12b788eed"
+    },
+    {
+      "commit": "fdd349dcf6ba1b104e27866ae66b4c89752d5f05",
+      "git_blob": "e601072cd96a3ac8ec7eca6e73c2a08f29c44c7b",
+      "path": "research/l-families/atlas/generalized/cusp_matrix_period_positivity.json",
+      "sha256_lf": "021b0bd08e96fa4a58dfac352f4833ef86587ea273e6d656bcda8c19bf789689"
+    },
+    {
+      "commit": "fdd349dcf6ba1b104e27866ae66b4c89752d5f05",
+      "git_blob": "8841b26a3256556df178e90d78c657c775d3c01d",
+      "path": "research/l-families/atlas/generalized/cusp_matrix_period_positivity.sources.json",
+      "sha256_lf": "82a568b0d338cf45a1168206fdecbc9132bbb57c28684b22777c3768e4f3b17b"
+    },
+    {
+      "commit": "fdd349dcf6ba1b104e27866ae66b4c89752d5f05",
+      "git_blob": "b8a0878c6561816ec1617e1e3842cc781a70751b",
+      "path": "tests/test_cusp_matrix_period_positivity.py",
+      "sha256_lf": "0c681025da1e6957e412abd853052454ef5c8f03c56b3c9c64cb8379bf3764a5"
+    },
+    {
+      "commit": "bd53c016dbd006ac5e40d4fff412162a68e99525",
+      "git_blob": "fddbcc89852d2e9280d2208b67603855f6f8667c",
+      "path": "research/l-families/atlas/generalized/THETA_SOURCE_QUOTIENT_TENSOR_COHERENCE.md",
+      "sha256_lf": "4271b58d5ed8ea805441ae38fd720baa6c698866e94a5023c7813a6eb7cd1442"
+    },
+    {
+      "commit": "e2c659ef1c1af926de63b69bf6c9ead6a95feaf5",
+      "git_blob": "2fc590b7fac8681d5afde0c576693193c56306e7",
+      "path": "research/l-families/atlas/generalized/THETA_SOURCE_QUOTIENT_TENSOR_COHERENCE.md",
+      "sha256_lf": "a45c015fc8a07f76ca9c23411ea3854397b3afdf01205a0c33c6594926d3c5f0"
+    }
+  ],
+  "references": [
+    {
+      "passage": "Anderson, Shorted operators (1971), classical finite maximal shorted form",
+      "url": "https://doi.org/10.1137/0120053"
+    },
+    {
+      "passage": "Anderson-Trapp, Shorted Operators II (1975), classical maximality; proof here is native finite algebra",
+      "url": "https://doi.org/10.1137/0128007"
+    },
+    {
+      "passage": "Ando, Generalized Schur complements (1979), classical quotient context; not an imported unread theorem",
+      "url": "https://doi.org/10.1016/0024-3795(79)90040-5"
+    }
+  ],
+  "remote_bytes_authenticated": false,
+  "schema": "theta_source_quotient_tensor_coherence-sources-v1"
+}
