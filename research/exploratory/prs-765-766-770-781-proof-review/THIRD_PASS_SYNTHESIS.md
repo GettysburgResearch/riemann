@@ -8,7 +8,7 @@
 
 This pass independently reconstructs the second-pass Hecke and divisor
 arguments, repairs the load-bearing import boundary, and replaces the
-Miller-echel​​on growth bottleneck by the exact source-normalized Poincare
+Miller-echelon growth bottleneck by the exact source-normalized Poincare
 coefficient frame already present in PR #766.
 
 ## Current front doors
@@ -19,36 +19,16 @@ coefficient frame already present in PR #766.
 
 ---
 
-## 1. Reconstruction verdict on the Hecke theorem
+## 1. Hecke reconstruction
 
-The matched Hecke theorem survives reconstruction.
-
-The exact parent identities are retained:
-
-\[
-M_X(e_f)
-=1+
-\frac{\pi}{2L(1,\operatorname{sym}^2 f)}
-\sum_n\frac{\lambda_f(n)^2}{n}Q(k,4\pi n),
-\]
-
-and
-
-\[
-\sum_n\lambda_f(n)^2n^{-s}
-=
-\frac{\zeta(s)L(s,\operatorname{sym}^2 f)}{\zeta(2s)}.
-\]
-
-The Gamma-tail Mellin inequality preserves this exact positive series and
-gives
+The matched Hecke theorem survives reconstruction. The exact parent
+Rankin--Selberg identities and the Gamma-tail Mellin inequality give
 
 \[
 M_X(e_f)\ll\log k.
 \]
 
-The one additional automorphic input is now reconstructed explicitly: the
-standard comparison
+The one additional automorphic input is now made explicit:
 
 \[
 L(1+u,\operatorname{sym}^2f)
@@ -56,9 +36,9 @@ L(1+u,\operatorname{sym}^2f)
 \qquad0\le u\le1/\log k,
 \]
 
-follows by integrating the usual logarithmic-derivative bound in the
-symmetric-square zero-free strip already imported by the parent.  It remains
-an imported classical fact, not a new zero-free theorem.
+obtained by integrating the standard logarithmic-derivative bound in the
+symmetric-square zero-free strip already imported by the parent. It remains
+a classical import, not a new zero-free theorem.
 
 For every adversarial selected set of `r_k` Hecke eigenlines,
 
@@ -66,11 +46,11 @@ For every adversarial selected set of `r_k` Hecke eigenlines,
 \frac1kG_S^{-1/2}I_S(1-c/k)G_S^{-1/2}
 =
 -\frac1{2c}I
-+O\!\left(\frac{r_k\log k}{k}\right),
++O\!\left(\frac{r_k\log k}{k}\right).
 \]
 
-so `r_k=o(k/log k)` is endpoint-zero-free.  The open Hecke question is the
-constant-scale window, not the former four-logarithm gap.
+Hence `r_k=o(k/log k)` is endpoint-zero-free. The open Hecke question is
+the constant-scale window, not the former four-logarithm gap.
 
 ---
 
@@ -86,7 +66,7 @@ J_{k-1}(4\pi\sqrt{mn}/q).
 \]
 
 When `M=o(k/log k)`, its distance from the identity is
-superpolynomially small.  The Gram-dual vectors `w_l` therefore satisfy
+superpolynomially small. The Gram-dual vectors `w_l` satisfy
 
 \[
 a_{w_l}(m)=\delta_{lm}\quad(m\le M),
@@ -94,12 +74,9 @@ a_{w_l}(m)=\delta_{lm}\quad(m\le M),
 G(w_l)=A_l(1+o(k^{-N}))
 \]
 
-for every fixed `N`.
-
-Their leading Fourier mode already consumes essentially their entire
-Petersson energy.  Consequently the complete low-domain mass and the entire
-Fourier tail above mode `M` are superpolynomially small.  This replaces the
-old `k^{2J}` Miller-echel​​on cost by an exact minimum-energy source statement.
+for every fixed `N`. Their leading Fourier mode consumes essentially their
+entire Petersson energy. The complete low-domain mass and the full Fourier
+tail above mode `M` are therefore superpolynomially small.
 
 No unauthenticated projection or fitted basis is introduced.
 
@@ -107,16 +84,8 @@ No unauthenticated projection or fitted basis is introduced.
 
 ## 3. Exact one-mode centers
 
-The pure source mode `q^m` has the completed scalar period
-
-\[
-T_m(c)=
-C(s)\frac{\Gamma(k-1+s)}{(4\pi m)^{k-1+s}}
-+D(s)\frac{\Gamma(k-s)}{(4\pi m)^{k-s}},
-\qquad s=1-c/k.
-\]
-
-Its unique endpoint zero satisfies
+The pure source mode `q^m` has scalar completed period `T_m(c)`. Its unique
+endpoint zero satisfies
 
 \[
 \widehat c_{k,m}
@@ -136,58 +105,53 @@ and
 
 uniformly for `m=o(k/log k)`.
 
-This corrects the interpretation of the previous pass.  The scale
-`J^2/k` governs finite-block coupling **after recentering**, while the literal
-center `12J` first drifts by order
+This corrects the interpretation of the previous pass. The scale `J^2/k`
+governs finite-block coupling **after recentering**, while the literal center
+`12J` first drifts by order
 
 \[
 J^2\log(k/J)/k.
 \]
 
-Thus fixed-center and recentered transitions are different.
-
 ---
 
 ## 4. Recentered determinant closure
 
-Let
+Assume
 
 \[
 L(k)\log(k+2)=o(k).
 \]
 
-For every `J<=L(k)`, take a fixed-radius disc about the exact center
-`chat_{k,J}`.  Split
+Using the exact split
 
 \[
 S_k=
 \operatorname{span}\{w_1,\ldots,w_{2L}\}
-\mathbin{\perp_G}W_{2L+1}.
+\mathbin{\perp_G}W_{2L+1},
 \]
 
-The far block is coercive by order `k/L`, hence invertible.  Its Schur
-correction is superpolynomially small.  In the finite block, symmetric
-source scaling makes every off-diagonal entry exponentially small:
+the far block is coercive by order `k/L` and its Schur correction is
+superpolynomially small. In the finite block, symmetric source scaling gives
 
 \[
 \frac{|H_{lm}|}{\sqrt{A_lA_m}}
 \ll
-\sigma_{-1}(|l-m|)
-\exp[-c k|l-m|/L].
+\sigma_{-1}(|l-m|)e^{-c k|l-m|/L}.
 \]
 
-Rouche against the product of exact one-mode diagonals therefore proves:
+Rouche against the product of exact one-mode diagonals proves, simultaneously
+for every `i<=J<=L(k)`:
 
-* for every `i<=J`, `D_i` has exactly one simple real zero in the `J`-th
-  recentered disc;
+* `D_i` has exactly one simple real zero in a fixed disc about
+  `c_hat(k,J)`;
 * `D_{J+1}` is nonzero there;
-* the result is simultaneous for all `J<=L(k)`;
 * the zeros weakly interlace.
 
-This gives a fixed-weight determinant census throughout the essentially
-maximal endpoint range `L=o(k/log k)`.
+This is a fixed-weight determinant census throughout the endpoint range
+`L=o(k/log k)`.
 
-Weak rather than strict interlacing is necessary.  Equality occurs exactly
+Weak rather than strict interlacing is necessary. Equality occurs exactly
 when the source Schur coupling vanishes, in which case the two simple
 determinant zeros cancel in their quotient.
 
@@ -201,7 +165,7 @@ If
 \frac{L(k)^2\log(L(k)+2)}{k}\to0,
 \]
 
-the source coupling remains perturbative:
+the source coupling is perturbative:
 
 \[
 \frac{b_{i,J}}{A_J}
@@ -210,7 +174,7 @@ the source coupling remains perturbative:
 \]
 
 All weak inequalities become strict and the parent gap and residue formulas
-hold in recentered form.  If also
+hold in recentered form. If also
 
 \[
 L^2\log(k/L+2)=o(k),
@@ -218,9 +182,8 @@ L^2\log(k/L+2)=o(k),
 
 the centers are `12J+o(1)` and the literal fixed-center laws are recovered.
 
-This improves the earlier cube-root theorem to the source-natural
-square-root/logarithmic regime.  The older theorem remains a valid smaller
-subregime but is no longer the front boundary.
+This replaces the earlier cube-root boundary by the source-natural
+square-root/logarithmic subcritical regime.
 
 ---
 
@@ -232,7 +195,7 @@ At fixed offset `h=J-i` and
 J^2/k\to\tau\in(0,\infty),
 \]
 
-the intermediate column-scaled source matrix tends to
+the intermediate source matrix tends to the triangular divisor operator
 
 \[
 (\mathcal C_\tau)_{rs}
@@ -249,19 +212,12 @@ The effective coupling is
 \[
 \boxed{
  g_h(\tau)
- =-rac{h}{24\tau}[z^h]
+ =-\frac{h}{24\tau}[z^h]
  \exp\!\left[
  -24\tau
  \sum_{r\ge1}\frac{\sigma_{-1}(r)}r z^r
  \right].
 }
-\]
-
-Equivalently, the integrating factor is built from
-
-\[
-\Phi(z)
-=-\sum_{d\ge1}\frac{\log(1-z^d)}{d^2}.
 \]
 
 Away from a root of `g_h`, strict interlacing survives and
@@ -289,18 +245,9 @@ g_2=\frac32-24\tau,
 g_3=\frac43-54\tau+288\tau^2.
 \]
 
-Therefore
-
-\[
-\boxed{\tau=1/16}
-\]
-
-is the first exact leading merger resonance.  This proves that the parent
-coefficient `sigma_{-1}(h)` cannot remain the uniform coupling through the
-square-root scale.
-
-At a resonance the present relative gap law stops.  No exact finite-weight
-cancellation is asserted without the next source term.
+Therefore `tau=1/16` is the first exact leading merger resonance. At a
+resonance the relative gap law stops; no exact finite-weight cancellation is
+asserted without the next source term.
 
 ---
 
@@ -313,15 +260,15 @@ cancellation is asserted without the next source term.
 * Fourier expansion and complex Bessel bound;
 * exact arithmetic cross coefficient;
 * source Schur identities, reflection, and Schwarz symmetry;
-* the symmetric-square zero-free machinery used in the Hecke lane.
+* symmetric-square zero-free machinery in the Hecke lane.
 
 ### New in this pass
 
-1. an explicit reconstruction of the near-one Hecke import;
-2. the Gram-dual Poincare flag and complete energy-saturation estimate;
-3. exact recentered one-mode centers and their spacing;
+1. explicit reconstruction of the near-one Hecke import;
+2. the Gram-dual Poincare flag and energy-saturation estimate;
+3. recentered one-mode centers and their spacing;
 4. the `L=o(k/log k)` determinant census;
-5. exact weak interlacing and the coupling/cancellation criterion;
+5. weak interlacing and the exact coupling/cancellation criterion;
 6. the strict square-root/logarithmic subcritical theorem;
 7. the triangular critical divisor block;
 8. the renewal generating function and critical gap/residue laws;
@@ -338,9 +285,9 @@ cancellation is asserted without the next source term.
 
 ---
 
-## 8. Best next closure target
+## 8. Next closure target
 
-The next theorem-sized target is the all-offset resolvent of
+The next theorem-sized target is the all-offset resolvent
 
 \[
 (\mathcal L_\tau x)_r
@@ -359,7 +306,6 @@ S(z)=\sum_{n\ge1}\sigma_{-1}(n)z^n.
 \]
 
 A full spectral analysis should classify which weak interlacings remain
-strict, resolve the resonance scaling, and then feed the resulting leverage
-profiles into the constant Hecke-support window.  Finite computations may
-suggest that analysis, but the current pass stops at the proved fixed-offset
-renewal law.
+strict, resolve the resonance scaling, and feed the resulting coefficient
+leverage profiles into the constant Hecke-support window. The current pass
+stops at the proved fixed-offset renewal law.
