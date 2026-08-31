@@ -17,6 +17,7 @@ SHA = re.compile(r"[0-9a-f]{40}\Z")
 MAX_BLOB = 40_000_000
 HASH_KEYS = ("sha256_lf", "file_sha256_lf_normalized")
 CACHE = {}
+COMMIT_CACHE = set()
 
 
 def need(ok, message):
@@ -36,9 +37,24 @@ def git(*args):
     return subprocess.check_output(["git", "--no-replace-objects", *args], cwd=ROOT)
 
 
-def source(commit, path):
+def validate_commit(commit):
     need(type(commit) is str and SHA.fullmatch(commit), "exact source commit")
-    need(type(path) is str and path and "\x00" not in path, "source path")
+    if commit not in COMMIT_CACHE:
+        need(git("cat-file", "-t", commit).strip() == b"commit", "Git commit type")
+        COMMIT_CACHE.add(commit)
+
+
+def source(commit, path):
+    validate_commit(commit)
+    need(
+        type(path) is str
+        and path
+        and not any(ord(char) < 32 or ord(char) == 127 for char in path)
+        and "\\" not in path
+        and ":" not in path
+        and all(part not in ("", ".", "..") for part in path.split("/")),
+        "canonical relative source path",
+    )
     key = commit, path
     if key not in CACHE:
         obj = git("rev-parse", commit + ":" + path).decode().strip()
@@ -119,7 +135,9 @@ def bindings(document):
 
 
 def build(head, base, programme):
-    need(SHA.fullmatch(head) and SHA.fullmatch(base), "exact panel heads")
+    validate_commit(head)
+    validate_commit(base)
+    need(programme in ("S", "G"), "programme identity")
     roots = sorted(
         path
         for path in git("diff", "--no-renames", "--name-only", base, head)
