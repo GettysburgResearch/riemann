@@ -1,4 +1,65 @@
-# Six-hour native-source pass: eighth checkpoint
+# Six-hour native-source pass: final mathematical checkpoint
+
+A compact map of the source, proofs, computations and remaining limits is
+[SIX_HOUR_RESEARCH_SYNTHESIS.md](native-six-hour/SIX_HOUR_RESEARCH_SYNTHESIS.md).
+All results below retain the literal primes 2,3,5, derivative sites,
+factor-two current, physical weights, observation measure and aliases.
+
+The accepted H450 certificate proves a global optimum over actual
+monotone paths, with energy about 178.6045826115; the path-image stability
+exponent 1/3 is sharp. The complete attainable pair-moment body is now
+proved, including both envelopes, all equality profiles and constructive
+realization. These are not arbitrary positive-candidate optimizations.
+The source permutation and Reynolds results also give exact obstructions
+to projecting or averaging without checking native path compatibility.
+
+The infinite fixed-prime current exists, is faithful on the full tensor
+carrier, and has a uniform strict-sign interval and positive primitive
+energy gap. Its optimizer has not been identified. The old selected
+20-row observation has limiting rank at most 15; its inverse norm must
+grow whenever it is invertible. Its failed uniform-tail comparisons
+remain UNKNOWN. The diagnostic at b602ea788ed6a74800c5dd394c118dbc14dd59d2
+passed exact replay and verifies that merely refining the local series
+cutoff or diagonally reweighting that comparison cannot repair it.
+
+A concrete replacement succeeds. All 64 ratios
+1/(2^a 3^b 5^c), with a,b,c in {1,2,3,4}, distinguish the complete
+64-dimensional tensor source at infinite horizon. Fixed local inverse
+certificates are frozen at 0103b95130de0f8151c529a0911a52842732227d,
+proof b036cc774cee43b10652efdf40a81c89d5913a388dc84e629d1d0fcc42b50109.
+The separate analytic theorem
+[EFFECTIVE_FULL_SUPPORT_THEOREM.md](native-six-hour/EFFECTIVE_FULL_SUPPORT_THEOREM.md)
+gives full rank at every integer H at least
+185088306963957322500000001. This conservative H2 bound does not alter
+the larger preregistered H0 artifact or fill an untested finite interval.
+
+The complete event campaign is frozen at
+7448c5a4eb1cd2ad7c300b7332abf4e39392a138, proof
+02a7065a92e272f6764eb235f78b011c8312358ec914adf994e4019cf8d304a8.
+All 39 target panels passed write/check/optimized-check. The collector
+also passed all three modes and authenticates all 40 frozen components,
+reconstructs every event address, and proves full rank of the selected
+minor at EVERY integer 900<=H<=281474976710656 (=2^48), with no gaps.
+It composes the already verified local source updates and modular
+eliminations; it does not rerun those calculations or claim a monolithic
+replay. Combined with the earlier certificate through 900, the complete
+physical observation is faithful for every integer 450<=H<=2^48.
+The interval from there to H2 remains unproved.
+
+Completed focused final-packet controls total 423 in ordinary Python
+and 423 with -O: the eighth-checkpoint 403, twelve effective-minor controls
+and eight exact-diagnostic controls. All required final writes and both
+checks passed. Target event panels and their collection have separate
+write/check/optimized-check records; they do not inflate the named test
+count. Older interrupted contracts are not relabeled completed.
+
+The actual higher-arity attainable body, the remaining finite-horizon
+gap, the infinite optimizer, the full retained-gamma comparison and
+all-prime completion remain open. No principal-member, RH or GRH
+conclusion is asserted. Scientific workers ran serially under unchanged
+RAM caps and reserves; only the two owned research branches were used.
+
+## Eighth checkpoint history
 
 The pass remains active until at least 17:41:25+03 on 31 August 2026.
 Completed focused final-packet controls now total 403 per interpreter mode:
