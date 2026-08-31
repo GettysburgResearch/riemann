@@ -9,8 +9,9 @@ this guide does not rewrite those authenticated sources.
 The continuation constructs an analytic realization of a classical
 Koszul Lie parent, then tests its ramification behaviour against actual
 S3/S4 covers. A separate construction completes polynomial-growth
-finite-grade arithmetic cohomology. The latest companion also realizes
-the exponential Lie source itself in arithmetic cohomology. These
+finite-grade arithmetic cohomology. A further companion realizes
+the exponential Lie source itself in arithmetic cohomology, and the
+full place-Euler companions test explicit source operations. These
 constructions are related by specified source functors, but their
 operators and convergence domains must not be identified.
 
@@ -22,6 +23,7 @@ operators and convergence domains must not be identified.
 | Arithmetic cohomology of the actual Lie source | The S3 local systems M_n themselves, with their full ramified stalks. Their actual finite cohomology still has exponential growth asymptotic to constants times 2^n/n. | Parity-signed ratio with determinant exponent (-1)^(n+i) on H^i_n. M_1 is the regular S3 representation and gives the actual closure zeta factor. | Each cohomological parity block is in S_p exactly for abs(z)<2^(-1/p). Ordinary signed Fredholm ratio for abs(z)<1/2 and all T. Actual place Euler product initially requires Q abs(Tz)<1 as well. | At T=1, unramified place factors recover F_Frobenius(z^deg); bad places need explicit invariant-Lie corrections. Near z=-1/2 the continued local exponent is T times #Z(F_Q)/6. For Q=1 modulo 3 the arithmetic T=1 source has cubic monodromy. |
 | Full invariant-Segre place Euler source | The original finite R_j algebra at every place, including full bad-place inertia and residual Frobenius. | E_R(z)=product_v sum_j tr(Frobenius on R_j^I) z^(j deg v). Compact-support Lie cohomology provides finite extraction factors. | Initially abs(z)<1/Q. The new source theorem gives single-valued meromorphic continuation to abs(z)<1 by finite extraction, without enlarging any infinite Lie operator's trace-class disk. | The bad-place correction cancels the first fractional branch and leaves zero order equal to the number of rational split good places. Surviving split-place zeros in all large degrees give a natural boundary at abs(z)=1. This is a distinct completion from the infinite polynomial-growth cohomology sum. |
 | Coherent quadratic full place Euler source | The actual algebra R_j tensor chi^j on the joint S3 times C2 cover. New full inertia at zero and infinity retains even grades. | E_chi(z) has the source-defined sign in each closed residue field and uses the homogeneous Lie twist M_n tensor chi^n for finite extraction. | Meromorphic continuation to abs(z)<1; the first Taylor poles are the roots of P_E(z^2), at radius Q^(-1/4). | The actual first grade has no H^2, so the untwisted main Q^n term disappears. The same even second Lie grade keeps the elliptic coefficient scale. The unit circle remains a natural boundary. |
+| Constructible algebra with added standard generators | Extend every finite coherent grade by ordinary j_* first, then tensor with the symmetric algebra of j_*Std in grading degree two. This is a declared order of sheaf operations. | Its full place-Euler function is the new H(z)=P_E(z^2)E_chi(z), using the actual second-relation standard summand. | Fully resonant E and D: holomorphic unit disk. Otherwise its first Taylor poles have radius Q^(-1/8). Both cases retain meromorphic continuation and natural boundary at the unit circle. | The old C2 stalk distinguishes this source from extending the generic tensor algebra: degree-three traces23 versus26, with quadratic sign. A finite ladder of extra even-grade source modules removes finitely many further pole circles, without asserting an infinite limiting construction. |
 
 The Hilbert metrics are specified in the proofs. In particular the
 arithmetic construction fixes complex realizations and norms on finitely
@@ -80,6 +82,39 @@ second elliptic denominator. Its signed coefficients have the untwisted
 weighted-divisor coefficients as a majorant, but the sharper cancellation
 comes from source cohomology and noncancellation. The source is frozen
 and validated as recorded below.
+
+The active [Euler-order companion](EULER_ORDER_AND_FOUR_DOMAINS.md)
+separates four domains of that same coherent place source. Absolute
+factor convergence stops at Q^(-1); normally convergent good-place
+logarithms grouped by closed degree stop at Q^(-1/2); the full Taylor
+series stops at its elliptic poles at Q^(-1/4); meromorphic continuation
+reaches the unit disk. Finite bad factors remain outside the good-place
+logarithm. Conditional degree grouping is not individual absolute
+convergence, and a Taylor zero is not a pole.
+
+The accompanying [arithmetic pole-divisor note](S3_WEIGHT_CIRCLE_POLE_DIVISOR.md)
+retains cancellations between grade n elliptic poles and grade2n
+principal zeros. For nonsquare Q all the even-grade elliptic poles
+survive. Over square Q a real Frobenius eigenvalue can trigger an
+exact cancellation: the seven-point source A=1,B=0, viewed over F49 by
+Frobenius squaring, cancels its grade-four apparent poles while retaining
+the grade-two poles. The coherent source has only finitely many interior
+poles precisely when every actual E/D eigenvalue satisfies alpha^2=Q.
+Even then its meromorphic natural boundary remains the unit circle.
+These packet17 statements are frozen and validated as recorded below.
+
+The active [fully resonant sequel](FINITE_RESONANT_COHERENT_POLES.md)
+makes that finite list exact: a uniform source inequality from even
+grade6 onward leaves only the two double poles of P_E(z^2). The excess
+higher-grade principal zeros themselves form dense boundary grids.
+It separates two operations on the same original function. Subtracting
+its complex principal parts gives a holomorphic remainder with
+coefficient root-limsup1, without claiming integral residues. Multiplying
+instead by the actual elliptic polynomial P_E(z^2) is a new, minimal
+degree4 cohomological pole-clearing operation; its integer coefficients
+obey h_m=c_m-2 alpha_E c_(m-2)+Q c_(m-4), again with root-limsup1.
+Neither operation changes the stated Q^(1/4) growth of the original
+c_m. Packet18 has passed validation; its exact freeze is being completed.
 
 ## Bind arithmetic sources before taking the infinite sum
 
@@ -204,15 +239,39 @@ Packet 16, the coherent quadratic full place-Euler sequel, is frozen at
 `5104c38614461a3e080c93631b855094d0e5961a`. Its 26 tests passed in each
 mode, all producer modes and focused Ruff checks passed, and its proof,
 runtime and controls have been independently read. Exact-freeze review
-is being deposited with the source. Through this checkpoint, root reports
-490 new GLO tests passing per mode across the analytic and geometric
-continuation packets; this is not a count restricted to this directory.
+is being deposited with the source. Through packet19, root reports562
+new GLO tests passing per mode across the analytic and geometric
+continuation packets; this is not a count restricted to this directory
+or a count limited to checkpoint6.
 
-Packet 17 is active outside checkpoint 6. Its four-domain Euler-order
-note and exact arithmetic pole-divisor companion are being assembled
-with bounded source controls. Their final source binding, execution and
-exact-freeze review are pending. No pending packet is included in the
-passed test count.
+Packet 17 is frozen at `f977b2e9e962b4ad560ce0edfac6dd97fb395d6b` outside
+checkpoint 6. Its four-domain Euler-order note and exact arithmetic
+pole-divisor companion have passed independent proof and code reading.
+All 27 tests passed in each mode, with focused Ruff and all producer
+modes also passing. Exact-freeze review is being deposited. No unexecuted
+test is included in the passed count.
+
+Packet18 makes the fully resonant coherent pole classification explicit
+by proving the uniform cancellation bound from grade6 onward and retaining
+the exact low grades. All 22 tests passed in each mode, focused Ruff and
+all producer modes passed, and independent proof/code reading found no
+blocking issue. It is frozen at
+`e196fa1e4265b482ad1fa495436ed0e4ff088419`; its exact-freeze independent
+review is available.
+
+Packet19's [constructible source theorem](CONSTRUCTIBLE_POLE_CLEARING_SOURCE.md)
+gives an actual algebra for the new polynomial modification and its sharp
+two-case coefficient growth. Its 23 tests passed in each mode, with focused
+Ruff and all producer modes also passing. It is frozen at
+`c3cdd2528595cbf22c31d88a40c8a611b6385752`. The proof, runtime and tests
+have independently been read without a blocking finding; the exact-freeze
+independent review is available. It defines a different
+constructible extension of the same generic tensor algebra, not a
+universal statement that ordinary j_* commutes with tensor products or
+symmetric powers. Its finite even-grade ladder adjoins specified actual
+nontrivial relation modules and guarantees larger holomorphic disks for
+each finite choice. No convergence of an infinite ladder or enlargement
+of the original Lie operator's ideal domain is claimed.
 
 The current packets' source freezes are direct ancestors of this branch.
 The earlier graph companions retain their separately published review
