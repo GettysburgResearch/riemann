@@ -66,7 +66,7 @@ Put
 Y(x)=\xi(1/2+x),\quad F=Y'/Y,\quad
 H(x,y)=\frac{F(x)+F(y)}{x+y},\quad C(x,y)=\frac1{x+y}.
 \]
-The pass proved these source-exact regions, including confluences:
+The pass proved these replayed source-exact regions, including confluences:
 
 - at most four nodes \(x_i\ge256\): \(H\succeq C/4\);
 - one node in \([1/2,256]\) and up to three at least \(2^{30}\):
@@ -74,9 +74,12 @@ The pass proved these source-exact regions, including confluences:
 - two nodes in \([32,256]\) and two at least \(2^{40}\):
   \(H\succeq C/50\);
 - three nodes in \([64,256]\) and one at least \(2^{34}\):
-  \(H\succeq C/200\);
-- for arbitrary order \(n\), nodes at least \(16\cdot3^n\):
-  \(H\succeq C\).
+  \(H\succeq C/200\).
+
+A separate proof-only packet derives the growing-order statement
+\(H\succeq C\) for arbitrary order \(n\) when every node is at least
+\(16\cdot3^n\). Its source note retains its own review boundary and is not
+used to strengthen any fixed-height all-order claim.
 
 The algebraic exponential-core operator is well defined and dense. Extending
 it as a globally closable \(F(A_0)\) is itself an RH-sensitive domain claim;
