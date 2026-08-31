@@ -78,7 +78,7 @@ The convergence is sequentially uniform over the declared range: a failure
 would select a sequence `J=o(sqrt(k))` contradicting S3.  Also
 
 \[
- \mu_{\nu,4\pi J}=m_{k,J}+o(1),qquad
+ \mu_{\nu,4\pi J}=m_{k,J}+o(1),\qquad
  \mu_{\nu,4\pi J}\longrightarrow\infty.             \tag{S4}
 \]
 
@@ -143,7 +143,7 @@ On the cusp,
 
 \[
  |r_0(z)|\le R(y):={2e^{-2\pi y}\over(1-e^{-2\pi y})^2},
- \qquad R(1)=R_1,quad R(H_{k,J})=o(1).               \tag{S9}
+ \qquad R(1)=R_1,\quad R(H_{k,J})=o(1).              \tag{S9}
 \]
 
 After integrating over the complete x-period, the mass in
