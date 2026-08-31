@@ -4,7 +4,7 @@ Status: **reviewed local/global boundaries, a classical signed parent, and
 an actual global period quotient; no new automorphic L-function or external
 novelty claim**.
 
-For the current twenty-two-packet result and the remaining global-object gates,
+For the current twenty-six-packet result and the remaining global-object gates,
 start with [CONTINUATION_RESULTS.md](CONTINUATION_RESULTS.md).
 The [all-weight cusp-flag family](CUSP_FLAG_QUOTIENT_GLOBAL_FAMILY.md)
 extends the [weight-24 quotient](RANKIN_SELBERG_QUOTIENT_GLOBAL_PARENT.md).
@@ -18,6 +18,15 @@ The [signed counting law](CUSP_FLAG_SIGNED_RIEMANN_VON_MANGOLDT.md)
 counts zeros minus poles. The [full-period real-zero theorem](CUSP_PERIOD_OFF_CENTRAL_REAL_ZEROS.md)
 forces off-central real zeros at k=12d>=6144 without claiming they survive
 in the quotient.
+The [uncancelled quotient-zero theorem](CUSP_FLAG_UNCANCELLED_OFF_CENTRAL_REAL_ZEROS.md)
+pays that separate noncancellation obligation. Its
+[effective endpoint theorem](CUSP_FLAG_EFFECTIVE_ENDPOINT_SEPARATION.md) and
+[all-weight extension](CUSP_FLAG_ALL_WEIGHT_ENDPOINT_SEPARATION.md) prove an
+actual reflected quotient-zero pair for every even k>=65536.
+The [local simplicity theorem](CUSP_FLAG_LOCAL_SIMPLE_ENDPOINT_ZERO.md)
+separately proves eventual uniqueness, simplicity and reality in each fixed
+shrinking disc around 12/k and 1-12/k. Its sufficient threshold is not
+computed; 65536 is an existence bound, not a simplicity bound.
 Each has an independent exact-source audit in the continuation map.
 The packet introductions below and the wave-2 research map record the
 earlier six-packet stage; their open-work lists are superseded by that
