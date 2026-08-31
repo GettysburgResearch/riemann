@@ -70,12 +70,22 @@ are exactly the within-cluster pairs of each crowded class.
 **2 (how each cluster splits).** Fix a crowded pair, `mu = mu_c`.
 `F(w, 0) = w^mu u(w)` with `u(0) != 0` (step 1), so `c_{0,mu} != 0`;
 with (T) the Newton polygon of `F` at the origin is the single
-segment from `(0, mu)` to `(mu, 0)`. By Newton-Puiseux
-(single-segment case; IMPORTED above), the local zero set over the
-`s`-disc consists of `mu` branches `w = lam_r s + O(s^2)` whose
-slopes `lam_r` are the roots of `A_c` — distinct since
-`disc(A_c) != 0` — and each branch, being a simple order-1 Puiseux
-branch, is analytic. Hence for every within-cluster pair,
+segment from `(0, mu)` to `(mu, 0)`. Blow up: substituting
+`w = s (lam_r + v)` and using (T.a) (nothing below the diagonal),
+
+```text
+F(s (lam_r + v), s) = s^mu [ A_c(lam_r + v) + s R(v, s) ]
+```
+
+with `R` polynomial. Since `A_c(lam_r) = 0` and `A_c'(lam_r) != 0`
+(disc != 0), the implicit function theorem gives a unique analytic
+`v_r(s)`, `v_r(0) = 0`: an analytic branch
+`w^{(r)}(s) = lam_r s + O(s^2)` for each of the `mu` distinct roots
+`lam_r` of `A_c` (`deg A_c = mu` by (T)). These `mu` branches are
+distinct and exhaust the local zero set (F has w-degree mu locally
+by Weierstrass at `c_{0,mu} != 0`; the count matches — the general
+Newton-Puiseux machinery, IMPORTED above, is needed only for this
+bookkeeping sentence). Hence for every within-cluster pair,
 `ord_s (w^{(r)} - w^{(r')}) = 1` exactly.
 
 **3 (assembling the discriminant).** `M_m` is monic in `z`
