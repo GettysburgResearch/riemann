@@ -1,0 +1,533 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "arithmetic_domain": "integers and rational coefficients; pi and exp(-2*pi) are unevaluated symbolic labels",
+  "artifact_sha256_lf": {
+    "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246",
+    "research/exploratory/xi_actual_kernel_laplace_concentration.py": "e339d8e7ea8fd71b2f1824a766e899eb36d39747924444d66eb8fbbe77a3aab3",
+    "research/exploratory/xi_actual_kernel_laplace_concentration.sources.json": "7d2b884885fb4f46328a33628c875a66fabfa3db29e1fd61f99c7825758f3e74",
+    "tests/test_xi_actual_kernel_laplace_concentration.py": "cd2d4ad75e6ec3fa53b18f88b8a1c973446d16a8e945de2b76a47c092cda9ba4"
+  },
+  "boundary_layer_controls": [
+    {
+      "K": 1,
+      "c": "gamma/pi",
+      "gamma": "-1",
+      "rho_limit": "5/2"
+    },
+    {
+      "K": 1,
+      "c": "gamma/pi",
+      "gamma": "0",
+      "rho_limit": "1/2"
+    },
+    {
+      "K": 1,
+      "c": "gamma/pi",
+      "gamma": "1/4",
+      "rho_limit": "0"
+    },
+    {
+      "K": 1,
+      "c": "gamma/pi",
+      "gamma": "1/2",
+      "rho_limit": "-1/2"
+    },
+    {
+      "K": 1,
+      "c": "gamma/pi",
+      "gamma": "1",
+      "rho_limit": "-3/2"
+    },
+    {
+      "K": 3,
+      "c": "gamma/pi",
+      "gamma": "-1",
+      "rho_limit": "5/6"
+    },
+    {
+      "K": 3,
+      "c": "gamma/pi",
+      "gamma": "0",
+      "rho_limit": "1/6"
+    },
+    {
+      "K": 3,
+      "c": "gamma/pi",
+      "gamma": "1/4",
+      "rho_limit": "0"
+    },
+    {
+      "K": 3,
+      "c": "gamma/pi",
+      "gamma": "1/2",
+      "rho_limit": "-1/6"
+    },
+    {
+      "K": 3,
+      "c": "gamma/pi",
+      "gamma": "1",
+      "rho_limit": "-1/2"
+    },
+    {
+      "K": 5,
+      "c": "gamma/pi",
+      "gamma": "-1",
+      "rho_limit": "1/2"
+    },
+    {
+      "K": 5,
+      "c": "gamma/pi",
+      "gamma": "0",
+      "rho_limit": "1/10"
+    },
+    {
+      "K": 5,
+      "c": "gamma/pi",
+      "gamma": "1/4",
+      "rho_limit": "0"
+    },
+    {
+      "K": 5,
+      "c": "gamma/pi",
+      "gamma": "1/2",
+      "rho_limit": "-1/10"
+    },
+    {
+      "K": 5,
+      "c": "gamma/pi",
+      "gamma": "1",
+      "rho_limit": "-3/10"
+    },
+    {
+      "K": 7,
+      "c": "gamma/pi",
+      "gamma": "-1",
+      "rho_limit": "5/14"
+    },
+    {
+      "K": 7,
+      "c": "gamma/pi",
+      "gamma": "0",
+      "rho_limit": "1/14"
+    },
+    {
+      "K": 7,
+      "c": "gamma/pi",
+      "gamma": "1/4",
+      "rho_limit": "0"
+    },
+    {
+      "K": 7,
+      "c": "gamma/pi",
+      "gamma": "1/2",
+      "rho_limit": "-1/14"
+    },
+    {
+      "K": 7,
+      "c": "gamma/pi",
+      "gamma": "1",
+      "rho_limit": "-3/14"
+    },
+    {
+      "K": 9,
+      "c": "gamma/pi",
+      "gamma": "-1",
+      "rho_limit": "5/18"
+    },
+    {
+      "K": 9,
+      "c": "gamma/pi",
+      "gamma": "0",
+      "rho_limit": "1/18"
+    },
+    {
+      "K": 9,
+      "c": "gamma/pi",
+      "gamma": "1/4",
+      "rho_limit": "0"
+    },
+    {
+      "K": 9,
+      "c": "gamma/pi",
+      "gamma": "1/2",
+      "rho_limit": "-1/18"
+    },
+    {
+      "K": 9,
+      "c": "gamma/pi",
+      "gamma": "1",
+      "rho_limit": "-1/6"
+    },
+    {
+      "K": 11,
+      "c": "gamma/pi",
+      "gamma": "-1",
+      "rho_limit": "5/22"
+    },
+    {
+      "K": 11,
+      "c": "gamma/pi",
+      "gamma": "0",
+      "rho_limit": "1/22"
+    },
+    {
+      "K": 11,
+      "c": "gamma/pi",
+      "gamma": "1/4",
+      "rho_limit": "0"
+    },
+    {
+      "K": 11,
+      "c": "gamma/pi",
+      "gamma": "1/2",
+      "rho_limit": "-1/22"
+    },
+    {
+      "K": 11,
+      "c": "gamma/pi",
+      "gamma": "1",
+      "rho_limit": "-3/22"
+    },
+    {
+      "K": 13,
+      "c": "gamma/pi",
+      "gamma": "-1",
+      "rho_limit": "5/26"
+    },
+    {
+      "K": 13,
+      "c": "gamma/pi",
+      "gamma": "0",
+      "rho_limit": "1/26"
+    },
+    {
+      "K": 13,
+      "c": "gamma/pi",
+      "gamma": "1/4",
+      "rho_limit": "0"
+    },
+    {
+      "K": 13,
+      "c": "gamma/pi",
+      "gamma": "1/2",
+      "rho_limit": "-1/26"
+    },
+    {
+      "K": 13,
+      "c": "gamma/pi",
+      "gamma": "1",
+      "rho_limit": "-3/26"
+    },
+    {
+      "K": 15,
+      "c": "gamma/pi",
+      "gamma": "-1",
+      "rho_limit": "1/6"
+    },
+    {
+      "K": 15,
+      "c": "gamma/pi",
+      "gamma": "0",
+      "rho_limit": "1/30"
+    },
+    {
+      "K": 15,
+      "c": "gamma/pi",
+      "gamma": "1/4",
+      "rho_limit": "0"
+    },
+    {
+      "K": 15,
+      "c": "gamma/pi",
+      "gamma": "1/2",
+      "rho_limit": "-1/30"
+    },
+    {
+      "K": 15,
+      "c": "gamma/pi",
+      "gamma": "1",
+      "rho_limit": "-1/10"
+    }
+  ],
+  "caps": {
+    "K_max": 15,
+    "q_max": 6,
+    "rational_input_bits": 64
+  },
+  "current_weight_identities_replayed": 224,
+  "normalization": {
+    "PhiXi_operator_coefficients": [
+      "0",
+      "6",
+      "4"
+    ],
+    "actual_kernel_over_historical_phi0": 2,
+    "basis": "e^(u/2)*[psi(x),x*psi'(x),x^2*psi''(x)]",
+    "frequency_rescaling": false,
+    "phi0_Mellin_coefficient_of_z_times_z_minus_one": "1/4",
+    "phi0_operator_coefficients": [
+      "0",
+      "3",
+      "2"
+    ],
+    "quadratic_density_multiplier": 4,
+    "standard_Xi_Mellin_coefficient": "1/2"
+  },
+  "odd_order_constants": [
+    {
+      "K": 1,
+      "P": [
+        1
+      ],
+      "Q": [
+        1
+      ],
+      "R_constant": "1",
+      "R_x_squared_coefficient": "0",
+      "adapted_p_limit": "1/2",
+      "current_defect_times_pi_E_divided_by_h_squared_limit": "1/4",
+      "gain_divided_by_pi_xi_squared_E_limit": "1",
+      "m2_times_pi_E_limit": "3/2",
+      "p_correction_times_pi_E_xi_squared_limit": "0",
+      "window_width_times_pi_E_xi_squared_divided_by_M_limit_M_positive": 1,
+      "zero_shift_times_pi_E_xi_squared_limit": "1/4"
+    },
+    {
+      "K": 3,
+      "P": [
+        1,
+        3
+      ],
+      "Q": [
+        3,
+        1
+      ],
+      "R_constant": "1/3",
+      "R_x_squared_coefficient": "8/9",
+      "adapted_p_limit": "1/6",
+      "current_defect_times_pi_E_divided_by_h_squared_limit": "1/4",
+      "gain_divided_by_pi_xi_squared_E_limit": "1/3",
+      "m2_times_pi_E_limit": "3/2",
+      "p_correction_times_pi_E_xi_squared_limit": "2/3",
+      "window_width_times_pi_E_xi_squared_divided_by_M_limit_M_positive": 3,
+      "zero_shift_times_pi_E_xi_squared_limit": "1/4"
+    },
+    {
+      "K": 5,
+      "P": [
+        1,
+        10,
+        5
+      ],
+      "Q": [
+        5,
+        10,
+        1
+      ],
+      "R_constant": "1/5",
+      "R_x_squared_coefficient": "8/5",
+      "adapted_p_limit": "1/10",
+      "current_defect_times_pi_E_divided_by_h_squared_limit": "1/4",
+      "gain_divided_by_pi_xi_squared_E_limit": "1/5",
+      "m2_times_pi_E_limit": "3/2",
+      "p_correction_times_pi_E_xi_squared_limit": "6/5",
+      "window_width_times_pi_E_xi_squared_divided_by_M_limit_M_positive": 5,
+      "zero_shift_times_pi_E_xi_squared_limit": "1/4"
+    },
+    {
+      "K": 7,
+      "P": [
+        1,
+        21,
+        35,
+        7
+      ],
+      "Q": [
+        7,
+        35,
+        21,
+        1
+      ],
+      "R_constant": "1/7",
+      "R_x_squared_coefficient": "16/7",
+      "adapted_p_limit": "1/14",
+      "current_defect_times_pi_E_divided_by_h_squared_limit": "1/4",
+      "gain_divided_by_pi_xi_squared_E_limit": "1/7",
+      "m2_times_pi_E_limit": "3/2",
+      "p_correction_times_pi_E_xi_squared_limit": "12/7",
+      "window_width_times_pi_E_xi_squared_divided_by_M_limit_M_positive": 7,
+      "zero_shift_times_pi_E_xi_squared_limit": "1/4"
+    },
+    {
+      "K": 9,
+      "P": [
+        1,
+        36,
+        126,
+        84,
+        9
+      ],
+      "Q": [
+        9,
+        84,
+        126,
+        36,
+        1
+      ],
+      "R_constant": "1/9",
+      "R_x_squared_coefficient": "80/27",
+      "adapted_p_limit": "1/18",
+      "current_defect_times_pi_E_divided_by_h_squared_limit": "1/4",
+      "gain_divided_by_pi_xi_squared_E_limit": "1/9",
+      "m2_times_pi_E_limit": "3/2",
+      "p_correction_times_pi_E_xi_squared_limit": "20/9",
+      "window_width_times_pi_E_xi_squared_divided_by_M_limit_M_positive": 9,
+      "zero_shift_times_pi_E_xi_squared_limit": "1/4"
+    },
+    {
+      "K": 11,
+      "P": [
+        1,
+        55,
+        330,
+        462,
+        165,
+        11
+      ],
+      "Q": [
+        11,
+        165,
+        462,
+        330,
+        55,
+        1
+      ],
+      "R_constant": "1/11",
+      "R_x_squared_coefficient": "40/11",
+      "adapted_p_limit": "1/22",
+      "current_defect_times_pi_E_divided_by_h_squared_limit": "1/4",
+      "gain_divided_by_pi_xi_squared_E_limit": "1/11",
+      "m2_times_pi_E_limit": "3/2",
+      "p_correction_times_pi_E_xi_squared_limit": "30/11",
+      "window_width_times_pi_E_xi_squared_divided_by_M_limit_M_positive": 11,
+      "zero_shift_times_pi_E_xi_squared_limit": "1/4"
+    },
+    {
+      "K": 13,
+      "P": [
+        1,
+        78,
+        715,
+        1716,
+        1287,
+        286,
+        13
+      ],
+      "Q": [
+        13,
+        286,
+        1287,
+        1716,
+        715,
+        78,
+        1
+      ],
+      "R_constant": "1/13",
+      "R_x_squared_coefficient": "56/13",
+      "adapted_p_limit": "1/26",
+      "current_defect_times_pi_E_divided_by_h_squared_limit": "1/4",
+      "gain_divided_by_pi_xi_squared_E_limit": "1/13",
+      "m2_times_pi_E_limit": "3/2",
+      "p_correction_times_pi_E_xi_squared_limit": "42/13",
+      "window_width_times_pi_E_xi_squared_divided_by_M_limit_M_positive": 13,
+      "zero_shift_times_pi_E_xi_squared_limit": "1/4"
+    },
+    {
+      "K": 15,
+      "P": [
+        1,
+        105,
+        1365,
+        5005,
+        6435,
+        3003,
+        455,
+        15
+      ],
+      "Q": [
+        15,
+        455,
+        3003,
+        6435,
+        5005,
+        1365,
+        105,
+        1
+      ],
+      "R_constant": "1/15",
+      "R_x_squared_coefficient": "224/45",
+      "adapted_p_limit": "1/30",
+      "current_defect_times_pi_E_divided_by_h_squared_limit": "1/4",
+      "gain_divided_by_pi_xi_squared_E_limit": "1/15",
+      "m2_times_pi_E_limit": "3/2",
+      "p_correction_times_pi_E_xi_squared_limit": "56/15",
+      "window_width_times_pi_E_xi_squared_divided_by_M_limit_M_positive": 15,
+      "zero_shift_times_pi_E_xi_squared_limit": "1/4"
+    }
+  ],
+  "rounding_contract": "no rounded transcendental evaluation; analytic inequalities are proved in the note",
+  "schema": "xi-actual-kernel-laplace-v1",
+  "scope": {
+    "L105413_complex_ray_claim_imported": false,
+    "analytic_proof_formally_machine_verified": false,
+    "floating_point_Xi_samples": 0,
+    "new_real_concentration_proof_resident": true,
+    "ninety_percent_density_one_or_RH": false,
+    "novelty_claim": false,
+    "quadrature_or_fitted_asymptotics": false,
+    "source_Pick_or_physical_scale_transfer": false
+  },
+  "source_authentication": {
+    "manifest_sha256_canonical_json": "27fa3deee25d5998c723c678ac80f6869ba491d8e9c57d60f3b3c718b6558723",
+    "remote_pages_authenticated": false,
+    "source_count": 6
+  },
+  "status": "ANALYTIC_PROOF_IN_NOTE_WITH_EXACT_BOUNDED_ALGEBRA_CONTROLS",
+  "tail_constants": {
+    "coarse_r_upper_from_pi_gt_3_e_gt_2": "1/32",
+    "denominator_lower_factor_before_kappa_xi_power_H0_E_minus_3_over_2": "2*exp(-2*pi)/27",
+    "global_product_Gaussian_majorant_multiplier": 9,
+    "phi0_upper_divided_by_pi_squared_U": "64/31",
+    "theta_sum_upper": "32/31"
+  },
+  "weighted_moment_constants_times_pi_E_power_q": [
+    {
+      "limit": "1",
+      "q": 0
+    },
+    {
+      "limit": "3/2",
+      "q": 1
+    },
+    {
+      "limit": "15/4",
+      "q": 2
+    },
+    {
+      "limit": "105/8",
+      "q": 3
+    },
+    {
+      "limit": "945/16",
+      "q": 4
+    },
+    {
+      "limit": "10395/32",
+      "q": 5
+    },
+    {
+      "limit": "135135/64",
+      "q": 6
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "authoring_base": "cce5552c9de8a6ec0206977fdd7119a7fab3d874",
+  "frozen_sources": [
+    {
+      "commit": "d38961c15fc76d671cef4fddfc92d3c866af4fd5",
+      "git_blob": "9688e30825fcc3d2b13570539bf03299407eae87",
+      "id": "NA",
+      "path": "research/exploratory/XI_COMPANION_IMAGINARY_AXIS_SAMPLING.md",
+      "role": "AX1-2 moments and companion; AX7 no common axis zero; AX21 Wronskian",
+      "sha256_lf": "a9d6b51b3b2f1ccb388fb8d74e115023c622115b169d3214f071ef9005034081"
+    },
+    {
+      "commit": "9da33e7ea2b15a4badb3cb436e38e54762ad5e1d",
+      "git_blob": "e592a4c031876f56f07d28b7e18a8a7cf6e826f4",
+      "id": "GH",
+      "path": "research/exploratory/XI_COMPANION_GLOBAL_HEIGHT_BOUNDARY.md",
+      "role": "GH1-4 native ratio and inner premise; GH3/16 pure component infinite height",
+      "sha256_lf": "5bf33ffd58c3fe277f4bfb0408f0805eae1b2f34aab49bb71e4c714afb80dc6d"
+    },
+    {
+      "commit": "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+      "git_blob": "fa24f9c8e0a87709d1a297a4e72136c1135d066c",
+      "id": "XL",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+      "role": "XL1-4 actual Phi=2phi0; XL11 entire positive-kernel moment justification",
+      "sha256_lf": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246"
+    },
+    {
+      "commit": "36eddbbf065959f535ca4a7b08455d489ed4bd18",
+      "git_blob": "d44f3b58e7dbd9ec847d771b2299c6fabc21f5df",
+      "id": "LP",
+      "path": "research/exploratory/HARDY_LOW_PASS_HEIGHT_EQUIVALENCE.md",
+      "role": "LP1-3 pure Blaschke infinite height implies every bare zero-start lowpass trace infinite",
+      "sha256_lf": "ca94d882bc9ee69ae8e0a277ccc13ca7e7b86ab95a52d60eed16bb110f32bc72"
+    },
+    {
+      "commit": "7aed2ec0b99b9d7f2fb94a774922a83d5b84a870",
+      "git_blob": "cd74bd06267eb4d60bc977353d11f6a0fb72ba6a",
+      "id": "CP",
+      "path": "research/exploratory/COPRIME_INFINITE_HEIGHT_PHYSICAL_CAPTURE.md",
+      "role": "CP2-4 coprime infinite-height does not imply corrected physical trace divergence",
+      "sha256_lf": "b9ab266898129389b94a9ed494b140422fc823552c6b69bf22ed36a9dbb2e7f7"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "7fbf3731f286ddfc9eb1d10ede5941ab2156817a",
+      "id": "L106620",
+      "path": "claims/lemmas/L-106620-mesoscopic-frozen-riemann-siegel-gauge.md",
+      "role": "L106620.1,.4-.6 constant positive lambda and native Theta0/Theta5",
+      "sha256_lf": "23e368f246606b0a8b4f53bec9e65e1dec21bdd207197387461268b4ca1bb7d0"
+    }
+  ],
+  "primitive_contract": {
+    "conditional": "outside E AND both companions inner; RH sufficient not proved",
+    "downstream": "pure coprime reduced infinite heights and bare [0,L] traces only",
+    "equivalence": "exact genuine common zero iff exceptional membership",
+    "exceptional_set": "Wzero plus fprime*gprime nonzero plus f/(i*fprime) positive real",
+    "excluded": "no explicit good lambda, finite/dense E claim, physical capture, prescribed gauge or RH conclusion",
+    "execution": "no ancestor code or actual Xi numeric values",
+    "lambda": "one positive constant; not variable scale or gauge reselection",
+    "nonvanishing": "W(0)=-mu0*mu6<0 from positive actual kernel",
+    "source": "actual unrescaled Xi, Phi=2phi0, g=f fifth derivative"
+  },
+  "schema": "xi-companion-generic-parameter-coprimality-sources-v1"
+}

@@ -1,0 +1,1162 @@
+{
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": [
+    "EXACT_RATIONAL",
+    "CERTIFIED_INTEGER_COVERAGE"
+  ],
+  "artifact_sha256_lf": {
+    "research/exploratory/XI_COMPANION_GENERIC_PARAMETER_COPRIMALITY.md": "55aa96745c3f269ac464ea7c0b8227e14e7d8ceb33f8bec2fc13f9642b33d44d",
+    "research/exploratory/xi_companion_generic_parameter_coprimality.py": "f08d9f5c3af37a98f905c0269319cc187bedadc3b26d9dc64e583e16b805be6b",
+    "research/exploratory/xi_companion_generic_parameter_coprimality.sources.json": "e88ba14281edab6365a87bedeea7edbfb8e704300dc106f262a78f5b14a246d5",
+    "tests/test_xi_companion_generic_parameter_coprimality.py": "a3caab1f7ef771465411d1b1e79ababe1e99379c953d569b3e93e8e105d80e5e"
+  },
+  "caps": {
+    "bytes": 2000000,
+    "input_degree": 16,
+    "internal_bits": 4096,
+    "internal_degree": 32,
+    "json_nodes": 20000,
+    "public_bits": 32,
+    "work": 200000
+  },
+  "coverage": {
+    "cancellation_controls": 24,
+    "charged_work": 36903,
+    "linked_controls": 8,
+    "source_notes": 6
+  },
+  "frozen_sources": [
+    {
+      "commit": "d38961c15fc76d671cef4fddfc92d3c866af4fd5",
+      "git_blob": "9688e30825fcc3d2b13570539bf03299407eae87",
+      "id": "NA",
+      "path": "research/exploratory/XI_COMPANION_IMAGINARY_AXIS_SAMPLING.md",
+      "role": "AX1-2 moments and companion; AX7 no common axis zero; AX21 Wronskian",
+      "sha256_lf": "a9d6b51b3b2f1ccb388fb8d74e115023c622115b169d3214f071ef9005034081"
+    },
+    {
+      "commit": "9da33e7ea2b15a4badb3cb436e38e54762ad5e1d",
+      "git_blob": "e592a4c031876f56f07d28b7e18a8a7cf6e826f4",
+      "id": "GH",
+      "path": "research/exploratory/XI_COMPANION_GLOBAL_HEIGHT_BOUNDARY.md",
+      "role": "GH1-4 native ratio and inner premise; GH3/16 pure component infinite height",
+      "sha256_lf": "5bf33ffd58c3fe277f4bfb0408f0805eae1b2f34aab49bb71e4c714afb80dc6d"
+    },
+    {
+      "commit": "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+      "git_blob": "fa24f9c8e0a87709d1a297a4e72136c1135d066c",
+      "id": "XL",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+      "role": "XL1-4 actual Phi=2phi0; XL11 entire positive-kernel moment justification",
+      "sha256_lf": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246"
+    },
+    {
+      "commit": "36eddbbf065959f535ca4a7b08455d489ed4bd18",
+      "git_blob": "d44f3b58e7dbd9ec847d771b2299c6fabc21f5df",
+      "id": "LP",
+      "path": "research/exploratory/HARDY_LOW_PASS_HEIGHT_EQUIVALENCE.md",
+      "role": "LP1-3 pure Blaschke infinite height implies every bare zero-start lowpass trace infinite",
+      "sha256_lf": "ca94d882bc9ee69ae8e0a277ccc13ca7e7b86ab95a52d60eed16bb110f32bc72"
+    },
+    {
+      "commit": "7aed2ec0b99b9d7f2fb94a774922a83d5b84a870",
+      "git_blob": "cd74bd06267eb4d60bc977353d11f6a0fb72ba6a",
+      "id": "CP",
+      "path": "research/exploratory/COPRIME_INFINITE_HEIGHT_PHYSICAL_CAPTURE.md",
+      "role": "CP2-4 coprime infinite-height does not imply corrected physical trace divergence",
+      "sha256_lf": "b9ab266898129389b94a9ed494b140422fc823552c6b69bf22ed36a9dbb2e7f7"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "7fbf3731f286ddfc9eb1d10ede5941ab2156817a",
+      "id": "L106620",
+      "path": "claims/lemmas/L-106620-mesoscopic-frozen-riemann-siegel-gauge.md",
+      "role": "L106620.1,.4-.6 constant positive lambda and native Theta0/Theta5",
+      "sha256_lf": "23e368f246606b0a8b4f53bec9e65e1dec21bdd207197387461268b4ca1bb7d0"
+    }
+  ],
+  "internal_cancellation_controls": [
+    {
+      "lambda": "1/2",
+      "local": {
+        "denominator_order": 0,
+        "genuine_zero_order": 0,
+        "h_zero_order": 1,
+        "internal_cancelled_order": 0,
+        "numerator_order": 0,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 1,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1",
+      "local": {
+        "denominator_order": 0,
+        "genuine_zero_order": 0,
+        "h_zero_order": 1,
+        "internal_cancelled_order": 0,
+        "numerator_order": 0,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 1,
+      "native_Xi": false
+    },
+    {
+      "lambda": "3",
+      "local": {
+        "denominator_order": 0,
+        "genuine_zero_order": 0,
+        "h_zero_order": 1,
+        "internal_cancelled_order": 0,
+        "numerator_order": 0,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 1,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1/2",
+      "local": {
+        "denominator_order": 1,
+        "genuine_zero_order": 0,
+        "h_zero_order": 2,
+        "internal_cancelled_order": 1,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 2,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1",
+      "local": {
+        "denominator_order": 1,
+        "genuine_zero_order": 0,
+        "h_zero_order": 2,
+        "internal_cancelled_order": 1,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 2,
+      "native_Xi": false
+    },
+    {
+      "lambda": "3",
+      "local": {
+        "denominator_order": 1,
+        "genuine_zero_order": 0,
+        "h_zero_order": 2,
+        "internal_cancelled_order": 1,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 2,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1/2",
+      "local": {
+        "denominator_order": 2,
+        "genuine_zero_order": 0,
+        "h_zero_order": 3,
+        "internal_cancelled_order": 2,
+        "numerator_order": 2,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 3,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1",
+      "local": {
+        "denominator_order": 2,
+        "genuine_zero_order": 0,
+        "h_zero_order": 3,
+        "internal_cancelled_order": 2,
+        "numerator_order": 2,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 3,
+      "native_Xi": false
+    },
+    {
+      "lambda": "3",
+      "local": {
+        "denominator_order": 2,
+        "genuine_zero_order": 0,
+        "h_zero_order": 3,
+        "internal_cancelled_order": 2,
+        "numerator_order": 2,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 3,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1/2",
+      "local": {
+        "denominator_order": 3,
+        "genuine_zero_order": 0,
+        "h_zero_order": 4,
+        "internal_cancelled_order": 3,
+        "numerator_order": 3,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 4,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1",
+      "local": {
+        "denominator_order": 3,
+        "genuine_zero_order": 0,
+        "h_zero_order": 4,
+        "internal_cancelled_order": 3,
+        "numerator_order": 3,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 4,
+      "native_Xi": false
+    },
+    {
+      "lambda": "3",
+      "local": {
+        "denominator_order": 3,
+        "genuine_zero_order": 0,
+        "h_zero_order": 4,
+        "internal_cancelled_order": 3,
+        "numerator_order": 3,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 4,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1/2",
+      "local": {
+        "denominator_order": 4,
+        "genuine_zero_order": 0,
+        "h_zero_order": 5,
+        "internal_cancelled_order": 4,
+        "numerator_order": 4,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 5,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1",
+      "local": {
+        "denominator_order": 4,
+        "genuine_zero_order": 0,
+        "h_zero_order": 5,
+        "internal_cancelled_order": 4,
+        "numerator_order": 4,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 5,
+      "native_Xi": false
+    },
+    {
+      "lambda": "3",
+      "local": {
+        "denominator_order": 4,
+        "genuine_zero_order": 0,
+        "h_zero_order": 5,
+        "internal_cancelled_order": 4,
+        "numerator_order": 4,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 5,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1/2",
+      "local": {
+        "denominator_order": 5,
+        "genuine_zero_order": 0,
+        "h_zero_order": 6,
+        "internal_cancelled_order": 5,
+        "numerator_order": 5,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 6,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1",
+      "local": {
+        "denominator_order": 5,
+        "genuine_zero_order": 0,
+        "h_zero_order": 6,
+        "internal_cancelled_order": 5,
+        "numerator_order": 5,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 6,
+      "native_Xi": false
+    },
+    {
+      "lambda": "3",
+      "local": {
+        "denominator_order": 5,
+        "genuine_zero_order": 0,
+        "h_zero_order": 6,
+        "internal_cancelled_order": 5,
+        "numerator_order": 5,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 6,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1/2",
+      "local": {
+        "denominator_order": 6,
+        "genuine_zero_order": 0,
+        "h_zero_order": 7,
+        "internal_cancelled_order": 6,
+        "numerator_order": 6,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 7,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1",
+      "local": {
+        "denominator_order": 6,
+        "genuine_zero_order": 0,
+        "h_zero_order": 7,
+        "internal_cancelled_order": 6,
+        "numerator_order": 6,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 7,
+      "native_Xi": false
+    },
+    {
+      "lambda": "3",
+      "local": {
+        "denominator_order": 6,
+        "genuine_zero_order": 0,
+        "h_zero_order": 7,
+        "internal_cancelled_order": 6,
+        "numerator_order": 6,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 7,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1/2",
+      "local": {
+        "denominator_order": 7,
+        "genuine_zero_order": 0,
+        "h_zero_order": 8,
+        "internal_cancelled_order": 7,
+        "numerator_order": 7,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 8,
+      "native_Xi": false
+    },
+    {
+      "lambda": "1",
+      "local": {
+        "denominator_order": 7,
+        "genuine_zero_order": 0,
+        "h_zero_order": 8,
+        "internal_cancelled_order": 7,
+        "numerator_order": 7,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 8,
+      "native_Xi": false
+    },
+    {
+      "lambda": "3",
+      "local": {
+        "denominator_order": 7,
+        "genuine_zero_order": 0,
+        "h_zero_order": 8,
+        "internal_cancelled_order": 7,
+        "numerator_order": 7,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "multiplicity": 8,
+      "native_Xi": false
+    }
+  ],
+  "local_derivative_linked_controls": [
+    {
+      "Theta0_local": {
+        "denominator_order": 0,
+        "genuine_zero_order": 1,
+        "h_zero_order": 0,
+        "internal_cancelled_order": 0,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": null
+      },
+      "Theta5_local": {
+        "denominator_order": 0,
+        "genuine_zero_order": 1,
+        "h_zero_order": 0,
+        "internal_cancelled_order": 0,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": null
+      },
+      "W_coefficients": [
+        "-3600",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-3600"
+      ],
+      "W_value": [
+        "0",
+        "0"
+      ],
+      "W_zero_order": 1,
+      "coefficientwise_bridge": {
+        "R5_equals_fifth_derivative_R0": true,
+        "coefficient_count": 8,
+        "difference_factor": 2
+      },
+      "criterion": true,
+      "f_coefficients": [
+        "5",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      "fprime_gprime_nonzero": true,
+      "g_coefficients": [
+        "0",
+        "-720"
+      ],
+      "genuine_common_zero": true,
+      "lambda": "1",
+      "model": "genuine",
+      "native_Xi": false,
+      "point": [
+        "0",
+        "1"
+      ],
+      "positive_kernel_surrogate": false,
+      "ratio_f_over_ifprime": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "Theta0_local": {
+        "denominator_order": 0,
+        "genuine_zero_order": 0,
+        "h_zero_order": 0,
+        "internal_cancelled_order": 0,
+        "numerator_order": 0,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "1/3",
+          "0"
+        ]
+      },
+      "Theta5_local": {
+        "denominator_order": 0,
+        "genuine_zero_order": 0,
+        "h_zero_order": 0,
+        "internal_cancelled_order": 0,
+        "numerator_order": 0,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "1/3",
+          "0"
+        ]
+      },
+      "W_coefficients": [
+        "-3600",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-3600"
+      ],
+      "W_value": [
+        "0",
+        "0"
+      ],
+      "W_zero_order": 1,
+      "coefficientwise_bridge": {
+        "R5_equals_fifth_derivative_R0": true,
+        "coefficient_count": 8,
+        "difference_factor": 2
+      },
+      "criterion": false,
+      "f_coefficients": [
+        "5",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      "fprime_gprime_nonzero": true,
+      "g_coefficients": [
+        "0",
+        "-720"
+      ],
+      "genuine_common_zero": false,
+      "lambda": "1/2",
+      "model": "genuine",
+      "native_Xi": false,
+      "point": [
+        "0",
+        "1"
+      ],
+      "positive_kernel_surrogate": false,
+      "ratio_f_over_ifprime": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "Theta0_local": {
+        "denominator_order": 0,
+        "genuine_zero_order": 0,
+        "h_zero_order": 0,
+        "internal_cancelled_order": 0,
+        "numerator_order": 0,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1063/1385",
+          "-624/1385"
+        ]
+      },
+      "Theta5_local": {
+        "denominator_order": 0,
+        "genuine_zero_order": 0,
+        "h_zero_order": 0,
+        "internal_cancelled_order": 0,
+        "numerator_order": 0,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "1/5",
+          "-2/5"
+        ]
+      },
+      "W_coefficients": [
+        "-3600",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-3600"
+      ],
+      "W_value": [
+        "-3600",
+        "28800"
+      ],
+      "W_zero_order": 0,
+      "coefficientwise_bridge": {
+        "R5_equals_fifth_derivative_R0": true,
+        "coefficient_count": 8,
+        "difference_factor": 2
+      },
+      "criterion": false,
+      "f_coefficients": [
+        "5",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      "fprime_gprime_nonzero": true,
+      "g_coefficients": [
+        "0",
+        "-720"
+      ],
+      "genuine_common_zero": false,
+      "lambda": "1",
+      "model": "genuine",
+      "native_Xi": false,
+      "point": [
+        "1",
+        "1"
+      ],
+      "positive_kernel_surrogate": false,
+      "ratio_f_over_ifprime": [
+        "1/16",
+        "-13/48"
+      ]
+    },
+    {
+      "Theta0_local": {
+        "denominator_order": 0,
+        "genuine_zero_order": 1,
+        "h_zero_order": 0,
+        "internal_cancelled_order": 0,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": null
+      },
+      "Theta5_local": {
+        "denominator_order": 0,
+        "genuine_zero_order": 1,
+        "h_zero_order": 0,
+        "internal_cancelled_order": 0,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": null
+      },
+      "W_coefficients": [
+        "-3600",
+        "0",
+        "-10800",
+        "0",
+        "-10800",
+        "0",
+        "-3600"
+      ],
+      "W_value": [
+        "0",
+        "0"
+      ],
+      "W_zero_order": 3,
+      "coefficientwise_bridge": {
+        "R5_equals_fifth_derivative_R0": true,
+        "coefficient_count": 8,
+        "difference_factor": 2
+      },
+      "criterion": true,
+      "f_coefficients": [
+        "5",
+        "0",
+        "-15",
+        "0",
+        "-5",
+        "0",
+        "-1"
+      ],
+      "fprime_gprime_nonzero": true,
+      "g_coefficients": [
+        "0",
+        "-720"
+      ],
+      "genuine_common_zero": true,
+      "lambda": "1",
+      "model": "excess_W_order",
+      "native_Xi": false,
+      "point": [
+        "0",
+        "1"
+      ],
+      "positive_kernel_surrogate": false,
+      "ratio_f_over_ifprime": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "Theta0_local": {
+        "denominator_order": 1,
+        "genuine_zero_order": 0,
+        "h_zero_order": 2,
+        "internal_cancelled_order": 1,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "Theta5_local": {
+        "denominator_order": 1,
+        "genuine_zero_order": 0,
+        "h_zero_order": 2,
+        "internal_cancelled_order": 1,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "W_coefficients": [
+        "-30240",
+        "0",
+        "-937440",
+        "0",
+        "-4082400",
+        "0",
+        "-7711200",
+        "0",
+        "-7711200",
+        "0",
+        "-4263840",
+        "0",
+        "-1239840",
+        "0",
+        "-151200"
+      ],
+      "W_value": [
+        "0",
+        "0"
+      ],
+      "W_zero_order": 4,
+      "coefficientwise_bridge": {
+        "R5_equals_fifth_derivative_R0": true,
+        "coefficient_count": 16,
+        "difference_factor": 2
+      },
+      "criterion": false,
+      "f_coefficients": [
+        "1",
+        "0",
+        "-25",
+        "0",
+        "-60",
+        "0",
+        "-42",
+        "0",
+        "-9",
+        "0",
+        "-1"
+      ],
+      "fprime_gprime_nonzero": false,
+      "g_coefficients": [
+        "0",
+        "-30240",
+        "0",
+        "-60480",
+        "0",
+        "-30240"
+      ],
+      "genuine_common_zero": false,
+      "lambda": "1/2",
+      "model": "cancelled_raw",
+      "native_Xi": false,
+      "point": [
+        "0",
+        "1"
+      ],
+      "positive_kernel_surrogate": false,
+      "ratio_f_over_ifprime": null
+    },
+    {
+      "Theta0_local": {
+        "denominator_order": 1,
+        "genuine_zero_order": 0,
+        "h_zero_order": 2,
+        "internal_cancelled_order": 1,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "Theta5_local": {
+        "denominator_order": 1,
+        "genuine_zero_order": 0,
+        "h_zero_order": 2,
+        "internal_cancelled_order": 1,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "W_coefficients": [
+        "-30240",
+        "0",
+        "-937440",
+        "0",
+        "-4082400",
+        "0",
+        "-7711200",
+        "0",
+        "-7711200",
+        "0",
+        "-4263840",
+        "0",
+        "-1239840",
+        "0",
+        "-151200"
+      ],
+      "W_value": [
+        "0",
+        "0"
+      ],
+      "W_zero_order": 4,
+      "coefficientwise_bridge": {
+        "R5_equals_fifth_derivative_R0": true,
+        "coefficient_count": 16,
+        "difference_factor": 2
+      },
+      "criterion": false,
+      "f_coefficients": [
+        "1",
+        "0",
+        "-25",
+        "0",
+        "-60",
+        "0",
+        "-42",
+        "0",
+        "-9",
+        "0",
+        "-1"
+      ],
+      "fprime_gprime_nonzero": false,
+      "g_coefficients": [
+        "0",
+        "-30240",
+        "0",
+        "-60480",
+        "0",
+        "-30240"
+      ],
+      "genuine_common_zero": false,
+      "lambda": "1",
+      "model": "cancelled_raw",
+      "native_Xi": false,
+      "point": [
+        "0",
+        "1"
+      ],
+      "positive_kernel_surrogate": false,
+      "ratio_f_over_ifprime": null
+    },
+    {
+      "Theta0_local": {
+        "denominator_order": 1,
+        "genuine_zero_order": 0,
+        "h_zero_order": 2,
+        "internal_cancelled_order": 1,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "Theta5_local": {
+        "denominator_order": 1,
+        "genuine_zero_order": 0,
+        "h_zero_order": 2,
+        "internal_cancelled_order": 1,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": [
+          "-1",
+          "0"
+        ]
+      },
+      "W_coefficients": [
+        "-30240",
+        "0",
+        "-937440",
+        "0",
+        "-4082400",
+        "0",
+        "-7711200",
+        "0",
+        "-7711200",
+        "0",
+        "-4263840",
+        "0",
+        "-1239840",
+        "0",
+        "-151200"
+      ],
+      "W_value": [
+        "0",
+        "0"
+      ],
+      "W_zero_order": 4,
+      "coefficientwise_bridge": {
+        "R5_equals_fifth_derivative_R0": true,
+        "coefficient_count": 16,
+        "difference_factor": 2
+      },
+      "criterion": false,
+      "f_coefficients": [
+        "1",
+        "0",
+        "-25",
+        "0",
+        "-60",
+        "0",
+        "-42",
+        "0",
+        "-9",
+        "0",
+        "-1"
+      ],
+      "fprime_gprime_nonzero": false,
+      "g_coefficients": [
+        "0",
+        "-30240",
+        "0",
+        "-60480",
+        "0",
+        "-30240"
+      ],
+      "genuine_common_zero": false,
+      "lambda": "2",
+      "model": "cancelled_raw",
+      "native_Xi": false,
+      "point": [
+        "0",
+        "1"
+      ],
+      "positive_kernel_surrogate": false,
+      "ratio_f_over_ifprime": null
+    },
+    {
+      "Theta0_local": {
+        "denominator_order": 0,
+        "genuine_zero_order": 1,
+        "h_zero_order": 0,
+        "internal_cancelled_order": 0,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": null
+      },
+      "Theta5_local": {
+        "denominator_order": 0,
+        "genuine_zero_order": 1,
+        "h_zero_order": 0,
+        "internal_cancelled_order": 0,
+        "numerator_order": 1,
+        "pole_order": 0,
+        "regular_nonzero_value": null
+      },
+      "W_coefficients": [
+        "-90000",
+        "0",
+        "-54000",
+        "0",
+        "32400",
+        "0",
+        "-3600"
+      ],
+      "W_value": [
+        "0",
+        "0"
+      ],
+      "W_zero_order": 1,
+      "coefficientwise_bridge": {
+        "R5_equals_fifth_derivative_R0": true,
+        "coefficient_count": 8,
+        "difference_factor": 2
+      },
+      "criterion": true,
+      "f_coefficients": [
+        "125",
+        "0",
+        "-75",
+        "0",
+        "15",
+        "0",
+        "-1"
+      ],
+      "fprime_gprime_nonzero": true,
+      "g_coefficients": [
+        "0",
+        "-720"
+      ],
+      "genuine_common_zero": true,
+      "lambda": "1",
+      "model": "real_rooted_common",
+      "native_Xi": false,
+      "point": [
+        "0",
+        "1"
+      ],
+      "positive_kernel_surrogate": false,
+      "ratio_f_over_ifprime": [
+        "1",
+        "0"
+      ]
+    }
+  ],
+  "moment_sign_controls": [
+    {
+      "W0": [
+        "-1",
+        "0"
+      ],
+      "actual_Xi_moments_evaluated": false,
+      "i_power6": [
+        "-1",
+        "0"
+      ],
+      "mu0": "1",
+      "mu6": "1"
+    },
+    {
+      "W0": [
+        "-6",
+        "0"
+      ],
+      "actual_Xi_moments_evaluated": false,
+      "i_power6": [
+        "-1",
+        "0"
+      ],
+      "mu0": "2",
+      "mu6": "3"
+    },
+    {
+      "W0": [
+        "-15/77",
+        "0"
+      ],
+      "actual_Xi_moments_evaluated": false,
+      "i_power6": [
+        "-1",
+        "0"
+      ],
+      "mu0": "3/7",
+      "mu6": "5/11"
+    }
+  ],
+  "payload_sha256": "6ab64cba1e802008bdb51fb4d5e9a595877153ed696b6bd3bfc301d6f9efaae2",
+  "rounding_contract": "exact integers/Fraction Gaussian pairs; no rounding or analytic sampling",
+  "schema": "xi-companion-generic-parameter-coprimality-v1",
+  "scope": {
+    "E_is_dense_asserted": false,
+    "E_is_empty_or_nonempty_decided": false,
+    "E_is_finite_or_locally_finite_in_parameter_space": false,
+    "RH_or_density_conclusion": false,
+    "actual_source_exceptional_set_countable_unconditionally": true,
+    "analytic_limits_machine_certified": false,
+    "bare_every_fixed_zero_start_lowpass_under_same_premises": true,
+    "bounded_disk_parameter_image_finite": true,
+    "corrected_physical_capture_or_fixed_lambda_HS_divergence": false,
+    "exact_common_zero_equivalence": true,
+    "explicit_good_parameter": false,
+    "gauge_reselection_authorized": false,
+    "minimum_multiplicity_dominated": true,
+    "native_Xi_values_or_zeros_sampled": 0,
+    "new_abstract_principle_or_exhaustive_novelty": false,
+    "no_positive_axis_exception_point": true,
+    "parents_modified": false,
+    "prescribed_physical_parameters_avoid_E": false,
+    "reduced_infinite_heights_only_with_inner_premise_and_lambda_outside_E": true,
+    "uniform_or_shifted_shrinking_band_claim": false
+  },
+  "status": "PROPOSED_REQUIRING_INDEPENDENT_FROZEN_REVIEW"
+}

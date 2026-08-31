@@ -1,0 +1,555 @@
+{
+  "schema": "sixhour-pass3-network-acquisition-evidence-v1",
+  "status": "PASS",
+  "checkpoint_scope": {
+    "G": "64885db5848252b8f013a24333fa3c2462101dee",
+    "S": "408a9bd84a44d4878b957175516caddb81540f33"
+  },
+  "initial_empty_store": {
+    "chunk_id": "dd4385",
+    "wall_time_seconds": 0.7823138,
+    "exit_code": 0,
+    "original_token_count": 99,
+    "output": "\r\nInitialized empty Git repository in C:/Users/gideo/OneDrive/Documents/riemann/isolated/sixhour-final-network-acquisition-pass3/.git/\ncount: 0\nsize: 0\nin-pack: 0\npacks: 0\nsize-pack: 0\nprune-packable: 0\ngarbage: 0\nsize-garbage: 0\n.git\n.git\nfalse\nFullName\r\n--------\r\nC:\\Users\\gideo\\OneDrive\\Documents\\riemann\\isolated\\sixhour-final-network-acquisition-pass3\r\n2026-08-31T16:48:36.4202024+03:00\r\n\r\n"
+  },
+  "independent_prefetch_observation": {
+    "reviewer": "Gibbs",
+    "observed_local_time": "2026-08-31 16:52:04--16:52:56 +03:00",
+    "result": "PASS: zero objects/packs/refs and no FETCH_HEAD; own .git/common dir; no alternates, grafts, replacements, shallow/promisor/config/environment overrides, URL rewriting, active hooks or inspected-path reparse points."
+  },
+  "expectations": {
+    "recording": "Root retained the40 archive mappings before fetch and froze both publication A SHAs before the single fetch. Expected mapping is not derived from fetched refs.",
+    "archive_capture_local_time": "2026-08-31 16:51 +03:00",
+    "expected_refs": {
+      "refs/heads/codex/review-sources-beta-bandpass-original-pass3": "d79692ece0b7604ad309c459f565b24e9926f5c5",
+      "refs/heads/codex/review-sources-canonical-boolean-diagonal-wave2": "7ccd5a044e91b32a0aa66bcf30dcf39d99f96217",
+      "refs/heads/codex/review-sources-coprime-physical-capture-wave2": "7aed2ec0b99b9d7f2fb94a774922a83d5b84a870",
+      "refs/heads/codex/review-sources-cusp-flag-all-weight-endpoints-wave2": "98b4058ac29ba88cf993d7a3ce67579fab0c7844",
+      "refs/heads/codex/review-sources-cusp-flag-divisor-explicit-formula-wave2": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "refs/heads/codex/review-sources-cusp-flag-effective-derivative-wave2": "a32a3923f34e2a281737cc1f2cd610bc5c69279e",
+      "refs/heads/codex/review-sources-cusp-flag-effective-endpoints-wave2": "27496745df9dd49fcde17699d333a54cf8620772",
+      "refs/heads/codex/review-sources-cusp-flag-family-wave2": "43ecb4ac3f2487ee944b6bb6bef72e1ad92f2678",
+      "refs/heads/codex/review-sources-cusp-flag-local-simple-zero-wave2": "1653565cc80cde6fa882ae9e150626187d3071d0",
+      "refs/heads/codex/review-sources-cusp-flag-positive-spectrum-wave2": "282ce03941444d0e02daba5fde260ccb54a3f909",
+      "refs/heads/codex/review-sources-cusp-flag-signed-count-wave2": "24bfc73fc9aa3ba115902340affa8727dfa18970",
+      "refs/heads/codex/review-sources-cusp-flag-uncancelled-zeros-wave2": "bcd3ad5ff0c42e7b205663b68a010e2dbde6d941",
+      "refs/heads/codex/review-sources-cusp-native-poles-wave2": "2f636755ef8605eff725562094017f501fb1db70",
+      "refs/heads/codex/review-sources-cusp-period-real-zeros-wave2": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+      "refs/heads/codex/review-sources-finite-graded-parent-wave2": "7c9e7bde7980c4cfc0b3c3e521fa022319244caa",
+      "refs/heads/codex/review-sources-fixed-label-cycle-five-hour": "6bd0387e876ffea56e2dc60d3e4a32f6476c1105",
+      "refs/heads/codex/review-sources-graded-global-wave2": "a432061f12fd15658e9790966e5bf3d1e9830e07",
+      "refs/heads/codex/review-sources-half-divisor-original-pass3": "59654c02d13545d6c8c0972315db2628e9efa1f6",
+      "refs/heads/codex/review-sources-hardy-cofinal-capture-wave2": "90e8dff3d184cbfe59974969ca89615856c33c51",
+      "refs/heads/codex/review-sources-hardy-inner-width-wave2": "ef7bbb8dca978269f24e7ff9d97b6dceeed5b460",
+      "refs/heads/codex/review-sources-hardy-low-pass-height-wave2": "36eddbbf065959f535ca4a7b08455d489ed4bd18",
+      "refs/heads/codex/review-sources-native-boolean-diagnostic-wave2": "2e1293a03486fb74580eef0ddd7ed0caf9ab7808",
+      "refs/heads/codex/review-sources-native-boolean-parent-pass3": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "refs/heads/codex/review-sources-pr760-dual-architecture-pass3": "e3747c946379735d27658c010976cfff051843e9",
+      "refs/heads/codex/review-sources-pr770-native-acquisition-pass3": "b79aa2dcddd27a84d629e39fbbf39d31e5470aac",
+      "refs/heads/codex/review-sources-rankin-selberg-quotient-wave2": "b62dfc6348661992bca659c99de226a1b6b22e14",
+      "refs/heads/codex/review-sources-satake-tensor-wave2": "0d7503b8575db40a46303315b8130973ed214d50",
+      "refs/heads/codex/review-sources-segre-koszul-lie-wave2": "39f19e361c476c77cd016d314662448f43df7a80",
+      "refs/heads/codex/review-sources-signed-history-wave2": "e1a10bc821c22cb341424b18ce6838634262af31",
+      "refs/heads/codex/review-sources-universal-euler-wave2": "330c6f8b85fa1923f2d4914ce3ab1775b0e56c75",
+      "refs/heads/codex/review-sources-xi-companion-axis-sampling-wave2": "d38961c15fc76d671cef4fddfc92d3c866af4fd5",
+      "refs/heads/codex/review-sources-xi-companion-count-wave2": "76454e3db0ccce8f500297ea27668d6088b5091a",
+      "refs/heads/codex/review-sources-xi-companion-global-height-wave2": "9da33e7ea2b15a4badb3cb436e38e54762ad5e1d",
+      "refs/heads/codex/review-sources-xi-generic-coprimality-wave2": "d76a1a8eb8ec40b19a351af95439b9a6514bee87",
+      "refs/heads/codex/review-sources-xi-global-saddle-first-audit-pass3": "a7b3f8ce63d021e78c79e9e1b76f3cd95aaa279b",
+      "refs/heads/codex/review-sources-xi-laplace-wave2": "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+      "refs/heads/codex/review-sources-xi-moderate-saddle-original-pass3": "14f3ef3cb40854fb559deb2528932e5113f72038",
+      "refs/heads/codex/review-sources-xi-physical-band-wave2": "1b5547c3fcd1ba116106953f44a2ee4ceb81b525",
+      "refs/heads/codex/review-sources-xi-positive-kernel-wave2": "e2d145ce1b113c1bb87dd2bc67f717f72be74328",
+      "refs/heads/codex/review-sources-xi-reverse-rolle-original-pass3": "cdad9e88097db4925c3bbbf731f7d1ae1a9e6c57",
+      "refs/heads/codex/riemann-structures-marked-descent-gate0": "408a9bd84a44d4878b957175516caddb81540f33",
+      "refs/heads/codex/generalized-l-objects-gate0": "64885db5848252b8f013a24333fa3c2462101dee"
+    },
+    "independently_rechecked_against_acquired_report": true
+  },
+  "fetch": {
+    "command": "git fetch --no-tags origin refs/heads/codex/riemann-structures-marked-descent-gate0:refs/remotes/origin/codex/riemann-structures-marked-descent-gate0 refs/heads/codex/generalized-l-objects-gate0:refs/remotes/origin/codex/generalized-l-objects-gate0 \"refs/heads/codex/review-sources-*:refs/remotes/origin/codex/review-sources-*\"",
+    "chunk_id": "b64ee5",
+    "wall_time_seconds": 4.4225885,
+    "exit_code": 0,
+    "original_token_count": 1375,
+    "output": "From https://github.com/gfreund123/riemann\n * [new branch]      codex/riemann-structures-marked-descent-gate0 -> origin/codex/riemann-structures-marked-descent-gate0\n * [new branch]      codex/generalized-l-objects-gate0 -> origin/codex/generalized-l-objects-gate0\n * [new branch]      codex/review-sources-beta-bandpass-original-pass3 -> origin/codex/review-sources-beta-bandpass-original-pass3\n * [new branch]      codex/review-sources-canonical-boolean-diagonal-wave2 -> origin/codex/review-sources-canonical-boolean-diagonal-wave2\n * [new branch]      codex/review-sources-coprime-physical-capture-wave2 -> origin/codex/review-sources-coprime-physical-capture-wave2\n * [new branch]      codex/review-sources-cusp-flag-all-weight-endpoints-wave2 -> origin/codex/review-sources-cusp-flag-all-weight-endpoints-wave2\n * [new branch]      codex/review-sources-cusp-flag-divisor-explicit-formula-wave2 -> origin/codex/review-sources-cusp-flag-divisor-explicit-formula-wave2\n * [new branch]      codex/review-sources-cusp-flag-effective-derivative-wave2 -> origin/codex/review-sources-cusp-flag-effective-derivative-wave2\n * [new branch]      codex/review-sources-cusp-flag-effective-endpoints-wave2 -> origin/codex/review-sources-cusp-flag-effective-endpoints-wave2\n * [new branch]      codex/review-sources-cusp-flag-family-wave2 -> origin/codex/review-sources-cusp-flag-family-wave2\n * [new branch]      codex/review-sources-cusp-flag-local-simple-zero-wave2 -> origin/codex/review-sources-cusp-flag-local-simple-zero-wave2\n * [new branch]      codex/review-sources-cusp-flag-positive-spectrum-wave2 -> origin/codex/review-sources-cusp-flag-positive-spectrum-wave2\n * [new branch]      codex/review-sources-cusp-flag-signed-count-wave2 -> origin/codex/review-sources-cusp-flag-signed-count-wave2\n * [new branch]      codex/review-sources-cusp-flag-uncancelled-zeros-wave2 -> origin/codex/review-sources-cusp-flag-uncancelled-zeros-wave2\n * [new branch]      codex/review-sources-cusp-native-poles-wave2 -> origin/codex/review-sources-cusp-native-poles-wave2\n * [new branch]      codex/review-sources-cusp-period-real-zeros-wave2 -> origin/codex/review-sources-cusp-period-real-zeros-wave2\n * [new branch]      codex/review-sources-finite-graded-parent-wave2 -> origin/codex/review-sources-finite-graded-parent-wave2\n * [new branch]      codex/review-sources-fixed-label-cycle-five-hour -> origin/codex/review-sources-fixed-label-cycle-five-hour\n * [new branch]      codex/review-sources-graded-global-wave2 -> origin/codex/review-sources-graded-global-wave2\n * [new branch]      codex/review-sources-half-divisor-original-pass3 -> origin/codex/review-sources-half-divisor-original-pass3\n * [new branch]      codex/review-sources-hardy-cofinal-capture-wave2 -> origin/codex/review-sources-hardy-cofinal-capture-wave2\n * [new branch]      codex/review-sources-hardy-inner-width-wave2 -> origin/codex/review-sources-hardy-inner-width-wave2\n * [new branch]      codex/review-sources-hardy-low-pass-height-wave2 -> origin/codex/review-sources-hardy-low-pass-height-wave2\n * [new branch]      codex/review-sources-native-boolean-diagnostic-wave2 -> origin/codex/review-sources-native-boolean-diagnostic-wave2\n * [new branch]      codex/review-sources-native-boolean-parent-pass3 -> origin/codex/review-sources-native-boolean-parent-pass3\n * [new branch]      codex/review-sources-pr760-dual-architecture-pass3 -> origin/codex/review-sources-pr760-dual-architecture-pass3\n * [new branch]      codex/review-sources-pr770-native-acquisition-pass3 -> origin/codex/review-sources-pr770-native-acquisition-pass3\n * [new branch]      codex/review-sources-rankin-selberg-quotient-wave2 -> origin/codex/review-sources-rankin-selberg-quotient-wave2\n * [new branch]      codex/review-sources-satake-tensor-wave2 -> origin/codex/review-sources-satake-tensor-wave2\n * [new branch]      codex/review-sources-segre-koszul-lie-wave2 -> origin/codex/review-sources-segre-koszul-lie-wave2\n * [new branch]      codex/review-sources-signed-history-wave2 -> origin/codex/review-sources-signed-history-wave2\n * [new branch]      codex/review-sources-universal-euler-wave2 -> origin/codex/review-sources-universal-euler-wave2\n * [new branch]      codex/review-sources-xi-companion-axis-sampling-wave2 -> origin/codex/review-sources-xi-companion-axis-sampling-wave2\n * [new branch]      codex/review-sources-xi-companion-count-wave2 -> origin/codex/review-sources-xi-companion-count-wave2\n * [new branch]      codex/review-sources-xi-companion-global-height-wave2 -> origin/codex/review-sources-xi-companion-global-height-wave2\n * [new branch]      codex/review-sources-xi-generic-coprimality-wave2 -> origin/codex/review-sources-xi-generic-coprimality-wave2\n * [new branch]      codex/review-sources-xi-global-saddle-first-audit-pass3 -> origin/codex/review-sources-xi-global-saddle-first-audit-pass3\n * [new branch]      codex/review-sources-xi-laplace-wave2 -> origin/codex/review-sources-xi-laplace-wave2\n * [new branch]      codex/review-sources-xi-moderate-saddle-original-pass3 -> origin/codex/review-sources-xi-moderate-saddle-original-pass3\n * [new branch]      codex/review-sources-xi-physical-band-wave2 -> origin/codex/review-sources-xi-physical-band-wave2\n * [new branch]      codex/review-sources-xi-positive-kernel-wave2 -> origin/codex/review-sources-xi-positive-kernel-wave2\n * [new branch]      codex/review-sources-xi-reverse-rolle-original-pass3 -> origin/codex/review-sources-xi-reverse-rolle-original-pass3\n"
+  },
+  "acquired_store_audit": {
+    "acquired_repository": "C:\\Users\\gideo\\OneDrive\\Documents\\riemann\\isolated\\sixhour-final-network-acquisition-pass3",
+    "analytic_note_seals": [
+      {
+        "note": "research/l-families/atlas/generalized/NATIVE_THETA_SOURCE_OFFCENTRAL_ZERO_COROLLARY.md",
+        "review_bytes_match_frozen_commit": true,
+        "review_commit": "53244685e46e1fd27a88a983c6ad359e0b89c20d",
+        "review_sha256_lf": "469eeba0551350dc71014247be37b68437533429c6cb5192d29b6974aa2d92bb",
+        "sha256_lf": "f76b711355dbdb1b07c172a8e2b5b02a20051338e2badf4816722cc8a5438501"
+      },
+      {
+        "note": "research/l-families/atlas/generalized/PROPER_THETA_SOURCE_REAL_ZERO_COROLLARY.md",
+        "review_bytes_match_frozen_commit": true,
+        "review_commit": "31e5ca265cc3be43cff30962041d93a2be4d8ee2",
+        "review_sha256_lf": "c4ae9eef856daf5c4df27d76ebfbc2b17c849ab6e3de03fb50efef96c6862b3b",
+        "sha256_lf": "22cbe2797ac06ae37468e4da93d17b261d99675f50255fd6a2c67bf53ca1f70f"
+      },
+      {
+        "note": "research/l-families/atlas/generalized/PROPER_THETA_SOURCE_EFFECTIVE_WEIGHT96.md",
+        "review_bytes_match_frozen_commit": true,
+        "review_commit": "43c36f4c462bb008d7fb744ca52768d2591b1822",
+        "review_sha256_lf": "e8305aa28fa2361ad0883a10ea219b94a4974aeb9e73202842165a4030c410d6",
+        "sha256_lf": "a1ce66344ca96dbc828f405adeeb7d0deea73db62a0d7481fcdb1b2ede7a312e"
+      },
+      {
+        "note": "research/l-families/atlas/generalized/PROPER_THETA_SOURCE_UNIFORM_DEPTH_ZEROS.md",
+        "review_bytes_match_frozen_commit": true,
+        "review_commit": "9e2ff8e80dbeb5f0acb7615658f72227c0914b3d",
+        "review_sha256_lf": "46f720b1d4104fd78d9493742d3e00591b932b25550819b7fa7c667e3a4b026a",
+        "sha256_lf": "033a76d069917020be5032c131e8acfbaf571c9d328ec599e1fc41872c229f11"
+      }
+    ],
+    "checkpoints": {
+      "G": "64885db5848252b8f013a24333fa3c2462101dee",
+      "S": "408a9bd84a44d4878b957175516caddb81540f33"
+    },
+    "exact_advertised_and_fetched_ref_count": 42,
+    "expected_and_fetched_refs": {
+      "refs/heads/codex/generalized-l-objects-gate0": "64885db5848252b8f013a24333fa3c2462101dee",
+      "refs/heads/codex/review-sources-beta-bandpass-original-pass3": "d79692ece0b7604ad309c459f565b24e9926f5c5",
+      "refs/heads/codex/review-sources-canonical-boolean-diagonal-wave2": "7ccd5a044e91b32a0aa66bcf30dcf39d99f96217",
+      "refs/heads/codex/review-sources-coprime-physical-capture-wave2": "7aed2ec0b99b9d7f2fb94a774922a83d5b84a870",
+      "refs/heads/codex/review-sources-cusp-flag-all-weight-endpoints-wave2": "98b4058ac29ba88cf993d7a3ce67579fab0c7844",
+      "refs/heads/codex/review-sources-cusp-flag-divisor-explicit-formula-wave2": "a27781310ded92125ef16d97d78db4d97cec4c1b",
+      "refs/heads/codex/review-sources-cusp-flag-effective-derivative-wave2": "a32a3923f34e2a281737cc1f2cd610bc5c69279e",
+      "refs/heads/codex/review-sources-cusp-flag-effective-endpoints-wave2": "27496745df9dd49fcde17699d333a54cf8620772",
+      "refs/heads/codex/review-sources-cusp-flag-family-wave2": "43ecb4ac3f2487ee944b6bb6bef72e1ad92f2678",
+      "refs/heads/codex/review-sources-cusp-flag-local-simple-zero-wave2": "1653565cc80cde6fa882ae9e150626187d3071d0",
+      "refs/heads/codex/review-sources-cusp-flag-positive-spectrum-wave2": "282ce03941444d0e02daba5fde260ccb54a3f909",
+      "refs/heads/codex/review-sources-cusp-flag-signed-count-wave2": "24bfc73fc9aa3ba115902340affa8727dfa18970",
+      "refs/heads/codex/review-sources-cusp-flag-uncancelled-zeros-wave2": "bcd3ad5ff0c42e7b205663b68a010e2dbde6d941",
+      "refs/heads/codex/review-sources-cusp-native-poles-wave2": "2f636755ef8605eff725562094017f501fb1db70",
+      "refs/heads/codex/review-sources-cusp-period-real-zeros-wave2": "a12d0fbc9b17a29f4eb3aa7f984877ffd4c5e717",
+      "refs/heads/codex/review-sources-finite-graded-parent-wave2": "7c9e7bde7980c4cfc0b3c3e521fa022319244caa",
+      "refs/heads/codex/review-sources-fixed-label-cycle-five-hour": "6bd0387e876ffea56e2dc60d3e4a32f6476c1105",
+      "refs/heads/codex/review-sources-graded-global-wave2": "a432061f12fd15658e9790966e5bf3d1e9830e07",
+      "refs/heads/codex/review-sources-half-divisor-original-pass3": "59654c02d13545d6c8c0972315db2628e9efa1f6",
+      "refs/heads/codex/review-sources-hardy-cofinal-capture-wave2": "90e8dff3d184cbfe59974969ca89615856c33c51",
+      "refs/heads/codex/review-sources-hardy-inner-width-wave2": "ef7bbb8dca978269f24e7ff9d97b6dceeed5b460",
+      "refs/heads/codex/review-sources-hardy-low-pass-height-wave2": "36eddbbf065959f535ca4a7b08455d489ed4bd18",
+      "refs/heads/codex/review-sources-native-boolean-diagnostic-wave2": "2e1293a03486fb74580eef0ddd7ed0caf9ab7808",
+      "refs/heads/codex/review-sources-native-boolean-parent-pass3": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "refs/heads/codex/review-sources-pr760-dual-architecture-pass3": "e3747c946379735d27658c010976cfff051843e9",
+      "refs/heads/codex/review-sources-pr770-native-acquisition-pass3": "b79aa2dcddd27a84d629e39fbbf39d31e5470aac",
+      "refs/heads/codex/review-sources-rankin-selberg-quotient-wave2": "b62dfc6348661992bca659c99de226a1b6b22e14",
+      "refs/heads/codex/review-sources-satake-tensor-wave2": "0d7503b8575db40a46303315b8130973ed214d50",
+      "refs/heads/codex/review-sources-segre-koszul-lie-wave2": "39f19e361c476c77cd016d314662448f43df7a80",
+      "refs/heads/codex/review-sources-signed-history-wave2": "e1a10bc821c22cb341424b18ce6838634262af31",
+      "refs/heads/codex/review-sources-universal-euler-wave2": "330c6f8b85fa1923f2d4914ce3ab1775b0e56c75",
+      "refs/heads/codex/review-sources-xi-companion-axis-sampling-wave2": "d38961c15fc76d671cef4fddfc92d3c866af4fd5",
+      "refs/heads/codex/review-sources-xi-companion-count-wave2": "76454e3db0ccce8f500297ea27668d6088b5091a",
+      "refs/heads/codex/review-sources-xi-companion-global-height-wave2": "9da33e7ea2b15a4badb3cb436e38e54762ad5e1d",
+      "refs/heads/codex/review-sources-xi-generic-coprimality-wave2": "d76a1a8eb8ec40b19a351af95439b9a6514bee87",
+      "refs/heads/codex/review-sources-xi-global-saddle-first-audit-pass3": "a7b3f8ce63d021e78c79e9e1b76f3cd95aaa279b",
+      "refs/heads/codex/review-sources-xi-laplace-wave2": "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+      "refs/heads/codex/review-sources-xi-moderate-saddle-original-pass3": "14f3ef3cb40854fb559deb2528932e5113f72038",
+      "refs/heads/codex/review-sources-xi-physical-band-wave2": "1b5547c3fcd1ba116106953f44a2ee4ceb81b525",
+      "refs/heads/codex/review-sources-xi-positive-kernel-wave2": "e2d145ce1b113c1bb87dd2bc67f717f72be74328",
+      "refs/heads/codex/review-sources-xi-reverse-rolle-original-pass3": "cdad9e88097db4925c3bbbf731f7d1ae1a9e6c57",
+      "refs/heads/codex/riemann-structures-marked-descent-gate0": "408a9bd84a44d4878b957175516caddb81540f33"
+    },
+    "fsck": {
+      "exit_code": 0,
+      "stderr": "notice: HEAD points to an unborn branch (master)\n",
+      "stdout": ""
+    },
+    "independent_git_directory": true,
+    "no_alternates_grafts_replace_shallow_promisor_or_environment_overrides": true,
+    "object_counts": "count: 0\nsize: 0\nin-pack: 15704\npacks: 1\nsize-pack: 21372\nprune-packable: 0\ngarbage: 0\nsize-garbage: 0",
+    "origin": "https://github.com/gfreund123/riemann.git",
+    "pack_files": [
+      {
+        "bytes": 440784,
+        "link_count": 1,
+        "name": "pack-80c888d1e56e64e0910af387b1591f7ee25f2e4e.idx"
+      },
+      {
+        "bytes": 21445146,
+        "link_count": 1,
+        "name": "pack-80c888d1e56e64e0910af387b1591f7ee25f2e4e.pack"
+      }
+    ],
+    "result_map_commit_ancestry": {
+      "G": {
+        "all_ancestors_of_checkpoint": true,
+        "all_commit_types": true,
+        "commits": [
+          "070751bf7e96c1dbd6d4b3cfbb05dc70f5a2aa22",
+          "0c07ba0e9c6464d3b623f7d997e471544f4e807e",
+          "0d1f90323c8d61abefee077b7bcaa4c024596a55",
+          "0f29fd2d687c57402a14723dde2bc2b7e74fa317",
+          "1148ed1fceedf3e103397ca426df98aeaafa5865",
+          "14fa39a02267c043ac27cd68ef7157ef77afe83b",
+          "1c3c6880ce4db8b15a5e26c3c27e822f3f46365a",
+          "21aa85770299b3522daa2bc89656df427f569607",
+          "31232ad40a3fea67e501cc0aec50bec75f4e3dee",
+          "31e5ca265cc3be43cff30962041d93a2be4d8ee2",
+          "3575c8274a887bc5de29aa41749cac37f49b73cd",
+          "43c36f4c462bb008d7fb744ca52768d2591b1822",
+          "4a317ea5c9d7aa016fba58a1d74746e437329ec7",
+          "53244685e46e1fd27a88a983c6ad359e0b89c20d",
+          "5bfbad61eb035168fdc4abb265ecb4c2f2d34d51",
+          "6e47a4b2604668eb88b977c9182f5a04a214638a",
+          "7d59b841e522d6afe2ec59c3986416489554deea",
+          "8b2bb44f3b82059b6e3721aba9b2cff2a70fd7d0",
+          "9e2ff8e80dbeb5f0acb7615658f72227c0914b3d",
+          "a66879ab211052983f8849c8336b7500ecadffbf",
+          "a7f9fae13c99d7542c764b777ca0d072f9a5c2c1",
+          "acd91a621244872d49e0e4dfde76775879eadfc1",
+          "b0e3b18e690accdee6d77b3b3c4c68850f6cb671",
+          "c29ae6f3d134e076fa41aef9ae39920478f16ac0",
+          "dd498bdc20bdd658d34d0a56d7d22f3c5182b569",
+          "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+          "ec5bdd9b02ea68bddfcf34ac40a85d283faf64cf",
+          "fdd349dcf6ba1b104e27866ae66b4c89752d5f05"
+        ],
+        "count": 28
+      },
+      "S": {
+        "all_ancestors_of_checkpoint": true,
+        "all_commit_types": true,
+        "commits": [
+          "04a00558f1083a43b4dae468194cd24ca7934a17",
+          "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+          "21936f22246a12ab0b4e8bd706154b861b56b585",
+          "2a27043c73cded47c2804ba50b9b1001145a0a82",
+          "3adfd9cb4013052180fb973c55deed49bad4a809",
+          "3f00e46e79cf928f724a9170116cb69e14f7b02f",
+          "530732c5fd7f50364381f8af50e97ce809b674c5",
+          "5334c3776ce204a5982fac989a8b4f87dc645c35",
+          "64165b8c805d182dbc43f2e5855e64a86cf1aaf9",
+          "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+          "6c5c99a0d2f2d2ecca5087da0fd171998b444d2b",
+          "6d122a1a5114d957ada9956ad4d10db4aad44316",
+          "6fcbec7e579db751c1d0ebc60f92a70a15945617",
+          "71dc38e7619409a27dd4d1973dec985b0e655a30",
+          "740b497e99e6e6fb274684cc53599302402f2718",
+          "75bcae9036b82bc79b032df4bb26ddd5ed609130",
+          "7beafb200fd265c67d6ed77bf98e33e4e846dcd4",
+          "7fbcd592042a5cc98c17d0db2fac62f8171267f2",
+          "8f63362db9b8a82e64b645ad2c74781c753b6eea",
+          "94c5c279283463eb472b8162b4c26db359b82f56",
+          "96543552b5bc5976d96c35123bfb82e609a27972",
+          "a29373d16abcf646cc0f86bd7d3f215e98ed15b0",
+          "a7479e85fdc2a464cdc753021435cfef7a1f3910",
+          "a99a357b96abf535af79a20d5e1948aed6bd3da7",
+          "af35a035a921a8e3164bda3dce95290afc456645",
+          "af809698fe6cb5046a5bcc00e9175296e4597060",
+          "b44052443c6c84025771efe1fd0ff805e36a5f5d",
+          "b47af62c6efa225d731f2813e8bdf7f8b2a9a308",
+          "bda894b84013d377b68c3602d4e8bb06e6f42e68",
+          "c7104e59d4e30802d593ef2e5353c30bbaf8dff5",
+          "c782115fbe7d334d65ca9f99ae88439b7fe45b5c",
+          "f25599e0bcb77cb716bf17120e54174a994e7402",
+          "f77477c061e0e9e5ce340ee810254ddd50fad32f",
+          "fa042aebaff2039e9c218f5b1f50b1790390360a",
+          "ffc2d0a5d8e24ab13565e51d0a0adfb36102de18"
+        ],
+        "count": 35
+      }
+    },
+    "schema": "sixhour-pass3-https-source-acquisition-v1",
+    "scope": "HTTPS acquisition, exact declared ref identities, result-map commit ancestry and four analytic note seals. Manifest closure and test replay are separate evidence; not all prose dependencies, external papers, arbitrary dynamic imports or mathematical proof verification.",
+    "status": "PASS",
+    "verified_at": "2026-08-31T13:59:35.431819+00:00"
+  },
+  "root_readonly_verifier_python": "import datetime,hashlib,json,os,pathlib,re,subprocess,sys\nroot=pathlib.Path.cwd().resolve()\ndef need(ok,msg):\n    if not ok: raise RuntimeError(msg)\ndef git(*args):\n    return subprocess.check_output([\"git\",\"--no-replace-objects\",*args],stderr=subprocess.PIPE)\ndef txt(*args):return git(*args).decode(\"utf-8\").strip()\ndef blob(head,path):return git(\"show\",head+\":\"+path)\nS,G=sys.argv[1:3]\nneed(re.fullmatch(r\"[0-9a-f]{40}\",S) and re.fullmatch(r\"[0-9a-f]{40}\",G),\"full checkpoint SHAs\")\ngd=(root/txt(\"rev-parse\",\"--git-dir\")).resolve()\ncommon=(root/txt(\"rev-parse\",\"--git-common-dir\")).resolve()\nneed(gd==root/\".git\" and common==gd,\"independent ordinary repository\")\nfor rel in (\"objects/info/alternates\",\"objects/info/http-alternates\",\"commondir\",\"shallow\",\"info/grafts\"):\n    need(not (gd/rel).exists(),\"forbidden Git sharing/partial file: \"+rel)\nfor key in (\"GIT_OBJECT_DIRECTORY\",\"GIT_ALTERNATE_OBJECT_DIRECTORIES\",\"GIT_COMMON_DIR\",\"GIT_DIR\",\"GIT_WORK_TREE\"):\n    need(not os.environ.get(key),\"Git environment override: \"+key)\nneed(txt(\"rev-parse\",\"--is-shallow-repository\")==\"false\",\"shallow repository\")\nneed(not txt(\"replace\",\"-l\"),\"replacement refs\")\nconfig=txt(\"config\",\"--local\",\"--list\")\nneed(not re.search(r\"(?im)^(?:extensions\\.partialclone|remote\\..*\\.promisor|remote\\..*\\.partialclonefilter)=\",config),\"partial/promisor configuration\")\nneed(txt(\"remote\",\"get-url\",\"origin\")==\"https://github.com/gfreund123/riemann.git\",\"literal HTTPS origin\")\nguide=blob(S,\"research/exploratory/SIXHOUR_PASS3_SOURCE_REPLAY.md\").decode()\npairs=re.findall(r\"^\\| (refs/heads/codex/review-sources-[^ ]+) \\| ([0-9a-f]{40}) \\|$\",guide,re.M)\nneed(len(pairs)==40 and len(dict(pairs))==40,\"40 declared archive identities\")\nexpected=dict(pairs)\nexpected[\"refs/heads/codex/riemann-structures-marked-descent-gate0\"]=S\nexpected[\"refs/heads/codex/generalized-l-objects-gate0\"]=G\nremote=dict((ref,sha) for sha,ref in (line.split() for line in txt(\"ls-remote\",\"--heads\",\"origin\",*expected).splitlines()))\nneed(remote==expected,\"advertised exact42 mismatch\")\nlocal={}\nfor ref,sha in expected.items():\n    localref=ref.replace(\"refs/heads/\",\"refs/remotes/origin/\",1)\n    actual=txt(\"rev-parse\",localref)\n    need(actual==sha,\"fetched ref mismatch: \"+ref)\n    need(txt(\"cat-file\",\"-t\",sha)==\"commit\",\"ref does not name commit\")\n    local[ref]=actual\npackfiles=[]\nfor path in sorted((gd/\"objects\"/\"pack\").glob(\"*\")):\n    need(path.stat().st_nlink==1,\"hard-linked object pack\")\n    need(not (path.lstat().st_file_attributes & 0x400),\"reparse object pack\")\n    packfiles.append({\"name\":path.name,\"bytes\":path.stat().st_size,\"link_count\":path.stat().st_nlink})\nneed(bool(packfiles),\"no network packs\")\nidentities={}\nfor tag,head,path in [(\"S\",S,\"research/riemann-structures/SIXHOUR_PASS3_RESULTS.md\"),(\"G\",G,\"research/l-families/atlas/generalized/SIXHOUR_PASS3_RESULTS.md\")]:\n    ids=sorted(set(re.findall(r\"\\x60([0-9a-f]{40})\\x60\",blob(head,path).decode())))\n    for sha in ids:\n        need(txt(\"cat-file\",\"-t\",sha)==\"commit\",\"noncommit result-map identity\")\n        subprocess.run([\"git\",\"--no-replace-objects\",\"merge-base\",\"--is-ancestor\",sha,head],check=True,capture_output=True)\n    identities[tag]={\"count\":len(ids),\"all_commit_types\":True,\"all_ancestors_of_checkpoint\":True,\"commits\":ids}\nbase=\"research/l-families/atlas/generalized/\"\nnotes=[\n(\"NATIVE_THETA_SOURCE_OFFCENTRAL_ZERO_COROLLARY.md\",\"f76b711355dbdb1b07c172a8e2b5b02a20051338e2badf4816722cc8a5438501\",\"53244685e46e1fd27a88a983c6ad359e0b89c20d\"),\n(\"PROPER_THETA_SOURCE_REAL_ZERO_COROLLARY.md\",\"22cbe2797ac06ae37468e4da93d17b261d99675f50255fd6a2c67bf53ca1f70f\",\"31e5ca265cc3be43cff30962041d93a2be4d8ee2\"),\n(\"PROPER_THETA_SOURCE_EFFECTIVE_WEIGHT96.md\",\"a1ce66344ca96dbc828f405adeeb7d0deea73db62a0d7481fcdb1b2ede7a312e\",\"43c36f4c462bb008d7fb744ca52768d2591b1822\"),\n(\"PROPER_THETA_SOURCE_UNIFORM_DEPTH_ZEROS.md\",\"033a76d069917020be5032c131e8acfbaf571c9d328ec599e1fc41872c229f11\",\"9e2ff8e80dbeb5f0acb7615658f72227c0914b3d\")]\nseals=[]\nfor name,want,review in notes:\n    raw=blob(G,base+name).replace(b\"\\r\\n\",b\"\\n\")\n    need(hashlib.sha256(raw).hexdigest()==want,\"analytic note hash: \"+name)\n    reviewname=name[:-3]+\"_REVIEW.md\"\n    historical=blob(review,base+reviewname).replace(b\"\\r\\n\",b\"\\n\")\n    current=blob(G,base+reviewname).replace(b\"\\r\\n\",b\"\\n\")\n    need(historical==current,\"review bytes changed\")\n    need(want.encode() in historical,\"review does not bind expected LF proof seal\")\n    subprocess.run([\"git\",\"--no-replace-objects\",\"merge-base\",\"--is-ancestor\",review,G],check=True,capture_output=True)\n    seals.append({\"note\":base+name,\"sha256_lf\":want,\"review_commit\":review,\"review_sha256_lf\":hashlib.sha256(current).hexdigest(),\"review_bytes_match_frozen_commit\":True})\nfsck=subprocess.run([\"git\",\"--no-replace-objects\",\"fsck\",\"--full\",\"--strict\"],capture_output=True)\nneed(fsck.returncode==0,\"git fsck failed\")\nout={\"schema\":\"sixhour-pass3-https-source-acquisition-v1\",\"status\":\"PASS\",\"verified_at\":datetime.datetime.now(datetime.timezone.utc).isoformat(),\"acquired_repository\":str(root),\"checkpoints\":{\"S\":S,\"G\":G},\"expected_and_fetched_refs\":expected,\"exact_advertised_and_fetched_ref_count\":len(expected),\"independent_git_directory\":True,\"no_alternates_grafts_replace_shallow_promisor_or_environment_overrides\":True,\"origin\":\"https://github.com/gfreund123/riemann.git\",\"object_counts\":txt(\"count-objects\",\"-v\"),\"pack_files\":packfiles,\"result_map_commit_ancestry\":identities,\"analytic_note_seals\":seals,\"fsck\":{\"exit_code\":fsck.returncode,\"stdout\":fsck.stdout.decode(),\"stderr\":fsck.stderr.decode()},\"scope\":\"HTTPS acquisition, exact declared ref identities, result-map commit ancestry and four analytic note seals. Manifest closure and test replay are separate evidence; not all prose dependencies, external papers, arbitrary dynamic imports or mathematical proof verification.\"}\nprint(json.dumps(out,sort_keys=True,indent=2))",
+  "structures_producer_only_driver_python": "import hashlib,importlib.util,json,os,pathlib,subprocess,sys,time\nroot=pathlib.Path.cwd().resolve()\nhead,mode=sys.argv[1:3]\nopt=mode==\"optimized\"\np=root/\"research/riemann-structures\"\nspec=importlib.util.spec_from_file_location(\"replay\",p/\"sixhour_pass3_replay.py\")\nr=importlib.util.module_from_spec(spec);spec.loader.exec_module(r)\npanelpath=p/\"sixhour_pass3_replay_panel.json\"\npanelbytes=panelpath.read_bytes();panel=json.loads(panelbytes)\nrunnerbytes=(p/\"sixhour_pass3_replay.py\").read_bytes()\nbefore=r.authenticate(root,panel)\ndef need(ok,msg):\n    if not ok:raise RuntimeError(msg)\nneed(r.git(root,\"rev-parse\",\"HEAD\")==head,\"wrong acquisition checkpoint\")\nsubprocess.run([\"git\",\"--no-replace-objects\",\"merge-base\",\"--is-ancestor\",panel[\"science_head\"],head],check=True,capture_output=True)\ninterpreters={\"system\":\"C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe\",\"flint\":\"C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe\"}\nenv=os.environ.copy();env[\"PYTHONDONTWRITEBYTECODE\"]=\"1\"\nrecords=[]\nfor i,row in enumerate(panel[\"modules\"],1):\n    cmd=[interpreters[row[\"runtime\"]],\"-B\"]+([\"-O\"] if opt else[])+[row[\"producer\"],\"--check\"]\n    start=time.monotonic()\n    result=subprocess.run(cmd,cwd=root,env=env,capture_output=True,timeout=3600)\n    item={\"producer\":row[\"producer\"],\"command\":cmd,\"exit_code\":result.returncode,\"elapsed_seconds\":round(time.monotonic()-start,3),\"stdout_sha256\":hashlib.sha256(result.stdout).hexdigest(),\"stderr_sha256\":hashlib.sha256(result.stderr).hexdigest(),\"status\":\"PASS\" if result.returncode==0 else\"FAIL\"}\n    if result.returncode:item[\"failure_tail\"]=(result.stdout+result.stderr)[-6000:].decode(errors=\"replace\")\n    records.append(item)\n    print(str(i)+\"/\"+str(len(panel[\"modules\"]))+\" producer \"+row[\"producer\"]+\": \"+item[\"status\"],flush=True)\nafter=r.authenticate(root,panel)\nneed(before==after and panelpath.read_bytes()==panelbytes and (p/\"sixhour_pass3_replay.py\").read_bytes()==runnerbytes,\"input changed\")\nneed(r.git(root,\"rev-parse\",\"HEAD\")==head,\"HEAD changed during producer-only replay\")\nreport={\"schema\":\"sixhour-pass3-network-producer-only-replay-v1\",\"programme\":\"S\",\"acquired_checkpoint\":head,\"observed_head_before\":head,\"observed_head_after\":head,\"panel_science_head\":panel[\"science_head\"],\"panel_science_is_ancestor\":True,\"panel_sha256_lf\":r.sha(r.lf(panelbytes)),\"runner_sha256_lf\":r.sha(r.lf(runnerbytes)),\"optimized\":opt,\"producer_checks\":len(records),\"unit_tests_rerun\":False,\"all_test_and_producer_input_hashes_unchanged\":before==after,\"status\":\"PASS\" if all(x[\"status\"]==\"PASS\" for x in records) else\"FAIL\",\"records\":records,\"boundary\":\"Producer --check replay from the independently HTTPS-acquired object store. This does not rerun S's unit tests and does not replace mathematical review. Full S unit-test replay is separately recorded at the isolated release source.\"}\nprint(\"BEGIN_FINAL_NETWORK_PRODUCER_JSON\",flush=True)\nprint(json.dumps(report,sort_keys=True,indent=2),flush=True)\nsys.exit(0 if report[\"status\"]==\"PASS\" else 1)",
+  "replay_boundary": "All stated fresh runs completed PASS: full G tests+producers in both modes; S producer --check paths only in both modes. Full S unit-test runs remain the separate frozen-head isolated release evidence. All four analytic notes retain separate mathematical reviews and do not add computational modules.",
+  "exclusions": [
+    "Not a proof of the mathematics",
+    "Not an assertion of external novelty",
+    "Not an audit of all prose or arbitrary executable imports",
+    "External primary papers and runtime packages are not acquired by Git",
+    "Later documentation/report-only publication tips do not replace these recorded A checkpoints"
+  ],
+  "final_evidence_recorded_at": "2026-08-31T17:15:16.2586548+03:00",
+  "initial_reviewed_snapshot": {
+    "path": "sixhour_pass3_network_acquisition_initial.json",
+    "sha256_lf": "70e280f77789e81115ed724db04e7c576b85aefee42339c503d8cb3758adfa76",
+    "review": "SIXHOUR_PASS3_NETWORK_REVIEW.md",
+    "boundary": "The independent acquisition review binds the initial acquisition snapshot and manifest closure; later replay outcomes are separate."
+  },
+  "fresh_manifest_closure": {
+    "reviewer": "Gibbs",
+    "status": "PASS",
+    "S": {
+      "head": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "counts": {
+        "roots": 38,
+        "manifest_versions": 47,
+        "edges": 389,
+        "source_versions": 142,
+        "source_commits": 54,
+        "implicit_edges": 1
+      }
+    },
+    "G": {
+      "head": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "counts": {
+        "roots": 37,
+        "manifest_versions": 59,
+        "edges": 368,
+        "source_versions": 160,
+        "source_commits": 48,
+        "implicit_edges": 75
+      }
+    }
+  },
+  "fresh_replays": {
+    "G_normal": {
+      "report": "sixhour_pass3_network_g_normal.json",
+      "status": "PASS",
+      "scope": "37 modules,962 unit tests,37 producer checks",
+      "observed_head_before": "64885db5848252b8f013a24333fa3c2462101dee",
+      "observed_head_after": "64885db5848252b8f013a24333fa3c2462101dee",
+      "panel_science_head": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "panel_sha256_lf": "4881c4efd3f8dae235d0db095b7ebf63489f582be75c3ceaa6c800563f64b5a3",
+      "runner_sha256_lf": "4bf7cb0cfb598b76d01ad7a48f082aaf110eb6a017e6831e67c307933f5e1a88",
+      "all_declared_input_hashes_unchanged": true
+    },
+    "G_optimized": {
+      "report": "sixhour_pass3_network_g_optimized.json",
+      "status": "PASS",
+      "scope": "37 modules,962 unit tests,37 producer checks",
+      "observed_head_before": "64885db5848252b8f013a24333fa3c2462101dee",
+      "observed_head_after": "64885db5848252b8f013a24333fa3c2462101dee",
+      "panel_science_head": "dde680d50358fb6d269485b1b8f61f23ba6b221e",
+      "panel_sha256_lf": "4881c4efd3f8dae235d0db095b7ebf63489f582be75c3ceaa6c800563f64b5a3",
+      "runner_sha256_lf": "4bf7cb0cfb598b76d01ad7a48f082aaf110eb6a017e6831e67c307933f5e1a88",
+      "all_declared_input_hashes_unchanged": true
+    },
+    "S_normal": {
+      "report": "sixhour_pass3_network_s_producers_normal.json",
+      "status": "PASS",
+      "scope": "38 producer checks only; S unit tests not rerun",
+      "observed_head_before": "408a9bd84a44d4878b957175516caddb81540f33",
+      "observed_head_after": "408a9bd84a44d4878b957175516caddb81540f33",
+      "panel_science_head": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "panel_sha256_lf": "d3e9a9c05051d151fbf60bdb3e888fee30f81eb4a607c1572b30f6eaffc27208",
+      "runner_sha256_lf": "4bf7cb0cfb598b76d01ad7a48f082aaf110eb6a017e6831e67c307933f5e1a88",
+      "all_declared_input_hashes_unchanged": true
+    },
+    "S_optimized": {
+      "report": "sixhour_pass3_network_s_producers_optimized.json",
+      "status": "PASS",
+      "scope": "38 producer checks only; S unit tests not rerun",
+      "observed_head_before": "408a9bd84a44d4878b957175516caddb81540f33",
+      "observed_head_after": "408a9bd84a44d4878b957175516caddb81540f33",
+      "panel_science_head": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+      "panel_sha256_lf": "d3e9a9c05051d151fbf60bdb3e888fee30f81eb4a607c1572b30f6eaffc27208",
+      "runner_sha256_lf": "4bf7cb0cfb598b76d01ad7a48f082aaf110eb6a017e6831e67c307933f5e1a88",
+      "all_declared_input_hashes_unchanged": true
+    }
+  },
+  "fresh_workflow_tests": {
+    "normal": {
+      "chunk_id": "02e31e",
+      "wall_time_seconds": 2.1275986,
+      "exit_code": 0,
+      "original_token_count": 35,
+      "output": "...................................\r\n----------------------------------------------------------------------\r\nRan 35 tests in 1.691s\r\n\r\nOK\r\n"
+    },
+    "optimized": {
+      "chunk_id": "74eda1",
+      "wall_time_seconds": 2.2931852,
+      "exit_code": 0,
+      "original_token_count": 35,
+      "output": "...................................\r\n----------------------------------------------------------------------\r\nRan 35 tests in 1.737s\r\n\r\nOK\r\n"
+    },
+    "scope": "35 independent closure-workflow tests per mode, separate from science test totals."
+  },
+  "producer_output_comparison": {
+    "S_normal": {
+      "matched": 38,
+      "mismatches": []
+    },
+    "S_optimized": {
+      "matched": 38,
+      "mismatches": []
+    },
+    "G_normal": {
+      "matched": 27,
+      "mismatches": [
+        "tests/test_dense_torus_trace_absolute_power_rationality.py",
+        "tests/test_irrational_rotation_absolute_power_rationality.py",
+        "tests/test_irrational_rotation_principal_complex_power_rationality.py",
+        "tests/test_nonintegral_local_power_rationality.py",
+        "tests/test_positive_determinant_power_release.py",
+        "tests/test_rational_rotation_branch_census.py",
+        "tests/test_rational_rotation_real_power_exact_degree.py",
+        "tests/test_rational_rotation_uniform_degree_gate.py",
+        "tests/test_transfer_matrix_symmetric_parent.py",
+        "tests/test_universal_coefficient_power_euler_obstruction.py"
+      ]
+    },
+    "G_optimized": {
+      "matched": 27,
+      "mismatches": [
+        "tests/test_dense_torus_trace_absolute_power_rationality.py",
+        "tests/test_irrational_rotation_absolute_power_rationality.py",
+        "tests/test_irrational_rotation_principal_complex_power_rationality.py",
+        "tests/test_nonintegral_local_power_rationality.py",
+        "tests/test_positive_determinant_power_release.py",
+        "tests/test_rational_rotation_branch_census.py",
+        "tests/test_rational_rotation_real_power_exact_degree.py",
+        "tests/test_rational_rotation_uniform_degree_gate.py",
+        "tests/test_transfer_matrix_symmetric_parent.py",
+        "tests/test_universal_coefficient_power_euler_obstruction.py"
+      ]
+    },
+    "G_path_only_difference_verification": {
+      "checked_cases": 20,
+      "records": [
+        {
+          "mode": "normal",
+          "producer": "research/l-families/atlas/generalized/dense_torus_trace_absolute_power_rationality.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "normal",
+          "producer": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "normal",
+          "producer": "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "normal",
+          "producer": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "normal",
+          "producer": "research/l-families/atlas/generalized/positive_determinant_power_release.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "normal",
+          "producer": "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "normal",
+          "producer": "research/l-families/atlas/generalized/rational_rotation_real_power_exact_degree.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "normal",
+          "producer": "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "normal",
+          "producer": "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "normal",
+          "producer": "research/l-families/atlas/generalized/universal_coefficient_power_euler_obstruction.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "optimized",
+          "producer": "research/l-families/atlas/generalized/dense_torus_trace_absolute_power_rationality.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "optimized",
+          "producer": "research/l-families/atlas/generalized/irrational_rotation_absolute_power_rationality.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "optimized",
+          "producer": "research/l-families/atlas/generalized/irrational_rotation_principal_complex_power_rationality.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "optimized",
+          "producer": "research/l-families/atlas/generalized/nonintegral_local_power_rationality.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "optimized",
+          "producer": "research/l-families/atlas/generalized/positive_determinant_power_release.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "optimized",
+          "producer": "research/l-families/atlas/generalized/rational_rotation_branch_census.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "optimized",
+          "producer": "research/l-families/atlas/generalized/rational_rotation_real_power_exact_degree.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "optimized",
+          "producer": "research/l-families/atlas/generalized/rational_rotation_uniform_degree_gate.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "optimized",
+          "producer": "research/l-families/atlas/generalized/transfer_matrix_symmetric_parent.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        },
+        {
+          "mode": "optimized",
+          "producer": "research/l-families/atlas/generalized/universal_coefficient_power_euler_obstruction.py",
+          "status": "PASS",
+          "stderr_unchanged": true,
+          "stdout_difference": "absolute checkout path only"
+        }
+      ],
+      "status": "PASS"
+    }
+  }
+}

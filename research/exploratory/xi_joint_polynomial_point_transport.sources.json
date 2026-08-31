@@ -1,0 +1,127 @@
+{
+  "authoring_base": "530732c5fd7f50364381f8af50e97ce809b674c5",
+  "contract": {
+    "arithmetic_class": "MIXED",
+    "arithmetic_components": [
+      "DIRECTED_BALL_ENCLOSURES",
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "caps": {
+      "arcs": 64,
+      "container": 4096,
+      "depth": 24,
+      "integer_bits": 4096,
+      "jet": 40,
+      "json_bytes": 2000000,
+      "nodes": 60000,
+      "source_bytes": 24000000,
+      "string": 4096,
+      "terms": 32
+    },
+    "contour": "64 equal CLOSED arcs, outward sin/cos and complex Horner; retain every failure",
+    "cover": "inherit authenticated QT512-bit complete256-cell cover at R7/8; no fresh outer native calls",
+    "domain": "unchanged HA 20<Re z<1100,-1<Im z<2; local requested series cap40",
+    "exclusions": "no new zero census, new point, parameter tuning, cofinal theorem, physical capture, RH, novelty or priority",
+    "jet": "fresh signed40-term actual-Xi jet over FULL inherited real-critical interval",
+    "matching": "FULL inherited HA rectangle inside disc for every t/y/r allowed by their enclosures",
+    "no_innerness_premise": true,
+    "panel": {
+      "arcs": 64,
+      "bits": 512,
+      "node_index": 19,
+      "ratio": [
+        1,
+        2
+      ],
+      "terms": 32
+    },
+    "primitive": "literal unrescaled Xi(1/2+iz), g=f5, fixed calibrated lambda_(64)",
+    "rounding": "pinned FLINT outward balls; exact rational lower/upper endpoints; strict rational comparisons",
+    "selection": "post-QT/post-joint-M3 selected known node19; not a blind heldout point",
+    "source_equation": "f6(t)=0 canceled algebraically; real symmetry permits projection to real coefficient enclosures",
+    "source_quantifiers": "one selected local actual-source companion root; QT critical/cover certificates inherited",
+    "tail": "joint f5/f6 Cauchy tails from n32; no separate-M3 triangle estimate",
+    "trust": "same pinned FLINT special functions; not a second implementation or formal verification"
+  },
+  "documentation": [
+    {
+      "role": "Ball enclosure, certified comparisons, exact rational inputs, series cap",
+      "url": "https://python-flint.readthedocs.io/en/latest/general.html"
+    },
+    {
+      "role": "Taylor-series gamma, exp, zeta; no numerical finite differences",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb_series.html"
+    },
+    {
+      "role": "Pinned library-version series API documentation",
+      "url": "https://github.com/flintlib/flint/blob/v3.6.0/doc/source/acb_poly.rst"
+    },
+    {
+      "role": "rigorous non-approx matrix inverse and arithmetic API",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb_mat.html"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "530732c5fd7f50364381f8af50e97ce809b674c5",
+      "git_blob": "cb634e9ac1e5ddbdffad01286a0b37ca958ac92b",
+      "path": "research/exploratory/XI_QUADRATIC_CRITICAL_TRANSPORT.md",
+      "sha256_lf": "b9e7cf4911688d81c44ec9d871104e063c7bf46f574d86b479c6d912559d7269"
+    },
+    {
+      "commit": "530732c5fd7f50364381f8af50e97ce809b674c5",
+      "git_blob": "a5e48dea3a25e1ff7419b2f6e2cfeef3de230185",
+      "path": "research/exploratory/xi_quadratic_critical_transport.py",
+      "sha256_lf": "28033a330ade30e0079f6e24cd0f4b07e9de9ba70438f92c88fe5c0f7fe8c373"
+    },
+    {
+      "commit": "530732c5fd7f50364381f8af50e97ce809b674c5",
+      "git_blob": "322281110f34af24575be29aed32acfd25657959",
+      "path": "research/exploratory/xi_quadratic_critical_transport.json",
+      "sha256_lf": "45e9d81f5cfe22662ad9e07b9a994796b3c3b18743ae74c8cbd3ce095f3a4cce"
+    },
+    {
+      "commit": "530732c5fd7f50364381f8af50e97ce809b674c5",
+      "git_blob": "58bd03b1d15ce4d2eb91addb4c209a0f43fab80c",
+      "path": "research/exploratory/xi_quadratic_critical_transport.sources.json",
+      "sha256_lf": "66aa6f3d483bc638eed43315592c3cc5f3f8ef2baa9d9518e2fa0de3e685d757"
+    },
+    {
+      "commit": "530732c5fd7f50364381f8af50e97ce809b674c5",
+      "git_blob": "cde20699d7b3894bf40db419b2d90a3d93459751",
+      "path": "tests/test_xi_quadratic_critical_transport.py",
+      "sha256_lf": "d5493e8c31d53d66fdb00f35dfa1198b173513e23b2bfd3bdcb2d39d80423749"
+    },
+    {
+      "commit": "689a93971cdd741a2b154f9506672667aa1a32dc",
+      "git_blob": "7dede48e26e34e79c123ab6741f11644273b8f3d",
+      "path": "research/exploratory/XI_JOINT_POLYNOMIAL_POINT_TRANSPORT.md",
+      "sha256_lf": "2cd0cad4228f573be998641d090264b6a9cdddef2870832e523b685c9920aa28"
+    },
+    {
+      "commit": "f8003a2569ba8cd9c62516d6f72aa8dfca9ce7b4",
+      "git_blob": "40e1b5ed858ec838667f2dd68764a89a0d781535",
+      "path": "research/exploratory/XI_JOINT_POLYNOMIAL_POINT_TRANSPORT.md",
+      "sha256_lf": "b4df49fb751288edbb833753a76724be42619f77501c67f40f5e3f0ed3d85908"
+    },
+    {
+      "commit": "a99a357b96abf535af79a20d5e1948aed6bd3da7",
+      "git_blob": "61ff29d0365a1b856ec9fa873082569db930f8e8",
+      "path": "research/exploratory/XI_QUADRATIC_CRITICAL_TRANSPORT_AUDIT_530732C5.md",
+      "sha256_lf": "faac44110eb02985dd647151df7716836d1e98229447b488aa7fd9e3f47d1082"
+    }
+  ],
+  "preregistration": "689a93971cdd741a2b154f9506672667aa1a32dc",
+  "preregistration_correction": "f8003a2569ba8cd9c62516d6f72aa8dfca9ce7b4",
+  "runtime": {
+    "flint": "3.6.0",
+    "machine": "AMD64",
+    "native_files": 44,
+    "native_files_sha256": "36c07323af58dec0eb6fd82a99bf871924eb69f1833d9af626fc09437ae5b0cc",
+    "python": "3.12.10",
+    "python_flint": "0.9.0",
+    "system": "Windows"
+  },
+  "schema": "xi_joint_polynomial_point_transport-sources-v1"
+}

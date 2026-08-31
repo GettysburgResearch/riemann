@@ -1,0 +1,574 @@
+{
+  "schema": "archimedean-ladder-boundary-v1",
+  "scope": "exact finite algebra, not a gamma or global-L proof certificate",
+  "source_authentication": {
+    "source_commit": "6675c19f20760301d8c91dedc4a7836170003512",
+    "frozen_programme_path": "research/riemann-structures/RIEMANN_STRUCTURES_WAVE2_PORTFOLIO.md",
+    "frozen_programme_blob": "f5e0eb316f29d5e44cc3c7124401cb3e784fef49",
+    "frozen_programme_sha256_lf": "23d5a5a7ccdf7669cbbfab6bf4a71d904c71ca5986caecb424d33d67bcd70a8c",
+    "current_programme_may_evolve": true,
+    "source_manifest_sha256_canonical_json": "13e55004c7a1bbe074247d68deed0a03036f46b7f96a0d060b6434d11c493db7",
+    "imported_analytic_facts_are_not_computationally_certified": true
+  },
+  "artifact_sha256_lf": {
+    "research/riemann-structures/ARCHIMEDEAN_LADDER_BOUNDARY.md": "d3b5e522cc228b7870db314f39627672df9a1c89f5242e094bdb242470ebbb3f",
+    "research/riemann-structures/archimedean_ladder_boundary.py": "1272c353d5060128040429ecef281cefa68e322e6dfbe4b96765b900bd24c652",
+    "tests/test_archimedean_ladder_boundary.py": "be851ffb294468826105006ec17658dcaf95574e41cd1180b34c8032492073d4",
+    "research/riemann-structures/archimedean_ladder_boundary.sources.json": "ee672d71bae749d81e2cda91f32ddac0cc8c10a7f9165c81bbced0e9211ffcb7"
+  },
+  "computation_caps_not_theorem_hypotheses": {
+    "input_numerator_denominator_bits": 64,
+    "terms": 32,
+    "absolute_shift_steps": 64,
+    "absolute_multiplicity": 32,
+    "total_shift_multiplicity_weight": 256,
+    "basis_degree": 64
+  },
+  "gamma_shift_examples": [
+    {
+      "name": "empty_product",
+      "terms": [],
+      "rational": true,
+      "tail_multiplicities": [],
+      "two_pi_power": 0,
+      "linear_factors": [],
+      "stable_tail_checks": []
+    },
+    {
+      "name": "one_effective_real_type",
+      "terms": [
+        [
+          "0",
+          1
+        ]
+      ],
+      "rational": false,
+      "tail_multiplicities": [
+        [
+          "0",
+          1
+        ]
+      ],
+      "two_pi_power": 0,
+      "linear_factors": [],
+      "stable_tail_checks": [
+        {
+          "coset": "0",
+          "points": [
+            "0",
+            "-2",
+            "-4"
+          ],
+          "orders": [
+            -1,
+            -1,
+            -1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "even_odd_pair",
+      "terms": [
+        [
+          "0",
+          1
+        ],
+        [
+          "1",
+          1
+        ]
+      ],
+      "rational": false,
+      "tail_multiplicities": [
+        [
+          "0",
+          1
+        ],
+        [
+          "1",
+          1
+        ]
+      ],
+      "two_pi_power": 0,
+      "linear_factors": [],
+      "stable_tail_checks": [
+        {
+          "coset": "0",
+          "points": [
+            "0",
+            "-2",
+            "-4"
+          ],
+          "orders": [
+            -1,
+            -1,
+            -1
+          ]
+        },
+        {
+          "coset": "1",
+          "points": [
+            "-1",
+            "-3",
+            "-5"
+          ],
+          "orders": [
+            -1,
+            -1,
+            -1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "forward_shift",
+      "terms": [
+        [
+          "2",
+          1
+        ],
+        [
+          "0",
+          -1
+        ]
+      ],
+      "rational": true,
+      "tail_multiplicities": [],
+      "two_pi_power": -1,
+      "linear_factors": [
+        [
+          "0",
+          1
+        ]
+      ],
+      "stable_tail_checks": [
+        {
+          "coset": "0",
+          "points": [
+            "-2",
+            "-4",
+            "-6"
+          ],
+          "orders": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "backward_shift",
+      "terms": [
+        [
+          "-2",
+          1
+        ],
+        [
+          "0",
+          -1
+        ]
+      ],
+      "rational": true,
+      "tail_multiplicities": [],
+      "two_pi_power": 1,
+      "linear_factors": [
+        [
+          "-2",
+          -1
+        ]
+      ],
+      "stable_tail_checks": [
+        {
+          "coset": "0",
+          "points": [
+            "0",
+            "-2",
+            "-4"
+          ],
+          "orders": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "false_total_rank_cancellation",
+      "terms": [
+        [
+          "1",
+          1
+        ],
+        [
+          "0",
+          -1
+        ]
+      ],
+      "rational": false,
+      "tail_multiplicities": [
+        [
+          "0",
+          -1
+        ],
+        [
+          "1",
+          1
+        ]
+      ],
+      "two_pi_power": 0,
+      "linear_factors": [],
+      "stable_tail_checks": [
+        {
+          "coset": "0",
+          "points": [
+            "0",
+            "-2",
+            "-4"
+          ],
+          "orders": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "coset": "1",
+          "points": [
+            "-1",
+            "-3",
+            "-5"
+          ],
+          "orders": [
+            -1,
+            -1,
+            -1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fractional_shift_balanced",
+      "terms": [
+        [
+          "9/2",
+          1
+        ],
+        [
+          "1/2",
+          -1
+        ]
+      ],
+      "rational": true,
+      "tail_multiplicities": [],
+      "two_pi_power": -2,
+      "linear_factors": [
+        [
+          "1/2",
+          1
+        ],
+        [
+          "5/2",
+          1
+        ]
+      ],
+      "stable_tail_checks": [
+        {
+          "coset": "1/2",
+          "points": [
+            "-9/2",
+            "-13/2",
+            "-17/2"
+          ],
+          "orders": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mixed_balanced",
+      "terms": [
+        [
+          "4",
+          2
+        ],
+        [
+          "0",
+          -2
+        ],
+        [
+          "3",
+          -1
+        ],
+        [
+          "1",
+          1
+        ]
+      ],
+      "rational": true,
+      "tail_multiplicities": [],
+      "two_pi_power": -3,
+      "linear_factors": [
+        [
+          "0",
+          2
+        ],
+        [
+          "1",
+          -1
+        ],
+        [
+          "2",
+          2
+        ]
+      ],
+      "stable_tail_checks": [
+        {
+          "coset": "0",
+          "points": [
+            "-4",
+            "-6",
+            "-8"
+          ],
+          "orders": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coset": "1",
+          "points": [
+            "-3",
+            "-5",
+            "-7"
+          ],
+          "orders": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mixed_unbalanced",
+      "terms": [
+        [
+          "-7/3",
+          2
+        ],
+        [
+          "5/3",
+          -1
+        ]
+      ],
+      "rational": false,
+      "tail_multiplicities": [
+        [
+          "5/3",
+          1
+        ]
+      ],
+      "two_pi_power": 4,
+      "linear_factors": [
+        [
+          "-7/3",
+          -2
+        ],
+        [
+          "-1/3",
+          -2
+        ]
+      ],
+      "stable_tail_checks": [
+        {
+          "coset": "5/3",
+          "points": [
+            "-5/3",
+            "-11/3",
+            "-17/3"
+          ],
+          "orders": [
+            -1,
+            -1,
+            -1
+          ]
+        }
+      ]
+    }
+  ],
+  "tensor_pairs": [
+    {
+      "input_parities": [
+        0,
+        0
+      ],
+      "output_parity": 0,
+      "u_power": 0,
+      "cokernel_dimension": 0,
+      "basis_checks": 25
+    },
+    {
+      "input_parities": [
+        0,
+        1
+      ],
+      "output_parity": 1,
+      "u_power": 0,
+      "cokernel_dimension": 0,
+      "basis_checks": 25
+    },
+    {
+      "input_parities": [
+        1,
+        0
+      ],
+      "output_parity": 1,
+      "u_power": 0,
+      "cokernel_dimension": 0,
+      "basis_checks": 25
+    },
+    {
+      "input_parities": [
+        1,
+        1
+      ],
+      "output_parity": 0,
+      "u_power": 1,
+      "cokernel_dimension": 1,
+      "basis_checks": 25
+    }
+  ],
+  "tensor_associativity": [
+    {
+      "parities": [
+        0,
+        0,
+        0
+      ],
+      "left_u_power": 0,
+      "right_u_power": 0
+    },
+    {
+      "parities": [
+        0,
+        0,
+        1
+      ],
+      "left_u_power": 0,
+      "right_u_power": 0
+    },
+    {
+      "parities": [
+        0,
+        1,
+        0
+      ],
+      "left_u_power": 0,
+      "right_u_power": 0
+    },
+    {
+      "parities": [
+        0,
+        1,
+        1
+      ],
+      "left_u_power": 1,
+      "right_u_power": 1
+    },
+    {
+      "parities": [
+        1,
+        0,
+        0
+      ],
+      "left_u_power": 0,
+      "right_u_power": 0
+    },
+    {
+      "parities": [
+        1,
+        0,
+        1
+      ],
+      "left_u_power": 1,
+      "right_u_power": 1
+    },
+    {
+      "parities": [
+        1,
+        1,
+        0
+      ],
+      "left_u_power": 1,
+      "right_u_power": 1
+    },
+    {
+      "parities": [
+        1,
+        1,
+        1
+      ],
+      "left_u_power": 1,
+      "right_u_power": 1
+    }
+  ],
+  "duals": [
+    {
+      "parity": 0,
+      "u_power": 0,
+      "cokernel_dimension": 0,
+      "perfect_over_A": true
+    },
+    {
+      "parity": 1,
+      "u_power": 1,
+      "cokernel_dimension": 1,
+      "perfect_over_A": false
+    }
+  ],
+  "ordinary_C_tensor_multiplicities": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "balanced_A_tensor_multiplicity": 1,
+  "spacing_one_split": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "regularized_determinant": {
+    "real": "sqrt(2)/Gamma_R(s+mu)",
+    "complex": "2/Gamma_C(s+mu)",
+    "proof_kind": "analytic derivation from imported Hurwitz zeta values; not numeric replay"
+  },
+  "firewalls": {
+    "finite_affine_effective_gamma_model": "excluded by infinite divisor",
+    "shift_balanced_virtual_gamma_products": "rational; essential exception",
+    "one_sided_tensor_assignment": "lax, not strong",
+    "localized_positive_time_heat_trace": "divergent; original regularization unavailable",
+    "global_completion": "not constructed",
+    "external_novelty": "not claimed",
+    "RH_or_GRH": "not proved"
+  }
+}

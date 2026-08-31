@@ -1,0 +1,1385 @@
+{
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": [
+    "CERTIFIED_INTEGER_COVERAGE",
+    "EXACT_RATIONAL"
+  ],
+  "arithmetic_control": {
+    "aggregate_equal_pair_share_per_side": "1/3",
+    "arithmetic_atoms_after_one_sided_equal_product_aggregation": [
+      {
+        "M": 1242913731,
+        "N": 392348555,
+        "P": 155,
+        "Q": 411,
+        "c": 43,
+        "cell": [
+          3,
+          36
+        ],
+        "d": 47,
+        "g": 37,
+        "left_core": 1591,
+        "left_owner_labels": [
+          5,
+          31
+        ],
+        "physical_ratio": "286595/907899",
+        "right_core": 1739,
+        "right_owner_labels": [
+          3,
+          137
+        ],
+        "sigma": 1,
+        "tau": 1,
+        "u": 1,
+        "v": 1
+      },
+      {
+        "M": 1502988137,
+        "N": 392348555,
+        "P": 155,
+        "Q": 497,
+        "c": 43,
+        "cell": [
+          3,
+          36
+        ],
+        "d": 47,
+        "g": 37,
+        "left_core": 1591,
+        "left_owner_labels": [
+          5,
+          31
+        ],
+        "physical_ratio": "286595/1097873",
+        "right_core": 1739,
+        "right_owner_labels": [
+          7,
+          71
+        ],
+        "sigma": 1,
+        "tau": 1,
+        "u": 1,
+        "v": 1
+      },
+      {
+        "M": 1242913731,
+        "N": 511318762,
+        "P": 202,
+        "Q": 411,
+        "c": 43,
+        "cell": [
+          3,
+          36
+        ],
+        "d": 47,
+        "g": 37,
+        "left_core": 1591,
+        "left_owner_labels": [
+          2,
+          101
+        ],
+        "physical_ratio": "373498/907899",
+        "right_core": 1739,
+        "right_owner_labels": [
+          3,
+          137
+        ],
+        "sigma": 1,
+        "tau": 1,
+        "u": 1,
+        "v": 1
+      },
+      {
+        "M": 1502988137,
+        "N": 511318762,
+        "P": 202,
+        "Q": 497,
+        "c": 43,
+        "cell": [
+          3,
+          36
+        ],
+        "d": 47,
+        "g": 37,
+        "left_core": 1591,
+        "left_owner_labels": [
+          2,
+          101
+        ],
+        "physical_ratio": "373498/1097873",
+        "right_core": 1739,
+        "right_owner_labels": [
+          7,
+          71
+        ],
+        "sigma": 1,
+        "tau": 1,
+        "u": 1,
+        "v": 1
+      }
+    ],
+    "cell": [
+      3,
+      36
+    ],
+    "common_core": 37,
+    "ell": 43,
+    "equal_pair_share_per_history": "1/6",
+    "frozen_cutoff": 32,
+    "horizon": 1073741824,
+    "kernel_dimension_lower_bound_after_history_aggregation": 3,
+    "kernel_dimension_lower_bound_at_literal_history_resolution": 15,
+    "left_boolean_source": {
+      "balanced_coefficient": 2,
+      "coefficient_histogram": {
+        "1": 2
+      },
+      "coefficient_vector_statistics": {
+        "cell_mean_energy": "2",
+        "count": 2,
+        "kernel_projection_energy": "0",
+        "literal_diagonal_energy": "2",
+        "sum": "2"
+      },
+      "core": 1591,
+      "cutoff": 32,
+      "history_count": 2,
+      "labels": [
+        37,
+        43
+      ],
+      "ordered_histories": [
+        {
+          "coefficient": 1,
+          "first": [
+            37
+          ],
+          "first_coefficient": -1,
+          "first_product": 37,
+          "second": [
+            43
+          ],
+          "second_coefficient": -1,
+          "second_product": 43,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        },
+        {
+          "coefficient": 1,
+          "first": [
+            43
+          ],
+          "first_coefficient": -1,
+          "first_product": 43,
+          "second": [
+            37
+          ],
+          "second_coefficient": -1,
+          "second_product": 37,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        }
+      ]
+    },
+    "left_owner_difference_over_rho": 1,
+    "literal_same_cell_principal_submatrix_spectrum": [
+      {
+        "eigenvalue": "28980/2021",
+        "multiplicity": 1
+      },
+      {
+        "eigenvalue": "-1932/2021",
+        "multiplicity": 15
+      }
+    ],
+    "name": "Y_2_30_43_47",
+    "native_coefficient_family_nonfactorization": "NOT_PROVED",
+    "native_coefficient_shape": "z_ij(t)=conjugate(A_i(t))*B_j(t); no free coefficient coordinates are inferred",
+    "rho": 47,
+    "right_boolean_source": {
+      "balanced_coefficient": 2,
+      "coefficient_histogram": {
+        "1": 2
+      },
+      "coefficient_vector_statistics": {
+        "cell_mean_energy": "2",
+        "count": 2,
+        "kernel_projection_energy": "0",
+        "literal_diagonal_energy": "2",
+        "sum": "2"
+      },
+      "core": 1739,
+      "cutoff": 32,
+      "history_count": 2,
+      "labels": [
+        37,
+        47
+      ],
+      "ordered_histories": [
+        {
+          "coefficient": 1,
+          "first": [
+            37
+          ],
+          "first_coefficient": -1,
+          "first_product": 37,
+          "second": [
+            47
+          ],
+          "second_coefficient": -1,
+          "second_product": 47,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        },
+        {
+          "coefficient": 1,
+          "first": [
+            47
+          ],
+          "first_coefficient": -1,
+          "first_product": 47,
+          "second": [
+            37
+          ],
+          "second_coefficient": -1,
+          "second_product": 37,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        }
+      ]
+    },
+    "right_owner_difference_over_ell": 2,
+    "same_cell_arithmetic_atom_lower_bound": 4,
+    "same_cell_literal_history_atom_lower_bound": 16,
+    "scope": "source support and single-side equal-product survival, not the full live occupancy census or a bound for the native signed fibre",
+    "sigma": 1,
+    "tau": 1
+  },
+  "arithmetic_held_out": {
+    "aggregate_equal_pair_share_per_side": "1/3",
+    "arithmetic_atoms_after_one_sided_equal_product_aggregation": [
+      {
+        "M": 5382928835,
+        "N": 1300491157,
+        "P": 133,
+        "Q": 515,
+        "c": 59,
+        "cell": [
+          5,
+          44
+        ],
+        "d": 61,
+        "g": 53,
+        "left_core": 3127,
+        "left_owner_labels": [
+          7,
+          19
+        ],
+        "physical_ratio": "462973/1916315",
+        "right_core": 3233,
+        "right_owner_labels": [
+          5,
+          103
+        ],
+        "sigma": -1,
+        "tau": -1,
+        "u": 1,
+        "v": 1
+      },
+      {
+        "M": 6616298937,
+        "N": 1300491157,
+        "P": 133,
+        "Q": 633,
+        "c": 59,
+        "cell": [
+          5,
+          44
+        ],
+        "d": 61,
+        "g": 53,
+        "left_core": 3127,
+        "left_owner_labels": [
+          7,
+          19
+        ],
+        "physical_ratio": "462973/2355393",
+        "right_core": 3233,
+        "right_owner_labels": [
+          3,
+          211
+        ],
+        "sigma": -1,
+        "tau": -1,
+        "u": 1,
+        "v": 1
+      },
+      {
+        "M": 5382928835,
+        "N": 1896957026,
+        "P": 194,
+        "Q": 515,
+        "c": 59,
+        "cell": [
+          5,
+          44
+        ],
+        "d": 61,
+        "g": 53,
+        "left_core": 3127,
+        "left_owner_labels": [
+          2,
+          97
+        ],
+        "physical_ratio": "675314/1916315",
+        "right_core": 3233,
+        "right_owner_labels": [
+          5,
+          103
+        ],
+        "sigma": -1,
+        "tau": -1,
+        "u": 1,
+        "v": 1
+      },
+      {
+        "M": 6616298937,
+        "N": 1896957026,
+        "P": 194,
+        "Q": 633,
+        "c": 59,
+        "cell": [
+          5,
+          44
+        ],
+        "d": 61,
+        "g": 53,
+        "left_core": 3127,
+        "left_owner_labels": [
+          2,
+          97
+        ],
+        "physical_ratio": "675314/2355393",
+        "right_core": 3233,
+        "right_owner_labels": [
+          3,
+          211
+        ],
+        "sigma": -1,
+        "tau": -1,
+        "u": 1,
+        "v": 1
+      }
+    ],
+    "cell": [
+      5,
+      44
+    ],
+    "common_core": 53,
+    "ell": 59,
+    "equal_pair_share_per_history": "1/6",
+    "frozen_cutoff": 45,
+    "horizon": 8589934592,
+    "kernel_dimension_lower_bound_after_history_aggregation": 3,
+    "kernel_dimension_lower_bound_at_literal_history_resolution": 15,
+    "left_boolean_source": {
+      "balanced_coefficient": 2,
+      "coefficient_histogram": {
+        "1": 2
+      },
+      "coefficient_vector_statistics": {
+        "cell_mean_energy": "2",
+        "count": 2,
+        "kernel_projection_energy": "0",
+        "literal_diagonal_energy": "2",
+        "sum": "2"
+      },
+      "core": 3127,
+      "cutoff": 45,
+      "history_count": 2,
+      "labels": [
+        53,
+        59
+      ],
+      "ordered_histories": [
+        {
+          "coefficient": 1,
+          "first": [
+            53
+          ],
+          "first_coefficient": -1,
+          "first_product": 53,
+          "second": [
+            59
+          ],
+          "second_coefficient": -1,
+          "second_product": 59,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        },
+        {
+          "coefficient": 1,
+          "first": [
+            59
+          ],
+          "first_coefficient": -1,
+          "first_product": 59,
+          "second": [
+            53
+          ],
+          "second_coefficient": -1,
+          "second_product": 53,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        }
+      ]
+    },
+    "left_owner_difference_over_rho": 1,
+    "literal_same_cell_principal_submatrix_spectrum": [
+      {
+        "eigenvalue": "52200/3599",
+        "multiplicity": 1
+      },
+      {
+        "eigenvalue": "-3480/3599",
+        "multiplicity": 15
+      }
+    ],
+    "name": "Y_2_33_59_61_held_out",
+    "native_coefficient_family_nonfactorization": "NOT_PROVED",
+    "native_coefficient_shape": "z_ij(t)=conjugate(A_i(t))*B_j(t); no free coefficient coordinates are inferred",
+    "rho": 61,
+    "right_boolean_source": {
+      "balanced_coefficient": 2,
+      "coefficient_histogram": {
+        "1": 2
+      },
+      "coefficient_vector_statistics": {
+        "cell_mean_energy": "2",
+        "count": 2,
+        "kernel_projection_energy": "0",
+        "literal_diagonal_energy": "2",
+        "sum": "2"
+      },
+      "core": 3233,
+      "cutoff": 45,
+      "history_count": 2,
+      "labels": [
+        53,
+        61
+      ],
+      "ordered_histories": [
+        {
+          "coefficient": 1,
+          "first": [
+            53
+          ],
+          "first_coefficient": -1,
+          "first_product": 53,
+          "second": [
+            61
+          ],
+          "second_coefficient": -1,
+          "second_product": 61,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        },
+        {
+          "coefficient": 1,
+          "first": [
+            61
+          ],
+          "first_coefficient": -1,
+          "first_product": 61,
+          "second": [
+            53
+          ],
+          "second_coefficient": -1,
+          "second_product": 53,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        }
+      ]
+    },
+    "right_owner_difference_over_ell": 2,
+    "same_cell_arithmetic_atom_lower_bound": 4,
+    "same_cell_literal_history_atom_lower_bound": 16,
+    "scope": "source support and single-side equal-product survival, not the full live occupancy census or a bound for the native signed fibre",
+    "sigma": -1,
+    "tau": -1
+  },
+  "artifact_source_sha256_lf_normalized": {
+    "research/l-families/atlas/function_field/FFPS_LIVE_SHARED_FIBRE_COLLISIONS.md": "edb5b5ab4e8fde27207bb304a7c9e4c249e66d71d2b55811ebd79db361cace7c",
+    "research/l-families/atlas/function_field/ffps_live_shared_fibre_collisions.py": "a6af6e6e846cccf8fe017864d892f941735501c4a80836ef8e1edc5edb77c8a1",
+    "research/l-families/atlas/function_field/ffps_live_shared_fibre_collisions.sources.json": "8f047e7cba793af7135ef50b4f38d222c2912993655efe8c4dc7820607a0ee77",
+    "tests/test_ffps_live_shared_fibre_collisions.py": "bdee0bd4b0f0b8dafb0c2a2e63f504a7ce1f86ae2ae639adb64eab587d40d389"
+  },
+  "history_calibration": {
+    "bilateral_history_coefficient_ratios": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "coefficient_statistics": {
+      "cell_mean_energy": "4",
+      "count": 4,
+      "kernel_projection_energy": "0",
+      "literal_diagonal_energy": "4",
+      "sum": "4"
+    },
+    "frozen_cutoff": 16,
+    "horizon": 16777216,
+    "left_source": {
+      "balanced_coefficient": 2,
+      "coefficient_histogram": {
+        "1": 2
+      },
+      "coefficient_vector_statistics": {
+        "cell_mean_energy": "2",
+        "count": 2,
+        "kernel_projection_energy": "0",
+        "literal_diagonal_energy": "2",
+        "sum": "2"
+      },
+      "core": 731,
+      "cutoff": 16,
+      "history_count": 2,
+      "labels": [
+        17,
+        43
+      ],
+      "ordered_histories": [
+        {
+          "coefficient": 1,
+          "first": [
+            17
+          ],
+          "first_coefficient": -1,
+          "first_product": 17,
+          "second": [
+            43
+          ],
+          "second_coefficient": -1,
+          "second_product": 43,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        },
+        {
+          "coefficient": 1,
+          "first": [
+            43
+          ],
+          "first_coefficient": -1,
+          "first_product": 43,
+          "second": [
+            17
+          ],
+          "second_coefficient": -1,
+          "second_product": 17,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        }
+      ]
+    },
+    "physical_pair": {
+      "M": 22344035,
+      "N": 3206166,
+      "P": 6,
+      "Q": 35,
+      "c": 43,
+      "cell": [
+        42,
+        2
+      ],
+      "d": 47,
+      "g": 17,
+      "left_core": 731,
+      "left_owner_labels": [
+        2,
+        3
+      ],
+      "physical_ratio": "11094/77315",
+      "right_core": 799,
+      "right_owner_labels": [
+        5,
+        7
+      ],
+      "sigma": 1,
+      "tau": 1,
+      "u": 1,
+      "v": 1
+    },
+    "right_source": {
+      "balanced_coefficient": 2,
+      "coefficient_histogram": {
+        "1": 2
+      },
+      "coefficient_vector_statistics": {
+        "cell_mean_energy": "2",
+        "count": 2,
+        "kernel_projection_energy": "0",
+        "literal_diagonal_energy": "2",
+        "sum": "2"
+      },
+      "core": 799,
+      "cutoff": 16,
+      "history_count": 2,
+      "labels": [
+        17,
+        47
+      ],
+      "ordered_histories": [
+        {
+          "coefficient": 1,
+          "first": [
+            17
+          ],
+          "first_coefficient": -1,
+          "first_product": 17,
+          "second": [
+            47
+          ],
+          "second_coefficient": -1,
+          "second_product": 47,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        },
+        {
+          "coefficient": 1,
+          "first": [
+            47
+          ],
+          "first_coefficient": -1,
+          "first_product": 47,
+          "second": [
+            17
+          ],
+          "second_coefficient": -1,
+          "second_product": 17,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        }
+      ]
+    },
+    "scope": "literal swap multiplicity exists; its fixed native vector is constant and has zero kernel projection"
+  },
+  "not_proved": [
+    "full live occupancy classification or a conductor-uniform multiplicity estimate",
+    "two admissible native inputs with the same residue aggregate and different literal diagonal energy",
+    "native coefficient-family nonfactorization",
+    "a sign or noncancellation theorem for the complete native fibre",
+    "WCADD, WCCORR, WCKUM, ONEPLACEWEIL, RELPARTFROB, RELTRACE, or principal binding",
+    "RH or GRH"
+  ],
+  "proved": [
+    "a complete live shared fibre can contain duplicate physical residue cells",
+    "four arithmetic atoms in one cell survive single-side equal-product aggregation in both locked owner panels",
+    "literal ordered histories give at least sixteen same-cell atoms in each owner panel",
+    "the corresponding live-support Wick operator has a nonzero minus-d eigenspace",
+    "the signed-history control has exact nonzero fixed source variance"
+  ],
+  "resource_boundary": {
+    "authenticated_git_blobs": 11,
+    "conductor_family_searched_by_replay": false,
+    "fixed_arithmetic_owner_panels": 2,
+    "floating_point_operations": 0,
+    "largest_assignment_cube": 243,
+    "largest_boolean_support": 5,
+    "largest_literal_coefficient_vector": 100,
+    "live_source_family_enumerated": false,
+    "maximum_horizon_input": 1152921504606846976,
+    "maximum_prime_input": 5000
+  },
+  "rounding_contract": "exact Python integers and fractions; no rounding",
+  "schema": "riemann.function_field.ffps_live_shared_fibre_collisions.v1",
+  "signed_history_control": {
+    "bilateral_coefficient_histogram": {
+      "-3": 32,
+      "1": 64,
+      "9": 4
+    },
+    "bilateral_native_coefficient_ratios": [
+      9,
+      -3,
+      -3,
+      -3,
+      9,
+      -3,
+      -3,
+      -3,
+      -3,
+      -3,
+      -3,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      9,
+      -3,
+      -3,
+      -3,
+      9,
+      -3,
+      -3,
+      -3,
+      -3,
+      -3,
+      -3,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      -3,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "coefficient_statistics": {
+      "cell_mean_energy": "4/25",
+      "count": 100,
+      "kernel_projection_energy": "16896/25",
+      "literal_diagonal_energy": "676",
+      "sum": "4"
+    },
+    "common_bilateral_owner_share": "1/441",
+    "equal_pair_share_per_side_history": "1/21",
+    "fixed_history_subpacket_wick_over_common_scale_squared": "-353496000/537151",
+    "frozen_cutoff": 512,
+    "horizon": 18014398509481984,
+    "internal_zero_sum_subset": {
+      "native_coefficient_ratios": [
+        -3,
+        1,
+        1,
+        1
+      ],
+      "statistics": {
+        "cell_mean_energy": "0",
+        "count": 4,
+        "kernel_projection_energy": "12",
+        "literal_diagonal_energy": "12",
+        "sum": "0"
+      },
+      "status": "INTERNAL_SUBSET_ONLY_NOT_AN_ADMISSIBLE_FULL_NATIVE_INPUT_PAIR"
+    },
+    "left_source": {
+      "balanced_coefficient": -2,
+      "coefficient_histogram": {
+        "-1": 8,
+        "3": 2
+      },
+      "coefficient_vector_statistics": {
+        "cell_mean_energy": "2/5",
+        "count": 10,
+        "kernel_projection_energy": "128/5",
+        "literal_diagonal_energy": "26",
+        "sum": "-2"
+      },
+      "core": 47620859,
+      "cutoff": 512,
+      "history_count": 10,
+      "labels": [
+        11,
+        13,
+        17,
+        19,
+        1031
+      ],
+      "ordered_histories": [
+        {
+          "coefficient": 3,
+          "first": [
+            11,
+            13,
+            17,
+            19
+          ],
+          "first_coefficient": -3,
+          "first_product": 46189,
+          "second": [
+            1031
+          ],
+          "second_coefficient": -1,
+          "second_product": 1031,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            11,
+            13,
+            17
+          ],
+          "first_coefficient": -1,
+          "first_product": 2431,
+          "second": [
+            1031
+          ],
+          "second_coefficient": -1,
+          "second_product": 1031,
+          "tail": [
+            19
+          ],
+          "tail_mu": -1,
+          "tail_product": 19
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            11,
+            13,
+            19
+          ],
+          "first_coefficient": -1,
+          "first_product": 2717,
+          "second": [
+            1031
+          ],
+          "second_coefficient": -1,
+          "second_product": 1031,
+          "tail": [
+            17
+          ],
+          "tail_mu": -1,
+          "tail_product": 17
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            11,
+            17,
+            19
+          ],
+          "first_coefficient": -1,
+          "first_product": 3553,
+          "second": [
+            1031
+          ],
+          "second_coefficient": -1,
+          "second_product": 1031,
+          "tail": [
+            13
+          ],
+          "tail_mu": -1,
+          "tail_product": 13
+        },
+        {
+          "coefficient": 3,
+          "first": [
+            1031
+          ],
+          "first_coefficient": -1,
+          "first_product": 1031,
+          "second": [
+            11,
+            13,
+            17,
+            19
+          ],
+          "second_coefficient": -3,
+          "second_product": 46189,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            1031
+          ],
+          "first_coefficient": -1,
+          "first_product": 1031,
+          "second": [
+            11,
+            13,
+            17
+          ],
+          "second_coefficient": -1,
+          "second_product": 2431,
+          "tail": [
+            19
+          ],
+          "tail_mu": -1,
+          "tail_product": 19
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            1031
+          ],
+          "first_coefficient": -1,
+          "first_product": 1031,
+          "second": [
+            11,
+            13,
+            19
+          ],
+          "second_coefficient": -1,
+          "second_product": 2717,
+          "tail": [
+            17
+          ],
+          "tail_mu": -1,
+          "tail_product": 17
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            1031
+          ],
+          "first_coefficient": -1,
+          "first_product": 1031,
+          "second": [
+            11,
+            17,
+            19
+          ],
+          "second_coefficient": -1,
+          "second_product": 3553,
+          "tail": [
+            13
+          ],
+          "tail_mu": -1,
+          "tail_product": 13
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            13,
+            17,
+            19
+          ],
+          "first_coefficient": -1,
+          "first_product": 4199,
+          "second": [
+            1031
+          ],
+          "second_coefficient": -1,
+          "second_product": 1031,
+          "tail": [
+            11
+          ],
+          "tail_mu": -1,
+          "tail_product": 11
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            1031
+          ],
+          "first_coefficient": -1,
+          "first_product": 1031,
+          "second": [
+            13,
+            17,
+            19
+          ],
+          "second_coefficient": -1,
+          "second_product": 4199,
+          "tail": [
+            11
+          ],
+          "tail_mu": -1,
+          "tail_product": 11
+        }
+      ]
+    },
+    "native_coefficient_family_nonfactorization": "NOT_PROVED",
+    "physical_pair": {
+      "M": 20268453388818635,
+      "N": 13606477271387286,
+      "P": 6,
+      "Q": 35,
+      "c": 1031,
+      "cell": [
+        230,
+        205
+      ],
+      "d": 521,
+      "g": 46189,
+      "left_core": 47620859,
+      "left_owner_labels": [
+        2,
+        3
+      ],
+      "physical_ratio": "6377766/9500435",
+      "right_core": 24064469,
+      "right_owner_labels": [
+        5,
+        7
+      ],
+      "sigma": -1,
+      "tau": -1,
+      "u": 1,
+      "v": 1
+    },
+    "resolution": "ordered Boolean histories before one-sided equal-product aggregation; the arithmetic pair is one point after that aggregation",
+    "right_source": {
+      "balanced_coefficient": -2,
+      "coefficient_histogram": {
+        "-1": 8,
+        "3": 2
+      },
+      "coefficient_vector_statistics": {
+        "cell_mean_energy": "2/5",
+        "count": 10,
+        "kernel_projection_energy": "128/5",
+        "literal_diagonal_energy": "26",
+        "sum": "-2"
+      },
+      "core": 24064469,
+      "cutoff": 512,
+      "history_count": 10,
+      "labels": [
+        11,
+        13,
+        17,
+        19,
+        521
+      ],
+      "ordered_histories": [
+        {
+          "coefficient": 3,
+          "first": [
+            11,
+            13,
+            17,
+            19
+          ],
+          "first_coefficient": -3,
+          "first_product": 46189,
+          "second": [
+            521
+          ],
+          "second_coefficient": -1,
+          "second_product": 521,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            11,
+            13,
+            17
+          ],
+          "first_coefficient": -1,
+          "first_product": 2431,
+          "second": [
+            521
+          ],
+          "second_coefficient": -1,
+          "second_product": 521,
+          "tail": [
+            19
+          ],
+          "tail_mu": -1,
+          "tail_product": 19
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            11,
+            13,
+            19
+          ],
+          "first_coefficient": -1,
+          "first_product": 2717,
+          "second": [
+            521
+          ],
+          "second_coefficient": -1,
+          "second_product": 521,
+          "tail": [
+            17
+          ],
+          "tail_mu": -1,
+          "tail_product": 17
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            11,
+            17,
+            19
+          ],
+          "first_coefficient": -1,
+          "first_product": 3553,
+          "second": [
+            521
+          ],
+          "second_coefficient": -1,
+          "second_product": 521,
+          "tail": [
+            13
+          ],
+          "tail_mu": -1,
+          "tail_product": 13
+        },
+        {
+          "coefficient": 3,
+          "first": [
+            521
+          ],
+          "first_coefficient": -1,
+          "first_product": 521,
+          "second": [
+            11,
+            13,
+            17,
+            19
+          ],
+          "second_coefficient": -3,
+          "second_product": 46189,
+          "tail": [],
+          "tail_mu": 1,
+          "tail_product": 1
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            521
+          ],
+          "first_coefficient": -1,
+          "first_product": 521,
+          "second": [
+            11,
+            13,
+            17
+          ],
+          "second_coefficient": -1,
+          "second_product": 2431,
+          "tail": [
+            19
+          ],
+          "tail_mu": -1,
+          "tail_product": 19
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            521
+          ],
+          "first_coefficient": -1,
+          "first_product": 521,
+          "second": [
+            11,
+            13,
+            19
+          ],
+          "second_coefficient": -1,
+          "second_product": 2717,
+          "tail": [
+            17
+          ],
+          "tail_mu": -1,
+          "tail_product": 17
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            521
+          ],
+          "first_coefficient": -1,
+          "first_product": 521,
+          "second": [
+            11,
+            17,
+            19
+          ],
+          "second_coefficient": -1,
+          "second_product": 3553,
+          "tail": [
+            13
+          ],
+          "tail_mu": -1,
+          "tail_product": 13
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            13,
+            17,
+            19
+          ],
+          "first_coefficient": -1,
+          "first_product": 4199,
+          "second": [
+            521
+          ],
+          "second_coefficient": -1,
+          "second_product": 521,
+          "tail": [
+            11
+          ],
+          "tail_mu": -1,
+          "tail_product": 11
+        },
+        {
+          "coefficient": -1,
+          "first": [
+            521
+          ],
+          "first_coefficient": -1,
+          "first_product": 521,
+          "second": [
+            13,
+            17,
+            19
+          ],
+          "second_coefficient": -1,
+          "second_product": 4199,
+          "tail": [
+            11
+          ],
+          "tail_mu": -1,
+          "tail_product": 11
+        }
+      ]
+    },
+    "scope": "fixed source variance and a fixed tuple contribution only; neither the full fibre nor the complete signed source is evaluated",
+    "wick_value_as_multiple_of_d": -660
+  },
+  "source_locks": [
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "b8a6eed2c8dda7d0ed28a8dd18fc57387e4c2e7b",
+      "path": "claims/lemmas/L-102883-balanced-vaughan-free-energy-and-equal-product-cost-are-subpower.md"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "383aa27fee269645e45c26c12fbd4a97a6b337a8",
+      "path": "claims/lemmas/L-102887-horizon-safe-pair-gauge-eliminates-the-largest-two-smooth-boundary.md"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "3b72653ea5f05405c587be165faf7ab2c52c3f2b",
+      "path": "claims/lemmas/L-102958-ratioeight-comparability-pays-both-opposite-owner-products.md"
+    },
+    {
+      "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+      "git_blob": "d8f4557df6dc37e6b605b1821c5b8ab028136398",
+      "path": "claims/lemmas/L-102962-canonical-equal-pair-gauge-is-horizon-safe-on-the-boolean-balanced-source.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "346cc52420ec65457c2a5accc045d4a85635cc24",
+      "path": "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+      "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "37722c3f36ec7d1681f34d4329a3795e5028f7ae",
+      "path": "claims/lemmas/L-106131-wick-normal-ordering-additive-kummer-decomposition.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "85c4ef92ead7d8b235f9c195c3c0acd16d16030f",
+      "path": "claims/lemmas/L-106191-source-dual-centered-double-incidence-correlation.md"
+    },
+    {
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+      "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md"
+    },
+    {
+      "commit": "99163530fdd311f42e138e33851a94e26c6b0f32",
+      "git_blob": "5540f451b41c234066d024d577de50701cf715c7",
+      "path": "research/l-families/atlas/function_field/FFPS_FROZEN_SOURCE_TERMINAL_HORIZON_AUDIT.md"
+    },
+    {
+      "commit": "6675c19f20760301d8c91dedc4a7836170003512",
+      "git_blob": "3e7fff53f5cdbb3a660b24b2e765f4ac35c434c3",
+      "path": "research/l-families/atlas/function_field/FFPS_SHARED_FIBRE_WICK_OCCUPANCY_SPECTRUM.md"
+    }
+  ],
+  "status": "EXACT_LIVE_SUPPORT_COLLISIONS_AND_FIXED_HISTORY_VARIANCE"
+}

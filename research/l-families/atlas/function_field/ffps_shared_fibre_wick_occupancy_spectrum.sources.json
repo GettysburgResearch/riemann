@@ -1,0 +1,68 @@
+{
+  "schema": "riemann.function_field.ffps_shared_fibre_wick_occupancy_sources.v1",
+  "status": "EXPLORATORY_WAVE2_SOURCE_LOCK_NOT_INTEGRATED",
+  "predecessor_commit": "b8cf095e7446583af80cbe4ff5d04257b6901d97",
+  "sources": [
+    {
+      "role": "gate0_shared_coordinate_graph_and_global_firewall",
+      "commit": "b8cf095e7446583af80cbe4ff5d04257b6901d97",
+      "path": "research/l-families/atlas/function_field/FFPS_MARKED_PLACE_SIGNED_DESCENT_GATE0.md",
+      "git_blob": "aad29a0401d0f26c3dceadaaaaf017af6da95ec1"
+    },
+    {
+      "role": "gate0_native_source_provenance",
+      "commit": "b8cf095e7446583af80cbe4ff5d04257b6901d97",
+      "path": "research/l-families/atlas/function_field/ffps_marked_place_signed_descent_gate0.sources.json",
+      "git_blob": "b62cc787177e51bd89ef33307bd08916c16d8d1d"
+    },
+    {
+      "role": "oneplaceweil_reltrace_and_signed_recombination_boundary",
+      "commit": "3a595dda92ef827a41e50d2395309692a93748ad",
+      "path": "research/l-families/atlas/function_field/FFPS_RELATIVE_TRACE_TENSOR_CLOSURE.md",
+      "git_blob": "37647db8c43b983dc64bfc71a0c112539119a98a"
+    },
+    {
+      "role": "external_plus_literal_diagonal_adams_interface",
+      "commit": "3a595dda92ef827a41e50d2395309692a93748ad",
+      "path": "research/l-families/atlas/function_field/FFPS_RELATIVE_EXTERNAL_DIAGONAL_ADAMS.md",
+      "git_blob": "884f2fc949bbd5b076df0c0c7afd4711f81ce37e"
+    },
+    {
+      "role": "native_fixed_fibre_owner_cofactor_phase_coordinates",
+      "claim": "L-106120",
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md",
+      "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065"
+    },
+    {
+      "role": "literal_atom_wick_diagonal_and_centered_background",
+      "claim": "L-106131",
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/lemmas/L-106131-wick-normal-ordering-additive-kummer-decomposition.md",
+      "git_blob": "37722c3f36ec7d1681f34d4329a3795e5028f7ae"
+    },
+    {
+      "role": "source_dual_shared_fibre_centered_incidence_kernel",
+      "claim": "L-106191",
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/lemmas/L-106191-source-dual-centered-double-incidence-correlation.md",
+      "git_blob": "85c4ef92ead7d8b235f9c195c3c0acd16d16030f"
+    },
+    {
+      "role": "wcadd_wckum_principal_binding_frontier",
+      "claim": "T-106140",
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md",
+      "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2"
+    }
+  ],
+  "native_ontology": {
+    "fibre": "iota=(g,ell,rho,sigma,tau), ell!=rho",
+    "atom": "omega=(P,Q,c=ell*u,d=rho*v; all retained source labels)",
+    "pair_space": "(Omega x_I Omega) minus the literal relative diagonal",
+    "physical_coordinates": "x=-Q*rho^2*v^2 mod ell, y=P*ell^2*u^2 mod rho",
+    "forbidden_model": "independent marked-place pairs Z0 x Z1"
+  },
+  "authentication": "The producer independently resolves every COMMIT:PATH through the local Git object database and compares the returned blob ID.",
+  "boundary": "This lock authenticates a fixed-fibre algebra and an arbitrary-occupancy residue-sufficiency criterion, not live occupancy or injectivity, global signed recombination, geometric descent, principal binding, RH, or GRH."
+}

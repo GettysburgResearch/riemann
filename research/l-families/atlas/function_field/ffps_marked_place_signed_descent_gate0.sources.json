@@ -1,0 +1,99 @@
+{
+  "schema": "riemann.function_field.ffps_marked_place_signed_descent_sources.v1",
+  "status": "EXPLORATORY_GATE0_SOURCE_LOCK_NOT_INTEGRATED",
+  "base_commit": "b870366141fe8d5f43d5b81f6e50a67d2a888070",
+  "sources": [
+    {
+      "role": "corrected_marked_place_axes_and_raw_no_lift",
+      "commit": "d79692ece0b7604ad309c459f565b24e9926f5c5",
+      "path": "research/l-families/atlas/function_field/FFPS_MARKED_PLACE_BIFROBENIUS_GLUING_GATE.md",
+      "git_blob": "a04eaa8a1fd5838f7bbe605dc9c8099e0f033511"
+    },
+    {
+      "role": "faithful_graph_support_module",
+      "commit": "d79692ece0b7604ad309c459f565b24e9926f5c5",
+      "path": "research/l-families/atlas/function_field/FFPS_TERNARY_RELATIVE_CORRESPONDENCE_NORMAL_FORM.md",
+      "git_blob": "4ee3c50f3cce3e7aa2dbd901b93fd50b713ea4bb"
+    },
+    {
+      "role": "native_partial_frobenius_scope_firewall",
+      "commit": "d79692ece0b7604ad309c459f565b24e9926f5c5",
+      "path": "research/l-families/atlas/function_field/FFPS_NATIVE_PARTIAL_FROBENIUS_VERDICT.md",
+      "git_blob": "19939eb240ca6b2b6d5221954cec76fe0f5c4f9c"
+    },
+    {
+      "role": "relative_first_adams_interface",
+      "commit": "3a595dda92ef827a41e50d2395309692a93748ad",
+      "path": "research/l-families/atlas/function_field/FFPS_RELATIVE_FIRST_ADAMS_CLOSURE.md",
+      "git_blob": "aba88795dd1c95cb320d45c1dc367cd71d73e1d5"
+    },
+    {
+      "role": "fixed_label_coefficient_partition_externality",
+      "commit": "3a595dda92ef827a41e50d2395309692a93748ad",
+      "path": "research/l-families/atlas/function_field/FFPS_RELATIVE_PHASE_STRATIFIED_EXTERNALIZATION.md",
+      "git_blob": "68e99e25539de79955ef11534056b9e82b57cb60"
+    },
+    {
+      "role": "trace_level_mobius_and_wick_tensor_closure",
+      "commit": "3a595dda92ef827a41e50d2395309692a93748ad",
+      "path": "research/l-families/atlas/function_field/FFPS_RELATIVE_TRACE_TENSOR_CLOSURE.md",
+      "git_blob": "37647db8c43b983dc64bfc71a0c112539119a98a"
+    },
+    {
+      "role": "external_plus_literal_diagonal_adams_category",
+      "commit": "3a595dda92ef827a41e50d2395309692a93748ad",
+      "path": "research/l-families/atlas/function_field/FFPS_RELATIVE_EXTERNAL_DIAGONAL_ADAMS.md",
+      "git_blob": "884f2fc949bbd5b076df0c0c7afd4711f81ce37e"
+    },
+    {
+      "role": "native_bilateral_labels_and_phase_tensor",
+      "claim": "L-106120",
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md",
+      "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065"
+    },
+    {
+      "role": "literal_wick_normal_ordering_and_physical_coordinates",
+      "claim": "L-106131",
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/lemmas/L-106131-wick-normal-ordering-additive-kummer-decomposition.md",
+      "git_blob": "37722c3f36ec7d1681f34d4329a3795e5028f7ae"
+    },
+    {
+      "role": "dangerous_degree_one_core_chart_and_centered_correlation",
+      "claim": "L-106191",
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/lemmas/L-106191-source-dual-centered-double-incidence-correlation.md",
+      "git_blob": "85c4ef92ead7d8b235f9c195c3c0acd16d16030f"
+    },
+    {
+      "role": "principal_binding_normalization_and_open_gates",
+      "claim": "T-106140",
+      "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+      "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md",
+      "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2"
+    },
+    {
+      "role": "honest_cyclic_invariant_projector",
+      "commit": "b870366141fe8d5f43d5b81f6e50a67d2a888070",
+      "path": "research/l-families/atlas/function_field/FFPS_CYCLIC_TORSOR_RELATIVE_PROJECTOR.md",
+      "git_blob": "ab16e6c0894e51303119692e67b2f2bf59ba73e4"
+    },
+    {
+      "role": "literal_physical_squareclass_cleanup_order",
+      "commit": "b870366141fe8d5f43d5b81f6e50a67d2a888070",
+      "path": "research/l-families/atlas/function_field/FFPS_PHYSICAL_SQUARECLASS_ADAPTER.md",
+      "git_blob": "e7cb9133bb6b57ddbb1c7f1e350f1d2d0af7bd1a"
+    }
+  ],
+  "native_labels": {
+    "fibre": "iota=(g,ell,rho,sigma,tau), ell!=rho",
+    "left_phase": "1<=h<ell",
+    "right_phase": "1<=k<rho",
+    "least_core_places": "ell=P^-(c), rho=P^-(d)",
+    "physical_coordinates": "X=P*c^2 mod rho, Y=Q*d^2 mod ell",
+    "wick_scope": "literal source labels before physical collapse"
+  },
+  "authentication": "The producer independently resolves every COMMIT:PATH through the local Git object database and compares the returned blob ID.",
+  "boundary": "This is a source lock for an exploratory Gate-0 packet, not an exact-SHA scientific review or integration verdict."
+}

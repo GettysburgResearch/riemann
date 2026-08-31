@@ -1,0 +1,94 @@
+{
+  "schema": "xi-uniform-companion-count-width-sources-v1",
+  "authoring_base": "08187bdfae119f66c8c82baca2d1c1068e48ff40",
+  "scope": "actual-Xi geographic count; finite geographic shallow packets; no native cofinal capture",
+  "external_contracts": [
+    {
+      "url": "https://dlmf.nist.gov/5.11",
+      "contract": "classical Gamma/digamma Stirling expansions 5.11.1-2; manually consulted, not remote-byte authenticated",
+      "remote_bytes_authenticated": false
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.4.E4",
+      "contract": "standard completed xi normalization; primitive kernel normalization is proved in bound XL1-XL4 source",
+      "remote_bytes_authenticated": false
+    },
+    {
+      "url": "https://arxiv.org/pdf/2107.06506v1",
+      "contract": "Hasanalizade-Shen-Wong Section 1 (1.1): classical N(T)=T log(T/(2pi e))/(2pi)+O(log T), used only for the normalizer; no explicit modern error constant imported",
+      "remote_bytes_authenticated": false
+    }
+  ],
+  "sources": [
+    {
+      "commit": "3b6972320899a82c6caa3a98e2ada5ff703a605a",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+      "role": "primitive_Xi_normalization_XL1_and_positive_theta_bound_XL11",
+      "git_blob": "fa24f9c8e0a87709d1a297a4e72136c1135d066c",
+      "sha256_lf": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246"
+    },
+    {
+      "commit": "f3d074190e64a97ac935b93c5b628568cde90858",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION_AUDIT.md",
+      "role": "frozen_concentration_review_context",
+      "git_blob": "da9032e15eb7be89557a54120b74fc9596c527d9",
+      "sha256_lf": "aaf60c26b34296aa2e23bdad1469fce8ed3efe5ec27063d14d666f3fa5ce0536"
+    },
+    {
+      "commit": "ef7bbb8dca978269f24e7ff9d97b6dceeed5b460",
+      "path": "research/exploratory/HARDY_INNER_WIDTH_SOURCE_DUALITY.md",
+      "role": "all_inner_finite_denominator_width_and_adjoint_source",
+      "git_blob": "955b92fe277bcdb3d6e260b5cc9dc02dd3f49144",
+      "sha256_lf": "a946e53b956bc94b39687dffe59f0eb97d33948ace996a6d9f0797d71b20acd5"
+    },
+    {
+      "commit": "8ef225b8753e2cd1f9c031fbb8038d1321c7f308",
+      "path": "research/exploratory/XI_CONFLUENT_SOURCE_BAND_OBSTRUCTION.md",
+      "role": "accepted_band_CB18_CB20_only_not_historical_raw_values",
+      "git_blob": "76152f000c026c4a68ade2593b16ffbd7e0de528",
+      "sha256_lf": "750f7e22c14adcb8d3748e29d7a6b5b5e808fcab4998660c759a484800ef6146"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "path": "claims/lemmas/L-106610-riemann-siegel-gauge-factorization.md",
+      "role": "disambiguated_physical_gauge_and_Stirling_scale",
+      "git_blob": "16ab64a193e59608c9e2c9fd9762addc58809c3f",
+      "sha256_lf": "11c87fd9b50c309249b76f39fd87c3d20953779355a39a0338ef281d3cb57c87"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "path": "claims/lemmas/L-106620-mesoscopic-frozen-riemann-siegel-gauge.md",
+      "role": "fixed_constant_lambda_and_J_windows",
+      "git_blob": "7fbf3731f286ddfc9eb1d10ede5941ab2156817a",
+      "sha256_lf": "23e368f246606b0a8b4f53bec9e65e1dec21bdd207197387461268b4ca1bb7d0"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "path": "claims/lemmas/L-106503-companion-pole-heights-obey-rank-one-majorization.md",
+      "role": "finite_polynomial_degree_not_native_local_count",
+      "git_blob": "f55761a06cc53a2e32b8c79bc07cb9206ba24701",
+      "sha256_lf": "822fdbcb18a68c9bba4fe2c9172cde23af491e7439dac4b0dd1813b39dee3d48"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "path": "claims/lemmas/L-106621-constant-scale-companion-height-budget.md",
+      "role": "conditional_height_improvement_only",
+      "git_blob": "fafa4b390bc140c8bb514dba83d41a5643cb77f1",
+      "sha256_lf": "e41462ea71fd1f46849f75f7ff5dd6189514743e27bd3292bd1aec9292ec9065"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "path": "claims/theorems/T-106620-mesoscopic-riemann-siegel-gauge-ninety-percent-frontier.md",
+      "role": "unpaid_native_cofinal_and_boundary_ledger",
+      "git_blob": "8db4fc42c3ea964c592224b64d0ad92b6c264018",
+      "sha256_lf": "f926698271d06b2db02bd1d7e00a05034934d8b77a75496e137d127c565795b0"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "path": "claims/theorems/T-106670-regularized-pick-free-energy-ninety-percent-equivalence.md",
+      "role": "historical_finite_cofinal_scope_not_repaired",
+      "git_blob": "9a61689c19b244f0176f753cef146b252256eab0",
+      "sha256_lf": "b96ffe1ec8e5fc7d825e521c57c956066e25f0494e80aa4c13d4017ea98c8ae7"
+    }
+  ]
+}

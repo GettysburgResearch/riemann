@@ -1,0 +1,33 @@
+{
+  "authoring_base": "36eddbbf065959f535ca4a7b08455d489ed4bd18",
+  "external_context": {
+    "passages": "introduction; Section2.2 TheoremA; Section2.4 projection/model operators",
+    "remote_bytes_authenticated": false,
+    "role": "classical kernel/Riesz/projection context; no imported HS theorem",
+    "url": "https://arxiv.org/html/2203.15372v1"
+  },
+  "frozen_sources": [
+    {
+      "commit": "90e8dff3d184cbfe59974969ca89615856c33c51",
+      "git_blob": "72ac1f93b6fb0a74200ed2cc7e8399a4a10064c2",
+      "kind": "corrected_physical_interface_and_sparse_denominator",
+      "path": "research/exploratory/HARDY_COFINAL_FINITE_HEIGHT_SOURCE_CAPTURE.md",
+      "sha256_lf": "490373dafd09ed491a2c3ad31b44dc152cd0936c84f58e1676aef0ffd1013a0b"
+    },
+    {
+      "commit": "36eddbbf065959f535ca4a7b08455d489ed4bd18",
+      "git_blob": "d44f3b58e7dbd9ec847d771b2299c6fabc21f5df",
+      "kind": "bare_low_pass_equivalence_and_scope_firewalls",
+      "path": "research/exploratory/HARDY_LOW_PASS_HEIGHT_EQUIVALENCE.md",
+      "sha256_lf": "ca94d882bc9ee69ae8e0a277ccc13ca7e7b86ab95a52d60eed16bb110f32bc72"
+    }
+  ],
+  "primitive_contract": {
+    "Fourier": "(2pi)^(-1/2) integral_0^infinity h(t) exp(izt)dt; boundary dx",
+    "construction": "b_n=16*2^n+i; u_n=16*2^n+i*(1+2^-n); n>=1; PURE",
+    "projection": "P_U=P_(U H2)=M_U M_U*, NOT P_(K_U) or M_U",
+    "source": "O=1; N_src=U; D_src=B; R_src=U-B; nonnative",
+    "tail": "fixed infinite U; orthogonal divisor prefix; overlap correction retained"
+  },
+  "schema": "coprime-infinite-height-physical-sources-v1"
+}

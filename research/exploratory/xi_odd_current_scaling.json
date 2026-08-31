@@ -1,0 +1,803 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "artifact_sha256_lf": {
+    "research/exploratory/XI_ODD_CURRENT_CARRIER_TRANSITION.md": "b7f3b85a56dba60b1b249ddd447d68f6cd9421423fa7fc1c27aa32804891becc",
+    "research/exploratory/XI_ODD_CURRENT_DOUBLE_SCALING.md": "3c7c16677311d40d8219a88ffb236984ea8704a8ef4e1a30f8b9da1637342e41",
+    "research/exploratory/xi_odd_current_double_scaling_scout.py": "c9726967a842e1f0b9343bc6eae4cf54e17a45ebc0fe23f2d1f32caf6145626b",
+    "research/exploratory/xi_odd_current_scaling.py": "3ec353766ba53206af647adc84eec139503d7404a5113057fd00de985b62bd95",
+    "research/exploratory/xi_odd_current_scaling.sources.json": "40faa58ea354d2f7f86ee9859d1112227ed5b12e716546c28b6d20320142bdda",
+    "tests/test_xi_odd_current_scaling.py": "98ae7beab3a0d970b5760076783dcbf30e71d025503f1db96451e62219cb96e9"
+  },
+  "boundary_window_panel": [
+    {
+      "Delta": "-8",
+      "ell": "5/4",
+      "window_coefficient": "3/5",
+      "xi": "2"
+    },
+    {
+      "Delta": "-6",
+      "ell": "5/4",
+      "window_coefficient": "13/5",
+      "xi": "2"
+    },
+    {
+      "Delta": "0",
+      "ell": "5/4",
+      "window_coefficient": "43/5",
+      "xi": "2"
+    },
+    {
+      "Delta": "2",
+      "ell": "5/4",
+      "window_coefficient": "53/5",
+      "xi": "2"
+    },
+    {
+      "Delta": "-12",
+      "ell": "7/6",
+      "window_coefficient": "1/14",
+      "xi": "3"
+    },
+    {
+      "Delta": "-9",
+      "ell": "7/6",
+      "window_coefficient": "43/14",
+      "xi": "3"
+    },
+    {
+      "Delta": "0",
+      "ell": "7/6",
+      "window_coefficient": "169/14",
+      "xi": "3"
+    },
+    {
+      "Delta": "3",
+      "ell": "7/6",
+      "window_coefficient": "211/14",
+      "xi": "3"
+    },
+    {
+      "Delta": "-20",
+      "ell": "11/10",
+      "window_coefficient": "-21/22",
+      "xi": "5"
+    },
+    {
+      "Delta": "-15",
+      "ell": "11/10",
+      "window_coefficient": "89/22",
+      "xi": "5"
+    },
+    {
+      "Delta": "0",
+      "ell": "11/10",
+      "window_coefficient": "419/22",
+      "xi": "5"
+    },
+    {
+      "Delta": "5",
+      "ell": "11/10",
+      "window_coefficient": "529/22",
+      "xi": "5"
+    },
+    {
+      "Delta": "-32",
+      "ell": "17/16",
+      "window_coefficient": "-42/17",
+      "xi": "8"
+    },
+    {
+      "Delta": "-24",
+      "ell": "17/16",
+      "window_coefficient": "94/17",
+      "xi": "8"
+    },
+    {
+      "Delta": "0",
+      "ell": "17/16",
+      "window_coefficient": "502/17",
+      "xi": "8"
+    },
+    {
+      "Delta": "8",
+      "ell": "17/16",
+      "window_coefficient": "638/17",
+      "xi": "8"
+    },
+    {
+      "Delta": "-40",
+      "ell": "21/20",
+      "window_coefficient": "-73/21",
+      "xi": "10"
+    },
+    {
+      "Delta": "-30",
+      "ell": "21/20",
+      "window_coefficient": "137/21",
+      "xi": "10"
+    },
+    {
+      "Delta": "0",
+      "ell": "21/20",
+      "window_coefficient": "767/21",
+      "xi": "10"
+    },
+    {
+      "Delta": "10",
+      "ell": "21/20",
+      "window_coefficient": "977/21",
+      "xi": "10"
+    },
+    {
+      "Delta": "-64",
+      "ell": "33/32",
+      "window_coefficient": "-214/33",
+      "xi": "16"
+    },
+    {
+      "Delta": "-48",
+      "ell": "33/32",
+      "window_coefficient": "314/33",
+      "xi": "16"
+    },
+    {
+      "Delta": "0",
+      "ell": "33/32",
+      "window_coefficient": "1898/33",
+      "xi": "16"
+    },
+    {
+      "Delta": "16",
+      "ell": "33/32",
+      "window_coefficient": "2426/33",
+      "xi": "16"
+    },
+    {
+      "Delta": "-128",
+      "ell": "65/64",
+      "window_coefficient": "-942/65",
+      "xi": "32"
+    },
+    {
+      "Delta": "-96",
+      "ell": "65/64",
+      "window_coefficient": "1138/65",
+      "xi": "32"
+    },
+    {
+      "Delta": "0",
+      "ell": "65/64",
+      "window_coefficient": "7378/65",
+      "xi": "32"
+    },
+    {
+      "Delta": "32",
+      "ell": "65/64",
+      "window_coefficient": "9458/65",
+      "xi": "32"
+    },
+    {
+      "Delta": "-256",
+      "ell": "129/128",
+      "window_coefficient": "-3934/129",
+      "xi": "64"
+    },
+    {
+      "Delta": "-192",
+      "ell": "129/128",
+      "window_coefficient": "4322/129",
+      "xi": "64"
+    },
+    {
+      "Delta": "0",
+      "ell": "129/128",
+      "window_coefficient": "29090/129",
+      "xi": "64"
+    },
+    {
+      "Delta": "64",
+      "ell": "129/128",
+      "window_coefficient": "37346/129",
+      "xi": "64"
+    }
+  ],
+  "caps": {
+    "K_max": 63,
+    "moment_index_max": 8,
+    "rational_input_bits": 64
+  },
+  "carrier_panel": [
+    {
+      "kappa": "0",
+      "limit_2K_rho": "5",
+      "w": "-1"
+    },
+    {
+      "kappa": "0",
+      "limit_2K_rho": "1",
+      "w": "0"
+    },
+    {
+      "kappa": "0",
+      "limit_2K_rho": "0",
+      "w": "1/4"
+    },
+    {
+      "kappa": "0",
+      "limit_2K_rho": "-3",
+      "w": "1"
+    },
+    {
+      "kappa": "0",
+      "limit_2K_rho": "-11",
+      "w": "3"
+    },
+    {
+      "kappa": "1/2",
+      "limit_2K_rho": "41/8",
+      "w": "-1"
+    },
+    {
+      "kappa": "1/2",
+      "limit_2K_rho": "9/8",
+      "w": "0"
+    },
+    {
+      "kappa": "1/2",
+      "limit_2K_rho": "1/8",
+      "w": "1/4"
+    },
+    {
+      "kappa": "1/2",
+      "limit_2K_rho": "-23/8",
+      "w": "1"
+    },
+    {
+      "kappa": "1/2",
+      "limit_2K_rho": "-87/8",
+      "w": "3"
+    },
+    {
+      "kappa": "1",
+      "limit_2K_rho": "11/2",
+      "w": "-1"
+    },
+    {
+      "kappa": "1",
+      "limit_2K_rho": "3/2",
+      "w": "0"
+    },
+    {
+      "kappa": "1",
+      "limit_2K_rho": "1/2",
+      "w": "1/4"
+    },
+    {
+      "kappa": "1",
+      "limit_2K_rho": "-5/2",
+      "w": "1"
+    },
+    {
+      "kappa": "1",
+      "limit_2K_rho": "-21/2",
+      "w": "3"
+    },
+    {
+      "kappa": "4",
+      "limit_2K_rho": "13",
+      "w": "-1"
+    },
+    {
+      "kappa": "4",
+      "limit_2K_rho": "9",
+      "w": "0"
+    },
+    {
+      "kappa": "4",
+      "limit_2K_rho": "8",
+      "w": "1/4"
+    },
+    {
+      "kappa": "4",
+      "limit_2K_rho": "5",
+      "w": "1"
+    },
+    {
+      "kappa": "4",
+      "limit_2K_rho": "-3",
+      "w": "3"
+    }
+  ],
+  "complete_current_grid_rows": 896,
+  "gaussian_moment_panel": [
+    {
+      "moment_polynomial_in_kappa_squared": [
+        "1"
+      ],
+      "q": 0,
+      "sinhc_translation_tau_2q_coefficient": [
+        "1"
+      ]
+    },
+    {
+      "moment_polynomial_in_kappa_squared": [
+        "3/2",
+        "1/4"
+      ],
+      "q": 1,
+      "sinhc_translation_tau_2q_coefficient": [
+        "1/4",
+        "1/24"
+      ]
+    },
+    {
+      "moment_polynomial_in_kappa_squared": [
+        "15/4",
+        "5/4",
+        "1/16"
+      ],
+      "q": 2,
+      "sinhc_translation_tau_2q_coefficient": [
+        "1/32",
+        "1/96",
+        "1/1920"
+      ]
+    },
+    {
+      "moment_polynomial_in_kappa_squared": [
+        "105/8",
+        "105/16",
+        "21/32",
+        "1/64"
+      ],
+      "q": 3,
+      "sinhc_translation_tau_2q_coefficient": [
+        "1/384",
+        "1/768",
+        "1/7680",
+        "1/322560"
+      ]
+    },
+    {
+      "moment_polynomial_in_kappa_squared": [
+        "945/16",
+        "315/8",
+        "189/32",
+        "9/32",
+        "1/256"
+      ],
+      "q": 4,
+      "sinhc_translation_tau_2q_coefficient": [
+        "1/6144",
+        "1/9216",
+        "1/61440",
+        "1/1290240",
+        "1/92897280"
+      ]
+    },
+    {
+      "moment_polynomial_in_kappa_squared": [
+        "10395/32",
+        "17325/64",
+        "3465/64",
+        "495/128",
+        "55/512",
+        "1/1024"
+      ],
+      "q": 5,
+      "sinhc_translation_tau_2q_coefficient": [
+        "1/122880",
+        "1/147456",
+        "1/737280",
+        "1/10321920",
+        "1/371589120",
+        "1/40874803200"
+      ]
+    },
+    {
+      "moment_polynomial_in_kappa_squared": [
+        "135135/64",
+        "135135/64",
+        "135135/256",
+        "6435/128",
+        "2145/1024",
+        "39/1024",
+        "1/4096"
+      ],
+      "q": 6,
+      "sinhc_translation_tau_2q_coefficient": [
+        "1/2949120",
+        "1/2949120",
+        "1/11796480",
+        "1/123863040",
+        "1/2972712960",
+        "1/163499212800",
+        "1/25505877196800"
+      ]
+    },
+    {
+      "moment_polynomial_in_kappa_squared": [
+        "2027025/128",
+        "4729725/256",
+        "2837835/512",
+        "675675/1024",
+        "75075/2048",
+        "4095/4096",
+        "105/8192",
+        "1/16384"
+      ],
+      "q": 7,
+      "sinhc_translation_tau_2q_coefficient": [
+        "1/82575360",
+        "1/70778880",
+        "1/235929600",
+        "1/1981808640",
+        "1/35672555520",
+        "1/1307993702400",
+        "1/102023508787200",
+        "1/21424936845312000"
+      ]
+    },
+    {
+      "moment_polynomial_in_kappa_squared": [
+        "34459425/256",
+        "11486475/64",
+        "16081065/256",
+        "2297295/256",
+        "1276275/2048",
+        "23205/1024",
+        "1785/4096",
+        "17/4096",
+        "1/65536"
+      ],
+      "q": 8,
+      "sinhc_translation_tau_2q_coefficient": [
+        "1/2642411520",
+        "1/1981808640",
+        "1/5662310400",
+        "1/39636172800",
+        "1/570760888320",
+        "1/15695924428800",
+        "1/816188070297600",
+        "1/85699747381248000",
+        "1/23310331287699456000"
+      ]
+    }
+  ],
+  "general_boundary_cleared_coefficients": [
+    "-1",
+    "0",
+    "2"
+  ],
+  "likelihood_successor_panel": [
+    {
+      "K": 1,
+      "complete_coefficients_sha256": "26a6ce94f8d2ece150a6caa06e71f7d032764e0638a47b58e868257bb3dea578",
+      "degree": 0,
+      "first_coefficient": "3",
+      "last_coefficient": "3",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 3
+    },
+    {
+      "K": 3,
+      "complete_coefficients_sha256": "b6641334b4020003462563e56b2671eb1742dbadad4e8c762257492e1c3f59b7",
+      "degree": 2,
+      "first_coefficient": "7",
+      "last_coefficient": "15",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 5
+    },
+    {
+      "K": 5,
+      "complete_coefficients_sha256": "d5ccf7a7b0fd88103f1f26f45ccff150b92a5918b24fd49bd169ce5e53d6eaa7",
+      "degree": 4,
+      "first_coefficient": "11",
+      "last_coefficient": "35",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 7
+    },
+    {
+      "K": 7,
+      "complete_coefficients_sha256": "2b0ec776b0a422b96f3b8cc4045120e83f2756abcc542b952553585a6b2f1587",
+      "degree": 6,
+      "first_coefficient": "15",
+      "last_coefficient": "63",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 9
+    },
+    {
+      "K": 9,
+      "complete_coefficients_sha256": "5251821d988a7234d1e8b310b17e74120161f1211defc848fec7fe90dd3cb209",
+      "degree": 8,
+      "first_coefficient": "19",
+      "last_coefficient": "99",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 11
+    },
+    {
+      "K": 11,
+      "complete_coefficients_sha256": "c7ffdc153e87fc28e99c91b1749e4499190b13257e03ec604b67113c9d13427c",
+      "degree": 10,
+      "first_coefficient": "23",
+      "last_coefficient": "143",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 13
+    },
+    {
+      "K": 13,
+      "complete_coefficients_sha256": "ac643b21828393cbcfadada0d0097cf1effeec623496881d6f370499ad9d5aa4",
+      "degree": 12,
+      "first_coefficient": "27",
+      "last_coefficient": "195",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 15
+    },
+    {
+      "K": 15,
+      "complete_coefficients_sha256": "dc9db84a775ad88d97dfaf6ccd1a8d4b261d72c576f2451bd2e03dcfe62a2db8",
+      "degree": 14,
+      "first_coefficient": "31",
+      "last_coefficient": "255",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 17
+    },
+    {
+      "K": 17,
+      "complete_coefficients_sha256": "c380ba51a4eb52f1caaeb63731027e50ef3c04b778e7a45aad49b817e6fed827",
+      "degree": 16,
+      "first_coefficient": "35",
+      "last_coefficient": "323",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 19
+    },
+    {
+      "K": 19,
+      "complete_coefficients_sha256": "681db42dfa9c2c0010d06b8c6b57cd10b0fa8d2afeb66d6cae441c800aab0887",
+      "degree": 18,
+      "first_coefficient": "39",
+      "last_coefficient": "399",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 21
+    },
+    {
+      "K": 21,
+      "complete_coefficients_sha256": "5b70648ea2e5e988f0bb8ae5c41b2f12e9c18c32064625ddacc9b811d36ddc21",
+      "degree": 20,
+      "first_coefficient": "43",
+      "last_coefficient": "483",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 23
+    },
+    {
+      "K": 23,
+      "complete_coefficients_sha256": "d0324704cd380a3d1c623cbeb1c08acf3b689b50e9ef90981e39bc2d7adc5e8b",
+      "degree": 22,
+      "first_coefficient": "47",
+      "last_coefficient": "575",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 25
+    },
+    {
+      "K": 25,
+      "complete_coefficients_sha256": "6856fd1051f9b9e504f894ed113a0f0d78788c9c5f027ec77655d77733d904b6",
+      "degree": 24,
+      "first_coefficient": "51",
+      "last_coefficient": "675",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 27
+    },
+    {
+      "K": 27,
+      "complete_coefficients_sha256": "82da12ee355d9e9fa66cb626470b77ad4c7c886c8a37b08581c0e7816bd13db3",
+      "degree": 26,
+      "first_coefficient": "55",
+      "last_coefficient": "783",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 29
+    },
+    {
+      "K": 29,
+      "complete_coefficients_sha256": "26dbaad60dcfa3d98f24ff7fa079a8c24c34debbcd57b6d7f2f6df247d38742d",
+      "degree": 28,
+      "first_coefficient": "59",
+      "last_coefficient": "899",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 31
+    },
+    {
+      "K": 31,
+      "complete_coefficients_sha256": "2a7b89720342dcc5bf2c8b54e62cd5295342688c415530cbeb18622fa8648443",
+      "degree": 30,
+      "first_coefficient": "63",
+      "last_coefficient": "1023",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 33
+    },
+    {
+      "K": 33,
+      "complete_coefficients_sha256": "c8967cd1ec40bf46ed7e36e089194c450dbc5e0f39a64153cb4f4d0a631f4ec1",
+      "degree": 32,
+      "first_coefficient": "67",
+      "last_coefficient": "1155",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 35
+    },
+    {
+      "K": 35,
+      "complete_coefficients_sha256": "c33a12c3b5be2ca62db201ddbcb5481f45f9143d13d1fe94f068ec46162d0ac7",
+      "degree": 34,
+      "first_coefficient": "71",
+      "last_coefficient": "1295",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 37
+    },
+    {
+      "K": 37,
+      "complete_coefficients_sha256": "1e72b5c82eb230f5689c1ae09e10431abc8db8bac021016d7fb7e5f73fa4ad26",
+      "degree": 36,
+      "first_coefficient": "75",
+      "last_coefficient": "1443",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 39
+    },
+    {
+      "K": 39,
+      "complete_coefficients_sha256": "49e66589a89f1b5413da464f8e2ac33d303039c507513e9be99eeeda0265b903",
+      "degree": 38,
+      "first_coefficient": "79",
+      "last_coefficient": "1599",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 41
+    },
+    {
+      "K": 41,
+      "complete_coefficients_sha256": "b08635ae33e24e03c65f1b5bf420d1eeff21c7c80cd44ee0787307636b08eb97",
+      "degree": 40,
+      "first_coefficient": "83",
+      "last_coefficient": "1763",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 43
+    },
+    {
+      "K": 43,
+      "complete_coefficients_sha256": "b9c711494ec6de2b6617c5a6a3645cf3ec7cfdd7636e4c944757d13f3ae302d8",
+      "degree": 42,
+      "first_coefficient": "87",
+      "last_coefficient": "1935",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 45
+    },
+    {
+      "K": 45,
+      "complete_coefficients_sha256": "27ad16a5b6cd4b59164b16809e63a9e06eadc2a1fca6628fe8c798483972621a",
+      "degree": 44,
+      "first_coefficient": "91",
+      "last_coefficient": "2115",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 47
+    },
+    {
+      "K": 47,
+      "complete_coefficients_sha256": "44402f3fb8a915e165d930e9ab46bf8644aaf5ba2330d1eadc5c03ca53649140",
+      "degree": 46,
+      "first_coefficient": "95",
+      "last_coefficient": "2303",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 49
+    },
+    {
+      "K": 49,
+      "complete_coefficients_sha256": "de09cb34da3b7477a59d7c25a47935d2078ba38f88f4b7115b31269c84efa380",
+      "degree": 48,
+      "first_coefficient": "99",
+      "last_coefficient": "2499",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 51
+    },
+    {
+      "K": 51,
+      "complete_coefficients_sha256": "803588ba436872cb9d793aa6387043e1f8359fd8cc74a86e38cbe49f54f9e614",
+      "degree": 50,
+      "first_coefficient": "103",
+      "last_coefficient": "2703",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 53
+    },
+    {
+      "K": 53,
+      "complete_coefficients_sha256": "f25eaf9a57c77cffde7e6ef7871d58a39aa0e4599a756ef03041d01c839d64c4",
+      "degree": 52,
+      "first_coefficient": "107",
+      "last_coefficient": "2915",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 55
+    },
+    {
+      "K": 55,
+      "complete_coefficients_sha256": "163afbecddf3d93ebb8aa3311291d560ebfd49b9607582fa05dee08a967c54e1",
+      "degree": 54,
+      "first_coefficient": "111",
+      "last_coefficient": "3135",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 57
+    },
+    {
+      "K": 57,
+      "complete_coefficients_sha256": "f825666180597450fa164625d505114fa5bd98501c4e6011f8403d3895a80e73",
+      "degree": 56,
+      "first_coefficient": "115",
+      "last_coefficient": "3363",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 59
+    },
+    {
+      "K": 59,
+      "complete_coefficients_sha256": "99b0e853b36e76a288bddf20931232f10e1b7898981734d8cadd1a909f6e8358",
+      "degree": 58,
+      "first_coefficient": "119",
+      "last_coefficient": "3599",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 61
+    },
+    {
+      "K": 61,
+      "complete_coefficients_sha256": "94b54598fbcfda91978dd19baf2b642e80f93b7aa72d7580459f62233ff887e5",
+      "degree": 60,
+      "first_coefficient": "123",
+      "last_coefficient": "3843",
+      "nonnegative_coefficients": true,
+      "strictly_positive_coefficient_exists": true,
+      "successor_K": 63
+    }
+  ],
+  "rounding_contract": "no rounded transcendental evaluation; analytic tails and limits are not machine proved",
+  "schema": "xi-odd-current-scaling-v1",
+  "scopes": {
+    "analytic_proof_formally_machine_verified": false,
+    "analytic_uniformity_from_finite_panel": false,
+    "external_novelty_claim": false,
+    "literal_Xi_numerically_evaluated_by_this_producer": false,
+    "native_source_capture_or_RH_conclusion": false,
+    "noninteger_current_order_defined": false,
+    "physical_gauge_changed": false,
+    "scout_is_directed_or_certified": false
+  },
+  "source_authentication": {
+    "ancestral_code_executed": false,
+    "exact_git_blobs_and_lf_bytes": true,
+    "source_count": 4
+  },
+  "status": "ANALYTIC_THEOREMS_IN_NOTES_WITH_EXACT_BOUNDED_ALGEBRA"
+}

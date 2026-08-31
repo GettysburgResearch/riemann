@@ -1,0 +1,1587 @@
+{
+  "all_science_input_hashes_unchanged": true,
+  "boundary": "Exact declared test/producer input hashes only; fixtures and sources are checked by their producers. Analytic proof review remains separate.",
+  "interpreters": {
+    "flint": {
+      "path": "C:\\Users\\gideo\\OneDrive\\Documents\\riemann\\isolated\\native-xi-pass3-runtime\\Scripts\\python.exe",
+      "version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "system": {
+      "path": "C:\\Users\\gideo\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    }
+  },
+  "module_count": 38,
+  "observed_head_after": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+  "observed_head_before": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+  "optimized": true,
+  "panel_science_head": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+  "panel_sha256_lf": "d3e9a9c05051d151fbf60bdb3e888fee30f81eb4a607c1572b30f6eaffc27208",
+  "producer_checks": 38,
+  "programme": "S",
+  "records": [
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_archimedean_ladder_boundary.py"
+      ],
+      "elapsed_seconds": 1.5,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "59a75d5debb1954134f1faf26f1949b144bb11b60ead2282a7b03ad11488f125",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_archimedean_ladder_boundary.py",
+      "tests_run": 29
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/riemann-structures/archimedean_ladder_boundary.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.297,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2a363e41ae81621ac057573a9536b282cc3dbe92a24579e7e5d4dbeb426823c2",
+      "test": "tests/test_archimedean_ladder_boundary.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_coprime_infinite_height_physical_capture.py"
+      ],
+      "elapsed_seconds": 1.734,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "f4840d5a3e5d40b9efa947adb41afb0ecdbd191249effa1c1ac41514d27f4bc1",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_coprime_infinite_height_physical_capture.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/coprime_infinite_height_physical_capture.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.61,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2f6e84500e093543843dbe220ffb9c0012ea04b33f4be10dda0c98c3f1618396",
+      "test": "tests/test_coprime_infinite_height_physical_capture.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_family_binding_permutation_firewall.py"
+      ],
+      "elapsed_seconds": 1.922,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "4913a9d8e74f9184f897f0e4c94e84ed4947855c9b4ca3650f51a568c55f32f8",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_family_binding_permutation_firewall.py",
+      "tests_run": 17
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/riemann-structures/family_binding_permutation_firewall.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.718,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "38a2f70bf0c74e61563e408d55c10a3a71bb6cd0a8bdd259015f44bc34779db6",
+      "test": "tests/test_family_binding_permutation_firewall.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_ffps_canonical_boolean_principal_diagonal.py"
+      ],
+      "elapsed_seconds": 3.141,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "d365e42d96c7193252c2b0540370a433a444ad6b77f5560c20c67f0c2370873d",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_ffps_canonical_boolean_principal_diagonal.py",
+      "tests_run": 30
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/l-families/atlas/function_field/ffps_canonical_boolean_principal_diagonal.py",
+        "--check"
+      ],
+      "elapsed_seconds": 2.469,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9b7738bf27d6f3ab9902289a08ea34527774ad155f08952222b246d1b2e25fcc",
+      "test": "tests/test_ffps_canonical_boolean_principal_diagonal.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_ffps_live_shared_fibre_collisions.py"
+      ],
+      "elapsed_seconds": 4.765,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "0b6f89568103cd24f89ef64b2d0a25a432ac9cc62e248c16b8e6f788301d559c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_ffps_live_shared_fibre_collisions.py",
+      "tests_run": 21
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/l-families/atlas/function_field/ffps_live_shared_fibre_collisions.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.453,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e280ade455bc37a26ff3b85cb3c56dfe55e93dd98f26743b8d0bfc94ecfbee65",
+      "test": "tests/test_ffps_live_shared_fibre_collisions.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_ffps_marked_place_signed_descent_gate0.py"
+      ],
+      "elapsed_seconds": 2.031,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "67420af8822a63cf99fbd50cb2cb00cf42c0f9fdb12f676d863c872eb9e3b9df",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_ffps_marked_place_signed_descent_gate0.py",
+      "tests_run": 11
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/l-families/atlas/function_field/ffps_marked_place_signed_descent_gate0.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.094,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5655aa320dcd1e19e7f78cf53ce8311a6d1abfb1942b11fac164d1f4c4be9d80",
+      "test": "tests/test_ffps_marked_place_signed_descent_gate0.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_ffps_shared_fibre_wick_occupancy_spectrum.py"
+      ],
+      "elapsed_seconds": 2.516,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "285144e7626a039d9915af0aed0a91dae3553e6c2ff3f77fca6dc07dc1708924",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_ffps_shared_fibre_wick_occupancy_spectrum.py",
+      "tests_run": 19
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/l-families/atlas/function_field/ffps_shared_fibre_wick_occupancy_spectrum.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.172,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7a0063dac85227eb626f6ec6fb5b4db514105685dffd99e3890e1422068610d7",
+      "test": "tests/test_ffps_shared_fibre_wick_occupancy_spectrum.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_ffps_signed_history_recombination.py"
+      ],
+      "elapsed_seconds": 13.406,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "66a086241472ce34c35e4947841133d4f191b611d88509071a8a74989ec8fb25",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_ffps_signed_history_recombination.py",
+      "tests_run": 18
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/l-families/atlas/function_field/ffps_signed_history_recombination.py",
+        "--check"
+      ],
+      "elapsed_seconds": 3.172,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d76d7d6c6168e26ee5af26e4ee4fb1d63188bfd08826b9afe1a0de02b39f88a8",
+      "test": "tests/test_ffps_signed_history_recombination.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_hardy_cofinal_finite_height_source_capture.py"
+      ],
+      "elapsed_seconds": 1.687,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "ac06a4ae4a8b44b33121287d4a85629061e531ca31c553e301647bae85dd4488",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_hardy_cofinal_finite_height_source_capture.py",
+      "tests_run": 30
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/hardy_cofinal_finite_height_source_capture.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.407,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "471a1c9d0fb214873e7a1be6716a4cb60d699cff0ec0bb7e6aa892dfff997990",
+      "test": "tests/test_hardy_cofinal_finite_height_source_capture.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_hardy_inner_width_source_duality.py"
+      ],
+      "elapsed_seconds": 7.546,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "1b4bab0af768c46b4ccfa36fa90a55cef11478a8d8cb6d47a432ff5890432b27",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_hardy_inner_width_source_duality.py",
+      "tests_run": 30
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/hardy_inner_width_source_duality.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.516,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "914febf6ebe0249e81639d660af9dfc50707cf75dc56b333de5ebd00c5eda1e8",
+      "test": "tests/test_hardy_inner_width_source_duality.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_hardy_low_pass_height_equivalence.py"
+      ],
+      "elapsed_seconds": 1.203,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "5cc9fc04fe40e3a4af1d5986732d46f9daceb9c32ed509c0821de175b2a6758e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_hardy_low_pass_height_equivalence.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/hardy_low_pass_height_equivalence.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.422,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f17a1607aa762cc96c5529a014259ee859041df2c39def1ba2dad8607e52c0a3",
+      "test": "tests/test_hardy_low_pass_height_equivalence.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_hardy_translation_physical_band_bound.py"
+      ],
+      "elapsed_seconds": 3.703,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "c213975d76a287603be008ac77fdf21b3d007b0e0778bb51e449b9858a6fa19c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_hardy_translation_physical_band_bound.py",
+      "tests_run": 33
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/hardy_translation_physical_band_bound.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.86,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a8e33910f98f755e8ea9912dc1bd6ab557f0d01827144a6a12ec2e8ad7860c2f",
+      "test": "tests/test_hardy_translation_physical_band_bound.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_native_tuple_source_acquisition.py"
+      ],
+      "elapsed_seconds": 10.734,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "9027b57a684369047d78443183a686521f7625f4d43aa8103b0a5c7479aebd04",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_native_tuple_source_acquisition.py",
+      "tests_run": 33
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/native_tuple_source_acquisition.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.953,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "061c966894afe05a88cf3823a534d65918abee141f6ae95acd39403c9af50f96",
+      "test": "tests/test_native_tuple_source_acquisition.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_source_algebra_diagonal_adams_adapter.py"
+      ],
+      "elapsed_seconds": 1.125,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "93a425ab18db480d71886285352697e69d8fd3b9bdaad84eee10b7d7b4d0db34",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_source_algebra_diagonal_adams_adapter.py",
+      "tests_run": 17
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/riemann-structures/source_algebra_diagonal_adams_adapter.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.125,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "612e5637aac4e335f3b3e5dac2d59988699d8f40e17cdd90515ea567e56aae3e",
+      "test": "tests/test_source_algebra_diagonal_adams_adapter.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_actual_kernel_laplace_concentration.py"
+      ],
+      "elapsed_seconds": 11.734,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "d21529b8eccb7d5a08d292f278ba8a3962005e1905dbbda9fe6ae4d3b1559351",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_actual_kernel_laplace_concentration.py",
+      "tests_run": 15
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_actual_kernel_laplace_concentration.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.891,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d3bc1db7fc84165953fe25ba42826c3ccf97f96f51081b40dedb84e227668ed5",
+      "test": "tests/test_xi_actual_kernel_laplace_concentration.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_all_radius_transport_obstruction.py"
+      ],
+      "elapsed_seconds": 155.844,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "96293b58fe16cfc0b462e8f0df43c53bf13dd29375fee0b74a4a24cf54d0c3ad",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_all_radius_transport_obstruction.py",
+      "tests_run": 25
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_all_radius_transport_obstruction.py",
+        "--check"
+      ],
+      "elapsed_seconds": 15.359,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "590b790682d3754cc294f0f55c61b22eac0ff1263b59a53b04cb6cf132ada3ec",
+      "test": "tests/test_xi_all_radius_transport_obstruction.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_companion_box_count_compression.py"
+      ],
+      "elapsed_seconds": 19.125,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "da97825343ccd468357800016de33013996a1b596b9f4102950654f867f3211f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_companion_box_count_compression.py",
+      "tests_run": 40
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_companion_box_count_compression.py",
+        "--check"
+      ],
+      "elapsed_seconds": 16.391,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "19c132c0badb56c380fda90b0f12b78f0f35f7b1b72a5d1db2e95d1f5e5a0d8f",
+      "test": "tests/test_xi_companion_box_count_compression.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_companion_generic_parameter_coprimality.py"
+      ],
+      "elapsed_seconds": 6.797,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "d30f98b745281fd0fab771a644fab2f2e5418f23c34fb7b1958b8ae3b0ed596d",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_companion_generic_parameter_coprimality.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_companion_generic_parameter_coprimality.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.156,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8f1d3385ddb5c8d7686c0668aff4f909f1f502674b72431912299a8762b57bdf",
+      "test": "tests/test_xi_companion_generic_parameter_coprimality.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_companion_global_height_boundary.py"
+      ],
+      "elapsed_seconds": 1.641,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e04283c4260fc3e69f95c0c3ab99c0837940ca9ea7fabe2cb162061d8ef10158",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_companion_global_height_boundary.py",
+      "tests_run": 35
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_companion_global_height_boundary.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.015,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2ca7be8093a7cb2c7b1e4710b35737852051a4761e8105601f5f032452af10fb",
+      "test": "tests/test_xi_companion_global_height_boundary.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_companion_imaginary_axis_sampling.py"
+      ],
+      "elapsed_seconds": 4.703,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "09bb570e2cbde6a8d3013fc59ea7ec7430185403ee226e1aa1e6dfc444454ae1",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_companion_imaginary_axis_sampling.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_companion_imaginary_axis_sampling.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.969,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "71d077713aec0388467fb701e08f223d885fb30680f28f957940ad4b5dce7ace",
+      "test": "tests/test_xi_companion_imaginary_axis_sampling.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_companion_off_axis_ball_certificates.py"
+      ],
+      "elapsed_seconds": 9.844,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "eaa4ca8ccbde0a297326b0316c6a05ce7e303784389e6859765f931e4169e208",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_companion_off_axis_ball_certificates.py",
+      "tests_run": 36
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_companion_off_axis_ball_certificates.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.156,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ac0251fb3acdb43acbeb54d2ea98daa2136f6f7c5e92fd5405f80015b7534c8f",
+      "test": "tests/test_xi_companion_off_axis_ball_certificates.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_confluent_source_band_obstruction.py"
+      ],
+      "elapsed_seconds": 14.469,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "1fb86f77585fe4c59015c8b660d3dddeb0d772d5ccdb3d7126434d19c5d6f4a7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_confluent_source_band_obstruction.py",
+      "tests_run": 23
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_confluent_source_band_obstruction.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.406,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "73d2ab10bbb580c414ef7efbf5a3e83390895582c1ad163dd5b7574fbbac7575",
+      "test": "tests/test_xi_confluent_source_band_obstruction.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_current_radial_semigroup.py"
+      ],
+      "elapsed_seconds": 12.359,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e43b2963f10538d843dbe7d16e6669944c64557320b208c30927a2d6b53a6b11",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_current_radial_semigroup.py",
+      "tests_run": 19
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_current_radial_semigroup.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.297,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9bfd036342dbe9793472ff2e8e36d461b25d96fc93167a897c2715703ab77ade",
+      "test": "tests/test_xi_current_radial_semigroup.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_fixed_lambda_heldout_alignment.py"
+      ],
+      "elapsed_seconds": 825.75,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "9521d9e82aa466331324ec4b5fb0669a408f59d9c764c85585144e893fa3298a",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_fixed_lambda_heldout_alignment.py",
+      "tests_run": 44
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_fixed_lambda_heldout_alignment.py",
+        "--check"
+      ],
+      "elapsed_seconds": 402.922,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "15ccbae10cd6414750e47f2bd8f23bae0039d0412a1b234f41c6f6dbe7ccce3f",
+      "test": "tests/test_xi_fixed_lambda_heldout_alignment.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_fixed_lambda_joint_box_compression.py"
+      ],
+      "elapsed_seconds": 67.578,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "18f4bb3fb5d21af91e98b9f9c741ddad654dd3721851f5258bfa80085f0be041",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_fixed_lambda_joint_box_compression.py",
+      "tests_run": 44
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_fixed_lambda_joint_box_compression.py",
+        "--check"
+      ],
+      "elapsed_seconds": 15.438,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2e14068bfce38d723a4ee8a154f744b520207e3f8196da8a94654d6e89e069b3",
+      "test": "tests/test_xi_fixed_lambda_joint_box_compression.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_fixed_lambda_shrinking_physical_bands.py"
+      ],
+      "elapsed_seconds": 136.297,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "45e6b2b1d117ddb852680ef5237680c5a2bd8737ad831329ae977c88b4d0d2c0",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_fixed_lambda_shrinking_physical_bands.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_fixed_lambda_shrinking_physical_bands.py",
+        "--check"
+      ],
+      "elapsed_seconds": 11.859,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "302c2a285f1771e9216fa869fb7fe8948fa5535f581f0ca914425fed1b107f94",
+      "test": "tests/test_xi_fixed_lambda_shrinking_physical_bands.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_global_odd_order_saddle.py"
+      ],
+      "elapsed_seconds": 12.125,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "bf4e41c26b1253d291f254073f92abfb6fbf3916fd45519fbbf6ff218f7ec1ac",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_global_odd_order_saddle.py",
+      "tests_run": 21
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_global_odd_order_saddle.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.672,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "afc9dd31d3fbae5751647e56e7bcd52eb0613cd06ccfdc48bc248329ffe4b41d",
+      "test": "tests/test_xi_global_odd_order_saddle.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_high_derivative_saddle_closure.py"
+      ],
+      "elapsed_seconds": 1.859,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "39e34723729c2db15aa7c7d930adaba656b9628ab5f25c360cb6b3c2e551da45",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_high_derivative_saddle_closure.py",
+      "tests_run": 33
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_high_derivative_saddle_closure.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.938,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b35f10aa2e98640ae30b0070c396c80f5f83fbf00e88eabc93d5bbd4dd34a4f1",
+      "test": "tests/test_xi_high_derivative_saddle_closure.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_joint_polynomial_panel_transport.py"
+      ],
+      "elapsed_seconds": 98.906,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "400e6e758327438d73f6857c161d1b184d7278ac0f4428d41411c65839770a41",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_joint_polynomial_panel_transport.py",
+      "tests_run": 16
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_joint_polynomial_panel_transport.py",
+        "--check"
+      ],
+      "elapsed_seconds": 27.281,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4ed328aa8a18c9f1d91684a3f7e16345b990023d1e2ac02c1f80a8607cdfbe56",
+      "test": "tests/test_xi_joint_polynomial_panel_transport.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_joint_polynomial_point_transport.py"
+      ],
+      "elapsed_seconds": 92.11,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "c99b3df42284a7c248ae19313cc78679c5bcf031acda64d403580c09b61e1224",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_joint_polynomial_point_transport.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_joint_polynomial_point_transport.py",
+        "--check"
+      ],
+      "elapsed_seconds": 25.015,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8e6a8533a408b6d4a6135af8c8a37d0de6cd21790985ae7fac905361b0d6dfaf",
+      "test": "tests/test_xi_joint_polynomial_point_transport.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_laplace_low_pass_lower_bound.py"
+      ],
+      "elapsed_seconds": 13.907,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "99c2b3b8822a412ec471a8f8ab3743d4d9fdcc534ff5816f958d3b0e551c26aa",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_laplace_low_pass_lower_bound.py",
+      "tests_run": 21
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_laplace_low_pass_lower_bound.py",
+        "--check"
+      ],
+      "elapsed_seconds": 2.156,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ed43d494b1ee80c571bd9c54001a483c76e0a82d4d89c57860263aad8f8d5c23",
+      "test": "tests/test_xi_laplace_low_pass_lower_bound.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_near_adapted_scale_firewall.py"
+      ],
+      "elapsed_seconds": 5.015,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "95f9b10b52fe55d7ac75e95a9f87c16ef093f7fb344f8ef6317d877465c0aa64",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_near_adapted_scale_firewall.py",
+      "tests_run": 23
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_near_adapted_scale_firewall.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.016,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d5110f5acf8ad92ef1c8595f084a111ebfef6fda9ef47328328eb6948e1cb458",
+      "test": "tests/test_xi_near_adapted_scale_firewall.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_occupancy_carleson_capture.py"
+      ],
+      "elapsed_seconds": 4.641,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "3ad3f2417cb85befca30ba217ee7c85632007fc412ac9095fcfd8e7c9530fe9b",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_occupancy_carleson_capture.py",
+      "tests_run": 18
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_occupancy_carleson_capture.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.593,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "71061d5eff72a9b855a76728b93c86e4e9f0b2fa4f3ce786199ff6609405da14",
+      "test": "tests/test_xi_occupancy_carleson_capture.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_odd_current_scaling.py"
+      ],
+      "elapsed_seconds": 11.266,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "21c68dc3fad98cdbdeb4fb92847264faf69fdc6590c8b2c503bb75a9e09355af",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_odd_current_scaling.py",
+      "tests_run": 24
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_odd_current_scaling.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.797,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "780afdfef94b97e1c8ffbc6022f22ee84bad195c4617e037a1dc5d3c59195d4a",
+      "test": "tests/test_xi_odd_current_scaling.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_positive_kernel_descent_firewall.py"
+      ],
+      "elapsed_seconds": 3.219,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "73310c0900a93b25ea3dc49216bbffd50afdbd1e4a2d90e306d079027ef5fc66",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_positive_kernel_descent_firewall.py",
+      "tests_run": 31
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_positive_kernel_descent_firewall.py",
+        "--check"
+      ],
+      "elapsed_seconds": 1.156,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a769bcb962b82510b64ff4fca08a156bb670655835778fe8127ab96d1d7251c9",
+      "test": "tests/test_xi_positive_kernel_descent_firewall.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_quadratic_critical_transport.py"
+      ],
+      "elapsed_seconds": 222.844,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "16dedfde7433887017d95f542c67cce78a7c4f102ccb9996402522adab479b09",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_quadratic_critical_transport.py",
+      "tests_run": 48
+    },
+    {
+      "command": [
+        "C:/Users/gideo/OneDrive/Documents/riemann/isolated/native-xi-pass3-runtime/Scripts/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_quadratic_critical_transport.py",
+        "--check"
+      ],
+      "elapsed_seconds": 196.187,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "flint",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fcb79cdda1f9ec06fd0eb21a46e6bbd4efeea0810d677e08152f6f8c8b3b24f0",
+      "test": "tests/test_xi_quadratic_critical_transport.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_quadratic_joint_remainder_transport.py"
+      ],
+      "elapsed_seconds": 46.766,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "a12476190b711fc981c834c9d74da29f0791fad4db176fc12bf48fbe39dd1605",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_quadratic_joint_remainder_transport.py",
+      "tests_run": 28
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_quadratic_joint_remainder_transport.py",
+        "--check"
+      ],
+      "elapsed_seconds": 13.609,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8cc93ed339a5b1ef5ea802719bcb9e1f779b8978603d9b7127f86bfe0a607736",
+      "test": "tests/test_xi_quadratic_joint_remainder_transport.py",
+      "tests_run": null
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_xi_uniform_companion_count_width.py"
+      ],
+      "elapsed_seconds": 1.625,
+      "exit_code": 0,
+      "kind": "tests",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "13ee132a9c0cc197204e40da06ed75c7e6264f0b435d8407beb113bd936c77e8",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test": "tests/test_xi_uniform_companion_count_width.py",
+      "tests_run": 32
+    },
+    {
+      "command": [
+        "C:/Users/gideo/AppData/Local/Programs/Python/Python312/python.exe",
+        "-B",
+        "-O",
+        "research/exploratory/xi_uniform_companion_count_width.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.813,
+      "exit_code": 0,
+      "kind": "producer_check",
+      "runtime": "system",
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "90f8dc55a35f3909acc7a7dcde3622a40bd3f8e9d60d867098144c8cb4b5aaca",
+      "test": "tests/test_xi_uniform_companion_count_width.py",
+      "tests_run": null
+    }
+  ],
+  "runner_sha256_lf": "4bf7cb0cfb598b76d01ad7a48f082aaf110eb6a017e6831e67c307933f5e1a88",
+  "schema": "sixhour-pass3-programme-replay-v1",
+  "status": "PASS",
+  "total_tests": 1056
+}
+

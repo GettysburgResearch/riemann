@@ -1,0 +1,70 @@
+{
+  "authoring_base": "a7479e85fdc2a464cdc753021435cfef7a1f3910",
+  "contract": {
+    "analytic": "local Jensen count, Carleson embedding and cofinal implication are written proofs",
+    "arithmetic_class": "MIXED",
+    "arithmetic_components": [
+      "EXACT_RATIONAL",
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "caps": {
+      "interval_grid_rows": 600,
+      "json_bytes": 1000000,
+      "nodes_per_cell": 16,
+      "subset_oracle_nodes": 8
+    },
+    "imported": "classical half-plane Carleson embedding, Stirling, Euler-Maclaurin, Jensen",
+    "no_xi_computation": true,
+    "open": "actual-Xi innerness, source-owned survival, divergent cofinal weighted alignment, decoder and RH",
+    "physical_metric": "unchanged boundary-dx Hardy norm; weights apply only to test vectors",
+    "rounding": "none; exact canonical rational strings and integers",
+    "scope": "finite exact controls; conditional infinite capture criterion",
+    "source": "preregistered rational cell families; frozen literal-Xi analytic dependencies"
+  },
+  "preregistration": "4f38c14b260fe939c3848884584b49ca3c3f7941",
+  "references": [
+    {
+      "passage": "Theorem1.1, pp2-3",
+      "role": "classical Carleson embedding",
+      "url": "https://arxiv.org/pdf/1201.1021"
+    },
+    {
+      "passage": "Stirling and digamma expansions",
+      "role": "Gamma factor bounds",
+      "url": "https://dlmf.nist.gov/5.11"
+    },
+    {
+      "passage": "Euler-Maclaurin representations",
+      "role": "polynomial zeta growth on fixed strips",
+      "url": "https://dlmf.nist.gov/25.2#iii"
+    }
+  ],
+  "remote_reference_bytes": "not_authenticated_by_offline_checker",
+  "schema": "xi_occupancy_carleson_capture-sources-v1",
+  "sources": [
+    {
+      "commit": "a7479e85fdc2a464cdc753021435cfef7a1f3910",
+      "git_blob": "90e6bd89ca9a23c401d6d947c04a9d548f6b3030",
+      "path": "research/exploratory/XI_LAPLACE_LOW_PASS_LOWER_BOUND.md",
+      "sha256_lf": "c56d29037b85c45398bcb34dc7fb8450ba0e4b0f32fa7293edcaf5d1d2ea4b64"
+    },
+    {
+      "commit": "1904d20cdb76ecd26e0e63472625da930075303e",
+      "git_blob": "a97d25f556a2bd085a4749d1e96d883a0646e666",
+      "path": "research/exploratory/XI_UNIFORM_COMPANION_COUNT_WIDTH.md",
+      "sha256_lf": "adaef750b277b755494d57e17a3e913e8f44f1614806d8274495ac88912fb0bc"
+    },
+    {
+      "commit": "1904d20cdb76ecd26e0e63472625da930075303e",
+      "git_blob": "fa24f9c8e0a87709d1a297a4e72136c1135d066c",
+      "path": "research/exploratory/XI_ACTUAL_KERNEL_LAPLACE_CONCENTRATION.md",
+      "sha256_lf": "f7f89abe2e54d0d8df72dc830162b2083bc4f05d402c3aa70eca464678e80246"
+    },
+    {
+      "commit": "4f38c14b260fe939c3848884584b49ca3c3f7941",
+      "git_blob": "c1c62d72ab77869ad2ebb43600ffdbf8f171edbb",
+      "path": "research/exploratory/XI_OCCUPANCY_CARLESON_CAPTURE.md",
+      "sha256_lf": "288b1165d1c58cd3eb8827464b9828b6023d598cbd0b3ff3f93d596cf0cdb080"
+    }
+  ]
+}

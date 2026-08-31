@@ -1,0 +1,1746 @@
+{
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": [
+    "EXACT_RATIONAL",
+    "CERTIFIED_INTEGER_COVERAGE"
+  ],
+  "boolean": {
+    "all_cutoffs_proved_in_note": true,
+    "case_count": 102,
+    "rows": [
+      {
+        "canonical": "0",
+        "cutoff": 1,
+        "expanded": 0,
+        "majorant": 1,
+        "original": 0,
+        "support": []
+      },
+      {
+        "canonical": "0",
+        "cutoff": 1,
+        "expanded": 0,
+        "majorant": 3,
+        "original": 0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 2,
+        "expanded": 0,
+        "majorant": 3,
+        "original": 0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "canonical": "1/3",
+        "cutoff": 1,
+        "expanded": 2,
+        "majorant": 9,
+        "original": 2,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 2,
+        "expanded": 0,
+        "majorant": 9,
+        "original": 0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 3,
+        "expanded": 0,
+        "majorant": 9,
+        "original": 0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 5,
+        "expanded": 0,
+        "majorant": 9,
+        "original": 0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 6,
+        "expanded": 0,
+        "majorant": 9,
+        "original": 0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 1,
+        "expanded": 0,
+        "majorant": 27,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "canonical": "-1/5",
+        "cutoff": 2,
+        "expanded": -2,
+        "majorant": 27,
+        "original": -2,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "canonical": "-1/5",
+        "cutoff": 3,
+        "expanded": -2,
+        "majorant": 27,
+        "original": -2,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "canonical": "-1/5",
+        "cutoff": 4,
+        "expanded": -2,
+        "majorant": 27,
+        "original": -2,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 5,
+        "expanded": 0,
+        "majorant": 27,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 6,
+        "expanded": 0,
+        "majorant": 27,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 9,
+        "expanded": 0,
+        "majorant": 27,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 10,
+        "expanded": 0,
+        "majorant": 27,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 14,
+        "expanded": 0,
+        "majorant": 27,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 15,
+        "expanded": 0,
+        "majorant": 27,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 29,
+        "expanded": 0,
+        "majorant": 27,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 30,
+        "expanded": 0,
+        "majorant": 27,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "canonical": "2/15",
+        "cutoff": 1,
+        "expanded": 2,
+        "majorant": 81,
+        "original": 2,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 2,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 3,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 4,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "2/15",
+        "cutoff": 5,
+        "expanded": 2,
+        "majorant": 81,
+        "original": 2,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "2/15",
+        "cutoff": 6,
+        "expanded": 2,
+        "majorant": 81,
+        "original": 2,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "4/15",
+        "cutoff": 7,
+        "expanded": 4,
+        "majorant": 81,
+        "original": 4,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "4/15",
+        "cutoff": 9,
+        "expanded": 4,
+        "majorant": 81,
+        "original": 4,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "2/15",
+        "cutoff": 10,
+        "expanded": 2,
+        "majorant": 81,
+        "original": 2,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "2/15",
+        "cutoff": 13,
+        "expanded": 2,
+        "majorant": 81,
+        "original": 2,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 14,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 15,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 20,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 21,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 29,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 30,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 34,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 35,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 41,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 42,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 69,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 70,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 104,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 105,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 209,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 210,
+        "expanded": 0,
+        "majorant": 81,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 1,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-2/21",
+        "cutoff": 2,
+        "expanded": -2,
+        "majorant": 243,
+        "original": -2,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-2/21",
+        "cutoff": 3,
+        "expanded": -2,
+        "majorant": 243,
+        "original": -2,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-2/21",
+        "cutoff": 4,
+        "expanded": -2,
+        "majorant": 243,
+        "original": -2,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 5,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 6,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "2/21",
+        "cutoff": 7,
+        "expanded": 2,
+        "majorant": 243,
+        "original": 2,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "2/21",
+        "cutoff": 9,
+        "expanded": 2,
+        "majorant": 243,
+        "original": 2,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 10,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "2/21",
+        "cutoff": 11,
+        "expanded": 2,
+        "majorant": 243,
+        "original": 2,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "2/21",
+        "cutoff": 13,
+        "expanded": 2,
+        "majorant": 243,
+        "original": 2,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-2/21",
+        "cutoff": 14,
+        "expanded": -2,
+        "majorant": 243,
+        "original": -2,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-4/21",
+        "cutoff": 15,
+        "expanded": -4,
+        "majorant": 243,
+        "original": -4,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-4/21",
+        "cutoff": 20,
+        "expanded": -4,
+        "majorant": 243,
+        "original": -4,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-2/7",
+        "cutoff": 21,
+        "expanded": -6,
+        "majorant": 243,
+        "original": -6,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-2/7",
+        "cutoff": 22,
+        "expanded": -6,
+        "majorant": 243,
+        "original": -6,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-2/7",
+        "cutoff": 29,
+        "expanded": -6,
+        "majorant": 243,
+        "original": -6,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-4/21",
+        "cutoff": 30,
+        "expanded": -4,
+        "majorant": 243,
+        "original": -4,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-4/21",
+        "cutoff": 32,
+        "expanded": -4,
+        "majorant": 243,
+        "original": -4,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-4/21",
+        "cutoff": 33,
+        "expanded": -4,
+        "majorant": 243,
+        "original": -4,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-4/21",
+        "cutoff": 34,
+        "expanded": -4,
+        "majorant": 243,
+        "original": -4,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-2/21",
+        "cutoff": 35,
+        "expanded": -2,
+        "majorant": 243,
+        "original": -2,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "-2/21",
+        "cutoff": 41,
+        "expanded": -2,
+        "majorant": 243,
+        "original": -2,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 42,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 54,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 55,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 65,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 66,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 69,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 70,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 76,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 77,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 104,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 105,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 109,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 110,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 153,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 154,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 164,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 165,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 209,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 210,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 230,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 231,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 329,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 330,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 384,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 385,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 461,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 462,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 769,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 770,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 1154,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 1155,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 2309,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      },
+      {
+        "canonical": "0",
+        "cutoff": 2310,
+        "expanded": 0,
+        "majorant": 243,
+        "original": 0,
+        "support": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      }
+    ]
+  },
+  "canonical_arithmetic_panels": [
+    {
+      "arithmetic_tuple": [
+        155,
+        411,
+        37,
+        43,
+        47
+      ],
+      "canonical_coefficients": [
+        "1/3",
+        "1/3"
+      ],
+      "cutoff": 32,
+      "horizon": 1073741824,
+      "least_primes": [
+        43,
+        47
+      ],
+      "mask_norm_squared": "1",
+      "native_masked_identification": false,
+      "original_principal_squared_amplitude": "176/2298551171131845",
+      "phase": "exp(i*t*log(286595/907899))",
+      "physical_products": [
+        392348555,
+        1242913731
+      ],
+      "pointwise_majorant": "13122/58751915015",
+      "prime_supports": [
+        [
+          5,
+          31
+        ],
+        [
+          3,
+          137
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ],
+        [
+          47
+        ]
+      ],
+      "source_dual_principal_squared_amplitude": "176/2298551171131845"
+    },
+    {
+      "arithmetic_tuple": [
+        202,
+        497,
+        37,
+        43,
+        47
+      ],
+      "canonical_coefficients": [
+        "1/3",
+        "1/3"
+      ],
+      "cutoff": 32,
+      "horizon": 1073741824,
+      "least_primes": [
+        43,
+        47
+      ],
+      "mask_norm_squared": "1",
+      "native_masked_identification": false,
+      "original_principal_squared_amplitude": "88/1811166676670673",
+      "phase": "exp(i*t*log(373498/1097873))",
+      "physical_products": [
+        511318762,
+        1502988137
+      ],
+      "pointwise_majorant": "19683/138882499553",
+      "prime_supports": [
+        [
+          2,
+          101
+        ],
+        [
+          7,
+          71
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ],
+        [
+          47
+        ]
+      ],
+      "source_dual_principal_squared_amplitude": "88/1811166676670673"
+    }
+  ],
+  "divisor_majorants": {
+    "all_horizon_proof_location": "note CBPD11-CBPD12; not certified by finite enumeration",
+    "divisor_weighted_sum": "307722201872741/875173047840",
+    "finite_euler_rows": [
+      {
+        "left": "85/4",
+        "prime": 2,
+        "right": "5846006549323611672814739330865132078623730171904/443426488243037769948249630619149892803"
+      },
+      {
+        "left": "10",
+        "prime": 3,
+        "right": "196627050475552913618075908526912116283103450944214766927315415537966391196809/14134776518227074636666380005943348126619871175004951664972849610340958208"
+      },
+      {
+        "left": "106/25",
+        "prime": 5,
+        "right": "171056941445900521352994333897694840244172600326723116669563999498265513023176342954911888227798044681549072265625/6267734313577584256357641581093817726955040966208349116831647822507211168810373395608151952729507634763502977024"
+      },
+      {
+        "left": "130/49",
+        "prime": 7,
+        "right": "80516053971970421037933020117270695510750033560376651356418468890427170712552106702000651867094468024858631110895701897604321111031904049/15154451684337032471180877896715528289578404766894843944101258135758218479588478910835485639300034416425654688319551372515107152957800448"
+      },
+      {
+        "left": "202/121",
+        "prime": 11,
+        "right": "5077091561327677113415553585980590842360615728229233364862290815297716701264433363773373053938332281076254624013242157863555226477026837198609634984531166006978737225721/2592274154412368294402517527097493563919882812285425404029152162634123499226358362406912000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "finite_limit": 32,
+    "g_exponent": 81,
+    "harmonic_components": [
+      9,
+      9,
+      2,
+      2
+    ],
+    "harmonic_exponent": 22,
+    "harmonic_power_upper": "8156169337371082527946309133250150373561979753534995371782325982099187737496751620709654059104545878665727732961600034460808146834159/27302405237517908736196591685099577765059792142754994508411830503758131680559402323363494053435945408859734016000000000000000000",
+    "squarefree_weighted_sum": "503414922341/6077590610",
+    "universal_principal_constant": "6"
+  },
+  "kernel_norm": {
+    "basis": [
+      "1",
+      "sqrt2",
+      "log2",
+      "sqrt2_log2"
+    ],
+    "exact_coefficients": [
+      -288,
+      0,
+      384,
+      128
+    ],
+    "measure": "abs(kappa_hat(t))^2*dt/(2*pi)",
+    "norm": "128*(3+sqrt(2))*log(2)-288",
+    "numerical_Mellin_integration": false,
+    "pieces": [
+      {
+        "A": [
+          8,
+          0
+        ],
+        "B": [
+          -4,
+          0
+        ],
+        "constant_Qsqrt2": [
+          144,
+          -128
+        ],
+        "log2_Qsqrt2": [
+          64,
+          0
+        ],
+        "y_interval": [
+          1,
+          2
+        ]
+      },
+      {
+        "A": [
+          -8,
+          -8
+        ],
+        "B": [
+          0,
+          4
+        ],
+        "constant_Qsqrt2": [
+          -192,
+          0
+        ],
+        "log2_Qsqrt2": [
+          192,
+          128
+        ],
+        "y_interval": [
+          2,
+          4
+        ]
+      },
+      {
+        "A": [
+          0,
+          8
+        ],
+        "B": [
+          -2,
+          0
+        ],
+        "constant_Qsqrt2": [
+          -240,
+          128
+        ],
+        "log2_Qsqrt2": [
+          128,
+          0
+        ],
+        "y_interval": [
+          4,
+          8
+        ]
+      }
+    ]
+  },
+  "payload_sha256": "8e9d8e8787da18b3be5aee9f01a7f7378a6995b261cc895f80bb74828aaa8ea3",
+  "resource_caps": {
+    "atom_count": 16,
+    "bytes": 524288,
+    "cutoff": 1000000000,
+    "divisor_order": 81,
+    "finite_sum": 128,
+    "horizon": 1099511627776,
+    "prime": 1000,
+    "product": 9223372036854775808,
+    "rational_bits": 64,
+    "support": 6
+  },
+  "rounding_contract": "integer/Fraction and formal Q(sqrt2)+Q(sqrt2)*log2; no rounding",
+  "schema": "ffps-canonical-boolean-principal-diagonal-v1",
+  "scope": {
+    "centered_identity": "P_nat^circ-P_B^circ=(P_nat-P_B)+(D_B-D_lit)",
+    "diagonal_bound": "6*C_kappa*zeta(2)^81*H_floor(16Y)^22",
+    "finite_computation_proves_analytic_limits": false,
+    "full_principal_moment_difference_paid": false,
+    "mask_modulus_at_most_one": true,
+    "native_masked_bilateral_identity_proved": false,
+    "native_sign_or_RH_consequence": false,
+    "one_atom_per_exact_arithmetic_tuple": true,
+    "ordinary_prime_67_free_chart_only": true,
+    "original_principal_weight_and_measure": true,
+    "unpaid_term": "P_nat-P_B"
+  },
+  "sources": {
+    "current_artifacts": {
+      "research/l-families/atlas/function_field/FFPS_CANONICAL_BOOLEAN_PRINCIPAL_DIAGONAL.md": {
+        "kind": "current_artifact",
+        "sha256_lf": "d183d2997aba709f423e4e72c8cd3e55cbb6ae14c383e034f8c1142999dfc185"
+      },
+      "research/l-families/atlas/function_field/ffps_canonical_boolean_principal_diagonal.py": {
+        "kind": "current_artifact",
+        "sha256_lf": "ce91707119eb9febefd55426439271c28b48765ce29082dd50e55b8bf61bd600"
+      },
+      "research/l-families/atlas/function_field/ffps_canonical_boolean_principal_diagonal.sources.json": {
+        "kind": "current_artifact",
+        "sha256_lf": "6d66bb4e40b7112a3124ccaabdd859d567a06af5d09cd3b91f303c3189b2c461"
+      },
+      "tests/test_ffps_canonical_boolean_principal_diagonal.py": {
+        "kind": "current_artifact",
+        "sha256_lf": "c68f5e068f2d7260a2093c9970b427aa4638bb0a8c1ad15171760eb3242670af"
+      }
+    },
+    "frozen_sources": [
+      {
+        "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+        "git_blob": "346cc52420ec65457c2a5accc045d4a85635cc24",
+        "id": "boolean",
+        "kind": "scientific_source",
+        "path": "claims/lemmas/L-106080-squarefree-boolean-vaughan-keeps-the-balanced-core-literal.md",
+        "role": "Boolean Vaughan identity",
+        "sha256_lf": "8efc34b198fe4bc642f6292bb0cfc4b937922a25b0e3cee35bdc2e51a62e5b7d"
+      },
+      {
+        "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+        "git_blob": "b988b14eb982504a799158eed4c76e7f033c96f0",
+        "id": "canonical",
+        "kind": "scientific_source",
+        "path": "claims/lemmas/L-106133-canonical-equal-pair-boolean-source-is-a-beta-half-source-square.md",
+        "role": "canonical equal-pair coefficient",
+        "sha256_lf": "2c38355491c82c85886b9b528c4a79d492b74f32ed133d2f1335cd1e6b133a4f"
+      },
+      {
+        "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+        "git_blob": "388c7e166a0e6e534d7e908685f71a16de246575",
+        "id": "fourier",
+        "kind": "scientific_source",
+        "path": "claims/lemmas/L-106026-mellin-plancherel-normal-form-for-owner-conductor-moment.md",
+        "role": "Fourier convention and literal shell",
+        "sha256_lf": "1f2259fde8b6763c878354d09b13c7bd858b16dddd7b7784d43e53e52ad77fee"
+      },
+      {
+        "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+        "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+        "id": "bilateral",
+        "kind": "scientific_source",
+        "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md",
+        "role": "physical tuple and retained masks",
+        "sha256_lf": "2f1a1dfea2cdce53d84160261f746cdf19a67169b41a9bbd93acd9b8ccdd50d8"
+      },
+      {
+        "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+        "git_blob": "955c3ed0363ca330439eedbae1bf0041a4c96468",
+        "id": "principal",
+        "kind": "scientific_source",
+        "path": "claims/lemmas/L-106121-bilateral-tensor-moment-has-a-paid-atomic-diagonal.md",
+        "role": "original principal normalization",
+        "sha256_lf": "24f8661d8b3007e4a76202ca53cc3a19eecd966f1a9dc7608b40d879699e2f0c"
+      },
+      {
+        "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+        "git_blob": "cb8665b8cdbe2bc7e6eb223d6bc009e8e4f5a5df",
+        "id": "anchors",
+        "kind": "scientific_source",
+        "path": "claims/lemmas/L-106093-mellin-polarization-places-the-anchor-inside-one-amplified-family-moment.md",
+        "role": "masked bilateral obstruction",
+        "sha256_lf": "11c781a133698ab823c60e2f44036ce04b19789d33baa8a3f78e0afdc185af74"
+      },
+      {
+        "commit": "86cac1d64364015ec2cc0f8fbb6fc75dc041c12b",
+        "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+        "id": "target",
+        "kind": "scientific_source",
+        "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md",
+        "role": "literal native target remains distinct",
+        "sha256_lf": "54592d5d8d67dd797f9aa2d134ab4825e8ccc52c3ed18edefaf226ea0852eb1d"
+      },
+      {
+        "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+        "git_blob": "d7330d114ebba1a7a16e22fa9ba6aa6b5eb7cdd6",
+        "id": "kernel",
+        "kind": "scientific_source",
+        "path": "claims/lemmas/L-102880-logarithmic-derivative-outer-detector-has-zero-square-lattice-moment.md",
+        "role": "actual piecewise native K",
+        "sha256_lf": "0358b6c377747512037e0e3e2ed88ffcc2974d6f6e9b815621a6ce450735b092"
+      },
+      {
+        "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+        "git_blob": "65fa60eb0ac25ea9797eba3d057bc765cb10c1cd",
+        "id": "projection",
+        "kind": "scientific_source",
+        "path": "claims/lemmas/L-102901-primewise-complementary-temperatures-form-an-infinite-dimensional-flat-gauge.md",
+        "role": "product identity is not mask intertwining",
+        "sha256_lf": "50249da3f2a0537aeed2dcad77cc1f1e4610cfe76fe323c5954a19e05b81fa31"
+      },
+      {
+        "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+        "git_blob": "6d5ed75b6938f76d98f2face50e3af62a9dc693c",
+        "id": "selector",
+        "kind": "scientific_source",
+        "path": "claims/lemmas/L-102963-owner-and-phase-gauges-decouple-on-the-boolean-source.md",
+        "role": "pair-dependent selector limitation",
+        "sha256_lf": "283b7fdfb5788091f5211a12cd74635e4c1a53bd7cfa99cd755a8150063a4df1"
+      },
+      {
+        "commit": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+        "git_blob": "8e0de55d193d6f9dafd025235dac8ab48e687081",
+        "id": "exclusion",
+        "kind": "scientific_source",
+        "path": "claims/lemmas/L-102952-owner-excluded-boolean-vaughan-coefficients-are-universal.md",
+        "role": "owner-exclusion coefficient universality",
+        "sha256_lf": "5e73afb84c22dc043b6fd6c652233a75d0bbd87f91a5d5dc6e5a02d95635d351"
+      },
+      {
+        "commit": "08187bdfae119f66c8c82baca2d1c1068e48ff40",
+        "git_blob": "c5f77f48bd19cc9af39698d4de53ae266bd42e17",
+        "id": "context",
+        "kind": "programme_context",
+        "path": "research/l-families/atlas/function_field/FFPS_SIGNED_HISTORY_RECOMBINATION.md",
+        "role": "history-only payment does not forget other labels",
+        "sha256_lf": "cd19af1dc2b75b07e6775651509a8cebf1b8db96d9cc9bf50c4e7412661a2798"
+      }
+    ]
+  }
+}

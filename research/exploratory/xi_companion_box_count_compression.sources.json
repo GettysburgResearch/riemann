@@ -1,0 +1,109 @@
+{
+  "authoring_base": "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+  "contract": {
+    "arithmetic": "pinned FLINT complex balls plus exact Fraction winding and acceptance",
+    "boundary": "416 exact arcs each, 32-term point Taylor plus Cauchy analytic remainder, rational polygon winding",
+    "common_factor": "conditional global Loewner comparison H_reduced >= H_raw without parameter nonexceptionality",
+    "compression": "finite input space, global output; trace and rational Rayleigh lower bounds",
+    "counts": "3/5/6 R5 zeros, all individually simple and locally noncommon",
+    "coverage": "complete three open boxes (a-6,a+6)+i(0,1), anchors32/64/128, zero-free closed boundaries",
+    "exclusions": "no Fourier-band/outer-metric/high-T/cofinal/HS-infinity/RH inference",
+    "metric": "boundary dx Hardy norm; physical P_U=P_(U H2), input Gram H=V G Vstar",
+    "primitive": "actual unrescaled Xi and exact fixed inverse phase derivative",
+    "trust": "same OA pinned FLINT implementation, not a formally verified special-function implementation"
+  },
+  "documentation": [
+    {
+      "role": "Ball enclosure, certified comparisons, exact rational inputs, series cap",
+      "url": "https://python-flint.readthedocs.io/en/latest/general.html"
+    },
+    {
+      "role": "Taylor-series gamma, exp, zeta; no numerical finite differences",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb_series.html"
+    },
+    {
+      "role": "Pinned library-version series API documentation",
+      "url": "https://github.com/flintlib/flint/blob/v3.6.0/doc/source/acb_poly.rst"
+    },
+    {
+      "role": "rigorous non-approx matrix inverse and arithmetic API",
+      "url": "https://python-flint.readthedocs.io/en/latest/acb_mat.html"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+      "git_blob": "625cc29f67510bd58ed667f6f5fec242b84e4a11",
+      "id": "OA1",
+      "path": "research/exploratory/XI_COMPANION_OFF_AXIS_BALL_CERTIFICATES.md",
+      "role": "complete parent proof and normalization",
+      "sha256_lf": "020597b67044d996e12e2f76655550557cc33cd52cf717553e2fc6be9d48e396"
+    },
+    {
+      "commit": "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+      "git_blob": "b0cecac35dcdb3a583ae891609d7d89b378b537b",
+      "id": "OA2",
+      "path": "research/exploratory/xi_companion_off_axis_ball_certificates.py",
+      "role": "executed frozen ball/runtime/source helpers",
+      "sha256_lf": "319e9abf775199e1747b0642dd99f24e52d9700bf71c04385d02cf5be9aac15f"
+    },
+    {
+      "commit": "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+      "git_blob": "e7cdd61fcc046d142ccc95b5796d3106a79139c4",
+      "id": "OA3",
+      "path": "research/exploratory/xi_companion_off_axis_ball_certificates.json",
+      "role": "frozen nine-node fixture",
+      "sha256_lf": "268e67f84bdae5d41a4acb95df96fff18e00c3d0ae3430a9be8c89f633ff7c5b"
+    },
+    {
+      "commit": "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+      "git_blob": "06434dc776028d155b8107f8cb5ea8687a3ce9dc",
+      "id": "OA4",
+      "path": "research/exploratory/xi_companion_off_axis_ball_certificates.sources.json",
+      "role": "parent transitive source manifest",
+      "sha256_lf": "eec3231292d8d5b030c68ffaed9520dd5697657dcd17f15c91e4f34ee8f9be4c"
+    },
+    {
+      "commit": "134a55016b4f3ea970dc8e5f03505d4e97afff07",
+      "git_blob": "f1f323d579968949cf07c662dd245172380759ba",
+      "id": "OA5",
+      "path": "tests/test_xi_companion_off_axis_ball_certificates.py",
+      "role": "frozen parent tests",
+      "sha256_lf": "3cfd3a3c2177ccbb242aeb5a9fa7e83b27859f9485a532489304019499b8dcd7"
+    },
+    {
+      "commit": "7aed2ec0b99b9d7f2fb94a774922a83d5b84a870",
+      "git_blob": "cd74bd06267eb4d60bc977353d11f6a0fb72ba6a",
+      "id": "CP",
+      "path": "research/exploratory/COPRIME_INFINITE_HEIGHT_PHYSICAL_CAPTURE.md",
+      "role": "CP2-4 coprime infinite-height does not imply corrected physical trace divergence",
+      "sha256_lf": "b9ab266898129389b94a9ed494b140422fc823552c6b69bf22ed36a9dbb2e7f7"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "7fbf3731f286ddfc9eb1d10ede5941ab2156817a",
+      "id": "L106620",
+      "path": "claims/lemmas/L-106620-mesoscopic-frozen-riemann-siegel-gauge.md",
+      "role": "L106620.1,.4-.6 constant positive lambda and native Theta0/Theta5",
+      "sha256_lf": "23e368f246606b0a8b4f53bec9e65e1dec21bdd207197387461268b4ca1bb7d0"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "16ab64a193e59608c9e2c9fd9762addc58809c3f",
+      "id": "L106610",
+      "path": "claims/lemmas/L-106610-riemann-siegel-gauge-factorization.md",
+      "role": "Exact Riemann-Siegel phase and digamma derivative of the native freezing scale",
+      "sha256_lf": "11c87fd9b50c309249b76f39fd87c3d20953779355a39a0338ef281d3cb57c87"
+    }
+  ],
+  "runtime": {
+    "flint": "3.6.0",
+    "machine": "AMD64",
+    "native_files": 44,
+    "native_files_sha256": "36c07323af58dec0eb6fd82a99bf871924eb69f1833d9af626fc09437ae5b0cc",
+    "python": "3.12.10",
+    "python_flint": "0.9.0",
+    "system": "Windows"
+  },
+  "schema": "xi_companion_box_count_compression-sources-v1"
+}

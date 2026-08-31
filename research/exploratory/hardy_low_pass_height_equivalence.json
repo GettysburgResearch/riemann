@@ -1,0 +1,855 @@
+{
+  "arithmetic_class": "MIXED",
+  "arithmetic_components": [
+    "CERTIFIED_INTEGER_COVERAGE",
+    "EXACT_RATIONAL"
+  ],
+  "artifact_sha256_lf": {
+    "research/exploratory/HARDY_LOW_PASS_HEIGHT_EQUIVALENCE.md": "ca94d882bc9ee69ae8e0a277ccc13ca7e7b86ab95a52d60eed16bb110f32bc72",
+    "research/exploratory/hardy_low_pass_height_equivalence.py": "299fcb5f95d17b5527042aaceb47235a003178334484a0b0473ebb4c1191853c",
+    "research/exploratory/hardy_low_pass_height_equivalence.sources.json": "e378690657458b2ce64038ab67b60d8ac910264445bcd36022e4c09e5d1d4403",
+    "tests/test_hardy_low_pass_height_equivalence.py": "6f36297a00bff80822fab885549eec2f268627a51b4d400d279b79510a49e3cd"
+  },
+  "caps": {
+    "bytes": 2000000,
+    "degree": 4,
+    "input_bits": 32,
+    "internal_bits": 4096,
+    "lacunary_prefix": 8,
+    "work": 200000
+  },
+  "coverage": {
+    "charged_work": 2225,
+    "confluent_Gram_models": 7,
+    "weighted_bridge_routes": 2
+  },
+  "delay_controls": [
+    {
+      "L": "1",
+      "T_and_C_identically_zero": false,
+      "any_B_including_infinite_height": true,
+      "remaining_input_low_pass_length": "1",
+      "tau": "0"
+    },
+    {
+      "L": "1",
+      "T_and_C_identically_zero": false,
+      "any_B_including_infinite_height": true,
+      "remaining_input_low_pass_length": "1/2",
+      "tau": "1/2"
+    },
+    {
+      "L": "1",
+      "T_and_C_identically_zero": true,
+      "any_B_including_infinite_height": true,
+      "remaining_input_low_pass_length": "0",
+      "tau": "1"
+    },
+    {
+      "L": "1",
+      "T_and_C_identically_zero": true,
+      "any_B_including_infinite_height": true,
+      "remaining_input_low_pass_length": "0",
+      "tau": "2"
+    }
+  ],
+  "finite_Gram_bridge_controls": [
+    {
+      "Gram": [
+        [
+          "1/2"
+        ]
+      ],
+      "Gram_inverse": [
+        [
+          "2"
+        ]
+      ],
+      "Lyapunov_verified": true,
+      "analytic_limit_evaluated": false,
+      "degree": 1,
+      "height": "1",
+      "horizontal_defect_integral_over_4pi_y": "1/2",
+      "log_integral_over_2pi": "1",
+      "negative_square_derivative_verified": true,
+      "nodes_eta_multiplicity": [
+        [
+          "1",
+          1
+        ]
+      ],
+      "origin": "2",
+      "partial_fractions_in_x_squared": [
+        {
+          "basis_integral_over_pi": "1/2",
+          "coefficient": "4",
+          "order": 1,
+          "scale": "2"
+        }
+      ],
+      "shifted_Gram_trace": "1/2",
+      "y": "1"
+    },
+    {
+      "Gram": [
+        [
+          "3/2"
+        ]
+      ],
+      "Gram_inverse": [
+        [
+          "2/3"
+        ]
+      ],
+      "Lyapunov_verified": true,
+      "analytic_limit_evaluated": false,
+      "degree": 1,
+      "height": "1/3",
+      "horizontal_defect_integral_over_4pi_y": "1/7",
+      "log_integral_over_2pi": "1/3",
+      "negative_square_derivative_verified": true,
+      "nodes_eta_multiplicity": [
+        [
+          "1/3",
+          1
+        ]
+      ],
+      "origin": "2/3",
+      "partial_fractions_in_x_squared": [
+        {
+          "basis_integral_over_pi": "3/7",
+          "coefficient": "8/3",
+          "order": 1,
+          "scale": "7/3"
+        }
+      ],
+      "shifted_Gram_trace": "1/7",
+      "y": "2"
+    },
+    {
+      "Gram": [
+        [
+          "1/2",
+          "1/4"
+        ],
+        [
+          "1/4",
+          "1/4"
+        ]
+      ],
+      "Gram_inverse": [
+        [
+          "4",
+          "-4"
+        ],
+        [
+          "-4",
+          "8"
+        ]
+      ],
+      "Lyapunov_verified": true,
+      "analytic_limit_evaluated": false,
+      "degree": 2,
+      "height": "2",
+      "horizontal_defect_integral_over_4pi_y": "3/4",
+      "log_integral_over_2pi": "2",
+      "negative_square_derivative_verified": true,
+      "nodes_eta_multiplicity": [
+        [
+          "1",
+          2
+        ]
+      ],
+      "origin": "4",
+      "partial_fractions_in_x_squared": [
+        {
+          "basis_integral_over_pi": "1/2",
+          "coefficient": "8",
+          "order": 1,
+          "scale": "2"
+        },
+        {
+          "basis_integral_over_pi": "1/16",
+          "coefficient": "-16",
+          "order": 2,
+          "scale": "2"
+        }
+      ],
+      "shifted_Gram_trace": "3/4",
+      "y": "1"
+    },
+    {
+      "Gram": [
+        [
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "2",
+          "3"
+        ],
+        [
+          "1",
+          "3",
+          "6"
+        ]
+      ],
+      "Gram_inverse": [
+        [
+          "3",
+          "-3",
+          "1"
+        ],
+        [
+          "-3",
+          "5",
+          "-2"
+        ],
+        [
+          "1",
+          "-2",
+          "1"
+        ]
+      ],
+      "Lyapunov_verified": true,
+      "analytic_limit_evaluated": false,
+      "degree": 3,
+      "height": "3/2",
+      "horizontal_defect_integral_over_4pi_y": "267/512",
+      "log_integral_over_2pi": "3/2",
+      "negative_square_derivative_verified": true,
+      "nodes_eta_multiplicity": [
+        [
+          "1/2",
+          3
+        ]
+      ],
+      "origin": "3",
+      "partial_fractions_in_x_squared": [
+        {
+          "basis_integral_over_pi": "1/2",
+          "coefficient": "9",
+          "order": 1,
+          "scale": "2"
+        },
+        {
+          "basis_integral_over_pi": "1/16",
+          "coefficient": "-27",
+          "order": 2,
+          "scale": "2"
+        },
+        {
+          "basis_integral_over_pi": "3/256",
+          "coefficient": "27",
+          "order": 3,
+          "scale": "2"
+        }
+      ],
+      "shifted_Gram_trace": "267/512",
+      "y": "3/2"
+    },
+    {
+      "Gram": [
+        [
+          "1/2",
+          "1/3"
+        ],
+        [
+          "1/3",
+          "1/4"
+        ]
+      ],
+      "Gram_inverse": [
+        [
+          "18",
+          "-24"
+        ],
+        [
+          "-24",
+          "36"
+        ]
+      ],
+      "Lyapunov_verified": true,
+      "analytic_limit_evaluated": false,
+      "degree": 2,
+      "height": "3",
+      "horizontal_defect_integral_over_4pi_y": "6/5",
+      "log_integral_over_2pi": "1",
+      "negative_square_derivative_verified": true,
+      "nodes_eta_multiplicity": [
+        [
+          "1",
+          1
+        ],
+        [
+          "2",
+          1
+        ]
+      ],
+      "origin": "6",
+      "partial_fractions_in_x_squared": [
+        {
+          "basis_integral_over_pi": "2/3",
+          "coefficient": "0",
+          "order": 1,
+          "scale": "3/2"
+        },
+        {
+          "basis_integral_over_pi": "2/5",
+          "coefficient": "6",
+          "order": 1,
+          "scale": "5/2"
+        }
+      ],
+      "shifted_Gram_trace": "6/5",
+      "y": "1/2"
+    },
+    {
+      "Gram": [
+        [
+          "1",
+          "1",
+          "2/7",
+          "4/49"
+        ],
+        [
+          "1",
+          "2",
+          "4/49",
+          "16/343"
+        ],
+        [
+          "2/7",
+          "4/49",
+          "1/6",
+          "1/36"
+        ],
+        [
+          "4/49",
+          "16/343",
+          "1/36",
+          "1/108"
+        ]
+      ],
+      "Gram_inverse": [
+        [
+          "397586/15625",
+          "-28469/3125",
+          "-294336/15625",
+          "-381024/3125"
+        ],
+        [
+          "-28469/3125",
+          "2401/625",
+          "22344/3125",
+          "24696/625"
+        ],
+        [
+          "-294336/15625",
+          "22344/3125",
+          "409836/15625",
+          "160524/3125"
+        ],
+        [
+          "-381024/3125",
+          "24696/625",
+          "160524/3125",
+          "518616/625"
+        ]
+      ],
+      "Lyapunov_verified": true,
+      "analytic_limit_evaluated": false,
+      "degree": 4,
+      "height": "7",
+      "horizontal_defect_integral_over_4pi_y": "234836/234375",
+      "log_integral_over_2pi": "5",
+      "negative_square_derivative_verified": true,
+      "nodes_eta_multiplicity": [
+        [
+          "1/2",
+          2
+        ],
+        [
+          "3",
+          2
+        ]
+      ],
+      "origin": "14",
+      "partial_fractions_in_x_squared": [
+        {
+          "basis_integral_over_pi": "2/5",
+          "coefficient": "58072/46875",
+          "order": 1,
+          "scale": "5/2"
+        },
+        {
+          "basis_integral_over_pi": "4/125",
+          "coefficient": "-784/625",
+          "order": 2,
+          "scale": "5/2"
+        },
+        {
+          "basis_integral_over_pi": "1/5",
+          "coefficient": "2566928/46875",
+          "order": 1,
+          "scale": "5"
+        },
+        {
+          "basis_integral_over_pi": "1/250",
+          "coefficient": "-529984/625",
+          "order": 2,
+          "scale": "5"
+        }
+      ],
+      "shifted_Gram_trace": "234836/234375",
+      "y": "2"
+    },
+    {
+      "Gram": [
+        [
+          "1/2",
+          "1/3",
+          "1/4",
+          "1/5"
+        ],
+        [
+          "1/3",
+          "1/4",
+          "1/5",
+          "1/6"
+        ],
+        [
+          "1/4",
+          "1/5",
+          "1/6",
+          "1/7"
+        ],
+        [
+          "1/5",
+          "1/6",
+          "1/7",
+          "1/8"
+        ]
+      ],
+      "Gram_inverse": [
+        [
+          "200",
+          "-1200",
+          "2100",
+          "-1120"
+        ],
+        [
+          "-1200",
+          "8100",
+          "-15120",
+          "8400"
+        ],
+        [
+          "2100",
+          "-15120",
+          "29400",
+          "-16800"
+        ],
+        [
+          "-1120",
+          "8400",
+          "-16800",
+          "9800"
+        ]
+      ],
+      "Lyapunov_verified": true,
+      "analytic_limit_evaluated": false,
+      "degree": 4,
+      "height": "10",
+      "horizontal_defect_integral_over_4pi_y": "425/429",
+      "log_integral_over_2pi": "9",
+      "negative_square_derivative_verified": true,
+      "nodes_eta_multiplicity": [
+        [
+          "1",
+          1
+        ],
+        [
+          "2",
+          1
+        ],
+        [
+          "3",
+          1
+        ],
+        [
+          "4",
+          1
+        ]
+      ],
+      "origin": "20",
+      "partial_fractions_in_x_squared": [
+        {
+          "basis_integral_over_pi": "1/4",
+          "coefficient": "-80/11",
+          "order": 1,
+          "scale": "4"
+        },
+        {
+          "basis_integral_over_pi": "1/5",
+          "coefficient": "1400/11",
+          "order": 1,
+          "scale": "5"
+        },
+        {
+          "basis_integral_over_pi": "1/6",
+          "coefficient": "-70560/143",
+          "order": 1,
+          "scale": "6"
+        },
+        {
+          "basis_integral_over_pi": "1/7",
+          "coefficient": "70560/143",
+          "order": 1,
+          "scale": "7"
+        }
+      ],
+      "shifted_Gram_trace": "425/429",
+      "y": "3"
+    }
+  ],
+  "frozen_sources": [
+    {
+      "commit": "90e8dff3d184cbfe59974969ca89615856c33c51",
+      "git_blob": "72ac1f93b6fb0a74200ed2cc7e8399a4a10064c2",
+      "kind": "finite_Gram_and_capture_parent",
+      "path": "research/exploratory/HARDY_COFINAL_FINITE_HEIGHT_SOURCE_CAPTURE.md",
+      "sha256_lf": "490373dafd09ed491a2c3ad31b44dc152cd0936c84f58e1676aef0ffd1013a0b"
+    },
+    {
+      "commit": "9da33e7ea2b15a4badb3cb436e38e54762ad5e1d",
+      "git_blob": "e592a4c031876f56f07d28b7e18a8a7cf6e826f4",
+      "kind": "conditional_actual_companion_height_parent",
+      "path": "research/exploratory/XI_COMPANION_GLOBAL_HEIGHT_BOUNDARY.md",
+      "sha256_lf": "5bf33ffd58c3fe277f4bfb0408f0805eae1b2f34aab49bb71e4c714afb80dc6d"
+    }
+  ],
+  "one_factor_controls": [
+    {
+      "a": "0",
+      "defect": "1",
+      "eta": "1",
+      "log_integral_over_2pi": "1",
+      "log_singularity_on_line": true,
+      "modulus_squared": "0",
+      "weighted_mass": "1/2",
+      "x": "0",
+      "y": "1"
+    },
+    {
+      "a": "2",
+      "defect": "12/65",
+      "eta": "1/3",
+      "log_integral_over_2pi": "1/3",
+      "log_singularity_on_line": false,
+      "modulus_squared": "53/65",
+      "weighted_mass": "1/7",
+      "x": "-1",
+      "y": "2"
+    },
+    {
+      "a": "-3",
+      "defect": "16/221",
+      "eta": "2",
+      "log_integral_over_2pi": "1/2",
+      "log_singularity_on_line": false,
+      "modulus_squared": "205/221",
+      "weighted_mass": "4/5",
+      "x": "4",
+      "y": "1/2"
+    },
+    {
+      "a": "1",
+      "defect": "24/25",
+      "eta": "3",
+      "log_integral_over_2pi": "2",
+      "log_singularity_on_line": false,
+      "modulus_squared": "1/25",
+      "weighted_mass": "3/5",
+      "x": "1",
+      "y": "2"
+    }
+  ],
+  "payload_sha256": "5d055216ec0c101eb9c4b2c73ffabb87f3f5ac63eb774fc6e4f618d54055cdf4",
+  "product_controls": [
+    {
+      "defect": "64/65",
+      "factors": 2,
+      "modulus_squared": "1/65"
+    },
+    {
+      "defect": "1",
+      "factors": 3,
+      "modulus_squared": "0"
+    }
+  ],
+  "real_inequality_controls": [
+    {
+      "L": "2",
+      "Lipschitz_constant": "1",
+      "disjoint_interval_mass_lower": "1/32",
+      "epsilon": "1/4",
+      "exponentials_or_logs_evaluated": false,
+      "half_interval_width": "1/8",
+      "q_minus_half_negative_log_derivative": "1/3",
+      "weighted_trace_bound_per_A": "5/4",
+      "y": "1"
+    },
+    {
+      "L": "1/3",
+      "Lipschitz_constant": "2/3",
+      "disjoint_interval_mass_lower": "3/16",
+      "epsilon": "1/2",
+      "exponentials_or_logs_evaluated": false,
+      "half_interval_width": "3/8",
+      "q_minus_half_negative_log_derivative": "0",
+      "weighted_trace_bound_per_A": "2",
+      "y": "3/2"
+    },
+    {
+      "L": "4",
+      "Lipschitz_constant": "1/3",
+      "disjoint_interval_mass_lower": "3/128",
+      "epsilon": "1/8",
+      "exponentials_or_logs_evaluated": false,
+      "half_interval_width": "3/16",
+      "q_minus_half_negative_log_derivative": "3/7",
+      "weighted_trace_bound_per_A": "25/24",
+      "y": "3"
+    }
+  ],
+  "rounding_contract": "exact integers and Fraction; no rounding; no transcendental evaluation",
+  "schema": "hardy-low-pass-height-equivalence-v1",
+  "scope": {
+    "RH_or_critical_line_claim": false,
+    "Xi_unreduced_corollary_requires_GH_premise": true,
+    "analytic_limits_machine_certified": false,
+    "arbitrary_inner_numerator_lower_bound": false,
+    "band": "[0,L], fixed L>0",
+    "bare_U_equals_one": true,
+    "cofinal_physical_uniformity": false,
+    "corrected_P_U_physical_capture": false,
+    "infinite_height_implies_every_shifted_band_infinite": false,
+    "meromorphic_real_boundary_extension_required": false,
+    "native_reduced_denominator_determined": false,
+    "novelty_or_new_abstract_theory_claim": false,
+    "numerical_transcendental_samples": 0,
+    "pure_Blaschke_required_for_equivalence": true,
+    "some_low_pass_finite_iff_every_low_pass_finite_iff_height_finite": true
+  },
+  "shifted_band_lacunary_controls": [
+    {
+      "Gram": [
+        [
+          "1"
+        ]
+      ],
+      "band_exponentials_evaluated": false,
+      "finite_prefix_used_as_infinite_proof": false,
+      "global_Gram_lower": "11/15",
+      "global_Gram_upper": "19/15",
+      "global_inverse_upper": "15/11",
+      "global_off_diagonal_bound": "4/15",
+      "heights": [
+        256
+      ],
+      "off_diagonal_row_sums": [
+        "0"
+      ],
+      "prefix": 1
+    },
+    {
+      "Gram": [
+        [
+          "1",
+          "32/257"
+        ],
+        [
+          "32/257",
+          "1"
+        ]
+      ],
+      "band_exponentials_evaluated": false,
+      "finite_prefix_used_as_infinite_proof": false,
+      "global_Gram_lower": "11/15",
+      "global_Gram_upper": "19/15",
+      "global_inverse_upper": "15/11",
+      "global_off_diagonal_bound": "4/15",
+      "heights": [
+        256,
+        65536
+      ],
+      "off_diagonal_row_sums": [
+        "32/257",
+        "32/257"
+      ],
+      "prefix": 2
+    },
+    {
+      "Gram": [
+        [
+          "1",
+          "32/257",
+          "512/65537",
+          "8192/16777217"
+        ],
+        [
+          "32/257",
+          "1",
+          "32/257",
+          "512/65537"
+        ],
+        [
+          "512/65537",
+          "32/257",
+          "1",
+          "32/257"
+        ],
+        [
+          "8192/16777217",
+          "512/65537",
+          "32/257",
+          "1"
+        ]
+      ],
+      "band_exponentials_evaluated": false,
+      "finite_prefix_used_as_infinite_proof": false,
+      "global_Gram_lower": "11/15",
+      "global_Gram_upper": "19/15",
+      "global_inverse_upper": "15/11",
+      "global_off_diagonal_bound": "4/15",
+      "heights": [
+        256,
+        65536,
+        16777216,
+        4294967296
+      ],
+      "off_diagonal_row_sums": [
+        "146033082912/1099528470529",
+        "4325952/16843009",
+        "4325952/16843009",
+        "146033082912/1099528470529"
+      ],
+      "prefix": 4
+    },
+    {
+      "Gram": [
+        [
+          "1",
+          "32/257",
+          "512/65537",
+          "8192/16777217",
+          "131072/4294967297",
+          "2097152/1099511627777",
+          "33554432/281474976710657",
+          "536870912/72057594037927937"
+        ],
+        [
+          "32/257",
+          "1",
+          "32/257",
+          "512/65537",
+          "8192/16777217",
+          "131072/4294967297",
+          "2097152/1099511627777",
+          "33554432/281474976710657"
+        ],
+        [
+          "512/65537",
+          "32/257",
+          "1",
+          "32/257",
+          "512/65537",
+          "8192/16777217",
+          "131072/4294967297",
+          "2097152/1099511627777"
+        ],
+        [
+          "8192/16777217",
+          "512/65537",
+          "32/257",
+          "1",
+          "32/257",
+          "512/65537",
+          "8192/16777217",
+          "131072/4294967297"
+        ],
+        [
+          "131072/4294967297",
+          "8192/16777217",
+          "512/65537",
+          "32/257",
+          "1",
+          "32/257",
+          "512/65537",
+          "8192/16777217"
+        ],
+        [
+          "2097152/1099511627777",
+          "131072/4294967297",
+          "8192/16777217",
+          "512/65537",
+          "32/257",
+          "1",
+          "32/257",
+          "512/65537"
+        ],
+        [
+          "33554432/281474976710657",
+          "2097152/1099511627777",
+          "131072/4294967297",
+          "8192/16777217",
+          "512/65537",
+          "32/257",
+          "1",
+          "32/257"
+        ],
+        [
+          "536870912/72057594037927937",
+          "33554432/281474976710657",
+          "2097152/1099511627777",
+          "131072/4294967297",
+          "8192/16777217",
+          "512/65537",
+          "32/257",
+          "1"
+        ]
+      ],
+      "band_exponentials_evaluated": false,
+      "finite_prefix_used_as_infinite_proof": false,
+      "global_Gram_lower": "11/15",
+      "global_Gram_upper": "19/15",
+      "global_inverse_upper": "15/11",
+      "global_off_diagonal_bound": "4/15",
+      "heights": [
+        256,
+        65536,
+        16777216,
+        4294967296,
+        1099511627776,
+        281474976710656,
+        72057594037927936,
+        18446744073709551616
+      ],
+      "off_diagonal_row_sums": [
+        "3232094984321417933631527818499719932429970582942892576/24329484782745738075279179550998207770663359600075668993",
+        "22332023417065273168143451947334564291136/86773332813117812192435733979599776841473",
+        "5357496089990515671281734362176/20203799211676034466678860545793",
+        "1254558748169948234816/4722438823042483290113",
+        "1254558748169948234816/4722438823042483290113",
+        "5357496089990515671281734362176/20203799211676034466678860545793",
+        "22332023417065273168143451947334564291136/86773332813117812192435733979599776841473",
+        "3232094984321417933631527818499719932429970582942892576/24329484782745738075279179550998207770663359600075668993"
+      ],
+      "prefix": 8
+    }
+  ],
+  "status": "PROPOSED_REQUIRING_INDEPENDENT_FROZEN_REVIEW"
+}

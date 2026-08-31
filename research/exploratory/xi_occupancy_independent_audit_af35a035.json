@@ -1,0 +1,32 @@
+{
+  "additional_subset_endpoint_cases": 384,
+  "analytic_or_Xi_evaluation_machine_certified": false,
+  "arithmetic_class": "MIXED",
+  "authoring_base": "a7479e85fdc2a464cdc753021435cfef7a1f3910",
+  "components": [
+    "EXACT_RATIONAL",
+    "CERTIFIED_INTEGER_COVERAGE"
+  ],
+  "hostile_rejections": 49,
+  "independent_arithmetic_sha256": "e372855802e504b19596ab8fb30c9e4774c53da8c9409d0708e645eba0e44ea8",
+  "own_artifacts_checked": 4,
+  "reconstructed_rows": {
+    "boxes": 600,
+    "families": 32,
+    "mixed": 1,
+    "rayleigh": 16,
+    "sparse": 32
+  },
+  "rounding": "none",
+  "schema": "independent-oc-review-af35a035-v1",
+  "science": "af35a035a921a8e3164bda3dce95290afc456645",
+  "science_sha256_lf": {
+    "research/exploratory/XI_OCCUPANCY_CARLESON_CAPTURE.md": "43610f01cc34e7eeb18bad82ae26ed6da2e08170ae807a2a7d63fde8a25cfcae",
+    "research/exploratory/xi_occupancy_carleson_capture.json": "2e698f7a1be78f54ef15187565659d0bd7afefc7ba2eb0efb32d6b9be61207c4",
+    "research/exploratory/xi_occupancy_carleson_capture.py": "684db7009b4520f5ee70ada4e88ea3a583db1606c74880ac8f09ca79487bdec1",
+    "research/exploratory/xi_occupancy_carleson_capture.sources.json": "2a1b1a5de72dde0bdec382021fbcc35e41479ad5224eb3357d33823a66a9de80",
+    "tests/test_xi_occupancy_carleson_capture.py": "a0305d2e0a3dc30084f7741070e6ed2d36ffc77f1506fe29ad8e6114f62bc05f"
+  },
+  "scope": "exact frozen finite arithmetic/source audit; analytic verdict is in the separate review note",
+  "source_bindings_checked": 4
+}

@@ -1,0 +1,136 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "artifact_sha256_lf": {
+    "research/exploratory/XI_GLOBAL_ODD_ORDER_SADDLE.md": "eddb18ed5fdc4ba95fb449f3b8362e1cd30ef0eddf9f781981ecf95c72489341",
+    "research/exploratory/xi_global_odd_order_saddle.py": "2328de4b82b279a7eb60db2d4cbb7a8e2c62526e54f014dab5a571541d62a5a7",
+    "research/exploratory/xi_global_odd_order_saddle.sources.json": "d2004cc18bba1907f9b8683c0f274543cfd90e7b044d8cd3ec246852de58c62c",
+    "research/exploratory/xi_global_odd_order_scout.py": "bc762426bcf556e8388706c1eade716c4add639edb0354677378912198bccec6",
+    "research/exploratory/xi_global_odd_order_scout_results.json": "01f4c5477c9d911d3df35ae859a19e4a6d9608c6de923f96bbf3012d820054eb",
+    "tests/test_xi_global_odd_order_saddle.py": "4e8be1241a3902faa032f791ef7abe897986787d30c6beeb27bbf3255b61d1ba"
+  },
+  "control_caps": {
+    "gaussian_moment_index": 12,
+    "max_odd_K": 127,
+    "rational_input_bits": 64
+  },
+  "current_grid_canonical_sha256": "926f32b264f9fe8b82c19c78d22979fd4c6ac3d6402042b03c774b1475baaca1",
+  "current_grid_rows": 2048,
+  "normal_response_coefficients": [
+    {
+      "coefficient": "1",
+      "j": 0,
+      "normal_even_moment": 1
+    },
+    {
+      "coefficient": "1/2",
+      "j": 1,
+      "normal_even_moment": 1
+    },
+    {
+      "coefficient": "1/8",
+      "j": 2,
+      "normal_even_moment": 3
+    },
+    {
+      "coefficient": "1/48",
+      "j": 3,
+      "normal_even_moment": 15
+    },
+    {
+      "coefficient": "1/384",
+      "j": 4,
+      "normal_even_moment": 105
+    },
+    {
+      "coefficient": "1/3840",
+      "j": 5,
+      "normal_even_moment": 945
+    },
+    {
+      "coefficient": "1/46080",
+      "j": 6,
+      "normal_even_moment": 10395
+    },
+    {
+      "coefficient": "1/645120",
+      "j": 7,
+      "normal_even_moment": 135135
+    },
+    {
+      "coefficient": "1/10321920",
+      "j": 8,
+      "normal_even_moment": 2027025
+    },
+    {
+      "coefficient": "1/185794560",
+      "j": 9,
+      "normal_even_moment": 34459425
+    },
+    {
+      "coefficient": "1/3715891200",
+      "j": 10,
+      "normal_even_moment": 654729075
+    },
+    {
+      "coefficient": "1/81749606400",
+      "j": 11,
+      "normal_even_moment": 13749310575
+    },
+    {
+      "coefficient": "1/1961990553600",
+      "j": 12,
+      "normal_even_moment": 316234143225
+    }
+  ],
+  "phase_identities": {
+    "complete_symbolic_identities": [
+      "balanced_derivative",
+      "unbalanced_derivative",
+      "balanced_curvature",
+      "unbalanced_curvature",
+      "phase_continuity",
+      "curvature_continuity",
+      "downward_slope_jump",
+      "left_corner_order",
+      "right_corner_order",
+      "wrong_center_slope_defect"
+    ],
+    "kernel_amplitude_branches": 2,
+    "pi_is_symbolic_not_rounded": true
+  },
+  "rounding_contract": "no rounded transcendental evaluation in exact producer; analytic estimates require proof review",
+  "schema": "xi-global-odd-order-saddle-v1",
+  "scopes": {
+    "analytic_uniformity_machine_verified": false,
+    "cofinal_capture_or_RH_proved": false,
+    "external_novelty_claim": false,
+    "finite_panel_implies_all_K": false,
+    "fixed_K_first_packet_refuted": false,
+    "literal_Xi_evaluated_by_exact_producer": false,
+    "numerical_scout_certified": false,
+    "physical_gauge_selected": false
+  },
+  "scout_campaign_contract": {
+    "canonical_odd_order_decimal_strings": true,
+    "case_count": 10,
+    "scout_source_hashes_verified": true,
+    "transcendental_values_recomputed_by_exact_producer": false
+  },
+  "source_authentication": {
+    "ancestral_code_executed_by_exact_producer": false,
+    "ancestral_code_executed_by_separate_scout": true,
+    "exact_git_blobs_and_lf_bytes": true,
+    "source_count": 4
+  },
+  "status": "ANALYTIC_THEOREMS_IN_NOTE_WITH_EXACT_BOUNDED_CONTROLS",
+  "theta_bounds": {
+    "B_lower": "1/4",
+    "B_upper": "1024/961",
+    "corner_order_width_lower_per_xi": "3",
+    "first_orbit_lower": "1/2",
+    "phase_downjump_lower_using_pi_gt_3": "3/2",
+    "successive_half_exponent_ratio": "81/2048",
+    "tail_using_pi_gt_3_e_gt_2": "1/31",
+    "theta_derivative_majorant": "1232/465"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "authoring_base": "58be12463b3ff909eff0d491f606e87149efa9e4",
+  "external_contracts": [
+    {
+      "contract": "Beckner 1975 sharp Hausdorff-Young; only classical nonsharp interpolation is used",
+      "remote_bytes_authenticated": false,
+      "url": "https://annals.math.princeton.edu/1975/102-1/p11"
+    },
+    {
+      "contract": "Takenaka 1925 orthogonal rational system; no novelty claim",
+      "remote_bytes_authenticated": false,
+      "url": "https://doi.org/10.4099/jjm1924.2.0_129"
+    },
+    {
+      "contract": "Fricain-Hartmann-Ross (2.12), p8 and (2.18)-(2.19), p9: model decomposition and finite models",
+      "remote_bytes_authenticated": false,
+      "url": "https://arxiv.org/pdf/1605.07418v2"
+    }
+  ],
+  "schema": "hardy-inner-width-source-duality-sources-v1",
+  "source_scope": "all-inner finite-denominator theorem; explicit historical raw-value mismatch correction",
+  "sources": [
+    {
+      "commit": "a07e9c3ba093abb348b849e0356f6babdf591e84",
+      "git_blob": "95338634d08fb5bde4d56d10197833b44ec64788",
+      "path": "research/exploratory/HARDY_TRANSLATION_PHYSICAL_BAND_BOUND.md",
+      "role": "finite_physical_theorem",
+      "sha256_lf": "efa2a1535e30e12e0fa20b1fabf49762843b50c72d0c8f6e44a70bbaa2feba3c"
+    },
+    {
+      "commit": "a07e9c3ba093abb348b849e0356f6babdf591e84",
+      "git_blob": "3e8dcb2ea93cfdf7421fef2e6e33fcd20774dc2a",
+      "path": "research/exploratory/hardy_translation_physical_band_bound.py",
+      "role": "exact_arithmetic_helper",
+      "sha256_lf": "755bd0ed8ee76e612d2c0d65619e4b9492f8e0c08d4574758f9aac44e06dc2e7"
+    },
+    {
+      "commit": "8ef225b8753e2cd1f9c031fbb8038d1321c7f308",
+      "git_blob": "76152f000c026c4a68ade2593b16ffbd7e0de528",
+      "path": "research/exploratory/XI_CONFLUENT_SOURCE_BAND_OBSTRUCTION.md",
+      "role": "historical_confluent_interface",
+      "sha256_lf": "750f7e22c14adcb8d3748e29d7a6b5b5e808fcab4998660c759a484800ef6146"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "d0488eccf2507bcb71c7e46f3f6f9c7013dd3998",
+      "path": "claims/lemmas/L-106671-endpoint-free-energy-is-a-source-evaluation-pick-determinant.md",
+      "role": "historical_value_coefficient_mismatch",
+      "sha256_lf": "fc9bc89d9129ca22a9ededed2e3a6daf78c1371c9582d023487c326309d42764"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "7fbf3731f286ddfc9eb1d10ede5941ab2156817a",
+      "path": "claims/lemmas/L-106620-mesoscopic-frozen-riemann-siegel-gauge.md",
+      "role": "literal_frozen_gauge",
+      "sha256_lf": "23e368f246606b0a8b4f53bec9e65e1dec21bdd207197387461268b4ca1bb7d0"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "fafa4b390bc140c8bb514dba83d41a5643cb77f1",
+      "path": "claims/lemmas/L-106621-constant-scale-companion-height-budget.md",
+      "role": "height_sum_not_count",
+      "sha256_lf": "e41462ea71fd1f46849f75f7ff5dd6189514743e27bd3292bd1aec9292ec9065"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "8db4fc42c3ea964c592224b64d0ad92b6c264018",
+      "path": "claims/theorems/T-106620-mesoscopic-riemann-siegel-gauge-ninety-percent-frontier.md",
+      "role": "cofinal_frontier",
+      "sha256_lf": "f926698271d06b2db02bd1d7e00a05034934d8b77a75496e137d127c565795b0"
+    },
+    {
+      "commit": "81d52e569cc8bb566e54043fd692fd6157406aab",
+      "git_blob": "9a61689c19b244f0176f753cef146b252256eab0",
+      "path": "claims/theorems/T-106670-regularized-pick-free-energy-ninety-percent-equivalence.md",
+      "role": "free_energy_frontier",
+      "sha256_lf": "b96ffe1ec8e5fc7d825e521c57c956066e25f0494e80aa4c13d4017ea98c8ae7"
+    }
+  ]
+}

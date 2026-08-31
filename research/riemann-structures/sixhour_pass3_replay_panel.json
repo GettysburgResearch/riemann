@@ -1,0 +1,273 @@
+{
+  "schema": "sixhour-pass3-explicit-replay-panel-v1",
+  "programme": "S",
+  "science_head": "6bc9f5fc499fbdc4b9807b49975988f4fba67740",
+  "modules": [
+    {
+      "test": "tests/test_archimedean_ladder_boundary.py",
+      "test_sha256_lf": "be851ffb294468826105006ec17658dcaf95574e41cd1180b34c8032492073d4",
+      "producer": "research/riemann-structures/archimedean_ladder_boundary.py",
+      "producer_sha256_lf": "1272c353d5060128040429ecef281cefa68e322e6dfbe4b96765b900bd24c652",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_coprime_infinite_height_physical_capture.py",
+      "test_sha256_lf": "0148a6cf5b1d319292097c7faa45bcca9d359e342574e9b0af78628f659205e7",
+      "producer": "research/exploratory/coprime_infinite_height_physical_capture.py",
+      "producer_sha256_lf": "7c940599fdaf6d55f61d02b51ef466f6e04b309ae9232ecc5c3c55ad96554469",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_family_binding_permutation_firewall.py",
+      "test_sha256_lf": "c35bc93aa33c8373bca7089af4ece94b3ec13612ee531272b78acd69db7ae341",
+      "producer": "research/riemann-structures/family_binding_permutation_firewall.py",
+      "producer_sha256_lf": "c9db1f7d6cde3a1c59a5df14b4d5a152cffa36f5de92eff933a9c07c3519673f",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_ffps_canonical_boolean_principal_diagonal.py",
+      "test_sha256_lf": "c68f5e068f2d7260a2093c9970b427aa4638bb0a8c1ad15171760eb3242670af",
+      "producer": "research/l-families/atlas/function_field/ffps_canonical_boolean_principal_diagonal.py",
+      "producer_sha256_lf": "ce91707119eb9febefd55426439271c28b48765ce29082dd50e55b8bf61bd600",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_ffps_live_shared_fibre_collisions.py",
+      "test_sha256_lf": "bdee0bd4b0f0b8dafb0c2a2e63f504a7ce1f86ae2ae639adb64eab587d40d389",
+      "producer": "research/l-families/atlas/function_field/ffps_live_shared_fibre_collisions.py",
+      "producer_sha256_lf": "a6af6e6e846cccf8fe017864d892f941735501c4a80836ef8e1edc5edb77c8a1",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_ffps_marked_place_signed_descent_gate0.py",
+      "test_sha256_lf": "ff7dce342a8fd70d001256effa8b12ac8377705c999eae29b911611901c696e7",
+      "producer": "research/l-families/atlas/function_field/ffps_marked_place_signed_descent_gate0.py",
+      "producer_sha256_lf": "7e8896b444303b5bf9e90db1f8805839d263f755796a210a37048527e1244ee9",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_ffps_shared_fibre_wick_occupancy_spectrum.py",
+      "test_sha256_lf": "368819780b87decce85ff066ade83c2b2a55a4daae8dc35d63f36f2261d1bb3f",
+      "producer": "research/l-families/atlas/function_field/ffps_shared_fibre_wick_occupancy_spectrum.py",
+      "producer_sha256_lf": "4e1cdf3ad83e70649521b71f53ded5eb310f021524269bfeeb7d122e67290ea0",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_ffps_signed_history_recombination.py",
+      "test_sha256_lf": "f09bd850e0fbf6feb222811931c0dc8b13492257d18fdc5cd9d6d9aa793548ed",
+      "producer": "research/l-families/atlas/function_field/ffps_signed_history_recombination.py",
+      "producer_sha256_lf": "94e8da784e14d403ed3f3d3e22430f1aaa165835094ff545fa8b977cfcce4879",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_hardy_cofinal_finite_height_source_capture.py",
+      "test_sha256_lf": "7a6646f9a47670489d3189bc41bdad76f80d9307db6f8b549ae4e98b87087ae5",
+      "producer": "research/exploratory/hardy_cofinal_finite_height_source_capture.py",
+      "producer_sha256_lf": "2f497a7069ea7b36fe30a27cd6baf151e83bba0327aa1af040fed4922c70f603",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_hardy_inner_width_source_duality.py",
+      "test_sha256_lf": "33d22640b7628ff5bebd1c7f42671883918fb08e0d60dc1fa450e2d6cc802843",
+      "producer": "research/exploratory/hardy_inner_width_source_duality.py",
+      "producer_sha256_lf": "1b06c3bab64266be56a3bc86c0d8abedcc5c5c3af91963b0cee4716ecc257a3a",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_hardy_low_pass_height_equivalence.py",
+      "test_sha256_lf": "6f36297a00bff80822fab885549eec2f268627a51b4d400d279b79510a49e3cd",
+      "producer": "research/exploratory/hardy_low_pass_height_equivalence.py",
+      "producer_sha256_lf": "299fcb5f95d17b5527042aaceb47235a003178334484a0b0473ebb4c1191853c",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_hardy_translation_physical_band_bound.py",
+      "test_sha256_lf": "3b4e9ca8a851c8959c3b0815dfea1197a020f056276ffaa94913a1590b1016b4",
+      "producer": "research/exploratory/hardy_translation_physical_band_bound.py",
+      "producer_sha256_lf": "755bd0ed8ee76e612d2c0d65619e4b9492f8e0c08d4574758f9aac44e06dc2e7",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_native_tuple_source_acquisition.py",
+      "test_sha256_lf": "d91c3933defc654b0268fda552d1911434677e776fdfc27a7e4e51de677c96e7",
+      "producer": "research/exploratory/native_tuple_source_acquisition.py",
+      "producer_sha256_lf": "62afc6a3a72c61b153af93159961f54ddfd2b98df964e6deec654eb8ea2a8fe7",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_source_algebra_diagonal_adams_adapter.py",
+      "test_sha256_lf": "aca44fbf0bb4ebc3c9ae298ddc2a842fe5365e697ca07e8ea6723e02ada9cbb7",
+      "producer": "research/riemann-structures/source_algebra_diagonal_adams_adapter.py",
+      "producer_sha256_lf": "5a94ddf391dd59502d41ec28df30aa3fe0d2102415a54e3215f9bc018e4b8958",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_xi_actual_kernel_laplace_concentration.py",
+      "test_sha256_lf": "cd2d4ad75e6ec3fa53b18f88b8a1c973446d16a8e945de2b76a47c092cda9ba4",
+      "producer": "research/exploratory/xi_actual_kernel_laplace_concentration.py",
+      "producer_sha256_lf": "e339d8e7ea8fd71b2f1824a766e899eb36d39747924444d66eb8fbbe77a3aab3",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_xi_all_radius_transport_obstruction.py",
+      "producer": "research/exploratory/xi_all_radius_transport_obstruction.py",
+      "runtime": "flint",
+      "test_sha256_lf": "796c054fdf72fe60ad83101b7d05e53b72b68fc69180c59a3bfdf58067bc7ba9",
+      "producer_sha256_lf": "612c7ca5be490eb1a7306696aa09f33d5b27aface3c89642e788f6a1e24361aa"
+    },
+    {
+      "test": "tests/test_xi_companion_box_count_compression.py",
+      "test_sha256_lf": "e9b40aaa100f1f8ae74ad2d90978b8e7621303ac750a847cbfc8ec045a2e05b5",
+      "producer": "research/exploratory/xi_companion_box_count_compression.py",
+      "producer_sha256_lf": "cea67ec0b5335ecef7a6df8d453859a249b73d1b716b8c87565709d27ec95e58",
+      "runtime": "flint"
+    },
+    {
+      "test": "tests/test_xi_companion_generic_parameter_coprimality.py",
+      "test_sha256_lf": "a3caab1f7ef771465411d1b1e79ababe1e99379c953d569b3e93e8e105d80e5e",
+      "producer": "research/exploratory/xi_companion_generic_parameter_coprimality.py",
+      "producer_sha256_lf": "f08d9f5c3af37a98f905c0269319cc187bedadc3b26d9dc64e583e16b805be6b",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_xi_companion_global_height_boundary.py",
+      "test_sha256_lf": "0c637ca6c546cc4fe94a8e507963cb70d6ccfbfe32f0d963d6dbd5edd3c6b178",
+      "producer": "research/exploratory/xi_companion_global_height_boundary.py",
+      "producer_sha256_lf": "7ccbedc1dc4f1ab4be4d700ef1ea4cda08639b5c93376f72ff2ace87cd9e5827",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_xi_companion_imaginary_axis_sampling.py",
+      "test_sha256_lf": "8bdbc153a4672ee6d8ed51302715fb01c244d5f8c539a000c6e6306f0b9c5c38",
+      "producer": "research/exploratory/xi_companion_imaginary_axis_sampling.py",
+      "producer_sha256_lf": "e97fb8b818bbd6079b214aac1f61ea5e5a326f353910b8c2f3cccf04f3f5c50f",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_xi_companion_off_axis_ball_certificates.py",
+      "test_sha256_lf": "3cfd3a3c2177ccbb242aeb5a9fa7e83b27859f9485a532489304019499b8dcd7",
+      "producer": "research/exploratory/xi_companion_off_axis_ball_certificates.py",
+      "producer_sha256_lf": "319e9abf775199e1747b0642dd99f24e52d9700bf71c04385d02cf5be9aac15f",
+      "runtime": "flint"
+    },
+    {
+      "test": "tests/test_xi_confluent_source_band_obstruction.py",
+      "test_sha256_lf": "7a235155b4922188f8634220f5ffed897b41d2b7df5437d8eb90562d6981412f",
+      "producer": "research/exploratory/xi_confluent_source_band_obstruction.py",
+      "producer_sha256_lf": "2981061d259d595c0611584a8c0dda5255ba65a47822dc551934ac9c02e3fb74",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_xi_current_radial_semigroup.py",
+      "test_sha256_lf": "b8e52d560e9789f4bb209e2e989d19bfa5f50fa90b125238e331dc51ead68345",
+      "producer": "research/exploratory/xi_current_radial_semigroup.py",
+      "producer_sha256_lf": "62324f0b3146da13b5bda35f7fbe7360b660be5764128d5988ad91b3f8f3359f",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_xi_fixed_lambda_heldout_alignment.py",
+      "test_sha256_lf": "8ece2393f6039ae3ea42b137cd079ef727a0db932de440f9a641020c9a0b0392",
+      "producer": "research/exploratory/xi_fixed_lambda_heldout_alignment.py",
+      "producer_sha256_lf": "1ad06f941f1c24f4732ef4db772c915f8bdf080abbdf2b8754816ea70fff01f0",
+      "runtime": "flint"
+    },
+    {
+      "test": "tests/test_xi_fixed_lambda_joint_box_compression.py",
+      "test_sha256_lf": "deb2696c5c160e0da970c31f35e5ed472baabc4fb1d3db831b4e48371935ae80",
+      "producer": "research/exploratory/xi_fixed_lambda_joint_box_compression.py",
+      "producer_sha256_lf": "aab4939203b42933ca9ca246f7b8c6791391058afe6a785cc320d39fea9e4b73",
+      "runtime": "flint"
+    },
+    {
+      "test": "tests/test_xi_fixed_lambda_shrinking_physical_bands.py",
+      "producer": "research/exploratory/xi_fixed_lambda_shrinking_physical_bands.py",
+      "runtime": "flint",
+      "test_sha256_lf": "57f85beade4d9946165b725f443bb99b2bc114381043bd5939e22682121dd893",
+      "producer_sha256_lf": "c3b51950ff6c62295bd08a8393d0a3ccc2cee38b33d739142ef882d776f7b35b"
+    },
+    {
+      "test": "tests/test_xi_global_odd_order_saddle.py",
+      "test_sha256_lf": "4e8be1241a3902faa032f791ef7abe897986787d30c6beeb27bbf3255b61d1ba",
+      "producer": "research/exploratory/xi_global_odd_order_saddle.py",
+      "producer_sha256_lf": "2328de4b82b279a7eb60db2d4cbb7a8e2c62526e54f014dab5a571541d62a5a7",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_xi_high_derivative_saddle_closure.py",
+      "test_sha256_lf": "428298b01cf94a3fd679f1ec42afb0946b2c327ba6c344a4a58045f6353ea303",
+      "producer": "research/exploratory/xi_high_derivative_saddle_closure.py",
+      "producer_sha256_lf": "b7688b8416264524f3cd63420de90e72929ac7da071b8e3335816fd757fc50d3",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_xi_joint_polynomial_panel_transport.py",
+      "producer": "research/exploratory/xi_joint_polynomial_panel_transport.py",
+      "runtime": "flint",
+      "test_sha256_lf": "26f3fdb93a140e1b7854449d60c20e7da375e1b5568174c058dae1284889b3bc",
+      "producer_sha256_lf": "5dc54caa0943073e8fe98740561bee45bc5a0a095b3e5c24e481b28c36a38882"
+    },
+    {
+      "test": "tests/test_xi_joint_polynomial_point_transport.py",
+      "producer": "research/exploratory/xi_joint_polynomial_point_transport.py",
+      "runtime": "flint",
+      "test_sha256_lf": "e5799df7b3770e7fa1996c5e925537408b4ca5409fe90e61128ef131087e5979",
+      "producer_sha256_lf": "b09a81ec048ff42fbd4334692741204992ce59d2add020b99935eb2534cd4167"
+    },
+    {
+      "test": "tests/test_xi_laplace_low_pass_lower_bound.py",
+      "test_sha256_lf": "6e03d1a7e1285d30602bb2057144dacff820567bdbbca8d72548415c4fd46b35",
+      "producer": "research/exploratory/xi_laplace_low_pass_lower_bound.py",
+      "producer_sha256_lf": "cc5fa52704fb26742ded7c2605ee561f676166c7be1974090bbe8161d2b3a009",
+      "runtime": "flint"
+    },
+    {
+      "test": "tests/test_xi_near_adapted_scale_firewall.py",
+      "test_sha256_lf": "3cc5dc33488b65258f5adfab9e7e4d545521f31f27bb340ee90d2007d96aa762",
+      "producer": "research/exploratory/xi_near_adapted_scale_firewall.py",
+      "producer_sha256_lf": "78ae968c56ee2d8e307089dcff2133b9b9716418eb1ee8618215a4983cbc2bae",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_xi_occupancy_carleson_capture.py",
+      "test_sha256_lf": "a0305d2e0a3dc30084f7741070e6ed2d36ffc77f1506fe29ad8e6114f62bc05f",
+      "producer": "research/exploratory/xi_occupancy_carleson_capture.py",
+      "producer_sha256_lf": "684db7009b4520f5ee70ada4e88ea3a583db1606c74880ac8f09ca79487bdec1",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_xi_odd_current_scaling.py",
+      "test_sha256_lf": "98ae7beab3a0d970b5760076783dcbf30e71d025503f1db96451e62219cb96e9",
+      "producer": "research/exploratory/xi_odd_current_scaling.py",
+      "producer_sha256_lf": "3ec353766ba53206af647adc84eec139503d7404a5113057fd00de985b62bd95",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_xi_positive_kernel_descent_firewall.py",
+      "test_sha256_lf": "bdfa0c31f30f2d1edee14e360617f6c2212e42a3405ebeb3b0e67f54c280f29a",
+      "producer": "research/exploratory/xi_positive_kernel_descent_firewall.py",
+      "producer_sha256_lf": "aa66faa77bc3c9d213bbfaf0aa5f8ad379c91734099efdefd48a3105c9b346d5",
+      "runtime": "system"
+    },
+    {
+      "test": "tests/test_xi_quadratic_critical_transport.py",
+      "producer": "research/exploratory/xi_quadratic_critical_transport.py",
+      "runtime": "flint",
+      "test_sha256_lf": "d5493e8c31d53d66fdb00f35dfa1198b173513e23b2bfd3bdcb2d39d80423749",
+      "producer_sha256_lf": "28033a330ade30e0079f6e24cd0f4b07e9de9ba70438f92c88fe5c0f7fe8c373"
+    },
+    {
+      "test": "tests/test_xi_quadratic_joint_remainder_transport.py",
+      "producer": "research/exploratory/xi_quadratic_joint_remainder_transport.py",
+      "runtime": "system",
+      "test_sha256_lf": "3ae5668156c4ec279ee28cceded51eb2751e9c3ca11d4821c9d2ffed3ac076f6",
+      "producer_sha256_lf": "dac9341fcd12d58a083dcf0fa38eab14e0fd96191886d85dc747b9b94602eb16"
+    },
+    {
+      "test": "tests/test_xi_uniform_companion_count_width.py",
+      "test_sha256_lf": "e131f5666a554d20e2ebde46ea07eeac6e7b45bf240da5f6dc2623bf14fcf5f8",
+      "producer": "research/exploratory/xi_uniform_companion_count_width.py",
+      "producer_sha256_lf": "4e21aab7efefb870cdb297f47e2fd86123d97c6fcd3b8ea6795fbe32ead597d2",
+      "runtime": "system"
+    }
+  ]
+}
