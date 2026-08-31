@@ -1,0 +1,84 @@
+{
+  "schema": "segre-chow-chain-sources-v1",
+  "parents": [
+    {
+      "commit": "552fe0b78fd96b02fe5836269e6795a992c935be",
+      "path": "standalone/2026-08-31-segre-chow-equivariant-synthesis/THEOREM_I.md",
+      "git_blob": "749cc53453e4842ca010c4028d2a9b35024e3208",
+      "sha256_lf": "de9ca912fe206717db50ac6b27f2a56b686b33008099d78e3cf82d60c2004c59",
+      "current_copy_required": false
+    },
+    {
+      "commit": "552fe0b78fd96b02fe5836269e6795a992c935be",
+      "path": "standalone/2026-08-31-segre-chow-equivariant-synthesis/THEOREM_II.md",
+      "git_blob": "ee2f721f855e6024efd48495562ed5b9a7d4e58c",
+      "sha256_lf": "c39ef11fcbe4a583ec77a04467c82150f34cb6972c414a609334cfa4e898c740",
+      "current_copy_required": false
+    },
+    {
+      "commit": "f36576faf7853a56bd1f64edd29c4df662cae849",
+      "path": "research/l-families/atlas/generalized/segre-hadamard-source/MATHEMATICS.md",
+      "git_blob": "bbd847461b4955a93b4533fa687cdd8724e2347c",
+      "sha256_lf": "de7d8d8507a47fdd35d04bfdeee430a64e81c054ad8a8c61cb303d70a0d17e6a",
+      "current_copy_required": false
+    },
+    {
+      "commit": "f36576faf7853a56bd1f64edd29c4df662cae849",
+      "path": "research/l-families/atlas/generalized/segre-hadamard-source/TERNARY_CUBE_TOR_CHARACTERS.md",
+      "git_blob": "f8edf2aac25e96434f77e1fc1681b8f22c609071",
+      "sha256_lf": "32ef7f6db2ff7ef022f0881e44de965246637bdf586f64b8c4736586855d957e",
+      "current_copy_required": false
+    },
+    {
+      "commit": "f36576faf7853a56bd1f64edd29c4df662cae849",
+      "path": "research/l-families/atlas/generalized/segre-hadamard-source/COMPLETED_TERNARY_CUBE_RESOLUTION.md",
+      "git_blob": "7301d9cbc50bde470fb3551a6262cf62378b523c",
+      "sha256_lf": "22e4af08206b61c1baa2182f99164ba8696165a255187ff81666b559706fd2b7",
+      "current_copy_required": false
+    },
+    {
+      "commit": "4a317ea5c9d7aa016fba58a1d74746e437329ec7",
+      "path": "research/l-families/atlas/generalized/SEGRE_RECURRENCE_SYZYGY_BRIDGE.md",
+      "git_blob": "acc3a0382f3ad919037b156749b4a07a971b429a",
+      "sha256_lf": "7dd4af9c9f14c73413d7a233cf64d7b608d94b60af334d08e1a0e0561a5f94a2",
+      "current_copy_required": true
+    },
+    {
+      "commit": "acd91a621244872d49e0e4dfde76775879eadfc1",
+      "path": "research/l-families/atlas/generalized/SEGRE_RECURRENCE_SYZYGY_BRIDGE_AUDIT_4A317EA5.md",
+      "git_blob": "9917525809b5c22627d216e8180a4ea29ae32b0c",
+      "sha256_lf": "b5abd8d8c788563a241242e4b83d70640643c1b1898df5eb0b358b5e79191ae7",
+      "current_copy_required": true
+    },
+    {
+      "commit": "28c6d95ccf6842ec415c440c77a8036a187f176c",
+      "path": "research/l-families/atlas/generalized/SEGRE_CHOW_CHAIN_COMPARISON.md",
+      "git_blob": "f07e6567f65aec5fa2a6db45cda667e6a4023d64",
+      "sha256_lf": "ea80284648d9f63743f0146aeeb6d4b0cc5335ee12c08ff02ffc8ae0b540aeb9",
+      "current_copy_required": false
+    },
+    {
+      "commit": "6416a3c301c22fb674ef12947568da0ad341f801",
+      "path": "research/l-families/atlas/generalized/SEGRE_CHOW_CHAIN_COMPARISON.md",
+      "git_blob": "a4234ed7bd3696867b092c83655d6c8be3e41c8c",
+      "sha256_lf": "98415cdc702dbeba64559b18df91d9583613b5dea0000cc421e7a6801d3bc3c2",
+      "current_copy_required": false
+    },
+    {
+      "commit": "e3a9b2c56029fa41e4cbceb1fbf64de4e20c75b4",
+      "path": "research/l-families/atlas/generalized/SEGRE_CHOW_CHAIN_COMPARISON.md",
+      "git_blob": "6a9bd38ae748762d616efaecf7c5fe4d7596b640",
+      "sha256_lf": "50ec7cf8cacc7728f28a2a9a717734381f63967fdfb7514b752a7e305a3bf7a0",
+      "current_copy_required": false
+    }
+  ],
+  "prior_art": [
+    {
+      "authors": "Raicu--Sam--Weyman",
+      "title": "On some modules supported in the Chow variety",
+      "url": "https://arxiv.org/html/2108.10910",
+      "locator": "Proposition 2.7; equations (3.2)--(3.5); Example 4.5",
+      "role": "classical Chow module and duality, not computed transgression"
+    }
+  ]
+}
