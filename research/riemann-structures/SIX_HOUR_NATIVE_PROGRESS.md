@@ -1,4 +1,66 @@
-# Six-hour native pass: sixth checkpoint
+# Six-hour native-source pass: seventh checkpoint
+
+The pass remains active until at least 17:41:25+03 on 31 August 2026.
+The completed final-packet count remains 321 focused tests per
+interpreter mode. Partially executed acceptance suites below are excluded.
+
+The source now has a complete all-arity permutation-character law.
+An exact one-form quotient gives every Specht multiplicity, a sharp
+four-row support bound, and explicit arity-four and arity-five
+decompositions of dimensions 93 and 374. The ordinary sign representation
+is absent at arity five and above. The source sequence is frozen at
+cb9278bec3844cc3fd8072987a6890f1df32a368; the complete multiplicity law
+is at cbf347d79971535dc37df2874e884482b44bbee3. These are applications
+of explicitly credited classical representation theory to the native
+source, not arithmetic or physical symmetry claims.
+
+Two exact obstructions separate these structures. At H25 every one of
+the three S3 central projectors fails to preserve the physical
+observation kernel. Independently, the Reynolds average of sequential
+activation paths is not the current of any single monotone path, for
+every arity at least two. Its pair moments (1/2,1/4,1/2) violate the
+compatibility inequality C-A^2 <= 2B-A by 1/4. The exact distance to
+the attainable pair-moment set in maximum norm is (sqrt(10)-3)/2.
+This obstruction is frozen at 5e312c7dc81926e637d2d7343f90eba4708587c0
+and is visible in the original H25 observation, with all aliases retained.
+
+Further exact geometry is frozen at
+8522f5a8854c29c755314bf4d86b2bc42464da71. A common threshold law
+parametrizes the entire completed pair-source body; averaging profiles
+and averaging their currents differ by an explicit variance term.
+The smallest C at every feasible fixed pair (A,B) has a closed formula
+with affine, singly clipped and doubly clipped regimes, exact transition
+curves and unique minimizing profiles. This minimizes an occupation
+moment, not the original physical energy. The H450 optimal-path geometry
+at 83ca3f77516380eaa29fa0f3a76f25ce9ebcc568 also proves sharp
+one-third-power control of the complete path image by its energy excess.
+
+The H450 and earlier fixed-minor final acceptance packets are frozen at
+35ebdcdf060489be7a53e81246094043ec4aa9c0. The H450 acquisition and
+final write passed, with all 16 registered starts giving the same
+certified full-source global minimum near 178.6045826115. Its normal
+and optimized checks and final fourteen controls per mode remain
+pending here. The earlier H900/2^20 tail packet passed write, check,
+optimized check and fourteen ordinary controls; its optimized controls
+remain pending. Both of its mathematical outcomes remain UNKNOWN
+because their verified tail bounds are not contractive.
+
+A new data-informed tail extension is frozen at
+63e1742ec319c532baa36f6568809f6a6b32e6e2. Its calibration freshly
+reproduced every old 2^20 source contribution and the entire exact
+matrix/tail result, with proof object
+e89eb7bb31d87bfc7fcd20b9d8343829f498bd1188d785b42c1308f926de3c70.
+The registered larger target is 2^48; no result or all-future threshold
+from that target is claimed at this checkpoint. Its optimized calibration
+and eighteen controls also remain pending.
+
+RAM gates and reserves remain unchanged; only root-owned scientific
+workers run, one at a time. Unfinished runs and newly designed event-rank
+experiments do not enlarge the validated intervals. No all-prime
+completion, full retained-gamma decoder, principal-member bound or
+RH/GRH conclusion is asserted.
+
+## Sixth checkpoint history
 
 The six-hour pass remains active. Completed focused final-packet tests
 now total321 in ordinary Python and the same321 under -O: the previous
