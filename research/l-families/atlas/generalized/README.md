@@ -8,7 +8,12 @@ For the latest six-hour pass and its thirty-seven scientific replay modules,
 start with [SIXHOUR_PASS3_RESULTS.md](SIXHOUR_PASS3_RESULTS.md). It includes the
 exact Segre bridge, higher-rank purity chambers, all-fixed-depth flag ladder,
 fixed-weight complex-subspace divisors, source-first theta completion and its
-positive-source zero firewall. The thirty-seven-module panel passes 962 tests
+positive-source zero firewall. Four separately reviewed analytic notes
+also expose off-central zeros of a native restriction and prove a real
+off-central pair in each proper coefficient-source quotient for EVERY
+j>=1 and even k>=96j. They do not add computational modules, establish
+simplicity, settle weight24 or transfer the period-side12j/k location law.
+The thirty-seven-module panel passes 962 tests
 and all producer checks in both normal and optimized Python.
 
 The earlier twenty-seven-packet result and historical open gates are preserved

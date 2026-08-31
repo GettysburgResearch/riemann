@@ -57,6 +57,51 @@ identity or a signed Taylor/Cauchy bound can potentially control
 e-i*lambda*e'. That companion error starts at order w^3, unlike the
 quadratic comparison's order-w^2 error. This is a concrete theorem target.
 
+The exact Green-kernel formulation makes the missing bound explicit. Put
+
+    K(v)=exp(-alpha*v) sin(beta*v)/beta,
+    Q(v)=K(v)-i*lambda*K'(v),
+    P(v)=integral_0^v (v-u) Q(u) du.
+
+Then P(0)=P'(0)=0 and P''=Q. Using the two exact vanishing conditions
+on D gives
+
+    e(w)-i*lambda*e'(w)
+      = w integral_0^1 P((1-tau)*w) D''(tau*w) dtau.
+
+An actual bound M for |D''| on the FULL radial hull of the contour gives
+the error bound M*|w|*integral_0^1 |P(tau*w)| dtau. Integrating the signed
+kernel before taking its modulus can retain cancellation. No certified
+complex-domain M for this new criterion is supplied in this agenda.
+The actual unknown critical point and its fitted parameter intervals must
+remain linked; midpoint substitutions cannot pay the exact cancellations.
+
+The model side also has an explicit contour margin. If F=m-i*lambda*m'
+and w0 is a model zero, then
+
+    F(w0+eta)=F'(w0)*exp(-alpha*eta)*sin(beta*eta)/beta.
+
+For 0<r<min(Im(w0),pi/beta), the circle |eta|=r has model modulus at
+least |F'(w0)|*exp(-alpha*r)*sin(beta*r)/beta. A future native certificate
+can compare the full complex residual bound against this positive margin.
+Parent-root containment and nonvanishing guards still need separate proof;
+neither the explicit model zero nor its margin is an actual-Xi certificate.
+
+There is also a source-defined envelope to separate from fitted damping.
+On the real line, Xi(t)=-A(t)Z(t), where
+
+    A(t)=(t^2+1/4)*pi^(-1/4)*|Gamma(1/4+i*t/2)|/2,
+    A'(t)/A(t)=-pi/4+7/(4t)+O(t^-3).
+
+These are classical consequences of the
+[Xi normalization](https://dlmf.nist.gov/25.4),
+[Hardy Z definition](https://dlmf.nist.gov/25.10) and
+[Gamma expansion](https://dlmf.nist.gov/5.11), not a new discovery.
+They do NOT imply that the fitted alpha of g=f5 converges to pi/4.
+Removing A also changes derivative companions unless every chain-rule
+term is retained. Complex-domain use also requires a legitimate holomorphic
+envelope extension. A classical envelope must not replace the native source.
+
 A disciplined next test would freeze all26 points, a single contour rule,
 precision and truncation BEFORE evaluating this new criterion; retain
 every failure and compare against the existing eight successes. A theorem
@@ -104,15 +149,24 @@ The new source-first quotient has a genuine minimum-energy universal
 property, exact nested quotients and tensor compatibility in its stated
 regularity class. Those facts do not select critical-line zeros.
 
-Both the synthetic positive-source transition and the actual modular
-restriction to span(Delta^2) show that positive reciprocal source structure
-plus a completed reflection is insufficient. The native restriction is
-NOT the proper pointwise source quotient of the full weight24 space.
-The zero geometry of that proper quotient remains an honest open target.
+The synthetic positive-source transition and actual modular restriction
+to span(Delta^2) show that positive reciprocal source structure plus a
+completed reflection is insufficient. The native restriction is NOT the
+proper pointwise source quotient of the full weight24 space.
 
-A next source-exact computational laboratory should therefore study that
-proper quotient directly, retaining the vacuum, actual theta density and
-completion. It should separately test Hecke compatibility and the
+The late proper-source proofs now establish a uniform effective theorem:
+for EVERY j>=1 and EVERY even k>=96j, the genuine proper theta quotient
+at that depth has a reflected real off-central zero pair. The common cusp
+lower bound survives the whole varying quotient minimum, and the complete
+growing Poincare Gram block pays all earlier coefficient constraints.
+Different depths define different objects. No simplicity, optimal onset
+or12j/k location law is established for this source construction. Its
+fixed-weight24 zero geometry remains open.
+
+A next source-exact computational laboratory should therefore study the
+proper quotient at fixed weight24 and seek finer large-weight locations
+or sharper effective thresholds, retaining the vacuum, actual theta density
+and completion. It should separately test Hecke compatibility and the
 noncommutation of source restriction, source quotient and Mellin observation.
 Do not infer a scalar Euler product or a purity principle from positivity.
 

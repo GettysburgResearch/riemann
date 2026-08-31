@@ -5,9 +5,10 @@ during the six-hour pass. The
 published twenty-seven-packet baseline remains documented in
 [CONTINUATION_RESULTS.md](CONTINUATION_RESULTS.md).
 The positive-source real-zero counterexample has also passed independent
-fixed-SHA review. The native-source corollary in Section 5 is a deduction
-from the reviewed fixed-weight and matrix-period theorems, not a new
-numerical search.
+fixed-SHA review. Four separately reviewed native-source analytic notes in
+Section 5 culminate in a uniform effective theorem: every depth j>=1 and
+every even weight k>=96j gives a real off-central pair in its proper quotient.
+These analytic proofs are not numerical searches or extra test modules.
 
 ## 1. The Segre bridge is real, but its proposed determinant was too strong
 
@@ -101,8 +102,9 @@ The completed observation is
     L_Q(s) = G_Q/[2s(s-1)]
              + integral_1^infinity [t^(s-1)+t^-s] C_Q(t) dt.
 
-It has reflection s->1-s, a positive Mellin feature kernel, and only the
-two specified entrywise endpoint poles. At the unquotiented source it
+It has reflection s->1-s, a positive Mellin feature kernel, and entrywise
+meromorphic continuation with possible poles only at0 and1; the matrix
+residues are respectively -G_Q/2 and G_Q/2. At the unquotiented source it
 recovers the completed period matrix. It is generally NOT the Schur
 quotient of that matrix after integration.
 
@@ -155,9 +157,42 @@ period determinant. See the short
 Here Delta^2 is NOT a Hecke eigenform. Restricting to its one-dimensional
 source before completion is NOT taking the new proper source quotient
 of the original two-dimensional space. Thus the zero placement of that
-proper quotient remains unproved. Even so, actual modular origin,
+proper weight-24 quotient remains unproved. Even so, actual modular origin,
 positivity, reflection, smoothness and the positive Mellin feature kernel
 together do not force critical-line zeros.
+
+A late, separately reviewed deduction now goes further: the
+[proper theta-source quotient](PROPER_THETA_SOURCE_REAL_ZERO_COROLLARY.md)
+itself has a reflected real off-central zero pair at EVERY FIXED coefficient
+depth j and all sufficiently large even weights. This is not merely a
+one-dimensional restriction. The actual source satisfies the bound
+
+    H_Q(t) >= J_(k,j)/sqrt(t),
+    J_(k,j) = integral_1^infinity y^(k-3/2) exp(-4*pi*j*y) dy.
+
+It holds for every admissible lift before taking the quotient minimum.
+The native cusp norm gives R=J_(k,j)/G_Q ~ sqrt(k/(4*pi*j)), and the
+literal completed integral gives L(1/2)/G_Q >= 2R(log R-1) for R>1.
+Eventually the central value is positive, while the endpoint residue makes
+L(s) negative near1 from the left; reflection supplies the other zero.
+No minimum is exchanged with integration. That first argument is fixed-depth
+and asymptotic. Two separately reviewed extensions make the onset effective
+and then pay a growing coefficient block:
+
+- [First depth, every even k>=96](PROPER_THETA_SOURCE_EFFECTIVE_WEIGHT96.md)
+  uses the exact Poincare-series norm identity, complete Bessel/Kloosterman
+  bounds and exact integer inequalities, not sampled central values.
+- [Every j>=1, every even k>=96j](PROPER_THETA_SOURCE_UNIFORM_DEPTH_ZEROS.md)
+  controls the FULL normalized j-by-j Poincare Gram matrix K. All earlier
+  coefficient constraints are retained: G_Q=A_j*(K^-1)_(j,j), not a diagonal
+  shortcut. The growing exponential factor is paid uniformly, giving
+  ||K-I||<1/1000 and J/G_Q>2.736261>e throughout the stated region.
+
+Thus there is an explicit proper-source off-central pair for every allowed
+(k,j). Different depths are DIFFERENT quotient objects; this is not a
+many-pair census in the first quotient. There is no fixed-weight24 conclusion,
+simplicity, uniqueness, optimal threshold or12j/k location law for this new
+source quotient. The period-side ladder in Section 2 is a different theorem.
 
 The most worthwhile next selection question is therefore: which additional
 arithmetic compatibility distinguishes the actual theta-derived objects
@@ -201,6 +236,26 @@ and matrix-period parents, not an eleventh computational packet. Its
 at `53244685e46e1fd27a88a983c6ad359e0b89c20d` binds the exact corollary
 content by normalized-LF SHA256. Historical review/repaired-source
 distinctions are retained in the original notes.
+
+The late proper-source corollary has scientific identity
+`0d1f90323c8d61abefee077b7bcaa4c024596a55` and a separate
+[non-author review](PROPER_THETA_SOURCE_REAL_ZERO_COROLLARY_REVIEW.md) at
+`31e5ca265cc3be43cff30962041d93a2be4d8ee2`. It imports the actual theta
+source and fixed-depth native cusp norm, not the period-side divisor law.
+Its exact proof bytes are sealed in that review.
+
+The effective first-depth extension has science
+`6e47a4b2604668eb88b977c9182f5a04a214638a` and
+[independent review](PROPER_THETA_SOURCE_EFFECTIVE_WEIGHT96_REVIEW.md)
+`43c36f4c462bb008d7fb744ca52768d2591b1822`.
+The uniform growing-depth theorem has science
+`a7f9fae13c99d7542c764b777ca0d072f9a5c2c1` and
+[independent review](PROPER_THETA_SOURCE_UNIFORM_DEPTH_ZEROS_REVIEW.md)
+`9e2ff8e80dbeb5f0acb7615658f72227c0914b3d`. Its review checks the full
+off-diagonal Petersson formula and inner-product convention against the
+primary paper, along with the all-depth norm, dimension and tail estimates.
+None of these four analytic notes adds a computational module or is
+machine-proved by the 37-module replay below.
 
 ## Replay and source boundary
 
