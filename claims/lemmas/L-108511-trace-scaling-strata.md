@@ -28,7 +28,12 @@ throughout; `f` = the weight-2 newform 11a1).
 `(1 + y)^{-1} = (1 - y)/(1 - y^2) = (1 - p^{1-2s}) (1 - p^{2-4s})^{-1}`.
 Multiply over good `p`. ∎
 
-## Lemma 2 (t = -1). `Z_{-1}(s) = L^{(11)}(Sym^2 f, 2s) / ( zeta^{(11)}(2s-1) L(f, s) )`.
+## Lemma 2 (t = -1). `Z_{-1}(s) = L^{(11)}(Sym^2 f, 2s) / ( zeta^{(11)}(2s-1) L^{(11)}(f, s) )`.
+
+(`L^{(11)}(f, s) = L(f, s)(1 - 11^{-s})`, the good-prime product —
+superscript corrected 2026-08-31 by the continuation verification
+wave; the local proof below and the machine certificates always used
+good primes only.)
 
 *Proof.* Locally, with Satake `alpha beta = p`, `alpha + beta = a_p`:
 

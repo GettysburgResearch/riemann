@@ -181,6 +181,13 @@ Tor_4 = det^9                               (j = 6;  dimension 1)
 (`det^k Sym^j` denotes the character `b^k h_j`; total Betti numbers
 `(1, 9, 16, 9, 1)`, consistent with the known resolution of the
 2x2x2 Segre — CITATION-NEEDED for the precise classical reference.)
+COMPLETENESS of the table beyond the machine window (j <= 8): `R_3`
+is a normal semigroup ring (Theorem 3, Lemma A), hence Cohen-Macaulay
+(Hochster, IMPORTED), so by Auslander-Buchsbaum
+`pd_S R_3 = 9 - 5 = 4` — no `Tor_i` for `i > 4` — and Gorenstein
+duality with `omega = b^3 R_3(-2)` (Lemma B + Danilov-Stanley) pairs
+internal degrees j and 6 - j, bounding every internal degree by 6;
+the window j <= 8 therefore contains the whole table.
 Consequences, each verified coefficientwise by hand AND by machine:
 
 1. **K-polynomial assembly.**

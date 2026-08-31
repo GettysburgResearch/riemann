@@ -95,22 +95,24 @@ At a good prime, the local roots have equal moduli ("purity") iff
 - **Inside** `{u >= t^2} union {t = 0}`: purity at EVERY good prime,
   unconditionally (Hasse: `t^2 a_p^2 <= 4 t^2 p <= 4 u p`; on the
   axis the roots are `+-` pairs).
-- **Outside** (`0 < u < t^2` after parity): impurity occurs.
+- **Outside** (`{u < t^2, t != 0}`, which includes all `u <= 0` with
+  `t != 0`): impurity occurs.
   UNCONDITIONAL witnesses suffice for the rigidity theorem below:
   `p = 2` (`a_2 = -2`, `a_2^2/2 = 2`) is impure whenever
   `4 u / t^2 < 2`, e.g. for every `|t| >= 2` on `u = 1` and for every
-  `t != 0` at `u <= 0`. The DENSITY of impure primes outside the
-  wedge is the deformed Sato-Tate mass of `{|cos theta| >
-  sqrt(u)/|t|}` (ST IMPORTED, as in L-108511; closed form elementary
-  calculus).
+  `t != 0` at `u <= 0`. For `0 < u < t^2` the DENSITY of impure
+  primes is the deformed Sato-Tate mass of
+  `{|cos theta| > sqrt(u)/|t|}` (ST IMPORTED, as in L-108511; closed
+  form elementary calculus); for `u <= 0, t != 0` every prime with
+  `a_p != 0` is impure.
 - Machine (exact, all 9591 good primes `p <= 1e5`, 54-cell grid):
   every inside cell has ZERO impure primes; every strictly-outside
   cell has thousands (1354-9550), first witness `p = 2` or `p = 61`:
   True in all cells.
 
-Weight normalization: the root-modulus product is `u p`, so purity of
-MOTIVIC WEIGHT 1 (moduli exactly `sqrt p`) additionally forces
-`|u| = 1`.
+Weight normalization: the product of the ROOT MODULI is `|u| p`, so
+purity of MOTIVIC WEIGHT 1 (moduli exactly `sqrt p`) additionally
+forces `|u| = 1`.
 
 ## Lemma 4 (integrality locus = Z^2 exactly)
 
@@ -129,15 +131,21 @@ The points of the ENTIRE plane that are simultaneously
 (i) integral and (ii) weight-1 pure at every good prime are EXACTLY
 
 ```text
-(1, 1)  = L(f, s)                                    [S1; modularity
+(1, 1)  = L^{(11)}(f, s) = L(f, s) (1 - 11^{-s})     [S1; modularity
                                                       IMPORTED]
-(-1, 1) = sum lambda(n) a_n n^{-s}
-        = L^{(11)}(Sym^2 f, 2s)/(zeta^{(11)}(2s-1) L(f,s))  [S2;
-                                                      L-108511]
+(-1, 1) = sum' lambda(n) a_n n^{-s}
+        = L^{(11)}(Sym^2 f, 2s)/(zeta^{(11)}(2s-1) L^{(11)}(f,s))
+                                                     [S2; L-108511]
 (0, 1)  = zeta^{(11)}(4s-2)/zeta^{(11)}(2s-1)        [S2; L-108511]
 (0, -1) = zeta^{(11)}(2s-1)                          [S2-classical;
                                                       Lemma 2]
 ```
+
+(All four rows are good-prime (p != 11) Euler products, matching the
+definition of `Z_{t,u}`; since `a_11 = 1 != 0`, restoring the bad
+factor changes `(1,1)` by exactly `(1 - 11^{-s})` — verification-wave
+correction of an inherited bare-`L(f,s)` display, also fixed in
+L-108511.)
 
 *Proof.* Integrality forces `(t, u) in Z^2` (Lemma 4); weight-1
 purity forces `|u| = 1` (Lemma 3). On `u = 1`: purity at `p = 2`

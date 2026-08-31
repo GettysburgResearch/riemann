@@ -93,7 +93,6 @@ def main():
         for i in range(0, min(j, 8)+1):
             # component spaces per weight
             weights = set()
-            dom_all = koszul_component(i, j, None) if False else None
             # collect weights present
             for S in combinations(range(8), i):
                 wS = sum(wt_W(WB[k]) for k in S)
