@@ -49,6 +49,18 @@ form is known (Kar, RHUMJ 23 (2023)); the alternant is a closed
 numerator for Hadamard powers of degree-d rational series — claimed
 new in context, technique elementary/classical.
 
+## Multilinear extension (Theorem C, same-day addendum)
+
+The alternant works verbatim for DISTINCT objects: closed-form
+defect numerators `N_{ABC}` for naive triple products
+`sum a_n b_n c_n n^{-s}` against the automorphic triple-product
+denominator, with the degree law
+`deg N_{ABC} = dA dB dC - max(dA, dB, dC)` (the naive `n - dA` guess
+was REFUTED by the machine at shape (2,2,3); the corrected law's
+mechanism is Lemma 1 at negative index). The pair case re-derives
+classical Rankin-Selberg exactness (`N_{AB} = 1 - det A det B T^2`
+at rank 2 x 2) in one line. Machine: multilinear_defect.py, ALL OK.
+
 ## Stable layer theorems (same-day addendum)
 
 Via a restriction-stability lemma (each T^j-correction is a

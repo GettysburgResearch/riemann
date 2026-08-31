@@ -136,6 +136,57 @@ five (m, d) pairs (A3). For d = 2 this re-expresses the T-108509
 deformation-spectrum objects; the two-parameter (t, u)-plane of
 L-108516 acts on it by the weighted scaling of every `x`-monomial.
 
+## Theorem C (multilinear: defects of Hadamard products of DISTINCT objects)
+
+Lemma 2's proof never used that the alphabets coincide. For local
+objects `A, B, C` of ranks `dA, dB, dC` with inverse roots
+`x, y, z`:
+
+```text
+sum_r h_r(x) h_r(y) h_r(z) T^r
+  = sum_{j <= dB, k <= dC} y_j^{dB-1} z_k^{dC-1}
+    / [prod_{j' != j}(y_j - y_{j'}) prod_{k' != k}(z_k - z_{k'})]
+    * prod_{i <= dA} (1 - T x_i y_j z_k)^{-1},
+```
+
+and multiplying by `det(1 - A (x) B (x) C T)` gives the closed-form
+defect numerator `N_{ABC}` of the naive triple Dirichlet series
+`sum a_n b_n c_n n^{-s}` against the degree-`dA dB dC` automorphic
+triple-product denominator — with the DEGREE LAW
+
+```text
+deg N_{ABC} = dA dB dC - max(dA, dB, dC).
+```
+
+*Degree proof.* Writing the alternant with the LARGEST alphabet as
+the un-summed one bounds the degree by `n - d_max`; the top
+coefficient of the (j,k)-summand sum factors through
+`sum_j y_j^{dB - 1 - dA} / prod_{j' != j}(y_j - y_{j'})`, which is
+`h_{-dA}(y)` and VANISHES exactly when `1 <= dA <= dB - 1` (Lemma 1
+read at negative index — the bialternant has a repeated column). By
+the A/B/C-symmetry of the series this kills the top coefficient
+whenever the un-summed alphabet is not maximal, and leaves it
+nonzero when it is. ∎ (Honesty: the first machine run REFUTED the
+naive guess `deg = n - dA` at shape (2,2,3) — the corrected law and
+its mechanism came from that failure; recorded in
+multilinear_defect.py.)
+
+Anchors (machine, exact integer points, matrix/multilinear_defect.py,
+ALL OK): the series identity at shapes (2,2,2), (2,2,3), (3,2,2),
+(2,3,3); the N_{ABC}-vs-matrix-route equality (Kronecker triple
+products, integral Faddeev-LeVerrier) at all four shapes with the
+degree law; and the PAIR case reproducing classical Rankin-Selberg
+exactness: for rank 2 x rank 2, `N_{AB} = 1 - det(A) det(B) T^2` —
+degree `dA dB - max = 2`, the sign-twisted determinant, i.e. the
+m = 2 story of T-108500 re-derived from the alternant in one line.
+
+Reading for #764: the survival grammar's multilinear wall is now
+EXPLICIT — for any tuple of local systems the obstruction between
+the naive Hadamard series and the tensor-product L-denominator is a
+closed alternant, at every rank tuple, ready for the same
+specialization studies (torsion loci, degeneration strata,
+boundary-criteria inputs) that the diagonal case received this pass.
+
 ## Addendum (same day): the stable layer theorems
 
 T-108508's correction layers become theorems for ALL d via a

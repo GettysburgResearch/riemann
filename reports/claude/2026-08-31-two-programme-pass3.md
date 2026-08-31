@@ -242,7 +242,14 @@ corr_3 = 2 sum_{i>=4}(-1)^i e_i h_{6-i} (T-108508's guess),
 corr_4 = 2 sum_{i>=5}(-1)^i e_i h_{8-i} (new), and the
 eleven-monomial corr_5 — where the linear law TERMINATES (first
 layer empty at j = 5; purely second-stratum, collapsing at d = 5 to
-T-108508's quadratic coefficient). Ground truth added: the exact equivariant Betti table of
+T-108508's quadratic coefficient). MULTILINEAR EXTENSION (Theorem
+C): closed-form defect numerators for naive TRIPLE products
+sum a_n b_n c_n n^{-s} against the automorphic triple-product
+denominator, at every rank tuple, with the degree law deg N_{ABC} =
+dA dB dC - max(d) — the naive n - dA guess was refuted by the
+machine at shape (2,2,3) and the corrected law's mechanism (the
+bialternant at negative index) came from that failure; the pair case
+re-derives Rankin-Selberg exactness in one line. Ground truth added: the exact equivariant Betti table of
 P^2 x P^2 ((1,9,16,9,1) at twists 0,2,3,4,6, per-weight characters;
 matrix/segre_d3m2_betti.py). Replays: matrix/alternant_defect.py
 (sympy+exact) and X-108522 (stdlib), all green.
