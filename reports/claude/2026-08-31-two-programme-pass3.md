@@ -7,9 +7,10 @@ Branch/PR: claude/riemann-repo-review-m7dk1x / PR #781
 Design: computation-first (campaigns C1-C8 producing machine-readable
         atlases for others to mine), with the standing conversion rule:
         any pattern surviving a held-out test gets a same-pass proof
-        attempt. Two conversions succeeded (T-108509, T-108510), one
-        prediction was confirmed held-out (O-108512), one conjecture of
-        this pass was refuted by its own test and corrected before
+        attempt. Three conversions succeeded (T-108509, T-108510, and —
+        continuation leg — T-108513, proving the forward half of
+        O-108512's repeatedly-held-out entry law), and one conjecture
+        of this pass was refuted by its own test and corrected before
         commit (the Hadamard min-law; see T-108510).
 RH status: RH and GRH are unproved; nothing in this pass addresses
         them. Every artifact carries rh_established: false.
@@ -23,7 +24,8 @@ RH status: RH and GRH are unproved; nothing in this pass addresses
 | T-108510 | THEOREM | Codimension law: defect numerator degree deficit = backward vanishing order; all-d top-coefficient sign law; product/shift/section laws |
 | L-108511 | LEMMA | Trace-scaling line crosses the survival trichotomy: Z_0 = zeta(4s-2)/zeta(2s-1), Z_{-1} = L(Sym^2,2s)/(zeta(2s-1)L(f,s)), exact |
 | O-108006 | OBSERVATION | Graph purity telescope: 605-graph certified corpus, negative-end breach law (37/37 through n=14), certified walk bifurcations |
-| O-108512 | OBSERVATION | Torsion resonance: order-N collision loci of the spectrum enter at m = N+1; order-10 confirmed held-out at m=11 |
+| O-108512 | OBSERVATION (half-converted) | Torsion resonance entry law m = 2 ord(alpha^2)+1: ten points, ten exact matches, six held-out |
+| T-108513 | THEOREM | Resonance threshold PROVED (forward): class crowding forces collisions from m = 2R+1, first collision at z = a; m = 2R near-miss and a=0 m=6 gap derived |
 
 Pass-2 claims T-108507 and T-108508 received addenda: the spectrum
 theorem closes T-108507's tower question; the codimension law proves
@@ -97,8 +99,17 @@ run in Q[a]/(C) at b = 1; each cell seconds): ten torsion points
 certified at every earlier m, monotone persistence after entry; six of
 the ten entries were held-out predictions recorded before their runs.
 All torsion factors carry even multiplicity; the {0, +-1}-slice
-collapse lemma (proved) explains the a and (a -+ 1) dominance;
-mechanism for the threshold OPEN.
+collapse lemma (proved) explains the a and (a -+ 1) dominance. The
+threshold mechanism was then FOUND AND PROVED (T-108513, standalone/
+2026-08-31-torsion-resonance-threshold/): class crowding of the Sym^m
+weight monomials mod the torsion order forces repeated defect roots
+from m = 2R on; at m = 2R the triple lands on the boundary class
+(z = 2 — no collision, deriving the universal m = 2R non-entry) and
+at m = 2R+1 on c = +-1, forcing two spectrum points to collide AT THE
+ORIGINAL TRACE z = a ((z-a)^2 | M_{2R+1}, machine-confirmed 10/10);
+the a = 0 m = 6 gap and its m = 8 return are derived by the same
+counting. The CONVERSE (no accidental sub-threshold collision) stays
+empirical — the deposited next problem.
 
 ## Process notes (honesty trail)
 
