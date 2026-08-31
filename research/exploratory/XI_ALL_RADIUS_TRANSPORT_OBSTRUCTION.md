@@ -100,3 +100,65 @@ This theorem is unconditional about the literal local sufficient criterion.
 It does not require raw companion innerness, prove actual innerness/RH,
 or establish cofinal capture, native decoder identity or transport failure
 for other methods.
+
+## 4. Complete post-design outcomes
+
+The design above was frozen at
+`800b5e212f61a4df9a640788d294b0bbbf37862b` before evaluating the new threshold.
+Its analytic algebra was independently checked before that evaluation.
+
+Every one of the26 prescribed full critical intervals returned all nine
+finite actual-Xi coefficients at1024bits. All sign/discriminant guards
+passed; there are no numerical-domain failure rows. The complete results are:
+
+| parent box center | points | sharper all-radius obstruction | coarse obstruction | unresolved |
+|---:|---:|---:|---:|---:|
+| 256 | 8 | 8 | 8 | 0 |
+| 512 | 9 | 9 | 7 | 0 |
+| 1024 | 9 | 1 | 0 | 8 |
+| total | 26 | 18 | 15 | 8 |
+
+The strict improvement over the coarser ceiling is effective at the exact
+zero-based parent indices13,14,22. All18 sharper obstructions pass a second
+Fraction/integersqrt comparison reconstructed from the fresh rational jet
+enclosures. The independent comparison uses256-bit dyadic square-root
+brackets and outward512-bit dyadic final reporting; it does not replace
+the primitive1024-bit Xi calculation or inherit its final inequality flag.
+
+At those18 actual critical points, NO radius in the full admissible interval
+can make QT's specified separate-triangle sufficient criterion hold, for
+ANY legitimate third-derivative supremum bound. This strengthens a failed
+finite radius grid to an analytic all-radius obstruction at these points.
+The eight remaining points are UNRESOLVED, not positive transport results.
+
+The target criterion matters. A joint integral treatment of the two Taylor
+remainders can yield a different, smaller error coefficient. Such a theorem
+is outside this obstruction. Neither other remainder estimates, higher
+Taylor models, alternative source-defined centers, nor the existence of
+the already certified companion roots are ruled out.
+
+## 5. Replay and interpretation
+
+The38 immutable source records close the exact QT/HA/BC/OA proof and
+executable lineage and this design. The full QT fixture, its payload and
+four artifact seals are authenticated. Only unchanged hash-locked HA/BC/OA
+helpers execute; the QT producer, Newton searches, broad-task history and
+19,968 cover cells are not reexecuted or represented as fresh by this packet.
+Acceptance therefore inherits the independent QT theorem review.
+
+Each fresh producer run computes all26 full-interval point jets, both
+thresholds and all second-route comparisons, with no successful-result cache.
+The exact controls cover144 rational geometries and2160 rational test radii,
+including the derivative identity, interior maximizer, strict coarse
+improvement and both sides of a cubic control. These finite checks support
+the algebra; the proof in Section1 supplies the all-radius quantifier.
+
+The25-test module covers full fresh reconstruction, every observed point,
+interval/integer-square-root arithmetic, strict resource/type guards, source
+corruption and independently resealed report mutations. The observed18/15/8
+counts were added as regression controls AFTER the design; they were not
+predictions used to select or alter the panel.
+
+Normal and optimized runs, exact emissions, independent review and final
+source acquisition are required separately. The theorem is about this
+local sufficient criterion, not RH, global zero density or native capture.
