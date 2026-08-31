@@ -398,15 +398,29 @@ A generic positivity-preserving claim for the differential operator is false; th
 
 ## 11. Hausdorff-cell lane
 
-The normalized sequence `C_k(u)` suggests proving stronger inequalities
+The normalized sequence `C_k(u)` suggests proving the shifted Bernstein-cell inequalities
+
+\[
+ \boxed{
+ B_{N,j}(u)
+ =\binom Nj(-1)^{N-j}\Delta^{N-j}C_{j+1}(u)
+ \ge0,
+ \qquad 0\le j\le N.
+ }
+ \tag{11.1}
+\]
+
+Under RH,
 
 \[
  B_{N,j}(u)
- =\binom Nj(-1)^{N-j}\Delta^{N-j}C_j(u)
- \ge0.
+ =\sum_{\gamma>0}m_\gamma
+ \binom Nj
+ \lambda_u(a_\gamma)^{j+1}
+ [1-\lambda_u(a_\gamma)]^{N-j}.
 \]
 
-Under RH these are beta/Bernstein cells of the invariant spectral coordinate `lambda_u(a)`.  They form a partition of the first normalized moment and localize transformed spectral distance.
+These are beta/Bernstein cells of the invariant spectral coordinate `lambda_u(a)`.  They sum to `C_1(u)` and localize transformed spectral distance.
 
 The source-side question is whether the complete prime filters admit an exact beta-cell decomposition with a positive archimedean reserve.  This is the most direct bridge to the existing Hausdorff/Laguerre repository machinery.
 
