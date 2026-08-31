@@ -193,3 +193,39 @@ or proved either signed global target. That distinction should remain
 visible in every front-door summary and PR description. The new
 [four-hour handoff](FOUR_HOUR_NATIVE_HANDOFF.md) records the frozen results,
 bounded replays, concurrent source overlap and exact acquisition paths.
+
+## 5. The final source audit found a concrete local range error
+
+[The full-core range correction](FIXED_CORE_OWNER_RANGE_CORRECTION.md), frozen
+at `94eb10f59be1f0118d165ac23a31b648600d224e`, distinguishes the true parent
+inequalities `P<=2gd,Q<=2gc` from the reduced-core ranges imported in
+L-106124. The latter omit the common factor `g`. The abstract shorter-range
+residue-cell lemma remains correct, while its proposed uniform source
+application with an extra `1/g^2` saving does not extend to the actual
+physical owner ranges. The corrected weighted coefficient bound is
+`Y^o(1)*ell*rho/(cd)`; the frozen dense-source class control shows why the
+missing common-core saving cannot be recovered from local coefficient
+magnitude and geometry alone. The exact Gauss comparison factor is retained.
+
+This qualification also belongs with the retained-local prose in
+L-106123/R-106123 and the blanket retained-results references in
+R-106122/R-106124. It does not invalidate the directly derived principal
+diagonal, finite tensor/Wick identities, or the conditional T-106130/T-106140
+implications. The independent bounded dependency audit found no use of the
+false L-106124.5 saving in the earlier frozen continuation proofs. No full
+native gamma moment failure or RH conclusion is claimed.
+
+The continuation now has sixteen individually validated scientific packets,
+with 161 tests per mode; the unchanged earlier FCM/NMO packets add 22 per
+mode. This count is not itself a combined-run claim. The new local-range
+packet passed Ruff and all producer/replay modes, plus ten ordinary and ten
+optimized tests.
+
+The [observation-gap audit](NATIVE_DECODER_OBSERVATION_GAP.md), first frozen at
+`78262e88f`, records exactly what the eleven inspected source maps preserve.
+The [conditional fibre-distribution corollary](NATIVE_DECODER_FIBRE_DISTRIBUTION.md)
+then rules out a sparse-fibre repair of the specified canonical comparison
+if the intended native principal bound is subpower. Almost every selected
+rough complete triple block would need a correction of norm at least a
+constant times `1/log(U)^4`. That is a quantitative demand on a proposed
+decoder, not an identification of the actual missing source terms.

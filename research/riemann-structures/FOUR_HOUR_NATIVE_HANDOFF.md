@@ -109,9 +109,10 @@ manifest. Exact-SHA independent reviews are preserved separately.
 | OAC | `cc861747bd78c6cf90cd73316341fd85ec8cb721` | `native_off_atomic_conductor_cancellation` | 10 |
 | Dense owner | `1fea3c9ce079325d19f5b43c6daa59c76afff921` | `dense_owner_principal_coefficient_family` | 10 |
 | Complete fibres | `4353858fbfedc3acacb568bf8357c39a16da093f` | `complete_boolean_fibre_positivity_obstruction` | 10 |
+| Full-core range correction | `94eb10f59be1f0118d165ac23a31b648600d224e` | `fixed_core_owner_range_correction` | 10 |
 
-All fifteen rows passed Ruff, producer write/replay in ordinary and
-optimized Python, and the listed tests in both modes: 151 tests per mode
+All sixteen rows passed Ruff, producer write/replay in ordinary and
+optimized Python, and the listed tests in both modes: 161 tests per mode
 across their individually validated packets. The earlier FCM/NMO packets
 add 22 tests per mode and remain unchanged. A combined final rerun, when
 reported, is a separate execution record rather than an inference from
@@ -204,3 +205,47 @@ comparison. A successful map must retain the missing cancellations or
 choose a demonstrably different candidate/readout with paid leftovers.
 No actual full native residual or complete source moment estimate has
 been proved in this continuation.
+
+The [source-map audit](NATIVE_DECODER_OBSERVATION_GAP.md), first frozen at
+`78262e88f`, separates the exact Boolean/Wick maps from their fixed-observation
+quotient costs and the unproved principal-norm transfer. The immediate
+[fibre-distribution corollary](NATIVE_DECODER_FIBRE_DISTRIBUTION.md) makes the
+conditional decoder requirement systematic: if the native principal moment
+is subpower in the same space, the correction must have norm at least a
+constant times `1/log(U)^4` on all but `U^o(1)` of the
+`Theta(U^3/log(U)^3)` selected complete four-class triple blocks. This is
+not an actual construction of that native correction.
+
+## 7. A named local source-range import needed correction
+
+The final [full-core owner-range correction](FIXED_CORE_OWNER_RANGE_CORRECTION.md)
+identifies a separate concrete error in the archival L-106124 application.
+L-102958 proves `P<=2gd,Q<=2gc` for full cores `gc,gd`; L-106124 instead
+imports reduced-core ranges `P<<d,Q<<c`. Its interval lemma is correct on
+those shorter ranges, but they do not contain the complete physical source
+uniformly in `g`. The corrected uniform Hilbert bound has the factor
+`(ell+2gc)(rho+2gd)<=9g^2cd`. After the actual source coefficient and weight,
+the bound is `Y^o(1)*ell*rho/(cd)`, with no extra uniform `1/g^2` saving.
+
+The existing dense canonical source provides an exact range witness and,
+on one actual quadratic class, observed additive energy at least a constant
+times `1/log(U)^8` at `g~U`. The conservative direct Gauss comparison retains
+its exact factor, bounded below by `9/16`. This disproves the proposed uniform
+extension of the old local coefficient estimate to the true physical range;
+it does not refute the correctly restricted abstract interval lemma or
+identify the complete native gamma vector.
+
+The independent downstream audit found affected local-use prose in
+L-106123/R-106123 and retained-results lists in R-106122/R-106124. The direct
+principal atomic calculation, finite tensor/Wick identities and conditional
+T-106130/T-106140 chains do not quantitatively use that false common-core
+saving. None of the earlier frozen continuation proofs uses it. No upstream
+source or earlier scientific packet was silently edited.
+
+The correction is frozen at `94eb10f59be1f0118d165ac23a31b648600d224e`, with
+proof object `6145fcb1b88180448808bfecc29a82a5bcda06b5b87c13f3c6ed27d57be9235e`.
+Ruff, producer write/check/optimized-check, and ten tests in each mode passed;
+the ordinary and optimized test runs took 0.959 and 0.953 seconds. It adds
+no prime search, large phase enumeration or imported executable. The source
+audit and fibre-distribution corollary are documentary deductions and add no
+extra producer or test count.
