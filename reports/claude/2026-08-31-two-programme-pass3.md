@@ -218,6 +218,29 @@ s709 block; (iii) WINDOW FINITENESS IS PROVED (L-108520): an induced
 corridor length 15 — the transient-window vs permanent-regime
 dichotomy of O-108006/T-108514 is now proved at both poles.
 
+**The alternant closed form (Lane 6; T-108522)**: the divided-
+difference/partial-fraction identity sum_r h_r^m T^r = (m-1)-fold
+alternant of geometric products yields EXPLICIT closed forms for
+every defect numerator N_{m,d} — in particular the general-rank
+square defect
+
+N_{2,d} = sum_j x_j^{d-1} prod_{a!=j}(1-x_a^2 T)
+prod_{a<b!=j}(1-x_a x_b T)/prod_{a!=j}(x_j-x_a),
+
+CLOSING T-108508's open general-d problem (symbolically equal to the
+proved d = 3, 4 forms; verified at exact points for d = 5, 6, 7 —
+ranks with no previously known closed form), and re-deriving
+T-108510's top-coefficient sign law in three lines. The proof is
+three elementary lemmas (bialternant expansion; partial fractions;
+multiplication bookkeeping); the partial-fraction treatment of
+Hadamard products is classical in flavor (flagged CITATION-NEEDED
+for the next boundary audit); the closed N_{2,d}, the sign-law
+rederivation, and the Segre-strand identification are the new
+content. Ground truth added: the exact equivariant Betti table of
+P^2 x P^2 ((1,9,16,9,1) at twists 0,2,3,4,6, per-weight characters;
+matrix/segre_d3m2_betti.py). Replays: matrix/alternant_defect.py
+(sympy+exact) and X-108522 (stdlib), all green.
+
 ## Process notes (honesty trail)
 
 - The X-108510 replay's mixed-triple test was written expecting the

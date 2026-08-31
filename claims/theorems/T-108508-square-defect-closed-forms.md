@@ -76,6 +76,22 @@ d = 5:  N = G_5 + 2 (e4 h2 - e5 h1) T^3
 4. Degeneration loci (reduced denominators) occur at special
    instantiations and are recorded, consistent with T-108500(5).
 
+## Pass-3 continuation addendum (2026-08-31): the general-d law is CLOSED
+
+T-108522 (standalone/2026-08-31-alternant-defect/) proves the closed
+alternant form
+
+```text
+N_{2,d}(T) = sum_j x_j^{d-1} prod_{a != j}(1 - x_a^2 T)
+             prod_{a<b != j}(1 - x_a x_b T) / prod_{a != j}(x_j - x_a)
+```
+
+for EVERY rank d (symbolically equal to the d = 3, 4 forms above;
+integer-point-verified at d = 5, 6, 7). The correction-layer
+structure of this claim is the expansion of that alternant minus the
+Gauss-sign polynomial; the OPEN general-d problem posed here is
+resolved.
+
 ## Method note (why "symbolic expansion" is a proof)
 
 Each identity is an equality of polynomials in the free variables
