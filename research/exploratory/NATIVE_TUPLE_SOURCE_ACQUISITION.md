@@ -199,4 +199,3 @@ and density, or prove a source-matched transport theorem. Neither a virtual
 character nor a finite zero-Boolean computation supplies it. RH, the
 complete principal moment, native signed conductor cancellation and
 global geometric descent remain open.
-
