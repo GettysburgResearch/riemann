@@ -1,0 +1,1736 @@
+{
+  "actual_branches": {
+    "base_change_49": {
+      "four_rational_old_signs": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "new_field_count_performed": false
+    },
+    "field": 7,
+    "infinity_split": true,
+    "quadratic_old": {
+      "chi": 1,
+      "degree": 2,
+      "norm": 2,
+      "polynomial": [
+        2,
+        0,
+        1
+      ]
+    },
+    "rational_old": [
+      {
+        "chi": -1,
+        "u": 3
+      },
+      {
+        "chi": 1,
+        "u": 4
+      }
+    ]
+  },
+  "all_grade_formal_controls": [
+    {
+      "after": [
+        1,
+        -3,
+        11,
+        -23,
+        51,
+        -89,
+        165,
+        -265,
+        460,
+        -716,
+        1231,
+        -1917,
+        3383,
+        -5375,
+        9896,
+        -16148,
+        31010,
+        -51818,
+        102867,
+        -174929,
+        355444,
+        -611614,
+        1262332,
+        -2189086,
+        4566594
+      ],
+      "before": [
+        1,
+        -3,
+        11,
+        -26,
+        60,
+        -121,
+        238,
+        -447,
+        826,
+        -1513,
+        2745,
+        -5025,
+        9143,
+        -16914,
+        31129,
+        -58369,
+        108807,
+        -206532,
+        389310,
+        -746172,
+        1418879,
+        -2739324,
+        5243664,
+        -10178142,
+        19581881
+      ],
+      "difference": [
+        0,
+        0,
+        0,
+        -3,
+        9,
+        -32,
+        73,
+        -182,
+        366,
+        -797,
+        1514,
+        -3108,
+        5760,
+        -11539,
+        21233,
+        -42221,
+        77797,
+        -154714,
+        286443,
+        -571243,
+        1063435,
+        -2127710,
+        3981332,
+        -7989056,
+        15015287
+      ],
+      "epsilon": -1,
+      "kind": "old",
+      "ratio": [
+        1,
+        0,
+        0,
+        -3,
+        0,
+        1,
+        7,
+        -19,
+        -12,
+        -19,
+        89,
+        -101,
+        -76,
+        -485,
+        751,
+        -684,
+        587,
+        -6674,
+        5596,
+        -10327,
+        20698,
+        -76763,
+        54255,
+        -190972,
+        333649
+      ]
+    },
+    {
+      "after": [
+        1,
+        3,
+        11,
+        23,
+        51,
+        89,
+        165,
+        265,
+        460,
+        716,
+        1231,
+        1917,
+        3383,
+        5375,
+        9896,
+        16148,
+        31010,
+        51818,
+        102867,
+        174929,
+        355444,
+        611614,
+        1262332,
+        2189086,
+        4566594
+      ],
+      "before": [
+        1,
+        3,
+        11,
+        26,
+        60,
+        121,
+        238,
+        447,
+        826,
+        1513,
+        2745,
+        5025,
+        9143,
+        16914,
+        31129,
+        58369,
+        108807,
+        206532,
+        389310,
+        746172,
+        1418879,
+        2739324,
+        5243664,
+        10178142,
+        19581881
+      ],
+      "difference": [
+        0,
+        0,
+        0,
+        3,
+        9,
+        32,
+        73,
+        182,
+        366,
+        797,
+        1514,
+        3108,
+        5760,
+        11539,
+        21233,
+        42221,
+        77797,
+        154714,
+        286443,
+        571243,
+        1063435,
+        2127710,
+        3981332,
+        7989056,
+        15015287
+      ],
+      "epsilon": 1,
+      "kind": "old",
+      "ratio": [
+        1,
+        0,
+        0,
+        3,
+        0,
+        -1,
+        7,
+        19,
+        -12,
+        19,
+        89,
+        101,
+        -76,
+        485,
+        751,
+        684,
+        587,
+        6674,
+        5596,
+        10327,
+        20698,
+        76763,
+        54255,
+        190972,
+        333649
+      ]
+    },
+    {
+      "after": [
+        1,
+        0,
+        6,
+        0,
+        26,
+        0,
+        73,
+        0,
+        173,
+        0,
+        392,
+        0,
+        939,
+        0,
+        2475,
+        0,
+        7302,
+        0,
+        23451,
+        0,
+        79782,
+        0,
+        280658,
+        0,
+        1008596
+      ],
+      "before": [
+        1,
+        0,
+        6,
+        0,
+        39,
+        0,
+        157,
+        0,
+        549,
+        0,
+        1827,
+        0,
+        6104,
+        0,
+        20775,
+        0,
+        72660,
+        0,
+        259920,
+        0,
+        947338,
+        0,
+        3500522,
+        0,
+        13071558
+      ],
+      "difference": [
+        0,
+        0,
+        0,
+        0,
+        13,
+        0,
+        84,
+        0,
+        376,
+        0,
+        1435,
+        0,
+        5165,
+        0,
+        18300,
+        0,
+        65358,
+        0,
+        236469,
+        0,
+        867556,
+        0,
+        3219864,
+        0,
+        12062962
+      ],
+      "epsilon": 1,
+      "kind": "split",
+      "ratio": [
+        1,
+        0,
+        0,
+        0,
+        13,
+        0,
+        6,
+        0,
+        2,
+        0,
+        318,
+        0,
+        518,
+        0,
+        644,
+        0,
+        9907,
+        0,
+        28862,
+        0,
+        63866,
+        0,
+        396350,
+        0,
+        1485133
+      ]
+    },
+    {
+      "after": [
+        1,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        0,
+        -5,
+        0,
+        -26,
+        0,
+        -99,
+        0,
+        -343,
+        0,
+        -1186,
+        0,
+        -4121,
+        0,
+        -14542,
+        0,
+        -51884,
+        0,
+        -187182
+      ],
+      "before": [
+        1,
+        0,
+        2,
+        0,
+        3,
+        0,
+        3,
+        0,
+        -1,
+        0,
+        -21,
+        0,
+        -94,
+        0,
+        -355,
+        0,
+        -1266,
+        0,
+        -4476,
+        0,
+        -15866,
+        0,
+        -56718,
+        0,
+        -204474
+      ],
+      "difference": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        4,
+        0,
+        5,
+        0,
+        5,
+        0,
+        -12,
+        0,
+        -80,
+        0,
+        -355,
+        0,
+        -1324,
+        0,
+        -4834,
+        0,
+        -17292
+      ],
+      "epsilon": 1,
+      "kind": "nonsplit",
+      "ratio": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        17,
+        0,
+        0,
+        0,
+        56,
+        0,
+        0,
+        0,
+        189
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "characters": [
+        6,
+        0,
+        0
+      ],
+      "grade": 1,
+      "multiplicities": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "characters": [
+        3,
+        1,
+        0
+      ],
+      "grade": 2,
+      "multiplicities": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "characters": [
+        2,
+        0,
+        -1
+      ],
+      "grade": 3,
+      "multiplicities": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "characters": [
+        3,
+        -1,
+        0
+      ],
+      "grade": 4,
+      "multiplicities": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "characters": [
+        6,
+        0,
+        0
+      ],
+      "grade": 5,
+      "multiplicities": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "characters": [
+        11,
+        1,
+        -1
+      ],
+      "grade": 6,
+      "multiplicities": [
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "characters": [
+        18,
+        0,
+        0
+      ],
+      "grade": 7,
+      "multiplicities": [
+        3,
+        3,
+        6
+      ]
+    },
+    {
+      "characters": [
+        30,
+        -2,
+        0
+      ],
+      "grade": 8,
+      "multiplicities": [
+        4,
+        6,
+        10
+      ]
+    },
+    {
+      "characters": [
+        56,
+        0,
+        -1
+      ],
+      "grade": 9,
+      "multiplicities": [
+        9,
+        9,
+        19
+      ]
+    },
+    {
+      "characters": [
+        105,
+        3,
+        0
+      ],
+      "grade": 10,
+      "multiplicities": [
+        19,
+        16,
+        35
+      ]
+    },
+    {
+      "characters": [
+        186,
+        0,
+        0
+      ],
+      "grade": 11,
+      "multiplicities": [
+        31,
+        31,
+        62
+      ]
+    },
+    {
+      "characters": [
+        335,
+        -5,
+        -1
+      ],
+      "grade": 12,
+      "multiplicities": [
+        53,
+        58,
+        112
+      ]
+    },
+    {
+      "characters": [
+        630,
+        0,
+        0
+      ],
+      "grade": 13,
+      "multiplicities": [
+        105,
+        105,
+        210
+      ]
+    },
+    {
+      "characters": [
+        1179,
+        9,
+        0
+      ],
+      "grade": 14,
+      "multiplicities": [
+        201,
+        192,
+        393
+      ]
+    },
+    {
+      "characters": [
+        2182,
+        0,
+        -2
+      ],
+      "grade": 15,
+      "multiplicities": [
+        363,
+        363,
+        728
+      ]
+    },
+    {
+      "characters": [
+        4080,
+        -16,
+        0
+      ],
+      "grade": 16,
+      "multiplicities": [
+        672,
+        688,
+        1360
+      ]
+    },
+    {
+      "characters": [
+        7710,
+        0,
+        0
+      ],
+      "grade": 17,
+      "multiplicities": [
+        1285,
+        1285,
+        2570
+      ]
+    },
+    {
+      "characters": [
+        14588,
+        28,
+        -4
+      ],
+      "grade": 18,
+      "multiplicities": [
+        2444,
+        2416,
+        4864
+      ]
+    },
+    {
+      "characters": [
+        27594,
+        0,
+        0
+      ],
+      "grade": 19,
+      "multiplicities": [
+        4599,
+        4599,
+        9198
+      ]
+    },
+    {
+      "characters": [
+        52377,
+        -51,
+        0
+      ],
+      "grade": 20,
+      "multiplicities": [
+        8704,
+        8755,
+        17459
+      ]
+    },
+    {
+      "characters": [
+        99858,
+        0,
+        -6
+      ],
+      "grade": 21,
+      "multiplicities": [
+        16641,
+        16641,
+        33288
+      ]
+    },
+    {
+      "characters": [
+        190743,
+        93,
+        0
+      ],
+      "grade": 22,
+      "multiplicities": [
+        31837,
+        31744,
+        63581
+      ]
+    },
+    {
+      "characters": [
+        364722,
+        0,
+        0
+      ],
+      "grade": 23,
+      "multiplicities": [
+        60787,
+        60787,
+        121574
+      ]
+    },
+    {
+      "characters": [
+        698870,
+        -170,
+        -10
+      ],
+      "grade": 24,
+      "multiplicities": [
+        116390,
+        116560,
+        232960
+      ]
+    },
+    {
+      "characters": [
+        1342176,
+        0,
+        0
+      ],
+      "grade": 25,
+      "multiplicities": [
+        223696,
+        223696,
+        447392
+      ]
+    },
+    {
+      "characters": [
+        2581425,
+        315,
+        0
+      ],
+      "grade": 26,
+      "multiplicities": [
+        430395,
+        430080,
+        860475
+      ]
+    },
+    {
+      "characters": [
+        4971008,
+        0,
+        -19
+      ],
+      "grade": 27,
+      "multiplicities": [
+        828495,
+        828495,
+        1657009
+      ]
+    },
+    {
+      "characters": [
+        9586395,
+        -585,
+        0
+      ],
+      "grade": 28,
+      "multiplicities": [
+        1597440,
+        1598025,
+        3195465
+      ]
+    },
+    {
+      "characters": [
+        18512790,
+        0,
+        0
+      ],
+      "grade": 29,
+      "multiplicities": [
+        3085465,
+        3085465,
+        6170930
+      ]
+    },
+    {
+      "characters": [
+        35792449,
+        1091,
+        -35
+      ],
+      "grade": 30,
+      "multiplicities": [
+        5965942,
+        5964851,
+        11930828
+      ]
+    },
+    {
+      "characters": [
+        69273666,
+        0,
+        0
+      ],
+      "grade": 31,
+      "multiplicities": [
+        11545611,
+        11545611,
+        23091222
+      ]
+    },
+    {
+      "characters": [
+        134215680,
+        -2048,
+        0
+      ],
+      "grade": 32,
+      "multiplicities": [
+        22368256,
+        22370304,
+        44738560
+      ]
+    },
+    {
+      "characters": [
+        260300986,
+        0,
+        -62
+      ],
+      "grade": 33,
+      "multiplicities": [
+        43383477,
+        43383477,
+        86767016
+      ]
+    },
+    {
+      "characters": [
+        505294125,
+        3855,
+        0
+      ],
+      "grade": 34,
+      "multiplicities": [
+        84217615,
+        84213760,
+        168431375
+      ]
+    },
+    {
+      "characters": [
+        981706806,
+        0,
+        0
+      ],
+      "grade": 35,
+      "multiplicities": [
+        163617801,
+        163617801,
+        327235602
+      ]
+    },
+    {
+      "characters": [
+        1908866960,
+        -7280,
+        -112
+      ],
+      "grade": 36,
+      "multiplicities": [
+        318140816,
+        318148096,
+        636289024
+      ]
+    },
+    {
+      "characters": [
+        3714566310,
+        0,
+        0
+      ],
+      "grade": 37,
+      "multiplicities": [
+        619094385,
+        619094385,
+        1238188770
+      ]
+    },
+    {
+      "characters": [
+        7233642927,
+        13797,
+        0
+      ],
+      "grade": 38,
+      "multiplicities": [
+        1205614053,
+        1205600256,
+        2411214309
+      ]
+    },
+    {
+      "characters": [
+        14096302710,
+        0,
+        -210
+      ],
+      "grade": 39,
+      "multiplicities": [
+        2349383715,
+        2349383715,
+        4698767640
+      ]
+    },
+    {
+      "characters": [
+        27487764474,
+        -26214,
+        0
+      ],
+      "grade": 40,
+      "multiplicities": [
+        4581280972,
+        4581307186,
+        9162588158
+      ]
+    },
+    {
+      "characters": [
+        53634713550,
+        0,
+        0
+      ],
+      "grade": 41,
+      "multiplicities": [
+        8939118925,
+        8939118925,
+        17878237850
+      ]
+    },
+    {
+      "characters": [
+        104715442659,
+        49929,
+        -393
+      ],
+      "grade": 42,
+      "multiplicities": [
+        17452598610,
+        17452548681,
+        34905147684
+      ]
+    },
+    {
+      "characters": [
+        204560302842,
+        0,
+        0
+      ],
+      "grade": 43,
+      "multiplicities": [
+        34093383807,
+        34093383807,
+        68186767614
+      ]
+    },
+    {
+      "characters": [
+        399822314775,
+        -95325,
+        0
+      ],
+      "grade": 44,
+      "multiplicities": [
+        66637004800,
+        66637100125,
+        133274104925
+      ]
+    },
+    {
+      "characters": [
+        781874934568,
+        0,
+        -728
+      ],
+      "grade": 45,
+      "multiplicities": [
+        130312488852,
+        130312488852,
+        260624978432
+      ]
+    },
+    {
+      "characters": [
+        1529755490571,
+        182361,
+        0
+      ],
+      "grade": 46,
+      "multiplicities": [
+        254959339609,
+        254959157248,
+        509918496857
+      ]
+    },
+    {
+      "characters": [
+        2994414645858,
+        0,
+        0
+      ],
+      "grade": 47,
+      "multiplicities": [
+        499069107643,
+        499069107643,
+        998138215286
+      ]
+    },
+    {
+      "characters": [
+        5864061663920,
+        -349520,
+        -1360
+      ],
+      "grade": 48,
+      "multiplicities": [
+        977343435440,
+        977343784960,
+        1954687221760
+      ]
+    }
+  ],
+  "finite_critical_products": [
+    {
+      "Xi49_at_half": [
+        117265002496,
+        24288576375
+      ],
+      "Xi7_at_half": [
+        13078528,
+        7223895
+      ],
+      "finite_source_only": true,
+      "generator_grade_cap": 2,
+      "harmonic_index": 1
+    },
+    {
+      "Xi49_at_half": [
+        864868348789609406577023909888,
+        97568554945477010042197265625
+      ],
+      "Xi7_at_half": [
+        17423628600686905428803584,
+        8486830909470650641734375
+      ],
+      "finite_source_only": true,
+      "generator_grade_cap": 4,
+      "harmonic_index": 2
+    },
+    {
+      "Xi49_at_half": [
+        227984014028542941390852894465213662100490658100250435309984833525777587352983532021394532291481893244838812278270722048,
+        16918075090038740306230445421399702231410739381037727112226506509274931177051856725010016841816390903294086456298828125
+      ],
+      "Xi7_at_half": [
+        3286939100840799516833268261595365986971589303873689905657784232909577341089235129494995123662611673653603991552,
+        1424359650023938007104895856707164366762611727825640318334511140913990291275623803334526994042230892181396484375
+      ],
+      "finite_source_only": true,
+      "generator_grade_cap": 6,
+      "harmonic_index": 3
+    },
+    {
+      "Xi49_at_half": [
+        14210661072835741275096044673592393295342455210675389438673016094099156444711035411352333716195867667878571659392217890874412106907644067134639006282411829684739020508561332046683911063201765484342423331117952971014319514715783837642307008039995960660966307566523042706345625383956910803470621039117131107771967219816831537988474800265119751785759563009140210751344248392135486282631308511720474246743871719292421670869254798635666666134601736511490205334527083194280618962704578196712333220106993664,
+        769915583687960941029401211493815869557727381745767135139315406572464187216266940031578100823694269897206897156707066184118135851688866340480057115299912044136541684478540380170761992200814647275005712371308893135578428331476687781387487257813580354383741730202673311562187221977755576691734181888502767922050387645422809563516821582889323836595775096355395035283642404186404121037865906966577269891168481944517545138354984536948735569309272992147677425775302573196512412323500029742717742919921875
+      ],
+      "Xi7_at_half": [
+        78378978201215599164977957645273999732245143847698652169514892444159808508309741177719963471133656088387708970826440370531127317958062704564300167000676299198464018302879893813061022937716741226106167410212293839302297718909975262338189115837706041300253393269160043910118206173592684082459784344803331647108620544186861019477902650482283668254037122066723615493347000584950699080589899661349334946530297671031481051259907851825048646858732711158327803904,
+        31600346185631668102528435711248869943856813288518538277455034583856346364845345540585925387373060664552845833283749650174729396317680333780489121518541856601649073499442285928657734168899850446969194543220206618967518336462997765169939840291379635886552714440683541208990734015218779435049126225097659021044080450362972410095457019706802715279846529095213066707178911400373527511964100577926254127928073549711677873996773513454172643832862377166748046875
+      ],
+      "finite_source_only": true,
+      "generator_grade_cap": 8,
+      "harmonic_index": 4
+    }
+  ],
+  "literal_sources": [
+    {
+      "after": 1,
+      "after_residual_trace": 1,
+      "before": 1,
+      "before_residual_trace": 1,
+      "cap": 2,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 0,
+      "kind": "old"
+    },
+    {
+      "after": 3,
+      "after_residual_trace": 3,
+      "before": 3,
+      "before_residual_trace": 3,
+      "cap": 2,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 1,
+      "kind": "old"
+    },
+    {
+      "after": 11,
+      "after_residual_trace": 11,
+      "before": 11,
+      "before_residual_trace": 11,
+      "cap": 2,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 2,
+      "kind": "old"
+    },
+    {
+      "after": 23,
+      "after_residual_trace": 23,
+      "before": 26,
+      "before_residual_trace": 26,
+      "cap": 2,
+      "cokernel_dimension": 3,
+      "cokernel_residual_trace": 3,
+      "grade": 3,
+      "kind": "old"
+    },
+    {
+      "after": 50,
+      "after_residual_trace": 50,
+      "before": 59,
+      "before_residual_trace": 59,
+      "cap": 2,
+      "cokernel_dimension": 9,
+      "cokernel_residual_trace": 9,
+      "grade": 4,
+      "kind": "old"
+    },
+    {
+      "after": 86,
+      "after_residual_trace": 86,
+      "before": 112,
+      "before_residual_trace": 112,
+      "cap": 2,
+      "cokernel_dimension": 26,
+      "cokernel_residual_trace": 26,
+      "grade": 5,
+      "kind": "old"
+    },
+    {
+      "after": 150,
+      "after_residual_trace": 150,
+      "before": 205,
+      "before_residual_trace": 205,
+      "cap": 2,
+      "cokernel_dimension": 55,
+      "cokernel_residual_trace": 55,
+      "grade": 6,
+      "kind": "old"
+    },
+    {
+      "after": 230,
+      "after_residual_trace": 230,
+      "before": 342,
+      "before_residual_trace": 342,
+      "cap": 2,
+      "cokernel_dimension": 112,
+      "cokernel_residual_trace": 112,
+      "grade": 7,
+      "kind": "old"
+    },
+    {
+      "after": 355,
+      "after_residual_trace": 355,
+      "before": 554,
+      "before_residual_trace": 554,
+      "cap": 2,
+      "cokernel_dimension": 199,
+      "cokernel_residual_trace": 199,
+      "grade": 8,
+      "kind": "old"
+    },
+    {
+      "after": 1,
+      "after_residual_trace": 1,
+      "before": 1,
+      "before_residual_trace": 1,
+      "cap": 2,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 0,
+      "kind": "infinity"
+    },
+    {
+      "after": 0,
+      "after_residual_trace": 0,
+      "before": 0,
+      "before_residual_trace": 0,
+      "cap": 2,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 1,
+      "kind": "infinity"
+    },
+    {
+      "after": 6,
+      "after_residual_trace": 2,
+      "before": 6,
+      "before_residual_trace": 2,
+      "cap": 2,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 2,
+      "kind": "infinity"
+    },
+    {
+      "after": 0,
+      "after_residual_trace": 0,
+      "before": 0,
+      "before_residual_trace": 0,
+      "cap": 2,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 3,
+      "kind": "infinity"
+    },
+    {
+      "after": 25,
+      "after_residual_trace": 3,
+      "before": 38,
+      "before_residual_trace": 4,
+      "cap": 2,
+      "cokernel_dimension": 13,
+      "cokernel_residual_trace": 1,
+      "grade": 4,
+      "kind": "infinity"
+    },
+    {
+      "after": 0,
+      "after_residual_trace": 0,
+      "before": 0,
+      "before_residual_trace": 0,
+      "cap": 2,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 5,
+      "kind": "infinity"
+    },
+    {
+      "after": 66,
+      "after_residual_trace": 4,
+      "before": 136,
+      "before_residual_trace": 6,
+      "cap": 2,
+      "cokernel_dimension": 70,
+      "cokernel_residual_trace": 2,
+      "grade": 6,
+      "kind": "infinity"
+    },
+    {
+      "after": 0,
+      "after_residual_trace": 0,
+      "before": 0,
+      "before_residual_trace": 0,
+      "cap": 2,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 7,
+      "kind": "infinity"
+    },
+    {
+      "after": 135,
+      "after_residual_trace": 5,
+      "before": 365,
+      "before_residual_trace": 9,
+      "cap": 2,
+      "cokernel_dimension": 230,
+      "cokernel_residual_trace": 4,
+      "grade": 8,
+      "kind": "infinity"
+    },
+    {
+      "after": 1,
+      "after_residual_trace": 1,
+      "before": 1,
+      "before_residual_trace": 1,
+      "cap": 4,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 0,
+      "kind": "old"
+    },
+    {
+      "after": 3,
+      "after_residual_trace": 3,
+      "before": 3,
+      "before_residual_trace": 3,
+      "cap": 4,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 1,
+      "kind": "old"
+    },
+    {
+      "after": 11,
+      "after_residual_trace": 11,
+      "before": 11,
+      "before_residual_trace": 11,
+      "cap": 4,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 2,
+      "kind": "old"
+    },
+    {
+      "after": 23,
+      "after_residual_trace": 23,
+      "before": 26,
+      "before_residual_trace": 26,
+      "cap": 4,
+      "cokernel_dimension": 3,
+      "cokernel_residual_trace": 3,
+      "grade": 3,
+      "kind": "old"
+    },
+    {
+      "after": 51,
+      "after_residual_trace": 51,
+      "before": 60,
+      "before_residual_trace": 60,
+      "cap": 4,
+      "cokernel_dimension": 9,
+      "cokernel_residual_trace": 9,
+      "grade": 4,
+      "kind": "old"
+    },
+    {
+      "after": 89,
+      "after_residual_trace": 89,
+      "before": 121,
+      "before_residual_trace": 121,
+      "cap": 4,
+      "cokernel_dimension": 32,
+      "cokernel_residual_trace": 32,
+      "grade": 5,
+      "kind": "old"
+    },
+    {
+      "after": 161,
+      "after_residual_trace": 161,
+      "before": 234,
+      "before_residual_trace": 234,
+      "cap": 4,
+      "cokernel_dimension": 73,
+      "cokernel_residual_trace": 73,
+      "grade": 6,
+      "kind": "old"
+    },
+    {
+      "after": 253,
+      "after_residual_trace": 253,
+      "before": 420,
+      "before_residual_trace": 420,
+      "cap": 4,
+      "cokernel_dimension": 167,
+      "cokernel_residual_trace": 167,
+      "grade": 7,
+      "kind": "old"
+    },
+    {
+      "after": 406,
+      "after_residual_trace": 406,
+      "before": 727,
+      "before_residual_trace": 727,
+      "cap": 4,
+      "cokernel_dimension": 321,
+      "cokernel_residual_trace": 321,
+      "grade": 8,
+      "kind": "old"
+    },
+    {
+      "after": 1,
+      "after_residual_trace": 1,
+      "before": 1,
+      "before_residual_trace": 1,
+      "cap": 4,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 0,
+      "kind": "infinity"
+    },
+    {
+      "after": 0,
+      "after_residual_trace": 0,
+      "before": 0,
+      "before_residual_trace": 0,
+      "cap": 4,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 1,
+      "kind": "infinity"
+    },
+    {
+      "after": 6,
+      "after_residual_trace": 2,
+      "before": 6,
+      "before_residual_trace": 2,
+      "cap": 4,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 2,
+      "kind": "infinity"
+    },
+    {
+      "after": 0,
+      "after_residual_trace": 0,
+      "before": 0,
+      "before_residual_trace": 0,
+      "cap": 4,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 3,
+      "kind": "infinity"
+    },
+    {
+      "after": 26,
+      "after_residual_trace": 2,
+      "before": 39,
+      "before_residual_trace": 3,
+      "cap": 4,
+      "cokernel_dimension": 13,
+      "cokernel_residual_trace": 1,
+      "grade": 4,
+      "kind": "infinity"
+    },
+    {
+      "after": 0,
+      "after_residual_trace": 0,
+      "before": 0,
+      "before_residual_trace": 0,
+      "cap": 4,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 5,
+      "kind": "infinity"
+    },
+    {
+      "after": 72,
+      "after_residual_trace": 2,
+      "before": 156,
+      "before_residual_trace": 4,
+      "cap": 4,
+      "cokernel_dimension": 84,
+      "cokernel_residual_trace": 2,
+      "grade": 6,
+      "kind": "infinity"
+    },
+    {
+      "after": 0,
+      "after_residual_trace": 0,
+      "before": 0,
+      "before_residual_trace": 0,
+      "cap": 4,
+      "cokernel_dimension": 0,
+      "cokernel_residual_trace": 0,
+      "grade": 7,
+      "kind": "infinity"
+    },
+    {
+      "after": 161,
+      "after_residual_trace": 3,
+      "before": 481,
+      "before_residual_trace": 7,
+      "cap": 4,
+      "cokernel_dimension": 320,
+      "cokernel_residual_trace": 4,
+      "grade": 8,
+      "kind": "infinity"
+    }
+  ],
+  "ordinary_boundary_Fredholm_claimed": false,
+  "owned_sha256_lf": {
+    "research/l-families/atlas/generalized/extension-order-defect/INFINITE_EXTENSION_ORDER.md": "7ac926d09ee3b9b098bce0a02c6745626a597856a98666bb864d33d6189b397d",
+    "research/l-families/atlas/generalized/extension-order-defect/INFINITE_REPLAY.md": "36c51acbfb95f4d7dbb62c39d5b661cb671a02fb7beb0243d6e6b98db452865a",
+    "research/l-families/atlas/generalized/extension-order-defect/infinite_replay.py": "71a4b3e43c5334d30df9b2c0e46f4c30fdefaae8e098d24b52196f2392eb746d",
+    "tests/test_extension_order_infinite.py": "d6c554a3d02e849aa508e4adf0baf50d4114540faf3adabaf09dc247d97bb177"
+  },
+  "scalar_base_change": {
+    "Xi49": [
+      1,
+      0,
+      0,
+      12,
+      13,
+      -4,
+      88,
+      232,
+      -82,
+      456,
+      2430,
+      768,
+      1201
+    ],
+    "Xi49_z_squared": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      12,
+      0,
+      13,
+      0,
+      -4,
+      0,
+      88
+    ],
+    "Xi7": [
+      1,
+      0,
+      0,
+      0,
+      13,
+      0,
+      14,
+      0,
+      -16,
+      0,
+      484,
+      0,
+      175
+    ],
+    "Xi7_squared": [
+      1,
+      0,
+      0,
+      0,
+      26,
+      0,
+      28,
+      0,
+      137,
+      0,
+      1332,
+      0,
+      130
+    ],
+    "first_mismatch": 4,
+    "sheaf_base_change_failure_claimed": false
+  },
+  "schema": "infinite-extension-order-v1",
+  "scope": "actual S3 F7 and F49; finite source controls and proved infinite tails",
+  "source": {
+    "completion_producer": {
+      "blob": "18e370b9393d1a907b54c78bd66cc9450f3a624f",
+      "freeze": "64075f1a3f81529f217dee1ae139656dfb9356f3",
+      "path": "research/l-families/atlas/generalized/graded-completion-lab/replay.py",
+      "sha256_lf": "70272340d73c241834c666da7626211f63518187eed05391acfac762f1edb70d"
+    },
+    "completion_proof": {
+      "blob": "c0e6fe3bb24cbec75cee01ddac6f26ff5358264b",
+      "freeze": "64075f1a3f81529f217dee1ae139656dfb9356f3",
+      "path": "research/l-families/atlas/generalized/graded-completion-lab/MATHEMATICS.md",
+      "sha256_lf": "86ca69ef8134918687b8900ce0b8be77f23d76e78c6c09b74925dc856e825bcc"
+    },
+    "finite_producer": {
+      "blob": "6df0f1746caf765efe960aee421323681a488202",
+      "freeze": "0018b73f60e42bc793d172c381547de34322d8ca",
+      "path": "research/l-families/atlas/generalized/extension-order-defect/replay.py",
+      "sha256_lf": "d4a327f253eaa9d8451380ac1f2b2228f2ef151f5eb8f6662d790fe9ebbc311b"
+    },
+    "finite_proof": {
+      "blob": "dfb7fcbf1115846664fa99e71116a3635b14d7a0",
+      "freeze": "0018b73f60e42bc793d172c381547de34322d8ca",
+      "path": "research/l-families/atlas/generalized/extension-order-defect/EXTENSION_ORDER_DEFECT.md",
+      "sha256_lf": "de1ed55a560e0f71602d7ff7f1a10b3a4ffe8b64d0089a087c6275aeed65945d"
+    }
+  },
+  "unit_log_bounds": {
+    "analytic_unit_logs": {
+      "V": [
+        [
+          44665502833494828265597,
+          1208925819614629174706176
+        ],
+        [
+          44665504755031127406879,
+          1208925819614629174706176
+        ]
+      ],
+      "W": [
+        [
+          2791593927070462245881,
+          75557863725914323419136
+        ],
+        [
+          22332752377331847537689,
+          604462909807314587353088
+        ]
+      ],
+      "X": [
+        [
+          260365770946335709299977,
+          1208925819614629174706176
+        ],
+        [
+          260365778632487166972909,
+          1208925819614629174706176
+        ]
+      ],
+      "Y": [
+        [
+          -13853737646856895834689,
+          151115727451828646838272
+        ],
+        [
+          -6926868583236200548507,
+          75557863725914323419136
+        ]
+      ]
+    },
+    "cutoff_j": 24,
+    "infinite_boundary_product_evaluated": false,
+    "log_c49": [
+      [
+        8263380974064383439467,
+        302231454903657293676544
+      ],
+      [
+        33053539268554187995929,
+        1208925819614629174706176
+      ]
+    ],
+    "tail_bounds": {
+      "V": [
+        838861,
+        1055531162664960
+      ],
+      "W": [
+        838861,
+        1055531162664960
+      ],
+      "X": [
+        50331701,
+        15832967439974400
+      ],
+      "Y": [
+        6291463,
+        3958241859993600
+      ]
+    }
+  }
+}
