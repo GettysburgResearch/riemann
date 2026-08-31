@@ -1,0 +1,41 @@
+{
+  "all_passed": true,
+  "checks": {
+    "companion_congruence_rows": 2,
+    "multiplier_defect_rows": 20,
+    "nonisometric_compression_counterexamples": [
+      {
+        "CE_norm": 1,
+        "CKE_lower_bound": 2,
+        "K_norm": 1,
+        "M": 2
+      },
+      {
+        "CE_norm": 1,
+        "CKE_lower_bound": 3,
+        "K_norm": 1,
+        "M": 3
+      },
+      {
+        "CE_norm": 1,
+        "CKE_lower_bound": 5,
+        "K_norm": 1,
+        "M": 5
+      },
+      {
+        "CE_norm": 1,
+        "CKE_lower_bound": 10,
+        "K_norm": 1,
+        "M": 10
+      }
+    ],
+    "source_factor_four": {
+      "a_phi_coefficient_of_y_dy": "2",
+      "k0_coefficient_of_y_dy": "1/2",
+      "ratio": "4"
+    },
+    "stieltjes_two_channel_rows": 27
+  },
+  "schema": "xi-source-hermite-stieltjes-closure-v1",
+  "scope": "finite exact algebra only; no Xi evaluation, continuum operator norm, source positivity, or RH conclusion"
+}
