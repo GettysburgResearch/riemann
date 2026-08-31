@@ -215,8 +215,8 @@ implications. The independent bounded dependency audit found no use of the
 false L-106124.5 saving in the earlier frozen continuation proofs. No full
 native gamma moment failure or RH conclusion is claimed.
 
-The continuation now has sixteen individually validated scientific packets,
-with 161 tests per mode; the unchanged earlier FCM/NMO packets add 22 per
+The continuation now has seventeen individually validated scientific packets,
+with 171 tests per mode; the unchanged earlier FCM/NMO packets add 22 per
 mode. This count is not itself a combined-run claim. The new local-range
 packet passed Ruff and all producer/replay modes, plus ten ordinary and ten
 optimized tests.
@@ -229,3 +229,28 @@ if the intended native principal bound is subpower. Almost every selected
 rough complete triple block would need a correction of norm at least a
 constant times `1/log(U)^4`. That is a quantitative demand on a proposed
 decoder, not an identification of the actual missing source terms.
+
+## 6. The opposite-owner diagonal issue was already known
+
+A final bounded audit of L-106094 located the binding R-106095 and
+R-106110 retractions before treating its missing opposite-owner count as a
+new discovery. The [canonical saturation sequel](CANONICAL_ANCHOR_DIAGONAL_SATURATION.md)
+explicitly credits that prior correction. It adds a source realization:
+the original principal same-anchor operation on the seven-window
+coefficient restriction has order `U/log(U)^8`, with the full `c_ell`
+normalization; its arithmetic atomic counterpart is only `log(U)^-7`.
+The exact factorization leaves a literal count of opposite-owner Q fibres.
+
+That restricted model does not identify the unrestricted canonical tail or
+full gamma member. It therefore supplements the known firewall rather
+than refuting the corrected dual-amplified frontier. Its ten tests per
+mode are included in the total above; no new prime search was needed.
+
+The [fixed compact-kernel corollary](FIXED_COMPACT_KERNEL_CANDIDATE_BARRIER.md)
+also excludes a narrow repair proposal. Every fixed nonzero compact kernel
+leaves the complete positive candidate power-sized, even if its Fourier
+transform has arbitrarily many fixed vanishing moments. Its unmasked
+logarithmic exponent becomes `12+2m`, where m is the finite zero order.
+This is a changed-observation candidate theorem, not a native norm transfer;
+it leaves horizon-dependent and noncompact filters outside its scope. No
+extra numerical test is counted for this direct analytic corollary.

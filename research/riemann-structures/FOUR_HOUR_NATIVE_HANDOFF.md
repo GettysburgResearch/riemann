@@ -110,9 +110,10 @@ manifest. Exact-SHA independent reviews are preserved separately.
 | Dense owner | `1fea3c9ce079325d19f5b43c6daa59c76afff921` | `dense_owner_principal_coefficient_family` | 10 |
 | Complete fibres | `4353858fbfedc3acacb568bf8357c39a16da093f` | `complete_boolean_fibre_positivity_obstruction` | 10 |
 | Full-core range correction | `94eb10f59be1f0118d165ac23a31b648600d224e` | `fixed_core_owner_range_correction` | 10 |
+| Known anchor-diagonal obstruction, canonical saturation | `ce8c857a039cde7f0affa0b1abd346e356255a73` | `canonical_anchor_diagonal_saturation` | 10 |
 
-All sixteen rows passed Ruff, producer write/replay in ordinary and
-optimized Python, and the listed tests in both modes: 161 tests per mode
+All seventeen rows passed Ruff, producer write/replay in ordinary and
+optimized Python, and the listed tests in both modes: 171 tests per mode
 across their individually validated packets. The earlier FCM/NMO packets
 add 22 tests per mode and remain unchanged. A combined final rerun, when
 reported, is a separate execution record rather than an inference from
@@ -249,3 +250,44 @@ the ordinary and optimized test runs took 0.959 and 0.953 seconds. It adds
 no prime search, large phase enumeration or imported executable. The source
 audit and fibre-distribution corollary are documentary deductions and add no
 extra producer or test count.
+
+## 8. An already-retracted diagonal claim receives an actual source control
+
+The final [canonical anchor-diagonal saturation](CANONICAL_ANCHOR_DIAGONAL_SATURATION.md)
+does not claim another newly discovered historical error. R-106095 and
+R-106110 already withdraw L-106094's uncharged opposite-owner count. The
+audit checked those binding retractions before proposing a sequel.
+
+The added theorem realizes that known obstruction in the existing seven
+prime windows, with the exact principal factor `c_ell`. Its restricted
+same-anchor quantity has order `U/log(U)^8`, while the corresponding
+arithmetic atomic diagonal has order `log(U)^-7`. Four opposite owners in
+the frozen finite fixture contribute exactly four times one owner, after
+the physical reciprocal Q weight cancels. The literal left-anchor and
+both-atomic diagonal factors are kept distinct.
+
+This model is an explicitly restricted canonical coefficient family; the
+restriction is not asserted orthogonal. It gives no unrestricted-tail or
+full native lower bound and does not refute the corrected dual-amplified
+moment. Ten ordinary and ten optimized tests passed in 1.122 and 1.183
+seconds, with Ruff and all producer modes also passing. The final ordinary
+write/check and optimized check passed without changing the frozen science.
+The scientific commit is `ce8c857a039cde7f0affa0b1abd346e356255a73`, and its
+proof object is
+`32a232800ee1d56d2b32cc3ea7bfdc634a6d019b3678a4e621e05b0ffbe322fa`.
+
+## 9. A fixed compact-kernel change is not a candidate repair
+
+The proof-only [compact-kernel corollary](FIXED_COMPACT_KERNEL_CANDIDATE_BARRIER.md)
+is frozen at `374371257cb97aa5772905ca9f232670f3baa327`. Any fixed nonzero
+compactly supported L2 kernel has an entire Fourier transform and a finite
+zero order m at the origin. The same complete positive arithmetic candidate
+therefore retains a masked lower bound `Y^(1/2)/log(Y)^11` and an unmasked
+lower bound `Y^(1/2)/log(Y)^(12+2m)`. More fixed vanishing moments cost only
+logarithms; they do not make this candidate subpower.
+
+For a different kernel this is a different observed moment. The statement
+does not authorize changing the native norm, apply uniformly to kernels
+varying with the horizon, or cover noncompact high-pass filters. It does
+not identify full gamma. The corollary is an analytic deduction with an
+independent proof review, not an extra replay packet or computational test.
