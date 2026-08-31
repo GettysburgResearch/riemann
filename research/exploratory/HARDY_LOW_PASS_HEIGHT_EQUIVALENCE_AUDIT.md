@@ -192,4 +192,3 @@ does not determine the reduced denominator after common-inner cancellation,
 control the native numerator or corrected physical projection, prove
 cofinal physical failure, or settle RH. No exhaustive novelty or new
 abstract Hardy theory is claimed.
-
