@@ -1,0 +1,6905 @@
+{
+  "before_radius_counts": {
+    "1/2": 2647,
+    "1/sqrt(2)": 397
+  },
+  "extension_order_changes": 849,
+  "generator_base_controls": {
+    "C2_obstruction": {
+      "new_base_y_squared_in_B": false,
+      "one_in_B": true,
+      "product_preserves_B": false
+    },
+    "all_grade_finiteness_and_rank_proved_not_inferred": true,
+    "anti_module_source_coverage": [
+      {
+        "coverage": [
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              0,
+              1
+            ],
+            "w": [
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              1
+            ],
+            "w": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              0
+            ],
+            "w": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "dimension": 3,
+        "grade": 1,
+        "negative_degree_one_coordinates": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "coverage": [
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              0,
+              2
+            ],
+            "w": [
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              2
+            ],
+            "w": [
+              1,
+              0,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              1
+            ],
+            "w": [
+              0,
+              0,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              1,
+              1
+            ],
+            "w": [
+              0,
+              2,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              1,
+              1
+            ],
+            "w": [
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              1,
+              1
+            ],
+            "w": [
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              0
+            ],
+            "w": [
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              0
+            ],
+            "w": [
+              1,
+              0,
+              1
+            ]
+          }
+        ],
+        "dimension": 8,
+        "grade": 2,
+        "negative_degree_one_coordinates": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "coverage": [
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              0,
+              3
+            ],
+            "w": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              0,
+              3
+            ],
+            "w": [
+              0,
+              3,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              3
+            ],
+            "w": [
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              3
+            ],
+            "w": [
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              3
+            ],
+            "w": [
+              2,
+              1,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              3
+            ],
+            "w": [
+              3,
+              0,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              2
+            ],
+            "w": [
+              0,
+              0,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              2
+            ],
+            "w": [
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              2
+            ],
+            "w": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              2
+            ],
+            "w": [
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              1
+            ],
+            "w": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              2,
+              1
+            ],
+            "w": [
+              0,
+              3,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              1
+            ],
+            "w": [
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              2,
+              1
+            ],
+            "w": [
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              2,
+              1
+            ],
+            "w": [
+              2,
+              1,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              2,
+              1
+            ],
+            "w": [
+              3,
+              0,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              0
+            ],
+            "w": [
+              0,
+              0,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              0
+            ],
+            "w": [
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              0
+            ],
+            "w": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              0
+            ],
+            "w": [
+              2,
+              0,
+              1
+            ]
+          }
+        ],
+        "dimension": 20,
+        "grade": 3,
+        "negative_degree_one_coordinates": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "coverage": [
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              0,
+              4
+            ],
+            "w": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              0,
+              4
+            ],
+            "w": [
+              0,
+              3,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              4
+            ],
+            "w": [
+              1,
+              0,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              4
+            ],
+            "w": [
+              1,
+              2,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              4
+            ],
+            "w": [
+              2,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              4
+            ],
+            "w": [
+              3,
+              0,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              3
+            ],
+            "w": [
+              0,
+              0,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              3
+            ],
+            "w": [
+              0,
+              2,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              1,
+              3
+            ],
+            "w": [
+              0,
+              4,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              3
+            ],
+            "w": [
+              1,
+              1,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              1,
+              3
+            ],
+            "w": [
+              1,
+              3,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              3
+            ],
+            "w": [
+              2,
+              0,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              1,
+              3
+            ],
+            "w": [
+              2,
+              2,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              1,
+              3
+            ],
+            "w": [
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              1,
+              3
+            ],
+            "w": [
+              4,
+              0,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              2
+            ],
+            "w": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              2
+            ],
+            "w": [
+              0,
+              3,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              2
+            ],
+            "w": [
+              1,
+              0,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              2
+            ],
+            "w": [
+              1,
+              2,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              2
+            ],
+            "w": [
+              2,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              2
+            ],
+            "w": [
+              3,
+              0,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              1
+            ],
+            "w": [
+              0,
+              0,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              1
+            ],
+            "w": [
+              0,
+              2,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              3,
+              1
+            ],
+            "w": [
+              0,
+              4,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              1
+            ],
+            "w": [
+              1,
+              1,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              3,
+              1
+            ],
+            "w": [
+              1,
+              3,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              1
+            ],
+            "w": [
+              2,
+              0,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              3,
+              1
+            ],
+            "w": [
+              2,
+              2,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              3,
+              1
+            ],
+            "w": [
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              3,
+              1
+            ],
+            "w": [
+              4,
+              0,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              0
+            ],
+            "w": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              0
+            ],
+            "w": [
+              0,
+              3,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              0
+            ],
+            "w": [
+              1,
+              0,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              0
+            ],
+            "w": [
+              1,
+              2,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              0
+            ],
+            "w": [
+              2,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              0
+            ],
+            "w": [
+              3,
+              0,
+              1
+            ]
+          }
+        ],
+        "dimension": 36,
+        "grade": 4,
+        "negative_degree_one_coordinates": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "coverage": [
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              0,
+              5
+            ],
+            "w": [
+              0,
+              1,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              0,
+              5
+            ],
+            "w": [
+              0,
+              3,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              0,
+              5
+            ],
+            "w": [
+              0,
+              5,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              5
+            ],
+            "w": [
+              1,
+              0,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              5
+            ],
+            "w": [
+              1,
+              2,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              5
+            ],
+            "w": [
+              1,
+              4,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              5
+            ],
+            "w": [
+              2,
+              1,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              5
+            ],
+            "w": [
+              2,
+              3,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              5
+            ],
+            "w": [
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              5
+            ],
+            "w": [
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              5
+            ],
+            "w": [
+              4,
+              1,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              5
+            ],
+            "w": [
+              5,
+              0,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              4
+            ],
+            "w": [
+              0,
+              0,
+              5
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              4
+            ],
+            "w": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              4
+            ],
+            "w": [
+              0,
+              4,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              4
+            ],
+            "w": [
+              1,
+              1,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              4
+            ],
+            "w": [
+              1,
+              3,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              4
+            ],
+            "w": [
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              4
+            ],
+            "w": [
+              2,
+              2,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              4
+            ],
+            "w": [
+              3,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              4
+            ],
+            "w": [
+              4,
+              0,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              3
+            ],
+            "w": [
+              0,
+              1,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              3
+            ],
+            "w": [
+              0,
+              3,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              2,
+              3
+            ],
+            "w": [
+              0,
+              5,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              3
+            ],
+            "w": [
+              1,
+              0,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              3
+            ],
+            "w": [
+              1,
+              2,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              2,
+              3
+            ],
+            "w": [
+              1,
+              4,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              3
+            ],
+            "w": [
+              2,
+              1,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              2,
+              3
+            ],
+            "w": [
+              2,
+              3,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              3
+            ],
+            "w": [
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              2,
+              3
+            ],
+            "w": [
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              2,
+              3
+            ],
+            "w": [
+              4,
+              1,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              2,
+              3
+            ],
+            "w": [
+              5,
+              0,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              2
+            ],
+            "w": [
+              0,
+              0,
+              5
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              2
+            ],
+            "w": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              2
+            ],
+            "w": [
+              0,
+              4,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              2
+            ],
+            "w": [
+              1,
+              1,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              2
+            ],
+            "w": [
+              1,
+              3,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              2
+            ],
+            "w": [
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              2
+            ],
+            "w": [
+              2,
+              2,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              2
+            ],
+            "w": [
+              3,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              2
+            ],
+            "w": [
+              4,
+              0,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              1
+            ],
+            "w": [
+              0,
+              1,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              1
+            ],
+            "w": [
+              0,
+              3,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              4,
+              1
+            ],
+            "w": [
+              0,
+              5,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              1
+            ],
+            "w": [
+              1,
+              0,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              1
+            ],
+            "w": [
+              1,
+              2,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              4,
+              1
+            ],
+            "w": [
+              1,
+              4,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              1
+            ],
+            "w": [
+              2,
+              1,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              4,
+              1
+            ],
+            "w": [
+              2,
+              3,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              1
+            ],
+            "w": [
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              4,
+              1
+            ],
+            "w": [
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              4,
+              1
+            ],
+            "w": [
+              4,
+              1,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              4,
+              1
+            ],
+            "w": [
+              5,
+              0,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              0
+            ],
+            "w": [
+              0,
+              0,
+              5
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              0
+            ],
+            "w": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              0
+            ],
+            "w": [
+              0,
+              4,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              0
+            ],
+            "w": [
+              1,
+              1,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              0
+            ],
+            "w": [
+              1,
+              3,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              0
+            ],
+            "w": [
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              0
+            ],
+            "w": [
+              2,
+              2,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              0
+            ],
+            "w": [
+              3,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              0
+            ],
+            "w": [
+              4,
+              0,
+              1
+            ]
+          }
+        ],
+        "dimension": 63,
+        "grade": 5,
+        "negative_degree_one_coordinates": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "coverage": [
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              0,
+              6
+            ],
+            "w": [
+              0,
+              1,
+              5
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              0,
+              6
+            ],
+            "w": [
+              0,
+              3,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              0,
+              6
+            ],
+            "w": [
+              0,
+              5,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              6
+            ],
+            "w": [
+              1,
+              0,
+              5
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              6
+            ],
+            "w": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              6
+            ],
+            "w": [
+              1,
+              4,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              6
+            ],
+            "w": [
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              6
+            ],
+            "w": [
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              6
+            ],
+            "w": [
+              3,
+              0,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              6
+            ],
+            "w": [
+              3,
+              2,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              6
+            ],
+            "w": [
+              4,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              0,
+              6
+            ],
+            "w": [
+              5,
+              0,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              0,
+              0,
+              6
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              0,
+              2,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              0,
+              4,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              0,
+              6,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              1,
+              1,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              1,
+              3,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              1,
+              5,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              2,
+              0,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              2,
+              4,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              3,
+              3,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              4,
+              0,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              4,
+              2,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              5,
+              1,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              1,
+              5
+            ],
+            "w": [
+              6,
+              0,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              4
+            ],
+            "w": [
+              0,
+              1,
+              5
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              4
+            ],
+            "w": [
+              0,
+              3,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              4
+            ],
+            "w": [
+              0,
+              5,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              4
+            ],
+            "w": [
+              1,
+              0,
+              5
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              4
+            ],
+            "w": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              4
+            ],
+            "w": [
+              1,
+              4,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              4
+            ],
+            "w": [
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              4
+            ],
+            "w": [
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              4
+            ],
+            "w": [
+              3,
+              0,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              4
+            ],
+            "w": [
+              3,
+              2,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              4
+            ],
+            "w": [
+              4,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              2,
+              4
+            ],
+            "w": [
+              5,
+              0,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              0,
+              0,
+              6
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              0,
+              2,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              0,
+              4,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              0,
+              6,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              1,
+              1,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              1,
+              3,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              1,
+              5,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              2,
+              0,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              2,
+              4,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              3,
+              3,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              4,
+              0,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              4,
+              2,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              5,
+              1,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              3,
+              3
+            ],
+            "w": [
+              6,
+              0,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              2
+            ],
+            "w": [
+              0,
+              1,
+              5
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              2
+            ],
+            "w": [
+              0,
+              3,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              2
+            ],
+            "w": [
+              0,
+              5,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              2
+            ],
+            "w": [
+              1,
+              0,
+              5
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              2
+            ],
+            "w": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              2
+            ],
+            "w": [
+              1,
+              4,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              2
+            ],
+            "w": [
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              2
+            ],
+            "w": [
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              2
+            ],
+            "w": [
+              3,
+              0,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              2
+            ],
+            "w": [
+              3,
+              2,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              2
+            ],
+            "w": [
+              4,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              4,
+              2
+            ],
+            "w": [
+              5,
+              0,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              0,
+              0,
+              6
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              0,
+              2,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              0,
+              4,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              1
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              0,
+              6,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              1,
+              1,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              1,
+              3,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              1,
+              5,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              2,
+              0,
+              4
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              2,
+              4,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              3,
+              3,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              4,
+              0,
+              2
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              4,
+              2,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              5,
+              1,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              1,
+              0
+            ],
+            "v": [
+              5,
+              1
+            ],
+            "w": [
+              6,
+              0,
+              0
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              6,
+              0
+            ],
+            "w": [
+              0,
+              1,
+              5
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              6,
+              0
+            ],
+            "w": [
+              0,
+              3,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              6,
+              0
+            ],
+            "w": [
+              0,
+              5,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              6,
+              0
+            ],
+            "w": [
+              1,
+              0,
+              5
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              6,
+              0
+            ],
+            "w": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              6,
+              0
+            ],
+            "w": [
+              1,
+              4,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              6,
+              0
+            ],
+            "w": [
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              6,
+              0
+            ],
+            "w": [
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              6,
+              0
+            ],
+            "w": [
+              3,
+              0,
+              3
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              6,
+              0
+            ],
+            "w": [
+              3,
+              2,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              6,
+              0
+            ],
+            "w": [
+              4,
+              1,
+              1
+            ]
+          },
+          {
+            "chosen_negative_coordinate": [
+              0,
+              2
+            ],
+            "v": [
+              6,
+              0
+            ],
+            "w": [
+              5,
+              0,
+              1
+            ]
+          }
+        ],
+        "dimension": 96,
+        "grade": 6,
+        "negative_degree_one_coordinates": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      }
+    ],
+    "invariant_ring_rows": [
+      {
+        "dimension": 1,
+        "fixed_input_dimension": 1,
+        "grade": 0,
+        "inertia": "C2",
+        "monomials": [
+          [
+            0,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 1,
+        "residual_trace": 1
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 1,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 1,
+        "fixed_input_dimension": 1,
+        "grade": 2,
+        "inertia": "C2",
+        "monomials": [
+          [
+            1,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            1,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 1
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 3,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 2,
+        "fixed_input_dimension": 1,
+        "grade": 4,
+        "inertia": "C2",
+        "monomials": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 1,
+        "residual_trace": 2
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 5,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 2,
+        "fixed_input_dimension": 1,
+        "grade": 6,
+        "inertia": "C2",
+        "monomials": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 2
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 7,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 3,
+        "fixed_input_dimension": 1,
+        "grade": 8,
+        "inertia": "C2",
+        "monomials": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 1,
+        "residual_trace": 3
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 9,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 3,
+        "fixed_input_dimension": 1,
+        "grade": 10,
+        "inertia": "C2",
+        "monomials": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            5,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 3
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 11,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 4,
+        "fixed_input_dimension": 1,
+        "grade": 12,
+        "inertia": "C2",
+        "monomials": [
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 1,
+        "residual_trace": 4
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 13,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 4,
+        "fixed_input_dimension": 1,
+        "grade": 14,
+        "inertia": "C2",
+        "monomials": [
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            7,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            7,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 4
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 15,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 5,
+        "fixed_input_dimension": 1,
+        "grade": 16,
+        "inertia": "C2",
+        "monomials": [
+          [
+            0,
+            8
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            8,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            8,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 1,
+        "residual_trace": 5
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 17,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 5,
+        "fixed_input_dimension": 1,
+        "grade": 18,
+        "inertia": "C2",
+        "monomials": [
+          [
+            1,
+            8
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 5
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 19,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 6,
+        "fixed_input_dimension": 1,
+        "grade": 20,
+        "inertia": "C2",
+        "monomials": [
+          [
+            0,
+            10
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            10,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 1,
+        "residual_trace": 6
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 21,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 6,
+        "fixed_input_dimension": 1,
+        "grade": 22,
+        "inertia": "C2",
+        "monomials": [
+          [
+            1,
+            10
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            11,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            11,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 6
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 23,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 7,
+        "fixed_input_dimension": 1,
+        "grade": 24,
+        "inertia": "C2",
+        "monomials": [
+          [
+            0,
+            12
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            12,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            1
+          ],
+          [
+            12,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 1,
+        "residual_trace": 7
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 25,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 7,
+        "fixed_input_dimension": 1,
+        "grade": 26,
+        "inertia": "C2",
+        "monomials": [
+          [
+            1,
+            12
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            13,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            13,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 7
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 27,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 8,
+        "fixed_input_dimension": 1,
+        "grade": 28,
+        "inertia": "C2",
+        "monomials": [
+          [
+            0,
+            14
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            14,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            7
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            14,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 1,
+        "residual_trace": 8
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 29,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 8,
+        "fixed_input_dimension": 1,
+        "grade": 30,
+        "inertia": "C2",
+        "monomials": [
+          [
+            1,
+            14
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            13,
+            2
+          ],
+          [
+            15,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            1,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            15,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 8
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 31,
+        "inertia": "C2",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 9,
+        "fixed_input_dimension": 1,
+        "grade": 32,
+        "inertia": "C2",
+        "monomials": [
+          [
+            0,
+            16
+          ],
+          [
+            2,
+            14
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            16,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            8
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            14,
+            1
+          ],
+          [
+            16,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 1,
+        "residual_trace": 9
+      },
+      {
+        "dimension": 1,
+        "fixed_input_dimension": 1,
+        "grade": 0,
+        "inertia": "C3",
+        "monomials": [
+          [
+            0,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 1,
+        "residual_trace": 1
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 1,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 2,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 3,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 1,
+        "fixed_input_dimension": 0,
+        "grade": 4,
+        "inertia": "C3",
+        "monomials": [
+          [
+            1,
+            1
+          ]
+        ],
+        "normal_forms": [
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 1,
+        "residual_trace": 1
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 5,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 2,
+        "fixed_input_dimension": 0,
+        "grade": 6,
+        "inertia": "C3",
+        "monomials": [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 2,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 7,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 1,
+        "fixed_input_dimension": 0,
+        "grade": 8,
+        "inertia": "C3",
+        "monomials": [
+          [
+            2,
+            2
+          ]
+        ],
+        "normal_forms": [
+          [
+            2,
+            0,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 1,
+        "residual_trace": 1
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 9,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 2,
+        "fixed_input_dimension": 0,
+        "grade": 10,
+        "inertia": "C3",
+        "monomials": [
+          [
+            1,
+            4
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "normal_forms": [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 2,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 11,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 3,
+        "fixed_input_dimension": 0,
+        "grade": 12,
+        "inertia": "C3",
+        "monomials": [
+          [
+            0,
+            6
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 3,
+        "residual_trace": 1
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 13,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 2,
+        "fixed_input_dimension": 0,
+        "grade": 14,
+        "inertia": "C3",
+        "monomials": [
+          [
+            2,
+            5
+          ],
+          [
+            5,
+            2
+          ]
+        ],
+        "normal_forms": [
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 2,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 15,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 3,
+        "fixed_input_dimension": 0,
+        "grade": 16,
+        "inertia": "C3",
+        "monomials": [
+          [
+            1,
+            7
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            7,
+            1
+          ]
+        ],
+        "normal_forms": [
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            4,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 3,
+        "residual_trace": 1
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 17,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 4,
+        "fixed_input_dimension": 0,
+        "grade": 18,
+        "inertia": "C3",
+        "monomials": [
+          [
+            0,
+            9
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            9,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            0,
+            3
+          ],
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 4,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 19,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 3,
+        "fixed_input_dimension": 0,
+        "grade": 20,
+        "inertia": "C3",
+        "monomials": [
+          [
+            2,
+            8
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            8,
+            2
+          ]
+        ],
+        "normal_forms": [
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            5,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 3,
+        "residual_trace": 1
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 21,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 4,
+        "fixed_input_dimension": 0,
+        "grade": 22,
+        "inertia": "C3",
+        "monomials": [
+          [
+            1,
+            10
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            10,
+            1
+          ]
+        ],
+        "normal_forms": [
+          [
+            1,
+            0,
+            3
+          ],
+          [
+            4,
+            0,
+            1
+          ],
+          [
+            4,
+            1,
+            0
+          ],
+          [
+            1,
+            3,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 4,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 23,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 5,
+        "fixed_input_dimension": 0,
+        "grade": 24,
+        "inertia": "C3",
+        "monomials": [
+          [
+            0,
+            12
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            12,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            3,
+            0,
+            2
+          ],
+          [
+            6,
+            0,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 5,
+        "residual_trace": 1
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 25,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 4,
+        "fixed_input_dimension": 0,
+        "grade": 26,
+        "inertia": "C3",
+        "monomials": [
+          [
+            2,
+            11
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            11,
+            2
+          ]
+        ],
+        "normal_forms": [
+          [
+            2,
+            0,
+            3
+          ],
+          [
+            5,
+            0,
+            1
+          ],
+          [
+            5,
+            1,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 4,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 27,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 5,
+        "fixed_input_dimension": 0,
+        "grade": 28,
+        "inertia": "C3",
+        "monomials": [
+          [
+            1,
+            13
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            13,
+            1
+          ]
+        ],
+        "normal_forms": [
+          [
+            1,
+            0,
+            4
+          ],
+          [
+            4,
+            0,
+            2
+          ],
+          [
+            7,
+            0,
+            0
+          ],
+          [
+            4,
+            2,
+            0
+          ],
+          [
+            1,
+            4,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 5,
+        "residual_trace": 1
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 29,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 6,
+        "fixed_input_dimension": 0,
+        "grade": 30,
+        "inertia": "C3",
+        "monomials": [
+          [
+            0,
+            15
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            12,
+            3
+          ],
+          [
+            15,
+            0
+          ]
+        ],
+        "normal_forms": [
+          [
+            0,
+            0,
+            5
+          ],
+          [
+            3,
+            0,
+            3
+          ],
+          [
+            6,
+            0,
+            1
+          ],
+          [
+            6,
+            1,
+            0
+          ],
+          [
+            3,
+            3,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 6,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 0,
+        "fixed_input_dimension": 0,
+        "grade": 31,
+        "inertia": "C3",
+        "monomials": [],
+        "normal_forms": [],
+        "quotient_by_positive_fixed_inputs_dimension": 0,
+        "residual_trace": 0
+      },
+      {
+        "dimension": 5,
+        "fixed_input_dimension": 0,
+        "grade": 32,
+        "inertia": "C3",
+        "monomials": [
+          [
+            2,
+            14
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            14,
+            2
+          ]
+        ],
+        "normal_forms": [
+          [
+            2,
+            0,
+            4
+          ],
+          [
+            5,
+            0,
+            2
+          ],
+          [
+            8,
+            0,
+            0
+          ],
+          [
+            5,
+            2,
+            0
+          ],
+          [
+            2,
+            4,
+            0
+          ]
+        ],
+        "quotient_by_positive_fixed_inputs_dimension": 5,
+        "residual_trace": 1
+      }
+    ],
+    "original_Q_becomes_module_over_larger_base": false,
+    "repaired_C_minimal_generators": {
+      "0": 1,
+      "3": 3
+    },
+    "repaired_C_rank": 2,
+    "standard_source": {
+      "basis": [
+        "e1-e0",
+        "e2-e0"
+      ],
+      "cycle": [
+        [
+          -1,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "quadratic_eigenbasis": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "quadratic_eigenbasis_determinant": -2,
+      "reflection": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  },
+  "not_claimed": [
+    "different generic algebras",
+    "ordinary L of boundary cokernel equals Hilbert ratio",
+    "Q is a module over repaired base",
+    "all-grade theorem from finite atlas",
+    "larger ordinary trace-class domain",
+    "number-field or archimedean transfer",
+    "RH"
+  ],
+  "owned_sha256_lf": {
+    "research/l-families/atlas/generalized/extension-order-defect/GENERAL_FIELD_RAMIFICATION_EXPONENT.md": "487cf82f97d1eab4d13ce09e8de000a5710bba30fd020a3cf98e244361d62bf4",
+    "research/l-families/atlas/generalized/extension-order-defect/GENERAL_REPLAY.md": "74b87d6e4f92ce69dd97a59c6de932eab3e9cfc2e77989a955bff5c2b07f2dfd",
+    "research/l-families/atlas/generalized/extension-order-defect/INVARIANT_GENERATOR_BASE.md": "fc228c136e4840e3e88522ed8442cddbb0b7898cf054cbb65c894df905c3843b",
+    "research/l-families/atlas/generalized/extension-order-defect/general_replay.py": "2a8021a47fb70ae60f953524145c785fa81c88c0ded00703143bf0870e205430",
+    "tests/test_extension_order_general.py": "0f42f708361252ad801c6251cb5389103883d38c2a721cbf42ad7afbcd1711ca"
+  },
+  "panels": [
+    {
+      "before_radius_counts": {
+        "1/2": 14,
+        "1/sqrt(2)": 2
+      },
+      "extension_order_changes": 4,
+      "p": 5,
+      "parameter_count": 16
+    },
+    {
+      "before_radius_counts": {
+        "1/2": 36,
+        "1/sqrt(2)": 0
+      },
+      "extension_order_changes": 12,
+      "p": 7,
+      "parameter_count": 36
+    },
+    {
+      "before_radius_counts": {
+        "1/2": 45,
+        "1/sqrt(2)": 55
+      },
+      "extension_order_changes": 15,
+      "p": 11,
+      "parameter_count": 100
+    },
+    {
+      "before_radius_counts": {
+        "1/2": 144,
+        "1/sqrt(2)": 0
+      },
+      "extension_order_changes": 78,
+      "p": 13,
+      "parameter_count": 144
+    },
+    {
+      "before_radius_counts": {
+        "1/2": 236,
+        "1/sqrt(2)": 20
+      },
+      "extension_order_changes": 40,
+      "p": 17,
+      "parameter_count": 256
+    },
+    {
+      "before_radius_counts": {
+        "1/2": 324,
+        "1/sqrt(2)": 0
+      },
+      "extension_order_changes": 126,
+      "p": 19,
+      "parameter_count": 324
+    },
+    {
+      "before_radius_counts": {
+        "1/2": 220,
+        "1/sqrt(2)": 264
+      },
+      "extension_order_changes": 88,
+      "p": 23,
+      "parameter_count": 484
+    },
+    {
+      "before_radius_counts": {
+        "1/2": 728,
+        "1/sqrt(2)": 56
+      },
+      "extension_order_changes": 126,
+      "p": 29,
+      "parameter_count": 784
+    },
+    {
+      "before_radius_counts": {
+        "1/2": 900,
+        "1/sqrt(2)": 0
+      },
+      "extension_order_changes": 360,
+      "p": 31,
+      "parameter_count": 900
+    }
+  ],
+  "schema": "general-before-extension-radius-v1",
+  "scope": "Actual same-generic-source BEFORE/AFTER radius comparison and invariant-generator-base finiteness",
+  "selected_actual_sources": [
+    {
+      "before": {
+        "after_radius": "1/sqrt(2)",
+        "alpha": [
+          0,
+          1
+        ],
+        "before_radius": "1/sqrt(2)",
+        "extension_order_changes_radius": false,
+        "positive_sqrt_coefficient_present": false,
+        "rational_old_count": 0,
+        "rho_minus": [
+          0,
+          1
+        ],
+        "rho_plus": [
+          0,
+          1
+        ],
+        "second_circle_quarter_sixth_controls": [
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              1,
+              12
+            ],
+            "hypothetical_degree_two_sign_difference": -2
+          },
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              -1,
+              6
+            ],
+            "hypothetical_degree_two_sign_difference": -1
+          },
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              -5,
+              12
+            ],
+            "hypothetical_degree_two_sign_difference": 0
+          },
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              -2,
+              3
+            ],
+            "hypothetical_degree_two_sign_difference": 1
+          },
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              -11,
+              12
+            ],
+            "hypothetical_degree_two_sign_difference": 2
+          }
+        ],
+        "sigma_minus": [
+          0,
+          1
+        ],
+        "sigma_plus": [
+          0,
+          1
+        ],
+        "split_infinity": false
+      },
+      "proper_closure_recount": {
+        "affine_fibres": [
+          {
+            "ordered_pairs": 2,
+            "vs": [
+              1,
+              4
+            ],
+            "x": 0,
+            "ys": [
+              0
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 1,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 2,
+            "vs": [
+              2,
+              3
+            ],
+            "x": 2,
+            "ys": [
+              0
+            ]
+          },
+          {
+            "ordered_pairs": 2,
+            "vs": [
+              2,
+              3
+            ],
+            "x": 3,
+            "ys": [
+              0
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 4,
+            "ys": []
+          }
+        ],
+        "infinity_count": 0,
+        "parameters": [
+          5,
+          1,
+          0
+        ],
+        "proper_count": 6
+      },
+      "row": {
+        "A": 1,
+        "B": 0,
+        "aD": -4,
+        "aE": 2,
+        "class": "zero",
+        "delta": 0,
+        "oldMinus": 0,
+        "oldPlus": 0,
+        "p": 5,
+        "pointsD": 10,
+        "pointsE": 4,
+        "split": 1,
+        "splitMinus": 0,
+        "splitPlus": 0,
+        "splitZero": 1,
+        "tZ": 0,
+        "zPoints": 6
+      }
+    },
+    {
+      "before": {
+        "after_radius": "1/sqrt(2)",
+        "alpha": [
+          0,
+          1
+        ],
+        "before_radius": "1/2",
+        "extension_order_changes_radius": true,
+        "positive_sqrt_coefficient_present": true,
+        "rational_old_count": 2,
+        "rho_minus": [
+          -1,
+          3
+        ],
+        "rho_plus": [
+          -1,
+          3
+        ],
+        "second_circle_quarter_sixth_controls": [],
+        "sigma_minus": [
+          -1,
+          3
+        ],
+        "sigma_plus": [
+          -1,
+          3
+        ],
+        "split_infinity": true
+      },
+      "proper_closure_recount": {
+        "affine_fibres": [
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 0,
+            "ys": [
+              0
+            ]
+          },
+          {
+            "ordered_pairs": 2,
+            "vs": [
+              0
+            ],
+            "x": 1,
+            "ys": [
+              3,
+              4
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 2,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              2,
+              5
+            ],
+            "x": 3,
+            "ys": [
+              3,
+              4
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              2,
+              5
+            ],
+            "x": 4,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 5,
+            "ys": [
+              2,
+              5
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              0
+            ],
+            "x": 6,
+            "ys": []
+          }
+        ],
+        "infinity_count": 2,
+        "parameters": [
+          7,
+          1,
+          0
+        ],
+        "proper_count": 8
+      },
+      "row": {
+        "A": 1,
+        "B": 0,
+        "aD": 0,
+        "aE": 0,
+        "class": "zero",
+        "delta": 1,
+        "oldMinus": 1,
+        "oldPlus": 1,
+        "p": 7,
+        "pointsD": 8,
+        "pointsE": 8,
+        "split": 0,
+        "splitMinus": 0,
+        "splitPlus": 0,
+        "splitZero": 0,
+        "tZ": 0,
+        "zPoints": 8
+      }
+    },
+    {
+      "before": {
+        "after_radius": "1/sqrt(2)",
+        "alpha": [
+          -1,
+          1
+        ],
+        "before_radius": "1/sqrt(2)",
+        "extension_order_changes_radius": false,
+        "positive_sqrt_coefficient_present": false,
+        "rational_old_count": 0,
+        "rho_minus": [
+          1,
+          1
+        ],
+        "rho_plus": [
+          1,
+          1
+        ],
+        "second_circle_quarter_sixth_controls": [
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              7,
+              12
+            ],
+            "hypothetical_degree_two_sign_difference": -2
+          },
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              1,
+              3
+            ],
+            "hypothetical_degree_two_sign_difference": -1
+          },
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              1,
+              12
+            ],
+            "hypothetical_degree_two_sign_difference": 0
+          },
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              -1,
+              6
+            ],
+            "hypothetical_degree_two_sign_difference": 1
+          },
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              -5,
+              12
+            ],
+            "hypothetical_degree_two_sign_difference": 2
+          }
+        ],
+        "sigma_minus": [
+          0,
+          1
+        ],
+        "sigma_plus": [
+          0,
+          1
+        ],
+        "split_infinity": false
+      },
+      "proper_closure_recount": {
+        "affine_fibres": [
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 0,
+            "ys": [
+              5,
+              6
+            ]
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              2,
+              9
+            ],
+            "x": 1,
+            "ys": [
+              4,
+              7
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 2,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 3,
+            "ys": [
+              0
+            ]
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              5,
+              6
+            ],
+            "x": 4,
+            "ys": [
+              4,
+              7
+            ]
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              3,
+              8
+            ],
+            "x": 5,
+            "ys": [
+              1,
+              10
+            ]
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              3,
+              8
+            ],
+            "x": 6,
+            "ys": [
+              4,
+              7
+            ]
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              5,
+              6
+            ],
+            "x": 7,
+            "ys": [
+              1,
+              10
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 8,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 9,
+            "ys": [
+              2,
+              9
+            ]
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              2,
+              9
+            ],
+            "x": 10,
+            "ys": [
+              1,
+              10
+            ]
+          }
+        ],
+        "infinity_count": 0,
+        "parameters": [
+          11,
+          1,
+          3
+        ],
+        "proper_count": 24
+      },
+      "row": {
+        "A": 1,
+        "B": 3,
+        "aD": 0,
+        "aE": -6,
+        "class": "negative_integer",
+        "delta": 0,
+        "oldMinus": 0,
+        "oldPlus": 0,
+        "p": 11,
+        "pointsD": 12,
+        "pointsE": 18,
+        "split": 4,
+        "splitMinus": 2,
+        "splitPlus": 2,
+        "splitZero": 0,
+        "tZ": -12,
+        "zPoints": 24
+      }
+    },
+    {
+      "before": {
+        "after_radius": "1/sqrt(2)",
+        "alpha": [
+          1,
+          1
+        ],
+        "before_radius": "1/sqrt(2)",
+        "extension_order_changes_radius": false,
+        "positive_sqrt_coefficient_present": false,
+        "rational_old_count": 0,
+        "rho_minus": [
+          1,
+          1
+        ],
+        "rho_plus": [
+          1,
+          1
+        ],
+        "second_circle_quarter_sixth_controls": [
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              -1,
+              6
+            ],
+            "hypothetical_degree_two_sign_difference": -2
+          },
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              -5,
+              12
+            ],
+            "hypothetical_degree_two_sign_difference": -1
+          },
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              -2,
+              3
+            ],
+            "hypothetical_degree_two_sign_difference": 0
+          },
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              -11,
+              12
+            ],
+            "hypothetical_degree_two_sign_difference": 1
+          },
+          {
+            "actual_pattern_assigned": false,
+            "exponent_mod_integer": [
+              -7,
+              6
+            ],
+            "hypothetical_degree_two_sign_difference": 2
+          }
+        ],
+        "sigma_minus": [
+          0,
+          1
+        ],
+        "sigma_plus": [
+          0,
+          1
+        ],
+        "split_infinity": false
+      },
+      "proper_closure_recount": {
+        "affine_fibres": [
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 0,
+            "ys": [
+              2,
+              9
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              2,
+              9
+            ],
+            "x": 1,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 2,
+            "ys": [
+              5,
+              6
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 3,
+            "ys": [
+              1,
+              10
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              5,
+              6
+            ],
+            "x": 4,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              3,
+              8
+            ],
+            "x": 5,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              3,
+              8
+            ],
+            "x": 6,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              5,
+              6
+            ],
+            "x": 7,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 8,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 9,
+            "ys": [
+              4,
+              7
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              2,
+              9
+            ],
+            "x": 10,
+            "ys": []
+          }
+        ],
+        "infinity_count": 0,
+        "parameters": [
+          11,
+          1,
+          4
+        ],
+        "proper_count": 0
+      },
+      "row": {
+        "A": 1,
+        "B": 4,
+        "aD": 6,
+        "aE": 3,
+        "class": "positive_integer",
+        "delta": 0,
+        "oldMinus": 0,
+        "oldPlus": 0,
+        "p": 11,
+        "pointsD": 6,
+        "pointsE": 9,
+        "split": 0,
+        "splitMinus": 0,
+        "splitPlus": 0,
+        "splitZero": 0,
+        "tZ": 12,
+        "zPoints": 0
+      }
+    },
+    {
+      "before": {
+        "after_radius": "1/sqrt(2)",
+        "alpha": [
+          1,
+          1
+        ],
+        "before_radius": "1/2",
+        "extension_order_changes_radius": true,
+        "positive_sqrt_coefficient_present": true,
+        "rational_old_count": 0,
+        "rho_minus": [
+          2,
+          3
+        ],
+        "rho_plus": [
+          2,
+          3
+        ],
+        "second_circle_quarter_sixth_controls": [],
+        "sigma_minus": [
+          -1,
+          3
+        ],
+        "sigma_plus": [
+          -1,
+          3
+        ],
+        "split_infinity": true
+      },
+      "proper_closure_recount": {
+        "affine_fibres": [
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              3,
+              10
+            ],
+            "x": 0,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 1,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              6,
+              7
+            ],
+            "x": 2,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 3,
+            "ys": [
+              3,
+              10
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              0
+            ],
+            "x": 4,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              5,
+              8
+            ],
+            "x": 5,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 6,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 7,
+            "ys": [
+              2,
+              11
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              5,
+              8
+            ],
+            "x": 8,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              0
+            ],
+            "x": 9,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 10,
+            "ys": [
+              1,
+              12
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              6,
+              7
+            ],
+            "x": 11,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 12,
+            "ys": [
+              4,
+              9
+            ]
+          }
+        ],
+        "infinity_count": 2,
+        "parameters": [
+          13,
+          1,
+          5
+        ],
+        "proper_count": 2
+      },
+      "row": {
+        "A": 1,
+        "B": 5,
+        "aD": 2,
+        "aE": 5,
+        "class": "positive_integer",
+        "delta": 1,
+        "oldMinus": 0,
+        "oldPlus": 0,
+        "p": 13,
+        "pointsD": 12,
+        "pointsE": 9,
+        "split": 0,
+        "splitMinus": 0,
+        "splitPlus": 0,
+        "splitZero": 0,
+        "tZ": 12,
+        "zPoints": 2
+      }
+    },
+    {
+      "before": {
+        "after_radius": "1/2",
+        "alpha": [
+          -1,
+          1
+        ],
+        "before_radius": "1/2",
+        "extension_order_changes_radius": false,
+        "positive_sqrt_coefficient_present": true,
+        "rational_old_count": 4,
+        "rho_minus": [
+          2,
+          3
+        ],
+        "rho_plus": [
+          -4,
+          3
+        ],
+        "second_circle_quarter_sixth_controls": [],
+        "sigma_minus": [
+          -1,
+          3
+        ],
+        "sigma_plus": [
+          -1,
+          3
+        ],
+        "split_infinity": true
+      },
+      "proper_closure_recount": {
+        "affine_fibres": [
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              6,
+              7
+            ],
+            "x": 0,
+            "ys": [
+              1,
+              12
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 1,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 2,
+            "ys": [
+              2,
+              11
+            ]
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              3,
+              10
+            ],
+            "x": 3,
+            "ys": [
+              1,
+              12
+            ]
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              1,
+              12
+            ],
+            "x": 4,
+            "ys": [
+              4,
+              9
+            ]
+          },
+          {
+            "ordered_pairs": 2,
+            "vs": [
+              0
+            ],
+            "x": 5,
+            "ys": [
+              4,
+              9
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 6,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 7,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 2,
+            "vs": [
+              0
+            ],
+            "x": 8,
+            "ys": [
+              5,
+              8
+            ]
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              1,
+              12
+            ],
+            "x": 9,
+            "ys": [
+              5,
+              8
+            ]
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              3,
+              10
+            ],
+            "x": 10,
+            "ys": [
+              1,
+              12
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 11,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 12,
+            "ys": [
+              3,
+              10
+            ]
+          }
+        ],
+        "infinity_count": 2,
+        "parameters": [
+          13,
+          4,
+          1
+        ],
+        "proper_count": 26
+      },
+      "row": {
+        "A": 4,
+        "B": 1,
+        "aD": -2,
+        "aE": -5,
+        "class": "negative_integer",
+        "delta": 1,
+        "oldMinus": 2,
+        "oldPlus": 2,
+        "p": 13,
+        "pointsD": 16,
+        "pointsE": 19,
+        "split": 2,
+        "splitMinus": 0,
+        "splitPlus": 2,
+        "splitZero": 0,
+        "tZ": -12,
+        "zPoints": 26
+      }
+    },
+    {
+      "before": {
+        "after_radius": "1/sqrt(2)",
+        "alpha": [
+          1,
+          1
+        ],
+        "before_radius": "1/2",
+        "extension_order_changes_radius": true,
+        "positive_sqrt_coefficient_present": true,
+        "rational_old_count": 2,
+        "rho_minus": [
+          5,
+          3
+        ],
+        "rho_plus": [
+          5,
+          3
+        ],
+        "second_circle_quarter_sixth_controls": [],
+        "sigma_minus": [
+          -1,
+          3
+        ],
+        "sigma_plus": [
+          -1,
+          3
+        ],
+        "split_infinity": true
+      },
+      "proper_closure_recount": {
+        "affine_fibres": [
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 0,
+            "ys": [
+              8,
+              23
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 1,
+            "ys": [
+              2,
+              29
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 2,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 2,
+            "vs": [
+              0
+            ],
+            "x": 3,
+            "ys": [
+              1,
+              30
+            ]
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              14,
+              17
+            ],
+            "x": 4,
+            "ys": [
+              15,
+              16
+            ]
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              13,
+              18
+            ],
+            "x": 5,
+            "ys": [
+              15,
+              16
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 6,
+            "ys": [
+              10,
+              21
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              2,
+              29
+            ],
+            "x": 7,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 8,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              1,
+              30
+            ],
+            "x": 9,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 10,
+            "ys": [
+              12,
+              19
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              6,
+              25
+            ],
+            "x": 11,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 12,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              4,
+              27
+            ],
+            "x": 13,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              11,
+              20
+            ],
+            "x": 14,
+            "ys": [
+              1,
+              30
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 15,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 16,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              11,
+              20
+            ],
+            "x": 17,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              4,
+              27
+            ],
+            "x": 18,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 19,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              6,
+              25
+            ],
+            "x": 20,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 21,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 4,
+            "vs": [
+              1,
+              30
+            ],
+            "x": 22,
+            "ys": [
+              15,
+              16
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 23,
+            "ys": [
+              3,
+              28
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              2,
+              29
+            ],
+            "x": 24,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 25,
+            "ys": [
+              11,
+              20
+            ]
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              13,
+              18
+            ],
+            "x": 26,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              14,
+              17
+            ],
+            "x": 27,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [
+              0
+            ],
+            "x": 28,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 29,
+            "ys": []
+          },
+          {
+            "ordered_pairs": 0,
+            "vs": [],
+            "x": 30,
+            "ys": [
+              0
+            ]
+          }
+        ],
+        "infinity_count": 2,
+        "parameters": [
+          31,
+          1,
+          2
+        ],
+        "proper_count": 20
+      },
+      "row": {
+        "A": 1,
+        "B": 2,
+        "aD": -4,
+        "aE": 8,
+        "class": "positive_integer",
+        "delta": 1,
+        "oldMinus": 1,
+        "oldPlus": 1,
+        "p": 31,
+        "pointsD": 36,
+        "pointsE": 24,
+        "split": 2,
+        "splitMinus": 1,
+        "splitPlus": 1,
+        "splitZero": 0,
+        "tZ": 12,
+        "zPoints": 20
+      }
+    }
+  ],
+  "source": {
+    "after_artifact": {
+      "blob": "88360519800f8ba2f8f4de6d8e62b0a0190ea9e3",
+      "freeze": "075f9b203aefefb4a29f3279b6de1c4127093af6",
+      "path": "research/l-families/atlas/generalized/graded-completion-lab/arithmetic_radius.verification.json",
+      "sha256_lf": "1ea420619067b96aeb3990b06b0aeea455b723f6a3c457a7ea74f22b9913030d"
+    },
+    "after_producer": {
+      "blob": "f33245de6552337df00f65b0bf78621fa6d6d028",
+      "freeze": "075f9b203aefefb4a29f3279b6de1c4127093af6",
+      "path": "research/l-families/atlas/generalized/graded-completion-lab/arithmetic_radius_replay.py",
+      "sha256_lf": "2b68172bfaafb0a66a25b7e06d0bbca0b859effac60eccbb0f0da52c5a9bea89"
+    },
+    "after_proof": {
+      "blob": "cf8d794a35c2dc88eb86c1a6f62f6a06cbe3d03f",
+      "freeze": "075f9b203aefefb4a29f3279b6de1c4127093af6",
+      "path": "research/l-families/atlas/generalized/graded-completion-lab/ARITHMETIC_RADIUS_DICHOTOMY.md",
+      "sha256_lf": "9bff236f272e8aeda5ec3ce08ffd050188e04d7c7147e11e8e107b8c1ba1dd1e"
+    },
+    "finite_proof": {
+      "blob": "dfb7fcbf1115846664fa99e71116a3635b14d7a0",
+      "freeze": "0018b73f60e42bc793d172c381547de34322d8ca",
+      "path": "research/l-families/atlas/generalized/extension-order-defect/EXTENSION_ORDER_DEFECT.md",
+      "sha256_lf": "de1ed55a560e0f71602d7ff7f1a10b3a4ffe8b64d0089a087c6275aeed65945d"
+    },
+    "infinite_proof": {
+      "blob": "e506acc486ab34d292538fd500cf1ec5cdd81364",
+      "freeze": "b3fde737e790e38ae15c20ce0858e72104c55550",
+      "path": "research/l-families/atlas/generalized/extension-order-defect/INFINITE_EXTENSION_ORDER.md",
+      "sha256_lf": "7ac926d09ee3b9b098bce0a02c6745626a597856a98666bb864d33d6189b397d"
+    }
+  },
+  "total": 3044
+}
