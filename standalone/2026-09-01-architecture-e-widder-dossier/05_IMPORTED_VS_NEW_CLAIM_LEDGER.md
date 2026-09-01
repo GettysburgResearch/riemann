@@ -2,7 +2,7 @@
 
 Status: **LOCAL REVIEW LEDGER ONLY.  THESE ARE NOT CANONICAL REPOSITORY CLAIM IDS.**
 
-This ledger is intended to make dependency and novelty review mechanical.  `IMPORTED` means the dossier relies on a result already present at a frozen source head without upgrading its status.  `PROPOSED_NEW` means a proof is supplied in this packet or its immediate predecessor work and requires independent review.  `OPEN_EQUIVALENT` means the statement is explicitly RH-equivalent and remains unproved.  `FIREWALL` means a counterexample or logical obstruction is supplied or imported.
+This ledger makes dependency and novelty review mechanical.  `IMPORTED` means the dossier relies on a result already present at a frozen source head without upgrading its status.  `PROPOSED_NEW` means a proof is supplied in this packet or its immediate predecessor work and requires independent review.  `OPEN_EQUIVALENT` means the statement is explicitly RH-equivalent and remains unproved.  `FIREWALL` means a counterexample or logical obstruction is supplied or imported.
 
 ## 1. Source results
 
@@ -21,6 +21,7 @@ This ledger is intended to make dependency and novelty review mechanical.  `IMPO
 | `EW-I-008` | Segre defect self-duality and deformation-spectrum reciprocity are exact; purity is a separate temperedness inequality. | `IMPORTED` | PR #781 `ea282c4e73ecd2d8cad44587da5ffa135df67e98` | Functional equation versus purity separation. |
 | `EW-F-004` | Arithmetic Epstein/theta objects can have certified off-critical real and complex zeros. | `FIREWALL` | PR #781 same head | Refutes generic arithmetic wall protection. |
 | `EW-I-009` | Low-order safe-line Hausdorff/Pick/Stieltjes transforms and finite Xi Pick results survive with their integrated fixes. | `IMPORTED` | `main@6dda8b5125457ed936330229f8c9eb6491728e76` | Complete all-order sign remains RH-equivalent. |
+| `EW-I-010` | Every nontrivial zeta zero with `0<gamma<=3*10^12` lies on the critical line. | `IMPORTED` | Platt–Trudgian 2021; repository lock `EXT.XI.PLATT_TRUDGIAN.2021` | Rigorous interval/Turing verification; not rerun here; simplicity is not used. |
 
 ## 2. Review deductions
 
@@ -30,7 +31,7 @@ This ledger is intended to make dependency and novelty review mechanical.  `IMPO
 | `EW-R-002` | Architecture B is the strongest exact endpoint, provided its index counts distinct zero locations. | `PROPOSED_NEW` | review plus `EW-N-002` below | Multiplicity caveat is load-bearing. |
 | `EW-R-003` | Architecture C lacks a protected arithmetic invariant in the reviewed data. | `PROPOSED_NEW` | `01_FROZEN_SOURCE_REVIEW.md` | Epstein firewall. |
 | `EW-R-004` | Architecture D supplies duality but lacks a polarized realization and purity theorem. | `PROPOSED_NEW` | review of #769/#781 | Near-term algebraic programme, long route to RH. |
-| `EW-R-005` | Architecture E is the shortest coherent synthesis of the reviewed source and endpoint structures. | `PROPOSED_NEW` | `01_FROZEN_SOURCE_REVIEW.md` | Strategic assessment, not a theorem of external priority. |
+| `EW-R-005` | Architecture E is the shortest coherent synthesis of the reviewed source and endpoint structures. | `PROPOSED_NEW` | `01_FROZEN_SOURCE_REVIEW.md` | Strategic assessment, not an external-priority theorem. |
 
 ## 3. Source–Hermite–Stieltjes theorems
 
@@ -43,21 +44,27 @@ This ledger is intended to make dependency and novelty review mechanical.  `IMPO
 | `EW-N-005` | The safe Euler-axis Pick kernel is the imaginary-axis restriction of `B_X`. | `PROPOSED_NEW` | same, Section 7 | Functional-equation derivative signs. |
 | `EW-N-006` | RH is equivalent to `p(t)=F(sqrt(t))/sqrt(t)` being Stieltjes. | `PROPOSED_NEW` | same, Section 8 | Check converse analytic continuation. |
 | `EW-N-007` | A positive Stieltjes measure gives the exact two-channel Gram factorization of the safe Pick kernel. | `PROPOSED_NEW` | same, Section 9 | Elementary algebra. |
-| `EW-N-008` | `H[x]=L_{tp}[t]-D_xL_p[t]D_x`. | `PROPOSED_NEW` | same, Section 10; predecessor PR #784 | Check diagonal convention. |
+| `EW-N-008` | `H[x]=L_(tp)[t]-D_xL_p[t]D_x`. | `PROPOSED_NEW` | same, Section 10; predecessor PR #784 | Check diagonal convention. |
 | `EW-N-009` | RH is equivalent to accretivity of the explicit gamma-plus-prime-shift operator on all finite exponential polynomials. | `PROPOSED_NEW` | same, Section 11 | Relies on all-order safe Pick equivalence. |
 | `EW-N-010` | On the positive quadrant, `A_Phi={H_Phi,{M,H_Phi}}`. | `PROPOSED_NEW` | same, Section 12 | Anticommutator, not square. |
 
-## 4. E–Widder endpoint
+## 4. E–Widder endpoint and finite-height closure
 
 | Local label | Statement | Status | Proof/source | Review sensitivity |
 |---|---|---|---|---|
 | `EW-W-001` | There is a unique entire `mathfrak X` with `mathfrak X(s(s-1))=xi_R(s)`, of order at most `1/2`. | `PROPOSED_NEW` | `03_E_WIDDER_SCALAR_ENDPOINT.md`, Section 1 | Even-entire descent and order conversion. |
 | `EW-W-002` | `q(u)=2 mathfrak X'(u)/mathfrak X(u)` is positive for every `u>0`. | `PROPOSED_NEW` | same, Sections 1–2 | Uses positivity of the actual theta kernel. |
 | `EW-W-003` | RH implies `q(u)=2 sum m_gamma/(u+gamma^2+1/4)`. | `PROPOSED_NEW` | same, Section 4 | Genus-zero product and multiplicities. |
-| `EW-W-004` | RH is equivalent to `(-1)^{k-1}D^{2k-1}[u^kq(u)]>=0` for every `u>0,k>=1`. | `PROPOSED_NEW` using `CLASSICAL IMPORT` | same, Sections 3–6; Widder/Sokal theorem | Central theorem of this dossier. |
-| `EW-W-005` | The Widder functional equals an explicit archimedean reserve minus an absolutely convergent von Mangoldt sum at `s>1`. | `PROPOSED_NEW` | same, Sections 7–8 | Check `2/u` cancellation and differentiated convergence. |
-| `EW-W-006` | False RH produces a finite strict certificate at integer `k`, rational `u`, and finite directed prime cutoff. | `PROPOSED_NEW` | same, Section 11 | Requires strict continuity and tail enclosure. |
-| `EW-W-OPEN` | The E–Widder source inequality `(EW)` holds for all `u>0,k>=1`. | `OPEN_EQUIVALENT` | `03_E_WIDDER_SCALAR_ENDPOINT.md`, Section 9 | Proving this proves RH. |
+| `EW-W-004` | RH is equivalent to `(-1)^(k-1)D^(2k-1)[u^kq(u)]>=0` for every `u>0,k>=1`. | `PROPOSED_NEW` using `CLASSICAL IMPORT` | same, Sections 3–6; Widder/Sokal theorem | Central all-order equivalence. |
+| `EW-W-005` | The Widder functional equals an explicit archimedean reserve minus an absolutely convergent von Mangoldt sum at `s>1`. | `PROPOSED_NEW` | same, Sections 7–9 | Check `2/u` cancellation and differentiated convergence. |
+| `EW-W-006` | False RH produces a finite strict certificate at integer `k`, rational `u`, and finite directed prime cutoff. | `PROPOSED_NEW` | same, Section 12 | Requires strict continuity and tail enclosure. |
+| `EW-W-007` | For the full Widder quantities, one invariant atom contributes `(n+k)! a^k/(u+a)^(n+k+1)`. | `PROPOSED_NEW` | `08_FINITE_HEIGHT_WIDDER_CONE.md`, Section 2 | Check orbit multiplicity and local convergence. |
+| `EW-W-008` | An off-line conjugate pair has phase bounded by `max(k,n+1)*arg(a)`, uniformly in `u>0`, and `|arg(a)|<arctan(1/|gamma|)`. | `PROPOSED_NEW` | same, Section 3 | Core angular lemma. |
+| `EW-W-009` | RH verified through height `H` implies `F_(n,k)(u)>0` whenever `max(k,n+1) arctan(1/H)<pi/2`. | `PROPOSED_NEW` | same, Section 4 | General finite-height-to-finite-cone theorem. |
+| `EW-W-010` | With `H=3*10^12`, the complete full Widder cone is positive through `max(k,n+1)<=4,710,000,000,000`. | `PROPOSED_NEW` using `IMPORTED` height | same, Section 5 | Uses `M/H=157/100` and `pi>3.14`. |
+| `EW-W-011` | The E–Widder prime/source inequality is strict for every `u>0` and `1<=k<=4,710,000,000,000`. | `PROPOSED_NEW` | same, Section 6 | Actual finite-order closure of `(EW)`. |
+| `EW-W-012` | A negative order-`k` Widder functional forces an off-line zero below `cot(pi/(2k))`. | `PROPOSED_NEW` | same, Section 7 | One-way localization only. |
+| `EW-W-OPEN` | The E–Widder source inequality holds for all `u>0` and unbounded `k`. | `OPEN_EQUIVALENT` | `03_E_WIDDER_SCALAR_ENDPOINT.md`, Section 11 | Proving this proves RH. |
 
 ## 5. Firewalls proved or imported in the successor work
 
@@ -69,6 +76,7 @@ This ledger is intended to make dependency and novelty review mechanical.  `IMPO
 | `EW-F-008` | Fixed finite Pick/Loewner order does not imply the all-order Stieltjes hierarchy. | `FIREWALL` | same, Section 11 | New all-order recurrence required. |
 | `EW-F-009` | Direct absolute Euler generating sums stop at the boundary before the RH-detecting annulus. | `FIREWALL` | same, Section 12; imported safe-line square-root transform | E–Widder avoids the annulus but not the sign. |
 | `EW-F-010` | Replacing `L_k` by absolute values erases the load-bearing signed interference. | `FIREWALL` | same, Section 13 | Preserve the signed source before estimates. |
+| `EW-F-011` | A finite verified height yields only a finite Widder cone; it cannot be promoted to unbounded order. | `FIREWALL` | `08_FINITE_HEIGHT_WIDDER_CONE.md`, Section 8 | The remaining height-free mechanism is RH-bearing. |
 
 ## 6. Classical imports
 
@@ -79,11 +87,12 @@ The following are used as named classical inputs, not claimed new:
 3. canonical-product logarithmic derivative identities;
 4. the Hermite–Biehler/de Branges and generalized-Schur kernel framework;
 5. the Bernstein–Hausdorff–Widder theorem;
-6. Widder's 1938 characterization of Stieltjes functions, in the reduced form `F_{k-1,k}>=0`;
+6. Widder's 1938 characterization of Stieltjes functions, in the reduced form `F_(k-1,k)>=0`;
 7. the cut-plane analytic characterization of Stieltjes functions;
 8. the Euler formula for `xi'/xi` on `Re(s)>1`;
 9. Hudson's theorem for pure-state Wigner positivity;
-10. standard operator-monotone/Stieltjes and complete-Bernstein correspondences where invoked.
+10. standard operator-monotone/Stieltjes and complete-Bernstein correspondences where invoked;
+11. the elementary inequalities `arctan y<y` and `pi>3.14`.
 
 Every final proof should pin exact editions/theorem numbers before external publication.
 
@@ -91,12 +100,14 @@ Every final proof should pin exact editions/theorem numbers before external publ
 
 This ledger does not claim:
 
-- an unconditional proof of `(EW)`;
+- the all-order E–Widder inequality;
 - RH or GRH;
+- that the Platt–Trudgian computation was rerun;
 - an external novelty or priority determination;
 - that predecessor proposed claims have passed canonical integration review;
-- a new zero-free region;
+- a new zero-free region beyond the imported finite verification;
 - a certified off-line zero of the Riemann zeta function;
-- that finite symbolic checks prove any continuum positivity theorem.
+- that finite symbolic checks prove any continuum positivity theorem;
+- that the finite order `4.71*10^12` can be extrapolated to all order.
 
 The purpose of the ledger is to prevent accidental promotion, hidden imports and circular restatement.
