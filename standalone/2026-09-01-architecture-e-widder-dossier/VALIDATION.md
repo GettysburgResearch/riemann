@@ -11,18 +11,24 @@ branch:     research/gpt56-pro/20260901-architecture-e-widder-dossier
 packet:     standalone/2026-09-01-architecture-e-widder-dossier/
 ```
 
-The branch was created directly from the stated `main` commit.  It does not modify the reviewed source PRs, source experiments, canonical registries or production paths.
+The branch is standalone.  It does not modify the reviewed source PRs,
+source experiments, canonical registries or production paths.
 
-## 2. Bounded checkers
+## 2. Bounded exact checkers
 
 Run from the repository root:
 
 ```bash
 python -B standalone/2026-09-01-architecture-e-widder-dossier/verify_widder_atom.py
 python -B standalone/2026-09-01-architecture-e-widder-dossier/verify_height_order_geometry.py
+python -B standalone/2026-09-01-architecture-e-widder-dossier/verify_order_product_and_reciprocal.py
+python -B standalone/2026-09-01-architecture-e-widder-dossier/verify_invariant_resolvent.py
+python -B standalone/2026-09-01-architecture-e-widder-dossier/verify_theta_darboux_andreief.py
 ```
 
-The first authoring execution produced
+The authoring runs produced the following exact-rational counts.
+
+### Original Widder, recurrence and Loewner checker
 
 ```text
 PASS_ARCHITECTURE_E_WIDDER_EXACT_CHECKS
@@ -35,7 +41,7 @@ total=217
 RH_UNPROVED
 ```
 
-The second exact-rational authoring calculation produced the equivalent count profile
+### Finite-height angular checker
 
 ```text
 PASS_FINITE_HEIGHT_WIDDER_CONE_EXACT_CHECKS
@@ -48,70 +54,81 @@ ALL_ORDER_EW_OPEN
 RH_UNPROVED
 ```
 
-The second committed script was reconstructed in the authoring environment with the same rational panels and all 66 controls passed.  Both checkers use only Python's standard library and exact `Fraction` arithmetic.
+### Order-product, reciprocal and Bernoulli-string checker
 
-Combined bounded controls:
+```text
+PASS_ORDER_PRODUCT_AND_RECIPROCAL_EXACT_CHECKS
+total=173
+RH_UNPROVED
+```
+
+The detailed component count is printed by the committed script.
+
+### Invariant resolvent and heat-moment checker
+
+```text
+PASS_INVARIANT_WIDDER_RESOLVENT_EXACT_CHECKS
+matching_scale=18
+resolvent=18
+pair_numerator=27
+pair_threshold=12
+normalized_recurrence=72
+heat_moment=72
+total=219
+ALL_ORDER_SOURCE_SIGN_OPEN
+RH_UNPROVED
+```
+
+### Theta--Darboux/Andreief checker
+
+```text
+PASS_THETA_DARBOUX_ANDREIEF_EXACT_CHECKS
+lowering_coefficients=1036
+pascal_minors=6
+composition_minors=6
+self_adjointness=51
+andreief=3
+total=1102
+WEIGHTED_THETA_DARBOUX_SIGN_OPEN
+RH_UNPROVED
+```
+
+Combined bounded authoring controls:
 
 \[
- 217+66=283.
+ \boxed{217+66+173+219+1102=1777.}
 \]
 
-## 3. What the first checker authenticates
+Every checker uses only Python's standard library and exact `Fraction`
+arithmetic.
 
-The 217 controls cover:
+## 3. What the checks authenticate
 
-1. the single-positive-Stieltjes-atom identity
-   \[
-   (-1)^{k-1}D^{2k-1}\left[\frac{u^k}{u+a}\right]
-   =(2k-1)!\frac{a^k}{(u+a)^{2k}};
-   \]
-2. the differential recurrence
-   \[
-   W_{k+1}=-uW_k''-(2k+1)W_k';
-   \]
-3. the lower-order recurrence
-   \[
-   Q_{k+1}=uQ_k'+(k+1)Q_k;
-   \]
-4. the normalized microscope identity
-   \[
-   \frac{(4u)^k}{2(2k-1)!}W_k^{\rm atom}
-   =\left[\frac{4ua}{(u+a)^2}\right]^k;
-   \]
-5. the Loewner-difference identity, including diagonal cells.
+The 1777 controls cover finite instances of:
 
-## 4. What the finite-height checker authenticates
+1. positive and complex Widder atom identities;
+2. the `W_k`, `Q_k` and normalized `C_k` differential recurrences;
+3. the invariant Hausdorff microscope;
+4. the Loewner-difference identity, including diagonal cells;
+5. the finite-height angular bound and the exact published height/order ratio;
+6. the radial order product and reciprocal rectangle identities;
+7. finite Bernoulli-string/quasi-free algebra;
+8. the matching-scale transformed atom and its interior pole;
+9. the closed invariant resolvent formula;
+10. the exact conjugate-pair numerator and positivity threshold;
+11. the Widder-to-heat Laplace moment identity;
+12. the coefficient-lowering law `L b_n=b_(n-1)` on truncated exact series;
+13. Pascal and coefficient-kernel total-positivity controls;
+14. formal self-adjointness against a Gaussian test source;
+15. finite weighted Cauchy--Binet/Andreief identities.
 
-The 66 new controls cover:
+These are regression checks for algebra, indexing and normalization.  They are
+not substitutes for the written continuum proofs.
 
-1. the full complex-atom Widder identity
-   \[
-   (-1)^nD^{n+k}\left[\frac{u^k}{u+a}\right]
-   =(n+k)!\frac{a^k}{(u+a)^{n+k+1}}
-   \]
-   on exact rational complex atoms;
-2. the exact diagonal phase formulas for
-   \[
-   z=\frac{a}{(u+a)^2};
-   \]
-3. positivity of `Re z` on the checked right-half-plane panels;
-4. the algebraic angular domination
-   \[
-   |\arg z|\le|\arg a|
-   \]
-   in its tangent cross-multiplication form;
-5. the exact published height/order ratio
-   \[
-   \frac{4{,}710{,}000{,}000{,}000}
-        {3{,}000{,}000{,}000{,}000}
-   =\frac{157}{100}.
-   \]
+## 4. Imported external inputs
 
-The checkers are regression controls for algebra and indexing.  They are not substitutes for the written continuum proof.
-
-## 5. Imported external theorem
-
-The finite-height Widder theorem imports the published Platt–Trudgian result that all nontrivial zeta zeros through height
+The finite-height conclusions import the published Platt--Trudgian result that
+all nontrivial zeta zeros through height
 
 \[
  3\cdot10^{12}
@@ -123,64 +140,68 @@ lie on the critical line.  The repository source lock is
 EXT.XI.PLATT_TRUDGIAN.2021
 ```
 
-The external interval computation and Turing count were not rerun in this pass.  No stronger zero-height statement is inferred.
+The external interval computation and Turing count were not rerun.
 
-## 6. Remote readback
+The dossier also cites recent primary-source results on a centered Toeplitz
+cubic wedge and strict total positivity of the modified-Bessel spectral
+kernel.  Their statements are imported only at the scopes recorded in the
+literature and claim-ledger files.  No external computation or proof was
+replayed by these rational checkers.
 
-The original checker was read back from the remote branch with blob identity
-
-```text
-0b791b399214eb91b0a5e6a93610019238fab02a
-```
-
-The new theorem note and finite-height checker were also created through the GitHub contents API and their branch residency is checked again at the final remote-head audit.
-
-## 7. Analytic content not machine-certified
+## 5. Analytic content not machine-certified
 
 The checkers do **not** establish:
 
-- existence, positivity or exact normalization of the full Riemann theta kernel;
-- the canonical-product expansions for `X` or `mathfrak X`;
-- orbit multiplicity and local-uniform convergence in the infinite zero sum;
+- existence, positivity or exact normalization of the full Riemann theta
+  kernel;
+- the infinite canonical products for `X` or `mathfrak X`;
+- orbit multiplicity and normal convergence in every infinite zero sum;
 - the negative-square theorem for the infinite zero set;
-- the Fourier transform from `A_Phi` to `B_X`;
-- the Stieltjes continuation converse;
-- the application of Widder's theorem to `q`;
-- differentiated infinite Euler-series interchange in every declared regime;
-- the published zero verification itself;
-- the continuum angular theorem for all zero atoms;
-- positivity at unbounded Widder order;
-- the all-order E–Widder inequality;
+- the source-polarization Fourier bridge;
+- the Stieltjes/Widder converse to RH;
+- the published finite-height verification;
+- the continuum angular and terminal-annulus theorems;
+- the infinite radial determinant and count-law product interchanges;
+- the one-scale `PF_infinity`/Poisson-binomial converse;
+- the theta mixture or Fredholm determinant closure;
+- strict total positivity of the complete infinite coefficient kernel beyond
+  the written proof;
+- the infinite theta--Darboux/Andreief integral and its weighted sign;
+- complete monotonicity of the fixed-centre heat trace;
+- the all-order E--Widder source inequality;
 - RH or GRH.
 
-These are mathematical proof obligations and must be checked independently.
+These remain mathematical proof obligations and require independent review.
 
-## 8. Review checklist
+## 6. Review order for the latest pass
 
-A reviewer should perform at least the following:
+A reviewer should reconstruct, in this order:
 
-1. verify every frozen source head and imported statement;
-2. reconstruct the companion/Hermite congruence;
-3. check the feature-space negative-index proof and multiplicity caveat;
-4. rederive the source transport equation and factor four;
-5. check the Stieltjes converse on the cut plane;
-6. pin Widder/Sokal's exact reduced condition;
-7. verify the invariant entire descent and order conversion;
-8. audit the Euler-safe source expansion and all fixed-order interchanges;
-9. reconstruct the full complex-atom formula;
-10. verify the phase interval and the bound `|arg a|<arctan(1/|gamma|)`;
-11. check the use and scope of the Platt–Trudgian theorem;
-12. verify the strict `4.71*10^12` corollary and one-way failure localization;
-13. rerun both exact checkers from committed bytes.
+1. the invariant entire descent and genus-zero orbit product;
+2. the radial product/resolvent factorization and matching-pole residue;
+3. the exact conjugate-pair positivity threshold;
+4. the sharp direct-Euler half-ray and verified-height terminal annulus;
+5. the identity between `K(t)` and the fixed-centre zero heat trace;
+6. the Widder-to-heat moment bridge and Guinand--Weil normalization;
+7. positivity and the lowering law for the coefficient basis `b_n`;
+8. strict total positivity of the Pascal/Bessel coefficient kernel;
+9. repeated self-adjoint transport of `L` onto the actual theta source;
+10. the factor and determinant orientation in the Andreief formula;
+11. the distinction between pointwise theta--Darboux positivity, which is not
+    asserted, and the weighted gate actually required;
+12. replay all five committed checkers from their remote bytes.
 
-## 9. Current exact boundary
+## 7. Current exact boundary
 
 ```text
-remote packet residency                         CONFIRM AT FINAL HEAD
-bounded rational algebra                        283 AUTHORING CHECKS PASSED
-repository-wide CI                              NOT RUN
-analytic proof review                           REQUIRED
-E-Widder inequality through 4.71*10^12          PROPOSED COMPLETE / REVIEW
-all-order E-Widder inequality                   OPEN / RH-EQUIVALENT
-Riemann Hypothesis                              UNPROVED
+remote packet residency                             CONFIRM AT FINAL HEAD
+bounded exact authoring algebra                      1777 CONTROLS PASSED
+repository-wide CI                                  NOT RUN
+analytic proof review                               REQUIRED
+E-Widder inequality through 4.71*10^12              PROPOSED COMPLETE / REVIEW
+resummed radial positivity through terminal cutoff  PROPOSED COMPLETE / REVIEW
+fixed-centre heat and theta-Darboux identities       PROPOSED COMPLETE / REVIEW
+weighted theta-Darboux / quasi-free completion       OPEN / RH-EQUIVALENT
+all-order E-Widder source inequality                 OPEN / RH-EQUIVALENT
+Riemann Hypothesis                                   UNPROVED
 ```
