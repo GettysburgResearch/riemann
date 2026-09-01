@@ -1,162 +1,56 @@
-# Architecture E and the E–Widder source criterion
+# Architecture E: invariant determinant, theta–Fock gate, and E–Widder source criterion
 
 Status: **PROPOSED PROOF-ORIENTED DOSSIER; INDEPENDENT REVIEW REQUIRED; RH REMAINS UNPROVED.**
 
-This standalone packet collects the complete mathematical output of the review and proof passes over PRs #765, #766, #769, #770, and #781, together with the source–Hermite–Stieltjes closure, the scalar E–Widder compression, and the latest finite-height theorem proving more than four trillion complete Widder orders.
+This packet collects the full review of PRs #765, #766, #769, #770 and #781,
+the source–Hermite–Stieltjes closure, the invariant E–Widder criterion, the
+finite-height cone through trillions of orders, and the latest structural
+advance: one exact radial determinant and one explicit theta–Fock mixture
+whose source-local quasi-free closure would prove RH.
 
-No predecessor branch is modified.  No theorem in this packet is to be read as an accepted repository claim before independent proof review.  The all-order arithmetic inequality remains unproved, so the Riemann Hypothesis remains unproved.
+No predecessor branch is modified.  No proposed claim is promoted to
+canonical status.  The all-order E–Widder inequality and RH remain unproved.
 
-## Current leading state
-
-Put
-
-\[
- \xi_{\rm R}(s)
- =\frac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),
- \qquad
- u=s(s-1),
-\]
-
-and, for `u>0`,
-
-\[
- x=\sqrt{u+\frac14},
- \qquad
- s=\frac12+x>1.
-\]
-
-Define the safe invariant logarithmic derivative
-
-\[
- \boxed{
- q(u)=
- \frac1{\sqrt{u+\frac14}}
- \frac{\xi_{\rm R}'}{\xi_{\rm R}}
- \left(\frac12+\sqrt{u+\frac14}\right).
- }
-\]
-
-The actual positive theta kernel makes `q(u)>0` unconditionally.  For every integer `k>=1`, set
-
-\[
- \boxed{
- \mathcal W_k(u)
- =(-1)^{k-1}
- \frac{d^{2k-1}}{du^{2k-1}}
- \bigl[u^kq(u)\bigr].
- }
-\]
-
-The all-order endpoint is
-
-\[
- \boxed{
- \mathrm{RH}
- \iff
- \mathcal W_k(u)\ge0
- \quad\hbox{for every }u>0\hbox{ and every }k\ge1.
- }
-\]
-
-The reverse implication is Widder's characterization of Stieltjes functions applied in the functional-equation invariant coordinate `u=s(s-1)`.
-
-### New unconditional finite-order theorem
+## 1. Current leading state
 
 Let
 
 \[
- F_{n,k}(u)=(-1)^nD_u^{n+k}[u^kq(u)].
+ \mathfrak X(s(s-1))=\xi_{\rm R}(s),
+ \qquad
+ u>0,
+ \qquad
+ x=\sqrt{u+\frac14},
+ \qquad
+ s=\frac12+x>1,
 \]
 
-Using the invariant genus-zero zero product, the exact atom formula
+and define
 
 \[
- F_{n,k}(u)
- =2(n+k)!\sum_a\frac{a^k}{(u+a)^{n+k+1}},
- \qquad a=-\rho(\rho-1),
+ q(u)=2\frac{\mathfrak X'(u)}{\mathfrak X(u)}
+ =\frac1x\frac{\xi_{\rm R}'}{\xi_{\rm R}}(s).
 \]
 
-and a new angular lemma for conjugate off-line invariant atoms, the dossier now proves the following height–order theorem:
-
-> If RH is verified through height `H`, then `F_(n,k)(u)>0` for every `u>0` whenever
-> 
-> \[
->  \max\{k,n+1\}\arctan(1/H)<\pi/2.
-> \]
-
-The published Platt–Trudgian verification through
+For `k>=1`,
 
 \[
- H=3\cdot10^{12}
+ \mathcal W_k(u)=(-1)^{k-1}D_u^{2k-1}[u^kq(u)].
 \]
 
-therefore gives
+The dossier proves the proposed exact chain
 
 \[
  \boxed{
- F_{n,k}(u)>0
- \quad\text{for every }u>0
- \quad\text{whenever}\quad
- \max\{k,n+1\}\le4{,}710{,}000{,}000{,}000.
+ \mathrm{RH}
+ \iff q\text{ is Stieltjes}
+ \iff \mathcal W_k(u)\ge0
+ \quad(\forall u>0,\ k\ge1).
  }
+ \tag{1.1}
 \]
 
-In particular,
-
-\[
- \boxed{
- \mathcal W_k(u)>0
- \quad
- (u>0,\ 1\le k\le4{,}710{,}000{,}000{,}000).
- }
-\]
-
-No simplicity hypothesis is used.  The external zero computation is imported through the repository's existing exact source lock and was not rerun.
-
-The proof also gives the failure-localization rule
-
-\[
- \mathcal W_k(u)<0
- \Longrightarrow
- \text{an off-line zero exists below height }
- \cot\left(\frac\pi{2k}\right).
-\]
-
-This is one-way: a zero below that height is not claimed to force a negative complete sum at the same order.
-
-## Euler-safe source form
-
-The Euler-safe expansion is
-
-\[
- q(u)=
- \frac2u
- +\frac{\psi(s/2)-\log\pi}{2x}
- -\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\frac{e^{-x\log n}}x.
-\]
-
-The `2/u` term is killed by every Widder differential operator.  Define
-
-\[
- \mathcal G_k(u)=
- (-1)^{k-1}D_u^{2k-1}
- \left[
-  \frac{u^k}{2x}
-  \bigl(\psi(s/2)-\log\pi\bigr)
- \right]
-\]
-
-and
-
-\[
- \mathcal L_k(u,\ell)=
- (-1)^{k-1}D_u^{2k-1}
- \left[
-  \frac{u^k}{x}e^{-\ell x}
- \right].
-\]
-
-Then
+On the Euler-safe half-plane,
 
 \[
  \mathcal W_k(u)
@@ -165,38 +59,330 @@ Then
   \mathcal L_k(u,\log n),
 \]
 
-where every differentiated prime-power series converges absolutely because `s>1`.
-
-Consequently the E–Widder source inequality
+with absolute convergence after every fixed order of differentiation.  Thus
+the remaining arithmetic theorem is
 
 \[
  \boxed{
  \sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
  \mathcal L_k(u,\log n)
- < \mathcal G_k(u)
+ \le\mathcal G_k(u)
+ \qquad(u>0,\ k\ge1).
  }
  \tag{EW}
 \]
 
-is now proved for every `u>0` and every integer
+## 2. New leverage I — all Widder orders form one radial determinant
+
+Let `a` run over the invariant zero parameters
 
 \[
- 1\le k\le4{,}710{,}000{,}000{,}000.
+ a=-\rho(\rho-1).
 \]
 
-The same inequality for **all** `k` remains open and is RH-equivalent.  The first order not paid by the imported finite-height theorem is `4,710,000,000,001`; that integer has no intrinsic meaning beyond marking the current angular budget.
+Define
 
-## Complete architecture
+\[
+ \lambda_u(a)=\frac{4ua}{(u+a)^2},
+ \qquad
+ C_k(u)=\frac{(4u)^k}{2(2k-1)!}\mathcal W_k(u).
+\]
 
-The dossier proves or imports, with exact provenance, the chain
+Then, without assuming RH,
+
+\[
+ \boxed{C_k(u)=\sum_a\lambda_u(a)^k.}
+ \tag{2.1}
+\]
+
+For nonzero `r`, put
+
+\[
+ w=-\frac{(r-1)^2}{4r}.
+\]
+
+The complete order product is
+
+\[
+ \boxed{
+ \Delta_u(w)
+ =\prod_a(1-w\lambda_u(a))
+ =\frac{\mathfrak X(ur)\mathfrak X(u/r)}
+        {\mathfrak X(u)^2}.
+ }
+ \tag{2.2}
+\]
+
+Hence
+
+\[
+ \boxed{
+ \sum_{k\ge1}C_k(u)w^{k-1}
+ =-\frac{\Delta_u'(w)}{\Delta_u(w)}
+ =\frac{2u[r^2q(ur)-q(u/r)]}{r^2-1}.
+ }
+ \tag{2.3}
+\]
+
+On the unit circle, `r=e^(i theta)` and
+`w=sin^2(theta/2)`,
+
+\[
+ \boxed{
+ \Delta_u(w)
+ =\frac{|\mathfrak X(ue^{i\theta})|^2}{\mathfrak X(u)^2}.
+ }
+ \tag{2.4}
+\]
+
+The invariant function has strictly positive coefficients, so
+
+\[
+ 0\le\Delta_u(w)\le1
+ \qquad(0\le w\le1)
+\]
+
+unconditionally.  Therefore
+
+\[
+ -\log\Delta_u(w)
+ =\sum_{k\ge1}\frac{C_k(u)}k w^k\ge0
+\]
+
+through its first zero barrier.  This is a genuine all-order averaged
+positivity theorem.  The remaining strengthening is coefficientwise
+positivity of every `C_k(u)`.
+
+A nonreal invariant atom `a=|a|e^(i alpha)` creates, at `u=|a|`, the interior
+order pole
+
+\[
+ w_a=\cos^2(\alpha/2)\in(1/2,1).
+\]
+
+Thus
+
+\[
+ \boxed{
+ \mathrm{RH}
+ \iff
+ -\Delta_u'(w)/\Delta_u(w)
+ \text{ is holomorphic in }|w|<1
+ \text{ for every }u>0.
+ }
+ \tag{2.5}
+\]
+
+Read
+[`09_INVARIANT_ORDER_PRODUCT_AND_COUNT_LAW.md`](09_INVARIANT_ORDER_PRODUCT_AND_COUNT_LAW.md).
+
+## 3. New leverage II — one positive count law
+
+Write
+
+\[
+ \mathfrak X(u)=\sum_{n\ge0}c_nu^n.
+\]
+
+The split theta integral gives `c_n>0` for every `n`.  For each `v>0`,
+
+\[
+ P_v(z)=\frac{\mathfrak X(vz)}{\mathfrak X(v)}
+ =\sum_{n\ge0}p_n(v)z^n
+\]
+
+is therefore a probability-generating function.
+
+For one, equivalently every, `v>0`,
+
+\[
+ \boxed{
+ \mathrm{RH}
+ \iff (p_n(v))\in PF_\infty
+ \iff P_v\text{ is Poisson-binomial}
+ \iff P_v(z)=\det(I-K_v+zK_v)
+ }
+ \tag{3.1}
+\]
+
+for one positive trace-class contraction `K_v`.
+
+This is a one-scale constructive endpoint: build `K_v` directly from the
+theta/prime source and RH follows.
+
+## 4. New leverage III — explicit theta–Fock mixture
+
+The logarithmic theta coordinate gives
+
+\[
+ \mathfrak X(v)
+ =\frac12+2v\int_0^\infty
+ e^{\tau/2}\psi(e^{2\tau})
+ \cosh\left(\tau\sqrt{v+\frac14}\right)d\tau.
+\]
+
+For fixed `tau`,
+
+\[
+ \frac{\cosh(\tau\sqrt{vz+1/4})}
+      {\cosh(\tau\sqrt{v+1/4})}
+ =\prod_{j\ge0}(1-p_j+p_jz),
+\]
+
+where
+
+\[
+ p_j=p_j(\tau;v)
+ =\frac{v}{v+\frac14+\pi^2(j+1/2)^2/\tau^2}.
+\]
+
+Consequently `P_v` is exactly
+
+```text
+a vacuum atom at N=0
++
+a positive theta mixture of counts
+N=1+sum_j independent Bernoulli(p_j(tau;v)).
+```
+
+Every fiber is a fermionic quasi-free determinant.  The completed arithmetic
+law is a positive mixture of those determinants.  RH is equivalent to this
+specific mixture itself being one determinant.
+
+The exact gate is:
+
+> **Theta quasi-free gate `TQF(v)`.** Construct from the theta source one
+> positive trace-class contraction `K_v` satisfying
+> 
+> \[
+>  \mathfrak X(vz)/\mathfrak X(v)=\det(I-K_v+zK_v).
+> \]
+
+A direct integral or convexly averaged fiber operator is insufficient: an
+arithmetic mixture of determinants is not the determinant of the average.
+The latent theta selector must be removed by a genuine exterior-power,
+conservative-colligation or planar-network theorem.
+
+The fiber coefficient kernel is
+
+\[
+ [v^n]\cosh\left(\tau\sqrt{v+\frac14}\right)
+ =\frac{\sqrt\pi}{2n!}
+  \tau^{n+1/2}I_{n-1/2}(\tau/2).
+\]
+
+A July 2026 theorem of D. S. P. Salazar proves strict total positivity of
+`(x,s)->I_s(x)`.  This supplies a serious Darboux mechanism before theta
+mixing; the common-selector composition theorem is the precise missing step.
+
+Read
+[`10_THETA_FOCK_MIXTURE_AND_QUASIFREE_GATE.md`](10_THETA_FOCK_MIXTURE_AND_QUASIFREE_GATE.md).
+
+## 5. New leverage IV — Toeplitz sector, cubic tail, and reciprocal duality
+
+Let
+
+\[
+ G(z)=\frac18\xi_{\rm R}\left(\frac12+\frac{\sqrt z}{2}\right)
+ =\sum a_nz^n.
+\]
+
+Then
+
+\[
+ \mathfrak X(u)=8G(4u+1).
+\]
+
+A July 2026 theorem of W. Michałowski proves for the centered coefficients
+
+\[
+ D^G_{r,k}>0
+ \qquad(k\ge10^{18}r^3).
+\]
+
+The same paper records the Schoenberg-sector consequence of the verified zero
+height.  Conservatively, for both centered and invariant coefficients,
+
+\[
+ r\le9{,}419{,}999{,}999{,}999
+ \Longrightarrow
+ \text{all Toeplitz minors of order }r\text{ are nonnegative at every shift}.
+\]
+
+The cubic wedge is imported only for the centered sequence; no unproved
+translation of its constant is made.
+
+For any normalized sequence
+
+\[
+ A(z)=\sum\alpha_nz^n,
+ \qquad
+ B(z)=1/A(-z)=\sum\beta_nz^n,
+\]
+
+the new exact reciprocal rectangle identity is
+
+\[
+ \boxed{
+ \det[\alpha_{k+j-i}]_{i,j=0}^{r-1}
+ =
+ \det[\beta_{r+j-i}]_{i,j=0}^{k-1}.
+ }
+ \tag{5.1}
+\]
+
+It is the equality of the dual and ordinary Jacobi--Trudi formulas for the
+same rectangle.  Large order at fixed shift becomes fixed order at large
+shift in the reciprocal, bosonic coordinate.
+
+This does not manufacture finite-order reciprocal closure, but it opens a
+second tail and makes the quasi-free endpoint literal fermion--boson Schur
+positivity.
+
+Read
+[`11_TOEPLITZ_SECTOR_AND_RECIPROCAL_DUALITY.md`](11_TOEPLITZ_SECTOR_AND_RECIPROCAL_DUALITY.md).
+
+## 6. Previous finite-height theorem retained
+
+For
+
+\[
+ F_{n,k}(u)=(-1)^nD_u^{n+k}[u^kq(u)],
+\]
+
+the invariant atom formula and angular theorem imply:
+
+> If RH is verified through height `H`, then `F_(n,k)(u)>0` for all `u>0`
+> whenever
+> 
+> \[
+>  \max\{k,n+1\}\arctan(1/H)<\pi/2.
+> \]
+
+Using the repository's conservative Platt--Trudgian lock `H=3*10^12`,
+
+\[
+ \boxed{
+ F_{n,k}(u)>0
+ \quad\text{when}\quad
+ \max\{k,n+1\}\le4{,}710{,}000{,}000{,}000.
+ }
+\]
+
+In particular `(EW)` is strict for every `u>0` through the same Widder order.
+No simplicity assumption is used, and the external computation was not
+rerun.
+
+Read
+[`08_FINITE_HEIGHT_WIDDER_CONE.md`](08_FINITE_HEIGHT_WIDDER_CONE.md).
+
+## 7. Complete Architecture E chain
 
 \[
  \begin{array}{c}
  \text{actual theta source }\Phi\\
  \Downarrow\\
- \mathcal A_\Phi(a,b)
- =\frac12\displaystyle\int_{|a+b|}^{\infty}
- \xi H_\xi(a-b)\,d\xi\\
+ \mathcal A_\Phi\\
  \Updownarrow\\
  K_0\succeq0\\
  \Updownarrow\\
@@ -204,95 +390,81 @@ The dossier proves or imports, with exact provenance, the chain
  \Updownarrow\\
  \Theta_\lambda\text{ has zero negative squares}\\
  \Updownarrow\\
- q\text{ is a Stieltjes function}\\
+ q\text{ is Stieltjes}\\
  \Updownarrow\\
  \mathcal W_k(u)\ge0\quad(\forall u,k)\\
+ \Updownarrow\\
+ \text{one-scale count law is }PF_\infty\\
+ \Updownarrow\\
+ \text{one theta-built quasi-free determinant}\\
  \Updownarrow\\
  \mathrm{RH}.
  \end{array}
 \]
 
-All translation arrows are explicit.  The only conclusion-bearing content still unproved is positivity for unbounded Widder order, equivalently all-order `(EW)`.
-
-## Frozen review boundary
-
-This packet freezes the following exact source states.  Later movement on any source branch is outside the present claims unless separately audited.
-
-| Source | Frozen head | Role |
-|---|---|---|
-| `main` | `6dda8b5125457ed936330229f8c9eb6491728e76` | branch base |
-| PR #765 | `8f01064df805624c045877655893c324a220975d` | actual-Xi companions, theta asymptotics, raw-innerness firewall |
-| PR #766 | `17c7624a0bd56c5356d00278b2a846d2efdbdccc` | positive-source quotients and counterexamples, coefficient flags |
-| PR #769 | `f36576faf7853a56bd1f64edd29c4df662cae849` | completed ternary Segre/Chow source resolution |
-| PR #770 | `9421846721cd788ab01615c8b6d459d9de849df7` | native source faithfulness, quotient/gauge obstructions |
-| PR #781 | `ea282c4e73ecd2d8cad44587da5ffa135df67e98` | Segre defect geometry, deformation spectra, Epstein walls |
-| PR #783 | `1db60cddb723ea921c1cc73edaa0334b72679156` | proof review and generalized-Schur negative-index theorem |
-| PR #784 | `d6d326b21d9526d9c91b18017bf550003f8f4f9b` | source–Hermite–Stieltjes closure and mechanism firewalls |
-| Platt–Trudgian | `EXT.XI.PLATT_TRUDGIAN.2021` | rigorous RH verification through `3*10^12` |
-
-## What is imported and what is new
-
-### Imported repository science
-
-The packet imports, without changing status:
-
-- the raw companion innerness/RH equivalence and actual-Xi finite/asymptotic packets from #765;
-- the positive-source quotient construction and native off-central-zero counterexamples from #766;
-- the explicit ternary Segre/Chow resolution from #769;
-- the source-faithfulness and nonorthogonal quotient/gauge barriers from #770;
-- the Segre/Gorenstein, deformation-spectrum and Epstein-wall results from #781;
-- reviewed low-order safe-line Pick/Stieltjes results already integrated on `main`;
-- the rigorous Platt–Trudgian finite-height theorem through `3*10^12`.
-
-### Imported classical mathematics
-
-The proofs use standard canonical products for entire functions, Hermite–Biehler/de Branges kernel algebra, generalized Schur/Pontryagin kernels, Stieltjes transforms, Widder's 1938 real-variable characterization of Stieltjes functions, the functional equation of `xi`, and the absolutely convergent Euler formula for `xi'/xi` on `Re(s)>1`.
-
-### Proposed new or new-in-repository deductions
-
-Subject to independent review, the dossier contributes:
-
-1. the exact companion-Schur/Hermite–Bezout congruence in the present normalization;
-2. the distinct-location negative-square count for the Xi Hermite kernel;
-3. the explicit source polarization and its double Fourier transform;
-4. the identity `A_Phi=4K_0` with the current Weyl kernel;
-5. the safe Euler-axis restriction and explicit prime-shift operator formulation;
-6. the exact Stieltjes endpoint and two-channel Gram factorization;
-7. the Loewner-difference decomposition of the safe Pick matrix;
-8. the functional-equation invariant coordinate `u=s(s-1)`;
-9. the scalar E–Widder criterion and absolutely convergent source inequality `(EW)`;
-10. the exact differential recurrences and normalized Hausdorff microscope;
-11. the invariant-atom angular lemma;
-12. the general finite-height-to-finite-Widder-cone theorem;
-13. the strict `4.71*10^12`-order source inequality and failure-localization corollary;
-14. the accompanying proof-boundary and failed-shortcut firewalls.
-
-No external priority claim is made.
-
-## Reading order
-
-1. [`01_FROZEN_SOURCE_REVIEW.md`](01_FROZEN_SOURCE_REVIEW.md)
-2. [`02_SOURCE_HERMITE_STIELTJES_CLOSURE.md`](02_SOURCE_HERMITE_STIELTJES_CLOSURE.md)
-3. [`03_E_WIDDER_SCALAR_ENDPOINT.md`](03_E_WIDDER_SCALAR_ENDPOINT.md)
-4. [`08_FINITE_HEIGHT_WIDDER_CONE.md`](08_FINITE_HEIGHT_WIDDER_CONE.md)
-5. [`04_FIREWALLS_AND_SCOPE.md`](04_FIREWALLS_AND_SCOPE.md)
-6. [`05_IMPORTED_VS_NEW_CLAIM_LEDGER.md`](05_IMPORTED_VS_NEW_CLAIM_LEDGER.md)
-7. [`06_NEXT_ATTACK.md`](06_NEXT_ATTACK.md)
-8. [`07_LITERATURE_BOUNDARY.md`](07_LITERATURE_BOUNDARY.md)
-9. [`VALIDATION.md`](VALIDATION.md)
-10. [`verify_widder_atom.py`](verify_widder_atom.py)
-11. [`verify_height_order_geometry.py`](verify_height_order_geometry.py)
-
-## Validation boundary
-
-The included checkers verify finite algebraic identities only.  They do not replay the external zero computation, prove the analytic continuation arguments, establish all-order source-kernel positivity, prove `(EW)` beyond the stated finite order, or prove RH.
+The main remaining theorem is no longer merely “prove positivity.”  It is the
+specific source operation
 
 ```text
-Architecture translations                         PROPOSED COMPLETE / REVIEW
-E–Widder equivalence                               PROPOSED COMPLETE / REVIEW
-Euler-safe source expansion                        PROPOSED COMPLETE / REVIEW
-finite-height full Widder cone through 4.71e12     PROPOSED COMPLETE / REVIEW
-exact bounded algebra                              283 AUTHORING CHECKS
-all-order E–Widder arithmetic inequality           OPEN / RH-EQUIVALENT
-Riemann Hypothesis                                 UNPROVED
+positive theta mixture of quasi-free fibers
+-> one positive trace-class contraction
 ```
+
+with all exterior powers matched.  That is the primary next attack.
+
+## 8. Frozen provenance
+
+| Source | Frozen head / identifier | Role |
+|---|---|---|
+| `main` | `6dda8b5125457ed936330229f8c9eb6491728e76` | branch base |
+| PR #765 | `8f01064df805624c045877655893c324a220975d` | actual-Xi companions and asymptotics |
+| PR #766 | `17c7624a0bd56c5356d00278b2a846d2efdbdccc` | positive-source counterexamples |
+| PR #769 | `f36576faf7853a56bd1f64edd29c4df662cae849` | ternary Segre/Chow resolution |
+| PR #770 | `9421846721cd788ab01615c8b6d459d9de849df7` | source-faithfulness barriers |
+| PR #781 | `ea282c4e73ecd2d8cad44587da5ffa135df67e98` | Segre, deformation and Epstein data |
+| PR #783 | `1db60cddb723ea921c1cc73edaa0334b72679156` | proof review and negative index |
+| PR #784 | `d6d326b21d9526d9c91b18017bf550003f8f4f9b` | source–Hermite–Stieltjes closure |
+| Platt--Trudgian | `EXT.XI.PLATT_TRUDGIAN.2021` | verified height |
+| Michałowski | arXiv:2607.16795 | centered cubic Toeplitz wedge |
+| Salazar | arXiv:2607.02778 | strict Bessel spectral total positivity |
+
+The two July 2026 papers are imported current literature, not claimed as
+repository discoveries.
+
+## 9. Reading order
+
+1. [`09_INVARIANT_ORDER_PRODUCT_AND_COUNT_LAW.md`](09_INVARIANT_ORDER_PRODUCT_AND_COUNT_LAW.md)
+2. [`10_THETA_FOCK_MIXTURE_AND_QUASIFREE_GATE.md`](10_THETA_FOCK_MIXTURE_AND_QUASIFREE_GATE.md)
+3. [`11_TOEPLITZ_SECTOR_AND_RECIPROCAL_DUALITY.md`](11_TOEPLITZ_SECTOR_AND_RECIPROCAL_DUALITY.md)
+4. [`02_SOURCE_HERMITE_STIELTJES_CLOSURE.md`](02_SOURCE_HERMITE_STIELTJES_CLOSURE.md)
+5. [`03_E_WIDDER_SCALAR_ENDPOINT.md`](03_E_WIDDER_SCALAR_ENDPOINT.md)
+6. [`08_FINITE_HEIGHT_WIDDER_CONE.md`](08_FINITE_HEIGHT_WIDDER_CONE.md)
+7. [`01_FROZEN_SOURCE_REVIEW.md`](01_FROZEN_SOURCE_REVIEW.md)
+8. [`04_FIREWALLS_AND_SCOPE.md`](04_FIREWALLS_AND_SCOPE.md)
+9. [`05_IMPORTED_VS_NEW_CLAIM_LEDGER.md`](05_IMPORTED_VS_NEW_CLAIM_LEDGER.md)
+10. [`06_NEXT_ATTACK.md`](06_NEXT_ATTACK.md)
+11. [`07_LITERATURE_BOUNDARY.md`](07_LITERATURE_BOUNDARY.md)
+12. [`VALIDATION.md`](VALIDATION.md)
+
+## 10. Validation boundary
+
+Three standard-library rational checkers cover:
+
+- Widder atoms, recurrences, microscope and Loewner algebra: 217 controls;
+- finite-height angular geometry: 66 controls;
+- radial product, matching pole, reciprocal rectangle and Bernoulli-string
+  algebra: 173 controls.
+
+```text
+combined bounded authoring controls                456
+repository-wide CI                                  NOT RUN
+source/Hermite/Stieltjes proofs                      REVIEW REQUIRED
+radial product and count-law proofs                 REVIEW REQUIRED
+theta mixture and reciprocal duality                REVIEW REQUIRED
+all-order theta quasi-free gate / (EW)              OPEN / RH-EQUIVALENT
+Riemann Hypothesis                                  UNPROVED
+```
+
+The checks authenticate finite algebra and indexing only.  They do not replay
+external computations, prove infinite-product interchanges, establish the
+source composition gate, or prove RH.
