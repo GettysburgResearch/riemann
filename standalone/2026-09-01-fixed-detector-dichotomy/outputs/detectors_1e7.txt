@@ -1,0 +1,69 @@
+sieve done 2.2s
+G_mu(4) = -1.4619438177870479  (packet: -1.4620 < G_mu(4) < -1.4618)
+zeros with zeta' available: 17496
+main terms: c0(h_mu)=2.054296 c0(h_67)=1.803324 | row2: 1.111710 log X + -0.063153 | row3: 0.406456 log X + -0.059039 | W: 6.777920 log X + -0.492884 | box67 c0=7.5824 | G_mu: none
+
+zero mass  2*sum_{gamma<=T} |r_gamma|  (partial sums; divergence => pointwise target false under LI)
+N                h_mu         h_67         row2         row3          W53         G_mu        box67
+10            0.55640      0.56585      0.04838      0.03094      0.29436      0.18662      0.04034   T=50
+100           1.16976      1.19883      0.05937      0.03766      0.35078      0.21903      0.04985   T=237
+1000          1.98823      2.02973      0.06227      0.03937      0.36588      0.22779      0.05207   T=1419
+10000         2.96584      3.02090      0.06282      0.03970      0.36874      0.22946      0.05249   T=9878
+17496         3.22434      3.28300      0.06286      0.03972      0.36894      0.22957      0.05252   T=16056
+
+direct evaluation vs main term + first N zeros (N=17496)
+X=1e+03
+   h_mu  direct=    2.213254  main=  2.054296  main+zeros=    2.213122  diff=  0.000132
+   h_67  direct=    1.969076  main=  1.803324  main+zeros=    1.969543  diff= -0.000466
+   row2  direct=    7.593644  main=  7.616270  main+zeros=    7.593644  diff=  0.000000
+   row3  direct=    2.731069  main=  2.748660  main+zeros=    2.731068  diff=  0.000000
+   W53   direct=   46.161426  main= 46.327329  main+zeros=   46.161423  diff=  0.000003
+   G_mu  direct=    0.089878  main=  0.000000  main+zeros=    0.089869  diff=  0.000008
+   check 5*row2+3*row3 - W = 1.435e-12
+X=1e+04
+   h_mu  direct=    1.849406  main=  2.054296  main+zeros=    1.851046  diff= -0.001640
+   h_67  direct=    1.579021  main=  1.803324  main+zeros=    1.580727  diff= -0.001706
+   row2  direct=   10.173224  main= 10.176077  main+zeros=   10.173224  diff=  0.000000
+   row3  direct=    3.680975  main=  3.684560  main+zeros=    3.680975  diff= -0.000000
+   W53   direct=   61.909043  main= 61.934067  main+zeros=   61.909043  diff= -0.000000
+   G_mu  direct=    0.044623  main=  0.000000  main+zeros=    0.044623  diff=  0.000000
+   check 5*row2+3*row3 - W = 2.375e-11
+X=1e+05
+   h_mu  direct=    1.887883  main=  2.054296  main+zeros=    1.891894  diff= -0.004011
+   h_67  direct=    1.626324  main=  1.803324  main+zeros=    1.630448  diff= -0.004124
+   row2  direct=   12.746826  main= 12.735885  main+zeros=   12.746826  diff= -0.000000
+   row3  direct=    4.638452  main=  4.620460  main+zeros=    4.638452  diff= -0.000000
+   W53   direct=   77.649488  main= 77.540804  main+zeros=   77.649488  diff= -0.000000
+   G_mu  direct=   -0.049233  main=  0.000000  main+zeros=   -0.049233  diff=  0.000000
+   check 5*row2+3*row3 - W = -1.424e-10
+X=1e+06
+   h_mu  direct=    2.234443  main=  2.054296  main+zeros=    2.242351  diff= -0.007908
+   h_67  direct=    1.993455  main=  1.803324  main+zeros=    2.001872  diff= -0.008418
+   row2  direct=   15.313993  main= 15.295693  main+zeros=   15.313993  diff= -0.000000
+   row3  direct=    5.578840  main=  5.556359  main+zeros=    5.578840  diff= -0.000000
+   W53   direct=   93.306484  main= 93.147542  main+zeros=   93.306486  diff= -0.000002
+   G_mu  direct=   -0.087530  main=  0.000000  main+zeros=   -0.087531  diff=  0.000001
+   check 5*row2+3*row3 - W = 8.939e-09
+X=3e+06
+   h_mu  direct=    2.134076  main=  2.054296  main+zeros=    2.128264  diff=  0.005812
+   h_67  direct=    1.886023  main=  1.803324  main+zeros=    1.879878  diff=  0.006145
+   row2  direct=   16.508541  main= 16.517031  main+zeros=   16.508542  diff= -0.000000
+   row3  direct=    5.984352  main=  6.002897  main+zeros=    5.984352  diff=  0.000000
+   W53   direct=  100.495763  main=100.593848  main+zeros=  100.495763  diff= -0.000001
+   G_mu  direct=    0.077949  main=  0.000000  main+zeros=    0.077950  diff= -0.000001
+   check 5*row2+3*row3 - W = -2.973e-08
+X=1e+07
+   h_mu  direct=    2.363339  main=  2.054296  main+zeros=    2.365304  diff= -0.001965
+   h_67  direct=    2.130411  main=  1.803324  main+zeros=    2.132348  diff= -0.001937
+   row2  direct=   17.876468  main= 17.855500  main+zeros=   17.876469  diff= -0.000000
+   row3  direct=    6.493698  main=  6.492259  main+zeros=    6.493698  diff=  0.000000
+   W53   direct=  108.863436  main=108.754279  main+zeros=  108.863437  diff= -0.000001
+   G_mu  direct=   -0.083923  main=  0.000000  main+zeros=   -0.083925  diff=  0.000001
+   check 5*row2+3*row3 - W = -5.647e-08
+
+sign census on log grid up to 10000000
+   h_mu  min=1.6000 at X=2.008e+02 ; #negative=0/4000 ; last negative X=none
+   h_67  min=1.2843 at X=2.008e+02 ; #negative=0/4000 ; last negative X=none
+   W53   min=0.0000 at X=2.000e+00 ; #negative=0/4000 ; last negative X=none
+   G_mu  min=-1.5262 max=1.2343 ; #negative=499/1000 ; last negative X=9.885e+06
+total 56s
