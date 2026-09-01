@@ -1,437 +1,382 @@
-# Next attack: pass from the finite-height Widder cone to all orders
+# Next attack: close the fixed-centre heat / theta–Darboux gate
 
 Status: **RESEARCH PROGRAMME; THE E–WIDDER SOURCE INEQUALITY IS PROVED THROUGH ORDER `4.71*10^12`; ITS UNBOUNDED-ORDER FORM AND RH REMAIN OPEN.**
 
-The target is
+The branch no longer needs another order-by-order Widder calculation.  The
+latest exact identities reduce the unbounded problem to two source-local gates
+that are adjoint views of the same invariant ladder:
+
+1. complete monotonicity of one fixed-centre zero heat trace;
+2. nonnegativity of one theta–Darboux exterior integral against a strictly
+   totally-positive Pascal/Bessel propagator.
+
+The purpose of this note is to organize the next proof around those gates and
+prevent a return to finite-order scanning.
+
+## 1. The fixed-centre heat gate
+
+Let
 
 \[
- \sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
- \mathcal L_k(u,\log n)
- \le
- \mathcal G_k(u)
- \qquad(u>0,\ k\ge1).
- \tag{EW}
-\]
-
-[`08_FINITE_HEIGHT_WIDDER_CONE.md`](08_FINITE_HEIGHT_WIDDER_CONE.md) proves `(EW)` for every `u>0` and every
-
-\[
- 1\le k\le4{,}710{,}000{,}000{,}000.
-\]
-
-The previous plan treated `W_2>=0` as the first new sign.  That frontier is obsolete: the complete diagonal hierarchy is now paid through more than four trillion orders, and a matching finite rectangle of the full Widder cone is paid as well.
-
-The remaining problem is qualitative rather than merely quantitative.  One needs a **height-free mechanism** preventing phase rotation of hypothetical off-line invariant zero atoms at unbounded Widder order.
-
-## 1. Exact differential recurrence
-
-For any smooth `q`, define
-
-\[
- \mathcal W_k(u)=(-1)^{k-1}D^{2k-1}[u^kq(u)].
-\]
-
-Using
-
-\[
- D^m[ug]=uD^mg+mD^{m-1}g,
-\]
-
-one obtains
-
-\[
- \boxed{
- \mathcal W_{k+1}
- =-u\mathcal W_k''-(2k+1)\mathcal W_k'.
- }
- \tag{1.1}
-\]
-
-Equivalently,
-
-\[
- \boxed{
- \mathcal W_{k+1}
- =-u^{-2k}D\left[u^{2k+1}\mathcal W_k'\right].
- }
- \tag{1.2}
-\]
-
-This identity holds separately for the archimedean reserve, every prime-power filter and their complete deficit.
-
-A successful induction must prove not only `W_k>=0` but a source-specific derivative cone strong enough to make
-
-\[
- D[u^{2k+1}W_k']\le0
-\]
-
-at the next order.  The differential operator is not positivity preserving on a generic cone.
-
-## 2. Full Widder and lower-derivative coordinates
-
-Define
-
-\[
- F_{n,k}(u)=(-1)^nD^{n+k}[u^kq(u)]
-\]
-
-and
-
-\[
- \boxed{
- Q_k(u)=D^k[u^kq(u)].
- }
- \tag{2.1}
-\]
-
-Widder's theorem is equivalently
-
-\[
- \boxed{
- \mathrm{RH}
- \iff
- Q_k\text{ is completely monotone for every }k\ge0.
- }
- \tag{2.2}
-\]
-
-The exact recurrence
-
-\[
- \boxed{
- Q_{k+1}=uQ_k'+(k+1)Q_k
- }
- \tag{2.3}
-\]
-
-may be better suited to a heat or source-flow proof because it takes only one new derivative at each stage.
-
-The finite-height theorem already proves
-
-\[
- F_{n,k}(u)>0
-\]
-
-through the complete region
-
-\[
- \max\{k,n+1\}\le4{,}710{,}000{,}000{,}000.
-\]
-
-Any inductive theorem must genuinely escape this finite rectangle rather than reprove low orders.
-
-## 3. Exact invariant-atom obstruction
-
-Without assuming RH, the genus-zero product gives
-
-\[
- F_{n,k}(u)
- =2(n+k)!\sum_a
- \frac{a^k}{(u+a)^{n+k+1}},
- \qquad
- a=-\rho(\rho-1).
- \tag{3.1}
-\]
-
-For an off-line zero `rho=beta+i gamma`, write
-
-\[
- a=A+iB,
- \qquad
- A=\gamma^2+\beta(1-\beta),
- \qquad
- B=-\gamma(2\beta-1).
+ K(t)=e^{-t/4}\sum_\rho e^{-t\gamma_\rho^2}
+ =2\sum_a e^{-at},
+ \qquad a=-\rho(\rho-1).
 \]
 
 Then
 
 \[
- |\arg a|<\arctan(1/|\gamma|).
+ q(u)=\int_0^\infty e^{-ut}K(t)\,dt
 \]
 
-If
+and
 
 \[
- \theta=\arg a,
+ \mathcal W_k(u)
+ =\int_0^\infty
+ t^{2k-1}e^{-ut}(-1)^kK^{(k)}(t)\,dt.
+\]
+
+Consequently
+
+\[
+ \boxed{
+ \mathrm{RH}
+ \iff K\text{ is completely monotone on }(0,\infty).
+ }
+ \tag{HCM}
+\]
+
+The explicit source is
+
+\[
+ \begin{aligned}
+ K(t)={}&2\\
+ &+\frac{e^{-t/4}}{2\pi}
+ \int_{\mathbb R}e^{-t\tau^2}
+ \left[
+  \Re\psi\left(\frac14+\frac{i\tau}{2}\right)-\log\pi
+ \right]d\tau\\
+ &-\frac{e^{-t/4}}{\sqrt{\pi t}}
+ \sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+ e^{-(\log n)^2/(4t)}.
+ \end{aligned}
+ \tag{1.1}
+\]
+
+Every term is absolutely convergent for `t>0`.  The movable cosine phase of
+the general First-Hermite formula has disappeared.  The problem is now the
+complete-monotonicity sign of one nonoscillatory gamma-plus-prime heat source.
+
+### Heat target `HCM_source`
+
+Prove directly from (1.1) that
+
+\[
+ \boxed{
+ (-1)^mD_t^mK(t)\ge0
+ \qquad(m\ge0,\ t>0).
+ }
+ \tag{1.2}
+\]
+
+A proof immediately gives every E–Widder inequality through the positive
+Laplace moment above.
+
+## 2. The theta–Darboux gate
+
+Let
+
+\[
+ b_n(\tau)
+ =[u^n]\cosh\left(\tau\sqrt{u+\frac14}\right),
  \qquad
- \phi=\arg(u+a),
+ L=D_\tau^2-\frac14.
 \]
 
-the phase of the atom in (3.1) is
+The actual invariant coefficients satisfy
 
 \[
- \Psi_{n,k}=k\theta-(n+k+1)\phi
-\]
-
-and obeys
-
-\[
- |\Psi_{n,k}|\le\max\{k,n+1\}|\theta|.
- \tag{3.2}
-\]
-
-This is the exact reason a finite verified height buys a finite Widder cone.  It also identifies what an all-order proof must defeat: when `k` becomes comparable to a hypothetical zero height, the atom can rotate through a right angle.
-
-The one-way localization theorem is
-
-\[
- \boxed{
- \mathcal W_k(u)<0
- \Longrightarrow
- \text{an off-line zero below height }
- \cot\left(\frac\pi{2k}\right).
- }
- \tag{3.3}
-\]
-
-Thus a proof at order `k` only needs arithmetic information through height approximately `2k/pi`, but the all-order theorem requires a uniform mechanism as that height grows.
-
-## 4. Normalized Hausdorff microscope
-
-Define
-
-\[
- \boxed{
- C_k(u)=
- \frac{(4u)^k}{2(2k-1)!}\mathcal W_k(u).
- }
- \tag{4.1}
-\]
-
-Under RH,
-
-\[
- C_k(u)=
- \sum_{\gamma>0}m_\gamma
- \lambda_u(a_\gamma)^k,
+ c_n=2\int_0^\infty\Phi(\tau)b_n(\tau)d\tau,
  \qquad
- \lambda_u(a)=\frac{4ua}{(u+a)^2}.
- \tag{4.2}
+ Lb_n=b_{n-1}.
 \]
 
-For positive real `a`,
+The kernel `(tau,n)->b_n(tau)` is strictly totally positive of infinite
+order.  For increasing row and column sets `I=(i_p)`, `J=(j_q)` with
+`j_1>=i_r`, put
 
 \[
- \lambda_u(a)
- =\operatorname{sech}^2\left(\frac12\log\frac au\right)
- \in(0,1].
+ h_p=i_p-i_1,
+ \qquad
+ n_q=j_q-i_1.
 \]
 
-Large order localizes invariant spectral mass to logarithmic width
-
-\[
- O(k^{-1/2})
-\]
-
-around `a=u`.  In the false-RH geometry, the same microscope sees complex atoms with a phase amplified by `k`.
-
-A source proof should therefore seek a **localized reserve theorem at scale `u~gamma^2`**, not a global absolute tail bound.  Low fixed critical zeros cannot dominate a hypothetical high off-line atom after localization.
-
-## 5. The new primary target: localized source reserve
-
-The useful next theorem is not the literal order
-
-\[
- 4{,}710{,}000{,}000{,}001.
-\]
-
-It is an all-scale statement that acts before Widder order is chosen.
-
-### Localized E-reserve theorem `LER`
-
-Construct, from the pole-subtracted gamma-plus-prime source, a positive measure or positive quadratic form `R_u` such that for every `k>=1`
+The exact Andreief factorization is
 
 \[
  \boxed{
- C_k(u)
- =\int_{[0,1]}\lambda^{k-1}\,dR_u(\lambda),
- \qquad R_u\ge0.
+ \begin{aligned}
+ \det[c_{j_q-i_p}]
+ ={}&2^r\int_{0<\tau_1<\cdots<\tau_r}
+ \det[(L^{h_p}\Phi)(\tau_\ell)]_{p,\ell}\\
+ &\qquad\qquad\cdot
+ \det[b_{n_q}(\tau_\ell)]_{q,\ell}
+ \,d\boldsymbol\tau.
+ \end{aligned}
  }
- \tag{LER}
+ \tag{2.1}
 \]
 
-A source-local construction of `R_u` closes all Hausdorff differences, all `W_k`, the Stieltjes theorem and RH at once.
+The second determinant is strictly positive.  All arithmetic sign is in one
+actual theta–Darboux exterior current.
 
-This is stronger than merely estimating each derivative, but it is exactly adapted to the normalized microscope.  An arbitrary measure obtained from the zeros would be tautological; `R_u` must be built from theta, gamma and prime labels before zero information is used.
+### Weighted theta–Darboux gate `TDA`
 
-Equivalent acceptable targets are:
+Prove the right side of (2.1) is nonnegative for every admissible index
+packet.
+
+This target is deliberately weaker than pointwise positivity of
+
+\[
+ \det[(L^{h_p}\Phi)(\tau_\ell)].
+\]
+
+No pointwise theorem is assumed.  Strict total positivity of `b_n` permits a
+variation-diminishing proof in which the theta determinant changes sign but
+its ordered pairing has the required orientation.
+
+## 3. Why the two gates are the same ladder
+
+The coefficient-side identity is obtained by moving powers of
+
+\[
+ L=D_\tau^2-\frac14
+\]
+
+from `b_n` onto the theta source.  The heat-side identity moves invariant
+powers from the Euler-safe logarithmic derivative into heat time.  Both are
+adjoint expressions of multiplication by the invariant coordinate
+
+\[
+ u=s(s-1).
+\]
+
+The desired intertwiner should have the schematic form
+
+\[
+ \boxed{
+ \text{theta--Darboux exterior current}
+ \longrightarrow
+ \text{positive combination of }(-1)^mK^{(m)}(t).
+ }
+ \tag{3.1}
+\]
+
+A positive version of (3.1) would settle both `TDA` and `HCM_source`, and
+therefore the quasi-free, Toeplitz, Stieltjes and E–Widder formulations at
+once.
+
+## 4. First theorem-sized objective: sign variation, not pointwise sign
+
+For consecutive order `r`, define
+
+\[
+ \mathcal T_r(\boldsymbol\tau)
+ =\det[(L^i\Phi)(\tau_j)]_{i,j=0}^{r-1}
+\]
+
+on the ordered chamber
+
+\[
+ 0<\tau_1<\cdots<\tau_r.
+\]
+
+The next theorem should determine the number and orientation of sign chambers
+of `mathcal T_r` and prove that the strictly TP kernel
+
+\[
+ \det[b_{k+j}(\tau_\ell)]
+\]
+
+integrates them with nonnegative total mass.
+
+A useful sufficient theorem would be:
+
+> **Ordered variation theorem `OVT(r)`.**  The cumulative integral of
+> `mathcal T_r` over every lower ideal of the ordered chamber has the
+> orientation required by all increasing Pascal/Bessel test determinants.
+
+This is a multidimensional analogue of a signed measure having nonnegative
+moments against a Chebyshev system.  It is weaker than pointwise positivity
+and exactly matched to (2.1).
+
+## 5. Darboux factorization lane
+
+The source atom
+
+\[
+ e^{\tau/2-\pi m^2e^{2\tau}}
+\]
+
+is acted on by
+
+\[
+ L=(D_\tau-1/2)(D_\tau+1/2).
+\]
+
+Writing `y=pi m^2e^(2 tau)`, the iterates have the form
+
+\[
+ L^h\left(e^{\tau/2-y}\right)
+ =e^{\tau/2-y}P_h(y),
+\]
+
+where
+
+\[
+ P_{h+1}=B(B+1)P_h,
+ \qquad
+ B=2y(D_y-1),
+ \qquad
+ P_0=1.
+\]
+
+The observed first polynomials have simple positive interlacing zeros.  The
+proof task is to derive a Rodrigues/Darboux theorem for the entire sequence
+and use it before summing the theta atoms.  A valid theorem must keep the
+common lattice label and ordered source packet; termwise positivity followed
+by an arbitrary positive sum is not enough.
+
+The immediate analytic subtargets are:
+
+1. prove real-rootedness and strict interlacing of every `P_h`;
+2. identify the sign-regular kernel `(h,y)->P_h(y)e^(-y)`;
+3. combine it with total positivity of the Laplace kernel
+   `exp(-pi m^2 exp(2 tau))` through a discrete/continuous Cauchy–Binet
+   formula;
+4. derive the chamber orientation needed by `OVT(r)`.
+
+## 6. Heat-source square-completion lane
+
+Differentiate the nonoscillatory prime term in (1.1) only after the entire
+source is assembled.  In the natural variable
+
+\[
+ y=\frac{(\log n)^2}{4t},
+\]
+
+each heat derivative is a Gaussian times a generalized Laguerre/Hermite
+polynomial.  The gamma integral has the same heat scale.
+
+The target is a source identity of the form
+
+\[
+ (-1)^mK^{(m)}(t)
+ =\int_\Omega |V_{m,t}(\omega)|^2d\nu(\omega)
+\]
+
+or a conservative two-channel difference in which the entire gamma reserve
+and prime sum are completed before squaring.  An absolute envelope for the
+prime polynomial is forbidden: it destroys the cancellation at the
+constant-four/terminal scale.
+
+## 7. Quasi-free projective lane
+
+The one-scale count law is an explicit positive mixture of quasi-free
+Bernoulli fibres.  A finite exterior closure at degree `N` is equivalent to
+matching every Toeplitz/Schur coefficient through that degree.
+
+The useful finite theorem is therefore not merely real-rootedness of one
+truncation.  It is:
+
+> construct positive contractions `K_v^(N)` whose exterior traces match all
+> theta-source minors through rank `N`, with a trace-norm bound independent of
+> `N`, and prove projective consistency.
+
+A compactness limit would then supply the single contraction required by the
+quasi-free gate.
+
+The theta–Darboux formula (2.1) provides the exact exterior data that these
+finite contractions must realize.
+
+## 8. Boundary and reciprocal completion
+
+Formula (2.1) covers minors whose coefficient indices are all nonnegative.
+Minors crossing the one-sided boundary must be handled with the exact
+reciprocal rectangle identity
+
+\[
+ D^A_{r,k}=D^{1/A(-z)}_{k,r}.
+\]
+
+The intended composition is:
 
 ```text
-source-local Stieltjes measure for q;
-source-local Gram factorization of A_Phi;
-source-local factorization T+T*=V*V;
-positive Bernstein-cell decomposition of every C_k(u).
+positive-index chamber -> theta--Darboux/Andreief;
+boundary-crossing chamber -> reciprocal bosonic coordinate;
+large shift -> imported cubic wedge;
+low order -> verified-height sector;
+broad central cone -> OVT/TDA.
 ```
 
-## 6. Bernstein-cell formulation
+No region may be promoted by overlap unless the exact index conventions are
+checked.
 
-For `N>=0` and `0<=j<=N`, define
+## 9. Large unconditional regions already available
 
-\[
- \boxed{
- B_{N,j}(u)
- =\binom Nj(-1)^{N-j}\Delta^{N-j}C_{j+1}(u).
- }
- \tag{6.1}
-\]
+The branch retains:
 
-Under RH,
+- strict E–Widder/source inequalities for every `u>0` through order
+  `4.71*10^12`;
+- the full two-parameter Widder cone through the matching rectangle;
+- all Toeplitz orders through `9.42*10^12` at every shift from the verified
+  zero-sector theorem;
+- the imported centred cubic wedge at `k>=10^18r^3`;
+- resummed radial positivity up to a terminal annulus of width below
+  `2.78e-26`.
 
-\[
- B_{N,j}(u)
- =\sum_{\gamma>0}m_\gamma
- \binom Nj
- \lambda_u(a_\gamma)^{j+1}
- [1-\lambda_u(a_\gamma)]^{N-j}
- \ge0.
- \tag{6.2}
-\]
+These are base regions and consistency checks.  They do not replace the
+height-free source mechanism.
 
-The cells sum to `C_1(u)` and resolve the invariant spectral distance from `a=u`.  The source-side goal is an exact beta-cell decomposition in which the complete prime sum remains assembled before absolute values.
-
-The existing safe-line Laguerre/Hausdorff transforms should be compared with these invariant cells.  A successful intertwiner between the two cell systems would be a plausible route to `LER`.
-
-## 7. Heat/Laguerre lane
-
-Use
-
-\[
- D_u=\frac1{2x}D_x,
- \qquad u=x^2-1/4.
-\]
-
-Seek an exact representation of `Q_k`, `W_k` or `B_(N,j)` as an integral over first-Hermite heat time.  The desired theorem must:
-
-1. identify the generalized-Laguerre/Bessel filter generated by invariant differentiation;
-2. keep the completed theta or prime sum inside the integral;
-3. preserve the pole cancellation at `u=0`;
-4. produce a square, variation-diminishing operator or positive beta-cell measure for the complete coupled source.
-
-Modewise `PF_infinity` remains forbidden: positive sums of totally-positive atoms need not be totally positive.
-
-## 8. Prime-shift operator lane
-
-On the exponential core,
-
-\[
- T=T_{\rm gamma}
- -\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
- e^{-(\log n)A_0}.
-\]
-
-The all-order theorem is
-
-\[
- T+T^*\succeq0.
-\]
-
-A source-local factorization
-
-\[
- T+T^*=V^*V
-\]
-
-would close RH immediately.  Every prime translation, gamma term and boundary term must remain in one quadratic form.  Quotienting or norm-bounding the prime shifts separately repeats the source-loss barriers of PR #770.
-
-Finite four-exponential Schur complements remain useful reconnaissance, but no fixed packet size can replace the all-order factorization.
-
-## 9. Zero-orbit compensation lane
-
-The invariant atom formula suggests a conditional analytic target:
-
-\[
- \sum_{\text{off-line pairs}}
- \left[
- \Re\frac{a^k}{(u+a)^{2k}}
- \right]_{-}
- \le
- \sum_{\text{critical atoms}}
- \frac{a^k}{(u+a)^{2k}}.
- \tag{9.1}
-\]
-
-Proving (9.1) from independent information about local critical-line density, zero-free regions and multiplicity would also establish `W_k>=0`.
-
-However, global positive-proportion theorems are not automatically enough: the microscope localizes to a narrow logarithmic height window and a negative off-line pair can have phase close to `pi`.  Any compensation theorem must be local at the `O(k^(-1/2))` invariant scale and retain multiplicity.
-
-This lane is secondary to a source-local factorization because it risks rebuilding RH through zero statistics.
-
-## 10. Three `u` regimes
-
-### 10.1 Functional-equation boundary `u->0+`
-
-The separated formula
-
-\[
- 2/u+\text{gamma term}-\text{prime term}
-\]
-
-contains exact pole cancellation.  Construct a pole-subtracted source identity before estimating.  Bounding the two singular pieces separately is forbidden.
-
-### 10.2 Compact Euler-safe regime
-
-On `epsilon<=u<=U`, every differentiated Euler series converges uniformly and admits directed prime-cutoff tails.  Use this only to test or certify a proposed factorization, not to extrapolate finite order.
-
-### 10.3 Large `u`
-
-For each fixed `k`, Stirling and prime exponential decay give terminal positivity.  This is now far weaker than the global finite-height theorem and does not address the joint regime `k~sqrt(u)` where hypothetical high zeros are detected.
-
-The real asymptotic problem is a two-parameter saddle in `(u,k)` with `u` of order `k^2`.
-
-## 11. Differential-induction lane
-
-The recurrence (1.2) suggests a source-dependent cone
-
-\[
- \mathcal C_k=
- \{h:\ h\ge0,\ D[u^{2k+1}h']\le0\}.
-\]
-
-A full induction must propagate enough derivative information to place `W_(k+1)` in the next cone.  A generic positivity claim is false.  The candidate cone must be justified by the literal theta/prime source or by a positive integral representation.
-
-The finite-height theorem can serve as an enormous base case, but a finite base case does not by itself help an induction whose propagation theorem is missing.
-
-## 12. Computation worth doing
+## 10. Computation worth doing
 
 Useful work:
 
-- exact recursive generation of `G_k`, `L_k` and invariant Bernstein cells;
-- asymptotic analysis in the joint scaling `u~k^2`;
-- search for a heat-time intertwiner between safe-line Laguerre cells and invariant cells;
-- exact symbolic testing of candidate source Gram factorizations;
-- directed compact checks only after a uniform identity is proposed;
-- local zero-orbit phase studies to calibrate the reserve required by (9.1).
+- exact symbolic generation and factorization of the Darboux polynomials
+  `P_h`;
+- rigorous sign-chamber enclosures for low exterior ranks, used to conjecture
+  `OVT(r)`;
+- exact Cauchy–Binet decompositions over lattice labels and polynomial degree;
+- search for a positive heat/theta intertwiner;
+- directed checks of a proposed uniform identity, not broad minor scans;
+- construction of finite projectively consistent contractions.
 
 Work to avoid:
 
-- raw derivatives at order `4.71*10^12+1`;
-- another broad zero scan;
-- modewise positivity;
+- the literal next Widder derivative;
+- a larger unstructured zero scan;
+- pointwise positivity assumed from positive source;
+- replacing a mixture of determinants by a determinant of an average;
+- modewise `PF_infinity` followed by positive summation;
 - absolute prime envelopes;
-- sparse finite packets promoted to all order;
-- treating the finite-height theorem as an all-order argument.
+- extrapolating any finite cone to all order.
 
-## 13. End-to-end completion protocol
+## 11. End-to-end completion protocol
 
-A successful continuation must deliver
+A successful continuation should deliver one chain:
 
 ```text
-literal pole-subtracted gamma-plus-prime source
--> source-local invariant measure / Gram / Bernstein cells
--> all-order (EW)
--> q is Stieltjes by Widder
--> invariant zeros lie on the negative real axis
--> every nontrivial zeta zero has beta=1/2
+actual theta source Phi
+-> theta--Darboux exterior current
+-> variation-diminishing Andreief sign / fixed-centre heat square
+-> all coefficient and Widder signs
+-> one positive trace-class contraction
+-> q is Stieltjes
+-> invariant zeros are negative real
 -> RH.
 ```
 
-The present checkpoint has completed the finite-height part:
-
-```text
-published RH verification through 3*10^12
--> exact invariant angular theorem
--> full Widder cone through 4.71*10^12
--> strict (EW) through 4.71*10^12.
-```
-
-The next pass should attack `LER`, not a low-order scalar inequality.
+The first load-bearing theorem is now `OVT/TDA` or its positive heat
+intertwiner.  That is where the new formulation offers genuine leverage over
+the original RH-equivalent inequality.
