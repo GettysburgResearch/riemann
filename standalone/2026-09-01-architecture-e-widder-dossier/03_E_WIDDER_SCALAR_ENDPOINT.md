@@ -1,10 +1,10 @@
 # The E–Widder scalar endpoint
 
-Status: **PROPOSED EXACT RH-EQUIVALENCE; INDEPENDENT REVIEW REQUIRED; THE RESULTING ARITHMETIC INEQUALITY IS OPEN.**
+Status: **PROPOSED EXACT RH-EQUIVALENCE; INDEPENDENT REVIEW REQUIRED.  THE SOURCE INEQUALITY IS PROVED THROUGH ORDER `4.71*10^12`; ITS ALL-ORDER FORM AND RH REMAIN OPEN.**
 
 This note compresses the all-order source/Hermite/Stieltjes positivity problem to one scalar derivative hierarchy evaluated entirely on the Euler-safe half-plane `Re(s)>1`.
 
-The only external real-analysis input is Widder's characterization of Stieltjes functions.  A convenient modern source is A. D. Sokal, *Real-variables characterization of generalized Stieltjes functions*, arXiv:0902.0065, Theorem 1.  In the notation below, Widder's reduced condition is exactly
+The external real-analysis input is Widder's characterization of Stieltjes functions.  A convenient modern source is A. D. Sokal, *Real-variables characterization of generalized Stieltjes functions*, arXiv:0902.0065, Theorem 1.  In the notation below, Widder's reduced condition is exactly
 
 \[
  f(u)\ge0,
@@ -12,6 +12,8 @@ The only external real-analysis input is Widder's characterization of Stieltjes 
  (-1)^{k-1}D_u^{2k-1}[u^kf(u)]\ge0
  \quad(k\ge1).
 \]
+
+The finite-order theorem proved after the initial version of this note is recorded in [`08_FINITE_HEIGHT_WIDDER_CONE.md`](08_FINITE_HEIGHT_WIDDER_CONE.md).
 
 ## 1. Functional-equation invariant coordinate
 
@@ -92,7 +94,7 @@ Consequently
  \tag{2.1}
 \]
 
-This pays the separate `F_{0,0}>=0` condition in Widder's theorem.
+This pays the separate `F_(0,0)>=0` condition in Widder's theorem.
 
 Stirling's formula and the absolute convergence of `zeta'/zeta` at `s>1` give
 
@@ -119,7 +121,7 @@ For every integer `k>=1`, define
  \tag{3.1}
 \]
 
-The proposed theorem is
+The endpoint theorem is
 
 \[
  \boxed{
@@ -131,7 +133,7 @@ The proposed theorem is
  \tag{3.2}
 \]
 
-The remainder of Sections 4–6 proves the equivalence.
+Sections 4–6 prove the equivalence.
 
 ## 4. RH implies the hierarchy
 
@@ -187,7 +189,7 @@ For one atom, polynomial division gives
  =Q_{k-1}(u)+\frac{(-a)^k}{u+a},
 \]
 
-where `Q_{k-1}` has degree at most `k-1`.  Hence
+where `Q_(k-1)` has degree at most `k-1`.  Hence
 
 \[
  \boxed{
@@ -221,7 +223,7 @@ Assume
  \qquad(u>0,\ k\ge1).
 \]
 
-Together with the unconditional positivity (2.1), Widder's theorem implies that `q` is a Stieltjes function:
+Together with (2.1), Widder's theorem implies that `q` is a Stieltjes function:
 
 \[
  q(u)=C+\int_{[0,\infty)}\frac{d\mu(r)}{u+r},
@@ -272,7 +274,7 @@ There are no real nontrivial zeros in `0<s<1`: for real `0<s<1`, the alternating
  \beta=1/2.
 \]
 
-Every nontrivial zero lies on the critical line.  This proves RH and completes the proof of (3.2), subject to review of the standard imported theorems and the analytic details stated above.
+Every nontrivial zero lies on the critical line.  This proves RH and completes the proof of (3.2), subject to review of the imported theorem and analytic details.
 
 ## 7. Euler-safe arithmetic expansion
 
@@ -314,7 +316,7 @@ Therefore
 
 ## 8. The pole term disappears at every Widder order
 
-Multiplication by `u^k` changes `2/u` into `2u^{k-1}`.  Since
+Multiplication by `u^k` changes `2/u` into `2u^(k-1)`.  Since
 
 \[
  2k-1>k-1,
@@ -365,7 +367,7 @@ Then
  \tag{8.3}
 \]
 
-Every derivative of the summand is `e^{-x log n}` times a finite polynomial in `log n` and rational functions of `x`.  Hence, for each fixed `u>0`, the series in (8.3) is absolutely convergent because
+Every derivative of the summand is `e^(-x log n)` times a finite polynomial in `log n` and rational functions of `x`.  Hence, for each fixed `u>0`, the series in (8.3) is absolutely convergent because
 
 \[
  \sum_{n\ge2}\Lambda(n)(\log n)^M n^{-s}<\infty
@@ -374,9 +376,9 @@ Every derivative of the summand is `e^{-x log n}` times a finite polynomial in `
 
 for every fixed `M`.
 
-## 9. The exact remaining source theorem
+## 9. The E–Widder source inequality
 
-The complete Architecture-E burden is
+The all-order Architecture-E burden is
 
 \[
  \boxed{
@@ -399,42 +401,117 @@ The statement contains:
 - no unsigned prime envelope;
 - no hidden choice of test function.
 
-It is one scalar inequality for an absolutely convergent prime-power series.  It remains unproved and is RH-equivalent.
+It is one scalar inequality for an absolutely convergent prime-power series.
 
-## 10. First rungs
+## 10. Finite-height theorem: `(EW)` through `4.71*10^12` orders
 
-The first three inequalities are
+The initial version of this note left every order above the inherited first rung open.  The angular theorem in [`08_FINITE_HEIGHT_WIDDER_CONE.md`](08_FINITE_HEIGHT_WIDDER_CONE.md) supersedes that frontier.
 
-\[
- \mathcal W_1(u)=D_u[uq(u)]\ge0,
-\]
+Without assuming RH, choose one invariant atom
 
 \[
- \mathcal W_2(u)=-D_u^3[u^2q(u)]\ge0,
+ a=-\rho(\rho-1)
 \]
 
-and
+for each functional-equation orbit.  If `rho=beta+i gamma`, then
 
 \[
- \mathcal W_3(u)=D_u^5[u^3q(u)]\ge0.
+ \Re a=\gamma^2+\beta(1-\beta)>\gamma^2,
+ \qquad
+ |\Im a|<|\gamma|,
 \]
 
-Writing `t=u+1/4` and
+so
 
 \[
- p(t)=q(t-1/4),
+ |\arg a|<\arctan(1/|\gamma|).
 \]
 
-the first rung is
+For the full Widder quantities
 
 \[
- \mathcal W_1(u)
- =(tp)'(t)-\frac14p'(t).
+ F_{n,k}(u)=(-1)^nD_u^{n+k}[u^kq(u)],
 \]
 
-The inherited safe-line monotonicity of `tp` and decrease of `p` pay this rung.  The next rung contains a third derivative and is not implied by the accepted scalar monotonicity/concavity statements.  Likewise, finite Pick positivity through order three does not promote automatically to all Widder orders.
+the exact zero-atom formula is
 
-## 11. False-RH finite witnesses
+\[
+ F_{n,k}(u)
+ =2(n+k)!\sum_a\frac{a^k}{(u+a)^{n+k+1}}.
+\]
+
+For an off-line conjugate pair, the phase of one summand has absolute value at most
+
+\[
+ \max\{k,n+1\}|\arg a|.
+\]
+
+Therefore finite-height RH verification through `H` proves the entire cone
+
+\[
+ F_{n,k}(u)>0
+\]
+
+whenever
+
+\[
+ \max\{k,n+1\}\arctan(1/H)<\pi/2.
+\]
+
+Using the published Platt–Trudgian height
+
+\[
+ H=3\cdot10^{12}
+\]
+
+and the rational budget
+
+\[
+ M/H=157/100<\pi/2,
+\]
+
+we obtain
+
+\[
+ \boxed{
+ \mathcal W_k(u)>0
+ \quad
+ (u>0,\ 1\le k\le4{,}710{,}000{,}000{,}000).
+ }
+ \tag{10.1}
+\]
+
+Combining (10.1) with (8.3) proves strict `(EW)` throughout that range.
+
+No simplicity assumption is used, and the external zero computation was not rerun.
+
+The same argument gives
+
+\[
+ \boxed{
+ \mathcal W_k(u)<0
+ \Longrightarrow
+ \text{an off-line zero below height }
+ \cot\left(\frac\pi{2k}\right).
+ }
+ \tag{10.2}
+\]
+
+The converse is not claimed.
+
+## 11. Remaining all-order frontier
+
+The first diagonal order not paid by the imported finite-height theorem is
+
+\[
+ 4{,}710{,}000{,}000{,}001.
+\]
+
+This number is merely the current height-to-angle cutoff.  The unresolved task is not to manipulate a derivative of that literal order.  It is to prove a height-free mechanism controlling the phase rotation of hypothetical off-line invariant atoms.
+
+A full proof must establish `(EW)` for unbounded `k`, which by Sections 3–6 is equivalent to RH.
+
+## 12. False-RH finite witnesses
 
 Because `q(u)>0` unconditionally, failure of RH means that `q` is not Stieltjes.  By Widder's theorem there exist an integer `k>=1` and a real `u>0` such that
 
@@ -444,18 +521,17 @@ Because `q(u)>0` unconditionally, failure of RH means that `q` is not Stieltjes.
 
 By continuity, a rational `u` can be chosen with the same strict sign.  At that rational point the prime series in (8.3) is absolutely convergent, so a sufficiently large outward-rounded finite prime cutoff certifies the strict violation.
 
-Thus false RH has a countable family of finite, Euler-safe certificate types:
+The finite-height theorem now adds that any such witness must satisfy
 
-```text
-integer Widder order k;
-rational invariant point u>0;
-finite prime-power cutoff with directed remainder bound;
-strict negative upper enclosure for W_k(u).
-```
+\[
+ k>4{,}710{,}000{,}000{,}000.
+\]
 
-No such Riemann-data witness is claimed here.
+Thus false RH has a countable family of finite, Euler-safe certificate types, but no witness can occur in the first `4.71*10^12` complete orders.
 
-## 12. Relation to the earlier Stieltjes coordinate
+No Riemann-data witness is claimed here.
+
+## 13. Relation to the earlier Stieltjes coordinate
 
 The source–Hermite closure uses
 
@@ -478,28 +554,30 @@ The translation moves the RH spectral support from `gamma^2` to
 
 which is exactly `-rho(rho-1)`.  This makes the converse transparent: Stieltjes support on the negative real `u` axis is literally critical-line support under the functional-equation quotient.
 
-## 13. Main review points
+## 14. Main review points
 
 Independent review should check, in this order:
 
 1. the entire descent `xi_R(s)=mathfrak X(s(s-1))` and order-one-half claim;
 2. the factor two in `q=2 mathfrak X'/mathfrak X`;
-3. the genus-zero product and multiplicity in (4.1);
-4. the exact Widder indexing `F_{k-1,k}=(-1)^{k-1}D^{2k-1}u^kq`;
+3. the genus-zero product and orbit multiplicities;
+4. the exact Widder indexing `F_(k-1,k)=(-1)^(k-1)D^(2k-1)u^kq`;
 5. the meromorphic identity-theorem argument in Section 6;
 6. exclusion of real nontrivial zeros;
 7. the pole-term cancellation in Section 8;
-8. absolute convergence after arbitrary fixed-order differentiation.
+8. absolute convergence after arbitrary fixed-order differentiation;
+9. the angular proof and use of the imported height theorem in Section 10.
 
-## 14. Exact status
+## 15. Exact status
 
 ```text
-functional-equation invariant descent       PROPOSED COMPLETE / REVIEW
-RH -> positive Stieltjes representation      PROPOSED COMPLETE / REVIEW
-Widder hierarchy <-> Stieltjes               CLASSICAL IMPORT
-Stieltjes continuation -> RH                 PROPOSED COMPLETE / REVIEW
-Euler-safe prime-power formula               PROPOSED COMPLETE / REVIEW
-finite strict witness reduction              PROPOSED COMPLETE / REVIEW
-E-Widder source inequality (EW)              OPEN / RH-EQUIVALENT
-Riemann Hypothesis                           UNPROVED
+functional-equation invariant descent              PROPOSED COMPLETE / REVIEW
+RH -> positive Stieltjes representation             PROPOSED COMPLETE / REVIEW
+Widder hierarchy <-> Stieltjes                      CLASSICAL IMPORT
+Stieltjes continuation -> RH                        PROPOSED COMPLETE / REVIEW
+Euler-safe prime-power formula                      PROPOSED COMPLETE / REVIEW
+finite-height full cone through 4.71*10^12          PROPOSED COMPLETE / REVIEW
+E-Widder source inequality through 4.71*10^12       PROPOSED COMPLETE / REVIEW
+all-order E-Widder source inequality                OPEN / RH-EQUIVALENT
+Riemann Hypothesis                                  UNPROVED
 ```
