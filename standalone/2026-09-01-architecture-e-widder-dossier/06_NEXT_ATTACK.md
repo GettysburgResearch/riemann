@@ -1,6 +1,6 @@
-# Next attack: prove the E–Widder source inequality
+# Next attack: pass from the finite-height Widder cone to all orders
 
-Status: **RESEARCH PROGRAMME; ALL COMPLETION-BEARING TARGETS BELOW ARE OPEN UNLESS MARKED AS IDENTITIES.**
+Status: **RESEARCH PROGRAMME; THE E–WIDDER SOURCE INEQUALITY IS PROVED THROUGH ORDER `4.71*10^12`; ITS UNBOUNDED-ORDER FORM AND RH REMAIN OPEN.**
 
 The target is
 
@@ -13,7 +13,15 @@ The target is
  \tag{EW}
 \]
 
-The point of this note is to prevent the next pass from reverting to broad computation or merely renaming the equivalent positivity condition.  It records exact new normal forms, the first theorem-sized target and a route from that target to all orders.
+[`08_FINITE_HEIGHT_WIDDER_CONE.md`](08_FINITE_HEIGHT_WIDDER_CONE.md) proves `(EW)` for every `u>0` and every
+
+\[
+ 1\le k\le4{,}710{,}000{,}000{,}000.
+\]
+
+The previous plan treated `W_2>=0` as the first new sign.  That frontier is obsolete: the complete diagonal hierarchy is now paid through more than four trillion orders, and a matching finite rectangle of the full Widder cone is paid as well.
+
+The remaining problem is qualitative rather than merely quantitative.  One needs a **height-free mechanism** preventing phase rotation of hypothetical off-line invariant zero atoms at unbounded Widder order.
 
 ## 1. Exact differential recurrence
 
@@ -29,7 +37,7 @@ Using
  D^m[ug]=uD^mg+mD^{m-1}g,
 \]
 
-one obtains the exact recurrence
+one obtains
 
 \[
  \boxed{
@@ -49,50 +57,25 @@ Equivalently,
  \tag{1.2}
 \]
 
-This is an identity, not an RH assumption.  It holds separately for the archimedean reserve and every prime-power filter:
+This identity holds separately for the archimedean reserve, every prime-power filter and their complete deficit.
+
+A successful induction must prove not only `W_k>=0` but a source-specific derivative cone strong enough to make
 
 \[
- \mathcal G_{k+1}
- =-u\mathcal G_k''-(2k+1)\mathcal G_k',
+ D[u^{2k+1}W_k']\le0
 \]
+
+at the next order.  The differential operator is not positivity preserving on a generic cone.
+
+## 2. Full Widder and lower-derivative coordinates
+
+Define
 
 \[
- \mathcal L_{k+1}(u,\ell)
- =-u\partial_u^2\mathcal L_k(u,\ell)
- -(2k+1)\partial_u\mathcal L_k(u,\ell).
+ F_{n,k}(u)=(-1)^nD^{n+k}[u^kq(u)]
 \]
 
-Thus the all-order theorem can be phrased as a weighted flux hierarchy:
-
-\[
- \mathcal W_{k+1}\ge0
- \iff
- D\left[u^{2k+1}\mathcal W_k'(u)\right]\le0.
-\]
-
-The first new rung is
-
-\[
- \boxed{
- \mathcal W_2(u)
- =-D^3[u^2q(u)]
- =-u\mathcal W_1''(u)-3\mathcal W_1'(u)
- \ge0.
- }
- \tag{1.3}
-\]
-
-This is the first theorem-sized target to attack.
-
-## 2. Lower-derivative complete-monotonicity form
-
-Widder's full two-parameter quantities are
-
-\[
- F_{n,k}(u)=(-1)^nD^{n+k}[u^kq(u)].
-\]
-
-For fixed `k`, define
+and
 
 \[
  \boxed{
@@ -112,302 +95,184 @@ Widder's theorem is equivalently
  \tag{2.2}
 \]
 
-The diagonal E–Widder functional is
-
-\[
- \mathcal W_k=(-1)^{k-1}D^{k-1}Q_k.
-\]
-
-The `Q_k` use only `k` derivatives before the complete-monotonicity test and may be better adapted to heat/Laguerre source formulas than the direct `2k-1` derivative.
-
-There is another exact recurrence:
+The exact recurrence
 
 \[
  \boxed{
- Q_{k+1}=uQ_k'+(k+1)Q_k.
+ Q_{k+1}=uQ_k'+(k+1)Q_k
  }
  \tag{2.3}
 \]
 
-Under RH,
+may be better suited to a heat or source-flow proof because it takes only one new derivative at each stage.
+
+The finite-height theorem already proves
 
 \[
- Q_k(u)=2k!\sum_{\gamma>0}m_\gamma
- \frac{a_\gamma^k}{(u+a_\gamma)^{k+1}},
- \qquad a_\gamma=\gamma^2+1/4,
+ F_{n,k}(u)>0
 \]
 
-which is manifestly completely monotone.
+through the complete region
 
-A viable source proof can therefore target either:
+\[
+ \max\{k,n+1\}\le4{,}710{,}000{,}000{,}000.
+\]
 
-```text
-all W_k >= 0;
-or
-all Q_k completely monotone.
-```
+Any inductive theorem must genuinely escape this finite rectangle rather than reprove low orders.
 
-The second is stronger term by term but has a lower-order primary derivative.
+## 3. Exact invariant-atom obstruction
 
-## 3. Normalized Hausdorff microscope
+Without assuming RH, the genus-zero product gives
+
+\[
+ F_{n,k}(u)
+ =2(n+k)!\sum_a
+ \frac{a^k}{(u+a)^{n+k+1}},
+ \qquad
+ a=-\rho(\rho-1).
+ \tag{3.1}
+\]
+
+For an off-line zero `rho=beta+i gamma`, write
+
+\[
+ a=A+iB,
+ \qquad
+ A=\gamma^2+\beta(1-\beta),
+ \qquad
+ B=-\gamma(2\beta-1).
+\]
+
+Then
+
+\[
+ |\arg a|<\arctan(1/|\gamma|).
+\]
+
+If
+
+\[
+ \theta=\arg a,
+ \qquad
+ \phi=\arg(u+a),
+\]
+
+the phase of the atom in (3.1) is
+
+\[
+ \Psi_{n,k}=k\theta-(n+k+1)\phi
+\]
+
+and obeys
+
+\[
+ |\Psi_{n,k}|\le\max\{k,n+1\}|\theta|.
+ \tag{3.2}
+\]
+
+This is the exact reason a finite verified height buys a finite Widder cone.  It also identifies what an all-order proof must defeat: when `k` becomes comparable to a hypothetical zero height, the atom can rotate through a right angle.
+
+The one-way localization theorem is
+
+\[
+ \boxed{
+ \mathcal W_k(u)<0
+ \Longrightarrow
+ \text{an off-line zero below height }
+ \cot\left(\frac\pi{2k}\right).
+ }
+ \tag{3.3}
+\]
+
+Thus a proof at order `k` only needs arithmetic information through height approximately `2k/pi`, but the all-order theorem requires a uniform mechanism as that height grows.
+
+## 4. Normalized Hausdorff microscope
 
 Define
 
 \[
  \boxed{
  C_k(u)=
- \frac{(4u)^k}{2(2k-1)!}\mathcal W_k(u),
- \qquad k\ge1.
+ \frac{(4u)^k}{2(2k-1)!}\mathcal W_k(u).
  }
- \tag{3.1}
+ \tag{4.1}
 \]
 
 Under RH,
 
 \[
- \boxed{
  C_k(u)=
  \sum_{\gamma>0}m_\gamma
  \lambda_u(a_\gamma)^k,
- }
- \tag{3.2}
+ \qquad
+ \lambda_u(a)=\frac{4ua}{(u+a)^2}.
+ \tag{4.2}
 \]
 
-where
+For positive real `a`,
 
 \[
- \boxed{
- \lambda_u(a)=\frac{4ua}{(u+a)^2}
+ \lambda_u(a)
  =\operatorname{sech}^2\left(\frac12\log\frac au\right)
  \in(0,1].
- }
- \tag{3.3}
 \]
 
-For fixed `u`, the finite measure
+Large order localizes invariant spectral mass to logarithmic width
 
 \[
- d\nu_u(\lambda)
- =\sum_{\gamma>0}m_\gamma
- \lambda_u(a_\gamma)\,
- \delta_{\lambda_u(a_\gamma)}
+ O(k^{-1/2})
 \]
 
-satisfies
+around `a=u`.  In the false-RH geometry, the same microscope sees complex atoms with a phase amplified by `k`.
+
+A source proof should therefore seek a **localized reserve theorem at scale `u~gamma^2`**, not a global absolute tail bound.  Low fixed critical zeros cannot dominate a hypothetical high off-line atom after localization.
+
+## 5. The new primary target: localized source reserve
+
+The useful next theorem is not the literal order
 
 \[
- C_k(u)=\int_{[0,1]}\lambda^{k-1}\,d\nu_u(\lambda).
+ 4{,}710{,}000{,}000{,}001.
 \]
 
-Thus RH yields an invariant-coordinate Hausdorff moment sequence:
+It is an all-scale statement that acts before Widder order is chosen.
 
-\[
- (-1)^m\Delta^mC_k(u)
- =\sum_{\gamma>0}m_\gamma
- \lambda_u(a_\gamma)^k
- [1-\lambda_u(a_\gamma)]^m
- \ge0.
- \tag{3.4}
-\]
+### Localized E-reserve theorem `LER`
 
-It also yields all shifted Hankel and Bernstein-cell inequalities.
-
-This normal form supplies a spectral microscope.  Writing
-
-\[
- v=\log(a/u),
-\]
-
-we have
-
-\[
- \lambda_u(a)^k
- =\operatorname{sech}^{2k}(v/2)
- =\exp\left[-\frac{k}{4}v^2+O(kv^4)\right]
-\]
-
-near `v=0`.  Large Widder order localizes invariant zero mass to logarithmic width `O(k^{-1/2})` around `a=u`.
-
-A source-side proof should seek the corresponding localization directly in the prime filters, rather than differentiating expanded formulas blindly.
-
-## 4. Generating function in Widder order
-
-Under RH, for fixed `u`,
-
-\[
- \sum_{k\ge1}C_k(u)w^{k-1}
- =\sum_{\gamma>0}m_\gamma
- \frac{\lambda_u(a_\gamma)}
- {1-w\lambda_u(a_\gamma)}.
- \tag{4.1}
-\]
-
-This is a Stieltjes/Pick function of `w` on the unit disk.  An off-line invariant zero produces a complex transformed atom and should create either a nonreal pole geometry or a failed Hausdorff cell.
-
-The generating function is useful for proof organization, but the earlier safe-line annulus firewall must be respected: no termwise Euler continuation is assumed outside its absolute domain.  The fixed-order E–Widder formula remains the safe arithmetic front door.
-
-## 5. First target: the weighted curvature theorem
-
-The recommended first theorem is
+Construct, from the pole-subtracted gamma-plus-prime source, a positive measure or positive quadratic form `R_u` such that for every `k>=1`
 
 \[
  \boxed{
- D\left[u^3\mathcal W_1'(u)\right]\le0
- \qquad(u>0).
+ C_k(u)
+ =\int_{[0,1]}\lambda^{k-1}\,dR_u(\lambda),
+ \qquad R_u\ge0.
  }
- \tag{5.1}
+ \tag{LER}
 \]
 
-By (1.2), this is exactly `W_2>=0`.
+A source-local construction of `R_u` closes all Hausdorff differences, all `W_k`, the Stieltjes theorem and RH at once.
 
-The theorem should be proved in the literal form
+This is stronger than merely estimating each derivative, but it is exactly adapted to the normalized microscope.  An arbitrary measure obtained from the zeros would be tautological; `R_u` must be built from theta, gamma and prime labels before zero information is used.
 
-\[
- \mathcal G_2(u)
- \ge
- \sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
- \mathcal L_2(u,\log n).
- \tag{5.2}
-\]
+Equivalent acceptable targets are:
 
-A proof of (5.1) would be the first genuinely new sign beyond the already reviewed first-order monotonicity.  It would not prove RH by itself, but it would validate the differential-recursive route and expose the exact all-order obstruction.
+```text
+source-local Stieltjes measure for q;
+source-local Gram factorization of A_Phi;
+source-local factorization T+T*=V*V;
+positive Bernstein-cell decomposition of every C_k(u).
+```
 
-## 6. Source decomposition of the first target
+## 6. Bernstein-cell formulation
 
-Use
-
-\[
- D_u=\frac1{2x}D_x,
- \qquad u=x^2-1/4.
-\]
-
-Do not expand all derivatives into a large polynomial at the outset.  Generate the filters recursively from `L_1` using (1.1), preserving:
-
-- the common exponential `e^{-ell x}`;
-- exact rational functions of `x`;
-- the sign-changing polynomial in `ell`;
-- the common source sum before absolute values.
-
-The archimedean part should be put into a polygamma/Laplace integral before comparison.  The prime side should remain the complete von Mangoldt translation sum.  A termwise sign proof is neither expected nor required.
-
-## 7. Three geometric regimes in `u`
-
-### 7.1 Terminal Euler-safe regime
-
-For each fixed `k`, use Stirling's expansion for the digamma term and the exponential smallness of the prime series as `s=1/2+x` tends to infinity.  The leading term of `q` is
-
-\[
- q(u)=\frac{\log u}{4\sqrt u}
- +O(u^{-1/2}),
-\]
-
-and the leading logarithmic coefficient has the correct Widder sign.  The concrete target is an effective `U_k` such that
-
-\[
- \mathcal W_k(u)>0
- \qquad(u\ge U_k).
-\]
-
-This should be proved analytically, not inferred from sampling.
-
-### 7.2 Compact source regime
-
-On `epsilon<=u<=U`, every differentiated Euler series converges uniformly and admits explicit prime-cutoff tails.  This is the right region for exact symbolic simplification, interval reconnaissance and testing candidate factorizations.
-
-Finite verification is useful here only to discover the factorization or inequality that will later be proved uniformly.
-
-### 7.3 Functional-equation boundary `u->0+`
-
-At `u=0`, `xi_R` is nonzero and `q` is analytic, but the separated formula
-
-\[
- 2/u+\text{gamma term}-\text{prime term}
-\]
-
-contains a cancellation of the zeta pole.  The archimedean and prime pieces must not be bounded separately by singular absolute estimates.
-
-Construct a pole-subtracted source identity before estimating the boundary.  Candidate coordinates include:
-
-- the Chebyshev error measure `d psi(x)-dx`;
-- a pole-subtracted logarithmic derivative;
-- a compactly supported or Abel-regularized explicit-formula kernel;
-- the invariant Taylor coefficients of `mathfrak X'/mathfrak X`.
-
-The cancellation must remain exact.
-
-## 8. Heat/Laguerre lane
-
-The integrated safe-line work already proves that discrete Hausdorff differences are generalized-Laguerre filters of first-Hermite heat time.  The new invariant hierarchy should be connected to that basis.
-
-Concrete target:
-
-1. express `Q_k` or `W_k` as an integral over first-Hermite heat time;
-2. identify the exact generalized-Laguerre or Bessel filter produced by the invariant derivative `D_u=(2x)^{-1}D_x`;
-3. keep the complete theta/prime sum inside the integral;
-4. prove a variation-diminishing or square-completion theorem for the coupled filter.
-
-Modewise `PF_infinity` is forbidden by the positive-sum firewall.  The theorem must act on the completed sum.
-
-## 9. Prime-shift operator lane
-
-The operator form is
-
-\[
- T=T_{\rm gamma}
- -\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
- e^{-(\log n)A_0}.
-\]
-
-The full result is `T+T^*>=0` on the exponential core.  A source-local factorization
-
-\[
- T+T^*=V^*V
-\]
-
-would close RH immediately.
-
-The next finite theorem is the four-exponential Schur complement.  It must be derived inside the unquotiented gamma-plus-prime form.  Bounding the translation sum after a nonorthogonal projection would repeat the #770 error mode.
-
-The finite theorem is reconnaissance: fixed packet size four cannot replace the all-order factorization.
-
-## 10. Differential induction lane
-
-The recurrence (1.2) suggests the cone
-
-\[
- \mathcal C_k=
- \left\{
- h:\ h\ge0,
- \ D[u^{2k+1}h']\le0
- \right\}.
-\]
-
-A complete induction would prove
-
-\[
- \mathcal W_k\in\mathcal C_k
- \quad\Longrightarrow\quad
- \mathcal W_{k+1}\ge0
-\]
-
-while also establishing the hypothesis for the next order.
-
-The missing source theorem may be a weighted complete-monotonicity or total-positivity property of the deficit sequence, rather than a separate estimate at every `k`.
-
-A generic positivity-preserving claim for the differential operator is false; the proof must use the literal source or an invariant cone with sufficient derivative control.
-
-## 11. Hausdorff-cell lane
-
-The normalized sequence `C_k(u)` suggests proving the shifted Bernstein-cell inequalities
+For `N>=0` and `0<=j<=N`, define
 
 \[
  \boxed{
  B_{N,j}(u)
- =\binom Nj(-1)^{N-j}\Delta^{N-j}C_{j+1}(u)
- \ge0,
- \qquad 0\le j\le N.
+ =\binom Nj(-1)^{N-j}\Delta^{N-j}C_{j+1}(u).
  }
- \tag{11.1}
+ \tag{6.1}
 \]
 
 Under RH,
@@ -417,58 +282,156 @@ Under RH,
  =\sum_{\gamma>0}m_\gamma
  \binom Nj
  \lambda_u(a_\gamma)^{j+1}
- [1-\lambda_u(a_\gamma)]^{N-j}.
+ [1-\lambda_u(a_\gamma)]^{N-j}
+ \ge0.
+ \tag{6.2}
 \]
 
-These are beta/Bernstein cells of the invariant spectral coordinate `lambda_u(a)`.  They sum to `C_1(u)` and localize transformed spectral distance.
+The cells sum to `C_1(u)` and resolve the invariant spectral distance from `a=u`.  The source-side goal is an exact beta-cell decomposition in which the complete prime sum remains assembled before absolute values.
 
-The source-side question is whether the complete prime filters admit an exact beta-cell decomposition with a positive archimedean reserve.  This is the most direct bridge to the existing Hausdorff/Laguerre repository machinery.
+The existing safe-line Laguerre/Hausdorff transforms should be compared with these invariant cells.  A successful intertwiner between the two cell systems would be a plausible route to `LER`.
 
-## 12. Computation that is worth doing
+## 7. Heat/Laguerre lane
 
-Useful bounded work:
+Use
 
-- exact recursion and simplification of `G_k` and `L_k`;
-- directed evaluation on compact `(u,k)` panels;
-- asymptotic saddle extraction in `k`;
-- search for square completions or positive integral kernels;
-- rigorous prime-cutoff remainder bounds at fixed `u>0`;
-- testing the weighted flux `D[u^{2k+1}W_k']` rather than raw high derivatives;
-- comparing invariant Bernstein cells with existing safe-line Laguerre cells.
+\[
+ D_u=\frac1{2x}D_x,
+ \qquad u=x^2-1/4.
+\]
+
+Seek an exact representation of `Q_k`, `W_k` or `B_(N,j)` as an integral over first-Hermite heat time.  The desired theorem must:
+
+1. identify the generalized-Laguerre/Bessel filter generated by invariant differentiation;
+2. keep the completed theta or prime sum inside the integral;
+3. preserve the pole cancellation at `u=0`;
+4. produce a square, variation-diminishing operator or positive beta-cell measure for the complete coupled source.
+
+Modewise `PF_infinity` remains forbidden: positive sums of totally-positive atoms need not be totally positive.
+
+## 8. Prime-shift operator lane
+
+On the exponential core,
+
+\[
+ T=T_{\rm gamma}
+ -\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+ e^{-(\log n)A_0}.
+\]
+
+The all-order theorem is
+
+\[
+ T+T^*\succeq0.
+\]
+
+A source-local factorization
+
+\[
+ T+T^*=V^*V
+\]
+
+would close RH immediately.  Every prime translation, gamma term and boundary term must remain in one quadratic form.  Quotienting or norm-bounding the prime shifts separately repeats the source-loss barriers of PR #770.
+
+Finite four-exponential Schur complements remain useful reconnaissance, but no fixed packet size can replace the all-order factorization.
+
+## 9. Zero-orbit compensation lane
+
+The invariant atom formula suggests a conditional analytic target:
+
+\[
+ \sum_{\text{off-line pairs}}
+ \left[
+ \Re\frac{a^k}{(u+a)^{2k}}
+ \right]_{-}
+ \le
+ \sum_{\text{critical atoms}}
+ \frac{a^k}{(u+a)^{2k}}.
+ \tag{9.1}
+\]
+
+Proving (9.1) from independent information about local critical-line density, zero-free regions and multiplicity would also establish `W_k>=0`.
+
+However, global positive-proportion theorems are not automatically enough: the microscope localizes to a narrow logarithmic height window and a negative off-line pair can have phase close to `pi`.  Any compensation theorem must be local at the `O(k^(-1/2))` invariant scale and retain multiplicity.
+
+This lane is secondary to a source-local factorization because it risks rebuilding RH through zero statistics.
+
+## 10. Three `u` regimes
+
+### 10.1 Functional-equation boundary `u->0+`
+
+The separated formula
+
+\[
+ 2/u+\text{gamma term}-\text{prime term}
+\]
+
+contains exact pole cancellation.  Construct a pole-subtracted source identity before estimating.  Bounding the two singular pieces separately is forbidden.
+
+### 10.2 Compact Euler-safe regime
+
+On `epsilon<=u<=U`, every differentiated Euler series converges uniformly and admits directed prime-cutoff tails.  Use this only to test or certify a proposed factorization, not to extrapolate finite order.
+
+### 10.3 Large `u`
+
+For each fixed `k`, Stirling and prime exponential decay give terminal positivity.  This is now far weaker than the global finite-height theorem and does not address the joint regime `k~sqrt(u)` where hypothetical high zeros are detected.
+
+The real asymptotic problem is a two-parameter saddle in `(u,k)` with `u` of order `k^2`.
+
+## 11. Differential-induction lane
+
+The recurrence (1.2) suggests a source-dependent cone
+
+\[
+ \mathcal C_k=
+ \{h:\ h\ge0,\ D[u^{2k+1}h']\le0\}.
+\]
+
+A full induction must propagate enough derivative information to place `W_(k+1)` in the next cone.  A generic positivity claim is false.  The candidate cone must be justified by the literal theta/prime source or by a positive integral representation.
+
+The finite-height theorem can serve as an enormous base case, but a finite base case does not by itself help an induction whose propagation theorem is missing.
+
+## 12. Computation worth doing
+
+Useful work:
+
+- exact recursive generation of `G_k`, `L_k` and invariant Bernstein cells;
+- asymptotic analysis in the joint scaling `u~k^2`;
+- search for a heat-time intertwiner between safe-line Laguerre cells and invariant cells;
+- exact symbolic testing of candidate source Gram factorizations;
+- directed compact checks only after a uniform identity is proposed;
+- local zero-orbit phase studies to calibrate the reserve required by (9.1).
 
 Work to avoid:
 
-- another unstructured Xi zero scan;
-- sparse companion panels without a cofinal frame theorem;
-- modewise total-positivity tests;
+- raw derivatives at order `4.71*10^12+1`;
+- another broad zero scan;
+- modewise positivity;
 - absolute prime envelopes;
-- finite-order positivity extrapolated to all order.
+- sparse finite packets promoted to all order;
+- treating the finite-height theorem as an all-order argument.
 
 ## 13. End-to-end completion protocol
 
-A successful pass should aim to deliver the following chain in one argument:
+A successful continuation must deliver
 
 ```text
 literal pole-subtracted gamma-plus-prime source
--> invariant heat/flux or Hausdorff decomposition
--> all-order source inequality (EW)
+-> source-local invariant measure / Gram / Bernstein cells
+-> all-order (EW)
 -> q is Stieltjes by Widder
 -> invariant zeros lie on the negative real axis
 -> every nontrivial zeta zero has beta=1/2
 -> RH.
 ```
 
-If the all-order step fails, the pass should still freeze the sharpest theorem-sized intermediate result, preferably `W_2>=0`, an effective terminal theorem, or an exact positive recursion with one clearly named source remainder.
+The present checkpoint has completed the finite-height part:
 
-## 14. Immediate priority
+```text
+published RH verification through 3*10^12
+-> exact invariant angular theorem
+-> full Widder cone through 4.71*10^12
+-> strict (EW) through 4.71*10^12.
+```
 
-The recommended immediate order is:
-
-1. prove the exact recurrences in a checker and in prose;
-2. derive a compact pole-subtracted formula for `W_2`;
-3. prove terminal positivity for `W_2`;
-4. attack the remaining compact/boundary source form without quotienting;
-5. identify whether the successful mechanism extends through (1.1) or through the `Q_k` complete-monotonicity hierarchy;
-6. only then generalize to all `k` and close RH.
-
-The project should treat `W_2` as a mechanism-discovery theorem, not as an endpoint substitute.
+The next pass should attack `LER`, not a low-order scalar inequality.
