@@ -2,9 +2,9 @@
 
 Status: **PROPOSED PROOF-ORIENTED DOSSIER; INDEPENDENT REVIEW REQUIRED; RH REMAINS UNPROVED.**
 
-This standalone packet collects the complete mathematical output of the review and proof passes over PRs #765, #766, #769, #770, and #781, together with the source–Hermite–Stieltjes closure developed in the successor work and the latest scalar compression to an all-order Widder inequality.
+This standalone packet collects the complete mathematical output of the review and proof passes over PRs #765, #766, #769, #770, and #781, together with the source–Hermite–Stieltjes closure, the scalar E–Widder compression, and the latest finite-height theorem proving more than four trillion complete Widder orders.
 
-No predecessor branch is modified.  No theorem in this packet is to be read as an accepted repository claim before independent proof review.  In particular, the final arithmetic inequality is not proved here, so the Riemann Hypothesis remains unproved.
+No predecessor branch is modified.  No theorem in this packet is to be read as an accepted repository claim before independent proof review.  The all-order arithmetic inequality remains unproved, so the Riemann Hypothesis remains unproved.
 
 ## Current leading state
 
@@ -47,7 +47,7 @@ The actual positive theta kernel makes `q(u)>0` unconditionally.  For every inte
  }
 \]
 
-The latest proposed endpoint theorem is
+The all-order endpoint is
 
 \[
  \boxed{
@@ -58,22 +58,73 @@ The latest proposed endpoint theorem is
  }
 \]
 
-The reverse implication is Widder's characterization of Stieltjes functions applied in the functional-equation invariant coordinate `u=s(s-1)`.  Under RH,
+The reverse implication is Widder's characterization of Stieltjes functions applied in the functional-equation invariant coordinate `u=s(s-1)`.
+
+### New unconditional finite-order theorem
+
+Let
 
 \[
- q(u)=2\sum_{\gamma>0}
- \frac{m_\gamma}{u+\gamma^2+1/4},
+ F_{n,k}(u)=(-1)^nD_u^{n+k}[u^kq(u)].
 \]
 
-and hence
+Using the invariant genus-zero zero product, the exact atom formula
 
 \[
- \mathcal W_k(u)
- =2(2k-1)!
- \sum_{\gamma>0}m_\gamma
- \frac{(\gamma^2+1/4)^k}
- {(u+\gamma^2+1/4)^{2k}}>0.
+ F_{n,k}(u)
+ =2(n+k)!\sum_a\frac{a^k}{(u+a)^{n+k+1}},
+ \qquad a=-\rho(\rho-1),
 \]
+
+and a new angular lemma for conjugate off-line invariant atoms, the dossier now proves the following height–order theorem:
+
+> If RH is verified through height `H`, then `F_(n,k)(u)>0` for every `u>0` whenever
+> 
+> \[
+>  \max\{k,n+1\}\arctan(1/H)<\pi/2.
+> \]
+
+The published Platt–Trudgian verification through
+
+\[
+ H=3\cdot10^{12}
+\]
+
+therefore gives
+
+\[
+ \boxed{
+ F_{n,k}(u)>0
+ \quad\text{for every }u>0
+ \quad\text{whenever}\quad
+ \max\{k,n+1\}\le4{,}710{,}000{,}000{,}000.
+ }
+\]
+
+In particular,
+
+\[
+ \boxed{
+ \mathcal W_k(u)>0
+ \quad
+ (u>0,\ 1\le k\le4{,}710{,}000{,}000{,}000).
+ }
+\]
+
+No simplicity hypothesis is used.  The external zero computation is imported through the repository's existing exact source lock and was not rerun.
+
+The proof also gives the failure-localization rule
+
+\[
+ \mathcal W_k(u)<0
+ \Longrightarrow
+ \text{an off-line zero exists below height }
+ \cot\left(\frac\pi{2k}\right).
+\]
+
+This is one-way: a zero below that height is not claimed to force a negative complete sum at the same order.
+
+## Euler-safe source form
 
 The Euler-safe expansion is
 
@@ -84,7 +135,7 @@ The Euler-safe expansion is
  -\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\frac{e^{-x\log n}}x.
 \]
 
-The `2/u` term is killed by every Widder differential operator.  Consequently define
+The `2/u` term is killed by every Widder differential operator.  Define
 
 \[
  \mathcal G_k(u)=
@@ -114,19 +165,26 @@ Then
   \mathcal L_k(u,\log n),
 \]
 
-where every differentiated prime-power series converges absolutely because `s>1`.  Thus the entire remaining Architecture-E theorem is the source-faithful inequality
+where every differentiated prime-power series converges absolutely because `s>1`.
+
+Consequently the E–Widder source inequality
 
 \[
  \boxed{
  \sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
  \mathcal L_k(u,\log n)
- \le \mathcal G_k(u)
- \qquad(u>0,\ k\ge1).
+ < \mathcal G_k(u)
  }
  \tag{EW}
 \]
 
-`(EW)` is not proved in this packet.  It is exactly the point at which the proof programme remains open.
+is now proved for every `u>0` and every integer
+
+\[
+ 1\le k\le4{,}710{,}000{,}000{,}000.
+\]
+
+The same inequality for **all** `k` remains open and is RH-equivalent.  The first order not paid by the imported finite-height theorem is `4,710,000,000,001`; that integer has no intrinsic meaning beyond marking the current angular budget.
 
 ## Complete architecture
 
@@ -154,7 +212,7 @@ The dossier proves or imports, with exact provenance, the chain
  \end{array}
 \]
 
-All translation arrows are explicit.  The only unproved content is the final positivity assertion, equivalently `(EW)`.
+All translation arrows are explicit.  The only conclusion-bearing content still unproved is positivity for unbounded Widder order, equivalently all-order `(EW)`.
 
 ## Frozen review boundary
 
@@ -170,6 +228,7 @@ This packet freezes the following exact source states.  Later movement on any so
 | PR #781 | `ea282c4e73ecd2d8cad44587da5ffa135df67e98` | Segre defect geometry, deformation spectra, Epstein walls |
 | PR #783 | `1db60cddb723ea921c1cc73edaa0334b72679156` | proof review and generalized-Schur negative-index theorem |
 | PR #784 | `d6d326b21d9526d9c91b18017bf550003f8f4f9b` | source–Hermite–Stieltjes closure and mechanism firewalls |
+| Platt–Trudgian | `EXT.XI.PLATT_TRUDGIAN.2021` | rigorous RH verification through `3*10^12` |
 
 ## What is imported and what is new
 
@@ -182,7 +241,8 @@ The packet imports, without changing status:
 - the explicit ternary Segre/Chow resolution from #769;
 - the source-faithfulness and nonorthogonal quotient/gauge barriers from #770;
 - the Segre/Gorenstein, deformation-spectrum and Epstein-wall results from #781;
-- reviewed low-order safe-line Pick/Stieltjes results already integrated on `main`.
+- reviewed low-order safe-line Pick/Stieltjes results already integrated on `main`;
+- the rigorous Platt–Trudgian finite-height theorem through `3*10^12`.
 
 ### Imported classical mathematics
 
@@ -200,9 +260,12 @@ Subject to independent review, the dossier contributes:
 6. the exact Stieltjes endpoint and two-channel Gram factorization;
 7. the Loewner-difference decomposition of the safe Pick matrix;
 8. the functional-equation invariant coordinate `u=s(s-1)`;
-9. the scalar E–Widder criterion and the absolutely convergent source inequality `(EW)`;
-10. the exact differential recurrences, normalized Hausdorff microscope and attack plan;
-11. the accompanying proof-boundary and failed-shortcut firewalls.
+9. the scalar E–Widder criterion and absolutely convergent source inequality `(EW)`;
+10. the exact differential recurrences and normalized Hausdorff microscope;
+11. the invariant-atom angular lemma;
+12. the general finite-height-to-finite-Widder-cone theorem;
+13. the strict `4.71*10^12`-order source inequality and failure-localization corollary;
+14. the accompanying proof-boundary and failed-shortcut firewalls.
 
 No external priority claim is made.
 
@@ -211,22 +274,25 @@ No external priority claim is made.
 1. [`01_FROZEN_SOURCE_REVIEW.md`](01_FROZEN_SOURCE_REVIEW.md)
 2. [`02_SOURCE_HERMITE_STIELTJES_CLOSURE.md`](02_SOURCE_HERMITE_STIELTJES_CLOSURE.md)
 3. [`03_E_WIDDER_SCALAR_ENDPOINT.md`](03_E_WIDDER_SCALAR_ENDPOINT.md)
-4. [`04_FIREWALLS_AND_SCOPE.md`](04_FIREWALLS_AND_SCOPE.md)
-5. [`05_IMPORTED_VS_NEW_CLAIM_LEDGER.md`](05_IMPORTED_VS_NEW_CLAIM_LEDGER.md)
-6. [`06_NEXT_ATTACK.md`](06_NEXT_ATTACK.md)
-7. [`07_LITERATURE_BOUNDARY.md`](07_LITERATURE_BOUNDARY.md)
-8. [`VALIDATION.md`](VALIDATION.md)
-9. [`verify_widder_atom.py`](verify_widder_atom.py)
+4. [`08_FINITE_HEIGHT_WIDDER_CONE.md`](08_FINITE_HEIGHT_WIDDER_CONE.md)
+5. [`04_FIREWALLS_AND_SCOPE.md`](04_FIREWALLS_AND_SCOPE.md)
+6. [`05_IMPORTED_VS_NEW_CLAIM_LEDGER.md`](05_IMPORTED_VS_NEW_CLAIM_LEDGER.md)
+7. [`06_NEXT_ATTACK.md`](06_NEXT_ATTACK.md)
+8. [`07_LITERATURE_BOUNDARY.md`](07_LITERATURE_BOUNDARY.md)
+9. [`VALIDATION.md`](VALIDATION.md)
+10. [`verify_widder_atom.py`](verify_widder_atom.py)
+11. [`verify_height_order_geometry.py`](verify_height_order_geometry.py)
 
 ## Validation boundary
 
-The included checker verifies finite algebraic identities only.  It does not prove the analytic continuation arguments, the infinite canonical-product identities, source-kernel positivity, the Widder inequalities for Riemann data, or RH.
+The included checkers verify finite algebraic identities only.  They do not replay the external zero computation, prove the analytic continuation arguments, establish all-order source-kernel positivity, prove `(EW)` beyond the stated finite order, or prove RH.
 
 ```text
-Architecture translations                 PROPOSED COMPLETE / REVIEW
-E–Widder equivalence                       PROPOSED COMPLETE / REVIEW
-Euler-safe source expansion                PROPOSED COMPLETE / REVIEW
-exact bounded algebra                      217 AUTHORING CHECKS
-E–Widder arithmetic inequality (EW)        OPEN / RH-EQUIVALENT
-Riemann Hypothesis                         UNPROVED
+Architecture translations                         PROPOSED COMPLETE / REVIEW
+E–Widder equivalence                               PROPOSED COMPLETE / REVIEW
+Euler-safe source expansion                        PROPOSED COMPLETE / REVIEW
+finite-height full Widder cone through 4.71e12     PROPOSED COMPLETE / REVIEW
+exact bounded algebra                              283 AUTHORING CHECKS
+all-order E–Widder arithmetic inequality           OPEN / RH-EQUIVALENT
+Riemann Hypothesis                                 UNPROVED
 ```
