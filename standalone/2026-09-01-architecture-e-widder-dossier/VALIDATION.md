@@ -11,17 +11,18 @@ branch:     research/gpt56-pro/20260901-architecture-e-widder-dossier
 packet:     standalone/2026-09-01-architecture-e-widder-dossier/
 ```
 
-The branch was created directly from the stated `main` commit.  It does not modify the five reviewed source PRs or the successor review/closure PRs.
+The branch was created directly from the stated `main` commit.  It does not modify the reviewed source PRs, source experiments, canonical registries or production paths.
 
-## 2. Bounded checker
+## 2. Bounded checkers
 
 Run from the repository root:
 
 ```bash
 python -B standalone/2026-09-01-architecture-e-widder-dossier/verify_widder_atom.py
+python -B standalone/2026-09-01-architecture-e-widder-dossier/verify_height_order_geometry.py
 ```
 
-Authoring execution produced:
+The first authoring execution produced
 
 ```text
 PASS_ARCHITECTURE_E_WIDDER_EXACT_CHECKS
@@ -34,18 +35,37 @@ total=217
 RH_UNPROVED
 ```
 
-The checker uses only Python's standard library and exact rational arithmetic.
+The second exact-rational authoring calculation produced the equivalent count profile
 
-## 3. What the checker authenticates
+```text
+PASS_FINITE_HEIGHT_WIDDER_CONE_EXACT_CHECKS
+complex_widder_atoms=36
+diagonal_phase_formulas=27
+published_budget=3
+total=66
+IMPORTED_ZERO_HEIGHT_NOT_REPLAYED
+ALL_ORDER_EW_OPEN
+RH_UNPROVED
+```
 
-The 217 finite controls cover:
+The second committed script was reconstructed in the authoring environment with the same rational panels and all 66 controls passed.  Both checkers use only Python's standard library and exact `Fraction` arithmetic.
 
-1. the single-Stieltjes-atom identity
+Combined bounded controls:
+
+\[
+ 217+66=283.
+\]
+
+## 3. What the first checker authenticates
+
+The 217 controls cover:
+
+1. the single-positive-Stieltjes-atom identity
    \[
    (-1)^{k-1}D^{2k-1}\left[\frac{u^k}{u+a}\right]
    =(2k-1)!\frac{a^k}{(u+a)^{2k}};
    \]
-2. the exact differential recurrence
+2. the differential recurrence
    \[
    W_{k+1}=-uW_k''-(2k+1)W_k';
    \]
@@ -60,36 +80,82 @@ The 217 finite controls cover:
    \]
 5. the Loewner-difference identity, including diagonal cells.
 
-The controls use several exact rational panels and polynomial test functions.  They are regression checks for algebra and indexing, not evidence for the Riemann-data sign.
+## 4. What the finite-height checker authenticates
 
-## 4. Remote readback
+The 66 new controls cover:
 
-The committed checker was read back from the remote branch through the GitHub contents API.  Its remote blob identity at readback was
+1. the full complex-atom Widder identity
+   \[
+   (-1)^nD^{n+k}\left[\frac{u^k}{u+a}\right]
+   =(n+k)!\frac{a^k}{(u+a)^{n+k+1}}
+   \]
+   on exact rational complex atoms;
+2. the exact diagonal phase formulas for
+   \[
+   z=\frac{a}{(u+a)^2};
+   \]
+3. positivity of `Re z` on the checked right-half-plane panels;
+4. the algebraic angular domination
+   \[
+   |\arg z|\le|\arg a|
+   \]
+   in its tangent cross-multiplication form;
+5. the exact published height/order ratio
+   \[
+   \frac{4{,}710{,}000{,}000{,}000}
+        {3{,}000{,}000{,}000{,}000}
+   =\frac{157}{100}.
+   \]
+
+The checkers are regression controls for algebra and indexing.  They are not substitutes for the written continuum proof.
+
+## 5. Imported external theorem
+
+The finite-height Widder theorem imports the published Platt–Trudgian result that all nontrivial zeta zeros through height
+
+\[
+ 3\cdot10^{12}
+\]
+
+lie on the critical line.  The repository source lock is
+
+```text
+EXT.XI.PLATT_TRUDGIAN.2021
+```
+
+The external interval computation and Turing count were not rerun in this pass.  No stronger zero-height statement is inferred.
+
+## 6. Remote readback
+
+The original checker was read back from the remote branch with blob identity
 
 ```text
 0b791b399214eb91b0a5e6a93610019238fab02a
 ```
 
-The packet directory was also read back remotely and contained the declared front door, seven proof/review notes and the checker before this validation file was added.
+The new theorem note and finite-height checker were also created through the GitHub contents API and their branch residency is checked again at the final remote-head audit.
 
-## 5. Analytic content not machine-certified
+## 7. Analytic content not machine-certified
 
-The checker does **not** establish:
+The checkers do **not** establish:
 
 - existence, positivity or exact normalization of the full Riemann theta kernel;
 - the canonical-product expansions for `X` or `mathfrak X`;
-- the negative-square theorem for an infinite zero set;
+- orbit multiplicity and local-uniform convergence in the infinite zero sum;
+- the negative-square theorem for the infinite zero set;
 - the Fourier transform from `A_Phi` to `B_X`;
 - the Stieltjes continuation converse;
 - the application of Widder's theorem to `q`;
 - differentiated infinite Euler-series interchange in every declared regime;
-- positivity of any `W_k(u)` for actual Riemann data beyond imported results;
-- the E–Widder inequality `(EW)`;
+- the published zero verification itself;
+- the continuum angular theorem for all zero atoms;
+- positivity at unbounded Widder order;
+- the all-order E–Widder inequality;
 - RH or GRH.
 
 These are mathematical proof obligations and must be checked independently.
 
-## 6. Review checklist
+## 8. Review checklist
 
 A reviewer should perform at least the following:
 
@@ -97,20 +163,24 @@ A reviewer should perform at least the following:
 2. reconstruct the companion/Hermite congruence;
 3. check the feature-space negative-index proof and multiplicity caveat;
 4. rederive the source transport equation and factor four;
-5. verify the safe-axis derivative signs;
-6. check the Stieltjes converse on the cut plane;
-7. pin Widder/Sokal's exact reduced condition;
-8. verify the invariant entire descent and order conversion;
-9. audit the Euler-safe source expansion and all fixed-order interchanges;
-10. rerun the exact checker from committed bytes.
+5. check the Stieltjes converse on the cut plane;
+6. pin Widder/Sokal's exact reduced condition;
+7. verify the invariant entire descent and order conversion;
+8. audit the Euler-safe source expansion and all fixed-order interchanges;
+9. reconstruct the full complex-atom formula;
+10. verify the phase interval and the bound `|arg a|<arctan(1/|gamma|)`;
+11. check the use and scope of the Platt–Trudgian theorem;
+12. verify the strict `4.71*10^12` corollary and one-way failure localization;
+13. rerun both exact checkers from committed bytes.
 
-## 7. Current exact boundary
+## 9. Current exact boundary
 
 ```text
-remote packet residency                   CONFIRMED
-bounded rational algebra                  217 CHECKS PASSED IN AUTHORING RUN
-repository-wide CI                        NOT RUN
-analytic proof review                     REQUIRED
-E-Widder inequality (EW)                  OPEN / RH-EQUIVALENT
-Riemann Hypothesis                        UNPROVED
+remote packet residency                         CONFIRM AT FINAL HEAD
+bounded rational algebra                        283 AUTHORING CHECKS PASSED
+repository-wide CI                              NOT RUN
+analytic proof review                           REQUIRED
+E-Widder inequality through 4.71*10^12          PROPOSED COMPLETE / REVIEW
+all-order E-Widder inequality                   OPEN / RH-EQUIVALENT
+Riemann Hypothesis                              UNPROVED
 ```
