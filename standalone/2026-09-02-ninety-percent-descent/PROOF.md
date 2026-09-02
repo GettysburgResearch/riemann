@@ -184,8 +184,12 @@ sign-change proportion of `Z` on that mesh.
 | 0.75 | 0.684 | 0.316 | 0.237 |
 | 0.875 | 0.704 | 0.296 | 0.175 |
 
+**`T = 10^8`, 300 mesh points per phase** (`outputs/gs_1e8.log`): Gram phase `eff = 0.746`,
+minority `0.163`; phase `π/2`: `eff = 0.595`, minority `0.473`.
+
 The best phase is the Gram phase, where `eff` is the classical Gram's-law success rate
-(`0.80` at `10^4`, `0.77` at `10^6`, decreasing with height as is well known); the worst
+(`0.80` at `10^4`, `0.77` at `10^6`, `0.75` at `10^8`, decreasing with height as is well
+known); the worst
 phase is `δ=π/2`, where the residue minority is one half, i.e. the descent certifies
 nothing beyond the trivial `N_0 ≥ 0`.  At **no phase and no height** does the minority
 fraction come within a factor `2` of the gate's `0.0495`.
@@ -229,6 +233,22 @@ as Theorem 2 predicts for `δ_{31}≈0`, and the minority fraction `0.050` sits 
 gate's threshold `0.0495` at this most favourable height; at `10^4` and `10^6` the Gram
 phase itself gives `0.10` and `0.14` (Section 3), and the `K=31` phase at those heights is
 `0.93π` and `0.71π`, where the minority fraction is `0.15–0.35`.
+
+Heights `[5000,5024]` (`outputs/mesh_5000.log`, 80 digits): 27 zeros of `Ξ`, 25 Gram
+points, Gram's law holding on 18 of 24 Gram intervals (75%).  Here `δ_{31}(t)=0.72π`, a bad
+phase for `K=31`:
+
+| `K` | mesh size `M` | `U_+` | `U_-` | `min/M` | certified zeros / mesh intervals | true zeros in the span |
+|---|---|---|---|---|---|---|
+| 5 | 27 | 7 | 20 | 0.259 | 14 / 26 (53.8%) | 26 |
+| 11 | 26 | 5 | 21 | 0.192 | 17 / 25 (68.0%) | 25 |
+| 21 | 27 | 9 | 18 | 0.333 | 16 / 26 (61.5%) | 26 |
+| 31 | 27 | 21 | 6 | 0.222 | 16 / 26 (61.5%) | 26 |
+
+The `K=31` yield (61.5%, minority `0.222`) matches the shifted-Gram scan at phase
+`0.69π–0.75π` and height `10^4` (`eff = 0.64–0.70`, Section 3), again as Theorem 2
+predicts.  Across the three heights the actual `Ξ^{(31)}` mesh thus certifies 39%, 90% and
+62% of the zeros, following the phase `δ_{31}(t)` and nothing else.
 
 ---
 

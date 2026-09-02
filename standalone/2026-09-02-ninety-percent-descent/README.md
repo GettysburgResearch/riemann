@@ -10,12 +10,13 @@ Exact sources or dependencies:
                    L-108301 (PR #777 @ 399410ba), T-107401 (PR #772 @ 93726d7);
                    Riemann-Siegel formula; Xi(t) = A(t) Z(t); mpmath 1.3.0.
 What was actually run:
-                   scripts/mesh.py 100 160 5,11,21,31 70   and   scripts/mesh.py 1000 1048 5,11,21,31 70
-                     - zeros of Xi^{(K)} from 70-digit Cauchy-circle Taylor expansions,
-                       residue signs, certified zeros, Gram control (outputs/mesh_*.log, *.json);
-                   scripts/gramshift2.py 10000 600 16   and   scripts/gramshift2.py 1000000 400 8
-                     - descent efficiency of the mesh theta = delta + j*pi for all phases
-                       (outputs/gs_1e4.log, outputs/gs_1e6.log).
+                   scripts/mesh.py at heights [100,160], [1000,1048] (70 digits) and [5000,5024] (80 digits)
+                     - zeros of Xi^{(K)} from Cauchy-circle Taylor expansions, residue signs,
+                       certified zeros, Gram control (outputs/mesh_*.log, *.json);
+                   scripts/gramshift2.py at T = 10^4 (16 phases, 600 points), 10^6 (8 phases, 400 points),
+                   10^8 (phases 0 and pi/2, 300 points)
+                     - descent efficiency of the mesh theta = delta + j*pi
+                       (outputs/gs_1e4.log, gs_1e6.log, gs_1e8.log).
 Smallest remaining gap:
                    none for the refutation; the limiting statement uses the observed
                    efficiency (~0.6) at the phase pi/2, which the K = 31 mesh visits near 10^15.
@@ -27,10 +28,11 @@ The descent inequality of PR #777 certifies exactly the zeros of `Ξ` that appea
 changes of `Ξ` between consecutive zeros of `Ξ^{(K)}` (Theorem 1). For `t ≫ K²` those
 zeros form the Gram mesh shifted by an explicit phase `δ_K(t)` (Theorem 2), which for
 `K = 31` sweeps through all values as `t` grows and reaches the Gram points only as
-`t → ∞`. The descent's yield is therefore a shifted Gram's-law success rate: `0.77–0.80`
-at the Gram phase and `≈0.55–0.60` at the phase `π/2`, at heights `10^4` and `10^6`
-(Section 3), and `89.7%` at height `10^3` where `δ_{31} = 0.03π` (Section 4, matching the
-Gram's-law rate `89.5%` there). The gate needs a minority residue fraction below
+`t → ∞`. The descent's yield is therefore a shifted Gram's-law success rate: `0.75–0.80`
+at the Gram phase and `≈0.55–0.60` at the phase `π/2`, at heights `10^4`, `10^6` and `10^8`
+(Section 3); with the actual zeros of `Ξ^{(31)}` it is `39%` at height `10^2`, `89.7%` at
+`10^3` (where `δ_{31} = 0.03π`, matching the Gram's-law rate `89.5%` there) and `61.5%` at
+`5·10^3` (where `δ_{31} = 0.72π`), Section 4. The gate needs a minority residue fraction below
 `0.0495`, i.e. sign changes on more than 90–95% of the mesh; it fails by a factor
 between 2 and 10 at every height tested, and its limsup over `T` is at least `0.35`.
 The "remaining theorem" of the programme is a false statement, not a missing lemma.
