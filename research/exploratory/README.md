@@ -23,3 +23,7 @@ Keep discovery and proof boundaries visible:
 - a new theorem or repair should receive a new identity and review.
 
 When a result becomes stable and important, request exact-SHA review. After review, a future integrator may extract it into `research/integrated/` while preserving the exploratory source.
+
+## Imported source dossiers
+
+- [`openai-prime-gaps-2026-09-02/`](openai-prime-gaps-2026-09-02/) — exact gitlink imports of `openai/PrimeGaps186@61340d0b74163003b32756bb16e91d9209a5e330` and `openai/LongGapsBetweenPrimes@8f5fa88c88b4750028c05b66b081d56a92418054`, with theorem audit, improvement roadmap, and an explicit RH implication firewall. Status: `IMPORTED / REVIEW_PENDING`.
