@@ -1,0 +1,218 @@
+{
+  "analytic_proofs_machine_verified": false,
+  "arithmetic": "EXACT_RATIONAL / SYNTHETIC_CONTROL",
+  "checks": {
+    "abel": 48,
+    "companion_nonpositive": 15,
+    "companion_polynomial": 105,
+    "counterfeit": 2,
+    "cycle_cumulants": 2,
+    "hilbert_flag": 16,
+    "hilbert_surplus": 16,
+    "horizontal_schur": 18,
+    "horizontal_sharp": 1,
+    "horizontal_surplus": 9,
+    "horizontal_zero": 2,
+    "marked_approximation": 1,
+    "marked_covariance": 36,
+    "pair_energy": 8,
+    "screening_legendre": 5,
+    "screening_series": 1,
+    "sharp_equality": 9,
+    "sharp_resolvent": 153
+  },
+  "independent_review_completed": false,
+  "rh_proved": false,
+  "route1": {
+    "actual_theta_marked_sign": "proved in manuscript; no numerical theta premise",
+    "companion_positive": false,
+    "synthetic_second_cycle": "96862261/432224100",
+    "synthetic_third_cycle": "101483578463/1283705577000"
+  },
+  "route2": {
+    "finite_frequency_theorem": "proved in manuscript; no M\u00f6bius exponent improvement",
+    "new_power_saving": false
+  },
+  "route3": {
+    "arithmetic_horizontal_bound": false,
+    "new_zero_proportion": false,
+    "packets": [
+      {
+        "M": 1,
+        "energy": "1",
+        "grid_radius": 1,
+        "horizontal_trace": "0",
+        "multiplicities": [
+          1
+        ],
+        "pairs": 0,
+        "simple_real": 1,
+        "support": [
+          "1"
+        ],
+        "surplus": "0"
+      },
+      {
+        "M": 3,
+        "energy": "129/25",
+        "grid_radius": 2,
+        "horizontal_trace": "0",
+        "multiplicities": [
+          2,
+          1
+        ],
+        "pairs": 0,
+        "simple_real": 1,
+        "support": [
+          "1",
+          "-1"
+        ],
+        "surplus": "4/25"
+      },
+      {
+        "M": 2,
+        "energy": "122681/3200",
+        "grid_radius": 2,
+        "horizontal_trace": "261/160",
+        "multiplicities": [
+          1,
+          1
+        ],
+        "pairs": 1,
+        "simple_real": 0,
+        "support": [
+          "2",
+          "1/2"
+        ],
+        "surplus": "109881/3200"
+      },
+      {
+        "M": 6,
+        "energy": "1104129/3200",
+        "grid_radius": 2,
+        "horizontal_trace": "783/160",
+        "multiplicities": [
+          3,
+          3
+        ],
+        "pairs": 1,
+        "simple_real": 0,
+        "support": [
+          "2",
+          "1/2"
+        ],
+        "surplus": "1065729/3200"
+      },
+      {
+        "M": 3,
+        "energy": "32188089/100352",
+        "grid_radius": 3,
+        "horizontal_trace": "5013/896",
+        "multiplicities": [
+          1,
+          1,
+          1
+        ],
+        "pairs": 1,
+        "simple_real": 1,
+        "support": [
+          "1",
+          "2",
+          "1/2"
+        ],
+        "surplus": "31686329/100352"
+      },
+      {
+        "M": 5,
+        "energy": "34898873/100352",
+        "grid_radius": 3,
+        "horizontal_trace": "5013/896",
+        "multiplicities": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "pairs": 1,
+        "simple_real": 1,
+        "support": [
+          "1",
+          "-1",
+          "2",
+          "1/2"
+        ],
+        "surplus": "33995705/100352"
+      },
+      {
+        "M": 4,
+        "energy": "1773062519898025/53331167232",
+        "grid_radius": 3,
+        "horizontal_trace": "41591629/653184",
+        "multiplicities": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "pairs": 2,
+        "simple_real": 0,
+        "support": [
+          "2",
+          "1/2",
+          "3",
+          "1/3"
+        ],
+        "surplus": "1772635870560169/53331167232"
+      },
+      {
+        "M": 10,
+        "energy": "45653989206714902905/28563737812992",
+        "grid_radius": 4,
+        "horizontal_trace": "6749359733/15116544",
+        "multiplicities": [
+          3,
+          1,
+          2,
+          2,
+          1,
+          1
+        ],
+        "pairs": 2,
+        "simple_real": 1,
+        "support": [
+          "1",
+          "-1",
+          "2",
+          "1/2",
+          "3",
+          "1/3"
+        ],
+        "surplus": "45653446495696456057/28563737812992"
+      }
+    ],
+    "screening_leading_terms": [
+      {
+        "coefficient": "1/1575",
+        "power": 6,
+        "real_pairs": 1
+      },
+      {
+        "coefficient": "1/9823275",
+        "power": 10,
+        "real_pairs": 2
+      },
+      {
+        "coefficient": "1/273922023375",
+        "power": 14,
+        "real_pairs": 3
+      },
+      {
+        "coefficient": "1/22561587455281875",
+        "power": 18,
+        "real_pairs": 4
+      }
+    ]
+  },
+  "schema": "three-routes-exact-v1",
+  "total_checks": 447
+}
