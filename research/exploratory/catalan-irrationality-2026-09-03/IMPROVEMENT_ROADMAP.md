@@ -1,253 +1,306 @@
-# Improvement roadmap
+# Improvement and repair roadmap after the hostile review
 
-## Priority 0: produce a corrected v2 proof packet
+```text
+Current v1 status: proof invalid as written
+Primary obstruction: +(rho^2/2) B^2 log B in the max-summand majorant
+At rho=1/20: +B^2 log B/800
+```
 
-The smallest viable repair set is:
+The earlier roadmap treated Proposition 9.5 as an unwritten ledger. The
+hostile countercheck now shows more: evaluating the exact largest-summand
+route described in the paper leaves a positive leading logarithmic term.
+Therefore editorial corrections and missing numerical certificates are no
+longer sufficient. A successful v2 needs a genuinely new global mechanism.
 
-1. define `D := 2B` before the square matrix;
-2. add `S <= B/20` to Theorem 5.1;
-3. replace the literal `5B` support cutoff in Lemma 5.5 by a proved safe
-   linear cutoff, for example `7B` in the final regime;
-4. give unique equation numbers in Section 5.1;
-5. state a uniform bound for the Pascal quotient `Psi_A(I)`;
-6. expand Proposition 9.5 into a complete ledger.
+## Priority 0: choose a real repair architecture
 
-The first three corrections appear not to change the final constant or
-strategy.
+A corrected proof must do at least one of the following.
 
-## Priority 1: publish exact computational artifacts
+### Route A: signed Cauchy--Binet cancellation
+
+Do not replace
+
+\[
+\sum_I\Xi_I
+\]
+
+by the largest absolute summand. Instead prove cancellation strong enough to
+remove at least
+
+\[
+\frac{\rho^2}{2}B^2\log B
+\]
+
+from the logarithmic size of the complete determinant.
+
+This requires:
+
+- a canonical sign or phase description of `Xi_I`;
+- a determinant-level identity, not termwise absolute values;
+- uniform control for the row set `A` selected by nonvanishing;
+- a proof robust to the variation of the tail factors;
+- an explicit lower bound on the amount of cancellation.
+
+A numerical observation of cancellation is not sufficient.
+
+### Route B: stronger common divisibility
+
+Find a divisor of the complete Cauchy--Binet sum whose small-prime singular
+coefficient is at least `2rho`, rather than
+
+\[
+2\rho-\rho^2/2.
+\]
+
+The divisor must be common to the actual determinant, not merely to a selected
+term or to different local minimizers. It must also remain attached to the
+same scalar used at the real place.
+
+### Route C: redesign the weights or completion
+
+Modify the weighted tails, clearing factors, or Newton completion so that the
+compulsory selected product
+
+\[
+\prod_{i<S}\Pi_i
+\]
+
+does not contribute `2rho B^2 log B`, or so that an exact matching local
+factor is forced.
+
+The design problem is now quantitative:
+
+```text
+selected clearing-factor coefficient
+<=
+common local-minimum coefficient.
+```
+
+The current design fails this by `rho^2/2`.
+
+### Route D: build a different adelic scalar
+
+Retain the attractive same-scalar philosophy but abandon this particular
+Pascal--Cauchy determinant. The replacement must have:
+
+```text
+forced nonvanishing
+complete local valuation ledger
+archimedean contraction
+compatible optimization directions
+no uncancelled entropy/clearing-factor tax.
+```
+
+## Priority 1: publish a corrected local algebra packet
+
+The finite core remains worth preserving, but it must be separated from the
+failed global conclusion.
+
+Required repairs:
+
+1. define `T_0:=G`;
+2. repair the `T_i`/`T_{i+1}` residual index and global column sign;
+3. define `D:=2B` before the square completion;
+4. add `S<=B/20` to Theorem 5.1;
+5. replace the factorial quotient in Lemma 4.1 by its global polynomial
+   product where necessary;
+6. treat zero Cauchy--Binet terms as valuation `+infinity`;
+7. replace the false `5B` cutoff by a proved `O(B)` support bound;
+8. supply explicit full-row/ideal-row exchanges.
+
+This packet should make no irrationality claim.
+
+## Priority 2: formalize the countercheck
+
+The leading-order obstruction is simple enough for a small formal or
+proof-assistant project.
+
+Suggested theorem surface:
+
+```text
+pascal_consecutive_minor_ne_zero
+selected_clearing_log_asymptotic
+consecutive_cauchy_log_is_O_B2
+tail_product_log_is_O_BlogB
+odd_a_layer_exact_cancellation
+small_prime_m_singular_coefficient
+max_summand_majorant_lower_bound
+```
+
+The final theorem should state
+
+\[
+\mathcal M_B\ge
+\frac{\rho^2}{2}B^2\log B-O_\rho(B^2).
+\]
+
+This would provide a durable refutation of the v1 proof route independent of
+floating computation.
+
+## Priority 3: release the missing numerical artifacts
+
+The missing certificates no longer repair the theorem, but they remain useful
+for validating the local optimization and for any redesigned scalar.
 
 ### Odd-small-prime certificate
 
-A machine-readable certificate should contain, for every merged interval:
+For every merged interval publish:
 
 ```text
-rational left and right endpoints
-ordering of the marginal ladders
+rational endpoints
+marginal-ladder ordering
 rational quadratic Q_0(v)
 symbolic antiderivative identifier
 outward-rounded endpoint enclosure
-local remainder bound
+Euler--Maclaurin remainder
 ```
 
-The checker must verify:
-
-- the union is exactly `[0,1]`;
-- interiors are disjoint;
-- all breakpoint events are represented;
-- the displayed quadratic equals the original floor/quantile definition;
-- special-function argument shifts are exact;
-- Euler-Maclaurin remainder signs and magnitudes;
-- the final rational interval.
+The checker must verify the full partition, formulas, argument shifts,
+remainder signs, and final interval.
 
 ### Middle-prime certificate
 
-For each of the 235 cells, publish:
+For every one of the claimed 235 cells publish:
 
 ```text
 t interval
-affine ordering data for the six boundaries
+affine boundary ordering
 selected marginal levels
 rational affine E_{1/20}(t)
-exact integral
+exact integral.
 ```
 
-The checker should sum the rational integrals and recover the displayed
-fraction exactly.
+The checker should recover the displayed rational exactly.
 
-## Priority 2: close Proposition 9.5
+## Priority 4: understand the min/max mismatch abstractly
 
-Write a master identity before taking asymptotics. Every factor in (4.5)
-should have one ledger row:
-
-```text
-F_B
-row factorials
-column factorials
-Pi_i
-Cauchy denominators
-V(J)
-V(I)^2
-Psi_A(I)
-tail bounds
-number of Cauchy-Binet subsets
-minimal integerizer local surplus
-prime 2
-odd small prime powers
-middle primes
-large primes
-higher powers
-surplus rows
-fixed rational denominator q.
-```
-
-For each row record:
-
-```text
-exact finite expression
-B^2 log B coefficient
-B^2 coefficient
-uniform error
-source lemma.
-```
-
-The proof should visibly cancel the `B^2 log B` column and sum the `B^2`
-column to the claimed coefficient.
-
-### Missing Pascal-height lemma
-
-A promising exact statement is:
-
-> If `A` is obtained from `{0,...,S+2}` by omitting
-> `c_1,c_2,c_3`, then the Pascal alternant quotient has total selected-index
-> degree `c_1+c_2+c_3-3 <= 3S`, and its coefficient height is at most
-> `exp(O(S log(B+S)))`.
-
-This would make its logarithm `o(B^2)` uniformly.
-
-## Priority 3: independent formal verification
-
-The finite core is well suited to Lean:
-
-```text
-Catalan tails and recurrence
-finite differences of polynomials
-Newton interpolation
-rational-function pole extremality
-matrix rank/minor extraction
-Newton unit-vector completion
-Cauchy determinant
-alternating-polynomial Vandermonde divisibility
-p-adic valuation of factorials and Vandermondes
-balanced occupancy minimization
-positive-part denominator identity.
-```
-
-The analytic layer needs:
-
-```text
-Stirling with uniform errors
-PNT weighted prime-power summation
-Hurwitz zeta, digamma, and log-Gamma recurrence identities
-Euler-Maclaurin interval certificates.
-```
-
-Keep the finite algebra, PNT interface, and numerical certificate as separate
-modules so the trust boundary remains visible.
-
-## Priority 4: optimize the ratio rho = S/B
-
-The paper fixes \(\rho=1/20\). Define the full margin function
+Formulate a general theorem for determinant expansions
 
 \[
-M(\rho)
- =
--\big(4\rho-2\rho^2\big)
--c_{\rm odd}(\rho)
-+\Lambda_{\rm mid}(\rho)
-+\Delta_{>B}(\rho),
+D=\sum_I X_I.
 \]
 
-with signs normalized to the final contraction.
+The v1 failure has the pattern:
 
-A systematic campaign should:
+```text
+local common divisor = sum over primes of minimum_I local_cost_p(I)
+real majorant         = maximum_I real_cost(I)
+```
 
-- derive cells symbolically as functions of rational `rho`;
-- locate combinatorial phase transitions;
-- optimize the certified margin;
-- search for a rational `rho` with fewer cells and a larger margin;
-- measure sensitivity to each prime range.
-
-A larger margin makes all subsequent verification and quantitative work more
-robust.
-
-## Priority 5: effective bounds and an irrationality measure
-
-The present proof is asymptotic. To obtain an explicit irrationality measure
-or even an explicit contradiction threshold, one needs:
-
-- effective Stirling remainders;
-- an effective PNT error sufficient for every compact prime range;
-- explicit full-row stability constants;
-- an explicit upper bound for `Psi_A(I)`;
-- a concrete lower bound on the negative margin after all errors.
-
-The determinant family may then yield rational approximants with controlled
-denominator and error. Whether these bounds are strong enough for a useful
-irrationality measure is open.
-
-## Priority 6: generalize to periodic L-values
-
-Let \(\chi\) be a real or complex periodic character. Study tails
+The minimum may be attained at different subsets for different primes, while
+the real maximum is forced to include subsets with a larger clearing-factor
+burden. A useful abstract quantity is the compatibility defect
 
 \[
-T_m^{(\chi)}
- =\sum_{r\ge0}\frac{\chi(m+r)}{(m+r)^2}
+\mathfrak D=
+\max_I R(I)-\sum_p\min_I L_p(I).
 \]
 
-or residue-class-separated state vectors.
+Research goals:
 
-Possible architectures:
+- derive lower bounds for `D` from compulsory subsets;
+- identify convex-duality conditions under which local minima and the real
+  maximum are compatible;
+- characterize when signed summation can beat the maximum;
+- translate the defect into a Hall, transport, or entropy problem.
+
+This abstraction is directly relevant to Riemann's Gram, Schur, and
+coefficient-extraction programs.
+
+## Priority 5: optimize only after the leading obstruction is removed
+
+The paper fixes `rho=1/20`. Changing `rho` within the current absolute
+max-summand method does not solve the problem, because
+
+\[
+\rho^2/2>0
+\]
+
+for every fixed positive `rho`.
+
+Possible asymptotic regimes to investigate are:
+
+- `rho=rho(B)->0`, while retaining enough columns for nonvanishing and a
+  meaningful contradiction;
+- a different local layer whose singular coefficient equals or exceeds
+  `2rho`;
+- a signed determinant estimate in which the `rho^2/2` tax cancels.
+
+Only after one of these succeeds should the finite `B^2` margin
+
+\[
+4\rho-2\rho^2+c_{\rm odd}(\rho)
+-\Lambda_{\rm mid}(\rho)-\Delta_{>B}(\rho)
+\]
+
+be re-optimized.
+
+## Priority 6: effective bounds and irrationality measures
+
+An effective threshold or irrationality measure is premature until the
+leading-order sign is repaired. After that, one would need:
+
+- effective Stirling errors;
+- an effective PNT error for every compact prime range;
+- explicit stability constants;
+- a complete Pascal quotient height bound;
+- directed numerical certificates;
+- a uniform negative margin after every error.
+
+## Priority 7: generalize the salvageable finite algebra
+
+For a periodic coefficient sequence or Dirichlet character, study vector tails
+
+\[
+T_m^{(\chi)}=
+\sum_{r\ge0}\frac{\chi(m+r)}{(m+r)^2}.
+\]
+
+A possible source-design program is
 
 ```text
 period-q vector recurrence
 -> weighted vector tails
--> block Cauchy/confluent-Cauchy matrix
+-> block or confluent Cauchy matrix
 -> block Pascal alternant
--> local prime-power occupancy
--> adelic contraction.
+-> local occupancy
+-> explicit compatibility-defect calculation.
 ```
 
-Targets include:
+The first target should be a classification theorem saying which weight and
+completion choices pass the leading-order compatibility test. Irrationality
+claims should come only after that gate.
 
-- other even beta values;
-- \(L(2,\chi)\) for odd quadratic characters;
-- linear independence of several special values;
-- criteria predicting when the local gain cannot beat the real baseline.
+## Priority 8: Riemann-facing extraction
 
-The method may reveal a structural distinction between period three and
-period four that complements the Calegari–Dimitrov–Tang result.
-
-## Priority 7: abstract the same-scalar adelic theorem
-
-Formulate a reusable theorem with inputs:
+The strongest lesson for the Riemann project is now a firewall rather than a
+positive theorem:
 
 ```text
-a nonzero rational determinant Q_B
-an exact local valuation lower bound for its numerator
-a local saturation theorem for its denominator baseline
-an archimedean Cauchy-Binet upper bound
-a negative global height coefficient.
+same scalar is necessary but not sufficient;
+local minimum and archimedean maximum must also be compatible.
 ```
 
-Conclusion:
+For every proposed zeta determinant or Gram proof, record:
+
+1. the exact finite object whose nonvanishing is known;
+2. the exact object receiving local arithmetic divisibility;
+3. the exact object receiving the archimedean bound;
+4. every minimization or maximization over auxiliary subsets;
+5. a leading-order compatibility calculation before finite constants are
+   optimized.
+
+A possible RH architecture inspired by the product-formula idea would still
+require wholly new theorems:
 
 ```text
-the source constant assumed rational produces a nonzero integer
-whose absolute value tends to zero.
+one off-line zero
+-> canonical nonzero arithmetic determinant at infinitely many scales
+-> compatible common local saturation
+-> signed archimedean contraction
+-> product-formula contradiction.
 ```
 
-Such an abstraction would clarify which parts are Catalan-specific and which
-can be reused in Riemann's determinant programs.
-
-## Priority 8: RH-facing exploration
-
-The only credible RH extension is indirect:
-
-```text
-hypothetical off-line zero
--> canonical nonzero source determinant at infinitely many scales
--> same-scalar p-adic/prime-side saturation
--> archimedean contraction
--> contradiction.
-```
-
-This would require new theorems absent from the Catalan argument:
-
-- an individual-zero-to-determinant propagation theorem;
-- coefficientwise signed source control;
-- local uniformity over growing scales;
-- a bridge from complex zeros to arithmetic denominators;
-- complete treatment of finitely many exceptional zeros.
-
-The Catalan proof offers a design pattern, not those theorems.
+The Catalan v1 paper supplies neither the first arrow nor a valid final
+contraction, but its failure gives a precise test that future architectures
+must pass.
