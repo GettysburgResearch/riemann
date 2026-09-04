@@ -1,0 +1,171 @@
+{
+  "convergence": {
+    "1.0": [
+      {
+        "efficiency": 0.7533362499631335,
+        "lam": 1.0,
+        "nodes": 64,
+        "profile_max": 1.0883448812673537,
+        "profile_min": 0.8277759681354477,
+        "residual_inf": 1.1102230246251565e-15,
+        "simple_on_line": 0.6725715109966663
+      },
+      {
+        "efficiency": 0.753306190959173,
+        "lam": 1.0,
+        "nodes": 128,
+        "profile_max": 1.088434406447151,
+        "profile_min": 0.8275690131039549,
+        "residual_inf": 1.3322676295501878e-15,
+        "simple_on_line": 0.6725185429224791
+      }
+    ],
+    "1.04": [
+      {
+        "efficiency": 0.7683276048963212,
+        "lam": 1.04,
+        "nodes": 64,
+        "profile_max": 1.0960151239672757,
+        "profile_min": 0.8138167185303945,
+        "residual_inf": 1.3322676295501878e-15,
+        "simple_on_line": 0.6984718580624982
+      },
+      {
+        "efficiency": 0.7682948868698584,
+        "lam": 1.04,
+        "nodes": 128,
+        "profile_max": 1.09611221936687,
+        "profile_min": 0.813600755314601,
+        "residual_inf": 1.3322676295501878e-15,
+        "simple_on_line": 0.6984164321668975
+      }
+    ],
+    "1.25": [
+      {
+        "efficiency": 0.8314667831115129,
+        "lam": 1.25,
+        "nodes": 64,
+        "profile_max": 1.1391112089673638,
+        "profile_min": 0.7485356812628048,
+        "residual_inf": 1.3322676295501878e-15,
+        "simple_on_line": 0.7973061337967073
+      },
+      {
+        "efficiency": 0.8314191334851098,
+        "lam": 1.25,
+        "nodes": 128,
+        "profile_max": 1.1392531646297073,
+        "profile_min": 0.7482769192785335,
+        "residual_inf": 1.3322676295501878e-15,
+        "simple_on_line": 0.797237205970664
+      }
+    ],
+    "1.7": [
+      {
+        "efficiency": 0.9090284374635063,
+        "lam": 1.7,
+        "nodes": 64,
+        "profile_max": 1.2215210948640405,
+        "profile_min": 0.6361162278888438,
+        "residual_inf": 1.3322676295501878e-15,
+        "simple_on_line": 0.8999244041359862
+      },
+      {
+        "efficiency": 0.9089510499263366,
+        "lam": 1.7,
+        "nodes": 128,
+        "profile_max": 1.221765314031388,
+        "profile_min": 0.6358790057091877,
+        "residual_inf": 1.7763568394002505e-15,
+        "simple_on_line": 0.8998307443717215
+      }
+    ],
+    "2.0": [
+      {
+        "efficiency": 0.9367240455339783,
+        "lam": 2.0,
+        "nodes": 64,
+        "profile_max": 1.2543935285480328,
+        "profile_min": 0.5762353162231021,
+        "residual_inf": 1.3322676295501878e-15,
+        "simple_on_line": 0.9324497382471362
+      },
+      {
+        "efficiency": 0.9366119940125686,
+        "lam": 2.0,
+        "nodes": 128,
+        "profile_max": 1.254606482412444,
+        "profile_min": 0.5759275817057027,
+        "residual_inf": 1.7763568394002505e-15,
+        "simple_on_line": 0.9323220219336836
+      }
+    ]
+  },
+  "nodes": 128,
+  "optima": [
+    {
+      "efficiency": 0.753306190959173,
+      "lam": 1.0,
+      "nodes": 128,
+      "profile_max": 1.088434406447151,
+      "profile_min": 0.8275690131039549,
+      "residual_inf": 1.3322676295501878e-15,
+      "simple_on_line": 0.6725185429224791
+    },
+    {
+      "efficiency": 0.7682948868698584,
+      "lam": 1.04,
+      "nodes": 128,
+      "profile_max": 1.09611221936687,
+      "profile_min": 0.813600755314601,
+      "residual_inf": 1.3322676295501878e-15,
+      "simple_on_line": 0.6984164321668975
+    },
+    {
+      "efficiency": 0.8314191334851098,
+      "lam": 1.25,
+      "nodes": 128,
+      "profile_max": 1.1392531646297073,
+      "profile_min": 0.7482769192785335,
+      "residual_inf": 1.3322676295501878e-15,
+      "simple_on_line": 0.797237205970664
+    },
+    {
+      "efficiency": 0.9089510499263366,
+      "lam": 1.7,
+      "nodes": 128,
+      "profile_max": 1.221765314031388,
+      "profile_min": 0.6358790057091877,
+      "residual_inf": 1.7763568394002505e-15,
+      "simple_on_line": 0.8998307443717215
+    },
+    {
+      "efficiency": 0.9366119940125686,
+      "lam": 2.0,
+      "nodes": 128,
+      "profile_max": 1.254606482412444,
+      "profile_min": 0.5759275817057027,
+      "residual_inf": 1.7763568394002505e-15,
+      "simple_on_line": 0.9323220219336836
+    }
+  ],
+  "scope": "conditional on the trace-extension functional in the proof note",
+  "status": "PASS_ZETA23_CONDITIONAL_SUPPORT_OPTIMIZER",
+  "target_supports": [
+    {
+      "attained": 0.6999986288514659,
+      "lambda": 1.0425949096679688,
+      "target": 0.7
+    },
+    {
+      "attained": 0.7999976427576709,
+      "lambda": 1.2577743530273438,
+      "target": 0.8
+    },
+    {
+      "attained": 0.8999998826194486,
+      "lambda": 1.7012100219726562,
+      "target": 0.9
+    }
+  ]
+}
