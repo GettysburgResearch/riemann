@@ -1,84 +1,126 @@
 {
-  "audit_boundary": {
-    "concrete_repairs": [
-      "undefined D, forced to D=2B",
-      "Theorem 5.1 statement omits S<=B/20 used in proof",
-      "Lemma 5.5 literal 5B support cutoff is unsafe"
-    ],
-    "headline_theorem_independently_verified": false,
-    "main_open_verification_gate": "complete uniform derivation of Proposition 9.5",
-    "missing_artifacts": [
-      "178 merged small-prime cells and directed interval table",
-      "235 exact middle-prime affine cells",
-      "complete same-scalar asymptotic ledger"
-    ],
-    "rh_implication_claimed": false,
-    "specialist_peer_review_found": false
-  },
-  "companion_source_search": {
-    "date": "2026-09-04",
-    "formalization_found": false,
-    "machine_certificate_found": false,
-    "note": "Only arXiv/RSS/news references were found; repeat before promotion.",
-    "performed": true,
-    "public_github_repository_found": false,
-    "queries": [
-      "\"2609.04176\"",
-      "\"Catalan's constant is irrational\" \"Zhi-Wei Sun\"",
-      "\"H_B^min\" Catalan",
-      "\"33042423784278900654572890582560690565493664595111\"",
-      "\"0.006276744728100982604597600317605548\""
-    ]
-  },
-  "diagnostic": {
-    "classification": "NON_PROOF_DIAGNOSTIC",
-    "directed_interval_arithmetic": false,
-    "finite_inequality_5_21_cases": 437661,
-    "finite_max_B": 300,
-    "output_path": "research/exploratory/catalan-irrationality-2026-09-03/diagnostics/replay.json",
-    "output_sha256": "56c6cb6d2f3251f07f5bad9e17ed551cd6fc4b30731cd438bfd313925f307543",
-    "python": "3.13.5",
-    "scipy": "1.17.0",
-    "script_path": "research/exploratory/catalan-irrationality-2026-09-03/diagnostics/catalan_audit_replay.py",
-    "script_sha256": "fe135f70ae2e9693c983af8e30ef4e9f01dc225914d8b34ba6f72846b8ffab26"
-  },
+  "status": "IMPORTED_POSTED_PROOF_INVALID_HEADLINE_UNRESOLVED",
   "import_date": "2026-09-04",
   "paper": {
-    "all_pages_rendered": true,
-    "attached_filename": "2609.04176(1).pdf",
+    "title": "Catalan's constant is irrational",
     "author": "Zhi-Wei Sun",
+    "identifier": "arXiv:2609.04176v1",
+    "source_footer_date": "2026-09-03",
     "classification": [
       "math.NT",
       "MSC 11J72",
       "MSC 15A15"
     ],
-    "copied_into_repository": false,
-    "encrypted": false,
-    "form_fields": false,
-    "identifier": "arXiv:2609.04176v1",
-    "javascript": false,
+    "attached_filename": "2609.04176(1).pdf",
+    "sha256": "1d05b36a5675cb8084935ec6945e004f1af9387c8fae6c48b242b4a94d73bd90",
+    "size_bytes": 378564,
+    "pages": 20,
+    "pdf_version": "1.7",
     "page_size_points": [
       612,
       792
     ],
-    "pages": 20,
-    "pdf_version": "1.7",
     "render_size_pixels": [
       1870,
       2420
     ],
-    "sha256": "1d05b36a5675cb8084935ec6945e004f1af9387c8fae6c48b242b4a94d73bd90",
-    "size_bytes": 378564,
-    "source_footer_date": "2026-09-03",
-    "title": "Catalan's constant is irrational",
-    "visual_audit_performed": true
+    "all_pages_rendered": true,
+    "visual_audit_performed": true,
+    "encrypted": false,
+    "javascript": false,
+    "form_fields": false,
+    "copied_into_repository": false
   },
   "riemann": {
-    "base_commit": "6dda8b5125457ed936330229f8c9eb6491728e76",
+    "repository": "gfreund123/riemann",
     "base_ref": "main",
+    "base_commit": "6dda8b5125457ed936330229f8c9eb6491728e76",
     "base_tree": "3e31763fd987fec2e1601a4ecab2de6465fcee24",
-    "branch": "research/gpt56-pro/20260904-catalan-irrationality-import",
-    "repository": "gfreund123/riemann"
+    "branch": "research/gpt56-pro/20260904-catalan-irrationality-import"
   },
-  "status": "IMPORTED_CLAIMED_BREAKTHROUGH_REVIEW_PENDING"
+  "audit_boundary": {
+    "proof_status": "INVALID_AS_WRITTEN",
+    "headline_theorem_independently_verified": false,
+    "headline_theorem_status": "NOT_ESTABLISHED_BY_THIS_PREPRINT",
+    "catalan_rationality_status": "NOT_ESTABLISHED",
+    "decisive_issue": {
+      "location": "proof of Proposition 9.5",
+      "description": "The largest-absolute-summand majorant retains +(rho^2/2) B^2 log B rather than cancelling to a finite B^2 coefficient.",
+      "rho_used_by_paper": "1/20",
+      "uncancelled_coefficient": "1/800",
+      "proof_file": "research/exploratory/catalan-irrationality-2026-09-03/HEIGHT_BOUND_COUNTERCHECK.md",
+      "executive_review_file": "research/exploratory/catalan-irrationality-2026-09-03/DEEP_HOSTILE_REVIEW.md",
+      "effect": "Equation (9.3) is not obtained; Theorem 9.1 and the final integer contradiction do not follow."
+    },
+    "concrete_repairs": [
+      "define T_0=G where Theorem 2.1 uses it",
+      "repair the T_i/T_{i+1} column-sign inconsistency after equation (2.3)",
+      "define D=2B in Section 3",
+      "add S<=B/20 to Theorem 5.1",
+      "replace Lemma 5.5's unsafe literal 5B cutoff by a proved O(B) cutoff",
+      "define the Pascal factorial quotient globally by its polynomial product"
+    ],
+    "missing_artifacts": [
+      "178 merged small-prime cells and directed interval table",
+      "235 exact middle-prime affine cells",
+      "a signed Cauchy-Binet cancellation theorem or redesigned scalar capable of removing the leading obstruction"
+    ],
+    "possible_repair_gate": "A corrected proof requires new signed determinant cancellation, stronger common divisibility, redesigned weights/completion, or a different same-scalar object.",
+    "rh_implication_claimed": false,
+    "specialist_peer_review_found": false
+  },
+  "companion_source_search": {
+    "performed": true,
+    "date": "2026-09-04",
+    "public_github_repository_found": false,
+    "formalization_found": false,
+    "machine_certificate_found": false,
+    "stable_indexed_specialist_counterargument_found": false,
+    "note": "Current status pages and social circulation were found, but no durable indexed specialist post containing a complete mathematical objection. The hostile review is independent.",
+    "queries": [
+      "\"2609.04176\"",
+      "\"Catalan's constant is irrational\" \"Zhi-Wei Sun\"",
+      "\"Catalan's constant is irrational\" false error critique",
+      "\"Proposition 9.5\" Catalan",
+      "\"Theorem 5.1\" Catalan",
+      "\"B^2 log B\" Catalan irrationality",
+      "\"H_B^min\" Catalan",
+      "\"F_B\" Catalan irrationality"
+    ],
+    "review_file": "research/exploratory/catalan-irrationality-2026-09-03/ONLINE_CLAIMS_REVIEW.md"
+  },
+  "diagnostics": [
+    {
+      "name": "original constant and finite-inequality replay",
+      "classification": "NON_PROOF_DIAGNOSTIC",
+      "directed_interval_arithmetic": false,
+      "finite_inequality_5_21_cases": 437661,
+      "finite_max_B": 300,
+      "python": "3.13.5",
+      "scipy": "1.17.0",
+      "script_path": "research/exploratory/catalan-irrationality-2026-09-03/diagnostics/catalan_audit_replay.py",
+      "script_sha256": "fe135f70ae2e9693c983af8e30ef4e9f01dc225914d8b34ba6f72846b8ffab26",
+      "output_path": "research/exploratory/catalan-irrationality-2026-09-03/diagnostics/replay.json",
+      "output_sha256": "56c6cb6d2f3251f07f5bad9e17ed551cd6fc4b30731cd438bfd313925f307543"
+    },
+    {
+      "name": "Proposition 9.5 max-summand hostile replay",
+      "classification": "NON_PROOF_DIAGNOSTIC",
+      "model": "consecutive-row ideal model",
+      "B_values": [
+        100,
+        200,
+        300,
+        500,
+        1000,
+        1500
+      ],
+      "python": "3.13.5",
+      "script_path": "research/exploratory/catalan-irrationality-2026-09-03/diagnostics/catalan_height_hostile_replay.py",
+      "local_generation_sha256": "a07c6bd8c095f861e3c0a9d69a9768937016cbd4079095a05565229ae3326605",
+      "output_path": "research/exploratory/catalan-irrationality-2026-09-03/diagnostics/height_hostile_replay.json",
+      "local_generation_output_sha256": "f1f7bb1ab11aa05efcf562d64fa11ae126ebd557fe2e7bc67ce090483c380c24",
+      "proof_level_result": "The analytic countercheck, not this finite replay, establishes the uncancelled leading term."
+    }
+  ]
 }
