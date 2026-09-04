@@ -1,0 +1,42 @@
+{
+  "analytic_theorems_machine_proved": false,
+  "arithmetic": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "groups": {
+    "atom_geometry": 60,
+    "column_wedge_constants": 131,
+    "heat_constants": 91,
+    "integer_gamma_tail": 69,
+    "laguerre_atom_integral": 72,
+    "mixed_atom_identity": 64,
+    "mixed_counterexample": 1,
+    "model_power_sum": 24,
+    "phase_counterexample": 7,
+    "phase_modulus": 1,
+    "prime_kernel_sign": 3,
+    "prime_kernel_taylor": 105,
+    "row_circle_bound": 96,
+    "row_conservation": 48,
+    "row_exponential_witness": 2,
+    "row_three_reconstructions": 96,
+    "small_ratio_cone": 2,
+    "zero_reservoir": 3
+  },
+  "rh_proved": false,
+  "status": "PASS_EXACT_MIXED_DIFFERENCE_PASS2",
+  "total_checks": 875,
+  "unrestricted_mixed_inequality_proved": false,
+  "witnesses": {
+    "N100_circle_modulus_exceeds_mass": true,
+    "N100_negative_row_mass_positive": true,
+    "column_ratio_less_than": "1/10",
+    "dominant_base_norm_squared": "26/25",
+    "heat_C20_less_than": "1/4096",
+    "heat_C22_less_than": "3/5",
+    "model_H_0_14": "-433316717939/1000000000000000",
+    "model_p1": "11/10",
+    "model_phase": "(4+3i)/5",
+    "unique_dominant_base": "1+i/5",
+    "wedge_ratio_less_than": "1/10"
+  },
+  "zero_census_executed": false
+}
