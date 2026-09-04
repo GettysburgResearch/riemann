@@ -1,0 +1,37 @@
+{
+  "arithmetic": "EXACT_RATIONAL",
+  "checks": 1922,
+  "counterfeit": {
+    "H_0_14": "-433316717939/1000000000000000",
+    "first_Chebyshev_bound_violation_in_0_to_32": 8,
+    "first_negative_row_in_0_to_32": 14,
+    "mass": "11/10",
+    "trace_at_first_violation": "-4664277/3906250"
+  },
+  "fixtures": [
+    "positive_real",
+    "pr790_counterfeit",
+    "repeated_pair",
+    "second_pair"
+  ],
+  "maximum_degree": 32,
+  "not_run": [
+    "actual-zeta moment evaluation",
+    "external zero verification replay",
+    "predecessor scripts",
+    "Lean",
+    "independent mathematical review"
+  ],
+  "scales": [
+    1,
+    2,
+    5
+  ],
+  "scope": "finite algebra and synthetic controls only; no RH proof",
+  "source_sha256": {
+    "GROWTH.md": "70de402281462018bbae92c31cb1434474a6d1f7242ced1a75f7d3c171020b20",
+    "README.md": "b184f48b367c0bee6ba56ebbbe89252cf38edf19d5e72fe4a720d736599c92e6",
+    "verify_exact.py": "6891aba22b954f85c49e31165356201c5bcf2a051052df951c481422b2e7d45c"
+  },
+  "status": "PASS"
+}
