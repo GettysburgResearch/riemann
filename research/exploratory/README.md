@@ -23,3 +23,7 @@ Keep discovery and proof boundaries visible:
 - a new theorem or repair should receive a new identity and review.
 
 When a result becomes stable and important, request exact-SHA review. After review, a future integrator may extract it into `research/integrated/` while preserving the exploratory source.
+
+## External resources for contributors
+
+- [Anthropic Fermat's Last Theorem formalization](external-flt-2026-09-05.md) — revision-pinned awareness note: potential GL(2)/structural-program connections and formalization practices; proof and build not reviewed here.
