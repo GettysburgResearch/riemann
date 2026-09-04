@@ -12,10 +12,39 @@
     "title": "A new proof that more than 2/3 of the zeros of the Riemann zeta function are simple and on the critical line",
     "author": "Youness Lamzouri",
     "identifier": "arXiv:2609.02882",
-    "public_version_used": "v1 metadata, submitted 2026-09-02",
+    "public_version_used": "v1, posted 2026-09-02; manuscript date 2026-09-03",
     "pdf_url": "https://arxiv.org/pdf/2609.02882",
-    "pdf_sha256": null,
-    "pdf_lock_note": "The web PDF renderer returned a cache-miss/HTML reference in this pass. No byte checksum or visual-page audit is claimed."
+    "pdf_source_receipt": "user-supplied copy of the arXiv v1 PDF",
+    "pdf_sha256": "fa33485f517b3c94d2f6e4d4366f3ab14a1e413a738db512e1862f4a0944f5f9",
+    "pdf_size_bytes": 505955,
+    "pdf_pages": 14,
+    "pdf_version": "1.7",
+    "pdf_page_size": "612 x 792 points (US Letter)",
+    "pdf_metadata": {
+      "title": "A new proof that more than 2/3 of the zeros of the Riemann zeta function are simple and on the critical line",
+      "author": "Youness Lamzouri",
+      "creator": "arXiv GenPDF (tex2pdf:4af3385)",
+      "producer": "pikepdf 8.15.1",
+      "encrypted": false,
+      "javascript": false,
+      "forms": "none"
+    },
+    "render_audit": {
+      "performed_in_import_pass": true,
+      "renderer": "/home/oai/skills/pdfs/scripts/render_pdf.py",
+      "render_count": 14,
+      "render_dimensions_pixels": "1190 x 1540 per page",
+      "visual_result": "All 14 pages rendered and were visually inspected. No clipping, unexpected rotation, blank pages, broken glyph blocks, or obvious corruption was observed.",
+      "independent_visual_review_complete": false
+    },
+    "statement_map": {
+      "Theorem 1.1": "paper page 3; proof completed on page 13",
+      "Proposition 2.1": "paper pages 5-9",
+      "Lemma 3.1": "paper page 10",
+      "Lemma 3.2": "paper pages 10-12",
+      "Remark 3.4": "paper page 12",
+      "Appendix A": "paper page 13"
+    }
   },
   "formal_repository": {
     "repository": "AxiomMath/ZetaZeros",
@@ -60,6 +89,7 @@
     ],
     "default_build_replay_performed_here": false,
     "comparator_replay_performed_here": false,
-    "semantic_line_review_complete": false
+    "semantic_line_review_complete": false,
+    "paper_pdf_hash_and_visual_audit_complete": true
   }
 }

@@ -1,8 +1,30 @@
 # Review checklist
 
-Mark each item with reviewer, date, evidence path, and exact SHA.
+Mark each independent-review item with reviewer, date, evidence path, and exact
+SHA.
 
-## A. Provenance
+## Importer receipt completed on 2026-09-04
+
+The initial import pass completed the following non-independent checks:
+
+- [x] Riemann base read back as
+  `6dda8b5125457ed936330229f8c9eb6491728e76`.
+- [x] Gitlink read back as
+  `AxiomMath/ZetaZeros@4bcaf70e544506c311d83a5a5b143a134b9fc5f7`.
+- [x] Supplied arXiv v1 PDF identified as a 14-page manuscript.
+- [x] PDF SHA256 recorded as
+  `fa33485f517b3c94d2f6e4d4366f3ab14a1e413a738db512e1862f4a0944f5f9`.
+- [x] All fourteen pages rendered and visually inspected.
+- [x] Theorem 1.1, Proposition 2.1, Lemmas 3.1-3.2, Remark 3.4, and
+  Appendix A were page-located.
+- [x] Upstream signed-commit and successful-CI metadata inspected.
+- [x] Lean theorem types, Comparator configuration, and explicit `hRvM`/`hPC`
+  boundary inspected remotely.
+
+These checks are documented in `SOURCE_LOCK.json` and `PDF_AUDIT.md`. They do
+not satisfy the independent-review boxes below.
+
+## A. Independent provenance review
 
 - [ ] Riemann base is `6dda8b5125457ed936330229f8c9eb6491728e76`.
 - [ ] Gitlink resolves to `AxiomMath/ZetaZeros@4bcaf70e544506c311d83a5a5b143a134b9fc5f7`.
@@ -10,8 +32,8 @@ Mark each item with reviewer, date, evidence path, and exact SHA.
 - [ ] Submodule worktree is clean.
 - [ ] Apache-2.0 attribution is preserved.
 - [ ] Current arXiv version is identified explicitly.
-- [ ] Paper PDF SHA256 is recorded.
-- [ ] Rendered paper pages were visually inspected.
+- [ ] Paper PDF SHA256 independently matches the recorded receipt.
+- [ ] Rendered paper pages were independently inspected.
 
 ## B. Build and kernel trust
 
@@ -36,6 +58,8 @@ Mark each item with reviewer, date, evidence path, and exact SHA.
 - [ ] The real part and square placement match Proposition 2.1.
 - [ ] The constants `2`, `3/2`, and `1/2` match.
 - [ ] Nonemptiness hypotheses are neither missing nor unnecessarily strengthened.
+- [ ] The nested flag `U subset V subset W` matches pages 6-9.
+- [ ] The three scalar ranges use the correct inequalities.
 - [ ] The Hilbert/Bessel proof has no hidden finite-dimensionality assumption.
 - [ ] Complex-to-real inner-product conversions are checked.
 - [ ] All Bochner integral and `MemLp` hypotheses are sufficient.
@@ -51,6 +75,8 @@ Mark each item with reviewer, date, evidence path, and exact SHA.
 - [ ] Diagonal pairs are treated consistently.
 - [ ] Rational weight is `4/(4-(rho-rho')^2)`.
 - [ ] The derivative correction removes the weight exactly.
+- [ ] The proof applies BGST to fixed `Q_delta` and `Q_delta''`, rather than
+  hiding a `T`-dependent test-function uniformity assumption.
 - [ ] No boundary term is lost in Fourier differentiation.
 - [ ] The cutoff approximation preserves admissibility.
 - [ ] Riemann-von Mangoldt normalization agrees with `zeroCount`.
@@ -68,11 +94,13 @@ Mark each item with reviewer, date, evidence path, and exact SHA.
 - [ ] Off-line zeros and multiplicities are included exactly as required.
 - [ ] An exact adapter to `ZetaZeros.PairCorrelation` is proved or the premise remains explicit.
 
-## F. Montgomery-Taylor constant
+## F. Montgomery-Taylor constant and method barrier
 
 - [ ] Exact cotangent expression is derived symbolically.
 - [ ] Smooth cutoff convergence is justified.
 - [ ] The cited extremal theorem applies to the exact admissible class.
+- [ ] Remark 3.4 is represented as optimality of this scalar method, not
+  optimality among every possible pair-correlation or higher-moment method.
 - [ ] `montgomeryTaylorConst_lt` is independently replayed.
 - [ ] Decimal corollaries prove only `> 0.6725` and `> 0.83625`.
 - [ ] No claim says retuning the same scalar class can improve the exact constant.
@@ -105,6 +133,7 @@ For every proposed architecture:
 ## Current disposition
 
 ```text
+paper byte and page audit: importer-complete / independent review pending
 abstract Hilbert theorem: high-priority review candidate
 zeta transfer theorem: conditional formal theorem
 Riemann-von Mangoldt inside package: not discharged

@@ -141,16 +141,60 @@ paper Theorem 1.1
 Check every Fourier sign, `2*pi`, pair ordering, multiplicity, support endpoint,
 zero range, rational weight, and strict inequality.
 
-## 8. Paper retrieval limitation in this import pass
+## 8. Exact paper receipt and render replay
 
-The arXiv PDF endpoint was read through extracted web text, but the PDF
-renderer returned a cache miss rather than an `application/pdf` object. Its
-screenshot call therefore failed. No visual-page comparison or PDF byte hash
-is part of this receipt.
+The import pass used the exact supplied arXiv v1 file with receipt:
 
-A reviewer should download the current arXiv version independently, record its
-version and SHA256, render all pages, and compare theorem/equation numbering
-against the Lean source before promotion.
+```text
+SHA256:
+fa33485f517b3c94d2f6e4d4366f3ab14a1e413a738db512e1862f4a0944f5f9
+
+size:
+505955 bytes
+
+pages:
+14
+```
+
+After independently downloading or receiving the paper, verify:
+
+```bash
+sha256sum 2609.02882.pdf
+pdfinfo 2609.02882.pdf
+```
+
+Expected metadata includes:
+
+```text
+Title:  A new proof that more than 2/3 of the zeros of the Riemann zeta
+        function are simple and on the critical line
+Author: Youness Lamzouri
+Pages:  14
+```
+
+Render all pages:
+
+```bash
+python /home/oai/skills/pdfs/scripts/render_pdf.py \
+  2609.02882.pdf \
+  --out_dir paper-renders \
+  --dpi 140
+```
+
+Visually compare pages and equation numbering against `PDF_AUDIT.md`. In
+particular locate:
+
+```text
+Theorem 1.1       page 3
+Proposition 2.1   pages 5-9
+Lemma 3.1         page 10
+Lemma 3.2         pages 10-12
+Remark 3.4        page 12
+Appendix A        page 13
+```
+
+The importer has completed this hash and visual pass. Promotion still requires
+an independent reviewer to repeat or verify the receipt.
 
 ## 9. Promotion criterion
 
