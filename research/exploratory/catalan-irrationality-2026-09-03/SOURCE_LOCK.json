@@ -1,0 +1,84 @@
+{
+  "audit_boundary": {
+    "concrete_repairs": [
+      "undefined D, forced to D=2B",
+      "Theorem 5.1 statement omits S<=B/20 used in proof",
+      "Lemma 5.5 literal 5B support cutoff is unsafe"
+    ],
+    "headline_theorem_independently_verified": false,
+    "main_open_verification_gate": "complete uniform derivation of Proposition 9.5",
+    "missing_artifacts": [
+      "178 merged small-prime cells and directed interval table",
+      "235 exact middle-prime affine cells",
+      "complete same-scalar asymptotic ledger"
+    ],
+    "rh_implication_claimed": false,
+    "specialist_peer_review_found": false
+  },
+  "companion_source_search": {
+    "date": "2026-09-04",
+    "formalization_found": false,
+    "machine_certificate_found": false,
+    "note": "Only arXiv/RSS/news references were found; repeat before promotion.",
+    "performed": true,
+    "public_github_repository_found": false,
+    "queries": [
+      "\"2609.04176\"",
+      "\"Catalan's constant is irrational\" \"Zhi-Wei Sun\"",
+      "\"H_B^min\" Catalan",
+      "\"33042423784278900654572890582560690565493664595111\"",
+      "\"0.006276744728100982604597600317605548\""
+    ]
+  },
+  "diagnostic": {
+    "classification": "NON_PROOF_DIAGNOSTIC",
+    "directed_interval_arithmetic": false,
+    "finite_inequality_5_21_cases": 437661,
+    "finite_max_B": 300,
+    "output_path": "research/exploratory/catalan-irrationality-2026-09-03/diagnostics/replay.json",
+    "output_sha256": "56c6cb6d2f3251f07f5bad9e17ed551cd6fc4b30731cd438bfd313925f307543",
+    "python": "3.13.5",
+    "scipy": "1.17.0",
+    "script_path": "research/exploratory/catalan-irrationality-2026-09-03/diagnostics/catalan_audit_replay.py",
+    "script_sha256": "fe135f70ae2e9693c983af8e30ef4e9f01dc225914d8b34ba6f72846b8ffab26"
+  },
+  "import_date": "2026-09-04",
+  "paper": {
+    "all_pages_rendered": true,
+    "attached_filename": "2609.04176(1).pdf",
+    "author": "Zhi-Wei Sun",
+    "classification": [
+      "math.NT",
+      "MSC 11J72",
+      "MSC 15A15"
+    ],
+    "copied_into_repository": false,
+    "encrypted": false,
+    "form_fields": false,
+    "identifier": "arXiv:2609.04176v1",
+    "javascript": false,
+    "page_size_points": [
+      612,
+      792
+    ],
+    "pages": 20,
+    "pdf_version": "1.7",
+    "render_size_pixels": [
+      1870,
+      2420
+    ],
+    "sha256": "1d05b36a5675cb8084935ec6945e004f1af9387c8fae6c48b242b4a94d73bd90",
+    "size_bytes": 378564,
+    "source_footer_date": "2026-09-03",
+    "title": "Catalan's constant is irrational",
+    "visual_audit_performed": true
+  },
+  "riemann": {
+    "base_commit": "6dda8b5125457ed936330229f8c9eb6491728e76",
+    "base_ref": "main",
+    "base_tree": "3e31763fd987fec2e1601a4ecab2de6465fcee24",
+    "branch": "research/gpt56-pro/20260904-catalan-irrationality-import",
+    "repository": "gfreund123/riemann"
+  },
+  "status": "IMPORTED_CLAIMED_BREAKTHROUGH_REVIEW_PENDING"
+}

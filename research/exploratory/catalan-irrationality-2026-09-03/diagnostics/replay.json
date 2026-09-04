@@ -1,0 +1,72 @@
+{
+  "cutoff_sanity": {
+    "B": 100,
+    "Q": 503,
+    "Q_is_above_five_B": true,
+    "S": 5,
+    "actual_denominator_layer": 114,
+    "difference": 6,
+    "five_B": 500,
+    "ideal_denominator_layer": 108,
+    "interpretation": "The full-row/ideal-row denominator-layer difference can be nonzero above 5B. Replacing the paper's 5B support sentence by a safe O(B) cutoff such as 7B preserves the subsequent o(B^2) estimate."
+  },
+  "environment": {
+    "python": "3.13.5",
+    "scipy": "1.17.0"
+  },
+  "inequality_5_21": {
+    "cases_checked": 437661,
+    "max_B": 300,
+    "minimum_case": {
+      "B": 20,
+      "Q": 31,
+      "S": 1,
+      "left_minus_right": 29
+    },
+    "scope_note": "All odd Q were checked, which is stronger than checking odd prime powers, but only over the finite B range shown.",
+    "status": "PASS"
+  },
+  "limitations": [
+    "Floating quadrature is not a directed interval certificate.",
+    "The finite (5.21) search is not a proof for all B.",
+    "The script does not reproduce the 178 merged small-prime cells exactly.",
+    "The script does not reproduce the 235 exact affine middle-prime cells.",
+    "The script does not derive Proposition 9.5's full same-scalar asymptotic ledger."
+  ],
+  "margin": {
+    "codd_upper_endpoint_used": "0.006276744728100982604597600317605549",
+    "conservative_margin": "0.00966242652523235072873573301572778433333333333333333333333333333333333333333333",
+    "conservative_margin_exceeds_threshold": true,
+    "large_gain_83_over_2400": "0.034583333333333333333333333333333333333333333333333333333333333333333333333333333",
+    "margin_using_exact_middle_fraction": "0.00966242653388064642839877602589524757868194059281177261840639936122495219440935",
+    "paper_threshold": "0.00966242652523235",
+    "published_Lambda_mid_lower_used": "0.17635583792",
+    "raw_coefficient_39_over_200": "0.195"
+  },
+  "middle_prime": {
+    "Lambda_mid_exact_denominator": 187362234062518051579626183549876762148305272280000,
+    "Lambda_mid_exact_float": 0.17635583792864828,
+    "Lambda_mid_exact_numerator": 33042423784278900654572890582560690565493664595111,
+    "Lambda_mid_numeric": 0.17635583794457388,
+    "absolute_difference": 1.5925594176735558e-11,
+    "primary_breakpoint_count": 77,
+    "quad_reported_error_sum": 6.275559829777936e-10
+  },
+  "paper": "arXiv:2609.04176v1",
+  "pdf": {
+    "matches_import_receipt": true,
+    "path": "/mnt/data/2609.04176(1).pdf",
+    "sha256": "1d05b36a5675cb8084935ec6945e004f1af9387c8fae6c48b242b4a94d73bd90",
+    "size_bytes": 378564
+  },
+  "small_prime": {
+    "I_odd_numeric": -0.006276744728100986,
+    "absolute_difference": 3.469446951953614e-18,
+    "breakpoint_count": 239,
+    "c_odd_numeric": 0.006276744728100986,
+    "published_c_odd_decimal": 0.006276744728100982,
+    "quad_reported_error_sum_scaled": 6.968586516832284e-17,
+    "raw_cell_count": 238
+  },
+  "status": "NON_PROOF_DIAGNOSTIC"
+}

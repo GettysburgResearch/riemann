@@ -1,0 +1,19 @@
+claim_id	source_location	claim	packet_status	main_dependency_or_issue
+CAT-1.1	Theorem 1.1	Catalan's constant G=L(2,chi_-4) is irrational	SOURCE_CLAIM_REVIEW_PENDING	Depends on complete Proposition 9.5 ledger and numerical certificates
+CAT-2.1	Theorem 2.1	Weighted residual matrix R has full column rank	PLAUSIBLE_HIGH_PRIORITY_FORMALIZATION	Expand polynomial case and fixed-divisor multiplicities
+CAT-2.C1	Corollary 2.1	An S by S residual minor is nonzero	CONDITIONAL_ON_CAT-2.1	Finite linear algebra
+CAT-3.1	Proposition 3.1	Newton completion gives det Atilde=+-F_B det R[A,J]	REPAIR_REQUIRED	Undefined D; dimension forces D=2B
+CAT-3.2	Proposition 3.2	H_B^min integerizes the fixed scalar	ALGEBRAICALLY_CHECKED	Conditional on repaired scalar definition
+CAT-4.1	Lemma 4.1	Pascal alternant contributes V(I) Psi_A(I)	IDENTITY_PLAUSIBLE	Needs uniform height bound for Psi_A(I)
+CAT-4.2	Lemma 4.2	Cauchy determinant contributes second Vandermonde	CLASSICAL_IDENTITY	Cauchy determinant
+CAT-5.3	Lemma 5.3	p-adic valuation is bounded by local minima	PLAUSIBLE_NEEDS_LINE_AUDIT	Audit every term of local layer (5.7)
+CAT-5.1	Theorem 5.1	Denominator layer dominates local minimum	REPAIR_REQUIRED_STRONGLY_CORROBORATED	Statement omits S<=B/20 used in proof
+CAT-5.2	Corollary 5.2	Positive-part denominator height has legal local upper bound	CONDITIONAL_ON_CAT-5.1	Same-scalar bridge
+CAT-5.4	Lemma 5.4	2-adic positive-part contribution is zero	PLAUSIBLE	Separate prime-2 integrality
+CAT-5.5	Lemma 5.5	Actual and ideal row models differ by o(B^2)	EXPANSION_AND_CUTOFF_REPAIR_REQUIRED	5B cutoff unsafe; use safe O(B) cutoff and explicit exchange bounds
+CAT-6.3	Proposition 6.3	Odd-small-prime constant c_odd has stated enclosure	NUMERICALLY_CORROBORATED_CERTIFICATE_MISSING	178 merged cells and interval table absent
+CAT-7.4	Proposition 7.4	Middle-prime integral equals displayed rational	NUMERICALLY_CORROBORATED_EXACT_PARTITION_MISSING	235 affine cells absent
+CAT-8	Equations 8.1-8.5	Large-prime gain is 2rho/3+rho^2/2	DISPLAYED_PIECES_CHECKED	Need derivation of the seven pieces
+CAT-9.5	Proposition 9.5	Same-scalar height has negative quadratic coefficient	MAIN_UNVERIFIED_GATE	Complete uniform real/p-adic ledger not written
+CAT-9.1	Theorem 9.1	Stated constants yield delta_0>0.00966242652523235	EXACT_ARITHMETIC_CHECKED	Conditional on CAT-6.3, CAT-7.4, CAT-9.5
+CAT-FINAL	Final proof	Nonzero integer tends below one	CONDITIONALLY_CHECKED	Immediate once CAT-9.5 and integerizer are valid

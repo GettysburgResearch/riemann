@@ -23,3 +23,7 @@ Keep discovery and proof boundaries visible:
 - a new theorem or repair should receive a new identity and review.
 
 When a result becomes stable and important, request exact-SHA review. After review, a future integrator may extract it into `research/integrated/` while preserving the exploratory source.
+
+## Current source-locked external analyses
+
+- [`catalan-irrationality-2026-09-03/`](catalan-irrationality-2026-09-03/README.md) — exact PDF receipt, theorem-level audit, diagnostics, and Riemann connection map for Zhi-Wei Sun's claimed proof that Catalan's constant is irrational. Status: `REVIEW_PENDING`.
