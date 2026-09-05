@@ -1,0 +1,75 @@
+{
+  "analytic_proofs_machine_checked": false,
+  "finite_positive_pivots": 18,
+  "runs": [
+    {
+      "command": [
+        "python",
+        "compile_source.py",
+        "--check",
+        "SOURCE_RESULTS.json"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "003b9c2e196e09aff63c2af9eb61c038c676f017059ccaed226b2fdc921ca931"
+    },
+    {
+      "combined_output_sha256": "3c0ec8f824ab8881652cab69849619730dbeacb3bfd015f8e72682a2410cfbc6",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "test_source"
+      ],
+      "exit_code": 0,
+      "tests": 14
+    },
+    {
+      "command": [
+        "python",
+        "compile_source.py",
+        "--check",
+        "<deliberately corrupted record>"
+      ],
+      "exit_code": 1,
+      "expected_refusal": "saved result differs from fresh source computation"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "compile_source.py",
+        "--check",
+        "SOURCE_RESULTS.json"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "003b9c2e196e09aff63c2af9eb61c038c676f017059ccaed226b2fdc921ca931"
+    },
+    {
+      "combined_output_sha256": "9f95cbd15542555453df97f4678076f7a0cdfffd0006a718fc6bc3dde1d6d124",
+      "command": [
+        "python",
+        "-O",
+        "-m",
+        "unittest",
+        "-v",
+        "test_source"
+      ],
+      "exit_code": 0,
+      "tests": 14
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "compile_source.py",
+        "--check",
+        "<deliberately corrupted record>"
+      ],
+      "exit_code": 1,
+      "expected_refusal": "saved result differs from fresh source computation"
+    }
+  ],
+  "source_outputs_identical": true,
+  "tests_per_mode": 14
+}

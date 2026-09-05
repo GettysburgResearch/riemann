@@ -1,0 +1,42 @@
+{
+  "all_agree": true,
+  "checks": {
+    "hardy_source": [
+      true,
+      true,
+      true
+    ],
+    "mobius": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "moments": [
+      true,
+      true,
+      true
+    ]
+  },
+  "classification": "NON_DIRECTED_HIGH_PRECISION",
+  "digits": 110,
+  "mpmath_version": "1.3.0",
+  "outer_saddle_ratios": [
+    {
+      "n": 20,
+      "ratio": "0.9958279035278466217695781"
+    },
+    {
+      "n": 80,
+      "ratio": "0.9989552313671788674091593"
+    },
+    {
+      "n": 200,
+      "ratio": "0.9995819574397773945718805"
+    }
+  ],
+  "proof_dependency": false
+}
