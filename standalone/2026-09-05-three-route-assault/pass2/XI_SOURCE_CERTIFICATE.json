@@ -1,0 +1,72 @@
+{
+  "Euler_Maclaurin_N": 64,
+  "Euler_Maclaurin_m": 4,
+  "RH_proved": false,
+  "arithmetic": "RATIONAL_INTERVAL_WITH_ANALYTIC_REMAINDERS",
+  "checks": {
+    "both_last_eigenvalues_positive": true,
+    "cubic_lower_endpoint_negative": true,
+    "cubic_strictly_increasing": true,
+    "cubic_upper_endpoint_positive": true,
+    "derivative_decreases_until_upper": true,
+    "discriminant_at_lower_positive": true,
+    "discriminant_at_upper_positive": true,
+    "no_rank_31_three_coefficient_completion": true,
+    "positive_cubic_trace": true,
+    "positive_square_trace": true,
+    "positive_sum_on_interval": true,
+    "positive_trace": true,
+    "product_decreases_until_upper": true,
+    "rank_two_coefficients_15_suffices": true,
+    "rank_two_coefficients_at_least_15": true
+  },
+  "decimal_outward_places": 40,
+  "higher_coefficient_completion_proved": false,
+  "intervals": {
+    "C": [
+      "0.0230957089661210264095401870787059306987",
+      "0.0230957089661210412125138487474598030152"
+    ],
+    "cubic_at_0.00056": [
+      "-0.0000000016604203176117242555935084890669",
+      "-0.0000000016604162370918574365702553734729"
+    ],
+    "cubic_at_0.00057": [
+      "0.0000000001161426896814399538386920130384",
+      "0.0000000001161467699859507399726608471954"
+    ],
+    "gamma0": [
+      "0.5772156649015328457969719684268237091962",
+      "0.5772156649015328754029192917643314538278"
+    ],
+    "gamma1": [
+      "-0.0728158454836768285158962141213949105182",
+      "-0.0728158454836766212227439050531333691868"
+    ],
+    "gamma2": [
+      "-0.0096903631928730670341221121322605670233",
+      "-0.0096903631928715699379492269317021850220"
+    ],
+    "p2": [
+      "0.0000371006364372256547556108706421516729",
+      "0.0000371006364377040250406909047061991754"
+    ],
+    "p3": [
+      "0.0000001436778582505740725173638600039176",
+      "0.0000001436778623265749242020624006233057"
+    ],
+    "pi": [
+      "3.1415926535897932384626433832795028841956",
+      "3.1415926535897932384626433832795028841976"
+    ],
+    "rank31_gap": [
+      "0.0000000020155627639895586220692819924143",
+      "0.0000000020155668442168120822578332479180"
+    ],
+    "zeta3": [
+      "1.2020569031595942852695457531610779429160",
+      "1.2020569031595942855297542745575990070779"
+    ]
+  },
+  "status": "PASS_ACTUAL_XI_MINIMAL_RANK_15_AND_32"
+}
