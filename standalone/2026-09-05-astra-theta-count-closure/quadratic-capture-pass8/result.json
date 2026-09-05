@@ -1,0 +1,117 @@
+{
+  "actual_xi_matrix_evaluated": false,
+  "analytic_limits_machine_proved": false,
+  "arithmetic": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "base_commit": "513d8f206bb597747afcb7a7410cdf768519d548",
+  "calibration": [
+    {
+      "exact_capture_fraction": "2/3",
+      "n": 1,
+      "r": 1
+    },
+    {
+      "exact_capture_fraction": "15/28",
+      "n": 4,
+      "r": 2
+    },
+    {
+      "exact_capture_fraction": "1615/3542",
+      "n": 16,
+      "r": 4
+    },
+    {
+      "exact_capture_fraction": "16739883/40542010",
+      "n": 64,
+      "r": 8
+    },
+    {
+      "exact_capture_fraction": "160007196594257016269203/409610954366869985860130",
+      "n": 256,
+      "r": 16
+    },
+    {
+      "exact_capture_fraction": "278661687553619892088853193573517021362211792676475/734643014030360048684899408776045904400229310935682",
+      "n": 1024,
+      "r": 32
+    }
+  ],
+  "distinct_controls": 756,
+  "endpoint_geometry": [
+    {
+      "dimension": 2,
+      "epsilon_squared_lower": "2598384108102196394377147864774970292807403164524247458311569408000000000/30816512862207303621533783203887179324462233762415998564244846494451355953",
+      "epsilon_squared_upper": "69019577871464591725642990158085148409274917481017661365581512704000/818563622902381502446991116353253200734501707059767029768204205647249",
+      "r": 1,
+      "theta_r": "53/72"
+    },
+    {
+      "dimension": 5,
+      "epsilon_squared_lower": "1534384259799930654583342025755922149894410790808899085043499008000000000/30816512862207303621533783203887179324462233762415998564244846494451355953",
+      "epsilon_squared_upper": "40757081900935658012370022559141682113148557554203720200648392704000/818563622902381502446991116353253200734501707059767029768204205647249",
+      "r": 2,
+      "theta_r": "23979899/24192000"
+    },
+    {
+      "dimension": 10,
+      "epsilon_squared_lower": "1088338316196620013172996713187925629417523237216801905409261568000000000/30816512862207303621533783203887179324462233762415998564244846494451355953",
+      "epsilon_squared_upper": "28908986523972719099907725194054274537981231911913638866613960704000/818563622902381502446991116353253200734501707059767029768204205647249",
+      "r": 3,
+      "theta_r": "30572364642471211661/27839027313377280000"
+    }
+  ],
+  "groups": {
+    "all_gap_reservoir_constant": 1,
+    "causal_transform": 30,
+    "continuous_error_constant": 1,
+    "critical_calibration": 6,
+    "endpoint_error_enclosure": 3,
+    "endpoint_projection_geometry": 3,
+    "endpoint_zero": 10,
+    "exact_projection_product": 35,
+    "exponential_coefficient": 35,
+    "finite_energy": 25,
+    "finite_tail_sufficient_constant": 1,
+    "incomplete_gamma_overlap": 17,
+    "independent_raw_projection": 25,
+    "inherited_metric": 100,
+    "laguerre_differential": 35,
+    "laguerre_orthogonality": 245,
+    "log_product_bounds": 35,
+    "safe_moment_compiler": 125,
+    "source_strip_budget": 1,
+    "synthetic_interpolation": 5,
+    "synthetic_matrix_sign": 5,
+    "synthetic_metric_norm": 5,
+    "synthetic_negative_value": 5,
+    "three_sparse_countercontrol": 3
+  },
+  "rh_proved": false,
+  "status": "PASS_FINITE_EXACT_CONTROLS",
+  "synthetic_witnesses": [
+    {
+      "m": 3,
+      "metric_norm": "15765653045562552721852221384805966975896882819158839080982933977624298312323/37131191283953560685562296607810170592749193032",
+      "quadratic_value": "-2"
+    },
+    {
+      "m": 4,
+      "metric_norm": "24803605863965015861720121771053147150334854350594911666543207885396614134263790161/74262382567907121371124593215620341185498386064",
+      "quadratic_value": "-2"
+    },
+    {
+      "m": 5,
+      "metric_norm": "2522701334846128914970797987639828790551859230867389553218152732978277396611313900159415/9282797820988390171390574151952542648187298258",
+      "quadratic_value": "-2"
+    },
+    {
+      "m": 8,
+      "metric_norm": "198520510726912990935011057115535159273401983392500103848525861048599962391051529521408325572483028419159127/1188198121086513941937993491449925458967974177024",
+      "quadratic_value": "-2"
+    },
+    {
+      "m": 12,
+      "metric_norm": "58532945853074426002817049345822488780445452286077829532835795414215382890951325254266237917926061977054912110282130091362432508353/559152056981888913853173407741141392455517259776",
+      "quadratic_value": "-2"
+    }
+  ]
+}

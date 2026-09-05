@@ -1,0 +1,90 @@
+{
+  "cases": 14,
+  "records": [
+    {
+      "case": "rh_flag",
+      "expected_error": "saved result mismatch",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "integer_float_alias",
+      "expected_error": "saved result mismatch",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "integer_bool_alias",
+      "expected_error": "saved result mismatch",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "duplicate_key",
+      "expected_error": "duplicate JSON key",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "wrong_witness",
+      "expected_error": "saved result mismatch",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "proof_change",
+      "expected_error": "source authentication failed",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "source_lock_change",
+      "expected_error": "source authentication failed",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "rh_flag",
+      "expected_error": "saved result mismatch",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "integer_float_alias",
+      "expected_error": "saved result mismatch",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "integer_bool_alias",
+      "expected_error": "saved result mismatch",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "duplicate_key",
+      "expected_error": "duplicate JSON key",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "wrong_witness",
+      "expected_error": "saved result mismatch",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "proof_change",
+      "expected_error": "source authentication failed",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "source_lock_change",
+      "expected_error": "source authentication failed",
+      "optimized": true,
+      "rejected": true
+    }
+  ],
+  "status": "PASS_EXPECTED_REJECTIONS"
+}
