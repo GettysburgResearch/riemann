@@ -1,0 +1,37 @@
+{
+  "RH_proved": false,
+  "actual_mobius_energy_evaluated": false,
+  "analytic_limits_machine_proved": false,
+  "arithmetic": "EXACT_RATIONAL_WITH_LOG_SERIES_REMAINDERS",
+  "counts": {
+    "arithmetic_exponent_gap": 4,
+    "arithmetic_transfer_constant": 1,
+    "complete_integral": 25,
+    "critical_interval": 5,
+    "degree_tail_domination": 48,
+    "integer_cutoff_schedule": 24,
+    "integrated_generating_polynomial": 25,
+    "jacobi_laguerre": 20,
+    "mean_variance": 13,
+    "rational_uniform_budget": 3,
+    "saddle_curvature": 4,
+    "saddle_global_gap": 16,
+    "saddle_stationarity": 4,
+    "signed_measure_moments": 65,
+    "simultaneous_vector_extremizer": 192,
+    "squarefree_count_identity": 24,
+    "tail_derivative_boundary": 25
+  },
+  "critical_constant": {
+    "c_lower": "358899418156529/50000000000000",
+    "c_upper": "35889941815653/5000000000000",
+    "inequalities": "strict",
+    "log_terms": 80,
+    "p_lower": "81469666777975167/1000000000000000000",
+    "p_upper": "636481771702931/7812500000000000"
+  },
+  "distinct_controls": 498,
+  "source_cutoff": "1728^N",
+  "status": "PASS_BOUNDED_EXACT_CONTROLS",
+  "vector_error_bound": "(10/3)*(11/12)^N"
+}

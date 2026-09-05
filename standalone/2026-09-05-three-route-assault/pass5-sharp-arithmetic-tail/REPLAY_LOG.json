@@ -1,0 +1,46 @@
+{
+  "RH_proved": false,
+  "commands": [
+    {
+      "command": "python verify.py --check RESULTS.json",
+      "exit_code": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5e3906c1bae3d715f27ddd5d9ad76d6f4fa12172593db51eddacba30e894e4f9"
+    },
+    {
+      "command": "python -O verify.py --check RESULTS.json",
+      "exit_code": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5e3906c1bae3d715f27ddd5d9ad76d6f4fa12172593db51eddacba30e894e4f9"
+    },
+    {
+      "command": "python verify.py --self-test",
+      "exit_code": 0,
+      "stderr_sha256": "e8f91e6adcbf814f4f050723ef31f1d1e02ce1c8d2279591ff8fcffcfb87582d",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python -O verify.py --self-test",
+      "exit_code": 0,
+      "stderr_sha256": "40f2de51ed09ca9afe109c6cc5011d9dbfb45dc81b59303d9ca0e2dd7c93f82f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "new_distinct_controls_per_mode": 498,
+  "normal_and_optimized_result_outputs_identical": true,
+  "not_performed": [
+    "actual large Mobius sums",
+    "broad predecessor suite",
+    "independent referee review",
+    "Lean build",
+    "remote CI"
+  ],
+  "regression": {
+    "arithmetic": "NON_DIRECTED_HIGH_PRECISION",
+    "command": "python regression.py > REGRESSION.json",
+    "digits": 90,
+    "executed": true,
+    "proof_dependency": false
+  },
+  "unit_rejection_tests_per_mode": 14
+}
