@@ -1,0 +1,41 @@
+{
+  "schema": "riemann.t105107.packet.v1",
+  "created": "2026-08-23",
+  "repository": "gfreund123/riemann",
+  "branch": "codex/105100-residue-second-moment",
+  "checkpoint_base_sha": "7e1cb178cd11202ed1e5877c898d1c2877d22521",
+  "post_freeze_context": {
+    "pull_request": 720,
+    "head_sha": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "status": "OPEN_DRAFT_UNREVIEWED"
+  },
+  "classification": "proposed exact boundary-optimal Blaschke-Pick jet-selector bridge",
+  "claims": [
+    "L-105107",
+    "T-105107",
+    "R-105107",
+    "M-105107"
+  ],
+  "arithmetic_class": "EXACT_RATIONAL",
+  "heavy_computation_run": false,
+  "proved_or_supplied_for_review": [
+    "forced-inner factorization of every top-jet selector",
+    "reduction from confluent primary data to ordinary target values",
+    "finite Pick-matrix characterization of the optimal boundary norm",
+    "constant-boundary-modulus extremal selector of degree at most D minus one",
+    "single-target closed-form optimizer",
+    "rectifiable-Jordan conformal transport and residue preservation",
+    "polynomial-versus-inner optimality and wrong-kernel firewalls"
+  ],
+  "open": [
+    "independent exact-SHA review",
+    "Xi finite-window event manifest",
+    "certified rectangle conformal coordinates",
+    "cofinal Xi Pick-optimum and pseudohyperbolic-product estimates",
+    "unweighted Xi quotient edge estimates",
+    "cofinal weighted-edge passage and strict jet coherence",
+    "RCMV104530",
+    "Riemann Hypothesis"
+  ],
+  "rh_established": false
+}

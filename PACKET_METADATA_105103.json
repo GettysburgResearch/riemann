@@ -1,0 +1,39 @@
+{
+  "schema": "riemann.t105103.packet.v1",
+  "created": "2026-08-23",
+  "repository": "gfreund123/riemann",
+  "branch": "codex/105100-residue-second-moment",
+  "checkpoint_base_sha": "0c1aedcafe7c6fe384695eee64435cc87b792aea",
+  "post_freeze_context": {
+    "pull_request": 720,
+    "head_sha": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "status": "OPEN_DRAFT_UNREVIEWED"
+  },
+  "classification": "proposed exact merged-support Laurent-residue ledger",
+  "claims": [
+    "L-105103",
+    "T-105103",
+    "R-105103",
+    "M-105103"
+  ],
+  "arithmetic_class": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "heavy_computation_run": false,
+  "proved_or_supplied_for_review": [
+    "finite Taylor recurrence for confluent P and Q residues",
+    "unique merged-support fixed-window contour ledger",
+    "simple-noncommon-stratum first and second moment reconstruction",
+    "residue-at-infinity and V2/V4 cross-oracles",
+    "multiplicity, sign, and transfer firewalls"
+  ],
+  "open": [
+    "independent exact-SHA review",
+    "Xi-derivative multiplicity/event manifest",
+    "real multiple/common critical-event exclusion or new transfer branch",
+    "merged Laurent correction estimates",
+    "admissible fixed-thickness or shrinking-strip sequence",
+    "signed carrier and strict coherence margin",
+    "RCMV104530",
+    "Riemann Hypothesis"
+  ],
+  "rh_established": false
+}

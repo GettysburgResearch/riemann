@@ -1,0 +1,1470 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "checks": {
+    "fixed_window_selector_fixtures": {
+      "common_only": {
+        "all_nontarget_actual_poles_annihilated": true,
+        "eligible_target_manifest": [],
+        "events": [
+          {
+            "P_actual_pole_order": 0,
+            "Q_actual_pole_order": 0,
+            "eligible_target": false,
+            "orders": {
+              "m": 4,
+              "r": 3,
+              "s": 2
+            },
+            "point": "0"
+          }
+        ],
+        "first_congruences": [],
+        "first_primary_modulus": [
+          "1"
+        ],
+        "first_selector": [
+          "0"
+        ],
+        "frozen_denominator_manifest": [
+          "0"
+        ],
+        "jet_first_sum": "0",
+        "jet_second_moment": "0",
+        "name": "common_only",
+        "second_congruences": [],
+        "second_primary_modulus": [
+          "1"
+        ],
+        "second_selector": [
+          "0"
+        ],
+        "selector_charge_identities_verified": true,
+        "weighted_first_residues": [
+          "0"
+        ],
+        "weighted_second_residues": [
+          "0"
+        ]
+      },
+      "even_stationary_only": {
+        "all_nontarget_actual_poles_annihilated": true,
+        "eligible_target_manifest": [],
+        "events": [
+          {
+            "P_actual_pole_order": 2,
+            "Q_actual_pole_order": 3,
+            "eligible_target": false,
+            "orders": {
+              "m": 0,
+              "r": 2,
+              "s": 1
+            },
+            "point": "0"
+          }
+        ],
+        "first_congruences": [
+          {
+            "modulus_order": 2,
+            "point": "0",
+            "target_remainder": [
+              "0"
+            ]
+          }
+        ],
+        "first_primary_modulus": [
+          "0",
+          "0",
+          "1"
+        ],
+        "first_selector": [
+          "0"
+        ],
+        "frozen_denominator_manifest": [
+          "0"
+        ],
+        "jet_first_sum": "0",
+        "jet_second_moment": "0",
+        "name": "even_stationary_only",
+        "second_congruences": [
+          {
+            "modulus_order": 3,
+            "point": "0",
+            "target_remainder": [
+              "0"
+            ]
+          }
+        ],
+        "second_primary_modulus": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "second_selector": [
+          "0"
+        ],
+        "selector_charge_identities_verified": true,
+        "weighted_first_residues": [
+          "0"
+        ],
+        "weighted_second_residues": [
+          "0"
+        ]
+      },
+      "flat_quartic": {
+        "all_nontarget_actual_poles_annihilated": true,
+        "eligible_target_manifest": [
+          "0"
+        ],
+        "events": [
+          {
+            "P_actual_pole_order": 3,
+            "Q_actual_pole_order": 5,
+            "eligible_target": true,
+            "orders": {
+              "m": 0,
+              "r": 3,
+              "s": 2
+            },
+            "point": "0"
+          }
+        ],
+        "first_congruences": [
+          {
+            "modulus_order": 3,
+            "point": "0",
+            "target_remainder": [
+              "0",
+              "0",
+              "1"
+            ]
+          }
+        ],
+        "first_primary_modulus": [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "first_selector": [
+          "0",
+          "0",
+          "1"
+        ],
+        "frozen_denominator_manifest": [
+          "0"
+        ],
+        "jet_first_sum": "-1/4",
+        "jet_second_moment": "1/16",
+        "name": "flat_quartic",
+        "second_congruences": [
+          {
+            "modulus_order": 5,
+            "point": "0",
+            "target_remainder": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "3"
+            ]
+          }
+        ],
+        "second_primary_modulus": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "second_selector": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "3"
+        ],
+        "selector_charge_identities_verified": true,
+        "weighted_first_residues": [
+          "-1/4"
+        ],
+        "weighted_second_residues": [
+          "1/16"
+        ]
+      },
+      "mixed_simple_flat": {
+        "all_nontarget_actual_poles_annihilated": true,
+        "eligible_target_manifest": [
+          "0",
+          "1"
+        ],
+        "events": [
+          {
+            "P_actual_pole_order": 1,
+            "Q_actual_pole_order": 1,
+            "eligible_target": true,
+            "orders": {
+              "m": 0,
+              "r": 1,
+              "s": 0
+            },
+            "point": "0"
+          },
+          {
+            "P_actual_pole_order": 0,
+            "Q_actual_pole_order": 1,
+            "eligible_target": false,
+            "orders": {
+              "m": 0,
+              "r": 0,
+              "s": 1
+            },
+            "point": "1/4"
+          },
+          {
+            "P_actual_pole_order": 3,
+            "Q_actual_pole_order": 5,
+            "eligible_target": true,
+            "orders": {
+              "m": 0,
+              "r": 3,
+              "s": 2
+            },
+            "point": "1"
+          }
+        ],
+        "first_congruences": [
+          {
+            "modulus_order": 1,
+            "point": "0",
+            "target_remainder": [
+              "1"
+            ]
+          },
+          {
+            "modulus_order": 3,
+            "point": "1",
+            "target_remainder": [
+              "1",
+              "-2",
+              "1"
+            ]
+          }
+        ],
+        "first_primary_modulus": [
+          "0",
+          "-1",
+          "3",
+          "-3",
+          "1"
+        ],
+        "first_selector": [
+          "1",
+          "-2",
+          "1"
+        ],
+        "frozen_denominator_manifest": [
+          "0",
+          "1/4",
+          "1"
+        ],
+        "jet_first_sum": "-1/20",
+        "jet_second_moment": "1/80",
+        "name": "mixed_simple_flat",
+        "second_congruences": [
+          {
+            "modulus_order": 1,
+            "point": "0",
+            "target_remainder": [
+              "1"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "1/4",
+            "target_remainder": [
+              "0"
+            ]
+          },
+          {
+            "modulus_order": 5,
+            "point": "1",
+            "target_remainder": [
+              "3",
+              "-12",
+              "18",
+              "-12",
+              "3"
+            ]
+          }
+        ],
+        "second_primary_modulus": [
+          "0",
+          "1/4",
+          "-9/4",
+          "15/2",
+          "-25/2",
+          "45/4",
+          "-21/4",
+          "1"
+        ],
+        "second_selector": [
+          "1",
+          "-10",
+          "38",
+          "-72",
+          "73",
+          "-38",
+          "8"
+        ],
+        "selector_charge_identities_verified": true,
+        "weighted_first_residues": [
+          "-1/10",
+          "0",
+          "1/20"
+        ],
+        "weighted_second_residues": [
+          "1/100",
+          "0",
+          "1/400"
+        ]
+      },
+      "nonreal_and_adjacent_support_annihilated": {
+        "all_nontarget_actual_poles_annihilated": true,
+        "eligible_target_manifest": [],
+        "events": [
+          {
+            "P_actual_pole_order": 1,
+            "Q_actual_pole_order": 1,
+            "eligible_target": false,
+            "orders": {
+              "m": 0,
+              "r": 1,
+              "s": 0
+            },
+            "point": "0-1i"
+          },
+          {
+            "P_actual_pole_order": 0,
+            "Q_actual_pole_order": 1,
+            "eligible_target": false,
+            "orders": {
+              "m": 0,
+              "r": 0,
+              "s": 1
+            },
+            "point": "0"
+          },
+          {
+            "P_actual_pole_order": 1,
+            "Q_actual_pole_order": 1,
+            "eligible_target": false,
+            "orders": {
+              "m": 0,
+              "r": 1,
+              "s": 0
+            },
+            "point": "0+1i"
+          }
+        ],
+        "first_congruences": [
+          {
+            "modulus_order": 1,
+            "point": "0-1i",
+            "target_remainder": [
+              "0"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "0+1i",
+            "target_remainder": [
+              "0"
+            ]
+          }
+        ],
+        "first_primary_modulus": [
+          "1",
+          "0",
+          "1"
+        ],
+        "first_selector": [
+          "0"
+        ],
+        "frozen_denominator_manifest": [
+          "0-1i",
+          "0",
+          "0+1i"
+        ],
+        "jet_first_sum": "0",
+        "jet_second_moment": "0",
+        "name": "nonreal_and_adjacent_support_annihilated",
+        "second_congruences": [
+          {
+            "modulus_order": 1,
+            "point": "0-1i",
+            "target_remainder": [
+              "0"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "0",
+            "target_remainder": [
+              "0"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "0+1i",
+            "target_remainder": [
+              "0"
+            ]
+          }
+        ],
+        "second_primary_modulus": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        "second_selector": [
+          "0"
+        ],
+        "selector_charge_identities_verified": true,
+        "weighted_first_residues": [
+          "0",
+          "0",
+          "0"
+        ],
+        "weighted_second_residues": [
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "parity_symmetric_partial_cancellation": {
+        "all_nontarget_actual_poles_annihilated": true,
+        "eligible_target_manifest": [
+          "-1",
+          "1"
+        ],
+        "events": [
+          {
+            "P_actual_pole_order": 1,
+            "Q_actual_pole_order": 1,
+            "eligible_target": true,
+            "orders": {
+              "m": 0,
+              "r": 1,
+              "s": 0
+            },
+            "point": "-1"
+          },
+          {
+            "P_actual_pole_order": 1,
+            "Q_actual_pole_order": 1,
+            "eligible_target": false,
+            "orders": {
+              "m": 0,
+              "r": 1,
+              "s": 0
+            },
+            "point": "0-1i"
+          },
+          {
+            "P_actual_pole_order": 0,
+            "Q_actual_pole_order": 1,
+            "eligible_target": false,
+            "orders": {
+              "m": 1,
+              "r": 0,
+              "s": 3
+            },
+            "point": "0"
+          },
+          {
+            "P_actual_pole_order": 1,
+            "Q_actual_pole_order": 1,
+            "eligible_target": false,
+            "orders": {
+              "m": 0,
+              "r": 1,
+              "s": 0
+            },
+            "point": "0+1i"
+          },
+          {
+            "P_actual_pole_order": 1,
+            "Q_actual_pole_order": 1,
+            "eligible_target": true,
+            "orders": {
+              "m": 0,
+              "r": 1,
+              "s": 0
+            },
+            "point": "1"
+          }
+        ],
+        "first_congruences": [
+          {
+            "modulus_order": 1,
+            "point": "-1",
+            "target_remainder": [
+              "1"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "0-1i",
+            "target_remainder": [
+              "0"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "0+1i",
+            "target_remainder": [
+              "0"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "1",
+            "target_remainder": [
+              "1"
+            ]
+          }
+        ],
+        "first_primary_modulus": [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "first_selector": [
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        "frozen_denominator_manifest": [
+          "-1",
+          "0-1i",
+          "0",
+          "0+1i",
+          "1"
+        ],
+        "jet_first_sum": "-2/5",
+        "jet_second_moment": "2/25",
+        "name": "parity_symmetric_partial_cancellation",
+        "second_congruences": [
+          {
+            "modulus_order": 1,
+            "point": "-1",
+            "target_remainder": [
+              "1"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "0-1i",
+            "target_remainder": [
+              "0"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "0",
+            "target_remainder": [
+              "0"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "0+1i",
+            "target_remainder": [
+              "0"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "1",
+            "target_remainder": [
+              "1"
+            ]
+          }
+        ],
+        "second_primary_modulus": [
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "second_selector": [
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        "selector_charge_identities_verified": true,
+        "weighted_first_residues": [
+          "-1/5",
+          "0",
+          "0",
+          "0",
+          "-1/5"
+        ],
+        "weighted_second_residues": [
+          "1/25",
+          "0",
+          "0",
+          "0",
+          "1/25"
+        ]
+      },
+      "simple_cubic_with_adjacent_debt_killed": {
+        "all_nontarget_actual_poles_annihilated": true,
+        "eligible_target_manifest": [
+          "-1",
+          "1"
+        ],
+        "events": [
+          {
+            "P_actual_pole_order": 1,
+            "Q_actual_pole_order": 1,
+            "eligible_target": true,
+            "orders": {
+              "m": 0,
+              "r": 1,
+              "s": 0
+            },
+            "point": "-1"
+          },
+          {
+            "P_actual_pole_order": 0,
+            "Q_actual_pole_order": 1,
+            "eligible_target": false,
+            "orders": {
+              "m": 0,
+              "r": 0,
+              "s": 1
+            },
+            "point": "0"
+          },
+          {
+            "P_actual_pole_order": 1,
+            "Q_actual_pole_order": 1,
+            "eligible_target": true,
+            "orders": {
+              "m": 0,
+              "r": 1,
+              "s": 0
+            },
+            "point": "1"
+          }
+        ],
+        "first_congruences": [
+          {
+            "modulus_order": 1,
+            "point": "-1",
+            "target_remainder": [
+              "1"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "1",
+            "target_remainder": [
+              "1"
+            ]
+          }
+        ],
+        "first_primary_modulus": [
+          "-1",
+          "0",
+          "1"
+        ],
+        "first_selector": [
+          "1"
+        ],
+        "frozen_denominator_manifest": [
+          "-1",
+          "0",
+          "1"
+        ],
+        "jet_first_sum": "-2/3",
+        "jet_second_moment": "5/18",
+        "name": "simple_cubic_with_adjacent_debt_killed",
+        "second_congruences": [
+          {
+            "modulus_order": 1,
+            "point": "-1",
+            "target_remainder": [
+              "1"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "0",
+            "target_remainder": [
+              "0"
+            ]
+          },
+          {
+            "modulus_order": 1,
+            "point": "1",
+            "target_remainder": [
+              "1"
+            ]
+          }
+        ],
+        "second_primary_modulus": [
+          "0",
+          "-1",
+          "0",
+          "1"
+        ],
+        "second_selector": [
+          "0",
+          "0",
+          "1"
+        ],
+        "selector_charge_identities_verified": true,
+        "weighted_first_residues": [
+          "-1/2",
+          "0",
+          "-1/6"
+        ],
+        "weighted_second_residues": [
+          "1/4",
+          "0",
+          "1/36"
+        ]
+      }
+    },
+    "mutation_firewalls": {
+      "both_target_manifests_incomplete_rejected": true,
+      "flat_quartic": {
+        "desired_jet_square": "1/16",
+        "naive_radical_flux_residue": "-1",
+        "ordinary_Q_residue": "-1/24",
+        "radical_support_without_local_unit_is_not_scale_invariant": true,
+        "residue_of_squared_first_flux": "0",
+        "residue_without_load_bearing_r_factor": "1/48",
+        "rho_jet": "-1/4",
+        "scaled_naive_radical_flux_residue": "-7",
+        "scaled_true_rho_jet": "-1/4",
+        "squaring_first_flux_loses_second_moment": true
+      },
+      "nonlinear_derivative_power_mutation_rejected": true,
+      "nonmonic_factor_rejected": true,
+      "nonsquarefree_factor_rejected": true,
+      "omitted_factor_rejected": true,
+      "overlapping_strata_rejected": true,
+      "partial_common_cancellation": {
+        "P_actual_pole_order": 0,
+        "Q_actual_pole_order": 1,
+        "orders_at_zero": {
+          "m": 1,
+          "r": 0,
+          "s": 3
+        },
+        "selected_Q_residue": "0",
+        "unweighted_Q_residue": "-1/4"
+      },
+      "selector_manifest_duplicate_rejected": true,
+      "selector_manifest_extraneous_rejected": true,
+      "selector_manifest_missing_rejected": true,
+      "selector_target_omission_rejected": true,
+      "simple_cubic_adjacent_debt": {
+        "F_double_prime_only_pole_annihilated": true,
+        "naive_Q_charge": "2/9",
+        "naive_Q_residues": [
+          "1/4",
+          "-1/18",
+          "1/36"
+        ],
+        "target_jet_second_moment": "5/18",
+        "weighted_selector": [
+          "0",
+          "0",
+          "1"
+        ]
+      },
+      "wrong_multiplicity_label_rejected": true
+    },
+    "squarefree_polynomial_corollary": {
+      "common_and_two_turns": {
+        "critical_polynomial": [
+          "0",
+          "-4",
+          "0",
+          "4"
+        ],
+        "events": [
+          {
+            "algebraic_leading_carrier": "-1/8",
+            "common_parent_zero": false,
+            "critical_order": 1,
+            "eligible_real_turn": true,
+            "first_log_derivative_residue": "-1/8",
+            "point": "-1",
+            "rho_jet": "-1/8",
+            "second_log_derivative_residue": "1/64"
+          },
+          {
+            "algebraic_leading_carrier": "0",
+            "common_parent_zero": true,
+            "critical_order": 1,
+            "eligible_real_turn": false,
+            "first_log_derivative_residue": "0",
+            "point": "0",
+            "rho_jet": null,
+            "second_log_derivative_residue": "0"
+          },
+          {
+            "algebraic_leading_carrier": "-1/8",
+            "common_parent_zero": false,
+            "critical_order": 1,
+            "eligible_real_turn": true,
+            "first_log_derivative_residue": "-1/8",
+            "point": "1",
+            "rho_jet": "-1/8",
+            "second_log_derivative_residue": "1/64"
+          }
+        ],
+        "factor_manifest": {
+          "1": [
+            "0",
+            "-1",
+            "0",
+            "1"
+          ]
+        },
+        "first_crt_carrier": [
+          "0",
+          "0",
+          "-1/8"
+        ],
+        "flux_identities_verified": true,
+        "frozen_root_manifest": {
+          "1": [
+            "-1",
+            "0",
+            "1"
+          ]
+        },
+        "global_first_residue_trace": "-1/4",
+        "global_second_residue_trace": "1/32",
+        "leading_scalar": "4",
+        "name": "common_and_two_turns",
+        "nonreal_first_correction": "0",
+        "nonreal_second_algebraic_square_correction": "0",
+        "odd_multiplicity_orders": [
+          1
+        ],
+        "odd_squarefree_support": [
+          "0",
+          "-1",
+          "0",
+          "1"
+        ],
+        "real_jet_first_carrier": "1/4",
+        "real_jet_second_moment": "1/32",
+        "second_crt_carrier": [
+          "0",
+          "0",
+          "1/64"
+        ],
+        "stratum_congruences": [
+          {
+            "critical_order": 1,
+            "factor": [
+              "0",
+              "-1",
+              "0",
+              "1"
+            ],
+            "local_denominator": [
+              "-4",
+              "0",
+              "12"
+            ],
+            "target_mod_factor": [
+              "0",
+              "0",
+              "-1/8"
+            ],
+            "unit_p_over_factor_power": [
+              "4"
+            ]
+          }
+        ]
+      },
+      "even_stationary_only": {
+        "critical_polynomial": [
+          "1/16",
+          "0",
+          "-1/2",
+          "0",
+          "1"
+        ],
+        "events": [
+          {
+            "common_parent_zero": false,
+            "critical_order": 2,
+            "eligible_real_turn": false,
+            "excluded_even_stationary_stratum": true,
+            "point": "-1/2"
+          },
+          {
+            "common_parent_zero": false,
+            "critical_order": 2,
+            "eligible_real_turn": false,
+            "excluded_even_stationary_stratum": true,
+            "point": "1/2"
+          }
+        ],
+        "factor_manifest": {
+          "2": [
+            "-1/4",
+            "0",
+            "1"
+          ]
+        },
+        "first_crt_carrier": [
+          "0"
+        ],
+        "flux_identities_verified": true,
+        "frozen_root_manifest": {
+          "2": [
+            "-1/2",
+            "1/2"
+          ]
+        },
+        "global_first_residue_trace": "0",
+        "global_second_residue_trace": "0",
+        "leading_scalar": "1",
+        "name": "even_stationary_only",
+        "nonreal_first_correction": "0",
+        "nonreal_second_algebraic_square_correction": "0",
+        "odd_multiplicity_orders": [],
+        "odd_squarefree_support": [
+          "1"
+        ],
+        "real_jet_first_carrier": "0",
+        "real_jet_second_moment": "0",
+        "second_crt_carrier": [
+          "0"
+        ],
+        "stratum_congruences": []
+      },
+      "flat_quartic": {
+        "critical_polynomial": [
+          "0",
+          "0",
+          "0",
+          "4"
+        ],
+        "events": [
+          {
+            "algebraic_leading_carrier": "-1/4",
+            "common_parent_zero": false,
+            "critical_order": 3,
+            "eligible_real_turn": true,
+            "first_log_derivative_residue": "-1/4",
+            "point": "0",
+            "rho_jet": "-1/4",
+            "second_log_derivative_residue": "1/16"
+          }
+        ],
+        "factor_manifest": {
+          "3": [
+            "0",
+            "1"
+          ]
+        },
+        "first_crt_carrier": [
+          "-1/4"
+        ],
+        "flux_identities_verified": true,
+        "frozen_root_manifest": {
+          "3": [
+            "0"
+          ]
+        },
+        "global_first_residue_trace": "-1/4",
+        "global_second_residue_trace": "1/16",
+        "leading_scalar": "4",
+        "name": "flat_quartic",
+        "nonreal_first_correction": "0",
+        "nonreal_second_algebraic_square_correction": "0",
+        "odd_multiplicity_orders": [
+          3
+        ],
+        "odd_squarefree_support": [
+          "0",
+          "1"
+        ],
+        "real_jet_first_carrier": "1/4",
+        "real_jet_second_moment": "1/16",
+        "second_crt_carrier": [
+          "1/16"
+        ],
+        "stratum_congruences": [
+          {
+            "critical_order": 3,
+            "factor": [
+              "0",
+              "1"
+            ],
+            "local_denominator": [
+              "4"
+            ],
+            "target_mod_factor": [
+              "-1/4"
+            ],
+            "unit_p_over_factor_power": [
+              "4"
+            ]
+          }
+        ]
+      },
+      "mixed_simple_flat": {
+        "critical_polynomial": [
+          "-1",
+          "2",
+          "0",
+          "-2",
+          "1"
+        ],
+        "events": [
+          {
+            "algebraic_leading_carrier": "-13/80",
+            "common_parent_zero": false,
+            "critical_order": 1,
+            "eligible_real_turn": true,
+            "first_log_derivative_residue": "-13/80",
+            "point": "-1",
+            "rho_jet": "-13/80",
+            "second_log_derivative_residue": "169/6400"
+          },
+          {
+            "algebraic_leading_carrier": "-3/20",
+            "common_parent_zero": false,
+            "critical_order": 3,
+            "eligible_real_turn": true,
+            "first_log_derivative_residue": "-3/20",
+            "point": "1",
+            "rho_jet": "-3/20",
+            "second_log_derivative_residue": "9/400"
+          }
+        ],
+        "factor_manifest": {
+          "1": [
+            "1",
+            "1"
+          ],
+          "3": [
+            "-1",
+            "1"
+          ]
+        },
+        "first_crt_carrier": [
+          "-5/32",
+          "1/160"
+        ],
+        "flux_identities_verified": true,
+        "frozen_root_manifest": {
+          "1": [
+            "-1"
+          ],
+          "3": [
+            "1"
+          ]
+        },
+        "global_first_residue_trace": "-5/16",
+        "global_second_residue_trace": "313/6400",
+        "leading_scalar": "1",
+        "name": "mixed_simple_flat",
+        "nonreal_first_correction": "0",
+        "nonreal_second_algebraic_square_correction": "0",
+        "odd_multiplicity_orders": [
+          1,
+          3
+        ],
+        "odd_squarefree_support": [
+          "-1",
+          "0",
+          "1"
+        ],
+        "real_jet_first_carrier": "5/16",
+        "real_jet_second_moment": "313/6400",
+        "second_crt_carrier": [
+          "313/12800",
+          "-1/512"
+        ],
+        "stratum_congruences": [
+          {
+            "critical_order": 1,
+            "factor": [
+              "1",
+              "1"
+            ],
+            "local_denominator": [
+              "-1",
+              "3",
+              "-3",
+              "1"
+            ],
+            "target_mod_factor": [
+              "-13/80"
+            ],
+            "unit_p_over_factor_power": [
+              "-1",
+              "3",
+              "-3",
+              "1"
+            ]
+          },
+          {
+            "critical_order": 3,
+            "factor": [
+              "-1",
+              "1"
+            ],
+            "local_denominator": [
+              "1",
+              "1"
+            ],
+            "target_mod_factor": [
+              "-3/20"
+            ],
+            "unit_p_over_factor_power": [
+              "1",
+              "1"
+            ]
+          }
+        ]
+      },
+      "nonlinear_flat_stratum": {
+        "critical_polynomial": [
+          "-1",
+          "0",
+          "3",
+          "0",
+          "-3",
+          "0",
+          "1"
+        ],
+        "events": [
+          {
+            "algebraic_leading_carrier": "-2/35",
+            "common_parent_zero": false,
+            "critical_order": 3,
+            "eligible_real_turn": true,
+            "first_log_derivative_residue": "-2/35",
+            "point": "-1",
+            "rho_jet": "-2/35",
+            "second_log_derivative_residue": "4/1225"
+          },
+          {
+            "algebraic_leading_carrier": "-2/35",
+            "common_parent_zero": false,
+            "critical_order": 3,
+            "eligible_real_turn": true,
+            "first_log_derivative_residue": "-2/35",
+            "point": "1",
+            "rho_jet": "-2/35",
+            "second_log_derivative_residue": "4/1225"
+          }
+        ],
+        "factor_manifest": {
+          "3": [
+            "-1",
+            "0",
+            "1"
+          ]
+        },
+        "first_crt_carrier": [
+          "-2/35"
+        ],
+        "flux_identities_verified": true,
+        "frozen_root_manifest": {
+          "3": [
+            "-1",
+            "1"
+          ]
+        },
+        "global_first_residue_trace": "-4/35",
+        "global_second_residue_trace": "8/1225",
+        "leading_scalar": "1",
+        "name": "nonlinear_flat_stratum",
+        "nonreal_first_correction": "0",
+        "nonreal_second_algebraic_square_correction": "0",
+        "odd_multiplicity_orders": [
+          3
+        ],
+        "odd_squarefree_support": [
+          "-1",
+          "0",
+          "1"
+        ],
+        "real_jet_first_carrier": "4/35",
+        "real_jet_second_moment": "8/1225",
+        "second_crt_carrier": [
+          "4/1225"
+        ],
+        "stratum_congruences": [
+          {
+            "critical_order": 3,
+            "factor": [
+              "-1",
+              "0",
+              "1"
+            ],
+            "local_denominator": [
+              "0",
+              "0",
+              "0",
+              "8"
+            ],
+            "target_mod_factor": [
+              "-2/35"
+            ],
+            "unit_p_over_factor_power": [
+              "1"
+            ]
+          }
+        ]
+      },
+      "nonreal_pair": {
+        "critical_polynomial": [
+          "1",
+          "0",
+          "1"
+        ],
+        "events": [
+          {
+            "algebraic_leading_carrier": "1/3+1/2i",
+            "common_parent_zero": false,
+            "critical_order": 1,
+            "eligible_real_turn": false,
+            "first_log_derivative_residue": "1/3+1/2i",
+            "point": "0-1i",
+            "rho_jet": null,
+            "second_log_derivative_residue": "-5/36+1/3i"
+          },
+          {
+            "algebraic_leading_carrier": "1/3-1/2i",
+            "common_parent_zero": false,
+            "critical_order": 1,
+            "eligible_real_turn": false,
+            "first_log_derivative_residue": "1/3-1/2i",
+            "point": "0+1i",
+            "rho_jet": null,
+            "second_log_derivative_residue": "-5/36-1/3i"
+          }
+        ],
+        "factor_manifest": {
+          "1": [
+            "1",
+            "0",
+            "1"
+          ]
+        },
+        "first_crt_carrier": [
+          "1/3",
+          "-1/2"
+        ],
+        "flux_identities_verified": true,
+        "frozen_root_manifest": {
+          "1": [
+            "0-1i",
+            "0+1i"
+          ]
+        },
+        "global_first_residue_trace": "2/3",
+        "global_second_residue_trace": "-5/18",
+        "leading_scalar": "1",
+        "name": "nonreal_pair",
+        "nonreal_first_correction": "2/3",
+        "nonreal_second_algebraic_square_correction": "-5/18",
+        "odd_multiplicity_orders": [
+          1
+        ],
+        "odd_squarefree_support": [
+          "1",
+          "0",
+          "1"
+        ],
+        "real_jet_first_carrier": "0",
+        "real_jet_second_moment": "0",
+        "second_crt_carrier": [
+          "-5/36",
+          "-1/3"
+        ],
+        "stratum_congruences": [
+          {
+            "critical_order": 1,
+            "factor": [
+              "1",
+              "0",
+              "1"
+            ],
+            "local_denominator": [
+              "0",
+              "2"
+            ],
+            "target_mod_factor": [
+              "1/3",
+              "-1/2"
+            ],
+            "unit_p_over_factor_power": [
+              "1"
+            ]
+          }
+        ]
+      },
+      "simple_cubic": {
+        "critical_polynomial": [
+          "-3",
+          "0",
+          "3"
+        ],
+        "events": [
+          {
+            "algebraic_leading_carrier": "-1/2",
+            "common_parent_zero": false,
+            "critical_order": 1,
+            "eligible_real_turn": true,
+            "first_log_derivative_residue": "-1/2",
+            "point": "-1",
+            "rho_jet": "-1/2",
+            "second_log_derivative_residue": "1/4"
+          },
+          {
+            "algebraic_leading_carrier": "-1/6",
+            "common_parent_zero": false,
+            "critical_order": 1,
+            "eligible_real_turn": true,
+            "first_log_derivative_residue": "-1/6",
+            "point": "1",
+            "rho_jet": "-1/6",
+            "second_log_derivative_residue": "1/36"
+          }
+        ],
+        "factor_manifest": {
+          "1": [
+            "-1",
+            "0",
+            "1"
+          ]
+        },
+        "first_crt_carrier": [
+          "-1/3",
+          "1/6"
+        ],
+        "flux_identities_verified": true,
+        "frozen_root_manifest": {
+          "1": [
+            "-1",
+            "1"
+          ]
+        },
+        "global_first_residue_trace": "-2/3",
+        "global_second_residue_trace": "5/18",
+        "leading_scalar": "3",
+        "name": "simple_cubic",
+        "nonreal_first_correction": "0",
+        "nonreal_second_algebraic_square_correction": "0",
+        "odd_multiplicity_orders": [
+          1
+        ],
+        "odd_squarefree_support": [
+          "-1",
+          "0",
+          "1"
+        ],
+        "real_jet_first_carrier": "2/3",
+        "real_jet_second_moment": "5/18",
+        "second_crt_carrier": [
+          "5/36",
+          "-1/9"
+        ],
+        "stratum_congruences": [
+          {
+            "critical_order": 1,
+            "factor": [
+              "-1",
+              "0",
+              "1"
+            ],
+            "local_denominator": [
+              "0",
+              "6"
+            ],
+            "target_mod_factor": [
+              "-1/3",
+              "1/6"
+            ],
+            "unit_p_over_factor_power": [
+              "3"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "classification": "PASS_T105105_FIXED_WINDOW_CRT_JET_SELECTORS",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105105.json": "2813b256d014b0b2803f8b33c457d168516fdb8eab82a1ae835fcb9cb8a29fc3",
+    "claims/lemmas/L-105105-fixed-window-crt-jet-selectors.md": "73526e847565bbe994acdb0fb2402bae78aa49aac72a95a593fe9d2b8ad9a035",
+    "claims/methodology/M-105105-fixed-window-crt-review-contract.md": "35c10c762c4933bfbaa50ac71589e4b694c6802c25b0e83f295dd6b4a760ea5f",
+    "claims/refutations/R-105105-squaring-first-jet-flux-loses-second-moment.md": "8c98c4d9305a5d597cbf238d11b07543c6d5c4c005a516ccd047fc85c2f2d192",
+    "claims/theorems/T-105105-polynomial-jet-observable-frontier.md": "6fb0cf13c6bb794daa35d70bcddb5b010c3a65e3470d417fbff10ea16edf6174",
+    "experiments/X-105105-squarefree-crt-jet-flux/tests/test_verify.py": "0a410b428a56d8e4d45fe02949bb8a9d401a4faf336c1411d937485db4ff3e34",
+    "experiments/X-105105-squarefree-crt-jet-flux/verify.py": "7efe387ed705e2aab50892d44839a4ebff918522b3157e67da479d879326a741"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "75bf12b76014da6ea983ac1dc8083aaac79132ce",
+    "proof_object_sha256": "bcd3ac0f644c49e47be6b2e019a57b2e7d2b8b6df14dfec97da854cb44b3bed6"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "3edde4fdb651ae0c3781e4f832884f0d7c81247edd3b5a151c6b2c54f051cf05",
+  "schema": "riemann.t105105.fixed-window-crt-jet-selectors.v1",
+  "scope": {
+    "all_nontarget_actual_poles_annihilated": true,
+    "common_odd_events_zero_suppressed": true,
+    "even_stationary_strata_excluded": true,
+    "finite_polynomial_squarefree_crt_bridge_proved": true,
+    "fixed_window_holomorphic_crt_selector_identity_proved": true,
+    "nonreal_corrections_are_algebraic_squares": true,
+    "odd_multiplicity_strata_encoded": true,
+    "ordinary_P_Q_residues_recover_flat_jets": false,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "root_free_carrier_construction_proved": true,
+    "second_jet_moment_is_simple_residue_flux": true,
+    "strict_xi_jet_coherence_margin_proved": false,
+    "xi_cofinal_window_limit_proved": false,
+    "xi_event_manifest_constructed": false,
+    "xi_fixed_window_selector_exists_given_exact_event_manifest": true,
+    "xi_jet_moments_estimated": false,
+    "xi_nonreal_jet_corrections_estimated": false,
+    "xi_selector_boundary_norm_estimated": false
+  },
+  "source": {
+    "checkpoint_base": "75bf12b76014da6ea983ac1dc8083aaac79132ce",
+    "post_freeze_context_head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "post_freeze_context_pr": 720
+  },
+  "verdict": "PASS_T105105_FIXED_WINDOW_CRT_JET_SELECTORS"
+}
