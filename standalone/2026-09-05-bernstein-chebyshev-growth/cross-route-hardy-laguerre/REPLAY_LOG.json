@@ -1,0 +1,198 @@
+{
+  "checks_per_clean_mode": 2188,
+  "corruption_refusals": 12,
+  "executions": [
+    {
+      "arguments": [
+        "python",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 0,
+      "expected_error": "none",
+      "label": "normal clean replay",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a1744836cd2c7190df0c8bf054f8fafdb13a38e6f28ea57b0d85f59e341e166a"
+    },
+    {
+      "arguments": [
+        "python",
+        "-O",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 0,
+      "expected_error": "none",
+      "label": "optimized clean replay",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a1744836cd2c7190df0c8bf054f8fafdb13a38e6f28ea57b0d85f59e341e166a"
+    },
+    {
+      "arguments": [
+        "python",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "saved result differs from recomputation",
+      "label": "wrong-pivot-normal",
+      "stderr_sha256": "b1aa50204f5c15907232eade668acefd99aa4b9bcdb1727c327d7a9c3ba78b55",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "python",
+        "-O",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "saved result differs from recomputation",
+      "label": "wrong-pivot-optimized",
+      "stderr_sha256": "b1aa50204f5c15907232eade668acefd99aa4b9bcdb1727c327d7a9c3ba78b55",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "python",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "noninteger JSON numeric literal",
+      "label": "float-alias-normal",
+      "stderr_sha256": "c1e866c143526cd2d065500bf628296cd31786c7bc20d90024a3c69a50145cd4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "python",
+        "-O",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "noninteger JSON numeric literal",
+      "label": "float-alias-optimized",
+      "stderr_sha256": "c1e866c143526cd2d065500bf628296cd31786c7bc20d90024a3c69a50145cd4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "python",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "Boolean/null alias refused",
+      "label": "boolean-alias-normal",
+      "stderr_sha256": "aca7c3b2fda32b3d44b87b4b03a59d2071f91b8fde50385c84b7b619184d8858",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "python",
+        "-O",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "Boolean/null alias refused",
+      "label": "boolean-alias-optimized",
+      "stderr_sha256": "aca7c3b2fda32b3d44b87b4b03a59d2071f91b8fde50385c84b7b619184d8858",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "python",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "duplicate JSON key",
+      "label": "duplicate-key-normal",
+      "stderr_sha256": "80f17528283edb77a9d0635757aa903c55a3961aa740cc81a58aa2df5e60f28f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "python",
+        "-O",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "duplicate JSON key",
+      "label": "duplicate-key-optimized",
+      "stderr_sha256": "80f17528283edb77a9d0635757aa903c55a3961aa740cc81a58aa2df5e60f28f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "python",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "saved result differs from recomputation",
+      "label": "changed-proof-normal",
+      "stderr_sha256": "b1aa50204f5c15907232eade668acefd99aa4b9bcdb1727c327d7a9c3ba78b55",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "python",
+        "-O",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "saved result differs from recomputation",
+      "label": "changed-proof-optimized",
+      "stderr_sha256": "b1aa50204f5c15907232eade668acefd99aa4b9bcdb1727c327d7a9c3ba78b55",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "python",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "saved result differs from recomputation",
+      "label": "changed-source-lock-normal",
+      "stderr_sha256": "b1aa50204f5c15907232eade668acefd99aa4b9bcdb1727c327d7a9c3ba78b55",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "python",
+        "-O",
+        "verify_bridge.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 1,
+      "expected_error": "saved result differs from recomputation",
+      "label": "changed-source-lock-optimized",
+      "stderr_sha256": "b1aa50204f5c15907232eade668acefd99aa4b9bcdb1727c327d7a9c3ba78b55",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "normal_optimized_byte_identical": true,
+  "schema": 1,
+  "scope": "Finite exact algebra and actual four-dimensional source interval certificate. No independent mathematical review, Lean build, prior suite replay, prime sweep, or RH proof."
+}
