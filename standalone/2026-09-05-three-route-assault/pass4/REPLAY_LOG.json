@@ -1,0 +1,140 @@
+{
+  "RH_proved": false,
+  "additional_corruptions_per_mode": 4,
+  "analytic_theorems_machine_proved": false,
+  "distinct_controls": 331,
+  "executions": [
+    {
+      "arguments": [
+        "--check",
+        "PASS4/RESULTS.json"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "mode": "normal",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f4d8f62055bcfa0908640c80e152113c142ea139eae222b720f2174539994457"
+    },
+    {
+      "arguments": [
+        "--check",
+        "PASS4/RESULTS.json"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "mode": "optimized",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f4d8f62055bcfa0908640c80e152113c142ea139eae222b720f2174539994457"
+    },
+    {
+      "arguments": [
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "mode": "normal",
+      "stderr_sha256": "d96c6fd3e677e8e5e7471f52150e73ecf86bac8bc33a32d5d450292bafd483ad",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "expected": "success",
+      "mode": "optimized",
+      "stderr_sha256": "d96c6fd3e677e8e5e7471f52150e73ecf86bac8bc33a32d5d450292bafd483ad",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "--check",
+        "CORRUPTED_FIXTURE/source_enclosure.json"
+      ],
+      "exit_code": 1,
+      "expected": "rejection",
+      "mode": "normal",
+      "stderr_sha256": "2c93cdf836e75c3dbb2b9979c76bc68aee145d942448745086b41076bc814b6b",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "--check",
+        "CORRUPTED_FIXTURE/source_enclosure.json"
+      ],
+      "exit_code": 1,
+      "expected": "rejection",
+      "mode": "optimized",
+      "stderr_sha256": "2c93cdf836e75c3dbb2b9979c76bc68aee145d942448745086b41076bc814b6b",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "--check",
+        "CORRUPTED_FIXTURE/boolean_alias.json"
+      ],
+      "exit_code": 1,
+      "expected": "rejection",
+      "mode": "normal",
+      "stderr_sha256": "2c93cdf836e75c3dbb2b9979c76bc68aee145d942448745086b41076bc814b6b",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "--check",
+        "CORRUPTED_FIXTURE/boolean_alias.json"
+      ],
+      "exit_code": 1,
+      "expected": "rejection",
+      "mode": "optimized",
+      "stderr_sha256": "2c93cdf836e75c3dbb2b9979c76bc68aee145d942448745086b41076bc814b6b",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "--check",
+        "CORRUPTED_FIXTURE/float_alias.json"
+      ],
+      "exit_code": 1,
+      "expected": "rejection",
+      "mode": "normal",
+      "stderr_sha256": "2c93cdf836e75c3dbb2b9979c76bc68aee145d942448745086b41076bc814b6b",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "--check",
+        "CORRUPTED_FIXTURE/float_alias.json"
+      ],
+      "exit_code": 1,
+      "expected": "rejection",
+      "mode": "optimized",
+      "stderr_sha256": "2c93cdf836e75c3dbb2b9979c76bc68aee145d942448745086b41076bc814b6b",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "--check",
+        "CORRUPTED_FIXTURE/duplicate_key.json"
+      ],
+      "exit_code": 1,
+      "expected": "rejection",
+      "mode": "normal",
+      "stderr_sha256": "4ca7ba97447e6b49300627f2f5b74291eee94abd4dd58dc96a0c27744158f8ab",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arguments": [
+        "--check",
+        "CORRUPTED_FIXTURE/duplicate_key.json"
+      ],
+      "exit_code": 1,
+      "expected": "rejection",
+      "mode": "optimized",
+      "stderr_sha256": "4ca7ba97447e6b49300627f2f5b74291eee94abd4dd58dc96a0c27744158f8ab",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "normal_optimized_result_bytes_equal": true,
+  "unit_tests_per_mode": 8
+}

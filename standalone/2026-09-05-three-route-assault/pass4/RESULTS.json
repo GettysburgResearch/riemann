@@ -1,0 +1,68 @@
+{
+  "RH_proved": false,
+  "arithmetic": "EXACT_RATIONAL_AND_SOURCE_BOUND_INTERVAL",
+  "counts": {
+    "cdf_boundary_identity": 90,
+    "distribution_moments": 3,
+    "explicit_cutoff_bound": 12,
+    "full_source_uniform_square": 1,
+    "laguerre_generating": 75,
+    "pgf_positivity": 75,
+    "reciprocal_residue": 2,
+    "source_interval_signs": 8,
+    "sqrt_and_pgf": 30,
+    "synthetic_rank_two_inertia": 35
+  },
+  "explicit_degree_bounds": {
+    "10": 134,
+    "100": 170,
+    "1000": 208,
+    "1000000": 322,
+    "2": 113,
+    "4": 121
+  },
+  "full_source_Hankel_PSD_proved": false,
+  "infinite_analytic_proofs_machine_checked": false,
+  "parent_sha256": {
+    "pass2/source_certificate.py": "128df4f27cc62683a58ef74c1f374910db13b507208e00535df3e1c9a9b3c6e5",
+    "pass3/source_moments.py": "1d7b36a0bfc3abca254912aaa5756fe24b7b3180aea2a1fc9edf6c51b830ce4d"
+  },
+  "source_checks": {
+    "balanced_cutoff_X2_trace_negative": true,
+    "cutoff_X2_sparse_square_n1_negative": true,
+    "full_m0_gt_one_fiftieth": true,
+    "full_m0_lt_one_fortieth": true,
+    "full_sparse_square_n1_positive": true,
+    "full_sparse_square_n2_positive": true,
+    "operator_cutoff_residual_D2_positive": true,
+    "safe_xi_value_less_than_four_thirds": true
+  },
+  "source_intervals": {
+    "balanced_cutoff_X2_trace": [
+      "-0.0114198568384842840424937839744130749190",
+      "-0.0114198568384842791081692300848284508132"
+    ],
+    "cutoff_X2_sparse_square_n1": [
+      "-0.0114463595530148130177543271490553683152",
+      "-0.0114463595530148110026552770200297610090"
+    ],
+    "full_m0": [
+      "0.0230220771766668920750553064208464754023",
+      "0.0230220771766668920750553064208464754337"
+    ],
+    "full_sparse_square_n1": [
+      "0.0228765013859926929160672075413739537439",
+      "0.0228765013859926929160672075413739551409"
+    ],
+    "full_sparse_square_n2": [
+      "0.0230209588708889300811790098536942584039",
+      "0.0230209588708889300811790098536942808113"
+    ],
+    "operator_residual_D2": [
+      "0.6895063803436352248830051268363235682934",
+      "0.6895063803436352347516542346154928165046"
+    ]
+  },
+  "status": "PASS_PASS4_TRUNCATION_CONTROLS",
+  "total_distinct_controls": 331
+}
