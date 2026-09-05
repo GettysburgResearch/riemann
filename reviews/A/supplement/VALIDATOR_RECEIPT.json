@@ -1,0 +1,90 @@
+{
+  "status": "ALL_SEVEN_MUTATIONS_REJECTED_IN_BOTH_MODES",
+  "tests": [
+    {
+      "mode": "normal",
+      "mutation": "duplicate_claim",
+      "exit": 1,
+      "last_error": "RuntimeError: duplicate review_id"
+    },
+    {
+      "mode": "normal",
+      "mutation": "missing_source",
+      "exit": 1,
+      "last_error": "RuntimeError: composite count mismatch"
+    },
+    {
+      "mode": "normal",
+      "mutation": "wrong_target",
+      "exit": 1,
+      "last_error": "RuntimeError: bad seven-point result"
+    },
+    {
+      "mode": "normal",
+      "mutation": "wrong_status",
+      "exit": 1,
+      "last_error": "RuntimeError: bad seven-point result"
+    },
+    {
+      "mode": "normal",
+      "mutation": "mode_count",
+      "exit": 1,
+      "last_error": "RuntimeError: tree node coverage"
+    },
+    {
+      "mode": "normal",
+      "mutation": "nonzero_exit",
+      "exit": 1,
+      "last_error": "RuntimeError: nonzero replay exit"
+    },
+    {
+      "mode": "normal",
+      "mutation": "rh_scope",
+      "exit": 1,
+      "last_error": "RuntimeError: scope overclaim"
+    },
+    {
+      "mode": "optimized",
+      "mutation": "duplicate_claim",
+      "exit": 1,
+      "last_error": "RuntimeError: duplicate review_id"
+    },
+    {
+      "mode": "optimized",
+      "mutation": "missing_source",
+      "exit": 1,
+      "last_error": "RuntimeError: composite count mismatch"
+    },
+    {
+      "mode": "optimized",
+      "mutation": "wrong_target",
+      "exit": 1,
+      "last_error": "RuntimeError: bad seven-point result"
+    },
+    {
+      "mode": "optimized",
+      "mutation": "wrong_status",
+      "exit": 1,
+      "last_error": "RuntimeError: bad seven-point result"
+    },
+    {
+      "mode": "optimized",
+      "mutation": "mode_count",
+      "exit": 1,
+      "last_error": "RuntimeError: tree node coverage"
+    },
+    {
+      "mode": "optimized",
+      "mutation": "nonzero_exit",
+      "exit": 1,
+      "last_error": "RuntimeError: nonzero replay exit"
+    },
+    {
+      "mode": "optimized",
+      "mutation": "rh_scope",
+      "exit": 1,
+      "last_error": "RuntimeError: scope overclaim"
+    }
+  ],
+  "mathematical_truth_not_certified_by_validator": true
+}
