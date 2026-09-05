@@ -1,0 +1,12 @@
+semantic_id	source_pr	source_head_sha	source_path	source_claim_id	same_statement_as	supersedes	superseded_by	contradicts	namespace_collision_with	review_verdict	notes
+CONSUMER.MELLIN.FIXED_ROW	652	24ab64551225f2dba9aa53a533eb9b0285c6e363	claims/lemmas/L-99602-exact-two-row-mellin-landau-consumer.md	L-99602	direct-row consumer #542/#545/#546/#547 after corrections					VERIFIED_WITH_FIXES	
+CONSUMER.MELLIN.FIVE_THREE	649	433fd3662f7b2e4ba384ce64f196380e88624090	claims/lemmas/L-99261-five-three-row-zero-free-mellin-witness.md	L-99261	integrated C4MBI primitive scalar consumer					VERIFIED	
+ARITH.SHARP.RN_CHILD	652	24ab64551225f2dba9aa53a533eb9b0285c6e363	claims/lemmas/L-99600-exact-compact-sharp-hall-and-rn-cocycle.md	L-99600		raw support cutoff child				VERIFIED	
+ARITH.WAVELET.MINIMAL_RATIO8	674	9962f7f712adc6b4ad72672ecfeace028ba79bdb	standalone/2026-08-20-minimal-mobius-wavelet/PROOF.md	T99910	phase-Hasse physical scalar; compact Mertens frame				T-99910/T-100200 historical branches	VERIFIED	
+ARITH.XD.LPMW_BVD_K0_K1_MISTYPE	705	027ea8bd5c879a190e9e22620c245a81f7b93b73	claims/refutations/R-103200-k0-k1-hybrid-equivalence-is-mistyped.md	R-103200			ARITH.XD.SAME_K1_LPMW_BVD	PR #692 unqualified LPMW<->BVD edge		FALSE	
+ARITH.XD.SAME_K1_LPMW_BVD	705	027ea8bd5c879a190e9e22620c245a81f7b93b73	claims/lemmas/L-103201-correct-same-k1-largest-prime-vaughan-hybrid.md	L-103201		ARITH.XD.LPMW_BVD_K0_K1_MISTYPE				VERIFIED	
+ARITH.DICKMAN.HEREDITARY	608	f362acf56bbbbd183976b6377fbe883193886e1a	claims/theorems/T-98050-hereditary-mesoscopic-bellman-corridor.md	T-98050	QMP67 mesoscopic hereditary corridor in #614				T-98050/T-98400 family	CONDITIONAL_EXACT	
+ARITH.DOUBLE_OWNER.COBBOUNDARY	695	5b549abb560e87718f1977d72bf6d3a18165af90	claims/lemmas/L-100700-double-owner-mixed-coboundary-and-rectangle-telescope.md	L-100700					T/L-100700 unrelated #693/#695 objects	VERIFIED	
+ARITH.VAUGHAN.HALF_DIVISOR	696	f4016db548afceb31b150547cb6cd48b4cddb77d	claims/lemmas/L-102010-half-divisor-symmetric-one-field-reduction.md	L-102010	half-field source square root #707					VERIFIED_WITH_FIXES	
+ARITH.OCCUPANCY.BPOE	707	7bf3308d40ac8ed1ba50e404ff6e9c47526d89e4	claims/theorems/T-103300-balanced-phase-amplitude-and-physical-occupancy-frontier.md	BPOE103300						OPEN_SUFFICIENT_FOR_RH	
+ARITH.PERRON.JOINT_MATRIX	697	e878c3717cd8124564e5400b2ec5db035e3a4088	claims/theorems/T-101100-joint-quadratic-wavelet-closure-matrix.md	T-101100					multiple unrelated T-101100 packets in #698/#699	CONDITIONAL_EXACT	
