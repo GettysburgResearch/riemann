@@ -1,0 +1,35 @@
+{
+  "analytic_theorems_machine_proved": false,
+  "arithmetic": "Gaussian rationals and formal prime-log coefficients",
+  "base_commit": "8cc6fc78db37f42290c7372bc994b3bfa94898ef",
+  "finite_fixtures": 102,
+  "groups": {
+    "complex_vector_identity": 11,
+    "cross_exponential_budget": 1,
+    "divisor_log_identity": 11,
+    "factorial_floor_identity": 6,
+    "gamma_derivative_budget": 1,
+    "ground_state_square_identity": 11,
+    "integer_knot_budget": 11,
+    "logarithm_constants": 1,
+    "operator_normalization": 1,
+    "positivity_margin": 1,
+    "prime_edge_connectivity": 11,
+    "primitive_endpoints": 11,
+    "primitive_polynomial_identity": 11,
+    "rayleigh_numerator": 11,
+    "regular_cross_budget": 1,
+    "small_curvature_budget": 1,
+    "two_vertex_adjacency_is_not_psd": 1
+  },
+  "log2_interval": [
+    "53056/76545",
+    "1910051/2755620"
+  ],
+  "proof_sha256": "ce24230301538130e4c058e9413ff5f6a1b4c84c4c9d8e3dd7fe55140f397a56",
+  "regular_cross_ceiling": "1/131072",
+  "rh_proved": false,
+  "source_lock_sha256": "db49bf5bd41243c4a0c70b10e9d792cbd583fef45370d03ef3b2f98b7ae7e40d",
+  "status": "PASS_FINITE_ALGEBRA",
+  "unrestricted_source_sign_proved": false
+}
