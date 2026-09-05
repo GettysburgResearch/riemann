@@ -1,0 +1,78 @@
+{
+  "heavy_campaigns_rerun": false,
+  "modules": {
+    "replay_heat_firewalls": {
+      "checks": {
+        "claimed_rate_at_theta_1_over_384": "1/4",
+        "tao_phase_separator_determinant": "-80/81",
+        "uniform_center_energy_type": "1/2"
+      },
+      "scope": "finite exact separators only; no Selberg--Delange or vertical-limit campaign rerun",
+      "verdict": "PASS_REVIEWER_B_FRACTIONAL_HEAT_FIREWALL_LIGHT_REPLAY"
+    },
+    "replay_loewner_hankel": {
+      "checks": {
+        "beta_hankel_determinants_alpha_half": {
+          "1": "1/2",
+          "2": "1/64",
+          "3": "1/32768",
+          "4": "1/268435456",
+          "5": "1/35184372088832",
+          "6": "1/73786976294838206464"
+        },
+        "pairwise_reciprocal_curvature": true,
+        "pairwise_schwarzian_curvature": true
+      },
+      "scope": "two-pole symbolic identities and fixed finite beta-Hankel orders only; no growing-order zero-frame theorem",
+      "verdict": "PASS_REVIEWER_B_LOEWNER_HANKEL_LIGHT_REPLAY"
+    },
+    "replay_mellin_consumer": {
+      "checks": {
+        "factor_67_multiplier_positive_half_plane_modulus": true,
+        "log_box_positive_real_samples": [
+          "50*sinh(7/50)/7",
+          "5*sinh(7/5)/7",
+          "2*sinh(7/2)/7"
+        ],
+        "two_row_common_zero_elimination": "-3*a**2 + 9*a - 6"
+      },
+      "scope": "finite symbolic algebra only; no arithmetic producer and no zeta-zero campaign",
+      "verdict": "PASS_REVIEWER_B_MELLIN_CONSUMER_LIGHT_REPLAY"
+    },
+    "replay_operator_local": {
+      "checks": {
+        "cayley_anticommutator": true,
+        "jacobi_one_cell_gap": "9/8",
+        "prime_julia_absorption_margin": "21587/38416"
+      },
+      "scope": "selected exact local identities only; no source-to-output domination theorem",
+      "verdict": "PASS_REVIEWER_B_OPERATOR_LOCAL_LIGHT_REPLAY"
+    },
+    "replay_q4_filter": {
+      "checks": {
+        "inverse_l1_mass": "64/21",
+        "mellin_zero_real_parts": [
+          -1,
+          -2,
+          -3
+        ],
+        "triple_filter_coefficients": "-S**3/64 + 7*S**2/32 - 7*S/8 + 1"
+      },
+      "scope": "exact scale-filter algebra only; no endpoint scan and no SACF/UOSACF campaign",
+      "verdict": "PASS_REVIEWER_B_Q4_FILTER_LIGHT_REPLAY"
+    },
+    "replay_xi_pick_order3": {
+      "checks": {
+        "critical_orbit_curvature": "0",
+        "cross_curvature_factorization": true,
+        "global_declared_budget_upper_bound": "1.78367726511960157652183165551432162213602832043204803975260E-10",
+        "off_line_orbit_curvature": "-32*B**2*m**2/(B**2 + c**2 + 2*c*t + t**2)**3",
+        "reciprocal_concavity_sum_closure": true,
+        "three_node_determinant_factorization": true
+      },
+      "scope": "exact finite algebra and printed budget only; external zero verification and infinite Hadamard passage not rerun",
+      "verdict": "PASS_REVIEWER_B_XI_PICK_ORDER3_LIGHT_REPLAY"
+    }
+  },
+  "verdict": "PASS_REVIEWER_B_ALL_LIGHT_REPLAYS"
+}

@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "inverse_l1_mass": "64/21",
+    "mellin_zero_real_parts": [
+      -1,
+      -2,
+      -3
+    ],
+    "triple_filter_coefficients": "-S**3/64 + 7*S**2/32 - 7*S/8 + 1"
+  },
+  "scope": "exact scale-filter algebra only; no endpoint scan and no SACF/UOSACF campaign",
+  "verdict": "PASS_REVIEWER_B_Q4_FILTER_LIGHT_REPLAY"
+}
