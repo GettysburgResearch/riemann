@@ -1,0 +1,72 @@
+{
+  "classification": "NON_DIRECTED_HIGH_PRECISION_NON_PROOF",
+  "digits": 50,
+  "mpmath": "1.3.0",
+  "python": "3.13.5",
+  "rows": [
+    {
+      "X": 101,
+      "completed_error": "0.007570170304455977464489",
+      "raw_error": "0.1396416547334655307841",
+      "t": "0.4",
+      "two_correction_forms_difference": "5.0114338e-52"
+    },
+    {
+      "X": 101,
+      "completed_error": "0.01196228831982163820709",
+      "raw_error": "0.190926268201398944094",
+      "t": "1.1",
+      "two_correction_forms_difference": "1.5759257e-51"
+    },
+    {
+      "X": 101,
+      "completed_error": "0.01138936923762149753876",
+      "raw_error": "0.09974920926937134969028",
+      "t": "3.0",
+      "two_correction_forms_difference": "2.826269e-51"
+    },
+    {
+      "X": 1009,
+      "completed_error": "0.001237573900171375411863",
+      "raw_error": "0.1146910674471713884504",
+      "t": "0.4",
+      "two_correction_forms_difference": "2.6727647e-51"
+    },
+    {
+      "X": 1009,
+      "completed_error": "0.002004756542540038336725",
+      "raw_error": "0.117599198367398882679",
+      "t": "1.1",
+      "two_correction_forms_difference": "9.1876287e-52"
+    },
+    {
+      "X": 1009,
+      "completed_error": "0.002182538136484671197128",
+      "raw_error": "0.0729909456355663398014",
+      "t": "3.0",
+      "two_correction_forms_difference": "8.3523897e-53"
+    },
+    {
+      "X": 10007,
+      "completed_error": "0.0004153835825249514795221",
+      "raw_error": "0.102824644433737882277",
+      "t": "0.4",
+      "two_correction_forms_difference": "1.3775114e-51"
+    },
+    {
+      "X": 10007,
+      "completed_error": "0.0006342338881862535380095",
+      "raw_error": "0.09822121387835621913433",
+      "t": "1.1",
+      "two_correction_forms_difference": "1.5759257e-51"
+    },
+    {
+      "X": 10007,
+      "completed_error": "0.0005669705410329679450068",
+      "raw_error": "0.05649513979709663345529",
+      "t": "3.0",
+      "two_correction_forms_difference": "1.3363824e-51"
+    }
+  ],
+  "scope": "Nine fixed arithmetic points. No global norm, PNT rate, zero-free region, or RH certificate."
+}

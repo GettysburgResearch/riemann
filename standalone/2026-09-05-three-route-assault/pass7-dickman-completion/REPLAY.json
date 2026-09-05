@@ -1,0 +1,129 @@
+{
+  "deliberate_cli_rejections_per_mode": 6,
+  "distinct_exact_checks": 2242,
+  "finite_checks_are_not_analytic_proofs": true,
+  "modes": [
+    "normal",
+    "optimized"
+  ],
+  "parent_suite_rerun": false,
+  "runs": [
+    {
+      "command": [
+        "python",
+        "verify.py",
+        "--check",
+        "RESULTS.json"
+      ],
+      "exit": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e8d86edf3ea6f6044f021ff9cebee1ca61645bf4dd50e697111f14e84021a4c2"
+    },
+    {
+      "command": [
+        "python",
+        "verify.py",
+        "--self-test"
+      ],
+      "exit": 0,
+      "stderr_sha256": "d0a9816b09c52fd4b03ab9904bd1a8dd95eefe2f8f5bfc85bf7b2a16454938d5",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "RH flag",
+      "exit": 1,
+      "expected_rejection": true,
+      "optimized": false
+    },
+    {
+      "case": "float alias",
+      "exit": 1,
+      "expected_rejection": true,
+      "optimized": false
+    },
+    {
+      "case": "changed constant",
+      "exit": 1,
+      "expected_rejection": true,
+      "optimized": false
+    },
+    {
+      "case": "duplicate key",
+      "exit": 1,
+      "expected_rejection": true,
+      "optimized": false
+    },
+    {
+      "case": "new_proof",
+      "exit": 1,
+      "expected_rejection": true,
+      "optimized": false
+    },
+    {
+      "case": "parent_proof",
+      "exit": 1,
+      "expected_rejection": true,
+      "optimized": false
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "verify.py",
+        "--check",
+        "RESULTS.json"
+      ],
+      "exit": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e8d86edf3ea6f6044f021ff9cebee1ca61645bf4dd50e697111f14e84021a4c2"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "verify.py",
+        "--self-test"
+      ],
+      "exit": 0,
+      "stderr_sha256": "d0a9816b09c52fd4b03ab9904bd1a8dd95eefe2f8f5bfc85bf7b2a16454938d5",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "RH flag",
+      "exit": 1,
+      "expected_rejection": true,
+      "optimized": true
+    },
+    {
+      "case": "float alias",
+      "exit": 1,
+      "expected_rejection": true,
+      "optimized": true
+    },
+    {
+      "case": "changed constant",
+      "exit": 1,
+      "expected_rejection": true,
+      "optimized": true
+    },
+    {
+      "case": "duplicate key",
+      "exit": 1,
+      "expected_rejection": true,
+      "optimized": true
+    },
+    {
+      "case": "new_proof",
+      "exit": 1,
+      "expected_rejection": true,
+      "optimized": true
+    },
+    {
+      "case": "parent_proof",
+      "exit": 1,
+      "expected_rejection": true,
+      "optimized": true
+    }
+  ],
+  "unit_tests_per_mode": 12
+}
