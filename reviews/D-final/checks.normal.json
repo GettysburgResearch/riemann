@@ -1,0 +1,294 @@
+{
+  "checks": [
+    {
+      "fixtures": 1,
+      "name": "Farkas_plus_sign_counterexample",
+      "result": {
+        "A": 1,
+        "G": 1,
+        "b": 1,
+        "u": -1,
+        "v": 1,
+        "z": 1
+      }
+    },
+    {
+      "fixtures": 125,
+      "name": "Corrected_one_variable_Farkas_grid",
+      "result": {
+        "dual": "A^T u-G^T v>=0; v>=0; b^T u<0"
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "Real_data_need_not_have_rational_separator",
+      "result": {
+        "dual_ray": "t*(-sqrt(2),1), t>0",
+        "primal": "infeasible"
+      }
+    },
+    {
+      "fixtures": 5,
+      "name": "One_sided_vector_generator_real_part",
+      "result": {
+        "counterexample": "D=-i, f=1: 1+i versus 1"
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "Matrix_conjugation_generator_HS_real_part",
+      "result": {
+        "negative_inner_product": "14 - 4*I"
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "Fredholm_inherited_Fourier_normalization",
+      "result": {
+        "correct_leading_coefficient": "Re psi(1/4+iT/2)-log pi",
+        "factor": "2*pi"
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "Gaussian_confinement_trace",
+      "result": {
+        "trace_B": "sqrt(pi/(2*sigma))/4"
+      }
+    },
+    {
+      "fixtures": 135,
+      "name": "Euler_Taylor_integral_remainders",
+      "result": {
+        "m_max": 7,
+        "z_count": 5
+      }
+    },
+    {
+      "fixtures": 405,
+      "name": "Taylor_dilation_bound",
+      "result": {
+        "orders": "k<m<=8"
+      }
+    },
+    {
+      "fixtures": 7,
+      "name": "Critical_Taylor_Mellin_symbol",
+      "result": {
+        "fundamental_strip": "1/2<Re(s)<1"
+      }
+    },
+    {
+      "fixtures": 28,
+      "name": "Critical_Taylor_positive_real_residue_cancellation",
+      "result": {
+        "warning": "analytic B-values and zeta-pole cancellation are separate inputs"
+      }
+    },
+    {
+      "fixtures": 35,
+      "name": "Critical_Taylor_source_kernel_rescaling",
+      "result": {
+        "m_max": 8,
+        "m_min": 2
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "Supercritical_prime_label_threshold",
+      "result": {
+        "exp_lower": "163/60",
+        "zeta_bound_over_local_factor": "4288/1605"
+      }
+    },
+    {
+      "fixtures": 720,
+      "name": "Jordan_divisor_cocycle_exact_rational",
+      "result": {
+        "parameter_convention": "A=2a, B=2b"
+      }
+    },
+    {
+      "fixtures": 540,
+      "name": "Jordan_coassociation_and_probability",
+      "result": {
+        "n_max": 48
+      }
+    },
+    {
+      "fixtures": 62,
+      "name": "First_owner_full_monomial_identity",
+      "result": {
+        "k_max": 5
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "Anchor_second_jet_Gram_Schmidt",
+      "result": {
+        "tau_squared": "36/41",
+        "variance": "41/36"
+      }
+    },
+    {
+      "fixtures": 7,
+      "name": "Anchor_second_jet_norm_identity",
+      "result": {
+        "scope": "finite positive law"
+      }
+    },
+    {
+      "fixtures": 255,
+      "name": "Y4_null_columns_support",
+      "result": {
+        "historical_5000_census_not_rerun": true,
+        "range": "2<=Q<=256"
+      }
+    },
+    {
+      "fixtures": 493,
+      "name": "Y4_full_triangular_columns",
+      "result": {
+        "Q_max": 32,
+        "Q_min": 4,
+        "index_floor": 2
+      }
+    },
+    {
+      "fixtures": 120,
+      "name": "Half_divisor_convolution_square",
+      "result": {
+        "n_max": 120
+      }
+    },
+    {
+      "fixtures": 480,
+      "name": "Vaughan_full_coefficient_factorizations",
+      "result": {
+        "cutoffs": [
+          1,
+          3,
+          8,
+          16
+        ],
+        "n_max": 120
+      }
+    },
+    {
+      "fixtures": 961,
+      "name": "Vaughan_squarefree_gcd_reparameterization",
+      "result": {
+        "d_e_max": 48
+      }
+    },
+    {
+      "fixtures": 21613,
+      "name": "Vaughan_exact_floor_parabolic_support",
+      "result": {
+        "X_max": 300
+      }
+    },
+    {
+      "fixtures": 3,
+      "name": "Ratio_four_half_kernel",
+      "result": {
+        "endpoint_values": "a.e. for integral identities",
+        "support": "[1,4]"
+      }
+    },
+    {
+      "fixtures": 6,
+      "name": "Volterra_modes_boundary_and_jump",
+      "result": {
+        "a": "strictly positive",
+        "derivative_jump_mass": "t^(3/2)*jump(f prime)"
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "Plastic_negative_score_six_term_cap",
+      "result": {
+        "cap_lt": "1/4",
+        "positive_root_bracket": [
+          "86883/100000",
+          "21721/25000"
+        ]
+      }
+    },
+    {
+      "fixtures": 2,
+      "name": "Julia_prime_mass_and_existing_margin_repair",
+      "result": {
+        "m4_upper": "85/196",
+        "not_a_new_margin_discovery": true,
+        "reserve_lower": "21587/38416"
+      }
+    },
+    {
+      "fixtures": 81,
+      "name": "Carry_prefix_signed_Abel_payment",
+      "result": {
+        "primitive_d64_generator_not_run": true
+      }
+    },
+    {
+      "fixtures": 12,
+      "name": "Dickman_repeated_prime_union_bound",
+      "result": {
+        "prime_set": [
+          2,
+          3,
+          5,
+          7
+        ]
+      }
+    },
+    {
+      "fixtures": 256,
+      "name": "Bellman_literal_least_prime_identity",
+      "result": {
+        "no_analytic_corridor_test": true,
+        "test_base": "h(t)=t^2+t on t>=1"
+      }
+    },
+    {
+      "fixtures": 24,
+      "name": "Dickman_CDF_convolution_discrepancy",
+      "result": {
+        "signed_factor_control": "2*k*delta*M^(k-1)"
+      }
+    },
+    {
+      "fixtures": 20,
+      "name": "Signed_Stieltjes_endpoint_transfer",
+      "result": {
+        "atom_ownership": "closed n*a<=Y"
+      }
+    },
+    {
+      "fixtures": 3,
+      "name": "Reciprocal_zeta_Hardy_exponent_contract",
+      "result": {
+        "analytic_theorem_not_finitely_verified": true,
+        "epsilon": "1/4",
+        "gamma_power": "-3/2",
+        "t_power": "-7/2"
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "Finite_Hermitian_midpoint_moat",
+      "result": {
+        "actual_xi_primitives_not_run": true,
+        "allowed_operator_radius_lt": "1",
+        "delta": "1"
+      }
+    }
+  ],
+  "fixtures": 26407,
+  "named_checks": 35,
+  "proof_status": "BOUNDED_RECONSTRUCTION_ONLY",
+  "python": "3.13.5",
+  "schema": "riemann.review.D.closeout.checks.v1",
+  "sympy": "1.14.0"
+}
