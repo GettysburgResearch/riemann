@@ -1,0 +1,28 @@
+{
+  "actual_X2_density_upper_bound": "-23/105",
+  "actual_X2_test_upper_bound": "-13/3240",
+  "arithmetic": "fractions_only",
+  "base_commit": "c64a0ae131d60cce48bc0dcc73358f7a1a857a89",
+  "claims": {
+    "all_rank_source_sign_proved": false,
+    "analytic_proofs_machine_checked": false,
+    "explicit_numeric_PNT_constants_certified": false,
+    "rh_proved": false
+  },
+  "finite_comparisons": 65,
+  "groups": {
+    "actual_X2_formal_jet": 2,
+    "actual_X2_margins": 3,
+    "continuum_exponents": 4,
+    "contour_algebra": 18,
+    "contour_constants": 7,
+    "elementary_constants": 9,
+    "gaussian_resolvent": 8,
+    "original_metric_controls": 6,
+    "pnt_tail_antiderivative": 5,
+    "trace_normalizations": 3
+  },
+  "proof_sha256": "132022d080f582bd5776d410aa482280685b581b4140239294f4244f9a844efe",
+  "scope": "Finite algebra and constant controls only; analytic arguments require proof review.",
+  "status": "PASS_FINITE_EXACT_CONTROLS"
+}
