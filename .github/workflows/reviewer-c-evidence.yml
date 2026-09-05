@@ -1,0 +1,173 @@
+name: Reviewer C bounded evidence export
+on:
+  push:
+    branches: ['review/C/2026-09-05-post-release-audit']
+    paths: ['.github/workflows/reviewer-c-evidence.yml']
+permissions:
+  contents: read
+  pull-requests: read
+  issues: read
+  actions: read
+jobs:
+  export:
+    if: github.ref == 'refs/heads/review/C/2026-09-05-post-release-audit'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 8d16f8d9c475db290bc85e53d775b93b9bcdb336
+          path: frozen_main
+          persist-credentials: false
+          fetch-depth: 1
+          submodules: false
+          lfs: false
+      - name: Read-only metadata and text-source acquisition (no research execution)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PYEXPORT'
+          # Reviewer-owned read-only acquisition. Never import or execute repository code.
+          import os, json, hashlib, base64, pathlib, subprocess, re, time, threading, urllib.request, urllib.error
+          from concurrent.futures import ThreadPoolExecutor
+          R='GettysburgResearch/riemann'; MAIN='8d16f8d9c475db290bc85e53d775b93b9bcdb336'
+          OLD='a6aa936ba8bf538177e34af60db7e2f0a58f8dfd'; OUT=pathlib.Path('C_EVIDENCE'); OUT.mkdir(exist_ok=True)
+          TOKEN=os.environ['GH_TOKEN']; lock=threading.Lock(); count=0; bytecount=0; receipt=[]; errors=[]
+          START=time.time(); MAX_REQUESTS=1600; MAX_BYTES=240_000_000
+          def clean(x):
+              if isinstance(x,dict): return {k:clean(v) for k,v in x.items() if k!='download_url'}
+              if isinstance(x,list): return [clean(v) for v in x]
+              if isinstance(x,str): return re.sub(r'([?&](?:token|access_token)=)[^&\s"<>]+',r'\1[REDACTED]',x)
+              return x
+          def put(name,data):
+              p=OUT/name;p.parent.mkdir(parents=True,exist_ok=True)
+              p.write_text(json.dumps(clean(data),ensure_ascii=False,indent=2)+'\n')
+          def get(path,name=None):
+              global count,bytecount
+              if not path.startswith('/repos/') or '..' in path: raise ValueError('GET path not allowed')
+              with lock:
+                  count+=1
+                  if count>MAX_REQUESTS or bytecount>MAX_BYTES or time.time()-START>1050: raise RuntimeError('bounded acquisition cap')
+              req=urllib.request.Request('https://api.github.com'+path,headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'Reviewer-C-read-only-audit'})
+              try:
+                  with urllib.request.urlopen(req,timeout=45) as res:
+                      raw=res.read(16_000_001)
+                      if len(raw)>16_000_000:raise RuntimeError('response byte cap')
+                      obj=json.loads(raw);link=res.headers.get('Link','')
+                  with lock:
+                      bytecount+=len(raw);receipt.append({'path':path,'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest(),'status':200,'time':time.time()})
+                  if name:put(name,obj)
+                  return obj,link
+              except Exception as e:
+                  record={'path':path,'type':type(e).__name__,'error':str(e)[:250]}
+                  with lock:errors.append(record)
+                  if name:put(name,{'ACQUISITION_ERROR':record})
+                  return None,''
+          def pages(path,name,limit=20,key=None):
+              ans=[]
+              for page in range(1,limit+1):
+                  sep='&' if '?' in path else '?'
+                  obj,link=get(path+sep+'per_page=100&page='+str(page),name+'/page_%02d.json'%page)
+                  if obj is None:return ans
+                  arr=obj.get(key,[]) if key else obj
+                  if not isinstance(arr,list):raise TypeError('pagination not array')
+                  ans+=arr
+                  if 'rel="next"' not in link:return ans
+              errors.append({'path':path,'error':'pagination limit reached; incomplete'})
+              return ans
+          def gitsha(data):return hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+          def contents(path,ref,dest):
+              from urllib.parse import quote
+              obj,_=get('/repos/'+R+'/contents/'+quote(path,safe='/')+'?ref='+ref)
+              if not isinstance(obj,dict) or 'content' not in obj:return
+              raw=base64.b64decode(obj['content'])
+              if gitsha(raw)!=obj['sha']:raise RuntimeError('blob authentication failed')
+              p=OUT/dest;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(raw)
+              return obj['sha']
+          repo,_=get('/repos/'+R,'repo.json')
+          prs=pages('/repos/'+R+'/pulls?state=all&sort=created&direction=desc','pulls',12)
+          put('ALL_PRS.json',prs)
+          refs,_=get('/repos/'+R+'/git/matching-refs/heads/','BRANCH_REFS.json')
+          get('/repos/'+R+'/git/ref/heads/main','MAIN_REF.json')
+          contents('review/2026-08-22/coverage/PR_CENSUS.tsv',OLD,'baseline/PR_CENSUS.tsv')
+          contents('review/2026-08-22/coverage/FINAL_HEAD_RECONCILIATION.tsv',OLD,'baseline/FINAL_HEAD_RECONCILIATION.tsv')
+          root=pathlib.Path('frozen_main').resolve(); total=0; copied=[]; skipped=[]
+          ls=subprocess.run(['git','-C',str(root),'ls-files','-z'],capture_output=True,check=True).stdout.decode().split('\0')
+          for rel in ls:
+              if not rel:continue
+              p=root/rel
+              if p.is_symlink() or not p.is_file() or p.stat().st_size>1_000_000:
+                  skipped.append(rel);continue
+              data=p.read_bytes()
+              try:data.decode('utf-8')
+              except UnicodeDecodeError:skipped.append(rel);continue
+              total+=len(data)
+              if total>120_000_000:raise RuntimeError('main text copy cap')
+              target=OUT/'main'/rel;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(data)
+              copied.append({'path':rel,'sha':gitsha(data),'bytes':len(data)})
+          put('MAIN_COPY.json',{'sha':MAIN,'copied':copied,'skipped':skipped})
+          cur=MAIN;hist=[]
+          for i in range(150):
+              obj,_=get('/repos/'+R+'/git/commits/'+cur)
+              if not obj:break
+              hist.append(obj)
+              if cur=='677203992eb0168920365ee45ae9db76bfa97dcf':break
+              if not obj.get('parents'):break
+              cur=obj['parents'][0]['sha']
+          else:errors.append({'error':'first-parent cap reached'})
+          put('FIRST_PARENT.json',hist)
+          selected=[p for p in prs if p['number']>=708 or p['updated_at']>='2026-08-22']
+          put('SELECTED_PRS.json',[{'number':p['number'],'head':p['head']['sha'],'base':p['base']['sha'],'updated_at':p['updated_at']} for p in selected])
+          def acquire_pr(p):
+              n=p['number'];stem='pr/%d'%n
+              detail,_=get('/repos/'+R+'/pulls/'+str(n),stem+'/info.json')
+              if not detail:return
+              sha=detail['head']['sha']
+              files=pages('/repos/'+R+'/pulls/'+str(n)+'/files',stem+'/files',35)
+              put(stem+'/FILES.json',files)
+              authenticated=[];unavailable=[]
+              for f in files:
+                  patch=f.get('patch');path=f['filename']
+                  if path.startswith('/') or '..' in pathlib.PurePosixPath(path).parts:raise RuntimeError('unsafe path')
+                  if f.get('status')=='added' and patch:
+                      lines=patch.splitlines();text='\n'.join(line[1:] for line in lines if line.startswith('+') and not line.startswith('+++'))+'\n'
+                      data=text.encode()
+                      if '\\ No newline at end of file' in patch:data=data[:-1]
+                      if gitsha(data)==f['sha']:
+                          target=OUT/'sources'/str(n)/sha/path;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(data)
+                          authenticated.append({'path':path,'sha':f['sha'],'bytes':len(data)})
+                          continue
+                  unavailable.append({'path':path,'sha':f.get('sha'),'status':f.get('status'),'reason':'not a complete reconstructible added-file patch'})
+              put(stem+'/SOURCE_COVERAGE.json',{'head':sha,'authenticated':authenticated,'unavailable':unavailable,'rest_file_limit_boundary':len(files)>=3000})
+              for endpoint,name in [('issues/%d/comments'%n,'discussion'),('pulls/%d/comments'%n,'inline'),('pulls/%d/reviews'%n,'reviews')]:
+                  pages('/repos/'+R+'/'+endpoint,stem+'/'+name,10)
+              after,_=get('/repos/'+R+'/pulls/'+str(n),stem+'/after.json')
+              if after and after['head']['sha']!=sha:
+                  put(stem+'/HEAD_MOVED.json',{'before':sha,'after':after['head']['sha'],'action':'do not treat mutable file list as source-authenticated; use exact blob matches only'})
+          with ThreadPoolExecutor(max_workers=4) as ex:
+              for _ in ex.map(acquire_pr,selected):pass
+          issues=pages('/repos/'+R+'/issues?state=all&since=2026-08-22T00:00:00Z','issues_updated',12)
+          real=[i for i in issues if 'pull_request' not in i];put('UPDATED_ISSUES.json',real)
+          nums=set(range(736,747))|{763,764}|{i['number'] for i in real}
+          for n in sorted(nums):
+              get('/repos/'+R+'/issues/'+str(n),'issue/%d/info.json'%n)
+              pages('/repos/'+R+'/issues/'+str(n)+'/comments','issue/%d/comments'%n,20)
+          runs=pages('/repos/'+R+'/actions/runs','actions',5,key='workflow_runs')
+          put('RUNS.json',runs)
+          for run in runs:
+              if 'formal' in (run.get('name','')+' '+run.get('path','')).lower():
+                  get('/repos/'+R+'/actions/runs/'+str(run['id'])+'/jobs?per_page=100','formal_jobs/%d.json'%run['id'])
+          put('ACQUISITION.json',{'main':MAIN,'old_census':OLD,'started_unix':START,'finished_unix':time.time(),'requests':count,'response_bytes':bytecount,'read_only':True,'research_code_executed':False,'errors':errors,'receipt':receipt})
+          print(json.dumps({'requests':count,'response_bytes':bytecount,'prs':len(prs),'selected_prs':len(selected),'main_files':len(copied),'errors':len(errors)}))
+          PYEXPORT
+      - name: Preserve private audit evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: reviewer-c-frozen-evidence
+          path: C_EVIDENCE/
+          if-no-files-found: warn
+          retention-days: 7
+          compression-level: 6
