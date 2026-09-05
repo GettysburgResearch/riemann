@@ -1,0 +1,270 @@
+{
+ "verdict": "PASS",
+ "rh_status": "UNPROVED \u2014 proved-only reachability does not reach RH in either trust mode",
+ "counts": {
+  "nodes": 41,
+  "edges": 12,
+  "aliases": 34,
+  "hypotheses": 8,
+  "coordinates_checked": 34
+ },
+ "offline": false,
+ "errors": [],
+ "check_errors": [],
+ "warnings": [],
+ "results": {
+  "proved_only": {
+   "strict": [
+    "L-102001",
+    "L-102009",
+    "L-102010",
+    "L-102100",
+    "L-102103",
+    "L-102105",
+    "L-103100",
+    "L-103101",
+    "L-103102",
+    "L-103300",
+    "L-103303",
+    "L-103304",
+    "L-99261",
+    "L-99270",
+    "L-99272",
+    "L-99282",
+    "L-99601",
+    "L-99602",
+    "T-102001",
+    "T-102100",
+    "T-103300"
+   ],
+   "deposited": [
+    "L-100310",
+    "L-100311",
+    "L-100312",
+    "L-102001",
+    "L-102009",
+    "L-102010",
+    "L-102100",
+    "L-102103",
+    "L-102105",
+    "L-103100",
+    "L-103101",
+    "L-103102",
+    "L-103300",
+    "L-103303",
+    "L-103304",
+    "L-105031",
+    "L-105032",
+    "L-99261",
+    "L-99270",
+    "L-99272",
+    "L-99281",
+    "L-99282",
+    "L-99601",
+    "L-99602",
+    "O-105010",
+    "T-102001",
+    "T-102100",
+    "T-102110",
+    "T-103300",
+    "T-105000",
+    "T-105040"
+   ]
+  },
+  "proved_only_reaches_RH": false,
+  "conditional_rh": {
+   "HYP.HHFE102010": {
+    "strict": true,
+    "deposited": true
+   },
+   "HYP.HCNC103100": {
+    "strict": true,
+    "deposited": true
+   },
+   "HYP.CFBB102100": {
+    "strict": true,
+    "deposited": true
+   },
+   "HYP.BPOE103300": {
+    "strict": true,
+    "deposited": true
+   },
+   "HYP.FCHD67": {
+    "strict": true,
+    "deposited": true
+   },
+   "HYP.WX53POS": {
+    "strict": true,
+    "deposited": true
+   },
+   "HYP.HNM67": {
+    "strict": true,
+    "deposited": true
+   },
+   "HYP.ROWS23": {
+    "strict": true,
+    "deposited": true
+   }
+  },
+  "gates_each_sufficient_strict": [
+   "HYP.BPOE103300",
+   "HYP.CFBB102100",
+   "HYP.FCHD67",
+   "HYP.HCNC103100",
+   "HYP.HHFE102010",
+   "HYP.HNM67",
+   "HYP.ROWS23",
+   "HYP.WX53POS"
+  ],
+  "minimal_open_cut": {
+   "cardinality": 1,
+   "solutions": [
+    [
+     "HYP.BPOE103300"
+    ],
+    [
+     "HYP.CFBB102100"
+    ],
+    [
+     "HYP.FCHD67"
+    ],
+    [
+     "HYP.HCNC103100"
+    ],
+    [
+     "HYP.HHFE102010"
+    ],
+    [
+     "HYP.HNM67"
+    ],
+    [
+     "HYP.ROWS23"
+    ],
+    [
+     "HYP.WX53POS"
+    ]
+   ]
+  },
+  "gate_implications": {
+   "strict": {
+    "HYP.HHFE102010": [
+     "HYP.HCNC103100"
+    ],
+    "HYP.HCNC103100": [
+     "HYP.HHFE102010"
+    ],
+    "HYP.CFBB102100": [],
+    "HYP.BPOE103300": [
+     "HYP.HCNC103100",
+     "HYP.HHFE102010"
+    ],
+    "HYP.FCHD67": [
+     "HYP.ROWS23"
+    ],
+    "HYP.WX53POS": [],
+    "HYP.HNM67": [],
+    "HYP.ROWS23": []
+   },
+   "deposited": {
+    "HYP.HHFE102010": [
+     "HYP.CFBB102100",
+     "HYP.HCNC103100"
+    ],
+    "HYP.HCNC103100": [
+     "HYP.CFBB102100",
+     "HYP.HHFE102010"
+    ],
+    "HYP.CFBB102100": [],
+    "HYP.BPOE103300": [
+     "HYP.CFBB102100",
+     "HYP.HCNC103100",
+     "HYP.HHFE102010"
+    ],
+    "HYP.FCHD67": [
+     "HYP.ROWS23"
+    ],
+    "HYP.WX53POS": [],
+    "HYP.HNM67": [],
+    "HYP.ROWS23": []
+   }
+  },
+  "hasse": {
+   "strict": {
+    "equivalence_classes": [
+     [
+      "HYP.BPOE103300"
+     ],
+     [
+      "HYP.CFBB102100"
+     ],
+     [
+      "HYP.FCHD67"
+     ],
+     [
+      "HYP.HCNC103100",
+      "HYP.HHFE102010"
+     ],
+     [
+      "HYP.HNM67"
+     ],
+     [
+      "HYP.ROWS23"
+     ],
+     [
+      "HYP.WX53POS"
+     ]
+    ],
+    "cover_relations": [
+     [
+      "HYP.BPOE103300",
+      "HYP.HCNC103100"
+     ],
+     [
+      "HYP.FCHD67",
+      "HYP.ROWS23"
+     ]
+    ]
+   },
+   "deposited": {
+    "equivalence_classes": [
+     [
+      "HYP.BPOE103300"
+     ],
+     [
+      "HYP.CFBB102100"
+     ],
+     [
+      "HYP.FCHD67"
+     ],
+     [
+      "HYP.HCNC103100",
+      "HYP.HHFE102010"
+     ],
+     [
+      "HYP.HNM67"
+     ],
+     [
+      "HYP.ROWS23"
+     ],
+     [
+      "HYP.WX53POS"
+     ]
+    ],
+    "cover_relations": [
+     [
+      "HYP.BPOE103300",
+      "HYP.HCNC103100"
+     ],
+     [
+      "HYP.FCHD67",
+      "HYP.ROWS23"
+     ],
+     [
+      "HYP.HCNC103100",
+      "HYP.CFBB102100"
+     ]
+    ]
+   }
+  }
+ }
+}

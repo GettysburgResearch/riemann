@@ -1,0 +1,28 @@
+[ok] S1_ratio_monotone_derivative: (6*sqrt(p) - 6)/(sqrt(w)*(4*sqrt(p)*sqrt(w) - 3)**2)
+[ok] S1_Tzc_over_Tz_derivative_numerator: 6*sqrt(c) - 6
+[ok] S1_Tzc_over_Tz_increasing_samples: True
+[ok] S2_branch_submult_deficit_identity: product - D == rp rq Rp (Rq - R_{pq|p})
+[ok] S2_reduces_to_S1: True
+[ok] S3_delta67_interval: [0.09231869808764850701423438395125267849..., 0.09231869808764850701423438395125267849...]
+[ok] S3_R99440_leading_coefficient: 4 C_j (1-r)/p * sqrt(Y)  [verified]
+[ok] S3_causal_identity_exact: True
+[ok] S4_three_quarters_threshold: 1-2/sqrt(p) > 3/4 iff p > 64; p=67 first prime
+[ok] S4_deficit_positive_iff_p_ge_5: True
+[ok] S4_small_prime_overshoot_const: 5/3 - 1/sqrt2 - 1/sqrt3 = 0.38220961629049337776
+[ok] S5_Q_sqrt_growth: True
+[ok] S5_qT_closed_form: q_T = sqrt(p) (4 sqrt Y - 3)/(4 sqrt Y - 3 sqrt p) >= sqrt p
+[ok] S5_exchange_rates
+[ok] S6_price_invariance: price ~ 1/p under both normalizations (cocycle-invariant)
+[ok] S7_budget_inequality_random_schemes: 200/200 within budget (consistency fixture: generator enforces per-block budget; the theorem is the two-line convex aggregate, proved in T-105000 A.1)
+[ok] S7_native_demand_vs_budget_at_5e4
+[ok] S8_unit_crossing_bracket
+[ok] S8_sum_inv_p_at_bracket
+[ok] S9_weight_bound_identity: sqrt(Z/Y) T(Y) - T(Z) = 3(1 - sqrt(Z/Y)) >= 0
+[ok] S9_price_forms_Y=10000
+[ok] S9_price_forms_Y=100000
+[ok] S9_price_forms_Y=400000
+[ok] S10_knot_identifiability: 5x5 triangular system uniquely recovers coefficients
+[ok] S9b_Q2_horizon_bracket
+[ok] S11_mutation_battery
+
+ALL CHECKS PASSED

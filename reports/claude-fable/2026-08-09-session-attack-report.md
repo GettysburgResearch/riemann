@@ -1,0 +1,79 @@
+# Session attack report — 2026-08-09 (`claude-fable-5`, branch `claude/riemann-proof-review-8nz34i`)
+
+One focused session attacking the open core after a full repository pass. Multi-agent orchestration (5 workflows, ~2.9M subagent tokens, 20+ independent derivation/verification agents); every load-bearing new identity machine-validated by ≥2 independent implementations; key steps hand-verified by the session author. The dedicated final adversarial-verify stage was cut short by a usage limit — disclosed in `T-90001` §6; statuses everywhere preserve the authoring agents' own PROVED / PROVED_SKETCH / NUMERICAL_ONLY labels.
+
+## Deliverables (in dependency order)
+
+| File | One-line content |
+|---|---|
+| `claims/theorems/T-90001-theta-bridge-equivalence.md` | **WSTS ⟺ RH as a short self-contained theorem**: exact bridge with explicit `10.3(2+log X)` floor; **Moat Lemma proved** (`J=H/√θ` nondecreasing via `S_N ≤ 2√N−1`); RH ⇒ `B_X ≪ log³` (log⁴→log³ sharpening); three independent classical consumers for WSTS ⇒ RH replacing the square-screw chain; calibration: unconditional `B_X` exponent ≡ best zero-free-strip width; VK-strength unconditional bound; effective window to ~10²⁵. Three named bookkeeping flags. |
+| `claims/observations/O-90004-structure-map-and-hardness-theorems.md` | z-max collapse (top half killed unconditionally; `B_X=[T^s(2)]_+` modulo Lemma S), Fejér-log2 kernel + dyadic blind spots, Bochner no-go for small-support Weil positivity, averaging-circularity theorem, attainment dichotomy, numerics-cannot-decide (≤10¹⁹), carry-LP = averaged Chebyshev with dual exactly Λ. |
+| `claims/refutations/R-90001-cbvr-residual-export-amplifies-debt.md` | **CBVR (PR #316) refuted as designed**: per-generation debt `~(log X)^{g−1}`, chain aggregate `~X^0.62`, certified fixed-scale witness family; independently replicated to 15 digits. |
+| `claims/observations/O-90001-…` | SHARP hinge scans to `T=10⁸` (rows 2–64 all T); exact terminal coefficient `½T^{−3/2}>0` (lemma); fixed-row recurrence enabling all-T sweeps. |
+| `claims/observations/O-90002-…` | GFEP extended to 10⁵ full / 10⁶ targeted; minimum structure `~X^{−1/2}` explicit; scope correction to T-28001 §9; provenance nit. |
+| `claims/observations/O-90003-…` | Carry profile `𝔊 ≥ 1` on `[1,10⁷]` (PR 243/247/252 shared sign target: no cheap kill). |
+
+## Honest bottom line
+
+RH remains unproved and WSTS remains exactly as hard as RH — now as a *theorem* (T-90001 §5), not a slogan. What changed: the repo's canonical equivalence is compressed from ~40 conditional files + an unreviewed consumer to a ~12–15-page self-contained argument with three named bookkeeping flags; one live closing route (CBVR) is refuted; the live open predicates (SHARP/GFEP) are massively stress-tested with structure exposed; and the wall map (§3 of O-90004) proves which attack shapes are circular before they are attempted.
+
+## Recommended next steps
+
+1. Review `T-90001` first (it is small); if it survives, re-point `T-27501` at it and retire the transport stack as architecture.
+2. Promote Lemma S (z-collapse) to a theorem via the same per-cell calculus as the Moat.
+3. Chase T-90001's three flags (C_E constants; real-X interpolation; Theorem B citations).
+4. Gate all future "producer" PRs on the O-90004 §3 wall map.
+
+---
+
+# Addendum: the strike session (same day, second dispatch)
+
+Three sequential strikes at the remaining open core, kill-criteria set in advance, adversarial review of all new work (prior work left to the external review track per project owner's instruction).
+
+| Strike | Outcome | Files |
+|---|---|---|
+| **A — dBN flow** | Lane **closed by theorems**: no one-sided prime-side certifier exists at t>0 (divergence + truncation sign-flip + classical-wall translation); the cost of \(\Lambda\to0\) via the existing architecture is superexponential; the dynamics schema stalls at death time 0.34 even with perfect statistics. Survivor: the **Tilted Moat Lemma** (the moat deepens monotonically along the flow; the tilt is a low-pass filter). | `R-90002`, `L-90002`, `O-90005` |
+| **B — monotone/operator positivity** | **T-90002: Lemma S promoted** — z-collapse proved; WSTS is now ONE scalar per X: \(B_X=[T^s(2)]_++O^*(X^{-3/2}\log X)\). **T-90003: GFEP proved for all n>X/10** (certified gates; positivity carried by ancestry over a wholly negative diagonal — the Perron–Frobenius pattern at theorem level); Landau fence: the uniform bottom sign pattern is RH-hard; GFEP's open core is exactly n=o(X). Plus: c-monotone moat, PSD c-Gram that provably cannot manufacture zero-side positivity, PNT-calibrated ladder decrement law, cone-blindness witness, three-crossing warning for general ratios. | `T-90002` (+addendum), `T-90003`, `L-90003`, riders in `O-90002`/`O-90004`, `X-90004` |
+| **C — carry-resolvent spectral probe** | **Structure theorem**: the inverse carry matrix is exactly Möbius × elementary (no truncation error; subsumes L-32701 with closed forms for all rows); spectrum provably arithmetic-free; **no PSD/spectral realization exists** — first failure at exactly T=10 with an exact rational witness, cause ζ-blind (the pure sawtooth reproduces it to 0.6%). Carry positivity is a cone statement, not a spectral one. | `O-90006`, `X-90005` |
+
+## State of the open core after the strikes
+
+Everything now rides on **one scalar per X**: \([T^s(2)]_+\) — the one-sided ramp deficit — with the provable-positivity cone proven unable to reach it, the dBN lane closed, the spectral lane closed, averaging circular, and the elementary-ladder lane PNT-calibrated. The scalar's unconditional status equals the zero-free-strip width (T-90001 §5), by theorem. The remaining problem is the classical wall, now stated in its sharpest known elementary form, with every tried lane fenced by a theorem rather than a memory.
+
+---
+
+# Final-pass addendum (third dispatch, same day)
+
+Two thrusts at the Q4 gate and GFEP-full, each with adversarial review. **No unconditional proposal was reached; the two hinges converged.**
+
+| Thrust | Outcome | Files |
+|---|---|---|
+| **Q4 gate** | Decompiled: \(I_2=\psi_{\rm odd}(2n)-\psi_{\rm odd}(2j)-\psi_{\rm odd}(2k)\) exactly — a three-point Chebyshev fluctuation, not a Möbius window. Eventual-form gate ⇒ RH **proved** (multiplier consumer, unconditional dlVP anchor); but the gate is **strictly stronger than RH** (Montgomery-class), its "cofinally" wording is vacuous, margins decay 0.62→0.055 (small-n artifact), unconditional route closed by calibration. GPT-wave repairs verified; reserve constant corrected (6H). | `T-90004`, `X-90006`, comment on PR #350 |
+| **GFEP-full** | **Chain map proved: GFEP-full ⇒ RH via exact algebra at every step** — a second one-statement RH-sufficient hinge. **Band 2 certified: GFEP now proved for all n > X/20.** Dominance conjecture refuted with proof (deep sources ride the same transport; fence promoted to magnitude-hardness: even RH-strength majorants insufficient); conditional-reduction salvage dead on review (it would have proven "half-plane ⇒ RH"). Razor's-edge measurement: |neg|/pos margin climbs 0.156→0.948→~1.00 as n descends. PNT-tie identity with exact boundary term. | `T-90005`, `X-90004` (+certificates) |
+
+**Converged end-state:** both remaining hinges — \([T^s(2)]_+\) and GFEP at \(n=o(X)\) — are the same Möbius-tail one-sidedness at √-scale. The campaign leaves: two independent one-statement gates with fully proved exact consumers to RH, certified deterministic frontiers, and impossibility theorems covering every majorant-, transport-, spectral-, flow-, and cone-shaped attack attempted by either model family. RH remains unproved.
+
+---
+
+# The Exact Flow Gambit (fourth dispatch — the final final pass)
+
+The last unfenced proof-shape (exactness/structure rather than size) was played to completion: GFEP as flow feasibility, min-cut characterization, counting interpretation, embedded skeptic, full adversarial review (all load-bearing artifacts independently re-implemented and reproduced).
+
+**Verdict: WALL_RENAMED — unanimous across three coordinate systems, with proved bridges between them.**
+
+- `T-90006`: the certificate cone is simplicial with extreme rays exactly the exit pixels (Martin boundary); LP duals are literally \(H_{p^*}\) (to 5.6e-17); **no threshold/dyadic min-cut criterion exists** (Theorem B). The wall lives in the cut *values*: every deep cut pairs \(C_N\) at unbounded \(N\) against harmonic measure.
+- `T-90007`: the τ dictionary is **sign-universal algebra with zero arithmetic content**; positive-kernel form \(\Sigma(p)=\sum_k\mu(k)c_p(k)\), \(c_p\ge0\) everywhere tested (conjectured); and the **constraint-relative refutation**: an adversarial sign source satisfying every proved campaign constraint AND the full RH-hard bottom pattern drives \(\min_p\Sigma\) to −0.47 — a stored finite certificate making the proves-too-much detector permanent: any structural closure of GFEP-full is pre-refuted.
+- `L-90004`: counting coordinates (U = divisor-lattice primitive of w; GFEP = Möbius-signed transport-weighted chain count), the exact doubling alignment (network doubling mirrors \(\mu(2j)=-\mu(j)\)), within-row convexity closing the injective method exactly at the known frontier, and **injection impossibility proved** (two pigeonhole mechanisms, exact witnesses, margins tending to 1).
+
+**Campaign end-state:** the open core of RH, in this repository's coordinates, is per-exit positivity of a Möbius-signed transport count whose certificate cone is exactly the exit pixels, whose aggregate margin is huge, whose difficulty is pure disaggregation (bottom-of-window exits \(p\in[n,1.3n]\)), and for which every size-based, structure-based, spectral, flow, tilt, and averaging method available to either model family is excluded by theorems with certificates. RH remains unproved — and the map of why is complete.
+
+---
+
+# The Multiplicative Bootstrap (fifth dispatch — Stages 1–3, mission complete)
+
+**Stage 1 (`T-90008`):** the free-sign adversary is *erased by multiplicativity alone* — exhaustive minimization over the entire class of completely multiplicative ±1 functions (fiber-WHT, class sizes to 2^669; independently re-confirmed from scratch at fresh scales) shows **the true Möbius sign pattern is the exact global minimizer of the transported functional at every tested exit and scale** (λ-extremality — a new, precise, falsifiable conjecture with a proved single-flip mechanism and an Euler-rigidity main term). Membership unconditional (λ-slice lemma; no Siegel input); "Form A over H ⇒ RH" proved by pure instantiation; H minimal (any free tail re-breaks the functional).
+
+**Stage 2 (`T-90009`):** the **Final Deficit Theorem** — demand is per-shell polylog (telescope exact and conservative; the "induction" is a partition: zero leverage, zero circularity); supply from *any* engine consuming only {class membership, pretentious distances, telescope structure} caps at \((\log t)^{-2\kappa+o(1)}\), \(\kappa=0.3287\) optimal (Hall), because every distance coordinate caps at \(2\log\log t\) — **informational, immune to future Halász sharpenings**; inter-shell cancellation false over H (shells reinforce, correlation +1⁻, exact second-moment certificates + explicit witness); the engine reproduces the Vinogradov–Korobov record exactly, never exceeds it. Closure at level δ ⟺ μ-specific non-distance input ⟺ a width-δ zero-free strip.
+
+**Stage 3:** from-scratch hostile verification (fresh-scale exhaustive searches; deficit arithmetic 5.25-available vs 9.2-needed at 10⁶, 9.05 vs 50.0 at 10⁴⁰; kernel transfer tight; multiplicativity-consumption line located at the parity constraints, −51.99 → −17.97); all four tripwires fired and passed. **FINAL WORD: DEFICIT THEOREM FINAL.** No unconditional proposal exists; the elementary lane's residual problem is *identically* the classical zero-free-strip problem — a theorem with sharp constants in both directions — and the campaign's bequest is **λ-extremality**, the one open coordinate nobody had stated.
+

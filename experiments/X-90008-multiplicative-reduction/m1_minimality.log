@@ -1,0 +1,12 @@
+== (2000,20) K=100
+   mult head k<=50 + free tail (50,100]: min_p = -0.3488 at p=20  [BREAKS]
+   mult head k<=66 + free tail (66,100]: min_p = +0.0813 at p=20  [holds]
+   mult head k<=83 + free tail (83,100]: min_p = +0.3060 at p=20  [holds]
+== (3000,25) K=120
+   mult head k<=60 + free tail (60,120]: min_p = -0.2940 at p=25  [BREAKS]
+   mult head k<=80 + free tail (80,120]: min_p = +0.0021 at p=25  [holds]
+   mult head k<=100 + free tail (100,120]: min_p = +0.3778 at p=25  [holds]
+== (4000,15) K=266
+   mult head k<=133 + free tail (133,266]: min_p = -0.7812 at p=15  [BREAKS]
+   mult head k<=177 + free tail (177,266]: min_p = -0.1736 at p=15  [BREAKS]
+   mult head k<=221 + free tail (221,266]: min_p = +0.5597 at p=15  [holds]

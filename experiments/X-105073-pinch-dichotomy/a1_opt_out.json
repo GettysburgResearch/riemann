@@ -1,0 +1,62 @@
+{
+ "eps/c0p=0.001": {
+  "pred_sup_f/p": 1.9994998749374608,
+  "sampled_sup_f/p": 1.9873289091101167,
+  "refined_sup_f/p": 1.9994985,
+  "pred_inf_f/p": 0.0005001250625391107,
+  "sampled_inf_f/p": 0.025448260004558687,
+  "sampled_min|alpha|/p": 0.015627170447852543,
+  "note_inf": "sampled inf approaches pred from above as N grows; refined line (anti-phase coherent, f=|alpha|) attains sup exactly",
+  "sup_err": 1.3749374607917375e-06,
+  "refined_inf_f/p": 0.0005005,
+  "inf_err": 3.749374608892491e-07
+ },
+ "eps/c0p=0.1": {
+  "pred_sup_f/p": 1.9486832980505138,
+  "sampled_sup_f/p": 1.9423347344112363,
+  "refined_sup_f/p": 1.9486830000000002,
+  "pred_inf_f/p": 0.051316701949486204,
+  "sampled_inf_f/p": 0.08284700850988225,
+  "sampled_min|alpha|/p": 0.06437118074082197,
+  "note_inf": "sampled inf approaches pred from above as N grows; refined line (anti-phase coherent, f=|alpha|) attains sup exactly",
+  "sup_err": 2.980505136197193e-07,
+  "refined_inf_f/p": 0.0513172,
+  "inf_err": 4.980505137938328e-07
+ },
+ "eps/c0p=0.5": {
+  "pred_sup_f/p": 1.7071067811865475,
+  "sampled_sup_f/p": 1.7031433952085564,
+  "refined_sup_f/p": 1.7071065,
+  "pred_inf_f/p": 0.29289321881345254,
+  "sampled_inf_f/p": 0.32462810016594146,
+  "sampled_min|alpha|/p": 0.3160558819396161,
+  "note_inf": "sampled inf approaches pred from above as N grows; refined line (anti-phase coherent, f=|alpha|) attains sup exactly",
+  "sup_err": 2.8118654736921e-07,
+  "refined_inf_f/p": 0.29289370000000003,
+  "inf_err": 4.811865475161216e-07
+ },
+ "eps/c0p=0.9": {
+  "pred_sup_f/p": 1.316227766016838,
+  "sampled_sup_f/p": 1.3010765633622374,
+  "refined_sup_f/p": 1.3162275,
+  "pred_inf_f/p": 0.683772233983162,
+  "sampled_inf_f/p": 0.7213134319648207,
+  "sampled_min|alpha|/p": 0.7205078279210928,
+  "note_inf": "sampled inf approaches pred from above as N grows; refined line (anti-phase coherent, f=|alpha|) attains sup exactly",
+  "sup_err": 2.6601683791708253e-07,
+  "refined_inf_f/p": 0.6837732,
+  "inf_err": 9.660168380141758e-07
+ },
+ "eps/c0p=0.999": {
+  "pred_sup_f/p": 1.0316227766016848,
+  "sampled_sup_f/p": null,
+  "refined_sup_f/p": 1.031622,
+  "pred_inf_f/p": 0.9683772233983151,
+  "sampled_inf_f/p": null,
+  "sampled_min|alpha|/p": null,
+  "note_inf": "sampled inf approaches pred from above as N grows; refined line (anti-phase coherent, f=|alpha|) attains sup exactly",
+  "sup_err": 7.766016848014336e-07,
+  "refined_inf_f/p": 0.9683773000000001,
+  "inf_err": 7.660168499449513e-08
+ }
+}

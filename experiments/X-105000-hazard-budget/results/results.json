@@ -1,0 +1,89 @@
+{
+ "S1_ratio_monotone_derivative": "(6*sqrt(p) - 6)/(sqrt(w)*(4*sqrt(p)*sqrt(w) - 3)**2)",
+ "S1_Tzc_over_Tz_derivative_numerator": "6*sqrt(c) - 6",
+ "S1_Tzc_over_Tz_increasing_samples": true,
+ "S2_branch_submult_deficit_identity": "product - D == rp rq Rp (Rq - R_{pq|p})",
+ "S2_reduces_to_S1": true,
+ "S3_delta67_interval": "[0.09231869808764850701423438395125267849..., 0.09231869808764850701423438395125267849...]",
+ "S3_R99440_leading_coefficient": "4 C_j (1-r)/p * sqrt(Y)  [verified]",
+ "S3_causal_identity_exact": true,
+ "S4_three_quarters_threshold": "1-2/sqrt(p) > 3/4 iff p > 64; p=67 first prime",
+ "S4_deficit_positive_iff_p_ge_5": true,
+ "S4_small_prime_overshoot_const": "5/3 - 1/sqrt2 - 1/sqrt3 = 0.38220961629049337776",
+ "S5_Q_sqrt_growth": true,
+ "S5_qT_closed_form": "q_T = sqrt(p) (4 sqrt Y - 3)/(4 sqrt Y - 3 sqrt p) >= sqrt p",
+ "S5_exchange_rates": {
+  "Y=10000,p=67": {
+   "qT": 8.6553135891726,
+   "q2": 10.451272860683012,
+   "q3": 10.711012652758848,
+   "sqrt_p": 8.18535277187245
+  },
+  "Y=100000,p=67": {
+   "qT": 8.327605546978111,
+   "q2": 8.975402246601979,
+   "q3": 9.05237509464086,
+   "sqrt_p": 8.18535277187245
+  },
+  "Y=100000,p=997": {
+   "qT": 34.05036308003481,
+   "q2": 43.95534260387688,
+   "q3": 45.45876215014567,
+   "sqrt_p": 31.575306807693888
+  },
+  "Y=1000000,p=67": {
+   "qT": 8.229736227977638,
+   "q2": 8.475473396866533,
+   "q3": 8.502339044976665,
+   "sqrt_p": 8.18535277187245
+  }
+ },
+ "S6_price_invariance": "price ~ 1/p under both normalizations (cocycle-invariant)",
+ "S7_budget_inequality_random_schemes": "200/200 within budget (consistency fixture: generator enforces per-block budget; the theorem is the two-line convex aggregate, proved in T-105000 A.1)",
+ "S7_native_demand_vs_budget_at_5e4": {
+  "demand_mass": 381.80026733557696,
+  "budget_mass": 872.5927558106199,
+  "feasible": true
+ },
+ "S8_unit_crossing_bracket": {
+  "Pi_below_1_at": 578906,
+  "Pi_above_1_at": 584375,
+  "Pi(a)_interval": "[0.99972388815056860063691073127594032, 0.99972388815056860063691073594984258]",
+  "Pi(b)_interval": "[1.0005267114848812058460280221791829, 1.0005267114848812058460280270101671]",
+  "certified": "interval arithmetic (mpmath.iv), Pi_T strictly increasing => unique crossing in bracket"
+ },
+ "S8_sum_inv_p_at_bracket": {
+  "at_a": 1.1331567887577836,
+  "at_b": 1.1338565681912105
+ },
+ "S9_weight_bound_identity": "sqrt(Z/Y) T(Y) - T(Z) = 3(1 - sqrt(Z/Y)) >= 0",
+ "S9_price_forms_Y=10000": {
+  "Pi_T": 0.5906711384266897,
+  "Pi_Q2": 0.34855571765216403,
+  "sum_1_over_p": 0.7692029105241387
+ },
+ "S9_price_forms_Y=100000": {
+  "Pi_T": 0.8385272544028635,
+  "Pi_Q2": 0.6028343054643911,
+  "sum_1_over_p": 0.9914151423378422
+ },
+ "S9_price_forms_Y=400000": {
+  "Pi_T": 0.9676166917971473,
+  "Pi_Q2": null,
+  "sum_1_over_p": 1.104943245786676
+ },
+ "S10_knot_identifiability": "5x5 triangular system uniquely recovers coefficients",
+ "S9b_Q2_horizon_bracket": {
+  "Pi_Q2(5e6)": 0.9817026948529312,
+  "Pi_Q2(7e6)": 1.0101387884102437,
+  "crosscheck_vs_mpf_at_1e4": 3.885780586188048e-16,
+  "note": "float64 prefix-sum evaluation; margins >> rounding error"
+ },
+ "S11_mutation_battery": {
+  "replace_r_by_2r2": true,
+  "omit_compensation_detected": true,
+  "coupling_above_cap_negative_density": true,
+  "weight_above_one_impossible": true,
+  "unswapped_child_flagged": true
+ }
+}
