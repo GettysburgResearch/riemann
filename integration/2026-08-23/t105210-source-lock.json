@@ -1,0 +1,20 @@
+{
+  "schema": "riemann.t105210.source-lock.v1",
+  "base_main_sha": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "anthropic": {
+    "repository": "anthropics/zeta-23-lean",
+    "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+    "theorem_file": "Zeta23/ThmD/Final.lean"
+  },
+  "record_extension": {
+    "repository": "ainta/zeta-simple-zeros",
+    "commit": "040c5e899e658aed7b56a2a87f501798fe10761d",
+    "proof": "docs/proof.md",
+    "seven_certificate": "certificates/seven-point.txt",
+    "seven_certificate_sha": "02f939f071c7fdbcb21b8991e170ef7fc301b19c",
+    "verifier": "src/zeta_simple_zeros/verify_seven.py",
+    "paper_tex_sha": "fed199bb7e641c718ac1f33d5e885c0b412d5080"
+  },
+  "heavy_arb_replayed_in_packet": false,
+  "rh_established": false
+}

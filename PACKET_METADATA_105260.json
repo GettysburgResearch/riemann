@@ -1,0 +1,19 @@
+{
+  "base_commit": "d84b0ebe217076c73d0026e26b8759fabff5acec",
+  "base_pr": 731,
+  "claims": ["L-105260", "L-105261", "L-105262", "R-105260", "T-105260"],
+  "density_one_established": false,
+  "edgeflux105260_proved": false,
+  "hardy_polarization_budget_proved": true,
+  "ninety_percent_established": false,
+  "physical_half_order_retained": true,
+  "related_heads": {
+    "pr726": "f043af99f606c29ef65eb13242cecb0c11c02162",
+    "pr728": "bfe884d0e6491bf1998b06b2e380ce9c36d67f78",
+    "pr742": "5088669fbd46ad76186df66e43b6715c9c732b81"
+  },
+  "rh_established": false,
+  "schema": "riemann.packet.t105260.v1",
+  "status": "PROVED_EXACT_REDUCTION_MODEL_BOUND_EDGE_FLUX_OPEN",
+  "title": "One-sided Toeplitz-Hankel polarization budget and strict-bandwidth 90% cut"
+}

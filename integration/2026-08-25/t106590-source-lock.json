@@ -1,0 +1,57 @@
+{
+  "schema": "riemann.t106590.source-lock.v2",
+  "created_utc": "2026-08-25",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "integrated_base": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "parent_checkpoint": {
+    "pull_request": 731,
+    "head_before_packet": "78326866c47749d947c752800890a688b8c14acd",
+    "claims": [
+      "L-106500",
+      "L-106501",
+      "L-106512",
+      "L-106514",
+      "T-106540",
+      "T-106550"
+    ]
+  },
+  "external_analytic_source": {
+    "author": "Aleksander Simonic",
+    "title": "Explicit zero density estimate for the Riemann zeta-function near the critical line",
+    "arxiv": "1910.08274",
+    "consumed_statement": "Selberg N(sigma,T) << T^(1-(sigma-1/2)/4) log T, uniformly for 1/2 <= sigma <= 1"
+  },
+  "principal_remote_commits": [
+    "1415996912e0093d19e8a2734021afa0520f32fb",
+    "521a57b48de0d9257ddffb54f767b2e72b08a064",
+    "8070fc80c0a11a569e303c46f806a1b8c8bfbd47",
+    "6dc4fee06d2c2c1c31b973c615064d8e858fed20",
+    "c7133d96952cfc8ac06243218792616467284832",
+    "630d373b87c5005b78cc25ccf966c48ce221bdc3",
+    "7b5877890dc504be76578a086feda12320c4e337"
+  ],
+  "claims": [
+    "L-106591",
+    "T-106590"
+  ],
+  "replay": {
+    "classification": "PASS_T106590_HEIGHT_TO_SHALLOW_CORRELATION_REDUCTION",
+    "proof_object_sha256": "3c3de8798e04d4e033cd32bc8aacd15dfb4bd1fb2ed6dafb98a4a26a1d2e8bcb",
+    "analytic_selberg_replayed": false,
+    "analytic_rouche_replayed": false
+  },
+  "status": {
+    "selberg_horizontal_first_moment_proved": true,
+    "window_adapted_companion_height_budget": "3/4000",
+    "deep_model_space_charge_paid_by_height": true,
+    "endloc106590_proved": true,
+    "ninety_eta": "1/100",
+    "ninety_deep_budget": "3/40",
+    "shallowcorr106591_threshold": "11/500",
+    "shallowcorr106591_proved": false,
+    "ninety_percent_established": false,
+    "density_one_established": false,
+    "rh_established": false
+  }
+}

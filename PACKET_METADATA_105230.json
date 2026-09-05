@@ -1,0 +1,20 @@
+{
+  "schema": "riemann.packet.t105230.v1",
+  "title": "Companion-corona square flux and half-plane index budget",
+  "status": "PROPOSED_REVIEWABLE_MATHEMATICS",
+  "base_commit": "e716a7993131c923866c2577d088f252747d17d7",
+  "claims": [
+    "L-105230",
+    "L-105231",
+    "R-105230",
+    "T-105230"
+  ],
+  "dependency": {
+    "pr720_hermite_biehler_index": "10bba584c01277e880aaa21e1fea09f396ca7246"
+  },
+  "arbitrary_interpolation_removed": true,
+  "companion_boundary_budget_proved": false,
+  "ninety_percent_established": false,
+  "density_one_established": false,
+  "rh_established": false
+}

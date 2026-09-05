@@ -1,0 +1,42 @@
+{
+  "schema": "riemann.t106440.source-lock.v1",
+  "created_utc": "2026-08-25",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "integrated_base": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "dependencies": [
+    {
+      "local_packet": "T-106430",
+      "claims": ["L-106400", "L-106401", "L-106413", "T-106430"]
+    },
+    {
+      "external_classical": "Conrey fixed-order Xi-derivative line proportion",
+      "claim": "R_4/N > 2487/2500-o(1)"
+    }
+  ],
+  "claims": [
+    "L-106440",
+    "L-106441",
+    "L-106442",
+    "L-106443",
+    "L-106444",
+    "T-106440"
+  ],
+  "replay": {
+    "path": "experiments/X-106440-even-endpoint/verify.py",
+    "retained_result_committed": false,
+    "scope": "finite exact algebra and rational constant ledger only"
+  },
+  "status": {
+    "even_endpoint_telescope_proved": true,
+    "actual_xi_even_endpoint_source_proved": true,
+    "four_channel_bound": "1596808/1568239201",
+    "four_channel_below_one_over_982": true,
+    "signed_tail_residue_gram_proved": true,
+    "endpoint_barycenter_proved": true,
+    "evenst106440_proved": false,
+    "ninety_percent_established": false,
+    "density_one_established": false,
+    "rh_established": false
+  }
+}

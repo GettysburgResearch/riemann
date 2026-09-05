@@ -1,0 +1,46 @@
+{
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "claims": [
+    "L-106600",
+    "L-106601",
+    "L-106602",
+    "L-106603",
+    "R-106600",
+    "T-106600"
+  ],
+  "created_utc": "2026-08-26",
+  "dependencies": [
+    {
+      "claim": "T-106590/L-106591",
+      "use": "closed cofinal endpoint height budget and fixed shallow split"
+    },
+    {
+      "claim": "L-106500/L-106514",
+      "use": "positive fifth Wronskian source and exact oriented phase-angle charge"
+    },
+    {
+      "claim": "pinned R_5/N>997/1000-o(1)",
+      "use": "unconditional fifth-derivative entry proportion"
+    }
+  ],
+  "parent_head_before_packet": "aa0ede74edb2d3cb209403cd5a3c732da8ce06be",
+  "replay": {
+    "classification": "PASS_T106600_ADAPTIVE_SCALE_ENDPOINT",
+    "exact_checks": 1320,
+    "proof_object_sha256": "52e309a7b2344bcda4a2ad23e66316ac329d44ef9a637e40cff0dfe8c24c14e6"
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t106600.source-lock.v1",
+  "status": {
+    "adaptive_endpoint_index_proved": true,
+    "adaptive_shallow_gate_proved": false,
+    "adaptive_shallow_threshold": "11/500",
+    "deep_height_payment": "3/40",
+    "density_one_established": false,
+    "monochromatic_reduced_charge": "0",
+    "ninety_percent_established": false,
+    "positive_scale_homotopy_proved": true,
+    "rh_established": false,
+    "variable_scale_height_budget": "3/4000"
+  }
+}

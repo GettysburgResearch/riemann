@@ -1,0 +1,24 @@
+{
+  "schema": "riemann.packet.t105210.v1",
+  "title": "67.3008527927% simple critical-line zeros and multilevel reverse-Rolle descent gates",
+  "status": "PROPOSED_REVIEWABLE_IMPORT_AND_NEW_EXACT_REDUCTION",
+  "base_main_sha": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "external_record_source": {
+    "repository": "ainta/zeta-simple-zeros",
+    "commit": "040c5e899e658aed7b56a2a87f501798fe10761d",
+    "license": "MIT",
+    "claimed_bound": "0.6730085279277797613..."
+  },
+  "anthropic_source": {
+    "repository": "anthropics/zeta-23-lean",
+    "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+    "baseline": "H0 = 3/2 - cot(1/sqrt(2))/sqrt(2)"
+  },
+  "new_claims": [
+    "L-105220",
+    "T-105220",
+    "R-105210"
+  ],
+  "external_heavy_arb_replayed_in_this_packet": false,
+  "rh_established": false
+}

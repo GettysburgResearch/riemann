@@ -1,0 +1,46 @@
+{
+  "schema": "riemann.t106400.source-lock.v1",
+  "created_utc": "2026-08-24",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "parent_head_before_packet": "50cf8ef3419b88c33b11de4b538192c5ad6a36e9",
+  "integrated_base": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "dependencies": [
+    {
+      "pull_request": 726,
+      "head_observed": "e8e6d85221a9a85fb2a5f82a1807802f89b06b7b",
+      "uses": [
+        "finite-window Xi companion and Hardy-bank context",
+        "pinned fixed-order Xi derivative inputs"
+      ]
+    },
+    {
+      "pull_request": 751,
+      "head_observed": "8f5a45a02a7d531eeeb4a4a920bf5b08be7f89dc",
+      "uses": [
+        "comparison-only owner-conductor and square-phase context"
+      ]
+    }
+  ],
+  "claims": [
+    "L-106400",
+    "L-106401",
+    "L-106402",
+    "T-106400"
+  ],
+  "replay": {
+    "classification": "PASS_T106400_XI_ENDPOINT_FRAME_ALGEBRA",
+    "proof_object_sha256": "4531334872fadf4d7f70cc787c91319077782305d5ac66011884d66ca35094b2"
+  },
+  "status": {
+    "endpoint_companion_telescope_proved": true,
+    "denominator_cancellation_proved": true,
+    "xi_exterior_square_density_proved": true,
+    "xi_turan_hankel_source_identified": true,
+    "frobenius_quantile_absorption_proved": true,
+    "robustframe106400_proved": false,
+    "ninety_percent_established": false,
+    "density_one_established": false,
+    "rh_established": false
+  }
+}
