@@ -1,0 +1,6 @@
+# Takes effect as an approval requirement only after owners enable branch rules.
+# Core members can approve integration; contributors can still review any PR.
+* @GettysburgResearch/polymath-integrators @GettysburgResearch/owners
+
+# Owners review workflow, access-template, and ownership changes.
+/.github/ @GettysburgResearch/owners

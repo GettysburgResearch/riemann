@@ -2,6 +2,17 @@
 
 This repository supports free exploration and exact mathematical integration. RH remains unsolved.
 
+## Join and start
+
+1. Read the [scientific status and route map](README.md), then choose a question that interests you. Check overlapping issues and PRs; coordination is useful, but you do not need permission to explore a new direction.
+2. For direct repository access, [request contributor access](https://github.com/GettysburgResearch/riemann/issues/new?template=contributor-access.md) with your GitHub username and the project you want to work on. While the repository is private, ask the maintainer who invited you instead. An owner or authorized team maintainer adds you to `polymath-contributors`; accept any GitHub invitation. No email address, biography, or research proposal is required in the issue.
+3. Work on your own branch and open a PR. Contributors have Write access to the project repository. Leave `main`, other people's branches, and frozen research records to the integration process. Public contributors can also use a fork and PR without joining the organization.
+4. Give your contribution the short status header below and identify the question it advances. A useful counterexample, review, or precise obstruction is a contribution. You do not need a claimed proof of RH.
+
+Using ChatGPT from a phone? Follow [the phone tutorial](docs/PHONE.md). Research agents should read [AGENTS.md](AGENTS.md). For reviewing someone else's work or requesting acceptance of a result, use [the review guide](docs/REVIEWING.md).
+
+Use public-safe material: do not commit credentials, private chat transcripts, personal contact details, or local configuration containing secrets. Credit contributors by their chosen public name or GitHub username. Ordinary scholarly citations are welcome.
+
 ## Exploratory work is lightweight
 
 Open broad or unconventional research PRs freely. They may contain conjectures, reconnaissance, synthetic models, failed attempts, literature connections, or prototype code.
