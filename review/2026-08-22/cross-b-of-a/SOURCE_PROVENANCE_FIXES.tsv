@@ -1,0 +1,10 @@
+fix_id	artifact	semantic_id	reviewer_a_value	corrected_value	exact_evidence	severity	integration_action
+P-SHA-001	CLAIMS.tsv	CONSUMER.MELLIN.ZERO_SAFE_BOX	928fd615d753882706bb88c51b717bd8d4a86ba	e928fd615d753882706bb88c51b717bd8d4a86ba	PR #653 exact head and sibling rows.	BLOCKING	Correct before merge.
+P-PATH-001	CLAIMS.tsv	CONSUMER.MELLIN.ANNULAR_ROWS23	claims/lemmas/L-96010-two-row-annular-mellin-landau.md	L-96010-fixed-annular-row-reciprocal-zeta-mellin-transform.md + L-96011-exact-two-row-open-strip-noncancellation.md	PR #547 exact changed-file list.	BLOCKING	Split transform/noncancellation provenance.
+P-CLAIMID-001	CLAIMS.tsv	ARITH.WAVELET.MINIMAL_ANNIHILATOR	T99910 on multi-result standalone PROOF.md	path-unique canonical theorem or section anchor	Standalone packet contains several results.	MEDIUM	Assign one semantic theorem per locator.
+P-ALIAS-001	ALIASES.tsv	ARITH.WAVELET.MINIMAL_RATIO8	ID absent from CLAIMS	map to MINIMAL_ANNIHILATOR + RATIO8_FACTOR67	Referential closure against 68 claim IDs.	HIGH	Repair alias schema.
+P-ALIAS-002	ALIASES.tsv	ARITH.DICKMAN.HEREDITARY	ID absent from CLAIMS	map to ARITH.DICKMAN.HEREDITARY_BELLMAN	Referential closure.	HIGH	Repair alias schema.
+P-ALIAS-003	ALIASES.tsv	ARITH.DOUBLE_OWNER.COBBOUNDARY	ID absent from CLAIMS	map to ARITH.OWNER.MIXED_COBOUNDARY	Referential closure.	HIGH	Repair alias schema.
+P-LOCAL-001	COMPUTATIONS.tsv	COMP.REVIEW.LIGHT_REPLAY	source_pr=review; blank SHA	source_kind=review_local; source_head_sha=55fe0b6f23d9163e2b602608da84194ba243d7c4	Exact PR #709 head.	MEDIUM	Type review-local records separately.
+P-EDGE-001	ROUTE_EDGES.tsv	EDGE.XD.SAME_K1	component premise IDs absent	use combined SAME_K1_LPMW_BVD or add components	CLAIMS contains only combined claim.	BLOCKING	Repair before graph calculation.
+P-EDGE-002	ROUTE_EDGES.tsv	EDGE.MELLIN.ROWS23	ARITH.ROWS23.NONNEGATIVE absent	add explicit open native producer node	Consumer row states witnesses absent.	BLOCKING	Do not infer producer from consumer.
