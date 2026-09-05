@@ -1,0 +1,220 @@
+{
+  "RH_proved": false,
+  "actual_scientific_graph_replayed": false,
+  "cases": [
+    {
+      "base": "a301bb558d5a953b3659482fe6d89f19b48c0702",
+      "case": "valid_explicit",
+      "head": "72cdf0846589dc1fbc4053680eae7551a5b1ea99",
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "result": {
+        "accepted": true,
+        "all_declared_seals_match": true,
+        "all_local_objects_present": true,
+        "counts": {
+          "edges": 1,
+          "implicit_edges": 0,
+          "manifest_versions": 1,
+          "roots": 1,
+          "source_commits": 1,
+          "source_versions": 1
+        },
+        "payload_sha256": "57f8cc1b28b9f9cd9af894aa6903efeec1de04c344afecbbdb38d151cc770d4b"
+      },
+      "roundtrip_PASS_modes": 2
+    },
+    {
+      "base": "a301bb558d5a953b3659482fe6d89f19b48c0702",
+      "case": "valid_inherited",
+      "head": "871627c233a604b0b3f5e095ef3106399c56b674",
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "result": {
+        "accepted": true,
+        "all_declared_seals_match": true,
+        "all_local_objects_present": true,
+        "counts": {
+          "edges": 1,
+          "implicit_edges": 1,
+          "manifest_versions": 1,
+          "roots": 1,
+          "source_commits": 1,
+          "source_versions": 1
+        },
+        "payload_sha256": "4fdfeccf62b74483a7d5d80eb83e0dd56dff39e142c0fb70e942b7f494c9b6b8"
+      },
+      "roundtrip_PASS_modes": 2
+    },
+    {
+      "base": "a301bb558d5a953b3659482fe6d89f19b48c0702",
+      "case": "bad_blob",
+      "head": "8f66931211be787084ac0d19f2dc16dedc7cb3ce",
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "result": {
+        "accepted": false,
+        "final_exception": "ValueError: declared Git blob mismatch"
+      },
+      "roundtrip_PASS_modes": 0
+    },
+    {
+      "base": "a301bb558d5a953b3659482fe6d89f19b48c0702",
+      "case": "bad_hash",
+      "head": "a4beba91570b9173d45cda5cf77715ed730eb5a2",
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "result": {
+        "accepted": false,
+        "final_exception": "ValueError: declared LF SHA mismatch"
+      },
+      "roundtrip_PASS_modes": 0
+    },
+    {
+      "base": "a301bb558d5a953b3659482fe6d89f19b48c0702",
+      "case": "missing_target",
+      "head": "e7bcdd17321afe2ea4e321bb9e9933cc2f9b6d96",
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "result": {
+        "accepted": false,
+        "final_exception": "subprocess.CalledProcessError: "
+      },
+      "roundtrip_PASS_modes": 0
+    },
+    {
+      "base": "a301bb558d5a953b3659482fe6d89f19b48c0702",
+      "case": "duplicate_key",
+      "head": "feabe72d4371df6ff0637e1a73d97537924112cf",
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "result": {
+        "accepted": false,
+        "final_exception": "ValueError: duplicate JSON key"
+      },
+      "roundtrip_PASS_modes": 0
+    },
+    {
+      "base": "a301bb558d5a953b3659482fe6d89f19b48c0702",
+      "case": "float_primitive",
+      "head": "49d87c4b08b1ef4cc433cad729c8e80cbe21ef15",
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "result": {
+        "accepted": false,
+        "final_exception": "ValueError: noninteger JSON primitive"
+      },
+      "roundtrip_PASS_modes": 0
+    },
+    {
+      "base": "a301bb558d5a953b3659482fe6d89f19b48c0702",
+      "case": "unknown_implicit",
+      "head": "3ff4a61e0675273ce979b6014b81019683c86a92",
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "result": {
+        "accepted": false,
+        "final_exception": "ValueError: unknown implicit binding: audit-explicit-v1/sources/0"
+      },
+      "roundtrip_PASS_modes": 0
+    },
+    {
+      "base": "a301bb558d5a953b3659482fe6d89f19b48c0702",
+      "case": "zero_roots",
+      "head": "10629a1acaf742975a49e7171830d498ef31d26b",
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "result": {
+        "accepted": true,
+        "all_declared_seals_match": true,
+        "all_local_objects_present": true,
+        "counts": {
+          "edges": 0,
+          "implicit_edges": 0,
+          "manifest_versions": 0,
+          "roots": 0,
+          "source_commits": 0,
+          "source_versions": 0
+        },
+        "payload_sha256": "d4a1ee432ff6a2156a02ec9f071dda898d60db7af2a892a4360bb38bd22dea60"
+      },
+      "roundtrip_PASS_modes": 2
+    },
+    {
+      "base": "a301bb558d5a953b3659482fe6d89f19b48c0702",
+      "case": "empty_bindings",
+      "head": "655f575cfa86bb99f2522231e89c1e26d3e5231f",
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "result": {
+        "accepted": true,
+        "all_declared_seals_match": true,
+        "all_local_objects_present": true,
+        "counts": {
+          "edges": 0,
+          "implicit_edges": 0,
+          "manifest_versions": 1,
+          "roots": 1,
+          "source_commits": 0,
+          "source_versions": 0
+        },
+        "payload_sha256": "c1b776abaf9b6458204861bfef394120db903d39c2e0478fc2bb5d316fc904ff"
+      },
+      "roundtrip_PASS_modes": 2
+    },
+    {
+      "base": "a301bb558d5a953b3659482fe6d89f19b48c0702",
+      "case": "unrecognized_seal_key",
+      "head": "fdd9faff808b778a8bde9f97ac044dc94546af72",
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "result": {
+        "accepted": true,
+        "all_declared_seals_match": true,
+        "all_local_objects_present": true,
+        "counts": {
+          "edges": 0,
+          "implicit_edges": 0,
+          "manifest_versions": 1,
+          "roots": 1,
+          "source_commits": 0,
+          "source_versions": 0
+        },
+        "payload_sha256": "ed07d3a686406d982e8a6a06fb8913dc19f7fdef4db69ff47c88317a3ed5dcab"
+      },
+      "roundtrip_PASS_modes": 2
+    }
+  ],
+  "cli_mode_runs": 22,
+  "earlier_expected_count_regressions_refuted": false,
+  "fixture_cases": 11,
+  "interpretation": "Recognized-binding integrity is not root/schema completeness. Empty closures can be valid vacuous reports.",
+  "roundtrip_mode_runs": 10,
+  "schema": "C3-manifest-contract-replay-v1",
+  "source_authentication_does_not_authenticate_mathematics": true,
+  "source_git_blob": "106e1a300872c78659ba2796b7fb98e08df84ef7",
+  "source_sha256": "127313c38e918e68a36dcf3bdc0bf69f851b58f3f900da9aa65bb0ef86a7794b",
+  "status": "PASS_CONTRACT_BOUNDARY_REPRODUCTION"
+}

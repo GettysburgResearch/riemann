@@ -1,0 +1,44 @@
+{
+  "RH_proved": false,
+  "all_conductor_estimate_proved": false,
+  "child_runs": 2,
+  "complete_native_fibre_replayed": false,
+  "finite_currents": 1539,
+  "grids": [
+    {
+      "ell": 2,
+      "finite_currents": 81,
+      "rho": 2
+    },
+    {
+      "ell": 2,
+      "finite_currents": 729,
+      "rho": 3
+    },
+    {
+      "ell": 3,
+      "finite_currents": 729,
+      "rho": 2
+    }
+  ],
+  "historical_source_blob_function_executed": false,
+  "live_exact_positive": "8483904/537151",
+  "live_majorant": "8569600/537151",
+  "live_ratio": "164800/6982963",
+  "modes": [
+    "normal",
+    "optimized"
+  ],
+  "out_of_domain_control": {
+    "energy_formula_returned": "1",
+    "mathematical_counterexample": false,
+    "projection_rejected": true
+  },
+  "retained_json_git_blob": "7bef7e8cf814920d81603aee7654d5ae3da8bc47",
+  "retained_json_reproduced": true,
+  "retained_json_sha256": "10fba5ab071a93aa8b4fdb5d11ee14f98aba8f801bb82827d69897a872f22499",
+  "schema": "C3-majorant-replay-v1",
+  "source_git_blob": "77ebc43f92ff21413bd56cda15522f2665825d9f",
+  "source_sha256": "f667eaf9fa4c839e15025c906cd8e95c2611b4afb97e1ef11086152bd51361c0",
+  "status": "PASS_BOUNDED_MAJORANT_ALGEBRA"
+}
