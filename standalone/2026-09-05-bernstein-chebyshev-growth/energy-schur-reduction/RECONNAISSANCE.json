@@ -1,0 +1,108 @@
+{
+  "actual_full_window_sign_certified": false,
+  "classification": "NON_CERTIFYING_FLOATING_RECONNAISSANCE",
+  "proof_dependency": false,
+  "results": [
+    {
+      "dimension": 104,
+      "generalized_residual_ratio": 1.117258656695677,
+      "grid": 256,
+      "positive_trial_rank": 0,
+      "refined_lower_min_eigenvalue": -2.9879414622380232e-05,
+      "residual_bound_min_eigenvalue": -6.568334414021357e-05,
+      "residual_trace": 6.890299387451814e-05,
+      "upper_matrix_min_eigenvalue": 3.3761747546159836e-10,
+      "wall_seconds": 0.101
+    },
+    {
+      "dimension": 104,
+      "generalized_residual_ratio": 1.5385040291449394,
+      "grid": 512,
+      "positive_trial_rank": 0,
+      "refined_lower_min_eigenvalue": -4.761571772489227e-05,
+      "residual_bound_min_eigenvalue": -9.333722925141628e-05,
+      "residual_trace": 8.743719774556046e-05,
+      "upper_matrix_min_eigenvalue": 4.993766086900257e-10,
+      "wall_seconds": 0.3
+    },
+    {
+      "dimension": 104,
+      "generalized_residual_ratio": 1.6946134314670336,
+      "grid": 1024,
+      "positive_trial_rank": 0,
+      "refined_lower_min_eigenvalue": -5.373608533203619e-05,
+      "residual_bound_min_eigenvalue": -0.0001029548612517435,
+      "residual_trace": 9.385764554172445e-05,
+      "upper_matrix_min_eigenvalue": 5.140353265641659e-10,
+      "wall_seconds": 0.729
+    },
+    {
+      "dimension": 104,
+      "generalized_residual_ratio": 1.365107659057828,
+      "grid": 1024,
+      "positive_trial_rank": 32,
+      "refined_lower_min_eigenvalue": -2.8797449529387485e-05,
+      "residual_bound_min_eigenvalue": -5.8751145338533337e-05,
+      "residual_trace": 6.305185402040011e-05,
+      "upper_matrix_min_eigenvalue": 5.107537053153753e-10,
+      "wall_seconds": 0.754
+    },
+    {
+      "dimension": 104,
+      "generalized_residual_ratio": 0.8477943521726194,
+      "grid": 1024,
+      "positive_trial_rank": 128,
+      "refined_lower_min_eigenvalue": -7.899329551119373e-06,
+      "residual_bound_min_eigenvalue": -2.2088457567352344e-05,
+      "residual_trace": 3.3864840348373834e-05,
+      "upper_matrix_min_eigenvalue": 5.065283945923892e-10,
+      "wall_seconds": 0.799
+    },
+    {
+      "dimension": 104,
+      "generalized_residual_ratio": 0.4354274649298892,
+      "grid": 1024,
+      "positive_trial_rank": 384,
+      "refined_lower_min_eigenvalue": 4.3146910211428423e-10,
+      "residual_bound_min_eigenvalue": -3.3883504113157707e-06,
+      "residual_trace": 1.5260310735354673e-05,
+      "upper_matrix_min_eigenvalue": 5.042138066157259e-10,
+      "wall_seconds": 0.915
+    },
+    {
+      "dimension": 104,
+      "generalized_residual_ratio": 0.385696226456357,
+      "grid": 1024,
+      "positive_trial_rank": 704,
+      "refined_lower_min_eigenvalue": 4.590958024496689e-10,
+      "residual_bound_min_eigenvalue": -1.463603330594945e-06,
+      "residual_trace": 1.142355638886549e-05,
+      "upper_matrix_min_eigenvalue": 5.039813689076253e-10,
+      "wall_seconds": 1.198
+    },
+    {
+      "dimension": 104,
+      "generalized_residual_ratio": 0.3841392453797443,
+      "grid": 1024,
+      "positive_trial_rank": 880,
+      "refined_lower_min_eigenvalue": 4.5974725379090794e-10,
+      "residual_bound_min_eigenvalue": -1.4047786376141427e-06,
+      "residual_trace": 1.1295082678439998e-05,
+      "upper_matrix_min_eigenvalue": 5.039740658972046e-10,
+      "wall_seconds": 1.532
+    }
+  ],
+  "software": {
+    "mpmath": "1.3.0",
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "scipy": "1.17.0"
+  },
+  "source_P2_50_digit_input": "0.56996099309453280639986436001973000240348228080693",
+  "warnings": [
+    "No interval arithmetic.",
+    "No analytic discretization remainder.",
+    "Sampled constraints are not exact continuum constraints.",
+    "This is not an actual Schur matrix or a theorem about its sign."
+  ]
+}
