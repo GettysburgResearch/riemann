@@ -1,0 +1,524 @@
+{
+  "environment": {
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "payload": {
+    "records": [
+      {
+        "data": {
+          "kind": "finite arithmetic",
+          "n": [
+            1,
+            200
+          ],
+          "primes": [
+            3,
+            5,
+            7
+          ]
+        },
+        "id": "BCHK01",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "formal_degree": 12,
+          "gamma": [
+            "1/2",
+            "-1/8",
+            "-1/8",
+            "-3/64",
+            "-3/32",
+            "3/128",
+            "-9/128",
+            "-15/2048",
+            "-7/512",
+            "45/2048",
+            "-93/2048",
+            "235/16384"
+          ]
+        },
+        "id": "BCHK02",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "auxiliary_traces": [
+            0,
+            0,
+            -2,
+            -2,
+            0
+          ],
+          "candidate_count": 3125,
+          "squarefree_count": 2500,
+          "sums": [
+            0,
+            7,
+            -18,
+            -5,
+            0
+          ]
+        },
+        "id": "BCHK03",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "groupoid_mass": "27",
+          "models": 162,
+          "orbits": 29,
+          "q": 3
+        },
+        "id": "BCHK04",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "central_signs": "opposite",
+          "deflated_determinants": [
+            -36,
+            36
+          ]
+        },
+        "id": "BCHK05",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "discriminant": 80,
+          "factor_control": "(q,a,b)=(5,0,-10)"
+        },
+        "id": "BCHK06",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "weight_multiplicities": {
+            "(1, 5)": 1,
+            "(2, 4)": 1,
+            "(3, 3)": 2,
+            "(4, 2)": 1,
+            "(5, 1)": 1
+          }
+        },
+        "id": "BCHK07",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "determinant": "77/2316",
+          "noncommuting": true
+        },
+        "id": "BCHK08",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "observations_multiply": false,
+          "tensor_quotient": "exact"
+        },
+        "id": "BCHK09",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "R_lower": "2736261/1000000",
+          "e_upper": "11743/4320",
+          "scope": "rational inequalities only"
+        },
+        "id": "BCHK10",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "Chow_numerator": "-T**7 - 17*T**6 + 9*T**5 + 65*T**4 - 65*T**3 - 9*T**2 + 17*T + 1",
+          "ambient_first_coefficients": [
+            1,
+            0,
+            -162,
+            1720,
+            -9234,
+            30456,
+            -61370
+          ]
+        },
+        "id": "BCHK11",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "A": [
+            2,
+            3,
+            5
+          ],
+          "B": [
+            1,
+            -1
+          ],
+          "C": [
+            1
+          ],
+          "actual_degree": 2,
+          "generic_prediction_degree": 3,
+          "numerator": "31*T**2 + 1"
+        },
+        "id": "BCHK12",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "R": 2,
+          "a": 0,
+          "discriminant": 16,
+          "m": 6,
+          "spectrum_polynomial": "z^2-4",
+          "threshold": 5
+        },
+        "id": "BCHK13",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "convention": "dh+hd=1-ip",
+          "correct_arity2": -1,
+          "printed_arity2": 1
+        },
+        "id": "BCHK14",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "Delta3": 0,
+          "claim": "components alone do not determine higher pages",
+          "correction": "x-y",
+          "d3_on_x": "-b"
+        },
+        "id": "BCHK15",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "degree6_dimensions": {
+            "3": 357,
+            "4": 79407,
+            "5": 152796,
+            "6": 12376
+          },
+          "master_module_dimension": 1000,
+          "slots": {
+            "1": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                1,
+                0,
+                2
+              ],
+              [
+                1,
+                2,
+                1,
+                3
+              ],
+              [
+                2,
+                4,
+                2,
+                5
+              ],
+              [
+                3,
+                5,
+                3,
+                6
+              ],
+              [
+                3,
+                6,
+                3,
+                7
+              ]
+            ],
+            "2": [
+              [
+                0,
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                1,
+                1,
+                3
+              ],
+              [
+                1,
+                2,
+                2,
+                4
+              ],
+              [
+                1,
+                3,
+                2,
+                5
+              ],
+              [
+                2,
+                4,
+                3,
+                6
+              ],
+              [
+                2,
+                5,
+                3,
+                7
+              ]
+            ],
+            "3": [
+              [
+                0,
+                1,
+                2,
+                4
+              ],
+              [
+                0,
+                2,
+                2,
+                5
+              ],
+              [
+                1,
+                2,
+                3,
+                5
+              ],
+              [
+                1,
+                3,
+                3,
+                6
+              ]
+            ],
+            "4": [
+              [
+                0,
+                1,
+                3,
+                5
+              ],
+              [
+                0,
+                2,
+                3,
+                6
+              ]
+            ],
+            "5": []
+          }
+        },
+        "id": "BCHK16",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "first_resonance": "1/16",
+          "g": [
+            "1",
+            "3/2 - 24*t",
+            "288*t**2 - 54*t + 4/3",
+            "-2304*t**3 + 864*t**2 - 209*t/3 + 7/4",
+            "13824*t**4 - 8640*t**3 + 1450*t**2 - 185*t/2 + 6/5",
+            "-331776*t**5/5 + 62208*t**4 - 17808*t**3 + 2151*t**2 - 86429*t/900 + 2"
+          ],
+          "native_limit_certified": false
+        },
+        "id": "BCHK17",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "A_Jr_over_A_Js": "29512665430652752148753480226197736314359272517043832886063884637676943433478020332709411004889/254629497041810760783555711051172270131433549208242031329517556169297662470417088272924672",
+          "J": 10,
+          "claimed_decay_possible": false,
+          "k": 100,
+          "r": 2,
+          "s": 1
+        },
+        "id": "BCHK18",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "distance": "(sqrt(10)-3)/2",
+          "forbidden_mean": [
+            "1/2",
+            "1/4",
+            "1/2"
+          ],
+          "gap": "1/4"
+        },
+        "id": "BCHK19",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "PH_upper": "1240161/500000000000",
+          "conditional_lower_Gram": "1/48000000",
+          "nu0_upper": 116,
+          "upstream_Gram_rerun": false
+        },
+        "id": "BCHK20",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "conjugation": "negative Fourier indices equivalent",
+          "convolution": [
+            3,
+            -1,
+            -7,
+            5,
+            12
+          ],
+          "group_order": 5
+        },
+        "id": "BCHK21",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "bilateral_value_over_d": -660,
+          "history_norm": 26,
+          "history_sum": -2,
+          "mean_fraction": "1/65"
+        },
+        "id": "BCHK22",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "charpoly_coefficients": [
+            1,
+            0,
+            -69,
+            0,
+            2208,
+            -46,
+            -43516,
+            2714,
+            591514,
+            -73554,
+            -5883377,
+            1214538,
+            44308281,
+            -13662184,
+            -257707318,
+            110865934,
+            1168749853,
+            -670079332,
+            -4135964144,
+            3068672052,
+            11315734925,
+            -10717772208,
+            -23371209282,
+            28466884348,
+            34549468147,
+            -56739540880,
+            -31643680646,
+            82542003618,
+            6780447104,
+            -83077249176,
+            25058197780,
+            51515420010,
+            -36020715955,
+            -13178895028,
+            21583822541,
+            -3949986926,
+            -4936463090,
+            2965519076,
+            -234147613,
+            -352696260,
+            164836239,
+            -34548254,
+            3753508,
+            -174708,
+            -1058,
+            230,
+            3
+          ],
+          "eigenvalues_above_cutoff": 1,
+          "n": 23,
+          "new_cutoff": "7071/2500",
+          "old_cutoff_sufficient": false
+        },
+        "id": "BCHK23",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "pointwise_asymptotic": false,
+          "ratio_lower_bound": "(56/11)*m^3",
+          "sequence": "t_m=16*m^2+m^-6, odd m"
+        },
+        "id": "BCHK24",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "Toeplitz_minor": -1,
+          "X": "1+u+2u^2",
+          "spectral_positivity_implies_coefficient_TP": false
+        },
+        "id": "BCHK25",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "Galerkin_S_direction": "decreasing from above",
+          "Hilbert_representative": "(1,1,...) not ell2",
+          "a_j": "4^-j",
+          "b_j": "4^-j",
+          "energy_Riesz_norm2": "1/3",
+          "unbounded_control_b_j": "2^-j"
+        },
+        "id": "BCHK26",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "25_digit_shortening": "1.000000000000000000000000",
+          "actual_Epstein_winding_rerun": false,
+          "exact_upper": "2500000000000000000000001/2500000000000000000000000",
+          "is_upper_bound": false
+        },
+        "id": "BCHK27",
+        "status": "PASS"
+      },
+      {
+        "data": {
+          "actual_slope_polynomial": "lambda^2-3*lambda-8",
+          "defined_associated": "1-3*lambda-8*lambda^2",
+          "multiplicity_argument_repairable": true
+        },
+        "id": "BCHK28",
+        "status": "PASS"
+      }
+    ],
+    "schema": "reviewer-B-independent-checks-v1",
+    "scope": "28 named bounded reconstructions; no upstream full-suite or interval walk replay"
+  },
+  "payload_sha256": "6ea89cfe8d639844822457cfe14fd7be53fdda531863564d9b624d811ec7d036",
+  "script_sha256": "3565d7ef745e73be77b3fd66c0a1825aef9dd2a2de01b9124c215187d9214c13"
+}

@@ -1,15 +1,30 @@
-# Reviewer B coordination — post-August-22 review
+# Reviewer B coordination — independent first-pass handoff
 
-Status: REVIEW IN PROGRESS; no source theorem promoted by this file.
-Review base: main@8d16f8d9c475db290bc85e53d775b93b9bcdb336.
-Previous scientific release: integration/2026-08-22, research census through PR #707.
+Status: FIRST-PASS REPORT COMPLETE, with claim-level scope and explicit omissions.
+Baseline: main@8d16f8d9c475db290bc85e53d775b93b9bcdb336.
+Previous scientific release: integration/2026-08-22, through PR #707.
+Review PR: https://github.com/GettysburgResearch/riemann/pull/796
 
-B owns programme #736–#741, #763 and #764 scientific objects: L-family detector/twist/trace interfaces, function-field hypotheses, atlas classifications, source-faithfulness, recurrence/Segre/representation identities and generalized arithmetic constructions. B is tracing execution and successor PRs, including closed packets.
+B owns programmes #736–#741, #763 and #764 scientific source objects:
+L-family/twist/trace interfaces, function-field scope, native source and
+observation, recurrence/Segre/Chow, and cusp/Hecke/Poincare mathematics.
+A remains primary for actual-Xi/Hardy/Pick and final RH-facing consumers,
+including such material housed in #765/#783. B's #783 cusp and #770 native
+reviews are independent of A's unpublished work.
 
-A should be primary on actual-Xi analytic/Hardy/Pick claims, raw-innerness/RH equivalence, and final number-field RH-facing consumers, including those physically housed in #765/#783. B is primary on #783 cusp/Hecke/Poincare and divisor-renewal statements and on #770 native source/observation objects. Shared transfers will have explicit edge rows with A/B responsibility; there is no implied independent acceptance from an author assertion.
+The user's later coordination instruction supersedes the earlier request to
+wait for a shared census. B has supplied its own exact freezes, inspected
+file/claim ledger, verdicts, omissions and programme/extraction map. All
+outstanding A/C scientific dispositions are pending integrator reconciliation,
+not failed reviews or accepted claims. Cross-review questions appear in
+PROGRAMMES_AND_EXTRACTION.md; no response is required for this publication.
 
-This conversation previously authored #790. B will not count that work, or its descendants, as independently reviewed here. B will flag other synthesis authorship overlap whenever it cannot establish independence.
+This conversation previously authored #790. B supplies no independent
+acceptance of that packet or its descendants. Same-account authorship of
+other source syntheses is not an authenticated independent-agent census.
 
-Shared exact-SHA census: no new census location was supplied in the task. Initial default-branch, recent-PR and branch-name searches did not locate a post-August-22 census. B will preserve a provisional exact-SHA source ledger and reconcile to a shared census if it becomes available before this review freezes. A/census owner: please leave the exact census commit/path and any primary-review overlap on this PR. An unreconciled census will be an explicit coverage omission, not silently called complete.
-
-Final requested deliverables: REPORT.md, CLAIMS.tsv, EDGES.tsv and PROGRAMMES_AND_EXTRACTION.md in reviews/B/. No main, canonical, integrated, source-branch or formal-library changes are authorized by this review.
+Read REPORT.md, CLAIMS.tsv, EDGES.tsv and PROGRAMMES_AND_EXTRACTION.md.
+SOURCES.tsv and FILES.tsv bind the selected versions; checks.py and its two
+result files record B's bounded executions. The prior partial-package upload
+is preserved in branch history. Only this review branch is modified; no
+main, source branch, canonical claim registry or formal library is changed.

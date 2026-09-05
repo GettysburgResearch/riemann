@@ -1,13 +1,49 @@
-from_claim	to_claim_or_handoff	edge_type	proof_level_reason
-B-006	B-008	REFINES	K-polynomial and recurrence conventions must match before alternant extraction.
-B-007	B-008	SUPPORTS	Degree law must use the same noncanceled denominator and specialization assumptions.
-B-009	B-010	DOES_NOT_UPGRADE	Finite torsion converse and multiplicity atlas do not discharge all transversality or even-boundary hypotheses.
-B-006	B-012	SOURCE_OBJECT	Ambient Segre ring must be distinguished from the Chow base used to form B.
-B-013	B-012	NONFORMALITY_EVIDENCE	A well-defined surjective d2 would refute a zero-higher-differential model; finite replay still pending.
-B-012	B-014	DEFINES_COMPLEX	The transferred grading determines the degree-six groups; Euler data alone do not determine both modules.
-B-008	B-015	SUPERSESSION_SCOPE	Simple linear pattern and all-depth head rule are different assertions; later return forbids termination inference.
-B-012	B-016	DOES_NOT_SUPPLY_MARKED_ACTION	Abstract contraction or unique representation line does not compute marked source projection.
-B-017	B-018	PARALLEL_NOT_IDENTICAL	Hecke selected subspace and Gram-dual coefficient-flag source require separate metric and uniformity proofs.
-B-018	B-019	REGIME_REFINEMENT	Critical fixed-offset coupling replaces naive extension of subcritical divisor factors.
-B-020	A-PRINCIPAL-ENDPOINT	CROSS_REVIEW_PENDING	B reviews local/principal non-implication; terminal literal-RH equivalence belongs to A and integrator reconciliation.
-B-011	A-RH-CONSEQUENCES	DOES_NOT_IMPLY	Off-line Epstein zeros are not off-line zeta zeros; Euler/completion hypotheses must not be transferred.
+edge_id	source	target	kind	disposition	primary_review	reason
+BE-01	L-106000 Euler identity	principal native detector	exact source map	ACCEPT_SCOPED	B	Restore ramified Euler factor after linear recombination.
+BE-02	L-106000 finite factors	all reciprocal-L poles	analytic noncancellation	CONDITIONAL	A/B; pending integrator reconciliation	Need mother Mellin nonvanishing; finite factors alone do not suffice.
+BE-03	quartic owner-pair norm	quadratic family moment	claimed estimate	REJECT_UNQUALIFIED	B	Homogeneity mismatch; retain R-106071.
+BE-04	complete Gauss family	atomic diagonal	normalization	RETAIN_CORRECTION	B	Conductor cardinality stays in the atomic ledger; no unit weight substitution.
+BE-05	Boolean Wick square	ordinary Mellin square	source operation	CONDITIONAL_CORRECTION	B	Shared-label contractions are an explicit extra term.
+BE-06	formal Witt product	analytic disk	infinite product	ACCEPT_WITH_PROOF_DETAIL	B	Normal convergence is separate; use fixed q and conductor.
+BE-07	complete FF shell bound	stopped growing-conductor mask	uniform estimate	HOLD	B	No uniform coefficient/mask decomposition supplied by complete-shell estimate alone.
+BE-08	nonprincipal Fourier bounds	principal cell energy	individualization	REJECT_UNQUALIFIED	B	Constant-source countermodel in R-108450.
+BE-09	local Kummer tensor	native global partial Frobenius	geometric realization	OPEN	B	Weil restriction, source pushforward and mixed masks must be constructed.
+BE-10	twisted Plancherel	coupled live mask	diagonalization	REJECT_UNQUALIFIED	B	Product-source convolution diagonalization does not apply to arbitrary joint mask.
+BE-11	GL2 parity deflation	bounded excess-rank moment	arithmetic estimate	OPEN	B	Rank-one formula does not bound arithmetic ranks or their tails.
+BE-12	uniform models	affine-stack average	measure identity	ACCEPT_SCOPED	B	Only invariant functions on the declared AGL quotient.
+BE-13	uniform models	uniform coarse orbits	measure substitution	REJECT_UNQUALIFIED	B	Stabilizer weights differ.
+BE-14	normalized local coefficient shape	motivic/arithmetic realization	recognition	REJECT_UNQUALIFIED	B	Integral and polarization conditions survive normalization; arithmetic ghosts exist.
+BE-15	Segre degreewise trace	ambient K-polynomial	Euler characteristic	ACCEPT_SCOPED	B	K uses full tensor denominator and alternating Tor characters.
+BE-16	ambient K-polynomial	universal recurrence numerator	cofactor	ACCEPT_SCOPED	B	Divide the explicit complementary representation determinant.
+BE-17	universal numerator	reduced specialized numerator	gcd reduction	ACCEPT_SCOPED	B	Specialization can lower both degrees; single-alphabet deficit theorem has its own nonvanishing.
+BE-18	additive syzygy Euler class	finite natural superdeterminant	multiplicative promotion	REJECT_UNQUALIFIED	B	Additive trace is not logarithmic determinant data.
+BE-19	generic multilinear degree	every invertible specialization	specialization	REJECT_UNQUALIFIED	B	BCHK12 has degree drop without zero eigenvalues.
+BE-20	torsion first entry	all later-m persistence	quantifier extension	REJECT_UNQUALIFIED	B	m6,a0 is an exact counterexample; retain boundary exceptions.
+BE-21	associated polynomial in L-108524	actual branch slopes	blow-up	FIX_REQUIRED	B	Reverse polynomial exponents; separability still transfers.
+BE-22	Chow CM plus Tor support	global D3 exactness	homological promotion	ACCEPT_CONDITIONAL	B	Establish cover surjectivity before using Tor4 vanishing for injectivity.
+BE-23	379-term stored witness	primitive certificate acceptance	computation	HOLD_REPLAY	B/C; pending integrator reconciliation	All original residuals and complete old span must be replayed.
+BE-24	Chow Tor	ambient Tor	change of rings	ACCEPT_WITH_HIGHER_DIFFERENTIAL	B	Lambda C tensor B without transferred higher maps is false.
+BE-25	dh+hd=1-ip	printed HPL expansion	sign convention	FIX_REQUIRED	B	Use plus resolvent or reverse homotopy convention.
+BE-26	literal Delta_r	spectral-sequence d_r	filtered complex	FIX_REQUIRED	B	Zigzag corrections can yield d3 nonzero while Delta3=0.
+BE-27	degree-six Euler coefficient	individual Betti numbers	module reconstruction	REJECT_UNQUALIFIED	B	Only K51-K42=61370; master module is a lower bound.
+BE-28	theta source quotient	Mellin observation	completion	ACCEPT_SCOPED	B	Vacuum subtraction and local regularity are required.
+BE-29	locally L1 sources	tensor source	regularity	REJECT_UNQUALIFIED	B	Tensor square of |t-3/2|^-2/3 is not locally integrable.
+BE-30	source Schur quotient	period Schur quotient	operation interchange	REJECT_UNQUALIFIED	B	Averaging variance measures mismatch; endpoint subtraction cannot be ignored.
+BE-31	full coefficient Gram plus all-lift lower bound	proper theta k>=96j zeros	analytic inference	ACCEPT_CONDITIONAL	B	Use inverse Gram jj entry with all earlier constraints, then R>e.
+BE-32	theta quotient reflection/positivity	critical-line zeros	zero-location promotion	REJECT_UNQUALIFIED	B	Proper source quotients can retain off-central real pairs.
+BE-33	near-one symmetric-square comparison	selected Hecke endpoint scale	positive trace bound	ACCEPT_CONDITIONAL	B	Gamma-tail bound yields log k per normalized line; r factor remains.
+BE-34	Poincare energy saturation	PF40 full deep coupling	error propagation	HOLD	B	Pure nonconstant reserve cross needs its own row-dependent estimate.
+BE-35	absolute whitened residual	relative b_i/A_J asymptotic	precision transport	HOLD	B	Multiplication by sqrt(A_i/A_J) can erase a superpolynomial saving.
+BE-36	formal renewal system	native critical limit	asymptotic transport	HOLD	B	Correct ratio orientation and prove normalized source-error convergence.
+BE-37	g_h(tau)=0	exact finite-weight cancellation	limit to identity	REJECT_UNQUALIFIED	B	Vanishing leading term requires a second-order analysis.
+BE-38	positive Stieltjes density formula	pointwise density tail	asymptotic	REJECT_UNQUALIFIED	B	Infinitely many near-threshold spikes; use integrated tail.
+BE-39	Stieltjes limiting profile	full imaginary Perron axis	boundary limit	OPEN	B/A; pending integrator reconciliation	Compact right-half-plane convergence does not pay approach to cuts.
+BE-40	Reynolds average of paths	single attainable path	source realizability	REJECT_UNQUALIFIED	B	Nonlinear moment inequality excludes the averaged moment triple.
+BE-41	old selected minor degeneration	full observation nonfaithfulness	coordinate restriction	REJECT_UNQUALIFIED	B	A singular selected row set does not refute an injective full observation.
+BE-42	original infinite Gram plus positive tail and finite prefix	all H>=450 faithfulness	certificate composition	ACCEPT_CONDITIONAL	B/C; pending integrator reconciliation	Original measure and all aliases retained; directed Gram/prefix executions remain separate inputs.
+BE-43	finite source faithfulness	retained-gamma/all-prime decoder	global source transport	OPEN	A/B; pending integrator reconciliation	Twenty fixed-prime coordinates are not the complete conclusion-facing decoder.
+BE-44	Epstein interval boxes	proved contour winding	directed rounding	HOLD	B/C; pending integrator reconciliation	Every conversion and error bound must preserve outwardness.
+BE-45	Dickman/PNT line-one correction	subcritical uniform L2 bounds	analytic extension	OPEN	A/B; pending integrator reconciliation	The exponential tilt destroys the separate Young estimate below one.
+BE-46	corrected product locally bounded on Re(s)>1/2	RH	final consumer	PENDING_INTEGRATOR_RECONCILIATION	A	B reads the conditional argument but does not prove its premise.
+BE-47	B known self-authored #790	independent referee acceptance	review provenance	NOT_AN_INDEPENDENT_EDGE	integrator	Assign another reviewer; no additional acceptance count.
+BE-48	unpublished A/C dispositions	B first-pass report	coordination	NOT_A_DEPENDENCY	integrator	Outstanding comparisons are pending integrator reconciliation, not failed or accepted reviews.
