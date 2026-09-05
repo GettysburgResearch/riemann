@@ -1,72 +1,87 @@
-# Explicit omissions and non-acceptances
+# Final coverage exclusions and targeted holds
 
-This file prevents the substantive continuation from being mistaken for an
-exhaustive proof audit or a fresh complete repository census.
+## Meaning of completion
 
-## Source refresh and repository instructions
+This A report completes its independent source-qualified dispositions and
+repair handoff. It does **not** assert an exhaustive independent proof audit
+of every historical lemma, every unchanged dependency, or every experiment in
+these large branches. The accepted scope is exactly the joined CLAIMS/SOURCES
+rows and the arguments cited there. Unlisted statements receive no promotion.
+This exclusion rule is binding, including for statements whose PR body says
+“proved” or whose author reports passing tests.
 
-The retained mathematical pins are prior connector observations, not a new
-shared freeze. A fresh request alone is not evidence of current head,
-README/guide content, successful publication or remote byte identity.
-`docs/REVIEWING.md` must be checked at the baseline and any new procedural
-requirements reconciled before the integrator labels the allotment fully
-closed. The prior release manifest itself was inspected at its exact blob.
+## Source inventory and versions
 
-## Older Xi descendants
+The baseline policies and release manifest were read. The published C census
+was consulted without waiting for unpublished work; the old #568/#599 deltas
+were independently compared. A did not repeat C's full 341-head archaeology,
+all programme-comment archival work, or every direct-main commit audit. Main
+and review-parent observations, new object pins and historical-pin changes are
+recorded separately. Later pushes to an inspected research head require a new
+delta review; no old verdict automatically covers them.
 
-#716, #720, #723, #724, #726, #729 and #731 have historical issue/head
-observations and programme-level interface treatment here. Their complete
-current source proofs, saddle uniformity, contour/winding and omitted-tail
-arguments have not all been independently reconstructed in this continuation.
-The same limitation applies to the full #772/#773 lineages. Historical pins
-in PR_SOURCE_CENSUS.tsv are not presented as current theorem-source freezes.
-No acceptance of those entire branches follows from a later finite identity
-being valid. Required disposition: source-qualified targeted proof audit,
-not theorem refutation and not assumed acceptance.
+## Older Xi lineages
 
-## Large mixed branches
+This pass directly covers the selected load-bearing count/entry, residue,
+Cauchy, fractional-charge, natural-window, stability, topology and rank-two
+claims from #716/#720/#723/#724/#725/#726/#728/#729/#731/#773, and their
+listed dependencies. It does not accept the entire 183- or 352-commit history
+of any such branch. In particular, the far moving-saddle/near-linear regimes,
+all strong-logconcavity constants, every CRT/Cartan implementation, all
+Conrey numerical inputs and every endpoint-31 approximation are not newly
+replayed. #772's 90%-bearing physical bound is open independently of those
+checks. This is not a claim that all these unreviewed statements are false.
 
-For #719 and #730 this packet audits the controlling source correction and
-selected exact components, not every historical lemma and experiment. For
-#757/#760 it audits A's beta/primitive analytic aspect, not B's family,
-selector, sheaf or Adams mathematics. For #765 it audits raw-innerness
-strength and physical source conventions, not its entire manifest closure,
-all 38 computational modules or every local actual-Xi certificate.
-B's scientific dispositions are **pending integrator reconciliation**.
+## Mixed family and source branches
 
-## E / recent operator sources
+A covers native source identities, finite labelled arithmetic, source
+normalization and the principal/physical implications. Full finite-field
+trace atlases, Hecke/Poincare uniformity, Segre/Chow representation theory,
+partial Frobenius constructions, all source-selection modules and their large
+experiment closures are assigned for B's review. In particular #752/#756,
+#766/#769/#770/#771/#774/#776/#781/#782 and the automorphic portion of #783
+receive no blanket mathematical acceptance. #757/#760 are covered only in
+A's literal beta/primitive analytic aspect; #765's actual source conventions,
+innerness and selected analytic claims are distinguished from its full
+38-module/manifest closure and 18 unresolved transport points.
 
-The final unbounded sign is open in #784/#785/#790/#792/#793. Earlier layers
-not individually entered in SOURCES.tsv do not acquire a new proof verdict
-through a later PR body. #793's full profile-asymptotic proof is not given
-independent acceptance; A's relation to this work requires non-author review.
-A reported author's test count is not a replay receipt from this review.
+## Arithmetic, theta, heat and operator work
 
-## External imports
+The #599 new arithmetic delta was read, but its unchanged reviewed base is
+an explicit imported dependency, not freshly reproved. #568's changed checker
+and JSON were identified, not independently audited in full. The primitive
+source/rounding and global continuum sign computations in #790/#792 were not
+executed. Their finite/local coercivity and Schur arguments have only the
+stated analytic dispositions. The large finite theta PF range remains an
+imported finite result, not an independently rerun all-rank certificate.
 
-No full LongGaps Lean/paper reconstruction, PrimeGaps186 physical-integral
-rerun, Lean build, Comparator or Nanoda run is newly certified here. No fresh
-whole-PDF byte/page audit of the Lamzouri or Catalan paper is claimed.
-The Lamzouri finite Hilbert theorem, scalar optimization and weight
-correction are independently reconstructed; the exact full BGST/RvM
-formal-to-paper input matching remains a separate verification item.
-The Catalan majorant objection is audited at its explicitly quoted premises;
-other paper defects and later versions need their own direct source checks.
-C's remaining dispositions are **pending integrator reconciliation**, not
-failed reviews or accepted imported theorems.
+#793 and A-authored Architecture-E mathematics remain self-audits requiring
+a non-author. The former authoring transcripts are not independent reviews.
+Neither the pass-7 profile asymptotic, the sharp growing-degree arithmetic-tail
+constant nor positive finite xi completions is promoted on the strength of
+A's own earlier writing or its test counts.
 
-## Computation
+## External imports and numerical records
 
-The review's new exact controls are not upstream heavy campaigns, numerical
-Xi/prime scans or infinite analytic proofs. Synthetic controls are explicitly
-nonnative. No unvalidated floating-point sign is promoted to a certificate.
+No Lean build, Comparator, Nanoda, large prime-gap physical-integral campaign,
+or 707901-node simple-zero certificate replay was performed. The complete
+LongGaps proof beyond the inspected local source and statement interfaces is
+not independently accepted here. The mathematical prerequisites and exact
+formal hypotheses of PrimeGaps186 and Lamzouri remain visible. The direct
+PDF requests did not yield inspectable PDFs in this pass; no new byte/page/
+screenshot review of those imports is claimed. The Catalan max-summand
+objection is reviewed at the explicitly quoted v1 premises, not as a fresh
+whole-paper audit and not as a disposition of any later version.
 
-## Consequence for completion language
+The exact finite rank-two source was replayed and failed. A symbol-substitution
+repair also failed; an invariant-cone repair passed in ordinary mode. A grouped
+optimized rerun was interrupted by a tool timeout and is not a PASS. Existing
+prior replay receipts remain historical unless specifically marked fresh.
 
-The first-pass report is self-contained and useful without another reviewer's
-unpublished work. Nevertheless the omissions above are real. The entire
-original allotment must not be described as exhaustively finished until the
-remaining source/version and older-lineage proof checks are closed. The
-integrator should combine this packet with the other independent reports
-and request only the still-uncovered exact objects, without treating those
-reports as dependencies of the mathematics already reconstructed here.
+## B and C handoff
+
+All outstanding cross-review questions are **pending integrator reconciliation**.
+They are neither failures of other reviewers nor accepted claims. No unpublished
+report was used as a dependency. The integrator should request only the exact
+remaining objects above, not infer approval from shared vocabulary or matching
+numerical outputs.

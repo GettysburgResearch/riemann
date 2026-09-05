@@ -1,73 +1,62 @@
-# Required fixes and extraction plan
+# Binding repairs and proposed extraction destinations
 
-Source versions are fixed by SOURCES.tsv. These instructions change review
-recommendations, not main or the original research files. A disposition of an
-open or unreviewed claim is not a refutation of the claim itself.
+The table is an integration instruction, not authorization to rewrite research
+branches. A repair receives a new identity with the original SHA/path and this
+review retained. The claim/source join is specified in REPORT.md. Historical
+claim-ID collisions must not be resolved by overwriting an existing file.
 
-| Priority | Source | Required action before canonical extraction |
-|---|---|---|
-| Blocking | #786 R-109203/T-109201 | Remove unconditional/cofinal refutation status; retain finite observations and expose missing uniform mesh/statistic theorem. |
-| Blocking | #786 minority argument | Delete V>=minority and the 95% equivalence; keep V<=2 minority and its actual sufficient threshold. |
-| Blocking | #777 R-108350.3 | Replace the false additive Fourier-band trace. The exact two-node counterexample is A-M04. |
-| Blocking | #777 companion realization | Restrict generic no-go to unrestricted F,G unless G=F^(K) is proved. A-M05 is a nonnative replacement, not an Xi refutation. |
-| Blocking | #786 L-109000 | Do not contour-shift a nonholomorphic Fejer weight. A-M03 repairs only the minimal no-main-term wavelet conclusion. |
-| Blocking | #786 PRIMCAR placement | Split literal weighted PRIMCAR, frozen-weight model, aligned-block comparison and Gonek/Ng analytic input into distinct nodes. |
-| Blocking | #719 completed source | Preserve native/completed distinction. Recompute changed core constants; fixed core exceptions are not merely lower-order owner exclusions. |
-| Blocking | #765 downstream physical consumers | Apply V G V* and adjoint confluent jets consistently, with the common outer metric. Keep raw innerness labelled RH-equivalent. |
-| Blocking | #784 low-order Loewner claim | Scalar monotonicity gives one-node derivative signs, not two-node PSD. |
-| Blocking | #790/#792 sign statements | State the actual subspace/length and effective Schur correction. Positive sampled upper sections are not lower certificates. |
-| Blocking | #793 and A-related E material | Require non-author disposition. This A packet supplies self-audit evidence only. |
-| Required | #742 W-pinch | Final corner residual plus CLUSTER-3 control; retain amended derivative condition and correct units. |
-| Required | #742 L-105075 | Prove uniform coefficient-one Conrey tail from the claimed starting index or weaken the explicit 1.4457 statement. |
-| Required | #730 historical standalone | Link old primitive-packing language to the later carrier and native-source supersessions. |
-| Required | #730 cross-Hodge gauge | Specify common finite horizon before differentiating; keep dyadic-frozen cutoff changes separate. |
-| Required | #767 concentration | State whole Rouché comparison contour, tail norm and quantitative margin. |
-| Required | #785 spectral/coefficient | Keep all-rank spectral identity and unbounded coefficient TLSE as different nodes; imported finite PF order is not all-order. |
-| Required | #787 bounded-gap formalization | Keep all three project axioms and the physical-certificate/code environment boundary. |
-| Required | #788 formal interface | List hRvM and hPC as hypotheses even when the allowed logical axioms are standard. |
-| Required | #789 countercheck | Attach direct paper version/equation receipt before claiming a fresh paper-level adjudication; do not infer rationality. |
+| Priority | Exact claim/source IDs | Repair or final disposition | Proposed destination |
+|---|---|---|---|
+| P0 | A-086/A-087, BEZOUT_INERTIA | Add nonreal critical pairs to the inertia formula; preserve the valid residue factorization and corrected total-root identity | Reviewed finite Bezoutian packet and scoped counterexample |
+| P0 | A-089/A-090, GLOBAL_GAUSSIAN | Withdraw all-A Gaussian tail; replace by local quadratic/exterior exponential proof; retain repaired growing-window entry | Xi derivative-entry packet with countersequence |
+| P0 | A-095--A-097, CTI_CODE/CTI_THEOREM | Correct formal-symbol substitution AND use P^2>=4R; keep original failures; specify normalized confluence | Exact rank-two Cauchy packet with new checker identity |
+| P0 | A-037/A-038, TAKENAKA | Withdraw additive product band trace and unsupported derivative-companion realization; retain one-factor law and scoped nonnative control | Refutations/capture boundaries |
+| P0 | A-041--A-045, NINETY | Remove false V>=min and cofinal limsup refutation based on finite evidence; retain opposite-endpoint mesh identity | Xi descent status/countermodels and noncertifying experiment record |
+| P0 | A-046--A-048, DICHOTOMY | Do not shift a nonholomorphic Fejer weight; use only the separately reconstructed fixed-source Landau repair | Fixed-detector eventual-sign packet; keep other dichotomy claims held |
+| P0 | A-029/A-030, PLACEMENT | Do not infer literal weighted PRIMCAR from frozen-weight/Gonek data | Open primitive-pair gate with exact weights |
+| P0 | A-003--A-007/A-120, SQUARED/EB/WICK_HALF | Relative square-core bounds are not absolute subpower errors; reopen descendant source-binding after semiprime-main failure | Native-source correction and dependency graph |
+| P0 | A-053--A-055/A-106 | Raw Xi innerness already implies RH; import the correct physical adjoint convention | Actual-Xi source-typing contract |
+| P0 | A-060/A-062/A-064 | Reject scalar-to-two-node PSD, positive-mixture PF-infinity, and spectral-to-coefficient shortcuts | Scoped finite counterexamples |
+| P1 | A-092, NATURAL_CLT | Weight the complex error by exp(-w_m abs(Im z)); hold C,H fixed | Natural-window CLT and adjacent-order residue rigidity |
+| P1 | A-098--A-100, HYPERBOLIC | Restrict the literal bilateral integral to its proved strip; distinguish its entire continuation; retain causal correction | Native beta smoothing/sampling packet |
+| P1 | A-088/A-101/A-102 | Use regular rectifiable contours; retain nonreal squares, adjacent debt, complete pole manifest and origin multiplicity | Finite residue/selector/Cauchy identities, not cofinal absorption |
+| P1 | A-103--A-107 | Preserve grade-zero projection, unit topological spectrum and nonnormality; frequency-adapted scale is not physical constant scale | Model-space charge identities and open transfer contract |
+| P1 | A-108/A-109 | Retain finite stability and analytic strict-gain mechanism with the actual smooth pair-correlation adapter | Finite Hilbert and conditional analytic extraction |
+| HOLD | A-110, SEVEN_LOCK/AINTA_PROOF/MULT_FORMAL | Explicit 269/280-block records require exact primitive interval replay and adapter reconciliation | Imported/exploratory record pending C/B |
+| P1 | A-111, CLARK_GATE | Require globally suitable Clark input or a new finite-window exterior construction | Conditional weighted extinction only |
+| P1 | A-112/A-113 | Keep determinant/trace/Loewner strengths separate; REC and cofinal transport remain open | Finite Cauchy determinant and extension identities |
+| P1 | A-114--A-117/A-125 | Preserve maximal prefix, fixed-kernel information order, sensitivity, signed source and convergence domain | Beta/coarea/chiral source packet |
+| P1 | A-118/A-119 | Aggregate the two marked-67 labels or pay their fixed multiplicity; freeze the horizon before differentiation | Boolean half-square and reflection identities |
+| P1 | A-121 | Keep constant-source principal obstruction within its model class | Nonprincipal/principal interface, not a native counterexample |
+| P1 | A-122--A-124 | Preserve complete spectral source, holomorphic Hardy membership and distinct-location count; do not localize without exterior control | Resolvent/Weil/Pick criterion and finite capture |
+| P1 | A-126--A-128 | Keep inactive divisors, strict kappa/beta ranges and signed large-product boundary; repair PR-number typo | Source-pinned #599 delta, not inherited wholesale release |
+| HOLD | A-050/A-051, CONREY | Qualitative rate does not certify explicit infinite-tail constant | Conditional pricing row until analytic tail repaired |
+| HOLD | A-063--A-066, SPECTRAL | Finite imported PF order is not all order; spectral identity does not extract coefficient signs | Theta identity and open coefficient theorem |
+| HOLD | A-070--A-074 | Effective Schur matrix includes all energy-space correction; Galerkin is an upper enclosure; sampled positivity is not continuum certification | Window coercivity/Schur packet; numerical reconnaissance only |
+| HOLD | A-075--A-084 | Preserve imported hypotheses, version boundaries and full-proof/PDF/build exclusions | External-import dossiers; no automatic theorem promotion |
+| NONAUTHOR | #793 and A-authored E/#784/#785 material | A self-audit is not author-independent acceptance | B/non-author scientific review, pending integrator reconciliation |
 
-## Proposed extraction destinations
+## Extraction protocol
 
-Use semantic families, with each reference keyed by `(repository, commit,
-path, local claim ID)` until existing ID collisions are reconciled.
+Each extracted claim must physically include its readable proof or corrected
+proof, exact original repository/commit/path/blob, this review ID, all analytic
+inputs, finite versus cofinal scope, and the first missing theorem. Import a
+repaired statement under a new source-qualified identity; preserve the false
+intermediate claim and its counterexample as historical evidence.
 
-- **ARITH.COMMON_MOTHER**: compact source, Bezout, finite shell Gram and
-  relative squared-core lemma. Do not add a proved one-sided producer edge.
-- **ARITH.NATIVE_TAIL_PAIR**: literal Vaughan identities, derivative K2 cells,
-  atomic jumps and the conditional native variation consumer.
-- **BETA.PRIMITIVE**: fixed mollification, source Gram, finite primitive/core
-  transforms, corrected PRIMLS equivalence and central assembled reduction.
-- **XI.REVERSE_ROLLE**: multiplicity-sensitive identity, curvature dictionary,
-  hypothesis-rich entry, and the valid minority upper bound.
-- **XI.HARDY_SOURCE**: raw-innerness strength, physical adjoint convention and
-  scoped nonnative lower-capture countercontrols. No cofinal source producer.
-- **XI.SOURCE_HERMITE / THETA.SPECTRAL**: only after non-author review; preserve
-  analytic/source normalization and spectral-versus-coefficient boundaries.
-- **WEIL.FINITE_WINDOW**: divisor interaction, positive primitive subspace,
-  energy-continuous effective Schur reduction and certified residual criterion.
-- **EXTERNAL.HILBERT_COUNTS**: finite tensor inequalities and scalar optimizer;
-  zeta transfer remains explicitly typed on its imported analytic premises.
-- **REFUTATIONS.METHOD_SPECIFIC**: literal false transition inequality,
-  product trace equation, scalar-to-two-node inference and generic compression
-  or coefficient-extraction shortcuts. Do not register these as RH refutations.
+The source table includes external excerpts as well as whole proof notes.
+An excerpt is not a complete proof/import-closure audit. A source author’s test
+count is not this reviewer’s replay count. C’s census dispositions are not A’s
+scientific premises.
 
-No proposed extraction destination is a claim that canonical files were
-modified. The integrator decides final aliases, IDs and storage paths.
+## Highest-value targeted follow-ups for the integrator
 
-## Known source/version hazards
+B should resolve non-author acceptance of #793/E; the actual-source/geometry
+binding in #751/#756/#757/#760 and the automorphic/Segre parts of #766/#769/
+#770/#781/#782/#783; and the explicit simple-zero record adapter. C should
+resolve the primitive certificate/build/PDF boundaries and both changed old
+source heads, including the newly reproduced rank-two checker failure.
 
-The #777 PR body quoted a different final SHA from its actual observed head;
-use `399410ba3b38e135ad6961a850bdaa02fa9cbba2` for the inspected files.
-#786's body also contains an older advertised head; the inspected files are
-at `fc550cb0531e7abbc438a9b6eefa5ca11f90abc7`.
-#765's advertised publication checkpoint and its later observed PR head
-are distinct. One must not transfer a verdict across that difference without
-checking the relevant blobs. #743/#746 issue comments lag the corrected
-#719/#730 controlling source.
-
-The #719 changed-file inventory contains repeated numerical claim IDs,
-including multiple L-102880--L-102888 and L-103070/L-103071 names. An ID-only
-edge is ambiguous. Qualify all source nodes before aliasing or renumbering.
-The older 900xx files carried in #742 are not automatically new post-707
-results just because they appear in a branch diff.
+No further broad census or new conjectural programme is a prerequisite for
+using this report. Only the named source objects are held. Neither uninspected
+mathematics nor a missing numerical certificate is thereby declared false.

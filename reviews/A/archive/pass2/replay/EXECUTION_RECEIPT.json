@@ -1,0 +1,151 @@
+{
+  "lean_build": false,
+  "modes": {
+    "normal": {
+      "canonical_check_exit_code": 0,
+      "checks": 10225,
+      "counts": {
+        "abstract_hilbert_distinct_count": 64,
+        "abstract_hilbert_simple_count": 64,
+        "catalan_pascal_minor": 221,
+        "catalan_uncancelled_height": 1,
+        "divisor_graph_nullvector": 144,
+        "divisor_graph_prime_log_identity": 1221,
+        "energy_completion_finite_sections": 48,
+        "euler_beta_live_core": 7,
+        "finite_prefix_inverse_coefficients": 16,
+        "generalized_vandermonde": 112,
+        "literal_beta_second_difference": 5000,
+        "minority_lower_bound_counterexample": 1,
+        "minority_upper_bound": 2046,
+        "montgomery_taylor_second_variation": 8,
+        "positive_upper_not_positive_limit": 1,
+        "raw_innerness_multiple_zero_control": 16,
+        "scalar_monotonicity_loewner_counterexample": 1,
+        "schur_lower_residual_psd": 8,
+        "schur_upper_residual_psd": 8,
+        "spectral_coefficient_counterexample": 1,
+        "takenaka_band_integral_polynomial": 3,
+        "takenaka_two_factor_partial_fractions": 17,
+        "theta_casimir_polynomial": 13,
+        "vaughan_tail_pair": 1200,
+        "window_coercivity_constants": 4
+      },
+      "exit_code": 0,
+      "sha256": "bb9f299bcf7a4ea917992b21760099e976372dd898dcab7db352dbdd9ed6fea2"
+    },
+    "optimized": {
+      "canonical_check_exit_code": 0,
+      "checks": 10225,
+      "counts": {
+        "abstract_hilbert_distinct_count": 64,
+        "abstract_hilbert_simple_count": 64,
+        "catalan_pascal_minor": 221,
+        "catalan_uncancelled_height": 1,
+        "divisor_graph_nullvector": 144,
+        "divisor_graph_prime_log_identity": 1221,
+        "energy_completion_finite_sections": 48,
+        "euler_beta_live_core": 7,
+        "finite_prefix_inverse_coefficients": 16,
+        "generalized_vandermonde": 112,
+        "literal_beta_second_difference": 5000,
+        "minority_lower_bound_counterexample": 1,
+        "minority_upper_bound": 2046,
+        "montgomery_taylor_second_variation": 8,
+        "positive_upper_not_positive_limit": 1,
+        "raw_innerness_multiple_zero_control": 16,
+        "scalar_monotonicity_loewner_counterexample": 1,
+        "schur_lower_residual_psd": 8,
+        "schur_upper_residual_psd": 8,
+        "spectral_coefficient_counterexample": 1,
+        "takenaka_band_integral_polynomial": 3,
+        "takenaka_two_factor_partial_fractions": 17,
+        "theta_casimir_polynomial": 13,
+        "vaughan_tail_pair": 1200,
+        "window_coercivity_constants": 4
+      },
+      "exit_code": 0,
+      "sha256": "bb9f299bcf7a4ea917992b21760099e976372dd898dcab7db352dbdd9ed6fea2"
+    }
+  },
+  "normal_optimized_byte_identical": true,
+  "rejection_count": 12,
+  "rejections": [
+    {
+      "exit_code": 1,
+      "mode": "normal",
+      "mutation": "wrong_total",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "mode": "normal",
+      "mutation": "float_total",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "mode": "normal",
+      "mutation": "boolean_total",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "mode": "normal",
+      "mutation": "rh_promotion",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "mode": "normal",
+      "mutation": "wrong_baseline",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "mode": "normal",
+      "mutation": "duplicate_json_key",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "mode": "optimized",
+      "mutation": "wrong_total",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "mode": "optimized",
+      "mutation": "float_total",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "mode": "optimized",
+      "mutation": "boolean_total",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "mode": "optimized",
+      "mutation": "rh_promotion",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "mode": "optimized",
+      "mutation": "wrong_baseline",
+      "rejected": true
+    },
+    {
+      "exit_code": 1,
+      "mode": "optimized",
+      "mutation": "duplicate_json_key",
+      "rejected": true
+    }
+  ],
+  "rh_proved": false,
+  "schema": "riemann.review.A.execution.v1",
+  "status": "PASS",
+  "upstream_campaigns_rerun": false
+}

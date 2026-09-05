@@ -1,234 +1,201 @@
-# Reviewer A — post-707 independent scientific review, continuation packet
+# Reviewer A — completed independent post-707 scientific disposition
 
-## Review status and source boundary
+## Decision and reading order
 
-This packet materially extends the preliminary handoff. It records twenty
-independent mathematical audit sections, a source-qualified claim ledger,
-explicit implication hyperedges, bounded exact controls, extraction fixes,
-and a separate list of omissions. It is an **independent first-pass scientific
-review with scoped holds**, not an assertion that every theorem in every
-post-707 branch has received a complete proof audit.
+**The assigned independent disposition report is complete, with explicit
+exclusions and targeted review holds. It is not blanket mathematical acceptance
+of every file on the research branches. No reviewed-only implication path to
+RH is established.** The integrator can act on the source-qualified rows without
+waiting for any unpublished report.
 
-The baseline remains `main@8d16f8d9c475db290bc85e53d775b93b9bcdb336`.
-The previous scientific release is `integration/2026-08-22`, with research
-terminal PR #707 and release-manifest blob
-`199168add64ebbcc9b28519c4e8c2ca698287907`. No later moving head is silently
-substituted for this baseline.
+Read `CLAIMS.tsv` together with `SOURCES.tsv`, then `FINAL_AUDIT.md` and the
+retained `MATHEMATICAL_AUDIT.md`. `EDGES.tsv` keeps conjunctive premises,
+including every open arithmetic estimate. `FIXES_AND_EXTRACTION.md` specifies
+which repairs must precede extraction. `OMISSIONS.md` is the exhaustive list
+of **coverage exclusions of this A report**, not a claim to enumerate every
+unreviewed theorem in the whole repository.
 
-The preceding attempt did obtain many inspectable GitHub reads. Its final
-statement that no inspectable source results existed was too broad. The
-exact prior connector pins and file blobs retained here are genuine source
-observations. This continuation uses those immutable texts and reconstructs
-specific arguments from them. A fresh tool request is not treated as a
-successful source refresh or publication unless a corresponding result is
-actually verified. `PR_SOURCE_CENSUS.tsv` distinguishes directly observed
-heads from historical issue/dependency pins; neither is called the shared
-integrator freeze.
+There are 128 claim dispositions: the previous 84, preserved with their
+original proof references, and 44 final-pass dispositions. The source ledger
+has 92 exact file objects, including policy/provenance files and external
+source excerpts. These are not counts of independently certified theorems.
 
-The latest known review PR is **#795**, branch
-`review/2026-09-05/A-scientific-post707`. The last source-visible review head
-was `f184ca0895713aa5323321ac482a11aeb2e6284b` and contained coordination only.
-That is **not** asserted to be the head containing this completion packet.
-Publication/readback must be recorded separately after the uploader or a
-successful direct write. Main and original research branches are not targets
-of the supplied publication procedure.
+## Frozen boundary and publication
 
-## Executive scientific disposition
+Policy baseline: `main@8d16f8d9c475db290bc85e53d775b93b9bcdb336`. `AGENTS.md`,
+`docs/REVIEWING.md` and the previous release manifest were read. The August 22
+scientific release has research terminal PR **707**, frozen main
+`677203992eb0168920365ee45ae9db76bfa97dcf`, and release-manifest blob
+`199168add64ebbcc9b28519c4e8c2ca698287907`. Merge status is not the research
+boundary. Formal-v0.1 is not a post-707 scientific theorem deposit.
 
-The important correction is not that every ambitious programme fails. It is
-that several purported refutations and several positivity transfers have
-been stated more strongly than their proofs allow. Preserve valid finite
-identities and conditional analytic mechanisms while repairing those edges.
-No accepted proof-only route to RH is supplied by this audit.
+The other agent's upload was verified on review PR **#795**, branch
+`review/2026-09-05/A-scientific-post707`, at
+`85df6055f2245eec494edd36c9f769e5b6186090`, tree
+`dc5680bca8deadd92246e89db5eabc068e1ca5c9`. That is the parent review snapshot,
+not a self-referential SHA for this report. The final publication commit is
+identified by the PR receipt and response after readback. Main and research
+branches are not publication targets.
 
-### Findings requiring immediate integration changes
+C's published census was consulted at
+`e0422804f098a296aaf2ede615a833d90704a18f`,
+`reviews/C/CENSUS.tsv`, blob `7f3bae32843289e5079e0e8eb4f9da60122f77a0`.
+It is navigation/provenance evidence, not an inherited scientific verdict.
+A's source freezes and proof scopes are independent. Differences from earlier
+A historical pins are recorded in `SOURCE_VERSION_DIFFS.tsv`; no later head
+inherits an old verdict without matching the inspected object.
 
-**#786's asymptotic 90%-gate refutation is not established.** Its minority
-argument uses a false lower bound for sign transitions. Its global mesh
-interpretation lacks the requisite fixed-K uniform remainder. Its cofinal
-limsup claim uses finite data and a finite phase visit. Retain the mesh
-endpoint-sign identity and the numerical records at their actual scope;
-leave the genuine Xi global gate open. See A-M01–A-M02.
+The two changed old research heads identified by that census were independently
+compared: #568 changes its checker/JSON; #599 adds three arithmetic lemmas and
+publication files. The latter's new mathematics is included here despite the
+old PR number and old dates printed in its files.
 
-**#777's exact additive Fourier-band trace is false.** At the two distinct
-nodes i and 2+i, the actual band trace on [pi/2,pi] differs from the
-advertised value by exactly 4 exp(-pi). The one-factor formula is correct;
-the Takenaka product step is not. A corrected shallow, nonnative
-countercontrol is supplied, with its limits and missing derivative-companion
-adapter explicit. See A-M04–A-M05.
+## Binding scientific corrections
 
-**The #786 Fejer contour proof is invalid, but its minimal-wavelet conclusion
-can be repaired.** The triangular weight is nonholomorphic. A direct
-positive-tail Landau argument instead proves the appropriate eventual-sign
-obstruction for the actual no-real-main-term wavelet. Do not use that repair
-to certify every other assertion in the dichotomy. See A-M03.
+**#724: the Bezoutian factorization survives, but its intermediate inertia
+count is false without a real-critical-point hypothesis.** Nonreal critical
+pairs contribute one negative square each. The exact polynomial
+`x^4+x^2+1` exposes the missing contribution. The corrected formula still
+implies the total nonreal-root count; this is a repair, not a refutation of
+all Bezoutian or reverse-Rolle arguments. See F01.
 
-**The PRIMLS converse can be made rigorous.** A corrected sharp-prefix Perron
-argument supplies uniformity in the sieve, endpoint and frequency under RH.
-The exact primitive-coprimality Fourier identity then proves the stated
-converse. This is an equivalence calibration, not an unconditional estimate.
-The frozen-weight/Gonek argument still does not prove literal weighted
-PRIMCAR. See A-M06–A-M07.
+**#773: the claimed uniform Gaussian tail at every deviation scale is false
+for the actual tilted Xi measure.** A left-tail countersequence at half the
+saddle disproves it. Local Gaussian and exterior exponential estimates do
+suffice for the growing-window entry theorem; F02 supplies that replacement
+proof. #725's fixed natural-window CLT also survives after making the
+exponentially weighted complex error explicit. High-order entry still does
+not establish low-order/global real-rootedness. See F02-F03.
 
-**The Lamzouri finite Hilbert mechanism and support-one optimization admit
-an independent reconstruction.** The review gives a finite-rank
-self-adjoint tensor proof of both counting inequalities, the exact
-pair-weight cancellation, and a positive-second-variation proof of the
-Montgomery–Taylor constant. The zeta analytic inputs remain explicit, as do
-the actual Lean theorem hypotheses. See A-M18–A-M19.
+**#729: the rank-two checker fails, and correcting its API use reveals a
+second proof error.** The claimed independent coefficient positivity in
+`P,R,U,H` is false. The physical relation `P^2>=4R` repairs it. The corrected
+symbolic calculation proves rank-two CTI, with the source failures and
+normalized confluence retained. It proves neither arbitrary-rank CTI nor
+an RH implication. See F04.
 
-Additional binding fixes concern the #742 explicit Conrey tail constant,
-#719's distinction between owner exceptions and changed core constants,
-#784's false scalar-to-two-node monotonicity sentence, and the interpretation
-of finite-window coercivity/effective Schur matrices in #790/#792.
+**#759: the entire continued multiplier is not an everywhere-convergent
+bilateral integral.** The integral strip is sufficient for the native-beta
+application; the domain correction preserves that conditional equivalence
+and the sampling theorem. See F05.
 
-## Programme #743: common mother and native arithmetic
+The earlier binding corrections remain active: #777's Takenaka product band
+formula is false; #786's purported cofinal 90%-gate refutation is not proved;
+its sign-transition lower bound is false; the nonholomorphic Fejer contour
+shift is invalid; literal weighted PRIMCAR is not obtained by freezing its
+arithmetic weights. The repaired RH-to-PRIMLS converse is an equivalence
+calibration, not an unconditional estimate. See A-M01-A-M07.
 
-The #715 common mother, finite Bezout reconstruction, shell Gram identity
-and squared-core relative bound survive at their stated scopes. A strict
-local energy reserve is not a one-sided arithmetic sign.
+## Programme dispositions
 
-The #718 native-minus-completion distinction remains essential. #719's
-literal Euler–Beta semiprime producer is refuted on its exact displayed
-source, using the named classical asymptotic. Its completed-source
-QPTI/BCI/HMO promotion cannot be retained as a subpower-preserving native
-arrow. Neither BCI nor HMO is declared false merely by their former
-association with that source. The live ordinary-Mobius signed detector
-requires its own estimate.
+### #743 — common source, stress, physical restriction
 
-The #757/#760 beta route retains the fixed-mollified criterion, prefix Gram,
-primitive panel decomposition, exact core transform and central-channel
-reduction. The raw Jordan negative-mass target is independently obstructed
-by its atoms. PRIMLS is RH-equivalent after the repair in A-M06; COREAGG and
-PRIMCAR remain equivalent at the all-positive-exponent scale, but unproved.
-The source-dependent arithmetic weights cannot be frozen without a theorem.
-B's family/sheaf/selector components are pending integrator reconciliation,
-not accepted or rejected on the basis of this A-only review.
+The compact-mother, finite Bezout, native-minus-completion and finite Duhamel
+identities have useful surviving scope. Relative squared-core estimates must
+not be promoted to absolute subpower errors. The completed Euler-Beta
+semiprime mode refutes the literal QPTI producer, not every native BCI/HMO
+statement. The live source is the ordinary-Mobius same-K1 wavelet; its signed
+cross-core estimate remains open.
 
-First open conclusion-facing target: a source-faithful one-sided native
-variation estimate, or the corresponding assembled primitive cancellation.
-No positive Gram, source-blind majorant or relative squared-core estimate
-supplies it.
+#751's Boolean Beta half-square and fixed-horizon reflection complementarity
+are retained, with marked-label multiplicities and ordinary/Wick distinction
+explicit. Its historical descendant arrows back to BCI require reconciliation
+with the later native-source reset. #756/#778 nonprincipal geometry does not
+price the principal arithmetic cell. Constant-source countermodels have only
+their stated source-blind scope. See A-M08 and F12.
 
-## Programme #746: F1 and native prime-colour repair
+### #744 — Xi reverse Rolle, residues and percentages
 
-The finite twisted Stokes and Hodge-variance identities survive. Historical
-unquotiented primitive packing language must be marked superseded. The
-native Vaughan tail-pair identity is exact and explains why the completed
-Euler–Beta semiprime main cannot simply be imported into b_U.
+The exact factor-two count, finite residue-square ledger, fixed regular-window
+Cauchy split, local Cauchy-layer count and repaired high-order entry survive.
+CRT or Clark representations do not automatically price their denominators,
+selectors or exterior contribution. A globally real-rooted Clark input is not
+supplied by a different derivative order for each fixed rectangle.
 
-The derivative same-K1 cell and endpoint identities retain all jumps and
-use the correct real square-root arguments. The dyadic-frozen Type-I row has
-finite logarithmic mass. Reflection-Hodge polarization is a source identity
-on a fixed horizon, not control of the positive part of its differential
-image.
+The finite stability-enhanced Hilbert inequality and the analytic three-point
+strict-gain mechanism are reconstructed independently. Explicit 269/280-block
+numerical records remain held for primitive interval-certificate and adapter
+review. No 90%, density-one or RH conclusion is certified. Source-Pick free
+energy includes a forced unit topological spectrum; phase conditioning cannot
+remove it. #786 does not establish a universal asymptotic refutation of the
+actual gate. See F01-F10 and A-M18-A-M19.
 
-First open conclusion-facing target: NATIVEF1XD/NATIVECELL with its literal
-native source and fixed consumer. The finite geometry is not a second,
-already-proved physical restriction theorem.
+### #746 — F1/Frobenius-Hodge and native arithmetic geometry
 
-## Programme #744: reverse Rolle and actual Xi
+Finite twisted Stokes, Hodge variance and native Vaughan tail-pair identities
+survive at their stated finite/source scopes. The unquotiented packing front
+door is superseded. The exact native same-K1 derivative/cell identity is not
+an all-scale positive-variation estimate. A geometric analogy, a nonprincipal
+Frobenius bound, or an abstract positive Hodge form is not an identification
+with the full native scalar. See A-M08 and F12.
 
-The multiplicity-sensitive reverse-Rolle formula and the nonreal-pair
-curvature budget survive. General Fourier concentration gives a conditional
-entry theorem, with complete Rouché contours and tail margins retained.
-Neither high-derivative entry nor averaged curvature alone pays low-order
-critical defects, endpoints, winding or omitted tails.
+### Remaining arithmetic, theta, heat, Pick, Weil and operator descendants
 
-#742's W-pinch refutation remains conditional on its final residual
-interfaces. A qualitative Conrey rate does not establish the deposited
-explicit infinite-tail constant. The pointwise-pricing obstruction is
-restricted to the defined pricing class.
+Fixed compact beta kernels and stationary q-adic coarea give faithful
+criteria; the maximal envelope, sensitivity and finite-Euler normalization are
+mandatory. The chiral Perron source identity is justified in its absolute
+convergence domain, not by replacing a complex product with a modulus square.
+The older #599 delta pays a complete small-prime cube and a terminal strip,
+but retains the full signed product boundary. See F11, F14-F15.
 
-The valid minority-sign theorem in #777 must be separated from its invalid
-product band-trace formula. #786 does not presently close the global
-90%-gate negatively. No zero-proportion improvement is certified by the
-finite mesh record.
+Actual-Xi raw-innerness is RH-equivalent. A conditional physical theorem using
+that premise is not a new reduction. The all-rank spectral theta identity is
+not coefficientwise total positivity. The heat/localized Weil captures must
+retain their fixed source, complete complement, and cofinal quantifiers.
+#792's effective Schur matrices include the eliminated positive sector;
+Galerkin sections approach from above, and sampled lower signs without
+continuum enclosures are not certificates. See A-M11-A-M17 and F13.
 
-The #765 raw-innerness firewall is binding: for actual Xi and fixed positive
-lambda, the raw zeroth companion being Schur on all of C+ is RH-equivalent.
-Actual physical estimates assuming that premise are RH-conditional even
-when their finite numerical right-hand sides are unconditional. Preserve
-the corrected adjoint convention and keep bare and physical traces apart.
+A-authored #793 and Architecture-E statements retain the explicit
+**self-audit pending non-author review** label. The finite completions,
+individual-zero capture, arithmetic-tail and line-one Dickman results do not
+prove their remaining all-order/subcritical signs. B must independently assess
+those claims before acceptance; the fact that their author is reviewing
+nearby programmes does not change their status.
 
-First open conclusion-facing targets: actual low-order defect/winding or
-cofinal physical-capture estimates with all hypotheses and source metrics
-fixed. These are not supplied by local samples or narrow bandwidth alone.
+## External imports #787-#789
 
-## Architecture E, theta/heat, and operator descendants
+A's assigned mathematical aspect is recorded independently of C: exact
+statement/normalization and local signed-source audit for prime gaps; finite
+Hilbert, optimization, weight-cancellation and stability mechanisms for
+Lamzouri; and the compulsory-summand obstruction to the quoted Catalan height
+argument. PrimeGaps186 keeps all three input assumptions. The full LongGaps
+Lean/paper proof is not accepted from metadata. The Catalan objection does not
+prove rationality and does not cover a later uninspected version.
 
-A authored substantial #793 and preceding Architecture-E material.
-Accordingly positive dispositions on that work are **self-audits pending a
-non-author**, not independent acceptances. This review supplies a complete
-local-pole proof of the distinct-location negative-square count and an exact
-counterexample to the scalar-monotonicity sentence; both are useful handoff
-evidence, not a substitute for independent acceptance.
+The direct PDF requests in this pass did not produce readable PDFs; no new
+byte/page/screenshot audit is claimed. No Lean build, Comparator or Nanoda was
+run. C's published provenance/formal work and B's overlapping science are
+**pending integrator reconciliation**, not prerequisites of A's finite
+proofs and not silently accepted conclusions.
 
-The all-rank spectral theta–Darboux identity is not coefficientwise TLSE.
-The finite sector order remains an imported finite order. Pointwise
-multiplier contraction is not contraction after a nonisometric quotient.
+## Corrected route map and first open theorem
 
-The #790 divisor square controls the full signed cusp graph on the stated
-mean-zero subspace. Its shrinking supports do not capture arbitrary fixed
-L2 tests. #792's actual-source energy continuity pays the Schur domain
-issue, and the finite effective matrix includes all variational couplings.
-Galerkin sections approach it from above; only a certified lower enclosure
-can prove its sign. A fixed-length, 104-dimensional reduction is not a
-finite reduction of the whole RH problem.
+| Route | Retained substrate | First open theorem or required source repair |
+|---|---|---|
+| Native common source/stress | Fixed compact mother; native pole distinction; exact stopped algebra | `OPEN.ARITH.XD`: signed same-K1 native cross-core dispersion, with carrier and endpoint terms |
+| F1/native Hodge | Finite Stokes/Hodge and native tail-pair/cell identities | `NATIVEF1XD`/`NATIVECELL`: the actual cofinal one-sided native variation, not a completed surrogate |
+| Beta primitive pairs | Fixed mollified/prefix criterion; corrected PRIMLS converse; core transforms | Literal `PRIMLS` or sufficient weighted `PRIMCAR`; frozen-weight models do not pay it |
+| Compact/q-adic/Chowla beta | Exact information order, maximal coarea and finite-Euler transport | Subpower full signed maximal energy; every high-primitive common-core interaction retained |
+| Chiral beta | Exact signed Cauchy source and diagonal subtraction | Assembled off-diagonal cusp bound plus outer-frequency/contour control |
+| Reverse Rolle | Factor-two and residue/winding bookkeeping; repaired high-order entry | Low-order defect plus endpoint/winding budget along a valid exhaustion; no quantifier interchange |
+| Percentage descent | Finite stability; canonical/topological charge identities | Certified derivative input and physical shallow/full charge below the stated allowance; still not RH |
+| Cauchy-translation | Repaired rank-two CTI; determinant gain and extension identities | General return compensation/trace CTI, then separate actual-Xi source and cofinal localization |
+| Theta/PF determinant | Literal theta identities and finite source constructions | Every required coefficient Toeplitz/Hankel sign from the actual source, not aggregate spectral positivity |
+| Heat | Source-defined transforms and complete conditional negative-direction capture | Fixed-source cofinal signed heat/Hankel lower bound; local/shrinking-window signs are insufficient |
+| Pick/Weil/Hardy | Distinct-location index; exact source; finite-window effective Schur reduction | `S_L>=0` on an unbounded predetermined sequence, or an arithmetic lower certificate implying it |
+| Positive operator (#793) | Finite source-defined completions and proposed compactness | Positive completions at unbounded order, with the exact determinant/source limit; independent B review first |
+| Mobius-Laguerre (#793) | Exact causal energy and growing-degree arithmetic-tail interface | Full signed subexponential energy; a diagonal or well-covered finite source is not that estimate |
+| Corrected Euler (#793) | Horizon-faithful continuum correction; proposed line-one norm theorem | Joint local boundedness of corrected products throughout Re(s)>1/2, not separate factor bounds |
+| Family/Frobenius | Finite/Wick/nonprincipal decompositions | Literal principal-member binding and signed residual estimate with affordable loss |
+| Factor-67 product boundary (#599 delta) | Complete small cube and terminal owner estimates | One-sided bound for all remaining rough-product histories at the native normalization |
+| Robin/Nicolas release spine | Previously reviewed finite reductions only | The original unbounded arithmetic tail; no new tail theorem is supplied by this review |
 
-#793's corrected norm theorem lies on Re(s)=1. The assembled subcritical
-product estimate remains open. No PNT-based line-one norm result is promoted
-to a uniform critical-half-plane theorem.
+## Final integration action
 
-## External imports #787–#789: A's independent aspect
-
-For #787, normalization, statement/location, local signed-source and RH-edge
-checks are recorded. PrimeGaps186 remains conditional on its three explicit
-inputs. The complete LongGaps formal proof is not independently accepted
-from metadata alone. The missing full-proof and paper/version checks are
-listed, not assigned a false theorem verdict.
-
-For #788, the finite Hilbert inequalities, scalar extremizer and exact
-rational-weight cancellation are reconstructed independently. The headline
-Lean statements visibly take RvM and pair correlation as hypotheses.
-Ordinary analytic theorem status and internal formal discharge are separate
-questions. C's build/type/source reconciliation is pending integrator
-reconciliation; it is not a dependency of the finite mathematical audit.
-
-For #789, the compulsory-summand obstruction is valid at the paper premises
-quoted in the inspected countercheck. Direct PDF equation/byte matching is
-not newly claimed. Invalidity of that height-majorant argument establishes
-neither rationality nor a new irrationality theorem.
-
-## Replay boundary
-
-`replay/verify_review.py` is a new review-authored, standard-library exact
-checker. It covers finite sign paths, actual integer beta coefficients,
-Vaughan tail identities, prime-log-resolved graph algebra, finite Euler–Beta
-coefficients, two-factor Takenaka algebra, Loewner and spectral
-counterexamples, theta-Casimir polynomials, Schur countercontrols, scalar
-coercivity constants, finite Hilbert controls and Pascal minors. Its output
-records the exact check count rather than copying a source author's count.
-
-Normal and optimized-mode runs, result equality and hostile saved-result
-rejections are recorded by `replay/run_replay.py`. Only a completed PASS
-receipt licenses a claim that those executions passed. No upstream heavy
-campaign, actual continuum sign computation, Lean build, Comparator,
-Nanoda or zero census is represented by these controls. Finite controls do
-not machine-prove the analytic theorems in the mathematical audit.
-
-## Integration recommendation and remaining work
-
-Integrate this review as evidence, not as a proof claim or blanket acceptance
-of the research branches. Extract only source-qualified claims with their
-premises, corrections and independence labels. All A/B/C cross-dispositions
-remain **pending integrator reconciliation** until the integrator resolves
-exact source versions and non-author acceptance.
-
-`OMISSIONS.md` is material: some older #744 descendants have historical
-head/genealogy observations but no complete direct proof audit, the full
-#765 computation/dependency closure is not rerun, and external full-proof/
-PDF/build checks remain explicit. This packet must not be described as an
-exhaustive completion of every aspect of the original allotment. It provides
-a substantially stronger first-pass report and narrower, precisely named
-remaining review tasks instead of waiting for another reviewer.
+Deposit this review and extract only the listed, source-qualified surviving
+subresults with mandatory repairs. Hold the named numerical, source-binding,
+non-author and external-proof objects rather than merging historical branches
+wholesale. The report does not need another reviewer's unpublished work to be
+complete. Final acceptance, conflicting dispositions and version differences
+belong to the integrator.
