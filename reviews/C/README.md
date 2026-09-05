@@ -1,57 +1,39 @@
-# Independent Reviewer C first-pass audit
+# Independent Reviewer C audit — second-pass handoff
 
+Scientific baseline: `8d16f8d9c475db290bc85e53d775b93b9bcdb336`.
 Review PR #798; branch `review/C/2026-09-05-post-release-audit`.
-Baseline: `8d16f8d9c475db290bc85e53d775b93b9bcdb336`.
+Exact existing published head: `7466ad8081101508be7c7acf0065cb2e0944a639`.
 
-**Public-release readiness is not cleared. This is not a complete-coverage certificate.**
-The 566-row census inventories 341 previous release rows (340 PRs and an explicit
-no-object slot), 79 post-review-cut PRs, all eleven programme issues, selected
-claim/deposit/external splits, direct-main history and explicit gaps.
-Only 28 old heads were freshly compared; 312 remain unperformed. Most later PRs
-have metadata-level coverage. Complete claim splits, branch/attachment closure,
-formal statement/build coverage and permissions/history review remain incomplete.
-These are C's coverage debts, not A/B failed reviews. A/B scientific dispositions
-are **pending integrator reconciliation**. No unpublished report was a dependency.
+**This second pass is prepared, not pushed: only read-only GitHub actions were exposed.**
+See `pass2/PUBLICATION.json`. No main, research source, permission, setting or workflow was changed.
 
-Read `VALIDATION.md` for inspected sources, exact evidence and unperformed checks;
-`RELEASE_BLOCKERS.md` for confirmed defects and owner-only gates;
-`STRUCTURE_AND_EXTRACTION.md` for concrete schemas, documentation and extraction order.
+## Read first
+
+**`pass2/FORMAL_NONVACUITY.md` proves from the frozen definitions that the actual-Xi headline input package is empty.** The raw Xi product vanishes at the pole, giving `actualXiNodeP(1/2)=0`, while the input requires strict positivity. Five actual-Xi catalog entries depend on this type. The source-level contradiction is complete; its supplied Lean regression is uncompiled. A separate off-line enumeration defect excludes empty/finite spectra.
+
+Historical version coverage is now **340/340 real PR sources**, after **312 additional observations**: 338 match and #568/#599 differ. #568's replay-only delta is resolved; #599's four recovered claim texts, thirteen changed text files, finite replay and publisher boundary are inspected. Its archival PDF and transitive analytic inputs remain outside the completed review.
+
+Every formal catalog mapping is now scoped against its declaration and body: 31 canonical rows plus six API rows, 34 declaration-bearing mappings, 33 distinct declarations, 15 defining modules. This is not full import/kernel coverage or scientific acceptance of all entries.
+
+`VALIDATION.md` records sources and replays; `RELEASE_BLOCKERS.md` distinguishes closed coverage from confirmed defects and uncompleted gates; `STRUCTURE_AND_EXTRACTION.md` gives the repair/extraction handoff. `CENSUS.tsv` retains the original source pins, and `pass2/HISTORICAL_HEAD_COMPARISON.tsv` records current observations separately. All seven replaced first-pass review files are archived unchanged under `pass2/evidence/PASS1_*`.
 
 ## Reproduce the bounded checks
 
-From repository root, in a disposable working copy:
+From repository root or the unpacked second-pass review packet:
 
 ```sh
 python reviews/C/check_census.py
 python -O reviews/C/check_census.py
-python reviews/C/replay/scripts/replay_consumer.py
-python reviews/C/replay/scripts/replay_axiom_parser.py
+python reviews/C/pass2/scripts/validate_pass2.py
+python -O reviews/C/pass2/scripts/validate_pass2.py
+python reviews/C/pass2/scripts/replay_changed_packets.py
+python reviews/C/pass2/scripts/replay_packet_mutations.py
+python reviews/C/pass2/scripts/replay_tactic_guard.py
+python reviews/C/pass2/scripts/independent_finite_algebra.py
 ```
 
-The census command checks structure and the DECLARED denominator, not complete
-review coverage. Both replay drivers authenticate their frozen target bytes before
-execution and use only reviewer-created bounded fixtures in temporary directories.
-They write new execution receipts into `replay/reports/`; use a disposable copy to
-preserve the original receipts. Exact stdout/stderr includes run-specific temporary
-paths. Compare acceptance outcomes rather than assuming byte-identical rerun logs.
-No Lean, compiler installation, network request or broad scientific campaign is run.
-The consumer driver records the six observed cases in both modes; the parser driver
-also checks its ten expected outcomes in both modes. Neither is a mathematical proof.
+Use a disposable copy: replay drivers replace only their own review receipts. Original target bytes are authenticated; mutation tests affect temporary copies only. Ordinary/optimized Python and bounded GNU grep fixtures were executed. No compiler installation, Lean/Lake/Comparator/Nanoda build, broad numerical campaign or network request is performed by these Python checks.
 
-## Frozen source copies
+`pass2/lean/XiInputNonvacuity.lean` and its optional exact-source shell runner are explicitly **NOT RUN**. They are not imported by the trusted project. All prior reviewed claim/source manifests and first-pass consumer/parser files already in PR #798 remain untouched by the patch; the downloadable packet is not a full repository mirror.
 
-`evidence/REVIEWED_PR_CENSUS.tsv` is the original blob
-`0c49ffb662312f402097b576b399e50b642fdfa2` from PR #712 at
-`a6aa936ba8bf538177e34af60db7e2f0a58f8dfd`.
-`evidence/RELEASE_MANIFEST.json` is main's original manifest blob
-`446aec7e1c6d7b1d40a7747f3c9b161d03efdad3`.
-`evidence/REVIEWED_CLAIMS.tsv` is main's original claim manifest blob
-`6a4157460bf0044c6e110a2713f7dfb62bcb6c28`.
-They are copied unchanged, not newly reviewed or generated acceptance records.
-
-The two Python targets under `replay/references/` are exact archived copies of the
-baseline repository files, including the consumer's deliberately preserved flawed
-acceptance behavior. They are not repairs and are not imported into production.
-Main, original research branches, permissions and settings were not changed.
-A read-only metadata export workflow was briefly added on this branch, no run was
-observed, and it was removed; the final diff contains only `reviews/C/` files.
+**Public-release readiness is not cleared.** All-postcut claim splitting, programme/attachment/transitive and branch-only closure, full build/uncataloged statement coverage, imported rights and all-history/access audits remain incomplete. These are C's omissions, not A/B failed reviews. Their outstanding scientific dispositions remain **pending integrator reconciliation**; no unpublished report was a dependency.

@@ -1,0 +1,122 @@
+{
+  "asymptotics_verified_by_replay": false,
+  "cases": [
+    {
+      "case": "pr568_recorded",
+      "command": [
+        "python",
+        "-I",
+        "verify.py"
+      ],
+      "optimized": false,
+      "output_git_blob": "16236ebf67030b3c81178ec0077c3f69e137ef0d",
+      "output_matches_retained_bytes": false,
+      "output_sha256": "3743e7105567e5bfc55502751f7aec586e06b7e743eb30ae2dfbef1b63d16928",
+      "retained_git_blob": "faac15c97c7c39a118f5f8cf4473c9e4e22e30e4",
+      "returncode": 0,
+      "source_git_blob": "c946104810907deb55db18a4f2897e28618a04db",
+      "stderr": "",
+      "stdout": "PASS_T97010_PARITY_GROUPING_HARDENING_ALGEBRA\n-62.71816781856588773240782086465\n"
+    },
+    {
+      "case": "pr568_recorded",
+      "command": [
+        "python",
+        "-I",
+        "-O",
+        "verify.py"
+      ],
+      "optimized": true,
+      "output_git_blob": "16236ebf67030b3c81178ec0077c3f69e137ef0d",
+      "output_matches_retained_bytes": false,
+      "output_sha256": "3743e7105567e5bfc55502751f7aec586e06b7e743eb30ae2dfbef1b63d16928",
+      "retained_git_blob": "faac15c97c7c39a118f5f8cf4473c9e4e22e30e4",
+      "returncode": 0,
+      "source_git_blob": "c946104810907deb55db18a4f2897e28618a04db",
+      "stderr": "",
+      "stdout": "PASS_T97010_PARITY_GROUPING_HARDENING_ALGEBRA\n-62.71816781856588773240782086465\n"
+    },
+    {
+      "case": "pr568_current",
+      "command": [
+        "python",
+        "-I",
+        "verify.py"
+      ],
+      "optimized": false,
+      "output_git_blob": "16236ebf67030b3c81178ec0077c3f69e137ef0d",
+      "output_matches_retained_bytes": true,
+      "output_sha256": "3743e7105567e5bfc55502751f7aec586e06b7e743eb30ae2dfbef1b63d16928",
+      "retained_git_blob": "16236ebf67030b3c81178ec0077c3f69e137ef0d",
+      "returncode": 0,
+      "source_git_blob": "f0e8f85e195162d745477cfb69e68b9b24443289",
+      "stderr": "",
+      "stdout": "PASS_T97010_PARITY_GROUPING_HARDENING_ALGEBRA\n-62.71816781856588773240782086465\n"
+    },
+    {
+      "case": "pr568_current",
+      "command": [
+        "python",
+        "-I",
+        "-O",
+        "verify.py"
+      ],
+      "optimized": true,
+      "output_git_blob": "16236ebf67030b3c81178ec0077c3f69e137ef0d",
+      "output_matches_retained_bytes": true,
+      "output_sha256": "3743e7105567e5bfc55502751f7aec586e06b7e743eb30ae2dfbef1b63d16928",
+      "retained_git_blob": "16236ebf67030b3c81178ec0077c3f69e137ef0d",
+      "returncode": 0,
+      "source_git_blob": "f0e8f85e195162d745477cfb69e68b9b24443289",
+      "stderr": "",
+      "stdout": "PASS_T97010_PARITY_GROUPING_HARDENING_ALGEBRA\n-62.71816781856588773240782086465\n"
+    },
+    {
+      "case": "pr599",
+      "command": [
+        "python",
+        "-I",
+        "verify.py"
+      ],
+      "optimized": false,
+      "output_git_blob": "7082465f6e1c37bf594318528b07b7cf84d64b14",
+      "output_matches_retained_bytes": true,
+      "output_sha256": "ad594acfe7c23191fdb4577e592842cf48ed136ff391543da2e55f1d741a8843",
+      "retained_git_blob": "7082465f6e1c37bf594318528b07b7cf84d64b14",
+      "returncode": 0,
+      "source_git_blob": "121a2767b0e9fe8ed0d76d6146f11807b9a4b587",
+      "stderr": "",
+      "stdout": "PASS_X97910_NEAR_CRITICAL_FACTOR67_ALGEBRA\n0616115be5b6d319f074d6e61182645a07d682afc14188b89eaee3f794e638a5\n"
+    },
+    {
+      "case": "pr599",
+      "command": [
+        "python",
+        "-I",
+        "-O",
+        "verify.py"
+      ],
+      "optimized": true,
+      "output_git_blob": "7082465f6e1c37bf594318528b07b7cf84d64b14",
+      "output_matches_retained_bytes": true,
+      "output_sha256": "ad594acfe7c23191fdb4577e592842cf48ed136ff391543da2e55f1d741a8843",
+      "retained_git_blob": "7082465f6e1c37bf594318528b07b7cf84d64b14",
+      "returncode": 0,
+      "source_git_blob": "121a2767b0e9fe8ed0d76d6146f11807b9a4b587",
+      "stderr": "",
+      "stdout": "PASS_X97910_NEAR_CRITICAL_FACTOR67_ALGEBRA\n0616115be5b6d319f074d6e61182645a07d682afc14188b89eaee3f794e638a5\n"
+    }
+  ],
+  "native_annular_source_recomputed": false,
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "pr568_old_new_producer_outputs_identical": true,
+  "pr568_old_new_retained_json_semantically_identical": true,
+  "pr568_old_retained_byte_replay_difference": "JSON formatting only; reconstructed old bytes authenticated",
+  "pr599_output_matches_retained_bytes": true,
+  "pr599_payload_digest_independently_recomputed": "0616115be5b6d319f074d6e61182645a07d682afc14188b89eaee3f794e638a5",
+  "python_version": "3.13.5",
+  "rh_established": false,
+  "schema": "riemann.review.C.packet-replay.v2",
+  "scope": "Original bounded fixtures only; exact finite algebra and unverified imported decimal endpoints / floating sanity proxies",
+  "subprocesses": 6
+}

@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the pass-two inventory structure, NOT scientific review completeness.
-
-Run pass2/scripts/validate_pass2.py for the per-object source comparison receipts.
-"""
+"""Validate this inventory's syntax and declared denominator, NOT review completeness."""
 from __future__ import annotations
 import argparse
 import csv
@@ -49,18 +46,14 @@ def check(data: bytes) -> dict:
         raise ValueError('postcut denominator differs')
     matches = sum(r['coverage'] == 'B1' for r in old)
     unchecked = sum(r['coverage'] == 'B0' for r in old)
-    differences = sum(r['coverage'] == 'B2' for r in old)
     absent = sum(r['coverage'] == 'historical-absence' for r in old)
-    if (len(rows), matches, differences, unchecked, absent) != (566, 338, 2, 0, 1):
-        raise ValueError('declared pass-two counts differ')
-    if {int(r['item_id'][4:]) for r in old if r['coverage'] == 'B2'} != {568, 599}:
-        raise ValueError('source-difference set differs')
+    if (len(rows), matches, unchecked, absent) != (566, 28, 312, 1):
+        raise ValueError('declared first-pass counts differ')
     return {
         'inventory_structure_valid': True,
         'review_completeness_certified': False,
         'rows': len(rows), 'historical_rows': len(old), 'real_historical_prs': len(old)-absent,
-        'historical_heads_compared': matches + differences, 'historical_heads_uncompared': unchecked,
-        'historical_heads_matching': matches, 'historical_heads_different': differences,
+        'historical_heads_compared': matches, 'historical_heads_uncompared': unchecked,
         'historical_no_object_slots': absent, 'postcut_prs': len(prs), 'programme_issues': len(issues),
         'sha256': hashlib.sha256(data).hexdigest(),
         'git_blob': hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest(),

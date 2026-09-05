@@ -1,143 +1,117 @@
-# Reviewer C — independent validation and coverage ledger
+# Reviewer C — second-pass independent validation and coverage
 
-**Disposition: PUBLIC-RELEASE READINESS NOT CLEARED. This is an independent first-pass audit, not a complete scientific re-review or a completeness certificate.** Outstanding A/B scientific dispositions are **pending integrator reconciliation**. They are not failed reviews, accepted claims, or dependencies on unpublished work. The C coverage omissions below are C's omissions and must not be attributed to A/B.
+**Historical head-comparison coverage is complete for its declared 340-PR denominator. Full research/public-release coverage is not complete. A decisive source-level nonvacuity defect was found in the formal actual-Xi input package.**
 
-Repository: `GettysburgResearch/riemann` (stable ID `1309150028`). Review branch: `review/C/2026-09-05-post-release-audit`; review PR **#798**. The controlling baseline is `8d16f8d9c475db290bc85e53d775b93b9bcdb336`, root tree `91742c176e5f7e5df8669e9a55f258c4889a1c12`. Initial observation anchor: `2026-09-05T15:36:41Z`. Reads continued afterwards; this is a collection of exact per-object versions, not an atomic snapshot of all mutable GitHub discussions. No main, original research branch, permissions or repository settings were changed.
+Scientific baseline: `GettysburgResearch/riemann@8d16f8d9c475db290bc85e53d775b93b9bcdb336`.
+Existing review PR: **#798**, branch `review/C/2026-09-05-post-release-audit`.
+Exact published head read back: **`7466ad8081101508be7c7acf0065cb2e0944a639`**.
 
-## 1. Published census and its exact denominator
+**Publication boundary:** this second pass is a prepared review-only patch, not a new pushed commit. The currently exposed GitHub actions are read-only; discovery of `update` returned no tools, and the installed-plugin search did not expose an alternate write action. No main or research branch, setting, permission or workflow was changed. `pass2/PUBLICATION.json` separates the existing published head from the unpushed deliverables. Nothing here claims an asynchronous publication.
 
-The anchor census was published first, at `9ba87fb856ecf5ed45b4bc8bd9dd4daa2fed57da`, before the substantive audit. `CENSUS.tsv` now contains the individually enumerated historical heads, post-review-cut PR heads, all eleven programme slots, inspected claim splits, source references, formal/computation checks, and explicit coverage debts.
+C worked independently. Outstanding A/B scientific dispositions are **pending integrator reconciliation**, not failed reviews or accepted claims. C's own omitted work remains C's responsibility. The first-pass report and census are preserved unchanged in `pass2/evidence/PASS1_*`.
 
-The previous release is anchored to its **actual** manifests, not to whatever a PR branch happens to contain today:
+## 1. What coverage was completed
 
-| Object | Frozen identity | What was checked |
-|---|---|---|
-| Main release manifest | `canonical/2026-08-22/manifest.json`, blob `446aec7e1c6d7b1d40a7747f3c9b161d03efdad3` at the baseline | Full content read; links reviewer/source identities |
-| Previous Reviewer C source census | PR #712, `a6aa936ba8bf538177e34af60db7e2f0a58f8dfd`, `review/2026-08-22/coverage/PR_CENSUS.tsv`, blob `0c49ffb662312f402097b576b399e50b642fdfa2` | All 341 head cells transcribed by line-window reads |
-| Previous Reviewer D reconciliation | PR #721, `06c8ea18ffe20c7efa01b0fdacb8ebea0a2b5b22` | Metadata and its release-manifest binding read; not a fresh review of D's mathematics |
-| Reviewed claim manifest | `canonical/2026-08-22/claims.tsv`, blob `6a4157460bf0044c6e110a2713f7dfb62bcb6c28` | Identity/size 95,757 bytes pinned; not all 139 claim proofs reread |
+| Review aspect | Exact scope and outcome |
+|---|---|
+| Historical source heads | All **312** previously unchecked PR heads were read. Combined with **28** first-pass observations, this covers **340/340** real sources: **338 MATCH**, **#568 and #599 DIFFERENT**. The explicit absent #417 is not a PR or failed review. |
+| Historical source deltas | Two #568 paths and fourteen #599 paths enumerated. Both #568 text artifacts and all thirteen #599 text files inspected; one archival PDF remains uninspected. Four recovered #599 claim texts independently desk-audited at their exact head. |
+| Formal release catalog | All **31 canonical delta rows and 6 API rows** reconciled. All **34 declaration-bearing catalog entries**, comprising **33 unique declarations in 15 defining modules**, read through their declaration and body. Three canonical rows are open producer estimates without declarations. |
+| Critical shared input | Entire Xi ChallengeDeps input file read, including normalization, source enumerations and all input fields. Empty-input proof reconstructed independently; a regression candidate is supplied but uncompiled. |
+| Bounded computation | Six author-script executions, six mutated-script executions and thirty GNU grep executions, plus an independently written exact finite-algebra checker and fail-closed inventory tests. See retained run receipts and reproduction commands. |
 
-There are **341 historical census rows: 340 real PR sources and the expressly absent #417**. The historical census also includes #337 and #368–374; it is not the same denominator as the 333 numbered dispositions #375–707. The release's 139 claim rows are not 139 independently rebuilt formal theorems.
+This does not mean 340 PRs were mathematically re-proved. Nor do 33 read declarations constitute all resident Lean declarations or full transitive import/kernel coverage. The denominator is stated so that version coverage, declaration inspection, mathematical validity, compilation and public readiness cannot be conflated.
 
-There are **79 PR objects beyond the #707 review cut through #797**, with exact observed heads, and eleven programme issues: **#736–741, #743, #744, #746, #763, #764**. This is a deliberate superset of literal post-release creation dates: release-preparation/reconciliation PRs #708–722 are retained. #742 and #745 are PRs, not missing programme issues. #798 is this audit and is outside that source denominator.
+## 2. Source census and observation semantics
 
-Five additional older active PRs outside the 341-row manifest are recorded: #348, #351, #352, #355, #356. A post-release `updated_at` is only a discovery signal; it does not prove that mathematical files changed.
+`CENSUS.tsv` retains 566 core inventory records, including the original 341 historical rows (340 real PRs and the absent #417), 79 post-review-cut PR objects through #797, all eleven programmes, selected claim/external/dependency records and explicit omissions. The historical PR set is `{337} ∪ ({368,…,707} \ {417})`. The older 333 numbered dispositions and 139 canonical claim rows are different denominators.
 
-### Coverage vocabulary
+`pass2/HISTORICAL_HEAD_COMPARISON.tsv` gives both the recorded reviewed-source SHA and observed current SHA for each real historical source, with observation pass, time, endpoint and comparison. The original `frozen_source` column was not overwritten. Updated coverage `B1` means a head match; `B2` means a source difference requiring its own delta treatment; neither grants scientific acceptance.
 
-- `B1`: previous reviewed head and a fresh current PR head match. This is a version check, not a new mathematical acceptance.
-- `B0`: previous reviewed source identity is known; the current head/delta was **not** independently compared.
-- `P0`: frozen PR-level metadata inventory only; not exhaustive file/claim reading.
-- `P1`: selected source/claim or external-boundary inspection in addition to PR metadata; still not a full packet review.
-- `H0`: retain the exact historical scope; no new scientific verdict.
-- `C0`: C owns documentation, infrastructure, source/validation and extraction review; no mathematical acceptance is implied.
-- `pending integrator reconciliation`: A/B scientific routing only. Mixed inspected packets have separate claim and C rows. **The split is not exhaustive for uninspected packets.**
+The 28 earlier observations are explicitly inherited, not claimed as new reads. The 312 fresh head fields were transcribed from GitHub connector GET responses and retained in `pass2/evidence/observed_heads.json`. This is not a signed raw API export or an atomic snapshot of every mutable repository ref. The offline checker can test consistency with those receipts; it cannot independently authenticate that an API read occurred or that no later mutation happened.
 
-Every abbreviated locator `PRn` means that PR's files at the row's frozen source, not its moving branch. `BASE` means the baseline above. An issue/comment has no intrinsic Git commit: those rows use typed `issue:n@C-observation-2026-09-05` identities and explicitly disclose the absence of a complete immutable body archive. A short SHA remains `UNRESOLVED_SHORT_SHA`, never a fabricated 40-digit pin.
+Both differing head commits precede August 22. Therefore these are **reviewed-source selection differences**, not evidence of post-release changes based only on a later `updated_at`.
 
-## 2. Older changes and direct-main accounting
+## 3. #568: replay-only difference, bounded equivalence checked
 
-Fresh head checks matched the prior source for **28** historical PRs (#370–389 and #700–707). The remaining **312 real historical heads were not freshly compared**. Thus this report does not establish that all older reviewed branches stayed unchanged. They remain individually listed as `B0`, rather than silently inheriting present-day acceptance. The #417 no-object row is not counted as an unperformed comparison.
+Recorded source: `085d046905bfd32a5725632650039e58bb7fc1f7`.
+Observed head: `3a70470e3a8bbd60e0b7387ea46fd391cfb1d2e2`.
+Head commit date: `2026-08-17T12:57:21Z`. Ahead by one commit.
 
-The entire first-parent main chain from the release to the chosen baseline was inspected:
+Only `experiments/X-97010-parity-grouping-hardening/verify.py` and its `results/verification.json` differ. The script change adds comments and changes a value iteration into key/value iteration with an unused key. Exact old and new script bytes were authenticated by Git blobs `c946104810907deb55db18a4f2897e28618a04db` and `f0e8f85e195162d745477cfb69e68b9b24443289`. The old script and old JSON formatting were reconstructed from the read source/diff and then checked against their exact Git blob identities, rather than assumed identical.
 
-| Main commit | First parent | Recorded integration source |
-|---|---|---|
-| `852d8aa05c701ea7818ce8a50543e68987fef5cc` (#722) | `677203992eb0168920365ee45ae9db76bfa97dcf` | `99dcb03f431d06032d205e6a6868616a108e4a99` |
-| `573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f` (#732) | `852d8aa05c701ea7818ce8a50543e68987fef5cc` | `b2c92374d42836b60210bc5700f04a83c965750e` |
-| `6dda8b5125457ed936330229f8c9eb6491728e76` (#761) | `573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f` | `74570d73194a1c74a39ea1f3ce58771cb0929894` |
-| `8d16f8d9c475db290bc85e53d775b93b9bcdb336` (#794) | `6dda8b5125457ed936330229f8c9eb6491728e76` | `c4cbfad34c21d7dfe63e5ca99bb68be58719aa99` |
+Old/new scripts in ordinary/optimized Python produced the same output bytes. The earlier retained JSON differs only in formatting; its exact historical bytes were also authenticated. C's verdict is **replay delta resolved, no claim-file change**.
 
-There is no separate nonmerge first-parent commit in that interval. This does not mean all merged content is reviewed. The exact compare from `6dda8b...` to the baseline lists only seven navigation/access-guidance paths; **no `formal/` change**. Therefore formal-v0.1's main-tree sources did not change in that final main increment. The full bootstrap/reconciliation diff was not independently line-reviewed.
+The result is not a fresh certificate of the imported directed-interval endpoints. The checker combines copied Decimal endpoints, finite parity data and a hardcoded factorization comparison. Its scope is not ASHP67, a new Landau theorem or RH. The independent algebra checker in this pass supplies a separate symbolic factorization test rather than counting the duplicated hardcoded tuple as a proof.
 
-A final direct ref check confirms PR #722 at `99dcb03f431d06032d205e6a6868616a108e4a99`, matching its merged second parent. PR #715 is the distinct `99cc94c48bafd9b96141f7cef9f1e7aa83012747`. An earlier working-note conflation of these similar prefixes was corrected before publication; it is not a repository defect. Version-aware extraction remains necessary, but no #722 head mismatch is reported.
+## 4. #599: a substantive packet beyond the historical census pin
 
-## 3. Programme and deposit audit
+Recorded source: `223f11259b3e7134f78d6492795e6e94caca8be3`.
+Observed head: `8daa0a5d94de56c68a1ce710824b26cacc1a9bbc`.
+Head commit date: `2026-08-18T06:10:22Z`. Ahead by four commits; fourteen added paths.
 
-All eleven bodies were requested. All comment collections were acquired through the connector; the displayed long bodies/threads were not all fully inspected or immutably archived. #739 (one comment), #744 (two), #746 (one), and #763 (two) had all comment bodies read. #740 and #764 returned zero comments. #736, #737, #738, #741 and #743 received selected-body reading; #763/#764 long objective bodies were only partially returned. **Complete transitive reference closure is not certified.**
+The provenance files explain why `223f…` occurs: it is the intentional PR #590 scientific freeze. Publication base `4f1283c67f0d4a4b504badd4c4113ba227521162` includes two PDF/publisher-only commits. The new factor-67 route was reidentified from occupied 97900-series IDs to 97910-series IDs. That lineage is not itself a malformed source lock. The historical #599 census row does not identify the final new packet. Whether another exact review covers it is **pending integrator reconciliation**, not assumed absent from all other reports.
 
-Confirmed dependencies requiring preservation include:
+### Independent claim dispositions
 
-- #743 → #713 → #715/#718/#719/#751; #746 → #727/#730, with #719's carrier correction binding the withdrawn unquotiented packing gate.
-- #744 → #714/#716/#720/#723/#724/#726/#729/#731/#772, with exact older checkpoint SHAs distinct from latest PR heads.
-- #739 → #771; #763 → #764 and #771, distinct from a complete source-to-principal theorem.
-- #738/#741 → #752/#756. Comments `5404086969` and `5404087087` explicitly downgrade the r=4 scout: script, coefficient numerators, exact domain and grid bounds were not retained. The 24,346+34,225 zero-hit totals are not reproducible evidence. The cited short correction `709b6b36` remains unresolved here.
+| Claim | C's reconstructed argument and boundary |
+|---|---|
+| L-97910 | The complete small-prime expansion gives `a ∏(1−1/p)` with error `O(X^(−1/2) ∏(1+p^(−1/2)))`. At `Z=(κ log X log log X)^2`, fixed `κ<1/2` gives error `X^(κ−1/2+o(1))`. The strict exponent is consistent given the declared base asymptotic and PNT/Mertens inputs; those transitive source theorems were not fully re-audited. |
+| L-97911 | The largest-prime ownership identity is exact. The terminal strip bound `O(H²/log X)` is small relative to the cube when `H² log Z=o(log X)`. The immediate owner-child scale `X/p` must not be confused with a fully expanded product-child scale. |
+| L-97912 | Separating the positive Euler main leaves an exact signed remainder. The bulk estimate has exponent `κ+(β−1)/2`, negative for `β<1−2κ`; the product-boundary remainder remains unsigned/uncontrolled. This is not a positive asymptotic for the native whole source. |
+| T-97910 | ESBLP67 and AFPBR67 are two alternative open sufficient interfaces, not two already-proved estimates or automatically intersectable localizations. The all-scale source/annular-consumer composition still needs its exact dependencies. No open signed gate was proved by C. |
 
-`CENSUS.tsv` records the concrete older checkpoints encountered. Suggested branch names in programme specifications are not called actual deposits without resolution. The absence of a full branch-ref inventory, all attachment payloads and all issue/PR review comments is a release-census blocker, not a claim that those materials do not exist. The reports do not rely on A/B's unpublished work.
+For a decomposition `M + E + R`, the exact sign condition is `R ≥ −M−E`. Knowing only `|E|≤B`, the safe sufficient condition is `R ≥ −M+B`, not `R ≥ −M−B`. This is a clarification for downstream adapters, not an allegation that the packet explicitly proves the wrong sign.
 
-## 4. Bounded computational replay actually executed
+The author checker uses a rational toy source and ordinary floating-point asymptotic sanity values. Its full committed JSON was reproduced byte-for-byte, with SHA256 `ad594acfe7c23191fdb4577e592842cf48ed136ff391543da2e55f1d741a8843`; the embedded canonical payload digest is separately checked. The program does not read and authenticate the native annular source or independently prove PNT, Mertens or its named RH-facing estimates. A self-hash does not add those missing obligations.
 
-No broad prime, zero, field, conductor or matrix campaign was launched. No optimizer or imported numerical sidecar was executed. Two short source files were read in full, recreated byte-for-byte locally, authenticated using the Git blob hash, and run only on reviewer-created bounded fixtures in temporary directories. The fixtures are **not** the original scientific data.
+The inherited `.github/workflows/t97700-publish-pdf.yml` is a branch-specific publisher with `contents: write`, persistent checkout credentials and `git push`. It verifies a fixed downloaded PDF hash, but should not be copied blindly as scientific-checker infrastructure. It was not run. The original source archive and archival PDF were not acquired, visually reviewed or rights-cleared.
 
-### 4.1 Canonical consumer acceptance failure
+## 5. Formal fidelity: a concrete failure, not merely missing build coverage
 
-Source: `canonical/consumers/mellin-landau/validate_consumer.py` at the baseline; **1,880 bytes**, Git blob **`950d5f1193724bd975111a1b37d55e19c9270a35`**. Its complete source and associated CLAIMS/EDGES were read, but the replay below uses synthetic structural tables to isolate acceptance behavior.
+Read **[the complete nonvacuity proof](pass2/FORMAL_NONVACUITY.md)** first.
 
-Command pattern: `python validate_consumer.py` and `python -O validate_consumer.py`; six cases in each mode, five-second timeout per subprocess, isolated working directories and reduced environment.
+The shared definition uses the raw totalized product `riemannXi(s) = (1/2) s(s−1) completedRiemannZeta(s)`. It is exactly zero at `s=1`. Consequently `centeredXi(1/2)=0`, and Lean's division-by-zero convention makes `actualXiNodeP(1/2)=0` without evaluating the derivative. But an `ActualXiOrderThreeInputs` instance supplies strict positivity at every positive node and a grouped expansion to which that field applies. At `x=1/2` it implies `0<0`. The input type is empty.
 
-| Fixture | Normal exit | `-O` exit | Independent observation |
-|---|---:|---:|---|
-| Minimal valid shape | 0 | 0 | Structural fixture accepted; not an authentic scientific replay |
-| Empty census | 1 | 0 | Optimization removes mandatory checks |
-| False VERIFIED labels on open claims | 1 | 0 | Optimization removes status gate |
-| Duplicate semantic ID | 0 | 0 | Dictionary construction overwrites duplicate identity |
-| No open premise | 1 | 0 | Optimization removes premise gate |
-| Malformed source SHA | 0 | 0 | Source identity is not authenticated by this validator |
+Five actual-Xi canonical entries therefore have a **FAIL_NONVACUITY_OF_HEADLINE_INPUT** disposition at this source, despite their historically reported `PROVED_CONDITIONAL` labels. Correctly proving an implication from empty inputs is not Lean unsoundness. It also does not disprove the ordinary Xi theorem. It blocks promotion of these declarations as a usable source-faithful realization until the input and function are repaired and reviewed.
 
-The file uses `assert` for acceptance and writes `validation.json` itself. It performs finite algebra examples, not a primitive-source proof of the general Mellin–Landau theorem. **It must not be the sole promotion gate.** This result does not demonstrate that the whole repository pipeline accepts a false theorem: it identifies this validator's concrete boundary. Replace assertions with explicit exceptions, reject duplicates, validate typed exact identities, and separate production from verification. Full command/stdout/stderr receipts are supplied in the bounded replay bundle.
+Independently, an injective `ℕ → ReflectedOffLineOrbit` cannot encode empty or finite off-line spectra. The repair must cover those cases rather than merely correcting the point `x=1/2`. Pinned Mathlib provides an entire `completedRiemannZeta₀` and a proved identity giving the normalization repair `ξ(s) = 1/2 + s(s−1)Λ₀(s)/2`. The packet includes an uncompiled Lean regression and exact-source runner, not an applied repair or successful build.
 
-### 4.2 Formal axiom-output parser controls
+The general `NonremovableAt` predicate is merely `¬ AnalyticAt` for the assigned function value. It is weaker than punctured analytic nonextendability; the point-spike counterexample and implications are given in the same note. The transfer lemmas remain valid for that weaker predicate, and negative meromorphic-order hypotheses make the actual pole application stronger. No false conditional RH proof is inferred solely from the name.
 
-Source: `formal/scripts/audit_axiom_output.py` at the baseline; **3,534 bytes**, Git blob **`ef83fe752f6612617612b259109cfdcab8b108bc`**.
+The catalog counts themselves reconcile: 31 canonical rows have 28 declaration-bearing entries and three open producer entries; six API mappings make 34 catalog entries and 33 distinct declarations. The reported ten proved statuses include three formalized refutations. The bootstrap RH proposition supplies the additional stated row. These are status/count facts, not thirty-three independent global theorems.
 
-Command pattern: `python [-O] -I audit.py output.txt Print.lean`. Ten cases in each mode, five-second timeout, temporary directories. All **20 expected outcomes** were reproduced: valid allowed-axiom, empty-axiom and multiline outputs pass; missing output, `sorryAx`, custom axioms, unexpected declarations, unterminated lists and garbage after a payload reject. Repeated identical allowed output is accepted because coverage is a set. That does not conceal a missing expected declaration, but is not an exact once-only transcript check.
+## 6. Replays and adversarial outcomes
 
-These are fabricated parser texts, **not actual Lean or Nanoda output**. The parser's source-hash authentication, normal/optimized agreement and rejection behavior are positive evidence about its implementation; they cannot authenticate the origin of a supplied transcript.
+`pass2/reports/` retains stdout/stderr, outcomes, arithmetic classifications and source locks. Replay drivers authenticate copied target bytes before executing them in temporary directories; author code is not installed into production.
 
-## 5. Formal-v0.1: statement and build boundaries
+| Driver | Declared bounded scope |
+|---|---|
+| `replay_changed_packets.py` | Six executions: #568 old/new and #599, each in ordinary and optimized Python. Exact retained output comparisons. |
+| `replay_packet_mutations.py` | Three deliberately corrupted temporary copies, each in two modes. All three reject normally but emit PASS under `python -O`; assertions are not fail-closed acceptance checks. |
+| `replay_tactic_guard.py` | Fifteen text fixtures against the baseline and a candidate PCRE: thirty GNU grep calls. Baseline misses ten ordinary tactic-suggestion spellings and flags `apply?x`. Candidate handles these fixtures but is not a full Lean lexer. |
+| `independent_finite_algebra.py` | Independent commuting formal-variable largest-owner expansion through ranks 0–8 (511 coefficients), separately expanded fixed 5:3 factorization, and an adverse error-sign fixture. The general finite identity also has the direct ownership proof; no asymptotic inference is made from finite testing. |
+| `validate_pass2.py` | Exact archived-source identities, all historical comparison rows, catalog/source boundaries, current-census consistency, and malformed-input rejection tests. It explicitly denies scientific or all-ref completeness certification. |
 
-Full source reads included `Analysis/FixedDetectorConsumer.lean`, `Analysis/LandauConsumer.lean`, `Operator/XiExternalInputs.lean`, the trusted root `RiemannFormal.lean`, `check_no_sorry.sh`, `check_axioms.sh`, and the axiom parser. `Operator/XiOrderThree.lean` was read through line 115, not in its entirety. `FORMAL_V0_1.md` was read as a **reported release record**, not as fresh execution evidence.
+Run, from repository root in a disposable checkout or the unpacked review packet:
 
-Findings:
+```sh
+python reviews/C/check_census.py
+python -O reviews/C/check_census.py
+python reviews/C/pass2/scripts/validate_pass2.py
+python -O reviews/C/pass2/scripts/validate_pass2.py
+python reviews/C/pass2/scripts/replay_changed_packets.py
+python reviews/C/pass2/scripts/replay_packet_mutations.py
+python reviews/C/pass2/scripts/replay_tactic_guard.py
+python reviews/C/pass2/scripts/independent_finite_algebra.py
+```
 
-1. The inspected fixed-detector result genuinely uses fixed source/continuation/factor data. The analytic results `MellinLandauBoundarySingularity`, `SubpowerNegativeMassHolomorphy`, `ShiftedReciprocalPoleOrder`, admissible-zero strip/reflection and related continuation hypotheses remain explicit. Its conditional assembly is not an unconditional proof of those premises or RH.
-2. The Landau interface retains finite abscissa, nonzero-a.e., local integrability and analytic-domain hypotheses. Supplying a proposition as a theorem argument is not a custom axiom, but the conclusion remains conditional. The named wrappers do not prove the supplied analytic inputs.
-3. `plattTrudgian_source_lock_exact := rfl` proves equality of metadata. It does not verify the external zero computation. The input package separately carries verified-height, multiplicity-residual, one-use allocation and C2 approximation data. Those dependencies must stay in the public theorem description.
-4. The trusted root does not import `ComparatorSmoke`. Seven Challenge placeholders and their solutions must be tracked separately from trusted production. A repository-wide textual `sorry` count would conflate specifications and proofs. Conversely grep alone does not establish axiom cleanliness.
-5. The axiom driver covers nine explicit print modules plus declarations drawn from release deltas. This is a defined coverage set, not every declaration in every external library. The fresh parser replay did not run the driver or build those declarations.
-6. The exact main toolchain is **`leanprover/lean4:v4.33.0-rc2`**, blob `c084c7fbe586b0276863b66f16d2955a43bc3fc6`. Main's recorded Mathlib pin is `51e6992efd06126df61a496bebf8f49482a4e129`; recorded Zeta23 pin is `cec57f919ccf34e5fa5372b4ba332f7c848bbb6e`. Reported release counts (58 commands, 8,806 jobs, 21 targets, seven comparator pairs, 139 registry rows) are not new C measurements.
+The drivers overwrite only their own review receipts. Temporary path text may differ across runs; compare outcomes and authenticated reproduced artifacts rather than requiring identical logs. The first-pass consumer/parser receipts remain historical evidence, not newly rerun here. The uncompiled Xi regression is explicitly separate from these executed Python/grep tests.
 
-**No local Lean/Lake installation was available; no fresh Lean build, complete axiom transcript, independent kernel run or exhaustive paper-to-Lean statement comparison was performed.** Accessible workflow queries did not supply a current-baseline build receipt. That is missing evidence, not proof that no build ever ran. The full later-formal-PR semantic reconciliation remains outside the inspected subset.
+## 7. Remaining C omissions
 
-## 6. External-source boundaries #787–#791
+`pass2/COVERAGE.tsv` is the controlling scope matrix. Complete claim-level extraction across all 79 later PRs, all new PRs beyond the original cutoff, branch-only deposits, full mutable discussion snapshots, attachments and transitive links remains incomplete. Only the first branch-name search page was examined; it is not an all-branch SHA census. Most later PR coverage remains inherited metadata or selected-source inspection.
 
-| Packet | Exact external source / boundary | C result |
-|---|---|---|
-| #787 PrimeGaps186 | `openai/PrimeGaps186@61340d0b74163003b32756bb16e91d9209a5e330`; Lean 4.34.0-rc2; `kloosterman3_bound`, `kloosterman2_correlation_bound`, `physical_integral_bounds` | Full import formalization audit read. Conditional endpoint; 152 numerical clauses are an external sidecar, not axiom elimination |
-| #787 LongGaps | `openai/LongGapsBetweenPrimes@8f5fa88c88b4750028c05b66b081d56a92418054`; metadata `03a1190d0bc5502d9f54eeb60ad3e45e22b0df0b`; Lean 4.33.0 | Standard-axiom-only status is reported upstream, not independently kernel-replayed. Same 4.33 generation is not the exact main rc2 toolchain |
-| #788 | `AxiomMath/ZetaZeros@4bcaf70e544506c311d83a5a5b143a134b9fc5f7`; Lean 4.34.0-rc2 | Headline hypotheses `hRvM` and `hPC` are not discharged by finite multiset proofs. Upstream CI and separately documented Comparator/Nanoda are different receipts |
-| #789 | `arXiv:2609.04176v1`; PDF SHA256 `1d05b36a5675cb8084935ec6945e004f1af9387c8fae6c48b242b4a94d73bd90` | Current hostile-review disposition is invalid-as-written; scientific confirmation pending integrator reconciliation. Missing 178/235 cell tables and correction propagation must not be hidden by old summaries |
-| #790 | checkpoint-specific V100, Platt–Trudgian and interval-Gamma inputs in the evolving research packet | No zero census or fresh interval-Gamma validation performed by C. Old checkpoint receipts cannot validate later all-order claims |
-| #791 | FLT reference at `aa2d8b34692b16c70f699536de0d8e75b9a3e9ef`, README blob `f3cfcb92443c29a8ce87494f6c9a7b57e40129e9` | Reference-only documentation, not a code import, trusted dependency or reviewed proof |
+The formal pass now reaches every listed declaration's definition and body, but not every uncataloged helper, external analytic proof, upstream dependency or compiled environment. No Lean/Lake/Comparator/Nanoda run, compiler installation, broad numerical campaign, full-history secret/PII audit, all-import license/NOTICE/paper-rights audit, or owner ruleset/access verification occurred. The #599 PDF is explicitly outside the reviewed content. C does not claim these are complete or depend on an unpublished A/B report to complete them.
 
-The #787 numerical environment states Python 3.12.13, NumPy 2.2.6, python-flint 0.9.0 and **FLINT 3.6.0 with a signed-convolution correction**. The exact patch/binary provenance and all clause coverage were not independently checked. Preserve isolation; do not silently upgrade the root toolchain.
-
-Apache-2.0 LICENSE headers were fetched at the exact code pins: PrimeGaps blob `261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64`, LongGaps `d645695673349e3947e8e5ae42332d0ac3164cd7`, AxiomMath `57bc88a15a0ee8266c259b2667e64608d3f7e292`. **This is not a full NOTICE/attribution or paper-permission audit.** Paper PDF receipts/rendering assertions were read as prior import records; C did not render or rereview those PDFs. No code license is inferred to cover a paper or attachment.
-
-## 7. Navigation, reproducibility and access
-
-The current README, integration entrypoints, CONTRIBUTING and docs/REVIEWING provide a useful separation of exploration, accepted exact-SHA mathematics, computation and owner responsibility. Their warnings against finite-to-global extrapolation, hash-only self-attestation and claim-ID reuse should be preserved. Navigation does not make branch-only work resident on main.
-
-Confirmed gaps: post-release collision rows are absent from the old aliases catalogue; a whole-repository setup/profile lock is not present at the inspected root; no root LICENSE or SECURITY file was observed in that root inventory. `docs/PUBLIC_LAUNCH.md` does not exist (not a claimed broken existing link). No complete recursive link, license, personal-data or secret-history scan was performed.
-
-`docs/REVIEWING.md` explicitly says that private Free main is not technically protected. CONTRIBUTING's Write-access policy is therefore not an enforced branch restriction. Owner-only launch actions are listed separately in RELEASE_BLOCKERS; C did not alter them.
-
-`.github/workflows/formal.yml` uses ordinary PR events and `contents: read`, positive safety properties. It also uses mutable `actions/checkout@v4`, `ubuntu-latest` and an Elan installer downloaded from `master` into a shell. No claim of exploitation is made; pin, verify and isolate these dependencies before opening privileged contributor workflows.
-
-## 8. Commands, failed acquisitions and omitted checks
-
-Actual local commands included: `python scripts/replay_consumer.py`; `python scripts/replay_axiom_parser.py`; Git-blob SHA1 reconstruction using `b'blob '+length+b'\\0'+bytes`; JSON/TSV parsing and census denominator checks. Replay subprocesses were bounded to five seconds and used reviewer-created data. Fixture receipt files record each command, exit and output. Git exists locally; `gh`, `lean`, and `lake` were not available. Direct GitHub DNS/network acquisition failed. Connector reads, rather than an unverified local checkout, provided source bytes.
-
-A one-shot **read-only metadata export**, with fixed baseline, pinned Actions and caps, was added only on this review branch at `2f191c487a49dad2f4ba6a63d068a2e2f97ceb0f`. Branch and exact-head Actions queries returned no run. It was removed at `bc7ccb0da6c87b588c4f96ccfd14eaa58cb1cfc9`; it is absent from the final diff. No export, research computation or success was inferred. The cause of no run is unconfirmed. No permissions/settings were changed.
-
-Unperformed: 312 historical current-head comparisons; complete all-branch/reference/deposit closure; exhaustive claim-level splits; every producer/checker or all raw coverage artifacts; full 139-claim formal statement audit; clean exact-toolchain builds; full license/NOTICE/attachment permission audit; complete Git-history secret/PII scan; owner access/ruleset enforcement checks. These are explicit release-closure debts. **This first-pass report is independent and finished as a report, but does not certify complete coverage of the requested universe.** The integrator should use the narrow completed findings and the explicit omission ledger, not infer acceptance from the size of the census.
+**Public-release readiness remains not cleared.** The narrower historical version census is closed; the wider scientific, build and launch attestations are not.
