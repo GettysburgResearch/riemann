@@ -1,0 +1,46 @@
+{
+  "PNT_machine_proved": false,
+  "RH_proved": false,
+  "arithmetic": "EXACT_INTEGER_AND_RATIONAL",
+  "counts": {
+    "full_prime_update": 15,
+    "horizon_faithfulness": 30,
+    "independent_full_energy": 48,
+    "log_tail_majorant": 5,
+    "normalized_ledger": 15,
+    "positive_energy": 48,
+    "rational_witness_values": 1,
+    "stopped_gram": 192,
+    "stopped_prime_update": 75,
+    "three_prime_negative_correlation": 4,
+    "three_prime_norm_excess": 4,
+    "three_prime_stopped_witness": 4,
+    "torus_diagonal": 48
+  },
+  "infinite_asymptotic_machine_proved": false,
+  "large_prime_sums_evaluated": false,
+  "status": "PASS_BOUNDED_EXACT_CONTROLS",
+  "total_checks": 489,
+  "witnesses": [
+    {
+      "excess_energy": "1/15",
+      "scaled_correlation": "-1/30",
+      "two_a": 1
+    },
+    {
+      "excess_energy": "11/900",
+      "scaled_correlation": "-11/1800",
+      "two_a": 2
+    },
+    {
+      "excess_energy": "91/40500",
+      "scaled_correlation": "-91/81000",
+      "two_a": 3
+    },
+    {
+      "excess_energy": "671/1620000",
+      "scaled_correlation": "-671/3240000",
+      "two_a": 4
+    }
+  ]
+}
