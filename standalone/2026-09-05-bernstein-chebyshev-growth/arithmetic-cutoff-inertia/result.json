@@ -1,0 +1,133 @@
+{
+  "bump_integrals": [
+    "1/12012",
+    "1/770",
+    "2/35",
+    "36/7"
+  ],
+  "check_groups": {
+    "annihilation": 24,
+    "bump": 17,
+    "constants": 9,
+    "continuum": 12,
+    "majorant": 35,
+    "multipliers": 23,
+    "norms": 18,
+    "source_integrity": 3
+  },
+  "checks": 141,
+  "continuum_laplace_fixtures": [
+    {
+      "X": "1/1",
+      "laplace": "-7/24",
+      "r": "5/2"
+    },
+    {
+      "X": "1/1",
+      "laplace": "-1/5",
+      "r": "7/2"
+    },
+    {
+      "X": "1/1",
+      "laplace": "-11/72",
+      "r": "9/2"
+    },
+    {
+      "X": "2/1",
+      "laplace": "-17/96",
+      "r": "5/2"
+    },
+    {
+      "X": "2/1",
+      "laplace": "-9/80",
+      "r": "7/2"
+    },
+    {
+      "X": "2/1",
+      "laplace": "-95/1152",
+      "r": "9/2"
+    },
+    {
+      "X": "4/1",
+      "laplace": "-37/384",
+      "r": "5/2"
+    },
+    {
+      "X": "4/1",
+      "laplace": "-37/640",
+      "r": "7/2"
+    },
+    {
+      "X": "4/1",
+      "laplace": "-767/18432",
+      "r": "9/2"
+    },
+    {
+      "X": "10/1",
+      "laplace": "-97/2400",
+      "r": "5/2"
+    },
+    {
+      "X": "10/1",
+      "laplace": "-233/10000",
+      "r": "7/2"
+    },
+    {
+      "X": "10/1",
+      "laplace": "-11999/720000",
+      "r": "9/2"
+    }
+  ],
+  "exp_39_20_lower": "35844308849/5120000000",
+  "norm_fixtures": [
+    {
+      "L": "1/1",
+      "derivative_norm_squared": "63713/12320",
+      "h_norm_squared": "55541/960960",
+      "ratio": "4969614/55541"
+    },
+    {
+      "L": "2/1",
+      "derivative_norm_squared": "4049/24640",
+      "h_norm_squared": "3593/480480",
+      "ratio": "157911/7186"
+    },
+    {
+      "L": "15/1",
+      "derivative_norm_squared": "159/7700000",
+      "h_norm_squared": "13589/98280000",
+      "ratio": "111618/747395"
+    },
+    {
+      "L": "30/1",
+      "derivative_norm_squared": "551/138600000",
+      "h_norm_squared": "97219/540540000",
+      "ratio": "21489/972190"
+    },
+    {
+      "L": "60/1",
+      "derivative_norm_squared": "827/554400000",
+      "h_norm_squared": "174743/540540000",
+      "ratio": "32253/6989720"
+    },
+    {
+      "L": "90/1",
+      "derivative_norm_squared": "95173/101039400000",
+      "h_norm_squared": "6940819/14594580000",
+      "ratio": "1237249/624673710"
+    }
+  ],
+  "parent_blob": "81d7d5db7a25f5875a08c10235fdb514d67cc744",
+  "parent_commit": "39c13367f4b3956631ea1e00fac6c3005fc32057",
+  "scope": "EXACT_FINITE_ALGEBRA_AND_SOURCE_INTEGRITY; analytic proofs require review; RH_UNPROVED",
+  "source_sha256": {
+    "PROOF.md": "8762b8b19f741bc0d9bc357d7e8f13cef0be8a732c285d2bfa230dec91890cae",
+    "SOURCE_LOCK.json": "715c609bbb1e9404e01fee2f67f89d2bab16fcae2e8d6008e4e9c6bdf1b6b128",
+    "verify_cutoff.py": "7330211c95df8ea812e9e74135d3fa9d061a97e9a52f5a233b56826a94147db7"
+  },
+  "uniform_length_certificate": [
+    "0/1",
+    "1/1",
+    "9/20"
+  ]
+}

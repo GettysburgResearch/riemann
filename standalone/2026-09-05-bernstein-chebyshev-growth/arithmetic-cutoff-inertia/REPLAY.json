@@ -1,0 +1,103 @@
+{
+  "scope": "Execution receipt, not proof of the analytic theorems",
+  "python": "3.13.5",
+  "runs": [
+    {
+      "command": [
+        "python",
+        "verify_cutoff.py",
+        "--check",
+        "result.json"
+      ],
+      "exit": 0,
+      "stdout_sha256": "711393497f579b457c04c5bc50602631891a66a1ef33c9e00dbc91a6b8b45511",
+      "checks": 141
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "verify_cutoff.py",
+        "--check",
+        "result.json"
+      ],
+      "exit": 0,
+      "stdout_sha256": "711393497f579b457c04c5bc50602631891a66a1ef33c9e00dbc91a6b8b45511",
+      "checks": 141
+    }
+  ],
+  "corruption_refusals": [
+    {
+      "mode": "normal",
+      "case": "saved_norm",
+      "exit": 1,
+      "expected_error": "saved result or source digest mismatch"
+    },
+    {
+      "mode": "normal",
+      "case": "float_alias",
+      "exit": 1,
+      "expected_error": "saved result or source digest mismatch"
+    },
+    {
+      "mode": "normal",
+      "case": "boolean_alias",
+      "exit": 1,
+      "expected_error": "saved result or source digest mismatch"
+    },
+    {
+      "mode": "normal",
+      "case": "duplicate_key",
+      "exit": 1,
+      "expected_error": "duplicate JSON key"
+    },
+    {
+      "mode": "normal",
+      "case": "proof_bytes",
+      "exit": 1,
+      "expected_error": "saved result or source digest mismatch"
+    },
+    {
+      "mode": "normal",
+      "case": "parent_lock",
+      "exit": 1,
+      "expected_error": "parent commit lock mismatch"
+    },
+    {
+      "mode": "optimized",
+      "case": "saved_norm",
+      "exit": 1,
+      "expected_error": "saved result or source digest mismatch"
+    },
+    {
+      "mode": "optimized",
+      "case": "float_alias",
+      "exit": 1,
+      "expected_error": "saved result or source digest mismatch"
+    },
+    {
+      "mode": "optimized",
+      "case": "boolean_alias",
+      "exit": 1,
+      "expected_error": "saved result or source digest mismatch"
+    },
+    {
+      "mode": "optimized",
+      "case": "duplicate_key",
+      "exit": 1,
+      "expected_error": "duplicate JSON key"
+    },
+    {
+      "mode": "optimized",
+      "case": "proof_bytes",
+      "exit": 1,
+      "expected_error": "saved result or source digest mismatch"
+    },
+    {
+      "mode": "optimized",
+      "case": "parent_lock",
+      "exit": 1,
+      "expected_error": "parent commit lock mismatch"
+    }
+  ]
+}
