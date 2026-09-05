@@ -1,0 +1,37 @@
+{
+  "repository": "GettysburgResearch/riemann",
+  "repository_id": 1309150028,
+  "own_parent": "634d9a8ec4b0819442e601686a109ff7015b7b0b",
+  "own_branch": "research/astra/20260905-theta-bernstein-exterior-closure",
+  "own_pr": 790,
+  "new_path": "standalone/2026-09-05-astra-theta-count-closure/heat-hankel-pass5",
+  "read_sources": [
+    {
+      "pr": 793,
+      "commit": "f22b67db113d1aa4f986fe35a2fc0321fdff7d47",
+      "paths": [
+        "standalone/2026-09-05-three-route-assault/pass2/R3_HARDY_CAPTURE.md",
+        "standalone/2026-09-05-three-route-assault/pass2/R2_CAUSAL_ENERGY.md"
+      ],
+      "use": "Full proof-text reading, focused mathematical reconstruction; no parent code rerun"
+    },
+    {
+      "pr": 792,
+      "commit": "875e8dd47186e924445533513a1ad405af09d7a7",
+      "paths": [
+        "standalone/2026-09-05-bernstein-chebyshev-growth/prime-energy-boundary/PROOF.md",
+        "standalone/2026-09-05-bernstein-chebyshev-growth/prime-energy-boundary/BOUNDARY.md"
+      ],
+      "use": "Full proof-text reading; diagonal and boundary mechanisms assessed, no parent code rerun"
+    }
+  ],
+  "assumptions": [
+    "Classical invariant xi genus-zero product, unconditional critical strip, and zero count",
+    "Classical Laplace/Hardy isometry and Blaschke/model-space facts, formulas reproduced",
+    "Unconditional Guinand-Weil formula with all multiplicities and endpoint terms"
+  ],
+  "no_finite_zero_verification_used": true,
+  "rh_proved": false,
+  "independent_review": "PENDING",
+  "external_novelty": "NOT_ASSESSED"
+}

@@ -1,0 +1,327 @@
+{
+  "actual_xi_matrix_evaluated": false,
+  "arithmetic": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "checks": 2300,
+  "counterfeit": {
+    "determinant": "-2/15625",
+    "norm_squared": "697",
+    "quadratic_value": "-2",
+    "rayleigh": "-2/697"
+  },
+  "groups": {
+    "confluent_projection_identity": 56,
+    "counterfeit": 5,
+    "counterfeit_matrix": 11,
+    "dyadic_strip_polynomial": 720,
+    "dyadic_strip_ratio": 720,
+    "explicit_formula_endpoint": 6,
+    "finite_pair_inertia": 12,
+    "finite_source_budget": 7,
+    "raw_metric_warning": 1,
+    "safe_source_confluent_matrix": 316,
+    "safe_tail_resolvent": 45,
+    "small_negative_mass_family": 33,
+    "source_divided_difference": 64,
+    "thermal_rank_choice": 75,
+    "tm_metric": 36,
+    "tm_partial_fraction": 18,
+    "tm_source_compiler": 144,
+    "zero_shift_error_decreases": 31
+  },
+  "inertia_fixtures": [
+    {
+      "inertia": [
+        1,
+        0,
+        0
+      ],
+      "pairs": 0,
+      "weight": 1
+    },
+    {
+      "inertia": [
+        1,
+        0,
+        0
+      ],
+      "pairs": 0,
+      "weight": 2
+    },
+    {
+      "inertia": [
+        1,
+        0,
+        0
+      ],
+      "pairs": 0,
+      "weight": 5
+    },
+    {
+      "inertia": [
+        2,
+        1,
+        0
+      ],
+      "pairs": 1,
+      "weight": 1
+    },
+    {
+      "inertia": [
+        2,
+        1,
+        0
+      ],
+      "pairs": 1,
+      "weight": 2
+    },
+    {
+      "inertia": [
+        2,
+        1,
+        0
+      ],
+      "pairs": 1,
+      "weight": 5
+    },
+    {
+      "inertia": [
+        3,
+        2,
+        0
+      ],
+      "pairs": 2,
+      "weight": 1
+    },
+    {
+      "inertia": [
+        3,
+        2,
+        0
+      ],
+      "pairs": 2,
+      "weight": 2
+    },
+    {
+      "inertia": [
+        3,
+        2,
+        0
+      ],
+      "pairs": 2,
+      "weight": 5
+    },
+    {
+      "inertia": [
+        4,
+        3,
+        0
+      ],
+      "pairs": 3,
+      "weight": 1
+    },
+    {
+      "inertia": [
+        4,
+        3,
+        0
+      ],
+      "pairs": 3,
+      "weight": 2
+    },
+    {
+      "inertia": [
+        4,
+        3,
+        0
+      ],
+      "pairs": 3,
+      "weight": 5
+    }
+  ],
+  "infinite_analytic_proof_machine_checked": false,
+  "rh_proved": false,
+  "source_hashes": {
+    "CROSS_REVIEW.md": "ea48eb16cba22e015c58e56cdc4ab821a53f6aaa08e100989b93a7e71043871e",
+    "PROOF.md": "7a15d43e3ba33cb4cd513f553d7d97894ccedd9adfbac47a45c745b4761f76e6",
+    "SOURCE_LOCK.json": "e37aaf0427c2f35d0dcddb30966a5f519e7cd477133e04b2a5b4e13b4f3ae1d2",
+    "verify.py": "e110a5a7244c5d2da5730bc1a1c4c3cc5d4f435a22088c4e90eec1633dffb8b0"
+  },
+  "status": "PASS_HEAT_HANKEL_FINITE_CONTROLS",
+  "thermal_parameters": [
+    {
+      "J": 8,
+      "dimension": 18,
+      "error_upper": "1/3",
+      "k": 1,
+      "tau": "1/100"
+    },
+    {
+      "J": 9,
+      "dimension": 40,
+      "error_upper": "1/9",
+      "k": 2,
+      "tau": "1/100"
+    },
+    {
+      "J": 10,
+      "dimension": 88,
+      "error_upper": "1/81",
+      "k": 4,
+      "tau": "1/100"
+    },
+    {
+      "J": 11,
+      "dimension": 192,
+      "error_upper": "1/6561",
+      "k": 8,
+      "tau": "1/100"
+    },
+    {
+      "J": 12,
+      "dimension": 416,
+      "error_upper": "1/43046721",
+      "k": 16,
+      "tau": "1/100"
+    },
+    {
+      "J": 5,
+      "dimension": 12,
+      "error_upper": "1/3",
+      "k": 1,
+      "tau": "1/10"
+    },
+    {
+      "J": 6,
+      "dimension": 28,
+      "error_upper": "1/9",
+      "k": 2,
+      "tau": "1/10"
+    },
+    {
+      "J": 7,
+      "dimension": 64,
+      "error_upper": "1/81",
+      "k": 4,
+      "tau": "1/10"
+    },
+    {
+      "J": 8,
+      "dimension": 144,
+      "error_upper": "1/6561",
+      "k": 8,
+      "tau": "1/10"
+    },
+    {
+      "J": 9,
+      "dimension": 320,
+      "error_upper": "1/43046721",
+      "k": 16,
+      "tau": "1/10"
+    },
+    {
+      "J": 1,
+      "dimension": 4,
+      "error_upper": "1/3",
+      "k": 1,
+      "tau": "1"
+    },
+    {
+      "J": 2,
+      "dimension": 12,
+      "error_upper": "1/9",
+      "k": 2,
+      "tau": "1"
+    },
+    {
+      "J": 3,
+      "dimension": 32,
+      "error_upper": "1/81",
+      "k": 4,
+      "tau": "1"
+    },
+    {
+      "J": 4,
+      "dimension": 80,
+      "error_upper": "1/6561",
+      "k": 8,
+      "tau": "1"
+    },
+    {
+      "J": 5,
+      "dimension": 192,
+      "error_upper": "1/43046721",
+      "k": 16,
+      "tau": "1"
+    },
+    {
+      "J": 0,
+      "dimension": 2,
+      "error_upper": "1/3",
+      "k": 1,
+      "tau": "2"
+    },
+    {
+      "J": 1,
+      "dimension": 8,
+      "error_upper": "1/9",
+      "k": 2,
+      "tau": "2"
+    },
+    {
+      "J": 2,
+      "dimension": 24,
+      "error_upper": "1/81",
+      "k": 4,
+      "tau": "2"
+    },
+    {
+      "J": 3,
+      "dimension": 64,
+      "error_upper": "1/6561",
+      "k": 8,
+      "tau": "2"
+    },
+    {
+      "J": 4,
+      "dimension": 160,
+      "error_upper": "1/43046721",
+      "k": 16,
+      "tau": "2"
+    },
+    {
+      "J": 0,
+      "dimension": 2,
+      "error_upper": "1/3",
+      "k": 1,
+      "tau": "10"
+    },
+    {
+      "J": 0,
+      "dimension": 4,
+      "error_upper": "1/9",
+      "k": 2,
+      "tau": "10"
+    },
+    {
+      "J": 0,
+      "dimension": 8,
+      "error_upper": "1/81",
+      "k": 4,
+      "tau": "10"
+    },
+    {
+      "J": 1,
+      "dimension": 32,
+      "error_upper": "1/6561",
+      "k": 8,
+      "tau": "10"
+    },
+    {
+      "J": 2,
+      "dimension": 96,
+      "error_upper": "1/43046721",
+      "k": 16,
+      "tau": "10"
+    }
+  ]
+}
