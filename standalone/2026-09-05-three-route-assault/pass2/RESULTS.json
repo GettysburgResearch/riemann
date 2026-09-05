@@ -1,0 +1,33 @@
+{
+  "RH_proved": false,
+  "actual_xi_certificate_status": "PASS_ACTUAL_XI_MINIMAL_RANK_15_AND_32",
+  "analytic_proofs_machine_checked": false,
+  "arithmetic": [
+    "EXACT_RATIONAL",
+    "EXACT_GAUSSIAN_RATIONAL",
+    "RATIONAL_INTERVAL"
+  ],
+  "counts": {
+    "actual_xi_strict_interval_signs": 15,
+    "blaschke_tail_bound": 16,
+    "blaschke_tail_exact_identity": 16,
+    "blaschke_tail_log_bound": 16,
+    "cauchy_schur_vs_blaschke": 16,
+    "causal_cutoff_kernel": 7,
+    "isolated_pair_determinant": 16,
+    "negative_witness": 48,
+    "newton_identity": 21,
+    "pole_multiplicity_constant": 12,
+    "positive_coefficient_bound": 90,
+    "q_free_diagonal_euler_factor": 256,
+    "residual_hermitian": 16,
+    "safe_source_factor_and_sign": 32,
+    "safe_source_removable_diagonal": 16,
+    "sharp_cubic_bound": 10,
+    "trace_escape": 11,
+    "two_moment_completion": 10,
+    "witness_positive_norm": 16
+  },
+  "status": "PASS_THREE_ROUTES_PASS2",
+  "total_finite_controls": 640
+}
