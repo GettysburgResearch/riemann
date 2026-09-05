@@ -1,0 +1,26 @@
+{
+  "packet": "PFR-108420-symmetric-positivity-speiser-screening",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/108200-phase-flow-real-transducer",
+  "parent_head": "16d9c586d2f7439187e756066410622fd51c6d56",
+  "claim_ids": [
+    "PFR-T10",
+    "PFR-T11",
+    "PFR-R4"
+  ],
+  "status": "AUTHOR_PROVED_REVIEW_PENDING",
+  "scientific_scope": [
+    "symmetric completed-xi resolvent",
+    "positive-definite and positive-real RH equivalences",
+    "prime-knot differential jump law",
+    "flower-Speiser finite rectangle Gauss law",
+    "harmonic screening countermodel"
+  ],
+  "validation": {
+    "marker": "PASS_PFR_SYMMETRIC_POSITIVITY_AND_SPEISER_SCREENING",
+    "checks": 10,
+    "proof_object": "eec2e381e3efc29ebe85bfe406027a6e54117db2cc833e2130a75458ab65498e",
+    "actual_zeta_arithmetic": "NON_DIRECTED_HIGH_PRECISION"
+  },
+  "rh_status": "UNPROVEN"
+}

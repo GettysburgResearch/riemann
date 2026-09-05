@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "name": "open_turn",
+      "values": [
+        -5.654866776461628,
+        -6.911503837897545,
+        -8.482300164692441
+      ]
+    },
+    {
+      "name": "closed_turn",
+      "values": [
+        -6.283185307179586,
+        -6.283185307179586,
+        -6.283185307179586
+      ]
+    },
+    {
+      "above_2pi_simple": false,
+      "at_2pi_simple": true,
+      "lags_2_1pi": 1,
+      "lags_4_1pi": 2,
+      "name": "span_topology"
+    },
+    {
+      "absolute_curvatures": [
+        6.283185307179586,
+        7.5398223686155035,
+        10.681415022205297
+      ],
+      "count_bound": 2.8000000000000003,
+      "name": "curvature_defect"
+    },
+    {
+      "angular_scaled": -6.893078260869562,
+      "name": "real_convexity_coordinate",
+      "real_numerator": 6.893078260869564
+    },
+    {
+      "name": "finite_energy",
+      "value": 0.003069090518398385
+    },
+    {
+      "absolute_error": 1.2049774363595733e-17,
+      "name": "safe_taylor_remainder",
+      "probe": [
+        1.3,
+        0.7
+      ]
+    },
+    {
+      "acceptance_threshold": 1e-05,
+      "arithmetic_class": "FLOATING_RECONNAISSANCE",
+      "name": "actual_xi_truncated_source_zero_regression",
+      "order": 3,
+      "prime_limit": 1000000,
+      "rate": 2.0,
+      "rows": [
+        {
+          "absolute_discrepancy": 5.228901191281672e-06,
+          "source": -0.0001311949226804887,
+          "t": 0.25,
+          "zero_side": -0.00013642382387177038
+        },
+        {
+          "absolute_discrepancy": 3.513510762905676e-07,
+          "source": 8.392241744203943e-05,
+          "t": 0.5,
+          "zero_side": 8.427376851833e-05
+        },
+        {
+          "absolute_discrepancy": 6.573381669541193e-07,
+          "source": 0.0007346604742972662,
+          "t": 1.0,
+          "zero_side": 0.0007353178124642203
+        },
+        {
+          "absolute_discrepancy": 2.466084826725735e-06,
+          "source": 0.0005560842970665503,
+          "t": 1.5,
+          "zero_side": 0.000558550381893276
+        }
+      ],
+      "zero_pairs": 20
+    }
+  ],
+  "proof_object": "c29b66ffdb29e5eb2eedef66ded096be38af2e1d9d52219cecd830645dcfb2d8",
+  "schema": "riemann.phase-real-resolvent.v1",
+  "scope": {
+    "actual_xi_numeric": "non-directed regression only",
+    "analytic_manuscript": "not machine proved",
+    "finite_algebra": "replayed",
+    "rh": "unproved"
+  },
+  "status": "PASS_PFR_T5_T6_CONTINUATION"
+}
