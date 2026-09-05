@@ -1,0 +1,35 @@
+{
+  "base_commit": "bce97be9727dea9968db7517738edc966d2cc86b",
+  "parent_file_git_blobs": [
+    {
+      "filename": "PROOF.md",
+      "blob": "caf9753e5c3e3bb918289da0f4e92ae7c6441f6c",
+      "matched": true
+    },
+    {
+      "filename": "verify_low_zero.py",
+      "blob": "dc65c7a2273c9657bb2e68ec3fa99ad115f42c3e",
+      "matched": true
+    },
+    {
+      "filename": "low_zero_result.json",
+      "blob": "d8617fb2c96b14531e4288d02119be0d917ebc17",
+      "matched": true
+    }
+  ],
+  "new_suite": {
+    "unit_tests_per_mode": 16,
+    "normal_optimized_byte_identity": true,
+    "output_sha256": "4c29a6964260b9ae3a3c3d8c51670f67c85d22e699dedf7f95a718fe766cf414"
+  },
+  "intentional_corruption_refusals": 6,
+  "original_low_zero_script": {
+    "normal_optimized_byte_identity": true,
+    "retained_output_byte_identity": true,
+    "output_sha256": "0ede5118fe3040728a7d0bde08e2c7f94855b6ce0d88247431acaaec17379199",
+    "scope": "Xi(14)>0, Xi(15)<0 only; mpmath 1.3.0 interval gamma trusted"
+  },
+  "analytic_proofs_machine_verified": false,
+  "rh_proved": false,
+  "remote_published": false
+}
