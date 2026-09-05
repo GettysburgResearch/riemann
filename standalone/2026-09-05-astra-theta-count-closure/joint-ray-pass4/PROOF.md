@@ -370,9 +370,11 @@ prime main term in (13), then using the Gaussian approximation to estimate
 the residual. The subtraction is exact. The next step does NOT close:
 
 - (10) is controlled for t<=c log m, whereas each ray t=m/u eventually
-  leaves that regime. Its peak r=sqrt(u) stays FIXED, and its real width is
-  of order sqrt(u/m). The large-height saddle estimates are not estimates
-  for this increasing-resolution regime.
+  leaves that regime. The scale parameter r=sqrt(u) stays FIXED. For u>1/4
+  the actual real peaks are +/-sqrt(u-1/4), with width of order m^(-1/2)
+  at fixed u. At u=1/4 the central saddle is quartic instead; no Gaussian
+  width claim is made there. The large-height saddle estimates do not
+  cover these fixed-center regimes.
 - The real Fourier error (5) becomes vacuous at t=m/u: its displayed bound
   grows like sqrt(m)/u. This is an explicit uniformity failure, not hidden
   in an o(1).

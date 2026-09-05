@@ -65,9 +65,10 @@ Quantitatively,
 Thus the one-sided source estimate B_m(u)>=-C_(u,epsilon)e^(epsilon m),
 for every positive rational u and every epsilon>0, would prove RH. It is
 still RH-equivalent and OPEN, not a weaker established arithmetic theorem.
-On these rays t=m/u, the center sqrt(m/t)=sqrt(u) stays fixed and the
-real width shrinks like m^(-1/2). The new uniform asymptotic does not cover
-this regime. Increasing a finite verification range cannot settle all rays.
+On these rays t=m/u, sqrt(m/t)=sqrt(u) stays fixed. For u>1/4 the actual
+real peaks are +/-sqrt(u-1/4), with width of order m^(-1/2); the u=1/4
+saddle is quartic instead. The new uniform asymptotic does not cover these
+regimes. Increasing a finite verification range cannot settle all rays.
 
 ## Verification and review
 
