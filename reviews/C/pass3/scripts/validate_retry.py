@@ -62,7 +62,12 @@ def validate(data: dict[str,bytes]) -> dict:
     need(record['ordinary_optimized_identical'] is True, 'record mode comparison')
     need(record['exact_decimal_lower'] == '0.673008527927779' and
          record['exact_decimal_upper'] == '0.673008527927780', 'scalar bracket changed')
-    need(all(v is False for v in record['scope'].values()), 'unperformed record scope promoted')
+    scope_keys = {'RH_proved','analytic_seven_gap_deduction_reviewed',
+                  'external_Arb_certificate_executed','full_sixteen_file_payload_executed',
+                  'new_zero_proportion_proved'}
+    need(type(record['scope']) is dict and set(record['scope']) == scope_keys,
+         'record scope denominator changed')
+    need(all(record['scope'][key] is False for key in scope_keys), 'unperformed record scope promoted')
     manifest = strict(data['pass3/reports/manifest_contract.json'])
     need(type(manifest['fixture_cases']) is int and manifest['fixture_cases'] == 11 and
          manifest['cli_mode_runs'] == 22 and manifest['roundtrip_mode_runs'] == 10,
@@ -96,7 +101,7 @@ def reseal(data: dict[str,bytes], path: str) -> None:
 def negative_tests(original: dict[str,bytes]) -> list[str]:
     passed = []
     names = ('missing_file','wrong_bytes','empty_manifest','duplicate_path','record_scope',
-             'record_count','majorant_scope','boolean_count','wrong_bracket')
+             'record_count','majorant_scope','boolean_count','wrong_bracket','empty_scope','missing_scope_field')
     for name in names:
         data = dict(original)
         path = 'pass3/reports/record_arithmetic_replay.json'
@@ -117,6 +122,8 @@ def negative_tests(original: dict[str,bytes]) -> list[str]:
             elif name == 'majorant_scope': obj['complete_native_fibre_replayed'] = True
             elif name == 'boolean_count': obj['finite_currents'] = True
             elif name == 'wrong_bracket': obj['exact_decimal_lower'] = '1.17'
+            elif name == 'empty_scope': obj['scope'] = {}
+            elif name == 'missing_scope_field': obj['scope'].pop('external_Arb_certificate_executed')
             data[path] = (json.dumps(obj,sort_keys=True,indent=2)+'\n').encode()
             reseal(data,path)
         try:
