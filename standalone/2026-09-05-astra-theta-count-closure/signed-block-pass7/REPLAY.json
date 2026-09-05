@@ -1,0 +1,111 @@
+{
+  "clean_runs": [
+    {
+      "command": "python verify.py --check result.json",
+      "exit_code": 0,
+      "stdout_sha256": "4be59a1718b0d75281ef1e108f646a3249531241b34331e8d2ca140ffbf7e84c"
+    },
+    {
+      "command": "python -O verify.py --check result.json",
+      "exit_code": 0,
+      "stdout_sha256": "4be59a1718b0d75281ef1e108f646a3249531241b34331e8d2ca140ffbf7e84c"
+    },
+    {
+      "command": "python verify_low_prefix.py --check low_prefix.json",
+      "exit_code": 0,
+      "stdout_sha256": "61e2039852a490939ce1731be0fc5183110787e9ee97c7cfced8f2c34eab8de2"
+    },
+    {
+      "command": "python -O verify_low_prefix.py --check low_prefix.json",
+      "exit_code": 0,
+      "stdout_sha256": "61e2039852a490939ce1731be0fc5183110787e9ee97c7cfced8f2c34eab8de2"
+    },
+    {
+      "command": "python verify.py --check checks.json",
+      "exit_code": 0,
+      "scope": "unchanged_parent_prime_cutoff_16_tests",
+      "stdout_sha256": "4c29a6964260b9ae3a3c3d8c51670f67c85d22e699dedf7f95a718fe766cf414"
+    },
+    {
+      "command": "python -O verify.py --check checks.json",
+      "exit_code": 0,
+      "scope": "unchanged_parent_prime_cutoff_16_tests",
+      "stdout_sha256": "4c29a6964260b9ae3a3c3d8c51670f67c85d22e699dedf7f95a718fe766cf414"
+    }
+  ],
+  "corruption_refusals": [
+    {
+      "case": "rh_flag",
+      "expected_error": "saved result differs in value or numeric type",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "rh_flag",
+      "expected_error": "saved result differs in value or numeric type",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "float_alias",
+      "expected_error": "saved result differs in value or numeric type",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "float_alias",
+      "expected_error": "saved result differs in value or numeric type",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "boolean_alias",
+      "expected_error": "saved result differs in value or numeric type",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "boolean_alias",
+      "expected_error": "saved result differs in value or numeric type",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "wrong_bound",
+      "expected_error": "saved result differs in value or numeric type",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "wrong_bound",
+      "expected_error": "saved result differs in value or numeric type",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "wrong_count",
+      "expected_error": "saved result differs in value or numeric type",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "wrong_count",
+      "expected_error": "saved result differs in value or numeric type",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "duplicate_key",
+      "expected_error": "duplicate JSON key",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "duplicate_key",
+      "expected_error": "duplicate JSON key",
+      "optimized": true,
+      "rejected": true
+    }
+  ],
+  "rh_proved": false
+}
