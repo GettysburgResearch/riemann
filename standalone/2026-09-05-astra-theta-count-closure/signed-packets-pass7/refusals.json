@@ -1,0 +1,78 @@
+{
+  "distinct_refusal_runs": 12,
+  "runs": [
+    {
+      "case": "rh_flag",
+      "expected_error_observed": true,
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "case": "numeric_type_alias",
+      "expected_error_observed": true,
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "case": "duplicate_key",
+      "expected_error_observed": true,
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "case": "saved_tail_margin",
+      "expected_error_observed": true,
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "case": "endpoint_sign",
+      "expected_error_observed": true,
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "case": "eta_tail",
+      "expected_error_observed": true,
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "case": "rh_flag",
+      "expected_error_observed": true,
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "case": "numeric_type_alias",
+      "expected_error_observed": true,
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "case": "duplicate_key",
+      "expected_error_observed": true,
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "case": "saved_tail_margin",
+      "expected_error_observed": true,
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "case": "endpoint_sign",
+      "expected_error_observed": true,
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "case": "eta_tail",
+      "expected_error_observed": true,
+      "optimized": true,
+      "returncode": 1
+    }
+  ],
+  "status": "PASS_RECORD_CORRUPTION_REFUSALS"
+}
