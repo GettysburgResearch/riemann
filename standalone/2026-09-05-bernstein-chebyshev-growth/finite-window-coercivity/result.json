@@ -1,0 +1,110 @@
+{
+  "actual_Q3_interval": {
+    "denominator": 1000000000000000000000000000000,
+    "lower": 1124413172331837573043338634362,
+    "upper": 1124413172331837573043338634363
+  },
+  "actual_Q3_upper": {
+    "denominator": 8,
+    "numerator": 9
+  },
+  "analytic_proof_machine_checked": false,
+  "check_count": 275,
+  "gamma_sum_152_margin": {
+    "denominator": 3320654513670126767788418084722494406174327018679450707231728669424187738671893372618509557624902983551552991857847829039533093729238720737062175865498508096647669969838500,
+    "numerator": 20780380956030160438620770037174265485924157332539337860992979466443977486567835088280813206684289475806800135173581020690736213264337931102265436021046019695142358365667
+  },
+  "rh_proved": false,
+  "selectors": [
+    {
+      "m": 40,
+      "qbar": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "r": 3
+    },
+    {
+      "m": 80,
+      "qbar": {
+        "denominator": 2,
+        "numerator": 1
+      },
+      "r": 4
+    },
+    {
+      "m": 320,
+      "qbar": {
+        "denominator": 8,
+        "numerator": 9
+      },
+      "r": 6
+    },
+    {
+      "m": 40960,
+      "qbar": {
+        "denominator": 5,
+        "numerator": 16
+      },
+      "r": 13
+    },
+    {
+      "m": 42949672960,
+      "qbar": {
+        "denominator": 1,
+        "numerator": 10
+      },
+      "r": 33
+    }
+  ],
+  "source_hashes": {
+    "PROOF.md": "5d684fb6b282681d20392c58d4644042922122b62e9da89a3175b48ed2db1a4b",
+    "SOURCE_LOCK.json": "dc2beb3716f2a841b35858633cd164289314c6c16f42a1740ae806598f05a3a1",
+    "verify.py": "e2f4b1b124db07d29fdf73c1456465879fb81aabc61c981ac27b222391c0ee8a"
+  },
+  "status": "EXACT_FINITE_CONTROLS_ONLY",
+  "three_mode_example": [
+    {
+      "coefficients": [
+        {
+          "denominator": 1,
+          "numerator": 1
+        },
+        {
+          "denominator": 21606,
+          "numerator": -48409
+        },
+        {
+          "denominator": 280878,
+          "numerator": 338045
+        }
+      ],
+      "k": 9,
+      "norm_ratio": {
+        "denominator": 294603379699,
+        "numerator": 3681174605449900
+      },
+      "omega": [
+        {
+          "denominator": 1,
+          "numerator": 90
+        },
+        {
+          "denominator": 1,
+          "numerator": 110
+        },
+        {
+          "denominator": 1,
+          "numerator": 130
+        }
+      ]
+    }
+  ],
+  "unit_window": {
+    "C_m": 46665,
+    "K": 101,
+    "X": 3,
+    "m": 152,
+    "nonpositive_dimension_upper_bound": 104
+  }
+}
