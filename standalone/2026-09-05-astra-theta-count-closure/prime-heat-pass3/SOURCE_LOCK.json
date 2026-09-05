@@ -1,0 +1,40 @@
+{
+  "base_tree": "baaffb179a99ec0ab5c97ad7060f5faa3a887355",
+  "branch": "research/astra/20260905-theta-bernstein-exterior-closure",
+  "dependencies": [
+    {
+      "git_blob": "0b6ea91d6e82ee6b90a01b36e3fd757ec101dded",
+      "path": "HEAT_BERNSTEIN.md",
+      "sha256": "38b6bc05df50ba23e447210e437c3efd4296c4208dcf751f6f5cefd62d50d98d"
+    },
+    {
+      "git_blob": "5d8d8eb8174fa4e57cdc9c058f38bdec1b278361",
+      "path": "THETA_COUNT.md",
+      "sha256": "029a253add6571c1f47a02c33f63b8afa3f115c0a591317c1e959e581fd6436f"
+    },
+    {
+      "git_blob": "3d42c006a08b62b00a09eb94ff37d656bb7cd0a0",
+      "path": "pass2/MIXED_HEAT_STRIPS.md",
+      "sha256": "1f2977df4220a58ebeede4b28d30111ec95be3dcb4cd78ea1db586e690fd1d50"
+    },
+    {
+      "git_blob": "73908d684d4f3547eb7527fac1efae24ade5770b",
+      "path": "pass2/SMALL_TIME_ALL_ORDERS.md",
+      "sha256": "f7898a6fdd029a8f27f9b5107eb0e6c984602a0889c92758c426c1accc339bb7"
+    }
+  ],
+  "external_novelty_review": "pending",
+  "independent_review": "pending",
+  "new_local_claims": [
+    "ASTRA-PH-01",
+    "ASTRA-PH-02",
+    "ASTRA-PH-03",
+    "ASTRA-PH-04",
+    "ASTRA-PH-05"
+  ],
+  "pr": 790,
+  "prepared_pass2_subtree": "fc0834a79c6f74f68355b26b3f7357d333d50eef",
+  "repository": "gfreund123/riemann",
+  "rh_proved": false,
+  "scientific_base": "401196451ef1b51e5ff4d84dd23bd75bbf9215a1"
+}

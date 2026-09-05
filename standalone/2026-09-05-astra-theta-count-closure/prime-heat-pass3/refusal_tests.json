@@ -1,0 +1,30 @@
+{
+  "scope": "output-integrity controls, not analytic proof",
+  "status": "PASS_FOUR_CORRUPTED_RESULTS_REFUSED",
+  "tests": [
+    {
+      "field": "total_checks",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "FAIL_ASTRA_PH: retained JSON differs from fresh exact controls"
+    },
+    {
+      "field": "rh_proved",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "FAIL_ASTRA_PH: retained JSON differs from fresh exact controls"
+    },
+    {
+      "field": "new_global_mixed_depth",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "FAIL_ASTRA_PH: retained JSON differs from fresh exact controls"
+    },
+    {
+      "field": "analytic_theorems_machine_proved",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "FAIL_ASTRA_PH: retained JSON differs from fresh exact controls"
+    }
+  ]
+}
