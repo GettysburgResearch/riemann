@@ -1,0 +1,31 @@
+{
+  "count": 4,
+  "rows": [
+    {
+      "case": "altered_report",
+      "optimized": false,
+      "returncode": 2,
+      "stderr": "REJECT_PACKET: checksum mismatch: REPORT.md"
+    },
+    {
+      "case": "unlisted_file",
+      "optimized": false,
+      "returncode": 2,
+      "stderr": "REJECT_PACKET: exact packet file coverage"
+    },
+    {
+      "case": "altered_report",
+      "optimized": true,
+      "returncode": 2,
+      "stderr": "REJECT_PACKET: checksum mismatch: REPORT.md"
+    },
+    {
+      "case": "unlisted_file",
+      "optimized": true,
+      "returncode": 2,
+      "stderr": "REJECT_PACKET: exact packet file coverage"
+    }
+  ],
+  "schema": "riemann.reviewerD.packet_refusals.v1",
+  "validator_sha256": "7b0472f58513067ccc40292644dea83e76fdfba7f5561fdf6f26ad4d2925fadb"
+}

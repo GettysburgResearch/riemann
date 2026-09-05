@@ -1,0 +1,81 @@
+{
+  "all_expected_refusals": true,
+  "checker_sha256": "26694e95cd50afa7b9b9934b545acee8b58acf2266ec53bd33b8fd92d27a4bb2",
+  "count": 12,
+  "driver_sha256": "65c2374b0a50351cdc46916627903beb79dc6ba227faacd292a1b287d3ec7a63",
+  "rows": [
+    {
+      "case": "changed_named_count",
+      "optimized": false,
+      "returncode": 2,
+      "stderr": "REJECT: metadata preflight: named_checks"
+    },
+    {
+      "case": "float_alias",
+      "optimized": false,
+      "returncode": 2,
+      "stderr": "REJECT: metadata preflight: fixture_count"
+    },
+    {
+      "case": "boolean_alias",
+      "optimized": false,
+      "returncode": 2,
+      "stderr": "REJECT: metadata preflight: rh_proved"
+    },
+    {
+      "case": "false_RH_flag",
+      "optimized": false,
+      "returncode": 2,
+      "stderr": "REJECT: metadata preflight: rh_proved"
+    },
+    {
+      "case": "duplicate_JSON_key",
+      "optimized": false,
+      "returncode": 2,
+      "stderr": "REJECT: duplicate JSON key: rh_proved"
+    },
+    {
+      "case": "changed_checker_bytes",
+      "optimized": false,
+      "returncode": 2,
+      "stderr": "REJECT: metadata preflight: script_sha256"
+    },
+    {
+      "case": "changed_named_count",
+      "optimized": true,
+      "returncode": 2,
+      "stderr": "REJECT: metadata preflight: named_checks"
+    },
+    {
+      "case": "float_alias",
+      "optimized": true,
+      "returncode": 2,
+      "stderr": "REJECT: metadata preflight: fixture_count"
+    },
+    {
+      "case": "boolean_alias",
+      "optimized": true,
+      "returncode": 2,
+      "stderr": "REJECT: metadata preflight: rh_proved"
+    },
+    {
+      "case": "false_RH_flag",
+      "optimized": true,
+      "returncode": 2,
+      "stderr": "REJECT: metadata preflight: rh_proved"
+    },
+    {
+      "case": "duplicate_JSON_key",
+      "optimized": true,
+      "returncode": 2,
+      "stderr": "REJECT: duplicate JSON key: rh_proved"
+    },
+    {
+      "case": "changed_checker_bytes",
+      "optimized": true,
+      "returncode": 2,
+      "stderr": "REJECT: metadata preflight: script_sha256"
+    }
+  ],
+  "schema": "riemann.reviewerD.refusals.v1"
+}
