@@ -1,0 +1,41 @@
+{
+  "RH_proved": false,
+  "all_radius_energy_bound_proved": false,
+  "analytic_proofs_machine_verified": false,
+  "arithmetic": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "controls": {
+    "Abel_error_constant": 6,
+    "Bessel_weight_exponent": 6,
+    "Hille_Hardy_coefficient_identity": 204,
+    "constant_arithmetic": 3,
+    "continuous_diagonal_discriminant": 6,
+    "disk_automorphism": 48,
+    "meromorphic_circle_is_not_Taylor_norm": 1,
+    "off_line_source_radius_geometry": 24,
+    "pole_norm_threshold_identity": 24,
+    "squarefree_local_factor_inverse": 384
+  },
+  "distinct_controls": 706,
+  "source_certificate": {
+    "H_outward_decimal_interval": [
+      "0.022608221204831390922783",
+      "0.023583831270462265642622"
+    ],
+    "atan_terms": 16,
+    "harmonic_n": 512,
+    "linear_diagonal_constant_outward_decimal_interval": [
+      "1.299493498707498412650290",
+      "1.299493498707498412650292"
+    ],
+    "log_terms": 40,
+    "method": "EXACT_RATIONAL_SERIES_AND_ELEMENTARY_ANALYTIC_REMAINDERS",
+    "no_zero_data_used": true,
+    "pi_outward_decimal_interval": [
+      "3.141592653589793238462639",
+      "3.141592653589793238462644"
+    ],
+    "proved_bound": "0 < H < 1/40",
+    "signed_convergence_radius_squared": "317/325"
+  },
+  "status": "PASS_BOUNDED_ALGEBRA_AND_H_SOURCE"
+}

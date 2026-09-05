@@ -1,0 +1,38 @@
+{
+  "RH_proved": false,
+  "remote_published": false,
+  "runs": [
+    {
+      "command": "python verify.py",
+      "exit_code": 0,
+      "stderr": "",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "PASS_BOUNDED_ALGEBRA_AND_H_SOURCE\n706 bounded controls; analytic proof not machine verified\n",
+      "stdout_sha256": "fcf02f7a420188d57bc0de7f4c151b64f58a1e1ee1c778af0b55d7ead2298d79"
+    },
+    {
+      "command": "python -O verify.py",
+      "exit_code": 0,
+      "stderr": "",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "PASS_BOUNDED_ALGEBRA_AND_H_SOURCE\n706 bounded controls; analytic proof not machine verified\n",
+      "stdout_sha256": "fcf02f7a420188d57bc0de7f4c151b64f58a1e1ee1c778af0b55d7ead2298d79"
+    },
+    {
+      "command": "python verify.py --tests",
+      "exit_code": 0,
+      "stderr": "test_bad_atan (__main__.Tests.test_bad_atan) ... ok\ntest_bool_integer_alias (__main__.Tests.test_bool_integer_alias) ... ok\ntest_bool_rejected (__main__.Tests.test_bool_rejected) ... ok\ntest_changed_result (__main__.Tests.test_changed_result) ... ok\ntest_float_rejected (__main__.Tests.test_float_rejected) ... ok\ntest_invalid_log (__main__.Tests.test_invalid_log) ... ok\ntest_invalid_terms (__main__.Tests.test_invalid_terms) ... ok\ntest_log_reciprocal (__main__.Tests.test_log_reciprocal) ... ok\ntest_mobius_domain (__main__.Tests.test_mobius_domain) ... ok\ntest_zero_division (__main__.Tests.test_zero_division) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.001s\n\nOK\n",
+      "stderr_sha256": "c8a127f440cb97da3408fe0db327753354acd3d2f0da9aa36e12cc893eea6d57",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python -O verify.py --tests",
+      "exit_code": 0,
+      "stderr": "test_bad_atan (__main__.Tests.test_bad_atan) ... ok\ntest_bool_integer_alias (__main__.Tests.test_bool_integer_alias) ... ok\ntest_bool_rejected (__main__.Tests.test_bool_rejected) ... ok\ntest_changed_result (__main__.Tests.test_changed_result) ... ok\ntest_float_rejected (__main__.Tests.test_float_rejected) ... ok\ntest_invalid_log (__main__.Tests.test_invalid_log) ... ok\ntest_invalid_terms (__main__.Tests.test_invalid_terms) ... ok\ntest_log_reciprocal (__main__.Tests.test_log_reciprocal) ... ok\ntest_mobius_domain (__main__.Tests.test_mobius_domain) ... ok\ntest_zero_division (__main__.Tests.test_zero_division) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.001s\n\nOK\n",
+      "stderr_sha256": "c8a127f440cb97da3408fe0db327753354acd3d2f0da9aa36e12cc893eea6d57",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
