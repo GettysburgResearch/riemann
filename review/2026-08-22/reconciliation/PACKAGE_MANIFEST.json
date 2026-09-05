@@ -1,0 +1,25 @@
+{
+  "checksums": "SHA256SUMS",
+  "direct_main_review_head": "dad61b954dd8404520631058d1ce717e7a910a3b",
+  "frozen_main": "677203992eb0168920365ee45ae9db76bfa97dcf",
+  "integration_readiness": "READY_WITH_EXPLICIT_EXCLUSIONS",
+  "repo_tree_root": "review/2026-08-22/reconciliation",
+  "required_tables": [
+    "FINAL_CLAIMS.tsv",
+    "FINAL_EDGES.tsv",
+    "FINAL_ALIASES.tsv",
+    "FINAL_REFUTATIONS.tsv",
+    "FINAL_COMPUTATIONS.tsv",
+    "FINAL_FAMILIES.tsv",
+    "FINAL_PR_DISPOSITIONS.tsv",
+    "CONFLICTS.tsv",
+    "EXTRACTION_PLAN.tsv"
+  ],
+  "review_c_head": "a6aa936ba8bf538177e34af60db7e2f0a58f8dfd",
+  "rh_status": "UNPROVED",
+  "schema": "riemann.reviewer-d.complete-package.v2",
+  "validators": [
+    "graph_validate.py",
+    "replay/run_all.py"
+  ]
+}
