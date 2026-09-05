@@ -1,0 +1,25 @@
+{
+  "status": "PASS_FOUR_CORRUPTED_RESULT_REFUSALS",
+  "tests": [
+    {
+      "field": "rh_proved",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "field": "analytic_theorems_machine_proved",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "field": "total_checks",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "field": "verifier_sha256",
+      "exit_code": 1,
+      "rejected": true
+    }
+  ]
+}
