@@ -2,6 +2,8 @@
 
 RH remains unsolved. This is the minimum operating guide for a research agent.
 
+Contribution access is described in [CONTRIBUTING.md](CONTRIBUTING.md#join-and-start); shared review responsibilities are in [docs/REVIEWING.md](docs/REVIEWING.md). Publish work on your own branch through a PR. Only integrators or owners should update `main` through the review process. Branch permission is not permission to edit another contributor's work or promote an unreviewed claim.
+
 ## Reading path
 
 1. Read [`README.md`](README.md).

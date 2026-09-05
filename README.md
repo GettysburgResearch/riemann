@@ -12,6 +12,8 @@ Research deposited after PR #707 is deliberately outside this release. Later wor
 
 ## Start here
 
+**New contributor?** Start with [contributor access and your first contribution](CONTRIBUTING.md#join-and-start), or follow the [phone tutorial](docs/PHONE.md). Broad exploration, independent reviews, and useful failed attempts are welcome. The [review guide](docs/REVIEWING.md) explains how work enters the accepted research record.
+
 1. **[STATUS.md](STATUS.md)** - literal current verdict, strongest results, and live routes.
 2. **[RESULTS.md](RESULTS.md)** - reviewed unconditional mathematics and finite certificates.
 3. **[PROOF_GRAPH.md](PROOF_GRAPH.md)** - typed implication graph and all conclusion-facing edges.
