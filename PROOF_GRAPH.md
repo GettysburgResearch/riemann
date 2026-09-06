@@ -1,19 +1,35 @@
-# Current proof graph and interface boundaries
+# How the mathematical implications fit together
 
-**No reviewed-only path reaches RH.** A conditional implication is not its missing premise.
+**No accepted chain proves RH.** A proved implication $A\Rightarrow B$ establishes $B$ only after $A$ has been supplied at the same source, normalization and quantifier scope. The maps below summarize existing criteria and distinguish them from proposed bridges; they do not introduce new accepted edges.
 
-The immutable baseline graph is [canonical/2026-08-22/edges.tsv](canonical/2026-08-22/edges.tsv). The September 6 [resolver](integration/2026-09-06/validate.py) applies source-scope corrections, blocks invalid original uses, and authenticates the inputs before emitting `claims_current.tsv` and `edges_current.tsv`. Its current relation set is a restriction of the old one. The exact full-checkout execution status is in [VALIDATION](integration/2026-09-06/VALIDATION.md).
+## Established criteria with an open premise
 
-## Current proof-use rule
+| Criterion | Reviewed or imported mechanism | What must still be proved |
+|---|---|---|
+| Robin | The classical all-integer inequality is RH-equivalent; canonical reduction preserves every hypothetical violation | Robin's inequality on the whole unbounded canonical class |
+| Fixed Mellin detector | Exact noncancelling source transform, negative-mass holomorphy and tail Landau | The every-epsilon logarithmic negative-mass estimate for that fixed source |
+| Xi finite witness hierarchy | Source-qualified resolvent/Pick/Loewner necessity and the corresponding complete witness criteria | The required all-packet statement, or one strict authenticated Riemann-data violation |
+| Complete Weil/operator criterion | Source and domain identification plus a complete test/capture theorem | The sign on the complete required form domain; finite capture alone does not establish it |
+| First-Hermite | The complete explicit-formula/countable-family criterion | Positivity on every remaining part of the domain, not only the known large-center region |
 
-Use the exact fixed source, all hypotheses, its original review and every matching [current decision](integration/2026-09-06/DECISIONS.json). An open hypothesis is not a proved seed. A false or held mechanism cannot be traversed. Source claim numbers are not globally unique identifiers; retain the PR, source commit and path. A repaired formula is not automatically an implemented or replayed certificate.
+For the exact statements and their qualifications, read [Robin](research/integrated/CURRENT_RESULTS.md#robin), [Mellin](research/integrated/CURRENT_RESULTS.md#mellin), [xi](research/integrated/CURRENT_RESULTS.md#xi), and [operators/heat](research/integrated/CURRENT_RESULTS.md#operators).
 
-The source-specific fixed Mellin consumer remains conditional on the literal arithmetic sign or subpower negative mass. The critical CV, XD, all-order Pick, corrected Weil floor and other open cut classes remain open.
+## Relations that help, without supplying the missing bound
 
-## New route records
+The compact wavelet/Abel–Mertens identities and corrected same-kernel Vaughan translation preserve specified signed-source information. Q4, half-divisor and occupancy decompositions isolate different remaining estimates. A conditional regional Schur or Perron argument needs all its compatible native premises; the fact that its inequality is available is not one of those arithmetic estimates.
 
-The [frontier graph](integration/2026-09-06/FRONTIER_GRAPH.json) records ten scoped components and six explicit open leaves: native beta cancellation, Xi low-order descent, coefficient-resolved theta sign, all-window Schur sign, corrected Euler half-plane boundedness and principal binding. Its six conclusion-facing arrows are **nontraversable navigation records**, pending complete exact adapter reconciliation. They are not six accepted new unconditional implications.
+SHARP positivity above the critical power and fixed-$P_{61}$ bias are established at their scopes. Neither arrow continues automatically to the critical linear source or a growing-prime family. Low-order safe-axis Pick positivity similarly does not continue automatically to all orders.
 
-Detailed A/B/C/D edge tables remain available at their frozen source paths. They are not blindly concatenated through short numerical claim IDs. This preserves their information without manufacturing a proof or claiming that the entire post-release graph-extraction backlog is complete.
+Energy-completed Schur elimination is an exact reduction **within a specified window and source**. It must retain the variational correction from the entire positive sector. A positive Galerkin upper approximation cannot replace a residual lower certificate, and one certified window would still not settle the required unbounded family.
 
-The update cannot create a new reviewed-only path by construction: it weakens or preserves old claim statuses, removes rather than adds traversable old edges, and installs no traversable new frontier edge. This is a monotonicity argument, not a claim that an unrun whole-checkout validation passed.
+## Proposed or still-unbound bridges
+
+Xi low-order derivative descent, full coefficient-resolved theta positivity, principal-member extraction, and the corrected Euler-product half-plane programme are active targets. The line-one causal norm theorem, finite geometric identities and generic cofactor laws do not discharge these targets. A source-specific composition not covered by an existing review needs its own review before becoming part of the accepted chain.
+
+[OPEN_CUTS](OPEN_CUTS.md) states concrete tasks; [PROGRAMMES](PROGRAMMES.md) distinguishes the integrated components from active branch work.
+
+## Machine graph and provenance
+
+The [current registry entry point](canonical/CURRENT.json) selects the authenticated resolver. The [graph-interpretation repair](integration/2026-09-06/graph-fix/README.md) explains why conditional-result records cannot propagate their unproved applications: missing prerequisites remain conjuncts, and historical declarations are preserved separately from effective premises. Source, execution and merge evidence is in [PR #802](https://github.com/GettysburgResearch/riemann/pull/802).
+
+The [frontier navigation graph](integration/2026-09-06/FRONTIER_GRAPH.json) is not a set of newly accepted conclusion-facing implications. Raw review edge tables and old historical verdict tables must not be concatenated into a proof. Exact review/source decisions and older execution narratives remain in [integration/audit records](integration/README.md). This human map does not change any machine status, graph edge or mathematical acceptance.
