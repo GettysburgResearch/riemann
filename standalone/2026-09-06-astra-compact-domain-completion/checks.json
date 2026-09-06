@@ -1,0 +1,79 @@
+{
+  "arithmetic": "EXACT_RATIONAL_AND_INTEGER_INTERVAL",
+  "checks": [
+    {
+      "fixtures": 128,
+      "name": "independent_trial_factor_Mobius",
+      "status": "PASS"
+    },
+    {
+      "fixtures": 8256,
+      "name": "complete_finite_divisor_reproduction",
+      "status": "PASS"
+    },
+    {
+      "fixtures": 128,
+      "name": "all_compact_inverse_pole_balances",
+      "status": "PASS"
+    },
+    {
+      "fixtures": 128,
+      "name": "compact_transform_by_independent_step_integration",
+      "status": "PASS"
+    },
+    {
+      "fixtures": 128,
+      "name": "exact_input_norm_signed_identity",
+      "status": "PASS"
+    },
+    {
+      "fixtures": 128,
+      "name": "complete_floor_identity_and_mass_bound",
+      "status": "PASS"
+    },
+    {
+      "fixtures": 4096,
+      "name": "output_cell_slopes_two_independent_constructions",
+      "status": "PASS"
+    },
+    {
+      "fixtures": 81,
+      "name": "Laguerre_jet_orthogonality_exact",
+      "status": "PASS"
+    },
+    {
+      "fixtures": 9,
+      "name": "shifted_multiplicity_jet_recombination",
+      "status": "PASS"
+    },
+    {
+      "fixtures": 169,
+      "name": "norm_cell_antiderivative_coefficients",
+      "status": "PASS"
+    },
+    {
+      "fixtures": 4,
+      "name": "tail_and_target_normalizations",
+      "status": "PASS"
+    },
+    {
+      "fixtures": 84,
+      "name": "directed_interval_endpoint_contracts",
+      "status": "PASS"
+    },
+    {
+      "fixtures": 16,
+      "name": "directed_transcendental_calibration",
+      "status": "PASS"
+    },
+    {
+      "fixtures": 11,
+      "name": "resource_and_primitive_refusals",
+      "status": "PASS"
+    }
+  ],
+  "fixtures": 13366,
+  "named_checks": 14,
+  "schema": "CD26.exact-controls.v1",
+  "scope": "Bounded identities only; no RH, domain completion or unbounded norm estimate."
+}
