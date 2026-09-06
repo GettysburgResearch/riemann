@@ -1,0 +1,56 @@
+{
+  "records": [
+    {
+      "exit_code": 2,
+      "mode": "normal",
+      "mutation": "result_change"
+    },
+    {
+      "exit_code": 2,
+      "mode": "normal",
+      "mutation": "producer_change"
+    },
+    {
+      "exit_code": 2,
+      "mode": "normal",
+      "mutation": "missing_header"
+    },
+    {
+      "exit_code": 2,
+      "mode": "normal",
+      "mutation": "extra_file"
+    },
+    {
+      "exit_code": 2,
+      "mode": "normal",
+      "mutation": "predecessor_change"
+    },
+    {
+      "exit_code": 2,
+      "mode": "optimized",
+      "mutation": "result_change"
+    },
+    {
+      "exit_code": 2,
+      "mode": "optimized",
+      "mutation": "producer_change"
+    },
+    {
+      "exit_code": 2,
+      "mode": "optimized",
+      "mutation": "missing_header"
+    },
+    {
+      "exit_code": 2,
+      "mode": "optimized",
+      "mutation": "extra_file"
+    },
+    {
+      "exit_code": 2,
+      "mode": "optimized",
+      "mutation": "predecessor_change"
+    }
+  ],
+  "schema": "reviewer-D.pass4.package-rejections.v1",
+  "status": "PASS"
+}

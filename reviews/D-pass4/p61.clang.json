@@ -1,0 +1,30 @@
+{
+"schema":"reviewer-D.P61.integer-interval-replay.v1",
+"status":"PASS",
+"mpfr_version":"4.2.2",
+"primitive_precision":256,
+"finite_endpoint":1000000,
+"finite_inequalities_checked":1999994,
+"finite_denominator":"79228162514264337593543950336",
+"finite_minima":[
+{"test":0,"N":3,"numerator_interval":["340729183347148579805511494496","340729183347164945200151063799"]},
+{"test":1,"N":5,"numerator_interval":["265188803212956219480848889288","265188803213014602349786794552"]},
+{"test":2,"N":184,"numerator_interval":["259293311682058671591052122948","259293311806764094616832047616"]},
+{"test":3,"N":67,"numerator_interval":["10736732220090603578002506514497","10736732220099888148494629085702"]},
+{"test":4,"N":184,"numerator_interval":["-1435172020859871211569797612448","-1435172020740683136053054288814"]}
+],
+"compact_C0_numerators":["-1087150761556811830613540561550","-1087150761556803191419894835610"],
+"compact_sample_upper_numerator":"257395741838064891858995566182",
+"compact_sample_arg_numerator_over_100":200,
+"compact_samples":1401,
+"compact_Lipschitz_bound":36,
+"divisor_count":262144,
+"tail_denominator":"6277101735386680763835789423207666416102355444464034512896",
+"tail_minima":[
+{"test":0,"left":"1000110","right":"1001220","lower_numerator":"752446003351696920199370108014712068491417449519175189675720","slabs_checked":256805},
+{"test":1,"left":"1000000","right":"1000110","lower_numerator":"251131143901520499150242113897970860844917315046553802967613440","slabs_checked":256805}
+],
+"analytic_ramp_input":"L-93600 as reconstructed in Reviewer D R21",
+"global_bias":"1/42 <= F/M <= 1/8 for x>=67",
+"RH_proved":false
+}
