@@ -1,0 +1,79 @@
+{
+  "baseline": "4f461e5ad46e452b1eafa69eddff3b76cd0c12be",
+  "root_tree": "c176d314be98f13b0ae8a38ae36df8cc0894ff0c",
+  "inspection_kind": "targeted post-merge engineering and navigation; not exhaustive mathematics",
+  "files": [
+    {
+      "path": "integration/2026-09-06/validate.py",
+      "blob": "d745b65157f6d75c48155bb94a2eebff208f9d96",
+      "scope": "complete returned source; authentication and resolver interfaces inspected"
+    },
+    {
+      "path": "integration/2026-09-06/source_inventory.py",
+      "blob": "39404ca2f7d78bd8f9e6a26ef1d9b20deb5057e2",
+      "scope": "complete source; not executed on full repository"
+    },
+    {
+      "path": ".github/workflows/integration-2026-09-06.yml",
+      "blob": "b3ef418df9e696a9598f188a05a3295c68616f16",
+      "scope": "complete workflow; trigger and execution boundaries"
+    },
+    {
+      "path": "canonical/CURRENT.json",
+      "blob": "e66961adf4ac18c6556a68076fe31434b14183dc",
+      "scope": "complete pointer"
+    },
+    {
+      "path": "canonical/2026-09-06/README.md",
+      "blob": "79f1d95bccc9beaa09ab5c9cdf683790c0bf5857",
+      "scope": "complete current-view guide"
+    },
+    {
+      "path": "FORMALIZATION.md",
+      "blob": "ef4e8a262a8108bcd46671f342f2febc50d2f0e2",
+      "scope": "complete formal front door"
+    },
+    {
+      "path": "formal/README.md",
+      "blob": "c0bdedaa0b93d02782dbc753eb1319ca4f961ca3",
+      "scope": "complete nested formal front door"
+    },
+    {
+      "path": "README.md",
+      "blob": "424a36e4dda43c63663d7a002fe155cbaba4adf5",
+      "scope": "complete root guide"
+    },
+    {
+      "path": "research/RESULTS_INDEX.md",
+      "blob": "5eb1bf14a075e2f0881689ce15f1367d37619082",
+      "scope": "complete index"
+    },
+    {
+      "path": "research/integrated/2026-09-06/MATHEMATICS.md",
+      "blob": "372199fadbde3f8360c6d95d72e77374545b9852",
+      "scope": "complete current mathematical guide; no new blanket scientific review"
+    },
+    {
+      "path": "research/integrated/2026-09-06/proof-extracts/README.md",
+      "blob": "eeb4a37c0598b82bea97a4795fbc66120331043c",
+      "scope": "complete source-context map"
+    },
+    {
+      "path": "integration/2026-09-06/PROOF_PAYLOADS.json",
+      "blob": "563283b1f3201e9563d5d923dc60331a32357c25",
+      "scope": "complete ten-copy source manifest"
+    },
+    {
+      "path": "reviews/C/CENSUS.tsv",
+      "blob": "7f3bae32843289e5079e0e8eb4f9da60122f77a0",
+      "scope": "lines 423-462 only; not a fresh full census"
+    },
+    {
+      "path": "integration/2026-09-06/DECISIONS.json",
+      "blob": "094d75445611b0b155b6edf309e02732f6bca593",
+      "scope": "returned leading entries; response truncated; no full new disposition review"
+    }
+  ],
+  "observed_main_workflow_runs": 0,
+  "actions_run_observation_scope": "all event types for baseline head at read time; not a cause diagnosis"
+}

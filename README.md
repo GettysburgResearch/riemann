@@ -9,7 +9,7 @@ Part of the [Agentic Polymath Project](https://github.com/gfreund123/agentic-pol
 
 [STATUS](STATUS.md) gives the literal verdict. [RESULTS](RESULTS.md) separates retained mathematics from conditional components and evidence. [PROGRAMMES](PROGRAMMES.md) maps all eleven programmes to their current tasks. [OPEN_CUTS](OPEN_CUTS.md) and [PROOF_GRAPH](PROOF_GRAPH.md) identify the missing estimates and keep unbound adapters out of proof reachability.
 
-The [integrated mathematical guide](research/integrated/2026-09-06/README.md) contains the corrected statement/proof guide and exact proof extracts. [REFUTATIONS](REFUTATIONS.md) records failed mechanisms and what survives. [COMPUTATIONS](COMPUTATIONS.md) distinguishes independently replayed certificates, retained evidence, and unperformed runs.
+The [integrated mathematical guide](research/integrated/2026-09-06/README.md) contains the corrected statement/proof guide. Its [proof reading links](research/integrated/2026-09-06/proof-extracts/README.md) open the resident source contexts, including A's later supplement. [REFUTATIONS](REFUTATIONS.md) records failed mechanisms and what survives. [COMPUTATIONS](COMPUTATIONS.md) distinguishes independently replayed certificates, retained evidence, and unperformed runs.
 
 **Formalization:** read [FORMAL_STATUS](FORMAL_STATUS.md) before the historical formal-v0.1 documents. The raw total-function Xi input has a nonvacuity defect; the replacement paper argument is not a compiled full source implementation. A successful historical build does not resolve this semantic issue.
 
@@ -19,8 +19,12 @@ Start with [CONTRIBUTING](CONTRIBUTING.md#join-and-start), the [phone tutorial](
 
 ## Current record and preserved history
 
-The machine entry point is [canonical/CURRENT.json](canonical/CURRENT.json). The current registry is a versioned overlay on the immutable August 22 release: 43 reconciliation decisions, eleven programme records, source-qualified review tables, and a conservative graph resolver. Raw reviewer edge tables remain evidence; they are not concatenated into a purported proof.
+The machine entry point is [canonical/CURRENT.json](canonical/CURRENT.json). The current registry is a generated, versioned overlay on the immutable August 22 release: 43 reconciliation decisions, eleven programme records, source-qualified review tables, and a conservative graph resolver. Raw reviewer edge tables remain evidence; they are not concatenated into a purported proof.
 
 [All four reviews](reviews/README.md) are resident at their exact frozen trees. The [August 22 release](integration/2026-08-22/README.md), older integrations, original source files, and research branches remain preserved. [HISTORY](HISTORY.md) explains the lifecycle.
 
-[Release holds](integration/2026-09-06/RELEASE_HOLDS.md) distinguish scientific review backlog, formal implementation work, and owner-only public-launch checks. This integration does not change repository visibility, permissions, or branch rules.
+## Verify and prepare release
+
+Use the [authenticated scoped verifier](integration/2026-09-06/hardening/README.md) for source-byte, current-navigation and registry checks. Its synthetic regression PASS is not a real-checkout or CI PASS. The original payload-only checker is retained for reproducing the earlier integration, not as the current release check.
+
+[RELEASE_READINESS](RELEASE_READINESS.md) distinguishes the outstanding scientific reviews, formal-source implementation, real-checkout verification and owner-only launch checks. Repository visibility, permissions and branch rules are unchanged by this pass.

@@ -1,30 +1,15 @@
 # Formalization track
 
-The repository's Lean development lives in the self-contained `formal/`
-subproject.
+The Lean development lives in the self-contained [`formal/`](formal/README.md) subproject. **Read [FORMAL_STATUS.md](FORMAL_STATUS.md) first:** the September 6 audit changes the interpretation of the historical formal-v0.1 release.
 
-Current release: **formal-v0.1**, formalizing the reviewed August 22, 2026
-scientific release through PR #707.
+The old actual-Xi source input is empty because of the total-function endpoint normalization, and its enumeration convention separately excludes empty or finite off-line spectra. A conditional theorem over that input is not an instantiated theorem about the intended Xi source. This is a source-fidelity defect, not a contradiction in Lean's kernel or a rejection of unrelated finite algebra.
 
-```text
-Riemann Hypothesis: UNPROVED
-unconditional Lean theorem proving RH: NONE
-conditional RH implication with explicit premises: PRESENT
-```
+The corrected entire normalization and conditional source-complete paper argument are retained in the [Xi repair](reviews/C/pass4-math-completion/proofs/XI_SOURCE_REPAIR.md). The full repaired Lean input, synchronized consumers and exact-tree verification remain outstanding. Candidate source outside trusted imports is not reported as compiled.
 
-Read [`formal/FORMAL_V0_1.md`](formal/FORMAL_V0_1.md) for the exact source
-locks, theorem inventory, exclusions, comparator surface, trust boundary and
-reproduction command.
+## Historical formal-v0.1
 
-The formal release uses Mathlib's `RiemannHypothesis` as its unique RH
-conclusion, pins Mathlib and the Anthropic Zeta23 dependency, and keeps every
-unproved RH-bearing theorem as an explicit proposition or theorem parameter.
-No open gate is installed as an axiom.
+The original scope, source locks, inventory and reproduction commands remain in [`formal/FORMAL_V0_1.md`](formal/FORMAL_V0_1.md). The library uses Mathlib's `RiemannHypothesis` as its RH conclusion and keeps the named open premises explicit. Its 139-row registry is a status map, not 139 formalized theorems.
 
-The generated `formal/registry/FORMALIZATION_MAP.tsv` maps all 139 canonical
-scientific semantic IDs to their independent formal status. Most of the
-canonical corpus remains unproved or not yet exactly stated in Lean; the first
-release is a reviewed gold spine, not a full formalization of the repository.
+Scientific integration and formal integration are separate gates. Acceptance of a later paper proof does not silently extend formal-v0.1, and an old green build does not settle the newly identified statement-fidelity problem.
 
-Post-PR-707 research, including later beta and L-function-family work, is
-excluded until it receives its own scientific review and integration.
+RH remains unproved. See [release readiness](RELEASE_READINESS.md) for the remaining source, build and publication checks.
