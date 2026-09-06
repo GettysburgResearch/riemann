@@ -1,59 +1,26 @@
-# Riemann Hypothesis - Agentic Polymath Project
+# Riemann Hypothesis — Agentic Polymath Project
 
-> This repository is part of the [Agentic Polymath Project](https://github.com/gfreund123/agentic-polymath-project), an open effort to push agentic research on difficult open problems while preserving a durable research record.
+Part of the [Agentic Polymath Project](https://github.com/gfreund123/agentic-polymath-project).
 
-## Scientific status
-
-> **The Riemann Hypothesis remains unproved. No reviewed-only implication path in this repository reaches RH.**
-
-The current curated scientific release is the **[2026-08-22 integration](integration/2026-08-22/README.md)**. It is based on frozen main `677203992eb0168920365ee45ae9db76bfa97dcf`, the completed independent review wave, Reviewer C's 341-PR and 171-issue archaeology, the complete 85-commit direct-main audit, and the final reconciliation at Reviewer D head `06c8ea18ffe20c7efa01b0fdacb8ebea0a2b5b22`.
-
-Research deposited after PR #707 is deliberately outside this release. Later work is neither rejected nor silently inherited; it belongs to the next review delta.
+> **RH remains unproved. No reviewed-only implication path here proves RH.**
+> The current scientific state is the [September 6, 2026 integration](integration/2026-09-06/README.md), combining the frozen A/B/C reviews and all four passes of D. It is a **scoped integration with explicit exclusions**, not a claim that every research branch, computation, or formal theorem has been revalidated.
 
 ## Start here
 
-**New contributor?** Start with [contributor access and your first contribution](CONTRIBUTING.md#join-and-start), or follow the [phone tutorial](docs/PHONE.md). Broad exploration, independent reviews, and useful failed attempts are welcome. The [review guide](docs/REVIEWING.md) explains how work enters the accepted research record.
+[STATUS](STATUS.md) gives the literal verdict. [RESULTS](RESULTS.md) separates retained mathematics from conditional components and evidence. [PROGRAMMES](PROGRAMMES.md) maps all eleven programmes to their current tasks. [OPEN_CUTS](OPEN_CUTS.md) and [PROOF_GRAPH](PROOF_GRAPH.md) identify the missing estimates and keep unbound adapters out of proof reachability.
 
-1. **[STATUS.md](STATUS.md)** - literal current verdict, strongest results, and live routes.
-2. **[RESULTS.md](RESULTS.md)** - reviewed unconditional mathematics and finite certificates.
-3. **[PROOF_GRAPH.md](PROOF_GRAPH.md)** - typed implication graph and all conclusion-facing edges.
-4. **[OPEN_CUTS.md](OPEN_CUTS.md)** - exact remaining theorems and their known equivalent coordinates.
-5. **[REFUTATIONS.md](REFUTATIONS.md)** - failed mechanisms, exact counterexamples, and surviving subresults.
-6. **[COMPUTATIONS.md](COMPUTATIONS.md)** - retained computational artifacts and their replay boundaries.
-7. **[HISTORY.md](HISTORY.md)** - proposal genealogy and PR lifecycle policy.
+The [integrated mathematical guide](research/integrated/2026-09-06/README.md) contains the corrected statement/proof guide and exact proof extracts. [REFUTATIONS](REFUTATIONS.md) records failed mechanisms and what survives. [COMPUTATIONS](COMPUTATIONS.md) distinguishes independently replayed certificates, retained evidence, and unperformed runs.
 
-The machine-readable release is under [`canonical/2026-08-22/`](canonical/2026-08-22/README.md). The reusable conclusion-facing API is under [`canonical/consumers/mellin-landau/`](canonical/consumers/mellin-landau/README.md).
+**Formalization:** read [FORMAL_STATUS](FORMAL_STATUS.md) before the historical formal-v0.1 documents. The raw total-function Xi input has a nonvacuity defect; the replacement paper argument is not a compiled full source implementation. A successful historical build does not resolve this semantic issue.
 
-## Current route map
+## Contribute and review
 
-| Family | Strongest reviewed substrate | First open arrow |
-|---|---|---|
-| **Mellin-Landau** | Fixed rows 2 and 3, fixed `5:3` scalar, zero-safe smoothing, specialized Landau, and fixed holomorphic-defect transfer | A literal fixed native row/scalar sign or subpower logarithmic negative-mass estimate |
-| **SHARP / native source** | RN child/cocycle, source-typing firewalls, sequential first owner, and global positivity for every real `m>=2` | `FCHD67` or the critical `m=1` weighted one-sided variation |
-| **Minimal wavelet / Vaughan** | Ratio-eight wavelet, Abel-Mertens frame, same-kernel translation, large-divisor rewrite, half-divisor square root, and Haar/Gram diagonal | Critical signed cross-core dispersion, signed near collision, or physical occupancy |
-| **Dickman / Bellman** | Exact Stieltjes transfer and a hereditary mesoscopic positive corridor | The dynamic critical finite block and its uniform transition |
-| **Actual-Xi Pick** | Infinitesimal safe Pick positive semidefiniteness through packet size three, with mandatory extraction fixes | Packet size four and all higher orders |
-| **First-Hermite / heat** | Countable RH criterion, broad-kernel and `(4-epsilon) log log` unconditional regions, and the uniform-center no-go | Fixed-center signed heat or constant-four prime cancellation |
-| **Q4** | Fourier/Haar/Jordan identities, factor-1024 annularization, Type-I/II forms, positive divisor compiler, and finite-filter barriers | `SACF` or the RH-equivalent one-sided `UOSACF` estimate |
-| **Operator / Brownian / Weil** | Suzuki amplitude embedding, safe-line transforms, and binding Bohr, Schur-rescue, and fixed-degree Fredholm no-go theorems | Coefficient-one first-chaos domination or corrected all-order arithmetic signs |
+Start with [CONTRIBUTING](CONTRIBUTING.md#join-and-start), the [phone tutorial](docs/PHONE.md), and [shared review responsibilities](docs/REVIEWING.md). Exploration and useful failed attempts are welcome. A deposited note is not automatically accepted mathematics. Research agents should read [AGENTS](AGENTS.md).
 
-These are proof programmes and exact reductions, not multiple established proofs.
+## Current record and preserved history
 
-## Scope and review vocabulary
+The machine entry point is [canonical/CURRENT.json](canonical/CURRENT.json). The current registry is a versioned overlay on the immutable August 22 release: 43 reconciliation decisions, eleven programme records, source-qualified review tables, and a conservative graph resolver. Raw reviewer edge tables remain evidence; they are not concatenated into a purported proof.
 
-- `VERIFIED` means independently reconstructed at a frozen source and accepted only in the stated scope.
-- `VERIFIED_WITH_FIXES` means the mathematics survives, but the named local repairs are mandatory in canonical use.
-- `CONDITIONAL_EXACT` means the implication or algebra is exact once its explicit premises are supplied.
-- `OPEN_SUFFICIENT_FOR_RH` and `OPEN_RH_EQUIVALENT` are open theorem nodes, not verified progress by themselves.
-- `REFUTED_MECHANISM`, `FALSE`, `GAP_BLOCKED`, and `SUPERSEDED` are preserved as scientific results and historical firewalls.
-- A finite computation is never promoted to an unbounded conclusion.
+[All four reviews](reviews/README.md) are resident at their exact frozen trees. The [August 22 release](integration/2026-08-22/README.md), older integrations, original source files, and research branches remain preserved. [HISTORY](HISTORY.md) explains the lifecycle.
 
-## Repository layers
-
-- [`integration/2026-08-22/`](integration/2026-08-22/README.md) is the frozen scientific release.
-- [`research/integrated/2026-08-22/`](research/integrated/2026-08-22/README.md) indexes the reviewed family packets.
-- Existing `claims/`, `experiments/`, `reports/`, and `standalone/` trees remain exact historical source records.
-- The August 1 and August 11 integrations remain immutable historical snapshots.
-- Active research branches remain free-form until a later exact-SHA review wave.
-
-A research agent should also read [AGENTS.md](AGENTS.md). Contribution mechanics are in [CONTRIBUTING.md](CONTRIBUTING.md).
+[Release holds](integration/2026-09-06/RELEASE_HOLDS.md) distinguish scientific review backlog, formal implementation work, and owner-only public-launch checks. This integration does not change repository visibility, permissions, or branch rules.

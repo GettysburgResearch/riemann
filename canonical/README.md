@@ -1,13 +1,7 @@
-# Stable canonical machine contract
+# Canonical research record
 
-This directory is backstage machine data. It is not the human front door.
+Start with [CURRENT.json](CURRENT.json) and the [September 6 current-view contract](2026-09-06/README.md).
 
-The established paths remain authoritative and compatibility-stable:
+The earlier dated directories remain immutable historical releases. They are inputs to the current source-qualified correction layer, not competing current verdicts. The reusable [Mellin-Landau consumer](consumers/mellin-landau/README.md) remains conditional on its literal native input and all current scope repairs. Its historical presence does not prove the arithmetic estimate or supply a newly compiled analytic library theorem.
 
-- `registry.yaml` — the first integration’s 18 reviewed metadata candidates;
-- `aliases.yaml` — append-only claim-ID collision, supersession, and historical identity records;
-- `provenance.schema.json` — the typed canonical/proof-producing provenance contract.
-
-The files retain their original schemas and bytes from the merged first integration. In particular, the JSON Schema keeps the canonical `$id` at this path.
-
-A registry row does not itself place a proof body on `main` or broaden a review. Readable mathematics lives under [`research/integrated/`](../research/integrated/README.md), and the wider reviewed state is in [`research/RESULTS_INDEX.md`](../research/RESULTS_INDEX.md).
+Exploratory records, component review verdicts, certified finite evidence and accepted implication premises remain distinct types. See the root [STATUS](../STATUS.md), [RESULTS](../RESULTS.md), [FORMAL_STATUS](../FORMAL_STATUS.md) and [PROOF_GRAPH](../PROOF_GRAPH.md).

@@ -31,17 +31,14 @@ jobs:
           submodules: false
       - name: Authenticate frozen review trees and collect bounded text inventory
         run: python3 -I -S integration/2026-09-06/source_inventory.py --output "$RUNNER_TEMP/integration-audit"
-      - name: Validate the reconciled release when installed
+      - name: Validate the complete scoped integration in both modes
         shell: bash
         run: |
           set -euo pipefail
-          if [ -f integration/2026-09-06/validate.py ]; then
-            python3 -I -S integration/2026-09-06/validate.py --output "$RUNNER_TEMP/integration-audit/current"
-            python3 -I -S -O integration/2026-09-06/validate.py --output "$RUNNER_TEMP/integration-audit/optimized"
-            diff -r "$RUNNER_TEMP/integration-audit/current" "$RUNNER_TEMP/integration-audit/optimized"
-          else
-            echo 'SOURCE_INVENTORY_ONLY_NOT_RELEASE_ACCEPTANCE'
-          fi
+          test -f integration/2026-09-06/validate.py
+          python3 -I -S integration/2026-09-06/validate.py --output "$RUNNER_TEMP/integration-audit/current"
+          python3 -I -S -O integration/2026-09-06/validate.py --output "$RUNNER_TEMP/integration-audit/optimized"
+          diff -r "$RUNNER_TEMP/integration-audit/current" "$RUNNER_TEMP/integration-audit/optimized"
       - name: Retain exact source and validation receipts
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:

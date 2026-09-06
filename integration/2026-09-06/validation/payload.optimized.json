@@ -1,0 +1,54 @@
+{
+  "decisions": 43,
+  "exhaustive_scientific_review": false,
+  "fresh_heavy_campaigns": false,
+  "fresh_lean_build": false,
+  "independent_fixtures": {
+    "arithmetic": "EXACT_RATIONAL_INTEGER",
+    "counts": {
+      "entire_endpoint": 2,
+      "entire_normalization": 12,
+      "farkas_sign": 1,
+      "finite_source_psd": 42,
+      "local_geometry": 2,
+      "old_total_endpoint": 2,
+      "p61_finite_coefficients": 400,
+      "paid_orbit": 36,
+      "pick_factorization": 3,
+      "poisson_energy": 2,
+      "prime_atom_sign": 1,
+      "principal_minors": 1,
+      "reserve_budget": 2,
+      "schur_upper_direction": 12,
+      "source_monotonicity": 12,
+      "varying_order": 46
+    },
+    "infinite_analysis_machine_proved": false,
+    "lean_compiled": false,
+    "marker": "PASS_INDEPENDENT_INTEGRATION_FIXTURES",
+    "original_heavy_campaigns_rerun": false,
+    "rh_proved": false,
+    "total": 576
+  },
+  "marker": "PASS_RELEASE_PAYLOAD_NOT_FULL_CHECKOUT",
+  "mode": "PAYLOAD_ONLY",
+  "programmes": 11,
+  "public_launch_cleared": false,
+  "rejection_tests": {
+    "graph_rejections": 2,
+    "payload_rejections": 14,
+    "strict_json_rejections": 2
+  },
+  "release": "2026-09-06",
+  "rh_proved": false,
+  "schema": "riemann.integration.validation.v1",
+  "unperformed": [
+    "actual-checkout source tree authentication",
+    "historical registry resolution",
+    "review-table/census parsing",
+    "full local-link validation",
+    "Lean and transitive import replay",
+    "heavy research campaigns",
+    "public-launch clearance"
+  ]
+}
