@@ -1,5 +1,7 @@
 # Riemann formalization
 
+> **September 6 audit notice:** read [current formal status](../FORMAL_STATUS.md) before using this historical release. The actual-Xi source input has a nonvacuity defect; the source-faithful paper replacement is not a compiled full Lean repair. This does not invalidate unrelated finite algebra or imply kernel inconsistency.
+
 This nested Lean project contains the formalization track for the Riemann
 Agentic Polymath repository.
 

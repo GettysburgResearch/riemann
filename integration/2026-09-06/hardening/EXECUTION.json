@@ -1,0 +1,42 @@
+{
+  "baseline": "4f461e5ad46e452b1eafa69eddff3b76cd0c12be",
+  "commands": [
+    "python -I -S -B integration/2026-09-06/hardening/test_verify.py",
+    "python -I -S -B -O integration/2026-09-06/hardening/test_verify.py"
+  ],
+  "executed_sources": [
+    {
+      "blob": "7ea5e446b48b875c4c580e8b140c185c54915a06",
+      "bytes": 12907,
+      "path": "integration/2026-09-06/hardening/verify.py",
+      "sha256": "996ee13fd92ee75c6833cb7c75a48ecdd3d4f42ae4e84b0a81042d71d9a3e97f"
+    },
+    {
+      "blob": "ff43f6c44adfe53cf5a2008b447b24a187ae5147",
+      "bytes": 9485,
+      "path": "integration/2026-09-06/hardening/test_verify.py",
+      "sha256": "5b1e484989ed108f02a7009f39fe698d4622e103c77ddf2dd77068d40d257d5f"
+    }
+  ],
+  "fresh_lean_build": false,
+  "full_24_page_navigation_scan_executed": false,
+  "identical_summary_bytes": true,
+  "modes": [
+    "normal",
+    "optimized"
+  ],
+  "new_mathematical_theorem_claimed": false,
+  "platform": "Linux",
+  "python": "3.13.5",
+  "real_checkout_validation_executed": false,
+  "remote_ci_success_observed": false,
+  "result": {
+    "blob": "30d17809409f332591487804a7fc5cf05094c107",
+    "bytes": 201,
+    "path": "integration/2026-09-06/hardening/test-result.json",
+    "sha256": "2f24c636be024ce0c9f7d3a36013c5be2c0f782bdc25eae8119e9ba454d70cc0"
+  },
+  "schema": "riemann.postmerge.hardening.execution.v1",
+  "scope": "27 initial Git/JSON/path/Markdown contracts plus two math-notation parser controls; synthetic Git repositories, not the real Riemann checkout",
+  "tests_per_mode": 29
+}
