@@ -1,30 +1,39 @@
 # Riemann Hypothesis — Agentic Polymath Project
 
-Part of the [Agentic Polymath Project](https://github.com/gfreund123/agentic-polymath-project).
+We are developing and testing approaches to the **Riemann Hypothesis (RH)**: every nontrivial zero of the Riemann zeta function has real part $1/2$. For $\Re s>1$, $\zeta(s)=\sum_{n\ge1}n^{-s}$; its analytic continuation connects the distribution of primes with complex analysis, harmonic analysis and spectral theory. This repository is part of the [Agentic Polymath Project](https://github.com/gfreund123/agentic-polymath-project).
 
-> **RH remains unproved. No reviewed-only implication path here proves RH.**
-> The current scientific state is the [September 6, 2026 integration](integration/2026-09-06/README.md), combining the frozen A/B/C reviews and all four passes of D. It is a **scoped integration with explicit exclusions**, not a claim that every research branch, computation, or formal theorem has been revalidated.
+**RH remains unproved here. There is no accepted proof or disproof, and no certified off-critical zeta zero.** The project has produced useful theorems, exact reductions, finite certificates and counterexamples to proposed mechanisms. These are a research foundation, not a completed solution.
 
-## Start here
+## What has been achieved
 
-[STATUS](STATUS.md) gives the literal verdict. [RESULTS](RESULTS.md) separates retained mathematics from conditional components and evidence. [PROGRAMMES](PROGRAMMES.md) maps all eleven programmes to their current tasks. [OPEN_CUTS](OPEN_CUTS.md) and [PROOF_GRAPH](PROOF_GRAPH.md) identify the missing estimates and keep unbound adapters out of proof reachability.
+**Arithmetic with explicit sources.** A complete reduction sends any hypothetical Robin-inequality violation to an integer with consecutive prime support and decreasing exponents. Exact finite bounds support that reduction. A separate Möbius-weighted construction has a genuine all-scale positivity theorem for every real power $m\ge2$; reaching the critical power $m=1$ remains open. The fixed-prime $P_{61}$ bias theorem also holds for every real endpoint; this does not establish uniformity over growing prime sets. [Arithmetic results](RESULTS.md#arithmetic).
 
-The [integrated mathematical guide](research/integrated/2026-09-06/README.md) contains the corrected statement/proof guide. Its [proof reading links](research/integrated/2026-09-06/proof-extracts/README.md) open the resident source contexts, including A's later supplement. [REFUTATIONS](REFUTATIONS.md) records failed mechanisms and what survives. [COMPUTATIONS](COMPUTATIONS.md) distinguishes independently replayed certificates, retained evidence, and unperformed runs.
+**Analytic criteria and finite witnesses.** Fixed Mellin transforms make precise which arithmetic negative-mass estimate would imply RH. Derivative-free xi/Pick/Loewner tests give exact finite predicates that an RH failure would violate. Low-order safe-axis xi positivity, compact wavelet identities and source-specific Schur reductions clarify what can be proved without the missing global sign. [Analytic and operator results](RESULTS.md#analytic).
 
-**Formalization:** read [FORMAL_STATUS](FORMAL_STATUS.md) before the historical formal-v0.1 documents. The raw total-function Xi input has a nonvacuity defect; the replacement paper argument is not a compiled full source implementation. A successful historical build does not resolve this semantic issue.
+**Certificates and structural mathematics.** Retained Robin and complex Pick controls, a repaired fixed-$P_{61}$ certificate, and a seven-point continuum kernel inequality have explicit evidence contracts. Work on L-function families, function fields, recurrence/cofactor algebra and filtered complexes provides additional exact or conditional components. Their connection to the actual zeta source is a separate question. [Certificates](RESULTS.md#certificates) · [Families and structures](RESULTS.md#structures).
 
-## Contribute and review
+These statements summarize the cumulative integrated record, including earlier work. Classical inputs are credited in the linked proofs; repository acceptance is not a claim of external novelty.
 
-Start with [CONTRIBUTING](CONTRIBUTING.md#join-and-start), the [phone tutorial](docs/PHONE.md), and [shared review responsibilities](docs/REVIEWING.md). Exploration and useful failed attempts are welcome. A deposited note is not automatically accepted mathematics. Research agents should read [AGENTS](AGENTS.md).
+## Read the project
 
-## Current record and preserved history
+| Question | Start here |
+|---|---|
+| What is established, and with what qualifications? | [Scientific status](STATUS.md) and [results with significance and scope](RESULTS.md) |
+| What do the current statements actually say? | [Current statements and proof routes](research/integrated/CURRENT_RESULTS.md) |
+| How do the approaches connect? | [Approaches](PROGRAMMES.md) and [implication map](PROOF_GRAPH.md) |
+| What should be tried next, and what has already failed? | [Open problems and concrete tasks](OPEN_CUTS.md) and [useful failed approaches](REFUTATIONS.md) |
+| Where are the proofs, evidence and ongoing experiments? | [Research navigation](research/RESULTS_INDEX.md) and [computational evidence](COMPUTATIONS.md) |
 
-The machine entry point is [canonical/CURRENT.json](canonical/CURRENT.json). The current registry is a generated, versioned overlay on the immutable August 22 release: 43 reconciliation decisions, eleven programme records, source-qualified review tables, and a conservative graph resolver. Raw reviewer edge tables remain evidence; they are not concatenated into a purported proof.
+**One useful first contribution:** independently regenerate the primitive xi-value enclosures for a retained finite Pick control and compare them with its exact matrix certificate. That improves a clearly identified evidence boundary without requiring a new RH mechanism. An analytic alternative is to isolate and prove one source-specific bound in the [fixed-detector negative-mass problem](OPEN_CUTS.md#fixed-detector), preserving the signed terms and both excursion endpoints.
 
-[All four reviews](reviews/README.md) are resident at their exact frozen trees. The [August 22 release](integration/2026-08-22/README.md), older integrations, original source files, and research branches remain preserved. [HISTORY](HISTORY.md) explains the lifecycle.
+## Integrated baseline and active research
 
-## Verify and prepare release
+The pages above describe reviewed components at their recorded sources, with later corrections applied. They do not certify every file on main. [Active research](PROGRAMMES.md#active-research), including newer branch revisions, remains discoverable but is not accepted merely because it exists or has passed an author's tests. Earlier results retain their inherited review scope unless an applicable correction changes it.
 
-Use the [authenticated scoped verifier](integration/2026-09-06/hardening/README.md) for source-byte, current-navigation and registry checks. Its synthetic regression PASS is not a real-checkout or CI PASS. The original payload-only checker is retained for reproducing the earlier integration, not as the current release check.
+**Formalization is a separate track.** Finite algebra and conditional Lean implications exist, but the old actual-xi input has a source-definition defect. A replacement paper argument is not a compiled, inhabited replacement API. See [formal status](FORMAL_STATUS.md); do not read a historical build as a completed formal proof release.
 
-[RELEASE_READINESS](RELEASE_READINESS.md) distinguishes the outstanding scientific reviews, formal-source implementation, real-checkout verification and owner-only launch checks. Repository visibility, permissions and branch rules are unchanged by this pass.
+## Contribute
+
+Read [CONTRIBUTING](CONTRIBUTING.md), choose a [bounded task](OPEN_CUTS.md#bounded-contributions), and check the existing issue or PR before starting. Exploration, independent review and useful counterexamples are welcome. Agents should also read [AGENTS](AGENTS.md).
+
+[Integration and audit records](integration/README.md), [history](HISTORY.md), the [machine-readable current record](canonical/CURRENT.json), and [publication readiness](RELEASE_READINESS.md) supply provenance and operational detail; they are not prerequisites for understanding the mathematics.

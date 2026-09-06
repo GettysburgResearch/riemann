@@ -1,23 +1,23 @@
-# Release readiness
+# Publication and verification readiness
 
-**Scientific record:** the September 6 integration is a scoped, corrected research record. RH remains unproved. **Public-launch clearance:** not asserted.
+The [scientific account](STATUS.md) describes an open research project, not a completed proof release. Open mathematics can remain clearly disclosed work. Publication decisions, source verification and formal-proof completion are separate questions.
 
-This page is the current operational checklist. The [original release holds](integration/2026-09-06/RELEASE_HOLDS.md) and reviewer omission ledgers remain authoritative detail; they are not erased by this post-merge pass.
+## Verification status
 
-| Area | Current disposition | Required evidence for completion |
-|---|---|---|
-| Review preservation | A, B, C and all four D directories are frozen; original reports and failed checks remain available. | The authenticated checkout command verifies every consumed working file and all seven tree IDs. |
-| Current navigation and validation | Hardened runner and 29 normal/optimized synthetic regression tests are supplied. | A real-checkout `PASS_AUTHENTICATED_SCOPED_RELEASE` receipt at the intended commit; not merely a workflow definition or a payload-only PASS. |
-| Scientific coverage | Scope, corrections, conditional inputs and omissions are explicit. Unreviewed material is not newly accepted. | Targeted proof/source reviews for the named omissions and adapters; not a blanket rereview or a required proof of every open problem. |
-| Actual-Xi formal source | The empty-input defect is disclosed; the conditional paper repair is retained outside trusted imports. | An inhabited source-faithful Lean repair, synchronized definitions/consumers/locks, exact-tree build, comparator and axiom audit. |
-| Other formal and external imports | Historical pins and conditional inputs are preserved. | The separately requested import-closure, physical-integral, primitive-certificate and toolchain checks. |
-| Automation and access | This pass changes only the bounded integration workflow, not permissions or visibility. | Owner verification of Actions availability, enforced main-branch review rules, bypass/access settings and the contributor workflow. |
-| Public distribution | No all-history privacy/credential or comprehensive imported-rights audit is claimed. No license was selected by this pass. | Owner review of history, credentials/personal data, licenses, notices and paper redistribution rights before changing visibility. |
+The conditional-API graph defect has been repaired. [PR #802](https://github.com/GettysburgResearch/riemann/pull/802) records real-registry regressions and ordinary/optimized authenticated full-checkout PASS at merged commit `051808c1f8367b4320c52f94b40908eb2173d622`, tree `115c71ffd64b5f9ab3568185634c9efd07c89333`. Its Windows symlink-test omissions are explicit. The earlier fixture-only and payload-only narratives remain historical evidence; they no longer mean that no real-checkout validation has ever occurred.
 
-## One verification entry point
+A receipt covers its tested tree, not all later commits. For an intended publication commit, run the [current authenticated verifier](integration/2026-09-06/hardening/README.md) selected by [canonical/CURRENT.json](canonical/CURRENT.json). Record the exact commit, platform and actual checks. No remote CI success or new whole-checkout execution is asserted by this editorial update.
 
-Use [canonical/CURRENT.json](canonical/CURRENT.json), whose resolver is the [authenticated scoped verifier](integration/2026-09-06/hardening/verify.py). Commands, exact scope and the distinction between synthetic and real-checkout success are in its [README](integration/2026-09-06/hardening/README.md).
+## Remaining publication decisions
 
-Open mathematics is expected in a research project. It may be published as clearly labeled research; it must not be silently promoted into accepted mathematics. Likewise, the source-specific formal hold is not a claim that Lean's kernel or all finite algebra is invalid.
+| Area | What still needs an explicit decision or evidence |
+|---|---|
+| Distribution | Appropriate project license, imported licenses/notices and paper redistribution rights; history/privacy/credential review at the intended disclosure scope |
+| Main and contributor access | Enforced review rules and bypass permissions where available; verify contributor access and the phone walkthrough rather than assuming the documentation was tested |
+| Automation | Deliberately decide whether to enable the bounded workflow; local recorded validation is distinct from Actions success |
+| Scientific presentation | Keep integrated component scopes, later corrections and active unreviewed work distinguishable; do not advertise exhaustive review |
+| Formal claims | Do not advertise a completed source-faithful formal release while the actual-xi repair remains unimplemented/uncompiled at its full intended interface |
 
-This checklist does not authorize a visibility change, invent a CI success, or declare the omitted audits complete.
+This page does not infer current repository settings from an older observation and does not change visibility, permissions, Actions or licensing. Exact historical holds and omissions remain in [the integration record](integration/2026-09-06/RELEASE_HOLDS.md). Its dated unresolved-execution statements must be read with the later verification receipt above.
+
+The unresolved [research tasks](OPEN_CUTS.md) do not have to be solved before publishing clearly labeled research. They do have to remain visible beside any result that depends on them.
