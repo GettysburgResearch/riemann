@@ -1,0 +1,41 @@
+{
+  "C0_decimal_enclosure": [
+    "0.0473031195",
+    "0.0473031978"
+  ],
+  "C0_interval": [
+    "34566793351160214594453932872077114506641314513/730750818665451459101842416358141509827966271488",
+    "34566850490697692527968570774722761848709595269/730750818665451459101842416358141509827966271488"
+  ],
+  "arithmetic": "integer/Fraction; outward dyadic logs; no floating point",
+  "bits": 160,
+  "groups": {
+    "constant_cancellation": 1,
+    "cusp_filter": 32,
+    "gamma_bound": 1,
+    "inverse_filter": 49,
+    "main_constant": 1,
+    "mellin_response": 11,
+    "rational_slack_normalization": 63,
+    "sample_scalar_sign": 63,
+    "sieve_independence": 255,
+    "source_C_bounds": 1,
+    "square_sample_normalization": 63,
+    "weight_nonnegative_rows": 63
+  },
+  "new_full_window_positivity_proved": false,
+  "rh_proved": false,
+  "sample_count": 63,
+  "sample_first_last": [
+    2,
+    64
+  ],
+  "sample_minimum_margin": [
+    "0.2162828059",
+    "0.2162828060"
+  ],
+  "sample_scope": "integers m=2,...,64; scalar annular inequality only",
+  "samples_digest": "6a05a05a3ce58124da7a5b27739989103abbd0d93f60748e72b65f94a8a0c808",
+  "status": "PASS_BOUNDED_ANNULAR_CONTROLS",
+  "unbounded_arithmetic_inequality_proved": false
+}
