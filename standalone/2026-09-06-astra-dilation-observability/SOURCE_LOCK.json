@@ -1,0 +1,25 @@
+{
+  "schema": "riemann-dilation-observability-source-lock-v1",
+  "repository": "GettysburgResearch/riemann",
+  "observed_main": "051808c1f8367b4320c52f94b40908eb2173d622",
+  "observed_main_tree": "115c71ffd64b5f9ab3568185634c9efd07c89333",
+  "date": "2026-09-06",
+  "proposed_branch": "research/astra/20260906-dilation-observability",
+  "publication_status": "LOCAL_PACKET_ONLY_NOT_PUSHED",
+  "repo_context_blobs": {
+    "AGENTS.md": "0ad1dc2034c5d83e777343f77b41dcaf3683ef14",
+    "README.md": "56593fc6e1f1e46cdd2ede2c54f08aeb253aafb1",
+    "research/RESULTS_INDEX.md": "5eb1bf14a075e2f0881689ce15f1367d37619082"
+  },
+  "context_only_pr793_head": "cdf2f15965decbd35afbbd09a16c89cb3e215737",
+  "mathematical_imports": [
+    "Integer step-space Nyman-Beurling equivalence: Balazard arXiv:1812.04309v1 Proposition 10, attributing the underlying criterion to Baez-Duarte",
+    "Classical Hilbert projection and analytic continuation theorems",
+    "Classical Euler-Maclaurin formula with bounded periodic Bernoulli remainder"
+  ],
+  "independent_review_complete": false,
+  "rh_proved": false,
+  "uniform_gain_proved": false,
+  "formal_build_run": false,
+  "remote_ci_run": false
+}
