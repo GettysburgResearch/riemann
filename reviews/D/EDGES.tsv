@@ -1,0 +1,63 @@
+edge_id	source_object	target_object	verdict	hypothesis_or_obstruction	review_units
+D-E001	Fixed signed detector with subpower negative mass	Negative-part tail Mellin holomorphy	VALID	Actual logarithmic mass and [1,infinity) tail transform.	D-U002
+D-E002	Nonnegative tail plus real-axis analytic continuation	Tail abscissa <=0	VALID	Finite initial abscissa and locally integrable density.	D-U001
+D-E003	Rows 2 and 3	Noncancellation in Re(z)>0	VALID	Exact row numerator algebra and |2^-z|<1.	D-U004
+D-E004	Fixed 5:3 combination	Noncancellation in Re(z)>0	VALID	Same source normalization and fixed coefficients.	D-U005
+D-E005	Literal fixed-row producer plus noncancellation	RH	CONDITIONAL_OPEN_PRODUCER	The required arithmetic sign or negative-mass bound is not proved.	D-U001;D-U004;D-U005
+D-E006	SHARP target	Positive component-row kernel	VALID	Exact Mellin convolution and positive activation-cell calculation.	D-U006
+D-E007	66 compact Hall inequalities	Complete rough Euler-source feasibility	NOT_ESTABLISHED	Finite compact Hall is not the full rough-source decoder.	D-U007;D-U008
+D-E008	Same-index endpoint restriction	RN cocycle	VALID	Retain T(Z/t)/T(Y/t), not a bare support cutoff.	D-U008
+D-E009	Subunit labelled removal mass	m>=2 SHARP positivity	VALID_WITH_REPAIR	Inactive adjacent levels use a weak inequality; the first pair is strictly positive.	D-U009
+D-E010	Positive H2 primitive	Critical weighted negative variation bound	NOT_ESTABLISHED	Primitive positivity alone does not control downward variation.	D-U010;D-U011
+D-E011	Distributional H2 descent	Critical negative mass identity	VALID	Separate absolutely continuous variation from activation atoms.	D-U010;D-U011
+D-E012	Complete finite carry field	Fourier / inverse-Laplacian energy	VALID	Include the zero mode and endpoint convention.	D-U012
+D-E013	Uniform independent residue average	Jordan2 positive Gram	VALID	Periodized ensemble only.	D-U013;D-U014
+D-E014	Periodized Jordan bound	Native fixed-endpoint Q4 bound	NOT_ESTABLISHED	The averaging measures differ.	D-U013;D-U014
+D-E015	Fixed filter with actual subpower inverse	Preserved subpower exponent	VALID_WITH_REPAIR	Fixed operator and controlled initial interval.	D-U016
+D-E016	Subpower inverses of each frozen order	Subpower inverse for varying-order rows	REFUTED	Periodic orders 2,4,4 annihilate an exponentially growing input.	D-U017
+D-E017	RH Mertens estimate	Displayed fixed-band UOSACF converse	VALID_WITH_INPUTS	Earlier source/annular forward identity remains outside this subreview.	D-U015
+D-E018	Three carrier roots	Minimal ratio-eight compactifier	VALID	Causal normalized polynomial of minimal degree three.	D-U018
+D-E019	Literal duplicate-67 scalar	Geometric scalar inverse	VALID	No silent change to the pair-energy measure.	D-U019
+D-E020	Minimal wavelet negative-mass bound	RH	CONDITIONAL_OPEN_PRODUCER	The compact multiplier is pole-safe; the arithmetic bound is open.	D-U020
+D-E021	P13 old Hardy energy	P14 identical Cauchy-Poisson energy	REFUTED	Missing (X/8)^2 factor in the endpoint term.	D-U021
+D-E022	P14 explicitly defined Cauchy average	Correct min(m,n)^2 Gram	VALID	Initial absolute Fubini; Hardy continuation only with its actual hypotheses.	D-U023
+D-E023	Literal old MWOC norm bound	All fixed suffix Mellin tests	REPAIR_PROVED	R4 uses a predetermined countable dense test family.	D-U022
+D-E024	Literal old MWOC norm bound	RH	CONDITIONAL_REPAIR_OPEN_PRODUCER	R4 separates every hypothetical reciprocal-zeta pole; norm bound remains open.	D-U022
+D-E025	RH	Literal old MWOC norm bound	VALID_WITH_INPUTS	Classical Mertens bound and uniform compact-suffix Abel summation.	D-U022
+D-E026	Zero-free half-plane	P15 weighted energy upper abscissa	INPUT_REVIEW_PENDING	Exact reciprocal-zeta growth and Hardy/contour theorem still require a complete source audit.	D-U024
+D-E027	Same-K1 decompositions plus L1 errors	Negative-mass equivalence	VALID_WITH_INPUTS	Smooth-sector and Type-I inputs remain imported.	D-U025
+D-E028	eta local binomial identity	eta*eta = constant one	VALID	Not eta*eta=delta1.	D-U026
+D-E029	Balanced two-field identity	Equal half-divisor source factors	VALID_WITH_INPUTS	L-102009 identity not independently reread here.	D-U027
+D-E030	Finite source truncated at N	Hardy norm-three energy estimate	VALID_WITH_REPAIR	Apply full-line norm after truncation and retain [U,4N].	D-U028
+D-E031	Finite half-completed field	Exact ratio-four Haar Gram	VALID	All cross terms and endpoint conventions retained.	D-U029
+D-E032	Subpower coefficient diagonal	Signed near-collision bound	NOT_ESTABLISHED	Off-diagonal remains unproved.	D-U030
+D-E033	Grouped Xi orbit inequalities	Order-two safe-axis PSD	VALID_WITH_INPUTS	Actual zero-height lower bound and grouped Hadamard convergence.	D-U031
+D-E034	Two scalar curvature signs	Three-node determinant sign	VALID	Exact determinant factorization and positive prefactor.	D-U032;D-U033
+D-E035	Published low-zero verification plus zero-count tail	Total reserve less than one	VALID_WITH_INPUTS	External verification is imported, not rerun.	D-U034;D-U035
+D-E036	Paid orbit blocks plus leftover reserve	Actual reciprocal concavity	VALID_WITH_REPAIR	Retain (m0-1)R0 and local C2 convergence.	D-U036;D-U037
+D-E037	Repaired reciprocal concavity and tp concavity	Actual Xi PSD through size three	VALID_WITH_INPUTS	Repeated nodes yield PSD, not PD.	D-U038
+D-E038	Actual Xi PSD through size three	All-order Xi positivity / RH	NOT_ESTABLISHED	No all-order theorem follows from this finite order.	D-U038
+D-E039	1 in full spectrum(K(0))	Nontrivial kernel of H	REFUTED	An approximate spectral point need not be an eigenvalue.	D-U040
+D-E040	1 in point spectrum(K(0))	Nontrivial kernel of H	REPAIR_PROVED	Use the exact eigenvector maps and form domains.	D-U039;D-U040
+D-E041	Terminal nonreal heat pair	Strict first-Hermite negative witness	VALID_WITH_INPUTS	Bounded imaginary width, local finiteness, subquadratic count and Gaussian tails.	D-U041;D-U042
+D-E042	Large-center subcritical heat wedge	Full all-center heat sign	NOT_ESTABLISHED	Bounded centers and the entire complementary resolution region remain.	D-U043;D-U044
+D-E043	Exact finite Robin barrier	Canonical-violator reduction above 5040	VALID_WITH_INPUTS	Finite thresholds plus monotone prime/exponent canonicalization.	D-U045;D-U046;D-U047
+D-E044	Certified tail caps and feasible minimum tail	Powered Robin envelope	VALID_WITH_REPAIR	Restore n_r and R<=M; use the original finite budget.	D-U048;D-U049
+D-E045	All principal minors nonnegative	Finite Hermitian PSD	REPAIR_PROVED	Leading minors alone do not suffice.	D-U050;D-U051
+D-E046	Saturated sign chain and total multiplicity	Complete simple-zero census in one slab	VALID_WITH_INPUTS	Endpoint and total-count certification are explicit.	D-U052
+D-E047	Finite slab census	Global Pick / Weil functional sign	REFUTED_GENERIC_INFERENCE	Needs an additional locality or complement theorem.	D-U053
+D-E048	Matched-pole vector with n>=2	Isolated modeled value -2md	VALID_WITH_REPAIR	Restore the original n>=2 assumption.	D-U058
+D-E049	Isolated modeled value -2md	Negative complete actual-xi form	NOT_ESTABLISHED	The other zeros remain in the actual evaluations.	D-U058
+D-E050	RH and stated safe-line expansion	Hausdorff / beta-Hankel positivity	VALID_WITH_INPUTS	Original safe-Euler-line arithmetic producer not fully reread.	D-U059;D-U060
+D-E051	Orthogonal positive chaos plus intensity linearity	Higher-chaos outputs vanish	VALID	All stated grading and intensity hypotheses retained.	D-U061
+D-E052	Higher-chaos outputs vanish	Contraction from specified source features	NOT_ESTABLISHED	Input/output Gram domination or a conservative source map is additionally required.	D-U062
+D-E053	Two fixed-scale channel mass bounds	Julia reserve domination	VALID_WITH_INPUTS	Correct the arithmetic margin; the upstream mass bounds were not audited.	D-U063
+D-E054	Uniform P61/Dickman inputs and margin	Mesoscopic Bellman corridor	INPUT_REVIEW_PENDING	Not a fixed-prime root theorem; profile and joint ranges still need complete audit.	D-U064;D-U065
+D-E055	Negative principal block	No positive Schur rescue	VALID	Test vectors (x,0), or subtract a positive Schur term.	D-U067
+D-E056	Signed Perron flux plus rho(M)<1	Negative-mass absorption	VALID	Finite integrals and positive operators; do not replace b by an unsigned unrelated quantity.	D-U068
+D-E057	One common matched transfer	Bound on negative part of sum	VALID	Same measurable transfer in both terms.	D-U069
+D-E058	Subpower inverse return gap plus excess packing	Subpower root negative mass	VALID	Both source hypotheses remain unproved where applied arithmetically.	D-U070
+D-E059	Uncharged initial negative component	Printed finite Poincare inequality	REFUTED	f(u)=u-1 on [0,2] violates it.	D-U071
+D-E060	Charged boundary components and interior derivative energy	Correct excursion mass bound	REPAIR_PROVED	Poincare applies only to zero-endpoint interior excursions.	D-U071;D-U072
+D-E061	Each fixed region subpower plus subpower region count	Subpower total for a growing partition	REFUTED_NONUNIFORM_READING	New regions may carry power mass with region-dependent constants.	D-U074
+D-E062	Uniform regional subpower bounds plus subpower count	Subpower Schur total	VALID_WITH_REPAIR	Or directly assume the subpower sum of regional products.	D-U073;D-U074

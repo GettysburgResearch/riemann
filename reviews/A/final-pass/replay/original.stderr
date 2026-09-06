@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/mnt/data/A-source-quarantine/rank2_author.py", line 163, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/A-source-quarantine/rank2_author.py", line 103, in main
+    numerator_ok, numerator_terms = coefficientwise_nonnegative(
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        numerator_pr
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "/mnt/data/A-source-quarantine/rank2_author.py", line 58, in coefficientwise_nonnegative
+    return all(c >= 0 for c in coefficients), len(polynomial.terms())
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/sympy/core/relational.py", line 519, in __bool__
+    raise TypeError(
+    ...<3 lines>...
+    )
+TypeError: cannot determine truth value of Relational: s1**2 - 2*s2 >= 0

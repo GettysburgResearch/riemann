@@ -1,0 +1,46 @@
+edge_id	from_object	to_object	verdict	condition_or_obstruction	review_units
+D3-E001	classical theta transform	cardinal G-class source	VALID_WITH_CLASSICAL_INPUT	Source is actual Xi with the declared Fourier normalization.	D3-U001
+D3-E002	cardinal G-class source	all-packet strip capture	VALID	Fixed target pair, exact multiplicities, distinct packet nodes.	D3-U002
+D3-E003	all-packet strip capture	compact and Gabor capture	VALID_WITH_QUANTIFIERS	Support and mode blocks selected after each packet, not fixed beforehand.	D3-U003
+D3-E004	cardinal G-class source	range(J_sigma) and full Weil negative test	VALID	Both divided source and derivatives remain super-Gaussian; source is target-dependent.	D3-U004
+D3-E005	full Weil negative test	arithmetic kernel positivity	NO_IMPLICATION	Existential capture supplies a witness conditional on an exceptional zero, not exclusion.	D3-U001;D3-U004
+D3-E006	sparse phase source	fourteen carry rows	VALID	Keep column-one deletion and u1.	D3-U005
+D3-E007	full Riesz scale identity	circle Riesz identity all X	VALID_AFTER_REPAIR	Positive-part logarithms; expanded gauge only X>=4.	D3-U006
+D3-E008	positive centered filter symbol	positive filtered arithmetic state	NO_IMPLICATION	Symbol coercivity is not pointwise positivity of an arbitrary signed source.	D3-U007
+D3-E009	fixed Haar inverse mass	fixed filter bound equivalence	VALID	Fixed order and bounded base range.	D3-U008
+D3-E010	fixed Haar inverse mass	varying-order inverse estimate	FALSE_GENERAL_INFERENCE	First-pass D-F01 remains binding.	D3-U008
+D3-E011	interior polynomial root	exponential inverse limsup	VALID	Does not force every individual coefficient to be nonzero.	D3-U009
+D3-E012	positive divisor compiler	additive carry-cost bound	OPEN_TRANSFER	Need an estimate in the actual additive metric.	D3-U010
+D3-E013	finite Goldbach identity	uniform counting energy	VALID	Keep artificial endpoint correction and all cross terms.	D3-U011;D3-U012
+D3-E014	uniform counting energy	original block-measure energy	OPEN_TRANSFER	Exact measure change not supplied.	D3-U012
+D3-E015	W/A/B/Q exact definitions	ten annular bands	VALID_FINITE	All coefficient and endpoint controls independently reconstructed.	D3-U013;D3-U014
+D3-E016	L-95401.16 core	L-95401.17 core	FALSE_AS_EXACT_SET_EQUALITY	Small reduced-variable sector must also be removed.	D3-U016
+D3-E017	L-95401.16 core	repaired final core plus small-a remainder	VALID_AFTER_REPAIR	Disjoint priority partition; total removed contribution O(H log^2(2X)).	D3-U017
+D3-E018	absolute 1/|m-n| bound	uniform Hilbert norm bound	FALSE_GENERAL_INFERENCE	Absolute harmonic matrix has logarithmically divergent norm.	D3-U019
+D3-E019	signed Hilbert transform	annular mean square <=(2T+14X) diagonal	VALID	Retain the two opposite modulations until the signed operator bound.	D3-U019
+D3-E020	mean square O(X) bound	critical pointwise Q4 estimate	NO_IMPLICATION	The X loss remains.	D3-U019
+D3-E021	gcd parity elimination	nonnegative common-divisor weight	NO_IMPLICATION	Kernel products remain signed.	D3-U020
+D3-E022	product-geometric association	positive all-Green safe density	VALID	Nonzero decreasing test for strictness; finite or dominated measure limits.	D3-U021
+D3-E023	positive Green density	Green-removed density	OPEN_WITHOUT_BOUNDARY_ESTIMATE	Cubic differentiation creates contacts and a signed continuous part.	D3-U022
+D3-E024	knot affine lower bound	between-knot lower bound	VALID_WITH_CHORD_ARGUMENT	Within-cell concavity and upward jumps.	D3-U022;D3-U023
+D3-E025	positive-measure Laplace limit and one-sided slope	small-scale full-time positivity	VALID_NON_EFFECTIVE	Threshold exists but has no certified numerical value here.	D3-U024
+D3-E026	safe Green positivity	completed critical intertwiner	OPEN_TRANSFER	No equality between one-variable Hankel and model-space source is constructed.	D3-U021;D3-U026
+D3-E027	raw denominator zero deeper than a	uncancelled crossed pole	FALSE_WITHOUT_NET_ORDER	Cancel numerator multiplicity first.	D3-U025
+D3-E028	net-pole inner factorization	four-term kernel identity	VALID_CONDITIONAL	Common domains and symmetric analytic factorization retained.	D3-U026
+D3-E029	one hypothetical right-side zero	a rational scale with nonzero port	VALID	Only finitely many target-cancelling horizontal shifts at its ordinate.	D3-U027
+D3-E030	Euler ramp remainder and literal q*	fixed P61 weighted variation	VALID	Derivative estimate reconstructed independently of undifferentiated error.	D3-U028;D3-U029
+D3-E031	fixed P61 weighted variation	prior D2 Dickman full-base adapter input	VALID	Discharges prior missing base input only; classical Dickman/VK ranges remain.	D3-U029
+D3-E032	X184 directed signs	global 1/42 bias certificate	NO_IMPLICATION	Only one endpoint regenerated; full finite campaign retained without replay.	D3-U030;D3-U031
+D3-E033	bounded literal base remainder plus PNT/Mertens	small-prime complete cube	VALID_WITH_EXTERNAL_INPUTS	Fixed kappa<1/2, sufficiently large X, uniform p0>=67.	D3-U032
+D3-E034	small-prime complete cube	bulk/product-boundary split	VALID_WITH_EXTERNAL_INPUTS	beta<1-2kappa and inactive-divisor errors retained.	D3-U033
+D3-E035	positive Euler main	positive full native root	OPEN_SIGN	Complementary product-boundary term is still uncontrolled.	D3-U033
+D3-E036	literal 5:3 sparse source	four-band C4 boundary	VALID	Finite Fubini, unit atom and zero extension retained.	D3-U034;D3-U035
+D3-E037	four-band boundary	logarithmic prime-owner form	VALID	Squarefree support, p not dividing cofactor, unit contribution separate.	D3-U036
+D3-E038	root Bellman identities	C4MBI root inequality equivalence	VALID_CONDITIONAL	Exact antecedent root identities; no descendant uniformity.	D3-U037
+D3-E039	root sign equivalence	unconditional root sign	NO_IMPLICATION	No producer bound is supplied.	D3-U037
+D3-E040	radix-four adjoint identity	physical P_Lambda-H score	VALID	Common finite physical row and exact source normalization.	D3-U038
+D3-E041	bounded physical packing error	J_Lambda-H endpoint control	FALSE_GENERAL_INFERENCE	F_Lambda remains as a separate arithmetic gap.	D3-U038
+D3-E042	affine positive cell integration	physical two-node compression	VALID_CONDITIONAL	Actual affine geometry assumed; positive finite mass or trivial zero case.	D3-U039
+D3-E043	three-square Cauchy identity	all-generation real-frequency frame	VALID	Fixed real u and terminal decay.	D3-U040;D3-U042
+D3-E044	nonnegative frequency spectrum	positive-definite physical kernel	VALID	Declared Fourier convention.	D3-U041
+D3-E045	positive-definite physical kernel	positive prime-inserted arithmetic form	OPEN_TRANSFER	Arithmetic insertion is signed and is not the same quadratic form.	D3-U041

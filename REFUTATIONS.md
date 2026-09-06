@@ -1,41 +1,29 @@
-# Refutations and mechanism firewalls
+# Refutations, corrections and surviving scope
 
-A failed full proposal does not erase its valid local mathematics. This index records the first broken arrow, the exact controlling evidence, what survives, and the corrected replacement.
+A refuted mechanism is not a refutation of RH. A bad proof or verifier does not automatically make its intended theorem false. Exact corrected statements and evidence are in the [decision register](integration/2026-09-06/DECISIONS.json) and [resident mathematical extracts](research/integrated/2026-09-06/proof-extracts/README.md).
 
-| Refutation | Family | False or blocked statement | Controlling evidence | What survives | Replacement |
-|---|---|---|---|---|---|
-| `REF.CONSUMER_MELLIN_MOVING_ROW_SELECTION` | **mellin_landau** | Selecting a sufficiently large row after introducing a hypothetical zero is not a fixed detector. | 641@19cd3939a54ccea73b055b3952b5dd7ed638c4fb:claims/lemmas/L-99242-positive-surrogate-preserves-reciprocal-zeta-poles.md | Only independently reviewed local mathematics at its corrected scope. | Detector changes after the hypothetical zero. |
-| `REF.ARITH_SHARP_ALPHA_NATIVE_PROMOTION` | **sharp_native** | Contracted alpha children do not reproduce the native Euler coefficient. | 652@24ab64551225f2dba9aa53a533eb9b0285c6e363:claims/refutations/R-99600-alpha-child-hazard-is-not-the-native-euler-source.md | Only independently reviewed local mathematics at its corrected scope. | Native r differs from contracted 2r^2 or net zero. |
-| `REF.REFUTATION_WAVELET_FLOOR_KERNEL` | **wavelet_xd** | Positive floor kernels cancel the reciprocal-zeta detector and cannot prove RH. | 675@7b28224ba1b072d4ccd5b93ad37c0a64e7939740:claims/refutations/R-100130-positive-floor-kernel-cancels-the-zeta-detector.md | Only independently reviewed local mathematics at its corrected scope. | The zeta factor cancels the detector. |
-| `REF.REFUTATION_WAVELET_CRITICAL_DESMOOTHING` | **wavelet_xd** | The positive inverse desmoothing has active mass of critical sqrt(X) size. | 689@1751b5d63d981f1d39e0679a5997a7e32d2f1649:claims/lemmas/L-100501-critical-dyadic-inverse-and-frame-firewall.md | Only independently reviewed local mathematics at its corrected scope. | Source-blind positive inversion loses the critical scale. |
-| `REF.ARITH_XD_OLD_K0_K1_EDGE` | **wavelet_xd** | The frozen K0 largest-prime versus K1 Vaughan equivalence is mistyped and false. | 705@027ea8bd5c879a190e9e22620c245a81f7b93b73:claims/refutations/R-103200-k0-k1-hybrid-equivalence-is-mistyped.md | Only independently reviewed local mathematics at its corrected scope. | No cross-kernel alias is valid. |
-| `REF.REFUTATION_ROOT_EXCESS_ONLY` | **conjunctive** | Positive excess alone does not control the unknown root in Q=\|g\|^2+E. | 706@44828a27c63bfc57dce12d67e980db33f4d55c3a:claims/lemmas/L-104100-root-containing-square-firewall.md | Only independently reviewed local mathematics at its corrected scope. | Excess-only closure is false. |
-| `REF.OPERATOR_XI_FRACTIONAL_STRING_GROWING_ORDER` | **xi_pick** | The Xi impedance is eventually matrix monotone to a growing order. | 461@ea633d416609565b3926f37c9302c93e1b818e2d:claims/lemmas/L-92302-the-xi-impedance-is-eventually-matrix-monotone-to-a-growing-order.md | Only independently reviewed local mathematics at its corrected scope. | Uniform moving-order control is absent. |
-| `REF.REFUTATION_HEAT_UNIFORM_CENTER` | **heat_hermite** | Uniform-center fractional heat cannot obtain a tunable exponent: Weyl displacement changes parity and conjugates the heat generator. | 708@eb1987502ef9043e782ac6ab1e19c47be9daef93:review/2026-08-21/operator/CLAIMS.tsv | Original source PR #618 @ 2dfa73325a6402418fc64b9e554c1b13dd2b9bf1. Controlling review consolidates PRs #613/#617-#623. | The exact uniform-center exponential type is 1/2. |
-| `REF.REFUTATION_BROWNIAN_COFINAL_STABILITY` | **brownian_weil** | Raw all-large/cofinal finite Brownian stability and the current symmetrized finite finishes fail by selected-prime/vertical-limit Bohr instability. | 388@ede3f2db2fe0c571964d2e603ba5d91ee463091a:reports/integration-wave/20260811-pr376-brownian-bohr-instability-review.md | Only independently reviewed local mathematics at its corrected scope. | A genuinely new producer must lie outside the reviewed class. |
-| `REF.METHODOLOGY_BROWNIAN_NEW_PRODUCER` | **brownian_weil** | A height-dependent or genuinely non-Bohr Brownian producer is a research direction, not a theorem node. | 0@0000000000000000000000000000000000000000:review/2026-08-22/reconciliation/OPEN_CUTS.md | Only independently reviewed local mathematics at its corrected scope. | No such producer currently exists. |
-| `REF.REFUTATION_WEIL_POSITIVE_SCHUR_RESCUE` | **brownian_weil** | A positive Schur complement cannot rescue an already negative kernel direction: B-Z*C^-1*Z <= B. | 0@0000000000000000000000000000000000000000:review/2026-08-22/reconciliation/GRAPH_REPORT.md | Only independently reviewed local mathematics at its corrected scope. | Corrected arithmetic kernel floor remains open. |
-| `REF.REFUTATION_FREDHOLM_FIXED_DEGREE_HIGH_CARRIER` | **brownian_weil** | Every fixed exterior/Hankel degree becomes positive at high carrier and is asymptotically blind to RH. | 0@0000000000000000000000000000000000000000:review/2026-08-22/reconciliation/GRAPH_REPORT.md | Only independently reviewed local mathematics at its corrected scope. | All-order or fixed-carrier structure remains open. |
-| `REF.REFUTATION_CARRY_SOURCE_BLIND_CONVEXITY` | **carry_critical_hinge** | Naive recursive residual monotonicity and generic average-carry convexity fail. | 382@d5630815f68554649445cbe19989b562dc685bd3:claims/refutations/R-90701-naive-recursive-residual-monotonicity-fails.md\|claims/refutations/R-90704-average-carry-inverse-does-not-preserve-the-full-convex-cone.md\|claims/refutations/R-90705-truncated-geometric-atoms-do-not-have-positive-average-carry-inverses.md | Only independently reviewed local mathematics at its corrected scope. | The mechanism is false at its stated scope. |
-| `REF.DIRECTMAIN_P79_L91350` | **direct_main_p79** | The claimed corrected finite P79 Hall formula/checker is false as a causal certificate. | MAIN@677203992eb0168920365ee45ae9db76bfa97dcf:claims/lemmas/L-91350-p79-low-prefix-hall-corrected-cell-derivative-certificate.md | Only independently reviewed local mathematics at its corrected scope. | The formula drops parent support cutoffs and omits activation cells. |
-| `REF.DIRECTMAIN_P79_SCORE_SURPLUS` | **direct_main_p79** | The claimed uniform positive residual score surplus is false already at x=83. | MAIN@677203992eb0168920365ee45ae9db76bfa97dcf:claims/lemmas/L-91351-p79-one-prime-splice-is-a-terminal-child-plus-positive-arithmetic-row.md | Only independently reviewed local mathematics at its corrected scope. | A_P(83)<0. |
-| `REF.DIRECTMAIN_P79_T91303` | **direct_main_p79** | The original P79 target-flow factor-54 full proposal is blocked by the invalid finite-cell proof and missing arithmetic-row typing. | MAIN@677203992eb0168920365ee45ae9db76bfa97dcf:claims/theorems/T-91303-p79-target-flow-factor54-resolution-proposal.md | Only independently reviewed local mathematics at its corrected scope. | Target-exact Hall does not reproduce the native row. |
-| `REF.DIRECTMAIN_P79_T91304` | **direct_main_p79** | The direct Euler-row factor-54 full proposal remains gap-blocked after exact P79 corrections. | MAIN@677203992eb0168920365ee45ae9db76bfa97dcf:claims/theorems/T-91304-direct-euler-row-factor54-resolution-proposal.md | Only independently reviewed local mathematics at its corrected scope. | False Hall formula, false surplus, hidden-child mismatch, undefined branch weights, and missing provenance. |
-| `REF.DIRECTMAIN_MELLIN_T96000` | **direct_main_mellin** | T-96000 is a correct conditional architecture but not a proof because its simultaneous native row producer is absent. | MAIN@677203992eb0168920365ee45ae9db76bfa97dcf:claims/theorems/T-96000-prime-sieved-row-positivity-directly-implies-rh.md | Only independently reviewed local mathematics at its corrected scope. | PR #544 rejects the producer transport. |
-| `REF.DIRECTMAIN_TAYLOR_R99930` | **direct_main_taylor** | Supercritical positivity and positive smoothing do not cross the critical carrier. | MAIN@677203992eb0168920365ee45ae9db76bfa97dcf:claims/refutations/R-99930-supercritical-positivity-does-not-cross-the-critical-carrier.md | Only independently reviewed local mathematics at its corrected scope. | The proposed automatic descent is false. |
+## D's audit of previously merged main
 
-## Recurring failure classes
+All eighteen findings remain binding, not just the final pass's last three:
 
-- auxiliary positive source substituted for the literal Euler/Möbius source;
-- actual child response replaced by full child capacity;
-- normalized `p^-1` activity replaced by `p^-1/2`;
-- fixed detector replaced by a row selected after the hypothetical zero;
-- positive floor or smoothing kernel cancelling the reciprocal-zeta detector;
-- positive square or excess retaining the unknown RH-sensitive root;
-- pointwise or finite positivity promoted to an unbounded quantifier;
-- carrier cancellation destroyed by taking norms before recombination;
-- amplitude unitarity promoted to curvature or full Gram positivity;
-- finite filters expected to create a new critical zero without power-sized inverse cost;
-- positive Schur complements expected to repair an existing negative kernel direction.
+| Findings | Required correction |
+|---|---|
+| D-F01–03 | Fixed inverses do not invert varying rows; use point spectrum at the Birman–Schwinger threshold; PSD requires all principal minors rather than only leading ones. |
+| D-F04–07 | Restore the wavelet Poisson boundary factor; require at least two admissible annihilator nodes; use actual Robin exponent caps and empty-subtree conventions; account for excursions touching either boundary. |
+| D-F08–11 | Repair the live-marginal Farkas sign; restrict rational certificates to rational data; take the real part of complex jump dissipation; restore the 2pi Fourier/Fredholm normalization. |
+| D-F12–15 | Include all four disjoint Q4 sectors; retain signed Hilbert cancellation; use activation-safe log-positive gauges; count net poles after cancellation. |
+| D-F16–18 | Positive prime atoms need not give positive elementary Wick Grams; replace the false P61 singleton enclosure with D's new certificate; repair the Pick68 source blob while keeping primitive rectangles conditional. |
 
-The machine-readable refutation registry is [`integration/2026-08-22/REFUTATIONS.tsv`](integration/2026-08-22/REFUTATIONS.tsv).
+D also preserves the open source-Gram domination, uniformity for growing regional partitions and the entire First-Hermite complement. Pure first-chaos support is not coefficient-one source domination.
+
+## Post-release mechanisms
+
+A's source-specific semiprime refutation blocks the literal completed QPTI/EBD chain, not the distinct native balanced source. Finite Bezoutian inertia must include nonreal critical points. All-deviation Gaussian tails, additive product band traces, nonholomorphic Fejer contour shifts, and arbitrary spectral-to-coefficient positivity are not accepted.
+
+The claimed cofinal refutation of the 90-percent descent gate is itself held: its false lower inequality and finite phase data do not prove the stated limsup. The exact mesh identity and finite diagnostics remain useful.
+
+B's corrections retain generic/specialized degree distinctions, the torsion persistence exception, the proper HPL sign and higher-page zigzags, integrated rather than pointwise threshold-density asymptotics, and the repaired graph cutoff. Native Poincare precision and numerical Epstein certification remain held rather than called universally false.
+
+C's old X105560 wrapper and empty-scope validation problems remain recorded even where a different replacement certificate now exists. The old formal actual-Xi input is empty; the corrected paper proof is not a newly compiled source implementation.
+
+Historical refutations remain at the [exact prior baseline](https://github.com/GettysburgResearch/riemann/blob/8d16f8d9c475db290bc85e53d775b93b9bcdb336/REFUTATIONS.md). Use the newest applicable source-qualified repair, not the strongest old status label.

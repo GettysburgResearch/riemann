@@ -1,0 +1,43 @@
+{
+  "actual_loop_counts": [
+    1640,
+    2592
+  ],
+  "author_function_runs": 2,
+  "author_output_sha256": "265e9d23e949d3233df857721da46b35b7a2bc0b8e2ee7165b6444c3a5fdf812",
+  "exact_decimal_lower": "0.673008527927779",
+  "exact_decimal_upper": "0.673008527927780",
+  "exact_interval_sha256": "eab3e105eb3023217e258f0f81f993b91375acccc668eff08c9611577b137ebc",
+  "invalid_order_rejections": 5,
+  "old50_lower_gt_old48_upper": true,
+  "old_upper_bound_refuted": true,
+  "ordinary_optimized_identical": true,
+  "original_lower_bound_gt_one": true,
+  "retained_counts_evidence": "original verification.json blob 41ec02af734f101c0255e200139fa532755847b3, connector inspection",
+  "retained_loop_counts": [
+    1601,
+    2527
+  ],
+  "retained_producer_hash": "37ee02345fa83e5c251a1f2477cfdbbf1c6224d6cd438ca9acfe6922833bff5f",
+  "schema": "C3-record-scalar-replay-v1",
+  "scope": {
+    "RH_proved": false,
+    "analytic_seven_gap_deduction_reviewed": false,
+    "external_Arb_certificate_executed": false,
+    "full_sixteen_file_payload_executed": false,
+    "new_zero_proportion_proved": false
+  },
+  "source_commit": "e8e6d85221a9a85fb2a5f82a1807802f89b06b7b",
+  "source_git_blob": "bd076c05c2e741758286ee3c0d378240c4be884c",
+  "source_path": "experiments/X-105560-reviewed-record/verify.py",
+  "source_sha256": "ab84355abb670a14348388636ce4bfb7a11e8bb9c6aa1f7fad1a16e981e9d6f9",
+  "status": "PASS_SCALAR_REPAIR_AND_WRAPPER_DEFECT_REPRODUCTION",
+  "threshold_orders": [
+    6,
+    8,
+    12,
+    20,
+    40,
+    80
+  ]
+}

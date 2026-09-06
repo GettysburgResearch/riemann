@@ -1,0 +1,100 @@
+{
+  "RH_proved": false,
+  "bounded_fixtures": 6253,
+  "named_checks": 14,
+  "primitive_Pick_values_recomputed": false,
+  "records": [
+    {
+      "detail": {
+        "finite_inequalities": 1999994,
+        "tail_slabs_each": 256805
+      },
+      "fixtures": 1,
+      "name": "P61_full_replay_result_contract"
+    },
+    {
+      "detail": {
+        "gap_lower": "4218645778097476890857029470446025783548037202715936935411/6129982163463555433433388108601236734474956488734408704000000000000000000"
+      },
+      "fixtures": 1,
+      "name": "P61_serialized_C0_singleton_is_invalid"
+    },
+    {
+      "detail": true,
+      "fixtures": 4000,
+      "name": "P61_closed_coefficients_vs_independent_convolution"
+    },
+    {
+      "detail": {
+        "lower_bound": "2^-138",
+        "primitive_replay": false,
+        "radius": "17323180600797004701/2254578897614762850471633369732311757216541650824262434476989171630080"
+      },
+      "fixtures": 9,
+      "name": "Pick68_all_eight_conditional_LDL_pivots_and_radius"
+    },
+    {
+      "detail": {
+        "carrier": 0,
+        "kernel": "-1/128-log(2)/4",
+        "scale": 1
+      },
+      "fixtures": 2,
+      "name": "Actual_prime_two_elementary_kernel_is_negative"
+    },
+    {
+      "detail": true,
+      "fixtures": 153,
+      "name": "Complete_complex_bridge_Haar_reconstruction"
+    },
+    {
+      "detail": {
+        "negative_coefficient": "-2/55"
+      },
+      "fixtures": 59,
+      "name": "Carry_inverse_linear"
+    },
+    {
+      "detail": {
+        "negative_coefficient": "-665845347619218138542420409292405824416969109171021822703491462196174092002525865440720928939259872076961254928495209551248297425065594434131942509261842300493129864638515790202962467261328087264288285682719449931990474747521548006669884449125987621/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "fixtures": 125,
+      "name": "Carry_inverse_geometric"
+    },
+    {
+      "detail": {
+        "lower": "-17102019515210325839687499849819499790429021236695/3687567395208545065424772534080431473082591012754292736",
+        "upper": "-5472646244867304268699999951942239932937286795711519/1180021566466734420935927210905738071386429124081373675520"
+      },
+      "fixtures": 839,
+      "name": "T894_full_elimination_dual_radical_witness"
+    },
+    {
+      "detail": true,
+      "fixtures": 779,
+      "name": "Positive_hinge_mixture_telescoping"
+    },
+    {
+      "detail": true,
+      "fixtures": 256,
+      "name": "Primitive_factor64_Pascal_reward_and_prefix"
+    },
+    {
+      "detail": true,
+      "fixtures": 6,
+      "name": "SHARP_wavelet_derivative_bridge_open_cells"
+    },
+    {
+      "detail": true,
+      "fixtures": 2,
+      "name": "Wick_Green_signed_not_positive_decomposition"
+    },
+    {
+      "detail": true,
+      "fixtures": 21,
+      "name": "Fixed_critical_dyadic_inverse_mass"
+    }
+  ],
+  "schema": "reviewer-D.pass4.checks.v1",
+  "status": "PASS"
+}

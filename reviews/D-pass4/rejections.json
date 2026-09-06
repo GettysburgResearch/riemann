@@ -1,0 +1,24 @@
+{
+  "boundary": "Parser/comparator and semantic-result corruption tests; not primitive replay.",
+  "rejected": [
+    "status",
+    "missing_record",
+    "wrong_count",
+    "false_primitive_claim",
+    "extra_claim",
+    "duplicate_key",
+    "nonfinite_json",
+    "malformed_json",
+    "P61_short_scan",
+    "P61_skipped_checks",
+    "P61_boolean_count",
+    "P61_tail_zero",
+    "P61_missing_slab",
+    "P61_reversed_interval",
+    "P61_wrong_denominator",
+    "P61_RH_claim"
+  ],
+  "rejected_count": 16,
+  "schema": "reviewer-D.pass4.rejections.v1",
+  "status": "PASS"
+}

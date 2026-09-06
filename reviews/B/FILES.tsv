@@ -1,0 +1,41 @@
+source_pr	source_sha	source_path	observed_blob_sha	inspection_scope
+751	86cac1d64364015ec2cc0f8fbb6fc75dc041c12b	claims/lemmas/L-106000-euler-completed-dirichlet-family-lift.md	47f468e6d8d216fb8aba3878cc9642cba909c56c	full proof
+751	86cac1d64364015ec2cc0f8fbb6fc75dc041c12b	claims/refutations/R-106071-quartic-pair-occupancy-cannot-bound-the-quadratic-character-moment.md	06223cc1fa78de6fc8095a0619889390ec02f7d0	full proof
+751	86cac1d64364015ec2cc0f8fbb6fc75dc041c12b	claims/lemmas/L-106212-boolean-half-source-is-a-witt-tower-of-l-functions.md	beeb68bd4164d221db12f05ea3e84cbe8ed8287a	full proof
+751	86cac1d64364015ec2cc0f8fbb6fc75dc041c12b	claims/lemmas/L-106213-function-field-nonprincipal-half-source-shells-have-square-root-size.md	7201afeae5239914158295fc1ef2d59487efd792	full proof
+752	10446e8ea9c55162c317810f63c1f7a379466459	research/l-families/atlas/gl2/README.md		full note; fetch response did not expose blob
+752	10446e8ea9c55162c317810f63c1f7a379466459	research/l-families/atlas/function_field/FAMILY_MEASURES.md		full note; no blob recorded
+752	10446e8ea9c55162c317810f63c1f7a379466459	research/l-families/atlas/function_field/GENUS2_ENDOSCOPIC_SPLIT_LOCUS.md	fd6ceff2e561b5d795154a1ea78b40268f36c8e9	full note; frozen census not rerun
+752	10446e8ea9c55162c317810f63c1f7a379466459	research/l-families/atlas/function_field/SYM3_EXTERIOR_SYM4_PLETHYSM_BRIDGE.md	1c7bbdb02a49b45ef2768519d81ebaf09923fc2a	full proof
+756	6e4609dfe1b073f1eb58445fdd1d7164dbc450d6	research/l-families/atlas/function_field/QUADRATIC_FAMILY_MULTIPLACE_L_FUNCTION_IDENTITY.md		full proof
+758	d79692ece0b7604ad309c459f565b24e9926f5c5	research/l-families/atlas/function_field/FFPS_CHEBYSHEV_MAX_CUSP_COMPENSATION.md	c34422172851e6c66baa23341d71b6f72f953045	sections0 and4.28-end freshly read; selected transform claims only
+766	9e8985410607248f760c5c7c9cb09120df951343	research/l-families/atlas/generalized/SEGRE_RECURRENCE_SYZYGY_BRIDGE.md	acc3a0382f3ad919037b156749b4a07a971b429a	full mathematical note; rank computations not rerun
+766	9e8985410607248f760c5c7c9cb09120df951343	research/l-families/atlas/generalized/THETA_SOURCE_QUOTIENT_TENSOR_COHERENCE.md	9873196dcaf7f5ed92c429fe17b146531f2325ac	corrected source theorem and regularity counterexample
+766	9e8985410607248f760c5c7c9cb09120df951343	research/l-families/atlas/generalized/PROPER_THETA_SOURCE_REAL_ZERO_COROLLARY.md	efdbb5869803d0876b0cc41b92cae6cbce870d6d	full proof
+766	9e8985410607248f760c5c7c9cb09120df951343	research/l-families/atlas/generalized/PROPER_THETA_SOURCE_UNIFORM_DEPTH_ZEROS.md	6db3b5d97b3164c2a87a6442fe16ba866b645ae8	full proof; Petersson normalization imported
+769	f5f9bed2bdcd9188fdd61b822376398022cebb03	research/l-families/atlas/generalized/segre-hadamard-source/COMPLETED_TERNARY_CUBE_RESOLUTION.md	7301d9cbc50bde470fb3551a6262cf62378b523c	full synthesis/promotion argument; matrices not rerun
+770	29aee91f17a8d6ccc6b19e21cff97f763d92da95	research/riemann-structures/native-six-hour/NATIVE_REYNOLDS_PATH_OBSTRUCTION.md	15d7ead32d565eb1c5c42b19368ecbea1fa30f85	full proof
+770	29aee91f17a8d6ccc6b19e21cff97f763d92da95	research/riemann-structures/native-six-hour/NATIVE_FIXED_MINOR_INFINITY_DEFECT.md		sections1-5 mathematical argument; no new tail producer
+770	29aee91f17a8d6ccc6b19e21cff97f763d92da95	research/riemann-structures/native-five-hour-pass/infinite-source/variational_ALL_HORIZON_FAITHFULNESS.md	557bf07638e1de2639dfe07c1db144e177f42765	full conditional inference
+771	bffe68cec24fd785f7b16087d6ce8fea4561eece	claims/lemmas/L-107300-reduced-kummer-augmentation-projector.md	a802acc898f39d1f028ba307523601f6b08ddb52	full proof
+771	bffe68cec24fd785f7b16087d6ce8fea4561eece	claims/lemmas/L-107302-shared-conductor-relative-augmentation-object.md	a8d8dd2c22f659ca93177ef5010e90c5ca3aa6b7	full proof
+771	bffe68cec24fd785f7b16087d6ce8fea4561eece	claims/lemmas/L-107304-physical-squareclass-twisted-plancherel.md		full proof; fetch rendering contained control escapes
+778	8db2752fa046a9fc686f3a4a5606beb2da3e7176	claims/refutations/R-108450-nonresonant-trace-cannot-control-principal-cell-energy.md	8d40ccc9208fb5b93b36fa879cbef3a4fc1937c6	full proof
+781	83dca1a6b750feeffe9f446656bb01694131d74a	claims/theorems/T-108000-axiom-separation-table.md	9be6682c87bb92fdd807c6e221d6f06d62f0a636	claim and caveat; all world builders omitted
+781	83dca1a6b750feeffe9f446656bb01694131d74a	claims/theorems/T-108002-structure-detector-refusal-semantics.md	b11f84d7500a3467120ab091cbc14daaceab50ee	claim and refusal ledger; implementation omitted
+781	83dca1a6b750feeffe9f446656bb01694131d74a	claims/lemmas/L-108520-corridor-forcing.md	8719e7e935c47585b652f3f6e792e98828c509e2	full proof
+781	83dca1a6b750feeffe9f446656bb01694131d74a	claims/lemmas/L-108521-frustration-negative-end.md	f8f8fdb7166d0693f532c9093ab49aaef4d10fd6	full proof
+781	83dca1a6b750feeffe9f446656bb01694131d74a	claims/lemmas/L-108524-multiplicity-transversality.md	311cf39a5f988c3b959a8345e8798b99b7c695c9	full proof; seven cells not rerun
+781	83dca1a6b750feeffe9f446656bb01694131d74a	standalone/2026-08-31-segre-defect-bridge/PROOF.md	874c879babf1f1c2cd20eb4c5f15cd13305f9684	full proof; Betti executable not rerun
+781	83dca1a6b750feeffe9f446656bb01694131d74a	standalone/2026-08-31-alternant-defect/PROOF.md		main alternant and multilinear proofs; stable-layer execution omitted
+781	83dca1a6b750feeffe9f446656bb01694131d74a	standalone/2026-08-31-torsion-resonance-threshold/PROOF.md	3b0d4ad20b07d01183276e9cf4737cffe10ccbc8	proof and sieve scope; m6 gap reconfirmed
+781	83dca1a6b750feeffe9f446656bb01694131d74a	standalone/2026-08-31-gp-positive-family/PROOF.md		three-piece argument; independent n23 certificate added
+781	83dca1a6b750feeffe9f446656bb01694131d74a	standalone/2026-08-31-epstein-complex-wall/PROOF.md		analytic bounds/winding proof; no fresh complete contour
+781	83dca1a6b750feeffe9f446656bb01694131d74a	research/exploratory/2026-08-30-two-programme-pass/epstein/wall_complex.py	0e66081b3bff3e27edd594dccdc118d6716b3930	complex endpoint/Gamma/lattice/sup-bound code portions
+782	737bf85ec9f36213cfe02b7edc178181545167f7	standalone/2026-08-31-segre-chow-equivariant-synthesis/TRANSFERRED_KOSZUL_MODEL.md	b7adce5d9ae6baf05a84b89cb5b35e44e4bf08d3	full note; conventions freshly reconfirmed
+782	737bf85ec9f36213cfe02b7edc178181545167f7	standalone/2026-08-31-segre-chow-equivariant-synthesis/INTERNAL_DEGREE_SIX_CLOSURE.md		full mathematical note; no higher-map elimination
+783	48d556561125cba3859a4c6d6747bcb44c1a7fc1	research/exploratory/prs-765-766-770-781-proof-review/HECKE_SCALE_RECONSTRUCTION.md	4cf86a6f7f0ee11d8f5c2bafc4060fb341ec99db	full reconstruction
+783	48d556561125cba3859a4c6d6747bcb44c1a7fc1	research/exploratory/prs-765-766-770-781-proof-review/POINCARE_FRAME_ENDPOINT_LADDER_PART_I.md	190df9cbbb1cbe75cb1a70a554d4606b8a7cfde4	full proof
+783	48d556561125cba3859a4c6d6747bcb44c1a7fc1	research/exploratory/prs-765-766-770-781-proof-review/POINCARE_FRAME_ENDPOINT_LADDER_PART_II.md	749b3fc962ace166f755f0a0f19638be0a4bc286	full proof; PF40-46 freshly reconfirmed
+783	48d556561125cba3859a4c6d6747bcb44c1a7fc1	research/exploratory/prs-765-766-770-781-proof-review/CRITICAL_DIVISOR_RENEWAL_TRANSITION.md	bfaae06ec0e1a029a7035005cc421f77013e2d76	full proof and formal coefficients
+793	cdf2f15965decbd35afbbd09a16c89cb3e215737	standalone/2026-09-05-three-route-assault/pass7-dickman-completion/PROOF.md	9efe0cca6c76a24750ebf3793bee7386eefa7b25	entire pass7 proof, including DC5 whole-frequency estimate

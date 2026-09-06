@@ -1,0 +1,66 @@
+{
+  "comparator_or_nanoda_run": false,
+  "finite_controls": {
+    "checks_per_mode": 1769,
+    "mode_results_identical": true
+  },
+  "float_contract": {
+    "mantissa_bits": 53,
+    "radix": 2,
+    "rounds": 1
+  },
+  "full_lean_build": false,
+  "new_pdf_page_audit": false,
+  "new_zeta_analytic_mean_square_proof": false,
+  "parent_review_head": "e44b6d072ac82d014717454635df96da9c0e115f",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "rank_two": {
+    "byte_equal_to_parent_ordinary_certificate": true,
+    "certificate_sha256": "fe52414f2ceb19159cf2875443e2da1f407b50282dd1c2b72e974613020a5ff5",
+    "extra_grouped_repeat": "A container-supervised repeat timed out after a terminal PASS without retaining shell exit; not used as exit evidence. The final detached current-turn run records exit 0.",
+    "optimized_exit": 0,
+    "source_sha256": "6223bd5d8f4e739a8719521f8d7ec6bed8437b3a15cba5a54d7906ee44dbe2e1"
+  },
+  "rh_proved": false,
+  "selector_spectral_controls": {
+    "checks_per_mode": 23,
+    "mode_results_identical": true
+  },
+  "seven": {
+    "all_three_payloads_identical_excluding_elapsed": true,
+    "first_normal_exit": null,
+    "first_normal_exit_separate_file_retained": false,
+    "first_normal_terminal_pass_and_result_retained": true,
+    "node_count": 713315,
+    "normal_exit": 0,
+    "normal_repeat_exit": 0,
+    "optimized_exit": 0,
+    "original_arb_transcript_reproduced": false,
+    "payload_hash_excluding_elapsed": "066c3a82b8a5c6bb876df3939b223bbf361e65f34a36d17b2ff411bc4c589328",
+    "primitive_sha256": "c0cb7d95a231099744dbd4278b3327c020812bb1b18a35147ea761e6390432e8",
+    "source_sha256": "bc4a638373414581515edd950d7a811b81dfe0ef3fa77d119f35b49bea6fe361",
+    "uncached_predecessor": "interrupted without verdict; superseded by exact-point cache; not a mathematical refutation"
+  },
+  "sha256": {
+    "dyadic_interval.py": "c0cb7d95a231099744dbd4278b3327c020812bb1b18a35147ea761e6390432e8",
+    "finite_controls.json": "1daa7e8a1c4c1b3f2a86fd1c9a92c639dd9e319ce4c1f03ed1afb6dc335f4651",
+    "finite_controls.optimized.json": "1daa7e8a1c4c1b3f2a86fd1c9a92c639dd9e319ce4c1f03ed1afb6dc335f4651",
+    "optimized.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "optimized.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "optimized.stdout": "2ada1417ac6a1d3b88d4b685b41cf7a37f13b963e9ecb58ae95c74a5aae3799c",
+    "repeated.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "repeated.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "repeated.stdout": "21247e7e1e89fc8d66cae5b74c9b9906fb99664348024f9caae402bf171b9ab7",
+    "selector_controls.json": "b43dc170d089a0a61945c5464425d69344ac05cf82867163d16dd4192d5e5b9c",
+    "selector_controls.optimized.json": "b43dc170d089a0a61945c5464425d69344ac05cf82867163d16dd4192d5e5b9c",
+    "seven_independent_cached.py": "bc4a638373414581515edd950d7a811b81dfe0ef3fa77d119f35b49bea6fe361",
+    "seven_result.json": "04f7f4e3e5349a1c1346151243a2eba3b3f3f134e2621caf902abce933ebf970",
+    "seven_result.optimized.json": "7783462e7d145804060630b5bd8ca5fa8d12a5ecbf89ca25eb320d6fe263c384",
+    "seven_result.repeated.json": "00758af7b02ff08b0bf4aed2952d795c152d7a332a4b38d1c4a1b34425fec1f0",
+    "verify_finite_controls.py": "4e4a7542a7d53e73610934e8c6eb708992e27e6ee13b111fe34a4a040fed150c",
+    "verify_selector_controls.py": "2ec15c370bfe70a100713976fe09fa4bc874a759f10ff847240db8e6265f2bd7"
+  },
+  "status": "COMPLETED_TARGETED_OMISSIONS_REPLAYS",
+  "stdout_retention": "Only terminal result lines retained; intermediate progress lines are not mathematical proof objects."
+}

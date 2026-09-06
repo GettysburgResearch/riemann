@@ -1,0 +1,5 @@
+object	inherited_sha	observed_sha	verdict	evidence	effect
+main	8d16f8d9c475db290bc85e53d775b93b9bcdb336	8d16f8d9c475db290bc85e53d775b93b9bcdb336	MATCH_AT_READ	GitHub direct branch-ref response	Exact formal/policy baseline unchanged at observation; not a 340-head check
+PR798	e0d1cb976030048275b5c2cda4275341650a350c	e0d1cb976030048275b5c2cda4275341650a350c	MATCH_AT_START	GitHub PR metadata	C4 additive parent; any final publication appears in external receipt
+PR792	465cb28ed8cbfa1bb071d9a85eeda9890decfe6b	465cb28ed8cbfa1bb071d9a85eeda9890decfe6b	MATCH_AT_READ	SRC-C2 PR-792 row and fresh GitHub PR metadata	Two proof-file review stays on inherited pin; no all-branch endorsement
+PR795	f184ca0895713aa5323321ac482a11aeb2e6284b	b50bb78186bf6c3ff6a65fc3928d86446528d9b3	LATER_HEAD_FLAGGED	SRC-C2 PR-795 row and fresh GitHub PR metadata	A advanced after the census pin; reconcile reports at final A head; not independent acceptance by former A

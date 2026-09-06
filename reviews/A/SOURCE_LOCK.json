@@ -1,0 +1,18 @@
+{
+  "schema": "review-A.final-source-lock.v1",
+  "review_parent": "85df6055f2245eec494edd36c9f769e5b6186090",
+  "review_parent_tree": "dc5680bca8deadd92246e89db5eabc068e1ca5c9",
+  "policy_main": "8d16f8d9c475db290bc85e53d775b93b9bcdb336",
+  "scientific_release": "2026-08-22",
+  "research_terminal_pr": 707,
+  "release_frozen_main": "677203992eb0168920365ee45ae9db76bfa97dcf",
+  "census_commit": "e0422804f098a296aaf2ede615a833d90704a18f",
+  "census_path": "reviews/C/CENSUS.tsv",
+  "census_blob": "7f3bae32843289e5079e0e8eb4f9da60122f77a0",
+  "source_table": "SOURCES.tsv",
+  "claim_source_join": "CLAIMS.source_id = SOURCES.source_id",
+  "later_change_policy": "SOURCE_VERSION_DIFFS.tsv; no verdict inheritance without exact object match",
+  "unpublished_reviewer_dependency": false,
+  "publication_target": "review/2026-09-05/A-scientific-post707",
+  "rh_proved": false
+}

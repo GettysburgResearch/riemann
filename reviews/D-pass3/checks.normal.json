@@ -1,0 +1,323 @@
+{
+  "checks": [
+    {
+      "details": {
+        "checks": "Fourier differential multiplier and exact target zero",
+        "orders": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "fixtures": 8,
+      "name": "cardinal_zero_division_ode"
+    },
+    {
+      "details": {
+        "target_Weil_value": "-2m; background values exactly zero"
+      },
+      "fixtures": 16,
+      "name": "cardinal_values_with_multiplicity"
+    },
+    {
+      "details": {
+        "cost": "103/70",
+        "residual_determinant": "0"
+      },
+      "fixtures": 1,
+      "name": "cardinal_schur_metric"
+    },
+    {
+      "details": {
+        "all_rows_16_to_128_zero": true,
+        "last_nonzero_row": 15
+      },
+      "fixtures": 127,
+      "name": "fourteen_row_and_divisor_reconstruction"
+    },
+    {
+      "details": {
+        "lower_edge": "(43-30sqrt(2))/4"
+      },
+      "fixtures": 4,
+      "name": "centered_symbol_and_forcing"
+    },
+    {
+      "details": {
+        "counterexample_X": "1",
+        "printed_gauge": "(3sqrt(2)-8)log(2)",
+        "true_gauge": "0"
+      },
+      "fixtures": 9,
+      "name": "riesz_activation_gauge"
+    },
+    {
+      "details": {
+        "scope": "fixed M; no varying-order inference"
+      },
+      "fixtures": 128,
+      "name": "fixed_filter_inverse_mass"
+    },
+    {
+      "details": {
+        "odd_coefficients_zero": true
+      },
+      "fixtures": 1,
+      "name": "filter_radius_not_pointwise_growth"
+    },
+    {
+      "details": {
+        "checked_n": "2..300",
+        "comparison": "formal prime-log coefficients"
+      },
+      "fixtures": 299,
+      "name": "scale_four_positive_compiler"
+    },
+    {
+      "details": {
+        "arbitrary_signed_inputs": true,
+        "n": "2..30"
+      },
+      "fixtures": 29,
+      "name": "goldbach_and_zero_mode"
+    },
+    {
+      "details": {
+        "bands": 10,
+        "channels": 2,
+        "coefficient_field": "Q(sqrt(2))",
+        "source_blob": "c0d12f07d1aa224bc986c280df0a823eede5047d"
+      },
+      "fixtures": 60,
+      "name": "annular_certificate_all_coefficients"
+    },
+    {
+      "details": {
+        "all_knots_continuous": true
+      },
+      "fixtures": 22,
+      "name": "annular_endpoints"
+    },
+    {
+      "details": {
+        "K1_bound": "456",
+        "base_absolute_bound": "8",
+        "filter_mass": "135/64"
+      },
+      "fixtures": 3,
+      "name": "annular_uniform_bounds"
+    },
+    {
+      "details": {
+        "integer_mellin_points": "1..6; exact integral"
+      },
+      "fixtures": 6,
+      "name": "annular_mellin_factor"
+    },
+    {
+      "details": {
+        "H": 8,
+        "X": 1024,
+        "actual_G_numerators": [
+          [
+            "1560840957423800827435667419/1237940039285380274899124224",
+            "1560840957423800827435667427/1237940039285380274899124224"
+          ],
+          [
+            "-2900945059265815849732025235/1237940039285380274899124224",
+            "-1450472529632907924866012613/618970019642690137449562112"
+          ]
+        ],
+        "gcd": 1,
+        "m": 3,
+        "n": 17,
+        "omitted_category": "small reduced variable"
+      },
+      "fixtures": 3,
+      "name": "annular_core_inequivalence"
+    },
+    {
+      "details": {
+        "H": [
+          2,
+          4,
+          8
+        ],
+        "X": [
+          32,
+          64,
+          128
+        ]
+      },
+      "fixtures": 5187,
+      "name": "disjoint_annular_sectors_and_gcd"
+    },
+    {
+      "details": {
+        "Rayleigh": "2H_(N-1)-2(N-1)/N"
+      },
+      "fixtures": 38,
+      "name": "absolute_hilbert_kernel_is_not_bounded"
+    },
+    {
+      "details": {
+        "interval_length": "delta/2"
+      },
+      "fixtures": 1,
+      "name": "signed_hilbert_averaging_identity"
+    },
+    {
+      "details": {
+        "result": "2T+14X"
+      },
+      "fixtures": 1,
+      "name": "signed_hilbert_repair_constant"
+    },
+    {
+      "details": {
+        "N": "1..24",
+        "infinite_measure_proof_not_replaced": true,
+        "s": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "fixtures": 96,
+      "name": "weighted_jordan_decreasing_tests"
+    },
+    {
+      "details": {
+        "small_y_07_lower": "239/1000",
+        "terminal_lower": "32743/250000"
+      },
+      "fixtures": 3,
+      "name": "green_terminal_and_near_origin"
+    },
+    {
+      "details": {
+        "contact": 1
+      },
+      "fixtures": 1,
+      "name": "green_boundary_contact"
+    },
+    {
+      "details": {
+        "a": "1/8",
+        "depths": [
+          "3/8",
+          "1/8",
+          "-1/8",
+          "-3/8"
+        ],
+        "raw_crossed_pole": "1/4+4i",
+        "reduced_RHP_poles": 0
+      },
+      "fixtures": 2,
+      "name": "crossed_poles_need_net_multiplicity"
+    },
+    {
+      "details": {
+        "only_model_kernel_identity": true
+      },
+      "fixtures": 1,
+      "name": "krein_product_algebra"
+    },
+    {
+      "details": {
+        "40F-M": [
+          "-22424562825038536762787883369/1237940039285380274899124224",
+          "-22424562825038536762787778375/1237940039285380274899124224"
+        ],
+        "42F-M": [
+          "4051457995970299339816226721/1237940039285380274899124224",
+          "4051457995970299339816336587/1237940039285380274899124224"
+        ],
+        "log_terms": 48,
+        "not_full_campaign": true,
+        "precision_bits": 90
+      },
+      "fixtures": 1,
+      "name": "P61_X184_independent_directed_regeneration"
+    },
+    {
+      "details": {
+        "no_infinite_check_claim": true,
+        "range": "0<=eta<1/2"
+      },
+      "fixtures": 4,
+      "name": "ramp_and_weighted_variation_constants"
+    },
+    {
+      "details": {
+        "source": "5Q2+3Q3; unit term retained"
+      },
+      "fixtures": 128,
+      "name": "C4MBI_sparse_dictionary"
+    },
+    {
+      "details": {
+        "atom_cutoff": 65,
+        "logs_as_exact_prime_vectors": true,
+        "real_rational_endpoints": 9
+      },
+      "fixtures": 585,
+      "name": "C4MBI_four_band_identity"
+    },
+    {
+      "details": {
+        "unit_atom_handled_separately": true
+      },
+      "fixtures": 182,
+      "name": "prime_owner_identity"
+    },
+    {
+      "details": {
+        "arithmetic_benchmark_J_not_substituted": true
+      },
+      "fixtures": 38,
+      "name": "native_radix_four_score_duality"
+    },
+    {
+      "details": {
+        "theta": "13/18",
+        "zero_mass_convention_required": true
+      },
+      "fixtures": 1,
+      "name": "affine_two_node_mean"
+    },
+    {
+      "details": {
+        "numerator": [
+          6048,
+          4401,
+          378
+        ]
+      },
+      "fixtures": 1,
+      "name": "cauchy_three_square_identity"
+    },
+    {
+      "details": {
+        "integral": 0,
+        "not_pointwise_nonnegative": true
+      },
+      "fixtures": 1,
+      "name": "cauchy_physical_contact_mass"
+    },
+    {
+      "details": {
+        "all_scale_limit_proved_analytically": true,
+        "four_generations": true
+      },
+      "fixtures": 12,
+      "name": "cauchy_finite_telescope"
+    }
+  ],
+  "fixtures": 6999,
+  "named_checks": 34,
+  "schema": "reviewer-D-pass3-controls-v1",
+  "scope": "bounded exact controls only; not formal verification of analytic theorems"
+}

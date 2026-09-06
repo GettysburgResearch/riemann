@@ -1,0 +1,18 @@
+{
+  "schema": "review-A.final-execution.v1",
+  "author_blob": "e708af8c5235b71e7382d43220236536fc3f20a8",
+  "python": "3.13",
+  "sympy": "1.14.0",
+  "original_normal_exit": 1,
+  "original_optimized_exit": 1,
+  "api_repair_normal_exit": 1,
+  "cone_repair_normal_exit": 0,
+  "cone_repair_optimized": "NOT_COMPLETED_GROUP_RUN_INTERRUPTED",
+  "prior_10225_controls": "HISTORICAL_REPLAY_NOT_RERUN_IN_FINAL_PASS",
+  "scope": "Exact symbolic rank-two proof; not arbitrary rank or actual-Xi sign",
+  "rh_proved": false,
+  "small_controls_normal": "PASS_A_FINAL_BOUNDED_CONTROLS",
+  "small_controls_optimized": "PASS_A_FINAL_BOUNDED_CONTROLS",
+  "small_control_modes_byte_identical": true,
+  "prepublication_review_correction": "Fresh polynomial reconstruction caught and corrected a draft Bezout matrix transcription; the negative index remains two."
+}

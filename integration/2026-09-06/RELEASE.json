@@ -1,0 +1,20 @@
+{
+  "schema": "riemann.integration.release.v1",
+  "release": "2026-09-06",
+  "repository": "GettysburgResearch/riemann",
+  "baseline": "8d16f8d9c475db290bc85e53d775b93b9bcdb336",
+  "status": "SCOPED_INTEGRATION_WITH_EXPLICIT_EXCLUSIONS",
+  "previous_release": "canonical/2026-08-22",
+  "base_claims": {"path":"canonical/2026-08-22/claims.tsv","blob":"6a4157460bf0044c6e110a2713f7dfb62bcb6c28","rows":139},
+  "base_edges": {"path":"canonical/2026-08-22/edges.tsv","blob":"174507a6d2778b699ce1a6306a5dbca73997ce98","rows":36},
+  "source_freeze":"integration/2026-09-06/SOURCE_FREEZE.json",
+  "decisions":"integration/2026-09-06/DECISIONS.json",
+  "programmes":"integration/2026-09-06/PROGRAMMES.json",
+  "review_tables":"integration/2026-09-06/REVIEW_TABLES.json",
+  "exhaustive_new_scientific_review":false,
+  "public_launch_cleared":false,
+  "fresh_lean_build":false,
+  "fresh_heavy_campaigns":false,
+  "rh_proved":false,
+  "current_state_rule":"Historical scientific claims are inherited only in their stated scope and with all matching current repairs. Review tables preserve component verdicts and omissions; they are not automatically seeded as proved facts. The current proof graph excludes broken original mechanisms and retains explicit open producer nodes."
+}
