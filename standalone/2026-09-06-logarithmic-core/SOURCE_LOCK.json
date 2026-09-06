@@ -1,0 +1,24 @@
+{
+  "schema": "riemann.proposed.logarithmic_core.v1",
+  "base_commit": "051808c1f8367b4320c52f94b40908eb2173d622",
+  "base_tree": "115c71ffd64b5f9ab3568185634c9efd07c89333",
+  "source_pr": 792,
+  "source_commit": "465cb28ed8cbfa1bb071d9a85eeda9890decfe6b",
+  "source_files": [
+    {
+      "path": "standalone/2026-09-05-bernstein-chebyshev-growth/finite-window-coercivity/PROOF.md",
+      "git_blob": "35d8d38a77bee896b0b2e729b095ccdef5d7a50f",
+      "scope": "literal kernel, constrained multiplier, rank-two tail, primitive coercivity"
+    },
+    {
+      "path": "standalone/2026-09-05-bernstein-chebyshev-growth/energy-schur-reduction/PROOF.md",
+      "git_blob": "0d12ff6039dcc79f6576538edeebd2a0c5b539c0",
+      "scope": "energy completion, residual identity and Loewner enclosure; no parent residual convergence claim"
+    }
+  ],
+  "new_status": "PROPOSED_COMPONENT_PROOFS_REVIEW_REQUIRED",
+  "rh_proved": false,
+  "actual_window_certified": false,
+  "external_zero_table_used": false,
+  "trusted_formal_files_changed": false
+}
