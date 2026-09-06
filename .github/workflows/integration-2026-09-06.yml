@@ -1,6 +1,8 @@
 name: integration-2026-09-06
 
 on:
+  push:
+    branches: ['integration/2026-09-06-abcd-final']
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened, ready_for_review]
@@ -23,7 +25,7 @@ jobs:
       - name: Checkout exact proposed head without persistent credentials
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           fetch-depth: 1
           persist-credentials: false
           submodules: false
@@ -43,7 +45,7 @@ jobs:
       - name: Retain exact source and validation receipts
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: integration-audit-${{ github.event.pull_request.head.sha }}
+          name: integration-audit-${{ github.event.pull_request.head.sha || github.sha }}
           path: ${{ runner.temp }}/integration-audit
           if-no-files-found: error
           retention-days: 14
