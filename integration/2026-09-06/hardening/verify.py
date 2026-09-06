@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import json
 import os
+import posixpath
 from pathlib import Path, PurePosixPath
 import re
 import subprocess
@@ -38,7 +39,7 @@ HISTORY_PINS = {
 }
 FROZEN_TREES = dict(TREE_PINS, **HISTORY_PINS)
 PAYLOAD_PINS = {
-    'validate.py': 'd745b65157f6d75c48155bb94a2eebff208f9d96',
+    'validate.py': 'b0f557189916ab1698a0170d4055fcc756a78199',
     'independent_fixtures.py': '873d56759ea517943286706670fe373cd7dbd1df',
     'RELEASE.json': '7bd18c3adfe624f9604c32516074bafd2733d3e1',
     'SOURCE_FREEZE.json': '33bf88880aee3846d6cf69374b8f529eb39127fc',
@@ -207,11 +208,12 @@ def check_links(root: Path, tree: dict, documents=NAVIGATION) -> dict:
                 external += 1
                 continue
             raw = unquote(u.path)
-            p = Path(name).parent / raw if raw else Path(name)
+            # Git/Markdown paths are POSIX, regardless of the host OS.
+            p = PurePosixPath(name).parent / raw if raw else PurePosixPath(name)
             if raw.startswith('/'):
-                p = Path(raw.lstrip('/'))
-            normalized = os.path.normpath(p.as_posix())
-            require(not normalized.startswith('../'), 'escaping link in ' + name)
+                p = PurePosixPath(raw.lstrip('/'))
+            normalized = posixpath.normpath(p.as_posix())
+            require(normalized != '..' and not normalized.startswith('../'), 'escaping link in ' + name)
             target = normalized
             if target not in tree:
                 target = target.rstrip('/') + '/README.md'

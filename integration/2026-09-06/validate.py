@@ -117,6 +117,78 @@ def check_payload(release,freeze,decisions,programmes,tables,frontier,proofs):
     for p in proofs:relative(p['path']);relative(p['source']);require(SHA.fullmatch(p['blob']),'bad proof blob')
 
 
+def typed_edges(claims, base_edges, blocked=()):
+    """Interpret applications separately from records of available APIs.
+
+    A verdict describes the statement's review status, not whether all of its
+    application hypotheses hold. The historical first_missing_premise column
+    is a conjunction of node IDs; never discard it when computing closure.
+    No historical row is mutated. Exported premise_ids are the effective
+    prerequisites, and historical_premise_ids retains the original text.
+    """
+    by={r['semantic_id']:r for r in claims}
+    require(len(by)==len(claims) and 'RH' in by,'base claim identity')
+    applications={'HYPEREDGE','CONDITIONAL_REDUCTION','COORDINATE_IDENTIFICATION',
+                  'EQUIVALENCE','EQUIVALENCE_MOD_L1','CONDITIONAL_ROUTE',
+                  'CONDITIONAL_IMPLICATION'}
+    metadata={'CONDITIONAL_API','STRUCTURAL_USE','OPEN_EXTENSION',
+              'PURPORTED_IMPLICATION','PURPORTED_EQUIVALENCE',
+              'PURPORTED_DESCENT','PURPORTED_EXTENSION'}
+    edges=copy.deepcopy(base_edges)
+    require(len({e['edge_id'] for e in edges})==len(edges),'duplicate inherited edge')
+    for e in edges:
+        ps=json.loads(e['premise_ids'],object_pairs_hook=pairs)
+        require(type(ps) is list and bool(ps) and
+                all(type(p) is str and bool(p) for p in ps),'bad inherited hyperedge')
+        require(len(ps)==len(set(ps)),'duplicate inherited premise')
+        text=e.get('first_missing_premise','')
+        require(type(text) is str,'bad missing-premise declaration')
+        missing=[p.strip() for p in text.split('|')] if text else []
+        require(all(missing),'empty missing-premise ID')
+        require(len(missing)==len(set(missing)),'duplicate missing-premise ID')
+        required=list(dict.fromkeys(ps+missing))
+        require(all(p in by for p in required) and e['conclusion_id'] in by,
+                'dangling inherited endpoint or missing prerequisite')
+        kind=e.get('edge_type')
+        require(kind in applications|metadata,'unknown or absent edge type')
+        reasons=[]
+        if e['final_verdict'] not in RELATIONS:
+            reasons.append('RELATION_NOT_ACCEPTED')
+        if kind in metadata:
+            reasons.append('NOT_AN_APPLICATION_EDGE')
+        if e['conclusion_id'] in required:
+            reasons.append('UNRESOLVED_SELF_DEPENDENCY')
+        if (set(required)|{e['conclusion_id']}) & set(blocked):
+            reasons.append('BLOCKED_BY_CURRENT_DECISION')
+        e['historical_premise_ids']=e['premise_ids']
+        e['premise_ids']=json.dumps(required)
+        e['current_missing_prerequisite_ids']=json.dumps(missing)
+        e['current_block_reasons']=json.dumps(reasons)
+        e['current_traversable']=not reasons
+    return edges
+
+
+def graph_closure(claims, edges):
+    """Least fixed point of explicitly typed, fully premised implications.
+
+    OPEN nodes are not initial facts, but may be derived by an actual accepted
+    implication. Do not hide errors by banning all OPEN conclusions or by
+    removing RH from the resulting closure.
+    """
+    reach={r['semantic_id'] for r in claims if r['final_verdict'] in PROVEN
+           and not r['semantic_id'].startswith('OPEN.') and r['semantic_id']!='RH'}
+    changed=True
+    while changed:
+        changed=False
+        for e in edges:
+            require(type(e.get('current_traversable')) is bool,
+                    'closure requires a typed edge')
+            if e['current_traversable'] and set(json.loads(e['premise_ids']))<=reach:
+                if e['conclusion_id'] not in reach:
+                    reach.add(e['conclusion_id']);changed=True
+    return reach
+
+
 def resolve(base_claims,base_edges,decisions):
     claims=copy.deepcopy(base_claims);by={r['semantic_id']:r for r in claims}
     require(len(by)==len(claims) and 'RH' in by,'base claim identity')
@@ -133,27 +205,21 @@ def resolve(base_claims,base_edges,decisions):
         if any(d['block_original_graph_use'] for d in found):
             r['final_verdict']='GAP_BLOCKED';blocked.add(r['semantic_id'])
         elif found and prior in PROVEN:r['final_verdict']='VERIFIED_WITH_FIXES'
-    edges=copy.deepcopy(base_edges)
-    require(len({e['edge_id'] for e in edges})==len(edges),'duplicate inherited edge')
-    for e in edges:
-        ps=json.loads(e['premise_ids'],object_pairs_hook=pairs)
-        require(type(ps) is list and all(type(p) is str for p in ps) and len(ps)>0,'bad inherited hyperedge')
-        require(all(p in by for p in ps) and e['conclusion_id'] in by,'dangling inherited endpoint')
-        e['current_traversable']=e['final_verdict'] in RELATIONS and not (set(ps)|{e['conclusion_id']}) & blocked
-    def closure(cs,es):
-        reach={r['semantic_id'] for r in cs if r['final_verdict'] in PROVEN and not r['semantic_id'].startswith('OPEN.') and r['semantic_id']!='RH'}
-        changed=True
-        while changed:
-            changed=False
-            for e in es:
-                if e.get('current_traversable',e['final_verdict'] in RELATIONS) and set(json.loads(e['premise_ids']))<=reach and e['conclusion_id'] not in reach:
-                    reach.add(e['conclusion_id']);changed=True
-        return reach
-    old=closure(base_claims,base_edges);new=closure(claims,edges)
+    # Apply the SAME corrected semantics to both historical and current views.
+    # The literal historical TSV remains unchanged, including its API records.
+    old_edges=typed_edges(base_claims,base_edges)
+    edges=typed_edges(claims,base_edges,blocked)
+    old=graph_closure(base_claims,old_edges);new=graph_closure(claims,edges)
     require(new<=old,'current graph illegally strengthens inherited reachability')
     require('RH' not in old and 'RH' not in new,'reviewed-only graph reaches RH: inspect proof inputs')
-    return claims,edges,{'matched_base_claims':matches,'blocked_original_nodes':sorted(blocked),'base_reachable':len(old),'current_reachable':len(new),'reviewed_only_path_to_rh':False}
-
+    return claims,edges,{
+        'interpretation':'typed-applications-v2',
+        'matched_base_claims':matches,'blocked_original_nodes':sorted(blocked),
+        'base_reachable':len(old),'current_reachable':len(new),
+        'base_reachable_ids':sorted(old),'current_reachable_ids':sorted(new),
+        'base_nonapplication_edges':[e['edge_id'] for e in old_edges
+                                    if not e['current_traversable']],
+        'reviewed_only_path_to_rh':False}
 
 def self_tests(payload):
     check_payload(*payload)
@@ -184,7 +250,7 @@ def self_tests(payload):
     cs=[{'semantic_id':'API','source_claim_id':'L-123','final_verdict':'VERIFIED'},
         {'semantic_id':'OPEN.X','source_claim_id':'','final_verdict':'OPEN_SUFFICIENT_FOR_RH'},
         {'semantic_id':'RH','source_claim_id':'','final_verdict':'OPEN_RH_EQUIVALENT'}]
-    es=[{'edge_id':'e','premise_ids':'["API","OPEN.X"]','conclusion_id':'RH','final_verdict':'CONDITIONAL_EXACT'}]
+    es=[{'edge_id':'e','premise_ids':'["API","OPEN.X"]','conclusion_id':'RH','final_verdict':'CONDITIONAL_EXACT','edge_type':'HYPEREDGE','first_missing_premise':''}]
     resolve(cs,es,[])
     bad=copy.deepcopy(es);bad[0]['premise_ids']='["API"]'
     try:resolve(cs,bad,[])
