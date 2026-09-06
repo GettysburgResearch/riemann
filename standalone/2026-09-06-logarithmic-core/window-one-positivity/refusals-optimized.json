@@ -1,0 +1,42 @@
+{
+  "cases": [
+    {
+      "case": "mode-denominator",
+      "exit_code": 1,
+      "expected_reason": "mode denominator",
+      "mode": "optimized"
+    },
+    {
+      "case": "negative-weight",
+      "exit_code": 1,
+      "expected_reason": "positive atom range",
+      "mode": "optimized"
+    },
+    {
+      "case": "missing-frequency",
+      "exit_code": 1,
+      "expected_reason": "witness dimension",
+      "mode": "optimized"
+    },
+    {
+      "case": "larger-window",
+      "exit_code": 1,
+      "expected_reason": "fixed source interval",
+      "mode": "optimized"
+    },
+    {
+      "case": "false-zero-weights",
+      "exit_code": 1,
+      "expected_reason": "finite coefficient failed",
+      "mode": "optimized"
+    },
+    {
+      "case": "duplicate-json",
+      "exit_code": 1,
+      "expected_reason": "duplicate JSON key",
+      "mode": "optimized"
+    }
+  ],
+  "status": "PASS_CLI_REJECTIONS",
+  "total": 6
+}
