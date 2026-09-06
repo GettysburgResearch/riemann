@@ -1,0 +1,29 @@
+[
+  {
+    "mode": "normal",
+    "command": [
+      "python",
+      "-B",
+      "checks/math_checks.py",
+      "--check",
+      "checks/result.json"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "42e78005f56a7273458d8fb693cdf090e84d4e9a383bdac1203cf402debe0dc9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "mode": "optimized",
+    "command": [
+      "python",
+      "-B",
+      "-O",
+      "checks/math_checks.py",
+      "--check",
+      "checks/result.json"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "42e78005f56a7273458d8fb693cdf090e84d4e9a383bdac1203cf402debe0dc9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]
