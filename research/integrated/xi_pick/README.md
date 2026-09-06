@@ -1,5 +1,9 @@
 # Actual-Xi Pick and Loewner
 
+> **Current interpretation:** use the [current xi statements](../CURRENT_RESULTS.md#xi). The earlier safe-axis paper theorem retains its source hypotheses and repairs; the all-positive-node replacement is conditional on a complete, multiplicity-correct entire source. Neither is a completed repaired Lean implementation: see [formal status](../../../FORMAL_STATUS.md). At the Birman–Schwinger threshold use **point spectrum**, with the additional assumptions needed for a statement about spectrum alone; see [R2](../../../reviews/D/REPAIRS.md).
+
+The following manifest and status cells are retained historical source records. In particular, `None` in an old repair column does not waive a later correction.
+
 ## Integrated scope
 
 **Strongest reviewed result:** Actual-Xi PSD through order three with mandatory fixes.

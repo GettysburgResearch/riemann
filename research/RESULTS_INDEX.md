@@ -19,6 +19,7 @@ The [cumulative results](../RESULTS.md) and [current statements with proof route
 | Native allocation and endpoints | Finite Farkas/Volterra/response identities; actual source feasibility and arithmetic endpoint gap still open | [Current dual conventions](integrated/CURRENT_RESULTS.md#q4), [assets](integrated/native_assets/README.md), [endpoint](integrated/native_endpoint/README.md) |
 | Conditional combinations | Perron, regional Schur, matched-transfer and root/excess tools; compatible source premises still required | [Current](integrated/CURRENT_RESULTS.md#q4), [manifest](integrated/conjunctive/README.md) |
 | Low-order actual xi | Earlier safe-domain PSD and conditional repaired entire-source theorem; no all-order or repaired-Lean completion | [Current](integrated/CURRENT_RESULTS.md#xi), [source manifest](integrated/xi_pick/README.md) |
+| High-derivative entry and finite transport | Repaired safe ray for the stated $T^2\log r/r\to0$ regime, finite pole selectors and a fifth Conrey trial; no low-order descent or stronger budget by substitution | [Current account](../RESULTS.md#high-derivatives), [safe-ray proof](../reviews/A/supplement/REPORT.md#S06), [selectors](../reviews/A/supplement/REPORT.md#S05), [trial](../reviews/A/supplement/REPORT.md#S04) |
 | Heat and First-Hermite | Specified unconditional regions and conditional criteria; the whole complementary domain remains open | [Current](integrated/CURRENT_RESULTS.md#operators), [manifest](integrated/heat_hermite/README.md) |
 | Safe-line/Suzuki/Hardy | Transform, amplitude and local Green results; source-Gram domination and critical intertwiner not supplied | [Current](integrated/CURRENT_RESULTS.md#operators), [safe-line](integrated/safe_line/README.md), [Suzuki](integrated/suzuki_hardy/README.md) |
 | Brownian/Weil/Fredholm | Fixed-compact and specified cardinal results; finite/cofinal no-go results; no full arithmetic floor | [Current](integrated/CURRENT_RESULTS.md#operators), [obstruction manifest](integrated/operator_no_go/README.md) |
@@ -46,6 +47,25 @@ These useful earlier components are not discarded because a later review concent
 | Local Möbius inversion and two-frame algebra | Finite source reconstruction and corrected residual identities; residual smallness, source/domain and repaired frame prerequisites remain explicit | [Inversion source](https://github.com/GettysburgResearch/riemann/tree/4b770cf245ca2253efb0db2b807f4eab37775333), [two-frame source](https://github.com/GettysburgResearch/riemann/tree/ff659984de0ab0c397ebefad393bc585c9007bc2) |
 
 The early direct-xi/total-count/zero-deflation stack likewise contains scoped finite consumers, but not one dependency-closed accepted whole branch. Its detailed extraction boundary remains in [IMPORT_MANIFEST](IMPORT_MANIFEST.md). No enlarged Robin traversal range is newly accepted here; missing streams and primitive assurance remain controlling.
+
+<a id="larger-robin-certificates"></a>
+### Larger Robin certificate programme: preserved, not promoted
+
+The [frozen canonical-tree deposit through $10^{54}$](https://github.com/GettysburgResearch/riemann/tree/eda7ba6e378851ebe7ec1441b6503ba365eb0e35) remains discoverable. Its [earlier review disposition](../integration/2026-08-01/ledger/batch-A.tsv) is **verified with fixes**, not independent reproduction of the complete numerical backend. The source stores a regeneration manifest rather than the terminal stream; the searcher and traversal verifier share their arithmetic kernel. The [later scope restriction](../reviews/D-pass4/INTEGRATOR_ACTIONS.tsv) does not import the $10^{54}$ or $10^{100}$ traversal claims from unavailable stream hashes. This entry preserves the work and its prior review, **not current acceptance of an enlarged finite range**. A useful contribution is to regenerate the complete frozen stream and independently check every terminal, cap and primitive bound before requesting range acceptance.
+
+<a id="external-comparisons"></a>
+## External work and comparison programmes
+
+These are inspected imports or interfaces, with attribution and status kept separate from native project results. Source pins are in the linked reports; no live upstream revision inherits a frozen disposition.
+
+| Work | Retained scope and boundary | Proof, review and source trail |
+|---|---|---|
+| LongGapsBetweenPrimes | Mathematical reconstruction of coefficient estimates, simultaneous-root sieve, growing-family quantifiers, covering and consecutive-prime endpoint. Retain uniformity losses and named classical inputs; not a fresh kernel/build check or a transfer to RH | [Complete mathematical chain](../reviews/A/supplement/REPORT.md#S07), [component dispositions AS-022–026](../reviews/A/supplement/CLAIMS.tsv) |
+| PrimeGaps186 | Conditional comparison contract: Kloosterman3, shifted Kloosterman2 correlation and the actual physical-integral bounds remain inputs. The weighted-fragment distinction is retained; finite weighted mass is not finite support | [Input and fragment analysis](../reviews/A/supplement/REPORT.md#S08), [component dispositions AS-027–028](../reviews/A/supplement/CLAIMS.tsv) |
+| Lamzouri interfaces | Earlier finite Hilbert/optimization mechanisms do not discharge the separately supplied zero-count and pair-correlation inputs; source and formal build holds remain | [Current boundary](../reviews/A/supplement/REPORT.md#S10), [earlier proof account](../reviews/A/MATHEMATICAL_AUDIT.md) |
+| Catalan height argument | Conditional obstruction to the specified majorant under quoted version-one premises. Original-PDF attribution and later versions were not verified in that pass; neither irrationality nor rationality is proved | [Exact proof-obstruction scope](../reviews/A/supplement/REPORT.md#S09), [disposition AS-029](../reviews/A/supplement/CLAIMS.tsv) |
+
+The [full supplement and its source links](../reviews/A/supplement/REPORT.md) control these entries where earlier report summaries still list an omission later addressed there. Completion of a paper reconstruction is not completion of a formal build, numerical campaign or native-source binding.
 
 ## Active work and contributing
 

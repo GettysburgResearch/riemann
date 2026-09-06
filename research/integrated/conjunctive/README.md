@@ -1,5 +1,9 @@
 # Conjunctive APIs
 
+> **Current interpretation:** these are tools for combining **supplied compatible estimates**, not proofs of those estimates. The [current excursion inequality](../CURRENT_RESULTS.md#mellin) includes components meeting either boundary and still needs the source-specific energy/boundary bound. [Regional Schur bounds](../CURRENT_RESULTS.md#q4) require uniform constants for growing partitions. An available conditional inequality cannot establish its open arithmetic premise; the [graph correction](../../../integration/2026-09-06/graph-fix/README.md) enforces that distinction.
+
+The following manifest and status cells are retained historical source records, subordinate to these current scope corrections.
+
 ## Integrated scope
 
 **Strongest reviewed result:** Perron, Schur, matched-transfer, root/excess, staircase identities.
