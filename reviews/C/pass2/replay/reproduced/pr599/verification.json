@@ -1,0 +1,64 @@
+{
+  "asymptotic_sanity": [
+    {
+      "bulk_power_exponent": -0.05000000000000002,
+      "error_exponent_over_logX": 0.1009011562983008,
+      "logX": 10000,
+      "terminal_strip_ratio_proxy": 0.2028458819999285
+    },
+    {
+      "bulk_power_exponent": -0.05000000000000002,
+      "error_exponent_over_logX": 0.09879107986257692,
+      "logX": 100000,
+      "terminal_strip_ratio_proxy": 0.16748883056585465
+    },
+    {
+      "bulk_power_exponent": -0.05000000000000002,
+      "error_exponent_over_logX": 0.09771403011455751,
+      "logX": 1000000,
+      "terminal_strip_ratio_proxy": 0.14503719321766528
+    },
+    {
+      "bulk_power_exponent": -0.05000000000000002,
+      "error_exponent_over_logX": 0.09712356452740795,
+      "logX": 10000000,
+      "terminal_strip_ratio_proxy": 0.12939823253734808
+    },
+    {
+      "bulk_power_exponent": -0.05000000000000002,
+      "error_exponent_over_logX": 0.09679012868850477,
+      "logX": 100000000,
+      "terminal_strip_ratio_proxy": 0.11780879404700412
+    }
+  ],
+  "cutoff": "kappa^2*(logX*loglogX)^2 with kappa<1/2",
+  "frozen": {
+    "pr576": "0f6ea6eae813c1d867ae50744cf5fd57e2720bb7",
+    "pr578": "981bfef5fcfa3a39ccf4f50875cf8a6057650268",
+    "pr589": "ff5156cf6aa469bb7a2155ff4aa7c094bd75b9b6",
+    "pr590": "223f11259b3e7134f78d6492795e6e94caca8be3"
+  },
+  "not_proved_by_replay": [
+    "PNT",
+    "Mertens",
+    "DLPBR67",
+    "RH"
+  ],
+  "product_bulk_condition": "beta<1-2*kappa",
+  "proof_object_sha256": "0616115be5b6d319f074d6e61182645a07d682afc14188b89eaee3f794e638a5",
+  "proved_by_replay": [
+    "finite_euler_factorization",
+    "largest_prime_owner_telescope",
+    "positive_main_plus_product_boundary_identity",
+    "normalized_1_over_p_coefficient"
+  ],
+  "rh_established": false,
+  "schema": "riemann.x97910.near-critical-factor67.v2",
+  "terminal_strip_condition": "H^2*logZ=o(logX)",
+  "toy_bulk_error": "833937107018882168/3110579686839735",
+  "toy_full_euler": "4941626927158514333447816/18734508208187395348725",
+  "toy_largest_prime_telescope": "4941626927158514333447816/18734508208187395348725",
+  "toy_positive_main": "408/385",
+  "toy_product_boundary": "-16055441048/2981303325",
+  "verdict": "PASS_X97910_NEAR_CRITICAL_FACTOR67_ALGEBRA"
+}

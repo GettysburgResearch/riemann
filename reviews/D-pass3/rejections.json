@@ -1,0 +1,56 @@
+{
+  "package_mutations": [
+    {
+      "mutation": "modify_report",
+      "rejected": true
+    },
+    {
+      "mutation": "missing_source_ledger",
+      "rejected": true
+    },
+    {
+      "mutation": "extra_file",
+      "rejected": true
+    },
+    {
+      "mutation": "forged_hash",
+      "rejected": true
+    }
+  ],
+  "result_mutations": [
+    {
+      "mutation": "fixture_total",
+      "rejected": true
+    },
+    {
+      "mutation": "schema",
+      "rejected": true
+    },
+    {
+      "mutation": "drop_check",
+      "rejected": true
+    },
+    {
+      "mutation": "change_claimed_precision",
+      "rejected": true
+    },
+    {
+      "mutation": "change_source_blob",
+      "rejected": true
+    },
+    {
+      "mutation": "erase_core_counterexample",
+      "rejected": true
+    },
+    {
+      "mutation": "alter_P61_interval",
+      "rejected": true
+    },
+    {
+      "mutation": "duplicate_check",
+      "rejected": true
+    }
+  ],
+  "schema": "reviewer-D-pass3-rejections-v1",
+  "scope": "result parser/comparator and file/package contracts; not mathematical theorem validation"
+}

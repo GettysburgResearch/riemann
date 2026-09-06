@@ -1,0 +1,78 @@
+{
+  "normal": {
+    "cases": [
+      {
+        "case": "fixture_count",
+        "rejected": true
+      },
+      {
+        "case": "counterexample_sign",
+        "rejected": true
+      },
+      {
+        "case": "missing_check",
+        "rejected": true
+      },
+      {
+        "case": "boolean_integer_alias",
+        "rejected": true
+      },
+      {
+        "case": "float_integer_alias",
+        "rejected": true
+      },
+      {
+        "case": "duplicate_key",
+        "rejected": true
+      },
+      {
+        "case": "nonfinite_constant",
+        "rejected": true
+      },
+      {
+        "case": "proof_status_promotion",
+        "rejected": true
+      }
+    ],
+    "optimized": false,
+    "rejected": 8
+  },
+  "optimized": {
+    "cases": [
+      {
+        "case": "fixture_count",
+        "rejected": true
+      },
+      {
+        "case": "counterexample_sign",
+        "rejected": true
+      },
+      {
+        "case": "missing_check",
+        "rejected": true
+      },
+      {
+        "case": "boolean_integer_alias",
+        "rejected": true
+      },
+      {
+        "case": "float_integer_alias",
+        "rejected": true
+      },
+      {
+        "case": "duplicate_key",
+        "rejected": true
+      },
+      {
+        "case": "nonfinite_constant",
+        "rejected": true
+      },
+      {
+        "case": "proof_status_promotion",
+        "rejected": true
+      }
+    ],
+    "optimized": true,
+    "rejected": 8
+  }
+}

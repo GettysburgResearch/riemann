@@ -1,0 +1,47 @@
+{
+  "exhaustive_C_allotment_complete": false,
+  "fresh_Lean_build": false,
+  "historical": {
+    "complete_scientific_replay": false,
+    "four_front_doors_restored_in_temporary_copy": true,
+    "fresh_340_head_fetch": false,
+    "results": [
+      {
+        "modes": [
+          "normal",
+          "optimized"
+        ],
+        "script": "check_census.py",
+        "stdout_sha256": "0f5b3209835baba30c3396a3612148ceb87f91a24b49958d3b45f3e26fe2f3cb"
+      },
+      {
+        "modes": [
+          "normal",
+          "optimized"
+        ],
+        "script": "pass2/scripts/validate_pass2.py",
+        "stdout_sha256": "1a6da6f776deb697468d56844b3b9454ed2aceb7764ef956c7c6ce3285653843"
+      }
+    ],
+    "runs": 4
+  },
+  "manifest_entries": 23,
+  "negative_fixtures_rejected": [
+    "missing_file",
+    "wrong_bytes",
+    "empty_manifest",
+    "duplicate_path",
+    "record_scope",
+    "record_count",
+    "majorant_scope",
+    "boolean_count",
+    "wrong_bracket",
+    "empty_scope",
+    "missing_scope_field"
+  ],
+  "new_driver_reports": 3,
+  "public_release_cleared": false,
+  "schema": "C3-delivery-consistency-v1",
+  "scientific_acceptance": false,
+  "status": "PASS_BOUNDED_DELIVERY"
+}

@@ -1,0 +1,289 @@
+{
+  "status": "PASS_C4_REJECTION_TESTS",
+  "packet_cases_per_mode": 11,
+  "math_result_cases_per_mode": 9,
+  "completed_cli_refusals": 40,
+  "preparation_failure": "initial combined orchestration exceeded outer execution limit; not counted as completed",
+  "records": [
+    {
+      "suite": "packet",
+      "mode": "normal",
+      "case": "unsealed_proof",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: manifest mismatch proofs/XI_SOURCE_REPAIR.md"
+    },
+    {
+      "suite": "packet",
+      "mode": "normal",
+      "case": "missing_proof",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: file inventory mismatch"
+    },
+    {
+      "suite": "packet",
+      "mode": "normal",
+      "case": "extra_file",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: file inventory mismatch"
+    },
+    {
+      "suite": "packet",
+      "mode": "normal",
+      "case": "empty_claims",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: empty/ragged table CLAIMS.tsv"
+    },
+    {
+      "suite": "packet",
+      "mode": "normal",
+      "case": "duplicate_claim",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: duplicate identity CLAIMS.tsv"
+    },
+    {
+      "suite": "packet",
+      "mode": "normal",
+      "case": "promote_open_node",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: open-node status changed"
+    },
+    {
+      "suite": "packet",
+      "mode": "normal",
+      "case": "unknown_premise",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: unknown/empty premise"
+    },
+    {
+      "suite": "packet",
+      "mode": "normal",
+      "case": "changed_source_pin",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: source pin mismatch SRC-X0"
+    },
+    {
+      "suite": "packet",
+      "mode": "normal",
+      "case": "empty_scope",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: declared scope mismatch"
+    },
+    {
+      "suite": "packet",
+      "mode": "normal",
+      "case": "compiled_alias",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: declared scope mismatch"
+    },
+    {
+      "suite": "packet",
+      "mode": "normal",
+      "case": "empty_manifest",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: manifest coverage"
+    },
+    {
+      "suite": "packet",
+      "mode": "optimized",
+      "case": "unsealed_proof",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: manifest mismatch proofs/XI_SOURCE_REPAIR.md"
+    },
+    {
+      "suite": "packet",
+      "mode": "optimized",
+      "case": "missing_proof",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: file inventory mismatch"
+    },
+    {
+      "suite": "packet",
+      "mode": "optimized",
+      "case": "extra_file",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: file inventory mismatch"
+    },
+    {
+      "suite": "packet",
+      "mode": "optimized",
+      "case": "empty_claims",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: empty/ragged table CLAIMS.tsv"
+    },
+    {
+      "suite": "packet",
+      "mode": "optimized",
+      "case": "duplicate_claim",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: duplicate identity CLAIMS.tsv"
+    },
+    {
+      "suite": "packet",
+      "mode": "optimized",
+      "case": "promote_open_node",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: open-node status changed"
+    },
+    {
+      "suite": "packet",
+      "mode": "optimized",
+      "case": "unknown_premise",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: unknown/empty premise"
+    },
+    {
+      "suite": "packet",
+      "mode": "optimized",
+      "case": "changed_source_pin",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: source pin mismatch SRC-X0"
+    },
+    {
+      "suite": "packet",
+      "mode": "optimized",
+      "case": "empty_scope",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: declared scope mismatch"
+    },
+    {
+      "suite": "packet",
+      "mode": "optimized",
+      "case": "compiled_alias",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: declared scope mismatch"
+    },
+    {
+      "suite": "packet",
+      "mode": "optimized",
+      "case": "empty_manifest",
+      "exit_code": 2,
+      "stderr_prefix": "FAIL: manifest coverage"
+    },
+    {
+      "suite": "math_result",
+      "mode": "normal",
+      "case": "empty_scope",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: exact scope mismatch"
+    },
+    {
+      "suite": "math_result",
+      "mode": "normal",
+      "case": "rh_true",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: exact scope mismatch"
+    },
+    {
+      "suite": "math_result",
+      "mode": "normal",
+      "case": "bool_count",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: count type/value"
+    },
+    {
+      "suite": "math_result",
+      "mode": "normal",
+      "case": "float_count",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: count type/value"
+    },
+    {
+      "suite": "math_result",
+      "mode": "normal",
+      "case": "missing_field",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: result schema"
+    },
+    {
+      "suite": "math_result",
+      "mode": "normal",
+      "case": "extra_field",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: result schema"
+    },
+    {
+      "suite": "math_result",
+      "mode": "normal",
+      "case": "duplicate_key",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: duplicate JSON key: schema"
+    },
+    {
+      "suite": "math_result",
+      "mode": "normal",
+      "case": "changed_constant",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: reconstructed result mismatch"
+    },
+    {
+      "suite": "math_result",
+      "mode": "normal",
+      "case": "changed_count",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: reconstructed result mismatch"
+    },
+    {
+      "suite": "math_result",
+      "mode": "optimized",
+      "case": "empty_scope",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: exact scope mismatch"
+    },
+    {
+      "suite": "math_result",
+      "mode": "optimized",
+      "case": "rh_true",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: exact scope mismatch"
+    },
+    {
+      "suite": "math_result",
+      "mode": "optimized",
+      "case": "bool_count",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: count type/value"
+    },
+    {
+      "suite": "math_result",
+      "mode": "optimized",
+      "case": "float_count",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: count type/value"
+    },
+    {
+      "suite": "math_result",
+      "mode": "optimized",
+      "case": "missing_field",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: result schema"
+    },
+    {
+      "suite": "math_result",
+      "mode": "optimized",
+      "case": "extra_field",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: result schema"
+    },
+    {
+      "suite": "math_result",
+      "mode": "optimized",
+      "case": "duplicate_key",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: duplicate JSON key: schema"
+    },
+    {
+      "suite": "math_result",
+      "mode": "optimized",
+      "case": "changed_constant",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: reconstructed result mismatch"
+    },
+    {
+      "suite": "math_result",
+      "mode": "optimized",
+      "case": "changed_count",
+      "exit_code": 2,
+      "stderr_prefix": "REJECT: reconstructed result mismatch"
+    }
+  ]
+}

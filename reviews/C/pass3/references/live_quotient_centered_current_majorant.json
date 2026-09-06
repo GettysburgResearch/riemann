@@ -1,0 +1,90 @@
+{
+  "classification": "PASS_T108106_LIVE_QUOTIENT_CENTERED_CURRENT_MAJORANT",
+  "complete_live_grouped_current_census_proved": false,
+  "cross_history_terms_retained_before_square": true,
+  "declared_live_subblock_is_complete_fibre": false,
+  "double_centered_current_formula_proved": true,
+  "finite_checks": 24,
+  "full_grid_projection_majorant_proved": true,
+  "global_relative_trace_proved": false,
+  "live_one_cell": {
+    "census_caveat": "declared one-cell subpacket only; not a complete live fibre",
+    "centered_current_majorant": {
+      "denominator": 537151,
+      "numerator": 8569600
+    },
+    "current_sum": {
+      "denominator": 1,
+      "numerator": 4
+    },
+    "ell": 1031,
+    "exact_one_cell_principal_block_positive_diagnostic": {
+      "denominator": 537151,
+      "numerator": 8483904
+    },
+    "history_multiplicity": 100,
+    "literal_energy": {
+      "denominator": 1,
+      "numerator": 676
+    },
+    "majorant_gap": {
+      "denominator": 537151,
+      "numerator": 85696
+    },
+    "majorant_to_literal_energy_ratio": {
+      "denominator": 6982963,
+      "numerator": 164800
+    },
+    "principal_density": {
+      "denominator": 537151,
+      "numerator": 535600
+    },
+    "rho": 521
+  },
+  "live_subblock_centered_majorant_valid_for_zero_extended_vector": true,
+  "principal_binding_proved": false,
+  "proof_object_sha256": "82b2825c1254ab3cceb4cbdbfd9c7ba4e142eec0add2499e22ac2e178c3e40ac",
+  "rh_or_grh_established": false,
+  "schema": "riemann.t108106.live-quotient-centered-current-majorant.v1",
+  "signed_cross_conductor_estimate_proved": false,
+  "two_cell": {
+    "centered_energy": {
+      "denominator": 3,
+      "numerator": 7
+    },
+    "current": [
+      {
+        "denominator": 1,
+        "numerator": 3
+      },
+      {
+        "denominator": 1,
+        "numerator": -1
+      }
+    ],
+    "ell": 3,
+    "majorant_gap": {
+      "denominator": 3,
+      "numerator": 5
+    },
+    "positive_debt": {
+      "denominator": 3,
+      "numerator": 2
+    },
+    "rho": 2
+  },
+  "unknown_quotient_norm_removed_from_upper_bound": true,
+  "zero_centered": {
+    "centered_energy": {
+      "denominator": 1,
+      "numerator": 0
+    },
+    "ell": 3,
+    "positive_debt": {
+      "denominator": 1,
+      "numerator": 0
+    },
+    "rho": 4
+  },
+  "zero_centered_current_zero_positive_debt": true
+}

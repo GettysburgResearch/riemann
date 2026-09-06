@@ -1,0 +1,25 @@
+edge_id	premise_ids	conclusion_id	edge_type	evidence	scope_note
+C4-E01	"[""H.MELLIN.ANALYSIS""]"	C4-M2	CONJUNCTIVE_PAPER_IMPLICATION	proofs/MELLIN_ANALYTIC_GAPS.md#M2	Absolute convergence supplies local analytic derivatives
+C4-E02	"[""H.MELLIN.ANALYSIS"",""C4-M2""]"	C4-M3	CONJUNCTIVE_PAPER_IMPLICATION	proofs/MELLIN_ANALYTIC_GAPS.md#M3	Finite real abscissa and eventual sign retained in theorem quantifiers
+C4-E03	"[""H.MELLIN.ANALYSIS""]"	C4-M4	CONJUNCTIVE_PAPER_IMPLICATION	proofs/MELLIN_ANALYTIC_GAPS.md#M4	Conditional on subpower mass, not an actual-source instance
+C4-E04	"[""C4-M2"",""H.MELLIN.ANALYSIS""]"	C4-M5	CONJUNCTIVE_PAPER_IMPLICATION	proofs/MELLIN_ANALYTIC_GAPS.md#M5	Core analyticity and initial agreement still required
+C4-E05	"[""H.MELLIN.ZERO_ADAPTERS""]"	C4-M6	CONJUNCTIVE_PAPER_IMPLICATION	proofs/MELLIN_ANALYTIC_GAPS.md#M6	Affine derivative nonzero, arbitrary finite multiplicity
+C4-E06	"[""C4-M3"",""C4-M4"",""C4-M5"",""C4-M6"",""H.MELLIN.NATIVE_SOURCE"",""H.MELLIN.NEGATIVE_MASS"",""H.MELLIN.ZERO_ADAPTERS""]"	RH	CONJUNCTIVE_PAPER_IMPLICATION	proofs/MELLIN_ANALYTIC_GAPS.md#M7	Native estimate and exact source are OPEN
+C4-E07	"[""C4-X1"",""H.XI.SPECTRAL_DATA""]"	C4-X8	CONJUNCTIVE_PAPER_IMPLICATION	proofs/XI_SOURCE_REPAIR.md#X4	Requires entire growth and exact complete spectrum, not a source lock string
+C4-E08	"[""H.XI.SPECTRAL_DATA""]"	C4-X7	CONJUNCTIVE_PAPER_IMPLICATION	proofs/XI_SOURCE_REPAIR.md#X4	Derivative majorants and countable fixed exhaustion
+C4-E09	"[""H.XI.SPECTRAL_DATA""]"	C4-X9	CONJUNCTIVE_PAPER_IMPLICATION	proofs/XI_SOURCE_REPAIR.md#X5	Pointwise payment from geometric inequalities
+C4-E10	"[""C4-X6"",""C4-X7"",""C4-X9"",""C4-X10"",""H.XI.SPECTRAL_DATA""]"	C4-X11	CONJUNCTIVE_PAPER_IMPLICATION	proofs/XI_SOURCE_REPAIR.md#X6	Retains selected multiplicity, zero coefficients and one-use reserve
+C4-E11	"[""C4-X8"",""C4-X11""]"	C4-X12	CONJUNCTIVE_PAPER_IMPLICATION	proofs/XI_SOURCE_REPAIR.md#X7	Full positive-domain scalar properties, not continuation of a sign
+C4-E12	"[""C4-X12"",""C4-X13"",""C4-X14""]"	XI.PSD3.PAPER	CONJUNCTIVE_PAPER_IMPLICATION	proofs/XI_SOURCE_REPAIR.md#X8	Only sizes one through three including repeated evaluation nodes
+C4-E13	"[""XI.PSD3.PAPER"",""H.XI.ACTUAL_BINDING"",""H.XI.COMPILED_REPAIR""]"	XI.PSD3.TRUSTED	CONJUNCTIVE_PAPER_IMPLICATION	proofs/XI_SOURCE_REPAIR.md#X10	No edge from size-three positivity to RH
+C4-E14	"[""H.OP.KERNEL""]"	C4-O1	CONJUNCTIVE_PAPER_IMPLICATION	proofs/OPERATOR_AUDIT.md#O1	Local boundedness/compactness, not parent global trace class
+C4-E15	"[""H.OP.KERNEL""]"	C4-O2	CONJUNCTIVE_PAPER_IMPLICATION	proofs/OPERATOR_AUDIT.md#O1	Full signed arithmetic tail
+C4-E16	"[""H.OP.KERNEL""]"	C4-O3	CONJUNCTIVE_PAPER_IMPLICATION	proofs/OPERATOR_AUDIT.md#O2	Constrained Fourier identity, all frequencies
+C4-E17	"[""C4-O2"",""C4-O3""]"	C4-O4	CONJUNCTIVE_PAPER_IMPLICATION	proofs/OPERATOR_AUDIT.md#O2	Finite L and exact constraints retained
+C4-E18	"[""C4-O1"",""C4-O4""]"	C4-O6	CONJUNCTIVE_PAPER_IMPLICATION	proofs/OPERATOR_AUDIT.md#O3	Source-specific energy continuity is essential
+C4-E19	"[""C4-O6""]"	C4-O7	CONJUNCTIVE_PAPER_IMPLICATION	proofs/OPERATOR_AUDIT.md#O4	Energy completion rather than L2 inverse
+C4-E20	"[""C4-O7""]"	C4-O8	CONJUNCTIVE_PAPER_IMPLICATION	proofs/OPERATOR_AUDIT.md#O4	Upper approximation only
+C4-E21	"[""C4-O6"",""C4-O7""]"	C4-O9	CONJUNCTIVE_PAPER_IMPLICATION	proofs/OPERATOR_AUDIT.md#O4	Residual Gram bound for all coefficient vectors
+C4-E22	"[""C4-O9"",""H.OP.CONTINUUM_CERT""]"	OP.ONE_WINDOW.PSD	CONJUNCTIVE_PAPER_IMPLICATION	proofs/OPERATOR_AUDIT.md#O4	The actual lower certificate remains unproduced
+C4-E23	"[""C4-O7"",""H.OP.ALL_LENGTHS"",""H.OP.GLOBAL_ADAPTER""]"	OP.ALL_WINDOWS.PSD	CONJUNCTIVE_PAPER_IMPLICATION	proofs/OPERATOR_AUDIT.md#O4	Unbounded family, not a fixed window
+C4-E24	"[""OP.ALL_WINDOWS.PSD"",""H.OP.GLOBAL_ADAPTER""]"	RH	CONJUNCTIVE_PAPER_IMPLICATION	proofs/OPERATOR_AUDIT.md#O4	Original global xi/RH bridge is a separate input; no new unconditional RH claim

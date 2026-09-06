@@ -1,0 +1,90 @@
+{
+  "status": "PASS_14_FINAL_VALIDATOR_CORRUPTION_REJECTIONS",
+  "results": [
+    {
+      "mutation": "bad_sha",
+      "optimized": false,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: bad source commit_sha"
+    },
+    {
+      "mutation": "bad_sha",
+      "optimized": true,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: bad source commit_sha"
+    },
+    {
+      "mutation": "missing_source",
+      "optimized": false,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: missing claim source"
+    },
+    {
+      "mutation": "missing_source",
+      "optimized": true,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: missing claim source"
+    },
+    {
+      "mutation": "proof_change",
+      "optimized": false,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: content mismatch FINAL_AUDIT.md"
+    },
+    {
+      "mutation": "proof_change",
+      "optimized": true,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: content mismatch FINAL_AUDIT.md"
+    },
+    {
+      "mutation": "float_count",
+      "optimized": false,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: count/type mismatch claim_dispositions"
+    },
+    {
+      "mutation": "float_count",
+      "optimized": true,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: count/type mismatch claim_dispositions"
+    },
+    {
+      "mutation": "duplicate_json",
+      "optimized": false,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: duplicate JSON key: rh_proved"
+    },
+    {
+      "mutation": "duplicate_json",
+      "optimized": true,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: duplicate JSON key: rh_proved"
+    },
+    {
+      "mutation": "rh_overclaim",
+      "optimized": false,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: completion overclaim"
+    },
+    {
+      "mutation": "rh_overclaim",
+      "optimized": true,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: completion overclaim"
+    },
+    {
+      "mutation": "source_code_change",
+      "optimized": false,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: author source blob mismatch"
+    },
+    {
+      "mutation": "source_code_change",
+      "optimized": true,
+      "exit_code": 1,
+      "last_error_line": "RuntimeError: author source blob mismatch"
+    }
+  ],
+  "mathematical_theorem_test": false
+}

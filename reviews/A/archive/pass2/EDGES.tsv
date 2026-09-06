@@ -1,0 +1,38 @@
+edge_id	all_required_premises	conclusion	status	note	review_reference
+A-E01	exact beta source; fixed compact BV mollification; subpower negative mass; zero-safe Mellin consumer	RH	VALID_CONDITIONAL_HYPEREDGE	The arithmetic mass premise remains open.	A-M06
+A-E02	RH; classical Mertens bound; fixed compact BV source kernel	subpower prefix Gram energy	VALID_CONDITIONAL_HYPEREDGE	No epsilon-to-zero limit.	A-M06
+A-E03	PRIMLS; exact finite primitive decomposition; beta Gram consumer	RH	VALID_CONDITIONAL_HYPEREDGE	All channels/weights/endpoints as source.	A-M06
+A-E04	RH; reciprocal-zeta bound; corrected uniform Perron; actual autocorrelation BV	PRIMLS	VALID_WITH_REPAIR	All sieve/frequency/endpoint quantifiers explicitly proved.	A-M06
+A-E05	COREAGG; finite source support; all-positive-exponent normalization	PRIMCAR	VALID_CONDITIONAL_HYPEREDGE	No cancellation estimate supplied.	A-M07
+A-E06	PRIMCAR; finite core inversion; support r<=4H^2/A	COREAGG	VALID_CONDITIONAL_HYPEREDGE	Divisor taxes absorbed by exponent renaming.	A-M07
+A-E07	COREWAVE; summable tau(r)/r^(2-eta)	COREAGG	VALID_CONDITIONAL_HYPEREDGE	Sufficiency is not a proof of strict logical strength.	A-M07
+A-E08	central PRIMLS; beta second-difference finite inverse; source consumer	RH	VALID_CONDITIONAL_HYPEREDGE	Exceptional positive channels unnecessary for this route.	A-M06
+A-E09	RH; unweighted short-interval theorem or Gonek model	literal weighted PRIMCAR	NOT_VERIFIED_ADAPTER_MISSING	Frozen t-dependent sieve weights cannot be replaced for free.	A-M07
+A-E10	finite Hodge/Gram positivity	cofinal native one-sided variation	INVALID_SHORTCUT	Source norm positivity does not sign a differential current.	A-M08
+A-E11	literal EB source; positive live-core mass; negative detector moment; semiprime asymptotic; dominated core sum	literal EB negative main	VALID_CONDITIONAL_HYPEREDGE	Does not transport to a changed core or native Mobius source.	A-M08
+A-E12	unquotiented completed source	ordinary native Mobius gate	WITHDRAWN_SOURCE_PROMOTION	An exact source-preserving adapter is missing/refuted in that use.	A-M08
+A-E13	high-derivative entry; complete defect sum bound; boundary/endpoint/multiplicity control	low-order Xi zero bound	VALID_CONDITIONAL_HYPEREDGE	Entry alone is insufficient.	A-M09
+A-E14	local weld amendment; corner residual in correct units; CLUSTER-3; retained assembly inputs	W-pinch gate refutation	CONDITIONAL_NOT_UNCONDITIONAL	Both final open interfaces remain.	A-M10
+A-E15	finite shifted-mesh observations; a finite phase visit	cofinal limsup minority >=0.35	INVALID_INFERENCE	No cofinal uniform statistic proved.	A-M02
+A-E16	minority count m	transition count V<=2m	VALID_FINITE_INEQUALITY	Reverse inequality is false.	A-M01
+A-E17	one-factor Fourier-band trace	n-factor additive Fourier-band trace	FALSE_IDENTITY	Two distinct factors refute it.	A-M04
+A-E18	unrestricted E=G+i epsilon F	G=F^(K) derivative companion	ADAPTER_MISSING	Nonnative entire-pair controls are not actual Xi controls.	A-M04
+A-E19	actual Xi; one fixed lambda>0; raw zeroth companion Schur on all C+	RH	VALID_EQUIVALENCE_DIRECTION	Multiplicity-safe removable germ and maximum modulus.	A-M11
+A-E20	RH; actual paired product; Rolle/Hurwitz	both raw companions inner	VALID_CONDITIONAL_HYPEREDGE	Fifth innerness alone does not imply RH.	A-M11
+A-E21	finite companion samples; positive Gram; narrow bands	global raw innerness or cofinal physical capture	INVALID_SHORTCUT	Infinite omitted directions and raw-innerness premise remain separate.	A-M11
+A-E22	all finite safe-axis source PSD; exact analytic adapters	RH	SELF_AUDIT_PENDING_NONAUTHOR	All-order sign is not proved.	A-M12
+A-E23	pointwise multiplier norm<=1; CE=I	compressed contraction	FALSE_IN_GENERAL	Weighted compressed metric needed.	A-M13
+A-E24	scalar p decreasing; scalar tp increasing	two-node Loewner PSD	FALSE_IN_GENERAL	Exact rational counterexample supplied.	A-M13
+A-E25	all-rank spectral TDA	coefficientwise TLSE	FALSE_GENERIC_EXTRACTION	Actual theta-lattice extra input remains open.	A-M14
+A-E26	DC-3 each-window damped means zero	full restricted mean-zero positivity	VALID_CONDITIONAL_HYPEREDGE	No claim on general means/cross terms.	A-M15
+A-E27	positive primitive sector; energy-continuous coupling	effective Schur matrix/index equivalence	VALID_CONDITIONAL_HYPEREDGE	No L2 inverse or nullity equality assumed.	A-M15
+A-E28	positive finite Galerkin upper matrix	positive exact effective matrix	INVALID_DIRECTION	Upper sections converge from above.	A-M15
+A-E29	certified U-kR>=0; exact trial constraints; enclosed continuum/rounding errors	full finite-window PSD	VALID_CONDITIONAL_HYPEREDGE	No actual such continuum certificate in source pass.	A-M15
+A-E30	full-window PSD for an unbounded predetermined sequence; complete bounded operator	full source PSD	VALID_CONDITIONAL_HYPEREDGE	One length or 104 entries is insufficient.	A-M15
+A-E31	#793 line-one corrected norm convergence	local boundedness on Re(s)>1/2	NOT_PROVED	Below-one aggregate estimate remains open; self-audit.	A-M16
+A-E32	rank3 bound; shifted rank2 correlation; 152 physical inequalities; sieve proof; admissible tuple	prime gap liminf<=186	CONDITIONAL_IMPORT	Project axioms remain explicit.	A-M17
+A-E33	extremal bounded/long gap theorems	RH	NO_SUCH_EDGE_SUPPLIED	Uniform signed explicit-formula control not obtained.	A-M17
+A-E34	finite conjugation-invariant multiset; admissible eta; full tensor identity	simple and distinct count lower bounds	VALID_FINITE_THEOREM	Independent Hilbert reconstruction in A-M18.	A-M18
+A-E35	finite Hilbert theorem; RvM; exact BGST interface; differential correction; scalar optimization	stated zeta density lower bounds	VALID_CONDITIONAL_INTERFACE	No build or internal discharge of analytic hypotheses claimed.	A-M19
+A-E36	positive density or density one	RH	INVALID_INFERENCE	Finite/density-zero off-line exceptions remain possible.	A-M19
+A-E37	quoted Catalan common-minimum asymptotic; compulsory nonzero summand; same clearing scalar	positive B^2 log B in max-summand majorant	VALID_CONDITIONAL_HYPEREDGE	Proof-method obstruction, not rationality.	A-M20

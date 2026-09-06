@@ -1,0 +1,124 @@
+{
+  "compiler_installed": false,
+  "counts_do_not_claim_unique_scientific_theorems": true,
+  "driver_invocations": 11,
+  "executed_at_utc": "2026-09-05T18:45:41.038767+00:00",
+  "lean_lake_comparator_nanoda_executed": false,
+  "lean_regression_status": "NOT_COMPILED_NOT_EXECUTED",
+  "network_used_by_these_commands": false,
+  "production_source_changed": false,
+  "python": "3.13.5",
+  "results": [
+    {
+      "command": [
+        "python",
+        "reviews/C/check_census.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\n  \"git_blob\": \"7f3bae32843289e5079e0e8eb4f9da60122f77a0\",\n  \"historical_heads_compared\": 340,\n  \"historical_heads_different\": 2,\n  \"historical_heads_matching\": 338,\n  \"historical_heads_uncompared\": 0,\n  \"historical_no_object_slots\": 1,\n  \"historical_rows\": 341,\n  \"inventory_structure_valid\": true,\n  \"postcut_prs\": 79,\n  \"programme_issues\": 11,\n  \"real_historical_prs\": 340,\n  \"review_completeness_certified\": false,\n  \"rows\": 566,\n  \"sha256\": \"27cf8dc7ca9503285c53fab8ef4d1b0c997b6b9516d0753e8fca1c0b1b2617dd\"\n}\n"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "reviews/C/check_census.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\n  \"git_blob\": \"7f3bae32843289e5079e0e8eb4f9da60122f77a0\",\n  \"historical_heads_compared\": 340,\n  \"historical_heads_different\": 2,\n  \"historical_heads_matching\": 338,\n  \"historical_heads_uncompared\": 0,\n  \"historical_no_object_slots\": 1,\n  \"historical_rows\": 341,\n  \"inventory_structure_valid\": true,\n  \"postcut_prs\": 79,\n  \"programme_issues\": 11,\n  \"real_historical_prs\": 340,\n  \"review_completeness_certified\": false,\n  \"rows\": 566,\n  \"sha256\": \"27cf8dc7ca9503285c53fab8ef4d1b0c997b6b9516d0753e8fca1c0b1b2617dd\"\n}\n"
+    },
+    {
+      "command": [
+        "python",
+        "reviews/C/pass2/scripts/validate_pass2.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"all_repository_branches_or_prs_certified\": false, \"catalog_declaration_mappings_desk_read\": 34, \"definition_modules_desk_read\": 15, \"formal_catalog_transcribed_rows\": 37, \"head_differences\": [568, 599], \"head_matches\": 338, \"inherited_pass1_observations\": 28, \"inspected_source_records\": 51, \"negative_fixtures\": [{\"case\": \"missing_observation\", \"reason\": \"missing/extra fresh observation\", \"rejected\": true}, {\"case\": \"missing_comparison\", \"reason\": \"comparison census incomplete\", \"rejected\": true}, {\"case\": \"duplicate_comparison\", \"reason\": \"missing/duplicate/non-PR comparison row\", \"rejected\": true}, {\"case\": \"malformed_sha\", \"reason\": \"bad observed SHA\", \"rejected\": true}, {\"case\": \"false_match\", \"reason\": \"false comparison verdict\", \"rejected\": true}, {\"case\": \"unreconciled_acceptance\", \"reason\": \"unreconciled delta promoted or failed\", \"rejected\": true}, {\"case\": \"count_absent_417\", \"reason\": \"no-object sentinel must be excluded\", \"rejected\": true}, {\"case\": \"claim_raw_export\", \"reason\": \"capture scope overstated\", \"rejected\": true}, {\"case\": \"duplicate_formal_id\", \"reason\": \"wrong formal catalog denominator/duplicates\", \"rejected\": true}, {\"case\": \"different_formal_baseline\", \"reason\": \"mixed formal baseline\", \"rejected\": true}, {\"case\": \"hide_vacuity\", \"reason\": \"nonvacuity finding silently altered or over-propagated\", \"rejected\": true}, {\"case\": \"invent_build\", \"reason\": \"unperformed build silently promoted\", \"rejected\": true}, {\"case\": \"overwrite_historical_pin\", \"reason\": \"current census overwrote historical pin\", \"rejected\": true}, {\"case\": \"false_current_match\", \"reason\": \"current census comparison disagrees\", \"rejected\": true}, {\"case\": \"bad_definition_blob\", \"reason\": \"declaration source binding differs\", \"rejected\": true}, {\"case\": \"duplicate_inspected_source\", \"reason\": \"duplicate inspected source identity\", \"rejected\": true}, {\"case\": \"duplicate_json_key\", \"reason\": \"duplicate JSON key: a\", \"rejected\": true}], \"new_lean_build\": false, \"new_observations\": 312, \"real_historical_prs\": 340, \"remote_read_authentication_certified\": false, \"scientific_review_completeness_certified\": false, \"source_level_nonvacuity_finding_ids\": [\"OPERATOR.XI.LOEWNER_LOW_ORDER\", \"OPERATOR.XI.PICK_ORDER2\", \"OPERATOR.XI.PICK_ORDER3\", \"OPERATOR.XI.PICK_ORDER3.TP_CURVATURE\", \"OPERATOR.XI.RECIPROCAL_CONCAVITY.ACTUAL\"], \"unique_declarations_desk_read\": 33}\n"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "reviews/C/pass2/scripts/validate_pass2.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"all_repository_branches_or_prs_certified\": false, \"catalog_declaration_mappings_desk_read\": 34, \"definition_modules_desk_read\": 15, \"formal_catalog_transcribed_rows\": 37, \"head_differences\": [568, 599], \"head_matches\": 338, \"inherited_pass1_observations\": 28, \"inspected_source_records\": 51, \"negative_fixtures\": [{\"case\": \"missing_observation\", \"reason\": \"missing/extra fresh observation\", \"rejected\": true}, {\"case\": \"missing_comparison\", \"reason\": \"comparison census incomplete\", \"rejected\": true}, {\"case\": \"duplicate_comparison\", \"reason\": \"missing/duplicate/non-PR comparison row\", \"rejected\": true}, {\"case\": \"malformed_sha\", \"reason\": \"bad observed SHA\", \"rejected\": true}, {\"case\": \"false_match\", \"reason\": \"false comparison verdict\", \"rejected\": true}, {\"case\": \"unreconciled_acceptance\", \"reason\": \"unreconciled delta promoted or failed\", \"rejected\": true}, {\"case\": \"count_absent_417\", \"reason\": \"no-object sentinel must be excluded\", \"rejected\": true}, {\"case\": \"claim_raw_export\", \"reason\": \"capture scope overstated\", \"rejected\": true}, {\"case\": \"duplicate_formal_id\", \"reason\": \"wrong formal catalog denominator/duplicates\", \"rejected\": true}, {\"case\": \"different_formal_baseline\", \"reason\": \"mixed formal baseline\", \"rejected\": true}, {\"case\": \"hide_vacuity\", \"reason\": \"nonvacuity finding silently altered or over-propagated\", \"rejected\": true}, {\"case\": \"invent_build\", \"reason\": \"unperformed build silently promoted\", \"rejected\": true}, {\"case\": \"overwrite_historical_pin\", \"reason\": \"current census overwrote historical pin\", \"rejected\": true}, {\"case\": \"false_current_match\", \"reason\": \"current census comparison disagrees\", \"rejected\": true}, {\"case\": \"bad_definition_blob\", \"reason\": \"declaration source binding differs\", \"rejected\": true}, {\"case\": \"duplicate_inspected_source\", \"reason\": \"duplicate inspected source identity\", \"rejected\": true}, {\"case\": \"duplicate_json_key\", \"reason\": \"duplicate JSON key: a\", \"rejected\": true}], \"new_lean_build\": false, \"new_observations\": 312, \"real_historical_prs\": 340, \"remote_read_authentication_certified\": false, \"scientific_review_completeness_certified\": false, \"source_level_nonvacuity_finding_ids\": [\"OPERATOR.XI.LOEWNER_LOW_ORDER\", \"OPERATOR.XI.PICK_ORDER2\", \"OPERATOR.XI.PICK_ORDER3\", \"OPERATOR.XI.PICK_ORDER3.TP_CURVATURE\", \"OPERATOR.XI.RECIPROCAL_CONCAVITY.ACTUAL\"], \"unique_declarations_desk_read\": 33}\n"
+    },
+    {
+      "command": [
+        "python",
+        "reviews/C/pass2/scripts/replay_changed_packets.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"pr568_old_new_producer_outputs_identical\": true, \"pr568_old_new_retained_json_semantically_identical\": true, \"pr599_output_matches_retained_bytes\": true, \"rh_established\": false, \"subprocesses\": 6}\n"
+    },
+    {
+      "command": [
+        "python",
+        "reviews/C/pass2/scripts/replay_packet_mutations.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"synthetic_mutations\": 3, \"normal_rejections\": 3, \"optimized_PASS_emissions\": 3, \"deployed_pipeline_bypass_claimed\": false}\n"
+    },
+    {
+      "command": [
+        "python",
+        "reviews/C/pass2/scripts/replay_tactic_guard.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"subprocesses\": 30, \"baseline_false_negatives\": 10, \"baseline_false_positives\": 1, \"candidate_all_fixtures_pass\": true, \"kernel_unsoundness_claimed\": false}\n"
+    },
+    {
+      "command": [
+        "python",
+        "reviews/C/pass2/scripts/independent_finite_algebra.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"finite_ranks\": 9, \"coefficient_checks\": 511, \"five_three_identity\": true, \"RH_proved\": false}\n"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "reviews/C/pass2/scripts/independent_finite_algebra.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"finite_ranks\": 9, \"coefficient_checks\": 511, \"five_three_identity\": true, \"RH_proved\": false}\n"
+    },
+    {
+      "command": [
+        "python",
+        "reviews/C/pass2/evidence/PASS1_check_census.py",
+        "reviews/C/pass2/evidence/PASS1_CENSUS.tsv"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\n  \"git_blob\": \"0d98aab08518bca855b387cdafa2a8e141ef2502\",\n  \"historical_heads_compared\": 28,\n  \"historical_heads_uncompared\": 312,\n  \"historical_no_object_slots\": 1,\n  \"historical_rows\": 341,\n  \"inventory_structure_valid\": true,\n  \"postcut_prs\": 79,\n  \"programme_issues\": 11,\n  \"real_historical_prs\": 340,\n  \"review_completeness_certified\": false,\n  \"rows\": 566,\n  \"sha256\": \"2d0bfc3a25bb1443cd8692bfe94ef7d5108933062353d808c80050bd29463364\"\n}\n"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "reviews/C/pass2/evidence/PASS1_check_census.py",
+        "reviews/C/pass2/evidence/PASS1_CENSUS.tsv"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\n  \"git_blob\": \"0d98aab08518bca855b387cdafa2a8e141ef2502\",\n  \"historical_heads_compared\": 28,\n  \"historical_heads_uncompared\": 312,\n  \"historical_no_object_slots\": 1,\n  \"historical_rows\": 341,\n  \"inventory_structure_valid\": true,\n  \"postcut_prs\": 79,\n  \"programme_issues\": 11,\n  \"real_historical_prs\": 340,\n  \"review_completeness_certified\": false,\n  \"rows\": 566,\n  \"sha256\": \"2d0bfc3a25bb1443cd8692bfe94ef7d5108933062353d808c80050bd29463364\"\n}\n"
+    }
+  ],
+  "retained_inner_replay_matrix_cases": {
+    "author_script": 6,
+    "grep_lexical": 30,
+    "mutant_script": 6
+  },
+  "schema": "review.C.pass2.execution.v1"
+}

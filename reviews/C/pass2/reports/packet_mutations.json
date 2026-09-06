@@ -1,0 +1,126 @@
+{
+  "cases": [
+    {
+      "after": "return current+debt",
+      "before": "return current-debt",
+      "case": "wrong_owner_telescope",
+      "command": [
+        "python",
+        "-I",
+        "verify.py"
+      ],
+      "emitted_PASS": false,
+      "mutant_sha256": "fb2ac654c068ed97cb2d0a73922eed9932fd13b1fb3e61cd4353396ce426b1b4",
+      "optimized": false,
+      "returncode": 1,
+      "source_git_blob": "121a2767b0e9fe8ed0d76d6146f11807b9a4b587",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/review-c-mutant-u2lh51gk/verify.py\", line 62, in <module>\n    assert full==tel\n           ^^^^^^^^^\nAssertionError\n",
+      "stderr_classification": "AssertionError",
+      "stdout": "",
+      "telescope_values_equal": null
+    },
+    {
+      "after": "return current+debt",
+      "before": "return current-debt",
+      "case": "wrong_owner_telescope",
+      "command": [
+        "python",
+        "-I",
+        "-O",
+        "verify.py"
+      ],
+      "emitted_PASS": true,
+      "mutant_sha256": "fb2ac654c068ed97cb2d0a73922eed9932fd13b1fb3e61cd4353396ce426b1b4",
+      "optimized": true,
+      "returncode": 0,
+      "source_git_blob": "121a2767b0e9fe8ed0d76d6146f11807b9a4b587",
+      "stderr": "",
+      "stderr_classification": "",
+      "stdout": "PASS_X97910_NEAR_CRITICAL_FACTOR67_ALGEBRA\n43bd1e6f850676ee9d70b279552d60900b21ad36ddf8d544242099c0f84657f7\n",
+      "telescope_values_equal": false
+    },
+    {
+      "after": "return main+1,bulk,boundary",
+      "before": "return main,bulk,boundary",
+      "case": "wrong_product_boundary",
+      "command": [
+        "python",
+        "-I",
+        "verify.py"
+      ],
+      "emitted_PASS": false,
+      "mutant_sha256": "bc926a6887f870e61b64961c7d7020e13a631cf67bff322f05f20d729cad437a",
+      "optimized": false,
+      "returncode": 1,
+      "source_git_blob": "121a2767b0e9fe8ed0d76d6146f11807b9a4b587",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/review-c-mutant-bqm28buo/verify.py\", line 67, in <module>\n    assert full==main+bulk+boundary\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "stderr_classification": "AssertionError",
+      "stdout": "",
+      "telescope_values_equal": null
+    },
+    {
+      "after": "return main+1,bulk,boundary",
+      "before": "return main,bulk,boundary",
+      "case": "wrong_product_boundary",
+      "command": [
+        "python",
+        "-I",
+        "-O",
+        "verify.py"
+      ],
+      "emitted_PASS": true,
+      "mutant_sha256": "bc926a6887f870e61b64961c7d7020e13a631cf67bff322f05f20d729cad437a",
+      "optimized": true,
+      "returncode": 0,
+      "source_git_blob": "121a2767b0e9fe8ed0d76d6146f11807b9a4b587",
+      "stderr": "",
+      "stderr_classification": "",
+      "stdout": "PASS_X97910_NEAR_CRITICAL_FACTOR67_ALGEBRA\ne62183434902a9dd1bb17534ab8083039c699b7ddbfc113e1b54f4656f0f5768\n",
+      "telescope_values_equal": true
+    },
+    {
+      "after": "threshold = Decimal(\"-100\")",
+      "before": "threshold = Decimal(\"-62.7181678185658877324\")",
+      "case": "invalid_negative_threshold",
+      "command": [
+        "python",
+        "-I",
+        "verify.py"
+      ],
+      "emitted_PASS": false,
+      "mutant_sha256": "7a3a1ecbdee291a3f8be451e058e33313f0facfe47c4922ed88c8aa034c5d5bb",
+      "optimized": false,
+      "returncode": 1,
+      "source_git_blob": "f0e8f85e195162d745477cfb69e68b9b24443289",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/review-c-mutant-_itxro4x/verify.py\", line 97, in <module>\n    main()\n    ~~~~^^\n  File \"/tmp/review-c-mutant-_itxro4x/verify.py\", line 59, in main\n    assert scalar_upper < threshold\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "stderr_classification": "AssertionError",
+      "stdout": "",
+      "telescope_values_equal": null
+    },
+    {
+      "after": "threshold = Decimal(\"-100\")",
+      "before": "threshold = Decimal(\"-62.7181678185658877324\")",
+      "case": "invalid_negative_threshold",
+      "command": [
+        "python",
+        "-I",
+        "-O",
+        "verify.py"
+      ],
+      "emitted_PASS": true,
+      "mutant_sha256": "7a3a1ecbdee291a3f8be451e058e33313f0facfe47c4922ed88c8aa034c5d5bb",
+      "optimized": true,
+      "returncode": 0,
+      "source_git_blob": "f0e8f85e195162d745477cfb69e68b9b24443289",
+      "stderr": "",
+      "stderr_classification": "",
+      "stdout": "PASS_T97010_PARITY_GROUPING_HARDENING_ALGEBRA\n-62.71816781856588773240782086465\n",
+      "telescope_values_equal": null
+    }
+  ],
+  "classification": "synthetic producer guard bypass under optimization; not a deployed pipeline exploit",
+  "rh_established": false,
+  "subprocesses": 6,
+  "synthetic_mutations": 3,
+  "unmodified_target_sources_preserved": true
+}

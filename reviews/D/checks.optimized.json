@@ -1,0 +1,373 @@
+{
+  "checks": [
+    {
+      "fixtures": 301,
+      "name": "D01_variable_order_counterexample",
+      "witness": {
+        "g_prefix": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "h_298": -633825300114114700748351602688,
+        "initial_f": [
+          0,
+          1,
+          4,
+          7,
+          8,
+          5,
+          2,
+          3,
+          12,
+          21,
+          22,
+          7,
+          -8,
+          -7,
+          26,
+          59
+        ],
+        "orders": [
+          2,
+          4,
+          4
+        ]
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "D01_generating_function",
+      "witness": null
+    },
+    {
+      "fixtures": 246,
+      "name": "fixed_order_inverse_hockey_stick",
+      "witness": null
+    },
+    {
+      "fixtures": 100,
+      "name": "D02_Birman_Schwinger_threshold_sequence",
+      "witness": {
+        "A": "I",
+        "G_n": "1-2^-n",
+        "K_n": "(1-2^-n)^2",
+        "ker_H": "zero",
+        "one_in_spectrum_K": true
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "D03_leading_vs_all_principal_minors",
+      "witness": null
+    },
+    {
+      "fixtures": 27,
+      "name": "D03_characteristic_principal_minor_identity",
+      "witness": null
+    },
+    {
+      "fixtures": 1,
+      "name": "D04_endpoint_factor_identity",
+      "witness": {
+        "correct": "961/16",
+        "difference": "361/48",
+        "old": "1261/24"
+      }
+    },
+    {
+      "fixtures": 2,
+      "name": "D04_actual_Mobius_wavelet_endpoint_witness",
+      "witness": {
+        "G16": {
+          "lower": "13614609075409060824214236581/1267650600228229401496703205376",
+          "upper": "6807304537704530412107118363/633825300114114700748351602688"
+        },
+        "G4": {
+          "lower": "-1853233958117702694481201866255/1267650600228229401496703205376",
+          "upper": "-1853233958117702694481201866195/1267650600228229401496703205376"
+        },
+        "Qcorrect_minus_Qold_X16": {
+          "lower": "219332022849401977770919783/633825300114114700748351602688",
+          "upper": "438664045698803955541839577/1267650600228229401496703205376"
+        }
+      }
+    },
+    {
+      "fixtures": 5582,
+      "name": "Robin_complete_integer_barrier",
+      "witness": {
+        "max_1_5040": [
+          5040,
+          "403/105"
+        ],
+        "max_5041_5582": [
+          5460,
+          "224/65"
+        ]
+      }
+    },
+    {
+      "fixtures": 3,
+      "name": "Robin_directed_gamma_loglog_thresholds",
+      "witness": {
+        "gamma": {
+          "lower": "731707758887610682577667522615/1267650600228229401496703205376",
+          "upper": "365853954964793584662447409179/633825300114114700748351602688"
+        },
+        "margins": {
+          "5041": {
+            "lower": "470000238663617720113462973509/1267650600228229401496703205376",
+            "upper": "7343762737165477246125674655/19807040628566084398385987584"
+          },
+          "5582": {
+            "lower": "-7087661939429346057421029/1267650600228229401496703205376",
+            "upper": "-6507949258689154005807175/1267650600228229401496703205376"
+          },
+          "5583": {
+            "lower": "39790748267147094390209427/1267650600228229401496703205376",
+            "upper": "40370466533502244312834093/1267650600228229401496703205376"
+          }
+        }
+      }
+    },
+    {
+      "fixtures": 2,
+      "name": "Robin_gamma_bound_derivatives",
+      "witness": null
+    },
+    {
+      "fixtures": 18,
+      "name": "Robin_exponent_swap_polynomials",
+      "witness": null
+    },
+    {
+      "fixtures": 66,
+      "name": "SHARP_complete_66_prefix_Hall",
+      "witness": {
+        "boundary": 67,
+        "minimum": {
+          "lower": "3558509751017905905849116921/9903520314283042199192993792",
+          "upper": "227744624065145977974343482947/633825300114114700748351602688"
+        },
+        "worst_prefix": 13
+      }
+    },
+    {
+      "fixtures": 3,
+      "name": "SHARP_m_ge_2_global_constant_algebra",
+      "witness": {
+        "rational_gap": "289/6420"
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "SHARP_quadratic_distributional_derivative",
+      "witness": null
+    },
+    {
+      "fixtures": 4,
+      "name": "SHARP_RN_density_and_cocycle",
+      "witness": null
+    },
+    {
+      "fixtures": 3,
+      "name": "fixed_rows_and_Mellin_ramp",
+      "witness": null
+    },
+    {
+      "fixtures": 109,
+      "name": "positive_row_kernel_moment_algebra",
+      "witness": null
+    },
+    {
+      "fixtures": 2,
+      "name": "Xi_two_three_node_determinants",
+      "witness": null
+    },
+    {
+      "fixtures": 4,
+      "name": "Xi_orbit_curvatures_and_reserve",
+      "witness": null
+    },
+    {
+      "fixtures": 1,
+      "name": "Xi_conservative_3e12_reserve_budget",
+      "witness": {
+        "external_zero_verification_rerun": false,
+        "upper_allocation": {
+          "lower": "113060362889706517749/633825300114114700748351602688",
+          "upper": "226120725779413035499/1267650600228229401496703205376"
+        }
+      }
+    },
+    {
+      "fixtures": 128,
+      "name": "half_divisor_convolution_is_constant_one",
+      "witness": null
+    },
+    {
+      "fixtures": 384,
+      "name": "half_divisor_uniform_coefficient_majorant",
+      "witness": null
+    },
+    {
+      "fixtures": 1,
+      "name": "half_divisor_Hardy_norm_three",
+      "witness": null
+    },
+    {
+      "fixtures": 81,
+      "name": "Q4_complete_residue_covariance",
+      "witness": null
+    },
+    {
+      "fixtures": 64,
+      "name": "Q4_Jordan_square_kernel",
+      "witness": null
+    },
+    {
+      "fixtures": 1,
+      "name": "heat_completed_square_saddle",
+      "witness": null
+    },
+    {
+      "fixtures": 3,
+      "name": "heat_terminal_pair_coefficients",
+      "witness": null
+    },
+    {
+      "fixtures": 1,
+      "name": "legacy_Hermite_inertia_with_multiplicity",
+      "witness": {
+        "negative": 1,
+        "positive": 2,
+        "zero": 1
+      }
+    },
+    {
+      "fixtures": 5,
+      "name": "legacy_derivative_free_resolvent_identities",
+      "witness": null
+    },
+    {
+      "fixtures": 7,
+      "name": "D05_matched_annihilator_n1_failure_n2_repair",
+      "witness": {
+        "n1_normalization": 0,
+        "n1_vector": [
+          0
+        ],
+        "n_ge_2_normalization": -1
+      }
+    },
+    {
+      "fixtures": 64,
+      "name": "D06_Robin_powered_tail_cap_contract",
+      "witness": {
+        "caps": [
+          2,
+          2,
+          1
+        ],
+        "ceiling_test": "U < (39/10)^64 < U_sep^64",
+        "true_max": "403/105"
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "first_chaos_support_without_contraction",
+      "witness": {
+        "input_gram": 1,
+        "intensity_law": "K_r=4r",
+        "output_gram": 4
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "Julia_existing_rational_margin_repair",
+      "witness": {
+        "correct_margin": "21587/38416",
+        "printed_weaker_margin": "19751/38416"
+      }
+    },
+    {
+      "fixtures": 20,
+      "name": "safe_line_beta_finite_difference",
+      "witness": null
+    },
+    {
+      "fixtures": 9,
+      "name": "safe_line_Bernstein_partition",
+      "witness": null
+    },
+    {
+      "fixtures": 17,
+      "name": "half_divisor_Haar_overlap",
+      "witness": null
+    },
+    {
+      "fixtures": 21,
+      "name": "Q4_rational_inverse_Laplacian_carry_energy",
+      "witness": null
+    },
+    {
+      "fixtures": 441,
+      "name": "same_kernel_negative_part_transfer",
+      "witness": null
+    },
+    {
+      "fixtures": 49,
+      "name": "conjunctive_signed_Perron_absorption",
+      "witness": null
+    },
+    {
+      "fixtures": 1331,
+      "name": "conjunctive_matched_transfer",
+      "witness": null
+    },
+    {
+      "fixtures": 252,
+      "name": "conjunctive_root_excess_absorption",
+      "witness": null
+    },
+    {
+      "fixtures": 1,
+      "name": "D07_initial_excursion_boundary_failure",
+      "witness": {
+        "f": "u-1",
+        "incorrectly_included_rhs": "1/pi < 1/3 < 1/2",
+        "interior_only_rhs": 0,
+        "log_Y": 2,
+        "negative_mass": "1/2",
+        "terminal_mass": 0
+      }
+    },
+    {
+      "fixtures": 20,
+      "name": "regional_fixed_index_is_not_uniform",
+      "witness": {
+        "active_region_count": "log_2(Y)",
+        "per_fixed_region_integral": "2^j log(2), eventually constant in Y",
+        "total_mass_at_Y_2N": "(Y-1) log(2)"
+      }
+    },
+    {
+      "fixtures": 1,
+      "name": "positive_Schur_complement_no_rescue",
+      "witness": null
+    }
+  ],
+  "fixture_count": 9380,
+  "main_sha": "8d16f8d9c475db290bc85e53d775b93b9bcdb336",
+  "named_checks": 45,
+  "rh_proved": false,
+  "schema": "riemann.reviewerD.bounded.v1",
+  "script_sha256": "26694e95cd50afa7b9b9934b545acee8b58acf2266ec53bd33b8fd92d27a4bb2",
+  "upstream_producers_executed": false
+}

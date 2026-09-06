@@ -1,0 +1,67 @@
+{
+  "PNT_or_Mertens_proved": false,
+  "RH_proved": false,
+  "arithmetic_class": "EXACT_INTEGER_POLYNOMIAL_AND_RATIONAL",
+  "bad_sign_counterexample": {
+    "E": "-1",
+    "M": "2",
+    "R": "-3",
+    "bound": "1",
+    "sum": "-2"
+  },
+  "finite_owner_checks": [
+    {
+      "coefficient_count": 1,
+      "equal": true,
+      "rank": 0
+    },
+    {
+      "coefficient_count": 2,
+      "equal": true,
+      "rank": 1
+    },
+    {
+      "coefficient_count": 4,
+      "equal": true,
+      "rank": 2
+    },
+    {
+      "coefficient_count": 8,
+      "equal": true,
+      "rank": 3
+    },
+    {
+      "coefficient_count": 16,
+      "equal": true,
+      "rank": 4
+    },
+    {
+      "coefficient_count": 32,
+      "equal": true,
+      "rank": 5
+    },
+    {
+      "coefficient_count": 64,
+      "equal": true,
+      "rank": 6
+    },
+    {
+      "coefficient_count": 128,
+      "equal": true,
+      "rank": 7
+    },
+    {
+      "coefficient_count": 256,
+      "equal": true,
+      "rank": 8
+    }
+  ],
+  "five_three_coefficients": {
+    "(0, 0)": -6,
+    "(1, 0)": 9,
+    "(2, 0)": -3
+  },
+  "native_annular_source_recomputed": false,
+  "optional_abs_error_bound_requires_positive_sign": true,
+  "total_owner_coefficients": 511
+}
