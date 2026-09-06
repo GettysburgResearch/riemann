@@ -1,0 +1,12 @@
+claim_id	status	path	location	scope	remaining_boundary
+CSM26.T1	PROPOSED_COMPLETE_NATIVE	CONSTRUCTION.md	C1-C5	Positive factorial source and exact Laplace denominator for every b>0	No outer/cyclicity assertion
+CSM26.T2	PROPOSED_COMPLETE_WITH_CLASSICAL_INPUTS	CONSTRUCTION.md	C6-C19	Explicit causal output and isometry for actual Theta on the source-generated domain; 0<a<1/2	Domain not asserted to be all L2
+CSM26.T3	PROPOSED_COMPLETE_WITH_CLASSICAL_INPUTS	CONSTRUCTION.md	C14-C20	Exact input/maximal Hardy domains with multiplicities and common inner factors	No common-zero convention silently discarded
+CSM26.L1	PROPOSED_COMPLETE_NATIVE	CONSTRUCTION.md	C21	Locally integrable causal desmoothing of parent positive source with exact centered correction	No global bounded map out of L2(mu_a)
+CSM26.T4	PROPOSED_COMPLETE_WITH_CLASSICAL_INPUTS	CONSTRUCTION.md	C22-C23	All-hard-scale strict contraction on T<=1/32 and explicit every-finite-T bound	Not a global contraction
+CSM26.T5	PROPOSED_COMPLETE_WITH_CLASSICAL_INPUTS	DOMAIN_AND_APPROXIMATION.md	D1-D9	Toeplitz error identity; polynomial integer cutoff with all-rank Gram error and explicit coefficient cost	Does not bound inverse conditioning or prove error tends to zero
+CSM26.C1	PROPOSED_COMPLETE_EQUIVALENCE	DOMAIN_AND_APPROXIMATION.md	D3-D5	Single b=1/2 cyclicity limit equivalent to RH; or all prescribed b_j	The required limit is OPEN
+CSM26.N1	PROPOSED_COMPLETE_SYNTHETIC	DOMAIN_AND_APPROXIMATION.md	D10-D11	Two positive causal equal-Gram sources with uniform coercivity and defect 3/4	Not an actual-zeta counterexample
+CSM26.L2	PROPOSED_COMPLETE_NATIVE	DOMAIN_AND_APPROXIMATION.md	D12-D13	Literal causal Mobius inverse including impulses and signed cumulative terms	Formal inversion is not a bounded synthesis
+CSM26.E1	DIRECTED_INTERVAL_EXECUTED	VALIDATION.md	Actual first-vector certificate	b=3/4 eta=1 squared projection error less than 11/50; complete real cells and infinite tail	One vector only; no finite-to-global inference
+CSM26.OPEN	OPEN_RH_EQUIVALENT	ATTEMPT.md	Exact sufficient completion	eps_N(1/2;1) tends to zero	Not supplied or assumed as a proved theorem

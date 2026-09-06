@@ -1,0 +1,113 @@
+{
+  "runs": [
+    {
+      "optimized": false,
+      "records": [
+        {
+          "case": "RH promotion",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "checks.py"
+        },
+        {
+          "case": "schema mutation",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "checks.py"
+        },
+        {
+          "case": "coverage mutation",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "checks.py"
+        },
+        {
+          "case": "proof record mutation",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "checks.py"
+        },
+        {
+          "case": "RH promotion",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "source_certificate.py"
+        },
+        {
+          "case": "schema mutation",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "source_certificate.py"
+        },
+        {
+          "case": "coverage mutation",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "source_certificate.py"
+        },
+        {
+          "case": "proof record mutation",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "source_certificate.py"
+        }
+      ],
+      "rejected": 8
+    },
+    {
+      "optimized": true,
+      "records": [
+        {
+          "case": "RH promotion",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "checks.py"
+        },
+        {
+          "case": "schema mutation",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "checks.py"
+        },
+        {
+          "case": "coverage mutation",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "checks.py"
+        },
+        {
+          "case": "proof record mutation",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "checks.py"
+        },
+        {
+          "case": "RH promotion",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "source_certificate.py"
+        },
+        {
+          "case": "schema mutation",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "source_certificate.py"
+        },
+        {
+          "case": "coverage mutation",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "source_certificate.py"
+        },
+        {
+          "case": "proof record mutation",
+          "exit_code": 1,
+          "rejected": true,
+          "script": "source_certificate.py"
+        }
+      ],
+      "rejected": 8
+    }
+  ],
+  "schema": "csm26.actual-cli-rejections.v1"
+}
