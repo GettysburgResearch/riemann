@@ -44,7 +44,7 @@ Nonprincipal family control can vanish while the principal component is large. F
 
 The claimed cofinal refutation of the 90-percent derivative-descent gate is not accepted: its lower inequality fails, and finite phase data do not prove the asserted limsup. The exact mesh identity and diagnostics remain useful. The native growing Poincare ladder and numerical Epstein certification are held for particular proof/rounding/coverage gaps; this does not declare every intended conclusion false.
 
-All-deviation Gaussian tails for the literal tilted source were withdrawn in favor of the specified local-quadratic/exterior-exponential estimates. A finite threshold-density spike invalidates a pointwise asymptotic but not the separately proved integrated transform result. [Detailed corrected component account](reviews/A/FINAL_AUDIT.md), [structural and density corrections](reviews/B/REPORT.md).
+All-deviation Gaussian tails for the literal tilted source were withdrawn in favor of the specified local-quadratic/exterior-exponential estimates. Square-root spikes at infinitely many thresholds invalidate the claimed pointwise density asymptotic, not the separately proved integrated transform result. [Detailed corrected component account](reviews/A/FINAL_AUDIT.md), [structural and density corrections](reviews/B/REPORT.md).
 
 ## 7. Formal or numerical success must refer to the intended object
 
