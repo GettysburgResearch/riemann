@@ -1,5 +1,9 @@
 # Heat and First-Hermite
 
+> **Current interpretation:** the remaining First-Hermite problem covers the **whole complement** of the proved positivity regions, including bounded centers with arbitrarily large heat parameters. The historical constant-four shorthand below is not a reduction to a single transition curve. Read the [current heat account](../CURRENT_RESULTS.md#operators) and the [full-domain correction, R10](../../../reviews/D/REPAIRS.md) before using these rows. Earlier positivity results keep their own stated ranges.
+
+The following manifest and status cells are retained historical source records, not a replacement for the current interpretation.
+
 ## Integrated scope
 
 **Strongest reviewed result:** Uniform-center no-go and unconditional First-Hermite regions.

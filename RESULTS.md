@@ -11,7 +11,7 @@ With $I(n)=\sigma(n)/n$, the classical Robin criterion is $I(n)<e^\gamma\log\log
 
 **Significance:** every hypothetical violation has a canonical representative, not merely a heuristically promising one. The resulting search domain is complete but infinite. An exact rational dynamic programme bounds each specified finite tail; its statement requires a nonempty subtree and certified exponent caps. Large source-reported traversal ranges without their complete streams are not substituted for this result.
 
-[Current statement and proof route](research/integrated/CURRENT_RESULTS.md#robin) · [full resident proof and evidence](research/integrated/robin/finite-robin-foundations.md).
+[Current statement and proof route](research/integrated/CURRENT_RESULTS.md#robin) · [full resident proof and evidence](research/integrated/robin/finite-robin-foundations.md). The [larger historical certificate programme](research/RESULTS_INDEX.md#larger-robin-certificates), including its frozen $10^{54}$ deposit, is retained separately with its replay qualifications; it is not an enlarged currently accepted range.
 
 ### SHARP: all-scale positivity above the critical power
 
@@ -68,6 +68,15 @@ Separately, safe-real-axis xi geometry supports the earlier low-order PSD result
 
 [Current statements](research/integrated/CURRENT_RESULTS.md#xi) · [early finite criteria](research/integrated/xi/derivative-free-pick-loewner.md) · [low-order source family](research/integrated/xi_pick/README.md).
 
+<a id="high-derivatives"></a>
+### High-derivative entry and finite transport algebra
+
+The derivative-descent programme retains more than a proposed route. Its repaired high-order safe-ray result uses the actual theta source, large derivative order $r$, and the stated regime $T^2\log r/r\to0$. The proof keeps the **same frozen companion parameter** at adjacent orders, with uniform positive-tilt variance and reflected-tail estimates. The legitimate saddle argument has local quadratic and exterior exponential control, not an all-deviation Gaussian bound.
+
+**Significance:** this supplies a controlled high-order entry regime. It does not prove transport down to the original xi function, a near-linear height regime, or the low-order signed residue and winding bounds. Exact pole selectors also survive with complete multiplicity/pole manifests and the corrected jet coefficient. A separate fifth Conrey trial has a retained finite bound; its zeta interpretation still imports the named analytic theorem and must not be substituted for a stronger downstream numerical budget.
+
+[Corrected safe-ray statement and full proof](reviews/A/supplement/REPORT.md#S06) · [finite pole selectors](reviews/A/supplement/REPORT.md#S05) · [Conrey trial and analytic boundary](reviews/A/supplement/REPORT.md#S04) · [descent programme](PROGRAMMES.md#xi).
+
 ### Weil, cardinal capture, heat and effective Schur forms
 
 Finite completion-of-squares identities and source-qualified cardinal constructions show how exceptional zero directions can be represented. Later multiplicity-aware complete-background interpolation supports capture in its specified adaptable Gaussian-confined hierarchy. That does not validate every earlier fixed-support or predetermined-grid construction.
@@ -109,6 +118,10 @@ The filtered-complex work retains its finite support/arity results and condition
 **Significance:** this is mathematical work beyond a list of RH reformulations. It also tests which features do not suffice: nonprincipal family control need not control the principal member, and function-field purity is not a number-field transfer theorem. The native arithmetic binding is still an independent task.
 
 [Representative exact statements and transfer boundaries](research/integrated/CURRENT_RESULTS.md#families) · [family proof/evidence account](reviews/B/REPORT.md) · [research programmes](PROGRAMMES.md#families).
+
+## Related imported work
+
+Analyses of **LongGapsBetweenPrimes** and **PrimeGaps186** remain part of the project's comparison material. The former has a retained mathematical reconstruction of its sieve, growing-family uniformity and covering chain; that is not a fresh Lean build or an RH transfer. The latter retains its three explicit analytic/numerical input assumptions, rather than becoming unconditional through a formal comparison. These are credited external works, not newly authored project theorems. The [external-work index](research/RESULTS_INDEX.md#external-comparisons) also preserves the Lamzouri interfaces and the narrowly scoped Catalan proof critique with their outstanding source/build qualifications.
 
 ## Useful negative results are part of the achievement
 

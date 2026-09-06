@@ -122,6 +122,26 @@ class ContractTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'empty authentication scope'):
             v.authenticate(self.root, self.tree, ('absent',), {})
 
+    def test_cumulative_reading_pages_in_default_scope(self):
+        for name in ('research/README.md', 'research/integrated/CURRENT_RESULTS.md'):
+            with self.subTest(path=name):
+                self.assertIn(name, v.NAVIGATION)
+                self.assertTrue(any(name == scope or name.startswith(scope + '/')
+                                    for scope in v.SCOPES))
+
+    def test_default_navigation_checks_inside_current_statement_guide(self):
+        # Use the real default list with synthetic contents. Checking only the
+        # README link to the guide would miss a broken link inside the guide.
+        for name in v.NAVIGATION:
+            self.write(name, '# Synthetic navigation page\n')
+        guide = 'research/integrated/CURRENT_RESULTS.md'
+        self.write(guide, '[Missing proof](missing-proof.md)\n')
+        self.call('add', '.')
+        self.call('commit', '-qm', 'default-scope navigation regression')
+        tree = v.tracked_tree(self.root)
+        with self.assertRaisesRegex(ValueError, 'broken local link: ' + guide):
+            v.check_links(self.root, tree)
+
     def test_clean_navigation(self):
         self.assertEqual(v.check_links(self.root, self.tree, ('README.md',))['local_links_and_anchors'], 1)
 
