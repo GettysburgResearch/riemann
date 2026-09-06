@@ -1,0 +1,19 @@
+{
+  "schema": "riemann.x21501-prime-pair-energy.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "window_segments": [
+    {"lower": "0", "upper": "1", "value": "1"},
+    {"lower": "1", "upper": "2", "value": "-1"}
+  ],
+  "atoms": [
+    {"location": "0", "weight": "2"},
+    {"location": "1/2", "weight": "-1"},
+    {"location": "2", "weight": "3"}
+  ],
+  "cutoff": "4",
+  "claimed": {
+    "energy": "29",
+    "diagonal": "28",
+    "off_diagonal": "1"
+  }
+}

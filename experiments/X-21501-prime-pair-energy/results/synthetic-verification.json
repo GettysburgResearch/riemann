@@ -1,0 +1,17 @@
+{
+  "schema": "riemann.x21501-prime-pair-energy.verification.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "verified": true,
+  "atom_count": 3,
+  "kernel_matrix": [
+    ["2", "1/2", "0"],
+    ["1/2", "2", "-1/2"],
+    ["0", "-1/2", "2"]
+  ],
+  "direct_energy": "29",
+  "pairwise_energy": "29",
+  "diagonal_energy": "28",
+  "off_diagonal_energy": "1",
+  "exact_proof_object_sha256": "75fb476e2abec4ea872e01069e6944781dc0e949d7f048c75dc17bc27dca6834",
+  "proof_boundary": "Exact rational piecewise-constant Gram algebra only. A production certificate needs directed logarithmic prime locations, the actual piecewise-linear L-21501 window, and immutable prime manifests."
+}
