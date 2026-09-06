@@ -1,0 +1,49 @@
+name: integration-2026-09-06
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'integration/2026-09-06/**'
+      - 'canonical/2026-09-06/**'
+      - 'canonical/CURRENT.json'
+      - 'research/integrated/2026-09-06/**'
+      - 'reviews/**'
+      - '.github/workflows/integration-2026-09-06.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  bounded-integration-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout exact proposed head without persistent credentials
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 1
+          persist-credentials: false
+          submodules: false
+      - name: Authenticate frozen review trees and collect bounded text inventory
+        run: python3 -I -S integration/2026-09-06/source_inventory.py --output "$RUNNER_TEMP/integration-audit"
+      - name: Validate the reconciled release when installed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -f integration/2026-09-06/validate.py ]; then
+            python3 -I -S integration/2026-09-06/validate.py --output "$RUNNER_TEMP/integration-audit/current"
+            python3 -I -S -O integration/2026-09-06/validate.py --output "$RUNNER_TEMP/integration-audit/optimized"
+            diff -r "$RUNNER_TEMP/integration-audit/current" "$RUNNER_TEMP/integration-audit/optimized"
+          else
+            echo 'SOURCE_INVENTORY_ONLY_NOT_RELEASE_ACCEPTANCE'
+          fi
+      - name: Retain exact source and validation receipts
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: integration-audit-${{ github.event.pull_request.head.sha }}
+          path: ${{ runner.temp }}/integration-audit
+          if-no-files-found: error
+          retention-days: 14
