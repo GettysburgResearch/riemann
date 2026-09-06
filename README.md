@@ -34,6 +34,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 ## Contribute
 
+Our ambition is to resolve this together. Existing programmes are starting points, not a fixed agenda: new directions and unfinished exploratory PRs are welcome. Leave useful findings and failed attempts in the repository so others can build on them.
+
+**Working from your phone?** See the [phone tutorial](docs/PHONE.md).
+
 Read [CONTRIBUTING](CONTRIBUTING.md), choose a [bounded task](OPEN_CUTS.md#bounded-contributions), and check the existing issue or PR before starting. Exploration, independent review and useful counterexamples are welcome. Agents should also read [AGENTS](AGENTS.md).
 
 [Integration and audit records](integration/README.md), [history](HISTORY.md), the [machine-readable current record](canonical/CURRENT.json), and [publication readiness](RELEASE_READINESS.md) supply provenance and operational detail; they are not prerequisites for understanding the mathematics.
