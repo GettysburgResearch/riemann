@@ -1,5 +1,15 @@
 # Archive index
 
+## Critical Taylor publication material
+
+The [2026-08-20 packet README](2026-08-20-critical-taylor-publication/README_99930.md),
+[original PR description](2026-08-20-critical-taylor-publication/PR_BODY_99930.md),
+and [packet metadata](2026-08-20-critical-taylor-publication/PACKET_METADATA_99930.json)
+are preserved byte-for-byte from their former repository-root paths. These are
+historical publication materials, not current scientific verdicts. Their replay
+commands are intended to run from the repository root. The research proof remains
+under `standalone/2026-08-20-critical-taylor-renormalization/`.
+
 ## First major integration snapshot
 
 The complete 2026-08-01 cutoff snapshot remains at:
