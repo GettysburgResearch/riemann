@@ -1,0 +1,36 @@
+{
+  "count": 6,
+  "schema": "riemann.astra.jgc26.package-refusals.v1",
+  "tests": [
+    {
+      "mode": "normal",
+      "mutation": "changed_proof",
+      "rejected": true
+    },
+    {
+      "mode": "normal",
+      "mutation": "missing_ledger",
+      "rejected": true
+    },
+    {
+      "mode": "normal",
+      "mutation": "extra_file",
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "mutation": "changed_proof",
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "mutation": "missing_ledger",
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "mutation": "extra_file",
+      "rejected": true
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "RH_proved": false,
+  "analytic_proofs_machine_checked": false,
+  "arithmetic": "EXACT_INTEGER_RATIONAL_AND_SYMBOLIC",
+  "check_count": 24,
+  "checks": [
+    {
+      "detail": "",
+      "fixtures": 4,
+      "name": "Ein_envelope_exact_coefficients"
+    },
+    {
+      "detail": "",
+      "fixtures": 3,
+      "name": "uniform_concavity_identities"
+    },
+    {
+      "detail": "",
+      "fixtures": 4,
+      "name": "comparison_monotonicity"
+    },
+    {
+      "detail": "",
+      "fixtures": 6,
+      "name": "small_scale_unit_interval"
+    },
+    {
+      "detail": "",
+      "fixtures": 9,
+      "name": "small_scale_middle_left"
+    },
+    {
+      "detail": "",
+      "fixtures": 7,
+      "name": "small_scale_middle_right"
+    },
+    {
+      "detail": "",
+      "fixtures": 6,
+      "name": "small_scale_infinite_tail"
+    },
+    {
+      "detail": "",
+      "fixtures": 3,
+      "name": "middle_scale_unit_interval"
+    },
+    {
+      "detail": "",
+      "fixtures": 4,
+      "name": "middle_scale_concave_interval"
+    },
+    {
+      "detail": "",
+      "fixtures": 6,
+      "name": "middle_scale_infinite_tail"
+    },
+    {
+      "detail": "",
+      "fixtures": 7,
+      "name": "large_scale_unit_flat_barrier"
+    },
+    {
+      "detail": "",
+      "fixtures": 4,
+      "name": "source_floors_and_log2"
+    },
+    {
+      "detail": "",
+      "fixtures": 7,
+      "name": "original_density_uniform_margin"
+    },
+    {
+      "detail": "kappa=3/2, s=1/10 has negative density at zero",
+      "fixtures": 1,
+      "name": "subthreshold_parameter_refused"
+    },
+    {
+      "detail": "",
+      "fixtures": 1,
+      "name": "Laplace_contact_and_all_channels"
+    },
+    {
+      "detail": "",
+      "fixtures": 4,
+      "name": "all_scale_gamma_regrouping"
+    },
+    {
+      "detail": "all N=2,...,128; exact coefficients of every log p",
+      "fixtures": 127,
+      "name": "factorial_prime_power_valuations"
+    },
+    {
+      "detail": "n=1,...,128 and integer s=1,2,3",
+      "fixtures": 384,
+      "name": "literal_Jordan_coefficients"
+    },
+    {
+      "detail": "",
+      "fixtures": 96,
+      "name": "prime_power_subsource"
+    },
+    {
+      "detail": "h(k)=N+1-k; not the proof of general association",
+      "fixtures": 72,
+      "name": "finite_weighted_association_controls"
+    },
+    {
+      "detail": "",
+      "fixtures": 10,
+      "name": "real_axis_remainder_and_margin"
+    },
+    {
+      "detail": "",
+      "fixtures": 3,
+      "name": "periodic_B4_bound"
+    },
+    {
+      "detail": "",
+      "fixtures": 5,
+      "name": "one_prime_real_axis_reserve"
+    },
+    {
+      "detail": "synthetic Schur quotient, not Xi",
+      "fixtures": 5,
+      "name": "positive_source_does_not_exhaust"
+    }
+  ],
+  "fixture_count": 778,
+  "schema": "riemann.astra.sharp-jordan-green.v1",
+  "status": "PASS_EXACT_BOUNDED_JGC26_CONTROLS",
+  "upstream_producer_imports": 0,
+  "zeta_gamma_evaluations": 0
+}
