@@ -1,0 +1,95 @@
+{
+  "baseline_commit": "c7069c1b49c1f46be42175271667917bedf17dfc",
+  "full_checkout_pass": false,
+  "full_registry_run": false,
+  "native_windows_run": false,
+  "original_code_reproduction": {
+    "exception": "ValueError",
+    "message": "reviewed-only graph reaches RH: inspect proof inputs",
+    "reproduced": true
+  },
+  "original_resolver_blob": "d745b65157f6d75c48155bb94a2eebff208f9d96",
+  "patched_graph": {
+    "base_nonapplication_edges": [
+      "EDGE.CONJ.SPARSITY_ENERGY"
+    ],
+    "base_reachable": 2,
+    "base_reachable_ids": [
+      "API.CONJUNCTIVE.SPARSITY_ENERGY",
+      "API.MELLIN.SUBPOWER_NEGATIVE_MASS"
+    ],
+    "blocked_original_nodes": [],
+    "current_reachable": 2,
+    "current_reachable_ids": [
+      "API.CONJUNCTIVE.SPARSITY_ENERGY",
+      "API.MELLIN.SUBPOWER_NEGATIVE_MASS"
+    ],
+    "interpretation": "typed-applications-v2",
+    "matched_base_claims": {},
+    "reviewed_only_path_to_rh": false
+  },
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "remote_changes": false,
+  "scope": "four-row/two-edge resolver-field projection of the actual failing chain; not full registry or checkout",
+  "test_results": {
+    "graph-normal.json": {
+      "actual_registries": null,
+      "marker": "PASS_ACTUAL_CHAIN_FIXTURE_SCOPE",
+      "native_windows_execution": false,
+      "rh_proved": false,
+      "tests": 24,
+      "whole_checkout_validated": false
+    },
+    "graph-optimized.json": {
+      "actual_registries": null,
+      "marker": "PASS_ACTUAL_CHAIN_FIXTURE_SCOPE",
+      "native_windows_execution": false,
+      "rh_proved": false,
+      "tests": 24,
+      "whole_checkout_validated": false
+    },
+    "hardening-normal.json": {
+      "errors": 0,
+      "failures": 0,
+      "lean_build": false,
+      "marker": "PASS_SYNTHETIC_HARDENING_CONTRACTS",
+      "real_riemann_checkout": false,
+      "remote_ci": false,
+      "rh_proved": false,
+      "tests": 29
+    },
+    "hardening-optimized.json": {
+      "errors": 0,
+      "failures": 0,
+      "lean_build": false,
+      "marker": "PASS_SYNTHETIC_HARDENING_CONTRACTS",
+      "real_riemann_checkout": false,
+      "remote_ci": false,
+      "rh_proved": false,
+      "tests": 29
+    }
+  },
+  "tested_sources": [
+    {
+      "git_blob": "b0f557189916ab1698a0170d4055fcc756a78199",
+      "path": "integration/2026-09-06/validate.py",
+      "sha256": "7b2c331fb6fc68f0cc7204103d6051d0b67fe0ca378cf2b1ed266c8d647f312a"
+    },
+    {
+      "git_blob": "bd235f6fb13f5ca6a489542f10d9596e9267b66e",
+      "path": "integration/2026-09-06/hardening/verify.py",
+      "sha256": "711fedafabc4df466048d4359bebfaf1d74d277626653206d4d9377553476929"
+    },
+    {
+      "git_blob": "ff43f6c44adfe53cf5a2008b447b24a187ae5147",
+      "path": "integration/2026-09-06/hardening/test_verify.py",
+      "sha256": "5b1e484989ed108f02a7009f39fe698d4622e103c77ddf2dd77068d40d257d5f"
+    },
+    {
+      "git_blob": "20a3af4f4d340c957bc625c4292a6645bcf784d6",
+      "path": "integration/2026-09-06/graph-fix/test_graph_dependencies.py",
+      "sha256": "216467e984a774338359a25379bb932887b06ca0b3d25ea2baf7456ad504482a"
+    }
+  ]
+}

@@ -54,6 +54,13 @@ jobs:
           python3 -I -S -B integration/2026-09-06/hardening/test_verify.py > "$RUNNER_TEMP/hardening-tests.normal.json"
           python3 -I -S -B -O integration/2026-09-06/hardening/test_verify.py > "$RUNNER_TEMP/hardening-tests.optimized.json"
           diff -u "$RUNNER_TEMP/hardening-tests.normal.json" "$RUNNER_TEMP/hardening-tests.optimized.json"
+      - name: Check actual graph dependencies in both modes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I -S -B integration/2026-09-06/graph-fix/test_graph_dependencies.py > "$RUNNER_TEMP/graph-tests.normal.json"
+          python3 -I -S -B -O integration/2026-09-06/graph-fix/test_graph_dependencies.py > "$RUNNER_TEMP/graph-tests.optimized.json"
+          diff -u "$RUNNER_TEMP/graph-tests.normal.json" "$RUNNER_TEMP/graph-tests.optimized.json"
       - name: Authenticate actual inputs and validate the scoped release
         shell: bash
         run: |
@@ -69,5 +76,6 @@ jobs:
             ${{ runner.temp }}/integration-normal
             ${{ runner.temp }}/integration-optimized
             ${{ runner.temp }}/hardening-tests.*.json
+            ${{ runner.temp }}/graph-tests.*.json
           if-no-files-found: error
           retention-days: 14

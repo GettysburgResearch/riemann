@@ -1,0 +1,51 @@
+{
+  "claims": [
+    {
+      "final_verdict": "OPEN_RH_EQUIVALENT",
+      "semantic_id": "RH",
+      "source_claim_id": "RH"
+    },
+    {
+      "final_verdict": "VERIFIED_WITH_FIXES",
+      "semantic_id": "API.MELLIN.SUBPOWER_NEGATIVE_MASS",
+      "source_claim_id": "L-99270/L-99272"
+    },
+    {
+      "final_verdict": "OPEN_SUFFICIENT_FOR_RH",
+      "semantic_id": "OPEN.ARITH.FIXED_DETECTOR_NEGATIVE_MASS",
+      "source_claim_id": "OPEN.ARITH.FIXED_DETECTOR_NEGATIVE_MASS"
+    },
+    {
+      "final_verdict": "VERIFIED_WITH_FIXES",
+      "semantic_id": "API.CONJUNCTIVE.SPARSITY_ENERGY",
+      "source_claim_id": "L-101103"
+    }
+  ],
+  "claims_blob": "6a4157460bf0044c6e110a2713f7dfb62bcb6c28",
+  "claims_path": "canonical/2026-08-22/claims.tsv",
+  "commit": "c7069c1b49c1f46be42175271667917bedf17dfc",
+  "edges": [
+    {
+      "conclusion_id": "OPEN.ARITH.FIXED_DETECTOR_NEGATIVE_MASS",
+      "edge_id": "EDGE.CONJ.SPARSITY_ENERGY",
+      "edge_type": "CONDITIONAL_API",
+      "final_verdict": "CONDITIONAL_EXACT",
+      "first_missing_premise": "OPEN.ARITH.FIXED_DETECTOR_NEGATIVE_MASS",
+      "premise_ids": "[\"API.CONJUNCTIVE.SPARSITY_ENERGY\"]"
+    },
+    {
+      "conclusion_id": "RH",
+      "edge_id": "EDGE.MELLIN.NEGATIVE_MASS",
+      "edge_type": "HYPEREDGE",
+      "final_verdict": "CONDITIONAL_EXACT",
+      "first_missing_premise": "OPEN.ARITH.FIXED_DETECTOR_NEGATIVE_MASS",
+      "premise_ids": "[\"API.MELLIN.SUBPOWER_NEGATIVE_MASS\",\"OPEN.ARITH.FIXED_DETECTOR_NEGATIVE_MASS\"]"
+    }
+  ],
+  "edges_blob": "174507a6d2778b699ce1a6306a5dbca73997ce98",
+  "edges_path": "canonical/2026-08-22/edges.tsv",
+  "repository": "GettysburgResearch/riemann",
+  "review_boundary": "D-F07 requires both boundary components in the Poincare inequality. Its applicability estimate is still open; no new arithmetic node or theorem is invented.",
+  "schema": "riemann.graph-regression.source-projection.v1",
+  "scope": "Exact resolver-field projection of four actual claim rows and two actual edge rows. Not a complete checkout."
+}

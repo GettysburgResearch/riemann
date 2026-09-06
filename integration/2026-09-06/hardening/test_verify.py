@@ -22,6 +22,7 @@ class ContractTests(unittest.TestCase):
         self.root = Path(self.temp.name) / 'repo'
         self.root.mkdir()
         self.call('init', '-q')
+        self.call('config', 'core.autocrlf', 'false')
         self.call('config', 'user.name', 'Synthetic fixture')
         self.call('config', 'user.email', 'fixture@example.invalid')
         self.write('reviews/A/CLAIMS.tsv', 'id\tverdict\nA1\tHOLD\n')
@@ -42,10 +43,18 @@ class ContractTests(unittest.TestCase):
     def write(self, name, text):
         path = self.root / name
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(text)
+        path.write_bytes(text.encode('utf-8'))
 
     def auth(self):
         return v.authenticate(self.root, self.tree, ('reviews/A', 'README.md'), self.pins)
+
+    def symlink(self, path, target, *, directory=False):
+        try:
+            path.symlink_to(target, target_is_directory=directory)
+        except OSError as error:
+            if os.name == 'nt' and getattr(error, 'winerror', None) == 1314:
+                self.skipTest('Windows account lacks symbolic-link privilege')
+            raise
 
     def test_clean_snapshot(self):
         self.assertEqual(self.auth()['files'], 3)
@@ -78,7 +87,7 @@ class ContractTests(unittest.TestCase):
         outside = self.root.parent / 'copy.tsv'
         outside.write_bytes(p.read_bytes())
         p.unlink()
-        p.symlink_to(outside)
+        self.symlink(p, outside)
         with self.assertRaisesRegex(ValueError, 'symlink'):
             self.auth()
 
@@ -86,7 +95,7 @@ class ContractTests(unittest.TestCase):
         old = self.root / 'reviews/A'
         moved = self.root.parent / 'A'
         old.rename(moved)
-        old.symlink_to(moved, target_is_directory=True)
+        self.symlink(old, moved, directory=True)
         with self.assertRaisesRegex(ValueError, 'symlink'):
             self.auth()
 
@@ -209,8 +218,11 @@ class ContractTests(unittest.TestCase):
 if __name__ == '__main__':
     suite = unittest.defaultTestLoader.loadTestsFromTestCase(ContractTests)
     result = unittest.TextTestRunner(stream=sys.stderr, verbosity=1).run(suite)
-    payload = {'marker':'PASS_SYNTHETIC_HARDENING_CONTRACTS' if result.wasSuccessful() else 'FAIL',
+    marker = ('PASS_SYNTHETIC_HARDENING_CONTRACTS_WITH_SKIPS' if result.skipped
+              else 'PASS_SYNTHETIC_HARDENING_CONTRACTS') if result.wasSuccessful() else 'FAIL'
+    payload = {'marker':marker,
                'tests':result.testsRun, 'failures':len(result.failures), 'errors':len(result.errors),
+               'skipped':len(result.skipped),
                'real_riemann_checkout':False, 'remote_ci':False, 'lean_build':False,
                'rh_proved':False}
     print(json.dumps(payload, sort_keys=True, indent=2))
