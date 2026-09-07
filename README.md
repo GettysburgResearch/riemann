@@ -32,7 +32,7 @@ Ask your agent to review work since the last integration, run exploratory comput
 
 The pages above describe reviewed components at their recorded sources, with later corrections applied. They do not certify every file on main. [Active research](PROGRAMMES.md#active-research), including newer branch revisions, remains discoverable but is not accepted merely because it exists or has passed an author's tests. Earlier results retain their inherited review scope unless an applicable correction changes it.
 
-**Formalization is a separate track.** Finite algebra and conditional Lean implications exist, but the old actual-xi input has a source-definition defect. A replacement paper argument is not a compiled, inhabited replacement API. See [formal status](FORMAL_STATUS.md); do not read a historical build as a completed formal proof release.
+**Formalization is a separate track.** The actual-xi source repair remains incomplete in Lean; see [formal status and limitations](FORMAL_STATUS.md).
 
 ## Contribute
 

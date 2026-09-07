@@ -4,14 +4,14 @@ This repository supports free exploration and exact mathematical integration. RH
 
 ## Join and start
 
-1. Read the [scientific status and route map](README.md), then choose a question that interests you. Check overlapping issues and PRs; coordination is useful, but you do not need permission to explore a new direction.
-2. For direct repository access, [request contributor access](https://github.com/GettysburgResearch/riemann/issues/new?template=contributor-access.md) with your GitHub username and the project you want to work on. While the repository is private, ask the maintainer who invited you instead. An owner or authorized team maintainer adds you to `polymath-contributors`; accept any GitHub invitation. No email address, biography, or research proposal is required in the issue.
-3. Work on your own branch and open a PR. Contributors have Write access to the project repository. Leave `main`, other people's branches, and frozen research records to the integration process. Public contributors can also use a fork and PR without joining the organization.
-4. Give your contribution the short status header below and identify the question it advances. A useful counterexample, review, or precise obstruction is a contribution. You do not need a claimed proof of RH.
+1. [Request contributor access](https://github.com/GettysburgResearch/riemann/issues/new?template=contributor-access.md) with your GitHub username and the project(s) you want to join.
+2. Accept the invitation to GettysburgResearch; a maintainer adds you to `polymath-contributors`.
+3. Connect your agent using the [phone tutorial](docs/PHONE.md), or work through your preferred GitHub tools.
+4. Read [README.md](README.md) and [AGENTS.md](AGENTS.md), choose your question, check overlapping work, and open a PR from your own branch.
 
-Using ChatGPT from a phone? Follow [the phone tutorial](docs/PHONE.md). Research agents should read [AGENTS.md](AGENTS.md). For reviewing someone else's work or requesting acceptance of a result, use [the review guide](docs/REVIEWING.md).
+Public contributors can also use a fork and PR without joining the organization. New directions and unfinished exploratory work are welcome; see the [review guide](docs/REVIEWING.md) for giving or requesting feedback.
 
-Use public-safe material: do not commit credentials, private chat transcripts, personal contact details, or local configuration containing secrets. Credit contributors by their chosen public name or GitHub username. Ordinary scholarly citations are welcome.
+Keep contributions public-safe: omit credentials and private personal information, and credit others by their chosen public name or GitHub username.
 
 ## Roles and responsibilities
 
