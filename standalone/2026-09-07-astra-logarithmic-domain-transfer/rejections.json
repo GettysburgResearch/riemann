@@ -1,0 +1,100 @@
+{
+  "package_refusals": [
+    {
+      "case": "changed_proof",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "missing_manifest_entry",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "extra_file",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "resealed_parent",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "changed_proof",
+      "exit": 1,
+      "mode": "optimized"
+    },
+    {
+      "case": "missing_manifest_entry",
+      "exit": 1,
+      "mode": "optimized"
+    },
+    {
+      "case": "extra_file",
+      "exit": 1,
+      "mode": "optimized"
+    },
+    {
+      "case": "resealed_parent",
+      "exit": 1,
+      "mode": "optimized"
+    }
+  ],
+  "pristine_controls": [
+    "normal",
+    "optimized"
+  ],
+  "result_refusals": [
+    {
+      "case": "rh_promotion",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "integer_float_alias",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "boolean_integer_alias",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "missing_group",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "duplicate_key",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "rh_promotion",
+      "exit": 1,
+      "mode": "optimized"
+    },
+    {
+      "case": "integer_float_alias",
+      "exit": 1,
+      "mode": "optimized"
+    },
+    {
+      "case": "boolean_integer_alias",
+      "exit": 1,
+      "mode": "optimized"
+    },
+    {
+      "case": "missing_group",
+      "exit": 1,
+      "mode": "optimized"
+    },
+    {
+      "case": "duplicate_key",
+      "exit": 1,
+      "mode": "optimized"
+    }
+  ]
+}
