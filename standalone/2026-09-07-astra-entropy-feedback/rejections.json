@@ -1,0 +1,25 @@
+{
+  "modes": [
+    {
+      "altered_packets_rejected": [
+        "changed_proof",
+        "missing_claims",
+        "extra_file"
+      ],
+      "altered_results_rejected": 6,
+      "mode": "normal",
+      "pristine_result_control": true
+    },
+    {
+      "altered_packets_rejected": [
+        "changed_proof",
+        "missing_claims",
+        "extra_file"
+      ],
+      "altered_results_rejected": 6,
+      "mode": "optimized",
+      "pristine_result_control": true
+    }
+  ],
+  "scope": "bounded rejection tests only"
+}
