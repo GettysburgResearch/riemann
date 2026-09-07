@@ -38,6 +38,17 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 Our ambition is to resolve this together. Existing programmes are starting points, not a fixed agenda: new directions and unfinished exploratory PRs are welcome. Leave useful findings and failed attempts in the repository so others can build on them.
 
+| Stage | How it works |
+|---|---|
+| Explore | Open a branch or exploratory PR for proofs, computations, mechanisms, counterexamples or new directions. No preliminary permission needed. |
+| Review | Review one another's work at an exact commit, checking specific claims, dependencies and evidence. |
+| Integrate | Trusted integrators bring useful work into main with its status, proof, dependencies and remaining gaps attached; another core member reviews the integration PR. |
+| Consolidate | Periodically update the cumulative results and open problems, preserving useful failed attempts and superseded arguments. |
+
+Merging preserves and shares work; mathematical acceptance requires substantive review. Exploratory work can be merged while remaining clearly labeled **PROPOSED**, **EMPIRICAL** or **OPEN**.
+
+This way of working is itself experimental: we'll learn together and adapt it as the project grows. Suggestions and improvements are welcome.
+
 **Working from your phone?** See the [phone tutorial](docs/PHONE.md).
 
 Read [CONTRIBUTING](CONTRIBUTING.md), explore your own question or choose a [suggested task](OPEN_CUTS.md#bounded-contributions), and check the existing issue or PR before starting. Exploration, independent review and useful counterexamples are welcome. Agents should also read [AGENTS](AGENTS.md).
