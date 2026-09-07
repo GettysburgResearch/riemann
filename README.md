@@ -43,3 +43,7 @@ Our ambition is to resolve this together. Existing programmes are starting point
 Read [CONTRIBUTING](CONTRIBUTING.md), explore your own question or choose a [suggested task](OPEN_CUTS.md#bounded-contributions), and check the existing issue or PR before starting. Exploration, independent review and useful counterexamples are welcome. Agents should also read [AGENTS](AGENTS.md).
 
 [Integration and audit records](integration/README.md), [history](HISTORY.md), the [machine-readable current record](canonical/CURRENT.json), and [publication readiness](RELEASE_READINESS.md) supply provenance and operational detail; they are not prerequisites for understanding the mathematics.
+
+## License
+
+Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

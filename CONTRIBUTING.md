@@ -125,3 +125,7 @@ Include:
 ## Integration
 
 Integrators should extract coherent claim-level packets rather than merge branch histories indiscriminately. Preserve exact provenance, alternate proofs, refutations, aliases, and frozen review boundaries. Keep timestamped inventories backstage and the current mathematical view in `README.md` and `research/`.
+
+## Contribution license
+
+By submitting a contribution, you agree to license your original contribution under the [MIT License](LICENSE). Only include material you have the right to contribute; preserve third-party licenses, notices, and attribution.
