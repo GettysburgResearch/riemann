@@ -24,7 +24,9 @@ These statements summarize the cumulative integrated record, including earlier w
 | What should be tried next, and what has already failed? | [Open problems and concrete tasks](OPEN_CUTS.md) and [useful failed approaches](REFUTATIONS.md) |
 | Where are the proofs, evidence and ongoing experiments? | [Research navigation](research/RESULTS_INDEX.md) and [computational evidence](COMPUTATIONS.md) |
 
-**One useful first contribution:** independently regenerate the primitive xi-value enclosures for a retained finite Pick control and compare them with its exact matrix certificate. That improves a clearly identified evidence boundary without requiring a new RH mechanism. An analytic alternative is to isolate and prove one source-specific bound in the [fixed-detector negative-mass problem](OPEN_CUTS.md#fixed-detector), preserving the signed terms and both excursion endpoints.
+Ask your agent to review work since the last integration, run exploratory computations to discover mechanisms, develop proofs, summarize results, build a dashboard—or pursue your own idea.
+
+**One possible starting point:** independently regenerate the primitive xi-value enclosures for a retained finite Pick control and compare them with its exact matrix certificate. That improves a clearly identified evidence boundary without requiring a new RH mechanism. An analytic alternative is to isolate and prove one source-specific bound in the [fixed-detector negative-mass problem](OPEN_CUTS.md#fixed-detector), preserving the signed terms and both excursion endpoints.
 
 ## Integrated baseline and active research
 
@@ -38,6 +40,6 @@ Our ambition is to resolve this together. Existing programmes are starting point
 
 **Working from your phone?** See the [phone tutorial](docs/PHONE.md).
 
-Read [CONTRIBUTING](CONTRIBUTING.md), choose a [bounded task](OPEN_CUTS.md#bounded-contributions), and check the existing issue or PR before starting. Exploration, independent review and useful counterexamples are welcome. Agents should also read [AGENTS](AGENTS.md).
+Read [CONTRIBUTING](CONTRIBUTING.md), explore your own question or choose a [suggested task](OPEN_CUTS.md#bounded-contributions), and check the existing issue or PR before starting. Exploration, independent review and useful counterexamples are welcome. Agents should also read [AGENTS](AGENTS.md).
 
 [Integration and audit records](integration/README.md), [history](HISTORY.md), the [machine-readable current record](canonical/CURRENT.json), and [publication readiness](RELEASE_READINESS.md) supply provenance and operational detail; they are not prerequisites for understanding the mathematics.
