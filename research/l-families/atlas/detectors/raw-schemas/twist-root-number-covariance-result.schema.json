@@ -1,0 +1,540 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gfreund123/riemann/research/l-families/atlas/detectors/raw-schemas/twist-root-number-covariance-result.schema.json",
+  "title": "Raw exact conductor-coprime 11.a2 quadratic-twist root-number covariance result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "definition",
+    "theorem_import",
+    "base_curve",
+    "family_definition",
+    "family",
+    "exact_identities",
+    "exact_coordinate_formulas",
+    "cohort_counts",
+    "root_cohort_gram_contrast",
+    "root_cohort_marginal_contrast",
+    "prime_bound",
+    "primes",
+    "traces",
+    "bounds",
+    "summaries"
+  ],
+  "properties": {
+    "schema": {"const": "riemann.atlas.raw.twist_root_number_covariance.v1"},
+    "definition": {"type": "string", "minLength": 1},
+    "theorem_import": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_manifest", "formula", "base_root_number", "hypotheses", "conditionality"],
+      "properties": {
+        "source_manifest": {"const": "research/l-families/atlas/sources/quadratic-twist-root-number.json"},
+        "formula": {"const": "epsilon_d=epsilon(11.a2)*chi_d(-11)=sign(d)*(d/11)"},
+        "base_root_number": {"const": "+1"},
+        "hypotheses": {"const": "d fundamental, 1<|d|<=X, and gcd(d,11)=1"},
+        "conditionality": {"type": "string", "minLength": 1}
+      }
+    },
+    "base_curve": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "ainvs", "conductor", "excluded_bad_primes", "imported_root_number"],
+      "properties": {
+        "label": {"const": "11.a2"},
+        "ainvs": {"const": [0, -1, 1, -10, -20]},
+        "conductor": {"const": 11},
+        "excluded_bad_primes": {"const": [11]},
+        "imported_root_number": {"const": "+1"}
+      }
+    },
+    "family_definition": {"type": "string", "minLength": 1},
+    "family": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "parameter",
+        "absolute_value_minimum_exclusive",
+        "absolute_value_bounds",
+        "coprime_to",
+        "measure",
+        "partitions",
+        "root_number_formula"
+      ],
+      "properties": {
+        "parameter": {"const": "fundamental_discriminant"},
+        "absolute_value_minimum_exclusive": {"const": 1},
+        "absolute_value_bounds": {"const": [256, 512, 1024, 2048]},
+        "coprime_to": {"const": 11},
+        "measure": {"const": "UNIFORM_WITHIN_PARTITION"},
+        "partitions": {"const": ["ROOT_NUMBER_PLUS", "ROOT_NUMBER_MINUS"]},
+        "root_number_formula": {"const": "sign(d)*(d/11)"}
+      }
+    },
+    "exact_identities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["root_number_partition", "raw_gram", "centered_covariance", "root_cohort_gram_contrast", "root_cohort_marginal_contrast", "moment_coordinates"],
+      "properties": {
+        "root_number_partition": {"type": "string", "minLength": 1},
+        "raw_gram": {"type": "string", "minLength": 1},
+        "centered_covariance": {"type": "string", "minLength": 1},
+        "root_cohort_gram_contrast": {"type": "string", "minLength": 1},
+        "root_cohort_marginal_contrast": {"type": "string", "minLength": 1},
+        "moment_coordinates": {"type": "string", "minLength": 1}
+      }
+    },
+    "exact_coordinate_formulas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["notation", "marginal_counts", "mean", "second_moment", "centered_variance", "reconstruction"],
+      "properties": {
+        "notation": {"type": "string", "minLength": 1},
+        "marginal_counts": {"type": "string", "minLength": 1},
+        "mean": {"type": "string", "minLength": 1},
+        "second_moment": {"type": "string", "minLength": 1},
+        "centered_variance": {"type": "string", "minLength": 1},
+        "reconstruction": {"type": "string", "minLength": 1}
+      }
+    },
+    "cohort_counts": {
+      "const": [
+        {"bound": 256, "ROOT_NUMBER_PLUS": 65, "ROOT_NUMBER_MINUS": 76, "total": 141},
+        {"bound": 512, "ROOT_NUMBER_PLUS": 140, "ROOT_NUMBER_MINUS": 145, "total": 285},
+        {"bound": 1024, "ROOT_NUMBER_PLUS": 281, "ROOT_NUMBER_MINUS": 289, "total": 570},
+        {"bound": 2048, "ROOT_NUMBER_PLUS": 568, "ROOT_NUMBER_MINUS": 574, "total": 1142}
+      ]
+    },
+    "root_cohort_gram_contrast": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["definition", "source", "pair_count", "summaries", "firewall"],
+      "properties": {
+        "definition": {"const": "Delta_X(p,r)=G_{X,+}(p,r)-G_{X,-}(p,r) for aligned good primes p<r."},
+        "source": {"const": "derived only from the emitted ROOT_NUMBER_PLUS and ROOT_NUMBER_MINUS raw Gram sufficient statistics"},
+        "pair_count": {"const": 78},
+        "summaries": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {"$ref": "#/$defs/gram_contrast_summary"}
+        },
+        "firewall": {"type": "string", "minLength": 1}
+      }
+    },
+    "root_cohort_marginal_contrast": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["definitions", "source", "prime_count", "primes", "summaries", "firewall"],
+      "properties": {
+        "definitions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["character_mean", "local_density"],
+          "properties": {
+            "character_mean": {"const": "s_{X,+}(p)/N_{X,+}-s_{X,-}(p)/N_{X,-}"},
+            "local_density": {"const": "G_{X,+}(p,p)-G_{X,-}(p,p)"}
+          }
+        },
+        "source": {"const": "derived only from emitted aligned character_sums and raw Gram diagonals; no family enumeration or new prime scan"},
+        "prime_count": {"const": 13},
+        "primes": {"const": [2, 3, 5, 7, 13, 17, 19, 23, 29, 31, 37, 41, 43]},
+        "summaries": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "prefixItems": [
+            {"allOf": [{"$ref": "#/$defs/marginal_contrast_summary"}], "properties": {"bound": {"const": 256}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_contrast_summary"}], "properties": {"bound": {"const": 512}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_contrast_summary"}], "properties": {"bound": {"const": 1024}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_contrast_summary"}], "properties": {"bound": {"const": 2048}}}
+          ],
+          "items": false
+        },
+        "firewall": {"type": "string", "minLength": 1}
+      }
+    },
+    "prime_bound": {"const": 43},
+    "primes": {"const": [2, 3, 5, 7, 13, 17, 19, 23, 29, 31, 37, 41, 43]},
+    "traces": {"const": [-2, -1, 1, -2, 4, -2, 0, -1, 0, 7, 3, -8, -6]},
+    "bounds": {"const": [256, 512, 1024, 2048]},
+    "summaries": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "bound",
+          "partition",
+          "discriminant_count",
+          "first_discriminant",
+          "last_discriminant",
+          "character_sums",
+          "correlation_matrices",
+          "off_diagonal",
+          "unitary_prime_sum"
+        ],
+        "properties": {
+          "bound": {"enum": [256, 512, 1024, 2048]},
+          "partition": {"enum": ["ROOT_NUMBER_PLUS", "ROOT_NUMBER_MINUS"]},
+          "discriminant_count": {"type": "integer", "minimum": 1},
+          "first_discriminant": {"type": "integer"},
+          "last_discriminant": {"type": "integer"},
+          "character_sums": {"type": "array", "minItems": 13, "maxItems": 13, "items": {"type": "integer"}},
+          "correlation_matrices": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["raw_gram", "centered_covariance"],
+            "properties": {
+              "raw_gram": {"$ref": "#/$defs/common_denominator_matrix"},
+              "centered_covariance": {"$ref": "#/$defs/common_denominator_matrix"}
+            }
+          },
+          "off_diagonal": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["pair_count", "max_absolute_raw", "max_absolute_centered", "mean_square_raw", "mean_square_centered"],
+            "properties": {
+              "pair_count": {"const": 78},
+              "max_absolute_raw": {"$ref": "#/$defs/correlation"},
+              "max_absolute_centered": {"$ref": "#/$defs/correlation"},
+              "mean_square_raw": {"$ref": "#/$defs/fraction"},
+              "mean_square_centered": {"$ref": "#/$defs/fraction"}
+            }
+          },
+          "unitary_prime_sum": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "definition",
+              "second_moment_diagonal_rational",
+              "centered_variance_diagonal_rational",
+              "mean_decimal_display_only",
+              "second_moment_decimal_display_only",
+              "centered_variance_decimal_display_only"
+            ],
+            "properties": {
+              "definition": {"const": "W_d=sum_{p<=43,p!=11} a_p chi_d(p)/sqrt(p)"},
+              "second_moment_diagonal_rational": {"$ref": "#/$defs/fraction"},
+              "centered_variance_diagonal_rational": {"$ref": "#/$defs/fraction"},
+              "mean_decimal_display_only": {"type": "string", "minLength": 1},
+              "second_moment_decimal_display_only": {"type": "string", "minLength": 1},
+              "centered_variance_decimal_display_only": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "common_denominator_matrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["denominator", "numerators"],
+      "properties": {
+        "denominator": {"type": "integer", "minimum": 1},
+        "numerators": {
+          "type": "array",
+          "minItems": 13,
+          "maxItems": 13,
+          "items": {
+            "type": "array",
+            "minItems": 13,
+            "maxItems": 13,
+            "items": {"type": "integer"}
+          }
+        }
+      }
+    },
+    "fraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["numerator", "denominator", "text"],
+      "properties": {
+        "numerator": {"type": "integer"},
+        "denominator": {"type": "integer", "minimum": 1},
+        "text": {"type": "string", "minLength": 1}
+      }
+    },
+    "correlation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["p", "q", "value", "absolute_value"],
+      "properties": {
+        "p": {"type": "integer", "minimum": 2},
+        "q": {"type": "integer", "minimum": 2},
+        "value": {"$ref": "#/$defs/fraction"},
+        "absolute_value": {"$ref": "#/$defs/fraction"}
+      }
+    },
+    "marginal_value": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prime", "signed_value"],
+      "properties": {
+        "prime": {"enum": [2, 3, 5, 7, 13, 17, 19, 23, 29, 31, 37, 41, 43]},
+        "signed_value": {"$ref": "#/$defs/fraction"}
+      }
+    },
+    "marginal_maximum": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prime", "signed_value", "absolute_value"],
+      "properties": {
+        "prime": {"enum": [2, 3, 5, 7, 13, 17, 19, 23, 29, 31, 37, 41, 43]},
+        "signed_value": {"$ref": "#/$defs/fraction"},
+        "absolute_value": {"$ref": "#/$defs/fraction"}
+      }
+    },
+    "marginal_channel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "values",
+        "maximum_absolute",
+        "mean_square",
+        "rms_decimal_display_only",
+        "sqrt_total_count_times_rms_decimal_display_only"
+      ],
+      "properties": {
+        "values": {
+          "type": "array",
+          "minItems": 13,
+          "maxItems": 13,
+          "prefixItems": [
+            {"allOf": [{"$ref": "#/$defs/marginal_value"}], "properties": {"prime": {"const": 2}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_value"}], "properties": {"prime": {"const": 3}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_value"}], "properties": {"prime": {"const": 5}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_value"}], "properties": {"prime": {"const": 7}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_value"}], "properties": {"prime": {"const": 13}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_value"}], "properties": {"prime": {"const": 17}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_value"}], "properties": {"prime": {"const": 19}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_value"}], "properties": {"prime": {"const": 23}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_value"}], "properties": {"prime": {"const": 29}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_value"}], "properties": {"prime": {"const": 31}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_value"}], "properties": {"prime": {"const": 37}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_value"}], "properties": {"prime": {"const": 41}}},
+            {"allOf": [{"$ref": "#/$defs/marginal_value"}], "properties": {"prime": {"const": 43}}}
+          ],
+          "items": false
+        },
+        "maximum_absolute": {"$ref": "#/$defs/marginal_maximum"},
+        "mean_square": {"$ref": "#/$defs/fraction"},
+        "rms_decimal_display_only": {"type": "string", "pattern": "^[0-9]+\\.[0-9]{6}$"},
+        "sqrt_total_count_times_rms_decimal_display_only": {"type": "string", "pattern": "^[0-9]+\\.[0-9]{6}$"}
+      }
+    },
+    "marginal_contrast_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bound", "total_discriminant_count", "character_mean", "local_density"],
+      "properties": {
+        "bound": {"enum": [256, 512, 1024, 2048]},
+        "total_discriminant_count": {"type": "integer", "minimum": 1},
+        "character_mean": {"$ref": "#/$defs/marginal_channel"},
+        "local_density": {"$ref": "#/$defs/marginal_channel"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"bound": {"const": 256}}},
+          "then": {"properties": {
+            "total_discriminant_count": {"const": 141},
+            "character_mean": {"properties": {
+              "maximum_absolute": {"const": {
+                "prime": 43,
+                "signed_value": {"numerator": 129, "denominator": 494, "text": "129/494"},
+                "absolute_value": {"numerator": 129, "denominator": 494, "text": "129/494"}
+              }},
+              "mean_square": {"const": {"numerator": 2665799, "denominator": 158623400, "text": "2665799/158623400"}},
+              "rms_decimal_display_only": {"const": "0.129637"},
+              "sqrt_total_count_times_rms_decimal_display_only": {"const": "1.539358"}
+            }},
+            "local_density": {"properties": {
+              "maximum_absolute": {"const": {
+                "prime": 5,
+                "signed_value": {"numerator": 367, "denominator": 4940, "text": "367/4940"},
+                "absolute_value": {"numerator": 367, "denominator": 4940, "text": "367/4940"}
+              }},
+              "mean_square": {"const": {"numerator": 265861, "denominator": 158623400, "text": "265861/158623400"}},
+              "rms_decimal_display_only": {"const": "0.040940"},
+              "sqrt_total_count_times_rms_decimal_display_only": {"const": "0.486131"}
+            }}
+          }}
+        },
+        {
+          "if": {"properties": {"bound": {"const": 512}}},
+          "then": {"properties": {
+            "total_discriminant_count": {"const": 285},
+            "character_mean": {"properties": {
+              "maximum_absolute": {"const": {
+                "prime": 43,
+                "signed_value": {"numerator": 97, "denominator": 580, "text": "97/580"},
+                "absolute_value": {"numerator": 97, "denominator": 580, "text": "97/580"}
+              }},
+              "mean_square": {"const": {"numerator": 407331, "denominator": 42857360, "text": "407331/42857360"}},
+              "rms_decimal_display_only": {"const": "0.097490"},
+              "sqrt_total_count_times_rms_decimal_display_only": {"const": "1.645824"}
+            }},
+            "local_density": {"properties": {
+              "maximum_absolute": {"const": {
+                "prime": 5,
+                "signed_value": {"numerator": 37, "denominator": 1015, "text": "37/1015"},
+                "absolute_value": {"numerator": 37, "denominator": 1015, "text": "37/1015"}
+              }},
+              "mean_square": {"const": {"numerator": 8409, "denominator": 30612400, "text": "8409/30612400"}},
+              "rms_decimal_display_only": {"const": "0.016574"},
+              "sqrt_total_count_times_rms_decimal_display_only": {"const": "0.279799"}
+            }}
+          }}
+        },
+        {
+          "if": {"properties": {"bound": {"const": 1024}}},
+          "then": {"properties": {
+            "total_discriminant_count": {"const": 570},
+            "character_mean": {"properties": {
+              "maximum_absolute": {"const": {
+                "prime": 13,
+                "signed_value": {"numerator": -9714, "denominator": 81209, "text": "-9714/81209"},
+                "absolute_value": {"numerator": 9714, "denominator": 81209, "text": "9714/81209"}
+              }},
+              "mean_square": {"const": {"numerator": 400113670, "denominator": 85733721853, "text": "400113670/85733721853"}},
+              "rms_decimal_display_only": {"const": "0.068315"},
+              "sqrt_total_count_times_rms_decimal_display_only": {"const": "1.630997"}
+            }},
+            "local_density": {"properties": {
+              "maximum_absolute": {"const": {
+                "prime": 23,
+                "signed_value": {"numerator": 128, "denominator": 4777, "text": "128/4777"},
+                "absolute_value": {"numerator": 128, "denominator": 4777, "text": "128/4777"}
+              }},
+              "mean_square": {"const": {"numerator": 15654922, "denominator": 85733721853, "text": "15654922/85733721853"}},
+              "rms_decimal_display_only": {"const": "0.013513"},
+              "sqrt_total_count_times_rms_decimal_display_only": {"const": "0.322617"}
+            }}
+          }}
+        },
+        {
+          "if": {"properties": {"bound": {"const": 2048}}},
+          "then": {"properties": {
+            "total_discriminant_count": {"const": 1142},
+            "character_mean": {"properties": {
+              "maximum_absolute": {"const": {
+                "prime": 37,
+                "signed_value": {"numerator": -14843, "denominator": 163016, "text": "-14843/163016"},
+                "absolute_value": {"numerator": 14843, "denominator": 163016, "text": "14843/163016"}
+              }},
+              "mean_square": {"const": {"numerator": 348116455, "denominator": 172732405664, "text": "348116455/172732405664"}},
+              "rms_decimal_display_only": {"const": "0.044893"},
+              "sqrt_total_count_times_rms_decimal_display_only": {"const": "1.517080"}
+            }},
+            "local_density": {"properties": {
+              "maximum_absolute": {"const": {
+                "prime": 23,
+                "signed_value": {"numerator": 1677, "denominator": 81508, "text": "1677/81508"},
+                "absolute_value": {"numerator": 1677, "denominator": 81508, "text": "1677/81508"}
+              }},
+              "mean_square": {"const": {"numerator": 1809069, "denominator": 13287108128, "text": "1809069/13287108128"}},
+              "rms_decimal_display_only": {"const": "0.011668"},
+              "sqrt_total_count_times_rms_decimal_display_only": {"const": "0.394317"}
+            }}
+          }}
+        }
+      ]
+    },
+    "gram_contrast_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bound",
+        "total_discriminant_count",
+        "maximum_absolute",
+        "mean_square",
+        "rms_decimal_display_only",
+        "sqrt_total_count_times_rms_decimal_display_only"
+      ],
+      "properties": {
+        "bound": {"enum": [256, 512, 1024, 2048]},
+        "total_discriminant_count": {"type": "integer", "minimum": 1},
+        "maximum_absolute": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["p", "r", "signed_value", "absolute_value"],
+          "properties": {
+            "p": {"type": "integer", "minimum": 2},
+            "r": {"type": "integer", "minimum": 2},
+            "signed_value": {"$ref": "#/$defs/fraction"},
+            "absolute_value": {"$ref": "#/$defs/fraction"}
+          }
+        },
+        "mean_square": {"$ref": "#/$defs/fraction"},
+        "rms_decimal_display_only": {"type": "string", "pattern": "^[0-9]+\\.[0-9]{6}$"},
+        "sqrt_total_count_times_rms_decimal_display_only": {"type": "string", "pattern": "^[0-9]+\\.[0-9]{6}$"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"bound": {"const": 256}}},
+          "then": {"properties": {
+            "total_discriminant_count": {"const": 141},
+            "maximum_absolute": {"const": {
+              "p": 37,
+              "r": 41,
+              "signed_value": {"numerator": -83, "denominator": 247, "text": "-83/247"},
+              "absolute_value": {"numerator": 83, "denominator": 247, "text": "83/247"}
+            }},
+            "mean_square": {"const": {"numerator": 22556369, "denominator": 1903480800, "text": "22556369/1903480800"}},
+            "rms_decimal_display_only": {"const": "0.108858"},
+            "sqrt_total_count_times_rms_decimal_display_only": {"const": "1.292617"}
+          }}
+        },
+        {
+          "if": {"properties": {"bound": {"const": 512}}},
+          "then": {"properties": {
+            "total_discriminant_count": {"const": 285},
+            "maximum_absolute": {"const": {
+              "p": 29,
+              "r": 41,
+              "signed_value": {"numerator": 156, "denominator": 1015, "text": "156/1015"},
+              "absolute_value": {"numerator": 156, "denominator": 1015, "text": "156/1015"}
+            }},
+            "mean_square": {"const": {"numerator": 398459, "denominator": 91837200, "text": "398459/91837200"}},
+            "rms_decimal_display_only": {"const": "0.065869"},
+            "sqrt_total_count_times_rms_decimal_display_only": {"const": "1.112000"}
+          }}
+        },
+        {
+          "if": {"properties": {"bound": {"const": 1024}}},
+          "then": {"properties": {
+            "total_discriminant_count": {"const": 570},
+            "maximum_absolute": {"const": {
+              "p": 7,
+              "r": 31,
+              "signed_value": {"numerator": 9594, "denominator": 81209, "text": "9594/81209"},
+              "absolute_value": {"numerator": 9594, "denominator": 81209, "text": "9594/81209"}
+            }},
+            "mean_square": {"const": {"numerator": 815350219, "denominator": 257201165559, "text": "815350219/257201165559"}},
+            "rms_decimal_display_only": {"const": "0.056304"},
+            "sqrt_total_count_times_rms_decimal_display_only": {"const": "1.344228"}
+          }}
+        },
+        {
+          "if": {"properties": {"bound": {"const": 2048}}},
+          "then": {"properties": {
+            "total_discriminant_count": {"const": 1142},
+            "maximum_absolute": {"const": {
+              "p": 5,
+              "r": 31,
+              "signed_value": {"numerator": 3713, "denominator": 40754, "text": "3713/40754"},
+              "absolute_value": {"numerator": 3713, "denominator": 40754, "text": "3713/40754"}
+            }},
+            "mean_square": {"const": {"numerator": 3293698081, "denominator": 2072788867968, "text": "3293698081/2072788867968"}},
+            "rms_decimal_display_only": {"const": "0.039862"},
+            "sqrt_total_count_times_rms_decimal_display_only": {"const": "1.347092"}
+          }}
+        }
+      ]
+    }
+  }
+}

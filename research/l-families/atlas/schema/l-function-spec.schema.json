@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gfreund123/riemann/research/l-families/atlas/schema/l-function-spec.schema.json",
+  "title": "LFunctionSpec v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "record_type", "semantic_id", "identity_sha256", "identity_kernel", "title", "revision",
+    "record_state", "programme_refs", "scope_boundary", "supersedes", "classification", "base_field", "conductor",
+    "completed_normalization", "analytic_properties", "functional_equation", "central_data", "euler_product", "zero_data",
+    "source_identifiers", "data_sources", "software", "assumptions", "notes"
+  ],
+  "properties": {
+    "schema_version": {"const": "riemann.atlas.l_function_spec.v1"},
+    "record_type": {"const": "L_FUNCTION_SPEC"},
+    "semantic_id": {"type": "string", "pattern": "^ATLAS\\.LFUNC\\.[A-Z0-9_.-]+\\.H[0-9a-f]{32}$"},
+    "identity_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "identity_kernel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "slug", "base_field_label", "construction", "source_identifiers", "twist_parameters"],
+      "properties": {
+        "version": {"const": 1},
+        "slug": {"type": "string", "pattern": "^[A-Z0-9_.-]+$"},
+        "base_field_label": {"type": "string", "minLength": 1},
+        "construction": {"type": "string", "minLength": 1},
+        "source_identifiers": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+        "twist_parameters": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "title": {"type": "string", "minLength": 1},
+    "revision": {"type": "integer", "minimum": 1},
+    "record_state": {"$ref": "common.schema.json#/$defs/recordState"},
+    "programme_refs": {"type": "array", "minItems": 1, "items": {"$ref": "common.schema.json#/$defs/programmeRef"}, "uniqueItems": true},
+    "scope_boundary": {"type": "string", "minLength": 1},
+    "supersedes": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/semanticId"}, "uniqueItems": true},
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["domain", "degree", "object_type", "family_id", "automorphic_class", "self_duality", "symmetry_type"],
+      "properties": {
+        "domain": {"enum": ["NUMBER_FIELD", "FUNCTION_FIELD"]},
+        "degree": {"type": "integer", "minimum": 1},
+        "object_type": {"enum": ["RIEMANN_ZETA", "DIRICHLET_L", "FUNCTION_FIELD_DIRICHLET_L", "HYPERELLIPTIC_L", "HOLOMORPHIC_NEWFORM_L", "MAASS_FORM_L", "ELLIPTIC_CURVE_L", "QUADRATIC_TWIST_L", "RANKIN_SELBERG_L", "SYMMETRIC_POWER_L", "HASSE_WEIL_L", "OTHER"]},
+        "family_id": {"type": "string", "minLength": 1},
+        "automorphic_class": {"enum": ["GL1", "GL2", "GLN", "GEOMETRIC", "UNKNOWN"]},
+        "self_duality": {"enum": ["SELF_DUAL", "CONJUGATE_SELF_DUAL", "NON_SELF_DUAL", "CONDITIONAL", "UNKNOWN"]},
+        "symmetry_type": {"enum": ["UNITARY", "SYMPLECTIC", "ORTHOGONAL_EVEN", "ORTHOGONAL_ODD", "ORTHOGONAL_UNSPLIT", "MIXED", "UNKNOWN", "NOT_APPLICABLE"]},
+        "motivic_weight": {"type": ["integer", "string"]}
+      }
+    },
+    "base_field": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "characteristic"],
+      "properties": {
+        "label": {"type": "string", "minLength": 1},
+        "characteristic": {"type": "integer", "minimum": 0},
+        "constant_field_order": {"type": "integer", "minimum": 2},
+        "variable": {"type": "string"}
+      }
+    },
+    "conductor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "value", "status"],
+      "properties": {
+        "kind": {"enum": ["INTEGER", "IDEAL", "POLYNOMIAL", "DEGREE_ONLY", "UNKNOWN"]},
+        "value": {"type": "string", "minLength": 1},
+        "norm_decimal": {"type": "string", "pattern": "^[1-9][0-9]*$"},
+        "degree": {"type": "integer", "minimum": 0},
+        "status": {"$ref": "common.schema.json#/$defs/assertionStatus"}
+      }
+    },
+    "completed_normalization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["normalization_id", "critical_center", "exact_formula", "analytic_variable", "conductor_factor", "gamma_factors"],
+      "properties": {
+        "normalization_id": {"type": "string", "pattern": "^[A-Z0-9_.-]+$"},
+        "critical_center": {"type": "string"},
+        "exact_formula": {"type": "string", "minLength": 1},
+        "analytic_variable": {"type": "string", "minLength": 1},
+        "conductor_factor": {"type": "string"},
+        "gamma_factors": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/gammaFactor"}},
+        "notes": {"type": "string"}
+      }
+    },
+    "analytic_properties": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["analytic_continuation", "functional_equation", "euler_product"],
+      "properties": {
+        "analytic_continuation": {"$ref": "common.schema.json#/$defs/assertionStatus"},
+        "functional_equation": {"$ref": "common.schema.json#/$defs/assertionStatus"},
+        "euler_product": {"$ref": "common.schema.json#/$defs/assertionStatus"},
+        "source_ref": {"type": "string"}
+      }
+    },
+    "functional_equation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["exact_formula", "root_number", "root_number_status"],
+      "properties": {
+        "exact_formula": {"type": "string", "minLength": 1},
+        "root_number": {"type": "string"},
+        "root_number_status": {"$ref": "common.schema.json#/$defs/assertionStatus"},
+        "source_ref": {"type": "string"}
+      }
+    },
+    "central_data": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assertion", "value", "rigor_level", "source_ref", "parity_forced"],
+      "properties": {
+        "assertion": {"enum": ["EXACT", "LOWER_BOUND", "PARITY_ONLY", "UNKNOWN"]},
+        "value": {"type": ["integer", "null"], "minimum": 0},
+        "rigor_level": {"$ref": "common.schema.json#/$defs/rigorLevel"},
+        "source_ref": {"type": "string"},
+        "parity_forced": {"type": "boolean"},
+        "notes": {"type": "string"}
+      }
+    },
+    "euler_product": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["good_factor_formula", "bad_factor_policy", "reciprocal_coefficient_definition", "coverage", "source_refs", "rigor_level"],
+      "properties": {
+        "good_factor_formula": {"type": "string", "minLength": 1},
+        "bad_factor_policy": {"type": "string", "minLength": 1},
+        "reciprocal_coefficient_definition": {"type": "string", "minLength": 1},
+        "coverage": {"type": "string", "minLength": 1},
+        "source_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "rigor_level": {"$ref": "common.schema.json#/$defs/rigorLevel"}
+      }
+    },
+    "zero_data": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["usage", "coverage_class", "rigor_level", "source_refs", "central_zero_policy"],
+      "properties": {
+        "usage": {"enum": ["REQUIRED", "OPTIONAL", "NOT_USED"]},
+        "coverage_class": {"$ref": "common.schema.json#/$defs/coverageClass"},
+        "rigor_level": {"$ref": "common.schema.json#/$defs/rigorLevel"},
+        "source_refs": {"type": "array", "items": {"type": "string"}},
+        "window": {"type": ["string", "null"]},
+        "precision": {"type": ["string", "null"]},
+        "central_zero_policy": {"$ref": "common.schema.json#/$defs/centralZeroPolicy"}
+      }
+    },
+    "source_identifiers": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "data_sources": {"type": "array", "minItems": 1, "items": {"$ref": "common.schema.json#/$defs/dataSource"}},
+    "software": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/softwareLock"}},
+    "assumptions": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/assumption"}},
+    "canonical_provenance_ref": {"$ref": "common.schema.json#/$defs/canonicalProvenanceRef"},
+    "notes": {"type": "string"}
+  }
+}

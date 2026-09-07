@@ -1,0 +1,178 @@
+{
+  "central_zero_policy": "PARAMETERIZED",
+  "detector_kind": "RANK_DEFLATED_PICK",
+  "failure_modes": [
+    {
+      "code": "RANK_AS_GRH",
+      "description": "Central rank metadata says nothing about off-line zeros.",
+      "hostile_control": "The output contains no zero ordinate or GRH predicate."
+    },
+    {
+      "code": "THREE_CURVES_AS_FAMILY",
+      "description": "Three rank-stress examples are not a twist-family statistic.",
+      "hostile_control": "Evaluation scope is MEMBERWISE_BATCH and rigor is DISCOVERY_ONLY."
+    },
+    {
+      "code": "PARITY_FULL_CONFUSION",
+      "description": "Parity deflation and full-order deflation differ at excess rank.",
+      "hostile_control": "The rank-two positive-sign row has exact residual norm squared 25/4 at nodes (1,2)."
+    }
+  ],
+  "family_adapters": [
+    {
+      "adapter_path": "research/l-families/atlas/gl2/deflation.py",
+      "correction": "This adapter consumes only rank/root metadata, not L-values.",
+      "family": "GL2_ELLIPTIC_METADATA",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": null,
+      "correction": "A source-locked twist range and certified central orders are still required.",
+      "family": "GL2_QUADRATIC_TWIST_FAMILY",
+      "status": "REQUIRED_OPEN"
+    }
+  ],
+  "formalization_refs": [
+    {
+      "path": null,
+      "state": "DEFINITION_READY",
+      "target": "The exact identity ||M_parity-M_full||_F^2=e^2(sum_i x_i^-2)^2."
+    }
+  ],
+  "identity_kernel": {
+    "central_zero_policy": "PARAMETERIZED",
+    "contract_revision": 1,
+    "kernel_convention": "CUSTOM",
+    "mathematical_definition": "For a self-dual GL(2) object with central order r and root number epsilon, set e=r-(1-epsilon)/2. At fixed positive centered nodes x_i, record the convention-independent squared Frobenius gap e^2(sum_i x_i^(-2))^2 between parity-only and full central-order deflation.",
+    "normalization_requirements": [
+      "Use the centered unitary variable z=s-1/2.",
+      "Bind root number and central order separately; parity alone does not determine r.",
+      "Square the rank-one residual norm so the Loewner/Pick atom sign drops out."
+    ],
+    "slug": "GL2.EXCESS_RANK.FROBENIUS_NORM",
+    "version": 1
+  },
+  "identity_sha256": "e840064270c7b9e522b1eeef68fb22ad1b899e4dfb61161dc41fbf0722ca70b5",
+  "invariances": [
+    {
+      "code": "CONVENTION_INDEPENDENT_SQUARE",
+      "statement": "The squared parity/full residual norm is the same for the two central-atom sign conventions.",
+      "status": "PROVED"
+    },
+    {
+      "code": "MINIMAL_RANK_ZERO",
+      "statement": "The residual vanishes exactly when the central order is minimal for its root-number parity.",
+      "status": "PROVED"
+    }
+  ],
+  "kernel_convention": "CUSTOM",
+  "mathematical_definition": "For a self-dual GL(2) object with central order r and root number epsilon, set e=r-(1-epsilon)/2. At fixed positive centered nodes x_i, record the convention-independent squared Frobenius gap e^2(sum_i x_i^(-2))^2 between parity-only and full central-order deflation.",
+  "normalization_requirements": [
+    {
+      "comparison_role": "IDENTITY",
+      "field": "completed_normalization.critical_center",
+      "requirement": "Use the centered unitary variable z=s-1/2."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "central_data",
+      "requirement": "Bind root number and central order separately; parity alone does not determine r."
+    },
+    {
+      "comparison_role": "COVARIANCE",
+      "field": "kernel_convention",
+      "requirement": "Square the rank-one residual norm so the Loewner/Pick atom sign drops out."
+    }
+  ],
+  "notes": "This scalar deliberately discards the convention sign after that sign has been checked by the two separate matrix contracts.",
+  "output_contract": {
+    "arithmetic_classes": [
+      "EXACT_RATIONAL"
+    ],
+    "global_claim_allowed": false,
+    "raw_schema_path": null,
+    "representations": [
+      "HASHED_ARTIFACT",
+      "EXACT_RATIONAL"
+    ]
+  },
+  "parameters": [
+    {
+      "constraints": {
+        "nonempty": true,
+        "rational_positive": true,
+        "unique": true
+      },
+      "domain": "nonempty positive centered rational nodes",
+      "name": "nodes",
+      "required": true,
+      "value_type": "RATIONAL_STRING_LIST"
+    },
+    {
+      "constraints": {
+        "enum_values": [
+          "IMPORTED_DISCOVERY"
+        ]
+      },
+      "domain": "IMPORTED_DISCOVERY",
+      "name": "rank_source_policy",
+      "required": true,
+      "value_type": "ENUM"
+    }
+  ],
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 738,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/738"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "DETECTOR_CONTRACT",
+  "reference_implementation": {
+    "entry_point": "correction_norm_squared",
+    "path": "research/l-families/atlas/gl2/deflation.py",
+    "source_sha256": "3f1036449edd6055a799f0af1bc291ec693252b9855727312b4b08023a655d29",
+    "version": "1"
+  },
+  "required_inputs": [
+    {
+      "coverage_requirement": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "ROOT_NUMBER",
+      "name": "root_number",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "CENTRAL_ORDER",
+      "name": "central_order",
+      "required": true
+    }
+  ],
+  "revision": 1,
+  "schema_version": "riemann.atlas.detector_contract.v1",
+  "scope_boundary": "Finite metadata stress test; no arithmetic logarithmic derivative or twist-family limit.",
+  "semantic_id": "ATLAS.DETECTOR.GL2.EXCESS_RANK.FROBENIUS_NORM.He840064270c7b9e522b1eeef68fb22ad",
+  "supersedes": [],
+  "theorem_links": [
+    {
+      "scope": "A family second moment of this residual is exactly a constant times average e_d^2.",
+      "semantic_id": "TWIST-EXCESS-RANK-L2",
+      "status": "PROPOSED"
+    }
+  ],
+  "title": "GL(2) parity-versus-full deflation residual norm"
+}

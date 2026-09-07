@@ -1,0 +1,235 @@
+{
+  "adapter_bindings": [
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/gl2/deflation.py",
+      "role": "exact_rank_correction_adapter",
+      "schema_path": null,
+      "sha256": "3f1036449edd6055a799f0af1bc291ec693252b9855727312b4b08023a655d29"
+    }
+  ],
+  "arithmetic": {
+    "class": "EXACT_RATIONAL",
+    "directed": false,
+    "rounding_contract": "The matrix correction is rational; imported ranks/root numbers are discrete metadata.",
+    "serialization_contract": "Reduced numerator/denominator pairs in canonical JSON."
+  },
+  "assumptions": [
+    {
+      "code": "LMFDB_RANK_ROOT_IMPORTED",
+      "statement": "The displayed analytic ranks and root numbers identify the intended records.",
+      "status": "HEURISTIC"
+    }
+  ],
+  "central_zero_policy_applied": "PARAMETERIZED",
+  "configuration": {
+    "canonical_sha256": "ea483835e192e0c61958909edcd9191e523ba6a1b652bd4fa6aa3983291dc960",
+    "values": {
+      "nodes": [
+        "1",
+        "2"
+      ],
+      "rank_source_policy": "IMPORTED_DISCOVERY"
+    }
+  },
+  "coverage": {
+    "class": "FINITE_COMPLETE",
+    "omissions": [
+      "twist-family sampling",
+      "certified rank replay",
+      "logarithmic-derivative values",
+      "zero ordinates"
+    ],
+    "statement": "All three declared rank-stress objects and both nodes."
+  },
+  "detector_contract_binding": {
+    "record_sha256": "d77c63d059f5c1636736ae5e5dcea721a810e4318260550c05f51e289e158d6d",
+    "semantic_id": "ATLAS.DETECTOR.GL2.EXCESS_RANK.FROBENIUS_NORM.He840064270c7b9e522b1eeef68fb22ad"
+  },
+  "evaluation_scope": "MEMBERWISE_BATCH",
+  "firewalls": [
+    {
+      "code": "CENTRAL_NOT_OFFLINE",
+      "statement": "A legitimate central zero is not an off-critical zero."
+    },
+    {
+      "code": "BATCH_NOT_FAMILY",
+      "statement": "Three selected examples do not estimate a twist-family distribution."
+    },
+    {
+      "code": "SOURCE_DISCOVERY",
+      "statement": "Dynamic LMFDB metadata keeps the evaluation at DISCOVERY_ONLY rigor."
+    }
+  ],
+  "identity_kernel": {
+    "adapter_bindings": [
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/gl2/deflation.py",
+        "role": "exact_rank_correction_adapter",
+        "schema_path": null,
+        "sha256": "3f1036449edd6055a799f0af1bc291ec693252b9855727312b4b08023a655d29"
+      }
+    ],
+    "configuration_sha256": "ea483835e192e0c61958909edcd9191e523ba6a1b652bd4fa6aa3983291dc960",
+    "detector_contract_binding": {
+      "record_sha256": "d77c63d059f5c1636736ae5e5dcea721a810e4318260550c05f51e289e158d6d",
+      "semantic_id": "ATLAS.DETECTOR.GL2.EXCESS_RANK.FROBENIUS_NORM.He840064270c7b9e522b1eeef68fb22ad"
+    },
+    "implementation_commit": "PENDING",
+    "implementation_sha256": "afcf26608c71d30ff77dda7764ccff801810969916ad6f847a2ea4afba09da93",
+    "input_fulfillments_sha256": "880c65eae8da952f73909d7634c73d81323881a56051e2c14882465315e4b488",
+    "input_sha256s": [
+      "66c7c62a159c0ab32178bdb21aefae18adb3f2e759cd507918c282ac7e318e32"
+    ],
+    "lfunction_spec_bindings": [
+      {
+        "record_sha256": "4a0d2b63da44a27b4e8a4ebc311d61cf51d6a596eee4f89a6a4b32cc913a2c36",
+        "semantic_id": "ATLAS.LFUNC.EC.11.R0.H640f9f7ea45725183495b7b2525cf21c"
+      },
+      {
+        "record_sha256": "ce646295ea12b8838dec372068049f8a098186afa0998171d6a49120a2768ff2",
+        "semantic_id": "ATLAS.LFUNC.EC.37.R1.H1d738e01ce5a9f22134cbd1c27969b32"
+      },
+      {
+        "record_sha256": "46f6083c390d50470a23d6f760f55a9677bc6de92fb59ad458dd40e0b787b4c8",
+        "semantic_id": "ATLAS.LFUNC.EC.389.R2.Hc38b7d1ec7c189163b3fa8f43a27a57c"
+      }
+    ],
+    "seed": null,
+    "slug": "GL2.EC.RANK_0_1_2.EXCESS_RANK_NORM",
+    "version": 1
+  },
+  "identity_sha256": "19908cce5b68a7744c91aac72514494c678ef4c784dedd34efd06631c9bea7e0",
+  "input_bindings": [
+    {
+      "coverage_class": "PARTIAL",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/sources/lmfdb-curves.json",
+      "role": "rank_root_source_manifest",
+      "schema_path": null,
+      "sha256": "66c7c62a159c0ab32178bdb21aefae18adb3f2e759cd507918c282ac7e318e32"
+    }
+  ],
+  "input_fulfillments": [
+    {
+      "coverage_class": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "sources": [
+        "ATLAS.LFUNC.EC.11.R0.H640f9f7ea45725183495b7b2525cf21c",
+        "ATLAS.LFUNC.EC.37.R1.H1d738e01ce5a9f22134cbd1c27969b32",
+        "ATLAS.LFUNC.EC.389.R2.Hc38b7d1ec7c189163b3fa8f43a27a57c"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "ROOT_NUMBER",
+      "name": "root_number",
+      "sources": [
+        "research/l-families/atlas/sources/lmfdb-curves.json"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "CENTRAL_ORDER",
+      "name": "central_order",
+      "sources": [
+        "research/l-families/atlas/sources/lmfdb-curves.json"
+      ]
+    }
+  ],
+  "interpretation": {
+    "smallest_gap": "Replace the three examples by a source-locked quadratic-twist family and prove a second moment for excess central order.",
+    "statement": "Given the imported rank/root metadata, the parity-versus-full correction is exactly zero, zero, and 25/4 for the three rows.",
+    "status": "EXACT_FINITE",
+    "theorem_claim_id": null
+  },
+  "lfunction_spec_bindings": [
+    {
+      "record_sha256": "4a0d2b63da44a27b4e8a4ebc311d61cf51d6a596eee4f89a6a4b32cc913a2c36",
+      "semantic_id": "ATLAS.LFUNC.EC.11.R0.H640f9f7ea45725183495b7b2525cf21c"
+    },
+    {
+      "record_sha256": "ce646295ea12b8838dec372068049f8a098186afa0998171d6a49120a2768ff2",
+      "semantic_id": "ATLAS.LFUNC.EC.37.R1.H1d738e01ce5a9f22134cbd1c27969b32"
+    },
+    {
+      "record_sha256": "46f6083c390d50470a23d6f760f55a9677bc6de92fb59ad458dd40e0b787b4c8",
+      "semantic_id": "ATLAS.LFUNC.EC.389.R2.Hc38b7d1ec7c189163b3fa8f43a27a57c"
+    }
+  ],
+  "notes": "The exact scalar is convention-independent only after the separate convention-sign contracts have been fixed.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 738,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/738"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "EVALUATION_RECORD",
+  "result": {
+    "artifact": {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/results/ATLAS.EVAL.GL2.EC.RANK_0_1_2.EXCESS_RANK_NORM.H19908cce5b68a7744c91aac72514494c.json",
+      "role": "detector_result",
+      "schema_path": null,
+      "sha256": "67c53dc0f64c0e9a0a4372a1d604bc88591bbe7e301d0c2eba8ad5f72e421884"
+    },
+    "predicate_outcome": "SATISFIED",
+    "representation": "HASHED_ARTIFACT",
+    "summary": "Ranks 0 and 1 are parity-minimal and have zero residual; imported rank 2 leaves exact squared residual 25/4."
+  },
+  "result_hashes": [
+    {
+      "algorithm": "sha256",
+      "binds": "canonical JSON GL(2) rank-stress result",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "value": "67c53dc0f64c0e9a0a4372a1d604bc88591bbe7e301d0c2eba8ad5f72e421884"
+    }
+  ],
+  "revision": 1,
+  "rigor_level": "DISCOVERY_ONLY",
+  "run": {
+    "code_commit": "PENDING",
+    "command": "python research/l-families/atlas/core/wrap_specialist_pilots.py",
+    "implementation_path": "research/l-families/atlas/core/wrap_specialist_pilots.py",
+    "implementation_sha256": "afcf26608c71d30ff77dda7764ccff801810969916ad6f847a2ea4afba09da93",
+    "timestamp_utc": "2026-08-24T15:00:00Z"
+  },
+  "schema_version": "riemann.atlas.evaluation_record.v1",
+  "scope_boundary": "Exactly the three source-identified elliptic-curve rows 11.a2, 37.a1, and 389.a1 at nodes (1,2).",
+  "semantic_id": "ATLAS.EVAL.GL2.EC.RANK_0_1_2.EXCESS_RANK_NORM.H19908cce5b68a7744c91aac72514494c",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "subject": {
+    "description": "Three elliptic-curve L-functions selected only to span imported ranks 0, 1, and 2",
+    "kind": "L_FUNCTION_SET"
+  },
+  "supersedes": [],
+  "title": "Imported rank 0/1/2 parity-deflation residual stress test"
+}

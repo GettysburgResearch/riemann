@@ -1,0 +1,225 @@
+{
+  "central_zero_policy": "NOT_APPLICABLE",
+  "detector_kind": "COEFFICIENT_DISPERSION",
+  "failure_modes": [
+    {
+      "code": "SIGN_AS_ROOT_NUMBER",
+      "description": "Positive/negative discriminant is not the same as twist root number.",
+      "hostile_control": "Every partition is labeled non-root-number and no epsilon is emitted."
+    },
+    {
+      "code": "DENSITY_EQUALS_ONE",
+      "description": "chi_d(p)^2 vanishes when p divides d.",
+      "hostile_control": "Each raw-Gram diagonal retains the exact nonzero count; zero and signed counts reconstruct with N and the character sum."
+    },
+    {
+      "code": "FINITE_ORTHOGONALITY_AS_LIMIT",
+      "description": "Finite off-diagonal correlations do not prove their asymptotic cancellation.",
+      "hostile_control": "All four bounds and the exact maximum/RMS are retained without a fitted exponent."
+    },
+    {
+      "code": "IMPORTED_MODEL_AS_CERTIFICATE",
+      "description": "The base Weierstrass model is imported discovery data.",
+      "hostile_control": "The evaluation remains DISCOVERY_ONLY despite exact downstream arithmetic."
+    }
+  ],
+  "family_adapters": [
+    {
+      "adapter_path": "research/l-families/atlas/core/twist_character_covariance.py",
+      "correction": "This is a character/coefficient family only; root numbers and central ranks are deliberately absent.",
+      "family": "EC11A2_CONDUCTOR_COPRIME_UNCONDITIONED_CHARACTERS",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": null,
+      "correction": "Source and verify the exact twist root-number formula before partitioning.",
+      "family": "EC11A2_ROOT_NUMBER_SPLIT",
+      "status": "REQUIRED_OPEN"
+    }
+  ],
+  "formalization_refs": [
+    {
+      "path": null,
+      "state": "DEFINITION_READY",
+      "target": "Fundamental-discriminant predicate, prime Kronecker symbol, Gram identities, and sufficient-statistic coordinate reconstruction."
+    }
+  ],
+  "identity_kernel": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "contract_revision": 1,
+    "kernel_convention": "CUSTOM",
+    "mathematical_definition": "For fundamental discriminants d with 1<|d|<=X and gcd(d,11)=1, evaluate the exact finite raw Gram matrix G_X(p,q)=|D(X)|^(-1) sum_d chi_d(p)chi_d(q), its centered covariance, and the mean, second moment, and variance of sum_p a_p(E)chi_d(p)/sqrt(p) at good primes p,q<=43.",
+    "normalization_requirements": [
+      "Use the fixed imported 11.a2 model and omit its bad prime 11.",
+      "Use primitive Kronecker characters indexed by fundamental discriminants coprime to 11.",
+      "Keep ALL/POSITIVE/NEGATIVE partitions separate; none is a root-number split.",
+      "Use unitary prime coefficients a_p*chi_d(p)/sqrt(p); retain exact rational and radical coordinates."
+    ],
+    "slug": "GL2.TWIST_CHARACTER.COVARIANCE",
+    "version": 1
+  },
+  "identity_sha256": "fbc71d709f2e2a1fb6ad6eaaf50528c6926e605db2929a3a65e0cd500aee164b",
+  "invariances": [
+    {
+      "code": "GRAM_POSITIVITY",
+      "statement": "The full character matrix G_X(p,q) is positive semidefinite because it is an exact finite Gram matrix.",
+      "status": "PROVED"
+    },
+    {
+      "code": "CENTERED_COVARIANCE_POSITIVITY",
+      "statement": "The centered character covariance is positive semidefinite by the exact centered-scatter identity.",
+      "status": "PROVED"
+    },
+    {
+      "code": "DIAGONAL_LOCAL_DENSITY",
+      "statement": "G_X(p,p) equals the exact proportion of discriminants not divisible by p.",
+      "status": "PROVED"
+    },
+    {
+      "code": "RADICAL_MOMENT_EXPANSION",
+      "statement": "The unitary prime-sum mean, second moment, and centered variance have exact multiquadratic coordinates reconstructed from the aligned sufficient statistics by the declared formulas.",
+      "status": "PROVED"
+    }
+  ],
+  "kernel_convention": "CUSTOM",
+  "mathematical_definition": "For fundamental discriminants d with 1<|d|<=X and gcd(d,11)=1, evaluate the exact finite raw Gram matrix G_X(p,q)=|D(X)|^(-1) sum_d chi_d(p)chi_d(q), its centered covariance, and the mean, second moment, and variance of sum_p a_p(E)chi_d(p)/sqrt(p) at good primes p,q<=43.",
+  "normalization_requirements": [
+    {
+      "comparison_role": "IDENTITY",
+      "field": "lfunction_spec_bindings",
+      "requirement": "Use the fixed imported 11.a2 model and omit its bad prime 11."
+    },
+    {
+      "comparison_role": "IDENTITY",
+      "field": "configuration.discriminant_bounds",
+      "requirement": "Use primitive Kronecker characters indexed by fundamental discriminants coprime to 11."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "result.summaries.partition",
+      "requirement": "Keep ALL/POSITIVE/NEGATIVE partitions separate; none is a root-number split."
+    },
+    {
+      "comparison_role": "SCALING",
+      "field": "result.artifact.{exact_coordinate_formulas,summaries[]}",
+      "requirement": "Use unitary prime coefficients a_p*chi_d(p)/sqrt(p); retain exact rational and radical coordinates."
+    }
+  ],
+  "notes": "This experiment isolates the character orthogonality input to Target C before any root-number split is attempted.",
+  "output_contract": {
+    "arithmetic_classes": [
+      "MIXED"
+    ],
+    "global_claim_allowed": false,
+    "raw_schema_path": "research/l-families/atlas/detectors/raw-schemas/twist-character-covariance-result.schema.json",
+    "representations": [
+      "HASHED_ARTIFACT"
+    ]
+  },
+  "parameters": [
+    {
+      "constraints": {
+        "element_minimum": 2,
+        "frozen_value": [
+          256,
+          512,
+          1024,
+          2048
+        ],
+        "nonempty": true,
+        "strictly_increasing": true,
+        "unique": true
+      },
+      "domain": "frozen nested positive bounds",
+      "name": "discriminant_bounds",
+      "required": true,
+      "value_type": "INTEGER_LIST"
+    },
+    {
+      "constraints": {
+        "frozen_value": 43,
+        "minimum": 2
+      },
+      "domain": "frozen value 43",
+      "name": "prime_bound",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "frozen_value": 11,
+        "minimum": 1
+      },
+      "domain": "frozen value 11",
+      "name": "base_conductor",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "enum_values": [
+          "ALL_POSITIVE_NEGATIVE"
+        ]
+      },
+      "domain": "ALL_POSITIVE_NEGATIVE",
+      "name": "partition_policy",
+      "required": true,
+      "value_type": "ENUM"
+    }
+  ],
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 738,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/738"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "DETECTOR_CONTRACT",
+  "reference_implementation": {
+    "entry_point": "build_result",
+    "path": "research/l-families/atlas/core/twist_character_covariance.py",
+    "source_sha256": "20d62858c6fae9b0d998796c35b6ecab299f5cb9a76d2fae9fc11f96233e6586",
+    "version": "1"
+  },
+  "required_inputs": [
+    {
+      "coverage_requirement": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "LOCAL_EULER_FACTORS",
+      "name": "local_euler_factors",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "FAMILY_PARAMETER",
+      "name": "family_parameter",
+      "required": true
+    }
+  ],
+  "revision": 1,
+  "schema_version": "riemann.atlas.detector_contract.v1",
+  "scope_boundary": "Fundamental discriminants coprime to 11 through 2048 and good primes through 43; no root-number, rank, zero, or asymptotic conclusion.",
+  "semantic_id": "ATLAS.DETECTOR.GL2.TWIST_CHARACTER.COVARIANCE.Hfbc71d709f2e2a1fb6ad6eaaf50528c6",
+  "supersedes": [],
+  "theorem_links": [
+    {
+      "scope": "Finite conductor-coprime unconditioned precursor; the target still needs root-number conditioning and uniform off-diagonal bounds.",
+      "semantic_id": "TWIST-RECIPROCAL-PRIME-M2",
+      "status": "PROPOSED"
+    }
+  ],
+  "title": "Exact finite conductor-coprime quadratic-character covariance"
+}

@@ -1,0 +1,202 @@
+{
+  "central_zero_policy": "NOT_APPLICABLE",
+  "detector_kind": "COEFFICIENT_DISPERSION",
+  "failure_modes": [
+    {
+      "code": "PURITY_TO_SIGN",
+      "description": "Root modulus alone does not force the toy signed statistic memberwise.",
+      "hostile_control": "Checked fixture contains explicit negative, zero, and positive members."
+    },
+    {
+      "code": "AVERAGE_TO_MEMBER",
+      "description": "Exact family mean zero does not imply a memberwise statement.",
+      "hostile_control": "The 40/20/40 sign split is retained beside the mean."
+    },
+    {
+      "code": "DYADIC_COPY",
+      "description": "Ratio eight and factor 67 have no automatic function-field meaning.",
+      "hostile_control": "The detector contract uses degree coordinates only."
+    }
+  ],
+  "family_adapters": [
+    {
+      "adapter_path": "research/l-families/atlas/function_field/pilot.py",
+      "correction": "Degree replaces dyadic scale and Q(sqrt(5)) replaces floating normalization.",
+      "family": "F5_QUADRATIC_CUBIC",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": null,
+      "correction": "No transfer from the finite function-field result is supplied.",
+      "family": "NUMBER_FIELD",
+      "status": "UNSUPPORTED"
+    }
+  ],
+  "formalization_refs": [
+    {
+      "path": null,
+      "state": "DEFINITION_READY",
+      "target": "Formal reciprocal recurrence and separation of memberwise versus family-average conclusions."
+    }
+  ],
+  "identity_kernel": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "contract_revision": 1,
+    "kernel_convention": "CUSTOM",
+    "mathematical_definition": "For each quadratic character chi_D over F_5[T], let B_D(n)=sum_deg(f)=n mu(f)chi_D(f), H_D(n)=5^(-n/2)B_D(n), and evaluate the explicitly toy cross-degree probe C_D=H_D(1)H_D(2).",
+    "normalization_requirements": [
+      "Use polynomial degree as the native logarithmic scale.",
+      "Store odd-degree normalization exactly in Q(sqrt(5)); do not round sqrt(5).",
+      "Do not identify C_D with canonical XD, HCNC, or physical occupancy."
+    ],
+    "slug": "FUNCTION_FIELD.NORMALIZED_LAG_ONE_TOY",
+    "version": 1
+  },
+  "identity_sha256": "9470def57b0bc98a0bce166fb12e713635615ccdb9e8c6f1487fcb5173bbffbf",
+  "invariances": [
+    {
+      "code": "RECIPROCAL_IDENTITY",
+      "statement": "Direct Moebius sums equal the formal reciprocal recurrence through the checked degree.",
+      "status": "PROVED"
+    },
+    {
+      "code": "FROBENIUS_SCALING",
+      "statement": "H_D(n) is invariant under extracting the common sqrt(q) Frobenius radius.",
+      "status": "PROVED"
+    },
+    {
+      "code": "MEMBERWISE_SIGN",
+      "statement": "Frobenius purity forces a single memberwise sign for C_D.",
+      "status": "FALSE"
+    }
+  ],
+  "kernel_convention": "CUSTOM",
+  "mathematical_definition": "For each quadratic character chi_D over F_5[T], let B_D(n)=sum_deg(f)=n mu(f)chi_D(f), H_D(n)=5^(-n/2)B_D(n), and evaluate the explicitly toy cross-degree probe C_D=H_D(1)H_D(2).",
+  "normalization_requirements": [
+    {
+      "comparison_role": "SCALING",
+      "field": "base_field.constant_field_order",
+      "requirement": "Use polynomial degree as the native logarithmic scale."
+    },
+    {
+      "comparison_role": "IDENTITY",
+      "field": "completed_normalization.normalization_id",
+      "requirement": "Store odd-degree normalization exactly in Q(sqrt(5)); do not round sqrt(5)."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "detector_kind",
+      "requirement": "Do not identify C_D with canonical XD, HCNC, or physical occupancy."
+    }
+  ],
+  "notes": "C_D is deliberately a toy probe used to expose the family/member firewall.",
+  "output_contract": {
+    "arithmetic_classes": [
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "global_claim_allowed": false,
+    "raw_schema_path": null,
+    "representations": [
+      "HASHED_ARTIFACT"
+    ]
+  },
+  "parameters": [
+    {
+      "constraints": {
+        "frozen_value": 5,
+        "minimum": 3,
+        "odd": true
+      },
+      "domain": "odd prime; frozen value 5",
+      "name": "q",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "frozen_value": 3,
+        "minimum": 1,
+        "odd": true
+      },
+      "domain": "positive odd integer; frozen value 3",
+      "name": "conductor_degree",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "frozen_value": 3,
+        "minimum": 2
+      },
+      "domain": "integer >= 2; frozen value 3",
+      "name": "reciprocal_degree",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "enum_values": [
+          "H1_TIMES_H2"
+        ]
+      },
+      "domain": "H1_TIMES_H2",
+      "name": "statistic",
+      "required": true,
+      "value_type": "ENUM"
+    }
+  ],
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 737,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/737"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "DETECTOR_CONTRACT",
+  "reference_implementation": {
+    "entry_point": "build_fixture",
+    "path": "research/l-families/atlas/function_field/pilot.py",
+    "source_sha256": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258",
+    "version": "1"
+  },
+  "required_inputs": [
+    {
+      "coverage_requirement": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "RECIPROCAL_COEFFICIENTS",
+      "name": "reciprocal_coefficients",
+      "required": true
+    }
+  ],
+  "revision": 1,
+  "schema_version": "riemann.atlas.detector_contract.v1",
+  "scope_boundary": "Exhaustive only for q=5, monic squarefree cubic conductors, and reciprocal degrees through 3.",
+  "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.NORMALIZED_LAG_ONE_TOY.H9470def57b0bc98a0bce166fb12e7136",
+  "supersedes": [],
+  "theorem_links": [
+    {
+      "scope": "Normalization inspiration only; the dyadic kernel is not copied.",
+      "semantic_id": "ARITH.WAVELET.MINIMAL_RATIO8",
+      "status": "VERIFIED_WITH_FIXES"
+    },
+    {
+      "scope": "Explicitly not evaluated by this toy probe.",
+      "semantic_id": "OPEN.ARITH.XD",
+      "status": "OPEN"
+    }
+  ],
+  "title": "Exact function-field normalized reciprocal lag-one toy probe"
+}

@@ -1,0 +1,193 @@
+{
+  "central_zero_policy": "PARAMETERIZED",
+  "detector_kind": "RANK_DEFLATED_PICK",
+  "failure_modes": [
+    {
+      "code": "CONVENTION_SIGN",
+      "description": "The two kernel conventions have opposite central-atom signs.",
+      "hostile_control": "Separate semantic detector contracts and exact sign tests."
+    },
+    {
+      "code": "PARITY_EQUALS_RANK",
+      "description": "A root number fixes only parity, not the full central order.",
+      "hostile_control": "Rank-three odd and rank-two even controls retain excess order two after parity deflation."
+    },
+    {
+      "code": "DEFLATION_POSITIVITY",
+      "description": "Removing a central atom does not repair an independently indefinite background.",
+      "hostile_control": "The quartic background remains indefinite after full deflation."
+    }
+  ],
+  "family_adapters": [
+    {
+      "adapter_path": "research/l-families/atlas/gl2/deflation.py",
+      "correction": "All entries are exact Fractions; no L-function values are asserted.",
+      "family": "SYNTHETIC_CENTERED_ENTIRE_CONTROLS",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": null,
+      "correction": "Lock conductor, gamma factors, root number, central order, and deflated logarithmic-derivative values.",
+      "family": "ARITHMETIC_GL2_TWISTS",
+      "status": "REQUIRED_OPEN"
+    }
+  ],
+  "formalization_refs": [
+    {
+      "path": null,
+      "state": "DEFINITION_READY",
+      "target": "Central-atom sign, parity/full deflation identity, affine determinant, and Frobenius correction norm."
+    }
+  ],
+  "identity_kernel": {
+    "central_zero_policy": "PARAMETERIZED",
+    "contract_revision": 1,
+    "kernel_convention": "PICK_SUM_HANKEL",
+    "mathematical_definition": "For F=Lambda'/Lambda and positive centered nodes, H_F(x,y)=(F(x)+F(y))/(x+y); a central order r contributes +r/(xy).",
+    "normalization_requirements": [
+      "Use the centered unitary variable z=s-1/2 and positive off-center rational nodes.",
+      "Keep the PICK_SUM_HANKEL kernel explicit; its central atom is positive semidefinite.",
+      "Root number authorizes parity-only deflation; full deflation requires a separately certified central order."
+    ],
+    "slug": "GL2.DEFLATION.PICK_SUM_HANKEL",
+    "version": 1
+  },
+  "identity_sha256": "1b4606ccacf35380aec6e46c59cb0bae5cd63e6a70816238c974549f21799586",
+  "invariances": [
+    {
+      "code": "CENTRAL_ATOM_RANK_ONE",
+      "statement": "A nonzero central-order correction is exactly rank one.",
+      "status": "PROVED"
+    },
+    {
+      "code": "DETERMINANT_AFFINE",
+      "statement": "det(B+sigma*r*u*u^T) is affine in r.",
+      "status": "PROVED"
+    },
+    {
+      "code": "PARITY_FULL_NORM",
+      "statement": "The squared Frobenius gap is e^2(sum_i x_i^-2)^2.",
+      "status": "PROVED"
+    },
+    {
+      "code": "DEFLATION_IMPLIES_POSITIVITY",
+      "statement": "Full deflation forces the remaining background to be positive.",
+      "status": "FALSE"
+    }
+  ],
+  "kernel_convention": "PICK_SUM_HANKEL",
+  "mathematical_definition": "For F=Lambda'/Lambda and positive centered nodes, H_F(x,y)=(F(x)+F(y))/(x+y); a central order r contributes +r/(xy).",
+  "normalization_requirements": [
+    {
+      "comparison_role": "IDENTITY",
+      "field": "completed_normalization.critical_center",
+      "requirement": "Use the centered unitary variable z=s-1/2 and positive off-center rational nodes."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "kernel_convention",
+      "requirement": "Keep the PICK_SUM_HANKEL kernel explicit; its central atom is positive semidefinite."
+    },
+    {
+      "comparison_role": "COVARIANCE",
+      "field": "central_data",
+      "requirement": "Root number authorizes parity-only deflation; full deflation requires a separately certified central order."
+    }
+  ],
+  "notes": "The convention split is semantic, not cosmetic. Both contracts share one exact implementation.",
+  "output_contract": {
+    "arithmetic_classes": [
+      "SYNTHETIC_CONTROL"
+    ],
+    "global_claim_allowed": false,
+    "raw_schema_path": null,
+    "representations": [
+      "HASHED_ARTIFACT",
+      "MATRIX"
+    ]
+  },
+  "parameters": [
+    {
+      "constraints": {
+        "enum_values": [
+          "SYNTHETIC_CONTROLS_V1"
+        ]
+      },
+      "domain": "SYNTHETIC_CONTROLS_V1",
+      "name": "fixture",
+      "required": true,
+      "value_type": "ENUM"
+    },
+    {
+      "constraints": {
+        "enum_values": [
+          "RAW_PARITY_FULL"
+        ]
+      },
+      "domain": "RAW_PARITY_FULL",
+      "name": "deflation_bundle",
+      "required": true,
+      "value_type": "ENUM"
+    }
+  ],
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 738,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/738"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "DETECTOR_CONTRACT",
+  "reference_implementation": {
+    "entry_point": "make_packet",
+    "path": "research/l-families/atlas/gl2/deflation.py",
+    "source_sha256": "3f1036449edd6055a799f0af1bc291ec693252b9855727312b4b08023a655d29",
+    "version": "1"
+  },
+  "required_inputs": [
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "SYNTHETIC_MATRIX",
+      "name": "synthetic_matrix",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "ROOT_NUMBER",
+      "name": "root_number",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "CENTRAL_ORDER",
+      "name": "central_order",
+      "required": true
+    }
+  ],
+  "revision": 1,
+  "schema_version": "riemann.atlas.detector_contract.v1",
+  "scope_boundary": "Exact rational synthetic controls only; no arithmetic GL(2) value or zero is evaluated.",
+  "semantic_id": "ATLAS.DETECTOR.GL2.DEFLATION.PICK_SUM_HANKEL.H1b4606ccacf35380aec6e46c59cb0bae",
+  "supersedes": [],
+  "theorem_links": [
+    {
+      "scope": "The sum/Hankel convention is source-compatible; no GL(2) positivity transfers.",
+      "semantic_id": "OPERATOR.XI.PICK_ORDER2",
+      "status": "VERIFIED_WITH_FIXES"
+    },
+    {
+      "scope": "Average excess-rank-square theorem nominated by the exact residual identity.",
+      "semantic_id": "TWIST-EXCESS-RANK-L2",
+      "status": "PROPOSED"
+    }
+  ],
+  "title": "GL(2) central-zero deflation: Pick sum/Hankel convention"
+}

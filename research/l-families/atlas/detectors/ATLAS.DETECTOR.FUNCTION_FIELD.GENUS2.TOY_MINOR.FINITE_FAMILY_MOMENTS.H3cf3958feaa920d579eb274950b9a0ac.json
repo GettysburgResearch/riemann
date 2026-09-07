@@ -1,0 +1,348 @@
+{
+  "central_zero_policy": "NOT_APPLICABLE",
+  "detector_kind": "COEFFICIENT_DISPERSION",
+  "failure_modes": [
+    {
+      "code": "SCAN_MISTAKEN_FOR_PROOF",
+      "description": "Agreement at q=3,5,7 is presented as the proof of the all-q identity.",
+      "hostile_control": "The theorem is bound to a separate complete proof note and exact Q[q] certificate; the scans are explicitly regression controls only."
+    },
+    {
+      "code": "TOY_KERNEL_CONFLATION",
+      "description": "The coefficient minor is identified with Pick/Loewner, XD, or HCNC.",
+      "hostile_control": "The detector, result, and evaluation all retain the analytic-kernel firewall."
+    },
+    {
+      "code": "RESOURCE_SCOPE_DRIFT",
+      "description": "A larger field silently expands the O(q^7) scan.",
+      "hostile_control": "The implementation refuses q outside 3,5,7, caps each field at 20,000 candidates, and enforces a global <=8-second replay deadline."
+    },
+    {
+      "code": "DENSITY_FLOOR_MISTAKEN_FOR_SIGN_LAW",
+      "description": "The lower bound on negative members is presented as a limiting sign distribution.",
+      "hostile_control": "Every record states only the one-sided floor derived from the exact mean and range, and explicitly withholds a sign law or equidistribution claim."
+    },
+    {
+      "code": "FINITE_AFFINE_ORBITS_MISTAKEN_FOR_LIMIT_LAW",
+      "description": "The q=3,5,7 orbit or stabilizer tables are extrapolated in q.",
+      "hostile_control": "The affine packet hard-refuses every other q, retains its own global <=8-second guard, and makes no asymptotic orbit claim."
+    },
+    {
+      "code": "ROADMAP_MISTAKEN_FOR_SECOND_MOMENT_FORMULA",
+      "description": "The exact signature census or three residual checks are presented as an all-q formula for E[K_D^2] or as an equidistribution theorem.",
+      "hostile_control": "The source, fixture, result, and evaluation all keep PARTIAL roadmap status and name the six primitive-coefficient families and the honest high-weight packet that remain unevaluated for general q."
+    }
+  ],
+  "family_adapters": [
+    {
+      "adapter_path": "research/l-families/atlas/function_field/genus2_q_scan.py",
+      "correction": "Use each field's exact F_(q^2) model and normalize K only after integer aggregation.",
+      "family": "F3_F5_F7_QUADRATIC_QUINTIC_GENUS2",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": "research/l-families/atlas/function_field/genus2_affine_orbits.py",
+      "correction": "Use the monic right action of AGL(1,F_q), exhaust every member-action pair, and retain exact orbit-stabilizer and sign summaries.",
+      "family": "F3_F5_F7_QUINTIC_AFFINE_ORBITS",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": "research/l-families/atlas/function_field/genus2_second_moment_reduction.py",
+      "correction": "Enumerate exactly 20 M22 and 54 B4 signatures without field enumeration; retain the six primitive-coefficient families and refined honest high-weight packet as explicit unresolved burdens.",
+      "family": "GENUS2_SECOND_MOMENT_SYMBOLIC_REDUCTION",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": null,
+      "correction": "No transfer from finite-field coefficient moments is supplied.",
+      "family": "NUMBER_FIELD",
+      "status": "UNSUPPORTED"
+    }
+  ],
+  "formalization_refs": [
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
+      "state": "PARTIAL",
+      "target": "Complete prose proof of the registered genus-two coefficient-moment identities."
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus2_moment_identity.py",
+      "state": "PARTIAL",
+      "target": "Bounded exact Q[q] certificate for every polynomial identity in the proof."
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus2_second_moment_reduction.py",
+      "state": "PARTIAL",
+      "target": "Bounded exact 20+54 signature and C2 character reduction for the open second toy moment."
+    }
+  ],
+  "identity_kernel": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "contract_revision": 3,
+    "kernel_convention": "COEFFICIENT_DISPERSION",
+    "mathematical_definition": "For each monic squarefree quintic D over F_q, q in {3,5,7}, reconstruct P_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4 from exact F_q and F_(q^2) character sums, set K_D=q*a_D^2-b_D^2=B_D(1)B_D(3)-B_D(2)^2, and record the exact finite-family moments of K_D and K_D/q^2 together with the exact first moment of b_D, the mixed moment a_D^2*b_D, and second/fourth moments of the trace coefficient a_D; attach the exact bounded K_D^2 reduction without asserting an all-q second-moment formula.",
+    "normalization_requirements": [
+      "Use exactly q_values=[3,5,7] and all monic squarefree quintics in each field.",
+      "Use K_D=q*a_D^2-b_D^2 and normalize only by q^2 after the exact integer K_D is formed.",
+      "Use a 20,000-candidate cap per field and a global monotonic wall guard no larger than eight seconds.",
+      "Freeze candidate_cap_scope=PER_FIELD_Q_SCAN; the cap is not a combined-replay total.",
+      "Under D^{alpha,beta}(T)=alpha^(-5)D(alpha*T+beta), require a' = chi(alpha)a, b' = b, and K' = K.",
+      "Keep the exact K_D^2 signature packet at PARTIAL proof-roadmap status: A4 is proved, while M22 and B4 remain unevaluated.",
+      "Treat K_D only as a toy reciprocal-coefficient minor, not Pick/Loewner, XD, or HCNC."
+    ],
+    "slug": "FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS",
+    "version": 1
+  },
+  "identity_sha256": "3cf3958feaa920d579eb274950b9a0ac1377df55c70310b424ca419644b45614",
+  "invariances": [
+    {
+      "code": "GENUS2_MINOR_IDENTITY",
+      "statement": "B_1*B_3-B_2^2=q*a_1^2-a_2^2 for the palindromic degree-four numerator.",
+      "status": "PROVED"
+    },
+    {
+      "code": "FINITE_CHARACTER_RECONSTRUCTION",
+      "statement": "a_D and b_D are reconstructed exactly from F_q and F_(q^2) character sums.",
+      "status": "PROVED"
+    },
+    {
+      "code": "CROSS_Q_CLOSED_FORM",
+      "statement": "The displayed a_D^2, a_D^4, a_D^2*b_D, b_D, b_D^2, and K_D mean formulas hold for every odd prime power q.",
+      "status": "PROVED"
+    },
+    {
+      "code": "NEGATIVE_SIGN_DENSITY_FLOOR",
+      "statement": "The exact mean and F(U)>=-20 imply rho_-(q)>=P(q)/(20*q^5) for every odd prime power q, with liminf at least 1/20.",
+      "status": "PROVED"
+    },
+    {
+      "code": "AFFINE_TOY_MINOR_INVARIANCE",
+      "statement": "For D^{alpha,beta}(T)=alpha^(-5)D(alpha*T+beta), exact change of variables gives a'=chi(alpha)a, b'=b, and K'=K.",
+      "status": "PROVED"
+    }
+  ],
+  "kernel_convention": "COEFFICIENT_DISPERSION",
+  "mathematical_definition": "For each monic squarefree quintic D over F_q, q in {3,5,7}, reconstruct P_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4 from exact F_q and F_(q^2) character sums, set K_D=q*a_D^2-b_D^2=B_D(1)B_D(3)-B_D(2)^2, and record the exact finite-family moments of K_D and K_D/q^2 together with the exact first moment of b_D, the mixed moment a_D^2*b_D, and second/fourth moments of the trace coefficient a_D; attach the exact bounded K_D^2 reduction without asserting an all-q second-moment formula.",
+  "normalization_requirements": [
+    {
+      "comparison_role": "IDENTITY",
+      "field": "configuration.q_values",
+      "requirement": "Use exactly q_values=[3,5,7] and all monic squarefree quintics in each field."
+    },
+    {
+      "comparison_role": "SCALING",
+      "field": "configuration.statistic",
+      "requirement": "Use K_D=q*a_D^2-b_D^2 and normalize only by q^2 after the exact integer K_D is formed."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "configuration.candidate_cap",
+      "requirement": "Use a 20,000-candidate cap per field and a global monotonic wall guard no larger than eight seconds."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "configuration.candidate_cap_scope",
+      "requirement": "Freeze candidate_cap_scope=PER_FIELD_Q_SCAN; the cap is not a combined-replay total."
+    },
+    {
+      "comparison_role": "IDENTITY",
+      "field": "result.artifact.affine_orbit_certificate",
+      "requirement": "Under D^{alpha,beta}(T)=alpha^(-5)D(alpha*T+beta), require a' = chi(alpha)a, b' = b, and K' = K."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "result.artifact.second_moment_reduction",
+      "requirement": "Keep the exact K_D^2 signature packet at PARTIAL proof-roadmap status: A4 is proved, while M22 and B4 remain unevaluated."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "detector_kind",
+      "requirement": "Treat K_D only as a toy reciprocal-coefficient minor, not Pick/Loewner, XD, or HCNC."
+    }
+  ],
+  "notes": "The q=3,5,7 histograms are finite exact computations. The separately bound DRAFT proof establishes the displayed a_D^2, a_D^4, a_D^2*b_D, b_D, b_D^2, and K_D formulas, including the normalized toy-minor first-moment limit, for every odd prime power; the separately replayed affine packet proves the exact action law and finite orbit partitions only at q=3,5,7. The mixed a_D^2*b_D^2 and b_D^4 moments needed for K_D^2, and equidistribution, remain open; the separately replayed PARTIAL roadmap reduces them to six primitive-coefficient families and the honest high-weight packet chi_04+chi_22+2*chi_03 without evaluating either for general q.",
+  "output_contract": {
+    "arithmetic_classes": [
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "global_claim_allowed": false,
+    "raw_schema_path": "research/l-families/atlas/detectors/raw-schemas/function-field-genus2-q-scan-result.schema.json",
+    "representations": [
+      "HASHED_ARTIFACT"
+    ]
+  },
+  "parameters": [
+    {
+      "constraints": {
+        "element_minimum": 3,
+        "frozen_value": [
+          3,
+          5,
+          7
+        ],
+        "nonempty": true,
+        "odd": true,
+        "strictly_increasing": true,
+        "unique": true
+      },
+      "domain": "exactly 3,5,7",
+      "name": "q_values",
+      "required": true,
+      "value_type": "INTEGER_LIST"
+    },
+    {
+      "constraints": {
+        "frozen_value": 5,
+        "minimum": 1,
+        "odd": true
+      },
+      "domain": "positive odd integer; frozen value 5",
+      "name": "conductor_degree",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "frozen_value": 20000,
+        "minimum": 16807
+      },
+      "domain": "positive per-field integer; frozen value 20000",
+      "name": "candidate_cap",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "enum_values": [
+          "PER_FIELD_Q_SCAN"
+        ]
+      },
+      "domain": "PER_FIELD_Q_SCAN",
+      "name": "candidate_cap_scope",
+      "required": true,
+      "value_type": "ENUM"
+    },
+    {
+      "constraints": {
+        "frozen_value": "8.0"
+      },
+      "domain": "8.0",
+      "name": "maximum_wall_seconds",
+      "required": true,
+      "value_type": "DECIMAL_STRING"
+    },
+    {
+      "constraints": {
+        "enum_values": [
+          "TOY_MINOR_K_AND_NORMALIZED_MOMENTS"
+        ]
+      },
+      "domain": "TOY_MINOR_K_AND_NORMALIZED_MOMENTS",
+      "name": "statistic",
+      "required": true,
+      "value_type": "ENUM"
+    }
+  ],
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 737,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/737"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "DETECTOR_CONTRACT",
+  "reference_implementation": {
+    "entry_point": "build_fixture",
+    "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
+    "source_sha256": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935",
+    "version": "1"
+  },
+  "required_inputs": [
+    {
+      "coverage_requirement": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "RAW_ARTIFACT",
+      "name": "exact_family_scan",
+      "required": true
+    },
+    {
+      "coverage_requirement": "COMPLETE",
+      "input_type": "RAW_ARTIFACT",
+      "name": "moment_identity_proof",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "RAW_ARTIFACT",
+      "name": "affine_orbit_certificate",
+      "required": true
+    },
+    {
+      "coverage_requirement": "PARTIAL",
+      "input_type": "RAW_ARTIFACT",
+      "name": "second_moment_reduction_roadmap",
+      "required": true
+    }
+  ],
+  "revision": 3,
+  "schema_version": "riemann.atlas.detector_contract.v1",
+  "scope_boundary": "Exhaustive histograms only for q=3,5,7, plus proof-backed b_D and toy-minor first moments, second/fourth trace moments, and the mixed a_D^2*b_D moment for every odd prime power, with the consequent negative-sign density floor. The exact affine action law is replayed with complete orbit partitions only at q=3,5,7; no full sign law, asymptotic orbit law, or all-q second-moment formula follows from the separately replayed PARTIAL reduction roadmap. There is no higher-moment equidistribution, zero statement, analytic-kernel conclusion, or number-field transfer.",
+  "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS.H3cf3958feaa920d579eb274950b9a0ac",
+  "supersedes": [],
+  "theorem_links": [
+    {
+      "scope": "Proved in the bound DRAFT research note for every odd prime power by an exact squarefree-Moebius character-correlation calculation.",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TOY_MINOR.MEAN_FORMULA",
+      "status": "VERIFIED"
+    },
+    {
+      "scope": "The normalized first moment tends to -1 immediately from the exact formula; this is not a higher-moment equidistribution theorem.",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR_FIRST_MOMENT",
+      "status": "VERIFIED"
+    },
+    {
+      "scope": "Ordered-linear reweighting of the proved quartic character table gives E[a_D^4]=3q^2-7q+5+12/q-14/q^2-11/q^3 for every odd prime power.",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TRACE.FOURTH_MOMENT",
+      "status": "VERIFIED"
+    },
+    {
+      "scope": "The three degree-two factorization types give E[b_D]=q-1+(q^2-1)/q^3 for every odd prime power.",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.MIDDLE_COEFFICIENT.MEAN",
+      "status": "VERIFIED"
+    },
+    {
+      "scope": "Quartic-row reweighting gives the displayed exact E[a_D^2*b_D] formula for every odd prime power.",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TRACE_SQUARED_MIDDLE.MEAN",
+      "status": "VERIFIED"
+    },
+    {
+      "scope": "The proved a_D^2, b_D, b_D^2, a_D^2*b_D, and a_D^4 formulas isolate five exact low-weight character means through chi_(4,0).",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.LOW_WEIGHT_CHARACTER_PROFILE",
+      "status": "VERIFIED"
+    },
+    {
+      "scope": "For every odd prime power, the exact first moment and exact lower range bound give rho_-(q)>=P(q)/(20*q^5) and liminf rho_-(q)>=1/20; this is not a sign law.",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TOY_MINOR.NEGATIVE_SIGN_DENSITY",
+      "status": "VERIFIED"
+    },
+    {
+      "scope": "The exact master identity, 20+54 signature census, six primitive-coefficient families, and refined honest high-weight USp(4) obstruction are replayed. M22 and B4 are not evaluated for every odd prime power.",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TOY_MINOR.SECOND_MOMENT_REDUCTION",
+      "status": "OPEN"
+    }
+  ],
+  "title": "Exact genus-two toy-minor finite-family moment scan"
+}

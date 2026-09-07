@@ -1,0 +1,53 @@
+{
+  "schema": "gl2-deflation-synthetic-controls-v1",
+  "rigor_level": "EXACT_RATIONAL_SYNTHETIC_CONTROL",
+  "arithmetic_l_function_data": false,
+  "description": "Exact algebra controls only. These records are not LMFDB objects and carry no claim about a genuine GL(2) L-function.",
+  "controls": [
+    {
+      "id": "minimal-odd-quadratic",
+      "label": "SYNTHETIC_CONTROL",
+      "nodes": ["1", "2"],
+      "root_number": -1,
+      "central_order": 1,
+      "background": {"c": "1", "d": "0"},
+      "purpose": "The parity-forced simple zero is the entire central atom."
+    },
+    {
+      "id": "excess-odd-quadratic",
+      "label": "SYNTHETIC_CONTROL",
+      "nodes": ["1", "2"],
+      "root_number": -1,
+      "central_order": 3,
+      "background": {"c": "1", "d": "0"},
+      "purpose": "Parity-only deflation leaves an exact residual atom of multiplicity two."
+    },
+    {
+      "id": "unforced-even-quadratic",
+      "label": "SYNTHETIC_CONTROL",
+      "nodes": ["1", "2"],
+      "root_number": 1,
+      "central_order": 2,
+      "background": {"c": "1", "d": "0"},
+      "purpose": "A positive root number forces no zero, so sign-only deflation removes nothing."
+    },
+    {
+      "id": "indefinite-quartic-background",
+      "label": "SYNTHETIC_HOSTILE_CONTROL",
+      "nodes": ["1", "2", "4"],
+      "root_number": -1,
+      "central_order": 1,
+      "background": {"c": "1", "d": "1"},
+      "purpose": "Full deflation restores an indefinite background; deflation is bookkeeping, not a positivity theorem."
+    },
+    {
+      "id": "parity-mismatch-rejected",
+      "label": "SYNTHETIC_NEGATIVE_CONTROL",
+      "nodes": ["1", "2"],
+      "root_number": 1,
+      "central_order": 1,
+      "background": {"c": "1", "d": "0"},
+      "expected_error": "central-order parity is incompatible with the root number"
+    }
+  ]
+}

@@ -1,0 +1,513 @@
+{
+  "schema": "riemann.function_field.genus2_family_measures.v1",
+  "raw_fixture_id": "FUNCTION_FIELD.GENUS2.AFFINE_MODEL_MEASURES.Q3_Q5_Q7.V1",
+  "rigor_level": "RIGOROUS_ALL_ODD_Q_LEMMA_WITH_FROZEN_FINITE_COMPARISONS",
+  "status": "EXACT_STACK_IDENTITY_WITH_FROZEN_MEASURE_COMPARISONS",
+  "theorem": {
+    "family": "H_5(q), monic squarefree quintics over F_q",
+    "group": "AGL(1,F_q) acting by D(T)->alpha^(-5)D(alpha*T+beta)",
+    "all_q_scope": "every odd prime power q",
+    "stack_cardinality": "sum_[D] 1/|Stab(D)|=q^3",
+    "invariant_average": "|H_5(q)|^(-1) sum_D f(D)=q^(-3) sum_[D] f(D)/|Stab(D)|",
+    "hypothesis_on_f": "f is invariant under the declared AGL(1,F_q) action",
+    "proof": "|H_5(q)|=q^4(q-1), |AGL(1,q)|=q(q-1), and orbit-stabilizer gives |Orbit(D)|=|G|/|Stab(D)|",
+    "coarse_orbit_count": "q^3+q-1+2*1_(4 divides q-1)+4*1_(5 divides q-1)+1_(characteristic(q)=5)",
+    "burnside_fixed_shapes": {
+      "order_2": "S^5+c3*S^3+c1*S, squarefree for (q-1)^2 pairs",
+      "order_3": "S^5+c2*S^2, never squarefree",
+      "order_4": "S^5+c1*S, squarefree for q-1 nonzero c1",
+      "order_5": "S^5+c0, squarefree for q-1 nonzero c0",
+      "translations": "none unless characteristic 5; then S^5-beta^4*S+c0 gives q squarefree fixed polynomials per nonzero translation",
+      "other_scaling_orders": "only S^5 is fixed, hence not squarefree"
+    },
+    "measure_comparison": {
+      "orbit_excess": "delta_q=N_q-q^3=q-1+2*1_(4 divides q-1)+4*1_(5 divides q-1)+1_(characteristic(q)=5)",
+      "total_variation_bound": "TV(uniform coarse orbits, stack)<=delta_q/q^3",
+      "asymptotic_rate": "O(q^(-2))",
+      "bounded_invariant_consequence": "for |f|<=M, |E_coarse(f)-E_stack(f)|<=2*M*delta_q/q^3"
+    }
+  },
+  "producer": {
+    "script": "genus2_family_measures.py",
+    "source_sha256_lf_normalized": "705af3993a1801f6d4704b3d532165c4fea92ce47b25ce59e95c255d31f03414",
+    "affine_fixture": "genus2_affine_orbits.json",
+    "affine_fixture_canonical_sha256": "2849d152b93023a30951f0f8f9b6e9ca2bb7234d210602fcb1d2973977db7994",
+    "affine_fixture_payload_sha256": "9f55481e43e096d7495d1c2966634e24b69ea15b986d5777af79efe9627a98d1"
+  },
+  "resource_contract": {
+    "field_enumeration": false,
+    "input_byte_cap": 200000,
+    "frozen_q_values": [
+      3,
+      5,
+      7
+    ],
+    "arithmetic": "exact integers and fractions"
+  },
+  "families": [
+    {
+      "q": 3,
+      "member_count": 162,
+      "group_order": 6,
+      "orbit_count": 29,
+      "quotient_stack_cardinality": [
+        27,
+        1
+      ],
+      "burnside_census": {
+        "characteristic": 3,
+        "fixed_point_contribution_sums": {
+          "identity": 162,
+          "order_2_scalings": 12,
+          "order_4_scalings": 0,
+          "order_5_scalings": 0,
+          "nonidentity_translations": 0
+        },
+        "all_other_nonidentity_elements_contribute": 0,
+        "burnside_numerator": 174,
+        "orbit_count": 29,
+        "closed_formula_value": 29
+      },
+      "coarse_orbit_excess_over_stack_mass": 2,
+      "total_variation_uniform_orbits_vs_model_affine_stack": [
+        50,
+        783
+      ],
+      "total_variation_from_free_orbit_deficit": [
+        50,
+        783
+      ],
+      "universal_total_variation_upper_bound": [
+        2,
+        27
+      ],
+      "nonfree_locus": {
+        "orbit_count": 4,
+        "member_count": 12,
+        "uniform_orbit_fraction": [
+          4,
+          29
+        ],
+        "uniform_model_equals_affine_stack_fraction": [
+          2,
+          27
+        ]
+      },
+      "stabilizer_strata": [
+        {
+          "stabilizer_order": 1,
+          "orbit_size": 6,
+          "orbit_count": 25,
+          "uniform_orbit_weight_each": [
+            1,
+            29
+          ],
+          "stack_weight_each": [
+            1,
+            27
+          ],
+          "coarse_to_stack_weight_ratio": [
+            27,
+            29
+          ]
+        },
+        {
+          "stabilizer_order": 2,
+          "orbit_size": 3,
+          "orbit_count": 4,
+          "uniform_orbit_weight_each": [
+            1,
+            29
+          ],
+          "stack_weight_each": [
+            1,
+            54
+          ],
+          "coarse_to_stack_weight_ratio": [
+            54,
+            29
+          ]
+        }
+      ],
+      "sign_measures": {
+        "negative": {
+          "orbit_count": 19,
+          "member_count": 102,
+          "uniform_coarse_orbit_fraction": [
+            19,
+            29
+          ],
+          "uniform_model_equals_affine_stack_fraction": [
+            17,
+            27
+          ],
+          "coarse_minus_model_affine_stack": [
+            20,
+            783
+          ]
+        },
+        "zero": {
+          "orbit_count": 2,
+          "member_count": 12,
+          "uniform_coarse_orbit_fraction": [
+            2,
+            29
+          ],
+          "uniform_model_equals_affine_stack_fraction": [
+            2,
+            27
+          ],
+          "coarse_minus_model_affine_stack": [
+            -4,
+            783
+          ]
+        },
+        "positive": {
+          "orbit_count": 8,
+          "member_count": 48,
+          "uniform_coarse_orbit_fraction": [
+            8,
+            29
+          ],
+          "uniform_model_equals_affine_stack_fraction": [
+            8,
+            27
+          ],
+          "coarse_minus_model_affine_stack": [
+            -16,
+            783
+          ]
+        }
+      }
+    },
+    {
+      "q": 5,
+      "member_count": 2500,
+      "group_order": 20,
+      "orbit_count": 132,
+      "quotient_stack_cardinality": [
+        125,
+        1
+      ],
+      "burnside_census": {
+        "characteristic": 5,
+        "fixed_point_contribution_sums": {
+          "identity": 2500,
+          "order_2_scalings": 80,
+          "order_4_scalings": 40,
+          "order_5_scalings": 0,
+          "nonidentity_translations": 20
+        },
+        "all_other_nonidentity_elements_contribute": 0,
+        "burnside_numerator": 2640,
+        "orbit_count": 132,
+        "closed_formula_value": 132
+      },
+      "coarse_orbit_excess_over_stack_mass": 7,
+      "total_variation_uniform_orbits_vs_model_affine_stack": [
+        77,
+        1500
+      ],
+      "total_variation_from_free_orbit_deficit": [
+        77,
+        1500
+      ],
+      "universal_total_variation_upper_bound": [
+        7,
+        125
+      ],
+      "nonfree_locus": {
+        "orbit_count": 11,
+        "member_count": 80,
+        "uniform_orbit_fraction": [
+          1,
+          12
+        ],
+        "uniform_model_equals_affine_stack_fraction": [
+          4,
+          125
+        ]
+      },
+      "stabilizer_strata": [
+        {
+          "stabilizer_order": 1,
+          "orbit_size": 20,
+          "orbit_count": 121,
+          "uniform_orbit_weight_each": [
+            1,
+            132
+          ],
+          "stack_weight_each": [
+            1,
+            125
+          ],
+          "coarse_to_stack_weight_ratio": [
+            125,
+            132
+          ]
+        },
+        {
+          "stabilizer_order": 2,
+          "orbit_size": 10,
+          "orbit_count": 6,
+          "uniform_orbit_weight_each": [
+            1,
+            132
+          ],
+          "stack_weight_each": [
+            1,
+            250
+          ],
+          "coarse_to_stack_weight_ratio": [
+            125,
+            66
+          ]
+        },
+        {
+          "stabilizer_order": 4,
+          "orbit_size": 5,
+          "orbit_count": 3,
+          "uniform_orbit_weight_each": [
+            1,
+            132
+          ],
+          "stack_weight_each": [
+            1,
+            500
+          ],
+          "coarse_to_stack_weight_ratio": [
+            125,
+            33
+          ]
+        },
+        {
+          "stabilizer_order": 5,
+          "orbit_size": 4,
+          "orbit_count": 1,
+          "uniform_orbit_weight_each": [
+            1,
+            132
+          ],
+          "stack_weight_each": [
+            1,
+            625
+          ],
+          "coarse_to_stack_weight_ratio": [
+            625,
+            132
+          ]
+        },
+        {
+          "stabilizer_order": 20,
+          "orbit_size": 1,
+          "orbit_count": 1,
+          "uniform_orbit_weight_each": [
+            1,
+            132
+          ],
+          "stack_weight_each": [
+            1,
+            2500
+          ],
+          "coarse_to_stack_weight_ratio": [
+            625,
+            33
+          ]
+        }
+      ],
+      "sign_measures": {
+        "negative": {
+          "orbit_count": 86,
+          "member_count": 1650,
+          "uniform_coarse_orbit_fraction": [
+            43,
+            66
+          ],
+          "uniform_model_equals_affine_stack_fraction": [
+            33,
+            50
+          ],
+          "coarse_minus_model_affine_stack": [
+            -7,
+            825
+          ]
+        },
+        "zero": {
+          "orbit_count": 4,
+          "member_count": 50,
+          "uniform_coarse_orbit_fraction": [
+            1,
+            33
+          ],
+          "uniform_model_equals_affine_stack_fraction": [
+            1,
+            50
+          ],
+          "coarse_minus_model_affine_stack": [
+            17,
+            1650
+          ]
+        },
+        "positive": {
+          "orbit_count": 42,
+          "member_count": 800,
+          "uniform_coarse_orbit_fraction": [
+            7,
+            22
+          ],
+          "uniform_model_equals_affine_stack_fraction": [
+            8,
+            25
+          ],
+          "coarse_minus_model_affine_stack": [
+            -1,
+            550
+          ]
+        }
+      }
+    },
+    {
+      "q": 7,
+      "member_count": 14406,
+      "group_order": 42,
+      "orbit_count": 349,
+      "quotient_stack_cardinality": [
+        343,
+        1
+      ],
+      "burnside_census": {
+        "characteristic": 7,
+        "fixed_point_contribution_sums": {
+          "identity": 14406,
+          "order_2_scalings": 252,
+          "order_4_scalings": 0,
+          "order_5_scalings": 0,
+          "nonidentity_translations": 0
+        },
+        "all_other_nonidentity_elements_contribute": 0,
+        "burnside_numerator": 14658,
+        "orbit_count": 349,
+        "closed_formula_value": 349
+      },
+      "coarse_orbit_excess_over_stack_mass": 6,
+      "total_variation_uniform_orbits_vs_model_affine_stack": [
+        2022,
+        119707
+      ],
+      "total_variation_from_free_orbit_deficit": [
+        2022,
+        119707
+      ],
+      "universal_total_variation_upper_bound": [
+        6,
+        343
+      ],
+      "nonfree_locus": {
+        "orbit_count": 12,
+        "member_count": 252,
+        "uniform_orbit_fraction": [
+          12,
+          349
+        ],
+        "uniform_model_equals_affine_stack_fraction": [
+          6,
+          343
+        ]
+      },
+      "stabilizer_strata": [
+        {
+          "stabilizer_order": 1,
+          "orbit_size": 42,
+          "orbit_count": 337,
+          "uniform_orbit_weight_each": [
+            1,
+            349
+          ],
+          "stack_weight_each": [
+            1,
+            343
+          ],
+          "coarse_to_stack_weight_ratio": [
+            343,
+            349
+          ]
+        },
+        {
+          "stabilizer_order": 2,
+          "orbit_size": 21,
+          "orbit_count": 12,
+          "uniform_orbit_weight_each": [
+            1,
+            349
+          ],
+          "stack_weight_each": [
+            1,
+            686
+          ],
+          "coarse_to_stack_weight_ratio": [
+            686,
+            349
+          ]
+        }
+      ],
+      "sign_measures": {
+        "negative": {
+          "orbit_count": 237,
+          "member_count": 9702,
+          "uniform_coarse_orbit_fraction": [
+            237,
+            349
+          ],
+          "uniform_model_equals_affine_stack_fraction": [
+            33,
+            49
+          ],
+          "coarse_minus_model_affine_stack": [
+            96,
+            17101
+          ]
+        },
+        "zero": {
+          "orbit_count": 8,
+          "member_count": 336,
+          "uniform_coarse_orbit_fraction": [
+            8,
+            349
+          ],
+          "uniform_model_equals_affine_stack_fraction": [
+            8,
+            343
+          ],
+          "coarse_minus_model_affine_stack": [
+            -48,
+            119707
+          ]
+        },
+        "positive": {
+          "orbit_count": 104,
+          "member_count": 4368,
+          "uniform_coarse_orbit_fraction": [
+            104,
+            349
+          ],
+          "uniform_model_equals_affine_stack_fraction": [
+            104,
+            343
+          ],
+          "coarse_minus_model_affine_stack": [
+            -624,
+            119707
+          ]
+        }
+      }
+    }
+  ],
+  "scope": {
+    "not_the_full_curve_isomorphism_stack": true,
+    "marked_infinity_affine_model_quotient_only": true,
+    "frozen_measure_distortions_are_not_asymptotic_laws": true,
+    "not_an_equidistribution_or_number_field_transfer": true,
+    "interpretation": "Uniform polynomial models already equal stabilizer-weighted stack averaging for this affine quotient; uniform orbit representatives define a different and generally biased family measure."
+  },
+  "payload_sha256": "23b905a8225d00080f00b238f51259b62f3a6c0d489c36168a32ec5580c7c79b"
+}

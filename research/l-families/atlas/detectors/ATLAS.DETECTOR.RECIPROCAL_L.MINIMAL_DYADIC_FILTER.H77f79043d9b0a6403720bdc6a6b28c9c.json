@@ -1,0 +1,200 @@
+{
+  "central_zero_policy": "NOT_APPLICABLE",
+  "detector_kind": "RECIPROCAL_L_MELLIN_WAVELET",
+  "failure_modes": [
+    {
+      "code": "BAD_FACTOR_OMISSION",
+      "description": "Dropping or guessing a conductor-prime factor changes the reciprocal series.",
+      "hostile_control": "The three semistable bad traces are declared; factors at 11 and 37 are exercised inside the n<=256 window."
+    },
+    {
+      "code": "CLASSICAL_UNITARY_CONFLATION",
+      "description": "Integral classical reciprocal coefficients are not the unitary coefficients for positive motivic weight.",
+      "hostile_control": "Every subject records its exact classical-to-unitary coefficient map."
+    },
+    {
+      "code": "ENDPOINT_DRIFT",
+      "description": "Changing <= to < or replacing floor dyadic endpoints changes finite rows.",
+      "hostile_control": "The endpoint convention is a required singleton parameter."
+    },
+    {
+      "code": "ZETA_ABSCISSA_TRANSFER",
+      "description": "The reviewed zeta abscissa theorem does not automatically hold for another completion.",
+      "hostile_control": "Evaluation interpretation is finite coefficient reconnaissance only."
+    }
+  ],
+  "family_adapters": [
+    {
+      "adapter_path": "research/l-families/atlas/core/reciprocal_wavelet.py",
+      "correction": "Use degree-one classical local reciprocal factors; weight zero makes the classical/unitary coefficient map trivial.",
+      "family": "GL1_ZETA_DIRICHLET",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": "research/l-families/atlas/core/reciprocal_wavelet.py",
+      "correction": "Use classical factors 1-a_pT+pT^2 (and explicit bad factors); the unitary reciprocal coefficient is mu_cl(n)/sqrt(n).",
+      "family": "GL2_ELLIPTIC",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": null,
+      "correction": "Derive a degree-shift kernel rather than copying integer dyadic endpoints.",
+      "family": "FUNCTION_FIELD",
+      "status": "REQUIRED_OPEN"
+    }
+  ],
+  "formalization_refs": [
+    {
+      "path": null,
+      "state": "DEFINITION_READY",
+      "target": "Q(sqrt(2)) filter expansion and three annihilation identities."
+    }
+  ],
+  "identity_kernel": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "contract_revision": 1,
+    "kernel_convention": "RECIPROCAL_MELLIN",
+    "mathematical_definition": "For the classical-variable reciprocal coefficients mu_L^cl(n), let M_L^cl(Y)=sum_{1<=n<=Y} mu_L^cl(n) with inclusive integer endpoints and S_2 M(X)=M(floor(X/2)); evaluate W_L^cl(X)=(I-sqrt(2)S_2)(I-S_2)^2 M_L^cl(X).",
+    "normalization_requirements": [
+      "Use inclusive integer partial sums and S_2 M(X)=M(floor(X/2)).",
+      "Use classical-variable reciprocal coefficients and record the map to each spec's unitary normalization.",
+      "Use the full declared reciprocal Euler factor, including every explicit bad factor that lies in the coefficient window.",
+      "Store W_L(X) as exact integer coordinates in Q(sqrt(2))."
+    ],
+    "slug": "RECIPROCAL_L.MINIMAL_DYADIC_FILTER",
+    "version": 1
+  },
+  "identity_sha256": "77f79043d9b0a6403720bdc6a6b28c9c473ddab099d986321e96acd0f4758e8a",
+  "invariances": [
+    {
+      "code": "FILTER_FACTORIZATION",
+      "statement": "The expanded four-shell coefficients equal (I-sqrt(2)S_2)(I-S_2)^2.",
+      "status": "PROVED"
+    },
+    {
+      "code": "CONSTANT_DOUBLE_ANNIHILATION",
+      "statement": "The filter has a double root at S_2=1.",
+      "status": "PROVED"
+    },
+    {
+      "code": "SQRT_SCALE_ANNIHILATION",
+      "statement": "The filter vanishes at S_2=1/sqrt(2).",
+      "status": "PROVED"
+    }
+  ],
+  "kernel_convention": "RECIPROCAL_MELLIN",
+  "mathematical_definition": "For the classical-variable reciprocal coefficients mu_L^cl(n), let M_L^cl(Y)=sum_{1<=n<=Y} mu_L^cl(n) with inclusive integer endpoints and S_2 M(X)=M(floor(X/2)); evaluate W_L^cl(X)=(I-sqrt(2)S_2)(I-S_2)^2 M_L^cl(X).",
+  "normalization_requirements": [
+    {
+      "comparison_role": "IDENTITY",
+      "field": "configuration.endpoint_convention",
+      "requirement": "Use inclusive integer partial sums and S_2 M(X)=M(floor(X/2))."
+    },
+    {
+      "comparison_role": "SCALING",
+      "field": "completed_normalization",
+      "requirement": "Use classical-variable reciprocal coefficients and record the map to each spec's unitary normalization."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "euler_product.bad_factor_policy",
+      "requirement": "Use the full declared reciprocal Euler factor, including every explicit bad factor that lies in the coefficient window."
+    },
+    {
+      "comparison_role": "SCALING",
+      "field": "result.wavelet_qsqrt2",
+      "requirement": "Store W_L(X) as exact integer coordinates in Q(sqrt(2))."
+    }
+  ],
+  "notes": "This is the common coefficient-filter skeleton; analytic source/zero theorems remain family-specific adapters.",
+  "output_contract": {
+    "arithmetic_classes": [
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "global_claim_allowed": false,
+    "raw_schema_path": "research/l-families/atlas/detectors/raw-schemas/reciprocal-wavelet-result.schema.json",
+    "representations": [
+      "HASHED_ARTIFACT"
+    ]
+  },
+  "parameters": [
+    {
+      "constraints": {
+        "element_minimum": 1,
+        "element_multiple_of": 8,
+        "nonempty": true,
+        "strictly_increasing": true,
+        "unique": true
+      },
+      "domain": "positive multiples of 8",
+      "name": "endpoints",
+      "required": true,
+      "value_type": "INTEGER_LIST"
+    },
+    {
+      "constraints": {
+        "enum_values": [
+          "INCLUSIVE_FLOOR_DYADIC"
+        ]
+      },
+      "domain": "INCLUSIVE_FLOOR_DYADIC",
+      "name": "endpoint_convention",
+      "required": true,
+      "value_type": "ENUM"
+    }
+  ],
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 738,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/738"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "DETECTOR_CONTRACT",
+  "reference_implementation": {
+    "entry_point": "wavelet_rows",
+    "path": "research/l-families/atlas/core/reciprocal_wavelet.py",
+    "source_sha256": "a6244aeedf143433e576af847744ef6addb35b9462dc49a6c307c5ec41f2fce2",
+    "version": "1"
+  },
+  "required_inputs": [
+    {
+      "coverage_requirement": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "RECIPROCAL_COEFFICIENTS",
+      "name": "reciprocal_coefficients",
+      "required": true
+    }
+  ],
+  "revision": 1,
+  "schema_version": "riemann.atlas.detector_contract.v1",
+  "scope_boundary": "Finite classical-variable coefficient-filter evaluation only; no weighted-L2 abscissa or zero-detection conclusion transfers across families.",
+  "semantic_id": "ATLAS.DETECTOR.RECIPROCAL_L.MINIMAL_DYADIC_FILTER.H77f79043d9b0a6403720bdc6a6b28c9c",
+  "supersedes": [],
+  "theorem_links": [
+    {
+      "scope": "The exact filter polynomial is reused with the declared endpoint convention.",
+      "semantic_id": "ARITH.WAVELET.MINIMAL_RATIO8",
+      "status": "VERIFIED_WITH_FIXES"
+    },
+    {
+      "scope": "Zeta-specific analytic conclusion is not transferred to GL(1)/GL(2) rows.",
+      "semantic_id": "ARITH.WAVELET.SPECTRAL_ABSCISSA",
+      "status": "VERIFIED_WITH_FIXES"
+    }
+  ],
+  "title": "Exact reciprocal-L minimal dyadic filter skeleton"
+}

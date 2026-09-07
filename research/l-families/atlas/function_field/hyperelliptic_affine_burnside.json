@@ -1,0 +1,3134 @@
+{
+  "schema": "riemann.function_field.hyperelliptic_affine_burnside.v1",
+  "raw_fixture_id": "FUNCTION_FIELD.HYPERELLIPTIC.ODD_DEGREE.AFFINE_BURNSIDE.V1",
+  "rigor_level": "RIGOROUS_ALL_ODD_Q_ALL_FIXED_GENUS_THEOREM",
+  "status": "EXACT_CLOSED_BURNSIDE_DIVISOR_SUM",
+  "theorem": {
+    "family": "monic squarefree D of degree n=2g+1 over F_q",
+    "group_action": "D(T)->alpha^(-n)D(alpha*T+beta)",
+    "scope": "every odd prime power q and every integer g>=1",
+    "affine_stack_cardinality": "q^(2g-1)",
+    "coarse_orbit_count": "q^(2g-1) + sum_{d|q-1,d>=2,n mod d in {0,1}} phi(d)*(q^floor(n/d)-(-1)^floor(n/d))/(q+1) + 1_{p|n}*SF_q(n/p)/q",
+    "nonzero_constant_squarefree_count": "A_m=(q-1)*(q^m-(-1)^m)/(q+1), m>=1",
+    "universal_involution_correction": "(q^g-(-1)^g)/(q+1)",
+    "fixed_genus_asymptotic": "N_(g,q)=q^(2g-1)+(q^g-(-1)^g)/(q+1)+O_g(q^(floor((2g+1)/3)-1)); relative excess is q^(-g)+lower order",
+    "all_degree_orbit_generating_function": "O_q(u)=[S_q(u)+q*sum_{d|q-1,d>=2}phi(d)*(1+u)*A_q(u^d)+(q-1)*S_q(u^p)]/[q*(q-1)], where S_q(u)=(1-q*u^2)/(1-q*u) and A_q(u)=S_q(u)/(1+u)",
+    "automorphism_resonance_interpretation": "scaling corrections occupy degree classes 0,1 modulo d for d|q-1; translation corrections occupy multiples of p=char(F_q)",
+    "invariant_average": "uniform equations equal stabilizer-weighted averaging on the declared affine quotient"
+  },
+  "proof_skeleton": {
+    "scalings": "after translating the fixed point, an order-d scaling fixes exactly D(S)=S^r*h(S^d), r=n mod d; squarefreeness requires r in {0,1} and h squarefree with h(0)!=0",
+    "translations": "for beta!=0 in characteristic p, F_q[S]^(S->S+beta)=F_q[S^p-beta^(p-1)S]; fixed degree-n models exist iff p|n, and composition preserves squarefreeness",
+    "stack": "|H_n(q)|=q^(n-1)(q-1) and |AGL(1,q)|=q(q-1)"
+  },
+  "producer": {
+    "script": "hyperelliptic_affine_burnside.py",
+    "source_sha256_lf_normalized": "71bc64365fb1552dabbd9889d1401d4c2ceb8adf0496d94d3fd5febccd549899",
+    "note": "HYPERELLIPTIC_AFFINE_BURNSIDE.md",
+    "note_sha256_lf_normalized": "b4c583b109552835ecab1dd3fbaba4328eeb29acdf1d78b5c8cce1cf90051dc9",
+    "test": "tests/test_hyperelliptic_affine_burnside.py",
+    "test_sha256_lf_normalized": "7e1d0b952076f9a4de6614d32f3342dcb5b59e11ffa7e5ebf70a1cf66c1e5315"
+  },
+  "resource_contract": {
+    "field_enumeration": "FORBIDDEN_AND_NOT_USED",
+    "polynomial_enumeration": "FORBIDDEN_AND_NOT_USED",
+    "maximum_q": 1000000,
+    "maximum_genus": 32,
+    "maximum_divisor_inspections": 20000,
+    "observed_divisor_inspections": 192,
+    "maximum_series_degree": 65,
+    "fixture_series_degree": 17,
+    "maximum_series_term_inspections": 20000,
+    "observed_series_term_inspections": 432,
+    "fixture_q_values": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      25
+    ],
+    "fixture_maximum_genus": 8
+  },
+  "genus_two_regression": {
+    "3": 29,
+    "5": 132,
+    "7": 349
+  },
+  "all_degree_orbit_series": [
+    {
+      "q": 3,
+      "characteristic": 3,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        5,
+        11,
+        29,
+        90,
+        250,
+        749,
+        2213,
+        6622,
+        19744,
+        59249,
+        177329,
+        531988,
+        1594924,
+        4784609,
+        14350547
+      ],
+      "term_inspections": 18
+    },
+    {
+      "q": 5,
+      "characteristic": 5,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        6,
+        31,
+        132,
+        646,
+        3146,
+        15737,
+        78237,
+        391150,
+        1953646,
+        9768271,
+        48830771,
+        244153646,
+        1220716166,
+        6103580937,
+        30517643437
+      ],
+      "term_inspections": 36
+    },
+    {
+      "q": 7,
+      "characteristic": 7,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        10,
+        57,
+        349,
+        2458,
+        16865,
+        117949,
+        823929,
+        5766988,
+        40355708,
+        282490567,
+        1977342061,
+        13841390150,
+        96889117552,
+        678223797651,
+        4747562230543
+      ],
+      "term_inspections": 54
+    },
+    {
+      "q": 9,
+      "characteristic": 3,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        11,
+        91,
+        739,
+        6642,
+        59122,
+        532117,
+        4783717,
+        43052626,
+        387426394,
+        3486838339,
+        31381112899,
+        282430014778,
+        2541866312458,
+        22876796760977,
+        205891136400665
+      ],
+      "term_inspections": 54
+    },
+    {
+      "q": 11,
+      "characteristic": 11,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        12,
+        131,
+        1345,
+        14756,
+        161162,
+        1772781,
+        19488391,
+        214372346,
+        2357961157,
+        25937572231,
+        285311818241,
+        3138430000652,
+        34522713768306,
+        379749851446925,
+        4177248187278891
+      ],
+      "term_inspections": 54
+    },
+    {
+      "q": 13,
+      "characteristic": 13,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        16,
+        185,
+        2211,
+        28744,
+        371476,
+        4828873,
+        62750895,
+        815757556,
+        10604525894,
+        137858841043,
+        1792160743232,
+        23298089604518,
+        302875111127332,
+        3937376444022891,
+        51185893072361317
+      ],
+      "term_inspections": 90
+    },
+    {
+      "q": 25,
+      "characteristic": 5,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        28,
+        653,
+        15652,
+        391276,
+        9766276,
+        244155701,
+        6103531903,
+        152588267452,
+        3814697641226,
+        95367441061951,
+        2384185800436951,
+        59604645010141226,
+        1490116119620268028,
+        37252902990488686995,
+        931322574621347310793
+      ],
+      "term_inspections": 126
+    }
+  ],
+  "rows": [
+    {
+      "q": 3,
+      "characteristic": 3,
+      "genus": 1,
+      "degree": 3,
+      "group_order": 6,
+      "model_count": 18,
+      "affine_stack_cardinality": 3,
+      "coarse_orbit_count": 5,
+      "coarse_orbit_excess": 2,
+      "relative_excess": [
+        2,
+        3
+      ],
+      "universal_involution_correction": 1,
+      "lower_order_correction": 1,
+      "fixed_loci": {
+        "identity": 18,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 1,
+            "affine_element_count": 3,
+            "fixed_models_per_element": 2,
+            "burnside_numerator_contribution": 6
+          }
+        ],
+        "scaling_contribution_total": 6,
+        "nonidentity_translation_count": 2,
+        "translation_fixed_models_per_element": 3,
+        "translation_contribution_total": 6
+      },
+      "closed_divisor_sum": {
+        "stack_term": 3,
+        "scaling_correction": 1,
+        "translation_correction": 1,
+        "total": 5
+      },
+      "resource_usage": {
+        "divisor_inspections": 1
+      }
+    },
+    {
+      "q": 3,
+      "characteristic": 3,
+      "genus": 2,
+      "degree": 5,
+      "group_order": 6,
+      "model_count": 162,
+      "affine_stack_cardinality": 27,
+      "coarse_orbit_count": 29,
+      "coarse_orbit_excess": 2,
+      "relative_excess": [
+        2,
+        27
+      ],
+      "universal_involution_correction": 2,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 162,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 1,
+            "affine_element_count": 3,
+            "fixed_models_per_element": 4,
+            "burnside_numerator_contribution": 12
+          }
+        ],
+        "scaling_contribution_total": 12,
+        "nonidentity_translation_count": 2,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 27,
+        "scaling_correction": 2,
+        "translation_correction": 0,
+        "total": 29
+      },
+      "resource_usage": {
+        "divisor_inspections": 1
+      }
+    },
+    {
+      "q": 3,
+      "characteristic": 3,
+      "genus": 3,
+      "degree": 7,
+      "group_order": 6,
+      "model_count": 1458,
+      "affine_stack_cardinality": 243,
+      "coarse_orbit_count": 250,
+      "coarse_orbit_excess": 7,
+      "relative_excess": [
+        7,
+        243
+      ],
+      "universal_involution_correction": 7,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 1458,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 3,
+            "scaling_count": 1,
+            "affine_element_count": 3,
+            "fixed_models_per_element": 14,
+            "burnside_numerator_contribution": 42
+          }
+        ],
+        "scaling_contribution_total": 42,
+        "nonidentity_translation_count": 2,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 243,
+        "scaling_correction": 7,
+        "translation_correction": 0,
+        "total": 250
+      },
+      "resource_usage": {
+        "divisor_inspections": 1
+      }
+    },
+    {
+      "q": 3,
+      "characteristic": 3,
+      "genus": 4,
+      "degree": 9,
+      "group_order": 6,
+      "model_count": 13122,
+      "affine_stack_cardinality": 2187,
+      "coarse_orbit_count": 2213,
+      "coarse_orbit_excess": 26,
+      "relative_excess": [
+        26,
+        2187
+      ],
+      "universal_involution_correction": 20,
+      "lower_order_correction": 6,
+      "fixed_loci": {
+        "identity": 13122,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 1,
+            "affine_element_count": 3,
+            "fixed_models_per_element": 40,
+            "burnside_numerator_contribution": 120
+          }
+        ],
+        "scaling_contribution_total": 120,
+        "nonidentity_translation_count": 2,
+        "translation_fixed_models_per_element": 18,
+        "translation_contribution_total": 36
+      },
+      "closed_divisor_sum": {
+        "stack_term": 2187,
+        "scaling_correction": 20,
+        "translation_correction": 6,
+        "total": 2213
+      },
+      "resource_usage": {
+        "divisor_inspections": 1
+      }
+    },
+    {
+      "q": 3,
+      "characteristic": 3,
+      "genus": 5,
+      "degree": 11,
+      "group_order": 6,
+      "model_count": 118098,
+      "affine_stack_cardinality": 19683,
+      "coarse_orbit_count": 19744,
+      "coarse_orbit_excess": 61,
+      "relative_excess": [
+        61,
+        19683
+      ],
+      "universal_involution_correction": 61,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 118098,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 5,
+            "scaling_count": 1,
+            "affine_element_count": 3,
+            "fixed_models_per_element": 122,
+            "burnside_numerator_contribution": 366
+          }
+        ],
+        "scaling_contribution_total": 366,
+        "nonidentity_translation_count": 2,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 19683,
+        "scaling_correction": 61,
+        "translation_correction": 0,
+        "total": 19744
+      },
+      "resource_usage": {
+        "divisor_inspections": 1
+      }
+    },
+    {
+      "q": 3,
+      "characteristic": 3,
+      "genus": 6,
+      "degree": 13,
+      "group_order": 6,
+      "model_count": 1062882,
+      "affine_stack_cardinality": 177147,
+      "coarse_orbit_count": 177329,
+      "coarse_orbit_excess": 182,
+      "relative_excess": [
+        182,
+        177147
+      ],
+      "universal_involution_correction": 182,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 1062882,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 6,
+            "scaling_count": 1,
+            "affine_element_count": 3,
+            "fixed_models_per_element": 364,
+            "burnside_numerator_contribution": 1092
+          }
+        ],
+        "scaling_contribution_total": 1092,
+        "nonidentity_translation_count": 2,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 177147,
+        "scaling_correction": 182,
+        "translation_correction": 0,
+        "total": 177329
+      },
+      "resource_usage": {
+        "divisor_inspections": 1
+      }
+    },
+    {
+      "q": 3,
+      "characteristic": 3,
+      "genus": 7,
+      "degree": 15,
+      "group_order": 6,
+      "model_count": 9565938,
+      "affine_stack_cardinality": 1594323,
+      "coarse_orbit_count": 1594924,
+      "coarse_orbit_excess": 601,
+      "relative_excess": [
+        601,
+        1594323
+      ],
+      "universal_involution_correction": 547,
+      "lower_order_correction": 54,
+      "fixed_loci": {
+        "identity": 9565938,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 7,
+            "scaling_count": 1,
+            "affine_element_count": 3,
+            "fixed_models_per_element": 1094,
+            "burnside_numerator_contribution": 3282
+          }
+        ],
+        "scaling_contribution_total": 3282,
+        "nonidentity_translation_count": 2,
+        "translation_fixed_models_per_element": 162,
+        "translation_contribution_total": 324
+      },
+      "closed_divisor_sum": {
+        "stack_term": 1594323,
+        "scaling_correction": 547,
+        "translation_correction": 54,
+        "total": 1594924
+      },
+      "resource_usage": {
+        "divisor_inspections": 1
+      }
+    },
+    {
+      "q": 3,
+      "characteristic": 3,
+      "genus": 8,
+      "degree": 17,
+      "group_order": 6,
+      "model_count": 86093442,
+      "affine_stack_cardinality": 14348907,
+      "coarse_orbit_count": 14350547,
+      "coarse_orbit_excess": 1640,
+      "relative_excess": [
+        1640,
+        14348907
+      ],
+      "universal_involution_correction": 1640,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 86093442,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 8,
+            "scaling_count": 1,
+            "affine_element_count": 3,
+            "fixed_models_per_element": 3280,
+            "burnside_numerator_contribution": 9840
+          }
+        ],
+        "scaling_contribution_total": 9840,
+        "nonidentity_translation_count": 2,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 14348907,
+        "scaling_correction": 1640,
+        "translation_correction": 0,
+        "total": 14350547
+      },
+      "resource_usage": {
+        "divisor_inspections": 1
+      }
+    },
+    {
+      "q": 5,
+      "characteristic": 5,
+      "genus": 1,
+      "degree": 3,
+      "group_order": 20,
+      "model_count": 100,
+      "affine_stack_cardinality": 5,
+      "coarse_orbit_count": 6,
+      "coarse_orbit_excess": 1,
+      "relative_excess": [
+        1,
+        5
+      ],
+      "universal_involution_correction": 1,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 100,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 1,
+            "affine_element_count": 5,
+            "fixed_models_per_element": 4,
+            "burnside_numerator_contribution": 20
+          }
+        ],
+        "scaling_contribution_total": 20,
+        "nonidentity_translation_count": 4,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 5,
+        "scaling_correction": 1,
+        "translation_correction": 0,
+        "total": 6
+      },
+      "resource_usage": {
+        "divisor_inspections": 2
+      }
+    },
+    {
+      "q": 5,
+      "characteristic": 5,
+      "genus": 2,
+      "degree": 5,
+      "group_order": 20,
+      "model_count": 2500,
+      "affine_stack_cardinality": 125,
+      "coarse_orbit_count": 132,
+      "coarse_orbit_excess": 7,
+      "relative_excess": [
+        7,
+        125
+      ],
+      "universal_involution_correction": 4,
+      "lower_order_correction": 3,
+      "fixed_loci": {
+        "identity": 2500,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 1,
+            "affine_element_count": 5,
+            "fixed_models_per_element": 16,
+            "burnside_numerator_contribution": 80
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 2,
+            "affine_element_count": 10,
+            "fixed_models_per_element": 4,
+            "burnside_numerator_contribution": 40
+          }
+        ],
+        "scaling_contribution_total": 120,
+        "nonidentity_translation_count": 4,
+        "translation_fixed_models_per_element": 5,
+        "translation_contribution_total": 20
+      },
+      "closed_divisor_sum": {
+        "stack_term": 125,
+        "scaling_correction": 6,
+        "translation_correction": 1,
+        "total": 132
+      },
+      "resource_usage": {
+        "divisor_inspections": 2
+      }
+    },
+    {
+      "q": 5,
+      "characteristic": 5,
+      "genus": 3,
+      "degree": 7,
+      "group_order": 20,
+      "model_count": 62500,
+      "affine_stack_cardinality": 3125,
+      "coarse_orbit_count": 3146,
+      "coarse_orbit_excess": 21,
+      "relative_excess": [
+        21,
+        3125
+      ],
+      "universal_involution_correction": 21,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 62500,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 3,
+            "scaling_count": 1,
+            "affine_element_count": 5,
+            "fixed_models_per_element": 84,
+            "burnside_numerator_contribution": 420
+          }
+        ],
+        "scaling_contribution_total": 420,
+        "nonidentity_translation_count": 4,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 3125,
+        "scaling_correction": 21,
+        "translation_correction": 0,
+        "total": 3146
+      },
+      "resource_usage": {
+        "divisor_inspections": 2
+      }
+    },
+    {
+      "q": 5,
+      "characteristic": 5,
+      "genus": 4,
+      "degree": 9,
+      "group_order": 20,
+      "model_count": 1562500,
+      "affine_stack_cardinality": 78125,
+      "coarse_orbit_count": 78237,
+      "coarse_orbit_excess": 112,
+      "relative_excess": [
+        112,
+        78125
+      ],
+      "universal_involution_correction": 104,
+      "lower_order_correction": 8,
+      "fixed_loci": {
+        "identity": 1562500,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 1,
+            "affine_element_count": 5,
+            "fixed_models_per_element": 416,
+            "burnside_numerator_contribution": 2080
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 2,
+            "affine_element_count": 10,
+            "fixed_models_per_element": 16,
+            "burnside_numerator_contribution": 160
+          }
+        ],
+        "scaling_contribution_total": 2240,
+        "nonidentity_translation_count": 4,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 78125,
+        "scaling_correction": 112,
+        "translation_correction": 0,
+        "total": 78237
+      },
+      "resource_usage": {
+        "divisor_inspections": 2
+      }
+    },
+    {
+      "q": 5,
+      "characteristic": 5,
+      "genus": 5,
+      "degree": 11,
+      "group_order": 20,
+      "model_count": 39062500,
+      "affine_stack_cardinality": 1953125,
+      "coarse_orbit_count": 1953646,
+      "coarse_orbit_excess": 521,
+      "relative_excess": [
+        521,
+        1953125
+      ],
+      "universal_involution_correction": 521,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 39062500,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 5,
+            "scaling_count": 1,
+            "affine_element_count": 5,
+            "fixed_models_per_element": 2084,
+            "burnside_numerator_contribution": 10420
+          }
+        ],
+        "scaling_contribution_total": 10420,
+        "nonidentity_translation_count": 4,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 1953125,
+        "scaling_correction": 521,
+        "translation_correction": 0,
+        "total": 1953646
+      },
+      "resource_usage": {
+        "divisor_inspections": 2
+      }
+    },
+    {
+      "q": 5,
+      "characteristic": 5,
+      "genus": 6,
+      "degree": 13,
+      "group_order": 20,
+      "model_count": 976562500,
+      "affine_stack_cardinality": 48828125,
+      "coarse_orbit_count": 48830771,
+      "coarse_orbit_excess": 2646,
+      "relative_excess": [
+        2646,
+        48828125
+      ],
+      "universal_involution_correction": 2604,
+      "lower_order_correction": 42,
+      "fixed_loci": {
+        "identity": 976562500,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 6,
+            "scaling_count": 1,
+            "affine_element_count": 5,
+            "fixed_models_per_element": 10416,
+            "burnside_numerator_contribution": 52080
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 3,
+            "scaling_count": 2,
+            "affine_element_count": 10,
+            "fixed_models_per_element": 84,
+            "burnside_numerator_contribution": 840
+          }
+        ],
+        "scaling_contribution_total": 52920,
+        "nonidentity_translation_count": 4,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 48828125,
+        "scaling_correction": 2646,
+        "translation_correction": 0,
+        "total": 48830771
+      },
+      "resource_usage": {
+        "divisor_inspections": 2
+      }
+    },
+    {
+      "q": 5,
+      "characteristic": 5,
+      "genus": 7,
+      "degree": 15,
+      "group_order": 20,
+      "model_count": 24414062500,
+      "affine_stack_cardinality": 1220703125,
+      "coarse_orbit_count": 1220716166,
+      "coarse_orbit_excess": 13041,
+      "relative_excess": [
+        13041,
+        1220703125
+      ],
+      "universal_involution_correction": 13021,
+      "lower_order_correction": 20,
+      "fixed_loci": {
+        "identity": 24414062500,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 7,
+            "scaling_count": 1,
+            "affine_element_count": 5,
+            "fixed_models_per_element": 52084,
+            "burnside_numerator_contribution": 260420
+          }
+        ],
+        "scaling_contribution_total": 260420,
+        "nonidentity_translation_count": 4,
+        "translation_fixed_models_per_element": 100,
+        "translation_contribution_total": 400
+      },
+      "closed_divisor_sum": {
+        "stack_term": 1220703125,
+        "scaling_correction": 13021,
+        "translation_correction": 20,
+        "total": 1220716166
+      },
+      "resource_usage": {
+        "divisor_inspections": 2
+      }
+    },
+    {
+      "q": 5,
+      "characteristic": 5,
+      "genus": 8,
+      "degree": 17,
+      "group_order": 20,
+      "model_count": 610351562500,
+      "affine_stack_cardinality": 30517578125,
+      "coarse_orbit_count": 30517643437,
+      "coarse_orbit_excess": 65312,
+      "relative_excess": [
+        65312,
+        30517578125
+      ],
+      "universal_involution_correction": 65104,
+      "lower_order_correction": 208,
+      "fixed_loci": {
+        "identity": 610351562500,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 8,
+            "scaling_count": 1,
+            "affine_element_count": 5,
+            "fixed_models_per_element": 260416,
+            "burnside_numerator_contribution": 1302080
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 2,
+            "affine_element_count": 10,
+            "fixed_models_per_element": 416,
+            "burnside_numerator_contribution": 4160
+          }
+        ],
+        "scaling_contribution_total": 1306240,
+        "nonidentity_translation_count": 4,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 30517578125,
+        "scaling_correction": 65312,
+        "translation_correction": 0,
+        "total": 30517643437
+      },
+      "resource_usage": {
+        "divisor_inspections": 2
+      }
+    },
+    {
+      "q": 7,
+      "characteristic": 7,
+      "genus": 1,
+      "degree": 3,
+      "group_order": 42,
+      "model_count": 294,
+      "affine_stack_cardinality": 7,
+      "coarse_orbit_count": 10,
+      "coarse_orbit_excess": 3,
+      "relative_excess": [
+        3,
+        7
+      ],
+      "universal_involution_correction": 1,
+      "lower_order_correction": 2,
+      "fixed_loci": {
+        "identity": 294,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 1,
+            "affine_element_count": 7,
+            "fixed_models_per_element": 6,
+            "burnside_numerator_contribution": 42
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 0,
+            "quotient_degree": 1,
+            "scaling_count": 2,
+            "affine_element_count": 14,
+            "fixed_models_per_element": 6,
+            "burnside_numerator_contribution": 84
+          }
+        ],
+        "scaling_contribution_total": 126,
+        "nonidentity_translation_count": 6,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 7,
+        "scaling_correction": 3,
+        "translation_correction": 0,
+        "total": 10
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 7,
+      "characteristic": 7,
+      "genus": 2,
+      "degree": 5,
+      "group_order": 42,
+      "model_count": 14406,
+      "affine_stack_cardinality": 343,
+      "coarse_orbit_count": 349,
+      "coarse_orbit_excess": 6,
+      "relative_excess": [
+        6,
+        343
+      ],
+      "universal_involution_correction": 6,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 14406,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 1,
+            "affine_element_count": 7,
+            "fixed_models_per_element": 36,
+            "burnside_numerator_contribution": 252
+          }
+        ],
+        "scaling_contribution_total": 252,
+        "nonidentity_translation_count": 6,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 343,
+        "scaling_correction": 6,
+        "translation_correction": 0,
+        "total": 349
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 7,
+      "characteristic": 7,
+      "genus": 3,
+      "degree": 7,
+      "group_order": 42,
+      "model_count": 705894,
+      "affine_stack_cardinality": 16807,
+      "coarse_orbit_count": 16865,
+      "coarse_orbit_excess": 58,
+      "relative_excess": [
+        58,
+        16807
+      ],
+      "universal_involution_correction": 43,
+      "lower_order_correction": 15,
+      "fixed_loci": {
+        "identity": 705894,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 3,
+            "scaling_count": 1,
+            "affine_element_count": 7,
+            "fixed_models_per_element": 258,
+            "burnside_numerator_contribution": 1806
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 2,
+            "affine_element_count": 14,
+            "fixed_models_per_element": 36,
+            "burnside_numerator_contribution": 504
+          },
+          {
+            "order": 6,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 2,
+            "affine_element_count": 14,
+            "fixed_models_per_element": 6,
+            "burnside_numerator_contribution": 84
+          }
+        ],
+        "scaling_contribution_total": 2394,
+        "nonidentity_translation_count": 6,
+        "translation_fixed_models_per_element": 7,
+        "translation_contribution_total": 42
+      },
+      "closed_divisor_sum": {
+        "stack_term": 16807,
+        "scaling_correction": 57,
+        "translation_correction": 1,
+        "total": 16865
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 7,
+      "characteristic": 7,
+      "genus": 4,
+      "degree": 9,
+      "group_order": 42,
+      "model_count": 34588806,
+      "affine_stack_cardinality": 823543,
+      "coarse_orbit_count": 823929,
+      "coarse_orbit_excess": 386,
+      "relative_excess": [
+        386,
+        823543
+      ],
+      "universal_involution_correction": 300,
+      "lower_order_correction": 86,
+      "fixed_loci": {
+        "identity": 34588806,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 1,
+            "affine_element_count": 7,
+            "fixed_models_per_element": 1800,
+            "burnside_numerator_contribution": 12600
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 0,
+            "quotient_degree": 3,
+            "scaling_count": 2,
+            "affine_element_count": 14,
+            "fixed_models_per_element": 258,
+            "burnside_numerator_contribution": 3612
+          }
+        ],
+        "scaling_contribution_total": 16212,
+        "nonidentity_translation_count": 6,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 823543,
+        "scaling_correction": 386,
+        "translation_correction": 0,
+        "total": 823929
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 7,
+      "characteristic": 7,
+      "genus": 5,
+      "degree": 11,
+      "group_order": 42,
+      "model_count": 1694851494,
+      "affine_stack_cardinality": 40353607,
+      "coarse_orbit_count": 40355708,
+      "coarse_orbit_excess": 2101,
+      "relative_excess": [
+        2101,
+        40353607
+      ],
+      "universal_involution_correction": 2101,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 1694851494,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 5,
+            "scaling_count": 1,
+            "affine_element_count": 7,
+            "fixed_models_per_element": 12606,
+            "burnside_numerator_contribution": 88242
+          }
+        ],
+        "scaling_contribution_total": 88242,
+        "nonidentity_translation_count": 6,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 40353607,
+        "scaling_correction": 2101,
+        "translation_correction": 0,
+        "total": 40355708
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 7,
+      "characteristic": 7,
+      "genus": 6,
+      "degree": 13,
+      "group_order": 42,
+      "model_count": 83047723206,
+      "affine_stack_cardinality": 1977326743,
+      "coarse_orbit_count": 1977342061,
+      "coarse_orbit_excess": 15318,
+      "relative_excess": [
+        15318,
+        1977326743
+      ],
+      "universal_involution_correction": 14706,
+      "lower_order_correction": 612,
+      "fixed_loci": {
+        "identity": 83047723206,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 6,
+            "scaling_count": 1,
+            "affine_element_count": 7,
+            "fixed_models_per_element": 88236,
+            "burnside_numerator_contribution": 617652
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 2,
+            "affine_element_count": 14,
+            "fixed_models_per_element": 1800,
+            "burnside_numerator_contribution": 25200
+          },
+          {
+            "order": 6,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 2,
+            "affine_element_count": 14,
+            "fixed_models_per_element": 36,
+            "burnside_numerator_contribution": 504
+          }
+        ],
+        "scaling_contribution_total": 643356,
+        "nonidentity_translation_count": 6,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 1977326743,
+        "scaling_correction": 15318,
+        "translation_correction": 0,
+        "total": 1977342061
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 7,
+      "characteristic": 7,
+      "genus": 7,
+      "degree": 15,
+      "group_order": 42,
+      "model_count": 4069338437094,
+      "affine_stack_cardinality": 96889010407,
+      "coarse_orbit_count": 96889117552,
+      "coarse_orbit_excess": 107145,
+      "relative_excess": [
+        107145,
+        96889010407
+      ],
+      "universal_involution_correction": 102943,
+      "lower_order_correction": 4202,
+      "fixed_loci": {
+        "identity": 4069338437094,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 7,
+            "scaling_count": 1,
+            "affine_element_count": 7,
+            "fixed_models_per_element": 617658,
+            "burnside_numerator_contribution": 4323606
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 0,
+            "quotient_degree": 5,
+            "scaling_count": 2,
+            "affine_element_count": 14,
+            "fixed_models_per_element": 12606,
+            "burnside_numerator_contribution": 176484
+          }
+        ],
+        "scaling_contribution_total": 4500090,
+        "nonidentity_translation_count": 6,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 96889010407,
+        "scaling_correction": 107145,
+        "translation_correction": 0,
+        "total": 96889117552
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 7,
+      "characteristic": 7,
+      "genus": 8,
+      "degree": 17,
+      "group_order": 42,
+      "model_count": 199397583417606,
+      "affine_stack_cardinality": 4747561509943,
+      "coarse_orbit_count": 4747562230543,
+      "coarse_orbit_excess": 720600,
+      "relative_excess": [
+        720600,
+        4747561509943
+      ],
+      "universal_involution_correction": 720600,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 199397583417606,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 8,
+            "scaling_count": 1,
+            "affine_element_count": 7,
+            "fixed_models_per_element": 4323600,
+            "burnside_numerator_contribution": 30265200
+          }
+        ],
+        "scaling_contribution_total": 30265200,
+        "nonidentity_translation_count": 6,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 4747561509943,
+        "scaling_correction": 720600,
+        "translation_correction": 0,
+        "total": 4747562230543
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 9,
+      "characteristic": 3,
+      "genus": 1,
+      "degree": 3,
+      "group_order": 72,
+      "model_count": 648,
+      "affine_stack_cardinality": 9,
+      "coarse_orbit_count": 11,
+      "coarse_orbit_excess": 2,
+      "relative_excess": [
+        2,
+        9
+      ],
+      "universal_involution_correction": 1,
+      "lower_order_correction": 1,
+      "fixed_loci": {
+        "identity": 648,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 1,
+            "affine_element_count": 9,
+            "fixed_models_per_element": 8,
+            "burnside_numerator_contribution": 72
+          }
+        ],
+        "scaling_contribution_total": 72,
+        "nonidentity_translation_count": 8,
+        "translation_fixed_models_per_element": 9,
+        "translation_contribution_total": 72
+      },
+      "closed_divisor_sum": {
+        "stack_term": 9,
+        "scaling_correction": 1,
+        "translation_correction": 1,
+        "total": 11
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 9,
+      "characteristic": 3,
+      "genus": 2,
+      "degree": 5,
+      "group_order": 72,
+      "model_count": 52488,
+      "affine_stack_cardinality": 729,
+      "coarse_orbit_count": 739,
+      "coarse_orbit_excess": 10,
+      "relative_excess": [
+        10,
+        729
+      ],
+      "universal_involution_correction": 8,
+      "lower_order_correction": 2,
+      "fixed_loci": {
+        "identity": 52488,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 1,
+            "affine_element_count": 9,
+            "fixed_models_per_element": 64,
+            "burnside_numerator_contribution": 576
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 2,
+            "affine_element_count": 18,
+            "fixed_models_per_element": 8,
+            "burnside_numerator_contribution": 144
+          }
+        ],
+        "scaling_contribution_total": 720,
+        "nonidentity_translation_count": 8,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 729,
+        "scaling_correction": 10,
+        "translation_correction": 0,
+        "total": 739
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 9,
+      "characteristic": 3,
+      "genus": 3,
+      "degree": 7,
+      "group_order": 72,
+      "model_count": 4251528,
+      "affine_stack_cardinality": 59049,
+      "coarse_orbit_count": 59122,
+      "coarse_orbit_excess": 73,
+      "relative_excess": [
+        73,
+        59049
+      ],
+      "universal_involution_correction": 73,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 4251528,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 3,
+            "scaling_count": 1,
+            "affine_element_count": 9,
+            "fixed_models_per_element": 584,
+            "burnside_numerator_contribution": 5256
+          }
+        ],
+        "scaling_contribution_total": 5256,
+        "nonidentity_translation_count": 8,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 59049,
+        "scaling_correction": 73,
+        "translation_correction": 0,
+        "total": 59122
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 9,
+      "characteristic": 3,
+      "genus": 4,
+      "degree": 9,
+      "group_order": 72,
+      "model_count": 344373768,
+      "affine_stack_cardinality": 4782969,
+      "coarse_orbit_count": 4783717,
+      "coarse_orbit_excess": 748,
+      "relative_excess": [
+        748,
+        4782969
+      ],
+      "universal_involution_correction": 656,
+      "lower_order_correction": 92,
+      "fixed_loci": {
+        "identity": 344373768,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 1,
+            "affine_element_count": 9,
+            "fixed_models_per_element": 5248,
+            "burnside_numerator_contribution": 47232
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 2,
+            "affine_element_count": 18,
+            "fixed_models_per_element": 64,
+            "burnside_numerator_contribution": 1152
+          },
+          {
+            "order": 8,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 4,
+            "affine_element_count": 36,
+            "fixed_models_per_element": 8,
+            "burnside_numerator_contribution": 288
+          }
+        ],
+        "scaling_contribution_total": 48672,
+        "nonidentity_translation_count": 8,
+        "translation_fixed_models_per_element": 648,
+        "translation_contribution_total": 5184
+      },
+      "closed_divisor_sum": {
+        "stack_term": 4782969,
+        "scaling_correction": 676,
+        "translation_correction": 72,
+        "total": 4783717
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 9,
+      "characteristic": 3,
+      "genus": 5,
+      "degree": 11,
+      "group_order": 72,
+      "model_count": 27894275208,
+      "affine_stack_cardinality": 387420489,
+      "coarse_orbit_count": 387426394,
+      "coarse_orbit_excess": 5905,
+      "relative_excess": [
+        5905,
+        387420489
+      ],
+      "universal_involution_correction": 5905,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 27894275208,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 5,
+            "scaling_count": 1,
+            "affine_element_count": 9,
+            "fixed_models_per_element": 47240,
+            "burnside_numerator_contribution": 425160
+          }
+        ],
+        "scaling_contribution_total": 425160,
+        "nonidentity_translation_count": 8,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 387420489,
+        "scaling_correction": 5905,
+        "translation_correction": 0,
+        "total": 387426394
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 9,
+      "characteristic": 3,
+      "genus": 6,
+      "degree": 13,
+      "group_order": 72,
+      "model_count": 2259436291848,
+      "affine_stack_cardinality": 31381059609,
+      "coarse_orbit_count": 31381112899,
+      "coarse_orbit_excess": 53290,
+      "relative_excess": [
+        53290,
+        31381059609
+      ],
+      "universal_involution_correction": 53144,
+      "lower_order_correction": 146,
+      "fixed_loci": {
+        "identity": 2259436291848,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 6,
+            "scaling_count": 1,
+            "affine_element_count": 9,
+            "fixed_models_per_element": 425152,
+            "burnside_numerator_contribution": 3826368
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 3,
+            "scaling_count": 2,
+            "affine_element_count": 18,
+            "fixed_models_per_element": 584,
+            "burnside_numerator_contribution": 10512
+          }
+        ],
+        "scaling_contribution_total": 3836880,
+        "nonidentity_translation_count": 8,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 31381059609,
+        "scaling_correction": 53290,
+        "translation_correction": 0,
+        "total": 31381112899
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 9,
+      "characteristic": 3,
+      "genus": 7,
+      "degree": 15,
+      "group_order": 72,
+      "model_count": 183014339639688,
+      "affine_stack_cardinality": 2541865828329,
+      "coarse_orbit_count": 2541866312458,
+      "coarse_orbit_excess": 484129,
+      "relative_excess": [
+        484129,
+        2541865828329
+      ],
+      "universal_involution_correction": 478297,
+      "lower_order_correction": 5832,
+      "fixed_loci": {
+        "identity": 183014339639688,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 7,
+            "scaling_count": 1,
+            "affine_element_count": 9,
+            "fixed_models_per_element": 3826376,
+            "burnside_numerator_contribution": 34437384
+          }
+        ],
+        "scaling_contribution_total": 34437384,
+        "nonidentity_translation_count": 8,
+        "translation_fixed_models_per_element": 52488,
+        "translation_contribution_total": 419904
+      },
+      "closed_divisor_sum": {
+        "stack_term": 2541865828329,
+        "scaling_correction": 478297,
+        "translation_correction": 5832,
+        "total": 2541866312458
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 9,
+      "characteristic": 3,
+      "genus": 8,
+      "degree": 17,
+      "group_order": 72,
+      "model_count": 14824161510814728,
+      "affine_stack_cardinality": 205891132094649,
+      "coarse_orbit_count": 205891136400665,
+      "coarse_orbit_excess": 4306016,
+      "relative_excess": [
+        4306016,
+        205891132094649
+      ],
+      "universal_involution_correction": 4304672,
+      "lower_order_correction": 1344,
+      "fixed_loci": {
+        "identity": 14824161510814728,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 8,
+            "scaling_count": 1,
+            "affine_element_count": 9,
+            "fixed_models_per_element": 34437376,
+            "burnside_numerator_contribution": 309936384
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 2,
+            "affine_element_count": 18,
+            "fixed_models_per_element": 5248,
+            "burnside_numerator_contribution": 94464
+          },
+          {
+            "order": 8,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 4,
+            "affine_element_count": 36,
+            "fixed_models_per_element": 64,
+            "burnside_numerator_contribution": 2304
+          }
+        ],
+        "scaling_contribution_total": 310033152,
+        "nonidentity_translation_count": 8,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 205891132094649,
+        "scaling_correction": 4306016,
+        "translation_correction": 0,
+        "total": 205891136400665
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 11,
+      "characteristic": 11,
+      "genus": 1,
+      "degree": 3,
+      "group_order": 110,
+      "model_count": 1210,
+      "affine_stack_cardinality": 11,
+      "coarse_orbit_count": 12,
+      "coarse_orbit_excess": 1,
+      "relative_excess": [
+        1,
+        11
+      ],
+      "universal_involution_correction": 1,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 1210,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 1,
+            "affine_element_count": 11,
+            "fixed_models_per_element": 10,
+            "burnside_numerator_contribution": 110
+          }
+        ],
+        "scaling_contribution_total": 110,
+        "nonidentity_translation_count": 10,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 11,
+        "scaling_correction": 1,
+        "translation_correction": 0,
+        "total": 12
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 11,
+      "characteristic": 11,
+      "genus": 2,
+      "degree": 5,
+      "group_order": 110,
+      "model_count": 146410,
+      "affine_stack_cardinality": 1331,
+      "coarse_orbit_count": 1345,
+      "coarse_orbit_excess": 14,
+      "relative_excess": [
+        14,
+        1331
+      ],
+      "universal_involution_correction": 10,
+      "lower_order_correction": 4,
+      "fixed_loci": {
+        "identity": 146410,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 1,
+            "affine_element_count": 11,
+            "fixed_models_per_element": 100,
+            "burnside_numerator_contribution": 1100
+          },
+          {
+            "order": 5,
+            "residue_degree_mod_order": 0,
+            "quotient_degree": 1,
+            "scaling_count": 4,
+            "affine_element_count": 44,
+            "fixed_models_per_element": 10,
+            "burnside_numerator_contribution": 440
+          }
+        ],
+        "scaling_contribution_total": 1540,
+        "nonidentity_translation_count": 10,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 1331,
+        "scaling_correction": 14,
+        "translation_correction": 0,
+        "total": 1345
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 11,
+      "characteristic": 11,
+      "genus": 3,
+      "degree": 7,
+      "group_order": 110,
+      "model_count": 17715610,
+      "affine_stack_cardinality": 161051,
+      "coarse_orbit_count": 161162,
+      "coarse_orbit_excess": 111,
+      "relative_excess": [
+        111,
+        161051
+      ],
+      "universal_involution_correction": 111,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 17715610,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 3,
+            "scaling_count": 1,
+            "affine_element_count": 11,
+            "fixed_models_per_element": 1110,
+            "burnside_numerator_contribution": 12210
+          }
+        ],
+        "scaling_contribution_total": 12210,
+        "nonidentity_translation_count": 10,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 161051,
+        "scaling_correction": 111,
+        "translation_correction": 0,
+        "total": 161162
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 11,
+      "characteristic": 11,
+      "genus": 4,
+      "degree": 9,
+      "group_order": 110,
+      "model_count": 2143588810,
+      "affine_stack_cardinality": 19487171,
+      "coarse_orbit_count": 19488391,
+      "coarse_orbit_excess": 1220,
+      "relative_excess": [
+        1220,
+        19487171
+      ],
+      "universal_involution_correction": 1220,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 2143588810,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 1,
+            "affine_element_count": 11,
+            "fixed_models_per_element": 12200,
+            "burnside_numerator_contribution": 134200
+          }
+        ],
+        "scaling_contribution_total": 134200,
+        "nonidentity_translation_count": 10,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 19487171,
+        "scaling_correction": 1220,
+        "translation_correction": 0,
+        "total": 19488391
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 11,
+      "characteristic": 11,
+      "genus": 5,
+      "degree": 11,
+      "group_order": 110,
+      "model_count": 259374246010,
+      "affine_stack_cardinality": 2357947691,
+      "coarse_orbit_count": 2357961157,
+      "coarse_orbit_excess": 13466,
+      "relative_excess": [
+        13466,
+        2357947691
+      ],
+      "universal_involution_correction": 13421,
+      "lower_order_correction": 45,
+      "fixed_loci": {
+        "identity": 259374246010,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 5,
+            "scaling_count": 1,
+            "affine_element_count": 11,
+            "fixed_models_per_element": 134210,
+            "burnside_numerator_contribution": 1476310
+          },
+          {
+            "order": 5,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 4,
+            "affine_element_count": 44,
+            "fixed_models_per_element": 100,
+            "burnside_numerator_contribution": 4400
+          },
+          {
+            "order": 10,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 4,
+            "affine_element_count": 44,
+            "fixed_models_per_element": 10,
+            "burnside_numerator_contribution": 440
+          }
+        ],
+        "scaling_contribution_total": 1481150,
+        "nonidentity_translation_count": 10,
+        "translation_fixed_models_per_element": 11,
+        "translation_contribution_total": 110
+      },
+      "closed_divisor_sum": {
+        "stack_term": 2357947691,
+        "scaling_correction": 13465,
+        "translation_correction": 1,
+        "total": 2357961157
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 11,
+      "characteristic": 11,
+      "genus": 6,
+      "degree": 13,
+      "group_order": 110,
+      "model_count": 31384283767210,
+      "affine_stack_cardinality": 285311670611,
+      "coarse_orbit_count": 285311818241,
+      "coarse_orbit_excess": 147630,
+      "relative_excess": [
+        147630,
+        285311670611
+      ],
+      "universal_involution_correction": 147630,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 31384283767210,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 6,
+            "scaling_count": 1,
+            "affine_element_count": 11,
+            "fixed_models_per_element": 1476300,
+            "burnside_numerator_contribution": 16239300
+          }
+        ],
+        "scaling_contribution_total": 16239300,
+        "nonidentity_translation_count": 10,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 285311670611,
+        "scaling_correction": 147630,
+        "translation_correction": 0,
+        "total": 285311818241
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 11,
+      "characteristic": 11,
+      "genus": 7,
+      "degree": 15,
+      "group_order": 110,
+      "model_count": 3797498335832410,
+      "affine_stack_cardinality": 34522712143931,
+      "coarse_orbit_count": 34522713768306,
+      "coarse_orbit_excess": 1624375,
+      "relative_excess": [
+        1624375,
+        34522712143931
+      ],
+      "universal_involution_correction": 1623931,
+      "lower_order_correction": 444,
+      "fixed_loci": {
+        "identity": 3797498335832410,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 7,
+            "scaling_count": 1,
+            "affine_element_count": 11,
+            "fixed_models_per_element": 16239310,
+            "burnside_numerator_contribution": 178632410
+          },
+          {
+            "order": 5,
+            "residue_degree_mod_order": 0,
+            "quotient_degree": 3,
+            "scaling_count": 4,
+            "affine_element_count": 44,
+            "fixed_models_per_element": 1110,
+            "burnside_numerator_contribution": 48840
+          }
+        ],
+        "scaling_contribution_total": 178681250,
+        "nonidentity_translation_count": 10,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 34522712143931,
+        "scaling_correction": 1624375,
+        "translation_correction": 0,
+        "total": 34522713768306
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 11,
+      "characteristic": 11,
+      "genus": 8,
+      "degree": 17,
+      "group_order": 110,
+      "model_count": 459497298635721610,
+      "affine_stack_cardinality": 4177248169415651,
+      "coarse_orbit_count": 4177248187278891,
+      "coarse_orbit_excess": 17863240,
+      "relative_excess": [
+        17863240,
+        4177248169415651
+      ],
+      "universal_involution_correction": 17863240,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 459497298635721610,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 8,
+            "scaling_count": 1,
+            "affine_element_count": 11,
+            "fixed_models_per_element": 178632400,
+            "burnside_numerator_contribution": 1964956400
+          }
+        ],
+        "scaling_contribution_total": 1964956400,
+        "nonidentity_translation_count": 10,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 4177248169415651,
+        "scaling_correction": 17863240,
+        "translation_correction": 0,
+        "total": 4177248187278891
+      },
+      "resource_usage": {
+        "divisor_inspections": 3
+      }
+    },
+    {
+      "q": 13,
+      "characteristic": 13,
+      "genus": 1,
+      "degree": 3,
+      "group_order": 156,
+      "model_count": 2028,
+      "affine_stack_cardinality": 13,
+      "coarse_orbit_count": 16,
+      "coarse_orbit_excess": 3,
+      "relative_excess": [
+        3,
+        13
+      ],
+      "universal_involution_correction": 1,
+      "lower_order_correction": 2,
+      "fixed_loci": {
+        "identity": 2028,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 1,
+            "affine_element_count": 13,
+            "fixed_models_per_element": 12,
+            "burnside_numerator_contribution": 156
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 0,
+            "quotient_degree": 1,
+            "scaling_count": 2,
+            "affine_element_count": 26,
+            "fixed_models_per_element": 12,
+            "burnside_numerator_contribution": 312
+          }
+        ],
+        "scaling_contribution_total": 468,
+        "nonidentity_translation_count": 12,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 13,
+        "scaling_correction": 3,
+        "translation_correction": 0,
+        "total": 16
+      },
+      "resource_usage": {
+        "divisor_inspections": 5
+      }
+    },
+    {
+      "q": 13,
+      "characteristic": 13,
+      "genus": 2,
+      "degree": 5,
+      "group_order": 156,
+      "model_count": 342732,
+      "affine_stack_cardinality": 2197,
+      "coarse_orbit_count": 2211,
+      "coarse_orbit_excess": 14,
+      "relative_excess": [
+        14,
+        2197
+      ],
+      "universal_involution_correction": 12,
+      "lower_order_correction": 2,
+      "fixed_loci": {
+        "identity": 342732,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 1,
+            "affine_element_count": 13,
+            "fixed_models_per_element": 144,
+            "burnside_numerator_contribution": 1872
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 2,
+            "affine_element_count": 26,
+            "fixed_models_per_element": 12,
+            "burnside_numerator_contribution": 312
+          }
+        ],
+        "scaling_contribution_total": 2184,
+        "nonidentity_translation_count": 12,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 2197,
+        "scaling_correction": 14,
+        "translation_correction": 0,
+        "total": 2211
+      },
+      "resource_usage": {
+        "divisor_inspections": 5
+      }
+    },
+    {
+      "q": 13,
+      "characteristic": 13,
+      "genus": 3,
+      "degree": 7,
+      "group_order": 156,
+      "model_count": 57921708,
+      "affine_stack_cardinality": 371293,
+      "coarse_orbit_count": 371476,
+      "coarse_orbit_excess": 183,
+      "relative_excess": [
+        183,
+        371293
+      ],
+      "universal_involution_correction": 157,
+      "lower_order_correction": 26,
+      "fixed_loci": {
+        "identity": 57921708,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 3,
+            "scaling_count": 1,
+            "affine_element_count": 13,
+            "fixed_models_per_element": 1884,
+            "burnside_numerator_contribution": 24492
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 2,
+            "affine_element_count": 26,
+            "fixed_models_per_element": 144,
+            "burnside_numerator_contribution": 3744
+          },
+          {
+            "order": 6,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 2,
+            "affine_element_count": 26,
+            "fixed_models_per_element": 12,
+            "burnside_numerator_contribution": 312
+          }
+        ],
+        "scaling_contribution_total": 28548,
+        "nonidentity_translation_count": 12,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 371293,
+        "scaling_correction": 183,
+        "translation_correction": 0,
+        "total": 371476
+      },
+      "resource_usage": {
+        "divisor_inspections": 5
+      }
+    },
+    {
+      "q": 13,
+      "characteristic": 13,
+      "genus": 4,
+      "degree": 9,
+      "group_order": 156,
+      "model_count": 9788768652,
+      "affine_stack_cardinality": 62748517,
+      "coarse_orbit_count": 62750895,
+      "coarse_orbit_excess": 2378,
+      "relative_excess": [
+        2378,
+        62748517
+      ],
+      "universal_involution_correction": 2040,
+      "lower_order_correction": 338,
+      "fixed_loci": {
+        "identity": 9788768652,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 1,
+            "affine_element_count": 13,
+            "fixed_models_per_element": 24480,
+            "burnside_numerator_contribution": 318240
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 0,
+            "quotient_degree": 3,
+            "scaling_count": 2,
+            "affine_element_count": 26,
+            "fixed_models_per_element": 1884,
+            "burnside_numerator_contribution": 48984
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 2,
+            "affine_element_count": 26,
+            "fixed_models_per_element": 144,
+            "burnside_numerator_contribution": 3744
+          }
+        ],
+        "scaling_contribution_total": 370968,
+        "nonidentity_translation_count": 12,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 62748517,
+        "scaling_correction": 2378,
+        "translation_correction": 0,
+        "total": 62750895
+      },
+      "resource_usage": {
+        "divisor_inspections": 5
+      }
+    },
+    {
+      "q": 13,
+      "characteristic": 13,
+      "genus": 5,
+      "degree": 11,
+      "group_order": 156,
+      "model_count": 1654301902188,
+      "affine_stack_cardinality": 10604499373,
+      "coarse_orbit_count": 10604525894,
+      "coarse_orbit_excess": 26521,
+      "relative_excess": [
+        26521,
+        10604499373
+      ],
+      "universal_involution_correction": 26521,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 1654301902188,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 5,
+            "scaling_count": 1,
+            "affine_element_count": 13,
+            "fixed_models_per_element": 318252,
+            "burnside_numerator_contribution": 4137276
+          }
+        ],
+        "scaling_contribution_total": 4137276,
+        "nonidentity_translation_count": 12,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 10604499373,
+        "scaling_correction": 26521,
+        "translation_correction": 0,
+        "total": 10604525894
+      },
+      "resource_usage": {
+        "divisor_inspections": 5
+      }
+    },
+    {
+      "q": 13,
+      "characteristic": 13,
+      "genus": 6,
+      "degree": 13,
+      "group_order": 156,
+      "model_count": 279577021469772,
+      "affine_stack_cardinality": 1792160394037,
+      "coarse_orbit_count": 1792160743232,
+      "coarse_orbit_excess": 349195,
+      "relative_excess": [
+        349195,
+        1792160394037
+      ],
+      "universal_involution_correction": 344772,
+      "lower_order_correction": 4423,
+      "fixed_loci": {
+        "identity": 279577021469772,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 6,
+            "scaling_count": 1,
+            "affine_element_count": 13,
+            "fixed_models_per_element": 4137264,
+            "burnside_numerator_contribution": 53784432
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 2,
+            "affine_element_count": 26,
+            "fixed_models_per_element": 24480,
+            "burnside_numerator_contribution": 636480
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 3,
+            "scaling_count": 2,
+            "affine_element_count": 26,
+            "fixed_models_per_element": 1884,
+            "burnside_numerator_contribution": 48984
+          },
+          {
+            "order": 6,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 2,
+            "affine_element_count": 26,
+            "fixed_models_per_element": 144,
+            "burnside_numerator_contribution": 3744
+          },
+          {
+            "order": 12,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 4,
+            "affine_element_count": 52,
+            "fixed_models_per_element": 12,
+            "burnside_numerator_contribution": 624
+          }
+        ],
+        "scaling_contribution_total": 54474264,
+        "nonidentity_translation_count": 12,
+        "translation_fixed_models_per_element": 13,
+        "translation_contribution_total": 156
+      },
+      "closed_divisor_sum": {
+        "stack_term": 1792160394037,
+        "scaling_correction": 349194,
+        "translation_correction": 1,
+        "total": 1792160743232
+      },
+      "resource_usage": {
+        "divisor_inspections": 5
+      }
+    },
+    {
+      "q": 13,
+      "characteristic": 13,
+      "genus": 7,
+      "degree": 15,
+      "group_order": 156,
+      "model_count": 47248516628391468,
+      "affine_stack_cardinality": 302875106592253,
+      "coarse_orbit_count": 302875111127332,
+      "coarse_orbit_excess": 4535079,
+      "relative_excess": [
+        4535079,
+        302875106592253
+      ],
+      "universal_involution_correction": 4482037,
+      "lower_order_correction": 53042,
+      "fixed_loci": {
+        "identity": 47248516628391468,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 7,
+            "scaling_count": 1,
+            "affine_element_count": 13,
+            "fixed_models_per_element": 53784444,
+            "burnside_numerator_contribution": 699197772
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 0,
+            "quotient_degree": 5,
+            "scaling_count": 2,
+            "affine_element_count": 26,
+            "fixed_models_per_element": 318252,
+            "burnside_numerator_contribution": 8274552
+          }
+        ],
+        "scaling_contribution_total": 707472324,
+        "nonidentity_translation_count": 12,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 302875106592253,
+        "scaling_correction": 4535079,
+        "translation_correction": 0,
+        "total": 302875111127332
+      },
+      "resource_usage": {
+        "divisor_inspections": 5
+      }
+    },
+    {
+      "q": 13,
+      "characteristic": 13,
+      "genus": 8,
+      "degree": 17,
+      "group_order": 156,
+      "model_count": 7984999310198158092,
+      "affine_stack_cardinality": 51185893014090757,
+      "coarse_orbit_count": 51185893072361317,
+      "coarse_orbit_excess": 58270560,
+      "relative_excess": [
+        58270560,
+        51185893014090757
+      ],
+      "universal_involution_correction": 58266480,
+      "lower_order_correction": 4080,
+      "fixed_loci": {
+        "identity": 7984999310198158092,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 8,
+            "scaling_count": 1,
+            "affine_element_count": 13,
+            "fixed_models_per_element": 699197760,
+            "burnside_numerator_contribution": 9089570880
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 2,
+            "affine_element_count": 26,
+            "fixed_models_per_element": 24480,
+            "burnside_numerator_contribution": 636480
+          }
+        ],
+        "scaling_contribution_total": 9090207360,
+        "nonidentity_translation_count": 12,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 51185893014090757,
+        "scaling_correction": 58270560,
+        "translation_correction": 0,
+        "total": 51185893072361317
+      },
+      "resource_usage": {
+        "divisor_inspections": 5
+      }
+    },
+    {
+      "q": 25,
+      "characteristic": 5,
+      "genus": 1,
+      "degree": 3,
+      "group_order": 600,
+      "model_count": 15000,
+      "affine_stack_cardinality": 25,
+      "coarse_orbit_count": 28,
+      "coarse_orbit_excess": 3,
+      "relative_excess": [
+        3,
+        25
+      ],
+      "universal_involution_correction": 1,
+      "lower_order_correction": 2,
+      "fixed_loci": {
+        "identity": 15000,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 1,
+            "affine_element_count": 25,
+            "fixed_models_per_element": 24,
+            "burnside_numerator_contribution": 600
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 0,
+            "quotient_degree": 1,
+            "scaling_count": 2,
+            "affine_element_count": 50,
+            "fixed_models_per_element": 24,
+            "burnside_numerator_contribution": 1200
+          }
+        ],
+        "scaling_contribution_total": 1800,
+        "nonidentity_translation_count": 24,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 25,
+        "scaling_correction": 3,
+        "translation_correction": 0,
+        "total": 28
+      },
+      "resource_usage": {
+        "divisor_inspections": 7
+      }
+    },
+    {
+      "q": 25,
+      "characteristic": 5,
+      "genus": 2,
+      "degree": 5,
+      "group_order": 600,
+      "model_count": 9375000,
+      "affine_stack_cardinality": 15625,
+      "coarse_orbit_count": 15652,
+      "coarse_orbit_excess": 27,
+      "relative_excess": [
+        27,
+        15625
+      ],
+      "universal_involution_correction": 24,
+      "lower_order_correction": 3,
+      "fixed_loci": {
+        "identity": 9375000,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 1,
+            "affine_element_count": 25,
+            "fixed_models_per_element": 576,
+            "burnside_numerator_contribution": 14400
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 2,
+            "affine_element_count": 50,
+            "fixed_models_per_element": 24,
+            "burnside_numerator_contribution": 1200
+          }
+        ],
+        "scaling_contribution_total": 15600,
+        "nonidentity_translation_count": 24,
+        "translation_fixed_models_per_element": 25,
+        "translation_contribution_total": 600
+      },
+      "closed_divisor_sum": {
+        "stack_term": 15625,
+        "scaling_correction": 26,
+        "translation_correction": 1,
+        "total": 15652
+      },
+      "resource_usage": {
+        "divisor_inspections": 7
+      }
+    },
+    {
+      "q": 25,
+      "characteristic": 5,
+      "genus": 3,
+      "degree": 7,
+      "group_order": 600,
+      "model_count": 5859375000,
+      "affine_stack_cardinality": 9765625,
+      "coarse_orbit_count": 9766276,
+      "coarse_orbit_excess": 651,
+      "relative_excess": [
+        651,
+        9765625
+      ],
+      "universal_involution_correction": 601,
+      "lower_order_correction": 50,
+      "fixed_loci": {
+        "identity": 5859375000,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 3,
+            "scaling_count": 1,
+            "affine_element_count": 25,
+            "fixed_models_per_element": 14424,
+            "burnside_numerator_contribution": 360600
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 2,
+            "affine_element_count": 50,
+            "fixed_models_per_element": 576,
+            "burnside_numerator_contribution": 28800
+          },
+          {
+            "order": 6,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 2,
+            "affine_element_count": 50,
+            "fixed_models_per_element": 24,
+            "burnside_numerator_contribution": 1200
+          }
+        ],
+        "scaling_contribution_total": 390600,
+        "nonidentity_translation_count": 24,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 9765625,
+        "scaling_correction": 651,
+        "translation_correction": 0,
+        "total": 9766276
+      },
+      "resource_usage": {
+        "divisor_inspections": 7
+      }
+    },
+    {
+      "q": 25,
+      "characteristic": 5,
+      "genus": 4,
+      "degree": 9,
+      "group_order": 600,
+      "model_count": 3662109375000,
+      "affine_stack_cardinality": 6103515625,
+      "coarse_orbit_count": 6103531903,
+      "coarse_orbit_excess": 16278,
+      "relative_excess": [
+        16278,
+        6103515625
+      ],
+      "universal_involution_correction": 15024,
+      "lower_order_correction": 1254,
+      "fixed_loci": {
+        "identity": 3662109375000,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 1,
+            "affine_element_count": 25,
+            "fixed_models_per_element": 360576,
+            "burnside_numerator_contribution": 9014400
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 0,
+            "quotient_degree": 3,
+            "scaling_count": 2,
+            "affine_element_count": 50,
+            "fixed_models_per_element": 14424,
+            "burnside_numerator_contribution": 721200
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 2,
+            "affine_element_count": 50,
+            "fixed_models_per_element": 576,
+            "burnside_numerator_contribution": 28800
+          },
+          {
+            "order": 8,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 4,
+            "affine_element_count": 100,
+            "fixed_models_per_element": 24,
+            "burnside_numerator_contribution": 2400
+          }
+        ],
+        "scaling_contribution_total": 9766800,
+        "nonidentity_translation_count": 24,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 6103515625,
+        "scaling_correction": 16278,
+        "translation_correction": 0,
+        "total": 6103531903
+      },
+      "resource_usage": {
+        "divisor_inspections": 7
+      }
+    },
+    {
+      "q": 25,
+      "characteristic": 5,
+      "genus": 5,
+      "degree": 11,
+      "group_order": 600,
+      "model_count": 2288818359375000,
+      "affine_stack_cardinality": 3814697265625,
+      "coarse_orbit_count": 3814697641226,
+      "coarse_orbit_excess": 375601,
+      "relative_excess": [
+        375601,
+        3814697265625
+      ],
+      "universal_involution_correction": 375601,
+      "lower_order_correction": 0,
+      "fixed_loci": {
+        "identity": 2288818359375000,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 5,
+            "scaling_count": 1,
+            "affine_element_count": 25,
+            "fixed_models_per_element": 9014424,
+            "burnside_numerator_contribution": 225360600
+          }
+        ],
+        "scaling_contribution_total": 225360600,
+        "nonidentity_translation_count": 24,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 3814697265625,
+        "scaling_correction": 375601,
+        "translation_correction": 0,
+        "total": 3814697641226
+      },
+      "resource_usage": {
+        "divisor_inspections": 7
+      }
+    },
+    {
+      "q": 25,
+      "characteristic": 5,
+      "genus": 6,
+      "degree": 13,
+      "group_order": 600,
+      "model_count": 1430511474609375000,
+      "affine_stack_cardinality": 2384185791015625,
+      "coarse_orbit_count": 2384185800436951,
+      "coarse_orbit_excess": 9421326,
+      "relative_excess": [
+        9421326,
+        2384185791015625
+      ],
+      "universal_involution_correction": 9390024,
+      "lower_order_correction": 31302,
+      "fixed_loci": {
+        "identity": 1430511474609375000,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 6,
+            "scaling_count": 1,
+            "affine_element_count": 25,
+            "fixed_models_per_element": 225360576,
+            "burnside_numerator_contribution": 5634014400
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 2,
+            "affine_element_count": 50,
+            "fixed_models_per_element": 360576,
+            "burnside_numerator_contribution": 18028800
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 3,
+            "scaling_count": 2,
+            "affine_element_count": 50,
+            "fixed_models_per_element": 14424,
+            "burnside_numerator_contribution": 721200
+          },
+          {
+            "order": 6,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 2,
+            "affine_element_count": 50,
+            "fixed_models_per_element": 576,
+            "burnside_numerator_contribution": 28800
+          },
+          {
+            "order": 12,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 1,
+            "scaling_count": 4,
+            "affine_element_count": 100,
+            "fixed_models_per_element": 24,
+            "burnside_numerator_contribution": 2400
+          }
+        ],
+        "scaling_contribution_total": 5652795600,
+        "nonidentity_translation_count": 24,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 2384185791015625,
+        "scaling_correction": 9421326,
+        "translation_correction": 0,
+        "total": 2384185800436951
+      },
+      "resource_usage": {
+        "divisor_inspections": 7
+      }
+    },
+    {
+      "q": 25,
+      "characteristic": 5,
+      "genus": 7,
+      "degree": 15,
+      "group_order": 600,
+      "model_count": 894069671630859375000,
+      "affine_stack_cardinality": 1490116119384765625,
+      "coarse_orbit_count": 1490116119620268028,
+      "coarse_orbit_excess": 235502403,
+      "relative_excess": [
+        235502403,
+        1490116119384765625
+      ],
+      "universal_involution_correction": 234750601,
+      "lower_order_correction": 751802,
+      "fixed_loci": {
+        "identity": 894069671630859375000,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 7,
+            "scaling_count": 1,
+            "affine_element_count": 25,
+            "fixed_models_per_element": 5634014424,
+            "burnside_numerator_contribution": 140850360600
+          },
+          {
+            "order": 3,
+            "residue_degree_mod_order": 0,
+            "quotient_degree": 5,
+            "scaling_count": 2,
+            "affine_element_count": 50,
+            "fixed_models_per_element": 9014424,
+            "burnside_numerator_contribution": 450721200
+          }
+        ],
+        "scaling_contribution_total": 141301081800,
+        "nonidentity_translation_count": 24,
+        "translation_fixed_models_per_element": 15000,
+        "translation_contribution_total": 360000
+      },
+      "closed_divisor_sum": {
+        "stack_term": 1490116119384765625,
+        "scaling_correction": 235501803,
+        "translation_correction": 600,
+        "total": 1490116119620268028
+      },
+      "resource_usage": {
+        "divisor_inspections": 7
+      }
+    },
+    {
+      "q": 25,
+      "characteristic": 5,
+      "genus": 8,
+      "degree": 17,
+      "group_order": 600,
+      "model_count": 558793544769287109375000,
+      "affine_stack_cardinality": 931322574615478515625,
+      "coarse_orbit_count": 931322574621347310793,
+      "coarse_orbit_excess": 5868795168,
+      "relative_excess": [
+        5868795168,
+        931322574615478515625
+      ],
+      "universal_involution_correction": 5868765024,
+      "lower_order_correction": 30144,
+      "fixed_loci": {
+        "identity": 558793544769287109375000,
+        "nontrivial_scalings": [
+          {
+            "order": 2,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 8,
+            "scaling_count": 1,
+            "affine_element_count": 25,
+            "fixed_models_per_element": 140850360576,
+            "burnside_numerator_contribution": 3521259014400
+          },
+          {
+            "order": 4,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 4,
+            "scaling_count": 2,
+            "affine_element_count": 50,
+            "fixed_models_per_element": 360576,
+            "burnside_numerator_contribution": 18028800
+          },
+          {
+            "order": 8,
+            "residue_degree_mod_order": 1,
+            "quotient_degree": 2,
+            "scaling_count": 4,
+            "affine_element_count": 100,
+            "fixed_models_per_element": 576,
+            "burnside_numerator_contribution": 57600
+          }
+        ],
+        "scaling_contribution_total": 3521277100800,
+        "nonidentity_translation_count": 24,
+        "translation_fixed_models_per_element": 0,
+        "translation_contribution_total": 0
+      },
+      "closed_divisor_sum": {
+        "stack_term": 931322574615478515625,
+        "scaling_correction": 5868795168,
+        "translation_correction": 0,
+        "total": 931322574621347310793
+      },
+      "resource_usage": {
+        "divisor_inspections": 7
+      }
+    }
+  ],
+  "firewall": "This counts affine presentations retaining the rational branch point at infinity, not unpointed hyperelliptic curves or the full moduli stack. It proves no Frobenius equidistribution, L-function moment, number-field transfer, RH, or GRH.",
+  "payload_sha256": "1c3578064dadca0c3914b180773ee1fffb707161451e14d8de333ce57abe5b61"
+}

@@ -1,0 +1,743 @@
+{
+  "bounded_arbitrary_trace_collision_regression": {
+    "all_actual_equalities_match_complete_Q_theorem": true,
+    "collision_projection_sha256": "875fdf3df825d938a254c771d1fc2673ca78dac57f97c5e4ac26107bc7850a0f",
+    "factor_comparisons": 240,
+    "integer_traces": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "maximum_m": 8,
+    "q_values": [
+      1,
+      3
+    ]
+  },
+  "bounded_full_factor_regression": {
+    "arithmetic": "fractions.Fraction only",
+    "exact_factor_comparisons": 90,
+    "maximum_m": 36,
+    "rows": [
+      {
+        "alias_cases": [
+          "order_2_t_zero"
+        ],
+        "m": 1,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 2,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero",
+          "order_4_t2_eq_2q"
+        ],
+        "m": 3,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 4,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero",
+          "order_6_t2_eq_3q"
+        ],
+        "m": 5,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 6,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero",
+          "order_4_t2_eq_2q"
+        ],
+        "m": 7,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 8,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero"
+        ],
+        "m": 9,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 10,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ],
+        "m": 11,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 12,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero"
+        ],
+        "m": 13,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 14,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero",
+          "order_4_t2_eq_2q"
+        ],
+        "m": 15,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 16,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero",
+          "order_6_t2_eq_3q"
+        ],
+        "m": 17,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 18,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero",
+          "order_4_t2_eq_2q"
+        ],
+        "m": 19,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 20,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero"
+        ],
+        "m": 21,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 22,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ],
+        "m": 23,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 24,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero"
+        ],
+        "m": 25,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 26,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero",
+          "order_4_t2_eq_2q"
+        ],
+        "m": 27,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 28,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero",
+          "order_6_t2_eq_3q"
+        ],
+        "m": 29,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 30,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero",
+          "order_4_t2_eq_2q"
+        ],
+        "m": 31,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 32,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero"
+        ],
+        "m": 33,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 34,
+        "tested_cases": [
+          "generic"
+        ]
+      },
+      {
+        "alias_cases": [
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ],
+        "m": 35,
+        "tested_cases": [
+          "generic",
+          "order_2_t_zero",
+          "order_4_t2_eq_2q",
+          "order_6_t2_eq_3q"
+        ]
+      },
+      {
+        "alias_cases": [
+          "generic"
+        ],
+        "m": 36,
+        "tested_cases": [
+          "generic"
+        ]
+      }
+    ]
+  },
+  "bounded_residue_regression": {
+    "cases_checked": 324,
+    "failures": 0,
+    "maximum_m": 36,
+    "odd_m_values_checked": 18,
+    "order_bound_reason": "-1=r^(n/2) occurs by exponent m, so n<=2m",
+    "projection_sha256": "919ae345538a852d4111680c228bcbef1d15a5353c3a45bdeba7f43c52c86dee"
+  },
+  "closed_alias_factors": {
+    "general_even_order_n": "if m is odd and n divides m+1, then P_m=(1+q^(m*n/2)*T^n)^((m+1)/n)",
+    "order_2_t_zero": "(1+q^m*T^2)^((m+1)/2)",
+    "order_4_t2_eq_2q": "(1+q^(2m)*T^4)^((m+1)/4)",
+    "order_6_t2_eq_3q": "(1+q^(3m)*T^6)^((m+1)/6)",
+    "sign_reason": "beta^(m*n)=-q^(m*n/2) because r^(n/2)=-1 and m is odd"
+  },
+  "complete_fixed_q_rational_collision_theorem": {
+    "complete_classification": {
+      "even_m": "factor equality iff x=y or x=-y",
+      "odd_m": "factor equality iff x=y, or y=-x with [x^2=2q and 4 divides m+1], or y=-x with [x^2=3q and 6 divides m+1]"
+    },
+    "consecutive_weight_certificate": "for A_x={alpha^(m-j)beta^j}, all quotients are powers of r=alpha/beta and consecutive weights have quotient r, so Gamma(A_x)=<r>",
+    "finite_case": "each r is a generator of the common finite cyclic group; rational traces force exact order n in {1,2,3,4,6}, whose generators are inverse pairs and have one common r+r^(-1)",
+    "infinite_case": "equal infinite cyclic groups have r_x and r_y as generators, hence r_y=r_x or r_x^(-1)",
+    "intrinsic_quotient_group": "Gamma(A)=group generated by a/a' for spectrum elements a,a'",
+    "m_zero_exception": "Sym^0 has factor 1-T for every trace and is excluded",
+    "nonzero_certificate": "q nonzero makes alpha,beta and every symmetric-power weight nonzero, so all quotients are defined",
+    "root_multisets_include_multiplicity": true,
+    "square_recovery": "x^2/q-2=r_x+r_x^(-1), hence x^2=y^2",
+    "statement": "for m>=1 and x,y,q in Q with q nonzero, equality of the complete Sym^m factors first forces x^2=y^2"
+  },
+  "consecutive_residue_multiset_lemma": {
+    "counts": "a+1 on residues 0,...,s-1 and a elsewhere",
+    "covers_repeated_torsion_roots": true,
+    "division": "L=a*n+s, 0<=s<n",
+    "s_between_1_and_n_over_2": "residue 0 is heavy but its half-shift n/2 is light",
+    "s_between_n_over_2_and_n_minus_1": "residue s-n/2 is heavy but its half-shift s is light",
+    "s_zero": "all residues have multiplicity a, so invariance holds",
+    "statement": "for even n and L>=1, multiplicities of 0,...,L-1 mod n are invariant under shift n/2 iff n divides L"
+  },
+  "cyclotomic_certificate": {
+    "all_degrees_equal_Euler_phi": true,
+    "coefficient_convention": "low degree to high degree",
+    "even_orders_surviving": [
+      2,
+      4,
+      6
+    ],
+    "exact_generation_checked_through_order": 36,
+    "global_phi_at_most_2_proof": {
+      "conclusion": "phi(n)<=2 iff n is one of 1,2,3,4,6",
+      "mixed": "phi(2^a*3^b)=2^a*3^(b-1), giving n=6",
+      "prime_exclusion": "a prime p>=5 dividing n forces p-1 to divide phi(n), so phi(n)>=4",
+      "pure_2_power": "phi(2^a)=2^(a-1), giving n=1,2,4",
+      "pure_3_power": "phi(3^b)=2*3^(b-1), giving n=3",
+      "remaining_shape": "n=2^a*3^b"
+    },
+    "identity": "product_(d|n) Phi_d(X)=X^n-1",
+    "orders_with_phi_at_most_2_in_checked_range": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ],
+    "special_polynomials": {
+      "1": [
+        -1,
+        1
+      ],
+      "2": [
+        1,
+        1
+      ],
+      "3": [
+        1,
+        1,
+        1
+      ],
+      "4": [
+        1,
+        0,
+        1
+      ],
+      "6": [
+        1,
+        -1,
+        1
+      ]
+    },
+    "square_ratio_t2_over_q_by_order": {
+      "1": 4,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "6": 3
+    }
+  },
+  "exact_sign_pair_theorem": {
+    "even_m": "P_m(t,q;T)=P_m(-t,q;T) for every t and q",
+    "multiplicity_firewall": "equality is equality of root multisets with multiplicity; no squarefreeness or distinct-root assumption is used",
+    "odd_m_iff": "P_m(t,q;T)=P_m(-t,q;T) iff r has exact even order n dividing m+1",
+    "order_two_case": "n=2 iff t=0; the sign pair then collapses",
+    "proof_steps": [
+      "t->-t replaces (alpha,beta) by (-alpha,-beta)",
+      "the Sym^m spectrum is fixed termwise for even m and negated for odd m",
+      "after division by beta^m, the odd-m condition is multiset {1,r,...,r^m}=-{1,r,...,r^m}",
+      "membership of -1 forces r to have even order n and -1=r^(n/2)",
+      "multiplication by -1 shifts exponent residues by n/2",
+      "the consecutive-residue multiplicity lemma gives invariance iff n divides m+1"
+    ]
+  },
+  "negative_controls": {
+    "all_factors_distinct_from_their_sign_partners": true,
+    "rows": [
+      {
+        "label": "odd_order_3_even_though_3_divides_m_plus_1",
+        "m": 5,
+        "q": 9,
+        "root_ratio_order": 3,
+        "t": 3
+      },
+      {
+        "label": "odd_order_1_Hasse_endpoint",
+        "m": 5,
+        "q": 9,
+        "root_ratio_order": 1,
+        "t": 6
+      },
+      {
+        "label": "order_6_but_6_does_not_divide_m_plus_1",
+        "m": 1,
+        "q": 3,
+        "root_ratio_order": 6,
+        "t": 3
+      },
+      {
+        "label": "order_6_but_6_does_not_divide_m_plus_1",
+        "m": 3,
+        "q": 3,
+        "root_ratio_order": 6,
+        "t": 3
+      },
+      {
+        "label": "order_6_but_6_does_not_divide_m_plus_1",
+        "m": 7,
+        "q": 3,
+        "root_ratio_order": 6,
+        "t": 3
+      },
+      {
+        "label": "order_6_but_6_does_not_divide_m_plus_1",
+        "m": 9,
+        "q": 3,
+        "root_ratio_order": 6,
+        "t": 3
+      }
+    ]
+  },
+  "nonrational_trace_counterexample": {
+    "common_factor": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "first_spectrum_exponents_mod_5": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "m": 3,
+    "meaning": "the rational-trace hypothesis in the complete collision theorem is essential",
+    "q": 1,
+    "second_spectrum_exponents_mod_5": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "x": "zeta+zeta^(-1)",
+    "x_and_y_minimal_polynomial": "X^2+X-1",
+    "x_not_equal_plus_or_minus_y": true,
+    "y": "zeta^2+zeta^(-2)",
+    "zeta": "a primitive fifth root of unity"
+  },
+  "normalization": {
+    "base_factor": "1-t*T+q*T^2=(1-alpha*T)*(1-beta*T)",
+    "domain_of_complete_collision_theorem": "fixed q in Q nonzero; x,y in Q; m>=1",
+    "domain_of_sign_theorem": "characteristic zero, m>=0, q nonzero",
+    "relations": "alpha+beta=t; alpha*beta=q; q nonzero",
+    "root_ratio": "r=alpha/beta; swapping alpha,beta replaces r by r^(-1)",
+    "sym_m_factor": "P_m(t,q;T)=product_(j=0)^m (1-alpha^(m-j)*beta^j*T)"
+  },
+  "odd_prime_power_integral_corollary": {
+    "Hasse_check": "t^2=3q<4q",
+    "classification": "P_m(t,q)=P_m(-t,q) iff m=5 mod 6, q=3^(2k+1), and t=+/-3^(k+1)",
+    "curve_realization_claimed": false,
+    "equivalent_equation": "m=5 mod 6 and t^2=3q",
+    "scope": "q=p^a with p odd prime, a>=1; t is a nonzero integer; m is odd",
+    "t2_eq_2q_impossible": "v_2(2q)=1 for odd q, whereas a nonzero square has even v_2",
+    "t2_eq_3q_prime_power_proof": "prime valuations force p=3; then a+1 is even, so a=2k+1"
+  },
+  "payload_sha256": "f1a7f183ee16c98c8f633e9b5ffa5f1bb76c0521cd596d5be71840a35711d983",
+  "producer": {
+    "note": "research/l-families/atlas/function_field/ELLIPTIC_SYMMETRIC_POWER_FULL_FACTOR_SIGN_ALIASES.md",
+    "note_sha256_lf_normalized": "881b01754a2381abbf22ca04beabc9ce3ed4796475f27e578654d30f17ebe34c",
+    "script": "research/l-families/atlas/function_field/elliptic_symmetric_power_full_factor_sign_aliases.py",
+    "script_sha256_lf_normalized": "b817406551fc9adc008fb6f24f9db6a1a84081cbcbd6aa3448344939bf74709a",
+    "test": "tests/test_elliptic_symmetric_power_full_factor_sign_aliases.py",
+    "test_sha256_lf_normalized": "4dd8a92fd13970cc345ff2d8e3895b7abce2560e00a1820cbe4896bd3d66bb63"
+  },
+  "rational_corollary": {
+    "cyclotomic_degree_argument": "if t^2/q is rational and r has order n, then Phi_n divides a quadratic over Q, hence phi(n)<=2",
+    "even_orders": [
+      2,
+      4,
+      6
+    ],
+    "identity": "t^2/q=r+r^(-1)+2",
+    "odd_m_full_sign_alias_iff": "t=0, or [t^2=2q and 4 divides m+1], or [t^2=3q and 6 divides m+1]",
+    "square_ratio_by_order": {
+      "2": 0,
+      "4": 2,
+      "6": 3
+    }
+  },
+  "resource_contract": {
+    "accounted_work_ledger": {
+      "bounded_arbitrary_trace_pair_comparisons": 240,
+      "bounded_residue_lemma_cases": 324,
+      "cyclotomic_orders_checked": 36,
+      "locked_source_payloads_loaded": 2,
+      "newton_coefficients_reconstructed": 4022
+    },
+    "accounted_work_unit_cap_exclusive": 5000,
+    "accounted_work_units": 4624,
+    "arithmetic": "exact integers and fractions.Fraction only",
+    "maximum_regression_m": 36,
+    "new_curve_field_or_trace_range_enumerations": 0,
+    "random_samples": 0,
+    "symbolic_engine_dependency": false
+  },
+  "schema": "riemann.function_field.elliptic_symmetric_power_full_factor_collisions.v1",
+  "scope_firewall": {
+    "bounded_regression_is_not_the_proof": "the proof is the exact root-multiset and consecutive-residue argument",
+    "complete_fixed_q_rational_full_factor_classification": true,
+    "does_not_classify_arbitrary_scalar_trace_collisions": true,
+    "does_not_extend_complete_classification_to_nonrational_traces": true,
+    "local_factor_identity_not_a_global_L_function_lift": true,
+    "no_RH_GRH_or_zero_distribution_consequence_claim": true,
+    "no_automorphy_or_modularity_claim": true,
+    "no_curve_or_isogeny_class_realization_claim": true,
+    "no_global_compatible_family_or_euler_product_constructed": true,
+    "no_literature_priority_claim": true,
+    "sign_pair_root_ratio_theorem_holds_in_characteristic_zero": true
+  },
+  "source_locks": [
+    {
+      "file_sha256_lf_normalized": "7a6e249fd696f9526154375f60bd97c2c40d251791f08eec6ecdc70b3177b941",
+      "path": "research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.json",
+      "payload_sha256": "046f76f43a2af3ac296f5c18c258e61f138e122bee38ec618af489e7e3a9e50e",
+      "schema": "riemann.function_field.elliptic_symmetric_power_trace_aliasing.v1",
+      "use": "replay the prior even-m and m=5 full-factor diagnostics"
+    },
+    {
+      "file_sha256_lf_normalized": "649f682c0355a71eab618cd4fbd0507e96643b1fefacdd37e1eb9cd82dd36515",
+      "path": "research/l-families/atlas/function_field/elliptic_sym5_coefficient_recovery.json",
+      "payload_sha256": "f7b1a484d2a8b3cc0b997dbf0f15a69893f279a32bc550b71f28b21a5a9d7467",
+      "schema": "riemann.function_field.elliptic_sym5_coefficient_recovery.v1",
+      "use": "replay the three locked Sym^5 full-factor sign aliases"
+    }
+  ],
+  "source_replay": {
+    "new_curve_field_or_trace_range_enumerations": 0,
+    "source_claims_replayed": 2,
+    "sym5_packet_full_factor_aliases": [
+      {
+        "q": 3,
+        "x": -3,
+        "y": 3
+      },
+      {
+        "q": 27,
+        "x": -9,
+        "y": 9
+      },
+      {
+        "q": 243,
+        "x": -27,
+        "y": 27
+      }
+    ],
+    "trace_packet_q3_m5_factors": {
+      "-3": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14348907
+      ],
+      "0": [
+        1,
+        0,
+        729,
+        0,
+        177147,
+        0,
+        14348907
+      ],
+      "3": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14348907
+      ]
+    }
+  }
+}
