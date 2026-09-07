@@ -10,14 +10,14 @@ Follow [Join and start](../CONTRIBUTING.md#join-and-start). For the direct organ
 
 When the repository is public, reading it and contributing through a fork do not require organization membership. Membership is the convenient route for shared repository branches.
 
-## 2. Connect GitHub in ChatGPT
+## 2. Connect GitHub in ChatGPT or Claude
 
-1. In ChatGPT on your phone, find the GitHub plugin or connection, install it if needed, and complete the GitHub connection prompt. Use the same GitHub account that has repository access.
-2. Open the project's [GitHub connector installation selector](https://github.com/apps/chatgpt-codex-connector/installations/select_target). Choose GettysburgResearch if offered, then follow the available authorization or repository access steps.
+1. In ChatGPT or Claude on your phone, find the available GitHub plugin or connector and complete its connection prompt. Use the same GitHub account that has repository access.
+2. Open the installation selector for your service: [ChatGPT/Codex](https://github.com/apps/chatgpt-codex-connector/installations/select_target) or [Claude](https://github.com/apps/claude/installations/select_target). Choose GettysburgResearch if offered, then follow the available authorization or repository access steps. Available mobile read/write actions may differ by service and client.
 3. If GitHub asks for organization-owner approval, submit the request and let a maintainer handle it. An ordinary member may not be able to install or change an organization app. Organization installation and your personal connection are separate; joining the organization alone does not finish both.
-4. Return to ChatGPT and start a new chat with GitHub tools available. Confirm that the repository is accessible before asking for a write.
+4. Return to your service and start a new chat with GitHub tools available. Confirm that the repository is accessible before asking for a write.
 
-The organization currently has the connector installed for all its repositories. That installation does not grant a person access they do not otherwise have. If you cannot see the repository, check the GitHub account, accepted invitation, personal connection, and organization approval before reinstalling anything.
+**Owner check, separate from personal authorization:** in GettysburgResearch's GitHub **Settings → Third-party Access → GitHub Apps**, configure the relevant app's repository access and resolve pending permission requests. **OAuth application policy** is a separate control for OAuth apps; approve the relevant app if required rather than disabling restrictions globally. An installation does not grant a person repository access they do not otherwise have, or guarantee mobile write tools. See [GitHub's app-access guidance](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/limiting-oauth-app-and-github-app-access-requests-and-installations) and [Claude's integration guide](https://support.claude.com/en/articles/10167454-use-the-github-integration).
 
 Reference: [ChatGPT plugins, including mobile availability](https://learn.chatgpt.com/docs/plugins) and [GitHub app installation and authorization](https://docs.github.com/en/apps/using-github-apps/installing-a-github-app-from-a-third-party).
 
