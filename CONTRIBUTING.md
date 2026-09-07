@@ -13,6 +13,20 @@ Using ChatGPT from a phone? Follow [the phone tutorial](docs/PHONE.md). Research
 
 Use public-safe material: do not commit credentials, private chat transcripts, personal contact details, or local configuration containing secrets. Credit contributors by their chosen public name or GitHub username. Ordinary scholarly citations are welcome.
 
+## Roles and responsibilities
+
+Our intended division of access and responsibility is:
+
+| Group | Access and responsibility |
+|---|---|
+| Contributors | Write access for research branches and PRs; review one another's work. Public fork contributions are also welcome. |
+| Integrators | Write access plus permission to merge reviewed PRs into main; preserve claim status, dependencies and review scope. Repository Admin access is not needed. |
+| Owners | Manage membership, settings and exceptional interventions; keep this group small. |
+
+Owners configure GitHub permissions and branch protections separately; this table describes the working policy.
+
+Interested in helping integrate? Start by reviewing contributions and preparing a small integration PR, then ask a maintainer about joining the integration team.
+
 ## Exploratory work is lightweight
 
 Open broad or unconventional research PRs freely. They may contain conjectures, reconnaissance, synthetic models, failed attempts, literature connections, or prototype code.
