@@ -1,0 +1,62 @@
+{
+  "schema": "riemann.prime-curvature.sources.v1",
+  "publication_parent": "94ed8cd0395350b465165b424cc5c6366223d4ae",
+  "rh_proved": false,
+  "new_native_sign_bound": false,
+  "sources": [
+    {
+      "role": "same scalar and slope precursor",
+      "repository": "GettysburgResearch/riemann",
+      "commit": "94ed8cd0395350b465165b424cc5c6366223d4ae",
+      "path": "standalone/2026-09-06-logarithmic-core/euler-tail-stability/PROOF.md",
+      "blob": "24ebe2ccf09d26e773a0071c6b335bcaff2b4b3d",
+      "sha256": "223109ec431d245d62df71d989796bd65e2ca9bbc5671b2d93180d637ea6c2ce",
+      "scope": "Read supplied full exact blob; remotely authenticated. No parent code replay."
+    },
+    {
+      "role": "inherited RH-to-positive-margin direction only; scalar normalization",
+      "repository": "GettysburgResearch/riemann",
+      "commit": "8d8750e5be8e0f2920db371bf31ea93c2d0a0caf",
+      "path": "standalone/2026-09-06-logarithmic-core/annular-scalar-route/PROOF.md",
+      "blob": "0f1b21227d064e61f4f532d9025c78106baa688e",
+      "sha256": "c68840c91308d4a93b85d38e34edc5c5ba9a335b2b25d0b4546a9e86979ffd04",
+      "scope": "Read full pinned manuscript; its RH-to-margin argument is imported at its proposed-review scope, not independently re-certified."
+    },
+    {
+      "role": "parallel Green-interpolation connection; no theorem dependency",
+      "repository": "GettysburgResearch/riemann",
+      "commit": "ea66cd5b152e7960ad51ea51b154734eebc9b96a",
+      "path": "standalone/2026-09-06-astra-terminal-endpoint/PROOF.md",
+      "blob": "138dd98c2f8f32b8979926593443986f98f263c5",
+      "scope": "Read lines 240-440, including sections 5-6. Different odd-Mobius scalar. No build, full packet audit, code replay or source map to its norm claimed."
+    }
+  ],
+  "classical_inputs": [
+    {
+      "name": "Mobius/divisor inversion",
+      "url": "https://dlmf.nist.gov/27.5",
+      "scope": "Classical identity, independently derived for the present finite sums."
+    },
+    {
+      "name": "von Mangoldt divisor identity",
+      "url": "https://github.com/leanprover-community/mathlib3/blob/master/src/number_theory/von_mangoldt.lean",
+      "scope": "Public source provenance only; proof in section 1 is elementary. No library dependency or Lean execution."
+    },
+    {
+      "name": "Landau boundary singularity and analytic continuation",
+      "scope": "Positive Taylor/Tonelli argument given in section 6; classical principle, not a new general theorem."
+    },
+    {
+      "name": "Zeta Euler series, real-axis nonvanishing, functional equation, analytic zero multiplicity",
+      "scope": "Classical inputs. No recent zero census or numerical zero location used."
+    }
+  ],
+  "not_claimed": [
+    "unbounded positivity",
+    "nontrivial upper bound for failure count",
+    "new zero-free region",
+    "formal proof",
+    "independent acceptance",
+    "external novelty"
+  ]
+}
