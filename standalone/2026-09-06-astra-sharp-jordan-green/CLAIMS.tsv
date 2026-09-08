@@ -1,0 +1,9 @@
+claim_id	locator	status	statement	proof_reason	boundary
+JGC26.T1	PROOF.md §§1–4	PROPOSED_PROOF_COMPLETE	For all s>0,t>=0 the literal density is positive iff the universal coefficient is at least 2	Factorial/association bounds and full concave-envelope proof	No RH or critical-innerness conclusion
+JGC26.C1	PROOF.md §4.4	PROPOSED_PROOF_COMPLETE	Original density B_(2a,a)>8a/45 for all a>0,t>=0	Sharp theorem plus two uniform source lower bounds	Replaces only the arithmetic density gate
+JGC26.T2	PROOF.md §5	PROPOSED_PROOF_COMPLETE	Positive complete contact/atom/density Laplace measure and all-rank safe Gram domination	Distributional integration by parts and positive measure	Re q>0 only
+JGC26.C2	PROOF.md §6	PROPOSED_PROOF_COMPLETE	All-scale positive completed safe Stinespring measure	Exact regrouping of gamma/rational factors and convolution	Not the pole-removed Xi model-space kernel
+JGC26.T3	REAL_AXIS.md	PROPOSED_PROOF_COMPLETE	s^2 M_s-c_s>13s^3/1800 for 0<s<=1	Prime-2 reserve and explicit Euler--Maclaurin remainder	No unbounded critical prime estimate
+JGC26.N1	RH_ATTEMPT.md §3	PROPOSED_PROOF_COMPLETE	Direct positive exponential continuation has no nonnegative exponential moment	Uniform density floor and positive convolution	Only diagnoses the literal map, not all possible intertwiners
+JGC26.C3	RH_ATTEMPT.md §5	CONDITIONAL_CONSUMER	Schur positivity at all dyadic a_j implies RH	Isolated zero, uncanceled shifted pole and functional equation	Schur premise unproved
+JGC26.OPEN.CRITICAL	RH_ATTEMPT.md §5	OPEN_RH_BEARING	Source-ordered critical Xi Gram factorization / norm exhaustion	Not established by safe positive density	No reachability to RH from proved components

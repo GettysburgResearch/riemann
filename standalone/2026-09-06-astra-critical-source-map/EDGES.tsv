@@ -1,0 +1,12 @@
+edge_id	inputs	output	status	qualification
+CSM26.E01	Euler_floor_identity	CSM26.T1	PROVED_IN_PACKET	Classical continuation on Re w>0
+CSM26.E02	CSM26.T1;beta_integral;xi_reflection	CSM26.T2	PROVED_IN_PACKET	Equal full polarized norms on source span only
+CSM26.E03	CSM26.T2;Hardy_cyclicity;canonical_factorization	CSM26.T3	PROVED_IN_PACKET	Boundary singular factors excluded separately
+CSM26.E04	P804.PROOF;exact_centered_algebra	CSM26.L1	PROVED_IN_PACKET	Local distributional recovery not an L2(mu) bounded map
+CSM26.E05	CSM26.L1;Young;Gamma_log_convexity	CSM26.T4	PROVED_IN_PACKET	Raw causal formula also derived independently in C17-C18
+CSM26.E06	CSM26.T1;Hardy_projection	CSM26.T5	PROVED_IN_PACKET	Conditioning not inferred from small Gram error
+CSM26.E07	CSM26.T3;CSM26.T5;CSM26.OPEN	RH	CONDITIONAL_ONLY	Requires the currently unproved cyclicity limit
+CSM26.E08	finite_Gram_PD	CSM26.OPEN	REJECTED_INFERENCE	Positive synthetic source pair retains defect 3/4
+CSM26.E09	CSM26.T4	global_contractivity	REJECTED_INFERENCE	Memory blocks retained; two-block exact counterexample
+CSM26.E10	CSM26.L2	bounded_inverse_synthesis	UNPROVED	Mobius cancellation and impulses require new control
+CSM26.E11	CSM26.E1	CSM26.OPEN	REJECTED_INFERENCE	One finite error bound is not zero limiting error

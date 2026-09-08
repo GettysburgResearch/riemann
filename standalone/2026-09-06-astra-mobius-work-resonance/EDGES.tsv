@@ -1,0 +1,13 @@
+from	to	type	reason
+DCP26 source identity	MWR26.T1	EXACT_REUSE	Actual phi fixed; energy identity itself rederived for arbitrary impulses.
+MWR26.T1	MWR26.A1	PROVED_IMPLICATION	Explicit exponential state update; no matrix inversion.
+MWR26.T1 + exact log/radical arithmetic	MWR26.F1	FINITE_CERTIFICATE	Complete n=1,2,3 event stream reconstructed.
+local d*h=f + stable d,f + finite zero packet	MWR26.T2	PROVED_IMPLICATION	No RH or global L2 h hypothesis.
+MWR26.T2 + critical-line zero existence	MWR26.C2	CLASSICAL_INPUT	Existence is imported; multiplicity need not be one.
+MWR26.T2 + local compact-inverse identity	MWR26.C3	PROVED_ADAPTER	Compact inverse identity independently reconstructed.
+MWR26.OPEN1 + MWR26.T1 + DCP26 exact source	RH	CONDITIONAL_ONLY	Open work upper bound cannot be omitted.
+RH + classical Littlewood implication	MWR26.OPEN1	CONDITIONAL_CONVERSE	Not an unconditional proof of the input.
+finite certificates	MWR26.OPEN1	NO_TRANSFER	No finite trend establishes a subpower subsequence.
+positive Q/passivity	work upper bound	NO_TRANSFER	Only W>=-D follows; W3 is positive.
+H(T)>=cT	unbounded source-output norm	NO_TRANSFER	The stable source convolution suppresses boundary modes.
+prior JGC26 safe positivity	MWR26.OPEN1	UNCONSTRUCTED_TRANSFER	No source-metric map paying actual work supplied.

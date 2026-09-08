@@ -1,0 +1,46 @@
+{
+  "RH_proved": false,
+  "arithmetic": "DIRECTED_INTERVAL",
+  "atanh_terms": 72,
+  "b": {
+    "denominator": 4,
+    "numerator": 3
+  },
+  "boundary": "One actual source-vector projection, with all real cells and the infinite tail bounded.",
+  "coarse_error_upper": "11/50",
+  "complete_cells": 4095,
+  "eta": 1,
+  "first_projection_error_squared": {
+    "denominator_power_of_two": 192,
+    "lower_numerator": "1355248738924802513958369666267576845077232931969087054052",
+    "upper_numerator": "1357377886051994609375341059423374292702148530731511175456"
+  },
+  "higher_rank_extrapolation": false,
+  "implementation": "DYADIC_INTEGER",
+  "integer_cutoff": 4096,
+  "laplace_at_one": {
+    "denominator_power_of_two": 192,
+    "lower_numerator": "3016575038107396466593530198128866527084411834725071247719",
+    "upper_numerator": "3016575770968479572975737650344535339665819575969154500163"
+  },
+  "laplace_dirichlet_enclosure": {
+    "denominator_power_of_two": 192,
+    "lower_numerator": "3016575038107396466593530198128866527084411834725071247719",
+    "upper_numerator": "3016575770968479572975737650344535339665819575969154500163"
+  },
+  "laplace_source_enclosure": {
+    "denominator_power_of_two": 192,
+    "lower_numerator": "3016567085957136493944679068496582091754380127902240577282",
+    "upper_numerator": "3016584000183519268600211061077355354519465298838099141359"
+  },
+  "laplace_tail_upper": "16914226382774655531992580773262765085170935853058943",
+  "norm_squared": {
+    "denominator_power_of_two": 192,
+    "lower_numerator": "3697684343086031065038014142252468217685377915981578668634",
+    "upper_numerator": "3699282821235274205225825100752910706309778992099989996775"
+  },
+  "norm_tail_upper": "1598478149243140187810958500442488624401076090793309804",
+  "precision_bits": 192,
+  "schema": "csm26.factorial-source-first-vector.v1",
+  "zeta_gamma_oracle_used": false
+}

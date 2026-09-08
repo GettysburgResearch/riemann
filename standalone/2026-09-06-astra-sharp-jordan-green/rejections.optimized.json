@@ -1,0 +1,40 @@
+{
+  "analytic_proofs_checked": false,
+  "count": 8,
+  "mode": "optimized",
+  "mutations": [
+    {
+      "mutation": "RH_proved",
+      "rejected": true
+    },
+    {
+      "mutation": "analytic_proofs_machine_checked",
+      "rejected": true
+    },
+    {
+      "mutation": "fixture_count",
+      "rejected": true
+    },
+    {
+      "mutation": "check_count",
+      "rejected": true
+    },
+    {
+      "mutation": "zeta_gamma_evaluations",
+      "rejected": true
+    },
+    {
+      "mutation": "schema",
+      "rejected": true
+    },
+    {
+      "mutation": "removed_control",
+      "rejected": true
+    },
+    {
+      "mutation": "duplicate_schema",
+      "rejected": true
+    }
+  ],
+  "schema": "riemann.astra.jgc26.rejections.v1"
+}
