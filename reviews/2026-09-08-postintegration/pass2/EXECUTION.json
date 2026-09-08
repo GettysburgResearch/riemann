@@ -1,0 +1,114 @@
+{
+  "author_files_executed": [
+    {
+      "bytes": 3246,
+      "git_blob": "1f56c8940b492241be50fa7ab7aea067962b5ec5",
+      "path": "wp/certificate.json",
+      "sha256": "d485e1bde853d0748ad4dd10739d23ed0c43a750cf087c1d81827a6a0f870b9d"
+    },
+    {
+      "bytes": 5860,
+      "git_blob": "22055a6404b36c208ea891728779bd6382be7722",
+      "path": "wp/intervals.py",
+      "sha256": "0d3d8d2f9cff470c7ef1987328f73853d7eee177c09c5a13db7d58284e5238b3"
+    },
+    {
+      "bytes": 7345,
+      "git_blob": "07f4e69a6c8216d01a6f80cf29bb9330b0bffa9a",
+      "path": "wp/verify.py",
+      "sha256": "65e3681d86e3f6b3d3f9a6d95f1336c86eb2f9074f1ca7317990a0c21937c696"
+    },
+    {
+      "bytes": 4403,
+      "git_blob": "02dcfed3b2539219bc07c56411510758932b8ccf",
+      "path": "ie/certificate.py",
+      "sha256": "77f0c79f30fed80e67367565c54be6ee7bfe01d3a008e88de94ceb4f7250d54a"
+    },
+    {
+      "bytes": 9799,
+      "git_blob": "92f484bc6bc7b12bf26313bd7d323c637cd834b9",
+      "path": "ie/interval_core.py",
+      "sha256": "1aa6bfa49f791ffde5224e21c8c92291a2e06b35130034d1de975b4d7a93fa17"
+    }
+  ],
+  "certificate_calculations": 2,
+  "counts_are_not_theorem_counts": true,
+  "date_utc": "2026-09-08",
+  "environment": "Linux; isolated standard-library Python; copied source subsets, not complete repository checkout",
+  "history_notes": [
+    "An attempted streaming container session was unsupported before execution; not counted as a test result.",
+    "Earlier direct subset and final wrapper calculations agreed; reruns are not counted as additional independent certificates.",
+    "No direct Git checkout could be obtained because runtime DNS resolution failed."
+  ],
+  "independent_assertions": 3024,
+  "main_changed": false,
+  "numerical_scope": {
+    "ADG32": "Independent implementation of actual finite inverse in reviewer checker; no author core/trial/derived matrix imported",
+    "IE": "certificate.certify(core) for full fixed exponential trial and entire tail; not package check.py or test suite",
+    "WP": "Full fixed certificate coefficients and analytic all-index tail, using inspected author interval implementation"
+  },
+  "pinned_subset_contracts": 213,
+  "reported_wp_result_match": "a94e20c9cbdb16e29fc95d5a95d6be9e660de2e5",
+  "reviewer_code": [
+    {
+      "bytes": 12428,
+      "git_blob": "873bf4729b3a4cfffa8dde56048fdd2137dcbecb",
+      "path": "independent_checks.py",
+      "sha256": "4256c280859f8091308449a20f29f260dab0235b8c854f02d1da50abef80dcc8"
+    },
+    {
+      "bytes": 6288,
+      "git_blob": "d6ea3bf97d56226d4709f9335da0595f610abf15",
+      "path": "replay_certificates.py",
+      "sha256": "075ad79d3e5b1eb87fa1497093f2e2499b8d0bbe6d8b13fafad1ab8615699eb4"
+    }
+  ],
+  "rh_proved": false,
+  "runs": [
+    {
+      "byte_identical": true,
+      "group": "independent",
+      "normal_output": "independent-normal.json",
+      "optimized_output": "independent-optimized.json",
+      "result_git_blob": "d7e7df4d525234d2e5b25f4abc22c90919121075",
+      "result_sha256": "1fa838e431a7107dccfda229aa2faded4172735482b16f159a9418ef29398ad2"
+    },
+    {
+      "byte_identical": true,
+      "group": "contracts",
+      "normal_output": "contracts-normal.json",
+      "optimized_output": "contracts-optimized.json",
+      "result_git_blob": "b4693b4af865a45381bafdcfc627ba7441219d59",
+      "result_sha256": "42515916612ef4b91beab1c76974237ac4d3dd0498e76559d3efff0f79c1c444"
+    },
+    {
+      "byte_identical": true,
+      "group": "window_one",
+      "normal_output": "wrapper-wp-normal.json",
+      "optimized_output": "wrapper-wp-optimized.json",
+      "result_git_blob": "a94e20c9cbdb16e29fc95d5a95d6be9e660de2e5",
+      "result_sha256": "cd294e67f4606d75685cc2631fcd4204e7fef2d6e55df01199ab240770442f2c"
+    },
+    {
+      "byte_identical": true,
+      "group": "intrinsic_entropy",
+      "normal_output": "wrapper-ie-normal.json",
+      "optimized_output": "wrapper-ie-optimized.json",
+      "result_git_blob": "e5fb5d3b6b7b2760ab33ed7153b8965b8cc6068b",
+      "result_sha256": "6ea7932be28a3018d604929d2108a3235cb0302f8ad30db54fe6e9885359a7f6"
+    }
+  ],
+  "same_identity_is_not_non_author_review": true,
+  "schema": "riemann.review.pass2.execution.v1",
+  "scientific_acceptance_changed": false,
+  "unperformed": [
+    "full repository checkout and authenticated checkout validator",
+    "all author package manifests/rejection suites",
+    "new Lean build/comparator/axiom audit",
+    "native Windows execution",
+    "remote CI",
+    "complete discussion/historical source archaeology",
+    "proof or code review of late PR828",
+    "evaluation of any RH-strength open upper bound"
+  ]
+}
