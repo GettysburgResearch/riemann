@@ -1,0 +1,9 @@
+claim_id	status	scope	proof	remaining_boundary
+PDS26.T1	PROPOSED_COMPLETE	All X>=2; full higher-power physical L2 norm and complete infinite tail	PROOF.md Sections 2-3	No pointwise convergence at zero; not first-prime cancellation
+PDS26.C1	PROPOSED_COMPLETE_WITH_IMPORTED_PNT	Higher-power complex and real tail asymptotics	PROOF.md Section 3 optional paragraph	Uses ordinary PNT; no numerical asymptotic extrapolation
+PDS26.T2	PROPOSED_COMPLETE	Uniform additive entropy linearization at all cutoffs	PROOF.md Section 4	Linear L1 discrepancy still unbounded at required scale
+PDS26.T3	PROPOSED_COMPLETE	Exact scalar filter and whole physical quadratic norm	PROOF.md Section 5	Retains all cross terms and infinite stopped-input future
+PDS26.C2	CONDITIONAL_ON_RH	E(X)=O((1+log X)^(3/2))	PROOF.md Section 6	RH input unavailable unconditionally
+PDS26.C3	CONDITIONAL_CRITERION	Subpower I subsequence implies RH; converse under RH	PROOF.md Section 7	Subsequence uses parent OEC26.T3; all-X reverse has independent analytic-log proof; bound OPEN
+PDS26.N1	SYNTHETIC_CONTROL_PROVED	Positive continuous PNT-scale source with power-sized linear discrepancy	ATTEMPT_AND_REVIEW.md	Not ordinary primes or an RH counterexample
+PDS26.OPEN	OPEN	Actual first-prime L1 or sufficient quadratic subpower bound	PROOF.md Sections 6-7	Not established by this packet
