@@ -1,0 +1,62 @@
+{
+  "RH_proved": false,
+  "arithmetic": "EXACT_RATIONAL_AND_DIRECTED_RATIONAL_LOG_INTERVALS",
+  "covariance_prime_2_3": "1/4",
+  "difference_determinant_prime_2_3": "-1/4",
+  "entropy_integral_evaluated": false,
+  "groups": {
+    "comparison_growth_controls": 16,
+    "complete_log_jump_interval_controls": 20,
+    "convex_jump_interval_controls": 35,
+    "exact_mixed_phase_pairs": 1024,
+    "exact_positive_Gram_matrices": 6,
+    "finite_prime_harmonic_controls": 8,
+    "prime_2_3_separators": 2,
+    "rational_constant_controls": 8
+  },
+  "positive_Gram_pivots": [
+    [
+      "1",
+      "3/4",
+      "5/9",
+      "7/16",
+      "9/25"
+    ],
+    [
+      "1",
+      "3/4",
+      "8/9",
+      "3/4",
+      "24/25"
+    ],
+    [
+      "1",
+      "5/9",
+      "16/25",
+      "24/49",
+      "72/121"
+    ],
+    [
+      "1",
+      "35/36",
+      "864/875",
+      "146/147",
+      "8808/8833"
+    ],
+    [
+      "1",
+      "203/10404",
+      "205/10609",
+      "207/10816"
+    ],
+    [
+      "1",
+      "106131203/106131204",
+      "1125945912024/1125945932627",
+      "146316669509/146316692912"
+    ]
+  ],
+  "schema": "EFB26-bounded-controls-v1",
+  "total_bounded_cases": 1119,
+  "work_upper_bound_proved": false
+}

@@ -1,0 +1,9 @@
+from	to	type	reason
+EPD26.L1	EPD26.T1	PROVED_COMPONENT_TRANSFER	Add exact base and bounded full prime-power derivative tails
+EPD26.T1	EPD26.T2	PROVED_COMPONENT_TRANSFER	Causal source agreement plus normalized Laguerre jet and full future tail
+EFB26.field	EPD26.T1	SOURCE_DEPENDENCY	Identical completion and weighted mean normalization at the frozen parent
+EPD26.T3	EPD26.C1	CONDITIONAL_TRANSFER	Requires the explicitly RH-dependent counting error
+PNT.classical	EPD26.C2	IMPORTED_TRANSFER	Weighted Stieltjes integration and complete endpoint terms
+EPD26.OPEN	RH	CONDITIONAL_IMPLICATION	Entropy upper bound and zero lower bound contradict any off-line zero
+RH	EPD26.OPEN	CONDITIONAL_IMPLICATION	Imported RH counting estimate and the squared tail bound
+EPD26.N1	EPD26.OPEN	FAILED_GENERIC_INFERENCE	Counting positivity and PNT-shaped estimates alone cannot prove subpower Q

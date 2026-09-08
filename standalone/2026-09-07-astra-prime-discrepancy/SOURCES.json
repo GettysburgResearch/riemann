@@ -1,0 +1,28 @@
+{
+  "inspection": "Uploaded parent bytes read and matched to recorded Git blob identities; no parent mathematical suite rerun.",
+  "parent_head": "9e05a2b345369cd16c0973c531650eb37727445e",
+  "parent_pr": 811,
+  "sources": [
+    {
+      "bytes": 10794,
+      "commit": "9e05a2b345369cd16c0973c531650eb37727445e",
+      "git_blob": "9fd9ead5d3d765ea1a6213ac931a216a6ac49b3f",
+      "path": "standalone/2026-09-07-astra-entropy-feedback/PROOF.md",
+      "repository": "GettysburgResearch/riemann",
+      "review_status": "PROPOSED_NOT_INDEPENDENTLY_ACCEPTED_HERE",
+      "role": "Exact source/cutoff conventions; optional comparison with nonlinear work.",
+      "sha256": "d4acd6a7469c9a3f41c7998d08fac351624672e237e34dcb388a3b9aa954dd9c"
+    },
+    {
+      "bytes": 16133,
+      "commit": "b6635a70a75b60050177d5cde67e911093698664",
+      "git_blob": "f8e74b694038176a2d5bc426832158fcde12d094",
+      "path": "standalone/2026-09-07-astra-logarithmic-domain-transfer/PROOF.md",
+      "repository": "GettysburgResearch/riemann",
+      "review_status": "PROPOSED_NOT_INDEPENDENTLY_ACCEPTED_HERE",
+      "role": "OEC26.T3 for the explicitly conditional closure implication.",
+      "sha256": "2cc3588fcb1f707b2ed459178ca2d4f75b5a6b84b792a7af3effe7475e8faa50"
+    }
+  ],
+  "status": "RH_NOT_PROVED"
+}
