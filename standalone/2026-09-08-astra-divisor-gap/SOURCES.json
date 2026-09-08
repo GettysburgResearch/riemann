@@ -1,0 +1,30 @@
+{
+  "branch_base": "bd7bc8ee27927df5d58a3203b328c11cdc1f04db",
+  "external_lineage": [
+    {
+      "authors": "Persi Diaconis; Laurent Saloff-Coste",
+      "title": "Comparison Theorems for Reversible Markov Chains",
+      "url": "https://statistics.stanford.edu/technical-reports/comparison-theorems-reversible-markov-chains",
+      "usage": "General path-comparison lineage only; the needed weighted path argument is fully proved here."
+    }
+  ],
+  "new_external_arithmetic_hypotheses": [],
+  "repository": "GettysburgResearch/riemann",
+  "source_usage": "Divisor matrix and arithmetic diagonal independently reconstructed. Square-grid proof read for remaining-scope context, not a proof input. No parent executable run.",
+  "sources": [
+    {
+      "bytes": 15233,
+      "commit": "6b309554bf1e2f83a83325cd54038f5a0b9b0014",
+      "git_blob": "2e7d67973881dc440868abd3e46bb65f379b2b31",
+      "path": "standalone/2026-09-05-astra-theta-count-closure/divisor-cusp-pass10/PROOF.md",
+      "sha256": "ce24230301538130e4c058e9413ff5f6a1b4c84c4c9d8e3dd7fe55140f397a56"
+    },
+    {
+      "bytes": 12728,
+      "commit": "bd7bc8ee27927df5d58a3203b328c11cdc1f04db",
+      "git_blob": "d983c4dd9a1925f1cb0bdc0596e3c1dfc96047ac",
+      "path": "standalone/2026-09-08-astra-square-grid-localization/PROOF.md",
+      "sha256": "7d1c16a6c093f268380947e8f359da2db6222bf7dccfb3394eef9bc694399638"
+    }
+  ]
+}

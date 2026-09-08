@@ -1,0 +1,75 @@
+{
+  "arithmetic": {
+    "divisor_identities": 256,
+    "log_enclosures": 54,
+    "prime_checks": 255
+  },
+  "arithmetic_spectral_gap_proved_in_manuscript": true,
+  "finite_code_proves_infinite_theorem": false,
+  "finite_forms": {
+    "divisor_closed_sets": 12,
+    "minimum_grounded_pivot": "241346173775447181026176726938855/37914002957168119261130099225018368",
+    "positive_grounded_pivots": 133,
+    "signed_vectors": 48
+  },
+  "inverse_certificate": {
+    "N": 32,
+    "edge_count": 65,
+    "finite_gap_certificate": "K_minus - M/384 has all positive LDL pivots",
+    "gap_minimum_pivot": "309538962756744310851312654370123527700736748132551768415070692411409667013352651759541780448503057/4352451867779326905787077254223974294868236653920868788770963134010940823906672627713399468776228736",
+    "gap_pivot_count": 31,
+    "inverse_lower": "1088059644310294114860816628774730376971723818739/1461501637330902918203684832716283019655932542976",
+    "inverse_upper": "12423444934948273731128182172589603163209611995881108776515286543460903195713421849680380466253/16687398718132110018711107079449625895333629080911349765211262561111091607661254297054391304192",
+    "largest_prime": 31,
+    "metric": "harmonic-mean-zero exact M",
+    "no_infinite_analytic_gap_input_for_this_finite_certificate": true,
+    "rational_trial_denominator": 100000000,
+    "rational_trial_numerators": [
+      74448062,
+      -26376039,
+      4449468,
+      -22598702,
+      13406564,
+      -20327903,
+      6239006,
+      -26508164,
+      25956889,
+      -18050658,
+      -11488509,
+      -17808660,
+      35356205,
+      -29934309,
+      8148716,
+      -25690859,
+      18511265,
+      -25362342,
+      -5057466,
+      -32286693,
+      45734480,
+      -24852442,
+      -10930717,
+      -27451164,
+      47258210,
+      -30768779,
+      -1669941,
+      -24311483,
+      1383346,
+      -24169373,
+      8148716
+    ],
+    "residual_budget_upper": "1596416264985322640839126095283719253282191693171058699573075325068046802653320269/16687398718132110018711107079449625895333629080911349765211262561111091607661254297054391304192",
+    "strict_display_bracket": [
+      "7444806194657/10000000000000",
+      "7444806194659/10000000000000"
+    ]
+  },
+  "largest_prime_not_integer_height": true,
+  "retained_channel": {
+    "exact_null_channel_panels": 136
+  },
+  "rh_proved": false,
+  "status": "PROPOSED_COMPONENT_PROOFS",
+  "tree": {
+    "finite_descendant_cases": 10062
+  }
+}
