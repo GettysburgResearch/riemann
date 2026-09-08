@@ -1,0 +1,246 @@
+{
+  "ANT_constant": {
+    "interval": [
+      "1.7042194500368407",
+      "1.7042194985432249"
+    ],
+    "tail_bound": "625/12884901888",
+    "unit_cells": 4095
+  },
+  "ANT_jets": {
+    "all_three_zero_jet_constraints": true,
+    "integer_horizons": 63
+  },
+  "annular": {
+    "continuum_budgets": [
+      {
+        "a": 2,
+        "b": 4,
+        "lower": "7810619999371/51200000000000",
+        "required": "1/10"
+      },
+      {
+        "a": 4,
+        "b": 50000000000,
+        "lower": "1644075585874599999999371/16000000000000000000000000",
+        "required": "1/10"
+      },
+      {
+        "a": 2,
+        "b": 16,
+        "lower": "781061999818219/5120000000000000",
+        "required": "1/200"
+      },
+      {
+        "a": 16,
+        "b": 100000000000,
+        "lower": "193151124065484179686871/32000000000000000000000000",
+        "required": "1/200"
+      }
+    ],
+    "signed_m2": [
+      "-0.0337171940864036",
+      "-0.0337171940864035"
+    ]
+  },
+  "assertions": 6770,
+  "author_packages_replayed": false,
+  "capacities": {
+    "geo": {
+      "anchored_bracket": [
+        "237221708831717/100000000000000",
+        "5930542720793/2500000000000"
+      ],
+      "contrast": [
+        "1.8225011917777596",
+        "1.8225011917777597"
+      ],
+      "left_residual": [
+        "0.0000000000000057977632",
+        "0.0000000000000057977633"
+      ],
+      "right_residual": [
+        "-0.0000000000000108327444",
+        "-0.0000000000000108327443"
+      ],
+      "visible_modes": 63
+    },
+    "sf": {
+      "anchored_bracket": [
+        "38318830694537/20000000000000",
+        "191594153472687/100000000000000"
+      ],
+      "contrast": [
+        "1.1853228597107288",
+        "1.1853228597107289"
+      ],
+      "left_residual": [
+        "0.0000000000000054971429",
+        "0.0000000000000054971430"
+      ],
+      "right_residual": [
+        "-0.0000000000000121470408",
+        "-0.0000000000000121470407"
+      ],
+      "visible_modes": 63
+    }
+  },
+  "coherent_source": {
+    "filters": "exponential; NOT cubic MWR filter",
+    "horizons": 128,
+    "last_full_norm": "1071326323599028497376703103941587472139165059/761760330044219390720007817652000974695613899"
+  },
+  "divisor_family": {
+    "balanced_rational_sources": {
+      "16": {
+        "1": "1",
+        "11": "-80344/57769",
+        "13": "-777400/519921",
+        "15": "28125/57769",
+        "3": "-60605/57769",
+        "5": "-200375/173307",
+        "7": "-618380/519921",
+        "9": "-20880/57769"
+      },
+      "3": {
+        "1": "1",
+        "3": "-3"
+      },
+      "32": {
+        "1": "1",
+        "11": "-5952892176/6292033393",
+        "13": "-6086960880/6292033393",
+        "15": "5365379250/6292033393",
+        "17": "-6367473420/6292033393",
+        "19": "-6510724528/6292033393",
+        "21": "4919859945/6292033393",
+        "23": "-6800041080/6292033393",
+        "25": "-1533840000/6292033393",
+        "27": "-1490892480/6292033393",
+        "29": "-7237538352/6292033393",
+        "3": "-6238839915/6292033393",
+        "31": "-7383864642/6292033393",
+        "5": "-6224329650/6292033393",
+        "7": "-6272706825/6292033393",
+        "9": "-331309440/6292033393"
+      },
+      "4": {
+        "1": "1",
+        "3": "-3"
+      },
+      "8": {
+        "1": "1",
+        "3": "-1242/937",
+        "5": "-1425/937",
+        "7": "-1666/937"
+      }
+    },
+    "dual_q_and_k_range": [
+      2,
+      32
+    ]
+  },
+  "full_checkout": false,
+  "groups": {
+    "ANT balanced jet": 63,
+    "ANT centered jet": 63,
+    "ANT derivative jet log2": 63,
+    "ANT exact coefficient norm": 63,
+    "ANT full rational profile cells": 4095,
+    "ANT full-prefix obstruction interval": 63,
+    "ANT independent layer-cake profile": 64,
+    "ANT printed continuum constant": 1,
+    "BG Jordan incidence factorization": 32,
+    "BH both signed quadratic countermodels": 16,
+    "BH exact balanced quadratic": 4,
+    "BH hostile source exact balance": 16,
+    "BH zero weighted endpoint": 4,
+    "BL exact balance": 5,
+    "BL exact first constraint": 5,
+    "BL nonsquarefree coordinate": 1,
+    "BL positive constraint determinant": 5,
+    "BL rational KKT normal equation": 32,
+    "CCS entire future norm": 128,
+    "CCS full prime-power graph identity": 128,
+    "CCS signed work increment": 128,
+    "CR actual signed negative scalar": 1,
+    "CR source versus printed overlap": 1,
+    "CR weaker native sign survives": 1,
+    "DO exact biorthogonal controls": 961,
+    "DO exact target dual pairing": 31,
+    "HT complete analytic tail constant": 1,
+    "HT exact continuum endpoint budgets": 4,
+    "HT gamma strict primitive order": 1,
+    "HT primitive C0 bound": 1,
+    "MWR actual N3 counterexample": 1,
+    "MWR exact Lyapunov storage": 16,
+    "MWR positive storage pivots": 4,
+    "TE exact native horizon": 30,
+    "TE full arithmetic continuation": 512,
+    "TE terminal normalization": 4,
+    "capacity graph eigenvectors": 64,
+    "capacity graph orthogonality": 28,
+    "capacity positive visible mode": 126,
+    "capacity printed contrast": 2,
+    "capacity secular endpoint signs": 2
+  },
+  "height_primitives": {
+    "C0": [
+      "0.04730311956993",
+      "0.04730319776286"
+    ],
+    "external_height_theorem": "Platt-Trudgian arXiv:2004.09765v1; imported, not replayed",
+    "height": 3000000000000,
+    "height_tail_bound": [
+      "0.0000000000014797036310412",
+      "0.0000000000014797036310413"
+    ],
+    "zero_count_remainder": "paper argument reviewed, not numerically proving the infinite estimate"
+  },
+  "lean_build": false,
+  "marker": "PASS_INDEPENDENT_BOUNDED_PASS3_CHECKS",
+  "rh_proved": false,
+  "schema": "riemann.review.pass3.independent-bounded-checks.v1",
+  "terminal_hyperbola": {
+    "countermodel_L_range": [
+      1,
+      8
+    ],
+    "terminal_rows": [
+      {
+        "B": "-32/35",
+        "Q_Y2": "-172/35",
+        "Y": 3
+      },
+      {
+        "B": "-9046980/7436429",
+        "Q_Y2": "-175869520/22309287",
+        "Y": 5
+      },
+      {
+        "B": "-152433781094464921260017891734/107254825578022430263302818471",
+        "Q_Y2": "-6032977476735141179239542252102/536274127890112151316514092355",
+        "Y": 9
+      },
+      {
+        "B": "-18311909697671521669546718293405207693177390611371479471620074916253870000918294701064145456743795825344482988215344/13677171638928959929447821929283303595185646715335295729568101187815634782561067638828574964301621858758754793802847",
+        "Q_Y2": "-3058645754131459881531565023886923943695628780791947991765569608478884192088082765717360589569822328954406812002968104/205157574583934398941717328939249553927784700730029435943521517817234521738416014582428624464524327881381321907042705",
+        "Y": 17
+      }
+    ],
+    "unbounded_countermodels": "polynomial proof reviewed separately from these finite checks"
+  },
+  "unbounded_analysis_machine_proved": false,
+  "work_storage": {
+    "W3": [
+      "0.0596187785377326",
+      "0.0596187785377327"
+    ],
+    "pivots": [
+      "385/2048",
+      "946109/788480",
+      "6400405/484407808",
+      "6561/3277007360"
+    ]
+  }
+}

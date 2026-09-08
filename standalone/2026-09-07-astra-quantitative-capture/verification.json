@@ -1,0 +1,324 @@
+{
+  "actual_source_energy_computation": false,
+  "arithmetic": "integer and Fraction only; no floating-point acceptance",
+  "bounded_controls": 1235,
+  "full_bound_10_proved": false,
+  "groups": {
+    "blaschke_product": 10,
+    "blaschke_radial": 40,
+    "degree_split": 16,
+    "exponents": 6,
+    "fejer_factors": 624,
+    "growing_synthetic": 36,
+    "schur_deficit": 12,
+    "small_value_constants": 280,
+    "synthetic_projection": 211
+  },
+  "growing_synthetic_panels": [
+    {
+      "excess": "1/21",
+      "floor": "3/1",
+      "j": 1,
+      "rank": 2
+    },
+    {
+      "excess": "4/1365",
+      "floor": "12/1",
+      "j": 2,
+      "rank": 5
+    },
+    {
+      "excess": "16/1398101",
+      "floor": "48/1",
+      "j": 3,
+      "rank": 10
+    },
+    {
+      "excess": "64/22906492245",
+      "floor": "192/1",
+      "j": 4,
+      "rank": 17
+    },
+    {
+      "excess": "256/6004799503160661",
+      "floor": "768/1",
+      "j": 5,
+      "rank": 26
+    },
+    {
+      "excess": "1024/25185954575304774473045",
+      "floor": "3072/1",
+      "j": 6,
+      "rank": 37
+    },
+    {
+      "excess": "4096/1690200800304305868662270940501",
+      "floor": "12288/1",
+      "j": 7,
+      "rank": 50
+    },
+    {
+      "excess": "16384/1814839290245005138471331239636097127765",
+      "floor": "49152/1",
+      "j": 8,
+      "rank": 65
+    },
+    {
+      "excess": "65536/31178701596392595588345276431280704419326560916821",
+      "floor": "196608/1",
+      "j": 9,
+      "rank": 82
+    },
+    {
+      "excess": "262144/8570336236047948136223797825819533880118415966841561788274005",
+      "floor": "786432/1",
+      "j": 10,
+      "rank": 101
+    },
+    {
+      "excess": "1048576/37692737381938865697777013349182261670986323133346537773260932294242555221",
+      "floor": "3145728/1",
+      "j": 11,
+      "rank": 122
+    },
+    {
+      "excess": "4194304/2652390594185528758162038656783044480535766137585854493015807876763517317400178002842965",
+      "floor": "12582912/1",
+      "j": 12,
+      "rank": 145
+    }
+  ],
+  "paper_capture_theorem": "proposed; not machine verified",
+  "rate_exponents": {
+    "sobolev_s": "1/16",
+    "weighted_inverse_power": "1/96"
+  },
+  "rh_proved": false,
+  "schema": "HC26-bounded-reconstruction-v1",
+  "scope": {
+    "fejer_N": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "gram_ranks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "growing_synthetic_j": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "targets": 5
+  },
+  "synthetic_projection_panels": [
+    {
+      "error": "4/5",
+      "excess": "1/20",
+      "intrinsic": "3/4",
+      "rank": 1,
+      "target": 0
+    },
+    {
+      "error": "16/21",
+      "excess": "1/84",
+      "intrinsic": "3/4",
+      "rank": 2,
+      "target": 0
+    },
+    {
+      "error": "256/341",
+      "excess": "1/1364",
+      "intrinsic": "3/4",
+      "rank": 4,
+      "target": 0
+    },
+    {
+      "error": "65536/87381",
+      "excess": "1/349524",
+      "intrinsic": "3/4",
+      "rank": 8,
+      "target": 0
+    },
+    {
+      "error": "16777216/22369621",
+      "excess": "1/89478484",
+      "intrinsic": "3/4",
+      "rank": 12,
+      "target": 0
+    },
+    {
+      "error": "1/5",
+      "excess": "1/80",
+      "intrinsic": "3/16",
+      "rank": 1,
+      "target": 1
+    },
+    {
+      "error": "4/21",
+      "excess": "1/336",
+      "intrinsic": "3/16",
+      "rank": 2,
+      "target": 1
+    },
+    {
+      "error": "64/341",
+      "excess": "1/5456",
+      "intrinsic": "3/16",
+      "rank": 4,
+      "target": 1
+    },
+    {
+      "error": "16384/87381",
+      "excess": "1/1398096",
+      "intrinsic": "3/16",
+      "rank": 8,
+      "target": 1
+    },
+    {
+      "error": "4194304/22369621",
+      "excess": "1/357913936",
+      "intrinsic": "3/16",
+      "rank": 12,
+      "target": 1
+    },
+    {
+      "error": "9/5",
+      "excess": "9/80",
+      "intrinsic": "27/16",
+      "rank": 1,
+      "target": 2
+    },
+    {
+      "error": "12/7",
+      "excess": "3/112",
+      "intrinsic": "27/16",
+      "rank": 2,
+      "target": 2
+    },
+    {
+      "error": "576/341",
+      "excess": "9/5456",
+      "intrinsic": "27/16",
+      "rank": 4,
+      "target": 2
+    },
+    {
+      "error": "16384/9709",
+      "excess": "1/155344",
+      "intrinsic": "27/16",
+      "rank": 8,
+      "target": 2
+    },
+    {
+      "error": "37748736/22369621",
+      "excess": "9/357913936",
+      "intrinsic": "27/16",
+      "rank": 12,
+      "target": 2
+    },
+    {
+      "error": "0/1",
+      "excess": "0/1",
+      "intrinsic": "0/1",
+      "rank": 1,
+      "target": 3
+    },
+    {
+      "error": "0/1",
+      "excess": "0/1",
+      "intrinsic": "0/1",
+      "rank": 2,
+      "target": 3
+    },
+    {
+      "error": "0/1",
+      "excess": "0/1",
+      "intrinsic": "0/1",
+      "rank": 4,
+      "target": 3
+    },
+    {
+      "error": "0/1",
+      "excess": "0/1",
+      "intrinsic": "0/1",
+      "rank": 8,
+      "target": 3
+    },
+    {
+      "error": "0/1",
+      "excess": "0/1",
+      "intrinsic": "0/1",
+      "rank": 12,
+      "target": 3
+    },
+    {
+      "error": "9/5",
+      "excess": "441/320",
+      "intrinsic": "27/64",
+      "rank": 1,
+      "target": 4
+    },
+    {
+      "error": "3/7",
+      "excess": "3/448",
+      "intrinsic": "27/64",
+      "rank": 2,
+      "target": 4
+    },
+    {
+      "error": "144/341",
+      "excess": "9/21824",
+      "intrinsic": "27/64",
+      "rank": 4,
+      "target": 4
+    },
+    {
+      "error": "4096/9709",
+      "excess": "1/621376",
+      "intrinsic": "27/64",
+      "rank": 8,
+      "target": 4
+    },
+    {
+      "error": "9437184/22369621",
+      "excess": "9/1431655744",
+      "intrinsic": "27/64",
+      "rank": 12,
+      "target": 4
+    }
+  ]
+}

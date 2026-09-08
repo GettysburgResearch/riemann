@@ -1,0 +1,34 @@
+{
+  "cutoff_exponent": "3/4",
+  "fixture_count": 534,
+  "groups": {
+    "complete_convolution_identity": 27,
+    "exact_prefix_range": 27,
+    "first_omitted_coefficient": 27,
+    "full_native_annular_identity": 21,
+    "general_three_jet_residue": 54,
+    "homogeneous_determinant": 12,
+    "mobius_sieve_vs_trial": 256,
+    "native_m2_log_coefficients": 1,
+    "native_negative_integral": 1,
+    "normalized_rank_one_residue": 18,
+    "polarized_tail_residue": 12,
+    "tail_variation_native_invariance": 14,
+    "three_quarter_cutoff": 1,
+    "two_jet_null_tail": 15,
+    "uniform_tail_exponents": 21,
+    "value_normalization": 27
+  },
+  "native_I2_enclosure": [
+    "-175069680933442076962721755464129",
+    "-175069680933442076962721755464128",
+    "5192296858534827628530496329220096"
+  ],
+  "native_sign_estimate_proved": false,
+  "parent_head": "ed074bcabfd2c1ca3336e457b8fdd09a25bcd2a7",
+  "rank_one_fixture_contract": "real tail variations with zero value at one",
+  "rh_proved": false,
+  "schema": "completion-rigidity-v1",
+  "scope": "bounded exact algebra; no contour quadrature or independent analytic acceptance",
+  "tail_power_before_epsilon": "-1/8"
+}

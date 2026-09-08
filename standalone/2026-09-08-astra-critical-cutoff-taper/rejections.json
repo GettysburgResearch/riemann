@@ -1,0 +1,107 @@
+{
+  "package_rejections": [
+    {
+      "case": "changed_proof",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "missing_proof",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "extra_file",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "duplicate_manifest",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "changed_proof",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "missing_proof",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "extra_file",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "duplicate_manifest",
+      "optimized": true,
+      "rejected": true
+    }
+  ],
+  "pristine_controls": 4,
+  "result_rejections": [
+    {
+      "case": "rh_proved:True",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "total_cases:232",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "total_cases:231.0",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "extra:1",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "duplicate_key",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "changed_finite_norms",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "rh_proved:True",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "total_cases:232",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "total_cases:231.0",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "extra:1",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "duplicate_key",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "changed_finite_norms",
+      "optimized": true,
+      "rejected": true
+    }
+  ]
+}

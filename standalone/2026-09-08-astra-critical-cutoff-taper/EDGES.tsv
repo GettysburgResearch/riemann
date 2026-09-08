@@ -1,0 +1,9 @@
+from	to	type	qualification
+J_FINITE	CCT26.T1	VALID_CONDITIONAL	Jensen and full stopped-state future
+J_FINITE	RH	VALID_CONDITIONAL	Analytic logarithm constructed in Euler half-plane then continued
+RH	CM	CLASSICAL_CONDITIONAL	Brent-Platt-Trudgian source; qualitative Cramer estimate only
+CM	CCT26.T3	VALID_CONDITIONAL	psi-to-theta and signed stable Volterra transfer
+CCT26.T3	CCT26.T5	VALID_CONDITIONAL	Fixed taper plus complete higher-prime-power norm tail
+BOUNDED_TAPERED_ENTROPY_SUBSEQUENCE	RH	VALID_CONDITIONAL	Poisson-Schwarz and analytic uniqueness
+FINITE_TARGET_ENTROPY	BOUNDED_TAPERED_ENTROPY_SUBSEQUENCE	INVALID_GENERIC_INFERENCE	No uniform approximation bound; synthetic analytic control
+ORDINARY_PNT	J_FINITE	NOT_ESTABLISHED	Available calculation retains a positive power of X

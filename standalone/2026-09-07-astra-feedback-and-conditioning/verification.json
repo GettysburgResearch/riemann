@@ -1,0 +1,264 @@
+{
+  "bounded_control_count": 1008,
+  "controls": {
+    "actual_seed_dirichlet_coefficients": 128,
+    "arbitrary_polynomial_feedthrough": 4,
+    "authenticated_trial_coefficients": 1,
+    "count_coefficient_majorant": 1,
+    "count_log_budget": 90,
+    "cutoff_induction_bound": 65,
+    "dyadic_log_auxiliary": 65,
+    "exceptional_prime_classification": 4,
+    "exceptional_radius_range": 90,
+    "harnack_radius_ratio": 1,
+    "ideal_feedthrough": 1,
+    "independent_feedthrough_square": 1,
+    "jensen_log_ratio_constant": 1,
+    "near_zero_disk_cover": 1,
+    "nonzero_limit_fast_convergence": 8,
+    "rational_feedback_expansion": 16,
+    "safe_exponential_constant": 1,
+    "safe_source_polynomial_envelope": 31,
+    "second_iterate_atom": 1,
+    "small_set_budget": 90,
+    "source_cutoff_integer_budget": 90,
+    "squared_floor_exponent": 90,
+    "synthetic_gram_entries": 8,
+    "uncancelled_prime_frequency": 220
+  },
+  "finite_alias_controls": [
+    {
+      "dilations": [
+        "2"
+      ],
+      "exceptional_primes": [
+        2
+      ]
+    },
+    {
+      "dilations": [
+        "3/2",
+        "5/3",
+        "7"
+      ],
+      "exceptional_primes": [
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "dilations": [
+        "49/25",
+        "9/4",
+        "11/7"
+      ],
+      "exceptional_primes": [
+        11
+      ]
+    },
+    {
+      "dilations": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "exceptional_primes": [
+        2
+      ]
+    }
+  ],
+  "fixed_controller_schur_premise_proved": false,
+  "growing_horizon_bound_proved": false,
+  "ideal_feedthrough": "133/10000",
+  "ideal_parent_polynomial": [
+    "1071/2500",
+    "-1839/10000",
+    "-1199/10000",
+    "-371/5000",
+    "-371/10000"
+  ],
+  "new_actual_zeta_values_evaluated": false,
+  "parent_numerical_certificate_replayed": false,
+  "rational_floor_panels": [
+    {
+      "dimension": 1,
+      "dyadic_log_ceiling": 0,
+      "floor_denominator_power_of_2": 12513,
+      "source_time_cutoff": 50092
+    },
+    {
+      "dimension": 2,
+      "dyadic_log_ceiling": 1,
+      "floor_denominator_power_of_2": 15585,
+      "source_time_cutoff": 62384
+    },
+    {
+      "dimension": 16,
+      "dyadic_log_ceiling": 4,
+      "floor_denominator_power_of_2": 26817,
+      "source_time_cutoff": 107324
+    },
+    {
+      "dimension": 64,
+      "dyadic_log_ceiling": 6,
+      "floor_denominator_power_of_2": 35985,
+      "source_time_cutoff": 144004
+    },
+    {
+      "dimension": 65536,
+      "dyadic_log_ceiling": 16,
+      "floor_denominator_power_of_2": 101985,
+      "source_time_cutoff": 408044
+    },
+    {
+      "dimension": 16777216,
+      "dyadic_log_ceiling": 24,
+      "floor_denominator_power_of_2": 178977,
+      "source_time_cutoff": 716044
+    },
+    {
+      "dimension": 4294967296,
+      "dyadic_log_ceiling": 32,
+      "floor_denominator_power_of_2": 277473,
+      "source_time_cutoff": 1110060
+    }
+  ],
+  "rh_proved": false,
+  "schema": "riemann-feedback-conditioning-v1",
+  "scientific_status": "PROPOSED_COMPONENT_PROOFS_REVIEW_REQUIRED",
+  "scope": {
+    "arithmetic": "integers_and_Fraction_only",
+    "prime_fixture_max": 257,
+    "rank_dimensions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768,
+      65536,
+      131072,
+      262144,
+      524288,
+      1048576,
+      2097152,
+      4194304,
+      8388608,
+      16777216,
+      33554432,
+      67108864,
+      134217728,
+      268435456,
+      536870912,
+      1073741824,
+      2147483648,
+      4294967296
+    ],
+    "rational_feedback_points": 16,
+    "synthetic_max_dimension": 8
+  },
+  "second_iterate_dirac_mass": "-17689/100000000",
+  "synthetic_nonzero_floor": [
+    {
+      "dimension": 1,
+      "squared_error": "4/5"
+    },
+    {
+      "dimension": 2,
+      "squared_error": "16/21"
+    },
+    {
+      "dimension": 3,
+      "squared_error": "64/85"
+    },
+    {
+      "dimension": 4,
+      "squared_error": "256/341"
+    },
+    {
+      "dimension": 5,
+      "squared_error": "1024/1365"
+    },
+    {
+      "dimension": 6,
+      "squared_error": "4096/5461"
+    },
+    {
+      "dimension": 7,
+      "squared_error": "16384/21845"
+    },
+    {
+      "dimension": 8,
+      "squared_error": "65536/87381"
+    }
+  ]
+}

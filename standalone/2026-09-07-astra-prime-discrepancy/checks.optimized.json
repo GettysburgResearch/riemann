@@ -1,0 +1,110 @@
+{
+  "actual_entropy_or_discrepancy_quadrature_run": false,
+  "analytic_proofs_machine_verified": false,
+  "arithmetic": "EXACT_RATIONAL_FINITE",
+  "groups": [
+    {
+      "cases": 511,
+      "name": "sieve_vs_independent_trial_factorization"
+    },
+    {
+      "cases": 64,
+      "name": "binomial_prime_divisibility"
+    },
+    {
+      "cases": 9,
+      "name": "rational_majorant_constants"
+    },
+    {
+      "cases": 11,
+      "name": "actual_prime_square_physical_norms"
+    },
+    {
+      "cases": 5,
+      "name": "prime_base_tail_endpoint_controls"
+    },
+    {
+      "cases": 24,
+      "name": "signed_atoms_complete_state_identity"
+    },
+    {
+      "cases": 5,
+      "name": "continuous_and_atomic_normalization_controls"
+    },
+    {
+      "cases": 2,
+      "name": "actual_first_prime_empty_continuum"
+    },
+    {
+      "cases": 5,
+      "name": "synthetic_continuous_source_bound_algebra"
+    }
+  ],
+  "records": {
+    "actual_first_prime_X2": {
+      "I": "1/4",
+      "c_squared": "1/8",
+      "real_norm_squared": "5/16"
+    },
+    "prime_square_finite_norms": [
+      {
+        "complex_norm_squared": "1/16",
+        "cutoff": 2,
+        "real_norm_squared": "17/512"
+      },
+      {
+        "complex_norm_squared": "55/432",
+        "cutoff": 3,
+        "real_norm_squared": "24985/373248"
+      },
+      {
+        "complex_norm_squared": "1699/10800",
+        "cutoff": 5,
+        "real_norm_squared": "479807281/5832000000"
+      },
+      {
+        "complex_norm_squared": "655657/3704400",
+        "cutoff": 7,
+        "real_norm_squared": "63285879304369/686128968000000"
+      },
+      {
+        "complex_norm_squared": "914353967/4930556400",
+        "cutoff": 11,
+        "real_norm_squared": "117291329891158816009/1215519320679048000000"
+      },
+      {
+        "complex_norm_squared": "2093887763399/10832432410800",
+        "cutoff": 13,
+        "real_norm_squared": "589291995053976793955747281/5867079596727514997832000000"
+      },
+      {
+        "complex_norm_squared": "10555373283746587/53219740434260400",
+        "cutoff": 17,
+        "real_norm_squared": "14582040862049323704591837581181889/141617038594502567458704750408000000"
+      },
+      {
+        "complex_norm_squared": "918889066204507223993711/4441371107002749881161200",
+        "cutoff": 23,
+        "real_norm_squared": "105786171264356610949441773391407501723758558209801/986288865505941596723704107037160036133019272000000"
+      },
+      {
+        "complex_norm_squared": "683040785019285515300017983863989/3226978992475605781577222338078800",
+        "cutoff": 31,
+        "real_norm_squared": "57089522887965332820283382326771270778060917480691793766855732514401/520669670893943789773653754042824950214880652733137824223750472000000"
+      },
+      {
+        "complex_norm_squared": "194040292704518865225453490370201029235561015399/895691076043235596570065593611979587038603610800",
+        "cutoff": 43,
+        "real_norm_squared": "4498056824929018848566158975961994977726794398685712694070013772934696057679307860443400791835281/40113125185174462601427861933827745666603764239047445379700622555861311069483785898339893832000000"
+      },
+      {
+        "complex_norm_squared": "15647499938681378615133650471048068937197249693993061513300494637725558951474439521918738309186809651202921/69045508032506336880866148863287491535468922388237886103528539605454198625668092169667381476402051466893200",
+        "cutoff": 97,
+        "real_norm_squared": "140742945235057466969346087018165117376224384026897690298775940282528965724286216240315260373626548525618698356267329170072331061880626323812757298228597028770071165444949397941350135856057711263046134628292731168097961/1201593473334631410872551014245342894393297762244489929213322525604890859348187200841978406611864750860221253112157598867455412729704954912246011280251580121665856171009976018645048597159608384418996090401154982792000000"
+      }
+    ]
+  },
+  "rh_proved": false,
+  "status": "PASS_BOUNDED_EXACT_CONTROLS",
+  "total_cases": 636
+}

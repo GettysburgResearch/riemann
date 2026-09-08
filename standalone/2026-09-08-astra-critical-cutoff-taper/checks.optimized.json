@@ -1,0 +1,43 @@
+{
+  "conditional_input": "RH implies Cramer mean-square bound; not established here",
+  "groups": [
+    {
+      "cases": 30,
+      "name": "physical Gram and complete state future",
+      "rational_payload_sha256": "698c26b0e1970bd2e25e227da6364613f9e6e40c6375f10a78ff71a47c85d360"
+    },
+    {
+      "cases": 150,
+      "name": "all signed cutoff-error comparisons",
+      "rational_payload_sha256": "3dfa48eb5e4af84886886e91baa632caaf0e4bcbe5008e75dd725e19aeb6303f"
+    },
+    {
+      "cases": 30,
+      "name": "finite average and initial horizon",
+      "rational_payload_sha256": "6e9bb5ae7ceb4213f434d94c5c76301304a06e02df3f93137281a0c91123ea70"
+    },
+    {
+      "cases": 6,
+      "name": "strict physical Gram pivots",
+      "rational_payload_sha256": "84b192d52408077581d7bfc6d669fa3cc2c7e2a5ff2f47da528c40d370cd47bd"
+    },
+    {
+      "cases": 1,
+      "name": "literal prime2 normalization",
+      "rational_payload_sha256": "0b31496ff9ff4d7f1ceebe404b27ae9f4fa7a4f67551546e8c5aea3e0730c2bc"
+    },
+    {
+      "cases": 2,
+      "name": "directed logarithm and transfer constants",
+      "rational_payload_sha256": "d1ca3b87c6183d305af66cad35840cb72814856d70c5c0e71feb2ac5e62e605b"
+    },
+    {
+      "cases": 12,
+      "name": "synthetic safe-limit Taylor controls",
+      "rational_payload_sha256": "b0062fbbf876cba7108e1a4e43e18c7cf4bff931d46238cc8636c90113711bf8"
+    }
+  ],
+  "rh_proved": false,
+  "status": "PASS_BOUNDED_CONTROLS_ONLY",
+  "total_cases": 231
+}

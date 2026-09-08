@@ -1,0 +1,95 @@
+{
+  "actual_window_certified": false,
+  "checks": 618,
+  "groups": {
+    "coercive_division_coefficients": 2,
+    "complex_loewner_error": 80,
+    "complex_schur_error_gram": 20,
+    "energy_does_not_imply_strong_residual": 64,
+    "exact_continuum_moment_correction": 24,
+    "gamma_denominator_tail": 100,
+    "gamma_partial_fractions": 64,
+    "harmonic_model_residual_enclosure": 64,
+    "laplace_resolvent_normalization": 150,
+    "model_strict_certificates": 1,
+    "primitive_tail_coefficient": 1,
+    "rational_multiplier_coefficients": 1,
+    "residual_constants": 1,
+    "ridge_normal_equation": 36,
+    "ridge_zero_comparison": 7,
+    "source_rational_reserves": 3
+  },
+  "harmonic_models": [
+    {
+      "M": 1,
+      "negative_upper": "0",
+      "positive_lower": "0",
+      "positive_upper": "1",
+      "tail_bound": "1"
+    },
+    {
+      "M": 2,
+      "negative_upper": "-1/6",
+      "positive_lower": "1/3",
+      "positive_upper": "5/6",
+      "tail_bound": "1/2"
+    },
+    {
+      "M": 4,
+      "negative_upper": "-283/1100",
+      "positive_lower": "271/550",
+      "positive_upper": "817/1100",
+      "tail_bound": "1/4"
+    },
+    {
+      "M": 8,
+      "negative_upper": "-333515941117/1112651555400",
+      "positive_lower": "320027084929/556325777700",
+      "positive_upper": "779135614283/1112651555400",
+      "tail_bound": "1/8"
+    },
+    {
+      "M": 16,
+      "negative_upper": "-99782535692431338196003738052487227001425198685731/313361674473276797921219960958038608970806847977200",
+      "positive_lower": "96997017063132829927569987672836984454353110646447/156680837236638398960609980479019304485403423988600",
+      "positive_upper": "213579138780845459725216222905551381969381649291469/313361674473276797921219960958038608970806847977200",
+      "tail_bound": "1/16"
+    }
+  ],
+  "infinite_analytic_proof_machine_checked": false,
+  "proof_sha256": "0e9a2bbfbe811a0ccd244129aee302860603eac0882f69d0b183c4a95baa66fc",
+  "rh_proved": false,
+  "ridge_models": [
+    {
+      "m": 1,
+      "residual_squared": "199081/176400"
+    },
+    {
+      "m": 2,
+      "residual_squared": "1108081/1587600"
+    },
+    {
+      "m": 3,
+      "residual_squared": "199081/2822400"
+    },
+    {
+      "m": 4,
+      "residual_squared": "453601/14288400"
+    },
+    {
+      "m": 6,
+      "residual_squared": "55460689/10761987600"
+    },
+    {
+      "m": 8,
+      "residual_squared": "1417181/960498000"
+    },
+    {
+      "m": 12,
+      "residual_squared": "923489401/3497872467600"
+    }
+  ],
+  "schema": "riemann.logarithmic_core.controls.v1",
+  "source_lock_sha256": "7ea66a2325ed9fcc80e4d2e370726a013a1a2c115100326b6ed66c14cdb18591",
+  "status": "PASS_BOUNDED_EXACT_CONTROLS"
+}

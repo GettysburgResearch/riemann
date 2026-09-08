@@ -1,0 +1,279 @@
+{
+  "arithmetic": "exact_integer_and_fraction",
+  "control_counts": {
+    "coefficient_total": 32,
+    "cutoff_forward": 32,
+    "cutoff_inverse": 32,
+    "damped_harmonic_bound": 288,
+    "dual_dictionary_pairing": 1457,
+    "dual_overlap_norm": 2,
+    "dual_target_pairing": 31,
+    "dyadic_staircase_identity": 32,
+    "elementary_log_bound_margin": 1,
+    "full_lift_values": 160,
+    "harmonic_mobius_bound": 96,
+    "initial_horizon_does_not_remove_tail": 1,
+    "jordan_divisor_identity": 96,
+    "lift_below_one_zero": 32,
+    "lift_is_step": 128,
+    "mobius_floor_identity": 96,
+    "nonsquarefree_annihilator_nonzero": 1,
+    "nonsquarefree_zero": 272,
+    "normalization_convolution": 32,
+    "odd_full_decomposition": 32,
+    "odd_full_inverse": 32,
+    "odd_harmonic_bound": 96,
+    "odd_harmonic_inverse": 96,
+    "odd_harmonic_recursion": 96,
+    "operator_forward": 81,
+    "operator_inverse": 81,
+    "operator_norm_scalar_margin": 5,
+    "operator_unit": 81,
+    "optimizer_from_operator": 32,
+    "prime_majorant_telescope": 32,
+    "prime_power_inverse_necessary": 1,
+    "primitive_mobius": 96,
+    "raw_exact_initial_horizon": 560,
+    "scalar_total_mobius": 81,
+    "scalar_u_positive": 81,
+    "signed_normalization_identity": 32,
+    "staircase_norm_partial_sum": 17
+  },
+  "dual_5": [
+    [
+      1,
+      2,
+      1
+    ],
+    [
+      4,
+      20,
+      1
+    ],
+    [
+      5,
+      -30,
+      1
+    ]
+  ],
+  "infinite_proofs_machine_verified": false,
+  "normalization": "a_hat = a / (8/pi^2); no approximation of pi is used",
+  "proof_status": "proposed_component_proofs_pending_independent_review",
+  "rh_proved": false,
+  "sample_cutoffs": [
+    {
+      "coefficient_sum_over_cstar": 1,
+      "cutoff": 1,
+      "normalization_over_cstar": [
+        1,
+        1
+      ],
+      "normalized_coefficients": [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "coefficient_sum_over_cstar": 0,
+      "cutoff": 3,
+      "normalization_over_cstar": [
+        3,
+        4
+      ],
+      "normalized_coefficients": [
+        [
+          1,
+          9,
+          8
+        ],
+        [
+          3,
+          -9,
+          8
+        ]
+      ]
+    },
+    {
+      "coefficient_sum_over_cstar": -2,
+      "cutoff": 8,
+      "normalization_over_cstar": [
+        11,
+        24
+      ],
+      "normalized_coefficients": [
+        [
+          1,
+          19,
+          16
+        ],
+        [
+          3,
+          -9,
+          8
+        ],
+        [
+          5,
+          -25,
+          24
+        ],
+        [
+          7,
+          -49,
+          48
+        ]
+      ]
+    },
+    {
+      "coefficient_sum_over_cstar": -3,
+      "cutoff": 16,
+      "normalization_over_cstar": [
+        29,
+        84
+      ],
+      "normalized_coefficients": [
+        [
+          1,
+          8111,
+          6720
+        ],
+        [
+          3,
+          -75,
+          64
+        ],
+        [
+          5,
+          -75,
+          64
+        ],
+        [
+          7,
+          -49,
+          48
+        ],
+        [
+          11,
+          -121,
+          120
+        ],
+        [
+          13,
+          -169,
+          168
+        ],
+        [
+          15,
+          75,
+          64
+        ]
+      ]
+    },
+    {
+      "coefficient_sum_over_cstar": -7,
+      "cutoff": 32,
+      "normalization_over_cstar": [
+        83,
+        504
+      ],
+      "normalized_coefficients": [
+        [
+          1,
+          180361,
+          147840
+        ],
+        [
+          3,
+          -153,
+          128
+        ],
+        [
+          5,
+          -75,
+          64
+        ],
+        [
+          7,
+          -147,
+          128
+        ],
+        [
+          11,
+          -121,
+          120
+        ],
+        [
+          13,
+          -169,
+          168
+        ],
+        [
+          15,
+          75,
+          64
+        ],
+        [
+          17,
+          -289,
+          288
+        ],
+        [
+          19,
+          -361,
+          360
+        ],
+        [
+          21,
+          147,
+          128
+        ],
+        [
+          23,
+          -529,
+          528
+        ],
+        [
+          29,
+          -841,
+          840
+        ],
+        [
+          31,
+          -961,
+          960
+        ]
+      ]
+    }
+  ],
+  "sample_operator_inverse_at_9": [
+    [
+      1,
+      1,
+      64
+    ],
+    [
+      3,
+      -5,
+      32
+    ],
+    [
+      9,
+      9,
+      64
+    ]
+  ],
+  "schema": "gt26-exact-transfer-v1",
+  "scope": {
+    "arithmetic_limit": 96,
+    "cutoff_limit": 32,
+    "dictionary_limit": 48,
+    "dual_limit": 32,
+    "operator_limit": 81
+  },
+  "source_binding": "Mobius independently rebuilt by divisor recursion; polynomial dilation algebra; finite fractional parts",
+  "subpower_growth_proved": false,
+  "total_controls": 4353,
+  "uniform_full_gain_proved": false
+}

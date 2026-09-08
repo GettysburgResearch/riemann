@@ -1,0 +1,9 @@
+id	status	statement	proof	boundary
+EPD26.L1	PROPOSED_PROVED	One-sided critical-band derivative bound with constant 24 Lambda^(3/2)	PROOF.md section 2	Real finite signed spectral measure in [log 2,L]; no infinite frequency extrapolation
+EPD26.T1	PROPOSED_PROVED	Actual smoothed logarithmic derivative controlled on the exact critical line	PROOF.md section 3	Bandwidth cost retained; high prime powers bounded separately
+EPD26.T2	PROPOSED_PROVED	Hypothetical off-line zero forces full-depth power over logarithmic loss	PROOF.md section 4	Conditional on that zero; not evidence one exists; full multiplicity retained
+EPD26.T3	PROPOSED_PROVED	Complete physical cosine energy is a square of the signed prime tail	PROOF.md section 5	No prime-independent measure; positivity is not a size bound
+EPD26.C1	CONDITIONAL_RH	Q(X)=O(log^3 X) and E(X)=O(log^(3/2) X)	PROOF.md section 6	RH prime-counting error is an input, not a conclusion
+EPD26.C2	IMPORTED_INPUT_CONSEQUENCE	Classical PNT gives only Q(X)=O(1+X exp(-c sqrt(log X)))	PROOF.md section 6	No new zero-free region; constants not numerically certified
+EPD26.N1	PROPOSED_SYNTHETIC_CONTROL	Positive continuous counting model obeys PNT-shaped error but power-sized Q	ATTEMPT.md	Not ordinary primes and not an L-function
+EPD26.OPEN	OPEN_RH_EQUIVALENT	Subpower Q along one unbounded sequence would finish this route	PROOF.md section 7	No unconditional proof supplied

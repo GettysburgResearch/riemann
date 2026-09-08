@@ -1,0 +1,534 @@
+{
+  "cube_algebra": [
+    {
+      "prime_count": 1,
+      "synthetic_K": [
+        1,
+        6
+      ],
+      "synthetic_K2": [
+        1,
+        18
+      ],
+      "vertices": 2
+    },
+    {
+      "prime_count": 2,
+      "synthetic_K": [
+        23,
+        84
+      ],
+      "synthetic_K2": [
+        563,
+        7056
+      ],
+      "vertices": 4
+    },
+    {
+      "prime_count": 3,
+      "synthetic_K": [
+        26821,
+        81900
+      ],
+      "synthetic_K2": [
+        117308423,
+        1341522000
+      ],
+      "vertices": 8
+    },
+    {
+      "prime_count": 4,
+      "synthetic_K": [
+        232228559,
+        643242600
+      ],
+      "synthetic_K2": [
+        358351126557943,
+        3940581356712000
+      ],
+      "vertices": 16
+    }
+  ],
+  "format": "CCS26-v1",
+  "literal_root_certificates": [
+    {
+      "K": [
+        [
+          480898346962,
+          1000000000000
+        ],
+        [
+          480898346963,
+          1000000000000
+        ]
+      ],
+      "centered_constant": [
+        [
+          961796693925,
+          1000000000000
+        ],
+        [
+          961796693926,
+          1000000000000
+        ]
+      ],
+      "optimal_anchored_constant": [
+        [
+          1442695040888,
+          1000000000000
+        ],
+        [
+          1442695040890,
+          1000000000000
+        ]
+      ],
+      "primes": [
+        2
+      ],
+      "vertices": 2
+    },
+    {
+      "K": [
+        [
+          775004048650,
+          1000000000000
+        ],
+        [
+          775004048651,
+          1000000000000
+        ]
+      ],
+      "centered_constant": [
+        [
+          961796693925,
+          1000000000000
+        ],
+        [
+          961796693926,
+          1000000000000
+        ]
+      ],
+      "optimal_anchored_constant": [
+        [
+          1640311705271,
+          1000000000000
+        ],
+        [
+          1640311705272,
+          1000000000000
+        ]
+      ],
+      "primes": [
+        2,
+        3
+      ],
+      "vertices": 4
+    },
+    {
+      "K": [
+        [
+          939362675746,
+          1000000000000
+        ],
+        [
+          939362675747,
+          1000000000000
+        ]
+      ],
+      "centered_constant": [
+        [
+          961796693925,
+          1000000000000
+        ],
+        [
+          961796693926,
+          1000000000000
+        ]
+      ],
+      "optimal_anchored_constant": [
+        [
+          1748973779868,
+          1000000000000
+        ],
+        [
+          1748973779869,
+          1000000000000
+        ]
+      ],
+      "primes": [
+        2,
+        3,
+        5
+      ],
+      "vertices": 8
+    },
+    {
+      "K": [
+        [
+          1055466664048,
+          1000000000000
+        ],
+        [
+          1055466664049,
+          1000000000000
+        ]
+      ],
+      "centered_constant": [
+        [
+          961796693925,
+          1000000000000
+        ],
+        [
+          961796693926,
+          1000000000000
+        ]
+      ],
+      "optimal_anchored_constant": [
+        [
+          1827392902275,
+          1000000000000
+        ],
+        [
+          1827392902276,
+          1000000000000
+        ]
+      ],
+      "primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "vertices": 16
+    },
+    {
+      "K": [
+        [
+          1185322859710,
+          1000000000000
+        ],
+        [
+          1185322859711,
+          1000000000000
+        ]
+      ],
+      "centered_constant": [
+        [
+          961796693925,
+          1000000000000
+        ],
+        [
+          961796693926,
+          1000000000000
+        ]
+      ],
+      "optimal_anchored_constant": [
+        [
+          1915941534726,
+          1000000000000
+        ],
+        [
+          1915941534727,
+          1000000000000
+        ]
+      ],
+      "primes": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13
+      ],
+      "vertices": 64
+    },
+    {
+      "K": [
+        [
+          1270405074945,
+          1000000000000
+        ],
+        [
+          1270405074946,
+          1000000000000
+        ]
+      ],
+      "centered_constant": [
+        [
+          961796693925,
+          1000000000000
+        ],
+        [
+          961796693926,
+          1000000000000
+        ]
+      ],
+      "optimal_anchored_constant": [
+        [
+          1975116407688,
+          1000000000000
+        ],
+        [
+          1975116407689,
+          1000000000000
+        ]
+      ],
+      "primes": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19
+      ],
+      "vertices": 256
+    }
+  ],
+  "native_coherent_panels": [
+    {
+      "J": [
+        1,
+        1
+      ],
+      "N": 1,
+      "coherent_squared_norm": [
+        1,
+        1
+      ],
+      "edges": 0,
+      "future_tail": [
+        1,
+        1
+      ],
+      "higher_power_edges": 0,
+      "vertex_squared_norm": 1
+    },
+    {
+      "J": [
+        1,
+        2
+      ],
+      "N": 2,
+      "coherent_squared_norm": [
+        1,
+        3
+      ],
+      "edges": 1,
+      "future_tail": [
+        0,
+        1
+      ],
+      "higher_power_edges": 0,
+      "vertex_squared_norm": 2
+    },
+    {
+      "J": [
+        5,
+        6
+      ],
+      "N": 3,
+      "coherent_squared_norm": [
+        5,
+        11
+      ],
+      "edges": 2,
+      "future_tail": [
+        1,
+        3
+      ],
+      "higher_power_edges": 0,
+      "vertex_squared_norm": 3
+    },
+    {
+      "J": [
+        5,
+        6
+      ],
+      "N": 4,
+      "coherent_squared_norm": [
+        2,
+        5
+      ],
+      "edges": 4,
+      "future_tail": [
+        1,
+        4
+      ],
+      "higher_power_edges": 1,
+      "vertex_squared_norm": 3
+    },
+    {
+      "J": [
+        43,
+        30
+      ],
+      "N": 5,
+      "coherent_squared_norm": [
+        86,
+        137
+      ],
+      "edges": 5,
+      "future_tail": [
+        4,
+        5
+      ],
+      "higher_power_edges": 1,
+      "vertex_squared_norm": 4
+    },
+    {
+      "J": [
+        14,
+        15
+      ],
+      "N": 6,
+      "coherent_squared_norm": [
+        8,
+        21
+      ],
+      "edges": 7,
+      "future_tail": [
+        1,
+        6
+      ],
+      "higher_power_edges": 1,
+      "vertex_squared_norm": 5
+    },
+    {
+      "J": [
+        143,
+        105
+      ],
+      "N": 8,
+      "coherent_squared_norm": [
+        1144,
+        2283
+      ],
+      "edges": 11,
+      "future_tail": [
+        1,
+        2
+      ],
+      "higher_power_edges": 3,
+      "vertex_squared_norm": 6
+    },
+    {
+      "J": [
+        3083,
+        2310
+      ],
+      "N": 12,
+      "coherent_squared_norm": [
+        36996,
+        86021
+      ],
+      "edges": 19,
+      "future_tail": [
+        1,
+        3
+      ],
+      "higher_power_edges": 5,
+      "vertex_squared_norm": 8
+    },
+    {
+      "J": [
+        17449,
+        15015
+      ],
+      "N": 16,
+      "coherent_squared_norm": [
+        837552,
+        2436559
+      ],
+      "edges": 28,
+      "future_tail": [
+        1,
+        16
+      ],
+      "higher_power_edges": 8,
+      "vertex_squared_norm": 11
+    },
+    {
+      "J": [
+        43270741,
+        31870410
+      ],
+      "N": 24,
+      "coherent_squared_norm": [
+        2423161496,
+        6739114775
+      ],
+      "edges": 45,
+      "future_tail": [
+        1,
+        6
+      ],
+      "higher_power_edges": 12,
+      "vertex_squared_norm": 16
+    },
+    {
+      "J": [
+        49803345139,
+        28651498590
+      ],
+      "N": 32,
+      "coherent_squared_norm": [
+        251008859500560,
+        586061125622639
+      ],
+      "edges": 65,
+      "future_tail": [
+        1,
+        2
+      ],
+      "higher_power_edges": 20,
+      "vertex_squared_norm": 20
+    },
+    {
+      "J": [
+        4737348987210788616337,
+        3554193374527483969190
+      ],
+      "N": 64,
+      "coherent_squared_norm": [
+        175092418567310747259815520,
+        623171679694215690971693339
+      ],
+      "edges": 145,
+      "future_tail": [
+        1,
+        64
+      ],
+      "higher_power_edges": 43,
+      "vertex_squared_norm": 39
+    },
+    {
+      "J": [
+        1071326323599028497376703103941587472139165059,
+        761760330044219390720007817652000974695613899
+      ],
+      "N": 128,
+      "coherent_squared_norm": [
+        18780487582460390234661269630093332909795997297397552000,
+        72552921080947538317446905633815133414572988188576608701
+      ],
+      "edges": 315,
+      "future_tail": [
+        1,
+        32
+      ],
+      "higher_power_edges": 91,
+      "vertex_squared_norm": 78
+    }
+  ],
+  "primitive_range": 256,
+  "rh_proved": false,
+  "scope": {
+    "actual_zero_data_used": false,
+    "broad_campaign": false,
+    "infinite_theorems_machine_proved": false,
+    "literal_prime_power_formula_checked": true
+  },
+  "status": "component-proofs; RH estimate OPEN"
+}

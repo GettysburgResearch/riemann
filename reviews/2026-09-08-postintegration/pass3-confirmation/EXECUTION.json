@@ -1,0 +1,29 @@
+{
+  "arithmetic": "Standard-library Fraction/integer plus outward 180-bit dyadic endpoints; no floating acceptance",
+  "assertions": 6770,
+  "author_research_code_executed": false,
+  "code": {
+    "bytes": 17196,
+    "git_blob": "630acf02f8655e21ec032d0cef338f41b6f80948",
+    "sha256": "a12718c7e8626ac913f12c17ae21fb1a51cc12636df6eed73a324bfc87d75c28"
+  },
+  "command_normal": "python3 -I -S -B checks.py",
+  "command_optimized": "python3 -I -S -B -O checks.py",
+  "commands_executed": true,
+  "full_checkout": false,
+  "lean_build": false,
+  "marker": "PASS_INDEPENDENT_BOUNDED_PASS3_CHECKS",
+  "native_windows_execution": false,
+  "normal_optimized_identical": true,
+  "relationship_to_published_pass3": "Separate locally executed corroboration with overlapping cases. Do not add counts to obtain distinct theorem or independent-referee counts. Published seven-minimum/full-Gram and 15-method package receipts were read but NOT rerun by this confirmation.",
+  "remote_ci": false,
+  "result": {
+    "bytes": 7100,
+    "git_blob": "5bdcd38fb91b7eac3de4c44b0c093e0f0ba0479d",
+    "sha256": "6af9ae3adc7d7c9fd3a9d38f72eff61c6ccb598519859bdda8187669837d2af1"
+  },
+  "rh_proved": false,
+  "schema": "riemann.review.pass3.confirmation-execution.v1",
+  "unbounded_analysis_machine_proved": false,
+  "zero_campaign": false
+}

@@ -1,0 +1,91 @@
+{
+  "additional_files": [
+    {
+      "commit": "dc7babb830cb696810fb68bd74f6a33459f5f921",
+      "git_blob": "d407fcc6b2ecf7d92f9393c3fc474f445095ca31",
+      "inspection": "SUBSTANTIVE_MANUSCRIPT_RECONSTRUCTION; already included by published pass2",
+      "packet": "ST",
+      "path": "standalone/2026-09-07-astra-source-stability/PROOF.md",
+      "pr": 814
+    },
+    {
+      "commit": "db175de165a9077e709b1cb482998171ffc0c6e7",
+      "git_blob": "c57f733bd97ea2dff808cb9141bd24303296bcb3",
+      "inspection": "FULL_SYNTHESIS_LOGIC",
+      "packet": "ANT",
+      "path": "standalone/2026-09-08-arithmetic-norm-transfer/SYNTHESIS.md",
+      "pr": 803
+    },
+    {
+      "commit": "db175de165a9077e709b1cb482998171ffc0c6e7",
+      "git_blob": "72598046a605da079d351879b0915b8d8992a440",
+      "inspection": "SOURCE_LOCK_SCOPE; not complete transitive verification",
+      "packet": "ANT",
+      "path": "standalone/2026-09-08-arithmetic-norm-transfer/SOURCES.json",
+      "pr": 803
+    },
+    {
+      "commit": "528b33ac8d57b5a046260ee45d585cd3fe720f4c",
+      "git_blob": "d5b5775cfed45695b3450226b210231a8deed504",
+      "inspection": "FULL_SYNTHESIS_LOGIC",
+      "packet": "GCP",
+      "path": "standalone/2026-09-08-astra-grounding-capacity/SYNTHESIS_AND_ATTEMPT.md",
+      "pr": 828
+    },
+    {
+      "commit": "528b33ac8d57b5a046260ee45d585cd3fe720f4c",
+      "git_blob": "dbdf82d95f0865addc81eb8a609da3e9baf84ccb",
+      "inspection": "SOURCE_LOCK_SCOPE; not complete transitive verification",
+      "packet": "GCP",
+      "path": "standalone/2026-09-08-astra-grounding-capacity/SOURCES.json",
+      "pr": 828
+    },
+    {
+      "commit": "f782788933dc21a0fe6a844950f5ca532eba7d86",
+      "git_blob": "6430664f8f9b047ccedbf9fa08bc00cc727143d3",
+      "inspection": "FULL_SYNTHESIS_LOGIC",
+      "packet": "CCS",
+      "path": "standalone/2026-09-08-astra-coherent-channel-synthesis/SYNTHESIS.md",
+      "pr": 829
+    },
+    {
+      "commit": "f782788933dc21a0fe6a844950f5ca532eba7d86",
+      "git_blob": "248bc1001af6be646b2c2439ba0d3e570c8f380e",
+      "inspection": "SOURCE_LOCK_SCOPE; not complete transitive verification",
+      "packet": "CCS",
+      "path": "standalone/2026-09-08-astra-coherent-channel-synthesis/SOURCE_LOCK.json",
+      "pr": 829
+    }
+  ],
+  "blob_assurance": "Connector-reported identities for read research documents; not a local full-tree byte acquisition. Own executable and result are authenticated separately.",
+  "common_principal_files": {
+    "exclusions": "The other three rows (RC proof/result and GT SOURCES) are not newly reconstructed here from this manifest.",
+    "git_blob": "00c7223babe9c0b030b24e712303e66b9edc558d",
+    "inspection": "Fresh main-argument reading at the SAME full source commits and connector-reported blobs. No author package executed.",
+    "path": "reviews/2026-09-08-postintegration/pass3/FILES.tsv",
+    "review_commit": "37ea752b07700c7ba76335ba082cb6993caca35f",
+    "select_rows": {
+      "inspection": "SUBSTANTIVE_MAIN_MANUSCRIPT"
+    },
+    "selected_rows": 28
+  },
+  "external_reads": [
+    {
+      "scope": "Lee-Leong theorem 1.2, qualitative unconditional Mertens bound only; no numerical constants/campaign replay",
+      "url": "https://arxiv.org/html/2208.06141v4"
+    },
+    {
+      "scope": "Classical approximate functional equation / critical-line convexity consequence",
+      "url": "https://dlmf.nist.gov/25.9"
+    },
+    {
+      "scope": "Platt-Trudgian abstract/height statement; page 1 screenshot inspected; not a new zero verification",
+      "url": "https://arxiv.org/pdf/2004.09765v1"
+    },
+    {
+      "scope": "Baez-Duarte quoted Balazard-Saias lemma and RH-conditional approximation; PDF pages 3 and 5 screenshots inspected; original Balazard-Saias proof not reread",
+      "url": "https://arxiv.org/pdf/math/0202141v2"
+    }
+  ],
+  "schema": "riemann.review.pass3.confirmation-sources.v1"
+}

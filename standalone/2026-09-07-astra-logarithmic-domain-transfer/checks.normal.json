@@ -1,0 +1,67 @@
+{
+  "analytic_bound_constants_checked": {
+    "X": 2,
+    "b": "1/2",
+    "integral_evaluated": false,
+    "upper_bound": "4"
+  },
+  "analytic_proofs_machine_verified": false,
+  "arithmetic": "EXACT_RATIONAL_AND_FORMAL_PRIME_LOG",
+  "bounded_fixtures": 2202,
+  "groups": [
+    {
+      "detail": "Seven prime-base cutoffs; every n=2..256; not an infinite prime census.",
+      "fixtures": 1785,
+      "name": "prime_base_and_native_horizon"
+    },
+    {
+      "detail": "128 independent factorization identities and four rational factor checks.",
+      "fixtures": 132,
+      "name": "literal_divisor_derivation"
+    },
+    {
+      "detail": "Full order-zero-through-seven rational Gram.",
+      "fixtures": 64,
+      "name": "complete_laguerre_gram"
+    },
+    {
+      "detail": "Exact local polynomial jets; finite synthetic algebra, no zeta zero values.",
+      "fixtures": 72,
+      "name": "multiplicity_and_delayed_jets"
+    },
+    {
+      "detail": "Ninety rational controls; the all-real inequality is separately proved.",
+      "fixtures": 90,
+      "name": "poisson_derivative_kernel_controls"
+    },
+    {
+      "detail": "Closed infinite exponential-polynomial integrals, evaluated by factorials.",
+      "fixtures": 4,
+      "name": "source_moment_and_stable_filter"
+    },
+    {
+      "detail": "Formal Taylor coefficients through nine; no truncated series used as an analytic bound.",
+      "fixtures": 30,
+      "name": "entire_cutoff_log_derivative"
+    },
+    {
+      "detail": "Full step integration versus atomwise summation at five cutoffs and three exponents.",
+      "fixtures": 15,
+      "name": "abel_cutoff_atom_weights"
+    },
+    {
+      "detail": "Rational enclosures supporting the analytic all-frequency bound E_(1/2)(2)<4.",
+      "fixtures": 6,
+      "name": "actual_X2_complete_frequency_margin"
+    },
+    {
+      "detail": "No unconditional entropy moment is asserted; these are integrals of the conditional majorant.",
+      "fixtures": 4,
+      "name": "conditional_moment_antiderivatives"
+    }
+  ],
+  "named_groups": 10,
+  "rh_proved": false,
+  "schema": "OEC26_EXACT_CONTROLS_V1",
+  "unconditional_entropy_upper_bound_proved": false
+}

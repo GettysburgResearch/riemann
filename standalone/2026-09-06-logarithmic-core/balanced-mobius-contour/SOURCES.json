@@ -1,0 +1,47 @@
+{
+  "parent_head": "47b8a507aea0ad6e1dd0ab23dfd2035a0eb03abb",
+  "parent_proof_blob": "046a12cd9233aa7d8a9a3a5d4d4c64a67d4207be",
+  "parent_proof_sha256": "036e9d3d7b429e9ac8d850e81910c53addfa1d9654050732cfc3dc8bcc4e47c7",
+  "parent_proof_path": "standalone/2026-09-06-logarithmic-core/sparse-sign-bootstrap/PROOF.md",
+  "parent_scope": "Only the final count-to-RH implication uses SSB1; new completion, proxy and tail statements do not assume its open arithmetic premise. Author dependency, not independent acceptance.",
+  "repository_context": [
+    {
+      "pr": 805,
+      "sha": "602d7ddf9dbd2ba79bd6cada149772111ca72150",
+      "path": "standalone/2026-09-07-astra-critical-line-attempt/PROOF.md",
+      "scope": "Read the actual proof; different odd-Mobius quadratic and its legal contour motivate the approach. No source identity or estimated bound is silently transferred."
+    }
+  ],
+  "external": [
+    {
+      "authors": "Harald Andres Helfgott and Lola Thompson",
+      "title": "Summing mu(n): a faster elementary algorithm",
+      "url": "https://link.springer.com/article/10.1007/s40993-022-00408-8",
+      "location": "Section 2, equation (2.1)",
+      "scope": "Primary paper states the classical quadratic Heath-Brown identity. The finite convolution identity used here is rederived in full. No algorithmic complexity theorem imported."
+    },
+    {
+      "authors": "NIST Digital Library of Mathematical Functions",
+      "title": "25.9 Asymptotic Approximations",
+      "url": "https://dlmf.nist.gov/25.9",
+      "location": "Equations 25.9.1--25.9.3; referenced classical AFE/strip theory",
+      "scope": "Approximate functional equation and classical convexity input. Cauchy supplies the derivative estimate. Constants exist and are independent of Y, but are not numerically certified. No zero-location assumption."
+    },
+    {
+      "authors": "H. L. Montgomery and R. C. Vaughan",
+      "title": "Hilbert's Inequality (1974)",
+      "url": "https://doi.org/10.1112/jlms/s2-8.1.73",
+      "scope": "Prior art for Dirichlet-polynomial mean values, bibliographic context only. This packet proves a weaker log-loss mean-value estimate directly and does not import this paper as an analytic premise."
+    }
+  ],
+  "reading_boundary": "Connector source reads and primary HTML/math pages; no new PDF audit or external numerical replay. Classical Mellin inversion and elementary complex analysis are used at their stated hypotheses.",
+  "nonclaims": [
+    "RH proof",
+    "native failure-count power saving",
+    "unbounded native positivity",
+    "contour quadrature",
+    "formal build",
+    "independent author acceptance",
+    "external novelty"
+  ]
+}

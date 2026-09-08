@@ -1,0 +1,45 @@
+{
+  "executed": [
+    {
+      "mode": "normal",
+      "mutation": "status_promotion",
+      "rejected": true
+    },
+    {
+      "mode": "normal",
+      "mutation": "coverage_loss",
+      "rejected": true
+    },
+    {
+      "mode": "normal",
+      "mutation": "false_endpoint",
+      "rejected": true
+    },
+    {
+      "mode": "normal",
+      "mutation": "multiplicity_coverage_loss",
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "mutation": "status_promotion",
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "mutation": "coverage_loss",
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "mutation": "false_endpoint",
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "mutation": "multiplicity_coverage_loss",
+      "rejected": true
+    }
+  ],
+  "scope": "Strict record replay only; not a proof of the analytic theorems."
+}
