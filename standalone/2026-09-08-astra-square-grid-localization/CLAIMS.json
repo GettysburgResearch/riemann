@@ -1,0 +1,90 @@
+{
+  "all_new_proofs": "proposed; independent review pending",
+  "claims": [
+    {
+      "id": "SSQ26.T1",
+      "inputs": [
+        "classical Plancherel",
+        "exact prime/continuum Stieltjes identity"
+      ],
+      "limits": "Global norm statement; not an uncorrected finite-tail comparison.",
+      "proof": "PROOF.md Section 1",
+      "statement": "Exact causal bounded invertible adapter from ordinary count e to parent weighted R; J finite iff K finite and K/4<=J<=K.",
+      "status": "PROPOSED_PROVED"
+    },
+    {
+      "id": "SSQ26.T2",
+      "inputs": [
+        "BT"
+      ],
+      "limits": "No bound for coarse levels; no short-interval lower estimate.",
+      "proof": "PROOF.md Sections 2-3",
+      "statement": "Sum of orthogonal detail energies on square cells n>=N is less than 28/log N for every integer N>=2.",
+      "status": "PROPOSED_PROVED_WITH_CLASSICAL_BT"
+    },
+    {
+      "id": "SSQ26.T3",
+      "inputs": [
+        "SSQ26.T2 range estimate"
+      ],
+      "limits": "No pointwise vanishing and no inferred coarse-tail convergence.",
+      "proof": "PROOF.md Section 4",
+      "statement": "Held endpoint samples have total squared error less than 112/log N; equivalent weighted sample series.",
+      "status": "PROPOSED_PROVED_WITH_CLASSICAL_BT"
+    },
+    {
+      "id": "SSQ26.T4",
+      "inputs": [
+        "BT"
+      ],
+      "limits": "No claim of sharp actual-prime threshold at alpha=1/2.",
+      "proof": "PROOF.md Section 5",
+      "statement": "General mesh detail bound sum h_j^3/(x_j^2 log^2 h_j); convergence for h=sqrt x log^alpha x with fixed alpha<1/2.",
+      "status": "PROPOSED_PROVED_WITH_CLASSICAL_BT"
+    },
+    {
+      "id": "SSQ26.C1",
+      "inputs": [
+        "SSQ26.T1",
+        "SSQ26.T3",
+        "parent RH=>J using CM",
+        "explicit analytic-logarithm converse"
+      ],
+      "limits": "The series finiteness remains unproved. No novelty claim for an RH criterion.",
+      "proof": "PROOF.md Section 6",
+      "statement": "RH iff the square-grid prime-count sample series is finite.",
+      "status": "PROPOSED_CRITERION_NOT_PREMISE"
+    },
+    {
+      "id": "SSQ26.X1",
+      "inputs": [
+        "integer sieve through 16384",
+        "outward dyadic log/Ei difference series"
+      ],
+      "limits": "Endpoint-sample energy, not orthogonal mean energy or full J; no infinite tail of coarse series is certified.",
+      "proof": "check.py; result.json",
+      "statement": "Six finite nonnegative sample-energy prefixes M=4,8,16,32,64,128 are enclosed; last lies strictly between 0.565641628407 and 0.565641628409.",
+      "status": "DIRECTED_FINITE_CERTIFICATE"
+    },
+    {
+      "id": "SSQ26.N1",
+      "inputs": [
+        "explicit r_beta(x) density"
+      ],
+      "limits": "Not ordinary primes, not an Euler product, not an RH counterexample.",
+      "proof": "ATTEMPT.md Section 3",
+      "statement": "Positive continuous count with a PNT-shaped error and the same square-cell sieve upper bound can have divergent coarse energy.",
+      "status": "PROPOSED_METHOD_CONTROL"
+    },
+    {
+      "id": "SSQ26.OPEN",
+      "inputs": [],
+      "limits": "This is the conclusion-bearing arithmetic upper bound; reviewers are not asked to invent it.",
+      "proof": "Not proved; attempted estimate in ATTEMPT.md",
+      "statement": "Prove sum [pi(n^2)-Li_2(n^2)]^2/n^3 finite for ordinary primes.",
+      "status": "OPEN"
+    }
+  ],
+  "rh_proved": false,
+  "schema": "SSQ26-components-v1"
+}

@@ -1,0 +1,51 @@
+{
+  "classical_analytic_inputs": [
+    "Stieltjes integration by parts",
+    "Laplace/Hardy Plancherel with dy/(2pi)",
+    "Euler product in Re(s)>1",
+    "zeta analytic continuation and functional equation",
+    "analytic uniqueness"
+  ],
+  "external_inputs": [
+    {
+      "authors": "H. L. Montgomery and R. C. Vaughan",
+      "id": "BT",
+      "imported_statement": "pi(x+y)-pi(x) <= 2y/log y for x>0,y>1.",
+      "inspection": "Yamada v1 Introduction equations (1), (2) and accompanying Montgomery--Vaughan attribution inspected. No use of the stronger 0.8601 constant or any associated computation.",
+      "primary_restatement": "https://arxiv.org/html/2312.16090v1#S1",
+      "role": "Only unconditional external prime estimate used to prove the new all-scale detail bound; not reproved or computationally authenticated here.",
+      "title": "The large sieve",
+      "url": "https://doi.org/10.1112/S0025579300004708",
+      "year": 1973
+    },
+    {
+      "authors": "R. P. Brent, D. J. Platt, T. S. Trudgian",
+      "id": "CM",
+      "imported_statement": "RH implies integral_Y^(2Y) |psi(x)-x|^2 dx <= K Y^2.",
+      "role": "Conditional converse inherited through the parent, not a premise of the new detail bound. No numerical constant or zero table is used.",
+      "title": "The mean square of the error term in the prime number theorem",
+      "url": "https://arxiv.org/abs/2008.06140"
+    }
+  ],
+  "not_claimed": [
+    "RH",
+    "independent proof of BT",
+    "new unconditional prime-error power saving",
+    "external mathematical novelty",
+    "independent acceptance of parent",
+    "full repository checkout",
+    "numerical global energy or entropy"
+  ],
+  "parent_commit": "52b6d58cef49a41bf5c07c84018c09b55e408d51",
+  "parent_pr": 818,
+  "parent_proof": {
+    "bytes": 15683,
+    "git_blob": "cad5d09a20ceb8c594832191156214ccd4aac11b",
+    "inherited_scope": "J finite implies RH; RH implies J finite under classical conditional Cramer mean-square. Not independently accepted here.",
+    "inspection": "Complete local manuscript read; exact-SHA GitHub source retrieved; local Git blob matches remote tree record.",
+    "path": "standalone/2026-09-08-astra-critical-cutoff-taper/PROOF.md",
+    "sha256": "b07aa8e614b735043c0f0ebee63c284ced0f274aa06342f37ca27351fc8125cb"
+  },
+  "parent_root_tree": "c0c9800ccc1638bdfb11a0c401e9a972c5e32f6d",
+  "repository": "GettysburgResearch/riemann"
+}
