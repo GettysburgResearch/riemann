@@ -1,0 +1,29 @@
+{
+  "arithmetic_source": {
+    "commit": "0f6ee91f1a8c8bece1618bde155d62fb0bfb4cad",
+    "path": "standalone/2026-09-06-astra-compact-domain-completion/PROOF.md",
+    "pr": 804,
+    "repository": "GettysburgResearch/riemann",
+    "scope": "source, compact inverse, Bernoulli remainder; reviewed by author, not independently accepted"
+  },
+  "main_or_predecessor_files_modified": false,
+  "packet_id": "FR26",
+  "parent_optimal_tail_delivery": {
+    "archive_sha256": "aff7a9c672e09e297b90a21c49e9130ca279177eb2b7c503e8ac48f057e128c8",
+    "proof_git_blob": "2b7e4966d21c8a77bb455ff391ed153f98372659",
+    "proof_sha256": "25c9eb3e6c73072c203d4fe2f3282b5a148c1283742daa061fdca2275f1c8a30",
+    "remote_publication_verified": false
+  },
+  "predecessor_test_suites_executed": false,
+  "publication_base": "38a9494be21e85e26b04df1c7c2fdfccfc3c657d",
+  "retained_interval_core": {
+    "byte_preserved": true,
+    "bytes": 9799,
+    "copied_path": "interval_core.py",
+    "git_blob": "92f484bc6bc7b12bf26313bd7d323c637cd834b9",
+    "sha256": "1aa6bfa49f791ffde5224e21c8c92291a2e06b35130034d1de975b4d7a93fa17",
+    "upstream_path": "standalone/2026-09-07-astra-optimal-tail/mathcore.py"
+  },
+  "schema": "riemann-future-realization-source-v1",
+  "unknown_zeros_are_inputs": false
+}
