@@ -1,0 +1,37 @@
+{
+  "current_repository": "GettysburgResearch/riemann",
+  "external_inputs": [
+    {
+      "url": "https://dlmf.nist.gov/18.3",
+      "use": "Laguerre orthogonality at alpha=0"
+    },
+    {
+      "url": "https://dlmf.nist.gov/18.12",
+      "use": "Laguerre generating function and alpha=-1 polynomial specialization"
+    },
+    {
+      "url": "https://dlmf.nist.gov/27.12#E5",
+      "use": "Classical quantitative PNT; only theta error O(x/log^2 x) is used"
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.10",
+      "use": "Existence/infinitude of critical-line zeros ONLY for HP-6"
+    }
+  ],
+  "external_proofs_replayed": false,
+  "external_sources_accessed": "2026-09-05",
+  "historical_repository": "gfreund123/riemann",
+  "new_claim_labels": "HP-1 through HP-6, local only",
+  "parent_commit": "a895f734fc4243dbe81e1a0c5a17cf978a744962",
+  "parent_git_blobs": {
+    "GROWTH.md": "c19930a24cefb6d5543098b9958f47a1d71acd87",
+    "arithmetic-laguerre/PROOF.md": "aff32d3b2078c3c895bd77f02e71fbe1fcfc3b49",
+    "arithmetic-laguerre/verify_arithmetic.py": "5280ba28c9580bb7b324f0a43cf169b3de503335",
+    "verify_exact.py": "44bf0d6ac36d9bc6f5e4e7019ebc7b14eeb2deda"
+  },
+  "parent_pr": 792,
+  "parent_tree": "9232234daa20dbd43fb6f15950f900f9680c8b52",
+  "pdfs_analyzed": false,
+  "repository_id": 1309150028,
+  "source_conditioning": "Actual prime logarithms are not replaced by rational fixture weights in the analytic theorem"
+}

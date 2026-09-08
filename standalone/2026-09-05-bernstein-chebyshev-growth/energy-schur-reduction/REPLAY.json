@@ -1,0 +1,249 @@
+{
+  "actual_effective_sign_certified": false,
+  "analytic_proofs_machine_checked": false,
+  "corruption_refusals": 16,
+  "finite_checks_per_clean_mode": 581,
+  "runs": [
+    {
+      "case": "clean",
+      "command": [
+        "python",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 0,
+      "mode": "normal",
+      "output_sha256": "137b8aefdc044844fc27f85490cb7aaa077c0efa88dd85e5359a497cf9df4cc6"
+    },
+    {
+      "case": "clean",
+      "command": [
+        "python",
+        "-O",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 0,
+      "mode": "optimized",
+      "output_sha256": "137b8aefdc044844fc27f85490cb7aaa077c0efa88dd85e5359a497cf9df4cc6"
+    },
+    {
+      "case": "saved_count",
+      "command": [
+        "python",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "saved result mismatch",
+      "mode": "normal",
+      "output_sha256": "ec82b677eb808e13d61d316701d215b3b30707c05e309fd6a858fd166cf695b6"
+    },
+    {
+      "case": "saved_count",
+      "command": [
+        "python",
+        "-O",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "saved result mismatch",
+      "mode": "optimized",
+      "output_sha256": "ec82b677eb808e13d61d316701d215b3b30707c05e309fd6a858fd166cf695b6"
+    },
+    {
+      "case": "float_alias",
+      "command": [
+        "python",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "saved result mismatch",
+      "mode": "normal",
+      "output_sha256": "ec82b677eb808e13d61d316701d215b3b30707c05e309fd6a858fd166cf695b6"
+    },
+    {
+      "case": "float_alias",
+      "command": [
+        "python",
+        "-O",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "saved result mismatch",
+      "mode": "optimized",
+      "output_sha256": "ec82b677eb808e13d61d316701d215b3b30707c05e309fd6a858fd166cf695b6"
+    },
+    {
+      "case": "boolean_alias",
+      "command": [
+        "python",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "saved result mismatch",
+      "mode": "normal",
+      "output_sha256": "ec82b677eb808e13d61d316701d215b3b30707c05e309fd6a858fd166cf695b6"
+    },
+    {
+      "case": "boolean_alias",
+      "command": [
+        "python",
+        "-O",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "saved result mismatch",
+      "mode": "optimized",
+      "output_sha256": "ec82b677eb808e13d61d316701d215b3b30707c05e309fd6a858fd166cf695b6"
+    },
+    {
+      "case": "duplicate_key",
+      "command": [
+        "python",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "duplicate JSON key",
+      "mode": "normal",
+      "output_sha256": "04734d511f5fcdfd0e930460cc29297a32ab696d07179ba1fecd7728a8d574ea"
+    },
+    {
+      "case": "duplicate_key",
+      "command": [
+        "python",
+        "-O",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "duplicate JSON key",
+      "mode": "optimized",
+      "output_sha256": "04734d511f5fcdfd0e930460cc29297a32ab696d07179ba1fecd7728a8d574ea"
+    },
+    {
+      "case": "proof_changed",
+      "command": [
+        "python",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "saved result mismatch",
+      "mode": "normal",
+      "output_sha256": "ec82b677eb808e13d61d316701d215b3b30707c05e309fd6a858fd166cf695b6"
+    },
+    {
+      "case": "proof_changed",
+      "command": [
+        "python",
+        "-O",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "saved result mismatch",
+      "mode": "optimized",
+      "output_sha256": "ec82b677eb808e13d61d316701d215b3b30707c05e309fd6a858fd166cf695b6"
+    },
+    {
+      "case": "parent_changed",
+      "command": [
+        "python",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "parent blob mismatch",
+      "mode": "normal",
+      "output_sha256": "6a919493fa029d56c7f3ba2f532f80a0bdf1a3e0cff3330204bb42557ce9fdff"
+    },
+    {
+      "case": "parent_changed",
+      "command": [
+        "python",
+        "-O",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "parent blob mismatch",
+      "mode": "optimized",
+      "output_sha256": "6a919493fa029d56c7f3ba2f532f80a0bdf1a3e0cff3330204bb42557ce9fdff"
+    },
+    {
+      "case": "lock_changed",
+      "command": [
+        "python",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "source lock mismatch",
+      "mode": "normal",
+      "output_sha256": "bb233361fa9567548ecb812dd9102de0a520995757174d5523038b14290e2a46"
+    },
+    {
+      "case": "lock_changed",
+      "command": [
+        "python",
+        "-O",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "source lock mismatch",
+      "mode": "optimized",
+      "output_sha256": "bb233361fa9567548ecb812dd9102de0a520995757174d5523038b14290e2a46"
+    },
+    {
+      "case": "checker_changed",
+      "command": [
+        "python",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "saved result mismatch",
+      "mode": "normal",
+      "output_sha256": "ec82b677eb808e13d61d316701d215b3b30707c05e309fd6a858fd166cf695b6"
+    },
+    {
+      "case": "checker_changed",
+      "command": [
+        "python",
+        "-O",
+        "verify_schur.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 2,
+      "expected_error": "saved result mismatch",
+      "mode": "optimized",
+      "output_sha256": "ec82b677eb808e13d61d316701d215b3b30707c05e309fd6a858fd166cf695b6"
+    }
+  ]
+}

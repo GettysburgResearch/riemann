@@ -1,0 +1,129 @@
+{
+  "clean_runs": [
+    {
+      "checks": 183,
+      "command": "python verify_gluing.py --check result.json",
+      "exit_code": 0,
+      "sha256_stdout": "fb7943baed9ebde388d81b07125018c63526c5ecff41af38a7d5595820f1b9af"
+    },
+    {
+      "checks": 183,
+      "command": "python -O verify_gluing.py --check result.json",
+      "exit_code": 0,
+      "sha256_stdout": "fb7943baed9ebde388d81b07125018c63526c5ecff41af38a7d5595820f1b9af"
+    },
+    {
+      "checks": 194,
+      "command": "python verify_window.py --check result.json",
+      "exit_code": 0,
+      "sha256_stdout": "81fc2a76c7a723b329ca2d1adef929e4fbeb3914153a623826fd1ffb81e677c5"
+    },
+    {
+      "checks": 194,
+      "command": "python -O verify_window.py --check result.json",
+      "exit_code": 0,
+      "sha256_stdout": "81fc2a76c7a723b329ca2d1adef929e4fbeb3914153a623826fd1ffb81e677c5"
+    }
+  ],
+  "orchestration_note": "Two initial oversized refusal batches hit the 45-second command cap without a complete receipt. Bounded batches subsequently recorded all 16 completed child refusals; the 2..4 batch wrote its complete receipt at the command boundary. Only the child runs with observed exit codes and exact errors listed here are counted.",
+  "refusal_runs": 16,
+  "refusals": [
+    {
+      "case": "saved_pivot",
+      "exit_codes": [
+        1,
+        1
+      ],
+      "expected_and_observed_error": "RESULT_MISMATCH",
+      "modes": [
+        "normal",
+        "optimized"
+      ]
+    },
+    {
+      "case": "float_alias",
+      "exit_codes": [
+        1,
+        1
+      ],
+      "expected_and_observed_error": "RESULT_MISMATCH",
+      "modes": [
+        "normal",
+        "optimized"
+      ]
+    },
+    {
+      "case": "boolean_alias",
+      "exit_codes": [
+        1,
+        1
+      ],
+      "expected_and_observed_error": "RESULT_MISMATCH",
+      "modes": [
+        "normal",
+        "optimized"
+      ]
+    },
+    {
+      "case": "duplicate_key",
+      "exit_codes": [
+        1,
+        1
+      ],
+      "expected_and_observed_error": "DUPLICATE_JSON_KEY",
+      "modes": [
+        "normal",
+        "optimized"
+      ]
+    },
+    {
+      "case": "new_proof",
+      "exit_codes": [
+        1,
+        1
+      ],
+      "expected_and_observed_error": "RESULT_MISMATCH",
+      "modes": [
+        "normal",
+        "optimized"
+      ]
+    },
+    {
+      "case": "source_lock",
+      "exit_codes": [
+        1,
+        1
+      ],
+      "expected_and_observed_error": "SOURCE_LOCK_MISMATCH",
+      "modes": [
+        "normal",
+        "optimized"
+      ]
+    },
+    {
+      "case": "parent_code",
+      "exit_codes": [
+        1,
+        1
+      ],
+      "expected_and_observed_error": "PARENT_SOURCE_MISMATCH: verify_window.py",
+      "modes": [
+        "normal",
+        "optimized"
+      ]
+    },
+    {
+      "case": "parent_proof",
+      "exit_codes": [
+        1,
+        1
+      ],
+      "expected_and_observed_error": "PARENT_SOURCE_MISMATCH: PROOF.md",
+      "modes": [
+        "normal",
+        "optimized"
+      ]
+    }
+  ],
+  "status": "execution_receipt_not_mathematical_proof"
+}

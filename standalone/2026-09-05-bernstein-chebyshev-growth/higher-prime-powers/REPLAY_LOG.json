@@ -1,0 +1,77 @@
+{
+  "arithmetic_parent_checks_per_mode": 1795,
+  "corruption_refusals": [
+    {
+      "expected_refusal": "saved result differs",
+      "mutation": "saved_norm",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "expected_refusal": "saved result differs",
+      "mutation": "saved_norm",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "expected_refusal": "saved result differs",
+      "mutation": "numeric_type_alias",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "expected_refusal": "saved result differs",
+      "mutation": "numeric_type_alias",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "expected_refusal": "saved result differs",
+      "mutation": "saved_source_hash",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "expected_refusal": "saved result differs",
+      "mutation": "saved_source_hash",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "expected_refusal": "saved result differs",
+      "mutation": "changed_proof",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "expected_refusal": "saved result differs",
+      "mutation": "changed_proof",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "expected_refusal": "parent_source_lock",
+      "mutation": "changed_parent_lock",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "expected_refusal": "parent_source_lock",
+      "mutation": "changed_parent_lock",
+      "optimized": true,
+      "returncode": 1
+    }
+  ],
+  "interpretation": "Executed local finite algebra only; no analytic theorem, actual prime norm, or RH is certified by this log.",
+  "new_finite_checks_per_mode": 1192,
+  "normal_optimized_outputs_identical": true,
+  "original_parent_checks_per_mode": 1922,
+  "output_sha256": {
+    "hp_normal.log": "94cef00a3e0887c257b81c6cb7e69824e651e9d308032ac2e601e0a18145952c",
+    "hp_optimized.log": "94cef00a3e0887c257b81c6cb7e69824e651e9d308032ac2e601e0a18145952c",
+    "hp_parent_arithmetic_normal.log": "13d64322e8fb14797c8a6615c098b66e860e45f6b00411d5e17ddd30ae9b0b67",
+    "hp_parent_arithmetic_optimized.log": "13d64322e8fb14797c8a6615c098b66e860e45f6b00411d5e17ddd30ae9b0b67",
+    "hp_parent_original_normal.log": "08e78f90039edaa845819384e412803b31a8c84d658b183224b2b3f421311cb6",
+    "hp_parent_original_optimized.log": "08e78f90039edaa845819384e412803b31a8c84d658b183224b2b3f421311cb6"
+  }
+}

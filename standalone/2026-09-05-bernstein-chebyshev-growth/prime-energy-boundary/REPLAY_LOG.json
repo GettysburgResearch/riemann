@@ -1,0 +1,137 @@
+{
+  "utc_started": "2026-09-05T01:17:31.653801+00:00",
+  "scope": "finite exact algebra and integrity only",
+  "runs": [
+    {
+      "directory": ".",
+      "command": "python verify_exact.py --check result.json",
+      "exit_code": 0,
+      "stdout_sha256": "08e78f90039edaa845819384e412803b31a8c84d658b183224b2b3f421311cb6",
+      "checks": 1922
+    },
+    {
+      "directory": ".",
+      "command": "python -O verify_exact.py --check result.json",
+      "exit_code": 0,
+      "stdout_sha256": "08e78f90039edaa845819384e412803b31a8c84d658b183224b2b3f421311cb6",
+      "checks": 1922
+    },
+    {
+      "directory": "arithmetic-laguerre",
+      "command": "python verify_arithmetic.py --check result.json",
+      "exit_code": 0,
+      "stdout_sha256": "13d64322e8fb14797c8a6615c098b66e860e45f6b00411d5e17ddd30ae9b0b67",
+      "checks": 1795
+    },
+    {
+      "directory": "arithmetic-laguerre",
+      "command": "python -O verify_arithmetic.py --check result.json",
+      "exit_code": 0,
+      "stdout_sha256": "13d64322e8fb14797c8a6615c098b66e860e45f6b00411d5e17ddd30ae9b0b67",
+      "checks": 1795
+    },
+    {
+      "directory": "higher-prime-powers",
+      "command": "python verify_exact.py --check result.json",
+      "exit_code": 0,
+      "stdout_sha256": "94cef00a3e0887c257b81c6cb7e69824e651e9d308032ac2e601e0a18145952c",
+      "checks": 1192
+    },
+    {
+      "directory": "higher-prime-powers",
+      "command": "python -O verify_exact.py --check result.json",
+      "exit_code": 0,
+      "stdout_sha256": "94cef00a3e0887c257b81c6cb7e69824e651e9d308032ac2e601e0a18145952c",
+      "checks": 1192
+    },
+    {
+      "directory": "prime-energy-boundary",
+      "command": "python verify_exact.py --check result.json",
+      "exit_code": 0,
+      "stdout_sha256": "536ac173d9301fc36ed119e95bb47d0287b4c47ff44f87002cdfbc7c75080086",
+      "checks": 1192
+    },
+    {
+      "directory": "prime-energy-boundary",
+      "command": "python -O verify_exact.py --check result.json",
+      "exit_code": 0,
+      "stdout_sha256": "536ac173d9301fc36ed119e95bb47d0287b4c47ff44f87002cdfbc7c75080086",
+      "checks": 1192
+    }
+  ],
+  "corruption_refusals": [
+    {
+      "case": "saved_constant",
+      "optimized": false,
+      "exit_code": 1,
+      "stderr": "REFUSED: value mismatch at root.exact_constants.continuous_diagonal_slope"
+    },
+    {
+      "case": "saved_constant",
+      "optimized": true,
+      "exit_code": 1,
+      "stderr": "REFUSED: value mismatch at root.exact_constants.continuous_diagonal_slope"
+    },
+    {
+      "case": "numeric_alias",
+      "optimized": false,
+      "exit_code": 1,
+      "stderr": "REFUSED: type mismatch at root.max_norm_degree"
+    },
+    {
+      "case": "numeric_alias",
+      "optimized": true,
+      "exit_code": 1,
+      "stderr": "REFUSED: type mismatch at root.max_norm_degree"
+    },
+    {
+      "case": "proof_bytes",
+      "optimized": false,
+      "exit_code": 1,
+      "stderr": "REFUSED: value mismatch at root.source_sha256.PROOF.md"
+    },
+    {
+      "case": "proof_bytes",
+      "optimized": true,
+      "exit_code": 1,
+      "stderr": "REFUSED: value mismatch at root.source_sha256.PROOF.md"
+    },
+    {
+      "case": "boundary_bytes",
+      "optimized": false,
+      "exit_code": 1,
+      "stderr": "REFUSED: value mismatch at root.source_sha256.BOUNDARY.md"
+    },
+    {
+      "case": "boundary_bytes",
+      "optimized": true,
+      "exit_code": 1,
+      "stderr": "REFUSED: value mismatch at root.source_sha256.BOUNDARY.md"
+    },
+    {
+      "case": "parent_commit",
+      "optimized": false,
+      "exit_code": 1,
+      "stderr": "REFUSED: parent commit lock mismatch"
+    },
+    {
+      "case": "parent_commit",
+      "optimized": true,
+      "exit_code": 1,
+      "stderr": "REFUSED: parent commit lock mismatch"
+    },
+    {
+      "case": "parent_bytes",
+      "optimized": false,
+      "exit_code": 1,
+      "stderr": "REFUSED: parent blob mismatch: higher-prime-powers/PROOF.md"
+    },
+    {
+      "case": "parent_bytes",
+      "optimized": true,
+      "exit_code": 1,
+      "stderr": "REFUSED: parent blob mismatch: higher-prime-powers/PROOF.md"
+    }
+  ],
+  "utc_finished": "2026-09-05T01:17:53.222308+00:00"
+}

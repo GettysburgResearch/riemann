@@ -1,0 +1,72 @@
+{
+  "analytic_proofs_machine_checked": false,
+  "classification": "LOCAL_EXECUTION_RECEIPT_NOT_ANALYTIC_PROOF",
+  "corruption_refusals_per_mode": 7,
+  "finite_checks_per_clean_mode": 275,
+  "normal_optimized_output_identical": true,
+  "parent_blob_checks": [
+    {
+      "bytes": 13773,
+      "git_blob": "8d7120ef2edc0ac033a4814eb61917652fc57ba8",
+      "supplied_file": "riemann_PR792_local_window_PROOF.md"
+    },
+    {
+      "bytes": 16120,
+      "git_blob": "122097298b4d35f21cca930423711faf748355f7",
+      "supplied_file": "riemann_PR792_cutoff_inertia_PROOF.md"
+    },
+    {
+      "bytes": 19171,
+      "git_blob": "81d7d5db7a25f5875a08c10235fdb514d67cc744",
+      "supplied_file": "riemann_PR792_cross_route_BRIDGE.md"
+    }
+  ],
+  "publication_boundary": "GitHub read access succeeded. No write/push action was discovered; local git network access failed DNS resolution. An add-only patch is supplied.",
+  "python": "3.13.5",
+  "remote_published": false,
+  "rh_proved": false,
+  "runs": [
+    {
+      "command": [
+        "python",
+        "verify.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f7241b7757bace134c13f5eaab0bbee715619f65fb580e61c925ec0633ad6bad"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "verify.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f7241b7757bace134c13f5eaab0bbee715619f65fb580e61c925ec0633ad6bad"
+    },
+    {
+      "combined_output_sha256": "d456a4cf32a8a8102d8fd73654cbd3ffdb197ac8fbb765afabe64e3b49f9fd63",
+      "command": [
+        "python",
+        "test_verify.py"
+      ],
+      "exit_code": 0,
+      "test_count": 7
+    },
+    {
+      "combined_output_sha256": "65b4b08f106aa1159e66a8b626d6962a60f0c6bb9d16e2d78b295e1f73779068",
+      "command": [
+        "python",
+        "-O",
+        "test_verify.py"
+      ],
+      "exit_code": 0,
+      "test_count": 7
+    }
+  ]
+}

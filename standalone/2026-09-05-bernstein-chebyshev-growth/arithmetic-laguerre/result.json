@@ -1,0 +1,60 @@
+{
+  "arithmetic": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "check_groups": {
+    "Chebyshev_Parseval_bound": 33,
+    "Chebyshev_affine_expansion": 33,
+    "Chebyshev_coefficient_bounds": 33,
+    "Chebyshev_l1_bound": 33,
+    "Laguerre_closed_form": 33,
+    "Laguerre_derivative": 32,
+    "Laplace_complex_atom": 128,
+    "archimedean_integral": 32,
+    "archimedean_maximum_bound": 31,
+    "archimedean_pole_coefficients": 800,
+    "archimedean_sign_factor": 32,
+    "centered_log_derivative_generating_identity": 6,
+    "exact_polar_integral": 32,
+    "input_refusals": 6,
+    "integration_by_parts_kernel": 32,
+    "original_trace_return": 99,
+    "parent_frozen_blob": 4,
+    "parent_source_lock": 1,
+    "positive_density_model_rate": 1,
+    "prime_atom_generating_identity": 165,
+    "rational_pole_vs_Laplace": 128,
+    "source_shift_moments": 99,
+    "tail_exponent_constant": 1,
+    "tail_log_constant": 1
+  },
+  "checks": 1795,
+  "continuous_countermodel": {
+    "E_1_through_E_8": [
+      "-216/1681",
+      "-41976/68921",
+      "2170728/2825761",
+      "29378376/115856201",
+      "-6901368408/4750104241",
+      "183958627464/194754273881",
+      "11401718963688/7984925229121",
+      "-923515062811704/327381934393961"
+    ],
+    "not_actual_primes": true,
+    "rate_squared": "65/41"
+  },
+  "maximum_degree": 32,
+  "not_run": [
+    "actual-zeta derivative evaluation",
+    "prime sweep",
+    "zero census",
+    "Lean",
+    "independent proof review"
+  ],
+  "rh_inequality": "NOT_PROVED",
+  "source_sha256": {
+    "PROOF.md": "305423f954a0e7f547556bbf5c90c1217e59ea0f26baadcf5ebeaaa9d1dd1934",
+    "README.md": "2d71e57233604cf5be7f97475cf252da51a00de7099ca7e14a5ca39a99777006",
+    "SOURCE_LOCK.json": "3dd6b2646ef3a98419be17300efb18a0a9a48cf063e844f1d0449efd46efb6ba",
+    "verify_arithmetic.py": "eac3ece0733c68a289c70d1948b1407aa26f761aa83770bd99b8edf410dd98cc"
+  },
+  "status": "PASS_FINITE_ALGEBRA_ONLY"
+}

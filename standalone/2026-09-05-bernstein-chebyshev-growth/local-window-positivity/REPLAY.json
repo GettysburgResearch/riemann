@@ -1,0 +1,222 @@
+{
+  "description": "Execution receipt, not a mathematical proof certificate",
+  "exact_checks_per_clean_mode": 194,
+  "identical_clean_outputs": true,
+  "intended_refusals": 14,
+  "records": [
+    {
+      "command": [
+        "python",
+        "verify_window.py",
+        "--check",
+        "result.json"
+      ],
+      "expected_diagnostic": null,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "81fc2a76c7a723b329ca2d1adef929e4fbeb3914153a623826fd1ffb81e677c5"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "verify_window.py",
+        "--check",
+        "result.json"
+      ],
+      "expected_diagnostic": null,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "81fc2a76c7a723b329ca2d1adef929e4fbeb3914153a623826fd1ffb81e677c5"
+    },
+    {
+      "case": "saved_endpoint",
+      "command": [
+        "python",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "RESULT_MISMATCH",
+      "returncode": 1,
+      "stderr_sha256": "c4971a74ae8cd62e330428d86ef5887832ecfcd4230e45327f65c9108a63db1e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "float_alias",
+      "command": [
+        "python",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "RESULT_MISMATCH",
+      "returncode": 1,
+      "stderr_sha256": "c4971a74ae8cd62e330428d86ef5887832ecfcd4230e45327f65c9108a63db1e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "bool_alias",
+      "command": [
+        "python",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "RESULT_MISMATCH",
+      "returncode": 1,
+      "stderr_sha256": "c4971a74ae8cd62e330428d86ef5887832ecfcd4230e45327f65c9108a63db1e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "duplicate_key",
+      "command": [
+        "python",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "DUPLICATE_JSON_KEY",
+      "returncode": 1,
+      "stderr_sha256": "6efe503a76b5a27032853022a53eaa89d5816c1d6c94a4ea458761d6c846cad9",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "proof_bytes",
+      "command": [
+        "python",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "RESULT_MISMATCH",
+      "returncode": 1,
+      "stderr_sha256": "c4971a74ae8cd62e330428d86ef5887832ecfcd4230e45327f65c9108a63db1e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "parent_lock",
+      "command": [
+        "python",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "CHECK_FAILED: literal parent lock",
+      "returncode": 1,
+      "stderr_sha256": "030b52d9182cd97c3865afe90965ceaa2b83123f28a1512843cfa17e8c4e5956",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "parent_bytes",
+      "command": [
+        "python",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "CHECK_FAILED: parent proof blob",
+      "returncode": 1,
+      "stderr_sha256": "54cff272b2aa45d45d94a3b1f171f9ffb725909a01303fffee207762487b4ad6",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "saved_endpoint",
+      "command": [
+        "python",
+        "-O",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "RESULT_MISMATCH",
+      "returncode": 1,
+      "stderr_sha256": "c4971a74ae8cd62e330428d86ef5887832ecfcd4230e45327f65c9108a63db1e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "float_alias",
+      "command": [
+        "python",
+        "-O",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "RESULT_MISMATCH",
+      "returncode": 1,
+      "stderr_sha256": "c4971a74ae8cd62e330428d86ef5887832ecfcd4230e45327f65c9108a63db1e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "bool_alias",
+      "command": [
+        "python",
+        "-O",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "RESULT_MISMATCH",
+      "returncode": 1,
+      "stderr_sha256": "c4971a74ae8cd62e330428d86ef5887832ecfcd4230e45327f65c9108a63db1e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "duplicate_key",
+      "command": [
+        "python",
+        "-O",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "DUPLICATE_JSON_KEY",
+      "returncode": 1,
+      "stderr_sha256": "6efe503a76b5a27032853022a53eaa89d5816c1d6c94a4ea458761d6c846cad9",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "proof_bytes",
+      "command": [
+        "python",
+        "-O",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "RESULT_MISMATCH",
+      "returncode": 1,
+      "stderr_sha256": "c4971a74ae8cd62e330428d86ef5887832ecfcd4230e45327f65c9108a63db1e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "parent_lock",
+      "command": [
+        "python",
+        "-O",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "CHECK_FAILED: literal parent lock",
+      "returncode": 1,
+      "stderr_sha256": "030b52d9182cd97c3865afe90965ceaa2b83123f28a1512843cfa17e8c4e5956",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "parent_bytes",
+      "command": [
+        "python",
+        "-O",
+        "verify_window.py",
+        "--check",
+        "bad.json"
+      ],
+      "expected_diagnostic": "CHECK_FAILED: parent proof blob",
+      "returncode": 1,
+      "stderr_sha256": "54cff272b2aa45d45d94a3b1f171f9ffb725909a01303fffee207762487b4ad6",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

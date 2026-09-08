@@ -1,0 +1,51 @@
+{
+  "PNT_reproved": false,
+  "actual_prime_sum_evaluated": false,
+  "arithmetic": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "checks": 1192,
+  "counts": {
+    "Bergman_boundary_partial_sum": 20,
+    "CD_confluent_or_distinct": 500,
+    "CD_polynomial_identity": 20,
+    "Cauchy_Chebyshev_argument": 4,
+    "Cauchy_Chebyshev_coefficients": 100,
+    "Cayley_horizontal_weight": 4,
+    "Cayley_pole_coefficients": 25,
+    "complete_signed_Gram": 60,
+    "continuous_diagonal": 32,
+    "counterfeit_growth_square": 1,
+    "counterfeit_pole_radius": 1,
+    "diagonal_cubic_sum": 20,
+    "finite_Gram_nonnegative": 60,
+    "integer_residue_noncancellation": 33,
+    "laguerre_derivative": 32,
+    "laguerre_difference": 32,
+    "local_area_defect": 12,
+    "log_derivative_residue": 12,
+    "minus_one_recurrence": 32,
+    "ordinary_cross_moment": 32,
+    "polar_integral": 32,
+    "square_bias_integral": 32,
+    "squared_norm": 32,
+    "weighted_derivative_norm": 32,
+    "weighted_norm": 32
+  },
+  "exact_constants": {
+    "area_local_defect_coefficient": "243/16",
+    "continuous_diagonal_slope": "2/3",
+    "counterfeit_inverse_radius_squared": "65/41",
+    "counterfeit_residue_increment": "1/4",
+    "weighted_diagonal_leading_coefficient": "2/9"
+  },
+  "independent_analytic_review": false,
+  "max_CD_degree": 20,
+  "max_norm_degree": 32,
+  "schema": "PR792_PE_BR_EXACT_V1",
+  "source_sha256": {
+    "BOUNDARY.md": "89e389abdc1a3c3537fd489cdff65edb888794e39d56ec8c3891f3dd4893cf9a",
+    "PROOF.md": "ae8aeb92ccc8dd95e94ad24560ad815906f6924c3b008aa8e7070fd5d5527b6e",
+    "SOURCE_LOCK.json": "42a43a637ec8431c34b330e591f54fafd69f17a0425fdc6728ea78bdfc2f5c5e",
+    "verify_exact.py": "03c2146155e84799650301b88833e5b499f6119f0fbc9e16a8a6f874fde18328"
+  },
+  "status": "FINITE_EXACT_CONTROLS_ONLY_RH_UNPROVED"
+}

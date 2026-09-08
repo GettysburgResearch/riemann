@@ -1,0 +1,63 @@
+{
+  "new_normal": {
+    "checks": 1795,
+    "exit_code": 0
+  },
+  "new_optimized": {
+    "checks": 1795,
+    "exit_code": 0
+  },
+  "new_byte_identical": true,
+  "parent_normal": {
+    "checks": 1922,
+    "exit_code": 0
+  },
+  "parent_optimized": {
+    "checks": 1922,
+    "exit_code": 0
+  },
+  "parent_byte_identical": true,
+  "refusals": [
+    {
+      "kind": "witness",
+      "optimized": false,
+      "exit_code": 1
+    },
+    {
+      "kind": "witness",
+      "optimized": true,
+      "exit_code": 1
+    },
+    {
+      "kind": "source_hash",
+      "optimized": false,
+      "exit_code": 1
+    },
+    {
+      "kind": "source_hash",
+      "optimized": true,
+      "exit_code": 1
+    },
+    {
+      "kind": "numeric_type_alias",
+      "optimized": false,
+      "exit_code": 1
+    },
+    {
+      "kind": "numeric_type_alias",
+      "optimized": true,
+      "exit_code": 1
+    },
+    {
+      "kind": "changed_source_bytes",
+      "optimized": false,
+      "exit_code": 1
+    },
+    {
+      "kind": "changed_source_bytes",
+      "optimized": true,
+      "exit_code": 1
+    }
+  ],
+  "utf8_newline_whitespace": "PASS"
+}
