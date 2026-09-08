@@ -1,0 +1,25 @@
+{
+  "repository": "GettysburgResearch/riemann",
+  "base_commit": "1f97efdcf9dacd24351ecff0819c524f9bf40ec3",
+  "parent_rate": {
+    "pr": 817,
+    "commit": "1f97efdcf9dacd24351ecff0819c524f9bf40ec3",
+    "path": "standalone/2026-09-07-astra-quantitative-capture/PROOF.md",
+    "sha256": "b6519788124a6d0317ffe6116910922652d2390fb4f006bf4aefef2eec97caab",
+    "git_blob": "47c51b2f91a2d52c9f9ab91c642ed207042992ca",
+    "bytes": 23351,
+    "usage": "only the rate corollary inherits HC1; source identities and certificate do not"
+  },
+  "copied_core": {
+    "pr": 812,
+    "commit": "cc5277c34fdbc48787cf650b4627a44a77862f1d",
+    "path": "standalone/2026-09-07-astra-future-realization/interval_core.py",
+    "sha256": "1aa6bfa49f791ffde5224e21c8c92291a2e06b35130034d1de975b4d7a93fa17",
+    "git_blob": "92f484bc6bc7b12bf26313bd7d323c637cd834b9",
+    "bytes": 9799,
+    "copy": "interval_core.py"
+  },
+  "proof_status": "proposed_components_only",
+  "rh_established": false,
+  "intrinsic_zero_established": false
+}
