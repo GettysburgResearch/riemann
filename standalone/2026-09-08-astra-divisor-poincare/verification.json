@@ -1,0 +1,847 @@
+{
+  "all_prime_powers_retained": true,
+  "distinct_factor_depth": "omega",
+  "gap_denominator_factor": 24,
+  "global_gap_constant_proved": false,
+  "groups": {
+    "direction_and_closure_controls": [
+      {
+        "N": 8,
+        "harmonic_load": "2/3"
+      },
+      {
+        "N": 16,
+        "harmonic_load": "88/105"
+      },
+      {
+        "N": 32,
+        "harmonic_load": "45536/45045"
+      },
+      {
+        "N": 64,
+        "harmonic_load": "5343226353536/4512611027925"
+      }
+    ],
+    "divisor_closed_graphs": [
+      {
+        "dense_lower_certificate": null,
+        "distinct_prime_depth": 0,
+        "edges": 0,
+        "maximum_integer": 1,
+        "support_sha256": "fa81ea526219857828f87f11fa5521a61121e9c90a85a0856d3ae62d77ae19ad",
+        "tree_edges": 0,
+        "vertices": 1
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/6",
+          "max_denominator_bits": 27,
+          "minimum_pivot_floor_2pow24": 4416438,
+          "positive_pivots": 1
+        },
+        "distinct_prime_depth": 1,
+        "edges": 1,
+        "maximum_integer": 2,
+        "support_sha256": "7970da714a88ff04cb7e10fba378231199dd7f8879ba411dd6e65b57b58a9d23",
+        "tree_edges": 1,
+        "vertices": 2
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/6",
+          "max_denominator_bits": 28,
+          "minimum_pivot_floor_2pow24": 4416438,
+          "positive_pivots": 2
+        },
+        "distinct_prime_depth": 1,
+        "edges": 2,
+        "maximum_integer": 3,
+        "support_sha256": "fbcd098215e9b438f44797ee2cb978928d36e2faef39256d05dca291857dca0a",
+        "tree_edges": 2,
+        "vertices": 3
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/6",
+          "max_denominator_bits": 54,
+          "minimum_pivot_floor_2pow24": 3961398,
+          "positive_pivots": 3
+        },
+        "distinct_prime_depth": 1,
+        "edges": 4,
+        "maximum_integer": 4,
+        "support_sha256": "9d55a51d364470c2fcda0a3aeae9c3573354711e040e345611791d3055ba2b6d",
+        "tree_edges": 3,
+        "vertices": 4
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/6",
+          "max_denominator_bits": 54,
+          "minimum_pivot_floor_2pow24": 3961398,
+          "positive_pivots": 4
+        },
+        "distinct_prime_depth": 1,
+        "edges": 5,
+        "maximum_integer": 5,
+        "support_sha256": "af37dbd037d3627c97b7f516563acb50a6ad25bed4b8c40e93dcddd80eeeea25",
+        "tree_edges": 4,
+        "vertices": 5
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/6",
+          "max_denominator_bits": 100,
+          "minimum_pivot_floor_2pow24": 2939385,
+          "positive_pivots": 5
+        },
+        "distinct_prime_depth": 2,
+        "edges": 7,
+        "maximum_integer": 6,
+        "support_sha256": "b3da6f8bb480916764822a8d72653a4b344c413009691be309c83c22e2b28c26",
+        "tree_edges": 5,
+        "vertices": 6
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/48",
+          "max_denominator_bits": 138,
+          "minimum_pivot_floor_2pow24": 3596927,
+          "positive_pivots": 7
+        },
+        "distinct_prime_depth": 2,
+        "edges": 11,
+        "maximum_integer": 8,
+        "support_sha256": "43b061425e9c9e34a1082edb08bafa7d06d6611b3cd47b14e808923759f01f33",
+        "tree_edges": 7,
+        "vertices": 8
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/48",
+          "max_denominator_bits": 193,
+          "minimum_pivot_floor_2pow24": 2984634,
+          "positive_pivots": 9
+        },
+        "distinct_prime_depth": 2,
+        "edges": 15,
+        "maximum_integer": 10,
+        "support_sha256": "8f1f71b76c981d3e041bebb23a4e97e2f7b04450217977ceaba8a9378e832229",
+        "tree_edges": 9,
+        "vertices": 10
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/48",
+          "max_denominator_bits": 246,
+          "minimum_pivot_floor_2pow24": 2661887,
+          "positive_pivots": 11
+        },
+        "distinct_prime_depth": 2,
+        "edges": 19,
+        "maximum_integer": 12,
+        "support_sha256": "d18110e4c3374832cf526b2280b6eab27f35ed4742413bc368abf3bad96895b9",
+        "tree_edges": 11,
+        "vertices": 12
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/48",
+          "max_denominator_bits": 366,
+          "minimum_pivot_floor_2pow24": 2480802,
+          "positive_pivots": 15
+        },
+        "distinct_prime_depth": 2,
+        "edges": 28,
+        "maximum_integer": 16,
+        "support_sha256": "8d4935e687c52bc96a22df40d18696b09d6b638838b922bcd4783ef077e3d8b6",
+        "tree_edges": 15,
+        "vertices": 16
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/48",
+          "max_denominator_bits": 396,
+          "minimum_pivot_floor_2pow24": 2058297,
+          "positive_pivots": 19
+        },
+        "distinct_prime_depth": 2,
+        "edges": 36,
+        "maximum_integer": 20,
+        "support_sha256": "2214058b89958f26fb3955d6ec183b620fa5c7e7a33502670bb0fd4e746c00fc",
+        "tree_edges": 19,
+        "vertices": 20
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/48",
+          "max_denominator_bits": 537,
+          "minimum_pivot_floor_2pow24": 1835552,
+          "positive_pivots": 23
+        },
+        "distinct_prime_depth": 2,
+        "edges": 45,
+        "maximum_integer": 24,
+        "support_sha256": "9736c4f7c326cadba8b9ffa747602b284a741d1b4eccefd74e70b61c87452448",
+        "tree_edges": 23,
+        "vertices": 24
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/72",
+          "max_denominator_bits": 769,
+          "minimum_pivot_floor_2pow24": 1560957,
+          "positive_pivots": 31
+        },
+        "distinct_prime_depth": 3,
+        "edges": 65,
+        "maximum_integer": 32,
+        "support_sha256": "76e4e0bf1f8adc1a4b76e2cf9f3148b36f5362cc4619959a18a67f845f6ed87d",
+        "tree_edges": 31,
+        "vertices": 32
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/72",
+          "max_denominator_bits": 526,
+          "minimum_pivot_floor_2pow24": 762474,
+          "positive_pivots": 17
+        },
+        "distinct_prime_depth": 3,
+        "edges": 39,
+        "maximum_integer": 84,
+        "support_sha256": "b605a6a92d6d99c07834a03a1afeb91b35f8a8ddf1cf977b01933a98d412857f",
+        "tree_edges": 17,
+        "vertices": 18
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/6",
+          "max_denominator_bits": 657,
+          "minimum_pivot_floor_2pow24": 242326,
+          "positive_pivots": 23
+        },
+        "distinct_prime_depth": 3,
+        "edges": 72,
+        "maximum_integer": 360,
+        "support_sha256": "01ffd7624afeecdbeba4dcf601711eabb00d6806deeb6d2760a92607c07f4e28",
+        "tree_edges": 23,
+        "vertices": 24
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/24",
+          "max_denominator_bits": 59,
+          "minimum_pivot_floor_2pow24": 1119179,
+          "positive_pivots": 16
+        },
+        "distinct_prime_depth": 1,
+        "edges": 17,
+        "maximum_integer": 61,
+        "support_sha256": "d2b82ea11038ef436bef77cf4bb618348f8e6a643c2891f09e46efd6df781f48",
+        "tree_edges": 16,
+        "vertices": 17
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/72",
+          "max_denominator_bits": 706,
+          "minimum_pivot_floor_2pow24": 1225595,
+          "positive_pivots": 30
+        },
+        "distinct_prime_depth": 3,
+        "edges": 47,
+        "maximum_integer": 47,
+        "support_sha256": "e8a4bf09875b018d4fce1eb87beda50148a695dfc6b2f8097e36e20a4389b114",
+        "tree_edges": 30,
+        "vertices": 31
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/6",
+          "max_denominator_bits": 661,
+          "minimum_pivot_floor_2pow24": 121776,
+          "positive_pivots": 23
+        },
+        "distinct_prime_depth": 2,
+        "edges": 96,
+        "maximum_integer": 864,
+        "support_sha256": "52af0a35ab944210b51c3352debb0009e148f5bd13f4f6d40941751921a6121f",
+        "tree_edges": 23,
+        "vertices": 24
+      },
+      {
+        "dense_lower_certificate": {
+          "gap": "1/6",
+          "max_denominator_bits": 251,
+          "minimum_pivot_floor_2pow24": 334497,
+          "positive_pivots": 8
+        },
+        "distinct_prime_depth": 1,
+        "edges": 36,
+        "maximum_integer": 256,
+        "support_sha256": "365767b69c1b18882eba6dffd76e15b71742ed1db5b880698d984849122058e5",
+        "tree_edges": 8,
+        "vertices": 9
+      }
+    ],
+    "logarithm_bounds": {
+      "127": [
+        "81271973/16777216",
+        "40635987/8388608"
+      ],
+      "2": [
+        "11629079/16777216",
+        "1453635/2097152"
+      ],
+      "3": [
+        "18431655/16777216",
+        "2303957/2097152"
+      ],
+      "31": [
+        "57612745/16777216",
+        "28806373/8388608"
+      ],
+      "5": [
+        "27001887/16777216",
+        "843809/524288"
+      ],
+      "7": [
+        "16323477/8388608",
+        "32646955/16777216"
+      ]
+    },
+    "nonclosed_counterexample": {
+      "energy": "0",
+      "support": [
+        1,
+        6
+      ],
+      "weighted_variance": "1/7"
+    },
+    "prime_power_spectra": [
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "3/2"
+        ],
+        "max_exponent": 1,
+        "prime": 2
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "7/4",
+          "5/2"
+        ],
+        "max_exponent": 2,
+        "prime": 2
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "15/8",
+          "11/4",
+          "7/2"
+        ],
+        "max_exponent": 3,
+        "prime": 2
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "31/16",
+          "23/8",
+          "15/4",
+          "9/2"
+        ],
+        "max_exponent": 4,
+        "prime": 2
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "63/32",
+          "47/16",
+          "31/8",
+          "19/4",
+          "11/2"
+        ],
+        "max_exponent": 5,
+        "prime": 2
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "127/64",
+          "95/32",
+          "63/16",
+          "39/8",
+          "23/4",
+          "13/2"
+        ],
+        "max_exponent": 6,
+        "prime": 2
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "255/128",
+          "191/64",
+          "127/32",
+          "79/16",
+          "47/8",
+          "27/4",
+          "15/2"
+        ],
+        "max_exponent": 7,
+        "prime": 2
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "511/256",
+          "383/128",
+          "255/64",
+          "159/32",
+          "95/16",
+          "55/8",
+          "31/4",
+          "17/2"
+        ],
+        "max_exponent": 8,
+        "prime": 2
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "4/3"
+        ],
+        "max_exponent": 1,
+        "prime": 3
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "13/9",
+          "7/3"
+        ],
+        "max_exponent": 2,
+        "prime": 3
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "40/27",
+          "22/9",
+          "10/3"
+        ],
+        "max_exponent": 3,
+        "prime": 3
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "121/81",
+          "67/27",
+          "31/9",
+          "13/3"
+        ],
+        "max_exponent": 4,
+        "prime": 3
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "364/243",
+          "202/81",
+          "94/27",
+          "40/9",
+          "16/3"
+        ],
+        "max_exponent": 5,
+        "prime": 3
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "1093/729",
+          "607/243",
+          "283/81",
+          "121/27",
+          "49/9",
+          "19/3"
+        ],
+        "max_exponent": 6,
+        "prime": 3
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "3280/2187",
+          "1822/729",
+          "850/243",
+          "364/81",
+          "148/27",
+          "58/9",
+          "22/3"
+        ],
+        "max_exponent": 7,
+        "prime": 3
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "9841/6561",
+          "5467/2187",
+          "2551/729",
+          "1093/243",
+          "445/81",
+          "175/27",
+          "67/9",
+          "25/3"
+        ],
+        "max_exponent": 8,
+        "prime": 3
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "6/5"
+        ],
+        "max_exponent": 1,
+        "prime": 5
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "31/25",
+          "11/5"
+        ],
+        "max_exponent": 2,
+        "prime": 5
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "156/125",
+          "56/25",
+          "16/5"
+        ],
+        "max_exponent": 3,
+        "prime": 5
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "781/625",
+          "281/125",
+          "81/25",
+          "21/5"
+        ],
+        "max_exponent": 4,
+        "prime": 5
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "3906/3125",
+          "1406/625",
+          "406/125",
+          "106/25",
+          "26/5"
+        ],
+        "max_exponent": 5,
+        "prime": 5
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "19531/15625",
+          "7031/3125",
+          "2031/625",
+          "531/125",
+          "131/25",
+          "31/5"
+        ],
+        "max_exponent": 6,
+        "prime": 5
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "97656/78125",
+          "35156/15625",
+          "10156/3125",
+          "2656/625",
+          "656/125",
+          "156/25",
+          "36/5"
+        ],
+        "max_exponent": 7,
+        "prime": 5
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "488281/390625",
+          "175781/78125",
+          "50781/15625",
+          "13281/3125",
+          "3281/625",
+          "781/125",
+          "181/25",
+          "41/5"
+        ],
+        "max_exponent": 8,
+        "prime": 5
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "8/7"
+        ],
+        "max_exponent": 1,
+        "prime": 7
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "57/49",
+          "15/7"
+        ],
+        "max_exponent": 2,
+        "prime": 7
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "400/343",
+          "106/49",
+          "22/7"
+        ],
+        "max_exponent": 3,
+        "prime": 7
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "2801/2401",
+          "743/343",
+          "155/49",
+          "29/7"
+        ],
+        "max_exponent": 4,
+        "prime": 7
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "19608/16807",
+          "5202/2401",
+          "1086/343",
+          "204/49",
+          "36/7"
+        ],
+        "max_exponent": 5,
+        "prime": 7
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "137257/117649",
+          "36415/16807",
+          "7603/2401",
+          "1429/343",
+          "253/49",
+          "43/7"
+        ],
+        "max_exponent": 6,
+        "prime": 7
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "960800/823543",
+          "254906/117649",
+          "53222/16807",
+          "10004/2401",
+          "1772/343",
+          "302/49",
+          "50/7"
+        ],
+        "max_exponent": 7,
+        "prime": 7
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "6725601/5764801",
+          "1784343/823543",
+          "372555/117649",
+          "70029/16807",
+          "12405/2401",
+          "2115/343",
+          "351/49",
+          "57/7"
+        ],
+        "max_exponent": 8,
+        "prime": 7
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "12/11"
+        ],
+        "max_exponent": 1,
+        "prime": 11
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "133/121",
+          "23/11"
+        ],
+        "max_exponent": 2,
+        "prime": 11
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "1464/1331",
+          "254/121",
+          "34/11"
+        ],
+        "max_exponent": 3,
+        "prime": 11
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "16105/14641",
+          "2795/1331",
+          "375/121",
+          "45/11"
+        ],
+        "max_exponent": 4,
+        "prime": 11
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "177156/161051",
+          "30746/14641",
+          "4126/1331",
+          "496/121",
+          "56/11"
+        ],
+        "max_exponent": 5,
+        "prime": 11
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "1948717/1771561",
+          "338207/161051",
+          "45387/14641",
+          "5457/1331",
+          "617/121",
+          "67/11"
+        ],
+        "max_exponent": 6,
+        "prime": 11
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "21435888/19487171",
+          "3720278/1771561",
+          "499258/161051",
+          "60028/14641",
+          "6788/1331",
+          "738/121",
+          "78/11"
+        ],
+        "max_exponent": 7,
+        "prime": 11
+      },
+      {
+        "eigenvalues_divided_by_log_prime": [
+          "0",
+          "235794769/214358881",
+          "40923059/19487171",
+          "5491839/1771561",
+          "660309/161051",
+          "74669/14641",
+          "8119/1331",
+          "859/121",
+          "89/11"
+        ],
+        "max_exponent": 8,
+        "prime": 11
+      }
+    ],
+    "primitive_factorization": {
+      "integers": 1024
+    },
+    "schur_controls": [
+      {
+        "correction": "27/5000",
+        "theta": "0"
+      },
+      {
+        "correction": "51/5000",
+        "theta": "1/2"
+      },
+      {
+        "correction": "99/5000",
+        "theta": "3/4"
+      }
+    ],
+    "tensor_spectrum": {
+      "formal_log2_log3_eigenvalues": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "4/3"
+        ],
+        [
+          "7/4",
+          "0"
+        ],
+        [
+          "7/4",
+          "4/3"
+        ],
+        [
+          "5/2",
+          "0"
+        ],
+        [
+          "5/2",
+          "4/3"
+        ]
+      ],
+      "support": [
+        1,
+        3,
+        2,
+        6,
+        4,
+        12
+      ]
+    }
+  },
+  "rh_proved": false,
+  "schema": "DPG26-exact-1",
+  "scope": {
+    "factorization_limit": 1024,
+    "graph_panels": 19,
+    "infinite_claims": "paper proofs; not finite-test consequences",
+    "local_spectral_panels": 40,
+    "tensor_panels": 1
+  }
+}
