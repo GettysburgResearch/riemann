@@ -1,0 +1,56 @@
+{
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "claims_full_postintegration_audit": false,
+  "executed_parent_code": false,
+  "inspected": [
+    {
+      "path": "standalone/2026-09-08-astra-divisor-gap/PROOF.md",
+      "pr": 825,
+      "scope": "complete proof text and current PR metadata; no parent code execution",
+      "sha": "e4a486d3fd4009e3722e9e93f35710b834fbd195"
+    },
+    {
+      "path": "standalone/2026-09-08-astra-divisor-poincare/PROOF.md",
+      "pr": 826,
+      "scope": "supplied complete manuscript and current PR metadata; no parent code execution",
+      "sha": "3a82b80da82edbcd65d4538418a3d51d6030f058"
+    },
+    {
+      "path": "standalone/2026-09-08-rational-residual-capture/PROOF.md",
+      "pr": 803,
+      "scope": "current proof text and metadata; no native minimum replay",
+      "sha": "31a35a90b0b924dc98a2c89c463fb59577f45a4e"
+    },
+    {
+      "pr": 818,
+      "scope": "current detailed metadata; earlier source context; no independent full proof audit in this pass",
+      "sha": "bd7bc8ee27927df5d58a3203b328c11cdc1f04db"
+    },
+    {
+      "pr": 811,
+      "scope": "current detailed metadata; note its body quotes earlier checkpoint 315532f084535e691e942f05d9144ec1b31d2a07",
+      "sha": "946dedfa3f6ec2d74f3f0f00f9ca511abf9652d7"
+    },
+    {
+      "pr": 805,
+      "scope": "current detailed metadata and supplied historical manuscripts; no parent replay",
+      "sha": "602d7ddf9dbd2ba79bd6cada149772111ca72150"
+    },
+    {
+      "path": "reviews/2026-09-08-postintegration/pass1/CENSUS.tsv",
+      "pr": 827,
+      "scope": "review inventory and pass-one description only; not an acceptance import",
+      "sha": "29d2337255cb467c8d83d070ebe71917d6221c7c"
+    }
+  ],
+  "pr825": "e4a486d3fd4009e3722e9e93f35710b834fbd195",
+  "pr826": "3a82b80da82edbcd65d4538418a3d51d6030f058",
+  "prior_conversation_context": [
+    "804",
+    "812",
+    "814",
+    "817",
+    "819",
+    "823"
+  ]
+}
