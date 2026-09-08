@@ -275,7 +275,7 @@ Proof. With A=A_P, set
 
 The secular equation gives F(1)=1, so g(1)=0. Completeness of the product basis
 implies sum_(F nonempty)chi_F(1)chi_F=1_{root}/pi(root)-1. Therefore off the root,
-L F=(F-1)/A and L_D g=g/A. Its norm is 1+V_P and its mean is 1. Thus the squared
+L F=(F-1)/A and L_D g=g/A. Its squared norm is 1+V_P and its mean is 1. Thus the squared
 coefficient of 1_D on the normalized ground vector is 1/(1+V_P). The remaining
 spectral weights are nonnegative, their sum is at most 1, and every eigenvalue
 is at least 1/A. This proves (21). Equation (19) bounds
