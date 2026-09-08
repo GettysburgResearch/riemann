@@ -1,0 +1,121 @@
+{
+  "arithmetic": "160-bit outward dyadic intervals; Python integers and Fraction",
+  "external_BT_reproved": false,
+  "global_coarse_tail_certified": false,
+  "groups": [
+    {
+      "cases": 7,
+      "name": "stable_metric_adapter"
+    },
+    {
+      "cases": 5,
+      "name": "weighted_projection_identities"
+    },
+    {
+      "cases": 127,
+      "name": "square_geometry"
+    },
+    {
+      "integers_through": 16384,
+      "name": "integer_prime_sieve_vs_trial",
+      "prime_count": 1900
+    },
+    {
+      "cases": 126,
+      "name": "finite_square_cell_count_controls"
+    },
+    {
+      "cases": 6,
+      "name": "actual_sample_energy_certificates",
+      "sample_terms": 126
+    },
+    {
+      "cases": 8,
+      "name": "signed_discrete_endpoint_identity"
+    }
+  ],
+  "li_series_terms": 128,
+  "log_series_terms": 72,
+  "prefixes": [
+    {
+      "M": 4,
+      "decimal_bracket_denominator": "1000000000000",
+      "decimal_bracket_numerators": [
+        "23054869191",
+        "23054869193"
+      ],
+      "sample_energy": {
+        "denominator": "1461501637330902918203684832716283019655932542976",
+        "hi": "33694729072089032301828578728800515342995357426",
+        "lo": "33694729072089032301828578728800515342995357150"
+      }
+    },
+    {
+      "M": 8,
+      "decimal_bracket_denominator": "1000000000000",
+      "decimal_bracket_numerators": [
+        "174282049867",
+        "174282049870"
+      ],
+      "sample_energy": {
+        "denominator": "1461501637330902918203684832716283019655932542976",
+        "hi": "254713501239805674344775440332740486676239806488",
+        "lo": "254713501239805674344775440332740486676239804860"
+      }
+    },
+    {
+      "M": 16,
+      "decimal_bracket_denominator": "1000000000000",
+      "decimal_bracket_numerators": [
+        "330234902225",
+        "330234902228"
+      ],
+      "sample_energy": {
+        "denominator": "1461501637330902918203684832716283019655932542976",
+        "hi": "482638850307326445137944774633349313308352955377",
+        "lo": "482638850307326445137944774633349313308352950991"
+      }
+    },
+    {
+      "M": 32,
+      "decimal_bracket_denominator": "1000000000000",
+      "decimal_bracket_numerators": [
+        "441341708779",
+        "441341708783"
+      ],
+      "sample_energy": {
+        "denominator": "1461501637330902918203684832716283019655932542976",
+        "hi": "645021630004846602844468365120075425563543987154",
+        "lo": "645021630004846602844468365120075425563543977628"
+      }
+    },
+    {
+      "M": 64,
+      "decimal_bracket_denominator": "1000000000000",
+      "decimal_bracket_numerators": [
+        "515356116352",
+        "515356116356"
+      ],
+      "sample_energy": {
+        "denominator": "1461501637330902918203684832716283019655932542976",
+        "hi": "753193807859382717463460096725439968194140662479",
+        "lo": "753193807859382717463460096725439968194140641884"
+      }
+    },
+    {
+      "M": 128,
+      "decimal_bracket_denominator": "1000000000000",
+      "decimal_bracket_numerators": [
+        "565641628407",
+        "565641628409"
+      ],
+      "sample_energy": {
+        "denominator": "1461501637330902918203684832716283019655932542976",
+        "hi": "826686166060264902871129478428255010502383969513",
+        "lo": "826686166060264902871129478428255010502383916348"
+      }
+    }
+  ],
+  "rh_proved": false,
+  "schema": "SSQ26-finite-controls-v1"
+}

@@ -1,0 +1,43 @@
+{
+  "activity_search": {
+    "incomplete_results": false,
+    "issues": [],
+    "per_page": 100,
+    "pull_requests": [
+      827
+    ],
+    "scope": "Updated PR/issue search, not all arbitrary branches or an exhaustive history census",
+    "since_utc": "2026-09-08T14:52:03Z"
+  },
+  "additional_older_refs": [
+    {
+      "branch": "research/astra/20260905-bernstein-chebyshev-growth",
+      "sha": "465cb28ed8cbfa1bb071d9a85eeda9890decfe6b"
+    },
+    {
+      "branch": "research/astra/20260905-theta-bernstein-exterior-closure",
+      "sha": "6b309554bf1e2f83a83325cd54038f5a0b9b0014"
+    },
+    {
+      "branch": "research/astra/20260905-three-route-assault",
+      "sha": "cdf2f15965decbd35afbbd09a16c89cb3e215737"
+    }
+  ],
+  "dated_prefix_ref_count": 18,
+  "globally_atomic_snapshot": false,
+  "inventoried_research_fronts_unchanged": 15,
+  "later_delta_rule": "Unchanged full SHA needs no ancestry inference. After an advance, check ancestry then compare both exact endpoint trees; preserve previous per-file verdicts only at their unchanged dependency scope.",
+  "main_observed": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "new_source_delta_found": false,
+  "publication_receipt": "Recorded after publication in the PR closing comment and outer delivery receipt, not guessed in this prepublication file.",
+  "recorded_at_utc": "2026-09-08T16:06:59.368757+00:00",
+  "repository": "GettysburgResearch/riemann",
+  "review_conversation_comments_read": [
+    5586754453,
+    5587090248
+  ],
+  "review_head_observed": "f3ba1a2bd3d925ab5caf3a0a3719392b7c5497d8",
+  "schema": "riemann-final-review-closing-v1",
+  "source_heads_file": "SOURCE_HEADS.json",
+  "write_boundary": "Append pass4 to the review branch only. No main, research branch, canonical/formal, workflow or settings change."
+}
