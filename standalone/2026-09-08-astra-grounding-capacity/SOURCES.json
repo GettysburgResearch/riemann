@@ -1,0 +1,68 @@
+{
+  "base_commit": "e4a486d3fd4009e3722e9e93f35710b834fbd195",
+  "context_only_not_freshly_inspected": [
+    {
+      "commit": "effa056532b951051e16f858aa59abea07a565ea",
+      "pr": 823
+    }
+  ],
+  "external_background": [
+    {
+      "title": "Aldous and Fill, Reversible Markov Chains and Random Walks on Graphs, Chapter 3",
+      "url": "https://www.stat.berkeley.edu/~aldous/RWG/Book_Ralph/Ch3.html",
+      "use": "classical spectral/capacity context; needed finite formulas reconstructed"
+    },
+    {
+      "title": "Alouges, Darses, Hillion, Polynomial approximations in a generalized Nyman-Beurling criterion",
+      "url": "https://arxiv.org/abs/2006.02953",
+      "use": "abstract consulted for approximation/coefficient-control distinction; no theorem imported into GCP26"
+    }
+  ],
+  "main_snapshot_read": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "metadata_only": [
+    {
+      "commit": "2d683186cb3dd4f304159d8176215ceae8ac59fb",
+      "pr": 812
+    },
+    {
+      "commit": "29d2337255cb467c8d83d070ebe71917d6221c7c",
+      "pr": 827
+    }
+  ],
+  "primary_sources": [
+    {
+      "commit": "e4a486d3fd4009e3722e9e93f35710b834fbd195",
+      "depth": "paper read; no parent executable replay; source identities independently reconstructed in new product cases",
+      "git_blob": "d87d275f53b68472e29dce777de3f786566184fc",
+      "path": "standalone/2026-09-08-astra-divisor-gap/PROOF.md",
+      "pr": 825
+    },
+    {
+      "commit": "3a82b80da82edbcd65d4538418a3d51d6030f058",
+      "depth": "Sections 0-3 and later scope statements read; Section 3 spectrum reconstructed; no parent executable replay",
+      "git_blob": "3e598e27e6b258d2fbd1a77740543ae99e191c3f",
+      "path": "standalone/2026-09-08-astra-divisor-poincare/PROOF.md",
+      "pr": 826
+    },
+    {
+      "commit": "31a35a90b0b924dc98a2c89c463fb59577f45a4e",
+      "depth": "Sections 1-6 read; comparison only, not an imported numerical acceptance",
+      "path": "standalone/2026-09-08-rational-residual-capture/PROOF.md",
+      "pr": 803
+    },
+    {
+      "commit": "c4fb013692c51d6b26b8a3c33200615af764da82",
+      "depth": "Sections 0-5 read; no trial certificate rerun; not required by the new graph theorem",
+      "path": "standalone/2026-09-08-astra-intrinsic-entropy/PROOF.md",
+      "pr": 819
+    },
+    {
+      "commit": "bd7bc8ee27927df5d58a3203b328c11cdc1f04db",
+      "depth": "provided own prior proof reread; no parent executable replay",
+      "path": "standalone/2026-09-08-astra-square-grid-localization/PROOF.md",
+      "pr": 818
+    }
+  ],
+  "repository": "GettysburgResearch/riemann",
+  "scope": "Targeted post-integration synthesis, not exhaustive scientific or code review."
+}

@@ -1,0 +1,188 @@
+{
+  "actual_root_certificates": {
+    "geo": {
+      "C_readable_bracket": [
+        "2.37221708831717",
+        "2.37221708831720"
+      ],
+      "G": {
+        "denominator": "2^160",
+        "hi": "2663588475820717681919566538857002517958453863032",
+        "lo": "2663588475820717681919566538857002517958453862960"
+      },
+      "G_readable_bracket": [
+        "1.82250119177775",
+        "1.82250119177777"
+      ],
+      "H": {
+        "denominator": "2^160",
+        "hi": "1411656743848600150761385136149027190210704947161",
+        "lo": "1411656743848600150761385136149027190210704947092"
+      },
+      "prime_cutoff": 13,
+      "secular_at_lower": {
+        "denominator": "2^160",
+        "hi": "1461501637330911391644229479704808975306423940844",
+        "lo": "1461501637330911391644229479704808975306423940773"
+      },
+      "secular_at_upper": {
+        "denominator": "2^160",
+        "hi": "1461501637330887086130077775328930694309681710733",
+        "lo": "1461501637330887086130077775328930694309681710665"
+      },
+      "visible_nonempty_subsets": 63
+    },
+    "sf": {
+      "C_readable_bracket": [
+        "1.91594153472685",
+        "1.91594153472687"
+      ],
+      "G": {
+        "denominator": "2^160",
+        "hi": "1732351300232978407070700049540689155997323647613",
+        "lo": "1732351300232978407070700049540689155997323647541"
+      },
+      "G_readable_bracket": [
+        "1.18532285971072",
+        "1.18532285971074"
+      ],
+      "H": {
+        "denominator": "2^160",
+        "hi": "1166439314230727547136970482081281597707770443366",
+        "lo": "1166439314230727547136970482081281597707770443295"
+      },
+      "prime_cutoff": 13,
+      "secular_at_lower": {
+        "denominator": "2^160",
+        "hi": "1461501637330910952287114949601806134359116288272",
+        "lo": "1461501637330910952287114949601806134359116288197"
+      },
+      "secular_at_upper": {
+        "denominator": "2^160",
+        "hi": "1461501637330885165283677075166949191983015570164",
+        "lo": "1461501637330885165283677075166949191983015570086"
+      },
+      "visible_nonempty_subsets": 63
+    }
+  },
+  "all_set_centered_constant_gap_proved": false,
+  "arithmetic_implementation": "integer/Fraction and 160-bit outward dyadic intervals",
+  "exact_formal_graph_panels": [
+    {
+      "G_formal": "1/3",
+      "H_formal": "2/9",
+      "caps": [
+        1
+      ],
+      "edges": 1,
+      "primes": [
+        2
+      ],
+      "vertices": 2
+    },
+    {
+      "G_formal": "3/7",
+      "H_formal": "12/49",
+      "caps": [
+        2
+      ],
+      "edges": 3,
+      "primes": [
+        2
+      ],
+      "vertices": 3
+    },
+    {
+      "G_formal": "7/15",
+      "H_formal": "56/225",
+      "caps": [
+        3
+      ],
+      "edges": 6,
+      "primes": [
+        2
+      ],
+      "vertices": 4
+    },
+    {
+      "G_formal": "31/63",
+      "H_formal": "992/3969",
+      "caps": [
+        5
+      ],
+      "edges": 15,
+      "primes": [
+        2
+      ],
+      "vertices": 6
+    },
+    {
+      "G_formal": "299/600",
+      "H_formal": "100331/360000",
+      "caps": [
+        1,
+        1
+      ],
+      "edges": 4,
+      "primes": [
+        2,
+        3
+      ],
+      "vertices": 4
+    },
+    {
+      "G_formal": "9943/15197",
+      "H_formal": "72435333/230948809",
+      "caps": [
+        2,
+        2
+      ],
+      "edges": 18,
+      "primes": [
+        2,
+        3
+      ],
+      "vertices": 9
+    },
+    {
+      "G_formal": "197182199/335100600",
+      "H_formal": "33712899029977331/112292412120360000",
+      "caps": [
+        1,
+        1,
+        1
+      ],
+      "edges": 12,
+      "primes": [
+        2,
+        3,
+        5
+      ],
+      "vertices": 8
+    },
+    {
+      "G_formal": "863082939768285633142607/1334010498710994101368800",
+      "H_formal": "553293301108777341017666496914827040214827300999/1779584010671155194989623351506027450033613440000",
+      "caps": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "edges": 32,
+      "primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "vertices": 16
+    }
+  ],
+  "one_prime_secular_controls": 24,
+  "prime_count": 55,
+  "prime_sieve_trial_range": 257,
+  "rh_proved": false,
+  "scope": "Finite identities and two finite-prime root costs. Infinite asymptotics are paper proofs; geo spectra are analytically reduced to finitely many visible modes.",
+  "status": "PROPOSED_COMPONENT_THEOREMS"
+}
