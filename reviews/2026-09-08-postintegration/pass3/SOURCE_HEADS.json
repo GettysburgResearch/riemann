@@ -1,0 +1,118 @@
+{
+  "blanket_package_acceptance": false,
+  "closing_status": "Branch-prefix GET repeated after manuscript/finite-check work; all listed heads unchanged from opening. Recent-PR search found no research PR newer than 829. Further changes require a delta review.",
+  "date": "2026-09-08",
+  "main_observed": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "pass1_tree": "2f725e4e6f8b42732c8dd9ccbf7d9c80ee6d491d",
+  "pass2_tree": "fac8ab751e2e629601f377b03bb2968c540b1322",
+  "repository": "GettysburgResearch/riemann",
+  "review_parent": "13ac26caae546c8a6481a85b2f61ecc524dbbb27",
+  "rh_proved": false,
+  "schema": "riemann.review.pass3.source-heads.v1",
+  "scope": "45 inventoried research packets across 14 PRs and one branch-only deposit; older dependencies not counted as new packets",
+  "snapshots_globally_atomic": false,
+  "sources": {
+    "D790": {
+      "branch": "research/astra/20260905-theta-bernstein-exterior-closure",
+      "observed_head": "6b309554bf1e2f83a83325cd54038f5a0b9b0014",
+      "pr": 790,
+      "review_depth": "DEPENDENCY_WATCH_ONLY"
+    },
+    "D793": {
+      "branch": "research/astra/20260905-three-route-assault",
+      "observed_head": "cdf2f15965decbd35afbbd09a16c89cb3e215737",
+      "pr": 793,
+      "review_depth": "DEPENDENCY_WATCH_ONLY"
+    },
+    "S803": {
+      "branch": "research/astra/20260906-logarithmic-core-certification",
+      "observed_head": "db175de165a9077e709b1cb482998171ffc0c6e7",
+      "pr": 803,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "S804": {
+      "branch": "research/astra/20260906-sharp-jordan-green-closure",
+      "observed_head": "0f6ee91f1a8c8bece1618bde155d62fb0bfb4cad",
+      "pr": 804,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "S805": {
+      "branch": "research/astra/20260906-dilation-observability",
+      "observed_head": "602d7ddf9dbd2ba79bd6cada149772111ca72150",
+      "pr": 805,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "S811": {
+      "branch": "research/astra/20260907-logarithmic-domain-transfer",
+      "observed_head": "946dedfa3f6ec2d74f3f0f00f9ca511abf9652d7",
+      "pr": 811,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "S812": {
+      "branch": "research/astra/20260907-future-realization",
+      "observed_head": "2d683186cb3dd4f304159d8176215ceae8ac59fb",
+      "pr": 812,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "S814": {
+      "branch": "research/astra/20260907-source-stability",
+      "observed_head": "dc7babb830cb696810fb68bd74f6a33459f5f921",
+      "pr": 814,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "S817": {
+      "branch": "research/astra/20260907-quantitative-capture",
+      "observed_head": "1f97efdcf9dacd24351ecff0819c524f9bf40ec3",
+      "pr": 817,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "S818": {
+      "branch": "research/astra/20260908-critical-cutoff-taper",
+      "observed_head": "bd7bc8ee27927df5d58a3203b328c11cdc1f04db",
+      "pr": 818,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "S819": {
+      "branch": "research/astra/20260908-intrinsic-entropy",
+      "observed_head": "c4fb013692c51d6b26b8a3c33200615af764da82",
+      "pr": 819,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "S823": {
+      "branch": "research/astra/20260908-late-tail-zero-insertion",
+      "observed_head": "effa056532b951051e16f858aa59abea07a565ea",
+      "pr": 823,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "S825": {
+      "branch": "research/astra/20260908-divisor-spectral-gap",
+      "observed_head": "e4a486d3fd4009e3722e9e93f35710b834fbd195",
+      "pr": 825,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "S826": {
+      "branch": "research/astra/20260908-divisor-poincare",
+      "observed_head": "3a82b80da82edbcd65d4538418a3d51d6030f058",
+      "pr": 826,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "S828": {
+      "branch": "research/astra/20260908-coherent-mode-capacity",
+      "observed_head": "528b33ac8d57b5a046260ee45d585cd3fe720f4c",
+      "pr": 828,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "S829": {
+      "branch": "research/astra/20260908-coherent-channel-synthesis",
+      "observed_head": "f782788933dc21a0fe6a844950f5ca532eba7d86",
+      "pr": 829,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    },
+    "TSR": {
+      "branch": "research/astra/20260907-all-rank-spectral-rigidity",
+      "observed_head": "d916a2d60a7ff9a01f1b8bcd73d8583829f78ba6",
+      "pr": null,
+      "review_depth": "PER_FILE_ONLY_SEE_FILES_AND_PRIOR_PASSES"
+    }
+  }
+}
