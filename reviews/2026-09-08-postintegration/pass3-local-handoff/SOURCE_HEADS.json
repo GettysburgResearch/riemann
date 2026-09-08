@@ -1,0 +1,301 @@
+{
+  "closing_metadata_recorded_utc": "2026-09-08T14:28:50.058490+00:00",
+  "closing_time_is_client_record_not_atomic_snapshot": true,
+  "discovery_limit": "Observed dated research/astra refs, all-state recent PR discovery, selected comments. Not exhaustive arbitrary/deleted/unadvertised branches or every discussion.",
+  "main_closing": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "main_modified": false,
+  "main_opening": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "pass_number": 3,
+  "publication": "LOCAL_REVIEW_PACKET_NOT_PUSHED",
+  "published_pass1": "29d2337255cb467c8d83d070ebe71917d6221c7c",
+  "published_pass2_commit": "df7c4436784ab3a545da63427da5392e0c074662",
+  "published_pass2_tree": "fac8ab751e2e629601f377b03bb2968c540b1322",
+  "repository": "GettysburgResearch/riemann",
+  "review_closing_head": "13ac26caae546c8a6481a85b2f61ecc524dbbb27",
+  "review_opening_head": "13ac26caae546c8a6481a85b2f61ecc524dbbb27",
+  "review_pr": 827,
+  "scientific_acceptance_changed": false,
+  "scientific_reference": "4f461e5ad46e452b1eafa69eddff3b76cd0c12be",
+  "snapshot_is_atomic": false,
+  "sources": [
+    {
+      "branch": "research/astra/20260906-logarithmic-core-certification",
+      "closing_observed_head": "db175de165a9077e709b1cb482998171ffc0c6e7",
+      "drift_observed": false,
+      "key": "S803",
+      "opening_head": "db175de165a9077e709b1cb482998171ffc0c6e7",
+      "packet_ids": [
+        "LC",
+        "WP",
+        "HT",
+        "AN",
+        "ES",
+        "FM",
+        "PC",
+        "SS",
+        "MC",
+        "CR",
+        "PR",
+        "RN",
+        "RG",
+        "RC",
+        "ANT"
+      ],
+      "pass3_main_review": [
+        "HT",
+        "AN",
+        "ES",
+        "FM",
+        "PC",
+        "SS",
+        "MC",
+        "CR",
+        "PR",
+        "RN",
+        "ANT"
+      ],
+      "pr": 803,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260906-sharp-jordan-green-closure",
+      "closing_observed_head": "0f6ee91f1a8c8bece1618bde155d62fb0bfb4cad",
+      "drift_observed": false,
+      "key": "S804",
+      "opening_head": "0f6ee91f1a8c8bece1618bde155d62fb0bfb4cad",
+      "packet_ids": [
+        "JG",
+        "CSM",
+        "CD",
+        "DC",
+        "MW"
+      ],
+      "pass3_main_review": [
+        "DC",
+        "MW"
+      ],
+      "pr": 804,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260906-dilation-observability",
+      "closing_observed_head": "602d7ddf9dbd2ba79bd6cada149772111ca72150",
+      "drift_observed": false,
+      "key": "S805",
+      "opening_head": "602d7ddf9dbd2ba79bd6cada149772111ca72150",
+      "packet_ids": [
+        "DO",
+        "BG",
+        "GT",
+        "BL",
+        "GE",
+        "TE",
+        "BH",
+        "CL"
+      ],
+      "pass3_main_review": [],
+      "pr": 805,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260907-logarithmic-domain-transfer",
+      "closing_observed_head": "946dedfa3f6ec2d74f3f0f00f9ca511abf9652d7",
+      "drift_observed": false,
+      "key": "S811",
+      "opening_head": "946dedfa3f6ec2d74f3f0f00f9ca511abf9652d7",
+      "packet_ids": [
+        "OEC",
+        "EF",
+        "EPD",
+        "PDS"
+      ],
+      "pass3_main_review": [
+        "EF"
+      ],
+      "pr": 811,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260907-future-realization",
+      "closing_observed_head": "2d683186cb3dd4f304159d8176215ceae8ac59fb",
+      "drift_observed": false,
+      "key": "S812",
+      "opening_head": "2d683186cb3dd4f304159d8176215ceae8ac59fb",
+      "packet_ids": [
+        "FR",
+        "FC"
+      ],
+      "pass3_main_review": [],
+      "pr": 812,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260907-source-stability",
+      "closing_observed_head": "dc7babb830cb696810fb68bd74f6a33459f5f921",
+      "drift_observed": false,
+      "key": "S814",
+      "opening_head": "dc7babb830cb696810fb68bd74f6a33459f5f921",
+      "packet_ids": [
+        "ST"
+      ],
+      "pass3_main_review": [],
+      "pr": 814,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260907-quantitative-capture",
+      "closing_observed_head": "1f97efdcf9dacd24351ecff0819c524f9bf40ec3",
+      "drift_observed": false,
+      "key": "S817",
+      "opening_head": "1f97efdcf9dacd24351ecff0819c524f9bf40ec3",
+      "packet_ids": [
+        "HC"
+      ],
+      "pass3_main_review": [],
+      "pr": 817,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260908-critical-cutoff-taper",
+      "closing_observed_head": "bd7bc8ee27927df5d58a3203b328c11cdc1f04db",
+      "drift_observed": false,
+      "key": "S818",
+      "opening_head": "bd7bc8ee27927df5d58a3203b328c11cdc1f04db",
+      "packet_ids": [
+        "CCT",
+        "SSQ"
+      ],
+      "pass3_main_review": [],
+      "pr": 818,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260908-intrinsic-entropy",
+      "closing_observed_head": "c4fb013692c51d6b26b8a3c33200615af764da82",
+      "drift_observed": false,
+      "key": "S819",
+      "opening_head": "c4fb013692c51d6b26b8a3c33200615af764da82",
+      "packet_ids": [
+        "IE"
+      ],
+      "pass3_main_review": [],
+      "pr": 819,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260908-late-tail-zero-insertion",
+      "closing_observed_head": "effa056532b951051e16f858aa59abea07a565ea",
+      "drift_observed": false,
+      "key": "S823",
+      "opening_head": "effa056532b951051e16f858aa59abea07a565ea",
+      "packet_ids": [
+        "LT"
+      ],
+      "pass3_main_review": [],
+      "pr": 823,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260907-all-rank-spectral-rigidity",
+      "closing_observed_head": "d916a2d60a7ff9a01f1b8bcd73d8583829f78ba6",
+      "drift_observed": false,
+      "key": "TSR",
+      "opening_head": "d916a2d60a7ff9a01f1b8bcd73d8583829f78ba6",
+      "packet_ids": [
+        "TSR"
+      ],
+      "pass3_main_review": [],
+      "pr": null,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260908-divisor-spectral-gap",
+      "closing_observed_head": "e4a486d3fd4009e3722e9e93f35710b834fbd195",
+      "drift_observed": false,
+      "key": "S825",
+      "opening_head": "e4a486d3fd4009e3722e9e93f35710b834fbd195",
+      "packet_ids": [
+        "ADG"
+      ],
+      "pass3_main_review": [],
+      "pr": 825,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260908-divisor-poincare",
+      "closing_observed_head": "3a82b80da82edbcd65d4538418a3d51d6030f058",
+      "drift_observed": false,
+      "key": "S826",
+      "opening_head": "3a82b80da82edbcd65d4538418a3d51d6030f058",
+      "packet_ids": [
+        "DPG"
+      ],
+      "pass3_main_review": [],
+      "pr": 826,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260908-coherent-mode-capacity",
+      "closing_observed_head": "528b33ac8d57b5a046260ee45d585cd3fe720f4c",
+      "drift_observed": false,
+      "key": "S828",
+      "opening_head": "528b33ac8d57b5a046260ee45d585cd3fe720f4c",
+      "packet_ids": [
+        "GCP"
+      ],
+      "pass3_main_review": [
+        "GCP"
+      ],
+      "pr": 828,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260908-coherent-channel-synthesis",
+      "closing_observed_head": "f782788933dc21a0fe6a844950f5ca532eba7d86",
+      "drift_observed": false,
+      "key": "S829",
+      "opening_head": "f782788933dc21a0fe6a844950f5ca532eba7d86",
+      "packet_ids": [
+        "CCS"
+      ],
+      "pass3_main_review": [
+        "CCS"
+      ],
+      "pr": 829,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260905-bernstein-chebyshev-growth",
+      "closing_observed_head": "465cb28ed8cbfa1bb071d9a85eeda9890decfe6b",
+      "drift_observed": false,
+      "key": "OLD_BERNSTEIN",
+      "opening_head": "465cb28ed8cbfa1bb071d9a85eeda9890decfe6b",
+      "packet_ids": [],
+      "pass3_main_review": [],
+      "pr": null,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260905-theta-bernstein-exterior-closure",
+      "closing_observed_head": "6b309554bf1e2f83a83325cd54038f5a0b9b0014",
+      "drift_observed": false,
+      "key": "OLD790",
+      "opening_head": "6b309554bf1e2f83a83325cd54038f5a0b9b0014",
+      "packet_ids": [],
+      "pass3_main_review": [],
+      "pr": 790,
+      "whole_branch_reviewed": false
+    },
+    {
+      "branch": "research/astra/20260905-three-route-assault",
+      "closing_observed_head": "cdf2f15965decbd35afbbd09a16c89cb3e215737",
+      "drift_observed": false,
+      "key": "OLD793",
+      "opening_head": "cdf2f15965decbd35afbbd09a16c89cb3e215737",
+      "packet_ids": [],
+      "pass3_main_review": [],
+      "pr": 793,
+      "whole_branch_reviewed": false
+    }
+  ]
+}
