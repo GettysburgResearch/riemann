@@ -27,6 +27,8 @@ Owners configure GitHub permissions and branch protections separately; this tabl
 
 Interested in helping integrate? After contributing research, reviews or a small integration PR, [request integrator access](https://github.com/GettysburgResearch/riemann/issues/new?template=integrator-access.md) with your GitHub username. A maintainer reviews your contribution history and grants access when you are ready.
 
+Interested in leading work on another problem? Open an issue suggesting a new repository, briefly describe the problem and offer to help maintain it; an organization owner can create it.
+
 ## Exploratory work is lightweight
 
 Open broad or unconventional research PRs freely. They may contain conjectures, reconnaissance, synthetic models, failed attempts, literature connections, or prototype code.
