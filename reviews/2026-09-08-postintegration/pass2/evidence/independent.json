@@ -1,0 +1,58 @@
+{
+  "author_checkers_imported": false,
+  "case_counts": {
+    "ADG32_independent_certificate": 3,
+    "CRT_covariance": 256,
+    "DPG_power_spectrum": 288,
+    "EPD_PDS_same_norm": 15,
+    "EPD_multiplier": 12,
+    "FC_feedback_atom": 1,
+    "RC_block_discrepancy": 189,
+    "RC_centered_completion": 126,
+    "RC_centering_jet": 16,
+    "RC_centering_values": 272,
+    "RC_false_cutoff_control": 16,
+    "RC_period_mean": 21,
+    "RC_tail_overlap": 21,
+    "analytic_integer_budgets": 1024,
+    "divisor_full_form": 209,
+    "divisor_missing_support_control": 1,
+    "divisor_tree": 554
+  },
+  "constants": {
+    "fixed_feedback_atom": "-17689/100000000"
+  },
+  "full_repository_checkout": false,
+  "infinite_theorems_machine_proved": false,
+  "inverse32": {
+    "N": 32,
+    "cheap_gap": "Kcheap - M/384 > 0",
+    "dimension": 31,
+    "exact_positive_pivots": 93,
+    "inverse_interval_sha256": "0f0249af6f3669e65e214067580ba1b85d18e820e44f1870390e9c1e613c4c6f",
+    "inverse_quadratic_outward_decimal": [
+      "0.744480619465733367",
+      "0.744480619465733368"
+    ],
+    "method": "independent 112-bit rational log endpoints; exact LDL and inverse order; no author trial or checker",
+    "prime_power_edges": 65,
+    "primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31
+    ]
+  },
+  "marker": "PASS_INDEPENDENT_BOUNDED_RECONSTRUCTIONS",
+  "period_control_digest": "357031f2cabf5ad315f1babc2423af43fbcae363194687d08a548a944d04f7a4",
+  "rh_proved": false,
+  "schema": "riemann.review.pass2.independent.v1",
+  "total_assertions": 3024
+}

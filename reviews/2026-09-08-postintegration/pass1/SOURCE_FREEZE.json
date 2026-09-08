@@ -1,0 +1,42 @@
+{
+  "schema": "riemann.review.source-freeze.v1",
+  "review": "2026-09-08-postintegration-pass1",
+  "observation_date_utc": "2026-09-08",
+  "atomic_global_snapshot": false,
+  "repository": "GettysburgResearch/riemann",
+  "scientific_reference_merge": "4f461e5ad46e452b1eafa69eddff3b76cd0c12be",
+  "current_main": "c07aa6adcb1e8afa8bac4c5d6f921a822629b236",
+  "current_main_tree": "9b512e8200f4c98484c901ec2d8e1159fc9aa0fc",
+  "sources": [
+    {"key":"S803","pr":803,"branch":"research/astra/20260906-logarithmic-core-certification","head":"bcec690c1607e281bd6f741b68f5c50f556670c7","packets":13},
+    {"key":"S804","pr":804,"branch":"research/astra/20260906-sharp-jordan-green-closure","head":"0f6ee91f1a8c8bece1618bde155d62fb0bfb4cad","packets":5},
+    {"key":"S805","pr":805,"branch":"research/astra/20260906-dilation-observability","head":"602d7ddf9dbd2ba79bd6cada149772111ca72150","packets":8},
+    {"key":"S811","pr":811,"branch":"research/astra/20260907-logarithmic-domain-transfer","head":"946dedfa3f6ec2d74f3f0f00f9ca511abf9652d7","packets":4},
+    {"key":"S812","pr":812,"branch":"research/astra/20260907-future-realization","head":"2d683186cb3dd4f304159d8176215ceae8ac59fb","packets":2},
+    {"key":"S814","pr":814,"branch":"research/astra/20260907-source-stability","head":"dc7babb830cb696810fb68bd74f6a33459f5f921","packets":1},
+    {"key":"S817","pr":817,"branch":"research/astra/20260907-quantitative-capture","head":"1f97efdcf9dacd24351ecff0819c524f9bf40ec3","packets":1},
+    {"key":"S818","pr":818,"branch":"research/astra/20260908-critical-cutoff-taper","head":"bd7bc8ee27927df5d58a3203b328c11cdc1f04db","packets":2},
+    {"key":"S819","pr":819,"branch":"research/astra/20260908-intrinsic-entropy","head":"c4fb013692c51d6b26b8a3c33200615af764da82","packets":1},
+    {"key":"S823","pr":823,"branch":"research/astra/20260908-late-tail-zero-insertion","head":"effa056532b951051e16f858aa59abea07a565ea","packets":1},
+    {"key":"TSR","pr":null,"branch":"research/astra/20260907-all-rank-spectral-rigidity","head":"d916a2d60a7ff9a01f1b8bcd73d8583829f78ba6","packets":1,"discovery":"Dated branch scan; no matching PR found by head-branch search"}
+  ],
+  "already_merged_nonresearch_prs": [801,802,806,807,808,809,810,813,815,816,820,821,822],
+  "updated_old_prs_without_identified_new_source_delta": [
+    {"pr":396,"head":"a7e140614a2544b320c274acc5c599e5176cea97","baseline_evidence":"reviews/D-pass3 source/claim records"},
+    {"pr":440,"head":"b971121babe6236a1c20cb34cb76215f4521f7bb","baseline_evidence":"reviews/C/CENSUS.tsv OLD-440 and pass2 historical-head comparison"}
+  ],
+  "discovery": {
+    "recent_pr_query":"updated:>=2026-09-06; all states; up to 100 results",
+    "dated_branch_queries":["202609","2026-09"],
+    "new_or_updated_issue_query":"is:issue updated:>=2026-09-06 returned no issues at observation",
+    "comments":"Recent repository issue/PR comments inspected for publication and successor references; full discussion archaeology remains pass 2",
+    "main_comparison":"Scientific reference merge to current main: 27 commits; maintenance, presentation, contribution and validation changes distinguished from research deposits",
+    "limitation":"No claim of exhaustive discovery of arbitrary unadvertised, deleted or inaccessible refs; pass 2 must repeat delta discovery before finalizing coverage"
+  },
+  "research_packets_identified":39,
+  "packets_with_substantive_paper_review":12,
+  "packets_pending_substantive_pass2":27,
+  "main_changed_by_review":false,
+  "scientific_acceptance_changed":false,
+  "rh_proved":false
+}

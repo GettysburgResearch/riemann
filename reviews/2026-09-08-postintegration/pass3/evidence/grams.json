@@ -1,0 +1,174 @@
+{
+  "author_producer_executed": false,
+  "bits": 176,
+  "checks": {
+    "contracts": 85,
+    "do_bg": 6,
+    "gram_entries": 496,
+    "rn": 12
+  },
+  "marker": "PASS_COMPLETE_BOUNDED_GRAM_RECONSTRUCTION",
+  "pairwise_gram_entries": 961,
+  "periodic_weights": 73621,
+  "results": {
+    "do_bg": {
+      "assurance": "complete pairwise periodic Gram with directed tails; new rational midpoint solves and residual floors",
+      "delta16": {
+        "bits": 176,
+        "decimal_lower": "0.017936267020202549",
+        "decimal_upper": "0.017936267020202550",
+        "hi": "1717953076765019458151079229060159059861799926707897",
+        "lo": "1717953076765019458151068375279020215406108011089925"
+      },
+      "delta8": {
+        "bits": 176,
+        "decimal_lower": "0.024244525306522673",
+        "decimal_upper": "0.024244525306522674",
+        "hi": "2322164182666012115475513873607218216260123056024332",
+        "lo": "2322164182666012115475507257419758364398978106159390"
+      },
+      "detail_lift_U8": {
+        "bits": 176,
+        "decimal_lower": "0.025491663369613566",
+        "decimal_upper": "0.025491663369613567",
+        "hi": "2441616277699194319024121625864423886145686538411180",
+        "lo": "2441616277699194319024103750314420694966527232184319"
+      },
+      "full_a9_16": {
+        "bits": 176,
+        "decimal_lower": "-0.105967221798837777",
+        "decimal_upper": "-0.105967221798837776",
+        "hi": "-10149643430291594164336117936406446740272727417569867",
+        "lo": "-10149643430291594166127756297012275777770779566588494"
+      },
+      "leakage": {
+        "bits": 176,
+        "decimal_lower": "-0.001714996316361534",
+        "decimal_upper": "-0.001714996316361533",
+        "hi": "-164264012964092225026988757660200484971083795592823",
+        "lo": "-164264012964092225288660327458806631172970414955637"
+      }
+    },
+    "rn": [
+      {
+        "N": 4,
+        "Y": 2,
+        "coercivity": "1/320",
+        "feasibility": "symbolic endpoint identities, not merely zero-containing intervals",
+        "minimum": {
+          "bits": 176,
+          "decimal_lower": "0.072123117281951579",
+          "decimal_upper": "0.072123117281951580",
+          "hi": "6908022226746145125394680240052838610753109122504910",
+          "lo": "6908022226746145125394674184026020660457391693957113"
+        },
+        "proposal_reproduction": "deterministic rational midpoint KKT above; actual endpoints imposed symbolically",
+        "proposal_sha256": "f22ec4517829e06ef5c9a491e87391b39287231ad3d4f85045395bb72f832082",
+        "stationarity_squared_upper": {
+          "bits": 176,
+          "decimal_lower": "0.000000000000000000",
+          "decimal_upper": "0.000000000000000001",
+          "hi": "38",
+          "lo": "0"
+        },
+        "trial": {
+          "bits": 176,
+          "decimal_lower": "0.072123117281951579",
+          "decimal_upper": "0.072123117281951580",
+          "hi": "6908022226746145125394680240052838610753109122504910",
+          "lo": "6908022226746145125394674184026020660457391693969274"
+        }
+      },
+      {
+        "N": 8,
+        "Y": 4,
+        "coercivity": "1/1152",
+        "feasibility": "symbolic endpoint identities, not merely zero-containing intervals",
+        "minimum": {
+          "bits": 176,
+          "decimal_lower": "0.026111243144081930",
+          "decimal_upper": "0.026111243144081931",
+          "hi": "2500960230298160638135847991523162458741121548224004",
+          "lo": "2500960230298160638135840339860443972843890416643086"
+        },
+        "proposal_reproduction": "deterministic rational midpoint KKT above; actual endpoints imposed symbolically",
+        "proposal_sha256": "056761628c9f2cf6d8b9424c282b39be583bd9fe89e4a658405bfb843c765b14",
+        "stationarity_squared_upper": {
+          "bits": 176,
+          "decimal_lower": "0.000000000000000000",
+          "decimal_upper": "0.000000000000000001",
+          "hi": "29",
+          "lo": "0"
+        },
+        "trial": {
+          "bits": 176,
+          "decimal_lower": "0.026111243144081930",
+          "decimal_upper": "0.026111243144081931",
+          "hi": "2500960230298160638135847991523162458741121548224004",
+          "lo": "2500960230298160638135840339860443972843890416676495"
+        }
+      },
+      {
+        "N": 16,
+        "Y": 8,
+        "coercivity": "1/4352",
+        "feasibility": "symbolic endpoint identities, not merely zero-containing intervals",
+        "minimum": {
+          "bits": 176,
+          "decimal_lower": "0.023695806559291602",
+          "decimal_upper": "0.023695806559291603",
+          "hi": "2269607368083441297375261450164205057584887396238776",
+          "lo": "2269607368083441297375242829514425992400275832497223"
+        },
+        "proposal_reproduction": "deterministic rational midpoint KKT above; actual endpoints imposed symbolically",
+        "proposal_sha256": "cbeeaa2703bb42df710e8a125755544879d710d1999698e5f80b865a950d2b0f",
+        "stationarity_squared_upper": {
+          "bits": 176,
+          "decimal_lower": "0.000000000000000000",
+          "decimal_upper": "0.000000000000000001",
+          "hi": "46",
+          "lo": "0"
+        },
+        "trial": {
+          "bits": 176,
+          "decimal_lower": "0.023695806559291602",
+          "decimal_upper": "0.023695806559291603",
+          "hi": "2269607368083441297375261450164205057584887396238776",
+          "lo": "2269607368083441297375242829514425992400275832697416"
+        }
+      },
+      {
+        "N": 32,
+        "Y": 16,
+        "coercivity": "1/16896",
+        "feasibility": "symbolic endpoint identities, not merely zero-containing intervals",
+        "minimum": {
+          "bits": 176,
+          "decimal_lower": "0.022118909935520037",
+          "decimal_upper": "0.022118909935520038",
+          "hi": "2118570677812416412588010456770912694039844407394807",
+          "lo": "2118570677812416412587976404889004741568950923465048"
+        },
+        "proposal_reproduction": "deterministic rational midpoint KKT above; actual endpoints imposed symbolically",
+        "proposal_sha256": "499706c0ae4c41683c480ad414704a7348eb0dd474559454f1413333013f9263",
+        "stationarity_squared_upper": {
+          "bits": 176,
+          "decimal_lower": "0.000000000000000000",
+          "decimal_upper": "0.000000000000000001",
+          "hi": "51",
+          "lo": "0"
+        },
+        "trial": {
+          "bits": 176,
+          "decimal_lower": "0.022118909935520037",
+          "decimal_upper": "0.022118909935520038",
+          "hi": "2118570677812416412588010456770912694039844407394807",
+          "lo": "2118570677812416412587976404889004741568950924326745"
+        }
+      }
+    ]
+  },
+  "rh_proved": false,
+  "schema": "riemann.review.pass3.gram-controls.v1",
+  "unbounded_minimum_proved": false
+}

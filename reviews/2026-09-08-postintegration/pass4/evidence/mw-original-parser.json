@@ -1,0 +1,71 @@
+{
+  "boundary": "The producer recomputes its mathematics. Python structural equality is not a strict typed or duplicate-key receipt contract. No numerical theorem is refuted by the alias acceptances.",
+  "observations": [
+    {
+      "case": "pristine",
+      "mode": "normal",
+      "observed_accepted": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "ddaa01ec89167f7604939711c548ce80e856eb8197bf34b566e69439883dc9d6"
+    },
+    {
+      "case": "float_event_count_boolean_checkpoint",
+      "mode": "normal",
+      "observed_accepted": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "ddaa01ec89167f7604939711c548ce80e856eb8197bf34b566e69439883dc9d6"
+    },
+    {
+      "case": "duplicate_key_last_wins",
+      "mode": "normal",
+      "observed_accepted": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "ddaa01ec89167f7604939711c548ce80e856eb8197bf34b566e69439883dc9d6"
+    },
+    {
+      "case": "changed_numerical_endpoint",
+      "mode": "normal",
+      "observed_accepted": false,
+      "returncode": 2,
+      "stderr": "retained certificate differs from full replay\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "pristine",
+      "mode": "optimized",
+      "observed_accepted": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "ddaa01ec89167f7604939711c548ce80e856eb8197bf34b566e69439883dc9d6"
+    },
+    {
+      "case": "float_event_count_boolean_checkpoint",
+      "mode": "optimized",
+      "observed_accepted": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "ddaa01ec89167f7604939711c548ce80e856eb8197bf34b566e69439883dc9d6"
+    },
+    {
+      "case": "duplicate_key_last_wins",
+      "mode": "optimized",
+      "observed_accepted": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "ddaa01ec89167f7604939711c548ce80e856eb8197bf34b566e69439883dc9d6"
+    },
+    {
+      "case": "changed_numerical_endpoint",
+      "mode": "optimized",
+      "observed_accepted": false,
+      "returncode": 2,
+      "stderr": "retained certificate differs from full replay\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "schema": "riemann-final-review-original-mw-parser-probe-v1",
+  "source_git_blob": "3d1e3b10135a8504a5d3639b507211014be7eecc"
+}
