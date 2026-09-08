@@ -1,0 +1,96 @@
+{
+  "base_commit": "bc3c35d8f434949748a2185783bf831d3afd9126",
+  "base_tree": "123ded0ecfe1c23cfb8196fa9ec36555ea446da7",
+  "external_novelty_review": "pending",
+  "external_zero_prefix": {
+    "arxiv": "2004.09765v1",
+    "doi": "10.1112/blms.12460",
+    "full_verification_rerun": false,
+    "large_prefix": 3000000000000,
+    "paper": "Platt--Trudgian, BLMS 53 (2021), 792--797",
+    "simplicity_used": false,
+    "small_prefix": 100
+  },
+  "independent_mathematical_review": "pending",
+  "new_analytic_input": "Classical argument-principle zero-count identity; Euler--Maclaurin and Stirling. Coarse constants derived in manuscript.",
+  "new_claim_ids": [
+    "ASTRA-TC2-01",
+    "ASTRA-TC2-02",
+    "ASTRA-TC2-03",
+    "ASTRA-TC2-04",
+    "ASTRA-TC2-05",
+    "ASTRA-TC2-06",
+    "ASTRA-TC2-07",
+    "ASTRA-TC2-08"
+  ],
+  "new_remote_commit": null,
+  "parent_directory": "standalone/2026-09-05-astra-theta-count-closure",
+  "parent_files": [
+    {
+      "git_blob_sha1": "91e98720fdbb041377ffc41f7b70e69614877e84",
+      "path": "COUNTERFEITS.md",
+      "sha256": "131e1767dfcece3ad90159efdaa4b5038f892ca49f11414d5006928a996bef0c"
+    },
+    {
+      "git_blob_sha1": "0b6ea91d6e82ee6b90a01b36e3fd757ec101dded",
+      "path": "HEAT_BERNSTEIN.md",
+      "sha256": "38b6bc05df50ba23e447210e437c3efd4296c4208dcf751f6f5cefd62d50d98d"
+    },
+    {
+      "git_blob_sha1": "d161d2be2f6c93bf32f9f42fe79ff2d9b31dec52",
+      "path": "README.md",
+      "sha256": "6d6c156eb3e017c253d53f40676fa54ecfd4acf51a15fb93a1f0241084d1b499"
+    },
+    {
+      "git_blob_sha1": "cc628bcda1fe9a7900d27b41c1b75619b1aebde5",
+      "path": "REVIEW.md",
+      "sha256": "8fa6747da8a39c1411ac4dad0160e84f071deecaa5f07601103283f086f07b10"
+    },
+    {
+      "git_blob_sha1": "be38152479302ced4d56257e8b611c4332960011",
+      "path": "SHA256SUMS",
+      "sha256": "b5bff29790556cf17f60f22e67f38abbd4ba68f9a926201b43f27eeeee0501d5"
+    },
+    {
+      "git_blob_sha1": "813857e6827f81146b9fddfff6018b8be1fc007d",
+      "path": "SOURCE_LOCK.json",
+      "sha256": "31a9e509a1493aa3c7635a62444d128c154a7134f64ae2b5805c9882149cb36d"
+    },
+    {
+      "git_blob_sha1": "5d8d8eb8174fa4e57cdc9c058f38bdec1b278361",
+      "path": "THETA_COUNT.md",
+      "sha256": "029a253add6571c1f47a02c33f63b8afa3f115c0a591317c1e959e581fd6436f"
+    },
+    {
+      "git_blob_sha1": "1f57c3f3cbc15b0a5f8827ecc6144970f7d99af7",
+      "path": "VALIDATION.md",
+      "sha256": "ead5c466c4f1789846cb80929e97ef2293c297a8c5f22d017e5ef6a2c6596175"
+    },
+    {
+      "git_blob_sha1": "184acd0debcff909e4b8680549cdc5bb552b15d1",
+      "path": "exact_result.json",
+      "sha256": "e7a4dc19c802d4fbf5699227019832808a356f7e9a4e0b623bf7e2d951922c1a"
+    },
+    {
+      "git_blob_sha1": "d8617fb2c96b14531e4288d02119be0d917ebc17",
+      "path": "low_zero_result.json",
+      "sha256": "0ede5118fe3040728a7d0bde08e2c7f94855b6ce0d88247431acaaec17379199"
+    },
+    {
+      "git_blob_sha1": "755bc489b25629dfc808875a0362e1db441c49ee",
+      "path": "verify_exact.py",
+      "sha256": "df7c7314f668cd864373ca7c187c6fd8f033d49b12956536fcb11a3fd280d529"
+    },
+    {
+      "git_blob_sha1": "dc65c7a2273c9657bb2e68ec3fa99ad115f42c3e",
+      "path": "verify_low_zero.py",
+      "sha256": "2658934627c16bd06ae5f39eee63b7fbef971956b7171e2bceb79da03c28a805"
+    }
+  ],
+  "remote_write_performed": false,
+  "repository": "gfreund123/riemann",
+  "rh_proved": false,
+  "source_readback_this_pass": "PR790 exact head and THETA_COUNT.md read with GitHub connector; uploaded parent archive identities independently recomputed.",
+  "target_branch": "research/astra/20260905-theta-bernstein-exterior-closure",
+  "target_pr": 790
+}

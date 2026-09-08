@@ -1,0 +1,47 @@
+{
+  "analytic_proof": "PROOF.md; independent review pending",
+  "arithmetic": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "checks": {
+    "case_split": 6,
+    "conjugation_and_multiplicity": 105,
+    "cubic_bound_induction_fixture": 80,
+    "envelope_derivative": 60,
+    "global_constant_boundary": 16,
+    "high_tail_constants": 4,
+    "low_tail_monotonicity": 18,
+    "mixed_binomial_identity": 105,
+    "mixed_recurrence": 105,
+    "phase_polynomial": 72,
+    "positive_heat_counterfeit": 1,
+    "published_source_binding": 1,
+    "quadratic_parameter": 6,
+    "rate_counterfeit": 3,
+    "row_mass": 27,
+    "saddle_phase_cancellation": 12,
+    "strip_modulus": 36
+  },
+  "constant_boundaries": {
+    "cubic_error_bound": "125/2048",
+    "far_tail_integer_numerator": "21250000000000",
+    "local_count_log_gap": "267/500",
+    "middle_budget_numerator": "12288000",
+    "middle_exponential_comparison": "15625/384",
+    "quadratic_constant": "100000000"
+  },
+  "counterfeit_witnesses": [
+    {
+      "H_0_14": "-433316717939/1000000000000000",
+      "model": "(1+u)(1+4u/5+u^2/5)"
+    }
+  ],
+  "new_high_zero_census": false,
+  "rh_proved": false,
+  "rosser_theorem_reproved": false,
+  "source_git_blobs": {
+    "HEAT_BERNSTEIN.md": "0b6ea91d6e82ee6b90a01b36e3fd757ec101dded",
+    "THETA_COUNT.md": "5d8d8eb8174fa4e57cdc9c058f38bdec1b278361"
+  },
+  "status": "PASS_QUADRATIC_MIXED_WEDGE_EXACT_CONTROLS",
+  "total_checks": 657,
+  "unrestricted_mixed_inequality_proved": false
+}

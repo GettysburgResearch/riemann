@@ -1,0 +1,27 @@
+{
+  "base_commit": "f0584f7a49550540eaed005868422a83cb3e1011",
+  "branch": "research/astra/20260905-theta-bernstein-exterior-closure",
+  "classical_verification": {
+    "full_verification_rerun": false,
+    "source": "https://arxiv.org/abs/2004.09765",
+    "used_height": 100,
+    "used_only_for": "SP7-4 actual three-dimensional positivity"
+  },
+  "import_receipt": "standalone/2026-09-05-astra-theta-count-closure/PRIME_CUTOFF_IMPORT.md",
+  "new_claim_scope": "PROPOSED_COMPONENT_PROOFS_REVIEW_PENDING",
+  "other_source_review": "signed-tail-pass6 analytic proof and ten-dimensional statement read; its certificate not rerun",
+  "parent_proof": {
+    "git_blob": "d9354917157bb80175093b6b44fc01a46ba4ffea",
+    "local_bytes_matched_remote_blob": true,
+    "path": "standalone/2026-09-05-astra-theta-count-closure/prime-cutoff-pass6/PROOF.md"
+  },
+  "pr": 790,
+  "repository": "GettysburgResearch/riemann",
+  "repository_id": 1309150028,
+  "rh_proved": false,
+  "small_zero_certificate": {
+    "file": "low_zeros.json",
+    "gamma_interval_implementation_trust_dependency": "mpmath 1.3.0",
+    "producer": "verify_low_zeros.py"
+  }
+}

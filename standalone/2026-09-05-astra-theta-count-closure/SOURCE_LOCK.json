@@ -1,0 +1,54 @@
+{
+  "packet": "astra-theta-count-2026-09-05",
+  "base_commit": "6dda8b5125457ed936330229f8c9eb6491728e76",
+  "base_tree": "3e31763fd987fec2e1601a4ecab2de6465fcee24",
+  "predecessor_pr": 785,
+  "predecessor_commit": "9a965c26fd3e0310736829689db1734bcb5c3ec4",
+  "files": [
+    {
+      "path": "standalone/2026-09-01-architecture-e-widder-dossier/15_SPECTRAL_WEIGHTED_VARIATION_AND_BISPECTRAL_GATE.md",
+      "git_blob": "9678decbbc064016bc8569e4f7ba286358d29f60",
+      "used_for": "Full-line theta source and spectral-versus-coefficient boundary"
+    },
+    {
+      "path": "standalone/2026-09-01-architecture-e-widder-dossier/10_THETA_FOCK_MIXTURE_AND_QUASIFREE_GATE.md",
+      "git_blob": "39ac982ebc6afede93e7a05e76c570bc84d2555a",
+      "used_for": "Original vacuum/forced-one marked mixture and open scalar TQF gate"
+    },
+    {
+      "path": "standalone/2026-09-01-architecture-e-widder-dossier/09_INVARIANT_RESOLVENT_AND_HEAT_TRACE.md",
+      "git_blob": "ca1a788b5d1cf24e6f22778b664c04cfa53f6208",
+      "used_for": "K_parent=2S, q_parent=2h; RH iff invariant heat is completely monotone"
+    },
+    {
+      "path": "standalone/2026-09-01-architecture-e-widder-dossier/09_INVARIANT_ORDER_PRODUCT_AND_COUNT_LAW.md",
+      "git_blob": "ca6c3491484964d489998c800814bb522709124a",
+      "used_for": "Positive invariant coefficients and one-scale count criterion"
+    }
+  ],
+  "external_inputs": [
+    {
+      "name": "V100",
+      "source": "Platt--Trudgian (2021), DOI 10.1112/blms.12460; arXiv:2004.09765",
+      "scope": "All nontrivial zeros with 0<gamma<=100 have beta=1/2; no simplicity used",
+      "verification": "Published result imported; original computation not rerun; no PDF byte hash claimed"
+    },
+    {
+      "name": "Z14/15",
+      "source": "verify_low_zero.py + low_zero_result.json",
+      "scope": "At least one critical-line zero in (14,15)",
+      "verification": "Executed directed interval sign change in normal and optimized Python; mpmath 1.3.0 interval Gamma is a software trust dependency"
+    }
+  ],
+  "normalization": {
+    "X": "xi(1/2+sqrt(u+1/4))",
+    "X0": "1/2",
+    "S": "sum over gamma>0 with multiplicity of exp(-rho(1-rho)t)",
+    "parent_K": "2*S",
+    "h": "Xprime/X",
+    "parent_q": "2*h"
+  },
+  "independent_review": "PENDING",
+  "rh_proved": false,
+  "novelty_priority_claim": false
+}

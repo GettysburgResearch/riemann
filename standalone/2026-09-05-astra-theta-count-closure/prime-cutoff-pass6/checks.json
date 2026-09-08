@@ -1,0 +1,18 @@
+{
+  "actual_prime_sums_evaluated": false,
+  "analytic_proofs_machine_checked": false,
+  "arithmetic": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "rh_proved": false,
+  "scope": "finite identities, constants, norm and synthetic controls only",
+  "status": "PASS_FINITE_EXACT_CUTOFF_CONTROLS",
+  "tests": 16,
+  "unrestricted_matrix_sign_proved": false,
+  "witness": {
+    "fourier_ratio_margin": "1/2656",
+    "m": 42,
+    "prime_cutoff": 1000000000000000000,
+    "second_moment_bound": "1/42",
+    "variance": "3931/460460",
+    "zero_tail_ratio_at_s6": "136821750708889/38416000000000000"
+  }
+}

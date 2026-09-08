@@ -1,0 +1,77 @@
+{
+  "tests": [
+    {
+      "case": "rh_flag",
+      "expected_diagnostic": "saved result mismatch",
+      "mode": "normal",
+      "rejected": true
+    },
+    {
+      "case": "float_alias",
+      "expected_diagnostic": "saved result mismatch",
+      "mode": "normal",
+      "rejected": true
+    },
+    {
+      "case": "count",
+      "expected_diagnostic": "saved result mismatch",
+      "mode": "normal",
+      "rejected": true
+    },
+    {
+      "case": "duplicate_key",
+      "expected_diagnostic": "duplicate JSON key",
+      "mode": "normal",
+      "rejected": true
+    },
+    {
+      "case": "proof",
+      "expected_diagnostic": "saved result mismatch",
+      "mode": "normal",
+      "rejected": true
+    },
+    {
+      "case": "source_lock",
+      "expected_diagnostic": "saved result mismatch",
+      "mode": "normal",
+      "rejected": true
+    },
+    {
+      "case": "rh_flag",
+      "expected_diagnostic": "saved result mismatch",
+      "mode": "optimized",
+      "rejected": true
+    },
+    {
+      "case": "float_alias",
+      "expected_diagnostic": "saved result mismatch",
+      "mode": "optimized",
+      "rejected": true
+    },
+    {
+      "case": "count",
+      "expected_diagnostic": "saved result mismatch",
+      "mode": "optimized",
+      "rejected": true
+    },
+    {
+      "case": "duplicate_key",
+      "expected_diagnostic": "duplicate JSON key",
+      "mode": "optimized",
+      "rejected": true
+    },
+    {
+      "case": "proof",
+      "expected_diagnostic": "saved result mismatch",
+      "mode": "optimized",
+      "rejected": true
+    },
+    {
+      "case": "source_lock",
+      "expected_diagnostic": "saved result mismatch",
+      "mode": "optimized",
+      "rejected": true
+    }
+  ],
+  "total": 12
+}

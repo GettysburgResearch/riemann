@@ -1,0 +1,52 @@
+{
+  "status": "PROPOSED_COMPONENT_PROOFS_REVIEW_PENDING",
+  "rh_proved": false,
+  "base_commit": "c64a0ae131d60cce48bc0dcc73358f7a1a857a89",
+  "base_root_tree": "e171156f4094efd1653e14824014617c42905838",
+  "repository": "GettysburgResearch/riemann",
+  "proof_sha256": "132022d080f582bd5776d410aa482280685b581b4140239294f4244f9a844efe",
+  "parent_projection_theorem": {
+    "path": "standalone/2026-09-05-astra-theta-count-closure/quadratic-capture-pass8/PROOF.md",
+    "commit": "c64a0ae131d60cce48bc0dcc73358f7a1a857a89",
+    "git_blob": "38574a2ba02ccfec1ba0eaf4164bb7862ef7bdc0",
+    "sha256": "e15e87fedbc3921345778dfa684cbb9ae895b05c05e1e027b1331713ff0788d5",
+    "read_scope": "Full proof; source identity authenticated against supplied published packet; not independent referee review."
+  },
+  "classical_inputs": [
+    {
+      "name": "Quantitative PNT, Theorem 8.7",
+      "url": "https://kskedlaya.org/ant/chapter-8.html",
+      "scope": "|Psi(x)-x| <= C x exp(-c sqrt(log x)); existence of constants imported, no numerical constants certified; adapt half-weight convention to right-continuous full weight."
+    },
+    {
+      "name": "Unconditional Weil explicit formula, equation 5.15",
+      "url": "https://londmathsoc.onlinelibrary.wiley.com/doi/full/10.1112/jlms.12785",
+      "scope": "All complex nontrivial zeros with multiplicities; Fourier constants translated explicitly; no positivity imported."
+    },
+    {
+      "name": "Digamma special values",
+      "url": "https://dlmf.nist.gov/5.4",
+      "scope": "psi(1), psi(1/2), psi(1/4); trigamma(1)=pi^2/6 from reciprocal-square series."
+    },
+    {
+      "name": "Gaussian/error-function integrals",
+      "url": "https://dlmf.nist.gov/7.7",
+      "scope": "Elementary Gaussian integrals used in atom, continuum and trace identities; derivations supplied."
+    },
+    {
+      "name": "Hankel sigma-function theory",
+      "url": "https://arxiv.org/abs/1403.3941",
+      "scope": "Prior-art credit for signed-Laplace/Hankel inertia; main convergence proof is given directly."
+    }
+  ],
+  "not_claimed": [
+    "RH proof",
+    "new PNT bound",
+    "numerically certified PNT constants",
+    "actual high-rank xi matrix evaluation",
+    "zero census",
+    "machine proof of infinite analysis",
+    "independent referee acceptance",
+    "external novelty"
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "case": "false_rh_flag",
+    "optimized": false,
+    "returncode": 1,
+    "expected_rejection": true
+  },
+  {
+    "case": "false_rh_flag",
+    "optimized": true,
+    "returncode": 1,
+    "expected_rejection": true
+  },
+  {
+    "case": "float_test_count",
+    "optimized": false,
+    "returncode": 1,
+    "expected_rejection": true
+  },
+  {
+    "case": "float_test_count",
+    "optimized": true,
+    "returncode": 1,
+    "expected_rejection": true
+  },
+  {
+    "case": "false_matrix_flag",
+    "optimized": false,
+    "returncode": 1,
+    "expected_rejection": true
+  },
+  {
+    "case": "false_matrix_flag",
+    "optimized": true,
+    "returncode": 1,
+    "expected_rejection": true
+  }
+]

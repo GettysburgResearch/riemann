@@ -1,0 +1,64 @@
+{
+  "repository": "GettysburgResearch/riemann",
+  "pr": 790,
+  "base_commit": "513d8f206bb597747afcb7a7410cdf768519d548",
+  "local_claims": [
+    "ASTRA-QC-01",
+    "ASTRA-QC-02",
+    "ASTRA-QC-03",
+    "ASTRA-QC-04",
+    "ASTRA-QC-05",
+    "ASTRA-QC-06",
+    "ASTRA-QC-07"
+  ],
+  "source_dependencies": [
+    {
+      "commit": "bce97be9727dea9968db7517738edc966d2cc86b",
+      "path": "standalone/2026-09-05-astra-theta-count-closure/heat-hankel-pass5/PROOF.md",
+      "blob": "caf9753e5c3e3bb918289da0f4e92ae7c6441f6c",
+      "role": "actual trace-class source and complete-background inertia, inherited proposed proof"
+    },
+    {
+      "commit": "84609fed315caa9c54dfb7a967e28744e1334f36",
+      "path": "standalone/2026-09-05-astra-theta-count-closure/signed-block-pass7/PROOF.md",
+      "role": "same U_j/u_j spaces, linear-width tail/escape result; read, not independently recertified"
+    },
+    {
+      "commit": "513d8f206bb597747afcb7a7410cdf768519d548",
+      "path": "standalone/2026-09-05-astra-theta-count-closure/signed-packets-pass7/SIGNED_TAIL_MATRICES.md",
+      "role": "prior signed-tail regime; preserved, not used as a positivity premise"
+    },
+    {
+      "commit": "bce97be9727dea9968db7517738edc966d2cc86b",
+      "path": "standalone/2026-09-05-astra-theta-count-closure/heat-hankel-pass5/PROOF.md",
+      "role": "unconditional rational-test explicit formula with endpoint and Fourier convention, used in ED2"
+    }
+  ],
+  "classical_sources": [
+    {
+      "url": "https://dlmf.nist.gov/18.3",
+      "role": "Laguerre normalization and orthogonality"
+    },
+    {
+      "url": "https://dlmf.nist.gov/18.8",
+      "role": "Laguerre differential expression, Table 18.8.1 row 10"
+    },
+    {
+      "url": "https://arxiv.org/abs/1403.3941",
+      "role": "Hankel sign/inertia prior-art context, not a theorem premise"
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.4",
+      "role": "xi reflection and normalization"
+    }
+  ],
+  "not_claimed": [
+    "RH",
+    "arithmetic positivity at square width",
+    "effective universal capture rank",
+    "independent referee acceptance",
+    "external priority",
+    "Lean proof"
+  ],
+  "rh_proved": false
+}

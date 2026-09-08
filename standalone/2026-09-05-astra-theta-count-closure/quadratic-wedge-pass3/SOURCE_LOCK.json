@@ -1,0 +1,45 @@
+{
+  "packet": "astra-quadratic-wedge-pass3",
+  "parent_commit": "11f20a995d740347177bb39e378cf5261d25132b",
+  "parent_tree": "d919a4981d0d1c42c9ed269234d4f3c371ce50f4",
+  "original_commit": "bc3c35d8f434949748a2185783bf831d3afd9126",
+  "repository": "gfreund123/riemann",
+  "pr": 790,
+  "branch": "research/astra/20260905-theta-bernstein-exterior-closure",
+  "primitive_files": {
+    "HEAT_BERNSTEIN.md": "0b6ea91d6e82ee6b90a01b36e3fd757ec101dded",
+    "THETA_COUNT.md": "5d8d8eb8174fa4e57cdc9c058f38bdec1b278361"
+  },
+  "external_inputs": [
+    {
+      "theorem": "Rosser 1941 argument bound",
+      "statement": "|S_arg(T)| <= .137 log T+.443 log log T+1.588 for T>=1467",
+      "original_doi": "10.2307/2371291",
+      "read_source": "Trudgian arXiv:1208.5846v2 Table 1, PDF page 1",
+      "status": "IMPORTED; original proof not independently reproduced"
+    },
+    {
+      "theorem": "Riemann-von Mangoldt completion remainder",
+      "statement": "|N(T)-F(T)| <= |S_arg(T)|+.2/T for T>=1",
+      "read_source": "Trudgian arXiv:1208.5846v2 equation (2.5), PDF page 3",
+      "status": "IMPORTED classical completion estimate"
+    },
+    {
+      "theorem": "V100",
+      "statement": "all nontrivial zeros through height 100 lie on the line",
+      "source": "Platt--Trudgian 2021, DOI 10.1112/blms.12460",
+      "status": "UNCHANGED original packet import; no new census"
+    }
+  ],
+  "source_pdf_pages_rendered": [
+    1,
+    3
+  ],
+  "source_pdf_bytes_hashed": false,
+  "uses_sharp_modern_argument_constants": false,
+  "uses_original_low_zero_sign_certificate_in_quadratic_proof": false,
+  "independent_review": "PENDING",
+  "unrestricted_mixed_inequality_proved": false,
+  "rh_proved": false,
+  "external_priority_claim": false
+}

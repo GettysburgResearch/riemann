@@ -1,0 +1,57 @@
+{
+  "actual_prime_sums_computed": false,
+  "analytic_proofs_machine_checked": false,
+  "arithmetic": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "categories": {
+    "all_gap_cardinal_bound": 36,
+    "all_gap_signed_interpolation": 12,
+    "archimedean_variance_budget": 1,
+    "beta_gram_pd": 12,
+    "countermodel_budget": 1,
+    "countermodel_exact_interpolation": 4,
+    "countermodel_full_form_negative": 4,
+    "countermodel_parabolic_strip": 1,
+    "escape_endpoint": 1,
+    "evaluation_envelope_constant": 10,
+    "evaluation_exponent": 1,
+    "explicit_positive_schur_factor": 4,
+    "full_signed_variance_matrix": 12,
+    "generalized_vandermonde_invertible": 6,
+    "invariant_disk_geometry": 15,
+    "jacobi_energy_identity": 278,
+    "lagrange_tail_envelope": 9,
+    "logarithm_certificates": 1,
+    "original_metric_escape_constant": 12,
+    "reservoir_ratio_identity": 20,
+    "signed_block_transform": 45,
+    "signed_lagrange_reconstruction": 9,
+    "three_zero_reservoir_constant": 1
+  },
+  "controls": 495,
+  "rh_proved": false,
+  "status": "PASS_FINITE_SIGNED_BLOCK_CONTROLS",
+  "synthetic_witnesses": [
+    {
+      "M": 2,
+      "coefficient_digest": "8d601622f30227ab4774c47404d58c0c4f30462a56efb877759ac6c7c471ac02",
+      "quadratic_value": -2
+    },
+    {
+      "M": 5,
+      "coefficient_digest": "58c31e625c83ed9b4ff5581e25d6fd4266bca3ecb1790deee86fa6130709ed84",
+      "quadratic_value": -2
+    },
+    {
+      "M": 20,
+      "coefficient_digest": "2bd8951aab772149624c28d9f2b8fa3741fd38181faa7de8da75c1f6125048d0",
+      "quadratic_value": -2
+    },
+    {
+      "M": 769,
+      "coefficient_digest": "e75178086f713990f8242353378c30a44a64adf1d5de3a8ef43bb32505bc3d4d",
+      "quadratic_value": -2
+    }
+  ],
+  "theta5": "143549852741136737742539985677149713003/572075882861328125000000000000000000000",
+  "theta5_upper": "1/3"
+}

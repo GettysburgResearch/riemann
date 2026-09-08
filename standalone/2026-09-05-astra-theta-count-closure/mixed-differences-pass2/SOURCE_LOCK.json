@@ -1,0 +1,48 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "external_input": {
+    "arxiv": "1208.5846v2",
+    "author": "Timothy S. Trudgian",
+    "imported_statement": "For T>=100, |N(T)-T/(2pi)log(T/(2pi e))-7/8| <= .112 log T+.278 log log T+2.512",
+    "independent_proof_reconstruction": false,
+    "inspection": "Parsed text plus web screenshots of both used pages",
+    "journal_doi": "10.1016/j.jnt.2013.07.017",
+    "not_assumed": "RH, line location of reservoir zeros, simplicity, new zero census",
+    "pdf_byte_hash_claimed": false,
+    "title": "An improved upper bound for the argument of the Riemann zeta-function on the critical line II",
+    "url": "https://arxiv.org/pdf/1208.5846v2",
+    "used_for": "Only the complete-column/cubic-wedge theorem: existence of some zero in [T,2T], T>=100",
+    "used_pages": "PDF pages 2 and 3, Corollary 1 and equation (2.5)",
+    "version_boundary": "v2 prints .111,.275,2.450 plus .2/T0; the packet deliberately weakens these, consistently with the published .112,.278,2.510 statement"
+  },
+  "historical_source_files_modified": false,
+  "independent_review": "PENDING",
+  "packet": "astra-mixed-differences-pass2",
+  "parent_commit": "bc3c35d8f434949748a2185783bf831d3afd9126",
+  "parent_files": {
+    "COUNTERFEITS.md": {
+      "git_blob": "91e98720fdbb041377ffc41f7b70e69614877e84",
+      "sha256": "131e1767dfcece3ad90159efdaa4b5038f892ca49f11414d5006928a996bef0c"
+    },
+    "HEAT_BERNSTEIN.md": {
+      "git_blob": "0b6ea91d6e82ee6b90a01b36e3fd757ec101dded",
+      "sha256": "38b6bc05df50ba23e447210e437c3efd4296c4208dcf751f6f5cefd62d50d98d"
+    },
+    "THETA_COUNT.md": {
+      "git_blob": "5d8d8eb8174fa4e57cdc9c058f38bdec1b278361",
+      "sha256": "029a253add6571c1f47a02c33f63b8afa3f115c0a591317c1e959e581fd6436f"
+    },
+    "verify_exact.py": {
+      "git_blob": "755bc489b25629dfc808875a0362e1db441c49ee",
+      "sha256": "df7c7314f668cd864373ca7c187c6fd8f033d49b12956536fcb11a3fd280d529"
+    },
+    "verify_low_zero.py": {
+      "git_blob": "dc65c7a2273c9657bb2e68ec3fa99ad115f42c3e",
+      "sha256": "2658934627c16bd06ae5f39eee63b7fbef971956b7171e2bceb79da03c28a805"
+    }
+  },
+  "parent_tree": "123ded0ecfe1c23cfb8196fa9ec36555ea446da7",
+  "pr": 790,
+  "repository": "gfreund123/riemann",
+  "rh_proved": false
+}

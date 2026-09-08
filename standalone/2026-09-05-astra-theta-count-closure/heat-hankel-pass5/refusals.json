@@ -1,0 +1,77 @@
+{
+  "count": 14,
+  "refusals": [
+    {
+      "case": "rh_flag",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "numeric_type_alias",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "determinant_sign",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "dimension",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "missing_group",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "changed_proof",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "changed_parent",
+      "exit": 1,
+      "mode": "normal"
+    },
+    {
+      "case": "rh_flag",
+      "exit": 1,
+      "mode": "optimized"
+    },
+    {
+      "case": "numeric_type_alias",
+      "exit": 1,
+      "mode": "optimized"
+    },
+    {
+      "case": "determinant_sign",
+      "exit": 1,
+      "mode": "optimized"
+    },
+    {
+      "case": "dimension",
+      "exit": 1,
+      "mode": "optimized"
+    },
+    {
+      "case": "missing_group",
+      "exit": 1,
+      "mode": "optimized"
+    },
+    {
+      "case": "changed_proof",
+      "exit": 1,
+      "mode": "optimized"
+    },
+    {
+      "case": "changed_parent",
+      "exit": 1,
+      "mode": "optimized"
+    }
+  ],
+  "rh_proved": false,
+  "status": "PASS_REJECTION_CONTROLS"
+}

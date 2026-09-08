@@ -1,0 +1,33 @@
+{
+  "base_commit": "8cc6fc78db37f42290c7372bc994b3bfa94898ef",
+  "base_tree": "8d0373b2cbb48d53f6e8bdbd16dee9dd0b7be3d2",
+  "independent_review": "pending",
+  "inputs": [
+    {
+      "blob": "a1d9886d6a846d911dd8b51d241d215fd8a49c38",
+      "commit": "8cc6fc78db37f42290c7372bc994b3bfa94898ef",
+      "path": "standalone/2026-09-05-astra-theta-count-closure/operator-renormalization-pass9/PROOF.md",
+      "pr": 790,
+      "scope": "continuation base and unresolved lower bound; 65-check suite rerun in both modes"
+    },
+    {
+      "blob": "d5dd18b62ef8fd9a19919914186e75e93146529f",
+      "commit": "e5e3c2cb98c584af8edc06e148a92e52d91d1b4a",
+      "path": "standalone/2026-09-05-bernstein-chebyshev-growth/separated-window-gluing/PROOF.md",
+      "pr": 792,
+      "scope": "full W source, distributional curvature, normalization; finite six-window signs not imported; code suite not rerun"
+    },
+    {
+      "blob": "caf9753e5c3e3bb918289da0f4e92ae7c6441f6c",
+      "commit": "bce97be9727dea9968db7517738edc966d2cc86b",
+      "path": "standalone/2026-09-05-astra-theta-count-closure/heat-hankel-pass5/PROOF.md",
+      "pr": 790,
+      "scope": "H and critical-strip budget; no finite zero verification"
+    }
+  ],
+  "new_proof_uses_PNT": false,
+  "new_proof_uses_zero_census": false,
+  "repository": "GettysburgResearch/riemann",
+  "repository_id": 1309150028,
+  "rh_proved": false
+}

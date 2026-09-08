@@ -1,0 +1,35 @@
+{
+  "cases": [
+    {
+      "case": "rh_flag",
+      "exit_code": 1,
+      "expected_diagnostic": "saved result mismatch"
+    },
+    {
+      "case": "numeric_alias",
+      "exit_code": 1,
+      "expected_diagnostic": "saved result mismatch"
+    },
+    {
+      "case": "duplicate_key",
+      "exit_code": 1,
+      "expected_diagnostic": "duplicate JSON key"
+    },
+    {
+      "case": "wrong_margin",
+      "exit_code": 1,
+      "expected_diagnostic": "saved result mismatch"
+    },
+    {
+      "case": "changed_proof",
+      "exit_code": 1,
+      "expected_diagnostic": "source hash mismatch"
+    },
+    {
+      "case": "changed_lock",
+      "exit_code": 1,
+      "expected_diagnostic": "source hash mismatch"
+    }
+  ],
+  "status": "PASS_EXPECTED_REFUSALS"
+}
