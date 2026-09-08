@@ -30,6 +30,8 @@ Ask your agent to review work since the last integration, run exploratory comput
 
 ## Integrated baseline and active research
 
+**Current integration:** the September 6, 2026 A/B/C/D consolidation builds on the earlier baseline through PR #707; see [exact source coverage and exclusions](integration/2026-09-06/README.md). Later branch revisions remain exploratory unless separately reviewed and integrated.
+
 The pages above describe reviewed components at their recorded sources, with later corrections applied. They do not certify every file on main. [Active research](PROGRAMMES.md#active-research), including newer branch revisions, remains discoverable but is not accepted merely because it exists or has passed an author's tests. Earlier results retain their inherited review scope unless an applicable correction changes it.
 
 **Formalization is a separate track.** The actual-xi source repair remains incomplete in Lean; see [formal status and limitations](FORMAL_STATUS.md).
