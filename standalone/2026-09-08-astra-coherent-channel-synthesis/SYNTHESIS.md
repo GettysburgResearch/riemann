@@ -5,6 +5,30 @@ or a full unconditional RH proof. Freeze: main f99d9e3908dde4865377c75d9ca051c1f
 The scientific integration reference is PR #800; later documentation releases do
 not count as acceptance of live research. No source branch is modified.
 
+## Closing-source reconciliation: parallel PR #828
+
+After this packet's first commit was published, the closing live check found
+PR #828 at 528b33ac8d57b5a046260ee45d585cd3fe720f4c, created during this work.
+Its principal spectral and asymptotic arguments were then inspected at
+standalone/2026-09-08-astra-grounding-capacity/PROOF.md. Its squarefree root-Green
+sum, anchored secular equation, 1/zeta(2) log-log asymptotic, constant centered
+gap and O(1/log-log) difference OVERLAP with CCS1-CCS2 here. The supplied P=13
+intervals are consistent with our independently reconstructed finite bracket.
+This is not represented as independent mathematical acceptance or two distinct
+new discoveries. Neither packet makes an external priority claim.
+
+#828 additionally treats the full geometric-exponent reservoir, with leading
+anchoring coefficient one rather than 1/zeta(2), and its specified root-coupling
+Schur test. Those extensions are not silently imported as our proved results.
+The additional contributions here are the actual stopped-Mobius field/projection
+identity, its complete N log N prime-power edge-energy asymptotic, and the rooted
+survival law in PROOF.md Section 6. Our short squarefree lower-bound argument
+uses squarefree counting rather than its prime-tail comparison. These distinctions
+should be retained when integrating the parallel submissions.
+
+The overlap note changes no mathematical proof, primitive data, or result file.
+The closing source lock is included; its paper is not a new executable dependency.
+
 ## 1. What changed after integration
 
 The live #827 pass-one review inventory records 42 identified packets, twelve
