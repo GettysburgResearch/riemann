@@ -1,0 +1,41 @@
+{
+  "repository": "GettysburgResearch/riemann",
+  "pr": 803,
+  "parent_head": "bcec690c1607e281bd6f741b68f5c50f556670c7",
+  "global_status": "RH and subpower bound remain unproved",
+  "sources": [
+    {
+      "path": "standalone/2026-09-08-residual-normalization-and-minima/PROOF.md",
+      "head": "bcec690c1607e281bd6f741b68f5c50f556670c7",
+      "git_blob": "d5192fab330a92f336b7cb2c1c93ba517754d307",
+      "sha256": "c6085aff0dba9d58b146fdced61bf5f9cb241e2d67893c102248dd0837895a5a",
+      "bytes": 16592,
+      "scope": "Read for inherited norm, constraints, and remaining-bound context. New form/tail proofs are self-contained; parent code not executed."
+    },
+    {
+      "path": "standalone/2026-09-08-residual-spectral-exponent/PROOF.md",
+      "head": "bcec690c1607e281bd6f741b68f5c50f556670c7",
+      "git_blob": "ff1bba2071a06c66ad52243d7646eec54b0a7ca4",
+      "sha256": "a4082ed6d5c7be0ba78d5ef53c794de0d254d995fc34aa6e945cd034f939f7e0",
+      "bytes": 17928,
+      "scope": "Read for inherited norm, constraints, and remaining-bound context. New form/tail proofs are self-contained; parent code not executed."
+    }
+  ],
+  "primary_external_context": [
+    {
+      "url": "https://arxiv.org/abs/math/0011254",
+      "title": "Báez-Duarte, New versions of the Nyman-Beurling criterion",
+      "scope": "Classical approximation context; no density or unproved RH premise imported."
+    },
+    {
+      "url": "https://arxiv.org/html/2203.05030",
+      "title": "Calderaro, Manzur, Noor, Santos, Orthogonality questions in the Hardy space related to zeta-zeros",
+      "scope": "Consulted for completeness/source-domain distinctions; no theorem imported in RC1--RC5."
+    }
+  ],
+  "not_dependencies": [
+    "Live PR descriptions from #818,#819,#823 were read for overlap, not used as mathematical premises.",
+    "No external fixed-power Mobius estimate or finite zero verification is used."
+  ],
+  "scope": "All new remote writes confined to a new standalone packet on the existing author branch. Source proofs remain proposed, pending independent review."
+}

@@ -1,0 +1,67 @@
+{
+  "RH_proved": false,
+  "bounded_panels": 841,
+  "centered_values_sha256": "3ff4dd7441066624685f0e44cb9d895a2dc6da1290c97a2ed5ae36910f8659af",
+  "certificates": [
+    {
+      "H": 4096,
+      "N": 8,
+      "Y": 2,
+      "comparison_constant": 448,
+      "constraints": "actual prefix; p(1)=0; no derivative or p(0) constraint",
+      "exact_solution_hashes_minus_center_plus": [
+        "4fee1f13e93683147510a775ee1f723522df772d672988d03343f8d6934a4f3e",
+        "c049f4b469d6461fec2f32566c7d8891139486f3b6041b9e7cdac5a0b9b0267a",
+        "12472d2d4bff5a8148792d37514d8e705cfaa9af7e18c67dcbf8fd511efa1341"
+      ],
+      "full_min_lower": "0.025607338825",
+      "full_min_upper": "0.025616531671"
+    },
+    {
+      "H": 4096,
+      "N": 12,
+      "Y": 3,
+      "comparison_constant": 1296,
+      "constraints": "actual prefix; p(1)=0; no derivative or p(0) constraint",
+      "exact_solution_hashes_minus_center_plus": [
+        "3805b663043c0cca963be004062a2cd17706839e2b4c1ee2410077d972e348c4",
+        "0c8236ec328a1cd151e6becdbbf1244685dfb2a3804d8e79c4cbc28c58e72e68",
+        "78d22522cc4bbe44604b36107fb412418741dd9a412e534a5662648aac37560c"
+      ],
+      "full_min_lower": "0.021620272026",
+      "full_min_upper": "0.021647203122"
+    },
+    {
+      "H": 4096,
+      "N": 16,
+      "Y": 4,
+      "comparison_constant": 2304,
+      "constraints": "actual prefix; p(1)=0; no derivative or p(0) constraint",
+      "exact_solution_hashes_minus_center_plus": [
+        "6e83becebd06d9b4a7e7191c5426bf2e56a75ec44d584525268e193f23d00642",
+        "045290f3539baa2eeb6833f1b3d678976db9868331ccbb1235598624a786b010",
+        "d647419344ae284eefec959bc7c6a5b0dcd7b00aa3de31180d0eb6dc4f1d39ae"
+      ],
+      "full_min_lower": "0.019070164807",
+      "full_min_upper": "0.019120804411"
+    }
+  ],
+  "groups": {
+    "actual_global_finite_minimum_brackets": 3,
+    "bare_cutoff_false_zero_controls": 14,
+    "block_discrepancy_panels": 144,
+    "crt_covariance_pairs": 144,
+    "full_period_second_moments": 12,
+    "independent_period_tail_brackets": 36,
+    "jordan_identity": 128,
+    "mobius_independent_factorization": 256,
+    "native_centered_constructions": 23,
+    "rational_frequency_and_horizon_cases": 63,
+    "safe_jet_preserving_center_repairs": 18
+  },
+  "new_minimum_class": "p(1)=0 only; all real corrections Y,...,4Y",
+  "parent_head": "bcec690c1607e281bd6f741b68f5c50f556670c7",
+  "period_values_sha256": "3b061b727ed39eb5a65be560f5b37ec33820466fae1d1c9ce1da4868f46b5750",
+  "status": "proposed component proof; independent review required",
+  "subpower_upper_bound_proved": false
+}
