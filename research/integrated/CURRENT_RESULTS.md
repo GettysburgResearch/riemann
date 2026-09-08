@@ -4,6 +4,20 @@ This is an editorial reading guide to retained mathematics, not a new theorem pa
 
 [Results and significance](../../RESULTS.md) · [approaches](../../PROGRAMMES.md) · [next tasks](../../OPEN_CUTS.md) · [full research index](../RESULTS_INDEX.md).
 
+## Source-qualified extensions in this integration candidate
+
+The earlier statements below remain part of the cumulative account. The following thematic pages add the selected reviewed work without changing the published baseline before this branch receives its own integration review.
+
+| Topic | Current statement, proof route and evidence |
+|---|---|
+| Whole-function unit-window positivity and the arithmetic graph | [Operators, anchoring and the retained coherent channel](native_sources/OPERATORS.md) |
+| Native arithmetic minima, annular criteria and balanced lifts | [Full residuals and their exact remaining estimates](native_sources/RESIDUALS.md) |
+| Ordinary causal inputs and the actual intrinsic floor | [Source domains, realization and entropy](native_sources/CAUSAL.md) |
+| Critical prime discrepancy and summable local detail | [Complete prime energy and square-grid localization](native_sources/PRIME_ENERGY.md) |
+| All-rank tensor/symmetric-power intersections | [Rational spectral classification and its exception](native_sources/STRUCTURES.md) |
+
+The [resident proof library](native_sources/SOURCE_INDEX.md) links every selected packet to its original manuscript. The [evidence guide](native_sources/EVIDENCE.md) distinguishes complete numerical reconstructions from archival programs. These are current formulations of reviewed components, not approval of a new composition or a claim that any open RH-strength upper bound has been proved.
+
 ## Conventions
 
 $\mu$ denotes the Möbius function, $\sigma$ the sum-of-divisors function, and $\gamma$ Euler's constant. For a real function, $F_-=\max\{-F,0\}$. A bound called **subpower** means: for every $\epsilon>0$ there are $C_\epsilon$ and a threshold such that the quantity is at most $C_\epsilon X^\epsilon$ thereafter. Constants need not be uniform in $\epsilon$.
@@ -198,7 +212,7 @@ $$U-3R\preceq S_L\preceq U.$$
 
 For the specifically defined $L=1$, $X=3$, $K=101$ subspace, the stronger lower bound is $U-(15/8)R$. Here $U$ and $R$ are the source-defined trial and residual matrices, including every cross term—not entrywise error magnitudes. Their definitions and continuum constraints are in the linked full proof. Finite Galerkin effective matrices approach $S_L$ **from above**. Neither their positivity nor sampled positive lower estimates certifies the continuum sign.
 
-[Complete source, space and residual definitions](../../reviews/C/pass4-math-completion/proofs/OPERATOR_AUDIT.md) · [earlier finite operator components](../RESULTS_INDEX.md#inherited-source-results). **Open:** a rigorous actual lower certificate, followed by the required unbounded family of complete windows.
+[Complete source, space and residual definitions](../../reviews/C/pass4-math-completion/proofs/OPERATOR_AUDIT.md) · [earlier finite operator components](../RESULTS_INDEX.md#inherited-source-results). **Current selected advance:** the [unit-window positive-extension theorem](native_sources/OPERATORS.md) now supplies a source-qualified whole-function sign at length at most one, with its [complete Fourier-tail evidence](native_sources/EVIDENCE.md#unit-window). The [logarithmic-core continuation](native_sources/OPERATORS.md) also gives converging two-sided Schur enclosures for each fixed window, without a length-uniform convergence rate. **Open:** the sign on the required unbounded family of complete windows. Neither the unit-window result nor a positive Galerkin upper section supplies that family. The [strong-residual statement for unbounded operators](native_sources/OPERATORS.md#strong-schur) separately retains its operator-domain hypothesis.
 
 ### Other retained operator results and their domains
 
