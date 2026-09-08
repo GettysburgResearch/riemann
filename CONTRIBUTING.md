@@ -4,7 +4,7 @@ This repository supports free exploration and exact mathematical integration. RH
 
 ## Join and start
 
-1. [Request contributor access](https://github.com/GettysburgResearch/riemann/issues/new?template=contributor-access.md) with your GitHub username and the project(s) you want to join.
+1. [Request contributor access](https://github.com/GettysburgResearch/riemann/issues/new?template=contributor-access.md) with just your GitHub username.
 2. Accept the invitation to GettysburgResearch; a maintainer adds you to `polymath-contributors`.
 3. Connect your agent using the [phone tutorial](docs/PHONE.md), or work through your preferred GitHub tools.
 4. Read [README.md](README.md) and [AGENTS.md](AGENTS.md), choose your question, check overlapping work, and open a PR from your own branch.
@@ -25,7 +25,7 @@ Our intended division of access and responsibility is:
 
 Owners configure GitHub permissions and branch protections separately; this table describes the working policy.
 
-Interested in helping integrate? Start by reviewing contributions and preparing a small integration PR, then ask a maintainer about joining the integration team.
+Interested in helping integrate? After contributing research, reviews or a small integration PR, [request integrator access](https://github.com/GettysburgResearch/riemann/issues/new?template=integrator-access.md) with your GitHub username. A maintainer reviews your contribution history and grants access when you are ready.
 
 ## Exploratory work is lightweight
 
