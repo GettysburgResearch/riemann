@@ -1,0 +1,15 @@
+packet_id	source_key	path	git_blob	reading_scope
+JG	S804	standalone/2026-09-06-astra-sharp-jordan-green/PROOF.md	fed74cfa6af97082862ca9d9bf9dfc220571fe70	Density and transform proof; supporting files not blanket reviewed
+JG	S804	standalone/2026-09-06-astra-sharp-jordan-green/REAL_AXIS.md	b3960acde6e8417bb24939f864f1910127831ff6	Real-axis margin proof
+CSM	S804	standalone/2026-09-06-astra-critical-source-map/CONSTRUCTION.md	593d99995f70c3cb565aebbfb455f93147d09e1e	Literal source and map construction
+CSM	S804	standalone/2026-09-06-astra-critical-source-map/DOMAIN_AND_APPROXIMATION.md	56a2f702d4f45e9e384853b917e6bfc47560a262	Domains, source range and finite approximation boundaries
+CD	S804	standalone/2026-09-06-astra-compact-domain-completion/PROOF.md	724042d5c785ad2c418d3b7f60f8562b59ff413a	Load-bearing compact-domain and tail arguments; no numerical replay
+LC	S803	standalone/2026-09-06-logarithmic-core/PROOF.md	f7420d1ddf603a3765331649d3f5b9d04f23e8e7	Core, residual and conditional all-window arguments; source reconfirmation remains
+WP	S803	standalone/2026-09-06-logarithmic-core/window-one-positivity/PROOF.md	644392c4a59edff697851fe526b8da5de96492cf	Full paper certificate architecture; accepting code and finite witness not replayed
+RG	S803	standalone/2026-09-08-residual-spectral-exponent/PROOF.md	ff1bba2071a06c66ad52243d7646eec54b0a7ca4	Spectral exponent argument and exact normalization
+HC	S817	standalone/2026-09-07-astra-quantitative-capture/PROOF.md	47c51b2f91a2d52c9f9ab91c642ed207042992ca	Fractional regularity, small values, outer clipping, target and horizon estimates
+CCT	S818	standalone/2026-09-08-astra-critical-cutoff-taper/PROOF.md	cad5d09a20ceb8c594832191156214ccd4aac11b	Endpoint-safe taper, energy and conditional convergence; PDS tail retained as dependency
+SSQ	S818	standalone/2026-09-08-astra-square-grid-localization/PROOF.md	d983c4dd9a1925f1cb0bdc0596e3c1dfc96047ac	Metric adapter, square-cell detail and coarse energy
+IE	S819	standalone/2026-09-08-astra-intrinsic-entropy/PROOF.md	afb721d6eddae8eb4fe861091f9747394bd7c708	Entropy, target sensitivity and finite approximation; numerical trial held
+LT	S823	standalone/2026-09-08-astra-late-tail-zero-insertion/PROOF.md	61b72484273694f1c737f81fffe319b9e7f5a10b	Delayed perturbation, relative tail, domains, entropy and finite evidence
+TSR	TSR	standalone/2026-09-07-astra-all-rank-spectral-intersection/PROOF.md	62794835cb594a433249337845ba22a5ad2ecc44	Complete paper classification and monodromy proof; own finite affine classification
