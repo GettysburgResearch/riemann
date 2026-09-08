@@ -22,6 +22,21 @@ SHARP positivity above the critical power and fixed-$P_{61}$ bias are establishe
 
 Energy-completed Schur elimination is an exact reduction **within a specified window and source**. It must retain the variational correction from the entire positive sector. A positive Galerkin upper approximation cannot replace a residual lower certificate, and one certified window would still not settle the required unbounded family.
 
+## Native-source selections: usable implications with explicit open inputs
+
+The following are scoped reviewed selections in the [integration candidate](integration/2026-09-08/README.md), not newly activated machine edges.
+
+| Exact source | What is available | Open prerequisite before an RH conclusion |
+|---|---|---|
+| Full W form | Unit-window positivity and fixed-window two-sided approximation | All required window signs; one interval does not prove them |
+| Prefix-preserving floor residual | Complete finite-tail capture and delayed zero lower cost | Native completions with subpower full energy along the stated unbounded sequence |
+| Fixed annular scalar | Noncancelling transform, curvature and sparse-sign consumer | Any fixed power saving in the specified all-cutoff negative-failure count |
+| Factorial causal source | Ordinary realization and convergence to the actual BH2 projection | Zero intrinsic defect or the stated growing-horizon output upper bound |
+| Critical prime discrepancy | Original-metric adapter and summable local square-cell detail | Finiteness of the cumulative coarse energy |
+| Complete divisor graph | Complement inverse and exact specified root-coupling cost | A source-faithful full coupling and control of its coherent function channel |
+
+[Current source statements](research/integrated/native_sources/README.md) supply definitions and hypotheses. The sharp uniform graph-to-physical loss and the literal coherent-channel identity prevent a source-blind composition of these rows. Positivity of a representation, finite stability and an available conditional consumer are not substitutes for its open input.
+
 ## Proposed or still-unbound bridges
 
 Xi low-order derivative descent, full coefficient-resolved theta positivity, principal-member extraction, and the corrected Euler-product half-plane programme are active targets. The line-one causal norm theorem, finite geometric identities and generic cofactor laws do not discharge these targets. A source-specific composition not covered by an existing review needs its own review before becoming part of the accepted chain.
@@ -30,6 +45,6 @@ Xi low-order derivative descent, full coefficient-resolved theta positivity, pri
 
 ## Machine graph and provenance
 
-The [current registry entry point](canonical/CURRENT.json) selects the authenticated resolver. The [graph-interpretation repair](integration/2026-09-06/graph-fix/README.md) explains why conditional-result records cannot propagate their unproved applications: missing prerequisites remain conjuncts, and historical declarations are preserved separately from effective premises. Source, execution and merge evidence is in [PR #802](https://github.com/GettysburgResearch/riemann/pull/802).
+The [current registry entry point](canonical/CURRENT.json) still selects the published baseline resolver. The candidate selection and interface table are not concatenated into its claim/edge tables; activation and any new machine implications require the separate integration review. The existing authenticated resolver remains unchanged. The [graph-interpretation repair](integration/2026-09-06/graph-fix/README.md) explains why conditional-result records cannot propagate their unproved applications: missing prerequisites remain conjuncts, and historical declarations are preserved separately from effective premises. Source, execution and merge evidence is in [PR #802](https://github.com/GettysburgResearch/riemann/pull/802).
 
 The [frontier navigation graph](integration/2026-09-06/FRONTIER_GRAPH.json) is not a set of newly accepted conclusion-facing implications. Raw review edge tables and old historical verdict tables must not be concatenated into a proof. Exact review/source decisions and older execution narratives remain in [integration/audit records](integration/README.md). This human map does not change any machine status, graph edge or mathematical acceptance.

@@ -54,4 +54,12 @@ Nearest-rounded output is not an outward enclosure. A checker accepting internal
 
 **Use the lesson:** test nonvacuity, normalization, primitive containment and rejection behavior as separate contracts. [Formal status](FORMAL_STATUS.md), [computational evidence](COMPUTATIONS.md), [implication map](PROOF_GRAPH.md).
 
+## 8. Native-source synthesis has sharper, source-specific limits
+
+The reviewed candidate adds a coefficient-uniform graph-to-physical obstruction of order Y/log Y, a literal coherent-channel identification, a full-source failure of detail-driven lifting, and a fixed-controller/input-resonance analysis. Each controls a stated class: none refutes a specially chosen native optimum, all varying controllers, or RH. The balanced-lift lower growth refers to **squared** energy, not the unsquared norm. [Residual and full-lift qualifications](research/integrated/native_sources/RESIDUALS.md).
+
+A constant centered divisor gap coexists with growing root-anchoring cost. Strong Hilbert-space residuals for an unbounded operator require the trial map's range in its **operator domain**, not only the form domain. [Repaired Schur statement and proof](research/integrated/native_sources/OPERATORS.md#strong-schur).
+
+Positive late-tail perturbations can retain finite horizons and jets while adding inner zeros to a **changed** infinite source. A capture rate to the actual floor, or a small fixed entropy trial, therefore cannot by itself set the floor to zero. The actual infinite arithmetic identity remains essential. [Causal source and obstruction scopes](research/integrated/native_sources/CAUSAL.md).
+
 Exact counterexamples, source versions and correction histories are retained in the [integration/audit records](integration/README.md). A useful next contribution strengthens an unrefuted source-specific route or supplies a missing bounded certificate; it need not propose a new global architecture.

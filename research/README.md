@@ -4,6 +4,8 @@ The [cumulative results catalogue](../RESULTS.md) explains what the project has 
 
 The integrated baseline consists of the specific reviewed components, not every manuscript on main. Later corrections control the affected claim; earlier results retain their inherited review scope when not superseded. Historical source manifests and dated proof extracts remain available, but their old status labels do not override the current interpretation.
 
+The [native-source guide](integrated/native_sources/README.md) and [selected proof library](integrated/native_sources/SOURCE_INDEX.md) add the reviewed operator, residual, causal, prime-energy and structural components. They are part of an integration candidate pending exact-tree approval, with [separate evidence contracts](integrated/native_sources/EVIDENCE.md); original author programs are not generically trusted by being archived here.
+
 For ongoing work, use [active research and programme threads](../PROGRAMMES.md#active-research) and the [exploratory layer](exploratory/README.md). These are discovery surfaces for proposals, experiments and useful failed attempts, not additional accepted theorems.
 
 Choose a [concrete next contribution](../OPEN_CUTS.md#bounded-contributions), read its current statement and evidence, then follow [CONTRIBUTING](../CONTRIBUTING.md). The older [import manifest](IMPORT_MANIFEST.md) records source/extraction dependencies for the early Weil/screw and operator stacks; it is not the default scientific reading order or a new review verdict.
