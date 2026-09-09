@@ -1,0 +1,746 @@
+{
+  "actual_log_prime_rayleigh_certificates": [
+    {
+      "A": [
+        2
+      ],
+      "B_prime_count": 2,
+      "B_primes_sha256": "e63b22ac167203571a5bf128474bd9c83cdf88c93e221b317f46e55a7337dc30",
+      "P": 5,
+      "Z_A": [
+        3,
+        2
+      ],
+      "Z_B": {
+        "denominator_bits": 3,
+        "numerator_bits": 4,
+        "sha256": "59890c6bca99fbc7ef05f3a97d3ae04271295805839f25ab8e6b74793b50dc26"
+      },
+      "actual_A_capacity": {
+        "bits": 160,
+        "hi_hex": "7b1c2770e80ff5d27f05548af0be29b09ce4fc71",
+        "lo_hex": "7b1c2770e80ff5d27f05548af0be29b09ce4fc6f"
+      },
+      "enumerated_A_nonconstant_modes": 1,
+      "enumerated_B_vertices": false,
+      "full_vertex_count_formula": "2^1+2^2-1",
+      "rayleigh_lower_witness": {
+        "bits": 160,
+        "hi_hex": "11964ec6fc9490d4ed930c13d93fbcd01669daeba",
+        "lo_hex": "11964ec6fc9490d4ed930c13d93fbcd01669daeb4"
+      },
+      "theorem_upper_enclosure": {
+        "bits": 160,
+        "hi_hex": "179697345ccbfe0426b4bd224c9800f9e1bad59dd",
+        "lo_hex": "179697345ccbfe0426b4bd224c9800f9e1bad59d4"
+      },
+      "trial_log_rates": {
+        "2": [
+          2977044471,
+          4294967296
+        ]
+      },
+      "upper_decimal": [
+        "1.474265293637",
+        "1.474265293638"
+      ],
+      "witness_decimal": [
+        "1.099196221629",
+        "1.099196221630"
+      ],
+      "y": 2
+    },
+    {
+      "A": [
+        2,
+        3
+      ],
+      "B_prime_count": 9,
+      "B_primes_sha256": "4d3b910eab9d78198ada05a8107031d3485ebd8694aad788784a0e59b3fb41a8",
+      "P": 31,
+      "Z_A": [
+        2,
+        1
+      ],
+      "Z_B": {
+        "denominator_bits": 30,
+        "numerator_bits": 31,
+        "sha256": "f16faa428479bfc181f83d01ea148b7f0ea95d2a811ac1939f03fd915529455b"
+      },
+      "actual_A_capacity": {
+        "bits": 160,
+        "hi_hex": "c666aa5338fe3665d7c14d71df23d9fe2f1bda47",
+        "lo_hex": "c666aa5338fe3665d7c14d71df23d9fe2f1bda41"
+      },
+      "enumerated_A_nonconstant_modes": 3,
+      "enumerated_B_vertices": false,
+      "full_vertex_count_formula": "2^2+2^9-1",
+      "rayleigh_lower_witness": {
+        "bits": 160,
+        "hi_hex": "1170d059300af572cfc6c4e3d866f0c8557e4e105",
+        "lo_hex": "1170d059300af572cfc6c4e3d866f0c8557e4e0fa"
+      },
+      "theorem_upper_enclosure": {
+        "bits": 160,
+        "hi_hex": "1a9089654c9e81cdfbaa907e95beb3cc9fc7401c0",
+        "lo_hex": "1a9089654c9e81cdfbaa907e95beb3cc9fc7401b5"
+      },
+      "trial_log_rates": {
+        "2": [
+          2977044471,
+          4294967296
+        ],
+        "3": [
+          2359251925,
+          2147483648
+        ]
+      },
+      "upper_decimal": [
+        "1.660287280750",
+        "1.660287280751"
+      ],
+      "witness_decimal": [
+        "1.090042446507",
+        "1.090042446508"
+      ],
+      "y": 3
+    },
+    {
+      "A": [
+        2,
+        3,
+        5
+      ],
+      "B_prime_count": 40,
+      "B_primes_sha256": "730a9926cf246bb71b89b47a8440a6f0d481b2bc0bb8219206880deb61997b2f",
+      "P": 191,
+      "Z_A": [
+        12,
+        5
+      ],
+      "Z_B": {
+        "denominator_bits": 195,
+        "numerator_bits": 197,
+        "sha256": "85ca45dab561bc229805cdd1d939bfca68d7ed056f96e59afb1e1744905b0df1"
+      },
+      "actual_A_capacity": {
+        "bits": 160,
+        "hi_hex": "f07a12836a8ea8d62cdbf3aaca41144bb923a49c",
+        "lo_hex": "f07a12836a8ea8d62cdbf3aaca41144bb923a48f"
+      },
+      "enumerated_A_nonconstant_modes": 7,
+      "enumerated_B_vertices": false,
+      "full_vertex_count_formula": "2^3+2^40-1",
+      "rayleigh_lower_witness": {
+        "bits": 160,
+        "hi_hex": "11c14b613d8e038f6b509cf2457ecabf735e7e4e9",
+        "lo_hex": "11c14b613d8e038f6b509cf2457ecabf735e7e4cb"
+      },
+      "theorem_upper_enclosure": {
+        "bits": 160,
+        "hi_hex": "1cac34cf6eb4dfe505549c606c08a2f1b6a2d2b29",
+        "lo_hex": "1cac34cf6eb4dfe505549c606c08a2f1b6a2d2b19"
+      },
+      "trial_log_rates": {
+        "2": [
+          2977044471,
+          4294967296
+        ],
+        "3": [
+          2359251925,
+          2147483648
+        ],
+        "5": [
+          3456241599,
+          2147483648
+        ]
+      },
+      "upper_decimal": [
+        "1.792042551310",
+        "1.792042551311"
+      ],
+      "witness_decimal": [
+        "1.109691028447",
+        "1.109691028448"
+      ],
+      "y": 5
+    },
+    {
+      "A": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "B_prime_count": 166,
+      "B_primes_sha256": "6c765febd15d51afb2dc8a1f63a0ffdfe17c5b1680f6a9a02ce463974a882a25",
+      "P": 1013,
+      "Z_A": [
+        96,
+        35
+      ],
+      "Z_B": {
+        "denominator_bits": 1101,
+        "numerator_bits": 1103,
+        "sha256": "f8abf70a998338556b26f33c9cf4cf7911fb068706e763cb7f18e3ffe756489d"
+      },
+      "actual_A_capacity": {
+        "bits": 160,
+        "hi_hex": "10e3310341b1f4e6d356278db0893c5de313cb717",
+        "lo_hex": "10e3310341b1f4e6d356278db0893c5de313cb701"
+      },
+      "enumerated_A_nonconstant_modes": 15,
+      "enumerated_B_vertices": false,
+      "full_vertex_count_formula": "2^4+2^166-1",
+      "rayleigh_lower_witness": {
+        "bits": 160,
+        "hi_hex": "1213d2081e6397c8ae5bdedf399d1cee1c27178c8",
+        "lo_hex": "1213d2081e6397c8ae5bdedf399d1cee1c2717871"
+      },
+      "theorem_upper_enclosure": {
+        "bits": 160,
+        "hi_hex": "1da607be1b6b912a823604960a5276acea5b74a25",
+        "lo_hex": "1da607be1b6b912a823604960a5276acea5b74a0e"
+      },
+      "trial_log_rates": {
+        "2": [
+          2977044471,
+          4294967296
+        ],
+        "3": [
+          2359251925,
+          2147483648
+        ],
+        "5": [
+          3456241599,
+          2147483648
+        ],
+        "7": [
+          8357620451,
+          4294967296
+        ]
+      },
+      "upper_decimal": [
+        "1.853034727674",
+        "1.853034727675"
+      ],
+      "witness_decimal": [
+        "1.129838973725",
+        "1.129838973726"
+      ],
+      "y": 7
+    },
+    {
+      "A": [
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "B_prime_count": 528,
+      "B_primes_sha256": "2fa7fc07e9ce5d9e163e9cd443617c2b652325d5a6cbdbe7e97b8d8ccc80c43f",
+      "P": 3847,
+      "Z_A": [
+        1152,
+        385
+      ],
+      "Z_B": {
+        "denominator_bits": 4367,
+        "numerator_bits": 4368,
+        "sha256": "c3df285b5274d10914a374686bf6c784a1f782aeb39b2ecfc7d85ccce0ac0283"
+      },
+      "actual_A_capacity": {
+        "bits": 160,
+        "hi_hex": "120258a3038a72ab0bf0f9d293b8288aaa469da91",
+        "lo_hex": "120258a3038a72ab0bf0f9d293b8288aaa469da69"
+      },
+      "enumerated_A_nonconstant_modes": 31,
+      "enumerated_B_vertices": false,
+      "full_vertex_count_formula": "2^5+2^528-1",
+      "rayleigh_lower_witness": {
+        "bits": 160,
+        "hi_hex": "124d83823c3143044a3bee4e23d2a341e23d82766",
+        "lo_hex": "124d83823c3143044a3bee4e23d2a341e23d82678"
+      },
+      "theorem_upper_enclosure": {
+        "bits": 160,
+        "hi_hex": "1e9c0ee970da275249e99c75aa21c19f1633fce0e",
+        "lo_hex": "1e9c0ee970da275249e99c75aa21c19f1633fcdee"
+      },
+      "trial_log_rates": {
+        "11": [
+          10298881775,
+          4294967296
+        ],
+        "2": [
+          2977044471,
+          4294967296
+        ],
+        "3": [
+          2359251925,
+          2147483648
+        ],
+        "5": [
+          3456241599,
+          2147483648
+        ],
+        "7": [
+          8357620451,
+          4294967296
+        ]
+      },
+      "upper_decimal": [
+        "1.913100158575",
+        "1.913100158576"
+      ],
+      "witness_decimal": [
+        "1.143924244624",
+        "1.143924244625"
+      ],
+      "y": 11
+    },
+    {
+      "A": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13
+      ],
+      "B_prime_count": 1698,
+      "B_primes_sha256": "620c8f1fcab90d2db2258e6e8361fef65df17cf2d8d5e42ab8defe3c3d319082",
+      "P": 14549,
+      "Z_A": [
+        2304,
+        715
+      ],
+      "Z_B": {
+        "denominator_bits": 16945,
+        "numerator_bits": 16947,
+        "sha256": "99f9374335480cacaa6ffe5a7a27dc2dd9a339007192fecc749934b8b64494ba"
+      },
+      "actual_A_capacity": {
+        "bits": 160,
+        "hi_hex": "12f7151a5a8a595184e387b4673871c1a8ede5a7f",
+        "lo_hex": "12f7151a5a8a595184e387b4673871c1a8ede5a34"
+      },
+      "enumerated_A_nonconstant_modes": 63,
+      "enumerated_B_vertices": false,
+      "full_vertex_count_formula": "2^6+2^1698-1",
+      "rayleigh_lower_witness": {
+        "bits": 160,
+        "hi_hex": "1283b94b44c62bc5b0efc42ce9fca6844b233878b",
+        "lo_hex": "1283b94b44c62bc5b0efc42ce9fca6844b2338520"
+      },
+      "theorem_upper_enclosure": {
+        "bits": 160,
+        "hi_hex": "1f25a6726ab92adccd25e74258757c51c1e064c47",
+        "lo_hex": "1f25a6726ab92adccd25e74258757c51c1e064c16"
+      },
+      "trial_log_rates": {
+        "11": [
+          10298881775,
+          4294967296
+        ],
+        "13": [
+          5508186803,
+          2147483648
+        ],
+        "2": [
+          2977044471,
+          4294967296
+        ],
+        "3": [
+          2359251925,
+          2147483648
+        ],
+        "5": [
+          3456241599,
+          2147483648
+        ],
+        "7": [
+          8357620451,
+          4294967296
+        ]
+      },
+      "upper_decimal": [
+        "1.946691939297",
+        "1.946691939298"
+      ],
+      "witness_decimal": [
+        "1.157159132021",
+        "1.157159132022"
+      ],
+      "y": 13
+    }
+  ],
+  "asymptotic_verified_by_finite_checks": false,
+  "formal_graph_panels": [
+    {
+      "A": [
+        2
+      ],
+      "B": [
+        3
+      ],
+      "complement_ldl": {
+        "dimension": 1,
+        "pivots_sha256": "e5ec786c841ba3991aa37d35e621ef341ee7fbc03e991fecef7bb55b6bc50fa2",
+        "positive": 1,
+        "zero": 0
+      },
+      "edges": 2,
+      "formal_rates": {
+        "2": [
+          4,
+          3
+        ],
+        "3": [
+          5,
+          4
+        ]
+      },
+      "rayleigh": {
+        "denominator_bits": 4,
+        "numerator_bits": 3,
+        "sha256": "c7637ff401a5644b3bdf3726f24d2f8421cc6d1b3f38ae608c542e3319ebc15c"
+      },
+      "upper": {
+        "denominator_bits": 5,
+        "numerator_bits": 4,
+        "sha256": "7140024c3cf831559cb8c56eeaf7d3a9f4be23853c742caa37bcd2c23bd43c7f"
+      },
+      "variance_identities": 4,
+      "vertices": 3
+    },
+    {
+      "A": [
+        2
+      ],
+      "B": [
+        3,
+        5
+      ],
+      "complement_ldl": {
+        "dimension": 3,
+        "pivots_sha256": "b48b3d550596ad9eb6567bc8e888fab30b565747956732d027bbfdcb1253b39c",
+        "positive": 3,
+        "zero": 0
+      },
+      "edges": 5,
+      "formal_rates": {
+        "2": [
+          4,
+          3
+        ],
+        "3": [
+          5,
+          4
+        ],
+        "5": [
+          7,
+          6
+        ]
+      },
+      "rayleigh": {
+        "denominator_bits": 3,
+        "numerator_bits": 3,
+        "sha256": "fb79a3caeeac6c24fd445de927f2456b18bdb26c6f3427c02166ea8d911fa449"
+      },
+      "upper": {
+        "denominator_bits": 14,
+        "numerator_bits": 14,
+        "sha256": "7e4f19c31f9f64b695816288613da61437d43f966958a7191cf37554235b2044"
+      },
+      "variance_identities": 4,
+      "vertices": 5
+    },
+    {
+      "A": [
+        2,
+        3
+      ],
+      "B": [
+        5,
+        7
+      ],
+      "complement_ldl": {
+        "dimension": 5,
+        "pivots_sha256": "5da05269bbab7012b40479705e62ee6fc177b0ceabf3473d89939be26e76ba21",
+        "positive": 5,
+        "zero": 0
+      },
+      "edges": 8,
+      "formal_rates": {
+        "2": [
+          4,
+          3
+        ],
+        "3": [
+          5,
+          4
+        ],
+        "5": [
+          7,
+          6
+        ],
+        "7": [
+          9,
+          8
+        ]
+      },
+      "rayleigh": {
+        "denominator_bits": 21,
+        "numerator_bits": 21,
+        "sha256": "bc9e9d554530b721a1a8e158291238559bf7370d19f583afd3d971bff71b1629"
+      },
+      "upper": {
+        "denominator_bits": 22,
+        "numerator_bits": 22,
+        "sha256": "6b02e6297981a0c9c72277e5979a576f52b05f4ceb6d9501588ffc7cc4d6a72e"
+      },
+      "variance_identities": 4,
+      "vertices": 7
+    },
+    {
+      "A": [
+        2,
+        5
+      ],
+      "B": [
+        3,
+        7
+      ],
+      "complement_ldl": {
+        "dimension": 5,
+        "pivots_sha256": "97308ca621aa24353fcb6f0a8ecce6629e7165c7ce0e48dc60272ccb4a087d55",
+        "positive": 5,
+        "zero": 0
+      },
+      "edges": 8,
+      "formal_rates": {
+        "2": [
+          4,
+          3
+        ],
+        "3": [
+          5,
+          4
+        ],
+        "5": [
+          7,
+          6
+        ],
+        "7": [
+          9,
+          8
+        ]
+      },
+      "rayleigh": {
+        "denominator_bits": 25,
+        "numerator_bits": 24,
+        "sha256": "597b9cd56330888b84588e9194776dee64431cce10259c3578bf809ad2d6c03c"
+      },
+      "upper": {
+        "denominator_bits": 27,
+        "numerator_bits": 27,
+        "sha256": "c465e2306de4fe59d3aabc1bf4cb71ef23b2bbd5494ac32c078f58a28d252f88"
+      },
+      "variance_identities": 4,
+      "vertices": 7
+    },
+    {
+      "A": [
+        2,
+        3,
+        5
+      ],
+      "B": [
+        7,
+        11
+      ],
+      "complement_ldl": {
+        "dimension": 9,
+        "pivots_sha256": "2ec0ef9235e9a5188df139e5164e9508d2ccf9b1010ca72b2b1e248755926b93",
+        "positive": 9,
+        "zero": 0
+      },
+      "edges": 16,
+      "formal_rates": {
+        "11": [
+          13,
+          12
+        ],
+        "2": [
+          4,
+          3
+        ],
+        "3": [
+          5,
+          4
+        ],
+        "5": [
+          7,
+          6
+        ],
+        "7": [
+          9,
+          8
+        ]
+      },
+      "rayleigh": {
+        "denominator_bits": 55,
+        "numerator_bits": 54,
+        "sha256": "ffe049d9464d8f7bcbdf40ef39ead894d55e8f8ba0ae9a8ac16d3c22f5a38639"
+      },
+      "upper": {
+        "denominator_bits": 37,
+        "numerator_bits": 37,
+        "sha256": "5be90b4f400618cf27e8c91d8f61502610c932f3f18a86ddddb3fce9a181d7d4"
+      },
+      "variance_identities": 4,
+      "vertices": 11
+    },
+    {
+      "A": [
+        2,
+        3,
+        5
+      ],
+      "B": [
+        7,
+        11,
+        13
+      ],
+      "complement_ldl": {
+        "dimension": 13,
+        "pivots_sha256": "8633970bebb0f6ec70dcf2a81fd30ed69f6cc233968aaaee0e7d1d3432115d7f",
+        "positive": 13,
+        "zero": 0
+      },
+      "edges": 24,
+      "formal_rates": {
+        "11": [
+          13,
+          12
+        ],
+        "13": [
+          15,
+          14
+        ],
+        "2": [
+          4,
+          3
+        ],
+        "3": [
+          5,
+          4
+        ],
+        "5": [
+          7,
+          6
+        ],
+        "7": [
+          9,
+          8
+        ]
+      },
+      "rayleigh": {
+        "denominator_bits": 60,
+        "numerator_bits": 59,
+        "sha256": "7f4fcee796b53b368fc9bd5da9efdfa9bf058d2fc60a7eff4db53f48de2200c8"
+      },
+      "upper": {
+        "denominator_bits": 56,
+        "numerator_bits": 56,
+        "sha256": "e111844171cc10458387386d6fa4c91e0f41326a496c63c4308293b93ccc0079"
+      },
+      "variance_identities": 4,
+      "vertices": 15
+    },
+    {
+      "A": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "B": [
+        11,
+        13,
+        17,
+        19
+      ],
+      "complement_ldl": {
+        "dimension": 29,
+        "pivots_sha256": "8cdc5eacad5ee7416eba1c13cefcbccec2b78d7c06648169697ce9fa51af1c89",
+        "positive": 29,
+        "zero": 0
+      },
+      "edges": 64,
+      "formal_rates": {
+        "11": [
+          13,
+          12
+        ],
+        "13": [
+          15,
+          14
+        ],
+        "17": [
+          19,
+          18
+        ],
+        "19": [
+          21,
+          20
+        ],
+        "2": [
+          4,
+          3
+        ],
+        "3": [
+          5,
+          4
+        ],
+        "5": [
+          7,
+          6
+        ],
+        "7": [
+          9,
+          8
+        ]
+      },
+      "rayleigh": {
+        "denominator_bits": 146,
+        "numerator_bits": 146,
+        "sha256": "531a6adf4bbd2dac97c1104451438650c6aeda96a0b62928a61487b1ddd2326f"
+      },
+      "upper": {
+        "denominator_bits": 174,
+        "numerator_bits": 174,
+        "sha256": "bad2a7bd8af28edb22cac00adf053b05420038f996e84c0781b3cef921228852"
+      },
+      "variance_identities": 4,
+      "vertices": 31
+    }
+  ],
+  "interpretation": "Rayleigh lower witnesses plus analytic upper bounds; not computed true eigenvalues or an RH bound.",
+  "primitive": {
+    "methods": [
+      "eratosthenes",
+      "trial_division"
+    ],
+    "prime_count": 1900,
+    "range_end": 16384
+  },
+  "rh_proved": false,
+  "schema": "CGG26-1",
+  "source": {
+    "base": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+    "box_capacity_parent": "f782788933dc21a0fe6a844950f5ca532eba7d86"
+  }
+}
