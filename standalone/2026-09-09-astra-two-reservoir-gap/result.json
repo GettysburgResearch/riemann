@@ -1,0 +1,86 @@
+{
+  "actual_gap_certificates": [
+    {
+      "A": [
+        2
+      ],
+      "B": [
+        3,
+        5,
+        7,
+        11,
+        13,
+        17
+      ],
+      "P": 17,
+      "Z_A": "3/2",
+      "Z_B": "27648/12155",
+      "edges": 193,
+      "gap_interval": [
+        "0.73956963541318",
+        "0.73956963541319"
+      ],
+      "secular_at_lower_dyadic": [
+        "80267354704416036326948188349604982",
+        "80267354704416036326948188349605133"
+      ],
+      "secular_at_upper_dyadic": [
+        "-127007426217652320246115311655310230",
+        "-127007426217652320246115311655310089"
+      ],
+      "vertices": 65,
+      "visible_nonconstant_modes": 64
+    },
+    {
+      "A": [
+        2
+      ],
+      "B": [
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19,
+        23,
+        29,
+        31
+      ],
+      "P": 31,
+      "Z_A": "3/2",
+      "Z_B": "2548039680/955049953",
+      "edges": 5121,
+      "gap_interval": [
+        "0.72552568064883",
+        "0.72552568064885"
+      ],
+      "secular_at_lower_dyadic": [
+        "143987316035453603473225212752462055",
+        "143987316035453603473225212752463448"
+      ],
+      "secular_at_upper_dyadic": [
+        "-311016297444318666350298775356381510",
+        "-311016297444318666350298775356380112"
+      ],
+      "vertices": 1025,
+      "visible_nonconstant_modes": 1024
+    }
+  ],
+  "asymptotic_machine_verified": false,
+  "dyadic_bits": 160,
+  "groups": {
+    "coincident_root_cases": 1,
+    "complete_trial_variances": 7,
+    "determinant_identities": 21,
+    "edge_instances": 54,
+    "formal_graph_panels": 7,
+    "product_eigenvectors": 38,
+    "root_green_identities": 14,
+    "sieve_vs_trial_integers": 256,
+    "vertex_instances": 45
+  },
+  "log_series_terms": 100,
+  "rh_proved": false,
+  "schema": "TRG26-bounded-v1"
+}
