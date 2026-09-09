@@ -1,0 +1,65 @@
+{
+  "schema": "NM26.sources.v1",
+  "repository": "GettysburgResearch/riemann",
+  "parent_pr": 833,
+  "parent_commit": "6b21700e0b64307fb7c1b93563a14ff3bc987905",
+  "parent_tree": "0c95890bcc3d306322ef0f847f9a0e216fcbda48",
+  "parent_scope": "live PR/commit metadata checked; previous full residual definitions reconstructed in new proof; old code not rerun",
+  "unpublished_seed": {
+    "archive": "astra_native_projection_PR833.zip",
+    "proof_path": "standalone/2026-09-09-astra-native-projection/PROOF.md",
+    "proof_sha256": "04631d76f8e146a8e0e3dd3011a7f066f64f5285b93c4fe84148d45b91b7ff46",
+    "proof_git_blob": "2b1ea80215269d97adea3448b9366c0f07e84b64",
+    "scope": "local supplied attachment read; one exact coefficient array and seed formula extracted; new direct-cell/pairwise-gcd replay; full prior 11-file package not published by this packet"
+  },
+  "period_tail": {
+    "pr": 803,
+    "commit": "31a35a90b0b924dc98a2c89c463fb59577f45a4e",
+    "path": "standalone/2026-09-08-rational-residual-capture/PROOF.md",
+    "scope": "RC1 finite Fourier/CRT/Abel theorem reconstructed in SEED.md; no original producer import"
+  },
+  "orientation_only": [
+    {
+      "pr": 834,
+      "head": "2787339f8f1feb619f1679afb96cb9995e440958",
+      "scope": "live PR description only; theta pencil not imported"
+    },
+    {
+      "pr": 835,
+      "head": "815ccae329a17327b873d21f05bc30c24db13e7e",
+      "scope": "live PR description only; Laguerre/truncation proof and certificate not imported"
+    }
+  ],
+  "external": [
+    {
+      "id": "E1",
+      "url": "https://dlmf.nist.gov/25.2",
+      "scope": "meromorphic continuation, simple pole with residue one, Euler series and 25.2.8 floor integral; HTML read"
+    },
+    {
+      "id": "E2",
+      "url": "https://link.springer.com/article/10.1007/BF02559553",
+      "title": "P. D. Lax, Translation invariant spaces, Acta Math.101 (1959),163-178",
+      "scope": "classical scalar translation-invariant-space theorem imported; primary bibliographic preview read, not full paywalled proof"
+    },
+    {
+      "id": "E2a",
+      "url": "https://link.springer.com/article/10.1007/BF02395019",
+      "title": "A. Beurling, On two problems concerning linear transformations in Hilbert space, Acta Math.81 (1949),239-255",
+      "scope": "Hardy invariant-subspace/factorization lineage; primary bibliographic preview read"
+    },
+    {
+      "id": "E3",
+      "url": "https://arxiv.org/abs/math/0011254",
+      "title": "L. Baez-Duarte, Arithmetical Aspects of Beurling\u2019s Real Variable Reformulation of the Riemann Hypothesis",
+      "scope": "abstract read for prior-art context on failed pointwise/L1-to-L2 inference; no new technical theorem imported"
+    }
+  ],
+  "claim_scope": {
+    "NM1": "proved proposed fixed-seed polynomial-feedback obstruction",
+    "NM2": "proved proposed exact common-zero elimination; one actual full-tail seed computation",
+    "NM3": "proposed bounded forward source filters and equality of all-real-translation closures; classical Hardy input retained",
+    "NM4": "proposed actual-phase lower bound for fixed-bank coefficient cost",
+    "RH": "OPEN; full feedback norm estimate not supplied"
+  }
+}
