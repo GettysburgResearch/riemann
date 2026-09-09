@@ -1,0 +1,73 @@
+{
+  "analytic_dependencies": [
+    {
+      "name": "Ordinary prime number theorem",
+      "url": "https://dlmf.nist.gov/27.12",
+      "use": "Only pi(x)~x/log(x), unconditional, used in PROOF section 3.1"
+    },
+    {
+      "name": "Euler products and Mobius Dirichlet series",
+      "url": "https://dlmf.nist.gov/27.4",
+      "use": "Classical background; finite products expanded exactly"
+    },
+    {
+      "name": "Fourier Plancherel; analytic uniqueness; zeta functional equation",
+      "use": "Classical analytic inputs; needed source identities reconstructed in PROOF"
+    }
+  ],
+  "main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "new_arithmetic_upper_bound_for_optimum": false,
+  "prior_context": [
+    {
+      "inspection": "abstract only; not a theorem input or a novelty search",
+      "name": "S. M. Gonek, Finite Euler products and the Riemann Hypothesis",
+      "url": "https://arxiv.org/abs/0704.3448"
+    },
+    {
+      "inspection": "abstract-level reconnaissance only; no resulting theorem used",
+      "name": "Xi/Jensen/Lee-Yang literature search"
+    }
+  ],
+  "repository_sources": [
+    {
+      "git_blob": "c2181ad9ebf037614f3daa8957df640159f8d968",
+      "inspection": "full returned text",
+      "path": "AGENTS.md",
+      "ref": "f99d9e3908dde4865377c75d9ca051c1f545bf4f"
+    },
+    {
+      "inspection": "full returned approach-map text",
+      "path": "PROGRAMMES.md",
+      "ref": "f99d9e3908dde4865377c75d9ca051c1f545bf4f"
+    },
+    {
+      "git_blob": "875f98b268b5d3c6185db6a0538d893fc825c92e",
+      "inspection": "initial returned excerpt plus exact lines 122-236; not all later sections",
+      "path": "research/integrated/CURRENT_RESULTS.md",
+      "ref": "f99d9e3908dde4865377c75d9ca051c1f545bf4f"
+    },
+    {
+      "git_blob": "ff5e98698cf09a95eaed6dfba3dc3f8307a01e1e",
+      "inspection": "PR metadata and proof lines 1-148; later affine theorem metadata only",
+      "path": "standalone/2026-09-09-near-square-root-residual-compression/PROOF.md",
+      "pr": 803,
+      "ref": "ac2d49b2a62d61aadebd38b63ae6ad52af6b571f"
+    },
+    {
+      "inspection": "live PR metadata; description contains historical checkpoint 8f01064df805624c045877655893c324a220975d; no fresh proof-file audit",
+      "pr": 765,
+      "ref": "359849086f0a62cc1cabd99b5029cdc4a44917d1"
+    },
+    {
+      "inspection": "live PR metadata; full Schur manuscript not newly audited",
+      "pr": 792,
+      "ref": "465cb28ed8cbfa1bb071d9a85eeda9890decfe6b"
+    },
+    {
+      "inspection": "metadata only; not a census, independent numerical replay, or proof review",
+      "pr_search": "12 open PRs sorted updated descending"
+    }
+  ],
+  "rh_strength_input_used": false,
+  "scope": "Selected live reassessment; not an exhaustive review or acceptance of parent work."
+}
