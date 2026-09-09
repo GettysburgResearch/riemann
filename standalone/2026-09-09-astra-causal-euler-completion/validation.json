@@ -1,0 +1,97 @@
+{
+  "schema": "EPC26-validation/v1",
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "scope": "Actual bounded standalone replay, not full repository validation or independent mathematical acceptance",
+  "runs": [
+    {
+      "name": "producer-normal",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "produce.py",
+        "--check",
+        "result.json",
+        "--emit",
+        "/mnt/data/rh_causal_completion/replays/producer-normal.json"
+      ],
+      "utc_started": "2026-09-09T13:28:46.271349+00:00",
+      "seconds": 2.050339,
+      "returncode": 0,
+      "stdout": "PRODUCER PASS ddf41a7acf1c5f427b06b218ace44a20a67e998403ed737039f168765c4bacde\nprefixes 256 repairs 48 complete_B_expansions 8\n",
+      "stderr": ""
+    },
+    {
+      "name": "verifier-normal",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "verify.py",
+        "result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_causal_completion/replays/verifier-normal.json"
+      ],
+      "utc_started": "2026-09-09T13:28:48.322223+00:00",
+      "seconds": 2.198296,
+      "returncode": 0,
+      "stdout": "SEPARATE RECONSTRUCTION PASS ddf41a7acf1c5f427b06b218ace44a20a67e998403ed737039f168765c4bacde\nRESEALED CORRUPTIONS REJECTED 12\n",
+      "stderr": ""
+    },
+    {
+      "name": "producer-optimized",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "-O",
+        "produce.py",
+        "--check",
+        "result.json",
+        "--emit",
+        "/mnt/data/rh_causal_completion/replays/producer-optimized.json"
+      ],
+      "utc_started": "2026-09-09T13:28:50.521307+00:00",
+      "seconds": 1.922627,
+      "returncode": 0,
+      "stdout": "PRODUCER PASS ddf41a7acf1c5f427b06b218ace44a20a67e998403ed737039f168765c4bacde\nprefixes 256 repairs 48 complete_B_expansions 8\n",
+      "stderr": ""
+    },
+    {
+      "name": "verifier-optimized",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "-O",
+        "verify.py",
+        "result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_causal_completion/replays/verifier-optimized.json"
+      ],
+      "utc_started": "2026-09-09T13:28:52.444097+00:00",
+      "seconds": 2.345686,
+      "returncode": 0,
+      "stdout": "SEPARATE RECONSTRUCTION PASS ddf41a7acf1c5f427b06b218ace44a20a67e998403ed737039f168765c4bacde\nRESEALED CORRUPTIONS REJECTED 12\n",
+      "stderr": ""
+    }
+  ],
+  "all_runs_passed": true,
+  "reconstructed_reports_byte_equal": {
+    "producer-normal.json": true,
+    "producer-optimized.json": true,
+    "verifier-normal.json": true,
+    "verifier-optimized.json": true
+  },
+  "report_semantic_sha256": "ddf41a7acf1c5f427b06b218ace44a20a67e998403ed737039f168765c4bacde",
+  "report_file_sha256": "1c169e8708868f653c1c7df6392d61d5b27a0196ddace3b68f89ad214683bd2e",
+  "resealed_corruptions_per_verifier_mode": 12,
+  "mathematical_claims_proved_by_finite_replay": false,
+  "full_repository_validator_run": false,
+  "full_records_byte_equal": true,
+  "full_records_file_sha256": "479d7d4620d16dd95ab6b4a133f0bcae354d54e1c3bf8daa859ad724f7cb9d39",
+  "full_records_semantic_sha256": "d6cf1ed4e9a5460bee4383db4811adefd2366aa07a727e4e2907ccb1ecbdb676"
+}
