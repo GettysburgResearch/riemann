@@ -1,0 +1,47 @@
+{
+  "claims": [
+    {
+      "id": "TRG26.T1",
+      "proof": "PROOF.md sections 3-5",
+      "scope": "all sufficiently large real P; explicit finite divisor-closed union",
+      "statement": "centered gap=3 zeta(2)/log log P+O((log log P)^-2)",
+      "status": "PROPOSED_PROVED"
+    },
+    {
+      "id": "TRG26.T2",
+      "proof": "PROOF.md section 2",
+      "scope": "all pairs of disjoint finite nonempty prime alphabets",
+      "statement": "unique scalar secular root is the full centered gap; all other positive eigenvalues at least min a_p",
+      "status": "PROPOSED_PROVED"
+    },
+    {
+      "id": "TRG26.T3",
+      "proof": "PROOF.md sections 1,7",
+      "scope": "finite all-support class, prime bound P, arbitrary exponent depths",
+      "statement": "worst inverse centered gap has order log log P; lower new, upper rederived",
+      "status": "PROPOSED_PROVED"
+    },
+    {
+      "id": "TRG26.T4",
+      "proof": "PROOF.md sections 2.3,6",
+      "scope": "same explicit union graphs",
+      "statement": "exact slow-mode vector and absolute-gap complement after retaining constants and contrast",
+      "status": "PROPOSED_PROVED"
+    },
+    {
+      "id": "TRG26.C1",
+      "proof": "verify.py actual_certificate",
+      "scope": "P=17,31 only",
+      "statement": "directed actual-logarithmic gap brackets, no asymptotic inference",
+      "status": "FINITE_CERTIFICATE"
+    },
+    {
+      "id": "TRG26.OPEN",
+      "proof": "ATTEMPT.md section 3; premise not proved",
+      "scope": "ordinary primes over the whole half-line",
+      "statement": "finite critical prime discrepancy energy / subpower native residual upper bound",
+      "status": "OPEN"
+    }
+  ],
+  "rh_proved": false
+}
