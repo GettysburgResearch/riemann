@@ -1,0 +1,80 @@
+{
+  "schema": "astra-kernel-spectral-sources/v1",
+  "repository": "GettysburgResearch/riemann",
+  "frozen_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "captured_utc": "2026-09-09T13:39:44.026760+00:00",
+  "status": "PROPOSED; RH_NOT_PROVED",
+  "remote_sources": [
+    {
+      "pr": 805,
+      "commit": "602d7ddf9dbd2ba79bd6cada149772111ca72150",
+      "scope": "Live PR metadata and source interface; no claim to re-review all eight passes."
+    },
+    {
+      "pr": 805,
+      "commit": "ccd0a80dbd9844d06ccd6331a15b085b9c9afa41",
+      "path": "standalone/2026-09-07-astra-balanced-hyperbola/PROOF.md",
+      "git_blob": "2af125b452015a0b73483eef66b0995b6c874097",
+      "scope": "Inspected source definitions, Newton square-scale identity, regularized kernel and method countercontrols. New proof rederives its remainder bound."
+    }
+  ],
+  "preserved_prior_files": {
+    "prior/PROOF.md": {
+      "bytes": 18812,
+      "sha256": "3d6c62f1ccb2c188afa08f039119cbb4d0f8b84321f36b8a1b325700a22e3ab3",
+      "git_blob": "90462d17ef8e73addc0dd41c5cb696bd2319df7b"
+    },
+    "prior/check.py": {
+      "bytes": 9081,
+      "sha256": "bc5a36116520df94cf9877e0e5808c5c02c596850096946c0970b5425900dc71",
+      "git_blob": "404039f040b7c793993b978ada10a72839affe0d"
+    }
+  },
+  "prior_canonical_report": {
+    "bytes": 99962,
+    "sha256": "fcb9c9c91d884a4b3c106f46bfc1e2c6e68bc80cc645ebea94a8529df984edee",
+    "git_blob": "fde3afc2ddfe327b26b86d1457becc8d21047ea6",
+    "semantic_sha256": "e2843d1605d1e650705fd5c4103a364fe1739ae56600df6f991cc70924a55a3b",
+    "publication": "Not copied to this packet; byte-for-byte regenerable using unchanged prior/check.py. Original remains in riemann_astra_critical_source_attack.zip.",
+    "verified_this_pass": "Regenerated into execution/prior_reproduced.json and cmp matched original bytes."
+  },
+  "new_canonical_report": {
+    "bytes": 1554,
+    "sha256": "5adc0cf702d2856057ab79a468d08c9b972d80426609b7b86a0468f05dc01d37",
+    "git_blob": "082e91decc909172544e7d62222998b1c0335b0b"
+  },
+  "literature": [
+    {
+      "url": "https://arxiv.org/abs/1807.05890",
+      "authors": "M. N. Huxley and N. Watt",
+      "use": "Classical short-source, quadratic-matrix and spectral/Perron context. No priority claim."
+    },
+    {
+      "url": "https://arxiv.org/abs/1812.01039",
+      "authors": "Nigel Watt",
+      "use": "Abstract inspected; related unsmoothed kernel, not an imported theorem for the present kernel."
+    },
+    {
+      "url": "https://arxiv.org/abs/1912.01716",
+      "authors": "Nigel Watt",
+      "use": "Abstract inspected; related eigenfunction programme, not an imported proof."
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.2",
+      "use": "Standard meromorphic continuation and pole/residue at 1."
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.6",
+      "use": "Standard zeta(0)=-1/2."
+    }
+  ],
+  "omissions": [
+    "No proof of actual-source subpower energy",
+    "No actual zeta zero approximations or census used",
+    "No infinite zero-residue expansion asserted",
+    "No numerical contour integration",
+    "No full repository checkout/validator; direct Git failed DNS",
+    "No independent referee or proof-assistant acceptance",
+    "No comprehensive novelty/priority review"
+  ]
+}
