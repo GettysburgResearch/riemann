@@ -1,0 +1,66 @@
+{
+  "schema": "EPC26-source-lock/v1",
+  "captured_utc": "2026-09-09T13:25:40.138621+00:00",
+  "repository": "GettysburgResearch/riemann",
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "status": "PROPOSED_NOT_RH_PROOF",
+  "independent_mathematical_review": false,
+  "repository_reads": [
+    {
+      "sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "paths": [
+        "AGENTS.md",
+        "STATUS.md"
+      ],
+      "scope": "Full operating/status text read; not a repository-wide proof audit."
+    },
+    {
+      "pr": 829,
+      "sha": "f782788933dc21a0fe6a844950f5ca532eba7d86",
+      "path": "standalone/2026-09-08-astra-coherent-channel-synthesis/COHERENT_SOURCE.md",
+      "blob": "f747626a1c98ed51ecba3fe110d6067c2ba0094f",
+      "scope": "Full text read. Native max-kernel energy and delayed-factorial consumer credited and reconstructed, not assumed accepted."
+    },
+    {
+      "pr": 834,
+      "sha": "2787339f8f1feb619f1679afb96cb9995e440958",
+      "scope": "Current description inspected for orientation; no spectral-pencil theorem used."
+    }
+  ],
+  "historical_delivery": {
+    "zip": "riemann_native_repair_attack.zip",
+    "zip_sha256": "c93a122ce40a99cb668f220ef17b424125a0e9dbceba50e98b123b3f19575751",
+    "proof_destination": "PREVIOUS_ATTEMPT.md",
+    "proof_sha256": "d17b43c493383b51b7cba8c47aa47e65cf2ea910b29e12750d351cd5a42d95b4",
+    "scope": "Original written PROOF.md preserved byte-for-byte. Its complete old producer, verifier/result protocol and external source inspection are not newly replayed or accepted."
+  },
+  "external_reading": [
+    {
+      "url": "https://dlmf.nist.gov/25.10",
+      "scope": "Classical zeta symmetry and RH definition; no new zero-location statement."
+    },
+    {
+      "url": "https://dlmf.nist.gov/27.12",
+      "scope": "PNT statement checked for prior-work context only. EPC26 constructive estimates do not use PNT."
+    },
+    {
+      "url": "https://arxiv.org/abs/2006.02953",
+      "scope": "Search-returned abstract only: Nyman-Beurling approximation/coefficient-control lineage. No unseen theorem imported."
+    }
+  ],
+  "mathematical_inputs": [
+    "Finite Mobius inversion",
+    "Finite geometric products",
+    "Hilbert space orthogonality and Cauchy-Schwarz",
+    "Finite-shift Laplace/Plancherel identity",
+    "Zeta analytic continuation and functional equation"
+  ],
+  "not_performed": [
+    "Independent mathematical peer review",
+    "Full repository validator/build",
+    "Formal proof build",
+    "Broad novelty/priority audit",
+    "Replay of original NRT26 experiment bundle",
+    "Any proof of subpower E_Y or RH"
+  ]
+}
