@@ -1,0 +1,25 @@
+id	status	scope	statement	proof	RH_boundary
+R1.1	IMPORTED_AND_REDERIVED_NORMALIZATION	global theta source	Invariant xi is the normalized positive theta determinant mixture	proofs/R1_SOURCE_DETERMINANT_AND_MARKED_OBSTRUCTION.md	No scalar positivity inferred
+R1.2	PROPOSED_PROVED	global operator construction	Explicit source-coefficient trace-class companion has determinant F/F(0)	proofs/R1_SOURCE_DETERMINANT_AND_MARKED_OBSTRUCTION.md	Operator is nonpositive; counterfeit-generality retained
+R1.3	PROPOSED_PROVED_OBSTRUCTION	global operator	Companion has exact negative tail Rayleigh vector and no positive diagonal symmetrizer	proofs/R1_SOURCE_DETERMINANT_AND_MARKED_OBSTRUCTION.md	Does not rule out other scalar positive realizations
+R1.4	PROPOSED_PROVED_OBSTRUCTION	actual theta marked marginals	Two distinct natural modes have strictly positive covariance incompatible with Hermitian principal minors	proofs/R1_SOURCE_DETERMINANT_AND_MARKED_OBSTRUCTION.md	Scalar specialization not refuted
+R1.5	PROPOSED_PROVED_OBSTRUCTION	actual split theta count	Vacuum and forced-bit covariance gives a marked determinantal obstruction and positive approximation cost	proofs/R1_SOURCE_DETERMINANT_AND_MARKED_OBSTRUCTION.md	Unmarked scalar quasi-free gate remains open
+R1.6	PROPOSED_PROVED_CORRECTION	nonatomic direct integral	Natural fiber direct integral is noncompact, so no ordinary Fredholm determinant	proofs/R1_SOURCE_DETERMINANT_AND_MARKED_OBSTRUCTION.md	Alternative determinant formalisms require separate specification
+R1.7	PROPOSED_PROVED	analytic germ	Scalar second and third cycles retain explicit variance and cumulant debts	proofs/R1_SOURCE_DETERMINANT_AND_MARKED_OBSTRUCTION.md	No all-order cycle sign theorem
+R2.1	PROPOSED_PROVED	arbitrary finite prefixes	Frequency-ensemble energy and untwisted maximal prefix are comparable with finite-second-moment logarithmic cost	proofs/R2_FIXED_FREQUENCY_AND_SHARP_TRANSPORT.md	No arithmetic cancellation input
+R2.2	PROPOSED_PROVED	finite-source comparison	Stationary tent energy compares to any fixed frequency ensemble with logarithmic cubed cost	proofs/R2_FIXED_FREQUENCY_AND_SHARP_TRANSPORT.md	Coarea/prefix core credited to PR779
+R2.3	EXACT_REDUCTION_WITH_CLASSICAL_IMPORT	individual zeta	Fixed [1,2] maximal Möbius energy is RH-equivalent	proofs/R2_FIXED_FREQUENCY_AND_SHARP_TRANSPORT.md	Subpower premise unproved
+R2.4	PROPOSED_PROVED	causal L2	Sharp twist transport constant is (sqrt(t^2+4sigma^2)+abs(t))/(2sigma)	proofs/R2_FIXED_FREQUENCY_AND_SHARP_TRANSPORT.md	Sharpness is ambient, not native Möbius sharpness
+R2.5	FAILED_ATTEMPT_AND_COUNTERCONTROL	source-blind method	Long-frequency mean value and deterministic back-transfer give no exponent contraction	proofs/R2_FIXED_FREQUENCY_AND_SHARP_TRANSPORT.md	New arithmetic power saving still absent
+R3.1-R3.2	STANDARD_FRAMEWORK_REDERIVED	finite multiset	Selfadjoint pair operator and intrinsic flag with multiplicities	proofs/R3_HORIZONTAL_SURPLUS_IDENTITY.md	No zeta asymptotic used
+R3.3	PROPOSED_PROVED	finite multiset	Exact positive-surplus identity E-(2M-S)=2d+2ell+4hE+8hN+R	proofs/R3_HORIZONTAL_SURPLUS_IDENTITY.md	No arithmetic upper bound for the surplus
+R3.4	PROPOSED_PROVED	finite multiset	Explicit horizontal Schur complement gives E>=2M-S+8TrH+4TrH2	proofs/R3_HORIZONTAL_SURPLUS_IDENTITY.md	H depends on complete packet and kernel
+R3.5	PROPOSED_PROVED_SHARP	finite simple multiset	E>=2M-S+8h+8h^2/q with single-pair equality	proofs/R3_HORIZONTAL_SURPLUS_IDENTITY.md	Not used for arbitrary multiplicities
+R3.6	CONDITIONAL_EXACT	analytic transfer	An external pair-energy bound also pays the conditioned horizontal surplus	proofs/R3_HORIZONTAL_SURPLUS_IDENTITY.md	External error uniformity not re-proved; no new percentage
+R3.7	PROPOSED_PROVED	finite perturbation	A tail error below twice a conditioned horizontal eigenvalue cannot erase its negative direction	proofs/R3_HORIZONTAL_SURPLUS_IDENTITY.md	Actual full-source error bound absent
+R3.9	PROPOSED_PROVED	explicit non-zeta quartet	Two real neighbors screen quadratic raw horizontal mass to y^6/1575	proofs/R3_SCREENING_AND_CONDITIONING.md	Not an actual zeta-zero configuration
+R3.10	PROPOSED_PROVED	fixed-depth iterated limit	General screening coefficient is reciprocal of n!^2(2n+1)L_n^2	proofs/R3_SCREENING_AND_CONDITIONING.md	No simultaneous growing-depth uniformity asserted
+R3.11	PROPOSED_PROVED_OBSTRUCTION	non-zeta finite models	No positive displacement-only lower Schur bound at fixed bandwidth and unbounded real background	proofs/R3_SCREENING_AND_CONDITIONING.md	Arithmetic conditioning could still defeat these models
+R1-P	OPEN	global scalar	Positive source-defined scalar xi determinant	ROUTES_AND_NEXT_PASS.md	RH-bearing
+R2-P	OPEN	individual arithmetic	New signed power improvement for fixed-band maximal Möbius energy	ROUTES_AND_NEXT_PASS.md	Uniform iteration would prove RH
+R3-P	OPEN	individual-zero arithmetic	Unaveraged source estimate and complete tail bound beating actual conditioned horizontal gap	ROUTES_AND_NEXT_PASS.md	RH-bearing

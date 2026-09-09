@@ -1,0 +1,137 @@
+{
+  "additional_saved_result_rejections_per_mode": 3,
+  "commands": [
+    {
+      "argv": [
+        "python",
+        "verify.py"
+      ],
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ac5bb65b20e464d20ea4dcde33887a8b2ae22aa51447ead23524eac0faf154f0"
+    },
+    {
+      "argv": [
+        "python",
+        "verify.py",
+        "--check",
+        "RESULTS.json"
+      ],
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ac5bb65b20e464d20ea4dcde33887a8b2ae22aa51447ead23524eac0faf154f0"
+    },
+    {
+      "argv": [
+        "python",
+        "-O",
+        "verify.py",
+        "--check",
+        "RESULTS.json"
+      ],
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ac5bb65b20e464d20ea4dcde33887a8b2ae22aa51447ead23524eac0faf154f0"
+    },
+    {
+      "argv": [
+        "python",
+        "verify.py",
+        "--self-test"
+      ],
+      "returncode": 0,
+      "stderr_sha256": "d2bc940fd1bd40df95a9106fa83fd9695e69b9f182b187f0a5f7f2ef52a9cfae",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "python",
+        "-O",
+        "verify.py",
+        "--self-test"
+      ],
+      "returncode": 0,
+      "stderr_sha256": "d2bc940fd1bd40df95a9106fa83fd9695e69b9f182b187f0a5f7f2ef52a9cfae",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "python",
+        "verify.py",
+        "--check",
+        "<temporary-corrupted-result.json>"
+      ],
+      "mutation": "number",
+      "returncode": 1,
+      "stderr_sha256": "db1bf994cecdfe9956893d999411e248018dbdef82c9e7434579f9a01ab54aa7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "python",
+        "-O",
+        "verify.py",
+        "--check",
+        "<temporary-corrupted-result.json>"
+      ],
+      "mutation": "number",
+      "returncode": 1,
+      "stderr_sha256": "db1bf994cecdfe9956893d999411e248018dbdef82c9e7434579f9a01ab54aa7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "python",
+        "verify.py",
+        "--check",
+        "<temporary-corrupted-result.json>"
+      ],
+      "mutation": "float_alias",
+      "returncode": 1,
+      "stderr_sha256": "db1bf994cecdfe9956893d999411e248018dbdef82c9e7434579f9a01ab54aa7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "python",
+        "-O",
+        "verify.py",
+        "--check",
+        "<temporary-corrupted-result.json>"
+      ],
+      "mutation": "float_alias",
+      "returncode": 1,
+      "stderr_sha256": "db1bf994cecdfe9956893d999411e248018dbdef82c9e7434579f9a01ab54aa7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "python",
+        "verify.py",
+        "--check",
+        "<temporary-corrupted-result.json>"
+      ],
+      "mutation": "RH_flag",
+      "returncode": 1,
+      "stderr_sha256": "db1bf994cecdfe9956893d999411e248018dbdef82c9e7434579f9a01ab54aa7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "python",
+        "-O",
+        "verify.py",
+        "--check",
+        "<temporary-corrupted-result.json>"
+      ],
+      "mutation": "RH_flag",
+      "returncode": 1,
+      "stderr_sha256": "db1bf994cecdfe9956893d999411e248018dbdef82c9e7434579f9a01ab54aa7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "exact_checks_per_mode": 489,
+  "finite_checks_not_analytic_proofs": true,
+  "normal_optimized_result_outputs_identical": true,
+  "unit_tests_per_mode": 12
+}

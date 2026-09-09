@@ -1,0 +1,17 @@
+{
+  "RH_proved": false,
+  "agent_guide_blob": "be9b5255e6108096450bfd63d8f04a7e9cec580a",
+  "base_read": "c4fedfcebf5226915969610281c650f452844fd8",
+  "branch": "research/astra/20260905-three-route-assault",
+  "code_dependencies": "Python standard library only; no predecessor code imported",
+  "external_inputs": [
+    "classical PNT",
+    "Fourier/Plancherel identity",
+    "DLMF 18.14.8 at alpha=0"
+  ],
+  "external_novelty_claim": false,
+  "parent_files_modified": false,
+  "pr": 793,
+  "repository": "GettysburgResearch/riemann",
+  "source_definition": "mu(n) restricted to squarefree products of the declared prime set; q=67 omitted only where specified"
+}

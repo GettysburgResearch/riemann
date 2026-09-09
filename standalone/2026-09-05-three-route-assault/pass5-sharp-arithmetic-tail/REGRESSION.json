@@ -1,0 +1,100 @@
+{
+  "actual_arithmetic_sum": false,
+  "arithmetic": "NON_DIRECTED_HIGH_PRECISION",
+  "digits": 90,
+  "gaussian_checks": [
+    {
+      "degree": 50,
+      "normal_tail": "0.8413447460685429485852",
+      "tail_fraction": "0.8768666266459406458938",
+      "z": -1
+    },
+    {
+      "degree": 50,
+      "normal_tail": "0.5",
+      "tail_fraction": "0.5365040410202002156582",
+      "z": 0
+    },
+    {
+      "degree": 50,
+      "normal_tail": "0.1586552539314570514148",
+      "tail_fraction": "0.1954950237042826209653",
+      "z": 1
+    },
+    {
+      "degree": 200,
+      "normal_tail": "0.8413447460685429485852",
+      "tail_fraction": "0.8593141074454911484701",
+      "z": -1
+    },
+    {
+      "degree": 200,
+      "normal_tail": "0.5",
+      "tail_fraction": "0.5182767881464432580918",
+      "z": 0
+    },
+    {
+      "degree": 200,
+      "normal_tail": "0.1586552539314570514148",
+      "tail_fraction": "0.1769527633711587995311",
+      "z": 1
+    },
+    {
+      "degree": 800,
+      "normal_tail": "0.8413447460685429485852",
+      "tail_fraction": "0.850375877829022896669",
+      "z": -1
+    },
+    {
+      "degree": 800,
+      "normal_tail": "0.5",
+      "tail_fraction": "0.5091414238351436549213",
+      "z": 0
+    },
+    {
+      "degree": 800,
+      "normal_tail": "0.1586552539314570514148",
+      "tail_fraction": "0.1677683332975180873633",
+      "z": 1
+    }
+  ],
+  "proof_dependency": false,
+  "saddle_checks": [
+    {
+      "c": "4.0",
+      "degree": 50,
+      "scalar_exact_over_leading": "0.9621642834303324499898",
+      "vector_exact_over_leading": "0.9611524238083536103913"
+    },
+    {
+      "c": "4.0",
+      "degree": 200,
+      "scalar_exact_over_leading": "0.9894552670065203902448",
+      "vector_exact_over_leading": "0.9891670105763557446949"
+    },
+    {
+      "c": "4.0",
+      "degree": 800,
+      "scalar_exact_over_leading": "0.997279035070413405229",
+      "vector_exact_over_leading": "0.9972042019059248432254"
+    },
+    {
+      "c": "8.0",
+      "degree": 50,
+      "scalar_exact_over_leading": "0.9956600062950396669496",
+      "vector_exact_over_leading": "0.9956113738118716631663"
+    },
+    {
+      "c": "8.0",
+      "degree": 200,
+      "scalar_exact_over_leading": "0.9989025876519804287861",
+      "vector_exact_over_leading": "0.998890153051324611718"
+    },
+    {
+      "c": "8.0",
+      "degree": 800,
+      "scalar_exact_over_leading": "0.9997248462170025729105",
+      "vector_exact_over_leading": "0.9997217196788351664653"
+    }
+  ]
+}
