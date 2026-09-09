@@ -1,0 +1,45 @@
+{
+ "experiment": "X-108500-transform-defects",
+ "claim": "T-108500",
+ "checks": [
+  {
+   "name": "D1_defect_law",
+   "ok": true,
+   "detail": "m=2,3,4 x 24 instantiations"
+  },
+  {
+   "name": "D2_supersingular_degeneration",
+   "ok": true,
+   "detail": "reduced form 1/(1-b^2 T^2) at a=0"
+  },
+  {
+   "name": "D3_self_duality",
+   "ok": true,
+   "detail": "c_{m-1-r} b^{mr} = c_r b^{m(m-1)/2}"
+  },
+  {
+   "name": "D4_linear_coefficient_law",
+   "ok": true,
+   "detail": "c_1 = a^m - h_m, m=2..6"
+  },
+  {
+   "name": "D5_cauchy_hadamard",
+   "ok": true,
+   "detail": "12 instantiation pairs"
+  },
+  {
+   "name": "D6_jacobi_trudi_hankel_minor",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D7_adams_relabelling",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "all_ok": true,
+ "arithmetic_class": "EXACT_RATIONAL",
+ "rh_established": false,
+ "scope_note": "finite exact replay of the theorem's computed content; the general-m proofs are in standalone/2026-08-30-transform-defect-law/PROOF.md"
+}

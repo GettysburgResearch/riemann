@@ -1,0 +1,28 @@
+{
+ "experiment": "X-108513-torsion-threshold",
+ "checks": [
+  {
+   "name": "V1 regrouping lemma: prefactor prod (1-alpha^c T)^{n_c-1} divides N_m exactly in K[T] (4 point/m cases)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V2 entry table: disc_z M zero first at exactly m = 2R+1 (all points with entry <= 27, every earlier m checked)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V3 collision at the trace: (z-a)^2 | M_{2R+1} at every point",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V4 the m = 2R near-miss: no collision at m = 2R",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "all_ok": true,
+ "arithmetic_class": "EXACT_RATIONAL (number fields)",
+ "rh_established": false
+}

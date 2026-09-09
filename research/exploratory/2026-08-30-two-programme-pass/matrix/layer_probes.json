@@ -1,0 +1,72 @@
+{
+ "rank6_corr3": [
+  {
+   "es": [
+    1,
+    2,
+    3,
+    2,
+    1,
+    2
+   ],
+   "corr3": "-2",
+   "conjecture_2(e4h2-e5h1+e6h0)": "-2",
+   "match": true
+  },
+  {
+   "es": [
+    2,
+    1,
+    -1,
+    3,
+    2,
+    1
+   ],
+   "corr3": "12",
+   "conjecture_2(e4h2-e5h1+e6h0)": "12",
+   "match": true
+  },
+  {
+   "es": [
+    1,
+    1,
+    2,
+    1,
+    3,
+    -1
+   ],
+   "corr3": "-8",
+   "conjecture_2(e4h2-e5h1+e6h0)": "-8",
+   "match": true
+  },
+  {
+   "es": [
+    2,
+    -1,
+    1,
+    2,
+    -2,
+    3
+   ],
+   "corr3": "34",
+   "conjecture_2(e4h2-e5h1+e6h0)": "34",
+   "match": true
+  },
+  {
+   "es": [
+    1,
+    2,
+    1,
+    -1,
+    2,
+    2
+   ],
+   "corr3": "2",
+   "conjecture_2(e4h2-e5h1+e6h0)": "2",
+   "match": true
+  }
+ ],
+ "rh_established": false,
+ "N5_factor_over_Qab": "T**4*b**10 + 4*T**3*a**3*b**6 - 3*T**3*a*b**7 + 6*T**2*a**4*b**3 - 8*T**2*a**2*b**4 + 2*T**2*b**5 + 4*T*a**3*b - 3*T*a*b**2 + 1",
+ "ansatz_disc_factored": "a**2*b**2*(16*a**4 - 48*a**2*b + 41*b**2)"
+}

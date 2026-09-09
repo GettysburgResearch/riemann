@@ -1,0 +1,36 @@
+{
+ "modulus": {
+  "x": "4341/50000",
+  "y": "3731/2500",
+  "context": "theta80 dirty probe of the C8 archipelago campaign, exact-rationalized"
+ },
+ "rectangle": {
+  "re": [
+   "62/100",
+   "77/100"
+  ],
+  "im": [
+   "1886/100",
+   "1904/100"
+  ]
+ },
+ "winding_interval": [
+  "0.99870691409184501549",
+  "1.0012930883753197865"
+ ],
+ "winding": 1,
+ "pinned": true,
+ "steps": 27046,
+ "min_contour_enclosure_lower": "2.8466864e-14",
+ "parallelized_by_edge": true,
+ "edge_steps": [
+  4809,
+  6160,
+  6527,
+  9550
+ ],
+ "float_zero_location": "0.6940279890724 + 18.9467935267590 i",
+ "conclusion": "Z_Q has 1 zero(s) in the rectangle; its left edge Re s = 62/100 > 1/2: a PROVED complex off-critical-line zero at an exact archipelago-adjacent modulus.",
+ "verified": true,
+ "rh_established": false
+}

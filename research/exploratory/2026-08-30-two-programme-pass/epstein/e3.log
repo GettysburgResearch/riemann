@@ -1,0 +1,40 @@
+[19:07:37] pool: 4 workers, dps=40, Xmax=39.5
+[19:07:37] wrote SCOPE.md
+[19:07:37] E3: departure paths (tau step 0.1, tau* to 1e-3 -- coordinator budget guidance)
+[19:07:37] E3 path A_x_slide_y1.02
+[19:08:05]   tau=0.000: n_line=13 n_box=13 disc=0
+[19:08:52]   tau=0.100: n_line=13 n_box=13 disc=0
+[19:09:37]   tau=0.200: n_line=13 n_box=13 disc=0
+[19:10:27]   tau=0.300: n_line=13 n_box=13 disc=0
+[19:11:20]   tau=0.400: n_line=13 n_box=13 disc=0
+[19:12:12]   tau=0.500: n_line=13 n_box=13 disc=0
+[19:13:10]   tau=0.600: n_line=13 n_box=13 disc=0
+[19:14:17]   tau=0.700: n_line=11 n_box=11 disc=0
+[19:15:08]   tau=0.800: n_line=11 n_box=11 disc=0
+[19:15:56]   tau=0.900: n_line=11 n_box=11 disc=0
+[19:16:48]   tau=1.000: n_line=11 n_box=11 disc=0
+[19:16:48] E3 path A quiet to tau=1; extending along x to 0.35 (tau to 7/3)
+[19:17:48]   tau=1.000: n_line=11 n_box=11 disc=0
+[19:18:32]   tau=1.667: n_line=10 n_box=10 disc=0
+[19:19:22]   tau=2.333: n_line=9 n_box=11 disc=2
+[19:19:22]   event departure between tau=1.667 and 2.333: jump=2, candidates=[]
+[19:19:22] wrote e3_events.json
+[19:19:22] E3 path B_y_stretch_x0
+[19:19:35]   tau=0.000: n_line=13 n_box=13 disc=0
+[19:19:59]   tau=0.100: n_line=10 n_box=10 disc=0
+[19:20:22]   tau=0.200: n_line=11 n_box=11 disc=0
+[19:20:51]   tau=0.300: n_line=12 n_box=12 disc=0
+[19:21:18]   tau=0.400: n_line=14 n_box=14 disc=0
+[19:21:42]   tau=0.500: n_line=11 n_box=11 disc=0
+[19:22:07]   tau=0.600: n_line=10 n_box=14 disc=4
+[19:22:35]   tau=0.700: n_line=12 n_box=14 disc=2
+[19:23:04]   tau=0.800: n_line=17 n_box=17 disc=0
+[19:23:31]   tau=0.900: n_line=17 n_box=17 disc=0
+[19:23:50]   tau=1.000: n_line=20 n_box=20 disc=0
+[19:23:50]   event departure between tau=0.500 and 0.600: jump=4, candidates=[(25.117, 25.329), (23.599, 25.117), (22.053, 23.599)]
+[19:25:06]   event reentry between tau=0.600 and 0.700: jump=-2, candidates=[(24.052, 24.782), (24.782, 25.952)]
+[19:25:49]   event reentry between tau=0.700 and 0.800: jump=-2, candidates=[(10.931, 11.281), (15.014, 16.085)]
+[19:26:40] wrote e3_events.json
+[19:26:40] wrote departure_paths.json
+[19:26:40] wrote DEPARTURE_PATHS.md
+[19:26:40] done in 1143s

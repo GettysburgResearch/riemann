@@ -1,0 +1,30 @@
+[16:22:48] m = 26: rigorous node bound B = 10608, interp window K = 186
+[16:22:48] E1: evaluating pipeline at all nodes ...
+[16:22:48]   node 0 (0s)
+[16:22:49]   node 500 (1s)
+[16:22:50]   node 1000 (3s)
+[16:22:52]   node 1500 (4s)
+[16:22:54]   node 2000 (6s)
+[16:22:56]   node 2500 (8s)
+[16:22:58]   node 3000 (10s)
+[16:23:00]   node 3500 (12s)
+[16:23:02]   node 4000 (15s)
+[16:23:04]   node 4500 (17s)
+[16:23:07]   node 5000 (19s)
+[16:23:09]   node 5500 (21s)
+[16:23:11]   node 6000 (24s)
+[16:23:14]   node 6500 (26s)
+[16:23:16]   node 7000 (28s)
+[16:23:19]   node 7500 (31s)
+[16:23:21]   node 8000 (34s)
+[16:23:24]   node 8500 (36s)
+[16:23:27]   node 9000 (39s)
+[16:23:29]   node 9500 (42s)
+[16:23:32]   node 10000 (45s)
+[16:23:35]   node 10500 (48s)
+[16:23:36] E1 done: 10609 nodes, all structural asserts passed (48s)
+[16:23:36] E3: interpolating mu_j over first K+1 nodes ...
+[16:23:38] E3 done; degrees [156, 154, 150, 144, 136, 126, 114, 100, 84, 66, 46, 24, 0]
+[16:23:38] E4 PROOF: exact evaluation of candidates at ALL nodes ...
+[16:23:39] E4 proof complete (51s)
+[16:23:39] saved matrix/m26_spectrum.json (51s)

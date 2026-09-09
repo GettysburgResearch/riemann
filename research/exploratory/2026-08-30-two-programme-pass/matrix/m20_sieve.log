@@ -1,0 +1,38 @@
+[13:43:01] nu = 9, degree bound D = 1530
+[13:43:01] S2: exact resultants at 0..D ...
+[13:43:01]   a0 = 0 (0s)
+[13:43:05]   a0 = 200 (3s)
+[13:43:10]   a0 = 400 (9s)
+[13:43:16]   a0 = 600 (15s)
+[13:43:23]   a0 = 800 (22s)
+[13:43:30]   a0 = 1000 (29s)
+[13:43:38]   a0 = 1200 (36s)
+[13:43:46]   a0 = 1400 (44s)
+[13:43:51] S2 done (49s); max digits 3114
+[13:43:51] S3: modular interpolation + CRT ...
+[13:44:04] S3 CRT stable after 16 primes (63s)
+[13:44:04] candidate deg = 960
+[13:44:04] S3 PROOF: exact evaluation at all nodes ...
+[13:44:04]   verified through 0 (63s)
+[13:44:04]   verified through 400 (63s)
+[13:44:04]   verified through 800 (63s)
+[13:44:04]   verified through 1200 (63s)
+[13:44:04] S3 proof complete: candidate == disc (63s)
+[13:44:04] S4: dividing out torsion factors ...
+[13:44:05]   psi_3 divides with multiplicity 42
+[13:44:05]   psi_4 divides with multiplicity 64
+[13:44:05]   psi_5 divides with multiplicity 16
+[13:44:05]   psi_6 divides with multiplicity 42
+[13:44:05]   psi_7 divides with multiplicity 6
+[13:44:05]   psi_8 divides with multiplicity 20
+[13:44:05]   psi_9 divides with multiplicity 2
+[13:44:05]   psi_10 divides with multiplicity 16
+[13:44:05]   psi_12 divides with multiplicity 8
+[13:44:05]   psi_14 divides with multiplicity 6
+[13:44:05]   psi_16 divides with multiplicity 4
+[13:44:05]   psi_18 divides with multiplicity 2
+[13:44:05] remainder deg 628, content 1, lc 214970653842806960754643057052211872092451805839608774656
+[13:44:05] S4: exhaustive candidate torsion minpolys ...
+[13:44:07]   exhaustive bound N <= 3155072; 2432 candidate N
+[13:46:29] checked 2432 candidate psi_N (provably all); divisors of remainder: []
+[13:46:29] done (208s); converse m=20: True

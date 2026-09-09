@@ -1,0 +1,617 @@
+{
+ "arithmetic_class": "EXACT_RATIONAL (integers, Fractions; Gaussian rationals Q(i) as Fraction pairs; Z[zeta_5] as integer vectors mod x^5 - 1). No floating point anywhere in the build.",
+ "critical_line": {
+  "citation": "GRH for Dirichlet L-functions (generalization of Riemann 1859; commonly attributed to the Piltz era, ~1884 \u2014 CITATION-NEEDED for the precise origin); zero-free regions: de la Vallee Poussin (1896-1899)",
+  "detail": "GRH for L(s, chi_5): all nontrivial zeros on Re(s) = 1/2. Unproved.  Known unconditionally: L(1, chi_5) != 0 (Dirichlet) and a classical zero-free region near Re(s) = 1; nothing in this record moves the conjecture.",
+  "rigor": "OPEN",
+  "status": "CONJECTURE",
+  "witness": ""
+ },
+ "definition": "L(s, chi_5) = sum_{n>=1} chi_5(n) n^{-s} = prod_p (1 - chi_5(p) p^{-s})^{-1}, where chi_5 is the Legendre symbol mod 5 (the quadratic Dirichlet character of conductor 5, unit table (1,-1,-1,1)).  Local factor at p != 5: degree 1, Satake polynomial 1 - chi_5(p) T with T = p^{-s}; at the ramified prime 5 the local factor is 1.  The order-4 characters chi_4, chi_4bar mod 5 (values in Q(i)) are carried as exact side objects; chi_4^2 = chi_5.",
+ "detector_runs": {
+  "coefficient_battery": [
+   {
+    "chi5_of_p": -1,
+    "holdout": 4,
+    "prime": 2,
+    "series_terms": 12,
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root -1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": [
+     2,
+     0
+    ]
+   },
+   {
+    "chi5_of_p": -1,
+    "holdout": 4,
+    "prime": 3,
+    "series_terms": 12,
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root -1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": [
+     3,
+     0
+    ]
+   },
+   {
+    "chi5_of_p": -1,
+    "holdout": 4,
+    "prime": 7,
+    "series_terms": 12,
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root -1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": [
+     7,
+     0
+    ]
+   },
+   {
+    "chi5_of_p": 1,
+    "holdout": 4,
+    "prime": 11,
+    "series_terms": 12,
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root 1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": [
+     11,
+     0
+    ]
+   },
+   {
+    "chi5_of_p": -1,
+    "holdout": 4,
+    "prime": 13,
+    "series_terms": 12,
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root -1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": [
+     13,
+     0
+    ]
+   },
+   {
+    "chi5_of_p": 1,
+    "holdout": 4,
+    "prime": 19,
+    "series_terms": 12,
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root 1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": [
+     19,
+     0
+    ]
+   },
+   {
+    "chi5_of_p": 1,
+    "holdout": 4,
+    "prime": 29,
+    "series_terms": 12,
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root 1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": [
+     29,
+     0
+    ]
+   },
+   {
+    "chi5_of_p": 0,
+    "holdout": 4,
+    "note": "ramified prime: local factor L_5(T) = 1; A4 purity vacuous at degree 0",
+    "prime": 5,
+    "series_terms": 12,
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 0, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "SKIPPED",
+       "witness": "degree-0 denominator: purity vacuous; virtual part not pure-tested"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 0,
+      "denominator": "[1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight_claim": [
+     5,
+     0
+    ]
+   }
+  ],
+  "tensor_battery": [
+   {
+    "a6": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -1]"
+    },
+    "prime": 2,
+    "statement": "chi_5 (x) chi_5 = chi_0 locally at p"
+   },
+   {
+    "a6": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -1]"
+    },
+    "prime": 3,
+    "statement": "chi_5 (x) chi_5 = chi_0 locally at p"
+   },
+   {
+    "a6": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -1]"
+    },
+    "prime": 7,
+    "statement": "chi_5 (x) chi_5 = chi_0 locally at p"
+   },
+   {
+    "a6": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -1]"
+    },
+    "prime": 11,
+    "statement": "chi_5 (x) chi_5 = chi_0 locally at p"
+   },
+   {
+    "a6": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -1]"
+    },
+    "prime": 13,
+    "statement": "chi_5 (x) chi_5 = chi_0 locally at p"
+   },
+   {
+    "a6": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -1]"
+    },
+    "prime": 19,
+    "statement": "chi_5 (x) chi_5 = chi_0 locally at p"
+   },
+   {
+    "a6": {
+     "axiom": "A6_TENSOR",
+     "rigor": "EXACT_RATIONAL",
+     "status": "HOLDS",
+     "witness": "predicted tensor local factor [1, -1]"
+    },
+    "prime": 29,
+    "statement": "chi_5 (x) chi_5 = chi_0 locally at p"
+   }
+  ]
+ },
+ "id": "dirichlet_mod5",
+ "ladder": {
+  "L0_WELL_DEFINED": {
+   "citation": "Euler's criterion (Euler, ~1748-1761); Legendre symbol (Legendre, 1798)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "chi_5 by Euler criterion n^((5-1)/2) mod 5 in exact integer arithmetic; unit table (chi(1),chi(2),chi(3),chi(4)) = (1, -1, -1, 1) matches the quadratic-residue set {1,4} mod 5; 5-periodicity verified for all n <= 200"
+  },
+  "L1_MULTIPLICATIVITY": {
+   "citation": "Dirichlet characters: Dirichlet (1837)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "chi_5(mn) = chi_5(m) chi_5(n) verified exactly for all 1 <= m, n <= 200 (40000 pairs, ramified cases chi_5(5k) = 0 included)"
+  },
+  "L2_EULER_PRODUCT": {
+   "citation": "Euler product for Dirichlet L-series: Dirichlet (1837), after Euler (1737)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "a_n = prod_p chi_5(p)^(v_p(n)) verified exactly against trial-division factorization for all n <= 200; the formal Euler product identity follows from complete multiplicativity (L1); analytic convergence for Re(s) > 1 is imported"
+  },
+  "L3_BOUNDED_DEGREE_RATIONAL": {
+   "citation": "",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "every local factor has degree <= 1: L_p(T) = 1 - chi_5(p) T for p != 5 and L_5(T) = 1; detect() certified deg Q = 1 with A1-A5 all HOLDS at p in {2, 3, 7, 11, 13, 19, 29} (12-term windows, 4-term holdout) and deg Q = 0 at the ramified prime p = 5"
+  },
+  "L4_WEIGHT_DUALITY": {
+   "citation": "",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "chi_5 is real-valued (quadratic): chi = conj(chi) = chi^{-1} verified exactly on all units mod 5; weight-0 purity holds exactly: the inverse root a = chi_5(p) satisfies a^2 = 1 = p^0 (detect A4 complete degree-1 test HOLDS at every tested prime)"
+  },
+  "L5_CONDUCTOR_GAMMA_ROOT": {
+   "citation": "Quadratic Gauss sums: Gauss (1801); sign of the Gauss sum: Gauss (1811); standard completed-L normalization: CITATION-NEEDED: classical 19th-century references for conductor-gamma-root data of Dirichlet L-functions",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "conductor 5 (primitivity witnessed: chi_5 nonconstant on units); chi_5(-1) = chi_5(4) = +1 so the character is even and the gamma factor is Gamma_R(s) = pi^{-s/2} Gamma(s/2); Gauss sum tau = zeta - zeta^2 - zeta^3 + zeta^4 satisfies tau^2 = 5 EXACTLY (computed in Z[zeta_5] as integer vectors mod x^5 - 1, canonical witness [5,0,0,0,0]); root number tau/sqrt(5) = +1 uses Gauss's sign theorem (imported) for tau > 0"
+  },
+  "L6_CONTINUATION_FE": {
+   "citation": "Functional equation and continuation for Dirichlet L-functions: classical, theta/Hurwitz-zeta methods; CITATION-NEEDED: precise original attribution (Hurwitz ~1882 / de la Vallee Poussin era)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "Lambda(s) = (5/pi)^{s/2} Gamma(s/2) L(s, chi_5) = Lambda(1 - s) with root number +1 (chi_5 even, self-dual); entire continuation"
+  },
+  "L7_TWIST_TENSOR_COMPAT": {
+   "citation": "",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "chi4 * chi4 = chi_5 verified pointwise EXACTLY in Q(i) (Fraction pairs) on the units mod 5 \u2014 table (1, i, -i, -1)^2 = (1, -1, -1, 1) \u2014 and for every n <= 200; chi_5 (x) chi_5 = chi_0 certified by the exact A6 tensor axiom (tensor_compatibility) at p in {2, 3, 7, 11, 13, 19, 29}; the character group mod 5 is closed under twisting"
+  },
+  "L8_REALIZATION": {
+   "citation": "Quadratic reciprocity: Gauss (1801); L(s,chi) factorization of Dedekind zeta for quadratic fields: Dirichlet (1837-1839 era); GL(1)/Hecke-character realization: Tate's thesis (1950), Hecke (1918-1920)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "splitting law verified exactly for all 44 odd primes p <= 200, p != 5: #{x mod p : x^2 = 5} = 1 + chi_5(p) (finite instances of quadratic reciprocity, (5|p) = (p|5) as 5 = 1 mod 4); chi_5 is the quadratic character of Q(sqrt 5), so L(s, chi_5) = zeta_{Q(sqrt 5)}(s) / zeta(s); automorphic realization: GL(1) Hecke character via class field theory / Tate"
+  },
+  "L9_EXPLICIT_FORMULA_POSITIVITY": {
+   "citation": "Explicit formula: Weil (1952); Guinand (1948); von Mangoldt-style forms: CITATION-NEEDED: precise Dirichlet-character reference",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "the explicit formula (zeros of L(s, chi_5) vs. prime powers chi_5(p^k) log p) holds unconditionally; the POSITIVITY half \u2014 Weil's positivity criterion for the explicit-formula functional, equivalent to GRH for chi_5 \u2014 is OPEN and NOT claimed here"
+  }
+ },
+ "mechanisms": {
+  "DUALITY_FE": {
+   "citation": "CITATION-NEEDED: classical functional equation for Dirichlet L-functions (Hurwitz ~1882 era)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "self-dual: chi_5 is real; FE s <-> 1-s with root number +1 (tau^2 = 5 exact here; sign of tau imported from Gauss)"
+  },
+  "EULER_PRODUCT": {
+   "citation": "Dirichlet (1837)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "supplied by complete multiplicativity of chi_5 (verified exactly for all m, n <= 200); degree <= 1 local factors"
+  },
+  "FAMILY": {
+   "citation": "Dirichlet (1837)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "all 4 Dirichlet characters mod 5 realized exactly (chi_0, chi_4, chi_5, chi_4bar; chi_4 of order 4 over Q(i)); orthogonality sum_u chi_i(u) conj(chi_j(u)) = 4 delta_ij verified exactly for all 16 pairs; complete multiplicativity of chi_4 verified for all m, n <= 200"
+  },
+  "POSITIVITY_PURITY": {
+   "citation": "",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "none known as a GRH-forcing mechanism: weight-0 purity |chi_5(p)| = 1 is trivially exact (a^2 = 1 = p^0 witnessed at every tested prime by detect A4), but no positivity / self-adjointness / Frobenius-weight structure is known that forces the zeros of L(s, chi_5) onto Re(s) = 1/2"
+  },
+  "TENSOR_OPS": {
+   "citation": "",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "character group mod 5 (cyclic of order 4) closed under tensor: chi_4^2 = chi_5, chi_5^2 = chi_0 \u2014 chi_4^2 verified exactly in Q(i) for all n <= 200, chi_5 (x) chi_5 = chi_0 certified by exact A6 tensor axiom at 7 primes"
+  },
+  "TRACE_FORMULA": {
+   "citation": "Tate's thesis (1950); Weil (1952)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "GL(1) trace formula = Poisson summation (theta transformation underlying the FE); the explicit formula plays the spectral-side role, pairing zeros against prime powers chi_5(p^k)"
+  }
+ },
+ "notes": "Order-4 characters chi_4, chi_4bar (a conjugate pair, values in Q(i), conductor 5): ODD (chi_4(-1) = chi_4(4) = -1, verified exactly in this build), hence gamma factor Gamma_R(s + 1); non-self-dual, dual(chi_4) = chi_4bar; their L-functions are not treated by the Q-rational detector here (coefficients lie in Z[i]), but their exact character-level structure is: complete multiplicativity (all m, n <= 200) and chi_4^2 = chi_5 are proved exactly above.  GRH for the order-4 L-functions is equally CONJECTURE.  Detector refusal semantics were never triggered: all runs completed with refusal = None.",
+ "rh_established": false,
+ "sources": [
+  "Dirichlet (1837), primes in arithmetic progressions (introduction of Dirichlet characters and L-series)",
+  "Gauss, Disquisitiones Arithmeticae (1801): quadratic reciprocity, Gauss sums",
+  "Gauss (1811): sign of the quadratic Gauss sum",
+  "Tate's thesis (1950): GL(1) automorphic realization, FE via Poisson summation",
+  "Weil (1952): explicit formula and positivity criterion equivalent to GRH",
+  "de la Vallee Poussin (1896-1899): zero-free regions for Dirichlet L-functions",
+  "CITATION-NEEDED: precise original reference for the functional equation of Dirichlet L-functions (Hurwitz ~1882 era)"
+ ],
+ "title": "Dirichlet L-functions mod 5 (quadratic character chi_5)"
+}

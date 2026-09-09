@@ -1,0 +1,93 @@
+{
+ "tower_a0": [
+  {
+   "m": 5,
+   "mu": 2,
+   "A": "-8*lam**2 - 3*lam + 1",
+   "deg_A_eq_mu": true,
+   "disc_nonzero": true,
+   "below_diagonal_clear": true,
+   "separation_and_no_accident": true,
+   "cell_fully_certified": true
+  },
+  {
+   "m": 7,
+   "mu": 3,
+   "A": "-48*lam**3 - 27*lam**2 + 4*lam + 1",
+   "deg_A_eq_mu": true,
+   "disc_nonzero": true,
+   "below_diagonal_clear": true,
+   "separation_and_no_accident": true,
+   "cell_fully_certified": true
+  },
+  {
+   "m": 9,
+   "mu": 4,
+   "A": "384*lam**4 + 185*lam**3 - 61*lam**2 - 5*lam + 1",
+   "deg_A_eq_mu": true,
+   "disc_nonzero": true,
+   "below_diagonal_clear": true,
+   "separation_and_no_accident": true,
+   "cell_fully_certified": true
+  },
+  {
+   "m": 11,
+   "mu": 5,
+   "A": "3840*lam**5 + 2285*lam**4 - 474*lam**3 - 114*lam**2 + 6*lam + 1",
+   "deg_A_eq_mu": true,
+   "disc_nonzero": true,
+   "below_diagonal_clear": true,
+   "separation_and_no_accident": true,
+   "cell_fully_certified": true
+  },
+  {
+   "m": 13,
+   "mu": 6,
+   "A": "-46080*lam**6 - 24675*lam**5 + 8181*lam**4 + 994*lam**3 - 190*lam**2 - 7*lam + 1",
+   "deg_A_eq_mu": true,
+   "disc_nonzero": true,
+   "below_diagonal_clear": true,
+   "separation_and_no_accident": true,
+   "cell_fully_certified": true
+  }
+ ],
+ "other_points": [
+  {
+   "point": "a^2 - a - 1",
+   "m": 11,
+   "classes": [
+    {
+     "m": 11,
+     "class": 1,
+     "mu": 2,
+     "T_ok": true
+    }
+   ],
+   "separation_and_no_accident": true,
+   "cell_fully_certified": true,
+   "predicted_mult": 2
+  },
+  {
+   "point": "a^2 - a - 1",
+   "m": 13,
+   "classes": [
+    {
+     "m": 13,
+     "class": 1,
+     "mu": 2,
+     "T_ok": true
+    },
+    {
+     "m": 13,
+     "class": 3,
+     "mu": 2,
+     "T_ok": true
+    }
+   ],
+   "separation_and_no_accident": true,
+   "cell_fully_certified": true,
+   "predicted_mult": 4
+  }
+ ],
+ "rh_established": false
+}

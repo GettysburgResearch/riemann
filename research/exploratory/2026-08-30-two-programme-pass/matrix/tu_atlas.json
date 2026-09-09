@@ -1,0 +1,463 @@
+{
+ "experiment": "tu_atlas (L-108516 machine layer)",
+ "rh_established": false,
+ "checks": {
+  "M1_homogeneity_and_point11": {
+   "ok": true,
+   "n_checked": 18182,
+   "homog_bad": [],
+   "prime_power_bad": []
+  },
+  "M2_dahlquist_axis": {
+   "ok": true,
+   "bad_n": []
+  },
+  "M3_point_0_minus1_is_zeta": {
+   "ok": true,
+   "bad": []
+  },
+  "M4_purity_wedge": {
+   "ok": true,
+   "grid": [
+    {
+     "t": "0",
+     "u": "-1",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "0",
+     "u": "1/4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "0",
+     "u": "1/2",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "0",
+     "u": "1",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "0",
+     "u": "9/4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "0",
+     "u": "4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "1/2",
+     "u": "-1",
+     "impure_primes": 9550,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "1/2",
+     "u": "1/4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "1/2",
+     "u": "1/2",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "1/2",
+     "u": "1",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "1/2",
+     "u": "9/4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "1/2",
+     "u": "4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "-1/2",
+     "u": "-1",
+     "impure_primes": 9550,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "-1/2",
+     "u": "1/4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "-1/2",
+     "u": "1/2",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "-1/2",
+     "u": "1",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "-1/2",
+     "u": "9/4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "-1/2",
+     "u": "4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "1",
+     "u": "-1",
+     "impure_primes": 9550,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "1",
+     "u": "1/4",
+     "impure_primes": 3729,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "1",
+     "u": "1/2",
+     "impure_primes": 1722,
+     "first": 61,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "1",
+     "u": "1",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "1",
+     "u": "9/4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "1",
+     "u": "4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "-1",
+     "u": "-1",
+     "impure_primes": 9550,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "-1",
+     "u": "1/4",
+     "impure_primes": 3729,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "-1",
+     "u": "1/2",
+     "impure_primes": 1722,
+     "first": 61,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "-1",
+     "u": "1",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "-1",
+     "u": "9/4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "-1",
+     "u": "4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "3/2",
+     "u": "-1",
+     "impure_primes": 9550,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "3/2",
+     "u": "1/4",
+     "impure_primes": 5586,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "3/2",
+     "u": "1/2",
+     "impure_primes": 4025,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "3/2",
+     "u": "1",
+     "impure_primes": 2069,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "3/2",
+     "u": "9/4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "3/2",
+     "u": "4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "-3/2",
+     "u": "-1",
+     "impure_primes": 9550,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "-3/2",
+     "u": "1/4",
+     "impure_primes": 5586,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "-3/2",
+     "u": "1/2",
+     "impure_primes": 4025,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "-3/2",
+     "u": "1",
+     "impure_primes": 2069,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "-3/2",
+     "u": "9/4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "-3/2",
+     "u": "4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "2",
+     "u": "-1",
+     "impure_primes": 9550,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "2",
+     "u": "1/4",
+     "impure_primes": 6542,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "2",
+     "u": "1/2",
+     "impure_primes": 5346,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "2",
+     "u": "1",
+     "impure_primes": 3729,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "2",
+     "u": "9/4",
+     "impure_primes": 1354,
+     "first": 61,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "2",
+     "u": "4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    },
+    {
+     "t": "-2",
+     "u": "-1",
+     "impure_primes": 9550,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "-2",
+     "u": "1/4",
+     "impure_primes": 6542,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "-2",
+     "u": "1/2",
+     "impure_primes": 5346,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "-2",
+     "u": "1",
+     "impure_primes": 3729,
+     "first": 2,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "-2",
+     "u": "9/4",
+     "impure_primes": 1354,
+     "first": 61,
+     "inside_wedge": false,
+     "ok": true
+    },
+    {
+     "t": "-2",
+     "u": "4",
+     "impure_primes": 0,
+     "first": null,
+     "inside_wedge": true,
+     "ok": true
+    }
+   ]
+  },
+  "M5_integrality_witnesses": {
+   "ok": true,
+   "b_5(1/2,1)": "1/2",
+   "b_9(1,1/2)": "-1/2"
+  }
+ },
+ "all_ok": true
+}

@@ -1,0 +1,81 @@
+{
+ "checks": [
+  {
+   "name": "A1 d=3 alternant == G_3",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A1 d=4 alternant == T-108508 closed form",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A4 d=3 top coefficient law",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A4 d=4 top coefficient law",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A4 d=5 top coefficient law",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A2 d=5 point (1, 2, 3, 4, 5)",
+   "ok": true,
+   "detail": "N=[Fraction(1, 1), Fraction(85, 1), Fraction(-3101, 1), Fraction(9225, 1), Fraction(570674, 1), Fraction(-6908860, 1), Fraction(24285176, 1), Fraction(27151200, 1), Fraction(-309456000, 1), Fraction(388800000, 1), Fraction(207360000, 1)] alt=[Fraction(1, 1), Fraction(85, 1), Fraction(-3101, 1), Fraction(9225, 1), Fraction(570674, 1), Fraction(-6908860, 1), Fraction(24285176, 1), Fraction(27151200, 1), Fraction(-309456000, 1), Fraction(388800000, 1), Fraction(207360000, 1)]"
+  },
+  {
+   "name": "A2 d=5 point (2, -1, 3, -2, 5)",
+   "ok": true,
+   "detail": "N=[Fraction(1, 1), Fraction(3, 1), Fraction(273, 1), Fraction(-3641, 1), Fraction(-9096, 1), Fraction(77868, 1), Fraction(-128288, 1), Fraction(397680, 1), Fraction(1814400, 1), Fraction(-9288000, 1), Fraction(12960000, 1)] alt=[Fraction(1, 1), Fraction(3, 1), Fraction(273, 1), Fraction(-3641, 1), Fraction(-9096, 1), Fraction(77868, 1), Fraction(-128288, 1), Fraction(397680, 1), Fraction(1814400, 1), Fraction(-9288000, 1), Fraction(12960000, 1)]"
+  },
+  {
+   "name": "A2 d=6 point (1, 2, 3, 4, 5, 6)",
+   "ok": true,
+   "detail": "N=[Fraction(1, 1), Fraction(175, 1), Fraction(-13811, 1), Fraction(139635, 1), Fraction(11596340, 1), Fraction(-425422900, 1), Fraction(5861609360, 1), Fraction(-24264450000, 1), Fraction(-296910444096, 1), Fraction(4568644451520, 1), Fraction(-24904689836544, 1), Fraction(50235911147520, 1), Fraction(67097299968000, 1), Fraction(-436901713920000, 1), Fraction(436431421440000, 1), Fraction(193491763200000, 1)] alt=[Fraction(1, 1), Fraction(175, 1), Fraction(-13811, 1), Fraction(139635, 1), Fraction(11596340, 1), Fraction(-425422900, 1), Fraction(5861609360, 1), Fraction(-24264450000, 1), Fraction(-296910444096, 1), Fraction(4568644451520, 1), Fraction(-24904689836544, 1), Fraction(50235911147520, 1), Fraction(67097299968000, 1), Fraction(-436901713920000, 1), Fraction(436431421440000, 1), Fraction(193491763200000, 1)]"
+  },
+  {
+   "name": "A2 d=6 point (2, -1, 3, -2, 5, 7)",
+   "ok": true,
+   "detail": "N=[Fraction(1, 1), Fraction(52, 1), Fraction(-21, 1), Fraction(-62644, 1), Fraction(346595, 1), Fraction(2756124, 1), Fraction(67603145, 1), Fraction(73029596, 1), Fraction(-8086687056, 1), Fraction(-10309567808, 1), Fraction(137079761536, 1), Fraction(-21516472320, 1), Fraction(305982028800, 1), Fraction(1396410624000, 1), Fraction(-10237479840000, 1), Fraction(13069123200000, 1)] alt=[Fraction(1, 1), Fraction(52, 1), Fraction(-21, 1), Fraction(-62644, 1), Fraction(346595, 1), Fraction(2756124, 1), Fraction(67603145, 1), Fraction(73029596, 1), Fraction(-8086687056, 1), Fraction(-10309567808, 1), Fraction(137079761536, 1), Fraction(-21516472320, 1), Fraction(305982028800, 1), Fraction(1396410624000, 1), Fraction(-10237479840000, 1), Fraction(13069123200000, 1)]"
+  },
+  {
+   "name": "A2 d=7 point (1, 2, 3, 4, 5, 6, 7)",
+   "ok": true,
+   "detail": "N=[Fraction(1, 1), Fraction(322, 1), Fraction(-48111, 1), Fraction(1110668, 1), Fraction(140153279, 1), Fraction(-11647845762, 1), Fraction(390233054111, 1), Fraction(-5740542267628, 1), Fraction(-29041635988176, 1), Fraction(2980316668078528, 1), Fraction(-61761570455985344, 1), Fraction(681188588278232832, 1), Fraction(-3804611802234096384, 1), Fraction(-1331315595286322688, 1), Fraction(191943888257789708544, 1), Fraction(-1478636633878009500672, 1), Fraction(5403282733709511598080, 1), Fraction(-7735873379169167769600, 1), Fraction(-10662895455227043840000, 1), Fraction(50702345056223723520000, 1), Fraction(-42705474953792716800000, 1), Fraction(-16390160963076096000000, 1)] alt=[Fraction(1, 1), Fraction(322, 1), Fraction(-48111, 1), Fraction(1110668, 1), Fraction(140153279, 1), Fraction(-11647845762, 1), Fraction(390233054111, 1), Fraction(-5740542267628, 1), Fraction(-29041635988176, 1), Fraction(2980316668078528, 1), Fraction(-61761570455985344, 1), Fraction(681188588278232832, 1), Fraction(-3804611802234096384, 1), Fraction(-1331315595286322688, 1), Fraction(191943888257789708544, 1), Fraction(-1478636633878009500672, 1), Fraction(5403282733709511598080, 1), Fraction(-7735873379169167769600, 1), Fraction(-10662895455227043840000, 1), Fraction(50702345056223723520000, 1), Fraction(-42705474953792716800000, 1), Fraction(-16390160963076096000000, 1)]"
+  },
+  {
+   "name": "A3 series identity m=3 x=(2, 3)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A3 series identity m=3 x=(1, 2, 3)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A3 series identity m=4 x=(2, 3)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A3 series identity m=4 x=(1, 2, 3)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A3 series identity m=5 x=(2, 3)",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "all_ok": true,
+ "rh_established": false
+}

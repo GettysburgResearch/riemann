@@ -1,0 +1,42 @@
+[13:46:42] nu = 10, degree bound D = 1900
+[13:46:42] S2: exact resultants at 0..D ...
+[13:46:42]   a0 = 0 (0s)
+[13:46:49]   a0 = 200 (7s)
+[13:47:01]   a0 = 400 (19s)
+[13:47:15]   a0 = 600 (33s)
+[13:47:30]   a0 = 800 (48s)
+[13:47:46]   a0 = 1000 (65s)
+[13:48:04]   a0 = 1200 (82s)
+[13:48:22]   a0 = 1400 (100s)
+[13:48:40]   a0 = 1600 (119s)
+[13:49:00]   a0 = 1800 (138s)
+[13:49:10] S2 done (148s); max digits 4102
+[13:49:10] S3: modular interpolation + CRT ...
+[13:49:33] S3 CRT stable after 19 primes (171s)
+[13:49:33] candidate deg = 1230
+[13:49:33] S3 PROOF: exact evaluation at all nodes ...
+[13:49:33]   verified through 0 (171s)
+[13:49:33]   verified through 400 (172s)
+[13:49:34]   verified through 800 (172s)
+[13:49:34]   verified through 1200 (172s)
+[13:49:34]   verified through 1600 (172s)
+[13:49:34] S3 proof complete: candidate == disc (173s)
+[13:49:34] S4: dividing out torsion factors ...
+[13:49:35]   psi_3 divides with multiplicity 48
+[13:49:35]   psi_4 divides with multiplicity 90
+[13:49:35]   psi_5 divides with multiplicity 20
+[13:49:35]   psi_6 divides with multiplicity 48
+[13:49:35]   psi_7 divides with multiplicity 8
+[13:49:35]   psi_8 divides with multiplicity 32
+[13:49:35]   psi_9 divides with multiplicity 4
+[13:49:35]   psi_10 divides with multiplicity 20
+[13:49:35]   psi_12 divides with multiplicity 14
+[13:49:35]   psi_14 divides with multiplicity 8
+[13:49:35]   psi_16 divides with multiplicity 6
+[13:49:35]   psi_18 divides with multiplicity 4
+[13:49:35]   psi_20 divides with multiplicity 2
+[13:49:35] remainder deg 768, content 4, lc -427950002828701619287041100981419576219308143474114560000000000000000
+[13:49:35] S4: exhaustive candidate torsion minpolys ...
+[13:49:38]   exhaustive bound N <= 4718592; 2998 candidate N
+[13:54:27] checked 2998 candidate psi_N (provably all); divisors of remainder: []
+[13:54:27] done (466s); converse m=21: True

@@ -1,0 +1,32 @@
+[11:34:12] validations:
+[11:34:12]   Spouge vs gamma at 0.7: |diff| = 4.82e-24
+[11:34:12]   Spouge vs gamma at (0.9 + 12.3j): |diff| = 1.75e-27
+[11:34:12]   Gamma(s,x) at (0.9+12.3i, 2.1): |diff| = 6.78e-26
+[11:34:12]   Gamma(s,x) at (0.9+12.3i, 40.0): |diff| = 2.02e-26
+[11:34:12]   Gamma(s,x) at (0.1+-12.3i, 5.0): |diff| = 4.19e-27
+[11:34:12] lattice: 58 vectors with Q <= 18
+[11:34:12] lattice tail bound: 5.064e-14
+[11:34:13]   Lambda(0.9+12.3i) iv-mid vs float: |diff| = 4.11e-24 (tail bound 5.06e-14)
+[11:34:14] B bound: A1=2.61e-7 A2=9.41e-7 K=1.25e-7 -> B=1.327e-6
+[11:34:14] Lipschitz M = 1.327e-5
+[11:35:40]   step 200: edge 0, pos 0.263, ell~3.25e-9, 87s
+[11:37:06]   step 400: edge 0, pos 0.501, ell~3.16e-9, 173s
+[11:38:33]   step 600: edge 0, pos 0.756, ell~3.73e-9, 260s
+[11:40:00]   step 800: edge 1, pos 0.076, ell~4.42e-9, 347s
+[11:41:28]   step 1000: edge 1, pos 0.341, ell~3.24e-9, 434s
+[11:42:57]   step 1200: edge 1, pos 0.555, ell~2.91e-9, 523s
+[11:44:30]   step 1400: edge 1, pos 0.766, ell~3.11e-9, 617s
+[11:46:01]   step 1600: edge 2, pos 0.006, ell~3.69e-9, 708s
+[11:47:29]   step 1800: edge 2, pos 0.246, ell~2.81e-9, 796s
+[11:48:56]   step 2000: edge 2, pos 0.441, ell~2.42e-9, 882s
+[11:50:23]   step 2200: edge 2, pos 0.619, ell~2.35e-9, 969s
+[11:51:50]   step 2400: edge 2, pos 0.802, ell~2.52e-9, 1056s
+[11:53:17]   step 2600: edge 3, pos 0.003, ell~2.87e-9, 1143s
+[11:54:45]   step 2800: edge 3, pos 0.191, ell~2.46e-9, 1231s
+[11:56:13]   step 3000: edge 3, pos 0.357, ell~2.24e-9, 1319s
+[11:57:40]   step 3200: edge 3, pos 0.514, ell~2.24e-9, 1407s
+[11:59:08]   step 3400: edge 3, pos 0.681, ell~2.52e-9, 1494s
+[12:00:34]   step 3600: edge 3, pos 0.882, ell~3.23e-9, 1581s
+[12:01:16] steps: 3696; min ell: 2.209e-9
+[12:01:16] winding interval: [0.9733493991, 1.026658161]
+[12:01:16] VERIFIED winding = 1

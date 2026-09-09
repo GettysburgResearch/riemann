@@ -1,0 +1,305 @@
+{
+ "worlds": {
+  "beurling": {
+   "ladder": {
+    "L0_WELL_DEFINED": "HOLDS",
+    "L1_MULTIPLICATIVITY": "HOLDS",
+    "L2_EULER_PRODUCT": "HOLDS",
+    "L3_BOUNDED_DEGREE_RATIONAL": "HOLDS",
+    "L4_WEIGHT_DUALITY": "OPEN",
+    "L5_CONDUCTOR_GAMMA_ROOT": "OPEN",
+    "L6_CONTINUATION_FE": "OPEN",
+    "L7_TWIST_TENSOR_COMPAT": "OPEN",
+    "L8_REALIZATION": "HOLDS",
+    "L9_EXPLICIT_FORMULA_POSITIVITY": "FAILS"
+   },
+   "mechanisms": {
+    "DUALITY_FE": "OPEN",
+    "EULER_PRODUCT": "HOLDS",
+    "FAMILY": "HOLDS",
+    "POSITIVITY_PURITY": "OPEN",
+    "TENSOR_OPS": "OPEN",
+    "TRACE_FORMULA": "OPEN"
+   },
+   "critical_line": "OPEN"
+  },
+  "counterfeit_deleted_euler": {
+   "ladder": {
+    "L0_WELL_DEFINED": "HOLDS",
+    "L1_MULTIPLICATIVITY": "HOLDS",
+    "L2_EULER_PRODUCT": "HOLDS",
+    "L3_BOUNDED_DEGREE_RATIONAL": "HOLDS",
+    "L4_WEIGHT_DUALITY": "HOLDS",
+    "L5_CONDUCTOR_GAMMA_ROOT": "FAILS",
+    "L6_CONTINUATION_FE": "FAILS",
+    "L7_TWIST_TENSOR_COMPAT": "HOLDS",
+    "L8_REALIZATION": "HOLDS",
+    "L9_EXPLICIT_FORMULA_POSITIVITY": "FAILS"
+   },
+   "mechanisms": {
+    "DUALITY_FE": "FAILS",
+    "EULER_PRODUCT": "HOLDS",
+    "FAMILY": "HOLDS",
+    "POSITIVITY_PURITY": "FAILS",
+    "TENSOR_OPS": "HOLDS",
+    "TRACE_FORMULA": "HOLDS"
+   },
+   "critical_line": "FALSE"
+  },
+  "counterfeit_random_phase": {
+   "ladder": {
+    "L0_WELL_DEFINED": "HOLDS",
+    "L1_MULTIPLICATIVITY": "HOLDS",
+    "L2_EULER_PRODUCT": "HOLDS",
+    "L3_BOUNDED_DEGREE_RATIONAL": "HOLDS",
+    "L4_WEIGHT_DUALITY": "HOLDS",
+    "L5_CONDUCTOR_GAMMA_ROOT": "OPEN",
+    "L6_CONTINUATION_FE": "OPEN",
+    "L7_TWIST_TENSOR_COMPAT": "HOLDS",
+    "L8_REALIZATION": "HOLDS",
+    "L9_EXPLICIT_FORMULA_POSITIVITY": "OPEN"
+   },
+   "mechanisms": {
+    "DUALITY_FE": "OPEN",
+    "EULER_PRODUCT": "HOLDS",
+    "FAMILY": "OPEN",
+    "POSITIVITY_PURITY": "OPEN",
+    "TENSOR_OPS": "HOLDS",
+    "TRACE_FORMULA": "OPEN"
+   },
+   "critical_line": "NOT_FORMULATED"
+  },
+  "counterfeit_wrong_gamma": {
+   "ladder": {
+    "L0_WELL_DEFINED": "HOLDS",
+    "L1_MULTIPLICATIVITY": "HOLDS",
+    "L2_EULER_PRODUCT": "HOLDS",
+    "L3_BOUNDED_DEGREE_RATIONAL": "HOLDS",
+    "L4_WEIGHT_DUALITY": "HOLDS",
+    "L5_CONDUCTOR_GAMMA_ROOT": "FAILS",
+    "L6_CONTINUATION_FE": "FAILS",
+    "L7_TWIST_TENSOR_COMPAT": "HOLDS",
+    "L8_REALIZATION": "FAILS",
+    "L9_EXPLICIT_FORMULA_POSITIVITY": "FAILS"
+   },
+   "mechanisms": {
+    "DUALITY_FE": "FAILS",
+    "EULER_PRODUCT": "HOLDS",
+    "FAMILY": "HOLDS",
+    "POSITIVITY_PURITY": "NOT_APPLICABLE",
+    "TENSOR_OPS": "HOLDS",
+    "TRACE_FORMULA": "FAILS"
+   },
+   "critical_line": "NOT_FORMULATED"
+  },
+  "davenport_heilbronn": {
+   "ladder": {
+    "L0_WELL_DEFINED": "HOLDS",
+    "L1_MULTIPLICATIVITY": "FAILS",
+    "L2_EULER_PRODUCT": "FAILS",
+    "L3_BOUNDED_DEGREE_RATIONAL": "FAILS",
+    "L4_WEIGHT_DUALITY": "HOLDS",
+    "L5_CONDUCTOR_GAMMA_ROOT": "HOLDS",
+    "L6_CONTINUATION_FE": "HOLDS",
+    "L7_TWIST_TENSOR_COMPAT": "OPEN",
+    "L8_REALIZATION": "FAILS",
+    "L9_EXPLICIT_FORMULA_POSITIVITY": "FAILS"
+   },
+   "mechanisms": {
+    "DUALITY_FE": "HOLDS",
+    "EULER_PRODUCT": "FAILS",
+    "FAMILY": "HOLDS",
+    "POSITIVITY_PURITY": "FAILS",
+    "TENSOR_OPS": "OPEN",
+    "TRACE_FORMULA": "OPEN"
+   },
+   "critical_line": "FALSE"
+  },
+  "dirichlet_mod5": {
+   "ladder": {
+    "L0_WELL_DEFINED": "HOLDS",
+    "L1_MULTIPLICATIVITY": "HOLDS",
+    "L2_EULER_PRODUCT": "HOLDS",
+    "L3_BOUNDED_DEGREE_RATIONAL": "HOLDS",
+    "L4_WEIGHT_DUALITY": "HOLDS",
+    "L5_CONDUCTOR_GAMMA_ROOT": "HOLDS",
+    "L6_CONTINUATION_FE": "HOLDS",
+    "L7_TWIST_TENSOR_COMPAT": "HOLDS",
+    "L8_REALIZATION": "HOLDS",
+    "L9_EXPLICIT_FORMULA_POSITIVITY": "HOLDS"
+   },
+   "mechanisms": {
+    "DUALITY_FE": "HOLDS",
+    "EULER_PRODUCT": "HOLDS",
+    "FAMILY": "HOLDS",
+    "POSITIVITY_PURITY": "OPEN",
+    "TENSOR_OPS": "HOLDS",
+    "TRACE_FORMULA": "HOLDS"
+   },
+   "critical_line": "CONJECTURE"
+  },
+  "elliptic_11a": {
+   "ladder": {
+    "L0_WELL_DEFINED": "HOLDS",
+    "L1_MULTIPLICATIVITY": "HOLDS",
+    "L2_EULER_PRODUCT": "HOLDS",
+    "L3_BOUNDED_DEGREE_RATIONAL": "HOLDS",
+    "L4_WEIGHT_DUALITY": "HOLDS",
+    "L5_CONDUCTOR_GAMMA_ROOT": "HOLDS",
+    "L6_CONTINUATION_FE": "HOLDS",
+    "L7_TWIST_TENSOR_COMPAT": "HOLDS",
+    "L8_REALIZATION": "HOLDS",
+    "L9_EXPLICIT_FORMULA_POSITIVITY": "CONJECTURAL"
+   },
+   "mechanisms": {
+    "DUALITY_FE": "HOLDS",
+    "EULER_PRODUCT": "HOLDS",
+    "FAMILY": "HOLDS",
+    "POSITIVITY_PURITY": "HOLDS",
+    "TENSOR_OPS": "HOLDS",
+    "TRACE_FORMULA": "HOLDS"
+   },
+   "critical_line": "CONJECTURE"
+  },
+  "epstein_pair": {
+   "ladder": {
+    "L0_WELL_DEFINED": "HOLDS",
+    "L1_MULTIPLICATIVITY": "FAILS",
+    "L2_EULER_PRODUCT": "FAILS",
+    "L3_BOUNDED_DEGREE_RATIONAL": "FAILS",
+    "L4_WEIGHT_DUALITY": "FAILS",
+    "L5_CONDUCTOR_GAMMA_ROOT": "HOLDS",
+    "L6_CONTINUATION_FE": "HOLDS",
+    "L7_TWIST_TENSOR_COMPAT": "FAILS",
+    "L8_REALIZATION": "HOLDS",
+    "L9_EXPLICIT_FORMULA_POSITIVITY": "FAILS"
+   },
+   "mechanisms": {
+    "DUALITY_FE": "HOLDS",
+    "EULER_PRODUCT": "FAILS",
+    "FAMILY": "HOLDS",
+    "POSITIVITY_PURITY": "FAILS",
+    "TENSOR_OPS": "FAILS",
+    "TRACE_FORMULA": "HOLDS"
+   },
+   "critical_line": "FALSE"
+  },
+  "ff_elliptic_f5": {
+   "ladder": {
+    "L0_WELL_DEFINED": "HOLDS",
+    "L1_MULTIPLICATIVITY": "HOLDS",
+    "L2_EULER_PRODUCT": "HOLDS",
+    "L3_BOUNDED_DEGREE_RATIONAL": "HOLDS",
+    "L4_WEIGHT_DUALITY": "HOLDS",
+    "L5_CONDUCTOR_GAMMA_ROOT": "HOLDS",
+    "L6_CONTINUATION_FE": "HOLDS",
+    "L7_TWIST_TENSOR_COMPAT": "HOLDS",
+    "L8_REALIZATION": "HOLDS",
+    "L9_EXPLICIT_FORMULA_POSITIVITY": "HOLDS"
+   },
+   "mechanisms": {
+    "DUALITY_FE": "HOLDS",
+    "EULER_PRODUCT": "HOLDS",
+    "FAMILY": "HOLDS",
+    "POSITIVITY_PURITY": "HOLDS",
+    "TENSOR_OPS": "HOLDS",
+    "TRACE_FORMULA": "HOLDS"
+   },
+   "critical_line": "THEOREM"
+  },
+  "ihara_nonramanujan": {
+   "ladder": {
+    "L0_WELL_DEFINED": "HOLDS",
+    "L1_MULTIPLICATIVITY": "HOLDS",
+    "L2_EULER_PRODUCT": "HOLDS",
+    "L3_BOUNDED_DEGREE_RATIONAL": "HOLDS",
+    "L4_WEIGHT_DUALITY": "HOLDS",
+    "L5_CONDUCTOR_GAMMA_ROOT": "HOLDS",
+    "L6_CONTINUATION_FE": "HOLDS",
+    "L7_TWIST_TENSOR_COMPAT": "HOLDS",
+    "L8_REALIZATION": "HOLDS",
+    "L9_EXPLICIT_FORMULA_POSITIVITY": "FAILS"
+   },
+   "mechanisms": {
+    "DUALITY_FE": "HOLDS",
+    "EULER_PRODUCT": "HOLDS",
+    "FAMILY": "HOLDS",
+    "POSITIVITY_PURITY": "FAILS",
+    "TENSOR_OPS": "HOLDS",
+    "TRACE_FORMULA": "HOLDS"
+   },
+   "critical_line": "FALSE"
+  },
+  "ihara_ramanujan": {
+   "ladder": {
+    "L0_WELL_DEFINED": "HOLDS",
+    "L1_MULTIPLICATIVITY": "HOLDS",
+    "L2_EULER_PRODUCT": "HOLDS",
+    "L3_BOUNDED_DEGREE_RATIONAL": "HOLDS",
+    "L4_WEIGHT_DUALITY": "HOLDS",
+    "L5_CONDUCTOR_GAMMA_ROOT": "HOLDS",
+    "L6_CONTINUATION_FE": "HOLDS",
+    "L7_TWIST_TENSOR_COMPAT": "HOLDS",
+    "L8_REALIZATION": "HOLDS",
+    "L9_EXPLICIT_FORMULA_POSITIVITY": "HOLDS"
+   },
+   "mechanisms": {
+    "DUALITY_FE": "HOLDS",
+    "EULER_PRODUCT": "HOLDS",
+    "FAMILY": "HOLDS",
+    "POSITIVITY_PURITY": "HOLDS",
+    "TENSOR_OPS": "HOLDS",
+    "TRACE_FORMULA": "HOLDS"
+   },
+   "critical_line": "THEOREM"
+  },
+  "native_imports": {
+   "ladder": {
+    "L0_WELL_DEFINED": "NOT_APPLICABLE",
+    "L1_MULTIPLICATIVITY": "NOT_APPLICABLE",
+    "L2_EULER_PRODUCT": "NOT_APPLICABLE",
+    "L3_BOUNDED_DEGREE_RATIONAL": "NOT_APPLICABLE",
+    "L4_WEIGHT_DUALITY": "NOT_APPLICABLE",
+    "L5_CONDUCTOR_GAMMA_ROOT": "NOT_APPLICABLE",
+    "L6_CONTINUATION_FE": "NOT_APPLICABLE",
+    "L7_TWIST_TENSOR_COMPAT": "NOT_APPLICABLE",
+    "L8_REALIZATION": "NOT_APPLICABLE",
+    "L9_EXPLICIT_FORMULA_POSITIVITY": "NOT_APPLICABLE"
+   },
+   "mechanisms": {
+    "DUALITY_FE": "NOT_APPLICABLE",
+    "EULER_PRODUCT": "NOT_APPLICABLE",
+    "FAMILY": "NOT_APPLICABLE",
+    "POSITIVITY_PURITY": "NOT_APPLICABLE",
+    "TENSOR_OPS": "NOT_APPLICABLE",
+    "TRACE_FORMULA": "NOT_APPLICABLE"
+   },
+   "critical_line": "NOT_FORMULATED"
+  },
+  "zeta": {
+   "ladder": {
+    "L0_WELL_DEFINED": "HOLDS",
+    "L1_MULTIPLICATIVITY": "HOLDS",
+    "L2_EULER_PRODUCT": "HOLDS",
+    "L3_BOUNDED_DEGREE_RATIONAL": "HOLDS",
+    "L4_WEIGHT_DUALITY": "HOLDS",
+    "L5_CONDUCTOR_GAMMA_ROOT": "HOLDS",
+    "L6_CONTINUATION_FE": "HOLDS",
+    "L7_TWIST_TENSOR_COMPAT": "HOLDS",
+    "L8_REALIZATION": "HOLDS",
+    "L9_EXPLICIT_FORMULA_POSITIVITY": "CONJECTURAL"
+   },
+   "mechanisms": {
+    "DUALITY_FE": "HOLDS",
+    "EULER_PRODUCT": "HOLDS",
+    "FAMILY": "HOLDS",
+    "POSITIVITY_PURITY": "OPEN",
+    "TENSOR_OPS": "HOLDS",
+    "TRACE_FORMULA": "HOLDS"
+   },
+   "critical_line": "CONJECTURE"
+  }
+ },
+ "validation_problems": {},
+ "rh_established": false
+}

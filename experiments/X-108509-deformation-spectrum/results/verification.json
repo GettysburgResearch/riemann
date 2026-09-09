@@ -1,0 +1,38 @@
+{
+ "experiment": "X-108509-deformation-spectrum",
+ "checks": [
+  {
+   "name": "V1 spectrum normal form m=2..9 x 12 points (BM route, unique exact solution, monic)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V2 bridge instances M_3 = z + 2ab, M_4 = z + b(3a^2-2b)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V3b purity float crosscheck (Durand-Kerner, labelled FLOAT_CROSSCHECK) agrees with exact z-criterion",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V4 disc_z M_5 == a^2 b^2 (16a^4-48a^2b+41b^2) at all 186 points",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V4 splitting law: disc square => exact factorization N_5 = prod(b^5 T^2 - z_i T + 1) (6 split points)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "V5 even-m factor dichotomy: second division succeeds iff M_m(-2 b^(m/2)) = 0 (66 generic, 4 jump-locus instantiations incl. the (-2,3) witness)",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "all_ok": true,
+ "arithmetic_class": "EXACT_RATIONAL + one labelled FLOAT_CROSSCHECK (V3b)",
+ "rh_established": false
+}

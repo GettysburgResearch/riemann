@@ -1,0 +1,59 @@
+[12:13:04] validations:
+[12:13:04]   Spouge vs gamma at 0.7: |diff| = 4.82e-24
+[12:13:04]   Spouge vs gamma at (0.9 + 12.3j): |diff| = 1.75e-27
+[12:13:04]   Gamma(s,x) at (0.9+12.3i, 2.1): |diff| = 6.78e-26
+[12:13:04]   Gamma(s,x) at (0.9+12.3i, 40.0): |diff| = 1.77e-27
+[12:13:04]   Gamma(s,x) at (0.1+-12.3i, 5.0): |diff| = 4.19e-27
+[12:13:04] lattice: 88 vectors with Q <= 28
+[12:13:04] lattice tail bound: 4.906e-21
+[12:13:06]   Lambda(0.9+12.3i) iv-mid vs float: |diff| = 1.48e-27 (tail bound 4.91e-21)
+[12:13:06] B bound: A1=8.72e-12 A2=3.61e-11 K=1.32e-11 -> B=5.796e-11
+[12:13:06] Lipschitz M = 1.449e-9
+[12:15:25]   step 200: edge 0, pos 0.040, ell~5.39e-14, 139s
+[12:17:42]   step 400: edge 0, pos 0.079, ell~5.32e-14, 276s
+[12:19:58]   step 600: edge 0, pos 0.118, ell~5.24e-14, 412s
+[12:22:16]   step 800: edge 0, pos 0.157, ell~5.18e-14, 550s
+[12:24:46]   step 1000: edge 0, pos 0.195, ell~5.12e-14, 700s
+[12:27:02]   step 1200: edge 0, pos 0.232, ell~5.07e-14, 836s
+[12:29:19]   step 1400: edge 0, pos 0.269, ell~5.04e-14, 974s
+[12:31:38]   step 1600: edge 0, pos 0.306, ell~5.02e-14, 1113s
+[12:33:56]   step 1800: edge 0, pos 0.343, ell~5.01e-14, 1250s
+[12:36:13]   step 2000: edge 0, pos 0.380, ell~5.01e-14, 1387s
+[12:38:31]   step 2200: edge 0, pos 0.417, ell~5.04e-14, 1525s
+[12:40:57]   step 2400: edge 0, pos 0.454, ell~5.08e-14, 1672s
+[12:43:29]   step 2600: edge 0, pos 0.492, ell~5.15e-14, 1824s
+[12:45:53]   step 2800: edge 0, pos 0.530, ell~5.24e-14, 1967s
+[12:48:14]   step 3000: edge 0, pos 0.569, ell~5.36e-14, 2108s
+[12:50:32]   step 3200: edge 0, pos 0.609, ell~5.5e-14, 2246s
+[12:52:51]   step 3400: edge 0, pos 0.650, ell~5.68e-14, 2385s
+[12:55:09]   step 3600: edge 0, pos 0.693, ell~5.89e-14, 2523s
+[12:57:26]   step 3800: edge 0, pos 0.737, ell~6.15e-14, 2661s
+[12:59:44]   step 4000: edge 0, pos 0.783, ell~6.45e-14, 2798s
+[13:02:02]   step 4200: edge 0, pos 0.832, ell~6.8e-14, 2937s
+[13:04:20]   step 4400: edge 0, pos 0.884, ell~7.21e-14, 3075s
+[13:06:38]   step 4600: edge 0, pos 0.939, ell~7.7e-14, 3212s
+[13:08:55]   step 4800: edge 0, pos 0.997, ell~8.26e-14, 3349s
+[13:11:14]   step 5000: edge 1, pos 0.047, ell~7.7e-14, 3489s
+[13:13:31]   step 5200: edge 1, pos 0.092, ell~7.16e-14, 3625s
+[13:15:49]   step 5400: edge 1, pos 0.135, ell~6.69e-14, 3763s
+[13:18:07]   step 5600: edge 1, pos 0.175, ell~6.29e-14, 3902s
+[13:20:26]   step 5800: edge 1, pos 0.212, ell~5.95e-14, 4040s
+[13:22:44]   step 6000: edge 1, pos 0.248, ell~5.65e-14, 4179s
+[13:25:06]   step 6200: edge 1, pos 0.282, ell~5.4e-14, 4320s
+[13:27:24]   step 6400: edge 1, pos 0.314, ell~5.18e-14, 4458s
+[13:29:43]   step 6600: edge 1, pos 0.345, ell~5.0e-14, 4597s
+[13:32:02]   step 6800: edge 1, pos 0.375, ell~4.85e-14, 4736s
+[13:34:19]   step 7000: edge 1, pos 0.405, ell~4.73e-14, 4873s
+[13:36:37]   step 7200: edge 1, pos 0.433, ell~4.63e-14, 5011s
+[13:38:55]   step 7400: edge 1, pos 0.462, ell~4.56e-14, 5149s
+[13:41:13]   step 7600: edge 1, pos 0.489, ell~4.51e-14, 5287s
+[13:43:31]   step 7800: edge 1, pos 0.517, ell~4.48e-14, 5425s
+[13:45:48]   step 8000: edge 1, pos 0.544, ell~4.47e-14, 5563s
+[13:48:06]   step 8200: edge 1, pos 0.572, ell~4.47e-14, 5700s
+[13:50:24]   step 8400: edge 1, pos 0.599, ell~4.5e-14, 5838s
+[13:52:41]   step 8600: edge 1, pos 0.627, ell~4.54e-14, 5976s
+[13:55:00]   step 8800: edge 1, pos 0.655, ell~4.59e-14, 6114s
+[13:57:17]   step 9000: edge 1, pos 0.683, ell~4.66e-14, 6251s
+[13:59:35]   step 9200: edge 1, pos 0.712, ell~4.74e-14, 6389s
+[14:01:53]   step 9400: edge 1, pos 0.742, ell~4.84e-14, 6527s
+[14:04:12]   step 9600: edge 1, pos 0.772, ell~4.95e-14, 6666s

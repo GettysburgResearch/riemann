@@ -1,0 +1,30 @@
+{
+ "experiment": "X-108501-commutative-collapse",
+ "claim": "T-108501",
+ "checks": [
+  {
+   "name": "C1_nilpotent_exponential_jet_law",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2_sum_exchange_identity",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3_bicomplex_idempotents_and_invertibility",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C4_floating_corroboration_dual_zeta",
+   "ok": true,
+   "detail": "FLOATING_RECONNAISSANCE only; decides nothing; dual arithmetic path vs independent jet path, agree < 1e-10"
+  }
+ ],
+ "all_ok": true,
+ "arithmetic_class": "EXACT_RATIONAL (C1-C3), FLOATING_RECONNAISSANCE (C4)",
+ "rh_established": false,
+ "scope_note": "finite verification of the algebraic pillars and the finite-N collapse identity; the theorem's proof is in standalone/2026-08-30-commutative-collapse/PROOF.md"
+}

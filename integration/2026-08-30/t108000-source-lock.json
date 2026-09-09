@@ -1,0 +1,36 @@
+{
+ "schema": "riemann.integration.t108000-source-lock.v1",
+ "packet": "108000/108500 two-programme pass (issues #763, #764)",
+ "base": {
+  "branch": "claude/riemann-repo-review-m7dk1x",
+  "forked_from_main": "6dda8b5 (merge of PR #761, formal-v0.1)"
+ },
+ "software_locks": {
+  "python": "3.11.15",
+  "sympy": "1.14.0 (symbolic discovery layer only; every conclusion-bearing finite computation replayed stdlib-exact)",
+  "mpmath": "1.3.0 (Epstein laboratory only; NON_DIRECTED_HIGH_PRECISION)"
+ },
+ "frozen_inputs": [
+  "issues #763 and #764 as of 2026-08-30 (the #764 update with the higher-dimensional parent axis included)",
+  "boundary audit BOUNDARY_AUDIT_CONSOLIDATED.md (nine areas, web-assisted)"
+ ],
+ "proved": {
+  "T-108500": "defect law statements 1-4, Theorems 2-3, Lemma 4 (with the adversarial-wave repairs); machine table m=2..6",
+  "T-108501": "commutative collapse + one-variable associative corollary (slice paragraph corrected)",
+  "T-108002": "detector refusal semantics on L-108001 (after the FATAL purity fix; 14-check battery)",
+  "T-108000": "witnessed separation table at finite corpus scope",
+  "L-108001": "uniqueness backbone with properness hypotheses"
+ },
+ "open": {
+  "corrected_rank4_defect_law": "witnesses in O-108505",
+  "S1_S2_S3_stratum_classification": "target over Estermann/Dahlquist/Kurokawa theory",
+  "number_field_world_without_purity": "the central #763 open cell",
+  "E4_departure_locus_grid": "lab continuation",
+  "native_imports_world": "builder lost to session limits"
+ },
+ "replay": {
+  "experiments": ["X-108002", "X-108500", "X-108501", "X-108505", "X-108506"],
+  "worlds": "python3 -m worlds.<id>_build from the pass root (12 records, validate_world clean)"
+ },
+ "rh_established": false
+}

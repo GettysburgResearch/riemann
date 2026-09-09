@@ -1,0 +1,51 @@
+{
+ "checks": [
+  {
+   "name": "M1 series (2, 2, 2) at (2, 3),(5, 7),(2, -3)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "M1 series (2, 2, 3) at (2, 3),(5, 7),(1, 2, 3)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "M1 series (3, 2, 2) at (1, 2, 3),(2, 3),(5, 7)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "M1 series (2, 3, 3) at (2, 3),(1, 2, -2),(3, 5, 7)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "M2 N_ABC (2, 2, 2) matrix==alternant, deg=6",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "M2 N_ABC (2, 2, 3) matrix==alternant, deg=9",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "M2 N_ABC (3, 2, 2) matrix==alternant, deg=9",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "M2 N_ABC (2, 3, 3) matrix==alternant, deg=15",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "M3 rank2 x rank2 Rankin-Selberg numerator = 1 - detA detB T^2",
+   "ok": true,
+   "detail": "N=[Fraction(1, 1), Fraction(0, 1), Fraction(-210, 1), Fraction(0, 1), Fraction(0, 1)]"
+  }
+ ],
+ "all_ok": true,
+ "rh_established": false
+}

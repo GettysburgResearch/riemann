@@ -1,0 +1,126 @@
+{
+ "note": "diamond head + k-rung corridor + every 3-chord cap matching on the far 6 positions; verdicts exact (Sturm, cut 283/100, guard (8,8.0089]); GUARD rows need adaptive cuts (none finalized here); n = 2k+10",
+ "rows": {
+  "((0, 1), (2, 3), (4, 5))": {
+   "2": "invalid",
+   "3": "invalid",
+   "4": "invalid",
+   "5": "invalid",
+   "6": "invalid",
+   "7": "invalid"
+  },
+  "((0, 1), (2, 4), (3, 5))": {
+   "2": "invalid",
+   "3": "invalid",
+   "4": "invalid",
+   "5": "invalid",
+   "6": "invalid",
+   "7": "invalid"
+  },
+  "((0, 1), (2, 5), (3, 4))": {
+   "2": "invalid",
+   "3": "invalid",
+   "4": "invalid",
+   "5": "invalid",
+   "6": "invalid",
+   "7": "invalid"
+  },
+  "((0, 2), (1, 3), (4, 5))": {
+   "2": "invalid",
+   "3": "invalid",
+   "4": "invalid",
+   "5": "invalid",
+   "6": "invalid",
+   "7": "invalid"
+  },
+  "((0, 2), (1, 4), (3, 5))": {
+   "2": "RAM",
+   "3": "GUARD",
+   "4": "POS(1,0)",
+   "5": "POS(1,0)",
+   "6": "BOTH(1,1)",
+   "7": "BOTH(1,1)"
+  },
+  "((0, 2), (1, 5), (3, 4))": {
+   "2": "invalid",
+   "3": "invalid",
+   "4": "invalid",
+   "5": "invalid",
+   "6": "invalid",
+   "7": "invalid"
+  },
+  "((0, 3), (1, 2), (4, 5))": {
+   "2": "invalid",
+   "3": "invalid",
+   "4": "invalid",
+   "5": "invalid",
+   "6": "invalid",
+   "7": "invalid"
+  },
+  "((0, 3), (1, 4), (2, 5))": {
+   "2": "NEG(0,1)",
+   "3": "GUARD",
+   "4": "BOTH(1,1)",
+   "5": "BOTH(1,1)",
+   "6": "BOTH(1,1)",
+   "7": "BOTH(1,1)"
+  },
+  "((0, 3), (1, 5), (2, 4))": {
+   "2": "RAM",
+   "3": "POS(1,0)",
+   "4": "POS(1,0)",
+   "5": "POS(1,0)",
+   "6": "BOTH(1,1)",
+   "7": "BOTH(1,1)"
+  },
+  "((0, 4), (1, 2), (3, 5))": {
+   "2": "invalid",
+   "3": "invalid",
+   "4": "invalid",
+   "5": "invalid",
+   "6": "invalid",
+   "7": "invalid"
+  },
+  "((0, 4), (1, 3), (2, 5))": {
+   "2": "RAM",
+   "3": "POS(1,0)",
+   "4": "POS(1,0)",
+   "5": "POS(1,0)",
+   "6": "BOTH(1,1)",
+   "7": "BOTH(1,1)"
+  },
+  "((0, 4), (1, 5), (2, 3))": {
+   "2": "invalid",
+   "3": "invalid",
+   "4": "invalid",
+   "5": "invalid",
+   "6": "invalid",
+   "7": "invalid"
+  },
+  "((0, 5), (1, 2), (3, 4))": {
+   "2": "invalid",
+   "3": "invalid",
+   "4": "invalid",
+   "5": "invalid",
+   "6": "invalid",
+   "7": "invalid"
+  },
+  "((0, 5), (1, 3), (2, 4))": {
+   "2": "RAM",
+   "3": "POS(1,0)",
+   "4": "POS(1,0)",
+   "5": "BOTH(1,1)",
+   "6": "BOTH(1,1)",
+   "7": "BOTH(1,1)"
+  },
+  "((0, 5), (1, 4), (2, 3))": {
+   "2": "invalid",
+   "3": "invalid",
+   "4": "invalid",
+   "5": "invalid",
+   "6": "invalid",
+   "7": "invalid"
+  }
+ },
+ "rh_established": false
+}

@@ -1,0 +1,460 @@
+{
+ "arithmetic_class": "EXACT_RATIONAL / EXACT_INTEGER combinatorial; Ihara zeta function of a finite 3-regular graph -- the function-field-like world where all three classical mechanisms hold exactly but purity fails",
+ "critical_line": {
+  "citation": "H. M. Stark and A. A. Terras (1996), zeta functions of finite graphs and coverings (functional equations, graph-RH formulation); A. Lubotzky, R. Phillips and P. Sarnak (1988), Ramanujan graphs (Combinatorica; the |lambda| <= 2 sqrt(q) definition); M. Kotani and T. Sunada (2000), zeta functions of finite graphs (pole locations vs the spectrum)",
+  "detail": "The graph-RH (Stark-Terras formulation): for a (q+1)-regular connected graph write u = q^(-s); zeta_X satisfies the Riemann hypothesis iff every pole of zeta_X with 0 < Re(s) < 1 has Re(s) = 1/2, iff every nontrivial pole in u has |u| = q^(-1/2), iff X is Ramanujan.  Here q = 2 and the statement is FALSE for Y_16 and for Y_9: both graphs are certified non-Ramanujan by exact Sturm counts, and the certified eigenvalue translates to a pair of real poles of zeta_G, one strictly inside and one strictly outside |u| = 2^(-1/2).  THE ABLATION READING: this world has an exact Euler product (L2), an exactly proved functional equation (L6), and an exactly proved trace formula (TRACE_FORMULA / Bass identity), yet the critical line FAILS.  Those three mechanisms therefore CANNOT jointly force the critical line; whatever forces it in the worlds where it is a theorem (e.g. ff_elliptic_f5) must be a genuine positivity/purity input absent here.  Nothing about RH itself follows; rh_established = false.",
+  "rigor": "REFUTED_BY_WITNESS",
+  "status": "FALSE",
+  "witness": "EXACT NON-RAMANUJAN CERTIFICATE for Y_16 = C_16 x K_2 (32 vertices, 3-regular, bipartite): char(A) = [9, 0, -496, 0, 10360, 0, -105968, 0, 597700, 0, -1998992, 0, 4212216, 0, -5829200, 0, 5429854, 0, -3446544, 0, 1497000, 0, -444304, 0, 89300, 0, -11888, 0, 1000, 0, -48, 0, 1] (degree 32, computed by BOTH Faddeev-LeVerrier and Newton-from-traces, equal).  Trivial eigenvalues +3, -3 stripped exactly (simple: psi(+-3) != 0).  The degree-30 polynomial of SQUARED nontrivial eigenvalues (power sums p_{2k} + Newton) has squarefree part [-1, 27, -181, 391, -343, 125, -19, 1]; its values at the endpoints are sq(8) = 9074667075536209 != 0 and sq(9) = 3651732441147117666304 != 0, and the EXACT Sturm count of roots in (8, 9] is 1 (also 1 in (8, 10]: nothing hides in [9,10]).  Hence some real eigenvalue lambda has 8 < lambda^2 < 9, i.e. 2 sqrt(2) < |lambda| < 3: the Ramanujan bound FAILS.  (A root of the squared-roots polynomial in (8,9) is automatically the square of a REAL root: mu^2 real positive forces mu real; total realness of spec(A) is ALSO proved by Sturm: the squarefree char poly has exactly deg-many distinct real roots in (-4,4], none in (3,4], and only -3 in (-4,-3].)  8-step exact bisection pins lambda^2 into (519/64, 2077/256] (width 1/256).  SECOND CERTIFIED EXAMPLE, SMALLER: Y_9 = C_9 x K_2 (18 vertices, 3-regular, non-bipartite): char(A) = [0, 0, 108, -36, -945, 144, 3081, -108, -4662, -4, 3564, 0, -1395, 0, 279, 0, -27, 0, 1]; only +3 stripped (odd prism, -3 not an eigenvalue); squared-roots polynomial (degree 17) has squarefree part [0, 36, -333, 1161, -1966, 1748, -823, 199, -23, 1] with sq(8) = 10442693632 != 0, sq(9) = 1065245272200 != 0, and Sturm count 1 in (8, 9] (and in (8, 10]).  Certified interval: 1061/128 < lambda^2 <= 2123/256 (the violating eigenvalue is lambda = -(1 + 2 cos(pi/9)) numerically, but ONLY the exact Sturm data is used).  TRANSLATION TO POLES: zeta^-1 = (1-u^2)^{m-n} * prod_lambda (1 - lambda u + 2u^2) exactly (proved here), so poles of zeta attached to lambda are the roots u0 of 1 - lambda u + 2u^2 = 0.  TWO-LINE EXACT ARGUMENT that the certified eigenvalue forces off-critical poles: the poles of zeta_G attached to lambda are the roots u0 of 1 - lambda u + 2u^2.  (1) For real lambda with lambda^2 > 8 the discriminant lambda^2 - 8 is > 0, so the two roots are real and distinct, with product u+ u- = 1/2.  (2) If a real root had |u0| = 1/sqrt(2) then u0 = +-2^(-1/2), and 0 = 2u0^2 - lambda u0 + 1 = 2 -+ lambda 2^(-1/2) forces lambda = +-2 sqrt(2), i.e. lambda^2 = 8, contradicting lambda^2 > 8.  Hence neither root has modulus 1/sqrt(2); since they are distinct real numbers with |u+ u-| = 1/2 = (2^(-1/2))^2, exactly one lies strictly inside and one strictly outside the critical circle |u| = 2^(-1/2).  Under u = 2^(-s) these are poles with Re(s) != 1/2.  For the certified lambda (8 < lambda^2 < 9) the roots are also poles of zeta and not cancelled: zeta = 1/R identically with R the computed polynomial."
+ },
+ "definition": "Primary: Y_16 = C_16 x K_2, the 3-regular prism on 32 vertices (equivalently Cay(D_16, {r, r^-1, s})), with Ihara zeta zeta(u)^-1 = (1-u^2)^16 det(I - Au + 2u^2 I) (q = 2).  Secondary: Y_9 (18 vertices), the smallest certifying prism from a deterministic sweep n = 3..15.  Spectrum of Y_n is {2 cos(2 pi k/n) +- 1}; all certificates below use only exact integer/Fraction computations (char polys, Sturm counts), never that closed form.",
+ "detector_runs": {
+  "certified_intervals": {
+   "Y16": "519/64 < lambda^2 <= 2077/256 (width 1/256), with 8 < lambda^2 < 9 and Sturm count 1 in (8, 9]",
+   "Y9": "1061/128 < lambda^2 <= 2123/256 (width 1/256), with 8 < lambda^2 < 9 and Sturm count 1 in (8, 9]"
+  },
+  "description": "core.reconstruct.detect on exact coefficient data of the Y_16 and Y_9 spectral determinants and the full Y_16 inverse zeta at weight (2,1), each honestly annotated (necessary-only purity passes on impure data; the full-zeta refusal is driven by the trivial (1-u^2)^16 factor); plus the exact prism sweep table and the certified localization intervals.",
+  "nonbacktracking_trace_prefixes": {
+   "Y16_tr_Bk_k_1_12": [
+    0,
+    0,
+    0,
+    128,
+    0,
+    192,
+    0,
+    640,
+    0,
+    2880,
+    0,
+    9152
+   ],
+   "Y9_tr_Bk_k_1_12": [
+    0,
+    0,
+    0,
+    72,
+    0,
+    108,
+    0,
+    360,
+    36,
+    1620,
+    1584,
+    5148
+   ]
+  },
+  "prism_sweep": [
+   {
+    "lambda_sq_interval": null,
+    "n": 3,
+    "stripped": [
+     "+3"
+    ],
+    "sturm_count_sq_in_(8,9]": 0,
+    "verdict": "Ramanujan (certified: no squared nontrivial eigenvalue in (8,10])",
+    "vertices": 6
+   },
+   {
+    "lambda_sq_interval": null,
+    "n": 4,
+    "stripped": [
+     "+3",
+     "-3"
+    ],
+    "sturm_count_sq_in_(8,9]": 0,
+    "verdict": "Ramanujan (certified: no squared nontrivial eigenvalue in (8,10])",
+    "vertices": 8
+   },
+   {
+    "lambda_sq_interval": null,
+    "n": 5,
+    "stripped": [
+     "+3"
+    ],
+    "sturm_count_sq_in_(8,9]": 0,
+    "verdict": "Ramanujan (certified: no squared nontrivial eigenvalue in (8,10])",
+    "vertices": 10
+   },
+   {
+    "lambda_sq_interval": null,
+    "n": 6,
+    "stripped": [
+     "+3",
+     "-3"
+    ],
+    "sturm_count_sq_in_(8,9]": 0,
+    "verdict": "Ramanujan (certified: no squared nontrivial eigenvalue in (8,10])",
+    "vertices": 12
+   },
+   {
+    "lambda_sq_interval": null,
+    "n": 7,
+    "stripped": [
+     "+3"
+    ],
+    "sturm_count_sq_in_(8,9]": 0,
+    "verdict": "Ramanujan (certified: no squared nontrivial eigenvalue in (8,10])",
+    "vertices": 14
+   },
+   {
+    "lambda_sq_interval": null,
+    "n": 8,
+    "stripped": [
+     "+3",
+     "-3"
+    ],
+    "sturm_count_sq_in_(8,9]": 0,
+    "verdict": "Ramanujan (certified: no squared nontrivial eigenvalue in (8,10])",
+    "vertices": 16
+   },
+   {
+    "lambda_sq_interval": "1061/128 < lambda^2 <= 2123/256",
+    "n": 9,
+    "stripped": [
+     "+3"
+    ],
+    "sturm_count_sq_in_(8,9]": 1,
+    "verdict": "NON-RAMANUJAN (certified)",
+    "vertices": 18
+   },
+   {
+    "lambda_sq_interval": null,
+    "n": 10,
+    "stripped": [
+     "+3",
+     "-3"
+    ],
+    "sturm_count_sq_in_(8,9]": 0,
+    "verdict": "Ramanujan (certified: no squared nontrivial eigenvalue in (8,10])",
+    "vertices": 20
+   },
+   {
+    "lambda_sq_interval": "2181/256 < lambda^2 <= 1091/128",
+    "n": 11,
+    "stripped": [
+     "+3"
+    ],
+    "sturm_count_sq_in_(8,9]": 1,
+    "verdict": "NON-RAMANUJAN (certified)",
+    "vertices": 22
+   },
+   {
+    "lambda_sq_interval": null,
+    "n": 12,
+    "stripped": [
+     "+3",
+     "-3"
+    ],
+    "sturm_count_sq_in_(8,9]": 0,
+    "verdict": "Ramanujan (certified: no squared nontrivial eigenvalue in (8,10])",
+    "vertices": 24
+   },
+   {
+    "lambda_sq_interval": "2215/256 < lambda^2 <= 277/32",
+    "n": 13,
+    "stripped": [
+     "+3"
+    ],
+    "sturm_count_sq_in_(8,9]": 1,
+    "verdict": "NON-RAMANUJAN (certified)",
+    "vertices": 26
+   },
+   {
+    "lambda_sq_interval": null,
+    "n": 14,
+    "stripped": [
+     "+3",
+     "-3"
+    ],
+    "sturm_count_sq_in_(8,9]": 0,
+    "verdict": "Ramanujan (certified: no squared nontrivial eigenvalue in (8,10])",
+    "vertices": 28
+   },
+   {
+    "lambda_sq_interval": "2237/256 < lambda^2 <= 1119/128",
+    "n": 15,
+    "stripped": [
+     "+3"
+    ],
+    "sturm_count_sq_in_(8,9]": 1,
+    "verdict": "NON-RAMANUJAN (certified)",
+    "vertices": 30
+   }
+  ],
+  "runs": [
+   {
+    "annotation": "HONEST ANNOTATION -- THE ABLATION LESSON IN MINIATURE: A4 reports HOLDS with rigor NECESSARY_ONLY because for degree 64 the detector can only test self-reciprocity under a -> q^w/a = 2/a, and self-reciprocity HOLDS (it is exactly the functional equation, proved in this build).  Yet purity is FALSE: this world's Sturm certificate exhibits an inverse-root pair off |a| = sqrt(2).  The detector's necessary conditions cannot see the violation: FE-type symmetry does NOT imply purity.  The detector is NOT evidence for purity here and is recorded only to demonstrate that gap.",
+    "mode": "coefficients",
+    "name": "Y16_spectral_determinant_weight_(2,1)",
+    "series": "coefficients of 1/D(u), D = det(I - Au + 2u^2 I) of Y_16, window 136, holdout 4",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 136 terms; deg Q = 64, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 0, 16, 0, 104, 0, 272, 0, -556, 0, -7312, 0, -28504, 0, -54672, 0, 2910, 0, 383280, 0, 1451512, 0, 3422704, 0, 5422532, 0, 2724112, 0, -18416776, 0, -81990000, 0, -201708791, 0, -327960000, 0, -294668416, 0, 174343168, 0, 1388168192, 0, 3504848896, 0, 5945393152, 0, 6279659520, 0, 190709760, 0, -14331936768, 0, -29888610304, 0, -30668750848, 0, -9328132096, 0, 18253611008, 0, 27917287424, 0, 17179869184, 0, 4294967296]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "NECESSARY_ONLY",
+       "status": "HOLDS",
+       "witness": "self-reciprocity holds"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 132 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 64,
+      "denominator": "[1, 0, 16, 0, 104, 0, 272, 0, -556, 0, -7312, 0, -28504, 0, -54672, 0, 2910, 0, 383280, 0, 1451512, 0, 3422704, 0, 5422532, 0, 2724112, 0, -18416776, 0, -81990000, 0, -201708791, 0, -327960000, 0, -294668416, 0, 174343168, 0, 1388168192, 0, 3504848896, 0, 5945393152, 0, 6279659520, 0, 190709760, 0, -14331936768, 0, -29888610304, 0, -30668750848, 0, -9328132096, 0, 18253611008, 0, 27917287424, 0, 17179869184, 0, 4294967296]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     2,
+     1
+    ]
+   },
+   {
+    "annotation": "HONEST ANNOTATION: the A4 refusal (exact self-reciprocity defect polynomial) is driven by the (1-u^2)^16 factor, whose inverse roots +-1 are not exchanged by a -> 2/a.  It is a correct exact refusal, but it detects the TRIVIAL factor, not the interesting spectral impurity; the latter is invisible to self-reciprocity (see run Y16_spectral_determinant) and is certified by Sturm in this build instead.",
+    "mode": "coefficients",
+    "name": "Y16_full_inverse_zeta_weight_(2,1)",
+    "series": "coefficients of 1/[(1-u^2)^16 D(u)] (the full zeta_{Y16}), window 202, holdout 4",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 202 terms; deg Q = 96, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 0, 0, 0, -32, 0, -32, 0, 432, 0, 736, 0, -3152, 0, -7232, 0, 14548, 0, 41984, 0, -54592, 0, -194272, 0, 194016, 0, 980128, 0, -334512, 0, -5143424, 0, -2336418, 0, 23205440, 0, 22978912, 0, -88549344, 0, -112592912, 0, 302640160, 0, 444011600, 0, -909801536, 0, -1745827516, 0, 2089856896, 0, 6980381312, 0, -2493262112, 0, -25981176320, 0, -3512758176, 0, 84619904176, 0, 22485226496, 0, -234084549879, 0, -32569007552, 0, 533176604544, 0, -77968833536, 0, -943902047232, 0, 509120331776, 0, 1148965584896, 0, -1279188533248, 0, -591441035264, 0, 1728216825856, 0, -718693990400, 0, -817721507840, 0, 1244802318336, 0, -772020371456, 0, 268435456000, 0, -51539607552, 0, 4294967296]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "FAILS",
+       "witness": "self-reciprocity under a -> q^w/a fails; defect polynomial [0, 0, 48, 0, -1032, 0, 11472, 0, -73764, 0, 195696, 0, 682248, 0, -6599856, 0, 9039222, 0, 78117456, 0, -280563768, 0, -497382096, 0, 3687311388, 0, 1219243152, 0, -33323872296, 0, 8137108464, 0, 234082213461, 0, -89917700544, 0, -1353895487904, 0, 224727973920, 0, 6651068545008, 0, 2553403042848, 0, -28591197842352, 0, -34241125185600, 0, 114412806261060, 0, 238501103710080, 0, -465572927100288, 0, -1269367326910752, 0, 1888969623516672, 0, 5942442371027040, 0, -6168270101199696, 0, -24916628987096064, 0, 10034604815235849, 0, 88363318908838464, 0, 22988022778517376, 0, -269415611146042368, 0, -213323791876635648, 0, 854417800925528064, 0, 960393769502343168, 0, -2954362634743578624, 0, -4094898552627658752, 0, 8142509854502682624, 0, 14195345306777812992, 0, -13258598120700248064, 0, -31128879379582550016, 0, 9223371264834404352, 0, 36893488415854559232, 0, -51539607552, 0, -18446744069414584320]"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 198 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 96,
+      "denominator": "[1, 0, 0, 0, -32, 0, -32, 0, 432, 0, 736, 0, -3152, 0, -7232, 0, 14548, 0, 41984, 0, -54592, 0, -194272, 0, 194016, 0, 980128, 0, -334512, 0, -5143424, 0, -2336418, 0, 23205440, 0, 22978912, 0, -88549344, 0, -112592912, 0, 302640160, 0, 444011600, 0, -909801536, 0, -1745827516, 0, 2089856896, 0, 6980381312, 0, -2493262112, 0, -25981176320, 0, -3512758176, 0, 84619904176, 0, 22485226496, 0, -234084549879, 0, -32569007552, 0, 533176604544, 0, -77968833536, 0, -943902047232, 0, 509120331776, 0, 1148965584896, 0, -1279188533248, 0, -591441035264, 0, 1728216825856, 0, -718693990400, 0, -817721507840, 0, 1244802318336, 0, -772020371456, 0, 268435456000, 0, -51539607552, 0, 4294967296]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": "A4_PURITY",
+     "rh_established": false
+    },
+    "weight": [
+     2,
+     1
+    ]
+   },
+   {
+    "annotation": "Same phenomenon as run Y16_spectral_determinant on the 18-vertex example: necessary-only purity passes (FE holds) while actual purity is refuted by the exact Sturm certificate.",
+    "mode": "coefficients",
+    "name": "Y9_spectral_determinant_weight_(2,1)",
+    "series": "coefficients of 1/D_9(u), window 80, holdout 4",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 80 terms; deg Q = 36, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 0, 9, 0, 27, 0, -15, 0, -360, -4, -1278, -180, -2583, -1944, -3573, -10356, -4032, -32760, -5768, -65520, -16128, -82848, -57168, -62208, -165312, -23040, -327168, -2048, -368640, 0, -61440, 0, 442368, 0, 589824, 0, 262144]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "NECESSARY_ONLY",
+       "status": "HOLDS",
+       "witness": "self-reciprocity holds"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 76 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 36,
+      "denominator": "[1, 0, 9, 0, 27, 0, -15, 0, -360, -4, -1278, -180, -2583, -1944, -3573, -10356, -4032, -32760, -5768, -65520, -16128, -82848, -57168, -62208, -165312, -23040, -327168, -2048, -368640, 0, -61440, 0, 442368, 0, 589824, 0, 262144]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     2,
+     1
+    ]
+   }
+  ]
+ },
+ "id": "ihara_nonramanujan",
+ "ladder": {
+  "L0_WELL_DEFINED": {
+   "citation": "Y. Ihara (1966), zeta functions of discrete cocompact subgroups of PGL_2 over p-adic fields (the original rationality/determinant theorem, regular case)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "Y_16 and Y_9 built explicitly; symmetry, 0/1 entries, zero diagonal, 3-regularity, connectivity (BFS) all asserted; girth 4 read off exactly from tr(B^k) (first nonzero at k = 4).  zeta_G(u) = prod over primitive closed geodesics of (1 - u^L(P))^-1 is a well-defined rational function: its inverse is the degree-96 (resp. 54) integer polynomial computed here.  BASS/IHARA DETERMINANT IDENTITY PROVED IN FULL for Y_16: the 96 x 96 non-backtracking edge matrix B was built explicitly (each directed edge has exactly q = 2 successors); tr(B^k) computed exactly for k = 1..96 (first twelve: [0, 0, 0, 128, 0, 192, 0, 640, 0, 2880, 0, 9152]; girth 4).  det(I - uB) is a degree-96 polynomial with constant term 1, hence DETERMINED by these 96 power sums via Newton; the reconstruction equals (1-u^2)^16 * det(I - Au + 2u^2 I) COEFFICIENTWISE.  D(u) = det(I - Au + 2u^2 I) itself was computed by two independent exact routes (substitution u^32 char((1+2u^2)/u), and the Chebyshev-style trace recursion t_k = lambda t_{k-1} - 2 t_{k-2}), equal; deg D = 64, D(0) = 1, leading coefficient 2^32 = 4294967296.  So zeta^-1 = (1-u^2)^16 D(u), degree 96: rationality of zeta is PROVED, not imported, for this graph."
+  },
+  "L1_MULTIPLICATIVITY": {
+   "citation": "Y. Ihara (1966), zeta functions of discrete cocompact subgroups of PGL_2 over p-adic fields (the original rationality/determinant theorem, regular case); A. A. Terras (2011), Zeta Functions of Graphs: A Stroll through the Garden (Cambridge)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "local(geodesic)-global multiplicativity: marked closed non-backtracking tailless paths form, under unique decomposition into powers of primitives, the free-monoid structure that gives N_k = sum_{d|k} d pi_d; Moebius inversion yields INTEGRAL, NONNEGATIVE pi_d for all d <= 32 (asserted), and the Euler product re-multiplies to the zeta series exactly through u^32.  EULER PRODUCT over primitive closed geodesics, exact window u^32: oriented primitive class counts pi_d from Moebius inversion of N_k = tr(B^k) = sum_{d|k} d pi_d (every marked closed geodesic is a unique power of a primitive one); all pi_d integral and >= 0; pi_1 = pi_2 = pi_3 = 0, pi_4 = 32, pi_6 = 32, pi_8 = 64, pi_10 = 288, pi_12 = 736; the product prod_{d<=32} (1-u^d)^(-pi_d) equals the coefficient series of 1/[(1-u^2)^16 D(u)] through u^32 EXACTLY (binomial series in Fractions)."
+  },
+  "L2_EULER_PRODUCT": {
+   "citation": "Y. Ihara (1966), zeta functions of discrete cocompact subgroups of PGL_2 over p-adic fields (the original rationality/determinant theorem, regular case)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "EULER PRODUCT over primitive closed geodesics, exact window u^32: oriented primitive class counts pi_d from Moebius inversion of N_k = tr(B^k) = sum_{d|k} d pi_d (every marked closed geodesic is a unique power of a primitive one); all pi_d integral and >= 0; pi_1 = pi_2 = pi_3 = 0, pi_4 = 32, pi_6 = 32, pi_8 = 64, pi_10 = 288, pi_12 = 736; the product prod_{d<=32} (1-u^d)^(-pi_d) equals the coefficient series of 1/[(1-u^2)^16 D(u)] through u^32 EXACTLY (binomial series in Fractions).  Same for Y_9 through u^24 (The same FULL proofs for Y_9: tr(B^k) for k = 1..54 on the 54 x 54 edge matrix (first twelve: [0, 0, 0, 72, 0, 108, 0, 360, 36, 1620, 1584, 5148]); Newton reconstruction equals (1-u^2)^9 D_9(u) coefficientwise (deg D_9 = 36, leading 2^18); FE identities at D- and Xi-level (deg Xi = 72); Euler product window u^24 with pi_4 = 18, pi_6 = 18, pi_8 = 36, pi_9 = 4 (the two 9-cycles, one per layer, in two orientations each), pi_10 = 162, pi_11 = 144: all exact.)  The identity for all degrees is Ihara's theorem (imported); the window is proved here."
+  },
+  "L3_BOUNDED_DEGREE_RATIONAL": {
+   "citation": "H. Bass (1992), the Ihara-Selberg zeta function of a tree lattice (three-term determinant identity for general graphs); K. Hashimoto (1989), zeta functions of finite graphs via the edge (non-backtracking) matrix",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "zeta^-1 IS a polynomial (degree 96 / 54), proved here via the Bass identity -- rationality is exact, not imported.  The spectral local factors are UNIFORMLY DEGREE 2: D(u) = prod over eigenvalues lambda of (1 - lambda u + 2u^2) (an algebraic identity via u^{2n} char((1+2u^2)/u), no diagonalization needed), one quadratic per eigenvalue -- the graph analogue of bounded-degree local L-factors.  BASS/IHARA DETERMINANT IDENTITY PROVED IN FULL for Y_16: the 96 x 96 non-backtracking edge matrix B was built explicitly (each directed edge has exactly q = 2 successors); tr(B^k) computed exactly for k = 1..96 (first twelve: [0, 0, 0, 128, 0, 192, 0, 640, 0, 2880, 0, 9152]; girth 4).  det(I - uB) is a degree-96 polynomial with constant term 1, hence DETERMINED by these 96 power sums via Newton; the reconstruction equals (1-u^2)^16 * det(I - Au + 2u^2 I) COEFFICIENTWISE.  D(u) = det(I - Au + 2u^2 I) itself was computed by two independent exact routes (substitution u^32 char((1+2u^2)/u), and the Chebyshev-style trace recursion t_k = lambda t_{k-1} - 2 t_{k-2}), equal; deg D = 64, D(0) = 1, leading coefficient 2^32 = 4294967296.  So zeta^-1 = (1-u^2)^16 D(u), degree 96: rationality of zeta is PROVED, not imported, for this graph."
+  },
+  "L4_WEIGHT_DUALITY": {
+   "citation": "H. M. Stark and A. A. Terras (1996), zeta functions of finite graphs and coverings (functional equations, graph-RH formulation)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "weight-coherence and self-duality, exact: each local quadratic 1 - lambda u + 2u^2 has inverse-root product exactly q = 2 (the weight datum), and the involution a -> 2/a fixes the global inverse-root multiset: (2u^2)^32 D(1/(2u)) = D(u) is asserted coefficientwise (c_{64-j} = 2^{32-j} c_j).  A is symmetric (asserted), and total realness of the spectrum is PROVED by Sturm count = degree.  NOTE THE ABLATION: duality coherence holds in full while purity FAILS -- the pair (alpha, beta = 2/alpha) can be real with |alpha| != sqrt(2)."
+  },
+  "L5_CONDUCTOR_GAMMA_ROOT": {
+   "citation": "H. M. Stark and A. A. Terras (1996), zeta functions of finite graphs and coverings (functional equations, graph-RH formulation)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "canonical completion with exact FE and root number +1: FUNCTIONAL EQUATION PROVED EXACTLY (coefficient identities in Z): (2u^2)^32 D(1/(2u)) = D(u), i.e. c_{64-j} = 2^{32-j} c_j for all j; and for the completed Xi(u) = ((1-u^2)(1-4u^2))^16 D(u) (degree 128), xi_{128-j} = 2^{64-j} xi_j for all j -- symmetric under u -> 1/(2u), which is s -> 1-s under u = 2^(-s); root number +1 (midpoint identity is trivially consistent).  The completion by (1-u^2)(1-4u^2) factors (vanishing at u = +-1, +-1/2, the s = 0 and s = 1 points) is one member of the standard family of graph FEs.  The (1-u^2)^{m-n} factor is the canonical 'gamma-like' prefactor of the Bass identity (Euler characteristic exponent m - n = 16, resp. 9); conductor-type data is trivial (finite graph, no ramification).  The specific completion ((1-u^2)(1-4u^2))^{m-n} used for the symmetric form is one of the standard family of graph functional equations."
+  },
+  "L6_CONTINUATION_FE": {
+   "citation": "H. Bass (1992), the Ihara-Selberg zeta function of a tree lattice (three-term determinant identity for general graphs); H. M. Stark and A. A. Terras (1996), zeta functions of finite graphs and coverings (functional equations, graph-RH formulation)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "continuation is trivial and exact: zeta = 1/R with R the explicitly computed integer polynomial (degree 96 for Y_16, 54 for Y_9); the functional equation is proved as exact coefficient identities at both D-level and completed Xi-level: FUNCTIONAL EQUATION PROVED EXACTLY (coefficient identities in Z): (2u^2)^32 D(1/(2u)) = D(u), i.e. c_{64-j} = 2^{32-j} c_j for all j; and for the completed Xi(u) = ((1-u^2)(1-4u^2))^16 D(u) (degree 128), xi_{128-j} = 2^{64-j} xi_j for all j -- symmetric under u -> 1/(2u), which is s -> 1-s under u = 2^(-s); root number +1 (midpoint identity is trivially consistent).  The completion by (1-u^2)(1-4u^2) factors (vanishing at u = +-1, +-1/2, the s = 0 and s = 1 points) is one member of the standard family of graph FEs. The same FULL proofs for Y_9: tr(B^k) for k = 1..54 on the 54 x 54 edge matrix (first twelve: [0, 0, 0, 72, 0, 108, 0, 360, 36, 1620, 1584, 5148]); Newton reconstruction equals (1-u^2)^9 D_9(u) coefficientwise (deg D_9 = 36, leading 2^18); FE identities at D- and Xi-level (deg Xi = 72); Euler product window u^24 with pi_4 = 18, pi_6 = 18, pi_8 = 36, pi_9 = 4 (the two 9-cycles, one per layer, in two orientations each), pi_10 = 162, pi_11 = 144: all exact."
+  },
+  "L7_TWIST_TENSOR_COMPAT": {
+   "citation": "H. M. Stark and A. A. Terras (2000), zeta functions of finite graphs and coverings, part II (Artin-Ihara L-functions of graph coverings)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "EXACT TWIST/TENSOR FACTORIZATIONS: (a) K_2-character branches: char(A(Y_16)) = char(A(C_16)+I) * char(A(C_16)-I) and D_{Y16} = D_+ * D_- (Cartesian-product spectral splitting along the two characters of the K_2 factor), asserted coefficientwise.  (b) ARTIN-IHARA for the double cover Y_16 -> Y_8: with voltage -1 on one cycle edge per layer, the signed twisted adjacency A_chi = char [1, 0, -40, 0, 468, 0, -1384, 0, 1638, 0, -856, 0, 212, 0, -24, 0, 1] satisfies char(A_16) = char(A_8) char(A_chi) and D_16 = D_8 D_chi, i.e. zeta_{Y16}^-1 = zeta_{Y8}^-1 * L(u,chi)^-1 with the (1-u^2) exponents adding as 16 = 8 + 8.  Both proved exactly.  These are the graph-zeta analogues of twisting (Artin-Ihara L-function of a character of the deck group) and tensor decomposition (Cartesian-product character splitting)."
+  },
+  "L8_REALIZATION": {
+   "citation": "K. Hashimoto (1989), zeta functions of finite graphs via the edge (non-backtracking) matrix; H. Bass (1992), the Ihara-Selberg zeta function of a tree lattice (three-term determinant identity for general graphs); M. Kotani and T. Sunada (2000), zeta functions of finite graphs (pole locations vs the spectrum)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "THREE exact realizations: (i) dynamical -- zeta_G is the Bowen-Lanford/Artin-Mazur zeta of the non-backtracking edge shift: the 0/1 transition matrix B is built explicitly and det(I - uB) = zeta^-1 is proved in full from its traces; (ii) combinatorial/group-theoretic -- Y_16 and Y_9 are the Cayley graphs of the dihedral groups of orders 32 and 18 with connection set {r, r^-1, s}, asserted ENTRYWISE from the explicit group multiplication; (iii) spectral -- the eigenvalue package is pinned by exact integer char polys computed by two independent methods.  BASS/IHARA DETERMINANT IDENTITY PROVED IN FULL for Y_16: the 96 x 96 non-backtracking edge matrix B was built explicitly (each directed edge has exactly q = 2 successors); tr(B^k) computed exactly for k = 1..96 (first twelve: [0, 0, 0, 128, 0, 192, 0, 640, 0, 2880, 0, 9152]; girth 4).  det(I - uB) is a degree-96 polynomial with constant term 1, hence DETERMINED by these 96 power sums via Newton; the reconstruction equals (1-u^2)^16 * det(I - Au + 2u^2 I) COEFFICIENTWISE.  D(u) = det(I - Au + 2u^2 I) itself was computed by two independent exact routes (substitution u^32 char((1+2u^2)/u), and the Chebyshev-style trace recursion t_k = lambda t_{k-1} - 2 t_{k-2}), equal; deg D = 64, D(0) = 1, leading coefficient 2^32 = 4294967296.  So zeta^-1 = (1-u^2)^16 D(u), degree 96: rationality of zeta is PROVED, not imported, for this graph."
+  },
+  "L9_EXPLICIT_FORMULA_POSITIVITY": {
+   "citation": "A. Lubotzky, R. Phillips and P. Sarnak (1988), Ramanujan graphs (Combinatorica; the |lambda| <= 2 sqrt(q) definition); M. Kotani and T. Sunada (2000), zeta functions of finite graphs (pole locations vs the spectrum)",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "THE ABLATION CELL.  An exact, finite explicit formula EXISTS and is proved here: tr(B^k) = sum_{d|k} d pi_d pairs geodesic counts against the 96 inverse roots of zeta^-1 with no analytic remainder (Bass identity proved in full).  But the POSITIVITY half -- a Weil-positivity-type principle that would force all nontrivial poles onto |u| = 2^(-1/2), equivalently all nontrivial |lambda| <= 2 sqrt(2) -- is REFUTED: EXACT NON-RAMANUJAN CERTIFICATE for Y_16 = C_16 x K_2 (32 vertices, 3-regular, bipartite): char(A) = [9, 0, -496, 0, 10360, 0, -105968, 0, 597700, 0, -1998992, 0, 4212216, 0, -5829200, 0, 5429854, 0, -3446544, 0, 1497000, 0, -444304, 0, 89300, 0, -11888, 0, 1000, 0, -48, 0, 1] (degree 32, computed by BOTH Faddeev-LeVerrier and Newton-from-traces, equal).  Trivial eigenvalues +3, -3 stripped exactly (simple: psi(+-3) != 0).  The degree-30 polynomial of SQUARED nontrivial eigenvalues (power sums p_{2k} + Newton) has squarefree part [-1, 27, -181, 391, -343, 125, -19, 1]; its values at the endpoints are sq(8) = 9074667075536209 != 0 and sq(9) = 3651732441147117666304 != 0, and the EXACT Sturm count of roots in (8, 9] is 1 (also 1 in (8, 10]: nothing hides in [9,10]).  Hence some real eigenvalue lambda has 8 < lambda^2 < 9, i.e. 2 sqrt(2) < |lambda| < 3: the Ramanujan bound FAILS.  (A root of the squared-roots polynomial in (8,9) is automatically the square of a REAL root: mu^2 real positive forces mu real; total realness of spec(A) is ALSO proved by Sturm: the squarefree char poly has exactly deg-many distinct real roots in (-4,4], none in (3,4], and only -3 in (-4,-3].)  8-step exact bisection pins lambda^2 into (519/64, 2077/256] (width 1/256).  SECOND CERTIFIED EXAMPLE, SMALLER: Y_9 = C_9 x K_2 (18 vertices, 3-regular, non-bipartite): char(A) = [0, 0, 108, -36, -945, 144, 3081, -108, -4662, -4, 3564, 0, -1395, 0, 279, 0, -27, 0, 1]; only +3 stripped (odd prism, -3 not an eigenvalue); squared-roots polynomial (degree 17) has squarefree part [0, 36, -333, 1161, -1966, 1748, -823, 199, -23, 1] with sq(8) = 10442693632 != 0, sq(9) = 1065245272200 != 0, and Sturm count 1 in (8, 9] (and in (8, 10]).  Certified interval: 1061/128 < lambda^2 <= 2123/256 (the violating eigenvalue is lambda = -(1 + 2 cos(pi/9)) numerically, but ONLY the exact Sturm data is used).  TWO-LINE EXACT ARGUMENT that the certified eigenvalue forces off-critical poles: the poles of zeta_G attached to lambda are the roots u0 of 1 - lambda u + 2u^2.  (1) For real lambda with lambda^2 > 8 the discriminant lambda^2 - 8 is > 0, so the two roots are real and distinct, with product u+ u- = 1/2.  (2) If a real root had |u0| = 1/sqrt(2) then u0 = +-2^(-1/2), and 0 = 2u0^2 - lambda u0 + 1 = 2 -+ lambda 2^(-1/2) forces lambda = +-2 sqrt(2), i.e. lambda^2 = 8, contradicting lambda^2 > 8.  Hence neither root has modulus 1/sqrt(2); since they are distinct real numbers with |u+ u-| = 1/2 = (2^(-1/2))^2, exactly one lies strictly inside and one strictly outside the critical circle |u| = 2^(-1/2).  Under u = 2^(-s) these are poles with Re(s) != 1/2."
+  }
+ },
+ "mechanisms": {
+  "DUALITY_FE": {
+   "citation": "H. M. Stark and A. A. Terras (1996), zeta functions of finite graphs and coverings (functional equations, graph-RH formulation)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "present, supplied by self-adjointness of A (symmetric, asserted) and the reciprocal pairing alpha beta = 2 in each local quadratic; FE proved as exact coefficient identities (D-level and completed Xi-level, root number +1): FUNCTIONAL EQUATION PROVED EXACTLY (coefficient identities in Z): (2u^2)^32 D(1/(2u)) = D(u), i.e. c_{64-j} = 2^{32-j} c_j for all j; and for the completed Xi(u) = ((1-u^2)(1-4u^2))^16 D(u) (degree 128), xi_{128-j} = 2^{64-j} xi_j for all j -- symmetric under u -> 1/(2u), which is s -> 1-s under u = 2^(-s); root number +1 (midpoint identity is trivially consistent).  The completion by (1-u^2)(1-4u^2) factors (vanishing at u = +-1, +-1/2, the s = 0 and s = 1 points) is one member of the standard family of graph FEs."
+  },
+  "EULER_PRODUCT": {
+   "citation": "Y. Ihara (1966), zeta functions of discrete cocompact subgroups of PGL_2 over p-adic fields (the original rationality/determinant theorem, regular case)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "present, supplied by primitive closed geodesics (free monoid of marked closed non-backtracking tailless paths under primitive decomposition): EULER PRODUCT over primitive closed geodesics, exact window u^32: oriented primitive class counts pi_d from Moebius inversion of N_k = tr(B^k) = sum_{d|k} d pi_d (every marked closed geodesic is a unique power of a primitive one); all pi_d integral and >= 0; pi_1 = pi_2 = pi_3 = 0, pi_4 = 32, pi_6 = 32, pi_8 = 64, pi_10 = 288, pi_12 = 736; the product prod_{d<=32} (1-u^d)^(-pi_d) equals the coefficient series of 1/[(1-u^2)^16 D(u)] through u^32 EXACTLY (binomial series in Fractions)."
+  },
+  "FAMILY": {
+   "citation": "N. Alon (1986), eigenvalues and expanders; A. Nilli (1991), on the second eigenvalue of a graph (Alon-Boppana bound)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "present: the prism family {Y_n} with the exact sweep n = 3..15 plus n = 16 (see sweep table in detector_runs), and the vertical covering structure Y_8 -> Y_16 with exact Artin-Ihara factorization.  HONEST NOTE: unlike the Hasse family sweep in world ff_elliptic_f5, membership in this family does NOT enforce the critical line -- the family contains certified Ramanujan members (n <= 8, 10, 12, 14) and certified non-Ramanujan members (n = 9, 11, 13, 15, 16); as n grows the nontrivial spectral radius tends to 3, so prisms are also a certified NON-example of an expander family.  DETERMINISTIC EXACT SWEEP over all prisms Y_n, n = 3..15 (same Sturm certificate pipeline as Y_16, both directions certified): NON-Ramanujan for n = 9, 11, 13, 15 (count in (8,9] equals 1); Ramanujan for n = 3..8, 10, 12, 14 (count in (8,10] equals 0).  In particular the task's candidate n = 14 (28 vertices) does NOT certify -- Y_14 is Ramanujan -- while n = 15 (30 vertices) does.  The smallest certifying prism is n = 9 (18 vertices), kept as the second certified example.  (Search restricted to the prism family; smaller non-prism cubic non-Ramanujan graphs were not searched for.)"
+  },
+  "POSITIVITY_PURITY": {
+   "citation": "A. Lubotzky, R. Phillips and P. Sarnak (1988), Ramanujan graphs (Combinatorica; the |lambda| <= 2 sqrt(q) definition); N. Alon (1986), eigenvalues and expanders; A. Nilli (1991), on the second eigenvalue of a graph (Alon-Boppana bound)",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "REFUTED BY EXACT WITNESS -- the point of this world.  Self-adjointness of A supplies REALNESS of the spectrum (proved by Sturm) but NOT the Ramanujan/purity bound |lambda| <= 2 sqrt(2): the tree-spectrum positivity that pins poles to the critical circle has no analogue here.  EXACT NON-RAMANUJAN CERTIFICATE for Y_16 = C_16 x K_2 (32 vertices, 3-regular, bipartite): char(A) = [9, 0, -496, 0, 10360, 0, -105968, 0, 597700, 0, -1998992, 0, 4212216, 0, -5829200, 0, 5429854, 0, -3446544, 0, 1497000, 0, -444304, 0, 89300, 0, -11888, 0, 1000, 0, -48, 0, 1] (degree 32, computed by BOTH Faddeev-LeVerrier and Newton-from-traces, equal).  Trivial eigenvalues +3, -3 stripped exactly (simple: psi(+-3) != 0).  The degree-30 polynomial of SQUARED nontrivial eigenvalues (power sums p_{2k} + Newton) has squarefree part [-1, 27, -181, 391, -343, 125, -19, 1]; its values at the endpoints are sq(8) = 9074667075536209 != 0 and sq(9) = 3651732441147117666304 != 0, and the EXACT Sturm count of roots in (8, 9] is 1 (also 1 in (8, 10]: nothing hides in [9,10]).  Hence some real eigenvalue lambda has 8 < lambda^2 < 9, i.e. 2 sqrt(2) < |lambda| < 3: the Ramanujan bound FAILS.  (A root of the squared-roots polynomial in (8,9) is automatically the square of a REAL root: mu^2 real positive forces mu real; total realness of spec(A) is ALSO proved by Sturm: the squarefree char poly has exactly deg-many distinct real roots in (-4,4], none in (3,4], and only -3 in (-4,-3].)  8-step exact bisection pins lambda^2 into (519/64, 2077/256] (width 1/256).  SECOND CERTIFIED EXAMPLE, SMALLER: Y_9 = C_9 x K_2 (18 vertices, 3-regular, non-bipartite): char(A) = [0, 0, 108, -36, -945, 144, 3081, -108, -4662, -4, 3564, 0, -1395, 0, 279, 0, -27, 0, 1]; only +3 stripped (odd prism, -3 not an eigenvalue); squared-roots polynomial (degree 17) has squarefree part [0, 36, -333, 1161, -1966, 1748, -823, 199, -23, 1] with sq(8) = 10442693632 != 0, sq(9) = 1065245272200 != 0, and Sturm count 1 in (8, 9] (and in (8, 10]).  Certified interval: 1061/128 < lambda^2 <= 2123/256 (the violating eigenvalue is lambda = -(1 + 2 cos(pi/9)) numerically, but ONLY the exact Sturm data is used).  The detector's necessary-only purity branch even PASSES on 1/D (self-reciprocity = FE holds), demonstrating exactly which mechanism is missing: see detector_runs annotations."
+  },
+  "TENSOR_OPS": {
+   "citation": "H. M. Stark and A. A. Terras (2000), zeta functions of finite graphs and coverings, part II (Artin-Ihara L-functions of graph coverings)",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "EXACT TWIST/TENSOR FACTORIZATIONS: (a) K_2-character branches: char(A(Y_16)) = char(A(C_16)+I) * char(A(C_16)-I) and D_{Y16} = D_+ * D_- (Cartesian-product spectral splitting along the two characters of the K_2 factor), asserted coefficientwise.  (b) ARTIN-IHARA for the double cover Y_16 -> Y_8: with voltage -1 on one cycle edge per layer, the signed twisted adjacency A_chi = char [1, 0, -40, 0, 468, 0, -1384, 0, 1638, 0, -856, 0, 212, 0, -24, 0, 1] satisfies char(A_16) = char(A_8) char(A_chi) and D_16 = D_8 D_chi, i.e. zeta_{Y16}^-1 = zeta_{Y8}^-1 * L(u,chi)^-1 with the (1-u^2) exponents adding as 16 = 8 + 8.  Both proved exactly."
+  },
+  "TRACE_FORMULA": {
+   "citation": "H. Bass (1992), the Ihara-Selberg zeta function of a tree lattice (three-term determinant identity for general graphs); K. Hashimoto (1989), zeta functions of finite graphs via the edge (non-backtracking) matrix",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "present, supplied by the Bass/Hashimoto determinant identity -- the graph trace formula -- PROVED IN FULL here for both graphs (not just window-checked): 96 resp. 54 exact traces of the non-backtracking operator determine det(I - uB) by Newton, and it equals (1-u^2)^{m-n} det(I - Au + 2u^2 I) coefficientwise.  BASS/IHARA DETERMINANT IDENTITY PROVED IN FULL for Y_16: the 96 x 96 non-backtracking edge matrix B was built explicitly (each directed edge has exactly q = 2 successors); tr(B^k) computed exactly for k = 1..96 (first twelve: [0, 0, 0, 128, 0, 192, 0, 640, 0, 2880, 0, 9152]; girth 4).  det(I - uB) is a degree-96 polynomial with constant term 1, hence DETERMINED by these 96 power sums via Newton; the reconstruction equals (1-u^2)^16 * det(I - Au + 2u^2 I) COEFFICIENTWISE.  D(u) = det(I - Au + 2u^2 I) itself was computed by two independent exact routes (substitution u^32 char((1+2u^2)/u), and the Chebyshev-style trace recursion t_k = lambda t_{k-1} - 2 t_{k-2}), equal; deg D = 64, D(0) = 1, leading coefficient 2^32 = 4294967296.  So zeta^-1 = (1-u^2)^16 D(u), degree 96: rationality of zeta is PROVED, not imported, for this graph. The same FULL proofs for Y_9: tr(B^k) for k = 1..54 on the 54 x 54 edge matrix (first twelve: [0, 0, 0, 72, 0, 108, 0, 360, 36, 1620, 1584, 5148]); Newton reconstruction equals (1-u^2)^9 D_9(u) coefficientwise (deg D_9 = 36, leading 2^18); FE identities at D- and Xi-level (deg Xi = 72); Euler product window u^24 with pi_4 = 18, pi_6 = 18, pi_8 = 36, pi_9 = 4 (the two 9-cycles, one per layer, in two orientations each), pi_10 = 162, pi_11 = 144: all exact."
+  }
+ },
+ "notes": "THIS IS THE PASS'S SHARPEST INDEPENDENCE WITNESS.  It separates the mechanism axes with exact certificates on both sides: EULER_PRODUCT holds (exact geodesic product, window u^32), DUALITY_FE holds (coefficient-identity FE, root number +1), TRACE_FORMULA holds (Bass identity proved IN FULL from 96 exact non-backtracking traces -- not window-checked, determined), and yet POSITIVITY_PURITY FAILS and the critical line is FALSE, certified twice (32-vertex Y_16 and 18-vertex Y_9) by exact Sturm counts with dyadic-rational localization of lambda^2 in (519/64, 2077/256] resp. (1061/128, 2123/256].  Consequently no argument of the shape 'Euler product + functional equation + trace formula => critical line' can be valid in any category containing this world: any credible route to critical-line statements must consume a positivity/purity input that this world falsifies (compare the OPEN L9 slot of the zeta world and the PROVED degree-form positivity of ff_elliptic_f5).  Secondary findings recorded honestly: the task's suggested smaller candidate n = 14 does NOT certify (Y_14 is Ramanujan, proved exactly); n = 15 certifies; the smallest certifying prism is n = 9; smaller NON-PRISM cubic non-Ramanujan graphs were not searched for.  The detector's necessary-only purity branch passes on the impure spectral determinant (annotated in detector_runs): self-reciprocity (= FE) does not see the violation -- the operational content of the ablation.  NO floats appear anywhere in this build; every HOLDS/FAILS is an exact integer/Fraction computation or a named imported theorem.  Nothing here bears on RH over Q: rh_established = false.",
+ "rh_established": false,
+ "sources": [
+  "Y. Ihara (1966), On discrete subgroups of the two by two projective linear group over p-adic fields (J. Math. Soc. Japan)",
+  "K. Hashimoto (1989), Zeta functions of finite graphs and representations of p-adic groups (Adv. Stud. Pure Math. 15)",
+  "H. Bass (1992), The Ihara-Selberg zeta function of a tree lattice (Internat. J. Math.)",
+  "H. M. Stark and A. A. Terras (1996), Zeta functions of finite graphs and coverings (Adv. Math.)",
+  "H. M. Stark and A. A. Terras (2000), Zeta functions of finite graphs and coverings, Part II (Adv. Math.)",
+  "A. A. Terras (2011), Zeta Functions of Graphs: A Stroll through the Garden (Cambridge Univ. Press)",
+  "A. Lubotzky, R. Phillips, P. Sarnak (1988), Ramanujan graphs (Combinatorica 8)",
+  "N. Alon (1986), Eigenvalues and expanders (Combinatorica 6); A. Nilli (1991), On the second eigenvalue of a graph (Discrete Math.)",
+  "M. Kotani and T. Sunada (2000), Zeta functions of finite graphs (J. Math. Sci. Univ. Tokyo 7)",
+  "J. Friedman (2008), A proof of Alon's second eigenvalue conjecture and related problems (Mem. Amer. Math. Soc.)"
+ ],
+ "title": "Ihara zeta of exact non-Ramanujan cubic graphs (prisms Y_16 and Y_9): the ablation witness against 'Euler product + FE + trace formula => critical line'"
+}

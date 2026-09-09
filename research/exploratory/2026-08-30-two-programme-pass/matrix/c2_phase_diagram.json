@@ -1,0 +1,274 @@
+{
+ "meta": {
+  "curve": "11a1",
+  "good_primes": 9591,
+  "ap_limit": 100000,
+  "coeff_check_limit": 20000,
+  "arithmetic_class": "EXACT_RATIONAL + labelled float densities",
+  "rh_established": false
+ },
+ "part1_phase_transition": {
+  "grid": {
+   "0.5": {
+    "st_closed_form": 0.0,
+    "empirical": {
+     "10000": {
+      "violations": 0,
+      "n_primes": 1228,
+      "density": 0.0
+     },
+     "100000": {
+      "violations": 0,
+      "n_primes": 9591,
+      "density": 0.0
+     }
+    }
+   },
+   "0.9": {
+    "st_closed_form": 0.0,
+    "empirical": {
+     "10000": {
+      "violations": 0,
+      "n_primes": 1228,
+      "density": 0.0
+     },
+     "100000": {
+      "violations": 0,
+      "n_primes": 9591,
+      "density": 0.0
+     }
+    }
+   },
+   "1.0": {
+    "st_closed_form": 0.0,
+    "empirical": {
+     "10000": {
+      "violations": 0,
+      "n_primes": 1228,
+      "density": 0.0
+     },
+     "100000": {
+      "violations": 0,
+      "n_primes": 9591,
+      "density": 0.0
+     }
+    }
+   },
+   "1.01": {
+    "st_closed_form": 0.0011808799623146192,
+    "empirical": {
+     "10000": {
+      "violations": 0,
+      "n_primes": 1228,
+      "density": 0.0
+     },
+     "100000": {
+      "violations": 9,
+      "n_primes": 9591,
+      "density": 0.0009383797309978105
+     }
+    }
+   },
+   "1.05": {
+    "st_closed_form": 0.01238449411342834,
+    "empirical": {
+     "10000": {
+      "violations": 12,
+      "n_primes": 1228,
+      "density": 0.009771986970684038
+     },
+     "100000": {
+      "violations": 106,
+      "n_primes": 9591,
+      "density": 0.0110520279428631
+     }
+    }
+   },
+   "1.1": {
+    "st_closed_form": 0.03245131226496893,
+    "empirical": {
+     "10000": {
+      "violations": 34,
+      "n_primes": 1228,
+      "density": 0.02768729641693811
+     },
+     "100000": {
+      "violations": 302,
+      "n_primes": 9591,
+      "density": 0.0314878531957043
+     }
+    }
+   },
+   "1.25": {
+    "st_closed_form": 0.1040880386618278,
+    "empirical": {
+     "10000": {
+      "violations": 120,
+      "n_primes": 1228,
+      "density": 0.09771986970684039
+     },
+     "100000": {
+      "violations": 973,
+      "n_primes": 9591,
+      "density": 0.10144927536231885
+     }
+    }
+   },
+   "1.5": {
+    "st_closed_form": 0.21910203741704806,
+    "empirical": {
+     "10000": {
+      "violations": 268,
+      "n_primes": 1228,
+      "density": 0.2182410423452769
+     },
+     "100000": {
+      "violations": 2069,
+      "n_primes": 9591,
+      "density": 0.2157230737149411
+     }
+    }
+   },
+   "1.75": {
+    "st_closed_form": 0.314239885815464,
+    "empirical": {
+     "10000": {
+      "violations": 392,
+      "n_primes": 1228,
+      "density": 0.31921824104234525
+     },
+     "100000": {
+      "violations": 3002,
+      "n_primes": 9591,
+      "density": 0.31300177249504746
+     }
+    }
+   },
+   "2.0": {
+    "st_closed_form": 0.3910022189557708,
+    "empirical": {
+     "10000": {
+      "violations": 484,
+      "n_primes": 1228,
+      "density": 0.3941368078175896
+     },
+     "100000": {
+      "violations": 3729,
+      "n_primes": 9591,
+      "density": 0.38880200187675945
+     }
+    }
+   },
+   "2.25": {
+    "st_closed_form": 0.453340855122456,
+    "empirical": {
+     "10000": {
+      "violations": 556,
+      "n_primes": 1228,
+      "density": 0.4527687296416938
+     },
+     "100000": {
+      "violations": 4326,
+      "n_primes": 9591,
+      "density": 0.4510478573662809
+     }
+    }
+   },
+   "2.5": {
+    "st_closed_form": 0.5046315754686909,
+    "empirical": {
+     "10000": {
+      "violations": 624,
+      "n_primes": 1228,
+      "density": 0.50814332247557
+     },
+     "100000": {
+      "violations": 4815,
+      "n_primes": 9591,
+      "density": 0.5020331560838286
+     }
+    }
+   },
+   "3.0": {
+    "st_closed_form": 0.5835828115818578,
+    "empirical": {
+     "10000": {
+      "violations": 723,
+      "n_primes": 1228,
+      "density": 0.5887622149837134
+     },
+     "100000": {
+      "violations": 5586,
+      "n_primes": 9591,
+      "density": 0.5824210197059744
+     }
+    }
+   }
+  },
+  "hasse_exact_zero_violations_all_t_leq_1": true,
+  "note": "closed form D(t) = (2 th - sin 2 th)/pi, th = arccos(1/|t|); Sato-Tate IMPORTED (labelled); densities are floats, everything else exact"
+ },
+ "part2_exact_strata": {
+  "t0_identity_zeta_quotient": true,
+  "tm1_identity_sym2_quotient": true,
+  "strata_reading": {
+   "t=1": "entire L-function (S1); IMPORTED modularity of 11a1",
+   "t=-1": "meromorphic on C as an automorphic quotient (S2): infinitely many poles at zeros of L(f,s); Sym^2 automorphy IMPORTED (Gelbart-Jacquet)",
+   "t=0": "meromorphic on C as zeta(4s-2)/zeta(2s-1) (S2): infinitely many poles at zeros of zeta(2s-1)",
+   "t=2": "the cube-defect bridge deformation (T-108507): CONJECTURAL natural boundary (S3), conditional on the Estermann/Kurokawa criteria",
+   "|t|>1 non-integer": "leaves the integral arithmetic class",
+   "headline": "one line through deformation space crosses the entire survival trichotomy, with exact identities at every integer point in [-1, 1]"
+  }
+ },
+ "part3_rigidity": {
+  "gcd_of_ap_first50": 1,
+  "integrality_lemma": "t * a_5 = t must be an integer (a_5 = 1), and t in Z suffices: integrality locus of the line = Z",
+  "tempered_and_integral_locus": [
+   0,
+   1,
+   -1
+  ],
+  "first_violating_prime_by_t": {
+   "1.05": 239,
+   "1.10": 239,
+   "1.15": 107,
+   "1.20": 107,
+   "1.25": 107,
+   "1.30": 89,
+   "1.35": 61,
+   "1.40": 61,
+   "1.45": 2,
+   "1.50": 2,
+   "1.55": 2,
+   "1.60": 2,
+   "1.65": 2,
+   "1.70": 2,
+   "1.75": 2,
+   "1.80": 2,
+   "1.85": 2,
+   "1.90": 2,
+   "1.95": 2,
+   "2.00": 2,
+   "2.05": 2,
+   "2.10": 2,
+   "2.15": 2,
+   "2.20": 2,
+   "2.25": 2,
+   "2.30": 2,
+   "2.35": 2,
+   "2.40": 2,
+   "2.45": 2,
+   "2.50": 2,
+   "2.55": 2,
+   "2.60": 2,
+   "2.65": 2,
+   "2.70": 2,
+   "2.75": 2,
+   "2.80": 2,
+   "2.85": 2,
+   "2.90": 2,
+   "2.95": 2,
+   "3.00": 2
+  }
+ }
+}

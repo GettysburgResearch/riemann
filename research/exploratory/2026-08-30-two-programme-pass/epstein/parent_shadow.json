@@ -1,0 +1,72 @@
+{
+ "checks": {
+  "all_verified": true,
+  "identity_Lambda_eq_2Estar_fourier": [
+   {
+    "digits_agree": 44.77864306968308,
+    "s": [
+     0.6,
+     7.3
+    ],
+    "z": [
+     0.13,
+     1.07
+    ]
+   },
+   {
+    "digits_agree": 41.270586491099294,
+    "s": [
+     0.5,
+     13.4
+    ],
+    "z": [
+     0.0,
+     1.31
+    ]
+   }
+  ],
+  "identity_Z_eq_2zeta2s_E1": [
+   {
+    "coprime_sum_cutoff_Q": 20000,
+    "coprime_tail_bound": 1.9118974445126246e-23,
+    "digits_agree": 23.663092197291654,
+    "s": [
+     6.25,
+     1.3
+    ],
+    "z": [
+     0.13,
+     1.07
+    ]
+   },
+   {
+    "coprime_sum_cutoff_Q": 25000,
+    "coprime_tail_bound": 7.82278376285284e-23,
+    "digits_agree": 22.856016306200782,
+    "s": [
+     6.0,
+     2.4
+    ],
+    "z": [
+     0.5,
+     0.8660254037844386
+    ]
+   }
+  ],
+  "scattering_unitarity": {
+   "abs_phi_minus_1": 0.0,
+   "phi": [
+    0.7966913771894442,
+    -0.6043863412685522
+   ],
+   "t": 3.7
+  }
+ },
+ "meta": {
+  "arithmetic_class": "NON_DIRECTED_HIGH_PRECISION",
+  "dps": 45,
+  "mpmath_version": "1.3.0",
+  "rh_established": false,
+  "truncation": "incomplete-gamma lattice sum truncated at Q_z(m,n) <= Xmax=39.5; stated tail bound 20*(pi*X+10)*exp(-pi*X) < 1e-50 absolute (valid for |Re s - 1/2| <= 6.5, |Im s| <= 40); on-line scans dt=0.05 with two nested dt/10 dip rescans; box winding adaptive with |dphi| < pi/2; zero refinement to |interval| <= 1e-13*max(1,t)"
+ }
+}

@@ -1,0 +1,29 @@
+[01:24:21] A: m=2 selfdual=True eps=1 M_fac=1 disc=None (0.1s)
+[01:24:21] A: m=3 selfdual=True eps=0 M_fac=2*a*b + z disc=None (0.1s)
+[01:24:21] A: m=4 selfdual=True eps=1 M_fac=3*a**2*b - 2*b**2 + z disc=None (0.3s)
+[01:24:21] A: m=5 selfdual=True eps=0 M_fac=6*a**4*b**3 + 4*a**3*b*z - 8*a**2*b**4 - 3*a*b**2*z + z**2 disc=a**2*b**2*(16*a**4 - 48*a**2*b + 41*b**2) (0.5s)
+[01:24:22] A: m=6 selfdual=True eps=1 M_fac=10*a**6*b**3 - 30*a**4*b**4 + 5*a**4*b*z + 22*a**2*b**5 - 6*a**2*b**2*z - 4*b**6 + z**2 disc=b**2*(5*a**2 - 2*b)*(5*a**6 - 18*a**4*b + 24*a**2*b**2 - 8*b**3) (0.9s)
+[01:24:24] A: m=7 selfdual=True eps=0 M_fac=20*a**9*b**6 + 15*a**8*b**3*z - 90*a**7*b**7 - 56*a**6*b**4*z + 120*a**5*b**8 + 6*a**5*b*z**2 + 65*a**4*b**5*z - 48*a**3*b**9 - 10*a**3*b**2*z**2 - 27*a**2*b**6*z + 4*a*b**3*z**2 + z**3 disc=4*a**6*b**8*(a**2 - b)**2*(2025*a**16 - 25515*a**14*b + 138384*a**12*b**2 - 422712*a**10*b**3 + 791534*a**8*b**4 - 917685*a**6*b**5 + 631117*a**4*b**6 - 229641*a**2*b**7 + 33447*b**8) (1.9s)
+[01:24:28] A: m=8 selfdual=True eps=1 M_fac=35*a**12*b**6 - 252*a**10*b**7 + 21*a**10*b**3*z + 665*a**8*b**8 - 105*a**8*b**4*z - 800*a**6*b**9 + 176*a**6*b**5*z + 7*a**6*b*z**2 + 446*a**4*b**10 - 123*a**4*b**6*z - 15*a**4*b**2*z**2 - 104*a**2*b**11 + 32*a**2*b**7*z + 10*a**2*b**3*z**2 + 8*b**12 - 4*b**8*z - 2*b**4*z**2 + z**3 disc=a**4*b**8*(a**2 - b)**2*(21609*a**24 - 350546*a**22*b + 2569511*a**20*b**2 - 11236778*a**18*b**3 + 32480469*a**16*b**4 - 64780548*a**14*b**5 + 90292308*a**12*b**6 - 87274400*a**10*b**7 + 57007232*a**8*b**8 - 24060896*a**6*b**9 + 6132928*a**4*b**10 - 841216*a**2*b**11 + 47104*b**12) (3.7s)
+[01:24:37] A: m=9 selfdual=True eps=0 M_fac=70*a**16*b**10 + 56*a**15*b**6*z - 672*a**14*b**11 - 490*a**13*b**7*z + 2520*a**12*b**12 + 28*a**12*b**3*z**2 + 1688*a**11*b**8*z - 4690*a**10*b**13 - 176*a**10*b**4*z**2 - 2915*a**9*b**9*z + 4536*a**8*b**14 + 415*a**8*b**5*z**2 + 2632*a**7*b**10*z + 8*a**7*b*z**3 - 2144*a**6*b**15 - 469*a**6*b**6*z**2 - 1160*a**5*b**11*z - 21*a**5*b**2*z**3 + 384*a**4*b**16 + 260*a**4*b**7*z**2 + 185*a**3*b**12*z + 20*a**3*b**3*z**3 - 61*a**2*b**8*z**2 - 5*a*b**4*z**3 + z**4 disc=a**12*b**20*(a**2 - 2*b)**2*(a**2 - b)**4*(157351936*a**44 - 5327486976*a**42*b + 84986754048*a**40*b**2 - 849877073920*a**38*b**3 + 5977760186944*a**36*b**4 - 31442861517312*a**34*b**5 + 128333785326720*a**32*b**6 - 416120809206304*a**30*b**7 + 1088343133470160*a**28*b**8 - 2318012288036056*a**26*b**9 + 4041766640491092*a**24*b**10 - 5780501222260372*a**22*b**11 + 6774163391522749*a**20*b**12 - 6480242810683510*a**18*b**13 + 5026568809583907*a**16*b**14 - 3130241125072554*a**14*b**15 + 1543228047066337*a**12*b**16 - 590694681932704*a**10*b**17 + 170759186043240*a**8*b**18 - 35790285479328*a**6*b**19 + 5096165498176*a**4*b**20 - 437770394880*a**2*b**21 + 16999214400*b**22) (9.2s)
+[01:24:37] A2: instantiation factor-pattern statistics (m = 5, 7, 9)
+[01:24:38] A2: m=5 patterns={'(4,)': 180, '(2, 2)': 8, '(1, 1, 2)': 4} extra={'n_points': 192, 'n_split': 12, 'D5_square': 12, 'D5_square_and_split': 12, 'split_without_D5_square': 0}
+[01:24:39] A2: m=7 patterns={'(6,)': 184, '(2, 4)': 2, '(2, 2, 2)': 2, '(1, 1, 2, 2)': 4} extra={'n_points': 192, 'n_split': 8}
+[01:24:41] A2: m=9 patterns={'(8,)': 184, '(2, 2, 4)': 2, '(2, 2, 2, 2)': 2, '(1, 1, 1, 1, 2, 2)': 4} extra={'n_points': 192, 'n_split': 8}
+[01:24:41] B: (m,d) grid — codimension law + duality
+[01:24:41] B: (m=2,d=2) dim=3 degQ=3 degN=1 pred=1 law=OK dual=[True, True, True, True, True]
+[01:24:41] B: (m=2,d=3) dim=6 degQ=6 degN=3 pred=3 law=OK dual=[False, False, False, False, False]
+[01:24:41] B: (m=2,d=4) dim=10 degQ=10 degN=6 pred=6 law=OK dual=[False, False, False, False, False]
+[01:24:41] B: (m=2,d=5) dim=15 degQ=15 degN=10 pred=10 law=OK dual=[False, False, False, False, False]
+[01:24:41] B: (m=2,d=6) dim=21 degQ=21 degN=15 pred=15 law=OK dual=[False, False, False, False, False]
+[01:24:41] B: (m=3,d=2) dim=4 degQ=4 degN=2 pred=2 law=OK dual=[True, True, True, True, True]
+[01:24:41] B: (m=3,d=3) dim=10 degQ=10 degN=7 pred=7 law=OK dual=[False, False, False, True, False]
+[01:24:41] B: (m=3,d=4) dim=20 degQ=20 degN=16 pred=16 law=OK dual=[False, False, False, False, False]
+[01:24:41] B: (m=4,d=2) dim=5 degQ=5 degN=3 pred=3 law=OK dual=[True, True, True, True, True]
+[01:24:41] B: (m=4,d=3) dim=15 degQ=15 degN=12 pred=12 law=OK dual=[False, False, False, False, False]
+[01:24:41] C: transform defects at d=2
+[01:24:41] C: Rankin control closed form CONFIRMED
+[01:24:41] C: mixed cube (deg_N, deg_Q) = [(4, 6), (4, 6), (4, 6), (4, 6), (4, 6), (4, 6)]
+[01:24:41] C: shift-then-square degs = [(2, 3), (2, 3), (2, 3), (2, 3)]
+[01:24:41] C: section degs = [((1, 2), (2, 3)), ((1, 2), (2, 3)), ((1, 2), (2, 3)), ((1, 2), (2, 3))]
+[01:24:41] C1 atlas done in 21s

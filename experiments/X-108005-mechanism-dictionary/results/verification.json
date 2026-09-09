@@ -1,0 +1,29 @@
+{
+ "experiment": "X-108005-mechanism-dictionary",
+ "claim": "L-108005",
+ "checks": [
+  {
+   "name": "D1_dictionary_sign_chains",
+   "ok": true,
+   "detail": "Vieta pairing + two-case criterion certified exactly"
+  },
+  {
+   "name": "D2_tempered_instances",
+   "ok": true,
+   "detail": "K4 and Petersen: zero eigenvalue-squares in (8,9): every non-trivial pole pair on the critical circle"
+  },
+  {
+   "name": "D3_untempered_census_resultant",
+   "ok": true,
+   "detail": "{\"prism_C16\": {\"untempered_squares\": 1, \"off_circle_poles_in_(0.708,0.999)\": 1}, \"Petersen\": {\"untempered_squares\": 0, \"off_circle_poles_in_(0.708,0.999)\": 0}}"
+  },
+  {
+   "name": "D4_function_field_transfer",
+   "ok": true,
+   "detail": "curve a = -3: disc = -11 < 0: conjugate pair of modulus sqrt(5) \u2014 same Vieta pairing, same two-case criterion; only the SUPPLIER of the bound differs"
+  }
+ ],
+ "all_ok": true,
+ "arithmetic_class": "EXACT_RATIONAL",
+ "rh_established": false
+}

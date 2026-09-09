@@ -1,0 +1,313 @@
+{
+ "arithmetic_class": "linear combination of GL(1) L-functions (the two odd Dirichlet L-functions of conductor 5), coefficients in the real quartic field Q(kappa) = Q(zeta_20)^+; possesses duality/FE but NO Euler product \u2014 the designed complement of the 'beurling' row (Euler product without duality)",
+ "critical_line": {
+  "citation": "H. Davenport, H. Heilbronn (1936), on the zeros of certain Dirichlet series, J. London Math. Soc. (papers I-II): zeta(s,a) for rational (and transcendental) a, and combinations of the Davenport-Heilbronn type, have infinitely many zeros in Re s > 1; CITATION-NEEDED: zero-density work on the Davenport-Heilbronn function \u2014 positive (in fact power-scale) counts of zeros in fixed strips 1/2 < sigma_1 < Re s < sigma_2 < 1 (Balanzario-Sanchez-Ortiz, ~2007, Math. Comp.; context: Bombieri-Hejhal (~1995) on the distribution of zeros of linear combinations of Euler products); CITATION-NEEDED: A. A. Karatsuba (~1980s-1990s), lower bounds for zeros of Davenport-Heilbronn-type series on the critical line; CITATION-NEEDED: R. Spira (~1960s-1970s), numerical zero computations for the Davenport-Heilbronn function (source of the numeric seed used here)",
+  "detail": "the RH analogue for f is FALSE: f has infinitely many zeros with Re s > 1 (Davenport-Heilbronn 1936, imported theorem), and zeros in the open critical strip off the line 1/2 < Re s < 1 (imported; density work citation-needed).  f also has infinitely many zeros ON Re s = 1/2 (imported, citation-needed: Karatsuba-era results for DH-type series) \u2014 the line is populated but not exclusive.  Everything exact in this record (FE, constant, non-multiplicativity) is consistent with and explanatory of this: duality holds, Euler product fails, zeros stray",
+  "rigor": "IMPORTED_THEOREM",
+  "status": "FALSE",
+  "witness": "corroboration only (NON_DIRECTED_NUMERIC (mpmath, 60 dps) \u2014 corroboration only, never the basis of a status): approximate zero rho = (0.808517182456637385553351960607 + 85.6993484853775921719292677089j) with |f(rho)| < 1e-50 and Re(rho) - 1/2 = 0.308517182457; zero LOCATION approximate (numeric); the EXISTENCE of off-line zeros is imported from the literature, not from this numeric || |Lambda_f(s) - Lambda_f(1-s)| < 1e-50 at s = 0.3+2i, 0.7+14.2i, -1.2+5.5i (corroborates the exactly-derived FE end to end, conventions included) || kappa -> 0.2840790438404122960282918323931261690911 under z -> e^{i pi/10}; matches the closed form (sqrt(10-2 sqrt5)-2)/(sqrt5-1) to < 1e-50; imaginary part < 1e-50.  The FALSE status rests on the imported theorems, not on these numerics"
+ },
+ "definition": "f(s) = 5^{-s} ( zeta(s,1/5) + kappa zeta(s,2/5) - kappa zeta(s,3/5) - zeta(s,4/5) ), zeta(s,a) the Hurwitz zeta, where kappa = tan(theta) is the unique real constant making f satisfy the self-dual functional equation Lambda_f(s) = Lambda_f(1-s), Lambda_f(s) = (5/pi)^{(s+1)/2} Gamma((s+1)/2) f(s).  Derived exactly here (not quoted): kappa = i(1 - eps)/(1 + eps) with eps = tau(chi)/(i sqrt5) the root number of the odd character chi mod 5, chi(2) = i; as an element of Q(zeta_20), kappa = (-1, 2, 0, -1, -1, 1, 1, -1) on the power basis 1, z, ..., z^7, with minimal polynomial T^4 + 2T^3 - 6T^2 - 2T + 1 over Q (numerically 0.28407904384..., equal to (sqrt(10 - 2 sqrt5) - 2)/(sqrt5 - 1)).  Coefficient-wise, f(s) = sum_n c(n) n^{-s} with c(n) of period 5, pattern (1, kappa, -kappa, -1, 0) on residues (1, 2, 3, 4, 0) mod 5; equivalently f = alpha L(s,chi) + beta L(s,chibar) with alpha = 1/(1+eps), beta = 1 - alpha",
+ "detector_runs": {
+  "description": "core.reconstruct.detect on EXACT RATIONAL column data of f (the columns live in Q + Q kappa; the canonical basis decomposition is proved exact before any run): p=2 rational component (degree 2, denominator 1 + T^2, complete degree-2 purity test HOLDS at weight (2,0)); p=2 kappa-component (honest A1 REFUSAL: not a unital series); p=11 and p=19 true columns (degrees 1, denominators 1 - T and 1 + T, all axioms HOLD).  LESSON: every column passes a purity battery, yet f has no Euler product \u2014 column-level structure does not certify global multiplicativity (a_6 != a_2 a_3)",
+  "numeric_corroboration": {
+   "fe_defect": "|Lambda_f(s) - Lambda_f(1-s)| < 1e-50 at s = 0.3+2i, 0.7+14.2i, -1.2+5.5i (corroborates the exactly-derived FE end to end, conventions included)",
+   "kappa_embedding": "kappa -> 0.2840790438404122960282918323931261690911 under z -> e^{i pi/10}; matches the closed form (sqrt(10-2 sqrt5)-2)/(sqrt5-1) to < 1e-50; imaginary part < 1e-50",
+   "label": "NON_DIRECTED_NUMERIC (mpmath, 60 dps) \u2014 corroboration only, never the basis of a status",
+   "off_line_zero": "approximate zero rho = (0.808517182456637385553351960607 + 85.6993484853775921719292677089j) with |f(rho)| < 1e-50 and Re(rho) - 1/2 = 0.308517182457; zero LOCATION approximate (numeric); the EXISTENCE of off-line zeros is imported from the literature, not from this numeric"
+  },
+  "runs": [
+   {
+    "mode": "coefficients",
+    "prime": 2,
+    "series": "rational component of (a_{2^k}) in the basis (1, kappa): [1,0,-1,0,...], window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 0, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=1, q^w=1, disc=-4"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 0, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     2,
+     0
+    ]
+   },
+   {
+    "mode": "coefficients",
+    "note": "honest refusal: not a unital coefficient series",
+    "prime": 2,
+    "series": "kappa-component of (a_{2^k}): [0,1,0,-1,...] (= T times the rational component, exactly)",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "FAILS",
+       "witness": "coefficient mode requires a_0 = 1; got [0]"
+      }
+     ],
+     "object": null,
+     "refusal": "A1_FINITE_RANK",
+     "rh_established": false
+    },
+    "weight": [
+     2,
+     0
+    ]
+   },
+   {
+    "mode": "coefficients",
+    "prime": 11,
+    "series": "true column (a_{11^k}) = [1,1,1,...] (11 = 1 mod 5), window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root 1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     11,
+     0
+    ]
+   },
+   {
+    "mode": "coefficients",
+    "prime": 19,
+    "series": "true column (a_{19^k}) = [1,-1,1,-1,...] (19 = -1 mod 5), window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root -1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     19,
+     0
+    ]
+   }
+  ]
+ },
+ "id": "davenport_heilbronn",
+ "ladder": {
+  "L0_WELL_DEFINED": {
+   "citation": "functional equation of Dirichlet L-functions / Hurwitz zeta at rational parameters: classical (A. Hurwitz, ~1882); modern exposition: H. Davenport, Multiplicative Number Theory (1967), with eps(chi) = tau(chi)/(i sqrt q) for odd primitive chi",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "f(s) = 5^{-s}(zeta(s,1/5) + kappa zeta(s,2/5) - kappa zeta(s,3/5) - zeta(s,4/5)) = sum_n c(n) n^{-s} with c(n) the exact period-5 pattern (1, kappa, -kappa, -1, 0); kappa is the EXACT field element (-1, 2, 0, -1, -1, 1, 1, -1) in Q(zeta_20) (derived, not quoted \u2014 see L6), real with minimal polynomial T^4 + 2T^3 - 6T^2 - 2T + 1; coefficients bounded, so the series converges absolutely for Re s > 1; continuation is inherited from the two entire Dirichlet L-functions (imported)"
+  },
+  "L1_MULTIPLICATIVITY": {
+   "citation": "H. Davenport, H. Heilbronn (1936), on the zeros of certain Dirichlet series, J. London Math. Soc. (papers I-II): zeta(s,a) for rational (and transcendental) a, and combinations of the Davenport-Heilbronn type, have infinitely many zeros in Re s > 1",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "a_6 != a_2 a_3.  EXACT WITNESS (coefficients of f in K = Q(zeta_20), coordinates on 1, z, ..., z^7): a_2 = kappa = (-1, 2, 0, -1, -1, 1, 1, -1), a_3 = -kappa, a_6 = 1 (6 = 1 mod 5).  a_2 a_3 = -kappa^2 and a_6 - a_2 a_3 = 1 + kappa^2 = (6, -4, 0, 0, 2, -2, -2, 4) != 0; nonzero-ness certified by Norm_{K/Q}(1 + kappa^2) = 6400 (product over all 8 Galois conjugates, exact).  All three coefficients lie in the real quartic subfield Q(kappa).  LEMMA (formal, proved): a formal Dirichlet series with a_1 = 1 admitting ANY Euler product over the rational primes with unital local factors (local constant term 1) has multiplicative coefficients \u2014 the coefficient of n^{-s} in prod_p L_p is prod_p b_{p, v_p(n)}.  Hence a_6 != a_2 a_3 refutes every such factorization of f, for this (intrinsic) normalization; a vertical shift s -> s + c rescales both sides of a_6 = a_2 a_3 by 6^{-c} and changes nothing.  SCOPE: this refutes multiplicativity of THIS normalization (a_1 = 1, the one forced by any unital Euler product); it is a single exact triple, which is all that is needed"
+  },
+  "L2_EULER_PRODUCT": {
+   "citation": "H. Davenport, H. Heilbronn (1936), on the zeros of certain Dirichlet series, J. London Math. Soc. (papers I-II): zeta(s,a) for rational (and transcendental) a, and combinations of the Davenport-Heilbronn type, have infinitely many zeros in Re s > 1",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "no Euler product over the rational primes with unital local factors exists: any such formal factorization forces a_{mn} = a_m a_n for coprime m, n (proved lemma in the L1 witness), refuted exactly by a_6 - a_2 a_3 = 1 + kappa^2 != 0 (Norm = 6400).  The historical statement \u2014 f is a functional-equation zeta WITHOUT Euler product \u2014 is the point of the Davenport-Heilbronn construction (imported)"
+  },
+  "L3_BOUNDED_DEGREE_RATIONAL": {
+   "citation": "",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "there are no local factors to bound: a system of bounded-degree rational local factors multiplying out to f would BE a unital Euler product, refuted by the L1/L2 witness (a_6 != a_2 a_3, exact).  CURIOSITY (exact, recorded honestly): every prime-power column (a_{p^k})_k of f satisfies the exact period-4 recurrence a_{p^{k+2}} = c(p^2 mod 5) a_{p^k} sign-pattern (u^4 = 1 in (Z/5)^*, c odd \u2014 verified exactly for all units); each column is a rational sequence of degree <= 2 over Q(kappa) with all inverse roots on |T| = 1 (weight-0 pure).  Detector certificates (exact, on rational data): p=2 rational component -> denominator 1 + T^2 (deg 2, disc -4 < 0, product 1 = 2^0: complete degree-2 purity test HOLDS); p=11 true column -> 1 - T; p=19 true column -> 1 + T; kappa-component refusal at A1 recorded honestly.  BUT these columns are NOT local factors: the product of the column generating functions does not rebuild f \u2014 a_6 != a_2 a_3.  Column-level purity certifies NOTHING global without multiplicativity"
+  },
+  "L4_WEIGHT_DUALITY": {
+   "citation": "",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "GLOBAL self-duality coherence, proved exactly: conj(alpha) = beta in K, so all Dirichlet coefficients of f are real (c(n) in the real quartic field Q(kappa)); the FE is self-dual with sign +1 by exact construction (alpha eps = beta, beta epsbar = alpha).  SCOPE: there is NO local weight data (no Euler product, no Frobenius/Satake parameters) \u2014 the cell is scoped to coefficient/FE-level duality, which is what the Davenport-Heilbronn example possesses"
+  },
+  "L5_CONDUCTOR_GAMMA_ROOT": {
+   "citation": "functional equation of Dirichlet L-functions / Hurwitz zeta at rational parameters: classical (A. Hurwitz, ~1882); modern exposition: H. Davenport, Multiplicative Number Theory (1967), with eps(chi) = tau(chi)/(i sqrt q) for odd primitive chi",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "canonical data (conductor, gamma, root number) = (5, Gamma_R(s+1) = pi^{-(s+1)/2} Gamma((s+1)/2), +1): both constituent characters are odd, primitive, of conductor 5, so they share the gamma factor and conductor; the sign +1 is the exactly-solved self-duality (alpha eps = beta).  Root-number unitarity eps epsbar = 1 proved exactly in K; the w = -1 eigenline (sign -1 companion function) also computed exactly (see L6 witness [eigenlines])"
+  },
+  "L6_CONTINUATION_FE": {
+   "citation": "functional equation of Dirichlet L-functions / Hurwitz zeta at rational parameters: classical (A. Hurwitz, ~1882); modern exposition: H. Davenport, Multiplicative Number Theory (1967), with eps(chi) = tau(chi)/(i sqrt q) for odd primitive chi",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "EXACT DERIVATION CHAIN (all identities verified in K = Q(zeta_20) = Q[x]/(x^8 - x^6 + x^4 - x^2 + 1), Fraction coefficients; z = zeta_20 of exact order 20, i = z^5, zeta_5 = z^4): [sqrt5] sqrt5 realized exactly: r = 1 + 2 zeta_5 + 2 zeta_5^4 = (1, 0, 0, 0, 2, 0, -2, 0) with r^2 = 5 (positive root under the standard embedding z -> e^{i pi/10}, since zeta_5 + zeta_5^4 = 2 cos 72deg > 0; embedding statement corroborated numerically only) || [gauss] tau(chi) = sum_a chi(a) zeta_5^a computed exactly in K: tau = (0, 0, 0, -1, 1, 0, 1, 1); verified tau(chi) tau(chibar) = -5 = chi(-1) 5 and tau(chi) conj(tau(chi)) = 5 (PROVED_HERE, no import) || [eps] eps(chi) = tau(chi)/(i sqrt5) = (1/5, 2/5, -2/5, 1/5, 3/5, 1/5, 1/5, -3/5); verified eps(chi) eps(chibar) = 1 and conj(eps) = eps^{-1} exactly (unitarity of the root number, symbolic in K) || [decomposition] coefficient function c(n) of f (period 5, pattern (1, kappa, -kappa, -1, 0) on residues (1,2,3,4,0)) expanded exactly over ALL four Dirichlet characters mod 5: even components (principal, quadratic) are EXACTLY 0; odd components are alpha on chi and beta on chibar.  Hence f = alpha L(s,chi) + beta L(s,chibar) identically (coefficient-wise), where 5^{-s} zeta(s,a/5) = sum_{n = a mod 5} n^{-s} is the definitional Hurwitz unfolding || [fe_solution] self-duality solved exactly: alpha = 1/(1+eps) = (1/2, 0, 0, 1/2, -1/2, 0, -1/2, 1/2), beta = eps/(1+eps) = 1 - alpha; VERIFIED as exact identities in K: alpha + beta = 1, alpha eps(chi) = beta, beta eps(chibar) = alpha, conj(alpha) = beta.  Hence Lambda_f(s) := (5/pi)^{(s+1)/2} Gamma((s+1)/2) f(s) satisfies Lambda_f(s) = Lambda_f(1-s), GIVEN the imported classical FE Lambda(s,chi) = eps(chi) Lambda(1-s,chibar) for the odd primitive characters mod 5 || [kappa] kappa = i (alpha - beta) = (-1, 2, 0, -1, -1, 1, 1, -1) on the basis 1, z, ..., z^7 of Q(zeta_20); verified real (sigma_19-fixed) and irrational || [minpoly] minimal polynomial of kappa over Q computed as the Galois-orbit product prod_{a in {1,3,7,9}} (T - sigma_a(kappa)): m(T) = T^4 + 2T^3 - 6T^2 - 2T + 1 (low-first [1, -2, -6, 2, 1]); coefficients verified rational, m(kappa) = 0 verified in K, degree exactly 4 (the 4 conjugates are pairwise distinct => m irreducible, kappa irrational).  EXACT Sturm: m has 4 real roots, localized one each in (-4,-3), (-1,0), (28/100, 29/100), (1,2) || [closed_form] classical closed form PROVED as the exact identity in K: (kappa (sqrt5 - 1) + 2)^2 = 10 - 2 sqrt5, i.e. kappa = (+-sqrt(10 - 2 sqrt5) - 2)/(sqrt5 - 1); combined with the Sturm localization, kappa is the root of m in (28/100, 29/100) UNDER the standard embedding z -> e^{i pi/10} (the embedding identification itself is corroborated numerically at 60 digits: kappa = 0.2840790438404122960..., the + sign) || [eigenlines] the 2-dim space C L(s,chi) + C L(s,chibar) splits exactly into root-number eigenlines: the w = -1 combination (alpha_-, beta_-) = (1/(1-eps), -eps/(1-eps)) satisfies alpha_- eps = -beta_- (exact), with constant kappa_- = i(alpha_- - beta_-) = (-1, -2, 0, 1, -1, -1, 1, 1); verified kappa * kappa_- = -1 and kappa_- = sigma_9(kappa), a Galois conjugate.  Lambda of that combination satisfies Lambda(s) = -Lambda(1-s) under the same imported FE || IMPORTED INGREDIENTS: the FE of the two odd primitive characters mod 5 (citation field) and the meromorphic (here entire) continuation of L(s,chi), L(s,chibar); everything else PROVED_HERE.  Analytic conclusion: f is entire and Lambda_f(s) = (5/pi)^{(s+1)/2} Gamma((s+1)/2) f(s) = Lambda_f(1-s)"
+  },
+  "L7_TWIST_TENSOR_COMPAT": {
+   "citation": "",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "no twist/tensor theory exists for f itself: with no Euler product there is no local data to tensor, and no Rankin-Selberg theory applies.  Termwise twisting by a character psi maps f to alpha L(s,chi psi) + beta L(s,chibar psi) \u2014 another combination of the same type, generally NOT self-dual with the same coefficients (its FE mixes the pair), so the DH-type family is closed under termwise twist but the self-dual normalization is not; no canonical tensor structure is known, and nonexistence is not proved \u2014 OPEN, not FAILS"
+  },
+  "L8_REALIZATION": {
+   "citation": "Selberg class context: CITATION-NEEDED: A. Selberg (~1989-1992), Old and new conjectures ... (definition of the class); H. Davenport, H. Heilbronn (1936), on the zeros of certain Dirichlet series, J. London Math. Soc. (papers I-II): zeta(s,a) for rational (and transcendental) a, and combinations of the Davenport-Heilbronn type, have infinitely many zeros in Re s > 1",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "FAILS for every realization class that entails an Euler product over its own primes/closed orbits (automorphic L(s,pi), motivic/Hasse-Weil, Selberg/Ruelle dynamical, Ihara-type combinatorial): each such realization forces multiplicative coefficients, refuted exactly by a_6 != a_2 a_3.  In particular f is NOT in the Selberg class (the Euler-product axiom fails; the other axioms \u2014 Dirichlet series, continuation, FE, coefficient growth \u2014 f satisfies, which is what makes it the classical counterexample delimiting that class).  The only realization f has is its construction: a vector in the 2-dim space C L(s,chi) + C L(s,chibar) (exact decomposition proved in L6).  An exotic realization in some framework NOT entailing an Euler product is not excluded \u2014 see notes"
+  },
+  "L9_EXPLICIT_FORMULA_POSITIVITY": {
+   "citation": "H. Davenport, H. Heilbronn (1936), on the zeros of certain Dirichlet series, J. London Math. Soc. (papers I-II): zeta(s,a) for rational (and transcendental) a, and combinations of the Davenport-Heilbronn type, have infinitely many zeros in Re s > 1; CITATION-NEEDED: zero-density work on the Davenport-Heilbronn function \u2014 positive (in fact power-scale) counts of zeros in fixed strips 1/2 < sigma_1 < Re s < sigma_2 < 1 (Balanzario-Sanchez-Ortiz, ~2007, Math. Comp.; context: Bombieri-Hejhal (~1995) on the distribution of zeros of linear combinations of Euler products)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "FAILS",
+   "witness": "two independent failures.  (i) POSITIVITY: f has zeros off the critical line \u2014 infinitely many in Re s > 1 (Davenport-Heilbronn 1936, imported) and zeros in the open strip 1/2 < Re s < 1 (imported, citation-needed density work); any Weil-type positivity for the zero multiset of Lambda_f would force the RH analogue, so it fails.  (ii) PRIME SIDE: with no Euler product, -f'/f has no prime-power Dirichlet coefficients, so there is no arithmetic explicit formula at all \u2014 the zero side (Hadamard product of the entire order-1 function Lambda_f) pairs with nothing multiplicative.  NON_DIRECTED_NUMERIC corroboration of (i): approximate zero rho = (0.808517182456637385553351960607 + 85.6993484853775921719292677089j) with |f(rho)| < 1e-50 and Re(rho) - 1/2 = 0.308517182457; zero LOCATION approximate (numeric); the EXISTENCE of off-line zeros is imported from the literature, not from this numeric"
+  }
+ },
+ "mechanisms": {
+  "DUALITY_FE": {
+   "citation": "functional equation of Dirichlet L-functions / Hurwitz zeta at rational parameters: classical (A. Hurwitz, ~1882); modern exposition: H. Davenport, Multiplicative Number Theory (1967), with eps(chi) = tau(chi)/(i sqrt q) for odd primitive chi",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "supplied by construction: f is the exact solution of the self-duality eigenvalue problem on the 2-dim space spanned by the two odd-character L-functions mod 5 \u2014 alpha/beta ratio solved and verified symbolically in Q(zeta_20) (alpha eps = beta, beta epsbar = alpha, eps epsbar = 1), on top of the imported classical FE of L(s,chi), L(s,chibar).  This is the isolated-mechanism row: duality WITHOUT Euler product (complement of 'beurling': Euler product without duality)"
+  },
+  "EULER_PRODUCT": {
+   "citation": "H. Davenport, H. Heilbronn (1936), on the zeros of certain Dirichlet series, J. London Math. Soc. (papers I-II): zeta(s,a) for rational (and transcendental) a, and combinations of the Davenport-Heilbronn type, have infinitely many zeros in Re s > 1",
+   "rigor": "REFUTED_BY_WITNESS",
+   "status": "FAILS",
+   "witness": "absent, and exactly refuted: a_6 - a_2 a_3 = 1 + kappa^2 != 0 (Norm_{K/Q} = 6400); the proved formal lemma (L1 witness) upgrades the single triple to the nonexistence of ANY unital Euler product over the rational primes.  This absence is the designed point of the world"
+  },
+  "FAMILY": {
+   "citation": "H. Davenport, H. Heilbronn (1936), on the zeros of certain Dirichlet series, J. London Math. Soc. (papers I-II): zeta(s,a) for rational (and transcendental) a, and combinations of the Davenport-Heilbronn type, have infinitely many zeros in Re s > 1; CITATION-NEEDED: zero-density work on the Davenport-Heilbronn function \u2014 positive (in fact power-scale) counts of zeros in fixed strips 1/2 < sigma_1 < Re s < sigma_2 < 1 (Balanzario-Sanchez-Ortiz, ~2007, Math. Comp.; context: Bombieri-Hejhal (~1995) on the distribution of zeros of linear combinations of Euler products)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "f sits in the explicit 2-parameter family {a L(s,chi) + b L(s,chibar)}: the family's root-number eigenline decomposition is computed exactly here (w = +1 line through f; w = -1 line with constant kappa_- = sigma_9(kappa), kappa kappa_- = -1).  Family membership supplies NO rigidity: generic members (and f itself) violate the RH analogue (imported: Davenport-Heilbronn; context: Bombieri-Hejhal on linear combinations of Euler products, citation-needed) \u2014 an anti-rigid family, like the Beurling class row"
+  },
+  "POSITIVITY_PURITY": {
+   "citation": "H. Davenport, H. Heilbronn (1936), on the zeros of certain Dirichlet series, J. London Math. Soc. (papers I-II): zeta(s,a) for rational (and transcendental) a, and combinations of the Davenport-Heilbronn type, have infinitely many zeros in Re s > 1; CITATION-NEEDED: zero-density work on the Davenport-Heilbronn function \u2014 positive (in fact power-scale) counts of zeros in fixed strips 1/2 < sigma_1 < Re s < sigma_2 < 1 (Balanzario-Sanchez-Ortiz, ~2007, Math. Comp.; context: Bombieri-Hejhal (~1995) on the distribution of zeros of linear combinations of Euler products)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "FAILS",
+   "witness": "no positivity/purity mechanism exists for f, and none CAN: the RH analogue is FALSE for f (off-line zeros, imported), so any candidate positivity mechanism would prove a falsehood.  The exact weight-0 purity of the coefficient COLUMNS (all column inverse roots on |T| = 1, certified by the detector) is vacuous for positivity \u2014 purity without multiplicativity supplies nothing.  This is the sharpest mechanism lesson of the row: DUALITY ALONE (a perfect self-dual FE with conductor, gamma, and root number +1) does NOT constrain zeros to the line"
+  },
+  "TENSOR_OPS": {
+   "citation": "",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "no local data, hence no tensor/Rankin-Selberg calculus for f itself; the ambient 2-dim space is closed under termwise character twist (see L7) but carries no known tensor structure; nonexistence not proved \u2014 OPEN"
+  },
+  "TRACE_FORMULA": {
+   "citation": "",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "no Euler product => no prime side: -f'/f is not a Dirichlet series supported on prime powers, so no explicit-formula/trace identity pairing zeros against arithmetic data exists in any known form.  The analytic zero side alone (Hadamard factorization of the entire order-1 completed function, zero-counting N_f(T)) survives; a trace-formula structure for f is unknown, and nonexistence in every conceivable pairing is not proved \u2014 OPEN"
+  }
+ },
+ "notes": "ROLE IN THE MATRIX: duality WITHOUT Euler product \u2014 the exact complement of the 'beurling' row (Euler product without duality).  The record's centerpiece is a reusable exact artifact: the Davenport-Heilbronn constant DERIVED from scratch in Q(zeta_20) = Q[x]/(x^8 - x^6 + x^4 - x^2 + 1) with Fraction coefficients \u2014 Gauss sum tau(chi) computed exactly, tau(chi) tau(chibar) = -5 and |tau|^2 = 5 proved symbolically, root number eps = tau/(i sqrt5) unitary (eps epsbar = 1), self-duality equation alpha eps = beta solved exactly, kappa = i(alpha - beta) = (-1, 2, 0, -1, -1, 1, 1, -1) real irrational of degree 4 with minimal polynomial T^4 + 2T^3 - 6T^2 - 2T + 1, classical closed form proved as the identity (kappa(sqrt5 - 1) + 2)^2 = 10 - 2 sqrt5, root localized by exact Sturm in (28/100, 29/100).  L1/L2/L3/L8 FAIL by the single exact witness a_6 - a_2 a_3 = 1 + kappa^2 != 0 (Norm 6400) plus a proved formal lemma (unital Euler product => multiplicativity); statements about zeros are IMPORTED (rigor labels say which), with CITATION-NEEDED flags for the boundary audit.  Floats appear ONLY in the quarantined NON_DIRECTED_NUMERIC corroboration (60-digit mpmath: embedding value of kappa, FE defect < 1e-50 at three points, refined off-line zero near 0.8085 + 85.6993i from a literature seed).  theta itself (kappa = tan theta) is never needed: all exact work uses kappa.  rh_established=false.",
+ "rh_established": false,
+ "sources": [
+  "H. Davenport, H. Heilbronn (1936), on the zeros of certain Dirichlet series (I, II), J. London Math. Soc.",
+  "A. Hurwitz (~1882), functional equation for zeta(s,a) at rational a / Dirichlet L-functions (classical import)",
+  "H. Davenport, Multiplicative Number Theory (1967): standard exposition of the odd-character functional equation and eps(chi) = tau(chi)/(i sqrt q)",
+  "E. C. Titchmarsh, The Theory of the Riemann Zeta-Function (2nd ed., rev. D. R. Heath-Brown, 1986), ch. X: context for Davenport-Heilbronn-type examples",
+  "CITATION-NEEDED: E. P. Balanzario, J. Sanchez-Ortiz (~2007, Math. Comp.), zeros of the Davenport-Heilbronn counterexample in the strip",
+  "CITATION-NEEDED: E. Bombieri, D. Hejhal (~1995), on the distribution of zeros of linear combinations of Euler products",
+  "CITATION-NEEDED: A. A. Karatsuba (~1980s-1990s), zeros of Davenport-Heilbronn-type series on the critical line",
+  "CITATION-NEEDED: A. Selberg (~1989-1992), Old and new conjectures and results about a class of Dirichlet series (the Selberg class, whose Euler-product axiom f fails)",
+  "CITATION-NEEDED: R. Spira (~1960s-1970s), numerical computations of zeros of the Davenport-Heilbronn function"
+ ],
+ "title": "Davenport-Heilbronn function (FE without Euler product)"
+}

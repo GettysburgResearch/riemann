@@ -1,0 +1,180 @@
+{
+ "meta": {
+  "arithmetic_class": "EXACT_RATIONAL (Sturm) + exact sympy factorization",
+  "rh_established": false
+ },
+ "graphs": {
+  "ham_cubic_n12_7": {
+   "name": "ham_cubic_n12_7",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": false,
+   "untempered_squares": 1,
+   "n_breach_pos": 0,
+   "n_breach_neg": 1,
+   "brackets_1_64": [
+    [
+     "-1149/400",
+     "-4579/1600",
+     1
+    ]
+   ],
+   "breach_minimal_polynomials": [
+    {
+     "factor": "x**3 + x**2 - 5*x + 1",
+     "degree": 3,
+     "mult": 1,
+     "breach_roots": 1
+    }
+   ]
+  },
+  "ham_cubic_n12_15": {
+   "name": "ham_cubic_n12_15",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": false,
+   "untempered_squares": 1,
+   "n_breach_pos": 0,
+   "n_breach_neg": 1,
+   "brackets_1_64": [
+    [
+     "-463/160",
+     "-4613/1600",
+     1
+    ]
+   ],
+   "breach_minimal_polynomials": [
+    {
+     "factor": "x**4 + 3*x**3 - 2*x**2 - 6*x + 2",
+     "degree": 4,
+     "mult": 1,
+     "breach_roots": 1
+    }
+   ]
+  },
+  "ham_cubic_n12_19": {
+   "name": "ham_cubic_n12_19",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": false,
+   "untempered_squares": 1,
+   "n_breach_pos": 0,
+   "n_breach_neg": 1,
+   "brackets_1_64": [
+    [
+     "-2281/800",
+     "-909/320",
+     1
+    ]
+   ],
+   "breach_minimal_polynomials": [
+    {
+     "factor": "x**4 + 2*x**3 - 5*x**2 - 6*x + 4",
+     "degree": 4,
+     "mult": 1,
+     "breach_roots": 1
+    }
+   ]
+  },
+  "ham_cubic_n12_35": {
+   "name": "ham_cubic_n12_35",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": false,
+   "untempered_squares": 1,
+   "n_breach_pos": 0,
+   "n_breach_neg": 1,
+   "brackets_1_64": [
+    [
+     "-909/320",
+     "-283/100",
+     1
+    ]
+   ],
+   "breach_minimal_polynomials": [
+    {
+     "factor": "x**3 + 3*x**2 - 2*x - 7",
+     "degree": 3,
+     "mult": 1,
+     "breach_roots": 1
+    }
+   ]
+  },
+  "GP(9,1)": {
+   "name": "GP(9,1)",
+   "n": 18,
+   "scope": "GP family",
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false,
+   "ramanujan": false,
+   "untempered_squares": 1,
+   "n_breach_pos": 0,
+   "n_breach_neg": 1,
+   "brackets_1_64": [
+    [
+     "-4613/1600",
+     "-1149/400",
+     1
+    ]
+   ],
+   "breach_minimal_polynomials": [
+    {
+     "factor": "x**3 + 3*x**2 - 1",
+     "degree": 3,
+     "mult": 2,
+     "breach_roots": 1
+    }
+   ]
+  },
+  "GP(11,1)": {
+   "name": "GP(11,1)",
+   "n": 22,
+   "scope": "GP family",
+   "girth": 4,
+   "diameter": 6,
+   "bipartite": false,
+   "ramanujan": false,
+   "untempered_squares": 1,
+   "n_breach_pos": 0,
+   "n_breach_neg": 1,
+   "brackets_1_64": [
+    [
+     "-4681/1600",
+     "-583/200",
+     1
+    ]
+   ],
+   "breach_minimal_polynomials": [
+    {
+     "factor": "x**5 + 6*x**4 + 10*x**3 + x**2 - 6*x - 1",
+     "degree": 5,
+     "mult": 2,
+     "breach_roots": 1
+    }
+   ]
+  }
+ },
+ "census_bipartite_girth_ramanujan": {
+  "bip=False, girth=3, ram=False": 4,
+  "bip=False, girth=3, ram=True": 74,
+  "bip=False, girth=4, ram=False": 2,
+  "bip=False, girth=4, ram=True": 22,
+  "bip=False, girth=5, ram=True": 13,
+  "bip=False, girth=6, ram=True": 2,
+  "bip=True, girth=4, ram=True": 14,
+  "bip=True, girth=6, ram=True": 3
+ }
+}

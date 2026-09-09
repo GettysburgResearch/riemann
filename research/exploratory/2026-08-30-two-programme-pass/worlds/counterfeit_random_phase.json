@@ -1,0 +1,336 @@
+{
+ "arithmetic_class": "synthetic degree-1 counterfeit (random-phase model): a completely multiplicative +-1 sequence with no known analytic continuation, completion, or realization beyond its own defining table; certified not induced by any real Dirichlet character of modulus <= 50, even up to changing the Euler factors at ramified primes",
+ "critical_line": {
+  "citation": "",
+  "detail": "the function is only known to exist on Re s > 1 (absolute convergence, |a_n| = 1), where the absolutely convergent Euler product of nonzero factors makes it ZERO-FREE (elementary: |eps_p p^{-s}| = p^{-Re s} < 1, and an absolutely convergent product of nonzero factors is nonzero \u2014 context C3).  With no known continuation there is no strip, no zero set, and no line: 'critical line' cannot be formulated for this object.  The exclusion certificate rules out the standard route to a formulation (a hidden classical completion) for conductor <= 50.  RH is not addressed; rh_established = false",
+  "rigor": "OPEN",
+  "status": "NOT_FORMULATED",
+  "witness": ""
+ },
+ "definition": "L(s) = sum_{n>=1} a_n n^{-s} = prod_p (1 - eps_p p^{-s})^{-1} (Re s > 1), a_n = prod_p eps_p^{v_p(n)} in {+1, -1}, where eps_p is DETERMINISTIC: the hardcoded literal sign table +--+-++--+--+-++-+-+--++-+-+--+-++-+-+-+--+--+ on the 46 primes 2, 3, 5, ..., 199 (in increasing order; fixed arbitrarily at build time, no runtime randomness), and eps_p = (-1)^{binary digit sum of p} for p > 200 (deterministic closed-form tail; an all-+1 tail is deliberately avoided, see notes).  A completely multiplicative unimodular counterfeit: all local floors of the ladder hold exactly, all global floors are OPEN, and an exact finite certificate shows it is not a disguised real Dirichlet character of modulus <= 50",
+ "detector_runs": {
+  "description": "core.reconstruct.detect on the exact local columns a_{p^k} = eps_p^k at p = (2, 3, 13, 197) (both signs represented), weight claim (p, 0): every run certifies degree 1, denominator 1 -+ T, and ALL FIVE axioms HOLD \u2014 including A4 purity \u2014 plus exact A6 tensor certificates.  The instructive point (matrix headline): these verdicts are indistinguishable from a genuine Dirichlet-character world; local tests cannot see the missing global structure",
+  "runs": [
+   {
+    "eps": 1,
+    "mode": "coefficients",
+    "prime": 2,
+    "series": "true column (a_{2^k}) = eps_2^k, window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on the 8-term prefix; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root 1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "the 8-term prefix form exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     2,
+     0
+    ]
+   },
+   {
+    "eps": -1,
+    "mode": "coefficients",
+    "prime": 3,
+    "series": "true column (a_{3^k}) = eps_3^k, window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on the 8-term prefix; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root -1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "the 8-term prefix form exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     3,
+     0
+    ]
+   },
+   {
+    "eps": 1,
+    "mode": "coefficients",
+    "prime": 13,
+    "series": "true column (a_{13^k}) = eps_13^k, window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on the 8-term prefix; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root 1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "the 8-term prefix form exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, -1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     13,
+     0
+    ]
+   },
+   {
+    "eps": -1,
+    "mode": "coefficients",
+    "prime": 197,
+    "series": "true column (a_{197^k}) = eps_197^k, window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on the 8-term prefix; deg Q = 1, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 1]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "inverse root -1, a^2 == q^w=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "the 8-term prefix form exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 1,
+      "denominator": "[1, 1]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     197,
+     0
+    ]
+   }
+  ]
+ },
+ "id": "counterfeit_random_phase",
+ "ladder": {
+  "L0_WELL_DEFINED": {
+   "citation": "",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "L(s) = sum a_n n^{-s} with a_n = prod_p eps_p^{v_p(n)}: fully specified by the explicit deterministic sign table (hardcoded literal +--+-++--+--+-++-+-+--++-+-+--+-++-+-+-+--+--+ on the primes <= 200 in order, fixed arbitrarily at build time; digit-parity tail for p > 200 \u2014 a tail of all +1 would collapse the world into a finitely-modified zeta, see notes).  a_n in {+1, -1} for ALL n <= 512 (verified; trivially true for all n: a finite product of signs) \u2014 unimodular real 'phases', |a_n| = 1, so the Dirichlet series converges absolutely for Re s > 1 by comparison with zeta (elementary).  Known domain: Re s > 1 only"
+  },
+  "L1_MULTIPLICATIVITY": {
+   "citation": "",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "COMPLETE multiplicativity a_{mn} = a_m a_n verified exactly for all 2257 pairs m, n >= 2 with mn <= 512.  Full one-line proof, valid for ALL m, n: a_n = prod_p eps_p^{v_p(n)} and v_p(mn) = v_p(m) + v_p(n); the exhaustive check corroborates it"
+  },
+  "L2_EULER_PRODUCT": {
+   "citation": "",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "Euler product verified coefficient-wise for ALL n <= 512: the truncated Dirichlet convolution of the local geometric series (a_{p^k} = eps_p^k, local factor 1/(1 - eps_p p^{-s})) over all 97 primes p <= 512 reproduces a_n exactly.  Formally the product also follows from complete multiplicativity plus |a_n| = 1"
+  },
+  "L3_BOUNDED_DEGREE_RATIONAL": {
+   "citation": "",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "uniform degree bound 1: L_p(T) = 1 - eps_p T at every prime \u2014 integer coefficients, constant term 1.  LOCAL STRUCTURE (exact).  Every local factor is 1 - eps_p T: degree 1, integer coefficients, constant term 1, inverse root alpha = eps_p with alpha^2 = 1 = p^0 (weight-0 purity, exact) and op_dual_satake([1, -eps_p], eps_p) == [1, -eps_p] (self-dual, exact, both signs).  Detector certificates at p = (2, 3, 13, 197) (signs (1, -1, 1, -1)): degree 1, denominator 1 -+ T, ALL FIVE axioms HOLD including A4 purity at weight (p, 0) and A5 held-out prediction.  Tensor certificates (A6, exact): (1 - eps T) tensor (1 - eps' T) = 1 - eps eps' T, verified for the same-sign and cross-sign pairs with all predicted coefficients checked.  Uniform degree bound 1"
+  },
+  "L4_WEIGHT_DUALITY": {
+   "citation": "",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "trivially HOLDS because the coefficients are real signs: every local factor is exactly self-dual (op_dual_satake([1, -eps_p], eps_p) == [1, -eps_p], verified for both signs) and weight-0 pure (eps_p^2 = 1 = p^0, exact).  NOTE: this self-duality is a property of the coefficient FIELD, obtained for free by any real sign table; it carries no functional-equation content whatsoever (L6 is OPEN).  The cheapest floor of the ladder to counterfeit"
+  },
+  "L5_CONDUCTOR_GAMMA_ROOT": {
+   "citation": "J. Kaczorowski and A. Perelli (1999), classification of the Selberg class in degree 1 (a degree-1 element with standard completion is a shifted Dirichlet L-function of a primitive character) \u2014 context C2 for the scope of 'standard completions with conductor <= 50'; no cell status rests on it",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "no canonical (conductor, gamma, root number) datum is known for this object; no completion/FE is known and none is expected; proving nonexistence is beyond this pass \u2014 the not-a-real-character certificate rules out the standard completions with conductor <= 50.  That finite certificate is the exact content of this cell: EXCLUSION CERTIFICATE (exhaustive, PROVED_HERE).  Sign table fingerprint over the 46 primes 2, 3, ..., 199 in order: +--+-++--+--+-++-+-+--++-+-+--+-++-+-+-+--+--+ (hardcoded literal, fixed arbitrarily at build time; deterministic digit-parity tail for p > 200).  For EVERY modulus q <= 50 and EVERY real character chi mod q (148 characters in total, principal characters and q = 1 included; per-q counts 1:1;2:1;3:2;4:2;5:2;6:2;7:2;8:4;9:2;10:2;11:2;12:4;13:2;14:2;15:4;16:4;17:2;18:2;19:2;20:4;21:4;22:2;23:2;24:8;25:2;26:2;27:2;28:4;29:2;30:4;31:2;32:4;33:4;34:2;35:4;36:4;37:2;38:2;39:4;40:8;41:2;42:4;43:2;44:4;45:4;46:2;47:2;48:8;49:2;50:2) there is a prime p <= 200 with p NOT dividing q and eps_p != chi(p); ramified primes p | q are skipped, so the certificate holds even after arbitrary modification of the Euler factors at p | q.  Worst case: the largest minimal distinguishing prime over all 148 characters is p = 17 (attained at modulus q = 6); every other character is distinguished by a smaller prime.  The character enumeration is proven complete IN-SCRIPT two independent ways, verified equal for every q: (i) abstract Hom(U(q), {+-1}) enumeration \u2014 any homomorphism is +1 on the square subgroup and determined on a verified generating set, giving at most 2^r; 2^r distinct candidates are constructed and each verified multiplicative on all of U x U; (ii) the classical generation via Jacobi symbols (products of (u/m) for odd m | q, built from Legendre symbols by Euler's criterion) times the Kronecker 2-part characters chi_4, chi_8 \u2014 asserted set-equal to (i), so the classical description of real characters is itself re-proved on this range rather than imported"
+  },
+  "L6_CONTINUATION_FE": {
+   "citation": "J. Kaczorowski and A. Perelli (1999), classification of the Selberg class in degree 1 (a degree-1 element with standard completion is a shifted Dirichlet L-function of a primitive character) \u2014 context C2 for the scope of 'standard completions with conductor <= 50'; no cell status rests on it",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "BOTH halves are open: no analytic continuation beyond Re s = 1 is known (contrast counterfeit_deleted_euler, where continuation HOLDS and the FE provably FAILS \u2014 here nothing is even known to continue), and no completion/FE is known and none is expected; proving nonexistence is beyond this pass \u2014 the not-a-real-character certificate rules out the standard completions with conductor <= 50.  Conditional remark (not used): square-root cancellation of the partial sums of a_n would extend convergence to Re s > 1/2 \u2014 CONJECTURAL, a random-phase heuristic, claimed nowhere"
+  },
+  "L7_TWIST_TENSOR_COMPAT": {
+   "citation": "",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "at the FORMAL/LOCAL level only, and exactly: the class of completely multiplicative sign sequences is closed under termwise product (twist by any real character or by another counterfeit), with local rule (1 - eps_p T) tensor (1 - eps'_p T) = 1 - eps_p eps'_p T \u2014 certified by the exact A6 tensor checks (same-sign and cross-sign, all predicted coefficients verified).  SCOPE: no analytic content \u2014 with no completions in sight, the analytic half of L7 (root numbers, conductors under twist) is not even formulable"
+  },
+  "L8_REALIZATION": {
+   "citation": "P. G. L. Dirichlet (1837), Dirichlet characters and L-functions (the classical objects excluded by the certificate at modulus <= 50; context C1)",
+   "rigor": "SYNTHETIC_CONTROL",
+   "status": "HOLDS",
+   "witness": "realized ONLY as an explicit combinatorial/synthetic object: the hardcoded 46-sign literal plus the deterministic digit-parity tail, extended multiplicatively.  That is a complete combinatorial realization (this world is a designed synthetic control), but it supplies no automorphic, motivic, spectral or dynamical structure.  The exclusion certificate PROVES it is not the pattern of any real Dirichlet character of modulus <= 50 (even off the ramified primes); whether some classical realization of larger conductor exists is OPEN \u2014 believed none (the digit-parity tail is believed incompatible with any eventual periodicity in p; Gelfond/Mauduit-Rivat context C4, not relied upon)"
+  },
+  "L9_EXPLICIT_FORMULA_POSITIVITY": {
+   "citation": "",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "no principled explicit formula is known: the prime side exists formally but with SIGNED coefficients (exact witness: Lambda(3) a_3 = -log 3 < 0 \u2014 see TRACE_FORMULA), and there is no zero side at all absent continuation.  Weil-type positivity cannot even be formulated (no zero set is defined).  no completion/FE is known and none is expected; proving nonexistence is beyond this pass \u2014 the not-a-real-character certificate rules out the standard completions with conductor <= 50"
+  }
+ },
+ "mechanisms": {
+  "DUALITY_FE": {
+   "citation": "J. Kaczorowski and A. Perelli (1999), classification of the Selberg class in degree 1 (a degree-1 element with standard completion is a shifted Dirichlet L-function of a primitive character) \u2014 context C2 for the scope of 'standard completions with conductor <= 50'; no cell status rests on it",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "none known; no completion/FE is known and none is expected; proving nonexistence is beyond this pass \u2014 the not-a-real-character certificate rules out the standard completions with conductor <= 50.  The finite exclusion certificate is the exact content: EXCLUSION CERTIFICATE (exhaustive, PROVED_HERE).  Sign table fingerprint over the 46 primes 2, 3, ..., 199 in order: +--+-++--+--+-++-+-+--++-+-+--+-++-+-+-+--+--+ (hardcoded literal, fixed arbitrarily at build time; deterministic digit-parity tail for p > 200).  For EVERY modulus q <= 50 and EVERY real character chi mod q (148 characters in total, principal characters and q = 1 included; per-q counts 1:1;2:1;3:2;4:2;5:2;6:2;7:2;8:4;9:2;10:2;11:2;12:4;13:2;14:2;15:4;16:4;17:2;18:2;19:2;20:4;21:4;22:2;23:2;24:8;25:2;26:2;27:2;28:4;29:2;30:4;31:2;32:4;33:4;34:2;35:4;36:4;37:2;38:2;39:4;40:8;41:2;42:4;43:2;44:4;45:4;46:2;47:2;48:8;49:2;50:2) there is a prime p <= 200 with p NOT dividing q and eps_p != chi(p); ramified primes p | q are skipped, so the certificate holds even after arbitrary modification of the Euler factors at p | q.  Worst case: the largest minimal distinguishing prime over all 148 characters is p = 17 (attained at modulus q = 6); every other character is distinguished by a smaller prime.  The character enumeration is proven complete IN-SCRIPT two independent ways, verified equal for every q: (i) abstract Hom(U(q), {+-1}) enumeration \u2014 any homomorphism is +1 on the square subgroup and determined on a verified generating set, giving at most 2^r; 2^r distinct candidates are constructed and each verified multiplicative on all of U x U; (ii) the classical generation via Jacobi symbols (products of (u/m) for odd m | q, built from Legendre symbols by Euler's criterion) times the Kronecker 2-part characters chi_4, chi_8 \u2014 asserted set-equal to (i), so the classical description of real characters is itself re-proved on this range rather than imported"
+  },
+  "EULER_PRODUCT": {
+   "citation": "",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "present, supplied by COMPLETE MULTIPLICATIVITY BY CONSTRUCTION (the object is defined as a multiplicative extension of prime signs): product of (1 - eps_p p^{-s})^{-1} over all p, verified coefficient-wise to 512 (L2 witness).  The mechanism is real but structurally EMPTY here: it constrains nothing beyond what the sign table dictates \u2014 an Euler product alone is cheap"
+  },
+  "FAMILY": {
+   "citation": "",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "no structural family is known (FAILS-like in spirit; recorded OPEN because nonexistence of any good family is not provable here).  The ambient 2^46-cube of sign tables is a CONTAINER, not a family: no conductor/weight parameter, no completed members, no orthogonality or averaging structure, no trace-formula linkage \u2014 contrast the dirichlet_mod5 row (character orthogonality) and the ihara rows (spectral families)"
+  },
+  "POSITIVITY_PURITY": {
+   "citation": "",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "LOCAL purity is exactly present \u2014 every inverse root is eps_p with |eps_p|^2 = 1 = p^0 (weight-0 purity, exact at every prime) \u2014 but it is supplied by nothing: the signs are an arbitrary table, not Frobenius weights or adjacency self-adjointness.  No global positivity statement is known or even formulable (no zero set); prime-side positivity FAILS exactly (coefficient -log 3 at n = 3).  MECHANISM LESSON: weight-0 purity of degree-1 local data is a vacuous constraint \u2014 any sign table has it; purity begins to bite only with degree >= 2 or weight > 0, where it forces real algebraic relations"
+  },
+  "TENSOR_OPS": {
+   "citation": "",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "exact local twist/tensor calculus: termwise sign product, (1 - eps T) tensor (1 - eps' T) = 1 - eps eps' T, A6 certificates HOLD (same-sign and cross-sign).  The class of counterfeits is CLOSED under tensor/twist \u2014 the operations exist but never leave the counterfeit class, so they detect nothing (L7 witness has the scope caveat)"
+  },
+  "TRACE_FORMULA": {
+   "citation": "",
+   "rigor": "OPEN",
+   "status": "OPEN",
+   "witness": "no trace formula or explicit formula is known.  What exists is only the formal identity: SIGNED VON MANGOLDT IDENTITY (exact, symbolic): with Lambda_eps supported on prime powers (Lambda_eps(p^k) = eps_p^k log p), the convolution identity sum_{d|n} Lambda_eps(d) a_{n/d} = a_n log n was verified for ALL n <= 512 as an identity in the free Z-module on the symbols {log p} (no floating-point logarithm anywhere).  Hence -L'/L(s) = sum_n Lambda(n) a_n n^{-s} as formal Dirichlet series: a prime side EXISTS formally, but its coefficients Lambda(n) a_n are SIGNED \u2014 exact witness: the coefficient at n = 3 is a_3 log 3 = -log 3 < 0; among the prime powers n <= 512 exactly 55 carry a negative coefficient.  Even prime-side positivity (which held for zeta and for the deleted-Euler counterfeit) fails here; and with no known continuation there is no zero side at all"
+  }
+ },
+ "notes": "ROLE IN THE MATRIX: the cheap-to-counterfeit lower floors.  An ARBITRARY hardcoded sign table, extended multiplicatively, buys L0-L4 and the formal layer of L7 EXACTLY (complete multiplicativity, Euler product coefficient-wise to 512, degree-1 integral local factors, weight-0 purity and self-duality at every prime, closed twist/tensor calculus) \u2014 while every global floor (completion, conductor/gamma/root, FE, explicit formula, positivity, family) is OPEN, and the exact finite certificate shows the object is not a disguised classical character at any modulus <= 50 (all 148 real characters excluded by a prime <= 17, ramified primes skipped).  MATRIX HEADLINE: LOCAL TESTS CANNOT SEE THE MISSING GLOBAL STRUCTURE.  At every tested prime the detector certifies a degree-1, integral, weight-0-PURE, SELF-DUAL local factor with perfect held-out prediction (A1-A5 all HOLD) \u2014 verdicts indistinguishable from the genuine dirichlet_mod5 row \u2014 while the global object is certified NOT to be any real Dirichlet character of modulus <= 50.  Purity and self-duality are LOCAL properties, and are exactly what an arbitrary sign table counterfeits for free; only global structure (completion/FE, family, positivity) separates the real thing from the counterfeit, and every global floor is OPEN here.  DESIGN NOTE (tail): eps_p for p > 200 is the digit-parity rule, NOT +1 \u2014 an eventually-+1 tail would make L(s) = zeta(s) times a finite rational Euler correction, importing zeta's continuation and collapsing this row into the counterfeit_deleted_euler family (finitely-modified zeta, provable FE failure); the point of THIS row is the object with NO known global analytic structure at all.  CONTRAST WITHIN THE COUNTERFEIT BAND: deleted_euler = continuation HOLDS + FE provably FAILS; random_phase = everything global honestly OPEN; both have perfect local floors.  Prime-side positivity fails here exactly (signed von Mangoldt coefficients, e.g. -log 3 at n = 3) \u2014 even the arithmetic half of an explicit formula degrades.  No floats anywhere in this build; every HOLDS/FAILS cell is exact.  rh_established=false.",
+ "rh_established": false,
+ "sources": [
+  "P. G. L. Dirichlet (1837), Dirichlet characters and L-functions (the classical comparison class for the exclusion certificate)",
+  "C. F. Gauss (1801), Disquisitiones Arithmeticae (quadratic residues); C. G. J. Jacobi (1837), the Jacobi symbol \u2014 classical generation of real characters, used as the cross-check enumeration and re-proved in-script by set equality for every q <= 50",
+  "J. Kaczorowski and A. Perelli (1999), classification of the Selberg class in degree 1 (context for 'standard completions with conductor <= 50'; no cell status rests on it)",
+  "H. Davenport, Multiplicative Number Theory (1967): standard reference for real/quadratic Dirichlet characters",
+  "A. O. Gelfond (~1968) and C. Mauduit and J. Rivat (~2010), digit-sum equidistribution results (context only for the digit-parity tail; no cell relies on them)",
+  "CITATION-NEEDED: A. Selberg (~1989-1992), Old and new conjectures and results about a class of Dirichlet series (the Selberg class; context only)"
+ ],
+ "title": "seeded random-phase counterfeit"
+}

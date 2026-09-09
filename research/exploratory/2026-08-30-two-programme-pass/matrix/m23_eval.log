@@ -1,0 +1,24 @@
+[14:22:33] m = 23: rigorous node bound B = 7521, interp window K = 151
+[14:22:33] E1: evaluating pipeline at all nodes ...
+[14:22:33]   node 0 (0s)
+[14:22:34]   node 500 (1s)
+[14:22:35]   node 1000 (2s)
+[14:22:37]   node 1500 (3s)
+[14:22:38]   node 2000 (4s)
+[14:22:39]   node 2500 (6s)
+[14:22:40]   node 3000 (7s)
+[14:22:42]   node 3500 (8s)
+[14:22:43]   node 4000 (10s)
+[14:22:45]   node 4500 (11s)
+[14:22:46]   node 5000 (13s)
+[14:22:48]   node 5500 (15s)
+[14:22:50]   node 6000 (17s)
+[14:22:52]   node 6500 (18s)
+[14:22:54]   node 7000 (20s)
+[14:22:55]   node 7500 (22s)
+[14:22:55] E1 done: 7522 nodes, all structural asserts passed (22s)
+[14:22:55] E3: interpolating mu_j over first K+1 nodes ...
+[14:22:57] E3 done; degrees [121, 120, 117, 112, 105, 96, 85, 72, 57, 40, 21, 0]
+[14:22:57] E4 PROOF: exact evaluation of candidates at ALL nodes ...
+[14:22:58] E4 proof complete (24s)
+[14:22:58] saved matrix/m23_spectrum.json (24s)

@@ -1,0 +1,1346 @@
+{
+ "scope_note": "Hamiltonian cubic via chord diagrams: exhaustive with brute isomorphism n<=10; n=12 deduplicated by charpoly + (girth, diameter, bipartite) \u2014 a cospectral-mate merge is possible, which cannot affect purity rows (spectral invariant) but could undercount classes. Plus named additions + GP family; NOT exhaustive over all connected cubic (bridged non-Hamiltonian exist from n=10)",
+ "rows": [
+  {
+   "name": "ham_cubic_n4_0",
+   "n": 4,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 1,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n6_0",
+   "n": 6,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 2,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n6_1",
+   "n": 6,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 4,
+   "diameter": 2,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n8_0",
+   "n": 8,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n8_1",
+   "n": 8,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n8_2",
+   "n": 8,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 2,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n8_3",
+   "n": 8,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 4,
+   "diameter": 2,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n8_4",
+   "n": 8,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_0",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_1",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_2",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_3",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_4",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_5",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_6",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_7",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_8",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_9",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_10",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_11",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_12",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_13",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_14",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_15",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n10_16",
+   "n": 10,
+   "scope": "exhaustive Hamiltonian cubic (chord diagrams)",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_0",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_1",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_2",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_3",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_4",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_5",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_6",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_7",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": false,
+   "untempered_squares": 1
+  },
+  {
+   "name": "ham_cubic_n12_8",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_9",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_10",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_11",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_12",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_13",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_14",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_15",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": false,
+   "untempered_squares": 1
+  },
+  {
+   "name": "ham_cubic_n12_16",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_17",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_18",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_19",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": false,
+   "untempered_squares": 1
+  },
+  {
+   "name": "ham_cubic_n12_20",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_21",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_22",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_23",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_24",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_25",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_26",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_27",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_28",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_29",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_30",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_31",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_32",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_33",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_34",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_35",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": false,
+   "untempered_squares": 1
+  },
+  {
+   "name": "ham_cubic_n12_36",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_37",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_38",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_39",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_40",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_41",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_42",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_43",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_44",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_45",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_46",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_47",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_48",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_49",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_50",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_51",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_52",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_53",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_54",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_55",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_56",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_57",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 3,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_58",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_59",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_60",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_61",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_62",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_63",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_64",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_65",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_66",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_67",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_68",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_69",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_70",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_71",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_72",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_73",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_74",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_75",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_76",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_77",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_78",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 5,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "ham_cubic_n12_79",
+   "n": 12,
+   "scope": "Hamiltonian cubic, spectral+invariant dedup",
+   "girth": 5,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "petersen",
+   "n": 10,
+   "scope": "named addition",
+   "girth": 5,
+   "diameter": 2,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(5,1)",
+   "n": 10,
+   "scope": "GP family",
+   "girth": 4,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(5,2)",
+   "n": 10,
+   "scope": "GP family",
+   "girth": 5,
+   "diameter": 2,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(6,1)",
+   "n": 12,
+   "scope": "GP family",
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(6,2)",
+   "n": 12,
+   "scope": "GP family",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(7,1)",
+   "n": 14,
+   "scope": "GP family",
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(7,2)",
+   "n": 14,
+   "scope": "GP family",
+   "girth": 5,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(7,3)",
+   "n": 14,
+   "scope": "GP family",
+   "girth": 5,
+   "diameter": 3,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(8,1)",
+   "n": 16,
+   "scope": "GP family",
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(8,2)",
+   "n": 16,
+   "scope": "GP family",
+   "girth": 4,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(8,3)",
+   "n": 16,
+   "scope": "GP family",
+   "girth": 6,
+   "diameter": 4,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(9,1)",
+   "n": 18,
+   "scope": "GP family",
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": false,
+   "ramanujan": false,
+   "untempered_squares": 1
+  },
+  {
+   "name": "GP(9,2)",
+   "n": 18,
+   "scope": "GP family",
+   "girth": 5,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(9,3)",
+   "n": 18,
+   "scope": "GP family",
+   "girth": 3,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(9,4)",
+   "n": 18,
+   "scope": "GP family",
+   "girth": 5,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(10,1)",
+   "n": 20,
+   "scope": "GP family",
+   "girth": 4,
+   "diameter": 6,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(10,2)",
+   "n": 20,
+   "scope": "GP family",
+   "girth": 5,
+   "diameter": 5,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(10,3)",
+   "n": 20,
+   "scope": "GP family",
+   "girth": 6,
+   "diameter": 5,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(10,4)",
+   "n": 20,
+   "scope": "GP family",
+   "girth": 5,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(11,1)",
+   "n": 22,
+   "scope": "GP family",
+   "girth": 4,
+   "diameter": 6,
+   "bipartite": false,
+   "ramanujan": false,
+   "untempered_squares": 1
+  },
+  {
+   "name": "GP(11,2)",
+   "n": 22,
+   "scope": "GP family",
+   "girth": 5,
+   "diameter": 5,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(11,3)",
+   "n": 22,
+   "scope": "GP family",
+   "girth": 6,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(11,4)",
+   "n": 22,
+   "scope": "GP family",
+   "girth": 6,
+   "diameter": 4,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(11,5)",
+   "n": 22,
+   "scope": "GP family",
+   "girth": 5,
+   "diameter": 5,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(12,1)",
+   "n": 24,
+   "scope": "GP family",
+   "girth": 4,
+   "diameter": 7,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(12,2)",
+   "n": 24,
+   "scope": "GP family",
+   "girth": 5,
+   "diameter": 5,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(12,3)",
+   "n": 24,
+   "scope": "GP family",
+   "girth": 4,
+   "diameter": 5,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(12,4)",
+   "n": 24,
+   "scope": "GP family",
+   "girth": 3,
+   "diameter": 5,
+   "bipartite": false,
+   "ramanujan": true,
+   "untempered_squares": 0
+  },
+  {
+   "name": "GP(12,5)",
+   "n": 24,
+   "scope": "GP family",
+   "girth": 6,
+   "diameter": 4,
+   "bipartite": true,
+   "ramanujan": true,
+   "untempered_squares": 0
+  }
+ ],
+ "rh_established": false
+}

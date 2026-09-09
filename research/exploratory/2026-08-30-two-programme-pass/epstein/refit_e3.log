@@ -1,0 +1,13 @@
+[19:30:47] refit events for path A_x_slide_y1.02
+[19:30:47]   event departure between tau=1.667 and 2.333: jump=2, candidates=[]
+[19:30:47]     full-window tau bisection on disc != 0 in [1.6667,2.3333]
+[19:39:55] wrote e3_events.json
+[19:39:55] refit events for path B_y_stretch_x0
+[19:39:55]   event departure between tau=0.500 and 0.600: jump=4, candidates=[(25.117, 25.329), (23.599, 25.117), (22.053, 23.599)]
+[19:41:10]     duplicate attribution (tau*=0.5020, t*=25.208) discarded; trying next window
+[19:42:43]   event reentry between tau=0.600 and 0.700: jump=-2, candidates=[(24.052, 24.782), (24.782, 25.952)]
+[19:43:25]   event reentry between tau=0.700 and 0.800: jump=-2, candidates=[(10.931, 11.281), (15.014, 16.085)]
+[19:44:14] wrote e3_events.json
+[19:44:14] wrote departure_paths.json
+[19:44:14] wrote DEPARTURE_PATHS.md
+[19:44:14] refit done

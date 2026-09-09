@@ -1,0 +1,337 @@
+{
+ "arithmetic_class": "EXACT_RATIONAL combinatorial-spectral world: Ihara zetas of finite 3-regular graphs (q=2); a function-field-like setting where the positivity/purity mechanism is independently supplied (operator self-adjointness + spectral gap)",
+ "critical_line": {
+  "citation": "Y. Ihara (1966), zeta functions of discrete cocompact p-adic groups; K. Hashimoto (1989), zeta functions of finite graphs (edge operator); T. Sunada (1986); A. Lubotzky, R. Phillips, P. Sarnak (1988), Ramanujan graphs; A. Terras (2011), Zeta Functions of Graphs: A Stroll through the Garden, Cambridge Univ. Press",
+  "detail": "Graph RH holds for both instances: every nontrivial pole u_0 of zeta_G (root of det(I - Au + 2u^2) outside the trivial factor (1-u)(1-2u)) satisfies |u_0|^2 = 1/2 exactly, i.e. lies ON |u| = q^(-1/2); under u = q^(-s) this is Re(s) = 1/2. Proved here: complete integer factorization of both charpolys; for every nontrivial lambda, disc = lambda^2 - 8 < 0 exactly, so the roots of 2u^2 - lambda u + 1 are a conjugate pair with product 1/2; plus the factorization-independent Sturm certificate lambda^2 <= 8. Trivial poles u = 1, 1/2 (|u|^2 = 1, 1/4) are off the circle (analogues of s = 0, 1). The equivalence graph-RH <=> Ramanujan for (q+1)-regular graphs is imported. This theorem is about graph zetas only and implies nothing about the classical RH.",
+  "rigor": "PROVED_HERE",
+  "status": "THEOREM",
+  "witness": "K4: s = charpoly/(x-3) exact (remainder 0, 3 simple, -3 not a root); s2(y) with roots = squared nontrivial eigenvalues = [-1, 3, -3, 1] via Newton power sums p_2k; exact Sturm: #roots in (8, 9] = 0 and in (9/2, 9] = 0; all 1 distinct roots in (0, 8]; hence lambda^2 <= 8 (indeed <= 9/2) for every eigenvalue lambda != 3: RAMANUJAN, fully exact || Petersen: s = charpoly/(x-3) exact (remainder 0, 3 simple, -3 not a root); s2(y) with roots = squared nontrivial eigenvalues = [-256, 1536, -3936, 5616, -4881, 2661, -906, 186, -21, 1] via Newton power sums p_2k; exact Sturm: #roots in (8, 5617] = 0 and in (9/2, 5617] = 0; all 2 distinct roots in (0, 8]; hence lambda^2 <= 8 (indeed <= 9/2) for every eigenvalue lambda != 3: RAMANUJAN, fully exact || K4: lambda=-1: disc=lambda^2-8=-7<0, so the roots of 2u^2--1u+1 are a conjugate pair with product 1/2: |u|^2=1/2; trivial factor (1-3u+2u^2) = (1-u)(1-2u): poles u=1, u=1/2 with |u|^2 in {1, 1/4}, OFF the circle |u|^2 = 1/2 (analogues of s=0, s=1) || Petersen: lambda=1: disc=lambda^2-8=-7<0, so the roots of 2u^2-1u+1 are a conjugate pair with product 1/2: |u|^2=1/2; lambda=-2: disc=lambda^2-8=-4<0, so the roots of 2u^2--2u+1 are a conjugate pair with product 1/2: |u|^2=1/2; trivial factor (1-3u+2u^2) = (1-u)(1-2u): poles u=1, u=1/2 with |u|^2 in {1, 1/4}, OFF the circle |u|^2 = 1/2 (analogues of s=0, s=1)"
+ },
+ "definition": "For a finite connected (q+1)-regular graph G, zeta_G(u) = prod over equivalence classes [P] of primitive closed backtrackless tailless cycles of (1 - u^len(P))^-1, |u| small; equivalently 1/zeta_G(u) = det(I - uB) = (1-u^2)^(|E|-|V|) det(I - Au + q u^2 I) (Ihara-Bass). Here G = K4 (n=4, |E|=6) and the Petersen graph (n=10, |E|=15), both cubic (q=2), with explicit integer adjacency matrices.",
+ "detector_runs": {
+  "description": "core.reconstruct.detect on coefficient expansions of the quadratic local factors 1/(1 - lambda u + 2u^2), purity weight (q, w) = (2, 1), window 12, holdout 4; the trivial Perron factor lambda = 3 is a control expected to be REFUSED at A4_PURITY (disc = 1 > 0)",
+  "runs": [
+   {
+    "label": "K4 nontrivial lambda=-1",
+    "mode": "coefficients",
+    "series": "a_k of 1/(1 - (-1)u + 2u^2), window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 1, 2]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=2, q^w=2, disc=-7"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 1, 2]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     2,
+     1
+    ]
+   },
+   {
+    "label": "Petersen nontrivial lambda=1",
+    "mode": "coefficients",
+    "series": "a_k of 1/(1 - (1)u + 2u^2), window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -1, 2]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=2, q^w=2, disc=-7"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -1, 2]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     2,
+     1
+    ]
+   },
+   {
+    "label": "Petersen nontrivial lambda=-2",
+    "mode": "coefficients",
+    "series": "a_k of 1/(1 - (-2)u + 2u^2), window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, 2, 2]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "deg-2 complete test: product=2, q^w=2, disc=-4"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, 2, 2]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": null,
+     "rh_established": false
+    },
+    "weight": [
+     2,
+     1
+    ]
+   },
+   {
+    "label": "trivial Perron factor lambda=3 (control)",
+    "mode": "coefficients",
+    "series": "a_k of 1/(1 - (3)u + 2u^2), window 12",
+    "verdict": {
+     "cells": [
+      {
+       "axiom": "A1_FINITE_RANK",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "P/Q certified on 12 terms; deg Q = 2, deg P = 0"
+      },
+      {
+       "axiom": "A2_EFFECTIVITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "numerator is 1: pure denominator local factor"
+      },
+      {
+       "axiom": "A3_INTEGRALITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "local factor in Z[T], constant term 1: [1, -3, 2]"
+      },
+      {
+       "axiom": "A4_PURITY",
+       "rigor": "EXACT_RATIONAL",
+       "status": "FAILS",
+       "witness": "deg-2 complete test: product=2, q^w=2, disc=1"
+      },
+      {
+       "axiom": "A5_HELD_OUT",
+       "rigor": "EXACT_RATIONAL",
+       "status": "HOLDS",
+       "witness": "prefix of 8 terms exactly predicts the withheld 4 terms"
+      }
+     ],
+     "object": {
+      "degree": 2,
+      "denominator": "[1, -3, 2]",
+      "mode": "coefficients",
+      "numerator": "[1]"
+     },
+     "refusal": "A4_PURITY",
+     "rh_established": false
+    },
+    "weight": [
+     2,
+     1
+    ]
+   }
+  ]
+ },
+ "id": "ihara_ramanujan",
+ "ladder": {
+  "L0_WELL_DEFINED": {
+   "citation": "Y. Ihara (1966), zeta functions of discrete cocompact p-adic groups",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "zeta_G(u) = prod over primitive geodesic classes [P] of (1 - u^len(P))^-1; for a finite graph 1/zeta is an explicit integer polynomial, computed exactly here: K4: Bass identity proved coefficient-wise: det(I - uB) (reversed exact charpoly of the 12x12 Hashimoto operator) == (1-u^2)^2 * det(I - Au + 2u^2 I), the latter computed twice (exact cofactor determinant over Q[u] == spectral product); 1/zeta = [1, 0, 0, -8, -6, 0, 16, 24, -3, -16, -24, 0, 16] (degree 12 = 2|E|) || Petersen: Bass identity proved coefficient-wise: det(I - uB) (reversed exact charpoly of the 30x30 Hashimoto operator) == (1-u^2)^5 * det(I - Au + 2u^2 I), the latter computed twice (exact cofactor determinant over Q[u] == spectral product); 1/zeta = [1, 0, 0, 0, 0, -24, -20, 0, -30, -40, 156, 240, -80, 120, 420, -544, -1275, 360, 500, -1680, 792, 3680, -480, -2880, 2000, 768, -4800, 0, 3840, 0, -1024] (degree 30 = 2|E|)"
+  },
+  "L1_MULTIPLICATIVITY": {
+   "citation": "Y. Ihara (1966), zeta functions of discrete cocompact p-adic groups; A. Terras (2011), Zeta Functions of Graphs: A Stroll through the Garden, Cambridge Univ. Press",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "the coefficients a_n of zeta count effective divisors (multisets of primitive classes of total length n), the graph analogue of multiplicativity over prime powers; verified exactly on the degree-12 window: K4: N_m = tr(B^m) (exact integer powers) == independent DFS count of closed non-backtracking tailless cycles == power sums of inverse roots of det(I-uB), m=1..12: [0, 0, 24, 24, 0, 96, 168, 168, 528, 1200, 1848, 3960]; primitive classes P_m = [0, 0, 8, 6, 0, 12, 24, 18, 56, 120, 168, 320] (nonnegative integers); zeta coefficients a_0..a_12 = [1, 0, 0, 8, 6, 0, 48, 72, 39, 272, 600, 624, 1772] (nonnegative integers); zeta * prod_(m<=12) (1-u^m)^P_m == 1 + O(u^13) exactly || Petersen: N_m = tr(B^m) (exact integer powers) == independent DFS count of closed non-backtracking tailless cycles == power sums of inverse roots of det(I-uB), m=1..12: [0, 0, 0, 0, 120, 120, 0, 240, 360, 1320, 2640, 3360]; primitive classes P_m = [0, 0, 0, 0, 24, 20, 0, 30, 40, 120, 240, 270] (nonnegative integers); zeta coefficients a_0..a_12 = [1, 0, 0, 0, 0, 24, 20, 0, 30, 40, 420, 720, 480] (nonnegative integers); zeta * prod_(m<=12) (1-u^m)^P_m == 1 + O(u^13) exactly"
+  },
+  "L2_EULER_PRODUCT": {
+   "citation": "Y. Ihara (1966), zeta functions of discrete cocompact p-adic groups; A. Terras (2011), Zeta Functions of Graphs: A Stroll through the Garden, Cambridge Univ. Press",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "Euler product over prime geodesic cycles; window-exact instance check: primitive class counts P_m from N_m = sum_{d|m} d P_d are nonnegative integers and zeta * prod_(m<=12)(1-u^m)^P_m == 1 + O(u^13) for both graphs (see L1 witness); full identity imported"
+  },
+  "L3_BOUNDED_DEGREE_RATIONAL": {
+   "citation": "Y. Ihara (1966), zeta functions of discrete cocompact p-adic groups",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "in the norm variable N(P)^-s = u^len(P) every local factor is (1 - N(P)^-s)^-1: degree 1 uniformly; global rationality proved exactly here: 1/zeta is a degree-2|E| integer polynomial (12 for K4, 30 for Petersen), coefficient lists embedded in the L0 witness"
+  },
+  "L4_WEIGHT_DUALITY": {
+   "citation": "A. Terras (2011), Zeta Functions of Graphs: A Stroll through the Garden, Cambridge Univ. Press",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "exact reflection q^n u^2n h(1/(qu)) == h(u) verified coefficient-wise for both graphs (self-duality under u <-> 1/(qu), i.e. s <-> 1-s); nontrivial inverse-root pairs are conjugate with |u|^2 = 1/q exactly: K4: lambda=-1: disc=lambda^2-8=-7<0, so the roots of 2u^2--1u+1 are a conjugate pair with product 1/2: |u|^2=1/2; trivial factor (1-3u+2u^2) = (1-u)(1-2u): poles u=1, u=1/2 with |u|^2 in {1, 1/4}, OFF the circle |u|^2 = 1/2 (analogues of s=0, s=1) || Petersen: lambda=1: disc=lambda^2-8=-7<0, so the roots of 2u^2-1u+1 are a conjugate pair with product 1/2: |u|^2=1/2; lambda=-2: disc=lambda^2-8=-4<0, so the roots of 2u^2--2u+1 are a conjugate pair with product 1/2: |u|^2=1/2; trivial factor (1-3u+2u^2) = (1-u)(1-2u): poles u=1, u=1/2 with |u|^2 in {1, 1/4}, OFF the circle |u|^2 = 1/2 (analogues of s=0, s=1)"
+  },
+  "L5_CONDUCTOR_GAMMA_ROOT": {
+   "citation": "Y. Ihara (1966), zeta functions of discrete cocompact p-adic groups; A. Terras (2011), Zeta Functions of Graphs: A Stroll through the Garden, Cambridge Univ. Press",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "gamma-factor analogue: the elementary factor (1-u^2)^(r-1), r-1 = |E|-|V| (2 for K4, 5 for Petersen); conductor analogue trivial (finite unramified object); root-number analogue computed exactly here: the cleared-denominator FE holds with sign (-1)^(r-1) = +1 for K4 and -1 for Petersen; note the completion is canonical in form but not unique (Terras gives three standard FEs)"
+  },
+  "L6_CONTINUATION_FE": {
+   "citation": "Y. Ihara (1966), zeta functions of discrete cocompact p-adic groups; H. Bass (1992), Ihara-Selberg zeta of a tree lattice",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "continuation: zeta is the reciprocal of an explicit polynomial (rationality), proved here for both instances via the exact three-leg Bass identity; FE: K4: exact reflection 2^4 u^8 h(1/(2u)) == h(u) coefficient-wise, h = det(I - Au + 2u^2 I); cleared-denominator FE for 1/zeta holds with sign (-1)^(r-1) = +1 || Petersen: exact reflection 2^10 u^20 h(1/(2u)) == h(u) coefficient-wise, h = det(I - Au + 2u^2 I); cleared-denominator FE for 1/zeta holds with sign (-1)^(r-1) = -1"
+  },
+  "L7_TWIST_TENSOR_COMPAT": {
+   "citation": "H. M. Stark, A. A. Terras (1996; Part II 2000), zeta functions of finite graphs and coverings, Adv. Math.",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "character-twist instance proved exactly: bipartite double cover D of K4 (8 vertices, 12 edges, cubic): charpoly(A_D) == charpoly(A) * charpoly(A)(-x) exactly; det(I - A_D u + 2u^2) == det(I - Au + 2u^2) * det(I + Au + 2u^2) (all by exact cofactor determinants); with L(u,chi)^-1 = (1-u^2)^2 det(I + Au + 2u^2) (Artin-Ihara, sign character), 1/zeta_D == (1/zeta_K4) * (1/L(u,chi)) coefficient-wise; independently confirmed by 1/zeta_D == det(I - u B_D) from the cover's own 24x24 non-backtracking operator; 1/L(u,chi) = [1, 0, 0, 8, -6, 0, 16, -24, -3, 16, -24, 0, 16] || CAVEAT (honesty): twists by characters of covers are fully available (Artin-Ihara theory), but no Rankin-Selberg-style tensor product of two graph zetas is known to this build; the tensor half of this cell rests on the twist instance only"
+  },
+  "L8_REALIZATION": {
+   "citation": "K. Hashimoto (1989), zeta functions of finite graphs (edge operator); H. Bass (1992), Ihara-Selberg zeta of a tree lattice; M. Kotani, T. Sunada (2000), zeta functions of finite graphs",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "three realizations: spectral (adjacency operator; exact charpolys and factorizations), dynamical/combinatorial (non-backtracking edge shift: zeta = 1/det(I - uB) with B built explicitly; N_m = tr B^m == independent DFS geodesic counts, m <= 12, both graphs), and group-theoretic (Ihara's original p-adic quotient setting, imported); the Bass identity tying them together is instance-proved coefficient-wise"
+  },
+  "L9_EXPLICIT_FORMULA_POSITIVITY": {
+   "citation": "A. Terras (2011), Zeta Functions of Graphs: A Stroll through the Garden, Cambridge Univ. Press",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "explicit formula instance: N_m = tr(B^m) = power sums of the inverse roots of det(I-uB) (= poles side), verified exactly for m <= 12 on both graphs; the positivity/purity input is supplied INDEPENDENTLY by self-adjointness of the adjacency operator (A = A^T, real spectrum - here even fully factored over Z) plus the spectral gap certified by exact Sturm counting (no roots of s2 in (8, B], in fact none in (9/2, B]); this is precisely the mechanism slot that stands OPEN in the zeta world"
+  }
+ },
+ "mechanisms": {
+  "DUALITY_FE": {
+   "citation": "A. Terras (2011), Zeta Functions of Graphs: A Stroll through the Garden, Cambridge Univ. Press",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "supplied by the u <-> 1/(qu) symmetry of each quadratic local factor 1 - lambda u + q u^2; exact reflection and cleared-denominator FE verified coefficient-wise for both graphs, signs +1 / -1"
+  },
+  "EULER_PRODUCT": {
+   "citation": "Y. Ihara (1966), zeta functions of discrete cocompact p-adic groups",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "supplied by unique factorization of closed geodesics into powers of primitive classes; window-exact Euler product check to degree 12 on both graphs (L2)"
+  },
+  "FAMILY": {
+   "citation": "A. Lubotzky, R. Phillips, P. Sarnak (1988), Ramanujan graphs; G. Margulis (1988); A. Marcus, D. Spielman, N. Srivastava (2015); N. Alon (1986); A. Nilli (1991)",
+   "rigor": "IMPORTED_THEOREM",
+   "status": "HOLDS",
+   "witness": "K4 and Petersen sit in the family of cubic Ramanujan graphs; infinite (q+1)-regular Ramanujan families exist for q = p (Lubotzky-Phillips-Sarnak 1988; Margulis 1988) and bipartite for all degrees (Marcus-Spielman-Srivastava 2015); Alon-Boppana (Nilli 1991) makes 2 sqrt(q) the sharp family-level bound, so the Ramanujan certificate is extremal"
+  },
+  "POSITIVITY_PURITY": {
+   "citation": "A. Lubotzky, R. Phillips, P. Sarnak (1988), Ramanujan graphs; A. Terras (2011), Zeta Functions of Graphs: A Stroll through the Garden, Cambridge Univ. Press",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "supplied by adjacency-operator self-adjointness (real spectrum) + spectral gap: the Ramanujan bound lambda^2 <= 8 = 4q certified by exact Sturm counting on s2 for both graphs; consequently every nontrivial pole is pure: |u|^2 = 1/q exactly. K4: s = charpoly/(x-3) exact (remainder 0, 3 simple, -3 not a root); s2(y) with roots = squared nontrivial eigenvalues = [-1, 3, -3, 1] via Newton power sums p_2k; exact Sturm: #roots in (8, 9] = 0 and in (9/2, 9] = 0; all 1 distinct roots in (0, 8]; hence lambda^2 <= 8 (indeed <= 9/2) for every eigenvalue lambda != 3: RAMANUJAN, fully exact || Petersen: s = charpoly/(x-3) exact (remainder 0, 3 simple, -3 not a root); s2(y) with roots = squared nontrivial eigenvalues = [-256, 1536, -3936, 5616, -4881, 2661, -906, 186, -21, 1] via Newton power sums p_2k; exact Sturm: #roots in (8, 5617] = 0 and in (9/2, 5617] = 0; all 2 distinct roots in (0, 8]; hence lambda^2 <= 8 (indeed <= 9/2) for every eigenvalue lambda != 3: RAMANUJAN, fully exact"
+  },
+  "TENSOR_OPS": {
+   "citation": "H. M. Stark, A. A. Terras (1996; Part II 2000), zeta functions of finite graphs and coverings, Adv. Math.",
+   "rigor": "EXACT_WITNESS",
+   "status": "HOLDS",
+   "witness": "present in the form of character twists via Galois covers (Artin-Ihara L-functions): exact double-cover factorization instance for K4 embedded at L7; CAVEAT: no tensor operation pairing two different graph zetas is known to this build - the mechanism is partial"
+  },
+  "TRACE_FORMULA": {
+   "citation": "Y. Ihara (1966), zeta functions of discrete cocompact p-adic groups; H. Bass (1992), Ihara-Selberg zeta of a tree lattice; K. Hashimoto (1989), zeta functions of finite graphs (edge operator)",
+   "rigor": "PROVED_HERE",
+   "status": "HOLDS",
+   "witness": "Ihara-Bass identity det(I-uB) = (1-u^2)^(r-1) det(I-Au+qu^2) proved coefficient-wise for K4 (deg 12) and Petersen (deg 30): LHS from the exact charpoly of the explicitly built Hashimoto operator, RHS computed twice (cofactor determinant over Q[u] and spectral product); geodesic side anchored combinatorially: tr(B^m) == pure-DFS geodesic counts, m <= 12 (K4: N_3 = 24 = 4 triangles x 6, N_4 = 24; Petersen: N_3 = N_4 = 0 (girth 5), N_5 = 120 = 12 pentagons x 10)"
+  }
+ },
+ "notes": "This world is the positive control for the mechanism matrix: unlike the zeta world, the POSITIVITY_PURITY slot is filled by an independently supplied structure (self-adjointness of the adjacency operator + exactly certified spectral gap), and the critical-line statement is a THEOREM for these instances. Every HOLDS above rests on Fraction-exact computation or an explicit citation; the general Ihara-Bass theorem and the geodesic Euler-product identity are imported, but both are also instance-verified here (coefficient-wise / to degree 12). Graph-RH theorems imply nothing about the classical Riemann Hypothesis: rh_established = false.",
+ "rh_established": false,
+ "sources": [
+  "Y. Ihara (1966), J. Math. Soc. Japan (discrete subgroups of PL(2) over p-adic fields; the graph zeta's origin)",
+  "K. Hashimoto (1989), Adv. Stud. Pure Math. (edge operator, zeta functions of finite graphs)",
+  "H. Bass (1992), Internat. J. Math. (Ihara-Selberg zeta of a tree lattice; three-term determinant identity)",
+  "T. Sunada (1986), L-functions in geometry",
+  "H. M. Stark, A. A. Terras (1996, 2000), Adv. Math. (graph zetas and coverings; Artin-Ihara L-functions)",
+  "M. Kotani, T. Sunada (2000), J. Math. Sci. Univ. Tokyo",
+  "A. Terras (2011), Zeta Functions of Graphs: A Stroll through the Garden, Cambridge Univ. Press",
+  "A. Lubotzky, R. Phillips, P. Sarnak (1988), Combinatorica (Ramanujan graphs)",
+  "G. Margulis (1988), explicit expander constructions",
+  "N. Alon (1986); A. Nilli (1991) (Alon-Boppana bound)",
+  "A. Marcus, D. Spielman, N. Srivastava (2015), Ann. of Math. (interlacing families I: bipartite Ramanujan graphs)"
+ ],
+ "title": "Ihara zeta functions of two Ramanujan cubic graphs (K4 and Petersen)"
+}

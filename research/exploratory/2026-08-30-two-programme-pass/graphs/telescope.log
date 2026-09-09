@@ -1,0 +1,15 @@
+[01:41:22] enumeration: Hamiltonian cubic via chord diagrams, n = 4..12
+[01:41:22]   n=4: 1 Hamiltonian cubic classes
+[01:41:22]   n=6: 2 Hamiltonian cubic classes
+[01:41:22]   n=8: 5 Hamiltonian cubic classes
+[01:41:24]   n=10: 17 Hamiltonian cubic classes
+[01:41:34]   n=12: 80 Hamiltonian cubic classes (spectral+invariant dedup)
+[01:41:38] named non-Hamiltonian addition: Petersen
+[01:41:38] parametrized families: GP(n,k), n <= 12
+[01:41:46] atlas: 134 graphs, 128 Ramanujan
+[01:41:46] rewiring walks (unbiased deterministic; seeds' status certified at step 0, not assumed)
+[01:41:46]   walk walk_from_GP(12,1)
+[01:42:05]   walk walk_from_GP(12,5)
+[01:42:23]   walk_from_GP(12,1): 25 steps, events: [(1, 'departure'), (8, 'reentry'), (11, 'departure'), (14, 'reentry'), (15, 'departure'), (16, 'reentry')]
+[01:42:23]   walk_from_GP(12,5): 25 steps, events: [(1, 'departure'), (2, 'reentry')]
+[01:42:23] C5 done
