@@ -1,0 +1,48 @@
+{
+  "arithmetic_and_analytic_boundary": "No RH premise, numerical zero, reciprocal-zeta critical bound or unknown optimizer is used in SC1-SC4. Classical approximate functional equation, Plancherel, analytic continuation, projection and finite-dimensional trace/min-max are paper inputs.",
+  "bounded_completion": {
+    "path": "standalone/2026-09-06-logarithmic-core/balanced-mobius-contour/PROOF.md",
+    "role": "Nonempty native coefficient-budget construction; formulas and proof outline reproduced in Section6.1. No parent code run.",
+    "sha": "ed074bcabfd2c1ca3336e457b8fdd09a25bcd2a7"
+  },
+  "instructions": {
+    "path": "AGENTS.md",
+    "scope": "Read at current main baseline.",
+    "sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f"
+  },
+  "orientation": [
+    {
+      "pr": 827,
+      "scope": "Published four-pass review metadata; not a new exhaustive source audit.",
+      "sha": "29237183dc6973cfa9bd953ac1710b7f00929d04"
+    },
+    {
+      "pr": 830,
+      "scope": "Unmerged integration-candidate metadata; not adopted as published baseline.",
+      "sha": "aafdb103393f8cff6578415fd631a3b78974b81b"
+    }
+  ],
+  "parent": {
+    "path": "standalone/2026-09-08-arithmetic-norm-transfer/PROOF.md",
+    "pr": 803,
+    "repository": "GettysburgResearch/riemann",
+    "role": "Exact full-norm and sharp graph-transfer context; mathematical estimates used here are reconstructed.",
+    "sha": "db175de165a9077e709b1cb482998171ffc0c6e7"
+  },
+  "parent_bytes_replayed": false,
+  "parent_code_executed": false,
+  "quantitative_import": {
+    "assertion": "Critical-line approximate functional equation with x=y=sqrt(t/(2pi)) and error O(t^(-1/4)).",
+    "inspection": "The displayed DLMF equations, domain and cited reference were read. The approximate functional equation proof is imported, not reproduced by finite code.",
+    "not_used": "No RH-conditional prime-error mean square, reciprocal-zeta critical estimate or Bourgain subconvexity is used in the final proof.",
+    "source": "NIST Digital Library of Mathematical Functions, 25.9.1--25.9.3",
+    "underlying_reference": "Titchmarsh (1986), (4.17.1), p.88",
+    "url": "https://dlmf.nist.gov/25.9",
+    "used_consequence": "The manuscript reconstructs integral_U^(2U)|zeta(1/2+it)|^2 dt=O(U log(2U)), keeping moving cutoff intervals, then the full weighted tail O(log(2T)/T)."
+  },
+  "rational_capture": {
+    "path": "standalone/2026-09-08-rational-residual-capture/PROOF.md",
+    "role": "Complete rational form, uniform over coefficients. Its required homogeneous identities are reconstructed; no historical producer run.",
+    "sha": "31a35a90b0b924dc98a2c89c463fb59577f45a4e"
+  }
+}

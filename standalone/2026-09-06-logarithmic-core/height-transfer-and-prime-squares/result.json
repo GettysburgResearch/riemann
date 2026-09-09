@@ -1,0 +1,109 @@
+{
+  "C0_decimal": [
+    "0.047303119569",
+    "0.047303197763"
+  ],
+  "C0_enclosure": [
+    "34566793351160214594453932872077114506641314513/730750818665451459101842416358141509827966271488",
+    "34566850490697692527968570774722761848709595269/730750818665451459101842416358141509827966271488"
+  ],
+  "Rbar_decimal": [
+    "0.00000000000147970363104120",
+    "0.00000000000147970363104121"
+  ],
+  "Rbar_enclosure": [
+    "2162589279531199891628639219555184177/1461501637330902918203684832716283019655932542976",
+    "1081294639765599945814319609777592683/730750818665451459101842416358141509827966271488"
+  ],
+  "Rbar_rational_upper": "37/25000000000000",
+  "bits": 160,
+  "continuum_budgets": [
+    {
+      "decimal_enclosure": [
+        "0.152551171862",
+        "0.152551171863"
+      ],
+      "left": 2,
+      "lower": "7810619999371/51200000000000",
+      "name": "small_strong",
+      "required": "1/10",
+      "right": 4
+    },
+    {
+      "decimal_enclosure": [
+        "0.102754724117",
+        "0.102754724118"
+      ],
+      "left": 4,
+      "lower": "1644075585874599999999371/16000000000000000000000000",
+      "name": "large_strong",
+      "required": "1/10",
+      "right": 50000000000
+    },
+    {
+      "decimal_enclosure": [
+        "0.152551171839",
+        "0.152551171840"
+      ],
+      "left": 2,
+      "lower": "781061999818219/5120000000000000",
+      "name": "small_wide",
+      "required": "1/200",
+      "right": 16
+    },
+    {
+      "decimal_enclosure": [
+        "0.006035972627",
+        "0.006035972628"
+      ],
+      "left": 16,
+      "lower": "193151124065484179686871/32000000000000000000000000",
+      "name": "large_wide",
+      "required": "1/200",
+      "right": 100000000000
+    }
+  ],
+  "external_height_used": 3000000000000,
+  "external_verification_rerun": false,
+  "finite_scalar_range": {
+    "real_m_max": 100000000000,
+    "real_m_min": 2,
+    "strict_margin": "1/200"
+  },
+  "groups": {
+    "compact_weight": 80,
+    "continuum_endpoint_budgets": 4,
+    "dyadic_chebyshev_divisibility": 16,
+    "exact_prime_power_partition": 23,
+    "filter_modulus_envelope": 25,
+    "gamma_remainder_coefficient": 1,
+    "not_an_unbounded_sharp_bound": 1,
+    "paired_laplace_identity": 18,
+    "primitive_source_bounds": 5,
+    "range_coverage": 2,
+    "self_reciprocity": 80,
+    "square_drift": 5,
+    "stieltjes_endpoint": 4,
+    "strip_denominator": 9,
+    "unbounded_weaker_bound": 2
+  },
+  "large_range_enumerated": false,
+  "new_full_window_psd_proved": false,
+  "prime_only_offset": "121/288",
+  "prime_partition_fixture_range": [
+    2,
+    24
+  ],
+  "prime_square_limit": "49/288",
+  "rh_proved": false,
+  "scope": "Finite exact arithmetic and source bindings only; analytic proofs and the external theorem require mathematical review.",
+  "status": "PASS_BOUNDED_HEIGHT_TRANSFER_CONTROLS",
+  "stronger_scalar_range": {
+    "real_m_max": 50000000000,
+    "real_m_min": 2,
+    "strict_margin": "1/10"
+  },
+  "total_bounded_controls": 275,
+  "unbounded_leading_coefficient_loss": "1887/5000000000000",
+  "unbounded_sharp_bound_proved": false
+}

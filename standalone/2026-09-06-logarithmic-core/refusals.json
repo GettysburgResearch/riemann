@@ -1,0 +1,151 @@
+{
+  "cases_per_mode": 12,
+  "outcomes": [
+    {
+      "case": "rh_upgrade",
+      "exit": 2,
+      "optimized": false,
+      "reason": "result differs"
+    },
+    {
+      "case": "actual_sign_upgrade",
+      "exit": 2,
+      "optimized": false,
+      "reason": "result differs"
+    },
+    {
+      "case": "boolean_integer_alias",
+      "exit": 2,
+      "optimized": false,
+      "reason": "result differs"
+    },
+    {
+      "case": "changed_count",
+      "exit": 2,
+      "optimized": false,
+      "reason": "result differs"
+    },
+    {
+      "case": "empty_scope",
+      "exit": 2,
+      "optimized": false,
+      "reason": "result differs"
+    },
+    {
+      "case": "floating_alias",
+      "exit": 2,
+      "optimized": false,
+      "reason": "non-integer JSON number"
+    },
+    {
+      "case": "duplicate_key",
+      "exit": 2,
+      "optimized": false,
+      "reason": "duplicate JSON key"
+    },
+    {
+      "case": "proof_changed",
+      "exit": 2,
+      "optimized": false,
+      "reason": "proof anchor mismatch"
+    },
+    {
+      "case": "source_changed",
+      "exit": 2,
+      "optimized": false,
+      "reason": "source anchor mismatch"
+    },
+    {
+      "case": "unlisted_file",
+      "exit": 2,
+      "optimized": false,
+      "reason": "manifest coverage"
+    },
+    {
+      "case": "missing_manifest_row",
+      "exit": 2,
+      "optimized": false,
+      "reason": "manifest coverage"
+    },
+    {
+      "case": "duplicate_manifest_row",
+      "exit": 2,
+      "optimized": false,
+      "reason": "manifest schema"
+    },
+    {
+      "case": "rh_upgrade",
+      "exit": 2,
+      "optimized": true,
+      "reason": "result differs"
+    },
+    {
+      "case": "actual_sign_upgrade",
+      "exit": 2,
+      "optimized": true,
+      "reason": "result differs"
+    },
+    {
+      "case": "boolean_integer_alias",
+      "exit": 2,
+      "optimized": true,
+      "reason": "result differs"
+    },
+    {
+      "case": "changed_count",
+      "exit": 2,
+      "optimized": true,
+      "reason": "result differs"
+    },
+    {
+      "case": "empty_scope",
+      "exit": 2,
+      "optimized": true,
+      "reason": "result differs"
+    },
+    {
+      "case": "floating_alias",
+      "exit": 2,
+      "optimized": true,
+      "reason": "non-integer JSON number"
+    },
+    {
+      "case": "duplicate_key",
+      "exit": 2,
+      "optimized": true,
+      "reason": "duplicate JSON key"
+    },
+    {
+      "case": "proof_changed",
+      "exit": 2,
+      "optimized": true,
+      "reason": "proof anchor mismatch"
+    },
+    {
+      "case": "source_changed",
+      "exit": 2,
+      "optimized": true,
+      "reason": "source anchor mismatch"
+    },
+    {
+      "case": "unlisted_file",
+      "exit": 2,
+      "optimized": true,
+      "reason": "manifest coverage"
+    },
+    {
+      "case": "missing_manifest_row",
+      "exit": 2,
+      "optimized": true,
+      "reason": "manifest coverage"
+    },
+    {
+      "case": "duplicate_manifest_row",
+      "exit": 2,
+      "optimized": true,
+      "reason": "manifest schema"
+    }
+  ],
+  "schema": "riemann.logarithmic_core.refusals.v1",
+  "status": "PASS_EXPECTED_REFUSALS"
+}

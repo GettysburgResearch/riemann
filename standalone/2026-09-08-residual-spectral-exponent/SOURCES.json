@@ -1,0 +1,59 @@
+{
+  "context_only": [
+    {
+      "head_reported_in_search": "c4fb013692c51d6b26b8a3c33200615af764da82",
+      "pr": 819,
+      "scope": "Metadata reading only, no mathematical dependency or independent review."
+    }
+  ],
+  "execution_boundary": "Bounded exact algebra and small norm replays only; no parent code, external computation, formal build or full checkout.",
+  "new_analytic_proofs": [
+    "strict-strip reciprocal bound",
+    "uniform growing-frequency Perron estimate",
+    "complete energy upper envelope",
+    "limit squeeze for both infima"
+  ],
+  "not_proved": [
+    "Theta=1/2",
+    "unconditional evaluated subpower energy bound",
+    "RH",
+    "native sparse failure saving"
+  ],
+  "parent": {
+    "blob": "d5192fab330a92f336b7cb2c1c93ba517754d307",
+    "bytes": 16592,
+    "commit": "6c86b5fbfe92c97ecccf17b81585744ccde33b10",
+    "path": "standalone/2026-09-08-residual-normalization-and-minima/PROOF.md",
+    "pr": 803,
+    "repository": "GettysburgResearch/riemann",
+    "scope": "Source class and prior RN bounds read; core norm/lower mechanism reconstructed; no code replay.",
+    "sha256": "c6085aff0dba9d58b146fdced61bf5f9cb241e2d67893c102248dd0837895a5a"
+  },
+  "primary_references": [
+    {
+      "scope": "Baez-Duarte; classical arithmetic Nyman-Beurling context; no new approximation principle claimed.",
+      "url": "https://arxiv.org/abs/math/0011254"
+    },
+    {
+      "scope": "Burnol; zero-sensitive Hilbert lower bounds; not a black-box upper estimate.",
+      "url": "https://arxiv.org/abs/math/0103058v2"
+    },
+    {
+      "scope": "Tao; harmonic Mobius partial-sum bound; elementary proof reconstructed here.",
+      "url": "https://arxiv.org/abs/0908.4323"
+    },
+    {
+      "scope": "Classical convexity from approximate functional equation; qualitative constant only.",
+      "url": "https://dlmf.nist.gov/25.9"
+    },
+    {
+      "scope": "Critical-strip location and symmetry; no actual zero evaluation.",
+      "url": "https://dlmf.nist.gov/25.10"
+    },
+    {
+      "scope": "Maier-Rassias statement pages 2-3 visually inspected; their different-range cotangent estimate NOT imported.",
+      "url": "https://arxiv.org/pdf/1806.05070"
+    }
+  ],
+  "status": "PROPOSED_COMPONENT_PROOFS"
+}

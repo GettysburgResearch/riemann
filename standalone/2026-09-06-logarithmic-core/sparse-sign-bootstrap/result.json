@@ -1,0 +1,199 @@
+{
+  "C0_interval": {
+    "denominator_power_two": 112,
+    "lower_numerator": 244780349436307224354973103102333,
+    "upper_numerator": 246444140849106775444437526059390
+  },
+  "RH_proved": false,
+  "analytical_boundary": "Landau, spectral expansion, all-K count, and almost-periodic recurrence are paper arguments; no count saving is established.",
+  "conditional_feedback_arithmetic": [
+    {
+      "delta": "1",
+      "r": 1,
+      "steps": 1
+    },
+    {
+      "delta": "1/2",
+      "r": 1,
+      "steps": 2
+    },
+    {
+      "delta": "1/3",
+      "r": 1,
+      "steps": 3
+    },
+    {
+      "delta": "1/7",
+      "r": 1,
+      "steps": 7
+    },
+    {
+      "delta": "1/10",
+      "r": 1,
+      "steps": 10
+    },
+    {
+      "delta": "1/100",
+      "r": 1,
+      "steps": 100
+    },
+    {
+      "delta": "1/1000",
+      "r": 1,
+      "steps": 1000
+    },
+    {
+      "delta": "1",
+      "r": 2,
+      "steps": 2
+    },
+    {
+      "delta": "1/2",
+      "r": 2,
+      "steps": 4
+    },
+    {
+      "delta": "1/3",
+      "r": 2,
+      "steps": 6
+    },
+    {
+      "delta": "1/7",
+      "r": 2,
+      "steps": 14
+    },
+    {
+      "delta": "1/10",
+      "r": 2,
+      "steps": 20
+    },
+    {
+      "delta": "1/100",
+      "r": 2,
+      "steps": 200
+    },
+    {
+      "delta": "1/1000",
+      "r": 2,
+      "steps": 2000
+    }
+  ],
+  "finite_fixture_total": 4785,
+  "finite_groups": {
+    "affine_pole_residue": 12,
+    "bounded_native_values": 11,
+    "feedback_iteration": 3369,
+    "feedback_termination": 14,
+    "mellin_normalization": 2,
+    "mellin_reflection": 16,
+    "mellin_weight": 16,
+    "prime_power_sieve": 512,
+    "real_pole_control": 6,
+    "resonant_fourier_means": 4,
+    "source_constant": 3,
+    "square_cell_geometry": 256,
+    "strict_supremum_gap": 24,
+    "unit_cell_background": 540
+  },
+  "global_theorems_machine_proved": false,
+  "native_fixture_scope": {
+    "all_source_integers_through": 576,
+    "m_max": 12,
+    "m_min": 2
+  },
+  "native_fixtures": [
+    {
+      "D_interval": {
+        "denominator_power_two": 112,
+        "lower_numerator": 1123004533700264830169902326840895,
+        "upper_numerator": 1123004533700264830169902326840896
+      },
+      "m": 2
+    },
+    {
+      "D_interval": {
+        "denominator_power_two": 112,
+        "lower_numerator": 1285024705692135844346110034345612,
+        "upper_numerator": 1285024705692135844346110034345613
+      },
+      "m": 3
+    },
+    {
+      "D_interval": {
+        "denominator_power_two": 112,
+        "lower_numerator": 1291202524825056270422027905916071,
+        "upper_numerator": 1291202524825056270422027905916072
+      },
+      "m": 4
+    },
+    {
+      "D_interval": {
+        "denominator_power_two": 112,
+        "lower_numerator": 1295709863552048369029306310948442,
+        "upper_numerator": 1295709863552048369029306310948443
+      },
+      "m": 5
+    },
+    {
+      "D_interval": {
+        "denominator_power_two": 112,
+        "lower_numerator": 1245885584729669576045506149918379,
+        "upper_numerator": 1245885584729669576045506149918380
+      },
+      "m": 6
+    },
+    {
+      "D_interval": {
+        "denominator_power_two": 112,
+        "lower_numerator": 1293113389104495888291129724834090,
+        "upper_numerator": 1293113389104495888291129724834091
+      },
+      "m": 7
+    },
+    {
+      "D_interval": {
+        "denominator_power_two": 112,
+        "lower_numerator": 1295195966004372874784389141133990,
+        "upper_numerator": 1295195966004372874784389141133991
+      },
+      "m": 8
+    },
+    {
+      "D_interval": {
+        "denominator_power_two": 112,
+        "lower_numerator": 1300413853806492199551900637132302,
+        "upper_numerator": 1300413853806492199551900637132303
+      },
+      "m": 9
+    },
+    {
+      "D_interval": {
+        "denominator_power_two": 112,
+        "lower_numerator": 1357089352361976223355465579668299,
+        "upper_numerator": 1357089352361976223355465579668300
+      },
+      "m": 10
+    },
+    {
+      "D_interval": {
+        "denominator_power_two": 112,
+        "lower_numerator": 1239770818842406598533425852685901,
+        "upper_numerator": 1239770818842406598533425852685902
+      },
+      "m": 11
+    },
+    {
+      "D_interval": {
+        "denominator_power_two": 112,
+        "lower_numerator": 1262853226025652801086247312052843,
+        "upper_numerator": 1262853226025652801086247312052844
+      },
+      "m": 12
+    }
+  ],
+  "native_power_saving_proved": false,
+  "new_positive_range": false,
+  "parent": "cdbe96a71523c81a7f50c8fe990f0f702ab49c82",
+  "schema": "sparse-sign-bootstrap-v1",
+  "status": "PROPOSED_COMPONENT_PROOFS"
+}

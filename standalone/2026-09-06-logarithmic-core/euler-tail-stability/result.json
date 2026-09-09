@@ -1,0 +1,88 @@
+{
+  "claimed_new_native_positive_range": null,
+  "global_parameter_certificate": null,
+  "groups": {
+    "binomial_prime_powers": 32,
+    "comparison_constants": 2,
+    "euler_log_identity": 240,
+    "euler_positive_coefficients": 240,
+    "euler_units": 20,
+    "exact_integrals": 4,
+    "local_factor_numerator": 20,
+    "mellin_symbol": 13,
+    "native_identity_separation": 1,
+    "native_slope_intervals": 8,
+    "prime_phase_tail": 36,
+    "selberg_recurrence": 120,
+    "slope_constants": 7,
+    "slope_envelope": 13,
+    "weight_geometry": 80
+  },
+  "native_slope_receipts": [
+    {
+      "largest_integer": 21,
+      "lower": "-1376418728957998843/9223372036854775808",
+      "m": "7/3",
+      "upper": "-2752837457915997685/18446744073709551616"
+    },
+    {
+      "largest_integer": 44,
+      "lower": "-3129142442423234191/18446744073709551616",
+      "m": "10/3",
+      "upper": "-1564571221211617095/9223372036854775808"
+    },
+    {
+      "largest_integer": 75,
+      "lower": "83220480586673059/1152921504606846976",
+      "m": "13/3",
+      "upper": "1331527689386768945/18446744073709551616"
+    },
+    {
+      "largest_integer": 113,
+      "lower": "2685179021452371453/18446744073709551616",
+      "m": "16/3",
+      "upper": "1342589510726185727/9223372036854775808"
+    },
+    {
+      "largest_integer": 160,
+      "lower": "869842030006008339/9223372036854775808",
+      "m": "19/3",
+      "upper": "1739684060012016679/18446744073709551616"
+    },
+    {
+      "largest_integer": 215,
+      "lower": "-944151436241061285/18446744073709551616",
+      "m": "22/3",
+      "upper": "-236037859060265321/4611686018427387904"
+    },
+    {
+      "largest_integer": 277,
+      "lower": "403027899492802375/9223372036854775808",
+      "m": "25/3",
+      "upper": "806055798985604751/18446744073709551616"
+    },
+    {
+      "largest_integer": 348,
+      "lower": "-50958080878991629/9223372036854775808",
+      "m": "28/3",
+      "upper": "-101916161757983257/18446744073709551616"
+    }
+  ],
+  "parent_head": "93e5d45b63f6a9a60f981e81df589feff1ba1cfb",
+  "parent_proof_blobs": {
+    "annular-scalar-route/PROOF.md": "0f1b21227d064e61f4f532d9025c78106baa688e",
+    "height-transfer-and-prime-squares/PROOF.md": "2ee61d78b5bcf8e06de973f7e29634112c37e1a9"
+  },
+  "schema": "riemann.euler-tail-stability.checks.v1",
+  "scope": {
+    "analytic_theorems_machine_proved": false,
+    "bounded_exact_checks_only": true,
+    "external_zero_verification_replayed": false,
+    "global_model_parameters_numerically_certified": false,
+    "native_unbounded_sign_proved": false,
+    "new_full_window_certificate": false,
+    "rh_proved": false
+  },
+  "status": "PASS_BOUNDED_EXACT_CONTROLS",
+  "total_controls": 836
+}
