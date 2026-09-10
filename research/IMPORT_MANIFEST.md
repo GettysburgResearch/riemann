@@ -251,3 +251,40 @@ Depends on repaired #191 and B5. Finite frame existence is not a uniform cofinal
 ## First safe next import
 
 The dependency-minimal next proof-bearing packet is **B1**, but only after B0 is pinned. The corresponding integration task should extract the two #168 claim files, state the centered-Weil and simple-zero assumptions at the top, and exclude `T-14307` or any complete-kernel conclusion not independently discharged.
+
+---
+
+## D. External exact-source imports
+
+### D1. OpenAI prime-gap repositories, published 2026-09-02
+
+```text
+Status: IMPORTED / REVIEW_PENDING
+Import branch: research/gpt56-pro/20260903-prime-gaps-import
+Riemann base: 6dda8b5125457ed936330229f8c9eb6491728e76
+Dossier: research/exploratory/openai-prime-gaps-2026-09-02/
+```
+
+#### `openai/PrimeGaps186`
+
+- Exact source: `61340d0b74163003b32756bb16e91d9209a5e330`.
+- Local gitlink: `research/exploratory/imports/openai-prime-gaps-2026-09-02/PrimeGaps186`.
+- License: Apache-2.0.
+- Toolchain: Lean 4.34.0-rc2.
+- Boundary: `primeGapLiminf <= 186` is proved conditional on `kloosterman3_bound`, `kloosterman2_correlation_bound`, and `physical_integral_bounds`.
+- Reproducibility: upstream Python/FLINT certificate corroborates the 152 physical inequalities but is not consumed by Lean; no local replay was performed in the import pass.
+- Review: upstream self-assessment only; independent exact-SHA semantic review required.
+
+#### `openai/LongGapsBetweenPrimes`
+
+- Exact source: `8f5fa88c88b4750028c05b66b081d56a92418054`.
+- Local gitlink: `research/exploratory/imports/openai-prime-gaps-2026-09-02/LongGapsBetweenPrimes`.
+- License: Apache-2.0.
+- Toolchain: Lean 4.33.0, matching the current Riemann generation.
+- Boundary: the eventual Erdos-Rankin-scale long-gap theorem is reported with no project-specific axioms.
+- Reproducibility: clean build, comparator, `#print axioms`, and statement-equivalence replay remain to be independently deposited.
+- Review: upstream self-assessment only; independent exact-SHA semantic review required.
+
+#### Integration decision
+
+Both repositories remain exploratory submodules. Neither modifies the trusted formal spine or creates an RH implication. The source lock, theorem audit, improvement plan, and RH firewall are in the dossier named above. Promotion requires exact-SHA review and modular extraction; the conditional 186 endpoint cannot be registered as unconditional while any of its three project assumptions remains.

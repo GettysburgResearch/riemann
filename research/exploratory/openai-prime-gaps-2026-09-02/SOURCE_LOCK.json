@@ -1,0 +1,88 @@
+{
+  "status": "IMPORTED_REVIEW_PENDING",
+  "imported_at": "2026-09-03",
+  "updated_at": "2026-09-04",
+  "riemann_repository": "gfreund123/riemann",
+  "riemann_base_commit": "6dda8b5125457ed936330229f8c9eb6491728e76",
+  "import_branch": "research/gpt56-pro/20260903-prime-gaps-import",
+  "imports": [
+    {
+      "name": "PrimeGaps186",
+      "repository": "openai/PrimeGaps186",
+      "source_url": "https://github.com/openai/PrimeGaps186",
+      "default_branch": "main",
+      "commit": "61340d0b74163003b32756bb16e91d9209a5e330",
+      "published_commit_date_utc": "2026-09-02T20:53:24Z",
+      "commit_signature": "unsigned",
+      "license": "Apache-2.0",
+      "lean_toolchain": "leanprover/lean4:v4.34.0-rc2",
+      "local_path": "research/exploratory/imports/openai-prime-gaps-2026-09-02/PrimeGaps186",
+      "import_method": "git_submodule_gitlink",
+      "principal_files": [
+        "PrimeGaps186.lean",
+        "Challenge.lean",
+        "formalization.yaml",
+        "prime_gap_186_certificate.py",
+        "short_gaps_numerics.pdf",
+        "README.md"
+      ],
+      "theorem_boundary": "primeGapLiminf <= 186 conditional on three project axioms",
+      "independent_review": false
+    },
+    {
+      "name": "LongGapsBetweenPrimes",
+      "repository": "openai/LongGapsBetweenPrimes",
+      "source_url": "https://github.com/openai/LongGapsBetweenPrimes",
+      "default_branch": "master",
+      "proof_commit": "8f5fa88c88b4750028c05b66b081d56a92418054",
+      "proof_commit_date_utc": "2026-09-02T18:32:49Z",
+      "proof_commit_signature": "unsigned",
+      "publication_metadata_commit": "03a1190d0bc5502d9f54eeb60ad3e45e22b0df0b",
+      "publication_metadata_commit_date_utc": "2026-09-03T22:45:11Z",
+      "publication_metadata_commit_signature": "unsigned",
+      "publication_metadata_parent": "8f5fa88c88b4750028c05b66b081d56a92418054",
+      "publication_metadata_change": "README/formalization metadata only; no Lean source change",
+      "paper": {
+        "title": "Improved Long Gaps Between Primes",
+        "author": "OpenAI",
+        "url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/long_gaps.pdf",
+        "abridged_chain_of_thought_url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/long_gaps_abridged_cot.pdf",
+        "source_location": "Theorem 1.1 and Proposition 1.2",
+        "pdf_sha256": null,
+        "visual_audit": false,
+        "retrieval_note": "CDN endpoint could not be fetched by the available PDF renderer in this pass."
+      },
+      "license": "Apache-2.0",
+      "lean_toolchain": "leanprover/lean4:v4.33.0",
+      "local_path": "research/exploratory/imports/openai-prime-gaps-2026-09-02/LongGapsBetweenPrimes",
+      "import_method": "git_submodule_gitlink pinned to proof commit",
+      "principal_files": [
+        "LongGapsBetweenPrimes.lean",
+        "Challenge.lean",
+        "formalization.yaml",
+        "README.md"
+      ],
+      "proof_blob": "14467e08a1848a43c374b43001f172eab2a71d3c",
+      "theorem_boundary": "unconditional long-gap lower bound inside the ordinary Lean and mathlib trust boundary",
+      "formalization_status": {
+        "scope": "Full formalization of main results.",
+        "sorry_count": 0,
+        "reported_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "review": "self-assessed"
+      },
+      "independent_review": false
+    }
+  ],
+  "trust_boundary": {
+    "classification": "exploratory_external_import",
+    "canonical_or_integrated": false,
+    "local_build_run_as_part_of_import": false,
+    "upstream_reports_used": true,
+    "long_gaps_paper_pdf_audited": false,
+    "rh_implication_claimed": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "status": "SOURCE_PINNED_PDF_AUDIT_PENDING",
+  "paper": {
+    "title": "Improved Long Gaps Between Primes",
+    "author": "OpenAI",
+    "classification": [
+      "math.NT",
+      "MSC 11N05"
+    ],
+    "pdf_url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/long_gaps.pdf",
+    "abridged_chain_of_thought_url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/long_gaps_abridged_cot.pdf",
+    "formalization_alignment": {
+      "Proposition 1.2": "LongGapsBetweenPrimes.short_translates",
+      "Theorem 1.1": "LongGapsBetweenPrimes.long_gap_theorem",
+      "Theorem 1.1 indexed-prime comparator form": "LongGapsBetweenPrimes.long_prime_gaps"
+    },
+    "pdf_sha256": null,
+    "pdf_pages": null,
+    "visual_audit_performed": false,
+    "retrieval_note": "The supplied CDN endpoint returned a cache miss to the available PDF renderer and could not be downloaded in this import pass. No byte hash, page count, or screenshot-based paper audit is claimed."
+  },
+  "repository": {
+    "repository": "openai/LongGapsBetweenPrimes",
+    "default_branch": "master",
+    "proof_commit_imported_as_gitlink": "8f5fa88c88b4750028c05b66b081d56a92418054",
+    "proof_commit_date_utc": "2026-09-02T18:32:49Z",
+    "publication_metadata_commit": "03a1190d0bc5502d9f54eeb60ad3e45e22b0df0b",
+    "publication_metadata_commit_date_utc": "2026-09-03T22:45:11Z",
+    "publication_metadata_tree": "5702146d74213c0ead42ef57b9b68872bc36a9f7",
+    "publication_metadata_commit_signature": "unsigned",
+    "publication_metadata_parent": "8f5fa88c88b4750028c05b66b081d56a92418054",
+    "publication_metadata_diff": {
+      "files_changed": [
+        "README.md",
+        "formalization.yaml"
+      ],
+      "additions": 5,
+      "deletions": 1,
+      "lean_source_changed": false
+    },
+    "proof_blob": {
+      "path": "LongGapsBetweenPrimes.lean",
+      "sha": "14467e08a1848a43c374b43001f172eab2a71d3c",
+      "size_bytes": 231710,
+      "unchanged_at_publication_metadata_commit": true
+    },
+    "formalization_metadata_blob_at_publication_commit": "b45446353d47d6e3864b34c264a45b54a667fb12",
+    "readme_blob_at_publication_commit": "782c7a795e16137f4b9afd305bc457d173778d08",
+    "lean_toolchain": "leanprover/lean4:v4.33.0",
+    "license": "Apache-2.0",
+    "local_gitlink_path": "research/exploratory/imports/openai-prime-gaps-2026-09-02/LongGapsBetweenPrimes"
+  },
+  "formalization_claim": {
+    "scope": "Full formalization of main results.",
+    "sorry_count": 0,
+    "reported_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "review_status": "self-assessed",
+    "independent_build_replay_performed_here": false,
+    "independent_comparator_replay_performed_here": false,
+    "independent_statement_equivalence_review_complete": false
+  },
+  "provenance_decision": "Keep the gitlink pinned to the proof commit. Record the later paper-link commit separately because it changes documentation/metadata only and is unsigned."
+}
