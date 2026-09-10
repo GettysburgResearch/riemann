@@ -1,0 +1,60 @@
+{
+  "coverage": {
+    "boundary_derivatives": 156,
+    "cascade_coefficient_identities": 90,
+    "continuous_flow_symbols": 80,
+    "convolution_moments": 108,
+    "density_cutoffs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "finite_tail_products": 96,
+    "local_partial_fractions": 78,
+    "normalizer_and_strip_constant_controls": 7
+  },
+  "density_N2": [
+    [
+      1,
+      "16/9",
+      "-32/27"
+    ],
+    [
+      4,
+      "16/9",
+      "32/27"
+    ]
+  ],
+  "infinite_theorems_machine_proved": false,
+  "numerical_zero_certificate": false,
+  "raw_moments_N4": [
+    "1/1",
+    "205/72",
+    "35473/3456",
+    "5670775/124416",
+    "4353808085/17915904",
+    "654054181625/429981696",
+    "679101801427475/61917364224",
+    "24985514274483875/278628139008",
+    "14633038822829856275/17832200896512"
+  ],
+  "rh_proved": false,
+  "status": "EXACT_FINITE_ALGEBRA_ONLY",
+  "tail_budgets": {
+    "1": "6/1",
+    "16": "561/4096",
+    "2": "15/8",
+    "32": "2145/32768",
+    "4": "45/64",
+    "8": "153/512"
+  }
+}

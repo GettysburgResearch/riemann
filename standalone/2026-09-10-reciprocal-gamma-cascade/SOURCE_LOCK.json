@@ -1,0 +1,83 @@
+{
+  "agent_guide": "main/AGENTS.md read; own research packet, no status promotion",
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "closing_delta": {
+    "closing_head": "8f1f457b0b92e76a0a75bd3d8a8921c205fa75b0",
+    "depth": "Updated PR description only; no new proof imported or reviewed",
+    "description": "connected theta synthesis and collective-limit constraints",
+    "pr": 842,
+    "previous_metadata_head": "7ff754c7347d6ee9d59608e562e469351b3d37e7"
+  },
+  "date": "2026-09-10",
+  "external": [
+    {
+      "arxiv": "math/9912170",
+      "authors": "Biane, Pitman, Yor",
+      "read": "Proposition 1 and selected Section 5 text; screenshots of printed pages 7 and 28; not a full paper audit",
+      "title": "Probability laws related to the Jacobi theta and Riemann zeta functions, and Brownian excursions",
+      "url": "https://statistics.berkeley.edu/sites/default/files/tech-reports/569.pdf",
+      "use": "classical gamma-sum/Mellin/reciprocity representation and predecessor approximation context"
+    },
+    {
+      "url": "https://dlmf.nist.gov/10.32",
+      "use": "10.32.9 Bessel K integral"
+    },
+    {
+      "url": "https://dlmf.nist.gov/10.25",
+      "use": "10.25.1 Bessel differential equation"
+    },
+    {
+      "url": "https://dlmf.nist.gov/10.40",
+      "use": "10.40.2 and 10.40.4 endpoint asymptotics"
+    }
+  ],
+  "main_ref_readback": "same at closing observation",
+  "previous_local_packet": {
+    "file": "riemann_trace_hankel_proof.md",
+    "role": "motivation only; no proposed theorem imported; not modified",
+    "sha256": "1025b44e280e005b2652cb9f10c0fdf321adef255be494776797fc5f4cbfe923"
+  },
+  "priority": "No exhaustive novelty audit or priority claim. Default-main Biane search returned no matches; branch absence not inferred.",
+  "publication": "Local only. GitHub tools exposed reads but no write actions; plugin search found existing connector; direct git ls-remote failed DNS.",
+  "repository": "GettysburgResearch/riemann",
+  "repository_reading": [
+    {
+      "depth": "PR metadata orientation only; no theorem imported",
+      "head": "7ff754c7347d6ee9d59608e562e469351b3d37e7",
+      "pr": 842,
+      "purpose": "ferromagnetic finite moment synthesis"
+    },
+    {
+      "depth": "PR metadata orientation only; no theorem imported",
+      "head": "01d5a86136866e53e50df5ce90dfa441abdc32d8",
+      "pr": 841,
+      "purpose": "trace metric and finite native certificate"
+    },
+    {
+      "depth": "PR metadata orientation only; no theorem imported",
+      "head": "5663f5c4dd193d20bb815cb865d961c42b453946",
+      "pr": 840,
+      "purpose": "gamma-regularized feedback; different gamma variable and operation"
+    },
+    {
+      "depth": "PR metadata orientation only; no theorem imported",
+      "head": "1742bb3d55cd289ab72a555b09f8fe4a6d8ded59",
+      "pr": 839,
+      "purpose": "spectral core and trace-sign mechanism"
+    },
+    {
+      "depth": "PR metadata orientation only; no theorem imported",
+      "head": "459c3f78b3dc8c95ae6cc7b1bec0154499d76c9f",
+      "pr": 838,
+      "purpose": "native multi-seed source filters"
+    },
+    {
+      "depth": "PR metadata orientation only; no theorem imported",
+      "head": "9ac6e93b22532a663ad179d03dac5437723fdb19",
+      "pr": 837,
+      "purpose": "signed Mellin pairing"
+    }
+  ],
+  "rh_proved": false,
+  "status": "PROPOSED_RESEARCH_NOT_INTEGRATED"
+}
