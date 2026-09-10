@@ -1,0 +1,62 @@
+{
+  "actual_cli": {
+    "boolean_count_alias": {
+      "accepted": false,
+      "returncode": 1
+    },
+    "changed_numeric_endpoint": {
+      "accepted": false,
+      "returncode": 1
+    },
+    "duplicate_top_level_key": {
+      "accepted": false,
+      "returncode": 1
+    },
+    "empty_object": {
+      "accepted": false,
+      "returncode": 1
+    },
+    "extra_field": {
+      "accepted": false,
+      "returncode": 1
+    },
+    "false_RH_claim": {
+      "accepted": false,
+      "returncode": 1
+    },
+    "float_count_alias": {
+      "accepted": false,
+      "returncode": 1
+    },
+    "pivots_missing": {
+      "accepted": false,
+      "returncode": 1
+    },
+    "pristine_complete_reconstruction": {
+      "accepted": true,
+      "returncode": 0
+    },
+    "tail_removed": {
+      "accepted": false,
+      "returncode": 1
+    },
+    "theta_coverage_reduced": {
+      "accepted": false,
+      "returncode": 1
+    }
+  },
+  "controls": {
+    "directed_rational_cases": 1976,
+    "exact_cluster_annihilations": 299,
+    "exact_two_vector_metric_identities": 12,
+    "independent_exp_brackets": 9,
+    "independent_pi_brackets": 1,
+    "jordan_algebra_control": 3,
+    "logconcave_moment_control": 1,
+    "positive_weighted_vandermonde_models": 3,
+    "signed_spectral_controls": 2,
+    "strict_receipt_unit_refusals": 5
+  },
+  "skipped_tests": 0,
+  "status": "PASS_BOUNDED_TESTS_NOT_RH"
+}
