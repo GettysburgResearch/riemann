@@ -1,0 +1,42 @@
+{
+  "N": 4,
+  "T": "0.979857505646192737263798158257464123880491519482778989046088608",
+  "actual_xi_zero": false,
+  "apparent_roots": [
+    {
+      "imag": "0.65997805037132556792757256521175404928971068862861116499614706981",
+      "real": "30.448056807011554060003915858354653146472366518533396169664016124"
+    },
+    {
+      "imag": "0.65997805037132556792757256521175404928971068862691623890130686046",
+      "real": "30.448056807011554060003915858354653146472366518535439649028803192"
+    }
+  ],
+  "complete_nonreal_census": false,
+  "cross_grid_residual": "5.7017392281324615552926877186543387605425916152615966890276889113e-56",
+  "density_small_argument_method": "positive tilted simplex series, 97 terms; nondirected",
+  "derivative_second_grid": {
+    "imag": "-0.00000001985421506089707764243415808745887230129752053640957424391052403",
+    "real": "-0.0000000081875045887482510154470377194448773335841093026074831907886205621"
+  },
+  "disagreement": "2.654916643000462058266450547942336561053280696861686233197040338e-48",
+  "mpmath_version": "1.3.0",
+  "outward_arithmetic": false,
+  "precision_digits": 120,
+  "quadrature_error_certified": false,
+  "quadrature_grids": [
+    {
+      "cells": 6,
+      "order": 32
+    },
+    {
+      "cells": 8,
+      "order": 40
+    }
+  ],
+  "rh_proved": false,
+  "root_count_certified": false,
+  "source": "exact centered N=4 gamma construction",
+  "status": "EXPLORATORY_NON_DIRECTED_NO_ROOT_COUNT",
+  "tau": "0.44264591147423065072260811106982815621567758019137465324889423652"
+}
