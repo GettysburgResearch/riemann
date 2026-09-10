@@ -1,0 +1,105 @@
+{
+  "actual_zero_evaluated_in_this_subset": false,
+  "finite_index_models": [
+    {
+      "degree8_inertia": [
+        9,
+        0,
+        0
+      ],
+      "multiplicity_weight": 1,
+      "nonreal_pairs": 0
+    },
+    {
+      "degree8_inertia": [
+        9,
+        0,
+        0
+      ],
+      "multiplicity_weight": 3,
+      "nonreal_pairs": 0
+    },
+    {
+      "degree8_inertia": [
+        8,
+        1,
+        0
+      ],
+      "multiplicity_weight": 1,
+      "nonreal_pairs": 1
+    },
+    {
+      "degree8_inertia": [
+        8,
+        1,
+        0
+      ],
+      "multiplicity_weight": 3,
+      "nonreal_pairs": 1
+    },
+    {
+      "degree8_inertia": [
+        7,
+        2,
+        0
+      ],
+      "multiplicity_weight": 1,
+      "nonreal_pairs": 2
+    },
+    {
+      "degree8_inertia": [
+        7,
+        2,
+        0
+      ],
+      "multiplicity_weight": 3,
+      "nonreal_pairs": 2
+    },
+    {
+      "degree8_inertia": [
+        6,
+        3,
+        0
+      ],
+      "multiplicity_weight": 1,
+      "nonreal_pairs": 3
+    },
+    {
+      "degree8_inertia": [
+        6,
+        3,
+        0
+      ],
+      "multiplicity_weight": 3,
+      "nonreal_pairs": 3
+    }
+  ],
+  "groups": {
+    "density_origin_coefficients": 88,
+    "endpoint_log_jets": 72,
+    "finite_index_controls": 72,
+    "gamma_moments": 104,
+    "partition_controls": 785,
+    "phase_algebra": 36,
+    "positive_tail_controls": 60
+  },
+  "partition_cells": 785,
+  "rh_proved": false,
+  "source_guards": {
+    "cauchy_integrand_ceiling": "4294967296",
+    "dominant_ratio": [
+      "622207205496105251649283",
+      "4295287464075121674682368"
+    ],
+    "simplex_coefficient": "4000/7",
+    "support_interval": [
+      "1686764263369/1562500000000",
+      "53976456427809/50000000000000"
+    ],
+    "tau_interval": [
+      "4862286727625450782261403054473119967640081414480764456051073103516949997657170520415860464402567681019581203509416659983623006687713175045356335165349290",
+      "4862286727625450782261403054473119967640081414480764456051073103516949997657170520415860464402567681019581203509416659983623006687713175045356335165349417"
+    ]
+  },
+  "status": "BOUNDED_IDENTITIES_NOT_INFINITE_THEOREM_PROOF"
+}
