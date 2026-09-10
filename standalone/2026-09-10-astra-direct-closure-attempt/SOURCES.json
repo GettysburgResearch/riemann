@@ -1,0 +1,50 @@
+{
+  "rh_proved": false,
+  "date": "2026-09-10",
+  "parent": {
+    "pr": 835,
+    "commit": "4b8fa9abfa9aac5ed1feb7f30acaeeb418ed405c",
+    "root": "standalone/2026-09-09-astra-global-xi-attack/",
+    "read_scope": "Both mathematical manuscripts; not independent acceptance.",
+    "primitive_replay_this_pass": false,
+    "local_matched_manuscripts": [
+      {
+        "role": "original",
+        "bytes": 15186,
+        "sha256": "be0bda62988412b94c79ba3d8c71d64232e297ab0752290fe2ef031d8ca7f080",
+        "git_blob": "92e2562661055ffe53845569d458f5fb721ad100"
+      },
+      {
+        "role": "tail",
+        "bytes": 15510,
+        "sha256": "f757ad17a86a00a6eaabc4b2446e154d80b39bc2cfd4bb261fc43cce43778b62",
+        "git_blob": "06863483da19ff1a35988e695459d49a17c303b2"
+      }
+    ]
+  },
+  "determinant": {
+    "pr": 834,
+    "commit": "f0e34780f4fe91bd5d07e791e8855189838c3df5",
+    "path": "standalone/2026-09-09-centered-theta-determinant/PROOF.md",
+    "read_scope": "Principal mathematical text sections 1-6 by authenticated connector; no code replay.",
+    "later_head_observed": "62bd9bbed134e20c1ee9cd92d008562079af9ceb",
+    "later_delta_scope": "Comparison and new theta-spectral-crowding README read only. New metric-obstruction proof not imported or independently reviewed."
+  },
+  "external": [
+    {
+      "author": "George Csordas",
+      "title": "Fourier transforms of positive definite kernels and the Riemann xi-function",
+      "url": "https://arxiv.org/abs/1309.0055v2",
+      "scope": "Classical Laguerre/positive-definite-kernel framework; no global sign imported."
+    },
+    {
+      "author": "NIST DLMF",
+      "url": "https://dlmf.nist.gov/25.10",
+      "scope": "Nontrivial-zero strip and classical infinitely many critical-line zeros, no numerical census imported."
+    }
+  ],
+  "publication": {
+    "performed": false,
+    "reason": "Current connector exposes reads but no write action; direct git DNS failed."
+  }
+}
