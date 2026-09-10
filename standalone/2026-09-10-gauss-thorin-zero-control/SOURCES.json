@@ -1,0 +1,41 @@
+{
+  "RH_proved": false,
+  "external_sources": [
+    {
+      "authors": "Biane, Pitman, Yor",
+      "scope": "classical exact source identity, inherited at the parent normalization; no fresh full external proof audit",
+      "url": "https://arxiv.org/abs/math/9912170"
+    },
+    {
+      "authors": "Trefethen, Weideman",
+      "scope": "Theorem 5.1 and contour remainder (5.15); parsed text and page images 15,18 (zero-based) inspected",
+      "url": "https://people.maths.ox.ac.uk/trefethen/publication/PDF/2014_149.pdf"
+    },
+    {
+      "authors": "NIST DLMF",
+      "scope": "Section 5.11(ii) complex log-Gamma/digamma remainder bounds inspected",
+      "url": "https://dlmf.nist.gov/5.11"
+    }
+  ],
+  "independent_analytic_review": false,
+  "inherited_dependencies": [
+    "BPY source normalization",
+    "Gaussian quadrature remainder",
+    "complete positive error law"
+  ],
+  "main_sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "no_priority_claim": true,
+  "parent_branch": "research/astra/20260910-gauss-thorin-positive-defect",
+  "parent_head": "283f110808eb4865dc1f827c2858a0cccfadd3dc",
+  "parent_path": "standalone/2026-09-10-gauss-thorin-positive-defect/PROOF.md",
+  "parent_pr": 851,
+  "parent_proof_sha256": "7d5e615a51dfe31cbbc71e8e6bfca34fdec3a1377f82a5b45d0275396da0baf6",
+  "read_cutoff_utc": "2026-09-10T18:30:00Z",
+  "repository": "GettysburgResearch/riemann",
+  "repository_reading": {
+    "851": "metadata and empty discussion fetched live; complete prior proof and checker read locally from supplied packet",
+    "main": "AGENTS.md and STATUS.md read at exact commits; no new complete repository audit",
+    "recent_prs": "12 most recently updated PR descriptions inspected; no new theorem imported from those descriptions"
+  },
+  "schema": "GZC26-source-freeze-v1"
+}
