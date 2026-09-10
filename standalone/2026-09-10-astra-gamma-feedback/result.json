@@ -1,0 +1,42 @@
+{
+  "actual_high_degree_feedback_energy": "not evaluated",
+  "analytic_proofs": "not machine verified",
+  "counts": {
+    "complete_polynomial_tail_cases": 12,
+    "formal_floor_increment_cases": 384,
+    "formal_seed_balance_cases": 3,
+    "full_truncated_feedback_panels": 34,
+    "gamma_moment_cases": 12,
+    "pairs_of_kernel_majorants": 78,
+    "rational_transform_cases": 312,
+    "synthetic_ridge_cases": 8,
+    "target_norm_cases": 12
+  },
+  "parent": "459c3f78b3dc8c95ae6cc7b1bec0154499d76c9f",
+  "records": {
+    "dirichlet_cutoff": 128,
+    "panels_by_degree_1_to_4": [
+      3,
+      6,
+      10,
+      15
+    ],
+    "seed_log_correction": "formal variable; exact value not numerically evaluated",
+    "target_squared_norms_D1_to_D12": [
+      "2/3",
+      "18/25",
+      "1035/1372",
+      "10213/13122",
+      "8206425/10307264",
+      "250277445/308915776",
+      "71868678427/87480000000",
+      "742009578285/892896952448",
+      "4436080506254421/5286915240411136",
+      "231206016217135775/273283169946845184",
+      "106419884722311167469/124886680589294239744",
+      "3349750707654142531257/3906250000000000000000"
+    ]
+  },
+  "schema": "NGR26-exact-controls-v1",
+  "status": "component-proofs-proposed; RH and norm bound unproved"
+}

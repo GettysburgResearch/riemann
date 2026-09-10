@@ -1,0 +1,51 @@
+{
+  "parent": {
+    "repository": "GettysburgResearch/riemann",
+    "pr": 838,
+    "commit": "459c3f78b3dc8c95ae6cc7b1bec0154499d76c9f",
+    "proof_path": "standalone/2026-09-09-astra-native-multiseed/PROOF.md",
+    "proof_blob": "acb45025b8c99c50dc49de62cec3660575279d60",
+    "proof_sha256": "f98733886fb62fbb1fe5125d0f255cdc82305c420567b84ecfc7454a0501de92",
+    "proof_bytes": 16739,
+    "inspection": "full manuscript locally, remote source and PR read; actual local blob matched",
+    "use": "input bank, source adapter and prior feedback scope; needed identities reconstructed",
+    "execution": "no parent executable or seed-energy certificate replayed"
+  },
+  "other_activity": {
+    "scope": "latest PR descriptions only, not proof review",
+    "prs": [
+      833,
+      834,
+      835,
+      836,
+      837
+    ],
+    "use": "orientation, no imported theorem"
+  },
+  "classical_sources": [
+    {
+      "url": "https://dlmf.nist.gov/25.4",
+      "use": "functional equation in RH consumer and separate LH diagnostic",
+      "reading": "official section read"
+    },
+    {
+      "url": "https://dlmf.nist.gov/5.11",
+      "use": "Stirling in separate LH diagnostic",
+      "reading": "official section read"
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.9",
+      "use": "classical polynomial growth background; no numerical bound imported",
+      "reading": "official section read"
+    },
+    {
+      "url": "https://arxiv.org/abs/2006.02953",
+      "authors": "Alouges, Darses, Hillion",
+      "use": "prior-art orientation on approximation versus coefficient control; no proof dependency",
+      "reading": "abstract only"
+    }
+  ],
+  "classical_analysis": "Young convolution inequality, Hardy-Laplace representation/evaluation and Phragmen-Lindelof are named standard inputs; main regularization is reconstructed by explicit kernels.",
+  "novelty": "no exhaustive external priority claim",
+  "proof_status": "proposed component proofs; independent review pending"
+}
