@@ -1,0 +1,62 @@
+{
+  "actual_xi_moments_computed": false,
+  "external_zeros_recomputed": false,
+  "files": {
+    "INPUTS.json": {
+      "bytes": 1559,
+      "git_blob": "b3b62e563e55df69eff430a74e7a0926ea509d01",
+      "sha256": "cadf56ddcaf85c0c42138c707cae7141c6270eb1c20c3b1abfc8709508e6e825"
+    },
+    "PROOF.md": {
+      "bytes": 27785,
+      "git_blob": "cf1dc849f307e581745c1bb5b2f300c77f552aca",
+      "sha256": "1025b44e280e005b2652cb9f10c0fdf321adef255be494776797fc5f4cbfe923"
+    },
+    "check.py": {
+      "bytes": 13398,
+      "git_blob": "48552091c732274bc46f42829e06019b690bdb43",
+      "sha256": "010a41e3e7926d957be39f44359131c78721eef4aa1f06b81551e6bb88bd9935"
+    },
+    "result.json": {
+      "bytes": 6744,
+      "git_blob": "3b592293581cfab2ec465202c422f7142ba4c1c4",
+      "sha256": "76b774a826952c1e80ba15c8b81f6c936c50a324740eb06ef11dec635060c887"
+    },
+    "test_check.py": {
+      "bytes": 4784,
+      "git_blob": "f0cc1262c9efe7beee12db32422a66b6f420b563",
+      "sha256": "5c9224ace657797c8f42aaf9cc7e2f0803330c9fd0fa77e463370a728b9f51aa"
+    },
+    "tests.json": {
+      "bytes": 134,
+      "git_blob": "2417ab97126da808ce4ab82a49608a637691c510",
+      "sha256": "d5eadf675e43be8e35870596e9c2edd4065c95b018d694a815528995733f01f1"
+    }
+  },
+  "full_checkout_validated": false,
+  "full_result_byte_identical": true,
+  "independent_mathematical_acceptance": false,
+  "lean_build": false,
+  "modes": [
+    "python3 -I -S -B",
+    "python3 -I -S -B -O"
+  ],
+  "native_windows": false,
+  "new_code_has_same_author": true,
+  "packet": "THA26",
+  "per_mode": {
+    "actual_cli_refusal_cases": 11,
+    "errors": 0,
+    "failures": 0,
+    "full_pristine_cli_replays": 1,
+    "passed": true,
+    "skips": 0,
+    "tests": 16
+  },
+  "platform": "Linux",
+  "python": "3.13.5",
+  "remote_ci": false,
+  "rh_proved": false,
+  "status": "locally executed proposed research; not pushed",
+  "test_summary_byte_identical": true
+}
