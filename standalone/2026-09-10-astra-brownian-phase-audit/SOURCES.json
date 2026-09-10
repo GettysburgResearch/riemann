@@ -1,0 +1,32 @@
+{
+  "status": "PROPOSED_PENDING_INDEPENDENT_REVIEW",
+  "parent": {
+    "repository": "GettysburgResearch/riemann",
+    "pr": 846,
+    "commit": "d9b60f8569af65b6787fc33c75c849640c8974e6",
+    "root_tree": "516c847e7979092a25f5bb2b6e2b1f3f0cf8fb1f",
+    "proof_path": "standalone/2026-09-10-astra-brownian-renormalization/PROOF.md",
+    "proof_blob": "6bdbee938a521f118b0e9b2b7f4029f10bed7e13",
+    "scope": "Full proof read from prior delivered archive; blob authenticated against remote packet tree. Current PR metadata read; no parent checker rerun."
+  },
+  "classical": [
+    {
+      "authors": "Philippe Biane, Jim Pitman, Marc Yor",
+      "title": "Probability laws related to the Jacobi theta and Riemann zeta functions, and Brownian excursions",
+      "url": "https://arxiv.org/abs/math/9912170",
+      "pdf": "https://arxiv.org/pdf/math/9912170",
+      "used": "Equations (5),(6),(8), Proposition 1 and equations (43)-(45); Brownian/xi identity and smoothing fixed law.",
+      "inspection": "Parsed primary text around normalization and fixed-point equations; page images of printed pages 3 and 4 inspected. Full external paper not independently refereed."
+    },
+    {
+      "title": "NIST Digital Library of Mathematical Functions, 5.11(ii)",
+      "url": "https://dlmf.nist.gov/5.11#ii",
+      "used": "Stirling log-gamma expansion and complex remainder bound. Exact conservative right-half-plane bound derived in CERTIFICATE.md.",
+      "inspection": "Official primary documentation read; no external gamma implementation enters final arithmetic."
+    }
+  ],
+  "numerical_primitive": "sqrt(6t)/sinh(sqrt(6t)); exact rational companion moment recursion and the whole-law delay equation; no zeta/zero table input",
+  "method_attribution": "Taylor models, Cauchy bounds, fixed-point moment recursion, Laplace rotation, smoothing-transform linearization and diagonalization of triangular finite jets are classical mechanisms. No external novelty claim or comprehensive literature audit.",
+  "reconnaissance": "Other contemporary PR descriptions were orientation only; no theorem imported from them. This is not a whole-repository review.",
+  "development_dependency_removed": "An early prototype used mpmath.iv.log. The final accepting programs import only the Python standard library; the prototype is not accepting evidence."
+}
