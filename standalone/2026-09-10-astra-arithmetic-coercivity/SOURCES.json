@@ -1,0 +1,95 @@
+{
+  "schema": "AC26/source-record-v1",
+  "status": "PROPOSED_COMPONENTS; Q-AC26_OPEN; RH_UNPROVED",
+  "repository": "GettysburgResearch/riemann",
+  "base_commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "base_tree": "8bddd12122e8a772683c9ed0b37dbcb945036893",
+  "source_capture_date_utc": "2026-09-10",
+  "previous_own_research": {
+    "pr": 837,
+    "head": "9ac6e93b22532a663ad179d03dac5437723fdb19",
+    "path": "standalone/2026-09-09-astra-kernel-spectral-continuation/PROOF.md",
+    "blob": "b8615f25f2db3c917bcd3fd46319f61fae16c3b8",
+    "scope": "Prior signed-kernel spectral identity and its stated failure to select critical zeros; not an input needed for the new finite matrix proofs."
+  },
+  "native_energy_predecessor": {
+    "pr": 837,
+    "head": "9ac6e93b22532a663ad179d03dac5437723fdb19",
+    "path": "standalone/2026-09-09-astra-kernel-spectral-continuation/prior/PROOF.md",
+    "scope": "Odd Mobius energy and Mellin target; the implication used here is rederived in AC26-2."
+  },
+  "read_main_paths": [
+    "AGENTS.md",
+    "PROGRAMMES.md",
+    "RESULTS.md"
+  ],
+  "classical_inputs": [
+    {
+      "id": "BC2009",
+      "authors": "Olivier Bordelles; Benoit Cloitre",
+      "title": "A matrix inequality for Mobius functions",
+      "year": 2009,
+      "journal": "JIPAM 10(3), article 62",
+      "url": "https://eudml.org/doc/230674",
+      "author_fulltext": "https://www.researchgate.net/publication/228687731_A_Matrix_Inequality_for_Mobius_Functions",
+      "inspection": "Journal metadata and author-uploaded HTML full text, especially Section 2.2. PDF fetch unsuccessful; no PDF inspection claimed.",
+      "use": "Prior art for arithmetic triangular-matrix and least-singular-value routes. No quantitative estimate from that paper is imported; exact equivalence to its matrix is not asserted."
+    },
+    {
+      "id": "S2008",
+      "author": "K. Soundararajan",
+      "title": "Partial sums of the Mobius function",
+      "url": "https://arxiv.org/abs/0705.0723v2",
+      "inspection": "arXiv abstract/metadata; no new numerical estimates or proof replay from this paper.",
+      "use": "Classical RH-to-Mertens implication M(x)=O_delta(x^(1/2+delta)), explicitly imported only for the converse in AC26-2."
+    },
+    {
+      "id": "DLMF2510",
+      "title": "NIST DLMF 25.10, Zeros of the Riemann zeta function",
+      "url": "https://dlmf.nist.gov/25.10",
+      "inspection": "HTML statements of zero symmetry and existence of infinitely many critical-line zeros.",
+      "use": "Functional-equation zero symmetry in AC26-2 and the classical existence of one critical-line zero in AC26-6; no zero coordinates, simplicity or RH assumed."
+    }
+  ],
+  "claims": [
+    {
+      "id": "AC26-1",
+      "type": "PROPOSED_EXACT",
+      "scope": "Every odd finite cutoff, complete complex-vector divisor inverse and trace identity."
+    },
+    {
+      "id": "AC26-2",
+      "type": "PROPOSED_EQUIVALENCE_WITH_CLASSICAL_INPUT",
+      "scope": "RH equivalent to subpower full-inverse growth; RH converse uses the named classical Mertens implication."
+    },
+    {
+      "id": "AC26-3",
+      "type": "PROPOSED_EXACT_AND_UNIFORM",
+      "scope": "Every ternary shell, all couplings retained; uniform fresh/high-relative-forcing output bounds."
+    },
+    {
+      "id": "AC26-4",
+      "type": "PROPOSED_CONDITIONAL",
+      "scope": "Q-AC26 implies RH; sequential version equivalent to Q-AC26. Its premise is not established."
+    },
+    {
+      "id": "Q-AC26",
+      "type": "OPEN",
+      "scope": "Uniform arithmetic shell compactness for every eta>0 and every cutoff 3^r."
+    },
+    {
+      "id": "AC26-5",
+      "type": "PROPOSED_COUNTERMODEL",
+      "scope": "An explicit nonnative nonnegative multiplicative kernel defeats generic compactness; not a zeta counterexample."
+    },
+    {
+      "id": "AC26-6",
+      "type": "PROPOSED_WITH_CLASSICAL_INPUT",
+      "scope": "No fixed positive coercivity gap, using existence of a critical-line zero."
+    }
+  ],
+  "overlap_check": "Targeted code/PR searches only. Existing Clark-Redheffer star-product work is not the arithmetic incidence matrix used here. No exhaustive repository or external novelty survey.",
+  "computation": "Finite rational and integer arithmetic. Same-author implementations of triangular inverse versus trial-factorized Mobius inverse, and Bareiss versus LDL certificates. No formal proof assistant or full-checkout validator.",
+  "canonical_semantic_sha256": "76d57ea6088254a5f3a03286850c2d904f1e9226b2e60a5d09e5b0bd4f899b72",
+  "redistribution": "No third-party article, PDF, font, or other binary source redistributed."
+}
