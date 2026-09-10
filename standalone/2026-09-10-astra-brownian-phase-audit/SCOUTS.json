@@ -1,0 +1,183 @@
+{
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "rh_proved": false,
+  "warning": "Floating continued-integral exploration outside the Laplace half-plane; no slit-plane continuation/error theorem is asserted. These scouts are not inputs to the accepting imaginary-axis certificate.",
+  "three_settings": [
+    {
+      "run": "a",
+      "step": 0.006,
+      "angle": -2.5,
+      "depth": 128,
+      "nodes": 128,
+      "selected_value": {
+        "z": [
+          59.5,
+          0.2
+        ],
+        "score": -0.0870334462354059,
+        "scaled_A": [
+          -373.2557205100511,
+          -295.71024577974015
+        ],
+        "scaled_B": [
+          94003.41513515433,
+          61971.84673604951
+        ]
+      },
+      "raw_sha256": "7c54e5c8e04b3922154e431f629f3e42a62d038afa56222b4f8c341ec0770e8b"
+    },
+    {
+      "run": "b",
+      "step": 0.003,
+      "angle": -2.7,
+      "depth": 160,
+      "nodes": 192,
+      "selected_value": {
+        "z": [
+          59.5,
+          0.2
+        ],
+        "score": -0.08703344623659515,
+        "scaled_A": [
+          -373.2557205100511,
+          -295.71024577974015
+        ],
+        "scaled_B": [
+          94003.41513529005,
+          61971.846735978004
+        ]
+      },
+      "raw_sha256": "422f40c6ab030c58fdfbdb92c5dee6e44a8d967aff8d16bf204bf550fde24e6e"
+    },
+    {
+      "run": "c",
+      "step": 0.004,
+      "angle": -2.3,
+      "depth": 160,
+      "nodes": 192,
+      "selected_value": {
+        "z": [
+          59.5,
+          0.2
+        ],
+        "score": -0.08703344629742485,
+        "scaled_A": [
+          -373.2557205100511,
+          -295.71024577974015
+        ],
+        "scaled_B": [
+          94003.41515915253,
+          61971.84674347473
+        ]
+      },
+      "raw_sha256": "38567fd88ac962e530b69eb8b792a64b6d9307fb4563cb75fc5efdc0d2d35b63"
+    }
+  ],
+  "mode_scout": {
+    "step": 0.004,
+    "angle": -2.6,
+    "depth": 160,
+    "nodes": 160,
+    "sample_points": 600,
+    "summary": {
+      "1.0": {
+        "negative": 0,
+        "positive": 600,
+        "min": 0.00019999906300149602,
+        "max": 0.6689647316369687,
+        "first_negative": null
+      },
+      "0.999": {
+        "negative": 0,
+        "positive": 600,
+        "min": 3.762516315626853e-05,
+        "max": 0.6686938229144255,
+        "first_negative": null
+      },
+      "1.001": {
+        "negative": 7,
+        "positive": 593,
+        "min": -0.008849213561425127,
+        "max": 0.6692341429781923,
+        "first_negative": [
+          25.0,
+          0.02
+        ]
+      },
+      "1.5": {
+        "negative": 68,
+        "positive": 532,
+        "min": -0.982925782817648,
+        "max": 0.982149241921205,
+        "first_negative": [
+          14.0,
+          0.02
+        ]
+      },
+      "2.0": {
+        "negative": 4,
+        "positive": 596,
+        "min": -0.08703344622344283,
+        "max": 0.9995094289448527,
+        "first_negative": [
+          59.0,
+          0.02
+        ]
+      },
+      "3.0": {
+        "negative": 60,
+        "positive": 540,
+        "min": -0.9932766752135264,
+        "max": 0.9999508217058563,
+        "first_negative": [
+          1.5,
+          0.02
+        ]
+      },
+      "4.0": {
+        "negative": 72,
+        "positive": 528,
+        "min": -0.993727778817036,
+        "max": 0.9999878558518731,
+        "first_negative": [
+          1.0,
+          0.02
+        ]
+      },
+      "5.0": {
+        "negative": 97,
+        "positive": 503,
+        "min": -0.9687031549395875,
+        "max": 0.999931730686134,
+        "first_negative": [
+          1.0,
+          0.02
+        ]
+      },
+      "6.0": {
+        "negative": 158,
+        "positive": 442,
+        "min": -0.9855281230579892,
+        "max": 0.9999961418892762,
+        "first_negative": [
+          1.0,
+          0.02
+        ]
+      },
+      "neutral_derivative": {
+        "negative": 313,
+        "positive": 287,
+        "min": -0.9932129769584512,
+        "max": 0.936700487246863,
+        "first_negative": [
+          0.5,
+          0.02
+        ]
+      }
+    },
+    "raw_sha256": "2eb1a87591b2e6108cda2616b3e66871cb0c66608ee78f1f47e166ed9d147634"
+  },
+  "raw_retention": "Full author-session JSON/NPZ outputs are retained in the downloadable archive; repository programs reproduce the experiments. Only result.json belongs to accepting phase evidence.",
+  "neutral_warning": "m=1 is exactly B_1=-z Xi/4, sharing every zero. Its positive sample scores prove no zero exclusion.",
+  "continuous_parameter_warning": "m=.999,1.001,1.5 and the difference quotient are experiments only; the manuscript proves integer-mode statements."
+}
