@@ -1,0 +1,60 @@
+{
+  "schema": "BHH26-sources-v1",
+  "scope": "selected-source continuation, not exhaustive repository review",
+  "primary": {
+    "repository": "GettysburgResearch/riemann",
+    "pr": 857,
+    "head": "3f1984867d23b588d09c88a892882411724b174b",
+    "path": "standalone/2026-09-10-astra-branching-dirichlet/PROOF.md",
+    "git_blob": "0673f43b95570bcbe7fe29de3c2528fc5ada29a2",
+    "sha256": "25c7cfe469f03aadffdb8c98ae076f04ee9481df2816cb929467059a96d380b7",
+    "bytes": 15453,
+    "inspection": "Full principal proof read at frozen remote head; local supplied bytes match remote Git blob and size. No parent certificate or test suite rerun.",
+    "dependency": "Exact orbit, entire representative and proposed global compact convergence; finite-depth factorization independently rederived here.",
+    "status": "Proposed mathematics; uploader execution does not constitute analytic acceptance."
+  },
+  "other_repository_reading": [
+    {
+      "pr": 851,
+      "observed_head_in_description": "57726ef9b3bf90561df5a361e3b01169c892a62a",
+      "inspection": "search-result description only; no theorem imported"
+    },
+    {
+      "pr": 855,
+      "inspection": "search-result description only; different reciprocal source, no theorem imported"
+    },
+    {
+      "pr": 852,
+      "inspection": "search-result description only; no theorem imported"
+    }
+  ],
+  "external": [
+    {
+      "name": "NIST DLMF 5.9",
+      "url": "https://dlmf.nist.gov/5.9",
+      "use": "Binet/digamma integral in the right half-plane; explicit t/12 remainder inequality reconstructed."
+    },
+    {
+      "name": "NIST DLMF 5.11",
+      "url": "https://dlmf.nist.gov/5.11",
+      "use": "Classical fixed-shift Stirling expansion for the fixed-depth counting law, not a uniform-in-depth asymptotic."
+    },
+    {
+      "name": "NIST DLMF 5.12",
+      "url": "https://dlmf.nist.gov/5.12",
+      "use": "Beta normalization and moments; change of variables and needed moment ratios reconstructed."
+    },
+    {
+      "name": "Biane–Pitman–Yor, Probability laws related to the Jacobi theta and Riemann zeta functions, and Brownian excursions",
+      "url": "https://arxiv.org/abs/math/9912170",
+      "use": "Classical Brownian source identification inherited through parent for the conditional RH endpoint. Not needed to prove high-height geometry of finite iterates."
+    }
+  ],
+  "non_claims": [
+    "No external priority assessment",
+    "No complete repository audit",
+    "No independent analytic acceptance",
+    "No actual xi zero calculation",
+    "No finite-to-global zero inference"
+  ]
+}
