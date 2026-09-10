@@ -1,0 +1,79 @@
+{
+  "schema": "BNR26-source-lock-v1",
+  "repository": "GettysburgResearch/riemann",
+  "base_commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "base_tree": "8bddd12122e8a772683c9ed0b37dbcb945036893",
+  "date": "2026-09-10",
+  "status": "PROPOSED; no RH or unbounded native gain",
+  "repository_sources": [
+    {
+      "pr": 836,
+      "sha": "159864e64ab2b3475b4a2edf212a16888cddd8c5",
+      "path": "standalone/2026-09-09-astra-causal-euler-completion/PROOF.md",
+      "blob": "c25e60dc696cb51d8a762c73eb1e36c79b778940",
+      "read": "Proof sections 1-5 read; no parent executable replay. Causal norm/projection reconstructed here."
+    },
+    {
+      "pr": 812,
+      "sha": "2d683186cb3dd4f304159d8176215ceae8ac59fb",
+      "path": "standalone/2026-09-07-astra-feedback-and-conditioning/PROOF.md",
+      "read": "Fixed-controller and atom/prime-frequency arguments read; later conditioning portion not independently reviewed or used."
+    },
+    {
+      "pr": 805,
+      "sha": "ccd0a80dbd9844d06ccd6331a15b085b9c9afa41",
+      "path": "standalone/2026-09-07-astra-balanced-hyperbola/PROOF.md",
+      "blob": "2af125b452015a0b73483eef66b0995b6c874097",
+      "read": "HP26 Sections 0-4 read; odd-source Newton balance and countermodels credited, not an imported upper bound."
+    },
+    {
+      "pr": 837,
+      "sha": "9ac6e93b22532a663ad179d03dac5437723fdb19",
+      "path": "standalone/2026-09-09-astra-kernel-spectral-continuation/PROOF.md",
+      "read": "Sections 0-4 and start of 5 read; exact model/native-source distinction retained. No spectral theorem used as proof input."
+    },
+    {
+      "path": "AGENTS.md",
+      "sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "blob": "c2181ad9ebf037614f3daa8957df640159f8d968",
+      "read": "Full operational guide."
+    }
+  ],
+  "external_sources": [
+    {
+      "authors": "M. N. Huxley and N. Watt",
+      "title": "Mertens Sums requiring Fewer Values of the Mobius Function",
+      "version": "arXiv:1807.05890v1, 2018-07-16",
+      "url": "https://arxiv.org/abs/1807.05890v1",
+      "pdf": "https://arxiv.org/pdf/1807.05890",
+      "read": "Abstract; text of pp.1-5 and equation (3.4) on p.12; images of pp.3 and 12 inspected. No full source audit or imported numerical spectral estimate. Basic convolution and centered-floor identities rederived."
+    }
+  ],
+  "reconnaissance_only": [
+    {
+      "pr": 834,
+      "sha": "f0e34780f4fe91bd5d07e791e8855189838c3df5",
+      "scope": "current PR metadata only; theta determinant not a dependency"
+    },
+    {
+      "pr": 841,
+      "sha": "01d5a86136866e53e50df5ce90dfa441abdc32d8",
+      "scope": "current PR metadata only; trace positivity not a dependency"
+    },
+    {
+      "pr": 842,
+      "sha": "7ff754c7347d6ee9d59608e562e469351b3d37e7",
+      "scope": "current PR metadata only; ferromagnetic finite realization not a dependency"
+    },
+    {
+      "pr": 843,
+      "scope": "current PR metadata only"
+    },
+    {
+      "pr": 844,
+      "scope": "current PR metadata only"
+    }
+  ],
+  "independence": "Two same-author implementations; no independent mathematical acceptance.",
+  "omitted": "No full repository audit/check-out validator, external proof build, zero computation, unbounded arithmetic-gain proof, or comprehensive originality search."
+}
