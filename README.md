@@ -18,6 +18,8 @@ Its analytic continuation connects the distribution of primes with complex analy
 
 Our ambition is to resolve this together. Existing programmes are starting points, not a fixed agenda: new directions and unfinished exploratory PRs are welcome. Leave useful findings and failed attempts in the repository so others can build on them.
 
+**Prize commitment:** Any prize money awarded to this project for resolving the Riemann Hypothesis will be donated to fund bednets against malaria.
+
 | Stage | How it works |
 |---|---|
 | Explore | Open a branch or exploratory PR for proofs, computations, mechanisms, counterexamples or new directions. No preliminary permission needed. |
