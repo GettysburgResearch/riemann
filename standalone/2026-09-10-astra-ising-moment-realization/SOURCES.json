@@ -1,0 +1,72 @@
+{
+  "packet": "IMR26",
+  "date": "2026-09-10",
+  "repository": "GettysburgResearch/riemann",
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "base_tree": "8bddd12122e8a772683c9ed0b37dbcb945036893",
+  "scope": "New research direction, not a post-integration audit or independent acceptance.",
+  "repository_sources": [
+    {
+      "pr": 840,
+      "head": "5663f5c4dd193d20bb815cb865d961c42b453946",
+      "inspection": "Live metadata and prior-context construction; orientation only, not an imported proof."
+    },
+    {
+      "pr": 834,
+      "live_head": "62bd9bbed134e20c1ee9cd92d008562079af9ceb",
+      "consumed_commit": "f0e34780f4fe91bd5d07e791e8855189838c3df5",
+      "path": "standalone/2026-09-09-centered-theta-determinant/PROOF.md",
+      "inspection": "Exact source text, principal construction through trace hierarchy; latest head additions not reviewed. Theta normalization checked against #835."
+    },
+    {
+      "pr": 835,
+      "consumed_commit": "815ccae329a17327b873d21f05bc30c24db13e7e",
+      "path": "standalone/2026-09-09-astra-global-xi-attack/GLOBAL_ATTEMPT.md",
+      "inspection": "Exact theta identity, complex Laguerre discussion and truncation/tail argument read. Old root certificate/code not rerun. New moment tail estimates reconstructed."
+    },
+    {
+      "commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "path": "AGENTS.md",
+      "inspection": "Operating instructions read; main ref and commit tree fetched."
+    }
+  ],
+  "index_search": {
+    "term": "ferromagnetic",
+    "returned_count": 0,
+    "scope": "GitHub indexed repo code search only; not all unmerged branches and not a novelty census."
+  },
+  "external_sources": [
+    {
+      "id": "E1",
+      "authors": "T. D. Lee and C. N. Yang",
+      "year": 1952,
+      "title": "Statistical Theory of Equations of State and Phase Transitions. II. Lattice Gas and Ising Model",
+      "url": "https://doi.org/10.1103/PhysRev.87.410",
+      "use": "Classical Lee-Yang theorem; original abstract checked, weighted form checked in Newman-Wu."
+    },
+    {
+      "id": "E1-E2",
+      "authors": "Charles M. Newman and Wei Wu",
+      "version": "arXiv:1901.06596v2",
+      "url": "https://arxiv.org/abs/1901.06596v2",
+      "use": "Weighted finite Ising theorem at p.11 (21); entire product and weak-closure Theorem16; classical lineage. Parsed full text, page11 image successfully inspected; page16 screenshot failed."
+    },
+    {
+      "id": "E3",
+      "authors": "Brad Rodgers and Terence Tao",
+      "version": "arXiv:1801.05914v5",
+      "url": "https://arxiv.org/abs/1801.05914v5",
+      "use": "Imported nonnegativity theorem only, stated normalization checked. Full proof not independently audited."
+    },
+    {
+      "id": "context",
+      "author": "Dimitar K. Dimitrov",
+      "version": "arXiv:1311.0596",
+      "url": "https://arxiv.org/abs/1311.0596",
+      "use": "Abstract-only prior-art orientation: Lee-Yang measures, orthogonal polynomials, Xi as a partition function. No theorem imported."
+    }
+  ],
+  "novelty_claim": false,
+  "independent_acceptance": false,
+  "RH_proved": false
+}
