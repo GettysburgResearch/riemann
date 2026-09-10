@@ -1,0 +1,104 @@
+{
+  "schema": "NIR26-validation-v1",
+  "utc": "2026-09-10T17:58:01.946221+00:00",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "parent": "a1b4625f9775df1fdbd431b5198309a2fce9b038",
+  "scope": "local exact packet, not complete checkout or independent mathematical acceptance",
+  "runs": [
+    {
+      "name": "producer-normal",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "produce.py",
+        "--check",
+        "result.json",
+        "--output",
+        "/mnt/data/rh_newton_innovations/replays/producer-normal.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.339,
+      "stdout": "NIR PRODUCER PASS eaacfc709fe6e395e875bef3a8970bba4569cc58151770e4cb812ee6aa6c5e37\nrecursive endpoint 65535\n",
+      "stderr": ""
+    },
+    {
+      "name": "verifier-normal",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "verify.py",
+        "result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_newton_innovations/replays/verifier-normal.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.795,
+      "stdout": "NIR SEPARATE RECONSTRUCTION PASS eaacfc709fe6e395e875bef3a8970bba4569cc58151770e4cb812ee6aa6c5e37\nRESEALED REJECTIONS 12 AND DUPLICATE-KEY REFUSAL\n",
+      "stderr": ""
+    },
+    {
+      "name": "producer-optimized",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "-O",
+        "produce.py",
+        "--check",
+        "result.json",
+        "--output",
+        "/mnt/data/rh_newton_innovations/replays/producer-optimized.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.445,
+      "stdout": "NIR PRODUCER PASS eaacfc709fe6e395e875bef3a8970bba4569cc58151770e4cb812ee6aa6c5e37\nrecursive endpoint 65535\n",
+      "stderr": ""
+    },
+    {
+      "name": "verifier-optimized",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "-O",
+        "verify.py",
+        "result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_newton_innovations/replays/verifier-optimized.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.875,
+      "stdout": "NIR SEPARATE RECONSTRUCTION PASS eaacfc709fe6e395e875bef3a8970bba4569cc58151770e4cb812ee6aa6c5e37\nRESEALED REJECTIONS 12 AND DUPLICATE-KEY REFUSAL\n",
+      "stderr": ""
+    }
+  ],
+  "all_runs_passed": true,
+  "reports_byte_equal": {
+    "producer-optimized.json": true,
+    "producer-normal.json": true,
+    "verifier-normal.json": true,
+    "verifier-optimized.json": true
+  },
+  "semantic_sha256": "eaacfc709fe6e395e875bef3a8970bba4569cc58151770e4cb812ee6aa6c5e37",
+  "executed_source_sha256": {
+    "produce.py": "9f8fc347f97fc79fe1ad922097d487b020198ec296081c13f8828267cc5bb95b",
+    "verify.py": "e25d2c825d103ca3b6247a08604515f6ea71ce8ba596a65e2f27385989270a98",
+    "result.json": "8c57fed6d5daace38a6258ecb7be18b710780decbe3df9f82f4a49f819db4f13"
+  },
+  "resealed_corruptions_per_verifier_mode": 12,
+  "duplicate_key_refused": true,
+  "RH_proved": false,
+  "native_all_scale_gain_proved": false,
+  "full_checkout_validator_run": false,
+  "disclosures": [
+    "Scratch localized-control range Y>=2 failed at 2; final theorem and checks use Y>=3.",
+    "Finite source windows and all-scale proofs are separate evidence.",
+    "Two implementations have one author.",
+    "One expected reconstruction reused across twelve actual altered-file tests in each verifier mode.",
+    "Container raw GitHub access failed DNS; no complete checkout execution."
+  ]
+}
