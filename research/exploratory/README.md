@@ -23,3 +23,12 @@ Keep discovery and proof boundaries visible:
 - a new theorem or repair should receive a new identity and review.
 
 When a result becomes stable and important, request exact-SHA review. After review, a future integrator may extract it into `research/integrated/` while preserving the exploratory source.
+
+## Exact external imports under review
+
+- [`lamzouri-zeta-zeros-2026-09-02/`](lamzouri-zeta-zeros-2026-09-02/README.md)
+  source-locks Lamzouri's Hilbert-space proof and
+  `AxiomMath/ZetaZeros@4bcaf70e544506c311d83a5a5b143a134b9fc5f7`.
+  The abstract finite-multiset inequalities are separated from the zeta
+  application's explicit Riemann-von Mangoldt and pair-correlation premises.
+  Nothing in that packet proves RH.

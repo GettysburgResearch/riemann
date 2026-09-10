@@ -1,0 +1,95 @@
+{
+  "status": "IMPORTED_REVIEW_PENDING",
+  "rh_status": "UNPROVED",
+  "import_date": "2026-09-04",
+  "riemann": {
+    "repository": "gfreund123/riemann",
+    "base_ref": "main",
+    "base_commit": "6dda8b5125457ed936330229f8c9eb6491728e76",
+    "base_tree": "3e31763fd987fec2e1601a4ecab2de6465fcee24"
+  },
+  "paper": {
+    "title": "A new proof that more than 2/3 of the zeros of the Riemann zeta function are simple and on the critical line",
+    "author": "Youness Lamzouri",
+    "identifier": "arXiv:2609.02882",
+    "public_version_used": "v1, posted 2026-09-02; manuscript date 2026-09-03",
+    "pdf_url": "https://arxiv.org/pdf/2609.02882",
+    "pdf_source_receipt": "user-supplied copy of the arXiv v1 PDF",
+    "pdf_sha256": "fa33485f517b3c94d2f6e4d4366f3ab14a1e413a738db512e1862f4a0944f5f9",
+    "pdf_size_bytes": 505955,
+    "pdf_pages": 14,
+    "pdf_version": "1.7",
+    "pdf_page_size": "612 x 792 points (US Letter)",
+    "pdf_metadata": {
+      "title": "A new proof that more than 2/3 of the zeros of the Riemann zeta function are simple and on the critical line",
+      "author": "Youness Lamzouri",
+      "creator": "arXiv GenPDF (tex2pdf:4af3385)",
+      "producer": "pikepdf 8.15.1",
+      "encrypted": false,
+      "javascript": false,
+      "forms": "none"
+    },
+    "render_audit": {
+      "performed_in_import_pass": true,
+      "renderer": "/home/oai/skills/pdfs/scripts/render_pdf.py",
+      "render_count": 14,
+      "render_dimensions_pixels": "1190 x 1540 per page",
+      "visual_result": "All 14 pages rendered and were visually inspected. No clipping, unexpected rotation, blank pages, broken glyph blocks, or obvious corruption was observed.",
+      "independent_visual_review_complete": false
+    },
+    "statement_map": {
+      "Theorem 1.1": "paper page 3; proof completed on page 13",
+      "Proposition 2.1": "paper pages 5-9",
+      "Lemma 3.1": "paper page 10",
+      "Lemma 3.2": "paper pages 10-12",
+      "Remark 3.4": "paper page 12",
+      "Appendix A": "paper page 13"
+    }
+  },
+  "formal_repository": {
+    "repository": "AxiomMath/ZetaZeros",
+    "commit": "4bcaf70e544506c311d83a5a5b143a134b9fc5f7",
+    "tree": "9406da0d71add8cb730270fcb0f292b976f6b78d",
+    "commit_date": "2026-09-02T15:08:03Z",
+    "commit_message": "feat: remove an assumption (#1)",
+    "commit_verification": "verified signed commit",
+    "license": "Apache-2.0",
+    "lean_toolchain": "leanprover/lean4:v4.34.0-rc2",
+    "gitlink_path": "research/exploratory/imports/lamzouri-zeta-zeros-2026-09-02/ZetaZeros",
+    "key_blobs": {
+      "README.md": "d42f8bdbbc7a3a3739cf9861a50234c6a027e9e2",
+      "Challenge/Basic.lean": "0ada9aee591827e28e8063dc412ff23abcf97ee2",
+      "Comparator/comparator.json": "ce7c284e18155189830f7c0ed4467908f9dd9e99",
+      "ZetaZeros.lean": "64764f2bf9b83230aec9edb081a95f3650a75356",
+      "ZetaZeros/Main.lean": "7630781cc53a6a0d93e4f07a3fb63807b4bfc9fb",
+      ".github/workflows/lean.yml": "5ca29524d3361454d1c246af72322f1afbc331d2"
+    },
+    "ci": {
+      "workflow": "Lean",
+      "run_id": 33646574248,
+      "head_sha": "4bcaf70e544506c311d83a5a5b143a134b9fc5f7",
+      "status": "completed",
+      "conclusion": "success",
+      "note": "The workflow is checkout plus leanprover/lean-action. Comparator is documented as a local command, not explicitly run by this workflow file."
+    }
+  },
+  "formal_boundary": {
+    "closed_abstract_results": [
+      "finite conjugation-invariant multiset simple-real lower bound",
+      "finite conjugation-invariant multiset distinct-point lower bound"
+    ],
+    "explicit_external_hypotheses_for_zeta_results": [
+      "ZetaZeros.RiemannVonMangoldt",
+      "ZetaZeros.PairCorrelation"
+    ],
+    "permitted_logical_axioms_in_comparator": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "default_build_replay_performed_here": false,
+    "comparator_replay_performed_here": false,
+    "semantic_line_review_complete": false,
+    "paper_pdf_hash_and_visual_audit_complete": true
+  }
+}

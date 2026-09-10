@@ -1,0 +1,11 @@
+id	statement	scope	status	inputs	integration_boundary
+ZZ-IMP-0001	Lamzouri Proposition 2.1(a)	finite multiset	closed Lean proof at pinned SHA	admissible eta; nonempty conjugation-invariant multiset	candidate after exact-SHA replay
+ZZ-IMP-0002	Lamzouri Proposition 2.1(b)	finite multiset	closed Lean proof at pinned SHA	same	candidate after exact-SHA replay
+ZZ-IMP-0003	simple critical-line proportion exact constant	global asymptotic	conditional Lean theorem; unconditional source mathematics	RiemannVonMangoldt; PairCorrelation	do not promote before source adapters
+ZZ-IMP-0004	distinct-zero proportion exact constant	global asymptotic	conditional Lean theorem; unconditional source mathematics	RiemannVonMangoldt; PairCorrelation	do not promote before source adapters
+ZZ-IMP-0005	simple proportion > 0.6725	global asymptotic	conditional Lean corollary	ZZ-IMP-0003; rigorous Montgomery-Taylor numeric bound	decimal convenience only
+ZZ-IMP-0006	distinct proportion > 0.83625	global asymptotic	conditional Lean corollary	ZZ-IMP-0004; rigorous Montgomery-Taylor numeric bound	decimal convenience only
+ZZ-IMP-0007	same scalar support-one method can exceed C0	global	refuted by cited extremal barrier	current scalar pair-correlation functional	new input or new inequality required
+ZZ-IMP-0008	density-one simple line zeros imply RH	global	false implication	none	finite or density-zero off-line exceptions remain
+ZZ-IMP-0009	positive-density simple zeros give complete Riemann frame	cofinal operator	open and not implied	local lower density; separation; derivative conditioning	possible bridge, not a theorem
+ZZ-IMP-0010	Lamzouri theorem proves RH	global	not claimed / false inference	none	RH remains unproved
