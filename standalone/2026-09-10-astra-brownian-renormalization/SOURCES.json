@@ -1,0 +1,74 @@
+{
+  "packet": "BRN26",
+  "base_commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "primary_mathematical_source": {
+    "authors": "Biane, Pitman, Yor",
+    "arxiv": "math/9912170",
+    "url": "https://arxiv.org/abs/math/9912170",
+    "scope": "Proposition 1, equations 43-45, Sigma1/Sigma2 normalization; parsed text and page images 7 and 13 inspected. Classical identity and fixed point credited, not newly discovered."
+  },
+  "repository_reading": [
+    {
+      "ref": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "paths": [
+        "README.md",
+        "STATUS.md",
+        "RESULTS.md",
+        "PROGRAMMES.md",
+        "research/integrated/CURRENT_RESULTS.md"
+      ],
+      "depth": "Scientific orientation; displayed portions of current-statement guide, not a full re-audit."
+    },
+    {
+      "ref": "main observed at base commit",
+      "path": "AGENTS.md",
+      "depth": "Full operating guide."
+    }
+  ],
+  "live_pr_orientation": [
+    {
+      "pr": 839,
+      "head": "1742bb3d55cd289ab72a555b09f8fe4a6d8ded59",
+      "depth": "Metadata and prior conversation; not a fresh proof replay."
+    },
+    {
+      "pr": 842,
+      "head": "7ff754c7347d6ee9d59608e562e469351b3d37e7",
+      "depth": "Detailed PR description only; no six-moment certificate or proof replay."
+    },
+    {
+      "pr": 841,
+      "head": "01d5a86136866e53e50df5ce90dfa441abdc32d8",
+      "depth": "PR description only."
+    },
+    {
+      "pr": 843,
+      "head": "279bbe3d5198d7f7eb3e0072267f65c7374d7e5e",
+      "depth": "PR description only."
+    },
+    {
+      "pr": 844,
+      "head": "d019681c8aaef4e1ddd64b83f2b1def98aaff945",
+      "depth": "PR description only."
+    },
+    {
+      "pr": 834,
+      "observed_live_head": "62bd9bbed134e20c1ee9cd92d008562079af9ceb",
+      "older_body_head": "f0e34780f4fe91bd5d07e791e8855189838c3df5",
+      "depth": "Metadata only; live head differs from descriptive frozen source, neither newly imported."
+    }
+  ],
+  "code_search": {
+    "query": "Biane",
+    "scope": "Default-branch GitHub code search only",
+    "result": "No matches returned; not an all-branch absence or priority claim."
+  },
+  "external_orientation_not_imported": [
+    {
+      "arxiv": "2602.01248",
+      "title": "The Riemann Xi-function from primitive Markovian cycles I: A canonical construction",
+      "depth": "Abstract-level orientation, no proof imported."
+    }
+  ],
+  "claims": "BRN26-1 through BRN26-5 are proposed component arguments; OPEN-BRN remains unproved."
+}
