@@ -1,0 +1,93 @@
+{
+  "schema": "AC28-sources/v1",
+  "repository": "GettysburgResearch/riemann",
+  "main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "parent": "e6dbb8ef4e458ea4c8d1b17ced77ec28905a7472",
+  "parent_tree": "fde6f3e5e097592381918f89b25cebb4945c0220",
+  "capture_utc": "2026-09-10T18:41:23Z",
+  "claim_status": "AC28-1 through AC28-7 PROPOSED; Q-AC28 OPEN; RH not proved",
+  "native_dependencies": [
+    {
+      "pr": 845,
+      "head": "be78f076b9abe8d8d6a40c14f71d0df36a4e0407",
+      "path": "standalone/2026-09-10-astra-arithmetic-coercivity/PROOF.md",
+      "length": 17112,
+      "git_blob": "822f24c624af00675ee42795d9354eecc6c2349b",
+      "sha256": "2c88a9cd400d638a56bbac1ca8e16324da66c4089cda9459b84e26e838f997a7",
+      "use": "AC26 exact operator/source definitions; conditional Q-AC26-to-RH bridge credited, not needed for the new direct RH implication.",
+      "inspection": "Complete local source read and mathematical interface reconstructed; file identity matched retained remote source pin. No parent checker or heavy corpus replay in this continuation."
+    },
+    {
+      "pr": 845,
+      "head": "e6dbb8ef4e458ea4c8d1b17ced77ec28905a7472",
+      "path": "standalone/2026-09-10-astra-shell-observability/PROOF.md",
+      "length": 17200,
+      "git_blob": "709d3827397ab950620ada11f8885e02cb31423a",
+      "sha256": "17ebc7b921c12e34c29e7006d2b66b79ce7a03794811e047501b6270489918e1",
+      "use": "AC27 continuum P,F normalization, first interval, and discrete-to-continuum implication; all old/source dependencies remain proposed.",
+      "inspection": "Complete local source read and mathematical interface reconstructed; file identity matched retained remote source pin. No parent checker or heavy corpus replay in this continuation."
+    }
+  ],
+  "related_work": [
+    {
+      "pr": 398,
+      "head": "043180519da90af2ea242a5055cbdad9ca40bc62",
+      "title": "safe Jordan / one-Green versus exact Pick positivity",
+      "inspection": "Live PR description and exact head read; full source bodies not re-reviewed. Its local-safe-positivity continuation principle is prior project work. The feature-map proof in AC28 is independently reconstructed, not imported as an acceptance.",
+      "difference": "AC28 concerns the exact Mobius prediction numerator kernel and its positive-dilation odd-polynomial form, not the completed-xi quotient."
+    }
+  ],
+  "external": [
+    {
+      "id": "DLMF25.2",
+      "url": "https://dlmf.nist.gov/25.2",
+      "use": "Meromorphic continuation, pole residue at 1, absolutely convergent Dirichlet/Euler series and Euler--Maclaurin remainder.",
+      "inspection": "Relevant HTML/formula content inspected; no external computation replay or PDF redistribution."
+    },
+    {
+      "id": "DLMF25.4",
+      "url": "https://dlmf.nist.gov/25.4",
+      "use": "Classical zeta reflection and conjugation for the final conditional implication.",
+      "inspection": "Relevant formula/search content inspected; used only as an explicit classical input."
+    },
+    {
+      "id": "DLMF25.10",
+      "url": "https://dlmf.nist.gov/25.10",
+      "use": "Classical existence of a critical-line zero for eta=0 obstruction and necessary cost; no ordinate, multiplicity value, or simplicity assumption.",
+      "inspection": "HTML/search content inspected, no zero census or numerical source."
+    },
+    {
+      "id": "DLMF25.6",
+      "url": "https://dlmf.nist.gov/25.6",
+      "use": "Even zeta formula with Bernoulli numbers for one interval certificate path.",
+      "inspection": "Full relevant HTML and equation 25.6.2 inspected."
+    },
+    {
+      "id": "Douglas1966",
+      "title": "On majorization, factorization, and range inclusion of operators on Hilbert space",
+      "doi": "10.1090/S0002-9939-1966-0203464-1",
+      "use": "Credit for the classical norm-domination/contractive-factorization framework; not an unreproduced load-bearing theorem.",
+      "inspection": "Bibliographic metadata located; AMS full article not retrieved. The proof used here is provided explicitly."
+    },
+    {
+      "id": "classical-complex-analysis",
+      "use": "Identity theorem, Hilbert-valued holomorphy, polynomial density, Jensen/Blaschke uniqueness.",
+      "inspection": "The needed feature-span and divergent-zero argument is proved in the manuscript. No claim that these general principles are new."
+    },
+    {
+      "id": "DLMF4.22",
+      "url": "https://dlmf.nist.gov/4.22",
+      "use": "Classical cosine product, logarithmically differentiated for the positive dilation measure generating function.",
+      "inspection": "HTML including 4.22.2 inspected; analytic identity credited, not numerically tested or claimed as new."
+    }
+  ],
+  "priority": "No comprehensive priority survey or broad external novelty claim. Search of repository PR descriptions was exploratory and is not exhaustive full-text coverage.",
+  "evidence_exclusions": [
+    "No full authenticated checkout or repository-wide validator",
+    "No Lean or other proof-assistant run",
+    "No numerical contour integral",
+    "No actual zero values",
+    "No independent mathematical referee",
+    "Finite positive matrices do not prove Q-AC28"
+  ]
+}
