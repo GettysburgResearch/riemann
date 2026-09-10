@@ -1,0 +1,49 @@
+{
+  "packet": "2026-09-10-claude-offline-zero-hunt",
+  "claim": "Three certified searches for an off-critical zeta zero. No violation found. RH neither proved nor disproved.",
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "repository_sources_read": [
+    {"path": "research/integrated/xi/derivative-free-pick-loewner.md",
+     "use": "E1 predicates: secant, alternating divided differences, cross-Loewner total nonnegativity, barycentric Pick localisers, two-channel A/B; the xi'/xi normalisation and the division-guard requirement",
+     "status_in_repo": "integrated reviewed finite conditional mathematics; PR #48 and PR #52 both VERIFIED"},
+    {"path": "research/integrated/xi/finite-pick-controls.md",
+     "use": "node-style precedent (Control A used offsets 2^-17..2^-5) and the assurance boundary that no Riemann-Siegel/zero/interval production replay had been performed"},
+    {"path": "OPEN_CUTS.md", "use": "bounded-contribution framing"},
+    {"path": "PROOF_GRAPH.md", "use": "distinction between RH-necessary criteria and open premises"}
+  ],
+  "classical_inputs": [
+    {"name": "Lagarias, On a positivity property of the Riemann xi-function, Acta Arith. 89 (1999) 217-234; Correction, Acta Arith. 116 (2005) 293-294",
+     "use": "RH-necessity interface for the E1 resolvent representation, as cited by the integrated packet"},
+    {"name": "de Bruijn (1950) / Newman (1976)",
+     "use": "definition and monotonicity of the heat flow H_t and the constant Lambda"},
+    {"name": "Rodgers and Tao, The de Bruijn-Newman constant is non-negative (2020)",
+     "use": "quoted as context: Lambda >= 0 unconditionally, which supersedes the lower bound computed here"},
+    {"name": "Csordas, Smith and Varga, Lehmer pairs of zeros and the de Bruijn-Newman constant",
+     "use": "quoted as context for the strength of published Lambda lower bounds"},
+    {"name": "Weil's explicit formula for zeta",
+     "use": "E3; the coded form is stated in e3_weil_form.py and validated numerically in e3_validate.py"},
+    {"name": "Platt and Trudgian, verified RH height 3e12",
+     "use": "choice of the E1 high band start ordinate"},
+    {"name": "Laguerre inequality for real entire functions with only real zeros",
+     "use": "E2 test; derived inline from L = H^2 sum 1/(x-z_k)^2"}
+  ],
+  "software": {
+    "python": "3.11.15",
+    "python-flint": "0.9.0 (Arb/FLINT ball arithmetic and rigorous integration)",
+    "mpmath": "1.4.1 (cross-check zero source in e3_validate.py ONLY; not on any acceptance path)",
+    "numpy": "2.4.6 (float eigenvector proposal only; every acceptance verdict is via certified Arb LDL^T or Rayleigh quotient)"
+  },
+  "acceptance_paths": {
+    "E1": "Arb enclosures of xi'/xi from acb_series zeta; certified sign only",
+    "E2": "Arb rigorous integration of Phi; no zeta evaluator, no zero table",
+    "E3": "Lambda(n) sieve plus Gamma integrals; no zeta evaluator, no zero table"
+  },
+  "not_claimed": [
+    "no off-line zeta zero",
+    "no proof or disproof of RH",
+    "no independent mathematical or code review",
+    "no Lean build, repository-wide build, remote CI, or second-platform replay",
+    "no exhaustive ordinate coverage; the E1 grids leave gaps below the per-band detection threshold",
+    "the E2 Lambda bound is far weaker than published bounds and is superseded by Rodgers-Tao"
+  ]
+}

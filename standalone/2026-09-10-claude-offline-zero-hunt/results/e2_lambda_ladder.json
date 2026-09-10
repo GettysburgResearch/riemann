@@ -1,0 +1,114 @@
+{
+ "certified_lower_bound_on_Lambda": -0.010027313232421876,
+ "elapsed_s": 346.1,
+ "half_width": 0.6,
+ "mode": "ladder",
+ "no_violation_found_above": -0.010027217864990235,
+ "status": "bracketed",
+ "trace": [
+  {
+   "t": -0.4,
+   "violates": true
+  },
+  {
+   "t": 0.0,
+   "violates": false
+  },
+  {
+   "t": -0.2,
+   "violates": true
+  },
+  {
+   "t": -0.1,
+   "violates": true
+  },
+  {
+   "t": -0.05,
+   "violates": true
+  },
+  {
+   "t": -0.025,
+   "violates": true
+  },
+  {
+   "t": -0.0125,
+   "violates": true
+  },
+  {
+   "t": -0.00625,
+   "violates": false
+  },
+  {
+   "t": -0.009375000000000001,
+   "violates": false
+  },
+  {
+   "t": -0.010937500000000001,
+   "violates": true
+  },
+  {
+   "t": -0.01015625,
+   "violates": true
+  },
+  {
+   "t": -0.009765625,
+   "violates": false
+  },
+  {
+   "t": -0.009960937500000001,
+   "violates": false
+  },
+  {
+   "t": -0.01005859375,
+   "violates": true
+  },
+  {
+   "t": -0.010009765625,
+   "violates": false
+  },
+  {
+   "t": -0.0100341796875,
+   "violates": true
+  },
+  {
+   "t": -0.010021972656250001,
+   "violates": false
+  },
+  {
+   "t": -0.010028076171875,
+   "violates": true
+  },
+  {
+   "t": -0.0100250244140625,
+   "violates": false
+  },
+  {
+   "t": -0.01002655029296875,
+   "violates": false
+  },
+  {
+   "t": -0.010027313232421876,
+   "violates": true
+  },
+  {
+   "t": -0.010026931762695312,
+   "violates": false
+  },
+  {
+   "t": -0.010027122497558594,
+   "violates": false
+  },
+  {
+   "t": -0.010027217864990235,
+   "violates": false
+  }
+ ],
+ "witness_L": {
+  "lower": -0.0,
+  "mid": -0.0,
+  "rad": 0.0,
+  "upper": -0.0
+ },
+ "witness_z": 982.0142857142857,
+ "z_center": 982.1
+}
