@@ -1,0 +1,56 @@
+{
+  "arithmetic_copy": {
+    "blob": "36d6341b574fe5a512196bfa0d66fbae897365a6",
+    "byte_identical": true,
+    "independent_backend": false,
+    "local_path": "interval.py",
+    "path": "standalone/2026-09-10-centered-gamma-continuation/interval.py"
+  },
+  "baseline_main_observed": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "exterior_radius_evaluated": false,
+  "external": [
+    {
+      "name": "Biane--Pitman--Yor, Bull AMS 38 (2001), 435--465",
+      "url": "https://arxiv.org/abs/math/9912170",
+      "use": "Classical gamma/xi correspondence inherited through parent; abstract viewed, no new full article audit."
+    },
+    {
+      "name": "NIST DLMF 2.4(i) and 2.3",
+      "url": "https://dlmf.nist.gov/2.4#i",
+      "use": "Complex-sector Watson expansion and endpoint integration; pages read; exact applicable contour proof supplied."
+    },
+    {
+      "name": "NIST DLMF 10.21",
+      "url": "https://dlmf.nist.gov/10.21",
+      "use": "Bessel phase comparison only; not primitive zero data."
+    }
+  ],
+  "independent_mathematical_acceptance": false,
+  "new_claims": [
+    "GE1 exact endpoint factor",
+    "GE2 fixed-N eventual real simple zeros",
+    "GE3 finite polynomial and exact negative index",
+    "GE4 complete centered-N5 disk certificate"
+  ],
+  "new_source": "Exact mean-centered integer N=5, rates 1,4,9,16,25, tau=pi^2/3-2 sum_(1..5)n^-2",
+  "orientation_only": [
+    "Latest PR descriptions for #842, #845, #846, #856; none supplies a theorem used in GE1--GE4.",
+    "Earlier #839/#841 trace-program descriptions are related orientation, not proof inputs."
+  ],
+  "parent_commit": "0e19b74fe6dfb39bef69a5edd3f0b3098b10a6ad",
+  "parent_path": "standalone/2026-09-10-centered-gamma-continuation/PROOF.md",
+  "parent_pr": 855,
+  "parent_proof_blob": "48dae66b76c92dccdd7d18fae61c6a5e23802569",
+  "parent_reading": "Complete manuscript; family and proposed convergence inherited; not independent acceptance or parent campaign replay.",
+  "precursor": {
+    "blob": "c324ba15d3f7f3e073b902042ec61c685b555f53",
+    "commit": "11a12b8ceb7db98c7961a5cebf3870b2f31dfa79",
+    "path": "standalone/2026-09-10-reciprocal-gamma-cascade/PROPOSAL.md",
+    "pr": 849,
+    "scope": "Finite gamma identities and source conventions read; optional scout not accepting evidence."
+  },
+  "rh_proved": false,
+  "schema": "GE26-source-lock-v1",
+  "status": "PROPOSED_RESEARCH_NOT_ACCEPTANCE",
+  "zero_of_xi_claimed": false
+}
