@@ -1,0 +1,137 @@
+{
+  "repository": "GettysburgResearch/riemann",
+  "date": "2026-09-10",
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "integration_untouched": {
+    "pr": 830,
+    "head": "a20e80654d33afc128261895291ccc37bb328402"
+  },
+  "status": "proposed research; not remote-published; not canonical acceptance",
+  "repository_reads": [
+    {
+      "path": "AGENTS.md",
+      "sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "scope": "operating instructions; full connector read"
+    },
+    {
+      "pr": 834,
+      "path": "standalone/2026-09-09-centered-theta-determinant/PROOF.md",
+      "sha": "f0e34780f4fe91bd5d07e791e8855189838c3df5",
+      "blob": "ef01f74c50d4efacb615176cbfed4a3de2fd1147",
+      "scope": "complete paper read; operator interpretation only; not independent acceptance or code replay"
+    },
+    {
+      "pr": 834,
+      "path": "standalone/2026-09-09-centered-theta-determinant/REVIEW.md",
+      "sha": "f0e34780f4fe91bd5d07e791e8855189838c3df5",
+      "blob": "8fde70fa740e33581b882d9aacaf4b68712b06f0",
+      "scope": "full author review guide read; not a referee verdict"
+    },
+    {
+      "pr": 834,
+      "path": "standalone/2026-09-10-theta-spectral-crowding/PROOF.md",
+      "sha": "62bd9bbed134e20c1ee9cd92d008562079af9ceb",
+      "blob": "53cc204b8af819b4d60f7da4c9deec895764e8a1",
+      "scope": "new closing manuscript read as context; no independent mathematical acceptance; not an input to present theorems"
+    },
+    {
+      "pr": 838,
+      "path": "standalone/2026-09-09-astra-native-multiseed/PROOF.md",
+      "sha": "459c3f78b3dc8c95ae6cc7b1bec0154499d76c9f",
+      "blob": "acb45025b8c99c50dc49de62cec3660575279d60",
+      "scope": "lines 1-240 read for alternative-route orientation; no theorem imported"
+    },
+    {
+      "path": "reviews/C/pass4-math-completion/proofs/XI_SOURCE_REPAIR.md",
+      "sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "blob": "05a8a10823af97d85b96cff626ed6c86f27e3c19",
+      "scope": "lines 1-240 read; reserve and source conventions; new coarse count proved separately"
+    }
+  ],
+  "metadata_only": [
+    835,
+    836,
+    837
+  ],
+  "closing_delta": {
+    "pr": 834,
+    "base": "f0e34780f4fe91bd5d07e791e8855189838c3df5",
+    "head": "62bd9bbed134e20c1ee9cd92d008562079af9ceb",
+    "commits_ahead": 1,
+    "added_files": 7,
+    "modified_files": 0,
+    "deleted_files": 0,
+    "consequence": "original determinant packet unchanged; new crowding argument read separately"
+  },
+  "external": [
+    {
+      "id": "E1",
+      "title": "The Riemann hypothesis is true up to 3*10^12",
+      "authors": "Dave Platt; Tim Trudgian",
+      "url": "https://arxiv.org/abs/2004.09765",
+      "doi": "10.1112/blms.12460",
+      "used": "published finite-height theorem, not RH above the height",
+      "reading": "statement and first PDF page; screenshot succeeded",
+      "replayed": false
+    },
+    {
+      "id": "E2",
+      "title": "LMFDB Riemann zeta zero data",
+      "url": "https://www.lmfdb.org/L/download_zeros/1-1-1.1-r0-0-0",
+      "used": "first 25 displayed ordinates enclosed by INPUTS.json hundredth intervals",
+      "reported_accuracy_bits": 100,
+      "returned_header_date": "2026-08-07",
+      "independently_regenerated": false
+    },
+    {
+      "id": "E3",
+      "title": "On Power Sums of Positive Numbers",
+      "authors": "Ruiming Zhang",
+      "url": "https://arxiv.org/abs/1510.03420v2",
+      "used": "classical xi product and related positivity-criterion literature; no priority assertion",
+      "reading": "parsed PDF; attempted page image unavailable"
+    },
+    {
+      "id": "E4",
+      "title": "The Moment Problem",
+      "authors": "Konrad Schmuedgen",
+      "year": 2017,
+      "url": "https://doi.org/10.1007/978-3-319-64546-9",
+      "used": "classical Hamburger moment existence theorem",
+      "reading": "publisher overview and chapter locations; full book not read"
+    },
+    {
+      "id": "E5",
+      "title": "Classical Bernstein--Widder representation theorem",
+      "used": "positive Laplace representation from complete monotonicity in the converse of Section 7; explicitly imported classical theorem",
+      "url": "https://doi.org/10.1515/9783110269338",
+      "reference": "Schilling, Song, Vondracek, Bernstein Functions, second edition (2012)",
+      "reading": "publisher catalogue located; classical theorem imported, not full book proof reread"
+    },
+    {
+      "id": "E6",
+      "title": "Explicit upper bounds for the number of zeros of the Riemann zeta-function",
+      "authors": "Hasanalizade; Shen; Wong",
+      "url": "https://arxiv.org/abs/2107.06506",
+      "used": "comparison only; not a premise of the new Jensen count",
+      "reading": "statement including first PDF page; no full proof replay"
+    }
+  ],
+  "classical_analytic_inputs": [
+    "Jacobi theta inversion and full-line entire xi Fourier representation",
+    "Hadamard factorization after even-variable substitution",
+    "Jensen formula with multiplicities",
+    "Bernstein--Widder and Hamburger representation theorems",
+    "normal convergence, Lagrange interpolation, elementary Hilbert--Schmidt trace algebra"
+  ],
+  "no_claims": [
+    "full repo census",
+    "complete parent proof acceptance",
+    "actual zero or actual xi moment computation",
+    "new finite-height zero verification",
+    "full external literature or originality audit",
+    "new unweighted all-rank positivity",
+    "RH proof",
+    "remote publication"
+  ]
+}
