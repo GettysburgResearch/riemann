@@ -1,0 +1,46 @@
+{
+  "parent_pr": 847,
+  "parent_commit": "6f3b816e6e8e4eafc0e3bc4dc830267f07f3a44d",
+  "parent_root_tree": "7a4c7dd1008c8c06733ec8eb55b60e6f4bf4ade7",
+  "parent_path": "standalone/2026-09-10-astra-ising-moment-realization/",
+  "local_parent_files": [
+    {
+      "name": "PROOF.md",
+      "git_blob": "5fe6f9f2919fe0f5ec843cc7f20a6d9f8c339043",
+      "sha256": "1d715d30bd25979752d82e3f2585e01dccefe891b03ebefa89b9c1bb7f09f997",
+      "bytes": 20865,
+      "inspection": "complete manuscript"
+    },
+    {
+      "name": "PROGRAMME.md",
+      "git_blob": "41e0cc1335311b943cec06cb4c983fb64bdf931e",
+      "sha256": "7d111503ae6a2e432071340cbbfababfda4a8d8aa6e73562219540b276a34dd0",
+      "bytes": 7556,
+      "inspection": "complete manuscript"
+    },
+    {
+      "name": "check.py",
+      "git_blob": "065df512d2a15d662dfac1366c6b5c031d8d543f",
+      "sha256": "6fd2690ad7039ec5d4814f2749b06a72e720a49a98268e982dfce39658519677",
+      "bytes": 15028,
+      "inspection": "interval primitives, density quadrature, old four-weight root routine; adapted with explicit attribution"
+    }
+  ],
+  "external_inputs": [
+    {
+      "source": "Newman and Wu, Constants of de Bruijn-Newman type in analytic number theory and statistical physics, arXiv:1901.06596v2",
+      "url": "https://arxiv.org/abs/1901.06596",
+      "scope": "Weighted Lee-Yang on printed p11, (21) and following paragraph; classical weak closure Theorem16 and product discussion. PDF page11 image and parsed text inspected. One later page screenshot returned an error. No whole-reference audit or novelty determination."
+    }
+  ],
+  "omissions": [
+    "No all-order Ising realization",
+    "No proof of RH",
+    "No independent second interval backend",
+    "No full repository checkout or formal build",
+    "No certified moment-14 interacting construction",
+    "No numerical theta moments above order14",
+    "No claim of an earliest independent obstruction order or optimal coupling threshold"
+  ],
+  "source_reuse": "core.py adapts parent dyadic, exponential, pi, polynomial and old-root routines; new degree120/full tails and Fourier controls are specified in the proof. The parent result.json is not imported by the accepting checker."
+}
