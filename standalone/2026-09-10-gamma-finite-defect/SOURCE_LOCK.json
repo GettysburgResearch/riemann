@@ -1,0 +1,49 @@
+{
+  "actual_xi_zero_data_needed": false,
+  "author_session_pushed": false,
+  "base_commit": "0e19b74fe6dfb39bef69a5edd3f0b3098b10a6ad",
+  "base_pr": 855,
+  "classical_sources": [
+    {
+      "name": "Biane-Pitman-Yor gamma/xi identity",
+      "scope": "classical imported normalization and reciprocal law; abstract metadata and parent scaling inspected, external proof not re-reviewed",
+      "url": "https://arxiv.org/abs/math/9912170"
+    },
+    {
+      "name": "DLMF Watson lemma",
+      "scope": "relevant text/formulas read; the required two-sector argument is supplied in full",
+      "url": "https://dlmf.nist.gov/2.4#i"
+    },
+    {
+      "name": "DLMF complex analysis",
+      "scope": "classical Hadamard/Jensen/Rouche inputs; specialized pairing and uniform tail argument supplied",
+      "url": "https://dlmf.nist.gov/1.10"
+    }
+  ],
+  "date": "2026-09-10",
+  "new_PR_discovery": "Latest-PR metadata only; no blanket review or import of concurrent research",
+  "parent_rate_needed": false,
+  "parent_sources": [
+    {
+      "commit": "0e19b74fe6dfb39bef69a5edd3f0b3098b10a6ad",
+      "name": "centered gamma",
+      "principal_blob": "48dae66b76c92dccdd7d18fae61c6a5e23802569",
+      "principal_bytes": 17201,
+      "reading_scope": "full supplied principal manuscript; identity matched published Git blob; no parent code/certificate replay",
+      "sha256": "c68d6cf6d0941b2f2b1c0dc4b27e82ac913d90c0f9c07640dbbc0df51a564afc"
+    },
+    {
+      "commit": "11a12b8ceb7db98c7961a5cebf3870b2f31dfa79",
+      "name": "reciprocal gamma",
+      "principal_blob": "c324ba15d3f7f3e073b902042ec61c685b555f53",
+      "principal_bytes": 24737,
+      "reading_scope": "full supplied principal manuscript; identity matched published Git blob; no parent code/certificate replay",
+      "sha256": "0e8b31df499db1e5479423f23c838661ba391ad03a74157908b06b9174647e7b"
+    }
+  ],
+  "prior_trace_programme": "motivation from earlier supplied trace/Hankel packet; no operator determinant or prior numerical zero table is a dependency",
+  "proposed_new_branch": "research/astra/20260910-gamma-finite-defect",
+  "repository": "GettysburgResearch/riemann",
+  "rh_proved": false,
+  "scientific_status": "PROPOSED_COMPONENT_PROOFS"
+}
