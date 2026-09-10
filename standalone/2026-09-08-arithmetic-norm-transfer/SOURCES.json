@@ -1,0 +1,92 @@
+{
+  "publication_parent": "31a35a90b0b924dc98a2c89c463fb59577f45a4e",
+  "claim_of_exhaustive_review": false,
+  "external_computations_replayed": false,
+  "source_binding_scope": "Exact read heads and blob metadata; not a transitive source replay. New algebra and estimates are derived in PROOF.md.",
+  "repo": "GettysburgResearch/riemann",
+  "scientific_integration_reference": {
+    "pr": 800,
+    "sha": "4f461e5ad46e452b1eafa69eddff3b76cd0c12be",
+    "provenance": "Reference reported by review PR827; not a new integration census"
+  },
+  "files": [
+    {
+      "pr": 803,
+      "sha": "31a35a90b0b924dc98a2c89c463fb59577f45a4e",
+      "path": "standalone/2026-09-08-rational-residual-capture/PROOF.md",
+      "blob": "e7b0dfd9db3a114962ed610c9b19900df135b58b",
+      "sha256": "394e1d80b58699854371489f5b9eb390ce4a4adca87825891140c915655f5b5c",
+      "scope": "Full locally available manuscript; source bytes match blob; full residual metric and cutoff context"
+    },
+    {
+      "pr": 803,
+      "sha": "bcec690c1607e281bd6f741b68f5c50f556670c7",
+      "path": "standalone/2026-09-08-residual-spectral-exponent/PROOF.md",
+      "blob": "ff1bba2071a06c66ad52243d7646eec54b0a7ca4",
+      "scope": "Full available manuscript; upper envelope and retained hypothetical-zero lower bound"
+    },
+    {
+      "pr": 825,
+      "sha": "e4a486d3fd4009e3722e9e93f35710b834fbd195",
+      "path": "standalone/2026-09-08-astra-divisor-gap/PROOF.md",
+      "blob": "d87d275f53b68472e29dce777de3f786566184fc",
+      "scope": "Direct lines 1-190: graph metric, gap and path argument; no numerical inverse replay"
+    },
+    {
+      "pr": 826,
+      "sha": "3a82b80da82edbcd65d4538418a3d51d6030f058",
+      "path": "standalone/2026-09-08-astra-divisor-poincare/PROOF.md",
+      "blob": "3e598e27e6b258d2fbd1a77740543ae99e191c3f",
+      "scope": "Direct sections 0-3 through finite prime-box spectra; graph identity reconstructed; no producer replay"
+    },
+    {
+      "pr": 818,
+      "sha": "bd7bc8ee27927df5d58a3203b328c11cdc1f04db",
+      "path": "standalone/2026-09-08-astra-square-grid-localization/PROOF.md",
+      "blob": "d983c4dd9a1925f1cb0bdc0596e3c1dfc96047ac",
+      "scope": "Direct lines 1-325, including coarse-to-RH implication; no interval producer replay"
+    },
+    {
+      "pr": 819,
+      "sha": "c4fb013692c51d6b26b8a3c33200615af764da82",
+      "path": "standalone/2026-09-08-astra-intrinsic-entropy/PROOF.md",
+      "blob": "afb721d6eddae8eb4fe861091f9747394bd7c708",
+      "scope": "Direct lines 1-175: factorization, BSY defect and target sensitivity; not numerical entropy acceptance"
+    },
+    {
+      "pr": 827,
+      "sha": "29d2337255cb467c8d83d070ebe71917d6221c7c",
+      "path": "reviews/2026-09-08-postintegration/pass1/REPORT.md",
+      "scope": "Orientation through returned report; recommendations not reclassified as canonical acceptance"
+    },
+    {
+      "pr": 803,
+      "sha": "31a35a90b0b924dc98a2c89c463fb59577f45a4e",
+      "path": "AGENTS.md",
+      "blob": "0ad1dc2034c5d83e777343f77b41dcaf3683ef14",
+      "scope": "Operating instructions"
+    }
+  ],
+  "external": [
+    {
+      "id": "E1",
+      "url": "https://arxiv.org/html/2208.06141v4",
+      "authors": "E. S. Lee; N. Leong",
+      "title": "New explicit bounds for Mertens function and the reciprocal of the Riemann zeta-function",
+      "scope": "Theorem 1.2, existence of unconditional positive constants only; no numerical constants or zero campaign replay"
+    },
+    {
+      "id": "E2",
+      "url": "https://dlmf.nist.gov/25.9",
+      "scope": "Classical approximate functional equation and convexity consequence; no numerical zeta or zero evaluation"
+    }
+  ],
+  "unchecked": [
+    "Full post-integration census beyond scoped reads",
+    "Author numerical campaigns in other PRs",
+    "Actual primitive zeta or zero computations",
+    "Full formal/library build",
+    "Independent acceptance of prior author proofs",
+    "Any unconditional RH-strength count or residual upper bound"
+  ]
+}

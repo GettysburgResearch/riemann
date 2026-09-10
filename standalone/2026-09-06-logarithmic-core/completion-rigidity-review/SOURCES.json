@@ -1,0 +1,50 @@
+{
+  "parent_head": "ed074bcabfd2c1ca3336e457b8fdd09a25bcd2a7",
+  "repository": "GettysburgResearch/riemann",
+  "pr": 803,
+  "parent_manuscripts": [
+    {
+      "path": "standalone/2026-09-06-logarithmic-core/balanced-mobius-contour/PROOF.md",
+      "commit": "ed074bcabfd2c1ca3336e457b8fdd09a25bcd2a7",
+      "blob": "8ebf299f6985600f56af0e340bf2ee57c090a65f",
+      "sha256": "e493ba173d6736fca88a84fc7821fc72d73cad89f7a689d7e219c394c245557e",
+      "bytes": 17637,
+      "scope": "Explicit two-jet completion and its elementary coefficient bounds. Convolution, residues and general uniform contour tail are rederived. Author source; no independent acceptance."
+    },
+    {
+      "path": "standalone/2026-09-06-logarithmic-core/sparse-sign-bootstrap/PROOF.md",
+      "commit": "47b8a507aea0ad6e1dd0ab23dfd2035a0eb03abb",
+      "blob": "046a12cd9233aa7d8a9a3a5d4d4c64a67d4207be",
+      "sha256": "036e9d3d7b429e9ac8d850e81910c53addfa1d9654050732cfc3dc8bcc4e47c7",
+      "bytes": 23507,
+      "scope": "Only Section 7 uses the complete-source growth/pole representation and curvature-grid adapter. Open count premise is not imported as a theorem. Full parent suite not replayed."
+    }
+  ],
+  "external": [
+    {
+      "id": "E1",
+      "authors": "Harald Andres Helfgott and Lola Thompson",
+      "title": "Summing mu(n): a faster elementary algorithm",
+      "url": "https://link.springer.com/article/10.1007/s40993-022-00408-8",
+      "location": "Section 2, (2.1)",
+      "scope": "Primary-source prior art for the classical quadratic convolution identity; no complexity result used. HTML read."
+    },
+    {
+      "id": "E2",
+      "authors": "NIST DLMF; classical Titchmarsh zeta theory",
+      "title": "25.9 Asymptotic Approximations",
+      "url": "https://dlmf.nist.gov/25.9",
+      "location": "25.9.1--25.9.3 and referenced fixed-strip convexity theory",
+      "scope": "Unconditional t^(1/4+eta) bound and fixed-strip version; derivative obtained by Cauchy. No explicit constant or external numerical replay. HTML read."
+    },
+    {
+      "id": "E3",
+      "authors": "Masatoshi Suzuki",
+      "title": "Screw functions of Dirichlet series in the extended Selberg class",
+      "url": "https://arxiv.org/html/2209.12832v2",
+      "scope": "Prior art for one-sign/Landau criteria, not a black-box source normalization or arithmetic estimate."
+    }
+  ],
+  "reading_boundary": "Pinned connector source and locally supplied matching bytes; primary HTML references. No new PDF review, whole-repository scan, independent referee acceptance, or original-source proof build.",
+  "open_premise": "A fixed power saving in the count of Z_k < -1 in PROOF.md (27). No such saving is established."
+}

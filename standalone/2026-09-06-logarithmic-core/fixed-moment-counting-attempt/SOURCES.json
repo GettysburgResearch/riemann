@@ -1,0 +1,38 @@
+{
+  "parent_head": "44a8ed8193a2a81d68c1f5c2bb592b266698032d",
+  "parent_pr": 803,
+  "target_proved": false,
+  "sources": [
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "44a8ed8193a2a81d68c1f5c2bb592b266698032d",
+      "path": "standalone/2026-09-06-logarithmic-core/prime-curvature-and-failure-count/PROOF.md",
+      "git_blob": "d74f2d0fc75ffedd53198f7b12b5bcbbdba8b6c5",
+      "sha256": "74b73d0d2203735de7f989ca12645624911a9bd860bbcb3df861d87c8c24c5da",
+      "bytes": 19318,
+      "scope": "Definitions, elementary Chebyshev estimate, existing lower failure-count implication. No parent producer rerun."
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "8d8750e5be8e0f2920db371bf31ea93c2d0a0caf",
+      "path": "standalone/2026-09-06-logarithmic-core/annular-scalar-route/PROOF.md",
+      "git_blob": "0f1b21227d064e61f4f532d9025c78106baa688e",
+      "sha256": "c68840c91308d4a93b85d38e34edc5c5ba9a335b2b25d0b4546a9e86979ffd04",
+      "bytes": 23078,
+      "scope": "Exact filtered scalar identity, RH-conditional full cosine representation and bounded gamma correction. Previous proposed-review scope retained."
+    }
+  ],
+  "classical_inputs": [
+    {
+      "name": "Ordinary prime number theorem",
+      "url": "https://dlmf.nist.gov/27.12",
+      "scope": "Imported theta(x)~x / psi(x)~x; elementary weighted deduction supplied. No optimized error or record claim."
+    },
+    {
+      "name": "Classical zeta zeros and paired Hadamard product",
+      "url": "https://dlmf.nist.gov/25.10",
+      "scope": "Existence of nontrivial zeros and O(T log T) count; exact filtered expansion bound to the annular source above."
+    }
+  ],
+  "reading_boundary": "The new mathematical deductions are supplied in PROOF_ATTEMPT.md. Web literature reconnaissance supplied no input establishing TARGET. No exhaustive literature/novelty claim."
+}

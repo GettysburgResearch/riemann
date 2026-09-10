@@ -1,0 +1,11 @@
+from	to	mechanism	status
+CSM26.source	CD26.T1	source identity	VALID_WITH_STATED_INPUTS
+mu*1=epsilon	CD26.T1	exact prefix cancellation	PROVED_IN_PACKET
+CD26.T1+hypothetical_zero	CD26.T2	delayed error evaluation	PROVED_CONDITIONAL_ON_ZERO
+CD26.OPEN+CD26.T2	RH	zero exclusion and reflection	CONDITIONAL_OPEN_PREMISE
+RH+classical_Littlewood	CD26.OPEN	Young bound from m(x)	CONDITIONAL_CONVERSE
+critical_line_zero_exists	CD26.T4	boundary pole versus H2 evaluation	PROVED_WITH_CLASSICAL_INPUT
+CD26.T5+directed_cell_stream	CD26.F1	complete finite candidate norm	FINITE_ONLY
+CD26.F1	CD26.OPEN	finite to unbounded extrapolation	FORBIDDEN
+local_exactness	domain_completeness	uncontrolled remote tail	NOT_ESTABLISHED
+uniform_input_norm	CD26.OPEN	Young shortcut	PREMISE_REFUTED_BY_T4

@@ -1,0 +1,19 @@
+{
+  "release": "2026-09-08",
+  "status": "INTEGRATION_CANDIDATE",
+  "final_review": "PENDING",
+  "published_baseline_activated": false,
+  "rh_proved": false,
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "review_commit": "29237183dc6973cfa9bd953ac1710b7f00929d04",
+  "source_manifest": "SOURCE_TREES.json",
+  "selection": "PACKETS.tsv",
+  "repairs": "REPAIRS.json",
+  "scientific_entry": "../../research/integrated/native_sources/README.md",
+  "review_selection": "../../reviews/2026-09-08-postintegration/pass4/EXTRACTION.tsv",
+  "review_decisions": "../../reviews/2026-09-08-postintegration/pass4/DECISIONS.tsv",
+  "previous_published_pointer": "../../canonical/CURRENT.json",
+  "verifier": "verify.py",
+  "verification_scope": "Committed candidate source preservation, selection coverage and named navigation; not mathematical replay, full historical audit, formal build or activation",
+  "executable_policy": "Unselected source executables are archival. Selected evidence retains its exact reviewed producer, primitive and replay contract."
+}

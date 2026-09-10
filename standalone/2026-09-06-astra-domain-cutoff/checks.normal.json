@@ -1,0 +1,36 @@
+{
+  "details": {
+    "Cauchy_jet_cases": 24,
+    "Mobius_coefficient_rows": 512,
+    "complete_correlation_identity": 1,
+    "cutoff_threshold_calibrations": 100,
+    "directed_source": {
+      "H_log64": {
+        "denominator": "340282366920938463463374607431768211456",
+        "lower_numerator": "175223642423332748810130907135482998776",
+        "precision_bits": 128,
+        "upper_numerator": "175223642423332748810130907135483801755"
+      },
+      "arithmetic": "DIRECTED_INTEGER_INTERVAL",
+      "complete_cells": 63,
+      "endpoint_integer": 64,
+      "h_log2": {
+        "denominator": "340282366920938463463374607431768211456",
+        "lower_numerator": "-297321576428065533026446521730352695209",
+        "precision_bits": 128,
+        "upper_numerator": "-297321576428065533026446521730352695204"
+      },
+      "interpretation": "H is the complete truncated inverse norm, not the full y norm; no growth extrapolation",
+      "source_sign_certificate": "h(log 2)<-4/5",
+      "time_endpoint": "log(64)"
+    },
+    "exact_Gram_floor_calibrations": 101,
+    "norms_and_null_moments": 5,
+    "proof_boundary": "No all-rank domain limit, infinite signed correlation bound, critical source-map contraction, or RH is certified.",
+    "rational_transform_identities": 3,
+    "tail_antiderivative_identities": 10
+  },
+  "named_checks": 10,
+  "schema": "riemann.DCP26.bounded-checks.v1",
+  "status": "PASS_BOUNDED_CHECKS_NOT_RH"
+}

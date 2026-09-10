@@ -1,0 +1,39 @@
+{
+  "author_code_executed": false,
+  "checks": {
+    "contracts": 175
+  },
+  "marker": "PASS_REVIEWER_RC_MINIMA",
+  "results": [
+    {
+      "H": 4096,
+      "N": 8,
+      "Y": 2,
+      "comparison_minima_sha256": "3deed534969bb25764c2f6bd3b170f11612ecfb32f639f1d48ad1f28e28f678d",
+      "constraint": "native prefix and p(1)=0 only; no derivative normalization",
+      "lower": "0.025607338825",
+      "upper": "0.025616531671"
+    },
+    {
+      "H": 4096,
+      "N": 12,
+      "Y": 3,
+      "comparison_minima_sha256": "043f541c11cbe45ad4c65f090148efcfe82aaaf4a5b7f3cf13e91583b1483290",
+      "constraint": "native prefix and p(1)=0 only; no derivative normalization",
+      "lower": "0.021620272026",
+      "upper": "0.021647203122"
+    },
+    {
+      "H": 4096,
+      "N": 16,
+      "Y": 4,
+      "comparison_minima_sha256": "8281dae9c60d7e7ec6f681fc5c5babf69c13932d6af8008203cd6c4b6ed75294",
+      "constraint": "native prefix and p(1)=0 only; no derivative normalization",
+      "lower": "0.019070164807",
+      "upper": "0.019120804411"
+    }
+  ],
+  "rh_proved": false,
+  "tail_comparison": "separate minima of Q_H+(1/H +/- C_N/(H(H+1)))V, paper (18)",
+  "unbounded_estimate_proved": false
+}

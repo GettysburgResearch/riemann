@@ -1,0 +1,38 @@
+{
+  "baseline_pr": 804,
+  "new_packet_is_self_contained": true,
+  "old_mathematical_suites_rerun": false,
+  "remote_baseline_commit": "0f6ee91f1a8c8bece1618bde155d62fb0bfb4cad",
+  "remote_baseline_tree": "0c8a32ba10e1e58278bfe2ae20f16281039f6c1c",
+  "repository": "GettysburgResearch/riemann",
+  "sources": [
+    {
+      "bytes": 18207,
+      "commit": null,
+      "git_blob": "310cf1dc40694d053ec955c2ad404eaec35fa7ed",
+      "name": "supplied_OE26",
+      "path": "standalone/2026-09-07-astra-outer-entropy/PROOF.md",
+      "scope": "Supplied ZIP manuscript inspected completely; publication not observed at the frozen baseline. Needed outer facts reconstructed in OEC26.",
+      "sha256": "070574df29d3b5a3f92628c43092271675b5a35249cdc9cbd268bab55e420fbe"
+    },
+    {
+      "bytes": 12266,
+      "commit": "0f6ee91f1a8c8bece1618bde155d62fb0bfb4cad",
+      "git_blob": "593d99995f70c3cb565aebbfb455f93147d09e1e",
+      "name": "CSM26",
+      "path": "standalone/2026-09-06-astra-critical-source-map/CONSTRUCTION.md",
+      "scope": "Provided exact parent; source formula reconstructed. No old code run.",
+      "sha256": "5e1805229509e0567f88bddb9ce29adefe5d1cc2662ebac82d35e7aed10c05e8"
+    },
+    {
+      "bytes": 10327,
+      "commit": "0f6ee91f1a8c8bece1618bde155d62fb0bfb4cad",
+      "git_blob": "f51ee8c99e3b5b5c8d8b8c325f346474c549200c",
+      "name": "MWR26",
+      "path": "standalone/2026-09-06-astra-mobius-work-resonance/WORK_IDENTITY.md",
+      "scope": "Prior inverse-energy comparison only; not a mathematical premise of OEC26.",
+      "sha256": "d6825b78304b5a69aba5cde008a18551034fc14390a974efdeae4b4645d88307"
+    }
+  ],
+  "unconditional_RH_claimed": false
+}

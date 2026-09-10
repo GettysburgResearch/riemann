@@ -1,0 +1,8 @@
+claim_id	status	hypotheses	statement	proof	open_boundary
+CCT26.T1	PROPOSED_COMPONENT	J finite	Fixed cutoff average converges in complete weighted L2 with squared error at most 6 times the state tail	PROOF.md section 2	J finite is not proved unconditionally
+CCT26.T2	PROPOSED_IMPLICATION	J finite for ordinary primes	An analytic logarithm of (s-1)zeta(s)/s^2 in Re s>1/2 excludes right-side zeros	PROOF.md section 3	Input J finite remains open
+CCT26.T3	CONDITIONAL_ON_RH	RH and classical RH-to-Cramer implication	J finite and full state tail at most K_v/T	PROOF.md section 4	CM is not an unconditional imported bound
+CCT26.T4	PROPOSED_COMPONENT	Finite X at least 2	Geometrically averaged Euler completion is outer and preserves the initial arithmetic horizon	PROOF.md section 5	No uniform bound in X supplied
+CCT26.T5	CONDITIONAL_ON_RH	RH	Complete complex logarithms converge in weighted L2 at O(1/sqrt(log X)); tapered entropies converge	PROOF.md section 6	No L2 convergence of the exponential claimed
+CCT26.C1	PROPOSED_EQUIVALENCE	Ordinary primes and stated fixed taper	RH equivalent to finite J and to bounded tapered entropy on an unbounded sequence	PROOF.md sections 3-6	Does not establish either upper premise
+CCT26.OPEN	OPEN	Unconditional ordinary-prime estimate required	Prove J finite or a sufficient source-specific subpower upper bound	ATTEMPT.md sections 2-3	No unconditional RH conclusion

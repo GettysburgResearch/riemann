@@ -1,0 +1,9 @@
+claim	type	status	proof	scope	dependencies	boundary
+CD26.T1	compact_source_construction	PROPOSED_COMPLETE	PROOF.md Sec2	All b>0 and integer N>=1; actual L2 input and output; full initial interval	Classical mu inversion; CSM26 source	No global critical norm conclusion
+CD26.C1	safe_convergence	PROPOSED_COMPLETE	PROOF.md (10a)	All b>1; explicit convergence rate	Elementary |m|<=1 and Young	Does not extend to b=1/2
+CD26.T2	missing_domain_tail_cost	PROPOSED_COMPLETE	PROOF.md Sec3	Every hypothetical zero Re rho>b; all N; full multiplicity bound	Hardy evaluation and Laguerre orthogonality	Not an off-critical zero discovery
+CD26.T3	subpower_equivalence	PROPOSED_COMPLETE_EQUIVALENCE	PROOF.md Sec4	Critical b=1/2; even an unbounded subpower subsequence suffices	RH-to-Mertens input only for converse	Unconditional output norm bound OPEN
+CD26.T4	input_norm_divergence	PROPOSED_COMPLETE	PROOF.md Sec5	S_N increases to infinity unconditionally	Classical existence of a critical-line zero	Does not imply output divergence
+CD26.T5	complete_error_tail	PROPOSED_COMPLETE	PROOF.md Sec6	Each finite candidate; all real x and infinite tail	Stirling constant and proved periodic B2 bound	Not uniform smallness in N
+CD26.F1	actual_finite_errors	DIRECTED_FINITE_CERTIFICATE	certificate.py; certificate.json	Exactly 8 candidates; Y32768 and whole tail	Exact integer intervals and proof tail	N64 relative error squared<1/19000; two strict increases
+CD26.OPEN	critical_output_growth	OPEN	ATTEMPT.md Sec5	liminf log max(1,||f_N||)/log(N+1)=0	No available unconditional proof	No RH conclusion

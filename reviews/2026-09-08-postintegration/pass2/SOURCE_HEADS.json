@@ -1,0 +1,219 @@
+{
+  "schema": "riemann.review.source-freeze.v1",
+  "review": "2026-09-08-postintegration-pass2",
+  "repository": "GettysburgResearch/riemann",
+  "observation_date_utc": "2026-09-08",
+  "atomic_global_snapshot": false,
+  "metadata_recheck_completed_by_utc": "2026-09-08T12:22:58Z",
+  "prior_review_pr": 827,
+  "prior_review_head": "29d2337255cb467c8d83d070ebe71917d6221c7c",
+  "review_branch": "review/2026-09-08-postintegration-pass1",
+  "main_observed": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "scientific_reference_merge": "4f461e5ad46e452b1eafa69eddff3b76cd0c12be",
+  "read_scope_rule": "A head is an immutable retrieval anchor, NOT a claim that every file or ancestor was reviewed. FILES.tsv and COVERAGE.tsv control.",
+  "sources": [
+    {
+      "key": "S803",
+      "pr": 803,
+      "branch": "research/astra/20260906-logarithmic-core-certification",
+      "head": "31a35a90b0b924dc98a2c89c463fb59577f45a4e",
+      "prior_observed_head": "bcec690c1607e281bd6f741b68f5c50f556670c7",
+      "substantive_pass2_packets": [
+        "WP",
+        "RC"
+      ],
+      "metadata_recheck_head": "31a35a90b0b924dc98a2c89c463fb59577f45a4e",
+      "note": "pass1 late head now reviewed selectively; nine added RC files, one commit ahead"
+    },
+    {
+      "key": "S804",
+      "pr": 804,
+      "branch": "research/astra/20260906-sharp-jordan-green-closure",
+      "head": "0f6ee91f1a8c8bece1618bde155d62fb0bfb4cad",
+      "prior_observed_head": "0f6ee91f1a8c8bece1618bde155d62fb0bfb4cad",
+      "substantive_pass2_packets": [],
+      "metadata_recheck_head": "0f6ee91f1a8c8bece1618bde155d62fb0bfb4cad",
+      "note": "pass1 inherited only; no new paper coverage"
+    },
+    {
+      "key": "S805",
+      "pr": 805,
+      "branch": "research/astra/20260906-dilation-observability",
+      "head": "602d7ddf9dbd2ba79bd6cada149772111ca72150",
+      "prior_observed_head": "602d7ddf9dbd2ba79bd6cada149772111ca72150",
+      "substantive_pass2_packets": [],
+      "metadata_recheck_head": "602d7ddf9dbd2ba79bd6cada149772111ca72150",
+      "note": "eight predecessor packets remain queued"
+    },
+    {
+      "key": "S811",
+      "pr": 811,
+      "branch": "research/astra/20260907-logarithmic-domain-transfer",
+      "head": "946dedfa3f6ec2d74f3f0f00f9ca511abf9652d7",
+      "prior_observed_head": "946dedfa3f6ec2d74f3f0f00f9ca511abf9652d7",
+      "substantive_pass2_packets": [
+        "OEC",
+        "EPD",
+        "PDS"
+      ],
+      "metadata_recheck_head": "946dedfa3f6ec2d74f3f0f00f9ca511abf9652d7",
+      "note": "PR prose advertises earlier 315532f; actual ref and file blobs control"
+    },
+    {
+      "key": "S812",
+      "pr": 812,
+      "branch": "research/astra/20260907-future-realization",
+      "head": "2d683186cb3dd4f304159d8176215ceae8ac59fb",
+      "prior_observed_head": "2d683186cb3dd4f304159d8176215ceae8ac59fb",
+      "substantive_pass2_packets": [
+        "FR",
+        "FC"
+      ],
+      "metadata_recheck_head": "2d683186cb3dd4f304159d8176215ceae8ac59fb",
+      "note": "fixed-horizon numerical certificate not replayed"
+    },
+    {
+      "key": "S814",
+      "pr": 814,
+      "branch": "research/astra/20260907-source-stability",
+      "head": "dc7babb830cb696810fb68bd74f6a33459f5f921",
+      "prior_observed_head": "dc7babb830cb696810fb68bd74f6a33459f5f921",
+      "substantive_pass2_packets": [
+        "ST"
+      ],
+      "metadata_recheck_head": "dc7babb830cb696810fb68bd74f6a33459f5f921",
+      "note": "main proof only; related FC theorem not counted as a second independent route"
+    },
+    {
+      "key": "S817",
+      "pr": 817,
+      "branch": "research/astra/20260907-quantitative-capture",
+      "head": "1f97efdcf9dacd24351ecff0819c524f9bf40ec3",
+      "prior_observed_head": "1f97efdcf9dacd24351ecff0819c524f9bf40ec3",
+      "substantive_pass2_packets": [],
+      "metadata_recheck_head": "1f97efdcf9dacd24351ecff0819c524f9bf40ec3",
+      "note": "pass1 scope inherited for IE rate only"
+    },
+    {
+      "key": "S818",
+      "pr": 818,
+      "branch": "research/astra/20260908-critical-cutoff-taper",
+      "head": "bd7bc8ee27927df5d58a3203b328c11cdc1f04db",
+      "prior_observed_head": "bd7bc8ee27927df5d58a3203b328c11cdc1f04db",
+      "substantive_pass2_packets": [],
+      "metadata_recheck_head": "bd7bc8ee27927df5d58a3203b328c11cdc1f04db",
+      "note": "pass1 scope inherited; actual finite energy suite still not replayed"
+    },
+    {
+      "key": "S819",
+      "pr": 819,
+      "branch": "research/astra/20260908-intrinsic-entropy",
+      "head": "c4fb013692c51d6b26b8a3c33200615af764da82",
+      "prior_observed_head": "c4fb013692c51d6b26b8a3c33200615af764da82",
+      "substantive_pass2_packets": [
+        "IE"
+      ],
+      "metadata_recheck_head": "c4fb013692c51d6b26b8a3c33200615af764da82",
+      "note": "core certificate subset replayed; not the complete package CLI suite"
+    },
+    {
+      "key": "S823",
+      "pr": 823,
+      "branch": "research/astra/20260908-late-tail-zero-insertion",
+      "head": "effa056532b951051e16f858aa59abea07a565ea",
+      "prior_observed_head": "effa056532b951051e16f858aa59abea07a565ea",
+      "substantive_pass2_packets": [],
+      "metadata_recheck_head": "effa056532b951051e16f858aa59abea07a565ea",
+      "note": "pass1 scope inherited; not rereviewed"
+    },
+    {
+      "key": "TSR",
+      "pr": null,
+      "branch": "research/astra/20260907-all-rank-spectral-rigidity",
+      "head": "d916a2d60a7ff9a01f1b8bcd73d8583829f78ba6",
+      "prior_observed_head": "d916a2d60a7ff9a01f1b8bcd73d8583829f78ba6",
+      "substantive_pass2_packets": [],
+      "metadata_recheck_head": "d916a2d60a7ff9a01f1b8bcd73d8583829f78ba6",
+      "note": "branch-only discovery from pass1; no additional review"
+    },
+    {
+      "key": "S825",
+      "pr": 825,
+      "branch": "research/astra/20260908-divisor-spectral-gap",
+      "head": "e4a486d3fd4009e3722e9e93f35710b834fbd195",
+      "prior_observed_head": "e4a486d3fd4009e3722e9e93f35710b834fbd195",
+      "substantive_pass2_packets": [
+        "ADG"
+      ],
+      "metadata_recheck_head": "e4a486d3fd4009e3722e9e93f35710b834fbd195",
+      "note": "late addition in pass1; main proof and application now reconstructed"
+    },
+    {
+      "key": "S826",
+      "pr": 826,
+      "branch": "research/astra/20260908-divisor-poincare",
+      "head": "3a82b80da82edbcd65d4538418a3d51d6030f058",
+      "prior_observed_head": "3a82b80da82edbcd65d4538418a3d51d6030f058",
+      "substantive_pass2_packets": [
+        "DPG"
+      ],
+      "metadata_recheck_head": "3a82b80da82edbcd65d4538418a3d51d6030f058",
+      "note": "late addition in pass1; main proof now reconstructed"
+    },
+    {
+      "key": "S790",
+      "pr": 790,
+      "branch": "research/astra/20260905-theta-bernstein-exterior-closure",
+      "head": "6b309554bf1e2f83a83325cd54038f5a0b9b0014",
+      "prior_observed_head": null,
+      "substantive_pass2_packets": [
+        "DC10",
+        "HH5(partial)"
+      ],
+      "metadata_recheck_head": "6b309554bf1e2f83a83325cd54038f5a0b9b0014",
+      "note": "preintegration held dependency, committed 2026-09-05; not new postintegration work"
+    },
+    {
+      "key": "S792",
+      "pr": 792,
+      "branch": "research/astra/20260905-bernstein-chebyshev-growth",
+      "head": "465cb28ed8cbfa1bb071d9a85eeda9890decfe6b",
+      "prior_observed_head": null,
+      "substantive_pass2_packets": [],
+      "metadata_recheck_head": "465cb28ed8cbfa1bb071d9a85eeda9890decfe6b",
+      "note": "preintegration source dependency; no fresh whole-branch review"
+    },
+    {
+      "key": "S793",
+      "pr": 793,
+      "branch": "research/astra/20260905-three-route-assault",
+      "head": "cdf2f15965decbd35afbbd09a16c89cb3e215737",
+      "prior_observed_head": null,
+      "substantive_pass2_packets": [],
+      "metadata_recheck_head": "cdf2f15965decbd35afbbd09a16c89cb3e215737",
+      "note": "preintegration component scope only; no fresh review"
+    },
+    {
+      "key": "S828",
+      "pr": 828,
+      "branch": "research/astra/20260908-coherent-mode-capacity",
+      "head": "528b33ac8d57b5a046260ee45d585cd3fe720f4c",
+      "prior_observed_head": null,
+      "substantive_pass2_packets": [],
+      "metadata_recheck_head": "528b33ac8d57b5a046260ee45d585cd3fe720f4c",
+      "note": "appeared during pass2; metadata only; proof/code UNREAD"
+    }
+  ],
+  "discovery": {
+    "dated_ref_query": "git/matching-refs/heads/research/astra/202609",
+    "updated_pr_query": "updated:>=2026-09-08; all states; up to 30 results",
+    "updated_issue_query": "is:issue updated:>=2026-09-08; no results",
+    "discussion_scope": "Recent comment excerpts on 825,826,790 checked for successor announcements; not complete thread archaeology",
+    "new_late_source": "PR828 at 528b33ac8d57b5a046260ee45d585cd3fe720f4c; no proof or certificate read",
+    "old_source_correction": "PR790 at 6b309... is already present in the preserved C census; commit metadata dates it 2026-09-05. This is selected review of a held dependency, not newly discovered September-8 research.",
+    "limitations": "No complete checkout, exhaustive arbitrary-ref/deleted-ref discovery, all historical PR/thread crawl, or global atomic freeze."
+  },
+  "main_changed_by_review": false,
+  "scientific_acceptance_changed": false,
+  "rh_proved": false
+}

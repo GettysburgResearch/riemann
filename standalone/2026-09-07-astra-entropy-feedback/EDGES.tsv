@@ -1,0 +1,9 @@
+source	target	type	reason
+Exact cutoff derivative and full local Euler logs	EFB26.L1	PROVED_COMPONENT	Chain rule plus full convex Taylor remainder
+EFB26.L1 and signed Cauchy mean	EFB26.T1	PROVED_COMPONENT	All initial, prime-2 and high-frequency contributions retained
+Cauchy Fourier identity	EFB26.T2	PROVED_COMPONENT	Mixed phase moments equal min/max rather than gcd-square product law
+Bounded feedback	OPEN.EFB26.WORK	INSUFFICIENT	Only O(sqrt X) follows by absolute values
+Independent prime phase averaging	OPEN.EFB26.WORK	INVALID_TRANSFER	Actual prime 2/3 covariance is 1/4 and no dimension-free Gram comparison exists
+OPEN.EFB26.WORK and EFB26.T1	Critical-line subpower entropy	CONDITIONAL_IMPLICATION	The work premise remains unproved
+Critical-line subpower entropy	RH	CONDITIONAL_IMPLICATION	CLOSURE.md reconstructs the source-domain zero contradiction
+RH and parent OEC26.T4	EFB26.C2	CONDITIONAL_IMPLICATION	May not be imported as an unconditional arithmetic upper bound

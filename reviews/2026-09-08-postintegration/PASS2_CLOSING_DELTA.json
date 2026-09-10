@@ -1,0 +1,48 @@
+{
+  "schema": "riemann.review.closing-delta.v1",
+  "review": "2026-09-08-postintegration-pass2",
+  "observed_by_utc": "2026-09-08T12:49:45Z",
+  "atomic_global_snapshot": false,
+  "sealed_review_head": "df7c4436784ab3a545da63427da5392e0c074662",
+  "sealed_pass2_tree": "fac8ab751e2e629601f377b03bb2968c540b1322",
+  "relationship": "Append-only closing inventory outside the sealed pass2 directory. Does not change its recommendations or extend them to new heads.",
+  "sources": [
+    {
+      "pr": 803,
+      "branch": "research/astra/20260906-logarithmic-core-certification",
+      "reviewed_anchor": "31a35a90b0b924dc98a2c89c463fb59577f45a4e",
+      "later_observed_head": "db175de165a9077e709b1cb482998171ffc0c6e7",
+      "new_root": "standalone/2026-09-08-arithmetic-norm-transfer",
+      "comparison": {
+        "status": "ahead",
+        "ahead_by": 1,
+        "behind_by": 0,
+        "added_files": 9,
+        "modified_files": 0,
+        "deleted_files": 0
+      },
+      "coverage": "UNREAD_NEW_PACKET; comparison filenames only; no proof/code/result review",
+      "resume": "Diff 31a35a90b0b924dc98a2c89c463fb59577f45a4e against db175de165a9077e709b1cb482998171ffc0c6e7. Existing pass2 file blobs are unchanged in this comparison; read the new PROOF.md, SYNTHESIS.md and complete evidence before accepting any metric transfer."
+    },
+    {
+      "pr": 829,
+      "branch": "research/astra/20260908-coherent-channel-synthesis",
+      "observed_head": "f782788933dc21a0fe6a844950f5ca532eba7d86",
+      "root": "standalone/2026-09-08-astra-coherent-channel-synthesis",
+      "coverage": "UNREAD_NEW_PACKET; PR description and ref only",
+      "resume": "Review PROOF.md, COHERENT_SOURCE.md, SYNTHESIS.md and complete numerical evidence. Reconcile the advertised overlap with #828; no statement from either was used as a pass2 premise."
+    },
+    {
+      "pr": 828,
+      "branch": "research/astra/20260908-coherent-mode-capacity",
+      "observed_head": "528b33ac8d57b5a046260ee45d585cd3fe720f4c",
+      "coverage": "UNCHANGED_METADATA_ONLY; still unread as recorded in pass2"
+    }
+  ],
+  "other_watched_refs": "Other listed research/astra/202609 refs matched the sealed pass2 observations at this check. This is not exhaustive arbitrary-ref or issue archaeology.",
+  "main_observed": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "next_queue": "The 21 original triage-depth packets and unreplayed evidence in pass2/RESUME.md remain queued, in addition to #828, #829 and the new #803 packet.",
+  "main_changed": false,
+  "scientific_acceptance_changed": false,
+  "rh_proved": false
+}

@@ -1,0 +1,36 @@
+{
+  "actual_CLI_refusals": 5,
+  "mode": "normal",
+  "results": [
+    {
+      "mutation": "negative_Gram_pivot",
+      "return_code": 2,
+      "script": "checks.py",
+      "stderr": "retained exact controls differ"
+    },
+    {
+      "mutation": "missing_check_group",
+      "return_code": 2,
+      "script": "checks.py",
+      "stderr": "retained exact controls differ"
+    },
+    {
+      "mutation": "false_fixture_count",
+      "return_code": 2,
+      "script": "checks.py",
+      "stderr": "retained exact controls differ"
+    },
+    {
+      "mutation": "missing_last_checkpoint",
+      "return_code": 2,
+      "script": "certify.py",
+      "stderr": "retained certificate differs from full replay"
+    },
+    {
+      "mutation": "false_N3_signed_work",
+      "return_code": 2,
+      "script": "certify.py",
+      "stderr": "retained certificate differs from full replay"
+    }
+  ]
+}

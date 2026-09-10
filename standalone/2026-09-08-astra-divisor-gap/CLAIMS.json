@@ -1,0 +1,55 @@
+{
+  "claims": [
+    {
+      "id": "ADG26.T1",
+      "proof": "PROOF.md Sections 1-4",
+      "result": "Anchored and centered arithmetic Poincare bound with kappa(P)=48[1+log(16logP)].",
+      "scope": "Every finite divisor-closed S; every exponent depth; arbitrary complex Hilbert-valued coefficients",
+      "status": "PROPOSED_COMPLETE_PROOF"
+    },
+    {
+      "id": "ADG26.T2",
+      "proof": "PROOF.md Section 5",
+      "result": "Same spectral gap, closed conservative Markov form, exponential mean-zero L2 relaxation.",
+      "scope": "Every countable divisor-closed reservoir on a fixed finite prime alphabet",
+      "status": "PROPOSED_COMPLETE_PROOF"
+    },
+    {
+      "id": "ADG26.C1",
+      "proof": "PROOF.md Section 4",
+      "result": "Explicit inverse bound, condition-number bound and quantitative approximate-multiplicative rigidity.",
+      "scope": "Full prime-power matrix on 1,...,N and coefficient complement of n^(-1/2)",
+      "status": "PROPOSED_COMPLETE_PROOF"
+    },
+    {
+      "id": "ADG26.C2",
+      "proof": "APPLICATION.md Sections 1-2",
+      "result": "Residual-enclosed scalar and matrix Schur correction, retaining all coupling and metric costs.",
+      "scope": "Eliminated block equal to this arithmetic operator or a separately norm-controlled perturbation",
+      "status": "PROPOSED_COMPLETE_PROOF"
+    },
+    {
+      "id": "ADG26.C3",
+      "proof": "APPLICATION.md Section 5",
+      "result": "Sparse operator and deterministic convergent relaxation with polylogarithmic iteration count.",
+      "scope": "Every finite initial integer interval; exact arithmetic operation count",
+      "status": "PROPOSED_COMPLETE_PROOF"
+    },
+    {
+      "id": "ADG26.X1",
+      "proof": "APPLICATION.md Section 3 and check.py",
+      "result": "0.7444806194657 < b^T K^(-1)b < 0.7444806194659; finite gap independently checked by rational LDL.",
+      "scope": "N=32, exact harmonic-mean-zero coordinates; one inverse quadratic",
+      "status": "DIRECTED_FINITE_CERTIFICATE"
+    },
+    {
+      "id": "ADG26.OPEN",
+      "proof": "PROOF.md Section 6; APPLICATION.md Section 4",
+      "result": "No unproved source adapter, small-edge-energy assertion or retained-channel sign is supplied. RH remains open.",
+      "scope": "Actual cumulative prime discrepancy or complete critical Weil/source form",
+      "status": "OPEN_NOT_ESTABLISHED"
+    }
+  ],
+  "rh_proved": false,
+  "status": "PROPOSED_COMPONENT_PROOFS"
+}

@@ -1,0 +1,52 @@
+{
+  "external": [
+    {
+      "url": "https://dlmf.nist.gov/2.10",
+      "use": "Euler--Maclaurin formula and complete remainder, specialized and derived in Section 4"
+    },
+    {
+      "url": "https://dlmf.nist.gov/24.8",
+      "use": "periodic Bernoulli Fourier bound used for the remainder"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0205003",
+      "use": "classical Nyman--Beurling arithmetic approximation context only; no density theorem used"
+    },
+    {
+      "url": "https://arxiv.org/abs/2405.06349",
+      "use": "prior art on Gram matrices; context only; abstract inspected, paper not claimed audited"
+    }
+  ],
+  "not_claimed": [
+    "RH",
+    "subpower all-Y energy bound",
+    "independent referee acceptance",
+    "Lean or kernel build",
+    "whole repository audit",
+    "new annular positivity range",
+    "external novelty"
+  ],
+  "overlap": [
+    {
+      "commit": "2d683186cb3dd4f304159d8176215ceae8ac59fb",
+      "pr": 812,
+      "use": "metadata context on a different source-coordinate conditioning theorem, not a proof dependency"
+    },
+    {
+      "commit": "1f97efdcf9dacd24351ecff0819c524f9bf40ec3",
+      "pr": 817,
+      "use": "metadata context on convergence to an intrinsic floor; not independent confirmation"
+    }
+  ],
+  "parent": {
+    "bytes": 12679,
+    "commit": "f7d786b2f827fd89e55947d1f2140c0ea6b1d9f8",
+    "git_blob": "9d49700e4378b2d5d0f1ebfe41861ac1dd01bd6e",
+    "path": "standalone/2026-09-06-logarithmic-core/positive-residual-review/PROOF.md",
+    "pr": 803,
+    "repository": "GettysburgResearch/riemann",
+    "sha256": "20abe3a61e71b03d11533813fc0acc6d7097af9b1ea37058522d60edf3b64e06",
+    "use": "same source definitions; basic norm and delay identities rederived; no parent code executed"
+  },
+  "status": "sources and scope, not an acceptance registry"
+}

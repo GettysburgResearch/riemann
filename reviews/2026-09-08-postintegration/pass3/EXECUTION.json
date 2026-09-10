@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-08",
+  "exclusions": {
+    "author_mathematical_code_executed": false,
+    "author_package_suites_executed": false,
+    "blanket_package_acceptance": false,
+    "exhaustive_history_discussion_audit": false,
+    "external_zero_verification_rerun": false,
+    "fresh_lean_build": false,
+    "native_windows_run": false,
+    "remote_ci_success": false,
+    "rh_proved": false,
+    "whole_repository_checked": false
+  },
+  "modes": [
+    "python3 -I -S -B",
+    "python3 -I -S -B -O"
+  ],
+  "packet_counts": {
+    "component_recommendations": 60,
+    "cumulative_principal_packet_reviews": 45,
+    "inventoried": 45,
+    "new_principal_packet_reviews": 24,
+    "this_pass_file_records": 31
+  },
+  "platform": "Linux x86_64",
+  "python": "3.13.5",
+  "review_parent": "13ac26caae546c8a6481a85b2f61ecc524dbbb27",
+  "runs": [
+    {
+      "marker": "PASS_BOUNDED_REVIEWER_RECONSTRUCTION",
+      "normal_optimized_byte_identical": true,
+      "receipt": "evidence/controls.json",
+      "receipt_bytes": 15565,
+      "receipt_sha256": "e0d95aca58a4932052e394e4122b8b493c356a4668482ecc375b218d9aa09379",
+      "script": "checks.py",
+      "script_git_blob": "bedfcfb146a10b18d7aae48d55c1edcd35539608",
+      "script_sha256": "c73eb55c8438e46c635921e88c21b5d19b74020b4bf7f509665a63ac2e0590e2"
+    },
+    {
+      "marker": "PASS_COMPLETE_BOUNDED_GRAM_RECONSTRUCTION",
+      "normal_optimized_byte_identical": true,
+      "receipt": "evidence/grams.json",
+      "receipt_bytes": 6815,
+      "receipt_sha256": "c9c082fc64f1b3bff0ef45d043ffcf01af4ef1e8ba673633d46ef2671fc69518",
+      "script": "gram_checks.py",
+      "script_git_blob": "d51aea544ab977429e134591c8df2099bdf8469d",
+      "script_sha256": "574461e874ce46bc0cc913d0197d59c63187d862f32b0412911dfe83d4948f7c"
+    },
+    {
+      "marker": "PASS_REVIEWER_RC_MINIMA",
+      "normal_optimized_byte_identical": true,
+      "receipt": "evidence/rc.json",
+      "receipt_bytes": 1200,
+      "receipt_sha256": "b7c0ca4de268ecf176399a3dbdb4038618cdde9e5ef201286394941a0b9544ce",
+      "script": "rc_checks.py",
+      "script_git_blob": "364e129829f592722c9b27bfa34758d36ec32866",
+      "script_sha256": "b01776c180bf5d330be3f48e6ef729e40363b5079a0bf2341e2326124bb9d3ad"
+    },
+    {
+      "marker": "PASS_REVIEWER_CONTRACTS",
+      "normal_optimized_byte_identical": true,
+      "receipt": "evidence/contracts.json",
+      "receipt_bytes": 203,
+      "receipt_sha256": "1eaf9b7e254160a3dcf22d9f7bd187b39c374080670b284a8e63d88967e1e900",
+      "script": "test_controls.py",
+      "script_git_blob": "8f55e8ea6463456506bc0eaff5966905f186da0b",
+      "script_sha256": "f3f307bab4b2bfbe057f30301dee4816427b1265f81d9468a1328709f4754c32"
+    }
+  ],
+  "schema": "riemann.review.pass3.execution.v1",
+  "source_assurance": "Manuscript commit/blob identities reported by GitHub connector; reviewer source/receipt bytes locally hashed. No full repository checkout."
+}

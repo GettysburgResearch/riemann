@@ -1,0 +1,36 @@
+{
+  "external_inputs": [
+    {
+      "scope": "Classical Euler product and zeta definitions; no critical-line upper estimate imported.",
+      "url": "https://dlmf.nist.gov/25.2"
+    },
+    {
+      "scope": "Ein/E1 normalization; the contour bound is derived in the proof.",
+      "url": "https://dlmf.nist.gov/6.2"
+    }
+  ],
+  "parent_sources": [
+    {
+      "bytes": 16133,
+      "commit": "b6635a70a75b60050177d5cde67e911093698664",
+      "git_blob": "f8e74b694038176a2d5bc426832158fcde12d094",
+      "path": "standalone/2026-09-07-astra-logarithmic-domain-transfer/PROOF.md",
+      "pr": 811,
+      "repository": "GettysburgResearch/riemann",
+      "scope": "Read paper source; no new independent acceptance. Parent checker not rerun.",
+      "sha256": "2cc3588fcb1f707b2ed459178ca2d4f75b5a6b84b792a7af3effe7475e8faa50"
+    },
+    {
+      "bytes": 8802,
+      "commit": "b6635a70a75b60050177d5cde67e911093698664",
+      "git_blob": "a69ed41b403aea4a757d39397287737653fe32fa",
+      "path": "standalone/2026-09-07-astra-logarithmic-domain-transfer/ABEL_AND_ATTEMPT.md",
+      "pr": 811,
+      "repository": "GettysburgResearch/riemann",
+      "scope": "Read paper source; no new independent acceptance. Parent checker not rerun.",
+      "sha256": "0db67fa54e0b4d25e3a2c2e4ecc85109036b440fcc7f50af805b014895d400ea"
+    }
+  ],
+  "self_authorship": "This is research by the source author, not an independent Reviewer D verdict.",
+  "status": "PROPOSED_COMPONENTS_RH_OPEN"
+}

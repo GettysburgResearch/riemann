@@ -1,0 +1,54 @@
+{
+  "claims": [
+    {
+      "dependencies": "Direct reconstruction of the prime-coordinate spectrum; finite/countable Hilbert spectral theory.",
+      "id": "GCP26.T1",
+      "proof": "PROOF.md Sections 1-2",
+      "statement": "Exact root-contrast constant and secular formula for the anchored constant on squarefree and finite-prime unbounded-exponent reservoirs.",
+      "status": "PROPOSED_COMPLETE_COMPONENT_PROOF"
+    },
+    {
+      "dependencies": "T1; elementary factorial/Chebyshev estimates and Euler product at real s>1. No PNT or RH.",
+      "id": "GCP26.T2",
+      "proof": "PROOF.md Sections 3-5",
+      "statement": "G_sf and C_sf have leading coefficient 1/zeta(2) at log log P; G_geo and C_geo have coefficient 1. C-G=O(1/log log P).",
+      "status": "PROPOSED_COMPLETE_COMPONENT_PROOF"
+    },
+    {
+      "dependencies": "T1; exact energy completion. No identification with Xi claimed.",
+      "id": "GCP26.T3",
+      "proof": "PROOF.md Section 6.1",
+      "statement": "For the specified root-coupled block, positivity is equivalent to c>=|tau|^2 G_P.",
+      "status": "PROPOSED_COMPLETE_COMPONENT_PROOF"
+    },
+    {
+      "dependencies": "T2. Does not settle the all-support centered-gap question.",
+      "id": "GCP26.C1",
+      "proof": "PROOF.md Sections 1,5",
+      "statement": "An absolute all-support ANCHORED constant in ADG26 is impossible; its log-log order is necessary already on finite squarefree primorial supports.",
+      "status": "PROPOSED_COROLLARY"
+    },
+    {
+      "dependencies": "The analytical spectral reduction in T1; actual logarithms use complete integer interval remainders.",
+      "id": "GCP26.N1",
+      "proof": "check.py and result.json",
+      "statement": "Two root costs at prime cutoff P=13 (six primes) and their anchored secular roots are enclosed by the stated rational brackets.",
+      "status": "FINITE_DIRECTED_CERTIFICATE"
+    },
+    {
+      "dependencies": "Exact sources and inspection scope in SOURCES.json.",
+      "id": "GCP26.S1",
+      "proof": "SYNTHESIS_AND_ATTEMPT.md",
+      "statement": "Selected post-integration blocks have different metrics and retain different coherent/intrinsic terms; their juxtaposition does not provide a norm-preserving source adapter.",
+      "status": "SYNTHESIS_NOT_ACCEPTANCE"
+    },
+    {
+      "dependencies": "No unconditional full RH conclusion.",
+      "id": "GCP26.OPEN",
+      "proof": "SYNTHESIS_AND_ATTEMPT.md Sections 2,4,5",
+      "statement": "A full source-preserving arithmetic comparison and retained-channel sign/smallness sufficient for RH have not been obtained.",
+      "status": "OPEN_NOT_PROVED"
+    }
+  ],
+  "rh_proved": false
+}

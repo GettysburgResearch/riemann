@@ -1,0 +1,11 @@
+from	to	edge_status	reason
+CSM26 factorial source identity	DCP26.T1	PROPOSED_EXACT	Same source d, not freely chosen metric
+DCP26.T1	DCP26.T2	PROPOSED_EXACT	Finite coefficient rearrangement only
+DCP26.T1 + hypothetical off-line zero	DCP26.T3	PROPOSED_EXACT	All future constraints retained
+DCP26.OPEN1 + DCP26.T3	RH	CONDITIONAL_NOT_CLOSED	No use of the open estimate as an available theorem
+RH + classical Mertens implication	DCP26.OPEN1	CONDITIONAL	Only this reverse direction imports RH
+DCP26.T4	original domain complete	INVALID	New damping span differs from fixed-source translation span
+DCP26.T4 + simplified damped outputs	global Xi contraction	INVALID	Actual-data amplification and omitted commutator
+DCP26.T5	finite inverse error bound	PROPOSED_EXACT	Full source tail and explicit floor
+DCP26.T5	vanishing domain defect	NOT_ESTABLISHED	Conditioning is not a projection-limit value
+DCP26.X1	DCP26.OPEN1	INVALID	Finite evaluation is not an all-T growth estimate

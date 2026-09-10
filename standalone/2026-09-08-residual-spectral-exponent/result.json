@@ -1,0 +1,59 @@
+{
+  "analytic_limit_verified_by_code": false,
+  "endpoint_prefixes": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "groups": {
+    "bounded_endpoint_enclosures": 36,
+    "exact_floor_horizon": 97,
+    "formal_two_jets_and_norm": 27,
+    "independent_mobius": 128,
+    "small_complete_energy_replays": 2,
+    "strict_strip_and_tail_budgets": 20,
+    "synthetic_hardy_identity": 9
+  },
+  "new_minimum_certificate": false,
+  "parent_commit": "6c86b5fbfe92c97ecccf17b81585744ccde33b10",
+  "rh_proved": false,
+  "small_norms": {
+    "2": {
+      "energy_interval": [
+        [
+          986426950884126717235221747158432,
+          5192296858534827628530496329220096
+        ],
+        [
+          986569331853267258832947502834600,
+          5192296858534827628530496329220096
+        ]
+      ],
+      "period": 4,
+      "terms_per_weight": 4096
+    },
+    "4": {
+      "energy_interval": [
+        [
+          300718889777573824736902941601983,
+          5192296858534827628530496329220096
+        ],
+        [
+          300731527980069059544380256120880,
+          5192296858534827628530496329220096
+        ]
+      ],
+      "period": 24,
+      "terms_per_weight": 4096
+    }
+  },
+  "status": "PROPOSED_COMPONENT_PROOFS",
+  "total_bounded_checks": 319,
+  "zero_edge_evaluated": false
+}

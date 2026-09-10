@@ -1,0 +1,50 @@
+{
+  "parent_head": "d1a45dba9c028f52c0f1cdb2c1bc0b2c0d2652c4",
+  "repository": "GettysburgResearch/riemann",
+  "inputs": [
+    {
+      "path": "standalone/2026-09-06-logarithmic-core/completion-rigidity-review/PROOF.md",
+      "sha": "d1a45dba9c028f52c0f1cdb2c1bc0b2c0d2652c4",
+      "git_blob": "8234e427ddda608f081ebff7c26605f8bad57eb5",
+      "sha256": "6009943730403fe9f5d27212de4019ce49ea87df8090b3e99b91f16985b0e0cf",
+      "bytes": 17193,
+      "scope": "Source conventions and motivation. Local file blob agrees with fresh connector read; no parent code executed."
+    },
+    {
+      "path": "standalone/2026-09-06-logarithmic-core/balanced-mobius-contour/PROOF.md",
+      "sha": "ed074bcabfd2c1ca3336e457b8fdd09a25bcd2a7",
+      "git_blob": "8ebf299f6985600f56af0e340bf2ee57c090a65f",
+      "sha256": "e493ba173d6736fca88a84fc7821fc72d73cad89f7a689d7e219c394c245557e",
+      "bytes": 17637,
+      "scope": "Distinguished coefficient construction and bounds |a|<6, |b|<5; imported proposed author component, not independent acceptance."
+    },
+    {
+      "path": "standalone/2026-09-06-astra-compact-domain-completion/PROOF.md",
+      "sha": "b556c3fdc8fa6c5fb7998559d2109ebf786aa31b",
+      "git_blob": "724042d5c785ad2c418d3b7f60f8562b59ff413a",
+      "scope": "Freshly read lines 1-210. Earlier delayed Hardy and multiplicity mechanism for target 1/s^2; contextual priority, not a new inference that its source equals ours."
+    }
+  ],
+  "external_context": [
+    {
+      "url": "https://arxiv.org/abs/math/0011254",
+      "title": "Baez-Duarte: Arithmetical Aspects of Beurling\u2019s Real Variable Reformulation",
+      "scope": "Classical context; abstract/metadata retrieved, not a fresh full-paper audit or computational input."
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0103058",
+      "title": "Burnol: A lower bound in an approximation problem involving the zeros of the Riemann zeta function",
+      "scope": "Classical context; abstract/metadata retrieved, not a fresh full-paper audit or imported numerical constant."
+    }
+  ],
+  "not_proved": [
+    "RH",
+    "signed low-frequency count bound",
+    "subpower positive residual norm",
+    "unbounded native positivity"
+  ],
+  "formal_build_executed": false,
+  "full_repository_checkout_executed": false,
+  "parent_python_executed": false,
+  "independent_review_completed": false
+}

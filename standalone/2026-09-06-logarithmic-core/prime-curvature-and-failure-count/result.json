@@ -1,0 +1,69 @@
+{
+  "counts": {
+    "atom-jumps": 12,
+    "atom-regular-curvature": 12,
+    "bounded-native-interpolation": 9,
+    "bounded-native-scalar": 6,
+    "curvature-budget": 1,
+    "green-identity": 144,
+    "grid-budget": 1,
+    "grid-geometry": 62,
+    "mellin-normalization": 8,
+    "native-divisor": 256,
+    "native-renewal": 10,
+    "negative-run-budget": 1
+  },
+  "failure_count_upper_bound_proved": false,
+  "fixture_digest": "877d6408e0dfb20d3719dd7b41f008b107f196d3e10ac0c6db5635aa25a53858",
+  "independent_review": false,
+  "native_scalar_samples": [
+    {
+      "denominator_power": 112,
+      "lower_numerator": 1123004533700264830169902326840890,
+      "m": 2,
+      "upper_numerator": 1123004533700264830169902326840899
+    },
+    {
+      "denominator_power": 112,
+      "lower_numerator": 1285024705692135844346110034345603,
+      "m": 3,
+      "upper_numerator": 1285024705692135844346110034345620
+    },
+    {
+      "denominator_power": 112,
+      "lower_numerator": 1291202524825056270422027905916060,
+      "m": 4,
+      "upper_numerator": 1291202524825056270422027905916083
+    },
+    {
+      "denominator_power": 112,
+      "lower_numerator": 1300413853806492199551900637132265,
+      "m": 9,
+      "upper_numerator": 1300413853806492199551900637132336
+    },
+    {
+      "denominator_power": 112,
+      "lower_numerator": 1329973189313919443755751877541537,
+      "m": 16,
+      "upper_numerator": 1329973189313919443755751877541708
+    },
+    {
+      "denominator_power": 112,
+      "lower_numerator": 1374576888154539172535054691507235,
+      "m": 25,
+      "upper_numerator": 1374576888154539172535054691507589
+    }
+  ],
+  "new_native_positive_range": false,
+  "parent": "94ed8cd0395350b465165b424cc5c6366223d4ae",
+  "primitive_scope": {
+    "dyadic_bits": 112,
+    "factorization_through": 2500,
+    "log_series_terms": 40,
+    "sample_m_max": 25
+  },
+  "proof_scope": "Paper theorems; bounded checks do not prove infinite passages.",
+  "rh_proved": false,
+  "schema": "riemann.prime-curvature.v1",
+  "total_bounded_fixtures": 522
+}

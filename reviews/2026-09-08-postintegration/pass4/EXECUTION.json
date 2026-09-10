@@ -1,0 +1,96 @@
+{
+  "author_producers_executed": [
+    "FR full_certificate(core) subset",
+    "CD certificate.py full producer",
+    "MW certify.py full producer",
+    "SSQ check.py full run"
+  ],
+  "executions": [
+    {
+      "byte_identical": true,
+      "bytes": 2362,
+      "duplicate_optimized_file_not_distributed": true,
+      "normal_completed": true,
+      "optimized_completed": true,
+      "retained": "evidence/fr-normal.json",
+      "sha256": "ef76ca01c9b32456db9f214f6a210f304f8b10563bbaa7b8f014e32d87d84bcf",
+      "target": "fr"
+    },
+    {
+      "byte_identical": true,
+      "bytes": 13572,
+      "duplicate_optimized_file_not_distributed": true,
+      "normal_completed": true,
+      "optimized_completed": true,
+      "retained": "evidence/cd-normal.json",
+      "sha256": "2fb2b2961ad9d6ec1a24fe60a3e05c500ca3a4bd246ce2e1965f80ab046f3ecb",
+      "target": "cd"
+    },
+    {
+      "byte_identical": true,
+      "bytes": 18200,
+      "duplicate_optimized_file_not_distributed": true,
+      "normal_completed": true,
+      "optimized_completed": true,
+      "retained": "evidence/mw-normal.json",
+      "sha256": "ddaa01ec89167f7604939711c548ce80e856eb8197bf34b566e69439883dc9d6",
+      "target": "mw"
+    },
+    {
+      "byte_identical": true,
+      "bytes": 3404,
+      "duplicate_optimized_file_not_distributed": true,
+      "normal_completed": true,
+      "optimized_completed": true,
+      "retained": "evidence/ssq-normal.json",
+      "sha256": "e7a80214068439ae01bb3714825634dd821480117d6ac1f478546725d2edbe06",
+      "target": "ssq"
+    },
+    {
+      "byte_identical": true,
+      "bytes": 11438,
+      "duplicate_optimized_file_not_distributed": true,
+      "normal_completed": true,
+      "optimized_completed": true,
+      "retained": "evidence/mw-independent-normal.json",
+      "sha256": "d2e7dc09e44a4f3bd93627ce3081090ef6ff146f8c3b70ded369b792a25ccbb8",
+      "target": "mw-independent"
+    },
+    {
+      "byte_identical": true,
+      "bytes": 5404,
+      "duplicate_optimized_file_not_distributed": true,
+      "normal_completed": true,
+      "optimized_completed": true,
+      "retained": "evidence/replay-tests-normal.json",
+      "sha256": "e97b6dec23e8ec4921bc7143a02a687750a322394d38c0337e1efccb7e5163e8",
+      "target": "replay-tests"
+    }
+  ],
+  "failures_not_counted_as_success": [
+    "Container HTTP acquisition failed DNS before data acquisition; exact source text was instead copied and rehashed.",
+    "Container streaming session request was unsupported; no command or independent source file ran in that request. Subsequently ordinary synchronous executions completed.",
+    "First patch-preparation whitespace check stopped on empty trailing TSV fields and an extra Markdown EOF blank; review metadata was repaired before the complete roundtrip. No author source bytes changed."
+  ],
+  "generated_at_utc": "2026-09-08T15:54:54.737330+00:00",
+  "independent_method": "MW every-cell polynomial integration with a linear sieve; no author module imported",
+  "not_performed": [
+    "Full repository checkout/validation",
+    "Original whole-package suites for FR/CD/MW or historical WP/IE/RN/RC/graphs",
+    "Fresh Lean/comparator/axiom audit",
+    "Native Windows testing",
+    "External zero census or external numerical campaign",
+    "Remote CI",
+    "Independent referee identity certification"
+  ],
+  "original_mw_parser_probe": "evidence/mw-original-parser.json; both modes accept duplicate keys and numeric aliases; reject changed numerical endpoint",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "rh_proved": false,
+  "schema": "riemann-final-review-execution-v1",
+  "strict_cli_tests": {
+    "pristine_full_replays_per_mode": 4,
+    "refusals_per_mode": 18,
+    "skips_per_mode": 0
+  }
+}

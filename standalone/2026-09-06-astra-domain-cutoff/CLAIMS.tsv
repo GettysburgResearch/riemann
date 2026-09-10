@@ -1,0 +1,10 @@
+claim	status	proof	statement	scope
+DCP26.T1	PROPOSED_COMPLETE	CONSTRUCTION.md §§2-3	Explicit pole-neutral Mobius synthesis and exact local matching in the original source domain	All T>0; fixed b=1/2; no global convergence assertion
+DCP26.T2	PROPOSED_COMPLETE	CONSTRUCTION.md §4	Full cutoff energy identity and O(T) diagonal	All real T>=0; cross terms retained
+DCP26.T3	PROPOSED_COMPLETE	TAIL_AND_DAMPING.md §1	Finite zero-packet future-energy lower bound with exact multiplicity asymptotic	Conditional on selected zeros; minimum over selected constraints only
+DCP26.T4	PROPOSED_COMPLETE	TAIL_AND_DAMPING.md §2	Arbitrarily small prescribed damping family is total	Changes the family; not completion of fixed source domain
+DCP26.N1	PROPOSED_COMPLETE	TAIL_AND_DAMPING.md §§3-4	Simple damped-output assignment fails contraction on actual sources; exact missing commutator	Does not refute contractivity of the actual Xi convolution
+DCP26.T5	PROPOSED_COMPLETE	GRAM_FLOOR.md	Explicit all-rank parent Gram floor and finite inverse error contract	1/2<=b<=1 eta=1; exponentially small floor; expensive source cutoff
+DCP26.C1	PROPOSED_CONDITIONAL	CONSTRUCTION.md §§5-6	Subexponential full cutoff energy implies RH; converse uses classical RH=>Mertens bound	Open estimate is not consumed as an established premise
+DCP26.OPEN1	OPEN_RH_EQUIVALENT	CONSTRUCTION.md §6	Subexponential bound for full signed cross correlation or y_T energy	No unconditional proof in this packet
+DCP26.X1	DIRECTED_FINITE_COMPUTATION	checks.py directed_head	Complete inverse norm through log64 and negative inverse value at log2	63 cells; no infinite growth or full y norm evaluation

@@ -1,0 +1,11 @@
+from	to	status	condition
+factorial valuations	harmonic Mangoldt lower bound	PROVED_IN_PACKET	A(x)>=log x-1 for every real x>=1
+prime-power subsource + harmonic lower bound	scaled Ein envelope	PROVED_IN_PACKET	Keep unit atom and Stieltjes endpoint -s
+scaled envelope + source association	JGC26.T1	PROVED_IN_PACKET	All three scale ranges with no grid extrapolation
+JGC26.T1	JGC26.C1	PROVED_IN_PACKET	Original kappa strictly exceeds sharp threshold
+JGC26.C1 + exact Laplace identity	JGC26.T2	PROVED_IN_PACKET	Positive source is on Re q>0
+JGC26.T2 + grouped beta/gamma factors	JGC26.C2	PROVED_IN_PACKET	Separate rational positivity is NOT assumed for s>1
+prime-2 reserve + Euler--Maclaurin bound	JGC26.T3	PROVED_IN_PACKET	0<s<=1; every other prime-power difference is positive
+JGC26.C1 + positive convolution	JGC26.N1	PROVED_IN_PACKET	Literal critical exponential feature is not in the source Hilbert space
+JGC26.C2	JGC26.OPEN.CRITICAL	OPEN_NOT_A_PROVED_TRANSFER	Requires an actual critical map and exhaustion identity
+JGC26.OPEN.CRITICAL	RH	CONDITIONAL_ONLY	Dyadic-scale pole exclusion as in JGC26.C3

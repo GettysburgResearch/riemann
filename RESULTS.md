@@ -2,6 +2,8 @@
 
 The project has established useful components, not RH. This catalogue selects the strongest surviving results across the project; the [research index](research/RESULTS_INDEX.md) keeps the wider inherited corpus discoverable. Each entry states what it means, where its scope ends, and where to read the current mathematics. Earlier review is retained rather than represented as a fresh replay. Classical ingredients are identified in the sources; no novelty or priority claim is made here.
 
+**Candidate boundary:** the newer native-source entries below are scoped review selections awaiting approval of this combined tree. Earlier integrated components retain their existing status and corrections. [Selection and validation boundary](integration/2026-09-08/README.md).
+
 <a id="arithmetic"></a>
 ## Arithmetic: exact reductions and genuine positivity
 
@@ -81,13 +83,28 @@ The derivative-descent programme retains more than a proposed route. Its repaire
 
 Finite completion-of-squares identities and source-qualified cardinal constructions show how exceptional zero directions can be represented. Later multiplicity-aware complete-background interpolation supports capture in its specified adaptable Gaussian-confined hierarchy. That does not validate every earlier fixed-support or predetermined-grid construction.
 
-For the specific full-source finite-window operator, a positive finite-codimension sector can be eliminated in its **energy completion**. The finite effective matrix retains the coupling to the whole infinite sector. Certified residual bounds enclose it from below; Galerkin matrices alone approach from above. No terminating positive test or residual convergence rate is inferred.
+For the specific full-source finite-window operator, a positive finite-codimension sector can be eliminated in its **energy completion**. The finite effective matrix retains the coupling to the whole infinite sector. Certified residual bounds enclose it from below; Galerkin matrices alone approach from above. The older reduction alone did not supply an actual sign or convergence theorem. The reviewed logarithmic-core extension now supplies fixed-window strong-residual convergence and two-sided enclosures, and the selected positive-extension certificate proves the actual unit-window sign. Neither result gives an unconditional all-window sign or a rate uniform in length.
 
 **Significance:** a rigorously bounded lower matrix could certify a whole window, not merely sampled vectors. No actual all-window sign is established. Birman–Schwinger threshold statements use point spectrum, not arbitrary spectrum; a positive complement cannot rescue an existing negative direction.
 
 The heat programme also retains broad-kernel and fixed-resolution exterior results, and its stated large-center First-Hermite region below $(4-\epsilon)\log\log(2+|x|)$. The remaining domain includes bounded centers and unbounded heat parameters. Fixed-compact Brownian expansions and local safe-line Green results are retained at their own scopes, not extended to growing height or the complete critical intertwiner.
 
 [Current operator and heat account](research/integrated/CURRENT_RESULTS.md#operators) · [heat sources](research/integrated/heat_hermite/README.md) · [safe-line sources](research/integrated/safe_line/README.md) · [earlier source-qualified operator spine](research/RESULTS_INDEX.md#inherited-source-results).
+
+<a id="native-sources"></a>
+### Native operators, residuals and causal source geometry
+
+**Whole-function positivity and arithmetic inverses.** The source-defined Weil kernel is positive for every complex L2 test on a window of length at most one, with its complete Fourier tail certified. The logarithmic operator core makes fixed-window lower/upper Schur approximation genuine. Complete prime-power divisor graphs have quantitative inverse bounds on their harmonic complement; exact product-reservoir anchoring costs grow like log log P even with constant centered gaps. The unbounded strong-residual Schur statement requires trial maps into the operator domain. [Current operator statements and repaired proof](research/integrated/native_sources/OPERATORS.md).
+
+**Actual finite completions.** Uniform rational tail capture precedes optimization; four two-jet and three balance-only minima have full-tail reconstructions. A native completion has an unconditional classical-cancellation-based o(Y) full residual bound. This does not change the required power exponent. A coefficient-uniform graph-to-physical comparison necessarily loses order Y/log Y, even preserving the native prefix and the stated moments. [Residual statements, finite classes and repairs](research/integrated/native_sources/RESIDUALS.md).
+
+**Annular and local-detail results.** A fixed noncancelling prime-power annulus gives source-specific sign/count criteria and, using imported finite-height verification plus its complete complement, positivity through the continuum prime scale X<=10^22. Any fixed power saving in the specified failure count would suffice, but is not proved. Exact parity, Green and harmonic representations retain the full coarse coupling; solved detail optimization is not the full norm problem. [Annular and full-lift mathematics](research/integrated/native_sources/RESIDUALS.md#annular).
+
+**Critical causal source.** All-scale Jordan positivity remains distinct from source completeness on the critical contour. The literal factorial source has quantitative finite stability and capture toward its possibly nonzero inner-factor floor. Ordinary compact inputs achieve strong fixed-horizon improvements with their complete future paid. The classical BSY defect and its unit/ramp sensitivity explain why a small fixed trial is not vanishing intrinsic error. [Current causal statements](research/integrated/native_sources/CAUSAL.md).
+
+**Prime energy.** A bounded invertible adapter preserves the original critical discrepancy metric. Unconditional Brun–Titchmarsh control pays the entire square-cell detail tail, while the accumulated cell levels remain open. The exact nonlinear work and endpoint formulations retain all prime-power and mixed terms. [Prime-energy statement and remaining estimate](research/integrated/native_sources/PRIME_ENERGY.md).
+
+**Significance:** these results supply genuine whole-source estimates and complete numerical contracts, while identifying the precise mean, target or signed arithmetic quantity still missing. Their open implications are not multiplied into a new accepted proof. The [proof library](research/integrated/native_sources/SOURCE_INDEX.md) retains the useful predecessor results and method obstructions, not only the latest paper in each sequence.
 
 ### Causal Euler/Dickman completion at the classical line
 
@@ -108,6 +125,8 @@ A horizon-faithful causal correction of the finite Euler product has a full-freq
 
 [Exact seven-point statement](research/integrated/CURRENT_RESULTS.md#seven-point) · [evidence and reproduction entry points](COMPUTATIONS.md).
 
+**Selected native-source evidence.** The newer review selections include the unit-window extension, seven finite residual minima, exact prime-box capacities, the N=32 inverse, the fixed-horizon ordinary realization, compact-domain trials, a complete 65,536-event work campaign, a finite square-grid prime-energy prefix, and the degree-six entropy trial. They retain different targets, feasible classes and assurance levels. Original receipt parsing is not silently upgraded; the selected work replay uses its stricter source-pinned wrapper. [Complete evidence guide](research/integrated/native_sources/EVIDENCE.md).
+
 <a id="structures"></a>
 ## L-families and generalized structures
 
@@ -118,6 +137,8 @@ The filtered-complex work retains its finite support/arity results and condition
 **Significance:** this is mathematical work beyond a list of RH reformulations. It also tests which features do not suffice: nonprincipal family control need not control the principal member, and function-field purity is not a number-field transfer theorem. The native arithmetic binding is still an independent task.
 
 [Representative exact statements and transfer boundaries](research/integrated/CURRENT_RESULTS.md#families) · [family proof/evidence account](reviews/B/REPORT.md) · [research programmes](PROGRAMMES.md#families).
+
+**All-rank full-factor classification.** The selected rational tensor/symmetric-power theorem extends the signed Dickson graph classification to every rank and retains the additional family r=3 mod 4, A=0, B²=C²=2q, with positive sqrt(q) normalization. It supplies reduced-complex and specified monodromy consequences, not a simultaneous curve realization or global automorphy theorem. The former branch-only proof is now resident. [Exact statement and proof route](research/integrated/native_sources/STRUCTURES.md).
 
 ## Related imported work
 

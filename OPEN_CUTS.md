@@ -25,7 +25,7 @@ For Robin's inequality, control the canonical class with unbounded prime support
 <a id="full-positivity"></a>
 ## 3. All-order or full-domain positivity
 
-For the actual-xi Pick programme, bridge the gap from low orders to the complete required hierarchy. For the energy-Schur route, first obtain a rigorous continuum **lower** certificate for the source-defined effective matrix, then control an unbounded prescribed family of full windows. For First-Hermite positivity, cover the whole complement of the proved region, including bounded centers and arbitrarily large heat parameters.
+For the actual-xi Pick programme, bridge the gap from low orders to the complete required hierarchy. For the energy-Schur route, the reviewed candidate supplies the actual unit-window sign and fixed-window lower/upper approximation. Extend the source-qualified certificate beyond that window, or prove a propagation bound covering an unbounded prescribed family. Preserve the distinction between an H^-1 coercive bound and an L2 spectral gap. For First-Hermite positivity, cover the whole complement of the proved region, including bounded centers and arbitrarily large heat parameters.
 
 **Concrete output:** an error-enclosed actual residual matrix respecting exact constraints and all cross terms, or a source-specific propagation lemma that genuinely covers a missing domain. Positive upper Galerkin matrices, finite zero tables, a narrow transition curve and adaptable capture alone do not settle these goals.
 
@@ -52,6 +52,20 @@ The retained causal norm theorem is on $\Re s=1$. The next target is suitable lo
 
 **Concrete output:** a signed discrepancy estimate with explicit dependence on distance from the critical line. Separate norm bounds on exponentially large factors below one do not meet the target.
 
+<a id="native-coherent-energy"></a>
+## 7. Native residual, intrinsic-floor and coarse-energy estimates
+
+The reviewed [native-source candidate](research/integrated/native_sources/README.md) makes several stopping points explicit. Construct prefix-preserving finite polynomials with subpower complete floor-residual energy, or prove a fixed power saving in the exact annular failure count. In the factorial-source route, estimate the actual intrinsic floor or the growing-horizon **output** error rather than merely conditioning its finite Gram. In the prime route, control the accumulated square-cell levels after the summable local detail is removed.
+
+The simple stopped-Mobius source has the exact coherent energy
+
+$$J_N=\sum_{k<N}\frac{M(k)^2}{k(k+1)}+\frac{M(N)^2}{N}
+=\sum_{n\le N}\frac{\mu(n)^2}{n}+2\sum_{n\le N}\frac{\mu(n)M(n-1)}n.$$
+
+Its signed-work upper bound is not supplied by a divisor gap: this norm lies in the channel the gradient annihilates. A useful contribution is a genuinely native estimate for that work, or a source-faithful adapter with a quantified loss. A uniform polylogarithmic graph-to-physical comparison on the entire stated coefficient class is already ruled out; a special estimate for a selected native minimizer is not.
+
+**Concrete output:** one exact-source inequality with its correct norm, complete future and unbounded quantifier; or an independent bounded certificate with no extrapolation. [Operator/coherent statement](research/integrated/native_sources/OPERATORS.md#coherent-source) · [residual targets](research/integrated/native_sources/RESIDUALS.md) · [prime coarse work](research/integrated/native_sources/PRIME_ENERGY.md).
+
 <a id="bounded-contributions"></a>
 ## Bounded contributions that do not require an RH breakthrough
 
@@ -59,6 +73,7 @@ The retained causal norm theorem is on $\Re s=1$. The next target is suitable lo
 |---|---|---|
 | Independent primitive arithmetic | Regenerate a specified Pick control's xi-value rectangles with a distinct directed implementation; keep exact nodes, normalization and division guards | [Finite Pick controls](research/integrated/xi/finite-pick-controls.md), [evidence guide](COMPUTATIONS.md) |
 | A whole-window sign certificate | Bound continuum constraints, integration and rounding errors for the source-specific effective matrix; report a certified lower enclosure or a precise obstruction | [Energy-Schur statement](research/integrated/CURRENT_RESULTS.md#operators) |
+| Independent native-source backend | Reconstruct the unit-window or fixed-horizon certificate with a distinct directed primitive implementation and complete tails; compare exact source and target | [Selected evidence](research/integrated/native_sources/EVIDENCE.md) |
 | Repaired formal source | Implement the entire xi normalization, allow empty/finite/countable spectra, preserve multiplicities, and check source/consumer types together | [Formal status and repair contract](FORMAL_STATUS.md) |
 | Exact finite arithmetic | Independently test a bounded Robin subtree using certified caps, feasibility and rational budget accounting | [Robin statement](research/integrated/CURRENT_RESULTS.md#robin) |
 | A theorem-sized review | Reconstruct one named proof or imported adapter at an exact source, record the first uncertain step and scope | [Research index](research/RESULTS_INDEX.md), [review process](docs/REVIEWING.md) |

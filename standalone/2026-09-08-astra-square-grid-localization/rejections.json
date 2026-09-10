@@ -1,0 +1,18 @@
+{
+  "altered_package_refusals": [
+    "changed_proof",
+    "missing_file",
+    "extra_file",
+    "symlink_payload"
+  ],
+  "altered_result_refusals": [
+    "false_RH",
+    "false_global_tail",
+    "float_alias",
+    "missing_prefix",
+    "wrong_directed_endpoint",
+    "duplicate_JSON"
+  ],
+  "pristine_controls": 2,
+  "schema": "SSQ26-rejection-controls-v1"
+}

@@ -1,0 +1,167 @@
+{
+  "complete": true,
+  "parts": [
+    {
+      "mode": "normal",
+      "part": "controls",
+      "records": [
+        {
+          "checker": "checks.py",
+          "exit": 1,
+          "mutation": "fixtures",
+          "rejected": true
+        },
+        {
+          "checker": "checks.py",
+          "exit": 1,
+          "mutation": "missing_control",
+          "rejected": true
+        },
+        {
+          "checker": "checks.py",
+          "exit": 1,
+          "mutation": "changed_verdict",
+          "rejected": true
+        },
+        {
+          "checker": "checks.py",
+          "exit": 1,
+          "mutation": "false_arithmetic",
+          "rejected": true
+        }
+      ],
+      "scope": "Altered record/source rejection; not a mathematical proof of infinite claims.",
+      "subprocess_refusals": 4
+    },
+    {
+      "mode": "normal",
+      "part": "package",
+      "records": [
+        {
+          "checker": "validate.py",
+          "exit": 2,
+          "mutation": "source_changed",
+          "rejected": true
+        },
+        {
+          "checker": "validate.py",
+          "exit": 2,
+          "mutation": "file_missing",
+          "rejected": true
+        }
+      ],
+      "scope": "Altered record/source rejection; not a mathematical proof of infinite claims.",
+      "subprocess_refusals": 2
+    },
+    {
+      "mode": "normal",
+      "part": "tail_removed",
+      "records": [
+        {
+          "checker": "certificate.py",
+          "exit": 1,
+          "mutation": "tail_removed",
+          "rejected": true
+        }
+      ],
+      "scope": "Altered record/source rejection; not a mathematical proof of infinite claims.",
+      "subprocess_refusals": 1
+    },
+    {
+      "mode": "normal",
+      "part": "wrong_source_error",
+      "records": [
+        {
+          "checker": "certificate.py",
+          "exit": 1,
+          "mutation": "wrong_source_error",
+          "rejected": true
+        }
+      ],
+      "scope": "Altered record/source rejection; not a mathematical proof of infinite claims.",
+      "subprocess_refusals": 1
+    },
+    {
+      "mode": "optimized",
+      "part": "controls",
+      "records": [
+        {
+          "checker": "checks.py",
+          "exit": 1,
+          "mutation": "fixtures",
+          "rejected": true
+        },
+        {
+          "checker": "checks.py",
+          "exit": 1,
+          "mutation": "missing_control",
+          "rejected": true
+        },
+        {
+          "checker": "checks.py",
+          "exit": 1,
+          "mutation": "changed_verdict",
+          "rejected": true
+        },
+        {
+          "checker": "checks.py",
+          "exit": 1,
+          "mutation": "false_arithmetic",
+          "rejected": true
+        }
+      ],
+      "scope": "Altered record/source rejection; not a mathematical proof of infinite claims.",
+      "subprocess_refusals": 4
+    },
+    {
+      "mode": "optimized",
+      "part": "package",
+      "records": [
+        {
+          "checker": "validate.py",
+          "exit": 2,
+          "mutation": "source_changed",
+          "rejected": true
+        },
+        {
+          "checker": "validate.py",
+          "exit": 2,
+          "mutation": "file_missing",
+          "rejected": true
+        }
+      ],
+      "scope": "Altered record/source rejection; not a mathematical proof of infinite claims.",
+      "subprocess_refusals": 2
+    },
+    {
+      "mode": "optimized",
+      "part": "tail_removed",
+      "records": [
+        {
+          "checker": "certificate.py",
+          "exit": 1,
+          "mutation": "tail_removed",
+          "rejected": true
+        }
+      ],
+      "scope": "Altered record/source rejection; not a mathematical proof of infinite claims.",
+      "subprocess_refusals": 1
+    },
+    {
+      "mode": "optimized",
+      "part": "wrong_source_error",
+      "records": [
+        {
+          "checker": "certificate.py",
+          "exit": 1,
+          "mutation": "wrong_source_error",
+          "rejected": true
+        }
+      ],
+      "scope": "Altered record/source rejection; not a mathematical proof of infinite claims.",
+      "subprocess_refusals": 1
+    }
+  ],
+  "schema": "CD26.rejections.v1",
+  "total_refusals": 16
+}

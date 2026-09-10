@@ -1,0 +1,163 @@
+{
+  "actual_refusals": 18,
+  "pristine_full_replays": 4,
+  "rows": [
+    {
+      "case": "pristine_full_FR",
+      "packet": "FR",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "81a6fbe61c3a88bd67b8bffb917cdd4724bbfbbffb9455b8e3f73f6ca6a46598"
+    },
+    {
+      "case": "pristine_full_CD",
+      "packet": "CD",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "113c5f973c148035eb0dd626d2de559ddaeed868008d264158d1ff0e39472bba"
+    },
+    {
+      "case": "pristine_full_MW",
+      "packet": "MW",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "0992985d007f7bff8a559571558bd5525d791795a590ad309dcf040646242681"
+    },
+    {
+      "case": "pristine_full_SSQ",
+      "packet": "SSQ",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "811dd74b83a9626b78167471867b9d64beae4031fcdb21f46e7aa11e137a0d02"
+    },
+    {
+      "case": "float_event_count",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: floating/nonfinite JSON value: 65536.0\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "boolean_checkpoint",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: typed frozen receipt mismatch\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "missing_checkpoint",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: typed frozen receipt mismatch\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "changed_numeric_endpoint",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: typed frozen receipt mismatch\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "false_RH_status",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: typed frozen receipt mismatch\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "extra_key",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: typed frozen receipt mismatch\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "duplicate_last_wins",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: duplicate JSON key: integer_events\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "nonfinite_json",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: floating/nonfinite JSON value: NaN\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "empty_object",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: typed frozen receipt mismatch\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "truncated_json",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: Expecting value: line 1 column 19 (char 18)\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "nonobject",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: receipt must be an object\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "symlink_receipt",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: receipt file\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "oversized_receipt",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: receipt size cap\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "changed_source",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: source blob mismatch: MW/certify.py\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "missing_source",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: source inventory mismatch\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "extra_source",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: source inventory mismatch\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "source_symlink",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: source symlink\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "root_symlink",
+      "packet": "MW",
+      "returncode": 2,
+      "stderr": "REJECT: source root\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "schema": "riemann-final-review-replay-cli-tests-v1",
+  "scope": "Malformed/type-aliased/hash-mismatched receipts and altered source inventories are rejected. Four pristine paths execute complete producer reconstruction.",
+  "skips": 0
+}

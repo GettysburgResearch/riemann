@@ -1,0 +1,46 @@
+{
+  "repository": "GettysburgResearch/riemann",
+  "base": "9e05a2b345369cd16c0973c531650eb37727445e",
+  "parents": [
+    {
+      "commit": "9e05a2b345369cd16c0973c531650eb37727445e",
+      "path": "standalone/2026-09-07-astra-entropy-feedback/PROOF.md",
+      "bytes": 10794,
+      "git_blob": "9fd9ead5d3d765ea1a6213ac931a216a6ac49b3f",
+      "sha256": "d4acd6a7469c9a3f41c7998d08fac351624672e237e34dcb388a3b9aa954dd9c",
+      "scope": "Read source; not an independent acceptance verdict or a rerun of the parent mathematical suite."
+    },
+    {
+      "commit": "b6635a70a75b60050177d5cde67e911093698664",
+      "path": "standalone/2026-09-07-astra-logarithmic-domain-transfer/PROOF.md",
+      "bytes": 16133,
+      "git_blob": "f8e74b694038176a2d5bc426832158fcde12d094",
+      "sha256": "2cc3588fcb1f707b2ed459178ca2d4f75b5a6b84b792a7af3effe7475e8faa50",
+      "scope": "Read source; not an independent acceptance verdict or a rerun of the parent mathematical suite."
+    }
+  ],
+  "external": [
+    {
+      "source": "NIST DLMF 25.10",
+      "url": "https://dlmf.nist.gov/25.10",
+      "used": "Classical localization and reflection of zeta zeros."
+    },
+    {
+      "source": "Lee and Nosal, arXiv:2312.05628",
+      "url": "https://arxiv.org/abs/2312.05628",
+      "used": "RH-conditional sqrt(x) log^2 x prime error ONLY in the conditional converse. Abstract checked; not a replay of their proof or constants."
+    },
+    {
+      "source": "Johnston and Yang, arXiv:2204.01980",
+      "url": "https://arxiv.org/abs/2204.01980",
+      "used": "Classical unconditional PNT-shaped error. Abstract checked; no explicit numerical constant imported into computations."
+    }
+  ],
+  "classical_analysis": [
+    "Fourier inversion and Parseval with the conventions in PROOF.md",
+    "Minkowski integral inequality",
+    "Laguerre orthogonality, with bounded exact polynomial checks only",
+    "Euler product, floor-integral continuation and Stieltjes integration"
+  ],
+  "novelty": "No external novelty or priority claim; the exact source-specific endpoint estimate is submitted for review."
+}

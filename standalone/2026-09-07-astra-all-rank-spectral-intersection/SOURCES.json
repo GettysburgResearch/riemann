@@ -1,0 +1,31 @@
+{
+  "base_commit": "38a9494be21e85e26b04df1c7c2fdfccfc3c657d",
+  "classical_inputs": [
+    "Eigenvalues and weights of symmetric powers, with their elementary formulas supplied.",
+    "A rational algebraic integer is an integer; a root-of-unity trace lies in [-2,2].",
+    "For T3 only: semisimple-factor structure of a reductive Lie algebra and the highest-weight classification of finite-dimensional sl2 representations."
+  ],
+  "files": [
+    {
+      "git_blob": "000879c7d8da092a6f2f30c2eccec053b302bdae",
+      "path": "research/l-families/atlas/function_field/TENSOR_SYMMETRIC_POWER_RESEARCH_MAP.md",
+      "role": "Names the all-rank residual and nonmonomial questions and the odd-prime boundary; research orientation, not an assumed full converse."
+    },
+    {
+      "git_blob": "c4ffdd465935b68c6f26a152ad4279d4f2087baf",
+      "path": "research/l-families/atlas/function_field/ELLIPTIC_TENSOR_SYMMETRIC_POWER_SUBTORUS_RIGIDITY.md",
+      "role": "The known integer-monomial graph classification and central-sign convention; its elementary proof is reproduced, not claimed newly discovered."
+    },
+    {
+      "git_blob": "f4e8cf80e4ee940c77a28a5fef28d309ca77481b",
+      "path": "research/l-families/atlas/function_field/ELLIPTIC_TENSOR_SYM3_SYM7_SPECTRAL_INTERSECTION.md",
+      "role": "Prior rank-three rational/integral comparison and raw q^(3/2) dilation; first 230 lines read. No coefficient-elimination proof is imported into the new all-rank proof."
+    }
+  ],
+  "literature_boundary": "The two graph identities and monomial classification are credited to PR752. Basic representation theory is classical (e.g. Fulton-Harris, Representation Theory, GTM129, 1991). No external novelty or priority claim and no completed full-text literature audit.",
+  "parent_commit": "10446e8ea9c55162c317810f63c1f7a379466459",
+  "parent_pr": 752,
+  "schema": "riemann.tsr26.sources.v1",
+  "scope": "Complete rational raw spectral classification for q>0 and r>=1, not automorphy, simultaneous curve realization, a full arbitrary-complex torsion list or scheme multiplicities.",
+  "trust": "Connected GitHub reads pinned these commit/path/blob identities. Local validation enforces the records; it does not re-download or authenticate unbundled predecessor payloads. No upstream census, producer or theorem checker was executed."
+}

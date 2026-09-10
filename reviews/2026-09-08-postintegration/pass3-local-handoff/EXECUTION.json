@@ -1,0 +1,45 @@
+{
+  "accepting_assertions": 4966,
+  "author_package_suite": false,
+  "checker": {
+    "bytes": 18812,
+    "git_blob": "dfbc77dce3e92616e96f42b53104e4402a8fe2ea",
+    "imports_author_module": false,
+    "path": "independent_checks.py",
+    "sha256": "83f6977778cb97113b45ca82d88fec6de9b72a05955b4bb63bb807f8d7810b0b"
+  },
+  "environment_limit": "GitHub connection exposed read actions, not write actions; direct GitHub DNS failed. Original immutable reviews were not modified.",
+  "external_zero_census_rerun": false,
+  "finite_validation_is_not_infinite_proof": true,
+  "fresh_lean_build": false,
+  "full_repository_checkout": false,
+  "local_metadata_checks": {
+    "census": 45,
+    "files": 23,
+    "local_document_links": 16,
+    "recommendations": 46,
+    "review_navigation_edges": 16,
+    "source_syntax": true
+  },
+  "outputs_byte_identical": true,
+  "pass": 3,
+  "profile_coverage_cells_within_assertions": 4095,
+  "recorded_utc": "2026-09-08T14:28:50.058490+00:00",
+  "remote_ci": false,
+  "remote_publication": false,
+  "rh_proved": false,
+  "runs": [
+    {
+      "command": "python3 -I -S -B independent_checks.py --output evidence/independent-normal.json",
+      "exit_code": 0,
+      "result_sha256": "def5d9ada8b59531e964be6e059a5dcec3b1503dbd9a455e3499ad9f077bfcde"
+    },
+    {
+      "command": "python3 -I -S -B -O independent_checks.py --output evidence/independent-optimized.json",
+      "exit_code": 0,
+      "result_sha256": "def5d9ada8b59531e964be6e059a5dcec3b1503dbd9a455e3499ad9f077bfcde"
+    }
+  ],
+  "schema": "riemann.review.execution.v1",
+  "scientific_acceptance_changed": false
+}

@@ -1,0 +1,92 @@
+{
+  "RH_proved": false,
+  "actual_source_run": "separate source.normal.json; not a high-rank campaign",
+  "analytic_theorems_machine_checked": false,
+  "arithmetic": "MIXED",
+  "checks": [
+    {
+      "fixtures": 3,
+      "name": "factorial_cells_and_Laplace_identity",
+      "passed": true
+    },
+    {
+      "fixtures": 2,
+      "name": "exact_cell_antiderivatives",
+      "passed": true
+    },
+    {
+      "fixtures": 2,
+      "name": "actual_Xi_rational_prefactors",
+      "passed": true
+    },
+    {
+      "fixtures": 3,
+      "name": "seventh_order_Jordan_desmoothing",
+      "passed": true
+    },
+    {
+      "fixtures": 4,
+      "name": "uniform_short_time_constants",
+      "passed": true
+    },
+    {
+      "fixtures": 13,
+      "name": "causal_allpass_power_expansions",
+      "passed": true
+    },
+    {
+      "fixtures": 6,
+      "name": "positive_source_pair_full_spectrum_and_domain_defect",
+      "passed": true
+    },
+    {
+      "fixtures": 27,
+      "name": "synthetic_Toeplitz_projection_tower",
+      "passed": true
+    },
+    {
+      "fixtures": 3,
+      "name": "coercivity_and_memory_counterexamples",
+      "passed": true
+    },
+    {
+      "fixtures": 258,
+      "name": "literal_finite_Mobius_inverse",
+      "passed": true
+    },
+    {
+      "fixtures": 1,
+      "name": "infinite_source_tail_primitive",
+      "passed": true
+    },
+    {
+      "fixtures": 676,
+      "name": "directed_integer_arithmetic_against_exact_rationals",
+      "passed": true
+    },
+    {
+      "fixtures": 6,
+      "name": "source_input_refusals",
+      "passed": true
+    }
+  ],
+  "fixtures": 1004,
+  "implementation": "EXACT_RATIONAL_SYMBOLIC_AND_DIRECTED_DYADIC",
+  "named_checks": 13,
+  "schema": "csm26.exact-bounded-controls.v1",
+  "synthetic_projection_errors": [
+    "8/9",
+    "4/5",
+    "16/21",
+    "592/781",
+    "2432/3213",
+    "64/85",
+    "256/341",
+    "156928/209101",
+    "628736/837837",
+    "1024/1365",
+    "4096/5461",
+    "40259584/53677261",
+    "161054720/214731981"
+  ]
+}

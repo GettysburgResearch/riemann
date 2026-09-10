@@ -13,6 +13,12 @@ The project uses exact computation, directed intervals, symbolic algebra and exp
 | Finite algebraic controls | Declared identities, specializations, counterexamples and exact finite matrix calculations | [Structural proof/check account](reviews/B/REPORT.md), [source/operator controls](reviews/C/pass4-math-completion/VALIDATION.md) | Finite controls do not machine-prove infinite analytic limits or establish every atlas, witness or census |
 | Other retained finite source controls | Specified carrier exclusions and the repaired scalar screw range | [Extended index](research/RESULTS_INDEX.md#inherited-source-results), [boundary/coverage packet](research/integrated/corrections/proof-boundary-corrections.md) | Source normalization, endpoint coverage and backend independence remain specific to each object |
 
+## Native-source evidence selected for the integration candidate
+
+The [native-source evidence guide](research/integrated/native_sources/EVIDENCE.md) adds the actual unit-window certificate, finite residual minima, graph inverse/capacity calculations, fixed-horizon realizations, full stopped-input work, square-grid sample prefixes and the entropy trial. Each entry identifies its precise numerical object and inherited execution contract. Their integration-tree approval remains pending; these rows do not certify arbitrary original programs.
+
+The original Mobius-work expected-receipt parser accepts duplicate keys and some numeric aliases. The numerical output reproduced and has a separate direct-integration reconstruction. Selected acceptance uses the [strict source-pinned wrapper](reviews/2026-09-08-postintegration/pass4/replay.py), preserving the original producer and [probe results](reviews/2026-09-08-postintegration/pass4/evidence/mw-original-parser.json). This is a receipt-contract repair, not a changed mathematical bound.
+
 ## Four questions before using an artifact
 
 **What are the primitive inputs?** Exact integers/rationals and independently enclosed special-function values are different assurance classes. Check the actual function, source coefficients, node set, normalization and division guards.
@@ -32,5 +38,7 @@ Exploratory eigenvalues, finite phase efficiencies and high-precision plots rema
 ## Repository validation is a separate evidence layer
 
 Use [canonical/CURRENT.json](canonical/CURRENT.json) for the authenticated scoped verifier and its documented commands. Its role is source integrity, navigation and dependency handling—not theorem proving. The reported graph/full-checkout defect was repaired and its exact merged tree was locally validated in [PR #802](https://github.com/GettysburgResearch/riemann/pull/802). That receipt is tied to its tested commit, not an automatic PASS for every later edit.
+
+The [candidate structure verifier and review checklist](integration/2026-09-08/README.md) additionally cover the new source snapshots and navigation. Neither that structural check nor the prior baseline receipt is a new numerical campaign.
 
 Exact run counts, skipped tests, earlier payload-only results, reviewer execution histories and source-freeze mechanics remain in [integration/audit records](integration/README.md), [the graph repair record](integration/2026-09-06/graph-fix/README.md), and the linked certificate packets. This editorial account does not claim a new heavy replay, fresh Lean build, remote CI success or publication clearance.

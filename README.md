@@ -10,11 +10,15 @@ Its analytic continuation connects the distribution of primes with complex analy
 
 **RH remains unproved here. There is no accepted proof or disproof, and no certified off-critical zeta zero.** The project has produced useful theorems, exact reductions, finite certificates and counterexamples to proposed mechanisms. These are a research foundation, not a completed solution.
 
+**Integration candidate:** newer native-source selections on this branch are reviewed recommendations awaiting review of the combined tree. The [published scientific baseline](canonical/CURRENT.json) is unchanged; no new RH conclusion or blanket executable acceptance is implied.
+
 ## Contribute
 
 **Working from your phone?** See the [phone tutorial](docs/PHONE.md).
 
 Our ambition is to resolve this together. Existing programmes are starting points, not a fixed agenda: new directions and unfinished exploratory PRs are welcome. Leave useful findings and failed attempts in the repository so others can build on them.
+
+**Prize commitment:** Any prize money awarded to this project for resolving the Riemann Hypothesis will be donated to fund bednets against malaria.
 
 | Stage | How it works |
 |---|---|
@@ -53,11 +57,13 @@ Ask your agent to review work since the last integration, run exploratory comput
 
 **Certificates and structural mathematics.** Retained Robin and complex Pick controls, a repaired fixed-$P_{61}$ certificate, and a seven-point continuum kernel inequality have explicit evidence contracts. Work on L-function families, function fields, recurrence/cofactor algebra and filtered complexes provides additional exact or conditional components. Their connection to the actual zeta source is a separate question. [Certificates](RESULTS.md#certificates) · [Families and structures](RESULTS.md#structures).
 
-These statements summarize the cumulative integrated record, including earlier work. Classical inputs are credited in the linked proofs; repository acceptance is not a claim of external novelty.
+**Whole-source advances and precise obstructions.** The reviewed native-source selections add positivity for every complex test on a unit window, quantitative complete divisor-graph inverses, full-tail arithmetic minima and ordinary fixed-horizon causal realizations. An all-scale Jordan theorem and an all-rank local spectral classification extend earlier components. Exact source comparisons also show why a graph gap, a small local detail or convergence to an intrinsic floor does not supply the remaining arithmetic upper bound. [Current statements and relationships](research/integrated/native_sources/README.md) · [evidence and its limits](research/integrated/native_sources/EVIDENCE.md).
+
+These statements describe a cumulative research foundation, with the newer selections explicitly marked as an integration candidate. Classical inputs are credited in the linked proofs; repository acceptance is not a claim of external novelty.
 
 ## Integrated baseline and active research
 
-**Current integration:** the September 6, 2026 A/B/C/D consolidation builds on the earlier baseline through PR #707; see [exact source coverage and exclusions](integration/2026-09-06/README.md). Later branch revisions remain exploratory unless separately reviewed and integrated.
+**Published baseline:** the cumulative consolidation recorded in [the current registry](canonical/CURRENT.json), with its [exact inherited source coverage](integration/2026-09-06/README.md). **This branch's candidate extension:** [reviewed native-source mathematics](research/integrated/native_sources/README.md), with [frozen selection, repairs and final-review requirements](integration/2026-09-08/README.md). Neither later branch revisions nor archived author programs become accepted automatically.
 
 The pages above describe reviewed components at their recorded sources, with later corrections applied. They do not certify every file on main. [Active research](PROGRAMMES.md#active-research), including newer branch revisions, remains discoverable but is not accepted merely because it exists or has passed an author's tests. Earlier results retain their inherited review scope unless an applicable correction changes it.
 

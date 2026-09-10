@@ -1,0 +1,12 @@
+from	to	type	reason
+outer_Euler_completion	OEC26.T1	PROVED_WITH_CLASSICAL_INPUTS	Poisson representation and safe normalization; no inner factor
+OEC26.T1	OEC26.T2	PROVED_CONSTRUCTION	Explicit derivative agrees with native arithmetic before log X
+OEC26.T2	OEC26.T3	CONDITIONAL_ON_HYPOTHETICAL_ZERO	Full multiplicity and delayed tail cost
+RH	OEC26.T4	CLASSICAL_INPUT_PLUS_NATIVE_ESTIMATE	Conditional theta bound; full frequency integral
+OEC26.T3 + subpower_subsequence	RH	PROPOSED_VALID_IMPLICATION	No fixed shifted-line family needed; reflection retains all zeros
+RH	subpower_subsequence	PROPOSED_VALID_IMPLICATION	T4; not used in zero-exclusion proof
+finite_Mellin_entropy_moment	OEC26.T5	CONDITIONAL_EXACT	Unnormalized Abel averaging creates analytic logarithm
+all_positive_Mellin_entropy_moments	RH	PROPOSED_VALID_IMPLICATION	Apply T5 at b=1/2 and every epsilon>0
+ordinary_PNT	OEC26.OPEN	NOT_ESTABLISHED	Available bound still has exponent 1-b
+bounded_signed_log_mean	OEC26.OPEN	INVALID_GENERIC_INFERENCE	Does not bound the positive logarithmic part
+OEC26.C2	OEC26.OPEN	NO_IMPLICATION	One finite cutoff never supplies unbounded growth control

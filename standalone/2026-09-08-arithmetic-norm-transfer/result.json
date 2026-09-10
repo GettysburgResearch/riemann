@@ -1,0 +1,40 @@
+{
+  "analytic_theorems_machine_verified": false,
+  "bounded_panels": 728,
+  "fixed_power_saving_proved": false,
+  "groups": {
+    "complete_formal_prime_log_graphs": 7,
+    "exact_budget_identities": 4,
+    "finite_jet_variations": 27,
+    "independent_mobius_values": 512,
+    "physical_interval_lower_bounds": 31,
+    "rational_continuum_profiles": 99,
+    "three_constraint_algebra": 48
+  },
+  "imports_not_replayed": [
+    "Lee--Leong Theorem 1.2",
+    "classical zeta convexity"
+  ],
+  "maximum_graph_source_integer": 256,
+  "native_bound": "E(p_Y^c) << Y exp(-c (log Y)^(3/5) (log log Y)^(-1/5))",
+  "new_native_minimum_computed": false,
+  "parent": "31a35a90b0b924dc98a2c89c463fb59577f45a4e",
+  "profile_certificate": {
+    "cutoff": 4096,
+    "decimal_denominator": 1000000000000,
+    "exact_partial_sum_sha256": "6fd9a72f26a7cd19f1e5c29d1bec4f8bfbecf4575041a01b86ca0cffb16f5497",
+    "integrated_cells": 4095,
+    "outward_numerators": [
+      1704219450036,
+      1704219498544
+    ],
+    "tail_bound": [
+      10000,
+      206158430208
+    ]
+  },
+  "rh_proved": false,
+  "scope": "No numerical zeta or zero data, no numerical contour, no parent code executed.",
+  "sharp_variation_transfer": "Gamma(Y) is of order Y/log Y",
+  "status": "PROPOSED_COMPONENT_PROOFS_INDEPENDENT_REVIEW_REQUIRED"
+}
