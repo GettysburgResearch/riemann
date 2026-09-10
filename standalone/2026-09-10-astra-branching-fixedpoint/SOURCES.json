@@ -1,0 +1,63 @@
+{
+  "base": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "brownian_pr": {
+    "head": "4a68887f9f713aea7f63444030379fb864766a2d",
+    "number": 296,
+    "reading": "live metadata, not source-proof acceptance",
+    "role": "attribution and distinction from finite Green--Robin mixtures"
+  },
+  "date": "2026-09-10",
+  "external": [
+    {
+      "authors": [
+        "Philippe Biane",
+        "Jim Pitman",
+        "Marc Yor"
+      ],
+      "id": "BPY",
+      "not_claimed": "new invention of Brownian-Xi correspondence or of the distributional equation",
+      "reading": "parsed PDF; screenshots of PDF pages 6 and 12 (printed pages 7 and 13)",
+      "title": "Probability laws related to the Jacobi theta and Riemann zeta function and Brownian excursions",
+      "url": "https://arxiv.org/abs/math/9912170",
+      "used": "Proposition 1, equations (6), (24), (45); source law and classical fixed-point identity",
+      "version": "v1"
+    },
+    {
+      "id": "DLMF-gamma",
+      "reading": "official integral representation page",
+      "url": "https://dlmf.nist.gov/5.9",
+      "used": "digamma/Binet identity; elementary remainder is proved in PROPOSAL.md"
+    },
+    {
+      "id": "classical-analysis",
+      "role": "standard mechanisms, reconstructed at needed scope except explicitly credited whole-source BPY theorem",
+      "used": "quadratic Wasserstein coupling, Laplace uniqueness, Euler product for sinh, Hurwitz and the classical zeta zero strip"
+    }
+  ],
+  "ferromagnetic_pr": {
+    "head": "7ff754c7347d6ee9d59608e562e469351b3d37e7",
+    "number": 842,
+    "path": "standalone/2026-09-10-theta-ferromagnetic-synthesis/PROPOSAL.md",
+    "reading": "live metadata and principal PROPOSAL.md sections; no author executable replay",
+    "role": "context and a potential zero-safe realization class; six-moment certificate not imported"
+  },
+  "not_performed": [
+    "full repository audit or checkout validation",
+    "parent numerical campaigns",
+    "actual zeta zero evaluation",
+    "interval zero count at a positive branching depth",
+    "Lean or remote CI",
+    "independent mathematical acceptance"
+  ],
+  "open": [
+    "critical-strip zero preservation beyond the gamma starting family",
+    "zero-safe approximate fixed points or exact ferromagnetic inverse realization",
+    "RH"
+  ],
+  "publication": {
+    "author_session_pushed": false,
+    "prepared_branch": "research/astra/20260910-branching-fixedpoint",
+    "scope": "new packet only; no main/other branch/status/settings changes"
+  },
+  "schema": "BSR26-source-1"
+}
