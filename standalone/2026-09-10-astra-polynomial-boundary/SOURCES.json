@@ -1,0 +1,42 @@
+{
+  "status": "PROPOSED component arguments; requested inequality OPEN",
+  "parent": {
+    "repository": "GettysburgResearch/riemann",
+    "pr": 845,
+    "sha": "b9ccd03a681a73e91fb7bbfb7a3b97766fe8285e",
+    "path": "standalone/2026-09-10-astra-safe-source-kernel/PROOF.md",
+    "git_blob": "5d4c2738f30b40b9b18874607ad061b5b096d7f3",
+    "sha256": "958c706846e3eb11d732dee717d7b6d5407a316146a900128964f9595d78068e",
+    "bytes": 19233,
+    "used": "Exact definitions and goal Q-AC28/AC28-7. The new proofs rederive their own domain, remainder, and witness claims. No parent theorem is promoted."
+  },
+  "main_observed": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "external": [
+    {
+      "source": "NIST DLMF 25.2, especially equation 25.2.8",
+      "url": "https://dlmf.nist.gov/25.2",
+      "scope": "Classical zeta continuation and Euler summation; webpage read. Odd centered remainder is proved in the manuscript."
+    },
+    {
+      "source": "NIST DLMF 25.10; Hardy critical-line existence",
+      "url": "https://dlmf.nist.gov/25.10",
+      "scope": "Classical existence of a critical-line zero and symmetry. No zero coordinate or simplicity assumption."
+    },
+    {
+      "source": "Dixit, Kumar, Maji, Zaharescu (2018), JMAA 466, 307-323, arXiv:1712.08435",
+      "url": "https://arxiv.org/abs/1712.08435",
+      "scope": "Primary research abstract confirms the classical Hardy input. Only the abstract inspected; no new result of that paper used."
+    },
+    {
+      "source": "Baez-Duarte, Arithmetical Aspects of Beurling's Real Variable Reformulation, arXiv:math/0011254",
+      "url": "https://arxiv.org/abs/math/0011254",
+      "scope": "Prior-art orientation from abstract only; no theorem imported from an unread full proof."
+    }
+  ],
+  "other_classical_inputs": [
+    "Bernstein uniform approximation, proved directly here from binomial variance",
+    "Young L1-L2 convolution inequality",
+    "classical Machin identity and Bernoulli even-zeta formula, bounded test primitives only"
+  ],
+  "priority": "No external priority or novelty claim. Parent already proves zero exclusion and eta=0 failure by another method; its multiplicity lower bound is sharper."
+}

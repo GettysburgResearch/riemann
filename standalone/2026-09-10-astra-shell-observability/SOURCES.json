@@ -1,0 +1,82 @@
+{
+  "schema": "AC27/source-record/v1",
+  "status": "PROPOSED_COMPONENTS; Q_AC26_AND_QWEAK_OPEN; RH_UNPROVED",
+  "repository": "GettysburgResearch/riemann",
+  "source_pr": 845,
+  "parent_commit": "be78f076b9abe8d8d6a40c14f71d0df36a4e0407",
+  "parent_tree": "9e59b95e82a900c8dd541b50cbf17d442b003cc6",
+  "main_observed": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "read_date_utc": "2026-09-10",
+  "parent_proof": {
+    "path": "standalone/2026-09-10-astra-arithmetic-coercivity/PROOF.md",
+    "git_blob": "822f24c624af00675ee42795d9354eecc6c2349b",
+    "sha256": "2c88a9cd400d638a56bbac1ca8e16324da66c4089cda9459b84e26e838f997a7",
+    "bytes": 17112,
+    "use": "Exact B,V,D,L definitions; Q-AC26 conditional RH implication and its explicitly imported converse; inherited nonnative control. Whole local proof read; live source pin and blob identity checked."
+  },
+  "sources": [
+    {
+      "id": "DLMF25.6",
+      "url": "https://dlmf.nist.gov/25.6",
+      "use": "Classical zeta(2),zeta(4) values in the global derivative trace. HTML table inspected; no numerical transcendental certificate needed."
+    },
+    {
+      "id": "DLMF25.10",
+      "url": "https://dlmf.nist.gov/25.10",
+      "use": "Classical existence of a critical-line zero and zeta analyticity. HTML inspected. No RH, simplicity, numerical zero locations or zero-count computation imported."
+    },
+    {
+      "id": "Soundararajan2008",
+      "url": "https://arxiv.org/abs/0705.0723",
+      "use": "Classical RH-to-Mertens implication, ONLY after assuming Q-AC26 (which implies RH), or in the explicit converse for Qweak. Abstract/metadata inspected; no quantitative theorem from the paper is reproduced or numerically evaluated."
+    },
+    {
+      "id": "BordellesCloitre2009",
+      "url": "https://eudml.org/doc/230674",
+      "journal_page": "https://www.emis.de/journals/JIPAM/article1118.html",
+      "use": "Prior art for integer triangular-matrix and singular-value approaches. Search metadata checked; direct journal open redirected unsuccessfully. No new paper theorem is imported."
+    }
+  ],
+  "claims": [
+    {
+      "id": "AC27-1",
+      "status": "PROPOSED_EXACT_GLOBAL",
+      "scope": "Infinite Hilbert--Schmidt derivative trace and full tail, finite-section inequality and sign conjugacy. Not boundedness of an infinite V."
+    },
+    {
+      "id": "AC27-2",
+      "status": "PROPOSED_EXACT_WITH_CLASSICAL_INPUT",
+      "scope": "Complete native finite mean-row identity and divergence of raw transmission in every fixed small-relative-forcing sector; uses existence of a critical-line zero."
+    },
+    {
+      "id": "AC27-3",
+      "status": "PROPOSED_UNIFORM_ON_DECLARED_RANGE",
+      "scope": "Full operator approximation with squared error 200q^6/A, A>=q; moving q allowed only with explicit error retained."
+    },
+    {
+      "id": "AC27-4",
+      "status": "PROPOSED_CONDITIONAL_NECESSITY",
+      "scope": "Q-AC26 implies native future/past inequality. Under Q-AC26, every actual critical zero forces a specified lower cost for C_eta; no upper bound supplied."
+    },
+    {
+      "id": "AC27-5",
+      "status": "PROPOSED_EXACT_FINITE",
+      "scope": "Four complete band inequalities and a combined native counterexample at A=81; not all A."
+    },
+    {
+      "id": "Qweak",
+      "status": "OPEN",
+      "scope": "Subpower-defect all-vector inequality; elementary equivalence with RH does not establish it."
+    }
+  ],
+  "overlap_check": "Targeted main-code and PR-text searches for AC27 returned no matches. This is not an exhaustive historical priority survey. Prior toy kernel and matrix framework explicitly credited.",
+  "computation": {
+    "checker": "One standard-library checker, with separate divisor recurrence versus trial Mobius, and rational LDL versus integer Bareiss paths. Same author; not independent peer review.",
+    "semantic_sha256": "8db1e2fff6b17b26ae432d115ce59576cd5fd7d3a0ee45b01b8528ed078473e0",
+    "zeros_evaluated": 0,
+    "numerical_contours": 0,
+    "finite_expected_payload": "Reconstructed, not accepted by hash alone. Large exact fractions summarized by outward 48-bit rational intervals plus exact-object digests."
+  },
+  "redistribution": "No external PDFs, binary payloads, font files or third-party full texts included.",
+  "unreviewed": "Every new proof remains author-proposed; parent mathematical statuses unchanged. No repository-wide validator, full authenticated checkout, formal proof assistant, remote CI or all-cutoff compactness verification claimed."
+}
