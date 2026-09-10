@@ -1,0 +1,104 @@
+{
+  "gamma_dirichlet_controls": [
+    {
+      "gamma_pair_shape": 5,
+      "left_first_pole": -10,
+      "lower_support": [
+        1,
+        1
+      ],
+      "n": 0,
+      "right_first_pole": 11
+    },
+    {
+      "gamma_pair_shape": 10,
+      "left_first_pole": -20,
+      "lower_support": [
+        1,
+        4
+      ],
+      "n": 1,
+      "right_first_pole": 21
+    },
+    {
+      "gamma_pair_shape": 20,
+      "left_first_pole": -40,
+      "lower_support": [
+        1,
+        16
+      ],
+      "n": 2,
+      "right_first_pole": 41
+    },
+    {
+      "gamma_pair_shape": 40,
+      "left_first_pole": -80,
+      "lower_support": [
+        1,
+        64
+      ],
+      "n": 3,
+      "right_first_pole": 81
+    },
+    {
+      "gamma_pair_shape": 80,
+      "left_first_pole": -160,
+      "lower_support": [
+        1,
+        256
+      ],
+      "n": 4,
+      "right_first_pole": 161
+    },
+    {
+      "gamma_pair_shape": 160,
+      "left_first_pole": -320,
+      "lower_support": [
+        1,
+        1024
+      ],
+      "n": 5,
+      "right_first_pole": 321
+    },
+    {
+      "gamma_pair_shape": 320,
+      "left_first_pole": -640,
+      "lower_support": [
+        1,
+        4096
+      ],
+      "n": 6,
+      "right_first_pole": 641
+    }
+  ],
+  "orbit_zero_preservation_proved": false,
+  "phase": {
+    "D": {
+      "bits": 256,
+      "hi_hex": "-0x16d86eda354ce73e7762cb8415587d34b540bb6be5b10c5f8675078506f4da833",
+      "lo_hex": "-0x16d86eda354d2e97ea85495001bfc08fcaabb01c9525548d201d706034c54ae81"
+    },
+    "beta_shape": 5,
+    "bracket": [
+      "-1.427840092064",
+      "-1.427840092063"
+    ],
+    "degree": 240,
+    "depth": 1,
+    "full_series_error": "13680516840696698875061549116904517145985848202321395115443788796282000087858463793133689111301697221089095064173119937946799215/1560874275157996115690798614896583152874299071332485575429578479812685869409882810060153051531745985579913465560703311447723987839644142653145088",
+    "gamma_pair_shape": 10,
+    "initial_gamma_shape": "5/2",
+    "meaning": "negative derivative of the modulus-ratio logarithm; NOT a zero certificate",
+    "mixing_series_square_modulus": {
+      "bits": 256,
+      "hi_hex": "0xa9667416e3f31441826b5b7a615d6bb271971427957d1610158e2b9b8eeaf",
+      "lo_hex": "0xa9667416e3f25b86c5632c9c4b154ace9c7ecd5fccaf2faaf2f93b2cbf059"
+    },
+    "point_imaginary": 23,
+    "point_real": "1/2"
+  },
+  "rh_proved": false,
+  "schema": "BDR26-1",
+  "source_head": "e0b82da7ecdd4ed21e47e8b6adbb8c5182eac048",
+  "source_pr": 853
+}

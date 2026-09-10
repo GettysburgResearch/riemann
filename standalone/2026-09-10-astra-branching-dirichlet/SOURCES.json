@@ -1,0 +1,95 @@
+{
+  "base_head": "e0b82da7ecdd4ed21e47e8b6adbb8c5182eac048",
+  "base_pr": 853,
+  "classical_sources": [
+    {
+      "scope": "classical source identity inherited at parent normalization; abstract/author account searched, no fresh full PDF audit",
+      "title": "Biane--Pitman--Yor, Probability laws related to the Jacobi theta and Riemann zeta function and Brownian excursions",
+      "url": "https://arxiv.org/abs/math/9912170"
+    },
+    {
+      "scope": "classical background for inherited interval backend and gamma-ratio limit",
+      "title": "DLMF Gamma function integral and asymptotic formulas",
+      "url": "https://dlmf.nist.gov/5.9"
+    },
+    {
+      "scope": "classical reciprocal-gamma growth and ratio asymptotics",
+      "title": "DLMF gamma asymptotics",
+      "url": "https://dlmf.nist.gov/5.11"
+    }
+  ],
+  "parent_unchanged_files": [
+    {
+      "bytes": 19892,
+      "git_blob": "418b60559a49545db1d0cc37ba5768fac80736e5",
+      "path": "standalone/2026-09-10-astra-branching-order/PROOF.md",
+      "sha256": "c76acb916a723137cb1cdf0dfe88cfbe4de212feacedc50ad81f7ab882bb4b93"
+    },
+    {
+      "bytes": 3270,
+      "git_blob": "02107ff06cab808df8a274a9129f40665128f2b7",
+      "path": "standalone/2026-09-10-astra-branching-order/README.md",
+      "sha256": "0e61c633bd0711dab64f8d61500e39ddee265cf0e9708e4ca40ae790ecec85d4"
+    },
+    {
+      "bytes": 624,
+      "git_blob": "6f583d9dafb1c47665e9e29713e3ee23184b38e5",
+      "path": "standalone/2026-09-10-astra-branching-order/SHA256SUMS",
+      "sha256": "3a158331670547ed81b5eb1215c6f94f5b3fe43aba60252a3d89597465ef2e80"
+    },
+    {
+      "bytes": 2312,
+      "git_blob": "d31e2a16d6531e065247b9bffa377443f3843ed5",
+      "path": "standalone/2026-09-10-astra-branching-order/SOURCES.json",
+      "sha256": "12ac43bb37bec45cbbd0e51b03926c7d46557775b667e904fc0568f7942bf7e6"
+    },
+    {
+      "bytes": 7793,
+      "git_blob": "efc55e1b5ff80929a1e68961777a0bfcc7920f17",
+      "path": "standalone/2026-09-10-astra-branching-order/VALIDATION.md",
+      "sha256": "5811fbbceba1e2620e2e3558c1625004477e784d4ff98e79125363237215c5f0"
+    },
+    {
+      "bytes": 9112,
+      "git_blob": "b91a58148d22bc2c42da3d0f49df8e68b29edfd5",
+      "path": "standalone/2026-09-10-astra-branching-order/certificate.py",
+      "sha256": "f20b3528dfa626acf9a9d5f5c70bf0d8c147322bd0215045a7a469f3280070b2"
+    },
+    {
+      "bytes": 9690,
+      "git_blob": "abf19452d3d48236a5b79a64d720252704b8fca8",
+      "path": "standalone/2026-09-10-astra-branching-order/check.py",
+      "sha256": "8c5bb118a37c8625acfae9bfcf36cfb835819133fd735a8aa12ab646e8bbfe71"
+    },
+    {
+      "bytes": 16030,
+      "git_blob": "855659fdbc5ce488e48829297a5073c2a04625f9",
+      "path": "standalone/2026-09-10-astra-branching-order/result.json",
+      "sha256": "1d3042516125c84dba4d48ccc3f8a307f9d22639e0639cde5033ee5641cfdb63"
+    },
+    {
+      "bytes": 6292,
+      "git_blob": "fce599badb991148f1567e9e23ee67d97a9767d1",
+      "path": "standalone/2026-09-10-astra-branching-order/test_check.py",
+      "sha256": "696c43cbb2238012999034d6d78a861c22003bc7e5f6b1c6f9bb008d6412c545"
+    }
+  ],
+  "read_scopes": [
+    {
+      "head": "e0b82da7ecdd4ed21e47e8b6adbb8c5182eac048",
+      "pr": 853,
+      "scope": "metadata, directory identities, full supplied PROOF.md and interval code"
+    },
+    {
+      "head": "283f110808eb4865dc1f827c2858a0cccfadd3dc",
+      "pr": 851,
+      "scope": "principal proof for overlap; not an executable dependency or newly accepted"
+    },
+    {
+      "head": "5c26d1f7e1075fdea18119a5abb447102ab5850b",
+      "pr": 850,
+      "scope": "inherited source-convergence and BPY normalization, not a new full replay"
+    }
+  ],
+  "schema": "BDR26-sources-1"
+}
