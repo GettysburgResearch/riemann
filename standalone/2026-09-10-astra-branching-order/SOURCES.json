@@ -1,0 +1,53 @@
+{
+  "base": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "certificate_scope": "one simple off-central zero of the EXACT one-step map from Gamma(1,1); not xi and not the Gamma(5/2) orbit",
+  "classical_mechanisms": [
+    "third-order convex order and ideal/Zolotarev metric",
+    "Peano interpolation remainder",
+    "Wasserstein coupling",
+    "Cauchy estimates and Rouche theorem",
+    "Hurwitz theorem"
+  ],
+  "imports": [
+    {
+      "name": "Biane-Pitman-Yor, Probability laws related to the Jacobi theta and Riemann zeta functions, and Brownian excursions",
+      "scope": "Proposition1 and distributional equation45 with exact scaling; source fixed law/Mellin identity classical. PDF text and relevant page images inspected.",
+      "url": "https://arxiv.org/abs/math/9912170"
+    },
+    {
+      "name": "NIST DLMF5.9",
+      "scope": "digamma integral for rederived input zero-free-strip theorem",
+      "url": "https://dlmf.nist.gov/5.9"
+    },
+    {
+      "name": "NIST DLMF5.11(ii)",
+      "scope": "complete complex Stirling/loggamma and psi remainder bounds after term m-1; specialized to Re z>0",
+      "url": "https://dlmf.nist.gov/5.11#ii"
+    },
+    {
+      "name": "NIST DLMF5.12",
+      "scope": "beta integral normalization; required finite moment formulas and beta-gamma factorization also rederived",
+      "url": "https://dlmf.nist.gov/5.12"
+    }
+  ],
+  "no_external_priority_claim": true,
+  "parent": {
+    "branch": "research/astra/20260910-branching-fixedpoint",
+    "head": "5c26d1f7e1075fdea18119a5abb447102ab5850b",
+    "inspection": "complete supplied proposal read; remote fixed-head file and PR read; no parent executable imported or replayed",
+    "path": "standalone/2026-09-10-astra-branching-fixedpoint/PROPOSAL.md",
+    "pr": 850,
+    "proposal_blob": "abd0d3089a95562372a2e8e04fce5443ef26b79e",
+    "proposal_bytes": 20310,
+    "proposal_sha256": "bab49ed09fccd832c9a5021049a61e61f41839edb73d59d2df38fb17fcfb9897",
+    "uploader_boundary": "Windows symlink subtest in original parent suite errored; its unconditional PASS line was not a valid passing receipt. Parent retained unchanged."
+  },
+  "rh_proved": false,
+  "schema": "BOR26-sources-1",
+  "unimported_context": [
+    {
+      "inspection": "metadata only; no mathematical premise used",
+      "pr": 848
+    }
+  ]
+}
