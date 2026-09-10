@@ -1,0 +1,97 @@
+{
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "claims_exhaustive_review": false,
+  "claims_external_novelty": false,
+  "classical_inputs": [
+    "Jacobi inversion and whole-theta Fourier representation",
+    "Hadamard factorization of genus-zero entire functions",
+    "bounded self-adjoint spectral theorem for the constructed polynomial moment space",
+    "Riemann-Lebesgue lemma",
+    "elementary Taylor/Cauchy bounds, factorial estimates and finite-dimensional positive-definite LDL"
+  ],
+  "external": [
+    {
+      "authors": "Bui, Conrey, Young",
+      "not_done": "proof/optimization replay",
+      "read_scope": "first page, definitions and Theorem 1.1, including screenshot",
+      "title": "More than 41% of the zeros of the zeta function are on the critical line",
+      "url": "https://arxiv.org/pdf/1002.4127v2",
+      "used": "positive simple critical-line proportion; weaker >2/5 consequence for explicit stretched-exponential exponent"
+    },
+    {
+      "authors": "Hasanalizade, Shen, Wong",
+      "not_done": "constant optimization or full reference audit",
+      "read_scope": "pages 2-3 parsed text and screenshots, Corollary 1.2 and entire order in Section 2",
+      "title": "Counting zeros of the Riemann zeta function",
+      "url": "https://arxiv.org/pdf/2107.06506v1",
+      "used": "classical qualitative zero-count asymptotic and order-one xi; their xi is twice ours"
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.4",
+      "used": "xi normalization and functional equation"
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.10",
+      "used": "zero symmetry and critical-line context; not a current numerical record"
+    },
+    {
+      "authors": "Ruiming Zhang",
+      "read_scope": "abstract only",
+      "title": "On Power Sums of Positive Numbers",
+      "url": "https://arxiv.org/abs/1510.03420v2",
+      "used": "credit for prior moment/power-sum positive-zero criteria and RH applications; no unread theorem imported"
+    }
+  ],
+  "integration_read_only": {
+    "head": "a20e80654d33afc128261895291ccc37bb328402",
+    "pr": 830,
+    "scope": "live metadata and supplied cumulative context; not a new integration review"
+  },
+  "metadata_orientation_only": [
+    {
+      "head": "ac2d49b2a62d61aadebd38b63ae6ad52af6b571f",
+      "pr": 803,
+      "topic": "near-square-root residual compression"
+    },
+    {
+      "head": "6b21700e0b64307fb7c1b93563a14ff3bc987905",
+      "pr": 833,
+      "topic": "failed complete native Euler attempt"
+    },
+    {
+      "head": "4b8fa9abfa9aac5ed1feb7f30acaeeb418ed405c",
+      "pr": 835,
+      "topic": "positive-real exact theta remainder"
+    },
+    {
+      "head": "159864e64ab2b3475b4a2edf212a16888cddd8c5",
+      "pr": 836,
+      "topic": "causal prefix-energy minimum"
+    },
+    {
+      "head": "9ac6e93b22532a663ad179d03dac5437723fdb19",
+      "pr": 837,
+      "topic": "signed kernel spectral models"
+    },
+    {
+      "head": "459c3f78b3dc8c95ae6cc7b1bec0154499d76c9f",
+      "pr": 838,
+      "topic": "three native generators and feedback cost"
+    }
+  ],
+  "operating_guide": {
+    "git_blob": "c2181ad9ebf037614f3daa8957df640159f8d968",
+    "head": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+    "path": "AGENTS.md"
+  },
+  "parent_code_executed": false,
+  "primary_repository_source": {
+    "git_blob": "ef01f74c50d4efacb615176cbfed4a3de2fd1147",
+    "head": "f0e34780f4fe91bd5d07e791e8855189838c3df5",
+    "path": "standalone/2026-09-09-centered-theta-determinant/PROOF.md",
+    "pr": 834,
+    "scope": "principal manuscript sections 1-8 read through the connector; eigenvectors and necessary source estimates reconstructed; no parent code or whole-repository audit"
+  },
+  "repository": "GettysburgResearch/riemann",
+  "rh_proved": false
+}
