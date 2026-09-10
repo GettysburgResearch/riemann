@@ -1,0 +1,61 @@
+{
+  "status": "PROPOSED_UNREVIEWED_COMPONENT_MATHEMATICS",
+  "rh_proved": false,
+  "date": "2026-09-10",
+  "repository": "GettysburgResearch/riemann",
+  "main_sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "main_read": [
+    "AGENTS.md",
+    "README.md",
+    "STATUS.md",
+    "PROGRAMMES.md",
+    "research/integrated/CURRENT_RESULTS.md (selected sections and cumulative overview)"
+  ],
+  "proof_sources": [
+    {
+      "pr": 850,
+      "sha": "5c26d1f7e1075fdea18119a5abb447102ab5850b",
+      "path": "standalone/2026-09-10-astra-branching-fixedpoint/PROPOSAL.md",
+      "scope": "full proposal"
+    },
+    {
+      "pr": 846,
+      "sha": "d9b60f8569af65b6787fc33c75c849640c8974e6",
+      "path": "standalone/2026-09-10-astra-brownian-renormalization/PROOF.md",
+      "scope": "full proposed proof; companion_scout.py also read, not rerun"
+    },
+    {
+      "pr": 849,
+      "sha": "11a12b8ceb7db98c7961a5cebf3870b2f31dfa79",
+      "path": "standalone/2026-09-10-reciprocal-gamma-cascade/PROPOSAL.md",
+      "scope": "lines 1-190 only; comparison of construction, not full audit"
+    }
+  ],
+  "classical_source": {
+    "authors": "Biane, Pitman, Yor",
+    "arxiv": "math/9912170",
+    "used": "Proposition 1; equations (43)-(45); Brownian law and whole xi Mellin identity"
+  },
+  "programme_bodies_read": [
+    736,
+    737,
+    738,
+    739,
+    740,
+    741,
+    743,
+    744,
+    746,
+    763,
+    764
+  ],
+  "pr_inventory_scope": "35 recently updated PR metadata/descriptions; not a source-complete review",
+  "omissions": [
+    "Full historical corpus",
+    "Most PR proof/code/artifact content",
+    "Programme comments",
+    "Whole repository or Lean build",
+    "Independent analytic review"
+  ],
+  "priority_scope": "No exhaustive external originality audit; classical quadrature, gamma infinite divisibility and Brownian source credited."
+}
