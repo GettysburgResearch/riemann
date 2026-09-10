@@ -1,0 +1,46 @@
+{
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "parent_reading": [
+    {
+      "path": "riemann-exact-theta-pencil-proof.md",
+      "commit": "2787339f8f1feb619f1679afb96cb9995e440958",
+      "git_blob": "648a8a867be1ce808a30364d0bb6d4ab7ab3b6f6",
+      "bytes": 21611,
+      "sha256": "f744b34bca432d16fe74aa4dd9d0a4dceb42feee30eaf71b904656010da2389b",
+      "scope": "source/proof read; no parent numerical suite rerun; not independent acceptance",
+      "repository_path": "standalone/2026-09-09-exact-theta-pencil/PROOF.md"
+    },
+    {
+      "path": "riemann-theta-spectral-crowding-proof.md",
+      "commit": "62bd9bbed134e20c1ee9cd92d008562079af9ceb",
+      "git_blob": "53cc204b8af819b4d60f7da4c9deec895764e8a1",
+      "bytes": 14235,
+      "sha256": "861d8d3a11eeab1a69d766d38e849a3ddb8b4e4017cbd4bf40d764a5568986e4",
+      "scope": "source/proof read; no parent numerical suite rerun; not independent acceptance",
+      "repository_path": "standalone/2026-09-10-theta-spectral-crowding/PROOF.md"
+    }
+  ],
+  "historical_overlap": {
+    "pr": 296,
+    "head": "4a68887f9f713aea7f63444030379fb864766a2d",
+    "scope": "metadata only; earlier Lee-Yang wording acknowledged, not audited"
+  },
+  "literature": [
+    {
+      "reference": "Newman--Wu, CMP 369 (2019), 153-170",
+      "url": "https://arxiv.org/abs/1708.08820v3",
+      "used": "weighted finite Ising Lee-Yang property; Villain theorem 3; closure theorem 7; product proposition 13",
+      "reading": "relevant statements and proof discussion; screenshots pages 1 and 4; page 6 screenshot failed; not a complete literature audit"
+    },
+    {
+      "reference": "Newman--Wu, Bull. AMS 57 (2020), 595-614",
+      "url": "https://arxiv.org/abs/1901.06596",
+      "used": "historical theta/Lee-Yang connection and conventions; not a new claim of priority",
+      "reading": "relevant theta and ferromagnet sections"
+    }
+  ],
+  "rh_proved": false,
+  "all_order_synthesis_proved": false,
+  "novelty_claim": false,
+  "remote_ci_run": false
+}
