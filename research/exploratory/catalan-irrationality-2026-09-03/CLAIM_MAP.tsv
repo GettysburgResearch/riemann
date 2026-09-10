@@ -1,0 +1,23 @@
+claim_id	source_location	claim	packet_status	main_dependency_or_issue
+CAT-1.1	Theorem 1.1	Catalan's constant G=L(2,chi_-4) is irrational	SOURCE_CLAIM_NOT_ESTABLISHED	Final height estimate does not follow; arithmetic nature remains unresolved
+CAT-1.TAIL	Equations 1.1-1.4	Tail identities and alternating bounds	CHECKED_WITH_DEFINITION_REPAIR	T_0 is later used but not defined; set T_0=G
+CAT-2.1	Theorem 2.1	Weighted residual matrix R has full column rank	PLAUSIBLE_AFTER_REPAIR	Fix T_i/T_{i+1} sign-index inconsistency and polynomial/no-pole case
+CAT-2.C1	Corollary 2.1	An S by S residual minor is nonzero	CONDITIONAL_ON_REPAIRED_CAT-2.1	Finite linear algebra
+CAT-3.1	Proposition 3.1	Newton completion gives det Atilde=+-F_B det R[A,J]	REPAIR_REQUIRED	Undefined D; dimension forces D=2B
+CAT-3.2	Proposition 3.2	H_B^min integerizes the fixed scalar	ALGEBRAICALLY_CHECKED	Conditional on repaired scalar definition
+CAT-4.1	Lemma 4.1	Pascal alternant contributes V(I) Psi_A(I)	IDENTITY_PLAUSIBLE_WITH_DOMAIN_REPAIR	Use polynomial product globally; uniform Psi height bound omitted
+CAT-4.2	Lemma 4.2	Cauchy determinant contributes second Vandermonde	CLASSICAL_IDENTITY	Cauchy determinant
+CAT-5.3	Lemma 5.3	p-adic valuation is bounded by local minima	PLAUSIBLE_AFTER_LINE_REPAIR	Treat zero summands as +infinity valuation and fix tail index consistently
+CAT-5.1	Theorem 5.1	Denominator layer dominates local minimum	REPAIR_REQUIRED_STRONGLY_CORROBORATED	Statement omits S<=B/20 used in proof
+CAT-5.2	Corollary 5.2	Positive-part denominator height has legal local upper bound	CONDITIONAL_ON_REPAIRED_CAT-5.1	Legal local-minimum bound; later incompatible with archimedean maximum at leading order
+CAT-5.4	Lemma 5.4	2-adic denominator positive part is zero	PLAUSIBLE	Does not remove the real numerator contribution v_2(F_B) log 2
+CAT-5.5	Lemma 5.5	Actual and ideal row models differ by o(B^2)	EXPANSION_AND_CUTOFF_REPAIR_REQUIRED	5B cutoff false; safe O(B) cutoff and explicit exchanges needed
+CAT-6.3	Proposition 6.3	Odd-small-prime constant c_odd has stated enclosure	NUMERICALLY_CORROBORATED_CERTIFICATE_MISSING	178 merged cells and interval table absent
+CAT-6.SING	Equations 6.17-6.19	Small-prime local minimum has singular coefficient A_rho=2rho-rho^2/2	SOURCE_FORMULA_USED_IN_COUNTERCHECK	Together with selected Pi coefficient 2rho leaves rho^2/2
+CAT-7.4	Proposition 7.4	Middle-prime integral equals displayed rational	NUMERICALLY_CORROBORATED_EXACT_PARTITION_MISSING	235 affine cells absent; only affects B^2 coefficient
+CAT-8	Equations 8.1-8.5	Large-prime gain is 2rho/3+rho^2/2	DISPLAYED_PIECES_CHECKED	Need derivation; only affects B^2 coefficient
+CAT-9.5	Proposition 9.5	Same-scalar height has negative quadratic coefficient	PROOF_REFUTED_CLAIM_NOT_ESTABLISHED	Largest-summand majorant retains +(rho^2/2)B^2 log B; at rho=1/20 coefficient is 1/800
+CAT-9.5-CHECK	HEIGHT_BOUND_COUNTERCHECK.md	Max-summand route has an uncancelled positive leading term	PROVED_INTERNAL_COUNTERCHECK	Uses compulsory I_0 term, exact a_Q cancellation, and source singular coefficient
+CAT-9.1	Theorem 9.1	Stated constants yield delta_0>0.00966242652523235	ARITHMETIC_SUBTRACTION_CHECKED_THEOREM_NOT_ESTABLISHED	Proposition 9.5 proof fails at larger B^2 log B scale
+CAT-FINAL	Final proof	Nonzero integer tends below one	DOES_NOT_FOLLOW	Immediate only from failed negative-height premise
+CAT-STATUS	Review verdict	The v1 proof establishes irrationality	REFUTED	Proof invalid as written; neither rationality nor irrationality of G is established here
