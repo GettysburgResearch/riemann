@@ -1,0 +1,50 @@
+{
+  "context": [
+    {
+      "head": "57726ef9b3bf90561df5a361e3b01169c892a62a",
+      "import": "none; different Gauss-Thorin family",
+      "pr": 851,
+      "reading": "current PR description only, including local zero-disk work"
+    }
+  ],
+  "external": [
+    {
+      "authors": "Biane, Pitman, Yor",
+      "reading": "abstract/metadata this pass; exact source identity inherited from pinned parent",
+      "title": "Probability laws related to the Jacobi theta and Riemann zeta function and Brownian excursions",
+      "url": "https://arxiv.org/abs/math/9912170",
+      "use": "classical fixed law and xi identification, not new asymptotic proof"
+    },
+    {
+      "reading": "HTML recurrence/reflection formulas",
+      "url": "https://dlmf.nist.gov/5.5",
+      "use": "Gamma reflection and recurrence, exact exponential cancellation in (22)"
+    },
+    {
+      "reading": "HTML gamma/digamma vertical asymptotics",
+      "url": "https://dlmf.nist.gov/5.11",
+      "use": "fixed-real-part phase and logarithmic derivative, no numerical constant imported"
+    },
+    {
+      "authors": "Annaby and Elsayed-Abdullah",
+      "reading": "abstract/metadata only",
+      "url": "https://arxiv.org/abs/2406.17925",
+      "use": "classical Enestrom-Kakeya attribution; needed theorem reproved in Section3"
+    }
+  ],
+  "originality": "No exhaustive priority audit or claim; selected live reading is not whole-repository review.",
+  "parent_branch": "research/astra/20260910-branching-dirichlet",
+  "parent_head": "3f1984867d23b588d09c88a892882411724b174b",
+  "parent_proof": {
+    "acceptance": "proposed, no new independent mathematical review; no parent accepting code replay",
+    "bytes": 15453,
+    "git_blob": "0673f43b95570bcbe7fe29de3c2528fc5ada29a2",
+    "import": "entire E_n, unchanged critical-strip zeros and local compact convergence to xi; actual finite gamma coordinates reconstructed here",
+    "path": "standalone/2026-09-10-astra-branching-dirichlet/PROOF.md",
+    "reading": "full principal manuscript; fixed-head remote and supplied local bytes",
+    "sha256": "25c7cfe469f03aadffdb8c98ae076f04ee9481df2816cb929467059a96d380b7"
+  },
+  "parent_tree": "8b470c2a30d7f8d7e4de287b4e2ac1217f39d93e",
+  "schema": "BHH26-sources-1",
+  "source_pr": 857
+}
