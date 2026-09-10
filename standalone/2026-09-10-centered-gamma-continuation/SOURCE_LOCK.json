@@ -1,0 +1,35 @@
+{
+  "base_main_observed": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "external_inputs": [
+    {
+      "authors": "Biane, Pitman, Yor",
+      "scope": "gamma/xi and reciprocal-source identities; scaling and Proposition 1 checked in text and printed page 7 image; no entire external-proof re-audit",
+      "url": "https://statistics.berkeley.edu/sites/default/files/tech-reports/569.pdf",
+      "work": "Probability laws related to the Jacobi theta and Riemann zeta functions, and Brownian excursions"
+    },
+    {
+      "scope": "10.32.9, parent's Bessel integral; centered first member is not identified with that seed",
+      "url": "https://dlmf.nist.gov/10.32"
+    }
+  ],
+  "later_or_adjacent_work": {
+    "pr850": "metadata orientation only; no Brownian construction theorem imported"
+  },
+  "new_global_zero_confinement_proved": false,
+  "parent_checker_replayed": false,
+  "parent_commit": "11a12b8ceb7db98c7961a5cebf3870b2f31dfa79",
+  "parent_packet_tree": "28b2eb6ba33d999d19091d5df37e0ef6bd6b58df",
+  "parent_pr": 849,
+  "parent_proof": {
+    "blob": "c324ba15d3f7f3e073b902042ec61c685b555f53",
+    "bytes": 24737,
+    "code_used_by_new_certificate": false,
+    "path": "standalone/2026-09-10-reciprocal-gamma-cascade/PROPOSAL.md",
+    "reading": "complete supplied manuscript matched to remote blob; source definitions and analytic domains reconstructed; not independent acceptance",
+    "sha256": "0e8b31df499db1e5479423f23c838661ba391ad03a74157908b06b9174647e7b"
+  },
+  "repository": "GettysburgResearch/riemann",
+  "rh_proved": false,
+  "status": "PROPOSED_RESEARCH_NOT_ACCEPTANCE",
+  "zero_primitives_imported": false
+}
