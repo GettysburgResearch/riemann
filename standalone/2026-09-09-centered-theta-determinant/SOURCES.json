@@ -1,0 +1,32 @@
+{
+  "actual_theta_numerics": false,
+  "branch": "research/astra/20260909-whole-xi-gamma-attack",
+  "external": [
+    {
+      "title": "NIST DLMF 25.4",
+      "url": "https://dlmf.nist.gov/25.4",
+      "use": "xi normalization and reflection only"
+    },
+    {
+      "exclusion": "The invalid printed lower side of (A.2) is not used.",
+      "inspection": "parsed PDF text inspected; two web PDF screenshot calls failed; no page-image verification claimed",
+      "journal_doi": "10.4171/ZAA/1469",
+      "title": "Kevin Zumbrun, 2-modified characteristic Fredholm determinants, Hills method, and the periodic Evans function of Gardner",
+      "url": "https://arxiv.org/abs/1011.5695",
+      "use": "Appendix A (A.1),(A.3)-(A.6), Section 5 Volterra/rank-one method"
+    }
+  ],
+  "independent_review": "pending",
+  "novelty_claim": false,
+  "parent_commit": "2787339f8f1feb619f1679afb96cb9995e440958",
+  "parent_proof": {
+    "bytes": 21611,
+    "git_blob": "648a8a867be1ce808a30364d0bb6d4ab7ab3b6f6",
+    "inspection": "full local text matched to remote blob; source/domain mathematics read; parent code not run",
+    "path": "standalone/2026-09-09-exact-theta-pencil/PROOF.md",
+    "sha256": "f744b34bca432d16fe74aa4dd9d0a4dceb42feee30eaf71b904656010da2389b"
+  },
+  "repository": "GettysburgResearch/riemann",
+  "rh_status": "unproved",
+  "schema": 1
+}

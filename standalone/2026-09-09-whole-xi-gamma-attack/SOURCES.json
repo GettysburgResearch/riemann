@@ -1,0 +1,72 @@
+{
+  "branch_base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "claims": {
+    "RH": "NOT_PROVED",
+    "W1": "PROPOSED_COMPONENT_PROOF",
+    "W2": "PROPOSED_COMPONENT_WITH_EXACT_FINITE_SIGN_CERTIFICATE",
+    "W3": "PROPOSED_COMPONENT_PROOF_WITH_CLASSICAL_PNT",
+    "all_height_finite_zero_free_premise": "REFUTED_FOR_THIS_CONSTRUCTION"
+  },
+  "date": "2026-09-09",
+  "external_novelty_claimed": false,
+  "metadata_orientation": [
+    803,
+    765,
+    825,
+    826,
+    827,
+    828,
+    829,
+    830,
+    831,
+    832
+  ],
+  "primary_references": [
+    {
+      "authors": "P. Biane, J. Pitman, M. Yor",
+      "id": "BPY",
+      "scope": "Equations (5)-(8), Sections 2.2 and 5, especially the final paragraph of 5.4. The shape-two finite computation is explicitly suggested there.",
+      "title": "Probability laws related to the Jacobi theta and Riemann zeta functions, and Brownian excursions",
+      "url": "https://arxiv.org/abs/math/9912170",
+      "version": "v1 (arXiv identifier); displayed later typesetting date not used to assign priority"
+    },
+    {
+      "id": "G",
+      "scope": "Classical fixed-compact ratio and fixed-strip vertical Stirling estimates",
+      "title": "NIST DLMF, Gamma asymptotic expansions and ratios",
+      "url": "https://dlmf.nist.gov/5.11"
+    },
+    {
+      "id": "P",
+      "scope": "Ordinary unconditional PNT, only in W3 selected-prime count",
+      "title": "NIST DLMF, Asymptotic formulas: primes",
+      "url": "https://dlmf.nist.gov/27.12"
+    }
+  ],
+  "prior_own_research_head": "ac2d49b2a62d61aadebd38b63ae6ad52af6b571f",
+  "prior_review_acceptance_claimed": false,
+  "reading_scope": "Selected cross-route reassessment, not an exhaustive repository audit.",
+  "repository": "GettysburgResearch/riemann",
+  "repository_reads": [
+    {
+      "path": "PROGRAMMES.md",
+      "scope": "Full cumulative route map",
+      "sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f"
+    },
+    {
+      "path": "research/integrated/CURRENT_RESULTS.md",
+      "scope": "Cumulative statements and open arithmetic/xi interfaces; no fresh verification of entire corpus",
+      "sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f"
+    },
+    {
+      "path": "research/exploratory/XI_RAW_INNERNESS_RH_EQUIVALENCE_FIREWALL.md",
+      "scope": "Full hypothesis-strength proof and its global versus finite distinctions",
+      "sha": "8f01064df805624c045877655893c324a220975d"
+    },
+    {
+      "path": "standalone/2026-09-09-near-square-root-residual-compression/PROOF.md",
+      "scope": "Previous author packet retained as context, not imported for W1-W3",
+      "sha": "ac2d49b2a62d61aadebd38b63ae6ad52af6b571f"
+    }
+  ]
+}

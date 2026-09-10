@@ -1,0 +1,88 @@
+{
+  "author_status": "research-not-review-acceptance",
+  "parent": {
+    "repository": "GettysburgResearch/riemann",
+    "pr": 834,
+    "commit": "3954f6398dd4be35182d89f44d1a715a4cfcbda0",
+    "path": "standalone/2026-09-09-whole-xi-gamma-attack/PROOF.md",
+    "git_blob": "7cf1d52a811cf9be0cbe18407f6384bf460afb02",
+    "sha256": "adbba4042eb4b21be8215713ab1b5a9164206de0265f40233d66cfc960da8f34",
+    "bytes": 21088,
+    "depth": "local complete manuscript bytes match deposited blob; no parent code replay; its zero-location theorem not needed for this note"
+  },
+  "orientation": [
+    {
+      "path": "AGENTS.md",
+      "ref": "main",
+      "depth": "current connector read"
+    },
+    {
+      "path": "OPEN_CUTS.md",
+      "ref": "main",
+      "depth": "current connector read"
+    },
+    {
+      "path": "research/integrated/CURRENT_RESULTS.md",
+      "ref": "main",
+      "depth": "selected returned current-statement text, not exhaustive dependency audit"
+    },
+    {
+      "pr": 803,
+      "commit": "ac2d49b2a62d61aadebd38b63ae6ad52af6b571f",
+      "depth": "prior supplied proof and current PR metadata"
+    },
+    {
+      "pr": 833,
+      "commit": "6b21700e0b64307fb7c1b93563a14ff3bc987905",
+      "depth": "current PR description only; no theorem imported"
+    },
+    {
+      "pr": 827,
+      "commit": "29237183dc6973cfa9bd953ac1710b7f00929d04",
+      "depth": "review description/orientation; not an independent acceptance of this work"
+    },
+    {
+      "pr": 830,
+      "commit": "aafdb103393f8cff6578415fd631a3b78974b81b",
+      "depth": "integration description only; not merged or used as proof premise"
+    },
+    {
+      "pr": 832,
+      "commit": "59bf12be8efdb45d77633cd2f9adec962f3fe534",
+      "depth": "description only; no theorem imported"
+    }
+  ],
+  "external": [
+    {
+      "url": "https://dlmf.nist.gov/20.7#E32",
+      "use": "classical theta modular transformation"
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.4",
+      "use": "entire xi normalization and functional equation"
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.5",
+      "use": "Mellin background; split formula rederived"
+    },
+    {
+      "url": "https://arxiv.org/abs/1309.0055",
+      "version": "v2",
+      "use": "classical associated-kernel/Laguerre context; PDF pp.10-11 and section3 text inspected with screenshots; no new positivity imported"
+    },
+    {
+      "url": "https://arxiv.org/abs/2002.12825",
+      "use": "abstract-level prior-art check only; no theorem imported or novelty claimed"
+    },
+    {
+      "url": "https://www.mat.univie.ac.at/~gerald/ftp/book-schroe/schroe.pdf",
+      "use": "standard closed-form background; needed domain and compactness derivation supplied in the note, not an audit of the book"
+    }
+  ],
+  "no_new_proof_claim": [
+    "RH",
+    "spectral reality of the unmodified theta pencil",
+    "native residual upper bound",
+    "simplicity of xi zeros"
+  ]
+}
