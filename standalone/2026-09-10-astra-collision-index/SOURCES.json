@@ -1,0 +1,59 @@
+{
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "base_tree": "8bddd12122e8a772683c9ed0b37dbcb945036893",
+  "historical_context": {
+    "citation": "S. Angenent, J. reine angew. Math. 390 (1988), 79-96",
+    "doi": "10.1515/crll.1988.390.79",
+    "read": "metadata and abstract only",
+    "url": "https://authors.library.caltech.edu/records/tdcs5-h8b80",
+    "use": "attribution of classical Sturm zero-number ideas, not a load-bearing substitute"
+  },
+  "local_prior_motivation": {
+    "file": "riemann_trace_hankel_proof.md",
+    "sha256": "1025b44e280e005b2652cb9f10c0fdf321adef255be494776797fc5f4cbfe923",
+    "use": "motivation only; not represented as a remote publication or theorem dependency"
+  },
+  "new_research_path": "standalone/2026-09-10-astra-collision-index",
+  "no_actual_theta_boundary_certificate": true,
+  "no_canonical_status_change": true,
+  "primary_analytic_input": {
+    "citation": "D.H.J. Polymath, arXiv:1904.12438v2",
+    "not_done": "full external proof audit or external numerical campaign",
+    "read": "Introduction, Theorem 1.5, Proposition 3.1 and Theorem 3.2; relevant PDF page images inspected",
+    "url": "https://arxiv.org/abs/1904.12438v2",
+    "use": "exact normalization; real-root preservation; uniform positive-time large-height reality/simplicity; local collision normal form reconstructed"
+  },
+  "repository_orientation": [
+    {
+      "head": "7ff754c7347d6ee9d59608e562e469351b3d37e7",
+      "pr": 842,
+      "read": "README and current PR description; avoid duplicate Lee-Yang synthesis"
+    },
+    {
+      "head": "01d5a86136866e53e50df5ce90dfa441abdc32d8",
+      "pr": 841,
+      "read": "PR description only; trace/metric context"
+    },
+    {
+      "head": "5663f5c4dd193d20bb815cb865d961c42b453946",
+      "pr": 840,
+      "read": "PR description only; feedback context"
+    },
+    {
+      "head": "1742bb3d55cd289ab72a555b09f8fe4a6d8ded59",
+      "pr": 839,
+      "read": "PR description only; no imported determinant proof"
+    },
+    {
+      "pr": 729,
+      "read": "PR description only; distinguish its signed quotient index"
+    },
+    {
+      "pr": 33,
+      "read": "PR description only; credit L-3104 chord interpolation bound"
+    }
+  ],
+  "rh_proved": false,
+  "scope": "Selected source reading, not a census or re-review of the live repository.",
+  "status": "PROPOSED_NOT_INDEPENDENTLY_REVIEWED"
+}
