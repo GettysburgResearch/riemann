@@ -1,0 +1,56 @@
+{
+  "rh": "unproved",
+  "claims": [
+    {
+      "id": "NGR1",
+      "status": "proposed proved component",
+      "scope": "all finite banks satisfying balance and native prefix; every polynomial degree",
+      "statement": "explicit gamma-regularized residual is L1/L2 and has the exact transform and horizon",
+      "proof": "PROOF.md sections 1-2"
+    },
+    {
+      "id": "NGR2",
+      "status": "proposed proved component",
+      "scope": "actual source, every finite controller",
+      "statement": "bounded source map and fixed nonzero limiting target",
+      "proof": "PROOF.md section 3"
+    },
+    {
+      "id": "NGR3",
+      "status": "proposed proved conditional consumer",
+      "scope": "all hypothetical right-of-line zeros, with no simplicity restriction",
+      "statement": "full zero-detection exponent survives smoothing; subexponential norm implies RH",
+      "unproved_premise": "subexponential regularized norm sequence",
+      "proof": "PROOF.md section 4"
+    },
+    {
+      "id": "NGR4",
+      "status": "proposed proved component",
+      "scope": "fixed degree, complete infinite physical tail",
+      "statement": "explicit exponential-polynomial majorant and finite-part computation contract",
+      "proof": "PROOF.md section 5"
+    },
+    {
+      "id": "NGR5",
+      "status": "proposed proved obstruction",
+      "scope": "one fixed seed, scalar polynomial acceleration only",
+      "statement": "exponential auxiliary-zero obstruction survives regularization",
+      "proof": "PROOF.md section 6"
+    },
+    {
+      "id": "NGR6",
+      "status": "proposed proved equivalence",
+      "scope": "all pure-power raw energies of the specified two seeds",
+      "statement": "their all-order finiteness is equivalent to LH, not assumed by NGR1-3",
+      "proof": "PROOF.md section 7"
+    },
+    {
+      "id": "NGR7",
+      "status": "open candidate",
+      "scope": "specified homogeneous three-seed ridge-minimum sequence",
+      "statement": "liminf log(1+b_m)/m = 0",
+      "proof": "NOT PROVED; definition and conditional ending only",
+      "numerical_status": "actual high-degree Grams not evaluated"
+    }
+  ]
+}
