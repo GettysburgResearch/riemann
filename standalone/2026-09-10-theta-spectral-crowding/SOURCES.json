@@ -1,0 +1,23 @@
+{
+  "parent_commit": "f0e34780f4fe91bd5d07e791e8855189838c3df5",
+  "parent_proof_path": "standalone/2026-09-09-centered-theta-determinant/PROOF.md",
+  "parent_git_blob": "ef01f74c50d4efacb615176cbfed4a3de2fd1147",
+  "parent_sha256": "9c57f315b26f4aa347771047e69903d1fc348f6c1b8cbab500cefe618ccc26fa",
+  "parent_bytes": 19077,
+  "parent_inspection": "Full supplied manuscript and connected source read; author work, not independent acceptance. No parent executable rerun.",
+  "external_inputs": [
+    {
+      "reference": "Bui-Conrey-Young, Acta Arith. 150 (2011), Theorem 1.1",
+      "url": "https://arxiv.org/abs/1002.4127v2",
+      "scope": "Imported liminf simple critical-line proportion >=0.4058; only 2/5 used.",
+      "inspection": "PDF parsed page 1 read; web screenshot attempted and failed cache lookup. Full mollifier proof not independently replayed."
+    },
+    {
+      "reference": "Classical Riemann-von Mangoldt formula, Titchmarsh second edition Chapter IX",
+      "scope": "Imported N(U)~U log U/(2pi); no explicit zero-count error constant used.",
+      "inspection": "Classical analytic dependency; not newly rederived or full chapter audited."
+    }
+  ],
+  "novelty_claim": false,
+  "rh_proved": false
+}
