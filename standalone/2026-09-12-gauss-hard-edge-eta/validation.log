@@ -1,0 +1,34 @@
+
+===== check-normal.log =====
+PASS: exact reconstruction, all finite checks, and all nine quadrature-node counts
+
+===== check-optimized.log =====
+PASS: exact reconstruction, all finite checks, and all nine quadrature-node counts
+
+===== tests-normal.log =====
+test_cli_changed_records (__main__.ExactChecks.test_cli_changed_records) ... ok
+test_cli_duplicate_json_rejected (__main__.ExactChecks.test_cli_duplicate_json_rejected) ... ok
+test_cli_pristine (__main__.ExactChecks.test_cli_pristine) ... ok
+test_coefficient_tail_beyond_polynomial_degree (__main__.ExactChecks.test_coefficient_tail_beyond_polynomial_degree) ... ok
+test_complete_reconstruction (__main__.ExactChecks.test_complete_reconstruction) ... ok
+test_primitive_mutation_rejected (__main__.ExactChecks.test_primitive_mutation_rejected) ... ok
+test_single_node_inertia_independently (__main__.ExactChecks.test_single_node_inertia_independently) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.073s
+
+OK
+
+===== tests-optimized.log =====
+test_cli_changed_records (__main__.ExactChecks.test_cli_changed_records) ... ok
+test_cli_duplicate_json_rejected (__main__.ExactChecks.test_cli_duplicate_json_rejected) ... ok
+test_cli_pristine (__main__.ExactChecks.test_cli_pristine) ... ok
+test_coefficient_tail_beyond_polynomial_degree (__main__.ExactChecks.test_coefficient_tail_beyond_polynomial_degree) ... ok
+test_complete_reconstruction (__main__.ExactChecks.test_complete_reconstruction) ... ok
+test_primitive_mutation_rejected (__main__.ExactChecks.test_primitive_mutation_rejected) ... ok
+test_single_node_inertia_independently (__main__.ExactChecks.test_single_node_inertia_independently) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 4.285s
+
+OK

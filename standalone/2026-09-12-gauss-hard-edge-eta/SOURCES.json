@@ -1,0 +1,67 @@
+{
+  "baseline_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "baseline_scope": "Cumulative research baseline identified in retained source packet; not a full-checkout or whole-main re-audit.",
+  "context_only": [
+    "Prior #851 local complex-zero packet and #864 coefficient-factor obstruction retained in the conversation; certificates not rerun.",
+    "Thirty recently updated PR descriptions were surveyed before focusing. This is not an exhaustive history, issue-comment or artifact audit."
+  ],
+  "date": "2026-09-12",
+  "external": [
+    {
+      "id": "E1",
+      "scope": "Official HTML; formula 4.39.1 and its continued-fraction context read.",
+      "url": "https://dlmf.nist.gov/4.39"
+    },
+    {
+      "id": "E2",
+      "scope": "Official HTML; Fermi\u2013Dirac Mellin formulas 25.5.3\u201325.5.4 read.",
+      "url": "https://dlmf.nist.gov/25.5"
+    },
+    {
+      "id": "E3",
+      "scope": "Fresh abstract/metadata; classical Brownian source identity retained from #851. No new independent full external probability-proof review.",
+      "url": "https://arxiv.org/abs/math/9912170"
+    }
+  ],
+  "omissions": [
+    "No comprehensive novelty review.",
+    "No full repository build or Lean verification.",
+    "No replay of prior xi certificates.",
+    "No remote publication in this session."
+  ],
+  "repository": "GettysburgResearch/riemann",
+  "sources": [
+    {
+      "blob": "8398cff6185b89d9964d5152dec9ce2640f52a53",
+      "head": "57726ef9b3bf90561df5a361e3b01169c892a62a",
+      "path": "standalone/2026-09-10-gauss-thorin-positive-defect/PROOF.md",
+      "pr": 851,
+      "scope": "Full retained principal manuscript used; local bytes authenticated against freshly fetched GitHub blob metadata. Original construction independently extended here."
+    },
+    {
+      "blob": "738a6c1767fddcf4b8de408bc6b54b1a69ead47e",
+      "head": "67d5d6a5f588642f4c451fe35d2369b5ddac9346",
+      "path": "standalone/2026-09-10-gamma-finite-defect/PROOF.md",
+      "pr": 862,
+      "scope": "Principal proof sections read for source, convergence, Jensen/weighted defect and failure boundary. Its numerical campaign not rerun."
+    },
+    {
+      "head": "45281093179434e08d28d8e589a8c70d70ead5b9",
+      "path": "standalone/2026-09-12-astra-hyperbolic-renormalization/PROOF.md",
+      "pr": 872,
+      "scope": "Principal proof lines 1\u2013220 read: literal source, analytic operator spectrum, hyperbolic coordinate, Mellin identity, Pareto comparison. No transfer of its operator spectrum to xi."
+    },
+    {
+      "head": "80844a3778390ff744235cf2b021cfaea80ff512",
+      "pr": 874,
+      "scope": "Result/description-level read only: unbounded-height tracking concerns actual xi zeros, not an unconditional proof that those zeros are central."
+    },
+    {
+      "blob": "bb82833e204abb8a69a7602642b3d0cb4e7b7024",
+      "head": "8002444ec4d4bd1c6f8fa073820bcc575cb218e1",
+      "path": "standalone/2026-09-12-beta-fixedpoint-homotopy/PROOF.md",
+      "pr": 876,
+      "scope": "Beginning and response/zero-functional/fold sections read. Distinct homotopy; only the common m=1 gamma endpoint is referenced, not intermediate zero safety."
+    }
+  ]
+}
