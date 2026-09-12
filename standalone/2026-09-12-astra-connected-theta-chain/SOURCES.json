@@ -1,0 +1,52 @@
+{
+  "schema": "CTC26.sources.v1",
+  "parent": {
+    "repository": "GettysburgResearch/riemann",
+    "pr": 863,
+    "head": "0640c9c59be0bf20c18258460a7517fb09728e82",
+    "packet": "standalone/2026-09-12-astra-interacting-cluster-realization",
+    "scope": "PR metadata read; local full CLUSTER_LIMIT and relevant PROOF/code inspected. Parent executables and campaigns not rerun."
+  },
+  "parent_files": {
+    "PROOF.md": {
+      "git_blob": "dcf0f5133d08305cc7e82ba307d5bd73b93d9adc",
+      "sha256": "b74e7f96955623552bf2569b0653e238265725f2d3d0ab18b7cf0f2dd816b7aa",
+      "bytes": 12916
+    },
+    "CLUSTER_LIMIT.md": {
+      "git_blob": "71c25f94db96c367d7a873cc45aa9ba8e76f4b31",
+      "sha256": "cec4269f0d8adff99fb58d813a8a393b83a94dcbd61930a930c9c90fb4e4656e",
+      "bytes": 10077
+    },
+    "check.py": {
+      "git_blob": "9831e7033fcaffea66d5220c7fe7a8b36c28ef65",
+      "sha256": "8e520d9cab28ca24c46a4eff123044c554480d9a3819a737d892f1f58a26700a",
+      "bytes": 12822
+    }
+  },
+  "code_lineage": "Dyadic intervals and theta Taylor integration adapted from ICR26, itself adapted from IMR26. Not an independent transcendental implementation. Target integrals newly reconstructed, not read from a receipt.",
+  "external": [
+    {
+      "id": "LY",
+      "authors": "Charles M. Newman and Wei Wu",
+      "title": "Constants of de Bruijn-Newman type in analytic number theory and statistical physics",
+      "identifier": "arXiv:1901.06596v2",
+      "url": "https://arxiv.org/pdf/1901.06596",
+      "read_scope": "Parsed text and rendered page 11, equation (21) and following weighted Lee-Yang statement. General theorem imported, not re-proved."
+    },
+    {
+      "id": "ST",
+      "title": "NIST DLMF 5.11.1",
+      "url": "https://dlmf.nist.gov/5.11",
+      "scope": "Classical log-Gamma Stirling expansion on positive real arguments."
+    },
+    {
+      "id": "XI",
+      "title": "NIST DLMF 25.4",
+      "url": "https://dlmf.nist.gov/25.4",
+      "scope": "Classical completed xi normalization and reflection; no RH-dependent zero assertion imported."
+    }
+  ],
+  "no_novelty_claim": true,
+  "not_an_exhaustive_repository_audit": true
+}

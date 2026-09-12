@@ -1,0 +1,49 @@
+{
+  "schema": "CTC26.claims.v1",
+  "status": "proposed-independent-review-pending",
+  "rh_proved": false,
+  "claims": [
+    {
+      "id": "CTC1",
+      "scope": "unconditional analytic component",
+      "claim": "Connected infinite Ising law, entire real-zero characteristic function, explicit full complex cutoff bound, analytic density.",
+      "inputs": [
+        "classical weighted Lee-Yang",
+        "Markov covariance identity"
+      ],
+      "proof": "PROOF.md sections 1-2"
+    },
+    {
+      "id": "CTC2",
+      "scope": "unconditional analytic component",
+      "claim": "Uniform-in-size-and-field bounded-error Perron product for the prescribed eventually monotone weights.",
+      "proof": "PROOF.md section 3"
+    },
+    {
+      "id": "CTC3",
+      "scope": "unconditional analytic component",
+      "claim": "Three calibrated log-MGF coefficients and real-axis two-sided comparability with theta. Not complex comparability.",
+      "inputs": [
+        "classical Stirling expansion"
+      ],
+      "proof": "PROOF.md section 4"
+    },
+    {
+      "id": "CTC4",
+      "scope": "proposed proof-producing continuum certificate",
+      "claim": "The complete infinite law matches theta moments2,4; standardized sixth-moment excess lies in (.005,.05).",
+      "inputs": [
+        "outward theta integrals",
+        "whole infinite variance/cumulant tails",
+        "IVT on a continuous variance-root curve"
+      ],
+      "proof": "PROOF.md sections 5-7"
+    },
+    {
+      "id": "CTC-OPEN",
+      "scope": "OPEN; not proved",
+      "claim": "All-order interacting realization or exact identification with theta.",
+      "proof": "INVERSE_PROGRAMME.md"
+    }
+  ]
+}
