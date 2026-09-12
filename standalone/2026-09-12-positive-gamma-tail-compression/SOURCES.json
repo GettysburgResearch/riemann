@@ -1,0 +1,140 @@
+{
+  "base_commit": "67d5d6a5f588642f4c451fe35d2369b5ddac9346",
+  "base_pr": 862,
+  "date": "2026-09-12",
+  "external_inputs": [
+    {
+      "id": "E1",
+      "reading": "Proposition 1 and Section 2.1 scaling in parsed text and actual PDF page images (PDF indices 6 and 9, printed pages 7 and 10). No entire external-paper audit.",
+      "title": "Biane-Pitman-Yor, Probability laws related to Jacobi theta and Riemann zeta functions, and Brownian excursions",
+      "url": "https://arxiv.org/abs/math/9912170",
+      "use": "Classical shape-two gamma/xi law, Laplace product and Jacobi reciprocity."
+    },
+    {
+      "id": "E2",
+      "url": "https://dlmf.nist.gov/3.5",
+      "use": "Classical quadrature background; actual Radau/error proofs supplied in full."
+    },
+    {
+      "id": "E2b",
+      "url": "https://doi.org/10.1016/j.cam.2021.113604",
+      "use": "Published Gauss-Radau error-theory context; abstract/context only, no theorem imported."
+    },
+    {
+      "id": "E3",
+      "url": "https://dlmf.nist.gov/25.6#E2",
+      "use": "Classical exact even-zeta/Bernoulli formula."
+    },
+    {
+      "id": "E3b",
+      "url": "https://dlmf.nist.gov/24.8#E1",
+      "use": "Complete periodic-Bernoulli Fourier bound for Euler-Maclaurin remainder."
+    },
+    {
+      "id": "E3c",
+      "url": "https://dlmf.nist.gov/2.10",
+      "use": "Euler-Maclaurin formula; full tail in independent moment enclosure."
+    },
+    {
+      "id": "E4",
+      "url": "https://dlmf.nist.gov/2.4#i",
+      "use": "Classical complex endpoint/Watson background; source-specific lemma inherited with hypotheses checked."
+    }
+  ],
+  "not_claimed": [
+    "full repository census",
+    "fresh parent numerical campaign",
+    "large-r node solve",
+    "new direct Fourier-zero computation or actual xi-zero claim",
+    "computed exceptional defect",
+    "Lean or remote CI",
+    "independent referee acceptance",
+    "external novelty or priority",
+    "RH proof"
+  ],
+  "observed_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "optional_countermodel_input": {
+    "certificate_blob": "4aeb2ea0cbe9d4710cb1320a5adb49075b0adbf8",
+    "certificate_path": "standalone/2026-09-10-centered-gamma-continuation/CERTIFICATE.md",
+    "commit": "0e19b74fe6dfb39bef69a5edd3f0b3098b10a6ad",
+    "inherited_rouche_margin_lower": "1963816046413587375735998000747928327019770581189416995995754155796255642214238632285580922950473968192889118936307817613777186424685567953056921578976916517233337031/4910085911844212805019784545241398728324963069064597184224937052144200694607011832324905138488856235726330026191340106513825884818828089579992791384064000000000000000000000000000000000000",
+    "logical_scope": "Inherited proposed CG4 numerical theorem only for RGT7; no fresh defining-integral replay",
+    "reading": "Complete supplied certificate text and receipt inspected; both blob identities read back on remote. Only the coarser 10^-22 boundary lower bound is used. No parent executable imported or run.",
+    "receipt_blob": "ba909625d064630af8ba8c28152ea0bcf27e6cd7",
+    "receipt_path": "standalone/2026-09-10-centered-gamma-continuation/results.json",
+    "receipt_sha256": "803e5a19b26fa13a8df6e4d45eee19fa6f2c07e7d3444a801d38895532e6674e",
+    "selected_case": "step_2_to_3_u_7_10"
+  },
+  "parent_records": [
+    {
+      "blob": "738a6c1767fddcf4b8de408bc6b54b1a69ead47e",
+      "commit": "67d5d6a5f588642f4c451fe35d2369b5ddac9346",
+      "path": "standalone/2026-09-10-gamma-finite-defect/PROOF.md",
+      "pr": 862,
+      "reading": "Source definitions and Sections 4-6 reread from supplied full local manuscript; whole-file Git hash matches remote. Endpoint and defect mechanisms are inherited proposed components; no new acceptance or parent executable replay."
+    },
+    {
+      "blob": "48dae66b76c92dccdd7d18fae61c6a5e23802569",
+      "commit": "0e19b74fe6dfb39bef69a5edd3f0b3098b10a6ad",
+      "path": "standalone/2026-09-10-centered-gamma-continuation/PROOF.md",
+      "pr": 855,
+      "reading": "Source convention and mean-centering motivation; CG4 lines 188-206 fetched at exact head as an explicit inherited proposed numerical premise only for RGT7. No parent certificate replay. RGT1--RGT6 do not import its infinite differential-product expansion or zero certificate."
+    },
+    {
+      "blob": "c324ba15d3f7f3e073b902042ec61c685b555f53",
+      "commit": "11a12b8ceb7db98c7961a5cebf3870b2f31dfa79",
+      "path": "standalone/2026-09-10-reciprocal-gamma-cascade/PROPOSAL.md",
+      "pr": 849,
+      "reading": "Inherited gamma/xi scaling and reciprocal projection, with direct BPY source verification below; no original scout execution."
+    }
+  ],
+  "proposed_branch": "research/astra/20260912-positive-gamma-tail-compression",
+  "relevant_current_readings": [
+    {
+      "blob": "4f2fef8a36219c79c62690b4e6085a42cb5d5c2e",
+      "commit": "72ccb357e774db1189e82f4f1b83459f00638c7e",
+      "path": "standalone/2026-09-10-gamma-endpoint-index/PROOF.md",
+      "pr": 858,
+      "reading": "Lines 1-280 and 345-end: simplex, both-sector endpoint proof, finite index and N5 certificate statement. Certificate implementation not read/replayed; no new verdict on that numerical package."
+    },
+    {
+      "blob": "f9ecf8dea816c6b1bc7ee7ec5ed0ee066bca4f66",
+      "commit": "34ee76ed5bc8124a30aff7567152d4ae9f7f69cb",
+      "path": "standalone/2026-09-10-nonuniform-theta-moment-transport/PROOF.md",
+      "pr": 842,
+      "reading": "Lines 1-260 plus current PR description: source, graph and ten-moment certificate architecture. Not a full proof/package audit; no ferromagnetic theorem is a premise of RGT."
+    },
+    {
+      "commit": "dd42bda400982e395c4102a8f66d25e2bb940e26",
+      "pr": 144,
+      "reading": "PR description only: earlier positive-anchor Stieltjes/Gauss-Radau direction acknowledged. No historical literature or theorem acceptance imported."
+    },
+    {
+      "commit": "cbf7d5f9a693fee17ee62dae4cfb1c2296499282",
+      "pr": 859,
+      "reading": "Current PR description only; not an input."
+    },
+    {
+      "commit": "e1a782cffaafbc9cc228273ed94ce63ae0407632",
+      "pr": 860,
+      "reading": "Alternative supplied branching high-height description only; same path/label but distinct proof/receipts from 859; not combined."
+    },
+    {
+      "commit": "f21012f63adac789653e9bf6dbb8c309fa5fe7c5",
+      "pr": 856,
+      "reading": "Current PR description only; native phase counterexample noted, not replayed or used as theorem."
+    },
+    {
+      "commit": "59384bcdea88bdedb86c503479c6c26c681daf5e",
+      "pr": 845,
+      "reading": "Current PR description only; polynomial compensated estimate still open, not an input."
+    },
+    {
+      "commit": "a1b4625f9775df1fdbd431b5198309a2fce9b038",
+      "pr": 848,
+      "reading": "Current PR description only; literal Newton energy remains a different open premise."
+    }
+  ],
+  "repository": "GettysburgResearch/riemann",
+  "status": "PROPOSED; new component proofs, not independent mathematical acceptance"
+}
