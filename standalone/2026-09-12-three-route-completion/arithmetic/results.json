@@ -1,0 +1,203 @@
+{
+  "arithmetic": "384-bit outward integer intervals plus exact Fraction identities",
+  "boundary_channel_panel": {
+    "HS_error_squared": {
+      "lower": "0.000000002183835895",
+      "upper": "0.000000002183835896"
+    },
+    "M": 32,
+    "N": 4,
+    "activation_continuity_checks": 128,
+    "complete_error_column_norms": 4,
+    "complete_output_cells": 64,
+    "native_coverage": 96,
+    "theorem_HS_error_squared_upper": {
+      "denominator": "1073741824",
+      "numerator": "99648703"
+    }
+  },
+  "coverage": {
+    "complete_output_column_norms": 8,
+    "complete_source_identity_endpoints": 177,
+    "crossing_energy_panels": 11,
+    "mobius_trial_sieve_integers": 177,
+    "odd_all_conversion_endpoints": 177,
+    "orthogonality_entries": 64,
+    "trace_degrees_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "crossing_panels": [
+    {
+      "Y": 5,
+      "complete_energy": {
+        "denominator": "45",
+        "numerator": "59"
+      }
+    },
+    {
+      "Y": 6,
+      "complete_energy": {
+        "denominator": "75",
+        "numerator": "106"
+      }
+    },
+    {
+      "Y": 7,
+      "complete_energy": {
+        "denominator": "1575",
+        "numerator": "2087"
+      }
+    },
+    {
+      "Y": 10,
+      "complete_energy": {
+        "denominator": "4410",
+        "numerator": "6203"
+      }
+    },
+    {
+      "Y": 11,
+      "complete_energy": {
+        "denominator": "121275",
+        "numerator": "161648"
+      }
+    },
+    {
+      "Y": 15,
+      "complete_energy": {
+        "denominator": "15030015",
+        "numerator": "20955761"
+      }
+    },
+    {
+      "Y": 19,
+      "complete_energy": {
+        "denominator": "412649061825",
+        "numerator": "575718749569"
+      }
+    },
+    {
+      "Y": 22,
+      "complete_energy": {
+        "denominator": "4276544822550",
+        "numerator": "5948389543133"
+      }
+    },
+    {
+      "Y": 23,
+      "complete_energy": {
+        "denominator": "540982920052575",
+        "numerator": "732103880041718"
+      }
+    },
+    {
+      "Y": 26,
+      "complete_energy": {
+        "denominator": "957123627785325",
+        "numerator": "1329935424832921"
+      }
+    },
+    {
+      "Y": 30,
+      "complete_energy": {
+        "denominator": "1395231016343594430",
+        "numerator": "1932831185568720949"
+      }
+    }
+  ],
+  "limitations": [
+    "No zeta zero is evaluated.",
+    "No all-degree trace upper saving is tested or proved by this program.",
+    "The two arithmetic paths have the same author.",
+    "No predecessor executable is imported."
+  ],
+  "pi_routes": {
+    "atan_half_plus_third": {
+      "lower": "3.141592653589793238",
+      "upper": "3.141592653589793239"
+    },
+    "machin": {
+      "lower": "3.141592653589793238",
+      "upper": "3.141592653589793239"
+    }
+  },
+  "status": "bounded directed reconstruction; no RH upper estimate",
+  "trace_panels": [
+    {
+      "F_coverage": {
+        "denominator": "225",
+        "numerator": "298"
+      },
+      "M": 2,
+      "N": 1,
+      "S_N": {
+        "lower": "2.386649335911072951",
+        "upper": "2.386649335911072952"
+      },
+      "adapter_upper": {
+        "denominator": "225",
+        "numerator": "299348"
+      },
+      "native_coverage": 6
+    },
+    {
+      "F_coverage": {
+        "denominator": "21718371675",
+        "numerator": "29239613323"
+      },
+      "M": 6,
+      "N": 2,
+      "S_N": {
+        "lower": "3.145813117140541768",
+        "upper": "3.145813117140541769"
+      },
+      "adapter_upper": {
+        "denominator": "1670643975",
+        "numerator": "2223633818246"
+      },
+      "native_coverage": 18
+    },
+    {
+      "F_coverage": {
+        "denominator": "9155631467684549613589771288098282525",
+        "numerator": "12626213572941783244244607342081646892"
+      },
+      "M": 19,
+      "N": 4,
+      "S_N": {
+        "lower": "3.561925078774541948",
+        "upper": "3.561925078774541949"
+      },
+      "adapter_upper": {
+        "denominator": "704279343668042277968443945238329425",
+        "numerator": "937998456539666358735592567713038228584"
+      },
+      "native_coverage": 57
+    },
+    {
+      "F_coverage": {
+        "denominator": "77955606864804138966574744508115074792717249849494762758216540651292593992825957432990469048784593397137156439095761525812877930859225",
+        "numerator": "109857036339931952959083651288183804180564946291541842895085334175278873709692691570317483390360993869651232735831559429215636430859908"
+      },
+      "M": 59,
+      "N": 8,
+      "S_N": {
+        "lower": "3.772365178708671708",
+        "upper": "3.772365178708671709"
+      },
+      "adapter_upper": {
+        "denominator": "5996585143446472228198057269855005753285942296114981750632041588560968768678919802537728388368045645933627418391981655831759840835325",
+        "numerator": "7991288418586491913662849524308455064619711108348100034609296567125573271627265447229530958105709144869283599707671344816392026584301016"
+      },
+      "native_coverage": 177
+    }
+  ]
+}

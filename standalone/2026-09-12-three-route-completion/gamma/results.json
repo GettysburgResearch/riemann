@@ -1,0 +1,146 @@
+{
+  "arithmetic": "exact integers and fractions; no floating primitives",
+  "checks": {
+    "collision_controls": [
+      {
+        "defect": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "parameter": {
+          "denominator": 4,
+          "numerator": -1
+        }
+      },
+      {
+        "defect": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "parameter": {
+          "denominator": 16,
+          "numerator": -1
+        }
+      },
+      {
+        "defect": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "parameter": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      {
+        "defect": {
+          "denominator": 64,
+          "numerator": 1
+        },
+        "parameter": {
+          "denominator": 16,
+          "numerator": 1
+        }
+      },
+      {
+        "defect": {
+          "denominator": 16,
+          "numerator": 1
+        },
+        "parameter": {
+          "denominator": 4,
+          "numerator": 1
+        }
+      }
+    ],
+    "finite_radau_controls": [
+      {
+        "drift": {
+          "denominator": 275,
+          "numerator": 584
+        },
+        "first_scale_defect": {
+          "denominator": 2793,
+          "numerator": 149
+        },
+        "node": {
+          "denominator": 798,
+          "numerator": 275
+        },
+        "remainder_mean": {
+          "denominator": 59451,
+          "numerator": 47284
+        }
+      },
+      {
+        "drift": {
+          "denominator": 78376609,
+          "numerator": 3746500
+        },
+        "first_scale_defect": {
+          "denominator": 749609640000,
+          "numerator": 18224641
+        },
+        "node": {
+          "denominator": 832899600,
+          "numerator": 78376609
+        },
+        "remainder_mean": {
+          "denominator": 9487060124402250,
+          "numerator": 1945368650467369
+        }
+      },
+      {
+        "drift": {
+          "denominator": 18317,
+          "numerator": 307
+        },
+        "first_scale_defect": {
+          "denominator": 658656,
+          "numerator": 2765
+        },
+        "node": {
+          "denominator": 27444,
+          "numerator": 18317
+        },
+        "remainder_mean": {
+          "denominator": 94853325,
+          "numerator": 145536422
+        }
+      }
+    ],
+    "head_identity_panels": 5,
+    "imported_GE4_disk_defect_lower_bound": {
+      "denominator": 10485760000,
+      "numerator": 529
+    },
+    "native_M2_polynomial_in_i_z": [
+      {
+        "denominator": 4,
+        "numerator": 3
+      },
+      {
+        "denominator": 1,
+        "numerator": 1
+      },
+      {
+        "denominator": 1,
+        "numerator": -1
+      }
+    ],
+    "optional_xi_defect_upper_bound": {
+      "denominator": 1944000000000000000000000000000000000000000000000000,
+      "numerator": 376000000000039
+    },
+    "weighted_fisher_anchor": {
+      "denominator": 28561,
+      "numerator": 382976
+    },
+    "weighted_fisher_whole_ceiling": 16384,
+    "whole_path_velocity_constant": 850
+  },
+  "open_gate": "OPEN-GJV",
+  "rh_proved": false,
+  "schema": "gamma-anchored-jensen-bounded-controls-v1",
+  "scope": "bounded algebra/inequalities only; no analytic proof or inherited integral replay"
+}
