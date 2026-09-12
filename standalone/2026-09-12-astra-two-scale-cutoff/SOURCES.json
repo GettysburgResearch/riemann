@@ -1,0 +1,72 @@
+{
+  "external_primary": [
+    {
+      "url": "https://arxiv.org/abs/math/9912170",
+      "use": "classical Brownian-Xi identity; inherited explicit scaling, not a fresh full proof audit"
+    },
+    {
+      "url": "https://dlmf.nist.gov/5.2",
+      "use": "gamma integral and zero-free property"
+    },
+    {
+      "url": "https://dlmf.nist.gov/5.5",
+      "use": "gamma recurrence/reflection"
+    },
+    {
+      "url": "https://dlmf.nist.gov/5.8",
+      "use": "gamma modulus product"
+    },
+    {
+      "url": "https://dlmf.nist.gov/18.19",
+      "use": "MP weight and norm"
+    },
+    {
+      "url": "https://dlmf.nist.gov/18.22",
+      "use": "MP recurrence"
+    },
+    {
+      "url": "https://dlmf.nist.gov/18.23",
+      "use": "MP generating function"
+    },
+    {
+      "url": "https://arxiv.org/abs/1902.06330",
+      "use": "prior orthogonal-polynomial Xi programme; abstract/selected pages only"
+    }
+  ],
+  "homotopy_context": {
+    "blob": "bb82833e204abb8a69a7602642b3d0cb4e7b7024",
+    "head": "8002444ec4d4bd1c6f8fa073820bcc575cb218e1",
+    "path": "standalone/2026-09-12-beta-fixedpoint-homotopy/PROOF.md",
+    "pr": 876,
+    "scope": "connector excerpts through Section 6 and start of 7; no theorem imported; no independent acceptance"
+  },
+  "metadata_only_prs": {
+    "865": "03cb3cb0b14922b839d0a6a64a59236377b1848d",
+    "866": "cb05d3052611bd1804459887e84fdec3cb7064af",
+    "867": "4c7898432546814812b2be8c72fc199e294354d1",
+    "868": "8ae3ea4855fd89882f4b5d782bbd72b721ebf47b",
+    "869": "6603f8b04f9a2d073123a328ac0298a498c93a96",
+    "870": "ee7f76736c235714496526f999e028d181302b56",
+    "871": "43a9eea85e20202370cae4b6ffa1a2c30fc3cfc3",
+    "873": "4d25182333f5900ebfbc97f36f823d256a2ee340",
+    "874": "80844a3778390ff744235cf2b021cfaea80ff512",
+    "875": "be149104721ae7b65b624c100118edfd7b76b69b"
+  },
+  "not_claimed": [
+    "exhaustive live-repository census",
+    "independent mathematics acceptance",
+    "new Xi zero",
+    "unbounded sign estimate",
+    "RH proof"
+  ],
+  "parent": {
+    "blob": "d2f12cf36103161b36c21010051770fda8d7d585",
+    "bytes": 24964,
+    "head": "45281093179434e08d28d8e589a8c70d70ead5b9",
+    "path": "standalone/2026-09-12-astra-hyperbolic-renormalization/PROOF.md",
+    "pr": 872,
+    "scope": "full supplied manuscript, selected connector excerpts, metadata readback; no parent executable replay",
+    "sha256": "dce4e60331be42d2ea3c2cb85c702955b3aa37e32cb63afa9c8ff957d20fe41e"
+  },
+  "schema": "HBR29_SOURCE_SCOPE_V1"
+}
