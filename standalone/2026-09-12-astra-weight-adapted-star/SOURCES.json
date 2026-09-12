@@ -1,0 +1,76 @@
+{
+  "base": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "date": "2026-09-12",
+  "external_sources": [
+    {
+      "scope": "Jacobi transformation, displayed equation inspected. Classical input for native source normalization.",
+      "url": "https://dlmf.nist.gov/20.7#E32"
+    },
+    {
+      "scope": "Entire xi convention and functional equation, displayed equations 25.4.3-4 inspected. The specialized Fourier source derivation is reproduced in PROOF.md.",
+      "url": "https://dlmf.nist.gov/25.4"
+    },
+    {
+      "scope": "Stirling expansion on the positive axis and remainder statement inspected. Used analytically for the leading MGF growth, not by the numerical source producer.",
+      "url": "https://dlmf.nist.gov/5.11"
+    },
+    {
+      "scope": "Newman-Wu abstract metadata and parent attribution inspected; HTML full-text request failed. General weighted Lee-Yang context credited, but the star-specific zero theorem is proved directly here rather than imported from an unread theorem.",
+      "url": "https://arxiv.org/abs/1901.06596"
+    }
+  ],
+  "not_claimed": [
+    "complete review of every recent PR",
+    "formal verification",
+    "external novelty of general Lee-Yang or moment methods",
+    "RH",
+    "independent-author review",
+    "parent full-certificate replays"
+  ],
+  "repository_sources": [
+    {
+      "head": "f21012f63adac789653e9bf6dbb8c309fa5fe7c5",
+      "imported_blob": "2d5dd98a78d0afe279cde2610819165f4b3bef1c",
+      "imported_file": "ball_core.py",
+      "imported_sha256": "6d119bdcd08f36e3905b7b03b6c3d0c5c623d22ce6601d197f3ca20be562f8c9",
+      "path": "standalone/2026-09-10-astra-brownian-phase-audit/",
+      "pr": 856,
+      "scope": "Previous conversation and supplied archive: failed native companion and shared-zero trap; arithmetic file inspected and copied byte-for-byte. Prior full numerical certificate NOT rerun this pass."
+    },
+    {
+      "head": "f737983edb993ffc1142c37320eb3c9b304ab06a",
+      "path": "standalone/2026-09-10-astra-ising-moment-extension/",
+      "pr": 854,
+      "proof_blob": "c58d8081618bffd2ad65a8ed63e836e7c319c781",
+      "scope": "ATTEMPT.md fully read; PROOF.md lines 1-170 and 235-390 read, including source, local moment lift, 270-spin degree-12 construction and independent zero-tripling obstruction. Large result.json partly inspected. No parent checker replay or independent mathematical acceptance."
+    },
+    {
+      "head": "34ee76ed5bc8124a30aff7567152d4ae9f7f69cb",
+      "path": "standalone/2026-09-10-nonuniform-theta-moment-transport/",
+      "pr": 842,
+      "scope": "Current detailed PR description read: 73-spin 2564-edge degree-10 model and local higher-order transport. Metadata/description orientation only, not full source or checker review."
+    },
+    {
+      "head": "6f3b816e6e8e4eafc0e3bc4dc830267f07f3a44d",
+      "pr": 847,
+      "scope": "General Ising realization and initial seed credited via the frozen #854 manuscript; no new independent parent proof audit."
+    },
+    {
+      "head": "67d5d6a5f588642f4c451fe35d2369b5ddac9346",
+      "path": "standalone/2026-09-10-gamma-finite-defect/PROOF.md",
+      "pr": 862,
+      "proof_blob": "738a6c1767fddcf4b8de408bc6b54b1a69ead47e",
+      "scope": "First part through the endpoint proof inspected in PR changed-file payload; lines 270-405 read directly, covering weighted defect limit, finite Hankel index and generic variance-flow failure. No complete independent review or numerical replay."
+    },
+    {
+      "head": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "paths": [
+        "README.md",
+        "AGENTS.md",
+        "research/integrated/suzuki_hardy/README.md"
+      ],
+      "scope": "Current repository policy/navigation and Suzuki/Hardy reviewed-scope summary read; no new acceptance of the missing coefficient-one domination estimate."
+    }
+  ],
+  "schema": "STAR26 source scope v1"
+}
