@@ -1,0 +1,72 @@
+{
+  "actual_zero_inputs": [],
+  "date": "2026-09-12",
+  "exhaustive_repository_audit": false,
+  "external": [
+    {
+      "depth": "abstract/metadata read this pass; required endpoint Mellin identity rederived",
+      "id": "B",
+      "title": "Biane--Pitman--Yor, Probability laws related to the Jacobi theta and Riemann zeta function and Brownian excursions",
+      "url": "https://arxiv.org/abs/math/9912170"
+    },
+    {
+      "depth": "Euler beta integral",
+      "id": "D1",
+      "url": "https://dlmf.nist.gov/5.12"
+    },
+    {
+      "depth": "xi functional equation and normalization",
+      "id": "D2",
+      "url": "https://dlmf.nist.gov/25.4"
+    },
+    {
+      "depth": "gamma/digamma integral formulas",
+      "id": "D3",
+      "url": "https://dlmf.nist.gov/5.9"
+    },
+    {
+      "depth": "classical zero-strip boundary only",
+      "id": "D4",
+      "url": "https://dlmf.nist.gov/25.10"
+    }
+  ],
+  "imported_executables": [],
+  "independent_mathematical_acceptance": false,
+  "inspected_connected_sources": [
+    {
+      "depth": "fetched principal text through available response; linearization compared; no theorem imported",
+      "path": "standalone/2026-09-12-astra-hyperbolic-renormalization/PROOF.md",
+      "pr": 872,
+      "sha": "45281093179434e08d28d8e589a8c70d70ead5b9"
+    },
+    {
+      "depth": "fresh PR body only; actual earlier phase failure retained, certificate not replayed",
+      "pr": 856,
+      "sha": "f21012f63adac789653e9bf6dbb8c309fa5fe7c5"
+    }
+  ],
+  "local_predecessor_orientation": [
+    {
+      "filename": "riemann_branching_fixedpoint_PROPOSAL.md",
+      "scope": "supplied prior manuscript; all new load-bearing formulas rederived; no remote blob authentication of this local file this pass",
+      "sha256": "bab49ed09fccd832c9a5021049a61e61f41839edb73d59d2df38fb17fcfb9897"
+    },
+    {
+      "filename": "riemann_branching_order_PROOF.md",
+      "scope": "supplied prior manuscript; all new load-bearing formulas rederived; no remote blob authentication of this local file this pass",
+      "sha256": "c76acb916a723137cb1cdf0dfe88cfbe4de212feacedc50ad81f7ab882bb4b93"
+    },
+    {
+      "filename": "riemann_branching_height_transfer_PROOF.md",
+      "scope": "supplied prior manuscript; all new load-bearing formulas rederived; no remote blob authentication of this local file this pass",
+      "sha256": "25893e146b4504e2579121db5394c42dbef808f91e0e38645afddfadc1d31d01"
+    }
+  ],
+  "publication_base": {
+    "depth": "fresh PR metadata; research motivation, not mathematical premise",
+    "pr": 874,
+    "repository": "GettysburgResearch/riemann",
+    "sha": "80844a3778390ff744235cf2b021cfaea80ff512"
+  },
+  "schema": "BFC26-sources-v1"
+}
