@@ -1,0 +1,54 @@
+{
+  "credited_antecedents": [
+    {
+      "head": "1742bb3d55cd289ab72a555b09f8fe4a6d8ded59",
+      "pr": 839
+    },
+    {
+      "head": "01d5a86136866e53e50df5ce90dfa441abdc32d8",
+      "pr": 841
+    }
+  ],
+  "external_orientation": [
+    {
+      "reference": "NIST DLMF 25.4",
+      "scope": "HTML definitions/reflection convention checked; no new analytic theorem imported.",
+      "url": "https://dlmf.nist.gov/25.4"
+    },
+    {
+      "reference": "R. Zhang, On Power Sums of Positive Numbers, arXiv:1510.03420v2",
+      "scope": "Abstract read for attribution; no full external proof audit.",
+      "url": "https://arxiv.org/abs/1510.03420v2"
+    },
+    {
+      "reference": "C. M. Newman and W. Wu, Constants of de Bruijn-Newman type and their Newman conjectures, arXiv:1901.06596v2",
+      "scope": "Abstract/orientation only; no additional theorem from it used for this perturbation.",
+      "url": "https://arxiv.org/abs/1901.06596v2"
+    }
+  ],
+  "latest_orientation": [
+    {
+      "head": "0640c9c59be0bf20c18258460a7517fb09728e82",
+      "pr": 863,
+      "scope": "PR body only; fourteen-moment construction, not imported as a theorem here."
+    },
+    {
+      "head": "2758a69b64dc8f3672681215b5dc431f7bf2b3ef",
+      "pr": 864,
+      "scope": "PR body only; complete-Bernstein obstruction, not a native Hankel negative result."
+    },
+    {
+      "head": "14b20cc85aec1dc1909990d2d8a517740f2dd536",
+      "pr": 866,
+      "scope": "PR body only; polynomial-degree growth criterion, not an upper bound used here."
+    }
+  ],
+  "novelty_claim": false,
+  "parent_bytes": 23854,
+  "parent_commit": "4558dce9cb981a2e8c0e3e058b21a5b17f6a1cf5",
+  "parent_git_blob": "b5c071afbac25cc27c4382306b4e8e26debb573c",
+  "parent_path": "standalone/2026-09-12-theta-cumulant-spectral-index/PROOF.md",
+  "parent_reading": "Full supplied manuscript read; remote contents identity checked. No parent numerical replay or independent acceptance.",
+  "parent_sha256": "1b3803ecd6bfa0e2d00cfbbbf9e1bbf755dbe254430ce2897cce37567251201b",
+  "rh_proved": false
+}
