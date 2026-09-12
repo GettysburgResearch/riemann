@@ -1,0 +1,74 @@
+{
+  "schema": "MRP26-sources-v1",
+  "date": "2026-09-12",
+  "status": "PROPOSED; independent analytic and implementation review required",
+  "repository": "GettysburgResearch/riemann",
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "base_tree": "8bddd12122e8a772683c9ed0b37dbcb945036893",
+  "publication_path": "standalone/2026-09-12-moment-ratio-pick-obstruction/",
+  "source_identity": "Classical theta Fourier representation of Xi(z)=xi(1/2+iz); normalized by Xi(0). No RH hypothesis.",
+  "parents_context": [
+    {
+      "pr": 851,
+      "head": "57726ef9b3bf90561df5a361e3b01169c892a62a",
+      "scope": "Prior supplied proof packets and current PR metadata; local scalar arithmetic authenticated against remote blob; no parent numerical replay."
+    },
+    {
+      "pr": 856,
+      "head": "f21012f63adac789653e9bf6dbb8c309fa5fe7c5",
+      "scope": "PR description of actual-source companion phase counterexample; no replay or independent acceptance."
+    },
+    {
+      "pr": 859,
+      "head": "cbf7d5f9a693fee17ee62dae4cfb1c2296499282",
+      "scope": "Relevant proof sections on finite-depth Laplace singularities, polynomial roots, and high-height asymptotics; not independent full review."
+    },
+    {
+      "pr": 860,
+      "head": "e1a782cffaafbc9cc228273ed94ce63ae0407632",
+      "scope": "Relevant proof sections on BV alternative and nonuniform explicit cutoffs; not a supersession or independent acceptance of #859."
+    },
+    {
+      "pr": 862,
+      "head": "67d5d6a5f588642f4c451fe35d2369b5ddac9346",
+      "scope": "Source convergence, radial repair, weighted defect limit and failed generic variance-flow proof sections."
+    }
+  ],
+  "orientation": [
+    "main README.md, AGENTS.md, STATUS.md",
+    "issue #763 Riemann Structures programme",
+    "recent PR descriptions, not an exhaustive artifact/comment census"
+  ],
+  "arithmetic_adaptation": {
+    "path": "standalone/2026-09-10-gauss-thorin-zero-control/intervals.py",
+    "head": "57726ef9b3bf90561df5a361e3b01169c892a62a",
+    "git_blob": "032d3693cb5b7828a38d0620ed8d901b1cdaee56",
+    "local_bytes": 8616,
+    "license": "MIT",
+    "changes": "Scalar-only subset, no complex/logarithmic operations; added point-input type guard."
+  },
+  "external": [
+    {
+      "authors": [
+        "T. Konstantopoulos",
+        "P. Patie",
+        "R. Sarkar"
+      ],
+      "title": "A new class of solutions to the van Dantzig problem, the Lee-Yang property, and the Riemann hypothesis",
+      "version": "arXiv:2211.16680v1",
+      "url": "https://arxiv.org/html/2211.16680v1",
+      "inspected": "HTML sections 2.1, 4, 4.1 and Theorem 23; classic coefficient-ratio question and sufficient one-separated Bernstein-Pick class; our exclusion proof does not rely on that sufficient zero theorem."
+    }
+  ],
+  "not_claimed": [
+    "RH proof or disproof",
+    "off-critical xi zero",
+    "an RH-necessary negative Pick certificate",
+    "exclusion of ordinary Bernstein factors or all Lee-Yang models",
+    "independent mathematical review",
+    "formal verification",
+    "whole-repository validation",
+    "parent certificate replay",
+    "external novelty priority"
+  ]
+}
