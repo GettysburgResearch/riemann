@@ -1,0 +1,139 @@
+{
+  "Walsh_sha256": "89c45db7ca00087961bddf3c24bdbce4419e3f63205f4e27dacc635510a06ab3",
+  "actual_theta_moments_newly_computed": 0,
+  "analytic_theorems_machine_proved": false,
+  "bounded_groups": {
+    "Bernstein_binomial_variances": 75,
+    "checked_Walsh_coefficients": 2032,
+    "complete_counterlaw_integral_certificate": 1,
+    "complete_four_spin_laws": 4,
+    "complete_spin_Walsh_panels": 28,
+    "conditional_attraction_controls": 132,
+    "connected_attractive_four_spin_law": 1,
+    "entropy_polynomial_panels": 40,
+    "rational_potential_constructions": 4,
+    "restricted_partition_normalization_panels": 3,
+    "source_and_cumulant_constants": 5
+  },
+  "continuous_countermodel": {
+    "epsilon": "1/1000000",
+    "safe_sixth_cumulant_interval": [
+      "-37/50000",
+      "-87/125000"
+    ],
+    "scope": "density proportional to exp(-x^2/2-10^-6*x^6), NOT theta",
+    "sixth_cumulant_bounds": [
+      "-6179344210704556948117915931579460933162473559640671/8358556883834510543651825763681550076684575840000000000",
+      "-14558917462611396588489519294884649018126669514623759/20896392100975649254902063994344174685600000000000000000"
+    ],
+    "unnormalized_integral_bounds": {
+      "0": [
+        "199997/200000",
+        "399994002079/400000000000"
+      ],
+      "2": [
+        "199979/200000",
+        "399958027027/400000000000"
+      ],
+      "4": [
+        "599811/200000",
+        "239924481081/80000000000"
+      ],
+      "6": [
+        "2997921/200000",
+        "1199169778377/80000000000"
+      ]
+    }
+  },
+  "four_spin_countermodels": [
+    {
+      "coefficients": [
+        "1",
+        "2",
+        "6",
+        "2",
+        "1"
+      ],
+      "r": "1/2",
+      "reduced_discriminant": "-12"
+    },
+    {
+      "coefficients": [
+        "1",
+        "3",
+        "6",
+        "3",
+        "1"
+      ],
+      "r": "3/4",
+      "reduced_discriminant": "-7"
+    },
+    {
+      "coefficients": [
+        "1",
+        "7/2",
+        "6",
+        "7/2",
+        "1"
+      ],
+      "r": "7/8",
+      "reduced_discriminant": "-15/4"
+    },
+    {
+      "coefficients": [
+        "1",
+        "999/250",
+        "6",
+        "999/250",
+        "1"
+      ],
+      "r": "999/1000",
+      "reduced_discriminant": "-1999/62500"
+    }
+  ],
+  "pair_realization_proved": false,
+  "parent_commit": "8f1f457b0b92e76a0a75bd3d8a8921c205fa75b0",
+  "potential_constructions": [
+    {
+      "L": 3,
+      "N": 27,
+      "P_even_coefficients": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "L": 13,
+      "N": 371293,
+      "P_even_coefficients": [
+        "9",
+        "-5",
+        "1"
+      ]
+    },
+    {
+      "L": 2,
+      "N": 128,
+      "P_even_coefficients": [
+        "0",
+        "1/2",
+        "0",
+        "1/1000000"
+      ]
+    },
+    {
+      "L": 61,
+      "N": 11694146092834141,
+      "P_even_coefficients": [
+        "1",
+        "3",
+        "3",
+        "2",
+        "1"
+      ]
+    }
+  ],
+  "rh_proved": false,
+  "schema": 1,
+  "status": "PROPOSED_MANY_SPIN_RECONSTRUCTION_NOT_PAIR_OR_RH"
+}

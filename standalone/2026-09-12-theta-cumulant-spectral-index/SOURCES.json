@@ -1,0 +1,94 @@
+{
+  "base_commit": "34ee76ed5bc8124a30aff7567152d4ae9f7f69cb",
+  "repository": "GettysburgResearch/riemann",
+  "intended_pr": 842,
+  "branch": "research/astra/20260910-theta-ferromagnetic-synthesis",
+  "rh_proved": false,
+  "novelty_claim": false,
+  "parent": {
+    "path": "standalone/2026-09-10-nonuniform-theta-moment-transport/",
+    "proof": {
+      "sha256": "a492fd67ec8f64e56172b8bb4fbd3a0e6327d581c75a5e9fd7b4a2af63b9f44b",
+      "git_blob": "f9ecf8dea816c6b1bc7ee7ec5ed0ee066bca4f66",
+      "bytes": 25764
+    },
+    "certify": {
+      "sha256": "4fcbb5d79c6bb33faef9ffb62867f4f5885830b6aeacfc29b8180a1d94d2cb9a",
+      "git_blob": "3c1078cddd72d13911bfbbfaba7ad6c7fa873414",
+      "bytes": 15029
+    },
+    "reading": "Full supplied manuscript and source code read; connected PR head verified. No parent full certificate rerun. Interval primitives adapted, not an independent backend."
+  },
+  "related": [
+    {
+      "pr": 854,
+      "commit": "f737983edb993ffc1142c37320eb3c9b304ab06a",
+      "path": "standalone/2026-09-10-astra-ising-moment-extension/PROOF.md",
+      "reading": "Sections 1--4 and statement of independent-spin obstruction read from connected file; no numerical producer replay. No theorem from this packet is a numerical premise."
+    },
+    {
+      "pr": 858,
+      "commit": "72ccb357e774db1189e82f4f1b83459f00638c7e",
+      "path": "standalone/2026-09-10-gamma-endpoint-index/PROOF.md",
+      "git_blob": "4f2fef8a36219c79c62690b4e6085a42cb5d5c2e",
+      "reading": "Source definition and fixed-stage statement inspected; full index argument and qualifications at file lines330--495 read. Antecedent for CSI1; actual-source proof is reconstructed here, no approximant root certificate imported."
+    },
+    {
+      "pr": 834,
+      "commit": "f0e34780f4fe91bd5d07e791e8855189838c3df5",
+      "path": "standalone/2026-09-09-centered-theta-determinant/PROOF.md",
+      "reading": "Previously supplied whole determinant/cumulant manuscript; trace identity used for orientation only, not a dependency of the new proof."
+    },
+    {
+      "pr": 859,
+      "commit": "cbf7d5f9a693fee17ee62dae4cfb1c2296499282",
+      "reading": "Recent PR metadata only; no all-depth theorem or producer imported."
+    },
+    {
+      "pr": 860,
+      "commit": "e1a782cffaafbc9cc228273ed94ce63ae0407632",
+      "reading": "Alternative shared-identifier version: metadata only; not reconciled or combined with #859."
+    },
+    {
+      "pr": 845,
+      "commit": "59384bcdea88bdedb86c503479c6c26c681daf5e",
+      "reading": "Updated PR description only. Its compensated all-degree estimate remains open; no claim imported."
+    },
+    {
+      "pr": 839,
+      "commit": "1742bb3d55cd289ab72a555b09f8fe4a6d8ded59",
+      "path": "standalone/2026-09-10-astra-spectral-core/PROOF.md",
+      "git_blob": "6cf2776b5974f0d1ba1218e1b8f771f78831e157",
+      "reading": "Connected exact proof lines160--345, including full SC26-2 complex-tail witness and trace application. Existing whole-source criterion credited; CSI1 adds exact multi-pair/infinite index, not the equivalence itself."
+    },
+    {
+      "pr": 841,
+      "commit": "01d5a86136866e53e50df5ce90dfa441abdc32d8",
+      "path": "standalone/2026-09-10-astra-theta-trace-metric/PROOF.md",
+      "reading": "Connected proof lines210--375, including TMC4, the exact shift1 normalization, the4x4 certificate statement and generic source counterexample. No numerical producer imported; fresh integration reproduces its4x4 determinant bracket.",
+      "git_blob": "536421e53a11bafdd368bd21c7ac4b1b115db14d"
+    }
+  ],
+  "external": [
+    {
+      "reference": "NIST DLMF 25.4",
+      "url": "https://dlmf.nist.gov/25.4",
+      "scope": "Classical xi normalization and reflection; web page read."
+    },
+    {
+      "reference": "Ruiming Zhang, On Power Sums of Positive Numbers, arXiv:1510.03420v2 (2016)",
+      "url": "https://arxiv.org/abs/1510.03420v2",
+      "scope": "Primary abstract inspected for attribution of genus-zero power-sum positivity criteria and their RH application. Its full theorem/proof is not an imported dependency; CSI1 is proved here."
+    },
+    {
+      "reference": "Classical Hadamard factorization, compact moment representation, Gaussian quadrature and cyclic spectral theorem",
+      "scope": "Standard analytic/algebraic tools. The needed index, tail and finite quadrature calculations are supplied; no general priority claim."
+    }
+  ],
+  "excluded": [
+    "Uncertified mpmath/SciPy graph and single-edge scouting this turn",
+    "No full repository checkout or all-PR proof census",
+    "No parent independent implementation or formal proof build",
+    "Unretrieved arXiv2608.11520 was not used"
+  ]
+}

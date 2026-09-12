@@ -1,0 +1,34 @@
+{
+  "parent_commit": "bc561659684f50a6374bcd8d4afb0caf9fb65027",
+  "parent_branch": "research/astra/20260910-theta-ferromagnetic-synthesis",
+  "parent_proof": {
+    "path": "standalone/2026-09-10-lee-yang-hidden-spin-transfer/PROOF.md",
+    "git_blob": "c9707fa6e7db99b8e7f7d7c487cf1f553a75632c",
+    "bytes": 22009,
+    "inspection": "Full supplied manuscript and live PR metadata read. Architecture-specific restrictions motivate the nonuniform graph; no independent acceptance claimed."
+  },
+  "adapted_interval_primitives": {
+    "commit": "7ff754c7347d6ee9d59608e562e469351b3d37e7",
+    "path": "standalone/2026-09-10-theta-ferromagnetic-synthesis/certify_seed.py",
+    "git_blob": "19ff7484e9d82ec16d483c0018e1aedcf1664362",
+    "bytes": 10784,
+    "inspection": "Full source extracted from supplied ZIP, read, and Git-blob authenticated. Only interval primitives adapted; new source integration uses a different Taylor rule and full tails. Old full seed executable not rerun."
+  },
+  "external_inputs": [
+    {
+      "reference": "Newman and Wu, Communications in Mathematical Physics 369 (2019), 153-170",
+      "url": "https://link.springer.com/article/10.1007/s00220-019-03453-0",
+      "scope": "Classical finite weighted pair-Ising Lee-Yang theorem, paired canonical product and weak/compact closure context.",
+      "inspection": "Primary journal HTML overview and Section 3 theorem/product/closure material read; no independent proof of the Lee-Yang theorem or PDF audit claimed."
+    },
+    {
+      "reference": "Classical Jacobi inversion and theta Mellin representation of entire xi",
+      "scope": "Literal density and full-line normalization reconstructed in Section 1; no zero data or proposed spectral theorem imported."
+    }
+  ],
+  "parallel_reading": "Recent PR descriptions on Brownian, gamma, arithmetic-coercivity and balanced-Newton routes received orientation-only reading in this pass. No theorem or computation from them enters the new certificate. This is not an exhaustive post-integration audit.",
+  "numerical_discovery": "Ordinary NumPy/SciPy least-squares and mpmath root/inverse reconnaissance suggested parameters only. Includes unsuccessful small two-block/one-hub fits. No scout output is a target-moment or acceptance input. The finite rational centers/preconditioner are supplied and fully certified afresh.",
+  "rh_proved": false,
+  "all_order_theta_realization_proved": false,
+  "novelty_claim": false
+}

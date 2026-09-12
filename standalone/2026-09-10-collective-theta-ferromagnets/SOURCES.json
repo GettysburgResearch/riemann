@@ -1,0 +1,31 @@
+{
+  "parent_commit": "7ff754c7347d6ee9d59608e562e469351b3d37e7",
+  "parent_path": "standalone/2026-09-10-theta-ferromagnetic-synthesis/PROPOSAL.md",
+  "parent_git_blob": "74e182ca4b75f329a5724be97fecf52809e40e57",
+  "parent_sha256": "4b0fceafea526cc7773a8e4265a254ebac7c232ca66756d5b4d68b32ef6b10db",
+  "parent_bytes": 20892,
+  "inspection": "Full proposal read from connected source and supplied file; local bytes and supplied ZIP agree with the returned Git blob. Parent code not executed; FMS3 retains inherited proposed status.",
+  "external_inputs": [
+    {
+      "reference": "Newman and Wu, Lee-Yang Property and Gaussian Multiplicative Chaos, CMP 369 (2019), 153-170, arXiv:1708.08820v3",
+      "url": "https://arxiv.org/abs/1708.08820",
+      "used": "Weighted Ising Lee-Yang theorem, canonical product and closure; needed elementary consequences rederived.",
+      "inspection": "Theorem and canonical-product text read; PDF pages 3 and 5 viewed in this session. Full external paper not independently audited."
+    },
+    {
+      "reference": "Li and Radziwill, The Riemann Zeta Function on Vertical Arithmetic Progressions, IMRN 2015(2), 325-354; arXiv:1208.2684v1, Theorem 4",
+      "url": "https://arxiv.org/abs/1208.2684",
+      "used": "No entire critical-line arithmetic progression consists of zeta zeros; fixed parameters only.",
+      "inspection": "Parsed definition and Theorem 4 on PDF page 3 read, published journal abstract verified. Web screenshot attempts failed with cache-miss; no claim of successful page-image inspection or full mollifier audit."
+    },
+    {
+      "reference": "Edwards and Sokal, Phys. Rev. D 38 (1988), 2009-2012",
+      "url": "https://doi.org/10.1103/PhysRevD.38.2009",
+      "used": "Attribution only. The finite expansion and moment identities are fully derived here.",
+      "inspection": "Publisher retrieval failed; no external proposition is relied on without its displayed finite derivation."
+    }
+  ],
+  "rh_proved": false,
+  "all_order_realization_proved": false,
+  "novelty_claim": false
+}

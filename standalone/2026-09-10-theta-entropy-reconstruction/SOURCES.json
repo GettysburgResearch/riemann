@@ -1,0 +1,41 @@
+{
+  "parent_commit": "8f1f457b0b92e76a0a75bd3d8a8921c205fa75b0",
+  "parent_path": "standalone/2026-09-10-collective-theta-ferromagnets/PROOF.md",
+  "parent_blob": "4f3cd5a983b651425ee659d021ce2875a711ef44",
+  "parent_bytes": 26436,
+  "parent_sha256": "9089cc66a3cf6f9306e933c312e271ba386cc1586eff083765684e707c05484a",
+  "parent_scope": "Full supplied proof and connected source read. Literal theta source and pair-Ising class used; seed certificate and parent code not rerun or independently accepted.",
+  "parallel_orientation": {
+    "pr": 850,
+    "head": "5c26d1f7e1075fdea18119a5abb447102ab5850b",
+    "path": "standalone/2026-09-10-astra-branching-fixedpoint/PROPOSAL.md",
+    "scope": "Read contraction/source/starting-family discussion for orientation. No mathematical or executable dependency. Zero-preservation remains open there."
+  },
+  "external": [
+    {
+      "reference": "Ellis--Newman, The statistics of Curie--Weiss models, J Stat Phys 19 (1978) 149--161",
+      "url": "https://link.springer.com/article/10.1007/BF01012508",
+      "inspection": "Publisher abstract and bibliographic page only. Historical attribution; required entropy convergence is proved in this packet."
+    },
+    {
+      "reference": "Lee--Yang, Phys Rev 87 (1952) 410--419",
+      "doi": "10.1103/PhysRev.87.410",
+      "inspection": "Classical imported pair-ferromagnetic zero theorem already stated in parent. Original full article not independently audited in this pass."
+    },
+    {
+      "reference": "Newman--Wu, Lee--Yang Property and Gaussian multiplicative chaos, arXiv:1708.08820v3",
+      "url": "https://arxiv.org/abs/1708.08820v3",
+      "inspection": "Public abstract/scope read. No full proof replay. Pair-class restriction retained."
+    },
+    {
+      "reference": "Newman, The GHS inequality and the Riemann hypothesis, Constructive Approximation 7 (1991) 389--399",
+      "url": "https://link.springer.com/article/10.1007/BF01888165",
+      "inspection": "Publisher abstract/reference page only; used to attribute known convexity, not as a zero-location theorem. Warned earlier erroneous theorem not used."
+    }
+  ],
+  "rh_proved": false,
+  "pair_realization_proved": false,
+  "novelty_claim": false,
+  "new_theta_integration": false,
+  "entire_limit_machine_proved": false
+}

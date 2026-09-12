@@ -1,0 +1,92 @@
+{
+  "all_order_synthesis_proved": false,
+  "bits": 128,
+  "cells": 16384,
+  "cloud_variance_range": [
+    "0.348620053078",
+    "0.352043930427"
+  ],
+  "cluster_variance_fraction_squared_upper": "144225372833165611771814286161728666031/340282366920938463463374607431768211456",
+  "finite_left_sixth_cumulant": [
+    "0.350087258775",
+    "0.350087683437"
+  ],
+  "finite_right_sixth_cumulant": [
+    "0.351467264282",
+    "0.351467690620"
+  ],
+  "finite_seed_total_spins": 4104,
+  "interval": [
+    0,
+    2
+  ],
+  "isolated_cloud_spins": 4096,
+  "left_cluster_ratio_squared": [
+    "13.456346576277",
+    "13.456346576278"
+  ],
+  "matched_even_moments_exactly": [
+    2,
+    4,
+    6
+  ],
+  "matching_meaning": "exact finite 4104-spin graph existence by IVT with explicit algebraic scale formulas; neither uniqueness nor a numerically instantiated root is claimed",
+  "parameter_subintervals": 128,
+  "pi": [
+    "3.141592653589793238",
+    "3.141592653589793239"
+  ],
+  "q_interval": [
+    "11/10",
+    "1101/1000"
+  ],
+  "rh_proved": false,
+  "right_cluster_ratio_squared": [
+    "13.562780559264",
+    "13.562780559265"
+  ],
+  "schema": 1,
+  "simpson_errors": {
+    "0": "681637/216172782113783808",
+    "2": "294915/18014398509481984",
+    "4": "1143989/13510798882111488",
+    "6": "1472521/3377699720527872",
+    "8": "628471/281474976710656"
+  },
+  "standardized_negative_fourth_cumulant": [
+    "0.208897057432",
+    "0.208897226226"
+  ],
+  "standardized_sixth_cumulant": [
+    "0.350653241429",
+    "0.350673600822"
+  ],
+  "status": "PROPOSED_SIX_MOMENT_SEED_NOT_RH",
+  "target_ratio_squared": [
+    "13.488314871657",
+    "13.489913916223"
+  ],
+  "theta_moments": {
+    "0": [
+      "1.000000000000000000",
+      "1.000000000000000000"
+    ],
+    "2": [
+      "0.046209986197613056",
+      "0.046209986264062827"
+    ],
+    "4": [
+      "0.005960017120576457",
+      "0.005960017461302463"
+    ],
+    "6": [
+      "0.001205533015184023",
+      "0.001205534769114304"
+    ],
+    "8": [
+      "0.000323793228595810",
+      "0.000323802211437155"
+    ]
+  },
+  "theta_terms_computed": 4
+}
