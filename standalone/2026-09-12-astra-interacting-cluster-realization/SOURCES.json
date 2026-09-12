@@ -1,0 +1,77 @@
+{
+  "schema": "ICR26.sources.v1",
+  "parent": {
+    "pr": 854,
+    "sha": "f737983edb993ffc1142c37320eb3c9b304ab06a",
+    "tree": "d0b7e2595606a15fea171394bad98c5966163826",
+    "branch": "research/astra/20260910-ising-moment-extension",
+    "scope": "PR metadata/comments, PROOF.md Sections 1-5 through the zero-tripling argument, and full ATTEMPT.md inspected. Not a full parent audit; no parent executable or numerical receipt imported or replayed.",
+    "directory": "standalone/2026-09-10-astra-ising-moment-extension/"
+  },
+  "interval_backend": {
+    "pr": 847,
+    "sha": "6f3b816e6e8e4eafc0e3bc4dc830267f07f3a44d",
+    "path": "standalone/2026-09-10-astra-ising-moment-realization/check.py",
+    "blob": "065df512d2a15d662dfac1366c6b5c031d8d543f",
+    "bytes": 15028,
+    "sha256": "6fd2690ad7039ec5d4814f2749b06a72e720a49a98268e982dfce39658519677",
+    "scope": "Primitives and Taylor recursion adapted from local exact uploaded packet. Bit precision, degree, target order, moment equations and acceptance controls changed. Not an independent interval backend."
+  },
+  "external_imports": [
+    {
+      "id": "NW19",
+      "authors": "Charles M. Newman and Wei Wu",
+      "title": "Constants of de Bruijn-Newman type in analytic number theory and statistical physics",
+      "url": "https://arxiv.org/abs/1901.06596v2",
+      "location": "page 11, equation (21) and following weighted specialization; general moment/weak-closure discussion",
+      "used": "Weighted Lee-Yang for finite zero-field Ising ferromagnets with nonnegative couplings and observable weights. Paired-product variance consequences and the needed limit argument are reconstructed.",
+      "reading": "Parsed primary paper and successful earlier page-11 image; a later repeat image request failed. No new proof of Lee-Yang or external theorem audit claimed."
+    },
+    {
+      "id": "LR12",
+      "authors": "Xiannan Li and Maksym Radziwill",
+      "title": "The Riemann-zeta function on vertical arithmetic progressions",
+      "url": "https://arxiv.org/abs/1208.2684v1",
+      "location": "Theorem 4, page 3",
+      "used": "Unconditional positive nonvanishing proportion for every fixed real arithmetic progression on the critical line. Only impossibility of an entire progression of zeros is used.",
+      "reading": "Primary parsed theorem and abstract inspected; PDF page-image requests failed with cache misses. No proof replay, effective uniform constants, or numerical zero census is claimed."
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "ICR1",
+      "status": "proposed",
+      "statement": "exact finite 272-spin moment realization through 14 at J=log(3/2)/2; unmatched16 strict interval",
+      "proof": "PROOF.md Sections 2-4",
+      "evidence": "check.py, parameters.json and result.json"
+    },
+    {
+      "id": "ICR2",
+      "status": "proposed",
+      "statement": "variance leaves every bounded-size, bounded-integer-complexity lattice component class in an all-order theta realization",
+      "proof": "CLUSTER_LIMIT.md Sections 1-4",
+      "imports": [
+        "NW19",
+        "LR12"
+      ],
+      "not_claimed": "general arbitrary incommensurate-weight cluster obstruction or RH"
+    },
+    {
+      "id": "ICR3",
+      "status": "proposed",
+      "statement": "vanishing total interblock coupling cannot connect fixed-size homogeneous blocks into an all-order realization",
+      "proof": "CLUSTER_LIMIT.md Section 5",
+      "imports": [
+        "ICR2"
+      ]
+    }
+  ],
+  "exclusions": [
+    "No full repository audit or checkout build",
+    "No all-order existence theorem",
+    "No current theta zero or positive-J spectrum computation",
+    "No validation of every statement in older packets",
+    "No independent referee acceptance",
+    "No external novelty/priority claim"
+  ]
+}
