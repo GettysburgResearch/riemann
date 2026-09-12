@@ -1,0 +1,82 @@
+{
+  "schema": "DG26-sources/v1",
+  "repository": "GettysburgResearch/riemann",
+  "main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "status": "PROPOSED; RH and subpower upper bound OPEN",
+  "repository_sources": [
+    {
+      "pr": 845,
+      "head": "59384bcdea88bdedb86c503479c6c26c681daf5e",
+      "path": "standalone/2026-09-10-astra-polynomial-boundary/PROOF.md",
+      "blob": "c48e35a673bb522b4294b483a33806de9f4783be",
+      "scope": "Complete manuscript read. AC29 cutoff and graph mechanism rederived; new quantitative degree choices added; no independent status promotion."
+    },
+    {
+      "pr": 845,
+      "head": "b9ccd03a681a73e91fb7bbfb7a3b97766fe8285e",
+      "path": "standalone/2026-09-10-astra-safe-source-kernel/PROOF.md",
+      "blob": "5d4c2738f30b40b9b18874607ad061b5b096d7f3",
+      "scope": "Parent polynomial normalization; supplied complete proof consulted. Positive-eta estimate remains open."
+    },
+    {
+      "pr": 845,
+      "head": "b9ccd03a681a73e91fb7bbfb7a3b97766fe8285e",
+      "path": "standalone/2026-09-10-astra-safe-source-kernel/check.py",
+      "local_sha256": "f5fc03f1eebf32eecb84f81c29431e58d1894b114b9f34c239be04b3f422e11d",
+      "scope": "Directed Fraction interval design and even-zeta primitive comparison adapted with attribution, not a new independent backend."
+    },
+    {
+      "pr": 861,
+      "head": "c0a11d2585ac8513be77bc72df6fe0e699d78211",
+      "path": "standalone/2026-09-10-astra-polynomial-proof-attempt/NOTE.md",
+      "blob": "7f42c6d68d32e30e71e22573a33da953fbb568f6",
+      "scope": "Local full note read; remote blob matched. Auxiliary norm failure does not refute Q-AC28."
+    },
+    {
+      "pr": 848,
+      "head": "2f0056d542603cb8118b9ac9da45b397162778e4",
+      "path": "standalone/2026-09-10-astra-balanced-newton/collision-energy/PROOF.md",
+      "blob": "9baf42cb5967a54960a55456e3ebc4136d63f9fb",
+      "scope": "Complete collision-energy argument read; contextual only, no estimate imported into the odd-source trace."
+    }
+  ],
+  "classical_inputs": [
+    {
+      "name": "Legendre Laplace integral, orthogonality, Rodrigues and derivative identities",
+      "url": "https://dlmf.nist.gov/18.10#E5",
+      "reading": "Primary DLMF page inspected. Boundary bound and Mellin coefficient product are derived in PROOF.md."
+    },
+    {
+      "name": "Classical Littlewood RH-to-Mertens implication",
+      "url": "https://arxiv.org/pdf/0705.0723",
+      "reading": "Soundararajan v2 introduction, page1, equation(1) inspected in parsed PDF: explicit Littlewood RH-to-Mertens statement. Web screenshot attempted but returned cache miss. Full analytic proof not newly reviewed; classical input imported. No PDF redistributed."
+    },
+    {
+      "name": "Classical reciprocal-even-zeta polynomial/sequence criteria",
+      "url": "https://doi.org/10.1155/IJMMS.2005.3527",
+      "reading": "Baez-Duarte 2005 primary abstract inspected; attribution only, no unproved transfer of its scalar theorem to this operator."
+    },
+    {
+      "name": "Hardy existence of a critical-line zero; zeta reflection and zero-free Re(s)>=1",
+      "url": "https://dlmf.nist.gov/25.10",
+      "reading": "Primary DLMF 25.10 distribution text read, including nontrivial strip, reflection, zero-free Re(s)>=1 and infinitely many critical-line zeros. No zero numerical evaluation."
+    }
+  ],
+  "not_run": [
+    "full authenticated checkout",
+    "repository-wide validator",
+    "Lean or other proof assistant",
+    "numeric zeta-zero census",
+    "other PR accepting campaigns",
+    "complete historical mathematics audit"
+  ],
+  "census": "LATEST_WORK.tsv: 25 exact heads; nine updated-PR search results, all within census",
+  "new_claims": {
+    "DG26-1": "Exact K identity and complete finite covariance/trace",
+    "DG26-2": "Unconditional linear trace ceiling and conditional source-exponent bound",
+    "DG26-3": "Global degree-exponent to zero-free half-plane implication",
+    "DG26-4": "Every hypothetical off-line zero forces all-large-degree power growth",
+    "DG26-5": "Sparse degree-growth criteria equivalent to RH; upper premise open",
+    "DG26-6": "Unconditional logarithmic cost lower bound from a classical critical-line zero"
+  }
+}
