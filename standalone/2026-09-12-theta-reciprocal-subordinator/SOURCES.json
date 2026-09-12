@@ -1,0 +1,79 @@
+{
+  "status": "PROPOSED_COMPONENT_PROOFS_NOT_RH",
+  "repository": "GettysburgResearch/riemann",
+  "target_pr": 842,
+  "parent_head": "aa281cc871637f287ff91457e5608b5b5f694c25",
+  "parent_branch": "research/astra/20260910-theta-ferromagnetic-synthesis",
+  "source_convention": "Xi(z)=xi(1/2+iz)=integral_R phi(t)exp(izt)dt; w=phi/Xi(0)",
+  "local_authentication": [
+    {
+      "path": "standalone/2026-09-12-theta-cumulant-spectral-index/PROOF.md",
+      "commit": "4558dce9cb981a2e8c0e3e058b21a5b17f6a1cf5",
+      "blob": "b5c071afbac25cc27c4382306b4e8e26debb573c",
+      "sha256": "1b3803ecd6bfa0e2d00cfbbbf9e1bbf755dbe254430ce2897cce37567251201b",
+      "bytes": 23854,
+      "use": "Source/q normalization. No old source integral or Hankel receipt used as numerical input."
+    },
+    {
+      "path": "standalone/2026-09-12-theta-cumulant-spectral-index/intervals.py",
+      "blob": "9532350b43e98c704b69fbf0a30de3c79d1aeec4",
+      "sha256": "45c19f8d7f989fa2628d563250e8ec1ea49e6c53b910be03ad925251b032b868",
+      "bytes": 4301,
+      "use": "Outward dyadic design adapted; new precision, trig evaluator and complete low-height calculation."
+    }
+  ],
+  "external_inputs": [
+    {
+      "reference": "Platt--Trudgian, Bull. London Math. Soc.53 (2021),792--797, Theorem1",
+      "url": "https://arxiv.org/abs/2004.09765",
+      "scope": "All nontrivial zeros with0<gamma<=30 central; much larger published height not otherwise used.",
+      "inspection": "Theorem statement and Turing explanation read in parsed PDF and page image. Full computation not rerun."
+    },
+    {
+      "reference": "DLMF5.9.16",
+      "url": "https://dlmf.nist.gov/5.9.E16",
+      "scope": "Digamma integral with combined origin cancellation.",
+      "inspection": "Official displayed formula read."
+    },
+    {
+      "reference": "Classical Hadamard/Jensen, Laplace uniqueness, Bernstein representation, Poisson jump construction",
+      "scope": "Explicit analytic inputs; source-specific estimates and consequences derived in PROOF."
+    }
+  ],
+  "related_not_imported": [
+    {
+      "pr": 379,
+      "head": "589f1c05ccaf248cf08c87fefa7d5ab6d2380708",
+      "reading": "Metadata/body. All-center first-Hermite criterion recognized; not proved or imported here."
+    },
+    {
+      "pr": 871,
+      "head": "43a9eea85e20202370cae4b6ffa1a2c30fc3cfc3",
+      "reading": "Principal proof Sections1--4 and metadata; model only, not theta identification."
+    },
+    {
+      "pr": 875,
+      "head": "be149104721ae7b65b624c100118edfd7b76b69b",
+      "reading": "Metadata/body only; no theorem imported."
+    },
+    {
+      "pr": 876,
+      "head": "8002444ec4d4bd1c6f8fa073820bcc575cb218e1",
+      "reading": "Metadata/body only; positive response does not prove sign."
+    },
+    {
+      "pr": 870,
+      "head": "ee7f76736c235714496526f999e028d181302b56",
+      "reading": "Metadata/body only; not used instead of published PT census."
+    },
+    {
+      "reference": "Polson arXiv:1804.10043",
+      "url": "https://arxiv.org/abs/1804.10043",
+      "reading": "Selected reciprocal-xi/Wald/GGC statements and page image. No proposed GGC/RH conclusion imported; no comprehensive external audit."
+    }
+  ],
+  "novelty_claim": false,
+  "rh_proved": false,
+  "complete_monotonicity_proved": false,
+  "independent_mathematical_review": false
+}
