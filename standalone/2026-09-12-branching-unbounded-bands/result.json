@@ -1,0 +1,478 @@
+{
+  "constants": {
+    "em_ratio_at_10": "112627/4500000",
+    "log2_lower": "842/1215",
+    "rho": "31/80",
+    "rho11_times_2pow15": "25408476896404831/26214400000000000"
+  },
+  "dyadic_schedules": [
+    {
+      "R": 16,
+      "comparison_depth": 4128,
+      "j": 4,
+      "sharper_depth": 1397
+    },
+    {
+      "R": 32,
+      "comparison_depth": 5248,
+      "j": 5,
+      "sharper_depth": 1892
+    },
+    {
+      "R": 64,
+      "comparison_depth": 6528,
+      "j": 6,
+      "sharper_depth": 2475
+    },
+    {
+      "R": 128,
+      "comparison_depth": 8000,
+      "j": 7,
+      "sharper_depth": 3146
+    },
+    {
+      "R": 256,
+      "comparison_depth": 9728,
+      "j": 8,
+      "sharper_depth": 3949
+    },
+    {
+      "R": 512,
+      "comparison_depth": 11840,
+      "j": 9,
+      "sharper_depth": 4928
+    },
+    {
+      "R": 1024,
+      "comparison_depth": 14592,
+      "j": 10,
+      "sharper_depth": 6193
+    },
+    {
+      "R": 2048,
+      "comparison_depth": 18496,
+      "j": 11,
+      "sharper_depth": 7953
+    },
+    {
+      "R": 4096,
+      "comparison_depth": 24576,
+      "j": 12,
+      "sharper_depth": 10648
+    },
+    {
+      "R": 8192,
+      "comparison_depth": 34880,
+      "j": 13,
+      "sharper_depth": 15125
+    },
+    {
+      "R": 16384,
+      "comparison_depth": 53504,
+      "j": 14,
+      "sharper_depth": 23111
+    },
+    {
+      "R": 32768,
+      "comparison_depth": 88640,
+      "j": 15,
+      "sharper_depth": 38027
+    },
+    {
+      "R": 65536,
+      "comparison_depth": 156672,
+      "j": 16,
+      "sharper_depth": 66748
+    },
+    {
+      "R": 131072,
+      "comparison_depth": 290368,
+      "j": 17,
+      "sharper_depth": 123002
+    },
+    {
+      "R": 262144,
+      "comparison_depth": 555264,
+      "j": 18,
+      "sharper_depth": 234256
+    },
+    {
+      "R": 524288,
+      "comparison_depth": 1082432,
+      "j": 19,
+      "sharper_depth": 455422
+    },
+    {
+      "R": 1048576,
+      "comparison_depth": 2134016,
+      "j": 20,
+      "sharper_depth": 896368
+    },
+    {
+      "R": 2097152,
+      "comparison_depth": 4234304,
+      "j": 21,
+      "sharper_depth": 1776786
+    },
+    {
+      "R": 4194304,
+      "comparison_depth": 8431872,
+      "j": 22,
+      "sharper_depth": 3536082
+    },
+    {
+      "R": 8388608,
+      "comparison_depth": 16823872,
+      "j": 23,
+      "sharper_depth": 7053057
+    },
+    {
+      "R": 16777216,
+      "comparison_depth": 33604608,
+      "j": 24,
+      "sharper_depth": 14085324
+    },
+    {
+      "R": 33554432,
+      "comparison_depth": 67162688,
+      "j": 25,
+      "sharper_depth": 28148120
+    },
+    {
+      "R": 67108864,
+      "comparison_depth": 134275328,
+      "j": 26,
+      "sharper_depth": 56271897
+    },
+    {
+      "R": 134217728,
+      "comparison_depth": 268496960,
+      "j": 27,
+      "sharper_depth": 112517548
+    },
+    {
+      "R": 268435456,
+      "comparison_depth": 536936448,
+      "j": 28,
+      "sharper_depth": 225006892
+    },
+    {
+      "R": 536870912,
+      "comparison_depth": 1073811520,
+      "j": 29,
+      "sharper_depth": 449983534
+    },
+    {
+      "R": 1073741824,
+      "comparison_depth": 2147557632,
+      "j": 30,
+      "sharper_depth": 899934739
+    },
+    {
+      "R": 2147483648,
+      "comparison_depth": 4295045696,
+      "j": 31,
+      "sharper_depth": 1799834960
+    },
+    {
+      "R": 4294967296,
+      "comparison_depth": 8590017536,
+      "j": 32,
+      "sharper_depth": 3599633158
+    }
+  ],
+  "ordinate_panels": [
+    {
+      "G": 0,
+      "N": 0,
+      "S": 0,
+      "central": 0,
+      "pairs": 0,
+      "slack": 0
+    },
+    {
+      "G": 0,
+      "N": 2,
+      "S": 0,
+      "central": 0,
+      "pairs": 1,
+      "slack": 2
+    },
+    {
+      "G": 0,
+      "N": 4,
+      "S": 0,
+      "central": 0,
+      "pairs": 2,
+      "slack": 4
+    },
+    {
+      "G": 0,
+      "N": 6,
+      "S": 0,
+      "central": 0,
+      "pairs": 3,
+      "slack": 6
+    },
+    {
+      "G": 1,
+      "N": 1,
+      "S": 1,
+      "central": 1,
+      "pairs": 0,
+      "slack": 0
+    },
+    {
+      "G": 0,
+      "N": 3,
+      "S": 1,
+      "central": 1,
+      "pairs": 1,
+      "slack": 0
+    },
+    {
+      "G": 0,
+      "N": 5,
+      "S": 1,
+      "central": 1,
+      "pairs": 2,
+      "slack": 2
+    },
+    {
+      "G": 0,
+      "N": 7,
+      "S": 1,
+      "central": 1,
+      "pairs": 3,
+      "slack": 4
+    },
+    {
+      "G": 0,
+      "N": 2,
+      "S": 0,
+      "central": 2,
+      "pairs": 0,
+      "slack": 2
+    },
+    {
+      "G": 0,
+      "N": 4,
+      "S": 0,
+      "central": 2,
+      "pairs": 1,
+      "slack": 4
+    },
+    {
+      "G": 0,
+      "N": 6,
+      "S": 0,
+      "central": 2,
+      "pairs": 2,
+      "slack": 6
+    },
+    {
+      "G": 0,
+      "N": 8,
+      "S": 0,
+      "central": 2,
+      "pairs": 3,
+      "slack": 8
+    },
+    {
+      "G": 0,
+      "N": 3,
+      "S": 0,
+      "central": 3,
+      "pairs": 0,
+      "slack": 3
+    },
+    {
+      "G": 0,
+      "N": 5,
+      "S": 0,
+      "central": 3,
+      "pairs": 1,
+      "slack": 5
+    },
+    {
+      "G": 0,
+      "N": 7,
+      "S": 0,
+      "central": 3,
+      "pairs": 2,
+      "slack": 7
+    },
+    {
+      "G": 0,
+      "N": 9,
+      "S": 0,
+      "central": 3,
+      "pairs": 3,
+      "slack": 9
+    },
+    {
+      "G": 0,
+      "N": 4,
+      "S": 0,
+      "central": 4,
+      "pairs": 0,
+      "slack": 4
+    },
+    {
+      "G": 0,
+      "N": 6,
+      "S": 0,
+      "central": 4,
+      "pairs": 1,
+      "slack": 6
+    },
+    {
+      "G": 0,
+      "N": 8,
+      "S": 0,
+      "central": 4,
+      "pairs": 2,
+      "slack": 8
+    },
+    {
+      "G": 0,
+      "N": 10,
+      "S": 0,
+      "central": 4,
+      "pairs": 3,
+      "slack": 10
+    }
+  ],
+  "parent": "ee7f76736c235714496526f999e028d181302b56",
+  "schedules": [
+    {
+      "B": 3148,
+      "C_R": "514518/175",
+      "L": 37,
+      "R": 30,
+      "a": 7,
+      "depth": 2321,
+      "m": 12
+    },
+    {
+      "B": 3732,
+      "C_R": "13891518/175",
+      "L": 43,
+      "R": 100,
+      "a": 7,
+      "depth": 2750,
+      "m": 17
+    },
+    {
+      "B": 7736,
+      "C_R": "12180901518/175",
+      "L": 61,
+      "R": 1000,
+      "a": 10,
+      "depth": 5698,
+      "m": 27
+    },
+    {
+      "B": 1165611,
+      "C_R": "12000180000900001518/175",
+      "L": 121,
+      "R": 1000000,
+      "a": 20,
+      "depth": 854832,
+      "m": 56
+    },
+    {
+      "B": 1222254,
+      "C_R": "2767051193663776662/35",
+      "L": 127,
+      "R": 1048576,
+      "a": 20,
+      "depth": 896368,
+      "m": 57
+    }
+  ],
+  "schema": "BUB26-v1",
+  "sharp_count_example": {
+    "clean_G": 1,
+    "coefficients_in_s_minus_half": [
+      "52804565555625/262144",
+      "0",
+      "1894172573798125/4194304",
+      "0",
+      "6438964807849009/16777216",
+      "0",
+      "1457600690585919/8388608",
+      "0",
+      "798580576486497/16777216",
+      "0",
+      "4377026676893/524288",
+      "0",
+      "62738841295/65536",
+      "0",
+      "73024851/1024",
+      "0",
+      "849903/256",
+      "0",
+      "701/8",
+      "0",
+      "1"
+    ],
+    "degree": 20,
+    "kind": "synthetic_not_zeta",
+    "positive_height_N": 10,
+    "simple_central_S": 4
+  },
+  "source_moments": [
+    {
+      "depth": 0,
+      "m3": "63/25",
+      "peano_mass": "4/175"
+    },
+    {
+      "depth": 1,
+      "m3": "651/250",
+      "peano_mass": "31/3500"
+    },
+    {
+      "depth": 2,
+      "m3": "52731/20000",
+      "peano_mass": "961/280000"
+    },
+    {
+      "depth": 3,
+      "m3": "4238661/1600000",
+      "peano_mass": "29791/22400000"
+    },
+    {
+      "depth": 4,
+      "m3": "339718491/128000000",
+      "peano_mass": "923521/1792000000"
+    },
+    {
+      "depth": 5,
+      "m3": "27196873221/10240000000",
+      "peano_mass": "28629151/143360000000"
+    },
+    {
+      "depth": 6,
+      "m3": "2176351069851/819200000000",
+      "peano_mass": "887503681/11468800000000"
+    },
+    {
+      "depth": 7,
+      "m3": "174126723165381/65536000000000",
+      "peano_mass": "27512614111/917504000000000"
+    },
+    {
+      "depth": 8,
+      "m3": "13930715618126811/5242880000000000",
+      "peano_mass": "852891037441/73400320000000000"
+    }
+  ],
+  "status": {
+    "bounded_exact_checks_only": true,
+    "gap_free_cover_proved": false,
+    "new_actual_zero_computation": false,
+    "rh_proved": false
+  }
+}
