@@ -60,7 +60,7 @@ All-degree statements above are written proofs, not inferred from the table.
 
 ## Finite arithmetic checks
 
-The locally executed companion checker reconstructs the complete matrix using actual reciprocal even-zeta
+The checker reconstructs the complete matrix using actual reciprocal even-zeta
 values and every polynomial cross term. No zero locations are evaluated.
 The table gives a certified Rayleigh LOWER bound for Lambda_N and a certified
 trace UPPER bound; it is not a table of computed exact eigenvalues.
@@ -89,19 +89,10 @@ metadata reconnaissance from actual proof reading. [SOURCES.json](SOURCES.json)
 credits both the classical ingredients and exact repository dependencies.
 [VALIDATION.md](VALIDATION.md) states what was and was not run.
 
-## Publication scope
+    python -B check.py --check results.json --self-test
+    python -O -B check.py --check results.json --self-test
+    python -OO -B check.py --check results.json --self-test
 
-This GitHub packet contains mathematics, provenance, and the finite result
-receipt. The executable checker is NOT in this PR: its upload was blocked by
-the connector. That blocked upload was not retried via encoding or a different
-action. The complete nine-file executable packet and detailed reconstructed
-payload are supplied as a separate downloadable chat artifact, with exact
-identities in [VALIDATION.md](VALIDATION.md).
-
-Consequently the accepting command cannot be run from this documentation-only
-directory. Use the complete local review bundle for computational reproduction;
-do not describe this PR alone as a self-contained executable certificate.
-The proof is self-contained apart from the explicitly named classical inputs.
-
-All computations have one author. No independent mathematical review, full
-checkout, repository-wide validator, or subpower upper bound is claimed.
+One same-author checker with different primitive calculations is not independent
+mathematical review. No full checkout or repository-wide validator run is
+claimed. Do not promote the OPEN estimate because its implication is proved.

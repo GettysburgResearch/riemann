@@ -5,31 +5,7 @@ RH remain OPEN. Date: 2026-09-12. All numerical acceptance is integer/Fraction
 arithmetic with explicit outward rounding. This is same-author computation,
 not independent mathematical review or a proof-assistant verification.
 
-## Repository publication versus executable companion
-
-The repository publication has EIGHT non-executable files. It does not contain
-check.py. The connector blocked that code upload with an indeterminate safety
-status. No encoded, split, or alternate-endpoint upload of it was attempted.
-The mathematics and receipt are published separately; the full nine-file local
-packet is supplied to the user as a downloadable artifact.
-
-The commands below describe actual executions in that COMPLETE companion,
-not commands executable from this documentation-only directory. Its original
-manifest remains inside the companion. This publication's MANIFEST.sha256
-instead authenticates its own seven non-manifest files; the two manifests
-are intentionally different and must not be substituted for each other.
-
-Companion checker:
-
-    Git blob bd791e9484114dbf29f0ab4e0eb03d5c2b069bcc
-    SHA256 976a09a38717d819d252104980c57ce9cb47acb043dd62b0f2e11677aa5be2dc
-
-The complete written PROOF.md is byte-identical in both versions:
-
-    Git blob c68170e2dacd23c188c9e71482e51fe63566b587
-    SHA256 94bb449b4ec654f946d1085816e709a2c68486439acad8b8e3a44a0ee9411504
-
-## Actual protocol in the complete companion
+## Actual protocol
 
     python -B check.py --write results.json --self-test
     python -B check.py --check results.json --self-test
@@ -116,7 +92,7 @@ was disabled and no floating value replaced the rational calculation.
 
 ## Scope of fresh replay and publication
 
-The complete companion addition-only patch is applied to a fresh local Git fixture containing
+The final addition-only patch is applied to a fresh local Git fixture containing
 an unrelated sentinel. Every added file is compared byte-for-byte with the
 tested packet; the sentinel is preserved. A clean ZIP extraction is also
 replayed. These are packet fixtures, NOT a full authenticated repository
