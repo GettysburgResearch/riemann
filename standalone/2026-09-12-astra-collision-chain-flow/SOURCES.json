@@ -1,0 +1,81 @@
+{
+  "acceptance": "No external priority claim, formal/kernel verification, independent mathematical acceptance, predecessor certificate replay, or remote CI claim.",
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "classical": [
+    {
+      "authors": "Huxley and Watt",
+      "scope": "primary abstract verified; classical short-source identity also reconstructed directly",
+      "title": "Mertens Sums requiring Fewer Values of the M\u00f6bius function",
+      "url": "https://arxiv.org/abs/1807.05890"
+    },
+    {
+      "authors": "Newman and Wu",
+      "scope": "classical Lee\u2013Yang/weak-closure context, primary abstract verified; finite weighted Lee\u2013Yang imported, convergence consumer reconstructed",
+      "title": "Constants of de Bruijn-Newman type in analytic number theory and statistical physics",
+      "url": "https://arxiv.org/abs/1901.06596"
+    },
+    {
+      "authors": "Biane, Pitman and Yor",
+      "scope": "classical gamma/theta identification inherited through pinned source, abstract verified; no claim of rechecking entire original paper",
+      "title": "Probability laws related to the Jacobi theta and Riemann zeta function and Brownian excursions",
+      "url": "https://arxiv.org/abs/math/9912170"
+    },
+    {
+      "scope": "zeta(0) and zeta prime(0), used to simplify the q=0 calibration; no numerical oracle",
+      "source": "NIST DLMF 25.6.1 and 25.6.11",
+      "url": "https://dlmf.nist.gov/25.6"
+    },
+    {
+      "scope": "explicit analytic imports; source-specific applications supplied in manuscripts",
+      "source": "Classical Jacobi transformation, Euler\u2013Maclaurin, Weierstrass preparation, Puiseux, Hurwitz, analytic implicit-function theorem"
+    }
+  ],
+  "code_origin": "All delivered executable files written in this session; no predecessor numerical module imported. Rational centers selected by excluded floating scouts.",
+  "predecessors": [
+    {
+      "blob": "0f9eac82fcbca61c7887a9fb71eb29d5a4181ce9",
+      "head": "99101457b32b6f10f4eda88ca998048404b860ea",
+      "path": "standalone/2026-09-12-astra-crossing-cofinal/PROOF.md",
+      "pr": 848,
+      "read": "complete principal proof",
+      "use": "native crossing source, diagonal upper bound, common energy exponent; the lower diagonal proof is new here"
+    },
+    {
+      "head": "0640c9c59be0bf20c18258460a7517fb09728e82",
+      "path": "standalone/2026-09-12-astra-interacting-cluster-realization/",
+      "pr": 863,
+      "read": "principal proof and CLUSTER_LIMIT.md",
+      "use": "finite degree-14 model and bounded-lattice-cluster obstruction; no old certificate replay"
+    },
+    {
+      "head": "2758a69b64dc8f3672681215b5dc431f7bf2b3ef",
+      "pr": 864,
+      "read": "PR description only",
+      "use": "orientation: avoid the excluded single complete-Bernstein factor; not a theorem premise"
+    },
+    {
+      "head": "67d5d6a5f588642f4c451fe35d2369b5ddac9346",
+      "path": "standalone/2026-09-10-gamma-finite-defect/PROOF.md",
+      "pr": 862,
+      "read": "complete principal proof in several fetched ranges",
+      "use": "centered source, endpoint contour argument, weighted defect convergence; proposed inherited analytic components"
+    },
+    {
+      "head": "6603f8b04f9a2d073123a328ac0298a498c93a96",
+      "path": "standalone/2026-09-12-three-route-completion/gamma/PROOF.md",
+      "pr": 869,
+      "read": "PR metadata and first 150 lines of gamma proof",
+      "use": "overlap reconciliation: Bessel-anchor positive convolution and signed production; no reuse of its numerical receipts"
+    },
+    {
+      "blob": "c85808219875aa4f40a6fa093d28a0b2394986a5",
+      "head": "43a9eea85e20202370cae4b6ffa1a2c30fc3cfc3",
+      "path": "standalone/2026-09-12-astra-connected-theta-chain/PROOF.md",
+      "pr": 871,
+      "read": "principal construction, Perron comparison, growth calculation and finite-certificate sections; growth section 4 reread at exact ref",
+      "use": "credited infinite connected growth-calibrated framework; reconstructed and extended here with a fresh six-moment small-q seed"
+    }
+  ],
+  "repository": "GettysburgResearch/riemann",
+  "scope": "Targeted continuation and live recent-PR reconciliation, not a fresh exhaustive audit of 100 diffs."
+}
