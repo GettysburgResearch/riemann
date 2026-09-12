@@ -1,0 +1,21 @@
+{
+  "schema": "riemann.dyadic-fir-density.synthetic.v1",
+  "psi_quadratic_sign": -1,
+  "cases": [
+    {
+      "id": "coarse-negative",
+      "h": {"numerator": 1, "denominator": 16},
+      "coefficients": [
+        {"numerator": 1, "denominator": 1},
+        {"numerator": 0, "denominator": 1},
+        {"numerator": 0, "denominator": 1},
+        {"numerator": 0, "denominator": 1},
+        {"numerator": 0, "denominator": 1},
+        {"numerator": -1, "denominator": 1}
+      ],
+      "expected_form": {"numerator": -25, "denominator": 128},
+      "expected_status": "NEGATIVE",
+      "refinement": {"factor": 2}
+    }
+  ]
+}
