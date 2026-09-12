@@ -1,0 +1,171 @@
+{
+  "scope": "finite exact/rational/directed controls only; no RH proof or parent native integral replay",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "groups": {
+    "arithmetic": [
+      {
+        "command": [
+          "python",
+          "-S",
+          "-B",
+          "check.py",
+          "--check",
+          "results.json"
+        ],
+        "exit_code": 0,
+        "output": "{\"accepted\": true, \"coverage\": {\"complete_output_column_norms\": 8, \"complete_source_identity_endpoints\": 177, \"crossing_energy_panels\": 11, \"mobius_trial_sieve_integers\": 177, \"odd_all_conversion_endpoints\": 177, \"orthogonality_entries\": 64, \"trace_degrees_all\": [1, 2, 3, 4, 5, 6, 7, 8]}, \"semantic_sha256\": \"2b706728d7d3ab92d6813eb98c98be6a18891756ae8e2acab6d6ec7e90824600\"}\n"
+      },
+      {
+        "command": [
+          "python",
+          "-S",
+          "-B",
+          "-O",
+          "check.py",
+          "--check",
+          "results.json"
+        ],
+        "exit_code": 0,
+        "output": "{\"accepted\": true, \"coverage\": {\"complete_output_column_norms\": 8, \"complete_source_identity_endpoints\": 177, \"crossing_energy_panels\": 11, \"mobius_trial_sieve_integers\": 177, \"odd_all_conversion_endpoints\": 177, \"orthogonality_entries\": 64, \"trace_degrees_all\": [1, 2, 3, 4, 5, 6, 7, 8]}, \"semantic_sha256\": \"2b706728d7d3ab92d6813eb98c98be6a18891756ae8e2acab6d6ec7e90824600\"}\n"
+      },
+      {
+        "command": [
+          "python",
+          "-S",
+          "-B",
+          "test_rejections.py"
+        ],
+        "exit_code": 0,
+        "output": "{\"accepted\": true, \"pristine_modes\": 2, \"corrupted_reports_rejected\": 8}\n"
+      }
+    ],
+    "ferromagnetic": [
+      {
+        "command": [
+          "python",
+          "-S",
+          "-B",
+          "certify_graft.py"
+        ],
+        "exit_code": 0,
+        "output": "PASS conditional whole-box compensated graft signs; target crossing and RH remain open\n0 -0.002723871612127589 -0.002723599544456787\n1 0.17353662831473302 0.17353862003641365\n2 -0.011822282644898777 -0.011818320035053141\n3 0.713373589247956 0.7133886441992682\n4 0.2570725117851567 0.2571304699142278\n5 0.07876238014883591 0.08062951971440799\n"
+      },
+      {
+        "command": [
+          "python",
+          "-S",
+          "-B",
+          "-O",
+          "certify_graft.py"
+        ],
+        "exit_code": 0,
+        "output": "PASS conditional whole-box compensated graft signs; target crossing and RH remain open\n0 -0.002723871612127589 -0.002723599544456787\n1 0.17353662831473302 0.17353862003641365\n2 -0.011822282644898777 -0.011818320035053141\n3 0.713373589247956 0.7133886441992682\n4 0.2570725117851567 0.2571304699142278\n5 0.07876238014883591 0.08062951971440799\n"
+      },
+      {
+        "command": [
+          "python",
+          "-S",
+          "-B",
+          "test_graft.py"
+        ],
+        "exit_code": 0,
+        "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.047s\n\nOK\n"
+      },
+      {
+        "command": [
+          "python",
+          "-S",
+          "-B",
+          "-O",
+          "test_graft.py"
+        ],
+        "exit_code": 0,
+        "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.049s\n\nOK\n"
+      }
+    ],
+    "gamma": [
+      {
+        "command": [
+          "python",
+          "-S",
+          "-B",
+          "check.py"
+        ],
+        "exit_code": 0,
+        "output": "PASS gamma anchored Jensen bounded controls; OPEN-GJV remains open; RH unproved\n"
+      },
+      {
+        "command": [
+          "python",
+          "-S",
+          "-B",
+          "-O",
+          "check.py"
+        ],
+        "exit_code": 0,
+        "output": "PASS gamma anchored Jensen bounded controls; OPEN-GJV remains open; RH unproved\n"
+      }
+    ],
+    "bridge": [
+      {
+        "command": [
+          "python",
+          "-S",
+          "-B",
+          "verify.py",
+          "--check",
+          "result.json",
+          "--self-test"
+        ],
+        "exit_code": 0,
+        "output": "{\"accepted\": true, \"primitive_moments\": 5, \"positive_forms\": 4, \"robust_exclusion\": true, \"mutations_rejected\": 3}\n"
+      },
+      {
+        "command": [
+          "python",
+          "-S",
+          "-B",
+          "-O",
+          "verify.py",
+          "--check",
+          "result.json",
+          "--self-test"
+        ],
+        "exit_code": 0,
+        "output": "{\"accepted\": true, \"primitive_moments\": 5, \"positive_forms\": 4, \"robust_exclusion\": true, \"mutations_rejected\": 3}\n"
+      }
+    ]
+  },
+  "file_sha256_at_run": {
+    "arithmetic/BOUNDARY_CHANNELS.md": "42bcf477f5fa03dc9246f7cfa48b08ed4a099afec030d75b86c449fa6f9d456b",
+    "arithmetic/check.py": "ff9529f8dfe9cfcfcdd2722761ec77b20ad4043a117e9ba1597b6d14cf3c18bb",
+    "arithmetic/PROOF.md": "4a8eb5a15d2fd9c37502e886159b32d25dda820c3c0c3106b0be7258a40f3dde",
+    "arithmetic/README.md": "ae2146c7945d055075078dc1638450ec289b3dc0132d1bde4c200432ffa2da14",
+    "arithmetic/results.json": "1070d328065957d3e34217ebc6750b87d9dcac91066cb8a70a986161b24adfef",
+    "arithmetic/SOURCES.json": "d0552694ef9348d489cf111da122655d25b2f277e9238508a127353422df3768",
+    "arithmetic/test_rejections.py": "b693bca58eec1ca0d01cb37c253fa3ee9a429844ec42062360370d4e5689ebd2",
+    "arithmetic/VALIDATION.md": "e64337ac82156f8feaee578a1b563db50678d80a4bf3651fd5eed17dd0f283ab",
+    "ferromagnetic/certify_graft.py": "68a6ae287f5a656bcb39d25ad6ef5f97ed0fd20f394b875d602842d6071403d2",
+    "ferromagnetic/continuation-scout.json": "e630ce0b426942d7f4dc03c1a655b73f87b3641add7e05f3156851b02dfbcabb",
+    "ferromagnetic/graft-certificate.json": "952bbac44c0705da98b4b0fbba8e04923f9ff6486ba2d9dbaae992bd71a695d7",
+    "ferromagnetic/PROOF.md": "82eed4adfdc3099b85ea2489d9bfd4e44d2129e198f38db0e3959a0869e5e17d",
+    "ferromagnetic/README.md": "b50a428a7a8cc5af81436e5500efe8ac7e3e572aa44bf3a62a1ff944be295099",
+    "ferromagnetic/scout-result.json": "8738da469ea9cfd5a018e143a8c72ad31acbac2a1a170756153f43f5d42fe8de",
+    "ferromagnetic/scout.py": "94c4900ce4352a5bcc78dbc3e6880b89aeca16fe98a13e08e19ff896ab1996fa",
+    "ferromagnetic/seed-box.json": "9070a5d9adac4d0db2a83acc2452c09381ba808ed7b1960610ea5767fb08a8d4",
+    "ferromagnetic/star-minnorm-scout.json": "ed71852e61d02474fd56fd75b86dd354451794435e97bbc02bebd6f3b8f50ee6",
+    "ferromagnetic/star_scout.py": "b10aaa410547ed8f3da9c640b8f815495f415bc2bd02d358bb472b6fcc0ec529",
+    "ferromagnetic/test_graft.py": "8f3fd4f35e423aec7b920a5852f3e1fb4ffb8711f86eae0859a39bf6ff748ffe",
+    "ferromagnetic/VALIDATION.md": "06b4cd75a6a75e0a52cf9f24765fd3149966fb1ec21dd492a853367c4a82479f",
+    "gamma/check.py": "2f4cbff546b84e8dac7ce629d77946c4b71fd2beed1d10371dc6046c4cc3a5cd",
+    "gamma/LATEST_CONNECTION.md": "f6d8905053939e18985974e343d3cf9084874555b777b55259ed3f5b15823010",
+    "gamma/PROOF.md": "ad66c33a03865c9e42fb470975f81f657cfc1b2b34c9a1a73930f30d38e77545",
+    "gamma/README.md": "038d24e36e5c4a0aa8e79e4182cc1d9b83201b9e837c9341a71a04176c97a6f2",
+    "gamma/results.json": "b9f5348f871849e5dd19fd3ae822e6dfdb871faa68dcb8532d5130247344d80c",
+    "gamma/SOURCES.json": "b00bce3017524b9d4595674234ee02dac9791384dd9b48039f5898cf04edf663",
+    "gamma/VALIDATION.md": "57684ce19a96d2349b0de252507c9c30ab41078a3c61336b5d2c10b59f1db27d",
+    "bridge/PROOF.md": "881d70313f7832ebe0b7a7157e22562be08f6a27afdf910cb12b6cff99905da7",
+    "bridge/result.json": "b42f1276db7fa3732eb7db8ca225097f6b96e813b57eb146aab6a71d45be432c",
+    "bridge/verify.py": "da13afccf2bf30d923dfcc05e6b52dddcfa3b21bb91b8f7d479ebc277b5e9ac5"
+  }
+}

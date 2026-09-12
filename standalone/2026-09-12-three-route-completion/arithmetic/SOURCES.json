@@ -1,0 +1,22 @@
+{
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "sources": [
+    {
+      "label": "DG26",
+      "commit": "14b20cc85aec1dc1909990d2d8a517740f2dd536",
+      "path": "standalone/2026-09-12-astra-polynomial-degree-growth/PROOF.md",
+      "sha256": "94bb449b4ec654f946d1085816e709a2c68486439acad8b8e3a44a0ee9411504",
+      "bytes": 20239,
+      "inspection": "complete proof read; parent executable not run"
+    },
+    {
+      "label": "XCC26",
+      "commit": "99101457b32b6f10f4eda88ca998048404b860ea",
+      "path": "standalone/2026-09-12-astra-crossing-cofinal/PROOF.md",
+      "sha256": "f13a0ccb4c8f5a0b8b96285d89de8d9bd4e62281051e6534865264204c07d9aa",
+      "bytes": 20973,
+      "inspection": "complete proof read; parent executable not run"
+    }
+  ],
+  "new_approximation": "self-contained high-order Fourier/Chebyshev proof; no external Jackson theorem imported"
+}
