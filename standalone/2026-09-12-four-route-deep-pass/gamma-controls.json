@@ -1,0 +1,217 @@
+{
+  "fixed_variance_positive_density_control": {
+    "birth_coefficient_lower_from_pi_gt_3": "53/126",
+    "density_multiplier_lower_for_abs_epsilon_le_quarter": "19/42",
+    "normalization_score_coefficient": "0",
+    "score_absolute_upper_from_pi_gt_3": "46/21",
+    "variance_score_coefficient": "0"
+  },
+  "native_score_panels": [
+    {
+      "kappa2": "17/8",
+      "kappa3": "65/16",
+      "kappa4": "771/64",
+      "score_fisher_lower_bound": "1088/95022963",
+      "shape": "0",
+      "stage": 2
+    },
+    {
+      "kappa2": "1385/648",
+      "kappa3": "47417/11664",
+      "kappa4": "1686305/139968",
+      "score_fisher_lower_bound": "88640/7823336747",
+      "shape": "1",
+      "stage": 2
+    },
+    {
+      "kappa2": "14003861/6480000",
+      "kappa3": "47463626609/11664000000",
+      "kappa4": "168646317872321/13996800000000",
+      "score_fisher_lower_bound": "350096525000000/8072048867510329749143",
+      "shape": "1/2",
+      "stage": 5
+    },
+    {
+      "kappa2": "14011361/6480000",
+      "kappa3": "47464376609/11664000000",
+      "kappa4": "168646392872321/13996800000000",
+      "score_fisher_lower_bound": "26944925000000/621887212530117070511",
+      "shape": "2",
+      "stage": 5
+    }
+  ],
+  "native_zero_integrals_evaluated": false,
+  "parent_certificates_replayed": false,
+  "rh_proved": false,
+  "scope": "Integer/Fraction consistency controls; analytic identities are proved in gamma.md",
+  "shape_scale_panels": [
+    {
+      "peano_mass": "0",
+      "rate": 9,
+      "scale_parameter": "0",
+      "shape_parameter": "0",
+      "third_cumulant_gap": "0",
+      "variance": "0"
+    },
+    {
+      "peano_mass": "1/23328",
+      "rate": 9,
+      "scale_parameter": "1/4",
+      "shape_parameter": "1/8",
+      "third_cumulant_gap": "1/3888",
+      "variance": "1/648"
+    },
+    {
+      "peano_mass": "4/59049",
+      "rate": 9,
+      "scale_parameter": "1/3",
+      "shape_parameter": "2/9",
+      "third_cumulant_gap": "8/19683",
+      "variance": "2/729"
+    },
+    {
+      "peano_mass": "1/8748",
+      "rate": 9,
+      "scale_parameter": "1/2",
+      "shape_parameter": "1/2",
+      "third_cumulant_gap": "1/1458",
+      "variance": "1/162"
+    },
+    {
+      "peano_mass": "8/59049",
+      "rate": 9,
+      "scale_parameter": "2/3",
+      "shape_parameter": "8/9",
+      "third_cumulant_gap": "16/19683",
+      "variance": "8/729"
+    },
+    {
+      "peano_mass": "1/7776",
+      "rate": 9,
+      "scale_parameter": "3/4",
+      "shape_parameter": "9/8",
+      "third_cumulant_gap": "1/1296",
+      "variance": "1/72"
+    },
+    {
+      "peano_mass": "0",
+      "rate": 9,
+      "scale_parameter": "1",
+      "shape_parameter": "2",
+      "third_cumulant_gap": "0",
+      "variance": "2/81"
+    },
+    {
+      "peano_mass": "0",
+      "rate": 16,
+      "scale_parameter": "0",
+      "shape_parameter": "0",
+      "third_cumulant_gap": "0",
+      "variance": "0"
+    },
+    {
+      "peano_mass": "1/131072",
+      "rate": 16,
+      "scale_parameter": "1/4",
+      "shape_parameter": "1/8",
+      "third_cumulant_gap": "3/65536",
+      "variance": "1/2048"
+    },
+    {
+      "peano_mass": "1/82944",
+      "rate": 16,
+      "scale_parameter": "1/3",
+      "shape_parameter": "2/9",
+      "third_cumulant_gap": "1/13824",
+      "variance": "1/1152"
+    },
+    {
+      "peano_mass": "1/49152",
+      "rate": 16,
+      "scale_parameter": "1/2",
+      "shape_parameter": "1/2",
+      "third_cumulant_gap": "1/8192",
+      "variance": "1/512"
+    },
+    {
+      "peano_mass": "1/41472",
+      "rate": 16,
+      "scale_parameter": "2/3",
+      "shape_parameter": "8/9",
+      "third_cumulant_gap": "1/6912",
+      "variance": "1/288"
+    },
+    {
+      "peano_mass": "3/131072",
+      "rate": 16,
+      "scale_parameter": "3/4",
+      "shape_parameter": "9/8",
+      "third_cumulant_gap": "9/65536",
+      "variance": "9/2048"
+    },
+    {
+      "peano_mass": "0",
+      "rate": 16,
+      "scale_parameter": "1",
+      "shape_parameter": "2",
+      "third_cumulant_gap": "0",
+      "variance": "1/128"
+    },
+    {
+      "peano_mass": "0",
+      "rate": 36,
+      "scale_parameter": "0",
+      "shape_parameter": "0",
+      "third_cumulant_gap": "0",
+      "variance": "0"
+    },
+    {
+      "peano_mass": "1/1492992",
+      "rate": 36,
+      "scale_parameter": "1/4",
+      "shape_parameter": "1/8",
+      "third_cumulant_gap": "1/248832",
+      "variance": "1/10368"
+    },
+    {
+      "peano_mass": "1/944784",
+      "rate": 36,
+      "scale_parameter": "1/3",
+      "shape_parameter": "2/9",
+      "third_cumulant_gap": "1/157464",
+      "variance": "1/5832"
+    },
+    {
+      "peano_mass": "1/559872",
+      "rate": 36,
+      "scale_parameter": "1/2",
+      "shape_parameter": "1/2",
+      "third_cumulant_gap": "1/93312",
+      "variance": "1/2592"
+    },
+    {
+      "peano_mass": "1/472392",
+      "rate": 36,
+      "scale_parameter": "2/3",
+      "shape_parameter": "8/9",
+      "third_cumulant_gap": "1/78732",
+      "variance": "1/1458"
+    },
+    {
+      "peano_mass": "1/497664",
+      "rate": 36,
+      "scale_parameter": "3/4",
+      "shape_parameter": "9/8",
+      "third_cumulant_gap": "1/82944",
+      "variance": "1/1152"
+    },
+    {
+      "peano_mass": "0",
+      "rate": 36,
+      "scale_parameter": "1",
+      "shape_parameter": "2",
+      "third_cumulant_gap": "0",
+      "variance": "1/648"
+    }
+  ]
+}

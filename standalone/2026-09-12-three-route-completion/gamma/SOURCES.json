@@ -1,0 +1,70 @@
+{
+  "status": "proposed component proofs; RH and OPEN-GJV remain open",
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "imports": [
+    {
+      "pr": 868,
+      "commit": "8ae3ea4855fd89882f4b5d782bbd72b721ebf47b",
+      "path": "standalone/2026-09-12-native-gamma-collision/PROOF.md",
+      "used": "LATEST_CONNECTION.md only: exact native mean-preserving update and generator; inherited local double-zero annihilation and tiny two-zero tube; whole-step connection and cumulative budget derived separately here.",
+      "reading": "Complete proof read after the main gamma packet was frozen; local integral and contraction certificate not replayed.",
+      "status": "Newly arrived proposed predecessor mathematics. Its numerical collision theorem is not a new certificate from this packet and is not needed for the appended analytic step-balance theorem."
+    },
+    {
+      "pr": 865,
+      "commit": "03cb3cb0b14922b839d0a6a64a59236377b1848d",
+      "path": "standalone/2026-09-12-positive-gamma-tail-compression/PROOF.md",
+      "used": "Positive Radau parameters, exact remainder measure, endpoint source bound, cofinal source convergence, and existing defect consumer.",
+      "reading": "Complete proof, README, and review specification read; computation not replayed.",
+      "status": "Proposed predecessor mathematics, not newly independently accepted."
+    },
+    {
+      "pr": 862,
+      "commit": "67d5d6a5f588642f4c451fe35d2369b5ddac9346",
+      "path": "standalone/2026-09-10-gamma-finite-defect/PROOF.md",
+      "used": "Weighted defect normalization, finite radial repair, convergence to the actual xi defect, and the optional xi zero-count ceiling.",
+      "reading": "Complete proof read; bounded checker not replayed.",
+      "status": "Proposed predecessor mathematics."
+    },
+    {
+      "pr": 858,
+      "commit": "72ccb357e774db1189e82f4f1b83459f00638c7e",
+      "paths": [
+        "standalone/2026-09-10-gamma-endpoint-index/PROOF.md",
+        "standalone/2026-09-10-gamma-endpoint-index/CERTIFICATE.md"
+      ],
+      "used": "GE4: one simple zero of the exact centered N=5 transform in the stated radius-10^-12 disk. Only the new rational disk-to-defect consequence is reconstructed here.",
+      "reading": "Full proof and certificate specification read; defining-integral computation not replayed.",
+      "status": "Inherited proposed computer-assisted theorem. Main production-balance theorem does not depend on it."
+    },
+    {
+      "pr": 855,
+      "commit": "0e19b74fe6dfb39bef69a5edd3f0b3098b10a6ad",
+      "path": "standalone/2026-09-10-centered-gamma-continuation/PROOF.md",
+      "used": "Comparison of the M=2 tangent with the previous variance-shift operator, and source normalization context.",
+      "reading": "Complete proof read; no certificate replay.",
+      "status": "Proposed predecessor mathematics."
+    }
+  ],
+  "classical_sources": [
+    {
+      "title": "Biane, Pitman, Yor: Probability laws related to the Jacobi theta and Riemann zeta functions, and Brownian excursions",
+      "url": "https://arxiv.org/abs/math/9912170",
+      "used": "Gamma-series Mellin identity and Jacobi reciprocity in the source-locked predecessor scaling.",
+      "reading": "Imported through the complete predecessor source proofs; external proof not independently re-established here."
+    },
+    {
+      "title": "NIST DLMF: Modified Bessel differential equation and integral representation",
+      "urls": ["https://dlmf.nist.gov/10.25", "https://dlmf.nist.gov/10.32"],
+      "used": "Equation and integral underlying the explicit Sturm real-zero anchor; the energy argument is supplied in the proof."
+    },
+    {
+      "title": "Platt and Trudgian: The Riemann hypothesis is true up to 3*10^12",
+      "url": "https://doi.org/10.1112/blms.12460",
+      "arxiv": "https://arxiv.org/abs/2004.09765",
+      "used": "Optional finite-height-to-weighted-defect bound only; not a dependency of the anchored production balance or native N=5 obstruction.",
+      "reading": "Primary publisher theorem statement and arXiv abstract inspected. No computation replay or independent audit of that paper's algorithm."
+    }
+  ],
+  "new_execution_scope": "Integer/Fraction algebra and coarse exact inequality controls only. No new Fourier/Jensen evaluation, zero census, parent integral certificate replay, or formal proof."
+}
