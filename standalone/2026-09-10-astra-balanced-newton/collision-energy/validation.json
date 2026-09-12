@@ -1,0 +1,126 @@
+{
+  "schema": 1,
+  "parent": "6671339d48c7f9bb846c15d8265e53f6856c2852",
+  "python": "3.13.5",
+  "scope": "local complete PCR26 fixed protocol, not a complete repository checkout or independent proof acceptance",
+  "runs": [
+    {
+      "name": "producer-normal",
+      "command": [
+        "python",
+        "-S",
+        "-B",
+        "produce.py",
+        "--check",
+        "result.json",
+        "--output",
+        "/mnt/data/rh_collision_continuation/generated-normal.json"
+      ],
+      "returncode": 0,
+      "seconds": 3.646,
+      "stdout": "PASS e4e45dec613f58600da3ae65f1a676e79b60fb14e6708f35b8f44123ff71ceb3\n{\"fake_annuli\": 3, \"kernel_cells\": 6316466, \"native_annuli\": 28, \"native_coefficients\": 86286, \"native_divisor_equations\": 256, \"scalar_tail_cases\": 12}\n",
+      "stderr": "",
+      "executed_utc": "2026-09-10T18:51:44.972702+00:00"
+    },
+    {
+      "name": "verifier-normal",
+      "command": [
+        "python",
+        "-S",
+        "-B",
+        "verify.py",
+        "result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_collision_continuation/verified-normal.json"
+      ],
+      "returncode": 0,
+      "seconds": 5.043,
+      "stdout": "SEPARATE RECONSTRUCTION PASS e4e45dec613f58600da3ae65f1a676e79b60fb14e6708f35b8f44123ff71ceb3\nRESEALED CORRUPTIONS REJECTED 12 AND DUPLICATE KEY\n",
+      "stderr": "",
+      "executed_utc": "2026-09-10T18:51:50.015819+00:00"
+    },
+    {
+      "name": "producer-optimized",
+      "command": [
+        "python",
+        "-S",
+        "-O",
+        "-B",
+        "produce.py",
+        "--check",
+        "result.json",
+        "--output",
+        "/mnt/data/rh_collision_continuation/generated-optimized.json"
+      ],
+      "returncode": 0,
+      "seconds": 3.841,
+      "stdout": "PASS e4e45dec613f58600da3ae65f1a676e79b60fb14e6708f35b8f44123ff71ceb3\n{\"fake_annuli\": 3, \"kernel_cells\": 6316466, \"native_annuli\": 28, \"native_coefficients\": 86286, \"native_divisor_equations\": 256, \"scalar_tail_cases\": 12}\n",
+      "stderr": "",
+      "executed_utc": "2026-09-10T18:51:53.856459+00:00"
+    },
+    {
+      "name": "verifier-optimized",
+      "command": [
+        "python",
+        "-S",
+        "-O",
+        "-B",
+        "verify.py",
+        "result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_collision_continuation/verified-optimized.json"
+      ],
+      "returncode": 0,
+      "seconds": 4.89,
+      "stdout": "SEPARATE RECONSTRUCTION PASS e4e45dec613f58600da3ae65f1a676e79b60fb14e6708f35b8f44123ff71ceb3\nRESEALED CORRUPTIONS REJECTED 12 AND DUPLICATE KEY\n",
+      "stderr": "",
+      "executed_utc": "2026-09-10T18:51:58.746808+00:00"
+    }
+  ],
+  "all_runs_passed": true,
+  "all_report_bytes_identical": true,
+  "semantic_sha256": "e4e45dec613f58600da3ae65f1a676e79b60fb14e6708f35b8f44123ff71ceb3",
+  "resealed_mutations_per_verifier_mode": 12,
+  "duplicate_key_rejected_per_verifier_mode": true,
+  "code_and_report": {
+    "produce.py": {
+      "bytes": 9598,
+      "sha256": "74c54c4c85e6479883f96e5878537cbafb0124d35c540753c00ef2eecf4e144c",
+      "git_blob": "0da88d2ee532bb76d59cff07a54dfaf1c462e4b1"
+    },
+    "verify.py": {
+      "bytes": 11833,
+      "sha256": "019d2e6f6f0230e39786c8b25273c5fe3f52974e216de03c0d9ba8f35fea414d",
+      "git_blob": "c882199be1e3e0e3e1c05a5d94fe01cbfe6f4541"
+    },
+    "result.json": {
+      "bytes": 22083,
+      "sha256": "f521664a106b5f1663ad8e4088d7dd3a2390963e06838a1393b8de0316ec0c91",
+      "git_blob": "6c01ba61c3b8521790ea7317ed6911f22fb07d89"
+    }
+  },
+  "local_links": [
+    [
+      "README.md",
+      "PROOF.md"
+    ],
+    [
+      "README.md",
+      "VALIDATION.md"
+    ],
+    [
+      "README.md",
+      "SOURCE_LOCK.json"
+    ]
+  ],
+  "execution_ceiling": [
+    "no parent checker execution",
+    "no repository-wide validator",
+    "no external formal build",
+    "no all-scale covariance proof",
+    "no independent mathematical acceptance"
+  ],
+  "direct_git_attempt": "git ls-remote failed: Could not resolve host: github.com"
+}

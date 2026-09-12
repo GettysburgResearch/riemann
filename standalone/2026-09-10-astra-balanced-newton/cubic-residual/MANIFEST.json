@@ -1,0 +1,54 @@
+{
+  "schema": "CIR26-manifest-v1",
+  "scope": "exact nine-file packet; this manifest does not authenticate itself or prove mathematics",
+  "files": [
+    {
+      "path": "PROOF.md",
+      "sha256": "78a8f7573f7f090f07465ab797426aeedc7aa716038b8a4629e639da4e9d7008",
+      "git_blob": "e2d4caef55b2d3ddb1036ae7d4ff938b67faec55",
+      "bytes": 15992
+    },
+    {
+      "path": "README.md",
+      "sha256": "822da408862accf4ad6838b37b3d36fd5444e03b37e1905fc3608208fb6ab027",
+      "git_blob": "2460a4220c5464bb1078917374b9ac611cd7da32",
+      "bytes": 4889
+    },
+    {
+      "path": "SOURCE_LOCK.json",
+      "sha256": "103d0225d7d206fee8a5233c4985146fce767f207969836b4a6eb4a13a2c777d",
+      "git_blob": "3f01230cc8dcbf13c8be66e0d6bfbff32c1ec6fe",
+      "bytes": 2915
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "c8d35563268b0f9e7801fe56a5d14356642bbd2cb3a1707986df5f55057d384f",
+      "git_blob": "1b4cbdd09fbab8085dea75af48b1128c1e7d5749",
+      "bytes": 5501
+    },
+    {
+      "path": "produce.py",
+      "sha256": "96494490e5921647ef564532bd0c71363e0861b78640a5eaf37b8f62bc11c1af",
+      "git_blob": "3d90118c94924624bde21bdb8f3184c3c6c345b4",
+      "bytes": 9302
+    },
+    {
+      "path": "result.json",
+      "sha256": "8136affd2565991da00cabf14e1515cdacfd7fd307f0082af286966271a61d8b",
+      "git_blob": "dd5ff796749a4936e939e4111606b19afcfcdf99",
+      "bytes": 10172
+    },
+    {
+      "path": "validation.json",
+      "sha256": "1d39999b3a53c8168a538ff3ff13ae742091719e32d5f2f1ad836992383355bc",
+      "git_blob": "dea8d14a04d5697b377ba0c830c3dadb815fcf47",
+      "bytes": 4038
+    },
+    {
+      "path": "verify.py",
+      "sha256": "4ebed59b9ce186446e86512e7269d602e10c5a885cab79b279a24f9386911117",
+      "git_blob": "e24c400a6df5fe516a7379e6549f2669fc7f3e06",
+      "bytes": 12094
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "NIR26-source-lock-v1",
+  "repository": "GettysburgResearch/riemann",
+  "parent": "a1b4625f9775df1fdbd431b5198309a2fce9b038",
+  "parent_tree": "af517ee8adcd55264e5c74b76aba0f97e2372acb",
+  "observed_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "date": "2026-09-10",
+  "status": "PROPOSED; native gain and RH OPEN",
+  "recovered_work": {
+    "pr": 848,
+    "recovery": "Live PR metadata and source fetched after interrupted response; published packet exists. No full proof recovered or inferred."
+  },
+  "repository_sources": [
+    {
+      "pr": 848,
+      "sha": "a1b4625f9775df1fdbd431b5198309a2fce9b038",
+      "path": "standalone/2026-09-10-astra-balanced-newton/PROOF.md",
+      "blob": "f67e97d423181321ca8318a8ed08071b3e78ec8a",
+      "scope": "Published source sections 0-3 fetched; complete preceding source text available from recovered records. State, Newton identity, and all used interfaces independently rederived here. Parent executables not replayed."
+    },
+    {
+      "pr": 836,
+      "sha": "159864e64ab2b3475b4a2edf212a16888cddd8c5",
+      "path": "standalone/2026-09-09-astra-causal-euler-completion/PROOF.md",
+      "blob": "c25e60dc696cb51d8a762c73eb1e36c79b778940",
+      "scope": "Prior conversation contains exact source. Safe-point optimum credited and rederived; no parent code replay."
+    },
+    {
+      "sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "path": "AGENTS.md",
+      "blob": "c2181ad9ebf037614f3daa8957df640159f8d968",
+      "scope": "Fetched in full; branch-only publication and proposed status retained."
+    }
+  ],
+  "external_sources": [
+    {
+      "authors": "M. N. Huxley and N. Watt",
+      "title": "Mertens Sums requiring Fewer Values of the Mobius Function",
+      "url": "https://arxiv.org/abs/1807.05890",
+      "scope": "Primary abstract read in this continuation. Arbitrary completely multiplicative weights include g(n)=1/n and the harmonic hyperbola identity. No numerical spectral bound imported; all convolution identities rederived. Earlier parent PDF-reading scope not relabeled as current replay."
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.4",
+      "scope": "Standard zeta reflection formulas checked for the conditional final implication."
+    },
+    {
+      "url": "https://dlmf.nist.gov/27.4",
+      "scope": "Standard absolutely convergent Euler/Dirichlet series context checked; no critical-line Euler product used."
+    }
+  ],
+  "independence": "Same-author producer and verifier; no independent mathematical acceptance or broad priority claim.",
+  "omitted": [
+    "full repository checkout validation",
+    "parent executable replay",
+    "external formal build",
+    "all-scale native gain",
+    "full RH proof"
+  ]
+}
