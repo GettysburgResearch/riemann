@@ -1,0 +1,73 @@
+{
+  "classical_imports": [
+    {
+      "name": "Platt--Trudgian, The Riemann hypothesis is true up to 3*10^12",
+      "url": "https://arxiv.org/abs/2004.09765",
+      "read": "PDF parsed text and page image, Theorem 1 on printed page 2",
+      "used": "Centrality of every nontrivial zero with positive ordinate at most 2^40 only",
+      "published_height": 3000175332800,
+      "campaign_rerun": false
+    },
+    {
+      "name": "NIST DLMF 5.8.2",
+      "url": "https://dlmf.nist.gov/5.8",
+      "read": "Gamma infinite-product formula",
+      "used": "Exact independent gamma-ratio factors and centered-noise bound"
+    },
+    {
+      "name": "NIST DLMF 25.10 and classical theta/Hadamard facts",
+      "url": "https://dlmf.nist.gov/25.10",
+      "read": "Zero strip/count context",
+      "used": "Classical strip, summable genus-zero xi product; exact conventions rederived in manuscript"
+    }
+  ],
+  "parent": {
+    "pr": 879,
+    "sha": "5645f787183edefacf6402b0cff60a991fa31ba4",
+    "branch": "research/astra/20260912-two-scale-brownian-cutoff",
+    "reading": "Authored HBR29 proof, two-scale and gamma-profile sections; remote publication verified",
+    "role": "Research motivation and additive Git base, not an analytic premise",
+    "prior_tests_rerun": false
+  },
+  "mathematical_context": [
+    {
+      "pr": 842,
+      "sha": "346f630299252183aec2d8c41a0f3b4027bb9d19",
+      "path": "standalone/2026-09-12-theta-reciprocal-subordinator/PROOF.md",
+      "blob": "f2053068565ab28f673eb537ed4cdb6b6ec9d8fa",
+      "reading": "Sections 1--7; certificate description",
+      "role": "Credited unpowered heat/count/factorial-moment mechanism; needed count and new anchor reconstructed here",
+      "prior_tests_rerun": false
+    },
+    {
+      "pr": 843,
+      "sha": "279bbe3d5198d7f7eb3e0072267f65c7374d7e5e",
+      "path": "standalone/2026-09-10-astra-trace-hankel-attack/PROOF.md",
+      "blob": "cf1dc849f307e581745c1bb5b2f300c77f552aca",
+      "reading": "Source/count opening through line 160 only",
+      "role": "Earlier trace/Hankel overlap; no imported later numerical campaign"
+    },
+    {
+      "pr": 881,
+      "sha": "ab663f7d8020a62e1d8eedaf7d963d0eca3efe50",
+      "path": "standalone/2026-09-12-similarity-energy/PROOF.md",
+      "reading": "Principal argument",
+      "role": "Alternative nonlocal route considered; no theorem or inherited numerical moments used"
+    }
+  ],
+  "reconnaissance_only": {
+    "prs": [869, 875, 877, 878, 880],
+    "scope": "Updated PR bodies, not complete proof review or acceptance"
+  },
+  "reused_primitive": {
+    "file": "ball_core.py",
+    "source_pr": 856,
+    "source_sha": "f21012f63adac789653e9bf6dbb8c309fa5fe7c5",
+    "path": "standalone/2026-09-10-astra-brownian-phase-audit/ball_core.py",
+    "git_blob": "2d5dd98a78d0afe279cde2610819165f4b3bef1c",
+    "bytes": 5553,
+    "status": "Reused byte-identically, not independently reimplemented",
+    "source_archive": "riemann_BRN27_f21012f63ada.zip"
+  },
+  "scope": "No exhaustive repository audit, external novelty survey, formal proof or independent acceptance"
+}
