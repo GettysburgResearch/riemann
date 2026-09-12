@@ -1,0 +1,82 @@
+{
+  "schema": "HSC26.sources.v1",
+  "parent": {
+    "pr": 863,
+    "head": "0640c9c59be0bf20c18258460a7517fb09728e82",
+    "directory": "standalone/2026-09-12-astra-interacting-cluster-realization",
+    "tree": "cd1fc7d91393d788a1cfa07c7df60c0bbaea4918",
+    "files": {
+      "PROOF.md": {
+        "git_blob": "dcf0f5133d08305cc7e82ba307d5bd73b93d9adc",
+        "sha256": "b74e7f96955623552bf2569b0653e238265725f2d3d0ab18b7cf0f2dd816b7aa",
+        "bytes": 12916
+      },
+      "CLUSTER_LIMIT.md": {
+        "git_blob": "71c25f94db96c367d7a873cc45aa9ba8e76f4b31",
+        "sha256": "cec4269f0d8adff99fb58d813a8a393b83a94dcbd61930a930c9c90fb4e4656e",
+        "bytes": 10077
+      },
+      "parameters.json": {
+        "git_blob": "e338c68ec803acd7991d52a83f7d5b5b97896ee3",
+        "sha256": "5f2377e538069e5e5d6f4df01e15a91880e21f1bfd73dd83818a226974a71c0b",
+        "bytes": 711
+      },
+      "check.py": {
+        "git_blob": "9831e7033fcaffea66d5220c7fe7a8b36c28ef65",
+        "sha256": "8e520d9cab28ca24c46a4eff123044c554480d9a3819a737d892f1f58a26700a",
+        "bytes": 12822
+      },
+      "result.json": {
+        "git_blob": "e04888f5cee6e8e6eb483f6b72239f03366c7fd6",
+        "sha256": "531b80259640396ce9f54144b69dbfb8daf90ecf944ca9cecc1e0809d0500160",
+        "bytes": 11143
+      },
+      "SHA256SUMS": {
+        "git_blob": "5250cdf779599aaa34093e768fd97f0ade2fa2ce",
+        "sha256": "ef721ecd08b626b5f532641a8cd2a93fa9fa2756b1d7567ee5853c6df6262442",
+        "bytes": 713
+      },
+      "test_rejections.py": {
+        "git_blob": "3c927a5eb241201c31c396757691479b03dd43be",
+        "sha256": "798f8252657629ff2af23d3cb2fe0ab5312e7f69144cbecd46f52dcd41bf1042",
+        "bytes": 3060
+      }
+    },
+    "reading": "Full PROOF.md and CLUSTER_LIMIT.md read locally and byte identities checked against live returned tree. Full parent numerical accepting command rerun in normal and optimized isolated Python. This is not a new independent interval backend or referee acceptance."
+  },
+  "other_repo_orientation": {
+    "pr": 842,
+    "head": "34ee76ed5bc8124a30aff7567152d4ae9f7f69cb",
+    "scope": "Current PR body and changed-file list only. Its 73-spin proof and numerical certificate are not imported or replayed."
+  },
+  "external": [
+    {
+      "id": "NW19",
+      "url": "https://arxiv.org/abs/1901.06596v2",
+      "location": "page 11, equation (21) and following paragraph",
+      "scope": "Weighted Lee-Yang for finite zero-field ferromagnets. Parsed primary theorem inspected; page-10 zero-indexed screenshot attempted and failed with cache miss."
+    },
+    {
+      "id": "DLMF-EM",
+      "url": "https://dlmf.nist.gov/2.10",
+      "scope": "Classical Euler-Maclaurin; the needed integrable remainder hypotheses for the new rescaled function are checked in the proof."
+    },
+    {
+      "id": "DLMF-GAMMA",
+      "url": "https://dlmf.nist.gov/5.11",
+      "scope": "Stirling asymptotic; exact gamma product and special values are classical."
+    },
+    {
+      "id": "DLMF-ZETA",
+      "url": "https://dlmf.nist.gov/25.6",
+      "scope": "zeta(0) and zeta-prime(0), particularly equation 25.6.11. No RH premise."
+    }
+  ],
+  "scope_boundaries": [
+    "No actual large starting index N0 certified.",
+    "No new retuned finite or infinite model numerically evaluated.",
+    "No actual Xi zero used to define the model.",
+    "All-order realization and RH remain open.",
+    "Generic asymptotic completion is not an identification with the theta law."
+  ]
+}
