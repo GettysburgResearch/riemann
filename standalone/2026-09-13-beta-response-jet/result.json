@@ -1,0 +1,141 @@
+{
+  "arithmetic": "exact Fraction + 512-bit outward integer intervals",
+  "coefficient_checks": {
+    "first_response_coefficients": [
+      "0",
+      "0",
+      "0",
+      "-7/10",
+      "-78/95",
+      "-96/125",
+      "-6170/9691",
+      "-41620/87087"
+    ],
+    "raw_moment_comparisons": 41,
+    "scale_integral_comparisons": 41,
+    "third_moment_parameter_cases": 5
+  },
+  "native_double_collision_computed": false,
+  "native_initial_response": {
+    "collision_sign_proved": false,
+    "complex_response_panels": [
+      {
+        "complete_series_tail_upper": "393642251268318833686140251524449078117547361943320913727805441565528288407110141675626605613386103262005000263468555141084288726104921319269695621179805280582997258983817530128674946728352874595857300500370373238620125101810494461523534775975397199038708919598214778168469972544009936977209/603473647567305755158152987630593019708183189952556527712320218730181711993564024188169326948999907297461319787165932291945400224901911269354651409007023732957594857078100689098914921757112742710566379538859577471075334932179898588932203435043060183348649785623306054882635408118675805466671423225667256320",
+        "imag_decimal_enclosure": [
+          "-52684650311/1000000000000",
+          "-5268465031/100000000000"
+        ],
+        "logarithmic_response": {
+          "imag": {
+            "bits": 256,
+            "hi_hex": "-0xd7cbdc2163b56e8fcf8ecdbdbfa8efa0069f348c7406ca0ed26b743f4356552",
+            "lo_hex": "-0xd7cbdc2163bb4ea63cd5ec7626c4b30d4171af5e375cf7d4ea94291d1b8f699"
+          },
+          "real": {
+            "bits": 256,
+            "hi_hex": "0x82ee1f169bcdc949d6a5d024664e3f5bcffd6ea2e0d3b6f387e4db1faf00c27",
+            "lo_hex": "0x82ee1f169bc7e933695eb16bff327bee952af3d11d7d892d6fbc2641d6c7adf"
+          }
+        },
+        "real_decimal_enclosure": [
+          "639307431/20000000000",
+          "31965371551/1000000000000"
+        ],
+        "s_imag": 4,
+        "s_real": "1/2"
+      },
+      {
+        "complete_series_tail_upper": "67025581940402097049097122457998286609724596928105998743786984704823737690871650330323765572258333948520762985680245187171510403665561680876052394595909091810316510991025238226260694316963242659001769513622102494426245713331494147954246105683894609239586237858791277132037223824826279334778603/2413894590269223020632611950522372078832732759810226110849280874920726847974256096752677307795999629189845279148663729167781600899607645077418605636028094931830379428312402756395659687028450970842265518155438309884301339728719594355728813740172240733394599142493224219530541632474703221866685692902669025280",
+        "imag_decimal_enclosure": [
+          "-333096133377/1000000000000",
+          "-1301156771/3906250000"
+        ],
+        "logarithmic_response": {
+          "imag": {
+            "bits": 256,
+            "hi_hex": "-0x5545c9c7464829efe67a55ff327cebbde5858b5c842bae2450a552bd70ee187a",
+            "lo_hex": "-0x5545c9c74657cb85a80a267ab45151b66dbfb221f62cbf1c84f33aecc19f86d4"
+          },
+          "real": {
+            "bits": 256,
+            "hi_hex": "-0x19a1ebebf5e26936d53cacb6334f603ee0d5e1a481f721a957c89137e86fada2",
+            "lo_hex": "-0x19a1ebebf5f20acc96cc7d31b523c63769100869f3f832a18c16796739211bfb"
+          }
+        },
+        "real_decimal_enclosure": [
+          "-10012697707/100000000000",
+          "-100126977069/1000000000000"
+        ],
+        "s_imag": 8,
+        "s_real": "1/2"
+      }
+    ],
+    "critical_line_local_analytic_branch": true,
+    "gamma_anchor_zero_bracket": [
+      "68827361087/5000000000",
+      "5506188887/400000000"
+    ],
+    "phase_minus_pi_over_2_at_endpoints": [
+      {
+        "bits": 256,
+        "hi_hex": "-0x10ca9f263e5f80288e26160e52f0d467c531b150678f86690cb458f5",
+        "lo_hex": "-0x10ca9f263e5f80288e26160e52f0d467c531b150678f867230c191e7"
+      },
+      {
+        "bits": 256,
+        "hi_hex": "0xe02300844895010d61423042131b38706ae7c00199e3e5819b073a7",
+        "lo_hex": "0xe02300844895010d61423042131b38706ae7c00199e3e4ef5a33ab4"
+      }
+    ],
+    "positive_parameter_interval_numerically_instantiated": false,
+    "root_is_xi_zero": false,
+    "series_degree": 512,
+    "velocity_decimal_enclosure": [
+      "522327871797/250000000000",
+      "2089311489201/1000000000000"
+    ],
+    "velocity_witness": [
+      "2.08931",
+      "2.08932"
+    ],
+    "whole_bracket_phase_slope": {
+      "bits": 256,
+      "hi_hex": "0x47b6409399a621761f5915c1e52dc1538923169fc8e247945a19d92162c9b615",
+      "lo_hex": "0x47b6409396f00145b32997e17f02180057b5b5aedb5e4fc657645d13a79e6a4a"
+    },
+    "zero_initial_velocity": {
+      "bits": 256,
+      "hi_hex": "0x216dd1e2545e624bafa41d6488c7120ed30e42b2ac9eb603a0e0f72fd5fbd4fc1",
+      "lo_hex": "0x216dd1e1ca1ade2d59c79d3d6e08ad97b8ccc9a2c60f6b87067114c6fe080c5ee"
+    }
+  },
+  "rh_proved": false,
+  "source_parent_pr": 878,
+  "source_parent_sha": "e28fd6c04d315c5f31f37b2240a263cd2e0cfeaf",
+  "status": "proposed components; analytic review required; RH not proved",
+  "unbounded_zero_confinement_proved": false,
+  "version": "BJR26-1",
+  "weighted_operator": {
+    "analytic_ball_radius": "1/64",
+    "analytic_radius": "1/4096",
+    "ball_image_bound": "30877031/2147483648",
+    "ball_lipschitz_bound": "41762357/50331648",
+    "complete_mellin_tail_constant": 13,
+    "forcing_cap": "11",
+    "majorant_denominator": "1680*(x+1)^2*(x+4)^7",
+    "majorant_numerator_ascending": [
+      6092800,
+      28331520,
+      44026752,
+      31552416,
+      10918776,
+      1539078,
+      149127,
+      124971,
+      33600,
+      1120
+    ],
+    "response_cap": "33",
+    "weighted_operator_cap": "2/3"
+  }
+}
