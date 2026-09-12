@@ -1,0 +1,57 @@
+{
+  "parent_commit": "346f630299252183aec2d8c41a0f3b4027bb9d19",
+  "parent_path": "standalone/2026-09-12-theta-reciprocal-subordinator/PROOF.md",
+  "parent_git_blob": "f2053068565ab28f673eb537ed4cdb6b6ec9d8fa",
+  "parent_sha256": "6eb0c773681aa538f5b165e8a04cb145b94236b6fb3bfa00f18192d04cf348bf",
+  "parent_bytes": 24692,
+  "parent_reading": "Complete supplied manuscript read; bytes match connected repository blob. No parent executable replay. Source normalization and prime formula retained; new heat positivity and finite-census imports are not premises of HE1--HE4.",
+  "repository_orientation": [
+    {
+      "pr": 881,
+      "commit": "ab663f7d8020a62e1d8eedaf7d963d0eca3efe50",
+      "path": "standalone/2026-09-12-similarity-energy/PROOF.md",
+      "reading": "Full principal manuscript read through connector for comparison. Its different metric-energy objective is not imported."
+    },
+    {
+      "pr": 869,
+      "commit": "5e559c9cbf5aee84ff7ed78dc91b55df744aef56",
+      "reading": "Current PR description only; no full follow-up proof or numerical campaign inspected/imported."
+    },
+    {
+      "pr": 875,
+      "commit": "177cf75e93b5614c5d5f0db1e4721ac69727e5ce",
+      "reading": "Current PR description, including Newton-tail continuation, only; no theorem imported."
+    },
+    {
+      "pr": 379,
+      "commit": "589f1c05ccaf248cf08c87fefa7d5ab6d2380708",
+      "reading": "Inherited bibliographic orientation to all-center heat criterion; no fresh full proof import."
+    }
+  ],
+  "external_inputs": [
+    {
+      "url": "https://dlmf.nist.gov/25.10",
+      "scope": "Classical strip, symmetry and infinitude of nontrivial zeros. Current text consulted; no zero table or positive-proportion theorem used."
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.4",
+      "scope": "Entire xi convention and functional equation; source growth plus classical Hadamard theorem supplies genus zero."
+    },
+    {
+      "url": "https://dlmf.nist.gov/5.9",
+      "scope": "Gamma integral and digamma integral in the source formula; classical identities, not new theorems."
+    },
+    {
+      "url": "https://doi.org/10.5802/aif.3600",
+      "scope": "Konstantopoulos-Patie-Sarkar, van Dantzig/Lee-Yang context only. No theorem from this paper used in HE1--HE4."
+    }
+  ],
+  "rules_read": [
+    "AGENTS.md",
+    "docs/REVIEWING.md"
+  ],
+  "native_energies_computed": 0,
+  "independent_review_completed": false,
+  "rh_proved": false,
+  "novelty_claim": false
+}
