@@ -1,0 +1,86 @@
+{
+  "base_commit": "e1a782cffaafbc9cc228273ed94ce63ae0407632",
+  "base_pr": 860,
+  "branch_proposal": "research/astra/20260912-branching-permanent-window",
+  "date": "2026-09-12",
+  "external_sources": [
+    {
+      "name": "Biane, Pitman and Yor, Probability laws related to the Jacobi theta and Riemann zeta function and Brownian excursions",
+      "reading": "abstract and retained project context, not fresh whole-paper review",
+      "role": "classical source attribution; negative-moment normalization rederived here",
+      "url": "https://arxiv.org/abs/math/9912170"
+    },
+    {
+      "name": "NIST DLMF 5.5.5",
+      "reading": "official HTML equation",
+      "role": "classical gamma duplication",
+      "url": "https://dlmf.nist.gov/5.5.E5"
+    },
+    {
+      "name": "NIST DLMF 25.4.3-4",
+      "reading": "official HTML equations",
+      "role": "xi definition and functional equation",
+      "url": "https://dlmf.nist.gov/25.4"
+    },
+    {
+      "name": "Classical argument principle, Rouche theorem, Simpson Peano kernel and interval arithmetic",
+      "role": "general mechanisms derived at used scope in manuscript; no priority claim"
+    }
+  ],
+  "numerical_inputs": {
+    "arithmetic": "256-bit outward dyadics with integer/Fraction operations",
+    "binary64_acceptance": false,
+    "parent_python_imports": false,
+    "source": "complete theta integral via finite model and all analytic remainders",
+    "special_function_oracles": false,
+    "zero_table": false
+  },
+  "packet_id": "BPW26",
+  "packet_path": "standalone/2026-09-12-branching-permanent-window",
+  "repository_sources": [
+    {
+      "commit": "e1a782cffaafbc9cc228273ed94ce63ae0407632",
+      "path": "standalone/2026-09-10-astra-branching-high-height/PROOF.md",
+      "pr": 860,
+      "reading": "local uploaded proof and fresh PR metadata; no parent numerical replay",
+      "role": "explicit high-height theorem and open bounded-window context"
+    },
+    {
+      "commit": "cbf7d5f9a693fee17ee62dae4cfb1c2296499282",
+      "pr": 859,
+      "reading": "uploader metadata only; do not merge or combine receipts",
+      "role": "distinct same-path variant; not a premise"
+    },
+    {
+      "commit": "e0b82da7ecdd4ed21e47e8b6adbb8c5182eac048",
+      "git_blob": "418b60559a49545db1d0cc37ba5768fac80736e5",
+      "path": "standalone/2026-09-10-astra-branching-order/PROOF.md",
+      "pr": 853,
+      "reading": "supplied manuscript and prior source context; no root-certificate import",
+      "role": "third-order orbit/error proof, reconstructed in Section 3"
+    },
+    {
+      "commit": "3f1984867d23b588d09c88a892882411724b174b",
+      "path": "standalone/2026-09-10-astra-branching-dirichlet/PROOF.md",
+      "pr": 857,
+      "reading": "supplied manuscript; no executable imported",
+      "role": "entire representatives E_n have identical strip zeros; optional consumer"
+    },
+    {
+      "commit": "815ccae329a17327b873d21f05bc30c24db13e7e",
+      "path": "standalone/2026-09-09-astra-global-xi-attack/GLOBAL_ATTEMPT.md",
+      "pr": 835,
+      "reading": "uploaded parent mathematical source and existing conversation; not a new full-PR audit",
+      "role": "literal complete theta normalization; rederived differentiation/error bounds, no parent certificate import"
+    }
+  ],
+  "scope_omissions": [
+    "cofinal expanding-height confinement",
+    "all early finite depths",
+    "whole-repository audit",
+    "Lean build",
+    "remote CI",
+    "independent analytic review"
+  ],
+  "status": "proposed component proof and finite directed certificate; RH not proved"
+}
