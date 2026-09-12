@@ -1,0 +1,55 @@
+{
+  "schema": "CFC26.claims.v1",
+  "status": "proposed-component-mathematics",
+  "rh_proved": false,
+  "claims": [
+    {
+      "id": "CFC1",
+      "scope": "all fixed finite ferromagnetic cores; global entire limiting model",
+      "statement": "explicit calibrated connected infinite completion with complete compact error and analytic density",
+      "proof": "PROOF.md Sections 1-5",
+      "dependencies": [
+        "classical weighted Lee-Yang",
+        "reconstructed CTC harmonic Perron calculation"
+      ]
+    },
+    {
+      "id": "CFC2",
+      "scope": "every fixed finite nonsingular moment jet; eventually every N",
+      "statement": "exact jet preservation with O(log(N)^2/N) parameter correction",
+      "proof": "PROOF.md Section 6",
+      "dependencies": [
+        "CFC1",
+        "finite-dimensional contraction principle"
+      ]
+    },
+    {
+      "id": "CFC3",
+      "scope": "specific native theta core, imported proposed finite certificate",
+      "statement": "connected infinite theta degree-14 realization; three growth coefficients; moment16 not equal",
+      "proof": "PROOF.md Sections 7-7.1",
+      "dependencies": [
+        "CFC1",
+        "CFC2",
+        "ICR26 finite root and variance box"
+      ]
+    },
+    {
+      "id": "CFC4",
+      "scope": "bounded-variance entire compact closures",
+      "statement": "calibrated connected class and finite ferromagnetic class have the same closure",
+      "proof": "PROOF.md Section 8",
+      "dependencies": [
+        "CFC1",
+        "complete finite-prefix approximation"
+      ]
+    },
+    {
+      "id": "OPEN-CFC",
+      "scope": "unbounded moment order",
+      "statement": "construct nonnegative pair-coupling cores reaching all native theta moment targets",
+      "proof_status": "OPEN; not obtained",
+      "consequence_if_proved": "RH by classical Lee-Yang, moment-tail bound and Hurwitz"
+    }
+  ]
+}

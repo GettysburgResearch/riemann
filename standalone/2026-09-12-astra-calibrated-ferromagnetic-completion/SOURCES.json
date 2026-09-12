@@ -1,0 +1,68 @@
+{
+  "schema": "CFC26.sources.v1",
+  "observed_date": "2026-09-12",
+  "selected_reading_not_full_repo_audit": true,
+  "base": {
+    "pr": 871,
+    "sha": "43a9eea85e20202370cae4b6ffa1a2c30fc3cfc3"
+  },
+  "repository_sources": [
+    {
+      "pr": 863,
+      "sha": "0640c9c59be0bf20c18258460a7517fb09728e82",
+      "path": "standalone/2026-09-12-astra-interacting-cluster-realization/PROOF.md",
+      "blob": "dcf0f5133d08305cc7e82ba307d5bd73b93d9adc",
+      "read_scope": "native source, seven-equation root, Jacobian, degree16 discrepancy; read locally and authenticated to fresh remote tree",
+      "executable_scope": "original full check.py replay in normal and optimized modes; same backend, not independent implementation",
+      "used_as": "proposed finite native root and interval data"
+    },
+    {
+      "pr": 871,
+      "sha": "43a9eea85e20202370cae4b6ffa1a2c30fc3cfc3",
+      "path": "standalone/2026-09-12-astra-connected-theta-chain/PROOF.md",
+      "blob": "c85808219875aa4f40a6fa093d28a0b2394986a5",
+      "read_scope": "Sections 1-6; analytic harmonic/Perron mechanism reconstructed here",
+      "executable_scope": "not rerun",
+      "used_as": "credited analytic mechanism, not imported fitted model"
+    },
+    {
+      "pr": 875,
+      "sha": "be149104721ae7b65b624c100118edfd7b76b69b",
+      "read_scope": "live PR description only",
+      "used_as": "orientation; six-moment advance not claimed or imported"
+    }
+  ],
+  "classical_sources": [
+    {
+      "id": "LY",
+      "url": "https://arxiv.org/abs/1901.06596",
+      "version": "v2",
+      "authors": "Charles M. Newman; Wei Wu",
+      "read_scope": "parsed PDF pages 11 and 16, weighted statement following (21) and Theorem16; screenshot calls attempted but failed cache retrieval",
+      "used": "weighted finite Lee-Yang theorem; closure context credited, needed elementary bounds rederived"
+    },
+    {
+      "id": "ST",
+      "url": "https://dlmf.nist.gov/5.11",
+      "used": "Stirling expansion in positive real field, not critical zero information"
+    }
+  ],
+  "imported_files": [
+    {
+      "path": "ICR_PARAMETERS.json",
+      "source_name": "parameters.json",
+      "source_git_blob": "e338c68ec803acd7991d52a83f7d5b5b97896ee3",
+      "sha256": "5f2377e538069e5e5d6f4df01e15a91880e21f1bfd73dd83818a226974a71c0b",
+      "bytes": 711,
+      "status": "byte-preserved inherited input; not a new native integration"
+    },
+    {
+      "path": "ICR_RECEIPT.json",
+      "source_name": "result.json",
+      "source_git_blob": "e04888f5cee6e8e6eb483f6b72239f03366c7fd6",
+      "sha256": "531b80259640396ce9f54144b69dbfb8daf90ecf944ca9cecc1e0809d0500160",
+      "bytes": 11143,
+      "status": "byte-preserved inherited input; not a new native integration"
+    }
+  ]
+}
