@@ -1,0 +1,72 @@
+{
+  "schema": "BHT26-sources-v1",
+  "repository": "GettysburgResearch/riemann",
+  "base": {
+    "pr": 870,
+    "head": "ee7f76736c235714496526f999e028d181302b56",
+    "branch": "research/astra/20260912-branching-permanent-window",
+    "principal_path": "standalone/2026-09-12-branching-permanent-window/PROOF.md",
+    "principal_git_blob": "8a9748db4c0cc296aba675f286a3bb4348ad3619",
+    "principal_sha256": "81e2830ffef1fcd9eebc0de4fe9fd31970175668b931dc9f8314710f5abaadcb",
+    "principal_bytes": 20032,
+    "reading": "principal analytic source and transfer sections read; source blob matched to live directory metadata; parent quadrature not rerun"
+  },
+  "high_height_context": {
+    "pr": 860,
+    "head": "e1a782cffaafbc9cc228273ed94ce63ae0407632",
+    "scope": "local supplied proof Section 5 threshold T_n>=320*16^n inspected; no theorem or checker rerun needed for new transfer theorem"
+  },
+  "recent_metadata_only": [
+    {
+      "pr": 872,
+      "scope": "description only; no theorem imported"
+    },
+    {
+      "pr": 869,
+      "scope": "description only; no theorem imported"
+    }
+  ],
+  "classical": [
+    {
+      "name": "Euler–Maclaurin representations of zeta",
+      "url": "https://dlmf.nist.gov/25.2",
+      "use": "periodic-Bernoulli source formula; specific disk bound rederived"
+    },
+    {
+      "name": "Binet convergent integral",
+      "url": "https://dlmf.nist.gov/5.9.E10_2",
+      "use": "explicit gamma lower bound and complete remainder"
+    },
+    {
+      "name": "Gamma asymptotics",
+      "url": "https://dlmf.nist.gov/5.11",
+      "use": "upper envelope in comparison-budget limitation only"
+    },
+    {
+      "name": "xi reflection and zero strip",
+      "url": "https://dlmf.nist.gov/25.4",
+      "use": "classical analytic normalization"
+    },
+    {
+      "name": "Zeta zeros",
+      "url": "https://dlmf.nist.gov/25.10",
+      "use": "all nontrivial zeros in the classical strip; no RH or zero list"
+    },
+    {
+      "name": "Biane, Pitman, Yor",
+      "url": "https://arxiv.org/abs/math/9912170",
+      "use": "classical Brownian source; Mellin normalization rederived"
+    },
+    {
+      "name": "Jensen, Poisson/Harnack, Rouche",
+      "use": "classical complex analysis; source-specialized proof supplied; no external novelty claim"
+    }
+  ],
+  "not_claimed": [
+    "all repository work reviewed",
+    "parent code re-executed",
+    "independent analytic review",
+    "unbounded critical-line confinement",
+    "RH"
+  ]
+}

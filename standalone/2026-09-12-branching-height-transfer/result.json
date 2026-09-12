@@ -1,0 +1,429 @@
+{
+  "comparison_speed_interval": [
+    "1.207081292484488465",
+    "1.207081292484488466"
+  ],
+  "height_prescriptions": [
+    {
+      "actual_zero_locations_computed": false,
+      "cluster_diameter_upper": "1824 * 2^-27",
+      "ell": 19,
+      "height_and_onset": 262144,
+      "log_ratio_upper_lt": "-340216/25",
+      "radius": "2^-27",
+      "radius_exponent": 27
+    },
+    {
+      "actual_zero_locations_computed": false,
+      "cluster_diameter_upper": "1824 * 2^-27",
+      "ell": 19,
+      "height_and_onset": 262145,
+      "log_ratio_upper_lt": "-136087/10",
+      "radius": "2^-27",
+      "radius_exponent": 27
+    },
+    {
+      "actual_zero_locations_computed": false,
+      "cluster_diameter_upper": "1824 * 2^-55",
+      "ell": 19,
+      "height_and_onset": 524275,
+      "log_ratio_upper_lt": "-58673/2",
+      "radius": "2^-55",
+      "radius_exponent": 55
+    },
+    {
+      "actual_zero_locations_computed": false,
+      "cluster_diameter_upper": "1824 * 2^-55",
+      "ell": 19,
+      "height_and_onset": 524276,
+      "log_ratio_upper_lt": "-733414/25",
+      "radius": "2^-55",
+      "radius_exponent": 55
+    },
+    {
+      "actual_zero_locations_computed": false,
+      "cluster_diameter_upper": "1920 * 2^-52",
+      "ell": 20,
+      "height_and_onset": 524277,
+      "log_ratio_upper_lt": "-1461281/50",
+      "radius": "2^-52",
+      "radius_exponent": 52
+    },
+    {
+      "actual_zero_locations_computed": false,
+      "cluster_diameter_upper": "1920 * 2^-100",
+      "ell": 20,
+      "height_and_onset": 1000000,
+      "log_ratio_upper_lt": "-57769",
+      "radius": "2^-100",
+      "radius_exponent": 100
+    },
+    {
+      "actual_zero_locations_computed": false,
+      "cluster_diameter_upper": "2016 * 2^-99",
+      "ell": 21,
+      "height_and_onset": 1048576,
+      "log_ratio_upper_lt": "-1514314/25",
+      "radius": "2^-99",
+      "radius_exponent": 99
+    },
+    {
+      "actual_zero_locations_computed": false,
+      "cluster_diameter_upper": "2400 * 2^-1342",
+      "ell": 25,
+      "height_and_onset": 16777216,
+      "log_ratio_upper_lt": "-25096174/25",
+      "radius": "2^-1342",
+      "radius_exponent": 1342
+    }
+  ],
+  "induction_panels": [
+    {
+      "base_margin": 5632,
+      "ell": 19,
+      "induction_polynomial": 466
+    },
+    {
+      "base_margin": 244276,
+      "ell": 20,
+      "induction_polynomial": 511
+    },
+    {
+      "base_margin": 744064,
+      "ell": 21,
+      "induction_polynomial": 558
+    },
+    {
+      "base_margin": 1767140,
+      "ell": 22,
+      "induction_polynomial": 607
+    },
+    {
+      "base_margin": 3837792,
+      "ell": 23,
+      "induction_polynomial": 658
+    },
+    {
+      "base_margin": 8004596,
+      "ell": 24,
+      "induction_polynomial": 711
+    },
+    {
+      "base_margin": 16364704,
+      "ell": 25,
+      "induction_polynomial": 766
+    },
+    {
+      "base_margin": 33112420,
+      "ell": 26,
+      "induction_polynomial": 823
+    },
+    {
+      "base_margin": 66636352,
+      "ell": 27,
+      "induction_polynomial": 882
+    },
+    {
+      "base_margin": 133713716,
+      "ell": 28,
+      "induction_polynomial": 943
+    },
+    {
+      "base_margin": 267898944,
+      "ell": 29,
+      "induction_polynomial": 1006
+    },
+    {
+      "base_margin": 536300900,
+      "ell": 30,
+      "induction_polynomial": 1071
+    },
+    {
+      "base_margin": 1073137312,
+      "ell": 31,
+      "induction_polynomial": 1138
+    },
+    {
+      "base_margin": 2146843636,
+      "ell": 32,
+      "induction_polynomial": 1207
+    },
+    {
+      "base_margin": 4294290784,
+      "ell": 33,
+      "induction_polynomial": 1278
+    },
+    {
+      "base_margin": 8589220580,
+      "ell": 34,
+      "induction_polynomial": 1351
+    },
+    {
+      "base_margin": 17179116672,
+      "ell": 35,
+      "induction_polynomial": 1426
+    },
+    {
+      "base_margin": 34358946356,
+      "ell": 36,
+      "induction_polynomial": 1503
+    },
+    {
+      "base_margin": 68718644224,
+      "ell": 37,
+      "induction_polynomial": 1582
+    },
+    {
+      "base_margin": 137438079460,
+      "ell": 38,
+      "induction_polynomial": 1663
+    },
+    {
+      "base_margin": 274876990432,
+      "ell": 39,
+      "induction_polynomial": 1746
+    },
+    {
+      "base_margin": 549754853876,
+      "ell": 40,
+      "induction_polynomial": 1831
+    },
+    {
+      "base_margin": 1099510623264,
+      "ell": 41,
+      "induction_polynomial": 1918
+    },
+    {
+      "base_margin": 2199022205540,
+      "ell": 42,
+      "induction_polynomial": 2007
+    },
+    {
+      "base_margin": 4398045414592,
+      "ell": 43,
+      "induction_polynomial": 2098
+    },
+    {
+      "base_margin": 8796091878196,
+      "ell": 44,
+      "induction_polynomial": 2191
+    },
+    {
+      "base_margin": 17592184851904,
+      "ell": 45,
+      "induction_polynomial": 2286
+    },
+    {
+      "base_margin": 35184370846820,
+      "ell": 46,
+      "induction_polynomial": 2383
+    },
+    {
+      "base_margin": 70368742885152,
+      "ell": 47,
+      "induction_polynomial": 2482
+    },
+    {
+      "base_margin": 140737487011316,
+      "ell": 48,
+      "induction_polynomial": 2583
+    }
+  ],
+  "local_guards": {
+    "Binet_constant": "-41/18",
+    "EM_bound_at_10": "1504/9",
+    "Harnack": "11",
+    "exponent_gap": "58/875"
+  },
+  "moment_panels": [
+    {
+      "depth": 0,
+      "fourth": "693/125",
+      "third": "63/25"
+    },
+    {
+      "depth": 1,
+      "fourth": "762/125",
+      "third": "651/250"
+    },
+    {
+      "depth": 2,
+      "fourth": "355473/56000",
+      "third": "52731/20000"
+    },
+    {
+      "depth": 3,
+      "fourth": "809841027/125440000",
+      "third": "4238661/1600000"
+    },
+    {
+      "depth": 4,
+      "fourth": "1826686921041/280985600000",
+      "third": "339718491/128000000"
+    },
+    {
+      "depth": 5,
+      "fourth": "4103295308006763/629407744000000",
+      "third": "27196873221/10240000000"
+    },
+    {
+      "depth": 6,
+      "fourth": "9201722366989346409/1409873346560000000",
+      "third": "2176351069851/819200000000"
+    },
+    {
+      "depth": 7,
+      "fourth": "20621052717993634422387/3158116296294400000000",
+      "third": "174126723165381/65536000000000"
+    },
+    {
+      "depth": 8,
+      "fourth": "46199277911445068839135041/7074180503699456000000000",
+      "third": "13930715618126811/5242880000000000"
+    },
+    {
+      "depth": 9,
+      "fourth": "103493518727402933377728699963/15846164328286781440000000000",
+      "third": "1114475160161931141/419430400000000000"
+    },
+    {
+      "depth": 10,
+      "fourth": "231831732182530902810877384146009/35495408095362390425600000000000",
+      "third": "89158568045019865371/33554432000000000000"
+    },
+    {
+      "depth": 11,
+      "fourth": "519308540855397072956280747525845187/79509714133611754553344000000000000",
+      "third": "7132702655795615826501/2684354560000000000000"
+    },
+    {
+      "depth": 12,
+      "fourth": "1163255894044674105307488105497748075441/178101759659290330199490560000000000000",
+      "third": "570616746041664090621531/214748364800000000000000"
+    }
+  ],
+  "schema": "BHT26-v1",
+  "scope": "exact finite controls of constants and algebra; no analytic zero evaluation",
+  "source_constants": {
+    "d0": "4/175",
+    "extended_strip_coefficient": "8/7",
+    "inverse_moments": {
+      "1": "35/24",
+      "2": "155/48",
+      "3": "15875/1344",
+      "4": "319375/3456"
+    },
+    "r": "31/80"
+  },
+  "status": {
+    "analytic_theorems": "proposed; independent review required",
+    "formal_proof": false,
+    "new_actual_zero_census": false,
+    "rh_proved": false,
+    "unbounded_line_confinement_proved": false
+  },
+  "synthetic_control": [
+    {
+      "depth": 0,
+      "difference": [
+        "640027/20000",
+        "0",
+        "1/50",
+        "0",
+        "0"
+      ],
+      "noncentral_real_frequency": 40,
+      "q": "29/400",
+      "three_protected_real_zeros": [
+        5,
+        15,
+        25
+      ]
+    },
+    {
+      "depth": 1,
+      "difference": [
+        "793631961/64000000",
+        "0",
+        "31/4000",
+        "0",
+        "0"
+      ],
+      "noncentral_real_frequency": 40,
+      "q": "531/8000",
+      "three_protected_real_zeros": [
+        5,
+        15,
+        25
+      ]
+    },
+    {
+      "depth": 2,
+      "difference": [
+        "1968205803521/409600000000",
+        "0",
+        "961/320000",
+        "0",
+        "0"
+      ],
+      "noncentral_real_frequency": 40,
+      "q": "40961/640000",
+      "three_protected_real_zeros": [
+        5,
+        15,
+        25
+      ]
+    },
+    {
+      "depth": 5,
+      "difference": [
+        "30021014108629246980801/107374182400000000000000",
+        "0",
+        "28629151/163840000000",
+        "0",
+        "0"
+      ],
+      "noncentral_real_frequency": 40,
+      "q": "20508629151/327680000000",
+      "three_protected_real_zeros": [
+        5,
+        15,
+        25
+      ]
+    },
+    {
+      "depth": 10,
+      "difference": [
+        "2816331359285507923816199210036142601601/1152921504606846976000000000000000000000000",
+        "0",
+        "819628286980801/536870912000000000000",
+        "0",
+        "0"
+      ],
+      "noncentral_real_frequency": 40,
+      "q": "67109683628286980801/1073741824000000000000",
+      "three_protected_real_zeros": [
+        5,
+        15,
+        25
+      ]
+    },
+    {
+      "depth": 20,
+      "difference": [
+        "24785664064719758371262095850971320922067926592866570834154614488607763201/132922799578491587290380706028034457600000000000000000000000000000000000000000000",
+        "0",
+        "671790528819082282036142601601/5764607523034234880000000000000000000000",
+        "0",
+        "0"
+      ],
+      "noncentral_real_frequency": 40,
+      "q": "720575941051069888819082282036142601601/11529215046068469760000000000000000000000",
+      "three_protected_real_zeros": [
+        5,
+        15,
+        25
+      ]
+    }
+  ]
+}
