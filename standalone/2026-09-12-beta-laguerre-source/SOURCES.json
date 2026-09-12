@@ -1,0 +1,48 @@
+{
+  "packet": "BLS26",
+  "base_pr": 876,
+  "base_sha": "8002444ec4d4bd1c6f8fa073820bcc575cb218e1",
+  "repository": "GettysburgResearch/riemann",
+  "parent": {
+    "path": "standalone/2026-09-12-beta-fixedpoint-homotopy/PROOF.md",
+    "git_blob": "bb82833e204abb8a69a7602642b3d0cb4e7b7024",
+    "sha256": "16ba436d836c7187f1693b39f8add0ea645a2d6f18ce3a3d2bb345ffab62c9f0",
+    "bytes": 28284,
+    "reading": "full supplied manuscript; remote blob matched",
+    "scope": "fixed point/order/source normalization; proposed not independently accepted",
+    "parent_checker_replayed": false
+  },
+  "repository_rules": {
+    "path": "AGENTS.md",
+    "git_blob": "c2181ad9ebf037614f3daa8957df640159f8d968"
+  },
+  "external": [
+    {
+      "key": "B",
+      "url": "https://arxiv.org/abs/math/9912170",
+      "title": "Biane–Pitman–Yor probability laws",
+      "reading": "abstract/record; exact normalization reconstructed in parent; not full-paper rereview"
+    },
+    {
+      "key": "D1",
+      "url": "https://dlmf.nist.gov/18.3",
+      "title": "Laguerre orthogonality",
+      "reading": "HTML table including row Laguerre; normalization derived in proof"
+    },
+    {
+      "key": "D2",
+      "url": "https://dlmf.nist.gov/18.17",
+      "title": "Orthogonal polynomial transforms",
+      "reading": "HTML transform section; required identity derived independently"
+    },
+    {
+      "key": "D3",
+      "url": "https://dlmf.nist.gov/15.4",
+      "title": "Hypergeometric special cases",
+      "reading": "HTML; Gauss expression corroborates Parseval identity; not needed as a separate premise"
+    }
+  ],
+  "new_full_repository_audit": false,
+  "independent_mathematical_review": false,
+  "remote_publication_this_session": false
+}
