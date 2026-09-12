@@ -1,0 +1,60 @@
+{
+  "schema": "BUB26-sources-v1",
+  "parent": {
+    "repository": "GettysburgResearch/riemann",
+    "pr": 870,
+    "sha": "ee7f76736c235714496526f999e028d181302b56",
+    "root_tree": "0da5a1f2150bbfd327c443747c2112e6b23ec654",
+    "path": "standalone/2026-09-12-branching-permanent-window/PROOF.md",
+    "blob": "8a9748db4c0cc296aba675f286a3bb4348ad3619",
+    "sha256": "81e2830ffef1fcd9eebc0de4fe9fd31970175668b931dc9f8314710f5abaadcb",
+    "bytes": 20032,
+    "inspection": "Full supplied manuscript read and authenticated by connector blob lookup; exact remote PR head and root tree read. Parent numerical executable and its contour receipt were not rerun. Source error reconstructed in Section 1; no claim of independent acceptance of parent."
+  },
+  "local_new_path": "standalone/2026-09-12-branching-unbounded-bands/",
+  "classical_inputs": [
+    {
+      "id": "CONREY",
+      "author": "J. B. Conrey",
+      "title": "More than two fifths of the zeros of the Riemann zeta function are on the critical line",
+      "publication": "Journal fuer die reine und angewandte Mathematik 399 (1989), 1-26",
+      "url": "https://doi.org/10.1515/crll.1989.399.1",
+      "used": "Unconditional S(T) >= (2/5-o(1)) N(T), S counting simple central zeros.",
+      "inspection": "Publisher page includes original introduction explicitly stating simple zeros on the critical line; bibliographic year checked. Full mollifier/Kloosterman proof not re-audited; imported classical theorem. No newer claimed record used."
+    },
+    {
+      "id": "EM",
+      "url": "https://dlmf.nist.gov/25.2",
+      "used": "Euler--Maclaurin continuation, N=1 and n=2 in 25.2.10; ordinary pole and safe Euler product.",
+      "inspection": "Official primary-reference formula and domain read; finite disk bound rederived in manuscript."
+    },
+    {
+      "id": "BINET",
+      "url": "https://dlmf.nist.gov/5.9",
+      "used": "Binet integral 5.9.10_2 for log Gamma in right half-plane.",
+      "inspection": "Official formula read. Bound by 1/(12 Re z) and the complete gamma lower bound proved in manuscript."
+    },
+    {
+      "id": "BPY",
+      "author": "P. Biane, J. Pitman, M. Yor",
+      "url": "https://arxiv.org/abs/math/9912170",
+      "used": "Classical Brownian/gamma source identity; precise pi/6 normalization reconstructed via Laplace transform and gamma duplication.",
+      "inspection": "Primary abstract and institutional reference plus full parent reconstruction read. No new full-paper audit or numerical Brownian simulation."
+    },
+    {
+      "id": "ZEROS",
+      "url": "https://dlmf.nist.gov/25.10",
+      "used": "Classical critical strip, reflection, nonvanishing on Re s=0,1 and existence of infinitely many nontrivial zeros.",
+      "inspection": "Official reference page read. No supplied zero table or numerical ordinate used."
+    }
+  ],
+  "not_imported_as_proved": [
+    "RH",
+    "centrality of the complete xi divisor",
+    "all-height success of the parent fixed-window verifier",
+    "newer 2026 simple-zero-proportion claims",
+    "independent acceptance of the high-height alternatives #859/#860"
+  ],
+  "code_dependencies": "Python standard library only. No predecessor module, external numerical backend or zeta/gamma oracle.",
+  "scope_of_search": "Targeted current PR870 publication and parent proof; not a fresh exhaustive repository audit."
+}
