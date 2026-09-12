@@ -1,0 +1,56 @@
+{
+  "accepting_code_dependencies": "Python standard library only; no parent modules, theta/zero/gamma oracle or floating arithmetic",
+  "external": [
+    {
+      "author": "Ringrose",
+      "title": "Super-Diagonal Forms for Compact Linear Operators",
+      "url": "https://doi.org/10.1112/plms/s3-12.1.367",
+      "use": "compact triangularizing chain and algebraic diagonal multiplicities; statement inspected in following primary research article",
+      "year": 1962
+    },
+    {
+      "arxiv": "2212.10243v1",
+      "authors": "Drnovsek and Kandic",
+      "reading": "Section 3 compact statement and Theorem 3.8 parsed text; web PDF screenshots attempted twice and failed",
+      "url": "https://arxiv.org/abs/2212.10243",
+      "use": "precise classical compact input, not lattice positivity"
+    },
+    {
+      "arxiv": "2602.11837v1",
+      "author": "Izumi",
+      "reading": "introduction and infinite-dimensional discussion",
+      "url": "https://arxiv.org/html/2602.11837v1",
+      "use": "orientation: matrix normalizing convergence is not imported for the infinite theta operator"
+    }
+  ],
+  "latest_orientation_only": [
+    {
+      "pr": 869,
+      "sha": "5e559c9cbf5aee84ff7ed78dc91b55df744aef56",
+      "topic": "four-route deep pass; signed production still open"
+    },
+    {
+      "pr": 842,
+      "sha": "346f630299252183aec2d8c41a0f3b4027bb9d19",
+      "topic": "reciprocal subordinator; complete monotonicity gap"
+    },
+    {
+      "pr": 875,
+      "sha": "177cf75e93b5614c5d5f0db1e4721ac69727e5ce",
+      "topic": "Newton tail and paid completion energy"
+    }
+  ],
+  "native_numerical_certificate": false,
+  "operator_source": {
+    "depth": "inherited through parent; no fresh independent acceptance or campaign",
+    "pr": 834,
+    "proof_blob": "ef01f74c50d4efacb615176cbfed4a3de2fd1147",
+    "sha": "f0e34780f4fe91bd5d07e791e8855189838c3df5"
+  },
+  "parent_branch": "codex/similarity-energy-20260912",
+  "parent_pr": 881,
+  "parent_proof_path": "standalone/2026-09-12-similarity-energy/PROOF.md",
+  "parent_reading": "full manuscript; numerical producer not replayed",
+  "parent_sha": "ab663f7d8020a62e1d8eedaf7d963d0eca3efe50",
+  "status": "proposed; no independent mathematical acceptance"
+}
