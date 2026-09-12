@@ -1,0 +1,111 @@
+{
+  "repository": "GettysburgResearch/riemann",
+  "date": "2026-09-12",
+  "base_main_sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "scope": "Targeted research reconnaissance, not an integration audit or review of all newer work.",
+  "sources": [
+    {
+      "id": "MAIN",
+      "sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "files_read": [
+        "README.md",
+        "AGENTS.md",
+        "STATUS.md",
+        "PROGRAMMES.md",
+        "RESULTS.md lines 35-100"
+      ],
+      "role": "project scope and operating guidance; no new acceptance inferred"
+    },
+    {
+      "id": "BRN26",
+      "pr": 846,
+      "sha": "d9b60f8569af65b6787fc33c75c849640c8974e6",
+      "path": "standalone/2026-09-10-astra-brownian-renormalization",
+      "read_scope": "supplied prior packet and conversation; local extraction; no certificate replay",
+      "role": "source and mode provenance; new needed identities rederived"
+    },
+    {
+      "id": "BRN27",
+      "pr": 856,
+      "sha": "f21012f63adac789653e9bf6dbb8c309fa5fe7c5",
+      "path": "standalone/2026-09-10-astra-brownian-phase-audit/PROOF.md",
+      "blob_sha": "d0b10400eba1a4acde1609f6a5646760971ab147",
+      "read_scope": "supplied full manuscript and explicit remote lines 175-295; existing negative certificate not rerun",
+      "role": "actual mode definitions, finite-jet result and shared-zero boundary; spectral theorem here independently proved"
+    },
+    {
+      "id": "GFD",
+      "pr": 862,
+      "sha": "67d5d6a5f588642f4c451fe35d2369b5ddac9346",
+      "path": "standalone/2026-09-10-gamma-finite-defect/PROOF.md",
+      "blob_sha": "738a6c1767fddcf4b8de408bc6b54b1a69ead47e",
+      "read_scope": "PR file-patch beginning through part of section 3, plus explicit remote lines 245-405; not a whole-proof audit",
+      "role": "weighted-defect target and finite-negative-index connection; no theorem used as premise"
+    },
+    {
+      "id": "CENTERED",
+      "pr": 855,
+      "sha": "0e19b74fe6dfb39bef69a5edd3f0b3098b10a6ad",
+      "path": "standalone/2026-09-10-centered-gamma-continuation/README.md",
+      "read_scope": "complete README only",
+      "role": "shifted-xi variance correction and absolute-error versus zero-confinement distinction; no proof imported"
+    },
+    {
+      "id": "ISING",
+      "pr": 854,
+      "sha": "f737983edb993ffc1142c37320eb3c9b304ab06a",
+      "path": "standalone/2026-09-10-astra-ising-moment-extension/PROOF.md",
+      "read_scope": "substantial remote excerpt, sections 1-5 through the zero-tripling discussion; later certificate omitted",
+      "role": "finite moment matching and independent-spin obstruction; informed exploration, not a premise"
+    },
+    {
+      "id": "BRANCHING_A",
+      "pr": 859,
+      "sha": "cbf7d5f9a693fee17ee62dae4cfb1c2296499282",
+      "path": "standalone/2026-09-10-astra-branching-high-height/README.md",
+      "blob_sha": "88fd7e115ab8363cf56ea58e4e9e82473bb22a51",
+      "read_scope": "metadata and complete README only",
+      "role": "dyadic polynomial and fixed-depth/joint-limit distinction; no theorem imported"
+    },
+    {
+      "id": "BRANCHING_B",
+      "pr": 860,
+      "sha": "e1a782cffaafbc9cc228273ed94ce63ae0407632",
+      "read_scope": "PR search metadata only",
+      "role": "alternate version of overlapping work, NOT an independent confirmation or proof dependency"
+    },
+    {
+      "id": "BPY",
+      "url": "https://arxiv.org/abs/math/9912170",
+      "authors": "Biane, Pitman, Yor",
+      "title": "Probability laws related to the Jacobi theta and Riemann zeta function and Brownian excursions",
+      "read_scope": "primary abstract metadata and exact scaling in prior source; not a new full-paper review",
+      "role": "classical attribution; the normalization used here is rederived from the source Mellin integral"
+    },
+    {
+      "id": "DLMF_GAMMA",
+      "url": "https://dlmf.nist.gov/5.5",
+      "read_scope": "recurrence and duplication formulas read",
+      "role": "classical input for arithmetic-shift simplification"
+    },
+    {
+      "id": "DLMF_XI",
+      "url": "https://dlmf.nist.gov/25.4",
+      "read_scope": "reflection formulas and xi definition read",
+      "role": "classical functional equation and completion"
+    },
+    {
+      "id": "KPS",
+      "url": "https://arxiv.org/html/2211.16680v1",
+      "title": "A class of solutions to the van Dantzig problem, the Lee-Yang property, and the Riemann hypothesis",
+      "authors": "Konstantopoulos, Patie, Sarkar",
+      "read_scope": "HTML sections relevant to moment-ratio/Lee-Yang exploration, plus published metadata; not a full theorem audit",
+      "role": "exploratory orientation ONLY; no theorem from this source used in HBR28"
+    }
+  ],
+  "external_novelty": "No literature-wide priority audit or novelty claim.",
+  "remote_publication": {
+    "created": false,
+    "reason": "Current available GitHub actions were read-only; no authenticated write path available."
+  }
+}
