@@ -1,0 +1,62 @@
+{
+  "schema": "D16.sources.v1",
+  "source_scope": "fresh native integration, adapted interval backend; no prior numerical receipt imported",
+  "intended_parent": {
+    "pr": 880,
+    "sha": "2398203ec171d9cbaac73acc62e1a643757f0a35",
+    "relationship": "optional calibrated-completion context, not premise of finite theorem"
+  },
+  "primitive_adaptation": {
+    "pr": 863,
+    "sha": "0640c9c59be0bf20c18258460a7517fb09728e82",
+    "path": "standalone/2026-09-12-astra-interacting-cluster-realization/check.py",
+    "git_blob": "9831e7033fcaffea66d5220c7fe7a8b36c28ef65",
+    "sha256": "8e520d9cab28ca24c46a4eff123044c554480d9a3819a737d892f1f58a26700a",
+    "changes": "reuse interval arithmetic, finite source recurrence, cumulant and rational inverse routines; extend native moments through eighteen; new active system and tests"
+  },
+  "repository_reads": [
+    {
+      "pr": 880,
+      "sha": "2398203ec171d9cbaac73acc62e1a643757f0a35",
+      "scope": "fresh PR metadata; full preceding local manuscript already present"
+    },
+    {
+      "pr": 869,
+      "sha": "5e559c9cbf5aee84ff7ed78dc91b55df744aef56",
+      "path": "standalone/2026-09-12-three-route-completion/ferromagnetic/PROOF.md",
+      "scope": "full extracted proof text; direction and failed crossing retained; no executable replay"
+    },
+    {
+      "pr": 842,
+      "sha": "346f630299252183aec2d8c41a0f3b4027bb9d19",
+      "scope": "current search/PR description only; subordinator theorem not imported"
+    },
+    {
+      "pr": 875,
+      "sha": "177cf75e93b5614c5d5f0db1e4721ac69727e5ce",
+      "scope": "current search/PR description only; Newton-tail theorem not imported"
+    },
+    {
+      "pr": 867,
+      "sha": "4c7898432546814812b2be8c72fc199e294354d1",
+      "scope": "directory metadata and prior descriptions; no new proof or code replay"
+    }
+  ],
+  "external_imports": [
+    {
+      "authors": "Charles M. Newman and Wei Wu",
+      "title": "Constants of de Bruijn-Newman type in analytic number theory and statistical physics",
+      "id": "arXiv:1901.06596v2",
+      "url": "https://arxiv.org/abs/1901.06596",
+      "used": "weighted Lee-Yang statement, printed page 11, equation (21) and following paragraph; classical theta source and closure context",
+      "read_scope": "PDF parsed text; web screenshot attempt failed (cache miss). No figure or table is used."
+    }
+  ],
+  "not_claimed": [
+    "external novelty",
+    "all-order Ising feasibility",
+    "independent mathematical acceptance",
+    "independent transcendental implementation",
+    "new zeta zero or zero-free region"
+  ]
+}
