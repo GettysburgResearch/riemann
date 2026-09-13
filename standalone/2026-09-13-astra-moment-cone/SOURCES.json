@@ -1,0 +1,95 @@
+{
+  "schema": "MCE26-sources-v1",
+  "date": "2026-09-13",
+  "publication_parent": {
+    "pr": 875,
+    "head": "177cf75e93b5614c5d5f0db1e4721ac69727e5ce",
+    "branch": "research/astra/20260912-collision-chain-flow",
+    "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+    "reading": "Current GitHub metadata and uploader receipt read. Local supplied newton-tail proofs and predecessor source code read. No whole-PR mathematical audit."
+  },
+  "primitive": {
+    "file": "exact_interval.py",
+    "sha256": "083ef417bc5249e189fb08f1c7b9009ff69a97a19073ba2778e02512515bf427",
+    "git_blob": "e6cbc5159adc788a6be448da1ef969b737c13336",
+    "source_path": "standalone/2026-09-12-astra-collision-chain-flow/exact_interval.py",
+    "source_head": "177cf75e93b5614c5d5f0db1e4721ac69727e5ce",
+    "reading": "Complete GitHub contents and supplied archive bytes; byte-identical local copy. Reused backend, not an independent primitive implementation."
+  },
+  "research_context": [
+    {
+      "pr": 842,
+      "head": "346f630299252183aec2d8c41a0f3b4027bb9d19",
+      "path": "standalone/2026-09-12-theta-reciprocal-subordinator/PROOF.md",
+      "reading": "Fresh PR body and raw proof through sections1-4 and beginning section5; explicitly not a full numerical replay. Positivity/factorial distinction retained. No native zero certificate imported."
+    },
+    {
+      "pr": 862,
+      "head": "67d5d6a5f588642f4c451fe35d2369b5ddac9346",
+      "reading": "Previously supplied source-convergence and cumulant-index statements; conventions retained. Needed source bounds and all-order moment argument reconstructed here, not dependent on finite zero locations."
+    },
+    {
+      "pr": 858,
+      "head": "72ccb357e774db1189e82f4f1b83459f00638c7e",
+      "reading": "Prior supplied certificate/domain arguments inform the quadrature architecture. Endpoint is extended and every moment newly evaluated. Its zero coordinates and zero-count result are NOT inputs or dependencies."
+    },
+    {
+      "pr": 869,
+      "head": "5e559c9cbf5aee84ff7ed78dc91b55df744aef56",
+      "reading": "Current updated four-route PR body only; not imported mathematics."
+    },
+    {
+      "pr": 880,
+      "head": "2398203ec171d9cbaac73acc62e1a643757f0a35",
+      "reading": "Current PR body only; calibrated-completion scope noted, no theorem or certificate imported."
+    },
+    {
+      "pr": 881,
+      "head": "ab663f7d8020a62e1d8eedaf7d963d0eca3efe50",
+      "reading": "Current PR body only; no theorem imported."
+    },
+    {
+      "pr": 877,
+      "head": "ec60ea46318143e9a7908aab3239fbdb327045df",
+      "reading": "Current PR body only; no theorem imported."
+    },
+    {
+      "pr": 878,
+      "head": "e28fd6c04d315c5f31f37b2240a263cd2e0cfeaf",
+      "reading": "Current PR body only; no theorem imported."
+    },
+    {
+      "pr": 879,
+      "head": "5645f787183edefacf6402b0cff60a991fa31ba4",
+      "reading": "Current PR body only; no theorem imported."
+    }
+  ],
+  "classical_sources": [
+    {
+      "url": "https://arxiv.org/abs/math/9912170",
+      "authors": "Biane, Pitman, Yor",
+      "title": "Probability laws related to the Jacobi theta and Riemann zeta function and Brownian excursions",
+      "scope": "Classical gamma/Jacobi source identification. Abstract refreshed; normalization inherited and stated. Entire external probability proof not independently rereviewed."
+    },
+    {
+      "url": "https://arxiv.org/abs/1510.03420",
+      "author": "Ruiming Zhang",
+      "title": "On Power Sums of Positive Numbers",
+      "scope": "Abstract/metadata inspected for prior genus-zero power-sum and RH criteria. Its specific theorem is not imported; the required Hamburger/Cauchy-transform argument is written in PROOF.md."
+    },
+    {
+      "url": "https://dlmf.nist.gov/18.40",
+      "scope": "Classical moment problem, rational Stieltjes transforms and moment-to-quadrature construction; relevant text inspected."
+    },
+    {
+      "url": "https://dlmf.nist.gov/3.5",
+      "scope": "Classical Gaussian quadrature and positive Jacobi matrix interpretation; general mechanism credited and finite proof supplied."
+    },
+    {
+      "url": "https://dlmf.nist.gov/1.10",
+      "scope": "Classical entire factorization/complex analysis. Even genus-zero application reconstructed."
+    }
+  ],
+  "priority": "No exhaustive novelty or priority determination. The qualitative moment criterion and Gaussian-quadrature construction are classical. Source-only finite certificates, explicit stage/dimension distinction and stated residual budget are proposed component contributions.",
+  "numerical_dependencies": "No stored predecessor theta moments, source zero locations, external low-zero census, or parent zero certificate enters numerical acceptance."
+}
