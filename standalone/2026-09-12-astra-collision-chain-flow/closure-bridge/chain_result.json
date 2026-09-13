@@ -1,0 +1,63 @@
+{
+  "all_order_realization_proved": false,
+  "box_image_radius_upper": "0.000000386038597039879293030649",
+  "center_displacement_upper": "0.000000007440249903202601159540",
+  "continuous_tail_displacement_upper": "0.000000302344816264641781461165",
+  "derivative_defect_upper": "0.076253530872034910409943853495",
+  "exact_even_moments_matched": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "existence_proved_with_brouwer": true,
+  "finite_chain_cutoff": 8192,
+  "growth_coefficients_matched": 3,
+  "majorant_base_checks": 9,
+  "native_variance": [
+    "0.046209986230837941577867620860",
+    "0.046209986230837941577867620861"
+  ],
+  "q_box": [
+    "0.018144167180821593999999999999",
+    "0.018146167180821594000000000001"
+  ],
+  "rh_proved": false,
+  "root_box_radius": "1/1000000",
+  "root_center": [
+    "110270545662161/5000000000000000",
+    "6132452139209203/100000000000000000",
+    "2738607210257253/25000000000000000",
+    "4620404935551159/1000000000000000000",
+    "9072583590410797/500000000000000000"
+  ],
+  "source": "complete native theta; inherited analytic source contract re-evaluated",
+  "status": "proposed computer-assisted existence; independent review required",
+  "tenth_standardized_cumulant_difference_whole_box": [
+    "0.029089537704108761718513229229",
+    "0.031416676582961907116846944675"
+  ],
+  "uniqueness_proved": false,
+  "whole_tail_errors_scaled": [
+    [
+      "0.000000016862059321000438332649",
+      "0.000000016862059321000438332650"
+    ],
+    [
+      "0.000000109303790068541912640941",
+      "0.000000109303790068541912640942"
+    ],
+    [
+      "0.000000043496540486994085245961",
+      "0.000000043496540486994085245962"
+    ],
+    [
+      "0.000000000000160428769068035445",
+      "0.000000000000160428769068035446"
+    ],
+    [
+      "0.000000000000000000601154928422",
+      "0.000000000000000000601154928423"
+    ]
+  ]
+}
