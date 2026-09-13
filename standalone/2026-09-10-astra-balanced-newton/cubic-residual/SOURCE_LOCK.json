@@ -1,0 +1,69 @@
+{
+  "schema": "CIR26-source-lock-v1",
+  "repository": "GettysburgResearch/riemann",
+  "source_parent": "098acb780655eb81f8b842be201596a50198e757",
+  "main_observed": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "branch": "research/astra/20260910-balanced-newton-renormalization",
+  "date": "2026-09-10",
+  "status": "PROPOSED; native covariance and RH OPEN",
+  "repository_sources": [
+    {
+      "sha": "098acb780655eb81f8b842be201596a50198e757",
+      "path": "standalone/2026-09-10-astra-balanced-newton/collision-energy/PROOF.md",
+      "role": "clipped native source, quadratic centered harmonic packet, collision bookkeeping; relevant arguments rederived",
+      "reading": "principal proof inspected; previous full producer/verifier corpus not replayed"
+    },
+    {
+      "sha": "6671339d48c7f9bb846c15d8265e53f6856c2852",
+      "path": "standalone/2026-09-10-astra-balanced-newton/innovations/PROOF.md",
+      "role": "whole-norm reciprocal coordinates; formula rederived",
+      "reading": "inherited author context and live PR comment; not a new independent source review"
+    },
+    {
+      "sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "path": "AGENTS.md",
+      "role": "repository publication and scope instructions",
+      "reading": "full current file read"
+    }
+  ],
+  "external_sources": [
+    {
+      "authors": "M. N. Huxley and N. Watt",
+      "title": "Mertens Sums requiring Fewer Values of the Mobius function",
+      "version": "arXiv:1807.05890v1, 2018-07-16",
+      "url": "https://arxiv.org/abs/1807.05890",
+      "reading": "abstract and version metadata only in this pass",
+      "role": "explicit attribution of general order-d short-source identities and classical lineage; no uninspected lemma used as a premise"
+    },
+    {
+      "title": "NIST DLMF 5.11.2 and 5.11(ii)",
+      "url": "https://dlmf.nist.gov/5.11",
+      "reading": "displayed digamma expansion and positive-real first-omitted-term error statement",
+      "role": "finite Euler constant enclosure used by both exact programs; main hyperbola bound is elementary and rederived"
+    }
+  ],
+  "reconnaissance_only": {
+    "pull_requests": [
+      855,
+      851,
+      854,
+      852,
+      790,
+      812
+    ],
+    "scope": "search metadata, not proof review or mathematical dependencies"
+  },
+  "no_claims": [
+    "No external priority survey",
+    "No formal proof build",
+    "No all-scale native sign proof",
+    "No complete repository validation",
+    "No new acceptance of parent claims"
+  ],
+  "constant_normalization": {
+    "gamma": "Euler constant",
+    "gamma1": "limit(sum_(n<=u)log(n)/n - log(u)^2/2), NOT used numerically",
+    "H2": "sum_(uv<=x)1/(uv), retains integer hyperbola endpoint"
+  },
+  "operator_boundary": "The raw cubic arithmetic sequence is coefficientwise defined. Only its finite exact prefix followed by an explicit finite completion is a Hilbert-space source here."
+}

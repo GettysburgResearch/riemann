@@ -1,0 +1,54 @@
+{
+  "schema": "NIR26-manifest-v1",
+  "entries": [
+    {
+      "path": "PROOF.md",
+      "bytes": 14227,
+      "sha256": "bcdac36b04e38c45da560f1335d1c914cdfeb3233380221810556ce92300fcd0",
+      "git_blob": "c23431cb9a4830b8966c5473878893686e1c3af3"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5035,
+      "sha256": "9ffe02b223633039c3fb916807d0a61e27d173441d4fbae18655bbd083e50c04",
+      "git_blob": "6bcbe73f83b454fa22ea0c5ed630bfd6c133be9b"
+    },
+    {
+      "path": "SOURCE_LOCK.json",
+      "bytes": 2733,
+      "sha256": "df34485d23b5d2399126afe44e7f7673ee9cfb77ee654d758c5e1546722bd5bf",
+      "git_blob": "6c1f00ceb6c2914c914d381ef641106e007908d2"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 3895,
+      "sha256": "1e5359ad8cf6b5496ab40b406d1a33ed2bbb09c612c6c953fa25499a53d9545e",
+      "git_blob": "59b7392ae07fa676b90b14c659f1aee9e5d1feb3"
+    },
+    {
+      "path": "produce.py",
+      "bytes": 8626,
+      "sha256": "9f8fc347f97fc79fe1ad922097d487b020198ec296081c13f8828267cc5bb95b",
+      "git_blob": "2651f03cc9e7d3d059afb4230994d83057e8593c"
+    },
+    {
+      "path": "result.json",
+      "bytes": 5303,
+      "sha256": "8c57fed6d5daace38a6258ecb7be18b710780decbe3df9f82f4a49f819db4f13",
+      "git_blob": "a4277d42155cd9e6451294ea831bdd1d542b065a"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 3567,
+      "sha256": "7e9c9741d7b8d10d4c7e6b57165407ec94dc7e5c95b999deb927b2c35759705c",
+      "git_blob": "a8884c7a8ae01e187600949559e9036b5deea822"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 10964,
+      "sha256": "e25d2c825d103ca3b6247a08604515f6ea71ce8ba596a65e2f27385989270a98",
+      "git_blob": "8f27c4432d75ee5e7f9d39e0034bfd90ebdb164c"
+    }
+  ],
+  "note": "Excludes self; file identity is not mathematical verification."
+}

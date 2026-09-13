@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "scope": "local sealed packet only; not full checkout, remote publication or independent mathematical acceptance",
+  "author_mode": "single implementation with alternative finite reconstructions",
+  "python": "3.13.5",
+  "parent": "99101457b32b6f10f4eda88ca998048404b860ea",
+  "semantic_sha256": "f290c47cf436b868f8d2af8c14836a5032f453bdb472a86974230d4061d0bb26",
+  "software_sha256": "83b1c4f8a40f76027dd4f1c591ce2d91963310a00fba199e8628aa432d9f0020",
+  "result_sha256": "e4a67ed51465eaf1e1a6aba131b0b37fe75f944ef7ae5fa7bb49e5cdcc4dbe42",
+  "runs": [
+    {
+      "name": "producer-normal",
+      "command": [
+        "python",
+        "-S",
+        "-B",
+        "check.py",
+        "--emit",
+        "/mnt/data/rh_resonance_budget/execution/produced-normal.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.57,
+      "executed_utc": "2026-09-12T22:33:06.084652+00:00",
+      "stdout": "PRODUCED f290c47cf436b868f8d2af8c14836a5032f453bdb472a86974230d4061d0bb26\n{\"adjoint_cases\": 16, \"cascade_cases\": 12, \"filtered_dephasing_panels\": 9, \"interior_filter_controls\": 48, \"matched_wave_controls\": 9, \"native_max\": 511, \"native_panels\": 36, \"off_line_buffer_controls\": 12, \"rational_boundary_controls\": 72, \"rational_resonances\": 54, \"scalar_cases\": 18, \"taper_cases\": 104, \"twist_signatures\": 42}\n",
+      "stderr": ""
+    },
+    {
+      "name": "accept-normal",
+      "command": [
+        "python",
+        "-S",
+        "-B",
+        "check.py",
+        "--check",
+        "result.json",
+        "--self-test"
+      ],
+      "returncode": 0,
+      "seconds": 0.564,
+      "executed_utc": "2026-09-12T22:33:06.654922+00:00",
+      "stdout": "PASS_EXACT_RBR26 f290c47cf436b868f8d2af8c14836a5032f453bdb472a86974230d4061d0bb26\nRESEALED_MUTATIONS_REJECTED 12 DUPLICATE_KEY_REJECTED\n{\"adjoint_cases\": 16, \"cascade_cases\": 12, \"filtered_dephasing_panels\": 9, \"interior_filter_controls\": 48, \"matched_wave_controls\": 9, \"native_max\": 511, \"native_panels\": 36, \"off_line_buffer_controls\": 12, \"rational_boundary_controls\": 72, \"rational_resonances\": 54, \"scalar_cases\": 18, \"taper_cases\": 104, \"twist_signatures\": 42}\n",
+      "stderr": ""
+    },
+    {
+      "name": "producer-optimized",
+      "command": [
+        "python",
+        "-S",
+        "-O",
+        "-B",
+        "check.py",
+        "--emit",
+        "/mnt/data/rh_resonance_budget/execution/produced-optimized.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.659,
+      "executed_utc": "2026-09-12T22:33:07.218632+00:00",
+      "stdout": "PRODUCED f290c47cf436b868f8d2af8c14836a5032f453bdb472a86974230d4061d0bb26\n{\"adjoint_cases\": 16, \"cascade_cases\": 12, \"filtered_dephasing_panels\": 9, \"interior_filter_controls\": 48, \"matched_wave_controls\": 9, \"native_max\": 511, \"native_panels\": 36, \"off_line_buffer_controls\": 12, \"rational_boundary_controls\": 72, \"rational_resonances\": 54, \"scalar_cases\": 18, \"taper_cases\": 104, \"twist_signatures\": 42}\n",
+      "stderr": ""
+    },
+    {
+      "name": "accept-optimized",
+      "command": [
+        "python",
+        "-S",
+        "-O",
+        "-B",
+        "check.py",
+        "--check",
+        "result.json",
+        "--self-test"
+      ],
+      "returncode": 0,
+      "seconds": 0.704,
+      "executed_utc": "2026-09-12T22:33:07.877635+00:00",
+      "stdout": "PASS_EXACT_RBR26 f290c47cf436b868f8d2af8c14836a5032f453bdb472a86974230d4061d0bb26\nRESEALED_MUTATIONS_REJECTED 12 DUPLICATE_KEY_REJECTED\n{\"adjoint_cases\": 16, \"cascade_cases\": 12, \"filtered_dephasing_panels\": 9, \"interior_filter_controls\": 48, \"matched_wave_controls\": 9, \"native_max\": 511, \"native_panels\": 36, \"off_line_buffer_controls\": 12, \"rational_boundary_controls\": 72, \"rational_resonances\": 54, \"scalar_cases\": 18, \"taper_cases\": 104, \"twist_signatures\": 42}\n",
+      "stderr": ""
+    }
+  ],
+  "all_runs_passed": true,
+  "normal_optimized_producers_byte_identical_to_canonical": true,
+  "resealed_mutations_refused_per_accepting_mode": 12,
+  "duplicate_key_parser_refused_per_accepting_mode": true,
+  "publication": "not performed: no connector write action; direct git failed DNS",
+  "direct_git_returncode": 128,
+  "direct_git_error": "Could not resolve host: github.com"
+}

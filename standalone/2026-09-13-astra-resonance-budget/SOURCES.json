@@ -1,0 +1,80 @@
+{
+  "scope": "Selected live-source continuation, not an exhaustive audit or priority survey",
+  "repository": "GettysburgResearch/riemann",
+  "observed_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "parent_pr": 848,
+  "parent": "99101457b32b6f10f4eda88ca998048404b860ea",
+  "sources": [
+    {
+      "pr": 848,
+      "sha": "99101457b32b6f10f4eda88ca998048404b860ea",
+      "path": "standalone/2026-09-12-astra-crossing-cofinal/PROOF.md",
+      "reading": "Full supplied manuscript; live PR head checked. Optional growth-exponent clause retains proposed-review boundary; covariance and diagonal are rederived.",
+      "role": "Credited source definitions and diagonal; optional exponent retention. Both direct filter-to-RH and direct annulus-to-RH implications are rederived without its growth-limit upper theorem.",
+      "supplied_proof_git_blob_sha1": "0f9eac82fcbca61c7887a9fb71eb29d5a4181ce9",
+      "supplied_proof_bytes": 20973,
+      "supplied_proof_rehashed": true
+    },
+    {
+      "pr": 869,
+      "sha": "5e559c9cbf5aee84ff7ed78dc91b55df744aef56",
+      "path": "standalone/2026-09-12-four-route-deep-pass/arithmetic.md",
+      "reading": "Live raw manuscript through the exact annular-covariance/collar proposition and preceding source review; remaining broad four-route work not re-reviewed.",
+      "role": "Credit for C=A-D+R with |R|<4; latest diagonal/counterfamily context. No Ising/gamma theorem imported."
+    },
+    {
+      "pr": 875,
+      "sha": "177cf75e93b5614c5d5f0db1e4721ac69727e5ce",
+      "reading": "Live PR metadata only, including Newton-tail completion-price description.",
+      "role": "Avoid pretending free completion optimization removes native energy. Its theorems are not premises."
+    },
+    {
+      "path": "AGENTS.md",
+      "sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "reading": "Live complete raw entrypoint.",
+      "role": "Preservation, proposed status and evidence conventions."
+    },
+    {
+      "title": "Nathan Ng, The distribution of the summatory function of the Mobius function",
+      "url": "https://arxiv.org/abs/math/0310381",
+      "version": "v1, 2003-10-23; journal publication 2004",
+      "reading": "Primary abstract and bibliographic record only; full text not inspected or imported.",
+      "role": "Related mean-square and weak-Mertens lineage. No theorem or novelty claim derived from this abstract."
+    },
+    {
+      "pr": 848,
+      "sha": "9ddd3dd029d9191cf409bc944132569630361a6f",
+      "path": "standalone/2026-09-13-astra-prime-dephasing/PROOF.md",
+      "reading": "Live manuscript through Section7 and its rough-tail statement; tail of returned response truncated. Native E, finite Euler comparison, prime-bank threshold and character identity read, not independent review.",
+      "role": "Concurrent work preserved. Finite Euler dephasing is credited; proposed RBR26-9 rederives commutation and comparisons on filtered reciprocal-prefix coordinates."
+    }
+  ],
+  "reconnaissance": {
+    "query": "updated:>=2026-09-12, most recently updated 8 PRs",
+    "numbers": [
+      869,
+      881,
+      880,
+      879,
+      878,
+      842,
+      877,
+      875
+    ],
+    "scope": "Descriptions only, except the source depths expressly listed above. No neighboring claim is independently accepted here."
+  },
+  "classical_inputs": [
+    "RH implies the Littlewood Mertens bound, reconstructed in pinned XCC26 Section1.2; used conditionally only in RBR26-1 and the easy RH converse.",
+    "Zeta analytic continuation and functional equation.",
+    "Laplace uniqueness, Plancherel, the Hardy evaluation inequality, and L2 translation continuity.",
+    "Finite Gram/Bessel inequalities and stable Lyapunov identities, with their concrete applications proved here."
+  ],
+  "not_performed": [
+    "No external full-paper proof or novelty audit.",
+    "No parent producer/checker replay or whole-repository validator.",
+    "No zeta zero or derivative calculation.",
+    "No full finite filter-grid optimization or cofinal native capture theorem.",
+    "No independent mathematical acceptance or formalization build."
+  ],
+  "latest_branch_observed": "9ddd3dd029d9191cf409bc944132569630361a6f"
+}

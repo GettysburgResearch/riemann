@@ -1,0 +1,80 @@
+{
+  "all_reports_byte_identical": true,
+  "result_sha256": "38366a7b01ed6a000f3569b281b774e6dfe15f836535a784557ecc48a85261dd",
+  "runs": [
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "/mnt/data/rh_prime_dephasing/packet/standalone/2026-09-13-astra-prime-dephasing/produce.py",
+        "--check",
+        "/mnt/data/rh_prime_dephasing/packet/standalone/2026-09-13-astra-prime-dephasing/result.json",
+        "--output",
+        "/mnt/data/rh_prime_dephasing/produce-False.json"
+      ],
+      "exit_code": 0,
+      "name": "produce-False",
+      "seconds": 0.407,
+      "stderr": "",
+      "stdout": "PRODUCER PASS ef4e52f44589616571b7104deb801b2e31ad0458f2f6f22df76190de2770219a\n{\"complete_ensembles\": 30, \"dyadic_ensembles\": 7, \"dyadic_signatures_not_enumerated\": 38046272, \"enumerated_signatures\": 372, \"signing_stages\": 196}\n"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "/mnt/data/rh_prime_dephasing/packet/standalone/2026-09-13-astra-prime-dephasing/verify.py",
+        "/mnt/data/rh_prime_dephasing/packet/standalone/2026-09-13-astra-prime-dephasing/result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_prime_dephasing/verify-False.json"
+      ],
+      "exit_code": 0,
+      "name": "verify-False",
+      "seconds": 0.361,
+      "stderr": "",
+      "stdout": "RESEALED MUTATIONS REJECTED 12; DUPLICATE REJECTED 1\nSEPARATE EXACT RECONSTRUCTION PASS ef4e52f44589616571b7104deb801b2e31ad0458f2f6f22df76190de2770219a\n"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "-O",
+        "/mnt/data/rh_prime_dephasing/packet/standalone/2026-09-13-astra-prime-dephasing/produce.py",
+        "--check",
+        "/mnt/data/rh_prime_dephasing/packet/standalone/2026-09-13-astra-prime-dephasing/result.json",
+        "--output",
+        "/mnt/data/rh_prime_dephasing/produce-True.json"
+      ],
+      "exit_code": 0,
+      "name": "produce-True",
+      "seconds": 0.492,
+      "stderr": "",
+      "stdout": "PRODUCER PASS ef4e52f44589616571b7104deb801b2e31ad0458f2f6f22df76190de2770219a\n{\"complete_ensembles\": 30, \"dyadic_ensembles\": 7, \"dyadic_signatures_not_enumerated\": 38046272, \"enumerated_signatures\": 372, \"signing_stages\": 196}\n"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "-O",
+        "/mnt/data/rh_prime_dephasing/packet/standalone/2026-09-13-astra-prime-dephasing/verify.py",
+        "/mnt/data/rh_prime_dephasing/packet/standalone/2026-09-13-astra-prime-dephasing/result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_prime_dephasing/verify-True.json"
+      ],
+      "exit_code": 0,
+      "name": "verify-True",
+      "seconds": 0.436,
+      "stderr": "",
+      "stdout": "RESEALED MUTATIONS REJECTED 12; DUPLICATE REJECTED 1\nSEPARATE EXACT RECONSTRUCTION PASS ef4e52f44589616571b7104deb801b2e31ad0458f2f6f22df76190de2770219a\n"
+    }
+  ],
+  "same_author": true,
+  "schema": 1,
+  "scope": "exact finite packet; not independent review or full repository validator",
+  "utc": "2026-09-12T22:16:47.825563+00:00"
+}

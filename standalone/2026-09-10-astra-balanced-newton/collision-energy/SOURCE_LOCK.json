@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "repository": "GettysburgResearch/riemann",
+  "date_utc": "2026-09-10T18:45:51.650300+00:00",
+  "parent_pr": 848,
+  "parent_head": "6671339d48c7f9bb846c15d8265e53f6856c2852",
+  "parent_tree": "e728ab6f53a4c2901f845e57e9c12106ba0a61e4",
+  "main_observed": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "branch": "research/astra/20260910-balanced-newton-renormalization",
+  "repository_reading": [
+    {
+      "path": "AGENTS.md",
+      "sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "scope": "read current workflow/scientific boundaries"
+    },
+    {
+      "path": "standalone/2026-09-10-astra-balanced-newton/innovations/PROOF.md",
+      "sha": "6671339d48c7f9bb846c15d8265e53f6856c2852",
+      "blob": "c23431cb9a4830b8966c5473878893686e1c3af3",
+      "bytes": 14227,
+      "scope": "full text read; uploaded local bytes matched to current remote directory blob; all reused algebra rederived"
+    },
+    {
+      "path": "standalone/2026-09-10-astra-balanced-newton/RESEARCH_PLAN.md",
+      "sha": "6671339d48c7f9bb846c15d8265e53f6856c2852",
+      "scope": "full source read; native product-coincidence task and failed general-vector estimates"
+    },
+    {
+      "path": "PR848 metadata and complete comments",
+      "sha": "6671339d48c7f9bb846c15d8265e53f6856c2852",
+      "scope": "live head, history boundary and continuation receipt; no independent review found in returned thread"
+    }
+  ],
+  "external": [
+    {
+      "authors": "M. N. Huxley and N. Watt",
+      "title": "Mertens Sums requiring Fewer Values of the Mobius function",
+      "url": "https://arxiv.org/abs/1807.05890",
+      "date": "2018-07-16",
+      "scope": "primary abstract inspected for attribution; not a new full-paper proof audit or an uninspected theorem premise"
+    }
+  ],
+  "proof_inputs": "finite divisor inversion; finite convolution; harmonic integral bounds; elementary Hilbert-space identities; zeta continuation and functional equation only in the conditional RH ending",
+  "nonclaims": [
+    "all-scale native covariance control",
+    "RH proof",
+    "external priority",
+    "independent mathematical acceptance",
+    "full repository validation",
+    "transfer of any earlier VERIFIED status to PCR26"
+  ]
+}
