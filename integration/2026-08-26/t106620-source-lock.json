@@ -1,0 +1,46 @@
+{
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "claims": [
+    "R-106620",
+    "L-106620",
+    "L-106621",
+    "T-106620"
+  ],
+  "created_utc": "2026-08-26",
+  "dependencies": [
+    {
+      "claim": "L-106503",
+      "use": "constant-scale rank-one companion-height majorization"
+    },
+    {
+      "claim": "T-106590/L-106591",
+      "use": "Selberg Xi height and pinned fifth-derivative height ledger"
+    },
+    {
+      "claim": "L-106610--L-106612",
+      "use": "exact Riemann-Siegel gauge and finite zeta-derivative packets"
+    },
+    {
+      "claim": "pinned R_5/N>997/1000-o(1)",
+      "use": "unconditional fifth-derivative entry proportion"
+    }
+  ],
+  "parent_head_before_packet": "76ecaabc91921d8da5b751105a3106f2e40a6080",
+  "replay": {
+    "classification": "PASS_T106620_MESOSCOPIC_RIEMANN_SIEGEL_GAUGE",
+    "exact_checks": 4510,
+    "proof_object_sha256": "6cbdc3727c68b9b3a25bccf5996c7eac4a352929ac502e2f75ff414b16b46033"
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t106620.source-lock.v1",
+  "status": {
+    "constant_scale_height_budget": "3/4000",
+    "deep_height_payment": "3/40",
+    "diagonal_rouche_inference_valid": false,
+    "mesorsgauge106620_proved": false,
+    "mesoscopic_constant_scale_factorization_proved": true,
+    "ninety_percent_established": false,
+    "rh_established": false,
+    "shallow_threshold": "11/500"
+  }
+}

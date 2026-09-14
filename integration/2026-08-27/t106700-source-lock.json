@@ -1,0 +1,39 @@
+{
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "claims": [
+    "L-106700",
+    "L-106701",
+    "R-106700",
+    "T-106700"
+  ],
+  "created_utc": "2026-08-27",
+  "dependencies": [
+    {
+      "claim": "L-106630--L-106631",
+      "use": "exact primal transport and numerator-subfactor monotonicity"
+    },
+    {
+      "claim": "T-106620/T-106590",
+      "use": "mesoscopic fifth endpoint and shallow/deep ledger"
+    },
+    {
+      "claim": "pinned simple-real Xi^(5) proportion >0.9863",
+      "use": "direct residue-transition allowance"
+    }
+  ],
+  "replay": {
+    "classification": "PASS_T106700_MESOTRANSPORT_HOSTILE_AUDIT",
+    "exact_checks": 111581
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t106700.source-lock.v1",
+  "status": {
+    "direct_transition_allowance": "863/10000",
+    "direct_transition_bound_proved": false,
+    "mesotrans106630_proved": false,
+    "ninety_percent_established": false,
+    "positive_source_formal_closure_refuted": true,
+    "rh_established": false,
+    "transport_topological_floor_proved": true
+  }
+}

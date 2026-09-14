@@ -1,0 +1,28 @@
+{
+  "base_commit": "d147fdb23492289fed4450e63b40ef55afaac466",
+  "base_pr": 731,
+  "claims": [
+    "L-105250",
+    "L-105251",
+    "L-105252",
+    "L-105253",
+    "R-105250",
+    "T-105250"
+  ],
+  "density_one_established": false,
+  "ninety_percent_established": false,
+  "related_prs": {
+    "quantitative_levinson": {
+      "head": "5088669fbd46ad76186df66e43b6715c9c732b81",
+      "pr": 742
+    },
+    "triangular_wick": {
+      "head": "45e416d932818399045ec7d3ba36e9d6efc50f00",
+      "pr": 726
+    }
+  },
+  "rh_established": false,
+  "schema": "riemann.packet.t105250.v1",
+  "status": "PROPOSED_REVIEWABLE_MATHEMATICS",
+  "title": "Square-root polynomial Wick hierarchy and density-one transfer lattice"
+}

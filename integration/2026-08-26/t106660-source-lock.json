@@ -1,0 +1,34 @@
+{
+  "base_head_read_back": "574a61139def4467abe086be2ede66e6e12b1988",
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "claim": "T-106660",
+  "created": "2026-08-26",
+  "depends_on": [
+    "T-106590",
+    "T-106620",
+    "T-106630",
+    "T-106650",
+    "corrected L-106514"
+  ],
+  "new_or_corrected_files": [
+    "claims/lemmas/L-106611-carrier-free-fifth-endpoint-cross-ratio.md",
+    "claims/lemmas/L-106660-phase-optimized-cross-hankel-majorant.md",
+    "claims/lemmas/L-106661-rational-resolvent-canonical-certificate.md",
+    "claims/theorems/T-106660-phase-resolvent-ninety-percent-gates.md",
+    "claims/refutations/R-106660-scalar-phase-dispersion-firewall.md",
+    "experiments/X-106660-phase-resolvent/README.md",
+    "experiments/X-106660-phase-resolvent/verify.py",
+    "experiments/X-106660-phase-resolvent/results/verification.json",
+    "reports/gpt56-pro/2026-08-26-phase-resolvent-frontier.md",
+    "PR_BODY_106660_ADDENDUM.md"
+  ],
+  "repository": "gfreund123/riemann",
+  "scientific_boundary": {
+    "MESODET106660": "OPEN",
+    "MESOPHASE106660": "OPEN",
+    "MESORES106660": "OPEN",
+    "density_one": "UNPROVED",
+    "ninety_percent": "UNPROVED",
+    "riemann_hypothesis": "UNPROVED"
+  }
+}

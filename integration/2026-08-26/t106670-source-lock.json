@@ -1,0 +1,92 @@
+{
+  "allowance_family": {
+    "1": "77/800",
+    "1/10": "179/2000",
+    "1/100": "11/500",
+    "infinity": "97/1000"
+  },
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "claims": [
+    "L-106670",
+    "L-106671",
+    "L-106672",
+    "L-106673",
+    "R-106670",
+    "T-106670",
+    "M-106670"
+  ],
+  "content_sha256": {
+    "PR_BODY_106670_ADDENDUM.md": "d82b0348bc2a1ee01517e516c21abeea5b6f689489836b59c82786f7f21bbae3",
+    "claims/lemmas/L-106670-regularized-pick-free-energy-is-lossless-canonical-charge.md": "5714f11f1a2a6bb76ebbd3d79665aa6a57da07770cd08d0dd101553dc409d195",
+    "claims/lemmas/L-106671-endpoint-free-energy-is-a-source-evaluation-pick-determinant.md": "fc9bc89d9129ca22a9ededed2e3a6daf78c1371c9582d023487c326309d42764",
+    "claims/lemmas/L-106672-conditional-pivots-and-global-pick-partition-function.md": "c7a668b48bcb12855980ee4a598da9529cc330b937d0196c8305695307b212ab",
+    "claims/lemmas/L-106673-unregularized-cauchy-volume-is-logarithmic-laplace-transport.md": "f7d68d9e64c2fb31da6db72bcd93971630cac2273fcb789052baa0679ad36b20",
+    "claims/methodology/M-106670-hostile-review-contract.md": "aa59fb274b0cdbf1a3900f669ea04e456c4153c40e475e36cbbafa6aebce2563",
+    "claims/refutations/R-106670-height-index-and-raw-volume-do-not-close-the-free-energy-gate.md": "c56910455f33209837ac85e13b072ef1aa91d98c4fe4b804f4654093d87ceb35",
+    "claims/theorems/T-106670-regularized-pick-free-energy-ninety-percent-equivalence.md": "84e923d2a9e8e203f3afbcfb3741896a2b0347eb970c00497480da222eeda250",
+    "experiments/X-106670-regularized-pick-free-energy/README.md": "969af3af6be6e0046a04ba0f522c0fb696688a6ed7199e06a6d3ec6cdaa1b799",
+    "experiments/X-106670-regularized-pick-free-energy/results/verification.json": "d145a7f29d6e940a9c14b2fbd6c8c13360594278c6bfae457e78d95cfd9d6d78",
+    "experiments/X-106670-regularized-pick-free-energy/verify.py": "23be393360ff4758086eaf18c5410128fe06625605c7144160744eff3231cc7d",
+    "reports/gpt56-pro/2026-08-26-regularized-pick-free-energy.md": "ab2a3535f92daa43a3748964d1b2dca31d3624b66fac44d4b1fba22deb7df2b2"
+  },
+  "created_utc": "2026-08-26",
+  "dependencies": [
+    {
+      "claim": "T-106500",
+      "use": "full endpoint charge below 97/1000 implies more than 90 percent"
+    },
+    {
+      "claim": "T-106590",
+      "use": "height split and 3/(4000 eta) cutoff payment"
+    },
+    {
+      "claim": "T-106620",
+      "use": "mesoscopic frozen Riemann-Siegel endpoint packets and regularization ledger"
+    },
+    {
+      "claim": "T-106630",
+      "use": "exact canonical charge / primal transport minimum"
+    },
+    {
+      "claim": "T-106650",
+      "use": "value-nonnormality normal form and current remote frontier"
+    },
+    {
+      "claim": "T-106660",
+      "use": "existing optimized-phase/resolvent/determinant scalar checkpoint; T-106670 supplies the lossless minus-determinant and full-cutoff family"
+    }
+  ],
+  "full_endpoint_allowance": "97/1000",
+  "parent_head_before_packet": "433490c133b26bce4163f4edf7ad04aeda9d33e3",
+  "remote_audit": {
+    "current_head_before_packet": "433490c133b26bce4163f4edf7ad04aeda9d33e3",
+    "current_t106660_landed_verified": true,
+    "draft": true,
+    "mergeable": true,
+    "pr": 731,
+    "pr_state": "open",
+    "prior_t106610_landed_verified": true,
+    "t106650_landed_verified": true
+  },
+  "replay": {
+    "classification": "PASS_T106670_REGULARIZED_PICK_FREE_ENERGY",
+    "exact_rational_checks": 1029,
+    "numerical_consistency_checks": 15256,
+    "proof_object_sha256": "d385b983a8f8fa140b6cd9a5373a910819709fb0622b8f93cd2f7be98210261b",
+    "total_checks": 16285
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t106670.source-lock.v2",
+  "status": {
+    "conditional_pivot_factorization_proved": true,
+    "cutoff_family_equivalence_proved": true,
+    "density_one_established": false,
+    "full_endpoint_gate_equivalence_proved": true,
+    "height_index_only_closure_valid": false,
+    "mesofree106670_proved": false,
+    "ninety_percent_established": false,
+    "regularized_free_energy_sandwich_proved": true,
+    "rh_established": false,
+    "source_pick_determinant_proved": true
+  }
+}

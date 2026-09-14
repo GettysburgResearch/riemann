@@ -1,0 +1,25 @@
+{
+  "schema": "riemann.t106451.source-lock.v1",
+  "created_utc": "2026-08-25",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "depends_on": ["R-106450", "T-106450", "L-106451"],
+  "claims": ["L-106451", "T-106451", "R-106451"],
+  "replay": {
+    "path": "experiments/X-106451-hermite-bezout/verify.py",
+    "retained_result_committed": false,
+    "scope": "finite exact Bezout and CRT algebra only"
+  },
+  "status": {
+    "endpoint_bezout_decomposition_proved": true,
+    "crt_root_fibre_labels_proved": true,
+    "signature_equals_r0_minus_r4_proved": true,
+    "thin_strip_high_derivative_firewall_proved": true,
+    "hbsig106451_proved": false,
+    "hbrt106451_proved": false,
+    "resgram106450_proved": false,
+    "ninety_percent_established": false,
+    "density_one_established": false,
+    "rh_established": false
+  }
+}

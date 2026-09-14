@@ -1,0 +1,35 @@
+{
+  "schema": "riemann.t106710.source-lock.v1",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "created_utc": "2026-08-27",
+  "dependencies": [
+    {
+      "claim": "L-106500--L-106502",
+      "use": "positive odd-current density and Xi conditional-difference concentration"
+    },
+    {
+      "claim": "T-106670/L-106674/T-106700",
+      "use": "lossless source-Pick free energy and forced topological floor"
+    }
+  ],
+  "claims": [
+    "L-106710",
+    "R-106710",
+    "T-106710"
+  ],
+  "replay": {
+    "classification": "PASS_T106710_CARRIER_ADAPTED_ANTIPHASE_SOURCE_SOFTENING",
+    "exact_checks": 48,
+    "proof_object_sha256": "95f1afc0c79bf4e23d29d411599d7f2f45f3d71c4b13f66607c524acedceae12"
+  },
+  "status": {
+    "carrier_adapted_source_softening_proved": true,
+    "xi_one_tenth_asymptotic_proved_given_l106502": true,
+    "physical_scale_bridge_proved": false,
+    "full_source_pick_free_energy_bound_proved": false,
+    "ninety_percent_established": false,
+    "density_one_established": false,
+    "rh_established": false
+  }
+}

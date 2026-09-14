@@ -1,0 +1,64 @@
+{
+  "schema": "riemann.t105290.source-lock.v2",
+  "created_utc": "2026-08-24",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "checkpoint_parent_head": "7fbd17f4937b24688b0c94dcd677970b2a3e8e00",
+  "programme_pr": 731,
+  "related_sources": {
+    "pr726_finite_alpha_and_unimodular_bank": {
+      "pr": 726,
+      "head": "45cf8e77569d9c2ae2b8f05bf1921cb1ae5c230c",
+      "claims": [
+        "L-105340",
+        "L-105341",
+        "L-105342",
+        "L-105540",
+        "L-105541",
+        "T-105540"
+      ]
+    },
+    "pr729_unit_vs_residue_gauss_law_comparison": {
+      "pr": 729,
+      "head": "f22ee0aa99d10961e0ac92c85b1fdc91e4cd0e75",
+      "claims": ["L-105450", "L-105451"]
+    },
+    "pr751_square_phase_owner_conductor": {
+      "pr": 751,
+      "head": "b72d82e8d31791712196081d8d8a7c9c1fc14cb8",
+      "claims": [
+        "L-106020",
+        "L-106021",
+        "L-106024",
+        "L-106027",
+        "T-106030"
+      ]
+    },
+    "pr742_conrey_numeric_import": {
+      "pr": 742,
+      "head": "5088669fbd46ad76186df66e43b6715c9c732b81",
+      "claim": "L-105075"
+    },
+    "factor67_hostile_reconstruction": {
+      "pr": 586,
+      "head": "70e74f38c1137bd987d1a706f7a9aa907f284e9a",
+      "status": "source induction and reserve domination refuted as used"
+    }
+  },
+  "replay": {
+    "classification": "PASS_T105290_ALLPASS_HANKEL_OWNER_CONDUCTOR",
+    "proof_object_sha256": "365cb91ba2af9276377fd0b2dc69c796c20dca51e478459132f3aced12582747"
+  },
+  "status": {
+    "matrix_allpass_hankel_identity_proved": true,
+    "finite_alpha_bridge_proved": true,
+    "square_phase_hankel_contraction_proved": true,
+    "five_rung_unphased_source_bound_proved": true,
+    "global_phase_family_diagonal_bound_proved": false,
+    "phase_family_excess_retained_in_hoch105290": true,
+    "hoch105290_proved": false,
+    "ninety_percent_established": false,
+    "density_one_established": false,
+    "rh_established": false
+  }
+}

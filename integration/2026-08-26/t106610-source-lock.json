@@ -1,0 +1,42 @@
+{
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "claims": [
+    "L-106610",
+    "L-106611",
+    "L-106612",
+    "T-106610"
+  ],
+  "created_utc": "2026-08-26",
+  "dependencies": [
+    {
+      "claim": "T-106590/L-106591",
+      "use": "closed denominator height and deep charge"
+    },
+    {
+      "claim": "T-106600",
+      "use": "positive analytic scale homotopy and adaptive endpoint gate"
+    },
+    {
+      "claim": "L-106514",
+      "use": "exact oriented denominator phase-angle identity"
+    }
+  ],
+  "parent_head_before_packet": "5071ebf6d3b5258ce6ef3991b7d1020810a34e44",
+  "replay": {
+    "classification": "PASS_T106610_RIEMANN_SIEGEL_GAUGE",
+    "exact_gaussian_rational_checks": 1920,
+    "proof_object_sha256": "84f63c1b9c14f2e76bce384bac51608475512626cb1eb32c6926f5a2d3dbd191"
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t106610.source-lock.v1",
+  "status": {
+    "amplitude_connection_cancellation_proved": true,
+    "carrier_factorization_proved": true,
+    "density_one_established": false,
+    "finite_zeta_derivative_packet_proved": true,
+    "ninety_percent_established": false,
+    "rh_established": false,
+    "riemann_siegel_scale_admissible": true,
+    "rsgauge106610_proved": false
+  }
+}

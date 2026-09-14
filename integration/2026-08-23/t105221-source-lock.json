@@ -1,0 +1,25 @@
+{
+  "schema": "riemann.t105221.source-lock.v1",
+  "parent_commit": "05a973e38a4f23c4ffe2fa4cf15c7aa319063c05",
+  "exact_dependencies": {
+    "L-104523": {
+      "pr": 720,
+      "commit": "10bba584c01277e880aaa21e1fea09f396ca7246",
+      "blob": "b29e0227cc75db905585e38764b69db5545ceaf6"
+    },
+    "L-105101": {
+      "pr": 723,
+      "commit": "fd3ef43a6964e502f00ad906482eae5b3c544fba",
+      "blob": "0e8daad055a95fca41257232bb19df3432ed77a1"
+    }
+  },
+  "literature_target": {
+    "title": "On simple zeros of derivatives of the Riemann xi-function",
+    "author": "I. S. Rezvyakova",
+    "doi": "10.1070/IM2006V070N02ABEH002312",
+    "proof_replayed": false
+  },
+  "ninety_percent_established": false,
+  "density_one_established": false,
+  "rh_established": false
+}

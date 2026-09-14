@@ -1,0 +1,56 @@
+{
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "claims": [
+    "R-106432",
+    "L-106432",
+    "L-106433",
+    "L-106434",
+    "L-106435",
+    "T-106450"
+  ],
+  "created_utc": "2026-08-25",
+  "dependencies": [
+    {
+      "claims": [
+        "L-105290",
+        "L-106400",
+        "L-106410--L-106442",
+        "T-106430",
+        "T-106440"
+      ],
+      "head_observed": "6abe03f6583afa075f1e9d2839f93ddae82f6478",
+      "pull_request": 731,
+      "use": "endpoint all-pass, source contraction, signed coarea and OUT/HOLE frontier"
+    },
+    {
+      "claims": [
+        "L-105620",
+        "L-105621",
+        "L-105623",
+        "L-105627",
+        "L-105632"
+      ],
+      "head_observed": "4150f96e3d410de1724303c60d72a000c1ff05e0",
+      "pull_request": 729,
+      "use": "actual current-Turan source closure and vertical-shift phase boundary"
+    }
+  ],
+  "parent_head_before_packet": "6abe03f6583afa075f1e9d2839f93ddae82f6478",
+  "replay": {
+    "classification": "PASS_T106450_ACTUAL_SPECTRAL_TAIL_REDUCTION",
+    "exact_checks": 20211,
+    "proof_object_sha256": "4e13de94803fa4c4176f60e3a6d178a594f7f605fbfcc5b10d7bc8a1df21ed71"
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t106450.source-lock.v1",
+  "status": {
+    "actualspectral106450_proved": false,
+    "cauchy_exponential_divisor_formula_proved": true,
+    "density_one_established": false,
+    "hard_band_visible_formula_proved": true,
+    "ninety_percent_established": false,
+    "quotientvis106450_proved": false,
+    "rh_established": false,
+    "visible_source_promotion_refuted_source_blindly": true
+  }
+}

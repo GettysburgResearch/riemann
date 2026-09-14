@@ -1,0 +1,47 @@
+{
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "claims": [
+    "L-106550",
+    "L-106551",
+    "T-106550"
+  ],
+  "created_utc": "2026-08-25",
+  "dependencies": [
+    {
+      "local_claims": [
+        "L-105210",
+        "L-105211",
+        "T-105210"
+      ],
+      "use": "stability-enhanced rank-inertia and original seven-gap averaging"
+    },
+    {
+      "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+      "repository": "anthropics/zeta-23-lean",
+      "use": "pinned Theorem D normalization and H0 interval"
+    },
+    {
+      "certificate": "certificates/seven-point.txt",
+      "certificate_blob": "02f939f071c7fdbcb21b8991e170ef7fc301b19c",
+      "commit": "040c5e899e658aed7b56a2a87f501798fe10761d",
+      "repository": "ainta/zeta-simple-zeros",
+      "use": "unchanged seven-gap finite certificate"
+    }
+  ],
+  "parent_head_before_packet": "b31605b5345f79b9ca3965654954a776c43dc1e5",
+  "parent_tree_before_packet": "e835122019a3488cf0aad832bfd3039344556422",
+  "replay": {
+    "classification": "PASS_T106550_280_POINT_SPECTRAL_PRESSURE_LIFT",
+    "proof_object_sha256": "934ec0dbff21897cdf03cbe36f8867987bd01f5db3fb657bf708d30664ea081b"
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t106550.source-lock.v1",
+  "status": {
+    "external_arb_certificate_replayed": false,
+    "global_280_point_lift_proved_conditional_on_pinned_certificate": true,
+    "new_source_pinned_record_proposed": true,
+    "ninety_percent_established": false,
+    "rh_established": false,
+    "spectral_envelope_proved": true
+  }
+}
