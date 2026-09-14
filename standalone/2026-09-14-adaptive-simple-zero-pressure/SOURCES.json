@@ -1,0 +1,79 @@
+{
+  "base_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "date": "2026-09-14",
+  "external_sources": [
+    {
+      "blob": "13384911b7b9953239cd1262a5c73c64c6167c18",
+      "path": "docs/proof.md",
+      "read": "Entire deduction; credit for stability inequality, seven-gap formulation and 269-point lift",
+      "ref": "040c5e899e658aed7b56a2a87f501798fe10761d",
+      "repository": "ainta/zeta-simple-zeros"
+    },
+    {
+      "blob": "ed0bf0a6703238ad390745135d8d7d6f594c1e5e",
+      "path": "src/zeta_simple_zeros/verify_seven.py",
+      "read": "Source read; no executable replay or full backend audit. New result uses stated P7 and separately retained integrated replacement boundary",
+      "ref": "040c5e899e658aed7b56a2a87f501798fe10761d",
+      "repository": "ainta/zeta-simple-zeros"
+    },
+    {
+      "read": "Parsed statements and Proposition 4.4/Theorem D page images; not complete external analytic reproof or formal build",
+      "title": "More than two thirds of the zeros of the Riemann zeta function lie on the critical line",
+      "url": "https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf",
+      "version": "Anthropic PDF dated August 10, 2026"
+    },
+    {
+      "arxiv": "2608.13637",
+      "authors": "Levent Alpoge, Ralph Furman",
+      "read": "Primary abstract and benchmark; later full manuscript not newly audited",
+      "title": "More than two thirds of the zeta zeros are simple and on the critical line"
+    },
+    {
+      "arxiv": "2609.02882",
+      "author": "Youness Lamzouri",
+      "read": "Primary abstract/statement and official MPIM talk page; full manuscript retrieval unsuccessful; no proof imported as an independently reviewed replacement",
+      "title": "A new proof that more than 2/3 of the zeros of the Riemann zeta function are simple and on the critical line"
+    }
+  ],
+  "new_claim_scope": "Adaptive pressure assembly and improved deduction from P7 plus A1-A3; no RH proof or priority claim",
+  "not_replayed": [
+    "P7 continuum cover",
+    "external analytic trace estimates",
+    "Lean formalization",
+    "any zeta zero computation"
+  ],
+  "novelty_boundary": "New relative to the inspected fixed-block deductions; no comprehensive external priority claim",
+  "repository_sources": [
+    {
+      "blob": "2ecb7959c1c8eb3bd9169a5cc606630282019bb8",
+      "path": "claims/lemmas/L-105210-stability-enhanced-rank-inertia.md",
+      "pr": 731,
+      "read": "Entire finite lemma and proof; reconstructed in new manuscript",
+      "ref": "6d440eb6c82d989c046e87e13f9bdabf087f920f"
+    },
+    {
+      "blob": "223d01b17118ee1197c0851bfd96c41a8fab8eb2",
+      "path": "standalone/2026-08-25-280-point-spectral-pressure/PROOF.md",
+      "pr": 731,
+      "read": "Entire proof; comparison constant, not a new certificate",
+      "ref": "6d440eb6c82d989c046e87e13f9bdabf087f920f"
+    },
+    {
+      "blob": "e1359f93c399c783e01c86d614fa02e86666671a",
+      "path": "reviews/A/supplement/REPORT.md",
+      "read": "Sections S01 and S02 in detail: replacement finite certificate and analytic block adapters; not the entire supplement",
+      "ref": "f99d9e3908dde4865377c75d9ca051c1f545bf4f"
+    },
+    {
+      "blob": "c2181ad9ebf037614f3daa8957df640159f8d968",
+      "path": "AGENTS.md",
+      "read": "Complete operating guide",
+      "ref": "f99d9e3908dde4865377c75d9ca051c1f545bf4f"
+    },
+    {
+      "pr": 882,
+      "read": "Remote head and PR-body confirmation; not a new proof audit or a premise of this result",
+      "ref": "ecf442fb60188d00e210105c147370df06750150"
+    }
+  ]
+}

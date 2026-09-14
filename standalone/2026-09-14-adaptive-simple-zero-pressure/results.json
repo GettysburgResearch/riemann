@@ -1,0 +1,66 @@
+{
+  "constants": {
+    "alpha": "1/500",
+    "alternating_cutoff": 40,
+    "beta": "19/5000",
+    "fixed_outer_proportion": [
+      "0.673043152139956967894923",
+      "0.673043152139956967894924"
+    ],
+    "fixed_outer_size": 1000000,
+    "fixed_threshold": "1",
+    "h0": [
+      "0.672500703679411645734379",
+      "0.672500703679411645734380"
+    ],
+    "new_proportion": [
+      "0.673044180434701871721313",
+      "0.673044180434701871721314"
+    ],
+    "old_269": [
+      "0.673008527927779761323475",
+      "0.673008527927779761323476"
+    ],
+    "old_280": [
+      "0.673009652279136912013711",
+      "0.673009652279136912013712"
+    ],
+    "optimal_threshold": [
+      "1.052527751692188230357210",
+      "1.052527751692188230357211"
+    ],
+    "optimal_x": [
+      "1.025927751692188230357210",
+      "1.025927751692188230357211"
+    ],
+    "percentage_point_gain_over_280": [
+      "0.003452815556495970760122",
+      "0.003452815556495970760123"
+    ],
+    "proportion_gain_over_280": [
+      "0.000034528155564959707601",
+      "0.000034528155564959707602"
+    ],
+    "sqrt_bits": 256,
+    "window_loss": 6
+  },
+  "external_analytic_inputs_reproved": false,
+  "native_zero_computation": false,
+  "partitions": {
+    "closed_blocks_in_small_tests": 2499,
+    "exhaustive_small_gap_lists": 6560,
+    "native_constant_profiles": 24,
+    "outer_size_offset_panels": 451,
+    "these_are_zeta_zero_configurations": false
+  },
+  "rh_proved": false,
+  "schema": "adaptive-pressure-v1",
+  "seven_gap_replayed": false,
+  "spectral_controls": {
+    "exact_pinching_panels": 2907,
+    "four_point_spectra": 969,
+    "scalar_subadditivity_panels": 441,
+    "these_are_native_gram_computations": false
+  },
+  "status": "PROPOSED_DEDUCTION_FROM_EXPLICIT_INPUTS"
+}
