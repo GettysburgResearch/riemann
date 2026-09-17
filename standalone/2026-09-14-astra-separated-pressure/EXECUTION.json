@@ -1,0 +1,53 @@
+{
+  "bounded_checks": {
+    "normal": true,
+    "optimized": true,
+    "semantic_sha256": "09ada6338446bfa0fc7393f89f235508693ab2bfc5082f8a7ce0864af5560c4e"
+  },
+  "date": "2026-09-14",
+  "formal_build": false,
+  "full_seven_replays": {
+    "mathematical_payloads_equal_excluding_seconds": true,
+    "new_independent_implementation": false,
+    "nodes_per_replay": 713315,
+    "optimized": "Final verify.py --full-seven invoked the unchanged vendor source with python -S -B -O.",
+    "ordinary": "Unchanged byte-authenticated vendor source executed directly with python -S -B.",
+    "raw_receipts": [
+      "seven_result.json",
+      "seven_result.optimized.json"
+    ]
+  },
+  "imported_prime_side_analysis_reproved": false,
+  "mathematical_source_review": "Same author; independent review of proposed new analytic proof remains required.",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "recorded_process_exits": {
+    "seven.exit": 0,
+    "seven_optimized.exit": 0,
+    "tests.final.normal.exit": 0,
+    "tests.final.optimized.exit": 0
+  },
+  "remote_ci": false,
+  "remote_publication": false,
+  "repository_wide_validation": false,
+  "rh_proved": false,
+  "source_and_result_sha256": {
+    "PROOF.md": "689b0d5ddf40ce968d561823ecae28180df6878150ee57354dd4e971e5b9e071",
+    "result.json": "bc54b46298e174c2fed74152ee4e7f2fbbc5631d74a344f6a71cb6e3f4c7f178",
+    "seven_result.json": "c6b80a371f5620e38aa02fb6a2050b503a0134e2d96c5a564310ca0341664804",
+    "seven_result.optimized.json": "86ac3e1fc0866a5c643f7cf2886f7766ae6c2e769d304efb4a1a3717c4cb1c06",
+    "test_verify.py": "d3d783a2930e649b2c448c7c6c2dc57c4735de08a18c3b06f080f8f4bb1d2972",
+    "vendor/dyadic_interval.py": "c0cb7d95a231099744dbd4278b3327c020812bb1b18a35147ea761e6390432e8",
+    "vendor/seven_independent_cached.py": "bc4a638373414581515edd950d7a811b81dfe0ef3fa77d119f35b49bea6fe361",
+    "verify.py": "5ab458b0f10091d8ba18c12f1b699a7090ac862f4eea0f4257824b79715677f5"
+  },
+  "status": "COMPLETED",
+  "tests": {
+    "actual_bounded_cli_refusals_per_mode": 8,
+    "failures": 0,
+    "full_seven_replays_inside_test_suite": 0,
+    "methods_per_mode": 3,
+    "pristine_bounded_cli_per_mode": 1,
+    "skips": 0
+  }
+}
