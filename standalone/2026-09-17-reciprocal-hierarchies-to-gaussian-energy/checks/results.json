@@ -1,0 +1,21 @@
+{
+  "derivative_constant_cases": 35,
+  "energy_dilation_cases": 42,
+  "expected_refusals": [
+    "Extending Newton support to (y+1)^2",
+    "Claiming all native covariances are nonpositive",
+    "Negative rational square-root input",
+    "Altered packet sign",
+    "Using H instead of H^2 in Gaussian Fourier formula",
+    "Altered artifact hash"
+  ],
+  "inherited_sha256": {
+    "mobius_packet_check.py": "d8b87123900d07c9db074f8d6c030e251b5f24eb5aab56cbc55b3850cfff81fa",
+    "mobius_packet_check_results.json": "cadabefd169b0f3e61739d7d647cc647bf93f765c1adfe2dfa00b7471e79c061"
+  },
+  "native_positive_covariance": "98927563616277399074304083/23245229340000000000000000000",
+  "newton_prefix_cases": 740,
+  "polya_gamma_formal_coefficients": 36,
+  "refusal_count": 6,
+  "scope": "Bounded exact identities and explicit false-claim controls only; no RH or asymptotic certification."
+}
