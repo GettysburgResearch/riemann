@@ -1,0 +1,63 @@
+{
+  "frozen_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "verified_previous_upload": {
+    "pr": 886,
+    "head": "d998605c0718e332ac503baf078704b862f8250e",
+    "subtree": "2b95816590f4594c2510614ca95bc1f6e3a915fd",
+    "scope": "PR metadata and uploader receipt; not an independent rerun of the Ising certificate"
+  },
+  "entries": [
+    {
+      "id": "A",
+      "repo": "ainta/zeta-simple-zeros",
+      "commit": "040c5e899e658aed7b56a2a87f501798fe10761d",
+      "paths": [
+        "paper/riemann.tex",
+        "src/zeta_simple_zeros/verify_seven.py",
+        "README.md"
+      ],
+      "scope": "Read stability proof, sampling/block arguments, and entire seven-point algorithm; credited source, no external original-code execution"
+    },
+    {
+      "id": "R",
+      "repo": "GettysburgResearch/riemann",
+      "commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "paths": [
+        "research/integrated/CURRENT_RESULTS.md",
+        "reviews/A/supplement/REPORT.md",
+        "AGENTS.md"
+      ],
+      "scope": "Read current statement guide and S01-S02 pressure/normalization/block repair; did not re-audit other reviewer programmes"
+    },
+    {
+      "id": "C",
+      "url": "https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf",
+      "date": "2026-08-10",
+      "pages": 35,
+      "scope": "Primary parsed text and screenshots of printed pages12 and21, including Proposition4.2/4.4 and TheoremD. Exact analytic interfaces explicitly imported; no complete new proof audit or Lean build"
+    },
+    {
+      "id": "L",
+      "url": "https://arxiv.org/abs/2609.02882",
+      "scope": "Primary abstract checked for literature calibration; PDF retrieval failed; not used as the vector-source interface"
+    },
+    {
+      "id": "AF",
+      "url": "https://arxiv.org/abs/2608.13637",
+      "scope": "Primary abstract checked; no separate full PDF review"
+    },
+    {
+      "id": "MPFR",
+      "url": "https://www.mpfr.org/mpfr-current/mpfr.html",
+      "version_executed": "4.2.2",
+      "scope": "Correct rounding and interval arithmetic contract; library not formally verified in this task"
+    }
+  ],
+  "omissions": [
+    "No independent verification of all seven critique thread reports",
+    "No exhaustive current-record or external-priority search",
+    "No full repository checkout/validator",
+    "No formal proof build",
+    "No prior Ising/source numerical campaign rerun"
+  ]
+}

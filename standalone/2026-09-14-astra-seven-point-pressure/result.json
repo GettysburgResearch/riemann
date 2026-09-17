@@ -1,0 +1,71 @@
+{
+  "rational_audit": {
+    "block": 308,
+    "distinct_constant": {
+      "denominator": 1000000000000000000,
+      "lower_numerator": 836515419319082763,
+      "upper_numerator": 836515419319082764
+    },
+    "gain": {
+      "denominator": 1000000000000000000,
+      "lower_numerator": 21186359028615,
+      "upper_numerator": 21186359028616
+    },
+    "independent_selected_cell_sample_points": 39,
+    "independent_selected_point_rows": 19,
+    "lower_local": "13777/4000000",
+    "new_constant": {
+      "denominator": 1000000000000000000,
+      "lower_numerator": 673030838638165527,
+      "upper_numerator": 673030838638165528
+    },
+    "old_280_constant": {
+      "denominator": 1000000000000000000,
+      "lower_numerator": 673009652279136912,
+      "upper_numerator": 673009652279136913
+    },
+    "phi": {
+      "denominator": 1000000000000000000,
+      "lower_numerator": 1039831274282629059,
+      "upper_numerator": 1039831274282629060
+    },
+    "pressure_denominator": 3433,
+    "q": "2080327/2000000",
+    "rational_witness_gaps": [
+      "65314862519/62500000000",
+      "988537872031/500000000000",
+      "260402578527/250000000000",
+      "1986449992801/1000000000000",
+      "1989188338767/1000000000000",
+      "1046116442247/1000000000000"
+    ],
+    "rational_witness_value": {
+      "denominator": 1000000000000000000,
+      "lower_numerator": 3444255864632298,
+      "upper_numerator": 3444255864632299
+    }
+  },
+  "rh_proved": false,
+  "search": {
+    "convex_leaves": 159465,
+    "cutoff_cells": 47297,
+    "grid": 4000,
+    "initial_boxes": 729,
+    "interval_ldl_positive": 423260,
+    "interval_ldl_tests": 423260,
+    "interval_leaves": 295184,
+    "leaves": 460596,
+    "max_stack": 729,
+    "minimum_comparison_margin": "0x1.2f8517fffffffp-38",
+    "nodes": 920463,
+    "pressure_denominator": 3433,
+    "pressure_leaves": 5947,
+    "splits": 459867,
+    "target_denominator": 4000000,
+    "target_numerator": 13777,
+    "traversal_fnv64": "b34922ee9636bd5d",
+    "verified": true
+  },
+  "status": "PROPOSED_UNCONDITIONAL_REFINEMENT_REVIEW_REQUIRED",
+  "table_payload_sha256": "7e5d7e14a151386023a7110e281de22e7049f4246bf4058a2cec4ab3fe575400"
+}
