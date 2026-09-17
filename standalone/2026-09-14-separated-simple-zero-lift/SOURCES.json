@@ -1,0 +1,77 @@
+{
+  "base": {
+    "commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+    "repo": "GettysburgResearch/riemann",
+    "root_tree": "8bddd12122e8a772683c9ed0b37dbcb945036893"
+  },
+  "boundaries": {
+    "new_proof_independently_reviewed": false,
+    "priority_census_complete": false,
+    "rh_proved": false,
+    "seven_thread_audit_reperformed": false,
+    "unpublished_parallel_work_used": false
+  },
+  "date": "2026-09-14",
+  "imports": [
+    {
+      "blob": "fed199bb7e641c718ac1f33d5e885c0b412d5080",
+      "commit": "040c5e899e658aed7b56a2a87f501798fe10761d",
+      "execution": "no fresh inherited verifier replay",
+      "label": "A",
+      "path": "paper/riemann.tex",
+      "reading": "full TeX through two consecutive line ranges",
+      "repo": "ainta/zeta-simple-zeros",
+      "used": "P7, credited stability lemma and baseline 269 lift"
+    },
+    {
+      "blob": "e1359f93c399c783e01c86d614fa02e86666671a",
+      "commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "execution": "historical 713315-node transcript read, not rerun",
+      "label": "R",
+      "path": "reviews/A/supplement/REPORT.md",
+      "reading": "S01 and S02 in full, surrounding scope statements",
+      "repo": "GettysburgResearch/riemann",
+      "used": "independent P7 provenance, 280 constant, source-normalization warnings"
+    },
+    {
+      "author_line": "Claude",
+      "execution": "no independent full proof or formalization replay",
+      "label": "C",
+      "manuscript_date": "2026-08-10",
+      "pages": 35,
+      "pdf_sha256": null,
+      "reading": "selected primary parsed sections and screenshots, including printed pages 8, 12, 13, 21",
+      "title": "More than two thirds of the zeros of the Riemann zeta function lie on the critical line",
+      "url": "https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf",
+      "used": "Lemma 2.2; Propositions 4.1-4.4; Section 5 and Section 7.1 Theorem D actual normalized trace statements"
+    },
+    {
+      "author": "Youness Lamzouri",
+      "label": "L",
+      "reading": "primary indexed abstract and repository import dossier context",
+      "url": "https://arxiv.org/abs/2609.02882",
+      "used": "literature context only, not a theorem dependency"
+    }
+  ],
+  "orientation": [
+    {
+      "blob": "875f98b268b5d3c6185db6a0538d893fc825c92e",
+      "path": "research/integrated/CURRENT_RESULTS.md",
+      "reading": "current statement guide with particular attention to section 10",
+      "repo": "GettysburgResearch/riemann"
+    },
+    {
+      "head": "eb397b753a4ec25e58b741d8a3a5831cfdcdd3b9",
+      "pr": 884,
+      "reading": "current metadata and upload receipt; not a premise of SPL26",
+      "repo": "GettysburgResearch/riemann"
+    },
+    {
+      "blob": "c2181ad9ebf037614f3daa8957df640159f8d968",
+      "path": "AGENTS.md",
+      "reading": "full current instructions",
+      "repo": "GettysburgResearch/riemann"
+    }
+  ],
+  "packet": "SPL26"
+}
