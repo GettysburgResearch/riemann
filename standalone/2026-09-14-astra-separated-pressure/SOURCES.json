@@ -1,0 +1,92 @@
+{
+  "date": "2026-09-14",
+  "target_repository": "GettysburgResearch/riemann",
+  "target_pr": 875,
+  "parent_head": "00af30b4b3f810c7cd03fe94ba2f43b6c6b90538",
+  "main_source": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "sources": [
+    {
+      "id": "Z",
+      "title": "More than two thirds of the zeros of the Riemann zeta function lie on the critical line",
+      "author_as_printed": "Claude",
+      "version": "August 10, 2026 primary-host PDF, 35 pages",
+      "url": "https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf",
+      "read": "Normalization, Lemma 2.2, Sections 4 and 7.1, Theorem D; relevant PDF pages also viewed as images.",
+      "imported": "Literal optimized Gabor window, full-grid identity, decomposition/index counts, prime-side trace/mean-square and complete zero-tail estimates.",
+      "not_claimed": "Full independent reproof of the prime-side analytic estimates or journal/referee acceptance. No local byte hash of PDF."
+    },
+    {
+      "id": "7",
+      "repository": "ainta/zeta-simple-zeros",
+      "commit": "040c5e899e658aed7b56a2a87f501798fe10761d",
+      "path": "paper/riemann.tex",
+      "git_blob": "fed199bb7e641c718ac1f33d5e885c0b412d5080",
+      "read": "Full relevant mathematical manuscript, including stability lemma, seven-point pressure, local kernel adapter and 269-block deduction.",
+      "imported": "Stability-enhanced rank inequality and seven-point pressure; both explicitly credited.",
+      "current_head_check": "The repository commits endpoint still returned this single initial commit in this pass."
+    },
+    {
+      "id": "A",
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "path": "reviews/A/supplement/REPORT.md",
+      "git_blob": "e1359f93c399c783e01c86d614fa02e86666671a",
+      "read": "Sections S01 and S02 in full; these supply the independent primitive seven-point proof and 280-block comparison.",
+      "imported": "Seven-point theorem and comparison constant. New pass reruns the unchanged exhaustive replay."
+    },
+    {
+      "id": "vendor-primitive",
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "path": "reviews/A/supplement/replay/dyadic_interval.py",
+      "git_blob": "0b7bbbb7b3011d22399be8430710996cbdbf4258",
+      "sha256": "c0cb7d95a231099744dbd4278b3327c020812bb1b18a35147ea761e6390432e8",
+      "copy": "vendor/dyadic_interval.py",
+      "read": "Full source; copied byte-identically, not a new primitive implementation."
+    },
+    {
+      "id": "vendor-search",
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "path": "reviews/A/supplement/replay/seven_independent_cached.py",
+      "git_blob": "a659bf129a09d6f3c339c673677f63a523e937f2",
+      "sha256": "bc4a638373414581515edd950d7a811b81dfe0ef3fa77d119f35b49bea6fe361",
+      "copy": "vendor/seven_independent_cached.py",
+      "read": "Full source; copied byte-identically. Branching design is credited upstream to ainta."
+    },
+    {
+      "id": "prior-publication",
+      "repository": "GettysburgResearch/riemann",
+      "pr": 875,
+      "head": "00af30b4b3f810c7cd03fe94ba2f43b6c6b90538",
+      "read": "Fresh PR metadata and uploader receipt confirming the moment-cone addition. Prior conversation/local manuscripts provide history, not new dependencies of this theorem."
+    },
+    {
+      "id": "critique-context",
+      "title": "Jensen polynomials are not a viable route to proving the Riemann Hypothesis",
+      "url": "https://arxiv.org/abs/2008.07206",
+      "read": "Relevant discussion and PDF page, not imported as an impossibility theorem for all moment methods."
+    }
+  ],
+  "recent_repo_reconnaissance": {
+    "scope": "PR titles/descriptions, not full mathematical audits or theorem imports",
+    "prs": [
+      783,
+      796,
+      848,
+      885,
+      886
+    ]
+  },
+  "novelty_search": {
+    "queries": [
+      "673058 zeta",
+      "673058325",
+      "67305 zeros",
+      "zeta 0.673 2026 simple zeros"
+    ],
+    "conclusion": "No exhaustive priority or world-record determination. A secondary page mentions 0.6730213619501665 without an authenticated proof; it is not used as an input or accepted comparison theorem."
+  },
+  "new_component": "Separated-core/close-pair transfer and its actual growing finite-grid implementation.",
+  "rh_proved": false
+}
