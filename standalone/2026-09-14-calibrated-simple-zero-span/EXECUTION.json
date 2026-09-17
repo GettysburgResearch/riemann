@@ -1,0 +1,73 @@
+{
+  "pressure_normal_exit": 0,
+  "pressure_normal_seconds": 248.47879839299998,
+  "pressure_optimized_exit": 0,
+  "pressure_optimized_seconds": 249.07870835999984,
+  "pressure_mathematical_fields_identical": true,
+  "pressure_semantic_sha256": "000bc8053ceafdf47a0ae9c27071dbf4e868c1285906daf2f749c8ddd0310aa6",
+  "counts": {
+    "nodes": 713315,
+    "pressure": 3072,
+    "interval": 259807,
+    "tangent": 94143,
+    "splits": 356293
+  },
+  "constant_normal_exit": 0,
+  "constant_optimized_exit": 0,
+  "constant_outputs_identical": true,
+  "constant_sha256": "b1fb734f7d248e1dc9736d21fec0c0079c408e9f64bc5f4a1bf286c5edbf7c80",
+  "constant_changed_record_cli_refusals": [
+    {
+      "optimized": false,
+      "case": "false_rh",
+      "exitcode": 1,
+      "stderr": "REJECT: receipt differs from exact reconstruction"
+    },
+    {
+      "optimized": false,
+      "case": "wrong_numeric_type",
+      "exitcode": 1,
+      "stderr": "REJECT: receipt differs from exact reconstruction"
+    },
+    {
+      "optimized": false,
+      "case": "false_bound",
+      "exitcode": 1,
+      "stderr": "REJECT: receipt differs from exact reconstruction"
+    },
+    {
+      "optimized": false,
+      "case": "duplicate_json",
+      "exitcode": 1,
+      "stderr": "REJECT: duplicate JSON key"
+    },
+    {
+      "optimized": true,
+      "case": "false_rh",
+      "exitcode": 1,
+      "stderr": "REJECT: receipt differs from exact reconstruction"
+    },
+    {
+      "optimized": true,
+      "case": "wrong_numeric_type",
+      "exitcode": 1,
+      "stderr": "REJECT: receipt differs from exact reconstruction"
+    },
+    {
+      "optimized": true,
+      "case": "false_bound",
+      "exitcode": 1,
+      "stderr": "REJECT: receipt differs from exact reconstruction"
+    },
+    {
+      "optimized": true,
+      "case": "duplicate_json",
+      "exitcode": 1,
+      "stderr": "REJECT: duplicate JSON key"
+    }
+  ],
+  "analytic_proof_machine_verified": false,
+  "independent_referee_review": false,
+  "new_pressure_backend": false,
+  "pressure_mutation_campaign_replayed": false
+}
