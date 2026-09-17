@@ -1,0 +1,44 @@
+{
+  "scope": "local exact finite arithmetic and supplied mathematical formula checks; not an external-input or full-repository replay",
+  "runs": [
+    {
+      "name": "normal",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "verify.py",
+        "--check",
+        "result.json",
+        "--self-test"
+      ],
+      "seconds": 0.49,
+      "returncode": 0,
+      "stdout": "PASS d8895a597ad387011d815465590d750fa8bf595b3cb8596a455eb5622dfc9268\nRESEALED_MUTATIONS_REJECTED 10 DUPLICATE_REJECTED 1\nSCOPE: finite/theoretical lift; inherited seven-point and analytic inputs NOT replayed\n",
+      "stderr": "",
+      "utc": "2026-09-14T20:45:14.449576+00:00"
+    },
+    {
+      "name": "optimized",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "-O",
+        "verify.py",
+        "--check",
+        "result.json",
+        "--self-test"
+      ],
+      "seconds": 0.621,
+      "returncode": 0,
+      "stdout": "PASS d8895a597ad387011d815465590d750fa8bf595b3cb8596a455eb5622dfc9268\nRESEALED_MUTATIONS_REJECTED 10 DUPLICATE_REJECTED 1\nSCOPE: finite/theoretical lift; inherited seven-point and analytic inputs NOT replayed\n",
+      "stderr": "",
+      "utc": "2026-09-14T20:45:15.070678+00:00"
+    }
+  ],
+  "same_stdout": true,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "code_sha256": "ffbbe8690bbcf8af4c3825bea48fd31d6debd23bbd8edec9a44e490039acb006",
+  "result_sha256": "d9720b16f796b735988c3cf0a790512e0aa9ac9ef6fe50dffc2d481dfa62fa09"
+}
