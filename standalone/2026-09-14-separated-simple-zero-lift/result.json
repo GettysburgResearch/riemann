@@ -1,0 +1,72 @@
+{
+  "constants": {
+    "H_MT": [
+      "0.67250070367941164573437979080329",
+      "0.67250070367941164573437979080330"
+    ],
+    "gain_vs_280": [
+      "0.00004867303647405539682785058712",
+      "0.00004867303647405539682785058713"
+    ],
+    "new_distinct": [
+      "0.83652916265780548370526992110183",
+      "0.83652916265780548370526992110184"
+    ],
+    "new_simple": [
+      "0.67305832531561096741053984220366",
+      "0.67305832531561096741053984220367"
+    ],
+    "old269": [
+      "0.67300852792777976132347525985421",
+      "0.67300852792777976132347525985422"
+    ],
+    "old280": [
+      "0.67300965227913691201371199161654",
+      "0.67300965227913691201371199161655"
+    ]
+  },
+  "coverage": {
+    "adapter_constant_cases": 73,
+    "matching_gap_strings": 21846,
+    "maximum_pair_count": 4,
+    "multiplicity_cases": 1029,
+    "pinching_matrices": 15,
+    "rank_stability_matrices": 90,
+    "triangle_convolution": 49,
+    "window_incidence": 88480
+  },
+  "global": {
+    "constant_loss": "57/2500",
+    "count_coefficient": "19/5000",
+    "span_coefficient": "1/500"
+  },
+  "majorant": {
+    "derivative_at_right": "-371/729",
+    "fourier_mass": "15/8",
+    "minimum": "23/64152",
+    "polynomial": [
+      "7/44",
+      "-226/297",
+      "4042/8019"
+    ],
+    "support_radius": "2/3"
+  },
+  "pair": {
+    "bonus": "1618781/24502500",
+    "kernel_lower": "19/99",
+    "price": "722/9801"
+  },
+  "schema": "SPL26-bounded-v1",
+  "status": {
+    "analytic_trace_input_reproved": false,
+    "inherited_P7_replayed": false,
+    "new_mathematics": "proposed_complete_proof",
+    "rh_proved": false,
+    "world_record_claimed": false
+  },
+  "theorem_inputs": [
+    "P7 continuum inequality (imported)",
+    "Claude Theorem D trace and outside-zero tail (imported)",
+    "finite-dimensional spectral facts (proved/credited in manuscript)"
+  ]
+}
