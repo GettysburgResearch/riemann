@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-14",
+  "repository": "GettysburgResearch/riemann",
+  "verified_main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "verified_prior_research_pr": 842,
+  "verified_prior_research_head": "0ef51f00350808f50b5d1eb0bb1461e6b34548aa",
+  "comparison_pr": 731,
+  "comparison_head": "6d440eb6c82d989c046e87e13f9bdabf087f920f",
+  "pressure_source": {
+    "external_repository": "ainta/zeta-simple-zeros",
+    "external_commit": "040c5e899e658aed7b56a2a87f501798fe10761d",
+    "external_path": "paper/riemann.tex",
+    "review_source": "reviews/A/supplement/REPORT.md, Sections S01--S02",
+    "code": {
+      "dyadic_interval.py": {
+        "repository_path": "reviews/A/supplement/replay/dyadic_interval.py",
+        "commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+        "git_blob": "0b7bbbb7b3011d22399be8430710996cbdbf4258",
+        "sha256": "c0cb7d95a231099744dbd4278b3327c020812bb1b18a35147ea761e6390432e8",
+        "bytes": 3743,
+        "changed": false
+      },
+      "seven_independent_cached.py": {
+        "repository_path": "reviews/A/supplement/replay/seven_independent_cached.py",
+        "commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+        "git_blob": "a659bf129a09d6f3c339c673677f63a523e937f2",
+        "sha256": "bc4a638373414581515edd950d7a811b81dfe0ef3fa77d119f35b49bea6fe361",
+        "bytes": 6247,
+        "changed": false
+      }
+    }
+  },
+  "analytic_input": {
+    "authors": "Baluyot, Goldston, Suriajaya, Turnage-Butterbaugh",
+    "title": "An unconditional Montgomery theorem for pair correlation of zeros of the Riemann zeta function",
+    "arxiv": "2306.04799v1",
+    "journal": "Acta Arithmetica 214 (2024), 357--376",
+    "doi": "10.4064/aa230612-20-3",
+    "read": "Primary PDF theorem 1, exact ordered-pair normalization, lemma 5 including page images; whole external proof not independently rederived.",
+    "rh_assumption": false
+  },
+  "hilbert_method_antecedent": {
+    "author": "Youness Lamzouri",
+    "arxiv": "2609.02882v1",
+    "repo_import_head": "a9c7b44f908c90f63d2f49a5fde58face5921e42",
+    "read": "Primary abstract and full repository PAPER_DIGEST; external PDF fetch unsuccessful; no Lean/Comparator replay."
+  },
+  "benchmark_claim": {
+    "author": "Michael Devine",
+    "zenodo": "22066689",
+    "version": "1.0.3",
+    "claimed_simple_critical_fraction": "0.673399",
+    "read": "Primary metadata/abstract only. PDF and certificate not audited; no acceptance or record claim."
+  },
+  "own_scope": {
+    "new": "Calibrated span coefficient and fixed-322-block extraction; explicit full global composition",
+    "inherited": "Stable rank inequality, spectral one-spike bound, seven-point pressure, MT profile, Hilbert pair-correlation mechanism",
+    "world_record": false,
+    "rh_proved": false,
+    "exhaustive_novelty_review": false
+  }
+}
