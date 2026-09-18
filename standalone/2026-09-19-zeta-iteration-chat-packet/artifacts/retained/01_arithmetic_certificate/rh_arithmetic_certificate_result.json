@@ -1,0 +1,149 @@
+{
+  "status": "finite interval-arithmetic certificate; not a proof of RH",
+  "N": 20,
+  "coefficient_order": "n = 2,...,20",
+  "rational_coefficients": [
+    [
+      11589423,
+      12500000
+    ],
+    [
+      4556417,
+      5000000
+    ],
+    [
+      13043019,
+      100000000
+    ],
+    [
+      76954681,
+      100000000
+    ],
+    [
+      -55503429,
+      100000000
+    ],
+    [
+      63105287,
+      100000000
+    ],
+    [
+      1877227,
+      100000000
+    ],
+    [
+      521469,
+      20000000
+    ],
+    [
+      -7632917,
+      20000000
+    ],
+    [
+      41728427,
+      100000000
+    ],
+    [
+      -41921,
+      1000000
+    ],
+    [
+      41237717,
+      100000000
+    ],
+    [
+      -35336207,
+      100000000
+    ],
+    [
+      -30063681,
+      100000000
+    ],
+    [
+      1424341,
+      100000000
+    ],
+    [
+      30018521,
+      100000000
+    ],
+    [
+      -2134239,
+      50000000
+    ],
+    [
+      16664863,
+      50000000
+    ],
+    [
+      -1568531,
+      6250000
+    ]
+  ],
+  "P_derivative_at_1_interval": "[0.983461745101944567992268718607736019924, 0.9834617451019445679922687186077360402365]",
+  "quadratic_energy_interval": "[0.9834617423132816617113237106091749245987, 0.9834617423132816627968745915096662964619]",
+  "one_sided_upper_bound_interval": "[0.008338267883729674709759030446453585951032, 0.008338267883729675261661984163329979219914]",
+  "proved_D_less_than": "0.00834",
+  "comparison_verified": true,
+  "interval_decimal_precision": 35,
+  "mpmath_version": "1.3.0",
+  "digamma_method": "shift by 20; Bernoulli terms B2 through B12; absolute remainder <= 1/(12*(x+20)^14)",
+  "limitations": "The result relies on the proved analytic inequality and the correctness of interval arithmetic. It is not a formal proof assistant certificate and gives no all-N decay estimate.",
+  "exploratory_table": [
+    {
+      "N": 2,
+      "E_N_approx": 0.3068528194400548,
+      "U_N_approx": 0.18325646029083226,
+      "certified": false
+    },
+    {
+      "N": 3,
+      "E_N_approx": 0.09574778392775385,
+      "U_N_approx": 0.05032347871166342,
+      "certified": false
+    },
+    {
+      "N": 5,
+      "E_N_approx": 0.036319017938186926,
+      "U_N_approx": 0.01849748530632136,
+      "certified": false
+    },
+    {
+      "N": 10,
+      "E_N_approx": 0.02385255331888292,
+      "U_N_approx": 0.012070815780077987,
+      "certified": false
+    },
+    {
+      "N": 20,
+      "E_N_approx": 0.01653825210939286,
+      "U_N_approx": 0.008338267883729848,
+      "certified": false
+    },
+    {
+      "N": 40,
+      "E_N_approx": 0.01273583539133094,
+      "U_N_approx": 0.006408815689250845,
+      "certified": false
+    },
+    {
+      "N": 80,
+      "E_N_approx": 0.010998795951049467,
+      "U_N_approx": 0.0055298649596833465,
+      "certified": false
+    },
+    {
+      "N": 120,
+      "E_N_approx": 0.009737842425911247,
+      "U_N_approx": 0.0048927826389656825,
+      "certified": false
+    },
+    {
+      "N": 200,
+      "E_N_approx": 0.008930777787761635,
+      "U_N_approx": 0.004485448110769251,
+      "certified": false
+    }
+  ],
+  "elapsed_seconds": 7.630855661000055
+}

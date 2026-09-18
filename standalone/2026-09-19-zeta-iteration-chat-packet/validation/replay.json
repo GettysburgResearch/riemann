@@ -1,0 +1,120 @@
+{
+  "status": "local replay only, no independent mathematical acceptance",
+  "python": "3.13.5",
+  "platform": "Linux",
+  "records": [
+    {
+      "name": "support_normal",
+      "stage": "05_support_leakage",
+      "command": [
+        "python",
+        "verify.py",
+        "--check",
+        "results.json",
+        "--self-test"
+      ],
+      "arithmetic_class": "EXACT_RATIONAL",
+      "returncode": 0,
+      "elapsed_seconds": 1.207,
+      "stdout_sha256": "f5d0683a83d017a7200ee73e14b29b453b11785faa335dd0f99358eb8888acf9",
+      "stderr_sha256": "d56d4f5a4e104ba4c1aef288ab0dd100fb8569620049ee66433a0a656f7be855",
+      "passed": true
+    },
+    {
+      "name": "support_optimized",
+      "stage": "05_support_leakage",
+      "command": [
+        "python",
+        "-O",
+        "verify.py",
+        "--check",
+        "results.json",
+        "--self-test"
+      ],
+      "arithmetic_class": "EXACT_RATIONAL",
+      "returncode": 0,
+      "elapsed_seconds": 2.666,
+      "stdout_sha256": "f5d0683a83d017a7200ee73e14b29b453b11785faa335dd0f99358eb8888acf9",
+      "stderr_sha256": "d56d4f5a4e104ba4c1aef288ab0dd100fb8569620049ee66433a0a656f7be855",
+      "passed": true
+    },
+    {
+      "name": "rigidity_exact",
+      "stage": "04_rigidity_gcd",
+      "command": [
+        "python",
+        "check_identities.py"
+      ],
+      "arithmetic_class": "EXACT_RATIONAL",
+      "returncode": 0,
+      "elapsed_seconds": 0.719,
+      "stdout_sha256": "1dca0c912915999cbe4f3d2217dbdf0e47e59aadad63858787980020f2097a7c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "name": "mollifier_float",
+      "stage": "03_mollifier_bridge",
+      "command": [
+        "python",
+        "check_identities.py"
+      ],
+      "arithmetic_class": "FLOATING_RECONNAISSANCE",
+      "returncode": 0,
+      "elapsed_seconds": 0.698,
+      "stdout_sha256": "e72b0aa52e3773d28044a91e11fcaab784066d04e55c026f7f1aa340b1ad104b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "name": "followup_small_float",
+      "stage": "02_arithmetic_followup",
+      "command": [
+        "python",
+        "check_identities.py"
+      ],
+      "arithmetic_class": "FLOATING_RECONNAISSANCE",
+      "returncode": 0,
+      "elapsed_seconds": 2.209,
+      "stdout_sha256": "541395d5d01be8613456d166625a07c088c24eb51585ce6168392812fb0a1316",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "name": "initial_N20_interval",
+      "stage": "01_arithmetic_certificate",
+      "command": [
+        "python",
+        "rh_arithmetic_certificate.py"
+      ],
+      "arithmetic_class": "DIRECTED_INTERVAL",
+      "returncode": 0,
+      "elapsed_seconds": 3.056,
+      "stdout_sha256": "f2b5e186a1316261eb77800a67507f07060c9a77f79c78dd7ca944c2bce0ae11",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    },
+    {
+      "name": "followup_N256_interval",
+      "stage": "02_arithmetic_followup",
+      "command": [
+        "python",
+        "verify_saved_certificate.py",
+        "results/certificate_N256.json"
+      ],
+      "arithmetic_class": "DIRECTED_INTERVAL",
+      "returncode": 0,
+      "elapsed_seconds": 4.911,
+      "stdout_sha256": "469e1e0f22764c2562620e4da4d43507ec81663be0fab6dd693a53d4face1fea",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true
+    }
+  ],
+  "not_rerun": [
+    "N512 and N1024 interval certificates",
+    "N2048 floating exploration",
+    "full repository validator",
+    "Lean",
+    "remote CI"
+  ]
+}
