@@ -101,9 +101,10 @@ def test_zeros_are_approximate_and_gaps_use_original_data():
 def test_serializable_identified_scoped_result(module):
     payload={'module':module,'grid':16,'samples':32,'limit':30,'kernel_n':8,'zero_count':2}
     r=compute(payload);encoded=json.dumps({k:v for k,v in r.items() if k!='result_id'},sort_keys=True,separators=(',',':'),allow_nan=False).encode()
-    assert hashlib.sha256(encoded).hexdigest()==r['result_id']
+    from identity import result_id
+    assert result_id(r)==r['result_id']
     assert compute(payload)['result_id']==r['result_id']
-    assert r['schema_version']==1
+    assert r['schema_version']==2
     assert 'certified' in r['evidence'] or 'pending' in r['evidence']
     assert r['warnings']
 

@@ -1,59 +1,61 @@
-# v0.1 architecture and extension contracts
+# Architecture and extension contracts — v0.4 preview
 
-## Deliberate simplification from the programme
-
-The programme suggested React/TypeScript as a long-term workbench option. v0.1 uses native browser ES modules plus Python. This is a deliberate delivery tradeoff: there is no npm install/build/CDN path to get a first useful instrument. There is still a real separation between numerical providers, transport, rendering, and experiment state. A later UI framework must preserve those contracts and produce a user-visible improvement, not become a prerequisite for research.
+The browser remains native ES modules and Canvas; the server remains one loopback Python service. NumPy/SciPy, SQLite and modular providers add capability without an npm/build/service stack. This is still an experimental desktop-oriented instrument, not a hosted multi-user platform.
 
 ```
-Spec (validated request)
-  -> registry in engine.PROVIDERS
-  -> pure computation in its own spawned process
-  -> typed-by-schema JSON artifact + engine source hash + result hash
-  -> app.js experiment state
-  -> charts.js numerical display + separate event/inspector views
-  -> save/export/replay and window.observatory.scene()
+Provider-specific validated request
+  -> spawned, bounded numerical worker
+  -> complete finite result + source/dependency identities
+  -> linked views / selection / comparison / point refinements
+  -> immutable result objects + investigation manifest + SQLite index
+
+Imported sampled series
+  -> strict decimal coordinates + declared provenance/coverage
+  -> SQLite samples + multilevel summaries + independent gaps/events
+  -> viewport query -> bounded display + exact sample inspection
 ```
 
-`run.py` provides loopback startup and an offline numerical CLI. `server.py` serves static assets and API endpoints from one origin. It starts at most two numerical processes, tracks deadlines independently of the polling browser, terminates cancelled/over-budget work, and keeps at most eight terminal jobs for at most 15 minutes. These are ephemeral transport records, not a persistent experiment store. Active jobs are cancelled when the server shuts down.
+## Numerical providers
 
-FastAPI endpoints that access Jobs run on the same event loop; they must not be casually changed to threaded sync endpoints without adding a synchronization design. Numerical work stays outside that loop. Completed artifacts are read over multiprocessing pipes. The bounds on individual requests constrain output size; this is a small local worker system, not a distributed queue.
+`engine.py` retains the original six providers and dispatches the new providers in `providers/`. New requests use a Pydantic discriminated union in `providers/contracts.py`. Each has separate bounds; unknown parameters are rejected. The old six retain the original flat `Spec` to preserve request compatibility. Migrating those remaining models is a future cleanup, not something this release claims to have completed.
 
-## Core contracts
+`cancellation.py` owns the complete two-source finite matrices, decomposition, eigensystem and training-only sweep selection. `explicit.py` owns the one Gaussian formula; its mathematical definition is in EXPLICIT_FORMULA.md. `explorations.py` owns quadratic characters, named sequence constructions and bounded point refinement.
 
-### Request
+The provider is a pure computation of its validated request. Neither an uploaded artifact nor a browser expression can execute arbitrary Python. Provider extensions require trusted source changes, review and tests. Add source files under `providers/` so `source_identity()` includes them automatically. Engine, identity and numerical provider hashes plus dependency versions travel with every new result.
 
-`Spec` rejects unknown fields, nonfinite numeric inputs and out-of-capability bounds. Its module selects one provider. It is currently a single flat model to keep initial extension simple; discriminated per-provider schemas are a v0.2 cleanup. The UI never sends expressions for evaluation.
+The output contract remains JSON with `series`, optional `grid`, independent `events`, definition, metrics, warnings and provider-specific structures. Renderer-facing imported shapes are bounded and checked, but not every output field has a generated Pydantic model. Full typed result contracts remain an integration task.
 
-### Result
+## Job transport and local boundary
 
-Every result carries `schema_version`, `engine_version`, `engine_source_sha256`, full normalized `request`, `provider`, `precision`, `evidence`, definitions/warnings, data, and a `result_id` SHA256 over canonical JSON excluding the result_id itself. A result is a numerical artifact, not an accepted mathematical claim. Actual dependencies must remain reflected in the version/provenance if extended.
+`server.py` keeps two spawned numerical workers with 60-second deadlines, explicit cancellation and a small ephemeral terminal-job cache. Jobs are reaped even if the browser stops polling. They are not the durable artifact database. Active jobs stop on server shutdown; completed data become durable only when explicitly saved.
 
-`series`: retained display vertices plus per-bucket sample counts, extrema, positions and sums. Null samples remain breaks. `grid`: either sampled complex values (including phase and magnitude) or a finite signed interaction matrix. `events`: a separately stored list with kind/status. `metrics`: exact strings/integers where appropriate, otherwise explicitly approximate values. `sources`: source-pinned imported material when used.
+Numerical worker requests are limited to 16 KiB. Investigation JSON is limited to 16 MiB; sampled-series imports to 24 MiB and 250,000 samples. A write lock serializes storage operations; parsing/indexing/hash work runs off the async event loop. This does not implement CPU fairness, user accounts, disk quotas or distributed scheduling. Trusted local imports can consume disk; keep an explicit backup/retention policy.
 
-### Browser state and replay
+The service binds `127.0.0.1`. Host and same-origin/custom-header checks remain. Scripts/assets use the same origin; no CDN or arbitrary script upload is introduced. Do not treat these guards as public-server authentication. No shared/paid deployment is part of this PR.
 
-Draft controls and computed requests are separate. An outstanding job uses a captured request. Generation IDs prevent cancelled or superseded responses from relabeling the scene. Plot viewports and selection belong to that displayed result; scene(), PNG stamps and DOM identity refer to its hash.
+## Browser modules and linked investigations
 
-A portable export includes the numerical artifact, request, notes, supported viewports and selection. Import does not trust the numerical artifact: it revalidates/recomputes the request, checks the resulting identity, and restores supported view state from bounded values. It is not offline artifact-only rendering. Local notebook storage keeps request-level records only (12 most recent). Pinned baseline comparison is transient in v0.1.
+`charts.js` supplies Curve/Field rendering, keyboard selection and viewport controls. `app.js` owns submitted requests, dirty controls, jobs, saved state, comparisons and refinements. `labs.js` supplies the new mathematical desks and named selection semantics. `datasets.js` owns stored-series queries and their exact-coordinate inspector.
 
-### Display preservation
+A cancellation selection identifies an actual row/cell or eigenmode. Its term table uses original complete finite arrays, not display-decimated values. An explicit-formula selection proposes a log-center; recomputation at that center generates a new term ledger. Sweep drill-down creates a new cancellation request; it does not repurpose the frozen winner's holdout claim.
 
-The reducer scans all finite input samples. Each bucket retains first, last, minimum and maximum vertices, their coordinates, count, signed sum and absolute sum. Buckets stop at missing-data boundaries. None of that establishes a continuous extremum, a zero census, or a bound on unsampled values. Separate approximate event producers declare their limitations.
+A pinned numerical artifact is retained alongside the current one. The generic comparison view matches the first common observable and only identical retained x coordinates. It does not invent interpolation, restore an unavailable continuum, or implement arbitrary cross-workspace linking. Source A and control B within the cancellation desk have complete matrices and share a fixed color scale.
 
-A million-point reducer test demonstrates spike retention and finite aggregation only. It is not a multilevel tile store, a proof of asymptotic scalability, or a browser performance result. Adaptive complex tiles and certified contour rules are intentionally not simulated here.
+Higher-precision point results are independent identified artifacts attached to a parent. Refinement preserves the parent view/selection. The default grid-to-point action refines the selected binary64 sample coordinate, represented as a decimal string; it cannot recover more precise coordinates than the original grid stored. The standalone point desk accepts the user's exact decimal strings directly.
 
-## Adding a provider with Codex
+Generation identifiers prevent cancelled or superseded jobs from replacing newer data. Portable bundles preserve the current result, optional baseline, up to 16 refinements, notes, supported viewports and selection. Import offers **inspect** (validate hashes, preserve stored values) and **recompute** (run requests, compare new identities). Changing a producer/library may change identities even when mathematical values agree.
 
-For an additive real-curve provider:
+`window.observatory.scene()` exposes the displayed request rather than edited controls. `capture()` synchronously redraws and packages the canvases with that scene; it is not a screenshot of surrounding browser chrome. There is no independent global scene-revision/MCP protocol yet. Images from the stored-data desk are interpreted through its dataset identity, not a zeta result identity.
 
-1. Extend the module Literal and add only bounded, named parameters to Spec. Register a pure `provider(q, ctx)` function in PROVIDERS.
-2. Return series/grid/events under the existing representation, plus a formula, warnings, metrics, and source details. Do not call a remote service without an explicit adapter/caching/provenance design.
-3. Use exact integer/decimal representations when required. Use finite() to mask unsupported floating display values. Do not turn a ball midpoint into a certified scalar.
-4. Add a module preset and declared controls in app.js. Reuse Curve or Field. Add cross-panel linking only for an explicitly identified common coordinate.
-5. Add known-value tests and at least one refusal/adversarial case. Add a replay example. Update README capabilities and limits.
+## Extension recipe
 
-For a different kind of observable, design its schema first; do not wedge an eigenvector, zero census, or imported certificate into an unrelated float curve.
+1. Write the mathematical object, domains, measure/transform conventions and finite/unknown boundaries first.
+2. Add one bounded model to `contracts.py` and a pure provider returning explicit data. Register in `engine.compute` and the model union. Do not weaken existing bounds.
+3. Add a named preset/control declaration and view in `labs.js`, or a small separate view module. Reuse existing renderers where the coordinate relationship is valid.
+4. Add known-value/independent checks, negative/adversarial cases, replay tests and an example JSON. Update imported-result shape checks if the view consumes new arrays.
+5. Exercise the app in a native browser when available. A test bridge is useful but not equivalent to actual origin, CSP, downloads or browser storage acceptance.
+6. Record source SHA, commands, exact tests and omissions. Review finite experiments as finite experiments; do not alter the repository's mathematical canon.
 
-## Boundaries / remaining engineering
+## Deliberate gaps
 
-No directed rounding, arbitrary user plugins, durable artifact store, distributed compute, adaptive tile cache, authentication, shared accounts, concurrent-user fairness, accessible table equivalent of every plotted vertex, or production deployment is claimed. The charts offer keyboard interactions and textual inspectors but have not undergone a full accessibility audit. Native-origin browser, clean package installation, Windows/macOS, and remote CI validation remain explicit acceptance tasks.
+Native-platform and clean-install acceptance; independent review of the new mathematical implementation; FLINT package execution; rigorous tails/census/region refinement; full result schemas; arbitrary operator adapters; dockable multi-workspace views; comprehensive accessibility; sparse/streaming/billion-point stores; MCP; public hosting/authentication; disk quotas/migrations/garbage collection. See ROADMAP for a prioritized continuation.

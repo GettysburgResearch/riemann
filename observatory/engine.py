@@ -10,7 +10,7 @@ from typing import Literal
 import mpmath
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-VERSION = "0.1.0"
+VERSION = "0.4.0-preview"
 
 class Spec(BaseModel):
     model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
@@ -299,15 +299,54 @@ def height(q, ctx):
 
 PROVIDERS={"geometry":geometry,"primes":primes_desk,"euler":euler,"mobius":mobius,"zeros":zeros,"height":height}
 
+def parse_spec(payload):
+    from providers.contracts import ADAPTER, NEW_MODULES
+    if isinstance(payload, dict) and payload.get("module") in NEW_MODULES:
+        return ADAPTER.validate_python(payload)
+    return Spec.model_validate(payload)
+
+
+def source_identity():
+    """Bind every numerical producer, not just the dispatcher that imports it."""
+    root = Path(__file__).resolve().parent
+    paths = [root / "engine.py", root / "identity.py", *sorted((root / "providers").glob("*.py"))]
+    return {str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
+
+
 def compute(payload):
-    q=Spec.model_validate(payload)
-    ctx=mpmath.mp.clone(); ctx.dps=q.dps
+    q=parse_spec(payload)
+    ctx=mpmath.mp.clone(); ctx.dps=getattr(q, "dps", 30)
     ctx._fp=mpmath.fp  # mpmath 1.3 zetazero requires its read-only fast context.
-    data=PROVIDERS[q.module](q,ctx)
-    data.update(schema_version=1,engine_version=VERSION,engine_source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),request=q.model_dump(),
-                evidence="imported claim; primitive replay pending" if q.module=="height" else "numerical scout; not certified",
+    from providers.cancellation import cancellation, sweep
+    from providers.explicit import explicit
+    from providers.explorations import refine, family, hierarchy
+    providers = {**PROVIDERS, "cancellation": cancellation, "sweep": sweep,
+                 "explicit": explicit, "refine": refine, "family": family, "hierarchy": hierarchy}
+    data=providers[q.module](q,ctx)
+    data.update(schema_version=2,engine_version=VERSION,engine_source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),request=q.model_dump(),
+                evidence=data.get("evidence", "imported claim; primitive replay pending" if q.module=="height" else "numerical scout; not certified"),
                 provider=f"mpmath {mpmath.__version__}; Python integer sieve; float display",
-                precision={"requested_dps":q.dps,"working_note":"dps applies to mpmath evaluations. Coordinates/grids and displayed curves are binary64; prime main terms and kernels use binary64."})
-    encoded=json.dumps(data,sort_keys=True,separators=(",",":"),allow_nan=False).encode()
-    data["result_id"]=hashlib.sha256(encoded).hexdigest()
+                precision={"requested_dps":getattr(q, "dps", 30),"working_note":"dps applies to mpmath evaluations. Coordinates/grids and displayed curves are binary64; prime main terms and kernels use binary64."})
+    import platform
+    import numpy, scipy, pydantic
+    data["producer_sources"] = source_identity()
+    data["dependencies"] = {"python": platform.python_version(), "mpmath": mpmath.__version__,
+                            "numpy": numpy.__version__, "scipy": scipy.__version__, "pydantic": pydantic.__version__}
+    data["provider"] = "Bounded Python providers; mpmath, NumPy/SciPy; exact finite integer sieve; float display"
+    if q.module in {'cancellation', 'sweep'}:
+        data['precision'] = {'requested_dps': None, 'working_note': 'Exact finite integer coefficients; weights, kernels, energies and eigensystems are binary64. No directed rounding.'}
+    elif q.module == 'hierarchy':
+        data['precision'] = {'requested_dps': None, 'working_note': 'Exact finite integer membership and counts; reciprocal/fractional sums and plotted coordinates are binary64.'}
+    elif q.module == 'explicit':
+        data['precision']['working_note'] = 'Working digits apply only to numerical zero ordinates. Fourier transforms, digamma quadrature, plotted terms and residuals are binary64; all error/tail bounds are unknown.'
+    elif q.module == 'refine':
+        data['precision']['working_note'] = 'Decimal-string input and high-precision textual output. The ordinary precision-change check is not an error bound.'
+        if q.backend == 'flint':
+            import flint
+            data['dependencies']['python-flint'] = flint.__version__
+            data['provider'] = 'Optional FLINT/Arb zeta point enclosure provider'
+            data['precision']['working_note'] = 'Decimal input rectangles and rounded textual output balls; serialization containment checked. Not a region or zero certificate.'
+    from identity import ALGORITHM, result_id
+    data["hash_algorithm"] = ALGORITHM
+    data["result_id"] = result_id(data)
     return data

@@ -1,48 +1,62 @@
-# v0.1 validation record
+# Validation — v0.4 research preview
 
-Status: software research preview. No mathematical theorem, analytic certification, primitive SARG26 replay, or RH acceptance is claimed.
+**Scope:** isolated software extension of v0.1 `f7e8518275203bfb796b82f91d1d652b5c9257a8`, confined to `observatory/`. No mathematical-canon change, independent proof review, remote CI success, public deployment, full-repository validator or Lean build is claimed.
 
-## Baseline / source boundary
+## Executed checks
 
-Additive directory against `main@f99d9e3908dde4865377c75d9ca051c1f545bf4f` (root tree `8bddd12122e8a772683c9ed0b37dbcb945036893`). The programme issue, root AGENTS and README, repository metadata/root inventory, and #891 source/status were inspected. This was not a census or numerical audit of the other research branches. A direct Git clone failed because GitHub DNS/network access was unavailable in the execution container; the connected GitHub API is used for publication.
+| Check | Actual result |
+|---|---|
+| Original extracted v0.1 subtree | Matched published Git subtree `4e3345da0d8518eb39e0b100fca19b065d18695b` before changes |
+| Baseline tests before implementation | Original 51 tests passed |
+| Final numerical/API/storage suite | **108 passed, 1 skipped**; observed final run 13.81 s |
+| Optional FLINT | Not installed; native point-enclosure test explicitly skipped. No enclosure execution is claimed |
+| JavaScript syntax | All four modules passed `node --check` |
+| CLI | Linked-cancellation and Gaussian-explicit examples computed; exact-coordinate sample imported through `--import-series` |
+| Actual service restart | A saved two-result investigation was fetched, the server terminated/restarted against the same data directory, and the fetched bundle remained equal |
+| Chromium UI | All 12 numerical desks plus stored-data desk exercised in **bridge mode**, with no page errors |
+| Capture/replay | Both result identities, full artifacts, selection and supported viewports preserved in tested cancellation export/inspect/reopen/recompute workflow; scene-plus-canvas image capture exercised |
+| Refinement | Complex-grid sample refinement left the parent result intact and attached a separate higher-precision artifact |
+| Stored data | Browser demo ingestion, indexed zoom and exact-coordinate/event inspection; independent 100,000-sample store benchmark below |
+| Mobile layout | 390×844 Chromium viewport, no document horizontal overflow in the tested cancellation view; not a full mobile/accessibility audit |
 
-The implementation is developed/tested as an isolated additive directory. No full repository validator, Lean build, other research producer, remote CI, clean package-index installation, or actual public deployment is represented as run.
+The baseline hash tests were updated for the explicitly versioned schema-2 identity, and a separate test verifies that legacy schema-1 hashes are **not** silently repaired. Browser-number normalization is tested through an actual Node JSON parse/stringify round-trip. Tests use the real spawned numerical workers for each new module, not only mocked API responses.
 
-## Executed environment
+The suite covers complete block/cross identities, source controls, split invariance of full energy, term-by-term differences, eigensystem reconstruction, frozen training selection independent of holdout location, independent Fourier/digamma integration checks, deliberate explicit-formula undertruncation, literal zero bands, character multiplicativity/induction, sequence membership, exact point input, request bounds, artifact corruption, duplicate JSON, restart-safe storage, gaps/events/extrema, indexed boundary queries and Host/origin/job guards.
 
-Linux container; Python 3.13.5; mpmath 1.3.0; FastAPI 0.128.2; uvicorn 0.48.0; pydantic 2.13.4; httpx 0.28.1; Node 22.16.0 for JS syntax checks. Numerical/API tests use real spawned worker processes. Package versions were already installed in this environment; attempting package-registry access failed DNS, so a clean dependency installation remains a platform-acceptance task.
+## Browser limitation: bridge is not native acceptance
 
-## Numerical and API tests: 51 passed
+A real Chromium attempt to navigate `http://127.0.0.1:8765` failed with **`net::ERR_BLOCKED_BY_ADMINISTRATOR`**. Browser policy was not changed or bypassed. The explicit test bridge loads the application modules in isolated IIFE scopes, directs fetches through Python HTTP to the actual running server, and substitutes Map-backed localStorage. It exercises real DOM/canvas events and actual numerical/storage endpoints, but not native origin/module resolution, CSP enforcement, download durability or browser storage persistence.
 
-`python -m pytest observatory/tests -q`
+The supplied smoke script supports both modes. Only native mode runs its actual download/storage acceptance section. Successful bridge canvas-to-PNG generation is not represented as a successful operating-system file download. Native-origin startup, clean installation, Windows/macOS/Safari/Firefox and comprehensive accessibility remain open.
 
-The suite covers bounded capability rejection, invalid/nonfinite input and unknown fields, exact huge-height decimal addition, Möbius divisor identities, sieve counts, zeta/eta/xi and two Dirichlet-L known values, xi removable values, Li/R comparison against mpmath calls at seven scales, spike/alternation/missing-region reduction, reduction-independent event lists, complete finite cross-term accounting, finite Euler products/omission, underflow/nonfinite masks, initial approximate zero values/gaps, deterministic canonical result hashing for all six providers, and imported pending-state retention.
+```sh
+python -m pytest observatory/tests -q
+node --check observatory/web/app.js
+node --check observatory/web/charts.js
+node --check observatory/web/labs.js
+node --check observatory/web/datasets.js
+python observatory/scripts/browser_smoke.py --browser /usr/bin/chromium --bridge
+```
 
-HTTP tests cover static assets/schema/security headers, Host/origin/client-header checks, 16 KiB request limit, validation refusals, a real process job, concurrency refusal, actual cancellation/termination, deadline termination, unknown jobs, and exact coordinate API output. These tests do not authenticate arbitrary mpmath computations or substitute for independent mathematical review.
+Run without `--bridge` on an unrestricted local browser. Dependencies were available in the implementation environment; no clean package-index install is claimed. Optional FLINT must be tested in an environment where it is actually installed.
 
-Both browser ES modules were syntax checked using `node --check`.
+## Stored-data benchmark
 
-## Browser exercise: six workspaces, with a declared harness substitution
+Command: `python observatory/scripts/benchmark_store.py --samples 100000`.
 
-A native Chromium navigation to localhost was blocked by the container's managed browser policy (`ERR_BLOCKED_BY_ADMINISTRATOR`). The browser policy was not changed. The successful run used the explicit `--bridge` mode in `scripts/browser_smoke.py`:
+Environment: Python 3.13.5, Linux 6.18.44 x86_64/glibc 2.41. One deterministic alternating synthetic source with one injected spike, a three-sample missing run and a separately indexed event. Observed:
 
-- Actual HTML/CSS and application JavaScript executed in headless Chromium with real canvas/DOM interactions.
-- A Python HTTP bridge sent the browser's API operations to the actual live loopback FastAPI server and real spawned numerical workers.
-- Source ES modules were combined in memory by removing their import/export wrappers for this restricted harness.
-- Browser localStorage was replaced with an in-memory Map because the harness used an about:blank document.
+- Import/index construction: **1.682 s**; SQLite file **10,371,072 bytes**.
+- Full-range stored query: **0.0134 s**, **1,176 display vertices**, **0 original boundary rows** read.
+- 801-sample local viewport: **0.00157 s**, **33 boundary rows** read.
+- Spike, gap, event and finite/missing counts retained.
 
-The run exercised all six workspaces, clicked a sampled field and a curve, zoomed, saved a request/notebook record, exported an in-memory experiment packet, replayed it, and verified equal result hash, restored selection and viewport. It tested a changed-sigma pinned baseline, draft-control separation, actual cancellation, a later successful computation, structured scene/DOM result-ID agreement, exact-height endpoint text, desktop screenshots and a 390-pixel mobile layout with no horizontal overflow. No JavaScript page errors were reported.
+These are one-machine stored-query measurements, **not** browser frame rates, certified floating-sum bounds, a streaming workload or a billion-point claim. Imports remain capped at 250,000 samples. Many missing runs/events can require more vertices than the nominal target. The source and benchmark assertions are included; timing will vary.
 
-**Not covered by that pass:** native-origin ES-module loading and browser fetch/CSP behavior, actual browser localStorage durability, OS download dialogs/PNG and JSON file downloads, Windows/macOS/Safari, mobile touch behavior, full accessibility, or remote CI. The normal smoke mode is supplied for Codex to close that acceptance gap on an unrestricted local browser. Static/HTTP behavior was separately exercised through the API tests.
+## Numerical and trust boundaries
 
-## Reducer stress test
+The Gaussian formula is a finite numerical implementation of a specified classical identity. Its tails/rounding/quadrature bounds are unknown, even where finite sides agree closely. Cancellation energies are full finite binary64 values for literal or explicitly synthetic coefficients. The generic Gaussian PSD kernel is not a repository-specific RH witness. Initial zeros, central values, sign candidates and selected eigenmodes are not independently certified censuses/ranks/witnesses.
 
-`python observatory/scripts/benchmark.py`
+Storage verifies content consistency and the tested accessed-record checksums; it does not authenticate an imported author's claims or prove an untrusted database has no missing rows. Exact anchors remain decimal strings. New provider source/dependency identities travel with results. The remotely published subtree is to be compared with the locally tested Git subtree before publication is reported; the PR records the actual commit/tree receipt.
 
-One observed run reduced 1,000,000 alternating samples with one exceptional spike to 3,000 display vertices and 1,000 summaries. The spike, counts, and signed sum were retained. Observed runtime was approximately 8.31 seconds with tracemalloc enabled; additional traced allocations were about 0.93 MB. Source arrays were allocated before tracing. These are measurements of that Python summary workload on this container, not end-to-end UI performance, total-memory usage, a disk-tile benchmark, or a scalability guarantee.
-
-## Known fixes caught during this pass
-
-The tests exposed mpmath 1.3's cloned-context zetazero requirement for its fast context; the worker now supplies it. Job table access stays on the event loop, avoiding a sync-endpoint/thread race. A post-await generation check prevents stale job responses from replacing a cancelled scene. Replays restore both the active inspection and previously selected field cells/plot ranges. Native float underflow is masked instead of silently turning a tiny nonzero value into a plotted zero.
-
-Read the final PR receipt for the published commit and source verification. External review, clean installation, and native-origin browser acceptance remain separate from these author-run tests.
+The original v0.1 validation record is preserved at [docs/VALIDATION_V01.md](docs/VALIDATION_V01.md). It is historical, not the current feature or test inventory.
