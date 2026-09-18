@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "name": "Signed finite-source cancellation",
+  "notes": "The Mertens curve and interaction matrix have distinct, explicit finite prefixes. Keep both block energies and the cross term.",
+  "request": {"module": "mobius", "limit": 20000, "kernel_n": 64, "width": 0.8, "buckets": 360}
+}

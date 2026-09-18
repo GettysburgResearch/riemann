@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "name": "A closer look at the first zero",
+  "notes": "Compare sampled geometry, increase resolution, and inspect a candidate without promoting it to a certificate.",
+  "request": {"module": "geometry", "function": "zeta", "re_min": 0, "re_max": 1, "t_min": 13, "t_max": 15, "sigma": 0.5, "grid": 48, "samples": 512, "dps": 40}
+}
