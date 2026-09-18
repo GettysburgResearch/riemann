@@ -1,0 +1,76 @@
+{
+  "counts": {
+    "appended_finite_tails": 72,
+    "biorthogonality": 1953,
+    "coefficient_recovery": 704,
+    "dual_optimum": 18,
+    "dual_projection_vectors": 18,
+    "dual_sources_and_ramps": 62,
+    "head_gram_entries": 2314,
+    "integer_gram_entries": 961,
+    "mobius_recurrence": 119,
+    "prime_power_obstruction_controls": 30,
+    "ramanujan_differences": 1160,
+    "ramanujan_dual_transport": 1457,
+    "source_head_decompositions": 72
+  },
+  "dual_projection_snapshots": [
+    {
+      "N": 2,
+      "dual_distance_squared": "13/14",
+      "ramp_norm_squared": "7/6",
+      "ramp_source": "5/6"
+    },
+    {
+      "N": 6,
+      "dual_distance_squared": "8867/12340",
+      "ramp_norm_squared": "617/140",
+      "ramp_source": "223/140"
+    },
+    {
+      "N": 12,
+      "dual_distance_squared": "55023970333/98092403640",
+      "ramp_norm_squared": "3538687/360360",
+      "ramp_source": "785633/360360"
+    },
+    {
+      "N": 18,
+      "dual_distance_squared": "2314823924364859/4897045043370480",
+      "ramp_norm_squared": "1199057081/77597520",
+      "ramp_source": "197698279/77597520"
+    },
+    {
+      "N": 24,
+      "dual_distance_squared": "27957386425926920257/67477685883095023536",
+      "ramp_norm_squared": "189040347533/8923714800",
+      "ramp_source": "25128807667/8923714800"
+    }
+  ],
+  "multi_witness": {
+    "error_lower_bound": "3562158/256250081",
+    "indices": [
+      6,
+      10,
+      14,
+      15
+    ]
+  },
+  "rh_proved": false,
+  "schema": 1,
+  "scope": "Finite identities only; universal claims use the written proofs.",
+  "single_witness": {
+    "error_lower_bound": "1/92",
+    "index": 6,
+    "norm_squared": 92,
+    "source": 1,
+    "vector": [
+      4,
+      0,
+      -12,
+      0,
+      -30,
+      42
+    ]
+  },
+  "status": "EXACT_RATIONAL_FINITE_REGRESSION"
+}

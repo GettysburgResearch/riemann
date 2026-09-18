@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "retained_file_count": 30,
+  "retained_content_bytes": 165965,
+  "source_zip_containers": [
+    {
+      "name": "rh_arithmetic_followup.zip",
+      "bytes": 35447,
+      "sha256": "8aaa1b168d1b516c7d6134163571bef54ef64f3cdd0d95573a539374dd4bdac3",
+      "retention": "all member files retained unmodified; original ZIP container bytes not duplicated"
+    },
+    {
+      "name": "rh_mollifier_bridge.zip",
+      "bytes": 6792,
+      "sha256": "227c0e0a5e3dc2f50200f9818cbc26a442decdf5ab3de93e0e79ccdd29fc00f2",
+      "retention": "all member files retained unmodified; original ZIP container bytes not duplicated"
+    },
+    {
+      "name": "rh_rigidity_gcd.zip",
+      "bytes": 9943,
+      "sha256": "11e19c11c94b82eb4ab64e58c2e641a0c79307ee38fa33f2ff486813b131f543",
+      "retention": "all member files retained unmodified; original ZIP container bytes not duplicated"
+    },
+    {
+      "name": "rh_support_leakage.zip",
+      "bytes": 19188,
+      "sha256": "ece77c45f89aa480a9fb8e69ee3b845b893a8d6b483029f516f6f38fc9f0d366",
+      "retention": "all member files retained unmodified; original ZIP container bytes not duplicated"
+    }
+  ],
+  "standalone_duplicate_checks": [
+    {
+      "standalone_attachment": "rh_followup/RESEARCH_NOTE.md",
+      "archive_member": "02_arithmetic_followup/RESEARCH_NOTE.md",
+      "exact_byte_match": true,
+      "sha256": "fd3ea9c13bc5b9796d2c46f9cf9b02b6a3f5d55916a1ded4382dbd588208267a"
+    },
+    {
+      "standalone_attachment": "rh_followup/results/certificate_N1024.json",
+      "archive_member": "02_arithmetic_followup/results/certificate_N1024.json",
+      "exact_byte_match": true,
+      "sha256": "9d2dacff31a3ca4c758d491c9b4171993c17c6a8061a46ddf605b3372bfa7003"
+    },
+    {
+      "standalone_attachment": "rh_mollifier_bridge/RESEARCH_NOTE.md",
+      "archive_member": "03_mollifier_bridge/RESEARCH_NOTE.md",
+      "exact_byte_match": true,
+      "sha256": "ace0a7cc0b3e1a20572abd0d20466597c13fa6ac5c0a469df32f1dde2ae74c65"
+    },
+    {
+      "standalone_attachment": "rh_rigidity_gcd/RESEARCH_NOTE.md",
+      "archive_member": "04_rigidity_gcd/RESEARCH_NOTE.md",
+      "exact_byte_match": true,
+      "sha256": "8bf1ab73a355bc82034270a3810816753750e5193b776815570b1b998fb459d4"
+    },
+    {
+      "standalone_attachment": "rh_support_leakage/PROOF.md",
+      "archive_member": "05_support_leakage/PROOF.md",
+      "exact_byte_match": true,
+      "sha256": "4847f92d345a65e60306cdb1588d225dea97ea732480a21e38c10583d675ea0d"
+    }
+  ],
+  "files": [
+    {
+      "path": "01_arithmetic_certificate/rh_arithmetic_certificate.py",
+      "bytes": 8470,
+      "sha256": "8411070ddb0142a76c6a4f10b71fb76bb241c9500a2ad0ffdbba9f204eeebb34"
+    },
+    {
+      "path": "01_arithmetic_certificate/rh_arithmetic_certificate_result.json",
+      "bytes": 3107,
+      "sha256": "4dfc88c31e8e55f18a481e11e3f60aa265eb6925495b10ec81823993471755c6"
+    },
+    {
+      "path": "02_arithmetic_followup/README.md",
+      "bytes": 1603,
+      "sha256": "bd7ce0a27eaeb64024f595cf58037cf71644d5715fc5bd151a7230e4ecde81c2"
+    },
+    {
+      "path": "02_arithmetic_followup/RESEARCH_NOTE.md",
+      "bytes": 13299,
+      "sha256": "fd3ea9c13bc5b9796d2c46f9cf9b02b6a3f5d55916a1ded4382dbd588208267a"
+    },
+    {
+      "path": "02_arithmetic_followup/SHA256SUMS.json",
+      "bytes": 1167,
+      "sha256": "0f156c422567f1055904726d7a70ad4d24e6fc5acb455ce02d643780f84b8abb"
+    },
+    {
+      "path": "02_arithmetic_followup/check_identities.py",
+      "bytes": 1314,
+      "sha256": "dcbc923bb10ea5c41da87bd68dfefdea8b3be54ee03f22098c9a286c17f90a54"
+    },
+    {
+      "path": "02_arithmetic_followup/refine_certificates.py",
+      "bytes": 612,
+      "sha256": "fdc1b024ca080c1f0c3debe139e22f9061770449bf1c357ba8d4099df4ea35e6"
+    },
+    {
+      "path": "02_arithmetic_followup/results/certificate_N1024.json",
+      "bytes": 23087,
+      "sha256": "9d2dacff31a3ca4c758d491c9b4171993c17c6a8061a46ddf605b3372bfa7003"
+    },
+    {
+      "path": "02_arithmetic_followup/results/certificate_N256.json",
+      "bytes": 6866,
+      "sha256": "32d2f7c0f30aa152e81cbe87f5fbde44a60f448c1baf4307b3f81f1bd5f2493c"
+    },
+    {
+      "path": "02_arithmetic_followup/results/certificate_N512.json",
+      "bytes": 12269,
+      "sha256": "5e8ea90d4bc4645b32d13458c2e79977a343c7aff2e72c6d63e28c3b7a40b50e"
+    },
+    {
+      "path": "02_arithmetic_followup/results/environment.json",
+      "bytes": 179,
+      "sha256": "4c908ab6d1d28f64016a4ec6d524055514f60a9a1d150bb2d159e93ca85a73d9"
+    },
+    {
+      "path": "02_arithmetic_followup/results/exploration.json",
+      "bytes": 5570,
+      "sha256": "063645ae23e2abfd56f04ce7c2d1044b3feb370bd0dc1d923a36f6d63cb34c7a"
+    },
+    {
+      "path": "02_arithmetic_followup/results/identity_checks.json",
+      "bytes": 1213,
+      "sha256": "541395d5d01be8613456d166625a07c088c24eb51585ce6168392812fb0a1316"
+    },
+    {
+      "path": "02_arithmetic_followup/rh_gram_followup.py",
+      "bytes": 8306,
+      "sha256": "9816ef4972b01734dd6e151841cf932574194da8a6f6b23faf17804b5ec2e40d"
+    },
+    {
+      "path": "02_arithmetic_followup/verify_saved_certificate.py",
+      "bytes": 960,
+      "sha256": "c245621541284125e588c97312753a99445f0b1ec68be91e07bb4a8eedac0588"
+    },
+    {
+      "path": "03_mollifier_bridge/RESEARCH_NOTE.md",
+      "bytes": 11777,
+      "sha256": "ace0a7cc0b3e1a20572abd0d20466597c13fa6ac5c0a469df32f1dde2ae74c65"
+    },
+    {
+      "path": "03_mollifier_bridge/check_identities.py",
+      "bytes": 2295,
+      "sha256": "7b8a18552d24a4b7a47f5c9ffc2702fe92d43a08dd5c14518106ee3fa7d5ed31"
+    },
+    {
+      "path": "03_mollifier_bridge/checks.json",
+      "bytes": 275,
+      "sha256": "e72b0aa52e3773d28044a91e11fcaab784066d04e55c026f7f1aa340b1ad104b"
+    },
+    {
+      "path": "04_rigidity_gcd/RESEARCH_NOTE.md",
+      "bytes": 14215,
+      "sha256": "8bf1ab73a355bc82034270a3810816753750e5193b776815570b1b998fb459d4"
+    },
+    {
+      "path": "04_rigidity_gcd/SHA256SUMS.txt",
+      "bytes": 253,
+      "sha256": "ec852f533e7ec61012d85dd6da98c4074e687117ee8221416ed2c46bbb94acf1"
+    },
+    {
+      "path": "04_rigidity_gcd/check_identities.py",
+      "bytes": 5187,
+      "sha256": "7a8870ea7b7a4bf5c27267e6c19656000070581ebd3bb2e2916868a7f7bbd4f5"
+    },
+    {
+      "path": "04_rigidity_gcd/exact_checks.json",
+      "bytes": 1724,
+      "sha256": "6057385f854be396737efb99a194ccd9b8d60f585bb391d7ac3bc518fb9e128f"
+    },
+    {
+      "path": "05_support_leakage/PROOF.md",
+      "bytes": 15824,
+      "sha256": "4847f92d345a65e60306cdb1588d225dea97ea732480a21e38c10583d675ea0d"
+    },
+    {
+      "path": "05_support_leakage/PUBLICATION.json",
+      "bytes": 868,
+      "sha256": "8b8cab6d258c6defba96cccdc5e773ff28ae2a40fa1556e4eaeb8b4e8c098037"
+    },
+    {
+      "path": "05_support_leakage/README.md",
+      "bytes": 3251,
+      "sha256": "0d0a16de0b645aac8db70cc8a0f99af15e9d0e522ddc5c8909eaca8d4fa71e0c"
+    },
+    {
+      "path": "05_support_leakage/SHA256SUMS",
+      "bytes": 463,
+      "sha256": "d53fd4b542148cf6fcd00a9c759c9e88e632f86c814665c02ae281deeb4db244"
+    },
+    {
+      "path": "05_support_leakage/SOURCES.md",
+      "bytes": 4073,
+      "sha256": "4cd4518e6f0239b019bad6647f1ec4b96eaf125a0c21b6d6bb31699bf23b17a2"
+    },
+    {
+      "path": "05_support_leakage/VALIDATION.md",
+      "bytes": 2929,
+      "sha256": "e297a08c118bc821862c5f0ed31f214ef6649f5345977a8ddc7d02fa4247bfc2"
+    },
+    {
+      "path": "05_support_leakage/results.json",
+      "bytes": 1818,
+      "sha256": "f5d0683a83d017a7200ee73e14b29b453b11785faa335dd0f99358eb8888acf9"
+    },
+    {
+      "path": "05_support_leakage/verify.py",
+      "bytes": 12991,
+      "sha256": "d0869c0cc0cd881953f7217475dc2557b8f1fa8d3d2d368756dffdb74010279f"
+    }
+  ],
+  "retained_root": "artifacts/retained",
+  "distribution_archive": {
+    "archive": "artifacts/retained_sources.tar.xz",
+    "archive_bytes": 56060,
+    "archive_sha256": "e9f7b2aa6ebfd22d62d4430b6e3cc9f7f1b241384a81990deac4d6d8628b7407",
+    "note": "Separate conversation download; all members are also plain files under retained_root in the repository."
+  }
+}
