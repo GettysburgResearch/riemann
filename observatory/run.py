@@ -5,14 +5,26 @@ import json
 import sys
 
 def main():
-    parser=argparse.ArgumentParser(description="Riemann Observatory v0.1: local research desk")
+    parser=argparse.ArgumentParser(description="Riemann Observatory research preview: local research desk")
     parser.add_argument("--port",type=int,default=8765)
     parser.add_argument("--compute",type=Path,help="Run an experiment JSON (request or exported envelope), print result, then exit")
+    parser.add_argument("--import-series",type=Path,help="Import a bounded sampled series JSON into the local indexed store")
+    parser.add_argument("--data-dir",type=Path,help="Override local persistent store (default ~/.riemann-observatory)")
     args=parser.parse_args()
+    import os
+    if args.data_dir:
+        os.environ["OBSERVATORY_DATA_DIR"] = str(args.data_dir)
+    if args.import_series:
+        from series_store import SeriesStore
+        from identity import strict_loads
+        root=Path(os.environ.get("OBSERVATORY_DATA_DIR", Path.home()/".riemann-observatory"))
+        print(json.dumps(SeriesStore(root).ingest(strict_loads(args.import_series.read_bytes()))))
+        return
     if args.compute:
         from engine import compute
-        payload=json.loads(args.compute.read_text(encoding="utf-8"))
-        print(json.dumps(compute(payload.get("request",payload)),ensure_ascii=False,allow_nan=False))
+        from identity import strict_loads
+        payload=strict_loads(args.compute.read_bytes())
+        print(json.dumps(compute(payload.get("result",payload).get("request",payload)),ensure_ascii=False,allow_nan=False))
         return
     if not 1024 <= args.port <= 65535:
         parser.error("Choose a port between 1024 and 65535")

@@ -26,7 +26,7 @@ export class Curve {
   constructor(host,series,{label='Data plot',xlabel='x',ylabel='',events=[],onSelect=()=>{},selection=null,onView=()=>{}}={}) {
     Object.assign(this,setup(host,label));Object.assign(this,{host,series,xlabel,ylabel,events,onSelect,selection,onView});
     const xs=series.flatMap(s=>s.points.map(p=>p[0])).filter(Number.isFinite).concat(events.flatMap(e=>[e.x0,e.x1]));
-    let lo=xs.length?Math.min(...xs):0,hi=xs.length?Math.max(...xs):1;if(lo===hi){lo-=.5;hi+=.5;}
+    let lo=xs.length?xs.reduce((a,b)=>Math.min(a,b),Infinity):0,hi=xs.length?xs.reduce((a,b)=>Math.max(a,b),-Infinity):1;if(lo===hi){lo-=.5;hi+=.5;}
     this.full=[lo,hi];this.view=[lo,hi];
     button(this.toolbar,'−','Zoom out',()=>this.zoom(1.7));button(this.toolbar,'+','Zoom in',()=>this.zoom(.6));button(this.toolbar,'Reset','Reset plot viewport',()=>{this.view=[...this.full];this.draw();this.onView();});
     const hint=document.createElement('span');hint.textContent='Drag to zoom · click to inspect · arrows to step';this.toolbar.append(hint);
@@ -44,7 +44,7 @@ export class Curve {
   draw(){
     const [w,h]=this.fit();this.width=w;const ctx=this.context,[lo,hi]=this.view;
     const values=this.series.flatMap(s=>s.points.filter(p=>p[0]>=lo&&p[0]<=hi&&Number.isFinite(p[1])).map(p=>p[1]));
-    let ymin=values.length?Math.min(...values):0,ymax=values.length?Math.max(...values):1;
+    let ymin=values.length?values.reduce((a,b)=>Math.min(a,b),Infinity):0,ymax=values.length?values.reduce((a,b)=>Math.max(a,b),-Infinity):1;
     let margin=(ymax-ymin)*.08 || Math.max(Math.abs(ymin)*.1,1);ymin-=margin;ymax+=margin;
     const px=x=>pad.l+(x-lo)/(hi-lo)*(w-pad.l-pad.r),py=y=>h-pad.b-(y-ymin)/(ymax-ymin)*(h-pad.t-pad.b);
     ticks(ctx,w,h,[lo,hi],[ymin,ymax],this.xlabel,this.ylabel);
@@ -73,13 +73,14 @@ export class Field {
   draw(){
     const [w,h]=this.fit();this.width=w;const ctx=this.context,g=this.grid,n=g.n;
     ticks(ctx,w,h,[g.x[0],g.x.at(-1)],[g.y[0],g.y.at(-1)],g.kind==='complex'?'Re(s) = σ':'m',g.kind==='complex'?'Im(s) = t':'n');
-    const cw=(w-pad.l-pad.r)/n,ch=(h-pad.t-pad.b)/n,max=g.kind==='interaction'?Math.max(...g.values.map(Math.abs)):1;
+    const cw=(w-pad.l-pad.r)/n,ch=(h-pad.t-pad.b)/n,max=g.kind==='interaction'?(g.scale_max??Math.max(...g.values.map(Math.abs))):1;
     for(let row=0;row<n;row++)for(let col=0;col<n;col++){
       const k=row*n+col;let fill='#455164';
       if(g.kind==='complex'&&g.phase[k]!=null&&g.magnitude[k]!=null){const hue=(g.phase[k]*180/Math.PI+360)%360;const bright=20+44*(1-Math.exp(-g.magnitude[k]));fill=`hsl(${hue} 70% ${bright}%)`;}
       if(g.kind==='interaction'){const v=g.values[k],a=Math.sqrt(Math.abs(v)/(max||1));fill=`hsl(${v>=0?38:175} ${45+35*a}% ${7+65*a}%)`;}
       ctx.fillStyle=fill;ctx.fillRect(pad.l+col*cw,pad.t+(n-1-row)*ch,cw+.3,ch+.3);
     }
+    if(g.split){ctx.strokeStyle='#ffffff99';ctx.lineWidth=1;const sx=pad.l+g.split*cw,sy=pad.t+(n-g.split)*ch;ctx.beginPath();ctx.moveTo(sx,pad.t);ctx.lineTo(sx,h-pad.b);ctx.moveTo(pad.l,sy);ctx.lineTo(w-pad.r,sy);ctx.stroke();}
     if(g.kind==='complex'&&this.t>=g.y[0]&&this.t<=g.y.at(-1)){const y=h-pad.b-(this.t-g.y[0])/(g.y.at(-1)-g.y[0])*(h-pad.t-pad.b);ctx.strokeStyle='#fff9';ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(w-pad.r,y);ctx.stroke();}
     if(this.selection){const [c,r]=this.selection;ctx.strokeStyle='#fff';ctx.lineWidth=1.5;ctx.strokeRect(pad.l+c*cw,pad.t+(n-1-r)*ch,cw,ch);}
     stamp(ctx,w,h);

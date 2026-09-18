@@ -1,67 +1,44 @@
-# Riemann Observatory roadmap
+# Observatory roadmap — delivered slices and remaining gates
 
-Programme: #897. v0.1 is a concrete instrument, not completion of the original programme. Milestones below are proposed deliverables and acceptance gates, not implemented functionality or time estimates.
+This pass is **v0.4.0-preview**, not a claim that every v0.2–v0.4 acceptance criterion is complete. The original v0.1 is preserved in PR #898; the expanded software builds on its exact `f7e8518275203bfb796b82f91d1d652b5c9257a8` head. Programme #897 and issue #899 remain open.
 
-## v0.1 — runnable local research desk (this contribution)
+## Delivered now
 
-Six bounded workspaces; five analytic objects; exact-coordinate imported interval demo; honest sampled-data reduction; linked inspection and transient baseline overlay; portable requests/results and replay; agent-readable scene; killable processes; local API/CLI and setup. Read VALIDATION before interpreting “tested.” No public hosting is part of this release.
+| Programme area | Implemented and exercised | Boundary |
+|---|---|---|
+| v0.2 connected cancellation | Editable split/window/width/weights, two complete sources, all energy/cross terms, equal-scale matrices, traceable differences, exact coefficients, eigenmodes/kernel sections | Finite floating experiment; not a repo-specific infinite-operator witness |
+| v0.2 prime–zero connection | One Gaussian Weil formula, declared transform, independent finite sides, selectable zero band, complete focused prime/zero ledgers, pole/logπ/gamma terms and cutoff checks | All five analytic/numerical tail/error bounds are unknown |
+| v0.2 refinement | Higher-precision decimal point desk, grid-point refinement attached to parent; optional FLINT zeta adapter with containment serialization | FLINT unavailable here: its native test is skipped; no cell/root/census certification |
+| v0.2 persistence | Immutable numerical artifacts, SQLite investigation index, both compared results, notes/selection/views/refinements, inspect versus recompute | Local only; no full migration, quota or garbage collection |
+| v0.2 contracts | Discriminated models for six new providers; versioned browser-stable result identities; numerical source/dependency hashes | Six legacy desks retain flat Spec; not every result structure has generated typed schemas |
+| v0.3 stored data | Bounded exact-offset JSON import, persistent multilevel summaries, indexed ordinal viewports, independent gaps/events, sample inspector | 250,000-sample import cap; sample-index navigation; no billion-point/live-append/2D-tile claim |
+| v0.3 families | Real quadratic characters, primitive/induced member metadata and explicit removed Euler factors | Ten named fundamental discriminants; not a general LMFDB/character database |
+| v0.4 mechanism experiments | Magnitude, hash-sign, permutation, alternating and Liouville controls; full finite spectrum and selected Gaussian kernel sections | No accepted RH mechanism or arbitrary Pick/Loewner/Weil operator adapter |
+| v0.4 reciprocal families | Repeated prime-index selections and fractional power sequences with separate index/value cutoffs | Not the Golomb–Erdős or residue-avoidance sieve; no asymptotic claim |
+| v0.4 discovery | Bounded width × split search, all training trials retained, frozen detector before one disjoint holdout, term-level drill-down | Effect sizes only; no significance claim, autonomous campaign manager or universal anomaly detector |
+| Agent use | Stable controls, structured scene, complete JSON bundles, synchronous scene-plus-canvas capture, direct browser API | No MCP protocol, agent permissions system or independent scene revision service |
 
-## v0.2 — connected experiments and trustworthy refinement
+## Next integration slice: acceptance before more breadth
 
-**Product outcome:** move from independent experiments to a small number of mathematically specified connected investigations, with real artifact persistence and better local navigation.
+- [ ] **Native browser/platform pass.** Clean dependency install; actual same-origin modules/fetch/CSP; real JSON/PNG downloads; browser storage; Windows and macOS launch; Safari/Firefox; full keyboard/accessibility review. Bridge tests do not close these gates.
+- [ ] **Independent mathematical/code review.** Check the Gaussian formula convention, primitive/induced characters, all cancellation source/measure definitions, finite decomposition and heldout separation against the exact published commit.
+- [ ] **FLINT native acceptance.** Install the optional package, exercise exact decimal balls, poles, tiny/large values, string containment and process-local context behavior. Do not relabel a skipped test as certified refinement.
+- [ ] **Durability and schemas.** Full generated result schemas, schema migrations, disk quotas/garbage collection, interrupted-write/recovery campaigns, import fuzzing and long-running memory/race checks.
 
-### 0.2-A: one genuine prime–zero desk
+## Next scientific instrument slice
 
-Choose ONE explicitly stated smoothed explicit formula and a declared test-function basis. Put Fourier/Mellin conventions, measures, endpoint conventions, main/pole/archimedean/trivial-zero terms, finite zero selection and tail status in its schema. Implement both sides independently where feasible. Selecting a spectral band shows its contribution under that exact kernel, not a mythical one-zero/one-prime correspondence.
+- [ ] Add rigorous prime/gamma tails and outward quadrature for the Gaussian formula, then authenticated primitive zero coverage. Keep every missing budget visible until independently checked.
+- [ ] Allow choosing which observable is compared, compatible-coordinate linked brushing, preserving independent view histories, and arbitrary dockable views. Generic comparison currently uses the first matching series.
+- [ ] Load a source-pinned repo-specific finite Pick/Loewner/Gram construction with its primitive assumptions, compare retained/omitted sectors and expose the actual witness. Do not confuse the generic Gaussian PSD kernel with that source.
+- [ ] Extend beyond the implemented reciprocal families only from explicit definitions and independent controls; preserve the distinction between rank-selection, residue sieves and multiplicative generation.
 
-Acceptance: reproduce a small checked reference experiment; visibly distinguish identity terms from numerical truncation; changing cutoff/precision/smoothing changes the actual producer; a missing tail remains explicitly missing. No RH-dependent estimate can silently be used to certify the RH route under examination.
+## Next scale/discovery slice
 
-### 0.2-B: precision/refinement and comparison
+- [ ] Streaming/binary/Arrow or Zarr adapters, irregular and missing coverage, exact-height-to-offset view navigation, sparse events, incremental append, and measured large-data latency/memory budgets. Begin with one actual workload, not a billion-point assertion.
+- [ ] More arithmetic families with explicit conductor/gamma/root-number conventions and authenticated external data provenance.
+- [ ] Multi-seed holdout protocols, user-visible holdout consumption, frozen campaign specifications, persisted negative searches and a bounded hypothesis/disagreement queue. Repeated manual tuning remains exploratory.
+- [ ] Synthetic polynomial/graph/function-field counterfactuals with a property-survival ledger and independently known answers before analytic deformation animation.
 
-Add optional python-flint/Arb providers for a bounded set of point evaluations with genuine ball serialization. Separate arithmetic enclosure, function-domain assumptions and coverage. Re-evaluate selected grid cells/points rather than increasing the entire grid. Add logarithmic magnitude and phase contour modes with fixed legends and masks. Improve linked coordinate navigation and retain cross-panel viewport state. Add two-result comparison for explicitly compatible observables, with both source requests visible.
+## v0.5 remains separate
 
-Acceptance: independent known-value and pole/underflow tests; scout vs ball labels cannot be confused; a sampled image is never labeled a certified whole-cell field; replay preserves comparisons and selected refinements.
-
-### 0.2-C: durable experiments and provider contracts
-
-Split Spec into discriminated per-provider schemas, with generated/validated client controls. Introduce immutable local content-addressed artifacts and a lightweight experiment index (SQLite is sufficient). Support offline inspection of validated saved artifacts without promoting their scientific status. Persist provider versions, code hashes, observations, event selections, comparisons and checks.
-
-Acceptance: process restart does not lose saved investigations; corrupt hashes and schema mismatches are refused or visibly quarantined; prior experiments remain reproducible/migratable; a CLI/browser agent can reproduce the same experiment identity.
-
-### 0.2-D: finish platform acceptance
-
-Native-origin Playwright coverage in CI; Windows/macOS startup; network-clean install; PNG/JSON downloads and native localStorage; stale/cancel races; keyboard and screen-reader audit; no outside requests. Add a screenshot+scene pair export. Improve maintainability of app.js through components only where it advances these workflows.
-
-**Do not put in 0.2:** public arbitrary compute, an unbounded expression language, all L-function families, or a costly frontend rewrite with no mathematical/interaction payoff.
-
-## v0.3 — scalable stored data and family exploration
-
-**Product outcome:** inspect large existing datasets smoothly and explore families without confusing data navigation with expensive fresh evaluation.
-
-Build an event-table adapter with exact heights, source/version/coverage/licence metadata and import validation. Start with a small curated dataset and a complete importer test, not a screenshot of advertised global coverage. Expand Dirichlet characters to a bounded primitive/imprimitive family explorer with explicit conductor, parity, local-factor and normalization metadata.
-
-Introduce multiresolution stored summaries, independent indexed events, viewport range queries, immutable chunk manifests and missing-data masks. Use columnar event tables; use chunked arrays for actual grid workloads. Choose Parquet/Arrow and Zarr only where measurements justify them; do not force both into every representation. The raw data and definition, not display vertices, determine statistics. Preserve irregular spacing and local anchors.
-
-Acceptance: adversarial spikes, alternating signs, gaps at chunk boundaries, duplicate/uncertain events, extreme anchors and missing tiles survive navigation. Publish hardware/workload/latency/memory measurements for a declared dataset, with source I/O separated from rendering and fresh evaluation. Provide a useful normalized zero-statistics panel with window/census restrictions exposed. Larger-height evaluators remain distinct capability providers.
-
-## v0.4 — operators, counterfactual worlds and discovery experiments
-
-**Product outcome:** generate reproducible questions about mechanisms, rather than only draw more quantities.
-
-Add one reviewed finite kernel/witness workflow from the repository with exact source SHA, primitive input status, conditioning, all finite blocks/couplings and omitted-sector status. A selected eigenvector opens the corresponding test function and its arithmetic decomposition. Add a small synthetic-control library: specified symmetric zero sets, exact polynomial/graph models, finite local-factor perturbations and clearly marked phase-randomized arithmetic.
-
-Build a bounded disagreement search between independently specified constructions. Search on training windows; freeze a detector; test on withheld windows; record parameter choices and failures. Add the reciprocal/logarithmic hierarchy workspace from the #892 programme as a separate provider family, with source and analytic-domain distinctions retained.
-
-Acceptance: a concrete investigation exports an observation, data, detector definition, controls, held-out results, uncertainty and one useful next experiment. A fitted model or finite PSD matrix is not elevated to a theorem. A deformation that is a nonvanishing analytic factor does not falsely animate existing zeros.
-
-## v0.5 — public exhibits and private collaboration
-
-**Product outcome:** share compelling reproducible investigations safely.
-
-First deploy precomputed, read-only exhibits with all definitions, source status and manifests. Public visitors should not be able to submit unrestricted calculations. Add an authenticated private workbench separately: bounded job queues, permissions, quotas, cancellation, resource accounting, backups, observability, cost limits and environment isolation. Reuse experiment formats between local/private/public modes.
-
-Acceptance: threat model, tenancy and access tests, restore drills, resource limits, crash/restart behavior, licensed data distribution and reproducible deploy/rollback. No public deployment until these exist. Specialized remote CPU/GPU workers are optional providers with benchmarks, not an automatic requirement to use the instrument.
-
-## Coordination strategy
-
-Keep the numerical contracts and mathematical formula review independent of UI implementation. A practical first split is: (A) formula/provider accuracy, (B) views/state/refinement, (C) artifacts/scaling, (D) native browser/platform tests. Each contribution carries executable examples and explicit numerical scope. Small vertically complete experiments are better acceptance units than a large inventory of disconnected controls.
+Read-only, precomputed public exhibits first. Authentication, multi-user access, compute quotas, cost accounting, monitoring, backups and deployment policies must precede remotely accessible arbitrary computation. No public service or paid infrastructure is deployed by this pass.

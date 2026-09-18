@@ -5,7 +5,10 @@ import server
 
 HEADERS={'X-Observatory-Client':'v0.1'}
 @pytest.fixture
-def client(monkeypatch):
+def client(monkeypatch,tmp_path):
+    monkeypatch.setenv("OBSERVATORY_DATA_DIR",str(tmp_path))
+    monkeypatch.setattr(server,"_store",None)
+    monkeypatch.setattr(server,"_series",None)
     monkeypatch.setattr(server,'jobs',server.Jobs(capacity=2,deadline=30))
     with TestClient(server.app) as client:
         yield client
@@ -59,3 +62,50 @@ def test_exact_coordinate_api(client):
     payload={'anchor':'201016554543249943627430143193','offset':'0.078428'}
     r=client.post('/api/coordinates',headers=HEADERS,json=payload)
     assert r.json()['exact_decimal']=='201016554543249943627430143193.078428'
+
+@pytest.mark.parametrize('module,options',[
+ ('cancellation',{'n':16,'split':7}),('sweep',{'n':16,'width_steps':3,'split_steps':3}),
+ ('explicit',{'samples':8,'zero_count':8}),('refine',{'real':'2','imag':'0'}),
+ ('family',{'samples':16,'discriminants':[-4]}),('hierarchy',{'limit':100}),
+])
+def test_new_modules_real_worker(client,module,options):
+    r=client.post('/api/jobs',headers=HEADERS,json={'module':module,**options})
+    assert r.status_code==202
+    end=terminal(client,r.json()['job_id'])
+    assert end['status']=='done',end
+    assert end['result']['request']['module']==module
+
+
+def test_new_schemas_duplicate_json_and_origin(client):
+    schema=client.get('/api/capabilities').json()
+    assert schema['provider_schemas']['cancellation']['additionalProperties'] is False
+    assert client.post('/api/jobs',headers=HEADERS,content='{"module":"height","module":"geometry"}').status_code==422
+    assert client.post('/api/jobs',headers={**HEADERS,'Origin':'http://['},json={}).status_code==403
+    assert client.get('/api/health',headers={'Host':'['}).status_code==403
+
+
+def test_persist_and_reopen_api(client):
+    from engine import compute
+    result=compute({'module':'cancellation','n':16,'split':7})
+    data={'schema_version':2,'name':'API save','result':result,'comparison':result}
+    saved=client.post('/api/investigations',headers=HEADERS,json=data)
+    assert saved.status_code==201,saved.text
+    key=saved.json()['investigation_id']
+    got=client.get('/api/investigations/'+key).json()['experiment']
+    assert got['result']==result and got['comparison']==result
+    assert client.get('/api/investigations').json()['items'][0]['investigation_id']==key
+    result['metrics']['A_energy']+=10
+    assert client.post('/api/investigations',headers=HEADERS,json=data).status_code==422
+
+
+def test_stored_series_api(client):
+    data={'name':'API fixture','provenance':'synthetic','anchor':'999999999999999999999999',
+          'samples':[{'offset':'0','value':1},{'offset':'0.000001','value':None},{'offset':'0.000002','value':-1}],
+          'events':[{'index':1,'label':'missing'}]}
+    reply=client.post('/api/datasets',headers=HEADERS,json=data)
+    assert reply.status_code==201,reply.text
+    key=reply.json()['dataset_id']
+    view=client.get(f'/api/datasets/{key}/view?start=0&stop=3&buckets=8').json()
+    assert view['signed_sum']==0 and view['missing_count']==1
+    assert client.get(f'/api/datasets/{key}/sample/2').json()['exact_decimal']=='999999999999999999999999.000002'
+    assert client.get(f'/api/datasets/{key}/view?stop=4').status_code==422

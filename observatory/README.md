@@ -1,111 +1,120 @@
-# Riemann Observatory · v0.1
+# Riemann Observatory — v0.4 research preview
 
-A runnable, local visual research desk for programme [#897](https://github.com/GettysburgResearch/riemann/issues/897). Six workspaces, five analytic objects, cancellable numerical jobs, sample-preserving reduction, linked inspection, baseline overlays, and replayable experiments.
+A local, runnable visual laboratory for zeta, prime–zero relationships, arithmetic cancellation, L-function families and stored numerical data. **Twelve numerical desks plus an indexed-data desk.** This large pass implements useful slices across the v0.2–v0.4 roadmap; it does not claim every milestone is complete.
 
-**Status:** implemented research preview; ordinary numerical exploration, not a certificate service or an RH claim. No public deployment has been made. See [VALIDATION](VALIDATION.md) for what was actually exercised, including the restricted-container browser-test boundary.
+Start with **Linked cancellation**, the default desk. Change a block split, compare the literal Möbius source with a magnitude or synthetic control, select a discrepancy, and inspect every contributing term. Both complete experiments survive save, export, reopen and recomputation.
 
-## Start here
+Programme: [#897](https://github.com/GettysburgResearch/riemann/issues/897). Earlier application: [#898](https://github.com/GettysburgResearch/riemann/pull/898). v0.2 follow-up: [#899](https://github.com/GettysburgResearch/riemann/issues/899). This preview builds on `f7e8518275203bfb796b82f91d1d652b5c9257a8` without changing the mathematical canon.
 
-Use Python **3.11 or newer**. No Node, npm, frontend build, database, API key, GPU, or paid service is required. The interface and API share one loopback server.
+## Run locally
 
-From the repository root on macOS/Linux:
+Use Python 3.11 or newer. From the repository root:
 
 ```sh
-python3 -m venv .venv
-. .venv/bin/activate
+git fetch origin
+git switch --track origin/feat/observatory-linked-labs-v0.4
+python3 -m venv observatory/.venv
+. observatory/.venv/bin/activate
 python -m pip install -r observatory/requirements.txt
 python observatory/run.py
 ```
 
-From the repository root in Windows PowerShell (activation is not required):
+If the local branch already exists, use `git switch feat/observatory-linked-labs-v0.4`. Do not discard uncommitted work to switch branches.
+
+Open **http://127.0.0.1:8765**. There is no npm build, CDN, database service, API key, GPU requirement, or paid deployment. NumPy and SciPy are new dependencies in this preview; reinstall requirements after switching from v0.1.
+
+Windows PowerShell, without needing to activate scripts:
 
 ```powershell
-py -3 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r observatory\requirements.txt
-.\.venv\Scripts\python.exe observatory\run.py
+py -3 -m venv observatory\.venv
+.\observatory\.venv\Scripts\python.exe -m pip install -r observatory\requirements.txt
+.\observatory\.venv\Scripts\python.exe observatory\run.py
 ```
 
-Open **http://127.0.0.1:8765**. Stop with Ctrl+C. Use `--port 8766` when the default port is occupied. Installation commands need package-index access; after installation, all six workspaces run without external services or assets.
+Select a different local port with `--port 8766`. The server binds loopback only and is unauthenticated. Do not expose it publicly or remove Host/origin guards. Windows/macOS native acceptance and clean installation remain unverified in the implementation environment; see [VALIDATION](VALIDATION.md).
 
-The application deliberately binds to loopback and rejects non-loopback Host names. It has **no accounts, authentication, or multi-user isolation**. Do not expose it publicly. For a remote workstation, use an SSH tunnel, for example `ssh -L 8765:127.0.0.1:8765 user@host`, and open the same loopback URL locally. Hosted Codex environments need a supported localhost browser/port-forward path; the local-only host check is intentional, not something to remove casually.
+## Five investigations to try
 
-## First ten minutes
+### 1. Where did the cancellation go?
 
-1. **Complex geometry:** the startup preset shows zeta near the first few zeros. Click a domain-color sample; inspect its actual sampled complex value and the matching height in the slice. Change the slice sigma, grid side, precision, or object. Five providers are available: zeta, eta, completed xi, Dirichlet beta, and the real character modulo 3. Hardy Z is always evaluated on the critical line, independently of the chosen zeta-slice sigma.
-2. **Prime counting / Euler products:** compare pi, Li, R and their residuals; then watch a finite Euler product approach or fail to approach zeta as the prime cutoff grows. Try sigma=1.5 and sigma=0.5. Remove a local factor. The latter experiments are visibly marked as altered objects/outside absolute convergence, not as analytic continuation.
-3. **Cancellation:** raise the Mertens prefix, inspect a signed Gaussian interaction matrix, change its width, and expand the energy metrics. The matrix uses its own explicitly labeled complete finite prefix, not the larger Mertens prefix. Inspect both block energies and the retained cross term.
-4. **Zero spacing / exact-height desk:** inspect approximate indexed zeros and their gaps. Then view either imported fine bracket from #891; exact anchors remain decimal strings, and the display plots offsets only. There is no made-up Hardy-Z curve at enormous height.
-5. **Preserve an observation:** zoom by dragging horizontally; use the buttons or arrow keys as alternatives. Click to pin a sample, name the experiment, add a question, and save locally or export JSON. Import re-evaluates the saved request, restores supported viewports/selections, and warns if the result hash differs.
+Open **Linked cancellation**. Source A is literal μ; control B initially uses |μ|. Set the window, starting integer, block split, log-kernel width and weight exponent. Each side shows block A, block B, twice the cross term, diagonal/off-diagonal contributions and the full energy. A and B matrices share one color scale. The third matrix is their signed difference.
 
-Only related coordinates are linked. A prime cutoff, zero index, complex real part, and zero height are not silently treated as the same axis.
+Click a matrix cell or a row in the discrepancy curve. The term table ranks **every contributor in that finite row**, retaining its integer indices, block membership, coefficients, two source terms and difference. Prefix energy includes every newly introduced cross term. Change the split: the ledger changes, but the full matrix/energy does not.
 
-## What is implemented
+Controls include |μ|, deterministic hash-derived signs on squarefree support, a seeded permutation of the μ window, alternating signs on squarefree support, and literal Liouville values. Definitions distinguish changed signs, changed arithmetic locations, and changed support.
 
-| Workspace | Implemented views and data |
-|---|---|
-| Complex geometry | Sampled phase/magnitude field; Re, Im and modulus slice; critical-line Hardy Z; separately retained sampled sign-change candidates; pole/nonfinite masks |
-| Prime counting | Exact integer sieve/pi; Li and R main terms; both counting residuals; normalized psi and theta residuals |
-| Euler products | Re/Im/modulus by prime cutoff; distance to the original zeta target; full finite Argand trajectory; single-prime omission |
-| Cancellation | Exact Mertens source and sums; harmonic signed/absolute sums; Gaussian signed interaction matrix; complete finite block/cross-term energy identity |
-| Zero spacing | First 2–64 mpmath indexed zeros; full numerical decimals; raw and locally normalized consecutive gaps |
-| Exact-height desk | Two source-pinned imported fine brackets; exact endpoint arithmetic; explicit primitive-replay-pending status |
+Select an eigenmode to inspect its coefficients, both source projections, modal energies and associated Gaussian kernel section. Near-floor or clustered eigenmodes are numerical, not certified witnesses. The Gaussian kernel is positive semidefinite by construction; its finite positivity is not a new arithmetic positivity theorem.
 
-Shared functionality: canvas plots with resize handling, zoom/reset and keyboard stepping; numerical inspectors; first-series baseline overlays; PNG exports with a scout/result-ID stamp; local request notebook; JSON result artifacts and replay; structured browser scene; numerical CLI; bounded API jobs with real process termination on cancel/deadline; schema/size/origin/Host checks.
+### 2. Compare, preserve, challenge
 
-**Baseline scope:** Pin overlays the first series of the current result when comparing within the same module. It is not a complete multi-experiment comparison manager. Browser notebook saves retain at most 12 request records. Portable exports include the result artifact. Replay intentionally recomputes rather than trusting arbitrary imported result JSON; it does not restore a pinned baseline or implement offline artifact-only playback.
+Pin a baseline, change width or the source control, and rerun. The comparison panel retains both full artifacts, exposes both requests, plots their first matching observable side by side, and subtracts only identical retained x coordinates. It does not interpolate mismatched data or infer a missing tail.
 
-## Numerical limits and honesty
+Add a name and observation. **Save investigation** writes to disk. **Export experiment** includes both results, notes, selection, supported viewports and attached refinements. Import offers two distinct actions: inspect saved data with integrity checks, or recompute the request(s). The original artifacts are not silently overwritten when numerical identities differ.
 
-- Analytic evaluations use mpmath 1.3.0 at 20–70 requested decimal working digits. They are **not directed-rounding enclosures**. Plotted numbers, grids, prime main terms and interaction kernels use binary64; changing dps does not upgrade those operations.
-- Live analytic heights are restricted to `|t| <= 1000`, sigma to `[-4,4]`, domain grids to 80 by 80, and line samples to 2048. The native zeta provider does not evaluate at height 10^30.
-- Prime/Mertens prefixes are capped at 200,000. Euler products are capped at prime cutoff 10,000. The interaction matrix is capped at 96 by 96. The job deadline is 60 seconds; narrow expensive requests when needed.
-- Li and R use explicitly documented 80-term Ei/Gram series in the bounded arithmetic domain. Their implementation is compared with mpmath in tests, but no interval tail bound is supplied.
-- Each plot reducer retains sampled first/min/max/last values and extrema locations; bucket metadata retains signed/absolute sums and counts. Missing samples remain breaks. This is **sampled-data preservation**, not a continuous-function bound or a zero-finding algorithm. Lines connect retained samples and are not fresh evaluations between them.
-- Events are retained independently of line reduction. Sampled sign changes are not certified brackets and do not detect all possible zeros, including even-multiplicity events. A small zero table is not a certificate of all-zero completeness.
-- Prefix counts are exact Python integers within these finite domains. Energy kernels and cross-term sums remain numerical, and no finite PSD conclusion is promoted to an infinite theorem.
-- Exact-height endpoint addition uses decimal strings with enough working precision for the accepted bounded lengths. Its exact coordinate arithmetic does not certify the imported analytic claim.
+### 3. Search, freeze, hold out
 
-The result identity hashes canonical result JSON, the request, provider/engine versions, and the engine-source SHA256. A matching hash authenticates bytes, **not mathematical correctness**. Different provider environments may yield a different replay hash.
+**Disagreement search** scans a bounded width × split grid on one training window. Its score is the absolute cross-term difference divided by the two diagonal energies. It freezes the winning width and split before one evaluation on a disjoint holdout window. Every training trial is retained.
 
-## For Codex and other contributors
+Click a trial to open its complete training comparison, or open the frozen holdout's term-level investigation. An alternative trial does not inherit the selected winner's holdout result. These are effect sizes, not p-values; repeated human retuning can consume a holdout.
 
-Start with [AGENTS.md](AGENTS.md), [docs/CODEX_HANDOFF.md](docs/CODEX_HANDOFF.md), [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), and [ROADMAP.md](ROADMAP.md).
+### 4. One prime–zero formula, completely specified
+
+**Prime–zero formula** uses `h(t)=exp(-a t²) cos(bt)` and one fixed angular-frequency Fourier convention. Move `b=log x`, change smoothing, prime-power/zero/quadrature cutoffs, or choose a zero band. Click a curve and select **Inspect selected b** to recalculate its term ledger.
+
+The desk separately displays the pole terms, log-π contribution, gamma integral, prime-power sum, selected numerical zero sum, discrepancy and selected zero band. All finite prime-power and zero contributions are preserved. Trivial zeros are encoded by the gamma term in this convention, not counted a second time.
+
+All five tail/error budgets remain explicitly **unknown**, not zero. A small finite discrepancy is not a certificate. See [the formula, derivation and truncation contract](docs/EXPLICIT_FORMULA.md).
+
+### 5. Load data once; investigate different scales
+
+Open **Stored data** and import its 4,096-point adversarial demo. Zoom into the spike or select an event. The data are stored in SQLite with persistent first/min/max/last summaries; viewports query these summaries rather than resending the whole array. Missing runs and registered events have independent indices. Per-sample inspection retains exact anchor, offset and exact decimal coordinate strings.
+
+The x-axis is explicitly **original sample index**, not a rounded huge height. Imports are bounded to 250,000 samples / 24 MiB. Data provenance is required. This is not a billion-point tile service, arbitrary file loader, or live huge-height zeta evaluator. [Import format and limitations](docs/STORAGE.md).
+
+## Other desks
+
+**Quadratic L-families** constructs real quadratic characters for ten named fundamental discriminants, compares selected members, and exposes conductor, modulus, parity, exact tables, numerical central values and the local factors removed in induced members. Central values are not arithmetic ranks.
+
+**Reciprocal families** constructs integers, primes, repeated prime-index selections, their counts and reciprocal sums, plus a separate fractional sequence `a_n=n^alpha`. Index cutoffs and value cutoffs are distinguished. These are not the Golomb–Erdős or residue-avoidance self-sieves.
+
+**Point refinement** accepts decimal-string coordinates for zeta, eta, xi, beta and the mod-3 L-function. Complex-geometry samples can be refined and attached to their parent investigation. Ordinary precision comparisons are not rigorous error bounds. An optional FLINT zeta-point enclosure adapter is included, but its native package was unavailable here; its test is skipped, not represented as passed.
+
+The original **complex geometry, prime counting, finite Euler products, Möbius prefix, initial zero gaps and exact-height desks** remain available. The enormous-height desk still imports only two fine brackets from source-pinned #891, with primitive Hardy-Z replay pending. No fabricated Z curve or new record verification is added.
+
+## Save location, CLI and agents
+
+Default persistent data: `~/.riemann-observatory/`. Override with `--data-dir PATH` or `OBSERVATORY_DATA_DIR`. Back up the entire directory: objects, index and series stores. It is not a shared multi-user service, and there is no disk quota/garbage collector yet.
+
+```sh
+python observatory/run.py --compute observatory/examples/linked-cancellation.json
+python observatory/run.py --compute observatory/examples/gaussian-explicit.json
+python observatory/run.py --import-series your-series.json --data-dir ./my-local-data
+```
+
+The numerical CLI accepts a request, result envelope or exported investigation. Replay can differ across library/producer versions; identities include numerical source hashes and dependency versions.
+
+```javascript
+await window.observatory.run({module:'cancellation', n:64, split:24,
+  width:0.8, source_a:'mobius', source_b:'random_signs'});
+const scene = window.observatory.scene();
+const bundle = window.observatory.exportExperiment();
+const receipt = await window.observatory.save();
+await window.observatory.openInvestigation(receipt.investigation_id);
+await window.observatory.replay(bundle);
+const capture = window.observatory.capture(); // scene + canvas images, same synchronous capture
+```
+
+Stable controls, explicit requests, selections, numerical inspectors and scene descriptions support computer use. Capture is a bundle of chart canvases, not an operating-system screenshot. Scene/result identifiers are not mathematical certificates. Generic comparison currently uses the first matching observable; dockable arbitrary cross-workspace linkage remains future work.
+
+## Validate and extend
 
 ```sh
 python -m pip install -r observatory/requirements-dev.txt
 python -m pytest observatory/tests -q
-python observatory/run.py --compute observatory/examples/first-zero.json > result.json
-python observatory/scripts/benchmark.py
+python observatory/scripts/browser_smoke.py --browser /path/to/chromium
+python observatory/scripts/benchmark_store.py --samples 100000
 ```
 
-For a normal browser smoke test, leave the server running in a second terminal:
+Actual implementation validation: **108 tests passed, one optional FLINT test skipped**, all four JavaScript modules syntax-checked, all 12 numerical desks plus stored data exercised in Chromium through a documented bridge. Native localhost navigation is blocked by this environment's managed policy; native-origin acceptance remains open. [Full validation](VALIDATION.md).
 
-```sh
-python -m playwright install chromium
-python observatory/scripts/browser_smoke.py
-```
-
-A system Chromium can be selected with `--browser /path/to/chromium` or `CHROMIUM_PATH`. The explicit `--bridge` option is only for restricted test harnesses; its substitutions are described in VALIDATION, and it is not equivalent to native-origin browser coverage.
-
-## Browser-agent API
-
-In the browser console / a computer-use agent's JavaScript evaluation surface:
-
-```js
-await window.observatory.run({module: 'mobius', limit: 20000, kernel_n: 64, width: 0.8});
-window.observatory.scene();             // displayed request, hash, viewports, selection, metrics
-window.observatory.result();            // current computed artifact
-const packet = window.observatory.exportExperiment();
-await window.observatory.replay(packet);
-await window.observatory.cancel();
-```
-
-The DOM root `#workspace[data-scene-id]` identifies the displayed artifact. Uncomputed control edits are separate from `displayed_request`. A screenshot's selection/viewport should be read together with `scene()`, not inferred from pixels alone. Every analytic result carries its scout status.
-
-The HTTP schema is at `/api/openapi.json`, and executable request capabilities are at `/api/capabilities`. POST/DELETE requests require `X-Observatory-Client: v0.1`. This header is a local cross-origin guard, **not authentication**.
-
-## Sources and licence
-
-The code is covered by the repository's MIT licence. Mathematical function implementations are provided by mpmath; this suite does not claim their novelty. See the [mpmath zeta/L-function documentation](https://mpmath.org/doc/current/functions/zeta.html).
-
-The exact-height panel transcribes only the two fine brackets from [news.txt at d5d55b7](https://github.com/GettysburgResearch/riemann/blob/d5d55b7950a4cc8a850e99c82b8f40e1699c7a3e/standalone/2026-09-15-s-argument-records/news.txt). The original announcement is credited in #891 to Avraham Eisenberg; that packet identifies its input as a user-supplied transcription. No source authentication, scalar checker, coarse-bracket census, or primitive Hardy-Z replay is newly performed by this adapter.
+Read [Codex handoff](docs/CODEX_HANDOFF.md), [architecture](docs/ARCHITECTURE.md), [roadmap / completed versus open gates](ROADMAP.md), and [AGENTS](AGENTS.md) before extending. Pure bounded numerical providers, reviewed formulas and useful investigations take priority over framework churn.
