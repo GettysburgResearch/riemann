@@ -1,0 +1,51 @@
+{
+  "scope": "Selective continuation, not a fresh repository-wide audit or independent acceptance",
+  "main": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "parent_848": "617cfaca6130addd2d16bbce6af117a55aef761b",
+  "parent_tree": "6d44ae4011e73d92fbdb0a80e9c8f0aadbd77f09",
+  "github_reading": [
+    {
+      "path": "AGENTS.md",
+      "commit": "617cfaca6130addd2d16bbce6af117a55aef761b",
+      "scope": "full read"
+    },
+    {
+      "path": "standalone/2026-09-19-newton-resonance-stress/PROOF.md",
+      "commit": "617cfaca6130addd2d16bbce6af117a55aef761b",
+      "scope": "commit proof plus focused read of source-first formulas and native evidence; no NSR checker replay"
+    },
+    {
+      "path": "standalone/2026-09-10-astra-balanced-newton/innovations/PROOF.md",
+      "commit": "9e4375952c87835c2f4f2cca10a996009e74a435",
+      "scope": "provided prior tool text: exact E/F/A distinction and conditional energy consumer"
+    },
+    {
+      "path": "standalone/2026-09-10-astra-balanced-newton/collision-energy/PROOF.md",
+      "commit": "9e4375952c87835c2f4f2cca10a996009e74a435",
+      "scope": "provided prior tool text: cap-three completion, endpoint and norm conventions"
+    }
+  ],
+  "prior_conversation_artifacts": {
+    "RCB26_newton_rough_core_packet.zip": "f525156e14d23950d68ebf56b966e542ca1ad43ce4e675cc351a13410820c021",
+    "RCB26_PROOF.md": "3aa4b8dcaaec618f16c6665d4ea4224da94d04fafc8fc48346d5c81b9b522dbc",
+    "RCB26_newton_rough_core.patch": "c84af9ae33eb23f28db749d0187445906d07b5d6deb97c30f523b032030eaaac"
+  },
+  "prior_artifact_scope": "RCB26 archive extracted and proof/scout read. No RCB26 campaign rerun. GitHub PR search for RCB26 returned zero; #848 current head instead contains concurrent NSR26. This continuation does not claim the old full archive has been published.",
+  "primary_literature": [
+    {
+      "authors": "M. N. Huxley and N. Watt",
+      "title": "Mertens Sums requiring Fewer Values of the Mobius function",
+      "id": "arXiv:1807.05890",
+      "url": "https://arxiv.org/abs/1807.05890",
+      "scope": "abstract and metadata consulted; short-source Newton identity explicitly attributed, rederived here coefficientwise"
+    },
+    {
+      "author": "D. R. Heath-Brown",
+      "title": "A mean value estimate for real character sums",
+      "id": "10.4064/aa-72-3-235-275",
+      "url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/72/3/108575/a-mean-value-estimate-for-real-character-sums",
+      "scope": "publisher bibliography only; no theorem or quantitative bound imported"
+    }
+  ],
+  "novelty": "No exhaustive priority search or new-record claim; classical tools identified in proof."
+}
