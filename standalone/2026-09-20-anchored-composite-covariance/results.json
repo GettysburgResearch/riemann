@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "exact_comparisons": 96190,
+  "balanced_sources": 81,
+  "native": [
+    {"Y": 3, "L": 4, "completion_coefficients": 1},
+    {"Y": 7, "L": 8, "completion_coefficients": 1},
+    {"Y": 15, "L": 16, "completion_coefficients": 1},
+    {"Y": 31, "L": 32, "completion_coefficients": 1},
+    {"Y": 63, "L": 64, "completion_coefficients": 1},
+    {"Y": 95, "L": 97, "completion_coefficients": 2}
+  ],
+  "scope": "finite exact regression; no analytic theorem or full-repository validation"
+}
