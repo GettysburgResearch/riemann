@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-19",
+  "repository": "GettysburgResearch/riemann",
+  "parent_pr": 848,
+  "parent_head": "9e4375952c87835c2f4f2cca10a996009e74a435",
+  "parent_ref": "research/astra/20260910-balanced-newton-renormalization",
+  "publication": "LOCAL_ONLY_NOT_PUSHED",
+  "read_scope": [
+    {
+      "source": "issue #902",
+      "url": "https://github.com/GettysburgResearch/riemann/issues/902",
+      "scope": "execution choice and strategic brief; not a new whole-repository audit"
+    },
+    {
+      "path": "AGENTS.md",
+      "ref": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+      "scope": "contribution and mathematical-status boundaries"
+    },
+    {
+      "path": "standalone/2026-09-10-astra-balanced-newton/PROOF.md",
+      "ref": "9e4375952c87835c2f4f2cca10a996009e74a435",
+      "scope": "native state, Newton prefix, complete energy and gain; substantive proof text"
+    },
+    {
+      "path": "standalone/2026-09-10-astra-balanced-newton/innovations/PROOF.md",
+      "ref": "9e4375952c87835c2f4f2cca10a996009e74a435",
+      "blob": "c23431cb9a4830b8966c5473878893686e1c3af3",
+      "scope": "full proof read, including norm-one projection, mixed differences and generic counterexamples"
+    },
+    {
+      "path": "standalone/2026-09-10-astra-balanced-newton/collision-energy/PROOF.md",
+      "ref": "9e4375952c87835c2f4f2cca10a996009e74a435",
+      "blob": "9baf42cb5967a54960a55456e3ebc4136d63f9fb",
+      "scope": "sections 0 through 3.1, clipped completion and complete harmonic-kernel bound"
+    },
+    {
+      "path": "standalone/2026-09-13-astra-prime-dephasing/PROOF.md",
+      "ref": "9e4375952c87835c2f4f2cca10a996009e74a435",
+      "scope": "prime-bank comparison, elementary prime-sum estimate, native-versus-average boundary"
+    },
+    {
+      "path": "standalone/2026-09-12-four-route-deep-pass/arithmetic.md",
+      "ref": "5e559c9cbf5aee84ff7ed78dc91b55df744aef56",
+      "blob": "d538a392443ba2a36fba8973ce3ce8711d40f9d2",
+      "scope": "native energy identity and exponent discussion; growing square-supported counterfamily; no certificate replay"
+    },
+    {
+      "url": "https://arxiv.org/abs/1807.05890",
+      "title": "Mertens Sums requiring Fewer Values of the Mobius function",
+      "authors": [
+        "M. N. Huxley",
+        "N. Watt"
+      ],
+      "year": 2018,
+      "scope": "primary abstract consulted for short-source inversion attribution; no PDF or full-paper review in this pass"
+    }
+  ],
+  "not_claimed": [
+    "exhaustive branch audit",
+    "broad novelty survey",
+    "external referee acceptance",
+    "replay of earlier research campaigns",
+    "full Riemann checkout or validator",
+    "remote publication"
+  ],
+  "closing_ref_read": {
+    "ref": "refs/heads/research/astra/20260910-balanced-newton-renormalization",
+    "sha": "9e4375952c87835c2f4f2cca10a996009e74a435"
+  },
+  "inherited_not_new": [
+    "Dirichlet Newton inversion and prefix support",
+    "NIR26 innovation isometry and norm-one projection",
+    "PCR26 clipped completion and tail price",
+    "PCR26 bound sum K_d squared <= 18/d",
+    "PPD26 elementary small-prime sum bound"
+  ],
+  "contributions_in_this_packet": [
+    "absolute overlap bound for complete harmonic kernels",
+    "fifth-logarithmic native rough-squareclass envelope",
+    "tenth-logarithmic bounded-completion rough-squareclass envelope",
+    "subpower growing-bank application to actual within-block covariance",
+    "exact retained collar interface and constant crossing completion estimate",
+    "cap-three fake-family quadratic cross-block lower bound",
+    "finite interval reconstruction and failing controls"
+  ]
+}
