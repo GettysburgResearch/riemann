@@ -1,0 +1,76 @@
+{
+  "classical_attribution": [
+    "Mobius inversion",
+    "finite Euler factorization",
+    "sieve-style cutoff splitting",
+    "negative logarithmic derivative and rank-one Pick correction"
+  ],
+  "date": "2026-09-19",
+  "external_asymptotic_input": {
+    "locators": [
+      "27.12.4",
+      "27.12.5"
+    ],
+    "name": "ordinary prime number theorem",
+    "url": "https://dlmf.nist.gov/27.12",
+    "used_for": "fixed-relative-interval prime-count asymptotics only; finite lower bounds do not require it"
+  },
+  "paper": {
+    "arxiv": "2609.14893v2",
+    "authors": [
+      "Ashay A. Burungale",
+      "Ye Tian"
+    ],
+    "basis": "user-provided 48-page PDF; targeted mechanism and appendix review; not independent verification of all cited inputs",
+    "external_scope": "exact central rank, not GRH; paper dependencies are imported and not certified here",
+    "locators": [
+      "Theorem 1.1",
+      "Proposition 7.10",
+      "Lemma 8.6",
+      "Theorem 8.7",
+      "Theorem 8.11",
+      "Theorem 10.5",
+      "Appendix A",
+      "Appendix B Tables 1-3"
+    ],
+    "sha256": "7b9d080156a764bc72d42f072ea44da7c32fb590d5bfb50229a76c054b70cca1",
+    "title": "A proof of Sylvester's conjecture",
+    "url": "https://arxiv.org/pdf/2609.14893v2",
+    "version_date": "2026-09-15",
+    "visual_checks": "local renders of printed pages 33 and 45 inspected",
+    "web_access": "direct PDF and HTML v2 fetches failed in this session; no replacement by v1 or a social-media summary"
+  },
+  "publication": {
+    "observed_head": "67132424e3cbe35a94752581a5b5271ab8bfc56f",
+    "reason": "GitHub connector exposed 48 read actions but no write actions; direct git clone failed DNS; do not infer the repository is disconnected",
+    "status": "NOT PUSHED in authoring session",
+    "target_branch": "research/sylvester-cutoff-boundary-20260919",
+    "target_pr": 903
+  },
+  "repo": "GettysburgResearch/riemann",
+  "reviewed_sources": [
+    {
+      "depth": "entire file and PR metadata",
+      "path": "standalone/2026-09-19-sylvester-cutoff-boundary/PROOF_NOTES.md",
+      "pr": 903,
+      "sha": "67132424e3cbe35a94752581a5b5271ab8bfc56f"
+    },
+    {
+      "depth": "component proof and complete native reconstruction section, including equations 18-21",
+      "path": "standalone/2026-09-19-newton-resonance-stress/PROOF.md",
+      "pr": 848,
+      "sha": "617cfaca6130addd2d16bbce6af117a55aef761b"
+    },
+    {
+      "depth": "sections 1-5 and start of 6; not represented as a full packet audit",
+      "path": "standalone/2026-09-19-newton-rough-core/PROOF.md",
+      "pr": 848,
+      "sha": "7de75c02417d5d8db7eafb1ceba364380e72d16a"
+    },
+    {
+      "depth": "current issue specification; no claim to review all 14 comments or every family branch",
+      "issue": 738,
+      "url": "https://github.com/GettysburgResearch/riemann/issues/738"
+    }
+  ]
+}

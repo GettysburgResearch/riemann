@@ -1,0 +1,139 @@
+{
+  "started_utc": "2026-09-19T21:06:36.536082+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "base_head": "36ffd15df96866a3f1c4f306000dd4a4dbf4153b",
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-S",
+        "-B",
+        "boundary.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.297000000020489,
+      "stdout": "BCP26 producer: PASS (byte-identical report)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-S",
+        "-B",
+        "verify.py",
+        "result.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6099999999860302,
+      "stdout": "BCP26 verifier PASS: {\"coefficient_checks_including_overlaps\": 70986, \"panels\": 6, \"upper_triangle_gram_checks\": 1964}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-S",
+        "-B",
+        "lfamily.py",
+        "--check",
+        "lfamily_result.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.14000000001396984,
+      "stdout": "BCP26 L-family algebra PASS: 14 families, 12 projectors, 2 Fermat lifts, 4 exact Pick matrices\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-S",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_boundary"
+      ],
+      "exit_code": 0,
+      "seconds": 0.48499999998603016,
+      "stdout": "",
+      "stderr": "test_antichain_needs_rough_support (test_boundary.BoundaryTests.test_antichain_needs_rough_support) ... ok\ntest_convolution_collapse_all_small_prefixes (test_boundary.BoundaryTests.test_convolution_collapse_all_small_prefixes) ... ok\ntest_duplicate_json (test_boundary.BoundaryTests.test_duplicate_json) ... ok\ntest_gram_simultaneous_jumps_and_interval_endpoints (test_boundary.BoundaryTests.test_gram_simultaneous_jumps_and_interval_endpoints) ... ok\ntest_moment_balance_does_not_restore_inverse_equations (test_boundary.BoundaryTests.test_moment_balance_does_not_restore_inverse_equations) ... ok\ntest_not_every_multiplicative_squarefree_source_is_native (test_boundary.BoundaryTests.test_not_every_multiplicative_squarefree_source_is_native) ... ok\ntest_one_and_two_prime_boundary (test_boundary.BoundaryTests.test_one_and_two_prime_boundary) ... ok\ntest_positive_native_sector (test_boundary.BoundaryTests.test_positive_native_sector) ... ok\ntest_rank_deflation_is_subtraction_not_addition (test_boundary.BoundaryTests.test_rank_deflation_is_subtraction_not_addition) ... ok\ntest_report_mutations (test_boundary.BoundaryTests.test_report_mutations) ... ok\ntest_sharp_squared_endpoint (test_boundary.BoundaryTests.test_sharp_squared_endpoint) ... ok\ntest_sylvester_projector_and_admissibility_controls (test_boundary.BoundaryTests.test_sylvester_projector_and_admissibility_controls) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.336s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-S",
+        "-O",
+        "-B",
+        "boundary.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.4679999999934807,
+      "stdout": "BCP26 producer: PASS (byte-identical report)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-S",
+        "-O",
+        "-B",
+        "verify.py",
+        "result.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.875,
+      "stdout": "BCP26 verifier PASS: {\"coefficient_checks_including_overlaps\": 70986, \"panels\": 6, \"upper_triangle_gram_checks\": 1964}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-S",
+        "-O",
+        "-B",
+        "lfamily.py",
+        "--check",
+        "lfamily_result.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1720000000204891,
+      "stdout": "BCP26 L-family algebra PASS: 14 families, 12 projectors, 2 Fermat lifts, 4 exact Pick matrices\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-S",
+        "-O",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_boundary"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5,
+      "stdout": "",
+      "stderr": "test_antichain_needs_rough_support (test_boundary.BoundaryTests.test_antichain_needs_rough_support) ... ok\ntest_convolution_collapse_all_small_prefixes (test_boundary.BoundaryTests.test_convolution_collapse_all_small_prefixes) ... ok\ntest_duplicate_json (test_boundary.BoundaryTests.test_duplicate_json) ... ok\ntest_gram_simultaneous_jumps_and_interval_endpoints (test_boundary.BoundaryTests.test_gram_simultaneous_jumps_and_interval_endpoints) ... ok\ntest_moment_balance_does_not_restore_inverse_equations (test_boundary.BoundaryTests.test_moment_balance_does_not_restore_inverse_equations) ... ok\ntest_not_every_multiplicative_squarefree_source_is_native (test_boundary.BoundaryTests.test_not_every_multiplicative_squarefree_source_is_native) ... ok\ntest_one_and_two_prime_boundary (test_boundary.BoundaryTests.test_one_and_two_prime_boundary) ... ok\ntest_positive_native_sector (test_boundary.BoundaryTests.test_positive_native_sector) ... ok\ntest_rank_deflation_is_subtraction_not_addition (test_boundary.BoundaryTests.test_rank_deflation_is_subtraction_not_addition) ... ok\ntest_report_mutations (test_boundary.BoundaryTests.test_report_mutations) ... ok\ntest_sharp_squared_endpoint (test_boundary.BoundaryTests.test_sharp_squared_endpoint) ... ok\ntest_sylvester_projector_and_admissibility_controls (test_boundary.BoundaryTests.test_sylvester_projector_and_admissibility_controls) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.333s\n\nOK\n"
+    }
+  ]
+}

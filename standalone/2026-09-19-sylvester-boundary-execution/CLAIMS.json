@@ -1,0 +1,53 @@
+[
+  {
+    "claim": "least-prime residual collapses under the actual inverse to a finite cutoff-pivot Euler polynomial",
+    "id": "BCP26-1",
+    "novelty": "not claimed",
+    "proof": "PROOF.md sections 1-2",
+    "status": "PROPOSED_PROOF"
+  },
+  {
+    "claim": "unique descending-prime cutoff pivot partitions native squarefree coefficients; nonsquarefree channel coefficients vanish",
+    "id": "BCP26-2",
+    "proof": "PROOF.md section 3",
+    "status": "PROPOSED_PROOF"
+  },
+  {
+    "claim": "explicit atom Gram and signed mean give the existing complete A and F states without omitted terms",
+    "id": "BCP26-3",
+    "proof": "PROOF.md section 4",
+    "status": "PROPOSED_PROOF"
+  },
+  {
+    "claim": "raw-pivot diagonal and positive cross mass have power-size native lower bounds, even using coprime semiprimes; centering does not repair the diagonal",
+    "external_input": "ordinary PNT only for asymptotic corollary",
+    "id": "BCP26-4",
+    "proof": "PROOF.md section 5",
+    "status": "PROPOSED_PROOF"
+  },
+  {
+    "claim": "exact central-rank deflation subtracts r vv* from a negative-log-derivative Pick matrix",
+    "id": "BCP26-L1",
+    "novelty": "not claimed",
+    "proof": "LFAMILY.md sections 2-4",
+    "status": "PROPOSED_ELEMENTARY_ADAPTER"
+  },
+  {
+    "claim": "analytic rank exactly one for E_p and E_(p^2), prime p=8 mod 9",
+    "id": "BT26-RANK",
+    "independent_verification_here": false,
+    "source": "Burungale--Tian arXiv:2609.14893v2 Theorem 1.1",
+    "status": "EXTERNAL_THEOREM"
+  },
+  {
+    "claim": "unbounded signed whole-state gain on the native Newton ladder",
+    "id": "BCP26-NATIVE-GAIN",
+    "proved_here": false,
+    "status": "OPEN"
+  },
+  {
+    "id": "RH-GRH",
+    "proved_here": false,
+    "status": "OPEN"
+  }
+]
