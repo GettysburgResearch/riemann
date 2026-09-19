@@ -1,0 +1,258 @@
+{
+  "RH_proved": false,
+  "arithmetic": "Python integers and Fraction; 96-bit directed rational sums",
+  "infinite_theorem_checked_by_code": false,
+  "model": {
+    "B": 17180131328,
+    "G_refuted_on_this_nonnative_source": true,
+    "Y": 131072,
+    "completion_abs_coefficient_upper": "0.001160835923236",
+    "covered_intervals": 4096,
+    "exact_midpoint_peak": 1222946,
+    "input_A": [
+      "1.629167080304",
+      "1.629167080305"
+    ],
+    "midpoint_sha256": "20fe395e50c2d35fb12ee3306d86f6618aca4d0d27cee712297689f8e480736c",
+    "native_G_refuted": false,
+    "native_initial_coefficients_matched": 5,
+    "nonzero_wave_entries": 6288,
+    "output_energy_lower": "15.732535140697",
+    "output_window": [
+      4294967296,
+      7635788689
+    ],
+    "positive_lower_intervals": 2449,
+    "prefix_u": [
+      "-0.000000004428203838",
+      "-0.000000004428203837"
+    ],
+    "status": "EXACT_FINITE_NON_MOBIUS_COUNTEREXAMPLE",
+    "support": [
+      65737,
+      86987
+    ],
+    "ternary_prefix_entries": 131072
+  },
+  "native": {
+    "Newton_coefficients_compared": 1118478,
+    "Newton_cutoffs": [
+      1,
+      3,
+      15,
+      63,
+      255,
+      1023
+    ],
+    "gain_cutoffs": [
+      1,
+      1023
+    ],
+    "gain_predicates": 1023,
+    "max_output_integer": 1048575,
+    "panels": [
+      {
+        "B": 3,
+        "Y": 1,
+        "input_A": [
+          "1.500000000000",
+          "1.500000000001"
+        ],
+        "input_u": [
+          "0.500000000000000",
+          "0.500000000000001"
+        ],
+        "output_A": [
+          "1.972222222222",
+          "1.972222222223"
+        ],
+        "output_u": [
+          "0.416666666666666",
+          "0.416666666666667"
+        ]
+      },
+      {
+        "B": 15,
+        "Y": 3,
+        "input_A": [
+          "1.972222222222",
+          "1.972222222223"
+        ],
+        "input_u": [
+          "0.416666666666666",
+          "0.416666666666667"
+        ],
+        "output_A": [
+          "1.585617854506",
+          "1.585617854507"
+        ],
+        "output_u": [
+          "0.123239260739260",
+          "0.123239260739261"
+        ]
+      },
+      {
+        "B": 255,
+        "Y": 15,
+        "input_A": [
+          "1.585617854506",
+          "1.585617854507"
+        ],
+        "input_u": [
+          "0.123239260739260",
+          "0.123239260739261"
+        ],
+        "output_A": [
+          "1.444181751809",
+          "1.444181751810"
+        ],
+        "output_u": [
+          "0.008456249432231",
+          "0.008456249432232"
+        ]
+      },
+      {
+        "B": 4095,
+        "Y": 63,
+        "input_A": [
+          "1.445147430972",
+          "1.445147430973"
+        ],
+        "input_u": [
+          "0.031608244111196",
+          "0.031608244111197"
+        ],
+        "output_A": [
+          "1.507982927883",
+          "1.507982927884"
+        ],
+        "output_u": [
+          "0.000521665182918",
+          "0.000521665182919"
+        ]
+      },
+      {
+        "B": 65535,
+        "Y": 255,
+        "input_A": [
+          "1.444181751809",
+          "1.444181751810"
+        ],
+        "input_u": [
+          "0.008456249432231",
+          "0.008456249432232"
+        ],
+        "output_A": [
+          "1.587579815075",
+          "1.587579815076"
+        ],
+        "output_u": [
+          "-0.000034745302895",
+          "-0.000034745302894"
+        ]
+      },
+      {
+        "B": 1048575,
+        "Y": 1023,
+        "input_A": [
+          "1.467368324468",
+          "1.467368324469"
+        ],
+        "input_u": [
+          "0.002411276597898",
+          "0.002411276597899"
+        ],
+        "output_A": [
+          "1.664707478362",
+          "1.664707478363"
+        ],
+        "output_u": [
+          "-0.000004038524657",
+          "-0.000004038524656"
+        ]
+      }
+    ],
+    "prime_bank_Y": 255,
+    "prime_banks": [
+      {
+        "Cauchy_upper": "22.144302498507",
+        "P": 1,
+        "all_integer_output_cells_equal": 65280,
+        "full_I": [
+          "0.179852003503",
+          "0.179852003504"
+        ],
+        "rows": 9,
+        "separate_row_energy": [
+          "2.460478055389",
+          "2.460478055390"
+        ],
+        "signed_cross": [
+          "-2.280626051887",
+          "-2.280626051886"
+        ]
+      },
+      {
+        "Cauchy_upper": "2.733320473353",
+        "P": 6,
+        "all_integer_output_cells_equal": 65280,
+        "full_I": [
+          "0.179852003503",
+          "0.179852003504"
+        ],
+        "rows": 9,
+        "separate_row_energy": [
+          "0.303702274816",
+          "0.303702274817"
+        ],
+        "signed_cross": [
+          "-0.123850271314",
+          "-0.123850271313"
+        ]
+      },
+      {
+        "Cauchy_upper": "2.146794066898",
+        "P": 30,
+        "all_integer_output_cells_equal": 65280,
+        "full_I": [
+          "0.179852003503",
+          "0.179852003504"
+        ],
+        "rows": 9,
+        "separate_row_energy": [
+          "0.238532674099",
+          "0.238532674100"
+        ],
+        "signed_cross": [
+          "-0.058680670597",
+          "-0.058680670596"
+        ]
+      },
+      {
+        "Cauchy_upper": "1.973004867678",
+        "P": 210,
+        "all_integer_output_cells_equal": 65280,
+        "full_I": [
+          "0.179852003503",
+          "0.179852003504"
+        ],
+        "rows": 9,
+        "separate_row_energy": [
+          "0.219222763075",
+          "0.219222763076"
+        ],
+        "signed_cross": [
+          "-0.039370759572",
+          "-0.039370759571"
+        ]
+      }
+    ],
+    "squared_gain_ratio_upper": "0.141345679012346",
+    "status": "EXACT_FINITE_NATIVE_CONTROLS_NOT_ASYMPTOTICS",
+    "two_sieve_comparisons": 1048575,
+    "worst_cutoff": 1
+  },
+  "packet": "NSR26",
+  "schema": 1,
+  "source_sha256": "6f277d7d6d8c2adff9d37b59c759af174f8b2befdfc1fd2ed2a7460802d3b610"
+}

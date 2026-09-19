@@ -1,0 +1,104 @@
+{
+  "schema": "BNR26-validation-v1",
+  "utc": "2026-09-10T14:08:34.200795+00:00",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "base": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "scope": "local packet only, no full repository validation or independent mathematical review",
+  "runs": [
+    {
+      "name": "producer-normal",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "produce.py",
+        "--check",
+        "result.json",
+        "--output",
+        "/mnt/data/rh_balanced_newton/replays/producer-normal.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.516,
+      "stdout": "BNR PRODUCER PASS 8f7348152b8a127f481e96d9e280d2c6cdf12874179c43b1e53fa21779244a31\nladder [3, 15, 255, 65535]\nfinite gain panels 66\n",
+      "stderr": ""
+    },
+    {
+      "name": "verifier-normal",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "verify.py",
+        "result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_balanced_newton/replays/verifier-normal.json"
+      ],
+      "returncode": 0,
+      "seconds": 2.151,
+      "stdout": "BNR INDEPENDENT IMPLEMENTATION PASS 8f7348152b8a127f481e96d9e280d2c6cdf12874179c43b1e53fa21779244a31\nRESEALED CORRUPTIONS REJECTED 12 AND DUPLICATE-KEY REFUSAL\n",
+      "stderr": ""
+    },
+    {
+      "name": "producer-optimized",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "-O",
+        "produce.py",
+        "--check",
+        "result.json",
+        "--output",
+        "/mnt/data/rh_balanced_newton/replays/producer-optimized.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.672,
+      "stdout": "BNR PRODUCER PASS 8f7348152b8a127f481e96d9e280d2c6cdf12874179c43b1e53fa21779244a31\nladder [3, 15, 255, 65535]\nfinite gain panels 66\n",
+      "stderr": ""
+    },
+    {
+      "name": "verifier-optimized",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "-O",
+        "verify.py",
+        "result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_balanced_newton/replays/verifier-optimized.json"
+      ],
+      "returncode": 0,
+      "seconds": 2.085,
+      "stdout": "BNR INDEPENDENT IMPLEMENTATION PASS 8f7348152b8a127f481e96d9e280d2c6cdf12874179c43b1e53fa21779244a31\nRESEALED CORRUPTIONS REJECTED 12 AND DUPLICATE-KEY REFUSAL\n",
+      "stderr": ""
+    }
+  ],
+  "normal_optimized_byte_equal": {
+    "producer-normal.json": true,
+    "producer-optimized.json": true,
+    "verifier-normal.json": true,
+    "verifier-optimized.json": true
+  },
+  "semantic_sha256": "8f7348152b8a127f481e96d9e280d2c6cdf12874179c43b1e53fa21779244a31",
+  "executed_source_sha256": {
+    "produce.py": "e9b7e0e5e9039b8cdd90cddeaaff6546b6830e2836a3a976e7b1dfbf6b78ceff",
+    "verify.py": "53a0eec2939c013c811d2eaa4d2793efbc9ed859e39a8ea726121f75e6f3d4c9",
+    "result.json": "09e115019457430c0aade260bb71c44dddfd5d1518ab9cd05d525a992f53a3df"
+  },
+  "tamper_cases_per_verifier_mode": 12,
+  "duplicate_json_refused_per_verifier_mode": true,
+  "nonproof_scoping": {
+    "all_scale_gain_proved": false,
+    "RH_proved": false,
+    "formal_build_run": false,
+    "full_checkout_validation_run": false
+  },
+  "disclosures": [
+    "Initial producer serialization encountered Python decimal digit limit on exact rational annular totals; replaced those finite sums by explicit 128-bit outward cell bounds before any published artifact. Final arithmetic protocol retains all cells and tails.",
+    "Exploratory float printing was used on exact/dyadic calculations to inspect small energies; no float or numerical quadrature enters final acceptance.",
+    "Resealed mutation tests parse changed report files and compare against one independently reconstructed expected object per run; they are not twelve repeated analytic proof checks or a separate author review."
+  ]
+}

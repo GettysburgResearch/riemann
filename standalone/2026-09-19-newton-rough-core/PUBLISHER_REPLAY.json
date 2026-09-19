@@ -1,0 +1,77 @@
+{
+  "started_utc": "2026-09-19T20:10:57.099249+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "scope": "riemann supplied packet replay; not independent mathematical review",
+  "base_head": "617cfaca6130addd2d16bbce6af117a55aef761b",
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-S",
+        "-B",
+        "check.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 0,
+      "seconds": 6.546999999962281,
+      "stdout": "PASS RCB26 finite source, partition, enclosure and controls\nsemantic_sha256=cd4a5bb8d46fed6ef24f1b7010e8635ff832092c75f324abac6af6d983b276d7\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-S",
+        "-O",
+        "-B",
+        "check.py",
+        "--check",
+        "result.json"
+      ],
+      "exit_code": 0,
+      "seconds": 6.39100000000326,
+      "stdout": "PASS RCB26 finite source, partition, enclosure and controls\nsemantic_sha256=cd4a5bb8d46fed6ef24f1b7010e8635ff832092c75f324abac6af6d983b276d7\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-S",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_check.py"
+      ],
+      "exit_code": 0,
+      "seconds": 6.922000000020489,
+      "stdout": "",
+      "stderr": "test_complete_small_newton_prefixes (test_check.Tests.test_complete_small_newton_prefixes) ... ok\ntest_duplicate_key_refusal (test_check.Tests.test_duplicate_key_refusal) ... ok\ntest_harmonic_enclosures (test_check.Tests.test_harmonic_enclosures) ... ok\ntest_log_enclosures (test_check.Tests.test_log_enclosures) ... ok\ntest_parity_not_radical (test_check.Tests.test_parity_not_radical) ... ok\ntest_real_cli_resealed_mutation_refusal (test_check.Tests.test_real_cli_resealed_mutation_refusal) ... ok\ntest_recorded_strict_controls (test_check.Tests.test_recorded_strict_controls) ... ok\ntest_signed_rounding (test_check.Tests.test_signed_rounding) ... ok\ntest_zero_and_nonzero_collars (test_check.Tests.test_zero_and_nonzero_collars) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 6.714s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-S",
+        "-O",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_check.py"
+      ],
+      "exit_code": 0,
+      "seconds": 6.98399999999674,
+      "stdout": "",
+      "stderr": "test_complete_small_newton_prefixes (test_check.Tests.test_complete_small_newton_prefixes) ... ok\ntest_duplicate_key_refusal (test_check.Tests.test_duplicate_key_refusal) ... ok\ntest_harmonic_enclosures (test_check.Tests.test_harmonic_enclosures) ... ok\ntest_log_enclosures (test_check.Tests.test_log_enclosures) ... ok\ntest_parity_not_radical (test_check.Tests.test_parity_not_radical) ... ok\ntest_real_cli_resealed_mutation_refusal (test_check.Tests.test_real_cli_resealed_mutation_refusal) ... ok\ntest_recorded_strict_controls (test_check.Tests.test_recorded_strict_controls) ... ok\ntest_signed_rounding (test_check.Tests.test_signed_rounding) ... ok\ntest_zero_and_nonzero_collars (test_check.Tests.test_zero_and_nonzero_collars) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 6.787s\n\nOK\n"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "external": [
+    {
+      "authors": "M. N. Huxley and N. Watt",
+      "scope": "abstract checked; classical short-source inversion background, not new proof premise",
+      "url": "https://arxiv.org/abs/1807.05890",
+      "year": 2018
+    },
+    {
+      "author": "Terence Tao",
+      "scope": "abstract checked; restricted-prime Mobius sums are established literature, no priority claim; theorem not needed for the new comparison",
+      "url": "https://arxiv.org/abs/0908.4323",
+      "year": 2009
+    }
+  ],
+  "mode": "research, not integration or independent review",
+  "not_reviewed": "No new all-scale covariance, Ising, gamma or theta component accepted. No comprehensive literature priority survey.",
+  "parent": "99101457b32b6f10f4eda88ca998048404b860ea",
+  "proof_inputs": "Finite-group orthogonality, unique factorization, Young, elementary Chebyshev estimates are proved/specialized in manuscript. Classical zeta continuation and reflection used only in the complete RH consumer. No PNT or external computation required.",
+  "read_utc": "2026-09-12T22:13:49.634507+00:00",
+  "repository": "GettysburgResearch/riemann",
+  "schema": "PPD26-sources",
+  "sources": [
+    {
+      "path": "standalone/2026-09-12-astra-crossing-cofinal/PROOF.md",
+      "pr": 848,
+      "scope": "full provided manuscript and context; causal criterion rederived; common-exponent limit optional and not a premise of new RH implication",
+      "sha": "99101457b32b6f10f4eda88ca998048404b860ea"
+    },
+    {
+      "path": "standalone/2026-09-12-astra-collision-chain-flow/newton-tail/ARITHMETIC.md",
+      "pr": 875,
+      "scope": "full text read; sharp completion-price boundary retained, not imported as a newly reviewed theorem",
+      "sha": "177cf75e93b5614c5d5f0db1e4721ac69727e5ce"
+    },
+    {
+      "pr": 869,
+      "scope": "current PR body only, four-route comparison; no theorem or numerical certificate imported",
+      "sha": "5e559c9cbf5aee84ff7ed78dc91b55df744aef56"
+    },
+    {
+      "prs": [
+        881,
+        880,
+        879,
+        878,
+        842,
+        877,
+        876,
+        874,
+        866,
+        873
+      ],
+      "scope": "latest twelve updated-PR search bodies, not full proofs or an exhaustive repo audit"
+    },
+    {
+      "pr": 751,
+      "scope": "search result only; Wick and ordinary prime-label contraction distinction retained; no import"
+    },
+    {
+      "pr": 756,
+      "scope": "search result only; prior family-to-principal individualization obligation is not assumed solved outside this explicit finite-Euler family"
+    },
+    {
+      "path": "AGENTS.md",
+      "scope": "operating guidance read at pinned base",
+      "sha": "f99d9e3908dde4865377c75d9ca051c1f545bf4f"
+    }
+  ]
+}

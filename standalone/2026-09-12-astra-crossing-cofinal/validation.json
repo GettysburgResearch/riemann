@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "executed_utc": "2026-09-12T08:46:30.759994+00:00",
+  "scope": "local complete finite packet, not whole repository or mathematical peer review",
+  "runs": [
+    {
+      "name": "producer-normal",
+      "command": [
+        "python",
+        "-S",
+        "-B",
+        "produce.py",
+        "--check",
+        "result.json",
+        "--output",
+        "/mnt/data/rh_crossing_attack/produced-normal.json"
+      ],
+      "returncode": 0,
+      "seconds": 15.952,
+      "stdout": "PASS ad8b1133d841effbefb392bcac98f3d07bd13b4e3284e383b102824cd241030d\n{'crossings': 95, 'native_panels': 34, 'product_time_cells': 5538817076, 'diagonal_groups': 2874506, 'reproduced_coefficients': 395065}\nlast [-3483861209, -3483861208]\nfake [476619897, 476619898]\n",
+      "stderr": ""
+    },
+    {
+      "name": "verifier-normal",
+      "command": [
+        "python",
+        "-S",
+        "-B",
+        "verify.py",
+        "result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_crossing_attack/verified-normal.json"
+      ],
+      "returncode": 0,
+      "seconds": 21.597,
+      "stdout": "RESEALED CORRUPTIONS REJECTED 12 DUPLICATE KEYS REJECTED\nSEPARATE REPLAY PASS ad8b1133d841effbefb392bcac98f3d07bd13b4e3284e383b102824cd241030d\n{'crossings': 95, 'native_panels': 34, 'product_time_cells': 5538817076, 'diagonal_groups': 2874506, 'reproduced_coefficients': 395065}\n",
+      "stderr": ""
+    },
+    {
+      "name": "producer-optimized",
+      "command": [
+        "python",
+        "-S",
+        "-O",
+        "-B",
+        "produce.py",
+        "--check",
+        "result.json",
+        "--output",
+        "/mnt/data/rh_crossing_attack/produced-optimized.json"
+      ],
+      "returncode": 0,
+      "seconds": 16.222,
+      "stdout": "PASS ad8b1133d841effbefb392bcac98f3d07bd13b4e3284e383b102824cd241030d\n{'crossings': 95, 'native_panels': 34, 'product_time_cells': 5538817076, 'diagonal_groups': 2874506, 'reproduced_coefficients': 395065}\nlast [-3483861209, -3483861208]\nfake [476619897, 476619898]\n",
+      "stderr": ""
+    },
+    {
+      "name": "verifier-optimized",
+      "command": [
+        "python",
+        "-S",
+        "-O",
+        "-B",
+        "verify.py",
+        "result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_crossing_attack/verified-optimized.json"
+      ],
+      "returncode": 0,
+      "seconds": 21.422,
+      "stdout": "RESEALED CORRUPTIONS REJECTED 12 DUPLICATE KEYS REJECTED\nSEPARATE REPLAY PASS ad8b1133d841effbefb392bcac98f3d07bd13b4e3284e383b102824cd241030d\n{'crossings': 95, 'native_panels': 34, 'product_time_cells': 5538817076, 'diagonal_groups': 2874506, 'reproduced_coefficients': 395065}\n",
+      "stderr": ""
+    }
+  ],
+  "all_passed": true,
+  "byte_identical": true,
+  "semantic_sha256": "ad8b1133d841effbefb392bcac98f3d07bd13b4e3284e383b102824cd241030d",
+  "software_sha256": {
+    "produce.py": "70e3ed7f0333d0639b8b0e3a24c49019363231fdcbe1837dc0036cb0808764f6",
+    "verify.py": "602dda3f24add82f187ae7240ceff2fdb783e3756f9fa2ec3ca3bf94391fb69f"
+  },
+  "same_author": true,
+  "full_repository_validation": false,
+  "RH_proof": false
+}

@@ -1,0 +1,119 @@
+{
+  "schema": "CIR26-validation-v1",
+  "prepared_utc": "2026-09-10T20:07:03.662987+00:00",
+  "python": "3.13.5",
+  "scope": "bounded packet execution; not independent mathematics or full checkout",
+  "parent": "098acb780655eb81f8b842be201596a50198e757",
+  "runs": [
+    {
+      "name": "producer-normal",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "produce.py",
+        "--check",
+        "result.json",
+        "--output",
+        "/mnt/data/rh_cubic_residual/producer-normal.json"
+      ],
+      "started_utc": "2026-09-10T20:03:50.740518+00:00",
+      "seconds": 31.187,
+      "returncode": 0,
+      "stdout": "PASS 1a3509a8baa22ba11d4b2161059845de43a494779f7bf3eb7f5131a1a79874cb\npanels 14 kernel_cells 5433258\n",
+      "stderr": "",
+      "output_matches_canonical": true
+    },
+    {
+      "name": "verifier-normal",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "verify.py",
+        "result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_cubic_residual/verifier-normal.json"
+      ],
+      "started_utc": "2026-09-10T20:04:25.610708+00:00",
+      "seconds": 32.909,
+      "returncode": 0,
+      "stdout": "RESEALED CORRUPTIONS REJECTED 12 DUPLICATE KEYS REJECTED\nSEPARATE RECONSTRUCTION PASS 1a3509a8baa22ba11d4b2161059845de43a494779f7bf3eb7f5131a1a79874cb\n",
+      "stderr": "",
+      "output_matches_canonical": true
+    },
+    {
+      "name": "producer-optimized",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "-O",
+        "produce.py",
+        "--check",
+        "result.json",
+        "--output",
+        "/mnt/data/rh_cubic_residual/producer-optimized.json"
+      ],
+      "started_utc": "2026-09-10T20:05:08.781655+00:00",
+      "seconds": 31.371,
+      "returncode": 0,
+      "stdout": "PASS 1a3509a8baa22ba11d4b2161059845de43a494779f7bf3eb7f5131a1a79874cb\npanels 14 kernel_cells 5433258\n",
+      "stderr": "",
+      "output_matches_canonical": true
+    },
+    {
+      "name": "verifier-optimized",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-S",
+        "-B",
+        "-O",
+        "verify.py",
+        "result.json",
+        "--self-test",
+        "--output",
+        "/mnt/data/rh_cubic_residual/verifier-optimized.json"
+      ],
+      "started_utc": "2026-09-10T20:05:58.864934+00:00",
+      "seconds": 33.559,
+      "returncode": 0,
+      "stdout": "RESEALED CORRUPTIONS REJECTED 12 DUPLICATE KEYS REJECTED\nSEPARATE RECONSTRUCTION PASS 1a3509a8baa22ba11d4b2161059845de43a494779f7bf3eb7f5131a1a79874cb\n",
+      "stderr": "",
+      "output_matches_canonical": true
+    }
+  ],
+  "all_runs_passed": true,
+  "reports_byte_identical": true,
+  "software": {
+    "produce.py": {
+      "sha256": "96494490e5921647ef564532bd0c71363e0861b78640a5eaf37b8f62bc11c1af",
+      "git_blob": "3d90118c94924624bde21bdb8f3184c3c6c345b4",
+      "bytes": 9302
+    },
+    "verify.py": {
+      "sha256": "4ebed59b9ce186446e86512e7269d602e10c5a885cab79b279a24f9386911117",
+      "git_blob": "e24c400a6df5fe516a7379e6549f2669fc7f3e06",
+      "bytes": 12094
+    },
+    "result.json": {
+      "sha256": "8136affd2565991da00cabf14e1515cdacfd7fd307f0082af286966271a61d8b",
+      "git_blob": "dd5ff796749a4936e939e4111606b19afcfcdf99",
+      "bytes": 10172
+    }
+  },
+  "semantic_sha256": "1a3509a8baa22ba11d4b2161059845de43a494779f7bf3eb7f5131a1a79874cb",
+  "resealed_rejections_per_verifier_mode": 12,
+  "duplicate_key_rejection_per_mode": true,
+  "prototype_failure": "First verifier incorrectly assumed the native residual gap for fake controls. Consumer now infers first actual nonzero residual; canonical producer data unchanged.",
+  "noncertifying_scout": "An early floating fake-source scout used the wrong later coordinate vector; excluded from all evidence.",
+  "not_run": [
+    "complete repository validator",
+    "parent executable suites",
+    "formal proof build",
+    "native all-scale sign",
+    "infinite raw cubic energy",
+    "remote CI"
+  ]
+}

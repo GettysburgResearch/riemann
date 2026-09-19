@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "status": "PROPOSED pending independent mathematical review",
+  "rh_proved": false,
+  "native_capture_proved": false,
+  "claims": [
+    {
+      "id": "RBR26-1",
+      "statement": "Conditional sharp annular resonance lower bound",
+      "premises": "RH; finite fixed set of critical zeros of an exact common multiplicity; native convolution identity",
+      "proof": "PROOF.md Section 1",
+      "boundary": "No actual multiple zero asserted; no all-zero summability hypothesis used"
+    },
+    {
+      "id": "RBR26-2",
+      "statement": "Bounded sparse covariance ratio imposes multiplicity at most two",
+      "premises": "RBR26-1 and RBR26-8; credited native covariance and diagonal identities rederived",
+      "proof": "PROOF.md Section 2",
+      "boundary": "Not a proof that RH and the strong sign target are logically inequivalent"
+    },
+    {
+      "id": "RBR26-3",
+      "statement": "Complete passive filter and Lyapunov tail identities",
+      "premises": "Finite positive widths; real frequencies; causal L2 input",
+      "proof": "PROOF.md Section 3",
+      "boundary": "Arbitrary repeated poles in theorem, distinct stable poles in modal fixtures"
+    },
+    {
+      "id": "RBR26-4",
+      "statement": "Sublinear-width filters preserve the off-line exponential detector",
+      "premises": "Exact native causal identity; Hardy evaluation; actual complete output norm",
+      "proof": "PROOF.md Section 4",
+      "boundary": "No native subpower upper bound; optional exponent clause imports pinned proposed XCC26"
+    },
+    {
+      "id": "RBR26-5",
+      "statement": "Finite rational-grid approximate selection",
+      "premises": "Finite grid, computable native integrals and whole tail",
+      "proof": "PROOF.md Section 5",
+      "boundary": "Not an efficient search or successful capture theorem; full grid not evaluated"
+    },
+    {
+      "id": "RBR26-6",
+      "statement": "Synthetic sharpness and native zero-frequency norm controls",
+      "premises": "Explicit rational systems; fixed finite native corpus",
+      "proof": "PROOF.md Section 7",
+      "boundary": "Not a zeta zero, source-replacement argument or all-scale numerical proof"
+    },
+    {
+      "id": "RBR26-7",
+      "statement": "Exact post-filter prefix-completion infimum with finite taper",
+      "premises": "Finite positive-width cascade and L2 prefix; numerical construction for effective data",
+      "proof": "PROOF.md Section 6",
+      "boundary": "Unfiltered continuation norm may be large; non-L2 zero dynamics not accepted; native capture open"
+    },
+    {
+      "id": "RBR26-8",
+      "statement": "Direct lower bound for every late logarithmic annulus from any hypothetical off-line zero",
+      "premises": "Elementary |m|<=1, exact native convolution, adjoint moment cancellation",
+      "proof": "PROOF.md Section 2.1",
+      "boundary": "Does not assert existence of an off-line zero or give a native upper bound"
+    },
+    {
+      "id": "RBR26-9",
+      "statement": "Commuting Euler dephasing and causal-filter source comparison",
+      "premises": "Finite geometric quotients, causal operator bounds, finite sign characters; rederived in F coordinates",
+      "proof": "PROOF.md Section 6.5",
+      "boundary": "Credit PPD26 at 9ddd3dd; common-filter Parseval not asserted for separately selected filters; native capture open"
+    }
+  ]
+}
