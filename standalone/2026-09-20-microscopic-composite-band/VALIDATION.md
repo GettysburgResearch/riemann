@@ -1,12 +1,9 @@
 # MCB31 validation and trust boundary
 
-> **Repository publication scope:** this directory contains the mathematical
-> documentation only. The complete nine-file executable companion is retained
-> in the conversation artifact `MCB31_microscopic_covariance_packet.zip`.
-> Its arithmetic-module upload was blocked by the tool; no alternate upload
-> route for that module was attempted. References below to code, receipts and
-> commands describe that tested local companion, not files present here.
-> No executable repository replay is claimed for this documentation-only commit.
+> **Publication completed:** the executable companion is now resident in this
+> directory. The earlier documentation-only publication is preserved at commit
+> `5cd394d5dfe49d153be49e9eaab02e83efdce3f1`. See [PUBLISHER.md](PUBLISHER.md)
+> for fresh replay results and the distinction from mathematical acceptance.
 
 ## Actual mathematics and finite computation are different claims
 

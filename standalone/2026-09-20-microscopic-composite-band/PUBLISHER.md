@@ -1,0 +1,5 @@
+# MCB31 publication completion
+
+Completed the documentation-only PR #904 payload at parent `5cd394d5dfe49d153be49e9eaab02e83efdce3f1` by restoring the original checker, arithmetic backend, tests and receipt. Those four files and PROOF.md match the companion exactly. Three Markdown publication notices were reconciled; no mathematical wording was changed. Original companion checksums remain in SHA256SUMS.companion, with current checksums in SHA256SUMS.
+
+Fresh default report reconstruction and receipt validation passed normally and under optimized Python. The regenerated report matches the entire supplied JSON report. Both 12-method test suites reached 11 successful methods and one environment error: Windows denied symbolic-link creation in the tamper test (WinError 1314). This is not a full test-suite PASS. Tests remain unchanged; details are in PUBLISHER_REPLAY.json. Generated reports remain outside Git. No full-checkout validator, Lean build, remote CI, or independent mathematical review was performed. Claims remain proposed and RH remains open.

@@ -1,12 +1,9 @@
 # MCB31 — collective control inside the microscopic composite band
 
-> **Repository publication scope:** this directory contains the mathematical
-> documentation only. The complete nine-file executable companion is retained
-> in the conversation artifact `MCB31_microscopic_covariance_packet.zip`.
-> Its arithmetic-module upload was blocked by the tool; no alternate upload
-> route for that module was attempted. References below to code, receipts and
-> commands describe that tested local companion, not files present here.
-> No executable repository replay is claimed for this documentation-only commit.
+> **Publication completed:** the executable companion is now resident in this
+> directory. The earlier documentation-only publication is preserved at commit
+> `5cd394d5dfe49d153be49e9eaab02e83efdce3f1`. See [PUBLISHER.md](PUBLISHER.md)
+> for fresh replay results and the distinction from mathematical acceptance.
 
 **Proposed component proofs. Independent mathematical review required.**
 The native subquadratic recurrence and RH remain open. This is an add-only
@@ -101,10 +98,10 @@ exact subtraction from independently checked native Newton output, not by a
 second exhaustive spectral sum. Prime-power/mixed-prime and native semiprime
 subledgers are also retained in the reconstructed report.
 
-## Reproduce the separately supplied executable companion
+## Reproduce
 
 No package installation is needed; use Python 3.10 or newer and the standard
-library. After extracting the conversation ZIP, from its packet directory:
+library. From this packet directory:
 
 ```sh
 python -S -B check.py --check-receipt receipt.json --write report.json
@@ -113,7 +110,7 @@ python -S -B test_check.py
 python -O -S -B test_check.py
 ```
 
-The full report is regenerated in that companion. Its `receipt.json`
+The full report is regenerated, not tracked in Git. `receipt.json`
 binds its complete canonical SHA256, producer/backend hashes, coverage and
 selected output intervals. A quick campaign is only a test fixture and is
 explicitly different from the default full report.
@@ -124,11 +121,6 @@ endpoint: 1,023. The 12-method suites, arithmetic lineage, exact source reading,
 replay boundaries and packaging checks are in VALIDATION.md and SOURCES.md.
 A finite checker does not prove the infinite component estimates.
 
-## Exact companion identity
+## Original companion identity
 
-The local executable packet contains nine files / 64,815 bytes; its Git subtree
-is `865d4dbc1713143a7516b3e0798c674eb704273c`. The full report SHA256 is
-`825800dd0f0759d787944daa23fe6cb31e5df7275b23a418e3d961e238c3c4d9`.
-Only PROOF.md is byte-identical between this documentation directory and that
-companion. The other three Markdown files add this publication boundary.
-Do not claim that the executable subtree is present in this commit.
+The supplied nine-file companion had subtree `865d4dbc1713143a7516b3e0798c674eb704273c`. Its original hashes are retained in `SHA256SUMS.companion`; `SHA256SUMS` covers the current source files including publication-note edits. Proof, checker, arithmetic backend, tests and receipt are unchanged.
