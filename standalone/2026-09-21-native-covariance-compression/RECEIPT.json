@@ -1,0 +1,95 @@
+{
+  "counts": {
+    "directed_interval": 50,
+    "endpoint_mellin_identity": 12,
+    "harmonic_primitive": 4096,
+    "integer_cube_root": 2001,
+    "mesh_cover_count": 26,
+    "mesh_step": 8364,
+    "native_block_mean": 59,
+    "native_coefficient": 1398095,
+    "native_detail_nonnegative": 10,
+    "native_detail_within_exact_budget": 10,
+    "native_mesh_budget_below_five_sixths": 10,
+    "orthogonal_energy_identity": 635,
+    "pair_distance_sum": 128,
+    "precision_mesh_bound": 12,
+    "taper_translation_identity": 16,
+    "variance_bound": 635,
+    "variance_pair_identity": 635
+  },
+  "executed_controls": [
+    {
+      "exit": 1,
+      "mode": "ordinary",
+      "mutation": "drop_mixed_product",
+      "stderr": "REFUSED: native_block_mean"
+    },
+    {
+      "exit": 1,
+      "mode": "ordinary",
+      "mutation": "drop_primitive_linear_term",
+      "stderr": "REFUSED: harmonic_primitive"
+    },
+    {
+      "exit": 1,
+      "mode": "optimized",
+      "mutation": "drop_mixed_product",
+      "stderr": "REFUSED: native_block_mean"
+    },
+    {
+      "exit": 1,
+      "mode": "optimized",
+      "mutation": "drop_primitive_linear_term",
+      "stderr": "REFUSED: harmonic_primitive"
+    },
+    {
+      "campaign": "full",
+      "exit": 1,
+      "mode": "ordinary",
+      "mutation": "altered_full_report_scope",
+      "stderr": "REFUSED: reconstructed report differs from supplied report"
+    },
+    {
+      "campaign": "full",
+      "exit": 1,
+      "mode": "optimized",
+      "mutation": "altered_full_report_scope",
+      "stderr": "REFUSED: reconstructed report differs from supplied report"
+    }
+  ],
+  "full_native_coarse_bound_proved": false,
+  "full_repository_validator": false,
+  "independent_mathematical_review": false,
+  "largest_outward_intervals": {
+    "F_Y": [
+      "1.461414527521",
+      "1.461414527522"
+    ],
+    "annular_F": [
+      "0.203275848900",
+      "0.203275848901"
+    ],
+    "coarse_S": [
+      "0.200596020299",
+      "0.200596020300"
+    ],
+    "detail_D": [
+      "0.002679828601",
+      "0.002679828602"
+    ],
+    "mesh_budget_Z": [
+      "0.223071773760",
+      "0.223071773761"
+    ]
+  },
+  "largest_panel": {
+    "Y": 1023,
+    "block_count": 2784,
+    "last_native_index": 1048575
+  },
+  "normal_and_optimized_full_reconstruction": "PASS; identical canonical report",
+  "packet": "NRC32",
+  "report_encoding": "json.dumps(sort_keys=True, indent=2, ensure_ascii=True) plus LF",
+  "report_sha256": "22fd396d1bcbdb0aa4f89c7029c72b89ae463a401fcd25894e646b1e2fb5b04a"
+}
