@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "exact_comparisons": 179941,
+  "balanced_squarefree_sources": 82,
+  "finite_completion_base": [
+    2,
+    255
+  ],
+  "worst_base_tail_over_F": {
+    "Y": 3,
+    "exact": "1/46"
+  },
+  "native": [
+    {
+      "Y": 3,
+      "L": 5,
+      "tail_energy_over_F": 0.021739130434782608
+    },
+    {
+      "Y": 7,
+      "L": 10,
+      "tail_energy_over_F": 0.00013695815928233926
+    },
+    {
+      "Y": 15,
+      "L": 17,
+      "tail_energy_over_F": 0.002747822878529406
+    },
+    {
+      "Y": 31,
+      "L": 33,
+      "tail_energy_over_F": 0.0028887931276770588
+    },
+    {
+      "Y": 63,
+      "L": 65,
+      "tail_energy_over_F": 0.00018495723865422962
+    },
+    {
+      "Y": 95,
+      "L": 97,
+      "tail_energy_over_F": 0.0012340689622788396
+    },
+    {
+      "Y": 255,
+      "L": 257,
+      "tail_energy_over_F": 1.451914451737525e-05
+    }
+  ],
+  "scope": "exact finite checks; displayed ratios are descriptive floats; infinite norm bounds are manuscript proofs"
+}

@@ -1,0 +1,236 @@
+{
+  "limits": "No quadrature error enclosure. Nothing beyond 4*T_L evaluated. Not part of exact acceptance.",
+  "method": "Composite Simpson steps 1/64 and 1/32; real-source symmetry includes both signs of t.",
+  "mpmath_version": "1.3.0",
+  "numpy_version": "2.3.5",
+  "packet": "DMC31",
+  "panels": [
+    {
+      "L": 17,
+      "T_L": 30,
+      "Y": 15,
+      "finite_bands": [
+        {
+          "absolute_mesh_difference": {
+            "D": 1.86133330970506e-11,
+            "O": 2.986450420294773e-09,
+            "P": 3.0288089813979013e-09,
+            "twice_covariance_D_O": 6.097172766672543e-11
+          },
+          "both_signs_included": true,
+          "covariance_identity_residual": 2.7755575615628914e-17,
+          "floating_energy": {
+            "D": 0.08215655047423287,
+            "O": 1.208811311322297,
+            "P": 1.3988372032453606,
+            "twice_covariance_D_O": 0.10786934144883073
+          },
+          "positive_t_interval": [
+            0,
+            30
+          ]
+        },
+        {
+          "absolute_mesh_difference": {
+            "D": 2.0558280338506263e-11,
+            "O": 2.9762853778758647e-09,
+            "P": 3.0013387816718584e-09,
+            "twice_covariance_D_O": 4.56116828334574e-11
+          },
+          "both_signs_included": true,
+          "covariance_identity_residual": 1.734723475976807e-18,
+          "floating_energy": {
+            "D": 0.002642919701031059,
+            "O": 0.03700242154804423,
+            "P": 0.0439637910248627,
+            "twice_covariance_D_O": 0.004318449775787407
+          },
+          "positive_t_interval": [
+            30,
+            120
+          ]
+        }
+      ]
+    },
+    {
+      "L": 33,
+      "T_L": 66,
+      "Y": 31,
+      "finite_bands": [
+        {
+          "absolute_mesh_difference": {
+            "D": 3.1881094986196956e-11,
+            "O": 2.353870431903715e-10,
+            "P": 8.593126210598712e-11,
+            "twice_covariance_D_O": 1.1757494283726189e-10
+          },
+          "both_signs_included": true,
+          "covariance_identity_residual": -3.191891195797325e-16,
+          "floating_energy": {
+            "D": 0.07714560469304299,
+            "O": 1.3659885111830548,
+            "P": 1.4625325431050265,
+            "twice_covariance_D_O": 0.019398427228929024
+          },
+          "positive_t_interval": [
+            0,
+            66
+          ]
+        },
+        {
+          "absolute_mesh_difference": {
+            "D": 3.1428227858718016e-11,
+            "O": 2.7335019317509257e-10,
+            "P": 1.3682080468591096e-10,
+            "twice_covariance_D_O": 1.0510115585997404e-10
+          },
+          "both_signs_included": true,
+          "covariance_identity_residual": -3.0357660829594124e-18,
+          "floating_energy": {
+            "D": 0.0009616452537855428,
+            "O": 0.02503976398138612,
+            "P": 0.027607074407940323,
+            "twice_covariance_D_O": 0.0016056651727686627
+          },
+          "positive_t_interval": [
+            66,
+            264
+          ]
+        }
+      ]
+    },
+    {
+      "L": 65,
+      "T_L": 148,
+      "Y": 63,
+      "finite_bands": [
+        {
+          "absolute_mesh_difference": {
+            "D": 1.5974999101331377e-12,
+            "O": 5.92481619321461e-12,
+            "P": 4.3049785958260145e-11,
+            "twice_covariance_D_O": 4.73767206021769e-11
+          },
+          "both_signs_included": true,
+          "covariance_identity_residual": -3.7470027081099033e-16,
+          "floating_energy": {
+            "D": 0.06524207402475266,
+            "O": 1.481788158237963,
+            "P": 1.5097723267761975,
+            "twice_covariance_D_O": -0.03725790548651771
+          },
+          "positive_t_interval": [
+            0,
+            148
+          ]
+        },
+        {
+          "absolute_mesh_difference": {
+            "D": 1.8236616643879655e-12,
+            "O": 5.616742314307199e-11,
+            "P": 1.128060110600071e-10,
+            "twice_covariance_D_O": 5.481492896305257e-11
+          },
+          "both_signs_included": true,
+          "covariance_identity_residual": -1.4094628242311558e-18,
+          "floating_energy": {
+            "D": 0.000242228617696376,
+            "O": 0.014108503927092383,
+            "P": 0.015011781541379748,
+            "twice_covariance_D_O": 0.0006610489965909908
+          },
+          "positive_t_interval": [
+            148,
+            592
+          ]
+        }
+      ]
+    },
+    {
+      "L": 129,
+      "T_L": 337,
+      "Y": 127,
+      "finite_bands": [
+        {
+          "absolute_mesh_difference": {
+            "D": 2.0664026045835726e-14,
+            "O": 4.398903463709303e-11,
+            "P": 5.095190935833216e-11,
+            "twice_covariance_D_O": 6.983510991709352e-12
+          },
+          "both_signs_included": true,
+          "covariance_identity_residual": -2.636779683484747e-16,
+          "floating_energy": {
+            "D": 0.057923460914143285,
+            "O": 1.5812418310703091,
+            "P": 1.5695103168210267,
+            "twice_covariance_D_O": -0.0696549751634254
+          },
+          "positive_t_interval": [
+            0,
+            337
+          ]
+        },
+        {
+          "absolute_mesh_difference": {
+            "D": 1.626619032610993e-14,
+            "O": 4.556507341574312e-11,
+            "P": 5.285620465617091e-11,
+            "twice_covariance_D_O": 7.307395221691979e-12
+          },
+          "both_signs_included": true,
+          "covariance_identity_residual": -1.2197274440461925e-18,
+          "floating_energy": {
+            "D": 4.381919873078116e-05,
+            "O": 0.0072456115123692814,
+            "P": 0.0074648837515563825,
+            "twice_covariance_D_O": 0.00017545304045632083
+          },
+          "positive_t_interval": [
+            337,
+            1348
+          ]
+        }
+      ]
+    }
+  ],
+  "status": "DESCRIPTIVE_FLOATING_FINITE_BANDS_NOT_CERTIFICATES",
+  "zeta_spot_comparisons": [
+    {
+      "absolute_fp_vs_60digit_difference": 2.220446049250313e-16,
+      "t": 0
+    },
+    {
+      "absolute_fp_vs_60digit_difference": 6.0116295811067406e-15,
+      "t": 0.125
+    },
+    {
+      "absolute_fp_vs_60digit_difference": 1.2622685304607575e-15,
+      "t": 3
+    },
+    {
+      "absolute_fp_vs_60digit_difference": 3.956773153607667e-15,
+      "t": 14.125
+    },
+    {
+      "absolute_fp_vs_60digit_difference": 3.855927796350635e-15,
+      "t": 30
+    },
+    {
+      "absolute_fp_vs_60digit_difference": 1.1710090180710446e-14,
+      "t": 66
+    },
+    {
+      "absolute_fp_vs_60digit_difference": 7.809533195710194e-15,
+      "t": 148
+    },
+    {
+      "absolute_fp_vs_60digit_difference": 4.102751038533318e-14,
+      "t": 337
+    },
+    {
+      "absolute_fp_vs_60digit_difference": 4.3714780648246517e-13,
+      "t": 1000
+    }
+  ]
+}
