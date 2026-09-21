@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-S",
+        "-B",
+        "check.py",
+        "--check-receipt",
+        "receipt.json",
+        "--write",
+        "C:\\Users\\gideo\\AppData\\Local\\Temp\\MCB31-publisher-report.json"
+      ],
+      "seconds": 4.518,
+      "exit_code": 0,
+      "stdout": "MCB31 PASS 825800dd0f0759d787944daa23fe6cb31e5df7275b23a418e3d961e238c3c4d9\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "-S",
+        "-B",
+        "check.py",
+        "--check-receipt",
+        "receipt.json"
+      ],
+      "seconds": 4.497,
+      "exit_code": 0,
+      "stdout": "MCB31 PASS 825800dd0f0759d787944daa23fe6cb31e5df7275b23a418e3d961e238c3c4d9\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-S",
+        "-B",
+        "test_check.py"
+      ],
+      "seconds": 1.289,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "..........E.\n======================================================================\nERROR: test_11_report_refusals (__main__.Tests.test_11_report_refusals)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\gideo\\AppData\\Local\\Temp\\publish-packets-20260919\\riemann\\standalone\\2026-09-20-microscopic-composite-band\\test_check.py\", line 127, in test_11_report_refusals\n    p.write_bytes(c.canonical(self.quick));link=Path(tmp)/'link.json';link.symlink_to(p)\n                                                                      ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\gideo\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\pathlib.py\", line 1386, in symlink_to\n    os.symlink(target, self, target_is_directory)\nOSError: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\gideo\\\\AppData\\\\Local\\\\Temp\\\\tmp_5w0t15b\\\\result.json' -> 'C:\\\\Users\\\\gideo\\\\AppData\\\\Local\\\\Temp\\\\tmp_5w0t15b\\\\link.json'\n\n----------------------------------------------------------------------\nRan 12 tests in 1.128s\n\nFAILED (errors=1)\n"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "-S",
+        "-B",
+        "test_check.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "..........E.\n======================================================================\nERROR: test_11_report_refusals (__main__.Tests.test_11_report_refusals)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\gideo\\AppData\\Local\\Temp\\publish-packets-20260919\\riemann\\standalone\\2026-09-20-microscopic-composite-band\\test_check.py\", line 127, in test_11_report_refusals\n    p.write_bytes(c.canonical(self.quick));link=Path(tmp)/'link.json';link.symlink_to(p)\n                                                                      ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\gideo\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\pathlib.py\", line 1386, in symlink_to\n    os.symlink(target, self, target_is_directory)\nOSError: [WinError 1314] A required privilege is not held by the client: 'C:\\\\Users\\\\gideo\\\\AppData\\\\Local\\\\Temp\\\\tmphp35m8lw\\\\result.json' -> 'C:\\\\Users\\\\gideo\\\\AppData\\\\Local\\\\Temp\\\\tmphp35m8lw\\\\link.json'\n\n----------------------------------------------------------------------\nRan 12 tests in 1.108s\n\nFAILED (errors=1)\n"
+    }
+  ],
+  "scope": "Packet replay only; not full-checkout validation or independent mathematical review.",
+  "full_report_matches_archive": true,
+  "test_limitation": "Both 12-method suites report 11 successful methods and one error: Windows denies creating the symbolic link required by the tamper test (WinError 1314). No test code changed or weakened."
+}

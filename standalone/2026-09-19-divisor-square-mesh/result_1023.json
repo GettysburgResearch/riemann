@@ -1,0 +1,54 @@
+{
+  "RH_proved": false,
+  "bits": 112,
+  "native_unbounded_gain_proved": false,
+  "packet": "DSE27",
+  "result": {
+    "B": 1048575,
+    "Y": 1023,
+    "annulus": {
+      "complete_error_budget": [
+        2211080820249790357671773161627788,
+        2211080820249790357671773161631756
+      ],
+      "covered_integer_cells": 1047552,
+      "energy_enclosure": [
+        0,
+        6419871310784857454365247480146977
+      ],
+      "sample_energy": [
+        1095740302891186942975548130210499,
+        1095740302891186942975548130218358
+      ]
+    },
+    "arithmetic": "integers; outward 112-bit binary intervals",
+    "finite_E_gain_certified": true,
+    "future_mobius_values_used_in_recurrence": 0,
+    "prefix_energy": [
+      7557184179077869284126844109680703,
+      7557184179077869284126844109681627
+    ],
+    "prefix_mu_sha256": "efa39a0df7c311c805106e1b6a7c53653be35fc393173f5c55dea2c67e99587c",
+    "sample_count": 3969,
+    "sample_examples": [
+      [
+        1024,
+        -4
+      ],
+      [
+        278784,
+        12
+      ],
+      [
+        1048575,
+        257
+      ]
+    ],
+    "sample_sha256": "81b4c7d8507fb949dc4477407999541182821e3ce81c0237174f63373cd1727e",
+    "total_energy": [
+      7557184179077869284126844109680703,
+      13977055489862726738492091589828604
+    ]
+  },
+  "schema": 1
+}
