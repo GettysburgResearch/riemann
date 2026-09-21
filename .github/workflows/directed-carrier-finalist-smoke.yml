@@ -1,0 +1,89 @@
+name: Directed carrier finalist smoke
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/X-4202-directed-carrier-finalist/**'
+      - '.github/workflows/directed-carrier-finalist-smoke.yml'
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install rigorous backend
+        run: python -m pip install --upgrade pip python-flint
+
+      - name: Run exact tests and compile checks
+        run: |
+          python -m unittest discover -s experiments/X-4202-directed-carrier-finalist/tests -v
+          python -m compileall -q experiments/X-4202-directed-carrier-finalist
+
+      - name: Freeze the committed finalist
+        run: |
+          python experiments/X-4202-directed-carrier-finalist/freeze_finalist.py \
+            --bits 80 \
+            --output experiments/X-4202-directed-carrier-finalist/results/finalist-p80.json
+
+      - name: Produce a 1,000,000-integer prefix at 128 bits
+        run: |
+          python experiments/X-4202-directed-carrier-finalist/directed_shard.py \
+            --finalist experiments/X-4202-directed-carrier-finalist/results/finalist-p80.json \
+            --cutoff 100000000000 \
+            --segment-size 1000000 \
+            --start-segment 0 --end-segment 1 \
+            --include-higher-powers \
+            --precision-bits 128 \
+            --output experiments/X-4202-directed-carrier-finalist/results/smoke-p128.json
+
+      - name: Reproduce the prefix at 160 bits
+        run: |
+          python experiments/X-4202-directed-carrier-finalist/directed_shard.py \
+            --finalist experiments/X-4202-directed-carrier-finalist/results/finalist-p80.json \
+            --cutoff 100000000000 \
+            --segment-size 1000000 \
+            --start-segment 0 --end-segment 1 \
+            --include-higher-powers \
+            --precision-bits 160 \
+            --output experiments/X-4202-directed-carrier-finalist/results/smoke-p160.json
+
+      - name: Check interval nesting and exact counts
+        run: |
+          python - <<'PY'
+          from fractions import Fraction
+          import json
+          from pathlib import Path
+
+          def load(name):
+              data = json.loads(Path(name).read_text())
+              interval = data['prime_rayleigh_interval']
+              def frac(endpoint):
+                  return Fraction(int(endpoint['numerator']), int(endpoint['denominator']))
+              return data, frac(interval['lower']), frac(interval['upper'])
+
+          low_data, low_l, low_u = load('experiments/X-4202-directed-carrier-finalist/results/smoke-p128.json')
+          high_data, high_l, high_u = load('experiments/X-4202-directed-carrier-finalist/results/smoke-p160.json')
+          assert low_l <= high_l <= high_u <= low_u
+          assert high_u - high_l < low_u - low_l
+          for data in (low_data, high_data):
+              assert data['prime_count'] == 78498
+              assert data['higher_prime_power_count'] == 28156
+              assert data['total_prime_power_terms'] == 106654
+              assert data['counterexample_candidate'] is None
+          PY
+
+      - name: Upload smoke artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: directed-carrier-finalist-smoke
+          path: |
+            experiments/X-4202-directed-carrier-finalist/results/finalist-p80.json
+            experiments/X-4202-directed-carrier-finalist/results/smoke-p128.json
+            experiments/X-4202-directed-carrier-finalist/results/smoke-p160.json

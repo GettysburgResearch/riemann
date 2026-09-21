@@ -1,0 +1,45 @@
+status: RIGOROUS_CORRECTION_BOUND_EMPIRICAL_MARGIN_ONLY
+parameters:
+  c: 100000000000
+  K: 1024
+  T: 94184072727073 / 20
+log_c_bounds:
+  lower: 22
+  upper: 638 / 25
+  exp_58_over_25_partial_degree_6: 110699859859 / 10986328125
+b_upper: 319 / 6400
+harmonic_index: 1022
+archimedean_operator_upper_decimal: 1.7781072071831001710267600684575205485e-10
+pole_operator_upper_decimal: 1.6672791396873303640550554380576753519e-16
+combined_operator_upper_decimal: 1.7781088744622398583571241235129586062e-10
+proved_thresholds:
+  archimedean: 1 / 5000000000
+  pole: 1 / 5000000000000000
+  combined: 1 / 4000000000
+reported_margin:
+  decimal: 0.00026896626427230785
+  classification: EMPIRICAL_ORDINARY_FLOATING_ONLY
+  greater_than_as_exact_string: 1 / 4000
+minimum_safe_threshold_scale_factor: 1000000
+exact_reconstructed_scale_ratio_against_reported_string: 1512653.5170893420514570903015198
+proof_boundary: nonprime envelope rigorous conditional on L-4202/L-4203; leading margin not directed
+
+test_corner_matrix_matches_fixed_vector_formula (test_prime_entry.PrimeEntryEventTests.test_corner_matrix_matches_fixed_vector_formula) ... ok
+test_derivative_limit (test_prime_entry.PrimeEntryEventTests.test_derivative_limit) ... ok
+test_endpoint_neutral_vector_annihilates_event (test_prime_entry.PrimeEntryEventTests.test_endpoint_neutral_vector_annihilates_event) ... ok
+test_first_cell_hat (test_prime_entry.PrimeEntryEventTests.test_first_cell_hat) ... ok
+test_first_cell_norm_cap_and_boundary_rejection (test_prime_entry.PrimeEntryEventTests.test_first_cell_norm_cap_and_boundary_rejection) ... ok
+test_nonunit_phase_rejected (test_prime_entry.PrimeEntryEventTests.test_nonunit_phase_rejected) ... ok
+test_claimed_scale_factor_cannot_be_inflated (test_verify.PiecewiseCorrectionBoundTests.test_claimed_scale_factor_cannot_be_inflated) ... ok
+test_committed_certificate (test_verify.PiecewiseCorrectionBoundTests.test_committed_certificate) ... ok
+test_empirical_margin_cannot_be_promoted (test_verify.PiecewiseCorrectionBoundTests.test_empirical_margin_cannot_be_promoted) ... ok
+test_exponential_control_is_exact (test_verify.PiecewiseCorrectionBoundTests.test_exponential_control_is_exact) ... ok
+test_harmonic_helper (test_verify.PiecewiseCorrectionBoundTests.test_harmonic_helper) ... ok
+test_mutated_total_threshold_rejected (test_verify.PiecewiseCorrectionBoundTests.test_mutated_total_threshold_rejected) ... ok
+test_parameter_mutation_rejected (test_verify.PiecewiseCorrectionBoundTests.test_parameter_mutation_rejected) ... ok
+test_small_cell_bound_is_exact (test_verify.PiecewiseCorrectionBoundTests.test_small_cell_bound_is_exact) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.016s
+
+OK

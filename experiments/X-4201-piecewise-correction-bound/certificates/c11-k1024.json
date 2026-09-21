@@ -1,0 +1,29 @@
+{
+  "K": 1024,
+  "T_decimal": "4709203636353.65",
+  "c": "100000000000",
+  "claimed": {
+    "arch_upper_threshold": {
+      "denominator": "5000000000",
+      "numerator": "1"
+    },
+    "empirical_margin_lower": {
+      "denominator": "4000",
+      "numerator": "1"
+    },
+    "minimum_scale_factor": "1000000",
+    "pole_upper_threshold": {
+      "denominator": "5000000000000000",
+      "numerator": "1"
+    },
+    "status": "RIGOROUS_CORRECTION_BOUND_EMPIRICAL_MARGIN_ONLY",
+    "total_upper_threshold": {
+      "denominator": "4000000000",
+      "numerator": "1"
+    }
+  },
+  "kind": "optimized-carrier-nonprime-operator-gate",
+  "margin_classification": "EMPIRICAL_ORDINARY_FLOATING_ONLY",
+  "reported_leading_margin_decimal": "0.00026896626427230785",
+  "schema": "riemann.piecewise-correction-bound.v1"
+}

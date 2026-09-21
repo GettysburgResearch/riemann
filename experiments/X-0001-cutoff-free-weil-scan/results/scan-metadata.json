@@ -1,0 +1,127 @@
+{
+  "aggregate": {
+    "cells": 82,
+    "empirical_negative_cells": 0,
+    "precision_unstable_cells": 0
+  },
+  "experiment_id": "X-0001",
+  "raw_output_sha256": {
+    "baseline.json": "8b69c177ab3dc30858254c51711a498643fa6cf82e7a14153b1c252c3e9f8e4a",
+    "extended.json": "e3ab0ae4dd70e882593931a9e57819cd8933c5c235159056fe8452e935114650",
+    "log-grid.json": "a76557f8557620669aebf272ab0577dd49a98a8755dbe6c6ce7e4355e072e870"
+  },
+  "retention_note": "Raw JSON is not committed; regenerate with run.py. Digests identify the session outputs summarized in the report.",
+  "scans": [
+    {
+      "environment": {
+        "mpmath": "1.3.0",
+        "platform": "Linux-6.12.13-x86_64-with-glibc2.41",
+        "python": "3.13.5 (main, May  5 2026, 21:05:52) [GCC 14.2.0]"
+      },
+      "generated_utc": "2026-07-22T19:16:32.726679+00:00",
+      "name": "baseline",
+      "parameters": {
+        "bands": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "cutoffs": [
+          "2",
+          "3",
+          "5",
+          "7",
+          "11",
+          "13"
+        ],
+        "dps": 60,
+        "guard_dps": 90
+      },
+      "summary": {
+        "cells": 24,
+        "empirical_negative_cells": [],
+        "precision_unstable_cells": []
+      }
+    },
+    {
+      "environment": {
+        "mpmath": "1.3.0",
+        "platform": "Linux-6.12.13-x86_64-with-glibc2.41",
+        "python": "3.13.5 (main, May  5 2026, 21:05:52) [GCC 14.2.0]"
+      },
+      "generated_utc": "2026-07-22T19:16:59.224354+00:00",
+      "name": "extended",
+      "parameters": {
+        "bands": [
+          4,
+          8,
+          12
+        ],
+        "cutoffs": [
+          "17",
+          "19",
+          "23",
+          "29",
+          "31",
+          "37",
+          "41",
+          "43",
+          "47",
+          "53",
+          "59",
+          "61",
+          "67",
+          "100"
+        ],
+        "dps": 90,
+        "guard_dps": 130
+      },
+      "summary": {
+        "cells": 42,
+        "empirical_negative_cells": [],
+        "precision_unstable_cells": []
+      }
+    },
+    {
+      "environment": {
+        "mpmath": "1.3.0",
+        "platform": "Linux-6.12.13-x86_64-with-glibc2.41",
+        "python": "3.13.5 (main, May  5 2026, 21:05:52) [GCC 14.2.0]"
+      },
+      "generated_utc": "2026-07-22T19:17:14.009244+00:00",
+      "name": "log-grid",
+      "parameters": {
+        "bands": [
+          8
+        ],
+        "cutoffs": [
+          "2",
+          "2.59594007310465313",
+          "3.36945243157529539",
+          "4.37344829577311245",
+          "5.67660484432433776",
+          "7.36806299728077363",
+          "9.56352499790036958",
+          "12.4131688910938358",
+          "16.1119212793032673",
+          "20.9127910518254687",
+          "27.1441761659490801",
+          "35.2323273302997109",
+          "45.7305051927326502",
+          "59.3568254965675237",
+          "77.0433809594098733",
+          "100.000000000000043"
+        ],
+        "dps": 70,
+        "guard_dps": 100
+      },
+      "summary": {
+        "cells": 16,
+        "empirical_negative_cells": [],
+        "precision_unstable_cells": []
+      }
+    }
+  ],
+  "status": "EMPIRICAL_NOT_CERTIFIED"
+}
