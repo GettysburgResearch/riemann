@@ -1,0 +1,1735 @@
+{
+  "cascade_jumps": {
+    "fejer": {
+      "4": {
+        "deficit": null,
+        "loewner_neg": null,
+        "sign": null
+      },
+      "6": {
+        "deficit": null,
+        "loewner_neg": null,
+        "sign": null
+      }
+    },
+    "hard": {
+      "4": {
+        "deficit": 0.97,
+        "loewner_neg": 0.97,
+        "sign": 0.995
+      },
+      "6": {
+        "deficit": 0.975,
+        "loewner_neg": 0.975,
+        "sign": 0.995
+      }
+    }
+  },
+  "content_sha256": "d854bf3da83ebed161e0d58b299ad0659ac773fabbb51d5ef1762fd8c6bf076b",
+  "disclaimer": "Float Loewner; Fejer via mpmath.quad. Cascade alphas are grid-limited.",
+  "rows": [
+    {
+      "N": 4,
+      "alpha": 1.02,
+      "deficit": 0,
+      "flip_edges": [
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        }
+      ],
+      "loewner_n_neg": 0,
+      "loewner_neg_sum": 0.0,
+      "sign_changes": 2,
+      "sign_pattern": "----+----",
+      "window": "hard"
+    },
+    {
+      "N": 4,
+      "alpha": 1.0,
+      "deficit": 0,
+      "flip_edges": [
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        }
+      ],
+      "loewner_n_neg": 0,
+      "loewner_neg_sum": 0.0,
+      "sign_changes": 2,
+      "sign_pattern": "----+----",
+      "window": "hard"
+    },
+    {
+      "N": 4,
+      "alpha": 0.995,
+      "deficit": 0,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 0,
+      "loewner_neg_sum": 0.0,
+      "sign_changes": 6,
+      "sign_pattern": "--+-+-+--",
+      "window": "hard"
+    },
+    {
+      "N": 4,
+      "alpha": 0.99,
+      "deficit": 0,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 0,
+      "loewner_neg_sum": 0.0,
+      "sign_changes": 6,
+      "sign_pattern": "--+-+-+--",
+      "window": "hard"
+    },
+    {
+      "N": 4,
+      "alpha": 0.985,
+      "deficit": 0,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 0,
+      "loewner_neg_sum": 0.0,
+      "sign_changes": 6,
+      "sign_pattern": "--+-+-+--",
+      "window": "hard"
+    },
+    {
+      "N": 4,
+      "alpha": 0.98,
+      "deficit": 0,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 0,
+      "loewner_neg_sum": 0.0,
+      "sign_changes": 6,
+      "sign_pattern": "--+-+-+--",
+      "window": "hard"
+    },
+    {
+      "N": 4,
+      "alpha": 0.975,
+      "deficit": 0,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 0,
+      "loewner_neg_sum": 0.0,
+      "sign_changes": 6,
+      "sign_pattern": "--+-+-+--",
+      "window": "hard"
+    },
+    {
+      "N": 4,
+      "alpha": 0.97,
+      "deficit": 4,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 2,
+      "loewner_neg_sum": -0.2594924451470951,
+      "sign_changes": 6,
+      "sign_pattern": "--+-+-+--",
+      "window": "hard"
+    },
+    {
+      "N": 4,
+      "alpha": 0.965,
+      "deficit": 4,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 2,
+      "loewner_neg_sum": -0.5729827560696015,
+      "sign_changes": 6,
+      "sign_pattern": "--+-+-+--",
+      "window": "hard"
+    },
+    {
+      "N": 4,
+      "alpha": 0.96,
+      "deficit": 4,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 2,
+      "loewner_neg_sum": -0.8101683845170939,
+      "sign_changes": 6,
+      "sign_pattern": "--+-+-+--",
+      "window": "hard"
+    },
+    {
+      "N": 6,
+      "alpha": 1.02,
+      "deficit": 0,
+      "flip_edges": [
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        }
+      ],
+      "loewner_n_neg": 0,
+      "loewner_neg_sum": 0.0,
+      "sign_changes": 2,
+      "sign_pattern": "------+------",
+      "window": "hard"
+    },
+    {
+      "N": 6,
+      "alpha": 1.0,
+      "deficit": 0,
+      "flip_edges": [
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        }
+      ],
+      "loewner_n_neg": 0,
+      "loewner_neg_sum": 0.0,
+      "sign_changes": 2,
+      "sign_pattern": "------+------",
+      "window": "hard"
+    },
+    {
+      "N": 6,
+      "alpha": 0.995,
+      "deficit": 0,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 0,
+      "loewner_neg_sum": 0.0,
+      "sign_changes": 6,
+      "sign_pattern": "----+-+-+----",
+      "window": "hard"
+    },
+    {
+      "N": 6,
+      "alpha": 0.99,
+      "deficit": 0,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 0,
+      "loewner_neg_sum": 0.0,
+      "sign_changes": 6,
+      "sign_pattern": "----+-+-+----",
+      "window": "hard"
+    },
+    {
+      "N": 6,
+      "alpha": 0.985,
+      "deficit": 0,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 0,
+      "loewner_neg_sum": 0.0,
+      "sign_changes": 6,
+      "sign_pattern": "----+-+-+----",
+      "window": "hard"
+    },
+    {
+      "N": 6,
+      "alpha": 0.98,
+      "deficit": 0,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 0,
+      "loewner_neg_sum": 0.0,
+      "sign_changes": 6,
+      "sign_pattern": "----+-+-+----",
+      "window": "hard"
+    },
+    {
+      "N": 6,
+      "alpha": 0.975,
+      "deficit": 4,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 2,
+      "loewner_neg_sum": -0.005767888030006128,
+      "sign_changes": 6,
+      "sign_pattern": "----+-+-+----",
+      "window": "hard"
+    },
+    {
+      "N": 6,
+      "alpha": 0.97,
+      "deficit": 4,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 2,
+      "loewner_neg_sum": -0.42474833625176917,
+      "sign_changes": 6,
+      "sign_pattern": "----+-+-+----",
+      "window": "hard"
+    },
+    {
+      "N": 6,
+      "alpha": 0.965,
+      "deficit": 4,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 2,
+      "loewner_neg_sum": -0.7576838146988566,
+      "sign_changes": 6,
+      "sign_pattern": "----+-+-+----",
+      "window": "hard"
+    },
+    {
+      "N": 6,
+      "alpha": 0.96,
+      "deficit": 4,
+      "flip_edges": [
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        }
+      ],
+      "loewner_n_neg": 2,
+      "loewner_neg_sum": -1.0036615315592459,
+      "sign_changes": 6,
+      "sign_pattern": "----+-+-+----",
+      "window": "hard"
+    },
+    {
+      "N": 4,
+      "alpha": 1.02,
+      "deficit": 8,
+      "flip_edges": [
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        }
+      ],
+      "loewner_n_neg": 4,
+      "loewner_neg_sum": -7.498010111430121,
+      "sign_changes": 8,
+      "sign_pattern": "+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 4,
+      "alpha": 1.0,
+      "deficit": 8,
+      "flip_edges": [
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        }
+      ],
+      "loewner_n_neg": 4,
+      "loewner_neg_sum": -7.48325984818656,
+      "sign_changes": 8,
+      "sign_pattern": "+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 4,
+      "alpha": 0.995,
+      "deficit": 8,
+      "flip_edges": [
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        }
+      ],
+      "loewner_n_neg": 4,
+      "loewner_neg_sum": -7.479899147845753,
+      "sign_changes": 8,
+      "sign_pattern": "+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 4,
+      "alpha": 0.99,
+      "deficit": 8,
+      "flip_edges": [
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        }
+      ],
+      "loewner_n_neg": 4,
+      "loewner_neg_sum": -7.476568107319892,
+      "sign_changes": 8,
+      "sign_pattern": "+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 4,
+      "alpha": 0.985,
+      "deficit": 8,
+      "flip_edges": [
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        }
+      ],
+      "loewner_n_neg": 4,
+      "loewner_neg_sum": -7.473213613630318,
+      "sign_changes": 8,
+      "sign_pattern": "+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 4,
+      "alpha": 0.98,
+      "deficit": 8,
+      "flip_edges": [
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        }
+      ],
+      "loewner_n_neg": 4,
+      "loewner_neg_sum": -7.4697812347705685,
+      "sign_changes": 8,
+      "sign_pattern": "+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 4,
+      "alpha": 0.975,
+      "deficit": 8,
+      "flip_edges": [
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        }
+      ],
+      "loewner_n_neg": 4,
+      "loewner_neg_sum": -7.4662153353382035,
+      "sign_changes": 8,
+      "sign_pattern": "+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 4,
+      "alpha": 0.97,
+      "deficit": 8,
+      "flip_edges": [
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        }
+      ],
+      "loewner_n_neg": 4,
+      "loewner_neg_sum": -7.462459207604902,
+      "sign_changes": 8,
+      "sign_pattern": "+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 4,
+      "alpha": 0.965,
+      "deficit": 8,
+      "flip_edges": [
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        }
+      ],
+      "loewner_n_neg": 4,
+      "loewner_neg_sum": -7.458455218267404,
+      "sign_changes": 8,
+      "sign_pattern": "+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 4,
+      "alpha": 0.96,
+      "deficit": 8,
+      "flip_edges": [
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        }
+      ],
+      "loewner_n_neg": 4,
+      "loewner_neg_sum": -7.454144970960083,
+      "sign_changes": 8,
+      "sign_pattern": "+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 6,
+      "alpha": 1.02,
+      "deficit": 12,
+      "flip_edges": [
+        {
+          "left_node": -6,
+          "right_node": -5
+        },
+        {
+          "left_node": -5,
+          "right_node": -4
+        },
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        },
+        {
+          "left_node": 4,
+          "right_node": 5
+        },
+        {
+          "left_node": 5,
+          "right_node": 6
+        }
+      ],
+      "loewner_n_neg": 6,
+      "loewner_neg_sum": -10.362403907940232,
+      "sign_changes": 12,
+      "sign_pattern": "+-+-+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 6,
+      "alpha": 1.0,
+      "deficit": 12,
+      "flip_edges": [
+        {
+          "left_node": -6,
+          "right_node": -5
+        },
+        {
+          "left_node": -5,
+          "right_node": -4
+        },
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        },
+        {
+          "left_node": 4,
+          "right_node": 5
+        },
+        {
+          "left_node": 5,
+          "right_node": 6
+        }
+      ],
+      "loewner_n_neg": 6,
+      "loewner_neg_sum": -10.218661774421978,
+      "sign_changes": 12,
+      "sign_pattern": "+-+-+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 6,
+      "alpha": 0.995,
+      "deficit": 12,
+      "flip_edges": [
+        {
+          "left_node": -6,
+          "right_node": -5
+        },
+        {
+          "left_node": -5,
+          "right_node": -4
+        },
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        },
+        {
+          "left_node": 4,
+          "right_node": 5
+        },
+        {
+          "left_node": 5,
+          "right_node": 6
+        }
+      ],
+      "loewner_n_neg": 6,
+      "loewner_neg_sum": -10.18529182295497,
+      "sign_changes": 12,
+      "sign_pattern": "+-+-+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 6,
+      "alpha": 0.99,
+      "deficit": 12,
+      "flip_edges": [
+        {
+          "left_node": -6,
+          "right_node": -5
+        },
+        {
+          "left_node": -5,
+          "right_node": -4
+        },
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        },
+        {
+          "left_node": 4,
+          "right_node": 5
+        },
+        {
+          "left_node": 5,
+          "right_node": 6
+        }
+      ],
+      "loewner_n_neg": 6,
+      "loewner_neg_sum": -10.15286223254192,
+      "sign_changes": 12,
+      "sign_pattern": "+-+-+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 6,
+      "alpha": 0.985,
+      "deficit": 12,
+      "flip_edges": [
+        {
+          "left_node": -6,
+          "right_node": -5
+        },
+        {
+          "left_node": -5,
+          "right_node": -4
+        },
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        },
+        {
+          "left_node": 4,
+          "right_node": 5
+        },
+        {
+          "left_node": 5,
+          "right_node": 6
+        }
+      ],
+      "loewner_n_neg": 6,
+      "loewner_neg_sum": -10.121325932541794,
+      "sign_changes": 12,
+      "sign_pattern": "+-+-+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 6,
+      "alpha": 0.98,
+      "deficit": 12,
+      "flip_edges": [
+        {
+          "left_node": -6,
+          "right_node": -5
+        },
+        {
+          "left_node": -5,
+          "right_node": -4
+        },
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        },
+        {
+          "left_node": 4,
+          "right_node": 5
+        },
+        {
+          "left_node": 5,
+          "right_node": 6
+        }
+      ],
+      "loewner_n_neg": 6,
+      "loewner_neg_sum": -10.090633522471508,
+      "sign_changes": 12,
+      "sign_pattern": "+-+-+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 6,
+      "alpha": 0.975,
+      "deficit": 12,
+      "flip_edges": [
+        {
+          "left_node": -6,
+          "right_node": -5
+        },
+        {
+          "left_node": -5,
+          "right_node": -4
+        },
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        },
+        {
+          "left_node": 4,
+          "right_node": 5
+        },
+        {
+          "left_node": 5,
+          "right_node": 6
+        }
+      ],
+      "loewner_n_neg": 6,
+      "loewner_neg_sum": -10.060733323480372,
+      "sign_changes": 12,
+      "sign_pattern": "+-+-+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 6,
+      "alpha": 0.97,
+      "deficit": 12,
+      "flip_edges": [
+        {
+          "left_node": -6,
+          "right_node": -5
+        },
+        {
+          "left_node": -5,
+          "right_node": -4
+        },
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        },
+        {
+          "left_node": 4,
+          "right_node": 5
+        },
+        {
+          "left_node": 5,
+          "right_node": 6
+        }
+      ],
+      "loewner_n_neg": 6,
+      "loewner_neg_sum": -10.031571453386091,
+      "sign_changes": 12,
+      "sign_pattern": "+-+-+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 6,
+      "alpha": 0.965,
+      "deficit": 12,
+      "flip_edges": [
+        {
+          "left_node": -6,
+          "right_node": -5
+        },
+        {
+          "left_node": -5,
+          "right_node": -4
+        },
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        },
+        {
+          "left_node": 4,
+          "right_node": 5
+        },
+        {
+          "left_node": 5,
+          "right_node": 6
+        }
+      ],
+      "loewner_n_neg": 6,
+      "loewner_neg_sum": -10.003091927168855,
+      "sign_changes": 12,
+      "sign_pattern": "+-+-+-+-+-+-+",
+      "window": "fejer"
+    },
+    {
+      "N": 6,
+      "alpha": 0.96,
+      "deficit": 12,
+      "flip_edges": [
+        {
+          "left_node": -6,
+          "right_node": -5
+        },
+        {
+          "left_node": -5,
+          "right_node": -4
+        },
+        {
+          "left_node": -4,
+          "right_node": -3
+        },
+        {
+          "left_node": -3,
+          "right_node": -2
+        },
+        {
+          "left_node": -2,
+          "right_node": -1
+        },
+        {
+          "left_node": -1,
+          "right_node": 0
+        },
+        {
+          "left_node": 0,
+          "right_node": 1
+        },
+        {
+          "left_node": 1,
+          "right_node": 2
+        },
+        {
+          "left_node": 2,
+          "right_node": 3
+        },
+        {
+          "left_node": 3,
+          "right_node": 4
+        },
+        {
+          "left_node": 4,
+          "right_node": 5
+        },
+        {
+          "left_node": 5,
+          "right_node": 6
+        }
+      ],
+      "loewner_n_neg": 6,
+      "loewner_neg_sum": -9.975236784594566,
+      "sign_changes": 12,
+      "sign_pattern": "+-+-+-+-+-+-+",
+      "window": "fejer"
+    }
+  ],
+  "schema": "riemann.x8455.comp13.v1",
+  "status": "EMPIRICAL_PROVISIONAL",
+  "suggested_questions_for_other_agents": [
+    "Are the precursor flip edges always the outermost ones, or near zero?",
+    "Does Fejer destroy the precursor gap between sign jump and deficit jump?",
+    "Is loewner_n_neg synchronized with deficit, not with sign_changes?"
+  ]
+}
