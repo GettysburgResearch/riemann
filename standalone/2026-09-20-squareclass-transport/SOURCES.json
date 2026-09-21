@@ -1,0 +1,22 @@
+{
+  "schema": "STC26-sources-1",
+  "date": "2026-09-20",
+  "repository": "GettysburgResearch/riemann",
+  "parent": "862f93aad76d0768b08bd9a12f6764d15e2cad63",
+  "branch": "research/sylvester-cutoff-boundary-20260919",
+  "repository_inputs": [
+    {"path": "standalone/2026-09-20-prime-extension-transport/PROOF.md", "scope": "Full proof read from the supplied published archive; live PR head confirmed. P_b, finite d_b/h_b, their asymptotic and the conditional energy consumer are inherited."},
+    {"path": "standalone/2026-09-20-prime-extension-transport/exact.py", "scope": "Copied unchanged with attribution. Integer-directed interval primitives only; no mathematical independence is claimed for this shared layer."},
+    {"path": "standalone/2026-09-20-prime-extension-transport/result.json", "scope": "All seven physical-energy, mean, completed-state and prime-transport panels compared for interval overlap after independent current reconstruction."},
+    {"path": "standalone/2026-09-19-newton-rough-core/PROOF.md", "scope": "Sections 1-5 read live at the frozen parent. Rough parity core and elementary growing-bank bounds inform the new proof. Its harmonic constants and covariance values are NOT imported into the physical kernel."},
+    {"path": "standalone/2026-09-13-astra-prime-dephasing/PROOF.md", "scope": "Prior source in conversation, with causal Euler comparison and finite-sign Parseval credited. The degree-two all-inert argument is supplied afresh, not presumed from its degree-one estimate."},
+    {"issue": 738, "scope": "Existing quadratic GL(2) programme, with explicitly declared CM cubic-twist extension. Artificial inert-square sign changes are neither genuine quadratic nor claimed automorphic twists."}
+  ],
+  "external_inputs": [
+    {"authors": "Ashay A. Burungale and Ye Tian", "title": "A proof of Sylvester's conjecture", "version": "arXiv:2609.14893v2, 15 September 2026", "url": "https://arxiv.org/abs/2609.14893v2", "scope": "Previously supplied paper: E_m model and rank-one Theorem 1.1. This pass uses the rank theorem only to specialize the independently derived central-stripping warning. No independent certification of the global paper is claimed."},
+    {"title": "NIST DLMF 27.12, especially equation 27.12.8", "url": "https://dlmf.nist.gov/27.12", "accessed": "2026-09-20", "scope": "Ordinary fixed-progression PNT, used by partial summation for the good-inert reciprocal prime sum and Euler product asymptotics. No GRH-strength error term is used."},
+    {"authors": "Alessandro Languasco and Alessandro Zaccagnini", "title": "On the constant in the Mertens product for arithmetic progressions. I. Identities", "url": "https://arxiv.org/abs/0706.2807", "scope": "Bibliographic reconnaissance only: abstract and version history read. Not a dependency for an uninspected theorem; the required asymptotic is derived from the DLMF fixed-progression statement."}
+  ],
+  "attribution": "Euler products, squarefree counting, character orthogonality, summation by parts and causal Young estimates are classical. No broad priority claim. New to this continuation: exact PET transport matching and its required-side sector estimate; the corresponding average/individualization obstruction; complete inert-sector causal restoration, finite Parseval fixtures and central-rank warning.",
+  "not_claimed": ["full harmonic covariance transfer", "native unmatched negative bound", "full Newton gain", "RH or GRH proof", "global elliptic rank or zero computation", "independent mathematical review"]
+}

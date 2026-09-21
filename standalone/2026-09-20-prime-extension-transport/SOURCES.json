@@ -1,0 +1,68 @@
+{
+  "external": [
+    {
+      "input": "Dirichlet convolution, Mobius inversion, log n=sum Lambda; read online this pass",
+      "url": "https://dlmf.nist.gov/27.5"
+    },
+    {
+      "input": "classical PNT only; no RH-strength error term used",
+      "url": "https://dlmf.nist.gov/27.12"
+    },
+    {
+      "authors": "M. N. Huxley and N. Watt",
+      "input": "classical short-source inversion attribution; abstract reread, not full-paper re-audit",
+      "title": "Mertens Sums requiring Fewer Values of the Mobius function",
+      "url": "https://arxiv.org/abs/1807.05890"
+    },
+    {
+      "authors": "Ashay A. Burungale and Ye Tian",
+      "input": "provided PDF and previous packet; page 2 rendered/rechecked for Theorem 1.1; online PDF refetch failed this pass; no fresh global proof audit",
+      "pages": 48,
+      "pdf_sha256": "7b9d080156a764bc72d42f072ea44da7c32fb590d5bfb50229a76c054b70cca1",
+      "title": "A proof of Sylvester's conjecture",
+      "url": "https://arxiv.org/pdf/2609.14893",
+      "version": "2609.14893v2"
+    }
+  ],
+  "new_derivations": "PET26 finite signed bound, proof of its asymptotic constant, logarithmic defect propagation, local tail numerator, exact executions; proposed, no priority assertion",
+  "not_claimed": [
+    "RH or GRH",
+    "bound for PCR26 full product covariance",
+    "uniform negative-part prime-extension estimate",
+    "all-scale sign",
+    "formal verification",
+    "independent mathematical acceptance",
+    "current global acceptance of the Sylvester preprint"
+  ],
+  "read": [
+    {
+      "depth": "full; SBC26 physical/harmonic distinction, prime block and individual-prime bound",
+      "path": "standalone/2026-09-19-sylvester-cutoff-boundary/PROOF_NOTES.md",
+      "ref": "519252721d8b4e4c70c0fd1f21d8c9465242b338"
+    },
+    {
+      "blob": "11c33f1ceb0b3fa9d72825197d679c6cba249710",
+      "depth": "provided full local packet; live prefix and blob ID checked",
+      "path": "standalone/2026-09-19-sylvester-boundary-execution/PROOF.md",
+      "ref": "519252721d8b4e4c70c0fd1f21d8c9465242b338"
+    },
+    {
+      "depth": "sections 1-6 returned; not a full re-audit of the packet",
+      "path": "standalone/2026-09-19-newton-rough-core/PROOF.md",
+      "ref": "7de75c02417d5d8db7eafb1ceba364380e72d16a"
+    },
+    {
+      "depth": "counterfamily and beginning of section 4; not a full code replay",
+      "path": "standalone/2026-09-19-newton-resonance-stress/PROOF.md",
+      "ref": "7de75c02417d5d8db7eafb1ceba364380e72d16a"
+    },
+    {
+      "depth": "first 180 lines; causal dilation context, not imported quantitative theorem",
+      "path": "standalone/2026-09-13-astra-prime-dephasing/PROOF.md",
+      "ref": "7de75c02417d5d8db7eafb1ceba364380e72d16a"
+    }
+  ],
+  "repository": "GettysburgResearch/riemann",
+  "review_snapshot": "519252721d8b4e4c70c0fd1f21d8c9465242b338",
+  "schema": "PET26-sources-1"
+}

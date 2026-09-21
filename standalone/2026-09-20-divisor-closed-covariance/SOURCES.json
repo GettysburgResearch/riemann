@@ -1,0 +1,38 @@
+{
+  "snapshot": "530cc8f706b1f1e3dc7aff77efdced82e4ac73ad",
+  "repository": "GettysburgResearch/riemann",
+  "date": "2026-09-20",
+  "sources": [
+    {
+      "path": "standalone/2026-09-20-squareclass-transport/",
+      "use": "STC26 source/observable, prior negative matched sector and exact interval utilities; local supplied archive and live PR metadata checked",
+      "status": "proposed component predecessor; not independently accepted"
+    },
+    {
+      "path": "standalone/2026-09-20-prime-extension-transport/PROOF.md",
+      "use": "PET26 observable, complete physical energy and conditional consumer; read complete local supplied archive",
+      "status": "proposed predecessor, not re-certified globally"
+    },
+    {
+      "path": "standalone/2026-09-19-newton-rough-core/PROOF.md",
+      "use": "RCB26 harmonic kernel overlap, rough-squareclass envelope and capped-source consumer; live source sections 1-6 read; kernel overlap rederived here",
+      "status": "proposed predecessor; no wholesale validation claimed"
+    },
+    {
+      "url": "https://dlmf.nist.gov/27.5",
+      "use": "classical Dirichlet convolution and Mobius inversion, especially equations 27.5.1-27.5.5",
+      "status": "external classical reference"
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.16",
+      "use": "scope check: ordinary prime asymptotics are distinct from RH-strength error estimates; no external zero theorem used in new bounds",
+      "status": "external scope reference"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.14893",
+      "version": "v2 user-supplied in previous passes",
+      "use": "context only: CM cubic-twist E_17 reference family inherited from BCP26/SBC26/STC26. This pass makes no fresh global paper certification or claim of importing its division boundary to zeta."
+    }
+  ],
+  "priority": "No priority claim for convolution, divisor closure, LCM inversion, shifted divisor moment inequalities, or generic Cauchy bounds. These are explicit applications in the frozen programme."
+}
