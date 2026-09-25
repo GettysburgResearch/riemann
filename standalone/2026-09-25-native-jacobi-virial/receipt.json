@@ -1,0 +1,436 @@
+{
+  "arithmetic": "integers, exact Fractions, explicit outward dyadic log bounds",
+  "not_established": [
+    "independent mathematical review",
+    "proof-assistant verification",
+    "repository-wide CI",
+    "new asymptotic bound for native E_N",
+    "identification with full Newton or Weil covariance",
+    "RH"
+  ],
+  "predicate_counts": {
+    "centered_reciprocal_variance": 48,
+    "character_multiplicativity_control": 7938,
+    "dilation_boundary_scale_identity": 432,
+    "direct_vs_hyperbola_correlations": 86,
+    "directed_log2_sanity": 1,
+    "directed_log_moment_positive": 8,
+    "directed_positive_resolvent": 8,
+    "directed_resolvent_upper": 8,
+    "dirichlet_energy_identity": 48,
+    "dirichlet_inverse_coefficients": 4095,
+    "discrete_poisson_equation": 1176,
+    "exact_common_denominator": 8,
+    "exact_dilation_schur_renormalization": 140,
+    "exact_jacobi_recurrence": 20,
+    "exact_resolvent_green_moments": 441,
+    "exact_weight_orthogonality": 441,
+    "factor_order_schur_coherence": 6,
+    "finite_green_inverse_entries": 38024,
+    "hypergeometric_recurrence_match": 21,
+    "liouville_source_gauge": 4095,
+    "logarithmic_convolution_prime_coefficients": 9514,
+    "native_energy_quadratic": 48,
+    "native_escape_signed_count": 256,
+    "positive_schur_pivots": 1699,
+    "prime_insertion_control_after": 1,
+    "prime_insertion_control_before": 1,
+    "rank_one_boundary_entries": 38024,
+    "reciprocal_mean_boundary": 48,
+    "reject_corrupted_primitive_source": 1,
+    "reject_omitted_prime_power_channels": 6,
+    "reject_omitted_rank_one_boundary": 1,
+    "reject_omitted_rounding_boundary": 1,
+    "reject_wrong_spectral_normalization": 1,
+    "retained_arithmetic_indices": 140,
+    "squarefree_weighted_escape_nonnegative": 100,
+    "ward_identity_all_prime_log_coefficients": 8
+  },
+  "source": {
+    "authenticated_through": 4095,
+    "prime_insertion_counterexample": {
+      "N": 5,
+      "added_prime": 3,
+      "new_energy": "2/3",
+      "old_energy": "1/2",
+      "old_primes": [
+        2
+      ]
+    },
+    "source_sha256": "33aea237fa900554ad596061de748e6606f95e8c9c67a6beeae4e660e3bde888"
+  },
+  "spectral_checks": {
+    "first_polynomials_in_t_squared": [
+      [
+        "1"
+      ],
+      [
+        "7/8",
+        "-1/2"
+      ],
+      [
+        "51/64",
+        "-19/24",
+        "1/12"
+      ]
+    ],
+    "max_polynomial_degree": 20,
+    "pairs": 441,
+    "rho_moments_first_five": [
+      "1",
+      "3/4",
+      "25/16",
+      "427/64",
+      "12465/256"
+    ]
+  },
+  "status": "proposed component comparisons, not a native asymptotic improvement or RH proof",
+  "twisted_panels": {
+    "mod3": {
+      "E": {
+        "denominator": 1099511627776,
+        "display": [
+          3.341397040643642,
+          3.3413970406445515
+        ],
+        "lower_numerator": 3673904899204,
+        "upper_numerator": 3673904899205
+      },
+      "N": 255,
+      "Q_positive_resolvent": {
+        "denominator": 1099511627776,
+        "display": [
+          3.789142577114035,
+          3.7891425771149443
+        ],
+        "lower_numerator": 4166206322838,
+        "upper_numerator": 4166206322839
+      },
+      "V_log_moment": {
+        "denominator": 1099511627776,
+        "display": [
+          5.779241623186863,
+          5.779241623187772
+        ],
+        "lower_numerator": 6354343364421,
+        "upper_numerator": 6354343364422
+      },
+      "W_complete_covariance": {
+        "denominator": 1099511627776,
+        "display": [
+          -1.9900990460737376,
+          -1.990099046072828
+        ],
+        "lower_numerator": -2188137041584,
+        "upper_numerator": -2188137041583
+      },
+      "common_denominator_bits": 363,
+      "mertens": 3,
+      "prime_power_channels": 69,
+      "symbolic_coefficients_sha256": "36a7908d11e46bb34befbf8dbeeed574db358836c8f9792fb976ddc38499b24f"
+    },
+    "mod4": {
+      "E": {
+        "denominator": 1099511627776,
+        "display": [
+          1.9650296217705545,
+          1.965029621771464
+        ],
+        "lower_numerator": 2160572918061,
+        "upper_numerator": 2160572918062
+      },
+      "N": 255,
+      "Q_positive_resolvent": {
+        "denominator": 1099511627776,
+        "display": [
+          2.0097642161554177,
+          2.009764216156327
+        ],
+        "lower_numerator": 2209759124751,
+        "upper_numerator": 2209759124752
+      },
+      "V_log_moment": {
+        "denominator": 1099511627776,
+        "display": [
+          3.278924210311743,
+          3.2789242103126526
+        ],
+        "lower_numerator": 3605215295834,
+        "upper_numerator": 3605215295835
+      },
+      "W_complete_covariance": {
+        "denominator": 1099511627776,
+        "display": [
+          -1.269159994157235,
+          -1.2691599941563254
+        ],
+        "lower_numerator": -1395456171084,
+        "upper_numerator": -1395456171083
+      },
+      "common_denominator_bits": 363,
+      "mertens": 9,
+      "prime_power_channels": 69,
+      "symbolic_coefficients_sha256": "df3518a5894cfefb62c50aeada5ce5add91f7161ff2ffb2bafa609b8c72143b8"
+    }
+  },
+  "ward_panels": [
+    {
+      "E": {
+        "denominator": 1099511627776,
+        "display": [
+          1.2382457319827154,
+          1.2382457319836249
+        ],
+        "lower_numerator": 1361465580359,
+        "upper_numerator": 1361465580360
+      },
+      "N": 31,
+      "Q_positive_resolvent": {
+        "denominator": 1099511627776,
+        "display": [
+          0.40596456412004045,
+          0.40596456412094994
+        ],
+        "lower_numerator": 446362758715,
+        "upper_numerator": 446362758716
+      },
+      "V_log_moment": {
+        "denominator": 1099511627776,
+        "display": [
+          1.746443209323843,
+          1.7464432093247524
+        ],
+        "lower_numerator": 1920234615902,
+        "upper_numerator": 1920234615903
+      },
+      "W_complete_covariance": {
+        "denominator": 1099511627776,
+        "display": [
+          -1.340478645204712,
+          -1.3404786452038024
+        ],
+        "lower_numerator": -1473871857188,
+        "upper_numerator": -1473871857187
+      },
+      "common_denominator_bits": 48,
+      "mertens": -4,
+      "prime_power_channels": 17,
+      "symbolic_coefficients_sha256": "e07bf1082749877932d6f743874a8011929e8c79166f98d032742fc6d1ce50fc"
+    },
+    {
+      "E": {
+        "denominator": 1099511627776,
+        "display": [
+          1.3172650507103754,
+          1.3172650507112849
+        ],
+        "lower_numerator": 1448348240119,
+        "upper_numerator": 1448348240120
+      },
+      "N": 63,
+      "Q_positive_resolvent": {
+        "denominator": 1099511627776,
+        "display": [
+          0.5245382601287929,
+          0.5245382601297024
+        ],
+        "lower_numerator": 576735916225,
+        "upper_numerator": 576735916226
+      },
+      "V_log_moment": {
+        "denominator": 1099511627776,
+        "display": [
+          2.041898222438249,
+          2.0418982224391584
+        ],
+        "lower_numerator": 2245090838306,
+        "upper_numerator": 2245090838307
+      },
+      "W_complete_covariance": {
+        "denominator": 1099511627776,
+        "display": [
+          -1.5173599623103655,
+          -1.517359962309456
+        ],
+        "lower_numerator": -1668354922082,
+        "upper_numerator": -1668354922081
+      },
+      "common_denominator_bits": 90,
+      "mertens": -1,
+      "prime_power_channels": 26,
+      "symbolic_coefficients_sha256": "486835d4aad545fa4f932bbd1c327805d242a228a4fc12ca059d10460910f72a"
+    },
+    {
+      "E": {
+        "denominator": 1099511627776,
+        "display": [
+          1.375132403159114,
+          1.3751324031600234
+        ],
+        "lower_numerator": 1511974067005,
+        "upper_numerator": 1511974067006
+      },
+      "N": 127,
+      "Q_positive_resolvent": {
+        "denominator": 1099511627776,
+        "display": [
+          0.6118270581146135,
+          0.611827058115523
+        ],
+        "lower_numerator": 672710964585,
+        "upper_numerator": 672710964586
+      },
+      "V_log_moment": {
+        "denominator": 1099511627776,
+        "display": [
+          2.3031279666465707,
+          2.30312796664748
+        ],
+        "lower_numerator": 2532315979584,
+        "upper_numerator": 2532315979585
+      },
+      "W_complete_covariance": {
+        "denominator": 1099511627776,
+        "display": [
+          -1.6913009085319572,
+          -1.6913009085310478
+        ],
+        "lower_numerator": -1859605014999,
+        "upper_numerator": -1859605014998
+      },
+      "common_denominator_bits": 184,
+      "mertens": -2,
+      "prime_power_channels": 43,
+      "symbolic_coefficients_sha256": "f1ddc03628966c1dab6904459e59903afdcaa215dfdab51950314b4ab2ee8189"
+    },
+    {
+      "E": {
+        "denominator": 1099511627776,
+        "display": [
+          1.407569576725109,
+          1.4075695767260186
+        ],
+        "lower_numerator": 1547639116513,
+        "upper_numerator": 1547639116514
+      },
+      "N": 255,
+      "Q_positive_resolvent": {
+        "denominator": 1099511627776,
+        "display": [
+          0.6555637290121012,
+          0.6555637290130107
+        ],
+        "lower_numerator": 720799942797,
+        "upper_numerator": 720799942798
+      },
+      "V_log_moment": {
+        "denominator": 1099511627776,
+        "display": [
+          2.4725719693060455,
+          2.472571969306955
+        ],
+        "lower_numerator": 2718621630765,
+        "upper_numerator": 2718621630766
+      },
+      "W_complete_covariance": {
+        "denominator": 1099511627776,
+        "display": [
+          -1.8170082402948537,
+          -1.8170082402939443
+        ],
+        "lower_numerator": -1997821687969,
+        "upper_numerator": -1997821687968
+      },
+      "common_denominator_bits": 363,
+      "mertens": -1,
+      "prime_power_channels": 69,
+      "symbolic_coefficients_sha256": "fe682a17df282215e46fe2b4b28e64d06838652d273a21fb22d6783beaa858fb"
+    },
+    {
+      "E": {
+        "denominator": 1099511627776,
+        "display": [
+          1.4554607305726677,
+          1.4554607305735772
+        ],
+        "lower_numerator": 1600295997036,
+        "upper_numerator": 1600295997037
+      },
+      "N": 1023,
+      "Q_positive_resolvent": {
+        "denominator": 1099511627776,
+        "display": [
+          0.7055320005893009,
+          0.7055320005902104
+        ],
+        "lower_numerator": 775740638416,
+        "upper_numerator": 775740638417
+      },
+      "V_log_moment": {
+        "denominator": 1099511627776,
+        "display": [
+          2.7660000539599423,
+          2.766000053960852
+        ],
+        "lower_numerator": 3041249221758,
+        "upper_numerator": 3041249221759
+      },
+      "W_complete_covariance": {
+        "denominator": 1099511627776,
+        "display": [
+          -2.060468053371551,
+          -2.0604680533706414
+        ],
+        "lower_numerator": -2265508583343,
+        "upper_numerator": -2265508583342
+      },
+      "common_denominator_bits": 1479,
+      "mertens": -4,
+      "prime_power_channels": 197,
+      "symbolic_coefficients_sha256": "1c4ee6c9d56f29a4689dde98cf6ee4535e31b7be8268014ed18ed7329c962a48"
+    },
+    {
+      "E": {
+        "denominator": 1099511627776,
+        "display": [
+          1.5057536015419828,
+          1.5057536015428923
+        ],
+        "lower_numerator": 1655593593461,
+        "upper_numerator": 1655593593462
+      },
+      "N": 4095,
+      "Q_positive_resolvent": {
+        "denominator": 1099511627776,
+        "display": [
+          0.7262373922767438,
+          0.7262373922776533
+        ],
+        "lower_numerator": 798506457334,
+        "upper_numerator": 798506457335
+      },
+      "V_log_moment": {
+        "denominator": 1099511627776,
+        "display": [
+          3.15044665161804,
+          3.1504466516189495
+        ],
+        "lower_numerator": 3463952726142,
+        "upper_numerator": 3463952726143
+      },
+      "W_complete_covariance": {
+        "denominator": 1099511627776,
+        "display": [
+          -2.4242092593422058,
+          -2.4242092593412963
+        ],
+        "lower_numerator": -2665446268809,
+        "upper_numerator": -2665446268808
+      },
+      "common_denominator_bits": 5925,
+      "mertens": -19,
+      "prime_power_channels": 603,
+      "symbolic_coefficients_sha256": "41a383ebb60b07a7b884ccb5ce12fe38461f73b84619f2736f33fa447e05a4e6"
+    }
+  ]
+}

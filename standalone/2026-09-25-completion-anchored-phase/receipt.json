@@ -1,0 +1,873 @@
+{
+  "arithmetic": "integer/Fraction/Gaussian rational",
+  "arithmetic_coverage_terms_not_predicates": {
+    "bilinear_source_pairs": 21904,
+    "compressed_kernel_terms": 34300
+  },
+  "cap_cutoffs": {
+    "additional": [
+      511,
+      1023,
+      2047,
+      4095
+    ],
+    "all_integers": [
+      2,
+      256
+    ]
+  },
+  "cap_panels": [
+    {
+      "D_per_tau_squared": {
+        "bits": 40,
+        "lower": 4398046511104,
+        "upper": 4398046511104
+      },
+      "D_per_tau_squared_over_F": {
+        "bits": 40,
+        "lower": 3518437208883,
+        "upper": 3518437208884
+      },
+      "F_Y": {
+        "bits": 40,
+        "lower": 1374389534720,
+        "upper": 1374389534720
+      },
+      "J_c": {
+        "bits": 40,
+        "lower": 1374389534720,
+        "upper": 1374389534720
+      },
+      "L": 3,
+      "Y": 2,
+      "m_Y": {
+        "bits": 40,
+        "lower": 549755813888,
+        "upper": 549755813888
+      },
+      "rho": {
+        "den": 2,
+        "num": 1
+      },
+      "width": 1
+    },
+    {
+      "D_per_tau_squared": {
+        "bits": 40,
+        "lower": 1303124892178,
+        "upper": 1303124892179
+      },
+      "D_per_tau_squared_over_F": {
+        "bits": 40,
+        "lower": 1019836872140,
+        "upper": 1019836872141
+      },
+      "F_Y": {
+        "bits": 40,
+        "lower": 1404931524380,
+        "upper": 1404931524381
+      },
+      "J_c": {
+        "bits": 40,
+        "lower": 1404931524380,
+        "upper": 1404931524381
+      },
+      "L": 4,
+      "Y": 3,
+      "m_Y": {
+        "bits": 40,
+        "lower": 183251937962,
+        "upper": 183251937963
+      },
+      "rho": {
+        "den": 3,
+        "num": 1
+      },
+      "width": 1
+    },
+    {
+      "D_per_tau_squared": {
+        "bits": 40,
+        "lower": 102578344282,
+        "upper": 102578344283
+      },
+      "D_per_tau_squared_over_F": {
+        "bits": 40,
+        "lower": 77444788448,
+        "upper": 77444788449
+      },
+      "F_Y": {
+        "bits": 40,
+        "lower": 1456341795955,
+        "upper": 1456341795956
+      },
+      "J_c": {
+        "bits": 40,
+        "lower": 1456341795955,
+        "upper": 1456341795956
+      },
+      "L": 8,
+      "Y": 7,
+      "m_Y": {
+        "bits": 40,
+        "lower": -10471539313,
+        "upper": -10471539312
+      },
+      "rho": {
+        "den": 7,
+        "num": 1
+      },
+      "width": 1
+    },
+    {
+      "D_per_tau_squared": {
+        "bits": 40,
+        "lower": 10424999137,
+        "upper": 10424999138
+      },
+      "D_per_tau_squared_over_F": {
+        "bits": 40,
+        "lower": 7764719282,
+        "upper": 7764719283
+      },
+      "F_Y": {
+        "bits": 40,
+        "lower": 1476216635114,
+        "upper": 1476216635115
+      },
+      "J_c": {
+        "bits": 40,
+        "lower": 1476216635114,
+        "upper": 1476216635115
+      },
+      "L": 16,
+      "Y": 15,
+      "m_Y": {
+        "bits": 40,
+        "lower": 66783523445,
+        "upper": 66783523446
+      },
+      "rho": {
+        "den": 15,
+        "num": 1
+      },
+      "width": 1
+    },
+    {
+      "D_per_tau_squared": {
+        "bits": 40,
+        "lower": 1181040317,
+        "upper": 1181040318
+      },
+      "D_per_tau_squared_over_F": {
+        "bits": 40,
+        "lower": 866936333,
+        "upper": 866936334
+      },
+      "F_Y": {
+        "bits": 40,
+        "lower": 1497881114500,
+        "upper": 1497881114501
+      },
+      "J_c": {
+        "bits": 40,
+        "lower": 1497881114500,
+        "upper": 1497881114501
+      },
+      "L": 32,
+      "Y": 31,
+      "m_Y": {
+        "bits": 40,
+        "lower": -68975809648,
+        "upper": -68975809647
+      },
+      "rho": {
+        "den": 31,
+        "num": 1
+      },
+      "width": 1
+    },
+    {
+      "D_per_tau_squared": {
+        "bits": 40,
+        "lower": 140711034,
+        "upper": 140711035
+      },
+      "D_per_tau_squared_over_F": {
+        "bits": 40,
+        "lower": 101875469,
+        "upper": 101875470
+      },
+      "F_Y": {
+        "bits": 40,
+        "lower": 1518652322162,
+        "upper": 1518652322163
+      },
+      "J_c": {
+        "bits": 40,
+        "lower": 1518652322162,
+        "upper": 1518652322163
+      },
+      "L": 64,
+      "Y": 63,
+      "m_Y": {
+        "bits": 40,
+        "lower": 17573762749,
+        "upper": 17573762750
+      },
+      "rho": {
+        "den": 63,
+        "num": 1
+      },
+      "width": 1
+    },
+    {
+      "D_per_tau_squared": {
+        "bits": 40,
+        "lower": 17176656,
+        "upper": 17176657
+      },
+      "D_per_tau_squared_over_F": {
+        "bits": 40,
+        "lower": 12232800,
+        "upper": 12232801
+      },
+      "F_Y": {
+        "bits": 40,
+        "lower": 1543876541679,
+        "upper": 1543876541680
+      },
+      "J_c": {
+        "bits": 40,
+        "lower": 1543876541679,
+        "upper": 1543876541680
+      },
+      "L": 128,
+      "Y": 127,
+      "m_Y": {
+        "bits": 40,
+        "lower": -625710469,
+        "upper": -625710468
+      },
+      "rho": {
+        "den": 127,
+        "num": 1
+      },
+      "width": 1
+    },
+    {
+      "D_per_tau_squared": {
+        "bits": 40,
+        "lower": 2121921,
+        "upper": 2121922
+      },
+      "D_per_tau_squared_over_F": {
+        "bits": 40,
+        "lower": 1488153,
+        "upper": 1488154
+      },
+      "F_Y": {
+        "bits": 40,
+        "lower": 1567766872625,
+        "upper": 1567766872626
+      },
+      "J_c": {
+        "bits": 40,
+        "lower": 1567766872625,
+        "upper": 1567766872626
+      },
+      "L": 256,
+      "Y": 255,
+      "m_Y": {
+        "bits": 40,
+        "lower": 5002777282,
+        "upper": 5002777283
+      },
+      "rho": {
+        "den": 255,
+        "num": 1
+      },
+      "width": 1
+    },
+    {
+      "D_per_tau_squared": {
+        "bits": 40,
+        "lower": 263686,
+        "upper": 263687
+      },
+      "D_per_tau_squared_over_F": {
+        "bits": 40,
+        "lower": 182899,
+        "upper": 182900
+      },
+      "F_Y": {
+        "bits": 40,
+        "lower": 1585168175597,
+        "upper": 1585168175598
+      },
+      "J_c": {
+        "bits": 40,
+        "lower": 1585168175597,
+        "upper": 1585168175598
+      },
+      "L": 512,
+      "Y": 511,
+      "m_Y": {
+        "bits": 40,
+        "lower": -5018039017,
+        "upper": -5018039016
+      },
+      "rho": {
+        "den": 511,
+        "num": 1
+      },
+      "width": 1
+    },
+    {
+      "D_per_tau_squared": {
+        "bits": 40,
+        "lower": 32864,
+        "upper": 32865
+      },
+      "D_per_tau_squared_over_F": {
+        "bits": 40,
+        "lower": 22487,
+        "upper": 22488
+      },
+      "F_Y": {
+        "bits": 40,
+        "lower": 1606842266010,
+        "upper": 1606842266011
+      },
+      "J_c": {
+        "bits": 40,
+        "lower": 1606842266010,
+        "upper": 1606842266011
+      },
+      "L": 1024,
+      "Y": 1023,
+      "m_Y": {
+        "bits": 40,
+        "lower": -1643740639,
+        "upper": -1643740638
+      },
+      "rho": {
+        "den": 1023,
+        "num": 1
+      },
+      "width": 1
+    },
+    {
+      "D_per_tau_squared": {
+        "bits": 40,
+        "lower": 332262,
+        "upper": 332263
+      },
+      "D_per_tau_squared_over_F": {
+        "bits": 40,
+        "lower": 224487,
+        "upper": 224488
+      },
+      "F_Y": {
+        "bits": 40,
+        "lower": 1627378649902,
+        "upper": 1627378649903
+      },
+      "J_c": {
+        "bits": 40,
+        "lower": 1627389319268,
+        "upper": 1627389319269
+      },
+      "L": 2050,
+      "Y": 2047,
+      "m_Y": {
+        "bits": 40,
+        "lower": 4699745949,
+        "upper": 4699745950
+      },
+      "rho": {
+        "den": 2047,
+        "num": 3
+      },
+      "width": 3
+    },
+    {
+      "D_per_tau_squared": {
+        "bits": 40,
+        "lower": 664038,
+        "upper": 664039
+      },
+      "D_per_tau_squared_over_F": {
+        "bits": 40,
+        "lower": 440674,
+        "upper": 440675
+      },
+      "F_Y": {
+        "bits": 40,
+        "lower": 1656819178578,
+        "upper": 1656819178579
+      },
+      "J_c": {
+        "bits": 40,
+        "lower": 1656845345449,
+        "upper": 1656845345450
+      },
+      "L": 4101,
+      "Y": 4095,
+      "m_Y": {
+        "bits": 40,
+        "lower": -4526696730,
+        "upper": -4526696729
+      },
+      "rho": {
+        "den": 1365,
+        "num": 2
+      },
+      "width": 6
+    }
+  ],
+  "mobius_limit": 8192,
+  "mobius_sha256": "26ea0af0f451851ffeeba4bf0eebe66190c623e65abaa8deead71c2bc4c1ca5d",
+  "negative_controls": {
+    "first_gap_endpoint_extra_term": {
+      "im": {
+        "den": 1,
+        "num": 0
+      },
+      "re": {
+        "den": 4,
+        "num": -1
+      }
+    },
+    "uncompressed_coefficient_leakage": {
+      "im": {
+        "den": 1,
+        "num": 0
+      },
+      "re": {
+        "den": 3,
+        "num": -2
+      }
+    },
+    "uncompressed_masked_leakage": {
+      "im": {
+        "den": 1,
+        "num": 0
+      },
+      "re": {
+        "den": 177147,
+        "num": -2
+      }
+    }
+  },
+  "not_numerically_tested": [
+    "actual real anchored phases",
+    "the centered harmonic microscopic kernel",
+    "unbounded analytic quantifiers"
+  ],
+  "packet": "CAP36",
+  "predicate_total": 53304,
+  "predicates": {
+    "Hermitian replacement genuinely rejected": 1,
+    "all compressed defect coefficients": 254,
+    "anchored defect envelope budget": 259,
+    "anticausal damping operator bound": 4,
+    "balanced multiplier composition": 12,
+    "balanced multiplier inverse algebra": 12,
+    "cap coefficient ceiling": 259,
+    "cap primitive agrees with independent prefix": 259,
+    "cap reciprocal balance": 259,
+    "complete tensor difference": 10,
+    "completion width bound": 259,
+    "corrupted primitive rejected": 1,
+    "cross repair leaves observable unchanged": 10,
+    "cubic width budget": 259,
+    "damped repair balance": 4,
+    "defect gap is preserved": 242,
+    "divisor sum equals prime product": 254,
+    "entire completion energy bound": 259,
+    "envelope repair is balanced": 518,
+    "exact multiplier maximum at declared phase": 1,
+    "factor compression leakage is nonzero": 1,
+    "factorwise compressed kernel direct replay": 10,
+    "first gap support": 259,
+    "first-gap endpoint cannot be included": 1,
+    "full repaired envelope energy including early cells": 518,
+    "independent Mobius authentication": 8192,
+    "low-coordinate invisibility fails outside its range": 1,
+    "microscopic low-coordinate invisibility": 10,
+    "native cap prefix preserved": 40571,
+    "native cubic point bound": 259,
+    "nonzero masked leakage pairing": 1,
+    "off-grid anticausal Abel identity": 56,
+    "phase multiplier two-sided normalization": 257,
+    "phase repair leaves observable unchanged": 10,
+    "product collisions all retained": 10,
+    "quadratic repair leaves observable unchanged": 10,
+    "uncompressed leakage q3": 1,
+    "uncompressed leakage q9": 1
+  },
+  "rational_product_kernel_panels": [
+    {
+      "L": 3,
+      "U_compressed": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 26873856,
+          "num": 675041
+        }
+      },
+      "U_twisted": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 2985984,
+          "num": 33689
+        }
+      },
+      "Y": 2,
+      "control_X": 6,
+      "difference": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 209952,
+          "num": 2905
+        }
+      },
+      "mode": "damp"
+    },
+    {
+      "L": 3,
+      "U_compressed": {
+        "im": {
+          "den": 11664,
+          "num": -29
+        },
+        "re": {
+          "den": 248832,
+          "num": -6701
+        }
+      },
+      "U_twisted": {
+        "im": {
+          "den": 32,
+          "num": 1
+        },
+        "re": {
+          "den": 82944,
+          "num": -4271
+        }
+      },
+      "Y": 2,
+      "control_X": 6,
+      "difference": {
+        "im": {
+          "den": 23328,
+          "num": -787
+        },
+        "re": {
+          "den": 7776,
+          "num": 191
+        }
+      },
+      "mode": "gaussian"
+    },
+    {
+      "L": 4,
+      "U_compressed": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 272097792,
+          "num": 6932785
+        }
+      },
+      "U_twisted": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 4353564672,
+          "num": 25136569
+        }
+      },
+      "Y": 3,
+      "control_X": 8,
+      "difference": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 5971968,
+          "num": 117679
+        }
+      },
+      "mode": "damp"
+    },
+    {
+      "L": 4,
+      "U_compressed": {
+        "im": {
+          "den": 729,
+          "num": -14
+        },
+        "re": {
+          "den": 30233088,
+          "num": -313951
+        }
+      },
+      "U_twisted": {
+        "im": {
+          "den": 729,
+          "num": -14
+        },
+        "re": {
+          "den": 30233088,
+          "num": -313951
+        }
+      },
+      "Y": 3,
+      "control_X": 8,
+      "difference": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 1,
+          "num": 0
+        }
+      },
+      "mode": "gaussian"
+    },
+    {
+      "L": 8,
+      "U_compressed": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 87569375135555250000000000,
+          "num": 2586899863606557035357
+        }
+      },
+      "U_twisted": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 5604440008675536000000000000,
+          "num": 5194491609462778342690973
+        }
+      },
+      "Y": 7,
+      "control_X": 16,
+      "difference": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 188195374080000000,
+          "num": -168869925368233
+        }
+      },
+      "mode": "damp"
+    },
+    {
+      "L": 8,
+      "U_compressed": {
+        "im": {
+          "den": 3063075750000,
+          "num": 32800207831
+        },
+        "re": {
+          "den": 882533385090000000000,
+          "num": -32715039670172843803
+        }
+      },
+      "U_twisted": {
+        "im": {
+          "den": 3063075750000,
+          "num": 7369173689
+        },
+        "re": {
+          "den": 882533385090000000000,
+          "num": -33765674652422843803
+        }
+      },
+      "Y": 7,
+      "control_X": 16,
+      "difference": {
+        "im": {
+          "den": 1531537875000,
+          "num": 12715517071
+        },
+        "re": {
+          "den": 840,
+          "num": 1
+        }
+      },
+      "mode": "gaussian"
+    },
+    {
+      "L": 16,
+      "U_compressed": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 525247543248539734125633254147560042796329101562500,
+          "num": 2335534727160545461454583967767427955251697623067
+        }
+      },
+      "U_twisted": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 134463371071626171936162113061775370955860250000000000,
+          "num": 814447706466570451097740201571580400190110145777
+        }
+      },
+      "Y": 15,
+      "control_X": 64,
+      "difference": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 1303795465939447777296000000,
+          "num": 5789482853581686400594087
+        }
+      },
+      "mode": "damp"
+    },
+    {
+      "L": 16,
+      "U_compressed": {
+        "im": {
+          "den": 579539414851418984853515625,
+          "num": -186801825166754031509354
+        },
+        "re": {
+          "den": 2329771652472468076381974132638634726562500,
+          "num": -3836158427208387350465330914623522105719
+        }
+      },
+      "U_twisted": {
+        "im": {
+          "den": 579539414851418984853515625,
+          "num": -186801825166754031509354
+        },
+        "re": {
+          "den": 2329771652472468076381974132638634726562500,
+          "num": -3836158427208387350465330914623522105719
+        }
+      },
+      "Y": 15,
+      "control_X": 64,
+      "difference": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 1,
+          "num": 0
+        }
+      },
+      "mode": "gaussian"
+    },
+    {
+      "L": 32,
+      "U_compressed": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 6388973090799579016759305451036013469010907257685340563238834308719629613153560272769253239049907143779938074381837521687000000000000,
+          "num": 26572813375984015241753882382272226287736622336028361319522776756210785207475028745704711092269738332500285351822901823339596622047
+        }
+      },
+      "U_twisted": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 6542308444978768913161528781860877792267169031869788736756566332128900723869245719315715316787104915230656588167001622207488000000000000,
+          "num": 434854578535862859585417990980236622699667384387359645697567765088604892375232664566733875585167827475823559709497061560721185503
+        }
+      },
+      "Y": 31,
+      "control_X": 256,
+      "difference": {
+        "im": {
+          "den": 1,
+          "num": 0
+        },
+        "re": {
+          "den": 1533075021300110761391969132041079334903034495087758348760099696142884208640000000,
+          "num": 6376214896149100543689998392968644452125406510412860567951068651679207445105657
+        }
+      },
+      "mode": "damp"
+    },
+    {
+      "L": 32,
+      "U_compressed": {
+        "im": {
+          "den": 2522629301486893190443886413325161410403883435910429717216876981650390625,
+          "num": 17708753259338442198947768387256882631769759510546819523875146962845734
+        },
+        "re": {
+          "den": 24777922644173103855697510538735183701398871524783322858918226929268426380592522553335594325792650027880000000000,
+          "num": 186453296844939146266967912615966010506341305774368437144467800115517012247126857443189994378311410977934423209
+        }
+      },
+      "U_twisted": {
+        "im": {
+          "den": 2522629301486893190443886413325161410403883435910429717216876981650390625,
+          "num": -8673904407899487638842071899391493645828369335346441403250592513709891
+        },
+        "re": {
+          "den": 24777922644173103855697510538735183701398871524783322858918226929268426380592522553335594325792650027880000000000,
+          "num": 11380081525261362066068607286995120169348808402337094593038932251107665154904249972315078125317966414716503209
+        }
+      },
+      "Y": 31,
+      "control_X": 256,
+      "difference": {
+        "im": {
+          "den": 112992550107192662711296387596099164543159863874378868104112515625,
+          "num": 1181720899963066200287330826646437726943730750914846098468721009
+        },
+        "re": {
+          "den": 994450876918734375,
+          "num": 7026485432207069
+        }
+      },
+      "mode": "gaussian"
+    }
+  ],
+  "scope": "Written analytic proofs plus declared exact finite structural replays; not independent review or an RH proof."
+}
