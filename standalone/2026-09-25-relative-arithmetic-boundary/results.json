@@ -1,0 +1,135 @@
+{
+  "arithmetic": "integers, Fractions, integer cyclotomic quotient rings; no floating point",
+  "boundary_example": {
+    "N": 12,
+    "a": 2,
+    "b": 3,
+    "nonzero_columns": {
+      "6": {
+        "9": 1
+      },
+      "8": {
+        "12": 1
+      }
+    },
+    "rank": 2
+  },
+  "not_executed": [
+    "repository validators",
+    "independent mathematical review",
+    "analytic Fourier-tail certification",
+    "Weil-form comparison",
+    "RH-sensitive native upper estimate"
+  ],
+  "predicate_counts": {
+    "barcode_euler_identity": 4095,
+    "coarse_additive_overlap": 105,
+    "coarse_semigroup": 120,
+    "cocycle_orthogonality": 3072,
+    "complete_block_gram": 48,
+    "escape_cocycle": 3072,
+    "exact_rank": 3072,
+    "explicit_boundary_control": 1,
+    "factor_order_recoupling_unitarity": 361,
+    "factorization_coherence": 30,
+    "filtered_triangular_pivot": 1661,
+    "first_exit_orthogonality": 90,
+    "gcd_boundary_gram": 75264,
+    "gram_nonnegative": 48,
+    "half_density_normalization": 15,
+    "iterated_bank_orthogonality": 722,
+    "joint_defect_negative_control": 1,
+    "joint_defect_positive_average": 1,
+    "masked_dilation_product": 15616,
+    "native_additive_gap": 105,
+    "native_channel_reconstruction": 135,
+    "native_euler_product": 1,
+    "persistent_cycle": 1661,
+    "pythagorean_energy": 3072,
+    "rejected_shortcuts": 4,
+    "residue_fourier_orthogonality": 1495,
+    "sharp_bar_birth": 1661,
+    "sharp_bar_death": 1661,
+    "sharp_support": 75264,
+    "simplicial_boundary_squared": 2491,
+    "spatial_mask_lcm": 15616
+  },
+  "recoupling_examples": [
+    {
+      "a": 2,
+      "b": 3,
+      "dimension": 6,
+      "off_diagonal_nonzero_entries": 14
+    },
+    {
+      "a": 2,
+      "b": 5,
+      "dimension": 10,
+      "off_diagonal_nonzero_entries": 44
+    },
+    {
+      "a": 3,
+      "b": 5,
+      "dimension": 15,
+      "off_diagonal_nonzero_entries": 128
+    }
+  ],
+  "scope": {
+    "boundary_N": [
+      1,
+      48
+    ],
+    "boundary_factors": [
+      2,
+      9
+    ],
+    "native_prefix_limit": 4095,
+    "one_prime_banks": [
+      2,
+      16
+    ]
+  },
+  "status": "finite exact algebra checked; no RH implication proved",
+  "topology_examples": [
+    {
+      "M": -1,
+      "N": 63,
+      "active_bars": 13,
+      "reduced_betti_by_degree": {
+        "0": 7,
+        "1": 6
+      }
+    },
+    {
+      "M": -1,
+      "N": 255,
+      "active_bars": 53,
+      "reduced_betti_by_degree": {
+        "0": 23,
+        "1": 26,
+        "2": 4
+      }
+    },
+    {
+      "M": -4,
+      "N": 1023,
+      "active_bars": 206,
+      "reduced_betti_by_degree": {
+        "0": 75,
+        "1": 101,
+        "2": 30
+      }
+    },
+    {
+      "M": -19,
+      "N": 4095,
+      "active_bars": 831,
+      "reduced_betti_by_degree": {
+        "0": 255,
+        "1": 394,
+        "2": 170,
+        "3": 12
+      }
+    }
+  ]
+}
