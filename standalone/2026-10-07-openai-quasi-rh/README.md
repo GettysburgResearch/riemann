@@ -64,6 +64,8 @@ with $G$ a fixed ray-class factor. For a prime, the sign $\mu(p)=-1$ is exactly 
 
 The 7/8 paper reorganizes the argument as a bootstrap over the **whole family** of primitive finite-order Hecke characters of $F$. Let $\beta_*$ be the supremum of real parts of their zeros. A probe $J_\eta(Z)$ is bounded directly through theta reflection and large sieves (the "low" side). The same probe, after Poisson summation, equals a principal Mellin integral of $Z^{C(s)}H_\eta(s)/L_F(s,\eta)$ plus nonprincipal rows (the "high" side). Each row is itself a twisted Hecke $L$-function in the same family, so its zeros are $\le\beta_*$ by definition. A zero detector converts every row with a zero near $\beta_*$ into large Dirichlet polynomials, and moment bounds count those rows. If $\beta_*>\sigma_0$, the two bounds continue $1/L$ uniformly past $\beta_*$, which is a contradiction (Prop. `lem:continuation-criterion`). Part II adds prime "compensation" slots, asymmetric scales ($h=13/16$, $\ell=1/6$, $l_x=17/48$, $l_y=23/48$, $C(s)=s-11/16$), an inverse-moment induction and a plain fourth-moment induction.
 
+Where the gain comes from (reconstructed in `exponent_model/`): the boundary is set by the **low** (theta-reflection) side, $|J|\ll Z^{l_x/2+b/12}$ (7/8 paper l. 8570). This gives $\sigma_0=1-h/6+b/12$, where $h$ is the length exponent of the Poisson rows. Part I has $h=1/2$, $b=0$, hence $11/12$; Part II has $h=13/16$, $b=1/8$, hence $7/8$. Lengthening $h$ is affordable only because every Poisson row is a member of the same closed family, so its zeros are $\le\beta_*$, and the detector, inverse moments and fourth moments can count the rows that matter.
+
 ## 3. Why the method stops short of RH: a leverage–exponent law
 
 Abstracting Step 2: suppose the rows $u$ with $Nu\le H$ satisfy a square-root mean square $\sum_u|A_u|^2\ll D^{1+\varepsilon}(H+D)$. Suppose also that a subset of $\gg H^{1-c}$ rows are principal copies ($A_u\approx A_1$). Then
@@ -72,7 +74,7 @@ Sixth powers give $c=5/6$, hence $11/12$. **RH would need subpower principal lev
 
 A Dirichlet family modulo $q$ has the principal member once among $\varphi(q)$ rows ($c=1$, no saving). This matches the binding barrier recorded there: "family dimension … gives no principal saving." OpenAI's choice of a residue-symbol family **indexed by the numerator** makes the principal pattern recur on all sixth powers. They pay a *power* leverage cost, and that is why the result is quasi-RH rather than RH.
 
-The 7/8 bootstrap beats the naive law ($c_{\rm eff}=3/4$) through **propagation**. Rows whose own $L$-function has a zero near $\beta_*$ also carry the signal. This is precisely the architecture of programme #740: "one bad zero → principal defect → propagated family statistic → unconditional family bound → contradiction."
+The 7/8 paper changes the bookkeeping rather than the leverage. It lengthens the Poisson row range and controls the extra rows through the family bootstrap. This is the architecture of programme #740 ("one bad zero → principal defect → propagated family statistic → unconditional family bound → contradiction"). The value $7/8$ coincides with the naive law at $c=3/4$, but that is a numerical coincidence, not a quartic mechanism.
 
 ## 4. Relation to this repository
 
@@ -118,15 +120,32 @@ Ranked by payoff and feasibility. Tier 0 and Tier 1 are concrete and mostly rout
 4. Turn §5 into claims, one per open "subpower" gate: Mertens, fixed Mellin detectors, critical Taylor, wavelet and tent abscissae, totient criterion, L-91027, causal Euler on $\Re s>7/8$, VK→power replacements in Dickman/Bellman and the Catalan safe disc. The repository's RH frontier then becomes a single, uniform **exponent ledger**: every gate is currently known at exponent $3/8$ and needed at exponent $0$. Progress on any gate becomes measurable as an exponent.
 5. Do the same formally. Depend on OpenAI's Apache-2.0 Lean library (after the toolchain bump) and prove, e.g., `∑_{n≤x} μ n = O(x^{7/8+ε})` and the $3/8$ negative-mass bound for a fixed detector. These would be the formal track's first unconditional, non-trivial analytic theorems about the actual zeta source. They would also exercise the "actual-Xi source" repair contract against a mature Mathlib-native development.
 
-**Tier 2: lower the exponent (months; this is where a dramatic advance would come from).**
-6. *Leverage.* By §3, any family with a provable square-root mean square and principal-copy density $H^{-c}$ gives $\Re s>(1+c)/2$. Two routes:
-   * Search for families with smaller $c$ in which Möbius is still Fourier-dual to automorphic coefficients. The sextic/cubic case is the smallest order in which the Davenport–Hasse relation produces the sign $\mu(p)=-1$; quartic characters over $\mathbb Q(i)$ give only a trivial identity.
-   * Or improve propagation, so that more rows carry the bad-zero signal (the 7/8 route, $c_{\rm eff}=3/4$).
-7. *Swap in the better family estimate.* The 7/8 paper counts detector rows with a general sextic large sieve, which carries a $(KD)^{2/3}$ term. The 11/12 paper proves a square-root mean square for the specific Möbius family, avoiding that term. A worked computation of which constraint is binding at 7/8, and what replacing the sieve would give, is the first research task. See the addendum in §6a when it is available.
-8. *Repository machinery inside the OpenAI family.* Programmes #736/#740 already contain exact principal/quadratic-root leverage identities (the $(\rho+1)/(\rho-1)$ coefficient, the $\chi\mapsto\chi^2$ temperature map) and fixed detectors with audited non-cancelling multipliers. Transplant them from Dirichlet characters mod $q$ to the sextic residue-symbol family over $\mathbb Z[\omega]$. The cube rows $u=v^3$ (quadratic twists) and square rows $u=v^2$ (cubic twists) are the analogues of the quadratic-root channels found in #736. Each is a candidate for additional leverage beyond the sixth powers.
+**Tier 2: lower the exponent (months to years). Read §6a first: the method is at its own ceiling.**
+6. *A ratios-type family estimate is the one structural input that could move the boundary.* By §6a, reaching $3/4$ in this architecture needs $h=3/2$. That means control of Poisson rows *beyond* the completed length, with cancellation *across* rows, i.e. a ratios-conjecture-type average of $L(w,\chi_u)/L(s,\eta\bar\chi_u)$ over the sextic family, or a bilinear bound that beats Cauchy–Schwarz. Better large sieves or mean squares do essentially nothing.
+   * The closest objects in this repository are the exact **mollified reciprocal-$L$ family moments** of #736: $B_U=(1-M_UZ)^2/Z$ over owner-excluded $L(w,\eta)$, together with the `PCM106030`/`NEM106030` split.
+   * Porting that exact moment algebra from Dirichlet characters mod $q$ to the sextic residue-symbol family over $\mathbb Z[\omega]$, and asking what it gives for the ratio average, is the most direct "combine the repositories" research task. It is speculative.
+7. *Leverage.* By §3, a family with a provable square-root mean square and principal-copy density $H^{-c}$ gives $\Re s>(1+c)/2$. The Möbius-absorption trick needs characters of order $2m$ with $m$ odd and order-$m$ Gauss sums appearing as GL(2) theta coefficients, which by Kazhdan–Patterson forces $m=3$. So $\mathbb Q(\sqrt{-3})$ and sextic symbols are essentially forced. Other leverage would need GL$_n$ metaplectic theta functions, whose coefficients are not known. Long-range only.
+8. *Repository machinery inside the OpenAI family.* #736/#740 contain exact principal/quadratic-root leverage identities (the $(\rho+1)/(\rho-1)$ coefficient, the $\chi\mapsto\chi^2$ temperature map). The cube rows $u=v^3$ (quadratic twists) and square rows $u=v^2$ (cubic twists) of the sextic family are their analogues. They are worth an exact audit, but §6a suggests leverage is not where the 7/8 bound is decided.
 9. *Atlas (#741).* Add the sextic family and its mean square to the detector atlas. The replay in `numerics/` is a ready pilot: $S/\text{diag}=1.000\pm0.04$ for $D\le10^5$.
 
-What the combination cannot do: none of the repository's one-sided positivity criteria is needed for, or improves, the OpenAI argument as it stands. Its estimates are two-sided mean squares. The main flow of value is OpenAI → repository (Tier 1). The conceptual flow is the reverse: this repository's ledgers (#736, #740) are exactly the right language for analysing and extending the OpenAI method.
+What the combination cannot do: none of the repository's one-sided positivity criteria is needed for, or improves, the OpenAI argument as it stands. Its estimates are two-sided. The main flow of value is OpenAI → repository (Tier 1). The conceptual flow is the reverse: the #736/#740 ledgers are the right language for the OpenAI method, and #736's reciprocal-$L$ family moments are the nearest thing to the missing ratios input.
+
+## 6a. Where 7/8 comes from, and what it would take to go lower
+
+This section is a reconstruction (assessment, not paper statements). The model in `exponent_model/` reproduces the paper's endpoint certificate: worst point $\delta\approx0.387$, $x=1/2$, margin $\approx-1.9\times10^{-4}$, against the paper's closed form $-49/440640-\ldots\approx-2.3\times10^{-4}$ (l. 16000, 16096–16104).
+
+| Question | Finding |
+|---|---|
+| Binding side at 7/8 | The low side fixes $\sigma_0=1-h/6+b/12$ exactly. The high side clears it by only $\approx2\times10^{-4}$, at rows with zeros near real part $0.69$ and row norm $Z^{h}$ |
+| Is 7/8 a round choice with slack? | No. Under the forced dual-length constraint $M+\ell\le1$, $\sigma_0=11/12-\ell/4$. The high certificate fails for $\ell$ above $\approx0.1668$, so the method's own optimum is $\approx0.87497$ |
+| Is the sextic large sieve ($(KD)^{2/3}$ term) binding? | No. It is used only in Part I (ll. 4707–5327), where it is never binding. Part II never uses it |
+| Optimal large sieve / optimal capacities in Part II | $\approx0.8728$ after re-optimizing the geometry |
+| Density hypothesis for every row | $13/15\approx0.8667$ ($b=0$, $\ell=1/5$) |
+| Drop energy and dual-length constraints, keep $h\le1$ | Floor $5/6$ |
+| Reach $3/4$ | Needs $h=3/2$: Poisson rows beyond the completed length with cross-row cancellation (ratios-type), or a bilinear bound beating Cauchy–Schwarz |
+| Part I (11/12) | Robust, with a little slack: the Part I geometry optimizes to $\approx0.9129$ |
+
+**Consequence for planning.** Tuning will not produce a dramatic improvement. It would take a new structural ingredient, most plausibly a ratios-type average over the sextic family (Tier 2, item 6). The thin $2\times10^{-4}$ margin at 7/8 makes the Lean proof (Tier 0) the decisive correctness check for that theorem. The 11/12 theorem has comfortable margins.
 
 ## 7. Verification performed here
 
@@ -141,4 +160,7 @@ What the combination cannot do: none of the repository's one-sided positivity cr
 2. **The Grössencharacter $\overline{\alpha(n)}$ inside theta sums.** The completed sum carries $\overline{\alpha(nb^3)}$, a character of infinite order. Check that the summation formula applies with this angular twist and that the dual weights $V_*^\sharp$ keep their rapid decay.
 3. **Transfer recursion (paper2 §`sec:transfer-proof`).** The "enlarged row range" trick ($Y=XL_b/\mathcal H$) and the claim that $\mathcal H'/X'$ stays fixed while both scales contract. Check the common factors and dyadic ranges suppressed in the outline.
 4. **Diagonal and zero-frequency terms** in the Poisson comparison (eq. `intro-poisson-comparison`), including rows $u$ sharing factors with $n$ and the sixth-power rows themselves.
-5. **7/8 paper only:** the uniformity of margins "independent of the target" in Prop. `prop:parameter-order`; the treatment of rows whose inducing character lies in the finite group generated by the target (Sec. `sec:plain`); and the boundary case $\delta=5/6$.
+5. **Lemma `lem:plain` (7/8 paper ll. 12531–12579, induction 12831–14984).** At $z=0$ it is a fourth moment for the sextic family of Lindelöf-on-average strength, the most consequential new analytic claim. Check the $A\le5M/6$ threshold, the centered differences (ll. 12940–13010), and the rows whose inducing character lies in $\langle\eta,\widehat T\rangle$ (ll. 14312–14779). Also note that the lemma is stated only for $\kappa\ge3/4$.
+6. **Thin margin.** The 7/8 certificate leaves $\approx2\times10^{-4}$. Any unaccounted loss breaks it, for example in the $\Delta/4$ capacity comparison (ll. 15392–15405), supply $8/39$ vs $7/37$, or mesh effects.
+7. **Siegel paper (independent).** It uses only a prime-bias lemma, an interpolation determinant, Frobenius congruences at inert primes and Hadamard's inequality. The reconstruction found no error, but the argument is tight: the bound it proves on the log-density of primes with $\chi(p)=-1$ is exactly sharp under equidistribution. It needs expert verification.
+8. **7/8 paper only:** the uniformity of margins "independent of the target" in Prop. `prop:parameter-order`; the treatment of rows whose inducing character lies in the finite group generated by the target (Sec. `sec:plain`); and the boundary case $\delta=5/6$.
