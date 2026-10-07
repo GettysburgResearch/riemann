@@ -1,0 +1,90 @@
+setup: 18386 prime ideals, 57787 squarefree n with N <= 204800; 6000 exact table checks passed (23.9s)
+D=100: #n=28, #u=582, A computed in 0.2s; |A_1|=4.544 (sqrt(sum w^2)=2.9); conj err 6.0e-15, lambda^6 err nan
+   theta=0.00 H=100 #u=366: S/(DH)=0.2928 S/diag=1.0164 | sixth 133 (6), cube 120 (12), square 201 (30), rest 2474; max rest |A|^2/sum w^2 = 4.50; E|A|^4/(E|A|^2)^2 = 1.934
+   theta=0.05 H=126 #u=450: S/(DH)=0.2915 S/diag=1.0313 | sixth 133 (6), cube 120 (12), square 201 (30), rest 3216; max rest |A|^2/sum w^2 = 4.50; E|A|^4/(E|A|^2)^2 = 1.837
+   theta=0.10 H=158 #u=582: S/(DH)=0.3043 S/diag=1.0568 | sixth 133 (6), cube 120 (12), square 223 (36), rest 4347; max rest |A|^2/sum w^2 = 4.50; E|A|^4/(E|A|^2)^2 = 1.804
+   N(p)=7: |A_p6 - A_1| = 1.449 (direct 1.449, err 4.4e-16; sum_(p|n)|w| = 1.45)
+   N(p)=7: |A_p6 - A_1| = 1.449 (direct 1.449, err 4.4e-16; sum_(p|n)|w| = 1.45)
+   N(p)=13: |A_p6 - A_1| = 0.509 (direct 0.509, err 2.2e-16; sum_(p|n)|w| = 0.51)
+   N(p)=13: |A_p6 - A_1| = 0.509 (direct 0.509, err 2.2e-16; sum_(p|n)|w| = 0.51)
+D=200: #n=52, #u=1236, A computed in 0.3s; |A_1|=4.605 (sqrt(sum w^2)=4.0); conj err 9.3e-15, lambda^6 err nan
+   theta=0.00 H=200 #u=732: S/(DH)=0.2861 S/diag=1.0310 | sixth 235 (6), cube 273 (12), square 838 (48), rest 1.01e+04; max rest |A|^2/sum w^2 = 6.33; E|A|^4/(E|A|^2)^2 = 1.862
+   theta=0.05 H=261 #u=954: S/(DH)=0.2810 S/diag=1.0103 | sixth 235 (6), cube 273 (12), square 899 (54), rest 1.324e+04; max rest |A|^2/sum w^2 = 6.33; E|A|^4/(E|A|^2)^2 = 1.944
+   theta=0.10 H=340 #u=1236: S/(DH)=0.2867 S/diag=1.0372 | sixth 235 (6), cube 273 (12), square 899 (54), rest 1.807e+04; max rest |A|^2/sum w^2 = 6.33; E|A|^4/(E|A|^2)^2 = 1.894
+   N(p)=7: |A_p6 - A_1| = 2.891 (direct 2.891, err 1.8e-15; sum_(p|n)|w| = 2.89)
+   N(p)=7: |A_p6 - A_1| = 2.891 (direct 2.891, err 1.8e-15; sum_(p|n)|w| = 2.89)
+   N(p)=13: |A_p6 - A_1| = 1.185 (direct 1.185, err 1.6e-15; sum_(p|n)|w| = 1.19)
+   N(p)=13: |A_p6 - A_1| = 1.185 (direct 1.185, err 1.6e-15; sum_(p|n)|w| = 1.19)
+D=400: #n=119, #u=2646, A computed in 0.3s; |A_1|=9.865 (sqrt(sum w^2)=5.6); conj err 1.2e-14, lambda^6 err nan
+   theta=0.00 H=400 #u=1458: S/(DH)=0.2729 S/diag=1.0032 | sixth 708 (6), cube 1.02e+03 (24), square 1.39e+03 (66), rest 4.055e+04; max rest |A|^2/sum w^2 = 6.59; E|A|^4/(E|A|^2)^2 = 1.994
+   theta=0.05 H=540 #u=1944: S/(DH)=0.2673 S/diag=0.9950 | sixth 708 (6), cube 1.02e+03 (24), square 1.54e+03 (78), rest 5.445e+04; max rest |A|^2/sum w^2 = 6.59; E|A|^4/(E|A|^2)^2 = 1.985
+   theta=0.10 H=728 #u=2646: S/(DH)=0.2703 S/diag=0.9970 | sixth 708 (6), cube 1.02e+03 (24), square 1.68e+03 (84), rest 7.532e+04; max rest |A|^2/sum w^2 = 6.59; E|A|^4/(E|A|^2)^2 = 2.010
+   N(p)=7: |A_p6 - A_1| = 1.845 (direct 1.845, err 2.2e-15; sum_(p|n)|w| = 5.32)
+   N(p)=7: |A_p6 - A_1| = 1.845 (direct 1.845, err 2.2e-15; sum_(p|n)|w| = 5.32)
+   N(p)=13: |A_p6 - A_1| = 1.034 (direct 1.034, err 2.0e-15; sum_(p|n)|w| = 2.77)
+   N(p)=13: |A_p6 - A_1| = 1.034 (direct 1.034, err 2.2e-16; sum_(p|n)|w| = 2.77)
+D=800: #n=224, #u=5646, A computed in 0.3s; |A_1|=2.302 (sqrt(sum w^2)=8.0); conj err 1.8e-14, lambda^6 err 0.0e+00
+   theta=0.00 H=800 #u=2904: S/(DH)=0.2598 S/diag=0.9580 | sixth 298 (12), cube 2.57e+03 (24), square 5.54e+03 (96), rest 1.579e+05; max rest |A|^2/sum w^2 = 6.41; E|A|^4/(E|A|^2)^2 = 1.991
+   theta=0.05 H=1117 #u=4056: S/(DH)=0.2607 S/diag=0.9610 | sixth 298 (12), cube 2.57e+03 (24), square 5.78e+03 (108), rest 2.244e+05; max rest |A|^2/sum w^2 = 6.41; E|A|^4/(E|A|^2)^2 = 1.974
+   theta=0.10 H=1561 #u=5646: S/(DH)=0.2632 S/diag=0.9734 | sixth 298 (12), cube 2.57e+03 (24), square 8.09e+03 (138), rest 3.177e+05; max rest |A|^2/sum w^2 = 7.96; E|A|^4/(E|A|^2)^2 = 1.998
+   N(p)=7: |A_p6 - A_1| = 6.172 (direct 6.172, err 0.0e+00; sum_(p|n)|w| = 10.28)
+   N(p)=7: |A_p6 - A_1| = 6.172 (direct 6.172, err 0.0e+00; sum_(p|n)|w| = 10.28)
+   N(p)=13: |A_p6 - A_1| = 2.311 (direct 2.311, err 2.7e-15; sum_(p|n)|w| = 6.28)
+   N(p)=13: |A_p6 - A_1| = 2.311 (direct 2.311, err 8.9e-16; sum_(p|n)|w| = 6.28)
+D=1600: #n=457, #u=12120, A computed in 0.3s; |A_1|=2.068 (sqrt(sum w^2)=11.3); conj err 3.0e-14, lambda^6 err 0.0e+00
+   theta=0.00 H=1600 #u=5814: S/(DH)=0.2782 S/diag=1.0136 | sixth 7.37e+03 (12), cube 3.11e+03 (24), square 1.44e+04 (138), rest 6.874e+05; max rest |A|^2/sum w^2 = 7.50; E|A|^4/(E|A|^2)^2 = 2.011
+   theta=0.05 H=2314 #u=8394: S/(DH)=0.2738 S/diag=0.9985 | sixth 7.37e+03 (12), cube 4.77e+03 (42), square 1.83e+04 (156), rest 9.832e+05; max rest |A|^2/sum w^2 = 7.50; E|A|^4/(E|A|^2)^2 = 2.011
+   theta=0.10 H=3346 #u=12120: S/(DH)=0.2727 S/diag=0.9965 | sixth 7.37e+03 (12), cube 4.77e+03 (42), square 2.33e+04 (198), rest 1.424e+06; max rest |A|^2/sum w^2 = 9.46; E|A|^4/(E|A|^2)^2 = 2.025
+   N(p)=7: |A_p6 - A_1| = 10.529 (direct 10.529, err 1.1e-14; sum_(p|n)|w| = 19.91)
+   N(p)=7: |A_p6 - A_1| = 10.529 (direct 10.529, err 3.6e-15; sum_(p|n)|w| = 19.91)
+   N(p)=13: |A_p6 - A_1| = 5.984 (direct 5.984, err 8.9e-16; sum_(p|n)|w| = 11.33)
+   N(p)=13: |A_p6 - A_1| = 5.984 (direct 5.984, err 8.9e-16; sum_(p|n)|w| = 11.33)
+D=3200: #n=898, #u=26016, A computed in 0.5s; |A_1|=7.659 (sqrt(sum w^2)=16.0); conj err 5.0e-14, lambda^6 err 0.0e+00
+   theta=0.00 H=3200 #u=11628: S/(DH)=0.2759 S/diag=1.0082 | sixth 5.81e+03 (12), cube 1.26e+04 (42), square 4.94e+04 (186), rest 2.758e+06; max rest |A|^2/sum w^2 = 8.11; E|A|^4/(E|A|^2)^2 = 2.047
+   theta=0.05 H=4791 #u=17376: S/(DH)=0.2750 S/diag=1.0073 | sixth 8.71e+03 (18), cube 1.26e+04 (42), square 6.38e+04 (234), rest 4.131e+06; max rest |A|^2/sum w^2 = 9.61; E|A|^4/(E|A|^2)^2 = 2.068
+   theta=0.10 H=7172 #u=26016: S/(DH)=0.2740 S/diag=1.0028 | sixth 8.71e+03 (18), cube 1.65e+04 (54), square 7.97e+04 (294), rest 6.183e+06; max rest |A|^2/sum w^2 = 10.70; E|A|^4/(E|A|^2)^2 = 2.079
+   N(p)=7: |A_p6 - A_1| = 13.464 (direct 13.464, err 1.6e-14; sum_(p|n)|w| = 42.21)
+   N(p)=7: |A_p6 - A_1| = 13.464 (direct 13.464, err 3.4e-14; sum_(p|n)|w| = 42.21)
+   N(p)=13: |A_p6 - A_1| = 11.400 (direct 11.400, err 3.9e-14; sum_(p|n)|w| = 21.30)
+   N(p)=13: |A_p6 - A_1| = 11.400 (direct 11.400, err 2.5e-14; sum_(p|n)|w| = 21.30)
+D=6400: #n=1799, #u=55764, A computed in 1.0s; |A_1|=30.197 (sqrt(sum w^2)=23.0); conj err 8.6e-14, lambda^6 err 0.0e+00
+   theta=0.00 H=6400 #u=23232: S/(DH)=0.2819 S/diag=1.0045 | sixth 2.25e+04 (18), cube 2.99e+04 (42), square 1.26e+05 (276), rest 1.137e+07; max rest |A|^2/sum w^2 = 10.56; E|A|^4/(E|A|^2)^2 = 2.123
+   theta=0.05 H=9919 #u=36000: S/(DH)=0.2819 S/diag=1.0049 | sixth 2.25e+04 (18), cube 3.57e+04 (66), square 1.49e+05 (342), rest 1.769e+07; max rest |A|^2/sum w^2 = 10.56; E|A|^4/(E|A|^2)^2 = 2.102
+   theta=0.10 H=15374 #u=55764: S/(DH)=0.2812 S/diag=1.0029 | sixth 2.25e+04 (18), cube 3.57e+04 (66), square 1.78e+05 (420), rest 2.743e+07; max rest |A|^2/sum w^2 = 12.77; E|A|^4/(E|A|^2)^2 = 2.114
+   N(p)=7: |A_p6 - A_1| = 3.948 (direct 3.948, err 7.4e-14; sum_(p|n)|w| = 86.85)
+   N(p)=7: |A_p6 - A_1| = 3.948 (direct 3.948, err 1.0e-13; sum_(p|n)|w| = 86.85)
+   N(p)=13: |A_p6 - A_1| = 7.432 (direct 7.432, err 5.4e-14; sum_(p|n)|w| = 52.46)
+   N(p)=13: |A_p6 - A_1| = 7.432 (direct 7.432, err 5.4e-14; sum_(p|n)|w| = 52.46)
+D=12800: #n=3623, #u=119562, A computed in 3.3s; |A_1|=37.974 (sqrt(sum w^2)=32.5); conj err 1.6e-13, lambda^6 err 0.0e+00
+   theta=0.00 H=12800 #u=46452: S/(DH)=0.2843 S/diag=1.0139 | sixth 2.93e+04 (18), cube 7.68e+04 (66), square 3.79e+05 (402), rest 4.609e+07; max rest |A|^2/sum w^2 = 15.09; E|A|^4/(E|A|^2)^2 = 2.116
+   theta=0.05 H=20539 #u=74526: S/(DH)=0.2833 S/diag=1.0107 | sixth 2.93e+04 (18), cube 1.11e+05 (78), square 4.46e+05 (492), rest 7.39e+07; max rest |A|^2/sum w^2 = 15.09; E|A|^4/(E|A|^2)^2 = 2.118
+   theta=0.10 H=32956 #u=119562: S/(DH)=0.2824 S/diag=1.0076 | sixth 2.93e+04 (18), cube 1.28e+05 (102), square 5.82e+05 (642), rest 1.184e+08; max rest |A|^2/sum w^2 = 15.37; E|A|^4/(E|A|^2)^2 = 2.117
+   N(p)=7: |A_p6 - A_1| = 3.460 (direct 3.460, err 1.0e-13; sum_(p|n)|w| = 177.01)
+   N(p)=7: |A_p6 - A_1| = 3.460 (direct 3.460, err 1.0e-13; sum_(p|n)|w| = 177.01)
+   N(p)=13: |A_p6 - A_1| = 8.388 (direct 8.388, err 4.4e-14; sum_(p|n)|w| = 100.29)
+   N(p)=13: |A_p6 - A_1| = 8.388 (direct 8.388, err 1.6e-13; sum_(p|n)|w| = 100.29)
+D=25600: #n=7224, #u=256212, A computed in 12.3s; |A_1|=29.356 (sqrt(sum w^2)=45.7); conj err 3.0e-13, lambda^6 err 0.0e+00
+   theta=0.00 H=25600 #u=92844: S/(DH)=0.2772 S/diag=0.9987 | sixth 9.7e+04 (18), cube 1.87e+05 (90), square 1.1e+06 (564), rest 1.803e+08; max rest |A|^2/sum w^2 = 11.46; E|A|^4/(E|A|^2)^2 = 2.102
+   theta=0.05 H=42526 #u=154278: S/(DH)=0.2790 S/diag=1.0050 | sixth 9.7e+04 (18), cube 2.01e+05 (102), square 1.41e+06 (726), rest 3.02e+08; max rest |A|^2/sum w^2 = 14.24; E|A|^4/(E|A|^2)^2 = 2.112
+   theta=0.10 H=70642 #u=256212: S/(DH)=0.2781 S/diag=1.0020 | sixth 9.7e+04 (18), cube 3.24e+05 (132), square 1.85e+06 (936), rest 5.006e+08; max rest |A|^2/sum w^2 = 14.24; E|A|^4/(E|A|^2)^2 = 2.112
+   N(p)=7: |A_p6 - A_1| = 17.582 (direct 17.582, err 2.8e-13; sum_(p|n)|w| = 346.65)
+   N(p)=7: |A_p6 - A_1| = 17.582 (direct 17.582, err 2.0e-13; sum_(p|n)|w| = 346.65)
+   N(p)=13: |A_p6 - A_1| = 6.487 (direct 6.487, err 6.8e-14; sum_(p|n)|w| = 199.75)
+   N(p)=13: |A_p6 - A_1| = 6.487 (direct 6.487, err 1.1e-14; sum_(p|n)|w| = 199.75)
+D=51200: #n=14441, #u=549354, A computed in 42.9s; |A_1|=21.102 (sqrt(sum w^2)=64.6); conj err 9.2e-13, lambda^6 err 0.0e+00
+   theta=0.00 H=51200 #u=185772: S/(DH)=0.2779 S/diag=1.0002 | sixth 2.55e+05 (18), cube 6.23e+05 (120), square 3.01e+06 (804), rest 7.245e+08; max rest |A|^2/sum w^2 = 13.25; E|A|^4/(E|A|^2)^2 = 2.129
+   theta=0.05 H=88051 #u=319458: S/(DH)=0.2774 S/diag=0.9987 | sixth 2.55e+05 (18), cube 7.26e+05 (144), square 3.85e+06 (1050), rest 1.246e+09; max rest |A|^2/sum w^2 = 14.21; E|A|^4/(E|A|^2)^2 = 2.125
+   theta=0.10 H=151425 #u=549354: S/(DH)=0.2770 S/diag=0.9973 | sixth 3.72e+05 (30), cube 7.61e+05 (168), square 5.21e+06 (1386), rest 2.141e+09; max rest |A|^2/sum w^2 = 16.57; E|A|^4/(E|A|^2)^2 = 2.126
+   N(p)=7: |A_p6 - A_1| = 9.176 (direct 9.176, err 4.7e-13; sum_(p|n)|w| = 689.04)
+   N(p)=7: |A_p6 - A_1| = 9.176 (direct 9.176, err 4.4e-13; sum_(p|n)|w| = 689.04)
+   N(p)=13: |A_p6 - A_1| = 21.305 (direct 21.305, err 2.0e-13; sum_(p|n)|w| = 395.33)
+   N(p)=13: |A_p6 - A_1| = 21.305 (direct 21.305, err 9.1e-13; sum_(p|n)|w| = 395.33)
+D=102400: #n=28894, #u=1177398, A computed in 177.3s; |A_1|=59.966 (sqrt(sum w^2)=91.4); conj err 1.0e-12, lambda^6 err 0.0e+00
+   theta=0.00 H=102400 #u=371484: S/(DH)=0.2792 S/diag=1.0034 | sixth 1.42e+05 (18), cube 1.12e+06 (144), square 9.29e+06 (1140), rest 2.917e+09; max rest |A|^2/sum w^2 = 18.56; E|A|^4/(E|A|^2)^2 = 2.143
+   theta=0.05 H=182312 #u=661332: S/(DH)=0.2786 S/diag=1.0010 | sixth 2.23e+05 (30), cube 1.31e+06 (168), square 1.22e+07 (1500), rest 5.186e+09; max rest |A|^2/sum w^2 = 18.56; E|A|^4/(E|A|^2)^2 = 2.144
+   theta=0.10 H=324586 #u=1177398: S/(DH)=0.2783 S/diag=1.0000 | sixth 2.23e+05 (30), cube 1.73e+06 (222), square 1.6e+07 (2034), rest 9.23e+09; max rest |A|^2/sum w^2 = 18.56; E|A|^4/(E|A|^2)^2 = 2.138
+   N(p)=7: |A_p6 - A_1| = 1.783 (direct 1.783, err 1.8e-12; sum_(p|n)|w| = 1387.73)
+   N(p)=7: |A_p6 - A_1| = 1.783 (direct 1.783, err 2.9e-12; sum_(p|n)|w| = 1387.73)
+   N(p)=13: |A_p6 - A_1| = 11.589 (direct 11.589, err 2.1e-13; sum_(p|n)|w| = 786.90)
+   N(p)=13: |A_p6 - A_1| = 11.589 (direct 11.589, err 1.4e-12; sum_(p|n)|w| = 786.90)
+done in 759.7s; wrote ./mean_square.json

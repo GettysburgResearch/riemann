@@ -1,0 +1,36 @@
+bound=50000: 5135 prime ideals, 14120 squarefree n; table self-test 18000 exact checks passed (2.2s)
+Gauss sums for 14120 n done (59.9s); 8985 composite, 784 involve an inert prime
+  max error a             : 4.789e-15   (worst n = ((94, -51), 16231))
+  max error b             : 2.906e-15   (worst n = ((241, 165), 45541))
+  max error c             : 2.843e-15   (worst n = ((166, -15), 30271))
+  max error d             : 2.397e-15   (worst n = ((-65, -219), 37951))
+  max error absG          : 1.110e-15   (worst n = ((52, 117), 10309))
+  max error gamma3_closed : 1.159e-15   (worst n = ((-197, -81), 29413))
+  max error chi4_mod2     : 0.000e+00   (worst n = None)
+(e) 303320 coprime ordered pairs with N <= 2000: max |R - round(R)| = 5.77e-16; R values [-1, 1]; (a mod 4, b mod 4) classes: 144, inconsistent: 0; mismatches with (-1)^(eh+fg+fh): 0; max |R - Gq(ab)/(Gq(a)Gq(b))| = 0.00e+00
+    G(ab)=G(a)G(b)R(a,b): 19370 pairs with N(ab)<=50000, max err 2.17e-15; eq:crt-a max err 5.04e-15
+  mod  2: G: 3 classes, max spread 2.00e+00; g3: 3 classes, max spread 2.00e+00; chi4: 3 classes, max spread 0.00e+00; chim1: 3 classes, max spread 2.00e+00
+  mod  3: G: 1 classes, max spread 2.00e+00; g3: 1 classes, max spread 2.00e+00; chi4: 1 classes, max spread 1.73e+00; chim1: 1 classes, max spread 2.00e+00
+  mod  4: G: 12 classes, max spread 1.64e-15; g3: 12 classes, max spread 1.59e-15; chi4: 12 classes, max spread 0.00e+00; chim1: 12 classes, max spread 0.00e+00
+  mod  6: G: 3 classes, max spread 2.00e+00; g3: 3 classes, max spread 2.00e+00; chi4: 3 classes, max spread 0.00e+00; chim1: 3 classes, max spread 2.00e+00
+  mod  8: G: 48 classes, max spread 1.61e-15; g3: 48 classes, max spread 1.59e-15; chi4: 48 classes, max spread 0.00e+00; chim1: 48 classes, max spread 0.00e+00
+  mod 12: G: 12 classes, max spread 1.64e-15; g3: 12 classes, max spread 1.59e-15; chi4: 12 classes, max spread 0.00e+00; chim1: 12 classes, max spread 0.00e+00
+  mod 24: G: 48 classes, max spread 1.61e-15; g3: 48 classes, max spread 1.59e-15; chi4: 48 classes, max spread 0.00e+00; chim1: 48 classes, max spread 0.00e+00
+  mod 36: G: 108 classes, max spread 1.78e-15; g3: 108 classes, max spread 1.75e-15; chi4: 108 classes, max spread 0.00e+00; chim1: 108 classes, max spread 0.00e+00
+  mod 72: G: 432 classes, max spread 1.67e-15; g3: 432 classes, max spread 1.61e-15; chi4: 432 classes, max spread 0.00e+00; chim1: 432 classes, max spread 0.00e+00
+  G on classes n mod 4 (a mod 4, b mod 4) -> G, chi_n(-1), square class (e,f):
+    (0, 1): G = -0.5000-0.8660i   chi(-1) = +1   class (0, 0)   R(c,c)=+1
+    (0, 3): G = -0.5000-0.8660i   chi(-1) = +1   class (1, 0)   R(c,c)=+1
+    (1, 0): G = +1.0000-0.0000i   chi(-1) = +1   class (0, 0)   R(c,c)=+1
+    (1, 1): G = -0.5000+0.8660i   chi(-1) = +1   class (1, 0)   R(c,c)=+1
+    (1, 2): G = +0.0000+1.0000i   chi(-1) = -1   class (0, 1)   R(c,c)=-1
+    (1, 3): G = -0.8660-0.5000i   chi(-1) = -1   class (0, 1)   R(c,c)=-1
+    (2, 1): G = -0.8660+0.5000i   chi(-1) = -1   class (1, 1)   R(c,c)=-1
+    (2, 3): G = +0.8660-0.5000i   chi(-1) = -1   class (0, 1)   R(c,c)=-1
+    (3, 0): G = +1.0000-0.0000i   chi(-1) = +1   class (1, 0)   R(c,c)=+1
+    (3, 1): G = +0.8660+0.5000i   chi(-1) = -1   class (1, 1)   R(c,c)=-1
+    (3, 2): G = +0.0000-1.0000i   chi(-1) = -1   class (1, 1)   R(c,c)=-1
+    (3, 3): G = -0.5000+0.8660i   chi(-1) = +1   class (0, 0)   R(c,c)=+1
+  max |chi_n(-1) - R(n,n)| = 1.22e-16
+  class level: max |G(ab)-G(a)G(b)R(a,b)| over all 144 class pairs = 1.85e-15; max |G(a^-1) - chi_a(-1) conj G(a)| = 9.04e-16
+wrote ./identities.json (69.9s total)
