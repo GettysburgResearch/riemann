@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "fixture_count": 15,
+  "fixtures": [
+    {
+      "test": "valid miniature selected tree",
+      "status": "PASS"
+    },
+    {
+      "test": "omitted from mirror and manifest",
+      "status": "PASS",
+      "rejection": "Frozen upstream selection mismatch: missing 1 ['examples/b.lean']; extra 0 []"
+    },
+    {
+      "test": "duplicate manifest row",
+      "status": "PASS",
+      "rejection": "Duplicate manifest file entry: upstream/LICENSE"
+    },
+    {
+      "test": "false path mapping",
+      "status": "PASS",
+      "rejection": "Invalid upstream-to-mirror path mapping: upstream/examples/elsewhere.lean"
+    },
+    {
+      "test": "changed upstream_commit",
+      "status": "PASS",
+      "rejection": "Frozen manifest metadata mismatch: upstream_commit"
+    },
+    {
+      "test": "changed upstream_repository",
+      "status": "PASS",
+      "rejection": "Frozen manifest metadata mismatch: upstream_repository"
+    },
+    {
+      "test": "false total byte count",
+      "status": "PASS",
+      "rejection": "Manifest total byte count mismatch"
+    },
+    {
+      "test": "identical bytes via file symlink",
+      "status": "PASS",
+      "rejection": "Symlink in upstream mirror: upstream/examples/b.lean"
+    },
+    {
+      "test": "identical bytes via directory symlink",
+      "status": "PASS",
+      "rejection": "Symlink in upstream mirror: upstream/examples"
+    },
+    {
+      "test": "mirror root symlink",
+      "status": "PASS",
+      "rejection": "The upstream mirror must be an ordinary directory"
+    },
+    {
+      "test": "executable bit differs from git mode",
+      "status": "PASS",
+      "rejection": "Mirrored Git executable mode mismatch: upstream/LICENSE"
+    },
+    {
+      "test": "miniature importer plus verifier round trip",
+      "status": "PASS"
+    },
+    {
+      "test": "importer rejects symlink before any copy",
+      "status": "PASS",
+      "rejection": "Symlink in file path: upstream/examples/b.lean"
+    },
+    {
+      "test": "importer rejects symlink ancestor",
+      "status": "PASS",
+      "rejection": "Symlink in file path: upstream/examples/a.lean"
+    },
+    {
+      "test": "all inputs checked before writing",
+      "status": "PASS",
+      "rejection": "Dirty or incomplete upstream source: examples/b.lean"
+    }
+  ],
+  "real_manifest_unchanged": true,
+  "actual_upstream_files_modified": false,
+  "kernel_build_run": false
+}

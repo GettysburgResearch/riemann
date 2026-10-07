@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "arithmetic": "EXACT_RATIONAL",
+  "proves_new_analytic_estimate": false,
+  "source_scope": "conditional exponents from CONDITIONAL_BRIDGES.md and RESEARCH_PLAN.md",
+  "endpoints": [
+    {
+      "status": "conditional on external strip plus classical summation interface",
+      "zero_free_boundary": {
+        "exact": "7/8",
+        "decimal": 0.875
+      },
+      "M_summatory_exponent": {
+        "exact": "7/8",
+        "decimal": 0.875
+      },
+      "m_reciprocal_sum_exponent": {
+        "exact": "-1/8",
+        "decimal": -0.125
+      },
+      "native_energy_exponent": {
+        "exact": "3/4",
+        "decimal": 0.75
+      },
+      "current_complete_MHB32_output": {
+        "exact": "505/546",
+        "decimal": 0.924908424908425
+      },
+      "MHB32_improves_seed": false,
+      "CAP36_width_exponent": {
+        "exact": "7/8",
+        "decimal": 0.875
+      },
+      "CAP36_D_exponent_bounded_phase": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "CAP36_transport_error_exponent_in_Y": {
+        "exact": "5/4",
+        "decimal": 1.25
+      },
+      "CAP36_transport_error_exponent_in_output_X": {
+        "exact": "5/8",
+        "decimal": 0.625
+      },
+      "square_step_energy_seed_exponent_in_Y": {
+        "exact": "3/2",
+        "decimal": 1.5
+      },
+      "saving_between_upper_bound_scales_in_Y": {
+        "exact": "1/4",
+        "decimal": 0.25
+      },
+      "CAP36_limits": "difference bound; anchored |tau|<=1; exact observation hypotheses retained"
+    },
+    {
+      "status": "conditional on external strip plus classical summation interface",
+      "zero_free_boundary": {
+        "exact": "11/12",
+        "decimal": 0.9166666666666666
+      },
+      "M_summatory_exponent": {
+        "exact": "11/12",
+        "decimal": 0.9166666666666666
+      },
+      "m_reciprocal_sum_exponent": {
+        "exact": "-1/12",
+        "decimal": -0.08333333333333333
+      },
+      "native_energy_exponent": {
+        "exact": "5/6",
+        "decimal": 0.8333333333333334
+      },
+      "current_complete_MHB32_output": {
+        "exact": "778/819",
+        "decimal": 0.9499389499389499
+      },
+      "MHB32_improves_seed": false,
+      "CAP36_width_exponent": {
+        "exact": "11/12",
+        "decimal": 0.9166666666666666
+      },
+      "CAP36_D_exponent_bounded_phase": {
+        "exact": "2/3",
+        "decimal": 0.6666666666666666
+      },
+      "CAP36_transport_error_exponent_in_Y": {
+        "exact": "3/2",
+        "decimal": 1.5
+      },
+      "CAP36_transport_error_exponent_in_output_X": {
+        "exact": "3/4",
+        "decimal": 0.75
+      },
+      "square_step_energy_seed_exponent_in_Y": {
+        "exact": "5/3",
+        "decimal": 1.6666666666666667
+      },
+      "saving_between_upper_bound_scales_in_Y": {
+        "exact": "1/6",
+        "decimal": 0.16666666666666666
+      },
+      "CAP36_limits": "difference bound; anchored |tau|<=1; exact observation hypotheses retained"
+    }
+  ],
+  "p_4_over_3_candidate": {
+    "status": "sufficient threshold only; full recurrence not established",
+    "strict_improvement_requires_a_less_than": {
+      "exact": "1/2",
+      "decimal": 0.5
+    }
+  }
+}
