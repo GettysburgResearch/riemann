@@ -1,0 +1,50 @@
+{
+  "status": "IMPORTED_EXTERNAL_RESULT_WITH_SELECTIVE_AUDIT",
+  "upstream_repository": "openai/math",
+  "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "upstream_commit_date_utc": "2026-10-06T21:58:50Z",
+  "target_repository": "GettysburgResearch/riemann",
+  "base_commit": "f99d9e3908dde4865377c75d9ca051c1f545bf4f",
+  "branch": "import/openai-quasi-rh-20261007",
+  "import_date": "2026-10-07",
+  "scope": "Family 003 three complete manuscripts; complete internal formal source closure; upstream build metadata and patches",
+  "upstream_source_modified": false,
+  "fresh_lean_kernel_build_run": false,
+  "comparator_run": false,
+  "implementation_closure_modules": 3232,
+  "original_license": "Apache-2.0",
+  "project_commentary_license": "MIT",
+  "recent_research_refs": [
+    {
+      "pr": 901,
+      "head": "93126fa9131ebfa93311c1874eeb4cbd93c97864",
+      "state": "open draft"
+    },
+    {
+      "pr": 903,
+      "head": "72ad9bc0fecf52769d62942a8ad307efe46847ce",
+      "state": "open draft"
+    },
+    {
+      "pr": 904,
+      "head": "8c506696d8ad7772ccaf48fbb8678fcd889e8beb",
+      "state": "open draft"
+    },
+    {
+      "pr": 905,
+      "head": "0f82df3bf1d0bc669a1bbca09f8404b77c6fecde",
+      "state": "open draft"
+    },
+    {
+      "pr": 907,
+      "head": "aa725eebf89201fcbefbf7f5e209a22ec318ba5a",
+      "state": "open draft"
+    }
+  ],
+  "limits": [
+    "Imported statements have not been promoted to accepted integrated results.",
+    "Source scans and finite algebra checks do not authenticate infinite analytic claims.",
+    "External dependency source trees and binary caches are pinned, not vendored.",
+    "No new zero-free region or RH proof is claimed by the project analysis."
+  ]
+}

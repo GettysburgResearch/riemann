@@ -1,0 +1,243 @@
+{
+  "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "status": "PASS",
+  "scope": "Selected algebraic checkpoints only; not an analytic or Lean proof audit",
+  "check_count": 27,
+  "checks": [
+    {
+      "name": "sixth_power_extraction_square_exponent",
+      "kind": "symbolic_identity",
+      "source": "Oct5 eq:prime-extract"
+    },
+    {
+      "name": "sixth_power_extraction_sum_exponent",
+      "kind": "symbolic_identity",
+      "source": "Oct5 eq:prime-extract"
+    },
+    {
+      "name": "sixth_power_extraction_error_exponent",
+      "kind": "symbolic_identity",
+      "source": "Oct5 eq:prime-extract"
+    },
+    {
+      "name": "common_support_prime_cancellation_0",
+      "kind": "symbolic_identity",
+      "source": "Oct5 Lemma 7.3 (lem:second-transfer), signed preimage regrouping"
+    },
+    {
+      "name": "common_support_prime_cancellation_1",
+      "kind": "symbolic_identity",
+      "source": "Oct5 Lemma 7.3 (lem:second-transfer), signed preimage regrouping"
+    },
+    {
+      "name": "child_row_scale",
+      "kind": "symbolic_identity",
+      "source": "Oct5 eq:transfer-scales"
+    },
+    {
+      "name": "cutoff_contraction_boundary",
+      "kind": "symbolic_identity",
+      "source": "Oct5 Proposition 5.1 (prop:canonical), induction"
+    },
+    {
+      "name": "compensated_geometry",
+      "kind": "symbolic_identity",
+      "source": "Sep30 old-eq:5.1"
+    },
+    {
+      "name": "compensated_low_exponent",
+      "kind": "symbolic_identity",
+      "source": "Sep30 Proposition 15.3, old-eq:5.10"
+    },
+    {
+      "name": "compensated_mellin_exponent",
+      "kind": "symbolic_identity",
+      "source": "Sep30 old-eq:5.11"
+    },
+    {
+      "name": "balanced_row_count_crossing_cleared",
+      "kind": "symbolic_identity",
+      "source": "Sep30 Proposition 19.2 and eq:target-cutoff"
+    },
+    {
+      "name": "positive_endpoint_certificate",
+      "kind": "symbolic_identity",
+      "source": "Sep30 Lemma 20.2, eq:balanced-endpoint-certificate"
+    },
+    {
+      "name": "endpoint_denominator_polynomial",
+      "kind": "symbolic_identity",
+      "source": "Sep30 Lemma 20.2"
+    },
+    {
+      "name": "endpoint_positive_linear_factor",
+      "kind": "exact_inequality",
+      "source": "Sep30 Lemma 20.2, 0 <= y <= 1/2"
+    },
+    {
+      "name": "endpoint_ratio_bound",
+      "kind": "symbolic_identity",
+      "source": "Sep30 Lemma 20.2, v <= 17(3+5y)"
+    },
+    {
+      "name": "Dx_lower_endpoint",
+      "kind": "symbolic_identity",
+      "source": "Sep30 Lemma 20.2, Dx decreases on [0,1/2]"
+    },
+    {
+      "name": "Dx_upper_endpoint",
+      "kind": "symbolic_identity",
+      "source": "Sep30 Lemma 20.2"
+    },
+    {
+      "name": "Px_lower_endpoint",
+      "kind": "symbolic_identity",
+      "source": "Sep30 Lemma 20.2, Px decreases on [0,1/2]"
+    },
+    {
+      "name": "Px_upper_endpoint",
+      "kind": "symbolic_identity",
+      "source": "Sep30 Lemma 20.2"
+    },
+    {
+      "name": "J_lower_bound",
+      "kind": "exact_inequality",
+      "source": "Sep30 Lemma 20.2, J/alpha is a convex combination of Dx and Px"
+    },
+    {
+      "name": "J_upper_bound",
+      "kind": "exact_inequality",
+      "source": "Sep30 Lemma 20.2"
+    },
+    {
+      "name": "certificate_margin",
+      "kind": "exact_inequality",
+      "source": "Sep30 Lemma 20.2"
+    },
+    {
+      "name": "adaptive_margin",
+      "kind": "symbolic_identity",
+      "source": "Sep30 eq:adaptive-endpoint"
+    },
+    {
+      "name": "prime_supply_margin",
+      "kind": "symbolic_identity",
+      "source": "Sep30 Proposition 19.2 and Section 20"
+    },
+    {
+      "name": "floor_margin",
+      "kind": "symbolic_identity",
+      "source": "Sep30 eq:floor-bound"
+    },
+    {
+      "name": "intermediate_margin",
+      "kind": "symbolic_identity",
+      "source": "Sep30 eq:adaptive-intermediate"
+    },
+    {
+      "name": "gauss_conversion_split_prime_cases",
+      "kind": "exact_cyclotomic_reduction",
+      "source": "Oct5 eq:convert2 and Appendix A.1",
+      "cases": [
+        {
+          "norm": 7,
+          "primary_generator": [
+            -2,
+            -3
+          ]
+        },
+        {
+          "norm": 7,
+          "primary_generator": [
+            1,
+            3
+          ]
+        },
+        {
+          "norm": 13,
+          "primary_generator": [
+            1,
+            -3
+          ]
+        },
+        {
+          "norm": 13,
+          "primary_generator": [
+            4,
+            3
+          ]
+        },
+        {
+          "norm": 19,
+          "primary_generator": [
+            -5,
+            -3
+          ]
+        },
+        {
+          "norm": 19,
+          "primary_generator": [
+            -2,
+            3
+          ]
+        },
+        {
+          "norm": 31,
+          "primary_generator": [
+            -5,
+            -6
+          ]
+        },
+        {
+          "norm": 31,
+          "primary_generator": [
+            1,
+            6
+          ]
+        },
+        {
+          "norm": 37,
+          "primary_generator": [
+            4,
+            -3
+          ]
+        },
+        {
+          "norm": 37,
+          "primary_generator": [
+            7,
+            3
+          ]
+        },
+        {
+          "norm": 43,
+          "primary_generator": [
+            1,
+            -6
+          ]
+        },
+        {
+          "norm": 43,
+          "primary_generator": [
+            7,
+            6
+          ]
+        },
+        {
+          "norm": 61,
+          "primary_generator": [
+            -5,
+            -9
+          ]
+        },
+        {
+          "norm": 61,
+          "primary_generator": [
+            4,
+            9
+          ]
+        }
+      ]
+    }
+  ]
+}
