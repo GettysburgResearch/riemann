@@ -1,7 +1,7 @@
 # Lean source audit of OpenAI family 003
 
 ```text
-Status: EMPIRICAL source inspection; NOT_EXECUTION_EVIDENCE (no build, no comparator replay)
+Status: EMPIRICAL source inspection; NOT_EXECUTION_EVIDENCE for the proofs (challenge statements compiled; 7/8 proof closure not built; no comparator replay)
 Scope: openai/math @ adc7f1241b42e322a6451854ab7e4b4c146bf78a, directory lean/
 What was actually run: grep over the import closure of the solution modules (3,232 files); reading of the challenge files and configs;
   elan + Lean v4.34.1 + Mathlib d13f23b cache: all four challenge files compile (expected `sorry` warnings only);
@@ -10,7 +10,7 @@ What was actually run: grep over the import closure of the solution modules (3,2
 Smallest remaining gap: `lake build` plus `lake env comparator ComparatorChallenges/{QuasiRiemannHypothesis,DirichletSevenEighths,HeckeSevenEighths,SiegelZeros}.json` on independent hardware, with the axiom report recorded
 ```
 
-As in the earlier external-work reviews (AS-026), formal metadata is not execution evidence. Everything below was read from source, not checked by a kernel.
+As in the earlier external-work reviews (AS-026), formal metadata is not execution evidence. Apart from the compiled challenge statements and the partial Siegel build, everything below was read from source, not checked by a kernel.
 
 ## Statements (verbatim from the challenge files)
 
