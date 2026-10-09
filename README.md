@@ -67,6 +67,8 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [OpenAI's quasi-Riemann result, imported 7 October 2026](standalone/2026-10-07-openai-quasi-riemann-import/README.md) preserves family 003's three complete manuscripts, the internal Lean implementation dependency closure, source hashes, selective audits, and a comparison with the current native-covariance branches. Its claimed zero-free half-plane is $\Re s>7/8$. The packet distinguishes the supplied unconditional formalization from verification performed here, and records conditional research bridges and the remaining native covariance estimate. It is an external source import, not promotion to the accepted integrated results.
 
+[Riemann companions and the native Möbius bridge, 9 October 2026](standalone/2026-10-09-openai-riemann-companion/README.md) adds 22 related manuscripts, their advertised internal Lean dependencies, and an exact interface from ideal Möbius coefficients to the integer source, completed Gram and native block means. The source map includes the broader-field Hecke theorem in the primitive-roots paper, with its narrower strip. Reproduction instructions, finite exact checks and an explicit research programme preserve the open covariance estimate and the failure of the existing full MHB32 bootstrap. This companion remains imported material and proposed mathematics for review.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

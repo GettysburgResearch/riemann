@@ -1,0 +1,25 @@
+{
+  "schema": "riemann-companion-validation-context-v1",
+  "date_utc": "2026-10-09",
+  "base_head": "31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6",
+  "upstream_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "core_upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "python_version": "3.12.14",
+  "tools_available": {
+    "lean": false,
+    "lake": false,
+    "comparator": false,
+    "landrun": false,
+    "lean4export": false
+  },
+  "sha256": {
+    "SOURCE_SELECTION.json": "5a0be434bdf539cedbd87d534a3f8cc9f90daaa2e8b1077c00246e6a95973fae",
+    "SOURCE_MANIFEST.json": "7b5c8191648f426c7ea00718c7d3fc1c928ae62084f850d03573e52d1c162187",
+    "checks/audit_upstream_drift.py": "7a99ee742d0a6381c7dcf8fb4dadafb6b27768fce11bc90272ae4ff21523f64d",
+    "checks/check_assembled_view.py": "51c70c14202b669a625ab68a43a0a48a939c05bd275b8ab18fcc4361023fab65",
+    "checks/check_native_mobius_bridge.py": "69420e9e142fd429c0844466514fb8269b190101c4a5057db0b4877f251355c8",
+    "checks/check_source_bundle.py": "ade8c88431dc0bad34e85ca06ab76d56035f5cb3aaaf396a7243245c891ffaa1",
+    "checks/source_bundle.py": "3873d623543d1bf978b17d4ac7e22a116aa19f94ac17b6277f2f26e18e5d6e4a"
+  },
+  "kernel_build_run": false
+}

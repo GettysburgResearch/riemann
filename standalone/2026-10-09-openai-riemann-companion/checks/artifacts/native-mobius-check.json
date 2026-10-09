@@ -1,0 +1,30 @@
+{
+  "all_gram_cutoffs": [
+    1,
+    24
+  ],
+  "all_square_step_inputs": [
+    1,
+    12
+  ],
+  "arithmetic": "exact integers and fractions; no floating-point tolerances",
+  "coefficient_and_completion_prefixes": 512,
+  "counterexamples": {
+    "absolute_coefficients_at_x_4": {
+      "M_4": -1,
+      "absolute_sum": 3
+    },
+    "beta_3": -1,
+    "beta_7_not_one_bounded": -2,
+    "missing_local_factors_at_x_3": {
+      "M_3": -1,
+      "uncorrected": 0
+    }
+  },
+  "gram_entries_compared_in_three_forms": 4900,
+  "rational_endpoint_cases": 1539,
+  "rational_endpoint_grid": "x=k, k+1/2, k+2/3 for every integer 0<=k<=limit",
+  "scope": "finite algebra regression only; no upstream theorem, all-scale inequality, or RH validation",
+  "square_step_blocks_compared_in_three_forms": 169,
+  "status": "PASS"
+}

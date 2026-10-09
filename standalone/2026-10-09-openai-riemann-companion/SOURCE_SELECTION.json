@@ -1,0 +1,247 @@
+{
+  "schema": "riemann-openai-companion-selection-v1",
+  "upstream_repository": "openai/math",
+  "upstream_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "prior_family003_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "base_pr": 908,
+  "base_head": "31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6",
+  "status": "IMPORTED_SOURCE_SELECTION_REVIEW_PENDING",
+  "selection_rule": "Direct zeta/Dirichlet/Hecke statements, their explicit source dependencies and applications, or a concrete retained riemann programme; not all mathematics sharing vocabulary.",
+  "families": [
+    {
+      "family": "007",
+      "title": "Ordinary two-point correlations and the corrected Elliott conjecture",
+      "tier": "arithmetic-method",
+      "manuscript_directories": [
+        "preprints/Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026"
+      ],
+      "pdf_paths": [
+        "preprints/Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026/final.pdf"
+      ],
+      "scope_docs": [
+        "lean/docs/007.md"
+      ],
+      "comparator_roots": [
+        "OrdinaryElliott",
+        "OrdinaryTwoPointCorrelations"
+      ],
+      "comparator_files": [
+        "lean/ComparatorChallenges/OrdinaryElliott.lean",
+        "lean/ComparatorChallenges/OrdinaryTwoPointCorrelations.lean"
+      ],
+      "selection_rationale": "Ordinary multiplicative cancellation, signed finite-law transference, and fixed-form versus growing-parameter limits directly inform the native Möbius/Q4/wavelet programmes.",
+      "review_status": "Imported source comparison; not independently reconstructed or Lean-built."
+    },
+    {
+      "family": "011",
+      "title": "Prime-factor statistics of $`p-1`$",
+      "tier": "arithmetic-method-and-dependency",
+      "manuscript_directories": [
+        "preprints/Weighted-Dilation-Graphs-Smooth-Shifted-Primes-and-Totient-Fibers-September-24-2026",
+        "preprints/The-Poisson-Dirichlet-Law-for-Prime-Predecessors-September-24-2026",
+        "preprints/Prime-Predecessors-with-an-Even-Number-of-Prime-Factors-September-17-2026"
+      ],
+      "pdf_paths": [
+        "preprints/Weighted-Dilation-Graphs-Smooth-Shifted-Primes-and-Totient-Fibers-September-24-2026/paper.pdf",
+        "preprints/The-Poisson-Dirichlet-Law-for-Prime-Predecessors-September-24-2026/paper.pdf",
+        "preprints/Prime-Predecessors-with-an-Even-Number-of-Prime-Factors-September-17-2026/paper.pdf"
+      ],
+      "scope_docs": [],
+      "comparator_roots": [],
+      "comparator_files": [],
+      "selection_rationale": "Weighted dilation transference and marked Type II estimates connect to signed arithmetic and rough-number sources; the Poisson–Dirichlet paper is an explicit analytic dependency of029.",
+      "review_status": "Imported source comparison; not independently reconstructed or Lean-built."
+    },
+    {
+      "family": "012",
+      "title": "Independent largest prime factors of consecutive integers",
+      "tier": "arithmetic-method",
+      "manuscript_directories": [
+        "preprints/The-joint-Dickman-law-for-consecutive-integers-September-24-2026"
+      ],
+      "pdf_paths": [
+        "preprints/The-joint-Dickman-law-for-consecutive-integers-September-24-2026/paper.pdf"
+      ],
+      "scope_docs": [
+        "lean/docs/012.md"
+      ],
+      "comparator_roots": [
+        "JointDickman"
+      ],
+      "comparator_files": [
+        "lean/ComparatorChallenges/JointDickman.lean"
+      ],
+      "selection_rationale": "An exact Dickman comparison for ordinary consecutive integers is a comparator for the existing Dickman/Bellman and causal Euler programmes, with fixed-parameter scope.",
+      "review_status": "Imported source comparison; not independently reconstructed or Lean-built."
+    },
+    {
+      "family": "014",
+      "title": "Restricted geometric Langlands, global Arthur enhancements, and generic Ramanujan",
+      "tier": "secondary-function-field-programme",
+      "manuscript_directories": [
+        "preprints/Global-Arthur-Enhancements-of-Cuspidal-Excursion-Parameters-October-5-2026",
+        "preprints/Rationality-of-the-Canonical-Unramified-Arthur-Filtration-September-24-2026",
+        "preprints/Ramanujan-Arthur-Decompositions-of-Cuspidal-Functions-at-Full-Finite-Level-September-24-2026",
+        "preprints/Temperedness-at-ramified-places-for-globally-generic-exceptional-groups-October-5-2026",
+        "preprints/The-Restricted-Geometric-Langlands-Equivalence-in-Positive-Characteristic-September-24-2026",
+        "preprints/Constructible-tame-Hecke-eigensheaves-in-positive-characteristic-October-5-2026",
+        "preprints/Tame-Hecke-Eigensheaves-with-Several-Marked-Points-October-5-2026",
+        "preprints/Frobenius-Structures-on-Tame-Hecke-Eigensheaves-October-5-2026"
+      ],
+      "pdf_paths": [
+        "preprints/Global-Arthur-Enhancements-of-Cuspidal-Excursion-Parameters-October-5-2026/manuscript.pdf",
+        "preprints/Rationality-of-the-Canonical-Unramified-Arthur-Filtration-September-24-2026/paper.pdf",
+        "preprints/Ramanujan-Arthur-Decompositions-of-Cuspidal-Functions-at-Full-Finite-Level-September-24-2026/paper.pdf",
+        "preprints/Temperedness-at-ramified-places-for-globally-generic-exceptional-groups-October-5-2026/ramified-ramanujan.pdf",
+        "preprints/The-Restricted-Geometric-Langlands-Equivalence-in-Positive-Characteristic-September-24-2026/paper.pdf",
+        "preprints/Constructible-tame-Hecke-eigensheaves-in-positive-characteristic-October-5-2026/constructible-tame-hecke-eigensheaves-positive-characteristic.pdf",
+        "preprints/Tame-Hecke-Eigensheaves-with-Several-Marked-Points-October-5-2026/Tame-Hecke-Eigensheaves-with-Several-Marked-Points.pdf",
+        "preprints/Frobenius-Structures-on-Tame-Hecke-Eigensheaves-October-5-2026/tame-hecke-frobenius.pdf"
+      ],
+      "scope_docs": [],
+      "comparator_roots": [],
+      "comparator_files": [],
+      "selection_rationale": "Explicit repository function-field, automorphic, and Frobenius programmes make this a secondary structural comparator; no characteristic-zero or principal-zeta extraction is supplied.",
+      "review_status": "Imported source comparison; not independently reconstructed or Lean-built."
+    },
+    {
+      "family": "021",
+      "title": "A quadratic bound for Jacobsthal’s function",
+      "tier": "arithmetic-method",
+      "manuscript_directories": [
+        "preprints/A-quadratic-bound-for-Jacobsthals-function-September-25-2026"
+      ],
+      "pdf_paths": [
+        "preprints/A-quadratic-bound-for-Jacobsthals-function-September-25-2026/paper.pdf"
+      ],
+      "scope_docs": [
+        "lean/docs/021.md"
+      ],
+      "comparator_roots": [
+        "Jacobsthal",
+        "JacobsthalImproved"
+      ],
+      "comparator_files": [
+        "lean/ComparatorChallenges/Jacobsthal.lean",
+        "lean/ComparatorChallenges/JacobsthalImproved.lean"
+      ],
+      "selection_rationale": "Uniform prime-set sieve result with explicit transfer from a positive reference calculation to actual residue-class survivors, relevant to growing-prime arithmetic closure.",
+      "review_status": "Imported source comparison; not independently reconstructed or Lean-built."
+    },
+    {
+      "family": "023",
+      "title": "Patterson's first moment for cubic Gauss sums",
+      "tier": "core-analytic-companion",
+      "manuscript_directories": [
+        "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026"
+      ],
+      "pdf_paths": [
+        "preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/paper.pdf"
+      ],
+      "scope_docs": [
+        "lean/docs/023.md"
+      ],
+      "comparator_roots": [
+        "PattersonFirstMoment"
+      ],
+      "comparator_files": [
+        "lean/ComparatorChallenges/PattersonFirstMoment.lean"
+      ],
+      "selection_rationale": "Same cubic theta/Gauss-sum setting as003; structured dual cancellation, exact prime decomposition, and sharp-cutoff control are substantive comparison tools.",
+      "review_status": "Imported source comparison; not independently reconstructed or Lean-built."
+    },
+    {
+      "family": "026",
+      "title": "Positive lower density of large prime gaps",
+      "tier": "secondary-prime-gap-programme",
+      "manuscript_directories": [
+        "preprints/Positive-lower-density-of-large-prime-gaps-September-25-2026"
+      ],
+      "pdf_paths": [
+        "preprints/Positive-lower-density-of-large-prime-gaps-September-25-2026/main.pdf"
+      ],
+      "scope_docs": [
+        "lean/docs/026.md"
+      ],
+      "comparator_roots": [
+        "PrimeGaps"
+      ],
+      "comparator_files": [
+        "lean/ComparatorChallenges/PrimeGaps.lean"
+      ],
+      "selection_rationale": "The repository already retains LongGapsBetweenPrimes and PrimeGaps186 comparison work; this is a related actual-prime gap result with signed centered sieve methods, not RH.",
+      "review_status": "Imported source comparison; not independently reconstructed or Lean-built."
+    },
+    {
+      "family": "029",
+      "title": "Primitive roots for every admissible integer base",
+      "tier": "direct-Hecke-zero-free-extension",
+      "manuscript_directories": [
+        "preprints/Primitive-roots-for-every-admissible-integer-base-October-4-2026",
+        "preprints/Simultaneous-primitive-roots-a-conditional-lower-bound-for-prime-bases-October-4-2026"
+      ],
+      "pdf_paths": [
+        "preprints/Primitive-roots-for-every-admissible-integer-base-October-4-2026/primitive-roots-all-integer-bases.pdf",
+        "preprints/Simultaneous-primitive-roots-a-conditional-lower-bound-for-prime-bases-October-4-2026/simultaneous-primitive-roots-conditional-lower-bound-prime-bases.pdf"
+      ],
+      "scope_docs": [],
+      "comparator_roots": [],
+      "comparator_files": [],
+      "selection_rationale": "Contains an explicit uniform zero-free half-plane Re(s)>1-10^-6 for every finite-order Hecke L-function over cyclotomic fields containing μ12, extending the003 mechanism; its simultaneous-root companion is expressly conditional.",
+      "review_status": "Imported source comparison; not independently reconstructed or Lean-built."
+    },
+    {
+      "family": "142",
+      "title": "Deterministic polynomial factorization over prime fields",
+      "tier": "application-of-029",
+      "manuscript_directories": [
+        "preprints/Deterministic-Polynomial-Factorization-over-Prime-Fields-October-4-2026"
+      ],
+      "pdf_paths": [
+        "preprints/Deterministic-Polynomial-Factorization-over-Prime-Fields-October-4-2026/Deterministic-Polynomial-Factorization-over-Prime-Fields.pdf"
+      ],
+      "scope_docs": [],
+      "comparator_roots": [],
+      "comparator_files": [],
+      "selection_rationale": "Explicit downstream application of029's uniform Hecke zero-free theorem to deterministic prime-field polynomial factorization; preserve as an application, not stronger zero-free evidence.",
+      "review_status": "Imported source comparison; not independently reconstructed or Lean-built."
+    },
+    {
+      "family": "182",
+      "title": "Power savings for intersective polynomial differences and prime arguments",
+      "tier": "application-of-003-and-method-chain",
+      "manuscript_directories": [
+        "preprints/A-power-saving-for-intersective-polynomial-differences-with-an-exponent-depending-only-on-the-degree-October-5-2026",
+        "preprints/A-Power-Saving-for-Polynomial-Differences-at-Prime-Arguments-October-5-2026",
+        "preprints/A-power-saving-for-square-difference-free-sets-September-24-2026"
+      ],
+      "pdf_paths": [
+        "preprints/A-power-saving-for-intersective-polynomial-differences-with-an-exponent-depending-only-on-the-degree-October-5-2026/power-saving-intersective-polynomial-differences.pdf",
+        "preprints/A-Power-Saving-for-Polynomial-Differences-at-Prime-Arguments-October-5-2026/prime-argument-polynomial-differences.pdf",
+        "preprints/A-power-saving-for-square-difference-free-sets-September-24-2026/paper.pdf"
+      ],
+      "scope_docs": [
+        "lean/docs/182.md"
+      ],
+      "comparator_roots": [
+        "SquareDifference"
+      ],
+      "comparator_files": [
+        "lean/ComparatorChallenges/SquareDifference.lean"
+      ],
+      "selection_rationale": "Prime-argument difference paper explicitly imports003's Dirichlet zero-free half-plane; preceding square/general-polynomial papers provide its source chain and signed finite-law/actual-shift method.",
+      "review_status": "Imported source comparison; not independently reconstructed or Lean-built."
+    }
+  ],
+  "notes": [
+    "Family003 already resides inPR908; preserve that exact historical import and do not relabel it as reviewed by this document.",
+    "014 and026 are secondary programme comparisons; their inclusion does not assert RH transfer.",
+    "No advertised formal comparator was found for011,014,029,142.",
+    "The182 comparator and scope cover the square-difference theorem, not the entire October5 generalization.",
+    "Follow Lean module imports from selected translated solution entries; comparator equivalence and dependency checks require their own build."
+  ],
+  "additional_files": [
+    "history.md",
+    "reasoning_traces/ordinary-two-point-correlations.pdf"
+  ]
+}
