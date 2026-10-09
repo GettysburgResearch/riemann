@@ -1,0 +1,112 @@
+{
+  "changed_implementation_modules": [],
+  "global_changed_paths": 1185,
+  "global_status_counts": {
+    "added": 1135,
+    "deleted": 31,
+    "modified": 19
+  },
+  "implementation_modules": 11576,
+  "new_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "old_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "proof_validity_checked": false,
+  "repository": "https://github.com/openai/math",
+  "selected_changes": [
+    {
+      "change": "modified",
+      "new": {
+        "blob": "2c68c086fff36a5806c936ad1659cf1a8d0b6dd9",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "old": {
+        "blob": "8148d2c9077e611d5665a2ded93da68e5b608f0f",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "path": "CONTENTS.md"
+    },
+    {
+      "change": "modified",
+      "new": {
+        "blob": "50feb63d396138f30dc1ff1e0af121d0263bf5a3",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "old": {
+        "blob": "8ac0cb7dbf1f38ad3b7480310d4e1d9482f0cfe8",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "path": "README.md"
+    },
+    {
+      "change": "added",
+      "new": {
+        "blob": "693874f398905b1bc59e01b898b223ae9956bfc2",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "old": null,
+      "path": "history.md"
+    },
+    {
+      "change": "modified",
+      "new": {
+        "blob": "8ce7be24bf62c66104be5f733d168301ead4e4f3",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "old": {
+        "blob": "c1ac131559880e759c28caf79905ba4fe6194eb7",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "path": "lean/ComparatorChallenges/README.md"
+    },
+    {
+      "change": "modified",
+      "new": {
+        "blob": "275eee8cfab7ce49d3a5e88f02cbb8f28fe6fee6",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "old": {
+        "blob": "e0584d4993df01ec08233ab344ebc1b1039bf7f7",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "path": "lean/formalization.yaml"
+    },
+    {
+      "change": "modified",
+      "new": {
+        "blob": "32338b9306cb07ba6575fdabb97dfa8cc342af9d",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "old": {
+        "blob": "7804973617dfa8fda35e0710c64f9b57e844891c",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "path": "overview.pdf"
+    },
+    {
+      "change": "modified",
+      "new": {
+        "blob": "8f3b8cb6d5c4f5f7f0ac216b2c6db52b4b34b2fd",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "old": {
+        "blob": "fc40ebdcd0fb9db026a2e44bde66f2e469939fd4",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "path": "overview.tex"
+    }
+  ],
+  "selected_files": 11940,
+  "status": "GIT_TREE_COMPARISON_ONLY"
+}

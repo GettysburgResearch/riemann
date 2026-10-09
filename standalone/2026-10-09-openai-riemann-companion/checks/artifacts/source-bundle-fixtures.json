@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "check": "isolated source-bundle fixtures",
+  "cases": 21,
+  "historical_core_verifier_mocked_in_fixtures": true,
+  "kernel_build_run": false,
+  "results": [
+    {
+      "case": "valid_resident_selection_and_closure",
+      "status": "PASS"
+    },
+    {
+      "case": "corrupt_shared_core_byte",
+      "status": "PASS",
+      "rejected": "Source integrity failure: lean/OAI/Review/Core.lean"
+    },
+    {
+      "case": "wrong_snapshot",
+      "status": "PASS",
+      "rejected": "Manifest metadata mismatch: upstream_commit"
+    },
+    {
+      "case": "duplicate_entry",
+      "status": "PASS",
+      "rejected": "Duplicate source entry: CONTENTS.md"
+    },
+    {
+      "case": "path_traversal",
+      "status": "PASS",
+      "rejected": "Invalid relative path: '../escape'"
+    },
+    {
+      "case": "symlink_source",
+      "status": "PASS",
+      "rejected": "Symlink in file path: upstream/lean/OAI/Review/Dependency.lean"
+    },
+    {
+      "case": "undeclared_supplement_file",
+      "status": "PASS",
+      "rejected": "Supplement has missing or unlisted files"
+    },
+    {
+      "case": "identical_core_file_stored_again",
+      "status": "PASS",
+      "rejected": "Noncanonical source storage: lean/OAI/Review/Core.lean"
+    },
+    {
+      "case": "omitted_dependency_after_manifest_rewrite",
+      "status": "PASS",
+      "rejected": "Missing resident internal dependency: lean/OAI/Review/Dependency.lean"
+    },
+    {
+      "case": "omitted_required_pdf_after_manifest_rewrite",
+      "status": "PASS",
+      "rejected": "Missing required selection: ['preprints/Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026/final.pdf'], []"
+    },
+    {
+      "case": "wrong_prior_pin_in_policy",
+      "status": "PASS",
+      "rejected": "Source-selection metadata mismatch: prior_family003_commit"
+    },
+    {
+      "case": "wrong_policy_schema",
+      "status": "PASS",
+      "rejected": "Source-selection metadata mismatch: schema"
+    },
+    {
+      "case": "wrong_policy_repository",
+      "status": "PASS",
+      "rejected": "Source-selection metadata mismatch: upstream_repository"
+    },
+    {
+      "case": "wrong_policy_base_pr",
+      "status": "PASS",
+      "rejected": "Source-selection metadata mismatch: base_pr"
+    },
+    {
+      "case": "inconsistent_comparator_paths",
+      "status": "PASS",
+      "rejected": "Comparator paths disagree with roots: 007"
+    },
+    {
+      "case": "policy_path_traversal",
+      "status": "PASS",
+      "rejected": "Invalid relative path: '../escape.pdf'"
+    },
+    {
+      "case": "stale_dependency_audit",
+      "status": "PASS",
+      "rejected": "Recomputed dependency audit differs"
+    },
+    {
+      "case": "unselected_declared_internal_file",
+      "status": "PASS",
+      "rejected": "Manifest contains paths outside the required selection and import closure"
+    },
+    {
+      "case": "offline_does_not_claim_full_git_directory_completeness",
+      "status": "PASS"
+    },
+    {
+      "case": "fresh_assembly_exact_paths_hashes_and_modes",
+      "status": "PASS"
+    },
+    {
+      "case": "nonempty_assembly_destination",
+      "status": "PASS"
+    }
+  ]
+}

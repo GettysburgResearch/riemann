@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "check": "source integrity and lexical closure, not theorem verification",
+  "upstream_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "files": 11940,
+  "bytes": 99623900,
+  "storage_counts": {
+    "supplement": 8660,
+    "core": 3280
+  },
+  "storage_bytes": {
+    "core": 39507819,
+    "supplement": 60116081
+  },
+  "required_selection_and_internal_closure_checked": true,
+  "recorded_dependency_audit_compared": true,
+  "complete_frozen_selection_compared": false,
+  "core_files_verified": 3286,
+  "kernel_build_run": false,
+  "assembled_view": "/workspace/scratch/8c475e3ccb3e/riemann-selected-validation"
+}
