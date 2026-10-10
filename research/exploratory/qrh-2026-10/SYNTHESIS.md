@@ -53,6 +53,15 @@ integration verdict.
        Its trust assumptions are listed there; in particular the solution was precompiled
        (a non-adversarial reproduction).
        This is a machine check of the Lean statement, not a review of the manuscript.
+     * **The Lean route needs no Part I** ([reviews/SEP30_LEAN_CORRESPONDENCE.md](reviews/SEP30_LEAN_CORRESPONDENCE.md)).
+       * It replaces the 11/12 bootstrap by the trivial `β ≤ 1`. The paper's own endpoint row count
+         is extended from `δ = 5/6` to all `δ ∈ [5/6, 1]`, with margin `−1/48 − δ/16`.
+       * It proves its own instances of the cited theorems (cubic theta, cubic and quadratic
+         sieves, Chebotarev via Wiener–Ikehara).
+       * Otherwise it uses the paper's 7/8 exponent bookkeeping constant for constant.
+       * So the formal 7/8 depends neither on the paper's Part I nor on the Oct 5 paper.
+       * Of the 65 paper nodes: 14 have a spot-checked Lean counterpart, 8 are bypassed, and 43 are
+         matched by name only or not found.
      * Two short formal corollaries ([lean/](lean/README.md)):
        * every nontrivial zero of `ζ` lies in `1/8 ≤ Re s ≤ 7/8`, stated in the shape of
          Mathlib's `RiemannHypothesis`;

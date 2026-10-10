@@ -20,7 +20,10 @@ Exact sources or dependencies:
   Build facts taken from the coordinator, not re-run here: Lean v4.34.1, Mathlib d13f23b7, module
         OAI.NumberTheory.DirichletL.Nonvanishing built (7,061 jobs, 0 errors, 0 sorry warnings);
         `#print axioms` = [propext, Classical.choice, Quot.sound] for the zeta and Dirichlet
-        theorems (results/lean_axioms.log); comparator run in progress.
+        theorems (results/lean_axioms.log). Comparator ACCEPTS the zeta challenge with the Lean
+        default kernel (results/comparator_QuasiRiemannHypothesis.log; LEAN_BUILD_ATTEMPT
+        Addendum B, which records that comparator assumption 2 is not met). No comparator
+        result for the Dirichlet challenge was on record when this note was written.
   Upstream correspondence data: formalization.yaml and docs/003.md map only the three headline
         theorems to files. There is no lemma-level paper-to-Lean map upstream. Only one closure
         module (Nonvanishing.lean) has a module docstring, and no closure source cites a paper
@@ -37,14 +40,14 @@ What was actually run (no Lean, Lake or lean4export process was started):
   - Reading: Nonvanishing.lean and the whole final-assembly chain down to the moment interface
     (Sec. 2), plus the 14 statement spot checks of Sec. 3.2 against the TeX.
 Smallest remaining gap: the Lean route does not pass through the paper's Part I (Thm 3.1, 11/12)
-  and proves its own versions of the imported external theorems, so a successful formal check
-  certifies the 7/8 statement for zeta and Dirichlet L-functions (under the comparator's trust
-  assumptions) but not the manuscript's text. Of the 65 nodes, 6 have a spot-checked Lean
+  and proves its own versions of the imported external theorems. The formal check therefore
+  certifies the 7/8 statement (zeta: comparator-accepted; Dirichlet: `#print axioms` only),
+  under the stated trust assumptions, but not the manuscript's text. Of the 65 nodes, 6 have a spot-checked Lean
   counterpart of the same strength, 8 a spot-checked variant, 37 only a name-level candidate, 8
   are bypassed, and 6 have no counterpart found by name.
 ```
 
-RH is unsolved. Both artifacts concern a quasi-RH statement (`Re s > 7/8`), which says nothing about the critical line. In this note, "formally covered" means a kernel-checked Lean declaration in the closure whose statement implies the paper node in the form the paper uses it. It does not mean the paper's proof of that node is correct, and it does not certify anything outside Lean+Mathlib definitions.
+RH is unsolved. Both artifacts concern a quasi-RH statement (`Re s > 7/8`), which says nothing about the critical line. In this note, "formally covered" means there is a kernel-checked Lean declaration in the closure whose statement implies the paper node, possibly only in the instance that the Lean route uses (Sec. 6 says which). It does not mean the paper's proof of that node is correct, and it does not certify anything outside Lean+Mathlib definitions.
 
 ## 1. Import closure and what it touches
 
@@ -260,7 +263,10 @@ The scan was run after stripping comments and string literals, over 2,924 files.
 
 ## 6. What the formal result means for the paper's verification status
 
-**Formally covered.** These nodes are covered by a kernel-checked Lean statement in the closure that implies the node as the Lean route uses it. This is subject to the comparator finishing and to the definitional fidelity of OAI's own Hecke objects.
+**Formally covered.** These nodes are covered by a kernel-checked Lean statement in the closure that implies the node as the Lean route uses it.
+* "Kernel-checked" here means compiled in the 0-error, 0-`sorry` build, with the lexical scan of Sec. 5 clean.
+* Comparator replay covers the zeta theorem and the constants it uses. It has not yet been run for the Dirichlet theorem.
+* For intermediate statements phrased in OAI's own Hecke objects, fidelity to the paper's objects is a separate, unchecked question.
 * Thm 1.1, for ζ and all Dirichlet L-functions. Here the statement uses Mathlib's definitions, so fidelity risk is low.
 * Lemmas 4.8, 13.1, 19.1 and 20.2, and Prop 15.3.
 * At the specialized σ0 = 7/8: Props 2.1 and 11.3.
@@ -278,12 +284,18 @@ Lemma 20.2 was already certified three times; the Lean proof is a fourth, indepe
 5. The cited theorems as published (DR, Heath-Brown, Goldmakher-Louvel, Thorner-Zaman). Lean's native replacements are not compared with them.
 6. The Hecke-family clause of Thm 1.1 at the level of definitions. Lean's `HeckeFamily.Character` is OAI's own type; its correspondence with "finite-order Hecke characters of Q(√-3)" is not checked.
 
-**Bottom line.** If the comparator run passes, the 7/8 zero-free half-plane for ζ and Dirichlet L-functions is established formally, independently of whether the manuscript's argument is correct as written. That is the statement `Re s > 7/8`, not RH. The paper's own verification status stays as recorded in SEP30_VERIFICATION_MAP_V2.md: bounded agent reviews, with no wrong step reported. The formal proof shows that a closely related argument works. It also shows that the paper's Part I is not needed for that argument. A formal certificate for the manuscript's text would need statement-level work on the C/N rows above, and it would need the paper to be re-read along the Lean route rather than its own route.
+**Bottom line.**
+* For ζ, comparator has accepted the 7/8 zero-free half-plane under the trust assumptions in LEAN_BUILD_ATTEMPT Addendum B.
+* For Dirichlet L-functions, the same build and `#print axioms` support it, but the comparator run is pending.
+* In both cases the result is established formally independently of whether the manuscript's argument is correct as written. That is the statement `Re s > 7/8`, not RH. The paper's own verification status stays as recorded in SEP30_VERIFICATION_MAP_V2.md: bounded agent reviews, with no wrong step reported. The formal proof shows that a closely related argument works. It also shows that the paper's Part I is not needed for that argument. A formal certificate for the manuscript's text would need statement-level work on the C/N rows above, and it would need the paper to be re-read along the Lean route rather than its own route.
 
 ## 7. Known misreadings to avoid
 
 * "The Lean proof formalizes the paper." It formalizes the theorem, by a variant route. The main differences are: no 11/12 bootstrap, native proofs of the cited theorems, distinct slot lengths, and instance-level lemma statements.
 * "All 65 nodes are now formally verified." Only 14 have a spot-checked Lean counterpart, and 8 are not used at all.
 * "The C column is a correspondence." It is a name search.
-* "No `sorry`/`axiom` in the source, so the trust question is closed." The comparator run, the patched dependencies, and the sandbox assumption remain.
+* "No `sorry`/`axiom` in the source, so the trust question is closed." Three items remain:
+  * the Dirichlet comparator run;
+  * the patched dependencies;
+  * the unmet sandbox assumption 2.
 * Nothing here bears on RH.

@@ -446,8 +446,14 @@ What this means:
 
 Separately, the import's Lean development of the 7/8 theorem now builds completely, and its
 axioms are the three standard ones ([LEAN_BUILD_ATTEMPT.md](LEAN_BUILD_ATTEMPT.md), Addenda A–B).
-That is a machine check of the Lean statement, not of this manuscript's text. A paper-to-Lean
-correspondence is being prepared separately.
+That is a machine check of the Lean statement, not of this manuscript's text.
+
+The paper-to-Lean correspondence is [SEP30_LEAN_CORRESPONDENCE.md](SEP30_LEAN_CORRESPONDENCE.md).
+* The Lean route bypasses Thm 3.1 and the seven Part-I-only nodes, using `β ≤ 1` and an extended
+  endpoint count instead of `β* ≤ 11/12`. This is a third way off the Part I path, besides the
+  paper as written and the Oct 5 substitution.
+* 14 nodes have a spot-checked Lean counterpart (6 same statement, 8 variants).
+* 37 are name-level candidates only, and 6 have no counterpart found.
 
 The counts are hand-entered from the review headers. They were not regenerated with
 `sep30_depgraph_v2.py`, whose status table is the v2 one.
