@@ -21,8 +21,7 @@ namespace WeightedTorusJets
 theorem real_zero_le_seven_eighths {q : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q)
     {β : ℝ} (hβ1 : β < 1) (hzero : χ.LFunction (β : ℂ) = 0) : β ≤ 7 / 8 := by
   by_contra h
-  push_neg at h
-  have hre : (7 / 8 : ℝ) < (β : ℂ).re := by simpa using h
+  have hre : (7 / 8 : ℝ) < (β : ℂ).re := by simpa using not_le.mp h
   have hpole : ¬ (χ = 1 ∧ (β : ℂ) = 1) := by
     rintro ⟨-, h1⟩
     have : β = 1 := by exact_mod_cast h1

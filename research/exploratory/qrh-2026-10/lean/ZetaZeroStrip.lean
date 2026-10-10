@@ -12,7 +12,7 @@ import OAI.NumberTheory.DirichletL.Nonvanishing
 
 namespace QRHWave
 
-open Complex
+open Complex Real
 
 /-- The reflected half-plane: `ζ` has no zeros with `Re s < 1/8` other than the trivial zeros. -/
 theorem riemannZeta_zero_re_lt_one_eighth {s : ℂ} (hs : riemannZeta s = 0)
@@ -63,21 +63,17 @@ theorem riemannZeta_zero_re_lt_one_eighth {s : ℂ} (hs : riemannZeta s = 0)
     have : (π : ℂ) * (1 - s) = π * (2 * k + 1) := by linear_combination 2 * hk
     have := mul_left_cancel₀ hpi this
     linear_combination -this
-  have hk1 : 1 ≤ k := by
-    by_contra hk0
-    push_neg at hk0
-    have hre := congrArg Complex.re hsk
-    simp at hre
-    have hk' : (k : ℝ) ≤ 0 := by exact_mod_cast Int.lt_add_one_iff.mp hk0
-    -- `Re s = -2k ≥ 0`, and `s = 0` is excluded, so `k ≤ -1` gives `Re s ≥ 2 > 1/8`.
-    rcases lt_or_eq_of_le hk' with hlt | heq
-    · have : (k : ℝ) ≤ -1 := by exact_mod_cast Int.le_sub_one_iff.mpr (by exact_mod_cast hlt)
-      linarith
-    · apply hs0
-      rw [hsk]
-      have : (k : ℂ) = 0 := by exact_mod_cast (by exact_mod_cast heq : (k : ℝ) = 0)
-      rw [this]
-      ring
+  have hre : s.re = -2 * (k : ℝ) := by
+    have := congrArg Complex.re hsk
+    simpa using this
+  have hkm1 : (-1 : ℤ) < k := by
+    have : (-1 : ℝ) < k := by linarith
+    exact_mod_cast this
+  have hk0 : k ≠ 0 := by
+    rintro rfl
+    apply hs0
+    simpa using hsk
+  have hk1 : 1 ≤ k := by omega
   refine ⟨(k - 1).toNat, ?_⟩
   have : ((k - 1).toNat : ℤ) = k - 1 := Int.toNat_of_nonneg (by linarith)
   have hc : (((k - 1).toNat : ℕ) : ℂ) = (k : ℂ) - 1 := by
@@ -94,10 +90,8 @@ theorem quasi_critical_strip :
   intro s hs hntriv _
   refine ⟨?_, ?_⟩
   · by_contra hlo
-    push_neg at hlo
-    exact hntriv (riemannZeta_zero_re_lt_one_eighth hs hlo)
+    exact hntriv (riemannZeta_zero_re_lt_one_eighth hs (not_le.mp hlo))
   · by_contra hhi
-    push_neg at hhi
-    exact OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re hhi hs
+    exact OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re (not_le.mp hhi) hs
 
 end QRHWave

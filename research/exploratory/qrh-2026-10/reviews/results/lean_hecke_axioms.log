@@ -1,0 +1,5 @@
+OAI.SevenEighths.HeckeFamily.LFunction_ne_zero_of_seven_eighths_lt_re : ∀ (χ : OAI.SevenEighths.HeckeFamily.Character)
+  {s : ℂ}, 7 / 8 < s.re → ¬(χ.residue = 1 ∧ s = 1) → OAI.SevenEighths.HeckeFamily.LFunction χ s ≠ 0
+'OAI.SevenEighths.HeckeFamily.LFunction_ne_zero_of_seven_eighths_lt_re' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

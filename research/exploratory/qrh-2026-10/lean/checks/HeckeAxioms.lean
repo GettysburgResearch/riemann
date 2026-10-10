@@ -1,0 +1,3 @@
+import OAI.NumberTheory.DirichletL.Hecke.Nonvanishing
+#check @OAI.SevenEighths.HeckeFamily.LFunction_ne_zero_of_seven_eighths_lt_re
+#print axioms OAI.SevenEighths.HeckeFamily.LFunction_ne_zero_of_seven_eighths_lt_re
