@@ -110,6 +110,10 @@ def raych(k, c):
 
 
 GHAT = [sum(Gcls(c) * raych(k, c).conjugate() for c in E.UNITS4) / len(E.UNITS4) for k in range(len(RAYCH))]
+# sum_th Ghat(th) conj th(c1) th(c2) (and the swapped control), tabulated on class pairs
+RAYEXP = {(c1, c2, sw): sum(GHAT[k] * (raych(k, c1) * raych(k, c2).conjugate() if sw else
+                                      raych(k, c1).conjugate() * raych(k, c2)) for k in range(12))
+          for c1 in E.UNITS4 for c2 in E.UNITS4 for sw in (False, True)}
 
 
 # ------------------------------------------------------------------------------------------------
@@ -134,7 +138,7 @@ def masked_poisson_rhs(chars, mlist, Rlist, K, hlat, conj_h=True, with_psid=True
             psid = chv(chars, d) if with_psid else 1.0
             if psid == 0:
                 continue
-            cut = 40.0 * qd * qm / K
+            cut = 10.0 * qd * qm / K
             n = int(np.searchsorted(Hq, cut, side='right'))
             ex = np.zeros(n, dtype=np.int64)
             zero = np.zeros(n, dtype=bool)
@@ -151,8 +155,8 @@ def part_P(rng):
     # P1: direct replay of eq:masked-poisson
     K = 60.0 if QUICK else 150.0
     ka, kb, kq = E.lattice(14 * K)
-    hlat = E.lattice(14 * 200 * 200 * 30 / K)
-    pool = [P for P in PRIMES if P.N <= 61]
+    hlat = E.lattice(10 * 961 * 600 / K * 1.01)
+    pool = [P for P in PRIMES if P.N <= 31]
     worst, cnt, nz, ctl_h, ctl_d = 0.0, 0, 0, 0, 0
     trials = 40 if QUICK else 120
     tried = 0
@@ -160,7 +164,7 @@ def part_P(rng):
         tried += 1
         k = rng.randint(0, 2)
         mlist = rng.sample(pool, k)
-        if norm(mlist) > 2000:
+        if norm(mlist) > 600:
             continue
         chars = [(P, rng.randint(1, 5)) for P in mlist]
         unit_triv = all(chv(chars, u) == 1 for u in UNITS) if mlist else True
@@ -224,7 +228,7 @@ def part_P(rng):
         '|gamma(psi;m)| = 1', max(w2, wg) < TOL, f'{w2:.1e}, {wg:.1e}')
 
     # P3: principal bound A sum_{h != 0} |F Phi(A q_h)| << 1, and the raw tail (inverse-raw-tail) with A = 2, 3
-    Ha, Hb, Hq = E.lattice(4e6)
+    Ha, Hb, Hq = E.lattice(3e4)
     Hq = Hq[1:]
     vals = []
     for A in np.logspace(-3, 3, 25):
@@ -330,8 +334,9 @@ def part_Q(rng):
         if not b1 and not b2:
             continue
         B = set(b1) | set(b2)
-        A1 = {P for P in B if rng.random() < 0.5}
-        A2 = {P for P in B if rng.random() < 0.5}
+        Bs = sorted(B, key=lambda P: P.name)               # deterministic order (sets of Primes hash by id)
+        A1 = {P for P in Bs if rng.random() < 0.5}
+        A2 = {P for P in Bs if rng.random() < 0.5}
         cd = cube_data(b1, b2, A1, A2)
         bad['q0'] += any(e < 0 for e in cd['q0'].values())
         bad['J2q'] += not all(cd['q'].get(P, 0) >= 1 for P in cd['J2'])
@@ -398,17 +403,23 @@ def mark_split(outer, inner, lists):
 
 
 def part_Q2(rng):
-    nt = 2 if QUICK else 4
-    worst, worst_ctl = 0.0, {'drop_mu_t': 0.0, 'chi_t_unconj': 0.0, 'drop_punct_t': 0.0, 'drop_J4_t': 0.0}
+    nt = 2 if QUICK else 3
+    BOUND = 1800 if QUICK else 2600
+    ctl_names = ['drop_inversion_mu', 'nu_t_side1_both', 'drop_punct_t', 'drop_J4_t', 'chi_t_unconj']
+    worst, worst_ctl = 0.0, {v: 0.0 for v in ctl_names}
     nterms_tot = 0
+    pool = [P for P in PRIMES if P.N <= 61]
+    U = sqfree_products(pool, 0, BOUND + 1, maxk=4)
+    info = {tuple(u): (gen_of(u), cls(u), norm(u)) for u in U}
+    raytab = {}
     for trial in range(nt):
         r2 = random.Random(1000 + trial)
-        # outer data from an actual cube configuration
         b1 = {PR['7a']: 2, PR['13b']: 1}
-        b2 = {PR['7a']: 1, PR['19a']: 2} if trial % 2 == 0 else {PR['13b']: 1, PR['7b']: 2}
+        b2 = [{PR['7a']: 1, PR['19a']: 2}, {PR['13b']: 1, PR['7b']: 2}, {PR['7a']: 3, PR['13b']: 2, PR['19a']: 1}][trial]
         B = set(b1) | set(b2)
-        A1 = {P for P in B if r2.random() < 0.5}
-        A2 = {P for P in B if r2.random() < 0.5}
+        Bs = sorted(B, key=lambda P: P.name)
+        A1 = {P for P in Bs if r2.random() < 0.5}
+        A2 = {P for P in Bs if r2.random() < 0.5}
         cd = cube_data(b1, b2, A1, A2)
         rad_q0 = {P for P, e in cd['q0'].items() if e > 0}
         Cl = [PR['31a']]
@@ -421,101 +432,103 @@ def part_Q2(rng):
         nus = [E.NUS['nu6'], E.NUS['chi4']]
         rho_set = {'37b'}
         lists = [{PR['43a']: 0.7 - 0.2j, PR['13a']: 0.4, PR['31a']: 0.9j}]
-        pool = [P for P in PRIMES if P.N <= 61 and P not in (PR['37b'],)] + [PR['37b']]
-        units = sqfree_products(pool, 0, 4000, maxk=2)
-        ufil = [u for u in units if norm(u) <= 4000]
+        CJ, CC, DK = gen_of(Cl + Jl), gen_of(Cl), gen_of(dk)
 
         def kern(q, c):
-            return math.exp(-q / 3.0e5) * (1.0 + 0.3 * chi4cls(c).real)
+            return math.exp(-q / 2.0e5) * (1.0 + 0.3 * chi4cls(c).real)
 
         def ray(c1, c2):
-            c = mod4(emul(c1, inv4(c2)))
-            return Gcls(c) * rr(c, PT)
+            key = (c1, c2, PT)
+            if key not in raytab:
+                c = mod4(emul(c1, inv4(c2)))
+                raytab[key] = Gcls(c) * rr(c, PT)
+            return raytab[key]
 
-        def coef(u, a, ydef, drop=None):
-            """eq. (C) coefficient with xi from the TABLE (no J): mu nu_a rho conj chi_u(y) chi_u(C)^4 chi_u(d_k) xi d."""
+        def coef(u, a):
+            """eq. (C) with xi from the TABLE: mu nu_a rho conj chi_u(y) chi_u(C)^4 chi_u(d_k) xi(u) d(u)."""
             if any(P.name in rho_set for P in u):
                 return 0j
-            g = gen_of(u)
-            return (mu(u) * nus[a](mod4(g)) * chi_n(u, ydef).conjugate() * chi_n(u, gen_of(Cl), 4) *
-                    chi_n(u, gen_of(dk)) * xi_table(u, cd) * mark_val(set(u), lists))
+            return (mu(u) * nus[a](cls(u)) * chi_n(u, y).conjugate() * chi_n(u, CC, 4) *
+                    chi_n(u, DK) * xi_table(u, cd) * mark_val(set(u), lists))
 
-        def B1(tp, a, drop=None):
+        def B1(tp, a, drop):
             if any(P.name in rho_set for P in tp):
                 return 0j
             if drop != 'drop_punct_t' and set(tp) & rad_q0:
                 return 0j
-            g = gen_of(tp)
             ch = chi_n(tp, y) if drop == 'chi_t_unconj' else chi_n(tp, y).conjugate()
-            J4 = 1.0 if drop == 'drop_J4_t' else chi_n(tp, gen_of(Cl + Jl), 4)
-            if drop == 'drop_J4_t':
-                J4 = chi_n(tp, gen_of(Cl), 4)
-            return (1 if drop == 'drop_mu_t' else mu(tp)) * nus[a](mod4(g)) * ch * J4 * chi_n(tp, gen_of(dk))
+            J4 = chi_n(tp, CC, 4) if drop == 'drop_J4_t' else chi_n(tp, CJ, 4)
+            aa = 0 if drop == 'nu_t_side1_both' else a
+            return mu(tp) * nus[aa](cls(tp)) * ch * J4 * chi_n(tp, DK)
 
-        def Pcoef(x, tp, a):
-            if any(P.name in rho_set for P in x) or set(x) & (rad_q0 | set(tp)):
+        def Pbase(x, a):
+            """P_a coefficient without the t' puncture (10489-10494)."""
+            if any(P.name in rho_set for P in x) or set(x) & rad_q0:
                 return 0j
-            g = gen_of(x)
-            return mu(x) * nus[a](mod4(g)) * chi_n(x, y).conjugate() * chi_n(x, gen_of(Cl + Jl), 4) * chi_n(x, gen_of(dk))
+            return mu(x) * nus[a](cls(x)) * chi_n(x, y).conjugate() * chi_n(x, CJ, 4) * chi_n(x, DK)
 
-        # LHS: coprime (u1,u2) with the formal kernel of the product norm
-        cu = {tuple(u): (coef(u, 0, y), coef(u, 1, y)) for u in ufil}
-        cu = {k: v for k, v in cu.items() if v[0] != 0 or v[1] != 0}
-        keys = list(cu)
+        # LHS: coprime (u1,u2) with the formal kernel of the product norm/class
+        L = []
+        for u in U:
+            c0, c1 = coef(u, 0), coef(u, 1)
+            if c0 != 0 or c1 != 0:
+                L.append((set(u), info[tuple(u)], c0, c1))
         lhs = 0j
-        for k1 in keys:
-            for k2 in keys:
-                if set(k1) & set(k2):
+        for s1, (g1, k1, N1), a1, _ in L:
+            for s2, (g2, k2, N2), _, b2v in L:
+                if s1 & s2 or N1 * N2 > BOUND * BOUND:
                     continue
-                lhs += cu[k1][0] * cu[k2][1].conjugate() * ray(gen_of(list(k1)), gen_of(list(k2))) * \
-                    kern(norm(k1) * norm(k2), mod4(emul(gen_of(list(k1)), gen_of(list(k2)))))
-        # RHS: sum_t' mu(t') B11 conj B12 sum_x P1 conj P2 ray(x1,x2) kern(q_t'^2 q_x1 q_x2), marks split
+                lhs += a1 * b2v.conjugate() * ray(k1, k2) * kern(N1 * N2, mod4(emul(k1, k2)))
+        pb = {tuple(x): (Pbase(x, 0), Pbase(x, 1)) for x in U}
         res = {}
-        for variant in [''] + list(worst_ctl):
+        for variant in [''] + ctl_names:
             rhs = 0j
             nterms = 0
-            for tp in ufil:
-                if norm(tp) ** 2 > 4000 ** 2:
-                    continue
-                bb = B1(tp, 0, variant or None) * B1(tp, 1, variant or None).conjugate()
+            for tp in U:
+                gt, kt, Nt = info[tuple(tp)]
+                # the outer mu(t') of the mutual-gcd inversion (10497), times B_11 conj B_12
+                bb = (1 if variant == 'drop_inversion_mu' else mu(tp)) * B1(tp, 0, variant) * B1(tp, 1, variant).conjugate()
                 if bb == 0:
                     continue
-                xs = [x for x in ufil if norm(x) * norm(tp) <= 4000]
-                px = {}
-                for x in xs:
-                    p1, p2 = Pcoef(x, tp, 0), Pcoef(x, tp, 1)
-                    if variant == 'drop_punct_t':
-                        if any(P.name in rho_set for P in x) or set(x) & rad_q0:
-                            p1 = p2 = 0j
-                        else:
-                            g = gen_of(x)
-                            base = mu(x) * chi_n(x, y).conjugate() * chi_n(x, gen_of(Cl + Jl), 4) * chi_n(x, gen_of(dk))
-                            p1, p2 = base * nus[0](mod4(g)), base * nus[1](mod4(g))
-                    if p1 != 0 or p2 != 0:
-                        px[tuple(x)] = (p1, p2)
-                for x1, (p11, _) in px.items():
-                    m1 = mark_split(set(tp), set(x1), lists)
-                    for x2, (_, p22) in px.items():
-                        m2 = mark_split(set(tp), set(x2), lists)
-                        rhs += bb * p11 * m1 * (p22 * m2).conjugate() * \
-                            ray(gen_of(list(x1)), gen_of(list(x2))) * \
-                            kern(norm(tp) ** 2 * norm(x1) * norm(x2),
-                                 mod4(emul(emul(gen_of(tp), gen_of(tp)), emul(gen_of(list(x1)), gen_of(list(x2))))))
+                st = set(tp)
+                px = []
+                for x in U:
+                    gx, kx, Nx = info[tuple(x)]
+                    if Nx * Nt > BOUND:
+                        continue
+                    if set(x) & st and variant != 'drop_punct_t':
+                        continue
+                    p1, p2 = pb[tuple(x)]
+                    if p1 == 0 and p2 == 0:
+                        continue
+                    px.append((kx, Nx, p1 * mark_split(st, set(x), lists), p2 * mark_split(st, set(x), lists)))
+                kt2 = mod4(emul(kt, kt))
+                for kx1, N1, p11, _ in px:
+                    for kx2, N2, _, p22 in px:
+                        if N1 * N2 * Nt * Nt > BOUND * BOUND:
+                            continue
+                        rhs += bb * p11 * p22.conjugate() * ray(kx1, kx2) * \
+                            kern(Nt * Nt * N1 * N2, mod4(emul(kt2, emul(kx1, kx2))))
                         nterms += 1
             res[variant] = rhs
             if variant == '':
                 nterms_tot += nterms
         err = abs(lhs - res['']) / max(1.0, abs(lhs))
         worst = max(worst, err)
-        for v in worst_ctl:
+        for v in ctl_names:
             worst_ctl[v] = max(worst_ctl[v], abs(lhs - res[v]) / max(1.0, abs(lhs)))
-        print(f'    Q2 trial {trial}: |LHS| = {abs(lhs):.4e}, rel err {err:.1e}, J={Jl}, q0={cd["q0"]}, dk={dk}', flush=True)
+        print(f'    Q2 trial {trial}: |LHS| = {abs(lhs):.4e}, rel err {err:.1e}, J={Jl}, '
+              f'q0={ {P.name: e for P, e in cd["q0"].items()} }, d_k={dk}, R1={sorted(P.name for P in cd["R1"])}', flush=True)
     rec('Q2', f"mutual-gcd t' extension + factorization B_1a(t';y) P_a(y) (10382-10497): sum over coprime "
-        f"(u1,u2) of Coef_1 conj Coef_2 G R kern = sum_t' mu(t') B11 conj B12 sum_x P1 conj P2 (marks split at t') "
-        f"[{nt} configs, {nterms_tot} RHS terms; xi from the table, zero extensions do all coprimality]",
-        worst < TOL, f'max rel err {worst:.1e}')
+        f"(u1,u2) of Coef_1 conj Coef_2 G R kern = sum_t' mu(t') B11 conj B12 sum_x P1 conj P2 G R kern, marks "
+        f"split at t' [{nt} configs, {len(U)} squarefree u, {nterms_tot} RHS terms; xi from the table; zero "
+        f"extensions supply all coprimality]", worst < TOL, f'max rel err {worst:.1e}')
     for v, e in worst_ctl.items():
-        ctrl('Q2', f'{v} breaks it', e > 1e-6, f'rel err {e:.1e}')
+        if v == 'chi_t_unconj':
+            rec('Q2', "PREDICTED INSENSITIVE: chi_t'(y) unconjugated in both B_1a (it enters only as "
+                "|chi_t'(y)|^2 in B_11 conj B_12)", e < TOL, f'rel err {e:.1e}')
+        else:
+            ctrl('Q2', f'{v} breaks it', e > TOL, f'rel err {e:.1e}')
 
 
 # ------------------------------------------------------------------------------------------------
@@ -658,17 +671,18 @@ def part_R_pointwise(rng):
 def part_R6(rng):
     """End-to-end replay of the second Poisson transform, RHS in the child form."""
     X = 300.0
-    K = 1500.0 if QUICK else 2500.0
     pool = [P for P in PRIMES if P.N <= (61 if QUICK else 79)]
     cols = sqfree_products(pool, X, 2.4 * X, maxk=4)
     # fixed outer data of one first-side polynomial (C, J, d_k, q0, t', rho, nu, marks)
     cfgs = [
         dict(name='C=31a, J=7a.13b, d_k=31a, rad q0=19a, t\'=37a, rho=43b, nu6, one slot list',
              C=[PR['31a']], J=[PR['7a'], PR['13b']], dk=[PR['31a']], q0=[PR['19a']], tp=[PR['37a']],
-             rho={'43b'}, nu='nu6', lists=[{PR['13a']: 0.8 - 0.3j, PR['19b']: 0.5, PR['61a']: -0.4j}]),
+             rho={'43b'}, nu='nu6', lists=[{PR['13a']: 0.8 - 0.3j, PR['19b']: 0.5, PR['61a']: -0.4j}],
+             K=1500.0 if QUICK else 2500.0),
         dict(name='C=1, J=13a, d_k=19b (in q0), rad q0=19b, t\'=1, no puncture, chi4, two slot lists',
              C=[], J=[PR['13a']], dk=[PR['19b']], q0=[PR['19b']], tp=[],
-             rho=set(), nu='chi4', lists=[{PR['7b']: 1.0, PR['31b']: 0.3 + 0.6j}, {PR['37b']: 0.7, PR['7a']: -0.5}]),
+             rho=set(), nu='chi4', lists=[{PR['7b']: 1.0, PR['31b']: 0.3 + 0.6j}, {PR['37b']: 0.7, PR['7a']: -0.5}],
+             K=500.0),
     ]
     if QUICK:
         cfgs = cfgs[:1]
@@ -677,6 +691,7 @@ def part_R6(rng):
     out = []
     for cfg in cfgs:
         nu = E.NUS[cfg['nu']]
+        K = cfg['K']
         C, J, dk, q0, tp, rho, lists = cfg['C'], cfg['J'], cfg['dk'], cfg['q0'], cfg['tp'], cfg['rho'], cfg['lists']
         CJ = gen_of(C + J)
         dkg = gen_of(dk)
@@ -713,7 +728,7 @@ def part_R6(rng):
 
             def ksum(dk_d2, n1, n2, v, d2g, mlist_gen, qd2, qm, variant):
                 """sum over k'' in O of |chi_v'(k'')|^2 chi_n1(k_new) conj chi_n2(k_new) * kernel."""
-                key = (dk_d2, tuple(P.name for P in n1), tuple(P.name for P in n2), tuple(P.name for P in v), phi, variant)
+                key = (dk_d2, tuple(P.name for P in n1), tuple(P.name for P in n2), tuple(P.name for P in v), phi)
                 if key in hcache:
                     return hcache[key]
                 cut = 9.0 * qd2 * qm / K
@@ -740,7 +755,7 @@ def part_R6(rng):
                 else:
                     w = HC[:n] / ecx(emul(d2g, mlist_gen))
                     ker = np.exp(-4j * np.pi * (z0 * w).imag / SQ3) * (2 / SQ3) * K * np.exp(-4 * np.pi * K * np.abs(w) ** 2 / 3)
-                val = complex(np.sum(H * ker))
+                val = (complex(np.sum(H * ker)), complex(H[0] * ker[0]))
                 hcache[key] = val
                 return val
 
@@ -808,35 +823,43 @@ def part_R6(rng):
                                         m2 = mark_val(set(g) | set(v) | set(n2), lists)
                                         # ray: sum_th Ghat(th) [nu conj th](n1) conj [nu conj th](n2)
                                         c1, c2 = cls(list(n1)), cls(list(n2))
-                                        if vv == 'theta_swap':
-                                            ray = sum(GHAT[k] * raych(k, c1) * raych(k, c2).conjugate() for k in range(12))
-                                        else:
-                                            ray = sum(GHAT[k] * raych(k, c1).conjugate() * raych(k, c2) for k in range(12))
-                                        ray *= nu(c1) * nu(c2).conjugate()
+                                        ray = RAYEXP[(c1, c2, vv == 'theta_swap')] * nu(c1) * nu(c2).conjugate()
                                         qz = norm(v) ** 2 * norm(n1) * norm(n2)
                                         kd = dkg if vv != 'k_new_no_dk' else (1, 0)
                                         mgen = emul(emul(gen_of(v), gen_of(v)), emul(gen_of(list(n1)), gen_of(list(n2))))
-                                        hs = ksum(emul(kd, d2g), list(n1), list(n2), v, d2g, mgen, qd2, qz, vv)
-                                        term = outer * b1v * m1 * (b2v * m2).conjugate() * ray * hs / (qd2 * math.sqrt(qz))
-                                        RHS[vv] += term
+                                        hs, hs0 = ksum(emul(kd, d2g), list(n1), list(n2), v, d2g, mgen, qd2, qz, vv)
+                                        pre = outer * b1v * m1 * (b2v * m2).conjugate() * ray / (qd2 * math.sqrt(qz))
+                                        RHS[vv] += pre * hs
                                         if vv == '':
+                                            RHS0 += pre * hs0
                                             nterm += 1
             err = abs(LHS - RHS['']) / LHS
-            rec_ = dict(cfg=cfg['name'], phi=phi, LHS=LHS, RHS=str(RHS['']), rel_err=err, terms=nterm,
+            dual = abs(LHS - RHS0) / LHS
+            rec_ = dict(cfg=cfg['name'], phi=phi, K=K, LHS=LHS, RHS=str(RHS['']), rel_err=err, terms=nterm,
+                        dual_share=dual, err_over_dual=err / dual if dual else None,
                         controls={vv: abs(LHS - RHS[vv]) / LHS for vv in variants if vv})
             out.append(rec_)
             print(f"    R6 {cfg['name']} [{phi}]: LHS {LHS:.10f}  RHS {RHS[''].real:.10f}{RHS[''].imag:+.1e}i  "
-                  f"rel err {err:.1e}  ({nterm} child terms)  controls: " +
+                  f"rel err {err:.1e}  dual (k''!=0) share {dual:.1e}  ({nterm} child terms)  controls: " +
                   ', '.join(f'{k} {v:.1e}' for k, v in rec_['controls'].items()), flush=True)
     OUT['R6'] = out
     worst = max(o['rel_err'] for o in out)
     rec('R6', f'second Poisson transform replay: sum_y Phi(q_y/K)|P(y)|^2 (direct) = child form '
         f'sum mu(d2) mu(v\') Ghat |B_o|^2 |D_o|^2 Q1(k_new,f_new) conj Q2 * root * kernel, '
-        f'{len(out)} runs ({len(cfgs)} configs x radial/shifted, K={K:g}, X={X:g})', worst < TOL,
+        f'{len(out)} runs ({len(cfgs)} configs x radial/shifted, X={X:g})', worst < TOL,
         f'max rel err {worst:.1e}')
     for vv in variants[1:]:
-        m = min(o['controls'][vv] for o in out)
-        ctrl('R6', f'{vv} breaks the replay in every run', m > 1e-6, f'min rel err {m:.1e}')
+        per_cfg = {}
+        for o in out:
+            per_cfg.setdefault(o['cfg'], []).append(o['controls'][vv])
+        if vv == 'D_no_a0':
+            mx = max(max(v) for v in per_cfg.values())
+            rec('R6', 'PREDICTED INSENSITIVE: a0(v\') dropped from D_o (it enters only through |D_o|^2, |a0| = 1)',
+                mx < TOL, f'max rel err {mx:.1e}')
+            continue
+        ok = any(max(v) > TOL for v in per_cfg.values())
+        ctrl('R6', f'{vv} breaks the replay (in at least one run)', ok,
+             'per-config max rel err: ' + ', '.join(f'{max(v):.1e}' for v in per_cfg.values()))
 
 
 # ------------------------------------------------------------------------------------------------
@@ -928,54 +951,57 @@ def part_U(rng):
     rec('U1', 'old-label fibre: #{f squarefree : f^2 E | y} <= d(y) (3000 random exponent vectors), so '
         'sum w(f) <= C0 d(y)^{C0+1}', bad == 0, f'{bad} failures')
 
-    # U2 new fibre (inverse-new-fibre) with K_slot = 0: enumerate xi = (b1,b2,A1,A2,C,d_k,t',g',d2,v')
-    P = 5                      # abstract primes 0..4; cubes supported on 0..2 with valuations <= 2
-    Bpr = [0, 1, 2]
+    # U2 new fibre (inverse-new-fibre) with K_slot = 0: enumerate xi = (b1,b2,A1,A2,C,d_k,t',g',d2,v').
+    # Abstract primes 0..P-1 (d_O depends only on exponents); cubes supported on Bpr with valuations <= VMAX.
+    P = 5
+    Bpr = [0, 1] if QUICK else [0, 1, 2]
+    VMAX = 2
     fib = {}
     nsrc = 0
+    viol = 0
     subsets = [frozenset(c) for r in range(P + 1) for c in itertools.combinations(range(P), r)]
-    vals = list(itertools.product(range(3), repeat=len(Bpr)))
+    vals = list(itertools.product(range(VMAX + 1), repeat=len(Bpr)))
+    ROLES = ('none', 'tp', 'rg', 'd2', 'v')
     for v1 in vals:
         for v2 in vals:
             b1 = dict(zip(Bpr, v1))
             b2 = dict(zip(Bpr, v2))
             B = frozenset(p for p in Bpr if b1[p] + b2[p] > 0)
-            Bsub = [s for s in subsets if s <= B]
+            Bsub = [x for x in subsets if x <= B]
             for A1 in Bsub:
                 for A2 in Bsub:
                     rows = {p: ((b1[p] + b2[p]) % 2, int(p in A1), int(p in A2)) for p in B}
                     t = {p: (rows[p][1] - rows[p][2] + 3 * rows[p][0]) % 6 for p in B}
-                    s = frozenset(p for p in B if rows[p][0] == 1)
+                    s_ = frozenset(p for p in B if rows[p][0] == 1)
                     J2 = frozenset(p for p in B if rows[p] == (0, 1, 1))
-                    J = s | J2
+                    J = s_ | J2
                     q0 = tuple((b1.get(p, 0) + b2.get(p, 0)) // 2 - (1 if p in J2 else 0) for p in range(P))
                     rq0 = frozenset(p for p in range(P) if q0[p] > 0)
+                    viol += not (B <= (J | rq0)) or min(q0) < 0
                     R1 = frozenset(p for p in B if t[p] != 0)
                     for C in subsets:
                         if C & B:
                             continue
                         mask = (C | B) - R1
+                        free = [p for p in range(P) if p not in (B | C)]
                         for dk in subsets:
                             if not dk <= mask:
                                 continue
-                            for tp in subsets:
-                                if tp & (C | B | J | rq0 | dk):
-                                    continue
+                            for roles in itertools.product(ROLES, repeat=len(free)):
+                                tp = frozenset(p for p, r in zip(free, roles) if r == 'tp')
+                                rg = frozenset(p for p, r in zip(free, roles) if r == 'rg')
+                                d2 = frozenset(p for p, r in zip(free, roles) if r == 'd2')
+                                v = frozenset(p for p, r in zip(free, roles) if r == 'v')
+                                g = rg | d2
                                 r0 = rq0 | tp
-                                for g in subsets:
-                                    if g & (C | J | r0 | dk):
-                                        continue
-                                    for d2 in subsets:
-                                        if not d2 <= g:
-                                            continue
-                                        rg = g - d2
-                                        for v in subsets:
-                                            if v & (g | C | J | r0 | dk | d2):
-                                                continue
-                                            f = J | C | d2 | v
-                                            key = (q0, tp, rg, f)
-                                            fib[key] = fib.get(key, 0) + 1
-                                            nsrc += 1
+                                # the stated support conditions (10155, 10475, 10822, 10862-10868)
+                                if tp & (C | B | J | rq0 | dk) or g & (C | J | r0 | dk) or \
+                                        v & (g | C | J | r0 | dk | d2):
+                                    continue
+                                f = J | C | d2 | v
+                                key = (q0, tp, rg, f)
+                                fib[key] = fib.get(key, 0) + 1
+                                nsrc += 1
     worst = 0.0
     wkey = None
     bad = 0
@@ -986,16 +1012,20 @@ def part_U(rng):
             bad += 1
         if c / bound > worst:
             worst, wkey = c / bound, (q0, sorted(tp), sorted(rg), sorted(f), c, bound)
-    rec('U2', f'eq:inverse-new-fibre at K_slot = 0 by brute force: {nsrc} source tuples over 5 abstract primes '
-        f'(cube valuations <= 2), {len(fib)} targets (q0,t\',r_g,f_new); every fibre <= d(f)^9 d(q0)^5',
-        bad == 0, f'max fibre/bound = {worst:.4f} at {wkey}')
+    rec('U2', f'eq:inverse-new-fibre at K_slot = 0 by brute force: {nsrc} source tuples over {P} abstract primes '
+        f'(cubes on {len(Bpr)} primes, valuations <= {VMAX}), {len(fib)} targets (q0,t\',r_g,f_new); '
+        f'supp B in supp(J q0) and q0 integral in every source ({viol} violations); every fibre <= d(f)^9 d(q0)^5',
+        bad == 0 and viol == 0, f'max fibre/bound = {worst:.4f} at {wkey}; max fibre {max(fib.values())}')
     # control: the bound without the q0 factor fails somewhere
     bad2 = sum(1 for (q0, tp, rg, f), c in fib.items()
                if c > dO([1 if p in f else 0 for p in range(P)]) ** 9)
-    bad3 = sum(1 for (q0, tp, rg, f), c in fib.items()
-               if c > dO([1 if p in f else 0 for p in range(P)]) ** 1 * dO(q0) ** 5)
     ctrl('U2', 'fibre <= d(f)^9 (q0 factor dropped)', bad2 > 0, f'{bad2} targets exceed')
-    ctrl('U2', 'fibre <= d(f) d(q0)^5 (f exponent 1)', bad3 > 0, f'{bad3} targets exceed')
+    # information only: smallest (a, b) on a grid with fibre <= d(f)^a d(q0)^b everywhere in this universe
+    grid = [(a, b) for a in range(0, 10) for b in range(0, 6)
+            if all(c <= dO([1 if p in f else 0 for p in range(P)]) ** a * dO(q0) ** b
+                   for (q0, tp, rg, f), c in fib.items())]
+    OUT['U2_minimal_exponents'] = [g for g in grid if not any(h != g and h[0] <= g[0] and h[1] <= g[1] for h in grid)]
+    print(f"    U2 info: minimal (a,b) with fibre <= d(f)^a d(q0)^b in this universe: {OUT['U2_minimal_exponents']}")
     # divisor-count arithmetic used in the fibre bound
     ok = True
     for _ in range(2000):

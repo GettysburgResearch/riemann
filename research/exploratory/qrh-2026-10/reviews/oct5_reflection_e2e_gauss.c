@@ -60,11 +60,14 @@ int main(void){
       if(kg==0){ fprintf(stderr,"generator?\n"); return 1; }
       tables(q);
       ll mult = ((2*a - b) % q + q) % q;
-      ll x = 1;
+      /* iterate y = g^k * mult directly; fast modmul via double reciprocal (q < 2^26, products < 2^52) */
+      double qinv = 1.0/(double)q;
+      ll y = mult; int e = 0;
       for(ll k=0;k<q-1;k++){
-        double re,im; cis_idx((x*mult)%q,&re,&im);
-        int e=(int)((k*kg)%3); S[e][0]+=re; S[e][1]+=im;
-        x = x*g % q;
+        double re,im; cis_idx(y,&re,&im);
+        S[e][0]+=re; S[e][1]+=im;
+        e += kg; if(e>=3) e-=3;
+        ll t = y*g; ll kq = (ll)((double)t*qinv); t -= kq*q; while(t<0) t+=q; while(t>=q) t-=q; y = t;
       }
     } else {
       ll q = -a;  /* p = -q */

@@ -244,21 +244,22 @@ M2 = mul(M, M)
 V_LAM_M, V_2_M = vq(M, LAM), vq(M, (2, 0))
 
 
-def phi_val(x):
+def phi_val(x, e0):
+    """phi(n) = chi_n(lambda)^2 Psi_0(n) = (lambda/n)_3^{1+e0} on primary n prime to S; Psi_0 = (lambda/.)_3^{e0}."""
     if not is_primary(x) or divides((2, 0), x):
         return 0j
-    return OM ** cubic_jacobi(LAM, x)
+    return OM ** (((1 + e0) * cubic_jacobi(LAM, x)) % 3)
 
 
-def setup_phi(rng):
+def setup_phi(rng, e0):
     R, N = eis.residues(L)
-    phi = {x: phi_val(x) for x in R}
+    phi = {x: phi_val(x, e0) for x in R}
     # periodicity check of phi modulo 18 on random shifts
     bad = 0
     for _ in range(300):
         x = R[rng.randrange(len(R))]
         t = (rng.randint(-50, 50), rng.randint(-50, 50))
-        if abs(phi_val(add(x, mul(L, t))) - phi[x]) > 1e-12:
+        if abs(phi_val(add(x, mul(L, t)), e0) - phi[x]) > 1e-12:
             bad += 1
     phihat = {}
     for h in R:
@@ -508,13 +509,15 @@ def main():
     build_sup()
     res['cubic_jacobi_vs_factor_based_mismatches'] = check_jacobi(rng)
     log('jacobi check', res['cubic_jacobi_vs_factor_based_mismatches'])
-    R18, phi, phihat, badper = setup_phi(rng)
-    res['phi_18_periodicity_failures'] = badper
-    res['phihat_nonzero'] = int(sum(abs(v) > 1e-13 for v in phihat.values()))
-    log('phi', badper, res['phihat_nonzero'])
+    PH = {}
+    for e0 in (0, 2):
+        PH[e0] = setup_phi(rng, e0)
+        res['Psi0_exp%d' % e0] = {'phi_18_periodicity_failures': PH[e0][3],
+                                  'phihat_nonzero': int(sum(abs(v) > 1e-13 for v in PH[e0][2].values()))}
+        log('phi', e0, res['Psi0_exp%d' % e0])
     T = np.load(tabp)
     NM = int(T['NM'])
-    res['tables'] = {'NM': NM, 'checks[gauss_n,gauss_err,tau_n,tau_err,g2_n,g2_err]': [float(v) for v in T['checks']],
+    res['tables'] = {'NM': NM, 'checks[gauss_n,gauss_err,conj_pair_err,tau_n,tau_err,g2_n,g2_err]': [float(v) for v in T['checks']],
                      'dual_entries': int(len(T['N'])), 'lhs_n': int(len(T['lN']))}
     mx, my, Nm = T['mx'], T['my'], T['N']
     am = (mx - 0.5 * my + 1j * (math.sqrt(3) / 2) * my); am = am / np.abs(am)
@@ -555,20 +558,26 @@ def main():
     p7 = primary((1, 3)) if norm((1, 3)) == 7 else None
     p7 = [p for p in r3.PRIMES if norm(p) == 7]
     p13 = [p for p in r3.PRIMES if norm(p) == 13]
+    # (name, Psi_0 exponent e0: Psi_0 = (lambda/.)_3^{e0}, P with exponents, X list)
     configs = [
-        ('P=empty', [], [600, 3000, 20000]),
-        ('p7a_j1', [(p7[0], 1)], [5000, 10000, 20000]),
-        ('p7a_j2', [(p7[0], 2)], [10000, 20000]),
-        ('p7a_j3', [(p7[0], 3)], [10000, 20000]),
-        ('p7a_j4', [(p7[0], 4)], [10000, 20000]),
-        ('p7a_j5', [(p7[0], 5)], [10000, 20000]),
-        ('p7a_j0', [(p7[0], 0)], [10000, 20000]),
-        ('p7b_j1', [(p7[1], 1)], [10000, 20000]),
-        ('p13a_j1', [(p13[0], 1)], [20000]),
+        ('rho0_P=empty', 0, [], [600, 3000, 20000]),
+        ('rho2_P=empty', 2, [], [30, 300, 3000]),
+        ('rho2_p7a_j1', 2, [(p7[0], 1)], [300, 3000, 20000]),
+        ('rho2_p7a_j0', 2, [(p7[0], 0)], [300, 3000]),
+        ('rho2_p7a_j2', 2, [(p7[0], 2)], [300, 3000]),
+        ('rho2_p7a_j3', 2, [(p7[0], 3)], [300, 3000]),
+        ('rho2_p7a_j4', 2, [(p7[0], 4)], [300, 3000]),
+        ('rho2_p7a_j5', 2, [(p7[0], 5)], [300, 3000]),
+        ('rho2_p7b_j1', 2, [(p7[1], 1)], [300, 3000]),
+        ('rho2_p13a_j1', 2, [(p13[0], 1)], [3000, 20000]),
+        ('rho2_p7a_j1_p13a_j1', 2, [(p7[0], 1), (p13[0], 1)], [20000]),
+        ('rho0_p7a_j1', 0, [(p7[0], 1)], [10000, 20000]),
+        ('rho0_p7a_j4', 0, [(p7[0], 4)], [10000, 20000]),
     ]
     only = os.environ.get('E2E_ONLY')
     res['configs'] = {}
-    for cname, cfg, Xs in configs:
+    for cname, e0, cfg, Xs in configs:
+        R18, phi, phihat, _ = PH[e0]
         if only and cname not in only.split(','):
             continue
         if os.environ.get('E2E_X'):
@@ -588,8 +597,12 @@ def main():
             for p, j in cfg:
                 v *= chi_pow(b, p, j)
             psib.append(v)
+        if e0:
+            kl = np.array([SUPL[(int(a) % 9, int(b) % 9)] for a, b in zip(lx, ly)])
+            psin *= np.exp(2j * math.pi * ((e0 * kl) % 3) / 3)
+            psib = [v * OM ** ((e0 * cubic_jacobi(LAM, b)) % 3) for v, b in zip(psib, bl)]
         lhs_base = an.conjugate() * lg * psin / np.sqrt(lN)
-        cres = {'P': [[list(p), j] for p, j in cfg], 'info': C['info'], 'X': {}}
+        cres = {'Psi0': '(lambda/.)_3^%d' % e0, 'P': [[list(p), j] for p, j in cfg], 'info': C['info'], 'X': {}}
         log('config', cname, C['info'], 'build %.1fs' % (time.time() - tc))
         for X in Xs:
             for name, tf in TESTFNS.items():

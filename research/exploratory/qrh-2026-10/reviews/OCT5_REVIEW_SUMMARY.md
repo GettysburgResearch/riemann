@@ -64,6 +64,17 @@ The reviews also noted the following points, none of them load-bearing:
 After this, the only unverified inputs are the published external theorems themselves
 (Goldmakher–Louvel's estimates, Dunn–Radziwiłł/Patterson theta theory, and standard results).
 
+## 3b. End-to-end numerical test of eq:reflection ([OCT5_REFLECTION_E2E.md](OCT5_REFLECTION_E2E.md))
+
+Both sides of eq:reflection were computed independently and agree across 56 runs:
+* `X` from 30 to 20000; all three cusps; local cases `j = 0..5`; two weight families;
+* relative error 6.5e-15 to 3.6e-10, in ordinary double precision, so not certified;
+* six controls break the agreement: a conjugate multiplier, a sextic `B_{p,1}`, a dropped phase,
+  and others.
+
+Not covered: compactly supported `W` (out of budget), the `v_λ(c) = 1` branch, inert primes, and
+rows with three or more primes.
+
 ## 4. What this does and does not mean
 
 * Bounded reviews by agents, at an exact SHA, found no wrong step in any proof line.

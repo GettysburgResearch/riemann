@@ -206,20 +206,50 @@ def sigma_geom(p, gram, lam, beta_prev=11/12, grid=B2.COARSE):
     return s, dict(low=low, high=float(Hh), arg=arg, binding='low' if low >= Hh else 'high')
 
 
-def optimise(gram, lam, starts, beta_prev=11/12):
+def optimise(gram, lam, starts, beta_prev=11/12, maxiter=250):
     from scipy.optimize import minimize
     best = (9.0, None)
     for st in starts:
         r = minimize(lambda p: sigma_geom(p, gram, lam, beta_prev)[0], st, method='Nelder-Mead',
-                     options=dict(xatol=1e-6, fatol=1e-8, maxiter=500))
+                     options=dict(xatol=1e-6, fatol=1e-8, maxiter=maxiter))
         if r.fun < best[0]:
             best = (float(r.fun), tuple(float(t) for t in r.x))
     s_fine, info = sigma_geom(best[1], gram, lam, beta_prev, B2.FINE)
     return dict(sigma_coarse=best[0], sigma=float(s_fine), geom=best[1], info=info)
 
 
-STARTS = [(17/48, 23/48, 1/6), (0.36, 0.475, 0.167), (0.40, 0.42, 0.17), (0.42, 0.46, 0.12),
-          (0.45, 0.48, 0.08), (0.48, 0.50, 0.03), (0.38, 0.50, 0.14)]
+# Starts for the paper-count optimisation.  'scan' = best point of a coarse grid scan
+# (lx in [0.30, 0.50] step 0.02, ly - lx in [0, 0.2] step 0.025, ell in [0, 0.2] step 0.025, both
+# floors; run once in the scratchpad, about 9 min on 3 cores; not repeated here), 'lp' = the exact
+# LP vertex nudged into tc.valid_geometry, 'paper' = the manuscript geometry.
+STARTS = {
+    'LS':     [(0.32, 0.52, 0.125), (0.05, 0.95, 0.0), (17/48, 23/48, 1/6)],
+    'biasA':  [(0.32, 0.52, 0.125), (104/359, 208/359, 47/359), (17/48, 23/48, 1/6)],
+    'lam1/2': [(0.46, 0.46, 0.075), (104/231, 104/231, 23/231), (0.45, 0.48, 0.08)],
+    'diag':   [(0.50, 0.525, 0.025), (0.50, 0.55, 0.0), (51/101, 51/101 + 0.005, 0.0)],
+}
+CS_OPT = (0.35812, 0.47504, 0.16685)      # bilinear_b2's theta = 0 optimum (paper counts)
+
+
+def _job(args):
+    name, d0 = args
+    tc.DELTA0 = d0
+    gram, lam = HYPS[name]
+    r = optimise(gram, lam, STARTS[name])
+    g = r['geom']
+    r['low_CS_at_geom'] = float(sigma_low(Fr(g[0]), Fr(g[1]), Fr(g[2]), 'paper', Fr(0)))
+    r['theta_eff'] = r['low_CS_at_geom'] - (r['info']['low'] if isinstance(r['info'], dict) else float('nan'))
+    return name, d0, r
+
+
+def dfdh_at_cs_optimum(d0):
+    """H-dFDH changes only the third Gram branch; evaluate it at the CS optimum on the fine grid."""
+    tc.DELTA0 = d0
+    out = {}
+    for name in ('CS', 'dFDH'):
+        gram, lam = HYPS[name]
+        out[name] = sigma_geom(CS_OPT, gram, lam, 11/12, B2.FINE)
+    return out
 
 
 # ------------------------------------------------------------------------------------------------
@@ -289,6 +319,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--quick', action='store_true')
     ap.add_argument('--json', default=None)
+    ap.add_argument('--procs', type=int, default=3)
     args = ap.parse_args()
     allok = True
     print("== self-tests ==")
@@ -330,22 +361,19 @@ def main():
     print("\n== paper-count model (FLOATING): inf_geom max(sigma_low^H, H_high), beta_prev = 11/12 ==")
     model = {}
     for d0, tag in ((DELTA0_PAPER, 'a0=51/100'), (DELTA0_LOW, 'a0=1/2+1/2000')):
-        tc.DELTA0 = d0
-        for name in ('CS', 'dFDH', 'biasA', 'LS', 'lam1/4', 'lam1/2', 'lam3/4', 'diag'):
-            gram, lam = HYPS[name]
-            starts = list(STARTS)
-            v = lpres[name][('51/100' if d0 == DELTA0_PAPER else '1/2') + '|ly>=lx=True']['vertex']
-            if v is not None:
-                vf = tuple(float(t) for t in v)
-                if tc.valid_geometry(*vf):
-                    starts.append(vf)
-            r = optimise(gram, lam, starts)
-            g = r['geom']
-            r['low_CS_at_geom'] = float(sigma_low(Fr(g[0]), Fr(g[1]), Fr(g[2]), 'paper', Fr(0)))
-            r['theta_eff'] = r['low_CS_at_geom'] - (r['info']['low'] if isinstance(r['info'], dict) else float('nan'))
+        r = dfdh_at_cs_optimum(d0)
+        for name, (s_, info) in r.items():
+            model[f"{name}@CSopt|{tag}"] = dict(sigma=s_, geom=CS_OPT, info=info)
+            print(f"{tag:14s} {name:7s} at the CS optimum {CS_OPT}: sigma={s_:.6f} info={info}")
+    from multiprocessing import Pool
+    jobs = [(n, d0) for d0 in (DELTA0_PAPER, DELTA0_LOW) for n in ('diag', 'lam1/2', 'LS', 'biasA')]
+    with Pool(args.procs) as pool:
+        for name, d0, r in pool.imap(_job, jobs):
+            tag = 'a0=51/100' if d0 == DELTA0_PAPER else 'a0=1/2+1/2000'
             model[f"{name}|{tag}"] = r
             print(f"{tag:14s} {name:7s} sigma={r['sigma']:.6f} (coarse {r['sigma_coarse']:.6f}) "
-                  f"geom={tuple(round(t, 5) for t in g)} theta_eff={r['theta_eff']:.5f} info={r['info']}")
+                  f"geom={tuple(round(t, 5) for t in r['geom'])} theta_eff={r['theta_eff']:.5f} info={r['info']}",
+                  flush=True)
     tc.DELTA0 = DELTA0_PAPER
 
     if args.json:

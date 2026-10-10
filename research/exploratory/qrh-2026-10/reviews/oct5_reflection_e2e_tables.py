@@ -78,6 +78,8 @@ def build_primes(NM):
 
 
 def gauss_sums(primes, binary):
+    if not primes:
+        return {}
     inp = ''.join('%d %d\n' % P[0] for P in primes)
     res = subprocess.run([binary], input=inp, capture_output=True, text=True, check=True)
     g = {}
@@ -86,8 +88,9 @@ def gauss_sums(primes, binary):
             continue
         a, b, re_, im_ = line.split()
         g[(int(a), int(b))] = complex(float(re_), float(im_))
-    assert len(g) == len(primes)
+    assert len(g) == len(primes), (len(g), len(primes))
     return g
+
 
 
 def main():
@@ -95,15 +98,37 @@ def main():
     t0 = time.time()
     primes = build_primes(NM)
     log('primes', len(primes))
-    G1 = gauss_sums(primes, binary)
-    log('gauss sums done', time.time() - t0)
+    # g1(conj p) = conj(g1(p)) (substitute x -> conj x; (-1/p)_3 = 1): compute one prime per conjugate
+    # pair, plus both members for small norms as a check of this identity.
+    seen = set(); todo = []
+    for P, q, rr in primes:
+        cp = primary(conj(P))
+        if cp in seen and q > 5000:
+            continue
+        seen.add(P); todo.append((P, q, rr))
+    half = len(todo) // 2
+    import concurrent.futures as cf
+    with cf.ThreadPoolExecutor(2) as ex:
+        parts = list(ex.map(lambda L: gauss_sums(L, binary), [todo[0::2], todo[1::2]]))
+    G1 = {}
+    for d in parts:
+        G1.update(d)
+    conj_err = 0.0
+    for P, q, rr in primes:
+        cp = primary(conj(P))
+        if P in G1 and cp in G1 and cp != P:
+            conj_err = max(conj_err, abs(G1[cp] - G1[P].conjugate()) / math.sqrt(q))
+    for P, q, rr in primes:
+        if P not in G1:
+            G1[P] = G1[primary(conj(P))].conjugate()
+    log('gauss sums done', time.time() - t0, 'conjugate-pair identity max err %.2e' % conj_err)
     # check C Gauss sums against R3 g1_prime (numpy / python) for small primes
     errs = []
     for P, q, rr in primes:
         if q <= 3000:
             errs.append(abs(G1[P] - r3.g1_prime(P)) / math.sqrt(q))
     log('C gauss vs R3 g1_prime: n=%d max normalised err %.2e' % (len(errs), max(errs)))
-    gauss_check = {'n': len(errs), 'max_err': max(errs)}
+    gauss_check = {'n': len(errs), 'max_err': max(errs), 'conj_pair_err': conj_err}
     r3._g1p.update(G1)
     # per prime: q, r, k_omega = (omega/p)_3, k_lam = (lambda/p)_3 exponents
     info = {}
@@ -301,7 +326,7 @@ def main():
     np.savez(outp, NM=NM, mx=np.array(MX, dtype=np.int64), my=np.array(MY, dtype=np.int64), N=np.array(NN, dtype=np.int64),
              d0=np.array(D0), dp=np.array(DP), dm=np.array(DMm),
              lx=np.array(LX, dtype=np.int64), ly=np.array(LY, dtype=np.int64), lN=np.array(LN, dtype=np.int64), lg=np.array(LG),
-             checks=np.array([gauss_check['n'], gauss_check['max_err'], nchk, worst, ng, gerr]))
+             checks=np.array([gauss_check['n'], gauss_check['max_err'], gauss_check['conj_pair_err'], nchk, worst, ng, gerr]))
     log('saved', outp, time.time() - t0)
 
 

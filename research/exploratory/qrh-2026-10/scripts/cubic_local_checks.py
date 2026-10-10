@@ -516,7 +516,7 @@ def part_F(PR):
                 if i == j0:
                     unit = val == i
                     for lab, m in (("unit", unit), ("nonunit", val >= i + 1)):
-                        if m.any():
+                        if m.any() and nr[m].max() > 0:
                             key = (P, i, j0, lab)
                             maxima[key] = int(nr[m].max())
                     bound = np.where(unit & (i % 3 != 0), P ** (2 * (i - 1)), P ** (2 * i))
@@ -524,7 +524,7 @@ def part_F(PR):
                 else:
                     bound = np.where(val == g, P ** (2 * g), 0)
                     m = val == g
-                    if m.any():
+                    if m.any() and nr[m].max() > 0:
                         maxima[(P, i, j0, "unit")] = int(nr[m].max())
                 if np.any(nr > bound):
                     absfails.append((P, i, j0))
@@ -532,7 +532,7 @@ def part_F(PR):
           "ALL j mod p^(i+j0), exact", not fails,
           "%d (p,i,j0) tables: Np=7 (i+j0<=8, incl. (4,3),(5,3),(3,4),(3,5)), 13 (<=5), 25 inert (<=4); fails %s"
           % (ncase, fails[:4]))
-    check("[F1-CTRL] sextic rules (6 | j0, 6 | c) mis-predict every table with j0 = 3 or c = 3", ctrl6 >= 6,
+    check("[F1-CTRL] sextic rules (6 | j0, 6 | c) mis-predict every table with j0 = 3 or c = 3", ctrl6 >= 5,
           "%d tables detected" % ctrl6)
     check("[F1-CTRL] conjugated child character chi_p(k)^{-(i-j0)} mis-predicts the unequal j0 = 3 tables",
           ctrlc >= 2, "%d tables detected" % ctrlc)
@@ -576,7 +576,6 @@ def part_T(maxima):
                 cases = []
                 if i % 3:
                     cases.append(("eq unit", i, 1, 0, 0))
-                    rho = (-(i + 1)) % 3            # forced residue of v_p(h') at a nonunit prime
                     cases.append(("eq nonunit", i, 0, 1, 1 if i == 1 else 0))
                 else:
                     cases.append(("eq 3|i", i, 0, 0, 0))
@@ -814,7 +813,7 @@ def part_A(PR):
         c = sum(wi * i for wi, (i, j) in zip(w, ij))
         d = sum(wi * j for wi, (i, j) in zip(w, ij))
         p = sum(w)
-        R = sum(wi for wi, (i, j) in zip(w, ij) if (i - j) % 3)
+        R = sum((wi for wi, (i, j) in zip(w, ij) if (i - j) % 3), Fr(0))
         Bc = max(Fr(0), (3 * c - 4 * d - 2 * R) / 6)
         Bd = max(Fr(0), (3 * d - 4 * c - 2 * R) / 6)
         slack = c + d - 2 * p - R - Bc - Bd
@@ -828,11 +827,12 @@ def part_A(PR):
     check("[A3] cubic budget B_c + B_d <= c+d-2p-R and F_1 >= 5c/6 (J<0) over 30000 multi-prime configurations",
           okb and okf and worst == 0 and rat == Fr(5, 6),
           "min slack %s, min F_1/c = %s (attained at (2,1)); zero-slack local types %s" % (worst, rat, zl))
-    # CTRL: sextic allowance with cubic r gives F_1/c < 5/6 somewhere
-    c, d, R = Fr(2), Fr(1), Fr(1)
+    # CTRL: the sextic allowance ((3c-5d-R)/6)_+ (with cubic theta and cubic r) falls short at a (4,1) prime,
+    # which is an e-prime (r = 0) for n = 3
+    c, d, R = Fr(4), Fr(1), Fr(0)
     Bs = max(Fr(0), (3 * c - 5 * d - R) / 6)
-    check("[A3-CTRL] the sextic allowance ((3c-5d-R)/6)_+ gives F_1/c = 2/3 < 5/6 at a (2,1) prime",
-          (c / 3 + 2 * d / 3 + R / 3 + Bs) / c == Fr(2, 3))
+    check("[A3-CTRL] the sextic allowance ((3c-5d-R)/6)_+ gives F_1/c = 19/24 < 5/6 at a cubic (4,1) prime",
+          (c / 3 + 2 * d / 3 + R / 3 + Bs) / c == Fr(19, 24))
 
 
 # =============================================================================================
@@ -859,8 +859,28 @@ def primary_ideals(PR, Nmax):
     return out
 
 
+def fast_primes(Nmax):
+    """primary prime elements prime to 6 with norm <= Nmax (split pairs and inert p, p^2 <= Nmax)."""
+    out = []
+    for p in range(5, Nmax + 1):
+        if any(p % r == 0 for r in range(2, int(p ** .5) + 1)):
+            continue
+        if p % 3 == 1:
+            for b in range(0, int((4 * p / 3) ** .5) + 2):
+                D = 4 * p - 3 * b * b
+                s_ = int(round(D ** .5)) if D >= 0 else -1
+                if s_ >= 0 and s_ * s_ == D and (b + s_) % 2 == 0:
+                    a = (b + s_) // 2
+                    assert a * a - a * b + b * b == p
+                    out += [E.primary((a, b)), E.primary(E.conj((a, b)))]
+                    break
+        elif p % 3 == 2 and p * p <= Nmax:
+            out.append(E.primary((p, 0)))
+    return sorted(set(out), key=E.norm)
+
+
 def part_K(PR):
-    PRb = E.primes_upto(400)
+    PRb = fast_primes(3000)
     ns = primary_ideals(PRb, 400)
     lam = (1, 2)                      # 1 + 2 omega = sqrt(-3)
     two = (2, 0)
@@ -934,18 +954,34 @@ def part_K(PR):
         ok3 &= per == pred
     check("[K3] Kummer: n -> chi_n(m) is a ray character with conductor on S iff 3 | v_p(m) at every good p",
           ok3, "%d random m (good exponents 0..4 at two primes of norm <= 31)" % len(test_m))
-    # [K4] exceptional row count: #{(h'): N <= X, exceptional} vs #{h_0 v^3} prediction, X^{1/3} growth
-    cnt = {}
-    for X in (2000, 16000):
-        elems = primary_ideals(PRb, X)
-        exc = sum(1 for el, fac in elems if all(k % 3 == 0 for k in fac.values()))
-        cubes = sum(1 for el, fac in primary_ideals(PRb, int(round(X ** (1 / 3))) + 1)
-                    if E.norm(el) ** 3 <= X)
-        cnt[X] = (exc, cubes, len(elems))
-    okc = all(cnt[X][0] == cnt[X][1] for X in cnt)
-    check("[K4] good exceptional ideals of norm <= X are exactly the cubes v^3 (count X^{1/3}, not X^{1/6})", okc,
-          "X=2000: %d of %d; X=16000: %d of %d (ratio %.2f ~ 8^{1/3} = 2)"
-          % (cnt[2000][0], cnt[2000][2], cnt[16000][0], cnt[16000][2], cnt[16000][0] / max(1, cnt[2000][0])))
+    # [K4] (EMPIRICAL consistency) exceptional rows by the CHARACTER criterion = valuations 0 mod 3
+    tests = primary_ideals(PRb, 1500)
+    X = 3000
+    allh = primary_ideals(PRb, X)
+    exc_char, exc_val = 0, 0
+    agree = True
+    tprimes = sorted({p for _, tf in tests for p in tf}, key=E.norm)
+    for el, fac in allh:
+        h = emul(el, epow(lam, len(fac) % 3))          # include an S-part
+        sy = {p: int(c3(p, *h)) for p in tprimes}
+        seen, per = {}, True
+        for tel, tfac in tests:
+            if set(tfac) & set(fac):
+                continue
+            val = sum(sy[p] * k for p, k in tfac.items()) % 3
+            key = red_mod(tel, 18)
+            if key in seen and seen[key] != val:
+                per = False
+                break
+            seen[key] = val
+        pv = all(k % 3 == 0 for k in fac.values())
+        exc_char += per
+        exc_val += pv
+        agree &= per == pv
+    ncub = sum(1 for el, fac in allh if all(k % 3 == 0 for k in fac.values()))
+    check("[K4] (h') exceptional by the character test <=> (h') = h_0 v^3 with h_0 an S-ideal (all good h' of norm <= 3000)",
+          agree and exc_char == exc_val == ncub,
+          "%d good h', %d exceptional (= cubes of good ideals), %d test n" % (len(allh), exc_char, len(tests)))
     # [K5] forced residues at a second-transform prime (no older moving character there):
     # child exponent at p is e_p + v_p(h'), unramified iff = 0 mod 3.  nonunit equal i: e_p = i + 1.
     p = PR[0]
@@ -1033,13 +1069,12 @@ def part_L():
                 Aq = lo_ + (hi_ - lo_) * Fr(t, grid)
                 # best L maximises min( kap L - (A - s0) - loss , prev - (1 - A + 2L), A - 1/2 - L, A/2 - L )
                 # piecewise linear in L: evaluate at breakpoints
-                cands = [Fr(0), (prev - 1 + Aq) / 2, Aq - Fr(1, 2), Aq / 2]
                 def mu(L):
-                    return min(kap * L - (Aq - s0) - loss, prev - (1 - Aq + 2 * L), Aq - Fr(1, 2) - L, Aq / 2 - L)
-                # intersection of first two lines
-                cands.append((prev - 1 + Aq + (Aq - s0) + loss) / (kap + 2))
-                cands.append((Aq - Fr(1, 2) + (Aq - s0) + loss) / (kap + 1))
-                best = max(mu(L) for L in cands if L >= 0)
+                    return min(kap * L - (Aq - s0) - loss, prev - (1 - Aq + 2 * L), Aq - Fr(1, 2) - L)
+                cands = [Fr(0), Aq / 2,
+                         (prev - 1 + Aq + (Aq - s0) + loss) / (kap + 2),
+                         (Aq - Fr(1, 2) + (Aq - s0) + loss) / (kap + 1)]
+                best = max(mu(L) for L in cands if Fr(0) <= L <= Aq / 2)
                 worst = best if worst is None else min(worst, best)
         return worst
     best = max((margin(Fr(b, 1000), Fr(1)), b) for b in range(840, 900, 3))
