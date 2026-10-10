@@ -16,6 +16,14 @@ Smallest remaining gap: no reflection / functional-equation estimate for the twi
   is proved or even precisely formulated here; the identification is of coefficient shape only
 ```
 
+> **Later in this wave (read first).**
+> * [A2_LITERATURE.md](A2_LITERATURE.md) confirms the shape identification exactly, plus an extra
+>   quadratic factor. It closes the "GL(3) cubic theta reflection" step of the programme in §4,
+>   because the cubic theta on GL(3) has coefficients vanishing off cubes.
+> * [RUNG_STRENGTH.md](RUNG_STRENGTH.md) shows that the moment order adds nothing by itself. Only
+>   the row/column ratio `ρ` matters, and the fourth moment at `H = D^{1+θ}` is a sub-diagonal
+>   (`ρ < 1`) statement. Its leverage claims below should be read with that in mind.
+
 ## 1. Why the fourth moment matters
 
 In the Oct 5 architecture, the 11/12 zero-free half-plane follows from the mean square
