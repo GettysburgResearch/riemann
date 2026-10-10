@@ -87,6 +87,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The signed-covariance packet](standalone/2026-10-10-signed-covariance-descent/README.md) evaluates the actual finite Fourier data and proves that the apparent v=1 pole in the preceding packet cancels. It proves a prescribed cube-character law at all three cusps, a larger continuation domain for the complete reflected series, and a conductor mean for the canonical Gauss family in Re(u)>5/8. An exact comparison shows that the new contour estimate still does not improve the existing physical envelope at the moment's critical scales. These are proposed source-conditional deductions; the full fourth moment, generalized hierarchy, and RH remain open.
 
+## Further research: joint divisors and additional moment sectors
+
+[The joint-divisor packet](standalone/2026-10-10-joint-divisor-covariance/README.md) proves a stronger large-divisor tail bound, handles overlapping moving exclusions and auxiliaries in the full all-row theta family, and transfers a raw short-row saving to the full arithmetic A2 completion through correction-dependent cube cutoffs. Published Hecke subconvexity also yields new diagonal-size sectors of every fixed generalized moment, with explicit fourth-moment configurations beyond the previous positive accounting regions. The theta deductions retain their imported assumptions; the remaining signed covariance, full fourth moment, generalized hierarchy, and RH remain open. Exact sources, scoped independent AI-agent reviews, and finite arithmetic diagnostics accompany the proofs.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

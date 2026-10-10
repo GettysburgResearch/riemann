@@ -1,0 +1,240 @@
+{
+  "repository": "GettysburgResearch/riemann",
+  "packet": "standalone/2026-10-10-joint-divisor-covariance",
+  "base_pr": 922,
+  "base_commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+  "base_mathematical_source": "8f2acaacddc10bd8fb053a66070a1d06d25aa922",
+  "branch": "research/sextic-joint-divisor-covariance-20261010",
+  "primary_theta_source": {
+    "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+    "path": "standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+    "git_blob": "2000faddbbebac5de0ecfe0b962534ea61a852d5",
+    "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+    "bytes": 169005,
+    "used": "eq:T, Proposition R, eq:cube-inverse, eq:ray-local-transform, scalar following eq:dual-cusp-mellin-series, and local large-sieve conventions",
+    "upstream_repository": "OpenAI/math",
+    "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a"
+  },
+  "inherited_and_sibling_dependencies": [
+    {
+      "commit": "8f2acaacddc10bd8fb053a66070a1d06d25aa922",
+      "path": "standalone/2026-10-10-signed-covariance-descent/SECOND_REFLECTION_BOOTSTRAP.md",
+      "git_blob": "38a2594ee38b14abbb8c6217352c9047e869e0f1",
+      "sha256": "e1db605878eb805a3d21f908ea1c73f5869d56c112a3c3e91e67d9b715b16fd0",
+      "bytes": 18957,
+      "used": "Exact old divisor representation and canonical characters"
+    },
+    {
+      "commit": "8f2acaacddc10bd8fb053a66070a1d06d25aa922",
+      "path": "standalone/2026-10-10-signed-covariance-descent/SPECTRAL_ROW_MEAN.md",
+      "git_blob": "bb4f6d8948a3e0ccd0f690e7380c1a71d20cf223",
+      "sha256": "5154dc7d0502555f9a198eed386b9926bf1769ac61ae6b7c6fa319eadec7ace1",
+      "bytes": 11136,
+      "used": "Completed block input, spectral reconstruction, and prior full mean"
+    },
+    {
+      "commit": "8f2acaacddc10bd8fb053a66070a1d06d25aa922",
+      "path": "standalone/2026-10-10-signed-covariance-descent/ALL_CUSP_COEFFICIENT_ADAPTER.md",
+      "git_blob": "1533314683a550ed9e59bac1c1734df346377458",
+      "sha256": "bfabc37c5b16a32d6b29fe5767f58f5f5a8dc161aaa3d127ebf11236fa2d3ca1",
+      "bytes": 17208,
+      "used": "Three-cusp coefficients and normalizations"
+    },
+    {
+      "commit": "8f2acaacddc10bd8fb053a66070a1d06d25aa922",
+      "path": "standalone/2026-10-10-signed-covariance-descent/FINITE_CUBE_HOMOGENEITY.md",
+      "git_blob": "850f03d087d885a6befd080dac95b76eee609568",
+      "sha256": "e4f7b3ff0817c4b6deaf2e608657425c06ac97c1a7f4f60f3762eba7eca7b0e1",
+      "bytes": 10455,
+      "used": "Literal fixed-ray cube transformation"
+    },
+    {
+      "commit": "1a1152008706f7e24fa1efe4990588f8f99c5d8d",
+      "path": "standalone/2026-10-10-sextic-separated-cores/ALL_ROW_COMPLETION_AND_RAW_GAIN.md",
+      "git_blob": "6518adf695643c31e380028ef327fec58631b8f9",
+      "sha256": "a0e6bd5517a81f44d2a18bd32dc4f0db623b9951c17068e56af7009c8914fdec",
+      "bytes": 16037,
+      "used": "All-row local input and prior short/long raw gain"
+    },
+    {
+      "commit": "1a1152008706f7e24fa1efe4990588f8f99c5d8d",
+      "path": "standalone/2026-10-10-sextic-separated-cores/CROSS_SIDE_SEPARATION_SECTOR.md",
+      "git_blob": "4662a98222659984b219018fc850678b47d5740b",
+      "sha256": "299b8cc4f981bd1bdfe1c3c8ac4b0d4eea23eec77c4e87b4ac46ff6ee0dcb263",
+      "bytes": 25067,
+      "used": "Comparison only: previously controlled cross-side sectors"
+    },
+    {
+      "commit": "1a1152008706f7e24fa1efe4990588f8f99c5d8d",
+      "path": "standalone/2026-10-10-sextic-separated-cores/SUBSET_PRODUCT_INCIDENCE.md",
+      "git_blob": "f3e4eb59a3f8ffb1c742de5a627704f169d7cc00",
+      "sha256": "9d62a79c0074c7506d273ff7203807e4efd054bfdf0b85baddf340304da4f3de",
+      "bytes": 19942,
+      "used": "Comparison only: all-order balanced incidence sectors"
+    },
+    {
+      "commit": "4e6d4aa57ae4cb04d76b2b31279ac367951b469a",
+      "path": "standalone/2026-10-10-sextic-centered-covariance/ARBITRARY_ROW_MOMENTS.md",
+      "git_blob": "83bf7ef9e2911d17e030d00efc03cf083cdf5419",
+      "sha256": "a12605808006c07f1a413e743545441e0541577367c8ea1bbe09a7fc493cc52a",
+      "bytes": 33984,
+      "used": "All-row valuations and auxiliary costs"
+    },
+    {
+      "commit": "4e6d4aa57ae4cb04d76b2b31279ac367951b469a",
+      "path": "standalone/2026-10-10-sextic-centered-covariance/CUBE_INVERSE.md",
+      "git_blob": "6dde8d7907bc471a83f7fa9efe4f055a16a0ac4b",
+      "sha256": "a865338882111bf3bc96ffc539dd93f3b2ee59390499caaf14852ed8cde77804",
+      "bytes": 22440,
+      "used": "Exact full signed inverse and angular scalar uniformity"
+    },
+    {
+      "commit": "4e6d4aa57ae4cb04d76b2b31279ac367951b469a",
+      "path": "standalone/2026-10-10-sextic-centered-covariance/ANGULAR_THETA.md",
+      "git_blob": "b3913bbf46c3d0adcbed270e20c147a29ecd014b",
+      "sha256": "bbc139f956731482fcf9e33645bfe2832b7b7471594d9cbc1f21cd08eaf2ac5a",
+      "bytes": 42495,
+      "used": "Fixed angular and ray scalar input"
+    },
+    {
+      "commit": "0cc0428fedbbfc340044c7451b3d392c1da9a103",
+      "path": "standalone/2026-10-10-sextic-moment-conductor-core/A2_COMPLETION.md",
+      "git_blob": "c163d5e95d76e69eac07631600a3117e055a8046",
+      "sha256": "d99eade56807077b07e5ec1325001f1592115db216e1e10e6a3906a3e01f0aad",
+      "bytes": 36064,
+      "used": "Finite A2 polynomial, forward/inverse correction, prior coefficient identification"
+    },
+    {
+      "commit": "0cc0428fedbbfc340044c7451b3d392c1da9a103",
+      "path": "standalone/2026-10-10-sextic-moment-conductor-core/CONDUCTOR_SECTORS.md",
+      "git_blob": "30c359bf54b91e640786114d7946fd4df39b526c",
+      "sha256": "c160bbb1b1d7c6bcc5514d496ad41f15fd17ea3d36206b0d05cfa0d7d6503983",
+      "bytes": 24272,
+      "used": "Residual-conductor accounting comparison"
+    },
+    {
+      "commit": "cfa102748b26f840ccc4b963a660711424db0ec3",
+      "path": "standalone/2026-10-10-sextic-joint-core/INTERFACE_COMPARISON.md",
+      "git_blob": "4373ac212f31f5472a1e83c69c8b28ec46547957",
+      "sha256": "203df24a48e54cb088a28c1236c78569ae75ea84a6b589f72a30b35720cc8e4c",
+      "bytes": 16228,
+      "used": "Exact mixed family, moving exclusions, A2 child scales, and stated open interface"
+    },
+    {
+      "commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "path": "standalone/2026-10-10-sextic-moment-descent/REFINED_ALL_ROW_SIEVE.md",
+      "git_blob": "69589ba1350c1ed5bd62cf87b976c3ba2142f94e",
+      "sha256": "6879e094fb63969ddc88c637bf633cf46360d144d2b1615573647e734b4141e8",
+      "bytes": 17097,
+      "used": "All-row character sieve"
+    },
+    {
+      "commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "path": "standalone/2026-10-10-sextic-moment-descent/GENERAL_MOMENT_ATTACK.md",
+      "git_blob": "893d0e394041d16cf36d643794b544b7556303de",
+      "sha256": "a4ca15c0d731ef6000b19507b39b64a4786a7f8af9939864b3176221bf02b499",
+      "bytes": 27326,
+      "used": "Moment target, fixed-test quantifiers and conditional extraction"
+    },
+    {
+      "commit": "2edc467ef4dea4aa685219ac6a558a158b88768d",
+      "path": "standalone/2026-10-10-theta-support-descent/HIGHER_ANGULAR_SECOND_MOMENT.md",
+      "git_blob": "956445e9baa91356a352cc089852dbf34f90dbef",
+      "sha256": "82edbaed050710fcdbfa65c20a39cc83338e9f283473462c1756ea717f035959",
+      "bytes": 23187,
+      "used": "Uniform angular reciprocal input, including moving exclusions"
+    },
+    {
+      "commit": "2edc467ef4dea4aa685219ac6a558a158b88768d",
+      "path": "standalone/2026-10-10-theta-support-descent/RAMANUJAN_SUPPORT_PRUNING.md",
+      "git_blob": "fae954cda842026d9f9edeabf1e5cdb4c0ed9e5c",
+      "sha256": "9a019b2253a0f35ade96455bf5d249cd1ca09285c4f2d7e17c475b5b5522c3ea",
+      "bytes": 11249,
+      "used": "Complete-group support cutoff"
+    },
+    {
+      "commit": "2edc467ef4dea4aa685219ac6a558a158b88768d",
+      "path": "standalone/2026-10-10-theta-support-descent/ALL_CUSP_REFLECTION.md",
+      "git_blob": "979c54bb310fe8ec48d83d4ac118ca6a97144ff6",
+      "sha256": "4a0201c3de364c1747726b9561f91ffc825da0aca926528844c543c9bbcd908d",
+      "bytes": 16372,
+      "used": "Complete all-cusp reflection input"
+    },
+    {
+      "commit": "9b04a887e171b3104a66cf57296ce5b0b2920d78",
+      "path": "standalone/2026-10-10-averaged-conductor-frontier/SMALL_GCD_CONDUCTOR_REDUCTION.md",
+      "git_blob": "4154f9d25537e863e235fd86ce5de9620256222c",
+      "sha256": "9a371bd84f63b7fae2a3983c05829f2d69e2bbed918ab3eed119a2e7a11125a2",
+      "bytes": 16386,
+      "used": "Exact real signed remainder, classical gcd tail, and averaged extraction"
+    }
+  ],
+  "external_primary_references": [
+    {
+      "title": "Burgess-like subconvexity for GL1",
+      "author": "Han Wu",
+      "version": "arXiv:1604.08551v6",
+      "url": "https://arxiv.org/html/1604.08551v6",
+      "doi": "10.1112/S0010437X19007309",
+      "used": "Theorem 1.1 for unitary Hecke characters; the explicit Söhne bound quoted immediately before it. Input theorems, not independently re-proved."
+    },
+    {
+      "title": "On the Ramanujan conjecture over number fields",
+      "authors": [
+        "Valentin Blomer",
+        "Farrell Brumley"
+      ],
+      "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v174-n1-p18-p.pdf",
+      "used": "Published Theorem 1 supplies theta=7/64 over every number field."
+    },
+    {
+      "title": "An upper bound for Hecke zeta-functions with Grössencharacters",
+      "author": "Peter Söhne",
+      "doi": "10.1006/jnth.1997.2167",
+      "url": "https://doi.org/10.1006/jnth.1997.2167",
+      "access_boundary": "Original publisher access was blocked; the exact divisor-sensitive statement is used as quoted in Wu v6. Original 1997 proof not replayed.",
+      "used": "For an actual divisor d of the finite conductor f: (TF)^(1/6+epsilon)+(Nd)^(1/2+epsilon)+(F/Nd)^(1/4+epsilon)."
+    },
+    {
+      "title": "Bias in cubic Gauss sums: Patterson’s conjecture",
+      "authors": [
+        "Alexander Dunn",
+        "Maksym Radziwill"
+      ],
+      "version": "arXiv:2109.07463v3",
+      "url": "https://arxiv.org/html/2109.07463v3",
+      "used": "Explicit all-cusp coefficient identities only; not GRH-conditional prime-sum or dispersion results."
+    },
+    {
+      "title": "L-functions with n-th order twists",
+      "authors": [
+        "Valentin Blomer",
+        "Leo Goldmakher",
+        "Benoit Louvel"
+      ],
+      "url": "https://arxiv.org/abs/1112.1650",
+      "used": "Theorem 1.3 as pinned squarefree cubic/sextic large-sieve input."
+    },
+    {
+      "title": "Constructing Weyl group multiple Dirichlet series",
+      "authors": [
+        "Gautam Chinta",
+        "Paul E. Gunnells"
+      ],
+      "version": "arXiv:0803.0691v2",
+      "url": "https://arxiv.org/html/0803.0691v2",
+      "used": "Proposition 2.1 and equations (4.3)-(4.4) at finite coefficient scope."
+    },
+    {
+      "title": "Chinta–Gunnells A2 multiple Dirichlet series paper",
+      "authors": [
+        "Gautam Chinta",
+        "Paul E. Gunnells"
+      ],
+      "version": "arXiv:math/0703040v1",
+      "url": "https://arxiv.org/html/math/0703040v1",
+      "used": "Equations (1.4), (2.8)-(2.9), local numerator and twisted multiplicativity; no global adapter inferred."
+    }
+  ],
+  "scope": "The theta/joint-divisor/A2 deductions are conditional on their explicit imported analytic inputs. The new signed-conductor sectors use published Hecke theorems and no imported native Möbius moment. No full generalized moment, new zero-free boundary, integration, external human acceptance, or Lean build."
+}
