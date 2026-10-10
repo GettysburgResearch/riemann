@@ -32,3 +32,11 @@ Smallest remaining gap: none of these reruns is independent of the scripts' own 
 
 Separately, every relative link in the folder's markdown files resolves: 376 links. One
 regex hit, at SEP30_SEC4_REVIEW.md:137, is a formula, not a link.
+
+Lean provenance check (22:28 UTC):
+* `lean/*.lean` and the two strip challenges are byte-identical to the copies that were built and
+  comparator-checked.
+* The explicit-Siegel challenge differed only by a docstring caveat added after its first run.
+  It was copied over and re-run with both kernels: accepted, 1188s.
+* `checks/CorollaryAxioms.lean` re-run at HEAD: all seven `#print axioms` lines show only
+  `[propext, Classical.choice, Quot.sound]`.
