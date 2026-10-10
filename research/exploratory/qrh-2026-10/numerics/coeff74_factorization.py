@@ -833,6 +833,7 @@ def run_tuples(W, tuples, label, fs_check=True, diag=True, log=print):
     worst = dict(K=0.0, FS=0.0, Kclosed=0.0)
     nonzero = 0
     zero_both = 0
+    zero_by_cancel = 0
     fails = []
     flags = {}
     per_tier = {}
@@ -862,11 +863,14 @@ def run_tuples(W, tuples, label, fs_check=True, diag=True, log=print):
                     flags[kf] = flags.get(kf, 0) + int(vf)
         elif abs(Kd) < 1e-6:
             zero_both += 1
+            if info["nsol"] > 0:
+                zero_by_cancel += 1
         if (i + 1) % 20000 == 0:
             log(f"   [{label}] {i + 1}/{len(tuples)}  maxdev={worst['K']:.2e}  "
                 f"{time.time() - t0:.0f}s")
     fails.sort(key=lambda x: x[0])
     res = dict(label=label, tuples=len(tuples), nonzero=nonzero, zero_both_sides=zero_both,
+               zero_with_nonempty_congruence=zero_by_cancel,
                max_rel_dev_K=worst["K"], max_rel_dev_K_using_closed_C=worst["Kclosed"],
                max_rel_dev_FS=worst["FS"] if fs_check else None, failures=len(fails),
                per_tier=per_tier, exercised_on_nonzero=flags,

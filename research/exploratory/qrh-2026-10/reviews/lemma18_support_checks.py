@@ -88,22 +88,22 @@ def part_A():
             r = [k for k in common if (C[k] - D[k]) % 6]
             p = len(common)
             ok_RE &= len(r) <= p and (p - len(r)) >= 0
-    # the decomposition map is onto the admissible set: count admissible (C,D,a,b)
-    cnt = 0
-    for C in vecs:
-        for D in vecs:
-            if tuple(1 if x else 0 for x in C) != tuple(1 if x else 0 for x in D):
-                continue
-            for a in vecs:
-                if any(a[k] and C[k] for k in range(NP)):
-                    continue
-                for b in vecs:
-                    if any(b[k] and (C[k] or a[k]) for k in range(NP)):
-                        continue
-                    if max(C[k] + a[k] for k in range(NP)) <= EMAX and max(D[k] + b[k] for k in range(NP)) <= EMAX:
-                        cnt += 1
+    # surjectivity: random admissible (C,D,a,b) with rad C = rad D, (a,b)=1, (ab,CD)=1 round-trip
+    rng0 = random.Random(5)
+    ok_onto, cnt = True, 0
+    while cnt < 20000:
+        C = tuple(rng0.randint(0, EMAX) for _ in range(NP))
+        D = tuple((rng0.randint(1, EMAX) if C[k] else 0) for k in range(NP))
+        a = tuple((0 if C[k] else rng0.choice([0, 0, rng0.randint(1, EMAX)])) for k in range(NP))
+        b = tuple((0 if (C[k] or a[k]) else rng0.choice([0, rng0.randint(1, EMAX)])) for k in range(NP))
+        if max(C[k] + a[k] for k in range(NP)) > EMAX or max(D[k] + b[k] for k in range(NP)) > EMAX:
+            continue
+        n = tuple(C[k] + a[k] for k in range(NP))
+        m = tuple(D[k] + b[k] for k in range(NP))
+        ok_onto &= seen.get((C, D, a, b)) == (n, m)
+        cnt += 1
     check("A1 complete-common-support decomposition is a bijection (3 primes, exps 0..7)",
-          ok_bij and ok_props and cnt == len(seen) == len(vecs) ** 2, "pairs=%d admissible=%d" % (len(seen), cnt))
+          ok_bij and ok_props and ok_onto and len(seen) == len(vecs) ** 2, "pairs=%d, round-trips=%d" % (len(seen), cnt))
     check("A2 R <= p and E <= p - R for every pair", ok_RE)
 
     # A3: (2.6) with random log-weights, 4 primes, exps 0..9 on common primes
@@ -146,19 +146,19 @@ def part_A():
     # primes] * [slot selected only by primes equal to it, and by at most one prime].
     okA5 = True
     nchk = 0
-    for n1 in itertools.product(range(3), repeat=4):
-        for n2 in itertools.product(range(3), repeat=4):
-            for slot in [None, 0, 1, 2, 3]:
-                full = [n1[k] + n2[k] + (1 if slot == k else 0) for k in range(4)]
-                for t in itertools.product(range(2), repeat=4):
-                    tp = [k for k in range(4) if t[k]]
+    for n1 in itertools.product(range(3), repeat=3):
+        for n2 in itertools.product(range(3), repeat=3):
+            for slot in [None, 0, 1, 2]:
+                full = [n1[k] + n2[k] + (1 if slot == k else 0) for k in range(3)]
+                for t in itertools.product(range(2), repeat=3):
+                    tp = [k for k in range(3) if t[k]]
                     lhs = 1 if all(full[k] >= 1 for k in tp) else 0
                     rhs = 0
                     for Js in itertools.product([1, 2, 3, 4, 5, 6, 7], repeat=len(tp)):
                         # bitmask: 1=n1, 2=n2, 4=slot
                         sign = 1
-                        d1 = [0] * 4
-                        d2 = [0] * 4
+                        d1 = [0] * 3
+                        d2 = [0] * 3
                         slot_sel = []
                         for k, J in zip(tp, Js):
                             sign *= (-1) ** (bin(J).count("1") + 1)
@@ -172,7 +172,7 @@ def part_A():
                             continue           # two distinct divisor primes select one prime slot: zero
                         if slot_sel and slot != slot_sel[0]:
                             continue
-                        if all(n1[k] >= d1[k] for k in range(4)) and all(n2[k] >= d2[k] for k in range(4)):
+                        if all(n1[k] >= d1[k] for k in range(3)) and all(n2[k] >= d2[k] for k in range(3)):
                             rhs += sign
                     okA5 &= lhs == rhs
                     nchk += 1
@@ -309,7 +309,6 @@ def part_B(PR):
     # B2 primitivity of xi_r
     okB2, worst = True, 0.0
     for rr in [{p7b: 1}, {p7: 3, p13: 2}, {q5: 5}, {p7: 2, p7b: 4, p13: 1}]:
-        M, tab = gauss_table(rr, None)  # character exponents via fac
         n = elem({p: 1 for p in rr})
         M = Mod(n)
         R = M.residues()
@@ -415,13 +414,16 @@ def part_D(PR, H, cfgs, cut=36.0):
         DB = dict(Df)
         DB.update(bf)
         # LHS
-        pts = lattice_points(cut * H / math.pi)
+        k0 = complex(0.31, 0.17) * math.sqrt(H)          # shift: breaks the unit symmetry
+        R0 = math.sqrt(cut * H / math.pi) + abs(k0)
+        pts = lattice_points(R0 * R0)
         lhs, mass = 0.0 + 0.0j, 0.0
         for k, n in pts:
             if n == 0:
                 continue
             f = chi(CA, k) * np.conj(chi(DB, k))
-            wgt = math.exp(-math.pi * n / H)
+            kc = E.to_complex(k) if hasattr(E, "to_complex") else complex(k[0] - 0.5 * k[1], k[1] * math.sqrt(3) / 2)
+            wgt = math.exp(-math.pi * abs(kc - k0) ** 2 / H)
             lhs += wgt * f
             mass += wgt * abs(f)
         # RHS: paper's display, summed over e | c/r and all h (h = 0 included)
@@ -448,8 +450,14 @@ def part_D(PR, H, cfgs, cut=36.0):
             scale = 3.0 * qQ * q_e / (4 * math.pi * H)
             hs = lattice_points(cut * scale)
             s = 0.0 + 0.0j
+            Qc = complex(Q[0] - 0.5 * Q[1], Q[1] * math.sqrt(3) / 2)
+            ec = complex(e_el[0] - 0.5 * e_el[1], e_el[1] * math.sqrt(3) / 2)
             for h, nh in hs:
-                ker = math.exp(-4 * math.pi * H * nh / (3.0 * qQ * q_e))
+                hc = complex(h[0] - 0.5 * h[1], h[1] * math.sqrt(3) / 2)
+                xi = 2j * hc.conjugate() / (math.sqrt(3) * Qc.conjugate())   # dual-lattice point
+                eta = xi / ec.conjugate()
+                ker = math.exp(-4 * math.pi * H * nh / (3.0 * qQ * q_e)) \
+                    * cmath.exp(-2j * math.pi * (eta * k0.conjugate()).real)
                 gx = Gr[Mr.idx(h)] if rr else 1.0
                 ga = Ga[Ma.idx(h)] if af else 1.0
                 gb = np.conj(Gb[Mb.idx(neg(h))]) if bf else 1.0
@@ -492,10 +500,11 @@ def F_brute(ufac, vfac, js):
 
 def part_E(PR):
     p7, p7b, p13, p13b, p19 = PR[0], PR[1], PR[2], PR[3], PR[4]
-    cfgs = [("D=p7^2,E=p7; a=p13,b=p7'", {p7: 2}, {p7: 1}, {p13: 1}, {p7b: 1}),
-            ("D=p7,E=p7^2; a=p7'^2,b=p13", {p7: 1}, {p7: 2}, {p7b: 2}, {p13: 1}),
-            ("D=E=p7 p13; a=p19,b=1", {p7: 1, p13: 1}, {p7: 1, p13: 1}, {p19: 1}, {}),
-            ("D=p7 p7',E=p7^2 p7'; a=p13,b=1", {p7: 1, p7b: 1}, {p7: 2, p7b: 1}, {p13: 1}, {})]
+    cfgs = [("D=E=p7; a=p13,b=p7'", {p7: 1}, {p7: 1}, {p13: 1}, {p7b: 1}),
+            ("D=E=p7^2; a=p13,b=p7'", {p7: 2}, {p7: 2}, {p13: 1}, {p7b: 1}),
+            ("D=E=p7 p13; a=p19,b=p7'", {p7: 1, p13: 1}, {p7: 1, p13: 1}, {p19: 1}, {p7b: 1}),
+            ("D=E=p7; a=p13^2,b=p19", {p7: 1}, {p7: 1}, {p13: 2}, {p19: 1}),
+            ("D=p7^2,E=p7 (unequal, min 1: must vanish); a=p13,b=p7'", {p7: 2}, {p7: 1}, {p13: 1}, {p7b: 1})]
     rng = random.Random(11)
     for name, Df, Ef, af, bf in cfgs:
         a_el, b_el = elem(af), elem(bf)
@@ -594,12 +603,8 @@ def part_F(PR):
                     else:
                         pred = P ** (i - 1) * ((P - 2.0) if kunit else (P - 1.0))
                 else:
-                    if j0 % 6 == 0 or i % 6 == 0:
-                        g6 = (g % 6 == 0)
-                    else:
-                        g6 = False
+                    g6 = (g % 6 == 0)
                     if g6 and v == g:
-                        k_res = (J * pow(pow(w, g, pK), -1, pK) if False else None)
                         # J = w^g * k with k a unit: chi_pi(k)^{|i-j0|} (on the larger side; conj if j0 > i)
                         kk = (J // pow(p, g)) * pow(pow(eps, g, pK), -1, pK) % pK
                         val = chival(int(kk), abs(i - j0))

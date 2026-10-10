@@ -137,6 +137,15 @@ attempt.
 * The numerology has zero slack at three points. This is the highest-value single verification
   target in the 7/8 manuscript.
 
+**C2″. Spin-off: the cubic fourth moment** ([CUBIC_FOURTH_MOMENT_TRANSFER.md](CUBIC_FOURTH_MOMENT_TRANSFER.md)).
+* Lemma 18.1's scheme, transferred to cubic characters, fails as is. The saving is `κ = 5/6`
+  at the `(2,1)` common primes.
+* A proposed residue repair closes it with zero slack.
+* A relaxed induction heuristically gives `X^{53/51+ε}` for the fourth moment of cubic Hecke
+  L-functions, against `X^{4/3+ε}` from known tools.
+* Writing out the relaxed induction is a concrete target that would be new as a standalone result.
+  It is conditional on Lemma 18.1's unverified bookkeeping.
+
 **C3.** The coefficient (7.4) of the 7/8 manuscript, factored into the local series (7.10). This
 needs (7.9) and the `b*`/`ξ`/`τ` and pair-phase cancellations; only the local identity was checked
 ([numerics/](numerics/README.md)).

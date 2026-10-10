@@ -1,0 +1,9 @@
+== main world: S = {2, lambda}, b_* = 2*lambda, xi = (quadratic at lambda) x (omega at 2)
+   self-tests: {'symbol_table_vs_exact': '2400/2400', 'prime_gauss_identities_maxdev': 3.034891656391957e-15, 'four_term_vs_direct_Gamma_maxdev': 5.732280600269111e-15, 'xi_units': 6, 'xi_order_divides_6': True, 'tau': [-5.944308391195182e-16, -1.0000000000000002], 'abs_tau_minus_1': 2.220446049250313e-16}
+   P1 Fourier claim: 4284 (s,A,H) cases, max rel dev 2.49e-14
+   P2 vanishing at S: 54 cases, max |F| = 4.38e-14
+   main tuples: 141264
+   [main] 20000/141264  maxdev=4.09e-14  11s
+   [main] 40000/141264  maxdev=4.09e-14  21s
+   [main] 60000/141264  maxdev=4.09e-14  31s
+   [main] 80000/141264  maxdev=4.09e-14  40s
