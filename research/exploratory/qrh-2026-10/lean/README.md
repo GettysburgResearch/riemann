@@ -77,6 +77,16 @@ The file proves both challenge statements with `c = (log 3)/8`:
 
 Primitivity, reality and non-principality of `χ` are not used.
 
+The constant is explicit. The helper theorem `gap_of_real_zero` states, with no `∃`:
+
+    q ≥ 3,  χ any Dirichlet character mod q,  β < 1,  L(β, χ) = 0   ⟹   (log 3)/8 ≤ (1 − β) log q.
+
+So this is an *effective* Landau–Siegel-type bound with constant `(log 3)/8 ≈ 0.137`. It is
+conditional only on accepting the imported 7/8 Dirichlet theorem (comparator-accepted; Addendum
+C). By contrast, the upstream Oct 1 proof states only `∃ c`, and its witness comes out of a chain
+of lemmas (`SiegelZerosAwei.W50.uniform_exclusion_of_local_isolated_bezout`). Whether that `c` is
+explicit was not checked here.
+
 The file reuses the challenge's fully qualified names `OAI.SiegelZeros.WeightedTorusJets.*`,
 because comparator matches by name. The upstream Siegel development uses the same names, so the
 two modules cannot be imported together. "WeightedTorusJets" names the upstream method, which
