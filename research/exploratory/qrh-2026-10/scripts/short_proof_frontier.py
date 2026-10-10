@@ -158,10 +158,13 @@ def closes_kink(lx, ly, ell, beta_prev, inp, fine=False):
     return s0, high_sup_kink(lx, ly, ell, s0, beta_prev, inp, **kw)
 
 
-def optimise_capped(beta_prev, inp, cap=None, starts=None, penalty=200.0, slack=2e-5):
+def optimise_capped(beta_prev, inp, cap=None, starts=None, penalty=200.0, slack=2e-5, mode='penalty'):
     """tc.optimise with (i) the kink bin added to the high side and (ii) an optional extra constraint
     lx + ly + ell <= cap (cap = 1 keeps the manuscript's Lemma 15.1 hypothesis M + ell = 1 as '<=').
-    Reported sigma0_eff = sigma0 + max(0, sup F) is the boundary the geometry actually certifies."""
+    Reported sigma0_eff = sigma0 + max(0, sup F) is the boundary the geometry actually certifies
+    (F = G - beta* is affine in beta* with slope -1 for every bin a <= beta*).  mode='eff' minimises
+    sigma0_eff directly (needed when the high side binds above the low side, e.g. under cap = 1);
+    the final point is re-checked with the high side evaluated at sigma0_eff."""
     from scipy.optimize import minimize
     def obj(p):
         lx, ly, ell = p
@@ -173,6 +176,8 @@ def optimise_capped(beta_prev, inp, cap=None, starts=None, penalty=200.0, slack=
         if s0 >= beta_prev:
             return 1.5 + s0
         hs = high_sup_kink(lx, ly, ell, s0, beta_prev, inp, nde=41, nx=6, nd=5)[0]
+        if mode == 'eff':
+            return s0 + max(0.0, hs + slack)
         return s0 + penalty*max(0.0, hs + slack)
     best = (9.0, None)
     for st in starts:
@@ -182,8 +187,10 @@ def optimise_capped(beta_prev, inp, cap=None, starts=None, penalty=200.0, slack=
             best = (r.fun, tuple(r.x))
     lx, ly, ell = best[1]
     s0, hs = closes_kink(lx, ly, ell, beta_prev, inp, fine=True)
-    return dict(sigma0=s0, sigma0_eff=s0 + max(0.0, hs[0]), lx=lx, ly=ly, ell=ell,
-                M_plus_ell=lx + ly + ell, high_sup=hs[0], arg=hs[1], objective=best[0])
+    s_eff = s0 + max(0.0, hs[0])
+    hs_eff = high_sup_kink(lx, ly, ell, s_eff, beta_prev, inp, nde=241, nx=26, nd=17)
+    return dict(sigma0=s0, sigma0_eff=s_eff, lx=lx, ly=ly, ell=ell, M_plus_ell=lx + ly + ell,
+                high_sup=hs[0], arg=hs[1], high_sup_at_eff=hs_eff[0], objective=best[0], mode=mode)
 
 # ------------------------------------------------------------------------------------------------
 # Exact LP (extends barrier_lp.py: same variables v = (lx, ly, ell, s), same low-side rows)
@@ -308,7 +315,7 @@ def cmd_check():
     return rows
 
 
-def cmd_run(name, cap=None, energy='paper'):
+def cmd_run(name, cap=None, energy='paper', mode='penalty'):
     a_star, Afl, Rfr, label = SCEN[name]
     inp = DensityInputs(Afl, 'density:' + name, energy=energy); inp.a_star = float(a_star)
     r = lp_solve(lp_rows(a_star, Rfr, cap=cap))
@@ -316,12 +323,12 @@ def cmd_run(name, cap=None, energy='paper'):
     starts = [lpg, (0.5, 0.5, 0.0), (17/48, 23/48, 1/6), (0.4, 0.45, 0.1), (0.3, 0.45, 0.2),
               (0.52, 0.53, 0.02), (0.45, 0.5, 0.05)]
     t0 = time.time()
-    res = optimise_capped(1.0, inp, cap=cap, starts=starts)
+    res = optimise_capped(1.0, inp, cap=cap, starts=starts, mode=mode)
     res = {k: (float(v) if isinstance(v, (int, float, np.floating)) else str(v)) for k, v in res.items()}
     res.update(scenario=name, label=label, cap=cap, energy=energy, beta_prev=1.0, lp_value=str(r['bound']),
                lp_value_float=float(r['bound']), lp_geom=[str(v) for v in r['geom']],
                seconds=round(time.time() - t0, 1), inputs=inp.describe())
-    tag = name + ('_cap1' if cap else '') + ('_optE' if energy != 'paper' else '')
+    tag = name + ('_cap1' if cap else '') + ('_optE' if energy != 'paper' else '') + ('_eff' if mode == 'eff' else '')
     out = os.path.join(HERE, '..', 'results', 'SPF_' + tag + '.json')
     with open(out, 'w') as f:
         json.dump(res, f, indent=1)
@@ -349,6 +356,7 @@ if __name__ == '__main__':
                 cap = 1
             if extra == 'optE':
                 energy = 'optimal'
-        cmd_run(nm, cap=cap, energy=energy)
+        mode = 'eff' if 'eff' in sys.argv[3:] else 'penalty'
+        cmd_run(nm, cap=cap, energy=energy, mode=mode)
     else:
         print(__doc__)

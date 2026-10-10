@@ -94,6 +94,12 @@ improves continuously as the row/column ratio `ρ` falls below 1. That makes it 
      reflection) and App. B, with numerical theta automorphy and cusp reflection
      ([reviews/KINTALI_LEMMA3_REVIEW.md](reviews/KINTALI_LEMMA3_REVIEW.md)).
    * The first unverified step is now App. A.2, the phase cancellation on the high side.
+   * Density inputs ([KINTALI_DENSITY_UPGRADE.md](KINTALI_DENSITY_UPGRADE.md)).
+     * Only the conductor exponent at `σ ≥ 4/5 − η` matters.
+     * No published Hecke-family theorem beats Hinz 1976. Hinz gives 29/30, and Kintali's 47/48
+       includes a 1/80 margin. Our reading, not re-verified, is that any `b > 29/30` follows.
+     * Hecke analogues of Huxley 1976 or Heath-Brown 1979 would give 113/120 or 941/1002. These
+       analogues are not in the literature.
    * The cited density lemma is in Khale–O'Kuhn–Panidapu–Sun–Zhang (JNT 2021). Its sketchy proof
      can be repaired by citing Hinz (1976).
    * [reviews/KINTALI_REVIEW.md](reviews/KINTALI_REVIEW.md)

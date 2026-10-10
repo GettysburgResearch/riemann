@@ -111,9 +111,9 @@ Put `Q := C·2U` (a conductor **norm**). [K] needs, for each label `σ = a`:
 * **Family.** Primitive finite-order Hecke characters of `K = Q(√−3)`, i.e. characters of the
   narrow (= wide) ray class groups mod `f`, over all integral `f` with `N f ≤ Q`. This is angular
   type zero: no Grössencharacter `λ^m`. Hinz sums over exactly this family. [K] actually needs
-  much less: only the thin set of inducing characters of the rows, at most one ideal class of `u`
-  per character, so about `U` characters out of about `U²`. The grand family is a convenience
-  (§5).
+  much less: only the thin set of inducing characters of the rows (at most twelve rows per
+  character by Lemma 2), so about `U` characters out of about `U²`. The grand family is a convenience
+  (§4).
 * **Exponents.** Separate in `Q` and `T`. **Only the conductor exponent `g(σ)` matters.** Any fixed
   `T`-power `B` is absorbed, because [K] fixes the growth order `A` first and then takes
   `T = 3Z^τ` with `τ ≤ m0/(4(A+1))` (Lemma 7 proof, p. 16). Hence an "imperfect hybrid" bound,
@@ -182,7 +182,8 @@ Consequences:
 * [K]'s choices `ε = 1/32`, large-row cutoff `501/1000`, `v = 4000`, `m0 = 1/1200` are fixed
   conveniences. Each appears adjustable:
   * `ε → 0`;
-  * cutoff `1/2 + κ`, with `v > (9/4 + κ)/κ + 1`;
+  * cutoff `1/2 + κ`, with `v > 1 + 9/(4κ)`: the large-row exponent is `9/4 + κ − κv`, which is
+    `−1749/1000` at [K]'s `κ = 1/1000`, `v = 4000`;
   * `m0 → 0`.
 
   If so, the same argument gives every `b > max(11/12, b*)`. With Hinz that is **every
