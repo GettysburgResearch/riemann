@@ -1,0 +1,56 @@
+{
+  "analytic_infinite_statements_machine_proved": false,
+  "analytic_review_status": "Root independently accepted analytic P-A1-P-A7 on 2026-10-10; source/root replay and independent audit pending",
+  "bernstein_tail_leaf_counts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "bounded_rectangle_certificates": 189,
+  "critical_power_one_proved": false,
+  "execution_time_utc": "2026-10-10T13:58:37.148980+00:00",
+  "global_sufficient_power": "9/7",
+  "independent_controls": {
+    "errors": 0,
+    "failures": 0,
+    "normal_command": "python3 -B test_activation_tail.py",
+    "optimized_command": "python3 -B -O test_activation_tail.py",
+    "skips": 0,
+    "tests_per_mode": 4
+  },
+  "marked_removal_control_input": "EXCLUSION_STITCH_EXECUTION.json, four control groups pass normal and optimized",
+  "normal_command": "python3 -B verify_activation_stitch.py --progress --output results/activation-stitch.normal.json",
+  "normal_optimized_json_byte_identical": true,
+  "optimized_command": "python3 -B -O verify_activation_stitch.py --progress --output results/activation-stitch.optimized.json",
+  "power_slabs": 9,
+  "result": "PASS_GLOBAL_SHARP_ACTIVATION_STITCH",
+  "result_hashes": {
+    "results/activation-stitch.normal.json": "77d274d15270bb281d0d7c41d2a088ed4d34e538779c896c298aa3db5659036d",
+    "results/activation-stitch.optimized.json": "77d274d15270bb281d0d7c41d2a088ed4d34e538779c896c298aa3db5659036d"
+  },
+  "rh_proved": false,
+  "source_hashes": {
+    "ACTIVATION_ENVELOPES.md": "5836c36ddfb408a3a2901526cec8956236c0f7864bf586c14677f7ed9492daf9",
+    "activation_tail.py": "1122314fc57d4119c76a15a426dd1af13c6830a610fe09db34f1a05506d1c9d2",
+    "check_threshold_arb.py": "82013dad13521fd9b619e18b6e4efe23ea4a8f7f1d5632e930964f2f512c7615",
+    "exclusion_moments.py": "8ac22c96b7ac1edf03defc9e099fdefe2c17907f21f3c24f3fbd180a2824dc1c",
+    "exclusion_tail.py": "79c8a5667fe2156fa593725ba012eda3e6635ec49898e80b82d8d7732442635c",
+    "polynomial_tail.py": "ae8ec2f91e8f00d286a7e8176d1f47bbe56a5013f22357d6dab52fa8ffb5e295",
+    "test_activation_tail.py": "3c4c42b6a1197d52dcba7d19af77e888a9aff2ec25daff6837bd6bf64b18daad",
+    "verify_activation_stitch.py": "a0c63c3cc94098e6cb2fefda84736672b99731b8e1082ee959a0656ae8b5e9c1",
+    "verify_exclusion_stitch.py": "393adee89aa073024f7093b4f0dc415abdd8c4cdb5e7e7d761a9e3646ac04b79",
+    "verify_four_label.py": "e07cd340f82fe61e39c864d2a91a944beb5211cd884a464e20baf2289ff707b6",
+    "verify_horizon_stitch.py": "8486059b8468ceb6cb59d34c4c16c61eeb72a8097583596e5253b934571e5104",
+    "verify_two_label.py": "9d58b1b9b2ef69e335ef64ff08a976a2a30051cc5e5cf23812369adf8aaf1212",
+    "verify_weighted_stitch.py": "14355093aed45e9a4378dc6a405ec251ea9c699c808cca4473983563776c85ab",
+    "weighted_moments.py": "715dae97b834735064aae0a9951c505750697ec003aacaafffa17c5975621677"
+  },
+  "status": "PROPOSED_GLOBAL_ACTIVATION_POSITIVITY_WITH_EXECUTED_CERTIFICATES",
+  "whole_unbounded_tail_certificates": 9
+}

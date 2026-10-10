@@ -92,3 +92,33 @@ estimate open. Conditional prime-deletion bootstraps and an exact
 same-count-envelope countermodel record both opportunities and barriers.
 Full continuum residual integrations and larger native companion-domain
 certificates continue separately.
+
+The fifth checkpoint raises global kernel positivity to **888000** using a
+Volterra endpoint bound and a sharper complete count discrepancy from the
+same published inputs. The complete tail admits even orders satisfying
+10000n^2<=2631T, improving the coefficient in its square-root growth.
+An independent fallback gives order 866000 with the earlier count constant.
+
+It also adds a complete-tail analytic companion theorem:
+for every lambda>0 and every integer 0<=r<=16381, the actual Xi companion
+has a strict positive sector on the entire closed lower column
+|T|<8192-(r+2)/2, y>=0. The theorem imports the explicitly qualified complete
+native census through 8192. It is finite in real part and does not assert RH.
+Independent Gaussian certificates through |T|<=13 and |T|<=100 are retained
+as separate methods, with their narrower parameter scopes.
+
+A separate published-height corollary extends the open lower column to
+|T|<3*10^12-(r+2)/2. Including its real boundary additionally imports the
+published sign-change/complete-count saturation method contract. The large
+published computation was not rerun; its source audit is kept distinct from
+the session's native 8192-height primitive replay.
+
+The sufficient all-real arithmetic power is now **m>=9/7**. The generalized
+2k-moment attack adds an exact CRT translation law, finite positive-cumulant
+counterexamples, a finite-support Euler correction at the critical exponent,
+and a source-qualified second theta reflection. That reflection makes one
+whole standard-cusp all-negative component vanish beyond its specified
+compact-support threshold. The full signed moment remainder, other cusps
+and other allocations remain open. The continuum work adds a reviewed local
+gamma evaluator and exact centered parity reduction; its expensive residual
+integration still needs a completed lower-matrix certificate.

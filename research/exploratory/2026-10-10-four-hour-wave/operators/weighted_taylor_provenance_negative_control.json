@@ -1,0 +1,26 @@
+{
+  "status": "TAYLOR_SOURCE_BINDING_NEGATIVE_CONTROLS_ACCEPT",
+  "scope": "synthetic diagnostics; no continuum integral or effective sign claimed",
+  "full_exact_coverage_panels": 636,
+  "same_exact_U_definition": true,
+  "rejections": [
+    {
+      "case": "stale_producer",
+      "rejection": "R receipt uses frozen reviewed continuum producer"
+    },
+    {
+      "case": "old_reviewed_producer",
+      "rejection": "R receipt uses frozen reviewed continuum producer"
+    },
+    {
+      "case": "stale_gamma_helper",
+      "rejection": "R receipt local gamma helper frozen"
+    }
+  ],
+  "sha256": {
+    "check_weighted_taylor_provenance.py": "f392d65160757e2f0318bcb3f1d2679e66168702b4658f2555e1b73d36ecc807",
+    "enclose_weighted_lower_taylor.py": "0ba57657eef0ea728134e846c2861f778793715c5d091c3c47090cc87f003f25",
+    "enclose_residual_phase8_taylor.py": "f10b2dad34ab16aa6f66f4693093be60657b5d395432bf29f1af33ede8bf3256",
+    "taylor_convolution_source.py": "118e828d8bf4cb706fd94c9d179fb8d8de88319df8b20273c4e19284175af0da"
+  }
+}

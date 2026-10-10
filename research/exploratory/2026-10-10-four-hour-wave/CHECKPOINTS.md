@@ -111,3 +111,38 @@ The growing-order tail kernels change with height. The full kernel statement
 remains finite order and imports published finite-height verification. RH
 remains open. Larger arithmetic and native companion certificates continue
 in separate working files until their reviews and receipts are complete.
+
+Publication receipt: commit `e32b6b5d0f92b1bbd431951577982f9e895e0e85`
+pushed at approximately 14:02 UTC; remote branch verified.
+
+## Checkpoint 5: full companion columns and a completed moment cancellation
+
+Prepared around 14:40 UTC. Included work:
+
+- Global kernel positivity through order 888000, with a Volterra endpoint
+  proof and sharper complete count discrepancy; complete-tail square-root
+  growth now satisfies 10000n^2<=2631T. A separate earlier-count fallback
+  gives order 866000. Published count and verified-height inputs are retained.
+
+- All-real arithmetic positivity for m>=9/7, with independent complete
+  directed replays, and a conditional Mertens adapter with explicit constants.
+- A complete-tail companion-sector proof for every positive lambda and
+  0<=r<=16381 throughout |T|<8192-(r+2)/2, y>=0, at the stated imported
+  complete native-census scope. Earlier independent Gaussian13/100 methods
+  and the native Taylor binding retain their separate runtime qualifications.
+- Separate published-height companion corollaries at height 3*10^12, an
+  alternate complete conjugate-pair proof, and the reviewed narrower harmonic
+  column method, all with their distinct source and boundary contracts.
+- A source-qualified opposite theta derivative and second reflection making
+  one whole standard-face all-negative moment component vanish at its named
+  compact-support threshold. Other components and the full moment remain open.
+- Finite-support Euler correction at exponent one half, conditional lower
+  moment lifting, exact CRT translation and positive-cumulant controls,
+  and exact affine geometry and divisor-colored block fusion.
+- Reviewed local gamma Taylor acceleration, exact centered continuum parity
+  reduction and the conditional native-window acceptance frame. Complete
+  residual integration and effective lower signs remain pending.
+
+The review record distinguishes full analytic audits, exact finite controls,
+directed native evaluations, serialized coverage audits and imported published
+or backend theorems. No global generalized-moment or RH result is asserted.

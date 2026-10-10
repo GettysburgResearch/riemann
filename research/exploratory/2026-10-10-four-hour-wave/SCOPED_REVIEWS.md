@@ -181,3 +181,89 @@ derivations passed coordinator and independent review. Outward source
 moment controls and stale-producer rejection were replayed. The expensive
 full residual integrations remain pending at this checkpoint, and no
 effective lower-matrix sign is asserted.
+
+## Checkpoint 5 additions
+
+The Volterra rational refinement V0--V9 passed full coordinator and independent
+operator analytic/code audits, and separate exact normal/optimized replays.
+Positive compression bounds the strictly triangular endpoint matrix by
+2/pi times its trace; the Hermitian multiplier retains its full Frobenius
+cost. The native count remainder sharpens the imported discrepancy to
+0.236393logT. Full variable complex displacements, exact derivative bounds
+and conjugate Taylor cancellation give global order 888000 and complete-tail
+condition 10000n^2<=2631T for even n>=850000, with smaller packets covered by
+principal submatrices. The independent earlier-count fallback gives 866000.
+The published verification and argument theorem remain imported; the result
+is finite order for the full kernel and does not establish RH.
+
+The prime-activation envelope at m>=9/7 passed coordinator analytic/code
+review and independent height-workstream review, with complete normal and
+optimized replays of 189 bounded rectangles and nine whole tails. Its full
+infinite prime tail remains present. The explicit Mertens activation adapter
+also passed coordinator review and exact controls; its Mertens constant is
+an explicit hypothesis, rather than a numerically established input.
+
+The coordinator and operator reviewer independently checked the complete
+derivative census localization and the new complex Laguerre argument
+FC1--FC14. Parity removes any nonconstant Hadamard exponential; complete
+conjugate blocks retain every zero; integer multiplicities pay the possible
+negative real-root inverse-square terms. The three companion coefficients
+are positive for every lambda>0. The resulting closed lower column is
+|T|<8192-(r+2)/2 for 0<=r<=16381, with unbounded depth. The native census
+still imports its stated FLINT historical complete-count contract, which
+was not rerun. Exact synthetic polynomial controls passed in both modes;
+they test the algebra and do not computationally certify actual Xi on that
+whole column.
+
+The coordinator and operator reviewer separately read the literal published
+Platt--Trudgian paper and checked its two imported contracts. The location
+theorem alone extends the sector to the open column based on height 3*10^12,
+with arbitrary multiplicities. The stated sign-change/complete-Turing-count
+saturation method additionally supplies simplicity and the real boundary.
+Neither large computation was rerun. A complete conjugate-pair complex
+Laguerre identity gives a second all-depth proof of the finite column; its
+source products and multiplicities received both independent audits. The
+alternative harmonic width-8174 proof also received full coordinator and
+independent literature review and exact constant controls; it retains its
+narrower order and lambda scope.
+
+The native Taylor binding, Gaussian slab through |T|<=13, finite product
+jet and bound Gaussian slab through |T|<=100 passed coordinator and
+independent literature review. The 13 certificate received an independent
+full optimized runtime replay. The 100 certificate's complete serialized
+coverage, analytic budgets and difficult native boxes were independently
+audited; its entire original runtime was not duplicated. Both owner modes
+agree. Their parameter and domain scopes are separately recorded. Quartic
+absorption is an accepted analytic source adapter, with its separate larger
+numerical slab still pending.
+
+The generalized-moment sources in PR912--917 were frozen and inspected
+outside the checkout. The finite endpoint correction G4 and conditional
+lower-moment lifting G7--G9 passed coordinator review and exact normal and
+optimized controls. Lower moments at all smaller scales remain explicit
+OPEN/PAID premises. The opposite horizontal theta derivative and compact
+support return O1--O8 passed coordinator and independent primary-source
+audit. They pay the entire specified standard-face all-negative component
+when Ng^2>C_V B, retaining the angular numerator, cube completion, moving
+sextic character and nonunit zeros. Theta automorphy is imported; no other
+cusp or full moment bound is authenticated.
+
+The exact Mobius CRT translation and native finite cumulant probes passed
+coordinator review and independent arithmetic census/code review. The
+finite three-prime product profile and its every-order collision polynomial
+received coordinator review and exact complete-residue replays. Complete
+residue moments cannot distinguish the signs; the native incomplete norm
+ball retains that information. Positive fourth cumulants reject a universal
+nonpositive-cumulant shortcut, without obstructing the desired upper moment
+estimate. The affine triangle normal form and divisor-colored block fusion
+passed coordinator and independent operator review and exact controls.
+Their required analytic completion and conductor savings remain open.
+
+The local gamma Taylor proof/helper, separate continuum producer and weighted
+wrapper passed coordinator and independent analytic/code audits. Native
+source controls, a complete rational coefficient oracle and optimized-mode
+guards passed. The centered complex hyperbolic rotation and five-plus-three
+parity reduction passed independent and coordinator review and exact replay.
+The native window implication is accepted conditional on a complete directed
+U-minus-weighted-residual certificate; the pending integration supplies no
+accepted lower sign at this checkpoint.
