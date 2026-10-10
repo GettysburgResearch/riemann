@@ -103,13 +103,16 @@ check("[R1] relaxed first-transform ledger: parent - (1+eta)M = (B_c+B_d-(c+d-2p
       sp.simplify(par - (1 + eta) * M - ((Bc + Bd - (c + d - 2 * pp - R)) / 2 + (xC + xD) / 2 - eta * M)) == 0)
 # nonexceptional child: child bound (1+eta)M' + Delta_child -> x = eta M'; average over the two sides
 # with M' = M + J - g - g_2 + t_2 (old-eq:2.13): excess eta (M' - M) = eta (J - g - g_2 + t_2) <= -eta sigma
-J, g, g2, t2, sig = L0.J, L0.g, L0.g2, L0.t2, sp.symbols("sigma", positive=True)
+# (L0 rebinds the name g2 to a Fraction in its section [G]; rebuild the symbol by name)
+J, g, t2 = L0.J, L0.g, L0.t2
+g2 = sp.Symbol("g_2", real=True)
 check("[R2] nonexceptional children: eta M' - eta M = eta (J - g - g_2 + t_2), theta-free (uses [A3])",
       sp.simplify(eta * L0.Mp - eta * M - eta * (J - g - g2 + t2)) == 0)
-check("[R2b] with g = J_+ + sigma >= J + sigma and g_2 >= t_2 the child excess is <= -eta sigma (sample grid)",
-      all(Fr(e_) * (Fr(j_) - (max(Fr(j_), 0) + Fr(1, 10)) - Fr(gg) + Fr(tt)) <= -Fr(e_) * Fr(1, 10)
-          for e_ in (0, Fr(2, 51), Fr(1, 6)) for j_ in (-1, 0, Fr(1, 3)) for gg in (0, Fr(1, 5))
-          for tt in (0, Fr(1, 5)) if tt <= gg))
+sig_ = Fr(1, 10)
+check("[R2b] with g = J_+ + sigma and g_2 >= t_2 the child excess eta(J - g - g_2 + t_2) is <= -eta sigma (grid)",
+      all(e_ * (j_ - (pos(j_) + sig_) - gg + tt) <= -e_ * sig_
+          for e_ in (Fr(0), Fr(2, 51), Fr(1, 6)) for j_ in (Fr(-1), Fr(0), Fr(1, 3))
+          for gg in (Fr(0), Fr(1, 5)) for tt in (Fr(0), Fr(1, 5)) if tt <= gg))
 # exceptional rows: excess over the relaxed parent target
 check("[R3] exceptional rows: E(theta) - eta M = A - (1-theta+eta)M - F1 - F2 (from [A1])",
       sp.simplify(L0.Eth - eta * M - (A - (1 - th + eta) * M - L0.F1 - L0.F2)) == 0)
@@ -197,7 +200,7 @@ def reach(theta, kap, eta_, kmax=5000, target=Fr(1)):
     s = [1 - theta + eta_]
     while len(s) <= kmax:
         s.append(reach_step(theta, kap, eta_, s[-1]))
-        if s[-1] > target or s[-1] == s[-2]:
+        if s[-1] > target or s[-1] - s[-2] < Fr(1, 10 ** 12):
             break
     return s
 
@@ -270,8 +273,7 @@ def equalized_margin(theta, kap, depth, A0=Fr(1)):
         L_ = (Acur - s0_ + mu) / k
         chain.append((Acur, L_))
         Acur = 1 - Acur + 2 * L_
-    caps_ok = all(L_ <= A_ / 2 and L_ <= A_ - Fr(1, 2) + Fr(10 ** -9) * 0 or L_ <= A_ / 2 and A_ - L_ <= 1
-                  for A_, L_ in chain)
+    caps_ok = all(0 <= L_ <= A_ / 2 and L_ <= A_ - Fr(1, 2) for A_, L_ in chain)
     return mu, chain, Acur, caps_ok
 
 
@@ -279,8 +281,8 @@ mus = []
 for dpt in (1, 2, 3, 4, 6):
     mu, chain, Aend, caps_ok = equalized_margin(TH3, KAP1_MECH, dpt)
     mus.append(mu)
-    print("   cubic mechanical, depth %d: best uniform margin mu = %s (= %.4f M); chain (A, L) = %s -> A_end = %s"
-          % (dpt, mu, float(mu), [(str(a), str(l)) for a, l in chain][:3], Aend))
+    print("   cubic mechanical, depth %d: best uniform margin mu = %s (= %.4f M); chain (A, L) = %s -> A_end = %s;"
+          " caps %s" % (dpt, mu, float(mu), [(str(a), str(l)) for a, l in chain][:3], Aend, caps_ok))
 check("[N8] cubic mechanical equalized margins at A = M: depth 1 -> -2/51 (old balanced slack), depth 2 -> 11/507",
       mus[0] == -Fr(2, 51) and mus[1] == Fr(11, 507))
 check("[N9] margins increase with depth and stay below the limit kappa/2 - theta = 1/12",
@@ -297,8 +299,8 @@ for A_top in (Fr(1), Fr(101, 100)):
     print("   explicit chain from A = %s: L1 = 21/50 -> A_comp = %s; L2 = 23/100 -> A_comp' = %s;"
           " margins (C1, C2, U) = (%s, %s, %s); caps %s" % (A_top, A1, A2, cC1, cC2, cU, all(caps)))
     if A_top == 1:
-        check("[N10] explicit chain at A = M: (C1) -1/60, (C2) -1/120, uncentred end 31/50 <= 2/3 - 7/150, caps hold",
-              cC1 == -Fr(1, 60) and cC2 == -Fr(1, 120) and A2 == Fr(31, 50) and cU == -Fr(7, 150) and all(caps))
+        check("[N10] explicit chain at A = M: (C1) -1/60, (C2) -11/600, uncentred end 31/50 = 2/3 - 7/150, caps hold",
+              cC1 == -Fr(1, 60) and cC2 == -Fr(11, 600) and A2 == Fr(31, 50) and cU == -Fr(7, 150) and all(caps))
     else:
         check("[N11] the same L1, L2 still work at A = M + 1/100 (all margins < 0, caps hold)",
               cC1 < 0 and cC2 < 0 and cU < 0 and all(caps))
@@ -326,13 +328,13 @@ for (A_, L_) in ((Fr(1), Fr(21, 50)), (Fr(21, 25), Fr(23, 100))):
     vals = [exc21(A_, L_, Fr(t_, 2400)) for t_ in range(0, 1201)]
     worst.append(max(vals))
     print("   stage at A = %s, L = %s: max over P of (2,1)-path exceptional excess = %s" % (A_, L_, max(vals)))
-check("[P1] (2,1)-path excess <= 0 at both nested stages without forcing (max -1/60 and -1/120)",
-      worst == [-Fr(1, 60), -Fr(1, 120)])
+check("[P1] (2,1)-path excess <= 0 at both nested stages without forcing (max -1/60 and -11/600)",
+      worst == [-Fr(1, 60), -Fr(11, 600)])
 check("[P2] (2,1)-path with the paper's own single window (A=M, L=1/3) still has +1/18 (old [F2])",
       max(exc21(Fr(1), Fr(1, 3), Fr(t_, 2400)) for t_ in range(0, 1201)) == Fr(1, 18))
-gen = [TH3 * 1 + A_ - L_ - 1 for (A_, L_) in ((Fr(1), Fr(21, 50)), (Fr(21, 25), Fr(23, 100)))]
-check("[P3] generic path (no common support) at the two stages: excess -3/50 and -1/30 (old [F1] had 0 at L=1/3)",
-      gen == [-Fr(3, 50), -Fr(1, 30)])
+gen = [exc21(A_, L_, Fr(0)) for (A_, L_) in ((Fr(1), Fr(21, 50)), (Fr(21, 25), Fr(23, 100)))]
+check("[P3] generic path (no common support) at the two stages: excess A - 2/3 - L = -13/150 and -17/300"
+      " (old [F1]: 0 at L = 1/3)", gen == [-Fr(13, 150), -Fr(17, 300)])
 
 
 # --------------------------------------------------------------------------------------------
@@ -358,8 +360,6 @@ pairs, bad = 0, 0
 for i1 in range(len(PR)):
     for i2 in range(len(PR)):
         a_, p_ = PR[i1], PR[i2]
-        if a_ == p_ or norm(a_) == norm(p_) and a_ == conj(p_) and False:
-            continue
         if a_ == p_:
             continue
         x1, x2 = c3(a_, p_), c3(p_, a_)
@@ -482,7 +482,7 @@ check("[L3] cubic CRT phase of the first-transform bridge: T = xi(ab) chi_a(pb) 
 #   consequence: a-dependence of the C side at p is xi(a) chi_a(p) = (a/p)^(i-j) (p/a) = (a/p)^(1+i-j)
 ok = True
 for a_ in PR:
-    if norm(a_) in (7,) or a_ == p7:
+    if a_ == p7:
         continue
     lhs = (eij * c3(a_, p7) + c3(p7, a_)) % 3
     if lhs != ((1 + eij) * c3(a_, p7)) % 3:
@@ -553,8 +553,14 @@ check("[L5b] C side forced residue is 1 exactly when i - j = 1 (mod 3) (types (2
 #      Gauss sum mod p^2 vanishes unless p | h, where it is N(p) g_p(h/p) (FLOATING): effective modulus p.
 p2 = mul(p7, p7)
 Rp2 = residues(p2)
-ok_exact = all((c3(x, p7) is None) or ((2 * c3(x, p7) - c3(x, p7)) % 3 == c3(x, p7)) for x in Rp2)
-check("[L6a] chi_{p^2}(k) conj chi_p(k) = chi_p(k) on all of Z[omega]/p^2 (N p = 7)", ok_exact)
+cnt6 = [0, 0, 0]
+for x in Rp2:
+    e1 = c3(x, p7)
+    if e1 is None:
+        continue
+    cnt6[(2 * e1 - e1) % 3] += 1      # chi_{p^2}(x) conj chi_p(x), net exponent i - j = 1
+check("[L6a] (2,1) prime is a genuine r-prime: the row character chi_{p^2} conj chi_p has exponent counts %s on"
+      " (Z[omega]/p^2)^*, so its row mean is exactly 0" % cnt6, cnt6 == [14, 14, 14])
 ok = True
 for h in Rp2:
     G2 = gsum(Rp2, p2, lambda x: (None if c3(x, p7) is None else c3(x, p7)), h)

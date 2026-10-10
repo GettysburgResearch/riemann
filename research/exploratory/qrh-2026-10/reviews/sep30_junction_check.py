@@ -103,7 +103,7 @@ def deriv(pd, k):
     return out
 
 
-def certify_ge(expr, vs, box, c=F(0), budget=300000):
+def certify_ge(expr, vs, box, c=F(0), budget=300000, seconds=240):
     """Decide  expr >= c  on the box exactly.  Returns dict(ok, boxes, witness?, value?).
     ok=True is a proof (every leaf box has an exact lower bound >= c, or was reduced by an exact
     monotonicity argument to a face, ending in exact point evaluations).  ok=False with a witness
@@ -116,11 +116,11 @@ def certify_ge(expr, vs, box, c=F(0), budget=300000):
     nv = len(vs)
     grads = [deriv(pd, k) for k in range(nv)]
     W = [b - a for a, b in box]
-    stack, n = [tuple(box)], 0
+    stack, n, t_start = [tuple(box)], 0, time.time()
     while stack:
         bx = stack.pop()
         n += 1
-        if n > budget:
+        if n > budget or (n % 2000 == 0 and time.time() - t_start > seconds):
             return dict(ok=False, boxes=n, undecided=True)
         if ival(pd, bx)[0] >= 0:
             continue
@@ -155,12 +155,44 @@ def certify_ge(expr, vs, box, c=F(0), budget=300000):
     return dict(ok=True, boxes=n)
 
 
+def certify_auto(expr, vs, box, c=F(0), **kw):
+    """For c == 0, first factor the numerator over Q and certify the sign of each odd-multiplicity
+    factor separately (exact; this avoids the dependency problem of interval arithmetic on faces where
+    a factor vanishes identically).  Falls back to the plain branch-and-bound otherwise."""
+    if c == 0:
+        num, den = sp.fraction(sp.cancel(sp.together(sp.sympify(expr))))
+        if not den.free_symbols:
+            const, facs = sp.factor_list(sp.expand(num), *vs)
+            if facs and (len(facs) > 1 or facs[0][1] > 1):
+                sign, nb, okf = (1 if const / den > 0 else -1), 0, True
+                for f, e in facs:
+                    if e % 2 == 0:
+                        continue
+                    rp = certify_ge(f, vs, box, F(0), **kw)
+                    nb += rp["boxes"]
+                    if rp["ok"]:
+                        continue
+                    rn = certify_ge(-f, vs, box, F(0), **kw)
+                    nb += rn["boxes"]
+                    if rn["ok"]:
+                        sign = -sign
+                        continue
+                    okf = False
+                    break
+                if okf and sign > 0:
+                    return dict(ok=True, boxes=nb, method="factored: " + " * ".join(
+                        f"({sp.sstr(f)})^{e}" for f, e in facs) + f" * {sp.sstr(const / den)}")
+    r = certify_ge(expr, vs, box, c, **kw)
+    r["method"] = "direct"
+    return r
+
+
 def gate(group, cid, lines, claim, expr, vs, box, c=F(0), **kw):
     t0 = time.time()
-    r = certify_ge(expr, vs, box, c, **kw)
-    det = dict(boxes=r["boxes"], seconds=round(time.time() - t0, 2))
+    r = certify_auto(expr, vs, box, c, **kw)
+    det = dict(boxes=r["boxes"], seconds=round(time.time() - t0, 2), method=r.get("method", ""))
     if not r["ok"]:
-        det.update({k: r[k] for k in r if k not in ("ok", "boxes")})
+        det.update({k: r[k] for k in r if k not in ("ok", "boxes", "method")})
     rec(group, cid, lines, claim, r["ok"], det)
     return r
 

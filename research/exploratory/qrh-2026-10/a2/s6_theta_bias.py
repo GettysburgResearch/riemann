@@ -14,14 +14,19 @@ Setup (conventions of a2/eis.py = the Oct 5 manuscript):
     G_n = g_n / sqrt(N c).
   * D_n(s, m) = sum_c G_n(m, c) N(c)^{-s} has its Kubota pole at s = 1/2 + 1/n with residue
     proportional to tau_n(m, V') N(m)^{-1/(2n)} (CFH (2.4); BH Sec. 2.2).
-  * Smoothed sums F_m(Y) = sum_c G_n(m, c) w(N c / Y), w(t) = exp(-t) or exp(-t^2), are fitted to
+  * Smoothed sums F_m(Y) = sum_c G_n(m, c) w(N c / Y), w(t) = exp(-t), exp(-t^2) or the Riesz
+    weight (1-t)_+^3 (full length; most reliable at this size), are fitted to
     A_m Y^{1/2+1/n} + B_m Y^{1/2-1/n} + C_m (the next Mellin poles; the left-contour remainder is
-    assumed small, which the fit residuals test).  Estimate: r(m) = (A_m / A_1) N(m)^{1/(2n)}.
+    assumed small, which the fit residuals test).  A_m is divided by the weight's Mellin factor
+    at 1/2 + 1/n, so A_m estimates the residue.  Estimate: r(m) = (A_m / A_1) N(m)^{1/(2n)}.
+    Agreement between weights is the noise diagnostic (cubic: ~0.04; sextic: ~0.5-1.3).
 Twisted multiplicativity: g(m, c1 c2) = (c1/c2)(c2/c1) g(m, c1) g(m, c2); g(m, c) = conj((m/c)) g(1, c)
 for (m, c) = 1; for m = pi^j (j = 1, 2, 4), the only extra p-part is c = pi^{j+1} c' with
 g(pi^j, pi^{j+1}) = N(pi)^j g_{s(j+1)}(1, pi) (s = 6/n; a Ramanujan sum -1 when 6 | s(j+1)).
 
 Usage: python3 s6_theta_bias.py XMAX MMAX OUT.json [path/to/s6_gauss binary]
+  e.g. gcc -O2 -o $SCRATCH/s6_gauss s6_gauss.c -lm;  python3 s6_theta_bias.py 300000 100 out.json $SCRATCH/s6_gauss
+  (X = 3e5: 79 s single process, 63 s of it in the C kernel.)
 """
 import cmath, json, math, os, subprocess, sys, time
 import numpy as np

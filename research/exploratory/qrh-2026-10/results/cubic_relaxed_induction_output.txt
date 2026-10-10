@@ -1,0 +1,83 @@
+PASS [0] existing ledger cubic_fourth_moment_ledger.py re-run on import: 31/31 PASS
+PASS [0b] scenario kappas: sextic 2/3, cubic mech 5/6, cubic unforced 2/3, cubic forced 1, quadratic 1
+
+=== [R] relaxed hypothesis H(M; eta): every step's excess over (1+eta) M ===
+PASS [R1] relaxed first-transform ledger: parent - (1+eta)M = (B_c+B_d-(c+d-2p-R))/2 + (x_C+x_D)/2 - eta M
+PASS [R2] nonexceptional children: eta M' - eta M = eta (J - g - g_2 + t_2), theta-free (uses [A3])
+PASS [R2b] with g = J_+ + sigma and g_2 >= t_2 the child excess eta(J - g - g_2 + t_2) is <= -eta sigma (grid)
+PASS [R3] exceptional rows: E(theta) - eta M = A - (1-theta+eta)M - F1 - F2 (from [A1])
+PASS [R4] diagonal: excess over relaxed target = (A-M) - d - Dk - w_o - B_c + g - ell - eta M (from [A5])
+   zero frequency: m - (1+eta)M <= -eta M;  Gauss-row zero h = 0: [E1], eta-free;  base M <= rho: terminal
+   => H(M;eta) closes iff (U) uncentred: A <= (1-theta+eta)M, and (C)+(R) at every centred A.
+
+=== [S] single-window ordering (paper's): comparisons call only the uncentred stage ===
+   sextic (paper)                                     eta_single = 0       L at A=M: [1/4, 5/12]  bound X^(1)
+   cubic mechanical: kappa1=5/6, nonunit-i=1 device   eta_single = 2/51    L at A=M: [6/17, 6/17]  bound X^(53/51)
+   cubic, no forcing anywhere: kappa2=2/3             eta_single = 1/12    L at A=M: [3/8, 3/8]  bound X^(13/12)
+   cubic + (2,1) forcing                              eta_single = 0       L at A=M: [1/3, 1/3]  bound X^(1)
+   quadratic                                          eta_single = 1/6     L at A=M: [1/3, 1/3]  bound X^(7/6)
+PASS [S1] cubic mechanical (kappa = 5/6): eta_single = 2/51 exactly (matches old [D2])
+PASS [S2] at eta = 2/51 the A = M window is the single point L = 6/17
+PASS [S3] necessity: for eta = 2/51 - t/10^6 (t = 1..2000) the A = M window is empty
+PASS [S4] sufficiency: at eta = 2/51 every A in [s0, M] (1201 exact points) has a nonempty window
+PASS [S5] single-window values: no forcing at all (kappa=2/3) -> 1/12; forced -> 0; quadratic -> 1/6; sextic -> 0
+PASS [S6] forced cubic, single window: A = M window is {M/3} (zero slack, old [D3])
+
+=== [N] nested comparisons (PROPOSED reordering inside a band) ===
+   sextic (paper)                                     eta=0: s = ['5/6', '7/6']  closes: True ; eta_nested = 0
+   cubic mechanical: kappa1=5/6, nonunit-i=1 device   eta=0: s = ['2/3', '19/21', '158/147']  closes: True ; eta_nested = 0
+   cubic, no forcing anywhere: kappa2=2/3             eta=0: s = ['2/3', '5/6', '11/12', '23/24'] ...  closes: False ; eta_nested = 0
+   cubic + (2,1) forcing                              eta=0: s = ['2/3', '1', '4/3']  closes: True ; eta_nested = 0
+   quadratic                                          eta=0: s = ['1/2', '1/2']  closes: False ; eta_nested = 0
+PASS [N1] cubic mechanical, eta = 0: s0 = 2/3, s1 = 19/21, s2 = 158/147 > 1 (closes after 2 centred stages)
+PASS [N2] cubic + (2,1) forcing, eta = 0: s1 = 1 exactly (zero slack), s2 = 4/3 (cap L <= A/2)
+PASS [N3] cubic, no forcing anywhere (kappa = 2/3 = 2 theta), eta = 0: s_k = 1 - (1/3)/2^k < 1 for k <= 40
+   cubic unforced (kappa=2/3): (eta, centred stages to pass M, closes) = [('1/100', 4, True), ('1/1000', 7, True), ('1/10000', 11, True)]
+PASS [N4] cubic unforced: every eta in {1e-2,1e-3,1e-4} closes in finitely many stages (~log2(1/eta))
+   quadratic (kappa=1=2 theta): (eta, stages, closes) = [('1/100', 25, True), ('1/1000', 250, True)]
+PASS [N5] quadratic calibration: eta = 0 never closes (s_k = 1/2), every eta > 0 closes (~1/(4 eta) stages)
+PASS [N6] sextic: closes after one centred stage at eta = 0 (paper's single window)
+PASS [N7] closed form: closes iff eta > theta - kappa/2 (grid theta = 1/2..1/8, kappa = 1/3..1; +-1/200 test)
+   cubic mechanical, depth 1: best uniform margin mu = -2/51 (= -0.0392 M); chain (A, L) = [('1', '6/17')] -> A_end = 12/17; caps True
+   cubic mechanical, depth 2: best uniform margin mu = 11/507 (= 0.0217 M); chain (A, L) = [('1', '72/169'), ('144/169', '42/169')] -> A_end = 109/169; caps True
+   cubic mechanical, depth 3: best uniform margin mu = 202/4299 (= 0.0470 M); chain (A, L) = [('1', '654/1433'), ('1308/1433', '504/1433'), ('1133/1433', '294/1433')] -> A_end = 888/1433; caps True
+   cubic mechanical, depth 4: best uniform margin mu = 2039/33843 (= 0.0602 M); chain (A, L) = [('1', '5328/11281'), ('10656/11281', '4578/11281'), ('9781/11281', '3528/11281')] -> A_end = 6841/11281; caps True
+   cubic mechanical, depth 6: best uniform margin mu = 137411/1883307 (= 0.0730 M); chain (A, L) = [('1', '306072/627769'), ('612144/627769', '287322/627769'), ('590269/627769', '261072/627769')] -> A_end = 372709/627769; caps True
+PASS [N8] cubic mechanical equalized margins at A = M: depth 1 -> -2/51 (old balanced slack), depth 2 -> 11/507
+PASS [N9] margins increase with depth and stay below the limit kappa/2 - theta = 1/12
+   explicit chain from A = 1: L1 = 21/50 -> A_comp = 21/25; L2 = 23/100 -> A_comp' = 31/50; margins (C1, C2, U) = (-1/60, -11/600, -7/150); caps True
+PASS [N10] explicit chain at A = M: (C1) -1/60, (C2) -11/600, uncentred end 31/50 = 2/3 - 7/150, caps hold
+   explicit chain from A = 101/100: L1 = 21/50 -> A_comp = 83/100; L2 = 23/100 -> A_comp' = 63/100; margins (C1, C2, U) = (-1/150, -17/600, -11/300); caps True
+PASS [N11] the same L1, L2 still work at A = M + 1/100 (all margins < 0, caps hold)
+
+=== [P] explicit paths along the nested chain (no (2,1) forcing) ===
+   stage at A = 1, L = 21/50: max over P of (2,1)-path exceptional excess = -1/60
+   stage at A = 21/25, L = 23/100: max over P of (2,1)-path exceptional excess = -11/600
+PASS [P1] (2,1)-path excess <= 0 at both nested stages without forcing (max -1/60 and -11/600)
+PASS [P2] (2,1)-path with the paper's own single window (A=M, L=1/3) still has +1/18 (old [F2])
+PASS [P3] generic path (no common support) at the two stages: excess A - 2/3 - L = -13/150 and -17/300 (old [F1]: 0 at L = 1/3)
+
+=== [L] finite computations in Z[omega] for the (2,1) forcing step ===
+PASS [L1] cubic reciprocity (a/p)_3 = (p/a)_3 for all 5852 ordered pairs of distinct primary primes, norm <= 400
+PASS [L2] cubic eq:gauss-local (6 -> 3) holds at N p = 7 (a = 1,2,3) and N p = 13 (a = 1,2)  [FLOATING]
+PASS [L3] cubic CRT phase of the first-transform bridge: T = xi(ab) chi_a(pb) conj chi_b(pa) g_xi g_a conj g_b(-h) (6 frequencies, max rel dev 3.7e-14)  [FLOATING]
+PASS [L3b] C-side character at a (2,1) prime: xi(a) chi_a(p) = chi_p(a)^(1+i-j) = chi_p(a)^2 for all primes a, N a <= 400
+PASS [L4] full correlation (cubic, coprime primes): F(u,v;j) = chi_u(j) conj chi_v(-j) exactly, 104 frequencies
+   (2,1) prime, child row j = p^t: u-character principal? {0: False, 1: True, 2: False, 3: False, 4: True, 5: False, 6: False}
+PASS [L5] (2,1) forcing: the child u-character is unramified at p iff v_p(j) = 1 (mod 3) (t = 0..6, all u, N u <= 400)
+   forced residues (C side, D side) at r-primes: {(1, 2): (0, 1), (1, 3): (1, 0), (1, 5): (0, 1), (2, 1): (1, 0), (2, 3): (0, 1), (2, 4): (1, 0), (3, 1): (0, 1), (3, 2): (1, 0), (3, 4): (0, 1), (3, 5): (1, 0), (4, 2): (0, 1), (4, 3): (1, 0), (4, 5): (0, 1), (5, 1): (1, 0), (5, 3): (0, 1), (5, 4): (1, 0)}
+PASS [L5b] C side forced residue is 1 exactly when i - j = 1 (mod 3) (types (2,1), (5,1), (3,2), (1,3), ...)
+PASS [L6a] (2,1) prime is a genuine r-prime: the row character chi_{p^2} conj chi_p has exponent counts [14, 14, 14] on (Z[omega]/p^2)^*, so its row mean is exactly 0
+PASS [L6b] its Gauss sum mod p^2 is 0 unless p | h, and N(p) g_p(h/p) otherwise (all 49 h)  [FLOATING]
+
+=== [V] verdict table: exponent theta_X in sum_{N c <= X} |L(1/2, chi_c)|^4 << X^(theta_X + eps) ===
+   sextic (paper)                                     single-window: X^1      nested: X^1   nested margin limit at A=M: 1/6 M
+   cubic mechanical: kappa1=5/6, nonunit-i=1 device   single-window: X^53/51  nested: X^1   nested margin limit at A=M: 1/12 M
+   cubic, no forcing anywhere: kappa2=2/3             single-window: X^13/12  nested: X^1   nested margin limit at A=M: 0 M
+   cubic + (2,1) forcing                              single-window: X^1      nested: X^1   nested margin limit at A=M: 1/6 M
+   quadratic                                          single-window: X^7/6    nested: X^1   nested margin limit at A=M: 0 M
+PASS [V1] cubic mechanical: single window X^(53/51); nested X^1 with margin limit M/12
+PASS [V2] cubic, no forcing anywhere: single window X^(13/12); nested X^(1+eps) only in the limit (margin 0)
+PASS [V3] quadratic calibration: single window X^(7/6) (old), nested X^(1+eps) in the limit = Heath-Brown's bound
+
+SUMMARY: 39/39 checks passed

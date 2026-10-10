@@ -29,7 +29,7 @@ COUNTS = {}
 
 
 def check(name, ok, detail=""):
-    print(("PASS " if ok else "FAIL ") + name + (("  [" + detail + "]") if detail else ""))
+    print(("PASS " if ok else "FAIL ") + name + (("  [" + detail + "]") if detail else ""), flush=True)
     if not ok:
         FAILS.append(name)
 
@@ -355,21 +355,6 @@ def spf_sieve(n):
     return s
 
 
-def split_primes_over(pr, cache={}):
-    if pr not in cache:
-        for a in range(-pr, pr + 1):
-            found = None
-            for b2 in range(-pr, pr + 1):
-                if a * a - a * b2 + b2 * b2 == pr:
-                    found = (a, b2)
-                    break
-            if found:
-                break
-        pi = E.primary(found)
-        cache[pr] = (pi, E.primary(E.conj(found)))
-    return cache[pr]
-
-
 def val(z, p):
     e = 0
     while z != (0, 0) and E.divides(p, z):
@@ -380,9 +365,18 @@ def val(z, p):
     return e
 
 
+SPLIT = {}
+for _p in PR:
+    if E.norm(_p) % 3 == 1:
+        SPLIT.setdefault(E.norm(_p), []).append(_p)
+
+
 def exceptional(z, Cprimes, spf):
-    """True if v_p(z) == 0 mod 6 at every prime ideal p outside S = {lambda, 2} and outside C."""
+    """True if v_p(z) == 0 mod 6 at every prime ideal p outside S = {lambda, 2} and outside C.
+    For a split rational prime r with v_r(N z) = e: v_pi + v_pibar = e, so e % 6 != 0 already
+    excludes z unless pi or pibar lies in C; only then are the individual valuations computed."""
     n = E.norm(z)
+    Cnorms = {E.norm(cp) for cp in Cprimes}
     while n > 1:
         pr = spf[n]
         e = 0
@@ -392,16 +386,19 @@ def exceptional(z, Cprimes, spf):
         if pr in (2, 3):
             continue
         if pr % 3 == 2:
-            if (e // 2) % 6 != 0 and ('inert', pr) not in Cprimes:
+            if (e // 2) % 6 != 0:
                 return False
             continue
-        if e % 6 != 0 or any(E.norm(cp) == pr for cp in Cprimes if not isinstance(cp, tuple)):
-            pi, pib = split_primes_over(pr)
-            for P_ in (pi, pib):
+        if pr in Cnorms or e % 6 == 0:
+            if pr not in SPLIT:
+                raise RuntimeError("split prime outside the precomputed list")
+            for P_ in SPLIT[pr]:
                 if P_ in Cprimes:
                     continue
                 if val(z, P_) % 6 != 0:
                     return False
+            continue
+        return False
     return True
 
 
