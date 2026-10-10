@@ -378,6 +378,17 @@ quartic-Gauss-sum coefficient, against the EP shape) and **9/10** (m = 5: a 10-f
 **Smallest statement whose failure kills the route:** (S6) itself, including its sign. If
 `τ_6(p) = ±η(p)γ(p)` with a sign that is not a Hecke character, absorption fails at those primes.
 
+> **Follow-up on (S6)** ([SEXTIC_THETA_S6.md](SEXTIC_THETA_S6.md)).
+> * (S6) is not known, and no proved result implies it.
+> * Bröker–Hoffstein's numerical Conj. 5.7 (arXiv:1312.0568) for one sextic theta *contradicts*
+>   (S6) for that theta. There `|τ(π)/τ(1)|²` varies, and their shape needs a half-integral
+>   infinity type.
+> * The theta space has 216 classes, so the general case is open. Settling it for every theta is a
+>   finite rank computation at small primes, using Bröker–Hoffstein's algorithm, but it needs
+>   cluster-scale Gauss sums.
+> * A bias experiment at norm `≤ 3·10⁵` reproduced the cubic control (Patterson's theorem) but was
+>   inconclusive for the sextic case.
+
 ## 6. Consequences
 
 * Within the Oct 5 architecture, the leverage axis is closed with current knowledge. 11/12 is the
