@@ -1,0 +1,74 @@
+{
+  "actual_theta_moment_integrals_enclosed": false,
+  "actual_xi_evaluated": false,
+  "all_fixed_order_multiplier_leibniz_transport_checked_numerically": false,
+  "arithmetic": "fractions.Fraction; rational real and imaginary components only",
+  "coverage": "Three explicitly factored strip polynomials; all derivative orders with positive degree; three positive lambdas; sixteen outer points each. Finite synthetic controls only.",
+  "exact_polynomial_inside_strip_zeros": [
+    {
+      "lambda": "3/8",
+      "strip": "1/2",
+      "y": "1/4"
+    },
+    {
+      "lambda": "9/80",
+      "strip": "1/2",
+      "y": "2/5"
+    },
+    {
+      "lambda": "99/9800",
+      "strip": "1/2",
+      "y": "49/100"
+    },
+    {
+      "lambda": "999/998000",
+      "strip": "1/2",
+      "y": "499/1000"
+    }
+  ],
+  "exact_positive_fourier_inside_strip_zeros": [
+    {
+      "epsilon": "10/17",
+      "exp_strip": "2",
+      "exp_y": "3/2",
+      "lambda": "178/395"
+    },
+    {
+      "epsilon": "10/17",
+      "exp_strip": "2",
+      "exp_y": "7/4",
+      "lambda": "2185/13596"
+    },
+    {
+      "epsilon": "10/17",
+      "exp_strip": "2",
+      "exp_y": "15/8",
+      "lambda": "55/782"
+    },
+    {
+      "epsilon": "10/17",
+      "exp_strip": "2",
+      "exp_y": "31/16",
+      "lambda": "185587/5607570"
+    },
+    {
+      "epsilon": "10/17",
+      "exp_strip": "2",
+      "exp_y": "63/32",
+      "lambda": "1552363/96578330"
+    }
+  ],
+  "infinite_product_or_analytic_theorems_authenticated_by_checker": false,
+  "polynomial_sector_cases": 1152,
+  "protected_multiplier_transport_cases": 1152,
+  "quantitative_half_plane_cases": 1152,
+  "rh_proved": false,
+  "source_sha256": {
+    "DERIVATIVE_COUNTEREXAMPLE.md": "b52474ca156c45ddb073f24cd3afe2c7ac8e0027195f29d016b843bf4c39ccf0",
+    "outer-ray/SOURCE_TRANSPORT.md": "43f3df148708c60692b7d01494ffa367704b0103988fd90717c4929f8e58fd85",
+    "outer-ray/THEOREM.md": "2b35a58b119a6f924658a702769c401126e708e592738551e992403004cdfe6d",
+    "outer-ray/check_exact.py": "943ad4d58b328a043f9c4d902d7c035c997c706735bb72db53b4711577b56662"
+  },
+  "status": "PASS_EXACT_OUTER_STRIP_CONTROLS",
+  "strict_acceptance": "Every need() assertion must pass; zero exit status is required."
+}

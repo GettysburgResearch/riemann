@@ -1,0 +1,39 @@
+{
+  "analytic_infinite_statements_machine_proved": false,
+  "analytic_review_status": "Independent root review requested",
+  "bounded_intervals_per_power_slab": 18,
+  "complete_labelled_level_counts": {
+    "1": 78499,
+    "2": 211614,
+    "3": 210777,
+    "4": 95714
+  },
+  "complete_prime_count": 78498,
+  "critical_power_one_proved": false,
+  "execution_time_utc": "2026-10-10T12:59:26.032901+00:00",
+  "global_sufficient_power": "7/5",
+  "independent_controls": {
+    "errors": 0,
+    "failures": 0,
+    "normal_command": "python3 -B test_four_label.py",
+    "optimized_command": "python3 -B -O test_four_label.py",
+    "skips": 0,
+    "tests_per_mode": 3
+  },
+  "normal_command": "python3 -B verify_four_label.py --output results/four-label.normal.json",
+  "normal_optimized_json_byte_identical": true,
+  "optimized_command": "python3 -B -O verify_four_label.py --output results/four-label.optimized.json",
+  "power_slabs": 7,
+  "result": "PASS_GLOBAL_SHARP_FOUR_LABEL_POSITIVITY",
+  "rh_proved": false,
+  "source_hashes": {
+    "FOUR_LABEL.md": "0adf4d69d1fc66e36942e40345c7b83625d758a38dc5a179221e9ffa6f70b818",
+    "check_threshold_arb.py": "82013dad13521fd9b619e18b6e4efe23ea4a8f7f1d5632e930964f2f512c7615",
+    "test_four_label.py": "46398d948f57ba70dc8efb7e3a04a66a6ed1c60f9b5e487f6dcd5cb1c0a4467e",
+    "verify_four_label.py": "e07cd340f82fe61e39c864d2a91a944beb5211cd884a464e20baf2289ff707b6",
+    "verify_horizon_stitch.py": "8486059b8468ceb6cb59d34c4c16c61eeb72a8097583596e5253b934571e5104",
+    "verify_two_label.py": "9d58b1b9b2ef69e335ef64ff08a976a2a30051cc5e5cf23812369adf8aaf1212"
+  },
+  "status": "PROPOSED_GLOBAL_FOUR_LABEL_POSITIVITY_WITH_EXECUTED_CERTIFICATES",
+  "unbounded_intervals_per_power_slab": 1
+}

@@ -78,3 +78,107 @@ The normalized Bernoulli prefix and tail errors produce exactly E0, L and C in S
 The second reviewer replayed the 192-bit Arb checker in normal and optimized `-B` Python into `/tmp`: all seven slabs pass and the receipts are byte-identical. Each constructed whole-power ball was also confirmed to enclose both exact endpoint balls. Directed coefficient endpoints, complete prime enumeration and explicit guards were checked. Finite density and prefix controls corroborate the normalizations but are not substitutes for S1–S12.
 
 Reviewed SHA-256: manuscript `62253844e57e2ad2c4490cb5dd08dc318a90ef058fdf81062dac9112ab32b221`; checker `746be9f6382323a0131e3a7ece95e4448461c2b44c7e0dd33310d02675513550`; horizon dependency `8486059b8468ceb6cb59d34c4c16c61eeb72a8097583596e5253b934571e5104`. No mathematical correction was identified. This remains a sufficient supercritical-power theorem, with no critical-power-one or RH claim.
+
+## All-order outer rays and protected source transport
+
+A separate reviewer checked O1–O21 of `../xi/outer-ray/THEOREM.md` and T1–T22 of its `SOURCE_TRANSPORT.md`. The all-order sector argument, Schwarz–Pick comparison and protected multiplier bounds pass. The checker was independently replayed into `/tmp`, avoiding writes to its owner's receipt. Its 1152 sector, 1152 Schwarz–Pick and 1152 protected-multiplier cases, four polynomial controls and five sharp Fourier controls passed in normal and optimized Python with byte-identical outputs. These finite controls supplement the displayed all-order proof.
+
+One wording correction was reported to the owner: a quartet at imaginary distance d lies inside the original zero strip of width A only if d<A. The weaker hypothesis 0<d<1/2 suffices when explicitly referring to the classical Xi strip A=1/2. The compact-error transport itself does not require preservation of a sharper zero strip. This issue does not change the protected denominator or outer-ray theorems.
+
+Reviewed SHA-256: theorem `2b35a58b119a6f924658a702769c401126e708e592738551e992403004cdfe6d`; transport `43b7f9a5da0ac3a59b6cc70a04606bc1bc100a09b60ff0974cfce61ce616691c`; checker `943ad4d58b328a043f9c4d902d7c035c997c706735bb72db53b4711577b56662`. The owner may subsequently correct the noted wording; these hashes identify the reviewed freeze.
+
+## Two-label all-real power threshold
+
+A separate reviewer checked all of `../arithmetic/TWO_LABEL.md`, `verify_two_label.py` and `test_two_label.py`. The theorem passes for every real x>=1 and every real m>=3/2. The level-pairing argument for R<3, activation endpoints and the separate duplicate-67 contributions are correct. The complete prime-zeta tail uses
+
+    P(ka)/k <= 2^(-ka)[1+2/(ka-1)]/k,
+
+followed by a geometric tail, retaining the correct directed signs. An independent trial-factorization census matched all 23550 entries of the pair multiset, including two entries at 134 and one at 4489.
+
+The reviewer replayed the 192-bit Arb certificate into `/tmp`. All 60 bounded rectangles and four complete tails passed; normal and optimized receipts were byte-identical. All four negative/control test groups remain active under Python optimization and passed. The smallest first-tail margin was greater than 0.00754409984518. The new certificate covers [1.5,1.81], and the previously reviewed higher-power theorem covers the remainder.
+
+Reviewed SHA-256: manuscript `3d8f05192841107bcf9b7904e212ebcb7db3afc8440cc813cc9b513479f5bd5d`; checker `9d58b1b9b2ef69e335ef64ff08a976a2a30051cc5e5cf23812369adf8aaf1212`; controls `ed921cbb565dae7d1fb414b353651c11f90478096a8004ae7dfc7254807b984e`. This improves the sufficient power threshold; it does not establish the power-one theorem or RH.
+
+## Literal continuum convolution and residual error bounds
+
+The analytic argument in `../operators/CONTINUUM_RESIDUAL_DERIVATION.md` and its three accompanying helpers passes a scoped independent review. The complete prime constant and real source, gamma partial fractions and removable values, elementary/dilogarithmic/hypergeometric incomplete transforms, semantic zero-frequency handling and exact double-integral formula are correct. Exact symbolic differentiation with r=exp(-x/2) independently proved the full gamma primitive and its endpoint constant `(7-pi-4log2)/9`. Eighteen real-length incomplete transforms, including both repeated poles and frequency 111*pi, matched 2048 literal gamma terms within the independently proved tail `1/(4*2048^2)`.
+
+The orthogonalization and exact trial coefficients enclose the original trial space rather than rounded replacement tests. The Schur U formula, common analytic extension of F, prime correction integrated from log2, and piecewise cusp branches match their definitions. On the Cauchy disks the complete source bound, partial-path allowance, primitive bounds and uniform trial coefficient sum justify M. The Taylor argument gives `8hB*2^(-2n)` for the positive Gauss rule. The logarithmic modulus controls all omitted neighborhoods, and the anchor guards imply the displayed `24epsilon` and `36epsilon` entrywise radii.
+
+An independent Fraction census confirms 232 contiguous normalized panels per slab, each of width at most 1/100, covering exactly `[2^-60,1-2^-60]`. Thus all 696 physical panels and the six declared omitted neighborhoods cover the full window. The projection Gram entries, directed matrix solve, symmetrization and coefficient 15/8 agree with the inherited coupling and codimension-14 coercivity.
+
+This review validates the written analytic enclosure and its implementation. The complete 696-panel matrix run was in progress at review time and was not duplicated. Positivity remains conditional on a completed directed lower receipt. A positive finite U alone does not establish that conclusion, and neither conclusion proves all-window positivity or the terminal xi/Weil adapter.
+
+Reviewed SHA-256: derivation `e2979233b85be95c8615313d72108e5d766c4b7280cebadb870baaa0940ef53f`; upper producer `b3832a0cddc8bc1e2603c40240b608d1f06a868bda9436d8e88a146393fe007b`; convolution `d53aa6c4e9c0e33d26c2327305bc1aa0ae9adef035ea4437ccd2a19b23bbf014`; residual producer `e03d92bb09c1250b4a93e485aba6cc85bf2a4309b00e6d9217dbfbd39887cc92`.
+
+## Common inverse/plain conditional pricing
+
+A separate reviewer checked all of `JOINT_WITNESS_PRICING.md`, its exact checker and receipt. The source-qualified conditional deduction passes. S's lines 4520–4546 supply the common-character/common-height product spike and padded t=1 rectangle; lines 15282–15314 supply the no-slot edges. The declared logarithmic derivative products suffice for two-variable Sobolev maximalization, matching S's lines 1141–1151 and 1231–1244. Summing over rows before integrating preserves the U exponent with one finite extra height power. Positivity permits bin restriction, and two different dyad selections can still give the minimum of the two cardinality bounds.
+
+The original kappa=3/4 is retained, and no new prime supply or coefficient family enters J1. The original compensated branch retains its required inverse supply above 7/37. The reviewer independently recovered the displayed high exponent from S's stage expression at lines 15827–15833, and checked all twenty retained geometry and transport gates.
+
+Normal and optimized checker outputs are byte-identical to the frozen receipt. An independent oracle reconstructed every tensor Bernstein coefficient using a 3-by-4 interpolation grid and inverse Bernstein evaluation matrices, rather than the checker's power conversion. All 6144 coefficients matched. Its minimum, base reserve and joint reserve are exactly `415930007/63281250000000`, `415930007/316406250000000` and `353513/585937500`.
+
+Section 6's nondegenerate prime-ideal example and its disjoint-slot extension also pass at their stated coefficient-energy scope. They exclude a power saving from the truncated annular mu*1 identity alone, without imposing a lower bound on a character moment or a zero bin. The new arithmetic mixed moment J1 remains unproved. Thus the review validates the conditional boundary B=0.874956 and its exact price, rather than an independently established zero-free theorem.
+
+Reviewed SHA-256: manuscript `58afe2b764e4cc27215f0e71d4e79817f52ab81924891d0ffd8ac3cb019923ee`; checker `be3821e6bd265d45b934dab43f4172c25874ba84bfb1c7dac16d7ab5d7f914f7`; receipt `df33021edf2606752b63a37167ddb8238adf11c99b91a181a4e5bb90be54984c`.
+
+## Global Pick packets through order twelve
+
+The complete argument in `../heights/ANNULAR_GLOBAL_PICK.md` passes independent analytic review, conditional on its explicit classical and published inputs. The even/odd rational moment congruence holds at arbitrary distinct positive nodes, and its determinant is the square Vandermonde factor. Its largest moment index is absolutely summable under the complete zero count. The normalization is a positive scalar/diagonal congruence for both Hankel blocks.
+
+Logarithmic differentiation gives the displayed node-independent second-derivative estimate on every vertical pole segment. Conjugation cancels its first-order term. The six-band Lagrange bound controls the inverse Vandermonde trace for arbitrary points in their projected intervals. Taking a product probability measure over the six bands proves the same reserve for arbitrary multiplicities and within-band distributions. Both the complete pole-weight factor of two and W/W_min<8000 are correct.
+
+The Trudgian error, elementary Stirling remainder and main-count increment imply the strict lower open-band count at every L>=H. The one-sided endpoint convention preserves the strict margin. The exact domination C/H^2<1/3 then holds on every dyadic annulus. Adding all complete annular kernels and the verified lower critical pairs is justified by locally normal convergence. Appending distinct nodes handles smaller packets, and repeated nodes use a coefficient-summing congruence.
+
+Normal and optimized `-B` Fraction replays into `/tmp` are byte-identical, covering the exact frame constants, arbitrary-node congruences for n=1 through 12 and Pfaffian controls. The published zero verification and argument bound were not independently rebuilt. The accepted result is a source-qualified fixed-order global positivity theorem, with no all-order or RH conclusion.
+
+Reviewed SHA-256: manuscript `c04cdf51ad64972137ecd3f4aa2c835e82481d4984115bd7fadf9b8621311724`; checker `150341214b3a6a5fde8ad3b7e53da2d4631970b4c6291c1beab5fe6f422cedb0`.
+
+## Phase-aware eight-dimensional positive sector
+
+`../operators/CODIMENSION_8_PHASE_REFINEMENT.md` and `check_codimension8_phase.py` pass independent source and arithmetic review. The outward phase union covers the entire sqrt(x)*log2 interval in each cell. The truncated gamma floors are monotone lower bounds; the sign-aware P endpoint product covers both signs of the directed V lower endpoint. The rational tail completes the unbounded frequency range. The supporting line implies the stated primitive gap after five sine constraints, and the retained whole-source tail remains a nonnegative sinh moment. The exact residual coefficient is 27/2.
+
+Both normal and optimized `-B` replays passed all 4096 closed cells and the unbounded tail, with byte-identical local receipts under python-flint 0.9.0. The stored owner receipt uses 0.8.0; this version field distinguishes their runtime provenance. This is positive-sector coercivity, rather than the eight-dimensional effective sign, interval joining or all-window positivity. Checker SHA-256 `11f1662311aaa5cbd0f274790069c1cb88b49ff591c4d500c6a63cdbdac6e60f`.
+
+## Uniform positive sectors through log3 and finite upper matrix replay
+
+`../operators/WINDOW_FAMILY_TO_LOG3.md` and its checker pass independent review. The outside-prime cosh identity remains valid through equality at log3, and that endpoint introduces no additional integral mass. The first seven sine moments give the stated L-dependent Poincare bound. Its rational lower gap `259120533/517719200>1/2`, complement dimension ten and residual coefficient 9/2 are correct uniformly for every 0<L<=log3. Normal and optimized phase/scaling replays are byte-identical under python-flint 0.9.0. This establishes positive-sector coercivity only; it does not join effective matrices. Reviewed manuscript SHA-256 `4141b356c805a99d2f9b535da5e808175ca3508d34f0534ff2ab5764cd322b2a`; checker `7bbef766664319616bf3b55ca653e07e925a1e699cdcaa930a127485b3bfd592`.
+
+The current `enclose_analytic_upper.py` was also independently replayed in normal and optimized Python at 256 bits, with 100 trial modes and eleven removed sine modes. All matrix, trial-coefficient, LDL and mathematical receipt fields match after excluding elapsed time. Both certify U>=1e-10 I in dimension fourteen. This supplements the preceding analytic review while preserving its U-only scope: the complete residual lower matrix remained in progress.
+
+## Four-label global power theorem and explicit activation defect
+
+A separate mathematical reviewer checked all of `../arithmetic/FOUR_LABEL.md` and `KERNEL_DEFECT.md`. The four-label theorem passes for every real x>=1 and m>=7/5. The level-four/five pairing and subsequent even/odd pairs use the correct removal factors. Negative odd levels receive upper bounds, positive even levels receive lower bounds, and the final nonnegative coefficient is preserved. Newton's third elementary identity correctly treats the two 67 labels as distinct. The complete prime-zeta tails are the previously reviewed P10 contract.
+
+An independent integer-factor census through one million reproduced all four product multisets exactly, with counts 78499, 211614, 210777 and 95714. Both 192-bit directed replays are byte-identical to the two frozen receipts (SHA-256 `fc976107d9f7c131deaf5412b33227d4358eaec36356f80c11a61e683a194c9b`). All 126 bounded and seven unbounded rectangles pass; the least whole-tail margin exceeds 0.01265529821835. Three separate control groups pass in normal and optimized Python. The previously reviewed two-label theorem supplies the larger powers.
+
+The defect note's exact absolute source identity is correct: the coefficients at n=67^k*l, 67 not dividing l, are mu(l), -2mu(l), mu(l), 0 for k=0,1,2,>=3. Thus `A(t)=(1+67^-t)zeta(t)/zeta(2t)`. Bernoulli and the activation estimate retain only adverse even-parity defects and exclude the empty subset, giving `(A+B)/2-1`. All Euler products converge because a-delta>1. The pole asymptotics prove the displayed diverging horizon as m decreases to one. This is eventual positivity for each fixed m>1, without a critical or all-endpoint conclusion.
+
+Reviewed SHA-256: four-label manuscript `0adf4d69d1fc66e36942e40345c7b83625d758a38dc5a179221e9ffa6f70b818`; checker `e07cd340f82fe61e39c864d2a91a944beb5211cd884a464e20baf2289ff707b6`; controls `46398d948f57ba70dc8efb7e3a04a66a6ed1c60f9b5e487f6dcd5cb1c0a4467e`; defect manuscript `af1f6c919245b684f5e7b7fc6d389a23a2e45b695170b854c0b612ce70424fc3`.
+
+## Critical pointwise sign obstruction
+
+A separate reviewer checked `../correlations/CRITICAL_SIGN_OBSTRUCTION.md`. Eventual H1>=0 implies RH by the cited Landau/negative-mass adapter. The resulting absolute Mellin convergence and Laplace triangle bound make every boundary pole at most simple; the transform numerator does not vanish at any nontrivial zero. Thus the simplicity implication also follows. The finite nonresonance contract and positive Fejer product imply the displayed necessary inequality `a0>=2K/(K+1) sum|a_j|` using finitely many residue limits, with no infinite zero expansion.
+
+The reviewer identified a conjugate-sign typo, which the coordinator corrected: rho=1/2+i*gamma creates a pole at +i*gamma and is tested by omega=-gamma. The corrected manuscript SHA-256 is `1afb76b7acd8dea9ee42efb00a2e093e6099b99c8c9459ad9afa8b77fa67e6e8`. The owner independently replayed 1000 directed intervals and whole-interval residues in both modes, obtaining byte-identical receipts and strict Fejer deficit greater than 1/50; the receipt SHA-256 is `1b69ff03236d94e6e53f11f5c71fb0381564f2d2926cb89ddb85e01f1e6175fa`. This review inspected the interval/derivative/residue checker contract but did not duplicate that full runtime. The finite nonresonance condition and any actual negative point remain unproved.
+
+## Narrow-annulus Markov theorem through global order 320
+
+N1–N14 in `../heights/NARROW_ANNULAR_PICK.md` pass independent analytic review. The scaled iterated Markov inequality and finite complex Taylor sum give the stated polynomial and derivative bounds. The rational weights have the required node-uniform upper/lower bounds. Conjugate grouping and the four product-rule terms produce the complete per-weight error coefficient 32A^2*n^6/L^2.
+
+The adaptive maximum interval stays in the projected J interval; shrinking its squared-height endpoints by A^2/L^2 places an open source band inside [1,r^2]. Its width is sufficient for the uniform Trudgian count at 1/(4n^3), without a zero-spacing assumption. The narrow full-weight upper count is less than 2L*log(L)/n. Comparing it to the peak-band lower reserve gives exactly 204800A^2*n^8/L^2. This proves global order 320 under the classical strip and the named classical/published inputs. Global order 350 additionally assumes the imported uniform depth A<=3/8.
+
+The coordinator identified the A=0 strict-error corner; the author corrected N10 and N14 to non-strict bounds. Both corrected normal and optimized Fraction replays are byte-identical to the corrected owner receipt. Published count/verified-height inputs and Markov's theorem remain explicit dependencies. The complete-source summation, smaller packets and repeated nodes follow the already reviewed arbitrary-node congruence. No all-order limit or RH conclusion follows at fixed H.
+
+The separate hostile reviewer also passed the inherited arbitrary-node congruence, both one-sided endpoint counts and the adaptive interval construction. Its replay-scope observation was corrected by checking every even auxiliary order from 8 through 350 at the worst depth A=1/2; an independent Fraction oracle verified all 172 orders and 1720 inequalities. The A=0 deviation and bound are both exactly zero under the corrected non-strict bounds.
+
+Reviewed corrected SHA-256: manuscript `c7dd156fec0d3982dd1d513697ef6786d9a1cc5f48a051865a8fcd493d404253`; checker `fad4f520ddf0c87e6c404a627e61d405de83cc75e9bd65cb4641ea984fe3eca4`; receipt `ce5466a74c0ef5ee66c69d0497dc6b525e3035d19242ae858c848cac1343e57c`.
+
+## Galerkin orthogonality in the literal source residual
+
+`../operators/GALERKIN_SOURCE_PROJECTION.md` passes independent operator review. Exact Galerkin orthogonality makes the residual functional vanish on the finite trial space H, so its energy dual norm restricts to H's energy-orthogonal complement. Coercivity makes the primitive derivative continuous under completion. The literal source images Pi F_H are independent by positivity of q on H; therefore their Gram inverse is legitimate and `R_H=R-B*G^-1 B` lies between zero and R.
+
+The cheaper shifted-source Gram also yields a valid lower bound with the original U: an arbitrary exact u_i in H changes no residual functional on H's energy-orthogonal complement. No extra trial-energy matrix or ordinary L2 spectral gap is required. Any effective sign still needs the full directed residual integrals; exploratory fits alone do not certify it.
+
+Reviewed manuscript SHA-256 `29738b5f61c49e027858387ac90f2eb5823f8f3487b59949d90a313d368c6c03`.

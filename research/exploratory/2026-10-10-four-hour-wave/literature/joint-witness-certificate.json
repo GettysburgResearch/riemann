@@ -1,0 +1,76 @@
+{
+  "base_minus_E_lower_bound": "415930007/316406250000000",
+  "bernstein_cells": 512,
+  "bernstein_coefficients_checked": 6144,
+  "critical_configuration": {
+    "delta": "49/48 - sqrt(921)/48",
+    "lambda_critical": "115/48 - sqrt(921)/16",
+    "m": "256/1295 + 9*sqrt(921)/1295",
+    "marginal_moment_exponents": [
+      "sqrt(921)/336 + 359/336",
+      "sqrt(921)/96 + 79/96"
+    ],
+    "r": "11/185 + 4*sqrt(921)/185",
+    "same_pair_moment_threshold": "8/21 + sqrt(921)/42",
+    "t": "9/35 + sqrt(921)/35",
+    "z_inverse": "87/185 - 2*sqrt(921)/185",
+    "z_plain": "174/1295 - 4*sqrt(921)/1295"
+  },
+  "geometry_gates": {
+    "analytic_lx_gt_b_plus_ell": "1615687/25000000",
+    "b_positive": "1542571/12500000",
+    "boundary_domain": "239/250000",
+    "ell_below_one_fifth": "6217/187500",
+    "ell_positive": "31283/187500",
+    "five_ell_gt_h": "1668487/75000000",
+    "floor_saving": "440533/75000000",
+    "intermediate_floor_saving": "1611686671/7500000000",
+    "intermediate_top_saving": "59725399/22500000000",
+    "lx_gt_ell": "4700829/25000000",
+    "ly_below_one": "39128887/75000000",
+    "ly_gt_ell": "7785971/25000000",
+    "one_minus_three_ell": "31217/62500",
+    "positive_gram_margin": "99838/1171875",
+    "positive_low_exponent": "4693043/25000000",
+    "prime_supply_above_seven_over_37": "36705809/2253207981",
+    "principal_h_saving": "20299171/15000000000",
+    "principal_y_saving": "35871113/1500000000",
+    "small_row_saving": "97999793/1250000000",
+    "small_row_transport": "97944793/1250000000"
+  },
+  "imported_bound_independently_rebuilt": false,
+  "joint_minus_E_lower_bound": "353513/585937500",
+  "joint_moment_proved": false,
+  "minimum_bernstein_cell_and_indices": [
+    31,
+    0,
+    2,
+    0
+  ],
+  "minimum_bernstein_coefficient": "415930007/63281250000000",
+  "new_zero_free_theorem_claimed": false,
+  "parameters": {
+    "B": "218739/250000",
+    "b": "1542571/12500000",
+    "c": "2/9",
+    "delta_cut": "191/500",
+    "ell": "31283/187500",
+    "kappa": "3/4",
+    "lambda": "49/100"
+  },
+  "polynomial_power_coefficients": {
+    "0,0": "57939373/810000000",
+    "0,1": "26620793/405000000",
+    "1,0": "-124282021/337500000",
+    "1,1": "-590082953/1012500000",
+    "1,2": "-19790917/506250000",
+    "2,0": "13326883/28125000",
+    "2,1": "40880353/33750000",
+    "2,2": "73281239/84375000",
+    "2,3": "125132/421875"
+  },
+  "rh_proved": false,
+  "scope": "whole-domain scalar implication from open source-qualified mixed moment",
+  "status": "PASS_EXACT_CONDITIONAL_JOINT_MOMENT_PRICING",
+  "uniform_minus_E_lower_bound": "415930007/316406250000000"
+}

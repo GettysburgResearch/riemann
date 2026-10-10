@@ -33,7 +33,7 @@ Publication receipt: commit `e742f14` pushed to the research branch. Draft PR
 
 ## Checkpoint 2: reviewed adapters and stronger uniform bounds
 
-Prepared around 12:55 UTC. Included work:
+Pushed at 12:50 UTC. Included work:
 
 - Exact critical negative-mass exponent equality, a fully written
   zero-free-to-Mertens adapter, and all-real SHARP positivity for m>=1.737.
@@ -53,3 +53,34 @@ The review record is `SCOPED_REVIEWS.md`. Root replayed the completed
 component checks. The continuation imports, compact height restriction,
 modified-source restriction and continuum residual gap remain explicit.
 New two-label, mixed-node and all-order outer-ray work continues separately.
+
+Publication receipt: commit `d93e2b2` pushed to the research branch and the
+existing draft PR updated.
+
+## Checkpoint 3: global finite order and stronger source mechanisms
+
+Prepared around 13:25 UTC. Included work:
+
+- Two- and four-label global arithmetic certificates, establishing
+  H_m(x)>0 for every real x>=1 and m>=7/5, plus an exact kernel-defect
+  estimate whose horizon diverges as m decreases to one.
+- Arbitrary-node kernel congruence and complete annular proofs, culminating
+  in global positivity through order 3500 from classical inputs and the
+  published verified height. The earlier order-350 refinement additionally
+  assumes the released 7/8 zero-free strip.
+- Literal-source codimension-eight coercivity at length one, the uniform
+  codimension-ten family through log3, and an exact Galerkin source-projection
+  refinement of the residual enclosure. Effective signs remain separate.
+- All-fixed-order outer-strip companion positivity and quantitative
+  denominator/source transport, plus a complete finite-census/tail certificate
+  on the full rectangle |T|<=2, 0<=y<=1/2 at order zero and lambda=10.
+- A critical pointwise-sign obstruction with 1000 directed simple-zero
+  residue intervals and an explicit unproved finite nonresonance condition.
+  The ordinary scan through 100 million is labeled reconnaissance.
+- A conditional B=0.874956 exponent deduction from a new open same-row
+  joint-witness estimate, with complete exact polynomial coverage.
+
+The reviewed runtime and analytic scopes are recorded in `SCOPED_REVIEWS.md`
+and the separate literature review files. The weighted arithmetic extension,
+full continuum residual and Gaussian slab extension continue separately and
+are excluded from this checkpoint.

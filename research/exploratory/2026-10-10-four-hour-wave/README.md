@@ -40,7 +40,7 @@ estimates do not discharge it.
 |---|---|
 | `arithmetic/` | Critical negative-mass rates and a lower SHARP positivity threshold |
 | `xi/` | Quantitative derivative transport and exact obstruction models |
-| `heights/` | Height-versus-order mechanisms and compact positivity through 96 points |
+| `heights/` | Height-versus-order mechanisms and global positivity through 3500 points |
 | `operators/` | Source-specific continuum coercivity and effective-matrix bounds |
 | `literature/` | Exact new-paper sources, admissibility audit, and exponent optimization |
 | `correlations/` | Quantitative correlation-to-arithmetic adapters with explicit uniformity |
@@ -57,10 +57,21 @@ same-envelope obstruction, and native height detector are credited in the
 component comparisons. Its draft status is preserved; it is not an accepted
 source verdict. Publication receipts are recorded in `CHECKPOINTS.md`.
 
-The second checkpoint adds independently reviewed component deductions:
-an exact critical negative-mass exponent identity, all-real SHARP positivity
-for m>=1.737, an H^-7 negative-only tail completion, 96-point compact kernel
-positivity, codimension-14 continuum coercivity, a positive continuum window
-of length 3/20 and a conditional bound Re(s)>0.87495703. The latter assumes
-the imported analytic inputs; the others retain their stated source, height
-and domain restrictions. See `SCOPED_REVIEWS.md` for the review boundary.
+The third checkpoint adds independently reviewed component deductions:
+all-real SHARP positivity for m>=7/5, global kernel positivity for every
+packet of at most 3500 positive nodes, and a uniform codimension-ten positive
+continuum sector for every window through log3. The global kernel result
+uses the named classical counting inputs and published finite-height zero
+verification. Its L2 polynomial argument improves the earlier maximum-based
+orders 320 (classical strip) and 350 (imported 7/8 strip).
+
+The companion theorem proves an all-fixed-order sector beyond a complete
+zero strip, with quantitative source-error budgets. A separate critical
+residue test exposes the additional hypotheses implicit in pointwise
+positivity at power one. The complete finite-census adapter also certifies
+the rectangle |T|<=2, 0<=y<=1/2 at order zero and lambda=10, retaining
+its imported historical finite-count input. The conditional half-plane
+B=0.87495703 assumes
+the imported analytic inputs. A further B=0.874956 implication prices a
+new, explicitly open joint-witness estimate and does not establish it.
+See `SCOPED_REVIEWS.md` for the exact review boundary.
