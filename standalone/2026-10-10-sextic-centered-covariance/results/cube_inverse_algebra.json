@@ -1,0 +1,337 @@
+{
+  "allocation_masks": {
+    "admissible_d_j_terms": 1331,
+    "allocation_cases": 4096,
+    "cases_detecting_incorrect_e_prime_ell_exclusion": 91,
+    "minimal_extra_mask_regression": {
+      "e": 7,
+      "expected": 0,
+      "f": 1,
+      "g": 7,
+      "h": 7,
+      "with_incorrect_e_prime_ell_exclusion": 1
+    },
+    "retained_masks": [
+      "(d,j)=1; (dj,f)=1; (e',djf)=1",
+      "(g',fdj)=(h',fdj)=1, followed by the shared ell expansion",
+      "(ell,fdj)=1; (g'',ell fdj)=(h'',ell fdj)=1",
+      "(e',ell) is unrestricted"
+    ],
+    "row_and_cubic_mask_factorizations": 32768,
+    "shared_ell_terms": 2197,
+    "terms_with_ell_sharing_e_prime": 469
+  },
+  "checker_sha256": "33b4354dc92c6864cc56bcc1cfff019c392a3fc19ea543c625ca86aece154553",
+  "formal_prime_norm_labels": [
+    7,
+    13,
+    19
+  ],
+  "not_checked": [
+    "Analytic scalar estimates, automorphy, cusp coefficients, or large sieves.",
+    "The analytic exact cutoff, arbitrary rows, centered covariance, or any RH claim."
+  ],
+  "rational_maximization": {
+    "cases": [
+      {
+        "balanced_column_exponents": [
+          "25/36",
+          "37/36"
+        ],
+        "beta": "13/24",
+        "energy_exponents_at_threshold": [
+          "119/72",
+          "2",
+          "205/108"
+        ],
+        "maxima": {
+          "first": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "0"
+              ]
+            ],
+            "maximum": "0",
+            "nonnegative_gap_certificate": {
+              "g": "23/12",
+              "z": "11/12"
+            }
+          },
+          "middle": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "1/3"
+              ]
+            ],
+            "maximum": "25/36",
+            "nonnegative_gap_certificate": {
+              "g": "47/36",
+              "slack": "25/36"
+            }
+          },
+          "third": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "1/3"
+              ]
+            ],
+            "maximum": "13/36",
+            "nonnegative_gap_certificate": {
+              "g": "59/36",
+              "slack": "13/36"
+            }
+          }
+        },
+        "row_threshold": "47/72"
+      },
+      {
+        "balanced_column_exponents": [
+          "7/9",
+          "10/9"
+        ],
+        "beta": "2/3",
+        "energy_exponents_at_threshold": [
+          "29/18",
+          "2",
+          "52/27"
+        ],
+        "maxima": {
+          "first": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "0"
+              ]
+            ],
+            "maximum": "0",
+            "nonnegative_gap_certificate": {
+              "g": "5/3",
+              "z": "2/3"
+            }
+          },
+          "middle": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "1/3"
+              ]
+            ],
+            "maximum": "7/9",
+            "nonnegative_gap_certificate": {
+              "g": "11/9",
+              "slack": "7/9"
+            }
+          },
+          "third": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "1/3"
+              ]
+            ],
+            "maximum": "4/9",
+            "nonnegative_gap_certificate": {
+              "g": "14/9",
+              "slack": "4/9"
+            }
+          }
+        },
+        "row_threshold": "11/18"
+      },
+      {
+        "balanced_column_exponents": [
+          "5/6",
+          "7/6"
+        ],
+        "beta": "3/4",
+        "energy_exponents_at_threshold": [
+          "19/12",
+          "2",
+          "35/18"
+        ],
+        "maxima": {
+          "first": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "0"
+              ]
+            ],
+            "maximum": "0",
+            "nonnegative_gap_certificate": {
+              "g": "3/2",
+              "z": "1/2"
+            }
+          },
+          "middle": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "1/3"
+              ]
+            ],
+            "maximum": "5/6",
+            "nonnegative_gap_certificate": {
+              "g": "7/6",
+              "slack": "5/6"
+            }
+          },
+          "third": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "1/3"
+              ]
+            ],
+            "maximum": "1/2",
+            "nonnegative_gap_certificate": {
+              "g": "3/2",
+              "slack": "1/2"
+            }
+          }
+        },
+        "row_threshold": "7/12"
+      },
+      {
+        "balanced_column_exponents": [
+          "17/18",
+          "23/18"
+        ],
+        "beta": "11/12",
+        "energy_exponents_at_threshold": [
+          "55/36",
+          "2",
+          "107/54"
+        ],
+        "maxima": {
+          "first": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "0"
+              ]
+            ],
+            "maximum": "0",
+            "nonnegative_gap_certificate": {
+              "g": "7/6",
+              "z": "1/6"
+            }
+          },
+          "middle": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "1/3"
+              ]
+            ],
+            "maximum": "17/18",
+            "nonnegative_gap_certificate": {
+              "g": "19/18",
+              "slack": "17/18"
+            }
+          },
+          "third": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "1/3"
+              ]
+            ],
+            "maximum": "11/18",
+            "nonnegative_gap_certificate": {
+              "g": "25/18",
+              "slack": "11/18"
+            }
+          }
+        },
+        "row_threshold": "19/36"
+      },
+      {
+        "balanced_column_exponents": [
+          "1",
+          "4/3"
+        ],
+        "beta": "1",
+        "energy_exponents_at_threshold": [
+          "3/2",
+          "2",
+          "2"
+        ],
+        "maxima": {
+          "first": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "1/3"
+              ]
+            ],
+            "maximum": "0",
+            "nonnegative_gap_certificate": {
+              "g": "1",
+              "z": "0"
+            }
+          },
+          "middle": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "1/3"
+              ]
+            ],
+            "maximum": "1",
+            "nonnegative_gap_certificate": {
+              "g": "1",
+              "slack": "1"
+            }
+          },
+          "third": {
+            "maximizing_vertices": [
+              [
+                "0",
+                "1/3"
+              ]
+            ],
+            "maximum": "2/3",
+            "nonnegative_gap_certificate": {
+              "g": "4/3",
+              "slack": "2/3"
+            }
+          }
+        },
+        "row_threshold": "1/2"
+      }
+    ],
+    "domain": "g>=0, z>=0, 2g+3z<=1; G=D^g, Z=D^z, B=D",
+    "interpretation": "Exact rational linear inequalities; no analytic bound is checked",
+    "slack": "s=1-2g-3z>=0"
+  },
+  "schema": "cube-inverse-finite-algebra-v1",
+  "scope": "Finite formal prime-support identities and rational exponent algebra only.",
+  "shared_divisor_identity": {
+    "axis_test_pairs": 2,
+    "cases": 9216,
+    "coefficient_ring": "Z[omega], omega^2 + omega + 1 = 0",
+    "exclusion_masks": 8,
+    "literal_zero_regression": {
+      "expected": [
+        0,
+        0
+      ],
+      "forced_r1_and_r2": 7,
+      "incorrect_principal_zero_replacement": [
+        -1,
+        0
+      ]
+    },
+    "prime_phase_grid": "a,b in 0..5; phases a+i and b+2i modulo 6",
+    "zero_patterns": "all 8 masks; the second mask is equal or cyclically rotated"
+  },
+  "status": "PASS_FINITE_ALGEBRA"
+}

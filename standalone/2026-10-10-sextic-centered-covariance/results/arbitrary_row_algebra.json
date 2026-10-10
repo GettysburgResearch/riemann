@@ -1,0 +1,322 @@
+{
+  "active_local_scalars": {
+    "c_over_p_exponents_modulo_six": [
+      2,
+      4,
+      0,
+      2,
+      4,
+      0
+    ],
+    "c_over_p_phases": 6,
+    "cases": 432,
+    "chi_minus_one_values": [
+      "1",
+      "-1"
+    ],
+    "gauss_factors": "Formal fixed monomials; no Gauss sum value is evaluated.",
+    "lambda_phases": 6,
+    "local_exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "simplified_phases": {
+      "j=0": "-gamma_2 * chi(c/p)^2",
+      "j=4": "gamma_4 * chi(lambda)^(-4) * chi(c/p)^(-2)",
+      "other_j": "gamma_j gamma_(j+2) * chi(lambda)^(5j) * chi(c/p)^(2j+2)"
+    }
+  },
+  "checker_sha256": "e24c08cca27df69e087e9a6ae71585bb5b2aeded01bd7fdde9a98f1c81883a08",
+  "cross_phase_and_reciprocity": {
+    "cases": 336,
+    "identity": "chi_a(q)^(nu+4) chi_q(a)^(2j+2) = R(a,q)^nu chi_q(a)^(3j)",
+    "incorrect_mask_deletion": {
+      "correct": "zero",
+      "incorrect": "1",
+      "nu": 6
+    },
+    "incorrect_reciprocity_sign_deletion": {
+      "correct": "-1",
+      "incorrect": "1",
+      "nu": 1
+    },
+    "nonunit_zero_cases": 48,
+    "physical_positive_valuations_by_residue": {
+      "0": [
+        6,
+        12,
+        18,
+        24
+      ],
+      "1": [
+        1,
+        7,
+        13,
+        19
+      ],
+      "2": [
+        2,
+        8,
+        14,
+        20
+      ],
+      "3": [
+        3,
+        9,
+        15,
+        21
+      ],
+      "4": [
+        4,
+        10,
+        16,
+        22
+      ],
+      "5": [
+        5,
+        11,
+        17,
+        23
+      ]
+    },
+    "positive_multiple_six_nonunit_cases": 8,
+    "quadratic_exponents_modulo_six": [
+      0,
+      3,
+      0,
+      3,
+      0,
+      3
+    ]
+  },
+  "not_checked": [
+    "Actual residue symbols or numerical Gauss sums; Gauss factors are formal fixed monomials.",
+    "Theta reflection, cusp coefficients, smooth norm estimates, conductor uniformity, or large sieves.",
+    "The proposed all-row theorem, its auxiliary family, centered covariance, or any RH claim."
+  ],
+  "optional_moving_auxiliary_parity": {
+    "cases": 24,
+    "identity": "3*((nu+4) mod 6) mod 6 = 3*(nu mod 2)",
+    "physical_nu_two": "The positive total exponent six remains zero at a nonunit.",
+    "physical_nu_zero": "The auxiliary exponent four still retains the original coprimality zero."
+  },
+  "optional_moving_auxiliary_weights": {
+    "meaning": "Six affine residue progressions and local rational weights; no analytic moment estimate is checked.",
+    "progressions": [
+      {
+        "base_exponents": [
+          "1",
+          "3",
+          "7/3"
+        ],
+        "base_valuation": 0,
+        "optional_branch_square_count": 1,
+        "physical_residue": 0,
+        "ramanujan_squared_penalty": 1,
+        "reflected_j": 4
+      },
+      {
+        "base_exponents": [
+          "-1",
+          "0",
+          "0"
+        ],
+        "base_valuation": 1,
+        "optional_branch_square_count": 1,
+        "physical_residue": 1,
+        "ramanujan_squared_penalty": 0,
+        "reflected_j": 5
+      },
+      {
+        "base_exponents": [
+          "-2",
+          "-2",
+          "-4/3"
+        ],
+        "base_valuation": 2,
+        "optional_branch_square_count": 4,
+        "physical_residue": 2,
+        "ramanujan_squared_penalty": 0,
+        "reflected_j": 0
+      },
+      {
+        "base_exponents": [
+          "-3",
+          "-4",
+          "-8/3"
+        ],
+        "base_valuation": 3,
+        "optional_branch_square_count": 1,
+        "physical_residue": 3,
+        "ramanujan_squared_penalty": 0,
+        "reflected_j": 1
+      },
+      {
+        "base_exponents": [
+          "-4",
+          "-6",
+          "-4"
+        ],
+        "base_valuation": 4,
+        "optional_branch_square_count": 1,
+        "physical_residue": 4,
+        "ramanujan_squared_penalty": 0,
+        "reflected_j": 2
+      },
+      {
+        "base_exponents": [
+          "-5",
+          "-8",
+          "-16/3"
+        ],
+        "base_valuation": 5,
+        "optional_branch_square_count": 1,
+        "physical_residue": 5,
+        "ramanujan_squared_penalty": 0,
+        "reflected_j": 3
+      }
+    ],
+    "rational_geometric_majorants_for_norm_at_least_two": [
+      "64/7",
+      "4096/455",
+      "768/85"
+    ],
+    "reflected_exponent_shift": 4,
+    "scope": "Moving q^4 auxiliary, physical nu>=0",
+    "six_step_slopes": [
+      "-6",
+      "-12",
+      "-8"
+    ],
+    "worst_exponents": [
+      "1",
+      "3",
+      "7/3"
+    ]
+  },
+  "powerful_row_weights": {
+    "meaning": "Six affine residue progressions and local rational weights; no analytic moment estimate is checked.",
+    "progressions": [
+      {
+        "base_exponents": [
+          "-6",
+          "-10",
+          "-20/3"
+        ],
+        "base_valuation": 6,
+        "optional_branch_square_count": 4,
+        "physical_residue": 0,
+        "ramanujan_squared_penalty": 0,
+        "reflected_j": 0
+      },
+      {
+        "base_exponents": [
+          "-7",
+          "-12",
+          "-8"
+        ],
+        "base_valuation": 7,
+        "optional_branch_square_count": 1,
+        "physical_residue": 1,
+        "ramanujan_squared_penalty": 0,
+        "reflected_j": 1
+      },
+      {
+        "base_exponents": [
+          "-2",
+          "-2",
+          "-4/3"
+        ],
+        "base_valuation": 2,
+        "optional_branch_square_count": 1,
+        "physical_residue": 2,
+        "ramanujan_squared_penalty": 0,
+        "reflected_j": 2
+      },
+      {
+        "base_exponents": [
+          "-3",
+          "-4",
+          "-8/3"
+        ],
+        "base_valuation": 3,
+        "optional_branch_square_count": 1,
+        "physical_residue": 3,
+        "ramanujan_squared_penalty": 0,
+        "reflected_j": 3
+      },
+      {
+        "base_exponents": [
+          "-3",
+          "-5",
+          "-3"
+        ],
+        "base_valuation": 4,
+        "optional_branch_square_count": 1,
+        "physical_residue": 4,
+        "ramanujan_squared_penalty": 1,
+        "reflected_j": 4
+      },
+      {
+        "base_exponents": [
+          "-5",
+          "-8",
+          "-16/3"
+        ],
+        "base_valuation": 5,
+        "optional_branch_square_count": 1,
+        "physical_residue": 5,
+        "ramanujan_squared_penalty": 0,
+        "reflected_j": 5
+      }
+    ],
+    "rational_geometric_majorants_for_norm_at_least_two": [
+      "64/7",
+      "4096/455",
+      "768/85"
+    ],
+    "reflected_exponent_shift": 0,
+    "scope": "Powerful row primes, physical nu>=2",
+    "six_step_slopes": [
+      "-6",
+      "-12",
+      "-8"
+    ],
+    "worst_exponents": [
+      "-2",
+      "-2",
+      "-4/3"
+    ]
+  },
+  "row_j4_ramanujan_factor": {
+    "cases": 104,
+    "comparison": "Numerators after multiplying B_(q,4) by sqrt(Nq), so all equalities are integral.",
+    "fixed_b_factor": "Nq-1 if q divides b'; otherwise -1+Nq*1_(q divides n_0)",
+    "hypothesis": "v_q(e)=v_q(f)=0; v_q(n_0) in {0,1}; v_q(b') in 0..12",
+    "largest_squared_amplitudes": {
+      "13": "144/13",
+      "19": "324/19",
+      "25": "576/25",
+      "7": "36/7"
+    },
+    "omitted_hypothesis_regression": {
+      "correct_numerator": 6,
+      "incorrect_numerator": -1,
+      "norm": 7
+    },
+    "prime_norm_labels": [
+      7,
+      13,
+      19,
+      25
+    ],
+    "squared_amplitude_bound": "|B_(q,4)|^2 <= Nq"
+  },
+  "schema": "arbitrary-row-finite-algebra-v1",
+  "scope": "Exact local phase identities, literal zeros, prime valuations, and rational exponent algebra.",
+  "status": "PASS_FINITE_ALGEBRA"
+}

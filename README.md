@@ -79,6 +79,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The conductor-core packet](standalone/2026-10-10-sextic-moment-conductor-core/README.md) gives an explicit cubic A2 completion and signed inverse for the balanced Gauss coefficients, proves that the entire signed initial dual diagonal is a uniformly bounded lattice discrepancy, and controls all higher-moment terms without singleton primes together with a larger conductor sector. It also proves bounded rough-replica averaging and records exact finite controls and scoped reviews. The remaining strict signed off-diagonal, the full fourth moment, and the unbounded moment hierarchy are open. This is standalone research stacked on the sextic-moment packet, not a new integrated zero-free claim.
 
+## Follow-up research: exact support, cube inversion, and Hermitian incidence sectors
+
+[The support and moment packet](standalone/2026-10-10-sextic-centered-covariance/README.md) proves an exact reunited-divisor cutoff at every nonzero row, bounds the full coupled completion at every cusp, and removes the cube completion using two angular Möbius factors. A further scalar calculation extends the quantitative bounds to all nonzero rows and supplies an explicit moving-auxiliary envelope. It extends the imported theta argument to fixed nonzero angular derivatives, proves new signed sectors at every fixed moment order by treating eligible odd repeated-prime ideals as inverse factors, sharpens the global Hermitian common-gcd cutoff, and gives an exact finite obstruction to centered A2 positivity. Its analytic conclusions retain their pinned imported dependencies and scoped reviews. The balanced fourth moment, the generalized hierarchy, and any new numerical zero-free boundary for zeta remain open.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

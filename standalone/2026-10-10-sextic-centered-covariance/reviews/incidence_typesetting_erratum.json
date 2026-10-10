@@ -1,0 +1,14 @@
+{
+  "change_type": "Typesetting-only byte repair",
+  "old_sha256": "714c9f69b9db58f3ada027c8902ded42b781d759b746c117f952748baafd4cc2",
+  "new_sha256": "5c1844409097959a772916e1658ec61dfa747da857dd48321869d0a38cbc66e9",
+  "file": "/workspace/scratch/6ec6134c1535/singleton_cancellation_attack.md",
+  "original_zero_based_byte_offsets": [
+    9849,
+    19094
+  ],
+  "original_sequence_hex": "0d 6d",
+  "replacement_sequence_hex": "5c 72 6d",
+  "description": "Replace two literal CR followed by m with the TeX command backslash-r-m; affected pairwise-coprime condition in B_C,u and even-incidence product in odd-incidence theorem. No mathematical content changes.",
+  "disallowed_control_bytes_after_repair": []
+}
