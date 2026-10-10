@@ -1,0 +1,14 @@
+{
+  "challenge_module": "ComparatorChallenges.QRHWaveSiegelExplicit",
+  "solution_module": "OAI.QRHWave.SiegelFromSevenEighths",
+  "theorem_names": [
+    "OAI.SiegelZeros.WeightedTorusJets.gap_of_real_zero"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}
