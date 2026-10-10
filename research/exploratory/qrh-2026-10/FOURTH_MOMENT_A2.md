@@ -114,6 +114,16 @@ proof one rank higher:
    large sieve, as `χ_h(m)³` was for `GL(2)`.
 3. *Removal.* Undo the completion by Möbius inversion in the prime-power parts.
 
+**Why `GL(2)` steps alone cannot do it (bookkeeping).** In the useful regime `H = D^h` with
+`h < 2`, the dual rows satisfy `N h ≲ 𝓗 = X⁴/H > X²` (at `X ≍ D`). By the nesting identity, a
+cubic-theta reflection in `d` with `e` fixed acts on a twist of conductor about `N(h)N(e)`. It maps
+length `X` to about `(N(h)N(e))²/X ≫ X`, so it *lengthens*. The same holds for `e`.
+
+`GL(2)` reflections shorten only when `𝓗 < X`, i.e. `H > X³`. There the leverage
+`1/2 + 5h/24` exceeds 1 and is useless. Any proof of the useful rung therefore needs a genuinely
+joint transformation, such as the long Weyl element of the A2 series acting on both variables at
+once, or a non-reflection argument. Iterating the `GL(2)` theory will not do.
+
 **First concrete obstacle.** In the `GL(2)` case the row twist became quadratic after reflection
 (`χ_p^{-1}χ_p^{-2} = χ_p^{3}`), which is why Goldmakher–Louvel's quadratic large sieve applied.
 Whether the `GL(3)` reflection produces a quadratic or a cubic/sextic twist is the decisive local
