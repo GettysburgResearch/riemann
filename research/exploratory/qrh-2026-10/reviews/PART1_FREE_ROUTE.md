@@ -331,3 +331,25 @@ git show 31c706bbb3dce49a7ebabbe71cd7cbacdaa6cbb6:$P/The-Quasi-Riemann-Hypothesi
 python3 -I part1_free_checks.py /tmp/sep30.tex                       # T, A, G, F, S groups (seconds)
 python3 -I part1_free_checks.py /tmp/sep30.tex --replay-junction     # adds J1 (minutes; widened junction replay)
 ```
+
+## Note added after the second review (same day)
+
+[PART1_FREE_ROUTE_REVIEW2.md](PART1_FREE_ROUTE_REVIEW2.md) is an adversarial second pass: one
+agent, the same model family. Its verdict is **"(A) with corrections"**, with no obstruction
+found in the parts read.
+* It independently re-derived the census (153 substantive lines, the same set line by line) and
+  the margin (worst case `−7/96`).
+* It checked ten riskiest (a) items against the cited lemmas' actual ranges.
+* It traced the (c) item at 16165: its hypothesis excludes high bins.
+* It added 3 failing controls of its own.
+
+Its corrections to this note:
+1. Lemma P1F.2 needs the loss bound `λ ≤ 527/300`.
+2. Gate T2 checks only line ranges; `\tfrac56` spellings and uses inside wide ranges can slip past.
+3. Lemma 17.6 is still needed for the balanced bins (NC2: margin +0.0039 at `Δ = 0` without
+   it), so it stays in the node set.
+4. Remark 19.3 is unlabeled and is justified only by a pointer to 15248-15294. That derivation
+   uses no `δ ≤ α` and holds on `[5/6, 1]`, but its status should be no better than Rp.
+
+These corrections do not change verdict (A). The composition still needs a review independent
+of this model family before it can be integrated.

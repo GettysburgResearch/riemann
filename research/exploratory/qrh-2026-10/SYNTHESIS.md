@@ -74,7 +74,11 @@ integration verdict.
          * Remark 19.3 becomes load-bearing.
          * 32/32 exact gates pass, and 10/10 controls fail as designed.
          * Thm 3.1 and its 7 Part-I-only nodes drop out, and no imported 11/12 theorem is needed.
-         * This is a new composition; it needs its own independent review.
+         * A second, adversarial agent review gives "(A) with corrections"
+           ([reviews/PART1_FREE_ROUTE_REVIEW2.md](reviews/PART1_FREE_ROUTE_REVIEW2.md)). It finds
+           no obstruction and makes four bookkeeping corrections (one loss bound; Lemma 17.6 stays;
+           Remark 19.3 rated no better than Rp).
+         * This is a new composition; it needs a review independent of this model family.
        * Of the 65 paper nodes: 14 have a spot-checked Lean counterpart, 8 are bypassed, and 43 are
          matched by name only or not found.
      * Two short formal corollaries ([lean/](lean/README.md)):

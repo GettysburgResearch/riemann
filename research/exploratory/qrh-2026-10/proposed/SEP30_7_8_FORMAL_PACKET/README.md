@@ -345,7 +345,8 @@ The mathematics is kernel-checked, so the smallest failure point is in the trust
    integrable fact yet. HECKE_LEAN_FIDELITY.md says the definitions match the paper's family, but
    it is a reading-level, single-pass agent note (with float spot checks), not a Lean comparison:
    Mathlib has no Hecke L-function, and the bridge lemmas are not comparator targets. The Hecke
-   comparator run is pending, and no independent review exists. Cite it as that note's reading,
+   comparator run has since been accepted (Addendum C), but no independent review of the
+   definitions' fidelity exists. Cite it as that note's reading,
    not as part of this packet's statement.
 4. **"There is an effective constant."** No. The theorem has no constants. The Siegel corollary
    states only `∃ c > 0`; its proof happens to use `c = (log 3)/8`, but the checked statement is
