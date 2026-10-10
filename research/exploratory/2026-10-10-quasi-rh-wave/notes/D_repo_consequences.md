@@ -168,3 +168,11 @@ an identity of functions holomorphic on $\mathbb C\setminus(-\infty,1]$ (the bra
 5. **Safe-axis extension to $x>3/8$** (D3(d)) and the **$m>1.8021$ extension** (C3): need the frozen sources L-92101/L-92103/L-99613, which are not in the tree.
 6. **Hildebrand-type range for $\Psi(x,y)$** (H10): not derived.
 7. Numerical constants ($C$ in A2, $c_b$ in A3) are effective in principle but not computed.
+
+
+## 4. Errata and clarifications after the referee pass (note R)
+
+- (C1): the label "Chebyshev" means the prime number theorem with power error; $|\gamma|\ge14$ for zeta, so no small-$|\rho|$ issue.
+- Theorem A2, step $P^+(N'')\le2P^+(N')$: the injectivity of $p\mapsto\log(1+1/p)/\log p$ only excludes two new primes entering at the same $\epsilon$; the conclusion follows instead from $a_p$ nonincreasing in $p$, which forces the new prime to be the next prime $\le2x$. In the final inequality, $N'\le n\le N''\le N'^3$ gives $(\log N')^{\Theta-1}\le3^{1-\Theta}(\log n)^{\Theta-1}$ and $(\log\log N'')^2\le3(\log\log n)^2$. "First power-of-$\log n$ upper bound" means: as a consequence of any zero-free half-plane; the route is Robin's own and the only new ingredient is the imported theorem.
+- Theorem D1: "in particular $\xi(s)\ne0$ there" restates the hypothesis. Theorem D2 holds at every finite order by the Riesz–Herglotz representation, with no growth condition.
+- The symbol $\Theta$ here is the supremum over zeta's zeros; note L uses it for the supremum over all Dirichlet $L$-functions.
