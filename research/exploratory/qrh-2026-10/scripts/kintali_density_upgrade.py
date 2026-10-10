@@ -54,7 +54,7 @@ JUT77 = bound("Jutila 1977: (Q^2 T^2)^{2(1-s)}, s>=7/9", 4, 1, 0, F(7, 9), "PUBL
 HB79_3 = bound("Heath-Brown 1979 Thm 3: (Q^2 T^2)^{2(1-s)}, s>=129/167", 4, 1, 0, F(129, 167), "PUBLISHED for Dirichlet only")
 HB79_1 = bound("Heath-Brown 1979 Thm 1: (Q^2 T)^{2(1-s)}, s>=11/14", 4, 1, 0, F(11, 14), "PUBLISHED for Dirichlet only")
 # Hypothetical
-DH_Q = bound("Q-aspect DH on [3/4,1]: Q^{4(1-s)} T^B", 4, 1, 0, F(3, 4), "HYPOTHETICAL (open for Hecke and for Dirichlet below 129/167)")
+DH_Q = bound("Q-aspect DH on [3/4,1]: Q^{4(1-s)} T^B", 4, 1, 0, F(3, 4), "HYPOTHETICAL (not located for Hecke; for Dirichlet located only on [129/167,1])")
 
 SCENARIOS = [
     ("S0 [K] as written (A = 5/2 constant)", [K_CONST]),
@@ -191,7 +191,7 @@ def main():
     print("\n== required Kintali-normalized A(s) for target b (need A(s) < (b+1/3-s)/(1-s) on (b-1/6, 1)) ==")
     for b in (F(11, 12), F(941, 1002), F(113, 120), F(29, 30)):
         row = []
-        for s in (b - SIXTH, F(4, 5), F(17, 20), F(9, 10), F(19, 20)):
+        for s in sorted({b - SIXTH, F(4, 5), F(17, 20), F(9, 10), F(19, 20)}):
             if s > b - SIXTH - F(1, 10**9) and s < 1:
                 row.append(f"s={s}: {float(required_A(b, s)):.4f}")
         print(f"  b={b} (~{float(b):.5f}): window ({b - SIXTH}, 1);  " + ";  ".join(row))
