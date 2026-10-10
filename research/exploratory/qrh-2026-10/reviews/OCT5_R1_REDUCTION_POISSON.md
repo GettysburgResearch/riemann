@@ -17,9 +17,11 @@ Exact sources or dependencies: manuscript at local ref pr908 = 31c706bbb3dce49a7
   pr910 = 670a76c1a3a8f325c43c1755b1cfc24d313a3e3c (UPSTREAM_HEIGHT_AND_MOMENTS.md, sections 2, 3, 7).
   Exact-symbol code: a2/eis.py, SHA-256 87ca11d98bf3ee130a6dab613b5f7efe444058320b7c22b005327686f2798e65.
 What was actually run: a line-by-line reading of the scoped lines, with every displayed identity in
-  Section 4 re-derived by hand. reviews/oct5_r1_checks.py (SHA-256 3d2667c2...d5c8) was written for this
-  review and run in full (`python3 -I oct5_r1_checks.py`, 102 s). It ran six check groups, C1-C6, and all
-  pass. Output: reviews/oct5_r1_checks_output.json (SHA-256 59160e44...f44d). The strongest check is C6.
+  Section 4 re-derived by hand. reviews/oct5_r1_checks.py (SHA-256
+  4fc6c5d72aa5533a88c205b7ba8b39783212fed14e83a51e3c1b3c34afc9cd54) was written for this review and run
+  in full (`python3 -I oct5_r1_checks.py --out <scratch>.json`, 114 s; it prints ALL CHECKS PASSED). It ran
+  six check groups, C1-C6, and all pass. The JSON record (SHA-256 59160e44...f44d, kept outside the repo)
+  was identical in two runs. The strongest check is C6.
   It is a full numerical replay of the exact identity M_D = Z + sum_xi c_xi S_xi in its final form
   eq:initial-column-output. It covers all rows u in O at tiny D, with D in {30,45,60} and H in {4,6,9,40}.
   It uses nu trivial and nu of order 3, and agrees to <= 2e-14. These are finite numerical checks. They
@@ -47,7 +49,7 @@ RH remains unsolved. This review covers neither RH nor the full quasi-RH claim. 
 | 2 | Outline exponents in eq:intro-extraction: D^{1+ε}H^{5/6} + D²H^{−1/3} gives 11/12 + 5θ/12 | 290-298 | Exact rationals (C1) | OK |
 | 3 | Outline Steps 3-5: the Gauss/Möbius identity, eq:intro-poisson-comparison, the cube-completion algebra, H_c, the transfer scale algebra ℋ' = ℋL_b/X, and the contraction ℋ' < ℋ(ℋ/X)² | 301-658 | Internal arithmetic re-derived by hand. Labelled schematic by the authors; the precise forms are in Sections 5-7. | Consistent (schematic only) |
 | 4 | Prop thm:ms statement: quantifiers, and the W-dependence through C^k norms | 679-689 | Read; checked against its use in lines 694-771 and its proof in lines 1611-1630 | OK |
-| 5 | Prime extraction eq:prime-extract: |A_1|² ≤ (2/J)Σ_p|A_{p⁶}|² + O(D²/Y²), J ≍ Y/log Y, with distinct rows of norm ≤ H | 696-725 | By hand. Exponents checked in exact rationals (C1). | OK |
+| 5 | Prime extraction eq:prime-extract: \|A_1\|² ≤ (2/J)Σ_p\|A_{p⁶}\|² + O(D²/Y²), J ≍ Y/log Y, with distinct rows of norm ≤ H | 696-725 | By hand. Exponents checked in exact rationals (C1). | OK |
 | 6 | Mellin step: M_W holomorphic on Re s > 11/12; M_W = Ŵ/L_K^S for Re s > 1; contradiction at ϱ | 727-759 | By hand: Fubini for Re s > 1, Ŵ(ϱ) = ∫φ dy/y > 0, and the removed Euler factors are nonzero | OK (see N1) |
 | 7 | Transfer to Dirichlet L-functions via L_K(s,χ∘N) = L(s,χ)L(s,χχ_{−3}) × (finitely many Euler factors) | 760-770 | Euler factors at split and inert primes checked by hand. The cases s = 1, χ principal, χ = χ_{−3} and imprimitive χ are all covered. | OK |
 | 8 | All heights, all ν, uniformity of constants | 694-771 | Quantifier audit (Section 3.4) | OK. The theorem is qualitative, so no uniformity in ν or in the height is needed. |
@@ -245,6 +247,7 @@ No error was found in the scoped lines.
 
 ```
 cd research/exploratory/qrh-2026-10/reviews
-python3 -I oct5_r1_checks.py           # about 100 s; writes oct5_r1_checks_output.json
-python3 -I oct5_r1_checks.py --quick   # shorter run: smaller ranges, two C6 cases (overwrites the JSON)
+python3 -I oct5_r1_checks.py                          # about 2 min; prints ALL CHECKS PASSED
+python3 -I oct5_r1_checks.py --quick                  # smaller ranges, two C6 cases
+python3 -I oct5_r1_checks.py --out /path/outside/repo.json   # optional JSON record
 ```
