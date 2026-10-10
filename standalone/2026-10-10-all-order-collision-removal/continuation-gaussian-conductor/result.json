@@ -1,0 +1,193 @@
+{
+  "exponents": {
+    "fourth_order_examples": [
+      {
+        "Q_cutoff_exponent": "8/7",
+        "conditional_boundary": "5/6",
+        "delta": "1/8"
+      },
+      {
+        "Q_cutoff_exponent": "12/11",
+        "conditional_boundary": "19/24",
+        "delta": "1/12"
+      },
+      {
+        "Q_cutoff_exponent": "24/23",
+        "conditional_boundary": "3/4",
+        "delta": "1/24"
+      },
+      {
+        "Q_cutoff_exponent": "48/47",
+        "conditional_boundary": "35/48",
+        "delta": "1/48"
+      }
+    ]
+  },
+  "integrated_panels": [
+    {
+      "complete_squarefree_factors": 15,
+      "diagonal": "2880286892792218885797062861109466/3323492831113019712587094484375",
+      "energy": "411438555892931855091821239903502/474784690159002816083870640625",
+      "high_Q_gt_H": "-101204055097154388389422534952/3323492831113019712587094484375",
+      "horizon_D": 25,
+      "k": 2,
+      "low_Q_le_H": "-26256/753571",
+      "offdiagonal": "-217001541695900154314181784952/3323492831113019712587094484375",
+      "ordered_allocations": 103,
+      "product_columns": 52,
+      "row_bound_H": 100,
+      "scale_intervals": 13,
+      "sector_sha256": "c5d5752838cb2205370b276e48c43726bcfac8e503de554d18be867dc0e4e61e",
+      "weight_exponent_2k_sigma": 3
+    },
+    {
+      "complete_squarefree_factors": 8,
+      "diagonal": "383957865141845101641/279273671640031250",
+      "energy": "9598562484991523226513/6981841791000781250",
+      "high_Q_gt_H": "-164980790360751006/3490920895500390625",
+      "horizon_D": 13,
+      "k": 3,
+      "low_Q_le_H": "-532170/68574961",
+      "offdiagonal": "-79996575302856/1453944562890625",
+      "ordered_allocations": 85,
+      "product_columns": 15,
+      "row_bound_H": 100,
+      "scale_intervals": 6,
+      "sector_sha256": "450e1bb578dea55ed752649d4580ba355e5d67ef12575f505137790bae93aa08",
+      "weight_exponent_2k_sigma": 4
+    },
+    {
+      "complete_squarefree_factors": 8,
+      "diagonal": "1712880203530336864934307522/754475278540021923828125",
+      "energy": "1712878073457111170008032066/754475278540021923828125",
+      "high_Q_gt_H": "-51184248192/18129541015625",
+      "horizon_D": 13,
+      "k": 4,
+      "low_Q_le_H": "0",
+      "offdiagonal": "-51184248192/18129541015625",
+      "ordered_allocations": 145,
+      "product_columns": 7,
+      "row_bound_H": 100,
+      "scale_intervals": 6,
+      "sector_sha256": "602c3bfbcf44766e6879bb213b4f594ffe43c3563baa7d479e9c863ab3373656",
+      "weight_exponent_2k_sigma": 5
+    }
+  ],
+  "local_fields": {
+    "fields": [
+      {
+        "generator": [
+          1,
+          3
+        ],
+        "omega_root": 2,
+        "q": 7
+      },
+      {
+        "generator": [
+          -2,
+          -3
+        ],
+        "omega_root": 4,
+        "q": 7
+      },
+      {
+        "generator": [
+          4,
+          3
+        ],
+        "omega_root": 3,
+        "q": 13
+      },
+      {
+        "generator": [
+          1,
+          -3
+        ],
+        "omega_root": 9,
+        "q": 13
+      },
+      {
+        "generator": [
+          -2,
+          3
+        ],
+        "omega_root": 7,
+        "q": 19
+      },
+      {
+        "generator": [
+          -5,
+          -3
+        ],
+        "omega_root": 11,
+        "q": 19
+      },
+      {
+        "generator": [
+          -5,
+          0
+        ],
+        "omega_root": null,
+        "q": 25
+      },
+      {
+        "generator": [
+          -11,
+          0
+        ],
+        "omega_root": null,
+        "q": 121
+      }
+    ]
+  },
+  "predicate_counts": {
+    "exponent": 763,
+    "factorization": 95,
+    "ideal_enumeration": 3,
+    "integral": 226,
+    "local": 16880,
+    "negative_control": 2,
+    "primary": 342,
+    "prime_generator": 56,
+    "row_kernel": 30032,
+    "split": 28
+  },
+  "row_kernels": {
+    "missing_mask_counterexample": {
+      "direct": [
+        18,
+        6
+      ],
+      "g": 1,
+      "r": 1,
+      "s": 23,
+      "without_mask": [
+        12,
+        0
+      ]
+    },
+    "missing_phase_counterexample": {
+      "direct": [
+        18,
+        6
+      ],
+      "g": 1,
+      "r": 1,
+      "s": 23,
+      "without_phase": [
+        6,
+        0
+      ]
+    },
+    "nonzero_shared_prime_offdiagonals": 2132,
+    "prime_ideal_count": 7,
+    "product_columns": 128,
+    "row_count": 72,
+    "row_norm_bound": 19,
+    "unit_mismatch_pairs": 13648
+  },
+  "scope": "exact finite arithmetic; no infinite moment or asymptotic certification",
+  "status": "PASS",
+  "total_predicates": 48427
+}
