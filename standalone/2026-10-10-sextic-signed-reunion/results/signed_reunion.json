@@ -1,0 +1,115 @@
+{
+  "coefficient_contract": "Prime labels and Gauss monomials satisfy declared CRT and finite-ray interfaces; not primitive Eisenstein Gauss-sum evaluations.",
+  "first_negative_witnesses": {
+    "delete_common_row_zero": {
+      "b": 0,
+      "correct": [
+        0,
+        0,
+        -1,
+        0
+      ],
+      "row_valuations": [
+        0,
+        1,
+        0
+      ],
+      "unit": 0,
+      "w": 2,
+      "wrong": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "z1": 4,
+      "z2": 0
+    },
+    "impose_coprime_h_w": {
+      "b": 0,
+      "correct": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "row_valuations": [
+        0,
+        2,
+        0
+      ],
+      "unit": 0,
+      "w": 2,
+      "wrong": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "z1": 4,
+      "z2": 0
+    },
+    "replace_mu_by_absolute": {
+      "b": 0,
+      "correct": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_valuations": [
+        0,
+        0,
+        0
+      ],
+      "unit": 0,
+      "w": 2,
+      "wrong": [
+        0,
+        0,
+        -2,
+        0
+      ],
+      "z1": 4,
+      "z2": 0
+    },
+    "use_h_w4_instead_of_h_w5": {
+      "b": 0,
+      "correct": [
+        0,
+        0,
+        -1,
+        0
+      ],
+      "row_valuations": [
+        0,
+        1,
+        0
+      ],
+      "unit": 0,
+      "w": 2,
+      "wrong": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "z1": 4,
+      "z2": 0
+    }
+  },
+  "formal_gauss_scalar_cases": 44928,
+  "negative_control_rejections": {
+    "delete_common_row_zero": 1152,
+    "impose_coprime_h_w": 612,
+    "replace_mu_by_absolute": 1692,
+    "use_h_w4_instead_of_h_w5": 984
+  },
+  "rational_kernel_cases": 40176,
+  "rational_tail_boundary_cases": 20,
+  "reunion_cases": 15876,
+  "scope": "Exact finite formal cyclotomic algebra and rational bookkeeping; no analytic certification.",
+  "status": "PASS",
+  "strict_condition_reconstructions": 24624,
+  "wrong_conjugation_rejected_cases": 21888
+}

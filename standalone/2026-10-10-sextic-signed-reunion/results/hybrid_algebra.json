@@ -1,0 +1,169 @@
+{
+  "arithmetic": "exact Fraction and integer arithmetic",
+  "counts": {
+    "auxiliary_triangle_vertex_inequalities": 468,
+    "balance_coefficient_equalities": 16,
+    "cutoff_endpoint_inequalities": 16,
+    "displayed_fraction_equalities": 5,
+    "energy_endpoint_inequalities": 48,
+    "negative_control_rejections": 2,
+    "smooth_regrouping_equalities": 11664,
+    "spectral_equalities": 3,
+    "spectral_threshold_inequalities": 2
+  },
+  "regimes": [
+    {
+      "cutoff_D": "8/29",
+      "cutoff_H": "-7/29",
+      "energy_D": "34/29",
+      "energy_H": "155/174",
+      "height_interval": [
+        "0",
+        "111/253"
+      ],
+      "name": "literal_first",
+      "six_substituted_exponents": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "99/116",
+          "563/348"
+        ],
+        [
+          "34/29",
+          "155/174"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "34/29",
+          "155/174"
+        ],
+        [
+          "68/87",
+          "100/87"
+        ]
+      ]
+    },
+    {
+      "cutoff_D": "19/55",
+      "cutoff_H": "-2/5",
+      "energy_D": "53/55",
+      "energy_H": "41/30",
+      "height_interval": [
+        "111/253",
+        "19/22"
+      ],
+      "name": "literal_second",
+      "six_substituted_exponents": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "53/55",
+          "41/30"
+        ],
+        [
+          "13/10",
+          "3/5"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "53/55",
+          "41/30"
+        ],
+        [
+          "106/165",
+          "22/15"
+        ]
+      ]
+    },
+    {
+      "cutoff_D": "8/29",
+      "cutoff_H": "-7/29",
+      "energy_D": "34/29",
+      "energy_H": "155/174",
+      "height_interval": [
+        "0",
+        "150/443"
+      ],
+      "name": "a2_first",
+      "six_substituted_exponents": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "111/116",
+          "1063/696"
+        ],
+        [
+          "34/29",
+          "155/174"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "34/29",
+          "155/174"
+        ],
+        [
+          "68/87",
+          "100/87"
+        ]
+      ]
+    },
+    {
+      "cutoff_D": "38/119",
+      "cutoff_H": "-44/119",
+      "energy_D": "124/119",
+      "energy_H": "911/714",
+      "height_interval": [
+        "150/443",
+        "19/22"
+      ],
+      "name": "a2_second",
+      "six_substituted_exponents": [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "124/119",
+          "911/714"
+        ],
+        [
+          "149/119",
+          "78/119"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "124/119",
+          "911/714"
+        ],
+        [
+          "248/357",
+          "502/357"
+        ]
+      ]
+    }
+  ],
+  "regrouping_cases": 11664,
+  "scope": "Finite algebra and affine exponent comparisons, not analytic certification",
+  "status": "pass",
+  "wrong_deleted_repeated_prime_zero_failures": 440,
+  "wrong_extra_n_d_mask_failures": 312
+}
