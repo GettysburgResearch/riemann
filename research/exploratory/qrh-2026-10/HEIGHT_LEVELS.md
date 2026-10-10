@@ -126,3 +126,27 @@ the positivity step, which discards the `μ(f)` cancellation of the dual diagona
 | zero height `T` | large values of `ζ`, not zeros, become the threat | numerics to `10⁶`; Prop. A (RH-conditional) |
 | reflection rank | the GL(3) cubic theta vanishes where needed | literature (IMPORTED) |
 | depth `σ₀ → 1/2` | implied by sub-diagonal mean squares (converse only at the endpoint); endpoint ⇔ family GRH | Prop. R (RUNG), Corollary (elementary, PROPOSED); Prop. R′ (RUNG) via unreviewed PR 910 |
+
+## 6. A formal anchor that holds at every height (added at the end of the wave)
+
+The four directions above are about mechanisms. One statement now holds uniformly at all heights
+and is machine-checked. It is a Lean theorem about Mathlib's `riemannZeta`, built on the
+imported 7/8 theorem, which comparator accepts
+([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md); [lean/](lean/README.md)):
+
+* every nontrivial zero `ρ = β + iγ` of `ζ` has `1/8 ≤ β ≤ 7/8`, at every height `γ`;
+* the same holds for primitive Dirichlet `L`-functions.
+
+How it sits against the other height facts:
+
+| height range | what is known about β | status |
+|---|---|---|
+| `0 < γ ≤ 3·10¹²` | `β = 1/2` | IMPORTED computation (Platt–Trudgian 2021; not re-run here) |
+| all `γ` | `1/8 ≤ β ≤ 7/8` | Lean theorem (this wave), on the imported 7/8 development |
+| `γ → ∞` | classical zero-free regions `β < 1 − c/(log γ)^{2/3}(log log γ)^{1/3}` | IMPORTED; weaker than 7/8 at every height beyond the verified range |
+
+So, at the level of zero-free regions, "going higher" now has a floor that does not erode: the
+strip does not narrow towards `Re s = 1` as `γ` grows. That is all it says. In particular:
+* Section 2's PR 910 route still breaks down heuristically at large heights, because the threat
+  there is large values of `ζ`, which a zero-free strip does not control pointwise;
+* the strip width `3/4` is far from RH's width `0`.
