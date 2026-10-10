@@ -1,0 +1,75 @@
+{
+  "scope": "Exact finite identities and exponent bookkeeping; no infinite analytic theorem is tested.",
+  "native_gcd_selector": {
+    "prime_norms": [
+      7,
+      13
+    ],
+    "phase_and_zero_assignments": 49,
+    "bounded_gcd_selector_identities": 784
+  },
+  "matching_inversion": {
+    "prime_norms": [
+      7,
+      13
+    ],
+    "phase_and_zero_assignments": 49,
+    "one_sided_selector_types": [
+      "gcd thresholds",
+      "gcd thresholds with shared-prime signs"
+    ],
+    "fourth_moment_matching_identities": 3920,
+    "sixth_moment_matching_identities": 5880
+  },
+  "endpoint_and_graph": {
+    "prime_norms": [
+      7,
+      13,
+      19,
+      31
+    ],
+    "endpoint_selector_checks": 2621440,
+    "nontrivial_residual_cycle_cases": 2370,
+    "nonempty_graph_intersections": {
+      "single": 4,
+      "matching": 2,
+      "star": 4,
+      "path": 4,
+      "cycle": 1
+    }
+  },
+  "exponents": {
+    "union_ranges": [
+      {
+        "b": "3/4",
+        "largest_r_with_single_edge_cost": "2/3",
+        "loss_at_endpoint": "1/3"
+      },
+      {
+        "b": "7/8",
+        "largest_r_with_single_edge_cost": "4/5",
+        "loss_at_endpoint": "3/5"
+      },
+      {
+        "b": "139999/160000",
+        "largest_r_with_single_edge_cost": "80000/100001",
+        "loss_at_endpoint": "59999/100001"
+      },
+      {
+        "b": "1",
+        "largest_r_with_single_edge_cost": "1",
+        "loss_at_endpoint": "1"
+      }
+    ],
+    "matching_orders_checked": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "interpretation": "finite rational arithmetic only; infinite parameter formulas are proved in the note"
+  }
+}

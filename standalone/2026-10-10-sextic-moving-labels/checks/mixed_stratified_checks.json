@@ -1,0 +1,534 @@
+{
+  "scope": "Finite exact arithmetic and rational exponents only; no numerical certification of analytic mean-square bounds.",
+  "manuscripts": [
+    "MIXED_LABEL_COMPLETION.md",
+    "SIXTH_POWER_STRATIFIED_INVERSE.md",
+    "ANISOTROPIC_A2_NORM_TRANSFER.md"
+  ],
+  "local_character_identities": {
+    "all_zero_or_sixth_root_values_per_character": 7,
+    "overlap_relabel_identities": 2401,
+    "cubed_relabel_identities": 2401,
+    "cube_inverse_mask_identities": 14406
+  },
+  "sixth_power_strata": {
+    "one_prime_character_identity_checks": 175,
+    "two_prime_character_identity_checks": 8281,
+    "checks_with_shared_v_and_k0_prime": 5145,
+    "moving_exclusion_exponent_checks": 40,
+    "maximum_prime_valuation_tested": 24
+  },
+  "local_energy_and_valuation_tables": {
+    "exclusion_energy_powers": [
+      "0",
+      "1",
+      "1/3"
+    ],
+    "auxiliary_energy_powers": [
+      "0",
+      "1",
+      "2/3"
+    ],
+    "residue_progression_checks": 216,
+    "progressions": [
+      {
+        "sector": "exclusion_positive_valuation",
+        "height_power": "1",
+        "leading_exponent": "-1",
+        "residue_terms": [
+          [
+            "-1",
+            1
+          ],
+          [
+            "-2",
+            1
+          ],
+          [
+            "-3",
+            1
+          ],
+          [
+            "-3",
+            1
+          ],
+          [
+            "-5",
+            1
+          ],
+          [
+            "-6",
+            4
+          ]
+        ],
+        "geometric_step": "6",
+        "elementary_majorant_constant_for_norm_p_at_least_2": "512/21"
+      },
+      {
+        "sector": "exclusion_positive_valuation",
+        "height_power": "2",
+        "leading_exponent": "0",
+        "residue_terms": [
+          [
+            "0",
+            1
+          ],
+          [
+            "-2",
+            1
+          ],
+          [
+            "-4",
+            1
+          ],
+          [
+            "-5",
+            1
+          ],
+          [
+            "-8",
+            1
+          ],
+          [
+            "-10",
+            4
+          ]
+        ],
+        "geometric_step": "12",
+        "elementary_majorant_constant_for_norm_p_at_least_2": "32768/1365"
+      },
+      {
+        "sector": "exclusion_positive_valuation",
+        "height_power": "4/3",
+        "leading_exponent": "0",
+        "residue_terms": [
+          [
+            "0",
+            1
+          ],
+          [
+            "-4/3",
+            1
+          ],
+          [
+            "-8/3",
+            1
+          ],
+          [
+            "-3",
+            1
+          ],
+          [
+            "-16/3",
+            1
+          ],
+          [
+            "-20/3",
+            4
+          ]
+        ],
+        "geometric_step": "8",
+        "elementary_majorant_constant_for_norm_p_at_least_2": "2048/85"
+      },
+      {
+        "sector": "auxiliary_positive_valuation",
+        "height_power": "1",
+        "leading_exponent": "-1",
+        "residue_terms": [
+          [
+            "-1",
+            1
+          ],
+          [
+            "-2",
+            4
+          ],
+          [
+            "-3",
+            1
+          ],
+          [
+            "-4",
+            1
+          ],
+          [
+            "-5",
+            1
+          ],
+          [
+            "-5",
+            1
+          ]
+        ],
+        "geometric_step": "6",
+        "elementary_majorant_constant_for_norm_p_at_least_2": "512/21"
+      },
+      {
+        "sector": "auxiliary_positive_valuation",
+        "height_power": "2",
+        "leading_exponent": "0",
+        "residue_terms": [
+          [
+            "0",
+            1
+          ],
+          [
+            "-2",
+            4
+          ],
+          [
+            "-4",
+            1
+          ],
+          [
+            "-6",
+            1
+          ],
+          [
+            "-8",
+            1
+          ],
+          [
+            "-9",
+            1
+          ]
+        ],
+        "geometric_step": "12",
+        "elementary_majorant_constant_for_norm_p_at_least_2": "32768/1365"
+      },
+      {
+        "sector": "auxiliary_positive_valuation",
+        "height_power": "4/3",
+        "leading_exponent": "0",
+        "residue_terms": [
+          [
+            "0",
+            1
+          ],
+          [
+            "-4/3",
+            4
+          ],
+          [
+            "-8/3",
+            1
+          ],
+          [
+            "-4",
+            1
+          ],
+          [
+            "-16/3",
+            1
+          ],
+          [
+            "-17/3",
+            1
+          ]
+        ],
+        "geometric_step": "8",
+        "elementary_majorant_constant_for_norm_p_at_least_2": "2048/85"
+      },
+      {
+        "sector": "ordinary_powerful_row_factor",
+        "height_power": "1",
+        "leading_exponent": "-2",
+        "residue_terms": [
+          [
+            "-2",
+            1
+          ],
+          [
+            "-3",
+            1
+          ],
+          [
+            "-3",
+            1
+          ],
+          [
+            "-5",
+            1
+          ],
+          [
+            "-6",
+            4
+          ],
+          [
+            "-7",
+            1
+          ]
+        ],
+        "geometric_step": "6",
+        "elementary_majorant_constant_for_norm_p_at_least_2": "512/21"
+      },
+      {
+        "sector": "ordinary_powerful_row_factor",
+        "height_power": "2",
+        "leading_exponent": "-2",
+        "residue_terms": [
+          [
+            "-2",
+            1
+          ],
+          [
+            "-4",
+            1
+          ],
+          [
+            "-5",
+            1
+          ],
+          [
+            "-8",
+            1
+          ],
+          [
+            "-10",
+            4
+          ],
+          [
+            "-12",
+            1
+          ]
+        ],
+        "geometric_step": "12",
+        "elementary_majorant_constant_for_norm_p_at_least_2": "32768/1365"
+      },
+      {
+        "sector": "ordinary_powerful_row_factor",
+        "height_power": "4/3",
+        "leading_exponent": "-4/3",
+        "residue_terms": [
+          [
+            "-4/3",
+            1
+          ],
+          [
+            "-8/3",
+            1
+          ],
+          [
+            "-3",
+            1
+          ],
+          [
+            "-16/3",
+            1
+          ],
+          [
+            "-20/3",
+            4
+          ],
+          [
+            "-8",
+            1
+          ]
+        ],
+        "geometric_step": "8",
+        "elementary_majorant_constant_for_norm_p_at_least_2": "2048/85"
+      }
+    ],
+    "scope": "Exact monomial and residue data; no analytic norm inequality is numerically certified."
+  },
+  "finite_masked_cube_inverse": {
+    "prime_norms": [
+      7,
+      13
+    ],
+    "cube_support_cap": 200,
+    "cube_ideals": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "full_inverse_identities": 3136,
+    "truncated_inverse_identities": 25088,
+    "empty_short_part_checks": 3136,
+    "exactly_empty_capped_tail_checks": 3136,
+    "stratum_cutoff_checks": 30,
+    "nonzero_repeated_h_b_factor_terms": 1344,
+    "nonzero_inner_n_d_overlap_terms": 2688,
+    "nonzero_outer_r_h_overlap_terms": 780,
+    "scope": "Finite exact convolution on sampled physical data; no Gauss coefficient or theta evaluation."
+  },
+  "stratified_optimization": {
+    "regimes": [
+      {
+        "beta": "1",
+        "d_beta": "3",
+        "cutoff_vectors_D_H_F_Q": [
+          [
+            "4/15",
+            "-4/15",
+            "-2/15",
+            "-1/15"
+          ],
+          [
+            "1/3",
+            "-4/9",
+            "-2/9",
+            "-2/9"
+          ]
+        ],
+        "optimized_energy_vectors_D_H_F_Q": [
+          [
+            "6/5",
+            "4/5",
+            "2/5",
+            "1/5"
+          ],
+          [
+            "1",
+            "4/3",
+            "2/3",
+            "2/3"
+          ]
+        ],
+        "affine_region_vertices_checked": 7,
+        "short_v_powers": [
+          "-6",
+          "-19/2",
+          "-17/3"
+        ],
+        "long_v_powers": [
+          "-6",
+          "-3",
+          "-6"
+        ]
+      },
+      {
+        "beta": "11/12",
+        "d_beta": "19/6",
+        "cutoff_vectors_D_H_F_Q": [
+          [
+            "4/15",
+            "-4/15",
+            "-2/15",
+            "-1/15"
+          ],
+          [
+            "1/3",
+            "-8/19",
+            "-4/19",
+            "-4/19"
+          ]
+        ],
+        "optimized_energy_vectors_D_H_F_Q": [
+          [
+            "6/5",
+            "4/5",
+            "2/5",
+            "1/5"
+          ],
+          [
+            "1",
+            "24/19",
+            "12/19",
+            "12/19"
+          ]
+        ],
+        "affine_region_vertices_checked": 7,
+        "short_v_powers": [
+          "-6",
+          "-37/4",
+          "-17/3"
+        ],
+        "long_v_powers": [
+          "-6",
+          "-3",
+          "-6"
+        ]
+      }
+    ],
+    "angular_transition_h": "19/44",
+    "counting_transition_h": "3/8",
+    "angular_example_exponent": "31/19",
+    "counting_example_exponent": "5/3",
+    "saving_over_previous_raw_exponent": "7/228",
+    "saving_over_classical_exponent": "103/228"
+  },
+  "A2_normalization_and_exponents": {
+    "correction_scale_vectors": {
+      "A_t": [
+        "-1",
+        "-2",
+        "-2"
+      ],
+      "B_t": [
+        "-2",
+        "-1",
+        "-2"
+      ],
+      "R_t": [
+        "-2/3",
+        "-1/3",
+        "-2/3"
+      ]
+    },
+    "six_exterior_weighted_norm_triples": [
+      [
+        "-3/2",
+        "-2",
+        "-5/2"
+      ],
+      [
+        "-1",
+        "-3/2",
+        "-2"
+      ],
+      [
+        "-3/2",
+        "-13/6",
+        "-5/2"
+      ],
+      [
+        "-1",
+        "-1",
+        "-3/2"
+      ],
+      [
+        "-3/2",
+        "-2",
+        "-5/2"
+      ],
+      [
+        "-4/3",
+        "-5/3",
+        "-13/6"
+      ]
+    ],
+    "norm_exponent_checks": 18,
+    "harmonic_ideal_sums_per_term": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      0
+    ],
+    "one_prime_A2_overlap_checks": 7,
+    "scope": "Exact normalization and exponent arithmetic; this does not prove the child analytic theorem."
+  }
+}
