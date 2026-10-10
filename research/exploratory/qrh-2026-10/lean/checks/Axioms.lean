@@ -1,0 +1,7 @@
+import OAI.NumberTheory.DirichletL.Nonvanishing
+
+#check @OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re
+#check @OAI.DirichletCharacter.LFunction_ne_zero_of_seven_eighths_lt_re
+#print axioms OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re
+#print axioms OAI.DirichletCharacter.LFunction_ne_zero_of_seven_eighths_lt_re
+#print axioms OAI.SevenEighths.ProbeFinalAssemblyUnconditional.detector_certified_bands

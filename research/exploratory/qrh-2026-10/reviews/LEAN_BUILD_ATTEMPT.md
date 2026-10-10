@@ -1,7 +1,9 @@
 # Lean build attempt: OpenAI 7/8 comparator challenge (family 003)
 
 ```text
-Status: VERIFICATION ATTEMPT (formal build); no mathematical claim beyond what the build shows
+Status: VERIFICATION (formal build COMPLETED; see Addendum A, and Addendum B for comparator);
+  no mathematical claim beyond what the build shows. Sections 1-8 are the original partial
+  attempt and are kept unchanged as the record of that attempt
 Scope: Kernel build of the import closure of OAI.NumberTheory.DirichletL.Nonvanishing, the solution
   module named in ComparatorChallenges/QuasiRiemannHypothesis.json and DirichletSevenEighths.json.
   The theorem in question is the quasi-RH zero-free half-plane Re s > 7/8. It is NOT RH.
@@ -12,19 +14,62 @@ Exact sources or dependencies: repo ref pr908 = 31c706bbb3dce49a7ebabbe71cd7cbac
   openai/math@adc7f1241b42e322a6451854ab7e4b4c146bf78a lean/. Lean leanprover/lean4:v4.34.1
   (commit 5045d0056413266e57c625dcd7c365b10e377c52); Mathlib d13f23b723b8a846827a245b89c10fc7d3f11612;
   lake-manifest.json unchanged (sha256 cf6105a25d9dca2f...). All 42 packages are at their manifest revisions.
-What was actually run: elan + toolchain install; `lake exe cache get` (Mathlib cache, 8,908 files);
-  manual application of the 12 post_update patches (the lakefile's run_cmd applied the other 11);
-  `lake build` of both challenge modules (OK, expected `sorry` warnings only); `lake build
-  OAI.NumberTheory.DirichletL.Nonvanishing` for 98.8 min wall time, stopped at the time budget;
-  comparator/lean4export/landrun built, and comparator's own self-tests run (4/4 pass).
-  Comparator was NOT run on the 7/8 challenge. `#print axioms` was NOT obtained.
-Smallest remaining gap: the remaining ~2,574 of 2,924 OAI modules (~290k of 486k lines). After
-  that, `lake env comparator ComparatorChallenges/QuasiRiemannHypothesis.json`, plus `#print axioms`
-  on OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re. The build resumes incrementally from the
-  scratch state; see Section 7.
+What was actually run: the original attempt (below), then three bounded resumptions of the same
+  incremental build (one stopped by the background time limit, one by a full disk while writing an
+  .olean, one completing): "Build completed successfully (7061 jobs)", 0 errors, 0 `sorry`
+  warnings in the final log. Then `#print axioms` and a statement-pinning check (Addendum A),
+  and comparator (Addendum B).
+Smallest remaining gap: the kernel check certifies the Lean statement against Lean + Mathlib +
+  the 23 patched third-party packages, under comparator's trust assumptions (Addendum B). It does
+  not certify the manuscript's text, and no human has reviewed the Lean development.
 ```
 
-## 1. Verdict: PARTIAL
+## Addendum A (10 Oct 2026, later the same day): build completed; axioms are standard
+
+The incremental build was resumed three times from the scratch state of Section 7:
+* The first resumption hit the 2-hour background limit.
+* The second failed only because the disk filled while writing an `.olean` ("failed to write");
+  that is an environment error, not a Lean error. About 1.2 GB of caches were freed.
+* The third finished: `✔ [7061/7061] Built OAI.NumberTheory.DirichletL.Nonvanishing`,
+  "Build completed successfully (7061 jobs)". Its log has 0 errors and 0
+  `declaration uses 'sorry'` warnings.
+
+`lake env lean scripts/Axioms.lean` then printed:
+
+```text
+@OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re : ∀ {s : ℂ}, 7 / 8 < s.re → riemannZeta s ≠ 0
+@OAI.DirichletCharacter.LFunction_ne_zero_of_seven_eighths_lt_re : ∀ {q : ℕ} [inst : NeZero q]
+  (χ : DirichletCharacter ℂ q) {s : ℂ}, 7 / 8 < s.re → ¬(χ = 1 ∧ s = 1) → DirichletCharacter.LFunction χ s ≠ 0
+'OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.DirichletCharacter.LFunction_ne_zero_of_seven_eighths_lt_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.SevenEighths.ProbeFinalAssemblyUnconditional.detector_certified_bands' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+
+So there is no `sorryAx`, no `Lean.ofReduceBool` (`native_decide`), no `Lean.trustCompiler` and no
+project-declared axiom behind either theorem.
+
+A second check file (`scripts/Statement.lean`) pins the statements:
+* it elaborates both theorems against the explicit types written with `_root_.riemannZeta` and
+  `_root_.DirichletCharacter.LFunction`;
+* it reports the defining modules: `riemannZeta` from `Mathlib.NumberTheory.LSeries.RiemannZeta`,
+  `DirichletCharacter.LFunction` from `Mathlib.NumberTheory.LSeries.DirichletContinuation`.
+
+The theorem is therefore about Mathlib's own zeta and Dirichlet `L`-functions, not about a
+project redefinition. Mathlib itself is unmodified at d13f23b7 (`git status` clean).
+
+The "has local changes" warnings that lake prints are the 23 shipped third-party patches of
+Section 3. They are part of the trusted input, and they were not reviewed beyond Section 3's checks.
+
+What this does and does not establish:
+* It establishes that Lean's kernel accepted a proof of `∀ s, 7/8 < Re s → ζ(s) ≠ 0` (and the
+  Dirichlet analogue), built on this machine from the pinned sources, using only the three
+  standard axioms.
+* It is not a review of the 30 Sep manuscript, and it is not RH. The half-plane `Re s > 7/8` says
+  nothing about the critical line.
+* `#print axioms` trusts the elaborated environment. Comparator's export-and-replay is the
+  stronger check (Addendum B).
+
+## 1. Verdict of the original attempt (superseded by Addendum A): PARTIAL
 
 The 7/8 closure was **not** fully built, so this attempt makes **no** kernel-checked claim about the 7/8 theorem. Comparator was not run on it, and no axiom list exists for it.
 
