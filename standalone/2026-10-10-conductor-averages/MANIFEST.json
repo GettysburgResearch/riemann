@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "status": "Exact frozen source identity for proposed standalone deductions; not external acceptance or formal verification.",
+  "repository": "GettysburgResearch/riemann",
+  "source_commit": "38ee7069e23ae24fd693e70149dc817900c3caa4",
+  "source_tree": "6df69e2b5674372695530860f9528b8db7aee9ff",
+  "source_parent": "506e3808d2f1e86a31a6d1f70cc7da58367c9918",
+  "source_url": "https://github.com/GettysburgResearch/riemann/commit/38ee7069e23ae24fd693e70149dc817900c3caa4",
+  "branch": "research/sextic-conductor-averages-20261010",
+  "base_branch": "research/sextic-joint-divisor-covariance-20261010",
+  "base_pr": 925,
+  "files": [
+    {
+      "path": "README.md",
+      "git_blob": "a72964a65fee97fe09e39a8b60eac18d8ab6f2d5",
+      "sha256": "3d7794384f381023b193ec07287e35f7479fbee6f08fb9e74e34e0f326c7c55e",
+      "bytes": 12828
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/CUBIC_CONDUCTOR_AVERAGE.md",
+      "git_blob": "ce56a368ec623da97a1977e5bd72750e8b6ab148",
+      "sha256": "74d9063bd36128d2b510a11d96dda8055539bd7c7a2f2d07f5cc3a105223ea61",
+      "bytes": 24307
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/EXPLORATION_SINGLETON_SIEVE.md",
+      "git_blob": "e7ad36ce77f6414f0931cdb5a6168348d0d9be36",
+      "sha256": "448a711f232d6a001769aa9849cf3331045e99ce2a4dfe47d8f4ca4a190f79aa",
+      "bytes": 8517
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/GAUSSIAN_SAMPLED_MOMENTS.md",
+      "git_blob": "31c446ef6dce84a38cdf5d7024b75da56d1e9af2",
+      "sha256": "53625b2fc8da8162792bb40cbb329cd609ddf152d362f05fad32ac7b841d41d4",
+      "bytes": 22774
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/JOINT_CONTINUATION.md",
+      "git_blob": "e94fd8193435864f875e0071dfd7edb7cfe33c4f",
+      "sha256": "67643be282fbc27e8f0b42d30032d185218b4e70fb96baa14566df49aacf012a",
+      "bytes": 30503
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/RATIONAL_PRIME_INCIDENCE.md",
+      "git_blob": "f22de70e282f7f5647879060377ca927d9b458be",
+      "sha256": "84b3aa3ba6ab0bdd05f70e2682f52d46697a335c8fa4f91cae77107de3b04d0e",
+      "bytes": 35732
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/README.md",
+      "git_blob": "a3f4ef373abedd89dd70bc9a702e5a526fd404b9",
+      "sha256": "78b62f5573a626e10b456c1227e0766ff689ca6e92fe9e2e49ff67b77d39decb",
+      "bytes": 13365
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/REVIEW_CUBIC_CONDUCTOR_AVERAGE.md",
+      "git_blob": "66d9470b43e7033afc50c82cc5b2c9cf5e179c2b",
+      "sha256": "90d6a4420fa17cfe22719c650833d88e50d3cf1d3727404bc4111eb2743a6d73",
+      "bytes": 12131
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/REVIEW_GAUSSIAN_SAMPLED_MOMENTS.md",
+      "git_blob": "35c2598ea6f40174906208fcb389eaeab04e6b42",
+      "sha256": "783afecb330858a3ea2bd306359e64fe21a6c785cea4fdf61fabf9ea1a0d5a85",
+      "bytes": 5638
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/REVIEW_GAUSSIAN_SECOND.md",
+      "git_blob": "f8890c781b37a2153850523199bfe3f4e8f80077",
+      "sha256": "15cc6cac6fab6271cad75bb1cd2340281fc392fd0ebec61af8873eeb9d812feb",
+      "bytes": 7830
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/REVIEW_JOINT_CONTINUATION.md",
+      "git_blob": "b0a26102e2207e4b47c27a0d35a241e02a35eb87",
+      "sha256": "4430ab109d4db7d37f66c1682e7299ff9e308b54460784e9cd9e366cb7aa958a",
+      "bytes": 16550
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/REVIEW_RATIONAL_PRIME_INCIDENCE.md",
+      "git_blob": "8dd304906c711e5b419781b26e153b9c99f37077",
+      "sha256": "54999c441123a1fba5af440ac71a20506d24d8c510ab659b08c7563557799d54",
+      "bytes": 19000
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/SOURCE_LOCK.json",
+      "git_blob": "5b439c3dbb466d0da4fa6e86ea94f28d7b69bb1b",
+      "sha256": "6ae3e490e5beb0a4d6cc962c552f4fa1e16c0ecc7a34a01baf2780f1d231d4c0",
+      "bytes": 9471
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/check_conductor_exponents.py",
+      "git_blob": "a0ae30ebd6c258abf651554dd323f8402c107334",
+      "sha256": "7adb5521e29ccb357b500b1ad89332eb26138041f161cd40f784c5eddbbd7cdc",
+      "bytes": 6301
+    },
+    {
+      "path": "standalone/2026-10-10-conductor-averages/conductor_exponent_report.json",
+      "git_blob": "a15e06b5a641fdabf86703cc6bf427d6113d50e1",
+      "sha256": "0dc77aa4f0a4b6b09c80c6c17726122b91342857ad914e64d059ed7111d43693",
+      "bytes": 2479
+    }
+  ],
+  "repository_dependencies": "SOURCE_LOCK.json",
+  "subsequent_validation_files": [
+    "MANIFEST.json",
+    "VALIDATION.md",
+    "EXACT_SOURCE_REVIEW_CUBIC_AND_SCOPE.md",
+    "EXACT_SOURCE_REVIEW_RATIONAL_AND_JOINT.md",
+    "EXACT_SOURCE_REVIEW_GAUSSIAN.md"
+  ],
+  "scope": "The subsequent validation-only commit adds receipts and metadata without editing any file listed in this manifest. The source commit, rather than a mutable branch tip, is the mathematical review object."
+}
