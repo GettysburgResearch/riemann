@@ -15,7 +15,23 @@ they are unreviewed by humans. The Lean statement of the Sep 30 claim, `ζ(s) �
 (Mathlib's `riemannZeta`), has been kernel-checked here with comparator
 ([reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md), Addendum B).
 
-## Headline findings (PROPOSED; conditional on the manuscript's stated lemma outputs)
+## Headline (end of wave)
+
+* **Formal.** The Lean statement `ζ(s) ≠ 0` for `Re s > 7/8` (Mathlib's `riemannZeta`), and its
+  Dirichlet and Hecke-family versions, are accepted by comparator with Lean's kernel. Only the
+  standard axioms are used, under the trust assumptions in
+  [reviews/LEAN_BUILD_ATTEMPT.md](reviews/LEAN_BUILD_ATTEMPT.md). The wave adds formal corollaries:
+  * the strip `1/8 ≤ Re s ≤ 7/8` for nontrivial zeros of `ζ` and of primitive Dirichlet `L`;
+  * the Oct 1 Siegel-zero statement with explicit `c = (log 3)/8`.
+* **Structure.** The formal proof uses no Part I. On paper, a Part-I-free route is PROPOSED with
+  two same-family reviews ([reviews/PART1_FREE_ROUTE.md](reviews/PART1_FREE_ROUTE.md)).
+* **Limits.** Both architectures have ceilings for known inputs, 13/15 and 11/12. Numerics show
+  that the needed cancellation exists and is random-like. What is missing is a mechanism. RH is
+  untouched.
+
+Start with [SYNTHESIS.md](SYNTHESIS.md) §0.
+
+## Headline findings of the analysis (PROPOSED; conditional on the manuscript's stated lemma outputs)
 
 1. **The arithmetic checks out.** The rational arithmetic and polynomial identities turning the
    lemmas into margins pass: 53/53 exact checks (`scripts/ledger_check.py`).
