@@ -57,10 +57,10 @@ named, unproved hypothesis, inside a model of its stated lemma outputs.
 |---|---|---|---|---|---|---|---|
 | CS (manuscript) | — | — | — | 0 | 167/192 = 0.869792 | 13/15 = 0.866667 | 0.874974 (exact limit 0.874957, PR 910) |
 | **(H-dFDH)** | conjectured sextic large sieve, extra terms included | yes | no | `½(2b−ly+d−max(0,b/6))₊` = **0** in every relevant geometry | 167/192 | 13/15 | **0.874974, identical to CS** |
-| (H-biasA) | Gram of the Gauss-sum vector without the `P_a^{1/6}` bias | no | no (super-diagonal) | `b/12` | 926/1077 = 0.859796 | 6/7 = 0.857143 | MODEL_BIASA |
-| (H-LS) | sharp (bias-free) sextic sieve for the theta-row vector only | no | no (exactly at the wall) | `½ max(0, b/6, 2b−ly+d)` | 251/300 = 0.836667 † | 5/6 † | MODEL_LS |
-| (H-λ), λ = 1/2 | twisted first moments at `Q^{1/2}Y'^{1/2}‖b‖²` | no | yes | `G/2 + (lx−d)/4` | 60/77 = 0.779221 | 7/9 = 0.777778 | MODEL_LAM |
-| **(H-diag)** | twisted first moments at their diagonal `Y'‖b‖²` | no | yes (ρ = 23/40 at d = 0) | `G/2 + (lx−d)/2` (= 3/16 at the paper geometry) | 203/303 = 0.669967 | 2/3 | **(√33 − 3)/4 = 0.686141** (ℓ = 0), MODEL_DIAG |
+| (H-biasA) | Gram of the Gauss-sum vector without the `P_a^{1/6}` bias | no | no (super-diagonal) | `b/12` | 926/1077 = 0.859796 | 6/7 = 0.857143 | 0.859796 |
+| (H-LS) | sharp (bias-free) sextic sieve for the theta-row vector only | no | no (exactly at the wall) | `½ max(0, b/6, 2b−ly+d)` | 251/300 = 0.836667 † | 5/6 † | 0.836667 † |
+| (H-λ), λ = 1/2 | twisted first moments at `Q^{1/2}Y'^{1/2}‖b‖²` | no | yes | `G/2 + (lx−d)/4` | 60/77 = 0.779221 | 7/9 = 0.777778 | 0.781933 |
+| **(H-diag)** | twisted first moments at their diagonal `Y'‖b‖²` | no | yes (ρ = 23/40 at d = 0) | `G/2 + (lx−d)/2` (= 3/16 at the paper geometry) | 203/303 = 0.669967 | 2/3 | **(√33 − 3)/4 = 0.686141** (ℓ = 0), 0.6836–0.6861 |
 
 `G = max(0, b/6, 2b − ly + d)` is the manuscript's Gram exponent. † marks a vertex at the
 degenerate corner `lx = ℓ = 0`, `ly = 1` (X = 1, dual length 1). There the barrier is the
@@ -338,7 +338,23 @@ the binding constraint.
 
 ### 4.1 Results
 
-MODEL_TABLE
+Paper-count model values (FLOATING, Nelder–Mead plus fine-grid re-verification). Taken from the
+run log `scratchpad/conditional_b2.log`. The agent was cut off by an API rate limit before it
+wrote `results/conditional_b2.json`. Cells marked "not run" were not reached; the coordinator
+filled in this table from the log.
+
+| hypothesis | `a0 = 51/100` | `a0 → 1/2⁺` (`1/2 + 1/2000`) | optimum geometry `(lx, ly, ℓ)` |
+|---|---|---|---|
+| CS (manuscript) | 0.874974 | 0.874974 | (0.358, 0.475, 0.167) |
+| (H-dFDH) | 0.874974 | 0.874974 | same as CS |
+| (H-biasA) | 0.859796 | not run | (0.290, 0.579, 0.131) |
+| (H-LS) | 0.836667 † | not run | (0.02, 0.98, 0), degenerate corner |
+| (H-λ), λ = 1/2 | 0.781933 | 0.781926 | (0.461, 0.461, 0.078) |
+| (H-diag) | 0.683611 | 0.683772 | (0.500, 0.534, ≈ 0) |
+
+The (H-diag) model values sit slightly *below* the slot-free closed form 0.686141. The optimizer
+uses a tiny `ℓ ≈ 10⁻⁴` and `ly ≠ lx`, and the grid reads slightly low (§4.2). Treat 0.6836–0.6861
+as the model range.
 
 **(H-dFDH) equals CS everywhere it could matter (exact).** The two low sides differ only where
 `11b/6 > ly − ℓ`. On that region an exact LP gives:
@@ -369,7 +385,7 @@ Under (H-diag) the low side on the branch `M ≥ 1` is `1/3 + lx/6 + ly/2`. Mini
 
 At this point the floor bin is `0.6371` (`a0 = 51/100`), so it does not bind, and the value is
 the same for both floors. `P_a = 1` and `M = 2L ≈ 1.058 > 1`: the dual-length branch of
-`E_B` is active. MODEL_DIAG_SLOTS
+`E_B` is active. With slots allowed, the floating model gives 0.6836 (`a0 = 51/100`) and 0.6838 (`a0 → 1/2⁺`), consistent with the closed form up to grid and optimizer error.
 
 ### 4.3 Floor dependence (both floors, as requested)
 
@@ -402,12 +418,12 @@ the lemma-range extrapolations of Sec. 7, whenever the geometry is not the manus
    value is `(1507 − 2√921)/1653 ≈ 0.874957` with or without (H-dFDH). **There is no conditional
    boundary below 7/8 attributable to (H-dFDH).**
 2. **(H-biasA) or (H-LS) (Gauss-sum bias only).** Conditional on the manuscript's other lemmas and
-   on (H-LS), ζ has no zeros in `Re s > σ_LS` with **σ_LS ≈ MODEL_LS_SHORT** (FLOATING,
+   on (H-LS), ζ has no zeros in `Re s > σ_LS` with **σ_LS ≈ 0.8367** (FLOATING,
    paper counts). The exact barrier for any row counts is `251/300` (`a0 = 51/100`), reached
-   only at a degenerate corner. Under (H-biasA), which is expected false: **σ ≈ MODEL_BIASA_SHORT**.
+   only at a degenerate corner. Under (H-biasA), which is expected false: **σ ≈ 0.8598**.
 3. **(H-diag).** Conditional on the manuscript's other lemmas and on (H-diag), ζ has no zeros in
    `Re s > σ_diag` with **σ_diag = (√33 − 3)/4 ≈ 0.686141** (paper counts, slot-free geometry
-   `lx = ly = (3√33 − 13)/8`, ℓ = 0, both floors; MODEL_DIAG_SHORT). Whatever the row counts, the
+   `lx = ly = (3√33 − 13)/8`, ℓ = 0, both floors; model 0.6836–0.6861). Whatever the row counts, the
    architecture cannot go below **203/303 ≈ 0.669967** at `a0 = 51/100`, or **2/3** at
    `a0 → 1/2⁺`. The latter needs reviews/SEP30_DETECTOR_QUANTIFIERS.md §4.
 4. **(H-λ).** With `a0 → 1/2⁺` the barrier is `min((13 − 5λ)/(15 − 3λ), 5/6†)`.
@@ -417,7 +433,7 @@ the lemma-range extrapolations of Sec. 7, whenever the geometry is not the manus
    * The LP certifies this value optimal at λ = 1/4, 1/2, 3/4 and 1 (47/57, 7/9, 37/51, 2/3).
      For other λ it is only an upper bound for the LP value.
    * It drops below the 5/6 family floor only for `λ > 1/5`. Paper counts at λ = 1/2:
-   **σ ≈ MODEL_LAM_SHORT**.
+   **σ ≈ 0.7819**.
 
 ## 6. Sanity checks against 167/192, 13/15 and the floor
 

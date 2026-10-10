@@ -213,8 +213,14 @@ a curve `σ₀(Y) = 1/2 + c loglog Y/log Y`, `Y ≈ 4T`.
    * Numerically the true bilinear form *is* far below Cauchy–Schwarz, by about `Q^{−1/2}`
      ([numerics/B2_NUMERICS.md](numerics/B2_NUMERICS.md)). But random phases on the same supports
      show the same saving, so the obstacle is proof technology, not truth. This mirrors the Oct 5
-     side ([moments/DUAL_ANATOMY.md](moments/DUAL_ANATOMY.md)). Conditional pricing:
-     [CONDITIONAL_B2.md](CONDITIONAL_B2.md), when present.
+     side ([moments/DUAL_ANATOMY.md](moments/DUAL_ANATOMY.md)). Conditional pricing ([CONDITIONAL_B2.md](CONDITIONAL_B2.md)):
+     * the published de Faveri–Dunn–Hoffstein large-sieve conjecture buys **nothing**: its extra
+       term is the manuscript's own Gram excess;
+     * removing only the Gauss-sum bias gives ≈ 0.836–0.860;
+     * a sub-diagonal, diagonal-size hypothesis (H-diag) would give ≈ 0.686 (barrier 2/3).
+
+     As on the Oct 5 side, row-blind inputs stall, and only sub-diagonal, coefficient-specific
+     input pays.
 4. Everything else (moment constants, detector floor, joint moments, iteration) is capped at
    `≤ 1/120` by the certificates.
 
