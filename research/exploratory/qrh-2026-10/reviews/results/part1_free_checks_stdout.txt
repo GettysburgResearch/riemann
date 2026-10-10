@@ -1,0 +1,50 @@
+PASS [T0] paper.tex SHA-256 matches the reviewed object :: 42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3
+PASS [T1] 32 anchor strings found at the cited lines :: {'387': 'beta_* <= 1 by definition and Euler convergence (input of this route)', '1593': 'Lemma 4.9 global clause covers b > 1 (contours at beta_*+e when beta_* = 1)', '4054': 'Lemma 7.1 region one allows w_r >= -1/100', '4285': 'Lemma 8.1 bins cover a in [51/100, 1]', '4338': 'Lemma 8.1 allows a zero on Re s = 1', '4372': 'detector delta range is [1/50, 1]', '4513': 'Prop 8.3 for every t in [1, 3/2]', '4529': 'Prop 8.3 witness: r >= t - 1/2 - O(eps)', '5857': 'Lemma 10.3 contour Re w = 1-a-6e stays in region one for a <= 1', '6300': 'Lemma 10.5 (principal signal) covers beta_* = 1', '6812': 'the bootstrap sentence', '6817': 'eq:part-II-bootstrap', '6825': 'eq:part-II-bin-ceiling', '8854': 'Prop 16.1 for 51/100 <= a <= 1', '12532': 'Lemma 18.1 stated for kappa in [3/4, 1]', '12565': 'Lemma 18.1 kappa = 1 clause', '15023': 'Lemma 19.1 uniform for 51/100 <= a <= 1', '15104': 'Sec 19.2 preamble uses kappa < 1', '15275': 'no-slot amplified exponent e(r)', '15282': 'eq:no-slot-inverse-count', '15448': 'Remark 19.3', '15458': 'Remark 19.3: valid for delta <= 1', '15928': 'endpoint argument at delta = alpha', '15946': 'eq:large-delta-endpoint', '16133': 'frequency slope 4/25 (the delta <= 1 value)', '16141': '139/96 (the Delta <= 1/8 value)', '16165': 'intermediate range uses delta <= 5/6', '16168': 'delta = alpha count used for all d <= h', '16223': 'm_high is a min', '16241': 'Prop 20.3 mesh sentence', '16269': 'Prop 20.3 rounding sentence', '16324': 'choices depend on Delta'}
+PASS [T2] census: 282 Part II pattern lines, 129 notation-only (other symbols), 153 substantive; every substantive line lies in exactly one item :: {'unclassified': [], 'overlap': [], 'items_without_hits': [], 'lines_per_category': {'R': 3, 'a': 117, 'b': 30, 'c': 3}, 'per_item': {'U1': [6812, 6814, 6815], 'U2': [6816, 6817, 6819], 'U3': [6822, 6824, 6825, 6828, 6830], 'U4': [6842], 'U5': [8647, 8648], 'U6': [9110, 9139], 'U7': [12532, 12561, 12564, 12565, 12573], 'U8': [12581, 12583, 12584], 'U9': [12833, 12834, 12837, 12844, 12847, 12873, 12878, 12882, 12893, 12896, 12897, 12898], 'U10': [12932, 12933, 12949, 12971, 12975, 14219, 14227, 14228, 14259, 14260, 14263, 14271, 14272, 14827, 14889, 14906], 'U11': [15097, 15099, 15100, 15101, 15103, 15104, 15105, 15106, 15107, 15108], 'U12': [15175, 15176, 15180], 'U13': [15188, 15198, 15201, 15208], 'U14': [15289, 15300, 15302, 15303, 15306, 15307], 'U15': [15326, 15338, 15341], 'U16': [15398, 15399, 15400, 15420], 'U17': [15429], 'U18': [15464], 'U19': [15498, 15501, 15502, 15503], 'U20': [15614, 15667, 15668, 15669, 15692], 'U21': [15724], 'U22': [15763], 'U23': [15859, 15882], 'U24': [15926, 15928, 15934], 'U25': [15949, 15951, 15952, 15953, 15955, 15956, 15960, 15963, 15978, 15983, 15988], 'U26': [15995, 16003, 16019, 16025, 16032], 'U27': [16087, 16091, 16098, 16099, 16101, 16106, 16108], 'U28': [16128, 16129, 16139, 16141, 16143], 'U29': [16146, 16165, 16166], 'U30': [16174, 16175, 16178, 16179, 16182, 16183, 16185], 'U31': [16197, 16200, 16212, 16222, 16233], 'U32': [16241], 'U33': [16269], 'U34': [16324], 'U35': [16333, 16350], 'U36': [16370, 16440, 16446], 'U37': [16459, 16460]}}
+PASS [T3] the only Part II citation of Thm 3.1 (thm:eleven-twelfths) is line 6812 :: [6812]
+PASS [T4] Remark 19.3 (15448) is the only occurrence of its title (unlabeled; no \ref reaches it) :: [15448]
+PASS [A1] eq:common-high-exponent (15726-15734): first line = second line, C_0 = -1/48 (identity in delta, q, R, d; no range used)
+PASS [A2] count, r >= 1: (1+5r)/6 - delta r - (1-delta) = (5/6 - delta)(r - 1)
+PASS [A3] count, r < 1 (e(r) = 1): 1 - delta r - (1-delta) = delta (1 - r)
+PASS [A4] (1+5r)/6 <= 1 iff r <= 1, so e(r) = 1 on r <= 1 and (1+5r)/6 on r >= 1
+PASS [A5] for 5/6 <= delta <= 1 and 1 <= r <= 3/2: (1+5r)/6 - delta r <= 1 - delta (max of the difference is 0, at delta = 5/6 or r = 1) :: {'max': '0', 'at': ['5/6', '1']}
+PASS [A6] Lean high_bin_count shape: for r in [1-gamma, 1), 1 - delta r <= 1 - delta + gamma (checked as max of delta(1-r) - gamma over r >= 1-gamma: substitute r = 1 - s gamma)
+PASS [A7] high margin identity with R = 1 - delta + lambda: E(d) - Delta = -1/48 - delta/16 - Delta + (q - delta/2)/6 + (13/16) lambda + (d - h)(33/50 - delta/2 + lambda)
+PASS [A8] at d = h, q = delta/2, lambda = 0: E(h) - Delta = -1/48 - delta/16 - Delta (the claimed margin; paper (eq:large-delta-endpoint) minus Delta; Lean high_source_margin)
+PASS [A9] frequency slope S(delta) = R + delta/2 - 17/50 at R = 1-delta: S(1) = 4/25 > 0, S(5/6) = 73/300 < 2; S is decreasing, so 4/25 <= S <= 73/300 on [5/6, 1]
+PASS [A10] margin over the whole range: for 5/6 <= delta <= 1, 0 <= Delta <= 1/8, 0 <= q <= delta/2, 1/100 <= d <= h: E(d) - Delta <= -1/48 - delta/16 - Delta, equality iff d = h and q = delta/2 (by A7: both correction terms are products of factors of fixed sign; checked at the vertices of (q/delta, delta, d))
+PASS [A11] extension h < d <= h + zeta: (d - h) S <= (73/300) zeta <= 2 zeta (Lean relative_extend uses 2 zeta)
+PASS [A12] claimed margin at the corners: -7/96 (5/6, 0), -19/96 (5/6, 1/8), -1/12 (1, 0), -5/24 (1, 1/8); maximum over the range is -7/96 < 0 :: {'delta=5/6,Delta=0': '-7/96', 'delta=5/6,Delta=1/8': '-19/96', 'delta=1,Delta=0': '-1/12', 'delta=1,Delta=1/8': '-5/24'}
+PASS [A13] high-bin margin dominates the balanced one: -1/48 - delta/16 - Delta <= -(51/64)Delta - 7/96 (so every high bin keeps more than m_hi >= m_high) :: 0
+PASS [A14] balanced: -49/440640 + h Delta/4 - Delta = -49/440640 - (51/64) Delta (any Delta)
+PASS [A15a] capacity comparison: (Delta/4 - increase) * 18(9/2+12 Delta)/Delta = 81/4 + 54 Delta - 96 q (1-2m)
+PASS [A15] capacity comparison <= Delta/4 for every Delta in [0, 1/8] (q <= 1/2, 1 - 2m <= 1/3): the bracket is >= 17/4 > 0; it only grows with Delta :: -17/4
+PASS [A16] 139/96 = 17/12 + (1/8)/4 exactly (the paper's R_* + Delta/4 bound is the Delta <= 1/8 value; with Delta <= 1/24 it would be 137/96); 139/96 + 1/2 - 17/50 < 2
+PASS [A17] m_high = min{51 Delta/64, 63/800} switches at Delta = 42/425, inside (1/24, 1/8]: for larger Delta, m_high = m_small (Prop 20.3 defines it as the min, so nothing changes) :: 42/425
+PASS [A18] kappa = 3/4 + 2 Delta lies in [3/4, 1] iff Delta in [0, 1/8]; kappa = 1 iff Delta = 1/8 iff beta_* = 1 (then Lemma 18.1's kappa = 1 clause applies); delta <= kappa <= 1
+PASS [A19] high bins (delta > 5/6) can occur only if kappa > 5/6, i.e. Delta > 1/24
+PASS [A20] Lemma 10.3 / Prop 16.1 contours for a <= 1, 0 < e < 1/1000: Re w = 1 - a - 6e >= -6e > -1/100, and Re s + Re w = 1 + 10e (region one with eps_0 = 10e)
+PASS [A21] Lemma 16.2 small-row line x_r = beta_* + e: the local exponents -x_r and 4 - 5x_r - 6z_r decrease in beta_*, so beta_* >= 7/8 is the binding case and beta_* <= 1 is never used
+PASS [A22] Prop 8.3 Gamma-integral exponent -3 + t(5/4 - sigma) <= -189/100 uses only sigma >= 51/100 (decreasing in sigma; at sigma = 1 it is -21/8)
+PASS [G1] exact grid: e(r) - delta r <= 1 - delta + delta (1-r)_+ on 11 delta x 6 r points in [5/6,1] x [1 - 1/100, 3/2] :: {'max_excess': '0'}
+PASS [G2] exact grid: E(d) - Delta <= -1/48 - delta/16 - Delta + (13/16)lambda + 2(d-h)_+ on 11 delta x 6 Delta x 3 q x 7 d x 2 lambda points (corners delta = 5/6, 1 and Delta = 0, 1/8 included) :: {'points': 2838, 'max_excess': '0', 'at': ['5/6', '0', '5/12', '13/16', '0']}
+CONTROL-OK [FC1] drop delta >= 5/6: at delta = 4/5, r = 3/2 the amplified count exceeds 1 - delta :: 1/60
+CONTROL-OK [FC2] drop the t = 3/2 witness (r >= 1 - O(eps)): at r = 1/2 the count is 1 - delta/2 > 1 - delta :: ['5/12', '1/2']
+CONTROL-OK [FC3] use the t = 1 no-slot count R = 1 - 2 delta/3 in a high bin: E(h) = -1/48 + 5 delta/24 > 0 (11/72 at delta = 5/6) :: 11/72
+CONTROL-OK [FC4] reuse the paper's intermediate count (16146-16165) in a high bin: E(1/2) = -529/2400 + 25 delta/96 is <= -49/14400 exactly iff delta <= 5/6, vanishes at delta = 529/625 and equals +1/25 at delta = 1 :: {'E_at_1': '1/25', 'E_at_5_6': '-49/14400'}
+CONTROL-OK [FC5] 139/96 chain beyond Delta = 1/8: at Delta = 1/7, 17/12 + Delta/4 > 139/96 :: 1/224
+CONTROL-OK [FC6] the literal 'm_high = 51 Delta/64' (SEP30_DETECTOR_QUANTIFIERS 6.2) at Delta = 1/8: 51/512 > 63/800 :: 267/12800
+CONTROL-OK [FC7] drop the subtraction of Delta (16106-16108) in a balanced bin at Delta = 1/8: -49/440640 + h Delta/4 > 0 :: 89113/3525120
+CONTROL-OK [FC8] kappa <= 5/6 (16241, eq:part-II-bootstrap) at Delta = 1/8: kappa = 1 > 5/6 :: 1/6
+CONTROL-OK [FC9] a beyond 1 (a = 101/100, e = 1/1000): Re w = 1 - a - 6e < -1/100 leaves region one :: -3/500
+CONTROL-OK [FC10] the slope bound 73/300 (exact min on delta <= 5/6, JUNCTION R3) fails at delta = 1; the paper's 4/25 is the delta <= 1 value :: -1/12
+PASS [S1a] without amplification (raw moment, exponent max{1,r}) at t = 3/2: R = (3/2)(1-delta), E(h) = 37/96 - 15 delta/32
+INFO [S1] control 'drop the amplification' does NOT fail on [5/6, 1]: E(h) <= -1/192 (zero at delta = 37/45 < 5/6); the margin shrinks from 7/96 to 1/192 at delta = 5/6 :: {'5/6': '-1/192', '9/10': '-7/192', '1': '-1/12'}
+INFO [S2] control 'e(r) = 1' (an unproven, stronger moment) does NOT fail: it lowers the count to 1 - delta r <= 1 - delta for r >= 1; uninformative
+PASS [J1] junction gates replayed on Delta in (0, 1/8] (13 box substitutions): every gate passes except P2 (kappa <= 5/6), and all failing controls still fire :: {'failed': ['P2'], 'controls_not_firing': [], 'n_gates': 84, 'seconds': 65.6}
+
+32/32 gates pass; 10/10 failing controls fire
+
+real	1m6.563s
+user	1m5.320s
+sys	0m0.127s

@@ -63,6 +63,15 @@ integration verdict.
          sieves, Chebotarev via Wiener–Ikehara).
        * Otherwise it uses the paper's 7/8 exponent bookkeeping constant for constant.
        * So the formal 7/8 depends neither on the paper's Part I nor on the Oct 5 paper.
+       * **The same works on paper** ([reviews/PART1_FREE_ROUTE.md](reviews/PART1_FREE_ROUTE.md);
+         PROPOSED, bounded review). Part II as written, plus the endpoint count extended to all
+         bins `δ ∈ [5/6, 1]`, proves 7/8 from `β* ≤ 1` alone.
+         * The extension rests on the exact identity `(1+5r)/6 − δr − (1−δ) = (5/6−δ)(r−1) ≤ 0`,
+           with margin `≤ −7/96 − Δ`.
+         * Remark 19.3 becomes load-bearing.
+         * 32/32 exact gates pass, and 10/10 controls fail as designed.
+         * Thm 3.1 and its 7 Part-I-only nodes drop out, and no imported 11/12 theorem is needed.
+         * This is a new composition; it needs its own independent review.
        * Of the 65 paper nodes: 14 have a spot-checked Lean counterpart, 8 are bypassed, and 43 are
          matched by name only or not found.
      * Two short formal corollaries ([lean/](lean/README.md)):

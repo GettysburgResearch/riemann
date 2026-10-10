@@ -456,5 +456,11 @@ The paper-to-Lean correspondence is [SEP30_LEAN_CORRESPONDENCE.md](SEP30_LEAN_CO
 * 14 nodes have a spot-checked Lean counterpart (6 same statement, 8 variants).
 * 37 are name-level candidates only, and 6 have no counterpart found.
 
+[PART1_FREE_ROUTE.md](PART1_FREE_ROUTE.md) checks the same bypass at paper level (PROPOSED,
+bounded review). It gives verdict (A): Part II as written, plus the extended endpoint count,
+proves 7/8 from `β* ≤ 1`.
+* The node set would be the 57 nodes of the substituted graph, with no [O5] import.
+* It adds new obligations: Remark 19.3 and two short proposed lemmas.
+
 The counts are hand-entered from the review headers. They were not regenerated with
 `sep30_depgraph_v2.py`, whose status table is the v2 one.
