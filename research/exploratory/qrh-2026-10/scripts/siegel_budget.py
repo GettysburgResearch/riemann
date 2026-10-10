@@ -4,7 +4,7 @@
 Source: pr908:standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/
         Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026/build/paper.tex  (773 lines)
 
-Part A  EXACT_RATIONAL: reproduces the manuscript's displayed constants (Cor. 4, Lemma 6, eq. (5.1)).
+Part A  EXACT_RATIONAL: reproduces the manuscript's displayed constants (Cor. 4, Lemma 6, eq. (6.2)).
 Part B  parametric contradiction condition and its closed-form optimum (PROPOSED algebra; the
         transcendental constants e, log are rounded UP to rationals so delta_max is a lower bound).
 Part C  explicit constant c for every q >= 3, q != 8, following the manuscript's own constants
@@ -34,17 +34,17 @@ check("Lemma 6: C0 = 2*96 = 192", C0 == 2 * 96)
 ratio = C0 / c0
 check("Lemma 6: S2/S1 <= (C0/c0)/H with C0/c0 = 7226112", ratio == 7226112)
 H_paper = 12 * ratio
-check("Sec 5: (C0/c0)/H <= 1/12 iff H >= 86713344 (Lean uses H := 86713344)", H_paper == 86713344)
+check("Sec 6: (C0/c0)/H <= 1/12 iff H >= 86713344 (Lean uses H := 86713344)", H_paper == 86713344)
 check("Lemma 6: M >= 2 Q0 needs H^{2/3} N^{4/3} >= 2*97^2 = 18818 (Lean: 18818 <= N)", 2 * 97**2 == 18818)
 kappa = Fr(3, 4)          # log N / log U, from U^3 = N^4
 eps = Fr(1, 12)
 first = kappa * (1 + eps)
-check("Sec 5: first term of (5.1) (3/4)(1 + 1/12) = 13/16", first == Fr(13, 16))
-check("Sec 5: limit 13/16 + 1/16 = 7/8 < 1", first + Fr(1, 16) == Fr(7, 8) < 1)
-check("Sec 5: log M = 3 log U and log N = (3/4) log U (M = N^4 = U^3)", Fr(4, 3) * kappa == 1)
+check("Sec 6: first term of (6.2) (3/4)(1 + 1/12) = 13/16", first == Fr(13, 16))
+check("Sec 6: limit 13/16 + 1/16 = 7/8 < 1", first + Fr(1, 16) == Fr(7, 8) < 1)
+check("Sec 6: log M = 3 log U and log N = (3/4) log U (M = N^4 = U^3)", Fr(4, 3) * kappa == 1)
 
 print("\n=== Part B: the contradiction condition ===")
-print("""Master inequality (5.1), divided by S1 log U, in the limit q -> oo at fixed H and lambda:
+print("""Master inequality (6.2) = (5.1) vs (5.7), divided by S1 log U, in the limit q -> oo at fixed H and lambda:
    phi_adm(U)  >  kappa (1+eps)  +  c_arch (1+eps)/lambda  +  R(U)
  with  phi_adm = (admissible prime mass up to U)/log U >= 1 - C1/lambda - Cd*delta*lambda,
    kappa = log N/log U = 3/4,  eps = S2/S1 <= (C0/c0)/H,  lambda = log U / log q,
@@ -71,7 +71,7 @@ dm_paper = delta_max(1 - kappa * (1 + eps), C1_paper, Cd, half, eps)
 check("Part B: with the paper's constants and eps = 1/12, delta_max > 1/400", dm_paper > Fr(1, 400))
 
 print("\n=== Part C: explicit c for all q >= 3, q != 8 (conditional on the manuscript) ===")
-# Finite-size residual numerator R_num (divided by log U in (5.1)):
+# Finite-size residual numerator R_num (divided by log U in (6.2)):
 #   Mertens (Rosser-Schoenfeld 1962, (3.22)): sum_{p<=x} log p/p > log x - 1.3326 - 1/(2 log x)
 #   C_H: sum_{p<=H} log p/p < log H  (RS (3.24)) ; plus log 2/2 for p = 2 (p | 2q)
 #   (1+eps) log 8 from |nu(theta_n)| <= 8 N sqrt q

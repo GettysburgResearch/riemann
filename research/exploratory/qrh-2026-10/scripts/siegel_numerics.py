@@ -4,6 +4,7 @@
   python3 -I siegel_numerics.py consts   # check the explicit Lemma 2 constant c(s) <= 0 on (1,2] (mpmath)
   python3 -I siegel_numerics.py bias     # prime bias for fields with long inert runs / small L(1,chi)
   python3 -I siegel_numerics.py det N d H  # exact interpolation determinant in Q(sqrt d, sqrt 2)
+  python3 -I siegel_numerics.py rect N d   # smallest spanning monomial boxes (Lemma 3 dimension count)
 
 Arithmetic classes: 'consts' and 'bias' are FLOATING (double / mpmath 30 digits, no directed
 rounding). 'det' is EXACT (Python integers in Z[sqrt d, sqrt 2]) except the greedy row selection,
@@ -104,11 +105,14 @@ def cmd_bias(PMAX=2_000_000):
     print("  For each D: q=|D|, l=log q. For X = q^lambda: phi_- = inert share of sum_{p<=X} log p/p;")
     print("  M+ = sum_{p<=X, chi(p)=+1} log p/p in units of l; Lemma-2 cap without a zero term is (e/4) l = 0.680 l;")
     print("  delta_req = smallest delta Lemma 2 allows given M+ (any real zero must have delta >= delta_req).")
+    print("  slack_all = ((3/4) log X + l/2 + log 8 - usable mass)/l, usable = Frob in {id, sigma, sigma tau}; the leading-order")
+    print("  determinant comparison (eps -> 0, lower-order terms dropped) is consistent with the data iff slack_all > 0.")
     import numpy as np
     Parr = np.array(P, dtype=np.float64); logP = np.log(Parr); wP = logP / Parr
     for D in seen:
         q = abs(D); l = math.log(q)
         chi = np.array([kron(D, p) for p in P], dtype=np.int8)
+        chi8 = np.array([kron(8, p) for p in P], dtype=np.int8)
         hinfo = ""
         if D < -4:
             h = class_number_neg(D); L1 = math.pi * h / math.sqrt(q)
@@ -124,7 +128,10 @@ def cmd_bias(PMAX=2_000_000):
             lX = math.log(X)
             dreq = max(0.0, plus - (E / 4) * l) * l / ((E / 2) * lX * lX)
             dreq_best = max(dreq_best, dreq)
-            print(f"    lambda={lam:<5} X={X:>12.0f} phi_-={minus/tot:.3f} M+/l={plus/l:.3f} delta_req={dreq:.3f}")
+            # all Frobenius classes usable by Lemma 7 + split-completely extension: chi(p)=-1, or chi(p)=+1 and (2/p)=+1
+            use = wP[m & ((chi == -1) | ((chi == 1) & (chi8 == 1)))].sum()
+            slack = (0.75 * lX + l / 2 + math.log(8) - use) / l
+            print(f"    lambda={lam:<5} X={X:>12.0f} phi_-={minus/tot:.3f} M+/l={plus/l:.3f} delta_req={dreq:.3f} slack_all/l={slack:+.3f}")
         # reverse Lemma 2 with the full truncated series (all prime powers <= PMAX), s on a grid
         pw_logs, pw_vals, pw_coef = [], [], []
         for p, c in zip(P, chi):
@@ -314,9 +321,50 @@ def cmd_det(N, d, H):
     print(f"  admissible-prime lower bound sum E_p log p = {lower:.1f} <= (1/4)log|Nm| = {logN4:.1f} <= {had:.1f}")
     print(f"[det] done in {time.time()-t0:.1f}s")
 
+def rank_mod(rows, Pm):
+    basis = {}
+    for row in rows:
+        row = row[:]
+        for pc, br in basis.items():
+            f = row[pc]
+            if f: row = [(x - f * y) % Pm for x, y in zip(row, br)]
+        pc = next((j for j, x in enumerate(row) if x), None)
+        if pc is None: continue
+        inv = pow(row[pc], Pm - 2, Pm); row = [x * inv % Pm for x in row]
+        for k in list(basis):
+            f = basis[k][pc]
+            if f: basis[k] = [(x - f * y) % Pm for x, y in zip(basis[k], row)]
+        basis[pc] = row
+    return len(basis)
+
+def cmd_rect(N, d):
+    """Smallest boxes alpha <= (t1,t2,t3) whose monomial rows span C^{E_N} (rank mod a 61-bit prime;
+    rank mod P <= rank over K, so 'spans' is exact, 'fails' is PROBABILISTIC)."""
+    rng = random.Random(99 + N + d)
+    while True:
+        Pm = rng.randrange(2**60, 2**61) | 1
+        if is_prime(Pm) and pow(d % Pm, (Pm-1)//2, Pm) == 1 and pow(2, (Pm-1)//2, Pm) == 1: break
+    ra, rb = sqrt_mod(d, Pm), sqrt_mod(2, Pm)
+    cols = [(n1, n2, n3, n4) for n1 in range(N) for n2 in range(N) for n3 in range(N) for n4 in range(N)]
+    M = len(cols)
+    th = [(n1 + n2*ra + n3*rb + n4*ra*rb) % Pm for (n1, n2, n3, n4) in cols]
+    sg = [(n1 - n2*ra + n3*rb - n4*ra*rb) % Pm for (n1, n2, n3, n4) in cols]
+    st = [(n1 - n2*ra - n3*rb + n4*ra*rb) % Pm for (n1, n2, n3, n4) in cols]
+    def spans(t1, t2, t3):
+        rows = [[pow(th[j], a1, Pm) * pow(sg[j], a2, Pm) % Pm * pow(st[j], a3, Pm) % Pm for j in range(M)]
+                for a1 in range(t1+1) for a2 in range(t2+1) for a3 in range(t3+1)]
+        return len(rows) >= M and rank_mod(rows, Pm) == M
+    tc = next(t for t in range(0, 4*M) if spans(t, t, t))
+    lem = next(t for t in range(3*(N-1), 10**6) if (t - 3*(N-1) + 1)**3 > (4*N - 3)**4)
+    print(f"[rect] N={N} d={d} M={M}: smallest cube t={tc} ((t+1)^3={(tc+1)**3}); count bound needs (t+1)^3>=M; Lemma 3 guarantees t={lem}")
+    for t23 in range(0, tc + 1):
+        t1 = next((t for t in range(0, M) if (t+1)*(t23+1)**2 >= M and spans(t, t23, t23)), None)
+        print(f"   t2=t3={t23}: smallest t1={t1}  (#monomials {(t1+1)*(t23+1)**2} vs M={M})")
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "consts"
     if cmd == "consts": cmd_consts()
     elif cmd == "bias": cmd_bias()
     elif cmd == "det": cmd_det(int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]))
+    elif cmd == "rect": cmd_rect(int(sys.argv[2]), int(sys.argv[3]))
     else: print(__doc__)

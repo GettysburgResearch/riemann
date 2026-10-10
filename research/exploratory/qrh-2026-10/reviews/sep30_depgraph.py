@@ -26,7 +26,7 @@ EXPECTED = "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3"
 ENVS = ("theorem", "proposition", "lemma", "corollary", "definition", "remark")
 SPECIAL_PROSE = {(12580, 14984): "18.1", (16454, 16463): "1.1"}
 MANUAL = {  # stated in words in the source, without \ref
-    "20.3": {"S20.4", "S20.5", "15.3"},  # "The endpoint inequality" (16346); low estimate (15513)
+    "20.3": {"S20.4", "S20.5", "15.3"},  # "The endpoint inequality" (16346); low estimate (15505)
     "S20.4": {"20.2"},                   # Lemma 20.2 sits inside the endpoint-inequality prose
     "1.1": {"S12.0"},                    # final paragraph uses the Part II bootstrap (6810-6826)
 }

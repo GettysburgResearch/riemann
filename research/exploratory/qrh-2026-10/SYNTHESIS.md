@@ -94,6 +94,17 @@ improves continuously as the row/column ratio `ρ` falls below 1. That makes it 
      reflection) and App. B, with numerical theta automorphy and cusp reflection
      ([reviews/KINTALI_LEMMA3_REVIEW.md](reviews/KINTALI_LEMMA3_REVIEW.md)).
    * The first unverified step is now App. A.2, the phase cancellation on the high side.
+   * **Short-proof frontier** ([SHORT_PROOF_FRONTIER.md](SHORT_PROOF_FRONTIER.md)): Part II fed
+     only classical full-family Hecke density with exponent `A` gives exact LP values.
+     * The formula is `(7A−3)/(7A−2)`, at `l_x = l_y = (4A−2)/(7A−2)`, `ℓ = 0`. Prime slots are
+       never used.
+     * Hinz (`A = 5/2`) gives **29/31 ≈ 0.9355**, better than Kintali's 29/30 and 47/48. This needs
+       `M + ℓ > 1`, outside the manuscript's stated range, and an unchecked re-run of the Part I
+       high-side steps at `X = Y = Z^{16/31}`.
+     * Inside `M + ℓ ≤ 1` the frontier is exactly Kintali's `7/6 − 1/(2A)`.
+     * Classical inputs never pass 11/12 (`A = 2`); reaching 7/8 would need a far-beyond-DH
+       crossing `a* = 19/36`.
+     * Our model's "DH counts" are subfamily DH (`A = 1` in this normalization).
    * Density inputs ([KINTALI_DENSITY_UPGRADE.md](KINTALI_DENSITY_UPGRADE.md)).
      * Only the conductor exponent at `σ ≥ 4/5 − η` matters.
      * No published Hecke-family theorem beats Hinz 1976. Hinz gives 29/30, and Kintali's 47/48

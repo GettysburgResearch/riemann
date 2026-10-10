@@ -134,6 +134,13 @@ So **both sides are tight at 7/8**:
 
 ## 4. Experiments (results/*.json; Nelder–Mead over `(lx, ly, ℓ)`, fine re-verification)
 
+> **Normalization of "DH counts"** (clarified by [SHORT_PROOF_FRONTIER.md](SHORT_PROOF_FRONTIER.md)).
+> The model's `R = 1 − δ` is the density hypothesis for the **≈ U-member Kummer row family**. In the
+> normalization of zero-density theorems for the *full* family of Hecke characters of `Q(√−3)`
+> (`N ≪ (conductor)^{2A(1−σ)}`), it corresponds to `A = 1`, *stronger* than full-family DH
+> (`A = 2`). Classical full-family inputs stall at `(7A−3)/(7A−2)`: 11/12 at `A = 2`, 29/31 for
+> Hinz `A = 5/2`.
+
 | Scenario | Inputs | Best σ0 | Binding constraint |
 |---|---|---|---|
 | A | manuscript lemmas, a priori `β* ≤ 11/12` | 0.874961 | mid-depth bin δ≈0.386, x=1/2, d=h |

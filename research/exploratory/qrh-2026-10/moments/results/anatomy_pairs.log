@@ -1,0 +1,36 @@
+setup: 1002 primes, 1200 exact symbol checks
+D=500 cols=150 sqf=139 kernel_err=1.1e-14 3.7s
+  rho=0.5 rows=84 M2/diag: mu=0.986 lam=0.965 one=1.72 rand=0.996+-0.106 rmf=1.003+-0.099 | mu sumabs/|off|=180 sumabs/diag=2.5 z=-0.10 zc=-0.15 randc=1.005+-0.128
+  rho=0.7 rows=282 M2/diag: mu=1.098 lam=1.097 one=1.15 rand=1.000+-0.056 rmf=1.004+-0.055 | mu sumabs/|off|=13 sumabs/diag=1.3 z=1.73 zc=1.20 randc=1.010+-0.073
+  rho=0.9 rows=966 M2/diag: mu=0.974 lam=0.968 one=1.02 rand=1.002+-0.023 rmf=1.002+-0.026 | mu sumabs/|off|=26 sumabs/diag=0.7 z=-1.18 zc=-1.16 randc=1.006+-0.027
+  rho=1.1 rows=3366 M2/diag: mu=0.982 lam=0.980 one=1.03 rand=1.001+-0.013 rmf=0.998+-0.015 | mu sumabs/|off|=20 sumabs/diag=0.4 z=-1.41 zc=-1.52 randc=1.009+-0.017
+D=707 cols=214 sqf=200 kernel_err=1.5e-14 3.1s
+  rho=0.5 rows=90 M2/diag: mu=0.880 lam=0.965 one=2.07 rand=0.995+-0.101 rmf=1.008+-0.114 | mu sumabs/|off|=29 sumabs/diag=3.5 z=-1.14 zc=-1.30 randc=1.067+-0.144
+  rho=0.7 rows=360 M2/diag: mu=1.014 lam=1.042 one=1.25 rand=0.999+-0.053 rmf=1.002+-0.052 | mu sumabs/|off|=118 sumabs/diag=1.7 z=0.28 zc=-0.40 randc=1.045+-0.076
+  rho=0.9 rows=1332 M2/diag: mu=0.998 lam=0.989 one=1.07 rand=0.997+-0.028 rmf=1.003+-0.025 | mu sumabs/|off|=424 sumabs/diag=0.8 z=0.03 zc=-0.74 randc=1.024+-0.035
+  rho=1.1 rows=4938 M2/diag: mu=0.965 lam=0.965 one=1.02 rand=0.999+-0.014 rmf=1.000+-0.013 | mu sumabs/|off|=13 sumabs/diag=0.4 z=-2.55 zc=-2.38 randc=1.004+-0.017
+D=1000 cols=304 sqf=286 kernel_err=1.5e-14 21.9s
+  rho=0.5 rows=120 M2/diag: mu=0.903 lam=0.921 one=2.00 rand=1.000+-0.096 rmf=1.000+-0.085 | mu sumabs/|off|=44 sumabs/diag=4.3 z=-1.01 zc=-1.11 randc=1.034+-0.118
+  rho=0.7 rows=450 M2/diag: mu=0.994 lam=1.002 one=1.21 rand=1.000+-0.047 rmf=1.003+-0.047 | mu sumabs/|off|=391 sumabs/diag=2.2 z=-0.11 zc=-0.72 randc=1.042+-0.067
+  rho=0.9 rows=1812 M2/diag: mu=0.959 lam=0.968 one=1.06 rand=1.000+-0.020 rmf=1.001+-0.023 | mu sumabs/|off|=25 sumabs/diag=1.0 z=-2.10 zc=-1.52 randc=1.001+-0.028
+  rho=1.1 rows=7242 M2/diag: mu=0.985 lam=0.989 one=1.03 rand=1.000+-0.010 rmf=1.001+-0.010 | mu sumabs/|off|=36 sumabs/diag=0.5 z=-1.52 zc=-0.87 randc=0.996+-0.013
+D=1414 cols=429 sqf=402 kernel_err=1.9e-14 10.8s
+  rho=0.5 rows=138 M2/diag: mu=1.053 lam=1.132 one=2.40 rand=0.993+-0.082 rmf=0.990+-0.077 | mu sumabs/|off|=108 sumabs/diag=5.7 z=0.73 zc=0.01 randc=1.051+-0.125
+  rho=0.7 rows=582 M2/diag: mu=1.073 lam=1.095 one=1.22 rand=1.002+-0.034 rmf=1.000+-0.036 | mu sumabs/|off|=37 sumabs/diag=2.7 z=2.08 zc=1.47 randc=0.995+-0.053
+  rho=0.9 rows=2490 M2/diag: mu=0.996 lam=1.006 one=1.02 rand=1.001+-0.019 rmf=1.000+-0.020 | mu sumabs/|off|=299 sumabs/diag=1.2 z=-0.26 zc=0.02 randc=0.995+-0.024
+  rho=1.1 rows=10602 M2/diag: mu=1.001 lam=0.996 one=1.00 rand=1.000+-0.009 rmf=1.000+-0.010 | mu sumabs/|off|=581 sumabs/diag=0.6 z=0.13 zc=0.27 randc=0.998+-0.011
+D=2000 cols=600 sqf=561 kernel_err=3.5e-14 18.2s
+  rho=0.5 rows=162 M2/diag: mu=0.954 lam=0.971 one=2.72 rand=1.010+-0.074 rmf=1.005+-0.082 | mu sumabs/|off|=168 sumabs/diag=7.7 z=-0.75 zc=-0.65 randc=1.023+-0.106
+  rho=0.7 rows=744 M2/diag: mu=0.932 lam=0.924 one=1.32 rand=1.000+-0.035 rmf=0.999+-0.039 | mu sumabs/|off|=52 sumabs/diag=3.6 z=-1.94 zc=-1.34 randc=0.998+-0.049
+  rho=0.9 rows=3402 M2/diag: mu=0.972 lam=0.960 one=1.13 rand=1.002+-0.015 rmf=1.001+-0.017 | mu sumabs/|off|=56 sumabs/diag=1.6 z=-1.97 zc=-1.09 randc=0.997+-0.024
+  rho=1.1 rows=15528 M2/diag: mu=0.996 lam=0.994 one=1.03 rand=1.001+-0.007 rmf=1.000+-0.008 | mu sumabs/|off|=188 sumabs/diag=0.8 z=-0.70 zc=-0.01 randc=0.996+-0.010
+D=2828 cols=853 sqf=795 kernel_err=5.3e-14 76.5s
+  rho=0.5 rows=198 M2/diag: mu=1.183 lam=1.156 one=3.11 rand=1.000+-0.074 rmf=1.011+-0.075 | mu sumabs/|off|=53 sumabs/diag=9.7 z=2.47 zc=1.33 randc=1.033+-0.113
+  rho=0.7 rows=954 M2/diag: mu=1.020 lam=0.998 one=1.36 rand=0.996+-0.031 rmf=1.002+-0.034 | mu sumabs/|off|=214 sumabs/diag=4.3 z=0.76 zc=-0.06 randc=1.023+-0.045
+  rho=0.9 rows=4638 M2/diag: mu=0.946 lam=0.955 one=1.19 rand=0.998+-0.014 rmf=1.000+-0.013 | mu sumabs/|off|=35 sumabs/diag=1.9 z=-3.60 zc=-2.90 randc=0.998+-0.018
+  rho=1.1 rows=22728 M2/diag: mu=1.001 lam=1.007 one=1.05 rand=0.999+-0.007 rmf=0.999+-0.006 | mu sumabs/|off|=1227 sumabs/diag=0.9 z=0.21 zc=-0.01 randc=1.001+-0.009
+D=4000 cols=1213 sqf=1129 kernel_err=6.0e-14 145.1s
+  rho=0.5 rows=234 M2/diag: mu=0.964 lam=0.973 one=3.43 rand=1.003+-0.066 rmf=1.004+-0.071 | mu sumabs/|off|=347 sumabs/diag=12.6 z=-0.59 zc=-0.79 randc=1.044+-0.102
+  rho=0.7 rows=1200 M2/diag: mu=0.990 lam=0.999 one=1.39 rand=0.998+-0.029 rmf=1.001+-0.030 | mu sumabs/|off|=570 sumabs/diag=5.5 z=-0.28 zc=-0.53 randc=1.011+-0.040
+  rho=0.9 rows=6342 M2/diag: mu=0.989 lam=0.988 one=1.14 rand=1.000+-0.012 rmf=1.000+-0.013 | mu sumabs/|off|=212 sumabs/diag=2.3 z=-0.91 zc=-0.63 randc=1.000+-0.017
+  rho=1.1 rows=33264 M2/diag: mu=1.003 lam=1.004 one=1.04 rand=1.001+-0.006 rmf=1.000+-0.005 | mu sumabs/|off|=307 sumabs/diag=1.0 z=0.46 zc=0.41 randc=1.000+-0.008

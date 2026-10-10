@@ -7,9 +7,9 @@ assumptions (the Poisson threshold, the GL(r) dual length q^r/X, an optimal larg
 D1  For a theta coefficient that is ONE normalized Gauss sum of order n (angle +-1/n), the order m of
     the row symbol whose single Poisson Gauss sum pairs with it to total angle 1/2 (the Moebius
     parity, Section 2) is the denominator of 1/2 - 1/n.
-D2  Structural boundary sigma(m, r) = 1/2 + (1 - 1/m)(1 - 1/r): leverage c = 1 - 1/m, Poisson
-    threshold rho = 2 - 2/r for a GL(r)-type reflection with dual length q^r/X and an optimal
-    large sieve.  Table for (n, r) with r = 2 and r = n - 1 (Kazhdan-Patterson unique-model range).
+D2  Structural boundary sigma(m, r) = 1/2 + (1 - 1/m) max(1/2, 1 - 1/r): leverage c = 1 - 1/m,
+    row threshold rho = max(1, 2 - 2/r) for a GL(r)-type reflection with dual length q^r/X and an
+    optimal large sieve (the rows term of the large sieve alone forces rho >= 1).  Table for (n, r) with r = 2 and r = n - 1 (Kazhdan-Patterson unique-model range).
 D3  All (m, r), 2 <= m <= 12, 1 <= r <= 6, with sigma(m, r) < 11/12.
 C   Principal-row counts: product family (a, b) <= H with ab a cube; quotient family with a/b a
     cube or sixth power; single-variable cubes up to H^2.
@@ -26,7 +26,7 @@ res = {}
 def m_of_n(n):
     return (Fr(1, 2) - Fr(1, n)).denominator if n > 2 else None
 def sigma(m, r):
-    return Fr(1, 2) + (1 - Fr(1, m))*(1 - Fr(1, r))
+    return Fr(1, 2) + (1 - Fr(1, m))*max(Fr(1, 2), 1 - Fr(1, r))
 known = {  # status of the theta coefficient at primes, from the cited sources
     (3, 2): 'Patterson: tau(p) = cubic Gauss sum (explicit)',
     (3, 3): 'Proskurin/Bump-Hoffstein: tau(p,1) = 0',

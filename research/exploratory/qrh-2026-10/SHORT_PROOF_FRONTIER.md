@@ -12,7 +12,7 @@ Exact sources or dependencies:
         TeX from `git show pr908:standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/
         The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex` (PDF sha256 in
         scripts/SOURCES.txt): Lemma 8.1 (buffered bins), Prop. 9.2 (eq. sextic-row-count),
-        Lemma 5.x (unmarked completed-row moment, eq. unmarked-completed-moment), Prop. 6.3 (balanced
+        Lemma 5.8 (unmarked completed-row moment, eq. unmarked-completed-moment), Prop. 6.3 (balanced
         low estimate), Def. 10.1, Lemma 19.1 (bin prime bound), Lemma 20.1 (eq. common-high-exponent).
   [K]   Kintali, "A Short Proof of the Quasi-Riemann Hypothesis" (7 Oct 2026; sha256 in SOURCES.txt),
         eq. (16), Lemma 2, Sec. 4.3; as checked in reviews/KINTALI_REVIEW.md.
@@ -21,17 +21,18 @@ Exact sources or dependencies:
   Huxley-type exponents (constant 12/5; sigma-dependent 3/(3 sigma - 1)): NOT located as published
         theorems for Hecke characters of Q(sqrt(-3)) in the conductor aspect. Treated as hypothetical inputs.
   Repository: scripts/threshold_calculus.py, scripts/barrier_lp.py (imported, unmodified);
+        KINTALI_DENSITY_UPGRADE.md (parallel Part I literature check; cross-referenced in Sec. 6a);
         THRESHOLD_CALCULUS.md, FLOOR_BIN_BARRIER.md.
 What was actually run: scripts/short_proof_frontier.py (new):
   `lp`    - exact LP with rational dual certificates and rational primal points, 9 count inputs,
             uncapped / capped (M + ell <= 1) / optimal energy;
   `check` - full threshold_calculus model at every LP optimum (241 bins x 26 amplitudes x 19 dyads,
             plus the exact kink bin, beta_prev = 1);
-  `run`   - Nelder-Mead over (lx, ly, ell) for every scenario, 7 starts each, about 15-30 s per run.
+  `run`   - Nelder-Mead over (lx, ly, ell) for every scenario, 7 starts each, about 15-55 s per run.
   Results are in results/SPF_*.json. All runs used nice -n 10 and at most 2 processes.
 Smallest remaining gap: the frontier value 29/31 (Hinz) sits at lx = ly = 16/31 > 1/2, ell = 0. It
-  needs the Part I high-expansion specializations ([OAI] Sec. 10.5-11, [K] Sec. 4) re-run at
-  h = 15/31, plus [OAI] Lemma 5.x at row exponent 32/31 (stated for general bounded M, but not
+  needs the Part I high-expansion specializations ([OAI] Sec. 10.5-10.8, 11, [K] Sec. 4) re-run at
+  h = 15/31, plus [OAI] Lemma 5.8 at row exponent 32/31 (stated for general bounded M, but not
   specialized there). Neither was checked. Inside the manuscript's own range M + ell <= 1 the
   value is 29/30, which is exactly Kintali's.
 ```
@@ -69,9 +70,9 @@ Every entry was matched against an exact LP certificate (Section 3), and every e
 
 1. **Hinz.** "Part II + Hinz" gives `29/31 ≈ 0.9355`. That beats [K]'s `29/30` only through a
    change of probe lengths, which stays to be checked. It is `15/248 ≈ 0.060` above `7/8`.
-2. **Other classical inputs.** No full-family density input that is known, or even conjectured
-   short of something beyond DH, gets below `11/12`. DH for the full Hecke family gives exactly
-   `11/12`.
+2. **Other classical inputs.** No full-family density input up to and including DH gets below
+   `11/12`. DH for the full Hecke family gives exactly `11/12`; going lower needs a beyond-DH
+   count at `σ ≤ 3/4`.
 3. **Reaching `7/8`.** That needs `N(σ) << Q^{1+ε}` for the `≈ Q²`-member family already at
    `σ ≥ 19/36`, i.e. "`A = 18/17`" there. That is far beyond DH, which gives `Q^{17/9}` at that `σ`.
 4. **Prime slots.** At the frontier the optimal slot length is `ℓ* = 0` for every `A ≥ 2`. The
@@ -149,8 +150,10 @@ The input `R_A(a) = min(1, 2A(a)(1 − a))` equals `1` up to the crossing `a*`, 
 * **Full-family DH:** `a* = 3/4`.
 
 Every bin with `51/100 < a < a*` is counted trivially, exactly like the floor bin. With `R = 1` and
-worst amplitude `q = δ/2`, `F` at the top dyad `d = h` increases in `a`. Beyond `a*`, `F` decreases,
-because `R` falls with slope `−2A < −1/2·(1 − ly + ℓ)/h`. So the binding object is the bin at `a*`:
+worst amplitude `q = δ/2`, `F` at the top dyad `d = h` increases in `a`. Beyond `a*` (constant `A`),
+`dF/dδ = (1 − ly + ℓ)/2 − h(A − 1/2)`, which is negative whenever `h(A − 1/2) > (1 − ly + ℓ)/2`. At the
+Hinz optimum this reads `30/31 > 15/62`; the descending bins were also checked on a grid (LP) and in
+the full model. So the binding object is the bin at `a*`:
 
     (H_a*)  σ0 ≥ a*(1 − ly) + h(5/6 + δ*/2) − ℓ/2 + δ*ℓ/2,   h = 1 − lx + ℓ,  δ* = 2a* − 1.
 
@@ -212,9 +215,11 @@ and without the cap. With `energy='optimal'` (large-sieve diagonal only) the val
 **Full model at the LP optima (`check`).** This uses 241 bins × 26 amplitudes × 19 dyads plus the
 kink bin, with `β_prev = 1`.
 
-* Uncapped: `σ0_low` equals the LP value to `10^{-12}`. `sup F ∈ [−3·10^{-4}, 0]`, attained at the
-  kink bin `δ*`, `d = h`. The nonzero values are grid offsets; `F = 0` exactly at `δ*`.
+* Uncapped: `σ0_low` equals the LP value to `10^{-12}`, and `sup F = −10^{-12}` (the model's `β`
+  offset) for all 9 inputs. It is attained at the kink bin `δ*`, `d = h` (the floor bin for `A = 1`).
+  So the high side is exactly tight at the LP point, and no other bin, amplitude or dyad exceeds it.
 * Capped: `σ0_low = 11/12` and `sup F = +1/20` (Hinz), i.e. boundary `11/12 + 1/20 = 29/30`.
+  Likewise `+1/24`, `+1/36`, `+1/28` for `A = 12/5, 9/4, 7/3`, matching the capped column.
 
 **Nelder–Mead (`run`).** These use `β_prev = 1`: no a priori zero-free region, so nothing from
 [OAI] Part I is used.
@@ -258,10 +263,10 @@ At every classical frontier point (`A ≥ 2`) only the branch `E = 2M − 1` bin
 `energy='optimal'` gives the same values. At `ℓ = 0` these two branches are exactly the
 manuscript's **Part I** bound:
 
-* [OAI] Lemma 5.x (unmarked completed-row moment) gives
+* [OAI] Lemma 5.8 (unmarked completed-row moment) gives
   `Σ_{q_m ≤ Z^M} |C_V(Z^N; m)|² << Z^{O/2 + max(M−O, 2M−O−N)+ε}`. It is stated for bounded ranges
   of `M ≥ 0`, `N`, and its worst dyad is `O = 0`.
-* It is paired with the additive norm `(Q + Y²)/Y ≤ 2Q/Y` of Prop. 6.3's proof.
+* It is paired with the additive norm `(Q + Y²)/Y ≤ 2Q/Y` (Lemma 6.2, as used in Prop. 6.3).
 * With `X = Y = Z^L` and `N = 1` this gives `|I_η| << Z^{(3L−1)/2+ε}` for `L ≥ 1/2`, hence
   `σ0_low = 1/3 + 7L/6`. That is the model's (L3).
 
@@ -269,7 +274,7 @@ So the frontier assumes **no new energy input**: only Prop. 6.3's proof re-run a
 
 [K]'s "short energy argument" (Lemma 4, with the large sieve (14)) is the `L = 1/2` instance of
 this pairing. Whether [K]'s own short proof extends to `L = 16/31` was not checked. [OAI]'s
-Lemma 5.x does, as stated.
+Lemma 5.8 does, as stated.
 
 ## 5. Which Part II lemmas are still needed (task 3)
 
@@ -278,7 +283,7 @@ At the classical frontier, `ℓ* = 0` for every `A ≥ 2`, even if the slot ampl
 
 | [OAI] Part II component | needed with classical counts? |
 |---|---|
-| Sec. 12–14 compensated probe, marked completion, whole-index prime-slot reflection, Lemma 14.3 | **No** (`ℓ = 0`); replaced by the Part I unmarked moment (Lemma 5.x) at row exponent `2L` |
+| Sec. 12–14 compensated probe, marked completion, whole-index prime-slot reflection, Lemma 14.3 | **No** (`ℓ = 0`); replaced by the Part I unmarked moment (Lemma 5.8) at row exponent `2L` |
 | Sec. 15 compensated low estimate (Lemma 15.1, Prop. 15.2 Gram, Prop. 15.3 tuples) | **No**; Prop. 6.3's proof at `X = Y = Z^L` |
 | Sec. 16 local compensation, dynamic local errors | **No**; Part I scalar Euler identity (Sec. 7) suffices |
 | Sec. 17 inverse moment with prime factors, Lemma 17.6 amplification | **No** |
@@ -288,7 +293,7 @@ At the classical frontier, `ℓ* = 0` for every `A ≥ 2`, even if the slot ampl
 | Lemma 8.1 buffered bins | **Yes**, but the floor may sit at `a* = 4/5` at no cost |
 | Euler local factors (7.14)/(7.15), regions `D_1`, `D_2` | **Yes, simplified.** With the floor at `a*`, `D_1` is needed only for `Re s ≥ a* + O(e)` instead of `51/100`; `D_2` (`Re s ≥ 7/8`) contains the frontier `29/31` |
 | Def. 10.1, Lemmas 10.3–10.4 (stated for general `lx, ly, ℓ`) | **Yes**, as stated |
-| Part I specializations: principal row, row envelope at `d = h`, small/large rows (Sec. 10.5–11) | **Yes, re-run at `h = 15/31`**: the main unchecked obligation |
+| Part I specializations: principal row, row envelope at `d = h`, small/large rows (Sec. 10.5–10.8, 11) | **Yes, re-run at `h = 15/31`**: the main unchecked obligation |
 | Probe identities and cubic-theta reflection ([OAI] Sec. 4–7, Prop. 5.1; [K] Sec. 2, Lemma 3, App. A–B) | **Yes**: shared, unverified core (KINTALI_REVIEW.md Sec. 5) |
 
 If a beyond-DH full-family input were available (`a* < 3/4`), `ℓ* > 0` and the following return:
@@ -320,7 +325,7 @@ Lemmas 17–18 and Prop. 19.2 would still be unnecessary.
 5. **Non-classical inputs remaining in "Part II + Hinz".** At `29/31` (or `29/30` capped):
    * the probe and its two exact representations;
    * the cubic-theta weak reflection;
-   * [OAI] Lemma 5.x at row exponent `32/31`;
+   * [OAI] Lemma 5.8 at row exponent `32/31`;
    * the Part I high-expansion specializations at `h = 15/31`.
 
    The density input itself is classical (Hinz Satz A; Satz B is not load-bearing, since it gives
@@ -336,12 +341,26 @@ Lemmas 17–18 and Prop. 19.2 would still be unnecessary.
   unspecialized geometry.
 * The `A ≤ 2` rows are hypothetical inputs, not results.
 
+## 6a. Cross-reference: KINTALI_DENSITY_UPGRADE.md (parallel, Part I)
+
+[KINTALI_DENSITY_UPGRADE.md](KINTALI_DENSITY_UPGRADE.md) works in [K]'s Part I geometry. Its
+`σ_1 + 1/6` is the capped column here, with `σ_1 = a*`. It found no published Hecke-family input
+better than Hinz, and it prices two conditional Dirichlet-to-Hecke analogues. Translated to the
+uncapped Part II frontier (exact LP via `lp_rows(a*)`, crossing bin only; certificates checked):
+
+| conditional analogue (not located for Hecke) | `a*` | Part I / capped | Part II, `M + ℓ` free |
+|---|---|---|---|
+| Huxley 1976, `A = 20/9` | 31/40 | 113/120 ≈ 0.941667 | 113/122 ≈ 0.926230 at (31/61, 31/61, 0) |
+| Heath-Brown 1979 Thm 3 (DH for `σ ≥ 129/167`) | 129/167 | 941/1002 ≈ 0.939122 | 941/1017 ≈ 0.925270 at (172/339, 172/339, 0) |
+
+Both stay above `11/12`, as they must, since `a* > 3/4`.
+
 ## 7. Reproduction
 
 ```text
 cd research/exploratory/qrh-2026-10/scripts
 python3 -I short_proof_frontier.py lp                       # exact LP table, certificates (~2 s); writes ../results/SPF_lp.json
-python3 -I short_proof_frontier.py check                    # full model at LP optima (~2 min)
+python3 -I short_proof_frontier.py check                    # full model at LP optima (seconds to ~2 min, machine load)
 python3 -I short_proof_frontier.py run hinz_linear          # Nelder-Mead (~20 s); also: hinz_exact huxley_12_5 huxley_sigma A_7_3 A_9_4 A_2_DH A_3_2
 python3 -I short_proof_frontier.py run hinz_linear optE     # optimal (large-sieve diagonal) energy
 python3 -I short_proof_frontier.py run hinz_linear cap1 eff # manuscript range M + ell <= 1, effective-boundary objective
