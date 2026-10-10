@@ -155,8 +155,16 @@ attempt.
     reproduces Heath-Brown's `K^{1+ε}`.
 * Six steps are unproved, including the n = 3 bookkeeping and the legitimacy of the nested order.
   If all of them hold, this would be the optimal cubic fourth moment, an open problem; the
-  literature best is `X^{4/3}`. Highest-value non-RH spin-off of the wave; needs adversarial
-  checking of the nested order first.
+  literature best is `X^{4/3}`. Highest-value non-RH spin-off of the wave.
+* *Adversarial check* ([reviews/CUBIC_NESTED_REDTEAM.md](reviews/CUBIC_NESTED_REDTEAM.md)): no
+  break at ledger level.
+  * The nested order is well-founded, and the uniform margin is `≈ 0.018M`.
+  * Patterson bias enters as the modelled exceptional excess.
+  * Remaining for `n = 3`:
+    * cubic correlations at prime powers;
+    * the Kummer/fixed-ray lemma with `μ₃`;
+    * the centred-stage saving (`L ≲ 0.42M`, `F₁ + F₂ ≥ (5/6)v`, total loss `< M/12`).
+  * Everything stays conditional on the unreviewed Lemma 18.1 machinery.
 
 **C3.** The coefficient (7.4) of the 7/8 manuscript, factored into the local series (7.10). This
 needs (7.9) and the `b*`/`ξ`/`τ` and pair-phase cancellations; only the local identity was checked
