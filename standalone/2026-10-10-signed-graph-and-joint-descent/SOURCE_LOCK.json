@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "packet": "2026-10-10-signed-graph-and-joint-descent",
+  "parent_commit": "725b2d25ab47e57500049d93985560098c7ef3fa",
+  "status": "Proposed standalone research; sources remain qualified and are not integrated acceptance.",
+  "sources": [
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "0cc0428fedbbfc340044c7451b3d392c1da9a103",
+      "path": "standalone/2026-10-10-sextic-moment-conductor-core/CONDUCTOR_SECTORS.md",
+      "git_blob": "30c359bf54b91e640786114d7946fd4df39b526c",
+      "sha256": "c160bbb1b1d7c6bcc5514d496ad41f15fd17ea3d36206b0d05cfa0d7d6503983",
+      "bytes": 24272,
+      "role": "Primitive row kernels and positive accounting in controlled conductor sectors",
+      "retained_path": "standalone/2026-10-10-sextic-joint-core/sources/pr914/CONDUCTOR_SECTORS.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "cfa102748b26f840ccc4b963a660711424db0ec3",
+      "path": "standalone/2026-10-10-sextic-joint-core/INTERFACE_COMPARISON.md",
+      "git_blob": "4373ac212f31f5472a1e83c69c8b28ec46547957",
+      "sha256": "203df24a48e54cb088a28c1236c78569ae75ea84a6b589f72a30b35720cc8e4c",
+      "bytes": 16228,
+      "role": "Literal mixed cube inverse with all zero masks",
+      "retained_path": "standalone/2026-10-10-sextic-joint-core/INTERFACE_COMPARISON.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "9b04a887e171b3104a66cf57296ce5b0b2920d78",
+      "path": "standalone/2026-10-10-averaged-conductor-frontier/COFINAL_AVERAGED_REDUCTION.md",
+      "git_blob": "a9372fa2682c4c6ece1a496afc068266af026b91",
+      "sha256": "b5c6f9064c9b614ccc15990e1b21b2ee7475e710bff8ee73534cb1cc45bbcbd4",
+      "bytes": 8086,
+      "role": "Existing cofinal extraction criterion; remaining-gap comparison only",
+      "retained_path": "standalone/2026-10-10-averaged-conductor-frontier/COFINAL_AVERAGED_REDUCTION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "0cc0428fedbbfc340044c7451b3d392c1da9a103",
+      "path": "standalone/2026-10-10-sextic-moment-conductor-core/A2_COMPLETION.md",
+      "git_blob": "c163d5e95d76e69eac07631600a3117e055a8046",
+      "sha256": "d99eade56807077b07e5ec1325001f1592115db216e1e10e6a3906a3e01f0aad",
+      "bytes": 36064,
+      "role": "Exact full A2 support, finite inverse, and the original centered first-Poisson comparison",
+      "retained_path": "standalone/2026-10-10-sextic-joint-core/sources/pr914/A2_COMPLETION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+      "path": "standalone/2026-10-10-signed-covariance-descent/SECOND_REFLECTION_BOOTSTRAP.md",
+      "git_blob": "38a2594ee38b14abbb8c6217352c9047e869e0f1",
+      "sha256": "e1db605878eb805a3d21f908ea1c73f5869d56c112a3c3e91e67d9b715b16fd0",
+      "bytes": 18957,
+      "role": "Exact cube-summed standard-face and conditioned divisor identities",
+      "retained_path": "standalone/2026-10-10-sextic-moving-labels/sources/pr922/SECOND_REFLECTION_BOOTSTRAP.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+      "path": "standalone/2026-10-10-signed-covariance-descent/FINITE_RAY_REUNION.md",
+      "git_blob": "616d3b9a146d7eba4a7f56467ef24197e0791d67",
+      "sha256": "8897088fb7e89c66e18bf0652a913983c5120a61d854591f990cce2a6261f2e0",
+      "bytes": 18423,
+      "role": "Actual finite ray reunion and its normalized gamma factor",
+      "retained_path": "standalone/2026-10-10-sextic-moving-labels/sources/pr922/FINITE_RAY_REUNION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+      "path": "standalone/2026-10-10-signed-covariance-descent/FINITE_CUBE_HOMOGENEITY.md",
+      "git_blob": "850f03d087d885a6befd080dac95b76eee609568",
+      "sha256": "e4f7b3ff0817c4b6deaf2e608657425c06ac97c1a7f4f60f3762eba7eca7b0e1",
+      "bytes": 10455,
+      "role": "Exact finite cube covariance, including nonunit bad arguments",
+      "retained_path": "standalone/2026-10-10-sextic-moving-labels/sources/pr922/FINITE_CUBE_HOMOGENEITY.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+      "path": "standalone/2026-10-10-signed-covariance-descent/ALL_CUSP_COEFFICIENT_ADAPTER.md",
+      "git_blob": "1533314683a550ed9e59bac1c1734df346377458",
+      "sha256": "bfabc37c5b16a32d6b29fe5767f58f5f5a8dc161aaa3d127ebf11236fa2d3ca1",
+      "bytes": 17208,
+      "role": "The complete coefficient table and finite character adapter for every cusp",
+      "retained_path": "standalone/2026-10-10-sextic-moving-labels/sources/pr922/ALL_CUSP_COEFFICIENT_ADAPTER.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+      "path": "standalone/2026-10-10-signed-covariance-descent/FULL_CUSP_DESCENT.md",
+      "git_blob": "85f28db785765668411f741492309df389a7a19a",
+      "sha256": "b025af8af1ac13d07a04fbc7de71401d2a47ef2c8df5a1e89a4edc4973482504",
+      "bytes": 11988,
+      "role": "Actual reunited Y function, exact cusp decomposition, and bad-label holomorphic mass",
+      "retained_path": "standalone/2026-10-10-sextic-moving-labels/sources/pr922/FULL_CUSP_DESCENT.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "1a1152008706f7e24fa1efe4990588f8f99c5d8d",
+      "path": "standalone/2026-10-10-sextic-separated-cores/SUBSET_PRODUCT_INCIDENCE.md",
+      "git_blob": "f3e4eb59a3f8ffb1c742de5a627704f169d7cc00",
+      "sha256": "9d62a79c0074c7506d273ff7203807e4efd054bfdf0b85baddf340304da4f3de",
+      "bytes": 19942,
+      "role": "Critical finite-horizon Euler correction for singleton cores",
+      "retained_path": "standalone/2026-10-10-sextic-separated-cores/SUBSET_PRODUCT_INCIDENCE.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "725b2d25ab47e57500049d93985560098c7ef3fa",
+      "path": "standalone/2026-10-10-sextic-moving-labels/MIXED_LABEL_COMPLETION.md",
+      "git_blob": "6f59a15b41cc87c64188a8037cfc3516bf962ea3",
+      "sha256": "5e77ec88d6a191ec214bcedebc2b42d37f95735ba2bb18955b2f8a16aedfbcad",
+      "bytes": 25718,
+      "role": "Counting completed estimate; fixed finite outer multipliers; exact mixed inverse and full cube regrouping",
+      "retained_path": "standalone/2026-10-10-sextic-moving-labels/MIXED_LABEL_COMPLETION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "725b2d25ab47e57500049d93985560098c7ef3fa",
+      "path": "standalone/2026-10-10-sextic-moving-labels/SIXTH_POWER_STRATIFIED_INVERSE.md",
+      "git_blob": "004dd4a8de2237661235a9da460b3caab432ef53",
+      "sha256": "f98cc20e361ebb99af7dbd4b5ffef83a8a55ca11c4d3f24da238bc24be4cb2e9",
+      "bytes": 12838,
+      "role": "Exact adaptive cutoff on each sixth-power row stratum",
+      "retained_path": "standalone/2026-10-10-sextic-moving-labels/SIXTH_POWER_STRATIFIED_INVERSE.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "725b2d25ab47e57500049d93985560098c7ef3fa",
+      "path": "standalone/2026-10-10-sextic-moving-labels/ANISOTROPIC_A2_NORM_TRANSFER.md",
+      "git_blob": "1e4e8a9b70fb15ee42bc41abbcdc3b217e07f215",
+      "sha256": "e671b8b1c8717ed494b3db0ba39fb4c0de374aef56f774bf9a7ca68e01b277cf",
+      "bytes": 18428,
+      "role": "All-row anisotropic raw estimate for every positive cutoff and exact A2 norm transfer",
+      "retained_path": "standalone/2026-10-10-sextic-moving-labels/ANISOTROPIC_A2_NORM_TRANSFER.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "725b2d25ab47e57500049d93985560098c7ef3fa",
+      "path": "standalone/2026-10-10-sextic-moving-labels/CROSS_GCD_GRAPH_AND_MATCHING_SECTORS.md",
+      "git_blob": "4bdc8aeed00538360d8365f6b7ad99915221a803",
+      "sha256": "9dc37104e3a06c11d11f48d4e3cb2a6653b64c844aa4c316c8bf1f2cd93d9d05",
+      "bytes": 24368,
+      "role": "Exact native NM2/PW premises and the prior matching/union bounds",
+      "retained_path": "standalone/2026-10-10-sextic-moving-labels/CROSS_GCD_GRAPH_AND_MATCHING_SECTORS.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "725b2d25ab47e57500049d93985560098c7ef3fa",
+      "path": "standalone/2026-10-10-sextic-moving-labels/ALL_ROW_SPECTRAL_MEAN.md",
+      "git_blob": "8585127fc6811f915863830e32af0f624371b325",
+      "sha256": "ef597dfc793af976a92b731f01930fc199948e99d5ccf2fc3fe2c91ec5249a8b",
+      "bytes": 11552,
+      "role": "Classical full-cube all-row envelope used in the physical comparison",
+      "retained_path": "standalone/2026-10-10-sextic-moving-labels/ALL_ROW_SPECTRAL_MEAN.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "725b2d25ab47e57500049d93985560098c7ef3fa",
+      "path": "standalone/2026-10-10-sextic-moving-labels/OPTIMAL_SIEVE_SPECTRAL_EXTENSION.md",
+      "git_blob": "5555cabdd5ee224c9a4204b4415ebf639cbdc426",
+      "sha256": "b0d3eee6d32ad7f69bfdd8ac5132c60139f322b1102086897ce0099defab8551",
+      "bytes": 13531,
+      "role": "Existing spectral 4/7 result; comparison only, not a new premise",
+      "retained_path": "standalone/2026-10-10-sextic-moving-labels/OPTIMAL_SIEVE_SPECTRAL_EXTENSION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "506e3808d2f1e86a31a6d1f70cc7da58367c9918",
+      "path": "standalone/2026-10-10-joint-divisor-covariance/MOVING_AUXILIARY_ADAPTER.md",
+      "git_blob": "8044ad07468dba818afcffebf54636f7f734c0b4",
+      "sha256": "e91e0f7b3c3d885587fc9197539beaf1caa8e0c80ed9c8bba5c15340090b5eda",
+      "bytes": 30631,
+      "role": "Adjacent physical mixed-label and reflected comparison; exact object audit",
+      "snapshot": "sources/pr925/MOVING_AUXILIARY_ADAPTER.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "506e3808d2f1e86a31a6d1f70cc7da58367c9918",
+      "path": "standalone/2026-10-10-joint-divisor-covariance/JOINT_DIVISOR_MEAN.md",
+      "git_blob": "c985bf32eb270ed684722e410c5551e25d942b9c",
+      "sha256": "7b42abe2c3c62acfd934b663405821748eac54bb440f1d1071671961a9e97035",
+      "bytes": 22983,
+      "role": "Adjacent joint divisor series; comparison and independent organization of the two Gauss factors",
+      "snapshot": "sources/pr925/JOINT_DIVISOR_MEAN.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "506e3808d2f1e86a31a6d1f70cc7da58367c9918",
+      "path": "standalone/2026-10-10-joint-divisor-covariance/SIGNED_CONDUCTOR_PROGRESS.md",
+      "git_blob": "c904ac06527a3c47bfc31b808b2a058030b0b2ea",
+      "sha256": "d973468a0e0a893f43327e6f3a4ac706076952ec44a2a3114423ea515bdc4e4a",
+      "bytes": 22968,
+      "role": "Additional positively accounted conductor sectors; optional comparison only",
+      "snapshot": "sources/pr925/SIGNED_CONDUCTOR_PROGRESS.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "086bf0560c0c2679a1fe41418f583d2c5ca743c3",
+      "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/MOBIUS_OVERLAP_TAILS.md",
+      "git_blob": "15d6694e748b6e6bca3a7dad1e37045f98cbcde8",
+      "sha256": "980c0e5d4e82e4c6105a21db37aeeb84ff19da9c985be571002fe4f3e9bfba04",
+      "bytes": 43009,
+      "role": "Mixed-sign critical Euler correction and the smaller actual fourth-moment common-factor tail",
+      "snapshot": "sources/pr926/MOBIUS_OVERLAP_TAILS.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "086bf0560c0c2679a1fe41418f583d2c5ca743c3",
+      "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/SAMPLED_MOMENT_CRITERION.md",
+      "git_blob": "ccb083b8bfd2e3c015c9a8aad5b27ba2754243a4",
+      "sha256": "18bf2fdad438eb21ae3318eba7d42e9c03803b2dd1abc4d8f6448fb3b04499de",
+      "bytes": 28877,
+      "role": "Signed sampling and logarithmic smoothing limitations; comparison only",
+      "snapshot": "sources/pr926/SAMPLED_MOMENT_CRITERION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "086bf0560c0c2679a1fe41418f583d2c5ca743c3",
+      "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/JOINT_REFLECTED_BLOCKS.md",
+      "git_blob": "626c3c7fea879065f8a41891d5e0a25ab0e15aa1",
+      "sha256": "c75be63f43de6efb0d9f820da008f256afc53351fdbfe38870f9e97207955bd5",
+      "bytes": 37494,
+      "role": "The literal three-variable reflected block and its surviving long-column terms",
+      "snapshot": "sources/pr926/JOINT_REFLECTED_BLOCKS.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "725b2d25ab47e57500049d93985560098c7ef3fa",
+      "path": "standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+      "git_blob": "2000faddbbebac5de0ecfe0b962534ea61a852d5",
+      "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+      "bytes": 169005,
+      "role": "Resident exact October 5 theta foundation; upstream OpenAI/math adc7f1241b42e322a6451854ab7e4b4c146bf78a. The imported theorem is not independently replayed here.",
+      "retained_path": "standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex"
+    }
+  ]
+}

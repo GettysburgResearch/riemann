@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "packet": "2026-10-10-signed-graph-and-joint-descent",
+  "parent_commit": "725b2d25ab47e57500049d93985560098c7ef3fa",
+  "status": "Proposed source-qualified standalone research, not integrated acceptance.",
+  "files": [
+    {
+      "path": "ARBITRARY_GRAPH_SECTORS.md",
+      "bytes": 24560,
+      "sha256": "ef3704340d3af629a6bbd97d575d35bb5570474e8973a99c600c76bf096c9f13"
+    },
+    {
+      "path": "CENTERED_COVARIANCE_AND_CUBE_ALIASES.md",
+      "bytes": 33924,
+      "sha256": "d121c94e9eaf8142d160ece29194d186cf2b915dfc53273d351e2baeec7becde"
+    },
+    {
+      "path": "DENSE_CROSS_GCD_SECTORS.md",
+      "bytes": 10512,
+      "sha256": "90af83fcd69cc95d2d56884e367f1a227828ca32c2cb03315ba5cf1d551f3d43"
+    },
+    {
+      "path": "JOINT_GAUSS_REUNION_CONTINUATION.md",
+      "bytes": 23108,
+      "sha256": "31e2395999301d56ce63751db7c907fc6147b689574aaf268133d706ad3aa0aa"
+    },
+    {
+      "path": "PRINCIPAL_SHORT_LONG_COVARIANCE.md",
+      "bytes": 11308,
+      "sha256": "7de2f4fbf8b085bc37cc83d0767748eee1c8478a590b3551935870b616f9166e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13003,
+      "sha256": "9532d061e0c53833d86f52cd6e025c66df165c15dbf39090c0834efadbcfbe3a"
+    },
+    {
+      "path": "SOURCE_LOCK.json",
+      "bytes": 13466,
+      "sha256": "85003defcb7044441b2448118e71b651bc45dba1580acc60f40feae533eb7297"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 10899,
+      "sha256": "6a5ac7ed5bec4d9ddcb26fbd221aa953e96a5e14e83c340fc92db4cdea6de74e"
+    },
+    {
+      "path": "checks/check_graph_charges.py",
+      "bytes": 23144,
+      "sha256": "9b7e752cf98a3d3fd0f40fe89b1cacdf497a56249025cd7ff48c8827bc48e671"
+    },
+    {
+      "path": "checks/check_joint_gauss_continuation.py",
+      "bytes": 18481,
+      "sha256": "e11f543769c2b958e7ab01e05f613073c800eb8d1e5a4dd26b8070abe5127585"
+    },
+    {
+      "path": "checks/check_principal_aliases.py",
+      "bytes": 10946,
+      "sha256": "38f659316d8445e85e11a8e2150dd2e778d1cee8263c4ac64d1fc3f757e1554f"
+    },
+    {
+      "path": "checks/check_short_long_principal_blocks.py",
+      "bytes": 4629,
+      "sha256": "1197b7e4eebc1c76909a272426365f4dde14e9afe78c37903508cf087c0edf8a"
+    },
+    {
+      "path": "checks/graph_charge_checks.json",
+      "bytes": 4399,
+      "sha256": "54e7e19ed2aa739a9877b9340a3bfb39ab70c3533fa8fcef8d866fa4387fd569"
+    },
+    {
+      "path": "checks/joint_gauss_continuation_checks.json",
+      "bytes": 11857,
+      "sha256": "efa333e808bec4e145b9715cd26abf4e49949c8198c560c6a628e43ea3872ceb"
+    },
+    {
+      "path": "checks/principal_alias_checks.json",
+      "bytes": 1649,
+      "sha256": "9c70640d8a8e15cc05394a212388b15c396e162e17e6003489c1bedc85cce744"
+    },
+    {
+      "path": "checks/short_long_principal_checks.json",
+      "bytes": 962,
+      "sha256": "191fc950937f84b33af16dce1e26e67ccb09ebe911cae3a7feb22ba31b26ce94"
+    },
+    {
+      "path": "checks/verify_packet.py",
+      "bytes": 4017,
+      "sha256": "4e3b1e4b55782902c8f5011a3d22f6990241b98e755ebf60ff21870906b343b5"
+    },
+    {
+      "path": "reviews/CENTERED_COVARIANCE_AND_CUBE_ALIASES_REVIEW.md",
+      "bytes": 9006,
+      "sha256": "47b6abb18243b2de37cb9e3edcefa1b36679b5d86c926e27e0cec6a4404f4e3c"
+    },
+    {
+      "path": "reviews/CENTERED_COVARIANCE_SECOND_REVIEW.md",
+      "bytes": 9457,
+      "sha256": "9a009c5b75bde6c30588b42f1df63cdc546b139ecf93d7c783901589f0be4b11"
+    },
+    {
+      "path": "reviews/DENSE_CROSS_GCD_REVIEW.md",
+      "bytes": 6115,
+      "sha256": "32d132f6345c23691ac7d061d305a50aaa4e04b8baf34224c4c68ad8bcdbb120"
+    },
+    {
+      "path": "reviews/JOINT_GAUSS_REUNION_REVIEW.md",
+      "bytes": 12495,
+      "sha256": "b99cd9403970f14a31815173581fe791f2b249266ef6b4fda7279fb292437d6c"
+    },
+    {
+      "path": "reviews/PACKET_SUMMARY_SCOPE_REVIEW.md",
+      "bytes": 6658,
+      "sha256": "2cf6674eb6069e2c657481779893f1c2b9b24fa7a1819e7fe032a6c69fabe6a7"
+    },
+    {
+      "path": "reviews/PRINCIPAL_SHORT_LONG_REVIEW.md",
+      "bytes": 8840,
+      "sha256": "a8c42cf61deda757d6bb505d7743627363f90a550ccf68e5d85d571430f5597a"
+    },
+    {
+      "path": "reviews/ROOT_GRAPH_AND_DENSE_REVIEW.md",
+      "bytes": 5142,
+      "sha256": "ccb01d78f1a4d8ba46bd2a1f38e221f6d29859455c164a8fad58cda9d584e465"
+    },
+    {
+      "path": "sources/pr925/JOINT_DIVISOR_MEAN.md",
+      "bytes": 22983,
+      "sha256": "7b42abe2c3c62acfd934b663405821748eac54bb440f1d1071671961a9e97035"
+    },
+    {
+      "path": "sources/pr925/MOVING_AUXILIARY_ADAPTER.md",
+      "bytes": 30631,
+      "sha256": "e91e0f7b3c3d885587fc9197539beaf1caa8e0c80ed9c8bba5c15340090b5eda"
+    },
+    {
+      "path": "sources/pr925/SIGNED_CONDUCTOR_PROGRESS.md",
+      "bytes": 22968,
+      "sha256": "d973468a0e0a893f43327e6f3a4ac706076952ec44a2a3114423ea515bdc4e4a"
+    },
+    {
+      "path": "sources/pr926/JOINT_REFLECTED_BLOCKS.md",
+      "bytes": 37494,
+      "sha256": "c75be63f43de6efb0d9f820da008f256afc53351fdbfe38870f9e97207955bd5"
+    },
+    {
+      "path": "sources/pr926/MOBIUS_OVERLAP_TAILS.md",
+      "bytes": 43009,
+      "sha256": "980c0e5d4e82e4c6105a21db37aeeb84ff19da9c985be571002fe4f3e9bfba04"
+    },
+    {
+      "path": "sources/pr926/SAMPLED_MOMENT_CRITERION.md",
+      "bytes": 28877,
+      "sha256": "18bf2fdad438eb21ae3318eba7d42e9c03803b2dd1abc4d8f6448fb3b04499de"
+    }
+  ],
+  "review_bindings": [
+    {
+      "review": "reviews/CENTERED_COVARIANCE_AND_CUBE_ALIASES_REVIEW.md",
+      "scope": "Exactly the analytic, source or summary scope stated in this report; a hash binding alone is not a proof review.",
+      "targets": {
+        "CENTERED_COVARIANCE_AND_CUBE_ALIASES.md": "d121c94e9eaf8142d160ece29194d186cf2b915dfc53273d351e2baeec7becde",
+        "checks/check_principal_aliases.py": "38f659316d8445e85e11a8e2150dd2e778d1cee8263c4ac64d1fc3f757e1554f",
+        "checks/principal_alias_checks.json": "9c70640d8a8e15cc05394a212388b15c396e162e17e6003489c1bedc85cce744",
+        "sources/pr926/JOINT_REFLECTED_BLOCKS.md": "c75be63f43de6efb0d9f820da008f256afc53351fdbfe38870f9e97207955bd5"
+      }
+    },
+    {
+      "review": "reviews/CENTERED_COVARIANCE_SECOND_REVIEW.md",
+      "scope": "Exactly the analytic, source or summary scope stated in this report; a hash binding alone is not a proof review.",
+      "targets": {
+        "CENTERED_COVARIANCE_AND_CUBE_ALIASES.md": "d121c94e9eaf8142d160ece29194d186cf2b915dfc53273d351e2baeec7becde",
+        "checks/check_principal_aliases.py": "38f659316d8445e85e11a8e2150dd2e778d1cee8263c4ac64d1fc3f757e1554f",
+        "checks/principal_alias_checks.json": "9c70640d8a8e15cc05394a212388b15c396e162e17e6003489c1bedc85cce744"
+      }
+    },
+    {
+      "review": "reviews/DENSE_CROSS_GCD_REVIEW.md",
+      "scope": "Exactly the analytic, source or summary scope stated in this report; a hash binding alone is not a proof review.",
+      "targets": {
+        "ARBITRARY_GRAPH_SECTORS.md": "ef3704340d3af629a6bbd97d575d35bb5570474e8973a99c600c76bf096c9f13",
+        "DENSE_CROSS_GCD_SECTORS.md": "90af83fcd69cc95d2d56884e367f1a227828ca32c2cb03315ba5cf1d551f3d43",
+        "checks/check_graph_charges.py": "9b7e752cf98a3d3fd0f40fe89b1cacdf497a56249025cd7ff48c8827bc48e671",
+        "checks/graph_charge_checks.json": "54e7e19ed2aa739a9877b9340a3bfb39ab70c3533fa8fcef8d866fa4387fd569"
+      }
+    },
+    {
+      "review": "reviews/JOINT_GAUSS_REUNION_REVIEW.md",
+      "scope": "Exactly the analytic, source or summary scope stated in this report; a hash binding alone is not a proof review.",
+      "targets": {
+        "JOINT_GAUSS_REUNION_CONTINUATION.md": "31e2395999301d56ce63751db7c907fc6147b689574aaf268133d706ad3aa0aa"
+      }
+    },
+    {
+      "review": "reviews/PACKET_SUMMARY_SCOPE_REVIEW.md",
+      "scope": "Exactly the analytic, source or summary scope stated in this report; a hash binding alone is not a proof review.",
+      "targets": {
+        "PRINCIPAL_SHORT_LONG_COVARIANCE.md": "7de2f4fbf8b085bc37cc83d0767748eee1c8478a590b3551935870b616f9166e",
+        "README.md": "9532d061e0c53833d86f52cd6e025c66df165c15dbf39090c0834efadbcfbe3a",
+        "VALIDATION.md": "6a5ac7ed5bec4d9ddcb26fbd221aa953e96a5e14e83c340fc92db4cdea6de74e"
+      }
+    },
+    {
+      "review": "reviews/PRINCIPAL_SHORT_LONG_REVIEW.md",
+      "scope": "Exactly the analytic, source or summary scope stated in this report; a hash binding alone is not a proof review.",
+      "targets": {
+        "CENTERED_COVARIANCE_AND_CUBE_ALIASES.md": "d121c94e9eaf8142d160ece29194d186cf2b915dfc53273d351e2baeec7becde",
+        "PRINCIPAL_SHORT_LONG_COVARIANCE.md": "7de2f4fbf8b085bc37cc83d0767748eee1c8478a590b3551935870b616f9166e",
+        "checks/check_short_long_principal_blocks.py": "1197b7e4eebc1c76909a272426365f4dde14e9afe78c37903508cf087c0edf8a",
+        "checks/short_long_principal_checks.json": "191fc950937f84b33af16dce1e26e67ccb09ebe911cae3a7feb22ba31b26ce94"
+      }
+    },
+    {
+      "review": "reviews/ROOT_GRAPH_AND_DENSE_REVIEW.md",
+      "scope": "Exactly the analytic, source or summary scope stated in this report; a hash binding alone is not a proof review.",
+      "targets": {
+        "ARBITRARY_GRAPH_SECTORS.md": "ef3704340d3af629a6bbd97d575d35bb5570474e8973a99c600c76bf096c9f13",
+        "checks/check_graph_charges.py": "9b7e752cf98a3d3fd0f40fe89b1cacdf497a56249025cd7ff48c8827bc48e671",
+        "checks/graph_charge_checks.json": "54e7e19ed2aa739a9877b9340a3bfb39ab70c3533fa8fcef8d866fa4387fd569"
+      }
+    }
+  ]
+}

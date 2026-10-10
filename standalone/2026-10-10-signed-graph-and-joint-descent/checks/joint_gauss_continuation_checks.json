@@ -1,0 +1,294 @@
+{
+  "coefficient_exponents": {
+    "auxiliary": "f=z; the fourth-power twist retains its zero when (am,z)>1, so the additional exclusion Q is 1",
+    "checked_affine_identities": 3,
+    "conditioned_d_denominator": "u+1-v=t",
+    "correction_denominator": "t+w=u+3t-1/2",
+    "cube_local_identity": "K_p*y_p=x_p, since (3t-1/2)-(1-v)=w and kappa*c_k=chi_k^-",
+    "exact_outer_coefficient": "mu_K(z)*a_k(z)*chi_k^-(z)/(Nz)^(t+w)",
+    "inner_character_placement": "kappa is on m in B_{k,z}^{varrho,kappa}(t,u)",
+    "phase_limit": "Only norm-exponent algebra is computationally checked here. Exact Gauss CRT phases and reciprocal-primary orientation are proved in the manuscript using the pinned sources.",
+    "row_overlap": "If (z,k)>1 the exterior coefficient is zero; no coprimality hypothesis between k and f was used in the raw norm."
+  },
+  "domains_and_growth": {
+    "exact_grid_points": 14241,
+    "growth": {
+      "B_row_energy_F": "2/3",
+      "B_row_energy_H": "10/7",
+      "Y_squarefree_row_energy_H": "10/7",
+      "reflected_row_energy_H": "24/7-4Re(s)",
+      "vertical_scope": "Polynomial on each closed bounded real subregion with strict margins; the degree may depend on that subregion and the fixed source weight seminorms."
+    },
+    "new_tube": [
+      "Re(t)>1/2",
+      "Re(u)>1/2",
+      "Re(t+u)>8/5"
+    ],
+    "old_tube_points_checked": 6010,
+    "positive_linear_certificates": {
+      "bad_cube_margin": "3Re(t)-1/2 = 3*(Re(t)-1/2)+1",
+      "bad_ramified_margin": "Re(t)-1/6 = (Re(t)-1/2)+1/3",
+      "correction_ideal_exponent_infimum": "53/30",
+      "correction_ideal_margin_over_1": "23/30",
+      "correction_margin": "Re(t+w)-21/10 = 2*(Re(t)-1/2)+(Re(t+u)-8/5)",
+      "cube_Euler_margin": "Re(3t-1/2)-1 = 3*(Re(t)-1/2)",
+      "old_sum_margin": "Re(t+u)-7/4 = (2Re(t)+Re(u)-3)/2+(Re(u)-1/2)/2",
+      "old_to_new_sum_gap": "3/20"
+    },
+    "source_coordinates": {
+      "t": "1-s",
+      "u": "v-s",
+      "w": "u+2t-1/2"
+    },
+    "strict_v_1_crossing": "Re(s)<1/5"
+  },
+  "extra_optimal_sieve_used_in_main_proof": false,
+  "not_established_by_this_script": [
+    "Imported theta automorphy or Gauss coefficient identities",
+    "The source large-sieve and completed-norm theorems",
+    "Infinite normal convergence or analytic continuation",
+    "Finite-height signed M\u00f6bius or A2 covariance estimates",
+    "A fourth moment, 17/24 zero-free result, or the Riemann hypothesis"
+  ],
+  "physical_comparison": {
+    "classical_dominates_candidate_when_H_at_least_D_power": "168/265",
+    "classical_full_cube_completion": "H+H^(1/6)*D^2+(H*D^2)^(2/3)",
+    "classical_mixed_threshold": "7/40",
+    "counting_completion": "HD+H^2*D^(1/2)+H^(4/3)*D^(2/3)",
+    "counting_dominates_candidate_when_H_at_most_D_power": "49/40",
+    "coverage": "The two ranges overlap and cover all H,D>=1, up to the stated arbitrary small powers.",
+    "hypothetical_scalar_candidate": "H^(10/7)*D^(6/5)",
+    "limit": "No physical Mellin contour transfer is asserted, and the hypothetical candidate does not improve the available same-family envelope.",
+    "same_completed_family_cube_norm_weights": [
+      "-1",
+      "-5/2",
+      "-2"
+    ]
+  },
+  "scope": "Exact rational diagnostics and source byte bindings; not an independent analytic proof.",
+  "six_term_optimization": {
+    "cutoff_H_F_A_B": [
+      "-8/21",
+      "-2/9",
+      "-1/15",
+      "1/3"
+    ],
+    "six_terms": {
+      "AB_tail": {
+        "H_F_A_B": [
+          "8/7",
+          "2/3",
+          "6/5",
+          "0"
+        ],
+        "target_minus_term": [
+          "2/7",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "H": {
+        "H_F_A_B": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "target_minus_term": [
+          "3/7",
+          "2/3",
+          "6/5",
+          "0"
+        ]
+      },
+      "HA": {
+        "H_F_A_B": [
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        "target_minus_term": [
+          "3/7",
+          "2/3",
+          "1/5",
+          "0"
+        ]
+      },
+      "middle_short": {
+        "H_F_A_B": [
+          "10/7",
+          "2/3",
+          "9/10",
+          "0"
+        ],
+        "target_minus_term": [
+          "0",
+          "0",
+          "3/10",
+          "0"
+        ]
+      },
+      "mixed_tail": {
+        "H_F_A_B": [
+          "10/7",
+          "4/9",
+          "4/5",
+          "0"
+        ],
+        "target_minus_term": [
+          "0",
+          "2/9",
+          "2/5",
+          "0"
+        ]
+      },
+      "third_short": {
+        "H_F_A_B": [
+          "4/7",
+          "2/9",
+          "6/5",
+          "0"
+        ],
+        "target_minus_term": [
+          "6/7",
+          "4/9",
+          "0",
+          "0"
+        ]
+      }
+    },
+    "target_H_F_A_B": [
+      "10/7",
+      "2/3",
+      "6/5",
+      "0"
+    ]
+  },
+  "source_bindings": {
+    "inherited_import_declaration": {
+      "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+      "repository": "OpenAI/math",
+      "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+      "source": "October 5 paper2.tex",
+      "verification_scope": "Declared in the verified source notes; this script does not revalidate the imported theta foundation."
+    },
+    "proof": {
+      "file": "JOINT_GAUSS_REUNION_CONTINUATION.md",
+      "sha256": "31e2395999301d56ce63751db7c907fc6147b689574aaf268133d706ad3aa0aa"
+    },
+    "sources": [
+      {
+        "commit": "725b2d25ab47e57500049d93985560098c7ef3fa",
+        "path": "standalone/2026-10-10-sextic-moving-labels/ANISOTROPIC_A2_NORM_TRANSFER.md",
+        "role": "main: all-row anisotropic inverse for every R > 0",
+        "sha256": "e671b8b1c8717ed494b3db0ba39fb4c0de374aef56f774bf9a7ca68e01b277cf"
+      },
+      {
+        "commit": "725b2d25ab47e57500049d93985560098c7ef3fa",
+        "path": "standalone/2026-10-10-sextic-moving-labels/MIXED_LABEL_COMPLETION.md",
+        "role": "main: counting completion, outer multiplier, exact cube identities",
+        "sha256": "5e77ec88d6a191ec214bcedebc2b42d37f95735ba2bb18955b2f8a16aedfbcad"
+      },
+      {
+        "commit": "725b2d25ab47e57500049d93985560098c7ef3fa",
+        "path": "standalone/2026-10-10-sextic-moving-labels/SIXTH_POWER_STRATIFIED_INVERSE.md",
+        "role": "main: sixth-free sieve and exact row stratification",
+        "sha256": "f98cc20e361ebb99af7dbd4b5ffef83a8a55ca11c4d3f24da238bc24be4cb2e9"
+      },
+      {
+        "commit": "725b2d25ab47e57500049d93985560098c7ef3fa",
+        "path": "standalone/2026-10-10-sextic-moving-labels/OPTIMAL_SIEVE_SPECTRAL_EXTENSION.md",
+        "role": "comparison only: old 4/7 canonical mean",
+        "sha256": "b0d3eee6d32ad7f69bfdd8ac5132c60139f322b1102086897ce0099defab8551"
+      },
+      {
+        "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+        "path": "standalone/2026-10-10-signed-covariance-descent/SECOND_REFLECTION_BOOTSTRAP.md",
+        "role": "main: exact cube reunion and conditioned coefficients",
+        "sha256": "e1db605878eb805a3d21f908ea1c73f5869d56c112a3c3e91e67d9b715b16fd0"
+      },
+      {
+        "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+        "path": "standalone/2026-10-10-signed-covariance-descent/FULL_CUSP_DESCENT.md",
+        "role": "main: exact full cusp identity and bad-label mass",
+        "sha256": "b025af8af1ac13d07a04fbc7de71401d2a47ef2c8df5a1e89a4edc4973482504"
+      },
+      {
+        "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+        "path": "standalone/2026-10-10-signed-covariance-descent/FINITE_RAY_REUNION.md",
+        "role": "main: actual finite rays, entire finite coefficients, gamma factor",
+        "sha256": "8897088fb7e89c66e18bf0652a913983c5120a61d854591f990cce2a6261f2e0"
+      },
+      {
+        "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+        "path": "standalone/2026-10-10-signed-covariance-descent/FINITE_CUBE_HOMOGENEITY.md",
+        "role": "main: fixed finite character support and cube covariance",
+        "sha256": "e4f7b3ff0817c4b6deaf2e608657425c06ac97c1a7f4f60f3762eba7eca7b0e1"
+      },
+      {
+        "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+        "path": "standalone/2026-10-10-signed-covariance-descent/ALL_CUSP_COEFFICIENT_ADAPTER.md",
+        "role": "main: full nonzero frequency and cusp support table",
+        "sha256": "bfabc37c5b16a32d6b29fe5767f58f5f5a8dc161aaa3d127ebf11236fa2d3ca1"
+      },
+      {
+        "commit": "086bf0560c0c2679a1fe41418f583d2c5ca743c3",
+        "path": "standalone/2026-10-10-mobius-overlaps-and-sampled-moments/SAMPLED_MOMENT_CRITERION.md",
+        "role": "comparison only: signed scale sampling barriers",
+        "sha256": "18bf2fdad438eb21ae3318eba7d42e9c03803b2dd1abc4d8f6448fb3b04499de"
+      }
+    ],
+    "verified_commit_path_bindings": 10
+  },
+  "status": "finite_algebra_and_source_bindings_pass",
+  "tests_frequencies_and_cusps": {
+    "bad_indices": "n0 is one of finitely many squarefree S-supported ideals away from lambda; b0 has arbitrary nonnegative valuations on the same fixed set; all j and unit sectors below are retained.",
+    "cusp_phases": "E_0(ell)=1 and E_-(ell)=E_+(ell)=breve-e(ell); the intrinsic additive phases are retained before fixed finite Fourier expansion.",
+    "cusp_table": [
+      {
+        "cusp": "0",
+        "epsilon": "+1 or -1",
+        "j": "3r-3, r>=0",
+        "scalar": "3^(r/2+5/2)"
+      },
+      {
+        "cusp": "0",
+        "epsilon": "+/-omega^h, h=0,1,2",
+        "j": "3r-4, r>=1",
+        "scalar": "3^(r/2+2)*a_h; a=(1,zeta9,zeta9^-1)"
+      },
+      {
+        "cusp": "-",
+        "epsilon": "-omega^(h+1), h=0,1,2",
+        "j": "-4",
+        "scalar": "9*c_h; c=(1,omega^2*zeta9,omega*zeta9^-1)"
+      },
+      {
+        "cusp": "+",
+        "epsilon": "omega^(h-1), h=0,1,2",
+        "j": "-4",
+        "scalar": "9*c_h"
+      }
+    ],
+    "finite_character_support": "varrho^3=conjugate(rho)^3 for each actual sector, with kappa=eta*rho^3; the group is fixed independently of k and the bad cube/ramified indices.",
+    "finite_table_entries_checked": 882,
+    "frequency_decomposition": "ell=epsilon*lambda^j*n0*n*(b0*b)^3; n,n0 squarefree, b,b0 arbitrary; (n,b)=1 is not required.",
+    "frequency_lattice": "ell in lambda^(-4) O_K, ell != 0, with every supported source cusp sector retained.",
+    "good_indices": "n,b are primary and avoid S; all physical raw indices and auxiliaries avoid S.",
+    "limit": "The finite table checks do not prove any imported theta coefficient or infinite cusp sum identity.",
+    "prime_valuation_support_checks": 300,
+    "raw_rows": "All nonzero element rows in H<=Nk<2H, or any subset, with fixed reciprocity and unit classes retained.",
+    "raw_tests": {
+      "class": "Complex smooth functions of positive ideal norm, each compactly supported in a fixed interval inside (0,infinity).",
+      "dyadic_tests": "W_t(x)=x^(-t)W_0(x), W_u(x)=x^(-u)W_0(x), and a fixed first block covering norm 1.",
+      "scales": "H,F>=1; nonempty factor scales below 1 have a fixed support-dependent positive lower bound. The exact inverse allows every R>0, with its stratum support caps retained.",
+      "uniformity": "Every required fixed derivative seminorm grows polynomially in Im(t),Im(u) on a bounded real strip. The counting theorem is used; no arbitrary row-dependent coefficient is allowed."
+    },
+    "reunited_rows": "Only the original squarefree primary k coprime to S; all-row B does not extend the scope of the exact source identity for Y.",
+    "supported_entries_in_finite_window": 128,
+    "total_bad_label_mass": "Bounded on strict Re(t)>1/6; the new domain has Re(t)>1/2. No cross-cusp terms are dropped in the row norm.",
+    "zero_frequency": "Not included: Y and the reflected object here are the exact nonzero-frequency objects defined by PR #922."
+  }
+}

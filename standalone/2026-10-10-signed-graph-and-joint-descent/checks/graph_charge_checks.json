@@ -1,0 +1,150 @@
+{
+  "arithmetic": "integers, rational Fractions, and integral Z[zeta_6]",
+  "coverage": {
+    "cycle_k_range": [
+      3,
+      6
+    ],
+    "cycle_lengths": "every even length from 4 through 2k-2",
+    "dense_b_values": "unique b0, (b0+1)/2, 7/8, 1, with b0=k/(2(k-1))",
+    "dense_k_range": [
+      3,
+      24
+    ],
+    "dense_labeled_subsets_represented": 1501199875787559,
+    "dense_subset_coverage": "all (r,n,t) symmetry classes of all labeled subsets",
+    "forest_b_values": [
+      "3/5",
+      "3/4",
+      "7/8",
+      "1"
+    ],
+    "formal_forward_axes": [
+      4,
+      6
+    ],
+    "formal_forward_masks": [
+      false,
+      true
+    ],
+    "formal_forward_prime_exponents": [
+      0,
+      1,
+      2
+    ],
+    "formal_phase_values_per_prime": 7,
+    "gcd_thresholds": [
+      1,
+      7,
+      13,
+      91
+    ],
+    "general_exponent_k_range": [
+      2,
+      40
+    ],
+    "graph_counts": {
+      "2": 16,
+      "3": 512
+    },
+    "graph_orders_all_labeled_graphs": [
+      2,
+      3
+    ],
+    "signed_moment_orders": [
+      4,
+      6
+    ],
+    "signed_selectors_per_moment": 25,
+    "signed_tuple_counts_per_phase": {
+      "4": 256,
+      "6": 4096
+    },
+    "two_prime_norms": [
+      7,
+      13
+    ],
+    "two_prime_phase_assignments": 49
+  },
+  "format": "signed_graph_exact_diagnostics_v1",
+  "not_verified": [
+    "NM2 and PW_b analytic premises or their source proofs",
+    "infinite Euler convergence or infinite moment inequalities",
+    "genuine global Hecke characters or L-function values",
+    "full moments, cofinal hierarchy, zero-free regions, or RH",
+    "all-order graph inequalities by finite extrapolation"
+  ],
+  "outcome": "PASS",
+  "passed_predicates": {
+    "all_pair_gcd_from_shared_incidence": 62976,
+    "base_exponent_identity": 156,
+    "connected_graph_charge": 840,
+    "connected_half_cutoff_identity": 156,
+    "cycle_edge_count": 10,
+    "cycle_improvement_identity": 40,
+    "cycle_matching_D_exponent": 12,
+    "cycle_matching_diagonal_cutoff": 152,
+    "cycle_matching_nonnegative": 12,
+    "cycle_matching_subsets": 16200,
+    "cycle_matching_total_charge": 12,
+    "cycle_nonnegative": 40,
+    "cycle_subsets": 79688,
+    "cycle_total_charge": 40,
+    "dense_D_exponent": 87,
+    "dense_all_subset_classes": 58104,
+    "dense_b_domain": 87,
+    "dense_corner_identities": 1044,
+    "dense_corner_nonnegative": 1044,
+    "dense_cutoff_gain": 1,
+    "dense_diagonal_cutoff": 87,
+    "dense_four_sevenths_cutoff": 1,
+    "dense_lower_endpoint_identities": 88,
+    "dense_nonnegative_charges": 87,
+    "dense_total_charge": 87,
+    "forest_nonnegative": 2112,
+    "forest_subsets": 117440,
+    "forest_total_charge": 2112,
+    "formal_forward_all_zero_sixth_phases": 11340,
+    "formal_forward_coefficients": 1620,
+    "full_matching_union_charge": 1016,
+    "incidence_reconstruction_complete": 2,
+    "incidence_reconstruction_signature": 4352,
+    "incidence_reconstruction_unique": 4352,
+    "literal_zero_power_convention": 1,
+    "low_rank_forces_unused_vertices": 51,
+    "matching_is_bounded_by_forest_rank": 528,
+    "negative_control_dense_below_witness_domain": 22,
+    "negative_control_dropped_principal_zero": 2,
+    "negative_control_missing_native_discount": 1,
+    "negative_control_singleton_selector_not_eligible": 2,
+    "negative_controls_present": 2,
+    "rank_isolates_statistic": 528,
+    "rank_union_nonnegative": 6224,
+    "rank_union_statistic_dominates_m": 6224,
+    "rank_union_subsets": 349064,
+    "rank_union_total_charge": 6224,
+    "rank_union_two_unused_axes": 6224,
+    "selectors_independent_of_singletons": 4352,
+    "signed_incidence_all_zero_sixth_phase_identity": 213248,
+    "signed_selector_complete_covariances": 2450,
+    "sixth_cycle_cutoff_two_fifths": 1,
+    "sixth_root_relations": 6,
+    "threshold_one_is_complete_graph": 4352,
+    "unit_conjugation_relations": 6
+  },
+  "source_bindings": {
+    "ARBITRARY_GRAPH_SECTORS.md": {
+      "bytes": 24560,
+      "sha256": "ef3704340d3af629a6bbd97d575d35bb5570474e8973a99c600c76bf096c9f13"
+    },
+    "DENSE_CROSS_GCD_SECTORS.md": {
+      "bytes": 10512,
+      "sha256": "90af83fcd69cc95d2d56884e367f1a227828ca32c2cb03315ba5cf1d551f3d43"
+    },
+    "check_graph_charges.py": {
+      "bytes": 23144,
+      "sha256": "9b7e752cf98a3d3fd0f40fe89b1cacdf497a56249025cd7ff48c8827bc48e671"
+    }
+  },
+  "total_passed_predicates": 964909
+}
