@@ -270,7 +270,10 @@ def check_E2E(res, locs_by_p, rng_seed=17):
     rnd = random.Random(rng_seed)
     P2 = [locs_by_p[(2, 1)], locs_by_p[(2, -3)]]            # norms 7, 13
     P3 = P2 + [locs_by_p[(5, 0)]]                           # + inert 5 (norm 25)
-    h0s = [ONE, LAM, mul(LAM, LAM), TWO, mul(TWO, LAM), mul(TWO, mul(LAM, LAM)), ZERO, (4, 5), (7, -3)]
+    h0s = [ONE, LAM, mul(LAM, LAM), TWO, mul(TWO, LAM), mul(TWO, mul(LAM, LAM)), ZERO, (4, 5), (7, -3),
+           mul(mul(LAM, LAM), W1), mul(mul(LAM, LAM), W2), mul(mul(TWO, mul(LAM, LAM)), W1), mul(LAM, W1)]
+    # the last four give (c, lambda) = 1 with numerators = -omega, -omega^2, omega mod 3 (cusps Theta_2, Theta_1)
+    # and v_lambda(c) = 1 with a unit-twisted numerator
     xs = [(rnd.randint(-400, 400), rnd.randint(-400, 400)) for _ in range(110)]
     xs += [mul(P2[0].p, (rnd.randint(-30, 30), rnd.randint(-30, 30))) for _ in range(15)]
     xs += [mul(P2[1].p, (rnd.randint(-30, 30), rnd.randint(-30, 30))) for _ in range(15)]
@@ -285,8 +288,9 @@ def check_E2E(res, locs_by_p, rng_seed=17):
 
     out = {'cases_seen': {}, 'kappa_direct_eq_formula': [0, 0], 'kappaF_constant': True, 'dpF_constant': True,
            'max_err_active': 0.0, 'n_active_identities': 0, 'max_err_branch_sum': 0.0, 'n_branch_identities': 0,
-           'ctrl_conj_multiplier_min_maxerr': 9.0, 'ctrl_no_lift_nonconstant_kappaF_or_deltaF_terms': 0, 'ctrl_no_lift_min_maxerr': 9.0,
-           'ctrl_eps_sign_min_maxerr': 9.0}
+           'ctrl_conj_multiplier': [0, 0, 9.0], 'ctrl_no_lift_nonconstant_kappaF_or_deltaF_terms': 0,
+           'ctrl_no_lift': [0, 0, 0.0], 'ctrl_eps_sign': [0, 0, 0.0]}
+    # control entries: [configurations failing (max err > 1e-6), configurations tested, min (conj) or max error]
     term_cache = {}
 
     def terms(aF, cF, act, lift=True):
@@ -335,7 +339,7 @@ def check_E2E(res, locs_by_p, rng_seed=17):
     for h0 in h0s:
         aF, cF = reduced_fraction(h0)
         for P, jlist in [(P2, [(j1, j2) for j1 in range(6) for j2 in range(6)]),
-                         (P3, [(1, 1, 1), (4, 0, 2), (0, 0, 5), (3, 4, 1), (0, 4, 0), (5, 2, 3)] if h0 in h0s[:6] else [])]:
+                         (P3, [(1, 1, 1), (4, 0, 2), (0, 0, 5), (3, 4, 1), (0, 4, 0), (5, 2, 3)] if h0 in h0s[:6] + h0s[9:11] else [])]:
             xs_use = xs if len(P) == 2 else xs[:24] + xs[110:126]
             # ---- all-active identity for every subset containing the nonzero exponents
             for js in jlist:
@@ -375,13 +379,13 @@ def check_E2E(res, locs_by_p, rng_seed=17):
                     # controls on a few configurations
                     if len(act) == 2 and js[:2] in [(1, 1), (1, 2), (3, 5), (2, 0)]:
                         e_conj = max(abs(lhs_active(act, jsa, tl, x, conj_mult=False) - rhs_active(aF, cF, act, jsa, tl, x)) for x in xs[:40])
-                        out['ctrl_conj_multiplier_min_maxerr'] = min(out['ctrl_conj_multiplier_min_maxerr'], e_conj)
+                        cc = out['ctrl_conj_multiplier']; cc[0] += e_conj > 1e-6; cc[1] += 1; cc[2] = min(cc[2], e_conj)
                         e_eps = max(abs(lhs_active(act, jsa, tl, x) - rhs_active(aF, cF, act, jsa, tl, x, eps_sign=-1)) for x in xs[:40])
-                        out['ctrl_eps_sign_min_maxerr'] = min(out['ctrl_eps_sign_min_maxerr'], e_eps)
+                        cc = out['ctrl_eps_sign']; cc[0] += e_eps > 1e-6; cc[1] += 1; cc[2] = max(cc[2], e_eps)
                         tl_nl = terms(aF, cF, act, lift=False)
                         out['ctrl_no_lift_nonconstant_kappaF_or_deltaF_terms'] += sum(1 for _, t in tl_nl if t['kF'] != tl_nl[0][1]['kF'] or t['dpF'] != tl_nl[0][1]['dpF'])
                         e_nl = max(abs(lhs_active(act, jsa, tl_nl, x) - rhs_active(aF, cF, act, jsa, tl, x)) for x in xs[:40])
-                        out['ctrl_no_lift_min_maxerr'] = min(out['ctrl_no_lift_min_maxerr'], e_nl)
+                        cc = out['ctrl_no_lift']; cc[0] += e_nl > 1e-6; cc[1] += 1; cc[2] = max(cc[2], e_nl)
                 # ---- full branch sum over all h (zero frequencies included), only when some j_p = 0
                 if zero_ps and len(P) == 2:
                     for x in xs[:60]:

@@ -17,8 +17,9 @@ Exact sources or dependencies: OpenAI "The Quasi-Riemann Hypothesis" (30 Sep 202
        read from the TeX, not from pdftotext. Exact Z[omega] arithmetic is in ../a2/eis.py
        (imported, unmodified).
 What was actually run: nice -n 10 python3 -I coeff74_factorization.py
-       results/coeff74_factorization.json (317 s, one process, single thread), then the same
-       script with --coverage (about 10 s). Python 3.13, numpy 2.5.3.
+       results/coeff74_factorization.json (317 s; rerun with the final script hash gave
+       identical results in 459 s on the loaded machine), then --coverage (about 10 s).
+       One process, single thread. Python 3.13, numpy 2.5.3.
 Smallest remaining gap: (1) Three of the four t>0 families of table (7.16) are covered only
        at r = 0, i.e. t = 3, 4, 6. Their r = 1 rows would need t = 9, 10, 12, with moduli of
        norm >= 12*7^9. (2) The exponent k = v_p(s) = 3 is not covered. (3) The analytic part of
@@ -232,12 +233,12 @@ a real invariance, explained after the table.
 
 ```
 cd research/exploratory/qrh-2026-10/numerics
-nice -n 10 python3 -I coeff74_factorization.py results/coeff74_factorization.json   # 317 s
+nice -n 10 python3 -I coeff74_factorization.py results/coeff74_factorization.json   # 317-459 s
 nice -n 10 python3 -I coeff74_factorization.py --coverage results/coeff74_coverage.json
 ```
 
 sha256:
 
 * script `5fb541e7…b17760`;
-* JSON `4b801357…0d3cb6`;
+* JSON `3e8f627f…36c5d3`;
 * coverage `e2cfd464…fae7939`.

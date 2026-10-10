@@ -152,6 +152,11 @@ attempt.
 **C3.** The coefficient (7.4) of the 7/8 manuscript, factored into the local series (7.10). This
 needs (7.9) and the `b*`/`ξ`/`τ` and pair-phase cancellations; only the local identity was checked
 ([numerics/](numerics/README.md)).
+* *Done in this wave* ([numerics/COEFF74_CHECK.md](numerics/COEFF74_CHECK.md)): on 141,264 tuples,
+  (7.4) equals the product of the (7.10) local summands, with relative deviation 7e-13 on nonzero
+  values. The `b*`/`ξ`/`τ` and pair phases are exercised, and all 16 controls fail.
+* This is finite floating point. Gaps: `r ≥ 1` for three families, `k = 3`, and the analytic part
+  of (7.5).
 
 **C4.** PR 910's 139999/160000 deduction, second replay
 ([reviews/PR910_REPLAY.md](reviews/PR910_REPLAY.md)), and its height route
