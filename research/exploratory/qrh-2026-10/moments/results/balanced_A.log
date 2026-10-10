@@ -1,0 +1,18 @@
+brute-force check of B_(c,u)(60): max err 1.4e-14 (c=1), 4.5e-15 (c=p7)
+D=500 X=500 Nc=1 #fam=139 #cols=8886 nodes=9209 [0.2s]: th=0.05: ms/HX^2=0.0467 ms/diag=0.9855 m4/m2^2=11.13; th=0.1: ms/HX^2=0.0463 ms/diag=0.9799 m4/m2^2=9.80; th=0.25: ms/HX^2=0.0473 ms/diag=0.9969 m4/m2^2=8.05
+D=500 X=250 Nc=1 #fam=70 #cols=2269 nodes=2402 [0.1s]: th=0.05: ms/HX^2=0.0298 ms/diag=0.9583 m4/m2^2=4.43; th=0.1: ms/HX^2=0.0292 ms/diag=0.9413 m4/m2^2=4.41; th=0.25: ms/HX^2=0.0307 ms/diag=0.9848 m4/m2^2=4.72
+D=500 X=125 Nc=1 #fam=39 #cols=685 nodes=748 [0.0s]: th=0.05: ms/HX^2=0.0282 ms/diag=0.9592 m4/m2^2=4.51; th=0.1: ms/HX^2=0.0276 ms/diag=0.9416 m4/m2^2=4.76; th=0.25: ms/HX^2=0.0289 ms/diag=0.9823 m4/m2^2=5.26
+D=500 X=31 Nc=1 #fam=7 #cols=21 nodes=29 [0.0s]: th=0.05: ms/HX^2=0.0157 ms/diag=0.9732 m4/m2^2=2.02; th=0.1: ms/HX^2=0.0155 ms/diag=0.9659 m4/m2^2=2.04; th=0.25: ms/HX^2=0.0162 ms/diag=1.0059 m4/m2^2=2.02
+D=500 X=71 Nc=7 #fam=19 #cols=165 nodes=185 [0.0s]: th=0.05: ms/HX^2=0.0328 ms/diag=1.0035 m4/m2^2=3.76; th=0.1: ms/HX^2=0.0323 ms/diag=0.9917 m4/m2^2=3.87; th=0.25: ms/HX^2=0.0329 ms/diag=1.0076 m4/m2^2=3.79
+D=1000 X=1000 Nc=1 #fam=286 #cols=37624 nodes=38501 [1.0s]: th=0.05: ms/HX^2=0.0403 ms/diag=0.9460 m4/m2^2=5.78; th=0.1: ms/HX^2=0.0410 ms/diag=0.9639 m4/m2^2=5.50; th=0.25: ms/HX^2=0.0419 ms/diag=0.9844 m4/m2^2=5.63
+D=1000 X=500 Nc=1 #fam=139 #cols=8886 nodes=9209 [0.3s]: th=0.05: ms/HX^2=0.0465 ms/diag=0.9808 m4/m2^2=8.50; th=0.1: ms/HX^2=0.0474 ms/diag=1.0010 m4/m2^2=8.31; th=0.25: ms/HX^2=0.0488 ms/diag=1.0297 m4/m2^2=6.74
+D=1000 X=250 Nc=1 #fam=70 #cols=2269 nodes=2402 [0.1s]: th=0.05: ms/HX^2=0.0298 ms/diag=0.9580 m4/m2^2=4.36; th=0.1: ms/HX^2=0.0300 ms/diag=0.9649 m4/m2^2=4.56; th=0.25: ms/HX^2=0.0315 ms/diag=1.0153 m4/m2^2=5.67
+D=1000 X=62 Nc=1 #fam=17 #cols=131 nodes=152 [0.0s]: th=0.05: ms/HX^2=0.0553 ms/diag=0.9817 m4/m2^2=4.42; th=0.1: ms/HX^2=0.0557 ms/diag=0.9872 m4/m2^2=4.42; th=0.25: ms/HX^2=0.0563 ms/diag=0.9994 m4/m2^2=4.32
+D=1000 X=143 Nc=7 #fam=36 #cols=611 nodes=658 [0.0s]: th=0.05: ms/HX^2=0.0320 ms/diag=0.9362 m4/m2^2=4.58; th=0.1: ms/HX^2=0.0333 ms/diag=0.9732 m4/m2^2=4.55; th=0.25: ms/HX^2=0.0343 ms/diag=1.0047 m4/m2^2=4.73
+D=1000 X=11 Nc=91 #fam=3 #cols=3 nodes=6 [0.0s]: th=0.05: ms/HX^2=0.0017 ms/diag=1.0022 m4/m2^2=1.25; th=0.1: ms/HX^2=0.0017 ms/diag=0.9997 m4/m2^2=1.25; th=0.25: ms/HX^2=0.0017 ms/diag=0.9998 m4/m2^2=1.25
+D=2000 X=2000 Nc=1 #fam=561 #cols=143918 nodes=146074 [6.3s]: th=0.05: ms/HX^2=0.0420 ms/diag=0.9739 m4/m2^2=6.63; th=0.1: ms/HX^2=0.0423 ms/diag=0.9817 m4/m2^2=6.33; th=0.25: ms/HX^2=0.0427 ms/diag=0.9914 m4/m2^2=6.25
+D=2000 X=1000 Nc=1 #fam=286 #cols=37624 nodes=38501 [1.5s]: th=0.05: ms/HX^2=0.0426 ms/diag=0.9987 m4/m2^2=5.55; th=0.1: ms/HX^2=0.0421 ms/diag=0.9872 m4/m2^2=5.42; th=0.25: ms/HX^2=0.0419 ms/diag=0.9845 m4/m2^2=5.87
+D=2000 X=500 Nc=1 #fam=139 #cols=8886 nodes=9209 [0.6s]: th=0.05: ms/HX^2=0.0482 ms/diag=1.0159 m4/m2^2=7.81; th=0.1: ms/HX^2=0.0478 ms/diag=1.0085 m4/m2^2=7.21; th=0.25: ms/HX^2=0.0488 ms/diag=1.0306 m4/m2^2=6.19
+D=2000 X=125 Nc=1 #fam=39 #cols=685 nodes=748 [0.1s]: th=0.05: ms/HX^2=0.0290 ms/diag=0.9867 m4/m2^2=5.12; th=0.1: ms/HX^2=0.0292 ms/diag=0.9933 m4/m2^2=4.95; th=0.25: ms/HX^2=0.0296 ms/diag=1.0073 m4/m2^2=4.84
+D=2000 X=286 Nc=7 #fam=71 #cols=2357 nodes=2471 [0.2s]: th=0.05: ms/HX^2=0.0373 ms/diag=1.0253 m4/m2^2=5.28; th=0.1: ms/HX^2=0.0363 ms/diag=0.9988 m4/m2^2=5.20; th=0.25: ms/HX^2=0.0362 ms/diag=0.9972 m4/m2^2=5.37
+D=2000 X=22 Nc=91 #fam=7 #cols=21 nodes=28 [0.0s]: th=0.05: ms/HX^2=0.0431 ms/diag=0.9808 m4/m2^2=2.32; th=0.1: ms/HX^2=0.0437 ms/diag=0.9937 m4/m2^2=2.32; th=0.25: ms/HX^2=0.0438 ms/diag=0.9976 m4/m2^2=2.32
