@@ -1,0 +1,70 @@
+{
+  "arithmetic": "exact fractions; explicit exceptions, independent of Python optimization",
+  "negative_control": {
+    "actual_H_norm_exponent": "65/128",
+    "omitted_middle_mixed_term": "rejected",
+    "test_a": "9/16"
+  },
+  "new_all_row_threshold": "4/7",
+  "new_rows": [
+    {
+      "F_norm_at_threshold": "3/14",
+      "H_norm_at_threshold": "10/21",
+      "column_power": "1",
+      "crossover_F": "1/2",
+      "crossover_H": "11/12",
+      "row_power": "1/6",
+      "threshold": "6/11"
+    },
+    {
+      "F_norm_at_threshold": "1/14",
+      "H_norm_at_threshold": "1/2",
+      "column_power": "1/3",
+      "crossover_F": "3/4",
+      "crossover_H": "7/8",
+      "row_power": "5/6",
+      "threshold": "4/7"
+    },
+    {
+      "F_norm_at_threshold": "29/154",
+      "H_norm_at_threshold": "37/77",
+      "column_power": "5/6",
+      "crossover_F": "6/11",
+      "crossover_H": "10/11",
+      "row_power": "1/3",
+      "threshold": "11/20"
+    }
+  ],
+  "old_all_row_threshold": "5/8",
+  "old_rows": [
+    {
+      "F_norm_at_threshold": "3/16",
+      "H_norm_at_threshold": "41/96",
+      "column_power": "1",
+      "crossover_F": "1/2",
+      "crossover_H": "11/12",
+      "row_power": "1/6",
+      "threshold": "6/11"
+    },
+    {
+      "F_norm_at_threshold": "1/8",
+      "H_norm_at_threshold": "1/2",
+      "column_power": "2/3",
+      "crossover_F": "3/5",
+      "crossover_H": "4/5",
+      "row_power": "2/3",
+      "threshold": "5/8"
+    }
+  ],
+  "reflected_scalar": {
+    "difference": "3/112",
+    "endpoint_claimed": false,
+    "limiting_s": "-3/14",
+    "limiting_tau": "5/14",
+    "new": "11/14",
+    "old": "13/16",
+    "physical_envelope_improved": false
+  },
+  "scope": "finite crossover identities and exponent comparisons only",
+  "status": "pass"
+}

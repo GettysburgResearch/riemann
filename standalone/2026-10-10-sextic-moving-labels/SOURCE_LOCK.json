@@ -1,0 +1,354 @@
+{
+  "schema_version": 1,
+  "packet": "2026-10-10-sextic-moving-labels",
+  "parent_commit": "1a1152008706f7e24fa1efe4990588f8f99c5d8d",
+  "sources": [
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "path": "standalone/2026-10-10-sextic-moment-descent/FOURTH_MOMENT_ATTACK.md",
+      "git_blob": "ef01306bf9453d1dd41c9e4ca50793cddac0a6e7",
+      "sha256": "354e8f7f5f81d0f8821ea6e821f55546f9c9641ac0690def1ae373000b4b3d08",
+      "bytes": 37899,
+      "role": "Native smaller-scale moving-mask second moment",
+      "retained_path": "standalone/2026-10-10-sextic-moment-descent/FOURTH_MOMENT_ATTACK.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "path": "standalone/2026-10-10-sextic-moment-descent/GENERAL_MOMENT_ATTACK.md",
+      "git_blob": "893d0e394041d16cf36d643794b544b7556303de",
+      "sha256": "a4ca15c0d731ef6000b19507b39b64a4786a7f8af9939864b3176221bf02b499",
+      "bytes": 27326,
+      "role": "Exact higher-moment incidence decomposition",
+      "retained_path": "standalone/2026-10-10-sextic-moment-descent/GENERAL_MOMENT_ATTACK.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "6498d6cc2eded03159c7332b25fd224ad07f89c1",
+      "path": "standalone/2026-10-10-sextic-moment-descent/REFINED_ALL_ROW_SIEVE.md",
+      "git_blob": "69589ba1350c1ed5bd62cf87b976c3ba2142f94e",
+      "sha256": "6879e094fb63969ddc88c637bf633cf46360d144d2b1615573647e734b4141e8",
+      "bytes": 17097,
+      "role": "Classical all-row squarefree-column sieve",
+      "retained_path": "standalone/2026-10-10-sextic-moment-descent/REFINED_ALL_ROW_SIEVE.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "0cc0428fedbbfc340044c7451b3d392c1da9a103",
+      "path": "standalone/2026-10-10-sextic-moment-conductor-core/CONDUCTOR_SECTORS.md",
+      "git_blob": "30c359bf54b91e640786114d7946fd4df39b526c",
+      "sha256": "c160bbb1b1d7c6bcc5514d496ad41f15fd17ea3d36206b0d05cfa0d7d6503983",
+      "bytes": 24272,
+      "role": "Absolute accounting in controlled conductor sectors",
+      "retained_path": "standalone/2026-10-10-sextic-joint-core/sources/pr914/CONDUCTOR_SECTORS.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "9959364671f89b86f3992ec5ed5e19f804eb607b",
+      "path": "standalone/2026-10-10-sextic-critical-core/ANISOTROPIC_SINGLETON_CORES.md",
+      "git_blob": "e3dfb64106249415eb4f3d1727186dd744535ca0",
+      "sha256": "4854a01c2767a1dc4d7c67c490e5502bcad8935bce3089ba5f37adb1e6d02ea8",
+      "bytes": 8894,
+      "role": "Native one-axis bound and exact forward Euler correction",
+      "retained_path": "standalone/2026-10-10-sextic-critical-core/ANISOTROPIC_SINGLETON_CORES.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "9959364671f89b86f3992ec5ed5e19f804eb607b",
+      "path": "standalone/2026-10-10-sextic-critical-core/COUPLED_THETA_COMPLETION.md",
+      "git_blob": "981f102d643f0052489d9025ef305be23a458823",
+      "sha256": "f3b57f69338e8736ffe4addd5a6e2ebf6d5f8976ee9d2fda5921c83ff484eb36",
+      "bytes": 18030,
+      "role": "Coupled reflection and quadratic-cubic row norm",
+      "retained_path": "standalone/2026-10-10-sextic-critical-core/COUPLED_THETA_COMPLETION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "9959364671f89b86f3992ec5ed5e19f804eb607b",
+      "path": "standalone/2026-10-10-sextic-critical-core/REFLECTION_SCALAR_AUDIT.md",
+      "git_blob": "9a2c73fafdab33a0513990b26761c1713a9507a3",
+      "sha256": "17bdce731735412cc463c50c944df9240736e5797282f2c5a4eed5a07b2e21e2",
+      "bytes": 5533,
+      "role": "Exact scalar orientation and zero-mask audit",
+      "retained_path": "standalone/2026-10-10-sextic-critical-core/REFLECTION_SCALAR_AUDIT.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "8d49acb264577f63374358c33636ebe8e05ccf70",
+      "path": "standalone/2026-10-10-all-order-collision-removal/continuation-balanced-closure/BALANCED_CLOSURE.md",
+      "git_blob": "09d1086f64a03df9ed87b12f9b3cfbd103073c6e",
+      "sha256": "f4f7f4d55f32ad070f8e7ab51215b431860340df5e8129633c2906441c6fa1b6",
+      "bytes": 11912,
+      "role": "Adjacent balanced fixed-row envelope closure; not an extra premise of the subset theorem",
+      "retained_path": "standalone/2026-10-10-sextic-separated-cores/sources/pr916/BALANCED_CLOSURE.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "6b4723042b3d250024eef45cb1924f88f28e902c",
+      "path": "standalone/2026-10-10-oscillating-overlaps-and-averaged-moments/SCALE_AVERAGED_CRITERION.md",
+      "git_blob": "f683c09d6ed298aa07384e71ee56d69ebbb35d5f",
+      "sha256": "c6c543037312480fae6154f7a059248fe14658ecff6251aaecb80fe0fdbfd9c0",
+      "bytes": 12654,
+      "role": "Signed dyadic-moment extraction",
+      "retained_path": "standalone/2026-10-10-averaged-conductor-frontier/sources/pr917/SCALE_AVERAGED_CRITERION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "cfa102748b26f840ccc4b963a660711424db0ec3",
+      "path": "standalone/2026-10-10-sextic-joint-core/INTERFACE_COMPARISON.md",
+      "git_blob": "4373ac212f31f5472a1e83c69c8b28ec46547957",
+      "sha256": "203df24a48e54cb088a28c1236c78569ae75ea84a6b589f72a30b35720cc8e4c",
+      "bytes": 16228,
+      "role": "Literal finite cube inversion and mixed physical coefficients",
+      "retained_path": "standalone/2026-10-10-sextic-joint-core/INTERFACE_COMPARISON.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "9b04a887e171b3104a66cf57296ce5b0b2920d78",
+      "path": "standalone/2026-10-10-averaged-conductor-frontier/SMALL_GCD_CONDUCTOR_REDUCTION.md",
+      "git_blob": "4154f9d25537e863e235fd86ce5de9620256222c",
+      "sha256": "9a371bd84f63b7fae2a3983c05829f2d69e2bbed918ab3eed119a2e7a11125a2",
+      "bytes": 16386,
+      "role": "Classical within-side gcd cutoff and signed fourth remainder",
+      "retained_path": "standalone/2026-10-10-averaged-conductor-frontier/SMALL_GCD_CONDUCTOR_REDUCTION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "9b04a887e171b3104a66cf57296ce5b0b2920d78",
+      "path": "standalone/2026-10-10-averaged-conductor-frontier/COFINAL_AVERAGED_REDUCTION.md",
+      "git_blob": "a9372fa2682c4c6ece1a496afc068266af026b91",
+      "sha256": "b5c6f9064c9b614ccc15990e1b21b2ee7475e710bff8ee73534cb1cc45bbcbd4",
+      "bytes": 8086,
+      "role": "All-order signed-average interface and its quantifiers",
+      "retained_path": "standalone/2026-10-10-averaged-conductor-frontier/COFINAL_AVERAGED_REDUCTION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "2edc467ef4dea4aa685219ac6a558a158b88768d",
+      "path": "standalone/2026-10-10-theta-support-descent/OPPOSITE_DERIVATIVE_REFLECTION.md",
+      "git_blob": "2966032ea89396ec2e0a423b1b23841645a1fb47",
+      "sha256": "9532f14dc452edf9a50e7ec905e0629c54d510fd9937c5d8c19bcf7dfb4e9ccb",
+      "bytes": 15584,
+      "role": "Opposite-derivative compact-support identity",
+      "retained_path": "standalone/2026-10-10-sextic-separated-cores/sources/pr920/OPPOSITE_DERIVATIVE_REFLECTION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "2edc467ef4dea4aa685219ac6a558a158b88768d",
+      "path": "standalone/2026-10-10-theta-support-descent/ALL_CUSP_REFLECTION.md",
+      "git_blob": "979c54bb310fe8ec48d83d4ac118ca6a97144ff6",
+      "sha256": "4a0201c3de364c1747726b9561f91ffc825da0aca926528844c543c9bbcd908d",
+      "bytes": 16372,
+      "role": "Exact denominator-preserving all-cusp adapter",
+      "retained_path": "standalone/2026-10-10-sextic-separated-cores/sources/pr920/ALL_CUSP_REFLECTION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "2edc467ef4dea4aa685219ac6a558a158b88768d",
+      "path": "standalone/2026-10-10-theta-support-descent/RAMANUJAN_SUPPORT_PRUNING.md",
+      "git_blob": "fae954cda842026d9f9edeabf1e5cdb4c0ed9e5c",
+      "sha256": "9a019b2253a0f35ade96455bf5d249cd1ca09285c4f2d7e17c475b5b5522c3ea",
+      "bytes": 11249,
+      "role": "Complete-group negative-allocation support cutoff",
+      "retained_path": "standalone/2026-10-10-sextic-separated-cores/sources/pr920/RAMANUJAN_SUPPORT_PRUNING.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "2edc467ef4dea4aa685219ac6a558a158b88768d",
+      "path": "standalone/2026-10-10-theta-support-descent/HIGHER_ANGULAR_SECOND_MOMENT.md",
+      "git_blob": "956445e9baa91356a352cc089852dbf34f90dbef",
+      "sha256": "82edbaed050710fcdbfa65c20a39cc83338e9f283473462c1756ea717f035959",
+      "bytes": 23187,
+      "role": "Uniform reciprocal for angular type minus three, conditional on imported framework",
+      "retained_path": "standalone/2026-10-10-sextic-separated-cores/sources/pr920/HIGHER_ANGULAR_SECOND_MOMENT.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "9b04a887e171b3104a66cf57296ce5b0b2920d78",
+      "path": "standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+      "git_blob": "2000faddbbebac5de0ecfe0b962534ea61a852d5",
+      "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+      "bytes": 169005,
+      "role": "Imported OpenAI analytic framework; original OpenAI/math commit adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+      "retained_path": "standalone/2026-10-07-openai-quasi-riemann-import/upstream/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "1a1152008706f7e24fa1efe4990588f8f99c5d8d",
+      "path": "standalone/2026-10-10-sextic-separated-cores/PRUNED_COUPLED_MEAN_SQUARE.md",
+      "git_blob": "6188eb6a5ce4fb06d6211a88ea34a86d1aa81a46",
+      "sha256": "411d7b28c0dabc97807d21683d731126e742d16424b1809787c87849dfb9e8d1",
+      "bytes": 22426,
+      "role": "Pruned completed norm and canonical angular reciprocal operator",
+      "retained_path": "standalone/2026-10-10-sextic-separated-cores/PRUNED_COUPLED_MEAN_SQUARE.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "1a1152008706f7e24fa1efe4990588f8f99c5d8d",
+      "path": "standalone/2026-10-10-sextic-separated-cores/ALL_ROW_LOCAL_AUDIT.md",
+      "git_blob": "f8c640518b6571e8ce7bc3a2ed22a59561dd62bb",
+      "sha256": "3e22014aeea7dbcf222f89833a27b56848deece013602a8ec4c94e9bfe46cf17",
+      "bytes": 13362,
+      "role": "Exact local valuation sectors and literal all-row zeros",
+      "retained_path": "standalone/2026-10-10-sextic-separated-cores/ALL_ROW_LOCAL_AUDIT.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "1a1152008706f7e24fa1efe4990588f8f99c5d8d",
+      "path": "standalone/2026-10-10-sextic-separated-cores/ALL_ROW_COMPLETION_AND_RAW_GAIN.md",
+      "git_blob": "6518adf695643c31e380028ef327fec58631b8f9",
+      "sha256": "a0e6bd5517a81f44d2a18bd32dc4f0db623b9951c17068e56af7009c8914fdec",
+      "bytes": 16037,
+      "role": "Previous all-row completed estimate and raw exponent",
+      "retained_path": "standalone/2026-10-10-sextic-separated-cores/ALL_ROW_COMPLETION_AND_RAW_GAIN.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "1a1152008706f7e24fa1efe4990588f8f99c5d8d",
+      "path": "standalone/2026-10-10-sextic-separated-cores/SHORT_CUBE_RAW_GAIN.md",
+      "git_blob": "9f3beb9b3d5a5e683e932ea2882dbdbae120596b",
+      "sha256": "8d97d0a4e6a0eef6ca0178e0dca7ff6e2cd059d594eba1e45fee47d57563cc40",
+      "bytes": 7560,
+      "role": "Previous squarefree-row inverse and norm optimization",
+      "retained_path": "standalone/2026-10-10-sextic-separated-cores/SHORT_CUBE_RAW_GAIN.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "1a1152008706f7e24fa1efe4990588f8f99c5d8d",
+      "path": "standalone/2026-10-10-sextic-separated-cores/CROSS_SIDE_SEPARATION_SECTOR.md",
+      "git_blob": "4662a98222659984b219018fc850678b47d5740b",
+      "sha256": "299b8cc4f981bd1bdfe1c3c8ac4b0d4eea23eec77c4e87b4ac46ff6ee0dcb263",
+      "bytes": 25067,
+      "role": "Previous signed fourth-moment cross-gcd sector",
+      "retained_path": "standalone/2026-10-10-sextic-separated-cores/CROSS_SIDE_SEPARATION_SECTOR.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "1a1152008706f7e24fa1efe4990588f8f99c5d8d",
+      "path": "standalone/2026-10-10-sextic-separated-cores/SOURCE_LOCK.json",
+      "git_blob": "38506e7b779a7c5bc90c3636dc0d3d799f1743a8",
+      "sha256": "b14457ae7ab480514eaf21acac9c44a9c019294d6a61a37bdea88f4fe9cb59f7",
+      "bytes": 10050,
+      "role": "Pinned inherited analytic foundation and its exact retained sources",
+      "retained_path": "standalone/2026-10-10-sextic-separated-cores/SOURCE_LOCK.json"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "0cc0428fedbbfc340044c7451b3d392c1da9a103",
+      "path": "standalone/2026-10-10-sextic-moment-conductor-core/A2_COMPLETION.md",
+      "git_blob": "c163d5e95d76e69eac07631600a3117e055a8046",
+      "sha256": "d99eade56807077b07e5ec1325001f1592115db216e1e10e6a3906a3e01f0aad",
+      "bytes": 36064,
+      "role": "Exact five-label A2 coefficient and projection",
+      "retained_path": "standalone/2026-10-10-sextic-joint-core/sources/pr914/A2_COMPLETION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "4e6d4aa57ae4cb04d76b2b31279ac367951b469a",
+      "path": "standalone/2026-10-10-sextic-centered-covariance/ARBITRARY_ROW_MOMENTS.md",
+      "git_blob": "83bf7ef9e2911d17e030d00efc03cf083cdf5419",
+      "sha256": "a12605808006c07f1a413e743545441e0541577367c8ea1bbe09a7fc493cc52a",
+      "bytes": 33984,
+      "role": "Single-auxiliary all-row local reindexing and exact scalar",
+      "snapshot": "sources/pr921/ARBITRARY_ROW_MOMENTS.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "4e6d4aa57ae4cb04d76b2b31279ac367951b469a",
+      "path": "standalone/2026-10-10-sextic-centered-covariance/CENTERED_NATIVE_SIGN.md",
+      "git_blob": "75a54ecc6b725199a3e2c540288c6eba1186a55f",
+      "sha256": "061927c467de2890d8c2e3ce14a5d5e0008154dc49c68e8c097ebd5556cc5a0b",
+      "bytes": 10560,
+      "role": "Native finite sign obstruction for the correctly product-diagonal-centered A2 covariance",
+      "snapshot": "sources/pr921/CENTERED_NATIVE_SIGN.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+      "path": "standalone/2026-10-10-signed-covariance-descent/SPECTRAL_ROW_MEAN.md",
+      "git_blob": "bb4f6d8948a3e0ccd0f690e7380c1a71d20cf223",
+      "sha256": "5154dc7d0502555f9a198eed386b9926bf1769ac61ae6b7c6fa319eadec7ace1",
+      "bytes": 11136,
+      "role": "Prior canonical squarefree-row spectral mean",
+      "snapshot": "sources/pr922/SPECTRAL_ROW_MEAN.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+      "path": "standalone/2026-10-10-signed-covariance-descent/SECOND_REFLECTION_BOOTSTRAP.md",
+      "git_blob": "38a2594ee38b14abbb8c6217352c9047e869e0f1",
+      "sha256": "e1db605878eb805a3d21f908ea1c73f5869d56c112a3c3e91e67d9b715b16fd0",
+      "bytes": 18957,
+      "role": "Exact conditioned-divisor representation and holomorphic tube",
+      "snapshot": "sources/pr922/SECOND_REFLECTION_BOOTSTRAP.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+      "path": "standalone/2026-10-10-signed-covariance-descent/FINITE_RAY_REUNION.md",
+      "git_blob": "616d3b9a146d7eba4a7f56467ef24197e0791d67",
+      "sha256": "8897088fb7e89c66e18bf0652a913983c5120a61d854591f990cce2a6261f2e0",
+      "bytes": 18423,
+      "role": "Fixed finite ray reunion with the correct family",
+      "snapshot": "sources/pr922/FINITE_RAY_REUNION.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+      "path": "standalone/2026-10-10-signed-covariance-descent/FINITE_CUBE_HOMOGENEITY.md",
+      "git_blob": "850f03d087d885a6befd080dac95b76eee609568",
+      "sha256": "e4f7b3ff0817c4b6deaf2e608657425c06ac97c1a7f4f60f3762eba7eca7b0e1",
+      "bytes": 10455,
+      "role": "Cube homogeneity with literal nonunit zeros",
+      "snapshot": "sources/pr922/FINITE_CUBE_HOMOGENEITY.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+      "path": "standalone/2026-10-10-signed-covariance-descent/ALL_CUSP_COEFFICIENT_ADAPTER.md",
+      "git_blob": "1533314683a550ed9e59bac1c1734df346377458",
+      "sha256": "bfabc37c5b16a32d6b29fe5767f58f5f5a8dc161aaa3d127ebf11236fa2d3ca1",
+      "bytes": 17208,
+      "role": "Explicit complete cusp coefficient adapter",
+      "snapshot": "sources/pr922/ALL_CUSP_COEFFICIENT_ADAPTER.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f71a9bc6ac3ce59a3c19d7e842a3fa082ecfbe32",
+      "path": "standalone/2026-10-10-signed-covariance-descent/FULL_CUSP_DESCENT.md",
+      "git_blob": "85f28db785765668411f741492309df389a7a19a",
+      "sha256": "b025af8af1ac13d07a04fbc7de71401d2a47ef2c8df5a1e89a4edc4973482504",
+      "bytes": 11988,
+      "role": "Absolute full-cusp coefficient mass and physical-envelope barrier",
+      "snapshot": "sources/pr922/FULL_CUSP_DESCENT.md"
+    },
+    {
+      "repository": "GettysburgResearch/riemann",
+      "commit": "f5c089e33ccce4eae4307d4f6475b9977485cb78",
+      "path": "standalone/2026-10-10-all-order-collision-removal/continuation-integrated-window/OPTIMAL_SIEVE_AUDIT.md",
+      "git_blob": "28ca6619f658b27791033a06776455a364018ea6",
+      "sha256": "11c48419de8c34160a18343ceadefc9ff7646942d22ccfc1e52024dc3b66d25f",
+      "bytes": 7029,
+      "role": "Independent repository audit of the October 2 fixed-order large sieve and its all-row adapter",
+      "snapshot": "sources/pr916/OPTIMAL_SIEVE_AUDIT.md"
+    }
+  ],
+  "external_primary": [
+    {
+      "authors": "Alexander Dunn and Maksym Radziwill",
+      "title": "Bias in cubic Gauss sums: Patterson’s conjecture",
+      "version": "arXiv:2109.07463v3",
+      "url": "https://arxiv.org/pdf/2109.07463v3",
+      "scope": "Only the unconditional explicit cusp coefficient formulas (5.7), (5.13), (5.14); no GRH-dependent bound imported from this paper."
+    },
+    {
+      "authors": "Alexandre de Faveri",
+      "title": "Optimal large sieve for fixed order characters",
+      "version": "arXiv:2610.04045v1",
+      "url": "https://arxiv.org/html/2610.04045v1",
+      "scope": "Theorem 1.1 for n=6 and its fixed-family and reciprocity conventions. External analytic premise only for the 4/7 spectral extension; not used by the 31/19 A2 bound or the 5/8 baseline. Primary version read; no full copyrighted paper copied."
+    }
+  ],
+  "scope": "Exact source binding is not certification of the imported analytic framework. The signed first-Poisson comparison, original higher moments, and any new zero-free boundary remain open."
+}

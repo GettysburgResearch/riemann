@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "packet": "2026-10-10-sextic-moving-labels",
+  "parent_commit": "1a1152008706f7e24fa1efe4990588f8f99c5d8d",
+  "files": [
+    {
+      "path": "ALL_ROW_SPECTRAL_MEAN.md",
+      "bytes": 11552,
+      "sha256": "ef597dfc793af976a92b731f01930fc199948e99d5ccf2fc3fe2c91ec5249a8b"
+    },
+    {
+      "path": "ANISOTROPIC_A2_NORM_TRANSFER.md",
+      "bytes": 18428,
+      "sha256": "e671b8b1c8717ed494b3db0ba39fb4c0de374aef56f774bf9a7ca68e01b277cf"
+    },
+    {
+      "path": "CROSS_GCD_GRAPH_AND_MATCHING_SECTORS.md",
+      "bytes": 24368,
+      "sha256": "9dc37104e3a06c11d11f48d4e3cb2a6653b64c844aa4c316c8bf1f2cd93d9d05"
+    },
+    {
+      "path": "MIXED_LABEL_COMPLETION.md",
+      "bytes": 25718,
+      "sha256": "5e77ec88d6a191ec214bcedebc2b42d37f95735ba2bb18955b2f8a16aedfbcad"
+    },
+    {
+      "path": "OPTIMAL_SIEVE_SPECTRAL_EXTENSION.md",
+      "bytes": 13531,
+      "sha256": "b0d3eee6d32ad7f69bfdd8ac5132c60139f322b1102086897ce0099defab8551"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13165,
+      "sha256": "180f373a0d245a188f2a2b393a7f7f19411a6486c2f8f0d1130414665e787563"
+    },
+    {
+      "path": "SIXTH_POWER_STRATIFIED_INVERSE.md",
+      "bytes": 12838,
+      "sha256": "f98cc20e361ebb99af7dbd4b5ffef83a8a55ca11c4d3f24da238bc24be4cb2e9"
+    },
+    {
+      "path": "SOURCE_LOCK.json",
+      "bytes": 19385,
+      "sha256": "419b7405c91b40d788c990d8953baa05340882378e2da0098097174fcebff78f"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 9794,
+      "sha256": "08220eecf71bf011e86f44f0ed2c2dc6f84a14dcadf6494df639df51cb37890c"
+    },
+    {
+      "path": "checks/check_cross_gcd_graph.py",
+      "bytes": 12349,
+      "sha256": "e0be540b2fbf3b46febe5387f47961d763d815bfead5b3ad4d18e53c6258de8c"
+    },
+    {
+      "path": "checks/check_mixed_stratified.py",
+      "bytes": 23615,
+      "sha256": "4ee32d85af1c48743050958fc0e81dc9bcd8878ecb06c596223b0e2dc893593b"
+    },
+    {
+      "path": "checks/check_spectral_exponents.py",
+      "bytes": 4961,
+      "sha256": "869fb24fe55060a80aab46cb10337b6f2e2f5ba90a117bffd0c4e5351b705874"
+    },
+    {
+      "path": "checks/cross_gcd_graph_checks.json",
+      "bytes": 1669,
+      "sha256": "d2421b6d36b264b15fae1814dc235e40f0dbd0b4eb4ab04327fc22212c458be1"
+    },
+    {
+      "path": "checks/mixed_stratified_checks.json",
+      "bytes": 10355,
+      "sha256": "64b6e272cd153e4a6fe37f6cfbc7203e50eab48708b2cba59baa450efe75be04"
+    },
+    {
+      "path": "checks/spectral_exponents.json",
+      "bytes": 1776,
+      "sha256": "4a9f2e8595d71d3be8c0fb1d23c3c9a9033e5208a6b006622de5c4b62b82f273"
+    },
+    {
+      "path": "checks/verify_packet.py",
+      "bytes": 4017,
+      "sha256": "4e3b1e4b55782902c8f5011a3d22f6990241b98e755ebf60ff21870906b343b5"
+    },
+    {
+      "path": "reviews/ANISOTROPIC_A2_NORM_TRANSFER_REVIEW.md",
+      "bytes": 10018,
+      "sha256": "3dc692f69342823ee451197b08c0d20436e83c9fc776e2fbfd66d70222ac1546"
+    },
+    {
+      "path": "reviews/CROSS_GCD_GRAPH_AND_MATCHING_SECTORS_REVIEW.md",
+      "bytes": 4788,
+      "sha256": "eb764a0ee180ba1d7968e5fadc8808c600e96d912e98126e3a0e874f70bd2756"
+    },
+    {
+      "path": "reviews/MIXED_STRATIFIED_ARITHMETIC_REVIEW.md",
+      "bytes": 6724,
+      "sha256": "a60aefb555f613b4934af6481d4973e598765a9c88e78acb2dd80093c564ff2b"
+    },
+    {
+      "path": "reviews/OPTIMAL_SIEVE_SPECTRAL_EXTENSION_REVIEW.md",
+      "bytes": 11648,
+      "sha256": "a9a2541a72b37c51a354359b70fa9de1167360d070f0e18f00ac24cb2cd81784"
+    },
+    {
+      "path": "reviews/PACKET_SCOPE_REVIEW.md",
+      "bytes": 5312,
+      "sha256": "f88f84920d5ab60f5f936cefdb57137b26c7d302b78127f9a13253e3e64f33a5"
+    },
+    {
+      "path": "reviews/ROOT_MIXED_AND_SPECTRAL_REVIEW.md",
+      "bytes": 8268,
+      "sha256": "fe649e4412ed5cb4b45c0fd964dd3910b0e0292d116be45874a98929b49df1e6"
+    },
+    {
+      "path": "reviews/SIXTH_POWER_STRATIFIED_INVERSE_REVIEW.md",
+      "bytes": 3458,
+      "sha256": "fdba40757c769b99ea6bdcf79a846bcb8ba46c90a123e0aff33a9a36a1ec8c49"
+    },
+    {
+      "path": "reviews/STRATIFIED_INVERSE_INTERFACE_REVIEW.md",
+      "bytes": 7421,
+      "sha256": "80e45a1f71ca254581b3cc5d5ca0834bf62491723b9957cb8d3cc058e0add596"
+    },
+    {
+      "path": "sources/pr916/OPTIMAL_SIEVE_AUDIT.md",
+      "bytes": 7029,
+      "sha256": "11c48419de8c34160a18343ceadefc9ff7646942d22ccfc1e52024dc3b66d25f"
+    },
+    {
+      "path": "sources/pr921/ARBITRARY_ROW_MOMENTS.md",
+      "bytes": 33984,
+      "sha256": "a12605808006c07f1a413e743545441e0541577367c8ea1bbe09a7fc493cc52a"
+    },
+    {
+      "path": "sources/pr921/CENTERED_NATIVE_SIGN.md",
+      "bytes": 10560,
+      "sha256": "061927c467de2890d8c2e3ce14a5d5e0008154dc49c68e8c097ebd5556cc5a0b"
+    },
+    {
+      "path": "sources/pr922/ALL_CUSP_COEFFICIENT_ADAPTER.md",
+      "bytes": 17208,
+      "sha256": "bfabc37c5b16a32d6b29fe5767f58f5f5a8dc161aaa3d127ebf11236fa2d3ca1"
+    },
+    {
+      "path": "sources/pr922/FINITE_CUBE_HOMOGENEITY.md",
+      "bytes": 10455,
+      "sha256": "e4f7b3ff0817c4b6deaf2e608657425c06ac97c1a7f4f60f3762eba7eca7b0e1"
+    },
+    {
+      "path": "sources/pr922/FINITE_RAY_REUNION.md",
+      "bytes": 18423,
+      "sha256": "8897088fb7e89c66e18bf0652a913983c5120a61d854591f990cce2a6261f2e0"
+    },
+    {
+      "path": "sources/pr922/FULL_CUSP_DESCENT.md",
+      "bytes": 11988,
+      "sha256": "b025af8af1ac13d07a04fbc7de71401d2a47ef2c8df5a1e89a4edc4973482504"
+    },
+    {
+      "path": "sources/pr922/SECOND_REFLECTION_BOOTSTRAP.md",
+      "bytes": 18957,
+      "sha256": "e1db605878eb805a3d21f908ea1c73f5869d56c112a3c3e91e67d9b715b16fd0"
+    },
+    {
+      "path": "sources/pr922/SPECTRAL_ROW_MEAN.md",
+      "bytes": 11136,
+      "sha256": "5154dc7d0502555f9a198eed386b9926bf1769ac61ae6b7c6fa319eadec7ace1"
+    }
+  ],
+  "review_bindings": [
+    {
+      "review": "reviews/ROOT_MIXED_AND_SPECTRAL_REVIEW.md",
+      "targets": {
+        "MIXED_LABEL_COMPLETION.md": "5e77ec88d6a191ec214bcedebc2b42d37f95735ba2bb18955b2f8a16aedfbcad",
+        "ALL_ROW_SPECTRAL_MEAN.md": "ef597dfc793af976a92b731f01930fc199948e99d5ccf2fc3fe2c91ec5249a8b",
+        "OPTIMAL_SIEVE_SPECTRAL_EXTENSION.md": "b0d3eee6d32ad7f69bfdd8ac5132c60139f322b1102086897ce0099defab8551"
+      }
+    },
+    {
+      "review": "reviews/STRATIFIED_INVERSE_INTERFACE_REVIEW.md",
+      "targets": {
+        "SIXTH_POWER_STRATIFIED_INVERSE.md": "f98cc20e361ebb99af7dbd4b5ffef83a8a55ca11c4d3f24da238bc24be4cb2e9"
+      }
+    },
+    {
+      "review": "reviews/SIXTH_POWER_STRATIFIED_INVERSE_REVIEW.md",
+      "targets": {
+        "SIXTH_POWER_STRATIFIED_INVERSE.md": "f98cc20e361ebb99af7dbd4b5ffef83a8a55ca11c4d3f24da238bc24be4cb2e9"
+      }
+    },
+    {
+      "review": "reviews/ANISOTROPIC_A2_NORM_TRANSFER_REVIEW.md",
+      "targets": {
+        "ANISOTROPIC_A2_NORM_TRANSFER.md": "e671b8b1c8717ed494b3db0ba39fb4c0de374aef56f774bf9a7ca68e01b277cf"
+      }
+    },
+    {
+      "review": "reviews/CROSS_GCD_GRAPH_AND_MATCHING_SECTORS_REVIEW.md",
+      "targets": {
+        "CROSS_GCD_GRAPH_AND_MATCHING_SECTORS.md": "9dc37104e3a06c11d11f48d4e3cb2a6653b64c844aa4c316c8bf1f2cd93d9d05"
+      }
+    },
+    {
+      "review": "reviews/MIXED_STRATIFIED_ARITHMETIC_REVIEW.md",
+      "targets": {
+        "MIXED_LABEL_COMPLETION.md": "5e77ec88d6a191ec214bcedebc2b42d37f95735ba2bb18955b2f8a16aedfbcad",
+        "SIXTH_POWER_STRATIFIED_INVERSE.md": "f98cc20e361ebb99af7dbd4b5ffef83a8a55ca11c4d3f24da238bc24be4cb2e9",
+        "ANISOTROPIC_A2_NORM_TRANSFER.md": "e671b8b1c8717ed494b3db0ba39fb4c0de374aef56f774bf9a7ca68e01b277cf"
+      }
+    },
+    {
+      "review": "reviews/OPTIMAL_SIEVE_SPECTRAL_EXTENSION_REVIEW.md",
+      "targets": {
+        "OPTIMAL_SIEVE_SPECTRAL_EXTENSION.md": "b0d3eee6d32ad7f69bfdd8ac5132c60139f322b1102086897ce0099defab8551"
+      }
+    },
+    {
+      "review": "reviews/PACKET_SCOPE_REVIEW.md",
+      "targets": {
+        "README.md": "180f373a0d245a188f2a2b393a7f7f19411a6486c2f8f0d1130414665e787563",
+        "MIXED_LABEL_COMPLETION.md": "5e77ec88d6a191ec214bcedebc2b42d37f95735ba2bb18955b2f8a16aedfbcad",
+        "SIXTH_POWER_STRATIFIED_INVERSE.md": "f98cc20e361ebb99af7dbd4b5ffef83a8a55ca11c4d3f24da238bc24be4cb2e9",
+        "ANISOTROPIC_A2_NORM_TRANSFER.md": "e671b8b1c8717ed494b3db0ba39fb4c0de374aef56f774bf9a7ca68e01b277cf",
+        "CROSS_GCD_GRAPH_AND_MATCHING_SECTORS.md": "9dc37104e3a06c11d11f48d4e3cb2a6653b64c844aa4c316c8bf1f2cd93d9d05",
+        "ALL_ROW_SPECTRAL_MEAN.md": "ef597dfc793af976a92b731f01930fc199948e99d5ccf2fc3fe2c91ec5249a8b",
+        "OPTIMAL_SIEVE_SPECTRAL_EXTENSION.md": "b0d3eee6d32ad7f69bfdd8ac5132c60139f322b1102086897ce0099defab8551"
+      }
+    }
+  ],
+  "scope": "Inventory and exact source/review bindings only. MANIFEST.json excludes itself; Git fixes its bytes. No imported analytic theorem, full inverse moment, zero-free boundary or RH proof is certified."
+}

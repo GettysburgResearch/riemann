@@ -91,6 +91,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The separated-cores packet](standalone/2026-10-10-sextic-separated-cores/README.md) proves a source-conditional all-row estimate for the literal completed and raw two-axis Gauss family, including sixth-power copies. Its raw mean-square exponent at row height \(H=D^{1/2}\) improves from \(25/12\) to \(379/228\). It also controls an additional signed fourth-moment cross-gcd sector with cost \(R^{2b-1}\), and improves a specified sixth-moment incidence loss from \(7/8\) to \(623/720\). Exact source snapshots, scoped independent reviews and finite algebra checks are included. The moving-conductor comparison, full fourth moment, \(17/24\), and further zero-free improvement remain open.
 
+## Further research: moving labels and the full A2 norm
+
+[The moving-label packet](standalone/2026-10-10-sextic-moving-labels/README.md) improves the all-row raw exponent at \(H=D^{1/2}\) to \(31/19\) and transfers it through the entire normalized A2 correction sum, using two adaptive cube cutoffs and explicit moving-label costs. It also controls overlapping signed fourth-moment cross-gcd events and fixed cross matchings at every even order. A separately credited fixed-order large-sieve input extends the canonical spectral mean to \(\Re u>4/7\). These are proposed source-conditional deductions with scoped reviews, source pins and finite diagnostics. The signed two-column comparison, full fourth moment, \(17/24\), cofinal hierarchy and further zero-free improvement remain open.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.
