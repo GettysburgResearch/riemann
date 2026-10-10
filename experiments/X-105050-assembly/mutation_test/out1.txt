@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-riemann/d379fac9-baa2-5637-b561-9823a1c28acc/scratchpad/GRAND/laneA1/mutation_test/validator.py", line 196, in <module>
+    assert "RH" not in cl, "proved-only reachability reached RH (%s mode) — REJECT" % mode
+           ^^^^^^^^^^^^^^
+AssertionError: proved-only reachability reached RH (strict mode) — REJECT

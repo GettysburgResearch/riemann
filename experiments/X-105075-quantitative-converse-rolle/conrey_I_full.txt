@@ -1,0 +1,3150 @@
+JOURNAL 
+
+OF  NUMBER 
+
+THEORY 
+
+16,  49-74 
+
+(1983) 
+
+Zeros  of  Derivatives 
+
+of  Riemann’s 
+on  the  Critical  Line 
+
+J-Function 
+
+BRIAN  CONREY 
+
+Department 
+
+of  Mathematics, 
+
+Urbana, 
+
+Illinois 
+
+University 
+61801 
+
+of 
+
+Illinois, 
+
+Communicated 
+
+by  H.  Montgomery 
+
+Received  February  3,  1981;  revised  June  1,  1981 
+
+Explicit 
+c-function  on 
+proportion 
+
+lower  bounds  for  the  proportion  of zeros  of the  derivatives  of  Riemann’s 
+the 
+
+line  are  given. 
+
+In  particular, 
+
+it  is  shown 
+
+the  critical 
+
+that 
+
+tends  to  one  as the  order  of the  derivative  tends  to  infinity. 
+
+1.  INTRODUCTION 
+
+is  the 
+The  <-function  has  the 
+
+The  Riemann 
+
+r-function 
+
+is  given  by  T(s)  =  H(s)  C(s),  where  [(s) 
+
+in  the  critical  strip  0  <  IJ  <  1 and  the  Riemann 
+that  all  these  zeros  have  real  part  f.  It  can  be 
+
+Riemann  C-function  and  H(s)  =  fs(s  -  1) n-“‘*Qs/2). 
+same  zeros  as  the  <-function 
+is  the  conjecture 
+hypothesis 
+shown  that 
+the  Riemann  hypothesis 
+the  mth  derivative  of  the  c-function,  have  real  part  4 for  any  m.  The  object  of 
+this  paper  is  to  give  explicit 
+of  zeros 
+lower  bounds  for  a,, 
+of  r’“‘(s)  which  have  real  part  4.  We  define  a,,, as follows.  Let  T be  a  (large) 
+positive  number  and  set  L  =  log  T/272 and  U  =  T/L  lo.  Let  N,(T) 
+be  the 
+number  of  zeros  of  to”)@  +  it)  with  0  <  f  <  T and  let 
+
+that  all  of  the  zeros  of  l’“‘(s), 
+
+the  “proportion” 
+
+implies 
+
+a,  = 
+
+lim  NAT+  u) -  ~,#‘I 
+
+T-CC 
+
+UL/(27?) 
+
+* 
+
+follows  from  Lemma  2  that  the  zeros  of  <‘“‘(s) 
+
+lie  in  the  strip  0  <  u  <  1 
+in  the  rectangle  0  <  u  <  1,  T  <  t  <  T +  U  is 
+
+(It 
+and  that 
+asymptotically  UL/(27c).) 
+
+the  number  of  them 
+
+Levinson 
+
+[8,6]  has  obtained 
+
+the  bounds  a,  >  0.3474  and  a,  >  0.7 1.  We 
+
+prove  the  following 
+
+THEOREM. 
+
+Let  o(x) 
+
+be  any  real,  continuously 
+
+dlperentiable function  on 
+
+49 
+
+0022-314X/83/010049-26%03.00/0 
+Press. 
+
+P  1983  by  Academic 
+
+of  reproduction 
+
+in  sny 
+
+form 
+
+Copyright 
+rights 
+
+All 
+
+Inc. 
+reserved. 
+
+50 
+
+BRIAN 
+
+CONREY 
+
+[0,  l]  which 
++4(x)( 1 -  2~)~  and  let 
+
+satisfies 
+
+4(O)  =  1  and  4’(x)  =  #‘(l 
+
+-x). 
+
+Let 
+
+tim(x)  = 
+
+F,(R)  =  2@A  coth  A  +  (e’“@(l)’  +  1)/2, 
+
+,  and  A  >  0.  Then 
+
+a  >  1 _  logF,(R) 
+
+m/ 
+
+R 
+
+for  any  R  >  0. 
+
+As  a  consequence  of  this  Theorem  we  deduce  the 
+
+COROLLARY.  With 
+
+a,,,  defined 
+
+a,  >  0.8137, 
+Furthermore,  as  m  +  00  we have  a,,, =  1 +  O(m  -‘). 
+
+a2  >  0.9584, 
+
+aj  >  0.9873, 
+
+as  above  we  have  a0 >  0.3658, 
+and  a5  >  0.9970. 
+
+a4  >  0.9948, 
+
+In  the  analysis  which  follows  we  treat  m,  R,  4,  and  /r  as  fixed; 
+
+implicit 
+constants  may  depend  on  them.  Also,  we use A  to  denote  a  positive  absolute 
+constant,  not  necessarily 
+
+the  same  at  each  occurrence. 
+
+2.  SKETCH  OF  PROOF 
+
+We  first  prove  an  identity 
+
+l’“‘(4 
+
+=  Q,(s)  +  C-1 1”’ Q,(l 
+
+-  s? 
+
+implies 
+
+which 
+that  c(m)(j  +  it)  =  0  when  arg  Q,(s  +  if)  =  ((m  +  1)/2)  n 
+mod  TC. (Many  such  identities  are  possible  since  Q,  depends  on  4(x)  which  is 
+in  the  Theorem.)  We  put  Q,(s)  =  H(s)  V(s). 
+constrained  only  as  described 
+Since  arg  H(f  +  it)  changes  quickly  enough  by  itself  to  supply  all  the  zeros 
+of  t’“‘(s). 
+to  bound  4  arg  V(i  +  it)(c+U.  By  the  argument 
+principle, 
+is  bounded  by  2nN  +  O(L),  where  N  is  the  number  of 
+zeros  of  V(s)  with  u  >  4  and  T  <  t  <  T  +  U.  We  estimate  N  by  using 
+Littlewood’s 
+lemma  on  a  rectangle  with  left  side  u  =  a,  where  4 -  a  =  R/L 
+for  some  fixed  R  >  0.  Littlewood’s 
+lemma 
+where  I,U is  entire  and  is  chosen  to  “mollify” 
+
+it  is  sufficient 
+the  latter 
+
+to  WV,  rather  than  V, 
+
+V.  We  find  that 
+
+is  applied 
+
+27rN< 
+
+1 
+l/2  -a 
+
+TtU 
+
+i 
+T 
+
+log  l~V(a  +  it)ldt  +  O(U), 
+
+1 wV(a  +  it)[*  dt  +  O(U). 
+
+ZEROS  OF  RIEMANN'S 
+
+(-FUNCTION 
+
+51 
+
+integral  can  be  shown  to  be 
+If  v/  is  chosen  properly, 
+asymptotic  to  U times a function  which  depends only  on m,  R,  4, and w. We 
+specify  I+Y to  obtain  the  Theorem,  and  choose R  and  4  to  obtain  the 
+Corollary. 
+
+then  the  latter 
+
+3.  BASIC  LEMMAS 
+
+In  this  section  we  include  lemmas that  are  needed for  the  proof  of  our 
+
+Theorem. 
+
+LEMMA 
+
+1.  Let  H(s)  =  fs(s  -  1) n-““T(s/2),  x(s)  =  H( 1 -  s)/H(s),  and 
+
+F(s)  =  H’(s)/H(s). 
+
+Then 
+
+(a)  argH  ++il 
+
+=+-log%-++O(I). 
+
+ItI 
+
+( 
+
+) 
+
+where  arg  H(3)  =  0  and  arg H(s) 
+on  the  straight 
+
+line  path  from  3  to  s; 
+
+is obtained  by  letting  arg vary  continuously 
+
+(b)  F(s)=+oge+O(]t]-‘) 
+
+Fk’(s)  << Itl-k 
+
+forltl>landk>l; 
+
+(c)  HCk’(s)  =  H(s)(F(s)~  +  O(t  -  I  logk-  ’ t)) 
+
+for  0 <  u  <  A  log L  and  t  >  10; 
+
+(d)  x(s)=  ~&)l12-Uenp 
+
+(:-itlog&)(l 
+
++0(F)) 
+
+forO<a<AlogLandT<t<T+U. 
+
+The  statements here  are  easily  proved  using the  well-known  formula  for 
+
+the  log  of  the r-function 
+
+log T(s) =  flog(2n)  +  (s -  f)  log s -  s -  O(s), 
+
+where Q(s)  <  l/]  tl,  and  if  (t 1 <  u  then  L?(s) <  l/o.  (For  a proof  of  this,  see 
+Rademacher [ 12, Sect. 2 1 I.) 
+
+52 
+
+BRIAN  CONREY 
+
+LEMMA 
+
+2.  Any  zero  of  r’“‘(s)  satisfies 0 <  u  <  1. ZfN(m)(7’)  denotes the 
+
+number of  zeros of  rCm’(s) with  0 <  t  <  T,  then 
+
+pqq 
+
+=  g 
+
+log  $ 
+
+-  $ 
+
++  O,(log  T). 
+
+the  first  statement  by  induction  on  m. We  apply  Hadamard’s 
+theorem 
+
+We  prove 
+to  r”“‘(s)  which  is  entire  and  of  order  one  since  c(s)  is. 
+factorization 
+Then  by  logarithmic 
+of  the  product  and  use  of  the  symmetry 
+differentiation 
+of  the  zeros  about  the  real  axis  and  about  the  line  o  =  4  (which  follows  from 
+the 
+that 
+Re(~cm+‘~(s)/~~m~(s))  cannot  vanish  unless  0  <  u  <  1. 
+
+-  s))  we  conclude 
+
+rem)(s) =  (-l)“~$“‘(l 
+
+functional 
+
+equation 
+
+The  second  statement  of  the  Lemma  can  be  proven  by  the  argument  prin- 
+to 
+
+(a),  (b),  and  (c)  of  Lemma 
+
+1.  The  proof 
+
+is  similar 
+
+proof  of 
+
+the  assertion 
+
+in 
+
+the  case  m =  0  (see  Titchmarsh 
+
+ciple  and  parts 
+Backlund’s 
+[ 14, Sect.  9.31). 
+
+LEMMA 
+
+3.  Let  0 J  1 signtfy  a straight  line path  of  slope 1 which crosses 
+
+the  real  axis  between 0  and  1.  Then 
+
+T(s) =  H(s)f  (s) +  H(1  -  s) j(l 
+
+-  F), 
+
+This 
+
+is 
+[ 13, Sect.  31.  Note 
+
+the  Riemann-Siegel 
+that 
+
+integral 
+
+formula 
+
+as  stated  by  Siegel 
+
+zs-l 
+
+niz2 
+
+m=joL, 
+
+2isi;nz 
+
+dzv 
+
+where  0 \ 
+
+1 signifies  a  straight 
+
+line  path  of  slope  -1. 
+
+LEMMA 
+
+4.  Suppose that  h(z) 
+negative  real  axis  and  1 h(z)1 4  1 log  z Ij  for 
+O<o<AlogL, 
+
+T<t<T+U,andn=(t/2?C)“2. 
+
+is  regular  in  the  z-plane  slit  along  the 
+Iz 1 >  10  and  some j  >  0.  Let 
+
+Thenforanye>O, 
+
+J oJ1  ~~~i~n~~ h(z)  dz  =  c  h(n) n-’  +  cJ,(T-“/~) 
+
+n<v 
+
+and 
+
+s-1  -niz’ 
+z 
+e 
+2isin7rz 
+
+o\l 
+J 
+
+h(z)  dz =  c  h(n)  nS-’  +  0C(Te+‘“-“‘2). 
+
+n<lt 
+
+ZEROS  OF  RIEMANN'S 
+
+r-FUNCTION 
+
+53 
+
+ProoJ:  We  move  the  paths  of  integration 
+theorem.  The  main 
+
+use  Cauchy’s 
+<q.  The  integrals  on  the  new  paths  are  easily  estimated 
+error  terms.  (Siegel 
+
+[ 13, Sect.  41  has  estimated  similar 
+
+so that  they  pass through  q  and 
+the  residues  at  integers 
+to  give  the  above 
+
+terms  arise  from 
+
+integrals.) 
+
+LEMMA 
+
+5.  Let  f,,(t)  be  a  complex-valued 
+
+function  defined  on 
+
+[T,,  T,  ] 
+
+such  that  ) f,(t)1  <  6  and  var  f,(t)12  <  6.  Then  for  any  complex  numbers  a,, 
+
+N 
+\‘  a,  f,(t)  n-” 
+n-1 
+
+2 
+
+dt  = 
+
+(’ 
+Iii, 
+
+/a,,/’ 
+
+iT’  1 f,(t)/’  dt 
+. TI 
+
++  0 
+
+d2N(logN) 
+( 
+
+IanI 
+
+c 
+n==l 
+
+. 
+1 
+
+The  implicit 
+
+constant 
+
+is  absolute. 
+
+Note 
+
+that  by  taking  f,  =  0  or  1 we can  deal  with  Dirichlet  polynomials 
+
+in 
+varies  with  t.  In  the  special  case f,(t)  =  1 for 
+
+which  the  range  of  summation 
+all  n  and  t  Montgomery 
+
+and  Vaughan 
+
+[lo]  have  shown  that 
+
+.TI 
+
+TI 
+
+J 
+
+I 
+
+O” 
+T  a,n-” 
+,:I 
+
+2 
+
+dt  = 
+
+‘? 
+El 
+
+la,12(T2  -  T,  +  O(n)). 
+
+Proof. 
+integrate 
+
+By  homogeneity  we  may  suppose  that  6 =  1. We  square  out  and 
+
+term-by-term.  Thus  it  suffices  to  show  that 
+
+By  integration  by  parts  we see that 
+
+i(log  y)  jb  f(t)  y”  dt  =  f(t)  y” 
+
+(1 
+
+b 
+
+- 
+(I 
+I 
+
+b 
+
+a 
+J 
+
+y”df(t)<maxIfI+varf 
+
+b 
+
+. 
+(I 
+
+We  apply  this  with  f  =f,f,. 
+
+Note 
+
+that  (f  ] <  1,  while 
+
+var  f  <  @ax  If,  I) var f,  +  @ax  If,  I) var f,  <  2. 
+
+Thus  it  suffices  to  show  that 
+
+laman I 
+I log m/n I 
+
+2, 
+
+-+ N(log  N)  5 
+
+IanI’. 
+
+n=1 
+
+is  well-known 
+
+This 
+result). 
+
+(see Titchmarsh 
+
+[ 14, Sect.  7.21  for  the  proof  of  a  similar 
+
+The  next  four  lemmas  appear  in  Levinson’s  work 
+
+[5]. 
+
+54 
+
+BRIANCONREY 
+
+LEMMA 
+
+6 
+
+[5,  Lemma  3.21.  Let 
+
+1 <  K,  , IC* Q  T”*  with 
+
+(K, , KJ  =  1. 
+
+Suppose that  a =  l/2  +  O(l/log 
+
+r).  Then 
+
+LEMMA 
+
+7  [5,  Lemma  3.41.  Define 
+
+Then 
+
+I(r)=~~+‘exp 
+
+(itlog&),. 
+
+Z(r)  =  2zr1’*  exij4 e(-r)  +  O(E(r)) 
+
+for  T/272 <  r  <  (T  +  iJ)/27r,  where e(x)  =  exp(2nix)  and 
+
+E(r)=  1 t  T/(lT-rJ 
+
++  T1’*) t  (T+  U)/(lT+  U-r/ 
+
+t  (T+  U)“‘). 
+
+Zf  r  (  T/2n  or  r  >  (T  t  U)/2n  then Z(r)  *  E(r). 
+
+LEMMA  8  [S,  (8.2)  and  (8.5)-(8.8)].  With  E(r)  defined as in  the previous 
+
+lemma, 
+
+k;‘/*k;‘/* 
+
+vv 
+
+krk;-Qy 
+
+ry 
+
+jZT= 
+
+j;'lZj;'/*E(r) 
+
+<  ULp6, 
+
+where r =  (T/2n)“’  and y  =  T’l*L  -*O. 
+
+LEMMA 
+
+9  [5,  Lemma  3.61.  Let  1 <  k,,  k,  ,< y  and  let  k =  gcd(k,,  k2). 
+
+Then Ckk;‘k;‘<log3y. 
+
+LEMMA 
+
+IO.  Let  /I  be a  real polynomial  with  F(O) =  0,  and  let 
+
+Then 
+
+uniformly  for  j  < y  and  0  <  Ip -  11 6  l/logy,  where 
+
+Mi,jW 
+
+=  O 
+
+for  i >  2, 
+
+ZEROS 
+
+OF  RIEMANN'S 
+
+~-FuNCTI~N 
+
+55 
+
+and 
+
+Here 
+6 =  l/log 
+absolute 
+
+we  define 
+
+Fu,s)  =  nplj 
+
+(1 -p-‘), 
+
+F,(~,s)  =  nplj(l 
+
++p-‘). 
+
+is  a  (suflciently 
+logy,  and  b =  l/(M 
+constant.  (The  products  are  over  primes  p  which  divide  j.) 
+
+log  logy), 
+
+where  M 
+
+farge) 
+
+Proof:  We  expand  /I  in  a  MacLaurin  series and  express the  sum over  n 
+
+as an integral.  Then 
+
+xS-b 
+
+ds 
+
+C(s) F(j, s)(s -  p>‘+ ’ ’ 
+
+the  pole  at  s =/?; 
+
+where x  =  y/j.  The  integrand  has a pole of  order  I +  1 at s =  /3. We move the 
+path  of  integration  and  apply  Cauchy’s  Theorem.  Let  R&3)  be the  residue 
+from 
+integral  on  s =  1 +  it, 
+-aI  <  t 6  -  (1ogy)‘O; 
+I-b<cr<i; 
+-(logy)‘” 
+conjugate to  the  paths of  R,(P)  and R,(J), 
+
+<  t <  (1ogy)‘O;  let  R4(P)  and  R5(‘J)  be  the  integrals  on  paths 
+
+integral  on  s =  u -  i(log y)“, 
+integral 
+
+respectively.  Then 
+
+be  the 
+the 
+
+let  R,(P) 
+
+let  R,(J) 
+
+let  R,(P) 
+
+s=(l-b)+it, 
+
+the 
+
+on 
+
+be 
+
+be 
+
+G,;‘)(P) =  \ ? p”‘(0) 
+
+,y, log’y2ni 
+
+1 
+
+2ni  Ry’(/l)  +  f,  R:‘(P)). 
+
+The  main term  of  G;“(J)  will  result from  the  residue RF’(P).  To  estimate the 
+error  terms we recall  (see Titchmarsh  [ 14, p. 531) that 
+
+for  s on  the  paths of R ,  and R 5 and if  M  is suffkiently 
+
+large, 
+
+for  s  on  the  paths  of  R,,  R,,  and  R,.  We  also  observe  that  l/F(j,  s) 6 
+F,(j,  1 -  26)  for  s  anywhere  on  the  new  path  of  integration.  Further,  if  we 
+apply  Cauchy’s  theorem on  a circle  of  radius  l/logy,  we see that 
+
+a 
+i 
+i  I( 
+ap 
+
+S-4 
+
+&)“l 
+
+From  these estimates we obtain 
+
+(logy)’  XUP ’ 
+((3 -  1)2 + t*y+ I)/2 . 
+
+-=3 
+
+1 
+
+R:“(P)  4  F,(j,  1 -  26)(logy)‘m9 
+
+56 
+
+BRIANCONREY 
+
+and  similarly 
+
+for  R\“(P), 
+
+R:“(p)  6  F,(j,  1 -  26)(log  y)‘-‘O 
+
+and  similarly 
+
+for  R:“(J),  and 
+
+R si’@> <  F, (j,  1 -  26)(log  y)‘(log 
+
+logy)‘+ 
+
+‘(~/JQ~. 
+
+Hence 
+
+Clearly, 
+
+the  ith  derivative  of  the  residue  is  given  by 
+
+‘, 
+WlP)  =  z  q;. 
+
+1 
+
+1 
+4  (log  x)‘--qP+i)(j?), 
+0 
+
+where  Z(S)  =  I/(&)  F(j,  s)).  Now 
+
+; 
+
+(j,  s) =  c  + 
+
+.+ c 
+
+!fEf  <  log  logj 
+
+pli  Ps - 
+
+plj  P 
+
+for  Is- 
+
+lIg6. 
+
+Hence 
+
+ZcO)= I@- l)+O(lP-  1I’>l/WP), 
+Z’ Co) = -  (V”/F)(.A PI + K’lW)>/V’(.h P> CW) 
+
+= VU,  /3) + W,(j,  1 -  24  IP  -  1 I log  log  Y), 
+
+and  by  Cauchy’s 
+
+theorem, 
+
+Zck’@?) &  F,(j,  1 -  2S)(log  logy)k-‘. 
+
+Therefore, 
+
+\'  P"'(O> 
+7 
+loi3  Y 
+;r; 
+
+R c'@)  =  Mi,j@) 
+
+t  O(Ei>) 
+
+as was  required 
+
+to  prove. 
+
+LEMMA 
+
+11.  Suppose  that  f(p)  =  1 t  O(p-‘) 
+
+for  primes  p  and  some 
+
+c  >  0.  Definef(r)  =  n,,,f(p), 
+
+and 
+
+zE~o.3  OF  RIEMANN'S  ~-FUNCTION 
+
+57 
+
+for  d,  a  non-negative  integer.  Then 
+
+Jd(X) =  (11  (1  +  f;;; 
+P 
+
+l)  (1 -p2)) 
+
+‘odg;;x  +  O(logdx), 
+
+where the  implicit  constant depends on c  and  d. 
+
+Note  that  the  product  is absolutely  convergent. 
+For  d =  0  this  lemma has been proved  by  Levinson  [ 5, Lemma 3.11 J. For 
+d  >  0  the  lemma  is easily  demonstrated  by  expressing f,(x)  as a  complex 
+integral 
+
+where A(s)  =  Cprr  p’(n)f(n)  n-‘,  and  using  Cauchy’s  theorem  to  shift  the 
+path  of  integration  to  the  line  s =  1 -  c/2  -I- it,  --CO <  t  <  CO. On  the  new 
+path  of  integration  the  estimate  A(s)  +  (1  +  / t()“’ 
+is  valid  and  the  result 
+follows. 
+
+4.  AN 
+
+IDENTITY  FOR  r'"'(s) 
+
+Let  4  be  a 
+
+real  polynomial  which 
+
+4(z)  +  @( 1 -  z)  =  K  f or  some constant  K  #  0.  Let  c(z)  =  #(L-r 
+d(z)  =  #( 1 -  L 
+
+’ log z).  Then  by  Lemma 3, 
+
+satisfies  g(O) =  1  and 
+log z)  and 
+
+Ktl(s)  =  Q(s) +  Q(l  -  s?, 
+
+where 
+
+Q(s) = H(s) j,, 
+
+'  -6eniZ2 ‘(‘)  dz  +  H(l  -s) 
+
+2i sin Xz 
+
+j 
+O\l 
+
+zS-;;sin  nz 
+
+-rrir2 d(z)  dz 
+. 
+
+This  may  be differentiated  m times with  respect to  s to  obtain 
+
+K?“(s)  =  Q,(s)  +  (-l)m  Q,(  1 -  s3, 
+
+(1) 
+
+where 
+
+Q,(s)  =  6 k~o (; 
+
+) ff'%) 
+
+lo., , ;;;;;I 
+
+(-log  zY'-kc(z)  dz 
+
+(log z)*  - kd(z)  dz. 
+
+58 
+
+BRIAN 
+
+CONREY 
+
+This  identity  expresses rCrn)($ +  it)  as  a  sum  (m  even)  or  a difference  (m  odd) 
+of  complex  conjugates.  Hence  T’“‘(i  +  it)  =  0  precisely  when 
+
+(a)  arg  Q,(f  +  if)  z  y  
+
+r(mod 
+
+rc) 
+
+(b)  Q,(i  +  it)  =  0. 
+
+These  conditions 
+do  not  depend  on  how  we  define  arg  Q,(t  +  if).  We 
+suppose  that  Q,&  +  iT)  #  0  #  Q,(f  +  i(T  +  U))  and  define  arg  Q,,($  +  it) 
+line  ~7 =  4 once 
+for  T  <  t <  T  +  U  by  continuous 
+n  we 
+f  +  it, 
+arg  Q,(&  +  iT) 
+define 
+
+variation 
+is  a  zero  of  Q,  of  multiplicity 
+
+is  defined. 
+
+along 
+
+the 
+
+If 
+
+arg  Q,(  l/2  +  it,‘)  =  arg  Q,(  l/2  +  it;) 
+
++  nz 
+
+By  (1)  such  a  point 
+
+is  a  zero  of  lcm)(s)  of  multiplicity 
+
+at  least  n.  Hence 
+
+N,(T 
+
++  U)  -N,,,(T) 
+
+> 
+
+l/n(arg  Q’“‘(1/2 
+
++  i(T  +  U)) 
+
+-  arg  Q’“‘( 
+
+l/2  +  iT)) 
+
+-  1. 
+
+Since  our  identity 
+that  we  are  counting  only  simple  zeros  (see Heath-Brown 
+
+from  Levinson’s 
+
+(1)  is  different 
+
+[5,  (1.8)], 
+
+[2]). 
+
+it  is  not  clear 
+
+It  follows  from  Lemmas  1  (part  (a))  and  2  that 
+
+l/n(arg  H(  l/2  +  i(T  +  U))  -  arg  H(  l/2  +  3)) 
+
+=  Ncm’(T  +  U)  -  N’“‘(T) 
+
++  O,(log 
+
+I’,). 
+
+Therefore, 
+
+N,(T 
+
++  U)  -  N,(T) 
+
+>  Ncm’(T  +  U)  -  Ncm)(T) 
+
++  O,(log 
+
+T) 
+
+-  (l/rc)(arg 
+
+I’(  l/2  +  i(T  +  U)) 
+
+-  arg  V(1/2  +  iT)),(2) 
+
+where  V(s)  =  Q&)/H(s). 
+
+We  obtain  a  simpler  expression  for  V(s).  By  Lemma  4, 
+
+Q,(s)  =  so 
+
+(T  )  Hck’(s)  ( nTv  (-log  n>m-kc(n) 
+
+n-’ 
+
++  0(7+“/‘)) 
+
+Pk’(l 
+
+-  s) 
+
+x 
+n<v 
+
+(log  n)m-kd(n) 
+
+n”-’ 
+
++  O(T”+‘“-I)‘*) 
+
+zERos 0F WEMANN’s <-;--FUNCTION 
+
+59 
+
+for  T <  t <  T  +  U  and  0 <  u  <  A  log  L.  Then  by  Lemma  1 (c)  we  can  replace 
+HCk’(s)  by  H(s)  F(s)~  with  a  small  error;  we  use  the  estimate  of  Lemma 
+l(d) 
+and  obtain 
+
+V(s) = C(s) + x(s) D(s) + O( T:  u 2 +  T”  ‘i2) 
+
+for  T<r<T+UandO<o<AlogL,where 
+
+C(s) =  y  c(n)(F(s) -  log nyn  --s 
+
+n<v 
+
+and 
+
+D(s)  =  x 
+
+n4rl 
+
+d(n)(log  n  -  F(  1 -  s))“C 
+
+‘. 
+
+We  apply 
+
+the  argument  principle 
+
+to  Y  on  the  rectangle  5~’  with  vertices 
+i  +  iT.  u0 +  iT,  u,, +  i(T  +  V),  and  i  +  i(T  +  U),  where  3 <  u0 =  u,(m).  On 
+the  left  side  of  C? the  argument  of  V  is  determined  as  it  was 
+for  Q,,  above. 
+Let  l= 
+
+log(t/2n).  Then  on  the  right  side  of  9.  since  c(  1) =  1, 
+
+( V(s)  - 
+
+(f/2)” 
+
+/ <  A  2 -““(L/2)” 
+
+by  Lemmas 
+
+I(b)  and  (d).  Hence 
+
+)A  arg  V(u,  +  it)lF+“l 
+
+<  n 
+
+if  u0  is  large  enough.  By  Jensen’s 
+parts  of  the  contour.  Thus 
+
+theorem,  A  arg  Y(s)  <  L  on  horizontal 
+
+(I/n)  A  arg  V(1/2  +  il)(F”= 
+
+-2N  +  O(L), 
+
+(3) 
+
+where  N  is  the  number  of  zeros  of  Y  inside  or  on  4i. 
+
+[ 14, Sect.  9.91) 
+
+We  obtain  an  upper  bound 
+
+lemma 
+(see 
+Titchmarsh 
+rectangle  8  with 
+vertices  a +  iT,  u1 +  iT,  u,  +  i(T  +  cl),  and  a  +  i(T+  U).  Here  u,  =  log  L 
+fixed.  The 
+and  (i  -  a)  =  R/L 
+mollifier 
+
+for  N  by  applying  Littlewood’s 
+v(s) 
+
+for  a  number  R  >  0  which  will  be  considered 
+
+v/  is  a  Dirichlet  polynomial 
+
+to  2”‘L  -“V(s) 
+
+the 
+
+on 
+
+v/(s)  = 
+
+\‘ 
+kyy 
+
+b(k)k-’ 
+
+60 
+
+BRIAN 
+
+CONREY 
+
+with  b( 1) =  1, b(k)  4  1,  and  y  =  T”ZL-20. 
+
+Then 
+
+vV(o  +  i(T+  U))  da 
+
+where  Cp  runs  over  all  zeros  /I  +  iy E  B  of  V(s)  I++).  The  last  two  integrals 
+are  6  L  by  the  usual  application  of  Jensen’s  formula.  Also 
+
+/(2/L)rn  V(s)- 
+
+1 (<A2-“‘<L-‘, 
+
+/ w(s) -  1) Q L  -’ 
+
+and  similarly 
+integral 
+inside  or  on  23,  and  if  p  +  iy E  CS then  j3 -  a  >  f  -  a.  Hence 
+
+is  6  UL  -I.  The  zeros  of  w(s) V(S)  inside  27 include 
+
+for  s on  the  right  side  of  8.  Hence  the  second 
+the  zeros  of  V(s) 
+
+-q3-u)>(f-a)N. 
+7 
+
+By  the  arithmetic-geometric 
+
+mean  inequality, 
+
+m yV(a  +  it)  dt  <  Ulog 
+
+(Z/U), 
+
+z= 
+
+.T+U 
+
+J 
+T  
+
+I(2/L)“?,vV(u 
+
++  it)1  dt. 
+
+where 
+
+Hence 
+
+2N< 
+
+(UL/lrR) 
+
+log(Z/U)  +  O(U). 
+
+(4) 
+
+We  can  simplify 
+
+the  integrand  of  I.  By  Lemma 
+
+l(b), 
+
+C(s)= 
+
+c(n) 
+
+x 
+n<n 
+
++++Log 
+i 
+
+n 
+
+1 
+
+m 
+
+n-s  +  O(7-- 
+
+VZLm- 
+
+1) 
+
+ZEROS 
+
+OF  RIEMANN'S 
+
+C;-HJNCTI~N 
+
+61 
+
+for  o=a,  T,<t,< 
+
+Tt  U.  Thus 
+
+I 
+. 
+--+s-- 
++ L  c(n) cc 
+
+n<t 
+
++ 
+
+x 
+T<R<tT 
+
+c(n) 
+
+2 log n m 
+- 
+1 
+In 
+
+L 
+
+1+2&- 
+( 
+n-‘+ 
+
+O(T-“*L-‘) 
+
+’  2logn m  -,~ 
+
+n 
+
+L 
+
+H 
+
+=  c,(s)  +  C,(s)  t  C,(s)  +  O(T-  “‘L  -  ‘), 
+
+where r =  (T/271)“~  and 
+
+C,(s)=  y  c(n) 
+
+n<r 
+
+l+$-7 
+
+i 
+
+2 logn  m  --s 
+. 
+
+n 
+
+1 
+
+We  now  apply  Lemma 5  several times. With  6 4  (log(T  +  U)/T)  <  L  -” 
+lemma gives 
+
+the 
+
+.f+l: 
+1, 
+
+(C2(a+ir)~2drGL-20U~~* 
+
+UL-“. 
+
+With  6 <  1, and ?, =  ((T  +  U)/2n)‘/‘,  we have 
+
+I' 
+
+.rt 
+1 
+-T 
+
+IC,(a+it)l*dt<U 
+
+lW)12 
+n 
+
+<< uL-‘O. 
+
+x 
+T<n$T, 
+
+We  treat  D,(s)  and D,(s) 
+
+in  a similar  way,  where 
+
+(2/L)”  D(s)  =  D,(s)  +  D,(s)  +  D3(s)  +  O(T- 
+
+I’*  L  - ‘) 
+
+with  D,  and D,  similar  to  C,  and  C,  and with 
+
+D,(s)= 
+
+y  d(n) 
+n<tl 
+
+Also  by  Lemma 5, 
+
+.rtci 
+1 
+-r 
+
+Iv(a+it)l’dt*UQ----- 
+
+7 IW12 
+k 
+
+<  uL  . 
+< 
+
+Let x*(t)  =  (T/27r)“2-a  exp(ni/4  -  it  log f/2ne).  Then  by  Lemma  1 (d), 
+
+x(a  +  it)  -x*(t) 
+
+<  L-.” 
+
+62 
+
+BRIAN  CONREY 
+
+for  T <  t <  T +  U.  Hence by  Lemma 5, 
+
+.TiC 
+1 
+.T 
+
+Ix(a+i+x*W 
+
+lD,yl(a+it)ldt 
+
+Now  by  several  applications  of 
+inequalities we conclude  that 
+
+the 
+
+triangle  and  Cauchy-Schwarz 
+
+I= 
+
+.7‘+1, 
+( 
+-T 
+
+1 V*y(a  +  it))dt  +  O(UL-9’2), 
+
+where  V*(s)  =  C,(s)  +x*(t)  D,(s). 
+
+Let 
+
+J=[ 
+
+.T+U 
+
+.T 
+
+1 V* y(u  +  it) 1 2 dt. 
+
+Then  by  the  Cauchy-Schwarz 
+
+inequality, 
+
+I  <  U’/’  J”’  +  O(UL  -9’2). 
+
+The  left  side of  (4)  is non-negative so I  +  U.  Hence J  $  U  and by  (4)  we see 
+that 
+
+2N < E 
+‘271 
+
+lw(J/U) 
+R 
+
++  O(U). 
+
+It  now  follows  from  (2),  (3),  and  Lemma 2 that 
+
+u,,, >  1 -  R 
+
+’ log(J/U). 
+
+(5) 
+
+5.  SIMPLIFICATION 
+
+OF  J 
+
+To  evaluate  J  we  use the  same basic  techniques as Levinson  [5]  but  we 
+
+make use of  Pan’s simplifications  [ 111. We  square out  to  see that 
+
+J=J,+2ReJ,+J,, 
+
+where  J,=j~‘UIyC,(a+it)12dt, 
+J,  =  1;” 
+
+] vD,(u  +  it)(’  df.  By  Lemma  5 with  6 $  1, 
+
+J2=S~fUI~12C1X*D,(a+it)dt, 
+
+(6) 
+
+and 
+
+J,  =  U(l  +  O(L-‘O)) 
+
+--& 
+
+1 
+n<TY 
+
+/ x  c&)b(n/d) 
+din 
+
+1 2, 
+
+zeros 
+
+OF  R~EMANN'S 
+
+<--FUNCTION 
+
+63 
+
+and  since  Ix*(t)l’ 
+
+=  (7’/27r)1’2-a  =  t2-4a, 
+
+J, 
+
+=  UT*-4yl 
+
++  O(L 
+
+-JO)) 
+
+y 
+
+& 
+
+tl<IY 
+
+d*(n) 
+
+b(n/d) 
+
+F7 
+Zii 
+
+2 
+
+, 
+
+where  c*(n)  =  c(n)(  1 -  2(log  n)/L  +  ~ri/2L)~  and  d,(n)  =  d(n)(2(log 
+1 +  7q2L)“. 
+summation  and  obtain 
+
+inner  sums  on  n  are  @ L’.  We 
+
+rearrange 
+
+The 
+
+n)/L 
+
+- 
+the  order  of 
+
+J, =  U\-‘- 
+7.r 
+
+and 
+
+b(k1)b(k2)  k2a 
+
+k:”  k:” 
+
+\‘ 
+j <r/rrM 
+
+c&K,)c,(j~2)j-2a 
+
++  O(ULP5) 
+
+(7) 
+
++ O(ULP5), 
+
+03) 
+
+gcd(k,, 
+
+where 
+K,  =  min(rc,,  K*}.  Unless  otherwise 
+1 <  k,  , k,  <  ?’  and  sums  on j,  and  j,  are  for  1 <j, 
+
+k,  =  K,  k, 
+
+indicated, 
+
+k,  =  K*/c, 
+
+k2)  =  k, 
+
+,jz  <  r. 
+
+K,  =  max{lc,,  K*}, 
+
+and 
+sums  on  k,  and  k,  are  for 
+
+Clearly 
+
+where 
+
+r  =j,j2  k,/k, 
+
+and  I(r) 
+
+is  defined  in  Lemma  7.  By  Lemmas  7  and  8. 
+
+Jz=J2, 
+
+fO(UL-6), 
+
+(9) 
+
+where 
+
+inside.  If  k,  tj2kl 
+(see 
+
+We  have  used  r:  =  (T+  U)/2n. 
+sum  over  j, 
+llj2k,/k2j) 
+-’ 
+nearest 
++  (r  +  k,)  L.  Thus 
+<  ryL*  +  y2L  @ UL-‘. 
+
+[ 14;  Sect.  5.2]),  where 
+integer.  The  sum  of  this  quantity  over  j,, 
+of 
+total 
+
+(Recall,  also,  that  r*  =  7’/2n.)  We  take  the 
+’  < 
+from  8  to  the 
+is 
+is 
+
+li0ll  is  the  distance 
+
+is  <  (sin  nG2 k,/k,)) 
+
+j,  f  O(mod  k2/(kl, 
+
+kJ), 
+to  J,, 
+
+then  the  sum  over  j, 
+
+contribution 
+
+Hence 
+
+these 
+
+terms 
+
+the 
+
+64 
+
+BRIAN 
+
+CONREY 
+
+where  the  sum  on  j,  and  j, 
+(Recall 
+summation  may  be  written 
+
+that  ICY =  k2/(kl,  k,).) 
+
+is  for  j,  , j,  <  r,  r2  <  r  Q  rf,  and  j,  s  0 mod  K,. 
+In  this  sum  let  j,  =  jrc2.  Then  the  conditions  of 
+
+If  we  drop 
+terms  to  the  sum  on  j,  , j,.  Thus 
+
+the  restraint 
+
+j,  <  r  then  we  introduce  4  UL  -lo  K;  ’  additional 
+
+J,, 
+
+=  2~5’-~~ 
+
+\-’ 
+
+v 
+y;.; 
+
+where 
+
+b(k1)b(k2) 
+k;- 
+
+112 k;+  1/2 
+
+(Z,  +  O(uL-%;‘)) 
+
++  O(UL-*), 
+
+(10) 
+
+terms  of 
+
+The 
+Wdn)Mn) 
+
+the 
+n “‘-O) 
+
+sum  on 
+
+inner 
+-=$ l/La  Thus  the  inner  sum  is 
+
+j, 
+
+here  are  almost 
+
+constant 
+
+since 
+
+1 
+Z---C 
+2n 
+
+--$ 
+K, 
+
+*  G 
+
+Ur’-2a(ju,)-3’2+a 
+
+1 
+
++  O(1)  +  O(UL-“tc;‘j-I), 
+
+so that 
+
+EC, =  G 
+
+IC-~/’ 
+
+c 
+dutGj<zIq 
+
+d*(jtcl)  dh(iKZ) 
+
+jZap2  +  O(T’l’) 
+
+(We  have  used  the  fact  that  c*(t’/x) 
+use  Lemma  9  to  find  that 
+
+=  d*(x).)  We  substitute 
+
+this  in  (10)  and 
+
+J2, 
+
+= 
+
+(~~2-4” 
+
+2 
+
+C 
+
+b(k;);(k2) 
+
+k2-2R 
+
+kl.kz 
+
+I 
+
+2 
+
++  O(UL-7). 
+
+Thus,  the  main 
+
+term  of  2 Re  J2  is 
+
+=  u~Z-4” 
+
+C 
+
+C 
+
+b(k') 
+
+“k” 
+
+kZ-Za 
+
+C 
+
+d*(jK 
+
+)  d*(jlcjZa-Z 
+1 
+
+2 
+
+9 
+
+k1.b 
+
+k, 
+
+kz 
+
+dqf=G/<r/xm 
+
+ZEROS  OF  RIEMANN'S  &FUNCTION 
+
+which  combines  nicely  with  the  main 
+
+term  of  J,  in  (8).  Hence 
+
+J/U=J, 
+
++J,  +  o(L-‘), 
+
+65 
+
+(11) 
+
+where 
+
+and 
+
+= 
+
++4a 
+
+J 
+
+5 
+
+r 
+
+xr 
+
+v 
+
+b(kl)b(kz) 
+
+k2-2” 
+
+1 
+
+d,(jK1)d*(jK2)j2a-2. 
+
+klkz 
+
+i<rlrr, 
+
+We  now  estimate 
+
+the 
+first  derivative, 
+
+continuous 
+
+innermost 
+then 
+
+sums 
+
+in  J4  and  J5.  If  h(u)  has  a 
+
+\‘ 
+n < x 
+
+h(n)  =  JX h(u)  du  +  h( 1) -  h(x)(x)  +  .i’:  (U)  h’(u)  du. 
+
+1 
+
+If  (h’(u))  <  M/u* 
+
+for  u <X,  where  x  <  X,  then  the  above  is 
+
+=  ‘xh(u)du+c+x 
+
+J 
+I 
+
+28M 
+
+tlel  G  11, 
+
+where  c=h(l)+~~{u}h’(u)du. 
+C*@KJ  C*WJ 
+
+x=r//~~, 
+u -”  we see that  the  innermost  sum  of  J,  is 
+
+Hence  with  X=r, 
+
+and  h(u)= 
+
+= 
+
+.r/c&f 
+I 
+-1 
+
+c&K~)  c&K~)  u-‘a  du +  K,  +  O(IC,&) 
+
+and  similarly 
+
+the  innermost  sum  of  J,  is 
+
+.T/nm 
+
+= 
+
+J 
+I 
+
+d&x,) 
+
+d&q) 
+
+uzO-*  du +  K,  +  O&,/r), 
+
+functions  of  T  (for  fixed  m, R,  and  4)  which 
+where  K,  and  K,  are  bounded 
+are  independent  of  k,  and  k,.  The  above  error  terms  contribute  an  amount 
+&  L -  I9  to  J4 and  J5.  With  our  choice  of  mollifier 
+coefficients  b(k)  we will 
+later  show  that 
+
+whenever  Ia  -  11 <  L-I.  We  assume  this  result  for  now,  so  that  K,  and  K, 
+contribute  an  amount  +  L -  ’  to  J4 and  J, .  We  make  the  change  of  variable 
+
+66 
+
+BRIAN 
+
+CONREY 
+
+u =  s*/(uK, 
+for  J4  and  J,  combine 
+
+in  the  integral 
+to  give 
+
+K*) 
+
+term  of  J5  with  the  result  that  the  expressions 
+
+with 
+
+J/U= 
+
+J,  +  O(L-‘) 
+
+(12) 
+
+that 
+
+the  asymmetry 
+Notice 
+combining 
+terms  which 
+of 
+cancellation  which  Levinson 
+
+between  K, 
+led 
+to 
+[5,  Sect.  lo] 
+
+(11)  and 
+found. 
+
+and  K~ 
+
+has  disappeared.  The 
+the 
+
+(12)  corresponds 
+
+to 
+
+We  now  compute 
+
+the  integral 
+
+in  J,.  By  repeated 
+
+integration  by  parts  we 
+
+see that  if  P  has  N  continuous  derivatives 
+
+then  for  a  #  1  and  0  < A  <  B, 
+
+J B P(log  v)  uadu  =  Nf’  (-1)” 
+
+n=o 
+
+A 
+
+P’“‘(log  ?J) 
+(1  +  CL)“+’  u 
+
+, +a  B 
+A 
+
+1-l)” 
+
++(l 
+
++cf)N 
+
+P’“‘(log 
+
+.4 B 
+
+u)  v”dv. 
+
+is  a  polynomial 
+
+If  P 
+with  4*(x)  =  #(x)(1  -  2x  +  7ri/2~5)~,  so 
+d,(x)=#,(l 
+
+of  degree  0 
+
+-L-‘logx), 
+
+we have  J6=J7-J8, 
+
+then 
+
+that 
+
+the 
+
+integral 
+
+c*(x)  =  $,(L-’ 
+where 
+
+vanishes.  Hence 
+log  x)  and 
+
+J,=e 
+
+2R 
+1 -2a 
+
+\‘y- 
+zs;;‘,T 
+
+W,) 
+
+WJ 
+
+k2-2a 
+
+k,k, 
+
+y 
+
+nio 
+
+t-l)” 
+PRY’ 
+
+and 
+
+J,  =  ___ 
+
+1 
+
+c 
+
+1 -  2a  y,e 
+
+\-  W)  Wb)  kza  v  C-1)” 
+(2R)” 
+
+kf”  kl” 
+
+$0 
+
+Here  we have  used  the  fact  that  72-40 
+qi5* is  a  polynomial. 
+
+=  e2R. The  sums  over  n  are  finite  since 
+
+ZEROS  OF  RIEMANN'S 
+
+(-FUNCTION 
+
+67 
+
+6.  THE  MOLLIFIER 
+
+It  is clear from  (13)  that  we need to  estimate the  sums 
+
+b(:);(k2) 
+I  2 
+
+k2G-20 
+
+(L-l 
+
+logy 
+
+(L-1 
+
+log~)N2(14) 
+
+for  N,  and N,  non-negative integers. Evidently  J,  involves  the sums SNI.,,+?( 1) 
+and J,  the  sums SN,,,,* (2~).  We  apply  the  Mobius  inversion  formula  to  the 
+part  of  S,.,. ,v2 (a)  which  involves  k =  gcd(k,  , kz).  Thus 
+
+= 
+
+\‘jY 
+
+~ 
+
+~' 
+
+ilk 
+
+nj-0 
+- 
+
+n*=o 
+- 
+
+where y=2a-2a, 
+
+N=N,-n,+N,-n,, 
+
+and 
+
+gjCN5  Y) =  :j  P(4  d-  ‘(log 4N. 
+
+We  substitute  this  into  (14)  and  interchange  the  summation on  k,  and  k? 
+with  that  on j.  Hence 
+
+where 
+
+Ti(i, a) =  z] 
+k<y 
+k  ~0  mod 
+
+j 
+
+. 
+
+Let  k =  nj  and x  = y/j.  Then 
+
+q(i,  a)  =  (-l)‘jPQ 
+
+f 
+
+(  x  b(nj)  n-”  ) 
+
+n<x 
+
+For  the  coefftcients  b(k)  of  the  mollifier  we take 
+
+b(k) =  k,,2--a y(k)b 
+
+(??f.$), 
+
+where  /r  is  a  polynomial  which  satisfies /r(l)  =  1,  so  that  b( 1) =  1,  and 
+/z(O) =  0.  We  substitute this  into  (15)  and see that 
+
+Tj(i,  a) =  (-l)‘p(j)j-” 
+
+Gj”(/?), 
+
+68 
+
+BRIAN 
+
+CONREY 
+
+where/?=a-a+$ 
+
+and 
+
+G,(p)= 
+
+p(n)n-'/I 
+
+c 
+n<x 
+(n.i) = 1 
+
+Hence 
+
+Denote 
+
+x  y 
+- 
+j<y 
+
+~‘(A 
+- 
+* 
+J 
+
+Gj”“(/3)  Gj”*‘(jI)  gj(N,  y). 
+
+(16) 
+
+the  inner  sum  over j  by  V N,n,,n$a).  We  shall  show  that  only  those 
+the  VN,n,,n2 
+
+with  max{N,,  N2}  <  1  are  sigmficant  and  for  these  only 
+
+S 
+wiLN*N  =  0  (i.e.,  n,  =  N,  , n,  =  NJ 
+gj(O,  y) =  F(j,  y).  Then  by  Cauchy’s 
+
+contribute 
+
+significantly. 
+
+First  of  all, 
+
+theorem, 
+
+gj(N9  y) <  F,(j,  1 -  24  10gNL. 
+
+Next,  by  Lemma  11  and  partial  summation, 
+
+r 
+
+,?Y 
+
+luY.8 T 
+J 
+
+F:(j,  1 -  26)  -=4 min 
+
+logy 
+
+$9 
+! 
+
+I 
+
+for  E >  0.  From  Lemma  10  and  these  estimates 
+
+it  follows  that 
+
+V N,n,,nz(a) 
+
+<  L  ‘h++(log~)N+4 
+
+4  LN’+N2- 
+
+*(log 
+
+L)S 
+
+if  N  >  0,  and 
+
+V O,n,,,,(a)  &  L”1+“2-2 
+
+log’  L  =  LNI+N’-2 
+
+logs  L 
+
+if  max{  a,,  n,}  >  2.  Thus  by  (16)  and  the  above, 
+
+S,,,,*(a)  Q  L-* 
+
+log’  L 
+
+(17) 
+
+if  max{N,, 
+N21  >  2, 
+-V,,o,l,o(a)L-‘+O(L-210g5L), 
+Also  by  Lemma  10, 
+
+and 
+
+S,,,(a) 
+and  S,,,(a)=V,,,,,(a)L’2+O(Lp210gJL). 
+
+=  Vo,o,o(a), 
+
+S,,  ,(a)  =  S,.,,(a)  = 
+
+Vo.da) = S i<y 
++- 
+
+q&;(g) 
+
+[(p+%.&?$) 
+
+lo;y /l’ (‘“““)]’ 
+
++ O(L-2 log5L). 
+
+ZEROS 
+
+OF  RIEMANN'S 
+
+<-FUNCTION 
+
+69 
+
+It  follows  from  Lemma  11  that 
+
+\-  P* tj)  KA  r> 
+WV  P> * 
+,T!J 
+
+j 
+
+d 
+= 
+
+c 
+
+log Y 
+q--q++(1), 
+
+where  it  is  easily  seen that  the  constant  C,  is 
+
+=l+O 
+
+,& 
+( 
+
+=lfO(L~‘). 
+
+1 
+
+Hence 
+
+vo,o,o(a)  =  (p - 
+
+l)*(log  y)  P,  +  2dg -  1) P,  +  &Pj 
+
++  O(L  -*  log5L), 
+
+where 
+
+and 
+
+P,  = 
+
+.’  /z(r)*  dr,  P,  =  1’  /z(t)  /z’(t)  dt  =  +, 
+1 0 
+0 
+
+P,  =  1’ p’(Q2  dt. 
+
+-0 
+
+Similarly, 
+(logy)  P,  +  O(log’L). 
+
+V,.,.,(a)  =  (j3 - 
+
+l)P, 
+
+logy  +  P,  +  O(L-’ 
+Therefore,  since  logy  =  L/2  +  O(l), 
+
+1og’L)  and  Vo,,,r(a)  = 
+
+S,,,(a)  =  L  -I(@ 
+
+-  1)2LZP,/2  +  2@? -  1) LP,  +  2P,)  +  O(L  -*  log5L). 
+
+S,,,(a)  =  S,,,(a)  =  -L 
+
+-‘(c/3  -  1) LP,/2  +  P*)  +  o(L-2 
+
+log5L), 
+
+and 
+
+S,,,(a) 
+
+=  L-‘P,/2 
+
++  O(L-* 
+
+1og’L). 
+
+these  estimates 
+
+Now  we  substitute 
+
+(13)  and  (14).  We 
+the  polynomials  &“*‘(x)  around  x  =  1  m  the  case  of  J,  and  around 
+to  a 
+
+expand 
+x  =  0  for  J,.  By  (17)  only  the  terms  which  involve 
+power  smaller 
+
+than  the  second  are  significant.  Hence 
+
+for  S,I,,, 
+
+log  k,/k 
+
+log  kJk 
+
+into 
+
+or 
+
+-(~~+“(l)&-ql)+~~‘(l)~~~‘+“(l))so~,(l) 
++  ~g+l)(l)~(fl-j+l) 
+* 
+
+(1) S,,,(l)1 + w-’ 
+
+log5 L) 
+
+70 
+
+and 
+
+BRIAN 
+
+CONREY 
+
+[d?(O)  C”(O) 
+
+So,,(2a) 
+
++  <~~+ “(0)  &-j’(O) 
+
++  #z’(O)  $t+Tj+“(O)) 
+
+S,,,(2a) 
+
++  &+“(O) 
+
+&“-j+“(O) 
+
+S,,,(2a)] 
+
++  O(L-’ 
+
+1og’L). 
+
+We  can  remove 
+@,,,(x) =  d(x)(  1 -  2x)“‘.  Then 
+
+the  ni/2L 
+
+term  which  appears  in  the  definition  of  q%*. Let 
+
+I@(x) 
+
+-  qq(x)I  <L-l 
+
+for  0 <  x  <  1.  Thus,  every  +4* which  appears  in  the  above  expressions  for  J, 
+and  JB  can  be  replaced  by  q+,,, with  a  total  error  which  is  @ L  -‘. 
+
+Our  expressions  for  J,  and  J,  can  be  simplified 
+when  a=1 
+
+and  p-l=,-+ 
+
+considerably.  We  observe 
+so  that 
+
+when  cr=2a 
+
+that  @-1)=+-a 
+(p- 
+
+l)L=M. 
+
+Hence 
+
+2R 
+
+J7  =  k 
+
+z. 
+
+(-1)” 
+(2R)” 
+
+[( 
+
+RZ52P,Rf2P, 
+
+Y;“‘(l) 
+
+i 
+
++  pq+P,) 
+
+2Y:“‘(l) 
+
++  $l  d”‘(1) 
+
++  o(L-’ 
+
+log5  L), 
+
+1 
+
+and 
+
+1 
+
+JE =  2R  n;. 
+
+1  C-1)” 
+(2R)” 
+
+R 2 2 
+
+-  2P,  R  +  2P,  Y’,“‘(O) 
+
+-  p2-;R) 
+
+Y:“1(O)++Y:“‘(O)]+O(L-‘log”L), 
+
+where  Y,(x)  =  #,Jx)~,  Y*(x)  =  Q,(x)  #h(x),  and  Y3(x)  =  #6(x)‘. 
+then  by  integrating  by  parts  repeatedly  we see that 
+polynomial, 
+
+If  Y(x)  is  a 
+
+e 
+
+2Rx Y(x)  dx  =  & 
+
+,~o  -&$ 
+F‘ 
+
+(eZR Ycn’( 1) -  Yen)(0)). 
+
+.I 
+
+I 
+-0 
+
+Hence 
+
+eZRx 
+
+Yu,(x)  dx  +  P, R 
+
+1 
+eZRx Y2(x)  dx 
+
+i 
+0 
+
++ 2);  e2Rx ul,(x)  dx  +  W  +  O(L  -I 
+
+Iog’L), 
+
+zoos  OF RIEMANN’S (-FUNCTION 
+
+71 
+
+where 
+
++ (R YyyO)  +  Y:n)(O))]. 
+
+Since  Yu,(x)  =  +Y;(x), 
+
+it  follows 
+
+that 
+
+~  (-l)“-’ 
+“bO  (2R)“-l 
+
+CT4 
+
++ 
+
+(-1)” 
+- 
+n;o  WY 
+
+!Py+  “(x) 
+
+1 
+
+=  R Yu,(x), 
+
+Yv,(x)  dx  =  j”A e2R”#;(x)2dx. 
+
+Then 
+
+.I 
+
+1 
+
+“0 
+
+e2RJY2(x)  dx  =  + 
+
+f’  eZR”(2$,(x) 
+,o 
+
+#h(x))  dx 
+
+=  + 
+
+(eZR$,(  1)’  -  d,(0)2) 
+
+-  R@. 
+
+Recall 
+
+that  #,{O)  =  4(O)  =  1 and  $,(  1)’  =  $( 1)‘.  Hence 
+
+J7-JB=f[(e2R#(1)2+ 
+
+1)+RP(e2RQ1(1)2- 
+
+l)+P@‘+(4P’-R’P)@] 
+
++  O(L 
+
+’  logSL), 
+
+where  we  have  written  P  for  P,  and  P’ 
+(13) 
+
+that 
+
+for  P,. 
+
+It  follows 
+
+from 
+
+(5).  (12),  and 
+
+a,  >  1 - 
+
+inf  log  Fm(R), 
+
+R 
+
+where 
+
+F,(R) 
+
+=  f[(e’“#(l)’ 
+
++  1)  +  RP(eZR#(l)’ 
+
+-  1)  +  PQp’  +  (4~’ 
+
+-RIP)  @)I, 
+
+the  inf 
+
+and 
+jr(  1)  =  1, 
+4’(x)  =  #‘(  1 -  x). 
+
+is  over  all  R  >  0,  all  real  polynomials 
+
+/z(O)  =  0  and 
+all 
+and 
+4 
+It  is  clear  that  the  inf  will  be  the  same  if  we  require  only 
+
+polynomials 
+
+4(O)  =  1 
+
+satisfying 
+
+/I  with 
+
+real 
+
+and 
+
+72 
+
+BRIAN 
+
+CONREY 
+
+/r  and  d  be  continuously  differentiable  on 
+
+that 
+boundary  conditions  and  functional  equation,  and  that  R  >  0.  We  choose 
+
+[0,  l]  and  satisfy  the  same 
+
+I 
+
+= 
+
+sinh  Ax 
+sinhA 
+
+’ 
+
+where  /1*  =  [@’  +  R(ezRd(l)* 
+and 
+
+-  1) -  R*@]/(4@).  Then 
+
+/z(O) =  0,  /r(l)  =  1, 
+
+F,(R)  =  f(e’“#(l)’ 
+
++  1) +  2(PA*  +  P’)  @. 
+
+It  is  easily  verified 
+
+that  with  this  choice  of  /z, 
+
+PA*+P’=AcothA 
+
+from  which  the  Theorem 
+suggestion  by  K.  Foster  to  use  the  calculus  of  variations.) 
+
+follows.  (The  choice  of  /r  was  made 
+
+following  a 
+
+7.  PROOF  OF  COROLLARY 
+
+To  establish 
+
+the  numerical 
+
+choices  of  d  and  R  for  the  various  values  of  m.  It  will  be  convenient 
+
+results  of  the  Corollary  we make  appropriate 
+to  let 
+
+g(x)  =  p.  +  x  &(  1 -  2x)2’-‘, 
+
+i>l 
+
+where  C  pi  =  1.  Then 
+choose  R  and  d  for  0  &  m  <  5  as listed  here. 
+
+it 
+
+is  clear  that  d(O)  =  1  and  d’(x)  =  #‘(I 
+
+-x).  We 
+
+m 
+
+R 
+
+2 
+P, 
+
+2 
+
+0 
+
+1 
+
+2 
+
+3 
+
+4 
+
+5 
+
+1.475231 
+
+1.209994 
+
+1.302341 
+
+1.539005 
+
+1.905703 
+
+2.007073 
+
+0.669654 
+0.488490 
+
+0.497750 
+0.996201 
+
+1.262516 
+0.500933 
+
+1.403534 
+0.500345 
+
+1.402774 
+0.500089 
+
+1.060701 
+0.500096 
+
+-0.252488 
+
+-1.274186 
+
+-1.977039 
+
+-2.290576 
+
+-2.189703 
+
+-0.896136 
+
+-0.030365 
+
+0.124709 
+
+-0.462395 
+
+1.242630 
+
+1.89084 
+-0.677251 
+
+1 
+
+-0.731010 
+
+2.117707 
+
+-0.637279 
+
+1.924119 
+
+- 
+0.335339 
+
+1 
+
+_ 
+
+log  F,,,(R) 
+R 
+
+0.36581 
+
+0.81378 
+
+0.95844 
+
+0.98731 
+
+0.99484 
+
+0.99702 
+
+The  values  in  the  last  row  are  truncations  of  the  actual  values.  These  choices 
+of  R  and  4 were found  using  a conjugate  gradient  algorithm 
+a 
+function  of  several  variables. 
+
+for  minimizing 
+
+To  prove 
+
+the  second  assertion 
+
+in 
+
+the  Corollary  we  take  R =  1  and 
+
+ZEROS  OF  RIEMANN'S  ~-FUNCTION 
+
+73 
+
+#(x-) =  1 -x  so that  $(l)  =  0.  IffE  C2[0,  11 and M  =  maxO,,, 
+by  integrating  by  parts  twice, 
+
+, If(x)\, 
+
+then 
+
+j;  f(x)(l 
+
+-  2x)”  dx 
+
+_  (-l>“f(l) 
+
++fP> 
+
+2(n  +  1) 
+
++  w)“+‘f’(l) 
+4(n  + 
+
++f’(O> 
+
+l)(n  +  2) 
+
+Hence with  obvious  choices off  and  n we obtain 
+
+@ =  1” e’“(1  -  x)‘(l 
+
+-  2x)2mdx  = 
+
+.O 
+
+=-- 
+
+1 
+4m 
+
+1 
+8mZ 
+
+’ 
+2(2m +  1) 
+
+and 
+
+e2”(2m +  1 -  (2m  +  2)  x)‘(  1 -  2~)~“~~  dx 
+
+= 
+
+e2+(2m+ 
+
+1)’ 
+
+-  2e2(2m  +  3) -  2(2m  +  1)  +  o  L 
+
+2(2m  -  1) 
+
++ 
+
+4(2m -  1)(2m) 
+
+( m 1 
+
+3 
+=m+T+o 
+
+1 
+ii- 
+* 
+(  1 
+
+Therefore. 
+
+A*  =  (C?’ -  1 -  @)/(4@)  S  m2 
+
+so that  coth A  =  1 +  O(eeZm), and 
+
+F,(  1) =  $ +  2@A coth A  =  4 +  d@(@’  -  1 -  @)( 1 +  O(e-2m)) 
+
+=  3 +  J/1/4(1  +  O(m-*))(l  +  O(e-2m))  =  1 +  O(m-*). 
+
+Hence log F,  <  me2  and we have  verified  the  Corollary. 
+
+ACKNOWLEDGMENT 
+
+I  thank  Professor  H.  L.  Montgomery,  my  thesis  advisor,  for  his  suggestion  that  I  work  on 
+this  problem,  for  his  encouragement  while  I  worked  on  it,  and  for  his  extensive comments  and 
+advice  which  greatly  benefited  the  presentation  of  this  paper. 
+
+74 
+
+BRIAN 
+
+CONREY 
+
+REFERENCES 
+
+I.  E.  Y.  BOMBIERI, A  lower  bound  for  the  zeros  of  Riemann’s  zeta-function  on  the  critical 
+
+line,  Sem.  Bourbaki  469  (1975),  176-181. 
+
+2.  D.  R.  HEATH-BROWN, Simple  zeros  of the  Riemann  zeta-function  on  the  critical  line,  Bull. 
+
+London  Math.  Sot.  II  (1979).  17-18. 
+
+3.  N.  LEVINSON,  Remarks  on  a  formula  of  Riemann 
+
+for  his  zeta-function,  J.  Math.  Anal. 
+
+Appl.  41  (1973),  345-351. 
+
+4.  N.  LEVINSON, 
+
+At  least  one-third  of  zeros  of  Riemann’s  zeta-function  are  on  o  =  f,  Proc. 
+
+NUI.  Acad.  Sci.  U.S.A.  71  (1974).  1013-1015. 
+
+5.  N.  LEVINSON.  More  than  one-third  of  zeros  of  Riemann’s  zeta-function  are  on  u  =  +, Adv. 
+
+in  Math.  13  (1974).  383-436. 
+
+6.  N.  LEVINSON, 
+
+Zeros  of  derivative  of  Riemann’s 
+
+l-function,  Bull.  Amer.  Math.  Sot.  80. 
+
+No.  5  (1974).  95 l-954. 
+
+7.  N. 
+
+LEVINSON, 
+
+Generalization 
+
+of  recent  method  giving 
+
+lower  bound 
+
+for  N,,(T)  of 
+
+Riemann’s  zeta-function,  Proc.  NUI.  Acad.  Sci.  U.S.A.  71,  No.  10  (1974).  3984-3987. 
+
+8.  N.  LEVINSON,  Deduction  of  semi-optional  mollifier 
+
+for  obtaining 
+
+lower  bound  for  N,(T) 
+
+for  Riemann’s  zeta-function,  Proc.  Nut.  Acud.  Sci.  U.S.A.  72.  No.  1  (1975),  294-297. 
+
+9.  N.  LEVINSON, 
+
+A  simplification 
+
+in  the  proof  that  N,(T)  >  (t)N(T) 
+
+for  Reimann’s  zeta- 
+
+function,  Ado.  in  Math.  18  (1975), 
+
+239-242. 
+
+IO.  H.  L.  MONTGOMERY 
+(1974).  73-81. 
+1 I.  PAN  CHENG-BIAO. 
+
+AND  R.  C.  VAUGHAN, 
+
+Hilbert’s 
+
+inequality,  J. London  Mulh.  Sot.  2 8 
+
+A  simplification  of  the  proof  of  Levinson’s 
+
+theorem,  Actu  Mufh. 
+
+Sinicu  22  (1979).  344-353. 
+
+12.  H. 
+
+RADEMACHER. 
+Berlin/Heidelberg, 
+
+“Topics 
+
+in  Analytic 
+
+Number 
+
+Theory,” 
+
+Springer-Verlag, 
+
+1973. 
+
+13.  C.  L.  SIEGEL,  Uber  Riemann’s  Nachlas  zur  analytischen  Zahlentheorie.  Quellen  Stud. 
+
+Geschichte  Math.  Astronom.  Phys. Abt.  B  Stud.  2  (1932),  45-80. 
+
+14.  E.  C.  TITCHMARSH. 
+Oxford,  195 I. 
+
+“The  Theory  of  the  Riemann  Zeta  Function,”  Oxford  Univ.  Press, 
+
+

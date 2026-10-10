@@ -1,0 +1,53 @@
+VALIDATE X=60: WHT+fold +16.235179 brute(2^10) +16.235179 delta 3.55e-15
+   random-f direct eval: +58.143169 (structure check only)
+   random-f direct eval: +28.455337 (structure check only)
+   random-f direct eval: +35.907776 (structure check only)
+== X=600  dmax=300  identity |sum mu(d)T(d) - sum Lambda w| = 0.00e+00
+   Ramp_lambda - 4sqrtX = -20.9447    Ramp_1 - 4sqrtX = +517.61
+   EXACT min_H Ramp_f - 4sqrtX = -20.9447   (core 7, big 55)
+   minimizer +1 primes: NONE (= lambda)
+   single-flip spectrum: min delta = +0.00135 at q=293; smallest [(293, np.float64(0.0014)), (283, np.float64(0.0034)), (281, np.float64(0.0038)), (277, np.float64(0.0047)), (271, np.float64(0.0061))]
+   [0.0s]
+
+== X=1000  dmax=500  identity |sum mu(d)T(d) - sum Lambda w| = 9.95e-14
+   Ramp_lambda - 4sqrtX = -22.3115    Ramp_1 - 4sqrtX = +843.21
+   EXACT min_H Ramp_f - 4sqrtX = -22.3115   (core 8, big 87)
+   minimizer +1 primes: NONE (= lambda)
+   single-flip spectrum: min delta = +0.00009 at q=499; smallest [(499, np.float64(0.0001)), (491, np.float64(0.0008)), (487, np.float64(0.0012)), (479, np.float64(0.0019)), (467, np.float64(0.0031))]
+   [0.0s]
+
+== X=2000  dmax=1000  identity |sum mu(d)T(d) - sum Lambda w| = 2.27e-13
+   Ramp_lambda - 4sqrtX = -24.1618    Ramp_1 - 4sqrtX = +1571.96
+   EXACT min_H Ramp_f - 4sqrtX = -24.1618   (core 11, big 157)
+   minimizer +1 primes: NONE (= lambda)
+   single-flip spectrum: min delta = +0.00009 at q=997; smallest [(997, np.float64(0.0001)), (991, np.float64(0.0003)), (983, np.float64(0.0005)), (977, np.float64(0.0007)), (971, np.float64(0.0009))]
+   [0.0s]
+
+== X=3000  dmax=1500  identity |sum mu(d)T(d) - sum Lambda w| = 0.00e+00
+   Ramp_lambda - 4sqrtX = -25.2368    Ramp_1 - 4sqrtX = +2225.97
+   EXACT min_H Ramp_f - 4sqrtX = -25.2368   (core 12, big 227)
+   minimizer +1 primes: NONE (= lambda)
+   single-flip spectrum: min delta = +0.00002 at q=1499; smallest [(1499, np.float64(0.0)), (1493, np.float64(0.0001)), (1489, np.float64(0.0002)), (1487, np.float64(0.0002)), (1483, np.float64(0.0003))]
+   [0.1s]
+
+== X=5000  dmax=2500  identity |sum mu(d)T(d) - sum Lambda w| = 3.98e-13
+   Ramp_lambda - 4sqrtX = -26.6256    Ramp_1 - 4sqrtX = +3402.22
+   EXACT min_H Ramp_f - 4sqrtX = -26.6256   (core 15, big 352)
+   minimizer +1 primes: NONE (= lambda)
+   single-flip spectrum: min delta = +0.00018 at q=2477; smallest [(2477, np.float64(0.0002)), (2473, np.float64(0.0002)), (2467, np.float64(0.0003)), (2459, np.float64(0.0003)), (2447, np.float64(0.0004))]
+   [0.4s]
+
+== X=8000  dmax=4000  identity |sum mu(d)T(d) - sum Lambda w| = 1.36e-12
+   Ramp_lambda - 4sqrtX = -27.8798    Ramp_1 - 4sqrtX = +4967.86
+   EXACT min_H Ramp_f - 4sqrtX = -27.8798   (core 18, big 532)
+   minimizer +1 primes: NONE (= lambda)
+   single-flip spectrum: min delta = +0.00004 at q=3989; smallest [(3989, np.float64(0.0)), (3967, np.float64(0.0001)), (3947, np.float64(0.0002)), (3943, np.float64(0.0002)), (3931, np.float64(0.0003))]
+   [13.3s]
+
+== X=10000  dmax=5000  identity |sum mu(d)T(d) - sum Lambda w| = 8.53e-13
+   Ramp_lambda - 4sqrtX = -28.4876    Ramp_1 - 4sqrtX = +5925.44
+   EXACT min_H Ramp_f - 4sqrtX = -28.4876   (core 19, big 650)
+   minimizer +1 primes: NONE (= lambda)
+   single-flip spectrum: min delta = +0.00000 at q=4999; smallest [(4999, np.float64(0.0)), (4993, np.float64(0.0)), (4987, np.float64(0.0)), (4973, np.float64(0.0001)), (4969, np.float64(0.0001))]
+   [33.3s]
+

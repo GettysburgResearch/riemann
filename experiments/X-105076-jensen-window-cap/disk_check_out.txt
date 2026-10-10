@@ -1,0 +1,19 @@
+== PART A: L-105067 sec 3b adversarial families (T_K nonempty) ==
+A1a-mu3 g=8  TNE m=2 M=4  Ztrue=2  thmB2=18.16 (p=2,nu=2,it=1,term=1) achJ=14.20 cone=1 OK
+A1b-mu3.5 g=8  TNE m=2 M=9  Ztrue=2  thmB2=18.16 (p=2,nu=2,it=1,term=1) achJ=14.20 cone=1 OK
+A2-edge g=8  TNE m=2 M=2  Ztrue=2  thmB2=18.16 (p=2,nu=2,it=1,term=1) achJ=14.21 cone=1 OK
+A3-13pair g=8  TNE m=13 M=13  Ztrue=2  thmB2=82.11 (p=13,nu=2,it=1,term=1) achJ=76.78 cone=1 OK
+A1a-mu3 g=32  TNE m=2 M=4  Ztrue=2  thmB2=18.16 (p=2,nu=2,it=1,term=1) achJ=14.20 cone=1 OK
+A1b-mu3.5 g=32  TNE m=2 M=9  Ztrue=2  thmB2=18.16 (p=2,nu=2,it=1,term=1) achJ=14.20 cone=1 OK
+A2-edge g=32  TNE m=2 M=2  Ztrue=2  thmB2=18.16 (p=2,nu=2,it=1,term=1) achJ=14.21 cone=1 OK
+A3-13pair g=32  TNE m=13 M=13  Ztrue=2  thmB2=82.11 (p=13,nu=2,it=1,term=1) achJ=76.78 cone=1 OK
+A1a-mu3 g=128  TNE m=2 M=4  Ztrue=2  thmB2=18.16 (p=2,nu=2,it=1,term=1) achJ=14.20 cone=1 OK
+A1b-mu3.5 g=128  TNE m=2 M=9  Ztrue=2  thmB2=18.16 (p=2,nu=2,it=1,term=1) achJ=14.20 cone=1 OK
+A2-edge g=128  TNE m=2 M=2  Ztrue=2  thmB2=18.16 (p=2,nu=2,it=1,term=1) achJ=14.21 cone=1 OK
+A3-13pair g=128  TNE m=13 M=13  Ztrue=2  thmB2=82.11 (p=13,nu=2,it=1,term=1) achJ=76.78 cone=1 OK
+A4-hug g=16  TNE m=2 M=4  Ztrue=2  thmB2=26.71 (p=2,nu=5,it=1,term=1) achJ=22.70 cone=1 OK
+
+== PART B: X-105067 t2 generator rerun, disk bound per cluster ==
+configs used: 600  clusters: {'E': 971, 'NE': 91}
+T-nonempty clusters: 91, certified OK: 91, violations: 0
+bound/M ratio: min 1.66 med 6.65 max 49.97;  terminal-window fraction 0.734

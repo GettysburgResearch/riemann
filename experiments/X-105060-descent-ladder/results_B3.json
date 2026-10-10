@@ -1,0 +1,37 @@
+{
+  "lane": "B3 descent assembly + master corollary",
+  "checks": {
+    "deterministic_configs": {
+      "A_all_real_simple": "OK both rungs; W=0, X=0, exact Rolle N'^r=N^r-1 shape",
+      "B_pair_annihilation": "OK; F: Nr=2,Nc=2 -> F': Nr=3,Nc=0; gap(4,6): n'=3, extra=2, weight=1.0, ratio 2.0; descent survives annihilation via W pricing",
+      "C_overhang_5gaps": "OK; single pair (1.4,0.45) overhangs 6 gaps, per-(pair,gap) weight totals 2.198; all extra=0; double-charging bookkeeping verified",
+      "D_double_real_zero": "OK; mult-drop at t=2 exact; gap(2,4): extra=2, weight=1.0",
+      "E_double_pair_mult2": "OK; pair mult 2 -> weight 2.0, extra=2, ratio 1.0",
+      "F_even_parity_window_0T": "OK; Xi-like even F with mirror pairs, window (0,4]; extra=2 weight=1",
+      "G_deep_pair_small_gaps": "OK; y=g: weight 0.25/gap, extra=0 (threshold respected)",
+      "H_tight_cluster_low_pair": "OK; second rung produces extra=2 with weight=1 in gap of length 0.147",
+      "MIXED_multiplicity": "OK after distinct-zero gap fix; N(8,6,2)->(7,7,0)... [counts (11,5,6)->(10,6,4)]",
+      "TRIPLE_real_zero_plus_pair": "OK with exact deflation; F' double zero at triple point; gap(3,6) extra=2 weight=1; counts (8,6,2)->(7,7,0)"
+    },
+    "random_search": {
+      "float64_pass": "400 trials seed 7: 4 apparent threshold violations + 2 dipole violations -- ALL shown to be numpy/float64 root-finding artifacts (one had parity-impossible even gap count)",
+      "exact_pass": "250 trials seed 123, exact rational coefficients + 60dps polyroots: 0 violations of rolle/parity/threshold/dipole(A'=4)/converseRolle/descent; min |Im| classification margin never below 1e-12; worst extra/weight = 2.0",
+      "reaudit_flagged": "trials 146/173/186/351 re-run exactly: all inequalities hold; worst per-gap (extra=4, weight=2.0)"
+    },
+    "adversarial": {
+      "STACK_m_tiny_pairs": "m=3,5 near-real pairs in one gap: extra=2m exactly, weight=m, ratio=2.0 (saturation)",
+      "COOP_medium_y": "m=3..10 pairs y=0.5 (strip cap) over gap 0.6 (per-pair weight 0.36<1): extras saturate at 2, ratio max 1.85 at m=3, DECREASES with m -- cooperation does not break the cap",
+      "COOPSPREAD_y0.42": "m=4,8 spread pairs weight 0.51 each: extra=2, ratio <= 0.98",
+      "MARGINAL3_w_lt_1": "3 pairs y=0.55>g/2, total weight 2.479: extra=2, ratio 0.81; threshold needs total>=1: confirmed (single sub-threshold pair never produced extras)"
+    },
+    "partial_fraction_identity": "relative error <= 4.4e-10 on all deterministic configs (float); identity exact for polynomials, validates phi'_j formula and sign conventions of Lemma 3.2",
+    "empirical_constants": {
+      "max_extra_over_weight_ever_observed": 2.0,
+      "pinned_interface_constant": 4.0,
+      "note": "evidence suggests true per-gap constant A'=2 with weight min(1,g^2/(4y^2)); A'=4 has factor-2 margin in every test"
+    },
+    "xi_ladder_cross_check": "B1 laneB1/results.json: all zeros of Xi_0..Xi_3 in [2,100]x[-1,1] are real (winding=sign-change counts) => W_k=0 there and descent inequality holds trivially with conservation breathing |N_{k+1}-N_k|<=1"
+  },
+  "violations_found": "none (after exact arithmetic); all float-level flags were root-finder artifacts",
+  "files": ["stress_tests.py", "exact_check.py", "dissect.py", "NOTES.md"]
+}
