@@ -135,28 +135,6 @@ def optimise_theta(theta, beta_prev, warm=None, inp=tc.PAPER):
     return dict(theta=float(theta), sigma_coarse=best[0], sigma=s_fine, geom=best[1], info=info)
 
 
-def optimise_high_only(beta_prev, inp=tc.PAPER, warm=None):
-    """inf over geometry of H(geom): the cap on what ANY low-side improvement can buy here."""
-    from scipy.optimize import minimize
-    def obj(p):
-        lx, ly, ell = (float(t) for t in p)
-        if not tc.valid_geometry(lx, ly, ell):
-            return 2.0
-        Hh, _, small = H_high(lx, ly, ell, beta_prev, inp, **COARSE)
-        return 1.5 + small if small >= 0 else Hh
-    starts = [(17/48, 23/48, 1/6), (0.40, 0.42, 0.17), (0.30, 0.45, 0.25), (0.25, 0.30, 0.20)]
-    if warm is not None:
-        starts = [tuple(warm)] + starts
-    best = (9.0, None)
-    for st in starts:
-        r = minimize(obj, st, method='Nelder-Mead', options=dict(xatol=1e-6, fatol=1e-8, maxiter=600))
-        if r.fun < best[0]:
-            best = (r.fun, tuple(float(t) for t in r.x))
-    lx, ly, ell = best[1]
-    Hf, arg, small = H_high(lx, ly, ell, beta_prev, inp, **FINE)
-    return dict(H=Hf, H_coarse=best[0], geom=best[1], arg=arg, low_at_geom=float(low_exact(lx, ly, ell)))
-
-
 # ---------------------------------------------------------------------------------------------
 # Exact LP barriers (any row counts; floor bin only) with the low rows shifted by theta
 # ---------------------------------------------------------------------------------------------
@@ -237,17 +215,17 @@ def main():
         print(f"theta={str(th):7s} sigma={r['sigma']:.6f} gain={r0['sigma'] - r['sigma']:.6f} "
               f"geom={tuple(round(t, 5) for t in r['geom'])} {r['info']}")
 
-    print("\n== cap: inf over geometry of the high side alone (theta -> infinity) ==")
-    cap = optimise_high_only(11/12, warm=rows[-1]['geom'])
-    print(cap)
-
+    print("\n== local slope of the gain (no cap is computed: the high side alone has no useful infimum,")
+    print("   since H = -inf once no bin binds; what limits sigma(theta) is the trade-off low - theta vs H) ==")
+    for r in rows[1:]:
+        print(f"theta={r['theta']:.3f}  gain/theta = {(r0['sigma'] - r['sigma'])/r['theta']:.4f}")
     print("\n== check: a priori bound beta_prev = 7/8 (Part II accepted), at the theta=1/20 optimum ==")
     r78 = optimise_theta(THETAS[-1], 7/8, rows[-1]['geom'])
     print(f"theta={THETAS[-1]} beta_prev=7/8: sigma={r78['sigma']:.6f} geom={tuple(round(t, 5) for t in r78['geom'])} {r78['info']}")
 
     if args.json:
         with open(args.json, 'w') as f:
-            json.dump(dict(lp=lp, rows=rows, cap=cap, beta78=r78), f, indent=1, default=str)
+            json.dump(dict(lp=lp, rows=rows, beta78=r78), f, indent=1, default=str)
     return 0 if allok else 1
 
 

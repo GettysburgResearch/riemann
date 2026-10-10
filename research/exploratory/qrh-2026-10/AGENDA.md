@@ -121,6 +121,14 @@ attempt.
 * Remaining unverified step: App. A.2 ("fixed and moving phase cancellation"), which serves the
   high-side identity.
 
+**C2′. Lemma 18.1 of the 7/8 manuscript** ([reviews/LEMMA18_1_REVIEW.md](reviews/LEMMA18_1_REVIEW.md)).
+* It asserts a Lindelöf-strength fourth moment of the sextic family, which would be new as a
+  standalone theorem.
+* A bounded review found no error. The first unverified step is the common-support allocation
+  (paper.tex l. 13192–13349 and 13686–13933).
+* The numerology has zero slack at three points. This is the highest-value single verification
+  target in the 7/8 manuscript.
+
 **C3.** The coefficient (7.4) of the 7/8 manuscript, factored into the local series (7.10). This
 needs (7.9) and the `b*`/`ξ`/`τ` and pair-phase cancellations; only the local identity was checked
 ([numerics/](numerics/README.md)).
