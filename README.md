@@ -91,6 +91,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The joint-divisor packet](standalone/2026-10-10-joint-divisor-covariance/README.md) proves a stronger large-divisor tail bound, handles overlapping moving exclusions and auxiliaries in the full all-row theta family, and transfers a raw short-row saving to the full arithmetic A2 completion through correction-dependent cube cutoffs. Published Hecke subconvexity also yields new diagonal-size sectors of every fixed generalized moment, with explicit fourth-moment configurations beyond the previous positive accounting regions. The theta deductions retain their imported assumptions; the remaining signed covariance, full fourth moment, generalized hierarchy, and RH remain open. Exact sources, scoped independent AI-agent reviews, and finite arithmetic diagnostics accompany the proofs.
 
+## Further research: conductor averages and joint continuation
+
+[The conductor-average packet](standalone/2026-10-10-conductor-averages/README.md) averages the cubic double-prime conductor and combines it with rational-prime incidence to bound additional positive portions of every fixed even moment. It also enlarges the exact reflected function's continuation domain and proves recovery of a full Gaussian-test moment from a smaller prescribed scale grid. The notes preserve their precise external dependencies, distinguish tuplewise absolute accounting from earlier complete signed-block bounds, and include independent AI-agent reviews. The arithmetic sampled moment, large-singleton signed complement, full generalized hierarchy, and RH remain open.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

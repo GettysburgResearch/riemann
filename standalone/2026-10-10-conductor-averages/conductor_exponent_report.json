@@ -1,0 +1,116 @@
+{
+  "composed_fixture": {
+    "column_balance": "1/1",
+    "composed_excess": "-1/40",
+    "ideal_average_excess": "3/40",
+    "ideal_singleton_exponent": "4/5",
+    "radical_exponent": "23/10",
+    "rational_completion_excess": "3/20",
+    "rational_wu_excess": "351/2560"
+  },
+  "cubic_fixture": {
+    "average_excess": "-1/40",
+    "balanced_divisor_excess": "43/360",
+    "column_balance": "1/1",
+    "old_completion_excess": "13/60",
+    "old_wu_excess": "353/1920",
+    "small_gcd_margin": "3/28"
+  },
+  "cubic_mean_ratios_R_M_N": [
+    [
+      "1/2",
+      "1/6",
+      "-1/6"
+    ],
+    [
+      "1/3",
+      "-1/3",
+      "0/1"
+    ]
+  ],
+  "gaussian": {
+    "derivative_log_coefficient": "4/1",
+    "fourth_moment_limit": "17/24",
+    "pre_row_error_exponent": "-3/1",
+    "replica_height_remainder": "5/6"
+  },
+  "higher_ideal_multiplicity_first_exponent": "-5/4",
+  "incidence_orders": {
+    "1": {
+      "multiplicity_assignments": 18,
+      "types": 3
+    },
+    "2": {
+      "multiplicity_assignments": 88,
+      "types": 12
+    },
+    "3": {
+      "multiplicity_assignments": 270,
+      "types": 20
+    },
+    "4": {
+      "multiplicity_assignments": 648,
+      "types": 28
+    },
+    "5": {
+      "multiplicity_assignments": 1330,
+      "types": 36
+    },
+    "6": {
+      "multiplicity_assignments": 2448,
+      "types": 44
+    },
+    "7": {
+      "multiplicity_assignments": 4158,
+      "types": 52
+    },
+    "8": {
+      "multiplicity_assignments": 6640,
+      "types": 60
+    }
+  },
+  "not_checked": [
+    "The analytic proof of any imported theorem.",
+    "All moment orders by enumeration.",
+    "Any full arithmetic moment estimate.",
+    "Any zero-free region or RH."
+  ],
+  "prior_PR926_signed_comparison": {
+    "composition_fixture_total_D_exponent": "19/10",
+    "cubic_fixture_axis": "13/40",
+    "cubic_fixture_total_D_exponent": "107/60",
+    "scope": "Complete structured signed blocks, not tuplewise absolute accounting."
+  },
+  "rational_fixture": {
+    "column_balance": "1/1",
+    "new_completion_excess": "1/100",
+    "new_wu_excess": "-37/12800",
+    "old_wu_excess": "19/512",
+    "rational_radical": "54/25"
+  },
+  "rational_low_types": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      2
+    ]
+  ],
+  "rational_m3_subconvex_exponent": "-281/256",
+  "scope": "Exact rational algebra and finite incidence diagnostics only.",
+  "status": "PASS"
+}
