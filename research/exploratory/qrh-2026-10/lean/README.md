@@ -7,7 +7,9 @@ Status: EXPLORATORY formal corollaries of the imported 7/8 theorem. All three fi
   notices of the patched packages, filtered from that log). `#print axioms` shows only
   [propext, Classical.choice, Quot.sound] (../reviews/results/lean_corollary_axioms.log).
   Comparator (../reviews/LEAN_BUILD_ATTEMPT.md, Addendum C): SiegelFromSevenEighths ACCEPTED
-  against the upstream SiegelZeros challenge; for the other files see the table there. No RH claim.
+  against the upstream SiegelZeros challenge; ZetaZeroStrip ACCEPTED against the wave's
+  Mathlib-only challenge comparator/QRHWaveStrip.lean. DirichletZeroStrip has no comparator
+  challenge (axioms only). No RH claim.
 Scope: ZetaZeroStrip.lean (nontrivial zeros of Mathlib's riemannZeta lie in 1/8 <= Re s <= 7/8);
   DirichletZeroStrip.lean (the same strip for L(s, chi), chi primitive and nontrivial);
   SiegelFromSevenEighths.lean (both statements of the imported Siegel-zero comparator challenge,

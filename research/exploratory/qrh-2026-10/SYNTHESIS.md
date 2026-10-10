@@ -87,7 +87,8 @@ integration verdict.
          matched by name only or not found.
      * Two short formal corollaries ([lean/](lean/README.md)):
        * every nontrivial zero of `ζ` lies in `1/8 ≤ Re s ≤ 7/8`, stated in the shape of
-         Mathlib's `RiemannHypothesis`;
+         Mathlib's `RiemannHypothesis` (comparator accepts it against a Mathlib-only challenge
+         written in this wave);
        * the Oct 1 Siegel-zero challenge statement is derived in Lean, with `c = (log 3)/8`, from
          the imported 7/8 Dirichlet theorem. Comparator accepts it against the upstream Oct 1
          challenge, and the constant is explicit (LEAN_BUILD_ATTEMPT Addendum C; lean/README).
