@@ -1,0 +1,14 @@
+{
+  "challenge_module": "ComparatorChallenges.QRHWaveDirichletStrip",
+  "solution_module": "OAI.QRHWave.DirichletZeroStrip",
+  "theorem_names": [
+    "QRHWave.LFunction_quasi_critical_strip"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

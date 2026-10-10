@@ -1,0 +1,14 @@
+{
+  "challenge_module": "ComparatorChallenges.QRHWaveStrip",
+  "solution_module": "OAI.QRHWave.ZetaZeroStrip",
+  "theorem_names": [
+    "QRHWave.quasi_critical_strip"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}
