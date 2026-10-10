@@ -79,6 +79,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The coupled-reflection packet](standalone/2026-10-10-sextic-critical-core/README.md) retains the outer divisor sum through theta reflection, proves stronger bounds for specified reflected components, and gives an exact reunited Ramanujan Euler product with its angular characters, moving exclusions and polar divisor. It also controls a further incidence portion of every fixed higher moment and combines adjacent arithmetic work into a polynomial positivity-horizon criterion. Exact source snapshots, local arithmetic diagnostics and scoped independent AI-agent reviews are included. The full fourth moment, \(17/24\), the unbounded hierarchy and any further zero-free improvement remain open.
 
+## Joint research: conductor sectors and the A2/theta interface
+
+[The joint research packet](standalone/2026-10-10-sextic-joint-core/README.md) combines the two complementary October 10 branches. It proves a sharper remaining signed sector for every fixed higher moment, an exact finite A2-to-theta composition with logarithmic norm cost, and a uniform classical bound for the resulting mixed families. A source-level audit distinguishes the cancelled signed Poisson diagonal from the positive large-value Gram diagonal. The stronger signed cancellation, full fourth moment, \(17/24\), and further zero-free improvement remain open. Prior proof packets stay frozen.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.
