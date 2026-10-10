@@ -413,10 +413,24 @@ G = "7 Prop 19.2 case cover"
 r_pl = rstar - s * (rstar - (t - R(1, 2)))
 m_pl = (t - r_pl) + v * (R(1, 2) - (t - r_pl))
 marg_pl = (Rshort + Dl / 4) - C_pl(m_pl, zP(m_pl))
-gate(G, "C1", "15363-15418", "plain branch: C_pl(m, z_P(m)) <= R_short(t) + Delta/4 for all delta<=5/6, x, t, Delta, "
-     "r in [t-1/2, r_*], m in [t-r, 1/2]  [times D_x(9/2+12D)]",
-     sp.expand(sp.cancel(marg_pl * Dx * (R(9, 2) + 12 * Dl))), [de, x, t, Dl, s, v],
-     [(0, F(5, 6)), (0, F(1, 2)), (1, F(3, 2)), (0, F(1, 24)), (0, 1), (0, 1)])
+ident(G, "C1a", "15363-15418", "plain branch decomposition (derived here): R_short(t) + Delta/4 - C_pl(m, z_P(m)) = "
+      "delta(2-8x/9)[(r_* - r) + (m - (t-r))] + Delta*K(m), K = 1/4 - 48 q(1-2m)/(9(9/2+12 Delta))",
+      Rshort + Dl / 4 - C_pl(m, zP(m)), de * (2 - R(8, 9) * x) * ((rstar - r) + (m - (t - r))) + Dl * lossfac)
+rec(G, "C1", "15363-15418", "plain branch: C_pl(m, z_P(m)) <= R_short(t) + Delta/4 on r in [t-1/2, r_*], m in [t-r, 1/2]: "
+    "each term of C1a is >= 0 (r <= r_*, m >= t-r by the branch; 2-8x/9 >= 14/9 by B2e; K >= 83/972 by K1 since "
+    "m >= t - r_* >= 1/3 by B2c)",
+    all(o["ok"] for o in OUT if o["id"] in ("C1a", "B2e", "K1", "B2c")))
+# Supplementary direct attempt (no decomposition), time-boxed; informational only
+r_pl = rstar - s * (rstar - (t - R(1, 2)))
+m_pl = (t - r_pl) + v * (R(1, 2) - (t - r_pl))
+marg_pl = (Rshort + Dl / 4) - C_pl(m_pl, zP(m_pl))
+_rd = certify_ge(sp.expand(sp.cancel(marg_pl * Dx * (R(9, 2) + 12 * Dl))), [de, x, t, Dl, s, v],
+                 [(0, F(5, 6)), (0, F(1, 2)), (1, F(3, 2)), (0, F(1, 24)), (0, 1), (0, 1)], budget=60000, seconds=60)
+DIRECT_C1 = dict(ok=_rd["ok"], boxes=_rd["boxes"], undecided=_rd.get("undecided", False), witness=_rd.get("witness"))
+print("INFO [C1-direct] plain branch by direct 6-variable B&B (not a gate):", DIRECT_C1, flush=True)
+ident(G, "C2a", "15364-15418", "inverse branch: R_short(t) - A_I(r) = delta(1-x)(r - r_*)", Rshort - AI(r), de * (1 - x) * (r - rstar))
+ident(G, "C3a", "15297-15311", "long branch: L(t) - (1-alpha+(alpha-delta)r) = (alpha-delta)(t-r)",
+      Lt - (1 - al + (al - de) * r), (al - de) * (t - r))
 r_in = rstar + s * (1 - rstar)
 gate(G, "C2", "15364-15418", "inverse branch: A_I(r) <= R_short(t) for r in [r_*, 1]  [times D_x]",
      sp.expand(sp.cancel((Rshort - AI(r_in)) * Dx)), [de, x, t, s],
@@ -547,6 +561,7 @@ ctrls = [o for o in OUT if o["control"]]
 summary = dict(object_sha256=EXPECTED_SHA, n_gates=len(gates), n_gates_pass=sum(o["ok"] for o in gates),
                n_controls=len(ctrls), n_controls_ok=sum(o["ok"] for o in ctrls),
                arithmetic="EXACT: sympy over Q for identities; Fraction branch-and-bound for inequalities",
+               supplementary_direct_C1=DIRECT_C1,
                checks=OUT)
 with open(os.path.join(HERE, "sep30_junction_check_output.json"), "w") as fh:
     json.dump(summary, fh, indent=1)
