@@ -73,7 +73,7 @@ check("A7 Lemma 17.1 at z=0: r<=m-c1 => 2r<=3m-c2 whenever m>=c2-2c1 (2r-3m+c2 =
       zero((2 * r - 3 * m + c2) - (2 * (r - m + c1) - (m - c2 + 2 * c1))))
 
 # ---------------------------------------------------------------------------------------------
-print("== B. local tables of the first Poisson transform (exhaustive)  [10201-10350, 11291-11300]")
+print("== B. local tables of the first Poisson transform (exhaustive)  [10155-10340, 11280-11290]")
 tab = {(0, 0, 0): (0, 0), (0, 1, 0): (1, 0), (0, 0, 1): (5, 0), (0, 1, 1): (0, 4),
        (1, 0, 0): (3, 4), (1, 1, 0): (4, 4), (1, 0, 1): (2, 4), (1, 1, 1): (3, 4)}   # (pi,a1,a2): (t, exp)
 bad_t, bad_e = [], []
@@ -84,8 +84,8 @@ for (pi, a1, a2), (tp, ex) in tab.items():
     e2 = (4 * a2 + (1 - tp if tp else 0) + pi * (a1 + a2)) % 6
     if not (e1 == e2 == ex):
         bad_e.append((pi, a1, a2, e1, e2, ex))
-check("B1 t_p = a1-a2+3pi mod 6 column of the table   [10214]", not bad_t)
-check("B2 exponent 4a_i + 1_{t!=0}(1 +- t) + pi(a1+a2) mod 6 equal on both sides = table   [10279-10297]",
+check("B1 t_p = a1-a2+3pi mod 6 column of the table   [10158-10162, 10263-10272]", not bad_t)
+check("B2 exponent 4a_i + 1_{t!=0}(1 +- t) + pi(a1+a2) mod 6 equal on both sides = table   [10252-10272]",
       not bad_e)
 # exhaustive over valuations v1,v2 of b1,b2 at p (p | B = rad(b1 b2)) and a_ip in {0,1}
 fails = {k: [] for k in ["loc", "rdiff", "xi", "q0", "recon", "cube", "sqf"]}
@@ -121,14 +121,14 @@ for v1, v2 in itertools.product(range(0, 13), repeat=2):
             fails["cube"].append((v1, v2, a1, a2))
         if s_ + j2 > 1:                                # J = s J2 squarefree: s, J2 disjoint
             fails["sqf"].append((v1, v2))
-check("B3 local identity R - A1 - A2 + E = s - 2 j2 (per prime, all v1,v2<=12)   [10357-10358]", not fails["loc"])
-check("B4 R = s + r_diff   [10599]", not fails["rdiff"])
-check("B5 xi(n) = chi_n(J)^4 1_{(n,rad q0)=1}: exponent-4 primes = supp(sJ2), exponent-0 primes | q0  [10331-10336]",
+check("B3 local identity R - A1 - A2 + E = s - 2 j2 (per prime, all v1,v2<=12)   [10331-10334]", not fails["loc"])
+check("B4 R = s + r_diff   [10618-10620]", not fails["rdiff"])
+check("B5 xi(n) = chi_n(J)^4 1_{(n,rad q0)=1}: exponent-4 primes = supp(sJ2), exponent-0 primes | q0  [10316-10323]",
       not fails["xi"])
-check("B6 q0 integral (J2 | q)   [10314-10316]", not fails["q0"])
+check("B6 q0 integral (J2 | q)   [10295-10300]", not fails["q0"])
 check("B7 t_p = 0 => p in J2 u supp(q0)  (eq:poisson-divisor-reconstruction)   [11277-11288]", not fails["recon"])
-check("B8 c = l_pair - s/2 - j2 and 4 l_pair - 2s + j2 = 4c + 5 j2   [10325-10329]", not fails["cube"])
-check("B9 s, J2 disjoint (J squarefree)   [10317-10318]", not fails["sqf"])
+check("B8 c = l_pair - s/2 - j2 and 4 l_pair - 2s + j2 = 4c + 5 j2   [10306-10312]", not fails["cube"])
+check("B9 s, J2 disjoint (J squarefree)   [10297-10300]", not fails["sqf"])
 # control: the alternative (wrong) parity rule t_p = a1 - a2 + 2 pi must break B2
 bad = [k for k in tab if ((4 * k[1] + (1 + (k[1] - k[2] + 2 * k[0]) % 6 if (k[1] - k[2] + 2 * k[0]) % 6 else 0)
                            + k[0] * (k[1] + k[2])) % 6) != tab[k][1]]
@@ -147,48 +147,48 @@ hn1, hn2, hA1, hA2, hB, hR, hd, ht, hx1, hx2, hb1, hb2, hj, hf, hs, hj2, hc = S(
     "hn1 hn2 hA1 hA2 hB hR hd ht hx1 hx2 hb1 hb2 hj hf hs hj2 hc", real=True)
 hL1 = hn1 + hn2 - hA1 - hA2 - 2 * hB + hR            # (first-poisson-lengths) [10226]
 hk = lambda hn, hA: Mm - rr - 2 * ell - Vv - hd - hn + hA + hB - hR / 2
-check("C1 prefactor split: -r-2l-V+M-d-L1/2 = (k1+k2)/2 (actual)   [10419-10424]",
+check("C1 prefactor split: -r-2l-V+M-d-L1/2 = (k1+k2)/2 (actual)   [10418-10424]",
       zero((-rr - 2 * ell - Vv + Mm - hd - hL1 / 2) - (hk(hn1, hA1) + hk(hn2, hA2)) / 2))
 # n_i = A_i C t' x_i  =>  L1/2 = t + (x1+x2)/2 + R/2 ;  root (inverse-first-root-kernel)
 sub_n = {hn1: hA1 + hB + ht + hx1, hn2: hA2 + hB + ht + hx2}
-check("C2 actual root: Z^{-L1/2} = 1/(q_t sqrt(q_x1 q_x2 q_R))   [10433-10437]",
+check("C2 actual root: Z^{-L1/2} = 1/(q_t sqrt(q_x1 q_x2 q_R))   [10444-10448]",
       zero(hL1.subs(sub_n) / 2 - (ht + (hx1 + hx2) / 2 + hR / 2)))
-check("C3 center root: -r-2l-V+M-d-R/2-t-(s1+s2)/2 = (kappa_1+kappa_2)/2   [10433-10437]",
+check("C3 center root: -r-2l-V+M-d-R/2-t-(s1+s2)/2 = (kappa_1+kappa_2)/2   [10444-10448]",
       zero((-rr - 2 * ell - Vv + Mm - dlt - R_ / 2 - t - (s1 + s2) / 2) - (kap(A1) + kap(A2)) / 2))
 hh_ = sp.Symbol("hh")
-check("C4 kernel: M + h - d - L1 = M + h - d - R - 2t - x1 - x2 (actual), i.e. A_ker1 = Z^{M+h1-d-R-2t-s1-s2}   [10438-10442]",
+check("C4 kernel: M + h - d - L1 = M + h - d - R - 2t - x1 - x2 (actual), i.e. A_ker1 = Z^{M+h1-d-R-2t-s1-s2}   [10449-10453]",
       zero((Mm + hh_ - hd - hL1.subs(sub_n)) - (Mm + hh_ - hd - hR - 2 * ht - hx1 - hx2)))
 # y-bound derivation (10360-10368): y = h f^2 E,  h <= L1 + d - M + tau,  E from local identity
 hE = hs - 2 * hj2 - hR + hA1 + hA2
 ybound1 = hL1 + hd - Mm + tau + 2 * hf + hE
 disp1 = hn1 + hn2 - 2 * hB - Mm + hs - 2 * hj2 + hd + 2 * hf + tau
-check("C5 y <= n1+n2-2B-M+s-2j2+d+2f+tau  [10363-10365]", zero(ybound1 - disp1))
+check("C5 y <= n1+n2-2B-M+s-2j2+d+2f+tau  [10336-10343]", zero(ybound1 - disp1))
 lpair = hc + hj2 + hs / 2
 disp2 = hn1 + hn2 - 2 * hB - Mm + 4 * lpair - (hs + hj2) + hd + 2 * hf + tau
-check("C6 second line - first line = 4c + 5j2 >= 0  [10366, (inverse-cube-actual)]",
+check("C6 second line - first line = 4c + 5j2 >= 0  [10341-10343, (inverse-cube-actual) 10308]",
       zero(disp2 - disp1 - (4 * hc + 5 * hj2)))
 Hc = 2 * rr - 2 * B - Mm + 4 * ell + 2 * Vv + dlt - j     # (enlarged-first-frequency) [10372]
 err_Hc = (hn1 - rr) + (hn2 - rr) - 2 * (hB - B) + 2 * (hb1 - ell) + 2 * (hb2 - ell) - (hj - j) + (hd - dlt) + 2 * (hf - Vv)
 disp2b = hn1 + hn2 - 2 * hB - Mm + 2 * hb1 + 2 * hb2 - hj + hd + 2 * hf + tau
-check("C7 (second line) - tau - H_c == displayed error expression   [10376-10380]", zero(disp2b - tau - Hc - err_Hc))
+check("C7 (second line) - tau - H_c == displayed error expression   [10351-10360]", zero(disp2b - tau - Hc - err_Hc))
 # second Poisson
 Mc = 2 * (s_i - g) - Hc + dlt + 2 * thta
 sI = rr - Ai - B - t
-check("C8 M_c = 2(s_i-g) - H_c + d + 2theta = M-4l-2A_i-2t-2g+2theta-2V+j   (second-poisson-lengths) [10719-10724]",
+check("C8 M_c = 2(s_i-g) - H_c + d + 2theta = M-4l-2A_i-2t-2g+2theta-2V+j   (second-poisson-lengths) [10706-10711]",
       zero(Mc.subs(s_i, sI) - (Mm - 4 * ell - 2 * Ai - 2 * t - 2 * g + 2 * thta - 2 * Vv + j)))
 kapI = kap(Ai)
-check("C9 principal exponent kappa_i+H_c+s_i+B+t+l+R/2 = F-B-j   (second-principal-exponent) [10771-10774]",
+check("C9 principal exponent kappa_i+H_c+s_i+B+t+l+R/2 = F-B-j   (second-principal-exponent) [10755-10758]",
       zero(kapI + Hc + sI + B + t + ell + R_ / 2 - (F - B - j)))
 lam_c = Hc - thta - (sI - g)
 Nc = rr - Ai - B - t - g - v
 Vc = B + thta + v + j
 Fc = Nc + Vc
 Huse = Hc + 12 * eta + tau
-check("C10 second root: H_use - theta - v - N_c = lambda_c + 12eta + tau  (N_c = s_i-g-v)  [11132-11143]",
+check("C10 second root: H_use - theta - v - N_c = lambda_c + 12eta + tau  (N_c = s_i-g-v)  [11135-11146]",
       zero((Huse - thta - v - Nc) - (lam_c + 12 * eta + tau)))
-check("C11 N_c = s_i - g - v   [11139]", zero(Nc - (sI - g - v)))
+check("C11 N_c = s_i - g - v   [11145]", zero(Nc - (sI - g - v)))
 Dc = ell + Ai + t + g - thta + Vv
-check("C12 F_c = F - D_c - 2l + j   (canonical-transition) [11032-11037]", zero(Fc - (F - Dc - 2 * ell + j)))
+check("C12 F_c = F - D_c - 2l + j   (canonical-transition) [11051-11057]", zero(Fc - (F - Dc - 2 * ell + j)))
 Mc_ = Mc.subs(s_i, sI)
 check("C13 M_c = M - 2D_c - 2l + j", zero(Mc_ - (Mm - 2 * Dc - 2 * ell + j)))
 check("C14 F_c - M_c = F - M + D_c", zero(Fc - Mc_ - (F - Mm + Dc)))
@@ -197,9 +197,9 @@ check("C15 4F_c - 3M_c = 4F - 3M + 2(A_i+t+g-theta+V) + j",
 Cc = ell + R_ / 2 - j + t + g - thta
 check("C16 ENERGY: kappa_i + lambda_c + C_c + 2F_c = F = r+3l+V   (canonical-prefactor) [11404-11410]",
       zero(kapI + lam_c + Cc + 2 * Fc - F))
-check("C17 fixed-cube-count: c = l_pair + R/2 - j - r_diff/2 (with R = s + r_diff, j = s + j2)  [10601-10604]",
+check("C17 fixed-cube-count: c = l_pair + R/2 - j - r_diff/2 (with R = s + r_diff, j = s + j2)  [10623-10626]",
       zero((lpair + (hs + S("rd")) / 2 - (hs + hj2) - S("rd") / 2) - hc))
-check("C18 M - M_ch (M_ch = M_c + eta) = 2D_c + 2l - j - eta   (inverse-row-decrease) [11098-11100]",
+check("C18 M - M_ch (M_ch = M_c + eta) = 2D_c + 2l - j - eta   (inverse-row-decrease) [11103-11105]",
       zero(Mm - (Mc_ + eta) - (2 * Dc + 2 * ell - j - eta)))
 # initialization (Lemma 17.1)
 z_, G_ = S("z G_", real=True)
@@ -210,14 +210,14 @@ check("C19 init: Z^{-(r+z)/2} = Z^{-G} Z^{-D'/2} with D' = r+z-2G   [11622-11630
 kap_init = m - 2 * Dp + P1
 Nci, Vci = Dp - B - v, thta + v
 Fci = Nci + Vci
-check("C20 init: F_c = D' - P1 with P1 = B - theta   (initial-canonical-lengths) [11935-11939]",
+check("C20 init: F_c = D' - P1 with P1 = B - theta   (initial-canonical-lengths) [11909-11913]",
       zero(Fci.subs(B, P1 + thta) - (Dp - P1)))
-check("C21 init root: -D'+m-theta-v-N_c = kappa_c^init (=m-2D'+B-theta)   (initial-root-kernel) [11982-11992]",
+check("C21 init root: -D'+m-theta-v-N_c = kappa_c^init (=m-2D'+B-theta)   (initial-root-kernel) [11973-11983]",
       zero((-Dp + m - thta - v - Nci) - (m - 2 * Dp + B - thta)))
 check("C22 init kernel: m+H-theta-2v-2N_c = m+H-theta-2(D'-B)", zero((m + H_ - thta - 2 * v - 2 * Nci) - (m + H_ - thta - 2 * (Dp - B))))
-check("C23 init energy: kappa_c + P1 + 2F_c = m   [12243-12246]", zero(kap_init + P1 + 2 * (Dp - P1) - m))
+check("C23 init energy: kappa_c + P1 + 2F_c = m   [12238-12244]", zero(kap_init + P1 + 2 * (Dp - P1) - m))
 Mci = 2 * Dp - m - 2 * P1
-check("C24 init margin 1: F_c - M_c - (P1+G) - z0 = m - r - 2z + 2G   [12183-12187]",
+check("C24 init margin 1: F_c - M_c - (P1+G) - z0 = m - r - 2z + 2G   [12207-12213]",
       zero(((Dp - P1) - Mci - (P1 + G_) - z0i).subs(Dp, Dpi) - (m - r - 2 * z_ + 2 * G_)))
 check("C25 init margin 2: 4F_c - 3M_c - 6z0 = 3m - 2r - 8z + 10G + 2P1",
       zero((4 * (Dp - P1) - 3 * Mci - 6 * z0i).subs(Dp, Dpi) - (3 * m - 2 * r - 8 * z_ + 10 * G_ + 2 * P1)))
@@ -239,29 +239,29 @@ def posmax(coeffs):
     return sum(abs(Fr(c)) for c in coeffs)
 
 
-check("D1 H_use - H_c: errors (n1,n2,B,b1,b2,j,d,f) weights (1,1,-2,2,2,-1,1,2) -> 12 eta   [10381-10383]",
+check("D1 H_use - H_c: errors (n1,n2,B,b1,b2,j,d,f) weights (1,1,-2,2,2,-1,1,2) -> 12 eta   [10360-10367]",
       posmax([1, 1, -2, 2, 2, -1, 1, 2]) == 12)
-check("D2 first prefactor kappa-hat <= kappa + 9/2 eta: weights (1,1,1,1,1/2)   [10426-10429]",
+check("D2 first prefactor kappa-hat <= kappa + 9/2 eta: weights (1,1,1,1,1/2)   [10425-10431]",
       posmax([1, 1, 1, 1, Fr(1, 2)]) == Fr(9, 2))
-check("D3 L2 conductor |L2 - 2(s_i-g)| <= 10 eta (x1,x2 at 4 eta; g weight 2)   [10691-10695]",
+check("D3 L2 conductor |L2 - 2(s_i-g)| <= 10 eta (x1,x2 at 4 eta; g weight 2)   [10690-10697]",
       posmax([4, 4, 2]) == 10)
-check("D4 k_new <= M_c + eta: 10 (conductor) + 1 (d_k) + 2 (two d_2) = 13 = 12 + 1   [10703-10727]",
+check("D4 k_new <= M_c + eta: 10 (conductor) + 1 (d_k) + 2 (two d_2) = 13 = 12 + 1   [10697-10717]",
       posmax([4, 4, 2, 1, 2]) == 13 and 13 - 12 == 1)
-check("D5 lambda-hat <= lambda_c + 18 eta + tau: 12 + 1 + 4 + 1   [10751-10756]", 12 + 1 + 4 + 1 == 18)
-check("D6 principal count: 9/2 + 12 + 4 + 1 + 1 + 7/2 = 26   [10775-10781]",
+check("D5 lambda-hat <= lambda_c + 18 eta + tau: 12 + 1 + 4 + 1   [10737-10748]", 12 + 1 + 4 + 1 == 18)
+check("D6 principal count: 9/2 + 12 + 4 + 1 + 1 + 7/2 = 26   [10759-10770]",
       Fr(9, 2) + 12 + 4 + 1 + 1 + Fr(7, 2) == 26)
-check("D7 combined (q0,J) count: (l+R/2-j+5/2) + (j+1) = l+R/2+7/2   [10605-10609]", Fr(5, 2) + 1 == Fr(7, 2))
-check("D8 fixed-cube-count slack 5/2: l_pair 1 + R/2 1/2 + j 1   [10603-10604]", posmax([1, Fr(1, 2), 1]) == Fr(5, 2))
-check("D9 child column 6 eta (n_i,A_i,C,t',g',v'), label 4 eta (J,C,d2,v')   [11005-11008]",
+check("D7 combined (q0,J) count: (l+R/2-j+5/2) + (j+1) = l+R/2+7/2   [10626-10630]", Fr(5, 2) + 1 == Fr(7, 2))
+check("D8 fixed-cube-count slack 5/2: l_pair 1 + R/2 1/2 + j 1   [10623-10626]", posmax([1, Fr(1, 2), 1]) == Fr(5, 2))
+check("D9 child column 6 eta (n_i,A_i,C,t',g',v'), label 4 eta (J,C,d2,v')   [10961-10965]",
       posmax([1] * 6) == 6 and posmax([1] * 4) == 4)
-check("D10 new puncture 4 eta: c 1 + t 1 + (g - theta) 2   [11078-11084]", posmax([1, 1, 1, 1]) == 4)
-check("D11 step loss: 9/2 + 18 + 11/2 = 28 ; 28 + 2*6 = 40   [11433-11441]",
+check("D10 new puncture 4 eta: c 1 + t 1 + (g - theta) 2   [11079-11086]", posmax([1, 1, 1, 1]) == 4)
+check("D11 step loss: 9/2 + 18 + 11/2 = 28 ; 28 + 2*6 = 40   [11436-11444]",
       Fr(9, 2) + 18 + Fr(11, 2) == 28 and 28 + 2 * 6 == 40)
-check("D12 fixed count 11/2 eta: q0 5/2 + t' 1 + r_g 2   [11336-11345]", Fr(5, 2) + 1 + 2 == Fr(11, 2))
+check("D12 fixed count 11/2 eta: q0 5/2 + t' 1 + r_g 2   [11336-11346]", Fr(5, 2) + 1 + 2 == Fr(11, 2))
 check("D13 init: kappa 3 eta (theta,c_i,B); L_init 4 eta; row 4+2 = 6 eta; child 3 eta / 2 eta; Q_init 3 eta",
       posmax([1, 1, 1]) == 3 and posmax([1, 1, 2]) == 4 and 4 + 2 == 6)
-check("D14 init margin-2 loss 22 = 4 (2P1 >= -4eta) + 18 (3 x 6eta row enclosure)   [12194-12195]", 4 + 3 * 6 == 22)
-check("D15 init energy: 3 + 2 + 2*3 = 11   [12247-12252]", 3 + 2 + 2 * 3 == 11)
+check("D14 init margin-2 loss 22 = 4 (2P1 >= -4eta) + 18 (3 x 6eta row enclosure)   [12215-12224]", 4 + 3 * 6 == 22)
+check("D15 init energy: 3 + 2 + 2*3 = 11   [12249-12256]", 3 + 2 + 2 * 3 == 11)
 
 # ---------------------------------------------------------------------------------------------
 print("== E. inequalities: exact Farkas certificates + failing controls")
@@ -325,13 +325,13 @@ base = [ell, Ai, t, Vv, j, thta, g, eta,                          # nonnegative 
         Qp + Dc_ + 4 * eta - Qn,                                 # (inverse-new-puncture), last line
         Fp - Mp - Qp - z0p - c, 4 * Fp - 3 * Mp - 6 * z0p - c,   # parent invariants
         ell + Vv - d, d / 16 - eta]                              # remaining block; eta <= d/16
-farkas("E1 child margin 1: F_ch-M_ch-Q_new-z0 >= c - 5eta   (inverse-child-margins) [11090-11094]",
+farkas("E1 child margin 1: F_ch-M_ch-Q_new-z0 >= c - 5eta   (inverse-child-margins) [11092-11098]",
        base, Fch - Mch - Qn - z0p - c + 5 * eta, vs)
 farkas("E1' child margin 1 (with delta_N): >= c + delta_N - 5eta", base, Fch - Mch - Qn - z0p - c - dN + 5 * eta, vs)
 farkas("E2 child margin 2: 4F_ch-3M_ch-6z0 >= c - 7eta", base, 4 * Fch - 3 * Mch - 6 * z0p - c + 7 * eta, vs)
 farkas("E2' child margin 2 (with 4 delta_N): >= c + 4delta_N - 7eta", base,
        4 * Fch - 3 * Mch - 6 * z0p - c - 4 * dN + 7 * eta, vs)
-farkas("E3 row decrease: M - M_ch >= 2(l+V) - 8eta   (inverse-row-decrease) [11098-11100]",
+farkas("E3 row decrease: M - M_ch >= 2(l+V) - 8eta   (inverse-row-decrease) [11103-11105]",
        base, Mp - Mch - 2 * (ell + Vv) + 8 * eta, vs)
 farkas("E4 row decrease >= 3d/2 (eta <= d/16, l+V >= d)", base, Mp - Mch - sp.Rational(3, 2) * d, vs)
 farkas("E5 F_c <= F - l - V + 5eta", base, Fp - ell - Vv + 5 * eta - Fc_, vs)
@@ -351,7 +351,7 @@ hcq, htq, hgq, hthq = S("hc ht hg hth", real=True)
 vsq = [hcq, htq, hgq, hthq, ell, t, g, thta, eta, Ai, Vv]
 hq = [ell + eta - hcq, t + eta - htq, hgq - g - eta, g + eta - hgq, hthq - thta + eta, thta + eta - hthq,
       Ai, Vv, eta]
-farkas("E8 Q_new - Q <= c+t+g-theta (actual) <= l+t+g-theta+4eta <= D_c+4eta   [11078-11084]",
+farkas("E8 Q_new - Q <= c+t+g-theta (actual) <= l+t+g-theta+4eta <= D_c+4eta   [11079-11086]",
        hq, (ell + Ai + t + g - thta + Vv + 4 * eta) - (hcq + htq + hgq - hthq), vsq)
 control("E8 with 3eta", hq, (ell + Ai + t + g - thta + Vv + 3 * eta) - (hcq + htq + hgq - hthq), vsq)
 # center inequalities from actual divisibility (11063-11072)
@@ -385,12 +385,12 @@ Nstar = Nn - 3 * hh
 ht_ = [2 * Mp - O + Qp + Vv - Nstar + 2 * za + eta - TSB,            # (inverse-terminal-width), second
        Fn - Mp - Qp - z0p - c, 4 * Fn - 3 * Mp - 6 * z0p - c,         # invariants
        d - Vv, d + eta - hh, Vv, hh, za, z0p - za, O, Qp, Mp, eta, tref, pref]
-farkas("E15 (old-eq:4.9) TSB <= M - O + 2z_a - z0 - c + 5d + 4eta   [9887-9893]",
+farkas("E15 (old-eq:4.9) TSB <= M - O + 2z_a - z0 - c + 5d + 4eta   [9884-9895]",
        ht_, Mp - O + 2 * za - z0p - c + 5 * d + 4 * eta - TSB, vst)
 control("E15 with 5d + 3eta", ht_, Mp - O + 2 * za - z0p - c + 5 * d + 3 * eta - TSB, vst)
-farkas("E16 (old-eq:4.10) O/2 + TSB + 5eta/3 + tref <= F - 2c + 5d + 17eta/3 + tref   [9906-9910]",
+farkas("E16 (old-eq:4.10) O/2 + TSB + 5eta/3 + tref <= F - 2c + 5d + 17eta/3 + tref   [9908-9912]",
        ht_, (Fn - 2 * c + 5 * d + sp.Rational(17, 3) * eta + tref) - (O / 2 + TSB + sp.Rational(5, 3) * eta + tref), vst)
-farkas("E17 (old-eq:4.11) O/2 + TSB/2 + z_a + 7eta/6 + tref/2 <= F - M/4 - 3c/4 + 5d/2 + 19eta/6 + tref/2   [9911-9920]",
+farkas("E17 (old-eq:4.11) O/2 + TSB/2 + z_a + 7eta/6 + tref/2 <= F - M/4 - 3c/4 + 5d/2 + 19eta/6 + tref/2   [9915-9923]",
        ht_, (Fn - Mp / 4 - sp.Rational(3, 4) * c + sp.Rational(5, 2) * d + sp.Rational(19, 6) * eta + tref / 2)
        - (O / 2 + TSB / 2 + za + sp.Rational(7, 6) * eta + tref / 2), vst)
 farkas("E18 row branch: M + z_a + 5eta/3 <= F - c + 5eta/3", ht_, (Fn - c) - (Mp + za), vst)
@@ -422,7 +422,7 @@ Fi, Mi = Fci_ + di, Mci_ + 6 * eta + ti
 vsi = [mm, rr_, zz, GG, P1s, cc1, cc2, eta, ti, Qi, di]
 hi = [mm - cc1 - rr_ - 2 * zz, 3 * mm - cc2 - 2 * rr_ - 8 * zz,   # marked premises
       GG, z0x, P1s + 2 * eta, P1s + GG + 3 * eta - Qi, di, 3 * eta - di, eta, ti]
-farkas("E22 init margin 1 >= c1 + delta - 9eta - tau_init   (inverse-initial-margins) [12188-12195]",
+farkas("E22 init margin 1 >= c1 + delta - 9eta - tau_init   (inverse-initial-margins) [12215-12222]",
        hi, Fi - Mi - Qi - z0x - (cc1 + di - 9 * eta - ti), vsi)
 farkas("E23 init margin 2 >= c2 + 4delta - 22eta - 3tau_init", hi, 4 * Fi - 3 * Mi - 6 * z0x - (cc2 + 4 * di - 22 * eta - 3 * ti), vsi)
 control("E22 with 8eta", hi, Fi - Mi - Qi - z0x - (cc1 + di - 8 * eta - ti), vsi)
