@@ -92,6 +92,10 @@ integration verdict.
    coefficient-specific mechanism of "GRH on average" type: a mechanism, not evidence.
 4. **Spin-offs that are not about RH.**
    * The 7/8 manuscript's Lemma 18.1 is itself a new Lindelöf-strength sextic fourth moment.
+     * A PROPOSED standalone packet is drafted ([proposed/SEXTIC_FOURTH_MOMENT/](proposed/SEXTIC_FOURTH_MOMENT/README.md)).
+     * Its zero-slack centred stage was re-read with fresh eyes
+       ([reviews/LEMMA18_THETA_ROW_REVIEW.md](reviews/LEMMA18_THETA_ROW_REVIEW.md)). No wrong step
+       was found, and the zero-slack point turns out not to use the lattice lemma at all.
    * Transferring its scheme gives a PROPOSED conditional route to the open **optimal cubic fourth
      moment** `Σ|L(1/2, χ_c)|⁴ ≪ X^{1+ε}`, against `X^{4/3}` in the literature
      ([proposed/CUBIC_FOURTH_MOMENT/](proposed/CUBIC_FOURTH_MOMENT/README.md)).
