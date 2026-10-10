@@ -78,6 +78,10 @@ integration verdict.
            ([reviews/PART1_FREE_ROUTE_REVIEW2.md](reviews/PART1_FREE_ROUTE_REVIEW2.md)). It finds
            no obstruction and makes four bookkeeping corrections (one loss bound; Lemma 17.6 stays;
            Remark 19.3 rated no better than Rp).
+         * Remark 19.3 is now written out as a labelled lemma with a full proof
+           ([proposed/PART1_FREE_7_8/](proposed/PART1_FREE_7_8/README.md); 43/43 exact gates,
+           14 controls). Its Lean counterpart is `no_slot_inverse_count`. The paper-level status
+           stays Rp, because it inherits Lemmas 17.1-17.2.
          * This is a new composition; it needs a review independent of this model family.
        * Of the 65 paper nodes: 14 have a spot-checked Lean counterpart, 8 are bypassed, and 43 are
          matched by name only or not found.

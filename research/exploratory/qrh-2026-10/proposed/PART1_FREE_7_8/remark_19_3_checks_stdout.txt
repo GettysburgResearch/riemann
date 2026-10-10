@@ -1,0 +1,58 @@
+T0    PASS   sha256 42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3
+T1    PASS   55/55 anchors at the cited lines; misses: []
+T2    PASS   numbers of 14 cited nodes recomputed from the TeX counters; mismatches: {}
+T3    PASS   lines in the Prop 19.2 proof with an inequality delta<=alpha (or delta<=5/6): [15303]; first = 15303 (Review 2 says 15303)
+T4    PASS   derivation 15248-15294: forbidden tokens []; lines with \alpha [15289] (expected only 15289, the identity (1+5r)/6-delta r = 1-alpha+(alpha-delta)r)
+T5    PASS   the Sobolev paragraph 15136-15170 and proof lines 15222-15247 (subdivision, marked/plain displays): forbidden tokens or alpha: []
+T6    PASS   Remark 19.3 (15448-15467): \label present=False; Delta/kappa present=False
+T7    PASS   Prop 19.2 statement hypothesis at 15188 (a hypothesis, not a use in the proof)
+T8    PASS   proof of Prop 19.2: lines with 1/24, Delta<=, kappa<=5/6 or 11/12: []
+A0    PASS   H/P = H/(H/U)^{1/6}: exponent k-(k-1)/6 = 1/6+5k/6; k=1 gives 1, k=(1+c)r gives (1+5(1+c)r)/6; 1/6+5k/6 is increasing in k, so the max commutes
+A1    PASS   (1+5r)/6 - delta r == 1-alpha+(alpha-delta)r identically in delta (no sign of alpha-delta used)
+A2    PASS   (1+5r)/6 - 1 = 5(r-1)/6, so e(r)=1 iff r<=1 and the two branches agree at r=1
+A3    PASS   15272-15274: identity (1+5(1+c)r)/6=(1+5r)/6+5cr/6; slack 5c(R0-r)/6>=0 and (R0-r)eps0>=0; exact sweep 4x3x2x25 points, violations 0
+A4    PASS   15277-15280: with the paper's c, eps0 the two extra terms are eps_m/2 (R0>=1) and eps_m(1+R0)/4 < eps_m/2 (R0<1); R0>=1: extra = eps_m/2; R0<1: extra = eps_m*(R0 + 1)/4
+A5    PASS   (3I+2)(1+T) - (1+(3I+1)T) = 3I+1+T >= 0
+A6    PASS   U^{e(r)+eps_m/2} / U^{delta r - eps_w} with eps_m=eps, eps_w=eps/2 gives exponent e(r)-delta r+eps
+A7    PASS   t<=3/2 so r <= 3/2 + o(1) < R0 = 2 for large U
+B1    PASS   r>=1: identity e-delta r-(1-delta) = (5/6-delta)(r-1); vertex max on delta in [5/6,1], r in [1,3] = 0 at {'delta': '5/6', 'r': '1'} (sign argument covers all r>=1)
+B2    PASS   r in [1-gamma,1): 1-delta r = 1-delta+delta(1-r); max of delta(1-r)-gamma over the box = 0 at {'delta': '5/6', 's': '0', 'gamma': '0'}
+B3    PASS   t - 1/2 = 1 at t = 3/2 (4529), so r >= 1 - c0 eps
+B4    PASS   Lean: tstar-1/2-76eps <= r and spike loss 2eps give 1-delta+78eps+eps_m
+B5    PASS   delta=1, r=1-76/1000: excess over 1-delta = 19/250
+B6    PASS   the O_A((log U)^2) subdivisions add a factor <= U^{eps} for large U (no arithmetic)
+C1    PASS   15729-15734: line 1 == line 2 with a=(1+delta)/2, h=13/16, l_y=23/48, ell=1/6, C0=-1/48 (difference 0)
+C2    PASS   E(d)-Delta = (-1/48-delta/16-Delta) + (q-delta/2)/6 + (13/16)lambda + (d-h)(33/50-delta/2+lambda) (difference 0)
+C3    PASS   S(1) = 4/25, S(5/6) = 73/300; S decreasing, so S in [4/25, 73/300]
+C4    PASS   bullet (i): max over delta in [5/6,1], x in [0,1/2], d in [0,h], lambda in [0,527/300] = 0 at {'delta': '5/6', 'x': '1/2', 'd': '13/16', 'lambda': '0'}
+C5    PASS   bullet (ii): E(d)-Delta <= bound + (73/300+lambda)zeta for d in [h,h+zeta]; max excess = 0 at {'delta': '5/6', 'x': '1/2', 's': '0', 'zeta': '0', 'lambda': '0'}
+C6    PASS   threshold lambda = 527/300 (Review 2 correction 1); max of (73/300+lambda)zeta-2zeta = 0
+C7    PASS   corners {('5/6', '0'): '-7/96', ('5/6', '1/8'): '-19/96', ('1', '0'): '-1/12', ('1', '1/8'): '-5/24'}
+C8    PASS   max of (-1/48-delta/16-Delta) - (-(51/64)Delta-7/96) = 0 at {'delta': '5/6', 'Delta': '0'}
+C9    PASS   15944-15945: C0+(3/4-h)delta = -1/48-delta/16; equality at q = delta/2
+C10   PASS   Lean sourceExponent - 3/16 == relativeExponent == paper E(d) (both lines); C(7/8) = 3/16
+C11   PASS   Lean loss<=1/32: slope in [0,2] (max(-slope)=-4/25, max(slope-2)=-4141/2400); 1/32 <= 527/300
+C12   PASS   Lean hshi <=> lambda <= delta/2 + 67/50; min over [5/6,1] minus 527/300 = 0 (attained at delta=5/6)
+C13   PASS   Lean high_bin_endpoint: lhs-rhs = -u/6-(13/16)w <= 0 (u = delta/2-q, w = 1-delta+loss-R); -u/6 - 13*w/16
+C14   PASS   dE/dR = d, so any R' <= 1-delta+lambda gives the same bound
+G1    PASS   P1F.1: e(r)-delta r <= 1-delta+gamma at 3198 exact points (delta in [5/6,1], gamma in [0,1/10], r in [1-gamma,3]); violations 0
+G2    PASS   P1F.2: both bullets and the 2zeta cap at 26460 exact points; violations 0
+L0    PASS   17/17 Lean files byte-identical to the git blobs at 31c706bb; mismatches []
+L1    PASS   46/46 declaration anchors at the cited file:line; misses []
+L2    PASS   closure of OAI.NumberTheory.DirichletL.Nonvanishing has 2924 OAI modules (0 imported OAI modules missing on disk); cited modules outside it: []
+L3    PASS   Moments fields used in the proof of high_count_from_raw_moments: ['inverse_raw']
+FC1   FIRES  delta=4/5, r=3/2: e(r)-delta r-(1-delta) = 1/60 > 0 (delta >= 5/6 is load-bearing)
+FC2   FIRES  t=1, r=1/2, delta=1: excess over 1-delta = 1/2 (the t=3/2 witness is load-bearing)
+FC3   FIRES  delta=2, gamma=1/10, r=9/10: delta(1-r)-gamma = 1/10 > 0 (delta <= 1 is where the r<1 branch absorbs delta*gamma into gamma)
+FC4   FIRES  lambda=528/300, delta=5/6, zeta=1/96: (73/300+lambda)zeta-2zeta = 1/28800 > 0
+FC5   FIRES  q=delta=5/6, R=1-delta, d=h: E(h) exceeds -1/48-delta/16 by 5/72 (Lemma 19.1's cap is used)
+FC6   FIRES  intermediate count R=76/75-2delta/3 at delta=1, d=1/2, q=delta/2: E(1/2) = 1/25 > 0 (high bins must use P1F.1 at every d)
+FC7   FIRES  Lemma 17.1 with m=1, z=0 needs r <= 1-c1; r=999/1000, c1=1/100 violates it (15293-15294: not an application of the strict marked moment)
+FC8   FIRES  unamplified exponent max{1,r}, delta=5/6, r=3/2: excess over 1-delta = 1/12 > 0 (the exponent 1-delta in P1F.1 needs Lemma 17.6)
+FC9   FIRES  gamma=1/8 fixed, delta=5/6: E(h) = 3/256 > 0 (O(eps) saturation of Prop 8.3 is load-bearing)
+FC10  FIRES  planted \delta\le\alpha at line 15270: T4 fails
+FC11  FIRES  planted \delta\le\alpha at line 15245: T3 fails (first use no longer 15303)
+FC14  FIRES  planted \Delta\le1/24 at line 15330: T8 fails
+FC12  FIRES  the remark at 15448 is numbered 19.3, so an expectation of 19.4 fails
+FC13  FIRES  high_bin_count does not carry hδ : δ≤5/6 (it carries 5/6≤δ)
+SUMMARY gates 43/43 pass; failing controls 14/14 fire; lean group run; 1.8 s

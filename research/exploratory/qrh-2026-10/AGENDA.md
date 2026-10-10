@@ -199,7 +199,9 @@ needs (7.9) and the `b*`/`ξ`/`τ` and pair-phase cancellations; only the local 
 **C6. The Part-I-free paper route** ([reviews/PART1_FREE_ROUTE.md](reviews/PART1_FREE_ROUTE.md)).
 Two bounded agent passes give verdict (A), the second with four corrections. Still needed:
 * a review independent of this model family;
-* a labelled, proved statement of Remark 19.3, which is unlabeled in the manuscript.
+* a labelled, proved statement of Remark 19.3, which is unlabeled in the manuscript. *Drafted:*
+  [proposed/PART1_FREE_7_8/REMARK_19_3.md](proposed/PART1_FREE_7_8/REMARK_19_3.md). It stays
+  Rp, because it rests on Lemmas 17.1-17.2.
 That would give a paper-level 7/8 proof with no Part I and no 11/12 import.
 
 **C7. A formal improvement below 7/8?**
