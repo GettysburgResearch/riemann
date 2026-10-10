@@ -338,6 +338,10 @@ which is the dual off-diagonal at relative precision `H/L`. The DR mechanism app
 * (c) also applies, independently: DR24's estimate controls only the large-sieve scale
   `(A + B)B` (§1.4). It is not the needed relative-precision asymptotic even conditionally.
 
+> **Coordinator note.** [Q_RHO_ANALYSIS.md](Q_RHO_ANALYSIS.md) shows that the theta reflection is
+> also an involution, so "non-involutive" below is incorrect. It also shows that (Q_ρ) is
+> equivalent to Mom(1, ρ) by Poisson in `h` (the manuscript's own lem:first-transfer).
+
 **Smallest statement that would unblock the route.**
 * (OD_ρ) for one fixed `ρ < 9/10` would beat 7/8. It is equivalent to Mom(1, ρ), so it is not a
   reduction.

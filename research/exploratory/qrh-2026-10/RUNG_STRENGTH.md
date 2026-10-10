@@ -179,6 +179,20 @@ A sub-diagonal primal (`θ < 0`, i.e. `ρ < 1`) starts with `H/Σ = D^{|θ|} > 1
 fails and the "contraction" becomes an expansion, so the recursion has no base. The level count
 `⌈4/ϑ⌉` also blows up as `ϑ → 0⁺`. So the manuscript's own mechanism is exactly the `ρ ≥ 1` method.
 
+*An invariant of the toolbox* ([Q_RHO_ANALYSIS.md](Q_RHO_ANALYSIS.md); PROPOSED, with numerical
+asserts).
+* Poisson summation in either variable and the cubic-theta reflection both act exactly on the pair
+  (row exponent, column exponent) and preserve `|cols − rows| = 1 − ρ`.
+* The reflection is itself an involution: twist exponent `j ↦ −j−2 (mod 6)`.
+* Every reformulation reachable with these moves therefore asks for a saving of some multiple
+  `k(1−ρ)` below its own diagonal, and that saving is zero only for Mom(1, ρ) itself.
+* In particular, the reflected-side statement (Q_ρ) is equivalent to Mom(1, ρ) with no change of
+  exponent.
+* Quadratic-twist moment technology stops at effective moment degree 4 with log savings, while
+  (Q_ρ) has degree `4(3−2ρ)/(2−ρ) > 4`. So it is out of reach as well.
+
+The `ρ = 1` wall is thus invariant under every move in the Oct 5 toolbox.
+
 **(c) Why `c = 5/6`.** By the heuristic parity rule of [ALT_PROBES.md](ALT_PROBES.md), the Möbius
 absorption needs a quadratic factor next to a theta with explicit Gauss-sum coefficients. Only the
 cubic theta has such coefficients, so the family is sextic and `c = 1 − 1/6`.

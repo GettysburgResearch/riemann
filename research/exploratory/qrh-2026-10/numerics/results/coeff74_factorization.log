@@ -19,3 +19,25 @@
    control drop_R           maxdev=2 failing=780/5844
    control Xi_drop_chiAb    maxdev=2 failing=1643/5844
    control drop_chisb       maxdev=2 failing=1518/5844
+   control xi_u_noconj      maxdev=1.73 failing=1413/5844
+   control tau_conj         maxdev=2 failing=2104/5844
+   control nonprimary_s     maxdev=1.44e-09 failing=0/5844
+   control nonprimary_s_omega maxdev=1.73 failing=1349/5844
+   control nonprimary_A     maxdev=2 failing=2104/5844
+   control F_e_conj         maxdev=2 failing=1039/5844
+   control gamma3_noconj    maxdev=2 failing=109/5844
+   control rho_sign         maxdev=1.73 failing=1246/5844
+   control drop_omega_ll    maxdev=2 failing=16/5844
+   control drop_omega_tk    maxdev=2 failing=71/5844
+   control gamma1_pos       maxdev=1.98 failing=1835/5844
+   ctrl_gen_minus_p: tuples=8352 maxdev=2 failures=4713
+   probe_e_conjugate: tuples=8352 maxdev=1.25e-12 failures=0
+   alt_bstar_unit_zeta: tuples=8352 nonzero=5247 maxdev=1.21e-12 FS=4.19e-12 failures=0
+   alt_bstar_unit_minus: tuples=8352 nonzero=5247 maxdev=1.25e-12 FS=4.35e-12 failures=0
+   alt_xi2_conj: tuples=8352 nonzero=5247 maxdev=1.33e-12 FS=4.59e-12 failures=0
+   alt_eta_seed: tuples=8352 nonzero=5247 maxdev=1.25e-12 FS=4.35e-12 failures=0
+== enlarged S = {2, lambda, both primes of norm 7}; xi = chi^3 and chi^1 there
+   self-tests: {'symbol_table_vs_exact': '2400/2400', 'prime_gauss_identities_maxdev': 3.034891656391957e-15, 'four_term_vs_direct_Gamma_maxdev': 1.422573102488521e-14, 'xi_units': 216, 'xi_order_divides_6': True, 'tau': [0.9222837188593076, 0.38651357275915466], 'abs_tau_minus_1': 4.440892098500626e-16}
+   P2 vanishing at S: 72 cases, max |F| = 3.91e-12
+   bigS: {"label": "bigS", "tuples": 5472, "nonzero": 4207, "zero_both_sides": 1265, "zero_with_nonempty_congruence": 391, "max_rel_dev_K": 2.2442982188488378e-11, "max_rel_dev_K_using_closed_C": 1.9111906023487733e-11, "max_rel_dev_K_on_nonzero": 3.069770449442784e-14, "max_rel_dev_FS": 5.442133959335535e-10, "failures": 0, "per_tier": {"bigS1": {"n": 5280, "nonzero": 4191, "maxdev": 5.420081540707457e-15}, "bigS2": {"n": 192, "nonzero": 16, "maxdev": 2.2442982188488378e-11}}, "exercised_on_nonzero": {"tau": 4207, "xi_s": 3576, "xi_u": 3608, "xi_A": 3992, "chiA_b": 3439, "chis_b": 2382, "R_As": 1766, "cross_As": 1760, "within_A": 0, "diag_omega_tk": 6, "omega_ll": 0, "l_pos": 16, "l2": 0, "two_prime_A": 0, "k_pos_t_pos": 37, "m_pos": 1980, "unit_u": 2802}, "seconds": 27.7}
+wrote results/coeff74_factorization.json  (317.5 s)

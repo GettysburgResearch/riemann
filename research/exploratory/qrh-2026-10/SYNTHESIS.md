@@ -180,6 +180,10 @@ a curve `σ₀(Y) = 1/2 + c loglog Y/log Y`, `Y ≈ 4T`.
      At `ρ < 1` the exact Poisson identity has no dual diagonal: it cancels through the Möbius
      variable `μ(f)`. The first loss is the positivity step (eq:weighted), which replaces `μ(f)` by
      `|μ(f)|` and costs `D^{1−ρ}`. Any proof must keep that sign.
+   * **The wall is invariant under the whole toolbox** ([Q_RHO_ANALYSIS.md](Q_RHO_ANALYSIS.md)).
+     Poisson summation and theta reflection (itself an involution) preserve
+     `|cols − rows| = 1 − ρ`. Every reachable reformulation, including the reflected-side (Q_ρ),
+     is Mom(1, ρ) in disguise.
    * Averaged substitutes for GRH are circular. Zero-density exponent `A` plus a half-plane
      bootstrap has fixed point `1 − 1/(6A)`, which is exactly 11/12 under DH.
 2. **Cross-row cancellation for zero-free rows (Sep 30 architecture).** A ratios-type average of

@@ -1,0 +1,552 @@
+{
+ "self_tests": {
+  "symbol_table_vs_exact": "2400/2400",
+  "prime_gauss_identities_maxdev": 3.034891656391957e-15,
+  "four_term_vs_direct_Gamma_maxdev": 5.732280600269111e-15,
+  "xi_units": 6,
+  "xi_order_divides_6": true,
+  "tau": [
+   -5.944308391195182e-16,
+   -1.0000000000000002
+  ],
+  "abs_tau_minus_1": 2.220446049250313e-16
+ },
+ "P1_fourier": {
+  "cases": 4284,
+  "pairs": 9,
+  "max_rel_dev": 2.4864022517686024e-14
+ },
+ "P2_vanishing": {
+  "cases": 54,
+  "max_abs_F": 4.3810479058978877e-14
+ },
+ "main": {
+  "label": "main",
+  "tuples": 141264,
+  "nonzero": 70723,
+  "zero_both_sides": 70541,
+  "zero_with_nonempty_congruence": 38232,
+  "max_rel_dev_K": 1.45077622530228e-09,
+  "max_rel_dev_K_using_closed_C": 1.768585287031727e-10,
+  "max_rel_dev_K_on_nonzero": 7.094497611823018e-13,
+  "max_rel_dev_FS": 5.025636265273081e-09,
+  "failures": 0,
+  "per_tier": {
+   "T1": {
+    "n": 106488,
+    "nonzero": 68430,
+    "maxdev": 4.086014051569528e-14
+   },
+   "T2": {
+    "n": 33696,
+    "nonzero": 2205,
+    "maxdev": 1.45077622530228e-09
+   },
+   "T3": {
+    "n": 1080,
+    "nonzero": 88,
+    "maxdev": 2.0398224631200492e-10
+   }
+  },
+  "exercised_on_nonzero": {
+   "tau": 70723,
+   "xi_s": 38753,
+   "xi_u": 58965,
+   "xi_A": 50473,
+   "chiA_b": 56827,
+   "chis_b": 51520,
+   "R_As": 26162,
+   "cross_As": 25530,
+   "within_A": 4806,
+   "diag_omega_tk": 1558,
+   "omega_ll": 80,
+   "l_pos": 2293,
+   "l2": 80,
+   "two_prime_A": 5459,
+   "k_pos_t_pos": 2284,
+   "m_pos": 43817,
+   "unit_u": 58831
+  },
+  "seconds": 107.2
+ },
+ "C_brute_vs_closed": {
+  "brute": 216,
+  "closed_only": 0,
+  "maxdiff": 4.077726603564114e-12
+ },
+ "fft_table_vs_direct_gauss_sum_maxdev_over_sqrtN": 2.3495642917269007e-14,
+ "controls": {
+  "alpha_noconj": {
+   "max_rel_dev": 1.9999679618104755,
+   "failing_tuples": "1908",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 2.7
+  },
+  "G_noconj": {
+   "max_rel_dev": 2.0000000000000004,
+   "failing_tuples": "1864",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 3.0
+  },
+  "drop_R": {
+   "max_rel_dev": 2.0000000000000004,
+   "failing_tuples": "780",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 3.3
+  },
+  "Xi_drop_chiAb": {
+   "max_rel_dev": 2.0000000000000004,
+   "failing_tuples": "1643",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 3.3
+  },
+  "drop_chisb": {
+   "max_rel_dev": 2.0000000000000004,
+   "failing_tuples": "1518",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 3.1
+  },
+  "xi_u_noconj": {
+   "max_rel_dev": 1.7320508075688785,
+   "failing_tuples": "1413",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 3.3
+  },
+  "tau_conj": {
+   "max_rel_dev": 2.0000000000000004,
+   "failing_tuples": "2104",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 2.7
+  },
+  "nonprimary_s": {
+   "max_rel_dev": 1.442461234669859e-09,
+   "failing_tuples": "0",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity holds",
+   "seconds": 3.2
+  },
+  "nonprimary_s_omega": {
+   "max_rel_dev": 1.732050807568879,
+   "failing_tuples": "1349",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 2.9
+  },
+  "nonprimary_A": {
+   "max_rel_dev": 2.0000000000000004,
+   "failing_tuples": "2104",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 113.7
+  },
+  "F_e_conj": {
+   "max_rel_dev": 2.0000000000000004,
+   "failing_tuples": "1039",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 2.7
+  },
+  "gamma3_noconj": {
+   "max_rel_dev": 2.0000000000000004,
+   "failing_tuples": "109",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 2.6
+  },
+  "rho_sign": {
+   "max_rel_dev": 1.7320508075688783,
+   "failing_tuples": "1246",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 2.8
+  },
+  "drop_omega_ll": {
+   "max_rel_dev": 2.0000000000000004,
+   "failing_tuples": "16",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 2.9
+  },
+  "drop_omega_tk": {
+   "max_rel_dev": 2.0,
+   "failing_tuples": "71",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 3.1
+  },
+  "gamma1_pos": {
+   "max_rel_dev": 1.983955832817046,
+   "failing_tuples": "1835",
+   "of": 5844,
+   "nonzero": 2104,
+   "verdict": "identity FAILS",
+   "seconds": 3.0
+  }
+ },
+ "ctrl_gen_minus_p": {
+  "label": "ctrl_gen_minus_p",
+  "tuples": 8352,
+  "nonzero": 5247,
+  "zero_both_sides": 3105,
+  "zero_with_nonempty_congruence": 1629,
+  "max_rel_dev_K": 2.0000000000000004,
+  "max_rel_dev_K_using_closed_C": 2.000000000000001,
+  "max_rel_dev_K_on_nonzero": 2.0000000000000004,
+  "max_rel_dev_FS": null,
+  "failures": 4713,
+  "per_tier": {
+   "alt1": {
+    "n": 7200,
+    "nonzero": 5178,
+    "maxdev": 2.0000000000000004
+   },
+   "alt2": {
+    "n": 1152,
+    "nonzero": 69,
+    "maxdev": 2.0000000000000004
+   }
+  },
+  "exercised_on_nonzero": {},
+  "seconds": 2.5,
+  "minimal_failure": {
+   "c": "-1-3w",
+   "n": "1",
+   "s": "1",
+   "a": "1",
+   "u": "zeta^0*1",
+   "K_direct": "(-2.290898801659689+1.3235492739426786j)",
+   "K_local": "(2.2908988016596905-1.3235492739426788j)"
+  },
+  "verdict": "identity FAILS"
+ },
+ "probe_e_conjugate": {
+  "label": "probe_e_conjugate",
+  "tuples": 8352,
+  "nonzero": 5247,
+  "zero_both_sides": 3105,
+  "zero_with_nonempty_congruence": 1629,
+  "max_rel_dev_K": 1.2547473532078389e-12,
+  "max_rel_dev_K_using_closed_C": 1.0661653846043998e-12,
+  "max_rel_dev_K_on_nonzero": 5.1412689635218445e-15,
+  "max_rel_dev_FS": null,
+  "failures": 0,
+  "per_tier": {
+   "alt1": {
+    "n": 7200,
+    "nonzero": 5178,
+    "maxdev": 1.4581299151355623e-14
+   },
+   "alt2": {
+    "n": 1152,
+    "nonzero": 69,
+    "maxdev": 1.2547473532078389e-12
+   }
+  },
+  "exercised_on_nonzero": {},
+  "seconds": 2.8,
+  "verdict": "identity holds"
+ },
+ "alt_bstar_unit_zeta": {
+  "label": "alt_bstar_unit_zeta",
+  "tuples": 8352,
+  "nonzero": 5247,
+  "zero_both_sides": 3105,
+  "zero_with_nonempty_congruence": 1629,
+  "max_rel_dev_K": 1.2082493307534596e-12,
+  "max_rel_dev_K_using_closed_C": 1.1553346985407988e-12,
+  "max_rel_dev_K_on_nonzero": 4.6944991274298125e-15,
+  "max_rel_dev_FS": 4.18549845815217e-12,
+  "failures": 0,
+  "per_tier": {
+   "alt1": {
+    "n": 7200,
+    "nonzero": 5178,
+    "maxdev": 1.9546178439308976e-14
+   },
+   "alt2": {
+    "n": 1152,
+    "nonzero": 69,
+    "maxdev": 1.2082493307534596e-12
+   }
+  },
+  "exercised_on_nonzero": {
+   "tau": 5247,
+   "xi_s": 3723,
+   "xi_u": 4367,
+   "xi_A": 2703,
+   "chiA_b": 4053,
+   "chis_b": 3723,
+   "R_As": 2367,
+   "cross_As": 2274,
+   "within_A": 45,
+   "diag_omega_tk": 105,
+   "omega_ll": 0,
+   "l_pos": 69,
+   "l2": 0,
+   "two_prime_A": 153,
+   "k_pos_t_pos": 150,
+   "m_pos": 2421,
+   "unit_u": 4361
+  },
+  "seconds": 4.3
+ },
+ "alt_bstar_unit_minus": {
+  "label": "alt_bstar_unit_minus",
+  "tuples": 8352,
+  "nonzero": 5247,
+  "zero_both_sides": 3105,
+  "zero_with_nonempty_congruence": 1629,
+  "max_rel_dev_K": 1.2547473532078387e-12,
+  "max_rel_dev_K_using_closed_C": 1.0661653846043996e-12,
+  "max_rel_dev_K_on_nonzero": 5.127514057581876e-15,
+  "max_rel_dev_FS": 4.346572332837096e-12,
+  "failures": 0,
+  "per_tier": {
+   "alt1": {
+    "n": 7200,
+    "nonzero": 5178,
+    "maxdev": 1.9546178439308976e-14
+   },
+   "alt2": {
+    "n": 1152,
+    "nonzero": 69,
+    "maxdev": 1.2547473532078387e-12
+   }
+  },
+  "exercised_on_nonzero": {
+   "tau": 5247,
+   "xi_s": 3723,
+   "xi_u": 4367,
+   "xi_A": 2703,
+   "chiA_b": 3813,
+   "chis_b": 2367,
+   "R_As": 2367,
+   "cross_As": 2274,
+   "within_A": 45,
+   "diag_omega_tk": 105,
+   "omega_ll": 0,
+   "l_pos": 69,
+   "l2": 0,
+   "two_prime_A": 153,
+   "k_pos_t_pos": 150,
+   "m_pos": 2421,
+   "unit_u": 4361
+  },
+  "seconds": 3.5
+ },
+ "alt_xi2_conj": {
+  "label": "alt_xi2_conj",
+  "tuples": 8352,
+  "nonzero": 5247,
+  "zero_both_sides": 3105,
+  "zero_with_nonempty_congruence": 1629,
+  "max_rel_dev_K": 1.3257390596800058e-12,
+  "max_rel_dev_K_using_closed_C": 9.976775495105177e-13,
+  "max_rel_dev_K_on_nonzero": 4.525559740310347e-15,
+  "max_rel_dev_FS": 4.592494817888714e-12,
+  "failures": 0,
+  "per_tier": {
+   "alt1": {
+    "n": 7200,
+    "nonzero": 5178,
+    "maxdev": 1.496950071819366e-14
+   },
+   "alt2": {
+    "n": 1152,
+    "nonzero": 69,
+    "maxdev": 1.3257390596800058e-12
+   }
+  },
+  "exercised_on_nonzero": {
+   "tau": 5247,
+   "xi_s": 3723,
+   "xi_u": 4367,
+   "xi_A": 2703,
+   "chiA_b": 3780,
+   "chis_b": 2367,
+   "R_As": 2367,
+   "cross_As": 2274,
+   "within_A": 45,
+   "diag_omega_tk": 105,
+   "omega_ll": 0,
+   "l_pos": 69,
+   "l2": 0,
+   "two_prime_A": 153,
+   "k_pos_t_pos": 150,
+   "m_pos": 2421,
+   "unit_u": 4361
+  },
+  "seconds": 4.3
+ },
+ "alt_eta_seed": {
+  "label": "alt_eta_seed",
+  "tuples": 8352,
+  "nonzero": 5247,
+  "zero_both_sides": 3105,
+  "zero_with_nonempty_congruence": 1629,
+  "max_rel_dev_K": 1.2547473532078387e-12,
+  "max_rel_dev_K_using_closed_C": 1.1553346985407988e-12,
+  "max_rel_dev_K_on_nonzero": 4.645771797192819e-15,
+  "max_rel_dev_FS": 4.346572332837096e-12,
+  "failures": 0,
+  "per_tier": {
+   "alt1": {
+    "n": 7200,
+    "nonzero": 5178,
+    "maxdev": 1.9546178439308976e-14
+   },
+   "alt2": {
+    "n": 1152,
+    "nonzero": 69,
+    "maxdev": 1.2547473532078387e-12
+   }
+  },
+  "exercised_on_nonzero": {
+   "tau": 5247,
+   "xi_s": 3723,
+   "xi_u": 4367,
+   "xi_A": 2703,
+   "chiA_b": 3780,
+   "chis_b": 2367,
+   "R_As": 2367,
+   "cross_As": 2274,
+   "within_A": 45,
+   "diag_omega_tk": 105,
+   "omega_ll": 0,
+   "l_pos": 69,
+   "l2": 0,
+   "two_prime_A": 153,
+   "k_pos_t_pos": 150,
+   "m_pos": 2421,
+   "unit_u": 4361
+  },
+  "seconds": 4.0
+ },
+ "bigS_self_tests": {
+  "symbol_table_vs_exact": "2400/2400",
+  "prime_gauss_identities_maxdev": 3.034891656391957e-15,
+  "four_term_vs_direct_Gamma_maxdev": 1.422573102488521e-14,
+  "xi_units": 216,
+  "xi_order_divides_6": true,
+  "tau": [
+   0.9222837188593076,
+   0.38651357275915466
+  ],
+  "abs_tau_minus_1": 4.440892098500626e-16
+ },
+ "bigS_P2": {
+  "cases": 72,
+  "max_abs_F": 3.914508983600528e-12
+ },
+ "bigS": {
+  "label": "bigS",
+  "tuples": 5472,
+  "nonzero": 4207,
+  "zero_both_sides": 1265,
+  "zero_with_nonempty_congruence": 391,
+  "max_rel_dev_K": 2.2442982188488378e-11,
+  "max_rel_dev_K_using_closed_C": 1.9111906023487733e-11,
+  "max_rel_dev_K_on_nonzero": 3.069770449442784e-14,
+  "max_rel_dev_FS": 5.442133959335535e-10,
+  "failures": 0,
+  "per_tier": {
+   "bigS1": {
+    "n": 5280,
+    "nonzero": 4191,
+    "maxdev": 5.420081540707457e-15
+   },
+   "bigS2": {
+    "n": 192,
+    "nonzero": 16,
+    "maxdev": 2.2442982188488378e-11
+   }
+  },
+  "exercised_on_nonzero": {
+   "tau": 4207,
+   "xi_s": 3576,
+   "xi_u": 3608,
+   "xi_A": 3992,
+   "chiA_b": 3439,
+   "chis_b": 2382,
+   "R_As": 1766,
+   "cross_As": 1760,
+   "within_A": 0,
+   "diag_omega_tk": 6,
+   "omega_ll": 0,
+   "l_pos": 16,
+   "l2": 0,
+   "two_prime_A": 0,
+   "k_pos_t_pos": 37,
+   "m_pos": 1980,
+   "unit_u": 2802
+  },
+  "seconds": 27.7
+ },
+ "seconds_total": 317.5,
+ "log": [
+  "== main world: S = {2, lambda}, b_* = 2*lambda, xi = (quadratic at lambda) x (omega at 2)",
+  "   self-tests: {'symbol_table_vs_exact': '2400/2400', 'prime_gauss_identities_maxdev': 3.034891656391957e-15, 'four_term_vs_direct_Gamma_maxdev': 5.732280600269111e-15, 'xi_units': 6, 'xi_order_divides_6': True, 'tau': [-5.944308391195182e-16, -1.0000000000000002], 'abs_tau_minus_1': 2.220446049250313e-16}",
+  "   P1 Fourier claim: 4284 (s,A,H) cases, max rel dev 2.49e-14",
+  "   P2 vanishing at S: 54 cases, max |F| = 4.38e-14",
+  "   main tuples: 141264",
+  "   [main] 20000/141264  maxdev=4.09e-14  9s",
+  "   [main] 40000/141264  maxdev=4.09e-14  20s",
+  "   [main] 60000/141264  maxdev=4.09e-14  30s",
+  "   [main] 80000/141264  maxdev=4.09e-14  42s",
+  "   [main] 100000/141264  maxdev=4.09e-14  51s",
+  "   [main] 120000/141264  maxdev=1.07e-11  61s",
+  "   [main] 140000/141264  maxdev=1.45e-09  71s",
+  "   main: {\"label\": \"main\", \"tuples\": 141264, \"nonzero\": 70723, \"zero_both_sides\": 70541, \"zero_with_nonempty_congruence\": 38232, \"max_rel_dev_K\": 1.45077622530228e-09, \"max_rel_dev_K_using_closed_C\": 1.768585287031727e-10, \"max_rel_dev_K_on_nonzero\": 7.094497611823018e-13, \"max_rel_dev_FS\": 5.025636265273081e-09, \"failures\": 0, \"per_tier\": {\"T1\": {\"n\": 106488, \"nonzero\": 68430, \"maxdev\": 4.086014051569528e-14}, \"T2\": {\"n\": 33696, \"nonzero\": 2205, \"maxdev\": 1.45077622530228e-09}, \"T3\": {\"n\": 1080, \"nonzero\": 88, \"maxdev\": 2.0398224631200492e-10}}, \"exercised_on_nonzero\": {\"tau\": 70723, \"xi_s\": 38753, \"xi_u\": 58965, \"xi_A\": 50473, \"chiA_b\": 56827, \"chis_b\": 51520, \"R_As\": 26162, \"cross_As\": 25530, \"within_A\": 4806, \"diag_omega_tk\": 1558, \"omega_ll\": 80, \"l_pos\": 2293, \"l2\": 80, \"two_prime_A\": 5459, \"k_pos_t_pos\": 2284, \"m_pos\": 43817, \"unit_u\": 58831}, \"seconds\": 107.2}",
+  "   fast Gauss table vs direct summation (3 random k per A): 2.3495642917269007e-14",
+  "   C_p brute [7.7] vs closed [7.8]: {'brute': 216, 'closed_only': 0, 'maxdiff': np.float64(4.077726603564114e-12)}",
+  "== controls on 5844 tuples",
+  "   control alpha_noconj     maxdev=2 failing=1908/5844",
+  "   control G_noconj         maxdev=2 failing=1864/5844",
+  "   control drop_R           maxdev=2 failing=780/5844",
+  "   control Xi_drop_chiAb    maxdev=2 failing=1643/5844",
+  "   control drop_chisb       maxdev=2 failing=1518/5844",
+  "   control xi_u_noconj      maxdev=1.73 failing=1413/5844",
+  "   control tau_conj         maxdev=2 failing=2104/5844",
+  "   control nonprimary_s     maxdev=1.44e-09 failing=0/5844",
+  "   control nonprimary_s_omega maxdev=1.73 failing=1349/5844",
+  "   control nonprimary_A     maxdev=2 failing=2104/5844",
+  "   control F_e_conj         maxdev=2 failing=1039/5844",
+  "   control gamma3_noconj    maxdev=2 failing=109/5844",
+  "   control rho_sign         maxdev=1.73 failing=1246/5844",
+  "   control drop_omega_ll    maxdev=2 failing=16/5844",
+  "   control drop_omega_tk    maxdev=2 failing=71/5844",
+  "   control gamma1_pos       maxdev=1.98 failing=1835/5844",
+  "   ctrl_gen_minus_p: tuples=8352 maxdev=2 failures=4713",
+  "   probe_e_conjugate: tuples=8352 maxdev=1.25e-12 failures=0",
+  "   alt_bstar_unit_zeta: tuples=8352 nonzero=5247 maxdev=1.21e-12 FS=4.19e-12 failures=0",
+  "   alt_bstar_unit_minus: tuples=8352 nonzero=5247 maxdev=1.25e-12 FS=4.35e-12 failures=0",
+  "   alt_xi2_conj: tuples=8352 nonzero=5247 maxdev=1.33e-12 FS=4.59e-12 failures=0",
+  "   alt_eta_seed: tuples=8352 nonzero=5247 maxdev=1.25e-12 FS=4.35e-12 failures=0",
+  "== enlarged S = {2, lambda, both primes of norm 7}; xi = chi^3 and chi^1 there",
+  "   self-tests: {'symbol_table_vs_exact': '2400/2400', 'prime_gauss_identities_maxdev': 3.034891656391957e-15, 'four_term_vs_direct_Gamma_maxdev': 1.422573102488521e-14, 'xi_units': 216, 'xi_order_divides_6': True, 'tau': [0.9222837188593076, 0.38651357275915466], 'abs_tau_minus_1': 4.440892098500626e-16}",
+  "   P2 vanishing at S: 72 cases, max |F| = 3.91e-12",
+  "   bigS: {\"label\": \"bigS\", \"tuples\": 5472, \"nonzero\": 4207, \"zero_both_sides\": 1265, \"zero_with_nonempty_congruence\": 391, \"max_rel_dev_K\": 2.2442982188488378e-11, \"max_rel_dev_K_using_closed_C\": 1.9111906023487733e-11, \"max_rel_dev_K_on_nonzero\": 3.069770449442784e-14, \"max_rel_dev_FS\": 5.442133959335535e-10, \"failures\": 0, \"per_tier\": {\"bigS1\": {\"n\": 5280, \"nonzero\": 4191, \"maxdev\": 5.420081540707457e-15}, \"bigS2\": {\"n\": 192, \"nonzero\": 16, \"maxdev\": 2.2442982188488378e-11}}, \"exercised_on_nonzero\": {\"tau\": 4207, \"xi_s\": 3576, \"xi_u\": 3608, \"xi_A\": 3992, \"chiA_b\": 3439, \"chis_b\": 2382, \"R_As\": 1766, \"cross_As\": 1760, \"within_A\": 0, \"diag_omega_tk\": 6, \"omega_ll\": 0, \"l_pos\": 16, \"l2\": 0, \"two_prime_A\": 0, \"k_pos_t_pos\": 37, \"m_pos\": 1980, \"unit_u\": 2802}, \"seconds\": 27.7}"
+ ]
+}
