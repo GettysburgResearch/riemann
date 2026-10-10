@@ -40,6 +40,7 @@ they are unreviewed.
 | [reports/REPO_RECENT_WORK.md](reports/REPO_RECENT_WORK.md) | digest of prior QRH work in PRs 908–910 and branches (read before extending) |
 | [FLOOR_BIN_BARRIER.md](FLOOR_BIN_BARRIER.md) | zero-free rows on the Poisson side: payoff of cross-row cancellation θ (σ = max(13/15, (167−225θ)/(192−225θ)) with DH counts) |
 | [ALT_PROBES.md](ALT_PROBES.md) | other metaplectic probes: parity/budget heuristic, cubic minimum 5/6, any theta-type probe ≥ 2/3 (HEURISTIC) |
+| [reviews/PR910_REPLAY.md](reviews/PR910_REPLAY.md) | independent exact replay of PR 910's 139999/160000 deduction at SHA 670a76c1: exponent arithmetic PASS (margin ~4x conservative); cosmetic decimal error; first unverified step = contour lemmas below 7/8 |
 | [reviews/KINTALI_REVIEW.md](reviews/KINTALI_REVIEW.md) | bounded review of the 47/48 paper: no error found; first unverified step Lemma 3 / App. B; density input identified |
 | [numerics/](numerics/README.md) | finite checks: Lemma 7.1 local identity, Kintali eq. (1) phases, joint-moment and Patterson-sum reconnaissance |
 | [THRESHOLD_CALCULUS.md](THRESHOLD_CALCULUS.md) | the exponent model, barriers 13/15, 167/192 and 5/6, experiments |
