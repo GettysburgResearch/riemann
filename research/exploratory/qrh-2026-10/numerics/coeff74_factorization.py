@@ -691,19 +691,22 @@ def build_tiers(W, which):
             ({}, {p7: 1}), ({p7: 1}, {p7: 1}), ({p7b: 1}, {p7: 1}), ({p13: 1}, {p7: 1}),
             ({p7: 1, p13: 1}, {p7: 1}), ({}, {p7b: 1}), ({p7b: 1}, {p7b: 1}),
             ({}, {p13: 1}), ({p13: 1}, {p13: 1}), ({p7: 1}, {p13: 1}), ({}, {m5: 1}),
-            ({p7: 1}, {m5: 1}),
         ]
         S2 = [{}, {p7: 1}, {p7b: 1}, {p7: 2}, {p13: 1}, {p7: 1, p13: 1}, {p7: 1, p7b: 1},
               {m5: 1}, {p13: 2}]
         A2 = [{}, {p7: 1}, {p7b: 1}, {p13: 1}]
         for (c, n) in T2:
             supp = sorted(set(c) | set(n))
+            # one prime: all units, u with and without an unrelated prime factor;
+            # two primes: units {1, zeta, -1}, no extra factor (cost control)
+            extras = ({}, {p19: 1}) if len(supp) == 1 else ({},)
+            units = range(6) if len(supp) == 1 else (0, 1, 3)
             for s in S2:
                 for a in A2:
                     for js in np.ndindex(*([6] * len(supp))):
                         base = {nm: int(j) for nm, j in zip(supp, js) if j}
-                        for extra in ({}, {p19: 1}):
-                            for un in range(6):
+                        for extra in extras:
+                            for un in units:
                                 tuples.append(Tuple(c, n, s, a, un, merge(base, extra), "T2"))
         # Tier 3: large A (l = 2 and two primes with l = 1), reduced index sets
         T3 = [({}, {p7: 2}, [{}, {p7: 1}, {p13: 1}, {p7b: 1}], [{}, {p7: 1}], [0, 1, 3]),
@@ -1002,7 +1005,7 @@ def main():
     rng = random.Random(3)
     sub = [T for T in tuples if T.tag == "T1"]
     sub = rng.sample(sub, 3000) + [T for T in tuples if T.tag == "T2"][::12] \
-        + [T for T in tuples if T.tag == "T3" and E.norm(W.ideal(T.n)[0]) <= 49][::4]
+        + [T for T in tuples if T.tag == "T3" and not T.c and len(T.n) == 1][::4]
     # keep only tuples where the true identity is nonzero, plus some zeros
     log(f"== controls on {len(sub)} tuples")
     result["controls"] = run_controls(W, sub, log)
