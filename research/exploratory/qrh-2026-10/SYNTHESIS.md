@@ -210,6 +210,11 @@ a curve `σ₀(Y) = 1/2 + c loglog Y/log Y`, `Y ≈ 4T`.
      is out of its Type I range.
    * The precise missing estimate is a bound better than the large sieve for
      `Σ_m w(m) χ̄_s(m) B_m`, averaged over moduli `s ≍ Y'`.
+   * Numerically the true bilinear form *is* far below Cauchy–Schwarz, by about `Q^{−1/2}`
+     ([numerics/B2_NUMERICS.md](numerics/B2_NUMERICS.md)). But random phases on the same supports
+     show the same saving, so the obstacle is proof technology, not truth. This mirrors the Oct 5
+     side ([moments/DUAL_ANATOMY.md](moments/DUAL_ANATOMY.md)). Conditional pricing:
+     [CONDITIONAL_B2.md](CONDITIONAL_B2.md), when present.
 4. Everything else (moment constants, detector floor, joint moments, iteration) is capped at
    `≤ 1/120` by the certificates.
 

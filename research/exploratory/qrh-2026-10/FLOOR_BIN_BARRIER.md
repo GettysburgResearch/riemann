@@ -392,7 +392,12 @@ boundary is sigma(theta)".
   of our high-side theta. By Sec. 0 item 4, either one alone is blocked at `13/15` by the other
   barrier. A joint optimisation of `(theta, theta_low)` was not run.
 
-### 4.3 The cheap alternative: lowering the detector floor (PROPOSED observation, unverified)
+### 4.3 The cheap alternative: lowering the detector floor (PROPOSED observation; first check passed)
+
+> **Update.** [reviews/SEP30_DETECTOR_QUANTIFIERS.md](reviews/SEP30_DETECTOR_QUANTIFIERS.md) checked
+> every floor-dependent inequality in Sec. 8, in Lemma 7.1 region one and in Prop 16.1. They hold
+> for any floor `1/2 + η`, so `51/100` is a convention. With DH-quality counts this reaches 13/15.
+> It moves neither 7/8 nor PR 910's limit, because the binding bins sit near `δ ≈ 0.39`.
 
 `a0 = 51/100` is set by (7.14): at `p | u` the local exponent `3/2 - 3 x_r` must be `<= -3/100`. For
 `x_r = 1/2 + eps` the `p | u` local factors are still `O_eps(1)`. Their product over the `omega(u)`
