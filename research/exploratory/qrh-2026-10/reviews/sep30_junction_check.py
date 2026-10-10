@@ -74,7 +74,19 @@ def ev(pd, pt):
 
 
 def ival(pd, box):
-    """natural interval extension on a box with nonnegative coordinates"""
+    """natural interval extension on a box with nonnegative coordinates; degenerate coordinates are
+    substituted exactly and like monomials merged first (removes the dependency effect on faces)"""
+    if any(a == b for a, b in box):
+        merged = {}
+        for mon, c in pd.items():
+            m2 = list(mon)
+            for k, (a, b) in enumerate(box):
+                if a == b and mon[k]:
+                    c = c * a ** mon[k]
+                    m2[k] = 0
+            m2 = tuple(m2)
+            merged[m2] = merged.get(m2, F(0)) + c
+        pd = merged
     lo = hi = F(0)
     for mon, c in pd.items():
         mlo = mhi = F(1)
@@ -497,15 +509,18 @@ dt_dx = sp.cancel(sp.diff(tcut, x))
 dR_dd = sp.cancel(sp.diff(Rstar_end, de))
 dR_dx = sp.cancel(sp.diff(Rstar_end, x))
 ident(G, "L0", "16074", "dt/d delta = alpha P_x D_x/(2 J^2)", dt_dd, al * Px * Dx / (2 * J ** 2))
-for cid, ex, bd in (("L1", dt_dd, 6), ("L2", dt_dx, 3), ("L3", dR_dd, 6), ("L4", dR_dx, 2)):
+# every derivative has denominator (k J)^2 with J >= 35/54 > 0 (B1e); certify |num| <= bd * den
+for cid, nm, ex, bd in (("L1", "dt/ddelta", dt_dd, 2), ("L2", "dt/dx", dt_dx, F(1, 4)),
+                        ("L3", "dR_*/ddelta", dR_dd, 2), ("L4", "dR_*/dx", dR_dx, F(1, 10))):
     nume, deno = sp.fraction(sp.together(ex))
-    # deno is (a power of) J times positive constants: verify sign, then certify |ex| <= bd
-    sgn = ival(to_pd(deno, [de, x]), [(F(0), F(5, 6)), (F(0), F(1, 2))])
-    ok_den = sgn[0] > 0
-    up = certify_ge(sp.expand(bd * deno - nume), [de, x], BOXdx)
-    lo = certify_ge(sp.expand(bd * deno + nume), [de, x], BOXdx)
-    rec(G, cid, "16074-16075", f"|{['dt/ddelta', 'dt/dx', 'dR_*/ddelta', 'dR_*/dx'][int(cid[1]) - 1]}| <= {bd} on the box",
-        ok_den and up["ok"] and lo["ok"], dict(boxes=up["boxes"] + lo["boxes"]))
+    kk = sp.simplify(sp.sqrt(sp.factor(deno)) / J)
+    ok_den = kk.is_number and kk != 0 and sp.expand(deno - (kk * J) ** 2) == 0
+    bdq = sp.Rational(bd.numerator, bd.denominator) if isinstance(bd, F) else bd
+    up = certify_auto(sp.expand(bdq * deno - nume), [de, x], BOXdx)
+    lo = certify_auto(sp.expand(bdq * deno + nume), [de, x], BOXdx)
+    rec(G, cid, "16074-16075", f"|{nm}| <= {bd} on [0,5/6]x[0,1/2] (denominator = (k J)^2, k = {kk})",
+        ok_den and up["ok"] and lo["ok"], dict(boxes=up["boxes"] + lo["boxes"], den_ok=bool(ok_den),
+                                               up=up["ok"], lo=lo["ok"]))
 r_dt = sp.cancel(sp.diff(rstar, t))
 gate(G, "L5", "16074", "0 <= dr_*/dt = (2-8x/9)/D_x <= 1", Dx - (2 - R(8, 9) * x), [x], [(0, F(1, 2))])
 
