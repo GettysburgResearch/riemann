@@ -9,7 +9,8 @@ Smallest remaining gap: RH itself (sup Re rho = 1/2) is untouched by everything 
 ```
 
 RH remains unproved. This folder studies the October 2026 *quasi*-RH manuscripts as an imported
-object and as a source of mechanisms. The manuscripts claim a zero-free half-plane `Re s > 7/8`;
+object and as a source of mechanisms. The manuscripts claim zero-free half-planes (`Re s > 7/8`
+Sep 30; `Re s > 11/12` Oct 5; Kintali `47/48`) and, separately, a Landau–Siegel exclusion (Oct 1);
 they are unreviewed.
 
 ## Headline findings (PROPOSED; conditional on the manuscript's stated lemma outputs)
@@ -32,7 +33,8 @@ they are unreviewed.
 7. **The Oct 5 (11/12) architecture has its own ceiling.** Its moment ladder depends only on the
    row/column ratio `ρ`, with boundary `1/2 + 5ρ/12`. `ρ = 1` gives 11/12 at every moment order.
    * `ρ < 1` (fewer rows than columns) is the whole difficulty. Row-blind large sieves cannot reach
-     it, and any input that does must contain an on-average GRH for the sextic family.
+     it, and any input that does must imply the large-values count of RUNG_STRENGTH §4 item 3 (an
+     on-average GRH for the sextic family).
    * The GL(3) cubic theta vanishes on the needed support.
    * Numerically, the true moments are diagonal-sized at every tested `ρ ≥ 0.35`. What is missing is
      a mechanism ([RUNG_STRENGTH.md](RUNG_STRENGTH.md), [A2_LITERATURE.md](A2_LITERATURE.md)).
@@ -59,22 +61,22 @@ they are unreviewed.
 | [SYNTHESIS.md](SYNTHESIS.md) | **start here**: the two architectures, what is new, where a breakthrough would have to come from |
 | [AGENDA.md](AGENDA.md) | bounded open problems with payoffs (moment ladder, 7/8 escape routes, verification, repo bridges) |
 | [INTAKE.md](INTAKE.md) | exact claimed statements, architecture, dependencies, what was verified |
-| [HEIGHT_LEVELS.md](HEIGHT_LEVELS.md) | what happens as you go higher, in four senses: moment order (same boundary at the same ρ; the dual type goes A₁ → A₂ → affine Ã₂ → Lorentzian, with the k = 3 pair pattern checked), zero height T, reflection rank, half-plane depth |
-| [LEVERAGE_FAMILIES.md](LEVERAGE_FAMILIES.md) | is leverage c = 5/6 forced? μ-absorption = the sign of one cubic Jacobi sum (checked exactly); every other family fails absorption, the theta step or the leverage; the only escape is a GL(2) theta on an n-fold cover, n ∈ {6, 4, 10}, with Hecke × order-n Gauss-sum coefficients (would give 5/6, 7/8, 9/10) |
+| [HEIGHT_LEVELS.md](HEIGHT_LEVELS.md) | what happens as you go higher, in four senses: moment order (same boundary at the same ρ; the dual coefficient shape on coprime support goes A₁ → A₂ → affine Ã₂ → Lorentzian (PROPOSED analogy), with the k = 3 pair pattern checked), zero height T, reflection rank, half-plane depth |
+| [LEVERAGE_FAMILIES.md](LEVERAGE_FAMILIES.md) | is leverage c = 5/6 forced? μ-absorption = the sign of one cubic Jacobi sum (checked exactly); every other examined family fails absorption, the theta step or the leverage (HEURISTIC pipeline model); the only escape found is a GL(2) theta on an n-fold cover, n ∈ {6, 4, 10}, with Hecke × order-n Gauss-sum coefficients (would give 5/6, 7/8, 9/10) |
 | [SEXTIC_THETA_S6.md](SEXTIC_THETA_S6.md) | the one escape hatch from 11/12 (S6: explicit sextic GL(2) theta coefficients) is unknown. Bröker–Hoffstein's numerics contradict it for one theta; general case is a finite but cluster-scale computation; bias experiment inconclusive (cubic control reproduces Patterson) |
-| [RUNG_STRENGTH.md](RUNG_STRENGTH.md) | the moment ladder depends only on `ρ = h/k`; `ρ = 1` wall at 11/12; a single-row Prop. R; what any `ρ < 1` input must contain; sub-diagonal numerics |
+| [RUNG_STRENGTH.md](RUNG_STRENGTH.md) | the moment ladder depends only on `ρ = h/k`; `ρ = 1` wall at 11/12; a single-row Prop. R and an every-member extraction Prop. R′ (PROPOSED); the endpoint Mom(1, ρ) ∀ρ > 0 ⟺ family GRH; what any `ρ < 1` input must contain; sub-diagonal numerics |
 | [A2_LITERATURE.md](A2_LITERATURE.md) | literature check: exact A2 WMDS dictionary (plus an extra quadratic factor); GL(3) cubic theta vanishes on the support; the missing input is a dispersion asymptotic |
 | [moments/DUAL_ANATOMY.md](moments/DUAL_ANATOMY.md) | anatomy of the sub-diagonal cancellation: random-sign-like across pairs, no μ-specific cancelling structure; an explicit Galois secondary term (positive, not cancelling); no dual bias at small D |
 | [moments/](moments/README.md) | actual sextic-family `M₂, M₄, M₆` at `H = D^{1+θ}` (and sub-diagonal `k = 1`): diagonal-sized up to `D = 64000` (finite) |
 | [ZERO_DENSITY_CONDITIONAL.md](ZERO_DENSITY_CONDITIONAL.md) | QRH-conditional zero density via ANTEDB: no `A(σ)` gain below 7/8; exact μ envelope |
 | [reviews/KINTALI_LEMMA3_REVIEW.md](reviews/KINTALI_LEMMA3_REVIEW.md) | Kintali Lemma 3 (weak reflection) and App. B: no error found; DR inputs quoted correctly; theta automorphy, cusp reflection and multiplier checked numerically/exactly; first unverified step App. A.2 (high side) |
-| [SHORT_PROOF_FRONTIER.md](SHORT_PROOF_FRONTIER.md) | Part II with only classical full-family Hecke density: `σ₀ = (7A−3)/(7A−2)` (exact LP); Hinz gives 29/31 (needs `M+ℓ > 1` and an unchecked Part I re-run); never below 11/12; our model's "DH counts" = `A = 1` |
+| [SHORT_PROOF_FRONTIER.md](SHORT_PROOF_FRONTIER.md) | Part II with only classical full-family Hecke density: `σ₀ = (7A−3)/(7A−2)` (exact LP); Hinz gives the model value 29/31, not a theorem (needs `M+ℓ > 1` and an unchecked re-run of Sep 30 Prop. 6.3 and Part I at `X = Y = Z^{16/31}`); never below 11/12; our model's "DH counts" = `A = 1` |
 | [KINTALI_DENSITY_UPGRADE.md](KINTALI_DENSITY_UPGRADE.md) | Kintali needs only the conductor exponent of a Hecke zero count at σ ≥ 4/5 − η; the best citable input is Hinz 1976 (29/30, so 47/48 = 29/30 + his margin); Hecke analogues of Huxley or Heath-Brown would give 113/120 or 941/1002 (not in the literature); 11/12 is the cap |
-| [ROBIN_GRADED.md](ROBIN_GRADED.md) | Θ-graded Robin/Nicolas: under QRH, Robin violations have relative size ≤ (log n)^{−1/8+ε}; sharp given Robin's Ω-theorem (so an asymptotic criterion for QRH); repo Robin packet unchanged |
-| [SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md) | the third OpenAI paper (Oct 1, Landau–Siegel via interpolation determinants):<br>• budget inequality; method intrinsically logarithmic-scale; no route to complex or middle-strip zeros<br>• effective in principle, with c ≈ 3·10⁻⁴ from the paper's constants<br>• a weak corollary of either QRH claim |
+| [ROBIN_GRADED.md](ROBIN_GRADED.md) | Θ-graded Robin/Nicolas: under QRH, Robin violations have relative size ≤ (log n)^{−1/8+ε}; sharp given Robin's Ω-theorem (so an asymptotic criterion for `Θ ≤ 7/8`, the ζ-part of QRH); repo Robin packet unchanged |
+| [SIEGEL_DETERMINANT.md](SIEGEL_DETERMINANT.md) | the third OpenAI paper (Oct 1, Landau–Siegel via interpolation determinants):<br>• budget inequality; method intrinsically logarithmic-scale; no route to complex or middle-strip zeros<br>• effective in principle (PROPOSED reading), with c ≈ 3·10⁻⁴ (2.8·10⁻⁴ at the paper's H) from the paper's constants<br>• a weak corollary of either QRH claim |
 | [NRC32_TWISTS.md](NRC32_TWISTS.md) | the NRC32 coarse kernel generates only the trivial character; twists give no leverage for issue 902's family-relative step; exact twisted checker (1.29M checks) |
 | [BILINEAR_B2.md](BILINEAR_B2.md) | the 7/8 low-side bilinear form exactly (TeX l. 3470); no known estimate beats Cauchy–Schwarz; payoff `σ ≈ 7/8 − 0.8125ϑ` in the paper's own model; the precise missing estimate |
-| [Q_RHO_ANALYSIS.md](Q_RHO_ANALYSIS.md) | the reflected-side reformulation (Q_ρ) is circular by duality. Poisson and theta reflection preserve \|cols − rows\| = 1 − ρ, so the ρ = 1 wall is invariant under the whole Oct 5 toolbox. Quadratic-twist moment methods (Li 2024 etc.) stop at degree 4 |
+| [Q_RHO_ANALYSIS.md](Q_RHO_ANALYSIS.md) | the reflected-side reformulation (Q_ρ) is circular by duality. Poisson and theta reflection preserve \|cols − rows\| = 1 − ρ, so the ρ = 1 wall is invariant under the whole Oct 5 toolbox. Quadratic-twist moment methods over number fields (Li 2024 etc.) stop at degree 4 |
 | [DISPERSION_GRH_STEP.md](DISPERSION_GRH_STEP.md) | where GRH enters Dunn–Radziwiłł, and why it is circular for the sextic family; the exact `ρ < 1` identity cancels its dual diagonal via `μ(f)`, and the positivity step loses it |
 | [reviews/SEP30_INVMOMENT_REVIEW.md](reviews/SEP30_INVMOMENT_REVIEW.md) | 7/8 inverse-moment engine (Lemmas 17.1–17.6): all three ledgers pass exactly (120/120, with failing controls); the statements reduce to reviewed Oct 5 results at z = 0 but the proof is a different recursion; 11 new Poisson identities; first unverified: eq. (C) (10214–10245) |
 | [numerics/COEFF74_CHECK.md](numerics/COEFF74_CHECK.md) | 7/8 coefficient (7.4) equals the product of the (7.10) local summands on 141k tuples (7e-13; all 16 controls fail); remaining gaps listed |
@@ -84,7 +86,7 @@ they are unreviewed.
 | [reviews/OCT5_REVIEW_SUMMARY.md](reviews/OCT5_REVIEW_SUMMARY.md) | **combined R1+R2+R3 bounded review of the Oct 5 (11/12) proof: every proof line read, no wrong step found**; imported: Goldmakher–Louvel, Dunn–Radziwiłł expansions, standard theorems |
 | [reviews/OCT5_RESIDUAL_ITEMS.md](reviews/OCT5_RESIDUAL_ITEMS.md) | Oct 5 residual items closed: the Goldmakher–Louvel use matches their Thm 1.1; the contour shift is complete; R1's minor points are harmless |
 | [reviews/OCT5_R1_REDUCTION_POISSON.md](reviews/OCT5_R1_REDUCTION_POISSON.md) | R1: reduction, initialization, Möbius absorption, exact Poisson replay at tiny D |
-| [reviews/OCT5_R2_ITERATION_TRANSFER.md](reviews/OCT5_R2_ITERATION_TRANSFER.md) | Oct 5 (11/12) transfer recursion (two Poisson steps, cube reduction, ⌈4/ϑ⌉ levels): PASS conditional on Prop R and Lemma arithmetic; 53 checks; regime H > X undocumented but fine |
+| [reviews/OCT5_R2_ITERATION_TRANSFER.md](reviews/OCT5_R2_ITERATION_TRANSFER.md) | Oct 5 (11/12) transfer recursion (two Poisson steps, cube reduction, ⌈4/ϑ⌉ levels): PASS conditional on Oct 5 prop:R and Lemma arithmetic; 53 checks; regime H > X undocumented but fine |
 | [falsification/PR910_HEIGHT_TEST.md](falsification/PR910_HEIGHT_TEST.md) | PR 910's native-height curve condition: not falsified for T ≤ 10⁶ (max statistic 0.121 vs 1); mechanism = large values of ζ, not zeros; heuristic failure near log T ~ 10³–10⁴; Proposition A (RH-conditional) |
 | [reviews/LEMMA18_1_COMMON_SUPPORT.md](reviews/LEMMA18_1_COMMON_SUPPORT.md) | the previously unverified common-support allocations of Lemma 18.1 (l. 13192–13349, 13686–13933): no error found; 24/24 checks including an end-to-end exact-symbol bridge test with failing variants; one unused f/6 of slack |
 | [CUBIC_FOURTH_MOMENT_TRANSFER.md](CUBIC_FOURTH_MOMENT_TRANSFER.md) | does Lemma 18.1's scheme give the open cubic fourth moment? Straight transfer fails (κ = 5/6 vs 1, at (2,1) common primes); a proposed residue repair closes with zero slack; heuristic relaxed bound X^{53/51+ε} vs the known X^{4/3+ε}; cubic is exactly the boundary case 1/n = 1/3 |
