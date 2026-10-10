@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "scope": "Finite rational principal kernels, actual product centering, and divisor support only.",
+  "producer_sha256": "1197b7e4eebc1c76909a272426365f4dde14e9afe78c37903508cf087c0edf8a",
+  "separation_checks": 270,
+  "common_annulus": [
+    17671488405823,
+    35342976811646
+  ],
+  "raw_squarefree_norm": 19325513060479,
+  "alias_product_norms": [
+    17671488405823,
+    31027225083967
+  ],
+  "principal_alias_density": "23760/28609",
+  "four_block_matrix": [
+    [
+      "118800/28609",
+      "-118800/28609"
+    ],
+    [
+      "-118800/28609",
+      "118800/28609"
+    ]
+  ],
+  "sharp_cutoff": {
+    "prime_norm": 7,
+    "c_at_R_6": -1,
+    "c_at_R_7": 0
+  },
+  "not_verified": [
+    "The analytic R^-1 bound or uniform Fourier remainder",
+    "The source's individual Gauss phases",
+    "A complete finite-height covariance or moment"
+  ],
+  "manuscript_sha256": "7de2f4fbf8b085bc37cc83d0767748eee1c8478a590b3551935870b616f9166e"
+}

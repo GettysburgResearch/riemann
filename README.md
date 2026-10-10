@@ -95,6 +95,10 @@ The pages above describe reviewed components at their recorded sources, with lat
 
 [The moving-label packet](standalone/2026-10-10-sextic-moving-labels/README.md) improves the all-row raw exponent at \(H=D^{1/2}\) to \(31/19\) and transfers it through the entire normalized A2 correction sum, using two adaptive cube cutoffs and explicit moving-label costs. It also controls overlapping signed fourth-moment cross-gcd events and fixed cross matchings at every even order. A separately credited fixed-order large-sieve input extends the canonical spectral mean to \(\Re u>4/7\). These are proposed source-conditional deductions with scoped reviews, source pins and finite diagnostics. The signed two-column comparison, full fourth moment, \(17/24\), cofinal hierarchy and further zero-free improvement remain open.
 
+## Further research: signed graphs and joint Gauss descent
+
+[The signed-graph and joint-descent packet](standalone/2026-10-10-signed-graph-and-joint-descent/README.md) gives source-conditional bounds for whole overlapping cross-gcd graph sectors at every fixed even order, extends the fourth-moment union estimate to its full cutoff range, and proves a stronger dense-sector bound. Joint summation continues the exact reunited Gauss family across `v=1` for `Re s<1/5`. A separate two-column analysis bounds the principal cube-inverse tail by `D^epsilon/R` and prunes a specified part of the strict A2 covariance. Exact source pins, scoped independent reviews and finite diagnostics are included. The oscillating signed remainder, full fourth moment, `17/24`, cofinal hierarchy and further zero-free improvement remain open.
+
 ## License
 
 Project code and original research materials are available under the [MIT License](LICENSE). Third-party material retains its existing terms and notices.

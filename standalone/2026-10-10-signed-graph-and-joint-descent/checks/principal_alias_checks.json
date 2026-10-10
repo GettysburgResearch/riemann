@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "producer_sha256": "38f659316d8445e85e11a8e2150dd2e778d1cee8263c4ac64d1fc3f757e1554f",
+  "finite_scope": "Exact root-of-unity, divisor, zero-mask, and rational identities; no analytic theorem verification.",
+  "counts": {
+    "local_residue_correlations": 784,
+    "cube_principal_pair_classifications": 4096,
+    "masked_complete_cube_inverses": 2304,
+    "cube_phase_zero_checks": 160,
+    "joint_lcm_cutoffs": 1792,
+    "a2_no_alias_and_radical_defect": 256
+  },
+  "off_product_principal_pairs_in_cube_grid": 192,
+  "truncated_alias_witness": {
+    "primes": [
+      7,
+      61,
+      67
+    ],
+    "cutoff": 100,
+    "left_cube_exponents": [
+      1,
+      2,
+      0
+    ],
+    "right_cube_exponents": [
+      1,
+      0,
+      2
+    ],
+    "left_partial_mobius": -1,
+    "right_partial_mobius": -1,
+    "lcm_partial_mobius": -2,
+    "complete_principal_density": "23760/28609",
+    "physical_cube_norm_ratio": "90458382169/51520374361",
+    "complete_inverse_coefficients": [
+      0,
+      0
+    ]
+  },
+  "lcm_not_rectangular_witness": {
+    "cutoff": 20,
+    "rectangle": 0,
+    "lcm": -1
+  },
+  "centered_reflected_unit_witness": {
+    "U": 7,
+    "column_norms": [
+      7,
+      13
+    ],
+    "energy": "4/7",
+    "product_diagonal": "2/7",
+    "centered": "2/7"
+  },
+  "not_verified": [
+    "Poisson summation or uniform Fourier decay",
+    "the infinite principal-energy R^-1 bound",
+    "the imported theta, Gauss, or large-sieve foundations",
+    "a centered original fourth moment, a zero-free boundary, or RH"
+  ],
+  "manuscript_sha256": "d121c94e9eaf8142d160ece29194d186cf2b915dfc53273d351e2baeec7becde"
+}
